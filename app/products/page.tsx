@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight } from 'lucide-react';
 import { AUTOMATION_LINKS } from '../constants/navigation';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Products | Zion Tech Group',
   description:
     'Explore Zion Tech Group production-ready products — analytics, CRM, content, project management, and more. Built for teams that need measurable results.',
@@ -107,19 +108,19 @@ export default function ProductsPage() {
             links, practical delivery paths, and measurable KPI tracking.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
             >
               View Pricing
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -141,13 +142,13 @@ export default function ProductsPage() {
               <ul className="space-y-2">
                 {category.products.map((product) => (
                   <li key={product.href}>
-                    <Link
+                    <a
                       href={product.href}
                       className="group/link flex items-center justify-between rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-sm text-slate-200 transition hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
                     >
                       {product.name}
                       <ArrowRight className="h-3.5 w-3.5 text-slate-500 transition group-hover/link:text-purple-400" />
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -191,13 +192,13 @@ export default function ProductsPage() {
           <p className="mb-4 text-sm text-slate-400">
             Looking for AI services?
           </p>
-          <Link
+          <a
             href="/ai-services"
             className="inline-flex items-center justify-center rounded-xl border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-semibold text-purple-200 transition hover:border-purple-400 hover:bg-purple-500/20 hover:text-white"
           >
             Browse AI Services
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

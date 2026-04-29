@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'API Development & Integration | Zion Tech Group',
   description:
     'Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.',

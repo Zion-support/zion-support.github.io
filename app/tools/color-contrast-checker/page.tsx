@@ -164,9 +164,9 @@ export default function ColorContrastChecker() {
         )}
         
         <div className="mt-6 pt-4 border-t border-gray-200">
-          <Link href="/" className="text-blue-600 hover:text-blue-800">
+          <a href="/" className="text-blue-600 hover:text-blue-800">
             ← Back to Home
-          </Link>
+          </a>
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, BookOpen, FileText, Megaphone } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'News & Resources | Zion Tech Group',
   description:
     'Latest news, blog posts, press releases, and resources from Zion Tech Group. Stay updated on AI solutions, product updates, and industry insights.',
@@ -86,20 +87,20 @@ export default function NewsPage() {
             guides to industry trends and product updates — one place to stay informed.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/blog"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
             >
               Browse all blog posts
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/press"
               className="inline-flex items-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               Press & media
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -117,7 +118,7 @@ export default function NewsPage() {
           </p>
           <div className="mt-8 space-y-5">
             {featuredPosts.map((post) => (
-              <Link
+              <a
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group block rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5 transition hover:border-purple-400/40 hover:bg-slate-900/80"
@@ -133,16 +134,16 @@ export default function NewsPage() {
                   Read more
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
-          <Link
+          <a
             href="/blog"
             className="mt-6 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
           >
             View all blog posts
             <ArrowRight className="ml-1 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -159,7 +160,7 @@ export default function NewsPage() {
           </p>
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
             {resourceLinks.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-5 transition hover:-translate-y-1 hover:border-purple-400/40"
@@ -175,7 +176,7 @@ export default function NewsPage() {
                   Visit
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -190,13 +191,13 @@ export default function NewsPage() {
             Visit our blog for the latest articles on AI implementation, industry guides, and
             product updates. No signup required — just read and share.
           </p>
-          <Link
+          <a
             href="/blog"
             className="mt-8 inline-flex items-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Go to blog
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

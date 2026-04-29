@@ -451,7 +451,7 @@ export default function Navigation({ className, children }: NavigationProps) {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center">
-                <Link
+                <a
                   href="/"
                   className="group flex items-center space-x-3 transition-transform hover:scale-105"
                   aria-label="Go to Zion Tech Group homepage"
@@ -471,17 +471,17 @@ export default function Navigation({ className, children }: NavigationProps) {
                       AI Delivery Studio
                     </span>
                   </div>
-                </Link>
+                </a>
               </div>
 
               <div className="hidden items-center gap-1.5 md:flex">
-                <Link
+                <a
                   href="/"
                   className={getNavLinkClassName(isActivePath(currentPath, '/'))}
                   aria-current={isActivePath(currentPath, '/') ? 'page' : undefined}
                 >
                   Home
-                </Link>
+                </a>
 
                 <div className="relative">
                   <button
@@ -526,7 +526,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {SOLUTION_LINKS.map((link) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, link);
                           return (
-                            <Link
+                            <a
                               key={link.href}
                               href={link.href}
                               role="menuitem"
@@ -539,7 +539,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={() => setActiveDropdown(null)}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           );
                         })}
                       </div>
@@ -547,20 +547,20 @@ export default function Navigation({ className, children }: NavigationProps) {
                   )}
                 </div>
 
-                <Link
+                <a
                   href="/services"
                   className={getNavLinkClassName(isActivePath(currentPath, '/services'))}
                   aria-current={isActivePath(currentPath, '/services') ? 'page' : undefined}
                 >
                   Services
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/pricing"
                   className={getNavLinkClassName(isActivePath(currentPath, '/pricing'))}
                   aria-current={isActivePath(currentPath, '/pricing') ? 'page' : undefined}
                 >
                   Pricing
-                </Link>
+                </a>
                 <div className="relative">
                   <button
                     type="button"
@@ -597,7 +597,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {FEATURED_AI_SERVICE_LINKS.map((service) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, service);
                           return (
-                            <Link
+                            <a
                               key={service.href}
                               href={service.href}
                               role="menuitem"
@@ -610,17 +610,17 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={() => setActiveDropdown(null)}
                             >
                               {service.name}
-                            </Link>
+                            </a>
                           );
                         })}
-                        <Link
+                        <a
                           href="/ai-services"
                           role="menuitem"
                           className="block border-t border-slate-700/70 px-4 py-3 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
                           onClick={() => setActiveDropdown(null)}
                         >
                           Browse all AI services →
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   )}
@@ -664,7 +664,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {FEATURED_PRODUCT_LINKS.map((product) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, product);
                           return (
-                            <Link
+                            <a
                               key={product.href}
                               href={product.href}
                               role="menuitem"
@@ -677,17 +677,17 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={() => setActiveDropdown(null)}
                             >
                               {product.name}
-                            </Link>
+                            </a>
                           );
                         })}
-                        <Link
+                        <a
                           href="/products"
                           role="menuitem"
                           className="block border-t border-slate-700/70 px-4 py-3 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
                           onClick={() => setActiveDropdown(null)}
                         >
                           Browse all products →
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   )}
@@ -731,7 +731,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {RESOURCE_LINKS.map((link) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, link);
                           return (
-                            <Link
+                            <a
                               key={link.href}
                               href={link.href}
                               role="menuitem"
@@ -744,7 +744,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={() => setActiveDropdown(null)}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           );
                         })}
                       </div>
@@ -763,15 +763,15 @@ export default function Navigation({ className, children }: NavigationProps) {
                   <span className={quickFindHintClassName}>Ctrl/⌘ K</span>
                 </button>
 
-                <Link
+                <a
                   href="/contact"
                   className={getNavLinkClassName(isActivePath(currentPath, '/contact'))}
                   aria-current={isActivePath(currentPath, '/contact') ? 'page' : undefined}
                 >
                   Contact
-                </Link>
+                </a>
 
-                <Link
+                <a
                   href="/contact?topic=project&source=nav-desktop"
                   data-cta-event="cta_primary"
                   data-cta-label="nav_desktop"
@@ -779,7 +779,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                   aria-current={isActivePath(currentPath, '/contact') ? 'page' : undefined}
                 >
                   Start a Project
-                </Link>
+                </a>
               </div>
 
               <div className="flex items-center md:hidden">
@@ -802,14 +802,14 @@ export default function Navigation({ className, children }: NavigationProps) {
                 className="md:hidden animate-fade-in border-t border-purple-500/20"
               >
                 <div className="max-h-[calc(100vh-5rem)] space-y-1 overflow-y-auto px-2 pb-4 pt-4">
-                  <Link
+                  <a
                     href="/"
                     className={`${getNavLinkClassName(isActivePath(currentPath, '/'))} block px-4 py-3 text-base`}
                     aria-current={isActivePath(currentPath, '/') ? 'page' : undefined}
                     onClick={closeMobileMenu}
                   >
                     Home
-                  </Link>
+                  </a>
 
                   <div className="relative">
                     <button
@@ -846,7 +846,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {SOLUTION_LINKS.map((link) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, link);
                           return (
-                            <Link
+                            <a
                               key={link.href}
                               href={link.href}
                               aria-current={isLinkActive ? 'page' : undefined}
@@ -858,37 +858,37 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={closeMobileMenu}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           );
                         })}
                       </div>
                     )}
                   </div>
 
-                  <Link
+                  <a
                     href="/services"
                     className={`${getNavLinkClassName(isActivePath(currentPath, '/services'))} block px-4 py-3 text-base`}
                     aria-current={isActivePath(currentPath, '/services') ? 'page' : undefined}
                     onClick={closeMobileMenu}
                   >
                     Services
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/pricing"
                     className={`${getNavLinkClassName(isActivePath(currentPath, '/pricing'))} block px-4 py-3 text-base`}
                     aria-current={isActivePath(currentPath, '/pricing') ? 'page' : undefined}
                     onClick={closeMobileMenu}
                   >
                     Pricing
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className={`${getNavLinkClassName(isActivePath(currentPath, '/contact'))} block px-4 py-3 text-base`}
                     aria-current={isActivePath(currentPath, '/contact') ? 'page' : undefined}
                     onClick={closeMobileMenu}
                   >
                     Contact
-                  </Link>
+                  </a>
 
                   <div className="relative">
                     <button
@@ -919,7 +919,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {FEATURED_AI_SERVICE_LINKS.map((service) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, service);
                           return (
-                            <Link
+                            <a
                               key={service.href}
                               href={service.href}
                               aria-current={isLinkActive ? 'page' : undefined}
@@ -931,16 +931,16 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={closeMobileMenu}
                             >
                               {service.name}
-                            </Link>
+                            </a>
                           );
                         })}
-                        <Link
+                        <a
                           href="/ai-services"
                           className="mt-2 block rounded-lg border-t border-purple-500/20 px-4 py-2.5 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
                           onClick={closeMobileMenu}
                         >
                           Browse all AI services →
-                        </Link>
+                        </a>
                       </div>
                     )}
                   </div>
@@ -974,7 +974,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {FEATURED_PRODUCT_LINKS.map((product) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, product);
                           return (
-                            <Link
+                            <a
                               key={product.href}
                               href={product.href}
                               aria-current={isLinkActive ? 'page' : undefined}
@@ -986,16 +986,16 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={closeMobileMenu}
                             >
                               {product.name}
-                            </Link>
+                            </a>
                           );
                         })}
-                        <Link
+                        <a
                           href="/products"
                           className="mt-2 block rounded-lg border-t border-purple-500/20 px-4 py-2.5 text-sm font-medium text-purple-300 hover:bg-purple-500/20 hover:text-white"
                           onClick={closeMobileMenu}
                         >
                           Browse all products →
-                        </Link>
+                        </a>
                       </div>
                     )}
                   </div>
@@ -1029,7 +1029,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                         {RESOURCE_LINKS.map((link) => {
                           const isLinkActive = isActiveNavigationLink(currentPath, link);
                           return (
-                            <Link
+                            <a
                               key={link.href}
                               href={link.href}
                               aria-current={isLinkActive ? 'page' : undefined}
@@ -1041,14 +1041,14 @@ export default function Navigation({ className, children }: NavigationProps) {
                               onClick={closeMobileMenu}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           );
                         })}
                       </div>
                     )}
                   </div>
 
-                  <Link
+                  <a
                     href="/contact?topic=project&source=nav-mobile"
                     data-cta-event="cta_primary"
                     data-cta-label="nav_mobile"
@@ -1057,7 +1057,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                     onClick={closeMobileMenu}
                   >
                     Start a Project
-                  </Link>
+                  </a>
 
                   <button
                     type="button"
@@ -1140,13 +1140,13 @@ export default function Navigation({ className, children }: NavigationProps) {
               )}
             </div>
             <div className="border-t border-slate-700/80 p-3">
-              <Link
+              <a
                 href={commandQuery.trim() ? `/search?q=${encodeURIComponent(commandQuery.trim())}` : '/search'}
                 className="flex items-center justify-center gap-2 rounded-lg border border-slate-600/80 bg-slate-950/50 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-white"
                 onClick={closeCommandMenu}
               >
                 Open full search page
-              </Link>
+              </a>
             </div>
           </div>
         </div>

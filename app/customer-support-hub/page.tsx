@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Customer Support Hub | Zion Tech Group',
   description:
     'Customer Support Hub elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint. Incre',

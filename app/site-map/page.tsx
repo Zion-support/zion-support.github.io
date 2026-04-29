@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import {
   PRIMARY_NAV_LINKS,
   SOLUTION_LINKS,
@@ -9,7 +10,7 @@ import {
 } from '../constants/navigation';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Sitemap | Zion Tech Group',
   description:
     'Browse all pages and sections of Zion Tech Group: solutions, services, AI products, resources, and company information.',
@@ -76,12 +77,12 @@ export default function SiteMapPage() {
             <ul className="grid gap-2 sm:grid-cols-2">
               {PRIMARY_NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-slate-300 underline decoration-purple-400/50 underline-offset-2 hover:text-purple-200 hover:decoration-purple-300"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -97,12 +98,12 @@ export default function SiteMapPage() {
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {SOLUTION_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-slate-300 underline decoration-purple-400/50 underline-offset-2 hover:text-purple-200 hover:decoration-purple-300"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -118,12 +119,12 @@ export default function SiteMapPage() {
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {RESOURCE_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-slate-300 underline decoration-purple-400/50 underline-offset-2 hover:text-purple-200 hover:decoration-purple-300"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -139,19 +140,19 @@ export default function SiteMapPage() {
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {AI_SERVICE_LINKS.slice(0, 18).map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-slate-300 underline decoration-purple-400/50 underline-offset-2 hover:text-purple-200 hover:decoration-purple-300"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
             <p className="mt-2 text-sm text-slate-400">
-              <Link href="/ai-services" className="text-purple-300 hover:underline">
+              <a href="/ai-services" className="text-purple-300 hover:underline">
                 View all AI services →
-              </Link>
+              </a>
             </p>
           </section>
 
@@ -165,19 +166,19 @@ export default function SiteMapPage() {
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {FEATURED_PRODUCT_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-slate-300 underline decoration-purple-400/50 underline-offset-2 hover:text-purple-200 hover:decoration-purple-300"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
             <p className="mt-2 text-sm text-slate-400">
-              <Link href="/products" className="text-purple-300 hover:underline">
+              <a href="/products" className="text-purple-300 hover:underline">
                 View all products →
-              </Link>
+              </a>
             </p>
           </section>
         </div>

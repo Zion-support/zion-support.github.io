@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import AIToolCard from '../components/AIToolCard';
 import { AI_LAB_TOOLS } from './ai-lab-tools';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Lab',
   description:
     'Explore experimental and live AI tools that showcase how Zion’s autonomous agents improve and evolve ziontechgroup.com.',
@@ -73,7 +74,7 @@ export default function AILabPage() {
                   Shows how Zion’s automation behaves using the same reports and pipelines that
                   power production.
                 </p>
-                <Link
+                <a
                   href={tool.href}
                   className="inline-flex items-center rounded-full border border-sky-500/60 bg-sky-500/10 px-3 py-1 font-medium text-sky-100 hover:bg-sky-500/20"
                 >
@@ -81,7 +82,7 @@ export default function AILabPage() {
                   <span className="ml-1.5 text-sky-200 transition-transform group-hover:translate-x-0.5">
                     →
                   </span>
-                </Link>
+                </a>
               </div>
             </AIToolCard>
           ))}

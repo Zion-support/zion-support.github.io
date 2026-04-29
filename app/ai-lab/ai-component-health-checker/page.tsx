@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Component Health Checker - Zion AI Lab',
   description: 'Real-time health monitoring for Zion AI components. Check component status, uptime, and performance metrics.',
 };

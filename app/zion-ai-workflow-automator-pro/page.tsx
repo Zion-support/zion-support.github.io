@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Workflow Automator Pro | Zion Tech Group',
   description:
     'Zion AI Workflow Automator Pro eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration.',

@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Code Reviewer | Zion Tech Group',
   description:
     'Zion AI Code Reviewer accelerates software delivery with intelligent tooling, automated code analysis, and streamlined development workflows. Ship higher-q',

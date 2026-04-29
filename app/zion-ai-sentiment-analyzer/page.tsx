@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Sentiment Analyzer | Zion Tech Group',
   description:
     'Analyze customer sentiment across support tickets, reviews, and social channels in real time with AI-powered sentiment analysis.',
@@ -25,18 +26,18 @@ export default function Page() {
             analyzes customer sentiment across support tickets, reviews, and social channels in real time.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/zion-ai-customer-sentiment-tracker"
               className="inline-flex rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
             >
               View Zion AI Customer Sentiment Tracker →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               Browse All Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </div>

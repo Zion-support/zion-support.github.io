@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Music Composition | Zion Tech Group',
   description:
     'AI Music Composition accelerates creative production with AI-assisted design, video generation, and content creation tools. Produce high-quality visual ass',

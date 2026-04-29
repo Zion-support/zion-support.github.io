@@ -442,7 +442,7 @@ export default function ToolsPage() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool) => (
-            <Link
+            <a
               key={tool.id}
               href={tool.href}
               className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 hover:shadow-lg"
@@ -455,7 +455,7 @@ export default function ToolsPage() {
                 {tool.title}
               </h2>
               <p className="mt-2 text-sm text-slate-600">{tool.description}</p>
-            </Link>
+            </a>
           ))}
 
           {/* Placeholder for future tools */}
@@ -474,18 +474,18 @@ export default function ToolsPage() {
             Our team can build custom calculators and tools tailored to your organization's specific needs.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
             >
               Contact Us
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-services"
               className="rounded-lg border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50"
             >
               View AI Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

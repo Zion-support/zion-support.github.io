@@ -57,12 +57,12 @@ export default function MeetingCostCalculator() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 py-12">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
-          <Link
+          <a
             href="/tools"
             className="text-sm text-emerald-600 hover:underline"
           >
             ← Back to Tools
-          </Link>
+          </a>
         </div>
 
         <div className="mb-8 text-center">
@@ -207,12 +207,12 @@ export default function MeetingCostCalculator() {
               </div>
               
               <div className="mt-6">
-                <Link
+                <a
                   href="/ai-services"
                   className="inline-block rounded-lg bg-emerald-600 px-6 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
                 >
                   Explore AI Meeting Solutions
-                </Link>
+                </a>
               </div>
             </div>
           </div>

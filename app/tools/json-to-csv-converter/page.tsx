@@ -194,9 +194,9 @@ export default function JsonToCsvConverter() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/" className="text-cyan-400 hover:text-cyan-300 text-sm mb-4 inline-flex items-center gap-1">
+          <a href="/" className="text-cyan-400 hover:text-cyan-300 text-sm mb-4 inline-flex items-center gap-1">
             ← Back to Home
-          </Link>
+          </a>
           <h1 className="text-3xl font-bold mt-2 mb-2">JSON to CSV Converter</h1>
           <p className="text-gray-400 max-w-2xl">
             Convert JSON arrays to CSV with support for nested objects, NDJSON, custom delimiters, and

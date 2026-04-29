@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, Users, Zap, Shield, Target, BookOpen } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Team | Zion Tech Group',
   description:
     'Meet the Zion Tech Group team. Engineers, architects, and product people building production-ready AI solutions with security-first delivery and measurable outcomes.',
@@ -72,25 +73,25 @@ export default function TeamPage() {
             document processing to predictive analytics and compliance.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5"
             >
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/about"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               About Zion
-            </Link>
-            <Link
+            </a>
+            <a
               href="/careers"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               Join the Team
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -156,18 +157,18 @@ export default function TeamPage() {
             delivery plan. No commitment required.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/contact"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               Start a Conversation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Explore Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>

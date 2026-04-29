@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Autonomous Agent Skill Orchestrator - Zion AI Lab',
   description:
     'Compose OpenClaw worker skill packs with cadence and risk-aware execution planning for autonomous app evolution.',

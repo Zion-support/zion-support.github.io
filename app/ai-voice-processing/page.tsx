@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Voice Processing | Zion Tech Group',
   description:
     'AI Voice Processing eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim op',

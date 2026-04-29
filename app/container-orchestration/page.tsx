@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Container Orchestration | Zion Tech Group',
   description:
     'Container Orchestration delivers scalable cloud architecture, automated provisioning, and resilient infrastructure management. Move workloads to production',

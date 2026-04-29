@@ -75,12 +75,12 @@ export default function AIGovernanceRiskAdvisorPage() {
             </ul>
 
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
-              <Link href="/ai-services/ai-governance-trust" className="rounded-full border border-amber-300/70 bg-amber-400/20 px-3 py-1.5 font-semibold text-amber-50">
+              <a href="/ai-services/ai-governance-trust" className="rounded-full border border-amber-300/70 bg-amber-400/20 px-3 py-1.5 font-semibold text-amber-50">
                 View governance services
-              </Link>
-              <Link href="/ai-lab/implementation-readiness-checker" className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-3 py-1.5 font-semibold text-cyan-50">
+              </a>
+              <a href="/ai-lab/implementation-readiness-checker" className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-3 py-1.5 font-semibold text-cyan-50">
                 Check implementation readiness
-              </Link>
+              </a>
             </div>
           </div>
         </div>

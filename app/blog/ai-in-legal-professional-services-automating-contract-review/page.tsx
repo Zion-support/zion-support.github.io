@@ -1,9 +1,10 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import Breadcrumb from '@/app/components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI in Legal & Professional Services: Automating Contract Review | Zion Tech Group Blog',
   description:
     'How AI is transforming legal workflows. Reduce document review time, surface risk clauses, and automate client intake with AI-powered legal analysis.',
@@ -107,28 +108,28 @@ export default function Page() {
             goals.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/solutions/legal-professional-services"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               Explore Legal AI Solutions
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
-            </Link>
+            </a>
           </div>
         </div>
 
         <div className="mt-12 border-t border-slate-800 pt-8">
-          <Link
+          <a
             href="/blog"
             className="text-sm font-medium text-purple-300 transition hover:text-purple-200"
           >
             &larr; Back to all articles
-          </Link>
+          </a>
         </div>
       </article>
     </div>

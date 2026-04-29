@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Long-Horizon AI Memory & Agents | Zion Tech Group",
   description: "Architect durable memory for agents that work across days and weeks: episodic recall, structured knowledge, and forgetting policies. Balance personalization with privacy and compliance.",
   alternates: { canonical: "/ai-services/ai-memory-agents-long-horizon" },

@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Route Optimizer | Zion Tech Group',
   description:
     'Minimize delivery time and costs with AI-powered route planning that factors in traffic, weather, and constraints.',

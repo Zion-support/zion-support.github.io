@@ -1,4 +1,5 @@
 import Banner from './components/Banner';
+import DonateSection from './components/DonateSection';
 import { whatsNewItems } from './features/featuredItems';
 import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
@@ -7,6 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
 import OpenCollectiveWidget from './components/OpenCollectiveWidget';
+import TopToolsShowcase from './components/TopToolsShowcase';
 
 type DeploymentReadinessReport = {
   timestamp?: string;
@@ -313,18 +315,18 @@ export default function Home() {
             >
               {autoHealth?.severity === 'critical' ? 'Critical' : automationHealthOk ? 'Nominal' : 'Review'}
             </span>
-            <Link
+            <a
               href="/ai-lab/deploy-drift-dashboard"
               className="rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-[11px] font-semibold text-slate-100 hover:bg-slate-700"
             >
               Drift dashboard
-            </Link>
-            <Link
+            </a>
+            <a
               href="/automation"
               className="rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-[11px] font-semibold text-slate-100 hover:bg-slate-700"
             >
               Automation
-            </Link>
+            </a>
             <DependencyBadge />
           </div>
         </div>
@@ -343,46 +345,46 @@ export default function Home() {
             and delivery speed.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link
+            <a
               href="#ai-product-recommender"
               className="rounded-lg bg-fuchsia-600 px-4 py-2 text-sm font-semibold text-white hover:bg-fuchsia-700"
             >
               Try AI Product Recommender
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab"
               className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
             >
               Explore AI Lab
-            </Link>
+            </a>
             {heroCtas.map((cta) => (
-              <Link key={cta.href} href={cta.href} className={cta.className}>
+              <a key={cta.href} href={cta.href} className={cta.className}>
                 {cta.label}
-              </Link>
+              </a>
             ))}
-            <Link
+            <a
               href="/automation"
               className="rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100"
             >
               View Automation Engine
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-services/autonomous-growth-intelligence"
               className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800 hover:bg-amber-100"
             >
               Explore Autonomous Growth Intelligence
-            </Link>
-            <Link
+            </a>
+            <a
               href="#ai-catalog"
               className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
             >
               View all AI products & experiences
-            </Link>
+            </a>
           </div>
         </section>
 
         <section className="mt-8 grid gap-4 md:grid-cols-3">
-          <Link
+          <a
             href="/ai-services"
             className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
           >
@@ -393,8 +395,8 @@ export default function Home() {
             <p className="mt-2 text-sm text-slate-600">
               Generative AI, autonomous agents, RAG, and multimodal intelligence with governance.
             </p>
-          </Link>
-          <Link
+          </a>
+          <a
             href="/ai-lab"
             className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
           >
@@ -404,8 +406,8 @@ export default function Home() {
               Interactive tools for readiness scoring, governance risk, rollout planning, and growth
               strategy.
             </p>
-          </Link>
-          <Link
+          </a>
+          <a
             href="/automation"
             className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
           >
@@ -417,7 +419,7 @@ export default function Home() {
               Agent pipelines for audits, performance checks, quality gates, and deployment-safe
               content evolution.
             </p>
-          </Link>
+          </a>
         </section>
 
         <section className="mt-6 rounded-2xl border border-cyan-200 bg-cyan-50/60 p-5 shadow-sm">
@@ -431,48 +433,48 @@ export default function Home() {
             already live across AI Lab.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/ai-lab/autonomous-rag-knowledge-workspace"
               className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
             >
               Open Autonomous RAG Knowledge Workspace
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab/autonomous-media-prompt-studio"
               className="rounded-lg border border-fuchsia-300 bg-fuchsia-50 px-4 py-2 text-sm font-semibold text-fuchsia-800 hover:bg-fuchsia-100"
             >
               Launch Media Prompt Studio
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab/autonomous-conversion-copilot"
               className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
             >
               Explore Conversion Copilot
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab/autonomous-revenue-forecast-studio"
               className="rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100"
             >
               Open Revenue Forecast Studio
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab/autonomous-incident-commander"
               className="rounded-lg border border-rose-300 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-800 hover:bg-rose-100"
             >
               Open Incident Commander
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab/autonomous-agent-skill-orchestrator"
               className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
             >
               Open Agent Skill Orchestrator
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab/autonomous-experiment-priority-engine"
               className="rounded-lg border border-sky-300 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-800 hover:bg-sky-100"
             >
               Open Experiment Priority Engine
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -493,12 +495,12 @@ export default function Home() {
                 </p>
               ) : null}
             </div>
-            <Link
+            <a
               href="/ai-lab/deployment-readiness-console"
               className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
             >
               Open deployment readiness console
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -519,18 +521,18 @@ export default function Home() {
             </ul>
           ) : null}
           <div className="mt-3 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/ai-lab/deploy-drift-dashboard"
               className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
             >
               Open deploy drift dashboard
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab"
               className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
             >
               Explore all AI Lab launches
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -547,18 +549,18 @@ export default function Home() {
             multi-phase plan and jump directly to the most relevant Zion AI products and services.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/ai-services/ai-strategy-roadmap"
               className="rounded-lg bg-fuchsia-600 px-4 py-2 text-sm font-semibold text-white hover:bg-fuchsia-700"
             >
               Start with AI strategy
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact#engagement"
               className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
              data-cta-event="cta_contact" data-cta-label="page">
               Talk with a solutions architect
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -577,7 +579,7 @@ export default function Home() {
           </p>
           <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {aiCatalogHighlights.map((item) => (
-              <Link
+              <a
                 key={item.title}
                 href={item.href}
                 className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-violet-300 hover:bg-violet-50"
@@ -585,7 +587,7 @@ export default function Home() {
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-violet-700">{item.badge}</p>
                 <h3 className="mt-2 text-base font-semibold text-slate-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{item.description}</p>
-              </Link>
+              </a>
             ))}
           </div>
         </section>
@@ -604,16 +606,16 @@ export default function Home() {
                 improving conversion, reliability, and deployment speed.
               </p>
             </div>
-            <Link
+            <a
               href="/products"
               className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
             >
               Browse all AI products
-            </Link>
+            </a>
           </div>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
             {liveNowItems.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
@@ -621,9 +623,9 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">{item.badge}</p>
                 <p className="mt-1 text-sm font-semibold text-slate-900">{item.title}</p>
                 <p className="mt-1 text-xs text-slate-600">{item.description}</p>
-              </Link>
+              </a>
             ))}
-            <Link
+            <a
               href="/automation"
               className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
             >
@@ -634,7 +636,7 @@ export default function Home() {
               <p className="mt-1 text-xs text-slate-600">
                 Continuous AI audits and deployment-safe improvement pipelines.
               </p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -653,15 +655,15 @@ export default function Home() {
                 Try our free in-browser AI tools.
               </p>
             </div>
-            <Link
+            <a
               href="/ai-tools"
               className="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
             >
               Try All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <Link
+            <a
               href="/ai-tools"
               className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
             >
@@ -672,8 +674,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">ROI Calculator</h3>
               <p className="mt-2 text-sm text-slate-600">Calculate your AI investment returns</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-tools"
               className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
             >
@@ -684,8 +686,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Document Analyzer</h3>
               <p className="mt-2 text-sm text-slate-600">AI-powered document analysis</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-tools"
               className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
             >
@@ -696,7 +698,7 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Chatbot Builder</h3>
               <p className="mt-2 text-sm text-slate-600">Create AI chatbots in minutes</p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -715,15 +717,15 @@ export default function Home() {
                 all running directly in your browser.
               </p>
             </div>
-            <Link
+            <a
               href="/ai-experiences"
               className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
             >
               Explore All AI Experiences
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <Link
+            <a
               href="/ai-experiences"
               className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -734,8 +736,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Voice AI Assistant</h3>
               <p className="mt-2 text-sm text-slate-600">Speak naturally and get instant AI responses</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-experiences"
               className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -746,8 +748,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Smart Recommendations</h3>
               <p className="mt-2 text-sm text-slate-600">AI-powered suggestions personalized for you</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-experiences"
               className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -758,8 +760,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Intelligent Notifications</h3>
               <p className="mt-2 text-sm text-slate-600">Smart alerts that learn your preferences</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-experiences"
               className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -770,7 +772,7 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">AI Chat Companion</h3>
               <p className="mt-2 text-sm text-slate-600">Conversational AI that truly understands</p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -788,15 +790,15 @@ export default function Home() {
                 Monitor service health, calculate ROI, analyze documents, and access all AI tools from one dashboard.
               </p>
             </div>
-            <Link
+            <a
               href="/ai-dashboard"
               className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
             >
               Open AI Dashboard
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-4">
-            <Link
+            <a
               href="/ai-dashboard"
               className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
             >
@@ -807,8 +809,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Service Health</h3>
               <p className="mt-2 text-sm text-slate-600">Real-time monitoring</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-tools"
               className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
             >
@@ -819,8 +821,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">ROI Calculator</h3>
               <p className="mt-2 text-sm text-slate-600">Calculate returns</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-tools"
               className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
             >
@@ -831,8 +833,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Document Analyzer</h3>
               <p className="mt-2 text-sm text-slate-600">AI analysis</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab"
               className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
             >
@@ -843,7 +845,7 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">AI Lab</h3>
               <p className="mt-2 text-sm text-slate-600">Experiments</p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -861,15 +863,15 @@ export default function Home() {
                 Analyze code complexity, test API response times, and more — all free.
               </p>
             </div>
-            <Link
+            <a
               href="/ai-tools"
               className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
             >
               All Developer Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <Link
+            <a
               href="/tools/json-to-typescript-converter"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -880,8 +882,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">JSON to TypeScript</h3>
               <p className="mt-2 text-sm text-slate-600">Convert JSON to TypeScript interfaces</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/code-complexity-analyzer"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -892,8 +894,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Code Complexity Analyzer</h3>
               <p className="mt-2 text-sm text-slate-600">AI-powered code analysis and suggestions</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/api-response-tester"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -904,7 +906,7 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">API Response Tester</h3>
               <p className="mt-2 text-sm text-slate-600">Test API latency and performance</p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -922,12 +924,12 @@ export default function Home() {
                 Monitor the uptime, latency, and status of all Zion AI services.
               </p>
             </div>
-            <Link
+            <a
               href="/ai-status"
               className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
             >
               View Status Dashboard
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -945,15 +947,15 @@ export default function Home() {
                 File analyzer, website analyzer, and more AI-powered developer utilities.
               </p>
             </div>
-            <Link
+            <a
               href="/ai-tools"
               className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
             >
               View All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <Link
+            <a
               href="/tools/file-analyzer"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -964,8 +966,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">File Analyzer</h3>
               <p className="mt-2 text-sm text-slate-600">AI file analysis</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/sql-query-generator"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -976,8 +978,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">SQL Generator</h3>
               <p className="mt-2 text-sm text-slate-600">AI query builder</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/api-designer"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -988,8 +990,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">API Designer</h3>
               <p className="mt-2 text-sm text-slate-600">Visual API builder</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/website-analyzer"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -1000,7 +1002,7 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Website Analyzer</h3>
               <p className="mt-2 text-sm text-slate-600">SEO & performance audit</p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1019,15 +1021,15 @@ export default function Home() {
                 Generate .gitignore files for 18+ languages, frameworks, and tools with search and custom rules.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/css-minifier-beautifier"
               className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
             >
@@ -1041,8 +1043,8 @@ export default function Home() {
                 Minify CSS for production or beautify for readability. Includes analysis panel showing rule count, unique selectors, colors used, media queries, !important usage, and size savings percentage. Toggle 2 or 4-space indentation.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/gitignore-generator"
               className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
             >
@@ -1056,7 +1058,7 @@ export default function Home() {
                 Generate .gitignore files for 18+ languages (Node, Python, Go, Rust, Java, Swift), frameworks (Next.js, Vue, Django, Rails), DevOps (Docker, Terraform), and OS files. Search templates, pick &ldquo;Popular&rdquo; presets, add custom rules, and download instantly. 100% client-side.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1075,15 +1077,15 @@ export default function Home() {
                 Generate HMAC signatures for API auth, webhooks, and request signing.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/xml-formatter-validator"
               className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
             >
@@ -1097,8 +1099,8 @@ export default function Home() {
                 Pretty-print or minify XML with real-time validation, error details with line numbers, element/attribute stats, and configurable indentation. 100% client-side.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/hmac-generator"
               className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
             >
@@ -1112,7 +1114,7 @@ export default function Home() {
                 Generate HMAC-SHA256/384/512 signatures with hex and Base64 output. Perfect for webhook verification (Stripe, GitHub), API request signing, and JWT generation. Includes Node.js verification snippets.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1133,7 +1135,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/uuid-generator"
               className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
             >
@@ -1148,8 +1150,8 @@ export default function Home() {
                 (uppercase, braces, no hyphens), copy-all, and download as .txt.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/timestamp-converter"
               className="rounded-xl border border-sky-200 bg-white p-5 transition hover:border-sky-400 hover:shadow-lg hover:shadow-sky-600/10"
             >
@@ -1164,7 +1166,7 @@ export default function Home() {
                 auto-detect format, and time difference calculator.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-sky-700 bg-sky-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1183,15 +1185,15 @@ export default function Home() {
                 Compare JSON objects with structural diffing and filtering.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/color-converter"
               className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
             >
@@ -1206,8 +1208,8 @@ export default function Home() {
                 color harmonies (complementary, triadic, analogous), and instant CSS export.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/json-diff-viewer"
               className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
             >
@@ -1222,7 +1224,7 @@ export default function Home() {
                 added, removed, or changed. Shows path-level changes with copy support.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1241,15 +1243,15 @@ export default function Home() {
                 URL slugs with case variants, stop word removal, and live preview.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/base64-encoder-decoder"
               className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
             >
@@ -1264,8 +1266,8 @@ export default function Home() {
                 character count stats, and expansion ratio display.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/url-slug-generator"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
@@ -1280,7 +1282,7 @@ export default function Home() {
                 4 case styles, stop word removal, and shows all case variants.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1298,15 +1300,15 @@ export default function Home() {
                 JWT decoder, cron generator, and more utilities.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/jwt-decoder"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -1317,8 +1319,8 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">JWT Decoder</h3>
               <p className="mt-2 text-sm text-slate-600">Decode & inspect tokens</p>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/cron-generator"
               className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -1329,7 +1331,7 @@ export default function Home() {
               </div>
               <h3 className="text-base font-semibold text-slate-900">Cron Generator</h3>
               <p className="mt-2 text-sm text-slate-600">Schedule expressions</p>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1348,15 +1350,15 @@ export default function Home() {
                 Parse and manage .env files with auto secret detection and .env.example export.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-lime-600 px-4 py-2 text-sm font-semibold text-white hover:bg-lime-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/csv-json-converter"
               className="rounded-xl border border-lime-200 bg-white p-5 transition hover:border-lime-400 hover:shadow-lg hover:shadow-lime-600/10"
             >
@@ -1371,8 +1373,8 @@ export default function Home() {
                 Upload files, copy output, or download results instantly.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-lime-700 bg-lime-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/env-file-parser"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
@@ -1387,7 +1389,7 @@ export default function Home() {
                 and one-click .env.example generation with placeholder values.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1406,15 +1408,15 @@ export default function Home() {
                 Test regular expressions with real-time match highlighting and capture group inspection.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-pink-600 px-4 py-2 text-sm font-semibold text-white hover:bg-pink-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/css-gradient-generator"
               className="rounded-xl border border-pink-200 bg-white p-5 transition hover:border-pink-400 hover:shadow-lg hover:shadow-pink-600/10"
             >
@@ -1428,8 +1430,8 @@ export default function Home() {
                 Create linear, radial, and conic gradients with a visual editor. Add color stops, pick from 8 curated presets, randomize, and copy ready-to-use CSS instantly.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-pink-700 bg-pink-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/regex-tester"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
@@ -1443,7 +1445,7 @@ export default function Home() {
                 Test regular expressions with real-time match highlighting, capture group details, toggle-able flags, 10 common pattern presets, and a built-in cheat sheet.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1462,15 +1464,15 @@ export default function Home() {
                 keyword extraction, and writing insights. 100% client-side, nothing leaves your browser.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/document-analyzer"
               className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10 md:col-span-2"
             >
@@ -1491,7 +1493,7 @@ export default function Home() {
                   <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1510,15 +1512,15 @@ export default function Home() {
                 Analyze string randomness and password strength with the Entropy Analyzer — character class breakdown, pattern detection, and brute-force bit estimation.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/chmod-calculator"
               className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
             >
@@ -1532,8 +1534,8 @@ export default function Home() {
                 Visually build Unix file permissions with owner/group/other toggles, SetUID/SetGID/Sticky bits, 12 common presets (644, 755, 777, etc.), and instant octal/symbolic/chmod command output.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/string-entropy-analyzer"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
@@ -1547,7 +1549,7 @@ export default function Home() {
                 Analyze the randomness and information density of any string. Character class breakdown with visual bars, top-frequency characters, pattern detection warnings (sequential, keyboard patterns), unique char ratio, and brute-force bit estimation. 8 example inputs included.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1566,15 +1568,15 @@ export default function Home() {
                 Query DNS records for any domain — A, AAAA, MX, TXT, NS, CNAME, SOA, and CAA — all from your browser.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/markdown-table-generator"
               className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
             >
@@ -1588,8 +1590,8 @@ export default function Home() {
                 Paste CSV or TSV data and instantly generate Markdown tables, ASCII box tables, or HTML tables. Toggle header rows, choose alignment (left/center/right), see a live rendered preview, and copy or download the output.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/dns-lookup"
               className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -1603,7 +1605,7 @@ export default function Home() {
                 Query DNS records for any domain — A, AAAA, MX, TXT, NS, CNAME, SOA, and CAA records. Select multiple record types at once, see query times, copy individual values, and export results. Uses Google Public DNS — 100% client-side.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1622,15 +1624,15 @@ export default function Home() {
                 Parse User-Agent strings to detect browser, OS, device type, and bot status — including AI crawlers like GPTBot and Claude.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/cors-tester"
               className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
             >
@@ -1644,8 +1646,8 @@ export default function Home() {
                 Test Cross-Origin Resource Sharing configuration for any URL. See allowed origins, methods, headers, and credentials at a glance. Origin verification shows exactly whether your app domain is permitted. Quick presets for common APIs.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/user-agent-parser"
               className="rounded-xl border border-slate-200 bg-white p-5 transition hover:border-slate-400 hover:shadow-lg hover:shadow-slate-600/10"
             >
@@ -1660,7 +1662,7 @@ export default function Home() {
                 Parse any User-Agent string to instantly detect browser name &amp; version, operating system, device type &amp; vendor, rendering engine, and CPU architecture. Includes bot detection for 20+ crawlers — Googlebot, GPTBot, Claude, Bingbot, Ahrefs, and more.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1679,15 +1681,15 @@ export default function Home() {
                 Format and beautify SQL queries with intelligent keyword detection and indentation.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/json-schema-validator"
               className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -1701,8 +1703,8 @@ export default function Home() {
                 Validate JSON data against JSON Schema with full support for type checking, required properties, string/number constraints, array validation, nested objects, and composition keywords (allOf, anyOf, oneOf, not). Shows exact error paths with keyword labels.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/sql-formatter"
               className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
             >
@@ -1716,7 +1718,7 @@ export default function Home() {
                 Format and beautify SQL queries with intelligent keyword capitalization, smart indentation for subqueries and CTEs, and support for SELECT, INSERT, UPDATE, CREATE TABLE, and more. Choose between spaces or tabs. Includes example queries to try instantly.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1735,15 +1737,15 @@ export default function Home() {
                 editor with instant preview and export to HTML or Markdown files.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/api-request-builder"
               className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
             >
@@ -1758,8 +1760,8 @@ export default function Home() {
                 authentication, and a formatted response viewer with timing and size metrics. Includes request history.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/markdown-live-editor"
               className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
             >
@@ -1774,7 +1776,7 @@ export default function Home() {
                 blockquotes, and links. Export as clean HTML or Markdown file. Includes quick reference cheatsheet.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1793,15 +1795,15 @@ export default function Home() {
                 Query JSON data interactively with JSONPath expressions and instant results.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/number-base-converter"
               className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
             >
@@ -1817,8 +1819,8 @@ export default function Home() {
                 and swap source base. Supports arbitrarily large integers.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/json-path-explorer"
               className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -1834,7 +1836,7 @@ export default function Home() {
                 Includes collapsible tree view, syntax reference, and preloaded sample data.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1853,15 +1855,15 @@ export default function Home() {
                 with nested object flattening, custom delimiters, and live preview.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/color-blindness-simulator"
               className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
             >
@@ -1878,8 +1880,8 @@ export default function Home() {
                 ratios, and get accessibility tips. 8% of men have color vision deficiency.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/json-to-csv-converter"
               className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
             >
@@ -1895,7 +1897,7 @@ export default function Home() {
                 live preview table, file upload, and one-click download. 100% client-side.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1914,15 +1916,15 @@ export default function Home() {
                 with configurable viewport and font-size settings.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/base32-encoder-decoder"
               className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
             >
@@ -1938,8 +1940,8 @@ export default function Home() {
                 variant, includes practical examples, and one-click copy. 100% client-side.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/css-unit-converter"
               className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -1955,7 +1957,7 @@ export default function Home() {
                 presets, quick CSS copy, and a full unit reference guide.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -1974,15 +1976,15 @@ export default function Home() {
                 Generate block-style ASCII art text for terminal banners, README headers, and more.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/subnet-calculator"
               className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
             >
@@ -1998,8 +2000,8 @@ export default function Home() {
                 subnet splitting guidance, and a quick-reference CIDR table. Perfect for network planning and troubleshooting.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ascii-art-generator"
               className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
             >
@@ -2015,7 +2017,7 @@ export default function Home() {
                 Supports A-Z, 0-9, and common symbols. Great for terminal banners, README files, and code comments.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -2034,15 +2036,15 @@ export default function Home() {
                 Extract dominant color palettes from images with export to CSS, SCSS, Tailwind, and JSON.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/certificate-decoder"
               className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
             >
@@ -2059,8 +2061,8 @@ export default function Home() {
                 Essential for DevOps, security audits, and SSL troubleshooting.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/image-color-extractor"
               className="rounded-xl border border-pink-200 bg-white p-5 transition hover:border-pink-400 hover:shadow-lg hover:shadow-pink-600/10"
             >
@@ -2077,7 +2079,7 @@ export default function Home() {
                 and a visual palette strip. Perfect for designers building brand-consistent palettes.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-pink-700 bg-pink-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -2096,15 +2098,15 @@ export default function Home() {
                 Generate realistic mock API data with a visual schema editor and 25+ field types.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/html-to-jsx"
               className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
             >
@@ -2121,8 +2123,8 @@ export default function Home() {
                 Includes live example presets and a visual conversion reference table.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/mock-api-generator"
               className="rounded-xl border border-purple-200 bg-white p-5 transition hover:border-purple-400 hover:shadow-lg hover:shadow-purple-600/10"
             >
@@ -2139,7 +2141,7 @@ export default function Home() {
                 Perfect for prototyping, testing, and demos without a real backend.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-purple-700 bg-purple-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -2158,15 +2160,15 @@ export default function Home() {
                 Identify hash types across 25+ algorithms with security analysis and confidence scoring.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/json-to-zod"
               className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -2184,8 +2186,8 @@ export default function Home() {
                 Supports strict and passthrough modes, mixed-type arrays with unions, and safe key quoting.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/hash-identifier"
               className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
             >
@@ -2201,7 +2203,7 @@ export default function Home() {
                 confidence scoring, and quick examples. A reference table shows hash lengths at a glance.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -2220,15 +2222,15 @@ export default function Home() {
                 Calculate CSS specificity scores with visual breakdowns, selector comparison, and cascade order reference.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/json-to-toml-converter"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
@@ -2244,8 +2246,8 @@ export default function Home() {
                 Cargo.toml, pyproject.toml, or Hugo config files from JSON data. Upload files, download output, and load samples.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/css-specificity-calculator"
               className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
             >
@@ -2261,7 +2263,7 @@ export default function Home() {
                 try 18 real-world examples, and reference the full cascade order. Essential for debugging CSS conflicts.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -2280,15 +2282,15 @@ export default function Home() {
                 Build Apache .htaccess rules visually — redirects, rewrites, browser caching, and security headers without memorizing syntax.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/favicon-generator"
               className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
             >
@@ -2304,8 +2306,8 @@ export default function Home() {
                 Supports Apple Touch Icons, Android Chrome icons, and PWA splash screens.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/htaccess-generator"
               className="rounded-xl border border-slate-200 bg-white p-5 transition hover:border-slate-400 hover:shadow-lg hover:shadow-slate-600/10"
             >
@@ -2322,7 +2324,7 @@ export default function Home() {
                 bot blocking, custom error pages, and more. Copy or download the generated file instantly.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -2341,15 +2343,15 @@ export default function Home() {
                 Generate JSON Schema and TypeScript types from sample data with smart format detection.
               </p>
             </div>
-            <Link
+            <a
               href="/tools"
               className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700"
             >
               All Tools
-            </Link>
+            </a>
           </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <Link
+            <a
               href="/tools/cookie-decoder"
               className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
             >
@@ -2364,8 +2366,8 @@ export default function Home() {
                 Get a security score with critical/warning/info recommendations. Supports multiple cookies and includes an attribute reference guide.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/json-schema-generator"
               className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
             >
@@ -2381,11 +2383,12 @@ export default function Home() {
                 Configurable options for required fields, additional properties, examples, and descriptions. Download as .json or .ts.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
-            </Link>
+            </a>
           </div>
         </section>
 
 
+      <DonateSection />
       <OpenCollectiveWidget />
       <section className="mt-12 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl text-center">
         <h3 className="text-2xl font-bold text-white mb-4">Support Zion Tech Group</h3>
@@ -2405,7 +2408,9 @@ export default function Home() {
         </div>
       </section>
 
-      </main>
+      <TopToolsShowcase />
+
+</main>
     </div>
   );
 }

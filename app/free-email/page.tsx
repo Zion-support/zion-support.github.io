@@ -85,12 +85,12 @@ export default function FreeEmailPage() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link 
+          <a 
             href="/support"
             className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
           >
             ← Back to Support Page
-          </Link>
+          </a>
         </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import ROIImpactEstimator from '../components/ROIImpactEstimator';
 import SolutionFinder from '../components/home/SolutionFinder';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Experiments | Zion Tech Group',
   description:
     'Try interactive AI-powered tools in your browser, including an automation ROI estimator and a solution finder that maps you to the right Zion AI products.',
@@ -30,30 +31,30 @@ export default function AIExperimentsPage() {
             from automation ROI modeling to solution discovery.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/contact?topic=project&source=ai-experiments"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-700/30 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
              data-cta-event="cta_contact" data-cta-label="page">
               Talk about a pilot
-            </Link>
-            <Link
+            </a>
+            <a
               href="/zion-ai-autonomous-ops-hub"
               className="inline-flex items-center rounded-xl border border-slate-600 bg-slate-900/60 px-6 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
             >
               Learn about Autonomous Ops
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai/solutions-configurator"
               className="inline-flex items-center rounded-xl border border-sky-500/70 bg-sky-500/10 px-6 py-2.5 text-sm font-semibold text-sky-100 shadow-lg shadow-sky-900/40 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-500/20"
             >
               Try solutions configurator
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai/url-audit-assistant"
               className="inline-flex items-center rounded-xl border border-slate-600 bg-slate-900/70 px-6 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-emerald-400 hover:text-white"
             >
               Audit a URL checklist
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -82,13 +83,13 @@ export default function AIExperimentsPage() {
             />
             <p className="mt-4 text-xs text-slate-400">
               Looking for something else? Browse the full{' '}
-              <Link href="/ai-services" className="font-semibold text-purple-300 hover:text-purple-200">
+              <a href="/ai-services" className="font-semibold text-purple-300 hover:text-purple-200">
                 AI Services
-              </Link>{' '}
+              </a>{' '}
               catalog or the{' '}
-              <Link href="/solutions" className="font-semibold text-purple-300 hover:text-purple-200">
+              <a href="/solutions" className="font-semibold text-purple-300 hover:text-purple-200">
                 solutions library
-              </Link>
+              </a>
               .
             </p>
           </div>

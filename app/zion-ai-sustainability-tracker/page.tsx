@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Sustainability Tracker | Zion Tech Group',
   description:
     'Track ESG metrics, carbon footprint, and sustainability goals with automated data collection and reporting.',

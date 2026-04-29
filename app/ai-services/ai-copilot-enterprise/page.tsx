@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Copilot & Enterprise Assistants | Zion Tech Group',
   description:
     'Deploy AI copilots and enterprise assistants that augment human work. Context-aware, role-specific AI embedded in your tools and workflows.',

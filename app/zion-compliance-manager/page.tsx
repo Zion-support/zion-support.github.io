@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion Compliance Manager | Zion Tech Group',
   description:
     'Zion Compliance Manager provides enterprise-grade security controls, continuous monitoring, and compliance automation. Reduce risk exposure and accelerate ',

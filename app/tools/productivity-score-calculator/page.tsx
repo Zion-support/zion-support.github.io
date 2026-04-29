@@ -93,12 +93,12 @@ export default function ProductivityScoreCalculator() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 py-12">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
-          <Link
+          <a
             href="/tools"
             className="text-sm text-emerald-600 hover:underline"
           >
             ← Back to Tools
-          </Link>
+          </a>
         </div>
 
         <div className="mb-8 text-center">
@@ -277,18 +277,18 @@ export default function ProductivityScoreCalculator() {
                 Our AI implementation experts can help you develop a roadmap to achieve optimal productivity gains.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link
+                <a
                   href="/ai-services/ai-strategy-roadmap"
                   className="inline-block rounded-lg bg-violet-600 px-6 py-2 text-sm font-semibold text-white hover:bg-violet-700"
                 >
                   Get AI Strategy
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="inline-block rounded-lg border border-violet-300 bg-white px-6 py-2 text-sm font-semibold text-violet-700 hover:bg-violet-50"
                 >
                   Talk to Expert
-                </Link>
+                </a>
               </div>
             </div>
           </div>

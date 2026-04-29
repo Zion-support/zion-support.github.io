@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Investors | Zion Tech Group',
   description:
     'Investor hub for Zion Tech Group — strategy, traction, business model, and governance for current and prospective investors.',

@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Network Design | Zion Tech Group',
   description:
     'Network Design designs and manages robust network infrastructure for reliable connectivity, security, and performance. Build the foundation your applicatio',

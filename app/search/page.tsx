@@ -105,36 +105,36 @@ export default function SearchPage() {
           <div className="mt-4">
             <p className="text-xs font-semibold text-slate-400">Popular searches</p>
             <div className="mt-2 flex flex-wrap gap-2">
-              <Link
+              <a
                 href="/search?q=chatbot"
                 className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
               >
                 Chatbot
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/search?q=automation"
                 className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
               >
                 Automation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/search?q=healthcare"
                 className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
               >
                 Healthcare
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/search?q=pricing"
                 className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
               >
                 Pricing
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/search?q=document"
                 className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
               >
                 Document
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function SearchPage() {
           <p className="mb-3 text-sm font-semibold text-slate-300">Browse by category</p>
           <div className="flex flex-wrap gap-3">
             {browseCategories.map((cat) => (
-              <Link
+              <a
                 key={cat.href}
                 href={cat.href}
                 className="flex items-center gap-2 rounded-xl border border-slate-700/70 bg-slate-900/65 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
@@ -173,7 +173,7 @@ export default function SearchPage() {
                 <cat.icon className="h-4 w-4 text-purple-400" />
                 {cat.label}
                 <ArrowRight className="h-3.5 w-3.5 text-slate-500" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -181,7 +181,7 @@ export default function SearchPage() {
         {results.length > 0 ? (
           <div className="space-y-2">
             {results.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className="flex items-center justify-between gap-3 rounded-xl border border-slate-700/70 bg-slate-900/65 px-5 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80"
@@ -193,7 +193,7 @@ export default function SearchPage() {
                 <span className="rounded-md border border-slate-700 bg-slate-950/70 px-2 py-0.5 text-[11px] text-slate-300">
                   {item.href}
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         ) : (
@@ -201,9 +201,9 @@ export default function SearchPage() {
             <p className="text-lg font-semibold text-white">No results found</p>
             <p className="mt-2 text-sm text-slate-300">
               Try different keywords or{' '}
-              <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
+              <a href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
                 contact us
-              </Link>{' '}
+              </a>{' '}
               for help.
             </p>
           </div>

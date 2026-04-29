@@ -308,7 +308,7 @@ export default function FeaturesShowcase() {
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredFeatures.map((feature) => (
-          <Link
+          <a
             key={feature.href}
             href={feature.href}
             className="group bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1"
@@ -327,7 +327,7 @@ export default function FeaturesShowcase() {
             <div className="mt-4 pt-4 border-t border-slate-700/50">
               <span className="text-xs text-purple-400 font-medium">{feature.category}</span>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 

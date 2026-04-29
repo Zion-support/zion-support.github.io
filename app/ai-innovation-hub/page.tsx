@@ -43,9 +43,9 @@ export default function InnovationHub() {
       <ul className="list-disc pl-6 space-y-3">
         {innovations.map((item) => (
           <li key={item.path}>
-            <Link href={item.path} className="text-blue-600 hover:underline">
+            <a href={item.path} className="text-blue-600 hover:underline">
               {item.name}
-            </Link>
+            </a>
             <p className="text-sm text-gray-600">{item.description}</p>
           </li>
         ))}

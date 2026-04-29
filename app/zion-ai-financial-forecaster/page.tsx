@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Financial Forecaster | Zion Tech Group',
   description:
     'Zion AI Financial Forecaster applies AI to financial workflows for smarter forecasting, risk assessment, and operational efficiency. Automate routine analy',

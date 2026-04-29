@@ -1,6 +1,20 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
+
 export default function SelfOptimizingCIPipeline() {
+  const [optimizing, setOptimizing] = useState(false);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (optimizing) {
+      timer = setTimeout(() => setOptimizing(false), 5000);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [optimizing]);
+
   return (
     <div className="p-6 bg-white rounded-xl shadow-lg">
       <div className="flex items-center justify-between mb-4">
@@ -14,13 +28,11 @@ export default function SelfOptimizingCIPipeline() {
         </div>
         <div className="flex items-center gap-3">
           <button
-            onClick={() => {
-              // Trigger CI optimization workflow
-            }}
+            onClick={() => setOptimizing(true)}
             className="px-4 py-2 bg-emerald-600 text-white rounded disabled:bg-emerald-400"
-            disabled
+            disabled={optimizing}
           >
-            Optimize CI
+            {optimizing ? 'Optimizing...' : 'Optimize CI'}
           </button>
         </div>
       </div>
@@ -39,9 +51,10 @@ export default function SelfOptimizingCIPipeline() {
       <div className="mt-6 bg-gray-50 rounded-lg p-4">
         <h3 className="font-semibold text-gray-800 mb-2">Deployment Status</h3>
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-2 bg-green-500 rounded-full" />
-          <span className="ml-2 text-green-600">Optimizing...</span>
+          <div className={optimizing ? "w-8 h-2 bg-orange-500 rounded-full" : "w-8 h-2 bg-green-500 rounded-full"} />
+          <span className="ml-2 font-medium">{optimizing ? 'Optimizing...' : 'Ready'}</span>
         </div>
       </div>
     </div>
   );
+}

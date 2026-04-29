@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Foundation Models & Custom Training | Zion Tech Group',
   description:
     'Train and deploy custom foundation models. Domain-specific pretraining, fine-tuning, and model adaptation for enterprise AI with full data sovereignty.',

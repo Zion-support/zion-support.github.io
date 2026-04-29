@@ -12,24 +12,24 @@ export default function NotFoundPage() {
           Page not found
         </h1>
         <p className="mt-4 max-w-xl text-base leading-7 text-slate-300">
-          Sorry, we couldn&apos;t find the page you were looking for. It may have been moved, renamed, or no longer exists.
+          Sorry, we couldn't find the page you were looking for. It may have been moved, renamed, or no longer exists.
           Use the links below to get back on track or reach out if you need help.
         </p>
         <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
-          <Link
+          <a
             href="/"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:opacity-95 focus:outline-none"
           >
             <Home className="h-4 w-4" />
             Go back home
-          </Link>
-          <Link
+          </a>
+          <a
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-600 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-purple-400/50 hover:bg-slate-800/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-           data-cta-event="cta_contact" data-cta-label="page">
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-600 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-purple-400/50 hover:bg-slate-800/60 hover:text-white focus:outline-none"
+          >
             <Mail className="h-4 w-4" />
             Contact support
-          </Link>
+          </a>
         </div>
 
         <div className="mt-16 w-full rounded-2xl border border-slate-700/70 bg-slate-900/50 p-6 text-left">
@@ -40,34 +40,34 @@ export default function NotFoundPage() {
             Jump to the page you need.
           </p>
           <nav className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Quick links">
-            <Link
+            <a
               href="/solutions"
               className="flex items-center gap-3 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/40 hover:text-white"
             >
               <LayoutGrid className="h-4 w-4 flex-shrink-0 text-purple-400" />
               Solutions by industry
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="flex items-center gap-3 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/40 hover:text-white"
             >
               <FileText className="h-4 w-4 flex-shrink-0 text-purple-400" />
               Services &amp; delivery
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="flex items-center gap-3 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/40 hover:text-white"
             >
               <Search className="h-4 w-4 flex-shrink-0 text-purple-400" />
               Pricing &amp; plans
-            </Link>
-            <Link
+            </a>
+            <a
               href="/blog"
               className="flex items-center gap-3 rounded-xl border border-slate-700/70 bg-slate-950/70 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/40 hover:text-white"
             >
               <FileText className="h-4 w-4 flex-shrink-0 text-purple-400" />
               Blog &amp; insights
-            </Link>
+            </a>
           </nav>
         </div>
       </div>

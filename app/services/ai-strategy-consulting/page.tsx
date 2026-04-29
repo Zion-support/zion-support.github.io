@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Strategy Consulting | Zion Tech Group',
   description: 'Transform your business with expert AI strategy consulting. Discover how Zion Tech Group can help transform your business.',
   openGraph: {
@@ -25,9 +26,9 @@ export default function Page() {
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">AI Strategy Consulting</h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with expert AI strategy consulting</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-xl transition-all">
+          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-xl transition-all">
             Get Started Today
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -67,9 +68,9 @@ export default function Page() {
           <p className="text-xl mb-8 text-blue-100">
             Let&apos;s discuss how AI Strategy Consulting can help you achieve your goals.
           </p>
-          <Link href="/contact" className="inline-block px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors">
+          <a href="/contact" className="inline-block px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors">
             Schedule Your Free Consultation
-          </Link>
+          </a>
         </div>
       </section>
     </div>

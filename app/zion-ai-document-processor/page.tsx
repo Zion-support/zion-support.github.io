@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Document Processor | Zion Tech Group',
   description:
     'Extract, classify, and process documents at scale with AI-powered OCR, smart templates, and compliance-ready workflows. Reduce manual data entry and errors.',

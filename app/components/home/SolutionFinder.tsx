@@ -107,7 +107,7 @@ export default function SolutionFinder({ apps }: SolutionFinderProps) {
       {visibleApps.length > 0 ? (
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {visibleApps.map((app) => (
-            <Link
+            <a
               key={app.href}
               href={app.href}
               className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-4 transition hover:-translate-y-0.5 hover:border-purple-400/60"
@@ -124,7 +124,7 @@ export default function SolutionFinder({ apps }: SolutionFinderProps) {
                 {app.name}
               </h4>
               <p className="mt-1.5 text-xs leading-5 text-slate-300">{app.description}</p>
-            </Link>
+            </a>
           ))}
         </div>
       ) : (
@@ -133,18 +133,18 @@ export default function SolutionFinder({ apps }: SolutionFinderProps) {
             No direct match found yet. Try a broader keyword or browse all available solutions.
           </p>
           <div className="mt-3 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/solutions"
               className="rounded-lg border border-slate-600 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
             >
               Explore all solutions
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="rounded-lg border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-xs font-semibold text-purple-100 transition hover:bg-purple-500/20"
             >
               Get a tailored recommendation
-            </Link>
+            </a>
           </div>
         </div>
       )}

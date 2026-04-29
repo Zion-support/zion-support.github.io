@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Asset Intelligence | Zion Tech Group',
   description:
     'Unlock predictive insights and automate workflows for optimal asset lifecycle management. Integrates document processing, compliance tracking, and real-time analytics.',

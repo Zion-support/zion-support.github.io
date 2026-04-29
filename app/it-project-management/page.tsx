@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'IT Project Management | Zion Tech Group',
   description:
     'IT Project Management streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free your team t',

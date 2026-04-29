@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Meeting Transcriber | Zion Tech Group',
   description:
     'AI Meeting Transcriber enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent tran',

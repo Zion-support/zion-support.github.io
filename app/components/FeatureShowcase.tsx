@@ -312,7 +312,7 @@ export default function FeatureShowcase() {
               )}
               
               {feature.href && (
-                <Link
+                <a
                   href={feature.href}
                   style={{
                     display: 'inline-flex',
@@ -326,7 +326,7 @@ export default function FeatureShowcase() {
                   }}
                 >
                   Learn more <ArrowRight size={14} />
-                </Link>
+                </a>
               )}
             </div>
           ))}
@@ -369,7 +369,7 @@ export default function FeatureShowcase() {
           textAlign: 'center',
           marginTop: '50px'
         }}>
-          <Link
+          <a
             href="/contact"
             style={{
               display: 'inline-flex',
@@ -388,7 +388,7 @@ export default function FeatureShowcase() {
             <Bot size={20} />
             Explore Our AI Solutions
             <ArrowRight size={20} />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

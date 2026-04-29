@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Digital Twin Platform | Zion Tech Group',
   description:
     'Digital Twin Platform explores the frontier of computing with advanced AI, simulation, and next-generation platforms. Position your team at the cutting edg',

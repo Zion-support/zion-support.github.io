@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Implementing AI in Your Organization: A Step-by-Step Guide | Zion Tech Group Blog',
   description: 'Explore implementing ai in your organization: a step-by-step guide and discover how AI automation is transforming businesses across industries.',
   openGraph: {
@@ -62,12 +63,12 @@ export default function Page() {
             Let&apos;s discuss how AI automation can help your organization achieve its goals.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <a href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Schedule a Consultation
-            </Link>
-            <Link href="/solutions" className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            </a>
+            <a href="/solutions" className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Explore Our Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </article>

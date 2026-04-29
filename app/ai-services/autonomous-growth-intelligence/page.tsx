@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Autonomous Growth Intelligence | Zion Tech Group',
   description:
     'Design AI-powered acquisition, conversion, retention, and expansion loops with measurable impact models and deployment-safe execution plans.',

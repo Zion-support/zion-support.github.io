@@ -1,3 +1,5 @@
+"use client";
+
 interface Metric {
   id: number;
   metric: string;

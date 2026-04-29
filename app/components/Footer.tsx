@@ -35,6 +35,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Digital Products', href: '/digital-products' },
   ].filter((link, idx, arr) => arr.findIndex((l) => l.href === link.href) === idx);
 
   return (
@@ -63,7 +64,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                     measurable outcomes faster.
                   </p>
                 </div>
-                <Link
+                <a
                   href="/contact"
                   data-cta-event="cta_discovery"
                   data-cta-label="footer_book_call"
@@ -71,7 +72,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 >
                   Book Discovery Call
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -97,13 +98,13 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 </p>
                 <div className="flex flex-wrap gap-2" aria-label="Quick links">
                   {resourceLinks.slice(0, 3).map((link) => (
-                    <Link
+                    <a
                       key={link.href}
                       href={link.href}
                       className={footerChipLinkClass}
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
                 <div className="flex items-center gap-3 pt-1" aria-label="Social media links">
@@ -114,7 +115,7 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900/70 text-gray-400 transition hover:border-purple-400 hover:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                     aria-label="LinkedIn"
                   >
-                    <LinkIcon className="h-4 w-4" />
+                    <aIcon className="h-4 w-4" />
                   </a>
                   <a
                     href={SOCIAL_LINKS.twitter}
@@ -144,15 +145,15 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 <ul className="space-y-2.5">
                   {aiServices.map((service) => (
                     <li key={service.href}>
-                      <Link href={service.href} className={footerLinkClass}>
+                      <a href={service.href} className={footerLinkClass}>
                         {service.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                   <li>
-                    <Link href="/ai-services" className={`${footerLinkClass} font-medium text-purple-300`}>
+                    <a href="/ai-services" className={`${footerLinkClass} font-medium text-purple-300`}>
                       View all AI services →
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -164,15 +165,15 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 <ul className="space-y-2.5">
                   {featuredProducts.map((product) => (
                     <li key={product.href}>
-                      <Link href={product.href} className={footerLinkClass}>
+                      <a href={product.href} className={footerLinkClass}>
                         {product.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                   <li>
-                    <Link href="/products" className={`${footerLinkClass} font-medium text-purple-300`}>
+                    <a href="/products" className={`${footerLinkClass} font-medium text-purple-300`}>
                       View all products →
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -184,16 +185,16 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                 <ul className="space-y-2.5">
                   {resourceLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className={footerLinkClass}>
+                      <a href={link.href} className={footerLinkClass}>
                         {link.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                   {itServices.map((service) => (
                     <li key={service.href}>
-                      <Link href={service.href} className={footerLinkClass}>
+                      <a href={service.href} className={footerLinkClass}>
                         {service.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -250,15 +251,15 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
                   © {currentYear} Zion Tech Group. All rights reserved.
                 </p>
                 <nav className="flex space-x-6 text-sm" aria-label="Legal">
-                  <Link href="/terms" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                  <a href="/terms" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     Terms of Service
-                  </Link>
-                  <Link href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                  </a>
+                  <a href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     Privacy Policy
-                  </Link>
-                  <Link href="#main-content" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                  </a>
+                  <a href="#main-content" className="text-gray-400 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     Back to content
-                  </Link>
+                  </a>
                 </nav>
               </div>
             </div>

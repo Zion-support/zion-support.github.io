@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Energy Management | Zion Tech Group',
   description:
     'Energy Management combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integrat',

@@ -12,14 +12,14 @@ export default function CommunityPage() {
       <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 text-center text-slate-100">
         <h1 className="text-3xl font-bold mb-6">Join Our Free Discord Community</h1>
         <p className="mb-8">Chat with developers, ask questions, and help shape our projects.</p>
-        <Link
+        <a
           href="https://discord.gg/your-invite-code"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition"
         >
           Join Discord
-        </Link>
+        </a>
       </div>
     </div>
   );

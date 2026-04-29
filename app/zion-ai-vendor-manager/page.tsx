@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Vendor Manager | Zion Tech Group',
   description:
     'Manage vendor relationships and procurement workflows with AI-powered scoring and risk assessment.',

@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Customer 360 | Zion Tech Group',
   description:
     'Unify customer data from all touchpoints into a single view with AI-powered insights and next-best-action recommendations.',

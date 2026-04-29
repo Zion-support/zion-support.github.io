@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Generative AI Enterprise | Zion Tech Group',
   description:
     'Enterprise-scale generative AI for content, code, and data. Deploy secure, governed LLM workflows with custom models, RAG, and fine-tuning for production use cases.',

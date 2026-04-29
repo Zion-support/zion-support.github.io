@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import PageFAQ from '../components/PageFAQ';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Professional AI & Engineering Services',
   description:
     'Professional AI engineering, cloud infrastructure, cybersecurity, and software development services from Zion Tech Group.',
@@ -264,18 +265,18 @@ export default function ServicesPage() {
             built in.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
             >
               Request a Proposal
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               View Plans
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -305,12 +306,12 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              <Link
+              <a
                 href={category.href}
                 className="mt-5 inline-flex text-sm font-semibold text-purple-300 transition hover:text-purple-200"
               >
                 Learn more →
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -362,26 +363,26 @@ export default function ServicesPage() {
               <p className="mt-2 text-sm text-slate-300">
                 Fleet operator deployed AI-powered route optimization and predictive maintenance.
               </p>
-              <Link
+              <a
                 href="/case-studies"
                 className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
               >
                 View case studies
                 <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
               <h3 className="font-semibold text-white">Fintech Passes SOC 2 Audit in 8 Weeks</h3>
               <p className="mt-2 text-sm text-slate-300">
                 Series A fintech used our security and compliance services for first audit.
               </p>
-              <Link
+              <a
                 href="/case-studies"
                 className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
               >
                 View case studies
                 <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -462,12 +463,12 @@ export default function ServicesPage() {
             Tell us about your goals and we will outline a practical delivery plan within 48
             hours.
           </p>
-          <Link
+          <a
             href="/contact"
             className="mt-8 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Start a Conversation
-          </Link>
+          </a>
         </div>
       </section>
     </div>

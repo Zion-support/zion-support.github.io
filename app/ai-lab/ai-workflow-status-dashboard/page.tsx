@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Workflow Status Dashboard - Zion AI Lab',
   description: 'Track GitHub Actions workflow status, success rates, and automation pipeline health.',
 };

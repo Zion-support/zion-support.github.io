@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Advanced AI & Enterprise Intelligence Hub | Zion Tech Group',
   description:
     'Unify generative AI, autonomous agents, multimodal intelligence, RAG, governance, observability, and enterprise copilots into a single advanced AI platform for production operations.',

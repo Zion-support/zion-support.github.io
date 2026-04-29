@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Workflow Automation | Zion Tech Group',
   description:
     'Workflow Automation eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim op',

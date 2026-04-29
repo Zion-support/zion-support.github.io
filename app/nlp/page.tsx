@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'NLP | Zion Tech Group',
   description:
     'NLP enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent translation across chan',

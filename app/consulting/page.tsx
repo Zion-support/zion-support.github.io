@@ -15,7 +15,7 @@ export default function ConsultingPage() {
         <p className="mb-8 text-lg">
           Need help with AI, DevOps, or cloud architecture? Book a short, no‑cost call with our team.
         </p>
-        <Link
+        <a
           href="https://calendly.com/your-calendly-username/15min?utm_source=ziontech"
           target="_blank"
           rel="noopener noreferrer"
@@ -24,7 +24,7 @@ export default function ConsultingPage() {
           <Calendar className="h-5 w-5" />
           Book Now
           <ArrowRight className="ml-1 h-4 w-4" />
-        </Link>
+        </a>
       </div>
     </div>
   );

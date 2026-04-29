@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion CRM Intelligence | Zion Tech Group',
   description:
     'Zion CRM Intelligence empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automation. T',

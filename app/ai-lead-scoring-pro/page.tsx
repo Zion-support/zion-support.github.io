@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Lead Scoring Pro | Zion Tech Group',
   description:
     'AI Lead Scoring Pro empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automation. Tur',

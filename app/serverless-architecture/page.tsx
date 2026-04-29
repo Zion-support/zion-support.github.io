@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Serverless Architecture | Zion Tech Group',
   description:
     'Serverless Architecture delivers scalable cloud architecture, automated provisioning, and resilient infrastructure management. Move workloads to production',

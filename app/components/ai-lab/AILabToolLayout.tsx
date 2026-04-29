@@ -25,13 +25,13 @@ export function AILabToolLayout({ title, subtitle, children }: AILabToolLayoutPr
           ) : null}
         </div>
         <div className="hidden text-right sm:block">
-          <Link
+          <a
             href="/ai-lab"
             className="inline-flex items-center rounded-full border border-sky-500/40 bg-sky-500/5 px-3 py-1 text-xs font-medium text-sky-200 hover:border-sky-400 hover:bg-sky-500/10"
           >
             <span className="mr-1.5">←</span>
             Back to AI Lab
-          </Link>
+          </a>
         </div>
       </div>
 

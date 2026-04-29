@@ -140,18 +140,18 @@ export default function AIExperimentDesignerPage() {
             </div>
 
             <div className="mt-5 grid gap-2 text-xs">
-              <Link
+              <a
                 href="/ai-lab/implementation-readiness-checker"
                 className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-4 py-2 text-center font-semibold text-cyan-50 hover:bg-cyan-400/30"
               >
                 Validate readiness for this experiment
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-lab/ai-governance-risk-advisor"
                 className="rounded-full border border-amber-300/70 bg-amber-400/15 px-4 py-2 text-center font-semibold text-amber-50 hover:bg-amber-400/25"
               >
                 Run governance and risk check
-              </Link>
+              </a>
             </div>
           </div>
         </div>

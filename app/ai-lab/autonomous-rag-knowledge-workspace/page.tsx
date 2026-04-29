@@ -197,18 +197,18 @@ export default function AutonomousRagKnowledgeWorkspacePage() {
             </div>
 
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link
+              <a
                 href="/ai-services/ai-rag-knowledge-systems"
                 className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-4 py-2 text-xs font-semibold text-cyan-50 hover:bg-cyan-400/30"
               >
                 Open RAG services
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-lab/autonomous-backlog-prioritizer"
                 className="rounded-full border border-emerald-300/70 bg-emerald-400/20 px-4 py-2 text-xs font-semibold text-emerald-50 hover:bg-emerald-400/30"
               >
                 Prioritize implementation backlog
-              </Link>
+              </a>
             </div>
           </section>
         </div>

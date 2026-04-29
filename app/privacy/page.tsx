@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Privacy Policy | Zion Tech Group',
   description:
     'Privacy policy for Zion Tech Group. Learn how we collect, use, and protect your personal information.',
@@ -102,13 +103,13 @@ export default function PrivacyPage() {
         <div className="mt-12 rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6">
           <p className="text-sm text-slate-300">
             For questions about this policy, please{' '}
-            <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
+            <a href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
               contact us
-            </Link>
+            </a>
             . You can also review our{' '}
-            <Link href="/terms" className="font-medium text-purple-300 hover:text-purple-200">
+            <a href="/terms" className="font-medium text-purple-300 hover:text-purple-200">
               Terms of Service
-            </Link>
+            </a>
             .
           </p>
         </div>

@@ -94,12 +94,12 @@ export default function BuildFailureExplainerPage() {
               ))}
             </ul>
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
-              <Link href="/ai-lab/deployment-readiness-console" className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-3 py-1.5 font-semibold text-cyan-50">
+              <a href="/ai-lab/deployment-readiness-console" className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-3 py-1.5 font-semibold text-cyan-50">
                 Open deployment readiness
-              </Link>
-              <Link href="/ai-lab" className="rounded-full border border-slate-600 bg-slate-900/80 px-3 py-1.5 font-semibold text-slate-200">
+              </a>
+              <a href="/ai-lab" className="rounded-full border border-slate-600 bg-slate-900/80 px-3 py-1.5 font-semibold text-slate-200">
                 Back to AI Lab
-              </Link>
+              </a>
             </div>
           </div>
         </div>

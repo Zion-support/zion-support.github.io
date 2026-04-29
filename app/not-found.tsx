@@ -26,24 +26,24 @@ export default function NotFound() {
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-          <Link
+          <a
             href="/"
             className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
           >
             Back to Home
-          </Link>
-          <Link
+          </a>
+          <a
             href="/solutions"
             className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
           >
             Explore Solutions
-          </Link>
-          <Link
+          </a>
+          <a
             href="/contact"
             className="inline-flex items-center justify-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-7 py-3 text-base font-semibold text-purple-100 transition hover:bg-purple-500/20"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
       </div>
     </div>

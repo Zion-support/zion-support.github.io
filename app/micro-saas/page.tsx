@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Micro SaaS | Zion Tech Group',
   description:
     'Micro SaaS offers a focused, lightweight SaaS solution that solves one problem exceptionally well. Deploy quickly, integrate easily, and scale as your need',

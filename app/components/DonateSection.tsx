@@ -1,13 +1,14 @@
 import React from 'react';
-import TrackedLink from './TrackedLink';
 import { Heart, Coffee, Gift } from 'lucide-react';
+import TrackedLink from './TrackedLink';
 
 export default function DonateSection() {
   return (
     <section className="mt-12 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl text-center">
       <h3 className="text-2xl font-bold text-white mb-4">Support Zion Tech Group</h3>
       <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-        Your contributions help keep our free tools available and improve the platform. Choose a way to support us:
+        Your contributions help keep our free tools available and improve the platform.
+        Choose a way to support us:
       </p>
       <div className="flex flex-col md:flex-row justify-center gap-6">
         <TrackedLink
@@ -22,7 +23,7 @@ export default function DonateSection() {
           utmParams={{utm_source: 'ziontechgroup.com', utm_medium: 'referral', utm_campaign: 'ko-fi'}}
           className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-white font-semibold rounded-xl hover:from-yellow-400 hover:to-amber-500 transition-all"
         >
-          <Coffee className="w-5 h-5" /> Ko‑fi
+          <Coffee className="w-5 h-5" /> Ko-fƯ
         </TrackedLink>
         <TrackedLink
           href="https://www.buymeacoffee.com/ziontech"

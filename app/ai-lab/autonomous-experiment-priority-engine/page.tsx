@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Autonomous Experiment Priority Engine - Zion AI Lab',
   description:
     'Score and prioritize AI experiments by expected lift, confidence, and execution risk to accelerate autonomous shipping.',

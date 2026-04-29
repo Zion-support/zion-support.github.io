@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Healthcare IT | Zion Tech Group',
   description:
     'Healthcare IT brings AI-powered intelligence to healthcare workflows, enabling faster diagnostics, better patient outcomes, and streamlined administrative ',

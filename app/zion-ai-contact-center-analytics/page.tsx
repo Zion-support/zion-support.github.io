@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Contact Center Analytics | Zion Tech Group',
   description:
     'Track call center performance, agent productivity, and customer satisfaction with AI-powered insights and recommendations.',

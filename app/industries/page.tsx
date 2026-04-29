@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 import { HelpCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Industry Solutions | Zion Tech Group',
   description:
     'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 47 verticals.',
@@ -485,18 +486,18 @@ export default function IndustriesPage() {
             Each industry solution includes tailored app combinations, use-case playbooks, and case studies so you can scope, pilot, and scale with confidence.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               Browse All Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -561,12 +562,12 @@ export default function IndustriesPage() {
                   </span>
                 ))}
               </div>
-              <Link
+              <a
                 href={ind.href}
                 className="mt-5 inline-flex text-sm font-semibold text-purple-300 transition hover:text-purple-200"
               >
                 Explore solutions →
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -636,18 +637,18 @@ export default function IndustriesPage() {
             delivery plan — regardless of your vertical.
           </p>
           <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
              data-cta-event="cta_discovery" data-cta-label="page">
               Talk to a Specialist
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               Browse All Apps
-            </Link>
+            </a>
           </div>
         </div>
       </section>

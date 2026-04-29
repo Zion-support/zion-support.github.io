@@ -41,12 +41,12 @@ export default function AppCollectionGrid({
             <ul className="mt-4 space-y-2">
               {visibleLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-sm text-slate-300 transition hover:text-purple-300"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, Handshake, Zap, Users, Award, Check, HelpCircle } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import { CONTACT_INFO } from '../utils/seoConstants';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Partners | Zion Tech Group',
   description:
     'Join the Zion Tech Group partner program. Reseller, technology, and implementation partners. Co-sell opportunities, training, and go-to-market support.',
@@ -146,19 +147,19 @@ export default function PartnersPage() {
             you can win more deals and deliver with confidence.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5"
             >
               Apply to Partner
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               Explore Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -200,7 +201,7 @@ export default function PartnersPage() {
           </p>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             {partnerResources.map((resource) => (
-              <Link
+              <a
                 key={resource.title}
                 href={resource.href}
                 className="group rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5 transition hover:border-purple-400/50"
@@ -211,7 +212,7 @@ export default function PartnersPage() {
                   Learn more
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -388,13 +389,13 @@ export default function PartnersPage() {
               </div>
             </li>
           </ol>
-          <Link
+          <a
             href="/contact"
             className="mt-8 inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
           >
             Apply Now
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
 

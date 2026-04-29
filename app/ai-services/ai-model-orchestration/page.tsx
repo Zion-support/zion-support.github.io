@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Model Orchestration | Zion Tech Group',
   description:
     'Multi-model AI orchestration, routing, and fallback. Optimize cost, latency, and quality by routing requests to the right model for each task.',

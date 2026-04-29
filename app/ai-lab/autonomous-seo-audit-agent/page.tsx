@@ -102,7 +102,7 @@ export default function AutonomousSEOAuditAgent() {
         <div className="container mx-auto max-w-5xl px-4">
           {/* Breadcrumb */}
           <div className="mb-6 flex items-center gap-2 text-sm">
-            <Link href="/ai-lab" className="text-indigo-600 hover:underline">AI Lab</Link>
+            <a href="/ai-lab" className="text-indigo-600 hover:underline">AI Lab</a>
             <span className="text-slate-400">/</span>
             <span className="text-slate-600">Autonomous SEO Audit Agent</span>
           </div>
@@ -219,18 +219,18 @@ export default function AutonomousSEOAuditAgent() {
               your search rankings.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link
+              <a
                 href="/ai-lab"
                 className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
               >
                 Explore More AI Lab Tools
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-services"
                 className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
               >
                 View AI Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

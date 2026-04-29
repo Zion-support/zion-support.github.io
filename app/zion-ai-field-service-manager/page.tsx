@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Field Service Manager | Zion Tech Group',
   description:
     'Optimize field technician scheduling, routing, and job completion with AI-driven dispatch and real-time updates.',

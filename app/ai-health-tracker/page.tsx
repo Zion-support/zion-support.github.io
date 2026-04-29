@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Health Tracker | Zion Tech Group',
   description:
     'AI Health Tracker brings AI-powered intelligence to healthcare workflows, enabling faster diagnostics, better patient outcomes, and streamlined administrat',

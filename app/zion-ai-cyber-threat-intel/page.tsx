@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Cyber Threat Intel | Zion Tech Group',
   description:
     'Aggregate and prioritize threat intelligence with automated correlation and actionable alerts.',

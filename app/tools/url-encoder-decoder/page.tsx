@@ -123,7 +123,7 @@ export default function UrlEncoderDecoder() {
               onClick={() => { setMode('encode'); handleInputChange(input); }}
               className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-sm transition ${mode === 'encode' ? 'bg-orange-600 text-white' : 'text-slate-300 hover:text-white'}`}
             >
-              <Link2 className="w-4 h-4" />
+              <a2 className="w-4 h-4" />
               Encode
             </button>
             <button

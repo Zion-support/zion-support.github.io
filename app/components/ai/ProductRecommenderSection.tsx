@@ -311,12 +311,12 @@ export default function ProductRecommenderSection({
             <ul className="mt-2 space-y-1.5">
               {bundle.products.map((product) => (
                 <li key={product.href}>
-                  <Link
+                  <a
                     href={product.href}
                     className="text-xs text-slate-100 underline-offset-2 hover:text-purple-200 hover:underline"
                   >
                     {product.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -344,24 +344,24 @@ export default function ProductRecommenderSection({
           ) : null}
 
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link
+            <a
               href={bundle.primaryCtaHref}
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2.5 text-xs font-semibold text-white shadow-md transition hover:from-purple-500 hover:to-pink-500"
             >
               {bundle.primaryCtaLabel}
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact#engagement"
               className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/80 px-4 py-2.5 text-xs font-semibold text-slate-100 transition hover:border-purple-300 hover:text-white"
             >
               Share my answers with Zion
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-services"
               className="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-2.5 text-xs font-semibold text-slate-100 transition hover:border-purple-300 hover:text-white"
             >
               Browse all AI services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

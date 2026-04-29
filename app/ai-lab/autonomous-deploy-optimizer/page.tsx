@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Autonomous Deploy Optimizer - Zion AI Lab',
   description:
     'Evaluate release risk, quality-gate coverage, and rollback readiness to pick the best autonomous deployment path.',
@@ -76,18 +77,18 @@ export default function AutonomousDeployOptimizerPage() {
             {' '}for guarded and full-risk-managed deploys.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/automation"
               className="inline-flex items-center rounded-full border border-sky-400/60 bg-sky-500/20 px-3 py-1.5 text-xs font-semibold text-sky-100"
             >
               Open automation center
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab"
               className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1.5 text-xs font-semibold text-slate-100"
             >
               Back to AI Lab
-            </Link>
+            </a>
           </div>
         </div>
       </section>

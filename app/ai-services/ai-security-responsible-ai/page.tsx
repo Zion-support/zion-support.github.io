@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Security & Responsible AI | Zion Tech Group',
   description:
     'Secure AI systems and responsible deployment. Adversarial robustness, prompt injection defense, data privacy, and AI safety controls for enterprise production.',

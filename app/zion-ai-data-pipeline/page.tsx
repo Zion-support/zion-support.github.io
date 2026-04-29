@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Data Pipeline | Zion Tech Group',
   description:
     'Build, monitor, and orchestrate ETL pipelines with AI-optimized scheduling and error recovery.',

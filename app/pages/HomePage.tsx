@@ -10,18 +10,18 @@ const HomePage: React.FC = () => {
         secure engineering, and practical delivery roadmaps so your team can move from pilot to scale.
       </p>
       <div className="flex flex-wrap justify-center gap-4">
-        <Link
+        <a
           href="/solutions"
           className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-purple-500"
         >
           Explore solutions
-        </Link>
-        <Link
+        </a>
+        <a
           href="/contact"
           className="rounded-xl border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
         >
           Contact us
-        </Link>
+        </a>
       </div>
     </div>
   );

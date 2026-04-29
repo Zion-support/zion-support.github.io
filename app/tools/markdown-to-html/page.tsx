@@ -133,7 +133,7 @@ ${rawHtml}
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/tools" className="text-sm text-blue-600 hover:underline">← Back to Tools</Link>
+          <a href="/tools" className="text-sm text-blue-600 hover:underline">← Back to Tools</a>
         </div>
 
         <div className="mb-8">

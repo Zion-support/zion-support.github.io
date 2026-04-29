@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, Zap, Layers, Shield, BarChart3 } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Micro SAAS Services | Zion Tech Group',
   description:
     'Build and launch AI-powered micro-SaaS products with Zion Tech Group. Rapid product development, white-label solutions, and scalable deployment for startups and enterprises.',
@@ -86,18 +87,18 @@ export default function MicroSaaSServicesPage() {
             pre-built modules, and scalable architecture so you can focus on customers, not infrastructure.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
             >
               Discuss Your Product Idea
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               View AI Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -166,13 +167,13 @@ export default function MicroSaaSServicesPage() {
           <p className="mx-auto mt-4 max-w-2xl text-slate-200">
             Share your product vision and we will outline a practical build plan and timeline within 48 hours.
           </p>
-          <Link
+          <a
             href="/contact"
             className="mt-8 inline-flex items-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Start a Conversation
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

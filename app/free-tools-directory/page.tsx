@@ -101,20 +101,20 @@ export default function FreeToolsDirectory() {
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Share your favorite free tools with us to help others discover them.
           </p>
-          <Link
+          <a
             href="/contribute"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-pink-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
           >
             Submit a Tool
-          </Link>
+          </a>
         </div>
         <div className="mt-12 text-center">
-          <Link 
+          <a 
             href="/support"
             className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
           >
             ← Back to Support Page
-          </Link>
+          </a>
         </div>
       </div>
     </div>

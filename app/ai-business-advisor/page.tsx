@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Business Advisor | Zion Tech Group',
   description:
     'Get tailored AI strategy recommendations for your business goals, workflows, and growth roadmap.',
@@ -23,18 +23,20 @@ export default function AIBusinessAdvisorPage() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <Link
+          <a
             href="/ai-services"
             className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-7 py-3.5 font-semibold hover:from-purple-700 hover:to-pink-700 transition-colors"
           >
             Explore AI Services
-          </Link>
-          <Link
+          </a>
+          <a
             href="/contact"
             className="inline-flex items-center justify-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-7 py-3.5 font-semibold text-purple-100 hover:bg-purple-500/20 transition-colors"
-           data-cta-event="cta_contact" data-cta-label="page">
+            data-cta-event="cta_contact"
+            data-cta-label="page"
+          >
             Talk to an Expert
-          </Link>
+          </a>
         </div>
       </section>
     </div>

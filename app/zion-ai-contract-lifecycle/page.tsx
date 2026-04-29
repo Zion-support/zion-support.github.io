@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Contract Lifecycle | Zion Tech Group',
   description:
     'Manage contract creation, negotiation, renewal, and compliance through the full lifecycle with AI-powered insights.',

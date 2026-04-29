@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Integration & APIs | Zion Tech Group',
   description:
     'Integrate AI into existing systems with unified APIs, event-driven pipelines, and enterprise connectors. One integration layer across LLMs, agents, and data sources.',

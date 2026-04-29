@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI for Regulated Industries | Zion Tech Group',
   description:
     'AI solutions built for healthcare, finance, legal, and government. HIPAA, SOC 2, GDPR, and EU AI Act–ready with audit trails and human oversight.',

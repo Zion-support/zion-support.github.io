@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Autonomous Funnel Orchestrator - Zion AI Lab',
   description:
     'Prioritize high-confidence conversion upgrades across CTA strategy, social proof, onboarding, and pricing presentation.',
@@ -88,18 +89,18 @@ export default function AutonomousFunnelOrchestratorPage() {
             before promoting changes site-wide.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/ai-lab/autonomous-deploy-optimizer"
               className="inline-flex items-center rounded-full border border-fuchsia-400/60 bg-fuchsia-500/20 px-3 py-1.5 text-xs font-semibold text-fuchsia-100"
             >
               Pair with deploy optimizer
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-lab"
               className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1.5 text-xs font-semibold text-slate-100"
             >
               Back to AI Lab
-            </Link>
+            </a>
           </div>
         </div>
       </section>

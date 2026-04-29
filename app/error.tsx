@@ -26,12 +26,12 @@ export default function Error({
            aria-label="Try again">
             Try again
           </button>
-          <Link
+          <a
             href="/"
             className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
           >
             Go Home
-          </Link>
+          </a>
         </div>
       </div>
     </div>

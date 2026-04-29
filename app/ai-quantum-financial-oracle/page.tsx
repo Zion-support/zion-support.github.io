@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Quantum Financial Oracle | Zion Tech Group',
   description:
     'AI Quantum Financial Oracle applies AI to financial workflows for smarter forecasting, risk assessment, and operational efficiency. Automate routine analys',

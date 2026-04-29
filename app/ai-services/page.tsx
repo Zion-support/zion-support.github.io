@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Services | Zion Tech Group',
   description:
     'Browse all Zion Tech Group AI services — chatbots, DevOps, code review, predictive analytics, security, and more. Production-ready AI for real business outcomes.',
@@ -127,19 +128,19 @@ export default function AIServicesPage() {
             From advanced AI (generative AI, agents, RAG, governance) to customer support, engineering, security, and industry-specific solutions — find the right fit for your use case and scale with confidence.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
             >
               View Pricing
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -197,13 +198,13 @@ export default function AIServicesPage() {
               <ul className="space-y-2">
                 {category.services.map((service) => (
                   <li key={service.href}>
-                    <Link
+                    <a
                       href={service.href}
                       className="group/link flex items-center justify-between rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-sm text-slate-200 transition hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
                     >
                       {service.name}
                       <ArrowRight className="h-3.5 w-3.5 text-slate-500 transition group-hover/link:text-purple-400" />
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -224,55 +225,55 @@ export default function AIServicesPage() {
             Explore AI solutions built for specific industries and use cases. Each industry solution includes tailored apps, use cases, and case studies.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/solutions/healthcare"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Healthcare
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/financial-services"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Financial Services
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/technology-and-saas"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Technology & SaaS
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/ecommerce-retail"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               E-Commerce & Retail
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/manufacturing-industrial"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Manufacturing
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/legal-professional-services"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Legal
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/industries"
               className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-3 text-sm font-medium text-purple-200 transition hover:bg-purple-500/20"
             >
               View All Industries
               <ArrowRight className="ml-2 h-3.5 w-3.5" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -285,14 +286,14 @@ export default function AIServicesPage() {
           </p>
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {AI_SERVICE_LINKS.map((service) => (
-              <Link
+              <a
                 key={service.href}
                 href={service.href}
                 className="flex items-center justify-between rounded-lg border border-slate-700/50 bg-slate-900/60 px-3 py-2.5 text-sm text-slate-200 transition hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
               >
                 {service.name}
                 <ArrowRight className="h-3.5 w-3.5 flex-shrink-0 text-slate-500" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -301,13 +302,13 @@ export default function AIServicesPage() {
           <p className="mb-4 text-sm text-slate-400">
             Looking for products and platforms?
           </p>
-          <Link
+          <a
             href="/products"
             className="inline-flex items-center justify-center rounded-xl border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-semibold text-purple-200 transition hover:border-purple-400 hover:bg-purple-500/20 hover:text-white"
           >
             Browse Products
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

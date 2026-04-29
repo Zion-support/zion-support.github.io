@@ -52,12 +52,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
                 </span>
               )}
               {item.href && !isLast ? (
-                <Link
+                <a
                   href={item.href}
                   className="transition hover:text-purple-300"
                 >
                   {item.label}
-                </Link>
+                </a>
               ) : (
                 <span
                   aria-current={isLast ? 'page' : undefined}

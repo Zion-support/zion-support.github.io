@@ -16,8 +16,8 @@ export default function TrackedLink({ href, utmParams, children, className = '',
     url.searchParams.set(key, value);
   });
   return (
-    <Link href={url.toString()} className={className} target={target} rel={rel} shallow={false}>
+    <a href={url.toString()} className={className} target={target} rel={rel} shallow={false}>
       {children}
-    </Link>
+    </a>
   );
 }

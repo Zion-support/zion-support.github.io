@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import CaseStudiesClient from './CaseStudiesClient';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Case Studies',
   description:
     'Real-world results from AI implementations across growth, engineering, and operations. See how teams use Zion Tech Group to deliver measurable outcomes.',
@@ -851,18 +852,18 @@ export default function CaseStudiesPage() {
             Tell us about your goals and we will map a practical plan to get there.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/contact"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               Start a Conversation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Explore Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>

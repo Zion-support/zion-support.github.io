@@ -107,18 +107,18 @@ export default function AiSiteHealthPanel() {
           ) : null}
 
           <div className="flex flex-wrap gap-2">
-            <Link
+            <a
               href="/ai-lab/ai-site-evolution-advisor"
               className="inline-flex items-center rounded-full border border-emerald-400/60 bg-emerald-500/15 px-3 py-1.5 text-[11px] font-semibold text-emerald-50 transition hover:bg-emerald-500/25"
             >
               Open AI Site Evolution Advisor →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/automation"
               className="inline-flex items-center rounded-full border border-slate-600/80 bg-slate-900/80 px-3 py-1.5 text-[11px] font-semibold text-slate-100 transition hover:border-emerald-300/70 hover:text-white"
             >
               See automation services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

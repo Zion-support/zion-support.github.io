@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion Smart Inventory Manager | Zion Tech Group',
   description:
     'Zion Smart Inventory Manager streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free your',

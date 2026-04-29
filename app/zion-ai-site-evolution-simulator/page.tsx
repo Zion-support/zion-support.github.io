@@ -135,28 +135,28 @@ export default function ZionAISiteEvolutionSimulatorPage() {
             </div>
 
             <div className="mt-7 flex flex-wrap gap-3 text-sm">
-              <Link
+              <a
                 href="/contact?topic=project&source=site-evolution-simulator"
                 className="inline-flex items-center rounded-xl bg-gradient-to-r from-emerald-500 to-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 transition hover:from-emerald-400 hover:to-sky-400"
               >
                 Talk through my scenario
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-lab"
                 className="inline-flex items-center rounded-xl border border-slate-600 bg-slate-900/70 px-4 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-emerald-400 hover:text-white"
               >
                 Explore Zion AI Lab
-              </Link>
+              </a>
             </div>
 
             <p className="mt-4 text-xs text-slate-400">
               This simulator uses transparent heuristics inspired by how Zion’s{' '}
-              <Link
+              <a
                 href="/ai-lab"
                 className="font-semibold text-emerald-300 underline-offset-2 hover:underline"
               >
                 app evolution pipelines
-              </Link>{' '}
+              </a>{' '}
               behave in production. It&apos;s designed to help you reason about impact — not to replace
               proper forecasting.
             </p>
@@ -406,12 +406,12 @@ export default function ZionAISiteEvolutionSimulatorPage() {
                 <p className="mt-2 text-[11px] text-slate-200">
                   Instrument your current funnel, confirm definition of a qualified opportunity, and
                   run a first wave of{' '}
-                  <Link
+                  <a
                     href="/ai-lab"
                     className="font-semibold text-emerald-300 underline-offset-2 hover:underline"
                   >
                     system intelligence audits
-                  </Link>
+                  </a>
                   .
                 </p>
               </li>
@@ -426,17 +426,17 @@ export default function ZionAISiteEvolutionSimulatorPage() {
                 </div>
                 <p className="mt-2 text-[11px] text-slate-200">
                   Turn on {modules <= 4 ? modules : 4}+ modules across{' '}
-                  <Link href="/zion-smart-crm-automation" className="font-semibold text-emerald-300">
+                  <a href="/zion-smart-crm-automation" className="font-semibold text-emerald-300">
                     Smart CRM Automation
-                  </Link>
+                  </a>
                   ,{' '}
-                  <Link href="/zion-ai-chatbot-builder" className="font-semibold text-emerald-300">
+                  <a href="/zion-ai-chatbot-builder" className="font-semibold text-emerald-300">
                     Chatbots
-                  </Link>
+                  </a>
                   , and{' '}
-                  <Link href="/zion-content-studio" className="font-semibold text-emerald-300">
+                  <a href="/zion-content-studio" className="font-semibold text-emerald-300">
                     Content Studio
-                  </Link>
+                  </a>
                   , then measure lift vs. your baselines.
                 </p>
               </li>
@@ -451,9 +451,9 @@ export default function ZionAISiteEvolutionSimulatorPage() {
                 </div>
                 <p className="mt-2 text-[11px] text-slate-200">
                   Fold successful journeys into always-on{' '}
-                  <Link href="/ai-lab" className="font-semibold text-emerald-300">
+                  <a href="/ai-lab" className="font-semibold text-emerald-300">
                     app evolution pipelines
-                  </Link>
+                  </a>
                   , so site health, content velocity, and conversion are continuously improved.
                 </p>
               </li>
@@ -462,12 +462,12 @@ export default function ZionAISiteEvolutionSimulatorPage() {
             <div className="mt-4 rounded-xl border border-slate-700 bg-slate-950/80 p-3 text-[11px] text-slate-300">
               <p>
                 Ready to see this calibrated against your real data?{' '}
-                <Link
+                <a
                   href="/contact?topic=project&source=site-evolution-simulator-footer"
                   className="font-semibold text-emerald-300 underline-offset-2 hover:underline"
                 >
                   Book a working session with a Zion architect
-                </Link>
+                </a>
                 . We’ll plug in actual funnel metrics and propose a concrete rollout.
               </p>
             </div>

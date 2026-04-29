@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Smart Contract Security Audit | Zion Tech Group',
   description:
     'Smart Contract Security Audit provides enterprise-grade security controls, continuous monitoring, and compliance automation. Reduce risk exposure and accel',

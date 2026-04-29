@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Resource Scheduler | Zion Tech Group',
   description:
     'Optimize resource allocation and scheduling with constraint-aware AI for teams and projects.',

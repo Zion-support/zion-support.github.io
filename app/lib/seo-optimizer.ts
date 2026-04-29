@@ -4,7 +4,7 @@
  * Priority: HIGH
  */
 
-import { Metadata } from 'next';
+import Metadata from 'next';
 
 type SEOConfig = {
   title: string;

@@ -72,22 +72,22 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
             {data.description}
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href={ctaHref}
               data-cta-event="cta_primary"
               data-cta-label="product_page_hero"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
             >
               {ctaLabel}
-            </Link>
-            <Link
+            </a>
+            <a
               href={secondaryCtaHref}
               data-cta-event="cta_secondary"
               data-cta-label="product_page_hero"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               {secondaryCtaLabel}
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -187,13 +187,13 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
             </p>
             <h2 className="mt-2 text-xl font-bold text-white">{data.caseStudy.title}</h2>
             <p className="mt-2 text-slate-300">{data.caseStudy.description}</p>
-            <Link
+            <a
               href="/case-studies"
               className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
             >
               {data.caseStudy.ctaLabel ?? 'View case studies'}
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </div>
         </section>
       )}
@@ -208,20 +208,20 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
             We will help you scope priorities and plan a practical rollout.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/contact?topic=project&source=product-page-bottom"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
               data-cta-event="cta_primary"
               data-cta-label="product_page_bottom"
             >
               Start a Project
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Explore Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>

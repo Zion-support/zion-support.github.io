@@ -11,6 +11,9 @@ import ReadingProgressBar from './components/ReadingProgressBar';
 import StickyMobileCTA from './components/StickyMobileCTA';
 import AIChatWidget from './components/AIChatWidget';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
+import StickyDonateBanner from './components/StickyDonateBanner';
+import ChatWidget from './components/ChatWidget';
+import CookieConsentBanner from './components/CookieConsentBanner';
 import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidget';
 import AIExperienceLoader from './components/AIExperienceLoader';
 import './globals.css';
@@ -18,7 +21,7 @@ import './globals.css';
 const siteUrl = 'https://ziontechgroup.com';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: 'Zion Tech Group | AI & IT Solutions',
@@ -88,6 +91,8 @@ export default function RootLayout({
           <AIExperienceLoader />
           <StickyMobileCTA />
           <ServiceWorkerRegistration />
+          <StickyDonateBanner />
+          <CookieConsentBanner />
         </div>
       </body>
     </html>

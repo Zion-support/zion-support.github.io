@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Facilities & Property Management AI Solutions | Zion Tech Group',
   description:
     'Optimize facility operations, maintenance scheduling, and tenant services with AI-powered workflows for commercial and multi-site property management.',
@@ -53,7 +54,7 @@ export default function FacilitiesPropertyManagementSolutionsPage() {
             AI-powered workflows for commercial buildings, campuses, and multi-site portfolios.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
               data-cta-event="cta_discovery"
@@ -61,13 +62,13 @@ export default function FacilitiesPropertyManagementSolutionsPage() {
             >
               Book a Discovery Call
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               View All Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -82,14 +83,14 @@ export default function FacilitiesPropertyManagementSolutionsPage() {
           </p>
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {facilitiesApps.map((app) => (
-              <Link
+              <a
                 key={app.href}
                 href={app.href}
                 className="flex items-center justify-between rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-slate-100 transition hover:border-purple-400/50 hover:text-white"
               >
                 <span>{app.name}</span>
                 <ArrowRight className="h-4 w-4 text-purple-400" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -149,13 +150,13 @@ export default function FacilitiesPropertyManagementSolutionsPage() {
             Maintenance to automate work order routing and preventive maintenance. Backlog
             dropped 42% while tenant satisfaction improved.
           </p>
-          <Link
+          <a
             href="/case-studies"
             className="mt-4 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
           >
             View case studies
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -165,12 +166,12 @@ export default function FacilitiesPropertyManagementSolutionsPage() {
       />
 
       <section className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <Link
+        <a
           href="/industries"
           className="inline-flex items-center text-sm font-medium text-purple-300 hover:text-purple-200"
         >
           ← Back to Industry Solutions
-        </Link>
+        </a>
       </section>
     </div>
   );

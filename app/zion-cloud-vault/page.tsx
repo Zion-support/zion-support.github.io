@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion Cloud Vault | Zion Tech Group',
   description:
     'Zion Cloud Vault delivers scalable cloud architecture, automated provisioning, and resilient infrastructure management. Move workloads to production faster',

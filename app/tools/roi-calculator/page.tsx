@@ -70,12 +70,12 @@ export default function ROICalculator() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
-          <Link
+          <a
             href="/tools"
             className="text-sm text-blue-600 hover:underline"
           >
             ← Back to Tools
-          </Link>
+          </a>
         </div>
 
         <div className="mb-8 text-center">
@@ -258,12 +258,12 @@ export default function ROICalculator() {
               <p className="mb-4 text-sm text-amber-700">
                 Get a personalized analysis from our AI experts with detailed projections for your specific use case.
               </p>
-              <Link
+              <a
                 href="/contact"
                 className="inline-block rounded-lg bg-amber-600 px-6 py-2 text-sm font-semibold text-white hover:bg-amber-700"
               >
                 Talk to an Expert
-              </Link>
+              </a>
             </div>
           </div>
         </div>

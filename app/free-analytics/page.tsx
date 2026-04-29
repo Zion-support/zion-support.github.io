@@ -36,13 +36,13 @@ const analyticsTools = [
   {
     name: 'Clicky',
     href: 'https://www.clicky.com/?ref=ziontech',
-    desc: 'Real‑time analytics with a free tier for low‑traffic sites.",
+    desc: 'Real-time analytics with a free tier for low-traffic sites.',
     category: 'Analytics'
   },
   {
     name: 'Statcounter',
     href: 'https://www.statcounter.com/?ref=ziontech',
-    desc: 'Web stats tracker with free plan and detailed reports.",
+    desc: 'Web stats tracker with free plan and detailed reports.',
     category: 'Analytics'
   },
 ];
@@ -112,22 +112,22 @@ export default function FreeAnalyticsPage() {
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Consult with us to design a data‑driven growth strategy.
           </p>
-          <Link
+          <a
             href="/consulting"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-pink-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
           >
             Book Free Consultation
-          </Link>
+          </a>
         </div>
 
         {/* Back to Support */}
         <div className="mt-12 text-center">
-          <Link 
+          <a 
             href="/support"
             className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
           >
             ← Back to Support Page
-          </Link>
+          </a>
         </div>
       </div>
     </div>

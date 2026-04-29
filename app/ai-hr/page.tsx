@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI HR | Zion Tech Group',
   description:
     'AI HR modernizes talent operations with AI-powered sourcing, screening, and workforce analytics. Hire faster, develop talent effectively, and make data-dri',

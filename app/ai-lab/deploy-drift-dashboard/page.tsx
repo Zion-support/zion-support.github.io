@@ -1285,18 +1285,18 @@ export default function DeployDriftDashboardPage() {
           <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
             <p className="text-xs uppercase tracking-wide text-slate-400">Autonomous actions</p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Link
+              <a
                 href="/ai-lab/deployment-readiness-console"
                 className="rounded-full border border-indigo-300/60 bg-indigo-400/20 px-3 py-1.5 text-xs font-semibold text-indigo-100"
               >
                 Readiness console
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/automation"
                 className="rounded-full border border-violet-300/60 bg-violet-400/20 px-3 py-1.5 text-xs font-semibold text-violet-100"
               >
                 Automation center
-              </Link>
+              </a>
             </div>
           </section>
         </div>

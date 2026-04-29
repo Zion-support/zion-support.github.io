@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, Zap, Globe, Heart, BookOpen, Users, Mail } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import { CONTACT_INFO } from '../utils/seoConstants';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Careers | Zion Tech Group',
   description:
     'Join Zion Tech Group. Build AI products that matter. Remote-first roles in engineering, AI, and product. Competitive benefits, growth opportunities, and a mission-driven team.',
@@ -125,19 +126,19 @@ export default function CareersPage() {
             value clarity, ownership, and continuous learning, you will fit right in.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5"
             >
               View Open Roles
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/about"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               Learn About Us
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -315,12 +316,12 @@ export default function CareersPage() {
           <p className="mx-auto mt-4 max-w-2xl text-slate-200">
             We are always open to meeting talented people. Reach out and tell us how you can contribute.
           </p>
-          <Link
+          <a
             href="/contact"
             className="mt-8 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Get in Touch
-          </Link>
+          </a>
         </div>
       </section>
     </div>

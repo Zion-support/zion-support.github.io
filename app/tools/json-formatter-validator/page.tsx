@@ -160,7 +160,7 @@ export default function JSONFormatterValidator() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <Link href="/tools" className="text-violet-400 hover:text-violet-300 text-sm">← Back to Tools</Link>
+            <a href="/tools" className="text-violet-400 hover:text-violet-300 text-sm">← Back to Tools</a>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">📋 JSON Formatter & Validator</h1>
           <p className="text-slate-400">Format, validate, minify, and compare JSON data</p>

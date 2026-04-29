@@ -34,7 +34,7 @@ export default function StickyMobileCTA() {
       role="banner"
       aria-label="Quick action"
     >
-      <Link
+      <a
         href="/contact?topic=project&source=sticky-mobile"
         data-cta-event="cta_primary"
         data-cta-label="sticky_mobile"
@@ -42,7 +42,7 @@ export default function StickyMobileCTA() {
       >
         Start a Project
         <ArrowRight className="h-4 w-4" aria-hidden />
-      </Link>
+      </a>
     </div>
   );
 }

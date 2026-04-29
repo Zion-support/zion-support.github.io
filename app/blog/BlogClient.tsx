@@ -99,12 +99,12 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
               <span className="text-xs text-slate-400">{post.date}</span>
               <span className="text-xs text-slate-400">{post.readTime}</span>
             </div>
-            <Link
+            <a
               href={`/blog/${post.slug}`}
               className="mt-3 inline-block text-sm font-semibold text-purple-300"
             >
               Read article →
-            </Link>
+            </a>
           </article>
         ))}
       </div>

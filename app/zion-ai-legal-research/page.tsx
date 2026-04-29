@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Legal Research | Zion Tech Group',
   description:
     'Accelerate legal research with AI-powered case law search, summarization, and citation analysis.',

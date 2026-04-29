@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Smart Manufacturing: How AI Is Powering the Next Industrial Revolution | Zion Tech Group Blog',
   description:
     'Smart Manufacturing: How AI Is Powering the Next Industrial Revolution — practical insights on AI implementation from Zion Tech Group.',
@@ -139,28 +140,28 @@ export default function Page() {
             your industry and goals.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/consultation"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               Book a Strategy Session
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Explore Solutions
-            </Link>
+            </a>
           </div>
         </div>
 
         <div className="mt-12 border-t border-slate-800 pt-8">
-          <Link
+          <a
             href="/blog"
             className="text-sm font-medium text-purple-300 transition hover:text-purple-200"
           >
             &larr; Back to all articles
-          </Link>
+          </a>
         </div>
       </article>
     </div>

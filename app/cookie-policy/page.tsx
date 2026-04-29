@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Cookie Policy | Zion Tech Group',
   description:
     'Information about our policies, terms, and legal commitments. We are transparent about how we operate, protect your data, and ensure fair business practice',

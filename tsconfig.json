@@ -33,7 +33,9 @@
     },
     "incremental": true,
     "types": [
-      "node", "react", "react-dom"
+      "node",
+      "react",
+      "react-dom"
     ],
     "plugins": [
       {

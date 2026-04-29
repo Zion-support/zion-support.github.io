@@ -77,18 +77,18 @@ export default function AutonomousConversionCopilotPage() {
               Pair with the Autonomous Backlog Prioritizer to merge funnel wins into the global implementation queue.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link
+              <a
                 href="/ai-lab/autonomous-backlog-prioritizer"
                 className="inline-flex items-center rounded-full border border-pink-400/60 bg-pink-500/20 px-3 py-1.5 text-xs font-semibold text-pink-100"
               >
                 Open backlog prioritizer
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact#engagement"
                 className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1.5 text-xs font-semibold text-slate-100"
                data-cta-event="cta_contact" data-cta-label="page">
                 Launch conversion sprint
-              </Link>
+              </a>
             </div>
           </section>
         </div>

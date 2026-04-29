@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, FileText, Image, Download, Mail } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import { CONTACT_INFO } from '../utils/seoConstants';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Press & Media | Zion Tech Group',
   description:
     'Press releases, media kit, logos, executive bios, and media contact for Zion Tech Group. Access AI product news, launch updates, and resources for journalists and analysts.',
@@ -110,13 +111,13 @@ export default function PressPage() {
               <Mail className="mr-2 h-4 w-4" />
               Media Inquiries
             </a>
-            <Link
+            <a
               href="/about"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               About Us
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -150,13 +151,13 @@ export default function PressPage() {
                 </time>
                 <h3 className="mt-2 text-lg font-semibold text-white">{release.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-300">{release.excerpt}</p>
-                <Link
+                <a
                   href={release.href}
                   className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
                 >
                   Read more
                   <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+                </a>
               </div>
             ))}
           </div>

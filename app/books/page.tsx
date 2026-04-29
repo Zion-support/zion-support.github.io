@@ -105,7 +105,7 @@ export default function BooksPage() {
         <div className="text-center p-8 bg-slate-800/30 border border-slate-700 rounded-3xl">
           <h2 className="text-2xl font-bold text-white mb-4">Want More Recommendations?</h2>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-            Check out our <Link href="/support" className="text-purple-400 hover:text-purple-300">Support page</Link> for more free tools, 
+            Check out our <a href="/support" className="text-purple-400 hover:text-purple-300">Support page</a> for more free tools, 
             or <a href="https://amzn.to/3wxy123?tag=ziontech-20" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">browse all DevOps books</a>.
           </p>
           <p className="text-xs text-slate-500">
@@ -115,12 +115,12 @@ export default function BooksPage() {
 
         {/* Back to Support */}
         <div className="mt-12 text-center">
-          <Link 
+          <a 
             href="/support"
             className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
           >
             ← Back to Support Page
-          </Link>
+          </a>
         </div>
       </div>
     </div>

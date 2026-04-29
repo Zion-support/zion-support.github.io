@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Edge & Real-Time Inference | Zion Tech Group',
   description:
     'Deploy AI at the edge and in real time. Low-latency inference, on-device models, and streaming pipelines for mission-critical applications.',

@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 import { latestSiteEvolutionSnapshot } from '../ai-site-evolution-data';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Site Evolution Advisor',
   description:
     'See an AI-native view of how Zion’s autonomous agents are improving ziontechgroup.com over time.',

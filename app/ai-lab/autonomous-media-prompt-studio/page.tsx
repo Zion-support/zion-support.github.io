@@ -179,18 +179,18 @@ export default function AutonomousMediaPromptStudioPage() {
             </div>
 
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link
+              <a
                 href="/zion-ai-image-generator"
                 className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-4 py-2 text-xs font-semibold text-cyan-50 hover:bg-cyan-400/30"
               >
                 Open image generator
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/zion-ai-video-generator"
                 className="rounded-full border border-emerald-300/70 bg-emerald-400/20 px-4 py-2 text-xs font-semibold text-emerald-50 hover:bg-emerald-400/30"
               >
                 Open video generator
-              </Link>
+              </a>
             </div>
           </section>
         </div>

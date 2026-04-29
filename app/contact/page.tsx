@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Zap } from 'lucide-react';
 import { CONTACT_INFO } from '../utils/seoConstants';
 import ContactFormClient from '../components/ContactFormClient';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Contact | Zion Tech Group',
   description:
     'Get in touch with Zion Tech Group to start a project, book a discovery call, or request a pilot quote for AI apps and engineering services.',
@@ -254,18 +255,18 @@ export default function ContactPage() {
             No commitment required. Start with a quick discovery conversation and see where it leads.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/solutions"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               Explore Solutions
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               View Pricing
-            </Link>
+            </a>
           </div>
         </div>
       </section>

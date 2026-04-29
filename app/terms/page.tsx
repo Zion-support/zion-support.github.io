@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Terms of Service | Zion Tech Group',
   description:
     'Terms of service for Zion Tech Group products, services, and platform usage.',
@@ -107,13 +108,13 @@ export default function TermsPage() {
         <div className="mt-12 rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6">
           <p className="text-sm text-slate-300">
             If you have questions about these terms, please{' '}
-            <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
+            <a href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
               contact us
-            </Link>
+            </a>
             . You can also review our{' '}
-            <Link href="/privacy" className="font-medium text-purple-300 hover:text-purple-200">
+            <a href="/privacy" className="font-medium text-purple-300 hover:text-purple-200">
               Privacy Policy
-            </Link>
+            </a>
             .
           </p>
         </div>

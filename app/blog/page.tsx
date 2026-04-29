@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
+import Metadata from 'next';
 import BlogClient from './BlogClient';
 import BlogNewsletterSignup from './BlogNewsletterSignup';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Blog',
   description:
     'Insights on AI implementation, engineering best practices, and technology strategy from the Zion Tech Group team.',

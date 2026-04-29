@@ -234,12 +234,12 @@ export default function LaunchReadinessAdvisor() {
             <ul className="mt-2 space-y-2">
               {recommendedPlaybook.modules.map((module) => (
                 <li key={module.href}>
-                  <Link
+                  <a
                     href={module.href}
                     className="text-sm text-slate-200 transition hover:text-purple-300"
                   >
                     {module.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -260,18 +260,18 @@ export default function LaunchReadinessAdvisor() {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
+            <a
               href={recommendedPlaybook.href}
               className="inline-flex items-center rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"
             >
               {recommendedPlaybook.primaryCta}
-            </Link>
-            <Link
+            </a>
+            <a
               href={`/contact?playbook=${recommendedPlaybook.slug}&timeline=${timeline}`}
               className="inline-flex items-center rounded-lg border border-purple-400/40 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-100 transition hover:bg-purple-500/20"
             >
               Discuss this plan
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Order Intelligence | Zion Tech Group',
   description:
     'Improve order accuracy, fulfillment speed, and exception handling with intelligent order routing and insights.',

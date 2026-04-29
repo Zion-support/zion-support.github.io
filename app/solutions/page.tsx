@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import PageFAQ from '../components/PageFAQ';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Solutions | Zion Tech Group',
   description:
     'Explore Zion Tech Group AI solutions across growth, engineering, security, and operations. Find the right app and delivery path for your team.',
@@ -121,19 +122,19 @@ export default function SolutionsPage() {
             <span className="rounded-full border border-slate-600/80 bg-slate-900/60 px-3 py-1">2–4 week pilots</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               View Pricing
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -184,14 +185,14 @@ export default function SolutionsPage() {
               </div>
               <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {category.apps.map((app) => (
-                  <Link
+                  <a
                     key={app.href}
                     href={app.href}
                     className="group flex items-center gap-2 rounded-xl border border-slate-700/50 bg-slate-950/50 px-4 py-3 text-sm text-slate-200 transition hover:border-purple-400/50 hover:bg-slate-900/80 hover:text-white"
                   >
                     <span className="flex-1">{app.name}</span>
                     <ArrowRight className="h-3.5 w-3.5 text-slate-500 transition group-hover:text-purple-400" />
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -209,349 +210,349 @@ export default function SolutionsPage() {
             Explore AI solutions built for specific industries and use cases.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
+            <a
               href="/solutions/healthcare"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Healthcare
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/financial-services"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Financial Services
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/insurance"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Insurance
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/beauty-wellness"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Beauty & Wellness
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/legal-professional-services"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Legal & Professional Services
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/education-training"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Education & Training
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/packaging-materials"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Packaging & Materials
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/warehousing-3pl"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Warehousing & 3PL
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/asset-management"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Asset Management & Investment
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/government-and-public-sector"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Government & Public Sector
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/banking-and-capital-markets"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Banking & Capital Markets
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/telecommunications"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Telecommunications
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/technology-and-saas"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Technology & SaaS
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/ecommerce-retail"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               E-Commerce & Retail
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/manufacturing-industrial"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Manufacturing & Industrial
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/logistics-supply-chain"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Logistics & Supply Chain
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/media-entertainment"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Media & Entertainment
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/real-estate-property"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Real Estate & Property
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/agriculture-agritech"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Agriculture & Agritech
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/automotive-mobility"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Automotive & Mobility
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/energy-utilities"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Energy & Utilities
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/renewable-energy-cleantech"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Renewable Energy & Cleantech
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/mining-natural-resources"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Mining & Natural Resources
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/food-beverage"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Food & Beverage
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/veterinary-animal-health"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Veterinary & Animal Health
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/home-services-contractors"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Home Services & Contractors
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/hospitality-travel"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Hospitality & Travel
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/non-profit-social-impact"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Non-Profit & Social Impact
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/construction-engineering"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Construction & Engineering
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/pharmaceuticals-life-sciences"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Pharmaceuticals & Life Sciences
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/aerospace-defense"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Aerospace & Defense
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/maritime-shipping"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Maritime & Shipping
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/oil-gas"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Oil & Gas
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/environmental-waste-management"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Environmental & Waste Management
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/gaming-esports"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Gaming & Esports
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/sports-fitness"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Sports & Fitness
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/consumer-goods-cpg"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Consumer Goods & CPG
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/transportation-fleet"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Transportation & Fleet
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/marketing-advertising"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Marketing & Advertising
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/chemicals-materials"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Chemicals & Materials
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/electronics-semiconductors"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Electronics & Semiconductors
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/space-satellite"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Space & Satellite
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/textiles-apparel"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Textiles & Apparel
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/accounting-tax-services"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Accounting & Tax Services
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/wholesale-distribution"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Wholesale & Distribution
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/restaurants-food-service"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Restaurants & Food Service
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-                        <Link
+            </a>
+                        <a
               href="/solutions/staffing-recruiting"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Staffing & Recruiting
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions/facilities-property-management"
               className="inline-flex items-center rounded-xl border border-slate-700/70 bg-slate-950/60 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
             >
               Facilities & Property Management
               <ArrowRight className="ml-2 h-3.5 w-3.5 text-purple-400" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/industries"
               className="inline-flex items-center rounded-xl border border-purple-400/40 bg-purple-500/10 px-4 py-3 text-sm font-medium text-purple-200 transition hover:bg-purple-500/20"
             >
               View All Industries
               <ArrowRight className="ml-2 h-3.5 w-3.5" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -571,39 +572,39 @@ export default function SolutionsPage() {
               <p className="mt-2 text-sm text-slate-300">
                 Multi-location provider digitized intake workflows with AI Document Processor.
               </p>
-              <Link
+              <a
                 href="/case-studies"
                 className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
               >
                 View case studies
                 <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
               <h3 className="font-semibold text-white">Fintech Passes SOC 2 Audit in 8 Weeks</h3>
               <p className="mt-2 text-sm text-slate-300">
                 Series A fintech used Compliance Manager and Security Shield for first audit.
               </p>
-              <Link
+              <a
                 href="/case-studies"
                 className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
               >
                 View case studies
                 <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/65 p-5">
               <h3 className="font-semibold text-white">Engineering Team Ships 3x Faster</h3>
               <p className="mt-2 text-sm text-slate-300">
                 Product team used AI Code Assistant and DevOps Automation to accelerate delivery.
               </p>
-              <Link
+              <a
                 href="/case-studies"
                 className="mt-3 inline-flex items-center text-sm font-semibold text-purple-300 hover:text-purple-200"
               >
                 View case studies
                 <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -675,18 +676,18 @@ export default function SolutionsPage() {
             Our team can map your goals to the right app modules, integration architecture, and delivery plan.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <a
               href="/contact"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
              data-cta-event="cta_discovery" data-cta-label="page">
               Talk to a Specialist
-            </Link>
-            <Link
+            </a>
+            <a
               href="/"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Browse All Apps
-            </Link>
+            </a>
           </div>
         </div>
       </section>

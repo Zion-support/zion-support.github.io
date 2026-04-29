@@ -1,7 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Data Engineering | Zion Tech Group',
   description:
     'Build robust data pipelines, modern data warehouses, and real-time streaming architectures. Transform raw data into reliable, analytics-ready assets at scale.',

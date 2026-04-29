@@ -407,12 +407,12 @@ export default function ROIImpactEstimator() {
           >
             {copyStatus === 'copied' ? 'Snapshot copied' : 'Copy snapshot'}
           </button>
-          <Link
+          <a
             href={contactHref}
             className="rounded-lg border border-purple-400/40 bg-purple-500/10 px-3 py-2 text-xs font-semibold text-purple-100 transition hover:bg-purple-500/20"
           >
             Send this estimate to Zion
-          </Link>
+          </a>
         </div>
         {copyStatus === 'error' && (
           <p className="mt-2 text-xs text-rose-300">

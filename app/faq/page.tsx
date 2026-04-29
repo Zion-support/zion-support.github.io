@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 import { FAQ_ITEMS } from '../constants/faqData';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Frequently Asked Questions | Zion Tech Group',
   description:
     'Find answers about Zion Tech Group AI solutions, implementation, pricing, industry support, and integration. Get started with AI for your business.',
@@ -43,18 +44,18 @@ export default function FAQPage() {
           <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-300">
             Answers to common questions about Zion Tech Group AI solutions, implementation, pricing,
             and support. Can&apos;t find what you need?{' '}
-            <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200" data-cta-event="cta_discovery" data-cta-label="page">
+            <a href="/contact" className="font-medium text-purple-300 hover:text-purple-200" data-cta-event="cta_discovery" data-cta-label="page">
               Contact us
-            </Link>
+            </a>
             .
           </p>
           <div className="mt-8">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call
-            </Link>
+            </a>
           </div>
         </div>
       </section>

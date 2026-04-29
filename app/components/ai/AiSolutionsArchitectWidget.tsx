@@ -342,18 +342,18 @@ export default function AiSolutionsArchitectWidget() {
                 <span className="font-medium text-purple-200">{kickoffWindow} based on your inputs.</span>
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
-                <Link
+                <a
                   href={recommendation.primaryCtaHref}
                   className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:from-purple-500 hover:to-pink-500"
                 >
                   {recommendation.primaryCtaLabel}
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact#engagement"
                   className="inline-flex items-center justify-center rounded-lg border border-slate-600 bg-slate-900/80 px-3 py-1.5 text-xs font-semibold text-slate-100 transition hover:border-purple-300 hover:text-white"
                 >
                   Talk with a human architect
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -393,12 +393,12 @@ export default function AiSolutionsArchitectWidget() {
               <ul className="mt-1 space-y-1.5">
                 {recommendation.supportingLinks.map((link) => (
                   <li key={link.href}>
-                    <Link
+                    <a
                       href={link.href}
                       className="text-xs text-slate-200 underline-offset-2 hover:text-purple-300 hover:underline"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

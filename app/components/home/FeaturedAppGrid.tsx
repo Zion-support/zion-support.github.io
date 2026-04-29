@@ -21,7 +21,7 @@ export default function FeaturedAppGrid({ apps }: { apps: FeaturedApp[] }) {
     <>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {visible.map((app) => (
-          <Link
+          <a
             key={app.href}
             href={app.href}
             className="group rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-900/80 to-slate-950/60 p-6 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10 ring-1 ring-white/[0.03]"
@@ -39,7 +39,7 @@ export default function FeaturedAppGrid({ apps }: { apps: FeaturedApp[] }) {
             </h3>
             <p className="mt-2 text-sm leading-6 text-slate-200">{app.description}</p>
             <p className="mt-4 text-sm font-semibold text-purple-300 group-hover:text-purple-200">View app →</p>
-          </Link>
+          </a>
         ))}
       </div>
 

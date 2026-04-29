@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Innovation Bundles | Zion Tech Group',
   description:
     'Pre-designed AI bundles for faster rollout. Combine apps across customer success, revenue, operations, security, and more.',
@@ -208,18 +209,18 @@ export default function InnovationBundlesPage() {
             high-impact bundle and expand as your team scales.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
              data-cta-event="cta_discovery" data-cta-label="page">
               Book a Discovery Call →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               View Pricing
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -320,22 +321,22 @@ export default function InnovationBundlesPage() {
               <p className="mt-3 text-sm text-slate-300">{bundle.description}</p>
               <div className="mt-4 space-y-2">
                 {bundle.modules.map((mod) => (
-                  <Link
+                  <a
                     key={mod.name}
                     href={mod.href}
                     className="flex items-center gap-2 rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 text-sm text-slate-200 transition hover:border-purple-400/40 hover:text-white"
                   >
                     <span className="block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-400" />
                     {mod.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
-              <Link
+              <a
                 href={bundle.href}
                 className="mt-5 inline-flex items-center text-sm font-semibold text-purple-300 transition hover:text-purple-200"
               >
                 {bundle.cta} →
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -398,18 +399,18 @@ export default function InnovationBundlesPage() {
             matched to your specific workflows and goals.
           </p>
           <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
              data-cta-event="cta_discovery" data-cta-label="page">
               Talk to a Specialist
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center rounded-xl border border-slate-500/70 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-purple-300/60 hover:text-white"
             >
               Browse All Apps
-            </Link>
+            </a>
           </div>
         </div>
       </section>

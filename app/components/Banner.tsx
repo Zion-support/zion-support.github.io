@@ -38,10 +38,10 @@ export default function Banner({ items }: BannerProps) {
             <span className="bg-blue-500/20 px-3 py-1 rounded text-sm font-medium">{item.tag}</span>
             <h1 className="text-3xl font-bold md:text-4xl leading-tight">{item.title}</h1>
             <p className="text-lg md:text-xl max-w-md">{item.description}</p>
-            <Link href={item.href} className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg transition-colors font-medium">
+            <a href={item.href} className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg transition-colors font-medium">
               Explore Now
               <span className="ml-2">→</span>
-            </Link>
+            </a>
           </div>
           <div className="self-end">
             <DarkModeToggle />

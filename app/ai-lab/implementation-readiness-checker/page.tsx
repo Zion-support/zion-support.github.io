@@ -64,12 +64,12 @@ export default function ImplementationReadinessCheckerPage() {
             </ul>
 
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
-              <Link href="/ai-lab/rollout-blueprint" className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-3 py-1.5 font-semibold text-cyan-50">
+              <a href="/ai-lab/rollout-blueprint" className="rounded-full border border-cyan-300/70 bg-cyan-400/20 px-3 py-1.5 font-semibold text-cyan-50">
                 Generate rollout blueprint
-              </Link>
-              <Link href="/ai-lab/ai-governance-risk-advisor" className="rounded-full border border-amber-300/70 bg-amber-400/15 px-3 py-1.5 font-semibold text-amber-50">
+              </a>
+              <a href="/ai-lab/ai-governance-risk-advisor" className="rounded-full border border-amber-300/70 bg-amber-400/15 px-3 py-1.5 font-semibold text-amber-50">
                 Review governance risk
-              </Link>
+              </a>
             </div>
           </div>
         </div>

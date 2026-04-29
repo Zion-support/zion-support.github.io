@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion Customer Satisfaction Monitor | Zion Tech Group',
   description:
     'Zion Customer Satisfaction Monitor transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. ',

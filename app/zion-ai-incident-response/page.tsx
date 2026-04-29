@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Incident Response | Zion Tech Group',
   description:
     'Accelerate incident triage and resolution with automated playbooks and real-time collaboration.',

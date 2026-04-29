@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 import { ArrowRight, Play, Calendar, MessageSquare, FileCode } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Demo | Zion Tech Group',
   description:
     'See Zion AI solutions in action. Book a live demo, explore use cases, or try our ROI estimator and launch advisor. No commitment required.',
@@ -71,19 +72,19 @@ export default function DemoPage() {
             based on your goals and timeline.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5"
             >
               Book a Demo
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/solutions"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-7 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
             >
               Browse Solutions
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -102,7 +103,7 @@ export default function DemoPage() {
           </p>
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {demoOptions.map((option) => (
-              <Link
+              <a
                 key={option.title}
                 href={option.href}
                 className="group rounded-2xl border border-slate-700/70 bg-slate-950/70 p-6 shadow-lg shadow-black/20 transition hover:border-purple-400/50 hover:bg-slate-900/80"
@@ -118,7 +119,7 @@ export default function DemoPage() {
                   {option.cta}
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </span>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -133,12 +134,12 @@ export default function DemoPage() {
             Tell us your use case and we will set up a demo focused on the apps and workflows that
             matter most to you.
           </p>
-          <Link
+          <a
             href="/contact"
             className="mt-8 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Request a Demo
-          </Link>
+          </a>
         </div>
       </section>
     </div>

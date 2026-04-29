@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Recommendation Engine | Zion Tech Group',
   description:
     'AI Recommendation Engine combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integrate with your existing systems and deliver measurable results.',

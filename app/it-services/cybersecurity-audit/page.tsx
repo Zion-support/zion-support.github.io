@@ -35,18 +35,18 @@ export default function CybersecurityauditPage() {
               We provide comprehensive services to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors"
               >
                 Get Started
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/about"
                 className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
               >
                 Learn More
-              </Link>
+              </a>
             </div>
           </div>
         </div>

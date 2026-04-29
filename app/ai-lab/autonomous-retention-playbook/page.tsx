@@ -66,18 +66,18 @@ export default function AutonomousRetentionPlaybookPage() {
               Start with <strong>{prioritizedLevers[0]?.name}</strong> to maximize near-term retention lift with practical execution risk.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link
+              <a
                 href="/ai-lab/autonomous-conversion-copilot"
                 className="inline-flex items-center rounded-full border border-cyan-400/60 bg-cyan-500/20 px-3 py-1.5 text-xs font-semibold text-cyan-100"
               >
                 Open conversion copilot
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact#engagement"
                 className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1.5 text-xs font-semibold text-slate-100"
                data-cta-event="cta_contact" data-cta-label="page">
                 Launch retention sprint
-              </Link>
+              </a>
             </div>
           </section>
         </div>

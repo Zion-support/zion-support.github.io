@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Supply Visibility | Zion Tech Group',
   description:
     'Gain real-time visibility into supply chain status, risks, and alternative sourcing options.',

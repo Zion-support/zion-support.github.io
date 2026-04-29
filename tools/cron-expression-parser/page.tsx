@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const FIELD_NAMES = ['minute', 'hour', 'day of month', 'month', 'day of week'];
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const DOW_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -29,16 +30,16 @@ function describeField(field: string, fieldName: string, monthNames?: string[], 
   const rangeMatch = field.match(/^(\d+)-(\d+)(?:\/(\d+))?$/);
   if (rangeMatch) {
     const [, start, end, step] = rangeMatch;
-    let desc = '';
     if (fieldName === 'month' && monthNames) {
-      desc = `${monthNames[parseInt(start) - 1] ?? start} to ${monthNames[parseInt(end) - 1] ?? end}`;
+      const rangeStr = `${monthNames[parseInt(start) - 1] ?? start} to ${monthNames[parseInt(end) - 1] ?? end}`;
+      return step ? `${rangeStr} (every ${step})` : rangeStr;
     } else if (fieldName === 'day of week' && dowNames) {
-      desc = `${dowNames[parseInt(start) % 7] ?? start} to ${dowNames[parseInt(end) % 7] ?? end}`;
+      const rangeStr = `${dowNames[parseInt(start) % 7] ?? start} to ${dowNames[parseInt(end) % 7] ?? end}`;
+      return step ? `${rangeStr} (every ${step})` : rangeStr;
     } else {
-      desc = `${start} through ${end}`;
+      const rangeStr = `${start} through ${end}`;
+      return step ? `${rangeStr} (every ${step})` : rangeStr;
     }
-    if (step) desc += ` (every ${step})`;
-    return desc;
   }
 
   // Single value

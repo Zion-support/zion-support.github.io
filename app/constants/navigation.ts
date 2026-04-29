@@ -9,6 +9,13 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
   { name: 'Pricing', href: '/pricing' },
+  { name: 'Donate', href: '/donate' },
+  { name: 'Newsletter', href: '/newsletter' },
+  { name: 'Support', href: '/support' },
+  { name: 'Monetization', href: '/monetization' },
+  { name: 'Sponsor', href: '/sponsor' },
+  { name: 'Digital Products', href: '/digital-products' },
+  { name: 'Free Resources', href: '/free-resources' },
   { name: 'Contact', href: '/contact' },
 ];
 

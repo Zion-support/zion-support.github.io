@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion AI Video Generator | Zion Tech Group',
   description:
     'Zion AI Video Generator accelerates creative production with AI-assisted design, video generation, and content creation tools. Produce high-quality visual ',

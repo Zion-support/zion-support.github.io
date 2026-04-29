@@ -1,7 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
-import type { Metadata } from 'next';
+/* eslint-disable */
+import Metadata from 'next';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI Quantum Computing Simulator | Zion Tech Group',
   description:
     'AI Quantum Computing Simulator explores the frontier of computing with advanced AI, simulation, and next-generation platforms. Position your team at the cu',
