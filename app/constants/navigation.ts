@@ -19,6 +19,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Free Tools Hub', href: '/free-tools-hub' },
   { name: 'Free Resources', href: '/free-resources' },
   { name: 'Newsletter', href: '/free-newsletter' },
+  { name: 'Calendar', href: '/free-calendar' },
   { name: 'Contact', href: '/contact' },
 ];
 
