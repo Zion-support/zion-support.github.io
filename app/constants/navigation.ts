@@ -32,6 +32,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'CSV to Table', href: '/tools/csv-to-table' },
   { name: 'Color Generator', href: '/tools/color-generator' },
   { name: 'Joke Generator', href: '/tools/joke-generator' },
+  { name: 'Base64 Encoder/Decoder', href: '/tools/base64' },
   { name: 'Contact', href: '/contact' },
 ];
 
