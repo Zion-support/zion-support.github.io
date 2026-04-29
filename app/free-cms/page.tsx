@@ -5,37 +5,37 @@ import { Code, ExternalLink } from 'lucide-react';
 const cmsTools = [
   {
     name: 'WordPress.com',
-    href: 'https://wordpress.com/?ref=ziontech',
+    href: 'https://wordpress.com/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=cms',
     desc: 'Free blogging and website builder with 3GB storage.',
     category: 'Hosted CMS'
   },
   {
     name: 'Ghost(Pro) Free Starter',
-    href: 'https://ghost.org/starter?ref=ziontech',
+    href: 'https://ghost.org/starter?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=cms',
     desc: 'Fluent publishing platform with free plan.',
     category: 'Hosted CMS'
   },
   {
     name: 'Strapi (Open Source)',
-    href: 'https://strapi.io/?ref=ziontech',
+    href: 'https://strapi.io/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=cms',
     desc: 'Headless CMS you host for free on your own server.',
     category: 'Self‑Hosted'
   },
   {
     name: 'DatoCMS',
-    href: 'https://www.datocms.com/?ref=ziontech',
+    href: 'https://www.datocms.com/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=cms',
     desc: 'Content infrastructure with 25MB free storage.',
     category: 'Headless CMS'
   },
   {
     name: 'Sanity.io',
-    href: 'https://www.sanity.io/?ref=ziontech',
+    href: 'https://www.sanity.io/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=cms',
     desc: 'Real-time document‑store CMS with free tier.',
     category: 'Headless CMS'
   },
   {
     name: 'Netlify CMS',
-    href: 'https://www.netlifycms.org/?ref=ziontech',
+    href: 'https://www.netlifycms.org/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=cms',
     desc: "Open-source CMS hosting freely via Netlify.",
     category: 'Self‑Hosted'
   },
