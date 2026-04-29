@@ -28,6 +28,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Quote of the Day', href: '/tools/quote-of-the-day' },
   { name: 'Recipe Converter', href: '/tools/recipe-converter' },
   { name: 'Password Strength Checker', href: '/tools/password-strength-checker' },
+  { name: 'Password Generator', href: '/tools/password-generator' },
   { name: 'Stopwatch', href: '/tools/stopwatch' },
   { name: 'CSV to Table', href: '/tools/csv-to-table' },
   { name: 'Color Generator', href: '/tools/color-generator' },
