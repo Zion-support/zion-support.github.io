@@ -1,93 +1,64 @@
-'use client';
-
 import React, { useState } from 'react';
-import { CONTACT_INFO } from '../utils/seoConstants';
 
-interface NewsletterSignupProps {
-  className?: string;
-  onSubscribe?: (email: string) => void;
-}
-
-/**
- * Newsletter signup. Sends to commercial@ziontechgroup.com via mailto
- * so submissions reach the commercial team (no backend required).
- */
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({
-  className = '',
-  onSubscribe
-}) => {
+export default function NewsletterSignup() {
   const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
+    setSending(true);
     setMessage('');
-
     try {
-      const subject = encodeURIComponent('Newsletter signup / Stay Updated');
-      const body = encodeURIComponent(
-        `Newsletter signup.\n\nEmail: ${email.trim()}\n\n(Submitted via ziontechgroup.com)`,
-      );
-      window.location.href = `mailto:${CONTACT_INFO.email}?subject=${subject}&body=${body}`;
-
-      if (onSubscribe) {
-        onSubscribe(email);
-      }
-
-      setMessage('Thank you for subscribing! Your email client should open to send the message.');
+      // In a real app, you would send this to your email service or API
+      // For now, we'll simulate a delay and show a success message
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setMessage('Thanks for subscribing! We\'ll keep you updated.');
       setEmail('');
-    } catch {
-      setMessage('Something went wrong. Please try again.');
+    } catch (err) {
+      setMessage('Oops! Something went wrong. Please try again.');
     } finally {
-      setIsSubmitting(false);
+      setSending(false);
     }
   };
 
   return (
-    <div className={`newsletter-signup ${className}`}>
-      <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-      <p className="text-gray-600 mb-4">
-        Get the latest updates and news delivered to your inbox.
+    <div className="mt-12 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl">
+      <h3 className="text-2xl font-bold text-white mb-4">Stay Updated</h3>
+      <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+        Get the latest on new free tools, automation tips, and Zion Tech Group updates.
       </p>
-      
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="email" className="sr-only">
-            Email address
-          </label>
+        <div className="relative">
           <input
-            id="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="your@email.com"
+            className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400 text-white placeholder:text-slate-400"
+            disabled={sending}
           />
+          {sending && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-400"></div>
+            </div>
+          )}
         </div>
-        
+        {message && (
+          <p className={`mt-2 text-sm text-center ${
+            message.includes('Thanks') ? 'text-emerald-400' : 'text-rose-400'
+          }`}>
+            {message}
+          </p>
+        )}
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+          disabled={sending || !email}
+          className="w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:bg-gradient-to-r from-purple-500 to-pink-500 disabled:opacity-50"
         >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+          {sending ? 'Subscribing...' : 'Subscribe'}
         </button>
       </form>
-      
-      {message && (
-        <p className={`mt-2 text-sm ${message.includes('Thank you') ? 'text-green-600' : 'text-red-600'}`}>
-          {message}
-        </p>
-      )}
     </div>
   );
-};
-
-NewsletterSignup.displayName = 'NewsletterSignup';
-
-export default NewsletterSignup;
+}

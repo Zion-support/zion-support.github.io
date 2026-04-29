@@ -6,6 +6,7 @@ import DependencyBadge from './components/DependencyBadge';
 import fs from 'fs';
 import path from 'path';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
+import OpenCollectiveWidget from './components/OpenCollectiveWidget';
 
 type DeploymentReadinessReport = {
   timestamp?: string;
@@ -2384,6 +2385,8 @@ export default function Home() {
           </div>
         </section>
 
+
+      <OpenCollectiveWidget />
       <section className="mt-12 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl text-center">
         <h3 className="text-2xl font-bold text-white mb-4">Support Zion Tech Group</h3>
         <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
