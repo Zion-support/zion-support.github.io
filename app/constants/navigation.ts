@@ -23,6 +23,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'API Mock', href: '/tools/api-mock' },
   { name: 'Markdown Preview', href: '/tools/markdown-preview' },
   { name: 'Unit Converter', href: '/tools/unit-converter' },
+  { name: 'Currency Converter', href: '/tools/currency-converter' },
   { name: 'Contact', href: '/contact' },
 ];
 
