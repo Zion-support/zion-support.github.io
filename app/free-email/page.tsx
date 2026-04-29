@@ -5,25 +5,25 @@ import { Mail, ExternalLink } from 'lucide-react';
 const emailServices = [
   {
     name: 'ProtonMail',
-    href: 'https://proton.me/mail?ref=ziontech',
+    href: 'https://proton.me/mail?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=email',
     desc: 'Secure email with 500MB free storage.',
     category: 'Privacy-Focused'
   },
   {
     name: 'Tutanota',
-    href: 'https://tutanota.com/?ref=ziontech',
+    href: 'https://tutanota.com/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=email',
     desc: 'Encrypted email with 1GB free tier.',
     category: 'Privacy-Focused'
   },
   {
     name: 'Zoho Mail',
-    href: 'https://www.zoho.com/mail/?ref=ziontech',
+    href: 'https://www.zoho.com/mail/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=email',
     desc: 'Business email with 5GB free for 1 user.',
     category: 'Business'
   },
   {
     name: 'Gmail',
-    href: 'https://mail.google.com/?ref=ziontech',
+    href: 'https://mail.google.com/?ref=ziontech&utm_source=ziontechgroup.com&utm_medium=referral&utm_campaign=email',
     desc: 'Google\'s email service with 15GB storage.',
     category: 'Standard'
   }
