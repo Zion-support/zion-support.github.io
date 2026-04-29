@@ -24,6 +24,9 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Markdown Preview', href: '/tools/markdown-preview' },
   { name: 'Unit Converter', href: '/tools/unit-converter' },
   { name: 'Currency Converter', href: '/tools/currency-converter' },
+  { name: 'Word Counter', href: '/tools/word-counter' },
+  { name: 'Quote of the Day', href: '/tools/quote-of-the-day' },
+  { name: 'Recipe Converter', href: '/tools/recipe-converter' },
   { name: 'Contact', href: '/contact' },
 ];
 
