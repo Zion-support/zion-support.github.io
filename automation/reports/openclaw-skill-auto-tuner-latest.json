@@ -1,9 +1,14 @@
 {
-  "generatedAt": "2026-04-07T22:01:52.604Z",
+  "generatedAt": "2026-04-29T19:00:01.686Z",
   "inputs": {
     "confidence": 0,
-    "auditHealthy": true,
-    "failingChecks": [],
+    "auditHealthy": false,
+    "failingChecks": [
+      "promptRunnerExists",
+      "guardianExists",
+      "trendAdapterExists",
+      "regressionMemoryExists"
+    ],
     "currentSuggested": {
       "frequencySeconds": 50,
       "maxParallel": 1

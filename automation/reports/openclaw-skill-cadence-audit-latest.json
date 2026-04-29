@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-04-15T17:38:30.287Z",
+  "generatedAt": "2026-04-29T19:00:01.691Z",
   "status": "warn",
   "failingChecks": [
+    "promptRunnerExists",
     "guardianExists",
     "trendAdapterExists",
     "regressionMemoryExists"
@@ -14,7 +15,7 @@
     "openclawMaxParallel": 2
   },
   "checks": {
-    "promptRunnerExists": true,
+    "promptRunnerExists": false,
     "guardianExists": false,
     "trendAdapterExists": false,
     "regressionMemoryExists": false,
