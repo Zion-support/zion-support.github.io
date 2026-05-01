@@ -67,3 +67,8 @@
 - security(pp,automation): update security configurations (Auto Sync Bot)
 - chore(reports): refresh workflow failure triage (github-actions[bot])
 
+## 2026-05-01
+- Merge branch 'main' of https://github.com/Zion-support/zion.app (Auto Sync Bot)
+- Add AI Smart Content Summarizer and FAQ Chatbot components (Auto Sync Bot)
+- chore(reports): refresh workflow failure triage (github-actions[bot])
+
