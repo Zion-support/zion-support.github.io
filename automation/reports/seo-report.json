@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-05-01T17:07:01.870Z",
+  "timestamp": "2026-05-01T19:07:05.267Z",
   "score": 27,
   "grade": "F",
   "summary": {
-    "totalIssues": 6532,
-    "highSeverity": 2360,
-    "mediumSeverity": 3591,
+    "totalIssues": 6537,
+    "highSeverity": 2362,
+    "mediumSeverity": 3594,
     "lowSeverity": 581,
-    "fixesApplied": 2362
+    "fixesApplied": 2364
   },
   "issues": [
     {
@@ -8148,6 +8148,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/ai/AiSolutionsArchitectWidget.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ai/FaqChatbot.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ai/FaqChatbot.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -20607,6 +20621,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/ai/FaqChatbot.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/ai/NewFeatureBanner.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -28931,6 +28952,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/ai/AiSolutionsArchitectWidget.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/ai/FaqChatbot.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -37296,6 +37324,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/ai/AiSolutionsArchitectWidget.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/ai/FaqChatbot.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
