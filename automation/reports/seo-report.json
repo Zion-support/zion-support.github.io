@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-04-29T19:07:01.207Z",
-  "score": 22,
+  "timestamp": "2026-05-01T15:07:01.084Z",
+  "score": 27,
   "grade": "F",
   "summary": {
-    "totalIssues": 6503,
-    "highSeverity": 2354,
-    "mediumSeverity": 3574,
-    "lowSeverity": 575,
-    "fixesApplied": 2357
+    "totalIssues": 6532,
+    "highSeverity": 2360,
+    "mediumSeverity": 3591,
+    "lowSeverity": 581,
+    "fixesApplied": 2362
   },
   "issues": [
     {
@@ -8210,6 +8210,20 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/components/ai/SmartContentSummarizer.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ai/SmartContentSummarizer.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/components/ai-lab/AILabToolLayout.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -12865,6 +12879,13 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/tools/base64/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/tools/base64-encoder/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
@@ -12978,6 +12999,13 @@
       "type": "meta",
       "severity": "high",
       "file": "app/tools/color-converter/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/color-generator/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -13383,6 +13411,13 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/tools/joke-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/tools/json-diff-viewer/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -13656,6 +13691,13 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/tools/name-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/tools/number-base-converter/page.tsx",
       "issue": "Missing title tag",
       "suggestion": "Add a descriptive title using Next.js Head component"
@@ -13680,13 +13722,6 @@
       "file": "app/tools/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
-    },
-    {
-      "type": "meta",
-      "severity": "high",
-      "file": "app/tools/password-generator/page.tsx",
-      "issue": "Missing title tag",
-      "suggestion": "Add a descriptive title using Next.js Head component"
     },
     {
       "type": "meta",
@@ -13727,6 +13762,13 @@
       "type": "meta",
       "severity": "high",
       "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/tools/qrcode-generator/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -16487,13 +16529,6 @@
       "file": "public/sitemap.xml",
       "issue": "Sitemap not found",
       "suggestion": "Generate sitemap.xml for better crawlability"
-    },
-    {
-      "type": "robots",
-      "severity": "medium",
-      "file": "public/robots.txt",
-      "issue": "robots.txt not found",
-      "suggestion": "Create robots.txt for crawler directives"
     },
     {
       "type": "opengraph",
@@ -20600,6 +20635,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/ai/SmartContentSummarizer.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/ai-lab/AILabToolLayout.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -22980,6 +23022,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/tools/base64/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/tools/base64-encoder/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -23037,6 +23086,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/tools/color-converter/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/color-generator/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -23253,6 +23309,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/tools/joke-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/tools/json-diff-viewer/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -23407,6 +23470,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/tools/name-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/tools/number-base-converter/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -23443,6 +23513,13 @@
       "type": "opengraph",
       "severity": "medium",
       "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
+      "file": "app/tools/qrcode-generator/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
     },
@@ -28888,6 +28965,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/components/ai/SmartContentSummarizer.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/components/ai-lab/AILabToolLayout.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -31254,6 +31338,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/tools/base64/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/tools/base64-encoder/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -31311,6 +31402,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/tools/color-converter/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/color-generator/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -31527,6 +31625,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/tools/joke-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/tools/json-diff-viewer/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -31674,6 +31779,13 @@
     {
       "type": "structured-data",
       "severity": "medium",
+      "file": "app/tools/name-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
       "file": "app/tools/number-base-converter/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -31710,6 +31822,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/qrcode-generator/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -37211,6 +37330,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/components/ai/SmartContentSummarizer.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/components/ai-lab/AILabToolLayout.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -39591,6 +39717,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/tools/base64/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/tools/base64-encoder/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -39648,6 +39781,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/tools/color-converter/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/color-generator/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -39864,6 +40004,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/tools/joke-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/tools/json-diff-viewer/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -40025,6 +40172,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/tools/name-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/tools/number-base-converter/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -40061,6 +40215,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/tools/qr-code-generator/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/tools/qrcode-generator/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
@@ -45422,7 +45583,21 @@
     {
       "type": "seo",
       "severity": "low",
+      "file": "app/tools/base64/page.tsx",
+      "issue": "Title too short (22 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
       "file": "app/tools/base64-encoder/page.tsx",
+      "issue": "Title too short (22 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/tools/color-generator/page.tsx",
       "issue": "Title too short (22 chars)",
       "suggestion": "Use 50-60 characters for optimal display"
     },
@@ -45445,6 +45620,13 @@
       "severity": "low",
       "file": "app/tools/html-minifier-beautifier/page.tsx",
       "issue": "Title too short (7 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/tools/joke-generator/page.tsx",
+      "issue": "Title too short (21 chars)",
       "suggestion": "Use 50-60 characters for optimal display"
     },
     {
@@ -45485,8 +45667,29 @@
     {
       "type": "seo",
       "severity": "low",
+      "file": "app/tools/name-generator/page.tsx",
+      "issue": "Title too short (21 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/tools/password-generator/page.tsx",
+      "issue": "Title too short (25 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
       "file": "app/tools/password-strength-checker/page.tsx",
       "issue": "Title too short (25 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/tools/qrcode-generator/page.tsx",
+      "issue": "Title too short (17 chars)",
       "suggestion": "Use 50-60 characters for optimal display"
     },
     {
