@@ -1,7 +1,15 @@
 {
   "description": "Central config for pages visited by app improvement, visit intelligence, and audit pipelines. Single source of truth. The aiLab array is merged from the AI Lab catalog by ai-lab-integrity-guardian (AUTO_PAGES_VISIT_BACKFILL).",
-  "updatedAt": "2026-03-25",
+  "updatedAt": "2026-04-29",
   "aiLab": [
+    {
+      "path": "/ai-lab/ai-api-status-dashboard",
+      "label": "Ai Api Status Dashboard"
+    },
+    {
+      "path": "/ai-lab/ai-component-health-checker",
+      "label": "Ai Component Health Checker"
+    },
     {
       "path": "/ai-lab/ai-content-idea-generator",
       "label": "Ai Content Idea Generator"
@@ -17,6 +25,10 @@
     {
       "path": "/ai-lab/ai-site-evolution-advisor",
       "label": "Ai Site Evolution Advisor"
+    },
+    {
+      "path": "/ai-lab/ai-workflow-status-dashboard",
+      "label": "Ai Workflow Status Dashboard"
     },
     {
       "path": "/ai-lab/autonomous-agent-skill-orchestrator",
