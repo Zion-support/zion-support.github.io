@@ -565,6 +565,7 @@ export default function Home() {
         </section>
 
         <ProductRecommenderSection items={aiCatalogHighlights} sectionId="ai-product-recommender" />
+        <SmartContentSummarizer />
 
         <section id="ai-catalog" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
