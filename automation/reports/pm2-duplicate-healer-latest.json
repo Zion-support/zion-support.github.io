@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-01T22:07:01.909Z",
+  "at": "2026-05-01T23:07:01.781Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -17,20 +17,20 @@
       "count": 3,
       "keeperId": 753,
       "extraIds": [
-        750,
-        752
+        756,
+        757
       ]
     }
   ],
   "healed": [
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 750,
+      "deletedId": 756,
       "keptId": 753
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 752,
+      "deletedId": 757,
       "keptId": 753
     }
   ]
