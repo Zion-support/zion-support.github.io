@@ -3,6 +3,7 @@ import DonateSection from './components/DonateSection';
 import { whatsNewItems } from './features/featuredItems';
 import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
+import AdSlot from './components/ai/AdSlot';
 import DependencyBadge from './components/DependencyBadge';
 import fs from 'fs';
 import path from 'path';
