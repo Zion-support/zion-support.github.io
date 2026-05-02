@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-02T08:20:00.541Z",
-  "status": "skipped",
-  "mode": "unknown",
-  "applyAllowed": false,
+  "generatedAt": "2026-05-02T09:20:01.624Z",
+  "status": "no-change",
+  "mode": "stabilize",
+  "applyAllowed": true,
   "applied": false,
   "executePm2": true,
   "files": {
@@ -11,15 +11,15 @@
     "history": "automation/reports/openclaw-runtime-overrides-history.json"
   },
   "before": {
-    "frequencySeconds": 65,
+    "frequencySeconds": 70,
     "maxParallel": 1
   },
   "recommended": {
-    "frequencySeconds": 65,
+    "frequencySeconds": 70,
     "maxParallel": 1
   },
   "after": {
-    "frequencySeconds": 65,
+    "frequencySeconds": 70,
     "maxParallel": 1
   },
   "pm2Restarts": [],

@@ -1,10 +1,26 @@
 # API Documentation
 
-## /api/market-prices/route
+## /api/ai/+server
 
 Methods: Unknown
 
-File: `app/api/market-prices/route.ts`
+File: `app/api/ai/+server.ts`
+
+---
+
+## /api/newsletter/route
+
+Methods: Unknown
+
+File: `app/api/newsletter/route.ts`
+
+---
+
+## /api/predictive/analytics
+
+Methods: Unknown
+
+File: `app/api/predictive/analytics.ts`
 
 ---
 
