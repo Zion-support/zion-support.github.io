@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-05-02T21:07:01.213Z",
+  "timestamp": "2026-05-02T23:07:01.180Z",
   "score": 27,
   "grade": "F",
   "summary": {
-    "totalIssues": 6537,
-    "highSeverity": 2362,
-    "mediumSeverity": 3594,
+    "totalIssues": 6542,
+    "highSeverity": 2364,
+    "mediumSeverity": 3597,
     "lowSeverity": 581,
-    "fixesApplied": 2364
+    "fixesApplied": 2366
   },
   "issues": [
     {
@@ -8134,6 +8134,20 @@
       "type": "meta",
       "severity": "high",
       "file": "app/components/accessibility/AccessibilityControls.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ai/AdSlot.tsx",
+      "issue": "Missing title tag",
+      "suggestion": "Add a descriptive title using Next.js Head component"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
+      "file": "app/components/ai/AdSlot.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -20614,6 +20628,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/components/ai/AdSlot.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/components/ai/AiSolutionsArchitectWidget.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -28945,6 +28966,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/components/accessibility/AccessibilityControls.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/components/ai/AdSlot.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -37317,6 +37345,13 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/components/accessibility/AccessibilityControls.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
+      "file": "app/components/ai/AdSlot.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
