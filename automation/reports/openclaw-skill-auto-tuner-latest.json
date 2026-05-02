@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-02T07:20:00.829Z",
+  "generatedAt": "2026-05-02T08:20:00.535Z",
   "inputs": {
     "confidence": 0,
     "auditHealthy": false,
@@ -10,18 +10,18 @@
       "regressionMemoryExists"
     ],
     "currentSuggested": {
-      "frequencySeconds": 20,
+      "frequencySeconds": 50,
       "maxParallel": 1
     }
   },
   "decision": {
     "mode": "stabilize",
     "recommended": {
-      "frequencySeconds": 40,
+      "frequencySeconds": 70,
       "maxParallel": 1
     },
     "envHints": {
-      "OPENCLAW_FREQUENCY_SECONDS": "40",
+      "OPENCLAW_FREQUENCY_SECONDS": "70",
       "OPENCLAW_MAX_PARALLEL": "1"
     }
   },
