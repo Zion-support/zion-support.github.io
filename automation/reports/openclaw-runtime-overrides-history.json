@@ -1,59 +1,5 @@
 [
   {
-    "at": "2026-04-07T05:01:26.049Z",
-    "mode": "stabilize",
-    "applyAllowed": true,
-    "applied": false,
-    "previousRuntime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "recommended": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "runtime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    }
-  },
-  {
-    "at": "2026-04-07T05:03:26.683Z",
-    "mode": "stabilize",
-    "applyAllowed": true,
-    "applied": false,
-    "previousRuntime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "recommended": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "runtime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    }
-  },
-  {
-    "at": "2026-04-07T05:22:57.488Z",
-    "mode": "stabilize",
-    "applyAllowed": true,
-    "applied": false,
-    "previousRuntime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "recommended": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    },
-    "runtime": {
-      "frequencySeconds": 70,
-      "maxParallel": 1
-    }
-  },
-  {
     "at": "2026-04-07T11:25:32.288Z",
     "mode": "stabilize",
     "applyAllowed": true,
@@ -1063,6 +1009,60 @@
   },
   {
     "at": "2026-05-02T04:20:01.060Z",
+    "mode": "stabilize",
+    "applyAllowed": true,
+    "applied": false,
+    "previousRuntime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "recommended": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "runtime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    }
+  },
+  {
+    "at": "2026-05-02T05:40:00.453Z",
+    "mode": "stabilize",
+    "applyAllowed": true,
+    "applied": false,
+    "previousRuntime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "recommended": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "runtime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    }
+  },
+  {
+    "at": "2026-05-02T06:00:00.839Z",
+    "mode": "stabilize",
+    "applyAllowed": true,
+    "applied": false,
+    "previousRuntime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "recommended": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    },
+    "runtime": {
+      "frequencySeconds": 70,
+      "maxParallel": 1
+    }
+  },
+  {
+    "at": "2026-05-02T06:20:00.693Z",
     "mode": "stabilize",
     "applyAllowed": true,
     "applied": false,
