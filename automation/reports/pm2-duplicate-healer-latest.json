@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-03T20:37:10.701Z",
+  "at": "2026-05-03T21:07:01.111Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -14,89 +14,17 @@
   "duplicates": [
     {
       "name": "openclaw-autonomous-prompts",
-      "count": 14,
+      "count": 2,
       "keeperId": 1554,
       "extraIds": [
-        1544,
-        1545,
-        1546,
-        1547,
-        1548,
-        1549,
-        1550,
-        1551,
-        1552,
-        1553,
-        1555,
-        1556,
-        1557
+        1558
       ]
     }
   ],
   "healed": [
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1544,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1545,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1546,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1547,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1548,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1549,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1550,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1551,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1552,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1553,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1555,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1556,
-      "keptId": 1554
-    },
-    {
-      "name": "openclaw-autonomous-prompts",
-      "deletedId": 1557,
+      "deletedId": 1558,
       "keptId": 1554
     }
   ]
