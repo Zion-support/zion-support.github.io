@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-03T21:07:01.111Z",
+  "at": "2026-05-03T22:07:01.803Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -14,18 +14,24 @@
   "duplicates": [
     {
       "name": "openclaw-autonomous-prompts",
-      "count": 2,
-      "keeperId": 1554,
+      "count": 3,
+      "keeperId": 1570,
       "extraIds": [
-        1558
+        1573,
+        1574
       ]
     }
   ],
   "healed": [
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1558,
-      "keptId": 1554
+      "deletedId": 1573,
+      "keptId": 1570
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1574,
+      "keptId": 1570
     }
   ]
 }
