@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T18:35:00.395Z",
+  "generatedAt": "2026-05-04T19:10:07.491Z",
   "thresholds": {
     "minSuccessRate": 0.6,
     "minQuality": 60,
@@ -10,11 +10,11 @@
     "successRate": 0,
     "quality": 0,
     "schemaValidityRate": 0,
-    "failures": 1,
+    "failures": 0,
     "successes": 0,
     "total": 0,
     "queued": 0,
-    "contractFailures": 1,
+    "contractFailures": 0,
     "parseFailures": 0
   },
   "confidence": 0,
@@ -24,7 +24,6 @@
     "success_rate_below_threshold(0 < 0.6)",
     "quality_below_threshold(0 < 60)",
     "schema_validity_low(0 < 0.6)",
-    "contract_failures_detected",
     "no_prompt_activity"
   ]
 }
