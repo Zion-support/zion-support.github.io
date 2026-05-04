@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-03T23:07:01.799Z",
+  "at": "2026-05-04T00:37:10.906Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -14,24 +14,96 @@
   "duplicates": [
     {
       "name": "openclaw-autonomous-prompts",
-      "count": 3,
-      "keeperId": 1593,
+      "count": 15,
+      "keeperId": 1619,
       "extraIds": [
-        1589,
-        1592
+        1614,
+        1615,
+        1616,
+        1617,
+        1618,
+        1620,
+        1621,
+        1622,
+        1623,
+        1624,
+        1625,
+        1626,
+        1627,
+        1628
       ]
     }
   ],
   "healed": [
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1589,
-      "keptId": 1593
+      "deletedId": 1614,
+      "keptId": 1619
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1592,
-      "keptId": 1593
+      "deletedId": 1615,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1616,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1617,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1618,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1620,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1621,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1622,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1623,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1624,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1625,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1626,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1627,
+      "keptId": 1619
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1628,
+      "keptId": 1619
     }
   ]
 }
