@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-05-04T22:30:01.393Z",
+  "generatedAt": "2026-05-04T23:30:01.566Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 29,
+      "touches7d": 27,
       "risk": "high",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
       "file": "ecosystem.config.cjs",
-      "touches7d": 1,
+      "touches7d": 0,
       "risk": "low",
       "recommendation": "Normal edit flow is safe."
     },
