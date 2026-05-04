@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T19:10:08.091Z",
+  "generatedAt": "2026-05-04T19:12:00.388Z",
   "schemaVersion": 2,
   "sources": {
     "actionQueue": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-queue-latest.json",
@@ -92,7 +92,7 @@
     "queue": []
   },
   "mergeLedgerSnapshot": {
-    "generatedAt": "2026-05-04T19:00:01.033Z",
+    "generatedAt": "2026-05-04T19:10:08.086Z",
     "totalFiles": 1980,
     "trackedPrefixes": [
       "automation/",
@@ -102,7 +102,7 @@
     ]
   },
   "conflictPredictorSummary": {
-    "generatedAt": "2026-05-04T19:00:01.712Z",
+    "generatedAt": "2026-05-04T19:10:09.988Z",
     "files": 5
   },
   "summary": {
