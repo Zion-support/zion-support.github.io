@@ -1,290 +1,5 @@
 [
   {
-    "generatedAt": "2026-05-03T17:10:00.429Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:15:00.501Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:20:00.630Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 0,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 0,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:25:00.401Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:30:00.504Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:35:00.422Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:40:00.646Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 0,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 0,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:45:00.416Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:50:00.463Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T17:55:00.391Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T18:00:01.069Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 0,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 0,
-      "parseFailures": 0
-    }
-  },
-  {
-    "generatedAt": "2026-05-03T18:05:00.401Z",
-    "confidence": 0,
-    "band": "hold",
-    "decision": "hold_deploy",
-    "reasons": [
-      "success_rate_below_threshold(0 < 0.6)",
-      "quality_below_threshold(0 < 60)",
-      "schema_validity_low(0 < 0.6)",
-      "contract_failures_detected",
-      "no_prompt_activity"
-    ],
-    "inputs": {
-      "successRate": 0,
-      "quality": 0,
-      "schemaValidityRate": 0,
-      "failures": 1,
-      "successes": 0,
-      "total": 0,
-      "queued": 0,
-      "contractFailures": 1,
-      "parseFailures": 0
-    }
-  },
-  {
     "generatedAt": "2026-05-03T18:10:00.406Z",
     "confidence": 0,
     "band": "hold",
@@ -3545,6 +3260,292 @@
   },
   {
     "generatedAt": "2026-05-04T07:35:00.405Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T07:40:00.444Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T07:45:00.489Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T07:50:00.581Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T07:55:00.414Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:00:02.384Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 0,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 0,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:05:00.711Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:10:00.433Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:15:00.417Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:20:00.557Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 0,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 0,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:25:00.410Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:30:00.519Z",
+    "confidence": 0,
+    "band": "hold",
+    "decision": "hold_deploy",
+    "reasons": [
+      "success_rate_below_threshold(0 < 0.6)",
+      "quality_below_threshold(0 < 60)",
+      "schema_validity_low(0 < 0.6)",
+      "contract_failures_detected",
+      "no_prompt_activity"
+    ],
+    "inputs": {
+      "successRate": 0,
+      "quality": 0,
+      "schemaValidityRate": 0,
+      "failures": 1,
+      "successes": 0,
+      "total": 0,
+      "queued": 0,
+      "contractFailures": 1,
+      "parseFailures": 0
+    }
+  },
+  {
+    "generatedAt": "2026-05-04T08:35:00.447Z",
     "confidence": 0,
     "band": "hold",
     "decision": "hold_deploy",
