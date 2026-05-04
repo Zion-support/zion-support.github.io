@@ -1,89 +1,6 @@
 {
   "entries": [
     {
-      "at": "2026-05-03T22:00:01.021Z",
-      "reasons": [
-        "success_rate_below_threshold(0 < 0.6)",
-        "quality_below_threshold(0 < 60)",
-        "schema_validity_low(0 < 0.6)",
-        "contract_failures_detected",
-        "no_prompt_activity"
-      ],
-      "incidents": [
-        "repeated_gate_reasons",
-        "low_confidence_trend"
-      ]
-    },
-    {
-      "at": "2026-05-03T22:10:00.408Z",
-      "reasons": [
-        "success_rate_below_threshold(0 < 0.6)",
-        "quality_below_threshold(0 < 60)",
-        "schema_validity_low(0 < 0.6)",
-        "contract_failures_detected",
-        "no_prompt_activity"
-      ],
-      "incidents": [
-        "repeated_gate_reasons",
-        "low_confidence_trend"
-      ]
-    },
-    {
-      "at": "2026-05-03T22:20:00.421Z",
-      "reasons": [
-        "success_rate_below_threshold(0 < 0.6)",
-        "quality_below_threshold(0 < 60)",
-        "schema_validity_low(0 < 0.6)",
-        "contract_failures_detected",
-        "no_prompt_activity"
-      ],
-      "incidents": [
-        "repeated_gate_reasons",
-        "low_confidence_trend"
-      ]
-    },
-    {
-      "at": "2026-05-03T22:30:01.064Z",
-      "reasons": [
-        "success_rate_below_threshold(0 < 0.6)",
-        "quality_below_threshold(0 < 60)",
-        "schema_validity_low(0 < 0.6)",
-        "contract_failures_detected",
-        "no_prompt_activity"
-      ],
-      "incidents": [
-        "repeated_gate_reasons",
-        "low_confidence_trend"
-      ]
-    },
-    {
-      "at": "2026-05-03T22:40:00.573Z",
-      "reasons": [
-        "success_rate_below_threshold(0 < 0.6)",
-        "quality_below_threshold(0 < 60)",
-        "schema_validity_low(0 < 0.6)",
-        "no_prompt_activity"
-      ],
-      "incidents": [
-        "repeated_gate_reasons",
-        "low_confidence_trend"
-      ]
-    },
-    {
-      "at": "2026-05-03T22:50:00.390Z",
-      "reasons": [
-        "success_rate_below_threshold(0 < 0.6)",
-        "quality_below_threshold(0 < 60)",
-        "schema_validity_low(0 < 0.6)",
-        "contract_failures_detected",
-        "no_prompt_activity"
-      ],
-      "incidents": [
-        "repeated_gate_reasons",
-        "low_confidence_trend"
-      ]
-    },
-    {
       "at": "2026-05-03T23:00:01.098Z",
       "reasons": [
         "success_rate_below_threshold(0 < 0.6)",
@@ -1380,6 +1297,90 @@
     },
     {
       "at": "2026-05-04T17:30:00.529Z",
+      "reasons": [
+        "success_rate_below_threshold(0 < 0.6)",
+        "quality_below_threshold(0 < 60)",
+        "schema_validity_low(0 < 0.6)",
+        "contract_failures_detected",
+        "no_prompt_activity"
+      ],
+      "incidents": [
+        "repeated_gate_reasons",
+        "low_confidence_trend"
+      ]
+    },
+    {
+      "at": "2026-05-04T17:40:00.416Z",
+      "reasons": [
+        "success_rate_below_threshold(0 < 0.6)",
+        "quality_below_threshold(0 < 60)",
+        "schema_validity_low(0 < 0.6)",
+        "contract_failures_detected",
+        "no_prompt_activity"
+      ],
+      "incidents": [
+        "repeated_gate_reasons",
+        "low_confidence_trend"
+      ]
+    },
+    {
+      "at": "2026-05-04T17:50:00.470Z",
+      "reasons": [
+        "success_rate_below_threshold(0 < 0.6)",
+        "quality_below_threshold(0 < 60)",
+        "schema_validity_low(0 < 0.6)",
+        "contract_failures_detected",
+        "no_prompt_activity"
+      ],
+      "incidents": [
+        "repeated_gate_reasons",
+        "low_confidence_trend"
+      ]
+    },
+    {
+      "at": "2026-05-04T18:00:03.400Z",
+      "reasons": [
+        "success_rate_below_threshold(0 < 0.6)",
+        "quality_below_threshold(0 < 60)",
+        "schema_validity_low(0 < 0.6)",
+        "contract_failures_detected",
+        "no_prompt_activity"
+      ],
+      "incidents": [
+        "repeated_gate_reasons",
+        "low_confidence_trend"
+      ]
+    },
+    {
+      "at": "2026-05-04T18:10:00.389Z",
+      "reasons": [
+        "success_rate_below_threshold(0 < 0.6)",
+        "quality_below_threshold(0 < 60)",
+        "schema_validity_low(0 < 0.6)",
+        "contract_failures_detected",
+        "no_prompt_activity"
+      ],
+      "incidents": [
+        "repeated_gate_reasons",
+        "low_confidence_trend"
+      ]
+    },
+    {
+      "at": "2026-05-04T18:20:00.516Z",
+      "reasons": [
+        "success_rate_below_threshold(0 < 0.6)",
+        "quality_below_threshold(0 < 60)",
+        "schema_validity_low(0 < 0.6)",
+        "contract_failures_detected",
+        "no_prompt_activity"
+      ],
+      "incidents": [
+        "repeated_gate_reasons",
+        "low_confidence_trend"
+      ]
+    },
+    {
+      "at": "2026-05-04T18:30:00.679Z",
       "reasons": [
         "success_rate_below_threshold(0 < 0.6)",
         "quality_below_threshold(0 < 60)",
