@@ -1,49 +1,49 @@
 # Workflow failure triage
 
-- generatedAt: 2026-05-04T01:09:25.648Z
+- generatedAt: 2026-05-04T01:55:55.168Z
 - recentRuns: 80
-- failedRuns: 44
+- failedRuns: 66
 
 ## Top failing workflows
-- AI Build Fixer: 2
-- AI CI Recovery: 2
-- AI Openclaw Autonomous Cycle: 1
-- AI Openclaw Skill Auto Tuner: 1
-- AI Next Build Lock Guardian: 1
-- Autonomous Writer Queue Guard: 1
+- AI Experiences Health: 2
+- AI autonomous self-heal factory: 2
+- AI lead form routing guard (daily): 2
 - Autonomous Release Guardian: 1
-- AI Content Velocity: 1
-- Predict CI Failure Risk: 1
+- AI Content Burst High Frequency: 1
 - Monitoring Dashboard: 1
-- AI autonomous runtime guardian: 1
-- Git Agent Auto Merge: 1
-- AI Content Burst Ultra: 1
 - Monitoring Dashboard & Alerts: 1
-- AI lead gen contact route guard: 1
+- AI Content Velocity: 1
 - AI PM2 static checks: 1
-- Workflow Change Guard: 1
 - Threat Matrix CI Integration: 1
-- Deploy to GitHub Pages: 1
-- CI/CD Pipeline: 1
+- Coverage Gate: 1
+- AI App Improvement On Push: 1
+- License Compliance Check: 1
+- Workflow Change Guard: 1
+- .github/workflows/ci-deploy.yml: 1
+- .github/workflows/github_synchronizer.yml: 1
+- .github/workflows/workflow-contracts-weekly.yml: 1
+- .github/workflows/ai-actions-pin-strict-guard.yml: 1
+- .github/workflows/generate-release-notes.yml: 1
+- .github/workflows/dependency-drift-guard-schedule.yml: 1
 
 ## Latest failed runs
-- AI Openclaw Autonomous Cycle | 2026-05-04T01:08:17Z | https://github.com/Zion-support/zion.app/actions/runs/25296179626
-- AI Openclaw Skill Auto Tuner | 2026-05-04T01:07:57Z | https://github.com/Zion-support/zion.app/actions/runs/25296172681
-- AI Next Build Lock Guardian | 2026-05-04T01:07:32Z | https://github.com/Zion-support/zion.app/actions/runs/25296162402
-- Autonomous Writer Queue Guard | 2026-05-04T01:04:22Z | https://github.com/Zion-support/zion.app/actions/runs/25296088701
-- AI Build Fixer | 2026-05-04T01:00:53Z | https://github.com/Zion-support/zion.app/actions/runs/25296006666
-- AI CI Recovery | 2026-05-04T01:00:53Z | https://github.com/Zion-support/zion.app/actions/runs/25296006646
-- Autonomous Release Guardian | 2026-05-04T00:55:12Z | https://github.com/Zion-support/zion.app/actions/runs/25295870466
-- AI Content Velocity | 2026-05-04T00:55:10Z | https://github.com/Zion-support/zion.app/actions/runs/25295869465
-- Predict CI Failure Risk | 2026-05-04T00:49:37Z | https://github.com/Zion-support/zion.app/actions/runs/25295735625
-- Monitoring Dashboard | 2026-05-04T00:49:04Z | https://github.com/Zion-support/zion.app/actions/runs/25295722182
-- AI autonomous runtime guardian | 2026-05-04T00:48:50Z | https://github.com/Zion-support/zion.app/actions/runs/25295716490
-- Git Agent Auto Merge | 2026-05-04T00:48:50Z | https://github.com/Zion-support/zion.app/actions/runs/25295716486
-- AI Content Burst Ultra | 2026-05-04T00:42:49Z | https://github.com/Zion-support/zion.app/actions/runs/25295572805
-- Monitoring Dashboard & Alerts | 2026-05-04T00:42:08Z | https://github.com/Zion-support/zion.app/actions/runs/25295557478
-- AI lead gen contact route guard | 2026-05-04T00:38:35Z | https://github.com/Zion-support/zion.app/actions/runs/25295469925
-- AI PM2 static checks | 2026-05-04T00:37:39Z | https://github.com/Zion-support/zion.app/actions/runs/25295448329
-- Workflow Change Guard | 2026-05-04T00:37:39Z | https://github.com/Zion-support/zion.app/actions/runs/25295448223
-- Threat Matrix CI Integration | 2026-05-04T00:37:39Z | https://github.com/Zion-support/zion.app/actions/runs/25295448136
-- Deploy to GitHub Pages | 2026-05-04T00:37:39Z | https://github.com/Zion-support/zion.app/actions/runs/25295448120
-- CI/CD Pipeline | 2026-05-04T00:37:39Z | https://github.com/Zion-support/zion.app/actions/runs/25295448117
+- AI Experiences Health | 2026-05-04T01:53:59Z | https://github.com/Zion-support/zion.app/actions/runs/25297267170
+- AI autonomous self-heal factory | 2026-05-04T01:53:34Z | https://github.com/Zion-support/zion.app/actions/runs/25297258550
+- AI lead form routing guard (daily) | 2026-05-04T01:53:17Z | https://github.com/Zion-support/zion.app/actions/runs/25297250264
+- Autonomous Release Guardian | 2026-05-04T01:42:03Z | https://github.com/Zion-support/zion.app/actions/runs/25297001975
+- AI Content Burst High Frequency | 2026-05-04T01:41:42Z | https://github.com/Zion-support/zion.app/actions/runs/25296994522
+- Monitoring Dashboard | 2026-05-04T01:40:08Z | https://github.com/Zion-support/zion.app/actions/runs/25296957632
+- Monitoring Dashboard & Alerts | 2026-05-04T01:38:19Z | https://github.com/Zion-support/zion.app/actions/runs/25296915859
+- AI Content Velocity | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909701
+- AI PM2 static checks | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909517
+- Threat Matrix CI Integration | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909511
+- Coverage Gate | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909504
+- AI App Improvement On Push | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909503
+- License Compliance Check | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909500
+- Workflow Change Guard | 2026-05-04T01:38:03Z | https://github.com/Zion-support/zion.app/actions/runs/25296909492
+- .github/workflows/ci-deploy.yml | 2026-05-04T01:38:02Z | https://github.com/Zion-support/zion.app/actions/runs/25296908916
+- .github/workflows/github_synchronizer.yml | 2026-05-04T01:38:01Z | https://github.com/Zion-support/zion.app/actions/runs/25296908797
+- .github/workflows/workflow-contracts-weekly.yml | 2026-05-04T01:38:01Z | https://github.com/Zion-support/zion.app/actions/runs/25296908681
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-05-04T01:38:01Z | https://github.com/Zion-support/zion.app/actions/runs/25296908555
+- .github/workflows/generate-release-notes.yml | 2026-05-04T01:38:00Z | https://github.com/Zion-support/zion.app/actions/runs/25296908384
+- .github/workflows/dependency-drift-guard-schedule.yml | 2026-05-04T01:38:00Z | https://github.com/Zion-support/zion.app/actions/runs/25296908200
