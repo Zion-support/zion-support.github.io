@@ -1,0 +1,32 @@
+name: AI ChatOps Commands
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
+jobs:
+  chatops:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm ci --prefer-offline --no-audit --fund=false
+      - name: Run ChatOps handler
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHATOPS_BODY: ${{ github.event.comment.body }}
+        run: node scripts/chatops-handler.cjs
