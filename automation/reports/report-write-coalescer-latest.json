@@ -1,7 +1,11 @@
 {
-  "generatedAt": "2026-05-05T04:30:00.647Z",
+  "generatedAt": "2026-05-05T06:30:00.822Z",
   "totalReports": 183,
   "minAgeSeconds": 60,
-  "coalescedCount": 0,
-  "coalescedReports": []
+  "coalescedCount": 3,
+  "coalescedReports": [
+    "health-monitor-latest.json",
+    "openclaw-autonomous-app-improver-history.json",
+    "openclaw-autonomous-app-improver-latest.json"
+  ]
 }
