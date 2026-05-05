@@ -1,38 +1,49 @@
-const { Octokit } = require('@octokit/rest');
+#!/usr/bin/env node
+/**
+ * Generate a simple HTML dashboard from automation reports.
+ * Reads JSON files in automation/reports and creates an index.html
+ * that lists each report with a summary.
+ */
 const fs = require('fs');
 const path = require('path');
 
-const token = process.env.GITHUB_TOKEN;
-if (!token) {
-  console.error('GITHUB_TOKEN is required');
+const reportsDir = path.resolve('automation','reports');
+if (!fs.existsSync(reportsDir)) {
+  console.error('Reports directory not found');
   process.exit(1);
 }
-const octokit = new Octokit({ auth: token });
-const owner = process.env.GITHUB_REPOSITORY_OWNER || 'ziontechgroup';
-const repo = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[1] : 'zion-app';
 
-async function getWorkflowRuns() {
-  const { data } = await octokit.actions.listWorkflowRuns({ owner, repo, per_page: 10 });
-  return data.workflow_runs.map(run => ({
-    name: run.name,
-    status: run.status,
-    conclusion: run.conclusion,
-    created_at: run.created_at,
-    duration: run.updated_at && run.created_at ? new Date(run.updated_at) - new Date(run.created_at) : null
-  }));
-}
-
-async function main() {
+const reportFiles = fs.readdirSync(reportsDir).filter(f => f.endsWith('.json'));
+let rows = '';
+reportFiles.forEach(file => {
+  const fullPath = path.join(reportsDir, file);
   try {
-    const runs = await getWorkflowRuns();
-    const outputPath = path.join(process.cwd(), 'public', 'dashboard.json');
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.writeFileSync(outputPath, JSON.stringify(runs, null, 2));
-    console.log('Dashboard data written to', outputPath);
-  } catch (err) {
-    console.error('Error generating dashboard:', err.message);
-    process.exit(1);
+    const data = JSON.parse(fs.readFileSync(fullPath,'utf8'));
+    const title = data.title || file.replace('.json','');
+    const score = data.autonomyScore || data.riskScore || data.mttrHours || '';
+    rows += `<tr><td>${title}</td><td>${score}</td><td><pre>${JSON.stringify(data,null,2).substring(0,200)}...</pre></td></tr>`;
+  } catch(e) {
+    rows += `<tr><td>${file}</td><td colspan="2">Failed to parse JSON</td></tr>`;
   }
-}
+});
 
-main();
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>AI Automation Dashboard</title>
+<style>body{font-family:sans-serif;}table{border-collapse:collapse;width:100%;}th,td{border:1px solid #ddd;padding:8px;vertical-align:top;}th{background:#f4f4f4;}</style>
+</head>
+<body>
+<h1>AI Automation Dashboard</h1>
+<p>Generated at ${new Date().toISOString()}</p>
+<table>
+  <thead><tr><th>Report</th><th>Key Score</th><th>Sample JSON</th></tr></thead>
+  <tbody>
+    ${rows}
+  </tbody>
+</table>
+</body>
+</html>`;
+
+fs.mkdirSync('dashboard', {recursive:true});
+fs.writeFileSync('dashboard/index.html', html);
+console.log('Dashboard generated at dashboard/index.html');

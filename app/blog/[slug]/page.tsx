@@ -1,5 +1,5 @@
 import Link from 'next/link';
-/* eslint-disable */
+ 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/app/components/Breadcrumb';
