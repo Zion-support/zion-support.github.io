@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-05-05T15:07:03.590Z",
+  "timestamp": "2026-05-05T19:07:01.110Z",
   "score": 27,
   "grade": "F",
   "summary": {
-    "totalIssues": 6542,
-    "highSeverity": 2364,
-    "mediumSeverity": 3597,
-    "lowSeverity": 581,
-    "fixesApplied": 2366
+    "totalIssues": 6547,
+    "highSeverity": 2365,
+    "mediumSeverity": 3600,
+    "lowSeverity": 582,
+    "fixesApplied": 2367
   },
   "issues": [
     {
@@ -13621,6 +13621,13 @@
     {
       "type": "meta",
       "severity": "high",
+      "file": "app/tools/link-preview/page.tsx",
+      "issue": "Missing meta description",
+      "suggestion": "Add a compelling meta description (150-160 characters)"
+    },
+    {
+      "type": "meta",
+      "severity": "high",
       "file": "app/tools/lorem-ipsum/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
@@ -23449,6 +23456,13 @@
     {
       "type": "opengraph",
       "severity": "medium",
+      "file": "app/tools/link-preview/page.tsx",
+      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
+      "suggestion": "Add complete Open Graph meta tags for social sharing"
+    },
+    {
+      "type": "opengraph",
+      "severity": "medium",
       "file": "app/tools/lorem-ipsum/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -31773,6 +31787,13 @@
       "type": "structured-data",
       "severity": "medium",
       "file": "app/tools/jwt-encoder/page.tsx",
+      "issue": "Missing structured data (Schema.org)",
+      "suggestion": "Add JSON-LD structured data for better search visibility"
+    },
+    {
+      "type": "structured-data",
+      "severity": "medium",
+      "file": "app/tools/link-preview/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
     },
@@ -40172,6 +40193,13 @@
     {
       "type": "canonical",
       "severity": "medium",
+      "file": "app/tools/link-preview/page.tsx",
+      "issue": "Missing canonical URL",
+      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
+    },
+    {
+      "type": "canonical",
+      "severity": "medium",
       "file": "app/tools/lorem-ipsum/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
@@ -45704,6 +45732,13 @@
       "severity": "low",
       "file": "app/tools/json-formatter/page.tsx",
       "issue": "Title too short (14 chars)",
+      "suggestion": "Use 50-60 characters for optimal display"
+    },
+    {
+      "type": "seo",
+      "severity": "low",
+      "file": "app/tools/link-preview/page.tsx",
+      "issue": "Title too short (12 chars)",
       "suggestion": "Use 50-60 characters for optimal display"
     },
     {

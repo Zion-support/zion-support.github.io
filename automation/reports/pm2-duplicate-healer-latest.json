@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-05T18:37:00.607Z",
+  "at": "2026-05-05T19:37:01.287Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -11,6 +11,21 @@
     "ai-project-improvement-radar",
     "ai-advanced-ai-content-pipeline"
   ],
-  "duplicates": [],
-  "healed": []
+  "duplicates": [
+    {
+      "name": "openclaw-autonomous-prompts",
+      "count": 2,
+      "keeperId": 361,
+      "extraIds": [
+        362
+      ]
+    }
+  ],
+  "healed": [
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 362,
+      "keptId": 361
+    }
+  ]
 }
