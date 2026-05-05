@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-05T19:30:00.806Z",
+  "generatedAt": "2026-05-05T20:30:00.629Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1636,
+  "totalFiles": 1639,
   "groupedCounts": {
-    ".github": 29,
+    ".github": 31,
     "automation": 1432,
     "commands": 45,
-    "scripts": 130
+    "scripts": 131
   },
   "sample": [
     ".github/workflows/.workflow-audit-all.yml.swp",
@@ -26,8 +26,10 @@
     ".github/workflows/ai-code-quality-scan.yml",
     ".github/workflows/ai-dashboard-visual.yml",
     ".github/workflows/ai-fingerprint-delta.yml",
+    ".github/workflows/ai-fingerprint-digest.yml",
     ".github/workflows/ai-generate-dashboard.yml",
     ".github/workflows/ai-gpt-code-review.yml",
+    ".github/workflows/ai-homepage-highlights-updater.yml",
     ".github/workflows/ai-mttr-slo-monitor.yml",
     ".github/workflows/ai-observability-digest.yml",
     ".github/workflows/ai-performance-monitor.yml",
@@ -131,8 +133,6 @@
     "automation/ai-changelog-generator.cjs",
     "automation/ai-ci-failure-recovery-agent.cjs",
     "automation/ai-code-generator.cjs",
-    "automation/ai-code-hygiene-agent.cjs",
-    "automation/ai-complexity-analyzer.cjs",
-    "automation/ai-contact-form-handler.cjs"
+    "automation/ai-code-hygiene-agent.cjs"
   ]
 }
