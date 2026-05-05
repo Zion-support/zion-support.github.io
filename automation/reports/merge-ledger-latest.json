@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-05T20:30:00.629Z",
+  "generatedAt": "2026-05-05T22:30:00.711Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1639,
+  "totalFiles": 1644,
   "groupedCounts": {
-    ".github": 31,
-    "automation": 1432,
+    ".github": 32,
+    "automation": 1433,
     "commands": 45,
-    "scripts": 131
+    "scripts": 134
   },
   "sample": [
     ".github/workflows/.workflow-audit-all.yml.swp",
@@ -45,6 +45,7 @@
     ".github/workflows/ci.yml",
     ".github/workflows/dependency-health-monitor.yml",
     ".github/workflows/deploy-to-netlify.yml",
+    ".github/workflows/deploy-watchdog.yml",
     "automation/.git/hooks/post-merge",
     "automation/.git/hooks/pre-commit",
     "automation/AI-ADVANCED-AI-CONTENT-README.md",
@@ -132,7 +133,6 @@
     "automation/ai-changelog-generator-agent.cjs",
     "automation/ai-changelog-generator.cjs",
     "automation/ai-ci-failure-recovery-agent.cjs",
-    "automation/ai-code-generator.cjs",
-    "automation/ai-code-hygiene-agent.cjs"
+    "automation/ai-code-generator.cjs"
   ]
 }
