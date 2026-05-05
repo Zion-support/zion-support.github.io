@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T09:12:00.638Z",
+  "generatedAt": "2026-05-05T10:12:00.401Z",
   "schemaVersion": 2,
   "sources": {
     "actionQueue": "/Users/miami2/zion-app-clone/automation/reports/openclaw-action-queue-latest.json",
@@ -19,7 +19,7 @@
   },
   "patchRouter": null,
   "deployGate": {
-    "generatedAt": "2026-05-05T09:10:00.439Z",
+    "generatedAt": "2026-05-05T10:10:00.430Z",
     "thresholds": {
       "minSuccessRate": 0.6,
       "minQuality": 60,
@@ -49,7 +49,7 @@
     ]
   },
   "regressionMemory": {
-    "generatedAt": "2026-05-05T09:10:00.421Z",
+    "generatedAt": "2026-05-05T10:10:00.386Z",
     "incidents": [
       "repeated_gate_reasons",
       "low_confidence_trend"
@@ -95,7 +95,7 @@
     "queue": []
   },
   "mergeLedgerSnapshot": {
-    "generatedAt": "2026-05-05T09:00:01.493Z",
+    "generatedAt": "2026-05-05T10:00:00.785Z",
     "totalFiles": 1993,
     "trackedPrefixes": [
       "automation/",
@@ -105,7 +105,7 @@
     ]
   },
   "conflictPredictorSummary": {
-    "generatedAt": "2026-05-05T09:00:02.310Z",
+    "generatedAt": "2026-05-05T10:00:01.589Z",
     "files": 5
   },
   "summary": {
