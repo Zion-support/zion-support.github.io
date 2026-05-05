@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-05T08:30:01.519Z",
+  "generatedAt": "2026-05-05T09:30:02.293Z",
   "files": [
     {
       "file": "package.json",
-      "touches7d": 19,
-      "risk": "high",
+      "touches7d": 14,
+      "risk": "medium",
       "recommendation": "Prefer append-only edits or section-scoped patching to reduce merge conflicts."
     },
     {
@@ -32,7 +32,5 @@
       "recommendation": "Normal edit flow is safe."
     }
   ],
-  "highRiskFiles": [
-    "package.json"
-  ]
+  "highRiskFiles": []
 }
