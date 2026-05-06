@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T22:30:07.896Z",
+  "generatedAt": "2026-05-06T23:30:07.624Z",
   "status": "warning",
   "failingChecks": [
     "openclaw_auth_contract"
