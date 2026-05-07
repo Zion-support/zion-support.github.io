@@ -129,9 +129,51 @@ MERGE_FREEZE_ON_PUSH=1 npm run push:merge-freeze -- origin main
 
 This project contains:
 
-- **22** Components
-- **1067** Pages
+- **134** Components
+- **1205** Pages
 - **0** Utility modules
+
+### Components
+
+- adaptive-security-intelligence
+- adaptive-threat-response-system
+- advanced-autonomous-wave
+- ai-chat-assistant
+- autonomous-brain
+- autonomous-dashboard
+- autonomous-experiment-priority-engine
+- autonomous-innovation-agent
+- autonomous-innovation-engine
+- autonomous-learning-engine
+- ... and 124 more
+
+For detailed component documentation, see the [docs/components](./docs/components) directory.
+
+---
+
+*Last updated: 2026-05-06T09:00:02.393Z*
+
+
+### Components
+
+- adaptive-security-intelligence
+- adaptive-threat-response-system
+- advanced-autonomous-wave
+- ai-chat-assistant
+- autonomous-brain
+- autonomous-dashboard
+- autonomous-experiment-priority-engine
+- autonomous-innovation-agent
+- autonomous-innovation-engine
+- autonomous-learning-engine
+- ... and 124 more
+
+For detailed component documentation, see the [docs/components](./docs/components) directory.
+
+---
+
+*Last updated: 2026-05-06T08:59:56.770Z*
+
 
 ### Components
 
