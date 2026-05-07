@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-07T04:17:00.655Z",
+  "at": "2026-05-07T05:17:00.437Z",
   "tier": "critical",
   "reasons": [
     "ema_stale>30h",
@@ -7,10 +7,10 @@
     "open_fp_high:18"
   ],
   "freshness": {
-    "emaLastAt": "2026-03-24T14:43:27.784Z",
-    "emaAgeHours": 1045.56,
+    "emaLastAt": null,
+    "emaAgeHours": null,
     "healthLastAt": "2026-05-04T18:54:38.694Z",
-    "healthAgeHours": 57.37,
+    "healthAgeHours": 58.37,
     "thresholds": {
       "emaStaleHours": 30,
       "healthStaleHours": 8

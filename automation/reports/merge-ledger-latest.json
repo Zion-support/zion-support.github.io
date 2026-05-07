@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-05-07T04:45:00.771Z",
+  "generatedAt": "2026-05-07T05:30:01.405Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1668,
+  "totalFiles": 1640,
   "groupedCounts": {
     ".github": 32,
-    "automation": 1457,
+    "automation": 1429,
     "commands": 45,
     "scripts": 134
   },

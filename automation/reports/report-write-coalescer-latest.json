@@ -1,10 +1,7 @@
 {
-  "generatedAt": "2026-05-07T04:45:00.735Z",
-  "totalReports": 184,
+  "generatedAt": "2026-05-07T05:30:01.303Z",
+  "totalReports": 156,
   "minAgeSeconds": 60,
-  "coalescedCount": 2,
-  "coalescedReports": [
-    "openclaw-autonomous-app-improver-history.json",
-    "openclaw-autonomous-app-improver-latest.json"
-  ]
+  "coalescedCount": 0,
+  "coalescedReports": []
 }
