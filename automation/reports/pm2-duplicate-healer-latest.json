@@ -1,5 +1,5 @@
 {
-  "at": "2026-05-08T03:07:06.069Z",
+  "at": "2026-05-08T04:07:13.698Z",
   "ok": true,
   "autoHeal": true,
   "deployLockActive": false,
@@ -14,60 +14,102 @@
   "duplicates": [
     {
       "name": "openclaw-autonomous-prompts",
-      "count": 9,
-      "keeperId": 1208,
+      "count": 16,
+      "keeperId": 1242,
       "extraIds": [
-        1201,
-        1202,
-        1203,
-        1204,
-        1205,
-        1206,
-        1207,
-        1209
+        1227,
+        1228,
+        1229,
+        1230,
+        1231,
+        1232,
+        1233,
+        1234,
+        1235,
+        1236,
+        1237,
+        1238,
+        1239,
+        1240,
+        1241
       ]
     }
   ],
   "healed": [
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1201,
-      "keptId": 1208
+      "deletedId": 1227,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1202,
-      "keptId": 1208
+      "deletedId": 1228,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1203,
-      "keptId": 1208
+      "deletedId": 1229,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1204,
-      "keptId": 1208
+      "deletedId": 1230,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1205,
-      "keptId": 1208
+      "deletedId": 1231,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1206,
-      "keptId": 1208
+      "deletedId": 1232,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1207,
-      "keptId": 1208
+      "deletedId": 1233,
+      "keptId": 1242
     },
     {
       "name": "openclaw-autonomous-prompts",
-      "deletedId": 1209,
-      "keptId": 1208
+      "deletedId": 1234,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1235,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1236,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1237,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1238,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1239,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1240,
+      "keptId": 1242
+    },
+    {
+      "name": "openclaw-autonomous-prompts",
+      "deletedId": 1241,
+      "keptId": 1242
     }
   ]
 }
