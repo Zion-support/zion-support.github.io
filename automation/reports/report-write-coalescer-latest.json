@@ -1,14 +1,7 @@
 {
-  "generatedAt": "2026-05-08T15:30:00.878Z",
+  "generatedAt": "2026-05-08T16:30:00.634Z",
   "totalReports": 158,
   "minAgeSeconds": 60,
-  "coalescedCount": 6,
-  "coalescedReports": [
-    "dns-health-check-history.json",
-    "dns-health-check-latest.json",
-    "openclaw-autonomous-app-improver-history.json",
-    "openclaw-autonomous-app-improver-latest.json",
-    "openclaw-regression-memory-history.json",
-    "openclaw-regression-memory-latest.json"
-  ]
+  "coalescedCount": 0,
+  "coalescedReports": []
 }
