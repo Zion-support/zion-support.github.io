@@ -2,6 +2,12 @@
 
 import { useState } from 'react';
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AIContentIdeaGenerator() {
   const [topic, setTopic] = useState('');
   const [ideas, setIdeas] = useState<string[]>([]);

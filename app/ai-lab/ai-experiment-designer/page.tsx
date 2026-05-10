@@ -21,6 +21,12 @@ function baselineMetric(goal: Goal) {
   return 'Quality score';
 }
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AIExperimentDesignerPage() {
   const [goal, setGoal] = useState<Goal>('conversion');
   const [risk, setRisk] = useState<RiskLevel>('medium');

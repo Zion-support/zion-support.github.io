@@ -21,6 +21,12 @@ const SIGNALS: FunnelSignal[] = [
 
 const clamp = (value: number) => Math.max(0, Math.min(100, value));
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AutonomousConversionCopilotPage() {
   const [impactWeight, setImpactWeight] = useState(45);
   const [confidenceWeight, setConfidenceWeight] = useState(30);

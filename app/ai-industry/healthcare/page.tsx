@@ -1,4 +1,10 @@
 'use client';
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-900 py-20">

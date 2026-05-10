@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-10T13:15:00.398Z",
+  "generatedAt": "2026-05-10T14:00:01.377Z",
   "trackedPrefixes": [
     "automation/",
     ".github/workflows/",
     "commands/",
     "scripts/"
   ],
-  "totalFiles": 1668,
+  "totalFiles": 1690,
   "groupedCounts": {
     ".github": 32,
-    "automation": 1457,
+    "automation": 1475,
     "commands": 45,
-    "scripts": 134
+    "scripts": 138
   },
   "sample": [
     ".github/workflows/.workflow-audit-all.yml.swp",

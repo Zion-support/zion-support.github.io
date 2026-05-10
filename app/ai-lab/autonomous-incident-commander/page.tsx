@@ -18,6 +18,12 @@ const scenarios: IncidentScenario[] = [
 
 const clamp = (value: number) => Math.max(0, Math.min(100, value));
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AutonomousIncidentCommanderPage() {
   const [severityWeight, setSeverityWeight] = useState(35);
   const [radiusWeight, setRadiusWeight] = useState(30);

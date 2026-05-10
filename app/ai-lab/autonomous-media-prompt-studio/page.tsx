@@ -18,6 +18,12 @@ function clamp(value: number) {
   return Math.max(0, Math.min(100, Math.round(value)));
 }
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AutonomousMediaPromptStudioPage() {
   const [mode, setMode] = useState<MediaMode>('image');
   const [style, setStyle] = useState<PromptStyle>('cinematic');

@@ -17,6 +17,12 @@ function tier(score: number) {
   return 'Low';
 }
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AIGovernanceRiskAdvisorPage() {
   const [sector, setSector] = useState<Sector>('general');
   const [autonomyLevel, setAutonomyLevel] = useState(55);

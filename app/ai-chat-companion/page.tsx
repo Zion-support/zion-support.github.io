@@ -27,6 +27,12 @@ const personalityTraits = [
   { id: 'friendly', label: 'Friendly', active: true },
 ];
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function AIChatCompanion() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [input, setInput] = useState('');
