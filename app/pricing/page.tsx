@@ -1,35 +1,40 @@
-import Head from 'next/head';
+import { useEffect, useState } from 'react'
+import { loadStripe } from '@stripe/stripe-js'
 
-export default function Pricing() {
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+
+export default function PricingPage() {
+  const [stripe, setStripe] = useState<ReturnType<typeof loadStripe> | null>(null)
+
+  useEffect(() => {
+    stripePromise.then((s) => setStripe(s))
+  }, [])
+
+  const handleCheckout = async (plan: string) => {
+    if (!stripe) return
+    const res = await fetch('/api/checkout_sessions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ plan })
+    })
+    const data = await res.json()
+    const result = await stripe.redirectToCheckout({ sessionId: data.sessionId })
+    if (result.error) alert(result.error.message)
+  }
+
   return (
-    <main className="mx-auto max-w-4xl p-8">
-      <Head>
-        <title>Pricing | {process.env.NEXT_PUBLIC_APP_NAME}</title>
-      </Head>
-      <h1 className="text-3xl font-bold mb-4">Pricing</h1>
-      <p className="mb-6">Choose a plan that fits your needs. All plans include free community support.</p>
-      <div className="grid gap-6 md:grid-cols-2">
-        <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-6">
-          <h2 className="text-2xl font-semibold mb-2">Free</h2>
-          <p className="mb-4">Access to open-source tools and public documentation.</p>
-          <ul className="list-disc list-inside mb-4">
-            <li>Basic AI Lab access</li>
-            <li>Community forum</li>
-            <li>Limited usage quotas</li>
-          </ul>
-          <a href="/contact" className="inline-block rounded-xl bg-gray-600 px-4 py-2 text-white hover:bg-gray-500">Get Started</a>
-        </section>
-        <section className="rounded-xl border border-slate-700 bg-slate-900/50 p-6">
-          <h2 className="text-2xl font-semibold mb-2">Pro</h2>
-          <p className="mb-4">Full-featured AI services with priority support.</p>
-          <ul className="list-disc list-inside mb-4">
-            <li>Unlimited AI Lab usage</li>
-            <li>Premium integrations</li>
-            <li>Dedicated support</li>
-          </ul>
-          <a href="https://buy.stripe.com/test_4gw3cG8yV8tR5dKc00" className="inline-block rounded-xl bg-purple-600 px-4 py-2 text-white hover:bg-purple-500">Upgrade Now</a>
-        </section>
+    <div>
+      <h1>Pricing</h1>
+      <div>
+        <h2>Pro</h2>
+        <p>$15/month – Unlimited features</p>
+        <button onClick={() => handleCheckout('pro')}>Subscribe Pro</button>
       </div>
-    </main>
-  );
+      <div>
+        <h2>Enterprise</h2>
+        <p>$99/month – All features with SLA</p>
+        <button onClick={() => handleCheckout('enterprise')}>Subscribe Enterprise</button>
+      </div>
+    </div>
+  )
 }

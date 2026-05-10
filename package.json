@@ -8,7 +8,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:check": "next lint --max-warnings=0",
+    "type-check": "tsc --noEmit",
     "test": "jest",
     "test:ci": "jest --ci --coverage --watchAll=false"
-  }
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^10.3.0",
+    "framer-motion": "^12.38.0",
+    "tailwindcss": "^4.3.0"
+  },
+  "type": "module"
 }
