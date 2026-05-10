@@ -1,6 +1,12 @@
 // import _Footer from '../components/Footer';
 // import _Navigation from '../components/Navigation';
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function FiveGMobileApplicationsPage() {
   return (
     
