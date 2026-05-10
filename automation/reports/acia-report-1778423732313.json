@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "timestamp": "2026-05-10T12:40:36.828Z",
+    "timestamp": "2026-05-10T14:35:32.313Z",
     "version": "1.0.0",
-    "runtime": 34182,
+    "runtime": 31599,
     "repository": "https://github.com/Zion-Holdings/zion.app"
   },
   "analysis": {
@@ -16,7 +16,7 @@
       "performanceIssues": 0,
       "accessibilityIssues": 1,
       "seoIssues": 1,
-      "deadCode": 21,
+      "deadCode": 19,
       "codeQualityIssues": 1
     },
     "recommendations": []
