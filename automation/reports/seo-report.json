@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-05-10T17:07:01.018Z",
+  "timestamp": "2026-05-10T19:07:04.144Z",
   "score": 27,
   "grade": "F",
   "summary": {
-    "totalIssues": 6158,
-    "highSeverity": 2224,
-    "mediumSeverity": 3387,
+    "totalIssues": 6153,
+    "highSeverity": 2222,
+    "mediumSeverity": 3384,
     "lowSeverity": 547,
-    "fixesApplied": 2226
+    "fixesApplied": 2224
   },
   "issues": [
     {
@@ -49,20 +49,6 @@
       "type": "meta",
       "severity": "high",
       "file": "app/about/layout.tsx",
-      "issue": "Missing meta description",
-      "suggestion": "Add a compelling meta description (150-160 characters)"
-    },
-    {
-      "type": "meta",
-      "severity": "high",
-      "file": "app/ai-lab/autonomous-retention-playbook/page.tsx",
-      "issue": "Missing title tag",
-      "suggestion": "Add a descriptive title using Next.js Head component"
-    },
-    {
-      "type": "meta",
-      "severity": "high",
-      "file": "app/ai-lab/autonomous-retention-playbook/page.tsx",
       "issue": "Missing meta description",
       "suggestion": "Add a compelling meta description (150-160 characters)"
     },
@@ -15602,13 +15588,6 @@
     {
       "type": "opengraph",
       "severity": "medium",
-      "file": "app/ai-lab/autonomous-retention-playbook/page.tsx",
-      "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
-      "suggestion": "Add complete Open Graph meta tags for social sharing"
-    },
-    {
-      "type": "opengraph",
-      "severity": "medium",
       "file": "app/ai-lab/autonomous-revenue-forecast-studio/page.tsx",
       "issue": "Missing OG tags: og:title, og:description, og:image, og:url, og:type",
       "suggestion": "Add complete Open Graph meta tags for social sharing"
@@ -23519,13 +23498,6 @@
     {
       "type": "structured-data",
       "severity": "medium",
-      "file": "app/ai-lab/autonomous-retention-playbook/page.tsx",
-      "issue": "Missing structured data (Schema.org)",
-      "suggestion": "Add JSON-LD structured data for better search visibility"
-    },
-    {
-      "type": "structured-data",
-      "severity": "medium",
       "file": "app/ai-lab/autonomous-revenue-forecast-studio/page.tsx",
       "issue": "Missing structured data (Schema.org)",
       "suggestion": "Add JSON-LD structured data for better search visibility"
@@ -31346,13 +31318,6 @@
       "type": "canonical",
       "severity": "medium",
       "file": "app/about/layout.tsx",
-      "issue": "Missing canonical URL",
-      "suggestion": "Add canonical link tag with https://ziontechgroup.com"
-    },
-    {
-      "type": "canonical",
-      "severity": "medium",
-      "file": "app/ai-lab/autonomous-retention-playbook/page.tsx",
       "issue": "Missing canonical URL",
       "suggestion": "Add canonical link tag with https://ziontechgroup.com"
     },
