@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-10T15:54:00.473Z",
-  "duration": 96,
+  "timestamp": "2026-05-10T16:34:00.451Z",
+  "duration": 103,
   "ssl": {
     "valid": false,
     "error": "getaddrinfo ENOTFOUND ziontechgroup.com"
@@ -18,7 +18,7 @@
         "responseTime": 3,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.445Z"
+        "timestamp": "2026-05-10T16:34:00.424Z"
       },
       {
         "url": "https://ziontechgroup.com/solutions/",
@@ -27,7 +27,7 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.448Z"
+        "timestamp": "2026-05-10T16:34:00.427Z"
       },
       {
         "url": "https://ziontechgroup.com/about/",
@@ -36,7 +36,7 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.451Z"
+        "timestamp": "2026-05-10T16:34:00.430Z"
       },
       {
         "url": "https://ziontechgroup.com/contact/",
@@ -45,7 +45,7 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.454Z"
+        "timestamp": "2026-05-10T16:34:00.433Z"
       },
       {
         "url": "https://ziontechgroup.com/case-studies/",
@@ -54,7 +54,7 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.457Z"
+        "timestamp": "2026-05-10T16:34:00.436Z"
       },
       {
         "url": "https://ziontechgroup.com/blog/",
@@ -63,16 +63,16 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.460Z"
+        "timestamp": "2026-05-10T16:34:00.439Z"
       },
       {
         "url": "https://ziontechgroup.com/pricing/",
         "path": "/pricing/",
         "statusCode": 0,
-        "responseTime": 2,
+        "responseTime": 3,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.462Z"
+        "timestamp": "2026-05-10T16:34:00.442Z"
       },
       {
         "url": "https://ziontechgroup.com/privacy/",
@@ -81,7 +81,7 @@
         "responseTime": 3,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.466Z"
+        "timestamp": "2026-05-10T16:34:00.445Z"
       },
       {
         "url": "https://ziontechgroup.com/terms/",
@@ -90,7 +90,7 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.470Z"
+        "timestamp": "2026-05-10T16:34:00.448Z"
       },
       {
         "url": "https://ziontechgroup.com/consultation/",
@@ -99,7 +99,7 @@
         "responseTime": 2,
         "error": "getaddrinfo ENOTFOUND ziontechgroup.com",
         "ok": false,
-        "timestamp": "2026-05-10T15:54:00.472Z"
+        "timestamp": "2026-05-10T16:34:00.451Z"
       }
     ]
   },
