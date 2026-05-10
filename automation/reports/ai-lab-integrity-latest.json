@@ -1,10 +1,10 @@
 {
-  "at": "2026-05-10T12:12:00.398Z",
+  "at": "2026-05-10T13:12:02.465Z",
   "ok": true,
   "totalTools": 30,
   "healthy": 30,
   "missingCount": 0,
-  "remediatedCount": 0,
+  "remediatedCount": 1,
   "missing": [],
   "autoRemediate": true,
   "autoOpenIssue": true,
@@ -15,5 +15,5 @@
     "skipped": false
   },
   "autoSmokeRoutesSync": true,
-  "smokeRoutesSynced": false
+  "smokeRoutesSynced": true
 }

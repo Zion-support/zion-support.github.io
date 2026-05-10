@@ -2,7 +2,6 @@
 # Source: app/**/page.tsx (static routes only)
 # Routes: 60 (SMOKE_MAX_ROUTES default 60; expanded if catalog+priority exceed cap)
 /
-/about
 /automation
 /blog
 /contact
@@ -12,10 +11,13 @@
 /zion-ai-chatbot-playground
 /zion-ai-code-sandbox
 /zion-ai-site-evolution-simulator
+/ai-lab/ai-api-status-dashboard
+/ai-lab/ai-component-health-checker
 /ai-lab/ai-content-idea-generator
 /ai-lab/ai-experiment-designer
 /ai-lab/ai-governance-risk-advisor
 /ai-lab/ai-site-evolution-advisor
+/ai-lab/ai-workflow-status-dashboard
 /ai-lab/autonomous-agent-skill-orchestrator
 /ai-lab/autonomous-ai-experience-studio
 /ai-lab/autonomous-backlog-prioritizer
@@ -43,21 +45,19 @@
 /5g-mobile-applications
 /5g-solutions
 /ai-agents
-/ai-business-advisor
 /ai-chat-companion
 /ai-code
 /ai-dashboard
-/ai-expense-tracker-pro
 /ai-experiences
-/ai-experiments
-/ai-fashion-design
-/ai-financial-advisor
-/ai-financial-analyzer
 /ai-financial-crime-detection-pro
 /ai-financial-forecasting
 /ai-financial-planner
 /ai-financial-services
-/ai-fintech
 /ai-fitness-coach
 /ai-form-builder
 /ai-fraud-detection
+/ai-fraud-detection-pro
+/ai-health-tracker
+/ai-healthcare
+/ai-healthcare-diagnostics
+/ai-healthcare-solutions
