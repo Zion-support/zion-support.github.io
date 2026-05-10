@@ -196,6 +196,48 @@
       "avgResponseTime": 2,
       "pagesOk": 0,
       "pagesTotal": 10
+    },
+    {
+      "timestamp": "2026-05-10T17:04:00.653Z",
+      "uptime": 0,
+      "avgResponseTime": 2,
+      "pagesOk": 0,
+      "pagesTotal": 10
+    },
+    {
+      "timestamp": "2026-05-10T17:14:00.477Z",
+      "uptime": 0,
+      "avgResponseTime": 2,
+      "pagesOk": 0,
+      "pagesTotal": 10
+    },
+    {
+      "timestamp": "2026-05-10T17:24:00.483Z",
+      "uptime": 0,
+      "avgResponseTime": 3,
+      "pagesOk": 0,
+      "pagesTotal": 10
+    },
+    {
+      "timestamp": "2026-05-10T17:34:00.479Z",
+      "uptime": 0,
+      "avgResponseTime": 3,
+      "pagesOk": 0,
+      "pagesTotal": 10
+    },
+    {
+      "timestamp": "2026-05-10T17:44:01.000Z",
+      "uptime": 0,
+      "avgResponseTime": 2,
+      "pagesOk": 0,
+      "pagesTotal": 10
+    },
+    {
+      "timestamp": "2026-05-10T17:54:00.485Z",
+      "uptime": 0,
+      "avgResponseTime": 2,
+      "pagesOk": 0,
+      "pagesTotal": 10
     }
   ],
   "alerts": [
@@ -1548,6 +1590,306 @@
       "type": "PAGE_DOWN",
       "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
       "timestamp": "2026-05-10T16:54:00.442Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.627Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/solutions/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.629Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/about/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.633Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/contact/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.636Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/case-studies/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.639Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/blog/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.641Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/pricing/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.644Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/privacy/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.648Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/terms/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.651Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:04:00.653Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.451Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/solutions/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.453Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/about/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.457Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/contact/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.460Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/case-studies/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.463Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/blog/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.465Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/pricing/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.468Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/privacy/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.472Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/terms/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.475Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:14:00.477Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.456Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/solutions/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.459Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/about/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.462Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/contact/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.465Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/case-studies/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.468Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/blog/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.471Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/pricing/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.474Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/privacy/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.477Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/terms/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.480Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:24:00.483Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.452Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/solutions/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.455Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/about/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.458Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/contact/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.461Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/case-studies/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.464Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/blog/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.467Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/pricing/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.470Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/privacy/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.473Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/terms/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.476Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:34:00.479Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.973Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/solutions/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.976Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/about/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.979Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/contact/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.982Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/case-studies/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.985Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/blog/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.988Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/pricing/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.990Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/privacy/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.994Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/terms/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:00.997Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:44:01.000Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.459Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/solutions/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.461Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/about/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.465Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/contact/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.468Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/case-studies/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.471Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/blog/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.473Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/pricing/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.476Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/privacy/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.480Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/terms/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.483Z"
+    },
+    {
+      "type": "PAGE_DOWN",
+      "message": "/consultation/ returned getaddrinfo ENOTFOUND ziontechgroup.com",
+      "timestamp": "2026-05-10T17:54:00.485Z"
     }
   ]
 }
