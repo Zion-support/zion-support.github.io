@@ -3,6 +3,12 @@
 import Link from 'next/link';
 import { Search, Home, Mail, FileText, LayoutGrid } from 'lucide-react';
 
+export const metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Page services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/page',
+};
+
 export default function NotFoundPage() {
   return (
     <div className="flex min-h-[70vh] flex-col bg-slate-950 px-6 py-16">

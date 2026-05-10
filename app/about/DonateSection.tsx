@@ -2,6 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { Heart, Coffee, Gift } from 'lucide-react';
 
+export const metadata = {
+  title: 'DonateSection | Zion Tech Group',
+  description: 'DonateSection services and solutions from Zion Tech Group.',
+  canonical: 'https://ziontechgroup.com/DonateSection',
+};
+
 export default function DonateSection() {
   return (
     <section className="mt-12 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl text-center">
