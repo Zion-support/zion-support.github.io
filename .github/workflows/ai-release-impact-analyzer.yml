@@ -1,6 +1,6 @@
 name: AI Release Impact Analyzer
 
-'on':
+on:
   pull_request:
     types: [closed]
     paths:

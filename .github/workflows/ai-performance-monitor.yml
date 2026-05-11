@@ -1,6 +1,6 @@
 name: AI Performance Monitor
 
-'on':
+on:
   schedule:
     - cron: '*/30 * * * *'  # Every 30 minutes
   workflow_dispatch:

@@ -1,6 +1,6 @@
 name: AI Auto Changelog
 
-'on':
+on:
   push:
     branches: [main]
     paths:

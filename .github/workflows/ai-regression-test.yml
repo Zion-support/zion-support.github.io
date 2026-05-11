@@ -1,6 +1,6 @@
 name: AI Regression Test Suite
 
-'on':
+on:
   schedule:
     - cron: '0 2 * * 0'  # Weekly Sunday at 2 AM UTC
   push:

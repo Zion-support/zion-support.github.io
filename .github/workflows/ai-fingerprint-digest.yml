@@ -1,6 +1,6 @@
 name: AI Fingerprint Digest
 
-'on':
+on:
   workflow_dispatch:
   push:
     branches: [main]

@@ -1,6 +1,6 @@
 name: MTTR SLO Monitor
 
-'on':
+on:
   schedule:
     - cron: '0 */2 * * *'  # Every 2 hours
   workflow_dispatch:

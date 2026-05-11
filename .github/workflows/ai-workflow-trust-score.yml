@@ -1,6 +1,6 @@
 name: Workflow Trust Score Monitor
 
-'on':
+on:
   schedule:
     - cron: '0 7 * * *'  # Daily at 7 AM UTC
   workflow_dispatch:

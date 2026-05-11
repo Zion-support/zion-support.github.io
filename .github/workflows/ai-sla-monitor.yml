@@ -1,6 +1,6 @@
 name: AI SLA Monitor
 
-'on':
+on:
   schedule:
     - cron: '*/10 * * * *'  # Every 10 minutes
   workflow_dispatch:

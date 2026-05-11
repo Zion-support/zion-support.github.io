@@ -1,6 +1,6 @@
 name: AI Code Quality Scanner
 
-'on':
+on:
   push:
     branches: [main]
     paths:

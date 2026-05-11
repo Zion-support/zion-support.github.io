@@ -1,6 +1,6 @@
 name: AI Observability Digest
 
-'on':
+on:
   schedule:
     - cron: '0 9 * * *'  # Daily at 9 AM
   workflow_dispatch:

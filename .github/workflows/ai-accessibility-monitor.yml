@@ -1,6 +1,6 @@
 name: AI Accessibility Monitor
 
-'on':
+on:
   schedule:
     - cron: '0 1 * * *'  # Nightly at 1 AM UTC
   workflow_dispatch:
