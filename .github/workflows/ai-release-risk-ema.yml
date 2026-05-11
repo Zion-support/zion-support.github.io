@@ -1,6 +1,6 @@
 name: Release Risk EMA Tracker
 
-on:
+'on':
   schedule:
     - cron: '0 6,18 * * *'  # 6 AM and 6 PM UTC
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
       
       - name: Alert on rising risk trend
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           report="automation/reports/release-risk-ema-latest.json"
           if [ -f "$report" ]; then

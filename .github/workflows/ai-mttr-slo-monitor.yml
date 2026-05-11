@@ -1,6 +1,6 @@
 name: MTTR SLO Monitor
 
-on:
+'on':
   schedule:
     - cron: '0 */2 * * *'  # Every 2 hours
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
       - name: Check SLO breach
         env:
           MTTR_SLO_THRESHOLD_HOURS: '24'
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           report="automation/reports/mttr-slo-latest.json"
           if [ -f "$report" ]; then

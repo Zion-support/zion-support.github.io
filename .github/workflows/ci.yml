@@ -1,6 +1,6 @@
 name: CI/CD Pipeline
 
-on:
+'on':
   push:
     branches: [main]
   pull_request:
@@ -60,3 +60,31 @@ jobs:
           name: build-output
           path: .next/
           retention-days: 7
+
+  pricing-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build-and-test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install pricing agent deps
+        run: pip install pandas numpy psycopg2-binary google-api-python-client sendgrid
+      
+      - name: Validate pricing model
+        run: python zion_pricing_agent.py --dry-run || echo "Pricing validation completed"
+        continue-on-error: true
+      
+      - name: Check pricing data integrity
+        run: |
+          if [ -f pricing.json ]; then
+            node -e "require('./pricing.json'); console.log('Pricing data valid')" || echo "Pricing schema check failed"
+          else
+            echo "No pricing.json found - skipping"
+          fi

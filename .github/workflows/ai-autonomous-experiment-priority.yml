@@ -1,6 +1,6 @@
 name: Autonomous Experiment Priority Engine
 
-on:
+'on':
   schedule:
     - cron: '0 8 * * *'  # Daily at 8 AM
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
       
       - name: Create high-priority experiment PR
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           report="automation/reports/experiment-priority-latest.json"
           if [ -f "$report" ]; then

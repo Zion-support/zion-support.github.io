@@ -1,6 +1,6 @@
 name: AI Fingerprint Delta Tracker
 
-on:
+'on':
   schedule:
     - cron: '0 0 * * *'  # Daily at midnight
   workflow_dispatch:

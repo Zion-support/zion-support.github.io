@@ -1,6 +1,6 @@
 name: Weekly AI Health Digest
 
-on:
+'on':
   schedule:
     - cron: '0 9 * * 1'  # Monday at 9 AM
   workflow_dispatch:

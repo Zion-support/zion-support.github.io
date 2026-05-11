@@ -1,6 +1,6 @@
 name: Generate AI Dashboard
 
-on:
+'on':
   push:
     branches: [main]
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Commit dashboard to gh-pages branch
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "OpenClaw Bot"
           git config user.email "bot@openclaw.ai"

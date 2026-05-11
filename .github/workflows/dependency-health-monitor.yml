@@ -1,6 +1,6 @@
 name: AI Dependency Health & Freshness Monitor
 
-on:
+'on':
   schedule:
     - cron: '0 2 * * *'  # Daily at 2:00 AM UTC
   workflow_dispatch:
@@ -33,5 +33,5 @@ jobs:
 
       - name: Run dependency health check
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/dependency-health.cjs

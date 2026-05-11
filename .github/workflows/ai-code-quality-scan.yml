@@ -1,6 +1,6 @@
 name: AI Code Quality Scanner
 
-on:
+'on':
   push:
     branches: [main]
     paths:
@@ -40,5 +40,5 @@ jobs:
 
       - name: Run AI Code Quality Scan
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/ai-code-quality-scan.cjs

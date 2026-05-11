@@ -1,6 +1,6 @@
 name: AI GPT Code Review
 
-on:
+'on':
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
@@ -34,6 +34,6 @@ jobs:
 
       - name: Run GPT Code Review
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/run-gpt-code-review.cjs

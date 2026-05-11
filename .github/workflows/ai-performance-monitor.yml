@@ -1,6 +1,6 @@
 name: AI Performance Monitor
 
-on:
+'on':
   schedule:
     - cron: '*/30 * * * *'  # Every 30 minutes
   workflow_dispatch:
@@ -34,5 +34,5 @@ jobs:
       - name: Run performance check
         id: perf
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/run-performance-monitor.cjs

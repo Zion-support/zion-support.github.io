@@ -1,6 +1,6 @@
 name: AI Bundle Size Monitor
 
-on:
+'on':
   schedule:
     - cron: '0 2 * * *'  # Daily at 2 AM UTC
   push:
@@ -68,7 +68,7 @@ jobs:
       - name: Create issue on large bundles
         if: steps.bundle-check.outputs.large_files == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue create --title "Large JavaScript Bundles Detected" \
             --body "Bundle size analysis found JavaScript files exceeding 500KB threshold. This may impact page load performance." \

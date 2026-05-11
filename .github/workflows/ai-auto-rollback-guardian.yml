@@ -1,6 +1,6 @@
 name: AI Auto Rollback Guardian
 
-on:
+'on':
   schedule:
     - cron: '*/15 * * * *'  # Every 15 minutes
   workflow_dispatch:
@@ -32,6 +32,6 @@ jobs:
 
       - name: Run rollback guardian
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NETLIFY_ROLLBACK_HOOK: ${{ secrets.NETLIFY_ROLLBACK_HOOK }}
         run: node scripts/run-rollback-guardian.cjs

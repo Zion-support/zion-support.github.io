@@ -1,6 +1,6 @@
 name: AI Release Impact Analyzer
 
-on:
+'on':
   pull_request:
     types: [closed]
     paths:
@@ -40,5 +40,5 @@ jobs:
 
       - name: Analyze release impact
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/analyze-release-impact.cjs

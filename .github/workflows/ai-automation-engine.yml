@@ -1,6 +1,6 @@
 name: AI Automation Engine
 
-on:
+'on':
   schedule:
     - cron: '0 8 * * *'  # Daily at 8 AM
   workflow_dispatch:
@@ -48,7 +48,7 @@ jobs:
       - name: Create issue on low autonomy score
         if: always()
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           report="automation/reports/autonomy-intelligence-plan-latest.json"
           if [ -f "$report" ]; then
