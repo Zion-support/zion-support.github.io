@@ -56,4 +56,8 @@ export default function UnitConverter() {
         <button onClick={convert} className="px-4 py-2 bg-blue-600 text-white rounded">Convert</button>
       </div>
       <div className="mt-2">
-        <strong>Result:</strong> {result.toFixed(5)} {
+        <strong>Result:</strong> {result.toFixed(5)} 
+      </div>
+    </main>
+    );
+  }

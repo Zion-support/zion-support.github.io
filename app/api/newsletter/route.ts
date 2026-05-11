@@ -42,4 +42,20 @@ export async function POST(req: NextRequest) {
       try {
         const sg = (await import('@sendgrid/mail')).default;
         sg.setApiKey(SENDGRID_API_KEY);
-        const subject = NEWSLETTER_SUBJECT || 'Welcome to Zion Tech
+        const subject = NEWSLETTER_SUBJECT || 'Welcome to Zion Tech Services';
+        const text = NEWSLETTER_BODY || 'Thank you for subscribing to our newsletter!';
+        await sg.send({
+          to: lower,
+          from: SENDER_EMAIL,
+          subject,
+          text,
+        });
+      } catch (err) {
+        console.error('SendGrid error:', err);
+      }
+    }
+    return NextResponse.json({ message: 'Subscribed successfully' }, { status: 200 });
+  } catch (err) {
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+  }
+}

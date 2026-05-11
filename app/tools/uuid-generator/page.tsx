@@ -28,4 +28,14 @@ export default function UuidGenerator() {
       <div className="flex flex-col items-center space-y-4">
         <button
           onClick={generate}
-          className="rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5
+          className="rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 transform hover:scale-105"
+        >
+          Generate UUID
+        </button>
+        {uuid && (
+          <p className="mt-4 text-lg font-mono text-indigo-600">{uuid}</p>
+        )}
+      </div>
+    </main>
+    );
+  }

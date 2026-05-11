@@ -42,4 +42,15 @@ export default function FreeToolsPage() {
       </Head>
       <h1 className="text-3xl font-bold mb-4">Free Tools & Resources</h1>
       <p className="mb-6">Explore a curated list of powerful free tools that help you build, deploy, and scale your projects without cost.</p>
-      <ul className="space-y-4 list-none"
+      <ul className="space-y-4 list-none">
+{tools.map((tool, i) => (
+  <li key={i} className="border p-4 rounded">
+    <h2 className="text-xl font-semibold">{tool.name}</h2>
+    <p className="text-gray-600">{tool.desc}</p>
+    <Link href={tool.href} className="text-blue-500 underline">{tool.href}</Link>
+  </li>
+))}
+</ul>
+    </main>
+    );
+}

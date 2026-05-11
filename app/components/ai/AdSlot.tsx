@@ -24,7 +24,7 @@ export default function AdSlot({ placement = 'inline', className = '' }: AdSlotP
 
   return (
     <div
-      className={`ad-slot ${placement} ${className} text-center`
+      className={`ad-slot ${placement} ${className} text-center`}
       style={{
         padding: '1rem',
         backgroundColor: '#f8f9fa',
