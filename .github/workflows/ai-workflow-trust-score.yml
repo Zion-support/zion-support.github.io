@@ -21,10 +21,10 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -61,7 +61,7 @@ jobs:
           fi
       
       - name: Upload trust scores
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: workflow-trust-${{ github.run_id }}
           path: automation/reports/workflow-trust-latest.json

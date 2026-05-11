@@ -20,10 +20,10 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -52,7 +52,7 @@ jobs:
           fi || true
       
       - name: Upload EMA report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-risk-ema-${{ github.run_id }}
           path: automation/reports/release-risk-ema-latest.json
