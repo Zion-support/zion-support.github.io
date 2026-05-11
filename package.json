@@ -14,7 +14,7 @@
     "test:ci": "jest --ci --coverage --watchAll=false"
   },
   "dependencies": {
-    "next": "^9.3.3",
+    "next": "^15.5.15",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
