@@ -56,6 +56,7 @@
 | #46 | Autonomous SQLite/Alarms retention policy manager | KiloClaw | ✅ Done | 2026-05-12 | Weekly purge old DB records (>90d default); VACUUM; report storage freed; dry-run safe |
 | #47 | Autonomous lazy-loading route slicer | KiloClaw | ✅ Done | 2026-05-12 | Weekly bundle-based analysis; proposes dynamic() imports; optional PR creation; dry-run safe |
 | #48 | Autonomous content summarizer & excerpt generator | KiloClaw | ✅ Done | 2026-05-12 | Weekly NLP-based excerpt generation; suggests keywords/tags; artifact upload; Telegram digest |
+| #49 | Autonomous dynamic sitemap & route priority optimizer | KiloClaw | ✅ Done | 2026-05-12 | Weekly sitemap.xml regeneration with route priority + changefreq; pings search engines; auto-commit |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 

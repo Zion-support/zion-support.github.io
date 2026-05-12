@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **34 Active Systems**
+## 📊 Current Guardrail Count: **35 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -44,6 +44,7 @@
 | **32** | **Autonomous SQLite/Alarms Retention Policy Manager** | **Weekly Sunday 03:00 UTC** | **✅ Just Deployed** |
 | **33** | **Autonomous Lazy-Loading Route Slicer** | **Weekly Sunday 04:00 UTC (dry-run)** | **✅ Just Deployed** |
 | **34** | **Autonomous Content Summarizer & Excerpt Generator** | **Weekly Sunday 05:00 UTC** | **✅ Just Deployed** |
+| **35** | **Autonomous Dynamic Sitemap & Route Priority Optimizer** | **Weekly Sunday 06:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -61,6 +62,7 @@
 - **#46** — SQLite Retention Policy Manager deployed
 - **#47** — Lazy-Loading Route Slicer deployed
 - **#48** — Content Summarizer deployed
+- **#49** — Dynamic Sitemap Optimizer deployed
 
 ---
 
@@ -73,15 +75,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #49)
+## 📋 Next Steps (Suggested #50)
 
-**Candidate:** Autonomous Dynamic Sitemap & Route Priority Optimizer
-- Regenerates `sitemap.xml` with intelligent priority based on route type (home/services/AI Lab/static)
-- Sets `changefreq` based on last modified date
-- Pings search engines (Google/Bing) after update
-- Files: `automation/sitemap-optimizer.cjs`, `.github/workflows/sitemap-optimizer.yml`, `docs/SITEMAP-OPTIMIZER.md`
+**Candidate:** Autonomous SSL/TLS Certificate Expiration Monitor
+- Check expiry dates on all configured domains (via `openssl` or `certbot`)
+- Alert 30, 7, and 1 day before expiry
+- Attempt auto-renew via Let's Encrypt where possible (for known ACME endpoints)
+- Files: `automation/cert-monitor.cjs`, `.github/workflows/cert-monitor.yml`, `docs/CERT-MONITOR.md`
 
-Alternative: **Autonomous SSL/TLS Certificate Expiration Monitor** — checks cert dates on all domains; alerts 30/7/1 day before expiry; auto-renew via Let's Encrypt where possible.
+Alternative: **Autonomous Changelog Generator** — aggregates commit messages and deployment notes into a public `CHANGELOG.md` with release sections.
 
 ---
 
