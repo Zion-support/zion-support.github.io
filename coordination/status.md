@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **40 Active Systems**
+## 📊 Current Guardrail Count: **41 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -50,6 +50,7 @@
 | **38** | **Autonomous Accessibility Scorecard Dashboard** | **Daily 08:30 UTC** | **✅ Just Deployed** |
 | **39** | **Autonomous Open Graph Image Generator** | **Daily 01:00 UTC** | **✅ Just Deployed** |
 | **40** | **Autonomous Structured Data (Schema.org) Validator** | **Weekly Monday 09:00 UTC** | **✅ Just Deployed** |
+| **41** | **Autonomous Performance Budget Enforcer with CI Gate** | **On PR + daily 03:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -84,15 +85,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #55)
+## 📋 Next Steps (Suggested #56)
 
-**Candidate:** Autonomous Performance Budget Enforcer with CI Gate
-- Enforce Core Web Vitals + CLS/INP via Lighthouse CI on every PR
-- Fail CI if LCP >2.5s, CLS <0.1, INP <200ms, or TBT <200ms
-- Auto-raise PR comments with metric breakdown; weekly trend digest
-- Files: `automation/performance-budget-enforcer.cjs`, `.github/workflows/performance-budget.yml`, `docs/PERFORMANCE-BUDGET.md`
+**Candidate:** Autonomous Content Freshness & Stale Content Archiver
+- Detect content not updated within configurable TTL (e.g., blog posts >2 years old)
+- Suggest archive/monetize/update; open GitHub issues for review
+- Automatically generate `archived` flag in frontmatter (opt-in via config)
+- Files: `automation/content-freshness.cjs`, `.github/workflows/content-freshness.yml`, `docs/CONTENT-FRESHNESS.md`
 
-Alternative: **Autonomous Privacy Policy Compliance Scanner** — checks for missing consent banners, cookie declarations, and data processing disclosures.
+Alternative: **Autonomous Meta Tags Quality Scanner** — checks title length, description duplication, missing canonical URLs, and robots.txt directives.
 
 ---
 
