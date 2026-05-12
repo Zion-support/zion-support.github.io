@@ -1,0 +1,19 @@
+{
+  "framework": "nextjs",
+  "rootDirectory": "/Users/klebergarciaalcatrao/web",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next",
+      "config": {
+        "includeFiles": ["pages/**/*", "public/**/*"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
+}

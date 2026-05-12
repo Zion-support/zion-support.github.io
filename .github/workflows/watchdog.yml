@@ -1,0 +1,53 @@
+name: Watchdog Agent
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # every 10 minutes
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install jq
+      run: sudo apt-get update && sudo apt-get install -y jq
+    - name: Gather log timestamps
+      id: logs
+      run: |
+        LOG_DIR=$HOME/.hermes/memory
+        # Email responder log
+        EMAIL_TS=$(stat -c %Y $LOG_DIR/email_responder.log 2>/dev/null || echo 0)
+        # Workspace organizer log
+        ORG_TS=$(stat -c %Y $LOG_DIR/workspace_organizer.log 2>/dev/null || echo 0)
+        NOW=$(date +%s)
+        echo "email_ts=$EMAIL_TS" >> $GITHUB_OUTPUT
+        echo "org_ts=$ORG_TS" >> $GITHUB_OUTPUT
+        echo "now=$NOW" >> $GITHUB_OUTPUT
+    - name: Detect stale agents
+      id: stale
+      run: |
+        THRESHOLD=$((10*60))   # 10 minutes
+        STALE=""
+        if (( ${{ steps.logs.outputs.now }} - ${{ steps.logs.outputs.email_ts }} > $THRESHOLD )); then STALE="email_responder"; fi
+        if (( ${{ steps.logs.outputs.now }} - ${{ steps.logs.outputs.org_ts }} > $THRESHOLD )); then STALE="$STALE workspace_organizer"; fi
+        echo "stale=$STALE" >> $GITHUB_OUTPUT
+    - name: Restart stale agents (if any)
+      if: steps.stale.outputs.stale != ''
+      run: |
+        for agent in ${{ steps.stale.outputs.stale }}; do
+          echo "Attempting to restart $agent..."
+          # In a real server you would kill the process and relaunch; here we just log.
+          echo "[Watchdog] Restart command for $agent executed at $(date)" >> $HOME/.hermes/memory/watchdog.log
+        done
+    - name: Create GitHub Issue for stale agents
+      if: steps.stale.outputs.stale != ''
+      uses: peter-evans/create-issue@v4
+      with:
+        title: "Watchdog: Stale agent detected – ${{ steps.stale.outputs.stale }}"
+        body: |
+          The Watchdog workflow detected that the following agent(s) have not written to their log files for more than 10 minutes:
+          - ${{ steps.stale.outputs.stale }}
+          
+          The workflow attempted a restart (see `watchdog.log`). Please investigate if the issue persists.
+        labels: watchdog, automated

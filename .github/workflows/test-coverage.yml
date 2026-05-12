@@ -1,0 +1,33 @@
+name: Test Coverage Monitor
+on:
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 1'  # Weekly at midnight UTC
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests with coverage
+        run: npm test -- --coverage
+      - name: Check coverage threshold
+        id: coverage
+        run: |
+          TOTAL=$(cat coverage/lcov.info | grep -c "SF:")
+          COVERED=$(cat coverage/lcov.info | grep -c "DA:.*1,")
+          PERCENT=$(echo "scale=2; $COVERED * 100 / $TOTAL" | bc)
+          echo "coverage=$PERCENT" >> $GITHUB_OUTPUT
+      - name: Block PR if coverage < 80%
+        if: steps.coverage.outputs.coverage < 80
+        run: |
+          echo "❌ Coverage too low: ${steps.coverage.outputs.coverage}% (minimum 80%)"
+          exit 1
+      - name: Run coverage suggester
+        if: steps.coverage.outputs.coverage < 80
+        run: node automation/coverage-suggester.js

@@ -1,0 +1,20 @@
+name: Event‑Based Build Trigger
+
+on:
+  repository_dispatch:
+    types: [manual_build]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install deps
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - run: npm ci
+    - run: npm run lint
+    - run: npm run test
+    - name: Deploy (placeholder)
+      run: echo "Deploy step would run here"

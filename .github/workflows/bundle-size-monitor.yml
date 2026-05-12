@@ -1,0 +1,22 @@
+name: Bundle Size Monitor
+on:
+  schedule:
+    - cron: '0 4 * * *'   # daily at 04:00 UTC
+  workflow_dispatch:
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies (including axe-cli if needed)
+        run: |
+          npm ci
+          npm install -D jq
+      - name: Run bundle size monitor script
+        run: |
+          chmod +x scripts/bundle-size-monitor.sh
+          ./scripts/bundle-size-monitor.sh

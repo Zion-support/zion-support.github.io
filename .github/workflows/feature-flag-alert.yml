@@ -1,0 +1,20 @@
+name: Feature Flag Alert
+
+on:
+  push:
+    paths:
+      - 'config/feature-flags.json'
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram Alert
+        run: |
+          # Get the changed file content
+          FLAG_FILE="config/feature-flags.json"
+          # Use curl to send a Telegram message
+          curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d "text=Feature flag updated:\n$(cat $FLAG_FILE | jq -r 'to_entries[] | \"\(.key): \(.value)\"' | paste -sd ' ')" \
+            -d "parse_mode=Markdown"

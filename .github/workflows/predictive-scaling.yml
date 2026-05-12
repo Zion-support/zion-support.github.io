@@ -1,0 +1,18 @@
+name: Predictive Scaling Agent
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Every 5 minutes
+  workflow_dispatch:
+
+jobs:
+  predictive-scaling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node (for bc)
+        run: sudo apt-get update && sudo apt-get install -y bc jq
+      - name: Run predictive scaling agent
+        run: |
+          chmod +x ./scripts/predictive-scaling-agent.sh
+          ./scripts/predictive-scaling-agent.sh

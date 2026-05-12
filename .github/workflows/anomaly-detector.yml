@@ -1,0 +1,19 @@
+name: Anomaly Detection
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  detect-anomalies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup bc
+        run: sudo apt-get install -y bc
+      - name: Run anomaly detector
+        run: |
+          chmod +x ./scripts/anomaly-detector.sh
+          ./scripts/anomaly-detector.sh

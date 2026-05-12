@@ -1,0 +1,49 @@
+name: Static Analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 3 * * *'   # daily at 03:00 UTC
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - name: Install Dependencies
+      run: npm ci
+    - name: Run Markdownlint
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const sh = require('child_process').spawnSync;
+          const res = sh('npx markdownlint -c .markdownlint.yml .', {stdio: 'inherit', shell: true});
+          if (res.status !== 0) process.exit(1);
+    - name: Check for broken links
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          const files = [];
+          function walk(dir){
+            const list = fs.readdirSync(dir);
+            list.forEach(file=>{
+              const filePath = path.join(dir, file);
+              const stat = fs.statSync(filePath);
+              if(stat.isDirectory()) walk(filePath); else if(file.endsWith('.md')) files.push(filePath);
+            });
+          }
+          walk('.');
+          const { spawnSync } = require('child_process');
+          const cmd = `npx markdown-link-check -c .linkcheckrc -r 2 ${files.join(' ')}`;
+          const res = spawnSync('bash', ['-c', cmd], {stdio: 'inherit'});
+          if(res.status !== 0) process.exit(1);
+    - name: Check GitHub Actions Lint
+      run: npx actionlint

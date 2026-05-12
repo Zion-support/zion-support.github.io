@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "@types/react": "^19.2.14",
+    "@types/stripe": "^8.0.416",
+    "typescript": "^6.0.3"
+  }
+}
