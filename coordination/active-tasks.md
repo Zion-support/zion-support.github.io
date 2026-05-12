@@ -49,6 +49,7 @@
 | #39 | Autonomous API schema validation & contract guard | KiloClaw | ✅ Done | 2026-05-12 | CI gate: every route must export Zod request/response schema; posts PR comments; daily summary; 90d history |
 | #40 | Autonomous OpenAPI spec consistency & drift detector | KiloClaw | ✅ Done | 2026-05-12 | Detects breaking contract changes; CI gate; daily digest |
 | #41 | Autonomous TypeScript type coverage & dead code finder | KiloClaw | ✅ Done | 2026-05-12 | Enforces strict typing, flags any usage, detects unused code; CI gate + weekly digest |
+| #42 | Autonomous ESLint rule extension & custom linter | KiloClaw | ✅ Done | 2026-05-12 | Custom ESLint config + CI gate; enforces forbidden APIs, error handling, naming, dead code |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 

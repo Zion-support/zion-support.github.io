@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **26 Active Systems**
+## 📊 Current Guardrail Count: **27 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -37,6 +37,7 @@
 | **25** | **Autonomous API Schema Validation & Contract Guard** | **On PR to main + Daily** | **✅ Just Deployed** |
 | **26** | **Autonomous OpenAPI Spec Consistency & Drift Detector** | **On PR to main + Daily** | **✅ Just Deployed** |
 | **27** | **Autonomous TypeScript Type Coverage & Dead Code Finder** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
+| **27** | **Autonomous TypeScript Type Coverage & Dead Code Finder** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 
 ---
 
@@ -47,6 +48,7 @@
 - **#39** — API Schema Validation deployed
 - **#40** — OpenAPI Drift Detector deployed
 - **#41** — TypeScript Type Coverage & Dead Code Finder deployed
+- **#42** — Custom ESLint Rules deployed
 
 ---
 
@@ -59,15 +61,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #42)
+## 📋 Next Steps (Suggested #43)
 
-**Candidate:** Autonomous ESLint Rule Extension & Custom Linter
-- Enforce project-specific code style rules
-- Detect common bug patterns (null checks, forgotten awaits)
-- Auto-fix via `--fix` on PRs
-- Files: `automation/custom-eslint.cjs`, `.github/workflows/custom-eslint.yml`, `docs/CUSTOM-ESLINT.md`
+**Candidate:** Autonomous Bundle Split Analyzer & Route-based Code Splitting Guide
+- Analyze route-level bundle sizes per-module
+- Suggest dynamic imports to reduce initial load
+- PR comments on regressions; monthly performance report
+- Files: `automation/bundle-split-analyzer.cjs`, `.github/workflows/bundle-split-analyzer.yml`, `docs/BUNDLE-SPLIT-ANALYZER.md`
 
-Alternative: **Autonomous Bundle Split Analyzer & Route-based Code Splitting Guide** — analyzes route-level bundle sizes; suggests dynamic imports to reduce initial load.
+Alternative: **Autonomous Memory Leak Detector & Heap Snapshot Comparator** — tracks heap diffs across deploys; alerts on abnormal object retention growth.
 
 ---
 
@@ -80,5 +82,5 @@ None. All systems healthy; no action required by Kleber at this time.
 ## 💬 Coordination Notes
 
 - Standing owner permission (2026-03-21+) remains in effect: autonomous implementation/deployment loops continue without confirmation pauses unless hard safety block
-- Autonomous improvement wave ongoing: #37, #38, #39, #40 shipped in rapid succession
+- Autonomous improvement wave ongoing: #37, #38, #39, #40, #41, #42 shipped in rapid succession
 - All guardrails designed for zero-cost operation using GitHub Actions + self-hosted scripts
