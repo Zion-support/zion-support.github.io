@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **29 Active Systems**
+## 📊 Current Guardrail Count: **30 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -39,6 +39,7 @@
 | **27** | **Autonomous TypeScript Type Coverage & Dead Code Finder** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 | **28** | **Autonomous ESLint Rule Extension & Custom Linter** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 | **29** | **Autonomous Bundle Split Analyzer & Route Code Splitting Guide** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
+| **30** | **Autonomous Memory Leak Detector & Heap Snapshot Comparator** | **Hourly** | **✅ Just Deployed** |
 
 ---
 
@@ -51,6 +52,7 @@
 - **#41** — TypeScript Type Coverage & Dead Code Finder deployed
 - **#42** — Custom ESLint Rules deployed
 - **#43** — Bundle Split Analyzer deployed
+- **#44** — Memory Leak Detector deployed
 
 ---
 
@@ -63,15 +65,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #44)
+## 📋 Next Steps (Suggested #45)
 
-**Candidate:** Autonomous Memory Leak Detector & Heap Snapshot Comparator
-- Capture Node.js heap snapshots on production processes (PM2)
-- Compare across deploys; alert on abnormal object retention growth
-- Suggest likely leak sources via dominator tree diffing
-- Files: `automation/heap-diff-detector.cjs`, `.github/workflows/heap-diff.yml`, `docs/HEAP-DIFF-DETECTOR.md`
+**Candidate:** Autonomous CSS/UI Visual Regression Detector with Playwright
+- Capture screenshots of key pages across breakpoints
+- Compare pixel diffs against baseline; flag visual changes
+- PR comments on unintended visual regressions
+- Files: `automation/visual-regression.cjs`, `.github/workflows/visual-regression.yml`, `docs/VISUAL-REGRESSION.md`
 
-Alternative: **Autonomous Accessibility Regression Detector with Playwright** — screenshot-based visual diff for WCAG violations; PR comments on new issues.
+Alternative: **Autonomous Log Anomaly Detector** — uses statistical outlier detection on application logs; surfaces spike in error rates or unusual patterns.
 
 ---
 

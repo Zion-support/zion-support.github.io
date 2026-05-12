@@ -51,6 +51,7 @@
 | #41 | Autonomous TypeScript type coverage & dead code finder | KiloClaw | ✅ Done | 2026-05-12 | Enforces strict typing, flags any usage, detects unused code; CI gate + weekly digest |
 | #42 | Autonomous ESLint rule extension & custom linter | KiloClaw | ✅ Done | 2026-05-12 | Custom ESLint config + CI gate; enforces forbidden APIs, error handling, naming, dead code |
 | #43 | Autonomous bundle split analyzer & route code splitting guide | KiloClaw | ✅ Done | 2026-05-12 | Analyzes route bundles; recommends dynamic imports; PR comments + weekly digest |
+| #44 | Autonomous memory leak detector & heap snapshot comparator | KiloClaw | ✅ Done | 2026-05-12 | Hourly PM2 heap diff; >20% growth alerts; GitHub issues + Telegram |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 
