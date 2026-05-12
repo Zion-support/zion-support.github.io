@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **35 Active Systems**
+## 📊 Current Guardrail Count: **36 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -45,6 +45,7 @@
 | **33** | **Autonomous Lazy-Loading Route Slicer** | **Weekly Sunday 04:00 UTC (dry-run)** | **✅ Just Deployed** |
 | **34** | **Autonomous Content Summarizer & Excerpt Generator** | **Weekly Sunday 05:00 UTC** | **✅ Just Deployed** |
 | **35** | **Autonomous Dynamic Sitemap & Route Priority Optimizer** | **Weekly Sunday 06:00 UTC** | **✅ Just Deployed** |
+| **36** | **Autonomous SSL/TLS Certificate Expiration Monitor** | **Weekly Sunday 07:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -63,6 +64,7 @@
 - **#47** — Lazy-Loading Route Slicer deployed
 - **#48** — Content Summarizer deployed
 - **#49** — Dynamic Sitemap Optimizer deployed
+- **#50** — SSL/TLS Certificate Expiration Monitor deployed
 
 ---
 
@@ -75,15 +77,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #50)
+## 📋 Next Steps (Suggested #51)
 
-**Candidate:** Autonomous SSL/TLS Certificate Expiration Monitor
-- Check expiry dates on all configured domains (via `openssl` or `certbot`)
-- Alert 30, 7, and 1 day before expiry
-- Attempt auto-renew via Let's Encrypt where possible (for known ACME endpoints)
-- Files: `automation/cert-monitor.cjs`, `.github/workflows/cert-monitor.yml`, `docs/CERT-MONITOR.md`
+**Candidate:** Autonomous Changelog Generator
+- Aggregate commit messages and deployment notes into a public `CHANGELOG.md`
+- Group by version/release date; categorize by guardrail type (security, perf, content, ops)
+- Auto-update on merge to `main` via CI
+- Files: `automation/changelog-generator.cjs`, `.github/workflows/changelog.yml`, `docs/CHANGELOG-GENERATOR.md`
 
-Alternative: **Autonomous Changelog Generator** — aggregates commit messages and deployment notes into a public `CHANGELOG.md` with release sections.
+Alternative: **Autonomous Accessibility Scorecard Dashboard** — aggregates Lighthouse a11y scores across routes; tracks trends; surfaces regressions.
 
 ---
 
