@@ -29,7 +29,8 @@ export type AILabToolId =
   | 'dynamic-api-monitoring'
   | 'ai-content-idea-generator'
   | 'ai-component-health-checker'
-  | 'ai-workflow-status-dashboard';
+  | 'ai-workflow-status-dashboard'
+  | 'autonomous-competitive-intelligence';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -356,10 +357,21 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     slug: 'ai-workflow-status-dashboard',
     title: 'AI Workflow Status Dashboard',
     shortDescription:
-      'Real-time GitHub Actions workflow monitoring for Zion autonomous pipelines with success rates and pipeline health.',
-    category: 'Deployment Intelligence',
+      'Real-time status board for all autonomous workflows tracking audits, quality gates, and deployment health.',
+    category: 'Platform Operations',
     status: 'live',
     href: '/ai-lab/ai-workflow-status-dashboard',
+    badge: 'Live',
+  },
+  {
+    id: 'autonomous-competitive-intelligence',
+    slug: 'autonomous-competitive-intelligence',
+    title: 'Autonomous Competitive Intelligence',
+    shortDescription:
+      'Scan, profile, and score your competitive landscape. Simulate rival strategies and surface defensible positioning.',
+    category: 'Market Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-competitive-intelligence',
     badge: 'New',
   },
 ];
