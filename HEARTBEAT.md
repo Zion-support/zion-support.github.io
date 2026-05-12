@@ -53,6 +53,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 21. Autonomous code quality & complexity analytics now active — static analysis of TS/TSX/JS/SH; computes cyclomatic complexity per function, LOC, comment density, Maintainability Index; detects code duplication (5-line blocks); weekly Telegram digest + GitHub issue on degradation; PR comments on complexity changes; 90-day file history. See automation/code-quality-analytics.cjs, workflow code-quality-analytics.yml, docs/CODE-QUALITY-ANALYTICS.md.
 22. Automated security headers & HTTPS enforcement auditor now active — probes production for HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy; validates HTTP→HTTPS redirect; checks cookie flags (Secure, HttpOnly, SameSite); scans for mixed content (http:// resources); daily Telegram + GitHub issue on critical failures. See automation/security-headers-audit.cjs, workflow security-headers-audit.yml, docs/SECURITY-HEADERS-AUDIT.md.
 23. Autonomous GDPR/privacy compliance scanner now active — Playwright-based DOM scanner; checks cookie consent banner visibility; detects tracking scripts (GA, FB Pixel, Hotjar, etc.) loading without consent; verifies privacy policy link in footer; audits email forms for explicit unchecked consent checkbox; looks for data collection disclosure; checks GA IP anonymization; computes 0–100 compliance score; weekly Telegram + GitHub issue on score<70 or critical violations. Workflow: gdpr-privacy-audit.yml. Docs: GDPR-PRIVACY-COMPLIANCE.md.
+24. Autonomous log rotation & storage cost optimizer now active — scans automation/reports/, .hermes/memory/ for expired logs/history; applies retention (daily 30d, weekly 90d, monthly 365d); deletes GitHub Actions artifacts >30d via API; dry-run by default; protects recent files; Telegram summary; daily 02:00 UTC. Script: automation/log-retention-manager.cjs. Docs: LOG-RETENTION-MANAGER.md.
 5. Keep main branch synced and deployment-ready
 6. Run deploy watchdog and promotion-route validation on each release cycle
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
@@ -76,6 +77,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 🟢 Code Quality & Complexity Analytics deployed (weekly + PRs, cyclomatic complexity, LOC, duplication detection, Maintainability Index)
 🟢 Security Headers & HTTPS Enforcement Auditor deployed (daily 18:00 UTC, header validation, mixed content scan, cookie flags)
 🟢 GDPR/Privacy Compliance Scanner deployed (weekly Sunday 19:00 UTC + PRs, consent banner, tracking script control, privacy link, form opt-in, data disclosure, compliance score)
+🟢 Log Rotation & Storage Cost Optimizer deployed (daily 02:00 UTC, file system cleanup, GitHub artifact deletion, dry-run safe)
 
 ### Operating Mandate
 - Standing owner permission (2026-03-20 rr-accel-1): continue autonomous implementation/deployment loops by default and persist this authority in continuity files for future sessions.
