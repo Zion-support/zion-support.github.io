@@ -19,6 +19,11 @@ if (!GITHUB_TOKEN) {
   process.exit(1);
 }
 
+if (!OPENROUTER_API_KEY) {
+  console.log('No OPENROUTER_API_KEY – skipping AI review');
+  process.exit(0);
+}
+
 // Helper to get PR files
 async function getModifiedFiles(octokit, owner, repo, prNumber) {
   const files = [];
