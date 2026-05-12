@@ -29,40 +29,18 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then npm ci; else npm install; fi
-          # Install bundle analyzer
-          npm install --save-dev next-bundle-analyzer
 
-      - name: Build with bundle analysis
-        env:
-          ANALYZE: true
-          BUNDLE_SIZE_THRESHOLD: ${{ secrets.BUNDLE_SIZE_THRESHOLD || '2' }}
-        run: |
-          # Run build with analyzer enabled (Next.js)
-          if npm run build 2>&1 | tee build.log; then
-            echo "✅ Build completed"
-          else
-            echo "❌ Build failed"
-            exit 1
-          fi
-
-          # Find the generated stats file
-          STATS_FILE=$(find .next -name "*.json" 2>/dev/null | head -1)
-          if [ -z "$STATS_FILE" ]; then
-            echo "❌ No bundle stats found"
-            exit 1
-          fi
-
-          # Convert to expected format (simplified)
-          # For next-bundle-analyzer, we can get total size directly
-          echo "📊 Bundle stats: $STATS_FILE"
-          cp "$STATS_FILE" bundle-analysis.json
+      - name: Build
+        run: npm run build
 
       - name: Save bundle size snapshot
         id: snapshot
         run: |
           # Snapshot current bundle size (sum of main JS + CSS)
-          SIZE=$(node -e "const fs=require('fs');const a=fs.readdirSync('.next/static/chunks');console.log(a.reduce((c,f)=>c+fs.statSync('.next/static/chunks/'+f).size,0));")
+          SIZE=$(node -e "const fs=require('fs');const dir='.next/static/chunks'; let total=0; try { const files=fs.readdirSync(dir); for(const f of files){ total+=fs.statSync(dir+'/'+f).size; } } catch(e) { console.error('Error reading chunks:', e.message); process.exit(1); } console.log(total);")
           echo "size=$SIZE" >> $GITHUB_OUTPUT
+          # Create bundle-analysis.json for monitor script
+          echo "{\"totalBytes\":$SIZE}" > bundle-analysis.json
 
       - name: Load previous snapshot
         id: prev
@@ -84,6 +62,7 @@ jobs:
 
       - name: Update stored snapshot
         run: |
+          mkdir -p .hermes/memory
           echo "{ \"size\": ${{steps.snapshot.outputs.size}}, \"timestamp\": \"$(date -u '+%Y-%m-%dT%H:%M:%SZ')\", \"hash\": \"$(git rev-parse HEAD)\" }" > .hermes/memory/bundle-size.json
           git add .hermes/memory/bundle-size.json
 
@@ -93,6 +72,14 @@ jobs:
         run: |
           node scripts/track-bundle-history.js
           git add .hermes/memory/bundle-history.json
+
+      - name: Commit bundle state
+        if: always()
+        run: |
+          git config user.email "ci@example.com"
+          git config user.name "CI Bot"
+          git add .hermes/memory
+          git diff --cached --quiet || (git commit -m "chore(bundle): update size metrics [skip ci]" && git push origin HEAD)
 
       - name: Evaluate bundle trend
         id: trend
