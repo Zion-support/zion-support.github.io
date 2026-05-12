@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **38 Active Systems**
+## 📊 Current Guardrail Count: **39 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -48,6 +48,7 @@
 | **36** | **Autonomous SSL/TLS Certificate Expiration Monitor** | **Weekly Sunday 07:00 UTC** | **✅ Just Deployed** |
 | **37** | **Autonomous Changelog Generator** | **On push to main + manual** | **✅ Just Deployed** |
 | **38** | **Autonomous Accessibility Scorecard Dashboard** | **Daily 08:30 UTC** | **✅ Just Deployed** |
+| **39** | **Autonomous Open Graph Image Generator** | **Daily 01:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -69,6 +70,7 @@
 - **#50** — SSL/TLS Certificate Expiration Monitor deployed
 - **#51** — Changelog Generator deployed
 - **#52** — Accessibility Scorecard Dashboard deployed
+- **#53** — Open Graph Image Generator deployed
 
 ---
 
@@ -81,15 +83,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #53)
+## 📋 Next Steps (Suggested #54)
 
-**Candidate:** Autonomous Open Graph Image Generator
-- Auto-creates OG images for content pages (blog, services, AI Lab) using Canvas
-- Renders title, excerpt, and site logo; saves to `public/og-images/`
-- Updates page frontmatter with `ogImage` path
-- Files: `automation/og-image-generator.cjs`, `.github/workflows/og-image-generator.yml`, `docs/OG-IMAGE-GENERATOR.md`
+**Candidate:** Autonomous Structured Data (Schema.org) Validator
+- Crawl all pages and extract JSON-LD / Microdata / RDFa
+- Validate required fields per type (Article, Product, Service, FAQ, etc.)
+- Flag missing/incorrect fields; open GitHub issues on schema regressions
+- Files: `automation/schema-validator.cjs`, `.github/workflows/schema-validator.yml`, `docs/SCHEMA-VALIDATOR.md`
 
-Alternative: **Autonomous Structured Data (Schema.org) Validator** — checks JSON-LD markup across pages for correctness and completeness.
+Alternative: **Autonomous Privacy Policy Compliance Scanner** — checks for missing consent banners, cookie declarations, and data processing disclosures.
 
 ---
 
