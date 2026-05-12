@@ -288,13 +288,13 @@ export default function AutonomousCodeQualityPlayground() {
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link
-                  href="/ai-lab/autonomous-code-review"
+                  href="/zion-ai-code-reviewer"
                   className="rounded-full border border-sky-300/70 bg-sky-400/20 px-4 py-2 text-xs font-semibold text-sky-50 hover:bg-sky-400/30"
                 >
                   Open Code Review
                 </Link>
                 <Link
-                  href="/code-review"
+                  href="/ai-lab"
                   className="rounded-full border border-violet-300/70 bg-violet-400/20 px-4 py-2 text-xs font-semibold text-violet-50 hover:bg-violet-400/30"
                 >
                   Open Code Quality Review

@@ -34,7 +34,8 @@ export type AILabToolId =
   | 'autonomous-feature-gap-analyzer'
   | 'autonomous-landing-page-ab-simulator'
   | 'autonomous-code-quality-playground'
-  | 'autonomous-roi-calculator';
+  | 'autonomous-roi-calculator'
+  | 'autonomous-tech-stack-auditor';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -420,6 +421,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Business Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-roi-calculator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-tech-stack-auditor',
+    slug: 'autonomous-tech-stack-auditor',
+    title: 'Autonomous Tech Stack Auditor',
+    shortDescription:
+      'Scan your tech stack for outdated dependencies, security risks, and modernization opportunities. Get a prioritized upgrade roadmap.',
+    category: 'DevOps Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-tech-stack-auditor',
     badge: 'New',
   },
 ];
