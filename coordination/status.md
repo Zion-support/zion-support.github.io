@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **27 Active Systems**
+## 📊 Current Guardrail Count: **28 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
