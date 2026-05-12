@@ -45,6 +45,7 @@
 | #35 | Implement autonomous user journey & critical path monitor | KiloClaw | ✅ Done | 2026-05-12 | Daily Playwright E2E tests of critical flows (contact form, AI chat, pricing CTA, blog); alerts on failures or >5% regression; GitHub issues auto-created; Workflow: user-journey-monitor.yml; Docs: USER-JOURNEY-MONITOR.md |
 | #36 | Implement autonomous performance budget enforcement (CI gate) | KiloClaw | ✅ Done | 2026-05-12 | Enforces Core Web Vitals budgets at PR time; fails if LCP>4s/FID>300ms/CLS>0.25 or regression>10% vs baseline; runs Lighthouse on built site in CI; baseline stored in .hermes/memory/performance-budget/baseline.json; Workflow: performance-budget.yml; Docs: PERFORMANCE-BUDGET.md |
 | #37 | Autonomous dependency update & safe auto-merge bot | KiloClaw | ✅ Done | 2026-05-12 | Daily bot opens PRs for minor/patch updates; auto-merges when CI passes + no bundle regression (+5% threshold); isolated branches; Telegram summary; excludes majors by default. Script: automation/dependency-update-bot.cjs; Workflow: dependency-update-bot.yml; Docs: DEPENDENCY-UPDATE-BOT.md |
+| #38 | Autonomous test coverage & threshold enforcement | KiloClaw | ✅ Done | 2026-05-12 | PR gate; global ≥80%; regression ≤5%; baseline auto-updates on main |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 
