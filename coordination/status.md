@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **41 Active Systems**
+## 📊 Current Guardrail Count: **42 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -51,6 +51,7 @@
 | **39** | **Autonomous Open Graph Image Generator** | **Daily 01:00 UTC** | **✅ Just Deployed** |
 | **40** | **Autonomous Structured Data (Schema.org) Validator** | **Weekly Monday 09:00 UTC** | **✅ Just Deployed** |
 | **41** | **Autonomous Performance Budget Enforcer with CI Gate** | **On PR + daily 03:00 UTC** | **✅ Just Deployed** |
+| **42** | **Autonomous Content Freshness & Stale Content Archiver** | **Weekly Tuesday 10:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -85,15 +86,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #56)
+## 📋 Next Steps (Suggested #57)
 
-**Candidate:** Autonomous Content Freshness & Stale Content Archiver
-- Detect content not updated within configurable TTL (e.g., blog posts >2 years old)
-- Suggest archive/monetize/update; open GitHub issues for review
-- Automatically generate `archived` flag in frontmatter (opt-in via config)
-- Files: `automation/content-freshness.cjs`, `.github/workflows/content-freshness.yml`, `docs/CONTENT-FRESHNESS.md`
+**Candidate:** Autonomous Meta Tags Quality Scanner
+- Crawl all pages; validate `<title>` length (50–60 chars), `<meta name="description">` uniqueness, presence of canonical URLs, robots.txt directives
+- Flag duplicate titles/descriptions, missing canonicals, dangerous `noindex` on key pages
+- Open GitHub issues; auto-suggest fixes
+- Files: `automation/meta-tags-scanner.cjs`, `.github/workflows/meta-tags-scanner.yml`, `docs/META-TAGS-SCANNER.md`
 
-Alternative: **Autonomous Meta Tags Quality Scanner** — checks title length, description duplication, missing canonical URLs, and robots.txt directives.
+Alternative: **Autonomous Broken Links Cross-Checker (Advanced)** — validates internal links across pages, detects orphaned routes, suggests redirects.
 
 ---
 
