@@ -1,0 +1,64 @@
+name: Performance Budget Enforcement (CI)
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  performance-budget:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Start local server
+        # Serve the built static site (assuming export to 'out' directory)
+        run: |
+          npx serve out -p 3000 &
+          # Wait for server to be ready
+          for i in `seq 1 30`; do
+            if curl -s http://localhost:3000 | grep -q 'html'; then break; fi
+            sleep 2
+          done
+          echo "Server ready"
+        env:
+          # For Next.js export, the static files are in 'out'
+          NODE_ENV: production
+
+      - name: Run Performance Budget Enforcer
+        env:
+          IS_MAIN_BRANCH: false   # PR runs only compare; don't update baseline
+        run: |
+          node automation/performance-budget-enforcer.cjs \
+            --url http://localhost:3000 \
+            --baseline-file .hermes/memory/performance-budget/baseline.json \
+            --output-dir .hermes/memory/performance-budget
+
+      - name: Upload report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-budget-report
+          path: |
+            .hermes/memory/performance-budget/
+          retention-days: 30
