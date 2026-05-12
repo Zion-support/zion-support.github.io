@@ -30,7 +30,8 @@ export type AILabToolId =
   | 'ai-content-idea-generator'
   | 'ai-component-health-checker'
   | 'ai-workflow-status-dashboard'
-  | 'autonomous-competitive-intelligence';
+  | 'autonomous-competitive-intelligence'
+  | 'autonomous-feature-gap-analyzer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -372,6 +373,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Market Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-competitive-intelligence',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-feature-gap-analyzer',
+    slug: 'autonomous-feature-gap-analyzer',
+    title: 'Autonomous Feature Gap Analyzer',
+    shortDescription:
+      'Detect missing high-value features competitors lack. Prioritize by ROI, market demand, and implementation effort.',
+    category: 'Market Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-feature-gap-analyzer',
     badge: 'New',
   },
 ];
