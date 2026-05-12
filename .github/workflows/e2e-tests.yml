@@ -1,0 +1,62 @@
+name: End-to-End Integration Tests
+on:
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM UTC
+
+env:
+  NODE_ENV: test
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+    services:
+      # Use Docker service for staging environment
+      staging:
+        image: node:20-alpine
+        ports:
+          - 3000:3000
+        options: --health-cmd "curl -f http://localhost:3000/api/health || exit 1" --health-interval 30s --health-timeout 10s --health-retries 3
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Build application
+        run: npm run build
+      - name: Start staging server
+        run: npm start &
+        env:
+          PORT: 3000
+      - name: Wait for health check
+        run: |
+          until curl -f http://localhost:3000/api/health; do
+            echo "Waiting for health check..."
+            sleep 5
+          done
+      - name: Run E2E tests
+        run: npm run test:e2e
+      - name: Parse test results
+        id: test-results
+        run: |
+          TOTAL_TESTS=$(grep -c "it(" test-results.json || echo "0")
+          FAILED_TESTS=$(grep -c "failed" test-results.json || echo "0")
+          SUCCESS_RATE=$((($TOTAL_TESTS - $FAILED_TESTS) * 100 / $TOTAL_TESTS))
+          echo "total=$TOTAL_TESTS" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED_TESTS" >> $GITHUB_OUTPUT
+          echo "success_rate=$SUCCESS_RATE" >> $GITHUB_OUTPUT
+      - name: Block PR if tests fail
+        if: steps.test-results.outputs.success_rate < 95
+        run: |
+          echo "❌ E2E tests failed: ${steps.test-results.outputs.success_rate}% success rate (minimum 95%)"
+          exit 1
+      - name: Send Telegram alert on failure
+        if: steps.test-results.outputs.success_rate < 95
+        run: node automation/e2e-telegram-alert.js failure "${steps.test-results.outputs.success_rate}"
+      - name: Send Telegram alert on success
+        if: steps.test-results.outputs.success_rate >= 95
+        run: node automation/e2e-telegram-alert.js success "${steps.test-results.outputs.success_rate}"
