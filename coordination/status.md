@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **36 Active Systems**
+## 📊 Current Guardrail Count: **37 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -46,6 +46,7 @@
 | **34** | **Autonomous Content Summarizer & Excerpt Generator** | **Weekly Sunday 05:00 UTC** | **✅ Just Deployed** |
 | **35** | **Autonomous Dynamic Sitemap & Route Priority Optimizer** | **Weekly Sunday 06:00 UTC** | **✅ Just Deployed** |
 | **36** | **Autonomous SSL/TLS Certificate Expiration Monitor** | **Weekly Sunday 07:00 UTC** | **✅ Just Deployed** |
+| **37** | **Autonomous Changelog Generator** | **On push to main + manual** | **✅ Just Deployed** |
 
 ---
 
@@ -65,6 +66,7 @@
 - **#48** — Content Summarizer deployed
 - **#49** — Dynamic Sitemap Optimizer deployed
 - **#50** — SSL/TLS Certificate Expiration Monitor deployed
+- **#51** — Changelog Generator deployed
 
 ---
 
@@ -77,15 +79,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #51)
+## 📋 Next Steps (Suggested #52)
 
-**Candidate:** Autonomous Changelog Generator
-- Aggregate commit messages and deployment notes into a public `CHANGELOG.md`
-- Group by version/release date; categorize by guardrail type (security, perf, content, ops)
-- Auto-update on merge to `main` via CI
-- Files: `automation/changelog-generator.cjs`, `.github/workflows/changelog.yml`, `docs/CHANGELOG-GENERATOR.md`
+**Candidate:** Autonomous Accessibility Scorecard Dashboard
+- Aggregate Lighthouse accessibility scores across all routes daily
+- Track trends over time; highlight regressions >5 points
+- Generate weekly accessibility health report with route-level details
+- Files: `automation/accessibility-scorecard.cjs`, `.github/workflows/accessibility-scorecard.yml`, `docs/ACCESSIBILITY-SCORECARD.md`
 
-Alternative: **Autonomous Accessibility Scorecard Dashboard** — aggregates Lighthouse a11y scores across routes; tracks trends; surfaces regressions.
+Alternative: **Autonomous Open Graph Image Generator** — auto-creates OG images for content pages using Canvas; updates frontmatter.
 
 ---
 

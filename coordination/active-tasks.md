@@ -58,6 +58,7 @@
 | #48 | Autonomous content summarizer & excerpt generator | KiloClaw | ✅ Done | 2026-05-12 | Weekly NLP-based excerpt generation; suggests keywords/tags; artifact upload; Telegram digest |
 | #49 | Autonomous dynamic sitemap & route priority optimizer | KiloClaw | ✅ Done | 2026-05-12 | Weekly sitemap.xml regeneration with route priority + changefreq; pings search engines; auto-commit |
 | #50 | Autonomous SSL/TLS certificate expiration monitor | KiloClaw | ✅ Done | 2026-05-12 | Weekly certificate expiry checks (openssl); alerts at 30/7/1 days; GitHub issues + Telegram |
+| #51 | Autonomous changelog generator | KiloClaw | ✅ Done | 2026-05-12 | Aggregates conventional commits; updates CHANGELOG.md on push to main; Telegram confirm |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 
