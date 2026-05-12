@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **24 Active Systems**
+## 📊 Current Guardrail Count: **26 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -34,6 +34,8 @@
 | 22 | Performance Budget Enforcement (CI Gate) | On PR to main | ✅ Operational |
 | 23 | Autonomous Dependency Update & Safe Auto-Merge Bot | Daily 06:00 UTC | ✅ Operational |
 | **24** | **Autonomous Test Coverage & Threshold Enforcement** | **On PR to main** | **✅ Just Deployed** |
+| **25** | **Autonomous API Schema Validation & Contract Guard** | **On PR to main + Daily** | **✅ Just Deployed** |
+| **26** | **Autonomous OpenAPI Spec Consistency & Drift Detector** | **On PR to main + Daily** | **✅ Just Deployed** |
 
 ---
 
@@ -42,6 +44,7 @@
 - **#37** — Dependency Update Bot deployed (`cd34b583`)
 - **#38** — Test Coverage Enforcer deployed (`c999834f`)
 - **#39** — API Schema Validation deployed (current commit)
+- **#40** — OpenAPI Drift Detector deployed
 
 ---
 
@@ -54,15 +57,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #40)
+## 📋 Next Steps (Suggested #41)
 
-**Candidate:** Autonomous OpenAPI Spec Consistency & Drift Detector
-- Compare implemented API routes against an OpenAPI spec or inferred contract
-- Detect breaking changes (added required params, changed response shape)
-- PR comment + GitHub issue on drift; daily digest summary
-- Files: `automation/openapi-drift-detector.cjs`, `.github/workflows/openapi-drift.yml`, `docs/OPENAPI-DRIFT-DETECTOR.md`
+**Candidate:** Autonomous TypeScript Type Coverage & Dead Code Finder
+- Enforce strict type usage (no implicit any)
+- Flag `any` leaks and unused exports/functions
+- PR comments on type coverage drop; weekly digest
+- Files: `automation/type-coverage-enforcer.cjs`, `.github/workflows/type-coverage.yml`, `docs/TYPE-COVERAGE-ENFORCER.md`
 
-Alternative: **Autonomous TypeScript Type Coverage & Dead Code Finder** — enforces strict type usage, flags `any` leaks, identifies unused code across repo.
+Alternative: **Autonomous OpenAPI Spec Consistency & Drift Detector** — compares routes against OpenAPI spec; detect breaking changes; PR comment + GitHub issue; daily digest.
 
 ---
 
@@ -75,5 +78,5 @@ None. All systems healthy; no action required by Kleber at this time.
 ## 💬 Coordination Notes
 
 - Standing owner permission (2026-03-21+) remains in effect: autonomous implementation/deployment loops continue without confirmation pauses unless hard safety block
-- Autonomous improvement wave ongoing: #37, #38, #39 shipped in rapid succession
+- Autonomous improvement wave ongoing: #37, #38, #39, #40 shipped in rapid succession
 - All guardrails designed for zero-cost operation using GitHub Actions + self-hosted scripts
