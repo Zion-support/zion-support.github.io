@@ -42,6 +42,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 11. Autonomous storybook snapshot regenerator now active – schema change detection, Puppeteer screenshot, pixelmatch visual diff (>0.5% change creates GitHub issue). See automation/storybook-snapshot-regenerator.cjs and workflow storybook-snapshot.yml.
 12. Uptime monitor verified and documented – scripts/uptime-monitor.sh operational; systemd timer recommended (crontab unavailable on host). See docs/UPTIME-MONITOR.md.
 13. Autonomous daily automation digest now active – aggregates all guardrail health (AI Lab, experiences, build size, regressions, release risk) and sends Telegram summary daily at 08:00 UTC. See automation/daily-automation-digest.cjs and workflow daily-digest.yml.
+14. Field performance & real user web vitals monitor (#34) implemented – client-side RUM collector, API endpoint, daily aggregator at 11:00 UTC; detects LCP/FID/CLS/FCP/TTFB regressions; Telegram summary; GitHub issues on critical degradation. See docs/FIELD-PERFORMANCE-MONITOR.md.
 14. Lighthouse Performance Monitor now active – tracks Core Web Vitals, detects >10% score regressions, alerts via Telegram + GitHub issues. Runs daily at 10:00 UTC + PR validation. See automation/lighthouse-monitor.cjs and workflow lighthouse-monitor.yml.
 15. Broken Link & Sitemap Health Checker now active – crawls sitemap, validates all internal links, detects 404s/redirects/orphans, sends Telegram summary daily 06:00 UTC, creates GitHub issue when ≥3 new broken links. See automation/link-health-checker.cjs and docs/BROKEN-LINK-CHECKER.md.
 15. Broken Link & Sitemap Health Checker now active – crawls sitemap, validates all internal links, detects 404s/redirects/orphans, sends Telegram summary daily at 06:00 UTC, creates GitHub issue when ≥3 new broken links. See automation/link-health-checker.cjs and workflow link-health-checker.yml.
@@ -78,6 +79,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 🟢 Security Headers & HTTPS Enforcement Auditor deployed (daily 18:00 UTC, header validation, mixed content scan, cookie flags)
 🟢 GDPR/Privacy Compliance Scanner deployed (weekly Sunday 19:00 UTC + PRs, consent banner, tracking script control, privacy link, form opt-in, data disclosure, compliance score)
 🟢 Log Rotation & Storage Cost Optimizer deployed (daily 02:00 UTC, file system cleanup, GitHub artifact deletion, dry-run safe)
+🟢 Field Performance & Real User Web Vitals Monitor deployed (daily 11:00 UTC, client-side RUM, p75 regression detection, Telegram summary, GitHub issues on critical)
 
 ### Operating Mandate
 - Standing owner permission (2026-03-20 rr-accel-1): continue autonomous implementation/deployment loops by default and persist this authority in continuity files for future sessions.
@@ -206,9 +208,8 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 🟢 **Hermes Agent:** Online — Poller active (PID 13328), last cycle: within 30s
 🟢 **Coordination Files:** inbox.md / outbox.md / status.md / active-tasks.md all accessible
 🟢 **Credentials:** All configured in .env (Github, Gmail, Telegram)
-🟢 **Task Board:** Tasks #1–16 Done; Hermes working on #17–18 (workflow monitoring)
-🟢 **Triad Chat:** Running on http://localhost:8080/triad-chat.html
-🟢 **GitHub:** 3 workflows pushed (image-compress, accessibility-audit, bundle-size-monitor)
+🟢 **Task Board:** #1–34 tracked; #1–33 Done; #34 in progress (field performance)
+🟢 **GitHub:** All 20 workflows live (including field-performance-aggregator)
 
 ### Last 5-min Check: 2026-05-11 23:50 UTC
 - No new Hermes messages in inbox.md (awaiting response to outbox LIVE message)
