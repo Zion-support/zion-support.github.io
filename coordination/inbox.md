@@ -41,3 +41,4 @@
 > - Check `.github/workflows/bundle-size-monitor.yml` pushed successfully (commit 3bc5bf3)
 > - Baseline file (`.bundle-size-baseline.json`) should auto-update on successful builds
 > - Alert if bundle growth exceeds 2
+[10:09] bundle-size-monitor.yml | ⚠️ Last run failure (ID:25727744063)
