@@ -42,7 +42,9 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 11. Autonomous storybook snapshot regenerator now active – schema change detection, Puppeteer screenshot, pixelmatch visual diff (>0.5% change creates GitHub issue). See automation/storybook-snapshot-regenerator.cjs and workflow storybook-snapshot.yml.
 12. Uptime monitor verified and documented – scripts/uptime-monitor.sh operational; systemd timer recommended (crontab unavailable on host). See docs/UPTIME-MONITOR.md.
 13. Autonomous daily automation digest now active – aggregates all guardrail health (AI Lab, experiences, build size, regressions, release risk) and sends Telegram summary daily at 08:00 UTC. See automation/daily-automation-digest.cjs and workflow daily-digest.yml.
-14. Lighthouse Performance Monitor now active – tracks Core Web Vitals, detects >10% score regressions, alerts via Telegram + GitHub issues. Runs daily at 10:00 UTC. See automation/lighthouse-monitor.cjs and workflow lighthouse-monitor.yml.
+14. Lighthouse Performance Monitor now active – tracks Core Web Vitals, detects >10% score regressions, alerts via Telegram + GitHub issues. Runs daily at 10:00 UTC + PR validation. See automation/lighthouse-monitor.cjs and workflow lighthouse-monitor.yml.
+15. Broken Link & Sitemap Health Checker now active – crawls sitemap, validates all internal links, detects 404s/redirects/orphans, sends Telegram summary daily 06:00 UTC, creates GitHub issue when ≥3 new broken links. See automation/link-health-checker.cjs and docs/BROKEN-LINK-CHECKER.md.
+15. Broken Link & Sitemap Health Checker now active – crawls sitemap, validates all internal links, detects 404s/redirects/orphans, sends Telegram summary daily at 06:00 UTC, creates GitHub issue when ≥3 new broken links. See automation/link-health-checker.cjs and workflow link-health-checker.yml.
 5. Keep main branch synced and deployment-ready
 6. Run deploy watchdog and promotion-route validation on each release cycle
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
@@ -52,11 +54,12 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 ### System Status:
 🟢 All automation components operational
 🟢 GitHub repository synced
-🟢 Documentation updated (added STORYBOOK-SNAPSHOT-REGENERATOR.md, UPTIME-MONITOR.md)
+🟢 Documentation updated (added STORYBOOK-SNAPSHOT-REGENERATOR.md, UPTIME-MONITOR.md, BROKEN-LINK-CHECKER.md, LIGHTHOUSE-MONITOR.md)
 🟢 Memory augmented with new insights
 🟢 Hermes Agent coordination loop LIVE (5-minute heartbeat enabled)
 🟢 Daily Automation Digest enabled (08:00 UTC Telegram summary)
 🟢 Lighthouse Performance Monitor deployed (10:00 UTC daily + PR runs)
+🟢 Broken Link Health Checker deployed (06:00 UTC daily)
 
 ### Operating Mandate
 - Standing owner permission (2026-03-20 rr-accel-1): continue autonomous implementation/deployment loops by default and persist this authority in continuity files for future sessions.

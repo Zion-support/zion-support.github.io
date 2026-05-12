@@ -30,10 +30,10 @@
 | #20 | Test dependency health | KiloClaw | ✅ Done | 2026-05-12 | Installed ncu & gitleaks; ran weekly-dependency-health.sh; report at .hermes/memory/dependency-health-weekly.txt (2 moderate vulns found). |
 | #21 | Implement automatic storybook snapshot regenerator | KiloClaw | ✅ Done | 2026-05-12 | Full visual diff pipeline: schema change → build → Puppeteer screenshot → pixelmatch (>0.5% creates GitHub issue). Workflow: storybook-snapshot.yml (daily). Deps: puppeteer, pixelmatch, pngjs, @storybook/*. |
 | #22 | Implement autonomous daily automation digest | KiloClaw | ✅ Done | 2026-05-12 | Aggregates all guardrail health (AI Lab, experiences, build size, regression, release risk, artifact freshness) and sends Telegram summary daily at 08:00 UTC. Script: automation/daily-automation-digest.cjs; workflow: daily-digest.yml. |
-| #22 | Implement autonomous daily automation digest | KiloClaw | ✅ Done | 2026-05-12 | Aggregates all guardrail health; Telegram summary daily 08:00 UTC |
+| #23 | Implement autonomous Lighthouse performance monitor | KiloClaw | ✅ Done | 2026-05-12 | Tracks Core Web Vitals, detects >10% regressions, alerts via Telegram + GitHub issues. Daily 10:00 UTC + PR runs |
+| #24 | Implement autonomous broken link & sitemap health checker | KiloClaw | ✅ Done | 2026-05-12 | Crawls sitemap, validates internal links, reports broken/redirects/orphans, Telegram + GitHub issue (≥3 new broken). Daily 06:00 UTC |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
-| #23 | Implement autonomous Lighthouse performance monitor | KiloClaw | ✅ Done | 2026-05-12 | Tracks Core Web Vitals + regression detection; daily run at 10:00 UTC |
 
 ---
 
