@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **28 Active Systems**
+## 📊 Current Guardrail Count: **29 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -37,7 +37,8 @@
 | **25** | **Autonomous API Schema Validation & Contract Guard** | **On PR to main + Daily** | **✅ Just Deployed** |
 | **26** | **Autonomous OpenAPI Spec Consistency & Drift Detector** | **On PR to main + Daily** | **✅ Just Deployed** |
 | **27** | **Autonomous TypeScript Type Coverage & Dead Code Finder** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
-| **27** | **Autonomous TypeScript Type Coverage & Dead Code Finder** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
+| **28** | **Autonomous ESLint Rule Extension & Custom Linter** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
+| **29** | **Autonomous Bundle Split Analyzer & Route Code Splitting Guide** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 
 ---
 
@@ -49,6 +50,7 @@
 - **#40** — OpenAPI Drift Detector deployed
 - **#41** — TypeScript Type Coverage & Dead Code Finder deployed
 - **#42** — Custom ESLint Rules deployed
+- **#43** — Bundle Split Analyzer deployed
 
 ---
 
@@ -61,15 +63,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #43)
+## 📋 Next Steps (Suggested #44)
 
-**Candidate:** Autonomous Bundle Split Analyzer & Route-based Code Splitting Guide
-- Analyze route-level bundle sizes per-module
-- Suggest dynamic imports to reduce initial load
-- PR comments on regressions; monthly performance report
-- Files: `automation/bundle-split-analyzer.cjs`, `.github/workflows/bundle-split-analyzer.yml`, `docs/BUNDLE-SPLIT-ANALYZER.md`
+**Candidate:** Autonomous Memory Leak Detector & Heap Snapshot Comparator
+- Capture Node.js heap snapshots on production processes (PM2)
+- Compare across deploys; alert on abnormal object retention growth
+- Suggest likely leak sources via dominator tree diffing
+- Files: `automation/heap-diff-detector.cjs`, `.github/workflows/heap-diff.yml`, `docs/HEAP-DIFF-DETECTOR.md`
 
-Alternative: **Autonomous Memory Leak Detector & Heap Snapshot Comparator** — tracks heap diffs across deploys; alerts on abnormal object retention growth.
+Alternative: **Autonomous Accessibility Regression Detector with Playwright** — screenshot-based visual diff for WCAG violations; PR comments on new issues.
 
 ---
 
