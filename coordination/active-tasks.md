@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Task Board (Updated 2026-05-12 10:15 UTC)
+## 📋 Task Board (Updated 2026-05-12 10:20 UTC)
 
 | ID | Task | Owner | Status | Created | Notes |
 |----|------|-------|--------|---------|-------|
@@ -26,11 +26,14 @@
 | #16 | Merge accessibility audit to main (git push) | Kleber | ✅ Done | 2026-05-11 | Pushed commit a26e686; workflows live on GitHub |
 | #17 | Implement autonomous build size optimizer (full spec) | KiloClaw | ✅ Done | 2026-05-12 | History trend + Telegram alerts + rollback-ready; workflow: build-size-guardian.yml |
 | ⚠️ Needs Attention | Monitor build size optimizer effectiveness | Hermes | 🔄 In Progress | 2026-05-12 | Watch consecutive failures and report accuracy |
-| #19 | Audit uptime monitor | KiloClaw | ✅ Done | 2026-05-12 | Verified scripts/uptime-monitor.sh exists; made executable; crontab unavailable (systemd-based host), wrapper created (scripts/run-uptime-monitor.sh). Can add systemd timer if needed. |
-| #20 | Test dependency health | KiloClaw | ✅ Done | 2026-05-12 | Installed ncu & gitleaks; ran weekly-dependency-health.sh; report generated at .hermes/memory/dependency-health-weekly.txt (2 moderate vulns found) |
-| #21 | Implement automatic storybook snapshot regenerator | KiloClaw | ✅ Done | 2026-05-12 | Full visual diff: schema change detection → Storybook build → Puppeteer screenshot → pixelmatch (>0.5% change creates GitHub issue). Workflow: storybook-snapshot.yml (daily). Dependencies: puppeteer, pixelmatch, pngjs. |
+| #19 | Audit uptime monitor | KiloClaw | ✅ Done | 2026-05-12 | Verified scripts/uptime-monitor.sh exists; made executable; wrapper run-uptime-monitor.sh created; systemd timer recommended (cron unavailable). |
+| #20 | Test dependency health | KiloClaw | ✅ Done | 2026-05-12 | Installed ncu & gitleaks; ran weekly-dependency-health.sh; report at .hermes/memory/dependency-health-weekly.txt (2 moderate vulns found). |
+| #21 | Implement automatic storybook snapshot regenerator | KiloClaw | ✅ Done | 2026-05-12 | Full visual diff pipeline: schema change → build → Puppeteer screenshot → pixelmatch (>0.5% creates GitHub issue). Workflow: storybook-snapshot.yml (daily). Deps: puppeteer, pixelmatch, pngjs, @storybook/*. |
+| #22 | Implement autonomous daily automation digest | KiloClaw | ✅ Done | 2026-05-12 | Aggregates all guardrail health (AI Lab, experiences, build size, regression, release risk, artifact freshness) and sends Telegram summary daily at 08:00 UTC. Script: automation/daily-automation-digest.cjs; workflow: daily-digest.yml. |
+| #22 | Implement autonomous daily automation digest | KiloClaw | ✅ Done | 2026-05-12 | Aggregates all guardrail health; Telegram summary daily 08:00 UTC |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
-| 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking; enforce threshold |
+| 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
+| #23 | Implement autonomous Lighthouse performance monitor | KiloClaw | ✅ Done | 2026-05-12 | Tracks Core Web Vitals + regression detection; daily run at 10:00 UTC |
 
 ---
 

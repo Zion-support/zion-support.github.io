@@ -43,3 +43,4 @@
 > - Alert if bundle growth exceeds 2
 [10:09] bundle-size-monitor.yml | ⚠️ Last run failure (ID:25727744063)
 [10:16] bundle-size-monitor.yml | ⏳ Last run still in_progress
+[10:19] bundle-size-monitor.yml | ⏳ Last run still queued
