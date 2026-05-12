@@ -81,7 +81,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Rollout Design',
     status: 'live',
     href: '/ai-lab/rollout-blueprint',
-    badge: 'New',
+    badge: 'Live',
   },
   {
     id: 'ai-roi-ops-scorecard',
@@ -90,9 +90,9 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     shortDescription:
       'Estimate impact across revenue, operations, and experience, then see where AI will likely move the needle first.',
     category: 'Impact Modeling',
-    status: 'experimental',
+    status: 'live',
     href: '/ai-lab/roi-ops-scorecard',
-    badge: 'Beta',
+    badge: 'Live',
   },
   {
     id: 'deployment-readiness-console',
