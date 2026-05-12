@@ -35,7 +35,8 @@ export type AILabToolId =
   | 'autonomous-landing-page-ab-simulator'
   | 'autonomous-code-quality-playground'
   | 'autonomous-roi-calculator'
-  | 'autonomous-tech-stack-auditor';
+  | 'autonomous-tech-stack-auditor'
+  | 'autonomous-project-estimator';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -432,6 +433,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'DevOps Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-tech-stack-auditor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-project-estimator',
+    slug: 'autonomous-project-estimator',
+    title: 'Autonomous Project Estimator',
+    shortDescription:
+      'Instant project proposal generator: phases, costs, risks, timelines, and team allocation for any project scope. Compare MVP/Standard/Enterprise scenarios.',
+    category: 'Business Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-project-estimator',
     badge: 'New',
   },
 ];

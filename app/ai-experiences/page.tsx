@@ -46,7 +46,7 @@ const aiExperiences: AIExperience[] = [
     description: 'AI-powered conversational assistant that learns from your interactions.',
     icon: <MessageCircle className="w-8 h-8" />,
     category: 'Interaction',
-    href: '/ai-chatbot-builder',
+    href: '/zion-ai-chatbot-builder',
     featured: true
   },
   {
@@ -334,7 +334,7 @@ export default function AIExperiencesPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="/ai-chatbot-builder"
+                  href="/zion-ai-chatbot-builder"
                   className="px-8 py-3 bg-white text-violet-600 rounded-full font-semibold hover:bg-slate-100 transition-colors"
                 >
                   Try AI Chat
