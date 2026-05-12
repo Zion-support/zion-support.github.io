@@ -36,6 +36,7 @@
 | **24** | **Autonomous Test Coverage & Threshold Enforcement** | **On PR to main** | **✅ Just Deployed** |
 | **25** | **Autonomous API Schema Validation & Contract Guard** | **On PR to main + Daily** | **✅ Just Deployed** |
 | **26** | **Autonomous OpenAPI Spec Consistency & Drift Detector** | **On PR to main + Daily** | **✅ Just Deployed** |
+| **27** | **Autonomous TypeScript Type Coverage & Dead Code Finder** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 
 ---
 
@@ -43,8 +44,9 @@
 
 - **#37** — Dependency Update Bot deployed (`cd34b583`)
 - **#38** — Test Coverage Enforcer deployed (`c999834f`)
-- **#39** — API Schema Validation deployed (current commit)
+- **#39** — API Schema Validation deployed
 - **#40** — OpenAPI Drift Detector deployed
+- **#41** — TypeScript Type Coverage & Dead Code Finder deployed
 
 ---
 
@@ -57,15 +59,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #41)
+## 📋 Next Steps (Suggested #42)
 
-**Candidate:** Autonomous TypeScript Type Coverage & Dead Code Finder
-- Enforce strict type usage (no implicit any)
-- Flag `any` leaks and unused exports/functions
-- PR comments on type coverage drop; weekly digest
-- Files: `automation/type-coverage-enforcer.cjs`, `.github/workflows/type-coverage.yml`, `docs/TYPE-COVERAGE-ENFORCER.md`
+**Candidate:** Autonomous ESLint Rule Extension & Custom Linter
+- Enforce project-specific code style rules
+- Detect common bug patterns (null checks, forgotten awaits)
+- Auto-fix via `--fix` on PRs
+- Files: `automation/custom-eslint.cjs`, `.github/workflows/custom-eslint.yml`, `docs/CUSTOM-ESLINT.md`
 
-Alternative: **Autonomous OpenAPI Spec Consistency & Drift Detector** — compares routes against OpenAPI spec; detect breaking changes; PR comment + GitHub issue; daily digest.
+Alternative: **Autonomous Bundle Split Analyzer & Route-based Code Splitting Guide** — analyzes route-level bundle sizes; suggests dynamic imports to reduce initial load.
 
 ---
 
