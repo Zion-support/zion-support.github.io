@@ -32,7 +32,8 @@ export type AILabToolId =
   | 'ai-workflow-status-dashboard'
   | 'autonomous-competitive-intelligence'
   | 'autonomous-feature-gap-analyzer'
-  | 'autonomous-landing-page-ab-simulator';
+  | 'autonomous-landing-page-ab-simulator'
+  | 'autonomous-code-quality-playground';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -396,6 +397,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Conversion Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-landing-page-ab-simulator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-code-quality-playground',
+    slug: 'autonomous-code-quality-playground',
+    title: 'Autonomous Code Quality Playground',
+    shortDescription:
+      'Paste any code snippet and get instant analysis. Security, performance, style violations, and refactoring suggestions with A-F grading.',
+    category: 'Code Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-code-quality-playground',
     badge: 'New',
   },
 ];
