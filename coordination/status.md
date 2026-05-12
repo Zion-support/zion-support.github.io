@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **39 Active Systems**
+## 📊 Current Guardrail Count: **40 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -49,6 +49,7 @@
 | **37** | **Autonomous Changelog Generator** | **On push to main + manual** | **✅ Just Deployed** |
 | **38** | **Autonomous Accessibility Scorecard Dashboard** | **Daily 08:30 UTC** | **✅ Just Deployed** |
 | **39** | **Autonomous Open Graph Image Generator** | **Daily 01:00 UTC** | **✅ Just Deployed** |
+| **40** | **Autonomous Structured Data (Schema.org) Validator** | **Weekly Monday 09:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -83,13 +84,13 @@
 
 ---
 
-## 📋 Next Steps (Suggested #54)
+## 📋 Next Steps (Suggested #55)
 
-**Candidate:** Autonomous Structured Data (Schema.org) Validator
-- Crawl all pages and extract JSON-LD / Microdata / RDFa
-- Validate required fields per type (Article, Product, Service, FAQ, etc.)
-- Flag missing/incorrect fields; open GitHub issues on schema regressions
-- Files: `automation/schema-validator.cjs`, `.github/workflows/schema-validator.yml`, `docs/SCHEMA-VALIDATOR.md`
+**Candidate:** Autonomous Performance Budget Enforcer with CI Gate
+- Enforce Core Web Vitals + CLS/INP via Lighthouse CI on every PR
+- Fail CI if LCP >2.5s, CLS <0.1, INP <200ms, or TBT <200ms
+- Auto-raise PR comments with metric breakdown; weekly trend digest
+- Files: `automation/performance-budget-enforcer.cjs`, `.github/workflows/performance-budget.yml`, `docs/PERFORMANCE-BUDGET.md`
 
 Alternative: **Autonomous Privacy Policy Compliance Scanner** — checks for missing consent banners, cookie declarations, and data processing disclosures.
 

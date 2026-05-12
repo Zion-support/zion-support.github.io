@@ -61,6 +61,7 @@
 | #51 | Autonomous changelog generator | KiloClaw | ✅ Done | 2026-05-12 | Aggregates conventional commits; updates CHANGELOG.md on push to main; Telegram confirm |
 | #52 | Autonomous accessibility scorecard dashboard | KiloClaw | ✅ Done | 2026-05-12 | Daily aggregates Lighthouse a11y scores; tracks trends; alerts on >10pt drop or new failures; weekly digest |
 | #53 | Autonomous open graph image generator | KiloClaw | ✅ Done | 2026-05-12 | Daily 1200×630 OG image generation via Playwright; auto-commit to public/og-images/; Telegram summary |
+| #54 | Autonomous structured data (Schema.org) validator | KiloClaw | ✅ Done | 2026-05-12 | Weekly crawl validates JSON-LD/Microdata required fields; opens GitHub issues on regressions; Telegram health digest |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 
