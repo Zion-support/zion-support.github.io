@@ -43,6 +43,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 12. Uptime monitor verified and documented – scripts/uptime-monitor.sh operational; systemd timer recommended (crontab unavailable on host). See docs/UPTIME-MONITOR.md.
 13. Autonomous daily automation digest now active – aggregates all guardrail health (AI Lab, experiences, build size, regressions, release risk) and sends Telegram summary daily at 08:00 UTC. See automation/daily-automation-digest.cjs and workflow daily-digest.yml.
 14. Field performance & real user web vitals monitor (#34) implemented – client-side RUM collector, API endpoint, daily aggregator at 11:00 UTC; detects LCP/FID/CLS/FCP/TTFB regressions; Telegram summary; GitHub issues on critical degradation. See docs/FIELD-PERFORMANCE-MONITOR.md.
+15. User Journey & Critical Path Monitor (#35) deployed – daily Playwright E2E tests of contact form submission, AI chat interaction, pricing CTA, blog navigation; alerts on failures or >5% success-rate regression; GitHub issues auto-created. See docs/USER-JOURNEY-MONITOR.md.
 14. Lighthouse Performance Monitor now active – tracks Core Web Vitals, detects >10% score regressions, alerts via Telegram + GitHub issues. Runs daily at 10:00 UTC + PR validation. See automation/lighthouse-monitor.cjs and workflow lighthouse-monitor.yml.
 15. Broken Link & Sitemap Health Checker now active – crawls sitemap, validates all internal links, detects 404s/redirects/orphans, sends Telegram summary daily 06:00 UTC, creates GitHub issue when ≥3 new broken links. See automation/link-health-checker.cjs and docs/BROKEN-LINK-CHECKER.md.
 15. Broken Link & Sitemap Health Checker now active – crawls sitemap, validates all internal links, detects 404s/redirects/orphans, sends Telegram summary daily at 06:00 UTC, creates GitHub issue when ≥3 new broken links. See automation/link-health-checker.cjs and workflow link-health-checker.yml.
@@ -80,6 +81,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 🟢 GDPR/Privacy Compliance Scanner deployed (weekly Sunday 19:00 UTC + PRs, consent banner, tracking script control, privacy link, form opt-in, data disclosure, compliance score)
 🟢 Log Rotation & Storage Cost Optimizer deployed (daily 02:00 UTC, file system cleanup, GitHub artifact deletion, dry-run safe)
 🟢 Field Performance & Real User Web Vitals Monitor deployed (daily 11:00 UTC, client-side RUM, p75 regression detection, Telegram summary, GitHub issues on critical)
+🟢 User Journey & Critical Path Monitor deployed (daily 09:30 UTC, Playwright E2E tests of contact form, AI chat, pricing CTA, blog; alerts on failures or >5% regression)
 
 ### Operating Mandate
 - Standing owner permission (2026-03-20 rr-accel-1): continue autonomous implementation/deployment loops by default and persist this authority in continuity files for future sessions.
@@ -204,12 +206,19 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 - Standing permission reaffirmed (2026-03-22 observability Telegram wave): add Telegram fanout to fingerprint-delta + EMA threshold digests and continue autonomous implementation/deployment/new-idea loops without confirmation; keep mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 - Standing permission reaffirmed (2026-03-21 app-intelligence wave): owner requested autonomous implementation/deployment plus recurring next-idea loops for more intelligence, autonomy, and usefulness; keep this mandate synchronized across SOUL/HEARTBEAT/MEMORY/daily memory.
 
+### Recent Activity
+- [2026-05-12] Deployed Field Performance Monitor (#34) — real user web vitals collection and daily aggregation enabled
+- [2026-05-12] Deployed User Journey & Critical Path Monitor (#35) — daily E2E Playwright tests of contact form, AI chat, pricing CTA, blog; alerts on failures or >5% regression
+- [2026-05-12] Verified Log Rotation Manager operates safely; dry-run results reported in Telegram
+- [2026-05-12] Updated active tasks, docs, and system status accordingly
+- [2026-05-12] Active guardrail count: 21 — covering Build, Deploy, Runtime, Frontend, Backend, Content, Compliance, Assets, SEO, Code Quality, Security, Privacy, Operations, Performance (field), and now User Journeys (E2E)
+
 ### Coordination Status (5-min heartbeat):
 🟢 **Hermes Agent:** Online — Poller active (PID 13328), last cycle: within 30s
 🟢 **Coordination Files:** inbox.md / outbox.md / status.md / active-tasks.md all accessible
 🟢 **Credentials:** All configured in .env (Github, Gmail, Telegram)
-🟢 **Task Board:** #1–34 tracked; #1–33 Done; #34 in progress (field performance)
-🟢 **GitHub:** All 20 workflows live (including field-performance-aggregator)
+🟢 **Task Board:** #1–35 tracked; #1–34 Done; #35 now active (user journey)
+🟢 **GitHub:** All 21 workflows live (including user-journey-monitor)
 
 ### Last 5-min Check: 2026-05-11 23:50 UTC
 - No new Hermes messages in inbox.md (awaiting response to outbox LIVE message)
