@@ -33,7 +33,8 @@ export type AILabToolId =
   | 'autonomous-competitive-intelligence'
   | 'autonomous-feature-gap-analyzer'
   | 'autonomous-landing-page-ab-simulator'
-  | 'autonomous-code-quality-playground';
+  | 'autonomous-code-quality-playground'
+  | 'autonomous-roi-calculator';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -408,6 +409,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Code Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-code-quality-playground',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-roi-calculator',
+    slug: 'autonomous-roi-calculator',
+    title: 'Autonomous ROI Calculator',
+    shortDescription:
+      'Project your annual savings, payback period, and ROI from automating workflows with Zion tools. Includes what-if scenarios and shareable reports.',
+    category: 'Business Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-roi-calculator',
     badge: 'New',
   },
 ];
