@@ -42,3 +42,4 @@
 > - Baseline file (`.bundle-size-baseline.json`) should auto-update on successful builds
 > - Alert if bundle growth exceeds 2
 [10:09] bundle-size-monitor.yml | ⚠️ Last run failure (ID:25727744063)
+[10:16] bundle-size-monitor.yml | ⏳ Last run still in_progress

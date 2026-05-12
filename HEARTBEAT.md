@@ -39,7 +39,8 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
 8. For risky merges/pushes: `npm run openclaw:merge:freeze:run -- <cmd>`; for lock-heavy deploys: `npm run deploy:local:supervised`; before report-only commits: `npm run openclaw:report:budget`
 9. Keep `ai-github-workflow-integrity-audit-daily.yml` and `ai-lead-form-routing-guard-daily.yml` green; if either drifts from healthy, prioritize fix-agent loops before feature expansion.
-11. Autonomous storybook snapshot regenerator now active – schema change detection, Puppeteer screenshot, pixelmatch visual diff, GitHub issue on >0.5% change. See automation/storybook-snapshot-regenerator.cjs and workflow storybook-snapshot.yml.
+11. Autonomous storybook snapshot regenerator now active – schema change detection, Puppeteer screenshot, pixelmatch visual diff (>0.5% change creates GitHub issue). See automation/storybook-snapshot-regenerator.cjs and workflow storybook-snapshot.yml.
+12. Uptime monitor verified and documented – scripts/uptime-monitor.sh operational; systemd timer recommended (crontab unavailable on host). See docs/UPTIME-MONITOR.md.
 5. Keep main branch synced and deployment-ready
 6. Run deploy watchdog and promotion-route validation on each release cycle
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
