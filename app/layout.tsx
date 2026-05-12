@@ -16,6 +16,7 @@ import ChatWidget from './components/ChatWidget';
 import CookieConsentBanner from './components/CookieConsentBanner';
 import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidget';
 import AIExperienceLoader from './components/AIExperienceLoader';
+import ErrorTracker from './components/ErrorTracker';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
@@ -93,6 +94,7 @@ export default function RootLayout({
           <ServiceWorkerRegistration />
           <StickyDonateBanner />
           <CookieConsentBanner />
+          <ErrorTracker />
         </div>
       </body>
     </html>
