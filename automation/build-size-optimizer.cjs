@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * Build Size Optimizer — Phase 1 (Analysis)
  *

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // scripts/track-bundle-history.js
 // Appends current bundle size to .hermes/memory/bundle-history.json
 // Keeps last 10 entries for trend analysis
