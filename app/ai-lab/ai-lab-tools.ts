@@ -31,7 +31,8 @@ export type AILabToolId =
   | 'ai-component-health-checker'
   | 'ai-workflow-status-dashboard'
   | 'autonomous-competitive-intelligence'
-  | 'autonomous-feature-gap-analyzer';
+  | 'autonomous-feature-gap-analyzer'
+  | 'autonomous-landing-page-ab-simulator';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -384,6 +385,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Market Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-feature-gap-analyzer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-landing-page-ab-simulator',
+    slug: 'autonomous-landing-page-ab-simulator',
+    title: 'Autonomous Landing Page A/B Simulator',
+    shortDescription:
+      'Generate 3 conversion-optimized hero variants scored by proven frameworks (AIDA, PAS, Value Prop Canvas). Zero cost.',
+    category: 'Conversion Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-landing-page-ab-simulator',
     badge: 'New',
   },
 ];
