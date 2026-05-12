@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **31 Active Systems**
+## 📊 Current Guardrail Count: **32 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -41,6 +41,7 @@
 | **29** | **Autonomous Bundle Split Analyzer & Route Code Splitting Guide** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 | **30** | **Autonomous Memory Leak Detector & Heap Snapshot Comparator** | **Hourly** | **✅ Just Deployed** |
 | **31** | **Autonomous CSS/UI Visual Regression Detector with Playwright** | **Daily 02:30 UTC** | **✅ Just Deployed** |
+| **32** | **Autonomous SQLite/Alarms Retention Policy Manager** | **Weekly Sunday 03:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -55,6 +56,7 @@
 - **#43** — Bundle Split Analyzer deployed
 - **#44** — Memory Leak Detector deployed
 - **#45** — Visual Regression Detector deployed
+- **#46** — SQLite Retention Policy Manager deployed
 
 ---
 
@@ -67,15 +69,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #46)
+## 📋 Next Steps (Suggested #47)
 
-**Candidate:** Autonomous SQLite/Alarms Retention Policy Manager
-- Auto-purge old analytics/error logs from SQLite DBs based on TTL
-- Vacuum after purge to reclaim space
-- Report storage savings and retention compliance
-- Files: `automation/db-retention-manager.cjs`, `.github/workflows/db-retention.yml`, `docs/DB-RETENTION-MANAGER.md`
+**Candidate:** Autonomous Lazy-Loading Route Slicer
+- Analyze bundle analyzer output + route popularity (from analytics)
+- Auto-inject `dynamic()` imports into heavy Next.js route segments
+- Generate PR with code changes and bundle size savings estimates
+- Files: `automation/route-slicer.cjs`, `.github/workflows/route-slicer.yml`, `docs/LAZY-LOAD-ROUTE-SLICER.md`
 
-Alternative: **Autonomous Lazy-Loading Route Slicer** — automatically annotates heavy route segments with `dynamic()` imports based on bundle analysis and user navigation patterns.
+Alternative: **Autonomous SSL/TLS Certificate Expiration Monitor** — checks cert dates on all domains; alerts 30/7/1 day before expiry; auto-renew via Let's Encrypt where possible.
 
 ---
 
