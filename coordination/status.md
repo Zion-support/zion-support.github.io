@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **33 Active Systems**
+## 📊 Current Guardrail Count: **34 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -43,6 +43,7 @@
 | **31** | **Autonomous CSS/UI Visual Regression Detector with Playwright** | **Daily 02:30 UTC** | **✅ Just Deployed** |
 | **32** | **Autonomous SQLite/Alarms Retention Policy Manager** | **Weekly Sunday 03:00 UTC** | **✅ Just Deployed** |
 | **33** | **Autonomous Lazy-Loading Route Slicer** | **Weekly Sunday 04:00 UTC (dry-run)** | **✅ Just Deployed** |
+| **34** | **Autonomous Content Summarizer & Excerpt Generator** | **Weekly Sunday 05:00 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -59,6 +60,7 @@
 - **#45** — Visual Regression Detector deployed
 - **#46** — SQLite Retention Policy Manager deployed
 - **#47** — Lazy-Loading Route Slicer deployed
+- **#48** — Content Summarizer deployed
 
 ---
 
@@ -71,15 +73,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #48)
+## 📋 Next Steps (Suggested #49)
 
-**Candidate:** Autonomous AI-Powered Content Summarizer & Excerpt Generator
-- Analyze new content pages (blog, services, AI Lab writeups) for key points
-- Auto-generate concise summaries and meta descriptions for SEO
-- Suggest featured images and tags based on content analysis
-- Files: `automation/content-summarizer.cjs`, `.github/workflows/content-summarizer.yml`, `docs/CONTENT-SUMMARIZER.md`
+**Candidate:** Autonomous Dynamic Sitemap & Route Priority Optimizer
+- Regenerates `sitemap.xml` with intelligent priority based on route type (home/services/AI Lab/static)
+- Sets `changefreq` based on last modified date
+- Pings search engines (Google/Bing) after update
+- Files: `automation/sitemap-optimizer.cjs`, `.github/workflows/sitemap-optimizer.yml`, `docs/SITEMAP-OPTIMIZER.md`
 
-Alternative: **Autonomous Dynamic Sitemap & Route Priority Optimizer** — updates sitemap.xml with priority/changeFreq based on content freshness and traffic; pings search engines.
+Alternative: **Autonomous SSL/TLS Certificate Expiration Monitor** — checks cert dates on all domains; alerts 30/7/1 day before expiry; auto-renew via Let's Encrypt where possible.
 
 ---
 
