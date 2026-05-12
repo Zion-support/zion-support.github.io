@@ -1,3 +1,4 @@
+✅ Received: TEST_MESSAGE Hello from Kleber via Telegram test
 ✅ Hermes Agent bootstrapped – 2026-05-12 00:24:57
 ✅ Hermes Agent bootstrapped – 2026-05-12 00:24:10
 ✅ Hermes Agent bootstrapped – 2026-05-12 00:23:05

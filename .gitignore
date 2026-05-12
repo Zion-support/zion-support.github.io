@@ -34,6 +34,8 @@ automation/reports/content-metadata-check-latest.json
 automation/reports/test-coverage-improvement-latest.json
 automation/reports/suggestion-importer-latest.json
 automation/reports/ci-recovery-latest.json
+automation/reports/build-size-optimizer-latest.json
+automation/reports/build-size-optimizer-state.json
 automation/reports/seo-content-refresh-latest.json
 automation/reports/code-hygiene-latest.json
 automation/reports/cron-health-latest.json
