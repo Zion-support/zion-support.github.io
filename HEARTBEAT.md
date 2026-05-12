@@ -51,6 +51,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 19. Autonomous image optimization & alt text compliance now active – scans source files for <img> + Next.js <Image>; enforces alt text; checks file size (>500KB warn, >1MB fail); verifies WebP/AVIF variants for large images; per-page image weight tracked; PR comments; daily Telegram + GitHub issue. See automation/image-optimization-audit.cjs, workflow image-optimization-audit.yml, docs/IMAGE-OPTIMIZATION-AUDIT.md.
 20. Autonomous content quality & SEO auditor now active – fetches sitemap pages, parses HTML for title, meta, headings, word count, links, Open Graph, Twitter Cards, schema; scores 0–100; measures readability (Flesch, grade level); detects thin content, orphan pages, missing metadata; daily Telegram summary; GitHub issues for systemic problems; per-page 90-day history. See automation/content-quality-audit.cjs, workflow content-quality-audit.yml, docs/CONTENT-QUALITY-AUDIT.md.
 21. Autonomous code quality & complexity analytics now active — static analysis of TS/TSX/JS/SH; computes cyclomatic complexity per function, LOC, comment density, Maintainability Index; detects code duplication (5-line blocks); weekly Telegram digest + GitHub issue on degradation; PR comments on complexity changes; 90-day file history. See automation/code-quality-analytics.cjs, workflow code-quality-analytics.yml, docs/CODE-QUALITY-ANALYTICS.md.
+22. Automated security headers & HTTPS enforcement auditor now active — probes production for HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy; validates HTTP→HTTPS redirect; checks cookie flags (Secure, HttpOnly, SameSite); scans for mixed content (http:// resources); daily Telegram + GitHub issue on critical failures. See automation/security-headers-audit.cjs, workflow security-headers-audit.yml, docs/SECURITY-HEADERS-AUDIT.md.
 5. Keep main branch synced and deployment-ready
 6. Run deploy watchdog and promotion-route validation on each release cycle
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
@@ -72,6 +73,7 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 🟢 Image Optimization & Alt Text Compliance deployed (PR + daily runs, alt text enforcement, file size checks, WebP/AVIF verification)
 🟢 Content Quality & SEO Auditor deployed (daily 16:00 UTC + PRs, SEO scoring, readability metrics, thin content/orphan detection, GitHub issues)
 🟢 Code Quality & Complexity Analytics deployed (weekly + PRs, cyclomatic complexity, LOC, duplication detection, Maintainability Index)
+🟢 Security Headers & HTTPS Enforcement Auditor deployed (daily 18:00 UTC, header validation, mixed content scan, cookie flags)
 
 ### Operating Mandate
 - Standing owner permission (2026-03-20 rr-accel-1): continue autonomous implementation/deployment loops by default and persist this authority in continuity files for future sessions.
