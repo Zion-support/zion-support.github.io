@@ -24,8 +24,8 @@
 | #14 | Hermes acknowledges receipt in inbox.md | Hermes | ✅ Done | 2026-05-11 | Generic ack written at 23:48:30 |
 | #15 | KiloClaw responds to Hermes first message | KiloClaw | ✅ Done | 2026-05-11 | LIVE coordination message sent via outbox.md |
 | #16 | Merge accessibility audit to main (git push) | Kleber | ✅ Done | 2026-05-11 | Pushed commit a26e686; workflows live on GitHub |
-| #17 | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
-| #18 | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking; enforce threshold |
+| 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
+| 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking; enforce threshold |
 
 ---
 

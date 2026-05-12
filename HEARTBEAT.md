@@ -39,6 +39,12 @@ If anything changed, update this heartbeat summary and optionally notify Kleber 
 7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
 8. For risky merges/pushes: `npm run openclaw:merge:freeze:run -- <cmd>`; for lock-heavy deploys: `npm run deploy:local:supervised`; before report-only commits: `npm run openclaw:report:budget`
 9. Keep `ai-github-workflow-integrity-audit-daily.yml` and `ai-lead-form-routing-guard-daily.yml` green; if either drifts from healthy, prioritize fix-agent loops before feature expansion.
+10. Autonomous build size optimizer now active – monitors bundle growth, tracks consecutive failures, and generates optimization recommendations after 3rd exceedance. See `automation/build-size-optimizer.cjs` and `.github/workflows/build-size-optimizer.yml`.
+5. Keep main branch synced and deployment-ready
+6. Run deploy watchdog and promotion-route validation on each release cycle
+7. Confirm new advertised AI Lab/route cards return `200` after deploy cycles (with redirect follow)
+8. For risky merges/pushes: `npm run openclaw:merge:freeze:run -- <cmd>`; for lock-heavy deploys: `npm run deploy:local:supervised`; before report-only commits: `npm run openclaw:report:budget`
+9. Keep `ai-github-workflow-integrity-audit-daily.yml` and `ai-lead-form-routing-guard-daily.yml` green; if either drifts from healthy, prioritize fix-agent loops before feature expansion.
 
 ### System Status:
 🟢 All automation components operational

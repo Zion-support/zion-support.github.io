@@ -1,0 +1,135 @@
+name: Autonomous Build Size Optimizer
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-size-optimizer:
+    name: Monitor & Optimize Bundle Size
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write  # for posting comments
+      issues: write         # for creating optimization tickets
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+          npm install --save-dev next-bundle-analyzer
+
+      - name: Build with bundle analysis
+        env:
+          ANALYZE: true
+          BUNDLE_SIZE_THRESHOLD: ${{ secrets.BUNDLE_SIZE_THRESHOLD || '2' }}
+        run: |
+          if npm run build 2>&1 | tee build.log; then
+            echo "✅ Build completed"
+          else
+            echo "❌ Build failed"
+            exit 1
+          fi
+
+          # Locate bundle stats
+          STATS_FILE=$(find .next -name "*.json" 2>/dev/null | head -1)
+          if [ -z "$STATS_FILE" ]; then
+            echo "❌ No bundle stats found"
+            exit 1
+          fi
+
+          cp "$STATS_FILE" bundle-analysis.json
+          echo "📊 Bundle stats saved"
+
+      - name: Run baseline + monitor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_PULL_NUMBER: ${{ github.event.pull_request.number }}
+          BUNDLE_SIZE_THRESHOLD: ${{ secrets.BUNDLE_SIZE_THRESHOLD || '2' }}
+          BUNDLE_CONSECUTIVE_LIMIT: ${{ secrets.BUNDLE_CONSECUTIVE_LIMIT || '3' }}
+        run: |
+          chmod +x scripts/bundle-size-monitor.sh
+          ./scripts/bundle-size-monitor.sh || true  # Don't fail yet — we'll analyze
+
+      - name: Run Build Size Optimizer (analysis mode)
+        id: optimizer
+        if: always()
+        env:
+          BUNDLE_SIZE_THRESHOLD: ${{ secrets.BUNDLE_SIZE_THRESHOLD || '2' }}
+          BUNDLE_CONSECUTIVE_LIMIT: ${{ secrets.BUNDLE_CONSECUTIVE_LIMIT || '3' }}
+          BUNDLE_BASELINE: .bundle-size-baseline.json
+          BUNDLE_REPORT: bundle-analysis.json
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_PULL_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          node automation/build-size-optimizer.cjs
+          echo "✅ Optimizer analysis complete"
+
+      - name: Upload optimization report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-size-optimizer-report
+          path: |
+            automation/reports/build-size-optimizer-latest.json
+            .bundle-size-baseline.json
+          retention-days: 30
+
+      - name: Post detailed PR comment on optimization trigger
+        if: |
+          always() &&
+          github.event_name == 'pull_request' &&
+          steps.optimizer.outcome == 'failure'
+        run: |
+          REPORT="automation/reports/build-size-optimizer-latest.json"
+          if [ -f "$REPORT" ]; then
+            echo "📋 Report found — posting detailed comment"
+            # Extract data from JSON (jq available on runner)
+            GROWTH=$(jq -r '.growthPercent' "$REPORT")
+            STRIKES=$(jq -r '.consecutiveFailures' "$REPORT")
+            REC_COUNT=$(jq -r '.recommendations | length' "$REPORT")
+
+            BODY="## 🔨 Build Size Optimizer: Action Required
+
+Bundle has grown by **${GROWTH}%** across **${STRIKES}** consecutive build(s). This exceeds the configured threshold.
+
+### 📊 Top Modules (Largest First)
+\`\`\`
+$(jq -r '.topModules[] | "\(.name | split("/")[-1]): \(.size/1024 | floor)KB"' "$REPORT" | head -10 | sed 's/^/  /')
+\`\`\`
+
+### 💡 Optimization Recommendations
+${REC_COUNT} recommendation(s) generated. See \`automation/reports/build-size-optimizer-latest.json\` for full details or check the uploaded artifact.
+
+**Next steps:**
+1. Review the optimization suggestions
+2. Apply recommended code-splitting/tree-shaking improvements
+3. Re-run this workflow to verify
+
+Or, enable \`BUNDLE_OPTIMIZER_AUTO_APPLY=true\` in repository secrets to let the agent apply safe optimizations automatically (Phase 2, currently disabled)."
+            gh pr comment "$GITHUB_PULL_NUMBER" --body "$BODY" || true
+          fi
+
+      - name: Fail PR if 3rd consecutive exceed
+        if: |
+          always() &&
+          steps.optimizer.outcome == 'failure' &&
+          github.event_name == 'pull_request'
+        run: |
+          echo "❌ Bundle size threshold exceeded on 3rd consecutive build — failing PR check"
+          exit 1

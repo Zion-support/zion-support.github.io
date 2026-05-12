@@ -3,6 +3,9 @@
 # Monitors JavaScript bundle size and enforces a growth budget.
 # Compares current build against a baseline (previous successful build).
 # Fails or posts PR comment if growth exceeds threshold (default: 2%).
+#
+# Also tracks consecutive failures in .bundle-size-monitor-state.json
+# for the autonomous build-size optimizer.
 
 set -euo pipefail
 
@@ -10,15 +13,30 @@ set -euo pipefail
 THRESHOLD_PERCENT="${THRESHOLD_PERCENT:-2}"  # Max allowed growth %
 BASELINE_FILE="${BASELINE_FILE:-.bundle-size-baseline.json}"
 REPORT_FILE="${REPORT_FILE:-bundle-analysis.json}"
+STATE_FILE="${STATE_FILE:-.bundle-size-monitor-state.json}"
+
 CURRENT_STATS="${CURRENT_STATS:-bundle-stats.json}"
 
 echo "📊 Starting bundle size monitoring (threshold: ${THRESHOLD_PERCENT}%)"
+
+# Load previous state
+STATE_CONSECUTIVE=0
+if [ -f "$STATE_FILE" ]; then
+  if command -v jq &> /dev/null; then
+    STATE_CONSECUTIVE=$(jq -r '.consecutiveFailures // 0' "$STATE_FILE" 2>/dev/null || echo 0)
+  else
+    STATE_CONSECUTIVE=$(grep -o '"consecutiveFailures":[0-9]*' "$STATE_FILE" 2>/dev/null | head -1 | cut -d: -f2 || echo 0)
+  fi
+  echo "📋 Previous consecutive failures: $STATE_CONSECUTIVE"
+fi
 
 # Ensure we have a baseline
 if [ ! -f "$BASELINE_FILE" ]; then
   echo "⚠️  No baseline found. Creating initial baseline from current build..."
   if [ -f "$REPORT_FILE" ]; then
     cp "$REPORT_FILE" "$BASELINE_FILE"
+    # Reset state on baseline creation
+    echo "{\"consecutiveFailures\": 0}" > "$STATE_FILE"
     echo "✅ Baseline saved to $BASELINE_FILE"
     exit 0
   else
@@ -64,6 +82,8 @@ if [ "$DIFF" -lt 0 ]; then
   echo "✅ Bundle size decreased by ${DIFF_ABS} bytes"
   # Update baseline to new smaller size
   cp "$REPORT_FILE" "$BASELINE_FILE"
+  # Reset consecutive count on decrease
+  echo "{\"consecutiveFailures\": 0}" > "$STATE_FILE"
   echo "🔄 Baseline updated to smaller size"
   exit 0
 fi
@@ -72,8 +92,10 @@ GROWTH_PERCENT=$(awk "BEGIN {printf \"%.2f\", ($DIFF / $BASELINE_BYTES) * 100}")
 echo "📈 Growth: ${DIFF} bytes (${GROWTH_PERCENT}%)"
 
 # Check threshold
+EXCEEDS=false
 if awk "BEGIN {exit !(${GROWTH_PERCENT} > ${THRESHOLD_PERCENT})}"; then
   echo "❌ Bundle growth exceeds ${THRESHOLD_PERCENT}% threshold!"
+  EXCEEDS=true
 
   # Post PR comment if available
   if [ -n "${GITHUB_TOKEN:-}" ] && [ -n "${GITHUB_REPOSITORY:-}" ] && [ -n "${GITHUB_PULL_NUMBER:-}" ]; then
@@ -84,11 +106,17 @@ if awk "BEGIN {exit !(${GROWTH_PERCENT} > ${THRESHOLD_PERCENT})}"; then
     fi
   fi
 
+  # Update state: increment consecutive failures
+  NEW_CONSECUTIVE=$((STATE_CONSECUTIVE + 1))
+  echo "{\"consecutiveFailures\": $NEW_CONSECUTIVE, \"lastGrowthPercent\": ${GROWTH_PERCENT}, \"updatedAt\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > "$STATE_FILE"
+  echo "📋 Updated consecutive failures: $NEW_CONSECUTIVE"
   exit 1
 else
   echo "✅ Bundle growth within acceptable budget (${GROWTH_PERCENT}% ≤ ${THRESHOLD_PERCENT}%)"
   # Update baseline to current for next comparison
   cp "$REPORT_FILE" "$BASELINE_FILE"
+  # Reset consecutive count
+  echo "{\"consecutiveFailures\": 0}" > "$STATE_FILE"
   echo "🔄 Baseline updated"
   exit 0
 fi
