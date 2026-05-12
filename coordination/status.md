@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **37 Active Systems**
+## 📊 Current Guardrail Count: **38 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -47,6 +47,7 @@
 | **35** | **Autonomous Dynamic Sitemap & Route Priority Optimizer** | **Weekly Sunday 06:00 UTC** | **✅ Just Deployed** |
 | **36** | **Autonomous SSL/TLS Certificate Expiration Monitor** | **Weekly Sunday 07:00 UTC** | **✅ Just Deployed** |
 | **37** | **Autonomous Changelog Generator** | **On push to main + manual** | **✅ Just Deployed** |
+| **38** | **Autonomous Accessibility Scorecard Dashboard** | **Daily 08:30 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -67,6 +68,7 @@
 - **#49** — Dynamic Sitemap Optimizer deployed
 - **#50** — SSL/TLS Certificate Expiration Monitor deployed
 - **#51** — Changelog Generator deployed
+- **#52** — Accessibility Scorecard Dashboard deployed
 
 ---
 
@@ -79,15 +81,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #52)
+## 📋 Next Steps (Suggested #53)
 
-**Candidate:** Autonomous Accessibility Scorecard Dashboard
-- Aggregate Lighthouse accessibility scores across all routes daily
-- Track trends over time; highlight regressions >5 points
-- Generate weekly accessibility health report with route-level details
-- Files: `automation/accessibility-scorecard.cjs`, `.github/workflows/accessibility-scorecard.yml`, `docs/ACCESSIBILITY-SCORECARD.md`
+**Candidate:** Autonomous Open Graph Image Generator
+- Auto-creates OG images for content pages (blog, services, AI Lab) using Canvas
+- Renders title, excerpt, and site logo; saves to `public/og-images/`
+- Updates page frontmatter with `ogImage` path
+- Files: `automation/og-image-generator.cjs`, `.github/workflows/og-image-generator.yml`, `docs/OG-IMAGE-GENERATOR.md`
 
-Alternative: **Autonomous Open Graph Image Generator** — auto-creates OG images for content pages using Canvas; updates frontmatter.
+Alternative: **Autonomous Structured Data (Schema.org) Validator** — checks JSON-LD markup across pages for correctness and completeness.
 
 ---
 
