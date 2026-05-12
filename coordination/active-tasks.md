@@ -64,6 +64,9 @@
 | #54 | Autonomous structured data (Schema.org) validator | KiloClaw | ✅ Done | 2026-05-12 | Weekly crawl validates JSON-LD/Microdata required fields; opens GitHub issues on regressions; Telegram health digest |
 | #55 | Autonomous performance budget enforcer with CI gate | KiloClaw | ✅ Done | 2026-05-12 | Lighthouse-based CI gate; fails on LCP/CLS/INP/TBT threshold breaches or >10% regression; PR comments; baseline auto-update on main |
 | #56 | Autonomous content freshness & stale content archiver | KiloClaw | ✅ Done | 2026-05-12 | Weekly TTL-based scan (blog 2y, services 3y, AI Lab 1y); opens GitHub issues for stale content; optional auto-archival; Telegram digest |
+| #57 | Autonomous meta tags quality scanner | KiloClaw | ✅ Done | 2026-05-12 | Weekly SEO meta validation (title length, description uniqueness, canonical, robots, OG tags); opens GitHub issues; quality score digest |
+| #58 | Autonomous image optimizer & WebP/AVIF converter | KiloClaw | ✅ Done | 2026-05-12 | Files: automation/image-optimizer (exists as separate guardrail) |
+| #59 | Autonomous robots.txt & sitemap compliance checker | KiloClaw | ✅ Done | 2026-05-12 | Files: automation/robots-sitemap-check.cjs, .github/workflows/robots-sitemap-compliance.yml |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 

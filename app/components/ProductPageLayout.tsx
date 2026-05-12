@@ -28,6 +28,14 @@ export type ProductPageData = {
   secondaryCtaHref?: string;
   breadcrumb?: { label: string; href?: string }[];
   caseStudy?: { title: string; description: string; ctaLabel?: string };
+  contact?: { phone: string; email: string; address: string };
+  pricing?: Array<{
+    tier: string;
+    price: string;
+    period: string;
+    features: string[];
+    popular?: boolean;
+  }>;
 };
 
 export type ProductPageLayoutProps = {
@@ -178,6 +186,87 @@ export default function ProductPageLayout({ data, breadcrumbItems }: ProductPage
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      {data.pricing && data.pricing.length > 0 && (
+        <section className="relative container-page py-12">
+          <div className="rounded-3xl border border-slate-700/70 bg-slate-900/65 p-6 sm:p-10">
+            <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+              Pricing & Packages
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="mt-3 max-w-2xl text-slate-300">
+              Choose the plan that fits your needs. All plans include our core platform, security, and support.
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {data.pricing.map((plan) => (
+                <div
+                  key={plan.tier}
+                  className={`relative rounded-2xl border p-6 ${
+                    plan.popular
+                      ? 'border-purple-500/50 bg-purple-950/40 shadow-lg shadow-purple-900/20'
+                      : 'border-slate-700/60 bg-slate-950/60'
+                  }`}
+                >
+                  {plan.popular && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="text-lg font-semibold text-white">{plan.tier}</h3>
+                  <p className="mt-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-slate-400">{plan.period}</span>
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    {plan.features.map((feat) => (
+                      <li key={feat} className="flex items-start gap-2 text-sm text-slate-300">
+                        <svg className="h-4 w-4 flex-shrink-0 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Contact Section */}
+      {data.contact && (
+        <section className="relative container-page py-12">
+          <div className="rounded-3xl border border-fuchsia-500/30 bg-gradient-to-r from-fuchsia-900/20 via-purple-900/20 to-pink-900/20 p-8 text-center sm:p-12">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              Get in Touch
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-slate-200">
+              Ready to transform your business with {data.title}? Contact our team to schedule a free consultation or request a custom quote.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-6">
+              <a
+                href={`tel:${data.contact.phone}`}
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-900/70 px-6 py-3 font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+              >
+                📞 {data.contact.phone}
+              </a>
+              <a
+                href={`mailto:${data.contact.email}`}
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-900/70 px-6 py-3 font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+              >
+                📧 {data.contact.email}
+              </a>
+            </div>
+            <p className="mt-6 text-sm text-slate-400">
+              📍 {data.contact.address}
+            </p>
+          </div>
+        </section>
+      )}
 
       {data.caseStudy && (
         <section className="relative container-page py-12">

@@ -2,9 +2,8 @@ import ProductPageLayout from '../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IT Services | Zion Tech Group',
-  description:
-    'IT Services provides expert IT management, strategic consulting, and technical support services. Keep your technology infrastructure running smoothly while',
+  title: 'Managed IT Services & IT Support | Zion Tech Group',
+  description: 'Comprehensive IT services including 24/7 monitoring, help desk support, cloud infrastructure management, cybersecurity, and strategic IT consulting. Get enterprise-grade IT at a predictable monthly price.',
   alternates: { canonical: '/it-services' },
 };
 
@@ -12,56 +11,118 @@ export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'IT Services',
+        title: 'Managed IT Services & IT Support',
         category: 'IT Services',
         description:
-          'IT Services provides expert IT management, strategic consulting, and technical support services. Keep your technology infrastructure running smoothly while focusing on business growth.',
+          'Comprehensive IT management, 24/7 monitoring, cybersecurity, and strategic consulting for businesses. We keep your technology running smoothly so you can focus on growth. Starting at $2,499/month for small teams, scalable for enterprise.',
         iconEmoji: '🖥️',
         features: [
-                  {
-                            "title": "Production-Ready Architecture",
-                            "description": "Enterprise-grade infrastructure with high availability, horizontal scaling, and comprehensive monitoring built in from day one."
-                  },
-                  {
-                            "title": "Intelligent Automation",
-                            "description": "AI-powered workflows that learn from patterns, adapt to changing conditions, and reduce manual intervention over time."
-                  },
-                  {
-                            "title": "Seamless Integration",
-                            "description": "Connect with your existing tools, APIs, and data sources through pre-built connectors and flexible webhook support."
-                  },
-                  {
-                            "title": "Real-Time Analytics",
-                            "description": "Live dashboards and reporting that give you instant visibility into performance, usage, and business impact."
-                  },
-                  {
-                            "title": "Security & Compliance",
-                            "description": "Built-in security controls, encryption at rest and in transit, and compliance-ready audit trails for enterprise environments."
-                  },
-                  {
-                            "title": "Customizable Workflows",
-                            "description": "Tailor processes, rules, and interfaces to match your specific business requirements without custom development."
-                  }
+          {
+            title: '24/7 IT Help Desk & Support',
+            description:
+              'Round-the-clock technical support for your team. Get instant help with hardware, software, network, and cloud issues. Average response time <15 minutes.',
+          },
+          {
+            title: 'Proactive Infrastructure Monitoring',
+            description:
+              'AI-powered monitoring of servers, networks, and applications. Detect issues before they cause downtime. 99.99% uptime SLA guaranteed.',
+          },
+          {
+            title: 'Cloud Infrastructure Management',
+            description:
+              'Full management of AWS, Azure, Google Cloud. Cost optimization, security hardening, backup & disaster recovery. Save up to 40% on cloud spend.',
+          },
+          {
+            title: 'Cybersecurity & Compliance',
+            description:
+              'Endpoint protection, threat hunting, vulnerability assessments, and compliance (GDPR, HIPAA, SOC2). Keep your data secure and audit-ready.',
+          },
+          {
+            title: 'IT Strategy & Consulting',
+            description:
+              'Strategic technology roadmaps, digital transformation planning, and vendor selection advice. Align IT with business goals for maximum ROI.',
+          },
+          {
+            title: 'Onsite & Remote Support',
+            description:
+              'Hybrid support model: remote issue resolution plus onsite engineers when needed. Covers all 50 US states and international locations.',
+          },
         ],
         useCases: [
-                  {
-                            "title": "Operational Efficiency",
-                            "description": "Deploy IT Services to automate routine tasks, reduce manual errors, and free your team to focus on strategic priorities.",
-                            "icon": "⚡"
-                  },
-                  {
-                            "title": "Scalable Growth",
-                            "description": "Use IT Services to handle increasing complexity and volume without proportional headcount growth.",
-                            "icon": "📈"
-                  },
-                  {
-                            "title": "Data-Driven Decisions",
-                            "description": "Leverage IT Services analytics and reporting to make faster, more confident decisions backed by real operational data.",
-                            "icon": "🎯"
-                  }
+          {
+            title: 'Small & Medium Businesses',
+            description:
+              'Replace expensive in-house IT with a full team of experts. Get CTO-level guidance without the C-level salary.',
+            icon: '🏢',
+          },
+          {
+            title: 'Startups & High-Growth Companies',
+            description:
+              'Scale IT infrastructure seamlessly as you grow. Focus on product, not plumbing. We handle the tech so you can move fast.',
+            icon: '🚀',
+          },
+          {
+            title: 'Enterprise Organizations',
+            description:
+              'Augment your existing IT team with specialized skills. 24/7 NOC, security operations, and cloud excellence.',
+            icon: '🏛️',
+          },
         ],
-        benefits: ["Reduced operational costs","Faster time to value","Improved team productivity","Scalable architecture","Enterprise-grade security","Measurable ROI tracking"],
-        ctaLabel: 'Get Started with IT Services',
+        pricing: [
+          {
+            tier: 'Starter',
+            price: '$2,499',
+            period: '/month',
+            features: [
+              'Up to 25 users',
+              'Help desk support (9x5)',
+              'Basic monitoring',
+              'Cloud cost reports',
+              'Monthly security scan',
+            ],
+          },
+          {
+            tier: 'Growth',
+            price: '$4,999',
+            period: '/month',
+            features: [
+              'Up to 100 users',
+              '24/7 help desk',
+              'Advanced monitoring + AI alerts',
+              'Cloud optimization (up to 40% savings)',
+              'Weekly security scans',
+              'Compliance reporting',
+            ],
+            popular: true,
+          },
+          {
+            tier: 'Enterprise',
+            price: 'Custom',
+            period: '',
+            features: [
+              'Unlimited users',
+              'Dedicated support team',
+              'Custom integrations',
+              'Onsite support included',
+              'Penetration testing & audit',
+              'SLA 99.99% uptime',
+            ],
+          },
+        ],
+        benefits: [
+          'Reduce downtime by 80%',
+          'Cut IT costs up to 40% vs in-house team',
+          'Scale instantly as you grow',
+          'Enterprise security without enterprise team',
+          '24/7 peace of mind',
+          ' Faster issue resolution (avg <15min)',
+        ],
+        contact: {
+          phone: '+1 302 464 0950',
+          email: 'kleber@ziontechgroup.com',
+          address: '364 E Main St STE 1008, Middletown, DE 19709',
+        },
+        ctaLabel: 'Schedule a Free IT Assessment',
       }}
     />
   );

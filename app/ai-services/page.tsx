@@ -310,6 +310,61 @@ export default function AIServicesPage() {
           </Link>
         </div>
       </section>
+
+      {/* === NEW: Pricing & Contact CTA Banner === */}
+      <section className="relative mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-fuchsia-500/30 bg-gradient-to-r from-fuchsia-900/20 via-purple-900/20 to-pink-900/20 p-8 sm:p-12">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              Ready to deploy AI across your organization?
+            </h2>
+            <p className="mt-4 text-base leading-7 text-slate-300">
+              Our AI services are production-ready, scalable, and backed by 24/7 support. Most engagements start with a free 2-week pilot. Contact us for a custom solution assessment.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-700/20 transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500"
+                data-cta-event="cta_contact"
+                data-cta-label="ai_services_page"
+              >
+                Schedule a Free Consultation
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center justify-center rounded-xl border border-slate-600 bg-slate-900/70 px-8 py-3.5 text-base font-semibold text-slate-100 transition hover:border-purple-400 hover:text-white"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+            </div>
+            <div className="mt-6 text-sm text-slate-400">
+              <p>📧 kleber@ziontechgroup.com</p>
+              <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div>
+            <div className="mt-8 rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 text-left">
+              <h3 className="text-lg font-semibold text-white">Popular AI Service Packages</h3>
+              <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-xl border border-slate-700/50 bg-slate-950/60 p-4">
+                  <p className="text-sm font-medium text-purple-300">AI Copilot & Assistants</p>
+                  <p className="mt-1 text-2xl font-bold text-white">$1,999–$4,999/mo</p>
+                  <p className="mt-2 text-xs text-slate-400">Custom AI assistants for your workflows. Includes NLP, integrations, and continuous improvement.</p>
+                </div>
+                <div className="rounded-xl border border-slate-700/50 bg-slate-950/60 p-4">
+                  <p className="text-sm font-medium text-fuchsia-300">AI DevOps & Automation</p>
+                  <p className="mt-1 text-2xl font-bold text-white">$1,999–$5,999/mo</p>
+                  <p className="mt-2 text-xs text-slate-400">CI/CD monitoring, self-healing, predictive maintenance. Covers infrastructure, pipelines, and apps.</p>
+                </div>
+                <div className="rounded-xl border border-slate-700/50 bg-slate-950/60 p-4">
+                  <p className="text-sm font-medium text-pink-300">AI Fraud & Security</p>
+                  <p className="mt-1 text-2xl font-bold text-white">$999–$3,999/mo</p>
+                  <p className="mt-2 text-xs text-slate-400">Real-time fraud detection, EDR, SOC 2 compliance, and incident response. Protect your business.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

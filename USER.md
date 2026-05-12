@@ -21,3 +21,15 @@
 - Telegram ✅
 - WhatsApp ⏳ (pendente QR)
 - GitHub 🔧 (suporte necessário)
+
+- Timezone: America/Sao_Paulo
+
+- Location: sao paulo, brazil
+
+- Timezone: America/Sao_Paulo
+
+- Location: sao paulo, brazil
+
+- Timezone: America/Sao_Paulo
+
+- Location: sao paulo, brazil

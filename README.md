@@ -32,21 +32,25 @@ npm run test:ci
 
 ## Automation (AI audits)
 
-LLM-powered automations use a **multi-provider chain** (first available):
+LLM-powered automations use a **multi-provider chain** with automatic fallback:
 
-1. **Ollama** (local, free) — `npm run llm:install`
-2. **Groq** (free tier, ultra-fast) — [console.groq.com](https://console.groq.com)
-3. **Google Gemini** (free tier, 1.5k req/day) — [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
-4. **Hugging Face** (300 req/hr) — [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
-5. **Cerebras** (1M tokens/day) — [cloud.cerebras.ai](https://cloud.cerebras.ai)
-6. **Cloudflare Workers AI** (10k Neurons/day) — [dash.cloudflare.com](https://dash.cloudflare.com)
-7. **DeepSeek** (5M tokens free) — [platform.deepseek.com](https://platform.deepseek.com)
-8. **Mistral AI** (free tier) — [console.mistral.ai](https://console.mistral.ai)
-9. **Together AI** (free research models) — [together.ai](https://together.ai)
-10. **Cohere** (1k req/month trial) — [dashboard.cohere.com](https://dashboard.cohere.com)
-11. **OpenRouter** (fallback)
+1. **Cloud LLMs** (fast, high quality): OpenAI GPT-4.1, Anthropic Claude, Groq (Llama 4), Google Gemini, etc. Configure via env vars:
+   - `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `COHERE_API_KEY`, `OPENROUTER_API_KEY`
+   - See `docs/FREE-AI-TOOLS.md` for free-tier options.
 
-Add `GROQ_API_KEY`, `GEMINI_API_KEY`, `HUGGINGFACE_HUB_TOKEN`, `CEREBRAS_API_KEY`, `CLOUDFLARE_ACCOUNT_ID`+`CLOUDFLARE_API_TOKEN`, `DEEPSEEK_API_KEY`, `MISTRAL_API_KEY`, `TOGETHER_API_KEY`, `FIREWORKS_API_KEY`, `COHERE_API_KEY`, or `OPENROUTER_API_KEY` to `.env` for cloud fallbacks. See `docs/FREE-AI-TOOLS.md`.
+2. **Local Ollama** (private, free, always-on fallback) — automatically used when cloud is unavailable:
+   - Default model: **Qwen3-4B** (~2.5GB, strong reasoning for its size). Equivalent reasoning class to 27B MoE models, optimized for local deployment.
+   - Start: `ollama serve` — runs at `http://localhost:11434`
+   - Pull: `ollama pull qwen3:4b` (or larger if GPU/RAM allows: `qwen3:14b`, `qwen3:32b`, `qwen3:30b-a3b`)
+   - Env: `OLLAMA_BASE_URL` (default `http://localhost:11434`), `OLLAMA_MODEL` (default `qwen3:4b`)
+   - Unified chat API exposed at `/api/llm/chat` — cloud LLMs or Ollama depending on availability.
+
+### LLM router
+- `lib/llm-fallback-router.cjs` — chooses provider automatically (`auto`), or force specific provider (`openai`, `anthropic`, `ollama`).
+- API route: `app/api/llm/chat/route.ts` — unified chat endpoint for frontend and automations.
+- Ollama provider: `lib/ollama-provider.cjs` — handles Qwen3 thinking mode (`/think`), streaming, health checks.
+
+---
 
 Openclaw autonomous operations:
 - Runbook: `OPENCLAW.md`

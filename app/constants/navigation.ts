@@ -126,6 +126,13 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Process Automation', href: '/ai-services/process-automation' },
   { name: 'Quality Assurance', href: '/ai-services/quality-assurance' },
   { name: 'Supply Chain', href: '/ai-services/supply-chain' },
+  // === New standalone services added 2026-05-12 ===
+  { name: 'AI-Powered DevOps Guardian', href: '/ai-devops-guardian' },
+  { name: 'Real-Time Fraud Shield', href: '/real-time-fraud-shield' },
+  { name: 'Autonomous Lead-to-Cash', href: '/autonomous-lead-to-cash' },
+  { name: 'Intelligent Document Processing', href: '/intelligent-document-processing' },
+  { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
+  { name: 'Smart Healthcare Diagnostics', href: '/smart-healthcare-diagnostics' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
