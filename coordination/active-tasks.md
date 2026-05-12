@@ -52,6 +52,7 @@
 | #42 | Autonomous ESLint rule extension & custom linter | KiloClaw | ✅ Done | 2026-05-12 | Custom ESLint config + CI gate; enforces forbidden APIs, error handling, naming, dead code |
 | #43 | Autonomous bundle split analyzer & route code splitting guide | KiloClaw | ✅ Done | 2026-05-12 | Analyzes route bundles; recommends dynamic imports; PR comments + weekly digest |
 | #44 | Autonomous memory leak detector & heap snapshot comparator | KiloClaw | ✅ Done | 2026-05-12 | Hourly PM2 heap diff; >20% growth alerts; GitHub issues + Telegram |
+| #45 | Autonomous CSS/UI visual regression detector with Playwright | KiloClaw | ✅ Done | 2026-05-12 | Daily screenshot diff; >2% pixel change alerts; baseline auto-update for minor drift |
 | 🔄 In Progress | Monitor accessibility audit workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify GitHub Actions runs; check logs; report failures |
 | 🔄 In Progress | Monitor bundle-size monitoring workflow | Hermes | 🔄 In Progress | 2026-05-11 | Verify workflow runs; baseline tracking, enforce threshold |
 

@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Current Guardrail Count: **30 Active Systems**
+## 📊 Current Guardrail Count: **31 Active Systems**
 
 | # | Guardrail | Frequency | Status |
 |---|-----------|-----------|--------|
@@ -40,6 +40,7 @@
 | **28** | **Autonomous ESLint Rule Extension & Custom Linter** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 | **29** | **Autonomous Bundle Split Analyzer & Route Code Splitting Guide** | **On PR to main + Weekly digest** | **✅ Just Deployed** |
 | **30** | **Autonomous Memory Leak Detector & Heap Snapshot Comparator** | **Hourly** | **✅ Just Deployed** |
+| **31** | **Autonomous CSS/UI Visual Regression Detector with Playwright** | **Daily 02:30 UTC** | **✅ Just Deployed** |
 
 ---
 
@@ -53,6 +54,7 @@
 - **#42** — Custom ESLint Rules deployed
 - **#43** — Bundle Split Analyzer deployed
 - **#44** — Memory Leak Detector deployed
+- **#45** — Visual Regression Detector deployed
 
 ---
 
@@ -65,15 +67,15 @@
 
 ---
 
-## 📋 Next Steps (Suggested #45)
+## 📋 Next Steps (Suggested #46)
 
-**Candidate:** Autonomous CSS/UI Visual Regression Detector with Playwright
-- Capture screenshots of key pages across breakpoints
-- Compare pixel diffs against baseline; flag visual changes
-- PR comments on unintended visual regressions
-- Files: `automation/visual-regression.cjs`, `.github/workflows/visual-regression.yml`, `docs/VISUAL-REGRESSION.md`
+**Candidate:** Autonomous SQLite/Alarms Retention Policy Manager
+- Auto-purge old analytics/error logs from SQLite DBs based on TTL
+- Vacuum after purge to reclaim space
+- Report storage savings and retention compliance
+- Files: `automation/db-retention-manager.cjs`, `.github/workflows/db-retention.yml`, `docs/DB-RETENTION-MANAGER.md`
 
-Alternative: **Autonomous Log Anomaly Detector** — uses statistical outlier detection on application logs; surfaces spike in error rates or unusual patterns.
+Alternative: **Autonomous Lazy-Loading Route Slicer** — automatically annotates heavy route segments with `dynamic()` imports based on bundle analysis and user navigation patterns.
 
 ---
 
