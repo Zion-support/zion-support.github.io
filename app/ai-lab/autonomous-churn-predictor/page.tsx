@@ -62,8 +62,8 @@ export default function AutonomousChurnPredictorPage() {
           <div style={{ background: '#1e1b4b', padding: '1.5rem', borderRadius: '12px', border: '1px solid #431407' }}>
             <h3 style={{ marginBottom: '1rem', color: '#fb923c' }}>📊 Input Metrics</h3>
             {[['Total Active Users', users, setUsers], ['Churned This Month', churned, setChurned], ['Monthly Revenue ($)', mrr, setMrr], ['Avg Tenure (months)', avgTenure, setAvgTenure], ['NPS Score (-100 to 100)', nps, setNps], ['Monthly Support Tickets', supportTickets, setSupportTickets]].map(
-              ([label, val, setter]) => (
-              <div key={label as string} style={{ marginBottom: '0.75rem' }}>
+              ([label, val, setter]: [string, number, (v: number) => void]) => (
+                <div key={label} style={{ marginBottom: '0.75rem' }}>
                 <label style={{ color: '#c4b5fd', fontSize: '0.8rem', display: 'block', marginBottom: '0.2rem' }}>{label}</label>
                 <input type="number" value={val as number} onChange={e => (setter as any)(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#0f172a', border: '1px solid #431407', color: '#f8fafc', borderRadius: '4px' }} />
               </div>
