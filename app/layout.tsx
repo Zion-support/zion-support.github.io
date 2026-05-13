@@ -14,6 +14,7 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidget';
 import AIExperienceLoader from './components/AIExperienceLoader';
 import StructuredData from './components/StructuredData';
+import QuickHelpWidget from './components/QuickHelpWidget';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
@@ -89,6 +90,7 @@ export default function RootLayout({
           <AIChatWidget />
           <AIExperienceLoader />
           <StickyMobileCTA />
+          <QuickHelpWidget />
           <ServiceWorkerRegistration />
         </div>
       </body>
