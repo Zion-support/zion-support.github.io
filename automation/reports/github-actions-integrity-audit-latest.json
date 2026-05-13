@@ -1,16 +1,29 @@
 {
   "summary": {
-    "generatedAt": "2026-04-07T23:56:34.659Z",
-    "totalWorkflows": 369,
+    "generatedAt": "2026-05-13T11:22:41.973Z",
+    "totalWorkflows": 391,
     "warningCount": 367,
-    "criticalCount": 2,
+    "criticalCount": 24,
     "totals": {
       "missingPermissions": 0,
-      "unpinnedActions": 7,
-      "missingJobTimeouts": 375
+      "unpinnedActions": 85,
+      "missingJobTimeouts": 397
     }
   },
   "workflows": [
+    {
+      "file": ".github/workflows/accessibility-scorecard.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 4,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (4)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
     {
       "file": ".github/workflows/ai-accessibility-audit-smoke-weekly.yml",
       "checks": {
@@ -2809,6 +2822,19 @@
       ]
     },
     {
+      "file": ".github/workflows/api-schema-validation.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/auto-label.yml",
       "checks": {
         "hasPermissions": true,
@@ -2917,6 +2943,45 @@
       ]
     },
     {
+      "file": ".github/workflows/bundle-split-analyzer.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 5,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (5)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/cert-monitor.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 4,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (4)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/changelog.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/ci-cd-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
@@ -2977,6 +3042,32 @@
       ]
     },
     {
+      "file": ".github/workflows/content-freshness.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/content-summarizer.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/core-web-vitals-monitor-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
@@ -2997,6 +3088,32 @@
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/custom-eslint.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 5,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (5)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/db-retention.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -3045,6 +3162,19 @@
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/dependency-update-bot.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 2,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (2)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -3110,6 +3240,19 @@
       ]
     },
     {
+      "file": ".github/workflows/heap-diff.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 4,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (4)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/lighthouse-ci-smoke-weekly.yml",
       "checks": {
         "hasPermissions": true,
@@ -3154,6 +3297,58 @@
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/meta-tags-scanner.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/og-image-generator.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 4,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (4)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/openapi-drift-detector.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 5,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (5)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/performance-budget.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -3242,6 +3437,45 @@
       ]
     },
     {
+      "file": ".github/workflows/robots-sitemap-compliance.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 2,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (2)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/route-slicer.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 4,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (4)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/schema-validator.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
       "file": ".github/workflows/site-improv-agent.yml",
       "checks": {
         "hasPermissions": true,
@@ -3250,6 +3484,19 @@
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/sitemap-optimizer.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
         "jobs missing timeout-minutes (1)"
       ]
     },
@@ -3274,6 +3521,45 @@
         "missingJobTimeouts": 1
       },
       "warnings": [
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/test-coverage.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 3,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (3)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/type-coverage.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 5,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (5)",
+        "jobs missing timeout-minutes (1)"
+      ]
+    },
+    {
+      "file": ".github/workflows/visual-regression.yml",
+      "checks": {
+        "hasPermissions": true,
+        "unpinnedActionsCount": 4,
+        "hasAnyTimeout": false,
+        "missingJobTimeouts": 1
+      },
+      "warnings": [
+        "unpinned action refs (4)",
         "jobs missing timeout-minutes (1)"
       ]
     },

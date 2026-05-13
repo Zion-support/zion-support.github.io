@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-04-07T23:56:39.218Z",
+  "generatedAt": "2026-05-13T11:22:46.639Z",
   "queue": [
+    {
+      "id": "pin-.github/workflows/accessibility-scorecard.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/accessibility-scorecard.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/accessibility-scorecard.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/accessibility-scorecard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
@@ -1640,6 +1654,20 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "pin-.github/workflows/api-schema-validation.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/api-schema-validation.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/api-schema-validation.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/api-schema-validation.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/auto-label.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/auto-label.yml",
@@ -1703,6 +1731,48 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "pin-.github/workflows/bundle-split-analyzer.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/bundle-split-analyzer.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/bundle-split-analyzer.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/bundle-split-analyzer.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/cert-monitor.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/cert-monitor.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/cert-monitor.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/cert-monitor.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/changelog.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/changelog.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/changelog.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/changelog.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/ci-cd-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ci-cd-smoke-weekly.yml",
@@ -1738,6 +1808,34 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "pin-.github/workflows/content-freshness.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/content-freshness.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/content-freshness.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/content-freshness.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/content-summarizer.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/content-summarizer.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/content-summarizer.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/content-summarizer.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/core-web-vitals-monitor-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/core-web-vitals-monitor-smoke-weekly.yml",
@@ -1748,6 +1846,34 @@
       "id": "timeout-.github/workflows/core-web-vitals-monitor.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/core-web-vitals-monitor.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/custom-eslint.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/custom-eslint.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/custom-eslint.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/custom-eslint.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/db-retention.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/db-retention.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/db-retention.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/db-retention.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1776,6 +1902,20 @@
       "id": "timeout-.github/workflows/dependency-review.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/dependency-review.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/dependency-update-bot.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/dependency-update-bot.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/dependency-update-bot.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/dependency-update-bot.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1822,6 +1962,20 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "pin-.github/workflows/heap-diff.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/heap-diff.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/heap-diff.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/heap-diff.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/lighthouse-ci-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/lighthouse-ci-smoke-weekly.yml",
@@ -1846,6 +2000,62 @@
       "id": "timeout-.github/workflows/lighthouse-production.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/lighthouse-production.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/meta-tags-scanner.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/meta-tags-scanner.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/meta-tags-scanner.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/meta-tags-scanner.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/og-image-generator.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/og-image-generator.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/og-image-generator.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/og-image-generator.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/openapi-drift-detector.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/openapi-drift-detector.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/openapi-drift-detector.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/openapi-drift-detector.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/performance-budget.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/performance-budget.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/performance-budget.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/performance-budget.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1899,9 +2109,65 @@
       "action": "add timeout-minutes per job"
     },
     {
+      "id": "pin-.github/workflows/robots-sitemap-compliance.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/robots-sitemap-compliance.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/robots-sitemap-compliance.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/robots-sitemap-compliance.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/route-slicer.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/route-slicer.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/route-slicer.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/route-slicer.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/schema-validator.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/schema-validator.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/schema-validator.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/schema-validator.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
       "id": "timeout-.github/workflows/site-improv-agent.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/site-improv-agent.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/sitemap-optimizer.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/sitemap-optimizer.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/sitemap-optimizer.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/sitemap-optimizer.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },
@@ -1916,6 +2182,48 @@
       "id": "timeout-.github/workflows/stale.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/stale.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/test-coverage.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/test-coverage.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/test-coverage.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/test-coverage.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/type-coverage.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/type-coverage.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/type-coverage.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/type-coverage.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
+    {
+      "id": "pin-.github/workflows/visual-regression.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/visual-regression.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/visual-regression.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/visual-regression.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     },

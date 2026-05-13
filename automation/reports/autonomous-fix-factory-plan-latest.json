@@ -1,10 +1,24 @@
 {
-  "generatedAt": "2026-04-07T23:56:39.218Z",
+  "generatedAt": "2026-05-13T11:22:46.639Z",
   "source": "github-actions-integrity-auditor",
-  "queueSize": 371,
-  "criticalCount": 2,
-  "warningCount": 369,
+  "queueSize": 415,
+  "criticalCount": 24,
+  "warningCount": 391,
   "queue": [
+    {
+      "id": "pin-.github/workflows/accessibility-scorecard.yml",
+      "type": "workflow-action-pin-hardening",
+      "targetFile": ".github/workflows/accessibility-scorecard.yml",
+      "priority": "critical",
+      "action": "pin action references to commit SHA with comment"
+    },
+    {
+      "id": "timeout-.github/workflows/accessibility-scorecard.yml",
+      "type": "workflow-timeout-hardening",
+      "targetFile": ".github/workflows/accessibility-scorecard.yml",
+      "priority": "warning",
+      "action": "add timeout-minutes per job"
+    },
     {
       "id": "timeout-.github/workflows/ai-accessibility-audit-smoke-weekly.yml",
       "type": "workflow-timeout-hardening",
@@ -1038,20 +1052,6 @@
       "id": "timeout-.github/workflows/ai-openclaw-anomaly-trend-breach.yml",
       "type": "workflow-timeout-hardening",
       "targetFile": ".github/workflows/ai-openclaw-anomaly-trend-breach.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-openclaw-auth-runtime-diagnostic-smoke-weekly.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-openclaw-auth-runtime-diagnostic-smoke-weekly.yml",
-      "priority": "warning",
-      "action": "add timeout-minutes per job"
-    },
-    {
-      "id": "timeout-.github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
-      "type": "workflow-timeout-hardening",
-      "targetFile": ".github/workflows/ai-openclaw-auth-runtime-diagnostic.yml",
       "priority": "warning",
       "action": "add timeout-minutes per job"
     }
