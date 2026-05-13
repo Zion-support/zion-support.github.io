@@ -44,7 +44,8 @@ export type AILabToolId =
   | 'autonomous-api-profiler'
   | 'autonomous-data-pipeline-visualizer'
   | 'autonomous-meeting-analyzer'
-  | 'autonomous-code-review-assistant';
+  | 'autonomous-code-review-assistant'
+  | 'autonomous-prompt-cost-calculator';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -540,6 +541,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Code Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-code-review-assistant',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-prompt-cost-calculator',
+    slug: 'autonomous-prompt-cost-calculator',
+    title: 'Autonomous Prompt Cost Calculator',
+    shortDescription:
+      'Compare AI model pricing across 9 providers. Calculate per-prompt, daily, monthly, and yearly costs. Includes conversation history overhead and smart cost-saving recommendations.',
+    category: 'Cost Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-prompt-cost-calculator',
     badge: 'New',
   },
 ];
