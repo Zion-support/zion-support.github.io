@@ -2,8 +2,8 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Event Planning & Coordination | Zion Tech Group',
-  description: 'End-to-end event planning minus venue sourcing, vendor negotiation, guest list optimization, and real-time event day coordination.',
+  title: 'AI Event Planning and Coordination | Zion Tech Group',
+  description: 'End-to-end event planning with venue sourcing, vendor negotiation, guest list optimization, and real-time event day coordination.',
   alternates: { canonical: '/micro-saas/ai-event-planner-pro' },
 };
 
@@ -11,22 +11,22 @@ export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Event Planning & Coordination',
-        category: 'Micro SaaS · Events & Hospitality',
-        description: 'End-to-end event planning minus venue sourcing, vendor negotiation, guest list optimization, and real-time event day coordination.',
+        title: 'AI Event Planning and Coordination',
+        category: 'Micro SaaS - Events and Hospitality',
+        description: 'End-to-end event planning with venue sourcing, vendor negotiation, guest list optimization, and real-time event day coordination.',
         iconEmoji: '🎉',
         features: [
-          { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns and reduce manual effort.' },
+          { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns.' },
           { title: 'Cloud-Hosted', description: 'Zero setup required, accessible from anywhere.' },
           { title: 'API Access', description: 'REST API for custom integrations and workflows.' },
           { title: 'Role-Based Access', description: 'Granular permissions for team security.' },
-          { title: 'Analytics Dashboard', description: 'Real-time metrics, automated reports, and trend analysis.' },
+          { title: 'Analytics Dashboard', description: 'Real-time metrics and automated reports.' },
           { title: 'Dedicated Support', description: 'Responsive support team with guided onboarding.' },
         ],
         useCases: [
-          { title: 'Growing Teams', description: 'Scale operations efficiently without proportional headcount increases.', icon: '\U0001F680' },
-          { title: 'Startups', description: 'Enterprise-grade tools from day one at startup-friendly prices.', icon: '\u26A1' },
-          { title: 'Enterprise', description: 'Deploy within existing compliance frameworks and IT governance.', icon: '\U0001F3E2' },
+          { title: 'Growing Teams', description: 'Scale operations without proportional headcount.', icon: '\U0001F680' },
+          { title: 'Startups', description: 'Enterprise-grade tools at startup-friendly prices.', icon: '\u26A1' },
+          { title: 'Enterprise', description: 'Deploy within existing compliance frameworks.', icon: '\U0001F3E2' },
         ],
         benefits: [
           'Reduce manual effort by 70% or more',
@@ -39,8 +39,8 @@ export default function Page() {
         ctaLabel: 'Start Your Free Trial',
         pricing: [
           { tier: 'Starter', price: '$19', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics', 'Email support'] },
-          { tier: 'Professional', price: '$49', period: '/month', features: ['All Starter features', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
-          { tier: 'Enterprise', price: '$119', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA guarantee', 'SSO'] },
+          { tier: 'Professional', price: '$49', period: '/month', features: ['All Starter', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
+          { tier: 'Enterprise', price: '$119', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA', 'SSO'] },
         ],
         contact: {
           phone: '+1 302 464 0950',
