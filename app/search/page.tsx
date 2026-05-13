@@ -1,214 +1,178 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { useSearchParams, useRouter } from 'next/navigation';
-import { Search as SearchIcon, ArrowRight, Layers, FileText, Building2, Package } from 'lucide-react';
-import { AI_SERVICE_LINKS } from '../constants/navigation';
-import Breadcrumb from '../components/Breadcrumb';
+import { Search, ArrowRight, Zap, Sparkles, LayoutGrid, FileText, AlertCircle } from 'lucide-react';
+import { ALL_SEARCH_ITEMS, searchItems, groupByCategory } from '../config/searchIndex';
 
-type SearchableItem = {
-  name: string;
-  href: string;
-  group: string;
-};
-
-const resourceLinks: SearchableItem[] = [
-  { name: 'Solutions', href: '/solutions', group: 'Pages' },
-  { name: 'FAQ', href: '/faq', group: 'Pages' },
-  { name: 'Services', href: '/services', group: 'Pages' },
-  { name: 'Products', href: '/products', group: 'Pages' },
-  { name: 'AI Services', href: '/ai-services', group: 'Pages' },
-  { name: 'Industries', href: '/industries', group: 'Pages' },
-  { name: 'Innovation Bundles', href: '/innovation-bundles', group: 'Pages' },
-  { name: 'Pricing', href: '/pricing', group: 'Pages' },
-  { name: 'Blog', href: '/blog', group: 'Pages' },
-  { name: 'Case Studies', href: '/case-studies', group: 'Pages' },
-  { name: 'Consultation', href: '/consultation', group: 'Pages' },
-  { name: 'Micro SAAS Services', href: '/micro-saas-services', group: 'Pages' },
-  { name: 'Automation', href: '/automation', group: 'Pages' },
-  { name: 'About', href: '/about', group: 'Pages' },
-  { name: 'Careers', href: '/careers', group: 'Pages' },
-  { name: 'Community', href: '/community', group: 'Pages' },
-  { name: 'Contact', href: '/contact', group: 'Pages' },
-];
-
-const browseCategories = [
-  { label: 'Industry Solutions', href: '/industries', icon: Building2 },
-  { label: 'AI Products & Apps', href: '/products', icon: Layers },
-  { label: 'Innovation Bundles', href: '/innovation-bundles', icon: Package },
-  { label: 'Case Studies', href: '/case-studies', icon: FileText },
-];
-
-const allItems: SearchableItem[] = [
-  ...resourceLinks,
-  ...AI_SERVICE_LINKS.map((link) => ({
-    name: link.name,
-    href: link.href,
-    group: 'AI Services',
-  })),
+const CATEGORIES = [
+  { id: 'all', label: 'All', icon: <LayoutGrid className="h-4 w-4" /> },
+  { id: 'Pages', label: 'Pages', icon: <FileText className="h-4 w-4" /> },
+  { id: 'Services', label: 'Services', icon: <Zap className="h-4 w-4" /> },
+  { id: 'AI Lab', label: 'AI Lab', icon: <Sparkles className="h-4 w-4" /> },
 ];
 
 export default function SearchPage() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const urlQuery = searchParams?.get('q') ?? '';
-  const [query, setQuery] = useState(urlQuery);
-
-  useEffect(() => {
-    setQuery(urlQuery);
-  }, [urlQuery]);
-
-  const handleQueryChange = (value: string) => {
-    setQuery(value);
-    const path = value.trim() ? `/search?q=${encodeURIComponent(value.trim())}` : '/search';
-    router.replace(path, { scroll: false });
-  };
+  const [query, setQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const results = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    if (!normalizedQuery) return allItems;
-    return allItems.filter(
-      (item) =>
-        item.name.toLowerCase().includes(normalizedQuery) ||
-        item.href.toLowerCase().includes(normalizedQuery) ||
-        item.group.toLowerCase().includes(normalizedQuery),
-    );
-  }, [query]);
+    const items = activeCategory === 'all'
+      ? ALL_SEARCH_ITEMS
+      : ALL_SEARCH_ITEMS.filter((i) => i.category === activeCategory);
+    return searchItems(query, items);
+  }, [query, activeCategory]);
+
+  const grouped = useMemo(() => groupByCategory(results), [results]);
 
   return (
-    <div className="relative min-h-screen bg-slate-950">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-20 left-1/3 h-[24rem] w-[24rem] rounded-full bg-purple-500/20 blur-3xl" />
-      </div>
+    <main className="flex min-h-[80vh] flex-col bg-slate-950 px-4 py-16 sm:px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SearchResultsPage',
+            name: 'Search',
+            description: 'Search all AI tools, services, and pages on Zion Tech Group platform.',
+            url: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com/search',
+          }),
+        }}
+      />
 
-      <section className="relative mx-auto max-w-3xl px-4 pb-8 pt-20 sm:px-6 lg:px-8">
-        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Search' }]} className="mb-6" />
+      <div className="w-full max-w-4xl space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10 text-purple-400">
+            <Search className="h-8 w-8" />
+          </div>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Search
           </h1>
-          <p className="mt-4 text-slate-300">
-            Find pages, AI services, products, and resources across Zion Tech Group. Search by name, category, or keyword.
+          <p className="mt-3 max-w-xl text-base leading-7 text-slate-300">
+            Search across {ALL_SEARCH_ITEMS.length}+ pages, tools, and services.
           </p>
-          <p className="mt-2 text-sm text-slate-400">
-            Browse by Industries, Products, or Case Studies — or type to filter results instantly.
-          </p>
-          <div className="mt-6 rounded-xl border border-slate-700/70 bg-slate-900/50 p-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-purple-300">Tips</p>
-            <ul className="mt-2 space-y-1 text-sm text-slate-300">
-              <li>• Type part of a page name (e.g., &quot;chatbot&quot;, &quot;healthcare&quot;) to narrow results</li>
-              <li>• Use category links below to browse by Industry, Products, or Case Studies</li>
-              <li>• Results update as you type — no need to press Enter</li>
-            </ul>
-          </div>
-          <div className="mt-4">
-            <p className="text-xs font-semibold text-slate-400">Popular searches</p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              <Link
-                href="/search?q=chatbot"
-                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
-              >
-                Chatbot
-              </Link>
-              <Link
-                href="/search?q=automation"
-                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
-              >
-                Automation
-              </Link>
-              <Link
-                href="/search?q=healthcare"
-                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
-              >
-                Healthcare
-              </Link>
-              <Link
-                href="/search?q=pricing"
-                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/search?q=document"
-                className="rounded-lg border border-slate-700/70 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 transition hover:border-purple-400/50 hover:text-white"
-              >
-                Document
-              </Link>
-            </div>
+        </div>
+
+        <div className="relative">
+          <div className="relative flex items-center rounded-2xl border border-slate-700/70 bg-slate-900/80 px-4 py-3 shadow-lg focus-within:border-purple-400/50 focus-within:ring-2 focus-within:ring-purple-500/20 transition-all">
+            <Search className="h-5 w-5 flex-shrink-0 text-slate-500" />
+            <input
+              type="text"
+              placeholder="Search tools, services, pages..."
+              className="w-full bg-transparent pl-3 pr-4 text-base text-white placeholder-slate-400 outline-none"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck={false}
+            />
           </div>
         </div>
 
-        <div className="mt-8">
-          <label className="block">
-            <span className="sr-only">Search</span>
-            <div className="relative">
-              <SearchIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => handleQueryChange(e.target.value)}
-                placeholder="Search pages, services, or solutions..."
-                className="w-full rounded-xl border border-slate-600/80 bg-slate-900/80 py-4 pl-12 pr-4 text-sm text-slate-100 placeholder:text-slate-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-                autoFocus
-              />
-            </div>
-          </label>
-          <p className="mt-2 text-right text-xs text-slate-400">
-            {results.length} result{results.length !== 1 ? 's' : ''}
-          </p>
-        </div>
-      </section>
-
-      <section className="relative mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mb-10">
-          <p className="mb-3 text-sm font-semibold text-slate-300">Browse by category</p>
-          <div className="flex flex-wrap gap-3">
-            {browseCategories.map((cat) => (
-              <Link
-                key={cat.href}
-                href={cat.href}
-                className="flex items-center gap-2 rounded-xl border border-slate-700/70 bg-slate-900/65 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-purple-400/50 hover:text-white"
-              >
-                <cat.icon className="h-4 w-4 text-purple-400" />
-                {cat.label}
-                <ArrowRight className="h-3.5 w-3.5 text-slate-500" />
-              </Link>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-2">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
+                activeCategory === cat.id
+                  ? 'border-purple-400 bg-purple-500/20 text-purple-300'
+                  : 'border-slate-700/60 bg-slate-900/50 text-slate-400 hover:border-slate-500 hover:text-slate-200'
+              }`}
+            >
+              {cat.icon}
+              {cat.label}
+            </button>
+          ))}
         </div>
 
-        {results.length > 0 ? (
-          <div className="space-y-2">
-            {results.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="flex items-center justify-between gap-3 rounded-xl border border-slate-700/70 bg-slate-900/65 px-5 py-4 transition hover:border-purple-400/50 hover:bg-slate-900/80"
-              >
-                <div>
-                  <p className="text-sm font-semibold text-white">{item.name}</p>
-                  <p className="mt-0.5 text-xs text-slate-400">{item.group}</p>
-                </div>
-                <span className="rounded-md border border-slate-700 bg-slate-950/70 px-2 py-0.5 text-[11px] text-slate-300">
-                  {item.href}
-                </span>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-2xl border border-slate-700/70 bg-slate-900/65 p-8 text-center">
-            <p className="text-lg font-semibold text-white">No results found</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Try different keywords or{' '}
-              <Link href="/contact" className="font-medium text-purple-300 hover:text-purple-200">
-                contact us
-              </Link>{' '}
-              for help.
+        <p className="text-sm text-slate-400">
+          {results.length} result{results.length !== 1 ? 's' : ''}
+          {query ? ` for "${query}"` : ''}
+          {activeCategory !== 'all' ? ` in ${activeCategory}` : ''}
+        </p>
+
+        {query && results.length === 0 && (
+          <div className="rounded-xl border border-slate-700/50 bg-slate-900/30 p-8 text-center">
+            <AlertCircle className="mx-auto h-8 w-8 text-slate-600" />
+            <p className="mt-3 text-sm text-slate-400">
+              No matching results found for &ldquo;<span className="text-slate-200">{query}</span>&rdquo;
             </p>
           </div>
         )}
-      </section>
-    </div>
+
+        {results.length > 0 && (
+          <div className="space-y-6">
+            {Array.from(grouped.entries()).map(([category, items]) => (
+              <div key={category} className="space-y-3">
+                <h2 className="text-xs font-semibold uppercase tracking-wider text-purple-300">
+                  {category} ({items.length})
+                </h2>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {items.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="group flex items-start gap-3 rounded-xl border border-slate-700/60 bg-slate-900/50 p-4 transition hover:border-purple-400/40 hover:bg-slate-800/50"
+                    >
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate font-medium text-white">{item.title}</p>
+                        <p className="mt-0.5 truncate text-xs text-slate-500">{item.description}</p>
+                      </div>
+                      <ArrowRight className="h-4 w-4 flex-shrink-0 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {!query && results.length === 0 && (
+          <div className="space-y-6">
+            {Array.from(groupByCategory(ALL_SEARCH_ITEMS.slice(0, 40))).map(([category, items]) => (
+              <div key={category} className="space-y-3">
+                <h2 className="text-xs font-semibold uppercase tracking-wider text-purple-300">
+                  {category}
+                </h2>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {items.slice(0, 6).map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="group flex items-start gap-3 rounded-xl border border-slate-700/60 bg-slate-900/50 p-4 transition hover:border-purple-400/40 hover:bg-slate-800/50"
+                    >
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate font-medium text-white">{item.title}</p>
+                        <p className="mt-0.5 truncate text-xs text-slate-500">{item.description}</p>
+                      </div>
+                      <ArrowRight className="h-4 w-4 flex-shrink-0 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div className="text-center">
+          <p className="text-sm text-slate-500">
+            Need help? Contact us{' '}
+            <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:underline">
+              kleber@ziontechgroup.com
+            </a>{' '}
+            or call{' '}
+            <span className="text-purple-400">+1 302 464 0950</span>
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
