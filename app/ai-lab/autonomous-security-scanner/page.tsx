@@ -62,7 +62,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         title: 'eval() or exec() Usage Detected',
         description: 'Dynamic code execution can lead to Remote Code Execution (RCE) if user input reaches these functions.',
         remediation: 'Avoid eval/exec. Use safer alternatives like JSON.parse() or Function constructors with strict input validation.',
-        codeExample: '// Instead of eval(code), use:\nconst result = Function('"use strict"; return (' + code + ')')();',
+        codeExample: "// Avoid eval/exec. Use safer alternatives like JSON.parse() or Function with strict validation.",
         owaspReference: 'A03:2021 – Injection',
       });
     }
