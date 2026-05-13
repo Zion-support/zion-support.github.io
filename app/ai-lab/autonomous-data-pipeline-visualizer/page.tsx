@@ -120,7 +120,7 @@ export default function AutonomousDataPipelineVisualizer() {
                 const from = positions.find(p => p.id === e.from);
                 const to = positions.find(p => p.id === e.to);
                 if (!from || !to) return null;
-                return <line key={i} x1={from.x + 80} y1={from.y} x2={to.x - 80} y2={to.y} stroke="#58a6ff" strokeWidth="2" markerEnd="url(#arrow)" /><text key={`${i}-t`} x={(from.x + 80 + to.x - 80) / 2 - 30} y={(from.y + to.y) / 2 - 5} fill="#c9d1d9" fontSize="0.75rem">{e.label}</text>
+                return (<>\n                return   <line key={i} x1={from.x + 80} y1={from.y} x2={to.x - 80} y2={to.y} stroke="#58a6ff" strokeWidth="2" markerEnd="url(#arrow)" />\n                return   <text key={`${i}-t`} x={(from.x + 80 + to.x - 80) / 2 - 30} y={(from.y + to.y) / 2 - 5} fill="#c9d1d9" fontSize="0.75rem">{e.label}</text>\n                return </>)
               })}
               {positions.map((n, i) => {
                 const color = { source: '#238636', transform: '#f0883e', destination: '#58a6ff' }[n.type];
