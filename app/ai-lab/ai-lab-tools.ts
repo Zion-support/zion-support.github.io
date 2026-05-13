@@ -61,7 +61,8 @@ export type AILabToolId =
   | 'autonomous-support-ticket-analyzer'
   | 'autonomous-slo-dashboard'
   | 'autonomous-architecture-reviewer'
-  | 'autonomous-gdpr-compliance-checker';
+  | 'autonomous-gdpr-compliance-checker'
+  | 'autonomous-contract-analyzer';
 
 
 export interface AILabTool {
@@ -745,6 +746,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Governance & Risk',
     status: 'live',
     href: '/ai-lab/autonomous-gdpr-compliance-checker',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-contract-analyzer',
+    slug: 'autonomous-contract-analyzer',
+    title: 'Autonomous Contract & SLA Analyzer',
+    shortDescription:
+      'Paste contracts/SLAs to extract obligations, penalties, renewal dates, liability caps, and risk-scored recommendations.',
+    category: 'Legal Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-contract-analyzer',
     badge: 'New',
   },
 ];
