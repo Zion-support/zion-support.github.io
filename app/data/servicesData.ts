@@ -603,6 +603,78 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-speech-voice-solutions',
     category: 'ai'
+  },
+  {
+    id: 'ai-agentic-workflows',
+    title: 'AI Agentic Workflow Automation',
+    description: 'Autonomous AI agents that plan, execute, and monitor multi-step business workflows — from data gathering to decision execution with human-in-the-loop oversight.',
+    features: ['Multi-agent orchestration with role specialization', 'Natural language workflow design', 'Human-in-the-loop approval gates', 'Self-healing workflows with error recovery', 'Real-time monitoring dashboards', 'Integration with 200+ enterprise tools'],
+    benefits: ['Replace 70% of repetitive operational workflows', '24/7 autonomous execution without human intervention', 'Faster workflow creation with natural language design', 'Seamless integration with existing tool stack'],
+    pricing: { basic: '399', pro: '899', enterprise: '2499' },
+    contactInfo: { website: '/ai-services/ai-agentic-workflows', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🤖',
+    href: '/ai-services/ai-agentic-workflows',
+    category: 'ai'
+  },
+  {
+    id: 'ai-regulatory-compliance-monitor',
+    title: 'AI Regulatory Compliance Monitor',
+    description: 'Continuous regulatory change monitoring across 150+ jurisdictions with automated impact analysis, gap detection, and compliance report generation for financial services and healthcare.',
+    features: ['150+ jurisdiction regulatory change tracking', 'AI-powered impact analysis on existing operations', 'Automated compliance gap detection', 'Real-time deadline and filing alerts', 'Audit-ready evidence collection', 'Integration with GRC platforms'],
+    benefits: ['Never miss a regulatory deadline again', 'Reduce compliance research time by 90%', 'Automated reporting for SOC 2, HIPAA, GDPR', 'Proactive risk mitigation before violations occur'],
+    pricing: { basic: '699', pro: '1599', enterprise: '3999' },
+    contactInfo: { website: '/ai-services/ai-regulatory-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📜',
+    href: '/ai-services/ai-regulatory-compliance',
+    category: 'ai'
+  },
+  {
+    id: 'ai-talent-acquisition',
+    title: 'AI Talent Acquisition & Hiring Intelligence',
+    description: 'End-to-end AI recruiting platform — candidate sourcing, resume screening, bias-free scoring, interview scheduling, and predictive hiring success modeling.',
+    features: ['Multi-platform AI candidate sourcing', 'Bias-free resume scoring & ranking', 'Automated interview scheduling & coordination', 'Predictive hiring success modeling', 'Competitor talent mapping & intelligence', 'DEI analytics & reporting dashboard'],
+    benefits: ['Reduce time-to-hire by 60% with AI sourcing', 'Eliminate unconscious bias in screening', 'Predict candidate retention probability before hiring', 'Access passive candidates through intelligent mapping'],
+    pricing: { basic: '449', pro: '999', enterprise: '2299' },
+    contactInfo: { website: '/ai-services/ai-talent-acquisition', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎯',
+    href: '/ai-services/ai-talent-acquisition',
+    category: 'ai'
+  },
+  {
+    id: 'ai-financial-fraud-detection',
+    title: 'AI Financial Fraud Detection & Prevention',
+    description: 'Real-time transaction monitoring with deep learning anomaly detection, customer behavior profiling, and automated case management for banking and fintech.',
+    features: ['Real-time transaction scoring & blocking', 'Deep learning behavioral anomaly detection', 'Customer risk profiling with dynamic baselines', 'Automated case management with evidence bundling', 'False positive reduction with adaptive learning', 'Regulatory reporting (BSA, AML, SAR) automation'],
+    benefits: ['Catch 99.7% of fraudulent transactions in real time', 'Reduce false positives by 75% with adaptive models', 'Automate suspicious activity reporting', 'Lower fraud losses by 80% on average'],
+    pricing: { basic: '799', pro: '1899', enterprise: '4499' },
+    contactInfo: { website: '/ai-services/ai-fraud-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/ai-services/ai-fraud-detection',
+    category: 'ai'
+  },
+  {
+    id: 'ai-energy-optimization',
+    title: 'AI Energy Optimization & Sustainability',
+    description: 'AI-driven energy consumption optimization for buildings, data centers, and manufacturing — reduce costs, meet ESG targets, and automate sustainability reporting.',
+    features: ['AI-powered energy load forecasting and optimization', 'HVAC, lighting, and power system automated control', 'Carbon emissions tracking with ESG reporting', 'Peer benchmarking and efficiency gap analysis', 'Renewable energy integration recommendations', 'Real-time cost savings dashboard'],
+    benefits: ['Reduce energy costs by 25-40%', 'Automate ESG and sustainability reporting', 'Meet regulatory carbon reduction targets', 'Predict equipment failures before they waste energy'],
+    pricing: { basic: '549', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/ai-services/ai-energy-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚡',
+    href: '/ai-services/ai-energy-optimization',
+    category: 'ai'
+  },
+  {
+    id: 'ai-personalization-engine',
+    title: 'AI Personalization & Recommendation Engine',
+    description: 'Real-time personalization for websites, apps, and e-commerce — dynamic content, product recommendations, pricing, and messaging tailored to each visitor.',
+    features: ['Real-time visitor behavior tracking and profiling', 'Dynamic content serving based on user segments', 'Cross-channel personalized messaging', 'AI-powered product recommendation engine', 'A/B/n testing with multi-armed bandit optimization', 'Revenue attribution and ROI measurement'],
+    benefits: ['Increase conversion rates by 35-50%', 'Personalize every visitor experience in real time', 'Optimize product discovery for e-commerce', 'Measure personalization ROI with attribution modeling'],
+    pricing: { basic: '349', pro: '799', enterprise: '1899' },
+    contactInfo: { website: '/ai-services/ai-personalization-engine', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '✨',
+    href: '/ai-services/ai-personalization-engine',
+    category: 'ai'
   }
 ];
 
@@ -984,6 +1056,78 @@ export const itServices: Service[] = [
     icon: '🔐',
     href: '/it-services/zero-trust-architecture',
     category: 'security'
+  },
+  {
+    id: 'it-kubernetes-management',
+    title: 'Container Orchestration & Kubernetes Management',
+    description: 'Enterprise Kubernetes deployment, management, and optimization — multi-cluster orchestration, GitOps workflows, and service mesh implementation.',
+    features: ['Multi-cluster Kubernetes orchestration', 'GitOps deployment pipelines with ArgoCD', 'Service mesh implementation (Istio, Linkerd)', 'Automated scaling and self-healing', 'Cost optimization and resource right-sizing'],
+    benefits: ['Reduce infrastructure costs by 40%', 'Zero-downtime deployments with blue-green', 'Accelerate developer velocity 3x', 'Enterprise-grade reliability and observability'],
+    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
+    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🐳',
+    href: '/it-services/kubernetes-management',
+    category: 'cloud'
+  },
+  {
+    id: 'it-penetration-testing',
+    title: 'Penetration Testing & Vulnerability Assessment',
+    description: 'Comprehensive security testing — network, web application, API, and social engineering assessments with detailed remediation reports and retesting.',
+    features: ['Black-box and white-box penetration testing', 'Web application and API security testing', 'Social engineering and phishing simulations', 'Wireless and network infrastructure testing', 'Detailed remediation reports with retesting'],
+    benefits: ['Identify vulnerabilities before attackers do', 'Meet PCI-DSS, HIPAA, and SOC 2 testing requirements', 'Reduce attack surface with actionable reports', 'Validate security controls effectiveness'],
+    pricing: { basic: '2999', pro: '5999', enterprise: '12999' },
+    contactInfo: { website: '/it-services/penetration-testing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔓',
+    href: '/it-services/penetration-testing',
+    category: 'security'
+  },
+  {
+    id: 'it-blockchain-development',
+    title: 'Blockchain Development & Smart Contract Auditing',
+    description: 'End-to-end blockchain solution development — smart contract creation, security auditing, tokenomics design, and Web3 integration for enterprises.',
+    features: ['Smart contract development and deployment', 'Formal verification and security auditing', 'Tokenomics and governance design', 'DeFi protocol integration and development', 'Enterprise blockchain consulting and strategy'],
+    benefits: ['Launch secure blockchain products faster', 'Prevent exploits with formal verification', 'Access decentralized finance opportunities', 'Enterprise-grade blockchain integration'],
+    pricing: { basic: '4999', pro: '9999', enterprise: '24999' },
+    contactInfo: { website: '/it-services/blockchain-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⛓️',
+    href: '/it-services/blockchain-development',
+    category: 'it'
+  },
+  {
+    id: 'it-quantum-readiness',
+    title: 'Quantum Computing Readiness Assessment',
+    description: 'Evaluate your organization quantum readiness, identify cryptographic vulnerabilities, and develop migration strategies for post-quantum security standards.',
+    features: ['Post-quantum cryptography assessment', 'Quantum vulnerability scanning across systems', 'NIST PQC migration roadmap development', 'Quantum-safe encryption implementation', 'Executive quantum risk briefing and training'],
+    benefits: ['Prepare for quantum computing threats proactively', 'Comply with emerging NIST PQC standards', 'Protect long-lived encrypted data from harvest-now-decrypt-later', 'Position as quantum-ready enterprise leader'],
+    pricing: { basic: '3499', pro: '7999', enterprise: '18999' },
+    contactInfo: { website: '/it-services/quantum-readiness', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔮',
+    href: '/it-services/quantum-readiness',
+    category: 'security'
+  },
+  {
+    id: 'it-5g-network-deployment',
+    title: '5G Network Planning & Deployment',
+    description: 'End-to-end 5G network architecture, RF planning, edge computing integration, and private 5G deployment for enterprise campuses and industrial IoT.',
+    features: ['5G network architecture and RF planning', 'Private 5G network deployment for campuses', 'Edge computing integration with 5G infrastructure', 'Network slicing design and implementation', 'Industrial IoT connectivity and optimization'],
+    benefits: ['Ultra-low latency for mission-critical applications', 'Massive IoT device connectivity at scale', 'Secure private networks off public infrastructure', 'Future-proof connectivity for digital transformation'],
+    pricing: { basic: '9999', pro: '19999', enterprise: '49999' },
+    contactInfo: { website: '/it-services/5g-network-deployment', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📶',
+    href: '/it-services/5g-network-deployment',
+    category: 'cloud'
+  },
+  {
+    id: 'it-digital-twin-platform',
+    title: 'Digital Twin & IoT Platform Development',
+    description: 'Build real-time digital replicas of physical systems — factory floors, supply chains, and smart cities with predictive simulation and optimization capabilities.',
+    features: ['3D digital twin modeling and visualization', 'Real-time IoT sensor data ingestion and mapping', 'Predictive simulation and what-if scenario analysis', 'Integration with CAD, BIM, and ERP systems', 'Automated alerts and anomaly detection'],
+    benefits: ['Simulate changes before real-world implementation', 'Reduce operational downtime by 40%', 'Optimize resource allocation with predictive modeling', 'Unified visibility across complex physical-digital systems'],
+    pricing: { basic: '5999', pro: '12999', enterprise: '29999' },
+    contactInfo: { website: '/it-services/digital-twin-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🏗️',
+    href: '/it-services/digital-twin-platform',
+    category: 'automation'
   }
 ];
 

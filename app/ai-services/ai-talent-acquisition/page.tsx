@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Fraud Detection and Prevention | Zion Tech Group',
-  description: 'Real-time transaction monitoring with deep learning anomaly detection and automated case management for banking and fintech.',
-  alternates: { canonical: '/ai-services/ai-fraud-detection' },
+  title: 'AI Talent Acquisition and Hiring Intelligence | Zion Tech Group',
+  description: 'End-to-end AI recruiting platform minus candidate sourcing, resume screening, bias-free scoring, and predictive hiring modeling.',
+  alternates: { canonical: '/ai-services/ai-talent-acquisition' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Financial Fraud Detection and Prevention',
+        title: 'AI Talent Acquisition and Hiring Intelligence',
         category: 'AI Services',
-        description: 'Real-time transaction monitoring with deep learning anomaly detection and automated case management for banking and fintech.',
-        iconEmoji: '🛡',
+        description: 'End-to-end AI recruiting platform minus candidate sourcing, resume screening, bias-free scoring, and predictive hiring modeling.',
+        iconEmoji: '🎯',
         features: [
           { title: 'AI-Powered Analysis', description: 'Machine learning models trained on industry-specific data for superior accuracy.' },
           { title: 'Real-Time Processing', description: 'Instant insights and alerts with sub-second response times.' },

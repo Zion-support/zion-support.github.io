@@ -344,6 +344,76 @@ export const microSaasCatalog: MicroSaaSProduct[] = [
     icon: '📉',
     description: 'Identify at-risk customers before they leave with ML-powered churn signals and automated retention workflows.'
   },
+  {
+    slug: 'ai-cybersecurity-trainer',
+    name: 'AI Cybersecurity Training Platform',
+    category: 'Security Awareness',
+    icon: '🛡',
+    description: 'Interactive AI-driven phishing simulations, security awareness modules, and compliance training with personalized learning paths.'
+  },
+  {
+    slug: 'ai-podcast-producer',
+    name: 'AI Podcast Production Studio',
+    category: 'Media & Content Creation',
+    icon: '🎙',
+    description: 'End-to-end podcast production — AI script writing, voice synthesis, audio editing, show note generation, and distribution.'
+  },
+  {
+    slug: 'ai-mental-health-coach',
+    name: 'AI Mental Health & Wellness Coach',
+    category: 'Health & Wellness',
+    icon: '💚',
+    description: 'AI-powered mental health support with mood tracking, CBT exercises, guided meditation, and crisis escalation protocols.'
+  },
+  {
+    slug: 'ai-property-manager',
+    name: 'AI Property Management Assistant',
+    category: 'Real Estate & Facilities',
+    icon: '🏠',
+    description: 'Automated tenant screening, maintenance request triage, lease management, and market rent analysis for property portfolios.'
+  },
+  {
+    slug: 'ai-grant-writer',
+    name: 'AI Grant Writer & Funding Matcher',
+    category: 'Non-Profit & Education',
+    icon: '💰',
+    description: 'AI grant proposal generation, funder matching, compliance checking, and deadline management for nonprofits and research institutions.'
+  },
+  {
+    slug: 'ai-research-assistant',
+    name: 'AI Academic Research Assistant',
+    category: 'Education & Research',
+    icon: '📚',
+    description: 'Literature review automation, citation management, research gap identification, and academic paper drafting assistance.'
+  },
+  {
+    slug: 'ai-event-planner-pro',
+    name: 'AI Event Planning & Coordination',
+    category: 'Events & Hospitality',
+    icon: '🎉',
+    description: 'End-to-end event planning — venue sourcing, vendor negotiation, guest list optimization, and real-time event day coordination.'
+  },
+  {
+    slug: 'ai-dietitian',
+    name: 'AI Nutrition & Meal Planner',
+    category: 'Health & Wellness',
+    icon: '🥗',
+    description: 'Personalized meal planning based on dietary goals, allergies, and health conditions with grocery list automation.'
+  },
+  {
+    slug: 'ai-patent-analyzer',
+    name: 'AI Patent Search & Analysis Tool',
+    category: 'Legal & IP',
+    icon: '⚖',
+    description: 'AI-powered patent landscape analysis, prior art search, infringement detection, and patentability assessment.'
+  },
+  {
+    slug: 'ai-ux-auditor',
+    name: 'AI UX Audit & Conversion Optimizer',
+    category: 'Design & UX',
+    icon: '🎨',
+    description: 'Automated UX analysis, A/B test prioritization, accessibility scoring, and conversion rate optimization recommendations.'
+  },
 ];
 
 export function groupMicroSaaSByCategory(products: MicroSaaSProduct[] = microSaasCatalog): Record<string, MicroSaaSProduct[]> {

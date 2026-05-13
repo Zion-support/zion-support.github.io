@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Patent Search & Analysis Tool | Zion Tech Group',
-  description: 'AI-powered patent landscape analysis, prior art search, infringement detection, and patentability assessment.',
-  alternates: { canonical: '/micro-saas/ai-patent-analyzer' },
+  title: 'AI Property Management Assistant | Zion Tech Group',
+  description: 'Automated tenant screening, maintenance request triage, lease management, and market rent analysis for property portfolios.',
+  alternates: { canonical: '/micro-saas/ai-property-manager' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Patent Search & Analysis Tool',
-        category: 'Micro SaaS · Legal & IP',
-        description: 'AI-powered patent landscape analysis, prior art search, infringement detection, and patentability assessment.',
-        iconEmoji: '⚖',
+        title: 'AI Property Management Assistant',
+        category: 'Micro SaaS · Real Estate & Facilities',
+        description: 'Automated tenant screening, maintenance request triage, lease management, and market rent analysis for property portfolios.',
+        iconEmoji: '🏠',
         features: [
           { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns and reduce manual effort.' },
           { title: 'Cloud-Hosted', description: 'Zero setup required, accessible from anywhere.' },
@@ -38,9 +38,9 @@ export default function Page() {
         ],
         ctaLabel: 'Start Your Free Trial',
         pricing: [
-          { tier: 'Starter', price: '$39', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics', 'Email support'] },
-          { tier: 'Professional', price: '$89', period: '/month', features: ['All Starter features', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
-          { tier: 'Enterprise', price: '$199', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA guarantee', 'SSO'] },
+          { tier: 'Starter', price: '$29', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics', 'Email support'] },
+          { tier: 'Professional', price: '$69', period: '/month', features: ['All Starter features', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
+          { tier: 'Enterprise', price: '$179', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA guarantee', 'SSO'] },
         ],
         contact: {
           phone: '+1 302 464 0950',
