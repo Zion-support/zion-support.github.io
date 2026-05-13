@@ -1,31 +1,37 @@
 # Workflow failure triage
 
-- generatedAt: 2026-05-13T15:13:14.614Z
+- generatedAt: 2026-05-13T17:52:18.138Z
 - recentRuns: 80
-- failedRuns: 13
+- failedRuns: 14
 
 ## Top failing workflows
-- AI lead gen contact route guard: 3
-- AI Experiences Health: 2
-- AI Uninterruptable Content Loop: 2
-- AI Content Rapid: 1
-- AI Content Accelerator: 1
+- AI Content Burst Ultra: 1
 - AI Content Burst: 1
-- AI Autonomous Idea Guarded Cycle: 1
-- Observability history freshness guard: 1
-- Automation health static freshness guard: 1
+- Autonomous Bundle Split Analyzer: 1
+- Autonomous Changelog Generator: 1
+- CI/CD Pipeline: 1
+- Deploy to GitHub Pages: 1
+- OpenAPI Contract Drift Detector: 1
+- .github/workflows/workflow-contracts-weekly.yml: 1
+- .github/workflows/workflow-yaml-sanity.yml: 1
+- .github/workflows/workflow-validate-light-weekly.yml: 1
+- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
+- .github/workflows/route-slicer.yml: 1
+- .github/workflows/workflow-change-guard.yml: 1
+- .github/workflows/ai-actions-pin-strict-guard.yml: 1
 
 ## Latest failed runs
-- AI lead gen contact route guard | 2026-05-13T15:10:13Z | https://github.com/Zion-support/zion.app/actions/runs/25807967963
-- AI Content Rapid | 2026-05-13T15:09:25Z | https://github.com/Zion-support/zion.app/actions/runs/25807922094
-- AI Content Accelerator | 2026-05-13T14:57:09Z | https://github.com/Zion-support/zion.app/actions/runs/25807218741
-- AI lead gen contact route guard | 2026-05-13T13:57:25Z | https://github.com/Zion-support/zion.app/actions/runs/25803809597
-- AI Experiences Health | 2026-05-13T13:56:52Z | https://github.com/Zion-support/zion.app/actions/runs/25803777763
-- AI Uninterruptable Content Loop | 2026-05-13T13:55:49Z | https://github.com/Zion-support/zion.app/actions/runs/25803717342
-- AI Content Burst | 2026-05-13T13:44:10Z | https://github.com/Zion-support/zion.app/actions/runs/25803055264
-- AI Autonomous Idea Guarded Cycle | 2026-05-13T13:23:22Z | https://github.com/Zion-support/zion.app/actions/runs/25801908901
-- Observability history freshness guard | 2026-05-13T13:11:13Z | https://github.com/Zion-support/zion.app/actions/runs/25801265703
-- AI lead gen contact route guard | 2026-05-13T13:05:58Z | https://github.com/Zion-support/zion.app/actions/runs/25800995502
-- AI Experiences Health | 2026-05-13T13:02:20Z | https://github.com/Zion-support/zion.app/actions/runs/25800804447
-- AI Uninterruptable Content Loop | 2026-05-13T13:02:11Z | https://github.com/Zion-support/zion.app/actions/runs/25800796860
-- Automation health static freshness guard | 2026-05-13T13:02:07Z | https://github.com/Zion-support/zion.app/actions/runs/25800792467
+- AI Content Burst Ultra | 2026-05-13T17:46:15Z | https://github.com/Zion-support/zion.app/actions/runs/25816326702
+- AI Content Burst | 2026-05-13T17:41:11Z | https://github.com/Zion-support/zion.app/actions/runs/25816064612
+- Autonomous Bundle Split Analyzer | 2026-05-13T17:11:32Z | https://github.com/Zion-support/zion.app/actions/runs/25814553402
+- Autonomous Changelog Generator | 2026-05-13T17:11:30Z | https://github.com/Zion-support/zion.app/actions/runs/25814552445
+- CI/CD Pipeline | 2026-05-13T17:11:29Z | https://github.com/Zion-support/zion.app/actions/runs/25814551407
+- Deploy to GitHub Pages | 2026-05-13T17:11:27Z | https://github.com/Zion-support/zion.app/actions/runs/25814549011
+- OpenAPI Contract Drift Detector | 2026-05-13T17:11:27Z | https://github.com/Zion-support/zion.app/actions/runs/25814548995
+- .github/workflows/workflow-contracts-weekly.yml | 2026-05-13T17:11:22Z | https://github.com/Zion-support/zion.app/actions/runs/25814544807
+- .github/workflows/workflow-yaml-sanity.yml | 2026-05-13T17:11:19Z | https://github.com/Zion-support/zion.app/actions/runs/25814542380
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-05-13T17:11:19Z | https://github.com/Zion-support/zion.app/actions/runs/25814541904
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-05-13T17:11:16Z | https://github.com/Zion-support/zion.app/actions/runs/25814539174
+- .github/workflows/route-slicer.yml | 2026-05-13T17:11:13Z | https://github.com/Zion-support/zion.app/actions/runs/25814536728
+- .github/workflows/workflow-change-guard.yml | 2026-05-13T17:11:09Z | https://github.com/Zion-support/zion.app/actions/runs/25814533957
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-05-13T17:11:07Z | https://github.com/Zion-support/zion.app/actions/runs/25814531510
