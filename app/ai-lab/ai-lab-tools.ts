@@ -32,7 +32,7 @@ export type AILabToolId =
   | 'autonomous-media-prompt-studio'
   | 'autonomous-meeting-analyzer'
   | 'autonomous-opportunity-radar'
-  | 'autonomous-pricing-optimizer'
+  | 'autonomous-pricing-strategy-optimizer'
   | 'autonomous-project-estimator'
   | 'autonomous-prompt-cost-calculator'
   | 'autonomous-rag-knowledge-workspace'
@@ -53,8 +53,8 @@ export type AILabToolId =
   | 'dynamic-api-monitoring'
   | 'idea-to-feature-blueprint'
   | 'implementation-readiness-checker'
-  | 'roi-ops-scorecard'
-  | 'rollout-blueprint'
+  | 'ai-roi-ops-scorecard'
+  | 'ai-rollout-blueprint'
   | 'autonomous-db-schema-designer'
   | 'autonomous-churn-predictor'
   | 'autonomous-content-calendar'
@@ -67,7 +67,9 @@ export type AILabToolId =
   | 'autonomous-knowledge-base-auditor'
   | 'autonomous-incident-timeline-builder'
   | 'autonomous-api-test-generator'
-  | 'autonomous-competitor-analysis-engine';
+  | 'autonomous-competitor-analysis-engine'
+  | 'autonomous-code-deploy-simulator'
+  | 'autonomous-uptime-monitor';
 
 
 export interface AILabTool {
@@ -817,6 +819,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Market Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-competitor-analysis-engine',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-code-deploy-simulator',
+    slug: 'autonomous-code-deploy-simulator',
+    title: 'Autonomous Code Deploy Simulator',
+    shortDescription:
+      'Simulate CI/CD pipeline runs for different change types. See which steps fail fast and how long deployments take.',
+    category: 'Developer Tools',
+    status: 'live',
+    href: '/ai-lab/autonomous-code-deploy-simulator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-uptime-monitor',
+    slug: 'autonomous-uptime-monitor',
+    title: 'Autonomous Uptime Monitor',
+    shortDescription:
+      'Track website uptime, response times, and outage history with SLA reporting and alert thresholds.',
+    category: 'Reliability Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-uptime-monitor',
     badge: 'New',
   },
 ];
