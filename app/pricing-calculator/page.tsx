@@ -1,61 +1,79 @@
 'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, Zap, Brain, Rocket } from 'lucide-react';
 
-const PLANS = [
-  { name: 'Starter', price: 499, icon: Zap, features: ['5 AI Services', '1,000 API calls/mo', 'Email Support', 'Basic Analytics'] },
-  { name: 'Professional', price: 999, icon: Brain, popular: true, features: ['25 AI Services', '50,000 API calls/mo', 'Priority Support', 'Advanced Analytics', 'Custom Integration'] },
-  { name: 'Enterprise', price: 2499, icon: Rocket, features: ['Unlimited AI Services', 'Unlimited API calls', '24/7 Phone Support', 'Custom SLA', 'Dedicated Manager', 'On-premise option'] }
-];
+import React, { useState, useMemo, useCallback } from 'react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import Breadcrumb from '../components/Breadcrumb';
+import PricingCalculator from '../components/PricingCalculator';
 
-export default function PricingCalculator() {
-  const [users, setUsers] = useState(10);
-  const [apiCalls, setApiCalls] = useState(10000);
-  
-  const getPrice = (basePrice: number) => {
-    const userMultiplier = Math.max(1, users / 10);
-    const apiMultiplier = Math.max(1, apiCalls / 10000);
-    return Math.round(basePrice * userMultiplier * Math.sqrt(apiMultiplier));
-  };
+export const metadata: Metadata = {
+  title: 'Pricing Calculator | Zion Tech Group',
+  description:
+    'Get an instant, personalized cost estimate for AI and IT services. Configure your team size, services, and support level in seconds.',
+  alternates: { canonical: '/pricing-calculator' },
+};
 
+export default function PricingCalculatorPage() {
   return (
-    <div className="min-h-screen bg-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-4">Pricing Calculator</h1>
-          <p className="text-xl text-slate-400">Calculate your custom AI solution pricing</p>
-        </motion.div>
+    <div className="relative min-h-screen bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-20 left-1/3 h-[24rem] w-[24rem] rounded-full bg-purple-500/20 blur-3xl" />
+        <div className="absolute bottom-[-8rem] right-[-4rem] h-[20rem] w-[20rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {PLANS.map((plan, i) => (
-            <motion.div key={plan.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} className={`bg-slate-800 rounded-2xl p-8 border ${plan.popular ? 'border-violet-500 relative' : 'border-slate-700'}`}>
-              {plan.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-600 text-white text-xs px-3 py-1 rounded-full">Most Popular</span>}
-              <plan.icon className="w-10 h-10 text-violet-400 mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-              <div className="text-4xl font-bold text-white mb-6">${getPrice(plan.price)}<span className="text-lg text-slate-400 font-normal">/mo</span></div>
-              <ul className="space-y-3 mb-8">
-                {plan.features.map(f => <li key={f} className="flex items-center gap-2 text-slate-300"><Check className="w-4 h-4 text-green-400" />{f}</li>)}
-              </ul>
-              <a href="/contact" className={`block text-center py-3 rounded-lg font-medium transition-colors ${plan.popular ? 'bg-violet-600 hover:bg-violet-700 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}>Get Started</a>
-            </motion.div>
-          ))}
+      <section className="relative mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Pricing', href: '/pricing' },
+            { label: 'Pricing Calculator' },
+          ]}
+          className="mb-6"
+        />
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
+            Interactive Cost Estimator
+          </p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Pricing Calculator
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            Configure your project requirements and get an instant, personalized cost estimate in seconds.
+            Adjust team size, services, and support level to find the perfect plan.
+          </p>
         </div>
+      </section>
 
-        <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700 max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-6">Estimate Your Needs</h3>
-          <div className="space-y-6">
-            <div>
-              <label className="block text-slate-300 mb-2">Number of Users: {users}</label>
-              <input type="range" min="1" max="100" value={users} onChange={e => setUsers(+e.target.value)} className="w-full accent-violet-500" />
-            </div>
-            <div>
-              <label className="block text-slate-300 mb-2">Monthly API Calls: {apiCalls.toLocaleString()}</label>
-              <input type="range" min="1000" max="100000" step="1000" value={apiCalls} onChange={e => setApiCalls(+e.target.value)} className="w-full accent-violet-500" />
-            </div>
+      <PricingCalculator />
+
+      {/* Results contact CTA */}
+      <section className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-8 text-center shadow-2xl sm:p-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            Ready to Get an Accurate Quote?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-200">
+            Use the calculator above for a quick estimate, then let our team build a detailed proposal
+            tailored to your exact requirements.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact?topic=pricing-calculator&source=calculator"
+              className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+              data-cta-event="cta_primary"
+              data-cta-label="calculator_contact_sales"
+            >
+              Contact Sales for Custom Quote
+            </Link>
+            <Link
+              href="/pricing"
+              className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              View Standard Pricing Plans
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
