@@ -2,8 +2,13 @@
 
 /**
  * AI Code Generator - Advanced AI-powered code generation and improvement
- * 
- * Uses Anthropic Claude or OpenAI GPT to:
+ *
+/**
+ * AI Code Generator - Advanced AI-powered code generation and improvement
+ *
+ * Uses unified LLM client with multi-provider fallback chain:
+ *   Ollama → Groq → Gemini → HuggingFace → Cerebras → Cloudflare → DeepSeek → Mistral → Together → Cohere → OpenRouter
+ *
  * - Generate new features
  * - Refactor code
  * - Write tests
@@ -15,7 +20,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const https = require('https');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 class AICodeGenerator {
   constructor() {
@@ -23,10 +28,9 @@ class AICodeGenerator {
     this.logsDir = path.join(__dirname, 'logs');
     this.logFile = path.join(this.logsDir, 'ai-code-generator.log');
     this.outputDir = path.join(__dirname, 'generated');
-    
-    this.apiKey = process.env.OPENROUTER_API_KEY || process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY;
-    this.provider = process.env.OPENROUTER_API_KEY ? 'openrouter' : (process.env.ANTHROPIC_API_KEY ? 'anthropic' : 'openai');
-    
+
+    this.llm = createLLMClient({ appName: 'Zion AI Code Generator' });
+
     this.ensureDirectories();
   }
 
@@ -46,197 +50,37 @@ class AICodeGenerator {
   }
 
   async callAI(prompt, maxTokens = 4096) {
-    if (!this.apiKey) {
-      throw new Error('API key not found. Set OPENROUTER_API_KEY, ANTHROPIC_API_KEY, or OPENAI_API_KEY environment variable.');
+    const info = this.llm.getProviderInfo();
+    if (!info.configured) {
+      throw new Error(
+        'No LLM provider available. Configure one of: OLLAMA_URL/GROQ_API_KEY/GEMINI_API_KEY/' +
+        'HUGGINGFACE_HUB_TOKEN/CEREBRAS_API_KEY/CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN/' +
+        'DEEPSEEK_API_KEY/MISTRAL_API_KEY/TOGETHER_API_KEY/FIREWORKS_API_KEY/COHERE_API_KEY/' +
+        'OPENROUTER_API_KEY'
+      );
     }
 
-    this.log(`Calling ${this.provider} AI...`);
+    this.log(`Calling LLM via ${info.provider} (${info.model})...`);
 
-    if (this.provider === 'openrouter') {
-      return await this.callOpenRouter(prompt, maxTokens);
-    } else if (this.provider === 'anthropic') {
-      return await this.callAnthropic(prompt, maxTokens);
-    } else {
-      return await this.callOpenAI(prompt, maxTokens);
+    try {
+      const response = await this.llm.chat(prompt, {
+        maxTokens,
+        temperature: 0.7,
+        systemPrompt: 'You are an expert software developer. Provide high-quality, production-ready code.',
+      });
+      return response;
+    } catch (err) {
+      this.log(`LLM call failed (${info.provider}): ${err.message}`, 'WARN');
+      throw err;
     }
-  }
-
-  async callOpenRouter(prompt, maxTokens) {
-    return new Promise((resolve, reject) => {
-      const data = JSON.stringify({
-        model: 'openrouter/auto',
-        messages: [
-          { role: 'system', content: 'You are an expert software developer. Provide high-quality, production-ready code.' },
-          { role: 'user', content: prompt }
-        ],
-        max_tokens: maxTokens,
-        temperature: 0.7
-      });
-
-      const options = {
-        hostname: 'openrouter.ai',
-        path: '/api/v1/chat/completions',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
-          'HTTP-Referer': 'https://ziontechgroup.com',
-          'X-Title': 'Zion Tech Group AI Code Generator',
-          'Content-Length': Buffer.byteLength(data)
-        }
-      };
-
-      const req = https.request(options, (res) => {
-        let body = '';
-        res.on('data', (chunk) => { body += chunk; });
-        res.on('end', () => {
-          try {
-            const response = JSON.parse(body);
-            if (response.error) {
-              reject(new Error(typeof response.error === 'string' ? response.error : response.error.message));
-            } else if (response.choices && response.choices[0]) {
-              resolve(response.choices[0].message.content);
-            } else {
-              reject(new Error('Invalid response format'));
-            }
-          } catch (error) {
-            reject(error);
-          }
-        });
-      });
-
-      req.on('error', reject);
-      req.write(data);
-      req.end();
-    });
-  }
-
-  async callAnthropic(prompt, maxTokens) {
-    return new Promise((resolve, reject) => {
-      const data = JSON.stringify({
-        model: 'claude-3-5-sonnet-20241022',
-        max_tokens: maxTokens,
-        messages: [
-          {
-            role: 'user',
-            content: prompt
-          }
-        ]
-      });
-
-      const options = {
-        hostname: 'api.anthropic.com',
-        path: '/v1/messages',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': this.apiKey,
-          'anthropic-version': '2023-06-01',
-          'Content-Length': data.length
-        }
-      };
-
-      const req = https.request(options, (res) => {
-        let body = '';
-        
-        res.on('data', (chunk) => {
-          body += chunk;
-        });
-        
-        res.on('end', () => {
-          try {
-            const response = JSON.parse(body);
-            
-            if (response.error) {
-              reject(new Error(response.error.message));
-            } else if (response.content && response.content[0]) {
-              resolve(response.content[0].text);
-            } else {
-              reject(new Error('Invalid response format'));
-            }
-          } catch (error) {
-            reject(error);
-          }
-        });
-      });
-
-      req.on('error', (error) => {
-        reject(error);
-      });
-
-      req.write(data);
-      req.end();
-    });
-  }
-
-  async callOpenAI(prompt, maxTokens) {
-    return new Promise((resolve, reject) => {
-      const data = JSON.stringify({
-        model: 'gpt-4-turbo-preview',
-        messages: [
-          {
-            role: 'system',
-            content: 'You are an expert software developer. Provide high-quality, production-ready code.'
-          },
-          {
-            role: 'user',
-            content: prompt
-          }
-        ],
-        max_tokens: maxTokens,
-        temperature: 0.7
-      });
-
-      const options = {
-        hostname: 'api.openai.com',
-        path: '/v1/chat/completions',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Length': data.length
-        }
-      };
-
-      const req = https.request(options, (res) => {
-        let body = '';
-        
-        res.on('data', (chunk) => {
-          body += chunk;
-        });
-        
-        res.on('end', () => {
-          try {
-            const response = JSON.parse(body);
-            
-            if (response.error) {
-              reject(new Error(response.error.message));
-            } else if (response.choices && response.choices[0]) {
-              resolve(response.choices[0].message.content);
-            } else {
-              reject(new Error('Invalid response format'));
-            }
-          } catch (error) {
-            reject(error);
-          }
-        });
-      });
-
-      req.on('error', (error) => {
-        reject(error);
-      });
-
-      req.write(data);
-      req.end();
-    });
   }
 
   async analyzeFile(filePath) {
     this.log(`Analyzing file: ${filePath}`);
-    
+
     const content = fs.readFileSync(filePath, 'utf8');
     const relativePath = path.relative(this.projectRoot, filePath);
-    
+
     const prompt = `Analyze this TypeScript/JavaScript file and suggest improvements:
 
 File: ${relativePath}
@@ -261,13 +105,13 @@ Format your response as JSON with this structure:
 
     try {
       const response = await this.callAI(prompt, 2048);
-      
+
       // Extract JSON from response
       const jsonMatch = response.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         return JSON.parse(jsonMatch[0]);
       }
-      
+
       return { issues: [], suggestions: [] };
     } catch (error) {
       this.log(`Error analyzing file: ${error.message}`, 'ERROR');
@@ -277,7 +121,7 @@ Format your response as JSON with this structure:
 
   async generateComponent(name, description, type = 'functional') {
     this.log(`Generating component: ${name}`);
-    
+
     const prompt = `Generate a production-ready React TypeScript component with the following specifications:
 
 Component Name: ${name}
@@ -298,16 +142,16 @@ Please provide the complete component code, formatted and ready to use.`;
 
     try {
       const code = await this.callAI(prompt, 4096);
-      
+
       // Extract code block
       const codeMatch = code.match(/\`\`\`(?:typescript|tsx)?\n([\s\S]*?)\n\`\`\`/);
       const componentCode = codeMatch ? codeMatch[1] : code;
-      
+
       // Save component
       const fileName = `${name}.tsx`;
       const filePath = path.join(this.outputDir, fileName);
       fs.writeFileSync(filePath, componentCode);
-      
+
       this.log(`Component saved to: ${filePath}`);
       return { filePath, code: componentCode };
     } catch (error) {
@@ -318,10 +162,10 @@ Please provide the complete component code, formatted and ready to use.`;
 
   async generateTests(sourceFile) {
     this.log(`Generating tests for: ${sourceFile}`);
-    
+
     const content = fs.readFileSync(sourceFile, 'utf8');
     const fileName = path.basename(sourceFile, path.extname(sourceFile));
-    
+
     const prompt = `Generate comprehensive Jest tests for this TypeScript/React file:
 
 \`\`\`typescript
@@ -342,16 +186,16 @@ Provide complete test file code.`;
 
     try {
       const code = await this.callAI(prompt, 4096);
-      
+
       // Extract code block
       const codeMatch = code.match(/\`\`\`(?:typescript|tsx)?\n([\s\S]*?)\n\`\`\`/);
       const testCode = codeMatch ? codeMatch[1] : code;
-      
+
       // Save test file
       const testFileName = `${fileName}.test.tsx`;
       const testFilePath = path.join(this.outputDir, testFileName);
       fs.writeFileSync(testFilePath, testCode);
-      
+
       this.log(`Test file saved to: ${testFilePath}`);
       return { filePath: testFilePath, code: testCode };
     } catch (error) {
@@ -362,9 +206,9 @@ Provide complete test file code.`;
 
   async refactorCode(sourceFile, instructions) {
     this.log(`Refactoring: ${sourceFile}`);
-    
+
     const content = fs.readFileSync(sourceFile, 'utf8');
-    
+
     const prompt = `Refactor this code according to the following instructions:
 
 Instructions: ${instructions}
@@ -387,16 +231,16 @@ Provide the refactored code only, ready to replace the original file.`;
 
     try {
       const code = await this.callAI(prompt, 4096);
-      
+
       // Extract code block
       const codeMatch = code.match(/\`\`\`(?:typescript|tsx)?\n([\s\S]*?)\n\`\`\`/);
       const refactoredCode = codeMatch ? codeMatch[1] : code;
-      
+
       // Save refactored code
       const fileName = path.basename(sourceFile);
       const refactoredPath = path.join(this.outputDir, `${fileName}.refactored`);
       fs.writeFileSync(refactoredPath, refactoredCode);
-      
+
       this.log(`Refactored code saved to: ${refactoredPath}`);
       return { filePath: refactoredPath, code: refactoredCode };
     } catch (error) {
@@ -407,9 +251,9 @@ Provide the refactored code only, ready to replace the original file.`;
 
   async fixBugs(sourceFile, bugDescription) {
     this.log(`Fixing bugs in: ${sourceFile}`);
-    
+
     const content = fs.readFileSync(sourceFile, 'utf8');
-    
+
     const prompt = `Fix the following bug in this code:
 
 Bug Description: ${bugDescription}
@@ -431,16 +275,16 @@ Provide the fixed code only.`;
 
     try {
       const code = await this.callAI(prompt, 4096);
-      
+
       // Extract code block
       const codeMatch = code.match(/\`\`\`(?:typescript|tsx)?\n([\s\S]*?)\n\`\`\`/);
       const fixedCode = codeMatch ? codeMatch[1] : code;
-      
+
       // Save fixed code
       const fileName = path.basename(sourceFile);
       const fixedPath = path.join(this.outputDir, `${fileName}.fixed`);
       fs.writeFileSync(fixedPath, fixedCode);
-      
+
       this.log(`Fixed code saved to: ${fixedPath}`);
       return { filePath: fixedPath, code: fixedCode };
     } catch (error) {
@@ -451,10 +295,10 @@ Provide the fixed code only.`;
 
   async generateDocumentation(sourceFile) {
     this.log(`Generating documentation for: ${sourceFile}`);
-    
+
     const content = fs.readFileSync(sourceFile, 'utf8');
     const fileName = path.basename(sourceFile, path.extname(sourceFile));
-    
+
     const prompt = `Generate comprehensive documentation for this code:
 
 \`\`\`typescript
@@ -475,12 +319,12 @@ Provide complete documentation.`;
 
     try {
       const docs = await this.callAI(prompt, 4096);
-      
+
       // Save documentation
       const docsFileName = `${fileName}.md`;
       const docsPath = path.join(this.outputDir, docsFileName);
       fs.writeFileSync(docsPath, docs);
-      
+
       this.log(`Documentation saved to: ${docsPath}`);
       return { filePath: docsPath, content: docs };
     } catch (error) {
@@ -491,12 +335,12 @@ Provide complete documentation.`;
 
   async suggestFeatures() {
     this.log('Generating feature suggestions...');
-    
+
     // Analyze package.json to understand the project
     const packageJson = JSON.parse(
       fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
     );
-    
+
     const prompt = `Based on this Next.js project configuration, suggest 5 valuable new features to implement:
 
 Project: ${packageJson.name}
@@ -529,20 +373,20 @@ Provide 5 suggestions as a JSON array.`;
 
     try {
       const response = await this.callAI(prompt, 3000);
-      
+
       // Extract JSON array
       const jsonMatch = response.match(/\[[\s\S]*\]/);
       if (jsonMatch) {
         const suggestions = JSON.parse(jsonMatch[0]);
-        
+
         // Save suggestions
         const suggestionsPath = path.join(this.outputDir, 'feature-suggestions.json');
         fs.writeFileSync(suggestionsPath, JSON.stringify(suggestions, null, 2));
-        
+
         this.log(`Feature suggestions saved to: ${suggestionsPath}`);
         return suggestions;
       }
-      
+
       return [];
     } catch (error) {
       this.log(`Error generating feature suggestions: ${error.message}`, 'ERROR');
@@ -552,9 +396,9 @@ Provide 5 suggestions as a JSON array.`;
 
   async optimizePerformance(sourceFile) {
     this.log(`Optimizing performance for: ${sourceFile}`);
-    
+
     const content = fs.readFileSync(sourceFile, 'utf8');
-    
+
     const prompt = `Optimize this code for performance:
 
 \`\`\`typescript
@@ -575,16 +419,16 @@ Provide the optimized code with comments explaining optimizations.`;
 
     try {
       const code = await this.callAI(prompt, 4096);
-      
+
       // Extract code block
       const codeMatch = code.match(/\`\`\`(?:typescript|tsx)?\n([\s\S]*?)\n\`\`\`/);
       const optimizedCode = codeMatch ? codeMatch[1] : code;
-      
+
       // Save optimized code
       const fileName = path.basename(sourceFile);
       const optimizedPath = path.join(this.outputDir, `${fileName}.optimized`);
       fs.writeFileSync(optimizedPath, optimizedCode);
-      
+
       this.log(`Optimized code saved to: ${optimizedPath}`);
       return { filePath: optimizedPath, code: optimizedCode };
     } catch (error) {
@@ -595,59 +439,47 @@ Provide the optimized code with comments explaining optimizations.`;
 
   async run(command, ...args) {
     this.log(`🤖 AI Code Generator - ${command}`);
-    
+
     try {
       let result;
-      
+
       switch (command) {
         case 'analyze':
-          if (!args[0]) {
-            throw new Error('File path required');
-          }
+          if (!args[0]) throw new Error('File path required');
           result = await this.analyzeFile(args[0]);
           console.log(JSON.stringify(result, null, 2));
           break;
-          
+
         case 'component':
-          if (!args[0] || !args[1]) {
-            throw new Error('Component name and description required');
-          }
+          if (!args[0] || !args[1]) throw new Error('Component name and description required');
           result = await this.generateComponent(args[0], args[1], args[2]);
           console.log(`Component generated: ${result.filePath}`);
           break;
-          
+
         case 'tests':
-          if (!args[0]) {
-            throw new Error('Source file path required');
-          }
+          if (!args[0]) throw new Error('Source file path required');
           result = await this.generateTests(args[0]);
           console.log(`Tests generated: ${result.filePath}`);
           break;
-          
+
         case 'refactor':
-          if (!args[0] || !args[1]) {
-            throw new Error('File path and instructions required');
-          }
+          if (!args[0] || !args[1]) throw new Error('File path and instructions required');
           result = await this.refactorCode(args[0], args[1]);
           console.log(`Refactored code saved: ${result.filePath}`);
           break;
-          
+
         case 'fix':
-          if (!args[0] || !args[1]) {
-            throw new Error('File path and bug description required');
-          }
+          if (!args[0] || !args[1]) throw new Error('File path and bug description required');
           result = await this.fixBugs(args[0], args[1]);
           console.log(`Fixed code saved: ${result.filePath}`);
           break;
-          
+
         case 'docs':
-          if (!args[0]) {
-            throw new Error('Source file path required');
-          }
+          if (!args[0]) throw new Error('Source file path required');
           result = await this.generateDocumentation(args[0]);
           console.log(`Documentation generated: ${result.filePath}`);
           break;
-          
+
         case 'features':
           result = await this.suggestFeatures();
           console.log('Feature suggestions generated:');
@@ -656,15 +488,13 @@ Provide the optimized code with comments explaining optimizations.`;
             console.log(`   ${suggestion.description}`);
           });
           break;
-          
+
         case 'optimize':
-          if (!args[0]) {
-            throw new Error('Source file path required');
-          }
+          if (!args[0]) throw new Error('Source file path required');
           result = await this.optimizePerformance(args[0]);
           console.log(`Optimized code saved: ${result.filePath}`);
           break;
-          
+
         default:
           console.log('AI Code Generator - Advanced AI-powered code generation');
           console.log('\nCommands:');
@@ -677,12 +507,15 @@ Provide the optimized code with comments explaining optimizations.`;
           console.log('  features                    - Suggest new features');
           console.log('  optimize <file>             - Optimize performance');
           console.log('\nEnvironment Variables:');
-          console.log('  ANTHROPIC_API_KEY or OPENAI_API_KEY required');
+          console.log('  OLLAMA_URL, GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN,');
+          console.log('  CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN,');
+          console.log('  DEEPSEEK_API_KEY, MISTRAL_API_KEY, TOGETHER_API_KEY,');
+          console.log('  FIREWORKS_API_KEY, COHERE_API_KEY, OPENROUTER_API_KEY');
       }
-      
+
       this.log('✅ Command completed successfully');
       process.exit(0);
-      
+
     } catch (error) {
       this.log(`❌ Error: ${error.message}`, 'ERROR');
       console.error(error);
@@ -694,9 +527,8 @@ Provide the optimized code with comments explaining optimizations.`;
 // CLI interface
 if (require.main === module) {
   const generator = new AICodeGenerator();
-  const [,, command, ...args] = process.argv;
+  const [, , command, ...args] = process.argv;
   generator.run(command, ...args);
 }
 
 module.exports = AICodeGenerator;
-

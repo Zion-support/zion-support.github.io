@@ -13,8 +13,15 @@
  *   7. DeepSeek (5M tokens free; DeepSeek-V3, R1)
  *   8. Mistral AI (free tier: 1 req/sec, 1B tokens/month)
  *   9. Together AI (free research models: Apriel 15B)
- *  10. Cohere (1k req/month free trial)
- *  11. OpenRouter (fallback)
+ *  10. Fireworks AI (free trial: 10 RPM, Llama V3P1 8B, etc.)
+ *  11. Cohere (1k req/month free trial)
+ *  12. OpenRouter (fallback, with multi-model round-robin on 429)
+ *
+ * Resilience features:
+ *   - Per-provider cooldown: if a provider returns 429, it's skipped for a cooldown window
+ *   - Exponential backoff with jitter for all provider calls
+ *   - Automatic fallback to next provider on failure
+ *   - Rate-limit detection via HTTP 429 / error message patterns
  *
  * Usage:
  *   const { createLLMClient } = require('./lib/llm-client.cjs');
@@ -41,6 +48,8 @@
  *   GEMINI_MODEL            - Optional: gemini-2.5-flash-preview-05-20 (default: gemini-2.0-flash)
  *   CEREBRAS_MODEL          - Optional: llama3.1-8b (default)
  *   DEEPSEEK_MODEL          - Optional: deepseek-chat (default)
+ *   RATE_LIMIT_COOLDOWN_MS  - Cooldown window after 429 (default: 60000)
+ *   MAX_RETRIES             - Per-provider retry count (default: 2)
  */
 
 try {
@@ -634,11 +643,14 @@ class LLMClient {
     this.openrouterApiKey = options.apiKey || options.openrouterApiKey || process.env.OPENROUTER_API_KEY;
     const rawModel = options.openrouterModel || options.model || process.env.OPENROUTER_MODEL || OPENROUTER_MODELS.default;
     this.openrouterModel = OPENROUTER_MODELS[rawModel] || rawModel;
-    this.maxRetries = options.maxRetries ?? 2;
+    this.maxRetries = (options.maxRetries ?? parseInt(process.env.MAX_RETRIES, 10)) || 2;
     this.timeout = options.timeout || 60000;
     this.appName = options.appName || 'Zion Tech Group Automation';
     this.siteUrl = options.siteUrl || 'https://ziontechgroup.com';
+    this.rateLimitCooldown = parseInt(process.env.RATE_LIMIT_COOLDOWN_MS, 10) || 60000;
     this._lastProvider = null;
+    // Track providers that are currently rate-limited (cooldown until timestamp)
+    this._providerCooldowns = new Map();
   }
 
   _buildMessages(prompt, options = {}) {
@@ -651,152 +663,282 @@ class LLMClient {
     ];
   }
 
+  _isInCooldown(provider) {
+    const until = this._providerCooldowns.get(provider);
+    return until !== undefined && Date.now() < until;
+  }
+
+  _setCooldown(provider, ms) {
+    this._providerCooldowns.set(provider, Date.now() + ms);
+  }
+
+  _isRateLimit(err) {
+    return /429|rate.?limit|rate.?limited|too many requests|TooManyRequests|Slow down/i.test(err.message);
+  }
+
+  _backoffWithJitter(attempt, baseMs = 1000) {
+    const exp = Math.min(attempt, 6);
+    const baseDelay = Math.pow(2, exp) * baseMs;
+    const jitter = Math.random() * baseDelay * 0.3;
+    return baseDelay + jitter;
+  }
+
   async complete(messages, options = {}) {
     const opts = { ...options, timeout: options.timeout || this.timeout };
     let lastError;
 
-    if (this.ollamaEnabled) {
-      try {
-        const body = {
-          model: this.ollamaModel,
-          messages,
-          stream: false,
-          options: {
-            num_predict: options.maxTokens || 4096,
-            temperature: options.temperature ?? 0.7,
-          },
-        };
-        const res = await ollamaRequest(this.ollamaUrl, '/api/chat', body, opts.timeout);
-        this._lastProvider = 'ollama';
-        return parseOllamaResponse(res);
-      } catch (err) {
-        lastError = err;
+    // Ollama with retry + backoff
+    if (this.ollamaEnabled && !this._isInCooldown('ollama')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const body = {
+            model: this.ollamaModel,
+            messages,
+            stream: false,
+            options: {
+              num_predict: options.maxTokens || 4096,
+              temperature: options.temperature ?? 0.7,
+            },
+          };
+          const res = await ollamaRequest(this.ollamaUrl, '/api/chat', body, opts.timeout);
+          this._lastProvider = 'ollama';
+          return parseOllamaResponse(res);
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('ollama', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.groqApiKey) {
-      try {
-        const model = process.env.GROQ_MODEL || GROQ_DEFAULT_MODEL;
-        const result = await groqRequest(this.groqApiKey, model, messages, opts);
-        this._lastProvider = 'groq';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Groq with retry + backoff
+    if (this.groqApiKey && !this._isInCooldown('groq')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.GROQ_MODEL || GROQ_DEFAULT_MODEL;
+          const result = await groqRequest(this.groqApiKey, model, messages, opts);
+          this._lastProvider = 'groq';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('groq', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.geminiApiKey) {
-      try {
-        const model = process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL;
-        const result = await geminiRequest(this.geminiApiKey, model, messages, opts);
-        this._lastProvider = 'gemini';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Gemini with retry + backoff
+    if (this.geminiApiKey && !this._isInCooldown('gemini')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.GEMINI_MODEL || GEMINI_DEFAULT_MODEL;
+          const result = await geminiRequest(this.geminiApiKey, model, messages, opts);
+          this._lastProvider = 'gemini';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('gemini', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.huggingfaceToken) {
-      try {
-        const model = process.env.HUGGINGFACE_MODEL || HUGGINGFACE_DEFAULT_MODEL;
-        const result = await huggingfaceRequest(this.huggingfaceToken, model, messages, opts);
-        this._lastProvider = 'huggingface';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // HuggingFace with retry + backoff
+    if (this.huggingfaceToken && !this._isInCooldown('huggingface')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.HUGGINGFACE_MODEL || HUGGINGFACE_DEFAULT_MODEL;
+          const result = await huggingfaceRequest(this.huggingfaceToken, model, messages, opts);
+          this._lastProvider = 'huggingface';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('huggingface', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.cerebrasApiKey) {
-      try {
-        const model = process.env.CEREBRAS_MODEL || CEREBRAS_DEFAULT_MODEL;
-        const result = await cerebrasRequest(this.cerebrasApiKey, model, messages, opts);
-        this._lastProvider = 'cerebras';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Cerebras with retry + backoff
+    if (this.cerebrasApiKey && !this._isInCooldown('cerebras')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.CEREBRAS_MODEL || CEREBRAS_DEFAULT_MODEL;
+          const result = await cerebrasRequest(this.cerebrasApiKey, model, messages, opts);
+          this._lastProvider = 'cerebras';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('cerebras', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.cloudflareAccountId && this.cloudflareApiToken) {
-      try {
-        const result = await cloudflareRequest(
-          this.cloudflareAccountId,
-          this.cloudflareApiToken,
-          process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL,
-          messages,
-          opts
-        );
-        this._lastProvider = 'cloudflare';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Cloudflare with retry + backoff
+    if (this.cloudflareAccountId && this.cloudflareApiToken && !this._isInCooldown('cloudflare')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const result = await cloudflareRequest(
+            this.cloudflareAccountId,
+            this.cloudflareApiToken,
+            process.env.CLOUDFLARE_MODEL || CLOUDFLARE_DEFAULT_MODEL,
+            messages,
+            opts
+          );
+          this._lastProvider = 'cloudflare';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('cloudflare', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.deepseekApiKey) {
-      try {
-        const model = process.env.DEEPSEEK_MODEL || DEEPSEEK_DEFAULT_MODEL;
-        const result = await deepseekRequest(this.deepseekApiKey, model, messages, opts);
-        this._lastProvider = 'deepseek';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // DeepSeek with retry + backoff
+    if (this.deepseekApiKey && !this._isInCooldown('deepseek')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.DEEPSEEK_MODEL || DEEPSEEK_DEFAULT_MODEL;
+          const result = await deepseekRequest(this.deepseekApiKey, model, messages, opts);
+          this._lastProvider = 'deepseek';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('deepseek', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.mistralApiKey) {
-      try {
-        const model = process.env.MISTRAL_MODEL || MISTRAL_DEFAULT_MODEL;
-        const result = await mistralRequest(this.mistralApiKey, model, messages, opts);
-        this._lastProvider = 'mistral';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Mistral with retry + backoff
+    if (this.mistralApiKey && !this._isInCooldown('mistral')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.MISTRAL_MODEL || MISTRAL_DEFAULT_MODEL;
+          const result = await mistralRequest(this.mistralApiKey, model, messages, opts);
+          this._lastProvider = 'mistral';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('mistral', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.togetherApiKey) {
-      try {
-        const model = process.env.TOGETHER_MODEL || TOGETHER_DEFAULT_MODEL;
-        const result = await togetherRequest(this.togetherApiKey, model, messages, opts);
-        this._lastProvider = 'together';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Together AI with retry + backoff
+    if (this.togetherApiKey && !this._isInCooldown('together')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.TOGETHER_MODEL || TOGETHER_DEFAULT_MODEL;
+          const result = await togetherRequest(this.togetherApiKey, model, messages, opts);
+          this._lastProvider = 'together';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('together', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.fireworksApiKey) {
-      try {
-        const model = process.env.FIREWORKS_MODEL || FIREWORKS_DEFAULT_MODEL;
-        const result = await fireworksRequest(this.fireworksApiKey, model, messages, opts);
-        this._lastProvider = 'fireworks';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Fireworks AI with retry + backoff
+    if (this.fireworksApiKey && !this._isInCooldown('fireworks')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const model = process.env.FIREWORKS_MODEL || FIREWORKS_DEFAULT_MODEL;
+          const result = await fireworksRequest(this.fireworksApiKey, model, messages, opts);
+          this._lastProvider = 'fireworks';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('fireworks', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.cohereApiKey) {
-      try {
-        const result = await cohereRequest(this.cohereApiKey, COHERE_DEFAULT_MODEL, messages, opts);
-        this._lastProvider = 'cohere';
-        return result;
-      } catch (err) {
-        lastError = err;
+    // Cohere with retry + backoff
+    if (this.cohereApiKey && !this._isInCooldown('cohere')) {
+      for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+        try {
+          const result = await cohereRequest(this.cohereApiKey, COHERE_DEFAULT_MODEL, messages, opts);
+          this._lastProvider = 'cohere';
+          return result;
+        } catch (err) {
+          lastError = err;
+          if (this._isRateLimit(err)) {
+            this._setCooldown('cohere', this.rateLimitCooldown);
+            break;
+          }
+          if (attempt < this.maxRetries) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
+          }
+        }
       }
     }
 
-    if (this.openrouterApiKey) {
+    // OpenRouter with retry + backoff + multi-model fallback on 429
+    if (this.openrouterApiKey && !this._isInCooldown('openrouter')) {
       let attempt = 0;
       const maxAttempts = this.maxRetries + OPENROUTER_MODELS.fallback.length;
       let modelIndex = 0;
       while (attempt <= maxAttempts) {
         try {
-          // Use fallback models after first attempt (for rate limiting)
-          const model = attempt === 0 
-            ? this.openrouterModel 
+          const model = attempt === 0
+            ? this.openrouterModel
             : OPENROUTER_MODELS.getFallbackModel(modelIndex++);
           const res = await openrouterRequest(
             this.openrouterApiKey,
@@ -810,11 +952,14 @@ class LLMClient {
           return parseOpenRouterResponse(res);
         } catch (err) {
           lastError = err;
-          const is429 = /429|rate limit/i.test(err.message);
-          // Longer delay for rate limit errors
-          const delay = is429 ? 45000 : Math.pow(2, attempt) * 1000;
-          if (attempt < maxAttempts) {
-            await new Promise((r) => setTimeout(r, delay));
+          if (this._isRateLimit(err)) {
+            this._setCooldown('openrouter', this.rateLimitCooldown);
+            // On 429, switch to fallback model immediately
+            if (attempt < maxAttempts) {
+              await new Promise((r) => setTimeout(r, 5000));
+            }
+          } else if (attempt < maxAttempts) {
+            await new Promise((r) => setTimeout(r, this._backoffWithJitter(attempt)));
           }
           attempt++;
         }
@@ -822,7 +967,7 @@ class LLMClient {
     }
 
     throw lastError || new Error(
-      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, MISTRAL_API_KEY, TOGETHER_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY.'
+      'No LLM available. Start Ollama, or set GROQ_API_KEY, GEMINI_API_KEY, HUGGINGFACE_HUB_TOKEN, CEREBRAS_API_KEY, CLOUDFLARE_ACCOUNT_ID+CLOUDFLARE_API_TOKEN, DEEPSEEK_API_KEY, MISTRAL_API_KEY, TOGETHER_API_KEY, FIREWORKS_API_KEY, COHERE_API_KEY, or OPENROUTER_API_KEY.'
     );
   }
 
