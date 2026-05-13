@@ -660,4 +660,15 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     href: '/ai-lab/autonomous-pricing-strategy-optimizer',
     badge: 'New',
   },
+  {
+    id: 'autonomous-email-sequence-designer',
+    slug: 'autonomous-email-sequence-designer',
+    title: 'Autonomous Email Sequence Designer',
+    shortDescription:
+      'Generate complete drip campaigns with A/B subject lines, body copy, optimal timing, engagement metrics, and JSON export.',
+    category: 'Marketing Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-email-sequence-designer',
+    badge: 'New',
+  },
 ];
