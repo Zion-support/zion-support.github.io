@@ -1,59 +1,59 @@
 {
   "version": 3,
-  "generatedAt": "2026-04-07T18:40:03Z",
+  "generatedAt": "2026-05-13T13:05:55Z",
   "correlation": {
-    "correlationId": "suppression-reg-24098151080",
-    "registryWorkflowRunId": "24098151080",
+    "correlationId": "suppression-reg-25800874042",
+    "registryWorkflowRunId": "25800874042",
     "registryWorkflow": "AI Incident Suppression Registry",
     "repository": "Zion-support/zion.app",
-    "commitSha": "049b1f5f943e3689b8ddb02b684d8d658ddc7f66",
-    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/24098151080",
+    "commitSha": "6bd0b6e471dbb85b338fa6de9c58de3bb660e63a",
+    "workflowRunUrl": "https://github.com/Zion-support/zion.app/actions/runs/25800874042",
     "deployStatusSnapshot": {
       "source": "deploy-on-push",
-      "status": "success",
-      "sha": "228ffa2b4616a39a7f2c3b6e1f3c6c39a9a8c9bf",
-      "runId": "23501286789",
+      "status": "failed",
+      "sha": "a44fc659e3bec74404d9c6cf45dc171f95e65553",
+      "runId": "25776189999",
       "workflow": "Deploy on Push",
       "netlifyDeployId": null,
       "netlifyDeployUrl": null
     }
   },
   "noise": {
-    "emaOpenIncidents": 4.999,
+    "emaOpenIncidents": 4.649,
     "emaAlpha": 0.35,
-    "rawOpenTotal": 5
+    "rawOpenTotal": 4
   },
   "openIssueCounts": {
     "openclaw": 1,
-    "pm2": 4,
+    "pm2": 3,
     "sla": 0
   },
-  "totalOpenIncidents": 5,
+  "totalOpenIncidents": 4,
   "recommendedCooldownHours": 11,
   "cooldownHours": 11,
   "openclawCooldownHours": 12,
   "slaCooldownHours": 12,
   "domains": {
     "pm2Slo": {
-      "breachStreak": 63,
+      "breachStreak": 64,
       "openIssueCount": 1
     },
     "pm2Restart": {
-      "breachStreak": 50,
+      "breachStreak": 51,
       "openIssueCount": 2
     },
     "openclawIncident": {
-      "breachStreak": 9,
+      "breachStreak": 10,
       "openIssueCount": 1
     },
     "openclawSla": {
-      "breachStreak": 49,
+      "breachStreak": 50,
       "openIssueCount": 0
     }
   },
   "tuning": {
     "noiseLevel": "medium",
-    "maxBreachStreak": 63,
+    "maxBreachStreak": 64,
     "reason": "Sustained breach streak — elevated cooldown floor."
   },
   "notes": "v3: EMA-smoothed cooldowns, workflow/deploy correlation, Netlify fields via deploy-status-latest.json when present."
