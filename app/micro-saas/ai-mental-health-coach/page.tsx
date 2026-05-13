@@ -2,7 +2,7 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Mental Health & Wellness Coach | Zion Tech Group',
+  title: 'AI Mental Health and Wellness Coach | Zion Tech Group',
   description: 'AI-powered mental health support with mood tracking, CBT exercises, guided meditation, and crisis escalation protocols.',
   alternates: { canonical: '/micro-saas/ai-mental-health-coach' },
 };
@@ -11,22 +11,22 @@ export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Mental Health & Wellness Coach',
-        category: 'Micro SaaS · Health & Wellness',
+        title: 'AI Mental Health and Wellness Coach',
+        category: 'Micro SaaS - Health and Wellness',
         description: 'AI-powered mental health support with mood tracking, CBT exercises, guided meditation, and crisis escalation protocols.',
         iconEmoji: '💚',
         features: [
-          { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns and reduce manual effort.' },
+          { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns.' },
           { title: 'Cloud-Hosted', description: 'Zero setup required, accessible from anywhere.' },
           { title: 'API Access', description: 'REST API for custom integrations and workflows.' },
           { title: 'Role-Based Access', description: 'Granular permissions for team security.' },
-          { title: 'Analytics Dashboard', description: 'Real-time metrics, automated reports, and trend analysis.' },
+          { title: 'Analytics Dashboard', description: 'Real-time metrics and automated reports.' },
           { title: 'Dedicated Support', description: 'Responsive support team with guided onboarding.' },
         ],
         useCases: [
-          { title: 'Growing Teams', description: 'Scale operations efficiently without proportional headcount increases.', icon: '\U0001F680' },
-          { title: 'Startups', description: 'Enterprise-grade tools from day one at startup-friendly prices.', icon: '\u26A1' },
-          { title: 'Enterprise', description: 'Deploy within existing compliance frameworks and IT governance.', icon: '\U0001F3E2' },
+          { title: 'Growing Teams', description: 'Scale operations without proportional headcount.', icon: '\U0001F680' },
+          { title: 'Startups', description: 'Enterprise-grade tools at startup-friendly prices.', icon: '\u26A1' },
+          { title: 'Enterprise', description: 'Deploy within existing compliance frameworks.', icon: '\U0001F3E2' },
         ],
         benefits: [
           'Reduce manual effort by 70% or more',
@@ -39,8 +39,8 @@ export default function Page() {
         ctaLabel: 'Start Your Free Trial',
         pricing: [
           { tier: 'Starter', price: '$12', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics', 'Email support'] },
-          { tier: 'Professional', price: '$29', period: '/month', features: ['All Starter features', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
-          { tier: 'Enterprise', price: '$79', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA guarantee', 'SSO'] },
+          { tier: 'Professional', price: '$29', period: '/month', features: ['All Starter', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
+          { tier: 'Enterprise', price: '$79', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA', 'SSO'] },
         ],
         contact: {
           phone: '+1 302 464 0950',

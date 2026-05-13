@@ -675,6 +675,78 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/ai-personalization-engine',
     category: 'ai'
+  },
+  {
+    id: 'ai-legal-document-analysis',
+    title: 'AI Legal Document Analysis & Contract Review',
+    description: 'Automated legal document review, clause extraction, risk assessment, and contract comparison powered by advanced NLP trained on legal corpora.',
+    features: ['Intelligent clause extraction and classification', 'Risk scoring and compliance flagging', 'Contract comparison and gap analysis', 'Legal precedent research automation', 'Multi-language contract processing'],
+    benefits: ['Reduce legal review time by 80%', 'Catch hidden risks before signing', 'Standardize contract terminology', 'Accelerate M&A due diligence'],
+    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/ai-services/ai-legal-doc-analysis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚖️',
+    href: '/ai-services/ai-legal-doc-analysis',
+    category: 'ai'
+  },
+  {
+    id: 'ai-medical-imaging',
+    title: 'AI Medical Imaging & Diagnostics',
+    description: 'FDA-ready AI diagnostic support for radiology, pathology, and dermatology — detect anomalies, prioritize cases, and assist radiologists with second-opinion AI.',
+    features: ['Deep learning anomaly detection in X-rays, CT, MRI', 'Pathology slide analysis and classification', 'Dermatological lesion assessment', 'Triage and workload prioritization', 'HIPAA-compliant deployment with audit trails'],
+    benefits: ['Reduce diagnostic errors by 40%', 'Prioritize critical cases automatically', 'Extend specialist reach to underserved areas', 'Seamless PACS/EHR integration'],
+    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
+    contactInfo: { website: '/ai-services/ai-medical-imaging', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🏥',
+    href: '/ai-services/ai-medical-imaging',
+    category: 'ai'
+  },
+  {
+    id: 'ai-supply-chain-optimizer',
+    title: 'AI Supply Chain Optimization & Demand Forecasting',
+    description: 'End-to-end supply chain intelligence with ML demand forecasting, inventory optimization, supplier risk scoring, and logistics route planning.',
+    features: ['ML-powered demand forecasting at SKU level', 'Multi-echelon inventory optimization', 'Supplier risk intelligence and monitoring', 'Logistics route optimization with cost modeling', 'Carbon footprint tracking and reduction'],
+    benefits: ['Reduce inventory carrying costs by 25%', 'Improve forecast accuracy by 35%', 'Prevent supply disruptions with early warnings', 'Optimize logistics spend across modes'],
+    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
+    contactInfo: { website: '/ai-services/ai-supply-chain-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📦',
+    href: '/ai-services/ai-supply-chain-optimizer',
+    category: 'ai'
+  },
+  {
+    id: 'ai-content-localization',
+    title: 'AI Content Localization & Cultural Adaptation',
+    description: 'Enterprise-grade content localization with context-aware translation, cultural nuance adaptation, brand voice preservation, and multi-market compliance.',
+    features: ['Context-aware Neural Machine Translation (100+ languages)', 'Cultural adaptation and localization QA', 'Brand voice consistency across markets', 'Automated regulatory compliance checking', 'CMS and marketing platform integrations'],
+    benefits: ['Launch in 50+ markets simultaneously', 'Reduce localization costs by 70%', 'Maintain brand integrity across cultures', 'Meet local regulatory requirements automatically'],
+    pricing: { basic: '449', pro: '999', enterprise: '2299' },
+    contactInfo: { website: '/ai-services/ai-content-localization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌍',
+    href: '/ai-services/ai-content-localization',
+    category: 'ai'
+  },
+  {
+    id: 'ai-intelligent-routing',
+    title: 'AI Intelligent Document Processing & Routing',
+    description: 'Automated document intake with AI extraction, classification, and intelligent routing to the right team or workflow — invoices, claims, applications, and contracts.',
+    features: ['OCR + AI document understanding (99.5% accuracy)', 'Intelligent document classification and tagging', 'Automated data extraction to structured formats', 'Smart routing to teams based on content', 'Integration with RPA for downstream automation'],
+    benefits: ['Eliminate 90% of manual data entry', 'Reduce document processing time from hours to seconds', 'Improve data accuracy and compliance', 'Seamless integration with existing ERP/CRM'],
+    pricing: { basic: '349', pro: '799', enterprise: '1799' },
+    contactInfo: { website: '/ai-services/ai-intelligent-routing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📋',
+    href: '/ai-services/ai-intelligent-routing',
+    category: 'ai'
+  },
+  {
+    id: 'ai-code-migration',
+    title: 'AI Code Migration & Legacy Modernization',
+    description: 'AI-powered legacy code analysis, automated migration planning, and assisted code transformation from COBOL, mainframe, and legacy frameworks to modern cloud-native stacks.',
+    features: ['Legacy code analysis and dependency mapping', 'Automated migration plan generation', 'AI-assisted code transformation and refactoring', 'Test case generation for migrated systems', 'Risk assessment and rollback planning'],
+    benefits: ['Reduce migration costs by 60%', 'Accelerate modernization timelines by 3x', 'Preserve business logic during transformation', 'Minimize production disruption'],
+    pricing: { basic: '2999', pro: '5999', enterprise: '14999' },
+    contactInfo: { website: '/ai-services/ai-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💻',
+    href: '/ai-services/ai-code-migration',
+    category: 'ai'
   }
 ];
 
@@ -1127,6 +1199,78 @@ export const itServices: Service[] = [
     contactInfo: { website: '/it-services/digital-twin-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏗️',
     href: '/it-services/digital-twin-platform',
+    category: 'automation'
+  },
+  {
+    id: 'it-microservices-architecture',
+    title: 'Microservices Architecture & API Gateway Design',
+    description: 'Design and implement scalable microservices architectures with API gateways, service discovery, distributed tracing, and event-driven communication patterns.',
+    features: ['Domain-driven service decomposition', 'API gateway design and implementation (Kong, APISIX)', 'Service mesh deployment (Istio, Linkerd)', 'Distributed tracing and observability', 'Event-driven architecture with message brokers'],
+    benefits: ['Independent deployment and scaling per service', 'Reduced blast radius for failures', 'Technology polyglotism for optimal tooling', 'Accelerated development velocity with team autonomy'],
+    pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
+    contactInfo: { website: '/it-services/microservices-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🧩',
+    href: '/it-services/microservices-architecture',
+    category: 'cloud'
+  },
+  {
+    id: 'it-observability-platform',
+    title: 'Observability Platform & SRE Consulting',
+    description: 'End-to-end observability implementation with distributed tracing, log aggregation, metrics collection, and Site Reliability Engineering best practices.',
+    features: ['Unified observability stack (Prometheus, Grafana, Jaeger)', 'Custom SLO/SLI definition and dashboard creation', 'Incident management with automated runbooks', 'Chaos engineering and resilience testing', 'SRE consulting and reliability maturity assessment'],
+    benefits: ['Reduce MTTR by 60% with intelligent alerting', 'Eliminate alert fatigue with smart correlation', 'Proactive issue detection before user impact', 'Build engineering team reliability practices'],
+    pricing: { basic: '1299', pro: '2999', enterprise: '6999' },
+    contactInfo: { website: '/it-services/observability-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/it-services/observability-platform',
+    category: 'cloud'
+  },
+  {
+    id: 'it-data-mesh-implementation',
+    title: 'Data Mesh & Modern Data Platform Architecture',
+    description: 'Implement data mesh architecture with domain-oriented data ownership, self-serve data infrastructure, and federated computational governance.',
+    features: ['Domain-oriented data product design', 'Self-serve data platform implementation', 'Federated computational governance framework', 'Data quality and lineage automation', 'Multi-cloud data lakehouse architecture'],
+    benefits: ['Break down data silos with domain ownership', 'Scale analytics across the organization', 'Improve data quality with automated checks', 'Reduce data engineering bottleneck by 70%'],
+    pricing: { basic: '2999', pro: '6999', enterprise: '16999' },
+    contactInfo: { website: '/it-services/data-mesh', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🗄️',
+    href: '/it-services/data-mesh',
+    category: 'data'
+  },
+  {
+    id: 'it-platform-engineering',
+    title: 'Platform Engineering & Internal Developer Portal',
+    description: 'Build internal developer platforms with self-service infrastructure provisioning, golden paths, and developer experience optimization to accelerate team productivity.',
+    features: ['Internal developer platform (IDP) deployment', 'Self-service infrastructure provisioning', 'Golden path templates and scaffolding', 'Developer experience metrics and optimization', 'Integration with existing CI/CD pipelines'],
+    benefits: ['Reduce developer onboarding time by 80%', 'Eliminate infrastructure request bottleneck', 'Standardize best practices across teams', 'Accelerate feature delivery by 2-3x'],
+    pricing: { basic: '2499', pro: '5499', enterprise: '12999' },
+    contactInfo: { website: '/it-services/platform-engineering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛠️',
+    href: '/it-services/platform-engineering',
+    category: 'cloud'
+  },
+  {
+    id: 'it-wireless-network-design',
+    title: 'Wireless Network Design & Optimization',
+    description: 'Enterprise Wi-Fi and wireless infrastructure design, site surveys, RF optimization, and capacity planning for campuses, warehouses, and smart buildings.',
+    features: ['Predictive and on-site RF surveys', 'Capacity planning and density optimization', 'IoT and sensor network design', 'Seamless roaming and load balancing', 'Security hardening (WPA3, 802.1X, NAC)'],
+    benefits: ['Eliminate dead zones with precision design', 'Support 10,000+ concurrent devices per site', 'Seamless IoT and traditional device integration', 'Future-proof for Wi-Fi 6E and Wi-Fi 7'],
+    pricing: { basic: '2999', pro: '7499', enterprise: '18999' },
+    contactInfo: { website: '/it-services/wireless-network', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📡',
+    href: '/it-services/wireless-network',
+    category: 'cloud'
+  },
+  {
+    id: 'it-automation-orchestrator',
+    title: 'IT Automation & Orchestration Platform',
+    description: 'Enterprise IT automation platform with workflow orchestration, infrastructure provisioning, configuration management, and self-healing system capabilities.',
+    features: ['Infrastructure automation with Terraform and Ansible', 'Workflow orchestration across IT systems', 'Self-healing infrastructure with event-driven automation', 'Compliance enforcement and drift detection', 'Centralized automation catalog and governance'],
+    benefits: ['Reduce manual IT operations by 80%', 'Eliminate configuration drift across environments', 'Accelerate service provisioning from days to minutes', 'Maintain compliance with automated enforcement'],
+    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
+    contactInfo: { website: '/it-services/automation-orchestrator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚙️',
+    href: '/it-services/automation-orchestrator',
     category: 'automation'
   }
 ];
