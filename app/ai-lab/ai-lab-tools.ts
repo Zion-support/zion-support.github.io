@@ -70,7 +70,8 @@ export type AILabToolId =
   | 'autonomous-competitor-analysis-engine'
   | 'autonomous-code-deploy-simulator'
   | 'autonomous-uptime-monitor'
-  | 'autonomous-security-vulnerability-scanner';
+  | 'autonomous-security-vulnerability-scanner'
+  | 'autonomous-api-documentation-generator';
 
 
 export interface AILabTool {
@@ -853,6 +854,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Security & Compliance',
     status: 'live',
     href: '/ai-lab/autonomous-security-vulnerability-scanner',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-api-documentation-generator',
+    slug: 'autonomous-api-documentation-generator',
+    title: 'Autonomous API Documentation Generator',
+    shortDescription:
+      'Generate interactive API docs from OpenAPI specs or endpoint lists. Auto-create code samples, auth guides, and response examples.',
+    category: 'Developer Tools',
+    status: 'live',
+    href: '/ai-lab/autonomous-api-documentation-generator',
     badge: 'New',
   },
 ];
