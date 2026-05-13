@@ -15,7 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 const DATA_DIR = path.join(__dirname, 'data');
 const REPORT_PATH = path.join(__dirname, 'reports', 'content-ideation-latest.json');

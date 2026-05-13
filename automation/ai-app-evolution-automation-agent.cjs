@@ -90,7 +90,7 @@ async function generateEvolutionIdeas() {
     };
   }
 
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion App Evolution' });
 
   if (!llm.isConfigured()) {

@@ -88,7 +88,7 @@ function writeJson(file, obj) {
 function hasLlmConfigured() {
   try {
     // CommonJS module under automation/lib
-    const { createLLMClient } = require('./lib/openrouter-client.cjs');
+    const { createLLMClient } = require('./lib/llm-client.cjs');
     return createLLMClient().isConfigured();
   } catch {
     return false;

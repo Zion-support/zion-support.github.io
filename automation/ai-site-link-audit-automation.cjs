@@ -15,7 +15,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 const CONFIG = {
   rootDir: process.cwd(),

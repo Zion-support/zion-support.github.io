@@ -104,7 +104,7 @@ async function run() {
   const siteContent = pages
     .map((p) => `--- ${p.path} ---\nHints: imgs=${p.hints.imgCount} nextImage=${p.hints.nextImage} scripts=${p.hints.scriptCount} lazy=${p.hints.hasLazy} preload=${p.hints.hasPreload}\nHTML sample: ${p.text.slice(0, 1500)}`)
     .join('\n\n');
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion Performance Specialist' });
 
   let result = FALLBACK;

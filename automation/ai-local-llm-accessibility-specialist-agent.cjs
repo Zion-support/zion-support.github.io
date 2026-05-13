@@ -115,7 +115,7 @@ async function run() {
   const siteContent = pages
     .map((p) => `--- ${p.path} ---\nStructure: buttons=${p.structure.buttons} inputs=${p.structure.inputs} links=${p.structure.links} aria=${p.structure.hasAria} alt=${p.structure.hasAlt}\nContent: ${p.text}`)
     .join('\n\n');
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion Accessibility Specialist' });
 
   let result = FALLBACK;

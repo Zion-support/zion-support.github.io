@@ -7,7 +7,7 @@
  * Ollama first, then falls back to OpenRouter.
  *
  * Usage:
- *   const { createLLMClient } = require('./lib/openrouter-client.cjs');
+ *   const { createLLMClient } = require('./lib/llm-client.cjs');
  *   const llm = createLLMClient();
  *   const response = await llm.chat('Explain this code...');
  *

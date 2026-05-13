@@ -105,7 +105,7 @@ async function run() {
   }
 
   const siteContent = pages.map((p) => `--- ${p.path} ---\nTitle: ${p.title}\nMeta: ${p.metaDesc}\nContent: ${p.text}`).join('\n\n');
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion SEO Specialist' });
 
   let result = FALLBACK;

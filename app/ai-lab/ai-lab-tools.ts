@@ -32,7 +32,7 @@ export type AILabToolId =
   | 'autonomous-media-prompt-studio'
   | 'autonomous-meeting-analyzer'
   | 'autonomous-opportunity-radar'
-  | 'autonomous-pricing-strategy-optimizer'
+  | 'autonomous-pricing-optimizer'
   | 'autonomous-project-estimator'
   | 'autonomous-prompt-cost-calculator'
   | 'autonomous-rag-knowledge-workspace'
@@ -53,8 +53,8 @@ export type AILabToolId =
   | 'dynamic-api-monitoring'
   | 'idea-to-feature-blueprint'
   | 'implementation-readiness-checker'
-  | 'ai-roi-ops-scorecard'
-  | 'ai-rollout-blueprint'
+  | 'roi-ops-scorecard'
+  | 'rollout-blueprint'
   | 'autonomous-db-schema-designer'
   | 'autonomous-churn-predictor'
   | 'autonomous-content-calendar'
@@ -76,7 +76,9 @@ export type AILabToolId =
   | 'autonomous-performance-budget-calculator'
   | 'autonomous-email-deliverability-checker'
   | 'autonomous-landing-page-scorecard'
-  | 'autonomous-content-strategy-planner';
+  | 'autonomous-content-strategy-planner'
+  | 'autonomous-brand-voice-analyzer'
+  | 'autonomous-site-health-monitor';
 
 
 export interface AILabTool {
@@ -114,7 +116,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     badge: 'Experimental',
   },
   {
-    id: 'ai-rollout-blueprint',
+    id: 'rollout-blueprint',
     slug: 'rollout-blueprint',
     title: 'AI Rollout Blueprint Generator',
     shortDescription:
@@ -125,7 +127,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     badge: 'Live',
   },
   {
-    id: 'ai-roi-ops-scorecard',
+    id: 'roi-ops-scorecard',
     slug: 'roi-ops-scorecard',
     title: 'AI ROI & Ops Scorecard',
     shortDescription:
@@ -653,7 +655,7 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     badge: 'New',
   },
   {
-    id: 'autonomous-pricing-strategy-optimizer',
+    id: 'autonomous-pricing-optimizer',
     slug: 'autonomous-pricing-optimizer',
     title: 'Autonomous Pricing Strategy Optimizer',
     shortDescription:
@@ -925,6 +927,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Marketing & Growth',
     status: 'live',
     href: '/ai-lab/autonomous-content-strategy-planner',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-brand-voice-analyzer',
+    slug: 'autonomous-brand-voice-analyzer',
+    title: 'Autonomous Brand Voice Analyzer',
+    shortDescription:
+      'Analyze brand messaging consistency. Detect tone drift, formality score, and alignment across content.',
+    category: 'Brand Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-brand-voice-analyzer',
     badge: 'New',
   },
 ];

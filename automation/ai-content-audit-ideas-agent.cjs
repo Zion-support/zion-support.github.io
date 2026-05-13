@@ -14,7 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 const SITE_URL = 'https://ziontechgroup.com';
 const PAGES = [

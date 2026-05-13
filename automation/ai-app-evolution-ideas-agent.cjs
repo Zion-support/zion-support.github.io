@@ -112,7 +112,7 @@ const FALLBACK_IDEAS = {
 };
 
 async function runLLMIdeas(siteContent, backlog) {
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion Evolution Ideas' });
 
   if (!llm.isConfigured()) {

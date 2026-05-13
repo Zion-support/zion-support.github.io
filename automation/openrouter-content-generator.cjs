@@ -13,7 +13,7 @@ try {
 
 const fs = require('fs');
 const path = require('path');
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 const MAX_POSTS = parseInt(process.env.MAX_POSTS || '0', 10) || 999;
 const APP_DIR = path.join(process.cwd(), 'app');

@@ -35,7 +35,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const { execSync } = require('child_process');
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 const ROOT = process.cwd();
 const AUTOMATION_DIR = path.join(ROOT, 'automation');

@@ -102,7 +102,7 @@ async function run() {
   }
 
   const siteContent = pages.map((p) => `--- ${p.path} ---\n${p.text}`).join('\n\n');
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion Content Improvement' });
 
   let result = FALLBACK;
