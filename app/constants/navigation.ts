@@ -24,11 +24,10 @@ export const SOLUTION_LINKS: readonly NavigationLink[] = [
   { name: 'Insurance', href: '/solutions/insurance' },
   { name: 'Industries', href: '/industries' },
 ];
-
+// Resource Links
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Search', href: '/search' },
-  { name: 'FAQ', href: '/faq' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Pricing Calculator', href: '/pricing-calculator' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Innovation Bundles', href: '/innovation-bundles' },
   { name: 'Community', href: '/community' },
