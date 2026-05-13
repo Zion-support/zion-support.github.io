@@ -125,6 +125,15 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Process Automation', href: '/ai-services/process-automation' },
   { name: 'Quality Assurance', href: '/ai-services/quality-assurance' },
   { name: 'Supply Chain', href: '/ai-services/supply-chain' },
+  { name: 'AI Computer Vision', href: '/ai-services/ai-computer-vision' },
+  { name: 'AI Knowledge Management', href: '/ai-services/ai-knowledge-management' },
+  { name: 'AI Testing & QA', href: '/ai-services/ai-testing-qa' },
+  { name: 'AI Translation & Localization', href: '/ai-services/ai-translation-services' },
+  { name: 'AI Employee Experience', href: '/ai-services/ai-employee-experience' },
+  { name: 'AI Document Intelligence', href: '/ai-services/ai-document-intelligence' },
+  { name: 'Accessibility & WCAG Compliance', href: '/it-services/accessibility-compliance' },
+  { name: 'Cloud Cost Optimization (FinOps)', href: '/it-services/cloud-cost-optimization' },
+  { name: 'Supply Chain Management', href: '/it-services/supply-chain-management' },
   // === New standalone services added 2026-05-12 ===
   { name: 'AI-Powered DevOps Guardian', href: '/ai-devops-guardian' },
   { name: 'Real-Time Fraud Shield', href: '/real-time-fraud-shield' },
@@ -132,6 +141,16 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Intelligent Document Processing', href: '/intelligent-document-processing' },
   { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
   { name: 'Smart Healthcare Diagnostics', href: '/smart-healthcare-diagnostics' },
+  // === New services added 2026-01-10 ===
+  { name: 'AI Computer Vision', href: '/ai-services/ai-computer-vision' },
+  { name: 'AI Knowledge Management', href: '/ai-services/ai-knowledge-management' },
+  { name: 'AI Testing & QA', href: '/ai-services/ai-testing-qa' },
+  { name: 'AI Translation & Localization', href: '/ai-services/ai-translation-services' },
+  { name: 'AI Employee Experience', href: '/ai-services/ai-employee-experience' },
+  // === New IT Services ===
+  { name: 'Accessibility & WCAG Compliance', href: '/it-services/accessibility-compliance' },
+  { name: 'Cloud Cost Optimization (FinOps)', href: '/it-services/cloud-cost-optimization' },
+  { name: 'Supply Chain Management', href: '/it-services/supply-chain-management' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
