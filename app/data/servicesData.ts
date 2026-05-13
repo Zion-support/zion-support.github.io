@@ -747,6 +747,90 @@ export const aiServices: Service[] = [
     icon: '💻',
     href: '/ai-services/ai-code-migration',
     category: 'ai'
+  },
+  {
+    id: 'ai-ethics-governance',
+    title: 'AI Ethics, Safety & Governance Framework',
+    description: 'Comprehensive AI governance framework with bias detection, model explainability, audit trails, and regulatory compliance for responsible AI deployment.',
+    features: ['Automated bias detection across training data and model outputs', 'Model interpretability and explainability (SHAP/LIME integration)', 'AI ethics board policy generation and compliance tracking', 'Regulatory compliance automation (EU AI Act, NIST AI RMF)', 'Continuous monitoring and audit log generation'],
+    benefits: ['Deploy AI responsibly with regulatory confidence', 'Reduce AI-related legal and reputational risks', 'Build stakeholder and customer trust in AI systems', 'Stay ahead of emerging AI regulations globally'],
+    pricing: { basic: '799', pro: '1899', enterprise: '4499' },
+    contactInfo: { website: '/ai-services/ai-ethics-governance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚖️',
+    href: '/ai-services/ai-ethics-governance',
+    category: 'ai'
+  },
+  {
+    id: 'ai-spatial-computing',
+    title: 'AI Spatial Computing & AR/VR Analytics',
+    description: 'AI-powered spatial computing platform for augmented and virtual reality experiences — 3D scene understanding, gesture recognition, and immersive analytics.',
+    features: ['Real-time 3D scene reconstruction and understanding', 'AI-driven gesture and gaze tracking', 'Spatial audio processing and acoustic mapping', 'Immersive analytics dashboard creation', 'Cross-platform AR/VR deployment (Vision Pro, Quest, HoloLens)'],
+    benefits: ['Create next-generation immersive experiences', 'Enable spatial data visualization for complex datasets', 'Reduce training costs with VR simulations', 'Bridge physical and digital workspaces'],
+    pricing: { basic: '899', pro: '2199', enterprise: '4999' },
+    contactInfo: { website: '/ai-services/ai-spatial-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🥽',
+    href: '/ai-services/ai-spatial-computing',
+    category: 'ai'
+  },
+  {
+    id: 'ai-robotics-integration',
+    title: 'AI Robotics Integration & Autonomous Systems',
+    description: 'AI integration for industrial and commercial robotics — computer vision navigation, autonomous task planning, human-robot collaboration, and fleet management.',
+    features: ['Computer vision for robot navigation and obstacle avoidance', 'Autonomous task planning with reinforcement learning', 'Human-robot collaboration and safety monitoring', 'Multi-robot fleet management and coordination', 'Edge AI deployment for low-latency real-time control'],
+    benefits: ['Automate complex physical workflows with AI robotics', 'Improve workplace safety with intelligent monitoring', 'Scale robot fleet operations without proportional overhead', 'Reduce cycle times by 40% with autonomous optimization'],
+    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
+    contactInfo: { website: '/ai-services/ai-robotics-integration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🤖',
+    href: '/ai-services/ai-robotics-integration',
+    category: 'ai'
+  },
+  {
+    id: 'ai-voice-cloning',
+    title: 'AI Voice Cloning & Synthetic Media Creation',
+    description: 'Enterprise voice cloning for customer service, training, and content creation — realistic synthetic voice generation with consent management and quality controls.',
+    features: ['High-fidelity voice cloning from 30-second samples', 'Multi-language and accent-adaptive voice generation', 'Real-time voice conversion for live calls and broadcasts', 'Brand voice library management with usage governance', 'Consent management and deepfake detection safeguards'],
+    benefits: ['Produce audio content 100x faster with synthetic voices', 'Maintain brand voice consistency across all channels', 'Enable 24/7 voice-based customer interactions', 'Scale personalized communications to millions'],
+    pricing: { basic: '499', pro: '1199', enterprise: '2799' },
+    contactInfo: { website: '/ai-services/ai-voice-cloning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎙️',
+    href: '/ai-services/ai-voice-cloning',
+    category: 'ai'
+  },
+  {
+    id: 'ai-lead-generation',
+    title: 'AI Lead Generation & Pipeline Intelligence',
+    description: 'Intelligent lead generation platform — prospect identification, intent signal detection, personalized outreach automation, and pipeline conversion optimization.',
+    features: ['AI-powered prospect scoring and identification', 'Intent signal detection from web and social data', 'Personalized outreach generation at scale', 'Multi-channel engagement orchestration', 'Pipeline conversion prediction and bottleneck analysis'],
+    benefits: ['Increase qualified leads by 300%', 'Reduce cost per acquisition by 70%', 'Automate top-of-funnel outreach without losing personalization', 'Predict pipeline revenue with 85%+ accuracy'],
+    pricing: { basic: '399', pro: '899', enterprise: '2199' },
+    contactInfo: { website: '/ai-services/ai-lead-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎯',
+    href: '/ai-services/ai-lead-generation',
+    category: 'ai'
+  },
+  {
+    id: 'ai-presentation-maker',
+    title: 'AI Presentation & Report Generator',
+    description: 'Transform raw data into polished presentations and executive reports — AI-driven slide design, data visualization, narrative generation, and brand-aligned templates.',
+    features: ['AI-powered slide generation from documents and data', 'Automated chart and infographic creation', 'Executive narrative and talking point generation', 'Brand guideline enforcement across all slides', 'Export to PowerPoint, Google Slides, and PDF'],
+    benefits: ['Create presentations 90% faster with AI generation', 'Ensure consistent brand quality across all decks', 'Transform complex data into clear executive narratives', 'Never start a slide deck from scratch again'],
+    pricing: { basic: '99', pro: '249', enterprise: '599' },
+    contactInfo: { website: '/ai-services/ai-presentation-maker', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/ai-services/ai-presentation-maker',
+    category: 'ai'
+  },
+  {
+    id: 'ai-chatbot-builder-pro',
+    title: 'AI Enterprise Chatbot Builder Platform',
+    description: 'Build and deploy enterprise-grade AI chatbots with multi-language support, knowledge base integration, human handoff, and advanced analytics dashboard.',
+    features: ['No-code conversational AI builder with drag-and-drop', 'Multi-language support with automatic translation', 'Knowledge base integration (SharePoint, Confluence, web)', 'Intelligent human handoff with context transfer', 'Conversation analytics and sentiment tracking'],
+    benefits: ['Deflect 60% of support tickets with intelligent chatbots', 'Provide 24/7 multilingual customer support', 'Reduce average resolution time by 70%', 'Capture valuable customer insights from conversations'],
+    pricing: { basic: '199', pro: '499', enterprise: '1199' },
+    contactInfo: { website: '/ai-services/ai-chatbot-builder-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🤖',
+    href: '/ai-services/ai-chatbot-builder-pro',
+    category: 'ai'
   }
 ];
 
@@ -1272,6 +1356,66 @@ export const itServices: Service[] = [
     icon: '⚙️',
     href: '/it-services/automation-orchestrator',
     category: 'automation'
+  },
+  {
+    id: 'it-serverless-architecture',
+    title: 'Serverless Architecture & Function-as-a-Service',
+    description: 'Design and migrate to serverless architectures - automatic scaling, pay-per-use pricing, and zero infrastructure management across AWS Lambda, Azure, and GCP Cloud Run.',
+    features: ['Serverless architecture design and migration', 'Cold start optimization', 'Event-driven architecture', 'Cost monitoring and function optimization', 'Multi-cloud serverless deployment'],
+    benefits: ['Reduce infrastructure costs by 80%', 'No server management', 'Auto-scaling', 'Pay per compute execution'],
+    pricing: { basic: '1799', pro: '3999', enterprise: '8999' },
+    contactInfo: { website: '/it-services/serverless-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '☁️',
+    href: '/it-services/serverless-architecture',
+    category: 'cloud'
+  },
+  {
+    id: 'it-api-management',
+    title: 'API Management Platform & Developer Portal',
+    description: 'Comprehensive API management - gateway, developer portal, monetization, analytics, and lifecycle management for enterprise API programs.',
+    features: ['API gateway with rate limiting', 'Developer portal with docs and SDKs', 'Lifecycle management', 'Monetization', 'Real-time analytics'],
+    benefits: ['Accelerate API adoption', 'Monetize APIs', 'Protect backends', 'Track performance'],
+    pricing: { basic: '1499', pro: '3299', enterprise: '7499' },
+    contactInfo: { website: '/it-services/api-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔌',
+    href: '/it-services/api-management',
+    category: 'cloud'
+  },
+  {
+    id: 'it-database-as-a-service',
+    title: 'Database-as-a-Service & Managed Data Platforms',
+    description: 'Fully managed databases - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch with automated backups, scaling, and AI-powered optimization.',
+    features: ['Multi-engine provisioning', 'Automated backups and PITR', 'AI query optimization', 'Auto-scaling and HA', 'Encryption and compliance'],
+    benefits: ['No DBA overhead needed', '99.99% uptime SLA', 'Optimize queries automatically', 'Scale effortlessly'],
+    pricing: { basic: '799', pro: '1899', enterprise: '4499' },
+    contactInfo: { website: '/it-services/database-as-a-service', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🗄️',
+    href: '/it-services/database-as-a-service',
+    category: 'cloud'
+  },
+  {
+    id: 'it-incident-response',
+    title: 'Incident Response & Security Operations Center',
+    description: '24/7 SOC and incident response - threat detection, investigation, containment, recovery with automated playbooks and forensics.',
+    features: ['24/7 monitoring', 'Auto detection and classification', 'Response playbook automation', 'Digital forensics', 'Executive reporting'],
+    benefits: ['Reduce MTTD by 80%', 'Automated containment', 'Compliance-ready docs', 'Expert IR on demand'],
+    pricing: { basic: '2999', pro: '6499', enterprise: '14999' },
+    contactInfo: { website: '/it-services/incident-response', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🚨',
+    href: '/it-services/incident-response',
+    category: 'security'
+  },
+  {
+    id: 'it-voice-infrastructure',
+    title: 'Voice Infrastructure & Contact Center Solutions',
+    description: 'Modern contact center infrastructure - SIP trunking, IVR design, call routing, quality monitoring, and AI agent assistance.',
+    features: ['SIP and VoIP infrastructure', 'Intelligent routing and IVR', 'Call quality monitoring', 'AI agent assistance', 'Omnichannel integration'],
+    benefits: ['Reduce voice costs by 40%', 'Improve CSAT with smart routing', 'Call analytics insights', 'CRM integration ready'],
+    pricing: { basic: '1299', pro: '2899', enterprise: '6499' },
+    contactInfo: { website: '/it-services/voice-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📞',
+    href: '/it-services/voice-infrastructure',
+    category: 'cloud'
   }
 ];
 
