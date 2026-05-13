@@ -1,11 +1,13 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-04-07T23:56:39.218Z
-- queueSize: 371
-- criticalCount: 2
-- warningCount: 369
+- generatedAt: 2026-05-13T11:22:46.639Z
+- queueSize: 415
+- criticalCount: 24
+- warningCount: 391
 
 ## Top tasks
+- [critical] workflow-action-pin-hardening -> `.github/workflows/accessibility-scorecard.yml`
+- [warning] workflow-timeout-hardening -> `.github/workflows/accessibility-scorecard.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit-smoke-weekly.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-accessibility-audit.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-actions-pin-strict-guard.yml`
@@ -29,6 +31,4 @@
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-ai-lab-safe-scaffold-migrate-pr.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-audit-automation.yml`
 - [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-autonomy-guarded-cycle.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-audit.yml`
-- [warning] workflow-timeout-hardening -> `.github/workflows/ai-app-evolution-automation.yml`
 
