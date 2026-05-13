@@ -58,7 +58,10 @@ export type AILabToolId =
   | 'autonomous-db-schema-designer'
   | 'autonomous-churn-predictor'
   | 'autonomous-content-calendar'
-  | 'autonomous-support-ticket-analyzer';
+  | 'autonomous-support-ticket-analyzer'
+  | 'autonomous-slo-dashboard'
+  | 'autonomous-architecture-reviewer'
+  | 'autonomous-gdpr-compliance-checker';
 
 
 export interface AILabTool {
@@ -709,6 +712,39 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Customer Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-support-ticket-analyzer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-slo-dashboard',
+    slug: 'autonomous-slo-dashboard',
+    title: 'Autonomous SLO/SLI Dashboard Builder',
+    shortDescription:
+      'Define service SLOs, track error budgets, calculate multi-window burn rates, and get alerting recommendations.',
+    category: 'Reliability Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-slo-dashboard',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-architecture-reviewer',
+    slug: 'autonomous-architecture-reviewer',
+    title: 'Autonomous Architecture Reviewer',
+    shortDescription:
+      'Paste system architecture descriptions. Get trade-off analysis, scalability assessment, and improvement recommendations.',
+    category: 'Infrastructure Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-architecture-reviewer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-gdpr-compliance-checker',
+    slug: 'autonomous-gdpr-compliance-checker',
+    title: 'Autonomous GDPR Compliance Checker',
+    shortDescription:
+      'Audit your app for GDPR readiness. Data mapping, consent management, privacy policy checks, and breach response plan.',
+    category: 'Governance & Risk',
+    status: 'live',
+    href: '/ai-lab/autonomous-gdpr-compliance-checker',
     badge: 'New',
   },
 ];
