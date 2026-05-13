@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-07T23:59:15.225Z",
-  "workflowCount": 369,
+  "generatedAt": "2026-05-13T11:34:32.667Z",
+  "workflowCount": 391,
   "status": "healthy",
   "counts": {
     "critical": 0,
@@ -9,6 +9,14 @@
   },
   "findings": [],
   "sample": [
+    {
+      "file": ".github/workflows/accessibility-scorecard.yml",
+      "workflowName": "\"Autonomous Accessibility Scorecard Dashboard\"",
+      "digest": "817186fbf181",
+      "nameCount": 1,
+      "duplicateNameHeaders": false,
+      "lines": 125
+    },
     {
       "file": ".github/workflows/ai-accessibility-audit-smoke-weekly.yml",
       "workflowName": "ai accessibility audit workflow smoke (weekly)",
@@ -320,14 +328,6 @@
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 33
-    },
-    {
-      "file": ".github/workflows/ai-automation-audit.yml",
-      "workflowName": "AI Automation Audit",
-      "digest": "9627b8ec52cb",
-      "nameCount": 1,
-      "duplicateNameHeaders": false,
-      "lines": 57
     }
   ]
 }
