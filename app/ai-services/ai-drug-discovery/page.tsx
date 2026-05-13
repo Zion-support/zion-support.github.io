@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Email Marketing and Campaign Intelligence | Zion Tech Group',
-  description: 'AI email marketing with subject line optimization, send time prediction, content personalization, and A/B testing.',
-  alternates: { canonical: '/ai-services/ai-email-marketing' },
+  title: 'AI Drug Discovery and Molecular Design | Zion Tech Group',
+  description: 'Accelerate pharmaceutical R&D with AI molecular simulation, target identification, toxicity prediction, and clinical trial optimization.',
+  alternates: { canonical: '/ai-services/ai-drug-discovery' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Email Marketing and Campaign Intelligence',
+        title: 'AI Drug Discovery and Molecular Design',
         category: 'AI Services',
-        description: 'AI email marketing with subject line optimization, send time prediction, content personalization, and A/B testing.',
-        iconEmoji: '📧',
+        description: 'Accelerate pharmaceutical R&D with AI molecular simulation, target identification, toxicity prediction, and clinical trial optimization.',
+        iconEmoji: '💊',
         features: [
           { title: 'AI-Powered Analysis', description: 'Machine learning models trained on industry-specific data.' },
           { title: 'Real-Time Processing', description: 'Instant insights and alerts with sub-second response times.' },
