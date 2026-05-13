@@ -55,7 +55,8 @@ export type AILabToolId =
   | 'implementation-readiness-checker'
   | 'roi-ops-scorecard'
   | 'rollout-blueprint'
-  | 'autonomous-db-schema-designer';
+  | 'autonomous-db-schema-designer'
+  | 'autonomous-churn-predictor';
 
 
 export interface AILabTool {
@@ -673,6 +674,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Infrastructure Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-db-schema-designer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-churn-predictor',
+    slug: 'autonomous-churn-predictor',
+    title: 'Autonomous Churn Predictor',
+    shortDescription:
+      'Predict user churn from key metrics: monthly churn rate, NPS, support tickets, tenure. Get revenue-at-risk and 6-month projections.',
+    category: 'Retention Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-churn-predictor',
     badge: 'New',
   },
 ];
