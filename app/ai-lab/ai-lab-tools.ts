@@ -73,7 +73,8 @@ export type AILabToolId =
   | 'autonomous-security-vulnerability-scanner'
   | 'autonomous-api-documentation-generator'
   | 'autonomous-web-accessibility-auditor'
-  | 'autonomous-performance-budget-calculator';
+  | 'autonomous-performance-budget-calculator'
+  | 'autonomous-email-deliverability-checker';
 
 
 export interface AILabTool {
@@ -889,6 +890,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Performance & Optimization',
     status: 'live',
     href: '/ai-lab/autonomous-performance-budget-calculator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-email-deliverability-checker',
+    slug: 'autonomous-email-deliverability-checker',
+    title: 'Autonomous Email Deliverability Checker',
+    shortDescription:
+      'Analyze email content for spam score, DKIM/SPF alignment, bounce risk, inbox placement prediction, and fix recommendations.',
+    category: 'Marketing & Growth',
+    status: 'live',
+    href: '/ai-lab/autonomous-email-deliverability-checker',
     badge: 'New',
   },
 ];
