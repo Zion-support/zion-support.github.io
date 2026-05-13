@@ -231,7 +231,63 @@ export const microSaasCatalog: MicroSaaSProduct[] = [
     "category": "Supply Chain & Logistics",
     "icon": "\ud83d\ude9b",
     "description": "End-to-end supply chain orchestration with demand forecasting, route optimization, and disruption response."
-  }
+  },
+  {
+    slug: 'ai-contract-analyzer-pro',
+    name: 'AI Contract Analyzer Pro',
+    category: 'Legal & Contract Intelligence',
+    icon: '📑',
+    description: 'AI-powered contract review that identifies risks, extracts key terms, and generates negotiation recommendations.'
+  },
+  {
+    slug: 'ai-invoice-scanner',
+    name: 'AI Invoice Scanner',
+    category: 'Finance & Automation',
+    icon: '🧾',
+    description: 'OCR-powered invoice processing with line-item extraction, vendor matching, and zero-touch accounts payable.'
+  },
+  {
+    slug: 'ai-meeting-minutes',
+    name: 'AI Meeting Minutes Generator',
+    category: 'Productivity & Meetings',
+    icon: '🎙️',
+    description: 'Transcribe and summarize meetings with AI that extracts decisions, action items, owners, and deadlines.'
+  },
+  {
+    slug: 'ai-changelog-generator',
+    name: 'AI Changelog Generator',
+    category: 'Developer Productivity',
+    icon: '📋',
+    description: 'Auto-generate release notes from Git commits, PRs, and issues with customizable stakeholder formats.'
+  },
+  {
+    slug: 'ai-poll-creator',
+    name: 'AI Poll & Survey Creator',
+    category: 'Research & Feedback',
+    icon: '📊',
+    description: 'Research-grade surveys with AI-optimized questions, unbiased responses, and statistical analysis.'
+  },
+  {
+    slug: 'ai-press-release',
+    name: 'AI Press Release Writer',
+    category: 'PR & Communications',
+    icon: '📰',
+    description: 'Write AP-style press releases, media kits, and announcements with SEO optimization in minutes.'
+  },
+  {
+    slug: 'ai-compliance-checklist',
+    name: 'AI Compliance Checklist Builder',
+    category: 'Compliance & Governance',
+    icon: '✅',
+    description: 'Build compliance checklists for SOC 2, ISO 27001, HIPAA, GDPR with gap analysis and evidence collection.'
+  },
+  {
+    slug: 'ai-crisis-communications',
+    name: 'AI Crisis Communications Generator',
+    category: 'PR & Risk Management',
+    icon: '🚨',
+    description: 'Generate stakeholder communications and public statements calibrated for crisis severity and audience.'
+  },
 ];
 
 export function groupMicroSaaSByCategory(products: MicroSaaSProduct[] = microSaasCatalog): Record<string, MicroSaaSProduct[]> {

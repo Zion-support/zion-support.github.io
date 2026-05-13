@@ -141,16 +141,18 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Intelligent Document Processing', href: '/intelligent-document-processing' },
   { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
   { name: 'Smart Healthcare Diagnostics', href: '/smart-healthcare-diagnostics' },
-  // === New services added 2026-01-10 ===
-  { name: 'AI Computer Vision', href: '/ai-services/ai-computer-vision' },
-  { name: 'AI Knowledge Management', href: '/ai-services/ai-knowledge-management' },
-  { name: 'AI Testing & QA', href: '/ai-services/ai-testing-qa' },
-  { name: 'AI Translation & Localization', href: '/ai-services/ai-translation-services' },
-  { name: 'AI Employee Experience', href: '/ai-services/ai-employee-experience' },
   // === New IT Services ===
   { name: 'Accessibility & WCAG Compliance', href: '/it-services/accessibility-compliance' },
   { name: 'Cloud Cost Optimization (FinOps)', href: '/it-services/cloud-cost-optimization' },
   { name: 'Supply Chain Management', href: '/it-services/supply-chain-management' },
+  { name: 'Managed SOC & Security', href: '/it-services/managed-soc-security' },
+  { name: 'Network Infrastructure', href: '/it-services/network-infrastructure' },
+  { name: 'Backup & Disaster Recovery', href: '/it-services/backup-disaster-recovery' },
+  { name: 'IT Service Desk', href: '/it-services/it-service-desk' },
+  { name: 'Endpoint Management (MDM)', href: '/it-services/endpoint-management' },
+  { name: 'Digital Workplace', href: '/it-services/digital-workplace' },
+  { name: 'Identity & Access Management', href: '/it-services/identity-access-management' },
+  { name: 'Serverless Architecture', href: '/it-services/serverless-architecture' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
