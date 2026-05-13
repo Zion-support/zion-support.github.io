@@ -66,7 +66,8 @@ export type AILabToolId =
   | 'autonomous-roi-opportunity-radar'
   | 'autonomous-knowledge-base-auditor'
   | 'autonomous-incident-timeline-builder'
-  | 'autonomous-api-test-generator';
+  | 'autonomous-api-test-generator'
+  | 'autonomous-competitor-analysis-engine';
 
 
 export interface AILabTool {
@@ -805,6 +806,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Developer Tools',
     status: 'live',
     href: '/ai-lab/autonomous-api-test-generator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-competitor-analysis-engine',
+    slug: 'autonomous-competitor-analysis-engine',
+    title: 'Autonomous Competitor Analysis Engine',
+    shortDescription:
+      'Auto-scan competitor landscape by niche. Get strength/weakness mapping, market share estimates, pricing analysis, and gap opportunities.',
+    category: 'Market Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-competitor-analysis-engine',
     badge: 'New',
   },
 ];
