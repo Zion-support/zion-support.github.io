@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { routeChat } from '@/lib/llm-fallback-router.cjs';
+import { routeChat } from '@/lib/llm-fallback-router';
 
 /**
  * Unified LLM chat endpoint with automatic fallback to local Ollama.
