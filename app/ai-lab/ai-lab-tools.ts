@@ -37,7 +37,8 @@ export type AILabToolId =
   | 'autonomous-roi-calculator'
   | 'autonomous-tech-stack-auditor'
   | 'autonomous-project-estimator'
-  | 'autonomous-vendor-replacement-advisor';
+  | 'autonomous-vendor-replacement-advisor'
+  | 'autonomous-compliance-auditor';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -456,6 +457,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Cost Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-vendor-replacement-advisor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-compliance-auditor',
+    slug: 'autonomous-compliance-auditor',
+    title: 'Autonomous Compliance Auditor',
+    shortDescription:
+      'Assess GDPR, HIPAA, and SOC 2 readiness with a 15-question diagnostic. Get gap analysis, severity-ranked remediation steps, and Zion tool recommendations.',
+    category: 'Governance & Risk',
+    status: 'live',
+    href: '/ai-lab/autonomous-compliance-auditor',
     badge: 'New',
   },
 ];
