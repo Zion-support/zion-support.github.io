@@ -51,7 +51,8 @@ export type AILabToolId =
   | 'autonomous-ui-a11y-scorecard'
   | 'autonomous-seo-audit-agent'
   | 'autonomous-user-persona-builder'
-  | 'autonomous-ab-test-calculator';
+  | 'autonomous-ab-test-calculator'
+  | 'autonomous-rate-limit-capacity-planner';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -624,6 +625,39 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Experiment Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-ab-test-calculator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-rate-limit-capacity-planner',
+    slug: 'autonomous-rate-limit-capacity-planner',
+    title: 'Autonomous Rate Limit & Capacity Planner',
+    shortDescription:
+      'Model API endpoints with rate limits and traffic multipliers. Get capacity ceiling, DB pool sizing, and scaling recommendations.',
+    category: 'Infrastructure Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-rate-limit-capacity-planner',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-rate-limit-capacity-planner',
+    slug: 'autonomous-rate-limit-capacity-planner',
+    title: 'Autonomous Rate Limit & Capacity Planner',
+    shortDescription:
+      'Model API rate limits across endpoints, simulate traffic multipliers, calculate DB pool sizes and infrastructure costs.',
+    category: 'Infrastructure Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-rate-limit-capacity-planner',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-pricing-strategy-optimizer',
+    slug: 'autonomous-pricing-strategy-optimizer',
+    title: 'Autonomous Pricing Strategy Optimizer',
+    shortDescription:
+      'Optimize SaaS pricing tiers with LTV:CAC analysis, price elasticity modeling, competitor benchmarking, and scenario planning.',
+    category: 'Revenue Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-pricing-strategy-optimizer',
     badge: 'New',
   },
 ];
