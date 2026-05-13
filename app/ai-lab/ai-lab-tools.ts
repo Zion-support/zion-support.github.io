@@ -71,7 +71,8 @@ export type AILabToolId =
   | 'autonomous-code-deploy-simulator'
   | 'autonomous-uptime-monitor'
   | 'autonomous-security-vulnerability-scanner'
-  | 'autonomous-api-documentation-generator';
+  | 'autonomous-api-documentation-generator'
+  | 'autonomous-web-accessibility-auditor';
 
 
 export interface AILabTool {
@@ -865,6 +866,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Developer Tools',
     status: 'live',
     href: '/ai-lab/autonomous-api-documentation-generator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-web-accessibility-auditor',
+    slug: 'autonomous-web-accessibility-auditor',
+    title: 'Autonomous Web Accessibility Auditor',
+    shortDescription:
+      'Scan URLs against WCAG 2.1 AA. Contrast analysis, ARIA audits, keyboard nav, screen reader compatibility, fix recommendations.',
+    category: 'Security & Compliance',
+    status: 'live',
+    href: '/ai-lab/autonomous-web-accessibility-auditor',
     badge: 'New',
   },
 ];
