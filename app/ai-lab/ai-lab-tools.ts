@@ -43,7 +43,8 @@ export type AILabToolId =
   | 'autonomous-accessibility-auditor'
   | 'autonomous-api-profiler'
   | 'autonomous-data-pipeline-visualizer'
-  | 'autonomous-meeting-analyzer';
+  | 'autonomous-meeting-analyzer'
+  | 'autonomous-code-review-assistant';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -528,6 +529,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'AI Productivity',
     status: 'live',
     href: '/ai-lab/autonomous-meeting-analyzer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-code-review-assistant',
+    slug: 'autonomous-code-review-assistant',
+    title: 'Autonomous Code Review Assistant',
+    shortDescription:
+      'Paste code snippets or PR diffs to get instant security, performance, and style analysis. Detects vulnerabilities, bugs, anti-patterns, and provides fix suggestions.',
+    category: 'Code Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-code-review-assistant',
     badge: 'New',
   },
 ];
