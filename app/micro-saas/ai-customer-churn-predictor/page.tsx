@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group',
-  description: 'Intelligent cross-platform social scheduling with AI-generated posting times, content suggestions, hashtag optimization, and analytics.',
-  alternates: { canonical: '/micro-saas/ai-social-media-scheduler' },
+  title: 'AI Customer Churn Predictor | Zion Tech Group',
+  description: 'Identify at-risk customers before they leave with ML-powered churn signals, engagement decay detection, and automated retention workflows.',
+  alternates: { canonical: '/micro-saas/ai-customer-churn-predictor' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Social Media Scheduler',
-        category: 'Micro SaaS · Marketing Automation',
-        description: 'Intelligent cross-platform social scheduling with AI-generated posting times, content suggestions, hashtag optimization, and analytics.',
-        iconEmoji: '📅',
+        title: 'AI Customer Churn Predictor',
+        category: 'Micro SaaS · Revenue & Retention',
+        description: 'Identify at-risk customers before they leave with ML-powered churn signals, engagement decay detection, and automated retention workflows.',
+        iconEmoji: '📉',
         features: [
           { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns and reduce manual effort.' },
           { title: 'Cloud-Hosted & Zero Setup', description: 'Access from anywhere with no infrastructure management or IT overhead.' },
@@ -38,9 +38,9 @@ export default function Page() {
         ],
         ctaLabel: 'Start Your Free Trial',
         pricing: [
-          { tier: 'Starter', price: '$12', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics & reports', 'Email support'] },
-          { tier: 'Professional', price: '$29', period: '/month', features: ['All Starter features', 'Up to 25 users', 'Advanced analytics', 'Priority email & chat support', 'Full API access', 'Custom integrations'] },
-          { tier: 'Enterprise', price: '$79', period: '/month', features: ['Everything in Professional', 'Unlimited users', 'Custom workflows & branding', '24/7 dedicated support', 'SLA & uptime guarantee', 'SSO, SCIM & audit logs'] },
+          { tier: 'Starter', price: '$29', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics & reports', 'Email support'] },
+          { tier: 'Professional', price: '$69', period: '/month', features: ['All Starter features', 'Up to 25 users', 'Advanced analytics', 'Priority email & chat support', 'Full API access', 'Custom integrations'] },
+          { tier: 'Enterprise', price: '$199', period: '/month', features: ['Everything in Professional', 'Unlimited users', 'Custom workflows & branding', '24/7 dedicated support', 'SLA & uptime guarantee', 'SSO, SCIM & audit logs'] },
         ],
         contact: {
           phone: '+1 302 464 0950',

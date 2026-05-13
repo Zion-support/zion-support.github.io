@@ -543,6 +543,66 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-code-reviewer-pro',
     category: 'ai'
+  },
+  {
+    id: 'ai-revenue-optimization',
+    title: 'AI Revenue Optimization & Pricing Intelligence',
+    description: 'Dynamic pricing engine powered by machine learning — analyze competitor pricing, demand elasticity, customer segments, and market conditions to maximize revenue in real time.',
+    features: ['ML-driven dynamic pricing models', 'Competitor price monitoring & alerts', 'Customer segment willingness-to-pay analysis', 'Demand forecasting & inventory alignment', 'A/B price testing & revenue attribution', 'Multi-channel price synchronization'],
+    benefits: ['Increase revenue by 15-30% through optimized pricing', 'Reduce price-setting time from weeks to minutes', 'Real-time competitor price intelligence', 'Data-driven pricing decisions across all channels'],
+    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/ai-services/ai-revenue-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📈',
+    href: '/ai-services/ai-revenue-optimization',
+    category: 'ai'
+  },
+  {
+    id: 'ai-cyber-threat-hunting',
+    title: 'AI Cyber Threat Hunting & Incident Response',
+    description: 'Proactive threat detection using advanced AI behavioral analysis, anomaly detection, and automated incident response orchestration for enterprises under constant attack.',
+    features: ['24/7 AI-powered threat hunting across network endpoints', 'Behavioral anomaly detection & zero-day identification', 'Automated incident response playbooks', 'Threat intelligence correlation & enrichment', 'Forensic analysis & root-cause reconstruction', 'Compliance reporting for SOC 2, ISO 27001, NIST'],
+    benefits: ['Detect threats 10x faster than manual SOC teams', 'Reduce mean time to response (MTTR) by 70%', 'Proactive defense against emerging attack vectors', 'Automated compliance audit trail generation'],
+    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
+    contactInfo: { website: '/ai-services/ai-cyber-threat-hunting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔒',
+    href: '/ai-services/ai-cyber-threat-hunting',
+    category: 'ai'
+  },
+  {
+    id: 'ai-sentiment-analysis',
+    title: 'AI Sentiment Analysis & Brand Monitoring',
+    description: 'Real-time brand perception tracking across social media, reviews, news, and forums. Understand customer emotion at scale and act on insights before they become crises.',
+    features: ['Multi-platform social listening (X, Reddit, TikTok, news)', 'Emotion-level sentiment scoring (joy, anger, fear, trust)', 'Brand mention clustering & trending topic detection', 'Influencer identification & partnership scoring', 'Crisis early-warning system with alert triage', 'Competitor sentiment benchmarking & gap analysis'],
+    benefits: ['Identify PR crises 2-3 days before mainstream pickup', 'Quantify brand health with actionable metrics', 'Discover micro-influencers in your niche organically', 'Competitor sentiment intelligence for positioning'],
+    pricing: { basic: '349', pro: '799', enterprise: '1899' },
+    contactInfo: { website: '/ai-services/ai-sentiment-analysis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💬',
+    href: '/ai-services/ai-sentiment-analysis',
+    category: 'ai'
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: 'AI Predictive Maintenance & Asset Monitoring',
+    description: 'IoT-enabled predictive maintenance that monitors equipment health in real time, predicts failures before they happen, and optimizes maintenance schedules to reduce downtime.',
+    features: ['IoT sensor data ingestion & real-time monitoring', 'ML-based remaining useful life (RUL) prediction', 'Anomaly detection for early fault signatures', 'Automated maintenance scheduling & work order generation', 'Fleet-wide asset health dashboards', 'Integration with CMMS, SAP, and ERP systems'],
+    benefits: ['Reduce unplanned downtime by 40-60%', 'Extend equipment lifespan by 20-30%', 'Cut maintenance costs by 25% through optimization', 'Eliminate expensive emergency repairs'],
+    pricing: { basic: '499', pro: '1199', enterprise: '2799' },
+    contactInfo: { website: '/ai-services/ai-predictive-maintenance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚙️',
+    href: '/ai-services/ai-predictive-maintenance',
+    category: 'ai'
+  },
+  {
+    id: 'ai-speech-voice-solutions',
+    title: 'AI Speech & Voice Solutions',
+    description: 'Enterprise-grade speech technology including high-accuracy transcription, AI voice cloning, real-time translation, voice biometrics, and conversational AI for customer service.',
+    features: ['99.2% accuracy speech-to-text in 60+ languages', 'Real-time voice translation for live meetings', 'Voice cloning for personalized brand audio content', 'Voice biometrics for secure identity verification', 'Conversational IVR with natural language understanding', 'Meeting transcription with speaker diarization & summaries'],
+    benefits: ['Automate call center transcription at scale', 'Provide multilingual support without hiring translators', 'Secure authentication via voice fingerprinting', 'Create branded audio content with AI voice cloning'],
+    pricing: { basic: '279', pro: '649', enterprise: '1599' },
+    contactInfo: { website: '/ai-services/ai-speech-voice-solutions', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎙️',
+    href: '/ai-services/ai-speech-voice-solutions',
+    category: 'ai'
   }
 ];
 
@@ -864,6 +924,66 @@ export const itServices: Service[] = [
     icon: '🚛',
     href: '/it-services/supply-chain-management',
     category: 'automation'
+  },
+  {
+    id: 'it-network-security-monitoring',
+    title: 'Network Security Monitoring & SIEM',
+    description: 'Real-time network traffic analysis, threat correlation, and centralized Security Information and Event Management (SIEM) for enterprises requiring continuous security posture visibility.',
+    features: ['24/7 network traffic monitoring & flow analysis', 'Centralized SIEM with log aggregation', 'Threat correlation engine with automated alerting', 'Custom dashboard & compliance reporting', 'Integration with firewalls, IDS/IPS, and endpoint protection'],
+    benefits: ['Detect lateral movement within minutes, not months', 'Centralize security visibility across all infrastructure', 'Reduce alert fatigue with intelligent correlation', 'Meet regulatory requirements with automated reports'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/network-security-monitoring', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/it-services/network-security-monitoring',
+    category: 'security'
+  },
+  {
+    id: 'it-edge-computing-solutions',
+    title: 'Edge Computing & IoT Infrastructure',
+    description: 'Deploy compute closer to your data sources with edge computing architecture — low-latency processing, distributed AI inference, and resilient IoT device management.',
+    features: ['Edge server deployment & configuration', 'Container orchestration at the edge (K3s, KubeEdge)', 'IoT device provisioning & lifecycle management', 'Low-latency AI inference on edge hardware', 'Offline-first data synchronization with cloud'],
+    benefits: ['Sub-10ms response times for critical applications', 'Reduce cloud data transfer costs by 60%', 'Operate autonomously during network outages', 'Scale IoT deployments to thousands of devices'],
+    pricing: { basic: '1299', pro: '2999', enterprise: '6499' },
+    contactInfo: { website: '/it-services/edge-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📡',
+    href: '/it-services/edge-computing',
+    category: 'cloud'
+  },
+  {
+    id: 'it-disaster-recovery',
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning, automated failover systems, and business continuity solutions ensuring zero data loss and minimal downtime for mission-critical operations.',
+    features: ['RTO/RPO analysis & recovery strategy design', 'Multi-region backup & replication automation', 'Automated failover testing & validation', 'Runbook creation & disaster response playbooks', 'Continuous compliance monitoring for DR readiness'],
+    benefits: ['Guarantee 99.99% uptime with automated failover', 'Reduce recovery time from days to minutes', 'Pass compliance DR audits on first attempt', 'Protect brand reputation with always-on services'],
+    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
+    contactInfo: { website: '/it-services/disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔄',
+    href: '/it-services/disaster-recovery',
+    category: 'cloud'
+  },
+  {
+    id: 'it-itil-service-management',
+    title: 'ITIL Service Management (ITSM) Platform',
+    description: 'Full ITIL-aligned service management with AI-powered ticketing, change management automation, CMDB discovery, and self-service portal for enterprise IT operations.',
+    features: ['AI-powered incident classification & routing', 'Automated change approval workflows', 'Service catalog & self-service portal', 'CMDB auto-discovery & dependency mapping', 'SLA monitoring & escalation engine', 'Knowledge base integration with AI search'],
+    benefits: ['Reduce ticket resolution time by 50%', 'Eliminate change-related outages with automated validation', 'Empower users with self-service capabilities', 'Maintain accurate service dependency maps'],
+    pricing: { basic: '499', pro: '1099', enterprise: '2499' },
+    contactInfo: { website: '/it-services/itil-service-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📋',
+    href: '/it-services/itil-service-management',
+    category: 'it'
+  },
+  {
+    id: 'it-zero-trust-architecture',
+    title: 'Zero Trust Security Architecture',
+    description: 'Implement Zero Trust principles across your enterprise — identity verification, micro-segmentation, least-privilege access, and continuous authentication for every request.',
+    features: ['Identity & Access Management (IAM) modernization', 'Micro-segmentation of network workloads', 'Continuous adaptive risk & trust assessment', 'Device posture checking & conditional access', 'Privileged Access Management (PAM) integration'],
+    benefits: ['Eliminate implicit trust across the network', 'Reduce breach impact with micro-segmentation', 'Meet CISA Zero Trust maturity requirements', 'Secure hybrid and remote workforces uniformly'],
+    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
+    contactInfo: { website: '/it-services/zero-trust-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔐',
+    href: '/it-services/zero-trust-architecture',
+    category: 'security'
   }
 ];
 
