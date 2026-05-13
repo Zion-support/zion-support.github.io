@@ -45,7 +45,10 @@ export type AILabToolId =
   | 'autonomous-data-pipeline-visualizer'
   | 'autonomous-meeting-analyzer'
   | 'autonomous-code-review-assistant'
-  | 'autonomous-prompt-cost-calculator';
+  | 'autonomous-prompt-cost-calculator'
+  | 'autonomous-tech-debt-tracker'
+  | 'autonomous-api-doc-generator'
+  | 'autonomous-ui-a11y-scorecard';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -552,6 +555,39 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Cost Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-prompt-cost-calculator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-tech-debt-tracker',
+    slug: 'autonomous-tech-debt-tracker',
+    title: 'Autonomous Tech Debt Tracker',
+    shortDescription:
+      'Detect deprecated APIs, complexity, duplicates, and missing docs. Calculate debt ROI and interest rate.',
+    category: 'Code Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-tech-debt-tracker',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-api-doc-generator',
+    slug: 'autonomous-api-doc-generator',
+    title: 'Autonomous API Endpoint Doc Generator',
+    shortDescription:
+      'Paste Express/Next.js/NestJS route code. Auto-generates OpenAPI docs, parameter tables, and cURL examples.',
+    category: 'Developer Tools',
+    status: 'live',
+    href: '/ai-lab/autonomous-api-doc-generator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-ui-a11y-scorecard',
+    slug: 'autonomous-ui-a11y-scorecard',
+    title: 'Autonomous UI Accessibility Scorecard',
+    shortDescription:
+      'Audit HTML/JSX against WCAG 2.2 rules. Get pass/fail grades, severity-ranked violations, and fix instructions.',
+    category: 'Quality Assurance',
+    status: 'live',
+    href: '/ai-lab/autonomous-ui-a11y-scorecard',
     badge: 'New',
   },
 ];
