@@ -38,7 +38,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
       vulns.push({
         id: 'SEC-003', severity: 'Critical', category: 'Secrets Exposure',
         title: 'GitHub Personal Access Token Detected',
-        remediation: 'Revoke token immediately, rotate credentials, use GitHub's token patterns for CI.',
+        remediation: 'Revoke token immediately, rotate credentials, use GitHub\'s token patterns for CI.',
         owaspReference: 'A02:2021 – Cryptographic Failures',
       });
     }
@@ -99,7 +99,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         id: 'SEC-030', severity: 'Medium', category: 'Missing Security Headers',
         title: 'Content-Security-Policy Header Missing',
         description: 'CSP header not configured. Without CSP, the app is vulnerable to XSS and data injection attacks.',
-        remediation: 'Add CSP header: res.setHeader("Content-Security-Policy", "default-src 'self';")',
+        remediation: 'Add CSP header: res.setHeader("Content-Security-Policy", "default-src \'self\';")',
         owaspReference: 'A05:2021 – Security Misconfiguration',
       });
     }
@@ -108,7 +108,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         id: 'SEC-031', severity: 'Medium', category: 'Missing Security Headers',
         title: 'X-Frame-Options / frame-ancestors Not Set',
         description: 'App may be vulnerable to clickjacking attacks.',
-        remediation: 'Add X-Frame-Options: DENY or CSP frame-ancestors 'none''.
+        remediation: 'Add X-Frame-Options: DENY or CSP frame-ancestors \'none\''.
         owaspReference: 'A05:2021 – Security Misconfiguration',
       });
     }
