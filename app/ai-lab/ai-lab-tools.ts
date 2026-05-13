@@ -36,7 +36,8 @@ export type AILabToolId =
   | 'autonomous-code-quality-playground'
   | 'autonomous-roi-calculator'
   | 'autonomous-tech-stack-auditor'
-  | 'autonomous-project-estimator';
+  | 'autonomous-project-estimator'
+  | 'autonomous-vendor-replacement-advisor';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -444,6 +445,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Business Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-project-estimator',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-vendor-replacement-advisor',
+    slug: 'autonomous-vendor-replacement-advisor',
+    title: 'Autonomous Vendor Replacement Advisor',
+    shortDescription:
+      'Compare any current vendor against Zion AI alternatives. Side-by-side feature matrix, cost savings analysis, and migration recommendations.',
+    category: 'Cost Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-vendor-replacement-advisor',
     badge: 'New',
   },
 ];
