@@ -2,8 +2,8 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Voice Assistant | Zion Tech Group',
-  description: 'Enterprise voice AI across 50 languages with intelligent call routing, transcription, and CRM integration.',
+  title: 'AI Voice Assistant and Conversational IVR | Zion Tech Group',
+  description: 'Intelligent voice assistants for customer service and scheduling with natural language understanding and human escalation.',
   alternates: { canonical: '/ai-services/ai-voice-assistant' },
 };
 
@@ -11,36 +11,36 @@ export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Voice Assistant',
-        category: 'Enterprise Solutions',
-        description: 'Enterprise voice AI across 50 languages with intelligent call routing, transcription, and CRM integration.',
-        iconEmoji: '🎙️',
+        title: 'AI Voice Assistant and Conversational IVR',
+        category: 'AI Services',
+        description: 'Intelligent voice assistants for customer service and scheduling with natural language understanding and human escalation.',
+        iconEmoji: '🎙',
         features: [
-          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
-          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
-          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
-          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
-          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
-          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
+          { title: 'AI-Powered Analysis', description: 'Machine learning models trained on industry-specific data.' },
+          { title: 'Real-Time Processing', description: 'Instant insights and alerts with sub-second response times.' },
+          { title: 'Seamless Integration', description: 'REST APIs, webhooks, and pre-built connectors.' },
+          { title: 'Enterprise Security', description: 'SOC 2 certified with encryption and role-based access.' },
+          { title: 'Custom Dashboards', description: 'Tailored visualizations for your KPIs.' },
+          { title: '24/7 Support', description: 'Always-on infrastructure with dedicated support.' },
         ],
         useCases: [
-          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
-          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
-          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
+          { title: 'Enterprise', description: 'Full-scale deployment across departments.', icon: '\U0001F3E2' },
+          { title: 'Mid-Market', description: 'Tailored for growing organizations.', icon: '\U0001F4C8' },
+          { title: 'Regulated', description: 'Compliance-ready for healthcare, finance, and gov.', icon: '\U0001F512' },
         ],
         benefits: [
-          'Reduce costs by 30-60%',
-          'Accelerate delivery 2-10x',
-          '99.9%+ uptime SLAs',
-          'Built-in security & compliance',
-          'Dedicated expert team',
-          'Continuous optimization',
+          'Reduce costs by 30-50%',
+          'Accelerate decisions with AI insights',
+          'Eliminate manual overhead',
+          'Scale with your business',
+          'Meet compliance out of the box',
+          'Achieve ROI within 90 days',
         ],
-        ctaLabel: 'Get Started with AI Voice Assistant',
+        ctaLabel: 'Schedule Your Consultation',
         pricing: [
-          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
-          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
+          { tier: 'Starter', price: '$599', period: '/mo', features: ['Core features', 'Email support'] },
+          { tier: 'Professional', price: '$1299', period: '/mo', features: ['All Starter', 'Priority support', 'API access'] },
+          { tier: 'Enterprise', price: '$2999', period: '/mo', features: ['Everything', '24/7 support', 'SLA', 'On-premise'] },
         ],
         contact: {
           phone: '+1 302 464 0950',

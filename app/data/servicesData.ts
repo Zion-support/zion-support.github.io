@@ -831,6 +831,90 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-chatbot-builder-pro',
     category: 'ai'
+  },
+  {
+    id: 'ai-drug-discovery',
+    title: 'AI Drug Discovery & Molecular Design',
+    description: 'Accelerate pharmaceutical R&D with AI-powered molecular simulation, target identification, toxicity prediction, and clinical trial optimization.',
+    features: ['De novo molecular design with generative AI', 'Protein-ligand binding affinity prediction', 'ADMET toxicity and pharmacokinetics modeling', 'Clinical trial cohort matching and optimization', 'Multi-target drug candidate screening'],
+    benefits: ['Reduce drug discovery timelines from 12 to 4 years', 'Cut R&D costs by 60% with AI-guided candidate selection', 'Predict toxicity before expensive animal studies', 'Increase first-in-human trial success rates'],
+    pricing: { basic: '2999', pro: '6999', enterprise: '16999' },
+    contactInfo: { website: '/ai-services/ai-drug-discovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💊',
+    href: '/ai-services/ai-drug-discovery',
+    category: 'ai'
+  },
+  {
+    id: 'ai-video-generation',
+    title: 'AI Video Generation & Synthetic Media',
+    description: 'Enterprise video creation platform with AI-driven scripting, voice synthesis, avatar generation, scene composition, and automated post-production workflows.',
+    features: ['Text-to-video generation with photorealistic avatars', 'AI voice synthesis with emotion control', 'Automated subtitle and caption generation in 50+ languages', 'Brand-compliant scene templates and assets', 'Batch video production for marketing at scale'],
+    benefits: ['Produce marketing videos 95% faster than studio production', 'Eliminate need for physical sets and actors', 'Multi-localized versions from single source content', 'Consistent brand presence across all video channels'],
+    pricing: { basic: '299', pro: '799', enterprise: '1999' },
+    contactInfo: { website: '/ai-services/ai-video-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎬',
+    href: '/ai-services/ai-video-generation',
+    category: 'ai'
+  },
+  {
+    id: 'ai-voice-assistant',
+    title: 'AI Voice Assistant & Conversational IVR',
+    description: 'Deploy intelligent voice assistants for customer service, internal IT support, and appointment scheduling with natural language understanding and seamless human escalation.',
+    features: ['Natural language voice recognition across 100+ languages', 'Context-aware multi-turn conversation management', 'Sentiment analysis for real-time response adaptation', 'CRM and calendar integration for action completion', 'Analytics dashboard with call scoring and insights'],
+    benefits: ['Handle 70% of calls without human intervention', 'Reduce average handle time by 50%', '24/7 availability for global customer bases', 'Seamless escalation with full context transfer'],
+    pricing: { basic: '399', pro: '899', enterprise: '2199' },
+    contactInfo: { website: '/ai-services/ai-voice-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎙️',
+    href: '/ai-services/ai-voice-assistant',
+    category: 'ai'
+  },
+  {
+    id: 'ai-supply-chain',
+    title: 'AI Supply Chain Intelligence & Optimization',
+    description: 'End-to-end supply chain visibility and optimization with demand forecasting, supplier risk scoring, route planning, and inventory optimization powered by ML.',
+    features: ['Real-time supply chain visibility with digital twin', 'ML demand forecasting at SKU and location level', 'Supplier risk monitoring with alternative sourcing', 'Multi-echelon inventory optimization', 'Carbon footprint tracking and sustainability reporting'],
+    benefits: ['Reduce supply chain costs by 25-40%', 'Improve forecast accuracy by 35%', 'Prevent disruptions with early risk signals', 'Optimize inventory to reduce carrying costs by 30%'],
+    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
+    contactInfo: { website: '/ai-services/ai-supply-chain', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📦',
+    href: '/ai-services/ai-supply-chain',
+    category: 'ai'
+  },
+  {
+    id: 'ai-email-marketing',
+    title: 'AI Email Marketing & Campaign Intelligence',
+    description: 'AI-driven email marketing with intelligent subject line generation, send time optimization, content personalization, and automated A/B testing at enterprise scale.',
+    features: ['AI subject line and content generation', 'Predictive send time optimization per recipient', 'Dynamic content personalization at scale', 'Automated A/B/n testing with multi-armed bandits', 'Deliverability monitoring and inbox placement scoring'],
+    benefits: ['Increase open rates by 40% with AI-optimized subjects', 'Boost click-through rates by 60% with personalized content', 'Reduce campaign setup time by 80%', 'Maintain high deliverability with proactive monitoring'],
+    pricing: { basic: '149', pro: '349', enterprise: '899' },
+    contactInfo: { website: '/ai-services/ai-email-marketing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📧',
+    href: '/ai-services/ai-email-marketing',
+    category: 'ai'
+  },
+  {
+    id: 'ai-video-analytics',
+    title: 'AI Video Analytics & Visual Intelligence',
+    description: 'Real-time video analytics for retail, security, manufacturing, and public spaces — crowd behavior analysis, anomaly detection, and operational intelligence from existing CCTV.',
+    features: ['Existing CCTV integration with AI overlay', 'Crowd density and flow pattern analysis', 'Anomaly detection for security incidents', 'Customer journey and dwell time analytics', 'Real-time alerts with automated response triggers'],
+    benefits: ['Leverage existing camera infrastructure with AI upgrade', 'Detect security incidents 3x faster than human monitoring', 'Optimize store layouts with customer flow insights', 'Reduce retail shrinkage by 40% with proactive alerts'],
+    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/ai-services/ai-video-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📹',
+    href: '/ai-services/ai-video-analytics',
+    category: 'ai'
+  },
+  {
+    id: 'ai-compliance',
+    title: 'AI Compliance Monitoring & Automated Auditing',
+    description: 'Continuous compliance monitoring across SOC 2, ISO 27001, HIPAA, GDPR, and PCI-DSS with evidence collection, gap analysis, and automated audit-ready report generation.',
+    features: ['Continuous control monitoring across 5+ frameworks', 'Automated evidence collection from systems and logs', 'Real-time compliance dashboards with trend analysis', 'Gap analysis with prioritized remediation workflows', 'Audit-ready report generation with full traceability'],
+    benefits: ['Reduce audit preparation time by 75%', 'Eliminate compliance blind spots with continuous monitoring', 'Pass first-time audits with confidence', 'Scale compliance across growing multi-entity organizations'],
+    pricing: { basic: '449', pro: '999', enterprise: '2499' },
+    contactInfo: { website: '/ai-services/ai-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/ai-services/ai-compliance',
+    category: 'ai'
   }
 ];
 
@@ -1416,10 +1500,58 @@ export const itServices: Service[] = [
     icon: '📞',
     href: '/it-services/voice-infrastructure',
     category: 'cloud'
+  },
+  {
+    id: 'it-identity-access-management',
+    title: 'Identity & Access Management (IAM) Platform',
+    description: 'Enterprise IAM with SSO, MFA, PAM, and automated access provisioning across cloud and on-premise systems — Zero Trust-ready identity governance.',
+    features: ['Single sign-on (SSO) with 5000+ app integrations', 'Adaptive multi-factor authentication with risk scoring', 'Privileged access management (PAM) with session recording', 'Automated access provisioning and de-provisioning', 'Identity governance with access certification workflows'],
+    benefits: ['Reduce access-related incidents by 90%', 'Achieve 100% compliance with identity best practices', 'Eliminate orphaned accounts and access creep', 'Seamless experience with frictionless SSO for users'],
+    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
+    contactInfo: { website: '/it-services/iam-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔑',
+    href: '/it-services/iam-platform',
+    category: 'security'
+  },
+  {
+    id: 'it-capacity-planning',
+    title: 'IT Capacity Planning & Resource Forecasting',
+    description: 'AI-driven capacity planning that forecasts compute, storage, and network requirements based on growth patterns and workload trends across your infrastructure.',
+    features: ['Predictive capacity forecasting with ML models', 'Workload trend analysis and seasonal pattern detection', 'Cloud vs on-prem cost comparison modeling', 'Automated right-sizing recommendations', 'Budget impact simulation for capacity decisions'],
+    benefits: ['Eliminate surprise capacity crises with early warnings', 'Optimize infrastructure spend by 25-40%', 'Plan capacity with 95% forecast accuracy', 'Make data-driven budget decisions'],
+    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
+    contactInfo: { website: '/it-services/capacity-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/it-services/capacity-planning',
+    category: 'cloud'
+  },
+  {
+    id: 'it-backup-disaster-recovery',
+    title: 'Backup & Disaster Recovery Solutions',
+    description: 'Enterprise-grade backup, replication, and disaster recovery — automated backups, immutable storage, multi-region replication, and one-click failover.',
+    features: ['Automated incremental and full backup scheduling', 'Immutable backup storage (WORM) for ransomware protection', 'Multi-region replication for geographic redundancy', 'One-click disaster recovery with tested failover scripts', 'Compliance reporting and backup integrity verification'],
+    benefits: ['Guarantee RPO of minutes, RTO of hours', 'Protect against ransomware with immutable backups', 'Meet all regulatory data retention requirements', 'Eliminate backup failures with automated monitoring'],
+    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/it-services/backup-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💾',
+    href: '/it-services/backup-recovery',
+    category: 'cloud'
+  },
+  {
+    id: 'it-network-automation',
+    title: 'Network Automation & SD-WAN Management',
+    description: 'Automated network configuration, monitoring, and optimization with SD-WAN, intent-based networking, and AI-driven performance management.',
+    features: ['Intent-based network configuration automation', 'SD-WAN deployment and centralized management', 'AI-driven traffic routing and QoS optimization', 'Automated compliance checks and security policy enforcement', 'Network performance monitoring with predictive alerts'],
+    benefits: ['Reduce network change errors by 80%', 'Optimize WAN costs by 40-60% with SD-WAN', 'Automate repetitive network administration tasks', 'Proactively address performance degradations'],
+    pricing: { basic: '999', pro: '2299', enterprise: '5499' },
+    contactInfo: { website: '/it-services/network-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌐',
+    href: '/it-services/network-automation',
+    category: 'cloud'
   }
 ];
 
-// Add itSolutions as alias for itServices
+// Add itSolutions for itServices
 export const itSolutions = itServices;
 export const allServices: Service[] = [...aiServices, ...itServices];
 // Export as servicesData for backward compatibility
