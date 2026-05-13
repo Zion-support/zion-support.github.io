@@ -62,7 +62,7 @@ function auditAgents() {
     const agentPath = path.join(AUTOMATION_DIR, agent);
     const content = readFileSafe(agentPath);
 
-    // Check for require('./lib/openrouter-client.cjs')
+    // Check for require('./lib/llm-client.cjs')
     if (content.includes("require('./lib/") || content.includes("require('../lib/")) {
       if (!fs.existsSync(path.join(AUTOMATION_DIR, 'lib', 'openrouter-client.cjs'))) {
         issues.push({ type: 'missing_lib', agent, detail: 'References lib/openrouter-client.cjs but file missing' });
@@ -149,7 +149,7 @@ function auditCron() {
 
 async function runLLMSuggestions(auditResult) {
   try {
-    const { createLLMClient } = require('./lib/openrouter-client.cjs');
+    const { createLLMClient } = require('./lib/llm-client.cjs');
     const llm = createLLMClient({ appName: 'Zion Automation Audit' });
 
     if (!llm.isConfigured()) return null;

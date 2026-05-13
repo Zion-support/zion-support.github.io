@@ -115,7 +115,7 @@ async function run() {
     siteSample: siteSample.slice(0, 2000),
   };
 
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion Automation Evolution' });
 
   let result = FALLBACK;

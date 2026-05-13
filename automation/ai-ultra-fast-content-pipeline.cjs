@@ -222,7 +222,7 @@ async function runPhase2() {
 }
 
 async function main() {
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient();
   const needsLLM = !SKIP_IDEATION || !SKIP_EVOLUTION_IDEAS || !SKIP_BLOG || !SKIP_FRONT_PAGE || !SKIP_PRODUCT_PAGES;
   if (needsLLM && !llm.isConfigured()) {

@@ -130,7 +130,7 @@ async function runIdeation() {
     log('Skipping ideation (SKIP_IDEATION=1)');
     return { ok: true, skipped: true };
   }
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   if (!createLLMClient().isConfigured()) {
     log('Skipping ideation (no LLM: start Ollama or set OPENROUTER_API_KEY)');
     return { ok: true, skipped: true };
@@ -144,7 +144,7 @@ async function runFrontPageExpansion() {
     log('Skipping front page (SKIP_FRONT_PAGE=1)');
     return { ok: true, skipped: true };
   }
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   if (!createLLMClient().isConfigured()) {
     log('Skipping front page expansion (no LLM: start Ollama or set OPENROUTER_API_KEY)');
     return { ok: true, skipped: true };
@@ -169,7 +169,7 @@ async function runBlogGenerator() {
     log('Skipping blog (SKIP_BLOG=1)');
     return { ok: true, skipped: true };
   }
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   if (!createLLMClient().isConfigured()) {
     log('Skipping blog (no LLM: start Ollama or set OPENROUTER_API_KEY)');
     return { ok: true, skipped: true };

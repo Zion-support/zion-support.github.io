@@ -27,6 +27,20 @@ const appWhatsNew: WhatsNewItem[] = [
     tag: 'New tool',
   },
   {
+    id: 'email-response-generator',
+    title: 'Email Response Generator',
+    description: 'Generate professional email responses instantly. Choose your tone, purpose, and context — get a polished draft in seconds. Supports professional, friendly, formal, casual, empathetic, and persuasive tones.',
+    href: '/tools/email-response-generator',
+    tag: 'New tool',
+  },
+  {
+    id: 'google-workspace-setup',
+    title: 'Google Workspace Setup Guide',
+    description: 'Interactive step-by-step guide to configure Google Workspace with proper DNS, MX, SPF, DKIM, DMARC records, user accounts, email routing, and security settings.',
+    href: '/tools/google-workspace-setup',
+    tag: 'New tool',
+  },
+  {
     id: 'json-schema-generator',
     title: 'JSON Schema Generator',
     description: 'Generate JSON Schema (2020-12 draft) and TypeScript interfaces from sample JSON data. Smart format detection for emails, URLs, dates, UUIDs, phone numbers. Configurable options and downloadable output.',

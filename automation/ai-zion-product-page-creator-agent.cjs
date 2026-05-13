@@ -164,7 +164,7 @@ ${useCasesStr}
 
 async function llmGenerateProduct() {
   try {
-    const { createLLMClient } = require('./lib/openrouter-client.cjs');
+    const { createLLMClient } = require('./lib/llm-client.cjs');
     const client = createLLMClient({
       openrouterModel: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.2-3b-instruct:free',
     });

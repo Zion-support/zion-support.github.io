@@ -18,7 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 
 const PAGE_PATH = path.join(process.cwd(), 'app', 'page.tsx');
 const CASE_STUDIES_PATH = path.join(process.cwd(), 'app', 'case-studies', 'page.tsx');

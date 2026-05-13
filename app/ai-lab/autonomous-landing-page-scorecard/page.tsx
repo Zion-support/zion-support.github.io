@@ -91,7 +91,7 @@ export default function AutonomousLandingPageScorecardPage() {
                   {catScores.map((c, i) => (
                     <div key={i} style={{ background: '#0f172a', padding: '0.75rem', borderRadius: '8px', textAlign: 'center', border: '1px solid #312e81' }}>
                       <div style={{ fontSize: '1.25rem', fontWeight: '700', color: c.score >= 80 ? '#4ade80' : c.score >= 60 ? '#fbbf24' : '#f87171' }}>{c.score}</div>
-                      <div style={{ fontSize: '0.7rem', color: '#94a3b8' }}>{c.cat}</div>
+                      <div style={{ fontSize: '0.7rem', color: '#64748b' }}>{c.cat}</div>
                     </div>
                   ))}
                 </div>
@@ -109,7 +109,7 @@ export default function AutonomousLandingPageScorecardPage() {
           <>
             <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
               {(['all', 'pass', 'warning', 'fail'] as const).map(f => (
-                <button key={f} onClick={() => setFilter(f)} style={{ padding: '0.4rem 0.8rem', borderRadius: '6px', border: `1px solid ${filter === f ? (f === 'pass' ? '#22c55e' : f === 'warning' ? '#f59e0b' : '#ef4444') : '#44403c'}`, background: filter === f ? `${filter === 'pass' ? '#22c55e' : filter === 'warning' #20a' : '#20a'}22` : 'transparent', color: f === 'pass' ? '#22c55e' : f === 'warning' ? '#f59e0b' : '#ef4444', cursor: 'pointer', fontWeight: '600', fontSize: '0.8rem', textTransform: 'capitalize' }}>{f}</button>
+                <button key={f} onClick={() => setFilter(f)} style={{ padding: '0.4rem 0.8rem', borderRadius: '6px', border: `1px solid ${filter === f ? (f === 'pass' ? '#22c55e' : f === 'warning' ? '#f59e0b' : '#ef4444') : '#44403c'}`, background: filter === f ? `${filter === 'pass' ? '#22c55e' : filter === 'warning' ? '#f59e0b' : '#ef4444'}22` : 'transparent', color: f === 'pass' ? '#22c55e' : f === 'warning' ? '#f59e0b' : '#ef4444', cursor: 'pointer', fontWeight: '600', fontSize: '0.8rem', textTransform: 'capitalize' }}>{f}</button>
               ))}
             </div>
 

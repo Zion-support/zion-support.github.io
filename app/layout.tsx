@@ -13,6 +13,7 @@ import AIChatWidget from './components/AIChatWidget';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidget';
 import AIExperienceLoader from './components/AIExperienceLoader';
+import StructuredData from './components/StructuredData';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
@@ -70,6 +71,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <StructuredData />
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />

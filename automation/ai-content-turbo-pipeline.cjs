@@ -106,7 +106,7 @@ async function runServicesAdvertiser() {
 }
 
 async function main() {
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   if (!createLLMClient().isConfigured()) {
     log('ERROR: No LLM available. Start Ollama (ollama serve, ollama pull llama3.2:3b) or set OPENROUTER_API_KEY.');
     process.exit(1);

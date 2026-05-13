@@ -31,7 +31,7 @@ try {
   require('dotenv').config({ path: require('path').join(process.cwd(), '.env') });
 } catch (_) {}
 
-const { createLLMClient } = require('./lib/openrouter-client.cjs');
+const { createLLMClient } = require('./lib/llm-client.cjs');
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');

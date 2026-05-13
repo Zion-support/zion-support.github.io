@@ -3,6 +3,8 @@ import { whatsNewItems } from './features/featuredItems';
 import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
 import DependencyBadge from './components/DependencyBadge';
+import TrendingTools from './components/TrendingTools';
+import StructuredData from './components/StructuredData';
 import fs from 'fs';
 import path from 'path';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
@@ -2380,6 +2382,62 @@ export default function Home() {
                 Configurable options for required fields, additional properties, examples, and descriptions. Download as .json or .ts.
               </p>
               <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* What's New - Email Response Generator & Google Workspace Setup */}
+        <section className="mt-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-indigo-50 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+                🆕 What&apos;s New
+              </p>
+              <h2 className="mt-1 text-2xl font-bold text-slate-900">
+                Email & Workspace Tools — Just Launched
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Generate professional email responses in any tone and language. Set up Google Workspace with a complete step-by-step configuration guide.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+            >
+              All Tools
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/tools/email-response-generator"
+              className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Email Response Generator</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Generate professional email responses instantly. Choose your tone, purpose, and context — get a polished draft in seconds. All processing happens locally in your browser.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
+            </Link>
+            <Link
+              href="/tools/google-workspace-setup"
+              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.99.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Google Workspace Setup Guide</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Step-by-step guide to configure your Google Workspace with proper DNS, authentication, security, email routing, and compliance settings.
+              </p>
+              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
             </Link>
           </div>
         </section>

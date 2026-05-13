@@ -135,7 +135,7 @@ async function fetchSitePages() {
 }
 
 async function runLLMAudit(workflows, sitePages) {
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient({ appName: 'Zion GitHub Actions Audit' });
 
   if (!llm.isConfigured()) {
