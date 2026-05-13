@@ -62,7 +62,11 @@ export type AILabToolId =
   | 'autonomous-slo-dashboard'
   | 'autonomous-architecture-reviewer'
   | 'autonomous-gdpr-compliance-checker'
-  | 'autonomous-contract-analyzer';
+  | 'autonomous-contract-analyzer'
+  | 'autonomous-roi-opportunity-radar'
+  | 'autonomous-knowledge-base-auditor'
+  | 'autonomous-incident-timeline-builder'
+  | 'autonomous-api-test-generator';
 
 
 export interface AILabTool {
@@ -757,6 +761,50 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Legal Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-contract-analyzer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-roi-opportunity-radar',
+    slug: 'autonomous-roi-opportunity-radar',
+    title: 'Autonomous ROI Opportunity Radar',
+    shortDescription:
+      'Identify top automation opportunities by team context. Calculate time savings, cost reduction, and payback period.',
+    category: 'Business Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-roi-opportunity-radar',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-knowledge-base-auditor',
+    slug: 'autonomous-knowledge-base-auditor',
+    title: 'Autonomous Knowledge Base Auditor',
+    shortDescription:
+      'Audit documentation for gaps, outdated articles, broken links, and readability scores across wikis and docs.',
+    category: 'Knowledge Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-knowledge-base-auditor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-incident-timeline-builder',
+    slug: 'autonomous-incident-timeline-builder',
+    title: 'Autonomous Incident Timeline Builder',
+    shortDescription:
+      'Paste incident logs to auto-generate visual timelines, calculate MTTR, and produce postmortem reports.',
+    category: 'Reliability Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-incident-timeline-builder',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-api-test-generator',
+    slug: 'autonomous-api-test-generator',
+    title: 'Autonomous API Test Script Generator',
+    shortDescription:
+      'Paste API specs to generate test suites with edge cases, mock data, and cURL commands for each endpoint.',
+    category: 'Developer Tools',
+    status: 'live',
+    href: '/ai-lab/autonomous-api-test-generator',
     badge: 'New',
   },
 ];
