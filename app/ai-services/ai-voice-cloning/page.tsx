@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Voice Cloning & Synthesis | Zion Tech Group',
-  description: 'Clone any voice with 30 seconds of audio for personalized voiceovers, podcasts, audiobooks, and interactive voice applications.',
-  alternates: { canonical: 'ai-services/ai-voice-cloning' },
+  description: 'Clone any voice from 30s audio with emotion/tone control and real-time streaming.',
+  alternates: { canonical: '/ai-services/ai-voice-cloning' },
 };
 
 export default function Page() {
@@ -12,58 +12,35 @@ export default function Page() {
     <ProductPageLayout
       data={{
         title: 'AI Voice Cloning & Synthesis',
-        category: 'AI Voice & Audio',
-        description: 'Clone any voice with 30 seconds of audio for personalized voiceovers, podcasts, audiobooks, and interactive voice applications.',
+        category: 'Enterprise Solutions',
+        description: 'Clone any voice from 30s audio with emotion/tone control and real-time streaming.',
         iconEmoji: '🗣️',
         features: [
-          {
-            "title": "Voice Cloning",
-            "description": "Create a digital voice clone from just 30 seconds of clean audio with industry-leading accuracy."
-          },
-          {
-            "title": "Emotion & Tone Control",
-            "description": "Adjust emotional tone, speaking rate, pitch, and emphasis for natural-sounding speech."
-          },
-          {
-            "title": "Real-Time Streaming",
-            "description": "Stream synthesized audio in real-time for conversational AI, phone systems, and voice assistants."
-          },
-          {
-            "title": "Multi-Speaker Conversations",
-            "description": "Generate natural dialogues between multiple cloned voices for podcasts, training, and entertainment."
-          },
-          {
-            "title": "Audio Quality Enhancement",
-            "description": "AI noise reduction, echo cancellation, and volume normalization for studio-quality output."
-          },
-          {
-            "title": "Ethical Voice Management",
-            "description": "Voice ownership verification, consent tracking, and usage logs for compliance and safety."
-          }
+          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
+          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
+          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
+          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
+          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
+          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
         ],
         useCases: [
-          {
-            "title": "Personalized Communications",
-            "description": "Send voice messages in the customer's preferred voice and language for higher engagement rates.",
-            "icon": "📞"
-          },
-          {
-            "title": "Audiobook & Podcast Production",
-            "description": "Clone author voices or hire AI narrators to produce audiobooks and podcast episodes at scale.",
-            "icon": "🎧"
-          },
-          {
-            "title": "Accessibility Voice Assistants",
-            "description": "Build voice interfaces for visually impaired users with familiar, comforting voice personas.",
-            "icon": "♿"
-          }
+          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
+          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
+          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
         ],
-        benefits: ["Studio-quality voice from 30 seconds of audio", "50+ languages and dialects", "Real-time streaming capability", "Ethical consent management", "Reduce voice talent costs by 80%", "Custom emotion and tone controls"],
+        benefits: [
+          'Reduce costs by 30-60%',
+          'Accelerate delivery 2-10x',
+          '99.9%+ uptime SLAs',
+          'Built-in security & compliance',
+          'Dedicated expert team',
+          'Continuous optimization',
+        ],
         ctaLabel: 'Get Started with AI Voice Cloning & Synthesis',
         pricing: [
-          { tier: 'Starter', price: '$79', period: '/month', features: ['Core features', 'Up to 100 items/month', 'Email support', 'Standard security'], popular: false },
-          { tier: 'Professional', price: '$249', period: '/month', features: ['Advanced engine', 'Unlimited items', 'Priority support', 'API access', 'Team collaboration (10 users)', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited usage', 'Dedicated support engineer', 'Custom configuration', 'SSO & advanced security', '99.99% SLA guarantee', 'On-premise deployment option'], popular: false },
+          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
+          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
+          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
         ],
         contact: {
           phone: '+1 302 464 0950',

@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Lead Generation & Enrichment | Zion Tech Group',
-  description: 'Automatically discover, qualify, and enrich B2B leads with AI-powered web scraping, firmographic scoring, and intent signal detection.',
-  alternates: { canonical: 'ai-services/ai-lead-generation' },
+  description: 'Automated B2B lead discovery, firmographic enrichment, intent detection, and CRM sync.',
+  alternates: { canonical: '/ai-services/ai-lead-generation' },
 };
 
 export default function Page() {
@@ -12,58 +12,35 @@ export default function Page() {
     <ProductPageLayout
       data={{
         title: 'AI Lead Generation & Enrichment',
-        category: 'AI Sales Intelligence',
-        description: 'Automatically discover, qualify, and enrich B2B leads with AI-powered web scraping, firmographic scoring, and intent signal detection.',
+        category: 'Enterprise Solutions',
+        description: 'Automated B2B lead discovery, firmographic enrichment, intent detection, and CRM sync.',
         iconEmoji: '🎯',
         features: [
-          {
-            "title": "Automated Lead Discovery",
-            "description": "AI crawls public sources, databases, and social signals to build targeted lead lists matching your ideal customer profile."
-          },
-          {
-            "title": "Firmographic Enrichment",
-            "description": "Auto-fill company size, revenue, tech stack, funding status, and decision-maker contacts for every lead."
-          },
-          {
-            "title": "Intent Signal Detection",
-            "description": "Monitor hiring patterns, job postings, social mentions, and website visits to identify in-market prospects."
-          },
-          {
-            "title": "CRM Auto-Sync",
-            "description": "Push qualified leads directly to Salesforce, HubSpot, Pipedrive, or custom CRM with deduplication."
-          },
-          {
-            "title": "Personalized Outreach Sequences",
-            "description": "Generate personalized email and LinkedIn messages based on each lead's firmographic and behavioral profile."
-          },
-          {
-            "title": "Lead Quality Scoring",
-            "description": "ML-powered scoring model that predicts conversion probability and prioritizes high-value accounts."
-          }
+          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
+          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
+          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
+          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
+          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
+          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
         ],
         useCases: [
-          {
-            "title": "B2B Pipeline Generation",
-            "description": "Build a self-filling pipeline with AI-discovered leads that match your ideal customer profile and show buying intent.",
-            "icon": "🚀"
-          },
-          {
-            "title": "Account-Based Marketing",
-            "description": "Target, track, and engage specific high-value accounts with personalized multi-channel campaigns.",
-            "icon": "🏢"
-          },
-          {
-            "title": "Sales Team Enablement",
-            "description": "Equip sales reps with enriched lead profiles, conversation starters, and account intelligence before every call.",
-            "icon": "💼"
-          }
+          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
+          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
+          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
         ],
-        benefits: ["5x more qualified leads per month", "Automated enrichment saves 15 hours/week", "Intent-based targeting increases conversion 3x", "Seamless CRM integration", "ML-powered lead scoring", "Personalized outreach at scale"],
+        benefits: [
+          'Reduce costs by 30-60%',
+          'Accelerate delivery 2-10x',
+          '99.9%+ uptime SLAs',
+          'Built-in security & compliance',
+          'Dedicated expert team',
+          'Continuous optimization',
+        ],
         ctaLabel: 'Get Started with AI Lead Generation & Enrichment',
         pricing: [
-          { tier: 'Starter', price: '$149', period: '/month', features: ['Core features', 'Up to 100 items/month', 'Email support', 'Standard security'], popular: false },
-          { tier: 'Professional', price: '$449', period: '/month', features: ['Advanced engine', 'Unlimited items', 'Priority support', 'API access', 'Team collaboration (10 users)', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited usage', 'Dedicated support engineer', 'Custom configuration', 'SSO & advanced security', '99.99% SLA guarantee', 'On-premise deployment option'], popular: false },
+          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
+          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
+          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
         ],
         contact: {
           phone: '+1 302 464 0950',

@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Chatbot Builder Pro | Zion Tech Group',
-  description: 'Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and human handoff capabilities.',
-  alternates: { canonical: 'ai-services/ai-chatbot-builder-pro' },
+  description: 'RAG knowledge base, multi-channel deployment, visual flow designer, and human handoff.',
+  alternates: { canonical: '/ai-services/ai-chatbot-builder-pro' },
 };
 
 export default function Page() {
@@ -12,58 +12,35 @@ export default function Page() {
     <ProductPageLayout
       data={{
         title: 'AI Chatbot Builder Pro',
-        category: 'AI Conversational',
-        description: 'Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and human handoff capabilities.',
+        category: 'Enterprise Solutions',
+        description: 'RAG knowledge base, multi-channel deployment, visual flow designer, and human handoff.',
         iconEmoji: '🤖',
         features: [
-          {
-            "title": "RAG-Powered Knowledge Base",
-            "description": "Connect your documentation, FAQs, and knowledge base — chatbot retrieves precise answers using retrieval-augmented generation."
-          },
-          {
-            "title": "Multi-Channel Deployment",
-            "description": "Deploy across website, WhatsApp, Slack, Teams, Facebook Messenger, and custom APIs from a single builder."
-          },
-          {
-            "title": "Visual Conversation Flow Designer",
-            "description": "Drag-and-drop builder for complex conversation paths, conditional logic, and multi-turn workflows."
-          },
-          {
-            "title": "Human Handoff & Escalation",
-            "description": "Smart escalation rules that transfer complex queries to human agents with full conversation context."
-          },
-          {
-            "title": "Analytics & Conversation Insights",
-            "description": "Track resolution rates, user satisfaction, common queries, and conversation patterns with AI-powered trend analysis."
-          },
-          {
-            "title": "Continuous Learning Loop",
-            "description": "Automatically identify knowledge gaps from unanswered questions and suggest new training data for the chatbot."
-          }
+          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
+          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
+          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
+          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
+          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
+          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
         ],
         useCases: [
-          {
-            "title": "Customer Support Automation",
-            "description": "Resolve 70%+ of tier-1 support queries automatically with precise, knowledge-base-powered answers.",
-            "icon": "🎧"
-          },
-          {
-            "title": "Lead Qualification Bot",
-            "description": "Qualify website visitors through conversational forms that capture needs, budget, and timeline before routing to sales.",
-            "icon": "🎯"
-          },
-          {
-            "title": "Internal IT Helpdesk",
-            "description": "Deploy an internal assistant that handles IT requests, policy questions, and onboarding tasks for employees.",
-            "icon": "🏢"
-          }
+          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
+          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
+          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
         ],
-        benefits: ["70%+ automatic resolution rate", "Multi-channel from single builder", "Continuous self-improvement", "Seamless human handoff", "Conversation analytics dashboard", "No-code visual flow designer"],
+        benefits: [
+          'Reduce costs by 30-60%',
+          'Accelerate delivery 2-10x',
+          '99.9%+ uptime SLAs',
+          'Built-in security & compliance',
+          'Dedicated expert team',
+          'Continuous optimization',
+        ],
         ctaLabel: 'Get Started with AI Chatbot Builder Pro',
         pricing: [
-          { tier: 'Starter', price: '$99', period: '/month', features: ['Core features', 'Up to 100 items/month', 'Email support', 'Standard security'], popular: false },
-          { tier: 'Professional', price: '$299', period: '/month', features: ['Advanced engine', 'Unlimited items', 'Priority support', 'API access', 'Team collaboration (10 users)', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited usage', 'Dedicated support engineer', 'Custom configuration', 'SSO & advanced security', '99.99% SLA guarantee', 'On-premise deployment option'], popular: false },
+          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
+          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
+          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
         ],
         contact: {
           phone: '+1 302 464 0950',
