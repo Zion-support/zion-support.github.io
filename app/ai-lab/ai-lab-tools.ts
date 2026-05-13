@@ -42,7 +42,8 @@ export type AILabToolId =
   | 'autonomous-security-scanner'
   | 'autonomous-accessibility-auditor'
   | 'autonomous-api-profiler'
-  | 'autonomous-data-pipeline-visualizer';
+  | 'autonomous-data-pipeline-visualizer'
+  | 'autonomous-meeting-analyzer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -516,6 +517,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Data Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-data-pipeline-visualizer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-meeting-analyzer',
+    slug: 'autonomous-meeting-analyzer',
+    title: 'Autonomous Meeting Productivity Analyzer',
+    shortDescription:
+      'Paste meeting transcripts or notes to extract action items, track filler words, compute productivity scores, and get improvement recommendations.',
+    category: 'AI Productivity',
+    status: 'live',
+    href: '/ai-lab/autonomous-meeting-analyzer',
     badge: 'New',
   },
 ];
