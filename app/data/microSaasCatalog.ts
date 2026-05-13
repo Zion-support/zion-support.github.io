@@ -288,6 +288,62 @@ export const microSaasCatalog: MicroSaaSProduct[] = [
     icon: '🚨',
     description: 'Generate stakeholder communications and public statements calibrated for crisis severity and audience.'
   },
+  {
+    slug: 'ai-automated-invoicing',
+    name: 'AI Automated Invoicing System',
+    category: 'Finance & Accounting',
+    icon: '🧾',
+    description: 'Smart invoicing with automatic payment reminders, dunning management, multi-currency, and revenue recognition tracking.'
+  },
+  {
+    slug: 'ai-employee-feedback-platform',
+    name: 'AI Employee Feedback & Pulse Platform',
+    category: 'HR & People Operations',
+    icon: '💬',
+    description: 'Continuous pulse surveys, sentiment analysis, and actionable people insights to improve retention and engagement.'
+  },
+  {
+    slug: 'ai-social-media-scheduler',
+    name: 'AI Social Media Scheduler',
+    category: 'Marketing Automation',
+    icon: '📅',
+    description: 'Intelligent cross-platform social scheduling with AI-generated posting times, content suggestions, and analytics.'
+  },
+  {
+    slug: 'ai-contract-management',
+    name: 'AI Contract Management & Analysis',
+    category: 'Legal & Compliance',
+    icon: '📄',
+    description: 'Automated contract review, clause extraction, risk flagging, and renewal tracking for legal teams.'
+  },
+  {
+    slug: 'ai-inventory-forecasting',
+    name: 'AI Inventory Forecasting',
+    category: 'Supply Chain & Logistics',
+    icon: '📦',
+    description: 'ML-powered demand forecasting, safety stock calculation, and automated reorder point optimization.'
+  },
+  {
+    slug: 'ai-lead-scoring-platform',
+    name: 'AI Lead Scoring & Prioritization',
+    category: 'Sales Intelligence',
+    icon: '🎯',
+    description: 'Predictive lead scoring using behavioral signals, firmographics, and historical conversion patterns.'
+  },
+  {
+    slug: 'ai-meeting-notes-assistant',
+    name: 'AI Meeting Notes & Action Items',
+    category: 'Productivity & Collaboration',
+    icon: '📝',
+    description: 'Automated meeting transcription, summary generation, and action item extraction with CRM integration.'
+  },
+  {
+    slug: 'ai-customer-churn-predictor',
+    name: 'AI Customer Churn Predictor',
+    category: 'Revenue & Retention',
+    icon: '📉',
+    description: 'Identify at-risk customers before they leave with ML-powered churn signals and automated retention workflows.'
+  },
 ];
 
 export function groupMicroSaaSByCategory(products: MicroSaaSProduct[] = microSaasCatalog): Record<string, MicroSaaSProduct[]> {
