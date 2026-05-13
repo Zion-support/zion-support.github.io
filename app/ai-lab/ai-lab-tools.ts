@@ -74,7 +74,8 @@ export type AILabToolId =
   | 'autonomous-api-documentation-generator'
   | 'autonomous-web-accessibility-auditor'
   | 'autonomous-performance-budget-calculator'
-  | 'autonomous-email-deliverability-checker';
+  | 'autonomous-email-deliverability-checker'
+  | 'autonomous-landing-page-scorecard';
 
 
 export interface AILabTool {
@@ -901,6 +902,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Marketing & Growth',
     status: 'live',
     href: '/ai-lab/autonomous-email-deliverability-checker',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-landing-page-scorecard',
+    slug: 'autonomous-landing-page-scorecard',
+    title: 'Autonomous Landing Page Scorecard',
+    shortDescription:
+      'Score landing pages for conversion readiness — hero, trust signals, CTA, content, UX, and SEO analysis.',
+    category: 'Marketing & Growth',
+    status: 'live',
+    href: '/ai-lab/autonomous-landing-page-scorecard',
     badge: 'New',
   },
 ];
