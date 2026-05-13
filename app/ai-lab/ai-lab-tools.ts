@@ -56,7 +56,8 @@ export type AILabToolId =
   | 'roi-ops-scorecard'
   | 'rollout-blueprint'
   | 'autonomous-db-schema-designer'
-  | 'autonomous-churn-predictor';
+  | 'autonomous-churn-predictor'
+  | 'autonomous-content-calendar';
 
 
 export interface AILabTool {
@@ -685,6 +686,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Retention Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-churn-predictor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-content-calendar',
+    slug: 'autonomous-content-calendar',
+    title: 'Autonomous Content Calendar Generator',
+    shortDescription:
+      'Generate 30-day editorial calendars with SEO keywords, publishing times, content briefs, and CSV export for Notion/Airtable.',
+    category: 'Content Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-content-calendar',
     badge: 'New',
   },
 ];
