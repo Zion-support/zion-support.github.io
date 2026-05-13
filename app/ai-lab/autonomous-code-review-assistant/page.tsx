@@ -36,7 +36,7 @@ const SECURITY_PATTERNS = [
   { pattern: /document\.write\s*\(/, title: 'document.write() usage', description: 'document.write() can be exploited for XSS attacks.', suggestion: 'Use DOM manipulation methods instead.' },
   { pattern: /mysql\.query.*\$\{/, title: 'Potential SQL injection', description: 'String interpolation in SQL queries is dangerous.', suggestion: 'Use parameterized queries or an ORM.' },
   { pattern: /exec\s*\(\s*['"`].*\+/, title: 'Command injection risk', description: 'String concatenation in system commands is risky.', suggestion: 'Use parameterized exec() or validate input.' },
-  { pattern: /dangerouslySetInnerHTML/, title: 'React dangerouslySetInnerHTML usage', description: 'Bypasses React's XSS protection.', suggestion: 'Sanitize content with DOMPurify before rendering.' },
+  { pattern: /dangerouslySetInnerHTML/, title: 'React dangerouslySetInnerHTML usage', description: 'Bypasses React\'s XSS protection.', suggestion: 'Sanitize content with DOMPurify before rendering.' },
 ];
 
 const PERFORMANCE_PATTERNS = [
