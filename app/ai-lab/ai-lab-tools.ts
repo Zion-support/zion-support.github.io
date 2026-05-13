@@ -41,7 +41,8 @@ export type AILabToolId =
   | 'autonomous-compliance-auditor'
   | 'autonomous-security-scanner'
   | 'autonomous-accessibility-auditor'
-  | 'autonomous-api-profiler';
+  | 'autonomous-api-profiler'
+  | 'autonomous-data-pipeline-visualizer';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -504,6 +505,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'DevOps Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-api-profiler',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-data-pipeline-visualizer',
+    slug: 'autonomous-data-pipeline-visualizer',
+    title: 'Autonomous Data Pipeline Visualizer',
+    shortDescription:
+      'Paste JSON, CSV, or SQL to auto-generate data pipeline diagrams, data dictionaries, and schema analysis. Renders interactive flow charts with entity relationships.',
+    category: 'Data Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-data-pipeline-visualizer',
     badge: 'New',
   },
 ];
