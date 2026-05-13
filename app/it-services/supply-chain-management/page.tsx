@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Presentation & Pitch Deck Maker | Zion Tech Group',
-  description: 'Generate slides from docs/outlines with smart visualizations and AI speaker notes.',
-  alternates: { canonical: '/ai-services/ai-presentation-maker' },
+  title: 'Supply Chain Management Platform | Zion Tech Group',
+  description: 'AI demand forecasting, route optimization, supplier risk intelligence, and warehouse ops.',
+  alternates: { canonical: '/it-services/supply-chain-management' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Presentation & Pitch Deck Maker',
+        title: 'Supply Chain Management Platform',
         category: 'Enterprise Solutions',
-        description: 'Generate slides from docs/outlines with smart visualizations and AI speaker notes.',
-        iconEmoji: '📊',
+        description: 'AI demand forecasting, route optimization, supplier risk intelligence, and warehouse ops.',
+        iconEmoji: '🚛',
         features: [
           { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
           { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
@@ -36,7 +36,7 @@ export default function Page() {
           'Dedicated expert team',
           'Continuous optimization',
         ],
-        ctaLabel: 'Get Started with AI Presentation & Pitch Deck Maker',
+        ctaLabel: 'Get Started with Supply Chain Management Platform',
         pricing: [
           { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
           { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },

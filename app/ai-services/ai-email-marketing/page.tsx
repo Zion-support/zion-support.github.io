@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Presentation & Pitch Deck Maker | Zion Tech Group',
-  description: 'Generate slides from docs/outlines with smart visualizations and AI speaker notes.',
-  alternates: { canonical: '/ai-services/ai-presentation-maker' },
+  title: 'AI Email Marketing | Zion Tech Group',
+  description: 'Send-time optimization, dynamic personalization, AI subject lines, and behavioral segmentation.',
+  alternates: { canonical: '/ai-services/ai-email-marketing' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Presentation & Pitch Deck Maker',
+        title: 'AI Email Marketing',
         category: 'Enterprise Solutions',
-        description: 'Generate slides from docs/outlines with smart visualizations and AI speaker notes.',
-        iconEmoji: '📊',
+        description: 'Send-time optimization, dynamic personalization, AI subject lines, and behavioral segmentation.',
+        iconEmoji: '📧',
         features: [
           { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
           { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
@@ -36,7 +36,7 @@ export default function Page() {
           'Dedicated expert team',
           'Continuous optimization',
         ],
-        ctaLabel: 'Get Started with AI Presentation & Pitch Deck Maker',
+        ctaLabel: 'Get Started with AI Email Marketing',
         pricing: [
           { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
           { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },

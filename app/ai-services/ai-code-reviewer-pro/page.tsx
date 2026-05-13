@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Code Reviewer Pro | Zion Tech Group',
-  description: 'Automated code review platform that catches bugs, security issues, performance problems, and style violations before they reach production.',
-  alternates: { canonical: 'ai-services/ai-code-reviewer-pro' },
+  description: 'Static analysis across 50+ languages, OWASP scanning, and PR-integrated review.',
+  alternates: { canonical: '/ai-services/ai-code-reviewer-pro' },
 };
 
 export default function Page() {
@@ -12,58 +12,35 @@ export default function Page() {
     <ProductPageLayout
       data={{
         title: 'AI Code Reviewer Pro',
-        category: 'AI Developer Tools',
-        description: 'Automated code review platform that catches bugs, security issues, performance problems, and style violations before they reach production.',
+        category: 'Enterprise Solutions',
+        description: 'Static analysis across 50+ languages, OWASP scanning, and PR-integrated review.',
         iconEmoji: '🔍',
         features: [
-          {
-            "title": "Deep Code Analysis",
-            "description": "AI-powered static analysis that detects bugs, memory leaks, race conditions, and logic errors across 50+ languages."
-          },
-          {
-            "title": "Security Vulnerability Scanning",
-            "description": "Identify OWASP Top 10 vulnerabilities, hardcoded secrets, and dependency CVEs before deployment."
-          },
-          {
-            "title": "Performance Optimization Suggestions",
-            "description": "Detect N+1 queries, unnecessary allocations, inefficient algorithms, and suggest faster alternatives with benchmarks."
-          },
-          {
-            "title": "Coding Standards Enforcement",
-            "description": "Automatically enforce team coding standards, naming conventions, and architectural patterns via PR integration."
-          },
-          {
-            "title": "PR Integration",
-            "description": "Runs on every pull request in GitHub, GitLab, or Bitbucket with inline comments at the exact problematic line."
-          },
-          {
-            "title": "Custom Rules Engine",
-            "description": "Define team-specific rules, patterns, and best practices that the AI enforces consistently across all reviews."
-          }
+          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
+          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
+          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
+          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
+          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
+          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
         ],
         useCases: [
-          {
-            "title": "Code Quality Gates",
-            "description": "Prevent low-quality code from merging with automated quality gates that enforce standards and catch regressions.",
-            "icon": "🛡️"
-          },
-          {
-            "title": "Security Compliance",
-            "description": "Meet SOC 2 and ISO 27001 requirements with automated security scanning and audit-ready compliance reports.",
-            "icon": "🔒"
-          },
-          {
-            "title": "Onboarding & Mentoring",
-            "description": "Help junior developers learn best practices through AI-explained review comments with reasoning and examples.",
-            "icon": "🎓"
-          }
+          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
+          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
+          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
         ],
-        benefits: ["Catch 80% of bugs before production", "Automated security vulnerability scanning", "PR integration with inline comments", "Team custom rules enforcement", "Reduces senior review time by 60%", "Supports 50+ programming languages"],
+        benefits: [
+          'Reduce costs by 30-60%',
+          'Accelerate delivery 2-10x',
+          '99.9%+ uptime SLAs',
+          'Built-in security & compliance',
+          'Dedicated expert team',
+          'Continuous optimization',
+        ],
         ctaLabel: 'Get Started with AI Code Reviewer Pro',
         pricing: [
-          { tier: 'Starter', price: '$69', period: '/month', features: ['Core features', 'Up to 100 items/month', 'Email support', 'Standard security'], popular: false },
-          { tier: 'Professional', price: '$199', period: '/month', features: ['Advanced engine', 'Unlimited items', 'Priority support', 'API access', 'Team collaboration (10 users)', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited usage', 'Dedicated support engineer', 'Custom configuration', 'SSO & advanced security', '99.99% SLA guarantee', 'On-premise deployment option'], popular: false },
+          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
+          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
+          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
         ],
         contact: {
           phone: '+1 302 464 0950',
