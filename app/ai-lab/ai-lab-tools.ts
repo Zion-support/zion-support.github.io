@@ -40,7 +40,8 @@ export type AILabToolId =
   | 'autonomous-vendor-replacement-advisor'
   | 'autonomous-compliance-auditor'
   | 'autonomous-security-scanner'
-  | 'autonomous-accessibility-auditor';
+  | 'autonomous-accessibility-auditor'
+  | 'autonomous-api-profiler';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -492,6 +493,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Security & Compliance',
     status: 'live',
     href: '/ai-lab/autonomous-accessibility-auditor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-api-profiler',
+    slug: 'autonomous-api-profiler',
+    title: 'Autonomous API Response Time Profiler',
+    shortDescription:
+      'Measure API endpoint latency, payload sizes, and status codes. Takes samples, computes p50/p95/p99 percentiles, and flags slow endpoints. All client-side via fetch + Performance API.',
+    category: 'DevOps Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-api-profiler',
     badge: 'New',
   },
 ];
