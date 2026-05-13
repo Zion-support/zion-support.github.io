@@ -39,7 +39,8 @@ export type AILabToolId =
   | 'autonomous-project-estimator'
   | 'autonomous-vendor-replacement-advisor'
   | 'autonomous-compliance-auditor'
-  | 'autonomous-security-scanner';
+  | 'autonomous-security-scanner'
+  | 'autonomous-accessibility-auditor';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -480,6 +481,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Security & Compliance',
     status: 'live',
     href: '/ai-lab/autonomous-security-scanner',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-accessibility-auditor',
+    slug: 'autonomous-accessibility-auditor',
+    title: 'Autonomous WCAG 2.2 Auditor',
+    shortDescription:
+      'Paste HTML/JSX/CSS to scan for WCAG 2.2 violations. Detects missing alt text, contrast issues, keyboard gaps, ARIA problems, heading hierarchy, and form label issues. Get before/after fix snippets.',
+    category: 'Security & Compliance',
+    status: 'live',
+    href: '/ai-lab/autonomous-accessibility-auditor',
     badge: 'New',
   },
 ];
