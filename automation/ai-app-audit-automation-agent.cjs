@@ -166,7 +166,7 @@ const FALLBACK_AUDIT = {
 };
 
 async function runLLMAudit(pageData, config) {
-  const { createLLMClient } = require('./lib/openrouter-client.cjs');
+  const { createLLMClient } = require('./lib/llm-client.cjs');
   const llm = createLLMClient();
 
   if (!llm.isConfigured()) {
