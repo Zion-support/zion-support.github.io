@@ -1,6 +1,6 @@
 # Autonomous fix-factory plan
 
-- generatedAt: 2026-05-13T13:03:41.687Z
+- generatedAt: 2026-05-13T16:06:13.609Z
 - queueSize: 415
 - criticalCount: 24
 - warningCount: 391
