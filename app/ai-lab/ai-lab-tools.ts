@@ -75,7 +75,8 @@ export type AILabToolId =
   | 'autonomous-web-accessibility-auditor'
   | 'autonomous-performance-budget-calculator'
   | 'autonomous-email-deliverability-checker'
-  | 'autonomous-landing-page-scorecard';
+  | 'autonomous-landing-page-scorecard'
+  | 'autonomous-content-strategy-planner';
 
 
 export interface AILabTool {
@@ -913,6 +914,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Marketing & Growth',
     status: 'live',
     href: '/ai-lab/autonomous-landing-page-scorecard',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-content-strategy-planner',
+    slug: 'autonomous-content-strategy-planner',
+    title: 'Autonomous Content Strategy Planner',
+    shortDescription:
+      'Generate a personalized 30-day content calendar mapped to funnel stages, channels, and audience personas.',
+    category: 'Marketing & Growth',
+    status: 'live',
+    href: '/ai-lab/autonomous-content-strategy-planner',
     badge: 'New',
   },
 ];
