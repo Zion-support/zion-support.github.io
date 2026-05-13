@@ -57,7 +57,8 @@ export type AILabToolId =
   | 'rollout-blueprint'
   | 'autonomous-db-schema-designer'
   | 'autonomous-churn-predictor'
-  | 'autonomous-content-calendar';
+  | 'autonomous-content-calendar'
+  | 'autonomous-support-ticket-analyzer';
 
 
 export interface AILabTool {
@@ -697,6 +698,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Content Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-content-calendar',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-support-ticket-analyzer',
+    slug: 'autonomous-support-ticket-analyzer',
+    title: 'Autonomous Support Ticket Analyzer',
+    shortDescription:
+      'Paste support tickets to auto-categorize, detect sentiment/urgency, and get actionable recommendations for each ticket.',
+    category: 'Customer Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-support-ticket-analyzer',
     badge: 'New',
   },
 ];
