@@ -1,58 +1,61 @@
 export type AILabToolStatus = 'live' | 'experimental' | 'planned';
 
 export type AILabToolId =
-  | 'ai-site-evolution-advisor'
-  | 'idea-to-feature-blueprint'
-  | 'ai-rollout-blueprint'
-  | 'ai-roi-ops-scorecard'
-  | 'build-failure-explainer'
-  | 'deployment-readiness-console'
-  | 'implementation-readiness-checker'
-  | 'ai-governance-risk-advisor'
-  | 'autonomous-opportunity-radar'
-  | 'autonomous-growth-loop-designer'
-  | 'ai-experiment-designer'
-  | 'autonomous-ai-experience-studio'
-  | 'autonomous-deploy-optimizer'
-  | 'autonomous-backlog-prioritizer'
-  | 'autonomous-funnel-orchestrator'
-  | 'autonomous-conversion-copilot'
-  | 'autonomous-retention-playbook'
-  | 'autonomous-incident-commander'
-  | 'autonomous-rag-knowledge-workspace'
-  | 'autonomous-media-prompt-studio'
-  | 'autonomous-revenue-forecast-studio'
-  | 'autonomous-agent-skill-orchestrator'
-  | 'autonomous-experiment-priority-engine'
-  | 'deploy-drift-dashboard'
-  | 'autonomous-seo-audit-agent'
-  | 'dynamic-api-monitoring'
-  | 'ai-content-idea-generator'
   | 'ai-component-health-checker'
+  | 'ai-content-idea-generator'
+  | 'ai-experiment-designer'
+  | 'ai-governance-risk-advisor'
+  | 'ai-site-evolution-advisor'
   | 'ai-workflow-status-dashboard'
-  | 'autonomous-competitive-intelligence'
-  | 'autonomous-feature-gap-analyzer'
-  | 'autonomous-landing-page-ab-simulator'
-  | 'autonomous-code-quality-playground'
-  | 'autonomous-roi-calculator'
-  | 'autonomous-tech-stack-auditor'
-  | 'autonomous-project-estimator'
-  | 'autonomous-vendor-replacement-advisor'
-  | 'autonomous-compliance-auditor'
-  | 'autonomous-security-scanner'
-  | 'autonomous-accessibility-auditor'
-  | 'autonomous-api-profiler'
-  | 'autonomous-data-pipeline-visualizer'
-  | 'autonomous-meeting-analyzer'
-  | 'autonomous-code-review-assistant'
-  | 'autonomous-prompt-cost-calculator'
-  | 'autonomous-tech-debt-tracker'
-  | 'autonomous-api-doc-generator'
-  | 'autonomous-ui-a11y-scorecard'
-  | 'autonomous-seo-audit-agent'
-  | 'autonomous-user-persona-builder'
   | 'autonomous-ab-test-calculator'
-  | 'autonomous-rate-limit-capacity-planner';
+  | 'autonomous-accessibility-auditor'
+  | 'autonomous-agent-skill-orchestrator'
+  | 'autonomous-ai-experience-studio'
+  | 'autonomous-api-doc-generator'
+  | 'autonomous-api-profiler'
+  | 'autonomous-backlog-prioritizer'
+  | 'autonomous-code-quality-playground'
+  | 'autonomous-code-review-assistant'
+  | 'autonomous-competitive-intelligence'
+  | 'autonomous-compliance-auditor'
+  | 'autonomous-conversion-copilot'
+  | 'autonomous-data-pipeline-visualizer'
+  | 'autonomous-deploy-optimizer'
+  | 'autonomous-email-sequence-designer'
+  | 'autonomous-experiment-priority-engine'
+  | 'autonomous-feature-gap-analyzer'
+  | 'autonomous-feature-prioritizer'
+  | 'autonomous-funnel-orchestrator'
+  | 'autonomous-growth-loop-designer'
+  | 'autonomous-incident-commander'
+  | 'autonomous-landing-page-ab-simulator'
+  | 'autonomous-media-prompt-studio'
+  | 'autonomous-meeting-analyzer'
+  | 'autonomous-opportunity-radar'
+  | 'autonomous-pricing-optimizer'
+  | 'autonomous-project-estimator'
+  | 'autonomous-prompt-cost-calculator'
+  | 'autonomous-rag-knowledge-workspace'
+  | 'autonomous-rate-limit-capacity-planner'
+  | 'autonomous-retention-playbook'
+  | 'autonomous-revenue-forecast-studio'
+  | 'autonomous-roi-calculator'
+  | 'autonomous-security-scanner'
+  | 'autonomous-seo-audit-agent'
+  | 'autonomous-tech-debt-tracker'
+  | 'autonomous-tech-stack-auditor'
+  | 'autonomous-ui-a11y-scorecard'
+  | 'autonomous-user-persona-builder'
+  | 'autonomous-vendor-replacement-advisor'
+  | 'build-failure-explainer'
+  | 'deploy-drift-dashboard'
+  | 'deployment-readiness-console'
+  | 'dynamic-api-monitoring'
+  | 'idea-to-feature-blueprint'
+  | 'implementation-readiness-checker'
+  | 'roi-ops-scorecard'
+  | 'rollout-blueprint';
+
 
 export interface AILabTool {
   id: AILabToolId;
@@ -595,17 +598,6 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     badge: 'New',
   },
   {
-    id: 'autonomous-seo-audit-agent',
-    slug: 'autonomous-seo-audit-agent',
-    title: 'Autonomous SEO Audit Agent',
-    shortDescription:
-      'Paste HTML to audit meta tags, headings, links, media, social tags, and canonical URLs against SEO best practices.',
-    category: 'SEO Intelligence',
-    status: 'live',
-    href: '/ai-lab/autonomous-seo-audit-agent',
-    badge: 'New',
-  },
-  {
     id: 'autonomous-user-persona-builder',
     slug: 'autonomous-user-persona-builder',
     title: 'Autonomous User Persona Builder',
@@ -639,25 +631,14 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     badge: 'New',
   },
   {
-    id: 'autonomous-rate-limit-capacity-planner',
-    slug: 'autonomous-rate-limit-capacity-planner',
-    title: 'Autonomous Rate Limit & Capacity Planner',
-    shortDescription:
-      'Model API rate limits across endpoints, simulate traffic multipliers, calculate DB pool sizes and infrastructure costs.',
-    category: 'Infrastructure Intelligence',
-    status: 'live',
-    href: '/ai-lab/autonomous-rate-limit-capacity-planner',
-    badge: 'New',
-  },
-  {
     id: 'autonomous-pricing-strategy-optimizer',
-    slug: 'autonomous-pricing-strategy-optimizer',
+    slug: 'autonomous-pricing-optimizer',
     title: 'Autonomous Pricing Strategy Optimizer',
     shortDescription:
       'Optimize SaaS pricing tiers with LTV:CAC analysis, price elasticity modeling, competitor benchmarking, and scenario planning.',
     category: 'Revenue Intelligence',
     status: 'live',
-    href: '/ai-lab/autonomous-pricing-strategy-optimizer',
+    href: '/ai-lab/autonomous-pricing-optimizer',
     badge: 'New',
   },
   {
@@ -669,6 +650,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Marketing Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-email-sequence-designer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-feature-prioritizer',
+    slug: 'autonomous-feature-prioritizer',
+    title: 'Autonomous Feature Request Prioritizer',
+    shortDescription:
+      'Score and rank feature requests using RICE or WSJF frameworks. Balance reach, impact, confidence, and effort.',
+    category: 'Product Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-feature-prioritizer',
     badge: 'New',
   },
 ];
