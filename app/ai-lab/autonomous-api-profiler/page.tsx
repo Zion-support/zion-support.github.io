@@ -167,7 +167,7 @@ export default function AutonomousAPIProfiler() {
             </div>
           </div>
 
-          <button onClick={() => { setResults([]);  setEndpointMap({}); setUrls(''); }} style={{ display: 'block', width: '100%', padding: '0.75rem', fontSize: '1rem', fontWeight: 600, color: '#fff', background: '#1f6feb', border: 'none', borderRadius: 8, cursor: 'pointer', marginTop: '1rem' }}>
+<button onClick={() => { setResults([]); setEndpointMap({}); setUrls(''); }} style={{ display: 'block', width: '100%', padding: '0.75rem', fontSize: '1rem', fontWeight: 600, color: '#fff', background: '#1f6feb', border: 'none', borderRadius: 8, cursor: 'pointer', marginTop: '1rem' }}>
             🔄 Profile Another API
           </button>
         </>
