@@ -38,7 +38,8 @@ export type AILabToolId =
   | 'autonomous-tech-stack-auditor'
   | 'autonomous-project-estimator'
   | 'autonomous-vendor-replacement-advisor'
-  | 'autonomous-compliance-auditor';
+  | 'autonomous-compliance-auditor'
+  | 'autonomous-security-scanner';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -468,6 +469,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Governance & Risk',
     status: 'live',
     href: '/ai-lab/autonomous-compliance-auditor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-security-scanner',
+    slug: 'autonomous-security-scanner',
+    title: 'Autonomous Security Posture Scanner',
+    shortDescription:
+      'Scan code, config files, and HTTP headers for vulnerabilities. Detects exposed secrets, XSS, SQLi, missing headers, outdated deps. Maps to OWASP Top 10.',
+    category: 'Security & Compliance',
+    status: 'live',
+    href: '/ai-lab/autonomous-security-scanner',
     badge: 'New',
   },
 ];
