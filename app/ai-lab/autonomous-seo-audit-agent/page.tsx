@@ -1,240 +1,106 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
-import DefaultSEO from '@/components/DefaultSEO';
+import React, { useState } from 'react';
 
-interface SEOCheckResult {
-  name: string;
-  description: string;
-  passed: boolean;
-  details?: string;
-}
+interface SeoIssue { id: number; category: string; severity: 'critical' | 'warning' | 'info'; title: string; fix: string; }
 
-export default function AutonomousSEOAuditAgent() {
-  const [url, setUrl] = useState('');
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [results, setResults] = useState<SEOCheckResult[] | null>(null);
-  const [overallScore, setOverallScore] = useState<number | null>(null);
+const SEO_CHECKS = [
+  { check: (h: string) => !/<title[^>]*>[\s\S]*?<\/title>/i.test(h), cat: 'Meta', sev: 'critical' as const, title: 'Missing <title> tag', fix: 'Add a descriptive <title> element (50-60 chars).' },
+  { check: (h: string) => !/<meta[^>]*name=["']description["']/i.test(h), cat: 'Meta', sev: 'critical' as const, title: 'Missing meta description', fix: 'Add <meta name="description" content="..."/> (150-160 chars).' },
+  { check: (h: string) => !/<meta[^>]*name=["']keywords["']/i.test(h), cat: 'Meta', sev: 'info' as const, title: 'No meta keywords', fix: 'Add relevant keywords (optional but helpful for older crawlers).' },
+  { check: (h: string) => !/<h1[^>]*>[\s\S]*?<\/h1>/i.test(h), cat: 'Headings', sev: 'critical' as const, title: 'Missing H1 tag', fix: 'Add exactly one <h1> per page with primary keyword.' },
+  { check: (h: string) => (h.match(/<h1/gi) || []).length > 1, cat: 'Headings', sev: 'warning' as const, title: 'Multiple H1 tags', fix: 'Use only one H1; demote others to H2/H3.' },
+  { check: (h: string) => !/<a[^>]*href=["'][^"']*["'][^>]*>[\s\S]*?<\/a>/i.test(h), cat: 'Links', sev: 'warning' as const, title: 'No internal links found', fix: 'Add internal links to improve crawl depth and page authority.' },
+  { check: (h: string) => /<a[^>]*target=["']_blank["']/i.test(h) && !/rel=["'][^"']*noopener[^"']*["']/i.test(h), cat: 'Links', sev: 'warning' as const, title: 'External links missing rel="noopener"', fix: 'Add rel="noopener noreferrer" to target="_blank" links.' },
+  { check: (h: string) => !/<img[^>]*src=["'][^"']*["'][^>]*alt=["'][^"']+["']/i.test(h) && /<img/i.test(h), cat: 'Media', sev: 'warning' as const, title: 'Images missing alt text', fix: 'Add descriptive alt attributes to all images.' },
+  { check: (h: string) => /<img[^>]*src=["'][^"']*["'][^>]*(width|height)=/i.test(h), cat: 'Media', sev: 'info' as const, title: 'Images with dimension attributes', fix: 'Specify width/height to prevent CLS (Cumulative Layout Shift).' },
+  { check: (h: string) => !/<link[^>]*rel=["']canonical["']/i.test(h), cat: 'Meta', sev: 'warning' as const, title: 'Missing canonical URL', fix: 'Add <link rel="canonical" href="..."/> to prevent duplicate content.' },
+  { check: (h: string) => !/<meta[^>]*property=["']og:/i.test(h), cat: 'Social', sev: 'info' as const, title: 'Missing Open Graph tags', fix: 'Add og:title, og:description, og:image for better social sharing.' },
+  { check: (h: string) => !/<link[^>]*rel=["']icon["']/i.test(h), cat: 'Media', sev: 'info' as const, title: 'No favicon link', fix: 'Add <link rel="icon" href="/favicon.ico"/> for browser tabs/bookmarks.' },
+];
 
-  const runAnalysis = () => {
-    if (!url) return;
-    setIsAnalyzing(true);
-    
-    // Simulate SEO analysis
+export default function SeoAuditAgentPage() {
+  const [html, setHtml] = useState('');
+  const [pageName, setPageName] = useState('Homepage');
+  const [result, setResult] = useState<{ score: number; passed: number; failed: number; issues: SeoIssue[] } | null>(null);
+  const [isAuditing, setIsAuditing] = useState(false);
+
+  const runAudit = () => {
+    setIsAuditing(true);
     setTimeout(() => {
-      const checks: SEOCheckResult[] = [
-        {
-          name: 'Meta Tags',
-          description: 'Check for title, description, and canonical tags',
-          passed: Math.random() > 0.3,
-          details: 'Found optimized title and meta description',
-        },
-        {
-          name: 'Heading Structure',
-          description: 'Verify H1-H6 hierarchy',
-          passed: Math.random() > 0.2,
-          details: 'Single H1 tag found with proper subheadings',
-        },
-        {
-          name: 'Image Optimization',
-          description: 'Check for alt attributes and image sizing',
-          passed: Math.random() > 0.4,
-          details: '3 images missing alt text detected',
-        },
-        {
-          name: 'Mobile Responsiveness',
-          description: 'Verify mobile-friendly design',
-          passed: Math.random() > 0.1,
-          details: 'Page is fully responsive',
-        },
-        {
-          name: 'Page Speed',
-          description: 'Analyze load time and performance',
-          passed: Math.random() > 0.5,
-          details: 'LCP: 2.3s, FID: 45ms',
-        },
-        {
-          name: 'Internal Linking',
-          description: 'Check for proper internal links',
-          passed: Math.random() > 0.25,
-          details: '12 internal links found',
-        },
-        {
-          name: 'Content Quality',
-          description: 'Evaluate content depth and uniqueness',
-          passed: Math.random() > 0.2,
-          details: '1,200 words, 85% unique content',
-        },
-        {
-          name: 'Schema Markup',
-          description: 'Check for structured data',
-          passed: Math.random() > 0.6,
-          details: 'Organization schema detected',
-        },
-      ];
-      
-      const score = Math.round(
-        (checks.filter(c => c.passed).length / checks.length) * 100
-      );
-      
-      setResults(checks);
-      setOverallScore(score);
-      setIsAnalyzing(false);
-    }, 2000);
-  };
-
-  const getStatusBadge = (passed: boolean) => {
-    if (passed) {
-      return <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">Pass</span>;
-    }
-    return <span className="rounded-full bg-red-100 px-2 py-1 text-xs font-semibold text-red-700">Fail</span>;
+      const issues: SeoIssue[] = [];
+      let id = 0;
+      SEO_CHECKS.forEach(({ check, cat, sev, title, fix }) => {
+        if (check(html)) {
+          id++;
+          issues.push({ id, category: cat, severity: sev, title, fix });
+        }
+      });
+      const critical = issues.filter(i => i.severity === 'critical').length;
+      const warnings = issues.filter(i => i.severity === 'warning').length;
+      const passed = SEO_CHECKS.length - issues.filter(i => i.severity !== 'info').length;
+      const score = Math.max(0, 100 - (critical * 20) - (warnings * 8));
+      setResult({ score, passed, failed: issues.length, issues });
+      setIsAuditing(false);
+    }, 600);
   };
 
   return (
-    <>
-      <DefaultSEO
-        title="Autonomous SEO Audit Agent | AI Lab | Zion Tech Group"
-        description="Run autonomous SEO audits with AI-powered analysis. Get instant scores for meta tags, content, performance, and more."
-        keywords={['AI SEO audit', 'SEO analyzer', 'autonomous SEO', 'SEO health check']}
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50 py-12">
-        <div className="container mx-auto max-w-5xl px-4">
-          {/* Breadcrumb */}
-          <div className="mb-6 flex items-center gap-2 text-sm">
-            <Link href="/ai-lab" className="text-indigo-600 hover:underline">AI Lab</Link>
-            <span className="text-slate-400">/</span>
-            <span className="text-slate-600">Autonomous SEO Audit Agent</span>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #4c1d95 0%, #7c2d12 100%)', color: '#f8fafc', padding: '2rem' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '0.5rem', background: 'linear-gradient(90deg, #c084fc, #fb923c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>🔍 Autonomous SEO Audit Agent</h1>
+        <p style={{ color: '#c4b5fd', marginBottom: '2rem', fontSize: '1.1rem' }}>Paste page HTML to get instant SEO analysis: meta tags, headings, links, media, social tags, and canonical URLs.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
+          <div style={{ background: '#1e1b4b', padding: '1.5rem', borderRadius: '12px', border: '1px solid #4c1d95' }}>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600' }}>Page Name</label>
+            <input type="text" value={pageName} onChange={e => setPageName(e.target.value)} style={{ width: '100%', padding: '0.5rem', borderRadius: '6px', background: '#0f172a', border: '1px solid #4c1d95', color: '#f8fafc', marginBottom: '1rem' }} />
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600' }}>Page HTML</label>
+            <textarea value={html} onChange={e => setHtml(e.target.value)} placeholder={'<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Welcome</h1>\n</body>\n</html>'} style={{ width: '100%', height: 300, padding: '0.75rem', borderRadius: '8px', fontFamily: 'monospace', background: '#0f172a', border: '1px solid #4c1d95', color: '#f8fafc', fontSize: '0.9rem' }} />
+            <button onClick={runAudit} disabled={isAuditing || !html.trim()} style={{ width: '100%', padding: '0.75rem', marginTop: '1rem', borderRadius: '8px', background: 'linear-gradient(90deg, #9333ea, #ea580c)', color: 'white', border: 'none', cursor: html.trim() ? 'pointer' : 'not-allowed', opacity: html.trim() ? 1 : 0.5, fontWeight: '600' }}>
+              {isAuditing ? '🔍 Auditing...' : '🔍 Run SEO Audit'}
+            </button>
           </div>
-
-          <div className="mb-10 text-center">
-            <div className="mb-2 inline-block rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700">
-              AI Lab · Live
-            </div>
-            <h1 className="text-4xl font-bold text-slate-900">Autonomous SEO Audit Agent</h1>
-            <p className="mt-2 text-lg text-slate-600">
-              AI-powered SEO analysis with instant scoring and actionable recommendations
-            </p>
-          </div>
-
-          {/* Input Section */}
-          <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-lg">
-            <div className="flex flex-col gap-4 md:flex-row">
-              <input
-                type="url"
-                placeholder="Enter URL to audit (e.g., https://example.com)"
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                className="flex-1 rounded-lg border border-slate-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
-              />
-              <button
-                onClick={runAnalysis}
-                disabled={!url || isAnalyzing}
-                className="rounded-lg bg-indigo-600 px-8 py-3 font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {isAnalyzing ? 'Analyzing...' : 'Run Audit'}
-              </button>
-            </div>
-          </div>
-
-          {/* Results Section */}
-          {results && (
-            <div className="space-y-6">
-              {/* Score Card */}
-              <div className="rounded-2xl border border-indigo-200 bg-gradient-to-br from-indigo-600 to-purple-600 p-8 text-white shadow-lg">
-                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                  <div>
-                    <h2 className="text-2xl font-semibold">Overall SEO Score</h2>
-                    <p className="mt-1 text-indigo-100">
-                      {overallScore! >= 80 ? 'Excellent - Your page is well-optimized!' :
-                       overallScore! >= 60 ? 'Good - Some improvements recommended' :
-                       'Needs Work - Several issues detected'}
-                    </p>
+          <div style={{ background: '#1e1b4b', padding: '1.5rem', borderRadius: '12px', border: '1px solid #4c1d95' }}>
+            <h3 style={{ marginBottom: '1rem' }}>📊 Audit Results</h3>
+            {result ? (
+              <>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+                  <div style={{ background: '#0f172a', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
+                    <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: result.score >= 80 ? '#4ade80' : result.score >= 60 ? '#facc15' : '#f87171' }}>{result.score}</div>
+                    <div style={{ color: '#a7f3d0', fontSize: '0.85rem' }}>SEO Score</div>
                   </div>
-                  <div className={`text-7xl font-bold ${overallScore! >= 80 ? 'text-green-300' : overallScore! >= 60 ? 'text-amber-300' : 'text-red-300'}`}>
-                    {overallScore}
-                    <span className="text-3xl text-indigo-200">/100</span>
+                  <div style={{ background: '#0f172a', padding: '1rem', borderRadius: '8px', textAlign: 'center' }}>
+                    <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#60a5fa' }}>{result.passed}/{SEO_CHECKS.length}</div>
+                    <div style={{ color: '#a7f3d0', fontSize: '0.85rem' }}>Checks Passed</div>
                   </div>
                 </div>
-              </div>
-
-              {/* Checks Grid */}
-              <div className="grid gap-4 md:grid-cols-2">
-                {results.map((check, index) => (
-                  <div
-                    key={index}
-                    className={`rounded-xl border p-5 ${
-                      check.passed
-                        ? 'border-green-200 bg-green-50'
-                        : 'border-red-200 bg-red-50'
-                    }`}
-                  >
-                    <div className="mb-2 flex items-center justify-between">
-                      <h3 className="font-semibold text-slate-900">{check.name}</h3>
-                      {getStatusBadge(check.passed)}
-                    </div>
-                    <p className="text-sm text-slate-600">{check.description}</p>
-                    {check.details && (
-                      <p className="mt-2 text-sm font-medium text-slate-700">{check.details}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Recommendations */}
-              <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg">
-                <h3 className="mb-4 text-xl font-semibold text-slate-900">AI Recommendations</h3>
-                <ul className="space-y-3">
-                  {results.filter(r => !r.passed).length > 0 ? (
-                    results.filter(r => !r.passed).map((check, index) => (
-                      <li key={index} className="flex items-start gap-3 rounded-lg bg-amber-50 p-3">
-                        <span className="text-amber-600">⚠️</span>
-                        <div>
-                          <span className="font-medium text-slate-900">{check.name}: </span>
-                          <span className="text-slate-700">{check.details || 'Needs improvement'}</span>
-                        </div>
-                      </li>
-                    ))
-                  ) : (
-                    <li className="flex items-start gap-3 rounded-lg bg-green-50 p-3">
-                      <span className="text-green-600">✅</span>
-                      <div>
-                        <span className="font-medium text-slate-900">Great job! </span>
-                        <span className="text-slate-700">Your page passes all SEO checks.</span>
-                      </div>
-                    </li>
-                  )}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Info Section */}
-          <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 className="mb-4 text-lg font-semibold text-slate-900">About This Tool</h3>
-            <p className="text-slate-600">
-              The Autonomous SEO Audit Agent uses AI to analyze your page for key SEO factors including meta tags, 
-              heading structure, image optimization, mobile responsiveness, page speed, internal linking, 
-              content quality, and schema markup. Get instant feedback and actionable recommendations to improve 
-              your search rankings.
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <Link
-                href="/ai-lab"
-                className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
-              >
-                Explore More AI Lab Tools
-              </Link>
-              <Link
-                href="/ai-services"
-                className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-              >
-                View AI Services
-              </Link>
-            </div>
+                <div style={{ background: '#0f172a', padding: '1rem', borderRadius: '8px' }}>
+                  <div style={{ color: '#ef4444', fontWeight: '600' }}>🔴 Critical: {result.issues.filter(i => i.severity === 'critical').length}</div>
+                  <div style={{ color: '#f59e0b', fontWeight: '600' }}>🟡 Warnings: {result.issues.filter(i => i.severity === 'warning').length}</div>
+                  <div style={{ color: '#60a5fa', fontWeight: '600' }}>🔵 Info: {result.issues.filter(i => i.severity === 'info').length}</div>
+                </div>
+              </>
+            ) : (
+              <div style={{ color: '#7c3aed', textAlign: 'center', padding: '3rem 1rem' }}><div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>Results here</div>
+            )}
           </div>
         </div>
+        {result && result.issues.length > 0 && (
+          <div style={{ background: '#1e1b4b', borderRadius: '12px', border: '1px solid #4c1d95', overflow: 'hidden' }}>
+            <h3 style={{ padding: '1rem 1.5rem', borderBottom: '1px solid #4c1d95', margin: 0 }}>📋 Issues</h3>
+            {result.issues.map(i => (
+              <div key={i.id} style={{ padding: '1rem 1.5rem', borderBottom: '1px solid #4c1d9533' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
+                  <span style={{ fontWeight: '600', color: i.severity === 'critical' ? '#ef4444' : i.severity === 'warning' ? '#f59e0b' : '#60a5fa' }}>[{i.severity.toUpperCase()}]</span>
+                  <span style={{ background: '#4c1d95', padding: '0.25rem 0.5rem', borderRadius: '4px', fontSize: '0.75rem' }}>{i.category}</span>
+                  <span style={{ fontWeight: '600' }}>{i.title}</span>
+                </div>
+                <div style={{ background: '#0f172a', padding: '0.5rem 0.75rem', borderRadius: '6px', color: '#4ade80', fontSize: '0.85rem' }}>💡 {i.fix}</div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-    </>
+    </div>
   );
 }

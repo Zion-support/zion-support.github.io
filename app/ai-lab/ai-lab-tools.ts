@@ -48,7 +48,10 @@ export type AILabToolId =
   | 'autonomous-prompt-cost-calculator'
   | 'autonomous-tech-debt-tracker'
   | 'autonomous-api-doc-generator'
-  | 'autonomous-ui-a11y-scorecard';
+  | 'autonomous-ui-a11y-scorecard'
+  | 'autonomous-seo-audit-agent'
+  | 'autonomous-user-persona-builder'
+  | 'autonomous-ab-test-calculator';
 
 export interface AILabTool {
   id: AILabToolId;
@@ -588,6 +591,39 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Quality Assurance',
     status: 'live',
     href: '/ai-lab/autonomous-ui-a11y-scorecard',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-seo-audit-agent',
+    slug: 'autonomous-seo-audit-agent',
+    title: 'Autonomous SEO Audit Agent',
+    shortDescription:
+      'Paste HTML to audit meta tags, headings, links, media, social tags, and canonical URLs against SEO best practices.',
+    category: 'SEO Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-seo-audit-agent',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-user-persona-builder',
+    slug: 'autonomous-user-persona-builder',
+    title: 'Autonomous User Persona Builder',
+    shortDescription:
+      'Generate 3-4 detailed user personas from product description with goals, pain points, buying triggers, and frustration scores.',
+    category: 'Product Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-user-persona-builder',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-ab-test-calculator',
+    slug: 'autonomous-ab-test-calculator',
+    title: 'Autonomous A/B Test Calculator',
+    shortDescription:
+      'Compute lift, p-values, statistical significance, minimum sample size, and recommended test duration for A/B experiments.',
+    category: 'Experiment Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-ab-test-calculator',
     badge: 'New',
   },
 ];
