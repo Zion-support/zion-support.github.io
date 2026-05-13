@@ -72,7 +72,8 @@ export type AILabToolId =
   | 'autonomous-uptime-monitor'
   | 'autonomous-security-vulnerability-scanner'
   | 'autonomous-api-documentation-generator'
-  | 'autonomous-web-accessibility-auditor';
+  | 'autonomous-web-accessibility-auditor'
+  | 'autonomous-performance-budget-calculator';
 
 
 export interface AILabTool {
@@ -877,6 +878,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Security & Compliance',
     status: 'live',
     href: '/ai-lab/autonomous-web-accessibility-auditor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-performance-budget-calculator',
+    slug: 'autonomous-performance-budget-calculator',
+    title: 'Autonomous Performance Budget Calculator',
+    shortDescription:
+      'Calculate performance budgets by page type, device, and connection speed. Core Web Vitals tracking and resource allocation guidance.',
+    category: 'Performance & Optimization',
+    status: 'live',
+    href: '/ai-lab/autonomous-performance-budget-calculator',
     badge: 'New',
   },
 ];
