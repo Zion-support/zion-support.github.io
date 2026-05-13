@@ -54,7 +54,8 @@ export type AILabToolId =
   | 'idea-to-feature-blueprint'
   | 'implementation-readiness-checker'
   | 'roi-ops-scorecard'
-  | 'rollout-blueprint';
+  | 'rollout-blueprint'
+  | 'autonomous-db-schema-designer';
 
 
 export interface AILabTool {
@@ -661,6 +662,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Product Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-feature-prioritizer',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-db-schema-designer',
+    slug: 'autonomous-db-schema-designer',
+    title: 'Autonomous Database Schema Designer',
+    shortDescription:
+      'Define tables, columns, relationships. Auto-generate SQL (Postgres/MySQL/SQLite), ERD visualization, data dictionary, and JSON export.',
+    category: 'Infrastructure Intelligence',
+    status: 'live',
+    href: '/ai-lab/autonomous-db-schema-designer',
     badge: 'New',
   },
 ];
