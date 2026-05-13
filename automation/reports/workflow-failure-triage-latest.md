@@ -1,38 +1,47 @@
 # Workflow failure triage
 
-- generatedAt: 2026-05-13T19:48:58.210Z
+- generatedAt: 2026-05-13T20:47:34.904Z
 - recentRuns: 80
-- failedRuns: 15
+- failedRuns: 20
 
 ## Top failing workflows
-- AI lead gen contact route guard: 2
-- AI Content Ideas to Deploy: 1
-- AI Content Burst: 1
-- AI Autonomous Idea Guarded Cycle: 1
+- Autonomous Changelog Generator: 2
+- TypeScript Type Coverage & Dead Code Check: 2
+- AI Content Rapid: 1
+- AI Content Ideas and Evolution Deploy: 1
+- AI lead gen contact route guard: 1
+- CI/CD Pipeline: 1
+- Deploy to GitHub Pages: 1
+- Autonomous Bundle Split Analyzer: 1
+- OpenAPI Contract Drift Detector: 1
+- .github/workflows/route-slicer.yml: 1
+- .github/workflows/workflow-change-guard.yml: 1
+- .github/workflows/ai-actions-pin-strict-guard.yml: 1
+- .github/workflows/workflow-yaml-sanity.yml: 1
+- .github/workflows/workflow-validate-light-weekly.yml: 1
+- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
+- .github/workflows/workflow-contracts-weekly.yml: 1
 - AI Experiences Health: 1
 - AI Uninterruptable Content Loop: 1
-- Automation health static freshness guard: 1
-- AI Openclaw Autonomous Cycle: 1
-- AI Services & Content Automation: 1
-- AI Content Max Velocity Deploy: 1
-- Production Health Monitor: 1
-- Deploy to GitHub Pages: 1
-- TypeScript Type Coverage & Dead Code Check: 1
-- CI/CD Pipeline: 1
 
 ## Latest failed runs
-- AI Content Ideas to Deploy | 2026-05-13T19:37:12Z | https://github.com/Zion-support/zion.app/actions/runs/25821994114
-- AI Content Burst | 2026-05-13T19:36:11Z | https://github.com/Zion-support/zion.app/actions/runs/25821943090
-- AI lead gen contact route guard | 2026-05-13T19:35:21Z | https://github.com/Zion-support/zion.app/actions/runs/25821901745
-- AI Autonomous Idea Guarded Cycle | 2026-05-13T19:12:42Z | https://github.com/Zion-support/zion.app/actions/runs/25820768213
-- AI Experiences Health | 2026-05-13T18:54:39Z | https://github.com/Zion-support/zion.app/actions/runs/25819839445
-- AI Uninterruptable Content Loop | 2026-05-13T18:54:15Z | https://github.com/Zion-support/zion.app/actions/runs/25819818529
-- Automation health static freshness guard | 2026-05-13T18:53:23Z | https://github.com/Zion-support/zion.app/actions/runs/25819772126
-- AI Openclaw Autonomous Cycle | 2026-05-13T18:51:02Z | https://github.com/Zion-support/zion.app/actions/runs/25819648727
-- AI lead gen contact route guard | 2026-05-13T18:47:05Z | https://github.com/Zion-support/zion.app/actions/runs/25819440315
-- AI Services & Content Automation | 2026-05-13T18:45:36Z | https://github.com/Zion-support/zion.app/actions/runs/25819361716
-- AI Content Max Velocity Deploy | 2026-05-13T18:42:51Z | https://github.com/Zion-support/zion.app/actions/runs/25819221444
-- Production Health Monitor | 2026-05-13T18:41:43Z | https://github.com/Zion-support/zion.app/actions/runs/25819161236
-- Deploy to GitHub Pages | 2026-05-13T18:41:27Z | https://github.com/Zion-support/zion.app/actions/runs/25819148501
-- TypeScript Type Coverage & Dead Code Check | 2026-05-13T18:41:27Z | https://github.com/Zion-support/zion.app/actions/runs/25819148491
-- CI/CD Pipeline | 2026-05-13T18:41:27Z | https://github.com/Zion-support/zion.app/actions/runs/25819148475
+- AI Content Rapid | 2026-05-13T20:40:52Z | https://github.com/Zion-support/zion.app/actions/runs/25825193505
+- AI Content Ideas and Evolution Deploy | 2026-05-13T20:40:41Z | https://github.com/Zion-support/zion.app/actions/runs/25825184004
+- AI lead gen contact route guard | 2026-05-13T20:21:23Z | https://github.com/Zion-support/zion.app/actions/runs/25824219165
+- CI/CD Pipeline | 2026-05-13T20:17:19Z | https://github.com/Zion-support/zion.app/actions/runs/25824013467
+- Deploy to GitHub Pages | 2026-05-13T20:17:19Z | https://github.com/Zion-support/zion.app/actions/runs/25824013406
+- Autonomous Changelog Generator | 2026-05-13T20:17:19Z | https://github.com/Zion-support/zion.app/actions/runs/25824013385
+- TypeScript Type Coverage & Dead Code Check | 2026-05-13T20:17:17Z | https://github.com/Zion-support/zion.app/actions/runs/25824011725
+- Autonomous Bundle Split Analyzer | 2026-05-13T20:17:17Z | https://github.com/Zion-support/zion.app/actions/runs/25824011593
+- OpenAPI Contract Drift Detector | 2026-05-13T20:17:14Z | https://github.com/Zion-support/zion.app/actions/runs/25824009267
+- .github/workflows/route-slicer.yml | 2026-05-13T20:16:56Z | https://github.com/Zion-support/zion.app/actions/runs/25823993722
+- .github/workflows/workflow-change-guard.yml | 2026-05-13T20:16:47Z | https://github.com/Zion-support/zion.app/actions/runs/25823986914
+- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-05-13T20:16:47Z | https://github.com/Zion-support/zion.app/actions/runs/25823986515
+- .github/workflows/workflow-yaml-sanity.yml | 2026-05-13T20:16:46Z | https://github.com/Zion-support/zion.app/actions/runs/25823986259
+- .github/workflows/workflow-validate-light-weekly.yml | 2026-05-13T20:16:39Z | https://github.com/Zion-support/zion.app/actions/runs/25823979850
+- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-05-13T20:16:33Z | https://github.com/Zion-support/zion.app/actions/runs/25823975424
+- .github/workflows/workflow-contracts-weekly.yml | 2026-05-13T20:16:31Z | https://github.com/Zion-support/zion.app/actions/runs/25823973174
+- AI Experiences Health | 2026-05-13T19:54:01Z | https://github.com/Zion-support/zion.app/actions/runs/25822840908
+- AI Uninterruptable Content Loop | 2026-05-13T19:53:20Z | https://github.com/Zion-support/zion.app/actions/runs/25822807137
+- Autonomous Changelog Generator | 2026-05-13T19:53:02Z | https://github.com/Zion-support/zion.app/actions/runs/25822792360
+- TypeScript Type Coverage & Dead Code Check | 2026-05-13T19:53:01Z | https://github.com/Zion-support/zion.app/actions/runs/25822792112
