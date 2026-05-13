@@ -396,6 +396,80 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-compliance',
     category: 'ai'
+  },
+  {
+    id: 'ai-computer-vision',
+    title: 'AI Computer Vision',
+    description: 'Image recognition, object detection, quality inspection, and visual search powered by deep learning models trained on your domain data.',
+    features: ['Image classification & object detection', 'Visual quality inspection & defect detection', 'OCR + layout analysis', 'Visual search & similarity matching', 'Edge deployment for real-time inference'],
+    benefits: ['Automated visual inspection at scale', '99%+ defect detection accuracy', 'Reduce QC labor costs by 80%', 'Real-time inference on edge devices'],
+    pricing: { basic: '449', pro: '899', enterprise: '2199' },
+    contactInfo: { website: '/ai-services/ai-computer-vision', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '👁️',
+    href: '/ai-services/ai-computer-vision',
+    category: 'ai'
+  },
+  {
+    id: 'ai-knowledge-management',
+    title: 'AI Knowledge Management',
+    description: 'Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detection, and intelligent Q&A across your document corpus.',
+    features: ['Semantic search across all documents', 'Auto-tagging & intelligent categorization', 'Knowledge gap detection', 'AI Q&A over internal documents', 'Content lifecycle & freshness monitoring'],
+    benefits: ['Reduce time-to-information by 75%', 'Eliminate duplicate content creation', 'Preserve institutional knowledge', 'Automated freshness alerts'],
+    pricing: { basic: '199', pro: '499', enterprise: '1199' },
+    contactInfo: { website: '/ai-services/ai-knowledge-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🧠',
+    href: '/ai-services/ai-knowledge-management',
+    popular: true,
+    category: 'ai'
+  },
+  {
+    id: 'ai-testing-qa',
+    title: 'AI Testing & Quality Assurance',
+    description: 'Automated test generation, visual regression testing, and AI-powered bug detection that adapts to your application code and learns from failures.',
+    features: ['Auto-generated test cases from user journeys', 'Visual regression testing across browsers', 'AI bug detection with root-cause suggestions', 'Performance testing & bottleneck analysis', 'Self-healing test scripts'],
+    benefits: ['Reduce QA effort by 70%', 'Catch regressions before production', 'Self-healing tests reduce maintenance', 'Cross-browser visual consistency'],
+    pricing: { basic: '349', pro: '749', enterprise: '1799' },
+    contactInfo: { website: '/ai-services/ai-testing-qa', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🧪',
+    href: '/ai-services/ai-testing-qa',
+    category: 'ai'
+  },
+  {
+    id: 'ai-translation-services',
+    title: 'AI Translation & Localization',
+    description: 'Enterprise translation engine with 100+ language support, context-aware Neural MT, terminology management, and human review workflows.',
+    features: ['100+ language Neural Machine Translation', 'Domain-specific model fine-tuning', 'Translation memory & glossary integration', 'Quality scoring & consistency checks', 'API integration for real-time translation'],
+    benefits: ['80% reduction in translation costs', '10x faster content localization', 'Brand-consistent terminology', 'Built-in QA workflow'],
+    pricing: { basic: '249', pro: '599', enterprise: '1499' },
+    contactInfo: { website: '/ai-services/ai-translation-services', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌐',
+    href: '/ai-services/ai-translation-services',
+    category: 'ai'
+  },
+  {
+    id: 'ai-employee-experience',
+    title: 'AI Employee Experience Platform',
+    description: 'End-to-end employee lifecycle automation from AI-powered onboarding to performance management, engagement tracking, and retention prediction.',
+    features: ['Automated onboarding workflow orchestration', 'Personalized training & development paths', 'Sentiment & engagement tracking', 'AI-powered retention risk prediction', 'Buddy & mentor matching algorithms'],
+    benefits: ['50% faster onboarding to productivity', 'Proactive retention risk detection', 'Eliminate IT/HR coordination overhead', 'Personalized growth plans per employee'],
+    pricing: { basic: '299', pro: '699', enterprise: '1599' },
+    contactInfo: { website: '/ai-services/ai-employee-experience', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🤝',
+    href: '/ai-services/ai-employee-experience',
+    category: 'ai'
+  },
+  {
+    id: 'ai-document-intelligence',
+    title: 'AI Document Intelligence',
+    description: 'End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.',
+    features: ['99%+ accuracy AI-powered OCR', 'Intelligent document classification', 'Field-level structured data extraction', 'ERP/CRM validation & reconciliation', 'Automated approval workflow triggers'],
+    benefits: ['Eliminate 90% of manual data entry', 'Process documents 50x faster', 'ERP-ready structured output', 'Immutable audit trail'],
+    pricing: { basic: '449', pro: '999', enterprise: '2499' },
+    contactInfo: { website: '/ai-services/ai-document-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📄',
+    href: '/ai-services/ai-document-intelligence',
+    popular: true,
+    category: 'ai'
   }
 ];
 
@@ -681,6 +755,42 @@ export const itServices: Service[] = [
     icon: '💡',
     href: '/it-services/it-consulting',
     category: 'it'
+  },
+  {
+    id: 'accessibility-compliance',
+    title: 'Accessibility & WCAG Compliance',
+    description: 'Automated WCAG 2.2 auditing, AI-powered remediation suggestions, screen reader simulation, and continuous accessibility compliance monitoring.',
+    features: ['WCAG 2.2 AA/AAA automated auditing', 'Screen reader simulation & navigation testing', 'Auto-generated remediation code snippets', 'Color contrast & typography analysis', 'Continuous CI/CD accessibility gates'],
+    benefits: ['Reduce ADA lawsuit risk substantially', 'Improve UX for all users', 'Automated compliance reporting', 'Proactive CI/CD testing integration'],
+    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
+    contactInfo: { website: '/it-services/accessibility-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '♿',
+    href: '/it-services/accessibility-compliance',
+    category: 'it'
+  },
+  {
+    id: 'cloud-cost-optimization-service',
+    title: 'Cloud Cost Optimization (FinOps)',
+    description: 'ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.',
+    features: ['Multi-cloud unified cost visibility', 'ML-driven instance right-sizing', 'Reserved instance & savings plan optimizer', 'Idle resource detection & cleanup', 'Showback/chargeback automation'],
+    benefits: ['Average 35% cloud cost reduction', 'Cross-cloud spend optimization', 'Real-time anomaly detection alerts', 'Executive-ready FinOps dashboards'],
+    pricing: { basic: '499', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/it-services/cloud-cost-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💰',
+    href: '/it-services/cloud-cost-optimization',
+    category: 'cloud'
+  },
+  {
+    id: 'supply-chain-management-service',
+    title: 'Supply Chain Management Platform',
+    description: 'End-to-end supply chain orchestration with AI demand forecasting, multi-modal route optimization, supplier risk scoring, and real-time disruption response.',
+    features: ['AI-driven demand forecasting', 'Multi-modal route optimization', 'Supplier risk intelligence & monitoring', 'Automated disruption response playbooks', 'Warehouse operations AI optimization'],
+    benefits: ['40% reduction in stockouts', '25% lower logistics costs', 'Real-time supplier risk alerts', 'Sustainability & carbon tracking'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/supply-chain-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🚛',
+    href: '/it-services/supply-chain-management',
+    category: 'automation'
   }
 ];
 
