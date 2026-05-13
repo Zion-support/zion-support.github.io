@@ -2,19 +2,19 @@ import ProductPageLayout from '../../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Recipe Creator and Meal Planner | Zion Tech Group',
-  description: 'AI-generated recipes based on dietary preferences, available ingredients, nutritional goals, and cultural cuisine preferences.',
-  alternates: { canonical: '/micro-saas/ai-recipe-generator' },
+  title: 'AI Personal Finance Advisor | Zion Tech Group',
+  description: 'Personalized financial planning, budget optimization, investment recommendations, and automated savings strategies.',
+  alternates: { canonical: '/micro-saas/ai-finance-advisor' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'AI Recipe Creator and Meal Planner',
-        category: 'Micro SaaS - Food Tech',
-        description: 'AI-generated recipes based on dietary preferences, available ingredients, nutritional goals, and cultural cuisine preferences.',
-        iconEmoji: '🍳',
+        title: 'AI Personal Finance Advisor',
+        category: 'Micro SaaS - Finance and Accounting',
+        description: 'Personalized financial planning, budget optimization, investment recommendations, and automated savings strategies.',
+        iconEmoji: '💰',
         features: [
           { title: 'AI-Powered Automation', description: 'Intelligent workflows that adapt to your business patterns.' },
           { title: 'Cloud-Hosted', description: 'Zero setup required, accessible from anywhere.' },
@@ -38,9 +38,9 @@ export default function Page() {
         ],
         ctaLabel: 'Start Your Free Trial',
         pricing: [
-          { tier: 'Starter', price: '$7', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics', 'Email support'] },
-          { tier: 'Professional', price: '$17', period: '/month', features: ['All Starter', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
-          { tier: 'Enterprise', price: '$39', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA', 'SSO'] },
+          { tier: 'Starter', price: '$9', period: '/month', features: ['Core AI features', 'Up to 3 users', 'Basic analytics', 'Email support'] },
+          { tier: 'Professional', price: '$24', period: '/month', features: ['All Starter', 'Up to 25 users', 'Advanced analytics', 'Priority support', 'API access'] },
+          { tier: 'Enterprise', price: '$59', period: '/month', features: ['Everything in Pro', 'Unlimited users', 'Custom workflows', '24/7 support', 'SLA', 'SSO'] },
         ],
         contact: {
           phone: '+1 302 464 0950',

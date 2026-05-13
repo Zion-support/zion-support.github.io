@@ -414,6 +414,83 @@ export const microSaasCatalog: MicroSaaSProduct[] = [
     icon: '🎨',
     description: 'Automated UX analysis, A/B test prioritization, accessibility scoring, and conversion rate optimization recommendations.'
   },
+  {
+    slug: 'ai-retail-analytics',
+    name: 'AI Retail Analytics & Inventory Intelligence',
+    category: 'Retail & E-Commerce',
+    icon: '🛒',
+    description: 'AI-powered retail analytics with customer traffic analysis, shelf monitoring, pricing optimization, and demand forecasting.'
+  },
+  {
+    slug: 'ai-hr-onboarding',
+    name: 'AI HR Onboarding Automation',
+    category: 'Human Resources',
+    icon: '👋',
+    description: 'Automated employee onboarding workflows, document collection, compliance training, and personalized orientation planning.'
+  },
+  {
+    slug: 'ai-medical-scheduler',
+    name: 'AI Medical Appointment Scheduling',
+    category: 'Healthcare',
+    icon: '🏥',
+    description: 'Intelligent medical scheduling with patient triage, provider availability optimization, and automated appointment reminders.'
+  },
+  {
+    slug: 'ai-recipe-generator',
+    name: 'AI Recipe Creator & Meal Planner',
+    category: 'Food Tech',
+    icon: '🍳',
+    description: 'AI-generated recipes based on dietary preferences, available ingredients, nutritional goals, and cultural cuisine preferences.'
+  },
+  {
+    slug: 'ai-legal-researcher',
+    name: 'AI Legal Research Assistant',
+    category: 'Legal & IP',
+    icon: '⚖️',
+    description: 'AI-powered case law research, statute analysis, legal brief drafting, and precedent identification for legal professionals.'
+  },
+  {
+    slug: 'ai-finance-advisor',
+    name: 'AI Personal Finance Advisor',
+    category: 'Finance & Accounting',
+    icon: '💰',
+    description: 'Personalized financial planning, budget optimization, investment recommendations, and automated savings strategies.'
+  },
+  {
+    slug: 'ai-transport-optimizer',
+    name: 'AI Transportation Route Optimizer',
+    category: 'Supply Chain & Logistics',
+    icon: '🚛',
+    description: 'AI-powered route optimization for fleets, last-mile delivery scheduling, and real-time traffic adaptation.'
+  },
+  {
+    slug: 'ai-language-tutor',
+    name: 'AI Language Learning Tutor',
+    category: 'Education & Research',
+    icon: '🌐',
+    description: 'Personalized language tutoring with AI conversation practice, pronunciation feedback, and adaptive lesson planning.'
+  },
+  {
+    slug: 'ai-video-editor',
+    name: 'AI Video Editing & Post-Production',
+    category: 'Media & Content Creation',
+    icon: '🎬',
+    description: 'Automated video editing with scene detection, highlight extraction, caption generation, and professional color grading.'
+  },
+  {
+    slug: 'ai-agriculture-advisor',
+    name: 'AI Agriculture & Crop Management',
+    category: 'Agriculture & Environment',
+    icon: '🌱',
+    description: 'AI-powered crop monitoring, disease detection, yield prediction, irrigation optimization, and soil health analysis.'
+  },
+  {
+    slug: 'ai-fashion-designer',
+    name: 'AI Fashion Design & Trend Forecaster',
+    category: 'Fashion & Retail',
+    icon: '👗',
+    description: 'AI-driven fashion design, trend prediction, customer preference analysis, and automated collection generation.'
+  },
 ];
 
 export function groupMicroSaaSByCategory(products: MicroSaaSProduct[] = microSaasCatalog): Record<string, MicroSaaSProduct[]> {
