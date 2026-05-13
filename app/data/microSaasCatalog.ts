@@ -491,6 +491,41 @@ export const microSaasCatalog: MicroSaaSProduct[] = [
     icon: '👗',
     description: 'AI-driven fashion design, trend prediction, customer preference analysis, and automated collection generation.'
   },
+  {
+    slug: 'ai-fashion-stylist',
+    name: 'AI Fashion Stylist & Personal Shopper',
+    category: 'Fashion & Retail',
+    icon: '✨',
+    description: 'Personalized outfit recommendations, virtual wardrobe analysis, and style profile matching with seasonal trend integration.'
+  },
+  {
+    slug: 'ai-mental-health-companion',
+    name: 'AI Mental Health Companion',
+    category: 'Health & Wellness',
+    icon: '💙',
+    description: 'Conversational emotional support with mood journaling, coping strategy suggestions, and professional referral when needed.'
+  },
+  {
+    slug: 'ai-pronunciation-coach',
+    name: 'AI Pronunciation Coach',
+    category: 'Education & Research',
+    icon: '🎤',
+    description: 'Real-time speech analysis, phonetic feedback, accent reduction exercises, and progress tracking for language learners.'
+  },
+  {
+    slug: 'ai-real-estate-valuer',
+    name: 'AI Real Estate Valuation Engine',
+    category: 'Real Estate & Facilities',
+    icon: '💎',
+    description: 'Automated property valuation using comparable sales analysis, neighborhood trend data, and market condition indicators.'
+  },
+  {
+    slug: 'ai-supply-chain-optimizer',
+    name: 'AI Supply Chain Optimizer',
+    category: 'Supply Chain & Logistics',
+    icon: '⚡',
+    description: 'Predictive supply chain management with disruption alerts, vendor risk scoring, and cost optimization recommendations.'
+  },
 ];
 
 export function groupMicroSaaSByCategory(products: MicroSaaSProduct[] = microSaasCatalog): Record<string, MicroSaaSProduct[]> {

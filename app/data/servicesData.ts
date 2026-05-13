@@ -1287,6 +1287,90 @@ export const aiServices: Service[] = [
     icon: '🏢',
     href: '/ai-services/supply-chain',
     category: 'ai'
+  },
+  {
+    id: 'ai-supply-chain-intelligence',
+    title: 'AI Supply Chain Intelligence',
+    description: 'End-to-end supply chain visibility with predictive disruption alerts, multi-tier vendor risk scoring, and AI-driven cost optimization.',
+    features: ['Real-time multi-tier visibility', 'Predictive disruption alerts', 'Vendor risk assessment', 'Cost optimization engine', 'Scenario simulation and planning'],
+    benefits: ['Reduce disruption by 50%', 'Optimize inventory costs', 'Strengthen vendor relationships', 'Enable proactive planning'],
+    pricing: { basic: '1299', pro: '2999', enterprise: '7999' },
+    contactInfo: { website: '/ai-services/ai-supply-chain-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔗',
+    href: '/ai-services/ai-supply-chain-intelligence',
+    category: 'ai'
+  },
+  {
+    id: 'ai-predictive-workforce-planning',
+    title: 'AI Predictive Workforce Planning',
+    description: 'Forecast hiring needs, optimize team composition, and predict attrition risk with AI-powered HR analytics and workforce modeling.',
+    features: ['Attrition risk prediction', 'Skills gap analysis', 'Optimal team composition', 'Seasonal demand forecasting', 'Succession planning guidance'],
+    benefits: ['Reduce unplanned turnover by 35%', 'Optimize hiring budget allocation', 'Build resilient teams', 'Accelerate strategic planning'],
+    pricing: { basic: '599', pro: '1299', enterprise: '3499' },
+    contactInfo: { website: '/ai-services/ai-predictive-workforce-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '👥',
+    href: '/ai-services/ai-predictive-workforce-planning',
+    category: 'ai'
+  },
+  {
+    id: 'ai-voice-agent-platform',
+    title: 'AI Voice Agent Platform',
+    description: 'Deploy conversational AI voice agents for customer service, outbound calls, appointment scheduling, and lead qualification with natural speech.',
+    features: ['Natural voice synthesis', 'Real-time speech recognition', 'Multi-language support', 'CRM integration', 'Call analytics and scoring'],
+    benefits: ['Handle 10x more calls', '24/7 customer availability', 'Reduce labor costs by 60%', 'Qualify leads automatically'],
+    pricing: { basic: '499', pro: '1199', enterprise: '3999' },
+    contactInfo: { website: '/ai-services/ai-voice-agent-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎙️',
+    href: '/ai-services/ai-voice-agent-platform',
+    category: 'ai'
+  },
+  {
+    id: 'ai-financial-forecasting',
+    title: 'AI Financial Forecasting & Planning',
+    description: 'Revenue forecasting, cash flow prediction, and budget optimization using AI models trained on your historical and market data.',
+    features: ['Revenue and expense forecasting', 'Cash flow prediction models', 'Scenario planning and simulation', 'Budget variance analysis', 'Automated financial reporting'],
+    benefits: ['Reduce forecast errors by 40%', 'Improve budget accuracy', 'Enable proactive cash management', 'Support strategic decisions with data'],
+    pricing: { basic: '899', pro: '2199', enterprise: '5999' },
+    contactInfo: { website: '/ai-services/ai-financial-forecasting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/ai-services/ai-financial-forecasting',
+    category: 'ai'
+  },
+  {
+    id: 'ai-content-moderation',
+    title: 'AI Content Moderation Platform',
+    description: 'Automated content review for user-generated platforms — detect spam, harassment, and policy violations across text, image, and video.',
+    features: ['Multi-modal content analysis', 'Custom policy rule engine', 'Real-time moderation workflows', 'Appeal and escalation handling', 'Compliance audit logging'],
+    benefits: ['Moderate 99% of content automatically', 'Reduce review team costs by 75%', 'Maintain community safety standards', 'Scale to millions of posts daily'],
+    pricing: { basic: '399', pro: '999', enterprise: '2999' },
+    contactInfo: { website: '/ai-services/ai-content-moderation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/ai-services/ai-content-moderation',
+    category: 'ai'
+  },
+  {
+    id: 'ai-customer-sentiment-analytics',
+    title: 'AI Customer Sentiment Analytics',
+    description: 'Real-time sentiment analysis across reviews, surveys, social media, and support interactions to drive proactive customer experience improvements.',
+    features: ['Multi-channel sentiment tracking', 'Emotion intensity scoring', 'Trend detection and alerting', 'Competitor sentiment benchmarking', 'Actionable insight generation'],
+    benefits: ['Predict customer churn 30 days early', 'Identify brand perception shifts', 'Prioritize CX improvements', 'Benchmark against competitors'],
+    pricing: { basic: '349', pro: '799', enterprise: '1999' },
+    contactInfo: { website: '/ai-services/ai-customer-sentiment-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💭',
+    href: '/ai-services/ai-customer-sentiment-analytics',
+    category: 'ai'
+  },
+  {
+    id: 'ai-code-migration-modernization',
+    title: 'AI Code Migration & Modernization',
+    description: 'Automatically migrate legacy codebases to modern frameworks (COBOL → Java, jQuery → React, Python 2 → Python 3) with AI-assisted refactoring.',
+    features: ['Automated code translation', 'Dependency analysis and mapping', 'Test generation and validation', 'Incremental migration planning', 'Code quality scoring post-migration'],
+    benefits: ['Reduce migration effort by 60%', 'Minimize business disruption', 'Modernize without complete rewrites', 'Maintain security and compliance'],
+    pricing: { basic: '2999', pro: '7499', enterprise: '19999' },
+    contactInfo: { website: '/ai-services/ai-code-migration-modernization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚙️',
+    href: '/ai-services/ai-code-migration-modernization',
+    category: 'ai'
   }
 ];
 
@@ -2100,6 +2184,66 @@ export const itServices: Service[] = [
     icon: '🛡️',
     href: '/it-services/network-security-operations',
     category: 'cloud'
+  },
+  {
+    id: 'managed-soc-threat-intelligence',
+    title: 'Managed SOC & Threat Intelligence',
+    description: '24/7 Security Operations Center with AI-enhanced threat detection, incident response, and proactive threat hunting.',
+    features: ['24/7 security monitoring', 'AI-powered threat detection', 'Incident response automation', 'Proactive threat hunting', 'Compliance reporting'],
+    benefits: ['Detect threats in real-time', 'Reduce mean response time to minutes', 'Meet SOC 2 and ISO 27001 requirements', 'Protect against zero-day attacks'],
+    pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
+    contactInfo: { website: '/it-services/managed-soc-threat-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔒',
+    href: '/it-services/managed-soc-threat-intelligence',
+    category: 'it'
+  },
+  {
+    id: 'kubernetes-management',
+    title: 'Container Orchestration & Kubernetes Management',
+    description: 'Expert Kubernetes deployment, scaling, monitoring, and optimization for containerized applications with GitOps-driven workflows.',
+    features: ['Cluster design and deployment', 'Auto-scaling configuration', 'Service mesh implementation', 'CI/CD pipeline integration', 'Cost optimization and rightsizing'],
+    benefits: ['Reduce infrastructure costs by 35%', 'Enable zero-downtime deployments', 'Scale from hundreds to thousands of pods', 'Streamline developer workflows'],
+    pricing: { basic: '999', pro: '2499', enterprise: '6999' },
+    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🐳',
+    href: '/it-services/kubernetes-management',
+    category: 'it'
+  },
+  {
+    id: 'it-service-desk-automation',
+    title: 'IT Service Desk Automation',
+    description: 'AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.',
+    features: ['Intelligent ticket classification', 'Auto-resolution engine', 'Self-service knowledge base', 'SLA monitoring and escalation', 'Performance analytics'],
+    benefits: ['Resolve 40% of tickets automatically', 'Reduce average response time by 60%', 'Improve end-user satisfaction', 'Lower IT support costs'],
+    pricing: { basic: '499', pro: '1199', enterprise: '3499' },
+    contactInfo: { website: '/it-services/it-service-desk-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎧',
+    href: '/it-services/it-service-desk-automation',
+    category: 'it'
+  },
+  {
+    id: 'enterprise-backup-dr',
+    title: 'Enterprise Backup & Disaster Recovery',
+    description: 'Comprehensive data protection with automated backups, instant recovery, ransomware protection, and geo-redundant storage.',
+    features: ['Automated backup scheduling', 'Point-in-time recovery', 'Ransomware detection and isolation', 'Geo-redundant replication', 'Compliance-ready retention policies'],
+    benefits: ['Achieve 99.99% data durability', 'Meet RPO/RTO SLA targets', 'Protect against ransomware', 'Ensure business continuity'],
+    pricing: { basic: '299', pro: '799', enterprise: '2499' },
+    contactInfo: { website: '/it-services/enterprise-backup-dr', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💾',
+    href: '/it-services/enterprise-backup-dr',
+    category: 'it'
+  },
+  {
+    id: 'network-architecture-sdwan',
+    title: 'Network Architecture & SD-WAN',
+    description: 'Design, deploy, and manage enterprise networks with SD-WAN, zero-trust architecture, and intelligent traffic optimization.',
+    features: ['SD-WAN design and deployment', 'Network performance monitoring', 'Zero-trust segmentation', 'Traffic optimization policies', 'Multi-site connectivity management'],
+    benefits: ['Reduce WAN costs by 50%', 'Improve application performance', 'Secure remote workforce access', 'Simplify multi-cloud networking'],
+    pricing: { basic: '799', pro: '1999', enterprise: '5499' },
+    contactInfo: { website: '/it-services/network-architecture-sdwan', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌐',
+    href: '/it-services/network-architecture-sdwan',
+    category: 'it'
   }
 ];
 
