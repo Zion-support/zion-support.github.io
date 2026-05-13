@@ -72,6 +72,7 @@ const pageItems: SearchItem[] = [
   { title: 'AI Chat Companion', description: 'Conversational AI assistant for real-time support', href: '/ai-chat-companion', category: 'Pages', tags: ['chatbot', 'AI', 'conversational'], popularity: 70 },
   { title: 'AI Code Assistant', description: 'AI-powered code review, complexity analysis, and assistance', href: '/ai-code', category: 'Pages', tags: ['code', 'AI', 'review'], popularity: 65 },
   { title: 'AI Dashboard', description: 'Centralized AI-powered analytics and monitoring dashboard', href: '/ai-dashboard', category: 'Pages', tags: ['dashboard', 'analytics', 'AI'], popularity: 60 },
+  { title: 'AI Readiness Assessment', description: 'Interactive multi-step tool to evaluate your organization\'s AI maturity across data, infrastructure, team, process, and strategy dimensions', href: '/tools/ai-readiness-assessment', category: 'Tools', tags: ['AI readiness', 'maturity', 'assessment', 'score', 'evaluation'], popularity: 85 },
 ];
 
 // ---- Combine all ----
