@@ -133,6 +133,7 @@
     "app-disabled",
     "app-disabled-all",
     "apps",
-    "blog"
+    "blog",
+    "app/ai-lab/**"
   ]
 }
