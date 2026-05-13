@@ -34,6 +34,8 @@ export type AILabToolId =
   | 'autonomous-opportunity-radar'
   | 'autonomous-pricing-optimizer'
   | 'autonomous-project-estimator'
+  | 'autonomous-api-cost-estimator'
+  | 'autonomous-license-auditor'
   | 'autonomous-prompt-cost-calculator'
   | 'autonomous-rag-knowledge-workspace'
   | 'autonomous-rate-limit-capacity-planner'
@@ -938,6 +940,28 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Brand Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-brand-voice-analyzer',
+    badge: 'New',
+  },
+
+  {
+    id: 'autonomous-api-cost-estimator',
+    slug: 'autonomous-api-cost-estimator',
+    title: 'Autonomous API Cost Estimator',
+    shortDescription: 'Calculate and optimize AI API costs across providers with projections and savings recommendations.',
+    category: 'Cost Intelligence',
+    status: 'experimental',
+    href: '/ai-lab/autonomous-api-cost-estimator',
+    badge: 'New',
+  },
+
+  {
+    id: 'autonomous-license-auditor',
+    slug: 'autonomous-license-auditor',
+    title: 'Autonomous License Auditor',
+    shortDescription: 'Audit software licenses - open-source, commercial, and compliance - with risk scoring and remediation.',
+    category: 'Governance & Risk',
+    status: 'experimental',
+    href: '/ai-lab/autonomous-license-auditor',
     badge: 'New',
   },
 ];
