@@ -470,6 +470,79 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-document-intelligence',
     popular: true,
     category: 'ai'
+  },
+  {
+    id: 'ai-video-generation',
+    title: 'AI Video Generation & Editing',
+    description: 'Create professional videos from text prompts with voiceover, B-roll, transitions, and brand styling — produce enterprise-grade content in minutes.',
+    features: ['Text-to-video AI engine with scene generation', 'AI voiceover in 50+ languages with subtitles', 'Brand kit — colors, logos, auto-applied', 'Video editing timeline with AI-assisted cuts', 'Multi-platform export — YouTube, TikTok, Reels', 'Template marketplace — 500+ pre-built designs'],
+    benefits: ['Reduce video production time by 90%', 'Eliminate need for video editors for routine content', '50+ language voiceover', 'Consistent brand presentation', 'Multi-format export', 'Built-in editing suite'],
+    pricing: { basic: '59', pro: '199', enterprise: '499' },
+    contactInfo: { website: '/ai-services/ai-video-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎬',
+    href: '/ai-services/ai-video-generation',
+    category: 'ai'
+  },
+  {
+    id: 'ai-voice-cloning',
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'Clone any voice with 30 seconds of audio for voiceovers, podcasts, audiobooks, and interactive voice applications.',
+    features: ['Voice cloning from 30s audio sample', 'Emotion and tone control — adjust pitch, rate, emphasis', 'Real-time audio streaming for voice assistants', 'Multi-speaker conversation generation', 'Studio-quality audio with noise reduction', 'Ethical consent tracking and ownership verification'],
+    benefits: ['Studio-quality from 30 seconds of audio', '50+ languages and dialects', 'Real-time streaming capability', 'Reduce voice talent costs by 80%', 'Ethical consent management', 'Custom emotion and tone controls'],
+    pricing: { basic: '79', pro: '249', enterprise: '599' },
+    contactInfo: { website: '/ai-services/ai-voice-cloning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🗣️',
+    href: '/ai-services/ai-voice-cloning',
+    category: 'ai'
+  },
+  {
+    id: 'ai-lead-generation',
+    title: 'AI Lead Generation & Enrichment',
+    description: 'Automatically discover, qualify, and enrich B2B leads with web scraping, firmographic scoring, and intent signal detection.',
+    features: ['Automated lead discovery from public sources', 'Firmographic enrichment — revenue, tech stack, contacts', 'Intent signal — hiring, mentions, website visits', 'CRM auto-sync to Salesforce, HubSpot, Pipedrive', 'Personalized outreach — email, LinkedIn, sequences', 'ML-powered lead quality scoring and ranking'],
+    benefits: ['5x more qualified leads per month', 'Save 15 hours/week on enrichment', 'Intent targeting increases conversion 3x', 'Seamless CRM integration', 'ML-powered scoring models', 'Personalized outreach at scale'],
+    pricing: { basic: '149', pro: '449', enterprise: '999' },
+    contactInfo: { website: '/ai-services/ai-lead-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎯',
+    href: '/ai-services/ai-lead-generation',
+    popular: true,
+    category: 'ai'
+  },
+  {
+    id: 'ai-presentation-maker',
+    title: 'AI Presentation & Pitch Deck Maker',
+    description: 'Generate polished presentations, pitch decks, and reports from outlines with data visualization, templates, and speaker notes.',
+    features: ['Document-to-slide conversion from any file', 'Smart data visualization — auto charts, graphs', 'AI-generated speaker notes and timing cues', 'Brand-consistent — apply company guidelines', 'Multi-format export — PowerPoint, Google Slides, PDF', 'Real-time collaboration with team editing'],
+    benefits: ['Create presentations 10x faster', 'Professional design without designers', 'Data-driven visualizations', 'Brand consistency across teams', 'Speaker notes automatically included', 'Multi-format export options'],
+    pricing: { basic: '39', pro: '129', enterprise: '349' },
+    contactInfo: { website: '/ai-services/ai-presentation-maker', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/ai-services/ai-presentation-maker',
+    category: 'ai'
+  },
+  {
+    id: 'ai-chatbot-builder-pro',
+    title: 'AI Chatbot Builder Pro',
+    description: 'Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and seamless human handoff.',
+    features: ['RAG-powered knowledge base from your docs', 'Multi-channel — website, WhatsApp, Slack, Teams', 'Visual drag-and-drop flow designer', 'Smart human handoff with context transfer', 'Analytics — resolution rates, satisfaction, trends', 'Continuous learning from unanswered questions'],
+    benefits: ['70%+ automatic resolution rate', 'Multi-channel from single builder', 'Continuous self-improvement', 'Seamless human handoff', 'Built-in analytics dashboard', 'No-code visual flow designer'],
+    pricing: { basic: '99', pro: '299', enterprise: '699' },
+    contactInfo: { website: '/ai-services/ai-chatbot-builder-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🤖',
+    href: '/ai-services/ai-chatbot-builder-pro',
+    category: 'ai'
+  },
+  {
+    id: 'ai-code-reviewer-pro',
+    title: 'AI Code Reviewer Pro',
+    description: 'Automated code review that catches bugs, security issues, performance problems, and style violations before production.',
+    features: ['Deep code analysis across 50+ languages', 'OWASP Top 10 vulnerability scanning', 'Performance suggestions with benchmarks', 'Team coding standards enforcement', 'PR integration — GitHub, GitLab, Bitbucket', 'Custom rules engine for team-specific checks'],
+    benefits: ['Catch 80% of bugs before production', 'Automated security vulnerability scanning', 'PR integration with inline comments', 'Team custom rules enforcement', 'Reduces senior review time by 60%', 'Supports 50+ programming languages'],
+    pricing: { basic: '69', pro: '199', enterprise: '499' },
+    contactInfo: { website: '/ai-services/ai-code-reviewer-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔍',
+    href: '/ai-services/ai-code-reviewer-pro',
+    category: 'ai'
   }
 ];
 
