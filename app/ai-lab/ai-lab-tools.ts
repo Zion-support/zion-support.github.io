@@ -69,7 +69,8 @@ export type AILabToolId =
   | 'autonomous-api-test-generator'
   | 'autonomous-competitor-analysis-engine'
   | 'autonomous-code-deploy-simulator'
-  | 'autonomous-uptime-monitor';
+  | 'autonomous-uptime-monitor'
+  | 'autonomous-security-vulnerability-scanner';
 
 
 export interface AILabTool {
@@ -841,6 +842,17 @@ export const AI_LAB_TOOLS: AILabTool[] = [
     category: 'Reliability Intelligence',
     status: 'live',
     href: '/ai-lab/autonomous-uptime-monitor',
+    badge: 'New',
+  },
+  {
+    id: 'autonomous-security-vulnerability-scanner',
+    slug: 'autonomous-security-vulnerability-scanner',
+    title: 'Autonomous Security Vulnerability Scanner',
+    shortDescription:
+      'Scan dependencies for known CVEs, severity ratings, affected versions, and fix recommendations.',
+    category: 'Security & Compliance',
+    status: 'live',
+    href: '/ai-lab/autonomous-security-vulnerability-scanner',
     badge: 'New',
   },
 ];
