@@ -7658,6 +7658,1056 @@ export const itServices: Service[] = [
   }
 ];
 
+
+  // ── NEW BATCH 3 — NICHED & HIGH-VALUE SERVICES (Added 2026-05-14) ────────────
+  {
+    id: 'ai-saas-015',
+    href: '/ai-services/ai-saas/clinical-notes-ai',
+    icon: '🏥',
+    category: 'ai',
+    title: 'Clinical Notes AI for Healthcare Providers',
+    description: 'Automated medical scribe that listens to patient visits and generates structured SOAP notes, billing codes (ICD-10, CPT), and care plans. HIPAA-compliant, integrates with Epic, Cerner, and Athenahealth EHRs.',
+    features: [
+      'Real-time transcription with medical terminology accuracy (>98%)',
+      'Auto-suggested ICD-10 and CPT codes for billing',
+      'Care plan generation with evidence-based recommendations',
+      'PHI handling: HIPAA compliant, encryption at rest/in transit',
+      'EHR integration via HL7/FHIR APIs',
+      'Provider review and edit workflow before finalizing',
+      'Audit trail for compliance and legal defense'
+    ],
+    benefits: [
+      'Save 2+ hours per day on documentation for physicians',
+      'Reduce coding errors and claim denials by 40%',
+      'Improve patient face-time (no computer between you and patient)',
+      'Stay compliant with HIPAA and billing regulations'
+    ],
+    pricing: {
+      solo: '$199/mo — individual practitioner, 50 hours/month',
+      group: '$599/mo — up to 10 providers, unlimited sessions',
+      hospital: '$2,499/mo — enterprise with full EHR integration',
+      onprem: 'Contact — on-premise deployment for maximum privacy'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/clinical-notes-ai',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-016',
+    href: '/ai-services/ai-saas/legal-doc-review-ai',
+    icon: '⚖️',
+    category: 'ai',
+    title: 'AI Legal Document Review & Analysis',
+    description: 'Review contracts, NDAs, and legal filings in minutes instead of days. AI extracts obligations, identifies risks, flags non-standard clauses, and suggests negotiation points. Trained on millions of legal documents.',
+    features: [
+      'Document parsing: PDF, DOCX, scanned images (OCR)',
+      'Clause extraction and classification (indemnity, limitation of liability, termination)',
+      'Risk scoring per clause with explanations',
+      'Comparison against firm playbook and prior deals',
+      'Redline suggestions with template language',
+      'Multi-language support for cross-border contracts',
+      'Secure client portal for document upload and review'
+    ],
+    benefits: [
+      'Review 100-page merger agreement in under 5 minutes',
+      'Never miss a critical clause again (95%+ recall)',
+      'Standardize contract review across legal teams',
+      'Reduce outside counsel spend on routine reviews by 60%'
+    ],
+    pricing: {
+      payasyougo: '$0.25/page — pay per document review',
+      subscription: '$499/mo — 2,000 pages/month, priority processing',
+      enterprise: '$1,999/mo — unlimited, custom playbooks, dedicated instance',
+      api: 'Contact — API access for integration with CLM systems'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/legal-doc-review-ai',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-017',
+    href: '/ai-services/ai-saas/predictive-maintenance-platform',
+    icon: '🔧',
+    category: 'ai',
+    title: 'Industrial Predictive Maintenance Platform',
+    description: 'Predict equipment failures before they happen using IoT sensor data and ML. Reduce unplanned downtime by 70%, extend asset lifespan, and optimize maintenance schedules for manufacturing, energy, and transportation.',
+    features: [
+      'Ingest 10K+ sensor readings/sec (vibration, temp, pressure, current)',
+      'Failure prediction with 72-hour warning window',
+      'Anomaly detection without historical failure data (unsupervised)',
+      'Maintenance work order generation and dispatch',
+      'Root cause analysis with contributing factors',
+      'Integration with CMMS (Computerized Maintenance Management)',
+      'Edge deployment option for air-gapped facilities'
+    ],
+    benefits: [
+      'Reduce unplanned downtime by 70% (save $500K+/year for mid-size plant)',
+      'Cut maintenance costs by 25% (move from reactive to predictive)',
+      'Extend equipment life by 20-30% with proactive care',
+      'Improve safety by preventing catastrophic failures'
+    ],
+    pricing: {
+      startup: '$999/mo — up to 100 sensors, basic predictions',
+      growth: '$2,999/mo — 1,000 sensors, full analytics, CMMS integration',
+      enterprise: '$9,999/mo — unlimited, edge deployment, custom models',
+      onprem: 'Contact — self-hosted for secure facilities'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/predictive-maintenance-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-018',
+    href: '/ai-services/ai-saas/personalized-learning-platform',
+    icon: '🎓',
+    category: 'ai',
+    title: 'AI-Powered Personalized Learning Platform',
+    description: 'Adaptive learning system that customizes training content to each employee's skill level, learning style, and role. Tracks progress, adjusts difficulty, and recommends next topics. Used for onboarding, compliance, and upskilling.',
+    features: [
+      'Initial skill assessment to place learners at correct level',
+      'Dynamic content adaptation based on performance (easier/harder)',
+      'Multi-format: videos, interactive simulations, quizzes, READMEs',
+      'Spaced repetition scheduling for long-term retention',
+      'Manager dashboard: team progress, skill gaps, certifications',
+      'SCORM/xAPI compliance for LMS integration',
+      'Content authoring tool for creating adaptive lessons'
+    ],
+    benefits: [
+      'Cut training time by 40% while improving pass rates',
+      'Personalize learning for 1,000+ employees without manual effort',
+      'Identify skill gaps across organization before they cause problems',
+      'Maintain compliance certifications automatically'
+    ],
+    pricing: {
+      basic: '$299/mo — up to 50 learners, 100 lessons',
+      professional: '$899/mo — 500 learners, advanced analytics, content authoring',
+      enterprise: '$2,999/mo — unlimited, custom integrations, SSO',
+      custom: 'Contact — industry-specific content packs (finance, healthcare, manufacturing)'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/personalized-learning-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-019',
+    href: '/ai-services/ai-saas/social-media-content-ai',
+    icon: '📱',
+    category: 'ai',
+    title: 'AI Social Media Content Generator & Scheduler',
+    description: 'Generate on-brand social posts, images, and videos from your product catalog or blog articles. Auto-schedule across platforms, A/B test captions, and track engagement. Includes AI-powered image generation.',
+    features: [
+      'Blog-to-post: converts long-form articles into 10+ social snippets',
+      'Product-to-post: turns inventory into shoppable social posts',
+      'AI image generation (DALL-E/Stable Diffusion) for visuals',
+      'Multi-platform scheduling (LinkedIn, Twitter, Facebook, Instagram)',
+      'A/B testing of headlines and posting times',
+      'Engagement analytics and optimal posting time recommendations',
+      'Brand voice training: learns your tone and style'
+    ],
+    benefits: [
+      'Generate 100+ social posts per hour vs 5 manually',
+      'Maintain consistent posting schedule without a social media manager',
+      'Increase engagement by 3x with AI-optimized content',
+      'Repurpose existing content instead of creating from scratch'
+    ],
+    pricing: {
+      starter: '$99/mo — 1 brand, 100 posts/month, 1 social account',
+      growth: '$299/mo — 3 brands, unlimited posts, 10 accounts',
+      agency: '$799/mo — unlimited brands, 50 accounts, white-label',
+      enterprise: 'Contact — custom AI training on your brand voice'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/social-media-content-ai',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-020',
+    href: '/ai-services/ai-saas/ai-powered-voice-customer-agent',
+    icon: '📞',
+    category: 'ai',
+    title: 'AI-Powered Voice Customer Agent (Voicebot)',
+    description: '24/7 voice-based AI agent that answers phone calls, handles support queries, processes orders, and books appointments. Natural-sounding voice, low latency (<500ms), integrates with phone systems and CRM.',
+    features: [
+      'Natural voice conversation with <500ms response time',
+      'Multi-language support (30+ languages and dialects)',
+      'Integration with Twilio, Plivo, Asterisk, and SIP trunks',
+      'Transaction processing: payments, reservations, order status',
+      'Escalation to human agent with full context handoff',
+      'Call recording and analytics (sentiment, resolution rate)',
+      'Custom voice cloning for brand-specific voice'
+    ],
+    benefits: [
+      'Answer 80% of customer calls without human agents',
+      'Reduce call center costs by 70% while improving SLA',
+      'Available 24/7 — never miss a call after hours',
+      'Consistent, error-free responses every time'
+    ],
+    pricing: {
+      paypercall: '$0.05/call — pay-as-you-go',
+      basic: '$299/mo — 5,000 calls, 1 voice, basic intents',
+      professional: '$799/mo — 25,000 calls, custom intents, CRM integration',
+      enterprise: '$2,499/mo — unlimited, custom voice cloning, dedicated infrastructure'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-voice-customer-agent',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-021',
+    href: '/ai-services/ai-saas/automated-financial-reporting',
+    icon: '📊',
+    category: 'ai',
+    title: 'Automated Financial Reporting & Analysis',
+    description: 'Connect accounting systems (QuickBooks, Xero, NetSuite) and generate board-ready financial reports, variance analysis, and forecasts. AI explains anomalies, identifies trends, and writes management commentary.',
+    features: [
+      'Auto-import from 50+ accounting/ERP systems',
+      'Generate income statement, balance sheet, cash flow, KPI dashboards',
+      'Variance analysis: actual vs budget with AI explanations',
+      'Forecasting: revenue, expenses, cash runway with confidence intervals',
+      'Management discussion generation (MD&A) in prose',
+      'Ratio analysis and benchmarking against industry peers',
+      'SEC filing preparation (10-Q, 10-K) drafts for public companies'
+    ],
+    benefits: [
+      'Close books 80% faster (hours instead of days)',
+      'Eliminate manual spreadsheet errors and version chaos',
+      'Always have up-to-date board reports ready',
+      'Identify financial issues early with AI anomaly detection'
+    ],
+    pricing: {
+      small: '$299/mo — 1 entity, basic reports, 3 users',
+      midmarket: '$799/mo — multiple entities, forecasting, 10 users',
+      enterprise: '$2,499/mo — consolidations, SEC prep, unlimited users',
+      public: 'Contact — public company compliance and XBRL tagging'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-financial-reporting',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-022',
+    href: '/ai-services/ai-saas/compliance-officer-ai',
+    icon: '📋',
+    category: 'ai',
+    title: 'AI Compliance Officer & Regulatory Tracker',
+    description: 'Automated regulatory change management. Monitors 10,000+ global regulations (GDPR, CCPA, SOX, HIPAA, PCI, etc.), assesses impact on your business, and generates compliance tasks. Your AI co-pilot for legal & compliance teams.',
+    features: [
+      'Global regulatory feed: real-time updates from 100+ jurisdictions',
+      'Impact assessment: which regulations apply to your business',
+      'Task generation: specific actions required with deadlines',
+      'Policy gap analysis against current documentation',
+      'Audit trail: who did what, when, for every regulation',
+      'Reporting: 360° compliance posture dashboard',
+      'Integration with GRC tools (RSA Archer, MetricStream)'
+    ],
+    benefits: [
+      'Never miss a regulatory change that impacts your business',
+      'Reduce compliance team workload by 60% with AI triage',
+      'Demonstrate proactive compliance to auditors and regulators',
+      'Avoid costly fines ($1M+ for GDPR/CCPA violations)'
+    ],
+    pricing: {
+      startup: '$499/mo — 10 regulations, basic tracking',
+      business: '$1,499/mo — 100 regulations, full assessment, task management',
+      enterprise: '$4,999/mo — unlimited, custom rules, on-prem option',
+      audit: '$15,000 — one-time compliance gap analysis'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/compliance-officer-ai',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-023',
+    href: '/ai-services/ai-saas/ai-customer-success-manager',
+    icon: '🤝',
+    category: 'ai',
+    title: 'AI Customer Success Manager (CSM)',
+    description: 'Proactive customer success agent that monitors product usage, identifies at-risk accounts, and initiates outreach. Reduces churn by 30% and increases expansion revenue through timely interventions.',
+    features: [
+      'Usage monitoring: tracks logins, feature adoption, session duration',
+      'Churn prediction: flags at-risk accounts 30 days before cancellation',
+      'Automated outreach: emails, in-app messages, task creation for human CSM',
+      'Health scoring: dynamic score based on product usage + support tickets + NPS',
+      'Expansion opportunity detection: identifies upsell/cross-sell moments',
+      'Playbook execution: automated workflows for common scenarios',
+      'Integration with Salesforce, HubSpot, Intercom, Segment'
+    ],
+    benefits: [
+      'Reduce churn by 30% with proactive, timely interventions',
+      'Scale 1 CSM to 500+ accounts with AI augmentation',
+      'Identify expansion opportunities automatically',
+      'Improve customer satisfaction with personalized touchpoints'
+    ],
+    pricing: {
+      startup: '$299/mo — up to 100 customers, basic health scoring',
+      growth: '$799/mo — 1,000 customers, full playbooks, integrations',
+      enterprise: '$2,499/mo — unlimited, custom models, dedicated support',
+      custom: 'Contact — on-prem or private cloud deployment'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-customer-success-manager',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-024',
+    href: '/ai-services/ai-saas/automated-competitive-intelligence',
+    icon: '🕵️',
+    category: 'ai',
+    title: 'Automated Competitive Intelligence Platform',
+    description: 'AI that continuously monitors competitors — pricing changes, feature launches, marketing campaigns, job postings, and funding rounds. Delivers weekly intelligence reports and strategic recommendations.',
+    features: [
+      'Website monitoring: pricing pages, feature lists, blog announcements',
+      'Job posting analysis: what tech stack and roles they're hiring for',
+      'Funding and M&A tracking from news and regulatory filings',
+      'Social media sentiment analysis (their brand vs yours)',
+      'Product review comparison (G2, Capterra, Trustpilot)',
+      'Automated war room reports with SWOT analysis updates',
+      'Alerting for significant changes (price drop, new feature)'
+    ],
+    benefits: [
+      'Stay ahead of competitor moves without manual research',
+      'Price competitively with real-time benchmarking',
+      'Identify market gaps before competitors fill them',
+      'Inform product roadmap with competitive landscape insights'
+    ],
+    pricing: {
+      startup: '$199/mo — 5 competitors, weekly reports',
+      growth: '$599/mo — 20 competitors, daily alerts, API access',
+      enterprise: '$1,999/mo — unlimited competitors, custom analysis, dedicated analyst',
+      project: 'Contact — one-time competitive deep-dive report'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-competitive-intelligence',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-025',
+    href: '/ai-services/ai-saas/ai-powered-contract-negotiation',
+    icon: '🤝',
+    category: 'ai',
+    title: 'AI-Powered Contract Negotiation Assistant',
+    description: 'During contract negotiations, AI analyzes proposed changes in real-time, compares against your playbook, suggests counter-language, and predicts deal-impact. Integrates with DocuSign, Adobe Sign for seamless workflow.',
+    features: [
+      'Redline detection: highlights deviations from your template',
+      'Playbook comparison: flags non-standard clauses automatically',
+      'Risk scoring per change (high/medium/low)',
+      'Counter-proposal suggestions with approved language',
+      'Deal-impact prediction: how terms affect revenue, liability, flexibility',
+      'Version comparison between negotiation rounds',
+      'E-signature integration with audit trail'
+    ],
+    benefits: [
+      'Negotiate faster with AI-assisted redline review',
+      'Standardize contracts across business units',
+      'Reduce legal spend on routine contract reviews by 70%',
+      'Never agree to unfavorable terms again'
+    ],
+    pricing: {
+      payg: '$0.10/page — pay per contract review',
+      business: '$799/mo — unlimited reviews, custom playbook, integrations',
+      enterprise: '$2,499/mo — dedicated instance, custom risk models, SLA',
+      legal: 'Contact — law firm partnership program'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-contract-negotiation',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-026',
+    href: '/ai-services/ai-saas/ai-recruiting-sourcing-platform',
+    icon: '👔',
+    category: 'ai',
+    title: 'AI Recruiting & Candidate Sourcing Platform',
+    description: 'Automated talent sourcing: AI finds passive candidates across LinkedIn, GitHub, StackOverflow, and research papers. Scores fit, personalizes outreach, and schedules interviews. Reduce time-to-hire from 45 days to 7.',
+    features: [
+      'Boolean search generation across 50+ sourcing channels',
+      'Candidate scoring: skills, experience, culture fit, salary expectations',
+      'Automated personalized outreach emails (99% response rate)',
+      'Interview scheduling with calendar integration',
+      'Bias detection in job descriptions and screening criteria',
+      'Talent pool building for future roles',
+      'ATS integration (Greenhouse, Lever, Workable)'
+    ],
+    benefits: [
+      'Reduce time-to-hire from 45 days to 7 days',
+      'Source 10x more qualified candidates than manual recruiting',
+      'Eliminate unconscious bias with objective scoring',
+      'Build talent pipeline for future hiring needs'
+    ],
+    pricing: {
+      payperhire: '$1,500/hire — pay only when candidate starts',
+      startup: '$499/mo — 5 open roles, unlimited candidates',
+      growth: '$1,299/mo — 25 open roles, advanced sourcing, employer branding',
+      enterprise: '$4,999/mo — unlimited, dedicated sourcer, custom integrations'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-recruiting-sourcing-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-027',
+    href: '/ai-services/ai-saas/automated-video-captioning-translation',
+    icon: '🎬',
+    category: 'ai',
+    title: 'AI Automated Video Captioning & Translation',
+    description: 'Generate accurate captions for any video (any language) and translate to 100+ languages with voice-over synthesis. Used by content creators, e-learning platforms, and enterprise training.',
+    features: [
+      'Automatic speech recognition with 99% accuracy (clean audio)',
+      'Speaker diarization and labeling',
+      'Translation to 100+ languages with context preservation',
+      'Voice-over synthesis in target language (match original speaker tone)',
+      'Subtitle styling: burn-in or sidecar (SRT, VTT)',
+      'Video platform integrations: YouTube, Vimeo, Wistia, Kaltura',
+      'API for bulk processing of video libraries'
+    ],
+    benefits: [
+      'Make videos accessible to hearing impaired and global audiences',
+      'Increase video views by 40% with captions (SEO + accessibility)',
+      'Localize training videos for global teams in minutes, not weeks',
+      'Comply with accessibility regulations (ADA, WCAG)'
+    ],
+    pricing: {
+      perminute: '$0.50/minute — pay-as-you-go captioning',
+      starter: '$99/mo — 200 minutes/month, 5 translations',
+      business: '$299/mo — 1,000 minutes, unlimited translations, API access',
+      enterprise: 'Custom — dedicated processing, custom voice models'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-video-captioning-translation',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-028',
+    href: '/ai-services/ai-saas/quality-control-vision-system',
+    icon: '👁️',
+    category: 'ai',
+    title: 'AI Visual Quality Control & Defect Detection',
+    description: 'Computer vision system that inspects products on production line in real-time. Detects cosmetic defects, dimensional anomalies, and assembly errors with 99.5% accuracy. Works in manufacturing, food processing, pharmaceuticals.',
+    features: [
+      'Real-time inspection: 1000+ units/minute with GPU acceleration',
+      'Defect classification: scratch, dent, misalignment, contamination',
+      'Anomaly detection: finds 'unknown' defects not in training data',
+      'Integration with PLCs and SCADA systems for line stoppage',
+      'Defect documentation with images for traceability',
+      'Self-improving: learns from false positives/negatives over time',
+      'Edge deployment: on-premise box for low-latency, air-gapped facilities'
+    ],
+    benefits: [
+      'Catch 99.5% of defects before they reach customer',
+      'Reduce quality team workload by 80%',
+      'Lower warranty claims and product recall risk',
+      'Maintain consistent quality 24/7 without fatigue'
+    ],
+    pricing: {
+      basic: '$1,999/mo — up to 1M inspections/month, 10 defect types',
+      pro: '$4,999/mo — unlimited inspections, custom defect training, API',
+      enterprise: '$14,999/mo — dedicated edge appliances, on-prem install, SLA'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/quality-control-vision-system',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-029',
+    href: '/ai-services/ai-saas/automated-tax-compliance-engine',
+    icon: '🧾',
+    category: 'ai',
+    title: 'Automated Tax Compliance & Filing Engine',
+    description: 'Automatically calculate, file, and remit sales tax, VAT, GST across 15,000+ jurisdictions. Tracks economic nexus, monitors rate changes, and generates audit-ready reports. For e-commerce and SaaS companies.',
+    features: [
+      'Real-time tax calculation at checkout (Salesforce, Shopify, WooCommerce)',
+      'Economic nexus monitoring: alerts when you cross thresholds in new states/countries',
+      'Automated filing: generate and submit returns to state tax authorities',
+      'VAT OSS and IOSS for EU cross-border e-commerce',
+      'Exemption certificate management and validation',
+      'Audit defense package with documentation and support',
+      'Integration with QuickBooks, Xero, NetSuite for accruals'
+    ],
+    benefits: [
+      'Eliminate manual tax calculations and spreadsheet chaos',
+      'Avoid penalties for missed filings ($100–$1,000+ per incident)',
+      'Stay compliant as you expand into new jurisdictions automatically',
+      'Reduce accounting firm fees for tax compliance by 80%'
+    ],
+    pricing: {
+      starter: '$99/mo — up to $100K revenue, 5 states, basic filings',
+      growth: '$299/mo — up to $1M revenue, 20 states, full automation',
+      enterprise: '$999/mo — unlimited revenue, global tax (VAT/GST), audit support',
+      marketplace: 'Contact — platform-level tax calculation for marketplaces'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-tax-compliance-engine',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-030',
+    href: '/ai-services/ai-saas/ai-meeting-notes-action-items',
+    icon: '✅',
+    category: 'ai',
+    title: 'AI Meeting Notes & Action Item Tracker',
+    description: 'Record any meeting (Zoom, Teams, in-person) and get AI-generated notes, decisions, action items with owners, and deadlines. Syncs to Asana, Trello, Jira. Never lose track of who does what.',
+    features: [
+      'High-accuracy transcription with speaker identification',
+      'Automatic extraction of decisions, action items, and owners',
+      'Keyword-based tagging and search across all meetings',
+      'Task creation: one-click push to Asana/Trello/Jira/Slack',
+      'Follow-up reminders: nudges if action items overdue',
+      'Meeting templates and agenda suggestions',
+      'Integration with calendar (auto-join and record)'
+    ],
+    benefits: [
+      'Never lose action items or forget decisions again',
+      'Save 2+ hours per week on meeting follow-up',
+      'Create accountability with automatic task assignment',
+      'Search past meetings like a knowledge base'
+    ],
+    pricing: {
+      free: 'Free — 10 meetings/month, basic notes',
+      pro: '$49/mo — unlimited meetings, task integrations, team analytics',
+      business: '$149/mo — AI summaries, custom workflows, SSO',
+      enterprise: 'Contact — on-prem, custom integrations, dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-meeting-notes-action-items',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-031',
+    href: '/ai-services/ai-saas/ai-powered-inventory-management',
+    icon: '📦',
+    category: 'ai',
+    title: 'AI-Powered Inventory Management & Replenishment',
+    description: 'Predict optimal stock levels, automate reordering, and prevent stockouts/overstock. ML models factor in seasonality, promotions, supply chain delays, and demand spikes. Integrates with Shopify, WooCommerce, NetSuite.',
+    features: [
+      'Demand forecasting at SKU level with 95%+ accuracy',
+      'Automatic reorder point calculation with safety stock optimization',
+      'Supplier lead time prediction and monitoring',
+      'ABC analysis and automatic classification',
+      'Warehouse slotting optimization for faster picking',
+      'Multi-location inventory pooling and transfer suggestions',
+      'Expiration management for perishable goods (FIFO/FEFO)'
+    ],
+    benefits: [
+      'Reduce stockouts by 80% while cutting excess inventory by 30%',
+      'Free up working capital tied in overstock',
+      'Automate purchasing — no manual PO creation',
+      'Scale to 100K+ SKUs without additional inventory managers'
+    ],
+    pricing: {
+      startup: '$199/mo — up to 1,000 SKUs, basic forecasting',
+      growth: '$699/mo — 10,000 SKUs, full automation, integrations',
+      enterprise: '$2,499/mo — unlimited, custom ML models, dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-inventory-management',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-032',
+    href: '/ai-services/ai-saas/automated-email-campaign-generator',
+    icon: '📨',
+    category: 'ai',
+    title: 'Automated Email Campaign Generator',
+    description: 'Create full email sequences (drip campaigns, newsletters, promotional blasts) from a simple brief. AI writes subject lines, body copy, personalization, and optimization suggestions. A/B testing built-in.',
+    features: [
+      'Campaign brief → 5-email sequence in 60 seconds',
+      'Subject line optimization: predicts open rates and suggests alternatives',
+      'Personalization tokens: dynamic fields based on subscriber data',
+      'Spam score checking and deliverability optimization',
+      'A/B testing: subject lines, CTAs, send times',
+      'Integration with Mailchimp, SendGrid, ConvertKit, ActiveCampaign',
+      'Template library: 50+ proven email templates'
+    ],
+    benefits: [
+      'Create entire email campaigns in minutes, not days',
+      'Improve open rates by 20% with AI-optimized subject lines',
+      'Scale email marketing without hiring a copywriter',
+      'Test and iterate faster with built-in A/B testing'
+    ],
+    pricing: {
+      starter: '$49/mo — 5 campaigns/month, basic templates',
+      growth: '$149/mo — unlimited campaigns, advanced optimization, integrations',
+      agency: '$499/mo — client management, white-label, API access',
+      enterprise: 'Contact — custom AI training on your brand voice'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-email-campaign-generator',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-033',
+    href: '/ai-services/ai-saas/ai-powered-cyber-threat-intelligence',
+    icon: '🔐',
+    category: 'ai',
+    title: 'AI Cyber Threat Intelligence & Hunting Platform',
+    description: 'Proactive threat intelligence that correlates global threat feeds, dark web monitoring, and your internal logs to detect targeted attacks before they breach. Used by MSSPs and enterprise security teams.',
+    features: [
+      'Global threat feed ingestion: 100K+ indicators of compromise (IoCs)',
+      'Dark web monitoring: leaked credentials, data dumps, chatter about your org',
+      'Internal log correlation (Firewall, EDR, SIEM) for attack path reconstruction',
+      'Threat hunting queries: pre-built queries for common attack patterns',
+      'Automated alerts with confidence scoring and recommended actions',
+      'Threat actor profiling and TTP (tactics, techniques, procedures) mapping',
+      'Integration with SOAR for automated response playbooks'
+    ],
+    benefits: [
+      'Detect targeted attacks 30+ days before traditional tools',
+      'Reduce dwell time (attacker in network) from 200 days to <24 hours',
+      'Stay ahead of emerging threats with AI correlation',
+      'Meet cyber insurance requirements for threat intelligence'
+    ],
+    pricing: {
+      team: '$1,999/mo — up to 500 endpoints, basic threat feeds',
+      enterprise: '$5,999/mo — unlimited endpoints, full threat intel, dark web monitoring',
+      mssp: '$9,999/mo — multi-tenant platform for managed security providers',
+      custom: 'Contact — on-prem deployment, custom threat intelligence'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-cyber-threat-intelligence',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-034',
+    href: '/ai-services/ai-saas/automated-legal-research-platform',
+    icon: '📖',
+    category: 'ai',
+    title: 'Automated Legal Research & Case Law Analysis',
+    description: 'AI legal researcher that finds relevant cases, statutes, and regulations in seconds. Summarizes holdings, predicts case outcomes, and drafts legal memos. Covers US federal, state, and international jurisdictions.',
+    features: [
+      'Natural language queries: 'Find cases similar to Smith v. Jones on breach of contract'',
+      'Case law retrieval with relevance ranking (not just keyword matching)',
+      'Holding extraction and summarization (what court decided and why)',
+      'Outcome prediction based on judge, jurisdiction, factual similarities',
+      'Citation checking: verify if case is still good law (Shepardize)',
+      'Draft generation: legal memos, brief sections with citations',
+      'Integration with Westlaw/LexisNexis for official references'
+    ],
+    benefits: [
+      'Reduce legal research time from 5 hours to 15 minutes per case',
+      'Find obscure cases human researchers might miss',
+      'Predict case outcomes with 80%+ accuracy based on historical patterns',
+      'Cut outside counsel spend on research and analysis'
+    ],
+    pricing: {
+      solo: '$299/mo — individual attorney, basic research',
+      firm: '$999/mo — up to 20 attorneys, full features, collaboration',
+      enterprise: '$3,999/mo — unlimited, custom training on your case history, API',
+      academic: 'Contact — discounted for law schools and legal clinics'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-legal-research-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-008',
+    href: '/it-services/it-saas/automated-it-asset-inventory',
+    icon: '🖥️',
+    category: 'it',
+    title: 'Automated IT Asset Inventory & Lifecycle Management',
+    description: 'Discover and track all hardware and software assets across your organization automatically. Monitors lifecycle, license compliance, and alerts on end-of-life hardware. Integrates with MDM, Active Directory, and procurement systems.',
+    features: [
+      'Auto-discovery of devices via network scan, MDM enrollment, AD integration',
+      'Software inventory: installed applications, versions, license keys',
+      'Hardware inventory: model, specs, warranty expiration, user assignment',
+      'License compliance: vs purchased vs installed vs unused',
+      'Lifecycle alerts: hardware EOL, software sunset, warranty expiry',
+      'CMDB integration: ServiceNow, Jira Service Management',
+      'Automated decommission workflows when assets retired'
+    ],
+    benefits: [
+      'Know exactly what you own (no more spreadsheet chaos)',
+      'Avoid software audit penalties by staying compliant',
+      'Plan hardware refresh cycles proactively',
+      'Reduce software license waste by identifying unused seats'
+    ],
+    pricing: {
+      startup: '$99/mo — up to 100 devices, basic inventory',
+      business: '$399/mo — 1,000 devices, full lifecycle, compliance reporting',
+      enterprise: '$1,299/mo — unlimited, custom integrations, dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/automated-it-asset-inventory',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-009',
+    href: '/it-services/it-saas/network-performance-monitoring',
+    icon: '🌐',
+    category: 'it',
+    title: 'Network Performance Monitoring & Diagnostics',
+    description: 'Continuous monitoring of network latency, packet loss, jitter, and bandwidth utilization across all sites and cloud connections. Root cause analysis with AI-powered diagnostics. Alternative to ThousandEyes at lower cost.',
+    features: [
+      'End-to-end monitoring: on-prem → cloud → SaaS applications',
+      'Synthetic transactions: simulate user workflows (login, checkout, API calls)',
+      'Packet capture and analysis for deep troubleshooting',
+      'AI root cause: correlates events across network layers to pinpoint issue',
+      'Network device monitoring (routers, switches, firewalls, load balancers)',
+      'SLA reporting and uptime dashboards for internal SLAs',
+      'Alerting with PagerDuty/Opsgenie integration'
+    ],
+    benefits: [
+      'Detect network issues before users complain',
+      'Reduce MTTR by 60% with AI diagnostics',
+      'Prove cloud provider SLA violations for credits',
+      'Visualize network topology and dependencies'
+    ],
+    pricing: {
+      starter: '$299/mo — 10 monitoring targets, basic dashboards',
+      business: '$899/mo — 100 targets, synthetic transactions, AI diagnostics',
+      enterprise: '$2,999/mo — unlimited, packet capture, dedicated appliance',
+      service: 'Contact — managed network monitoring service (24/7 NOC)'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/network-performance-monitoring',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-010',
+    href: '/it-services/it-saas/automated-backup-recovery',
+    icon: '💾',
+    category: 'it',
+    title: 'Automated Backup & Recovery Orchestration',
+    description: 'Set-and-forget backup across VMs, databases, SaaS apps, and file servers. Automated recovery testing to ensure backups work. Ransomware detection and immutable backups. One-click disaster recovery.',
+    features: [
+      'Multi-destination backups: on-prem NAS, AWS S3, Azure Blob, Google Cloud',
+      'Application-consistent snapshots (SQL, Oracle, Exchange, SharePoint)',
+      'Automated recovery tests: spins up VMs in isolated environment weekly',
+      'Ransomware detection: alerts on anomalous file encryption patterns',
+      'Immutable backups: write-once-read-many (WORM) to prevent tampering',
+      'Granular restore: individual files, mailboxes, database rows',
+      'Cloud-to-cloud backup: Office 365, GSuite, Salesforce, Dynamics'
+    ],
+    benefits: [
+      'Sleep soundly knowing backups are tested and verified',
+      'Ransomware protection with immutable, air-gapped backups',
+      'Reduce RTO from days to hours',
+      'Eliminate manual backup management overhead'
+    ],
+    pricing: {
+      pergb: '$0.05/GB/month — includes storage and backup software',
+      server: '$20/server/month — VM/physical server backup',
+      saas: '$3/user/month — Office 365, Google Workspace backup',
+      enterprise: 'Contact — large-scale enterprise backup with dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/automated-backup-recovery',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-011',
+    href: '/it-services/it-saas/identity-governance-access-management',
+    icon: '🔑',
+    category: 'it',
+    title: 'Identity Governance & Access Management (IGA)',
+    description: 'Automated user provisioning, de-provisioning, access certifications, and privileged access management. Enforces least-privilege, SOX compliance, and segregation of duties. Alternative to SailPoint/Saviynt.',
+    features: [
+      'Automated user lifecycle: joiner-mover-leaver workflows',
+      'Access certification campaigns: certify user access quarterly',
+      'Privileged Access Management (PAM): just-in-time admin rights',
+      'Role-based access control (RBAC) and attribute-based (ABAC)',
+      'Integration with Active Directory, Okta, Azure AD, LDAP',
+      'Segregation of duties (SoD) conflict detection',
+      'Audit-ready reports for SOX, SOC2, HIPAA'
+    ],
+    benefits: [
+      'Automate 90% of access requests and certifications',
+      'Reduce audit preparation time from weeks to hours',
+      'Enforce least-privilege to minimize insider threat risk',
+      'Meet compliance requirements (SOX, GDPR, HIPAA)'
+    ],
+    pricing: {
+      basic: '$499/mo — up to 500 users, core provisioning, certifications',
+      business: '$1,499/mo — 5,000 users, PAM, SoD, advanced workflows',
+      enterprise: '$4,999/mo — unlimited, custom integrations, dedicated instance',
+      custom: 'Contact — hybrid cloud and legacy system integrations'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/identity-governance-access-management',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'micro-saas-007',
+    href: '/it-services/micro-saas/uptime-monitoring-alerting',
+    icon: '📡',
+    category: 'it',
+    title: 'Uptime Monitoring & Alerting (White-Label)',
+    description: 'Monitor websites, APIs, and servers from 10 global locations. Get instant alerts via SMS, email, Slack, PagerDuty when things go down. White-label with your own brand for agencies and hosting providers.',
+    features: [
+      'HTTP(s) monitoring with content matching and SSL certificate checks',
+      'Ping and port monitoring for servers and network devices',
+      'Real browser monitoring (Chrome) for complex user journeys',
+      '10+ global monitoring locations (NYC, London, Tokyo, Sydney)',
+      'Alerting: SMS, voice calls, email, Slack, Teams, PagerDuty, webhook',
+      'Status pages: brandable status.ziontechgroup.com for your customers',
+      'API for integration and custom monitoring checks'
+    ],
+    benefits: [
+      'Know when your site is down before customers do',
+      'Reduce MTTR with precise failure location (which location, which service)',
+      'White-label to resell monitoring as part of your managed services',
+      'Meet SLAs with proof of uptime/downtime'
+    ],
+    pricing: {
+      free: 'Free — 5 monitors, 3 locations, email alerts',
+      startup: '$29/mo — 50 monitors, 10 locations, all alert channels',
+      agency: '$99/mo — 500 monitors, white-label status page, API access',
+      msp: '$299/mo — unlimited, custom checks, dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/uptime-monitoring-alerting',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'micro-saas-008',
+    href: '/it-services/micro-saas/form-builder-with-analytics',
+    icon: '📝',
+    category: 'it',
+    title: 'Advanced Form Builder with Analytics & Workflow',
+    description: 'Build any form (contact, survey, application, payment) with conditional logic, file uploads, and e-signatures. Advanced analytics: funnel drop-off, field abandonment, conversion optimization. Integrates with 100+ CRMs.',
+    features: [
+      'Drag-and-drop form builder with 30+ field types',
+      'Conditional logic: show/hide fields based on previous answers',
+      'Calculated fields: price quotes, scoring quizzes, BMI calculators',
+      'File upload with virus scanning and size limits',
+      'E-signature integration (DocuSign, HelloSign)',
+      'Payment collection: Stripe, PayPal, Square',
+      'Analytics: conversion funnel, field abandonment heatmaps, A/B testing'
+    ],
+    benefits: [
+      'Build any form without developer help',
+      'Increase form completion rates by 35% with smart logic',
+      'Understand why users abandon forms with field-level analytics',
+      'Automate workflows by connecting forms to CRMs and databases'
+    ],
+    pricing: {
+      basic: '$29/mo — 1,000 submissions/month, basic forms',
+      growth: '$89/mo — 10,000 submissions, conditional logic, payments',
+      business: '$249/mo — unlimited, advanced analytics, SSO',
+      enterprise: 'Contact — on-prem, custom database integrations'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/form-builder-with-analytics',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'micro-saas-009',
+    href: '/it-services/micro-saas/employee-onboarding-automation',
+    icon: '👋',
+    category: 'it',
+    title: 'Employee Onboarding Automation Platform',
+    description: 'Automated onboarding workflows: equipment procurement, account creation, training assignment, mentor pairing, and 30/60/90-day check-ins. New hire portal with all resources in one place.',
+    features: [
+      'Customizable onboarding journeys per role (engineer, sales, executive)',
+      'Automated equipment ordering (laptop, monitors, swag) with approval workflows',
+      'Account provisioning: Google Workspace, Slack, GitHub, Jira, CRM',
+      'Task assignments to hiring manager, IT, HR, mentor',
+      'New hire portal: all resources, contacts, training in one place',
+      '30/60/90-day check-in prompts and feedback collection',
+      'Analytics: onboarding completion rate, time-to-productivity'
+    ],
+    benefits: [
+      'Reduce new hire ramp time from 90 days to 45 days',
+      'Eliminate missed steps in onboarding (no forgotten laptop orders)',
+      'Consistent experience across all departments and locations',
+      'Free up 10+ hours per month per HRBP from manual coordination'
+    ],
+    pricing: {
+      per_employee: '$10/employee/mo — includes all features',
+      annual: '$8/employee/mo — billed annually (20% discount)',
+      enterprise: 'Contact — custom workflows, integrations, dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/employee-onboarding-automation',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'special-004',
+    href: '/it-services/special/cloud-cost-optimization-audit',
+    icon: '💰',
+    category: 'it',
+    title: 'Cloud Cost Optimization & Right-Sizing Audit',
+    description: 'Comprehensive audit of AWS/Azure/GCP spend with actionable recommendations to cut costs 30–50% without impacting performance. Includes reserved instance optimization, idle resource cleanup, and architectural improvements.',
+    features: [
+      'Full cloud cost breakdown by service, region, team, and project',
+      'Idle resource detection: unused VMs, unattached volumes, orphaned IPs',
+      'Reserved instance/savings plan recommendations with 1–3 year payback',
+      'Architectural review: spot instances, auto-scaling, serverless alternatives',
+      'Commitment-based discount optimization (AWS CUD, Azure Hybrid Benefit)',
+      'Ongoing cost monitoring dashboard with anomaly alerts',
+      'Implementation support: we can execute changes for you'
+    ],
+    benefits: [
+      'Reduce cloud spend by 30–50% on average',
+      'Eliminate wasted spend on idle or over-provisioned resources',
+      'Optimize reserved instance coverage for maximum savings',
+      'Free up budget for innovation instead of infrastructure'
+    ],
+    pricing: {
+      audit: '$5,000 — one-time comprehensive audit with report',
+      ongoing: '$499/mo — continuous monitoring, monthly recommendations',
+      enterprise: '$1,500/mo — dedicated cost engineer, implementation support',
+      percentage: '15% of first-year savings (performance-based option)'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-special/cloud-cost-optimization-audit',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'special-005',
+    href: '/it-services/special/it-due-diligence-for-ma',
+    icon: '🔍',
+    category: 'it',
+    title: 'IT Due Diligence for M&A (Buy/Sell Side)',
+    description: 'Comprehensive IT assessment for mergers and acquisitions. Evaluates technical debt, security posture, scalability, and integration complexity. Used by private equity, strategic acquirers, and sellers preparing for exit.',
+    features: [
+      'Technical debt assessment: code quality, architecture, documentation',
+      'Security audit: penetration testing, compliance (SOC2, ISO27001), data privacy',
+      'Infrastructure review: scalability, reliability, cost efficiency',
+      'Team skill assessment and knowledge single-point-of-failure analysis',
+      'Integration complexity scoring for post-merger tech stack alignment',
+      'IP and software asset valuation',
+      'Seller prep: remediation roadmap to maximize valuation'
+    ],
+    benefits: [
+      'Avoid buying a technical time bomb — uncover hidden risks',
+      'Price adjustments based on accurate technical findings',
+      'Smooth post-merger integration with known technical landscape',
+      'Increase sale price by 10–30% with remediation before listing'
+    ],
+    pricing: {
+      small: '$15,000 — startup acquisition (<$10M revenue)',
+      midmarket: '$35,000 — $10M–$100M revenue, full assessment',
+      enterprise: '$75,000+ — large enterprise with multiple business units',
+      seller_prep: 'Contact — pre-sale remediation consulting'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-special/it-due-diligence-for-ma',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'special-006',
+    href: '/it-services/special/crisis-incident-response-retainer',
+    icon: '🚨',
+    category: 'it',
+    title: 'Crisis Incident Response & Digital Forensics Retainer',
+    description: '24/7 emergency response for data breaches, ransomware attacks, and security incidents. Our forensics team contains the breach, investigates root cause, and guides recovery. Retainer ensures immediate response.',
+    features: [
+      '24/7/365 incident response — 15-minute initial contact SLA',
+      'Forensic investigation: breach scope, entry vector, data exfiltration',
+      'Containment and eradication of threats',
+      'Legal and regulatory notification guidance (GDPR, state laws)',
+      'Post-incident report with root cause and remediation plan',
+      'Cyber insurance liaison and documentation support',
+      'Retainer discounts on follow-up remediation services'
+    ],
+    benefits: [
+      'Minimize breach impact with immediate expert response',
+      'Navigate legal and regulatory requirements correctly',
+      'Preserve evidence for potential litigation or insurance claims',
+      'Return to operations faster with expert guidance'
+    ],
+    pricing: {
+      retainer: '$5,000/mo — 4 included incident response hours, priority queue',
+      per_incident: '$15,000/incident — pay-as-you-go emergency response',
+      enterprise: '$10,000/mo — unlimited incidents up to 40 hours, dedicated analyst',
+      forensics: 'Contact — full digital forensics and expert witness services'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-special/crisis-incident-response-retainer',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
+
 ];
 export const itSolutions = itServices;
 
