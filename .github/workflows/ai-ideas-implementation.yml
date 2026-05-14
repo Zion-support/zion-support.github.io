@@ -1,7 +1,7 @@
 # AI Ideas to Implementation
 # Maximum-velocity content pipeline: ideation + evolution ideas + blog + front page + product pages.
 # Runs 4x daily (4/8/12/16 UTC) for fastest content velocity.
-# Requires: OPENROUTER_API_KEY, NETLIFY_BUILD_HOOK in repo secrets
+# Requires: OPENROUTER_API_KEY (Netlify build hook removed → GitHub Pages)
 
 name: AI Ideas to Implementation
 
@@ -29,7 +29,7 @@ on:
         required: false
         default: '1'
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit'
+        description: 'Trigger deploy after commit (GitHub Pages)'
         required: false
         default: true
         type: boolean
@@ -61,9 +61,9 @@ jobs:
 
       - name: Secret preflight
         env:
-          REQUIRED_SECRETS: OPENROUTER_API_KEY,NETLIFY_BUILD_HOOK
+          REQUIRED_SECRETS: OPENROUTER_API_KEY
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: npm run secrets:preflight
 
       - name: Autonomous quality gate
@@ -75,7 +75,7 @@ jobs:
           OPENROUTER_MODEL: openrouter/free
           AUTO_COMMIT: "1"
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '6' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '1' }}
           SKIP_PRODUCT_PAGES: ${{ github.event.inputs.skip_product_pages && '1' || '' }}
@@ -87,5 +87,5 @@ jobs:
           TARGET_BRANCH=main \
           PUSH_RETRIES=3 \
           TRIGGER_DEPLOY="${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}" \
-          NETLIFY_BUILD_HOOK="${{ secrets.NETLIFY_BUILD_HOOK }}" \
+          # NETLIFY_BUILD_HOOK removed (migrated to GitHub Pages) \
           npm run autonomy:safe-release

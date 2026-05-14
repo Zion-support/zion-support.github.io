@@ -28,7 +28,7 @@ jobs:
           grep -Fq 'group: deploy-on-push-main' "$f"
           grep -Fq 'cancel-in-progress: false' "$f"
           grep -Fq 'github.token' "$f"
-          grep -Fq 'NETLIFY_BUILD_HOOK' "$f"
+          grep -Fq 'GitHub Pages' "$f"
           grep -Fq 'deploy:status:generate' "$f"
           grep -Fq 'commit-and-push-main.sh' "$f"
           echo "ok: $f"

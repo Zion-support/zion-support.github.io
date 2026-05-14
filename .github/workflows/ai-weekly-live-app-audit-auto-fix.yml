@@ -129,15 +129,10 @@ jobs:
           git add -A
           bash scripts/automation/commit-and-push-main.sh "chore(app): weekly live app audit - UX and link fixes"
 
-      - name: Trigger Netlify deploy
-        if: success() && (github.event_name == 'schedule' || github.event.inputs.trigger_deploy == 'true')
+      - name: Deploy (GitHub Pages auto-deploy after push)
+        if: success()
         run: |
-          if [ -n "${{ secrets.NETLIFY_BUILD_HOOK }}" ]; then
-            curl -sS -X POST -d {} "${{ secrets.NETLIFY_BUILD_HOOK }}"
-            echo " Deploy triggered"
-          else
-            echo "Netlify build hook not set; skipping deploy"
-          fi
+          echo "Deploy handled by GitHub Pages (output: export, basePath: /zion.app)"
 
       - name: Upload audit reports
         if: always()

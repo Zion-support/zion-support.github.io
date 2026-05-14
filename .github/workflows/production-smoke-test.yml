@@ -40,7 +40,8 @@ jobs:
       - name: Validate promoted routes
         run: npm run routes:promotions:check
 
-      - name: Wait for Netlify build
+      - name: Netlify deploy removed (migrated to GitHub Pages)
+        if: false
         run: sleep 120
 
       - name: Smoke test key pages

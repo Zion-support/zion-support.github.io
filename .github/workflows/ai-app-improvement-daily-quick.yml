@@ -51,5 +51,5 @@ jobs:
         env:
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false') && '1' || '' }}
           TRIGGER_DEPLOY: ${{ ((github.event_name == 'schedule') || (github.event.inputs.trigger_deploy == 'true')) && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: node automation/ai-app-improvement-daily-quick-pipeline.cjs

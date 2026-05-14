@@ -1,6 +1,6 @@
 # AI Layout Design Automation
 # Full pipeline: UX audit + layout audit + implementation. Optional commit & deploy.
-# Runs weekly Tuesday 10 UTC and Friday 11 UTC. Requires OPENROUTER_API_KEY, NETLIFY_BUILD_HOOK for deploy.
+# Requires: OPENROUTER_API_KEY (Netlify build hook removed → GitHub Pages)
 
 name: AI Layout Design Automation
 
@@ -19,7 +19,7 @@ on:
         default: false
         type: boolean
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit'
+        description: 'Trigger deploy after commit (GitHub Pages)'
         required: false
         default: false
         type: boolean
@@ -59,7 +59,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' && '1') || (github.event.inputs.auto_commit == 'true' && '1') || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy == 'true' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           SKIP_UX_AUDIT: ${{ github.event.inputs.skip_ux_audit == 'true' && '1' || '' }}
           SKIP_LAYOUT_AUDIT: ${{ github.event.inputs.skip_layout_audit == 'true' && '1' || '' }}
         run: |

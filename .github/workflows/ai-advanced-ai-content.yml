@@ -2,7 +2,7 @@
 # Focused automation for advanced AI solutions:
 # - Runs ai-content-maximum-pipeline with the advanced-AI orchestrator enabled.
 # - Auto-commits and pushes to main when content changes are generated.
-# - Triggers Netlify deploy via NETLIFY_BUILD_HOOK.
+# - Deploy handled by GitHub Pages (was Netlify build hook)
 
 name: AI Advanced-AI Content
 
@@ -41,7 +41,7 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openrouter/free
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           # Ensure advanced-AI orchestrator is enabled inside maximum pipeline
           SKIP_ADVANCED_AI: ""
           AUTO_COMMIT: "1"

@@ -135,15 +135,7 @@ automation/reports/release-risk-recovery-state.json
 automation/reports/release-risk-webhook-state.json
 automation/reports/live-nav-sync-suggestions-latest.json
 zion.app
-*.cjs
-*.js
-!eslint.config.mjs
-!postcss.config.mjs
-!next.config.mjs
-!tailwind.config.ts
-*.cjs
+# Google tokens (secrets - NEVER commit)
 google-exchange-tokens.js
+google-exchange-tokens.cjs
 google-auth-setup.js
-!eslint.config.mjs
-!postcss.config.mjs
-!next.config.mjs

@@ -67,7 +67,7 @@ jobs:
           SKIP_LIGHTHOUSE: '1'
           SKIP_PERF_REGRESSION: '1'
           SKIP_LIVE_A11Y: '1'
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: node automation/ai-app-improvement-evolution-pipeline.cjs
 
       - name: Refresh aggregate regression and observability digest

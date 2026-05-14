@@ -30,5 +30,5 @@ jobs:
           grep -Fq 'npm run lint:check' "$f"
           grep -Fq 'npm run type-check' "$f"
           grep -Fq 'npm run build' "$f"
-          grep -Fq 'NETLIFY_BUILD_HOOK' "$f"
+          grep -Fq 'GitHub Pages' "$f"
           echo "ok: $f"

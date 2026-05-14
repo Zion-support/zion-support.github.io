@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       trigger_deploy:
-        description: 'Trigger Netlify deploy'
+        description: 'Trigger deploy (GitHub Pages)'
         required: false
         default: false
         type: boolean
@@ -63,14 +63,7 @@ jobs:
       - name: Deployment readiness check
         if: github.event.inputs.trigger_deploy == 'true' && github.event.inputs.deploy_readiness != 'false'
         run: npm run deploy:readiness
-      - name: Trigger Netlify deploy
-        if: github.event.inputs.trigger_deploy == 'true'
-        env:
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+      - name: Trigger deploy (was Netlify, now skipped)
+        if: false
         run: |
-          if [ -n "$NETLIFY_BUILD_HOOK" ]; then
-            curl -sS -X POST -d {} "$NETLIFY_BUILD_HOOK"
-            echo "Netlify deploy triggered"
-          else
-            echo "::warning::NETLIFY_BUILD_HOOK not set, skipping deploy"
-          fi
+          echo "Deploy step skipped — Netlify retired, use GitHub Pages via deploy-on-push.yml"
