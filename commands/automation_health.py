@@ -112,7 +112,7 @@ def check_heartbeat():
             try:
                 # Parse ISO timestamp
                 ts_str = line.split(']')[0].strip('[')
-                dt = datetime.datetime.fromisoformat(ts_str.replace('Z','+00:00'))
+                dt = datetime.datetime.fromisoformat(ts_str.replace('Z','+00:00')).replace(tzinfo=None)
                 return dt, 'ok'
             except Exception:
                 continue
@@ -131,7 +131,7 @@ def scan_log_errors(hours=1):
                 if 'ERROR' in line or 'Exception' in line or 'Traceback' in line:
                     try:
                         ts_str = line.split(']')[0].strip('[')
-                        dt = datetime.datetime.fromisoformat(ts_str.replace('Z','+00:00'))
+                        dt = datetime.datetime.fromisoformat(ts_str.replace('Z','+00:00')).replace(tzinfo=None)
                         if dt >= cutoff:
                             errors.append(f"{logfile.name}: {line[:120]}")
                     except Exception:

@@ -158,6 +158,63 @@ def gmail_batch_modify(payload: dict, addLabelIds=None, removeLabelIds=None):
         print(f'Batch modify error: {e}', file=sys.stderr)
         return False
 
+
+# ── Calendar ────────────────────────────────────────────────────────────────
+
+def calendar_list_events(time_min=None, time_max=None, max_results=10, single_events=True, order_by='startTime'):
+    """List calendar events within a time range."""
+    params = []
+    if time_min:
+        params.append(f'timeMin={urllib.parse.quote(time_min)}')
+    if time_max:
+        params.append(f'timeMax={urllib.parse.quote(time_max)}')
+    params.append(f'maxResults={max_results}')
+    params.append(f'singleEvents={str(single_events).lower()}')
+    params.append(f'orderBy={order_by}')
+    query_string = '&'.join(params)
+    url = f'https://www.googleapis.com/calendar/v3/calendars/primary/events?{query_string}'
+    req = urllib.request.Request(url, headers=gog_headers())
+    try:
+        resp = json.loads(urllib.request.urlopen(req).read())
+        return resp.get('items', [])
+    except Exception as e:
+        print(f"[Calendar Error] {e}", file=sys.stderr)
+        return []
+
+def calendar_create_event(event_body):
+    """Create a new calendar event."""
+    url = 'https://www.googleapis.com/calendar/v3/calendars/primary/events'
+    data = json.dumps(event_body).encode()
+    headers = gog_headers()
+    headers['Content-Type'] = 'application/json'
+    req = urllib.request.Request(url, data=data, headers=headers, method='POST')
+    try:
+        resp = json.loads(urllib.request.urlopen(req).read())
+        return resp.get('id')
+    except Exception as e:
+        print(f"[Calendar Error] {e}", file=sys.stderr)
+        return None
+
+def calendar_get_freebusy(time_min, time_max, calendar_ids=None):
+    """Check free/busy status for calendars."""
+    if calendar_ids is None:
+        calendar_ids = ['primary']
+    body = {
+        'timeMin': time_min,
+        'timeMax': time_max,
+        'items': [{'id': cal_id} for cal_id in calendar_ids]
+    }
+    data = json.dumps(body).encode()
+    url = 'https://www.googleapis.com/calendar/v3/freeBusy'
+    req = urllib.request.Request(url, data=data, headers=gog_headers(), method='POST')
+    try:
+        resp = json.loads(urllib.request.urlopen(req).read())
+        return resp.get('calendars', {})
+    except Exception as e:
+        print(f"[Calendar Error] {e}", file=sys.stderr)
+        return {}
+
+
 # ── Drive ───────────────────────────────────────────────────────────────────
 
 def drive_list(query=None, folder_id=None, limit=20):
