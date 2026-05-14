@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generatedAt": "2026-05-14T05:36:49.857Z",
+    "generatedAt": "2026-05-14T10:06:45.924Z",
     "totalWorkflows": 391,
     "warningCount": 367,
     "criticalCount": 24,
     "totals": {
       "missingPermissions": 0,
-      "unpinnedActions": 85,
+      "unpinnedActions": 84,
       "missingJobTimeouts": 399
     }
   },
@@ -3541,12 +3541,12 @@
       "file": ".github/workflows/type-coverage.yml",
       "checks": {
         "hasPermissions": true,
-        "unpinnedActionsCount": 5,
+        "unpinnedActionsCount": 4,
         "hasAnyTimeout": false,
         "missingJobTimeouts": 1
       },
       "warnings": [
-        "unpinned action refs (5)",
+        "unpinned action refs (4)",
         "jobs missing timeout-minutes (1)"
       ]
     },
