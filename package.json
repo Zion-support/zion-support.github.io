@@ -681,7 +681,8 @@
     "promotions:stale:repromote": "node automation/ai-stale-promotion-repromoter.cjs",
     "launch:digest": "node automation/generate-ai-launch-digest.cjs",
     "promotions:confidence:report": "node automation/generate-promotion-confidence-report.cjs",
-    "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
+    "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
+    "weekly-blog": "node automation/weekly-blog-generator.js"
   },
   "dependencies": {
     "@react-pdf/renderer": "4.5.1",
