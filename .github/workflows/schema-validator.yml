@@ -1,3 +1,5 @@
+permissions:
+  contents: read
 name: "Autonomous Structured Data (Schema.org) Validator"
 
 on:

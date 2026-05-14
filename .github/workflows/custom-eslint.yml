@@ -1,3 +1,5 @@
+permissions:
+  contents: read
 name: "Autonomous Custom ESLint Rules"
 
 on:

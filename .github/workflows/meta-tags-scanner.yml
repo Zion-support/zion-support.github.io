@@ -1,3 +1,5 @@
+permissions:
+  contents: read
 name: "Autonomous Meta Tags Quality Scanner"
 
 on:
