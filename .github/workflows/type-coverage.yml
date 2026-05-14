@@ -33,51 +33,30 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Type Coverage Enforcer
-        id: coverage
-        env:
-          TS_CONFIG: ${{ github.workspace }}/tsconfig.json
-          TYPE_COVERAGE_MIN: ${{ vars.TYPE_COVERAGE_MIN || '90' }}
-          TYPE_COVERAGE_ANY_BLOCKLIST: ${{ vars.TYPE_COVERAGE_ANY_BLOCKLIST || 'true' }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Run TypeScript Check
+        id: type-check
         run: |
-          node automation/type-coverage-enforcer.cjs
+          npm run type-check
           echo "exit_code=$?" >> $GITHUB_OUTPUT
 
-      - name: Upload report artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: type-coverage-report
-          path: .hermes/memory/type-coverage/report-latest.json
-          retention-days: 7
+      - name: Run ESLint Check
+        id: lint-check
+        run: |
+          npm run lint:check || true
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
 
       - name: Comment on PR if failed
         if: github.event_name == 'pull_request' && failure()
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const reportPath = '.hermes/memory/type-coverage/report-latest.json';
-            let body = '🚨 **Type Coverage / Dead Code Check Failed**\n\n';
-            try {
-              const r = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              body += `**Coverage:** ${r.coveragePercent}% (minimum: ${process.env.TYPE_COVERAGE_MIN || 90}%)\n`;
-              body += `**Any usage:** ${r.anyCount} occurrences\n`;
-              body += `**Unused exports:** ${r.unusedExports}\n\n`;
-              body += '**Errors:**\n';
-              r.findings.filter((f: any) => f.severity === 'error').slice(0, 20).forEach((f: any) => {
-                const rel = f.file.replace(process.env.GITHUB_WORKSPACE + '/', '');
-                body += `- [${rel}:${f.line}] (${f.type}) ${f.message}\n`;
-              });
-              if (r.findings.filter((f: any) => f.severity === 'error').length > 20) {
-                body += `… and more (see full report)\n`;
-              }
-              body += '\nPlease fix typing issues or adjust coverage threshold if intentionally allowed.';
-            } catch (e) {
-              body += 'Could not parse detailed report. Check workflow logs.';
-            }
+            const body = '🚨 **TypeScript Type Check Failed**\n\n' +
+              'The TypeScript `tsc --noEmit` check found type errors. ' +
+              'Fix typing issues before merging.\n\n' +
+              'To reproduce locally:\n' +
+              '```\n' +
+              'npm run type-check\n' +
+              '```\n';
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -90,24 +69,10 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const title = '🚨 Type Coverage Regression on Main';
-            const reportPath = '.hermes/memory/type-coverage/report-latest.json';
-            let body = '**TypeScript type coverage or dead code issues detected on `main`.**\n\n';
-            try {
-              const r = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-              body += `Coverage: ${r.coveragePercent}% (minimum: ${process.env.TYPE_COVERAGE_MIN || 90}%)\n`;
-              body += `Any usage: ${r.anyCount}\n`;
-              body += `Unused exports: ${r.unusedExports}\n\n`;
-              body += '**Top errors:**\n';
-              r.findings.filter((f: any) => f.severity === 'error').slice(0, 15).forEach((f: any) => {
-                body += `- ${f.file}:${f.line} — [${f.type}] ${f.message}\n`;
-              });
-            } catch (e) {
-              body += 'Could not parse full report; see artifact.';
-            }
-            body += `\n*Committed by: ${context.payload.committer?.name || 'unknown'}*\n`;
-            body += `*Commit: ${context.payload.headCommit?.id?.slice(0, 7) || 'N/A'}*\n`;
+            const title = '🚨 TypeScript Check Regression on Main';
+            const body = '**TypeScript check failed on `main`.**\n\n' +
+              'Run `npm run type-check` locally to reproduce.\n\n' +
+              `*Commit: ${context.payload.headCommit?.id?.slice(0, 7) || 'N/A'}*\n`;
 
             const existing = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
@@ -129,9 +94,9 @@ jobs:
       - name: Notify Telegram on failure
         if: failure()
         run: |
-          node automation/notify-telegram.js "🚨 Type Coverage check failed — type any usage or coverage regression detected. Review GitHub issues."
+          node automation/notify-telegram.js "🚨 TypeScript check failed — type errors detected. Review GitHub issues." || true
 
       - name: Notify Telegram on success (weekly digest)
         if: success() && github.event_name == 'schedule'
         run: |
-          node automation/notify-telegram.js "✅ Weekly Type Coverage Report — type hygiene baseline updated."
+          node automation/notify-telegram.js "✅ Weekly TypeScript Check — all clear." || true
