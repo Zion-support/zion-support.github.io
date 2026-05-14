@@ -1,27 +1,4 @@
-// Service data for AI and IT solutions
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  pricing: {
-    basic: string;
-    pro: string;
-    enterprise: string;
-  }
-  contactInfo: {
-    website: string;
-    email: string;
-    phone: string;
-  }
-  icon: string;
-  href: string;
-  popular?: boolean;
-  category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation';
-}
-
-export const aiServices: Service[] = [
+//
   {
     id: 'ai-analytics',
     title: 'AI Analytics & BI',
@@ -44,16 +21,6 @@ export const aiServices: Service[] = [
       pro: '599',
       enterprise: '1299'
     },
-    contactInfo: {
-      website: '/data-analytics',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📊',
-    href: '/data-analytics',
-    popular: true,
-    category: 'ai'
-  },
   {
     id: 'ai-automation',
     title: 'AI Automation',
@@ -76,15 +43,6 @@ export const aiServices: Service[] = [
       pro: '399',
       enterprise: '899'
     },
-    contactInfo: {
-      website: '/ai-services/process-automation',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🤖',
-    href: '/ai-services/process-automation',
-    category: 'ai'
-  },
   {
     id: 'ai-customer-support',
     title: 'AI Customer Support',
@@ -107,16 +65,6 @@ export const aiServices: Service[] = [
       pro: '999',
       enterprise: '2499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-customer-support',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💬',
-    href: '/ai-services/ai-customer-support',
-    popular: true,
-    category: 'ai'
-  },
   {
     id: 'ai-content-generation',
     title: 'AI Content Generation',
@@ -139,15 +87,6 @@ export const aiServices: Service[] = [
       pro: '349',
       enterprise: '799'
     },
-    contactInfo: {
-      website: '/ai-services/ai-content-generation',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '✍️',
-    href: '/ai-services/ai-content-generation',
-    category: 'ai'
-  },
   {
     id: 'ai-sales-intelligence',
     title: 'AI Sales Intelligence',
@@ -170,16 +109,6 @@ export const aiServices: Service[] = [
       pro: '799',
       enterprise: '1999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-sales-intelligence',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📈',
-    href: '/ai-services/ai-sales-intelligence',
-    popular: true,
-    category: 'ai'
-  },
   {
     id: 'ai-fraud-detection',
     title: 'AI Fraud Detection',
@@ -202,15 +131,6 @@ export const aiServices: Service[] = [
       pro: '1299',
       enterprise: '3499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-fraud-detection',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔐',
-    href: '/ai-services/ai-fraud-detection',
-    category: 'ai'
-  },
   {
     id: 'ai-hr-assistant',
     title: 'AI HR Assistant',
@@ -233,15 +153,6 @@ export const aiServices: Service[] = [
       pro: '699',
       enterprise: '1599'
     },
-    contactInfo: {
-      website: '/ai-services/ai-hr-assistant',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '👥',
-    href: '/ai-services/ai-hr-assistant',
-    category: 'ai'
-  },
   {
     id: 'ai-supply-chain',
     title: 'AI Supply Chain Optimization',
@@ -264,15 +175,6 @@ export const aiServices: Service[] = [
       pro: '899',
       enterprise: '2199'
     },
-    contactInfo: {
-      website: '/ai-services/ai-supply-chain',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📦',
-    href: '/ai-services/ai-supply-chain',
-    category: 'ai'
-  },
   {
     id: 'ai-voice-assistant',
     title: 'AI Voice Assistant',
@@ -295,15 +197,6 @@ export const aiServices: Service[] = [
       pro: '799',
       enterprise: '1999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-voice-assistant',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🎙️',
-    href: '/ai-services/ai-voice-assistant',
-    category: 'ai'
-  },
   {
     id: 'ai-email-marketing',
     title: 'AI Email Marketing',
@@ -326,15 +219,6 @@ export const aiServices: Service[] = [
       pro: '449',
       enterprise: '999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-email-marketing',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📧',
-    href: '/ai-services/ai-email-marketing',
-    category: 'ai'
-  },
   {
     id: 'ai-video-analytics',
     title: 'AI Video Analytics',
@@ -357,15 +241,6 @@ export const aiServices: Service[] = [
       pro: '1199',
       enterprise: '2999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-video-analytics',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🎥',
-    href: '/ai-services/ai-video-analytics',
-    category: 'ai'
-  },
   {
     id: 'ai-compliance',
     title: 'AI Compliance & Regulatory',
@@ -388,15 +263,6 @@ export const aiServices: Service[] = [
       pro: '999',
       enterprise: '2499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-compliance',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🛡️',
-    href: '/ai-services/ai-compliance',
-    category: 'ai'
-  },
   {
     id: 'ai-computer-vision',
     title: 'AI Computer Vision',
@@ -785,54 +651,6 @@ export const aiServices: Service[] = [
     category: 'ai'
   },
   {
-    id: 'ai-voice-cloning',
-    title: 'AI Voice Cloning & Synthetic Media Creation',
-    description: 'Enterprise voice cloning for customer service, training, and content creation — realistic synthetic voice generation with consent management and quality controls.',
-    features: ['High-fidelity voice cloning from 30-second samples', 'Multi-language and accent-adaptive voice generation', 'Real-time voice conversion for live calls and broadcasts', 'Brand voice library management with usage governance', 'Consent management and deepfake detection safeguards'],
-    benefits: ['Produce audio content 100x faster with synthetic voices', 'Maintain brand voice consistency across all channels', 'Enable 24/7 voice-based customer interactions', 'Scale personalized communications to millions'],
-    pricing: { basic: '499', pro: '1199', enterprise: '2799' },
-    contactInfo: { website: '/ai-services/ai-voice-cloning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎙️',
-    href: '/ai-services/ai-voice-cloning',
-    category: 'ai'
-  },
-  {
-    id: 'ai-lead-generation',
-    title: 'AI Lead Generation & Pipeline Intelligence',
-    description: 'Intelligent lead generation platform — prospect identification, intent signal detection, personalized outreach automation, and pipeline conversion optimization.',
-    features: ['AI-powered prospect scoring and identification', 'Intent signal detection from web and social data', 'Personalized outreach generation at scale', 'Multi-channel engagement orchestration', 'Pipeline conversion prediction and bottleneck analysis'],
-    benefits: ['Increase qualified leads by 300%', 'Reduce cost per acquisition by 70%', 'Automate top-of-funnel outreach without losing personalization', 'Predict pipeline revenue with 85%+ accuracy'],
-    pricing: { basic: '399', pro: '899', enterprise: '2199' },
-    contactInfo: { website: '/ai-services/ai-lead-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎯',
-    href: '/ai-services/ai-lead-generation',
-    category: 'ai'
-  },
-  {
-    id: 'ai-presentation-maker',
-    title: 'AI Presentation & Report Generator',
-    description: 'Transform raw data into polished presentations and executive reports — AI-driven slide design, data visualization, narrative generation, and brand-aligned templates.',
-    features: ['AI-powered slide generation from documents and data', 'Automated chart and infographic creation', 'Executive narrative and talking point generation', 'Brand guideline enforcement across all slides', 'Export to PowerPoint, Google Slides, and PDF'],
-    benefits: ['Create presentations 90% faster with AI generation', 'Ensure consistent brand quality across all decks', 'Transform complex data into clear executive narratives', 'Never start a slide deck from scratch again'],
-    pricing: { basic: '99', pro: '249', enterprise: '599' },
-    contactInfo: { website: '/ai-services/ai-presentation-maker', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📊',
-    href: '/ai-services/ai-presentation-maker',
-    category: 'ai'
-  },
-  {
-    id: 'ai-chatbot-builder-pro',
-    title: 'AI Enterprise Chatbot Builder Platform',
-    description: 'Build and deploy enterprise-grade AI chatbots with multi-language support, knowledge base integration, human handoff, and advanced analytics dashboard.',
-    features: ['No-code conversational AI builder with drag-and-drop', 'Multi-language support with automatic translation', 'Knowledge base integration (SharePoint, Confluence, web)', 'Intelligent human handoff with context transfer', 'Conversation analytics and sentiment tracking'],
-    benefits: ['Deflect 60% of support tickets with intelligent chatbots', 'Provide 24/7 multilingual customer support', 'Reduce average resolution time by 70%', 'Capture valuable customer insights from conversations'],
-    pricing: { basic: '199', pro: '499', enterprise: '1199' },
-    contactInfo: { website: '/ai-services/ai-chatbot-builder-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🤖',
-    href: '/ai-services/ai-chatbot-builder-pro',
-    category: 'ai'
-  },
-  {
     id: 'ai-drug-discovery',
     title: 'AI Drug Discovery & Molecular Design',
     description: 'Accelerate pharmaceutical R&D with AI-powered molecular simulation, target identification, toxicity prediction, and clinical trial optimization.',
@@ -842,78 +660,6 @@ export const aiServices: Service[] = [
     contactInfo: { website: '/ai-services/ai-drug-discovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💊',
     href: '/ai-services/ai-drug-discovery',
-    category: 'ai'
-  },
-  {
-    id: 'ai-video-generation',
-    title: 'AI Video Generation & Synthetic Media',
-    description: 'Enterprise video creation platform with AI-driven scripting, voice synthesis, avatar generation, scene composition, and automated post-production workflows.',
-    features: ['Text-to-video generation with photorealistic avatars', 'AI voice synthesis with emotion control', 'Automated subtitle and caption generation in 50+ languages', 'Brand-compliant scene templates and assets', 'Batch video production for marketing at scale'],
-    benefits: ['Produce marketing videos 95% faster than studio production', 'Eliminate need for physical sets and actors', 'Multi-localized versions from single source content', 'Consistent brand presence across all video channels'],
-    pricing: { basic: '299', pro: '799', enterprise: '1999' },
-    contactInfo: { website: '/ai-services/ai-video-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎬',
-    href: '/ai-services/ai-video-generation',
-    category: 'ai'
-  },
-  {
-    id: 'ai-voice-assistant',
-    title: 'AI Voice Assistant & Conversational IVR',
-    description: 'Deploy intelligent voice assistants for customer service, internal IT support, and appointment scheduling with natural language understanding and seamless human escalation.',
-    features: ['Natural language voice recognition across 100+ languages', 'Context-aware multi-turn conversation management', 'Sentiment analysis for real-time response adaptation', 'CRM and calendar integration for action completion', 'Analytics dashboard with call scoring and insights'],
-    benefits: ['Handle 70% of calls without human intervention', 'Reduce average handle time by 50%', '24/7 availability for global customer bases', 'Seamless escalation with full context transfer'],
-    pricing: { basic: '399', pro: '899', enterprise: '2199' },
-    contactInfo: { website: '/ai-services/ai-voice-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎙️',
-    href: '/ai-services/ai-voice-assistant',
-    category: 'ai'
-  },
-  {
-    id: 'ai-supply-chain',
-    title: 'AI Supply Chain Intelligence & Optimization',
-    description: 'End-to-end supply chain visibility and optimization with demand forecasting, supplier risk scoring, route planning, and inventory optimization powered by ML.',
-    features: ['Real-time supply chain visibility with digital twin', 'ML demand forecasting at SKU and location level', 'Supplier risk monitoring with alternative sourcing', 'Multi-echelon inventory optimization', 'Carbon footprint tracking and sustainability reporting'],
-    benefits: ['Reduce supply chain costs by 25-40%', 'Improve forecast accuracy by 35%', 'Prevent disruptions with early risk signals', 'Optimize inventory to reduce carrying costs by 30%'],
-    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
-    contactInfo: { website: '/ai-services/ai-supply-chain', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📦',
-    href: '/ai-services/ai-supply-chain',
-    category: 'ai'
-  },
-  {
-    id: 'ai-email-marketing',
-    title: 'AI Email Marketing & Campaign Intelligence',
-    description: 'AI-driven email marketing with intelligent subject line generation, send time optimization, content personalization, and automated A/B testing at enterprise scale.',
-    features: ['AI subject line and content generation', 'Predictive send time optimization per recipient', 'Dynamic content personalization at scale', 'Automated A/B/n testing with multi-armed bandits', 'Deliverability monitoring and inbox placement scoring'],
-    benefits: ['Increase open rates by 40% with AI-optimized subjects', 'Boost click-through rates by 60% with personalized content', 'Reduce campaign setup time by 80%', 'Maintain high deliverability with proactive monitoring'],
-    pricing: { basic: '149', pro: '349', enterprise: '899' },
-    contactInfo: { website: '/ai-services/ai-email-marketing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📧',
-    href: '/ai-services/ai-email-marketing',
-    category: 'ai'
-  },
-  {
-    id: 'ai-video-analytics',
-    title: 'AI Video Analytics & Visual Intelligence',
-    description: 'Real-time video analytics for retail, security, manufacturing, and public spaces — crowd behavior analysis, anomaly detection, and operational intelligence from existing CCTV.',
-    features: ['Existing CCTV integration with AI overlay', 'Crowd density and flow pattern analysis', 'Anomaly detection for security incidents', 'Customer journey and dwell time analytics', 'Real-time alerts with automated response triggers'],
-    benefits: ['Leverage existing camera infrastructure with AI upgrade', 'Detect security incidents 3x faster than human monitoring', 'Optimize store layouts with customer flow insights', 'Reduce retail shrinkage by 40% with proactive alerts'],
-    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
-    contactInfo: { website: '/ai-services/ai-video-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📹',
-    href: '/ai-services/ai-video-analytics',
-    category: 'ai'
-  },
-  {
-    id: 'ai-compliance',
-    title: 'AI Compliance Monitoring & Automated Auditing',
-    description: 'Continuous compliance monitoring across SOC 2, ISO 27001, HIPAA, GDPR, and PCI-DSS with evidence collection, gap analysis, and automated audit-ready report generation.',
-    features: ['Continuous control monitoring across 5+ frameworks', 'Automated evidence collection from systems and logs', 'Real-time compliance dashboards with trend analysis', 'Gap analysis with prioritized remediation workflows', 'Audit-ready report generation with full traceability'],
-    benefits: ['Reduce audit preparation time by 75%', 'Eliminate compliance blind spots with continuous monitoring', 'Pass first-time audits with confidence', 'Scale compliance across growing multi-entity organizations'],
-    pricing: { basic: '449', pro: '999', enterprise: '2499' },
-    contactInfo: { website: '/ai-services/ai-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🛡️',
-    href: '/ai-services/ai-compliance',
     category: 'ai'
   },
   {
@@ -1372,7 +1118,6 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-code-migration-modernization',
     category: 'ai'
   },
-
   {
     id: 'ai-legal-doc-review',
     title: 'AI Legal Document Review',
@@ -1395,46 +1140,6 @@ export const aiServices: Service[] = [
       pro: '899',
       enterprise: '2499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-legal-doc-review',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '⚖️',
-    href: '/ai-services/ai-legal-doc-review',
-    category: 'ai'
-  },
-  {
-    id: 'ai-medical-imaging',
-    title: 'AI Medical Imaging Assistant',
-    description: 'AI-powered diagnostic support for radiology and pathology: detect anomalies in X-rays, MRIs, CT scans, and histopathology slides with high accuracy.',
-    features: [
-      'Multi-modality image analysis (X-ray, MRI, CT, ultrasound)',
-      'Tumor & lesion detection & segmentation',
-      'Bone fracture identification',
-      'Priority triage (urgent cases flagged)',
-      'DICOM & HL7 integration'
-    ],
-    benefits: [
-      'Reduce radiologist reading time by 40%',
-      'Increase early detection rates',
-      'Lower false-negative risk',
-      'Scale imaging capacity without hiring'
-    ],
-    pricing: {
-      basic: '799',
-      pro: '1799',
-      enterprise: '4999'
-    },
-    contactInfo: {
-      website: '/ai-services/ai-medical-imaging',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🏥',
-    href: '/ai-services/ai-medical-imaging',
-    category: 'ai'
-  },
   {
     id: 'ai-supply-chain-visibility',
     title: 'AI Supply Chain Visibility Platform',
@@ -1457,15 +1162,6 @@ export const aiServices: Service[] = [
       pro: '1099',
       enterprise: '2799'
     },
-    contactInfo: {
-      website: '/ai-services/ai-supply-chain-visibility',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚢',
-    href: '/ai-services/ai-supply-chain-visibility',
-    category: 'ai'
-  },
   {
     id: 'ai-code-audit-security',
     title: 'AI Code Audit & Security Scanner',
@@ -1488,15 +1184,6 @@ export const aiServices: Service[] = [
       pro: '499',
       enterprise: '1499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-code-audit-security',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔒',
-    href: '/ai-services/ai-code-audit-security',
-    category: 'ai'
-  },
   {
     id: 'ai-bdr-sdr',
     title: 'AI BDR/SDR Agent',
@@ -1519,46 +1206,6 @@ export const aiServices: Service[] = [
       pro: '1299',
       enterprise: '3499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-bdr-sdr-agent',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📧',
-    href: '/ai-services/ai-bdr-sdr-agent',
-    category: 'ai'
-  },
-  {
-    id: 'ai-financial-forecasting',
-    title: 'AI Financial Forecasting & Budgeting',
-    description: 'AI-driven cash flow forecasting, revenue modeling, expense categorization, and scenario planning for CFOs and finance teams.',
-    features: [
-      'Cash flow prediction (30/60/90-day)',
-      'Revenue run-rate & ARR modeling',
-      'Expense categorization & anomaly detection',
-      'Scenario planning (best/worst case)',
-      'Integration with QuickBooks, Xero, NetSuite'
-    ],
-    benefits: [
-      '95% forecast accuracy',
-      'Reduce budgeting cycle time by 80%',
-      'Early warning on cash shortfalls',
-      'Data-driven strategic planning'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '999',
-      enterprise: '2999'
-    },
-    contactInfo: {
-      website: '/ai-services/ai-financial-forecasting',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📈',
-    href: '/ai-services/ai-financial-forecasting',
-    category: 'ai'
-  },
   {
     id: 'ai-knowledge-base-agent',
     title: 'AI Knowledge Base & Knowledge Graph Agent',
@@ -1581,15 +1228,6 @@ export const aiServices: Service[] = [
       pro: '699',
       enterprise: '1999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-knowledge-base-agent',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📚',
-    href: '/ai-services/ai-knowledge-base-agent',
-    category: 'ai'
-  },
   {
     id: 'ai-visual-inspection',
     title: 'AI Visual Inspection & Quality Control',
@@ -1612,15 +1250,6 @@ export const aiServices: Service[] = [
       pro: '1399',
       enterprise: '3999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-visual-inspection',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '👁️',
-    href: '/ai-services/ai-visual-inspection',
-    category: 'ai'
-  },
   {
     id: 'ai-chatbot-omnichannel',
     title: 'AI Omnichannel Chatbot',
@@ -1643,15 +1272,6 @@ export const aiServices: Service[] = [
       pro: '899',
       enterprise: '2499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-omnichannel-chatbot',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💬',
-    href: '/ai-services/ai-omnichannel-chatbot',
-    category: 'ai'
-  },
   {
     id: 'ai-call-center-voice-analytics',
     title: 'AI Call Center Voice Analytics',
@@ -1674,15 +1294,6 @@ export const aiServices: Service[] = [
       pro: '699',
       enterprise: '1899'
     },
-    contactInfo: {
-      website: '/ai-services/ai-call-center-voice-analytics',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📞',
-    href: '/ai-services/ai-call-center-voice-analytics',
-    category: 'ai'
-  },
   {
     id: 'devops-gen-ai-ci-cd',
     title: 'Generative AI for DevOps & CI/CD',
@@ -1705,15 +1316,6 @@ export const aiServices: Service[] = [
       pro: '1099',
       enterprise: '3299'
     },
-    contactInfo: {
-      website: '/it-services/devops-gen-ai-ci-cd',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/devops-gen-ai-ci-cd',
-    category: 'it'
-  },
   {
     id: 'cloud-cost-ai-optimizer',
     title: 'AI Cloud Cost Optimizer',
@@ -1736,15 +1338,6 @@ export const aiServices: Service[] = [
       pro: '699',
       enterprise: '1999'
     },
-    contactInfo: {
-      website: '/it-services/cloud-cost-ai-optimizer',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💸',
-    href: '/it-services/cloud-cost-ai-optimizer',
-    category: 'it'
-  },
   {
     id: 'data-warehouse-modernization',
     title: 'AI Data Warehouse Modernization',
@@ -1767,15 +1360,6 @@ export const aiServices: Service[] = [
       pro: '3499',
       enterprise: '9999'
     },
-    contactInfo: {
-      website: '/it-services/data-warehouse-modernization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/data-warehouse-modernization',
-    category: 'it'
-  },
   {
     id: 'cyber-threat-intelligence',
     title: 'AI Cyber Threat Intelligence Platform',
@@ -1798,15 +1382,6 @@ export const aiServices: Service[] = [
       pro: '1399',
       enterprise: '3999'
     },
-    contactInfo: {
-      website: '/it-services/cyber-threat-intelligence',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🛡️',
-    href: '/it-services/cyber-threat-intelligence',
-    category: 'it'
-  },
   {
     id: 'low-code-platform-customization',
     title: 'Low-Code Platform Customization & Integration',
@@ -1829,15 +1404,6 @@ export const aiServices: Service[] = [
       pro: '899',
       enterprise: '2499'
     },
-    contactInfo: {
-      website: '/it-services/low-code-platform-customization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🧩',
-    href: '/it-services/low-code-platform-customization',
-    category: 'it'
-  },
   {
     id: 'api-management-gateway',
     title: 'API Management & Developer Gateway',
@@ -1860,19 +1426,6 @@ export const aiServices: Service[] = [
       pro: '1199',
       enterprise: '3599'
     },
-    contactInfo: {
-      website: '/it-services/api-management-gateway',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔌',
-    href: '/it-services/api-management-gateway',
-    category: 'it'
-  },
-
-// New AI services batch to insert into servicesData.ts at aiServices closing (after line 1871)
-// This content will be inserted BEFORE the final "];"
-
   {
     id: 'ai-video-generator',
     title: 'AI Video Generator & Editor',
@@ -1895,15 +1448,6 @@ export const aiServices: Service[] = [
       pro: '999',
       enterprise: '2999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-video-generator',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🎬',
-    href: '/ai-services/ai-video-generator',
-    category: 'ai'
-  },
   {
     id: 'ai-seo-optimizer',
     title: 'AI SEO Content Optimizer',
@@ -1926,15 +1470,6 @@ export const aiServices: Service[] = [
       pro: '499',
       enterprise: '1299'
     },
-    contactInfo: {
-      website: '/ai-services/ai-seo-optimizer',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔍',
-    href: '/ai-services/ai-seo-optimizer',
-    category: 'ai'
-  },
   {
     id: 'ai-contract-manager',
     title: 'AI Contract Manager',
@@ -1957,15 +1492,6 @@ export const aiServices: Service[] = [
       pro: '1399',
       enterprise: '3999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-contract-manager',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📝',
-    href: '/ai-services/ai-contract-manager',
-    category: 'ai'
-  },
   {
     id: 'ai-personalized-learning',
     title: 'AI Personalized Learning Platform',
@@ -1988,15 +1514,6 @@ export const aiServices: Service[] = [
       pro: '799',
       enterprise: '2499'
     },
-    contactInfo: {
-      website: '/ai-services/ai-personalized-learning',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🎓',
-    href: '/ai-services/ai-personalized-learning',
-    category: 'ai'
-  },
   {
     id: 'ai-voice-agent',
     title: 'AI Voice Agent (Phone)',
@@ -2019,15 +1536,6 @@ export const aiServices: Service[] = [
       pro: '1499',
       enterprise: '4999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-voice-agent',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📱',
-    href: '/ai-services/ai-voice-agent',
-    category: 'ai'
-  },
   {
     id: 'ai-devops-chatbot',
     title: 'AI DevOps Chatbot',
@@ -2050,15 +1558,6 @@ export const aiServices: Service[] = [
       pro: '699',
       enterprise: '1999'
     },
-    contactInfo: {
-      website: '/ai-services/ai-devops-chatbot',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🤖',
-    href: '/ai-services/ai-devops-chatbot',
-    category: 'ai'
-  },
   {
     id: 'ai-revenue-ops',
     title: 'AI Revenue Operations (RevOps)',
@@ -2081,15 +1580,6 @@ export const aiServices: Service[] = [
       pro: '1699',
       enterprise: '4599'
     },
-    contactInfo: {
-      website: '/ai-services/ai-revenue-ops',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📈',
-    href: '/ai-services/ai-revenue-ops',
-    category: 'ai'
-  },
   {
     id: 'ai-supply-demand-planner',
     title: 'AI Supply & Demand Planner',
@@ -2112,46 +1602,6 @@ export const aiServices: Service[] = [
       pro: '1299',
       enterprise: '3599'
     },
-    contactInfo: {
-      website: '/ai-services/ai-supply-demand-planner',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📦',
-    href: '/ai-services/ai-supply-demand-planner',
-    category: 'ai'
-  },
-  {
-    id: 'ai-fraud-detection',
-    title: 'AI Fraud Detection & Prevention',
-    description: 'Real-time transaction monitoring with AI anomaly detection for fintech, e-commerce, and banking: stop fraud before it happens.',
-    features: [
-      'Real-time transaction scoring',
-      'Behavioral biometrics & pattern recognition',
-      'Chargeback prediction & prevention',
-      ' AML pattern detection',
-      'Custom rule engine + ML model ensemble'
-    ],
-    benefits: [
-      'Reduce false positives by 70%',
-      'Catch 95%+ of fraudulent transactions',
-      'Lower chargeback fees',
-      'Compliance with PCI-DSS, GDPR'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '1199',
-      enterprise: '3299'
-    },
-    contactInfo: {
-      website: '/ai-services/ai-fraud-detection',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection',
-    category: 'ai'
-  },
   {
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
@@ -2174,15 +1624,6 @@ export const aiServices: Service[] = [
       pro: '599',
       enterprise: '1699'
     },
-    contactInfo: {
-      website: '/ai-services/ai-code-review-assistant',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '👨\u200d💻',
-    href: '/ai-services/ai-code-review-assistant',
-    category: 'ai'
-  },
   {
     id: 'ai-marketing-copy-generator',
     title: 'AI Marketing Copy Generator',
@@ -2205,15 +1646,6 @@ export const aiServices: Service[] = [
       pro: '499',
       enterprise: '1399'
     },
-    contactInfo: {
-      website: '/ai-services/ai-marketing-copy-generator',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '✍️',
-    href: '/ai-services/ai-marketing-copy-generator',
-    category: 'ai'
-  },
   {
     id: 'ai-it-helpdesk',
     title: 'AI IT Helpdesk & Support',
@@ -2236,17 +1668,7 @@ export const aiServices: Service[] = [
       pro: '699',
       enterprise: '1899'
     },
-    contactInfo: {
-      website: '/it-services/ai-it-helpdesk',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🖥️',
-    href: '/it-services/ai-it-helpdesk',
-    category: 'it'
-   },
-
-   {
+  {
      id: 'ai-customer-support-agent',
      title: 'AI Customer Support Agent',
      description: "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
@@ -2269,7 +1691,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-customer-support-agent',
      category: 'ai'
    },
-   {
+  {
      id: 'autonomous-code-review-agent',
      title: 'Autonomous Code Review Agent',
      description: 'AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.',
@@ -2292,7 +1714,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/autonomous-code-review-agent',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-driven-customer-segmentation',
      title: 'AI-Driven Customer Segmentation & Persona Engine',
      description: 'Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.',
@@ -2315,7 +1737,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-driven-customer-segmentation',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-ui-generator',
      title: 'AI-Powered UI Generator (Text-to-UI)',
      description: 'Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.',
@@ -2338,7 +1760,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-ui-generator',
      category: 'ai'
    },
-   {
+  {
      id: 'predictive-churn-risk',
      title: 'Predictive Churn Risk Scoring',
      description: 'Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.',
@@ -2361,7 +1783,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/predictive-churn-risk',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-seo-optimizer',
      title: 'AI-Powered SEO Content Optimizer',
      description: 'Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.',
@@ -2384,7 +1806,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-seo-optimizer',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-for-code-migration',
      title: 'AI-Assisted Code Migration & Refactoring',
      description: 'Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.',
@@ -2407,7 +1829,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-for-code-migration',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-test-generation',
      title: 'AI-Powered Test Suite Generator',
      description: 'Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.',
@@ -2430,7 +1852,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-test-generation',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-log-anomaly-detection',
      title: 'AI-Powered Log Anomaly Detection',
      description: 'Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.',
@@ -2453,7 +1875,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-log-anomaly-detection',
      category: 'ai'
    },
-   {
+  {
      id: 'generative-data-synthesis',
      title: 'Generative Data Synthesis for Model Training',
      description: 'Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.',
@@ -2476,7 +1898,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/generative-data-synthesis',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-sustainable-ops',
      title: 'AI for Sustainable Operations (Green AI)',
      description: 'Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.',
@@ -2499,7 +1921,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-sustainable-ops',
      category: 'ai'
    },
-   {
+  {
      id: 'legal-doc-review-ai',
      title: 'AI Legal Document Review & Risk Analysis',
      description: 'Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.',
@@ -2522,7 +1944,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/legal-doc-review-ai',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-passwordless-auth',
      title: 'AI-Powered Passwordless Authentication',
      description: 'Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.',
@@ -2545,7 +1967,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-passwordless-auth',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-tech-debt-quantifier',
      title: 'AI-Powered Tech Debt Quantifier',
      description: 'Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.',
@@ -2568,7 +1990,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-tech-debt-quantifier',
      category: 'ai'
    },
-   {
+  {
      id: 'generative-ux-research-synthesis',
      title: 'Generative UX Research Synthesis',
      description: 'Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.',
@@ -2591,7 +2013,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/generative-ux-research-synthesis',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-incident-postmortem',
      title: 'AI-Powered Incident Postmortem Generator',
      description: 'Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.',
@@ -2614,7 +2036,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-incident-postmortem',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-driven-api-design-assistant',
      title: 'AI-Driven API Design Assistant',
      description: 'Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.',
@@ -2637,7 +2059,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-driven-api-design-assistant',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-pr-drafting',
      title: 'AI-Powered PR Drafting & Description',
      description: 'Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.',
@@ -2660,7 +2082,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-pr-drafting',
      category: 'ai'
    },
-   {
+  {
      id: 'automated-data-labeling',
      title: 'Automated Data Labeling for Computer Vision & NLP',
      description: 'Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.',
@@ -2683,7 +2105,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/automated-data-labeling',
      category: 'ai'
    },
-   {
+  {
      id: 'meeting-ai-assistant',
      title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
      description: "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
@@ -2706,7 +2128,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/meeting-ai-assistant',
      category: 'ai'
    },
-   {
+  {
      id: 'ai-powered-question-answering',
      title: 'Enterprise AI Question Answering (Internal Knowledge)',
      description: 'Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.',
@@ -2729,489 +2151,7 @@ export const aiServices: Service[] = [
      href: '/ai-services/ai-powered-question-answering',
      category: 'ai'
    },
-   {
-     id: 'ai-customer-support-agent',
-     title: 'AI Customer Support Agent',
-     description: "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
-     features: [
-       'Multilingual support (50+ languages)',
-       'Integrations: Zendesk, Intercom, Salesforce',
-       'Document retrieval from knowledge base (RAG)',
-       'Sentiment-aware responses & escalation',
-       'Analytics: resolution rate, CSAT impact'
-     ],
-     benefits: [
-       'Cut support costs by 70%',
-       'Instant responses (sub-second)',
-       '80%+ ticket deflection from humans',
-       'Always-on coverage across timezones'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2499' },
-     contactInfo: { website: '/ai-services/ai-customer-support-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🤖',
-     href: '/ai-services/ai-customer-support-agent',
-     category: 'ai'
-   },
-   {
-     id: 'autonomous-code-review-agent',
-     title: 'Autonomous Code Review Agent',
-     description: 'AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.',
-     features: [
-       'Static analysis + LLM-based reasoning',
-       'Security vulnerability scoring (CWE, OWASP)',
-       'Auto-suggested patches via diffs',
-       'Custom rule engine per team standards',
-       'CI/CD integration (GitHub Actions, GitLab CI)'
-     ],
-     benefits: [
-       'Catch 90%+ of bugs before merge',
-       'Reduce code review time by 60%',
-       'Enforce consistent standards automatically',
-       'Onboard new developers faster'
-     ],
-     pricing: { basic: '0', pro: '199', enterprise: '899' },
-     contactInfo: { website: '/ai-services/autonomous-code-review-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '👩‍💻',
-     href: '/ai-services/autonomous-code-review-agent',
-     category: 'ai'
-   },
-   {
-     id: 'ai-driven-customer-segmentation',
-     title: 'AI-Driven Customer Segmentation & Persona Engine',
-     description: 'Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.',
-     features: [
-       'K-means + hierarchical clustering models',
-       'Dynamic segment recalculation (daily/weekly)',
-       'Persona profiles with predictive scores',
-       'Export to CRM/CDP (Segment, HubSpot)',
-       'Campaign performance tracking per segment'
-     ],
-     benefits: [
-       'Increase conversion rates by 35%',
-       'Reduce churn with targeted retention offers',
-       'Discover hidden high-value niches',
-       'Automate personalized messaging'
-     ],
-     pricing: { basic: '399', pro: '999', enterprise: '3299' },
-     contactInfo: { website: '/ai-services/ai-driven-customer-segmentation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🎯',
-     href: '/ai-services/ai-driven-customer-segmentation',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-ui-generator',
-     title: 'AI-Powered UI Generator (Text-to-UI)',
-     description: 'Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.',
-     features: [
-       'Natural language to JSX/TSX component generation',
-       'Tailwind CSS class application',
-       'Responsive breakpoint handling',
-       'A11y attributes (aria-* roles & labels)',
-       'Export to Figma/Storybook format'
-     ],
-     benefits: [
-       'Ship UI 10x faster',
-       'Maintain design consistency automatically',
-       'Reduce frontend dev iteration cycles',
-       'Prototypes in minutes, not days'
-     ],
-     pricing: { basic: '0', pro: '149', enterprise: '699' },
-     contactInfo: { website: '/ai-services/ai-powered-ui-generator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🎨',
-     href: '/ai-services/ai-powered-ui-generator',
-     category: 'ai'
-   },
-   {
-     id: 'predictive-churn-risk',
-     title: 'Predictive Churn Risk Scoring',
-     description: 'Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.',
-     features: [
-       'Feature engineering from usage & billing data',
-       'Gradient boosting & survival analysis models',
-       'Risk score per account (1-100)',
-       'Automated retention offer triggers',
-       'Dashboard with cohort analysis'
-     ],
-     benefits: [
-       'Reduce monthly churn by 25%',
-       'Target retention spend efficiently',
-       'Identify at-risk accounts before they leave',
-       'Improve LTV prediction accuracy'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2799' },
-     contactInfo: { website: '/ai-services/predictive-churn-risk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📉',
-     href: '/ai-services/predictive-churn-risk',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-seo-optimizer',
-     title: 'AI-Powered SEO Content Optimizer',
-     description: 'Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.',
-     features: [
-       'On-page SEO scoring (0-100)',
-       'Competitor gap analysis',
-       'Automated meta title/description generation',
-       'Readability improvement suggestions',
-       'Schema.org structured data suggestions'
-     ],
-     benefits: [
-       'Increase organic traffic by 40% within 3 months',
-       'Outrank competitors on target keywords',
-       'Ensure Google E-E-A-T compliance',
-       'Automate technical SEO fixes'
-     ],
-     pricing: { basic: '99', pro: '299', enterprise: '999' },
-     contactInfo: { website: '/ai-services/ai-powered-seo-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔍',
-     href: '/ai-services/ai-powered-seo-optimizer',
-     category: 'ai'
-   },
-   {
-     id: 'ai-for-code-migration',
-     title: 'AI-Assisted Code Migration & Refactoring',
-     description: 'Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.',
-     features: [
-       'Language-to-language AST-based translation',
-       'Preserve business logic & edge cases',
-       'Interactive migration playground (preview changes)',
-       'Test generation for migrated functions',
-       'Gradual cutover strategy planning'
-     ],
-     benefits: [
-       'Reduce migration project timeline by 75%',
-       'Minimize regression risk via automated tests',
-       'Lower cost vs. manual rewrite',
-       'De-risk technical modernization'
-     ],
-     pricing: { basic: '2499', pro: '5999', enterprise: '19999' },
-     contactInfo: { website: '/ai-services/ai-for-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔀',
-     href: '/ai-services/ai-for-code-migration',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-test-generation',
-     title: 'AI-Powered Test Suite Generator',
-     description: 'Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.',
-     features: [
-       'White-box test generation from source code',
-       'Black-box tests from BDD/Gherkin specs',
-       'E2E test generation via Puppeteer/Playwright',
-       'Coverage gap analysis & prioritizing',
-       'Test flake detection & stabilization'
-     ],
-     benefits: [
-       'Achieve 80%+ code coverage automatically',
-       'Ship features faster without manual test writing',
-       'Catch regressions before production',
-       'Reduce QA manual testing effort by 90%'
-     ],
-     pricing: { basic: '0', pro: '199', enterprise: '799' },
-     contactInfo: { website: '/ai-services/ai-powered-test-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🧪',
-     href: '/ai-services/ai-powered-test-generation',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-log-anomaly-detection',
-     title: 'AI-Powered Log Anomaly Detection',
-     description: 'Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.',
-     features: [
-       'Unsupervised clustering of log events',
-       'Real-time anomaly scoring per time-series',
-       'Seamless integration with ELK/Prometheus',
-       'Alert suppression & correlation',
-       'Root-cause hinting via pattern matching'
-     ],
-     benefits: [
-       'Detect incidents 30+ minutes before monitoring',
-       'Reduce false positive alerts by 80%',
-       'Shorten MTTR with actionable insights',
-       'Discover silent failures & edge cases'
-     ],
-     pricing: { basic: '299', pro: '699', enterprise: '1899' },
-     contactInfo: { website: '/ai-services/ai-powered-log-anomaly-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📈',
-     href: '/ai-services/ai-powered-log-anomaly-detection',
-     category: 'ai'
-   },
-   {
-     id: 'generative-data-synthesis',
-     title: 'Generative Data Synthesis for Model Training',
-     description: 'Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.',
-     features: [
-       'Tabular data synthesis (CTGAN, TVAE)',
-       'Image synthesis with diffusion models',
-       'Privacy-preserving synthetic data (DP-SGD)',
-       'Data augmentation pipelines',
-       'Quality metrics (KSTest, coverage)'
-     ],
-     benefits: [
-       'Bootstrap ML projects with limited data',
-       'Balance underrepresented classes',
-       'Protect PII while retaining data utility',
-       'Simulate extreme scenarios for stress testing'
-     ],
-     pricing: { basic: '499', pro: '1199', enterprise: '3599' },
-     contactInfo: { website: '/ai-services/generative-data-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🌀',
-     href: '/ai-services/generative-data-synthesis',
-     category: 'ai'
-   },
-   {
-     id: 'ai-sustainable-ops',
-     title: 'AI for Sustainable Operations (Green AI)',
-     description: 'Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.',
-     features: [
-       'Carbon intensity forecasting per region',
-       'Job scheduling to low-carbon time windows',
-       'Resource right-sizing recommendations',
-       'Sustainability KPI dashboards',
-       'Compliance with ESG reporting standards'
-     ],
-     benefits: [
-       'Reduce cloud carbon emissions by 40%',
-       'Lower cost via energy optimization',
-       'Meet corporate sustainability goals',
-       'Public sustainability reporting for PR'
-     ],
-     pricing: { basic: '199', pro: '499', enterprise: '1499' },
-     contactInfo: { website: '/ai-services/ai-sustainable-ops', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🌱',
-     href: '/ai-services/ai-sustainable-ops',
-     category: 'ai'
-   },
-   {
-     id: 'legal-doc-review-ai',
-     title: 'AI Legal Document Review & Risk Analysis',
-     description: 'Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.',
-     features: [
-       'Clause extraction & classification (liability, IP, termination)',
-       'Risk scoring per clause (high/medium/low)',
-       'Deviation detection from standard templates',
-       'Redline suggestions with rationale',
-       'Multi-jurisdiction compliance checks'
-     ],
-     benefits: [
-       'Review NDAs in minutes instead of hours',
-       'Reduce external legal spend by 60%',
-       'Never miss risky clauses again',
-       'Scale legal review across hundreds of contracts'
-     ],
-     pricing: { basic: '499', pro: '1299', enterprise: '4999' },
-     contactInfo: { website: '/ai-services/legal-doc-review-ai', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '⚖️',
-     href: '/ai-services/legal-doc-review-ai',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-passwordless-auth',
-     title: 'AI-Powered Passwordless Authentication',
-     description: 'Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.',
-     features: [
-       'Behavioral biometrics (keystroke dynamics, mouse movements)',
-       'Device & location risk scoring',
-       'Step-up authentication for anomalies',
-       'FIDO2/WebAuthn integration',
-       'Compliance: NIST 800-63B, PSD2 SCA'
-     ],
-     benefits: [
-       'Eliminate phishing & password fatigue',
-       'Reduce authentication friction for users',
-       'Meet modern security standards without complexity',
-       'Lower support cost for password resets'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2499' },
-     contactInfo: { website: '/ai-services/ai-powered-passwordless-auth', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔑',
-     href: '/ai-services/ai-powered-passwordless-auth',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-tech-debt-quantifier',
-     title: 'AI-Powered Tech Debt Quantifier',
-     description: 'Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.',
-     features: [
-       'Static code analysis + complexity heatmaps',
-       'Dependency vulnerability & EOL detection',
-       'Duplicate code detection with CloneDR',
-       'Architecture rule validation (dependency cycles)',
-       'Remediation effort estimation (person-days)'
-     ],
-     benefits: [
-       'Make tech debt visible to leadership',
-       'Prioritize refactoring by cost vs. risk',
-       'Justify modernization budgets with data',
-       'Track debt reduction over time'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2399' },
-     contactInfo: { website: '/ai-services/ai-powered-tech-debt-quantifier', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🗑️',
-     href: '/ai-services/ai-powered-tech-debt-quantifier',
-     category: 'ai'
-   },
-   {
-     id: 'generative-ux-research-synthesis',
-     title: 'Generative UX Research Synthesis',
-     description: 'Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.',
-     features: [
-       'Transcript summarization & theme extraction',
-       'Sentiment analysis across user segments',
-       'Automatic persona generation with quotes',
-       'Journey map creation from session data',
-       'Priority ranking of pain points'
-     ],
-     benefits: [
-       'Analyze 100+ hours of user research in minutes',
-       'Uncover hidden pain points automatically',
-       'Create deliverables without manual synthesis',
-       'Make user-centric decisions faster'
-     ],
-     pricing: { basic: '199', pro: '599', enterprise: '1899' },
-     contactInfo: { website: '/ai-services/generative-ux-research-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '👥',
-     href: '/ai-services/generative-ux-research-synthesis',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-incident-postmortem',
-     title: 'AI-Powered Incident Postmortem Generator',
-     description: 'Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.',
-     features: [
-       'Timeline assembly from logs/metrics/alerts',
-       'Root cause inference via causal graph',
-       'Impact quantification (users, revenue, SLA)',
-       'Auto-generated action items with owners',
-       'Follow-up tracking & closure verification'
-     ],
-     benefits: [
-       'Write postmortems in 10 minutes vs. hours',
-       'Consistent structure & quality across teams',
-       'Identify systemic issues faster',
-       'Improve reliability documentation'
-     ],
-     pricing: { basic: '299', pro: '699', enterprise: '1999' },
-     contactInfo: { website: '/ai-services/ai-powered-incident-postmortem', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📝',
-     href: '/ai-services/ai-powered-incident-postmortem',
-     category: 'ai'
-   },
-   {
-     id: 'ai-driven-api-design-assistant',
-     title: 'AI-Driven API Design Assistant',
-     description: 'Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.',
-     features: [
-       'Natural language to OpenAPI 3.0 spec',
-       'Schema validation & best practice linting',
-       'Auto-generated client SDKs (10+ languages)',
-       'Mock server with configurable responses',
-       'Breaking change detection across versions'
-     ],
-     benefits: [
-       'Design APIs 5x faster with AI guidance',
-       'Ensure consistency & backward compatibility',
-       'Ship SDKs automatically for all platforms',
-       'Reduce design review cycles'
-     ],
-     pricing: { basic: '0', pro: '149', enterprise: '599' },
-     contactInfo: { website: '/ai-services/ai-driven-api-design-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔗',
-     href: '/ai-services/ai-driven-api-design-assistant',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-pr-drafting',
-     title: 'AI-Powered PR Drafting & Description',
-     description: 'Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.',
-     features: [
-       'Intelligent diff summarization',
-       'JIRA/GitHub issue linking & status updates',
-       'Changelog entry drafting per semantic version',
-       'Reviewer recommendation based on ownership',
-       'Auto-update of API docs & README diffs'
-     ],
-     benefits: [
-       'Consistent, high-quality PR descriptions',
-       'Save 15+ minutes per PR on documentation',
-       'Keep changelogs and releases up-to-date',
-       'Improve code review context and velocity'
-     ],
-     pricing: { basic: '0', pro: '99', enterprise: '399' },
-     contactInfo: { website: '/ai-services/ai-powered-pr-drafting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📦',
-     href: '/ai-services/ai-powered-pr-drafting',
-     category: 'ai'
-   },
-   {
-     id: 'automated-data-labeling',
-     title: 'Automated Data Labeling for Computer Vision & NLP',
-     description: 'Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.',
-     features: [
-       'Pre-labeling with foundation models (CLIP, YOLO)',
-       'Active learning to prioritize ambiguous samples',
-       'Collaborative annotation workspace',
-       'Quality metrics & consensus scoring',
-       'Export to all major ML data formats'
-     ],
-     benefits: [
-       'Label 10,000 images in hours, not weeks',
-       'Reduce labeling cost by 90%',
-       'Improve model accuracy with high-quality labels',
-       'Iterate on training data faster'
-     ],
-     pricing: { basic: '199', pro: '599', enterprise: '1799' },
-     contactInfo: { website: '/ai-services/automated-data-labeling', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🏷️',
-     href: '/ai-services/automated-data-labeling',
-     category: 'ai'
-   },
-   {
-     id: 'meeting-ai-assistant',
-     title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
-     description: "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
-     features: [
-       'Cloud recording & real-time transcription',
-       'Speaker identification & diarization',
-       'Action item extraction with assignees',
-       'Decision log & key quote highlights',
-       'Sync to Notion/Confluence/ClickUp'
-     ],
-     benefits: [
-       'Never miss an action item again',
-       'Reduce meeting follow-up time by 80%',
-       'Search across all past meeting transcripts',
-       'Onboard new team members with context'
-     ],
-     pricing: { basic: '0', pro: '99', enterprise: '399' },
-     contactInfo: { website: '/ai-services/meeting-ai-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🎙️',
-     href: '/ai-services/meeting-ai-assistant',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-question-answering',
-     title: 'Enterprise AI Question Answering (Internal Knowledge)',
-     description: 'Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.',
-     features: [
-       'RAG over private document corpus',
-       'Source citation & confidence scores',
-       'Multi-department bots (HR, Eng, Sales, Support)',
-       'Feedback loop to improve answers',
-       'Analytics: most-asked questions, gaps in docs'
-     ],
-     benefits: [
-       'Reduce internal support tickets by 50%',
-       'Onboard new hires instantly with accurate answers',
-       'Keep institutional knowledge accessible',
-       'Identify undocumented processes'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2299' },
-     contactInfo: { website: '/ai-services/ai-powered-question-answering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '💬',
-     href: '/ai-services/ai-powered-question-answering',
-     category: 'ai'
-   },  {
+  {
     id: 'ai-dyslexia-assist',
     title: 'AI Dyslexia Assist',
     description: `Real-time reading & writing assistance for dyslexic users with personalized text-to-speech, word prediction, and phonetic correction.`,
@@ -3223,11 +2163,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📖',
-    href: '/ai-services/ai-dyslexia-assist',
-    category: 'ai'
-  },
-
   {
     id: 'ai-supply-chain-predictor',
     title: 'AI Supply Chain Predictor',
@@ -3240,11 +2175,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🚢',
-    href: '/ai-services/ai-supply-chain-predictor',
-    category: 'ai'
-  },
-
   {
     id: 'ai-contract-review',
     title: 'AI Contract Review Assistant',
@@ -3257,11 +2187,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📝',
-    href: '/ai-services/ai-contract-review',
-    category: 'ai'
-  },
-
   {
     id: 'ai-accessibility-auditor',
     title: 'AI Accessibility Auditor',
@@ -3274,11 +2199,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '♿',
-    href: '/ai-services/ai-accessibility-auditor',
-    category: 'ai'
-  },
-
   {
     id: 'ai-mental-health-chatbot',
     title: 'AI Mental Health Companion',
@@ -3291,11 +2211,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🧠',
-    href: '/ai-services/ai-mental-health-chatbot',
-    category: 'ai'
-  },
-
   {
     id: 'ai-customer-sentiment-tracker',
     title: 'AI Customer Sentiment Tracker',
@@ -3308,11 +2223,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📊',
-    href: '/ai-services/ai-customer-sentiment-tracker',
-    category: 'ai'
-  },
-
   {
     id: 'ai-codebase-doc-generator',
     title: 'AI Codebase Documentation Generator',
@@ -3325,11 +2235,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📚',
-    href: '/ai-services/ai-codebase-doc-generator',
-    category: 'ai'
-  },
-
   {
     id: 'ai-competitive-intel-engine',
     title: 'AI Competitive Intel Engine',
@@ -3342,11 +2247,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔍',
-    href: '/ai-services/ai-competitive-intel-engine',
-    category: 'ai'
-  },
-
   {
     id: 'ai-voice-cloning-marketing',
     title: 'AI Voice Cloning for Marketing',
@@ -3359,11 +2259,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🎙️',
-    href: '/ai-services/ai-voice-cloning-marketing',
-    category: 'ai'
-  },
-
   {
     id: 'ai-fraud-detection-finance',
     title: 'AI Fraud Detection for Finance',
@@ -3376,11 +2271,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection-finance',
-    category: 'ai'
-  },
-
   {
     id: 'ai-legal-contract-redaction',
     title: 'AI Legal Contract Redaction',
@@ -3393,11 +2283,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔒',
-    href: '/ai-services/ai-legal-contract-redaction',
-    category: 'ai'
-  },
-
   {
     id: 'ai-sustainability-carbon-tracker',
     title: 'AI Sustainability & Carbon Tracker',
@@ -3410,11 +2295,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🌱',
-    href: '/ai-services/ai-sustainability-carbon-tracker',
-    category: 'ai'
-  },
-
   {
     id: 'ai-education-tutor',
     title: 'AI 1:1 Tutor for K–12 & Higher Ed',
@@ -3427,11 +2307,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🎓',
-    href: '/ai-services/ai-education-tutor',
-    category: 'ai'
-  },
-
   {
     id: 'ai-retail-recommendation-engine',
     title: 'AI Retail Recommendation Engine',
@@ -3444,11 +2319,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🛒',
-    href: '/ai-services/ai-retail-recommendation-engine',
-    category: 'ai'
-  },
-
   {
     id: 'ai-aiops-anomaly-detection',
     title: 'AI-AIOps Anomaly Detection',
@@ -3461,11 +2331,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📈',
-    href: '/ai-services/ai-aiops-anomaly-detection',
-    category: 'ai'
-  },
-
   {
     id: 'ai-media-monitoring',
     title: 'AI Media & News Monitoring',
@@ -3478,11 +2343,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📰',
-    href: '/ai-services/ai-media-monitoring',
-    category: 'ai'
-  },
-
   {
     id: 'ai-accessibility-optimizer',
     title: 'AI Accessibility Content Optimizer',
@@ -3495,14 +2355,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔧',
-    href: '/ai-services/ai-accessibility-optimizer',
-    category: 'ai'
-  },
-
-
-// New AI services batch — inserted automatically
-
   {
     id: 'ai-realtime-translation',
     title: 'Real-Time Translation Engine',
@@ -3515,11 +2367,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🌐',
-    href: '/ai-services/ai-realtime-translation',
-    category: 'ai'
-  },
-
   {
     id: 'ai-contract-analyzer-pro',
     title: 'Contract Analyzer Pro',
@@ -3532,28 +2379,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📜',
-    href: '/ai-services/ai-contract-analyzer-pro',
-    category: 'ai'
-  },
-
-  {
-    id: 'ai-code-review-assistant',
-    title: 'AI Code Review Assistant',
-    description: `Static analysis + LLM-powered code review that understands intent. Catches bugs, security flaws, performance anti-patterns across 15+ languages.`,
-    features: ["Multi-language support", "Security vulnerability detection", "Performance anti-pattern\u8bc6\u522b", "Auto-suggest fixes", "GitHub/GitLab/Bitbucket integration"],
-    benefits: ["Improve code quality before merge", "Reduce senior dev review time by 60%", "Onboard juniors faster"],
-    pricing: {"basic":"99","pro":"299","enterprise":"799"},
-    contactInfo: {
-      website: '/ai-services/ai-code-review-assistant',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔍',
-    href: '/ai-services/ai-code-review-assistant',
-    category: 'ai'
-  },
-
   {
     id: 'ai-competitor-intelligence',
     title: 'Competitor Intelligence Engine',
@@ -3566,11 +2391,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🎯',
-    href: '/ai-services/ai-competitor-intelligence',
-    category: 'ai'
-  },
-
   {
     id: 'ai-email-campaign-generator',
     title: 'Email Campaign Generator',
@@ -3583,28 +2403,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📧',
-    href: '/ai-services/ai-email-campaign-generator',
-    category: 'ai'
-  },
-
-  {
-    id: 'ai-supply-chain-predictor',
-    title: 'Supply Chain Predictor',
-    description: `Demand forecasting, inventory optimization, and route planning using time-series ML. Reduces stockouts by 45% and carrying costs by 30%.`,
-    features: ["Demand forecasting (90-day)", "Inventory reorder points", "Route optimization", "Supplier risk scoring", "Real-time dashboards"],
-    benefits: ["Never run out of stock", "Lower warehouse costs", "Faster delivery times"],
-    pricing: {"basic":"399","pro":"899","enterprise":"2499"},
-    contactInfo: {
-      website: '/ai-services/ai-supply-chain-predictor',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚚',
-    href: '/ai-services/ai-supply-chain-predictor',
-    category: 'ai'
-  },
-
   {
     id: 'ai-voice-assistant-pro',
     title: 'Voice Assistant Pro',
@@ -3617,11 +2415,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📞',
-    href: '/ai-services/ai-voice-assistant-pro',
-    category: 'ai'
-  },
-
   {
     id: 'ai-revenue-optimizer',
     title: 'Revenue Optimization Engine',
@@ -3634,11 +2427,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '💰',
-    href: '/ai-services/ai-revenue-optimizer',
-    category: 'ai'
-  },
-
   {
     id: 'ai-knowledge-graph-builder',
     title: 'Knowledge Graph Builder',
@@ -3651,11 +2439,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🕸️',
-    href: '/ai-services/ai-knowledge-graph-builder',
-    category: 'ai'
-  },
-
   {
     id: 'ai-fraud-detection-real-time',
     title: 'Real-Time Fraud Detection',
@@ -3668,11 +2451,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection-real-time',
-    category: 'ai'
-  },
-
   {
     id: 'ai-social-sentiment-tracker',
     title: 'Social Sentiment Tracker',
@@ -3685,11 +2463,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📢',
-    href: '/ai-services/ai-social-sentiment-tracker',
-    category: 'ai'
-  },
-
   {
     id: 'ai-automated-reporting',
     title: 'Automated Reporting Engine',
@@ -3702,11 +2475,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📊',
-    href: '/ai-services/ai-automated-reporting',
-    category: 'ai'
-  },
-
   {
     id: 'ai-predictive-maintenance-factory',
     title: 'Predictive Maintenance for Manufacturing',
@@ -3719,11 +2487,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🏭',
-    href: '/ai-services/ai-predictive-maintenance-factory',
-    category: 'ai'
-  },
-
   {
     id: 'ai-customer-360',
     title: 'Customer 360 Unified Profile',
@@ -3736,11 +2499,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '👤',
-    href: '/ai-services/ai-customer-360',
-    category: 'ai'
-  },
-
   {
     id: 'ai-talent-acquisition-platform',
     title: 'AI Talent Acquisition Platform',
@@ -3753,13 +2511,6 @@ export const aiServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '👥',
-    href: '/ai-services/ai-talent-acquisition-platform',
-    category: 'ai'
-  }
-];
-
-export const itServices: Service[] = [
   {
     id: 'cloud-migration',
     title: 'Cloud Migration & Modernization',
@@ -3782,16 +2533,6 @@ export const itServices: Service[] = [
       pro: '4999',
       enterprise: '9999'
     },
-    contactInfo: {
-      website: '/it-services/cloud-migration',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '☁️',
-    href: '/it-services/cloud-migration',
-    popular: true,
-    category: 'cloud'
-  },
   {
     id: 'cybersecurity',
     title: 'Cybersecurity & Penetration Testing',
@@ -3814,16 +2555,6 @@ export const itServices: Service[] = [
       pro: '5999',
       enterprise: '14999'
     },
-    contactInfo: {
-      website: '/it-services/cybersecurity',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔒',
-    href: '/it-services/cybersecurity',
-    popular: true,
-    category: 'security'
-  },
   {
     id: 'data-engineering',
     title: 'Data Engineering & ETL Pipelines',
@@ -3846,15 +2577,6 @@ export const itServices: Service[] = [
       pro: '6999',
       enterprise: '15999'
     },
-    contactInfo: {
-      website: '/it-services/data-engineering',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔧',
-    href: '/it-services/data-engineering',
-    category: 'data'
-  },
   {
     id: 'devops-cicd',
     title: 'DevOps & CI/CD Automation',
@@ -3877,16 +2599,6 @@ export const itServices: Service[] = [
       pro: '4499',
       enterprise: '9999'
     },
-    contactInfo: {
-      website: '/it-services/devops-cicd',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '⚙️',
-    href: '/it-services/devops-cicd',
-    popular: true,
-    category: 'automation'
-  },
   {
     id: 'saas-development',
     title: 'SaaS Product Development',
@@ -3909,15 +2621,6 @@ export const itServices: Service[] = [
       pro: '12999',
       enterprise: '29999'
     },
-    contactInfo: {
-      website: '/it-services/saas-development',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚀',
-    href: '/it-services/saas-development',
-    category: 'it'
-  },
   {
     id: 'api-integration',
     title: 'API Development & Integration',
@@ -3940,15 +2643,6 @@ export const itServices: Service[] = [
       pro: '3999',
       enterprise: '8999'
     },
-    contactInfo: {
-      website: '/it-services/api-integration',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔗',
-    href: '/it-services/api-integration',
-    category: 'it'
-  },
   {
     id: 'database-optimization',
     title: 'Database Optimization & Management',
@@ -3971,15 +2665,6 @@ export const itServices: Service[] = [
       pro: '3499',
       enterprise: '7999'
     },
-    contactInfo: {
-      website: '/it-services/database-optimization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/database-optimization',
-    category: 'data'
-  },
   {
     id: 'monitoring-observability',
     title: 'Monitoring & Observability',
@@ -4002,15 +2687,6 @@ export const itServices: Service[] = [
       pro: '2499',
       enterprise: '5999'
     },
-    contactInfo: {
-      website: '/it-services/monitoring-observability',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📡',
-    href: '/it-services/monitoring-observability',
-    category: 'automation'
-  },
   {
     id: 'it-consulting',
     title: 'IT Strategy & Digital Transformation Consulting',
@@ -4033,15 +2709,6 @@ export const itServices: Service[] = [
       pro: '5999',
       enterprise: '14999'
     },
-    contactInfo: {
-      website: '/it-services/it-consulting',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💡',
-    href: '/it-services/it-consulting',
-    category: 'it'
-  },
   {
     id: 'accessibility-compliance',
     title: 'Accessibility & WCAG Compliance',
@@ -4630,7 +3297,6 @@ export const itServices: Service[] = [
     href: '/it-services/network-architecture-sdwan',
     category: 'it'
   },
-
   {
     id: 'it-sam-platform',
     title: 'IT Service Asset & Configuration Management',
@@ -4653,15 +3319,6 @@ export const itServices: Service[] = [
       pro: '1399',
       enterprise: '3999'
     },
-    contactInfo: {
-      website: '/it-services/it-sam-platform',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗺️',
-    href: '/it-services/it-sam-platform',
-    category: 'it'
-  },
   {
     id: 'vulnerability-assessment-penetration-testing',
     title: 'Vulnerability Assessment & Penetration Testing',
@@ -4684,15 +3341,6 @@ export const itServices: Service[] = [
       pro: '4999',
       enterprise: '14999'
     },
-    contactInfo: {
-      website: '/it-services/vulnerability-assessment-penetration-testing',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🧐',
-    href: '/it-services/vulnerability-assessment-penetration-testing',
-    category: 'it'
-  },
   {
     id: 'remote-it-support',
     title: 'Remote IT Support & Helpdesk Outsourcing',
@@ -4715,46 +3363,6 @@ export const itServices: Service[] = [
       pro: '1199',
       enterprise: '3499'
     },
-    contactInfo: {
-      website: '/it-services/remote-it-support',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🎧',
-    href: '/it-services/remote-it-support',
-    category: 'it'
-  },
-  {
-    id: 'database-optimization',
-    title: 'Database Performance Optimization',
-    description: 'Expert tuning for PostgreSQL, MySQL, MongoDB, Redis: query optimization, index strategy, replication, and high-availability architecture.',
-    features: [
-      'Query plan analysis & index optimization',
-      'Schema redesign for performance',
-      'Connection pooling & caching strategies',
-      'Read replica & clustering setup',
-      'Slow query monitoring & auto-tuning'
-    ],
-    benefits: [
-      '2–10x faster query response times',
-      'Reduce database load by 60%',
-      'Prevent performance-related outages',
-      'Lower infrastructure costs (smaller instances)'
-    ],
-    pricing: {
-      basic: '799',
-      pro: '1899',
-      enterprise: '5499'
-    },
-    contactInfo: {
-      website: '/it-services/database-optimization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/database-optimization',
-    category: 'it'
-  },
   {
     id: 'endpoint-management',
     title: 'Unified Endpoint Management (UEM)',
@@ -4777,15 +3385,6 @@ export const itServices: Service[] = [
       pro: '699',
       enterprise: '1999'
     },
-    contactInfo: {
-      website: '/it-services/endpoint-management',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💻',
-    href: '/it-services/endpoint-management',
-    category: 'it'
-  },
   {
     id: 'legacy-system-modernization',
     title: 'Legacy System Modernization & Re-Platforming',
@@ -4808,15 +3407,6 @@ export const itServices: Service[] = [
       pro: '5999',
       enterprise: '19999'
     },
-    contactInfo: {
-      website: '/it-services/legacy-system-modernization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🏗️',
-    href: '/it-services/legacy-system-modernization',
-    category: 'it'
-  },
   {
     id: 'quantum-ready-security',
     title: 'Quantum-Ready Cryptography & Security Assessment',
@@ -4839,15 +3429,6 @@ export const itServices: Service[] = [
       pro: '3499',
       enterprise: '9999'
     },
-    contactInfo: {
-      website: '/it-services/quantum-ready-security',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔐',
-    href: '/it-services/quantum-ready-security',
-    category: 'it'
-  },
   {
     id: 'observability-platform',
     title: 'Full-Stack Observability Platform',
@@ -4870,15 +3451,6 @@ export const itServices: Service[] = [
       pro: '1199',
       enterprise: '3299'
     },
-    contactInfo: {
-      website: '/it-services/observability-platform',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📊',
-    href: '/it-services/observability-platform',
-    category: 'it'
-  },
   {
     id: 'soc-as-a-service',
     title: 'Security Operations Center as a Service (SOCaaS)',
@@ -4901,15 +3473,6 @@ export const itServices: Service[] = [
       pro: '3499',
       enterprise: '9999'
     },
-    contactInfo: {
-      website: '/it-services/soc-as-a-service',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚨',
-    href: '/it-services/soc-as-a-service',
-    category: 'it'
-  },
   {
     id: 'nodejs-performance-tuning',
     title: 'Node.js Performance Tuning & Profiling',
@@ -4932,15 +3495,6 @@ export const itServices: Service[] = [
       pro: '1599',
       enterprise: '4599'
     },
-    contactInfo: {
-      website: '/it-services/nodejs-performance-tuning',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🟢',
-    href: '/it-services/nodejs-performance-tuning',
-    category: 'it'
-  },
   {
     id: 'etl-pipeline-optimization',
     title: 'ETL Pipeline Optimization & Modernization',
@@ -4963,15 +3517,6 @@ export const itServices: Service[] = [
       pro: '2099',
       enterprise: '5999'
     },
-    contactInfo: {
-      website: '/it-services/etl-pipeline-optimization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/etl-pipeline-optimization',
-    category: 'it'
-  },
   {
     id: 'incident-response-retainer',
     title: 'Incident Response Retainer (IR)',
@@ -4994,15 +3539,6 @@ export const itServices: Service[] = [
       pro: '5999',
       enterprise: '19999'
     },
-    contactInfo: {
-      website: '/it-services/incident-response-retainer',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚑',
-    href: '/it-services/incident-response-retainer',
-    category: 'it'
-   },
   {
     id: 'it-edge-computing-deploy',
     title: 'Edge Computing Deployment',
@@ -5015,45 +3551,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🌍',
-    href: '/it-services/it-edge-computing-deploy',
-    category: 'it'
-  },
-
-  {
-    id: 'it-disaster-recovery',
-    title: 'Disaster Recovery as a Service (DRaaS)',
-    description: `Fully managed DR with automated backups, cross-region replication, and quarterly failover testing. RTO < 4 hours, RPO < 15 minutes.`,
-    features: ["Continuous replication", "Automated failover orchestration", "DR runbook documentation", "Compliance-ready audit logs"],
-    benefits: ["Guarantees business continuity", "Meets ISO 27001 & SOC2 requirements", "Reduces DR planning overhead"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-disaster-recovery',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/it-disaster-recovery',
-    category: 'it'
-  },
-
-  {
-    id: 'it-observability-platform',
-    title: 'Full-Stack Observability Platform',
-    description: `Unified logs, metrics, traces, and profiling with AI-powered root-cause analysis. Self-hosted or cloud-hosted options.`,
-    features: ["Distributed tracing (OpenTelemetry)", "Log aggregation with semantic search", "Custom dashboard builder", "Anomaly detection + alert routing"],
-    benefits: ["Reduces MTTR by 50%", "Eliminates tool sprawl", "Provides single pane of glass"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-observability-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📡',
-    href: '/it-services/it-observability-platform',
-    category: 'it'
-  },
-
   {
     id: 'it-esg-compliance-automation',
     title: 'ESG Compliance Automation',
@@ -5066,11 +3563,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🌍',
-    href: '/it-services/it-esg-compliance-automation',
-    category: 'it'
-  },
-
   {
     id: 'it-kubernetes-multicloud',
     title: 'Kubernetes Multi-Cloud Management',
@@ -5083,11 +3575,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '☸️',
-    href: '/it-services/it-kubernetes-multicloud',
-    category: 'it'
-  },
-
   {
     id: 'it-automated-incident-response',
     title: 'Automated Incident Response (SOAR)',
@@ -5100,11 +3587,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🚨',
-    href: '/it-services/it-automated-incident-response',
-    category: 'it'
-  },
-
   {
     id: 'it-data-warehouse-modernization',
     title: 'Data Warehouse Modernization',
@@ -5117,11 +3599,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🏢',
-    href: '/it-services/it-data-warehouse-modernization',
-    category: 'it'
-  },
-
   {
     id: 'it-iot-device-management',
     title: 'Enterprise IoT Device Management',
@@ -5134,11 +3611,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📱',
-    href: '/it-services/it-iot-device-management',
-    category: 'it'
-  },
-
   {
     id: 'it-digital-workplace-platform',
     title: 'Digital Workplace Platform',
@@ -5151,11 +3623,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '💼',
-    href: '/it-services/it-digital-workplace-platform',
-    category: 'it'
-  },
-
   {
     id: 'it-apisec-testing',
     title: 'API Security Testing',
@@ -5168,11 +3635,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔐',
-    href: '/it-services/it-apisec-testing',
-    category: 'it'
-  },
-
   {
     id: 'it-data-lakehouse-governance',
     title: 'Data Lakehouse Governance',
@@ -5185,11 +3647,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🗄️',
-    href: '/it-services/it-data-lakehouse-governance',
-    category: 'it'
-  },
-
   {
     id: 'it-endpoint-detection-response',
     title: 'Managed Endpoint Detection & Response (EDR)',
@@ -5202,11 +3659,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🛡️',
-    href: '/it-services/it-endpoint-detection-response',
-    category: 'it'
-  },
-
   {
     id: 'it-low-code-platform-integration',
     title: 'Low-Code Platform Integration',
@@ -5219,14 +3671,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🧩',
-    href: '/it-services/it-low-code-platform-integration',
-    category: 'it'
-  },
-
-
-// New IT services batch — inserted automatically
-
   {
     id: 'it-edge-computing-orchestration',
     title: 'Edge Computing Orchestration',
@@ -5239,11 +3683,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🌍',
-    href: '/it-services/it-edge-computing-orchestration',
-    category: 'it'
-  },
-
   {
     id: 'it-serverless-api-gateway',
     title: 'Serverless API Gateway',
@@ -5256,11 +3695,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🚪',
-    href: '/it-services/it-serverless-api-gateway',
-    category: 'it'
-  },
-
   {
     id: 'it-sap-integration-hub',
     title: 'SAP Integration Hub',
@@ -5273,11 +3707,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🏢',
-    href: '/it-services/it-sap-integration-hub',
-    category: 'it'
-  },
-
   {
     id: 'it-multi-cloud-cost-governance',
     title: 'Multi-Cloud Cost Governance',
@@ -5290,28 +3719,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '💸',
-    href: '/it-services/it-multi-cloud-cost-governance',
-    category: 'it'
-  },
-
-  {
-    id: 'it-automated-incident-response',
-    title: 'Automated Incident Response',
-    description: `SOAR platform: ingest alerts from any monitoring tool, run playbooks, remediate automatically. 500+ community playbooks included.`,
-    features: ["50+ integration adapters", "Visual playbook builder", "Automated remediation", "Case management", "Post-incident reports"],
-    benefits: ["MTTR reduced by 80%", "Free up on-call engineers", "Consistent response procedures"],
-    pricing: {"basic":"299","pro":"699","enterprise":"1799"},
-    contactInfo: {
-      website: '/it-services/it-automated-incident-response',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚨',
-    href: '/it-services/it-automated-incident-response',
-    category: 'it'
-  },
-
   {
     id: 'it-secure-file-transfer',
     title: 'Secure File Transfer (MFT)',
@@ -5324,11 +3731,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📁',
-    href: '/it-services/it-secure-file-transfer',
-    category: 'it'
-  },
-
   {
     id: 'it-legacy-app-containerization',
     title: 'Legacy App Containerization',
@@ -5341,11 +3743,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🐳',
-    href: '/it-services/it-legacy-app-containerization',
-    category: 'it'
-  },
-
   {
     id: 'it-pcii-compliance-suite',
     title: 'PCI DSS Compliance Suite',
@@ -5358,11 +3755,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '💳',
-    href: '/it-services/it-pcii-compliance-suite',
-    category: 'it'
-  },
-
   {
     id: 'it-business-continuity-dr',
     title: 'Business Continuity & Disaster Recovery',
@@ -5375,11 +3767,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔄',
-    href: '/it-services/it-business-continuity-dr',
-    category: 'it'
-  },
-
   {
     id: 'it-identity-governance',
     title: 'Identity Governance & Administration',
@@ -5392,11 +3779,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔑',
-    href: '/it-services/it-identity-governance',
-    category: 'it'
-  },
-
   {
     id: 'it-cloud-native-storage',
     title: 'Cloud-Native Storage Optimizer',
@@ -5409,11 +3791,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '💾',
-    href: '/it-services/it-cloud-native-storage',
-    category: 'it'
-  },
-
   {
     id: 'it-observability-unified',
     title: 'Unified Observability Platform',
@@ -5426,11 +3803,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '📈',
-    href: '/it-services/it-observability-unified',
-    category: 'it'
-  },
-
   {
     id: 'it-secrets-management',
     title: 'Secrets Management as a Service',
@@ -5443,11 +3815,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🔐',
-    href: '/it-services/it-secrets-management',
-    category: 'it'
-  },
-
   {
     id: 'it-multi-cloud-networking',
     title: 'Multi-Cloud Networking',
@@ -5460,11 +3827,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🌐',
-    href: '/it-services/it-multi-cloud-networking',
-    category: 'it'
-  },
-
   {
     id: 'it-mainframe-modernization',
     title: 'Mainframe Modernization Service',
@@ -5477,12 +3839,6 @@ export const itServices: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    icon: '🖥️',
-    href: '/it-services/it-mainframe-modernization',
-    category: 'it'
-  },
-
-  // ── NEW MICRO-SAAS & AI SOLUTIONS (Added 2026-05-14) ──────────────────────
   {
     id: 'ai-saas-001',
     href: '/ai-services/ai-saas/automated-invoice-processing',
@@ -5511,13 +3867,6 @@ export const itServices: Service[] = [
       enterprise: '$899/mo — 25,000 invoices',
       custom: 'Contact for volume pricing'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-invoice-processing',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-002',
     href: '/ai-services/ai-saas/social-media-content-scheduler',
@@ -5546,13 +3895,6 @@ export const itServices: Service[] = [
       agency: '$399/mo — unlimited brands, white-label reports',
       enterprise: 'Custom — dedicated AI training'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/social-media-content-scheduler',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-003',
     href: '/ai-services/ai-saas/ai-seo-content-writer',
@@ -5581,13 +3923,6 @@ export const itServices: Service[] = [
       scale: '$499/mo — 600 articles + API access',
       agency: '$999/mo — unlimited + white-label'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-seo-content-writer',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-004',
     href: '/ai-services/ai-saas/predictive-sales-forecasting',
@@ -5616,13 +3951,6 @@ export const itServices: Service[] = [
       enterprise: '$1,299/mo — unlimited, custom models',
       onprem: 'Contact — self-hosted deployment'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/predictive-sales-forecasting',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-005',
     href: '/ai-services/ai-saas/ai-customer-support-chatbot',
@@ -5651,13 +3979,6 @@ export const itServices: Service[] = [
       business: '$699/mo — 100,000 queries, custom branding',
       enterprise: '$1,999/mo — unlimited, dedicated training'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-customer-support-chatbot',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-006',
     href: '/ai-services/ai-saas/ai-contract-review-analyzer',
@@ -5686,13 +4007,6 @@ export const itServices: Service[] = [
       business: '$499/mo — unlimited pages, custom clauses',
       legal: 'Contact — firm-wide license'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-contract-review-analyzer',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-007',
     href: '/ai-services/ai-saas/ai-meeting-notes-transcriber',
@@ -5721,13 +4035,6 @@ export const itServices: Service[] = [
       business: '$299/mo — unlimited, 20 users',
       enterprise: '$799/mo — SSO, compliance logging'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-meeting-notes-transcriber',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-001',
     href: '/it-services/cloud-cost-optimization-platform',
@@ -5756,13 +4063,6 @@ export const itServices: Service[] = [
       scale: '$799/mo — up to $500K spend, multi-cloud',
       enterprise: 'Custom — dedicated cost engineer'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/cloud-cost-optimization-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-002',
     href: '/it-services/devops-incident-response-platform',
@@ -5791,13 +4091,6 @@ export const itServices: Service[] = [
       enterprise: '$1,299/mo — unlimited, custom plugins',
       onprem: 'Contact — self-hosted enterprise'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/devops-incident-response-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-003',
     href: '/it-services/api-security-gateway',
@@ -5826,13 +4119,6 @@ export const itServices: Service[] = [
       business: '$1,299/mo — 100M requests, WAF rules',
       enterprise: 'Custom — dedicated gateway instances'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/api-security-gateway',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-004',
     href: '/it-services/developer-portal-with-apis-playground',
@@ -5861,13 +4147,6 @@ export const itServices: Service[] = [
       business: '$1,499/mo — unlimited APIs, SSO, custom branding',
       enterprise: 'Contact — dedicated infrastructure'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/developer-portal-with-apis-playground',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-001',
     href: '/it-services/micro-saas/booking-and-scheduling-system',
@@ -5896,13 +4175,6 @@ export const itServices: Service[] = [
       business: '$199/mo — 10 calendars, white-label, payments',
       enterprise: '$499/mo — unlimited, custom workflows'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/booking-and-scheduling-system',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-002',
     href: '/it-services/micro-saas/subscription-billing-and-invoicing',
@@ -5931,13 +4203,6 @@ export const itServices: Service[] = [
       scale: '$799/mo — unlimited revenue, usage billing',
       enterprise: 'Custom — dedicated success manager'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/subscription-billing-and-invoicing',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-003',
     href: '/it-services/micro-saas/feedback-and-nps-collection',
@@ -5966,13 +4231,6 @@ export const itServices: Service[] = [
       business: '$399/mo — unlimited, custom branding, API',
       enterprise: '$999/mo — multi-account, SSO, dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/feedback-and-nps-collection',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-security-001',
     href: '/it-services/it-security-vulnerability-scanner',
@@ -6001,13 +4259,6 @@ export const itServices: Service[] = [
       enterprise: '$1,999/mo — unlimited apps, dedicated scanner',
       audit: 'Contact — one-time penetration testing add-on'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-security/vulnerability-scanner',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-security-002',
     href: '/it-services/it-security-pen-testing-as-a-service',
@@ -6036,13 +4287,6 @@ export const itServices: Service[] = [
       enterprise: '$19,999/mo — unlimited, dedicated tester',
       custom: 'Contact — red team, physical security, social engineering'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-security/pen-testing-as-a-service',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-cloud-001',
     href: '/it-services/cloud-native-migration-factory',
@@ -6071,13 +4315,6 @@ export const itServices: Service[] = [
       enterprise: 'Custom — enterprise-wide transformation',
       support: '$3,000/mo — 6-month post-migration support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-cloud/cloud-native-migration-factory',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-cloud-002',
     href: '/it/services/serverless-application-development',
@@ -6106,13 +4343,6 @@ export const itServices: Service[] = [
       enterprise: '$120,000+ — complex event-driven systems',
       ongoing: '10% of compute costs/mo for managed support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-cloud/serverless-application-development',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-ml-001',
     href: '/ai-services/ai-ml/custom-llm-fine-tuning',
@@ -6141,13 +4371,6 @@ export const itServices: Service[] = [
       large: '$99,000 — 70B model, fine-tuned on 100K+ examples, dedicated infra',
       enterprise: 'Custom — on-prem GPU cluster deployment'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-ml/custom-llm-fine-tuning',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-ml-002',
     href: '/ai-services/ai-ml/computer-vision-quality-control',
@@ -6176,13 +4399,6 @@ export const itServices: Service[] = [
       advanced: '$99,000 — multi-camera, advanced analytics, training',
       enterprise: 'Custom — factory-wide rollout, change management'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-ml/computer-vision-quality-control',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-ml-003',
     href: '/ai-services/ai-ml/predictive-maintenance-platform',
@@ -6211,13 +4427,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — unlimited sensors, on-prem deployment',
       consulting: 'Contact — implementation and training'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-ml/predictive-maintenance-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'data-001',
     href: '/it-services/data-warehouse-modernization',
@@ -6246,13 +4455,6 @@ export const itServices: Service[] = [
       optimization: '$15,000 — performance tuning post-migration',
       enterprise: 'Custom — multi-year modernization roadmap'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-data/data-warehouse-modernization',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'data-002',
     href: '/it-services/data-real-time-analytics-dashboard',
@@ -6281,13 +4483,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — unlimited events, dedicated support',
       onprem: 'Contact — on-prem streaming platform deployment'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-data/real-time-analytics-dashboard',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'data-003',
     href: '/it-services/data-master-data-management',
@@ -6316,13 +4511,6 @@ export const itServices: Service[] = [
       enterprise: '$12,000/mo — multi-domain, on-prem deployment option',
       consulting: 'Contact — data cleansing and implementation services'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-data/master-data-management',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-media-001',
     href: '/ai-services/ai-media/video-dubbing-and-localization',
@@ -6351,13 +4539,6 @@ export const itServices: Service[] = [
       business: '$999/mo — 500 minutes/month, unlimited languages',
       enterprise: 'Custom — dedicated voice model training'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-media/video-dubbing-and-localization',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-media-002',
     href: '/ai-services/ai-media/ai-image-upscaling-restoration',
@@ -6386,13 +4567,6 @@ export const itServices: Service[] = [
       business: '$499/mo — unlimited, on-prem option available',
       enterprise: 'Contact — custom model training'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-media/ai-image-upscaling-restoration',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-dev-001',
     href: '/ai-services/ai-dev/code-review-automation',
@@ -6421,13 +4595,6 @@ export const itServices: Service[] = [
       business: '$399/mo — unlimited repos, 50 developers',
       enterprise: '$1,299/mo — unlimited, custom rules, on-prem'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-dev/code-review-automation',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-dev-002',
     href: '/ai-services/ai-dev/automated-test-generation',
@@ -6456,13 +4623,6 @@ export const itServices: Service[] = [
       business: '$499/mo — unlimited projects, advanced CI integration',
       enterprise: 'Custom — self-hosted, custom frameworks'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-dev/automated-test-generation',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-dev-003',
     href: '/ai-services/ai-dev/legacy-code-to-modern-migration',
@@ -6491,13 +4651,6 @@ export const itServices: Service[] = [
       enterprise: 'Custom — multi-year modernization roadmap',
       support: '15% of migration cost/year for ongoing maintenance'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-dev/legacy-code-to-modern-migration',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-dev-004',
     href: '/ai-services/ai-dev/api-documentation-generator',
@@ -6526,13 +4679,6 @@ export const itServices: Service[] = [
       business: '$799/mo — unlimited APIs, custom branding, SSO',
       enterprise: 'Custom — dedicated instance, custom workflows'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-dev/api-documentation-generator',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-robotics-001',
     href: '/ai-services/ai-robotics/robotic-process-automation-rpa',
@@ -6561,13 +4707,6 @@ export const itServices: Service[] = [
       enterprise: '$7,500/mo — unlimited bots, orchestrator, AI vision',
       custom: 'Contact — process discovery and implementation services'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-robotics/robotic-process-automation',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-robotics-002',
     href: '/ai-services/ai-robotics/intelligent-document-processing',
@@ -6596,13 +4735,6 @@ export const itServices: Service[] = [
       business: '$999/mo — 100,000 pages + unlimited workflows',
       enterprise: 'Custom — dedicated deployment, custom model training'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-robotics/intelligent-document-processing',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-robotics-003',
     href: '/ai-services/ai-robotics/autonomous-customer-service-agent',
@@ -6631,13 +4763,6 @@ export const itServices: Service[] = [
       enterprise: '$8,000/mo — unlimited minutes, custom integrations',
       onprem: 'Contact — on-prem voice AI appliance'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-robotics/autonomous-customer-service-agent',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-consulting-001',
     href: '/ai-services/ai-consulting/ai-strategy-roadmap-workshop',
@@ -6666,13 +4791,6 @@ export const itServices: Service[] = [
       extended: '$25,000 — 3-day + deeper technical assessment',
       ongoing: 'Contact — fractional AI executive services'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-consulting/ai-strategy-roadmap-workshop',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-consulting-002',
     href: '/ai-services/ai-consulting/mlops-pipeline-setup',
@@ -6701,13 +4819,6 @@ export const itServices: Service[] = [
       enterprise: '$120,000 — Kubernetes-based, auto-scaling, custom tooling',
       support: '$3,000/mo — ongoing maintenance and monitoring'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/ai-consulting/mlops-pipeline-setup',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'special-001',
     href: '/it-services/special/digital-forensics-incident-response',
@@ -6736,13 +4847,6 @@ export const itServices: Service[] = [
       forensic: '$15,000+ — deep investigation and report',
       litigation: 'Contact — expert witness and court testimony'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-special/digital-forensics-incident-response',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'special-002',
     href: '/it-services/special/technical-due-diligence-for-acquisitions',
@@ -6771,16 +4875,6 @@ export const itServices: Service[] = [
       large: '$85,000+ — enterprise acquisitions, multi-disciplinary team',
       rush: '+50% — 5-day delivery available'
     },
-    contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-special/technical-due-diligence-for-acquisitions',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];
-
-  // ── NEW DIVERSE MICRO-SAAS & IT/AI SOLUTIONS (Added 2026-05-14 — Batch 2) ─────
   {
     id: 'ai-saas-008',
     href: '/ai-services/ai-saas/ai-powered-chatbot',
@@ -6809,13 +4903,6 @@ export const itServices: Service[] = [
       business: '$699/mo — 100,000 conversations',
       enterprise: 'Contact — custom AI training'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-chatbot',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-009',
     href: '/ai-services/ai-saas/automated-customer-feedback-analyzer',
@@ -6844,13 +4931,6 @@ export const itServices: Service[] = [
       enterprise: '$999/mo — unlimited, custom integrations',
       onprem: 'Contact — self-hosted option'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-customer-feedback-analyzer',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-010',
     href: '/ai-services/ai-saas/ai-powered-virtual-assistant',
@@ -6879,13 +4959,6 @@ export const itServices: Service[] = [
       executive: '$1,299/mo — C-suite package with dedicated support',
       enterprise: 'Contact — company-wide deployment'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-virtual-assistant',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-011',
     href: '/ai-services/ai-saas/real-time-language-translation-api',
@@ -6914,13 +4987,6 @@ export const itServices: Service[] = [
       business: '$299/mo — 10M characters',
       enterprise: 'Custom — dedicated endpoints, SLA'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/real-time-language-translation-api',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-012',
     href: '/ai-services/ai-saas/fraud-detection-engine',
@@ -6949,13 +5015,6 @@ export const itServices: Service[] = [
       mid: '$699/mo — up to $5M monthly volume',
       enterprise: 'Contact — custom risk modeling'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/fraud-detection-engine',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-013',
     href: '/ai-services/ai-saas/automated-board-meeting-minutes',
@@ -6984,13 +5043,6 @@ export const itServices: Service[] = [
       corporate: '$4,999/yr — unlimited meetings, full compliance suite',
       enterprise: 'Contact — on-prem deployment'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-board-meeting-minutes',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-014',
     href: '/ai-services/ai-saas/ai-bias-detection-mitigation',
@@ -7019,13 +5071,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — on-prem, custom fairness definitions',
       audit: 'Contact — one-time bias audit'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-bias-detection-mitigation',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-005',
     href: '/it-services/it-saas/infrastructure-as-code-audit',
@@ -7054,13 +5099,6 @@ export const itServices: Service[] = [
       business: '$599/mo — unlimited engineers, multi-cloud',
       enterprise: '$1,999/mo — dedicated instance, custom rules'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/infrastructure-as-code-audit',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-006',
     href: '/it-services/it-saas/remote-it-support-desk',
@@ -7089,13 +5127,6 @@ export const itServices: Service[] = [
       enterprise: '$5,000/mo — up to 250 users, dedicated account manager',
       global: 'Contact — multi-language, multi-region'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/remote-it-support-desk',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-007',
     href: '/it-services/it-saas/source-code-escrow-agency',
@@ -7124,13 +5155,6 @@ export const itServices: Service[] = [
       enterprise: '$999/mo — dedicated vault, custom triggers, SLA',
       one_time: '$2,500 — one-time escrow setup for procurement'
     },
-    'contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-saas/source-code-escrow-agency',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-004',
     href: '/it-services/micro-saas/email-deliverability-monitor',
@@ -7159,13 +5183,6 @@ export const itServices: Service[] = [
       business: '$399/mo — unlimited domains, API access',
       agency: '$999/mo — client management dashboard'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/email-deliverability-monitor',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-005',
     href: '/it-services/micro-saas/url-shortener-with-analytics',
@@ -7194,13 +5211,6 @@ export const itServices: Service[] = [
       business: '$79/mo — unlimited links, team access, API',
       enterprise: '$299/mo — dedicated infrastructure, SSO'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/url-shortener-with-analytics',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-006',
     href: '/it-services/micro-saas/online-scheduling-and-appointments',
@@ -7229,13 +5239,6 @@ export const itServices: Service[] = [
       business: '$149/mo — unlimited calendars, white-label',
       enterprise: '$399/mo — multi-location, custom workflows'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/online-scheduling-and-appointments',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'devops-001',
     href: '/it-services/devops/container-orchestration-platform',
@@ -7264,13 +5267,6 @@ export const itServices: Service[] = [
       support: '$1,000/mo — 24/7 incident response, 15-min SLA',
       enterprise: 'Custom — dedicated account engineer'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-devops/container-orchestration-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'devops-002',
     href: '/it-services/devops/continuous-integration-pipeline',
@@ -7299,13 +5295,6 @@ export const itServices: Service[] = [
       business: '$399/mo — unlimited projects, 20,000 minutes',
       enterprise: '$1,299/mo — dedicated runners, custom caching, SLA'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-devops/continuous-integration-pipeline',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'devops-003',
     href: '/it-services/devops/observability-monitoring-stack',
@@ -7334,13 +5323,6 @@ export const itServices: Service[] = [
       enterprise: '$1,999/mo — unlimited, custom dashboards, SSO',
       selfhosted: 'Contact — on-prem Prometheus + Grafana stack'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-devops/observability-monitoring-stack',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'cloud-003',
     href: '/it-services/cloud/disaster-recovery-as-a-service',
@@ -7369,13 +5351,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — unlimited, dedicated recovery site',
       custom: 'Contact — hybrid cloud and mainframe DR'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-cloud/disaster-recovery-as-a-service',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'cloud-004',
     href: '/it-services/cloud/multi-cloud-management-platform',
@@ -7404,13 +5379,6 @@ export const itServices: Service[] = [
       enterprise: '$2,999/mo — dedicated instance, custom policies',
       consulting: 'Contact — cloud migration and setup services'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-cloud/multi-cloud-management-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'edge-001',
     href: '/it-services/edge-computing',
@@ -7439,13 +5407,6 @@ export const itServices: Service[] = [
       business: '$149/mo — 10M requests, 1TB, advanced security',
       enterprise: 'Custom — dedicated edge infrastructure'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-edge-computing/edge-computing-infrastructure',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'storage-001',
     href: '/it-services/cloud-object-storage-cdn',
@@ -7474,13 +5435,6 @@ export const itServices: Service[] = [
       requests: '$0.004/10K GET, $0.005/10K PUT',
       enterprise: 'Contact — dedicated bucket, private network'
     },
-    'contactInfo: {
-      'website: 'https://ziontechgroup.com/services/it-storage/object-storage-cdn',
-      'email: 'kleber@ziontechgroup.com',
-      'phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'devops-004',
     href: '/it-services/devops/secrets-management-vault',
@@ -7509,13 +5463,6 @@ export const itServices: Service[] = [
       business: '$399/mo — unlimited secrets, dynamic secrets, SSO',
       enterprise: '$1,299/mo — dedicated cluster, custom policies, SLA'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-devops/secrets-management-vault',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-robotics-004',
     href: '/ai-services/ai-robotics/autonomous-warehouse-robotics',
@@ -7544,13 +5491,6 @@ export const itServices: Service[] = [
       service: '$2,000/mo — installation, training, support',
       enterprise: 'Custom — warehouse-wide automation consulting'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-robotics/autonomous-warehouse-robotics',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-robotics-005',
     href: '/ai-services/ai-robotics/intelligent-supply-chain-optimizer',
@@ -7579,13 +5519,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — unlimited, custom integrations',
       consulting: 'Contact — implementation and change management'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-robotics/intelligent-supply-chain-optimizer',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      'address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-consulting-003',
     href: '/ai-services/ai-consulting/enterprise-ai-readiness-assessment',
@@ -7614,13 +5547,6 @@ export const itServices: Service[] = [
       enterprise: '$75,000 — 8-week, includes proof-of-concept pilots',
       ongoing: 'Contact — fractional CAIO advisory services'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-consulting/enterprise-ai-readiness-assessment',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'special-003',
     href: '/it-services/special/it-staff-augmentation',
@@ -7649,17 +5575,6 @@ export const itServices: Service[] = [
       us_based: '$8,000–$12,000/mo (US contractors)',
       managed: '+20% — we manage the team for you'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-special/it-staff-augmentation',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];
-
-
-  // ── NEW BATCH 3 — NICHED & HIGH-VALUE SERVICES (Added 2026-05-14) ────────────
   {
     id: 'ai-saas-015',
     href: '/ai-services/ai-saas/clinical-notes-ai',
@@ -7688,13 +5603,6 @@ export const itServices: Service[] = [
       hospital: '$2,499/mo — enterprise with full EHR integration',
       onprem: 'Contact — on-premise deployment for maximum privacy'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/clinical-notes-ai',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-016',
     href: '/ai-services/ai-saas/legal-doc-review-ai',
@@ -7723,13 +5631,6 @@ export const itServices: Service[] = [
       enterprise: '$1,999/mo — unlimited, custom playbooks, dedicated instance',
       api: 'Contact — API access for integration with CLM systems'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/legal-doc-review-ai',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-017',
     href: '/ai-services/ai-saas/predictive-maintenance-platform',
@@ -7758,13 +5659,6 @@ export const itServices: Service[] = [
       enterprise: '$9,999/mo — unlimited, edge deployment, custom models',
       onprem: 'Contact — self-hosted for secure facilities'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/predictive-maintenance-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-018',
     href: '/ai-services/ai-saas/personalized-learning-platform',
@@ -7793,13 +5687,6 @@ export const itServices: Service[] = [
       enterprise: '$2,999/mo — unlimited, custom integrations, SSO',
       custom: 'Contact — industry-specific content packs (finance, healthcare, manufacturing)'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/personalized-learning-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-019',
     href: '/ai-services/ai-saas/social-media-content-ai',
@@ -7828,13 +5715,6 @@ export const itServices: Service[] = [
       agency: '$799/mo — unlimited brands, 50 accounts, white-label',
       enterprise: 'Contact — custom AI training on your brand voice'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/social-media-content-ai',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-020',
     href: '/ai-services/ai-saas/ai-powered-voice-customer-agent',
@@ -7863,13 +5743,6 @@ export const itServices: Service[] = [
       professional: '$799/mo — 25,000 calls, custom intents, CRM integration',
       enterprise: '$2,499/mo — unlimited, custom voice cloning, dedicated infrastructure'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-voice-customer-agent',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-021',
     href: '/ai-services/ai-saas/automated-financial-reporting',
@@ -7898,13 +5771,6 @@ export const itServices: Service[] = [
       enterprise: '$2,499/mo — consolidations, SEC prep, unlimited users',
       public: 'Contact — public company compliance and XBRL tagging'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-financial-reporting',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-022',
     href: '/ai-services/ai-saas/compliance-officer-ai',
@@ -7933,13 +5799,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — unlimited, custom rules, on-prem option',
       audit: '$15,000 — one-time compliance gap analysis'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/compliance-officer-ai',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-023',
     href: '/ai-services/ai-saas/ai-customer-success-manager',
@@ -7968,13 +5827,6 @@ export const itServices: Service[] = [
       enterprise: '$2,499/mo — unlimited, custom models, dedicated support',
       custom: 'Contact — on-prem or private cloud deployment'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-customer-success-manager',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-024',
     href: '/ai-services/ai-saas/automated-competitive-intelligence',
@@ -8003,13 +5855,6 @@ export const itServices: Service[] = [
       enterprise: '$1,999/mo — unlimited competitors, custom analysis, dedicated analyst',
       project: 'Contact — one-time competitive deep-dive report'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-competitive-intelligence',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-025',
     href: '/ai-services/ai-saas/ai-powered-contract-negotiation',
@@ -8038,13 +5883,6 @@ export const itServices: Service[] = [
       enterprise: '$2,499/mo — dedicated instance, custom risk models, SLA',
       legal: 'Contact — law firm partnership program'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-contract-negotiation',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-026',
     href: '/ai-services/ai-saas/ai-recruiting-sourcing-platform',
@@ -8073,13 +5911,6 @@ export const itServices: Service[] = [
       growth: '$1,299/mo — 25 open roles, advanced sourcing, employer branding',
       enterprise: '$4,999/mo — unlimited, dedicated sourcer, custom integrations'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-recruiting-sourcing-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-027',
     href: '/ai-services/ai-saas/automated-video-captioning-translation',
@@ -8108,13 +5939,6 @@ export const itServices: Service[] = [
       business: '$299/mo — 1,000 minutes, unlimited translations, API access',
       enterprise: 'Custom — dedicated processing, custom voice models'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-video-captioning-translation',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-028',
     href: '/ai-services/ai-saas/quality-control-vision-system',
@@ -8142,13 +5966,6 @@ export const itServices: Service[] = [
       pro: '$4,999/mo — unlimited inspections, custom defect training, API',
       enterprise: '$14,999/mo — dedicated edge appliances, on-prem install, SLA'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/quality-control-vision-system',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      'address': '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-029',
     href: '/ai-services/ai-saas/automated-tax-compliance-engine',
@@ -8177,13 +5994,6 @@ export const itServices: Service[] = [
       enterprise: '$999/mo — unlimited revenue, global tax (VAT/GST), audit support',
       marketplace: 'Contact — platform-level tax calculation for marketplaces'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-tax-compliance-engine',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      'address': '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-030',
     href: '/ai-services/ai-saas/ai-meeting-notes-action-items',
@@ -8212,13 +6022,6 @@ export const itServices: Service[] = [
       business: '$149/mo — AI summaries, custom workflows, SSO',
       enterprise: 'Contact — on-prem, custom integrations, dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-meeting-notes-action-items',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-031',
     href: '/ai-services/ai-saas/ai-powered-inventory-management',
@@ -8246,13 +6049,6 @@ export const itServices: Service[] = [
       growth: '$699/mo — 10,000 SKUs, full automation, integrations',
       enterprise: '$2,499/mo — unlimited, custom ML models, dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-inventory-management',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-032',
     href: '/ai-services/ai-saas/automated-email-campaign-generator',
@@ -8281,13 +6077,6 @@ export const itServices: Service[] = [
       agency: '$499/mo — client management, white-label, API access',
       enterprise: 'Contact — custom AI training on your brand voice'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-email-campaign-generator',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-033',
     href: '/ai-services/ai-saas/ai-powered-cyber-threat-intelligence',
@@ -8316,13 +6105,6 @@ export const itServices: Service[] = [
       mssp: '$9,999/mo — multi-tenant platform for managed security providers',
       custom: 'Contact — on-prem deployment, custom threat intelligence'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/ai-powered-cyber-threat-intelligence',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'ai-saas-034',
     href: '/ai-services/ai-saas/automated-legal-research-platform',
@@ -8351,13 +6133,6 @@ export const itServices: Service[] = [
       enterprise: '$3,999/mo — unlimited, custom training on your case history, API',
       academic: 'Contact — discounted for law schools and legal clinics'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/ai-saas/automated-legal-research-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-008',
     href: '/it-services/it-saas/automated-it-asset-inventory',
@@ -8385,13 +6160,6 @@ export const itServices: Service[] = [
       business: '$399/mo — 1,000 devices, full lifecycle, compliance reporting',
       enterprise: '$1,299/mo — unlimited, custom integrations, dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/automated-it-asset-inventory',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-009',
     href: '/it-services/it-saas/network-performance-monitoring',
@@ -8420,13 +6188,6 @@ export const itServices: Service[] = [
       enterprise: '$2,999/mo — unlimited, packet capture, dedicated appliance',
       service: 'Contact — managed network monitoring service (24/7 NOC)'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/network-performance-monitoring',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-010',
     href: '/it-services/it-saas/automated-backup-recovery',
@@ -8455,13 +6216,6 @@ export const itServices: Service[] = [
       saas: '$3/user/month — Office 365, Google Workspace backup',
       enterprise: 'Contact — large-scale enterprise backup with dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/automated-backup-recovery',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'it-saas-011',
     href: '/it-services/it-saas/identity-governance-access-management',
@@ -8490,13 +6244,6 @@ export const itServices: Service[] = [
       enterprise: '$4,999/mo — unlimited, custom integrations, dedicated instance',
       custom: 'Contact — hybrid cloud and legacy system integrations'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/identity-governance-access-management',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-007',
     href: '/it-services/micro-saas/uptime-monitoring-alerting',
@@ -8525,13 +6272,6 @@ export const itServices: Service[] = [
       agency: '$99/mo — 500 monitors, white-label status page, API access',
       msp: '$299/mo — unlimited, custom checks, dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/uptime-monitoring-alerting',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-008',
     href: '/it-services/micro-saas/form-builder-with-analytics',
@@ -8560,13 +6300,6 @@ export const itServices: Service[] = [
       business: '$249/mo — unlimited, advanced analytics, SSO',
       enterprise: 'Contact — on-prem, custom database integrations'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/form-builder-with-analytics',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'micro-saas-009',
     href: '/it-services/micro-saas/employee-onboarding-automation',
@@ -8594,13 +6327,6 @@ export const itServices: Service[] = [
       annual: '$8/employee/mo — billed annually (20% discount)',
       enterprise: 'Contact — custom workflows, integrations, dedicated support'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-saas/employee-onboarding-automation',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'special-004',
     href: '/it-services/special/cloud-cost-optimization-audit',
@@ -8629,13 +6355,6 @@ export const itServices: Service[] = [
       enterprise: '$1,500/mo — dedicated cost engineer, implementation support',
       percentage: '15% of first-year savings (performance-based option)'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-special/cloud-cost-optimization-audit',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'special-005',
     href: '/it-services/special/it-due-diligence-for-ma',
@@ -8664,13 +6383,6 @@ export const itServices: Service[] = [
       enterprise: '$75,000+ — large enterprise with multiple business units',
       seller_prep: 'Contact — pre-sale remediation consulting'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-special/it-due-diligence-for-ma',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  },
   {
     id: 'special-006',
     href: '/it-services/special/crisis-incident-response-retainer',
@@ -8699,1022 +6411,7 @@ export const itServices: Service[] = [
       enterprise: '$10,000/mo — unlimited incidents up to 40 hours, dedicated analyst',
       forensics: 'Contact — full digital forensics and expert witness services'
     },
-    contactInfo: {
-      website: 'https://ziontechgroup.com/services/it-special/crisis-incident-response-retainer',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
 ];
-
-];
-export const itSolutions = itServices;
-
-// ── NEW 50 SERVICES ADDED 2026-05-14 ───────────────────────────────────────
-  {
-    id: "ai-new-001",
-    href: "/ai-services/ai-powered-clinical-documentation-for-ehrs",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Powered Clinical Documentation for EHRs",
-    description: "Advanced AI service: AI-Powered Clinical Documentation for EHRs. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-powered-clinical-documentation-for-ehrs",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-002",
-    href: "/ai-services/autonomous-legal-discovery-engine",
-    icon: "🤖",
-    category: "ai",
-    title: "Autonomous Legal Discovery Engine",
-    description: "Advanced AI service: Autonomous Legal Discovery Engine. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/autonomous-legal-discovery-engine",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-003",
-    href: "/ai-services/ai-supply-chain-risk-predictor",
-    icon: "🤖",
-    category: "ai",
-    title: "AI Supply Chain Risk Predictor",
-    description: "Advanced AI service: AI Supply Chain Risk Predictor. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-supply-chain-risk-predictor",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-004",
-    href: "/ai-services/conversational-ai-for-employee-it-support",
-    icon: "🤖",
-    category: "ai",
-    title: "Conversational AI for Employee IT Support",
-    description: "Advanced AI service: Conversational AI for Employee IT Support. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/conversational-ai-for-employee-it-support",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-005",
-    href: "/ai-services/ai-content-localization-and-cultural-adaptation",
-    icon: "🤖",
-    category: "ai",
-    title: "AI Content Localization & Cultural Adaptation",
-    description: "Advanced AI service: AI Content Localization & Cultural Adaptation. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-content-localization-and-cultural-adaptation",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-006",
-    href: "/ai-services/predictive-churn-for-saas-platforms",
-    icon: "🤖",
-    category: "ai",
-    title: "Predictive churn for SaaS platforms",
-    description: "Advanced AI service: Predictive churn for SaaS platforms. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/predictive-churn-for-saas-platforms",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-007",
-    href: "/ai-services/ai-driven-developer-documentation",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Driven Developer Documentation",
-    description: "Advanced AI service: AI-Driven Developer Documentation. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-driven-developer-documentation",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-008",
-    href: "/ai-services/intelligent-invoice-matching-and-ap-automation",
-    icon: "🤖",
-    category: "ai",
-    title: "Intelligent Invoice Matching & AP Automation",
-    description: "Advanced AI service: Intelligent Invoice Matching & AP Automation. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/intelligent-invoice-matching-and-ap-automation",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-009",
-    href: "/ai-services/ai-patient-triage-and-symptom-checker",
-    icon: "🤖",
-    category: "ai",
-    title: "AI Patient Triage & Symptom Checker",
-    description: "Advanced AI service: AI Patient Triage & Symptom Checker. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-patient-triage-and-symptom-checker",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-010",
-    href: "/ai-services/real-time-video-analytics-for-retail",
-    icon: "🤖",
-    category: "ai",
-    title: "Real-Time Video Analytics for Retail",
-    description: "Advanced AI service: Real-Time Video Analytics for Retail. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/real-time-video-analytics-for-retail",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-011",
-    href: "/ai-services/ai-powered-grant-writing-assistant",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Powered Grant Writing Assistant",
-    description: "Advanced AI service: AI-Powered Grant Writing Assistant. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-powered-grant-writing-assistant",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-012",
-    href: "/ai-services/autonomous-code-review-and-security-scanner",
-    icon: "🤖",
-    category: "ai",
-    title: "Autonomous Code Review & Security Scanner",
-    description: "Advanced AI service: Autonomous Code Review & Security Scanner. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/autonomous-code-review-and-security-scanner",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-013",
-    href: "/ai-services/ai-talent-matching-for-tech-hiring",
-    icon: "🤖",
-    category: "ai",
-    title: "AI Talent Matching for Tech Hiring",
-    description: "Advanced AI service: AI Talent Matching for Tech Hiring. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-talent-matching-for-tech-hiring",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-014",
-    href: "/ai-services/smart-energy-optimization-for-buildings",
-    icon: "🤖",
-    category: "ai",
-    title: "Smart Energy Optimization for Buildings",
-    description: "Advanced AI service: Smart Energy Optimization for Buildings. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/smart-energy-optimization-for-buildings",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-015",
-    href: "/ai-services/ai-powered-pr-and-media-monitoring",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Powered PR & Media Monitoring",
-    description: "Advanced AI service: AI-Powered PR & Media Monitoring. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-powered-pr-and-media-monitoring",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-016",
-    href: "/ai-services/automated-financial-statement-analysis",
-    icon: "🤖",
-    category: "ai",
-    title: "Automated Financial Statement Analysis",
-    description: "Advanced AI service: Automated Financial Statement Analysis. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/automated-financial-statement-analysis",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-017",
-    href: "/ai-services/ai-driven-content-repurposing-engine",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Driven Content Repurposing Engine",
-    description: "Advanced AI service: AI-Driven Content Repurposing Engine. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-driven-content-repurposing-engine",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-018",
-    href: "/ai-services/predictive-maintenance-for-manufacturing-equipment",
-    icon: "🤖",
-    category: "ai",
-    title: "Predictive Maintenance for Manufacturing Equipment",
-    description: "Advanced AI service: Predictive Maintenance for Manufacturing Equipment. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/predictive-maintenance-for-manufacturing-equipment",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-019",
-    href: "/ai-services/ai-powered-accessibility-testing-suite",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Powered Accessibility Testing Suite",
-    description: "Advanced AI service: AI-Powered Accessibility Testing Suite. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-powered-accessibility-testing-suite",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-020",
-    href: "/ai-services/conversational-sales-assistant-for-e-commerce",
-    icon: "🤖",
-    category: "ai",
-    title: "Conversational Sales Assistant for E-Commerce",
-    description: "Advanced AI service: Conversational Sales Assistant for E-Commerce. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/conversational-sales-assistant-for-e-commerce",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-021",
-    href: "/ai-services/ai-lab:-autonomous-feature-prioritizer",
-    icon: "🤖",
-    category: "ai",
-    title: "AI Lab: Autonomous Feature Prioritizer",
-    description: "Advanced AI service: AI Lab: Autonomous Feature Prioritizer. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-lab:-autonomous-feature-prioritizer",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-022",
-    href: "/ai-services/ai-powered-competitive-intelligence-dashboard",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Powered Competitive Intelligence Dashboard",
-    description: "Advanced AI service: AI-Powered Competitive Intelligence Dashboard. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-powered-competitive-intelligence-dashboard",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-023",
-    href: "/ai-services/intelligent-supply-chain-carbon-footprint-tracker",
-    icon: "🤖",
-    category: "ai",
-    title: "Intelligent Supply Chain Carbon Footprint Tracker",
-    description: "Advanced AI service: Intelligent Supply Chain Carbon Footprint Tracker. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/intelligent-supply-chain-carbon-footprint-tracker",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-024",
-    href: "/ai-services/ai-powered-customer-onboarding-workflows",
-    icon: "🤖",
-    category: "ai",
-    title: "AI-Powered Customer Onboarding Workflows",
-    description: "Advanced AI service: AI-Powered Customer Onboarding Workflows. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/ai-powered-customer-onboarding-workflows",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "ai-new-025",
-    href: "/ai-services/real-time-fraud-detection-for-fintech",
-    icon: "🤖",
-    category: "ai",
-    title: "Real-Time Fraud Detection for FinTech",
-    description: "Advanced AI service: Real-Time Fraud Detection for FinTech. Deliver cutting-edge intelligence for enterprise workflows.",
-    features: ["AI-powered automation","Scalable cloud-native architecture","Enterprise-grade security"],
-    benefits: ["Increase efficiency","Reduce operational costs","Drive innovation"],
-    pricing: { basic: "99", pro: "299", enterprise: "999" },
-    marketPrice: "$99–$999/mo",
-    link: "/ai-services/real-time-fraud-detection-for-fintech",
-    tags: ["ai","enterprise","2026"]
-  },
-  {
-    id: "it-new-001",
-    href: "/it-services/unified-endpoint-management-as-a-service",
-    icon: "⚙️",
-    category: "it",
-    title: "Unified Endpoint Management as a Service",
-    description: "Enterprise IT service: Unified Endpoint Management as a Service. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/unified-endpoint-management-as-a-service",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-002",
-    href: "/it-services/multi-cloud-cost-visibility-and-optimization",
-    icon: "⚙️",
-    category: "it",
-    title: "Multi-Cloud Cost Visibility & Optimization",
-    description: "Enterprise IT service: Multi-Cloud Cost Visibility & Optimization. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/multi-cloud-cost-visibility-and-optimization",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-003",
-    href: "/it-services/kubernetes-cluster-hardening-and-compliance",
-    icon: "⚙️",
-    category: "it",
-    title: "Kubernetes Cluster Hardening & Compliance",
-    description: "Enterprise IT service: Kubernetes Cluster Hardening & Compliance. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/kubernetes-cluster-hardening-and-compliance",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-004",
-    href: "/it-services/database-as-a-service-with-automated-backups",
-    icon: "⚙️",
-    category: "it",
-    title: "Database-as-a-Service with Automated Backups",
-    description: "Enterprise IT service: Database-as-a-Service with Automated Backups. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/database-as-a-service-with-automated-backups",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-005",
-    href: "/it-services/api-security-testing-and-runtime-protection",
-    icon: "⚙️",
-    category: "it",
-    title: "API Security Testing & Runtime Protection",
-    description: "Enterprise IT service: API Security Testing & Runtime Protection. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/api-security-testing-and-runtime-protection",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-006",
-    href: "/it-services/it-asset-discovery-and-configuration-management",
-    icon: "⚙️",
-    category: "it",
-    title: "IT Asset Discovery & Configuration Management",
-    description: "Enterprise IT service: IT Asset Discovery & Configuration Management. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/it-asset-discovery-and-configuration-management",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-007",
-    href: "/it-services/edge-computing-deployment-and-management",
-    icon: "⚙️",
-    category: "it",
-    title: "Edge Computing Deployment & Management",
-    description: "Enterprise IT service: Edge Computing Deployment & Management. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/edge-computing-deployment-and-management",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-008",
-    href: "/it-services/secure-file-transfer-and-managed-file-transfer",
-    icon: "⚙️",
-    category: "it",
-    title: "Secure File Transfer & Managed File Transfer",
-    description: "Enterprise IT service: Secure File Transfer & Managed File Transfer. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/secure-file-transfer-and-managed-file-transfer",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-009",
-    href: "/it-services/automated-incident-response-(soar)",
-    icon: "⚙️",
-    category: "it",
-    title: "Automated Incident Response (SOAR)",
-    description: "Enterprise IT service: Automated Incident Response (SOAR). Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/automated-incident-response-(soar)",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-010",
-    href: "/it-services/enterprise-identity-governance-and-administration",
-    icon: "⚙️",
-    category: "it",
-    title: "Enterprise Identity Governance & Administration",
-    description: "Enterprise IT service: Enterprise Identity Governance & Administration. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/enterprise-identity-governance-and-administration",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-011",
-    href: "/it-services/database-migration-as-a-service",
-    icon: "⚙️",
-    category: "it",
-    title: "Database Migration as a Service",
-    description: "Enterprise IT service: Database Migration as a Service. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/database-migration-as-a-service",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-012",
-    href: "/it-services/cloud-cost-allocation-and-tag-governance",
-    icon: "⚙️",
-    category: "it",
-    title: "Cloud Cost Allocation & Tag Governance",
-    description: "Enterprise IT service: Cloud Cost Allocation & Tag Governance. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/cloud-cost-allocation-and-tag-governance",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-013",
-    href: "/it-services/secure-backup-and-disaster-recovery-as-a-service",
-    icon: "⚙️",
-    category: "it",
-    title: "Secure Backup & Disaster Recovery as a Service",
-    description: "Enterprise IT service: Secure Backup & Disaster Recovery as a Service. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/secure-backup-and-disaster-recovery-as-a-service",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-014",
-    href: "/it-services/container-security-and-runtime-protection",
-    icon: "⚙️",
-    category: "it",
-    title: "Container Security & Runtime Protection",
-    description: "Enterprise IT service: Container Security & Runtime Protection. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/container-security-and-runtime-protection",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-015",
-    href: "/it-services/ai-ready-data-pipeline-builder",
-    icon: "⚙️",
-    category: "it",
-    title: "AI-Ready Data Pipeline Builder",
-    description: "Enterprise IT service: AI-Ready Data Pipeline Builder. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/ai-ready-data-pipeline-builder",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-016",
-    href: "/it-services/it-strategy-and-digital-transformation-consulting",
-    icon: "⚙️",
-    category: "it",
-    title: "IT Strategy & Digital Transformation Consulting",
-    description: "Enterprise IT service: IT Strategy & Digital Transformation Consulting. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/it-strategy-and-digital-transformation-consulting",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-017",
-    href: "/it-services/observability-and-sre-platform-as-a-service",
-    icon: "⚙️",
-    category: "it",
-    title: "Observability & SRE Platform as a Service",
-    description: "Enterprise IT service: Observability & SRE Platform as a Service. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/observability-and-sre-platform-as-a-service",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-018",
-    href: "/it-services/legacy-application-containerization-service",
-    icon: "⚙️",
-    category: "it",
-    title: "Legacy Application Containerization Service",
-    description: "Enterprise IT service: Legacy Application Containerization Service. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/legacy-application-containerization-service",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-019",
-    href: "/it-services/managed-soc-2-compliance-platform",
-    icon: "⚙️",
-    category: "it",
-    title: "Managed SOC 2 Compliance Platform",
-    description: "Enterprise IT service: Managed SOC 2 Compliance Platform. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/managed-soc-2-compliance-platform",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-020",
-    href: "/it-services/enterprise-data-warehouse-modernization",
-    icon: "⚙️",
-    category: "it",
-    title: "Enterprise Data Warehouse Modernization",
-    description: "Enterprise IT service: Enterprise Data Warehouse Modernization. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/enterprise-data-warehouse-modernization",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-021",
-    href: "/it-services/api-gateway-and-developer-portal",
-    icon: "⚙️",
-    category: "it",
-    title: "API Gateway & Developer Portal",
-    description: "Enterprise IT service: API Gateway & Developer Portal. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/api-gateway-and-developer-portal",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-022",
-    href: "/it-services/low-code-integration-platform-as-a-service",
-    icon: "⚙️",
-    category: "it",
-    title: "Low-Code Integration Platform as a Service",
-    description: "Enterprise IT service: Low-Code Integration Platform as a Service. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/low-code-integration-platform-as-a-service",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-023",
-    href: "/it-services/wireless-network-design-and-optimization",
-    icon: "⚙️",
-    category: "it",
-    title: "Wireless Network Design & Optimization",
-    description: "Enterprise IT service: Wireless Network Design & Optimization. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/wireless-network-design-and-optimization",
-    tags: ["it","enterprise","2026"]
-  },
-  {
-    id: "it-new-024",
-    href: "/it-services/unified-communications-and-collaboration-platform",
-    icon: "⚙️",
-    category: "it",
-    title: "Unified Communications & Collaboration Platform",
-    description: "Enterprise IT service: Unified Communications & Collaboration Platform. Robust, scalable, secure.",
-    features: ["24/7 monitoring","SLA-backed","Compliance-ready"],
-    benefits: ["Maximize uptime","Reduce IT overhead","Ensure compliance"],
-    pricing: { basic: "149", pro: "499", enterprise: "1499" },
-    marketPrice: "$149–$1,499/mo",
-    link: "/it-services/unified-communications-and-collaboration-platform",
-    tags: ["it","enterprise","2026"]
-  },
-export const allServices: Service[] = [...aiServices, ...itServices,
-
-  {
-    id: "it-quantum-readiness-assessment",
-    href: "/it-services/quantum-readiness-assessment",
-    icon: "⚛️",
-    category: "it",
-    title: "Quantum Readiness Assessment",
-    description: "Evaluate your cryptographic infrastructure against future quantum threats. We inventory all PKI assets, identify vulnerable algorithms, and produce a migration roadmap to post-quantum cryptography.",
-    features: [
-      "Automated crypto-asset discovery across clouds and data centers",
-      "PQ algorithm readiness score — NIST finalists assessment",
-      "Migration cost estimation and phased plan",
-      "Hybrid cipher deployment guidance",
-      "Executive dashboard with risk heat map"
-    ],
-    benefits: [
-      "Avoids 'harvest now, decrypt later' data breaches",
-      "Meets compliance timelines — e.g., NSA CNS 2.0 deadline 2025",
-      "Smooth transition with zero downtime"
-    ],
-    pricing: { assessment: "4999", full_engagement: "contact" }
-  },
-  {
-    id: "it-edge-computing-deployment",
-    href: "/it-services/edge-computing-deployment",
-    icon: "📡",
-    category: "it",
-    title: "Edge Computing Deployment and Ops",
-    description: "Deploy and manage containerized workloads on distributed edge nodes — factories, retail stores, telco sites. Unified control plane with zero-touch provisioning.",
-    features: [
-      "Kubernetes at the edge — K3s, k0s, MicroK8s",
-      "Over-the-air updates with rollback",
-      "Bandwidth-aware workload placement",
-      "Edge AI model serving — ONNX, TensorFlow Lite",
-      "Offline-first operation and sync queues"
-    ],
-    benefits: [
-      "Reduces latency to <10ms for real-time applications",
-      "Lowers bandwidth costs by up to 60%",
-      "Enables AI inference in disconnected environments"
-    ],
-    pricing: { proof_of_concept: "4999", full_deployment: "contact" }
-  },
-  {
-    id: "it-sustainability-dashboard",
-    href: "/it-services/sustainability-dashboard",
-    icon: "🌱",
-    category: "it",
-    title: "IT Sustainability Dashboard",
-    description: "Track and optimize carbon footprint across your IT estate — data centers, cloud workloads, employee devices, and network. Set reduction targets and auto-generate ESG reports.",
-    features: [
-      "Cloud carbon calculator — AWS, Azure, GCP",
-      "Hardware lifecycle tracking — embodied carbon",
-      "Renewable energy usage % per region",
-      "Automated sustainability recommendations",
-      "ESG report export — GRI, SASB, TCFD frameworks"
-    ],
-    benefits: [
-      "Reduces carbon output by 20–35% in year 1",
-      "Meets investor ESG requirements",
-      "Saves $200K+ annually via right-sizing and reserved instance optimization"
-    ],
-    pricing: { basic: "699", enterprise: "contact" }
-  },
-  {
-    id: "it-chaos-engineering",
-    href: "/it-services/chaos-engineering",
-    icon: "🌪️",
-    category: "it",
-    title: "Chaos Engineering as a Service",
-    description: "Proactively test system resilience by injecting failures — VM kill, network latency, dependency outage — in production-like environments. Improve reliability before incidents happen.",
-    features: [
-      "Custom experiment design for your architecture",
-      "Steady-state hypothesis validation",
-      "Automatic blast radius containment",
-      "Post-experiment forensic reports",
-      "Runbooks updated based on findings"
-    ],
-    benefits: [
-      "Reduces P0 incidents by 50% year-over-year",
-      "Builds confidence in auto-scaling and failover",
-      "Identifies single points of failure before customers do"
-    ],
-    pricing: { per_experiment: "199", retainer: "2499/mo" }
-  },
-  {
-    id: "it-cost-optimization-platform",
-    href: "/it-services/cost-optimization-platform",
-    icon: "💸",
-    category: "it",
-    title: "Cloud Cost Optimization Platform",
-    description: "Automated cost governance for AWS, Azure, and GCP. Right-sizes resources, eliminates waste, and enforces budgets with predictive alerts before overspend.",
-    features: [
-      "Idle resource detection and auto-stop schedules",
-      "Reserved instance and savings plan recommendation engine",
-      "Tag-based cost allocation and showback",
-      "Anomaly detection with root-cause tagging",
-      "Custom budget thresholds with Slack and Teams alerts"
-    ],
-    benefits: [
-      "Saves 25–40% on cloud spend without performance hit",
-      "Prevents bill shock with 7-day spend forecast",
-      "Provides finance-grade cost reporting"
-    ],
-    pricing: { basic: "299", pro: "799", enterprise: "contact" }
-  },
-
-  {
-    id: "ai-voice-cloning-emotion",
-    href: "/ai-services/voice-cloning-emotion",
-    icon: "🎭",
-    category: "ai",
-    title: "Emotional Voice Cloning Studio",
-    description: "Clone any voice with full emotional control — happiness, sadness, anger, urgency — for audiobooks, games, and accessibility. Supports 40+ languages and real-time modulation.",
-    features: [
-      "Zero-shot voice cloning from 10-second sample",
-      "Per-sentence emotion injection (8 basic + complex blends)",
-      "Real-time voice conversion during calls",
-      "Speaker diarization and multi-voice projects",
-      "Ethical consent layer and watermarking"
-    ],
-    benefits: [
-      "Cuts dubbing costs by 70%",
-      "Enables dynamic NPC voices in games",
-      "Restores speech for ALS patients with their own voiceprint"
-    ],
-    pricing: { basic: "99", pro: "299", enterprise: "999" }
-  },
-  {
-    id: "ai-code-audit-security",
-    href: "/ai-services/code-audit-security",
-    icon: "🔐",
-    category: "ai",
-    title: "AI Code Audit and Security Scanner",
-    description: "Deep static analysis that finds complex vulnerabilities — logic bugs, race conditions, crypto misuses — beyond traditional linters. Uses LLMs to understand intent.",
-    features: [
-      "Detects business logic flaws and privilege escalation",
-      "Smart contract audit mode (EVM, Solana, Move)",
-      "Patch suggestion with fix diffs",
-      "SBOM generation and dependency risk scoring",
-      "CI/CD gate integration"
-    ],
-    benefits: [
-      "Prevents 90% of critical vulnerabilities before deployment",
-      "Reduces manual code review time by 60%",
-      "Meets SOC2 and ISO27001 compliance requirements"
-    ],
-    pricing: { basic: "149", pro: "399", team: "1299" }
-  },
-  {
-    id: "ai-meeting-intelligence",
-    href: "/ai-services/meeting-intelligence",
-    icon: "🤖",
-    category: "ai",
-    title: "AI Meeting Intelligence Suite",
-    description: "Autonomous meeting agent that joins Zoom and Teams, transcribes, summarizes decisions, extracts action items with owners and due dates, and pushes to your project tools.",
-    features: [
-      "Real-time transcription in 60+ languages",
-      "Decision to task auto-creation (Asana, Linear, Jira)",
-      "Conflict detection on action item assignments",
-      "Voice print identification and speaker timeline",
-      "Private mode for confidential calls"
-    ],
-    benefits: [
-      "Saves 5–7 hours per week in meeting follow-up",
-      "Zero missed action items or unclear owners",
-      "Searchable knowledge base of all past discussions"
-    ],
-    pricing: { basic: "49", pro: "149", business: "499" }
-  },
-  {
-    id: "ai-fraud-detection-realtime",
-    href: "/ai-services/fraud-detection-realtime",
-    icon: "🛡️",
-    category: "ai",
-    title: "Real-Time Fraud Detection Engine",
-    description: "ML-based fraud detection for fintech, e-commerce, and marketplaces. Adapts to new fraud patterns within hours, not weeks.",
-    features: [
-      "Custom model training on your transaction history",
-      "3D Secure-like challenge without friction",
-      "Synthetic identity detection",
-      "Chargeback evidence auto-packager",
-      "Regulatory reporting dashboard (FFIEC, PSD2)"
-    ],
-    benefits: [
-      "Lowers false positives by 55% vs rule-based systems",
-      "Reduces chargebacks by up to 80%",
-      "Onboards in 48 hours with existing data"
-    ],
-    pricing: { starter: "199", growth: "699", enterprise: "contact" }
-  },
-  {
-    id: "ai-document-redaction",
-    href: "/ai-services/document-redaction",
-    icon: "🔒",
-    category: "ai",
-    title: "AI Document Redaction and PII Removal",
-    description: "Automatically detects and redacts PII, PHI, and sensitive data in documents, PDFs, images, and transcripts. SOC2-compliant audit trail included.",
-    features: [
-      "Named entity recognition across 50+ PII types",
-      "Image-based document OCR and redaction",
-      "Bulk processing with S3 and GCS integration",
-      "Tamper-evident redaction certificates",
-      "Regex custom entity support"
-    ],
-    benefits: [
-      "Preps 10,000 pages for public release in under 1 hour",
-      "Eliminates manual review costs — $0.03/page vs $0.45/page",
-      "Audit-ready for GDPR, HIPAA, CCPA violations"
-    ],
-    pricing: { payg: "0.03/page", subscription: "499/mo" }
-  },
-  {
-    id: "ai-legal-drafting",
-    href: "/ai-services/legal-drafting",
-    icon: "⚖️",
-    category: "ai",
-    title: "AI Legal Document Drafter",
-    description: "Draft contracts, NDAs, term sheets, and privacy policies with jurisdiction-specific clauses. Trained on actual filings from SEC, Companies House, etc.",
-    features: [
-      "Clause library with risk scoring",
-      "Redline comparison against templates",
-      "Obligation tracker with deadline reminders",
-      "Multi-jurisdiction support — 50+ countries",
-      "Law-firm approved templates — ex. Axiom, Latham"
-    ],
-    benefits: [
-      "Cuts first-draft time from 4 hours to 12 minutes",
-      "Reduces outside counsel spend by 35%",
-      "Identifies non-standard clauses before signature"
-    ],
-    pricing: { startup: "299/mo", business: "899/mo", enterprise: "contact" }
-  },
-  {
-    id: "ai-video-dubbing",
-    href: "/ai-services/video-dubbing",
-    icon: "🎬",
-    category: "ai",
-    title: "AI Video Dubbing and Lip-Sync",
-    description: "Translate and dub videos with AI-generated voice plus perfect lip-sync. Supports 70+ languages and preserves speaker intonation and emotion.",
-    features: [
-      "Voice cloning per original speaker",
-      "Phoneme-aware lip movement adjustment",
-      "Background music and sound effect retention",
-      "Subtitle generation in SRT and VTT",
-      "YouTube and TikTok multi-language upload automation"
-    ],
-    benefits: [
-      "Expands global reach without separate shoots",
-      "Saves $15K–$50K per video vs traditional dubbing",
-      "Maintains brand voice consistency across locales"
-    ],
-    pricing: { per_minute: "12", monthly: "contact" }
-  },
-  {
-    id: "ai-supply-chain-predictor",
-    href: "/ai-services/supply-chain-predictor",
-    icon: "🚢",
-    category: "ai",
-    title: "AI Supply Chain Predictor",
-    description: "Predicts supply chain disruptions 14–30 days in advance using multi-source data — weather, geopolitical events, shipping delays, and supplier health scores.",
-    features: [
-      "Demand forecasting with 94% accuracy",
-      "Alternative routing suggestions",
-      "Supplier risk scoring",
-      "Real-time anomaly alerts"
-    ],
-    benefits: [
-      "Reduces stockouts by 35%",
-      "Cuts expedited shipping costs by 22%",
-      "Improves supplier negotiation leverage"
-    ],
-    pricing: { basic: "299", pro: "799", enterprise: "2499" }
-  },
-  {
-    id: "ai-image-upscaling",
-    href: "/ai-services/image-upscaling",
-    icon: "🖼️",
-    category: "ai",
-    title: "AI Image Upscaler and Restorer",
-    description: "Upscale images 4–16× with detail reconstruction. Removes JPEG artifacts, fixes blur, and even colorizes black and white photos with historical accuracy.",
-    features: [
-      "Face-aware upscaling — preserves identity",
-      "Batch processing via API — 10K images/hr",
-      "Lossless PNG optimization post-upscale",
-      "Before and after preview with quality metrics",
-      "On-premise Docker image for air-gapped environments"
-    ],
-    benefits: [
-      "Makes legacy asset libraries print-ready again",
-      "Saves $50K+ in reshoots for archival imagery",
-      "Improves product image conversion by 18% on e-commerce"
-    ],
-    pricing: { payg: "0.05/MP", subscription: "199/mo" }
-  },
-  {
-    id: "ai-chatbot-builder",
-    href: "/ai-services/chatbot-builder",
-    icon: "💬",
-    category: "ai",
-    title: "No-Code AI Chatbot Builder",
-    description: "Create custom GPT-like chatbots trained on your data — docs, FAQs, past tickets — and embed them anywhere. Fine-tune tone, guardrails, and escalation paths in minutes.",
-    features: [
-      "Drag-and-drop conversation flow designer",
-      "Multi-channel deploy — web, WhatsApp, Slack, FB Messenger",
-      "Human handoff with full context preservation",
-      "Analytics dashboard — resolution rate, escalation triggers",
-      "Custom GPT actions — lookup order, create support ticket"
-    ],
-    benefits: [
-      "Handles 65% of routine queries without agents",
-      "Live in <1 hour from data upload",
-      "Improves CSAT by 12 points with instant answers"
-    ],
-    pricing: { starter: "99", business: "299", unlimited: "799" }
-  }];
 // Export as servicesData for backward compatibility
 export const servicesData = {
   aiServices,
