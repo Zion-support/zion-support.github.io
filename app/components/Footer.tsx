@@ -1,3 +1,4 @@
+'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone, MapPin, Sparkles, Mail, Link as LinkIcon, X, GitBranch } from 'lucide-react';
@@ -8,6 +9,7 @@ import {
 } from '../constants/navigation';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
+import SiteHealthBadge from './SiteHealthBadge';
 interface FooterProps {
   className?: string;
   children?: React.ReactNode;
@@ -49,7 +51,10 @@ const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
           <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="relative mb-14 overflow-hidden rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-900/40 via-fuchsia-900/30 to-pink-900/40 p-7 sm:p-10">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(168,85,247,0.12),transparent_60%)]" aria-hidden="true" />
-              <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+              {/* Site Health Status Badge */}
+          <SiteHealthBadge />
+
+          <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-purple-200">
                     Plan your next release
