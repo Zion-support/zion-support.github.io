@@ -683,7 +683,8 @@
     "promotions:confidence:report": "node automation/generate-promotion-confidence-report.cjs",
     "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
     "weekly-blog": "node automation/weekly-blog-generator.js",
-    "generate-seo": "node scripts/generate-seo-assets.cjs"
+    "generate-seo": "node scripts/generate-seo-assets.cjs",
+    "generate-faqs": "node scripts/generate-faqs.cjs"
   },
   "dependencies": {
     "@react-pdf/renderer": "4.5.1",

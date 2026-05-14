@@ -18,6 +18,7 @@ export type ServiceData = {
     phone: string;
     address?: string;
   };
+  faqs?: Array<{ question: string; answer: string }>;
 };
 
 export type ServiceLayoutProps = {
@@ -36,6 +37,7 @@ export default function ServiceLayout({ service, breadcrumbItems }: ServiceLayou
     benefits,
     pricing,
     contactInfo,
+    faqs,
   } = service;
 
   const breadcrumb = breadcrumbItems ?? [
