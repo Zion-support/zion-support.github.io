@@ -1,3 +1,5 @@
+permissions:
+  contents: read
 name: "Autonomous SQLite Retention Policy Manager"
 
 on:
