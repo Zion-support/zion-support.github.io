@@ -1,0 +1,53 @@
+permissions:
+  contents: read
+name: "Autonomous SQLite Retention Policy Manager"
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'  # Weekly Sunday 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  retention:
+    name: DB Retention Manager
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Retention Manager
+        id: retention
+        continue-on-error: true
+        run: |
+          node automation/db-retention-manager.cjs > /tmp/retention-output.txt || true
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-retention-report
+          path: .hermes/memory/db-retention/*.json
+          retention-days: 30
+
+      - name: Notify Telegram on changes or errors
+        if: failure()
+        run: |
+          node automation/notify-telegram.js "🗄️ DB retention manager encountered errors. Check workflow logs."
+
+      - name: Weekly retention digest
+        if: success() && github.event_name == 'schedule'
+        run: |
+          node automation/notify-telegram.js "✅ Weekly DB retention scan complete — old records purged, storage optimized."

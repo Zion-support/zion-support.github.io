@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-04-07T22:17:17.257Z",
+  "status": "warning",
+  "failingChecks": [
+    "node22_runtime",
+    "openclaw_cli_available",
+    "openclaw_auth_contract"
+  ],
+  "checks": [
+    {
+      "name": "node22_runtime",
+      "ok": false,
+      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory"
+    },
+    {
+      "name": "openclaw_cli_available",
+      "ok": false,
+      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory"
+    },
+    {
+      "name": "openclaw_auth_contract",
+      "ok": false,
+      "output": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory",
+      "parsedToken": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory",
+      "responseShape": "plain-text"
+    }
+  ],
+  "recommendations": [
+    "Ensure Node 22 and Openclaw CLI are available in runtime environment.",
+    "Re-authenticate Openclaw/OpenRouter if auth contract checks fail.",
+    "Run npm run openclaw:autonomous-once after remediation."
+  ]
+}

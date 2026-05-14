@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-03-21T16:00:01.757Z",
+  "points": [
+    {
+      "at": "2026-03-21T15:41:38.181Z",
+      "status": "warning",
+      "score": 80,
+      "findings": 2
+    },
+    {
+      "at": "2026-03-21T16:00:01.757Z",
+      "status": "nominal",
+      "score": 100,
+      "findings": 0
+    }
+  ]
+}
