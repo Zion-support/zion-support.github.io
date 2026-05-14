@@ -41,6 +41,13 @@ const nextConfig = {
   },
   // NOTE: output: 'export' does not apply custom headers from next.config.
   // Configure security and cache headers at the hosting/CDN layer.
+
+  // Alias for absolute imports using @/
+  webpack: (config, { isServer }) => {
+    config.resolve.alias['@'] = '/';
+    return config;
+  },
+
 };
 
 export default nextConfig;

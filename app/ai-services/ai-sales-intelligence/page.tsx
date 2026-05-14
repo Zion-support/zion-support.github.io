@@ -1,53 +1,74 @@
-import ProductPageLayout from '../../components/ProductPageLayout';
+import ServiceLayout from '../../components/ServiceLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Sales Intelligence | Zion Tech Group',
-  description: 'Predictive lead scoring, deal risk analysis, conversation coaching, and revenue forecasting.',
-  alternates: { canonical: '/ai-services/ai-sales-intelligence' },
+  title: "AI Sales Intelligence — Zion Tech Group",
+  description: "Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.",
+  keywords: "AI services, IT services, AI Sales Intelligence",
+  openGraph: {
+    title: "AI Sales Intelligence",
+    description: "Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Sales Intelligence",
+    description: "Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
-export default function Page() {
+const service =   {
+    id: 'ai-sales-intelligence',
+    title: 'AI Sales Intelligence',
+    description: 'Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.',
+    features: [
+      'Predictive lead scoring (0-100)',
+      'Sales pipeline forecasting',
+      'Deal risk detection & alerts',
+      'Automated email sequences',
+      'Competitive intelligence briefs'
+    ],
+    benefits: [
+      'Higher conversion rates',
+      'Shorter sales cycles',
+      'Data-driven deal prioritization',
+      'Revenue forecasting accuracy'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '799',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-sales-intelligence',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📈',
+    href: '/ai-services/ai-sales-intelligence',
+    popular: true,
+    category: 'ai'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function AiSalesIntelligencePage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Sales Intelligence',
-        category: 'Enterprise Solutions',
-        description: 'Predictive lead scoring, deal risk analysis, conversation coaching, and revenue forecasting.',
-        iconEmoji: '📈',
-        features: [
-          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
-          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
-          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
-          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
-          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
-          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
-        ],
-        useCases: [
-          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
-          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
-          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
-        ],
-        benefits: [
-          'Reduce costs by 30-60%',
-          'Accelerate delivery 2-10x',
-          '99.9%+ uptime SLAs',
-          'Built-in security & compliance',
-          'Dedicated expert team',
-          'Continuous optimization',
-        ],
-        ctaLabel: 'Get Started with AI Sales Intelligence',
-        pricing: [
-          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
-          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
-        ],
-        contact: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          address: '364 E Main St STE 1008, Middletown DE 19709',
-        },
-      }}
-    />
+    <ServiceLayout service={mergedService} />
   );
 }

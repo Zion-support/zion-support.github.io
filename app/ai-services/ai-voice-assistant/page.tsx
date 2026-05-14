@@ -1,53 +1,73 @@
-import ProductPageLayout from '../../components/ProductPageLayout';
+import ServiceLayout from '../../components/ServiceLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Voice Assistant and Conversational IVR | Zion Tech Group',
-  description: 'Intelligent voice assistants for customer service and scheduling with natural language understanding and human escalation.',
-  alternates: { canonical: '/ai-services/ai-voice-assistant' },
+  title: "AI Voice Assistant — Zion Tech Group",
+  description: "Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.",
+  keywords: "AI services, IT services, AI Voice Assistant",
+  openGraph: {
+    title: "AI Voice Assistant",
+    description: "Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Voice Assistant",
+    description: "Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
-export default function Page() {
+const service =   {
+    id: 'ai-voice-assistant',
+    title: 'AI Voice Assistant',
+    description: 'Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.',
+    features: [
+      'Natural language voice processing',
+      'Multi-language support (50+ languages)',
+      'CRM & ERP integration',
+      'Real-time transcription & analytics',
+      'Custom wake words & voice branding'
+    ],
+    benefits: [
+      'Handle 80% of routine calls automatically',
+      '24/7 multilingual support',
+      'Seamless CRM workflow integration',
+      'Reduced call center costs'
+    ],
+    pricing: {
+      basic: '349',
+      pro: '799',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-voice-assistant',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🎙️',
+    href: '/ai-services/ai-voice-assistant',
+    category: 'ai'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function AiVoiceAssistantPage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Voice Assistant and Conversational IVR',
-        category: 'AI Services',
-        description: 'Intelligent voice assistants for customer service and scheduling with natural language understanding and human escalation.',
-        iconEmoji: '🎙',
-        features: [
-          { title: 'AI-Powered Analysis', description: 'Machine learning models trained on industry-specific data.' },
-          { title: 'Real-Time Processing', description: 'Instant insights and alerts with sub-second response times.' },
-          { title: 'Seamless Integration', description: 'REST APIs, webhooks, and pre-built connectors.' },
-          { title: 'Enterprise Security', description: 'SOC 2 certified with encryption and role-based access.' },
-          { title: 'Custom Dashboards', description: 'Tailored visualizations for your KPIs.' },
-          { title: '24/7 Support', description: 'Always-on infrastructure with dedicated support.' },
-        ],
-        useCases: [
-          { title: 'Enterprise', description: 'Full-scale deployment across departments.', icon: '\U0001F3E2' },
-          { title: 'Mid-Market', description: 'Tailored for growing organizations.', icon: '\U0001F4C8' },
-          { title: 'Regulated', description: 'Compliance-ready for healthcare, finance, and gov.', icon: '\U0001F512' },
-        ],
-        benefits: [
-          'Reduce costs by 30-50%',
-          'Accelerate decisions with AI insights',
-          'Eliminate manual overhead',
-          'Scale with your business',
-          'Meet compliance out of the box',
-          'Achieve ROI within 90 days',
-        ],
-        ctaLabel: 'Schedule Your Consultation',
-        pricing: [
-          { tier: 'Starter', price: '$599', period: '/mo', features: ['Core features', 'Email support'] },
-          { tier: 'Professional', price: '$1299', period: '/mo', features: ['All Starter', 'Priority support', 'API access'] },
-          { tier: 'Enterprise', price: '$2999', period: '/mo', features: ['Everything', '24/7 support', 'SLA', 'On-premise'] },
-        ],
-        contact: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          address: '364 E Main St STE 1008, Middletown DE 19709',
-        },
-      }}
-    />
+    <ServiceLayout service={mergedService} />
   );
 }

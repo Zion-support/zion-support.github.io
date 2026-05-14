@@ -1,53 +1,55 @@
-import ProductPageLayout from '../../components/ProductPageLayout';
+import ServiceLayout from '../../components/ServiceLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Document Intelligence | Zion Tech Group',
-  description: '99%%+ accuracy OCR, intelligent classification, field-level extraction, and ERP validation.',
-  alternates: { canonical: '/ai-services/ai-document-intelligence' },
+  title: "AI Document Intelligence — Zion Tech Group",
+  description: "End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.",
+  keywords: "AI services, IT services, AI Document Intelligence",
+  openGraph: {
+    title: "AI Document Intelligence",
+    description: "End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Document Intelligence",
+    description: "End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
-export default function Page() {
+const service =   {
+    id: 'ai-document-intelligence',
+    title: 'AI Document Intelligence',
+    description: 'End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.',
+    features: ['99%+ accuracy AI-powered OCR', 'Intelligent document classification', 'Field-level structured data extraction', 'ERP/CRM validation & reconciliation', 'Automated approval workflow triggers'],
+    benefits: ['Eliminate 90% of manual data entry', 'Process documents 50x faster', 'ERP-ready structured output', 'Immutable audit trail'],
+    pricing: { basic: '449', pro: '999', enterprise: '2499' },
+    contactInfo: { website: '/ai-services/ai-document-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📄',
+    href: '/ai-services/ai-document-intelligence',
+    popular: true,
+    category: 'ai'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function AiDocumentIntelligencePage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Document Intelligence',
-        category: 'Enterprise Solutions',
-        description: '99%%+ accuracy OCR, intelligent classification, field-level extraction, and ERP validation.',
-        iconEmoji: '📄',
-        features: [
-          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
-          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
-          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
-          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
-          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
-          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
-        ],
-        useCases: [
-          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
-          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
-          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
-        ],
-        benefits: [
-          'Reduce costs by 30-60%',
-          'Accelerate delivery 2-10x',
-          '99.9%+ uptime SLAs',
-          'Built-in security & compliance',
-          'Dedicated expert team',
-          'Continuous optimization',
-        ],
-        ctaLabel: 'Get Started with AI Document Intelligence',
-        pricing: [
-          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
-          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
-        ],
-        contact: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          address: '364 E Main St STE 1008, Middletown DE 19709',
-        },
-      }}
-    />
+    <ServiceLayout service={mergedService} />
   );
 }

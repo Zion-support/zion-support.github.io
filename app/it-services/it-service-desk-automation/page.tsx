@@ -1,19 +1,54 @@
-'use client';
+import ServiceLayout from '../../components/ServiceLayout';
+import type { Metadata } from 'next';
 
-import { motion } from 'framer-motion';
-import { CheckCircle, Star, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+export const metadata: Metadata = {
+  title: "IT Service Desk Automation — Zion Tech Group",
+  description: "AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.",
+  keywords: "AI services, IT services, IT Service Desk Automation",
+  openGraph: {
+    title: "IT Service Desk Automation",
+    description: "AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IT Service Desk Automation",
+    description: "AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
-export default function ITServiceDeskAutomation() {
-  const features = ['Intelligent ticket classification', 'Auto-resolution engine', 'Self-service knowledge base', 'SLA monitoring and escalation', 'Performance analytics'];
-  const benefits = ['Resolve 40% of tickets automatically', 'Reduce average response time by 60%', 'Improve end-user satisfaction', 'Lower IT support costs'];
+const service =   {
+    id: 'it-service-desk-automation',
+    title: 'IT Service Desk Automation',
+    description: 'AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.',
+    features: ['Intelligent ticket classification', 'Auto-resolution engine', 'Self-service knowledge base', 'SLA monitoring and escalation', 'Performance analytics'],
+    benefits: ['Resolve 40% of tickets automatically', 'Reduce average response time by 60%', 'Improve end-user satisfaction', 'Lower IT support costs'],
+    pricing: { basic: '499', pro: '1199', enterprise: '3499' },
+    contactInfo: { website: '/it-services/it-service-desk-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎧',
+    href: '/it-services/it-service-desk-automation',
+    category: 'it'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function ItServiceDeskAutomationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <section className="py-20 px-6"><div className="max-w-6xl mx-auto"><motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center"><span className="text-6xl mb-4 block">🎧</span><h1 className="text-4xl md:text-5xl font-bold text-white mb-4">IT Service Desk Automation</h1><p className="text-xl text-slate-400 max-w-3xl mx-auto">AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.</p></motion.div></div></section>
-      <section className="py-16 px-6"><div className="max-w-6xl mx-auto"><h2 className="text-3xl font-bold text-white mb-8 text-center">Core Capabilities</h2><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{features.map((f, i) => (<motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"><CheckCircle className="w-5 h-5 text-blue-400 inline mr-2" /><span className="text-white font-semibold">{f}</span></motion.div>))}</div></div></section>
-      <section className="py-16 px-6 bg-slate-800/30"><div className="max-w-6xl mx-auto"><h2 className="text-3xl font-bold text-white mb-8 text-center">Business Benefits</h2><div className="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">{benefits.map((b, i) => (<motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-start gap-3 bg-slate-800/50 border border-slate-700/50 rounded-lg p-4"><Star className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /><span className="text-slate-300">{b}</span></motion.div>))}</div></div></section>
-      <section className="py-16 px-6"><div className="max-w-6xl mx-auto"><h2 className="text-3xl font-bold text-white mb-4 text-center">Transparent Pricing</h2><p className="text-slate-400 text-center mb-10">Average market: $300–$700/mo for intelligent ITSM platforms.</p><div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"><div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"><h3 className="text-slate-400 font-medium mb-2">Starter</h3><p className="text-3xl font-bold text-white mb-4">$499/mo</p><ul className="text-left space-y-2 text-slate-400 text-sm mb-6"><li>Ticket classification</li><li>Basic knowledge base</li><li>SLA monitoring</li></ul><Link href="/consultation" className="block w-full py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-center">Get Started</Link></div><div className="bg-blue-600/20 border-2 border-blue-500 rounded-xl p-6 text-center relative"><span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Most Popular</span><h3 className="text-blue-400 font-medium mb-2">Professional</h3><p className="text-3xl font-bold text-white mb-4">$1,199/mo</p><ul className="text-left space-y-2 text-slate-400 text-sm mb-6"><li>Auto-resolution engine</li><li>Advanced analytics</li><li>Priority support</li><li>Multi-site</li></ul><Link href="/consultation" className="block w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center">Get Started</Link></div><div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"><h3 className="text-purple-400 font-medium mb-2">Enterprise</h3><p className="text-3xl font-bold text-white mb-4">$3,499/mo</p><ul className="text-left space-y-2 text-slate-400 text-sm mb-6"><li>Full AI automation</li><li>Custom integrations</li><li>Dedicated support</li><li>Enterprise SLA</li></ul><Link href="/consultation" className="block w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-center">Contact Sales</Link></div></div></div></section>
-      <section className="py-16 px-6 bg-slate-800/30"><div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl font-bold text-white mb-6">Transform Your IT Service Desk</h2><div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"><Link href="/consultation" className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">Schedule Free Consultation <ArrowRight className="w-4 h-4" /></Link><Link href="/services" className="inline-flex items-center gap-2 px-8 py-3 border border-slate-600 hover:border-slate-500 text-white rounded-lg font-medium transition-colors">Browse Services</Link></div><div className="text-slate-400 text-sm space-y-1"><p><Phone className="w-4 h-4 inline mr-1" /> +1 302 464 0950</p><p><Mail className="w-4 h-4 inline mr-1" /> kleber@ziontechgroup.com</p><p><MapPin className="w-4 h-4 inline mr-1" /> 364 E Main St STE 1008 Middletown DE 19709</p></div></div></section>
-    </div>
+    <ServiceLayout service={mergedService} />
   );
 }

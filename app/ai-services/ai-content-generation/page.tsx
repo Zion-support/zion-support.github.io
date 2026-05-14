@@ -1,53 +1,73 @@
-import ProductPageLayout from '../../components/ProductPageLayout';
+import ServiceLayout from '../../components/ServiceLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Content Generation | Zion Tech Group',
-  description: 'Enterprise-scale content engine producing blogs, ad copy, social campaigns, product descriptions, and landing pages with brand voice and SEO optimization.',
-  alternates: { canonical: '/ai-services/ai-content-generation' },
+  title: "AI Content Generation — Zion Tech Group",
+  description: "Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.",
+  keywords: "AI services, IT services, AI Content Generation",
+  openGraph: {
+    title: "AI Content Generation",
+    description: "Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Content Generation",
+    description: "Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
-export default function Page() {
+const service =   {
+    id: 'ai-content-generation',
+    title: 'AI Content Generation',
+    description: 'Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.',
+    features: [
+      'Blog post & article generation',
+      'Social media content creation',
+      'SEO-optimized copywriting',
+      'Ad copy & landing page text',
+      'Brand voice customization'
+    ],
+    benefits: [
+      '10x content production speed',
+      'Consistent brand messaging',
+      'SEO-optimized output',
+      'Reduced content creation costs'
+    ],
+    pricing: {
+      basic: '149',
+      pro: '349',
+      enterprise: '799'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-content-generation',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '✍️',
+    href: '/ai-services/ai-content-generation',
+    category: 'ai'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function AiContentGenerationPage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Content Generation',
-        category: 'Enterprise Solutions',
-        description: 'Enterprise-scale content engine producing blogs, ad copy, social campaigns, product descriptions, and landing pages with brand voice and SEO optimization.',
-        iconEmoji: '✍️',
-        features: [
-          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
-          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
-          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
-          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
-          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
-          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
-        ],
-        useCases: [
-          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
-          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
-          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
-        ],
-        benefits: [
-          'Reduce costs by 30-60%',
-          'Accelerate delivery 2-10x',
-          '99.9%+ uptime SLAs',
-          'Built-in security & compliance',
-          'Dedicated expert team',
-          'Continuous optimization',
-        ],
-        ctaLabel: 'Get Started with AI Content Generation',
-        pricing: [
-          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
-          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
-        ],
-        contact: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          address: '364 E Main St STE 1008, Middletown DE 19709',
-        },
-      }}
-    />
+    <ServiceLayout service={mergedService} />
   );
 }

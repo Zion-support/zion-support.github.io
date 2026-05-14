@@ -1,53 +1,54 @@
-import ProductPageLayout from '../../components/ProductPageLayout';
+import ServiceLayout from '../../components/ServiceLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Code Reviewer Pro | Zion Tech Group',
-  description: 'Static analysis across 50+ languages, OWASP scanning, and PR-integrated review.',
-  alternates: { canonical: '/ai-services/ai-code-reviewer-pro' },
+  title: "AI Code Reviewer Pro — Zion Tech Group",
+  description: "Automated code review that catches bugs, security issues, performance problems, and style violations before production.",
+  keywords: "AI services, IT services, AI Code Reviewer Pro",
+  openGraph: {
+    title: "AI Code Reviewer Pro",
+    description: "Automated code review that catches bugs, security issues, performance problems, and style violations before production.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Code Reviewer Pro",
+    description: "Automated code review that catches bugs, security issues, performance problems, and style violations before production."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
-export default function Page() {
+const service =   {
+    id: 'ai-code-reviewer-pro',
+    title: 'AI Code Reviewer Pro',
+    description: 'Automated code review that catches bugs, security issues, performance problems, and style violations before production.',
+    features: ['Deep code analysis across 50+ languages', 'OWASP Top 10 vulnerability scanning', 'Performance suggestions with benchmarks', 'Team coding standards enforcement', 'PR integration — GitHub, GitLab, Bitbucket', 'Custom rules engine for team-specific checks'],
+    benefits: ['Catch 80% of bugs before production', 'Automated security vulnerability scanning', 'PR integration with inline comments', 'Team custom rules enforcement', 'Reduces senior review time by 60%', 'Supports 50+ programming languages'],
+    pricing: { basic: '69', pro: '199', enterprise: '499' },
+    contactInfo: { website: '/ai-services/ai-code-reviewer-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔍',
+    href: '/ai-services/ai-code-reviewer-pro',
+    category: 'ai'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function AiCodeReviewerProPage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Code Reviewer Pro',
-        category: 'Enterprise Solutions',
-        description: 'Static analysis across 50+ languages, OWASP scanning, and PR-integrated review.',
-        iconEmoji: '🔍',
-        features: [
-          { title: 'Expert Consulting', description: 'Work with certified specialists who deliver proven enterprise transformations across industries.' },
-          { title: 'Custom Implementation', description: 'Tailored solutions for your specific infrastructure, requirements, and compliance environment.' },
-          { title: 'AI-Powered Automation', description: 'Integrate AI throughout for faster results, continuous optimization, and reduced overhead.' },
-          { title: 'Scalable Architecture', description: 'Built from day one to scale from startup to enterprise without re-architecture.' },
-          { title: '24/7 Support & Monitoring', description: 'Round-the-clock monitoring, proactive maintenance, and dedicated critical support.' },
-          { title: 'Compliance & Security', description: 'SOC 2, ISO 27001, HIPAA, GDPR compliance built into every solution.' },
-        ],
-        useCases: [
-          { title: 'Digital Transformation', description: 'Modernize legacy processes with AI and cloud, cutting costs by 40% while improving performance.', icon: '🏢' },
-          { title: 'Operational Excellence', description: 'Automate operations, reduce manual work, build self-healing systems.', icon: '⚡' },
-          { title: 'Competitive Advantage', description: 'Outperform through faster delivery, better insights, and lower costs.', icon: '🚀' },
-        ],
-        benefits: [
-          'Reduce costs by 30-60%',
-          'Accelerate delivery 2-10x',
-          '99.9%+ uptime SLAs',
-          'Built-in security & compliance',
-          'Dedicated expert team',
-          'Continuous optimization',
-        ],
-        ctaLabel: 'Get Started with AI Code Reviewer Pro',
-        pricing: [
-          { tier: 'Starter', price: 'Custom', period: '', features: ['Initial assessment & roadmap', 'Email support', 'Standard SLA', 'Core delivery'], popular: false },
-          { tier: 'Professional', price: 'Custom', period: '/month', features: ['Full platform access', '24/7 priority support', '99.95% SLA', 'Dedicated account manager', 'Custom integrations'], popular: true },
-          { tier: 'Enterprise', price: 'Custom', period: '', features: ['Unlimited scope', 'Dedicated engineering team', '99.99% SLA', 'On-premise option', 'Custom development'], popular: false },
-        ],
-        contact: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          address: '364 E Main St STE 1008, Middletown DE 19709',
-        },
-      }}
-    />
+    <ServiceLayout service={mergedService} />
   );
 }

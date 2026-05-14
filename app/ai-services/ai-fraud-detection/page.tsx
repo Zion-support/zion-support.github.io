@@ -1,53 +1,73 @@
-import ProductPageLayout from '../../components/ProductPageLayout';
+import ServiceLayout from '../../components/ServiceLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Financial Fraud Detection and Prevention | Zion Tech Group',
-  description: 'Real-time transaction monitoring with deep learning anomaly detection and automated case management for banking and fintech.',
-  alternates: { canonical: '/ai-services/ai-fraud-detection' },
+  title: "AI Fraud Detection — Zion Tech Group",
+  description: "Real-time fraud prevention using ML anomaly detection, behavioral analysis, and rule-based scoring for transactions and user activity.",
+  keywords: "AI services, IT services, AI Fraud Detection",
+  openGraph: {
+    title: "AI Fraud Detection",
+    description: "Real-time fraud prevention using ML anomaly detection, behavioral analysis, and rule-based scoring for transactions and user activity.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Tech Group"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Fraud Detection",
+    description: "Real-time fraud prevention using ML anomaly detection, behavioral analysis, and rule-based scoring for transactions and user activity."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
-export default function Page() {
+const service =   {
+    id: 'ai-fraud-detection',
+    title: 'AI Fraud Detection',
+    description: 'Real-time fraud prevention using ML anomaly detection, behavioral analysis, and rule-based scoring for transactions and user activity.',
+    features: [
+      'Real-time transaction scoring',
+      'Behavioral biometrics analysis',
+      'Anomaly pattern detection',
+      'Chargeback prediction & prevention',
+      'AML/KYC compliance screening'
+    ],
+    benefits: [
+      '99.5% fraud detection accuracy',
+      'Reduced false positives by 60%',
+      'Regulatory compliance automation',
+      'Real-time alerting & blocking'
+    ],
+    pricing: {
+      basic: '599',
+      pro: '1299',
+      enterprise: '3499'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-fraud-detection',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔐',
+    href: '/ai-services/ai-fraud-detection',
+    category: 'ai'
+  }
+;
+
+const mergedService = {
+  ...service,
+  contactInfo: {
+    website: 'https://ziontechgroup.com',
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  }
+};
+
+export default function AiFraudDetectionPage() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'AI Financial Fraud Detection and Prevention',
-        category: 'AI Services',
-        description: 'Real-time transaction monitoring with deep learning anomaly detection and automated case management for banking and fintech.',
-        iconEmoji: '🛡',
-        features: [
-          { title: 'AI-Powered Analysis', description: 'Machine learning models trained on industry-specific data for superior accuracy.' },
-          { title: 'Real-Time Processing', description: 'Instant insights and alerts with sub-second response times.' },
-          { title: 'Seamless Integration', description: 'REST API, webhooks, and pre-built connectors for common enterprise systems.' },
-          { title: 'Enterprise Security', description: 'SOC 2 Type II certified with end-to-end encryption and role-based access.' },
-          { title: 'Custom Dashboards', description: 'Build and share visualizations tailored to your KPIs.' },
-          { title: '24/7 Monitoring and Support', description: 'Always-on infrastructure with dedicated technical support.' },
-        ],
-        useCases: [
-          { title: 'Enterprise Deployment', description: 'Full-scale implementation across multiple departments and regions.', icon: '\U0001F3E2' },
-          { title: 'Mid-Market', description: 'Right-sized solutions for growing companies with specific needs.', icon: '\U0001F4C8' },
-          { title: 'Regulated Industries', description: 'Compliance-ready deployments for healthcare, finance, and government.', icon: '\U0001F512' },
-        ],
-        benefits: [
-          'Reduce operational costs by 30-50%',
-          'Accelerate decision-making with real-time AI insights',
-          'Eliminate manual analysis and reporting overhead',
-          'Scale seamlessly with your business growth',
-          'Meet compliance requirements out of the box',
-          'Achieve ROI within the first 90 days',
-        ],
-        ctaLabel: 'Schedule Your Consultation',
-        pricing: [
-          { tier: 'Starter', price: '$599', period: '/month', features: ['Core AI features', 'Up to 10K requests/month', 'Standard analytics', 'Email support'] },
-          { tier: 'Professional', price: '$1299', period: '/month', features: ['All Starter features', 'Up to 100K requests/month', 'Advanced analytics', 'Priority support', 'API access'] },
-          { tier: 'Enterprise', price: '$2999', period: '/month', features: ['Everything in Pro', 'Unlimited requests', 'Dedicated model training', '24/7 support', 'SLA guarantee', 'On-premise option'] },
-        ],
-        contact: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          address: '364 E Main St STE 1008, Middletown DE 19709',
-        },
-      }}
-    />
+    <ServiceLayout service={mergedService} />
   );
 }
