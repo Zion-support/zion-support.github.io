@@ -29,6 +29,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Search', href: '/search' },
   { name: 'Pricing Calculator', href: '/pricing-calculator' },
   { name: 'Site Health Monitor', href: '/status' },
+  { name: 'Client Portal', href: '/client-status/demo' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Innovation Bundles', href: '/innovation-bundles' },
   { name: 'Community', href: '/community' },
