@@ -201,6 +201,22 @@ export default function ServiceLayout({ service, breadcrumbItems }: ServiceLayou
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
+
+      {/* ── Service Configurator CTA ─────────────────────────────────────────────── */}
+      <section className="my-16 p-8 gradient-bg rounded-2xl text-center">
+        <h3 className="text-2xl font-bold mb-4">Build Your Own Custom Solution</h3>
+        <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+          Mix and match services across our catalog. The interactive configurator creates a
+          tailored bundle, calculates your investment, and generates a formal proposal instantly.
+        </p>
+        <a
+          href="/configurator"
+          className="inline-block bg-accent hover:bg-accent-light text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
+        >
+          Open Configurator
+        </a>
+      </section>
+
               href={`tel:${contactInfo.phone}`}
               className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-6 py-3 font-semibold text-white transition hover:bg-purple-500"
             >
@@ -212,6 +228,22 @@ export default function ServiceLayout({ service, breadcrumbItems }: ServiceLayou
             >
               ✉️ {contactInfo.email}
             </Link>
+
+      {/* ── Service Configurator CTA ─────────────────────────────────────────────── */}
+      <section className="my-16 p-8 gradient-bg rounded-2xl text-center">
+        <h3 className="text-2xl font-bold mb-4">Build Your Own Custom Solution</h3>
+        <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+          Mix and match services across our catalog. The interactive configurator creates a
+          tailored bundle, calculates your investment, and generates a formal proposal instantly.
+        </p>
+        <a
+          href="/configurator"
+          className="inline-block bg-accent hover:bg-accent-light text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
+        >
+          Open Configurator
+        </a>
+      </section>
+
           </div>
           {contactInfo.address && (
             <p className="mt-4 text-sm text-slate-400">
