@@ -686,11 +686,11 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "4.5.1",
-    "@storybook/react-vite": "^10.3.1",
+    "@storybook/react-vite": "^10.4.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "glob": "^13.0.6",
-    "lucide-react": "^1.6.0",
+    "lucide-react": "^1.16.0",
     "next": "16.2.0",
     "node-cron": "^4.2.1",
     "react": "^19.2.4",
@@ -698,8 +698,8 @@
     "react-dom": "^19.2.4",
     "react-helmet-async": "^3.0.0",
     "react-hot-toast": "2.6.0",
-    "react-router-dom": "^7.9.4",
-    "tailwind-merge": "^3.5.0"
+    "react-router-dom": "^7.15.1",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
