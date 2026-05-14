@@ -6,8 +6,9 @@
  */
 
 import { ollamaChat, ollamaChatStream, ollamaHealthCheck } from '../lib/ollama-provider.cjs';
+import { callFreeCloudLLM } from '../lib/free-llm-provider.ts';
 
-export type LLMProvider = 'openai' | 'anthropic' | 'ollama' | 'auto';
+export type LLMProvider = 'openai' | 'anthropic' | 'freecloud' | 'ollama' | 'auto';
 
 export interface ChatOptions {
   provider?: LLMProvider;
@@ -55,29 +56,35 @@ export async function routeChat(
   if (provider === 'anthropic') {
     return await callAnthropic(messages, rest);
   }
+  if (provider === 'freecloud') {
+    const { content } = await callFreeCloudLLM(messages, { temperature: rest.temperature, model: rest.model });
+    return { content, provider: 'freecloud', model: rest.model || 'auto' };
+  }
   if (provider === 'ollama' || forceLocal) {
     const content = await ollamaChat(messages, { ...rest });
     return { content, provider: 'ollama', model: rest.model || 'qwen3:4b' };
   }
 
-  // 2. Auto mode: try cloud first, fallback to local
+  // 2. Auto mode: try cloud first, then free providers, then local
   if (!forceLocal) {
     try {
-      // Quick check — could also attempt a test call
       const cloudOk = await Promise.race([
         checkCloudAvailability(),
         new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000)),
       ]);
       if (cloudOk) {
-        // Prefer OpenAI for speed + quality unless Anthropic specified via env
         const useAnthropic = process.env.PREFER_ANTHROPIC === 'true';
-        if (useAnthropic) {
-          return await callAnthropic(messages, rest);
-        }
-        return await callOpenAI(messages, rest);
+        return useAnthropic ? await callAnthropic(messages, rest) : await callOpenAI(messages, rest);
       }
     } catch {
-      // Cloud failed, fallthrough to local
+      // Cloud failed, continue to free tier
+    }
+    // Try free cloud LLMs before local Ollama
+    try {
+      const { content } = await callFreeCloudLLM(messages, { temperature: rest.temperature });
+      return { content, provider: 'freecloud', model: 'auto' };
+    } catch (e) {
+      console.warn('Free cloud providers failed, falling back to Ollama:', e.message);
     }
   }
 
