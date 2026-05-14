@@ -199,3 +199,41 @@ For detailed component documentation, see the [docs/components](./docs/component
 
 *Last updated: 2026-04-07T00:58:03.321Z*
 
+
+
+## Autonomous Agents
+
+### Email Responder v2
+The **Smart Email Responder** automatically processes inbound emails using AI.
+
+**Features:**
+- IMAP-based polling (configurable interval)
+- LLM-powered classification: intent, sub-intent, urgency, sentiment
+- Auto-detects spam & high-priority (requires human review)
+- Generates personalized replies (not templates)
+- Priority queue + follow-up scheduler (48h touch for sales)
+- Dry-run by default — safe to deploy
+
+**Setup:**
+1. Copy `.env.example` to `.env` and fill IMAP credentials
+2. Ensure `EMAIL_DRY_RUN=false` to enable auto-send (once verified)
+3. Run daemon: `node scripts/email-responder.cjs`
+4. Or trigger one cycle: `curl -X POST http://localhost:3000/api/email/process`
+
+**API Endpoints:**
+- `POST /api/email/process` — trigger one processing cycle
+- `GET /api/email/stats` — dashboard (counts, intents, latest processed)
+
+**Cron Deployment:**
+```bash
+# Run every 5 minutes
+*/5 * * * * node /path/to/scripts/email-responder.cjs >> automation/reports/email-cron.log 2>&1
+```
+
+**Queue Storage:** `automation/email-queue/` (pending, processed, failed, followups)
+
+---
+
+### AI Service Recommender
+`POST /api/recommend` — matches user needs to services using LLM.
+
