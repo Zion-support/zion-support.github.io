@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-05-14T02:28:53.134Z",
+    "generatedAt": "2026-05-14T05:36:49.857Z",
     "totalWorkflows": 391,
     "warningCount": 367,
     "criticalCount": 24,
     "totals": {
       "missingPermissions": 0,
       "unpinnedActions": 85,
-      "missingJobTimeouts": 397
+      "missingJobTimeouts": 399
     }
   },
   "workflows": [
@@ -3196,10 +3196,10 @@
         "hasPermissions": true,
         "unpinnedActionsCount": 0,
         "hasAnyTimeout": true,
-        "missingJobTimeouts": 1
+        "missingJobTimeouts": 3
       },
       "warnings": [
-        "jobs missing timeout-minutes (1)"
+        "jobs missing timeout-minutes (3)"
       ]
     },
     {
