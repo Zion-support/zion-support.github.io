@@ -3211,7 +3211,296 @@ export const aiServices: Service[] = [
      icon: '💬',
      href: '/ai-services/ai-powered-question-answering',
      category: 'ai'
-   },
+   },  {
+    id: 'ai-dyslexia-assist',
+    title: 'AI Dyslexia Assist',
+    description: `Real-time reading & writing assistance for dyslexic users with personalized text-to-speech, word prediction, and phonetic correction.`,
+    features: ["Live text highlighting", "Custom font recommendations", "Smart spell-check tuned for dyslexia", "Audio playback with adjustable speed"],
+    benefits: ["Improves reading speed by up to 40%", "Reduces writing errors by 60%", "Boosts confidence in professional communication"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-dyslexia-assist',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📖',
+    href: '/ai-services/ai-dyslexia-assist',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-supply-chain-predictor',
+    title: 'AI Supply Chain Predictor',
+    description: `Predicts supply chain disruptions 14–30 days in advance using multi-source data: weather, geopolitical events, shipping delays, and supplier health scores.`,
+    features: ["Demand forecasting with 94% accuracy", "Alternative routing suggestions", "Supplier risk scoring", "Real-time anomaly alerts"],
+    benefits: ["Reduces stockouts by 35%", "Cuts expedited shipping costs by 22%", "Improves supplier negotiation leverage"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-supply-chain-predictor',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚢',
+    href: '/ai-services/ai-supply-chain-predictor',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-contract-review',
+    title: 'AI Contract Review Assistant',
+    description: `Automatically reviews legal contracts, flags risky clauses, suggests amendments, and benchmarks against industry standards.`,
+    features: ["Clause risk scoring (1-10)", "Comparison with 200K+ public contracts", "AI-suggested redlines", "Compliance checklist generation"],
+    benefits: ["Cuts review time from hours to minutes", "Catches 95% of standard risks", "Reduces outside counsel dependency"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-contract-review',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📝',
+    href: '/ai-services/ai-contract-review',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-accessibility-auditor',
+    title: 'AI Accessibility Auditor',
+    description: `Automated WCAG 2.1 AA compliance scans for websites & apps with screen-reader simulation, color contrast testing, and keyboard navigation checks.`,
+    features: ["Full-page accessibility scoring", "Component-level issue mapping", "Remediation code snippets", "Automated PDF accessibility check"],
+    benefits: ["Avoid ADA lawsuit risks", "Improve SEO through accessibility", "Enhance UX for all users"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-accessibility-auditor',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '♿',
+    href: '/ai-services/ai-accessibility-auditor',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-mental-health-chatbot',
+    title: 'AI Mental Health Companion',
+    description: `Empathetic, HIPAA-compliant chatbot providing CBT-based support, mood tracking, and crisis escalation to licensed professionals.`,
+    features: ["Mood journal with trends", "Personalized coping strategies", "Crisis keyword detection to human handoff", "Weekly mental health reports"],
+    benefits: ["24/7 anonymous support", "Reduces therapy wait times", "Scalable early intervention"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-mental-health-chatbot',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧠',
+    href: '/ai-services/ai-mental-health-chatbot',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-customer-sentiment-tracker',
+    title: 'AI Customer Sentiment Tracker',
+    description: `Monitors support tickets, reviews, social mentions, and surveys to produce a real-time Net Promoter Score (NPS) and emotion heatmap.`,
+    features: ["Multi-channel aggregation (email, chat, social)", "Emotion classification (8 categories)", "Trend alerts for sentiment drops", "Root-cause topic clustering"],
+    benefits: ["Detect brand crises within hours", "Identify at-risk accounts proactively", "Measure campaign impact on sentiment"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-customer-sentiment-tracker',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📊',
+    href: '/ai-services/ai-customer-sentiment-tracker',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-codebase-doc-generator',
+    title: 'AI Codebase Documentation Generator',
+    description: `Automatically generates architecture diagrams, API docs, and README files by analyzing your Git repository and code dependencies.`,
+    features: ["Interactive dependency graph", "Auto-updated API endpoint docs", "Change-log highlighting", "Developer onboarding checklist"],
+    benefits: ["Cuts documentation time by 80%", "Keeps docs in sync with code", "Eases new hire ramp-up"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-codebase-doc-generator',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📚',
+    href: '/ai-services/ai-codebase-doc-generator',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-competitive-intel-engine',
+    title: 'AI Competitive Intel Engine',
+    description: `Tracks competitors' pricing changes, feature launches, hiring patterns, and customer reviews to deliver weekly strategic insights.`,
+    features: ["Price monitoring across 50+ sources", "Feature gap analysis vs your product", "Hiring intent detection (e.g. 'hiring 20 engineers')", "Sentiment on competitor brands"],
+    benefits: ["Informs pricing strategy", "Prioritizes product roadmap", "Anticipates competitor moves"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-competitive-intel-engine',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔍',
+    href: '/ai-services/ai-competitive-intel-engine',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-voice-cloning-marketing',
+    title: 'AI Voice Cloning for Marketing',
+    description: `Clone your brand spokesperson's voice to produce personalized video ads, podcast intros, and multilingual marketing content.`,
+    features: ["Voice clone with 5 min sample", "Emotion & tone control", "30+ language output", "Bulk video rendering API"],
+    benefits: ["Reduces voiceover costs by 70%", "Scales personalized campaigns", "Maintains brand consistency"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-voice-cloning-marketing',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🎙️',
+    href: '/ai-services/ai-voice-cloning-marketing',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-fraud-detection-finance',
+    title: 'AI Fraud Detection for Finance',
+    description: `Real-time transaction monitoring for banks, fintechs, and accounting firms with explainable AI decisions and SAR report generation.`,
+    features: ["Rule-based plus ML hybrid model", "Explainable decision reasons (XAI)", "Adaptive learning from investigator feedback", "Automatic SAR filing templates"],
+    benefits: ["Reduces false positives by 40%", "Meets FinCEN requirements", "Detects novel fraud patterns"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-fraud-detection-finance',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🛡️',
+    href: '/ai-services/ai-fraud-detection-finance',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-legal-contract-redaction',
+    title: 'AI Legal Contract Redaction',
+    description: `Automatically redacts PII, trade secrets, and privileged information from legal documents before sharing or discovery.`,
+    features: ["Entity recognition (PII, PHI, PCI)", "Custom redaction rules per jurisdiction", "Audit trail of redactions", "Secure workspace with encryption"],
+    benefits: ["Prevents data leaks during M&A", "Speeds up e-discovery", "Ensures GDPR/CCPA compliance"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-legal-contract-redaction',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔒',
+    href: '/ai-services/ai-legal-contract-redaction',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-sustainability-carbon-tracker',
+    title: 'AI Sustainability & Carbon Tracker',
+    description: `Automatically calculates organizational carbon footprint from operational data (energy, travel, cloud usage) and suggests reduction strategies.`,
+    features: ["Integration with AWS/GCP carbon APIs", "Travel emission estimation from calendars", "Supply chain scope 3 modeling", "Regulatory reporting templates (ESG)"],
+    benefits: ["Achieve ESG reporting compliance", "Identify top emission sources", "Set science-based reduction targets"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-sustainability-carbon-tracker',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌱',
+    href: '/ai-services/ai-sustainability-carbon-tracker',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-education-tutor',
+    title: 'AI 1:1 Tutor for K–12 & Higher Ed',
+    description: `Personalized learning companion that adapts to student's pace, identifies knowledge gaps, and provides Socratic questioning to deepen understanding.`,
+    features: ["Curriculum-aligned (Common Core, IB, AP)", "Progress dashboards for parents/teachers", "Multilingual support (25 languages)", "Plagiarism-resistant homework assistance"],
+    benefits: ["Improves test scores by 1\u20132 letter grades", "Reduces teacher workload", "Provides equitable access to tutoring"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-education-tutor',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🎓',
+    href: '/ai-services/ai-education-tutor',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-retail-recommendation-engine',
+    title: 'AI Retail Recommendation Engine',
+    description: `Product recommendation engine for e-commerce that increases AOV by 15–25% using collaborative filtering, basket analysis, and real-time behavior.`,
+    features: ["Real-time personalization", "A/B testing built-in", "Cross-sell & upsell suggestions", "Seasonal trend integration"],
+    benefits: ["Boosts average order value", "Reduces cart abandonment", "Increases customer LTV"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-retail-recommendation-engine',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🛒',
+    href: '/ai-services/ai-retail-recommendation-engine',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-aiops-anomaly-detection',
+    title: 'AI-AIOps Anomaly Detection',
+    description: `Detects infrastructure anomalies (CPU, memory, error rates) before they cause outages using unsupervised learning and seasonal decomposition.`,
+    features: ["Metric anomaly scoring", "Correlation across services", "Predictive alerting (30 min lead)", "Integration with PagerDuty & Slack"],
+    benefits: ["Catches issues 85% faster than thresholds", "Reduces MTTR by 30%", "Prevents revenue-impacting downtime"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-aiops-anomaly-detection',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📈',
+    href: '/ai-services/ai-aiops-anomaly-detection',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-media-monitoring',
+    title: 'AI Media & News Monitoring',
+    description: `Tracks global news, podcasts, and video transcripts for brand mentions, sentiment shifts, and crisis signals in real time.`,
+    features: ["100K+ sources monitored", "Multilingual sentiment", "Trending topic detection", "Custom keyword & competitor alerts"],
+    benefits: ["Early crisis detection", "Measure PR campaign reach", "Identify influencer opportunities"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-media-monitoring',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📰',
+    href: '/ai-services/ai-media-monitoring',
+    category: 'ai'
+  },
+
+  {
+    id: 'ai-accessibility-optimizer',
+    title: 'AI Accessibility Content Optimizer',
+    description: `Suggests alt-text for images, transcript generation for videos, and semantic HTML improvements to boost accessibility and SEO simultaneously.`,
+    features: ["Auto-alt-text for images", "Video transcript with speaker IDs", "Readability scoring", "WCAG 2.1 AA gap analysis"],
+    benefits: ["Improves Google Lighthouse scores", "Meets legal compliance", "Enhances user experience"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/ai-services/ai-accessibility-optimizer',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔧',
+    href: '/ai-services/ai-accessibility-optimizer',
+    category: 'ai'
+  },
+
+
 ];
 
 export const itServices: Service[] = [
@@ -4458,6 +4747,227 @@ export const itServices: Service[] = [
     href: '/it-services/incident-response-retainer',
     category: 'it'
    },
+  {
+    id: 'it-edge-computing-deploy',
+    title: 'Edge Computing Deployment',
+    description: `Deploys containerized workloads to global edge locations (Cloudflare Workers, Fastly Compute, AWS Lambda@Edge) for sub-10ms latency.`,
+    features: ["Multi-provider edge orchestration", "Edge cache strategy design", "Local data residency compliance", "Edge function monitoring"],
+    benefits: ["Reduces API latency by 60\u201380%", "Improves global user experience", "Lowers origin server load"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-edge-computing-deploy',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌍',
+    href: '/it-services/it-edge-computing-deploy',
+    category: 'it'
+  },
+
+  {
+    id: 'it-disaster-recovery',
+    title: 'Disaster Recovery as a Service (DRaaS)',
+    description: `Fully managed DR with automated backups, cross-region replication, and quarterly failover testing. RTO < 4 hours, RPO < 15 minutes.`,
+    features: ["Continuous replication", "Automated failover orchestration", "DR runbook documentation", "Compliance-ready audit logs"],
+    benefits: ["Guarantees business continuity", "Meets ISO 27001 & SOC2 requirements", "Reduces DR planning overhead"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-disaster-recovery',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔄',
+    href: '/it-services/it-disaster-recovery',
+    category: 'it'
+  },
+
+  {
+    id: 'it-observability-platform',
+    title: 'Full-Stack Observability Platform',
+    description: `Unified logs, metrics, traces, and profiling with AI-powered root-cause analysis. Self-hosted or cloud-hosted options.`,
+    features: ["Distributed tracing (OpenTelemetry)", "Log aggregation with semantic search", "Custom dashboard builder", "Anomaly detection + alert routing"],
+    benefits: ["Reduces MTTR by 50%", "Eliminates tool sprawl", "Provides single pane of glass"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-observability-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📡',
+    href: '/it-services/it-observability-platform',
+    category: 'it'
+  },
+
+  {
+    id: 'it-esg-compliance-automation',
+    title: 'ESG Compliance Automation',
+    description: `Automates ESG data collection from 100+ systems (cloud, HR, facilities) and generates SEC, EU CSRD, and SFDR reports.`,
+    features: ["Carbon footprint calculation engine", "Diversity metrics dashboard", "Governance policy tracker", "Report generation (XBRL support)"],
+    benefits: ["Saves 200+ manual hours per reporting cycle", "Ensures regulatory alignment", "Improves ESG ratings"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-esg-compliance-automation',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌍',
+    href: '/it-services/it-esg-compliance-automation',
+    category: 'it'
+  },
+
+  {
+    id: 'it-kubernetes-multicloud',
+    title: 'Kubernetes Multi-Cloud Management',
+    description: `Deploy and manage Kubernetes clusters across AWS, GCP, Azure, and on-prem with a single control plane. Includes GitOps and policy enforcement.`,
+    features: ["Cluster lifecycle automation", "Cost allocation per namespace", "Security policy as code (OPA/Gatekeeper)", "Cross-cloud service mesh"],
+    benefits: ["Avoids vendor lock-in", "Optimizes spend by 30%", "Standardizes deployments"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-kubernetes-multicloud',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '☸️',
+    href: '/it-services/it-kubernetes-multicloud',
+    category: 'it'
+  },
+
+  {
+    id: 'it-automated-incident-response',
+    title: 'Automated Incident Response (SOAR)',
+    description: `Security Orchestration, Automation & Response platform that auto-remediates 40% of Tier-1 incidents using playbooks and AI decisioning.`,
+    features: ["Pre-built playbooks (phishing, malware, IAM)", "Integration with 200+ security tools", "Case management & audit trail", "AI-assisted triage suggestions"],
+    benefits: ["Cuts incident response time from hours to minutes", "Reduces SOC analyst fatigue", "Improves compliance posture"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-automated-incident-response',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚨',
+    href: '/it-services/it-automated-incident-response',
+    category: 'it'
+  },
+
+  {
+    id: 'it-data-warehouse-modernization',
+    title: 'Data Warehouse Modernization',
+    description: `Migration from legacy data warehouses (Oracle, Teradata) to modern cloud-native stacks (Snowflake, BigQuery, Databricks) with zero downtime.`,
+    features: ["Schema conversion tools", "ETL/ELT pipeline rebuild", "Query optimization", "Training for data team"],
+    benefits: ["Lowers TCO by 40\u201360%", "Enables self-service analytics", "Scales compute & storage independently"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-data-warehouse-modernization',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🏢',
+    href: '/it-services/it-data-warehouse-modernization',
+    category: 'it'
+  },
+
+  {
+    id: 'it-iot-device-management',
+    title: 'Enterprise IoT Device Management',
+    description: `Provision, monitor, and secure 10K+ IoT devices (sensors, cameras, gateways) from a single dashboard with OTA updates and zero-touch enrollment.`,
+    features: ["Device inventory & health monitoring", "Remote command & control", "Firmware OTA scheduling", "Geofencing & alerting"],
+    benefits: ["Reduces device management overhead by 70%", "Ensures firmware consistency", "Detects rogue devices"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-iot-device-management',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📱',
+    href: '/it-services/it-iot-device-management',
+    category: 'it'
+  },
+
+  {
+    id: 'it-digital-workplace-platform',
+    title: 'Digital Workplace Platform',
+    description: `Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.`,
+    features: ["Self-service IT catalog", "Automated employee lifecycle (joiner/mover/leaver)", "License optimization engine", "Employee sentiment surveys"],
+    benefits: ["Reduces SaaS sprawl", "Cuts license costs by 20%", "Improves employee satisfaction"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-digital-workplace-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💼',
+    href: '/it-services/it-digital-workplace-platform',
+    category: 'it'
+  },
+
+  {
+    id: 'it-apisec-testing',
+    title: 'API Security Testing',
+    description: `Automated security scans for REST, GraphQL, and gRPC APIs. Detects OWASP API Top 10 vulnerabilities and provides remediation code snippets.`,
+    features: ["DAST + SCA for APIs", "Authentication flaw detection", "Rate-limiting & throttling tests", "CI/CD pipeline integration"],
+    benefits: ["Prevents data breaches via API", "Meets PCI & HIPAA API requirements", "Finds bugs before production"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-apisec-testing',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔐',
+    href: '/it-services/it-apisec-testing',
+    category: 'it'
+  },
+
+  {
+    id: 'it-data-lakehouse-governance',
+    title: 'Data Lakehouse Governance',
+    description: `Metadata management, lineage tracking, and access controls for Delta Lake, Apache Iceberg, or Snowflake environments.`,
+    features: ["Automated data catalog", "Column-level lineage", "Policy-based access control (RBAC/ABAC)", "Quality scorecard per dataset"],
+    benefits: ["Accelerates data discovery", "Ensures regulatory compliance (GDPR, CCPA)", "Reduces data swamp risk"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-data-lakehouse-governance',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🗄️',
+    href: '/it-services/it-data-lakehouse-governance',
+    category: 'it'
+  },
+
+  {
+    id: 'it-endpoint-detection-response',
+    title: 'Managed Endpoint Detection & Response (EDR)',
+    description: `24/7 monitored EDR service with threat hunting, ransomware rollback, and 15-minute SLA for critical alerts. Includes managed SOC.`,
+    features: ["Next-gen antivirus (NGAV)", "Behavior-based threat detection", "Incident response playbooks", "Quarterly threat hunting reports"],
+    benefits: ["Blocks 99% of endpoint attacks", "Ransomware recovery within hours", "Frees internal IT from security chores"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-endpoint-detection-response',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🛡️',
+    href: '/it-services/it-endpoint-detection-response',
+    category: 'it'
+  },
+
+  {
+    id: 'it-low-code-platform-integration',
+    title: 'Low-Code Platform Integration',
+    description: `Build & integrate internal tools on Retool, Tooljet, or internal platforms. Pre-built connectors to 200+ SaaS APIs and custom SQL/NoSQL builders.`,
+    features: ["Drag-and-drop UI builder", "Role-based access controls", "Audit logging", "One-click deployment"],
+    benefits: ["Empowers non-developers to build tools", "Reduces internal dev backlog by 40%", "Standardizes tooling across teams"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-low-code-platform-integration',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧩',
+    href: '/it-services/it-low-code-platform-integration',
+    category: 'it'
+  },
+
 
 ];
 export const itSolutions = itServices;
