@@ -2,10 +2,13 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Download, CheckCircle, Sparkles, RefreshCw } from 'lucide-react';
+import { FileText, Download, CheckCircle, Sparkles, RefreshCw, FolderOpen } from 'lucide-react';
 import { PDFDownloadLink, BlobProvider } from '@react-pdf/renderer';
 import ProposalDocument from '../components/ProposalDocument';
 import { servicesData } from '../data/servicesData';
+import { saveProposal } from '../lib/portal-storage';
+import type { Proposal } from '../lib/portal-storage';
+import toast from 'react-hot-toast';
 
 export default function ProposalGeneratorPage() {
   const [companyName, setCompanyName] = useState('');
@@ -42,6 +45,27 @@ export default function ProposalGeneratorPage() {
     });
   }, [priceMap, frequency]);
 
+  const handleSaveToPortal = () => {
+    if (!companyName || !contactName || !email || selectedServices.length === 0) {
+      toast.error('Please fill in all fields and select at least one service.');
+      return;
+    }
+    const proposal: Proposal = {
+      id: crypto.randomUUID(),
+      createdAt: new Date().toISOString(),
+      companyName,
+      contactName,
+      email,
+      selectedServices: selectedServices.map(s => ({ ...s })),
+      subtotal,
+      discount: discountPercent > 0 ? Math.round(subtotal * 0.20) : 0,
+      total,
+    };
+    saveProposal(proposal);
+    toast.success('Proposal saved to Client Portal!');
+  };
+
+  // Pricing
   const subtotal = selectedServices.reduce((sum, s) => sum + s.price, 0);
   const discountPercent = frequency === 'annual' ? 20 : 0;
   const total = subtotal * (1 - discountPercent / 100);
@@ -257,6 +281,19 @@ export default function ProposalGeneratorPage() {
                     </button>
                   )}
                 </PDFDownloadLink>
+
+                <button
+                  onClick={handleSaveToPortal}
+                  disabled={selectedServices.length === 0}
+                  className={`w-full py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition ${
+                    selectedServices.length === 0
+                      ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                  }`}
+                >
+                  <FolderOpen className="w-5 h-5" />
+                  Save to Client Portal
+                </button>
               </div>
             </div>
 

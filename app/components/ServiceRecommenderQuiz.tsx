@@ -2,9 +2,12 @@
 
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, CheckCircle, ArrowRight, Mail, DollarSign, Cpu, Lightbulb, Send, ArrowLeft, Building2 } from 'lucide-react';
+import { Sparkles, CheckCircle, ArrowRight, Mail, DollarSign, Cpu, Lightbulb, Send, ArrowLeft, Building2, FolderOpen } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 import type { Service } from '../data/servicesData';
+import { saveQuizResult } from '../lib/portal-storage';
+import type { QuizResult } from '../lib/portal-storage';
+import toast from 'react-hot-toast';
 
 type Industry = 'healthcare' | 'finance' | 'retail' | 'manufacturing' | 'technology' | 'government' | 'education' | 'other';
 type PainPoint = 'security' | 'efficiency' | 'cost' | 'compliance' | 'customer-experience' | 'data-insights' | 'automation' | 'scale';
@@ -194,6 +197,18 @@ export default function ServiceRecommenderQuiz() {
     setShowResults(true);
   };
 
+  const handleSaveQuiz = () => {
+    const result: QuizResult = {
+      id: crypto.randomUUID(),
+      createdAt: new Date().toISOString(),
+      answers,
+      recommendations: recommendations.map(s => s.id),
+      email: email || undefined,
+    };
+    saveQuizResult(result);
+    toast.success('Quiz results saved to Client Portal!');
+  };
+
   const progress = ((step + 1) / QUESTIONS.length) * 100;
 
   return (
@@ -334,34 +349,47 @@ export default function ServiceRecommenderQuiz() {
                     </div>
                   </motion.div>
                 ))}
-              </div>
+               </div>
 
-              <form onSubmit={handleSubmit} className="border-t border-gray-200 pt-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Get your recommendations via email</h3>
-                <div className="flex gap-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    required
-                    className="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                  <button
-                    type="submit"
-                    disabled={submitting || !email}
-                    className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 ${
-                      submitting || !email
-                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        : 'bg-purple-600 text-white hover:bg-purple-700'
-                    }`}
-                  >
-                    {submitting ? <Send className="w-4 h-4 animate-pulse" /> : <Mail className="w-4 h-4" />}
-                    {submitting ? 'Sending…' : 'Send'}
-                  </button>
-                </div>
-                <p className="text-xs text-gray-500 mt-2">We'll only send your recommendations. No spam, ever.</p>
-              </form>
+               {/* Save & Email actions */}
+               <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                 <div className="text-sm text-gray-600">
+                   <strong>Step 2:</strong> Save these results or email them to yourself.
+                 </div>
+                 <div className="flex items-center gap-3">
+                   <button
+                     type="button"
+                     onClick={handleSaveQuiz}
+                     className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 transition"
+                   >
+                     <FolderOpen className="w-4 h-4" />
+                     Save to Portal
+                   </button>
+                   <form onSubmit={handleSubmit}>
+                     <div className="flex gap-2">
+                       <input
+                         type="email"
+                         value={email}
+                         onChange={e => setEmail(e.target.value)}
+                         placeholder="Enter your email"
+                         required
+                         className="border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-purple-500"
+                       />
+                       <button
+                         type="submit"
+                         disabled={submitting || !email}
+                         className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 ${
+                           submitting || !email
+                             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                             : 'bg-purple-600 text-white hover:bg-purple-700'
+                         }`}
+                       >
+                         {submitting ? 'Sending…' : 'Send'}
+                       </button>
+                     </div>
+                   </form>
+                 </div>
+               </div>
             </>
           )}
 

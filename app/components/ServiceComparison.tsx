@@ -1,10 +1,13 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, X, Sparkles, BarChart3, DollarSign, Shield, Zap, ArrowRightLeft } from 'lucide-react';
+import { Check, X, Sparkles, BarChart3, DollarSign, Shield, Zap, ArrowRightLeft, FolderOpen } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 import type { Service } from '../data/servicesData';
+import { saveComparison } from '../lib/portal-storage';
+import type { ComparisonSet } from '../lib/portal-storage';
+import toast from 'react-hot-toast';
 
 export default function ServiceComparison() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
@@ -12,12 +15,29 @@ export default function ServiceComparison() {
 
   const allServices = useMemo(() => servicesData.allServices, []);
 
-  const toggleSelect = (id: string) => {
+  const toggleSelect = useCallback((id: string) => {
     setSelectedIds(prev => {
       if (prev.includes(id)) return prev.filter(x => x !== id);
       if (prev.length >= maxSelect) return prev;
       return [...prev, id];
     });
+  }, []);
+
+  const handleSaveComparison = () => {
+    if (selectedServices.length < 2) {
+      toast.error('Select at least 2 services to compare.');
+      return;
+    }
+    const name = prompt('Name this comparison (e.g., "AI Showdown"):');
+    if (!name) return;
+    const comp: ComparisonSet = {
+      id: crypto.randomUUID(),
+      createdAt: new Date().toISOString(),
+      name,
+      serviceIds: selectedIds,
+    };
+    saveComparison(comp);
+    toast.success('Comparison saved to Client Portal!');
   };
 
   const selectedServices = useMemo(() =>
@@ -94,6 +114,22 @@ export default function ServiceComparison() {
           </div>
         ) : (
           <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+            {/* Actions bar */}
+            <div className="bg-indigo-50 px-4 py-2 border-b border-indigo-100 flex items-center justify-between">
+              <span className="text-sm text-indigo-900 font-medium">
+                Comparing {selectedServices.length} service{selectedServices.length > 1 ? 's' : ''}
+              </span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleSaveComparison}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-600 text-white rounded-lg text-xs font-medium hover:bg-indigo-700 transition"
+                >
+                  <FolderOpen className="w-3 h-3" />
+                  Save to Portal
+                </button>
+              </div>
+            </div>
+
             {/* Header */}
             <div className="grid bg-gray-50 border-b border-gray-200" style={{ gridTemplateColumns: `200px repeat(${selectedServices.length}, 1fr)` }}>
               <div className="p-4 font-semibold text-gray-700 border-r border-gray-200">Feature</div>
