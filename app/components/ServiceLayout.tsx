@@ -163,7 +163,22 @@ export default function ServiceLayout({ service, breadcrumbItems }: ServiceLayou
           </div>
         )}
 
-        {/* Contact CTA */}
+        {/* FAQs */}
+        {faqs && faqs.length > 0 && (
+          <div className="mx-auto mt-16 max-w-4xl">
+            <h2 className="mb-8 text-center text-2xl font-bold text-white">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="rounded-xl border border-slate-700/50 bg-slate-900/40 p-6 backdrop-blur-sm">
+                  <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                  <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+                {/* Contact CTA */}
         <div className="mx-auto mt-16 max-w-3xl rounded-2xl border border-purple-500/30 bg-purple-900/20 p-8 text-center backdrop-blur-sm">
           <h2 className="text-2xl font-bold text-white">Ready to get started?</h2>
           <p className="mt-2 text-slate-300">
