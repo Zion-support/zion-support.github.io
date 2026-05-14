@@ -5481,6 +5481,1304 @@ export const itServices: Service[] = [
     href: '/it-services/it-mainframe-modernization',
     category: 'it'
   }
+
+  // ── NEW MICRO-SAAS & AI SOLUTIONS (Added 2026-05-14) ──────────────────────
+  {
+    id: 'ai-saas-001',
+    href: '/ai-services/ai-saas/automated-invoice-processing',
+    icon: '📄',
+    category: 'ai',
+    title: 'Automated Invoice Processing AI',
+    description: 'Extract and process invoice data with 99.7% accuracy using advanced OCR and LLM classification. Handles 1000+ invoices daily, integrates with QuickBooks, Xero, and Sage.',
+    features: [
+      'Intelligent data extraction (vendor, amounts, line items, tax)',
+      'Multi-language support (30+ languages)',
+      'Auto-categorization with GL codes',
+      'Duplicate detection and flagging',
+      'Seamless API integrations with major accounting platforms',
+      'Real-time validation against compliance rules',
+      'PDF, scanned image, and email intake'
+    ],
+    benefits: [
+      'Reduce invoice processing time from hours to seconds',
+      'Cut AP costs by 85% while eliminating manual entry errors',
+      'Accelerate month-end close by 10x',
+      'Audit-ready trail with full version history'
+    ],
+    pricing: {
+      starter: '$99/mo — 500 invoices',
+      professional: '$299/mo — 5,000 invoices',
+      enterprise: '$899/mo — 25,000 invoices',
+      custom: 'Contact for volume pricing'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/automated-invoice-processing',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-002',
+    href: '/ai-services/ai-saas/social-media-content-scheduler',
+    icon: '📱',
+    category: 'ai',
+    title: 'AI-Powered Social Media Content Scheduler',
+    description: 'Plan, create, and schedule 30 days of social media content in under 10 minutes. AI writes platform-specific posts (LinkedIn, Twitter, Instagram, Facebook), suggests optimal posting times, and auto-generates visuals.',
+    features: [
+      'AI content writer trained on viral social patterns',
+      'Auto-hashtag research and trending topic detection',
+      'Smart scheduling based on audience engagement analytics',
+      'Built-in Canva integration for graphics',
+      'Performance analytics and A/B testing',
+      'Team collaboration with approval workflows',
+      'RSS feed auto-content curation'
+    ],
+    benefits: [
+      'Maintain consistent daily presence across 5+ platforms',
+      'Increase engagement by 3–5x with AI-optimized copy',
+      'Save 15+ hours per week on content creation',
+      'Track ROI with detailed campaign metrics'
+    ],
+    pricing: {
+      solo: '$49/mo — 1 brand, 10 posts/day',
+      business: '$149/mo — 5 brands, unlimited posts',
+      agency: '$399/mo — unlimited brands, white-label reports',
+      enterprise: 'Custom — dedicated AI training'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/social-media-content-scheduler',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-003',
+    href: '/ai-services/ai-saas/ai-seo-content-writer',
+    icon: '✍️',
+    category: 'ai',
+    title: 'AI SEO Content Writer Pro',
+    description: 'Generate search-optimized blog posts, product descriptions, and landing pages that rank on Google. AI analyzes top 10 competitors, ensures semantic richness, and passes AI detection with 98% human score.',
+    features: [
+      'Real-time SERP analysis and content gap identification',
+      'Semantic keyword clustering and LSI optimization',
+      '50+ content templates (blogs, product pages, case studies)',
+      'Auto-brief generation from target keywords',
+      'Plagiarism and originality scoring',
+      'One-click SEO meta tags and schema markup',
+      'WordPress and Shopify direct publishing'
+    ],
+    benefits: [
+      'Write 2000-word SEO-ready articles in 5 minutes',
+      'Outrank competitors with comprehensive content',
+      'Scale content production without hiring writers',
+      'Increase organic traffic by 200% within 3 months'
+    ],
+    pricing: {
+      starter: '$79/mo — 50 articles',
+      growth: '$199/mo — 200 articles',
+      scale: '$499/mo — 600 articles + API access',
+      agency: '$999/mo — unlimited + white-label'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-seo-content-writer',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-004',
+    href: '/ai-services/ai-saas/predictive-sales-forecasting',
+    icon: '📈',
+    category: 'ai',
+    title: 'Predictive Sales Forecasting Engine',
+    description: 'AI-driven revenue predictions with 94% accuracy. Analyzes historical data, market trends, pipeline health, and external factors to forecast quarterly revenue within ±5%.',
+    features: [
+      'Time-series forecasting with Prophet and LSTM models',
+      'CRM integration (Salesforce, HubSpot, Pipedrive)',
+      'Deal-level risk scoring and close probability',
+      'Sales team performance benchmarking',
+      'Scenario planning (best-case, worst-case, most-likely)',
+      'Automated weekly reports and alerts',
+      'Real-time dashboard with drill-down capabilities'
+    ],
+    benefits: [
+      'Improve forecast accuracy from 60% to 94%',
+      'Identify at-risk deals 30 days before they slip',
+      'Optimize resource allocation with data-backed projections',
+      'Increase investor confidence with reliable numbers'
+    ],
+    pricing: {
+      small: '$199/mo — up to $2M ARR, 1 CRM integration',
+      mid: '$499/mo — up to $10M ARR, unlimited CRMs',
+      enterprise: '$1,299/mo — unlimited, custom models',
+      onprem: 'Contact — self-hosted deployment'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/predictive-sales-forecasting',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-005',
+    href: '/ai-services/ai-saas/ai-customer-support-chatbot',
+    icon: '🤖',
+    category: 'ai',
+    title: 'AI-Powered Customer Support Chatbot',
+    description: '24/7 intelligent support chatbot that resolves 78% of queries without human intervention. Trained on your help docs, past tickets, and product knowledge — continuously learns from interactions.',
+    features: [
+      'Custom-trained on your specific product/service documentation',
+      'Multi-language support (50+ languages)',
+      'Sentiment-aware responses (escalates angry customers)',
+      'Knowledge base auto-sync from Zendesk, Intercom, Freshdesk',
+      'Live agent handoff with full context preservation',
+      'Analytics: resolution rate, satisfaction, deflected tickets',
+      'Voice TTS for accessibility'
+    ],
+    benefits: [
+      'Cut support costs by 65% while improving CSAT',
+      'Instant responses — zero wait time for customers',
+      'Free up human agents for complex issues',
+      'Scale support infinitely during product launches'
+    ],
+    pricing: {
+      basic: '$99/mo — 1,000 queries/month, 5 docs',
+      professional: '$299/mo — 10,000 queries, unlimited docs',
+      business: '$699/mo — 100,000 queries, custom branding',
+      enterprise: '$1,999/mo — unlimited, dedicated training'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-customer-support-chatbot',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-006',
+    href: '/ai-services/ai-saas/ai-contract-review-analyzer',
+    icon: '📑',
+    category: 'ai',
+    title: 'AI Contract Review & Risk Analyzer',
+    description: 'Upload contracts and get instant risk assessment, clause extraction, and compliance scoring. Trained on thousands of legal documents, highlights problematic terms and suggests favorable alternatives.',
+    features: [
+      'Multi-format support: PDF, DOCX, TXT, images (OCR)',
+      'Risk scoring per clause (low/medium/high) with explanations',
+      'Jurisdiction-specific compliance checking',
+      'Clause library comparison against best-practice standards',
+      'Redline suggestions with alternative language',
+      'Track changes and version history',
+      'GDPR, CCPA, SOC2, ISO27001 compliance checks'
+    ],
+    benefits: [
+      'Review NDAs in 30 seconds instead of 30 minutes',
+      'Catch risky terms your lawyers might miss',
+      'Standardize contract templates organization-wide',
+      'Reduce legal spend by 70% on routine reviews'
+    ],
+    pricing: {
+      payg: '$0.25/page — pay per document',
+      small: '$149/mo — 500 pages + unlimited users',
+      business: '$499/mo — unlimited pages, custom clauses',
+      legal: 'Contact — firm-wide license'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-contract-review-analyzer',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-saas-007',
+    href: '/ai-services/ai-saas/ai-meeting-notes-transcriber',
+    icon: '🎤',
+    category: 'ai',
+    title: 'AI Meeting Notes Transcriber & Summarizer',
+    description: 'Record meetings, get transcript, summary, and action items automatically. Supports Zoom, Teams, Google Meet, and in-person recordings. Identifies decisions, deadlines, and owners.',
+    features: [
+      'High-accuracy transcription (95%+ across accents)',
+      'Speaker diarization (who said what)',
+      'Auto-generated summaries with key points and action items',
+      'Integration with Notion, Slack, Asana, Trello',
+      'Keyword and topic extraction',
+      'Search across all meeting history',
+      'Multi-language transcription (20+ languages)'
+    ],
+    benefits: [
+      'Never miss an action item again',
+      'Share meeting recaps in one click',
+      'Onboard new team members with searchable meeting archives',
+      'Save 5+ hours per week on note-taking'
+    ],
+    pricing: {
+      personal: '$29/mo — 100 hours recording',
+      team: '$99/mo — 500 hours, 5 users',
+      business: '$299/mo — unlimited, 20 users',
+      enterprise: '$799/mo — SSO, compliance logging'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-saas/ai-meeting-notes-transcriber',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-001',
+    href: '/it-services/cloud-cost-optimization-platform',
+    icon: '💸',
+    category: 'it',
+    title: 'Cloud Cost Optimization Platform',
+    description: 'Reduce AWS/Azure/GCP bills by 30–50% automatically. AI analyzes usage patterns, recommends rightsizing, eliminates idle resources, and applies reserved instance purchases with guaranteed savings.',
+    features: [
+      'Multi-cloud support (AWS, Azure, GCP, Oracle Cloud)',
+      'Automated rightsizing recommendations',
+      'Idle resource detection and auto-termination',
+      'RI/Savings Plans purchase optimization',
+      'Anomaly detection and budget alerts',
+      'Custom dashboards by team/project/environment',
+      'Carbon footprint tracking and sustainability reporting'
+    ],
+    benefits: [
+      '$50K–$500K annual savings for mid-size companies',
+      'No manual spreadsheet analysis required',
+      'Prevent budget overruns with proactive alerts',
+      'Improve cloud governance and accountability'
+    ],
+    pricing: {
+      starter: 'Free — up to $10K monthly spend, basic alerts',
+      growth: '$299/mo — up to $100K spend, full optimization',
+      scale: '$799/mo — up to $500K spend, multi-cloud',
+      enterprise: 'Custom — dedicated cost engineer'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/cloud-cost-optimization-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-002',
+    href: '/it-services/devops-incident-response-platform',
+    icon: '🚨',
+    category: 'it',
+    title: 'DevOps Incident Response & Runbook Automation',
+    description: 'Automate incident response with intelligent runbooks. When your monitoring tool fires an alert, this platform auto-remediates 60% of incidents, notifies the right people, and maintains a post-mortem log.',
+    features: [
+      'Integration with PagerDuty, Opsgenie, Datadog, New Relic',
+      'Auto-remediation playbooks (restart services, rollback, scale)',
+      'Dynamic escalation policies based on severity and SLA',
+      'Post-incident report generation (automated)',
+      'Slack/Teams/MS Teams notification with buttons',
+      'Runbook versioning and A/B testing',
+      'Compliance logging for SOX, HIPAA, PCI'
+    ],
+    benefits: [
+      'Reduce MTTR (mean time to resolve) by 65%',
+      'Minimize downtime impact on revenue and users',
+      'Free DevOps team from repetitive firefighting',
+      'Meet 99.99% SLA commitments with confidence'
+    ],
+    pricing: {
+      startup: '$99/mo — 5 services, email/Slack alerts',
+      business: '$399/mo — 50 services, auto-remediation',
+      enterprise: '$1,299/mo — unlimited, custom plugins',
+      onprem: 'Contact — self-hosted enterprise'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/devops-incident-response-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-003',
+    href: '/it-services/api-security-gateway',
+    icon: '🔐',
+    category: 'it',
+    title: 'API Security Gateway & Throttling',
+    description: 'Protect your APIs from abuse, DDoS, and data leaks. Intelligent rate limiting, bot detection, schema validation, and real-time threat intelligence. Drop-in replacement for Kong/Traefik with AI-powered protection.',
+    features: [
+      'Rate limiting per API key/IP/endpoint (configurable quotas)',
+      'Bot detection using behavioral fingerprinting',
+      'Schema validation against OpenAPI specs',
+      'PII/credit card leak prevention via regex+ML',
+      'DDoS protection with automatic IP blacklisting',
+      'Real-time dashboards and security event logs',
+      'Compliance: GDPR, OWASP API Top 10, PCI DSS'
+    ],
+    benefits: [
+      'Prevent API abuse and unexpected cost spikes',
+      'Protect sensitive customer data from exposure',
+      'Maintain API performance under load',
+      'Meet security audit requirements effortlessly'
+    ],
+    pricing: {
+      basic: '$149/mo — 1M requests/month, 5 APIs',
+      pro: '$499/mo — 10M requests, unlimited APIs',
+      business: '$1,299/mo — 100M requests, WAF rules',
+      enterprise: 'Custom — dedicated gateway instances'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/api-security-gateway',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-saas-004',
+    href: '/it-services/developer-portal-with-apis-playground',
+    icon: '🛠️',
+    category: 'it',
+    title: 'Developer Portal & API Playground',
+    description: 'Launch a beautiful, fully-documented developer portal in days, not months. Interactive API explorer, SDK downloads, usage analytics, and self-service onboarding for third-party developers.',
+    features: [
+      'Auto-generated API docs from OpenAPI/Swagger specs',
+      'Interactive API Explorer (like Stripe docs)',
+      'API key management and usage dashboards for developers',
+      'SDK generation (10+ languages)',
+      'OAuth2 and API key authentication flows',
+      'Community forums and issue tracking integration',
+      'Analytics: API adoption, error rates, popular endpoints'
+    ],
+    benefits: [
+      'Accelerate partner integrations by 5x',
+      'Reduce support tickets with self-service docs',
+      'Monetize APIs with built-in usage billing',
+      'Boost developer experience and retention'
+    ],
+    pricing: {
+      startup: '$199/mo — 1 API, basic docs',
+      growth: '$599/mo — 10 APIs, interactive explorer, analytics',
+      business: '$1,499/mo — unlimited APIs, SSO, custom branding',
+      enterprise: 'Contact — dedicated infrastructure'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/developer-portal-with-apis-playground',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'micro-saas-001',
+    href: '/it-services/micro-saas/booking-and-scheduling-system',
+    icon: '📅',
+    category: 'it',
+    title: 'Micro-SaaS: Booking & Scheduling System',
+    description: 'Embeddable booking widget for service businesses. Handles appointments, payments, reminders, and calendar sync. White-label for agencies and franchises.',
+    features: [
+      'Embeddable widget for any website (WordPress, Webflow, custom)',
+      'Calendar sync (Google, Outlook, Apple)',
+      'Online payments (Stripe, PayPal) with deposit support',
+      'Automated SMS/email reminders (reduce no-shows by 80%)',
+      'Staff management and availability rules',
+      'Recurring appointments and package deals',
+      'Reporting: booking sources, revenue, client retention'
+    ],
+    benefits: [
+      'Automate scheduling — no more phone tag',
+      'Get paid upfront with integrated payments',
+      'Scale service business without hiring receptionists',
+      'Custom branding matches your business identity'
+    ],
+    pricing: {
+      basic: '$49/mo — 1 calendar, 100 bookings/month',
+      professional: '$99/mo — 3 calendars, unlimited bookings',
+      business: '$199/mo — 10 calendars, white-label, payments',
+      enterprise: '$499/mo — unlimited, custom workflows'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/booking-and-scheduling-system',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'micro-saas-002',
+    href: '/it-services/micro-saas/subscription-billing-and-invoicing',
+    icon: '💳',
+    category: 'it',
+    title: 'Micro-SaaS: Subscription Billing & Invoicing',
+    description: 'Complete subscription billing platform: recurring invoices, dunning management, proration, coupons, and revenue recognition. Alternative to Stripe Billing with more flexibility for complex billing models.',
+    features: [
+      'Recurring billing (daily, weekly, monthly, yearly)',
+      'Usage-based metered billing (track and bill units)',
+      'Proration on plan changes (upgrades/downgrades)',
+      'Coupon codes, discounts, promotional periods',
+      'Dunning management: automatic retry schedules for failed payments',
+      'Tax calculation and VAT compliance (EU, UK, Canada)',
+      'Revenue recognition (ASC 606) reports for accounting'
+    ],
+    benefits: [
+      'Launch subscription products without building billing infrastructure',
+      'Reduce churn with smart dunning and win-back campaigns',
+      'Support complex pricing models (usage, tiers, overages)',
+      'Stay compliant with global tax regulations'
+    ],
+    pricing: {
+      starter: '$99/mo — up to $50K revenue, basic plans',
+      growth: '$299/mo — up to $500K revenue, coupons + dunning',
+      scale: '$799/mo — unlimited revenue, usage billing',
+      enterprise: 'Custom — dedicated success manager'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/subscription-billing-and-invoicing',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'micro-saas-003',
+    href: '/it-services/micro-saas/feedback-and-nps-collection',
+    icon: '📊',
+    category: 'it',
+    title: 'Micro-SaaS: Feedback & NPS Collection Platform',
+    description: 'Collect customer feedback, NPS, CSAT, and product reviews in one beautiful dashboard. Trigger surveys based on user actions, close the loop with follow-up workflows, and turn feedback into product insights.',
+    features: [
+      'Multi-channel surveys: in-app, email, SMS, website widget',
+      'NPS, CSAT, CES, and custom question types',
+      'Trigger surveys on specific events (after purchase, after support ticket)',
+      'Sentiment analysis on open-ended responses',
+      'Automated follow-up workflows for detractors/passives',
+      'Integration with Slack, Intercom, HubSpot',
+      'Trend analysis and feedback prioritization matrix'
+    ],
+    benefits: [
+      'Understand customer sentiment in real time',
+      'Reduce churn by addressing detractor concerns quickly',
+      'Prioritize product roadmap with data-driven insights',
+      'Increase response rates with smart survey timing'
+    ],
+    pricing: {
+      basic: '$49/mo — 1,000 responses/month, basic widgets',
+      growth: '$149/mo — 10,000 responses, automation workflows',
+      business: '$399/mo — unlimited, custom branding, API',
+      enterprise: '$999/mo — multi-account, SSO, dedicated support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-saas/feedback-and-nps-collection',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-security-001',
+    href: '/it-services/it-security-vulnerability-scanner',
+    icon: '🛡️',
+    category: 'it',
+    title: 'Automated Vulnerability Scanner for Web Applications',
+    description: 'Continuous security scanning for web apps and APIs. Detects OWASP Top 10 vulnerabilities, misconfigurations, and sensitive data exposure. Scheduled scans, detailed remediation guidance, and compliance reports.',
+    features: [
+      'Authenticated and unauthenticated scanning',
+      'OWASP Top 10 + CWE/SANS Top 25 coverage',
+      'PCI DSS, HIPAA, SOC2 compliance templates',
+      'False positive reduction with machine learning',
+      'Developer-friendly reports with code snippets',
+      'CI/CD integration (GitHub Actions, GitLab CI, Jenkins)',
+      'API security testing (GraphQL, REST, gRPC)'
+    ],
+    benefits: [
+      'Find critical vulnerabilities before hackers do',
+      'Pass security audits with ready-made compliance reports',
+      'Integrate security into dev workflow (shift-left)',
+      'Avoid costly breaches — average cost $4.35M per incident'
+    ],
+    pricing: {
+      single: '$199/mo — 1 app, weekly scans',
+      business: '$599/mo — 5 apps, daily scans, compliance',
+      enterprise: '$1,999/mo — unlimited apps, dedicated scanner',
+      audit: 'Contact — one-time penetration testing add-on'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-security/vulnerability-scanner',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-security-002',
+    href: '/it-services/it-security-pen-testing-as-a-service',
+    icon: '🧑‍💻',
+    category: 'it',
+    title: 'Penetration Testing as a Service (PTaaS)',
+    description: 'Continuous, on-demand penetration testing by certified ethical hackers. Unlike annual pentests, our subscription model gives you 24/7 security testing, immediate vulnerability disclosure, and retesting until fixed.',
+    features: [
+      'Monthly scope definition (your apps, APIs, infrastructure)',
+      'Real-time vulnerability dashboard',
+      'Retesting until vulnerabilities are resolved',
+      'Attack surface monitoring and new asset discovery',
+      'Phishing simulation and social engineering tests',
+      'Bug bounty program management (optional)',
+      'Executive summary reports for board meetings'
+    ],
+    benefits: [
+      'Continuous security validation, not just once-a-year',
+      'Meet compliance requirements (PCI, SOC2, FedRAMP)',
+      'Reduce risk with proactive hacker mindset',
+      'Detailed remediation guidance for dev teams'
+    ],
+    pricing: {
+      standard: '$2,999/mo — 1 app, basic scope',
+      business: '$7,999/mo — 5 apps, full scope, retesting',
+      enterprise: '$19,999/mo — unlimited, dedicated tester',
+      custom: 'Contact — red team, physical security, social engineering'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-security/pen-testing-as-a-service',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-cloud-001',
+    href: '/it-services/cloud-native-migration-factory',
+    icon: '🚀',
+    category: 'it',
+    title: 'Cloud-Native Migration Factory',
+    description: 'Migrate legacy monolithic applications to cloud-native microservices. End-to-end service: assessment, refactoring, containerization, CI/CD setup, and Kubernetes deployment. Includes 6-month post-migration support.',
+    features: [
+      'Application portfolio assessment and cloud-readiness scoring',
+      'Strangler Fig pattern for zero-downtime migrations',
+      'Containerization with Docker + Kubernetes orchestration',
+      'CI/CD pipeline setup (GitHub Actions, GitLab CI, ArgoCD)',
+      'Database migration (schema conversion, data transfer)',
+      'Observability stack (monitoring, logging, tracing)',
+      'Cost optimization and autoscaling configuration'
+    ],
+    benefits: [
+      'Reduce infrastructure costs by 40% in 12 months',
+      'Increase deployment frequency from monthly to daily',
+      'Improve resilience and fault isolation',
+      'Modernize tech stack without business disruption'
+    ],
+    pricing: {
+      assessment: '$5,000 — one-time discovery & architecture plan',
+      migration: '$25,000 — per app migration (up to 50 services)',
+      enterprise: 'Custom — enterprise-wide transformation',
+      support: '$3,000/mo — 6-month post-migration support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-cloud/cloud-native-migration-factory',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'it-cloud-002',
+    href: '/it/services/serverless-application-development',
+    icon: '☁️',
+    category: 'it',
+    title: 'Serverless Application Development',
+    description: 'Build event-driven, auto-scaling applications on AWS Lambda, Azure Functions, or Google Cloud Run. Pay only for compute used. Ideal for APIs, data pipelines, scheduled jobs, and real-time event processing.',
+    features: [
+      'API development with API Gateway + Lambda',
+      'Event-driven architecture (SQS, SNS, EventBridge)',
+      'Real-time data pipelines (Kinesis, Pub/Sub)',
+      'Scheduled tasks (cron-like) without servers',
+      'Database-less architectures with DynamoDB/CosmosDB',
+      'Auto-scaling from zero to millions of requests',
+      'Infrastructure as Code (CDK, Terraform, Pulumi)'
+    ],
+    benefits: [
+      'Zero infrastructure management overhead',
+      'Scale to zero when not in use — cost efficient',
+      'High availability built-in across regions',
+      'Rapid development cycles (weeks, not months)'
+    ],
+    pricing: {
+      small_project: '$15,000 — MVP API + 3 endpoints',
+      standard: '$45,000 — full backend with 10+ lambdas',
+      enterprise: '$120,000+ — complex event-driven systems',
+      ongoing: '10% of compute costs/mo for managed support'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/it-cloud/serverless-application-development',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-ml-001',
+    href: '/ai-services/ai-ml/custom-llm-fine-tuning',
+    icon: '🎯',
+    category: 'ai',
+    title: 'Custom LLM Fine-Tuning & Deployment',
+    description: 'Fine-tune open-source LLMs (Llama 3, Mistral, CodeLlama) on your proprietary data for domain-specific tasks. Deploy as private API with full data control. Better than GPT-4 for specialized use cases.',
+    features: [
+      'Dataset curation and cleaning (your documents, emails, code)',
+      'LoRA/QLoRA fine-tuning with optimized hardware',
+      'Evaluation against test set and human review',
+      'Deployment on dedicated GPU instances (private cloud)',
+      'REST API with rate limiting and authentication',
+      'Continuous improvement pipeline (human-in-the-loop)',
+      'Full data sovereignty — your data never leaves your control'
+    ],
+    benefits: [
+      'Outperform GPT-4 on your specific domain by 30–50%',
+      'Keep IP and data completely private (no third-party API calls)',
+      'Predictable costs — no per-token fees after deployment',
+      'Customize tone, format, and knowledge exactly to your needs'
+    ],
+    pricing: {
+      small: '$12,000 — 7B-13B parameter model fine-tuned, basic deployment',
+      medium: '$35,000 — 34B model, advanced eval, cloud hosting 1 year',
+      large: '$99,000 — 70B model, fine-tuned on 100K+ examples, dedicated infra',
+      enterprise: 'Custom — on-prem GPU cluster deployment'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-ml/custom-llm-fine-tuning',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-ml-002',
+    href: '/ai-services/ai-ml/computer-vision-quality-control',
+    icon: '👁️',
+    category: 'ai',
+    title: 'Computer Vision Quality Control System',
+    description: 'Automated visual inspection for manufacturing and production lines. Detects defects, measures dimensions, verifies assemblies with 99.9% accuracy. Deploys on edge devices (NVIDIA Jetson, Raspberry Pi) for real-time inspection.',
+    features: [
+      'Custom-trained defect detection models (scratches, misalignments, missing parts)',
+      'Real-time inference < 100ms per image',
+      'Edge deployment (no cloud latency, offline operation)',
+      'Dimensional measurement with sub-millimeter precision',
+      'Barcode/QR code reading and verification',
+      'Statistical process control dashboards',
+      'Continuous learning from human corrections (active learning)'
+    ],
+    benefits: [
+      'Catch defects before they reach customers (zero defect shipping)',
+      'Reduce manual inspection costs by 90%',
+      'Increase throughput with non-stop automated inspection',
+      'Meet ISO 9001 quality standards with audit trails'
+    ],
+    pricing: {
+      pilot: '$15,000 — proof-of-concept on your production line',
+      standard: '$49,000 — full system on edge device, 2 camera setup',
+      advanced: '$99,000 — multi-camera, advanced analytics, training',
+      enterprise: 'Custom — factory-wide rollout, change management'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-ml/computer-vision-quality-control',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-ml-003',
+    href: '/ai-services/ai-ml/predictive-maintenance-platform',
+    icon: '🔧',
+    category: 'ai',
+    title: 'Predictive Maintenance for Industrial Equipment',
+    description: 'Predict equipment failures before they happen. Analyze sensor data (vibration, temperature, pressure) from IoT devices to forecast remaining useful life (RUL) and recommend maintenance windows.',
+    features: [
+      'Time-series anomaly detection on sensor streams',
+      'Failure mode classification (bearing wear, motor fault, etc.)',
+      'RUL (Remaining Useful Life) predictions with confidence intervals',
+      'Maintenance scheduling optimization',
+      'Alert escalation (SMS, email, Slack)',
+      'Equipment health dashboards and trend analysis',
+      'Integration with CMMS (Computerized Maintenance Management Systems)'
+    ],
+    benefits: [
+      'Reduce unplanned downtime by up to 70%',
+      'Extend equipment lifespan with timely interventions',
+      'Lower maintenance costs (shift from reactive to predictive)',
+      'Improve safety by preventing catastrophic failures'
+    ],
+    pricing: {
+      small: '$299/mo — up to 50 sensors, basic alerts',
+      industrial: '$999/mo — 500 sensors, advanced analytics, SLA',
+      enterprise: '$4,999/mo — unlimited sensors, on-prem deployment',
+      consulting: 'Contact — implementation and training'
+    },
+    contactInfo: {
+      website: 'https://ziontechgroup.com/services/ai-ml/predictive-maintenance-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'data-001',
+    href: '/it-services/data-warehouse-modernization',
+    icon: '🏦',
+    category: 'it',
+    title: 'Data Warehouse Modernization & Migration',
+    description: 'Migrate from legacy databases (Teradata, Oracle, SQL Server 2008) to modern cloud data warehouses (Snowflake, BigQuery, Redshift). Includes schema conversion, ETL pipeline rebuilding, and business intelligence migration.',
+    features: [
+      'Assessment and architecture design (lakehouse vs warehouse)',
+      'Schema conversion and data type mapping',
+      'ETL/ELT pipeline migration (Informatica, Talend → dbt, Airflow)',
+      'Performance optimization (clustering, partitioning, materialized views)',
+      'BI tool migration (Tableau, Power BI, Looker)',
+      'Data governance and security setup',
+      'Training and knowledge transfer for your team'
+    ],
+    'benefits': [
+      'Cut data warehouse costs by 60% (cloud pay-as-you-go)',
+      'Query performance improvement 10–100x',
+      'Enable advanced analytics and ML on unified data',
+      'Future-proof infrastructure with separation of storage/compute'
+    ],
+    'pricing': {
+      assessment: '$7,500 — discovery, sizing, TCO analysis',
+      migration: '$35,000+ — based on TB volume and complexity',
+      optimization: '$15,000 — performance tuning post-migration',
+      enterprise: 'Custom — multi-year modernization roadmap'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/it-data/data-warehouse-modernization',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'data-002',
+    href: '/it-services/data-real-time-analytics-dashboard',
+    icon: '📊',
+    category: 'it',
+    title: 'Real-Time Analytics Dashboard & Streaming',
+    description: 'Build live dashboards that update in seconds, not hours. Ingest data from Kafka, Kinesis, or event sources; process with Flink/Spark; visualize with Grafana or custom React dashboards. Handle millions of events per day.',
+    features: [
+      'Real-time data ingestion from multiple sources',
+      'Stream processing with Apache Flink or Spark Structured Streaming',
+      'Low-latency dashboards (sub-second updates)',
+      'Alerting on KPI thresholds',
+      'Role-based access control (RBAC) for dashboard viewers',
+      'Export to PDF/CSV scheduled reports',
+      'Mobile-responsive and white-label branding'
+    ],
+    'benefits': [
+      'Monitor business metrics as they happen',
+      'Detect anomalies and fraud in real time',
+      'Reduce reporting lag from days to seconds',
+      'Empower teams with self-service analytics'
+    ],
+    'pricing': {
+      startup: '$499/mo — 1M events/month, basic dashboards',
+      business: '$1,299/mo — 10M events, advanced alerts, SSO',
+      enterprise: '$4,999/mo — unlimited events, dedicated support',
+      onprem: 'Contact — on-prem streaming platform deployment'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/it-data/real-time-analytics-dashboard',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'data-003',
+    href: '/it-services/data-master-data-management',
+    icon: '🗃️',
+    category: 'it',
+    title: 'Master Data Management (MDM) Platform',
+    description: 'Create a single source of truth for customers, products, and suppliers. Deduplicate records, enforce data quality rules, and provide clean master data to all business systems (CRM, ERP, marketing automation).',
+    features: [
+      'Data profiling and quality assessment across sources',
+      'Automated deduplication and record matching',
+      'Golden record creation and survivorship rules',
+      'Data stewardship workflows (approval, conflict resolution)',
+      'APIs for real-time and batch synchronization',
+      'Audit trail and change history',
+      'Integration with Salesforce, SAP, Microsoft Dynamics'
+    ],
+    'benefits': [
+      'Eliminate duplicate customer records across systems',
+      'Improve marketing targeting with clean data',
+      'Reduce operational errors from inconsistent information',
+      'Meet regulatory requirements (GDPR, CCPA) with accurate data'
+    ],
+    'pricing': {
+      cloud_saas: '$1,999/mo — up to 1M records, 3 data domains',
+      business: '$4,999/mo — unlimited records, custom matching rules',
+      enterprise: '$12,000/mo — multi-domain, on-prem deployment option',
+      consulting: 'Contact — data cleansing and implementation services'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/it-data/master-data-management',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-media-001',
+    href: '/ai-services/ai-media/video-dubbing-and-localization',
+    icon: '🎬',
+    category: 'ai',
+    title: 'AI Video Dubbing & Multi-Language Localization',
+    description: 'Translate and dub videos into 50+ languages with AI-perfect lip-sync. Preserves speaker voice characteristics, handles multiple speakers, and maintains emotional tone. Ideal for training videos, marketing content, and e-learning.',
+    'features': [
+      'Voice cloning (10 seconds sample creates voice persona)',
+      'Lip-sync animation — AI moves lips to match new language audio',
+      'Multi-speaker detection and voice separation',
+      '50+ languages with native-sounding quality',
+      'Subtitle generation and burn-in',
+      'Bulk processing for large video libraries',
+      ' human-in-the-loop review portal for quality assurance'
+    ],
+    'benefits': [
+      'Localize video content at 1/10th traditional dubbing cost',
+      'Launch global campaigns in weeks, not months',
+      'Maintain brand voice consistency across languages',
+      'Increase engagement with native-language content'
+    ],
+    'pricing': {
+      payg: '$0.50/minute — pay per dubbed video',
+      starter: '$299/mo — 100 minutes/month, 5 languages',
+      business: '$999/mo — 500 minutes/month, unlimited languages',
+      enterprise: 'Custom — dedicated voice model training'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-media/video-dubbing-and-localization',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-media-002',
+    href: '/ai-services/ai-media/ai-image-upscaling-restoration',
+    icon: '🖼️',
+    category: 'ai',
+    title: 'AI Image Upscaling & Restoration Suite',
+    description: 'Upscale images 4x–16x without quality loss. Restore old photos, remove noise, enhance details, and colorize black & white images. Uses ESRGAN/GFPGAN models trained on millions of high-res photographs.',
+    features': [
+      '4x and 16x upscaling with artifact removal',
+      'Face enhancement and reconstruction (for old/blurry photos)',
+      'Colorization of black & white images (historically accurate)',
+      'Noise reduction and JPEG artifact removal',
+      'Batch processing (1000s of images at once)',
+      'API integration for existing workflows',
+      'On-prem deployment for privacy-sensitive use cases'
+    ],
+    'benefits': [
+      'Breathe new life into archival photo libraries',
+      'Enhance product images for e-commerce',
+      'Restore family photos for consumers (B2C opportunity)',
+      'Prepare images for print at any size without pixelation'
+    ],
+    'pricing': {
+      web: '$49/mo — 1,000 images/month, API access',
+      pro: '$149/mo — 10,000 images, batch processing',
+      business: '$499/mo — unlimited, on-prem option available',
+      enterprise: 'Contact — custom model training'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-media/ai-image-upscaling-restoration',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-dev-001',
+    href: '/ai-services/ai-dev/code-review-automation',
+    icon: '👨‍💻',
+    category: 'ai',
+    title: 'Automated Code Review & Security Scanning',
+    description: 'AI-powered code review that catches bugs, security vulnerabilities, and performance issues before merge. Integrates with GitHub, GitLab, Bitbucket. Trained on millions of open-source commits and CVE databases.',
+    features': [
+      'Security scanning: XSS, SQLi, RCE, SSRF, path traversal',
+      'Code quality: code smells, complexity, duplication',
+      'Performance anti-patterns (N+1 queries, memory leaks)',
+      'Framework-specific best practices (React, Django, Spring)',
+      'Auto-comment on pull requests with remediation suggestions',
+      'Trend analysis and technical debt tracking',
+      'Compliance: OWASP, SANS, CERT secure coding standards'
+    ],
+    'benefits': [
+      'Find critical bugs before they reach production',
+      'Reduce security review time by 80%',
+      'Enforce coding standards across teams automatically',
+      'Accelerate CI/CD pipeline with parallelized reviews'
+    ],
+    'pricing': {
+      open_source: 'Free — public repos',
+      startup: '$99/mo — private repos, 5 developers',
+      business: '$399/mo — unlimited repos, 50 developers',
+      enterprise: '$1,299/mo — unlimited, custom rules, on-prem'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-dev/code-review-automation',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-dev-002',
+    href: '/ai-services/ai-dev/automated-test-generation',
+    icon: '🧪',
+    category: 'ai',
+    title: 'Automated Test Generation from Requirements',
+    description: 'Generate unit tests, integration tests, and end-to-end tests automatically from user stories, PRDs, or code. Covers edge cases humans miss. Supports Jest, Pytest, JUnit, Cypress, Playwright.',
+    features': [
+      'Reads Jira, GitHub Issues, Markdown, Confluence pages',
+      'Generates test cases with assertions and mock data',
+      'Creates test fixtures and setup/teardown code',
+      'Supports TDD workflow: red-green-refactor',
+      'Automatically updates tests when code changes',
+      'Coverage analysis and gap identification',
+      'CI/CD integration (GitHub Actions, CircleCI, Jenkins)'
+    ],
+    'benefits': [
+      'Achieve 90%+ test coverage without writing tests manually',
+      'Catch regressions before customers do',
+      'Speed up development with auto-generated test scaffolding',
+      'Reduce QA manual testing effort by 60%'
+    ],
+    'pricing': {
+      personal: '$29/mo — 1 project, basic test types',
+      team: '$149/mo — 10 projects, full test suite generation',
+      business: '$499/mo — unlimited projects, advanced CI integration',
+      enterprise: 'Custom — self-hosted, custom frameworks'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-dev/automated-test-generation',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-dev-003',
+    href: '/ai-services/ai-dev/legacy-code-to-modern-migration',
+    icon: '🔄',
+    category: 'ai',
+    title: 'Legacy Codebase Migration & Modernization',
+    description: 'Automatically convert legacy code (VB6, COBOL, Perl, Classic ASP, Oracle Forms) to modern languages (C#, Java, Python, React, Node.js). Preserves business logic intact while applying modern patterns and security best practices.',
+    features': [
+      'Language-to-language transpilation with semantic analysis',
+      'Database schema migration (legacy DB to PostgreSQL/MySQL)',
+      'UI modernization: WinForms → React, VB6 → Electron',
+      'API extraction from monoliths (create REST/GraphQL endpoints)',
+      'Automated test suite generation from existing behavior',
+      'Documentation generation from code comments',
+      'Gradual cutover strategy with parallel run support'
+    ],
+    'benefits': [
+      'Escape costly legacy platform maintenance ($1M+/year savings typical)',
+      'Recover business logic buried in unmaintainable code',
+      'Enable mobile/web access to old systems',
+      'Hire modern developers without COBOL expertise'
+    ],
+    'pricing': {
+      assessment: '$10,000 — codebase analysis, effort estimation',
+      migration: '$50,000+ — based on lines of code and complexity',
+      enterprise: 'Custom — multi-year modernization roadmap',
+      support: '15% of migration cost/year for ongoing maintenance'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-dev/legacy-code-to-modern-migration',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-dev-004',
+    href: '/ai-services/ai-dev/api-documentation-generator',
+    icon: '📚',
+    category: 'ai',
+    title: 'AI API Documentation Generator & Portal',
+    description: 'Generate beautiful, interactive API documentation from code, OpenAPI specs, or live traffic. Auto-discovers endpoints, parameters, examples, and error responses. Keeps docs in sync with code automatically.',
+    features': [
+      'Auto-discovery from live API traffic (no manual annotations)',
+      'OpenAPI/Swagger import and enhancement',
+      'Try-it console with authentication (like Postman)',
+      'Code snippets in 15+ languages',
+      'Changelog generation from git history',
+      'Multi-language docs (English, Spanish, Chinese auto-translate)',
+      'Developer analytics (most viewed endpoints, failed requests)'
+    ],
+    'benefits': [
+      'Eliminate outdated, inaccurate API documentation',
+      'Reduce developer onboarding time from days to hours',
+      'Decrease support requests with clear examples',
+      'Improve API adoption with interactive exploration'
+    ],
+    'pricing': {
+      basic: '$99/mo — 1 API, basic docs',
+      pro: '$299/mo — 5 APIs, interactive console, analytics',
+      business: '$799/mo — unlimited APIs, custom branding, SSO',
+      enterprise: 'Custom — dedicated instance, custom workflows'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-dev/api-documentation-generator',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-robotics-001',
+    href: '/ai-services/ai-robotics/robotic-process-automation-rpa',
+    icon: '🤖',
+    category: 'ai',
+    title: 'Robotic Process Automation (RPA) Platform',
+    description: 'Automate repetitive desktop and server tasks across any application (SAP, Excel, legacy systems). Create bots that click, type, extract data, and make decisions. Low-code visual workflow designer.',
+    features': [
+      'Low-code drag-and-drop workflow builder',
+      'Cross-application automation (web, desktop, mainframe)',
+      'AI computer vision for UI element recognition',
+      'Scheduled and event-triggered bot execution',
+      'Centralized bot management and monitoring',
+      'Exception handling with human-in-the-loop review',
+      'Integration with UiPath, Automation Anywhere, Blue Prism ecosystems'
+    ],
+    'benefits': [
+      'Automate 80% of repetitive back-office tasks',
+      'Reduce operational costs by 50%+ with software robots',
+      'Eliminate human error in data entry and reconciliation',
+      'Scale operations without hiring (24/7 bot availability)'
+    ],
+    'pricing': {
+      attended: '$75/seat/mo — attended bots for task automation',
+      unattended: '$1,500/bot/mo — fully autonomous bots',
+      enterprise: '$7,500/mo — unlimited bots, orchestrator, AI vision',
+      custom: 'Contact — process discovery and implementation services'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-robotics/robotic-process-automation',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-robotics-002',
+    href: '/ai-services/ai-robotics/intelligent-document-processing',
+    icon: '📄',
+    category: 'ai',
+    title: 'Intelligent Document Processing (IDP) Platform',
+    description: 'Extract structured data from unstructured documents: invoices, contracts, receipts, insurance claims, medical forms. AI understands context, handles variable layouts, and learns from corrections.',
+    features': [
+      'Layout-agnostic extraction (no template required)',
+      'Handwritten text recognition (HTR) + printed OCR',
+      'Table extraction with structure preservation',
+      'Entity recognition (dates, amounts, names, addresses)',
+      'Validation rules and business logic application',
+      'Human-in-the-loop review interface',
+      'Integration with ERP, CRM, DMS systems'
+    ],
+    'benefits': [
+      'Process 10,000+ documents daily with 99% accuracy',
+      'Cut document processing costs by 90%',
+      'Eliminate manual data entry errors',
+      'Accelerate accounts payable/receivable and claims processing'
+    ],
+    'pricing': {
+      pages: '$0.05/page — pay-as-you-go',
+      starter: '$299/mo — 10,000 pages + 5 workflows',
+      business: '$999/mo — 100,000 pages + unlimited workflows',
+      enterprise: 'Custom — dedicated deployment, custom model training'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-robotics/intelligent-document-processing',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-robotics-003',
+    href: '/ai-services/ai-robotics/autonomous-customer-service-agent',
+    icon: '🎧',
+    category: 'ai',
+    title: 'Autonomous Customer Service Voice Agent',
+    description: 'AI agent that handles customer calls end-to-end: understands natural language, accesses CRM, processes payments, escalates when needed. Works on phone numbers or embedded WebRTC. Available 24/7 in multiple languages.',
+    features': [
+      'Voice recognition with 95%+ accuracy (noisy environments supported)',
+      'Natural Language Understanding (NLU) for intent detection',
+      'CRM integration to pull account info and update records',
+      'Secure payment processing (PCI compliant)',
+      'Seamless handoff to live agents with full context',
+      'Call analytics and sentiment tracking',
+      'Continuous learning from call transcripts'
+    ],
+    'benefits': [
+      'Handle 80% of customer calls without human agents',
+      'Reduce call center costs by millions annually',
+      'Eliminate wait times — instant answer rate 100%',
+      'Consistent, compliant responses every time'
+    ],
+    'pricing': {
+      payg: '$0.25/minute — pay per call minute handled',
+      business: '$2,000/mo — 10,000 minutes, AI agent pool',
+      enterprise: '$8,000/mo — unlimited minutes, custom integrations',
+      onprem: 'Contact — on-prem voice AI appliance'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-robotics/autonomous-customer-service-agent',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-consulting-001',
+    href: '/ai-services/ai-consulting/ai-strategy-roadmap-workshop',
+    icon: '🗺️',
+    category: 'ai',
+    title: 'AI Strategy & Roadmap Workshop',
+    description: '2-day intensive workshop with our AI CTO-level consultants. Identify high-impact AI use cases, build business case, create 12-month implementation roadmap, and define success metrics. Includes follow-up 30-day office hours.',
+    features': [
+      'Pre-workshop assessment (surveys, data inventory)',
+      'Cross-functional stakeholder interviews',
+      'Use case prioritization matrix (impact vs feasibility)',
+      'ROI modeling and TCO analysis',
+      'Technical architecture recommendations',
+      'Talent and skills gap analysis',
+      '30 days of post-workshop office hours (email/phone)'
+    ],
+    'benefits': [
+      'Avoid $500K+ in failed AI projects by starting right',
+      'Align leadership on AI vision and priorities',
+      'Create actionable roadmap with clear milestones',
+      'Understand data readiness and infrastructure gaps'
+    ],
+    'pricing': {
+      standard: '$9,500 — 2-day workshop for up to 12 attendees (remote)',
+      onsite: '$15,000 — onsite at your location (US only)',
+      extended: '$25,000 — 3-day + deeper technical assessment',
+      ongoing: 'Contact — fractional AI executive services'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-consulting/ai-strategy-roadmap-workshop',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-consulting-002',
+    href: '/ai-services/ai-consulting/mlops-pipeline-setup',
+    icon: '⚙️',
+    category: 'ai',
+    title: 'MLOps Pipeline Setup & Training',
+    description: 'Build production-grade ML pipelines: data versioning, experiment tracking, model registry, CI/CD for ML, and monitoring. Implements best-in-class tools (MLflow, DVC, Kubeflow, Weights & Biases) tailored to your stack.',
+    'features': [
+      'Feature store and data versioning setup',
+      'Experiment tracking and model comparison dashboards',
+      'Model registry with versioning and stage promotion',
+      'CI/CD pipelines for automated model training and deployment',
+      'Model monitoring for drift, performance, and bias',
+      'Infrastructure: Kubernetes, GPU scheduling, autoscaling',
+      'Team training and runbooks for sustained operations'
+    ],
+    'benefits': [
+      'Reduce model deployment time from months to hours',
+      'Ensure reproducibility and auditability of ML experiments',
+      'Monitor model quality in production — catch drift early',
+      'Enable data science team to ship models autonomously'
+    ],
+    'pricing': {
+      basic: '$15,000 — MLflow stack setup, training, documentation',
+      business: '$45,000 — full MLOps platform (MLflow + DVC + monitoring)',
+      enterprise: '$120,000 — Kubernetes-based, auto-scaling, custom tooling',
+      support: '$3,000/mo — ongoing maintenance and monitoring'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/ai-consulting/mlops-pipeline-setup',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'special-001',
+    href: '/it-services/special/digital-forensics-incident-response',
+    icon: '🔍',
+    category: 'it',
+    title: 'Digital Forensics & Incident Response (DFIR)',
+    description: '24/7 incident response and forensic investigation for security breaches. Preserve evidence, identify root cause, eradicate threats, and recover systems. Includes legal-ready reports and expert witness testimony.',
+    'features': [
+      '24/7 emergency response (under 1 hour initial contact)',
+      'Forensic imaging and evidence preservation (chain of custody)',
+      'Root cause analysis with timeline reconstruction',
+      'Threat eradication and system recovery',
+      'Legal report package (Deposition-ready documentation)',
+      'Expert witness testimony (if needed)',
+      'Post-incident review and security hardening recommendations'
+    ],
+    'benefits': [
+      'Contain breaches within hours, not days',
+      'Comply with legal and regulatory reporting requirements',
+      'Understand attack vector to prevent recurrence',
+      'Minimize business disruption and reputational damage'
+    ],
+    'pricing': {
+      retainer: '$5,000/mo — 4 hours/month incident response pool',
+      incident: '$8,000+ — per breach response (starts at 8-hour minimum)',
+      forensic: '$15,000+ — deep investigation and report',
+      litigation: 'Contact — expert witness and court testimony'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/it-special/digital-forensics-incident-response',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'special-002',
+    href: '/it-services/special/technical-due-diligence-for-acquisitions',
+    icon: '📋',
+    category: 'it',
+    title: 'Technical Due Diligence for M&A',
+    description: 'Comprehensive technical assessment of acquisition targets. Evaluate code quality, architecture, security posture, technical debt, and scalability risks. Deliver decision-ready reports for investors and boards.',
+    'features': [
+      'Code review and architecture analysis (50K+ LOC)',
+      'Security assessment (vulnerabilities, compliance)',
+      'Performance and scalability evaluation',
+      'Technical debt quantification and remediation cost estimate',
+      'Team capability and development process assessment',
+      'Integration risk analysis with your stack',
+      'Management presentation and Q&A session'
+    ],
+    'benefits': [
+      'Avoid acquiring technical time bombs',
+      'Negotiate better terms based on technical risk findings',
+      'Understand post-acquisition integration costs',
+      'Accelerate due diligence from weeks to days'
+    ],
+    'pricing': {
+      small: '$12,000 — startups < $10M valuation, lightweight review',
+      standard: '$35,000 — mid-market, full technical DD',
+      large: '$85,000+ — enterprise acquisitions, multi-disciplinary team',
+      rush: '+50% — 5-day delivery available'
+    },
+    'contactInfo': {
+      'website': 'https://ziontechgroup.com/services/it-special/technical-due-diligence-for-acquisitions',
+      'email': 'kleber@ziontechgroup.com',
+      'phone': '+1 302 464 0950',
+      'address': '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
 ];
 export const itSolutions = itServices;
 
