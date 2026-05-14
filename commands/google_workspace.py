@@ -351,3 +351,51 @@ def telegram_send(text: str):
                 print(f'[TELEGRAM] HTTP {r.status}: {text[:100]}')
     except Exception as e:
         print(f'[TELEGRAM] Failed: {e}')
+
+def gmail_send_reply(thread_id: str, body: str) -> dict:
+    """Send a reply to an email thread.
+    
+    Args:
+      thread_id: The Gmail message/thread ID to reply to
+      body: The reply body text
+      
+    Returns:
+      dict with result status
+    """
+    # Get the thread to find original message details
+    url = f'https://gmail.googleapis.com/gmail/v1/users/me/messages/{thread_id}'
+    req = urllib.request.Request(url, headers=gog_headers())
+    thread = json.loads(urllib.request.urlopen(req).read())
+    
+    # Extract headers
+    headers = thread.get('payload', {}).get('headers', [])
+    to_header = next((h['value'] for h in headers if h['name'] == 'To'), '')
+    from_header = next((h['value'] for h in headers if h['name'] == 'From'), '')
+    subject = next((h['value'] for h in headers if h['name'] == 'Subject'), '')
+    message_id = next((h['value'] for h in headers if h['name'] == 'Message-ID'), '')
+    
+    # Create reply message
+    reply_subject = f"Re: {subject}" if not subject.startswith('Re:') else subject
+    
+    raw_email = f"""To: {from_header}
+Subject: {reply_subject}
+In-Reply-To: {message_id}
+References: {message_id}
+
+{body}"""
+    
+    # Encode for Gmail API
+    import base64
+    raw_bytes = raw_email.encode('utf-8')
+    raw_b64 = base64.urlsafe_b64encode(raw_bytes).decode('utf-8')
+    
+    # Send via Gmail API
+    send_url = 'https://gmail.googleapis.com/gmail/v1/users/me/messages/send'
+    data = json.dumps({'raw': raw_b64}).encode()
+    send_req = urllib.request.Request(send_url, data=data, headers={**gog_headers(), 'Content-Type': 'application/json'})
+    
+    try:
+        result = json.loads(urllib.request.urlopen(send_req).read())
+        return {'success': True, 'message_id': result.get('id')}
+    except Exception as e:
+        return {'success': False, 'error': str(e)}
