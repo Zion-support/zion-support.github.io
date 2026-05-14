@@ -70,7 +70,8 @@ export default function AutonomousFeaturePrioritizerPage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '0.5rem', marginBottom: '0.5rem' }}>
               {[['Title', newReq.title, (v: string) => setNewReq({ ...newReq, title: v }), false],
-                ['Category', newReq.category, (v: string) => setNewReq({ ...newReq, category: v }), false, ['UX', 'Integrations', 'Data', 'Security', 'Platform', 'Performance', 'Analytics']].map(([label, val, setter, isSelect, options]) => (
+                ['Category', newReq.category, (v: string) => setNewReq({ ...newReq, category: v }), false, ['UX', 'Integrations', 'Data', 'Security', 'Platform', 'Performance', 'Analytics']]
+              ].map(([label, val, setter, isSelect, options]) => (
                 <div key={label as string} style={isSelect ? { gridColumn: '1' } : { gridColumn: '1 / -1' }}>
                   <label style={{ color: '#67e8f9', fontSize: '0.75rem' }}>{label}</label>
                   {isSelect ? (

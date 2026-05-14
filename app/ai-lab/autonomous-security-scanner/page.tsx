@@ -23,7 +23,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         description: 'AWS access key found in code. Attackers can exploit your cloud resources.',
         remediation: 'Remove immediately, rotate credentials, use environment variables or AWS Secrets Manager.',
         codeExample: 'const key = process.env.AWS_ACCESS_KEY_ID;',
-        owaspReference: 'A02:2021 – Cryptographic Failures',
+        owaspReference: 'A02:2021 - Cryptographic Failures',
       });
     }
     if (/sk-[a-zA-Z0-9]{32,}/.test(input) || /OPENAI_API_KEY/.test(input)) {
@@ -31,15 +31,15 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         id: 'SEC-002', severity: 'Critical', category: 'Secrets Exposure',
         title: 'OpenAI API Key Detected',
         remediation: 'Remove key, revoke in OpenAI dashboard, use server-side proxy pattern.',
-        owaspReference: 'A02:2021 – Cryptographic Failures',
+        owaspReference: 'A02:2021 - Cryptographic Failures',
       });
     }
     if (/ghp_[a-zA-Z0-9]{36}/.test(input)) {
       vulns.push({
         id: 'SEC-003', severity: 'Critical', category: 'Secrets Exposure',
         title: 'GitHub Personal Access Token Detected',
-        remediation: 'Revoke token immediately, rotate credentials, use GitHub\'s token patterns for CI.',
-        owaspReference: 'A02:2021 – Cryptographic Failures',
+        remediation: 'Revoke token immediately, rotate credentials, use GitHub token token patterns for CI.',
+        owaspReference: 'A02:2021 - Cryptographic Failures',
       });
     }
     if (/password['"]?\s*[:=]\s*['"]\w{3,}/i.test(input) && !/process\.env|secret|placeholder|example/i.test(input)) {
@@ -48,7 +48,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         title: 'Possible Hardcoded Password',
         description: 'Potential hardcoded password detected in source code.',
         remediation: 'Move to environment variables or secrets management service.',
-        owaspReference: 'A07:2021 – Identification and Authentication Failures',
+        owaspReference: 'A07:2021 - Identification and Authentication Failures',
       });
     }
     return vulns;
@@ -63,7 +63,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         description: 'Dynamic code execution can lead to Remote Code Execution (RCE) if user input reaches these functions.',
         remediation: 'Avoid eval/exec. Use safer alternatives like JSON.parse() or Function constructors with strict input validation.',
         codeExample: "// Avoid eval/exec. Use safer alternatives like JSON.parse() or Function with strict validation.",
-        owaspReference: 'A03:2021 – Injection',
+        owaspReference: 'A03:2021 - Injection',
       });
     }
     if (/\$\{.*req\./i.test(input) || /innerHTML\s*=\s*.*\+/.test(input)) {
@@ -72,7 +72,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         title: 'Potential XSS via User Input in HTML',
         description: 'User input being inserted directly into HTML without sanitization.',
         remediation: 'Use textContent instead of innerHTML, or sanitize with DOMPurify.',
-        owaspReference: 'A03:2021 – Injection',
+        owaspReference: 'A03:2021 - Injection',
       });
     }
     return vulns;
@@ -86,7 +86,7 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         title: 'Potential SQL Injection via String Concatenation',
         description: 'SQL query built using string concatenation instead of parameterized queries.',
         remediation: 'Use parameterized queries or ORM. Example: db.query("SELECT * FROM users WHERE id = $1", [id])',
-        owaspReference: 'A03:2021 – Injection',
+        owaspReference: 'A03:2021 - Injection',
       });
     }
     return vulns;
@@ -99,8 +99,8 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         id: 'SEC-030', severity: 'Medium', category: 'Missing Security Headers',
         title: 'Content-Security-Policy Header Missing',
         description: 'CSP header not configured. Without CSP, the app is vulnerable to XSS and data injection attacks.',
-        remediation: 'Add CSP header: res.setHeader("Content-Security-Policy", "default-src \'self\';")',
-        owaspReference: 'A05:2021 – Security Misconfiguration',
+        remediation: 'Add a Content-Security-Policy header with default-src self',
+        owaspReference: 'A05:2021 - Security Misconfiguration',
       });
     }
     if (!/X-Frame-Options/i.test(input) && !/frame-ancestors/i.test(input)) {
@@ -108,8 +108,8 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         id: 'SEC-031', severity: 'Medium', category: 'Missing Security Headers',
         title: 'X-Frame-Options / frame-ancestors Not Set',
         description: 'App may be vulnerable to clickjacking attacks.',
-        remediation: 'Add X-Frame-Options: DENY or CSP frame-ancestors \'none\''.
-        owaspReference: 'A05:2021 – Security Misconfiguration',
+        remediation: 'Add X-Frame-Options: DENY or CSP frame-ancestors none',
+        owaspReference: 'A05:2021 - Security Misconfiguration',
       });
     }
     if (!/Strict-Transport-Security/i.test(input) && !/HSTS/i.test(input)) {
@@ -117,8 +117,8 @@ const SECURITY_PATTERNS: Record<string, (input: string) => Vulnerability[]> = {
         id: 'SEC-032', severity: 'High', category: 'Missing Security Headers',
         title: 'HSTS Header Not Configured',
         description: 'Without HSTS, users may be vulnerable to protocol downgrade attacks.',
-        remediation: 'Add: Strict-Transport-Security: max-age=31536000; includeSubDomains',
-        owaspReference: 'A05:2021 – Security Misconfiguration',
+        remediation: 'Set Strict-Transport-Security header: max-age=31536000; includeSubDomains',
+        owaspReference: 'A05:2021 - Security Misconfiguration',
       });
     }
     return vulns;

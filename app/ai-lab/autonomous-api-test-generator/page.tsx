@@ -22,7 +22,7 @@ export default function AutonomousApiTestGeneratorPage() {
     });
     if (ts.length === 0 && spec.length > 10) {
       ts.push({ method: 'GET', path: '/users', curl: 'curl -X GET https://api.example.com/users', expect: '200 OK, JSON array', edge: 'Empty, pagination, auth missing' });
-      ts.push({ method: 'POST', path: '/users', curl: "curl -X POST https://api.example.com/users -d '{"email":"test@test.com"}'", expect: '201 Created', edge: 'Empty body, invalid JSON, duplicate, rate limit' });
+      ts.push({ method: 'POST', path: '/users', curl: 'curl -X POST https://api.example.com/users -d \'' + '{"email":"test@test.com"}' + '\'', expect: '201 Created', edge: 'Empty body, invalid JSON, duplicate, rate limit' });
     }
     setTests(ts);
   };

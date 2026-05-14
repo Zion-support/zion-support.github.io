@@ -113,7 +113,7 @@ export default function AutonomousAccessibilityAuditorPage() {
 
             <div style={{ background: '#1e1b4b', padding: '1.5rem', borderRadius: '12px', border: '1px solid #312e81' }}>
               {filtered.map((item, i) => (
-                <div key={i} style={{ background: '#0f172a', padding: '1rem', borderRadius: '8px', marginBottom: '0.5rem', borderLeft: `4px solid ${item.status === '' ? '#20a' : item.status === 'fail' ? '#ef6633500'}`, }}>
+                <div key={i} style={{ background: '#0f172a', padding: '1rem', borderRadius: '8px', marginBottom: '0.5rem', borderLeft: `4px solid ${item.status === '' ? '#20a000' : item.status === 'fail' ? '#ef6633' : '#64748b'}`, }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <span style={{ fontSize: '1rem' }}>{item.status === 'pass' ? '✅' : item.status === 'fail' ? '❌' : '⚠️'}</span>

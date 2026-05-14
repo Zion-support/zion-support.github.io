@@ -12,6 +12,13 @@ interface ReviewIssue {
   suggestion: string;
 }
 
+interface PatternCheck {
+  pattern: RegExp;
+  title: string;
+  description: string;
+  suggestion: string;
+}
+
 interface ReviewResult {
   score: number;
   issuesFound: number;
@@ -27,38 +34,38 @@ interface ReviewResult {
   recommendations: string[];
 }
 
-const SECURITY_PATTERNS = [
+const SECURITY_PATTERNS: PatternCheck[] = [
   { pattern: /password\s*=\s*['"][^'"]+['"]/i, title: 'Hardcoded password detected', description: 'Passwords should never be hardcoded in source code.', suggestion: 'Use environment variables or a secrets manager.' },
   { pattern: /api[_-]?key\s*=\s*['"][^'"]+['"]/i, title: 'Hardcoded API key', description: 'API keys should be stored securely, not in code.', suggestion: 'Move to .env file and use process.env.API_KEY.' },
   { pattern: /secret\s*=\s*['"][^'"]+['"]/i, title: 'Potential hardcoded secret', description: 'Secrets in code pose security risks.', suggestion: 'Use a vault service or environment variables.' },
-  { pattern: /eval\s*\(/, title: 'Use of eval()', description: 'eval() can execute arbitrary code and is a security risk.', suggestion: 'Use JSON.parse() for JSON, or safer alternatives.' },
-  { pattern: /innerHTML\s*=/, title: 'Potential XSS via innerHTML', description: 'innerHTML can lead to Cross-Site Scripting attacks.', suggestion: 'Use textContent or sanitize HTML with DOMPurify.' },
-  { pattern: /document\.write\s*\(/, title: 'document.write() usage', description: 'document.write() can be exploited for XSS attacks.', suggestion: 'Use DOM manipulation methods instead.' },
-  { pattern: /mysql\.query.*\$\{/, title: 'Potential SQL injection', description: 'String interpolation in SQL queries is dangerous.', suggestion: 'Use parameterized queries or an ORM.' },
-  { pattern: /exec\s*\(\s*['"`].*\+/, title: 'Command injection risk', description: 'String concatenation in system commands is risky.', suggestion: 'Use parameterized exec() or validate input.' },
-  { pattern: /dangerouslySetInnerHTML/, title: 'React dangerouslySetInnerHTML usage', description: 'Bypasses React\'s XSS protection.', suggestion: 'Sanitize content with DOMPurify before rendering.' },
+  { pattern: /eval\s*\(/i, title: 'Use of eval()', description: 'eval() can execute arbitrary code and is a security risk.', suggestion: 'Use JSON.parse() for JSON, or safer alternatives.' },
+  { pattern: /innerHTML\s*=/i, title: 'Potential XSS via innerHTML', description: 'innerHTML can lead to Cross-Site Scripting attacks.', suggestion: 'Use textContent or sanitize HTML with DOMPurify.' },
+  { pattern: /document\.write\s*\(/i, title: 'document.write() usage', description: 'document.write() can be exploited for XSS attacks.', suggestion: 'Use DOM manipulation methods instead.' },
+  { pattern: /mysql\.query.*\$\{/i, title: 'Potential SQL injection', description: 'String interpolation in SQL queries is dangerous.', suggestion: 'Use parameterized queries or an ORM.' },
+  { pattern: /exec\s*\(\s*['"`].*\+/i, title: 'Command injection risk', description: 'String concatenation in system commands is risky.', suggestion: 'Use parameterized exec() or validate input.' },
+  { pattern: /dangerouslySetInnerHTML/i, title: 'React dangerouslySetInnerHTML usage', description: 'Bypasses React\'s XSS protection.', suggestion: 'Sanitize content with DOMPurify before rendering.' },
 ];
 
-const PERFORMANCE_PATTERNS = [
+const PERFORMANCE_PATTERNS: PatternCheck[] = [
   { pattern: /for\s*\([^)]*\.length/i, title: 'Caching array length in loop', description: 'Accessing .length repeatedly in loop condition.', suggestion: 'Cache length variable: for (let i = 0, len = arr.length; i < len; i++)' },
-  { pattern: /useState.*\[.*\]/, title: 'Array/obj in useState without memo', description: 'Creating new arrays/objects in useState each render.', suggestion: 'Use useMemo or initialize outside component.' },
-  { pattern: /useEffect.*\[\s*\]/.*async/, title: 'Async in useEffect without cleanup', description: 'Async effects can cause state updates on unmounted components.', suggestion: 'Add cleanup function to abort requests.' },
-  { pattern: /\.map\(.*\.filter\(/, title: 'Chained map/filter may be inefficient', description: 'Multiple array iterations create intermediate arrays.', suggestion: 'Use reduce() for single-pass transformations.' },
+  { pattern: /useState.*\[.*\]/i, title: 'Array/obj in useState without memo', description: 'Creating new arrays/objects in useState each render.', suggestion: 'Use useMemo or initialize outside component.' },
+  { pattern: /useEffect.*\[\s*\].*async/i, title: 'Async in useEffect without cleanup', description: 'Async effects can cause state updates on unmounted components.', suggestion: 'Add cleanup function to abort requests.' },
+  { pattern: /\.map\(.*\.filter\(/i, title: 'Chained map/filter may be inefficient', description: 'Multiple array iterations create intermediate arrays.', suggestion: 'Use reduce() for single-pass transformations.' },
 ];
 
-const STYLE_PATTERNS = [
-  { pattern: /var\s+\w+\s*=/, title: 'Using var instead of let/const', description: 'var has function scope and can cause unexpected behavior.', suggestion: 'Use const by default, let when reassignment is needed.' },
-  { pattern: /===?\s*null[^)]*\?\s*true\s*:\s*false/, title: 'Unnecessary ternary for null check', description: 'Can be simplified to boolean expression.', suggestion: 'Use !!value instead of value !== null ? true : false' },
+const STYLE_PATTERNS: PatternCheck[] = [
+  { pattern: /var\s+\w+\s*=/i, title: 'Using var instead of let/const', description: 'var has function scope and can cause unexpected behavior.', suggestion: 'Use const by default, let when reassignment is needed.' },
+  { pattern: /==?\s*null[^)]*\?\s*true\s*:\s*false/i, title: 'Unnecessary ternary for null check', description: 'Can be simplified to boolean expression.', suggestion: 'Use !!value instead of value !== null ? true : false' },
 ];
 
-const MAINTAINABILITY_PATTERNS = [
+const MAINTAINABILITY_PATTERNS: PatternCheck[] = [
   { pattern: /^(.{100,})$/m, title: 'Very long line detected', description: 'Lines over 100 chars reduce readability.', suggestion: 'Break long lines or extract to variables.' },
   { pattern: /\/\/.*TODO|\/\/.*FIXME|\/\/.*HACK/i, title: 'Technical debt marker found', description: 'TODO/FIXME comments indicate unfinished work.', suggestion: 'Address or convert to tracked issue.' },
 ];
 
-const BUG_PATTERNS = [
-  { pattern: /setTimeout\s*\(\s*.*\s*,\s*["']\d+["']/, title: 'setTimeout with string delay', description: 'String as delay converts to NaN.', suggestion: 'Use numeric milliseconds: setTimeout(fn, 1000)' },
-  { pattern: /if\s*\([^)]*=\s*[^=]/, title: 'Assignment in condition', description: 'Using = instead of == or ===.', suggestion: 'Fix to ===, or wrap in extra parens if intentional.' },
+const BUG_PATTERNS: PatternCheck[] = [
+  { pattern: /setTimeout\s*\(\s*.*\s*,\s*['"]\d+['"]/i, title: 'setTimeout with string delay', description: 'String as delay converts to NaN.', suggestion: 'Use numeric milliseconds: setTimeout(fn, 1000)' },
+  { pattern: /if\s*\([^)]*=\s*[^=]/i, title: 'Assignment in condition', description: 'Using = instead of == or ===.', suggestion: 'Fix to ===, or wrap in extra parens if intentional.' },
 ];
 
 export default function CodeReviewAssistantPage() {

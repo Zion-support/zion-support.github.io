@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useCallback } from 'react';
 
 type Tone = 'professional' | 'friendly' | 'formal' | 'casual' | 'empathetic' | 'persuasive';

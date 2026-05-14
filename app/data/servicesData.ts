@@ -1371,8 +1371,505 @@ export const aiServices: Service[] = [
     icon: '⚙️',
     href: '/ai-services/ai-code-migration-modernization',
     category: 'ai'
+  },
+
+  {
+    id: 'ai-legal-doc-review',
+    title: 'AI Legal Document Review',
+    description: 'Accelerate legal document analysis with AI: extract clauses, flag risks, summarize contracts, and generate due diligence reports in minutes.',
+    features: [
+      'Contract clause extraction & classification',
+      'Risk flagging & compliance checking',
+      'Document summarization (NLP)',
+      'Due diligence report generation',
+      'Multi-language support (20+ languages)'
+    ],
+    benefits: [
+      '90% faster document review',
+      'Reduce missed clauses by 95%',
+      'Lower outside counsel spend',
+      'Standardize review across matters'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '899',
+      enterprise: '2499'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-legal-doc-review',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '⚖️',
+    href: '/ai-services/ai-legal-doc-review',
+    category: 'ai'
+  },
+  {
+    id: 'ai-medical-imaging',
+    title: 'AI Medical Imaging Assistant',
+    description: 'AI-powered diagnostic support for radiology and pathology: detect anomalies in X-rays, MRIs, CT scans, and histopathology slides with high accuracy.',
+    features: [
+      'Multi-modality image analysis (X-ray, MRI, CT, ultrasound)',
+      'Tumor & lesion detection & segmentation',
+      'Bone fracture identification',
+      'Priority triage (urgent cases flagged)',
+      'DICOM & HL7 integration'
+    ],
+    benefits: [
+      'Reduce radiologist reading time by 40%',
+      'Increase early detection rates',
+      'Lower false-negative risk',
+      'Scale imaging capacity without hiring'
+    ],
+    pricing: {
+      basic: '799',
+      pro: '1799',
+      enterprise: '4999'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-medical-imaging',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🏥',
+    href: '/ai-services/ai-medical-imaging',
+    category: 'ai'
+  },
+  {
+    id: 'ai-supply-chain-visibility',
+    title: 'AI Supply Chain Visibility Platform',
+    description: 'End-to-end supply chain monitoring with AI-driven anomaly detection, predictive ETAs, and automated disruption alerts across suppliers, logistics, and inventory.',
+    features: [
+      'Real-time shipment tracking & ETA prediction',
+      'Supplier risk scoring & early warning',
+      'Inventory anomaly detection',
+      'Automated disruption alerts (Slack/email)',
+      'Root cause analysis & recommendation engine'
+    ],
+    benefits: [
+      '85% on-time delivery improvement',
+      '50% reduction in stockouts',
+      '30% lower safety stock needs',
+      'Proactive disruption mitigation'
+    ],
+    pricing: {
+      basic: '549',
+      pro: '1099',
+      enterprise: '2799'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-supply-chain-visibility',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚢',
+    href: '/ai-services/ai-supply-chain-visibility',
+    category: 'ai'
+  },
+  {
+    id: 'ai-code-audit-security',
+    title: 'AI Code Audit & Security Scanner',
+    description: 'Comprehensive static analysis powered by AI: detect vulnerabilities, code smells, license compliance issues, and security anti-patterns before they reach production.',
+    features: [
+      'Static Application Security Testing (SAST)',
+      'Secrets & credential leakage detection',
+      'Dependency vulnerability scanning',
+      'License compliance & risk assessment',
+      'Remediation guidance with code suggestions'
+    ],
+    benefits: [
+      'Prevent 95% of critical vulnerabilities',
+      'Automated compliance reporting (SOC2, ISO)',
+      'Reduce manual code review time by 70%',
+      'Shift-left security integration'
+    ],
+    pricing: {
+      basic: '199',
+      pro: '499',
+      enterprise: '1499'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-code-audit-security',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔒',
+    href: '/ai-services/ai-code-audit-security',
+    category: 'ai'
+  },
+  {
+    id: 'ai-bdr-sdr',
+    title: 'AI BDR/SDR Agent',
+    description: 'Autonomous AI Business Development & Sales Development Representative: prospect, qualify, email, book meetings, and nurture leads 24/7 without human intervention.',
+    features: [
+      'Lead research & enrichment (LinkedIn, company data)',
+      'Personalized cold email & LinkedIn outreach',
+      'Intent signal detection & prioritization',
+      'Automated meeting booking (Calendly integration)',
+      'CRM sync (HubSpot, Salesforce)'
+    ],
+    benefits: [
+      'Generate 50+ qualified meetings/month',
+      '80% lower cost-per-lead vs human BDRs',
+      '24/7 prospecting across timezones',
+      'Scalable outbound engine'
+    ],
+    pricing: {
+      basic: '699',
+      pro: '1299',
+      enterprise: '3499'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-bdr-sdr-agent',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📧',
+    href: '/ai-services/ai-bdr-sdr-agent',
+    category: 'ai'
+  },
+  {
+    id: 'ai-financial-forecasting',
+    title: 'AI Financial Forecasting & Budgeting',
+    description: 'AI-driven cash flow forecasting, revenue modeling, expense categorization, and scenario planning for CFOs and finance teams.',
+    features: [
+      'Cash flow prediction (30/60/90-day)',
+      'Revenue run-rate & ARR modeling',
+      'Expense categorization & anomaly detection',
+      'Scenario planning (best/worst case)',
+      'Integration with QuickBooks, Xero, NetSuite'
+    ],
+    benefits: [
+      '95% forecast accuracy',
+      'Reduce budgeting cycle time by 80%',
+      'Early warning on cash shortfalls',
+      'Data-driven strategic planning'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '999',
+      enterprise: '2999'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-financial-forecasting',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📈',
+    href: '/ai-services/ai-financial-forecasting',
+    category: 'ai'
+  },
+  {
+    id: 'ai-knowledge-base-agent',
+    title: 'AI Knowledge Base & Knowledge Graph Agent',
+    description: 'Turn your documents, wikis, and internal data into an intelligent, queryable knowledge graph with conversational AI search and automated content synchronization.',
+    features: [
+      'Multi-source document ingestion (PDF, DOC, Confluence, Notion)',
+      'Semantic search with natural language queries',
+      'Automated knowledge graph construction',
+      'Answer citation & source linking',
+      'Real-time sync with source systems'
+    ],
+    benefits: [
+      'Cut research time by 80%',
+      'Eliminate knowledge silos',
+      'Onboard new hires 3x faster',
+      'Maintain a single source of truth'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-knowledge-base-agent',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📚',
+    href: '/ai-services/ai-knowledge-base-agent',
+    category: 'ai'
+  },
+  {
+    id: 'ai-visual-inspection',
+    title: 'AI Visual Inspection & Quality Control',
+    description: 'Computer vision-powered quality control for manufacturing: detect defects, classify product flaws, and ensure consistent quality on the production line.',
+    features: [
+      'Defect detection (scratches, dents, misalignments)',
+      'Real-time inspection at line speed',
+      'Anomaly detection on novel defect types',
+      'Self-learning model improvement',
+      'Integration with PLCs & MES systems'
+    ],
+    benefits: [
+      'Reduce defect escape rate by 90%',
+      'Lower QC labor costs by 60%',
+      'Real-time quality dashboard',
+      'Continuous model improvement'
+    ],
+    pricing: {
+      basic: '599',
+      pro: '1399',
+      enterprise: '3999'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-visual-inspection',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '👁️',
+    href: '/ai-services/ai-visual-inspection',
+    category: 'ai'
+  },
+  {
+    id: 'ai-chatbot-omnichannel',
+    title: 'AI Omnichannel Chatbot',
+    description: 'Unified AI assistant across website chat, Messenger, WhatsApp, SMS, and voice. Context-aware conversations with seamless human handoff.',
+    features: [
+      'Multichannel conversation orchestration',
+      'Context memory across channels',
+      'Fallback to live agents with full context',
+      'Built-in analytics & conversation flows',
+      'CRM & helpdesk integration'
+    ],
+    benefits: [
+      '80% of queries resolved without human',
+      'Consistent CX across all touchpoints',
+      'Reduced agent handle time by 50%',
+      '24/7/365 availability'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '899',
+      enterprise: '2499'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-omnichannel-chatbot',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💬',
+    href: '/ai-services/ai-omnichannel-chatbot',
+    category: 'ai'
+  },
+  {
+    id: 'ai-call-center-voice-analytics',
+    title: 'AI Call Center Voice Analytics',
+    description: 'Real-time call transcription, sentiment analysis, agent coaching insights, and compliance monitoring for contact centers.',
+    features: [
+      'Real-time speech-to-text transcription',
+      'Sentiment & emotion detection',
+      'Agent compliance monitoring (PCI, GDPR)',
+      'Automated coaching suggestions',
+      'Keyword & topic trend analysis'
+    ],
+    benefits: [
+      'Improve CSAT scores by 25%',
+      'Reduce agent onboarding time by 50%',
+      'Automated compliance evidence collection',
+      'Identify upsell opportunities in real-time'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1899'
+    },
+    contactInfo: {
+      website: '/ai-services/ai-call-center-voice-analytics',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📞',
+    href: '/ai-services/ai-call-center-voice-analytics',
+    category: 'ai'
+  },
+  {
+    id: 'devops-gen-ai-ci-cd',
+    title: 'Generative AI for DevOps & CI/CD',
+    description: 'AI-powered DevOps: auto-generate CI/CD pipelines, infrastructure-as-code, deployment scripts, and incident runbooks from natural language specifications.',
+    features: [
+      'Natural language to pipeline generation',
+      'IaC template creation (Terraform, CloudFormation)',
+      'Automated incident runbook drafting',
+      'Self-healing deployment rollbacks',
+      'Performance anomaly detection & tuning'
+    ],
+    benefits: [
+      'Reduce pipeline setup time by 85%',
+      'Eliminate configuration drift',
+      'Faster incident resolution (MTTR)',
+      'Consistent infrastructure standards'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '1099',
+      enterprise: '3299'
+    },
+    contactInfo: {
+      website: '/it-services/devops-gen-ai-ci-cd',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔄',
+    href: '/it-services/devops-gen-ai-ci-cd',
+    category: 'it'
+  },
+  {
+    id: 'cloud-cost-ai-optimizer',
+    title: 'AI Cloud Cost Optimizer',
+    description: 'Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, and idle resource cleanup.',
+    features: [
+      'Multi-cloud cost aggregation & normalization',
+      'AI-driven rightsizing recommendations',
+      'Automated RI/SP purchase optimization',
+      'Idle resource detection & auto-cleanup',
+      'Anomaly detection & budget alerts'
+    ],
+    benefits: [
+      'Save 30-40% on cloud spend',
+      'Zero upfront engineering effort',
+      'Prevent cost overruns proactively',
+      'Detailed cost attribution by team/project'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: '/it-services/cloud-cost-ai-optimizer',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💸',
+    href: '/it-services/cloud-cost-ai-optimizer',
+    category: 'it'
+  },
+  {
+    id: 'data-warehouse-modernization',
+    title: 'AI Data Warehouse Modernization',
+    description: 'Modernize legacy data warehouses (Oracle, Teradata, on-prem) to cloud-native solutions (Snowflake, BigQuery, Redshift) with AI-assisted schema mapping and migration validation.',
+    features: [
+      'Legacy schema extraction & analysis',
+      'AI-powered schema mapping to target',
+      'Automated ETL/ELT pipeline generation',
+      'Data lineage & impact analysis',
+      'Post-migration validation & reconciliation'
+    ],
+    benefits: [
+      '60% faster migration timelines',
+      'Zero data loss guarantee',
+      '50% lower TCO vs traditional consultancies',
+      'Future-proof cloud-native architecture'
+    ],
+    pricing: {
+      basic: '1499',
+      pro: '3499',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/data-warehouse-modernization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🗄️',
+    href: '/it-services/data-warehouse-modernization',
+    category: 'it'
+  },
+  {
+    id: 'cyber-threat-intelligence',
+    title: 'AI Cyber Threat Intelligence Platform',
+    description: 'Proactive threat intelligence gathering, analysis, and prioritization from dark web, exploit feeds, and threat actor TTPs to stay ahead of attacks.',
+    features: [
+      'Automated threat feed ingestion (50+ sources)',
+      'AI-driven threat prioritization (impact scoring)',
+      'IOC & TTP matching against your environment',
+      'Dark web monitoring for leaked credentials',
+      'Executive threat briefings & reporting'
+    ],
+    benefits: [
+      'Reduce mean time to detect (MTTD) by 70%',
+      'Prevent credential-based attacks',
+      'Prioritize fixes based on actual risk',
+      'Compliance-ready audit trails'
+    ],
+    pricing: {
+      basic: '599',
+      pro: '1399',
+      enterprise: '3999'
+    },
+    contactInfo: {
+      website: '/it-services/cyber-threat-intelligence',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🛡️',
+    href: '/it-services/cyber-threat-intelligence',
+    category: 'it'
+  },
+  {
+    id: 'low-code-platform-customization',
+    title: 'Low-Code Platform Customization & Integration',
+    description: 'Extend and integrate your low-code platforms (Retool, Appian, Power Apps, OutSystems) with custom components, APIs, and enterprise system connectors.',
+    features: [
+      'Custom UI component development',
+      'Enterprise system connectors (SAP, Oracle, legacy)',
+      'API Gateway & middleware integration',
+      'Performance optimization & caching',
+      'Security hardening & audit logging'
+    ],
+    benefits: [
+      'Extend low-code app capabilities by 10x',
+      'Seamless integration with legacy systems',
+      'Reduce custom dev time by 70%',
+      'Enterprise-grade security & compliance'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '899',
+      enterprise: '2499'
+    },
+    contactInfo: {
+      website: '/it-services/low-code-platform-customization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧩',
+    href: '/it-services/low-code-platform-customization',
+    category: 'it'
+  },
+  {
+    id: 'api-management-gateway',
+    title: 'API Management & Developer Gateway',
+    description: 'Full-lifecycle API management: gateway, developer portal, analytics, monetization, and security (OAuth, JWT, rate limiting) for your API products.',
+    features: [
+      'High-performance API gateway (10k+ RPS)',
+      'Developer self-service portal',
+      'Analytics: usage, latency, errors',
+      'API monetization & billing integration',
+      'Security: OAuth2, JWT validation, rate limiting'
+    ],
+    benefits: [
+      'Launch API products 5x faster',
+      'Monitor & debug API issues in real-time',
+      'Protect backend services from abuse',
+      'Revenue stream from API usage'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '1199',
+      enterprise: '3599'
+    },
+    contactInfo: {
+      website: '/it-services/api-management-gateway',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔌',
+    href: '/it-services/api-management-gateway',
+    category: 'it'
   }
-];
+]
 
 export const itServices: Service[] = [
   {

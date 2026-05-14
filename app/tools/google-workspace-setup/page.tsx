@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useCallback } from 'react';
 
 type Provider = 'gmail' | 'google-workspace' | 'outlook' | 'outlook-365' | 'custom';
