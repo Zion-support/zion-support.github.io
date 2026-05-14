@@ -3,7 +3,7 @@
 Shared between org_memory_agent.py and vector_index.py
 """
 
-import urllib.request, urllib.parse, json, datetime
+import urllib.request, urllib.parse, json, datetime, sys, time
 from pathlib import Path
 
 WORKSPACE = Path('/root/.openclaw/workspace')
@@ -143,7 +143,7 @@ def extract_body_from_gmail_message(msg):
     return part_text(msg.get('payload', {}))
 
 def gmail_batch_modify(payload: dict, addLabelIds=None, removeLabelIds=None):
-    """Apply label changes to multiple messages. Blocks up to 15s."""
+    """Apply label changes to multiple messages. Blocks up to 60s."""
     if addLabelIds is None: addLabelIds = []
     if removeLabelIds is None: removeLabelIds = []
     url = 'https://gmail.googleapis.com/gmail/v1/users/me/messages/batchModify'
@@ -152,7 +152,7 @@ def gmail_batch_modify(payload: dict, addLabelIds=None, removeLabelIds=None):
     headers['Content-Type'] = 'application/json'
     req = urllib.request.Request(url, data=body, headers=headers, method='POST')
     try:
-        with urllib.request.urlopen(req, timeout=15) as _:
+        with urllib.request.urlopen(req, timeout=60) as _:
             return True
     except Exception as e:
         print(f'Batch modify error: {e}', file=sys.stderr)
