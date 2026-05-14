@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState, useMemo, useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Breadcrumb from '../components/Breadcrumb';
