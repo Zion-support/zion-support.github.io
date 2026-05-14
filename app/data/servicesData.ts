@@ -5480,7 +5480,7 @@ export const itServices: Service[] = [
     icon: '🖥️',
     href: '/it-services/it-mainframe-modernization',
     category: 'it'
-  }
+  },
 
   // ── NEW MICRO-SAAS & AI SOLUTIONS (Added 2026-05-14) ──────────────────────
   {
