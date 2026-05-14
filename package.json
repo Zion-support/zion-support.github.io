@@ -82,7 +82,6 @@
     "lint:check": "eslint . --ignore-pattern \".next/**\" --ignore-pattern \"out/**\" --ignore-pattern \"dist/**\" --ignore-pattern \"build/**\" --max-warnings 0",
     "type-check:strict": "tsc --noEmit --strict",
     "precommit": "npm run type-check && npm run lint:check && npm run test:ci",
-
     "security-audit": "npm audit --audit-level moderate && npm run lint:check",
     "performance-audit": "npm run build && npm run perf",
     "accessibility-audit": "npm run build && npx @axe-core/cli http://localhost:3000",
@@ -685,6 +684,7 @@
     "autonomy:writer-queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
   },
   "dependencies": {
+    "@react-pdf/renderer": "4.5.1",
     "@storybook/react-vite": "^10.3.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
