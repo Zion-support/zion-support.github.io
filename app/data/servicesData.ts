@@ -2244,8 +2244,974 @@ export const aiServices: Service[] = [
     icon: '🖥️',
     href: '/it-services/ai-it-helpdesk',
     category: 'it'
-  }
+   },
 
+   {
+     id: 'ai-customer-support-agent',
+     title: 'AI Customer Support Agent',
+     description: "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
+     features: [
+       'Multilingual support (50+ languages)',
+       'Integrations: Zendesk, Intercom, Salesforce',
+       'Document retrieval from knowledge base (RAG)',
+       'Sentiment-aware responses & escalation',
+       'Analytics: resolution rate, CSAT impact'
+     ],
+     benefits: [
+       'Cut support costs by 70%',
+       'Instant responses (sub-second)',
+       '80%+ ticket deflection from humans',
+       'Always-on coverage across timezones'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2499' },
+     contactInfo: { website: '/ai-services/ai-customer-support-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🤖',
+     href: '/ai-services/ai-customer-support-agent',
+     category: 'ai'
+   },
+   {
+     id: 'autonomous-code-review-agent',
+     title: 'Autonomous Code Review Agent',
+     description: 'AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.',
+     features: [
+       'Static analysis + LLM-based reasoning',
+       'Security vulnerability scoring (CWE, OWASP)',
+       'Auto-suggested patches via diffs',
+       'Custom rule engine per team standards',
+       'CI/CD integration (GitHub Actions, GitLab CI)'
+     ],
+     benefits: [
+       'Catch 90%+ of bugs before merge',
+       'Reduce code review time by 60%',
+       'Enforce consistent standards automatically',
+       'Onboard new developers faster'
+     ],
+     pricing: { basic: '0', pro: '199', enterprise: '899' },
+     contactInfo: { website: '/ai-services/autonomous-code-review-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '👩‍💻',
+     href: '/ai-services/autonomous-code-review-agent',
+     category: 'ai'
+   },
+   {
+     id: 'ai-driven-customer-segmentation',
+     title: 'AI-Driven Customer Segmentation & Persona Engine',
+     description: 'Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.',
+     features: [
+       'K-means + hierarchical clustering models',
+       'Dynamic segment recalculation (daily/weekly)',
+       'Persona profiles with predictive scores',
+       'Export to CRM/CDP (Segment, HubSpot)',
+       'Campaign performance tracking per segment'
+     ],
+     benefits: [
+       'Increase conversion rates by 35%',
+       'Reduce churn with targeted retention offers',
+       'Discover hidden high-value niches',
+       'Automate personalized messaging'
+     ],
+     pricing: { basic: '399', pro: '999', enterprise: '3299' },
+     contactInfo: { website: '/ai-services/ai-driven-customer-segmentation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🎯',
+     href: '/ai-services/ai-driven-customer-segmentation',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-ui-generator',
+     title: 'AI-Powered UI Generator (Text-to-UI)',
+     description: 'Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.',
+     features: [
+       'Natural language to JSX/TSX component generation',
+       'Tailwind CSS class application',
+       'Responsive breakpoint handling',
+       'A11y attributes (aria-* roles & labels)',
+       'Export to Figma/Storybook format'
+     ],
+     benefits: [
+       'Ship UI 10x faster',
+       'Maintain design consistency automatically',
+       'Reduce frontend dev iteration cycles',
+       'Prototypes in minutes, not days'
+     ],
+     pricing: { basic: '0', pro: '149', enterprise: '699' },
+     contactInfo: { website: '/ai-services/ai-powered-ui-generator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🎨',
+     href: '/ai-services/ai-powered-ui-generator',
+     category: 'ai'
+   },
+   {
+     id: 'predictive-churn-risk',
+     title: 'Predictive Churn Risk Scoring',
+     description: 'Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.',
+     features: [
+       'Feature engineering from usage & billing data',
+       'Gradient boosting & survival analysis models',
+       'Risk score per account (1-100)',
+       'Automated retention offer triggers',
+       'Dashboard with cohort analysis'
+     ],
+     benefits: [
+       'Reduce monthly churn by 25%',
+       'Target retention spend efficiently',
+       'Identify at-risk accounts before they leave',
+       'Improve LTV prediction accuracy'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2799' },
+     contactInfo: { website: '/ai-services/predictive-churn-risk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📉',
+     href: '/ai-services/predictive-churn-risk',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-seo-optimizer',
+     title: 'AI-Powered SEO Content Optimizer',
+     description: 'Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.',
+     features: [
+       'On-page SEO scoring (0-100)',
+       'Competitor gap analysis',
+       'Automated meta title/description generation',
+       'Readability improvement suggestions',
+       'Schema.org structured data suggestions'
+     ],
+     benefits: [
+       'Increase organic traffic by 40% within 3 months',
+       'Outrank competitors on target keywords',
+       'Ensure Google E-E-A-T compliance',
+       'Automate technical SEO fixes'
+     ],
+     pricing: { basic: '99', pro: '299', enterprise: '999' },
+     contactInfo: { website: '/ai-services/ai-powered-seo-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔍',
+     href: '/ai-services/ai-powered-seo-optimizer',
+     category: 'ai'
+   },
+   {
+     id: 'ai-for-code-migration',
+     title: 'AI-Assisted Code Migration & Refactoring',
+     description: 'Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.',
+     features: [
+       'Language-to-language AST-based translation',
+       'Preserve business logic & edge cases',
+       'Interactive migration playground (preview changes)',
+       'Test generation for migrated functions',
+       'Gradual cutover strategy planning'
+     ],
+     benefits: [
+       'Reduce migration project timeline by 75%',
+       'Minimize regression risk via automated tests',
+       'Lower cost vs. manual rewrite',
+       'De-risk technical modernization'
+     ],
+     pricing: { basic: '2499', pro: '5999', enterprise: '19999' },
+     contactInfo: { website: '/ai-services/ai-for-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔀',
+     href: '/ai-services/ai-for-code-migration',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-test-generation',
+     title: 'AI-Powered Test Suite Generator',
+     description: 'Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.',
+     features: [
+       'White-box test generation from source code',
+       'Black-box tests from BDD/Gherkin specs',
+       'E2E test generation via Puppeteer/Playwright',
+       'Coverage gap analysis & prioritizing',
+       'Test flake detection & stabilization'
+     ],
+     benefits: [
+       'Achieve 80%+ code coverage automatically',
+       'Ship features faster without manual test writing',
+       'Catch regressions before production',
+       'Reduce QA manual testing effort by 90%'
+     ],
+     pricing: { basic: '0', pro: '199', enterprise: '799' },
+     contactInfo: { website: '/ai-services/ai-powered-test-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🧪',
+     href: '/ai-services/ai-powered-test-generation',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-log-anomaly-detection',
+     title: 'AI-Powered Log Anomaly Detection',
+     description: 'Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.',
+     features: [
+       'Unsupervised clustering of log events',
+       'Real-time anomaly scoring per time-series',
+       'Seamless integration with ELK/Prometheus',
+       'Alert suppression & correlation',
+       'Root-cause hinting via pattern matching'
+     ],
+     benefits: [
+       'Detect incidents 30+ minutes before monitoring',
+       'Reduce false positive alerts by 80%',
+       'Shorten MTTR with actionable insights',
+       'Discover silent failures & edge cases'
+     ],
+     pricing: { basic: '299', pro: '699', enterprise: '1899' },
+     contactInfo: { website: '/ai-services/ai-powered-log-anomaly-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📈',
+     href: '/ai-services/ai-powered-log-anomaly-detection',
+     category: 'ai'
+   },
+   {
+     id: 'generative-data-synthesis',
+     title: 'Generative Data Synthesis for Model Training',
+     description: 'Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.',
+     features: [
+       'Tabular data synthesis (CTGAN, TVAE)',
+       'Image synthesis with diffusion models',
+       'Privacy-preserving synthetic data (DP-SGD)',
+       'Data augmentation pipelines',
+       'Quality metrics (KSTest, coverage)'
+     ],
+     benefits: [
+       'Bootstrap ML projects with limited data',
+       'Balance underrepresented classes',
+       'Protect PII while retaining data utility',
+       'Simulate extreme scenarios for stress testing'
+     ],
+     pricing: { basic: '499', pro: '1199', enterprise: '3599' },
+     contactInfo: { website: '/ai-services/generative-data-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🌀',
+     href: '/ai-services/generative-data-synthesis',
+     category: 'ai'
+   },
+   {
+     id: 'ai-sustainable-ops',
+     title: 'AI for Sustainable Operations (Green AI)',
+     description: 'Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.',
+     features: [
+       'Carbon intensity forecasting per region',
+       'Job scheduling to low-carbon time windows',
+       'Resource right-sizing recommendations',
+       'Sustainability KPI dashboards',
+       'Compliance with ESG reporting standards'
+     ],
+     benefits: [
+       'Reduce cloud carbon emissions by 40%',
+       'Lower cost via energy optimization',
+       'Meet corporate sustainability goals',
+       'Public sustainability reporting for PR'
+     ],
+     pricing: { basic: '199', pro: '499', enterprise: '1499' },
+     contactInfo: { website: '/ai-services/ai-sustainable-ops', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🌱',
+     href: '/ai-services/ai-sustainable-ops',
+     category: 'ai'
+   },
+   {
+     id: 'legal-doc-review-ai',
+     title: 'AI Legal Document Review & Risk Analysis',
+     description: 'Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.',
+     features: [
+       'Clause extraction & classification (liability, IP, termination)',
+       'Risk scoring per clause (high/medium/low)',
+       'Deviation detection from standard templates',
+       'Redline suggestions with rationale',
+       'Multi-jurisdiction compliance checks'
+     ],
+     benefits: [
+       'Review NDAs in minutes instead of hours',
+       'Reduce external legal spend by 60%',
+       'Never miss risky clauses again',
+       'Scale legal review across hundreds of contracts'
+     ],
+     pricing: { basic: '499', pro: '1299', enterprise: '4999' },
+     contactInfo: { website: '/ai-services/legal-doc-review-ai', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '⚖️',
+     href: '/ai-services/legal-doc-review-ai',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-passwordless-auth',
+     title: 'AI-Powered Passwordless Authentication',
+     description: 'Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.',
+     features: [
+       'Behavioral biometrics (keystroke dynamics, mouse movements)',
+       'Device & location risk scoring',
+       'Step-up authentication for anomalies',
+       'FIDO2/WebAuthn integration',
+       'Compliance: NIST 800-63B, PSD2 SCA'
+     ],
+     benefits: [
+       'Eliminate phishing & password fatigue',
+       'Reduce authentication friction for users',
+       'Meet modern security standards without complexity',
+       'Lower support cost for password resets'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2499' },
+     contactInfo: { website: '/ai-services/ai-powered-passwordless-auth', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔑',
+     href: '/ai-services/ai-powered-passwordless-auth',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-tech-debt-quantifier',
+     title: 'AI-Powered Tech Debt Quantifier',
+     description: 'Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.',
+     features: [
+       'Static code analysis + complexity heatmaps',
+       'Dependency vulnerability & EOL detection',
+       'Duplicate code detection with CloneDR',
+       'Architecture rule validation (dependency cycles)',
+       'Remediation effort estimation (person-days)'
+     ],
+     benefits: [
+       'Make tech debt visible to leadership',
+       'Prioritize refactoring by cost vs. risk',
+       'Justify modernization budgets with data',
+       'Track debt reduction over time'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2399' },
+     contactInfo: { website: '/ai-services/ai-powered-tech-debt-quantifier', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🗑️',
+     href: '/ai-services/ai-powered-tech-debt-quantifier',
+     category: 'ai'
+   },
+   {
+     id: 'generative-ux-research-synthesis',
+     title: 'Generative UX Research Synthesis',
+     description: 'Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.',
+     features: [
+       'Transcript summarization & theme extraction',
+       'Sentiment analysis across user segments',
+       'Automatic persona generation with quotes',
+       'Journey map creation from session data',
+       'Priority ranking of pain points'
+     ],
+     benefits: [
+       'Analyze 100+ hours of user research in minutes',
+       'Uncover hidden pain points automatically',
+       'Create deliverables without manual synthesis',
+       'Make user-centric decisions faster'
+     ],
+     pricing: { basic: '199', pro: '599', enterprise: '1899' },
+     contactInfo: { website: '/ai-services/generative-ux-research-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '👥',
+     href: '/ai-services/generative-ux-research-synthesis',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-incident-postmortem',
+     title: 'AI-Powered Incident Postmortem Generator',
+     description: 'Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.',
+     features: [
+       'Timeline assembly from logs/metrics/alerts',
+       'Root cause inference via causal graph',
+       'Impact quantification (users, revenue, SLA)',
+       'Auto-generated action items with owners',
+       'Follow-up tracking & closure verification'
+     ],
+     benefits: [
+       'Write postmortems in 10 minutes vs. hours',
+       'Consistent structure & quality across teams',
+       'Identify systemic issues faster',
+       'Improve reliability documentation'
+     ],
+     pricing: { basic: '299', pro: '699', enterprise: '1999' },
+     contactInfo: { website: '/ai-services/ai-powered-incident-postmortem', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📝',
+     href: '/ai-services/ai-powered-incident-postmortem',
+     category: 'ai'
+   },
+   {
+     id: 'ai-driven-api-design-assistant',
+     title: 'AI-Driven API Design Assistant',
+     description: 'Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.',
+     features: [
+       'Natural language to OpenAPI 3.0 spec',
+       'Schema validation & best practice linting',
+       'Auto-generated client SDKs (10+ languages)',
+       'Mock server with configurable responses',
+       'Breaking change detection across versions'
+     ],
+     benefits: [
+       'Design APIs 5x faster with AI guidance',
+       'Ensure consistency & backward compatibility',
+       'Ship SDKs automatically for all platforms',
+       'Reduce design review cycles'
+     ],
+     pricing: { basic: '0', pro: '149', enterprise: '599' },
+     contactInfo: { website: '/ai-services/ai-driven-api-design-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔗',
+     href: '/ai-services/ai-driven-api-design-assistant',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-pr-drafting',
+     title: 'AI-Powered PR Drafting & Description',
+     description: 'Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.',
+     features: [
+       'Intelligent diff summarization',
+       'JIRA/GitHub issue linking & status updates',
+       'Changelog entry drafting per semantic version',
+       'Reviewer recommendation based on ownership',
+       'Auto-update of API docs & README diffs'
+     ],
+     benefits: [
+       'Consistent, high-quality PR descriptions',
+       'Save 15+ minutes per PR on documentation',
+       'Keep changelogs and releases up-to-date',
+       'Improve code review context and velocity'
+     ],
+     pricing: { basic: '0', pro: '99', enterprise: '399' },
+     contactInfo: { website: '/ai-services/ai-powered-pr-drafting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📦',
+     href: '/ai-services/ai-powered-pr-drafting',
+     category: 'ai'
+   },
+   {
+     id: 'automated-data-labeling',
+     title: 'Automated Data Labeling for Computer Vision & NLP',
+     description: 'Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.',
+     features: [
+       'Pre-labeling with foundation models (CLIP, YOLO)',
+       'Active learning to prioritize ambiguous samples',
+       'Collaborative annotation workspace',
+       'Quality metrics & consensus scoring',
+       'Export to all major ML data formats'
+     ],
+     benefits: [
+       'Label 10,000 images in hours, not weeks',
+       'Reduce labeling cost by 90%',
+       'Improve model accuracy with high-quality labels',
+       'Iterate on training data faster'
+     ],
+     pricing: { basic: '199', pro: '599', enterprise: '1799' },
+     contactInfo: { website: '/ai-services/automated-data-labeling', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🏷️',
+     href: '/ai-services/automated-data-labeling',
+     category: 'ai'
+   },
+   {
+     id: 'meeting-ai-assistant',
+     title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
+     description: "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
+     features: [
+       'Cloud recording & real-time transcription',
+       'Speaker identification & diarization',
+       'Action item extraction with assignees',
+       'Decision log & key quote highlights',
+       'Sync to Notion/Confluence/ClickUp'
+     ],
+     benefits: [
+       'Never miss an action item again',
+       'Reduce meeting follow-up time by 80%',
+       'Search across all past meeting transcripts',
+       'Onboard new team members with context'
+     ],
+     pricing: { basic: '0', pro: '99', enterprise: '399' },
+     contactInfo: { website: '/ai-services/meeting-ai-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🎙️',
+     href: '/ai-services/meeting-ai-assistant',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-question-answering',
+     title: 'Enterprise AI Question Answering (Internal Knowledge)',
+     description: 'Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.',
+     features: [
+       'RAG over private document corpus',
+       'Source citation & confidence scores',
+       'Multi-department bots (HR, Eng, Sales, Support)',
+       'Feedback loop to improve answers',
+       'Analytics: most-asked questions, gaps in docs'
+     ],
+     benefits: [
+       'Reduce internal support tickets by 50%',
+       'Onboard new hires instantly with accurate answers',
+       'Keep institutional knowledge accessible',
+       'Identify undocumented processes'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2299' },
+     contactInfo: { website: '/ai-services/ai-powered-question-answering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '💬',
+     href: '/ai-services/ai-powered-question-answering',
+     category: 'ai'
+   },
+   {
+     id: 'ai-customer-support-agent',
+     title: 'AI Customer Support Agent',
+     description: "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
+     features: [
+       'Multilingual support (50+ languages)',
+       'Integrations: Zendesk, Intercom, Salesforce',
+       'Document retrieval from knowledge base (RAG)',
+       'Sentiment-aware responses & escalation',
+       'Analytics: resolution rate, CSAT impact'
+     ],
+     benefits: [
+       'Cut support costs by 70%',
+       'Instant responses (sub-second)',
+       '80%+ ticket deflection from humans',
+       'Always-on coverage across timezones'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2499' },
+     contactInfo: { website: '/ai-services/ai-customer-support-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🤖',
+     href: '/ai-services/ai-customer-support-agent',
+     category: 'ai'
+   },
+   {
+     id: 'autonomous-code-review-agent',
+     title: 'Autonomous Code Review Agent',
+     description: 'AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.',
+     features: [
+       'Static analysis + LLM-based reasoning',
+       'Security vulnerability scoring (CWE, OWASP)',
+       'Auto-suggested patches via diffs',
+       'Custom rule engine per team standards',
+       'CI/CD integration (GitHub Actions, GitLab CI)'
+     ],
+     benefits: [
+       'Catch 90%+ of bugs before merge',
+       'Reduce code review time by 60%',
+       'Enforce consistent standards automatically',
+       'Onboard new developers faster'
+     ],
+     pricing: { basic: '0', pro: '199', enterprise: '899' },
+     contactInfo: { website: '/ai-services/autonomous-code-review-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '👩‍💻',
+     href: '/ai-services/autonomous-code-review-agent',
+     category: 'ai'
+   },
+   {
+     id: 'ai-driven-customer-segmentation',
+     title: 'AI-Driven Customer Segmentation & Persona Engine',
+     description: 'Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.',
+     features: [
+       'K-means + hierarchical clustering models',
+       'Dynamic segment recalculation (daily/weekly)',
+       'Persona profiles with predictive scores',
+       'Export to CRM/CDP (Segment, HubSpot)',
+       'Campaign performance tracking per segment'
+     ],
+     benefits: [
+       'Increase conversion rates by 35%',
+       'Reduce churn with targeted retention offers',
+       'Discover hidden high-value niches',
+       'Automate personalized messaging'
+     ],
+     pricing: { basic: '399', pro: '999', enterprise: '3299' },
+     contactInfo: { website: '/ai-services/ai-driven-customer-segmentation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🎯',
+     href: '/ai-services/ai-driven-customer-segmentation',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-ui-generator',
+     title: 'AI-Powered UI Generator (Text-to-UI)',
+     description: 'Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.',
+     features: [
+       'Natural language to JSX/TSX component generation',
+       'Tailwind CSS class application',
+       'Responsive breakpoint handling',
+       'A11y attributes (aria-* roles & labels)',
+       'Export to Figma/Storybook format'
+     ],
+     benefits: [
+       'Ship UI 10x faster',
+       'Maintain design consistency automatically',
+       'Reduce frontend dev iteration cycles',
+       'Prototypes in minutes, not days'
+     ],
+     pricing: { basic: '0', pro: '149', enterprise: '699' },
+     contactInfo: { website: '/ai-services/ai-powered-ui-generator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🎨',
+     href: '/ai-services/ai-powered-ui-generator',
+     category: 'ai'
+   },
+   {
+     id: 'predictive-churn-risk',
+     title: 'Predictive Churn Risk Scoring',
+     description: 'Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.',
+     features: [
+       'Feature engineering from usage & billing data',
+       'Gradient boosting & survival analysis models',
+       'Risk score per account (1-100)',
+       'Automated retention offer triggers',
+       'Dashboard with cohort analysis'
+     ],
+     benefits: [
+       'Reduce monthly churn by 25%',
+       'Target retention spend efficiently',
+       'Identify at-risk accounts before they leave',
+       'Improve LTV prediction accuracy'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2799' },
+     contactInfo: { website: '/ai-services/predictive-churn-risk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📉',
+     href: '/ai-services/predictive-churn-risk',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-seo-optimizer',
+     title: 'AI-Powered SEO Content Optimizer',
+     description: 'Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.',
+     features: [
+       'On-page SEO scoring (0-100)',
+       'Competitor gap analysis',
+       'Automated meta title/description generation',
+       'Readability improvement suggestions',
+       'Schema.org structured data suggestions'
+     ],
+     benefits: [
+       'Increase organic traffic by 40% within 3 months',
+       'Outrank competitors on target keywords',
+       'Ensure Google E-E-A-T compliance',
+       'Automate technical SEO fixes'
+     ],
+     pricing: { basic: '99', pro: '299', enterprise: '999' },
+     contactInfo: { website: '/ai-services/ai-powered-seo-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔍',
+     href: '/ai-services/ai-powered-seo-optimizer',
+     category: 'ai'
+   },
+   {
+     id: 'ai-for-code-migration',
+     title: 'AI-Assisted Code Migration & Refactoring',
+     description: 'Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.',
+     features: [
+       'Language-to-language AST-based translation',
+       'Preserve business logic & edge cases',
+       'Interactive migration playground (preview changes)',
+       'Test generation for migrated functions',
+       'Gradual cutover strategy planning'
+     ],
+     benefits: [
+       'Reduce migration project timeline by 75%',
+       'Minimize regression risk via automated tests',
+       'Lower cost vs. manual rewrite',
+       'De-risk technical modernization'
+     ],
+     pricing: { basic: '2499', pro: '5999', enterprise: '19999' },
+     contactInfo: { website: '/ai-services/ai-for-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔀',
+     href: '/ai-services/ai-for-code-migration',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-test-generation',
+     title: 'AI-Powered Test Suite Generator',
+     description: 'Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.',
+     features: [
+       'White-box test generation from source code',
+       'Black-box tests from BDD/Gherkin specs',
+       'E2E test generation via Puppeteer/Playwright',
+       'Coverage gap analysis & prioritizing',
+       'Test flake detection & stabilization'
+     ],
+     benefits: [
+       'Achieve 80%+ code coverage automatically',
+       'Ship features faster without manual test writing',
+       'Catch regressions before production',
+       'Reduce QA manual testing effort by 90%'
+     ],
+     pricing: { basic: '0', pro: '199', enterprise: '799' },
+     contactInfo: { website: '/ai-services/ai-powered-test-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🧪',
+     href: '/ai-services/ai-powered-test-generation',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-log-anomaly-detection',
+     title: 'AI-Powered Log Anomaly Detection',
+     description: 'Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.',
+     features: [
+       'Unsupervised clustering of log events',
+       'Real-time anomaly scoring per time-series',
+       'Seamless integration with ELK/Prometheus',
+       'Alert suppression & correlation',
+       'Root-cause hinting via pattern matching'
+     ],
+     benefits: [
+       'Detect incidents 30+ minutes before monitoring',
+       'Reduce false positive alerts by 80%',
+       'Shorten MTTR with actionable insights',
+       'Discover silent failures & edge cases'
+     ],
+     pricing: { basic: '299', pro: '699', enterprise: '1899' },
+     contactInfo: { website: '/ai-services/ai-powered-log-anomaly-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📈',
+     href: '/ai-services/ai-powered-log-anomaly-detection',
+     category: 'ai'
+   },
+   {
+     id: 'generative-data-synthesis',
+     title: 'Generative Data Synthesis for Model Training',
+     description: 'Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.',
+     features: [
+       'Tabular data synthesis (CTGAN, TVAE)',
+       'Image synthesis with diffusion models',
+       'Privacy-preserving synthetic data (DP-SGD)',
+       'Data augmentation pipelines',
+       'Quality metrics (KSTest, coverage)'
+     ],
+     benefits: [
+       'Bootstrap ML projects with limited data',
+       'Balance underrepresented classes',
+       'Protect PII while retaining data utility',
+       'Simulate extreme scenarios for stress testing'
+     ],
+     pricing: { basic: '499', pro: '1199', enterprise: '3599' },
+     contactInfo: { website: '/ai-services/generative-data-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🌀',
+     href: '/ai-services/generative-data-synthesis',
+     category: 'ai'
+   },
+   {
+     id: 'ai-sustainable-ops',
+     title: 'AI for Sustainable Operations (Green AI)',
+     description: 'Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.',
+     features: [
+       'Carbon intensity forecasting per region',
+       'Job scheduling to low-carbon time windows',
+       'Resource right-sizing recommendations',
+       'Sustainability KPI dashboards',
+       'Compliance with ESG reporting standards'
+     ],
+     benefits: [
+       'Reduce cloud carbon emissions by 40%',
+       'Lower cost via energy optimization',
+       'Meet corporate sustainability goals',
+       'Public sustainability reporting for PR'
+     ],
+     pricing: { basic: '199', pro: '499', enterprise: '1499' },
+     contactInfo: { website: '/ai-services/ai-sustainable-ops', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🌱',
+     href: '/ai-services/ai-sustainable-ops',
+     category: 'ai'
+   },
+   {
+     id: 'legal-doc-review-ai',
+     title: 'AI Legal Document Review & Risk Analysis',
+     description: 'Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.',
+     features: [
+       'Clause extraction & classification (liability, IP, termination)',
+       'Risk scoring per clause (high/medium/low)',
+       'Deviation detection from standard templates',
+       'Redline suggestions with rationale',
+       'Multi-jurisdiction compliance checks'
+     ],
+     benefits: [
+       'Review NDAs in minutes instead of hours',
+       'Reduce external legal spend by 60%',
+       'Never miss risky clauses again',
+       'Scale legal review across hundreds of contracts'
+     ],
+     pricing: { basic: '499', pro: '1299', enterprise: '4999' },
+     contactInfo: { website: '/ai-services/legal-doc-review-ai', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '⚖️',
+     href: '/ai-services/legal-doc-review-ai',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-passwordless-auth',
+     title: 'AI-Powered Passwordless Authentication',
+     description: 'Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.',
+     features: [
+       'Behavioral biometrics (keystroke dynamics, mouse movements)',
+       'Device & location risk scoring',
+       'Step-up authentication for anomalies',
+       'FIDO2/WebAuthn integration',
+       'Compliance: NIST 800-63B, PSD2 SCA'
+     ],
+     benefits: [
+       'Eliminate phishing & password fatigue',
+       'Reduce authentication friction for users',
+       'Meet modern security standards without complexity',
+       'Lower support cost for password resets'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2499' },
+     contactInfo: { website: '/ai-services/ai-powered-passwordless-auth', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔑',
+     href: '/ai-services/ai-powered-passwordless-auth',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-tech-debt-quantifier',
+     title: 'AI-Powered Tech Debt Quantifier',
+     description: 'Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.',
+     features: [
+       'Static code analysis + complexity heatmaps',
+       'Dependency vulnerability & EOL detection',
+       'Duplicate code detection with CloneDR',
+       'Architecture rule validation (dependency cycles)',
+       'Remediation effort estimation (person-days)'
+     ],
+     benefits: [
+       'Make tech debt visible to leadership',
+       'Prioritize refactoring by cost vs. risk',
+       'Justify modernization budgets with data',
+       'Track debt reduction over time'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2399' },
+     contactInfo: { website: '/ai-services/ai-powered-tech-debt-quantifier', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🗑️',
+     href: '/ai-services/ai-powered-tech-debt-quantifier',
+     category: 'ai'
+   },
+   {
+     id: 'generative-ux-research-synthesis',
+     title: 'Generative UX Research Synthesis',
+     description: 'Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.',
+     features: [
+       'Transcript summarization & theme extraction',
+       'Sentiment analysis across user segments',
+       'Automatic persona generation with quotes',
+       'Journey map creation from session data',
+       'Priority ranking of pain points'
+     ],
+     benefits: [
+       'Analyze 100+ hours of user research in minutes',
+       'Uncover hidden pain points automatically',
+       'Create deliverables without manual synthesis',
+       'Make user-centric decisions faster'
+     ],
+     pricing: { basic: '199', pro: '599', enterprise: '1899' },
+     contactInfo: { website: '/ai-services/generative-ux-research-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '👥',
+     href: '/ai-services/generative-ux-research-synthesis',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-incident-postmortem',
+     title: 'AI-Powered Incident Postmortem Generator',
+     description: 'Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.',
+     features: [
+       'Timeline assembly from logs/metrics/alerts',
+       'Root cause inference via causal graph',
+       'Impact quantification (users, revenue, SLA)',
+       'Auto-generated action items with owners',
+       'Follow-up tracking & closure verification'
+     ],
+     benefits: [
+       'Write postmortems in 10 minutes vs. hours',
+       'Consistent structure & quality across teams',
+       'Identify systemic issues faster',
+       'Improve reliability documentation'
+     ],
+     pricing: { basic: '299', pro: '699', enterprise: '1999' },
+     contactInfo: { website: '/ai-services/ai-powered-incident-postmortem', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📝',
+     href: '/ai-services/ai-powered-incident-postmortem',
+     category: 'ai'
+   },
+   {
+     id: 'ai-driven-api-design-assistant',
+     title: 'AI-Driven API Design Assistant',
+     description: 'Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.',
+     features: [
+       'Natural language to OpenAPI 3.0 spec',
+       'Schema validation & best practice linting',
+       'Auto-generated client SDKs (10+ languages)',
+       'Mock server with configurable responses',
+       'Breaking change detection across versions'
+     ],
+     benefits: [
+       'Design APIs 5x faster with AI guidance',
+       'Ensure consistency & backward compatibility',
+       'Ship SDKs automatically for all platforms',
+       'Reduce design review cycles'
+     ],
+     pricing: { basic: '0', pro: '149', enterprise: '599' },
+     contactInfo: { website: '/ai-services/ai-driven-api-design-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🔗',
+     href: '/ai-services/ai-driven-api-design-assistant',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-pr-drafting',
+     title: 'AI-Powered PR Drafting & Description',
+     description: 'Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.',
+     features: [
+       'Intelligent diff summarization',
+       'JIRA/GitHub issue linking & status updates',
+       'Changelog entry drafting per semantic version',
+       'Reviewer recommendation based on ownership',
+       'Auto-update of API docs & README diffs'
+     ],
+     benefits: [
+       'Consistent, high-quality PR descriptions',
+       'Save 15+ minutes per PR on documentation',
+       'Keep changelogs and releases up-to-date',
+       'Improve code review context and velocity'
+     ],
+     pricing: { basic: '0', pro: '99', enterprise: '399' },
+     contactInfo: { website: '/ai-services/ai-powered-pr-drafting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '📦',
+     href: '/ai-services/ai-powered-pr-drafting',
+     category: 'ai'
+   },
+   {
+     id: 'automated-data-labeling',
+     title: 'Automated Data Labeling for Computer Vision & NLP',
+     description: 'Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.',
+     features: [
+       'Pre-labeling with foundation models (CLIP, YOLO)',
+       'Active learning to prioritize ambiguous samples',
+       'Collaborative annotation workspace',
+       'Quality metrics & consensus scoring',
+       'Export to all major ML data formats'
+     ],
+     benefits: [
+       'Label 10,000 images in hours, not weeks',
+       'Reduce labeling cost by 90%',
+       'Improve model accuracy with high-quality labels',
+       'Iterate on training data faster'
+     ],
+     pricing: { basic: '199', pro: '599', enterprise: '1799' },
+     contactInfo: { website: '/ai-services/automated-data-labeling', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🏷️',
+     href: '/ai-services/automated-data-labeling',
+     category: 'ai'
+   },
+   {
+     id: 'meeting-ai-assistant',
+     title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
+     description: "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
+     features: [
+       'Cloud recording & real-time transcription',
+       'Speaker identification & diarization',
+       'Action item extraction with assignees',
+       'Decision log & key quote highlights',
+       'Sync to Notion/Confluence/ClickUp'
+     ],
+     benefits: [
+       'Never miss an action item again',
+       'Reduce meeting follow-up time by 80%',
+       'Search across all past meeting transcripts',
+       'Onboard new team members with context'
+     ],
+     pricing: { basic: '0', pro: '99', enterprise: '399' },
+     contactInfo: { website: '/ai-services/meeting-ai-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '🎙️',
+     href: '/ai-services/meeting-ai-assistant',
+     category: 'ai'
+   },
+   {
+     id: 'ai-powered-question-answering',
+     title: 'Enterprise AI Question Answering (Internal Knowledge)',
+     description: 'Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.',
+     features: [
+       'RAG over private document corpus',
+       'Source citation & confidence scores',
+       'Multi-department bots (HR, Eng, Sales, Support)',
+       'Feedback loop to improve answers',
+       'Analytics: most-asked questions, gaps in docs'
+     ],
+     benefits: [
+       'Reduce internal support tickets by 50%',
+       'Onboard new hires instantly with accurate answers',
+       'Keep institutional knowledge accessible',
+       'Identify undocumented processes'
+     ],
+     pricing: { basic: '299', pro: '799', enterprise: '2299' },
+     contactInfo: { website: '/ai-services/ai-powered-question-answering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+     icon: '💬',
+     href: '/ai-services/ai-powered-question-answering',
+     category: 'ai'
+   },
 ];
 
 export const itServices: Service[] = [
@@ -3491,11 +4457,9 @@ export const itServices: Service[] = [
     icon: '🚑',
     href: '/it-services/incident-response-retainer',
     category: 'it'
-  }
+   },
 
 ];
-
-// Add itSolutions for itServices
 export const itSolutions = itServices;
 export const allServices: Service[] = [...aiServices, ...itServices];
 // Export as servicesData for backward compatibility
