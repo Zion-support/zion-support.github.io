@@ -19,6 +19,7 @@ export type ServiceData = {
     address?: string;
   };
   faqs?: Array<{ question: string; answer: string }>;
+  video?: string;
 };
 
 export type ServiceLayoutProps = {
@@ -38,6 +39,7 @@ export default function ServiceLayout({ service, breadcrumbItems }: ServiceLayou
     pricing,
     contactInfo,
     faqs,
+    video,
   } = service;
 
   const breadcrumb = breadcrumbItems ?? [
@@ -174,6 +176,19 @@ export default function ServiceLayout({ service, breadcrumbItems }: ServiceLayou
                   <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+                {/* Video Explainer */}
+        {video && (
+          <div className="mx-auto mt-16 max-w-4xl">
+            <h2 className="mb-6 text-center text-2xl font-bold text-white">Service Overview</h2>
+            <div className="relative aspect-video overflow-hidden rounded-xl border border-slate-700/50 bg-slate-900/60">
+              <video controls preload="metadata" className="h-full w-full object-cover">
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         )}
