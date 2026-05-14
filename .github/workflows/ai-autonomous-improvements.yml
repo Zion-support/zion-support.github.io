@@ -38,7 +38,7 @@ jobs:
       - name: Run Daily Automation Pipeline
         env:
           TRIGGER_DEPLOY: "1"
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: node automation/ai-daily-automation-pipeline.cjs
 
       - name: Check for changes

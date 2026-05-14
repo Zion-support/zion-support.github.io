@@ -71,7 +71,7 @@ jobs:
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
         run: |
           PIPELINE="${{ github.event.inputs.pipeline || 'maximum' }}"

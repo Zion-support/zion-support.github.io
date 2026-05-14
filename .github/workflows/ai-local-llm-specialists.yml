@@ -54,5 +54,5 @@ jobs:
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit != 'false') && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
           MERGE_TO_BACKLOG: ${{ github.event.inputs.merge_to_backlog != 'false' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: node automation/ai-local-llm-specialists-orchestrator.cjs run

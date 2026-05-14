@@ -92,14 +92,11 @@ jobs:
           fi
           bash scripts/automation/commit-and-push-main.sh "chore(automation): merge app automation ideas from GitHub Actions audit into evolution backlog"
 
-      - name: Trigger Netlify deploy after audit improvements
-        if: (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && success()
-        run: |
-          if [ -n "${{ secrets.NETLIFY_BUILD_HOOK }}" ]; then
-            curl -sS -X POST -d {} "${{ secrets.NETLIFY_BUILD_HOOK }}"
-            echo "Netlify deploy triggered (audit run)"
-          fi
+      - name: Trigger deploy step skipped (was Netlify)
+        if: false
         continue-on-error: true
+        run: |
+          echo "Deploy step skipped — Netlify retired, use GitHub Pages via deploy-on-push.yml"
 
       - name: Upload audit report
         if: always()

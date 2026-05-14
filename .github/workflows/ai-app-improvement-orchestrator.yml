@@ -73,7 +73,7 @@ jobs:
           EVOLUTION_IDEAS: ${{ github.event.inputs.evolution_ideas == 'true' && '1' || '' }}
           CREATE_PAGES: ${{ github.event.inputs.create_pages == 'true' && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy == 'true' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: node automation/ai-app-improvement-orchestrator.cjs run
 
       - name: Upload orchestrator report

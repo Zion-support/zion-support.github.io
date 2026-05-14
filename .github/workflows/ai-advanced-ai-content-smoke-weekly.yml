@@ -33,7 +33,7 @@ jobs:
           grep -Fq "cron: '0 19 * * *'" "$f"
           grep -Fq 'token: ${{ github.token }}' "$f"
           grep -Fq 'OPENROUTER_API_KEY' "$f"
-          grep -Fq 'NETLIFY_BUILD_HOOK' "$f"
+          grep -Fq 'GitHub Pages' "$f"
           grep -Fq 'SKIP_ADVANCED_AI' "$f"
           grep -Fq 'AUTO_COMMIT' "$f"
           grep -Fq 'TRIGGER_DEPLOY' "$f"

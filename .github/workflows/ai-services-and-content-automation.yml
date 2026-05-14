@@ -84,7 +84,7 @@ on:
         required: false
         default: '5'
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit'
+        description: 'Trigger deploy after commit (GitHub Pages)'
         required: false
         default: true
         type: boolean
@@ -112,8 +112,8 @@ jobs:
       - name: Secret preflight (deploy only)
         if: github.event_name == 'schedule' || github.event.inputs.trigger_deploy != 'false'
         env:
-          REQUIRED_SECRETS: NETLIFY_BUILD_HOOK
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+          REQUIRED_SECRETS: OPENROUTER_API_KEY
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: npm run secrets:preflight
 
       - name: Autonomous quality gate
@@ -137,7 +137,7 @@ jobs:
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '4' }}
           MAX_ADD: ${{ github.event.inputs.max_add || '12' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: |
           set -euo pipefail
           node automation/ai-services-and-content-automation.cjs
@@ -146,5 +146,5 @@ jobs:
           PUSH_RETRIES=3 \
           RUN_BUILD=1 \
           TRIGGER_DEPLOY="${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}" \
-          NETLIFY_BUILD_HOOK="${{ secrets.NETLIFY_BUILD_HOOK }}" \
+          # NETLIFY_BUILD_HOOK removed (migrated to GitHub Pages) \
           npm run autonomy:safe-release

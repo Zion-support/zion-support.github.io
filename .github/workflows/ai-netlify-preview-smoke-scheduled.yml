@@ -5,7 +5,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: ai-netlify-preview-smoke-scheduled
+  group: ai-deploy-smoke-scheduled
   cancel-in-progress: false
 
 on:
@@ -53,24 +53,25 @@ jobs:
             fi
           fi
 
-      - name: Netlify preview smoke
+      - name: Netlify preview smoke retired (migrated to GitHub Pages)
+        if: false
         id: netlify_preview
         continue-on-error: true
         env:
-          NETLIFY_DEPLOY_URL: ${{ env.NETLIFY_DEPLOY_URL }}
+          NETLIFY_DEPLOY_URL: ""
           SMOKE_NETLIFY_MAX_ROUTES: '6'
-        run: node scripts/automation/smoke-netlify-deploy-preview.cjs
+        run: echo "Netlify preview retired"
 
       - name: Append smoke health snapshot
         if: always()
         run: node scripts/automation/append-smoke-health-snapshot.cjs
 
-      - name: Upload Netlify preview smoke report
+      - name: Upload deploy smoke artifact
         if: always()
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
-          name: netlify-preview-smoke-${{ github.run_id }}
-          path: automation/reports/netlify-preview-smoke-latest.json
+          name: deploy-smoke-${{ github.run_id }}
+          path: automation/reports/deploy-smoke-latest.json
           if-no-files-found: ignore
           retention-days: 30
 
@@ -81,7 +82,7 @@ jobs:
           SITEMAP_URL: https://ziontechgroup.com/sitemap.xml
         run: |
           set -euo pipefail
-          report="automation/reports/netlify-preview-smoke-latest.json"
+          report="automation/reports/deploy-smoke-latest.json"
           [ -f "$report" ] || exit 0
           fc=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));process.stdout.write(String(r.failureClass||''))}catch{process.stdout.write('')}")
           case "$fc" in
@@ -93,56 +94,18 @@ jobs:
               ;;
           esac
 
-      - name: Escalate on Netlify preview smoke failure
-        if: steps.netlify_preview.outcome != 'success'
+      - name: Preview smoke failure escalation retired (migrated to GitHub Pages)
+        if: false
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          report="automation/reports/netlify-preview-smoke-latest.json"
-          [ -f "$report" ] || exit 0
-          skipped=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));process.stdout.write(r.skipped ? '1' : '0')}catch{process.stdout.write('1')}")
-          [ "$skipped" = "0" ] || exit 0
-          fc=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));process.stdout.write(String(r.failureClass||'unknown'))}catch{process.stdout.write('unknown')}")
-          drift_summary=$(node -e "const fs=require('fs');const p='automation/reports/app-route-sitemap-drift-latest.json';try{const j=JSON.parse(fs.readFileSync(p,'utf8'));const miss=(j.inAppNotSitemap||[]).length;const stale=(j.inSitemapNotApp||[]).length;process.stdout.write('inAppNotSitemap='+miss+', inSitemapNotApp='+stale)}catch{process.stdout.write('n/a')}")
-          body_file="netlify-preview-smoke-fail.md"
-          {
-            echo "## Netlify preview smoke failed"
-            echo ""
-            echo "- **Dedupe key:** \`netlify-preview-smoke\`"
-            echo "- **Failure class:** \`$fc\` (transport vs HTTP routing)"
-            echo "- **Route drift diagnostics:** ${drift_summary}"
-            echo ""
-            echo "- Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            echo ""
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log('```json');console.log(JSON.stringify(r.routes.filter(x=>!x.ok),null,2));console.log('```');"
-          } > "$body_file"
-          export ISSUE_TITLE="Netlify preview smoke failed"
-          export ISSUE_FINGERPRINT="netlify-preview-smoke"
-          export COOLDOWN_HOURS="2"
-          case "$fc" in
-            transport)
-              export ISSUE_LABELS="bug,automation,automation-slo-warning,automation-smoke-transport"
-              ;;
-            http)
-              export ISSUE_LABELS="bug,automation,automation-slo-warning,automation-smoke-http"
-              ;;
-            mixed)
-              export ISSUE_LABELS="bug,automation,automation-slo-warning,automation-smoke-transport,automation-smoke-http"
-              ;;
-            *)
-              export ISSUE_LABELS="bug,automation,automation-slo-warning"
-              ;;
-          esac
-          export ISSUE_BODY_FILE="$body_file"
-          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+        run: echo "Preview smoke escalation retired"
 
-      - name: Escalate repeated preview failures (streak)
-        if: always()
+      - name: Escalate repeated preview failures (streak) retired
+        if: false
         env:
           GH_TOKEN: ${{ github.token }}
           NETLIFY_PREVIEW_SMOKE_STREAK_AUTHORITY: '1'
-        run: node scripts/automation/escalate-netlify-preview-smoke.cjs || true
+        run: echo "Preview smoke streak escalation retired"
 
       - name: Upload route drift diagnostics
         if: always()
@@ -153,30 +116,20 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
-      - name: Close Netlify preview smoke issue on recovery
-        if: always()
+      - name: Close Netlify issues retired (GitHub Pages)
+        if: false
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_FINGERPRINT: netlify-preview-smoke
           CLOSE_COMMENT: "Auto-closing: Netlify preview smoke passed."
         run: |
           set -euo pipefail
-          report="automation/reports/netlify-preview-smoke-latest.json"
-          [ -f "$report" ] || exit 0
-          ok=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));const passed=!r.skipped&&Number(r.unhealthyCount||0)===0;process.stdout.write(passed?'1':'0')}catch{process.stdout.write('0')}")
-          [ "$ok" = "1" ] || exit 0
-          node scripts/automation/gh-issue-close-on-recovery.cjs || true
+          echo "Closed retired"
 
-      - name: Close repeated-preview issue on recovery
-        if: always()
+      - name: Close repeated-preview issue retired (GitHub Pages)
+        if: false
         env:
           GH_TOKEN: ${{ github.token }}
-          ISSUE_FINGERPRINT: netlify-preview-smoke-repeated
+          ISSUE_FINGERPRINT: deploy-smoke-repeated
           CLOSE_COMMENT: "Auto-closing: Netlify preview smoke streak cleared."
-        run: |
-          set -euo pipefail
-          report="automation/reports/netlify-preview-smoke-latest.json"
-          [ -f "$report" ] || exit 0
-          ok=$(node -e "const fs=require('fs');try{const r=JSON.parse(fs.readFileSync('$report','utf8'));const passed=!r.skipped&&Number(r.unhealthyCount||0)===0;process.stdout.write(passed?'1':'0')}catch{process.stdout.write('0')}")
-          [ "$ok" = "1" ] || exit 0
-          node scripts/automation/gh-issue-close-on-recovery.cjs || true
+        run: echo "Retired"

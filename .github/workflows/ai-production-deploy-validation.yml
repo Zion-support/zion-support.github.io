@@ -41,8 +41,8 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --fund=false
 
-      - name: Wait for Netlify build
-        if: github.event_name == 'workflow_run'
+      - name: Netlify deploy removed (migrated to GitHub Pages)
+        if: false
         run: sleep 120
 
       - name: Sitemap validation (production URLs)

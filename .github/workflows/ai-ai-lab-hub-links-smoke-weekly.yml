@@ -42,24 +42,10 @@ jobs:
           AI_LAB_HUB_LINKS_FAIL_ON_ERROR: '0'
         run: node scripts/automation/ai-lab-hub-links-playwright.cjs
 
-      - name: Resolve Netlify preview URL
+      - name: Preview URL lookup retired (Netlify removed)
+        if: false
         id: preview_url
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const p = 'automation/reports/deploy-status-latest.json';
-          let u = '';
-          try {
-            const j = JSON.parse(fs.readFileSync(p, 'utf8'));
-            u = String(j.netlifyDeployUrl || '').trim();
-          } catch {}
-          if (u) {
-            fs.appendFileSync(process.env.GITHUB_OUTPUT, `url=${u}\n`);
-            console.log(`preview url found: ${u}`);
-          } else {
-            console.log('no preview url found; preview smoke skipped');
-          }
-          NODE
+        run: echo "Preview URL lookup retired"
 
       - name: Smoke preview AI Lab links
         if: steps.preview_url.outputs.url != ''

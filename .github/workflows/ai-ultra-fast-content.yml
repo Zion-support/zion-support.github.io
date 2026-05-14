@@ -44,7 +44,7 @@ on:
         required: false
         default: '5'
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit'
+        description: 'Trigger deploy after commit (GitHub Pages)'
         required: false
         default: true
         type: boolean
@@ -92,7 +92,7 @@ jobs:
           OPENROUTER_MODEL: openrouter/free
           AUTO_COMMIT: "1"
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts || '10' }}
           MAX_PRODUCT_PAGES: ${{ github.event.inputs.max_product_pages || '3' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '3' }}

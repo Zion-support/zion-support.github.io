@@ -35,7 +35,8 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install chromium --with-deps
 
-      - name: Playwright smoke (Netlify URL from deploy-status when present)
+      - name: Netlify deploy removed (migrated to GitHub Pages)
+        if: false
         env:
           NETLIFY_PLAYWRIGHT_FAIL_ON_ERROR: '0'
           NETLIFY_PLAYWRIGHT_MAX_ROUTES: '6'

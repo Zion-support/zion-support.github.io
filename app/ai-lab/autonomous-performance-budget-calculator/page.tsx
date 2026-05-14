@@ -122,7 +122,7 @@ export default function AutonomousPerformanceBudgetCalculatorPage() {
         {calculated && (
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
             <div style={{ background: '#0c4a6e', padding: '1.5rem', borderRadius: '12px', border: '1px solid #0e7490' }}>
-              <h3 style={{ color: '#2dd4bf', marginBottom: '1rem' }}>\u{1F4C8} Core Web Vitals Budget</h3>
+              <h3 style={{ color: '#2dd4bf', marginBottom: '1rem' }}>📈 Core Web Vitals Budget</h3>
               {vitals.map((v, i) => {
                 const pct = (v.value / v.budget) * 100;
                 const color = pct <= 80 ? '#22c55e' : pct <= 100 ? '#f59e0b' : '#ef4444';
@@ -141,7 +141,7 @@ export default function AutonomousPerformanceBudgetCalculatorPage() {
             </div>
 
             <div style={{ background: '#0c4a6e', padding: '1.5rem', borderRadius: '12px', border: '1px solid #0e7490' }}>
-              <h3 style={{ color: '#2dd4bf', marginBottom: '1rem' }}>\u{1F4A1} Recommendations</h3>
+              <h3 style={{ color: '#2dd4bf', marginBottom: '1rem' }}>💡 Recommendations</h3>
               <div style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: 1.8 }}>
                 {connection === '3g' && <div>• ⚠️ 3G budget is tight — consider code splitting and lazy loading</div>}
                 {device === 'mobile' && <div>• 📱 Mobile-first: prioritize critical CSS inline, defer non-critical JS</div>}
@@ -150,7 +150,7 @@ export default function AutonomousPerformanceBudgetCalculatorPage() {
                 <div>• ✅ Minify and compress all JS/CSS (gzip/brotli)</div>
                 <div>• ✅ Use HTTP/2 multiplexing for parallel asset loading</div>
                 <div>• ✅ Set cache-control headers: immutable for hashed assets</div>
-                {device === 'mobile' && connection === '3g' && <div>• 🔴 CRITICAL: Mobile+3G combination needs aggressive optimization. Target < 300KB total</div>}
+                {device === 'mobile' && connection === '3g' && <div>• 🔴 CRITICAL: Mobile+3G combination needs aggressive optimization. Target {'<'} 300KB total</div>}
               </div>
             </div>
           </div>

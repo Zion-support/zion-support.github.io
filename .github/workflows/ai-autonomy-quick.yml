@@ -39,7 +39,7 @@ jobs:
       - name: Run autonomy quick cycle (improvement + deploy)
         if: steps.readiness.outputs.status == '0'
         env:
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
         run: |

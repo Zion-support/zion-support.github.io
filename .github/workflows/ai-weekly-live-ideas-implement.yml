@@ -86,13 +86,10 @@ jobs:
             fi
           fi
 
-      - name: Trigger Netlify deploy
-        if: steps.commit.outputs.committed == 'true' && (github.event_name == 'workflow_dispatch' && github.event.inputs.trigger_deploy == 'true')
+      - name: Deploy (GitHub Pages auto-deploy after push)
+        if: steps.commit.outputs.committed == 'true'
         run: |
-          if [ -n "${{ secrets.NETLIFY_BUILD_HOOK }}" ]; then
-            curl -sS -X POST "${{ secrets.NETLIFY_BUILD_HOOK }}"
-            echo "Deploy triggered."
-          fi
+          echo "Deploy handled by GitHub Pages"
 
       - name: Upload reports
         if: always()

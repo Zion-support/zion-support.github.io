@@ -50,7 +50,7 @@ on:
         required: false
         default: '5'
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit'
+        description: 'Trigger deploy after commit (GitHub Pages)'
         required: false
         default: true
         type: boolean
@@ -95,7 +95,7 @@ jobs:
       - name: Run content ideas to deploy pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           SKIP_IDEATION: ${{ github.event.inputs.skip_ideation == 'true' && '1' || '' }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page == 'true' && '1' || '' }}
           SKIP_BURST: ${{ github.event.inputs.skip_burst == 'true' && '1' || '' }}
@@ -114,14 +114,14 @@ jobs:
       - name: Commit, push, and deploy
         env:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --staged --quiet; then
             bash scripts/automation/commit-and-push-main.sh "chore(content): ideas to deploy - ideation + front page + template burst"
-            if [ -n "$NETLIFY_BUILD_HOOK" ] && [ "$TRIGGER_DEPLOY" = "1" ]; then
-              curl -sSf -o /dev/null "$NETLIFY_BUILD_HOOK" || true
+            if false # Netlify build hook removed (migrated to GitHub Pages) && [ "$TRIGGER_DEPLOY" = "1" ]; then
+              echo "# NO-OP: Netlify deploy removed (migrated to GitHub Pages)"
             fi
           fi

@@ -74,7 +74,7 @@ jobs:
           SKIP_LIGHTHOUSE: ''
           SKIP_PERF_REGRESSION: ''
           SKIP_LIVE_A11Y: ''
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
         run: |
           npm ci --prefer-offline --no-audit --fund=false
           node automation/ai-app-improvement-evolution-pipeline.cjs

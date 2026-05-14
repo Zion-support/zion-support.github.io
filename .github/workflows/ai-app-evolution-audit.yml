@@ -1,6 +1,6 @@
 # AI App Evolution Audit
 # Unified pipeline: visit ziontechgroup.com → audit → implement → deploy.
-# Runs weekly Saturday 14 UTC. Requires OPENROUTER_API_KEY, NETLIFY_BUILD_HOOK.
+# Requires: OPENROUTER_API_KEY (Netlify build hook removed → GitHub Pages)
 
 name: AI App Evolution Audit
 
@@ -18,7 +18,7 @@ on:
         default: true
         type: boolean
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit'
+        description: 'Trigger deploy after commit (GitHub Pages)'
         required: false
         default: true
         type: boolean
@@ -64,7 +64,7 @@ jobs:
           OPENROUTER_MODEL: openrouter/free
           AUTO_COMMIT: ${{ github.event_name == 'schedule' && '1' || (github.event.inputs.auto_commit != 'false' && '1' || '') }}
           TRIGGER_DEPLOY: ${{ github.event_name == 'schedule' && '1' || (github.event.inputs.trigger_deploy != 'false' && '1' || '') }}
-          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           SKIP_UX_AUDIT: ${{ github.event.inputs.skip_ux_audit == 'true' && '1' || '' }}
           SKIP_LAYOUT_DESIGN: ${{ github.event.inputs.skip_layout_design == 'true' && '1' || '' }}
           SKIP_EVOLUTION_APPLY: ${{ github.event.inputs.skip_evolution_apply == 'true' && '1' || '' }}
