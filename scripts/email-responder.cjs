@@ -132,6 +132,110 @@ async function actionReply(email, classification, dryRun = true) {
   return { sent: false, reason: 'SMTP not configured' };
 }
 
+
+// === RECOMMENDER INTEGRATION ===
+async function getRecommendations(answers) {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const resp = await fetch(`${baseUrl}/api/recommend`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answers })
+    });
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    return data.top3 || [];
+  } catch (e) {
+    console.error('Recommendation error:', e.message);
+    return null;
+  }
+}
+
+async function actionReply(email, classification) {
+  const templates = {
+    sales: (recs) => {
+      let body = `Thank you for your interest in our services!\n\nWe offer a comprehensive catalog of AI and IT solutions.`;
+      if (recs && recs.length > 0) {
+        body += '\n\nBased on your needs, here are our top recommendations:\n';
+        recs.forEach((r, i) => {
+          body += `\n${i+1}. **${r.title}** (${r.category}) — ${r.reason}\n`;
+        });
+        body += '\nReply with any questions or request a custom proposal!';
+      }
+      body += '\n\nExplore all services: /services\n\nBest,\nZion Team';
+      return body;
+    },
+    support: `We've received your support request. Our team will respond within 24 hours.\n\nYou can also browse our knowledge base or reply with more details.\n\nThank you,\nSupport Team`,
+    partnership: `Thank you for your partnership interest! Our team will review and respond within 2 business days.\n\nBest,\nZion Partnerships`,
+    feedback: `Thank you for your feedback! We appreciate you taking the time to share your thoughts.\n\n— Zion Team`,
+    spam: null,
+    unclassified: `Thank you for contacting us. We'll get back to you shortly.\n\n— Zion Team`
+  };
+
+  const replyText = templates[classification.intent] || templates.unclassified;
+  if (!replyText) return { sent: false, reason: 'spam - no reply' };
+
+  if (CONFIG.dryRun) {
+    console.log(`[DRY-RUN] Would reply to ${email.from?.text}: ${classification.intent}`);
+    return { sent: false, dryRun: true, intent: classification.intent };
+  }
+
+  console.log(`[SEND] Reply to ${email.from?.text} (${classification.intent}) - SMTP not yet implemented`);
+  return { sent: false, reason: 'SMTP pending' };
+}
+
+// Override processEmail to extract needs from email
+async function processEmail(email) {
+  const classification = await classifyEmail(email);
+
+  // Try to extract needs for sales emails
+  let needs = null;
+  if (classification.intent === 'sales' && classification.confidence >= 0.7) {
+    // Very rough extraction — LLM-based would be better but this is zero-cost
+    const bodyPreview = (email.text || '').slice(0, 2000);
+    needs = { budget: null, timeline: null, needs: [] };
+    // Heuristic: look for budget keywords
+    const budgetMatch = bodyPreview.match(/(?:budget|price|cost|under|max).{0,60}/i);
+    if (budgetMatch) needs.budget = budgetMatch[0].trim();
+    // Look for timeline keywords
+    const timeMatch = bodyPreview.match(/(?:timeline|asap|urgent|within|next week|month|quarter).{0,60}/i);
+    if (timeMatch) needs.timeline = timeMatch[0].trim();
+  }
+
+  let recommendations = null;
+  if (needs && classification.confidence >= 0.7) {
+    recommendations = await getRecommendations(needs);
+  }
+
+  const actionResult = await actionReply(email, classification, CONFIG.dryRun, recommendations);
+
+  const record = {
+    id: email.messageId || Date.now().toString(),
+    from: email.from?.text || 'unknown',
+    subject: email.subject || '(no subject)',
+    intent: classification.intent,
+    confidence: classification.confidence,
+    reason: classification.reason,
+    action: classification.suggested_action,
+    reply: actionResult,
+    receivedAt: email.date ? new Date(email.date).toISOString() : new Date().toISOString(),
+    processedAt: new Date().toISOString(),
+    dryRun: CONFIG.dryRun,
+    hasRecommendations: !!recommendations
+  };
+
+  if (classification.confidence >= CONFIG.confidenceThreshold) {
+    processedLog.unshift(record);
+    if (processedLog.length > 1000) processedLog.pop();
+    fs.writeFileSync(PROCESSED, JSON.stringify(processedLog, null, 2));
+    console.log(`✅ ${record.from} → ${record.intent} (${(classification.confidence*100).toFixed(0)}%) ${recommendations ? '+recs' : ''}`);
+  } else {
+    pendingQueue.unshift(record);
+    fs.writeFileSync(PENDING, JSON.stringify(pendingQueue, null, 2));
+    console.log(`⏳ Pending: ${record.from} → ${record.intent} (${(classification.confidence*100).toFixed(0)}%)`);
+  }
+}
+
 async function processEmail(email) {
   const classification = await classifyEmail(email);
   const actionResult = await actionReply(email, classification, CONFIG.dryRun);
