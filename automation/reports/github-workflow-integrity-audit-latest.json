@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T01:24:25.465Z",
+  "generatedAt": "2026-05-14T02:50:18.528Z",
   "workflowCount": 391,
   "status": "healthy",
   "counts": {
@@ -44,7 +44,7 @@
     {
       "file": ".github/workflows/ai-advanced-ai-content-smoke-weekly.yml",
       "workflowName": "ai advanced-ai content workflow smoke (weekly)",
-      "digest": "aab2e6029d0b",
+      "digest": "f29551063e88",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 41
@@ -52,7 +52,7 @@
     {
       "file": ".github/workflows/ai-advanced-ai-content.yml",
       "workflowName": "AI Advanced-AI Content",
-      "digest": "c1bf48574e2b",
+      "digest": "8d98cc4d827c",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 53
@@ -140,10 +140,10 @@
     {
       "file": ".github/workflows/ai-ai-lab-hub-links-smoke-weekly.yml",
       "workflowName": "AI AI Lab hub links smoke",
-      "digest": "856ee641b454",
+      "digest": "4420d5b963e2",
       "nameCount": 1,
       "duplicateNameHeaders": false,
-      "lines": 103
+      "lines": 89
     },
     {
       "file": ".github/workflows/ai-ai-lab-integrity-smoke-contract.yml",
@@ -196,7 +196,7 @@
     {
       "file": ".github/workflows/ai-app-autonomy-guarded-cycle.yml",
       "workflowName": "AI App Autonomy Guarded Cycle",
-      "digest": "160fe37faa09",
+      "digest": "6d8a27b9fc2e",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 68
@@ -204,7 +204,7 @@
     {
       "file": ".github/workflows/ai-app-evolution-audit.yml",
       "workflowName": "AI App Evolution Audit",
-      "digest": "7d9ea103e5a3",
+      "digest": "49ddc575b356",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 74
@@ -220,7 +220,7 @@
     {
       "file": ".github/workflows/ai-app-evolution-trigger-on-regression.yml",
       "workflowName": "AI App Evolution Trigger on Regression",
-      "digest": "42474149c546",
+      "digest": "5d06e8f50207",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 80
@@ -228,7 +228,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-daily-quick.yml",
       "workflowName": "AI App Improvement Daily Quick",
-      "digest": "4d1592d7c3a8",
+      "digest": "c49f17f961c9",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 55
@@ -236,7 +236,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-evolution-full-quality.yml",
       "workflowName": "AI App Improvement Evolution (Full Quality)",
-      "digest": "be00464974e7",
+      "digest": "7b8f36c590bf",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 63
@@ -244,7 +244,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-evolution.yml",
       "workflowName": "AI App Improvement Evolution",
-      "digest": "b6cbc84ca9b8",
+      "digest": "f726b9cbc72e",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 103
@@ -252,7 +252,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-on-push.yml",
       "workflowName": "AI App Improvement On Push",
-      "digest": "824b8b5c1a82",
+      "digest": "f8314271df2a",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 64
@@ -260,7 +260,7 @@
     {
       "file": ".github/workflows/ai-app-improvement-orchestrator.yml",
       "workflowName": "AI App Improvement Orchestrator",
-      "digest": "8953119a1bd5",
+      "digest": "0871562ff404",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 88
@@ -292,7 +292,7 @@
     {
       "file": ".github/workflows/ai-app-visit-audit-implement-deploy.yml",
       "workflowName": "App Visit Audit Implement Deploy",
-      "digest": "cc770b6bafcf",
+      "digest": "acd4b16f64ce",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 90
@@ -300,7 +300,7 @@
     {
       "file": ".github/workflows/ai-app-visit-intelligence.yml",
       "workflowName": "AI App Visit Intelligence",
-      "digest": "5428c23f1c80",
+      "digest": "929caa5b0602",
       "nameCount": 1,
       "duplicateNameHeaders": false,
       "lines": 60
