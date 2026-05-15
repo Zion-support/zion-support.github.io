@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Contact - Zion Tech Group',
+  description: 'Contact Zion Tech Group for AI and IT solutions',
+};
+
 export default function ContactPage() {
   return (
     <div style={{fontFamily: 'Arial, sans-serif', maxWidth: 800, margin: '50px auto', padding: 20}}>
@@ -8,5 +13,5 @@ export default function ContactPage() {
         <p>We respond within 24 hours during business days.</p>
       </div>
     </div>
-  )
+  );
 }
