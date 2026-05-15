@@ -2,6 +2,8 @@
 const nextConfig = {
   trailingSlash: true,
   output: 'export',
+  basePath: '',
+  assetPrefix: '',
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },

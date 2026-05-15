@@ -100,7 +100,7 @@ export default function ServicesPage() {
                     Starting at {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}
                   </span>
                 </div>
-                <Link href={`/services#${service.id}`} className="text-sm text-purple-400 hover:underline inline-flex items-center gap-1">
+                <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:underline inline-flex items-center gap-1">
                   View Details →
                 </Link>
               </div>
