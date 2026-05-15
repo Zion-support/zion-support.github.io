@@ -1745,7 +1745,295 @@ export const aiServices: Service[] = [
     pricing: { Starter: '$2,499/mo', Professional: '$6,999/mo', Enterprise: 'Custom' },
     contactUrl: '/contact'
   },
+  {
+    id: 'ai-predictive-maintenance-3',
+    title: 'AI Predictive Maintenance for Industrial Assets',
+    subtitle: 'Predict equipment failures before they happen with sensor fusion and machine learning',
+    category: 'ai',
+    subcategory: 'Predictive Maintenance',
+    description: 'Reduce unplanned downtime by up to 50% using AI-powered predictive maintenance. Analyzes sensor data from IoT devices, vibration patterns, thermal imaging, and historical failure data to predict equipment failures weeks in advance.',
+    features: [
+      'Multi-sensor data fusion (vibration, thermal, acoustic, pressure)',
+      'Remaining useful life (RUL) estimation per asset',
+      'Anomaly detection with unsupervised learning models',
+      'Automated work order generation and dispatch',
+      'Digital twin integration for simulation',
+      'Maintenance scheduling optimization',
+      'Spare parts inventory prediction',
+      'Condition-based monitoring dashboards'
+    ],
+    benefits: [
+      'Reduce unplanned downtime by 30-50%',
+      'Extend equipment lifespan by 20-40%',
+      'Cut maintenance costs by 25-30%',
+      'Eliminate catastrophic equipment failures'
+    ],
+    pricing: { Starter: '$2,499/mo', Professional: '$6,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-drug-discovery-3',
+    title: 'AI Drug Discovery & Molecular Design',
+    subtitle: 'Accelerate pharmaceutical R&D with AI-powered molecular design and virtual screening',
+    category: 'ai',
+    subcategory: 'Drug Discovery',
+    description: 'Leverage generative AI and molecular simulation to accelerate drug candidate identification, optimize molecular properties, and reduce time-to-clinical-trial by months.',
+    features: [
+      'De novo molecular generation with reinforcement learning',
+      'Virtual screening of billions of compounds',
+      'ADMET property prediction (absorption, toxicity, metabolism)',
+      'Protein structure prediction and docking simulation',
+      'Clinical trial outcome prediction',
+      'Patent landscape analysis and freedom-to-operate',
+      'Automated research report generation',
+      'Integration with LIMS and cheminformatics platforms'
+    ],
+    benefits: [
+      'Reduce drug discovery timeline by 40-60%',
+      'Identify novel drug candidates with higher success rates',
+      'Cut R&D costs by $50M+ per program',
+      'Prioritize compounds with best safety profiles'
+    ],
+    pricing: { Starter: '$4,999/mo', Professional: '$14,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-adaptive-learning-3',
+    title: 'AI Adaptive Learning Platform',
+    subtitle: 'Personalized education powered by AI that adapts to each learner\'s pace, style, and knowledge gaps',
+    category: 'ai',
+    subcategory: 'EdTech AI',
+    description: 'An intelligent learning platform that uses AI to create personalized learning paths, adapt content difficulty in real-time, identify knowledge gaps, and maximize knowledge retention.',
+    features: [
+      'Adaptive learning paths personalized per student',
+      'Real-time mastery assessment and gap analysis',
+      'AI-generated practice problems and explanations',
+      'Spaced repetition optimization for long-term retention',
+      'Learning style detection (visual, auditory, kinesthetic)',
+      'Gamified engagement and progress tracking',
+      'Teacher dashboard with class-level analytics',
+      'Integration with LMS and curriculum standards'
+    ],
+    benefits: [
+      'Improve learning outcomes by 40%+',
+      'Reduce time to mastery by 30%',
+      'Increase student engagement and completion rates',
+      'Enable teachers to focus on high-impact instruction'
+    ],
+    pricing: { Starter: '$999/mo', Professional: '$2,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-smart-cities-3',
+    title: 'AI Smart City Infrastructure Platform',
+    subtitle: 'Intelligent urban management — traffic optimization, energy management, and public safety',
+    category: 'ai',
+    subcategory: 'Smart Cities',
+    description: 'AI-powered urban infrastructure platform that optimizes traffic flow, reduces energy consumption, manages waste systems, and enhances public safety across smart city deployments.',
+    features: [
+      'Real-time traffic signal optimization with reinforcement learning',
+      'Energy grid load balancing and demand prediction',
+      'Waste collection route optimization',
+      'Public safety anomaly detection from camera feeds',
+      'Air quality monitoring and pollution source tracking',
+      'Citizen engagement and reporting portal',
+      'Cross-department data integration hub',
+      'Digital twin of city infrastructure for simulation'
+    ],
+    benefits: [
+      'Reduce traffic congestion by 25-35%',
+      'Cut municipal energy costs by 20-30%',
+      'Improve emergency response times by 30%',
+      'Enhance quality of life metrics for residents'
+    ],
+    pricing: { Starter: '$4,999/mo', Professional: '$14,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-precision-agriculture-3',
+    title: 'AI Precision Agriculture Platform',
+    subtitle: 'Boost crop yields and reduce waste with AI-powered farming intelligence',
+    category: 'ai',
+    subcategory: 'Agriculture AI',
+    description: 'Transform farming operations with AI-powered crop monitoring, yield prediction, irrigation optimization, pest detection, and harvest planning using satellite imagery and IoT sensor data.',
+    features: [
+      'Satellite and drone imagery analysis for crop health',
+      'AI-powered pest and disease detection',
+      'Precision irrigation scheduling optimization',
+      'Yield prediction with weather integration',
+      'Soil analysis and fertilizer recommendation',
+      'Automated harvest timing optimization',
+      'Supply chain coordination for perishables',
+      'Sustainability and carbon credit tracking'
+    ],
+    benefits: [
+      'Increase crop yields by 15-25%',
+      'Reduce water usage by 30-40%',
+      'Minimize pesticide use with targeted application',
+      'Optimize harvest timing to reduce waste'
+    ],
+    pricing: { Starter: '$1,999/mo', Professional: '$5,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-legal-research-3',
+    title: 'AI Legal Research & Contract Intelligence',
+    subtitle: 'Transform legal workflows with AI-powered research, contract analysis, and compliance monitoring',
+    category: 'ai',
+    subcategory: 'Legal AI',
+    description: 'AI-powered legal assistant that accelerates contract review, legal research, case analysis, and regulatory compliance monitoring — reducing hours of manual work to minutes.',
+    features: [
+      'AI-powered legal research with case law analysis',
+      'Contract clause extraction and risk scoring',
+      'Automated contract comparison and redlining',
+      'Regulatory change monitoring and impact alerts',
+      'Litigation prediction and outcome modeling',
+      'Document summarization with key issue extraction',
+      'Multi-jurisdiction compliance checking',
+      'Integration with legal practice management systems'
+    ],
+    benefits: [
+      'Reduce contract review time by 80%',
+      'Identify risks and opportunities in minutes, not days',
+      'Stay current with regulatory changes automatically',
+      'Improve billing efficiency and client satisfaction'
+    ],
+    pricing: { Starter: '$2,999/mo', Professional: '$7,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-digital-twin-3',
+    title: 'AI-Powered Digital Twin Platform',
+    subtitle: 'Create intelligent digital replicas of physical assets, processes, and environments for simulation and optimization',
+    category: 'ai',
+    subcategory: 'Digital Twin',
+    description: 'Build real-time digital twins of manufacturing lines, buildings, supply chains, or infrastructure — powered by physics-informed AI models for predictive simulation and optimization.',
+    features: [
+      'Real-time 3D visualization and simulation environment',
+      'Physics-informed machine learning models',
+      'Live data ingestion from IoT sensors and SCADA',
+      'What-if scenario simulation and optimization',
+      'Predictive maintenance and failure modeling',
+      'Multi-domain coupling (thermal, structural, fluid)',
+      'Collaborative digital twin workspaces',
+      'Automated report generation and KPI dashboards'
+    ],
+    benefits: [
+      'Predict failures and optimize before physical changes',
+      'Reduce prototyping costs by 60-80%',
+      'Enable scenario testing without production risk',
+      'Accelerate time-to-market for complex systems'
+    ],
+    pricing: { Starter: '$3,999/mo', Professional: '$12,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-creative-studio-3',
+    title: 'AI Creative Studio — Design, Video & Content Generation',
+    subtitle: 'Enterprise-grade AI creative platform for generating brand-consistent designs, videos, and multimedia content',
+    category: 'ai',
+    subcategory: 'Creative AI',
+    description: 'Generate on-brand creative assets — logos, marketing materials, product photos, videos, animations, and copy — using enterprise AI models trained on your brand guidelines.',
+    features: [
+      'Brand-aware image generation and editing',
+      'AI video generation and editing from text/scripts',
+      'Automated design template system with brand guardrails',
+      'Multi-format content adaptation (social, print, web)',
+      'AI-powered copywriting in brand voice',
+      '3D asset generation and product visualization',
+      'Creative workflow automation and approval chains',
+      'Analytics on creative performance and engagement'
+    ],
+    benefits: [
+      'Produce 10x more creative assets in a fraction of the time',
+      'Maintain brand consistency across all channels',
+      'Reduce creative production costs by 60-70%',
+      'Rapidly test and iterate on creative concepts'
+    ],
+    pricing: { Starter: '$999/mo', Professional: '$3,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-telecom-3',
+    title: 'AI Telecom Network Optimization',
+    subtitle: 'Self-optimizing telecom networks with AI-driven planning, anomaly detection, and capacity management',
+    category: 'ai',
+    subcategory: 'Telecom AI',
+    description: 'AI-powered network intelligence for telecom operators — automate network planning, detect anomalies, predict capacity demands, and optimize quality of experience across 4G/5G networks.',
+    features: [
+      'Network anomaly detection and root cause analysis',
+      'Predictive capacity planning and load forecasting',
+      'AI-driven radio network optimization (SON)',
+      'QoE prediction and proactive service assurance',
+      'Automated fault detection and self-healing networks',
+      'Energy optimization for base station operations',
+      'Fiber and fixed-network planning automation',
+      'Real-time network health dashboard'
+    ],
+    benefits: [
+      'Reduce network outages by 40-60%',
+      'Optimize spectrum and capacity allocation by 25%',
+      'Cut energy costs in network operations by 20%',
+      'Improve customer quality of experience scores'
+    ],
+    pricing: { Starter: '$3,499/mo', Professional: '$9,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-pharma-quality-3',
+    title: 'AI Pharmaceutical Quality & Compliance',
+    subtitle: 'Automated pharmaceutical quality control, deviation management, and regulatory compliance',
+    category: 'ai',
+    subcategory: 'Pharma AI',
+    description: 'AI platform for pharmaceutical manufacturing quality — automate deviation management, batch review, FDA compliance documentation, and predictive quality risk assessment.',
+    features: [
+      'Automated batch record review and anomaly flagging',
+      'Predictive quality risk scoring per batch',
+      'Deviation and CAPA management automation',
+      'FDA 21 CFR Part 11 compliant electronic records',
+      'Real-time process parameter monitoring and alerts',
+      'Stability study prediction and shelf-life modeling',
+      'Audit trail with full traceability',
+      'Integration with ERP, LIMS, and MES systems'
+    ],
+    benefits: [
+      'Reduce batch review time by 80%',
+      'Predict quality issues before batch failure',
+      'Ensure continuous FDA and EMA compliance',
+      'Cut quality-related costs by 30-40%'
+    ],
+    pricing: { Starter: '$3,999/mo', Professional: '$10,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'ai-creator-economy-3',
+    title: 'AI Creator Economy Platform',
+    subtitle: 'Empower content creators with AI tools for monetization, audience growth, and content optimization',
+    category: 'ai',
+    subcategory: 'Creator Economy',
+    description: 'AI-powered platform for content creators — generating, optimizing, and monetizing content across YouTube, TikTok, podcasts, newsletters, and blogs with intelligent growth analytics.',
+    features: [
+      'AI script and content generation across formats',
+      'Thumbnail and video title optimization with CTR prediction',
+      'Audience growth analytics with best-time-to-post AI',
+      'Revenue optimization (ad rates, sponsorship pricing, merch suggestions)',
+      'Cross-platform content repurposing engine',
+      'Viewer sentiment and comment analysis',
+      'Membership and subscription funnel optimization',
+      'Competitor channel benchmarking'
+    ],
+    benefits: [
+      'Grow audience 3x faster with data-driven strategies',
+      'Increase content monetization by 50%+',
+      'Produce 5x more content with AI assistance',
+      'Make smarter creative decisions with real analytics'
+    ],
+    pricing: { Starter: '$299/mo', Professional: '$799/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
 ];
+
+// ═══ IT Services (new additions) ═══
 
 // ═══════════════════════════════════════════════════════
 // SECTION 2: IT SERVICES & SOLUTIONS
@@ -2958,6 +3246,164 @@ export const itServices: Service[] = [
       'Onboard developers 3x faster with self-service portal'
     ],
     pricing: { Starter: '$799/mo', Professional: '$2,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+
+// ── 6 new IT services ──
+  {
+    id: 'it-quantum-2',
+    title: 'Post-Quantum Cryptography & Migration',
+    subtitle: 'Prepare your cryptographic infrastructure for the quantum era',
+    category: 'it',
+    subcategory: 'Quantum Security',
+    description: 'Assess and migrate your cryptographic infrastructure to post-quantum algorithms. Includes cryptographic audit, PQC algorithm selection, hybrid deployment, and quantum-readiness roadmap.',
+    features: [
+      'Cryptographic inventory and algorithm assessment',
+      'Post-quantum algorithm selection (CRYSTALS-Kyber, CRYSTALS-Dilithium)',
+      'Hybrid classical-quantum cryptographic deployment',
+      'Certificate lifecycle management for PQC',
+      'Crypto-agility framework implementation',
+      'Data-in-transit and data-at-rest quantum protection',
+      'Regulatory compliance (NIST PQC standards)',
+      'Quantum risk assessment and timeline planning'
+    ],
+    benefits: [
+      'Protect data against future quantum attacks',
+      'Meet emerging NIST PQC compliance requirements',
+      'Build crypto-agile infrastructure for long-term security',
+      'Reduce quantum migration risk with phased approach'
+    ],
+    pricing: { Starter: '$3,999/mo', Professional: '$10,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'it-5g-2',
+    title: '5G Network Design & Private 5G Deployments',
+    subtitle: 'Enterprise-grade private 5G network design, deployment, and optimization',
+    category: 'it',
+    subcategory: '5G & Wireless',
+    description: 'Design and deploy private 5G networks for enterprise campuses, manufacturing facilities, and smart infrastructure with full network slicing and edge integration.',
+    features: [
+      'Private 5G network architecture design (NSA/SA)',
+      'Network slicing for multi-tenant environments',
+      '5G core deployment (Open5GCore, OAI)',
+      'Edge computing integration (MEC)',
+      'Spectrum licensing and regulatory compliance',
+      'RF planning and site survey',
+      'Interference management and optimization',
+      'Network performance monitoring and analytics'
+    ],
+    benefits: [
+      'Ultra-low latency (<1ms) for critical applications',
+      'Massive IoT connectivity (up to 1M devices/sq km)',
+      'Replace legacy WiFi with reliable private 5G',
+      'Enable Industry 4.0 use cases (AGV, AR/VR, drones)'
+    ],
+    pricing: { Starter: '$4,999/mo', Professional: '$14,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'it-sustainability-2',
+    title: 'Green IT Infrastructure Optimization',
+    subtitle: 'Reduce IT energy consumption and carbon footprint with sustainable infrastructure design',
+    category: 'it',
+    subcategory: 'Green IT',
+    description: 'Comprehensive green IT assessment and optimization — reduce energy consumption, e-waste, and carbon emissions across your IT infrastructure while improving performance.',
+    features: [
+      'IT energy audit and carbon footprint baseline',
+      'Data center PUE optimization',
+      'Server consolidation and right-sizing',
+      'Workload migration to renewable-powered cloud regions',
+      'Hardware lifecycle and refresh planning',
+      'Energy-efficient cooling and power design',
+      'E-waste reduction and responsible recycling',
+      'Sustainability reporting and ESG compliance'
+    ],
+    benefits: [
+      'Reduce IT energy costs by 25-40%',
+      'Achieve carbon-neutral IT operations',
+      'Meet ESG and sustainability reporting requirements',
+      'Extend hardware lifespan and reduce e-waste'
+    ],
+    pricing: { Starter: '$1,499/mo', Professional: '$4,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'it-edge-computing-2',
+    title: 'Edge Computing Deployment & Management',
+    subtitle: 'Distributed edge infrastructure for low-latency, high-availability applications',
+    category: 'it',
+    subcategory: 'Edge Computing',
+    description: 'Design, deploy, and manage edge computing infrastructure that brings processing power closer to your users and IoT devices. Reduces latency, bandwidth costs, and enables real-time applications in manufacturing, retail, healthcare, and smart cities.',
+    features: [
+      'Edge node deployment across 100+ global locations',
+      'Containerized workloads with Kubernetes at the edge',
+      'Real-time data processing with sub-10ms latency',
+      'IoT device management and OTA firmware updates',
+      '5G MEC integration for mobile edge use cases',
+      'Edge-native security with zero-trust architecture',
+      'Centralized multi-edge orchestration platform',
+      'Cost optimization and workload placement AI'
+    ],
+    benefits: [
+      'Reduce latency by 90% compared to cloud-only',
+      'Process data locally for privacy-sensitive applications',
+      'Distribute workloads to optimal geographic locations',
+      'Enable AR/VR, gaming, and autonomous systems at scale'
+    ],
+    pricing: { Starter: '$2,999/mo', Professional: '$8,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'it-privacy-2',
+    title: 'Privacy Engineering & Data Protection',
+    subtitle: 'Build privacy-by-design systems and ensure regulatory compliance across jurisdictions',
+    category: 'it',
+    subcategory: 'Privacy Engineering',
+    description: 'Privacy engineering services — implement privacy-by-design architectures, data protection impact assessments, consent management, and cross-border data transfer compliance.',
+    features: [
+      'Privacy-by-design architecture review and implementation',
+      'Data Protection Impact Assessment (DPIA)',
+      'Consent management platform implementation',
+      'Cross-border data transfer compliance (GDPR, LGPD, CCPA)',
+      'Data minimization and retention policy design',
+      'Anonymization and differential privacy strategies',
+      'Regulatory audit preparation and support',
+      'Privacy engineering training for development teams'
+    ],
+    benefits: [
+      'Achieve compliance with GDPR, CCPA, LGPD, and beyond',
+      'Build customer trust through demonstrated privacy practices',
+      'Reduce risk of data protection fines (up to 4% of revenue)',
+      'Enable international expansion with privacy confidence'
+    ],
+    pricing: { Starter: '$2,499/mo', Professional: '$6,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'it-saas-ops-2',
+    title: 'SaaS Operations & Vendor Management',
+    subtitle: 'Centralize, optimize, and govern your entire SaaS portfolio',
+    category: 'it',
+    subcategory: 'SaaS Operations',
+    description: 'Full-service SaaS management — discover, optimize, and govern every SaaS application in your organization. Eliminate shadow IT, reduce costs, and ensure security compliance.',
+    features: [
+      'Automated SaaS discovery and shadow IT detection',
+      'Usage analytics and license optimization',
+      'Vendor risk assessment and compliance scoring',
+      'Contract lifecycle management and renewal tracking',
+      'Onboarding/offboarding automation for SaaS apps',
+      'Security policy enforcement across SaaS stack',
+      'Cost allocation and departmental chargeback',
+      'Integration with ITSM and procurement systems'
+    ],
+    benefits: [
+      'Reduce SaaS costs by 25-40%',
+      'Eliminate shadow IT and unauthorized apps',
+      'Streamline vendor onboarding by 60%',
+      'Ensure compliance across all SaaS applications'
+    ],
+    pricing: { Starter: '$1,499/mo', Professional: '$3,999/mo', Enterprise: 'Custom' },
     contactUrl: '/contact'
   },
 ];
@@ -4329,6 +4775,346 @@ export const saasSolutions: Service[] = [
     pricing: { Starter: '$79/mo', Professional: '$249/mo', Enterprise: 'Custom' },
     contactUrl: '/contact'
   },
+
+// ── 12 new Micro SAAS Solutions ──
+  {
+    id: 'saas-ai-writer-2',
+    title: 'AI Content & Copywriting Platform',
+    subtitle: 'Generate SEO-optimized, brand-consistent content at scale using AI',
+    category: 'saas',
+    subcategory: 'AI Content',
+    description: 'AI-powered content generation platform that produces blog posts, ad copy, product descriptions, and social media content tailored to your brand voice and optimized for search engines.',
+    features: [
+      'AI blog post and article generation',
+      'Ad copy and landing page copywriter',
+      'Product description generator for e-commerce',
+      'Brand voice training and consistency enforcement',
+      'SEO optimization with keyword integration',
+      'Content calendar and publishing automation',
+      'Multi-language content generation (50+ languages)',
+      'Plagiarism checker and content originality scoring'
+    ],
+    benefits: [
+      'Produce 10x more content in a fraction of the time',
+      'Increase organic traffic by 40-80%',
+      'Maintain consistent brand voice across all channels',
+      'Reduce content creation costs by 70%'
+    ],
+    pricing: { Starter: '$49/mo', Professional: '$149/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-voice-clone-2',
+    title: 'AI Voice Cloning & Text-to-Speech',
+    subtitle: 'Create realistic AI voiceovers and clone voices for content, training, and accessibility',
+    category: 'saas',
+    subcategory: 'Voice AI',
+    description: 'Generate natural-sounding AI voiceovers from text, clone professional voices with consent, and create multilingual audio content for training, marketing, and accessibility.',
+    features: [
+      'Instant voice cloning from 60 seconds of audio',
+      '200+ realistic AI voices in 50+ languages',
+      'Emotion and tone control for voice output',
+      'Batch audio generation for large projects',
+      'Real-time text-to-speech API',
+      'Audio content editor with timeline controls',
+      'Background noise removal and audio enhancement',
+      'SSML and pronunciation customization'
+    ],
+    benefits: [
+      'Produce studio-quality audio without recording',
+      'Launch multilingual content 10x faster',
+      'Create accessible content for visually impaired users',
+      'Reduce voiceover costs by 90%'
+    ],
+    pricing: { Starter: '$19/mo', Professional: '$49/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-video-gen-2',
+    title: 'AI Video Generation & Editing',
+    subtitle: 'Create professional videos from text, images, and templates using AI',
+    category: 'saas',
+    subcategory: 'Video AI',
+    description: 'Transform text, blog posts, and presentations into engaging videos with AI-powered script generation, voiceover, stock footage matching, and automated editing.',
+    features: [
+      'Blog-to-video and article-to-video conversion',
+      'AI-generated scripts and storyboards',
+      'Auto-matched stock footage and images',
+      'AI voiceover in 50+ languages',
+      'Captions, subtitles, and translations',
+      'Customizable templates for social media',
+      'Screen recording and webcam overlay',
+      'Brand kit integration (colors, logos, fonts)'
+    ],
+    benefits: [
+      'Create videos 15x faster than traditional production',
+      'Increase social media engagement by 40%+',
+      'Repurpose blog content into video at scale',
+      'Reduce video production costs by 80%'
+    ],
+    pricing: { Starter: '$29/mo', Professional: '$99/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-cyber-range-2',
+    title: 'Cybersecurity Simulation & Training Platform',
+    subtitle: 'Hands-on cyber ranges and attack simulations for security team training',
+    category: 'saas',
+    subcategory: 'Cybersecurity Training',
+    description: 'Cloud-based cyber range platform with realistic attack simulations, capture-the-flag exercises, red team/blue team scenarios, and automated skill assessment for security teams.',
+    features: [
+      'Realistic attack simulation environments',
+      'Capture-the-flag (CTF) challenge builder',
+      'Red team vs blue team scenario engine',
+      'Automated skill assessment and scoring',
+      'Pre-built training modules (phishing, ransomware, APT)',
+      'Customizable threat scenarios and difficulty levels',
+      'Team leaderboards and progress tracking',
+      'Compliance-aligned training paths (NIST, MITRE ATT&CK)'
+    ],
+    benefits: [
+      'Improve incident response time by 50%+',
+      'Validate security team readiness against real attack vectors',
+      'Meet compliance training requirements with automated proof',
+      'Build a security culture with gamified learning'
+    ],
+    pricing: { Starter: '$199/mo', Professional: '$599/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-carbon-2',
+    title: 'Carbon Accounting & Emissions Tracking',
+    subtitle: 'Automate carbon footprint measurement, reporting, and reduction across Scope 1, 2, and 3',
+    category: 'saas',
+    subcategory: 'Carbon Management',
+    description: 'Automated carbon accounting platform that measures, tracks, and reports greenhouse gas emissions across all scopes — with AI-powered reduction recommendations and regulatory report generation.',
+    features: [
+      'Automated Scope 1, 2, and 3 emissions calculation',
+      'AI-powered emission reduction recommendations',
+      'Carbon credit marketplace and offset purchasing',
+      'Regulatory report generation (CSRD, SEC, TCFD)',
+      'Supply chain emissions tracking',
+      'Real-time emission dashboards and alerts',
+      'Integration with ERP, procurement, and travel systems',
+      'Science-based target (SBTi) progress tracking'
+    ],
+    benefits: [
+      'Achieve carbon neutrality with data-driven insights',
+      'Meet mandatory climate disclosure requirements',
+      'Identify reduction opportunities worth millions',
+      'Build investor confidence with verified emissions data'
+    ],
+    pricing: { Starter: '$299/mo', Professional: '$899/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-smart-hr-2',
+    title: 'AI-Powered People Analytics',
+    subtitle: 'Predictive workforce analytics with AI-driven insights on retention, engagement, and performance',
+    category: 'saas',
+    subcategory: 'People Analytics',
+    description: 'Advanced people analytics platform that uses AI to predict employee attrition, measure engagement, optimize compensation, and identify flight risks before they impact your business.',
+    features: [
+      'Predictive attrition modeling with 90%+ accuracy',
+      'Employee sentiment analysis from multiple sources',
+      'Compensation benchmarking and equity analysis',
+      'Skills gap analysis and workforce planning',
+      'DEI analytics and pay equity monitoring',
+      'Manager effectiveness scoring',
+      'Automated stay interviews and pulse surveys',
+      'Integration with HRIS, Slack, and collaboration tools'
+    ],
+    benefits: [
+      'Reduce employee turnover by 25-35%',
+      'Save $15K+ per avoided departure',
+      'Identify flight risks 3 months before resignation',
+      'Optimize compensation with market data'
+    ],
+    pricing: { Starter: '$499/mo', Professional: '$1,299/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-threat-intel-2',
+    title: 'Threat Intelligence & Dark Web Monitoring',
+    subtitle: 'Proactive threat intelligence with dark web monitoring, credential leak detection, and attack surface management',
+    category: 'saas',
+    subcategory: 'Threat Intelligence',
+    description: 'Continuous threat intelligence platform that monitors the dark web for credential leaks, tracks your attack surface, and provides actionable alerts to prevent breaches before they happen.',
+    features: [
+      'Dark web monitoring for leaked credentials',
+      'Attack surface discovery and management',
+      'Threat actor tracking and attribution',
+      'Automated credential exposure alerts',
+      'Vulnerability intelligence and zero-day alerts',
+      'Brand impersonation detection',
+      'Executive and VIP credential monitoring',
+      'Integration with SIEM and SOAR platforms'
+    ],
+    benefits: [
+      'Detect credential leaks before attackers exploit them',
+      'Reduce mean time to threat detection by 80%',
+      'Protect executives and brand from targeted attacks',
+      'Prioritize remediation with risk-scored intelligence'
+    ],
+    pricing: { Starter: '$499/mo', Professional: '$1,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-iot-2',
+    title: 'IoT Device Management & Analytics',
+    subtitle: 'Manage, monitor, and extract insights from IoT device fleets at scale',
+    category: 'saas',
+    subcategory: 'IoT Management',
+    description: 'Cloud-based IoT platform for device provisioning, remote monitoring, firmware management, and real-time analytics across thousands of connected devices.',
+    features: [
+      'Device provisioning at scale (zero-touch)',
+      'Remote device monitoring and control',
+      'OTA firmware update management',
+      'Real-time telemetry and log ingestion',
+      'Device health and anomaly detection',
+      'Rules engine for automated actions',
+      'Digital twin integration per device',
+      'Multi-protocol support (MQTT, CoAP, HTTP)'
+    ],
+    benefits: [
+      'Manage 100K+ devices from a single dashboard',
+      'Reduce device downtime by 40%',
+      'Accelerate IoT deployments by 60%',
+      'Extract actionable insights from device data'
+    ],
+    pricing: { Starter: '$999/mo', Professional: '$2,999/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-privacy-2',
+    title: 'Privacy Compliance Automation (DSAR/CCPA/GDPR)',
+    subtitle: 'Automate data subject rights requests and privacy compliance workflows',
+    category: 'saas',
+    subcategory: 'Privacy Compliance',
+    description: 'Automate DSAR fulfillment, consent management, data mapping, and privacy impact assessments across GDPR, CCPA, and global privacy frameworks.',
+    features: [
+      'Automated DSAR intake and fulfillment (access, delete, portability)',
+      'Consent management with granular preferences',
+      'Automated data mapping and inventory',
+      'Privacy impact assessment (PIA) automation',
+      'Cross-system data discovery and classification',
+      'Regulatory change tracking and gap analysis',
+      'Audit trail and compliance reporting',
+      'Integration with major CRM, marketing, and cloud platforms'
+    ],
+    benefits: [
+      'Fulfill DSARs in hours instead of weeks',
+      'Maintain continuous compliance with GDPR and CCPA',
+      'Reduce privacy program costs by 60%',
+      'Build trust with transparent data practices'
+    ],
+    pricing: { Starter: '$299/mo', Professional: '$799/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-drone-2',
+    title: 'Drone Fleet Management & Analytics',
+    subtitle: 'Manage drone operations, automate flight planning, and analyze aerial data with AI',
+    category: 'saas',
+    subcategory: 'Drone Operations',
+    description: 'Enterprise drone fleet management platform — automated flight planning, airspace compliance, real-time telemetry, and AI-powered aerial data analysis for inspections, surveying, and mapping.',
+    features: [
+      'Automated flight path planning and optimization',
+      'Real-time drone telemetry and live video',
+      'AI-powered aerial image analysis (infrared, LiDAR, RGB)',
+      'Airspace compliance and no-fly zone management',
+      'Fleet health monitoring and maintenance alerts',
+      'Automated inspection reporting (construction, agriculture, energy)',
+      '3D mapping and volumetric measurement',
+      'Pilot certification and compliance tracking'
+    ],
+    benefits: [
+      'Complete inspections 5x faster than manual methods',
+      'Reduce human risk in hazardous inspections',
+      'Generate survey-grade accuracy maps',
+      'Optimize fleet utilization across 100+ drones'
+    ],
+    pricing: { Starter: '$499/mo', Professional: '$1,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-smart-contract-2',
+    title: 'Smart Contract Audit & Monitoring',
+    subtitle: 'Automated smart contract security auditing and real-time monitoring for DeFi and Web3',
+    category: 'saas',
+    subcategory: 'Smart Contract Security',
+    description: 'Automated smart contract auditing platform with vulnerability detection, formal verification, real-time exploit monitoring, and compliance reporting for DeFi protocols and NFT projects.',
+    features: [
+      'Automated vulnerability scanning (reentrancy, overflow, logic bugs)',
+      'Formal verification and mathematical proof of correctness',
+      'Real-time exploit and flash loan attack monitoring',
+      'Gas optimization recommendations',
+      'Comprehensive audit reports with severity ratings',
+      'Continuous monitoring post-deployment',
+      'Integration with GitHub and CI/CD pipelines',
+      'Insurance and risk scoring integration'
+    ],
+    benefits: [
+      'Detect critical vulnerabilities before deployment',
+      'Reduce smart contract exploit risk by 95%',
+      'Get audit reports in 48 hours (vs. weeks)',
+      'Continuous protection after deployment'
+    ],
+    pricing: { Starter: '$999/mo', Professional: '$3,499/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-ai-agent-2',
+    title: 'AI Agent Builder & Orchestration Platform',
+    subtitle: 'Build, deploy, and manage autonomous AI agents for business process automation',
+    category: 'saas',
+    subcategory: 'AI Agent Platform',
+    description: 'No-code platform to build autonomous AI agents that can browse the web, execute code, manage emails, book meetings, and automate complex multi-step business workflows.',
+    features: [
+      'Visual AI agent builder with drag-and-drop',
+      'Pre-built agent templates (sales, support, research, devops)',
+      'Multi-agent orchestration and collaboration',
+      'Web browsing and data extraction capabilities',
+      'Code execution in sandboxed environments',
+      'Email and calendar integration for autonomous actions',
+      'Human-in-the-loop approval workflows',
+      'Agent performance monitoring and analytics'
+    ],
+    benefits: [
+      'Automate complex workflows without code',
+      'Deploy agents in hours, not months',
+      'Scale operations 24/7 with autonomous AI',
+      'Reduce operational costs by 50-70%'
+    ],
+    pricing: { Starter: '$199/mo', Professional: '$599/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'saas-neurosafety-2',
+    title: 'AI Safety & Content Moderation',
+    subtitle: 'Real-time AI content moderation, toxicity detection, and safety guardrails for platforms',
+    category: 'saas',
+    subcategory: 'AI Safety',
+    description: 'AI-powered content moderation and safety platform for social platforms, marketplaces, and community apps — detecting harmful content, enforcing policies, and protecting users.',
+    features: [
+      'Real-time text, image, and video content moderation',
+      'Toxicity, hate speech, and harassment detection',
+      'AI-generated content detection (deepfakes, synthetic text)',
+      'Custom policy engine with configurable rules',
+      'Age verification and child safety protections',
+      'Appeal workflow and human review queue',
+      'Safety analytics dashboard and trend reporting',
+      'API-first for integration into any platform'
+    ],
+    benefits: [
+      'Moderate millions of content pieces daily with 99% accuracy',
+      'Reduce manual moderation costs by 80%',
+      'Protect brand reputation and user safety',
+      'Meet regulatory requirements (DSA, Online Safety Act)'
+    ],
+    pricing: { Starter: '$299/mo', Professional: '$899/mo', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
 ];
 
 // ═══════════════════════════════════════════════════════
@@ -4990,6 +5776,112 @@ export const consultingServices: Service[] = [
       'Navigate ethical and regulatory AI requirements confidently'
     ],
     pricing: { Starter: '$9,999/project', Professional: '$29,999/project', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+
+// ── 4 new IT Consulting Services ──
+  {
+    id: 'consult-risk-2',
+    title: 'Enterprise Risk Management Consulting',
+    subtitle: 'Holistic enterprise risk identification, quantification, and mitigation strategy',
+    category: 'consulting',
+    subcategory: 'Risk Management',
+    description: 'Comprehensive enterprise risk management — identify, quantify, and mitigate strategic, operational, financial, and cyber risks across your organization with integrated risk frameworks.',
+    features: [
+      'Enterprise risk register development and maintenance',
+      'Quantitative risk modeling and Monte Carlo simulation',
+      'Scenario analysis and stress testing',
+      'Risk appetite and tolerance framework design',
+      'Third-party and supply chain risk assessment',
+      'Integrated risk reporting for boards and regulators',
+      'Business continuity and crisis management planning',
+      'Regulatory risk mapping and horizon scanning'
+    ],
+    benefits: [
+      'Reduce enterprise risk exposure by 40-60%',
+      'Proactive risk identification prevents costly incidents',
+      'Meet board and regulatory risk reporting requirements',
+      'Build organizational resilience against disruptions'
+    ],
+    pricing: { Starter: '$9,999/project', Professional: '$29,999/project', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'consult-mlops-2',
+    title: 'MLOps & AI Production Consulting',
+    subtitle: 'Production-grade ML operations — from model training to deployment, monitoring, and governance',
+    category: 'consulting',
+    subcategory: 'MLOps',
+    description: 'Expert consulting to build production-ready ML systems — covering model deployment, monitoring, retraining, feature stores, and ML governance for reliable, scalable AI.',
+    features: [
+      'MLOps architecture design and platform selection',
+      'CI/CD pipelines for ML models (model versioning, testing)',
+      'Feature engineering and feature store implementation',
+      'Model monitoring (drift detection, performance degradation)',
+      'A/B testing framework for ML model comparison',
+      'ML governance and model risk management',
+      'Automated retraining and model lifecycle management',
+      'Kubeflow, MLflow, or Vertex AI implementation'
+    ],
+    benefits: [
+      'Deploy ML models to production 5x faster',
+      'Maintain model accuracy with automated drift detection',
+      'Reduce ML infrastructure costs by 40%',
+      'Governance and auditability for regulated industries'
+    ],
+    pricing: { Starter: '$9,999/project', Professional: '$29,999/project', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'consult-devsecops-2',
+    title: 'DevSecOps Transformation Consulting',
+    subtitle: 'Embed security into every phase of your software delivery lifecycle',
+    category: 'consulting',
+    subcategory: 'Security Transformation',
+    description: 'Transform your development and security practices with DevSecOps — shifting security left with automated testing, compliance-as-code, and security culture transformation.',
+    features: [
+      'DevSecOps maturity assessment and roadmap',
+      'SAST/DAST/SCA toolchain design and implementation',
+      'Security training and champion network setup',
+      'Compliance-as-code policy development',
+      'Container and Kubernetes security hardening',
+      'Secrets management and rotation implementation',
+      'Threat modeling as a service',
+      'Executive security dashboard and metrics'
+    ],
+    benefits: [
+      'Reduce security incidents by 70%',
+      'Ship secure software 3x faster',
+      'Meet compliance requirements without slowing delivery',
+      'Build a self-sustaining security culture'
+    ],
+    pricing: { Starter: '$9,999/project', Professional: '$29,999/project', Enterprise: 'Custom' },
+    contactUrl: '/contact'
+  },
+  {
+    id: 'consult-metaverse-1',
+    title: 'Metaverse & Spatial Computing Strategy',
+    subtitle: 'Navigate the future of spatial computing — VR/AR, digital twins, and immersive experiences',
+    category: 'consulting',
+    subcategory: 'Spatial Computing',
+    description: 'Strategic consulting for metaverse and spatial computing adoption — from VR/AR experiences and digital twins to immersive training and virtual collaboration platforms.',
+    features: [
+      'Metaverse readiness and use case assessment',
+      'VR/AR experience design and architecture',
+      'Digital twin creation for facilities and products',
+      'Spatial computing platform selection (Unity, Unreal, WebXR)',
+      'Immersive training program design',
+      'Virtual collaboration and meeting space implementation',
+      '3D asset pipeline and content strategy',
+      'Hardware and device strategy'
+    ],
+    benefits: [
+      'Identify $5M+ spatial computing opportunities',
+      'Reduce training costs by 60% with immersive VR',
+      'Differentiate your brand with immersive customer experiences',
+      'Future-proof your digital strategy for spatial web'
+    ],
+    pricing: { Starter: '$12,999/project', Professional: '$39,999/project', Enterprise: 'Custom' },
     contactUrl: '/contact'
   },
 ];
