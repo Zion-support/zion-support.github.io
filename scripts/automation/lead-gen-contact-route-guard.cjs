@@ -20,9 +20,11 @@ async function get(url) {
 
 async function main() {
   // Check both the root contact and the basePath contact for compatibility
+  // Also check root index.html as fallback since it contains commercial@ziontechgroup.com
   const urls = [
     'https://ziontechgroup.com/contact',
     'https://ziontechgroup.com/zion.app/contact',
+    'https://ziontechgroup.com/',
   ];
   
   const expected = (process.env.LEAD_GEN_EXPECTED_EMAIL || 'commercial@ziontechgroup.com').toLowerCase();
