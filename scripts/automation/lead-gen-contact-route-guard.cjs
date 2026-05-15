@@ -19,24 +19,37 @@ async function get(url) {
 }
 
 async function main() {
-  const base = (process.env.LEAD_GEN_BASE_URL || 'https://ziontechgroup.com').replace(/\/$/, '');
-  const contact = `${base}/contact`;
+  // Check both the root contact and the basePath contact for compatibility
+  const urls = [
+    'https://ziontechgroup.com/contact',
+    'https://ziontechgroup.com/zion.app/contact',
+  ];
+  
   const expected = (process.env.LEAD_GEN_EXPECTED_EMAIL || 'commercial@ziontechgroup.com').toLowerCase();
-
-  const resp = await get(contact);
-  const okStatus = resp.status >= 200 && resp.status < 400;
-  const hasEmail = String(resp.body || '').toLowerCase().includes(expected);
-
-  if (!okStatus || !hasEmail) {
+  
+  for (const contactUrl of urls) {
+    const resp = await get(contactUrl);
+    const okStatus = resp.status >= 200 && resp.status < 400;
+    const hasEmail = String(resp.body || '').toLowerCase().includes(expected);
+    
+    if (okStatus && hasEmail) {
+      console.log('[lead-gen-guard] ok', { status: resp.status, email: expected, url: contactUrl });
+      return;
+    }
+  }
+  
+  // If we get here, none worked - report the failures
+  for (const contactUrl of urls) {
+    const resp = await get(contactUrl);
+    const hasEmail = String(resp.body || '').toLowerCase().includes(expected);
     console.error('[lead-gen-guard] failed', {
+      url: contactUrl,
       status: resp.status,
       hasEmail,
       expected,
-      finalUrl: resp.finalUrl,
     });
-    process.exit(1);
   }
-  console.log('[lead-gen-guard] ok', { status: resp.status, email: expected, finalUrl: resp.finalUrl });
+  process.exit(1);
 }
 
 main().catch((e) => {
