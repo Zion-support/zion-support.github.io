@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/configurator/generate-pdf/route": "/api/configurator/generate-pdf",
+  "/proposals/page": "/proposals",
+  "/services/page": "/services",
+  "/about/page": "/about",
+  "/page": "/",
+  "/configurator/page": "/configurator",
+  "/testimonials/page": "/testimonials",
+  "/industry-solutions/page": "/industry-solutions",
+  "/faq/page": "/faq"
+}
