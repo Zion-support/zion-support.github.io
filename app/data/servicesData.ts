@@ -5480,6 +5480,256 @@ export const itServices: Service[] = [
     icon: '🖥️',
     href: '/it-services/it-mainframe-modernization',
     category: 'it'
+  },
+  {
+    id: 'it-devsecops-1',
+    title: 'DevSecOps & Security Automation',
+    description: 'Embed security into CI/CD pipelines with automated SAST, DAST, SCA, container scanning, and infrastructure-as-code security checks — shifting security left without slowing delivery.',
+    features: [
+      'Automated SAST/DAST scanning in CI/CD',
+      'Software composition analysis (SCA) for dependencies',
+      'Container and Kubernetes security scanning',
+      'Infrastructure-as-code security validation (Terraform, CloudFormation)',
+      'Secrets detection and rotation automation',
+      'SBOM generation and vulnerability tracking',
+      'Threat modeling automation',
+      'Compliance-as-code policy enforcement',
+    ],
+    benefits: [
+      'Catch vulnerabilities 10x earlier and 100x cheaper',
+      'Automate compliance evidence collection',
+      'Deploy faster with confidence, not fear',
+      'Reduce security incident risk by 80%',
+    ],
+    pricing: {
+      basic: '$1,499/mo',
+      pro: '$4,999/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-devsecops-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-devsecops-1',
+    category: 'it'
+  }
+,
+
+  {
+    id: 'it-platform-engineering-1',
+    title: 'Internal Developer Platform (IDP) Engineering',
+    description: 'Design and build an Internal Developer Platform (IDP) that provides self-service capabilities for developers — spinning up environments, deploying applications, and managing infrastructure through golden paths.',
+    features: [
+      'Self-service environment provisioning (Backstage, Port, or custom)',
+      'Golden path templates for common architectures',
+      'Internal API marketplace and service catalog',
+      'Automated deployment pipelines per service type',
+      'Developer portal with documentation and onboarding',
+      'Abstractions over cloud services for simplicity',
+      'Usage tracking and cost attribution per team',
+      'Platform observability and SLO management',
+    ],
+    benefits: [
+      'Reduce time-to-first-deploy from weeks to hours',
+      'Empower developers to self-serve without ops bottlenecks',
+      'Standardize best practices across all teams',
+      'Improve developer satisfaction and retention',
+    ],
+    pricing: {
+      basic: '$2,999/mo',
+      pro: '$8,999/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-platform-engineering-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-platform-engineering-1',
+    category: 'it'
+  }
+,
+
+  {
+    id: 'it-observability-1',
+    title: 'AI-Powered Observability & SRE',
+    description: 'Comprehensive observability platform combining metrics, logs, traces, and AI-powered anomaly detection to achieve proactive reliability and reduce MTTR to minutes.',
+    features: [
+      'Unified observability (metrics, logs, traces, profiles)',
+      'AI-powered anomaly detection and root cause analysis',
+      'Automated incident classification and routing',
+      'SLO/SLI management with error budget tracking',
+      'Predictive alerting — detect issues before users do',
+      'Runbook automation and remediation playbooks',
+      'Dashboard builder with natural language queries',
+      'Integration with PagerDuty, OpsGenie, Slack, and more',
+    ],
+    benefits: [
+      'Reduce MTTR from hours to minutes',
+      'Catch anomalies humans would miss',
+      'Eliminate alert fatigue with smart grouping',
+      'Maintain 99.99% uptime with proactive reliability',
+    ],
+    pricing: {
+      basic: '$999/mo',
+      pro: '$3,499/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-observability-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-observability-1',
+    category: 'it'
+  }
+,
+
+  {
+    id: 'ai-gen-app-dev-1',
+    title: 'AI-Powered Application Development',
+    description: 'End-to-end development service for building production-ready AI applications — from LLM-powered chatbots and RAG systems to multi-agent workflows and AI-native products.',
+    features: [
+      'LLM application architecture and design',
+      'RAG (Retrieval-Augmented Generation) implementation',
+      'Multi-agent system design and orchestration (LangChain, LangGraph, CrewAI)',
+      'Vector database selection and optimization (Pinecone, Weaviate, Qdrant)',
+      'Prompt engineering and fine-tuning workflows',
+      'AI safety, guardrails, and output validation',
+      'Scalable deployment with cost optimization',
+      'Evaluation frameworks and A/B testing for AI outputs',
+    ],
+    benefits: [
+      'Go from idea to production AI app in weeks, not months',
+      'Leverage the latest LLM advances without the R&D burden',
+      'Build AI features that scale to millions of users',
+      'Reduce hallucinations and improve accuracy with RAG',
+    ],
+    pricing: {
+      basic: '$4,999/mo',
+      pro: '$14,999/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/ai-gen-app-dev-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧠',
+    href: '/ai-gen-app-dev-1',
+    category: 'ai'
+  }
+,
+
+  {
+    id: 'ai-ethics-audit-1',
+    title: 'AI Ethics Audit & Bias Assessment',
+    description: 'Independent AI ethics audits examining your AI systems for bias, fairness, transparency, and regulatory compliance. Includes algorithmic impact assessments, bias testing across protected classes, and governance framework design.',
+    features: [
+      'Algorithmic bias detection across race, gender, age, and geography',
+      'Model interpretability and explainability analysis (XAI)',
+      'EU AI Act compliance assessment and readiness',
+      'AI impact assessment for high-risk applications',
+      'Fairness metrics evaluation (demographic parity, equalized odds)',
+      'AI governance framework design (NIST AI RMF, OECD)',
+      'Transparency report and model card documentation',
+      'Stakeholder engagement and AI literacy workshops',
+    ],
+    benefits: [
+      'Demonstrate responsible AI to regulators and stakeholders',
+      'Prevent PR disasters from biased AI outputs',
+      'Build customer trust through AI transparency',
+      'Stay ahead of global AI regulation requirements',
+    ],
+    pricing: {
+      basic: '$7,999/project',
+      pro: '$24,999/project',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/ai-ethics-audit-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧠',
+    href: '/ai-ethics-audit-1',
+    category: 'ai'
+  }
+,
+
+  {
+    id: 'cloud-finops-1',
+    title: 'Cloud FinOps & Cost Intelligence',
+    description: 'Comprehensive cloud cost management service combining automated tooling, reserved instance optimization, anomaly detection, and organizational FinOps culture to reduce cloud spend by 30-40% without performance impact.',
+    features: [
+      'Multi-cloud cost visibility and chargeback/showback',
+      'AI-driven rightsizing recommendations',
+      'Automated reserved instance and savings plan optimization',
+      'Real-time cost anomaly detection and budget alerts',
+      'Kubernetes cost optimization (HPA, node optimization)',
+      'Tag governance and resource ownership tracking',
+      'FinOps maturity assessment and roadmap',
+      'Monthly cost optimization reviews and savings tracking',
+    ],
+    benefits: [
+      'Reduce cloud spend by 30-40% sustainably',
+      'Eliminate cloud waste and orphaned resources',
+      'Allocate costs accurately to teams and projects',
+      'Build a culture of cloud cost awareness',
+    ],
+    pricing: {
+      basic: '$999/mo',
+      pro: '$3,499/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/cloud-finops-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/cloud-finops-1',
+    category: 'it'
+  }
+,
+
+  {
+    id: 'it-zero-trust-1',
+    title: 'Zero Trust Security Implementation',
+    description: 'Complete Zero Trust architecture implementation — from identity and access management to network microsegmentation, device trust, and continuous verification across your entire infrastructure.',
+    features: [
+      'Zero Trust maturity assessment and roadmap',
+      'Identity-aware proxy deployment (BeyondCorp model)',
+      'Network microsegmentation design and implementation',
+      'Multi-factor authentication everywhere (MFA/SSO)',
+      'Device trust and endpoint verification',
+      'Least-privilege access policy design',
+      'Continuous authentication and session management',
+      'Zero Trust for remote workforce and third-party access',
+    ],
+    benefits: [
+      'Eliminate lateral movement for attackers',
+      'Replace vulnerable VPN with modern secure access',
+      'Meet compliance requirements (NIST 800-207, CISA Zero Trust)',
+      'Reduce breach blast radius by 90%',
+    ],
+    pricing: {
+      basic: '$3,999/mo',
+      pro: '$12,999/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-zero-trust-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-zero-trust-1',
+    category: 'it'
   }
 ];
 export const itSolutions = itServices;
