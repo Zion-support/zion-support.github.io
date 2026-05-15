@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+
+# Build artifacts
+*.build
+.DS_Store
+
+# Environment files
+.env*.local
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+npm-debug.log*
+
+# Misc
+scripts/
+*.py
+test.txt
+reports/
+automation/
+web/
+go/
+llama.cpp/
+cursor/
+.memory/
+.hermes/
+.openclaw/
+.local/
+.ollama/
+Applications/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+.viminfo
+.zsh_history
+.zsh_sessions/
+.zshrc
+.gitconfig
+config/feature-flags.json
+memory/
+tools/

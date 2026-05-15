@@ -6,13 +6,13 @@ import Link from 'next/link';
 import { allServices, Service } from './data/servicesData';
 
 const FEATURED_IDS = [
-  'ai-gen-1', 'ai-agent-1', 'ai-rag-1',
-  'it-cloud-1', 'it-cybersecurity-1', 'it-devops-1',
-  'saas-crm-1', 'saas-seo-1', 'saas-email-1',
+  'ai-gen-1', 'ai-agent-1', 'ai-rag-1', 'ai-predictive-maintenance-3',
+  'it-cloud-1', 'it-cybersecurity-1', 'it-devops-1', 'it-quantum-2',
+  'saas-crm-1', 'saas-seo-1', 'saas-email-1', 'saas-ai-agent-2',
 ];
 
 const stats = [
-  { value: '169+', label: 'Services & Solutions' },
+  { value: '220+', label: 'Services & Solutions' },
   { value: '4 Categories', label: 'AI · IT · SAAS · Consulting' },
   { value: '24/7', label: 'Monitoring & Support' },
   { value: '99.9%', label: 'SLA Uptime Guarantee' },
@@ -92,7 +92,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
-              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 172+ options.' },
+              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 220+ options.' },
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (
