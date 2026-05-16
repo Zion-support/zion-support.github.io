@@ -35,14 +35,14 @@ jobs:
       sha: ${{ steps.resolve-sha.outputs.sha }}
     steps:
       - name: Checkout
-        uses: actions/checkout@692973e3dea939b84e3f3b8c5b0c95b4c0c2d5a1 # v4.2.4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.2.4
         with:
           token: ${{ github.token }}
           ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6a95d34 # v4.0.0
+        uses: actions/setup-node@670825a89dc0abd596e7a3abd0f5e3f6e5faf37c # v4.0.0
         with:
           node-version-file: '.nvmrc'
           cache: npm
@@ -71,7 +71,7 @@ jobs:
           DEPLOY_STATUS=triggered DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
 
       - name: Upload deploy status artifact
-        uses: actions/upload-artifact@ea16d33f925b198c5d4328f7a8e2c8d7a7c9e7d8 # v4.4.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v4.4.0
         with:
           name: deploy-status
           path: automation/reports/deploy-status-latest.json
@@ -134,13 +134,13 @@ jobs:
       BASE_URL: "https://zion-support.github.io"
     steps:
       - name: Checkout
-        uses: actions/checkout@692973e3dea939b84e3f3b8c5b0c95b4c0c2d5a1 # v4.2.4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.2.4
         with:
           ref: ${{ needs.build.outputs.sha }}
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6a95d34 # v4.0.0
+        uses: actions/setup-node@670825a89dc0abd596e7a3abd0f5e3f6e5faf37c # v4.0.0
         with:
           node-version-file: '.nvmrc'
 
@@ -194,7 +194,7 @@ jobs:
 
       - name: Upload deploy watchdog report
         if: always()
-        uses: actions/upload-artifact@ea16d33f925b198c5d4328f7a8e2c8d7a7c9e7d8 # v4.4.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v4.4.0
         with:
           name: deploy-watchdog-report
           path: automation/reports/deploy-watchdog-latest.json
