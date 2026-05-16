@@ -1,11 +1,14 @@
 // app/services/[id]/page.tsx — Dynamic Service Detail Page
 import { notFound } from 'next/navigation';
-import { allServices, categoryMeta } from '@/data/servicesData';
+import { allServices } from '@/data/servicesData';
 import Link from 'next/link';
 
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
+const CAT_LABELS: Record<string,string> = {
+  ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security',
+  data: 'Data & AI', automation: 'Automation', consulting: 'Consulting',
+};
+
+interface PageProps { params: Promise<{ id: string }>; }
 
 export async function generateStaticParams() {
   return allServices.map((service) => ({ id: service.id }));
@@ -15,29 +18,22 @@ export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   const service = allServices.find((s) => s.id === id);
   if (!service) return { title: 'Service Not Found' };
-
-  const catLabel = categoryMeta[service.category]?.label ?? '';
   return {
-    title: `${service.title} — ${catLabel}`,
-    description: service.description,
-    openGraph: {
-      title: `${service.title} | Zion Tech Group`,
-      description: service.description,
-      type: 'website',
-    },
+    title: `${service.title} | Zion Tech Group`,
+    description: service.description.slice(0, 160),
   };
 }
 
-export default async function ServiceDetailPage({ params }: PageProps) {
+export default async function ServicePage({ params }: PageProps) {
   const { id } = await params;
   const service = allServices.find((s) => s.id === id);
-
   if (!service) notFound();
 
-  const catMeta = categoryMeta[service.category];
-  const relatedServices = allServices
+  const related = allServices
     .filter((s) => s.category === service.category && s.id !== service.id)
     .slice(0, 4);
+
+  const catLabel = CAT_LABELS[service.category] || service.category;
 
   return (
     <main className="min-h-screen bg-slate-950 py-20">
@@ -53,14 +49,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
         {/* Hero */}
         <div className="glass-card mb-12">
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 uppercase tracking-wider">
-              {catMeta?.label}
-            </span>
-            <span className="text-xs text-slate-500">{service.subcategory}</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">{service.title}</h1>
-          <p className="text-lg text-slate-300 mb-2">{service.subtitle}</p>
+          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 uppercase tracking-wider">
+            {catLabel}
+          </span>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 mt-3">{service.title}</h1>
           <p className="text-slate-400 leading-relaxed max-w-3xl">{service.description}</p>
         </div>
 
@@ -78,20 +70,21 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             </ul>
           </div>
 
-          {/* Pricing + CTA */}
+          {/* Pricing */}
           <div className="space-y-6">
             <div className="glass-card">
               <h2 className="text-xl font-semibold text-white mb-4">Pricing</h2>
               <div className="space-y-3">
                 {Object.entries(service.pricing).map(([tier, price]) => (
                   <div key={tier} className="flex justify-between items-center py-2 border-b border-slate-700/50 last:border-0">
-                    <span className="text-slate-300">{tier}</span>
+                    <span className="text-slate-300 capitalize">{tier}</span>
                     <span className="text-purple-300 font-semibold">{price}</span>
                   </div>
                 ))}
               </div>
             </div>
 
+            {/* CTA */}
             <div className="glass-card">
               <h3 className="text-lg font-semibold text-white mb-3">Get Started</h3>
               <p className="text-slate-400 text-sm mb-4">
@@ -108,9 +101,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   Get Custom Proposal →
                 </Link>
               </div>
-              <p className="text-slate-500 text-xs mt-4 text-center">
-                📍 364 E Main St STE 1008, Middletown, DE 19709
-              </p>
             </div>
           </div>
         </div>
@@ -128,18 +118,15 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Related Services */}
-        {relatedServices.length > 0 && (
+        {/* Related */}
+        {related.length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-6">Related Services</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {relatedServices.map((s) => (
-                <Link
-                  key={s.id}
-                  href={`/services/${s.id}`}
-                  className="glass-card hover:border-purple-500/50 transition group"
-                >
-                  <span className="text-xs text-slate-500">{s.subcategory}</span>
+              {related.map((s) => (
+                <Link key={s.id} href={`/services/${s.id}`}
+                  className="glass-card hover:border-purple-500/50 transition group">
+                  <span className="text-xs text-slate-500">{s.category}</span>
                   <h3 className="text-white font-semibold mt-1 group-hover:text-purple-400 transition">{s.title}</h3>
                   <p className="text-slate-400 text-sm mt-2 line-clamp-2">{s.description}</p>
                 </Link>
@@ -153,19 +140,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss how {service.title} can transform your business.
-            Get a free consultation and custom proposal.
+            364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="btn-primary text-lg">
-              ☎ +1 302 464 0950
-            </a>
-            <Link href="/configurator" className="btn-secondary text-lg">
-              Get Custom Proposal →
-            </Link>
+            <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8">Get a Custom Quote</a>
+            <Link href="/pricing-calculator" className="btn-secondary text-lg px-8">Pricing Calculator</Link>
           </div>
-          <p className="text-slate-500 text-sm mt-6">
-            📍 364 E Main St STE 1008, Middletown, DE 19709
-          </p>
         </section>
       </div>
     </main>

@@ -3,17 +3,20 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { allServices, Service } from './data/servicesData';
+import { allServices } from './data/servicesData';
+import type { Service } from './data/servicesData';
+import Footer from '@/components/Footer';
 
 const FEATURED_IDS = [
-  'ai-gen-1', 'ai-agent-1', 'ai-rag-1', 'ai-predictive-maintenance-3',
-  'it-cloud-1', 'it-cybersecurity-1', 'it-devops-1', 'it-quantum-2',
-  'saas-crm-1', 'saas-seo-1', 'saas-email-1', 'saas-ai-agent-2',
+  'ai-analytics', 'ai-customer-support', 'ai-content-generation',
+  'ai-supply-chain', 'ai-voice-assistant', 'ai-compliance',
+  'ai-knowledge-management', 'ai-fraud-detection', 'ai-hr-assistant',
+  'devops-gen-ai-ci-cd', 'cloud-cost-ai-optimizer', 'it-consulting',
 ];
 
 const stats = [
   { value: '220+', label: 'Services & Solutions' },
-  { value: '4 Categories', label: 'AI · IT · SAAS · Consulting' },
+  { value: '4 Core Categories', label: 'AI · IT · Cloud · Automation' },
   { value: '24/7', label: 'Monitoring & Support' },
   { value: '99.9%', label: 'SLA Uptime Guarantee' },
 ];
@@ -117,7 +120,7 @@ export default function HomePage() {
             {featuredServices.map((service: any) => (
               <div key={service.id} className="glass-card">
                 <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
-                <p className="text-slate-400 text-sm mb-4">{service.subtitle}</p>
+                <p className="text-slate-400 text-sm mb-4">{service.title.slice(0,56)}</p>
                 <ul className="space-y-2 mb-4">
                   {service.features.slice(0, 4).map((f: string, i: number) => (
                     <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
@@ -135,7 +138,7 @@ export default function HomePage() {
                   <Link href={`/services#${service.id}`} className="text-sm text-purple-400 hover:underline">
                     Learn more →
                   </Link>
-                  <p className="text-xs text-slate-500 mt-2">{service.category.charAt(0).toUpperCase() + service.category.slice(1)} • {service.subcategory}</p>
+                  <p className="text-xs text-slate-500 mt-2">{service.category.charAt(0).toUpperCase() + service.category.slice(1)} • {service.category}</p>
                 </div>
               </div>
             ))}
@@ -157,8 +160,8 @@ export default function HomePage() {
             {[
               { key: 'ai', label: 'AI Services', emoji: '🧠', count: services.filter((s: any) => s.category === 'ai').length },
               { key: 'it', label: 'IT Services', emoji: '🖥️', count: services.filter((s: any) => s.category === 'it').length },
-              { key: 'saas', label: 'Micro SAAS', emoji: '🚀', count: services.filter((s: any) => s.category === 'saas').length },
-              { key: 'consulting', label: 'Consulting', emoji: '📋', count: services.filter((s: any) => s.category === 'consulting').length },
+              { key: 'cloud', label: 'Cloud Services', emoji: '☁️', count: services.filter((s: any) => s.category === 'cloud').length },
+              { key: 'automation', label: 'Automation', emoji: '🤖', count: services.filter((s: any) => s.category === 'automation').length },
             ].map((cat: any) => (
               <Link key={cat.key} href={`/services?category=${cat.key}`} className="glass-card text-center hover:-translate-y-2 transition-transform">
                 <div className="text-4xl mb-4">{cat.emoji}</div>
@@ -221,6 +224,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+    <Footer />
     </main>
   );
 }

@@ -36,7 +36,7 @@ export function recommendServices(params: {
 
       // Keyword matching: check if any need keyword appears in service description, title, or features
       for (const needWords of normalizedNeeds) {
-        const searchText = `${service.title} ${service.description} ${service.features.join(' ')} ${service.subcategory}`.toLowerCase();
+        const searchText = `${service.title} ${service.description} ${service.features.join(' ')} ${service.category}`.toLowerCase();
         for (const word of needWords) {
           if (word.length > 3 && searchText.includes(word)) {
             score += 10;
@@ -52,7 +52,7 @@ export function recommendServices(params: {
       if (needCategories.some((n) => service.category === 'it' && (n.includes('security') || n.includes('infrastructure') || n.includes('scale')))) {
         score += 5;
       }
-      if (needCategories.some((n) => service.category === 'saas' && (n.includes('manage') || n.includes('process') || n.includes('team')))) {
+      if (needCategories.some((n) => service.category === 'automation' && (n.includes('software') || n.includes('cloud') || n.includes('manage') || n.includes('team')))) {
         score += 5;
       }
 
@@ -87,11 +87,11 @@ export function recommendServices(params: {
 
   for (const item of scored) {
     if (selected.length >= 8) break;
-    const diversityBonus = !categories.has(item.service.category) ? 3 : (!subcategories.has(item.service.subcategory) ? 1 : 0);
+    const diversityBonus = !categories.has(item.service.category) ? 3 : (!subcategories.has(item.service.category) ? 1 : 0);
     if (diversityBonus > 0 || selected.length < 4) {
       selected.push(item.service);
       categories.add(item.service.category);
-      subcategories.add(item.service.subcategory);
+      subcategories.add(item.service.category);
     }
   }
 
@@ -143,7 +143,7 @@ export function searchServices(query: string): Service[] {
     (s) =>
       s.title.toLowerCase().includes(q) ||
       s.description.toLowerCase().includes(q) ||
-      s.subcategory.toLowerCase().includes(q) ||
+      s.category.toLowerCase().includes(q) ||
       s.features.some((f) => f.toLowerCase().includes(q))
   );
 }

@@ -1,5 +1,6 @@
 // ProposalPDF — renders the proposal document for download/email
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
+import type { Service } from '@/data/servicesData';
 
 const styles = StyleSheet.create({
   page: { padding: 40, fontSize: 11, fontFamily: 'Helvetica' },
@@ -66,10 +67,10 @@ export default function ProposalPDF({ data }: { data: any }) {
             <Text style={styles.thPrice}>Price</Text>
             <Text style={styles.thTier}>Tier</Text>
           </View>
-          {selectedServices.map((svc: ServiceData) => {
+          {selectedServices.map((svc: Service) => {
             const price = svc.pricing;
-            const displayPrice = Object.values(price)[0] || 'Contact for pricing';
-            const tier = Object.keys(price)[0] || 'Custom';
+            const displayPrice = String(Object.values(price)[0]) || 'Contact for pricing';
+            const tier = String(Object.keys(price)[0]) || 'Custom';
             return (
               <View style={styles.tableRow} key={svc.id}>
                 <Text style={styles.td}>{svc.title}</Text>

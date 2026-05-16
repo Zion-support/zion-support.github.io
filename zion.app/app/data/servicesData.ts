@@ -1,20 +1,12 @@
-// Service data for AI and IT solutions
+// Service data for Zion Tech Group
 export interface Service {
   id: string;
   title: string;
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
-    basic: string;
-    pro: string;
-    enterprise: string;
-  }
-  contactInfo: {
-    website: string;
-    email: string;
-    phone: string;
-  }
+  pricing: { basic: string; pro: string; enterprise: string };
+  contactInfo: { website: string; email: string; phone: string };
   icon: string;
   href: string;
   popular?: boolean;
@@ -22,7 +14,7 @@ export interface Service {
 }
 
 export const aiServices: Service[] = [
-  {
+{
     id: 'ai-analytics',
     title: 'AI Analytics & BI',
     description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
@@ -53,8 +45,8 @@ export const aiServices: Service[] = [
     href: '/data-analytics',
     popular: true,
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-automation',
     title: 'AI Automation',
     description: 'Streamline your business processes with intelligent automation solutions.',
@@ -84,8 +76,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/process-automation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-customer-support',
     title: 'AI Customer Support',
     description: '24/7 AI-powered customer service with intelligent ticket routing, auto-resolution, and sentiment analysis.',
@@ -116,8 +108,8 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-customer-support',
     popular: true,
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-content-generation',
     title: 'AI Content Generation',
     description: 'Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.',
@@ -147,8 +139,8 @@ export const aiServices: Service[] = [
     icon: '✍️',
     href: '/ai-services/ai-content-generation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-sales-intelligence',
     title: 'AI Sales Intelligence',
     description: 'Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.',
@@ -179,8 +171,8 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-sales-intelligence',
     popular: true,
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-fraud-detection',
     title: 'AI Fraud Detection',
     description: 'Real-time fraud prevention using ML anomaly detection, behavioral analysis, and rule-based scoring for transactions and user activity.',
@@ -210,8 +202,8 @@ export const aiServices: Service[] = [
     icon: '🔐',
     href: '/ai-services/ai-fraud-detection',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-hr-assistant',
     title: 'AI HR Assistant',
     description: 'Intelligent HR automation for recruitment, onboarding, employee engagement, and policy Q&A using conversational AI.',
@@ -241,8 +233,8 @@ export const aiServices: Service[] = [
     icon: '👥',
     href: '/ai-services/ai-hr-assistant',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-supply-chain',
     title: 'AI Supply Chain Optimization',
     description: 'Predictive demand forecasting, inventory optimization, and supplier risk management powered by machine learning.',
@@ -272,8 +264,8 @@ export const aiServices: Service[] = [
     icon: '📦',
     href: '/ai-services/ai-supply-chain',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-voice-assistant',
     title: 'AI Voice Assistant',
     description: 'Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.',
@@ -303,8 +295,8 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-voice-assistant',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-email-marketing',
     title: 'AI Email Marketing',
     description: 'Intelligent email campaigns with AI-powered subject lines, send-time optimization, dynamic content, and advanced segmentation.',
@@ -334,8 +326,8 @@ export const aiServices: Service[] = [
     icon: '📧',
     href: '/ai-services/ai-email-marketing',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-video-analytics',
     title: 'AI Video Analytics',
     description: 'Real-time video content analysis for security, retail insights, and operational intelligence using computer vision.',
@@ -365,8 +357,8 @@ export const aiServices: Service[] = [
     icon: '🎥',
     href: '/ai-services/ai-video-analytics',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-compliance',
     title: 'AI Compliance & Regulatory',
     description: 'Automated compliance monitoring, risk assessment, and audit trail management for GDPR, HIPAA, SOC 2, and more.',
@@ -396,8 +388,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-compliance',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-computer-vision',
     title: 'AI Computer Vision',
     description: 'Image recognition, object detection, quality inspection, and visual search powered by deep learning models trained on your domain data.',
@@ -408,8 +400,8 @@ export const aiServices: Service[] = [
     icon: '👁️',
     href: '/ai-services/ai-computer-vision',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-knowledge-management',
     title: 'AI Knowledge Management',
     description: 'Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detection, and intelligent Q&A across your document corpus.',
@@ -421,8 +413,8 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-knowledge-management',
     popular: true,
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-testing-qa',
     title: 'AI Testing & Quality Assurance',
     description: 'Automated test generation, visual regression testing, and AI-powered bug detection that adapts to your application code and learns from failures.',
@@ -433,8 +425,8 @@ export const aiServices: Service[] = [
     icon: '🧪',
     href: '/ai-services/ai-testing-qa',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-translation-services',
     title: 'AI Translation & Localization',
     description: 'Enterprise translation engine with 100+ language support, context-aware Neural MT, terminology management, and human review workflows.',
@@ -445,8 +437,8 @@ export const aiServices: Service[] = [
     icon: '🌐',
     href: '/ai-services/ai-translation-services',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-employee-experience',
     title: 'AI Employee Experience Platform',
     description: 'End-to-end employee lifecycle automation from AI-powered onboarding to performance management, engagement tracking, and retention prediction.',
@@ -457,8 +449,8 @@ export const aiServices: Service[] = [
     icon: '🤝',
     href: '/ai-services/ai-employee-experience',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-document-intelligence',
     title: 'AI Document Intelligence',
     description: 'End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.',
@@ -470,8 +462,8 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-document-intelligence',
     popular: true,
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-video-generation',
     title: 'AI Video Generation & Editing',
     description: 'Create professional videos from text prompts with voiceover, B-roll, transitions, and brand styling — produce enterprise-grade content in minutes.',
@@ -482,8 +474,8 @@ export const aiServices: Service[] = [
     icon: '🎬',
     href: '/ai-services/ai-video-generation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-voice-cloning',
     title: 'AI Voice Cloning & Synthesis',
     description: 'Clone any voice with 30 seconds of audio for voiceovers, podcasts, audiobooks, and interactive voice applications.',
@@ -494,8 +486,8 @@ export const aiServices: Service[] = [
     icon: '🗣️',
     href: '/ai-services/ai-voice-cloning',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-lead-generation',
     title: 'AI Lead Generation & Enrichment',
     description: 'Automatically discover, qualify, and enrich B2B leads with web scraping, firmographic scoring, and intent signal detection.',
@@ -507,8 +499,8 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-lead-generation',
     popular: true,
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-presentation-maker',
     title: 'AI Presentation & Pitch Deck Maker',
     description: 'Generate polished presentations, pitch decks, and reports from outlines with data visualization, templates, and speaker notes.',
@@ -519,8 +511,8 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-presentation-maker',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-chatbot-builder-pro',
     title: 'AI Chatbot Builder Pro',
     description: 'Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and seamless human handoff.',
@@ -531,8 +523,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-chatbot-builder-pro',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-code-reviewer-pro',
     title: 'AI Code Reviewer Pro',
     description: 'Automated code review that catches bugs, security issues, performance problems, and style violations before production.',
@@ -543,8 +535,8 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-code-reviewer-pro',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-revenue-optimization',
     title: 'AI Revenue Optimization & Pricing Intelligence',
     description: 'Dynamic pricing engine powered by machine learning — analyze competitor pricing, demand elasticity, customer segments, and market conditions to maximize revenue in real time.',
@@ -555,8 +547,8 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/ai-revenue-optimization',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-cyber-threat-hunting',
     title: 'AI Cyber Threat Hunting & Incident Response',
     description: 'Proactive threat detection using advanced AI behavioral analysis, anomaly detection, and automated incident response orchestration for enterprises under constant attack.',
@@ -567,8 +559,8 @@ export const aiServices: Service[] = [
     icon: '🔒',
     href: '/ai-services/ai-cyber-threat-hunting',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-sentiment-analysis',
     title: 'AI Sentiment Analysis & Brand Monitoring',
     description: 'Real-time brand perception tracking across social media, reviews, news, and forums. Understand customer emotion at scale and act on insights before they become crises.',
@@ -579,8 +571,8 @@ export const aiServices: Service[] = [
     icon: '💬',
     href: '/ai-services/ai-sentiment-analysis',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-predictive-maintenance',
     title: 'AI Predictive Maintenance & Asset Monitoring',
     description: 'IoT-enabled predictive maintenance that monitors equipment health in real time, predicts failures before they happen, and optimizes maintenance schedules to reduce downtime.',
@@ -591,8 +583,8 @@ export const aiServices: Service[] = [
     icon: '⚙️',
     href: '/ai-services/ai-predictive-maintenance',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-speech-voice-solutions',
     title: 'AI Speech & Voice Solutions',
     description: 'Enterprise-grade speech technology including high-accuracy transcription, AI voice cloning, real-time translation, voice biometrics, and conversational AI for customer service.',
@@ -603,8 +595,8 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-speech-voice-solutions',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-agentic-workflows',
     title: 'AI Agentic Workflow Automation',
     description: 'Autonomous AI agents that plan, execute, and monitor multi-step business workflows — from data gathering to decision execution with human-in-the-loop oversight.',
@@ -615,8 +607,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-agentic-workflows',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-regulatory-compliance-monitor',
     title: 'AI Regulatory Compliance Monitor',
     description: 'Continuous regulatory change monitoring across 150+ jurisdictions with automated impact analysis, gap detection, and compliance report generation for financial services and healthcare.',
@@ -627,8 +619,8 @@ export const aiServices: Service[] = [
     icon: '📜',
     href: '/ai-services/ai-regulatory-compliance',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-talent-acquisition',
     title: 'AI Talent Acquisition & Hiring Intelligence',
     description: 'End-to-end AI recruiting platform — candidate sourcing, resume screening, bias-free scoring, interview scheduling, and predictive hiring success modeling.',
@@ -639,8 +631,8 @@ export const aiServices: Service[] = [
     icon: '🎯',
     href: '/ai-services/ai-talent-acquisition',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-financial-fraud-detection',
     title: 'AI Financial Fraud Detection & Prevention',
     description: 'Real-time transaction monitoring with deep learning anomaly detection, customer behavior profiling, and automated case management for banking and fintech.',
@@ -651,8 +643,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-fraud-detection',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-energy-optimization',
     title: 'AI Energy Optimization & Sustainability',
     description: 'AI-driven energy consumption optimization for buildings, data centers, and manufacturing — reduce costs, meet ESG targets, and automate sustainability reporting.',
@@ -663,8 +655,8 @@ export const aiServices: Service[] = [
     icon: '⚡',
     href: '/ai-services/ai-energy-optimization',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-personalization-engine',
     title: 'AI Personalization & Recommendation Engine',
     description: 'Real-time personalization for websites, apps, and e-commerce — dynamic content, product recommendations, pricing, and messaging tailored to each visitor.',
@@ -675,8 +667,8 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/ai-personalization-engine',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-legal-document-analysis',
     title: 'AI Legal Document Analysis & Contract Review',
     description: 'Automated legal document review, clause extraction, risk assessment, and contract comparison powered by advanced NLP trained on legal corpora.',
@@ -687,8 +679,8 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-legal-doc-analysis',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-medical-imaging',
     title: 'AI Medical Imaging & Diagnostics',
     description: 'FDA-ready AI diagnostic support for radiology, pathology, and dermatology — detect anomalies, prioritize cases, and assist radiologists with second-opinion AI.',
@@ -699,8 +691,8 @@ export const aiServices: Service[] = [
     icon: '🏥',
     href: '/ai-services/ai-medical-imaging',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-supply-chain-optimizer',
     title: 'AI Supply Chain Optimization & Demand Forecasting',
     description: 'End-to-end supply chain intelligence with ML demand forecasting, inventory optimization, supplier risk scoring, and logistics route planning.',
@@ -711,8 +703,8 @@ export const aiServices: Service[] = [
     icon: '📦',
     href: '/ai-services/ai-supply-chain-optimizer',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-content-localization',
     title: 'AI Content Localization & Cultural Adaptation',
     description: 'Enterprise-grade content localization with context-aware translation, cultural nuance adaptation, brand voice preservation, and multi-market compliance.',
@@ -723,8 +715,8 @@ export const aiServices: Service[] = [
     icon: '🌍',
     href: '/ai-services/ai-content-localization',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-intelligent-routing',
     title: 'AI Intelligent Document Processing & Routing',
     description: 'Automated document intake with AI extraction, classification, and intelligent routing to the right team or workflow — invoices, claims, applications, and contracts.',
@@ -735,8 +727,8 @@ export const aiServices: Service[] = [
     icon: '📋',
     href: '/ai-services/ai-intelligent-routing',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-code-migration',
     title: 'AI Code Migration & Legacy Modernization',
     description: 'AI-powered legacy code analysis, automated migration planning, and assisted code transformation from COBOL, mainframe, and legacy frameworks to modern cloud-native stacks.',
@@ -747,8 +739,8 @@ export const aiServices: Service[] = [
     icon: '💻',
     href: '/ai-services/ai-code-migration',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-ethics-governance',
     title: 'AI Ethics, Safety & Governance Framework',
     description: 'Comprehensive AI governance framework with bias detection, model explainability, audit trails, and regulatory compliance for responsible AI deployment.',
@@ -759,8 +751,8 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-ethics-governance',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-spatial-computing',
     title: 'AI Spatial Computing & AR/VR Analytics',
     description: 'AI-powered spatial computing platform for augmented and virtual reality experiences — 3D scene understanding, gesture recognition, and immersive analytics.',
@@ -771,8 +763,8 @@ export const aiServices: Service[] = [
     icon: '🥽',
     href: '/ai-services/ai-spatial-computing',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-robotics-integration',
     title: 'AI Robotics Integration & Autonomous Systems',
     description: 'AI integration for industrial and commercial robotics — computer vision navigation, autonomous task planning, human-robot collaboration, and fleet management.',
@@ -783,56 +775,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-robotics-integration',
     category: 'ai'
-  },
-  {
-    id: 'ai-voice-cloning',
-    title: 'AI Voice Cloning & Synthetic Media Creation',
-    description: 'Enterprise voice cloning for customer service, training, and content creation — realistic synthetic voice generation with consent management and quality controls.',
-    features: ['High-fidelity voice cloning from 30-second samples', 'Multi-language and accent-adaptive voice generation', 'Real-time voice conversion for live calls and broadcasts', 'Brand voice library management with usage governance', 'Consent management and deepfake detection safeguards'],
-    benefits: ['Produce audio content 100x faster with synthetic voices', 'Maintain brand voice consistency across all channels', 'Enable 24/7 voice-based customer interactions', 'Scale personalized communications to millions'],
-    pricing: { basic: '499', pro: '1199', enterprise: '2799' },
-    contactInfo: { website: '/ai-services/ai-voice-cloning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎙️',
-    href: '/ai-services/ai-voice-cloning',
-    category: 'ai'
-  },
-  {
-    id: 'ai-lead-generation',
-    title: 'AI Lead Generation & Pipeline Intelligence',
-    description: 'Intelligent lead generation platform — prospect identification, intent signal detection, personalized outreach automation, and pipeline conversion optimization.',
-    features: ['AI-powered prospect scoring and identification', 'Intent signal detection from web and social data', 'Personalized outreach generation at scale', 'Multi-channel engagement orchestration', 'Pipeline conversion prediction and bottleneck analysis'],
-    benefits: ['Increase qualified leads by 300%', 'Reduce cost per acquisition by 70%', 'Automate top-of-funnel outreach without losing personalization', 'Predict pipeline revenue with 85%+ accuracy'],
-    pricing: { basic: '399', pro: '899', enterprise: '2199' },
-    contactInfo: { website: '/ai-services/ai-lead-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎯',
-    href: '/ai-services/ai-lead-generation',
-    category: 'ai'
-  },
-  {
-    id: 'ai-presentation-maker',
-    title: 'AI Presentation & Report Generator',
-    description: 'Transform raw data into polished presentations and executive reports — AI-driven slide design, data visualization, narrative generation, and brand-aligned templates.',
-    features: ['AI-powered slide generation from documents and data', 'Automated chart and infographic creation', 'Executive narrative and talking point generation', 'Brand guideline enforcement across all slides', 'Export to PowerPoint, Google Slides, and PDF'],
-    benefits: ['Create presentations 90% faster with AI generation', 'Ensure consistent brand quality across all decks', 'Transform complex data into clear executive narratives', 'Never start a slide deck from scratch again'],
-    pricing: { basic: '99', pro: '249', enterprise: '599' },
-    contactInfo: { website: '/ai-services/ai-presentation-maker', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📊',
-    href: '/ai-services/ai-presentation-maker',
-    category: 'ai'
-  },
-  {
-    id: 'ai-chatbot-builder-pro',
-    title: 'AI Enterprise Chatbot Builder Platform',
-    description: 'Build and deploy enterprise-grade AI chatbots with multi-language support, knowledge base integration, human handoff, and advanced analytics dashboard.',
-    features: ['No-code conversational AI builder with drag-and-drop', 'Multi-language support with automatic translation', 'Knowledge base integration (SharePoint, Confluence, web)', 'Intelligent human handoff with context transfer', 'Conversation analytics and sentiment tracking'],
-    benefits: ['Deflect 60% of support tickets with intelligent chatbots', 'Provide 24/7 multilingual customer support', 'Reduce average resolution time by 70%', 'Capture valuable customer insights from conversations'],
-    pricing: { basic: '199', pro: '499', enterprise: '1199' },
-    contactInfo: { website: '/ai-services/ai-chatbot-builder-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🤖',
-    href: '/ai-services/ai-chatbot-builder-pro',
-    category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-drug-discovery',
     title: 'AI Drug Discovery & Molecular Design',
     description: 'Accelerate pharmaceutical R&D with AI-powered molecular simulation, target identification, toxicity prediction, and clinical trial optimization.',
@@ -843,80 +787,8 @@ export const aiServices: Service[] = [
     icon: '💊',
     href: '/ai-services/ai-drug-discovery',
     category: 'ai'
-  },
-  {
-    id: 'ai-video-generation',
-    title: 'AI Video Generation & Synthetic Media',
-    description: 'Enterprise video creation platform with AI-driven scripting, voice synthesis, avatar generation, scene composition, and automated post-production workflows.',
-    features: ['Text-to-video generation with photorealistic avatars', 'AI voice synthesis with emotion control', 'Automated subtitle and caption generation in 50+ languages', 'Brand-compliant scene templates and assets', 'Batch video production for marketing at scale'],
-    benefits: ['Produce marketing videos 95% faster than studio production', 'Eliminate need for physical sets and actors', 'Multi-localized versions from single source content', 'Consistent brand presence across all video channels'],
-    pricing: { basic: '299', pro: '799', enterprise: '1999' },
-    contactInfo: { website: '/ai-services/ai-video-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎬',
-    href: '/ai-services/ai-video-generation',
-    category: 'ai'
-  },
-  {
-    id: 'ai-voice-assistant',
-    title: 'AI Voice Assistant & Conversational IVR',
-    description: 'Deploy intelligent voice assistants for customer service, internal IT support, and appointment scheduling with natural language understanding and seamless human escalation.',
-    features: ['Natural language voice recognition across 100+ languages', 'Context-aware multi-turn conversation management', 'Sentiment analysis for real-time response adaptation', 'CRM and calendar integration for action completion', 'Analytics dashboard with call scoring and insights'],
-    benefits: ['Handle 70% of calls without human intervention', 'Reduce average handle time by 50%', '24/7 availability for global customer bases', 'Seamless escalation with full context transfer'],
-    pricing: { basic: '399', pro: '899', enterprise: '2199' },
-    contactInfo: { website: '/ai-services/ai-voice-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎙️',
-    href: '/ai-services/ai-voice-assistant',
-    category: 'ai'
-  },
-  {
-    id: 'ai-supply-chain',
-    title: 'AI Supply Chain Intelligence & Optimization',
-    description: 'End-to-end supply chain visibility and optimization with demand forecasting, supplier risk scoring, route planning, and inventory optimization powered by ML.',
-    features: ['Real-time supply chain visibility with digital twin', 'ML demand forecasting at SKU and location level', 'Supplier risk monitoring with alternative sourcing', 'Multi-echelon inventory optimization', 'Carbon footprint tracking and sustainability reporting'],
-    benefits: ['Reduce supply chain costs by 25-40%', 'Improve forecast accuracy by 35%', 'Prevent disruptions with early risk signals', 'Optimize inventory to reduce carrying costs by 30%'],
-    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
-    contactInfo: { website: '/ai-services/ai-supply-chain', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📦',
-    href: '/ai-services/ai-supply-chain',
-    category: 'ai'
-  },
-  {
-    id: 'ai-email-marketing',
-    title: 'AI Email Marketing & Campaign Intelligence',
-    description: 'AI-driven email marketing with intelligent subject line generation, send time optimization, content personalization, and automated A/B testing at enterprise scale.',
-    features: ['AI subject line and content generation', 'Predictive send time optimization per recipient', 'Dynamic content personalization at scale', 'Automated A/B/n testing with multi-armed bandits', 'Deliverability monitoring and inbox placement scoring'],
-    benefits: ['Increase open rates by 40% with AI-optimized subjects', 'Boost click-through rates by 60% with personalized content', 'Reduce campaign setup time by 80%', 'Maintain high deliverability with proactive monitoring'],
-    pricing: { basic: '149', pro: '349', enterprise: '899' },
-    contactInfo: { website: '/ai-services/ai-email-marketing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📧',
-    href: '/ai-services/ai-email-marketing',
-    category: 'ai'
-  },
-  {
-    id: 'ai-video-analytics',
-    title: 'AI Video Analytics & Visual Intelligence',
-    description: 'Real-time video analytics for retail, security, manufacturing, and public spaces — crowd behavior analysis, anomaly detection, and operational intelligence from existing CCTV.',
-    features: ['Existing CCTV integration with AI overlay', 'Crowd density and flow pattern analysis', 'Anomaly detection for security incidents', 'Customer journey and dwell time analytics', 'Real-time alerts with automated response triggers'],
-    benefits: ['Leverage existing camera infrastructure with AI upgrade', 'Detect security incidents 3x faster than human monitoring', 'Optimize store layouts with customer flow insights', 'Reduce retail shrinkage by 40% with proactive alerts'],
-    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
-    contactInfo: { website: '/ai-services/ai-video-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📹',
-    href: '/ai-services/ai-video-analytics',
-    category: 'ai'
-  },
-  {
-    id: 'ai-compliance',
-    title: 'AI Compliance Monitoring & Automated Auditing',
-    description: 'Continuous compliance monitoring across SOC 2, ISO 27001, HIPAA, GDPR, and PCI-DSS with evidence collection, gap analysis, and automated audit-ready report generation.',
-    features: ['Continuous control monitoring across 5+ frameworks', 'Automated evidence collection from systems and logs', 'Real-time compliance dashboards with trend analysis', 'Gap analysis with prioritized remediation workflows', 'Audit-ready report generation with full traceability'],
-    benefits: ['Reduce audit preparation time by 75%', 'Eliminate compliance blind spots with continuous monitoring', 'Pass first-time audits with confidence', 'Scale compliance across growing multi-entity organizations'],
-    pricing: { basic: '449', pro: '999', enterprise: '2499' },
-    contactInfo: { website: '/ai-services/ai-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🛡️',
-    href: '/ai-services/ai-compliance',
-    category: 'ai'
-  },
-  {
+  },,
+{
     id: 'advanced_ai_enterprise_intelligence_hub',
     title: 'Advanced AI & Enterprise Intelligence Hub',
     description: 'Unify generative AI, autonomous agents, multimodal intelligence, RAG, governance, observability, and enterprise copilots into a single advanced AI ...',
@@ -927,8 +799,8 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_agent_safety_evaluation',
     title: 'Ai Agent Safety Evaluation',
     description: '',
@@ -939,8 +811,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-agent-safety-evaluation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_agents_autonomous',
     title: 'AI Agents & Autonomous Workflows',
     description: 'Deploy autonomous AI agents that reason, plan, and act. Multi-step task execution, tool use, and human-in-the-loop controls for enterprise automation.',
@@ -951,8 +823,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-agents-autonomous',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_context_engineering_enterprise',
     title: 'Ai Context Engineering Enterprise',
     description: '',
@@ -963,8 +835,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-context-engineering-enterprise',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_copilot_enterprise',
     title: 'AI Copilot & Enterprise Assistants',
     description: 'Deploy AI copilots and enterprise assistants that augment human work. Context-aware, role-specific AI embedded in your tools and workflows.',
@@ -975,8 +847,8 @@ export const aiServices: Service[] = [
     icon: '👤',
     href: '/ai-services/ai-copilot-enterprise',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_edge_realtime_inference',
     title: 'AI Edge & Real-Time Inference',
     description: 'Deploy AI at the edge and in real time. Low-latency inference, on-device models, and streaming pipelines for mission-critical applications.',
@@ -987,8 +859,8 @@ export const aiServices: Service[] = [
     icon: '⚡',
     href: '/ai-services/ai-edge-realtime-inference',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_finetuning_alignment_pipelines',
     title: 'Ai Finetuning Alignment Pipelines',
     description: '',
@@ -999,8 +871,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-finetuning-alignment-pipelines',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_foundation_models_custom_training',
     title: 'AI Foundation Models & Custom Training',
     description: 'Train and deploy custom foundation models. Domain-specific pretraining, fine-tuning, and model adaptation for enterprise AI with full data sovereig...',
@@ -1011,8 +883,8 @@ export const aiServices: Service[] = [
     icon: '🏗️',
     href: '/ai-services/ai-foundation-models-custom-training',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_governance_trust',
     title: 'AI Governance & Trust',
     description: 'Enterprise AI governance, compliance, and risk management. Policy enforcement, bias detection, audit trails, and responsible AI frameworks for regu...',
@@ -1023,8 +895,8 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-governance-trust',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_integration_apis',
     title: 'AI Integration & APIs',
     description: 'Integrate AI into existing systems with unified APIs, event-driven pipelines, and enterprise connectors. One integration layer across LLMs, agents,...',
@@ -1035,8 +907,8 @@ export const aiServices: Service[] = [
     icon: '🔌',
     href: '/ai-services/ai-integration-apis',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_memory_agents_long_horizon',
     title: 'Ai Memory Agents Long Horizon',
     description: '',
@@ -1047,8 +919,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-memory-agents-long-horizon',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_model_orchestration',
     title: 'AI Model Orchestration',
     description: 'Multi-model AI orchestration, routing, and fallback. Optimize cost, latency, and quality by routing requests to the right model for each task.',
@@ -1059,8 +931,8 @@ export const aiServices: Service[] = [
     icon: '🎛️',
     href: '/ai-services/ai-model-orchestration',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_multimodal_intelligence',
     title: 'AI Multimodal Intelligence',
     description: 'Enterprise multimodal AI for text, video, images, and audio. Unified understanding across data types for document analysis, video insights, and int...',
@@ -1071,8 +943,8 @@ export const aiServices: Service[] = [
     icon: '🎬',
     href: '/ai-services/ai-multimodal-intelligence',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_observability_mlops',
     title: 'AI Observability & MLOps',
     description: 'Monitor, debug, and optimize AI systems at scale. End-to-end observability for LLMs, agents, and ML pipelines with tracing, evaluation, and cost an...',
@@ -1083,8 +955,8 @@ export const aiServices: Service[] = [
     icon: '📡',
     href: '/ai-services/ai-observability-mlops',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_rag_knowledge_systems',
     title: 'AI RAG & Knowledge Systems',
     description: 'Enterprise retrieval-augmented generation (RAG) for accurate, grounded AI. Connect LLMs to your knowledge bases, documents, and real-time data with...',
@@ -1095,8 +967,8 @@ export const aiServices: Service[] = [
     icon: '📚',
     href: '/ai-services/ai-rag-knowledge-systems',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_regulated_industries',
     title: 'AI for Regulated Industries',
     description: 'AI solutions built for healthcare, finance, legal, and government. HIPAA, SOC 2, GDPR, and EU AI Act–ready with audit trails and human oversight.',
@@ -1107,8 +979,8 @@ export const aiServices: Service[] = [
     icon: '🏛️',
     href: '/ai-services/ai-regulated-industries',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_security_responsible_ai',
     title: 'AI Security & Responsible AI',
     description: 'Secure AI systems and responsible deployment. Adversarial robustness, prompt injection defense, data privacy, and AI safety controls for enterprise...',
@@ -1119,8 +991,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-security-responsible-ai',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai_strategy_roadmap',
     title: 'AI Strategy & Roadmap',
     description: 'Align AI initiatives with business goals. Discovery workshops, use-case prioritization, vendor evaluation, and phased roadmaps for production AI at...',
@@ -1131,8 +1003,8 @@ export const aiServices: Service[] = [
     icon: '🗺️',
     href: '/ai-services/ai-strategy-roadmap',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'autonomous_growth_intelligence',
     title: 'Autonomous Growth Intelligence',
     description: 'Design AI-powered acquisition, conversion, retention, and expansion loops with measurable impact models and deployment-safe execution plans.',
@@ -1143,8 +1015,8 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/autonomous-growth-intelligence',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'business_intelligence',
     title: 'Business Intelligence',
     description: 'Business Intelligence transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make ...',
@@ -1155,8 +1027,8 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/business-intelligence',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'content_generation',
     title: 'Content Generation',
     description: 'Content Generation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automati...',
@@ -1167,8 +1039,8 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/content-generation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'customer_experience',
     title: 'Customer Experience',
     description: 'Customer Experience elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint...',
@@ -1179,8 +1051,8 @@ export const aiServices: Service[] = [
     icon: '💬',
     href: '/ai-services/customer-experience',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'document_processing',
     title: 'Document Processing',
     description: 'Document Processing eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Re...',
@@ -1191,8 +1063,8 @@ export const aiServices: Service[] = [
     icon: '🔄',
     href: '/ai-services/document-processing',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'energy_management',
     title: 'Energy Management',
     description: 'Energy Management combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that ...',
@@ -1203,8 +1075,8 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/energy-management',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'fraud_detection',
     title: 'Fraud Detection',
     description: 'Fraud Detection provides enterprise-grade security controls, continuous monitoring, and compliance automation. Reduce risk exposure and accelerate ...',
@@ -1215,8 +1087,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/fraud-detection',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'generative_ai_enterprise',
     title: 'Generative AI Enterprise',
     description: 'Enterprise-scale generative AI for content, code, and data. Deploy secure, governed LLM workflows with custom models, RAG, and fine-tuning for prod...',
@@ -1227,8 +1099,8 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-services/generative-ai-enterprise',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'hr_analytics',
     title: 'HR Analytics',
     description: 'HR Analytics transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make faster, m...',
@@ -1239,8 +1111,8 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/hr-analytics',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'marketing_automation',
     title: 'Marketing Automation',
     description: 'Marketing Automation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automa...',
@@ -1251,8 +1123,8 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/marketing-automation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'predictive_maintenance',
     title: 'Predictive Maintenance',
     description: 'Predictive Maintenance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities ...',
@@ -1263,8 +1135,8 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/predictive-maintenance',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'quality_assurance',
     title: 'Quality Assurance',
     description: 'Quality Assurance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that ...',
@@ -1275,8 +1147,8 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/quality-assurance',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'supply_chain',
     title: 'Supply Chain',
     description: 'Supply Chain delivers purpose-built AI solutions tailored to specific industry requirements. Accelerate digital transformation with domain-specific...',
@@ -1287,8 +1159,8 @@ export const aiServices: Service[] = [
     icon: '🏢',
     href: '/ai-services/supply-chain',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-supply-chain-intelligence',
     title: 'AI Supply Chain Intelligence',
     description: 'End-to-end supply chain visibility with predictive disruption alerts, multi-tier vendor risk scoring, and AI-driven cost optimization.',
@@ -1299,8 +1171,8 @@ export const aiServices: Service[] = [
     icon: '🔗',
     href: '/ai-services/ai-supply-chain-intelligence',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-predictive-workforce-planning',
     title: 'AI Predictive Workforce Planning',
     description: 'Forecast hiring needs, optimize team composition, and predict attrition risk with AI-powered HR analytics and workforce modeling.',
@@ -1311,8 +1183,8 @@ export const aiServices: Service[] = [
     icon: '👥',
     href: '/ai-services/ai-predictive-workforce-planning',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-voice-agent-platform',
     title: 'AI Voice Agent Platform',
     description: 'Deploy conversational AI voice agents for customer service, outbound calls, appointment scheduling, and lead qualification with natural speech.',
@@ -1323,8 +1195,8 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-voice-agent-platform',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-financial-forecasting',
     title: 'AI Financial Forecasting & Planning',
     description: 'Revenue forecasting, cash flow prediction, and budget optimization using AI models trained on your historical and market data.',
@@ -1335,8 +1207,8 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-financial-forecasting',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-content-moderation',
     title: 'AI Content Moderation Platform',
     description: 'Automated content review for user-generated platforms — detect spam, harassment, and policy violations across text, image, and video.',
@@ -1347,8 +1219,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-content-moderation',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-customer-sentiment-analytics',
     title: 'AI Customer Sentiment Analytics',
     description: 'Real-time sentiment analysis across reviews, surveys, social media, and support interactions to drive proactive customer experience improvements.',
@@ -1359,8 +1231,8 @@ export const aiServices: Service[] = [
     icon: '💭',
     href: '/ai-services/ai-customer-sentiment-analytics',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-code-migration-modernization',
     title: 'AI Code Migration & Modernization',
     description: 'Automatically migrate legacy codebases to modern frameworks (COBOL → Java, jQuery → React, Python 2 → Python 3) with AI-assisted refactoring.',
@@ -1371,9 +1243,8 @@ export const aiServices: Service[] = [
     icon: '⚙️',
     href: '/ai-services/ai-code-migration-modernization',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-legal-doc-review',
     title: 'AI Legal Document Review',
     description: 'Accelerate legal document analysis with AI: extract clauses, flag risks, summarize contracts, and generate due diligence reports in minutes.',
@@ -1403,39 +1274,8 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-legal-doc-review',
     category: 'ai'
-  },
-  {
-    id: 'ai-medical-imaging',
-    title: 'AI Medical Imaging Assistant',
-    description: 'AI-powered diagnostic support for radiology and pathology: detect anomalies in X-rays, MRIs, CT scans, and histopathology slides with high accuracy.',
-    features: [
-      'Multi-modality image analysis (X-ray, MRI, CT, ultrasound)',
-      'Tumor & lesion detection & segmentation',
-      'Bone fracture identification',
-      'Priority triage (urgent cases flagged)',
-      'DICOM & HL7 integration'
-    ],
-    benefits: [
-      'Reduce radiologist reading time by 40%',
-      'Increase early detection rates',
-      'Lower false-negative risk',
-      'Scale imaging capacity without hiring'
-    ],
-    pricing: {
-      basic: '799',
-      pro: '1799',
-      enterprise: '4999'
-    },
-    contactInfo: {
-      website: '/ai-services/ai-medical-imaging',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🏥',
-    href: '/ai-services/ai-medical-imaging',
-    category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-supply-chain-visibility',
     title: 'AI Supply Chain Visibility Platform',
     description: 'End-to-end supply chain monitoring with AI-driven anomaly detection, predictive ETAs, and automated disruption alerts across suppliers, logistics, and inventory.',
@@ -1465,8 +1305,8 @@ export const aiServices: Service[] = [
     icon: '🚢',
     href: '/ai-services/ai-supply-chain-visibility',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-code-audit-security',
     title: 'AI Code Audit & Security Scanner',
     description: 'Comprehensive static analysis powered by AI: detect vulnerabilities, code smells, license compliance issues, and security anti-patterns before they reach production.',
@@ -1496,8 +1336,8 @@ export const aiServices: Service[] = [
     icon: '🔒',
     href: '/ai-services/ai-code-audit-security',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-bdr-sdr',
     title: 'AI BDR/SDR Agent',
     description: 'Autonomous AI Business Development & Sales Development Representative: prospect, qualify, email, book meetings, and nurture leads 24/7 without human intervention.',
@@ -1527,39 +1367,8 @@ export const aiServices: Service[] = [
     icon: '📧',
     href: '/ai-services/ai-bdr-sdr-agent',
     category: 'ai'
-  },
-  {
-    id: 'ai-financial-forecasting',
-    title: 'AI Financial Forecasting & Budgeting',
-    description: 'AI-driven cash flow forecasting, revenue modeling, expense categorization, and scenario planning for CFOs and finance teams.',
-    features: [
-      'Cash flow prediction (30/60/90-day)',
-      'Revenue run-rate & ARR modeling',
-      'Expense categorization & anomaly detection',
-      'Scenario planning (best/worst case)',
-      'Integration with QuickBooks, Xero, NetSuite'
-    ],
-    benefits: [
-      '95% forecast accuracy',
-      'Reduce budgeting cycle time by 80%',
-      'Early warning on cash shortfalls',
-      'Data-driven strategic planning'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '999',
-      enterprise: '2999'
-    },
-    contactInfo: {
-      website: '/ai-services/ai-financial-forecasting',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📈',
-    href: '/ai-services/ai-financial-forecasting',
-    category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-knowledge-base-agent',
     title: 'AI Knowledge Base & Knowledge Graph Agent',
     description: 'Turn your documents, wikis, and internal data into an intelligent, queryable knowledge graph with conversational AI search and automated content synchronization.',
@@ -1589,8 +1398,8 @@ export const aiServices: Service[] = [
     icon: '📚',
     href: '/ai-services/ai-knowledge-base-agent',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-visual-inspection',
     title: 'AI Visual Inspection & Quality Control',
     description: 'Computer vision-powered quality control for manufacturing: detect defects, classify product flaws, and ensure consistent quality on the production line.',
@@ -1620,8 +1429,8 @@ export const aiServices: Service[] = [
     icon: '👁️',
     href: '/ai-services/ai-visual-inspection',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-chatbot-omnichannel',
     title: 'AI Omnichannel Chatbot',
     description: 'Unified AI assistant across website chat, Messenger, WhatsApp, SMS, and voice. Context-aware conversations with seamless human handoff.',
@@ -1651,8 +1460,8 @@ export const aiServices: Service[] = [
     icon: '💬',
     href: '/ai-services/ai-omnichannel-chatbot',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-call-center-voice-analytics',
     title: 'AI Call Center Voice Analytics',
     description: 'Real-time call transcription, sentiment analysis, agent coaching insights, and compliance monitoring for contact centers.',
@@ -1682,198 +1491,8 @@ export const aiServices: Service[] = [
     icon: '📞',
     href: '/ai-services/ai-call-center-voice-analytics',
     category: 'ai'
-  },
-  {
-    id: 'devops-gen-ai-ci-cd',
-    title: 'Generative AI for DevOps & CI/CD',
-    description: 'AI-powered DevOps: auto-generate CI/CD pipelines, infrastructure-as-code, deployment scripts, and incident runbooks from natural language specifications.',
-    features: [
-      'Natural language to pipeline generation',
-      'IaC template creation (Terraform, CloudFormation)',
-      'Automated incident runbook drafting',
-      'Self-healing deployment rollbacks',
-      'Performance anomaly detection & tuning'
-    ],
-    benefits: [
-      'Reduce pipeline setup time by 85%',
-      'Eliminate configuration drift',
-      'Faster incident resolution (MTTR)',
-      'Consistent infrastructure standards'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '1099',
-      enterprise: '3299'
-    },
-    contactInfo: {
-      website: '/it-services/devops-gen-ai-ci-cd',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/devops-gen-ai-ci-cd',
-    category: 'it'
-  },
-  {
-    id: 'cloud-cost-ai-optimizer',
-    title: 'AI Cloud Cost Optimizer',
-    description: 'Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, and idle resource cleanup.',
-    features: [
-      'Multi-cloud cost aggregation & normalization',
-      'AI-driven rightsizing recommendations',
-      'Automated RI/SP purchase optimization',
-      'Idle resource detection & auto-cleanup',
-      'Anomaly detection & budget alerts'
-    ],
-    benefits: [
-      'Save 30-40% on cloud spend',
-      'Zero upfront engineering effort',
-      'Prevent cost overruns proactively',
-      'Detailed cost attribution by team/project'
-    ],
-    pricing: {
-      basic: '299',
-      pro: '699',
-      enterprise: '1999'
-    },
-    contactInfo: {
-      website: '/it-services/cloud-cost-ai-optimizer',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💸',
-    href: '/it-services/cloud-cost-ai-optimizer',
-    category: 'it'
-  },
-  {
-    id: 'data-warehouse-modernization',
-    title: 'AI Data Warehouse Modernization',
-    description: 'Modernize legacy data warehouses (Oracle, Teradata, on-prem) to cloud-native solutions (Snowflake, BigQuery, Redshift) with AI-assisted schema mapping and migration validation.',
-    features: [
-      'Legacy schema extraction & analysis',
-      'AI-powered schema mapping to target',
-      'Automated ETL/ELT pipeline generation',
-      'Data lineage & impact analysis',
-      'Post-migration validation & reconciliation'
-    ],
-    benefits: [
-      '60% faster migration timelines',
-      'Zero data loss guarantee',
-      '50% lower TCO vs traditional consultancies',
-      'Future-proof cloud-native architecture'
-    ],
-    pricing: {
-      basic: '1499',
-      pro: '3499',
-      enterprise: '9999'
-    },
-    contactInfo: {
-      website: '/it-services/data-warehouse-modernization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/data-warehouse-modernization',
-    category: 'it'
-  },
-  {
-    id: 'cyber-threat-intelligence',
-    title: 'AI Cyber Threat Intelligence Platform',
-    description: 'Proactive threat intelligence gathering, analysis, and prioritization from dark web, exploit feeds, and threat actor TTPs to stay ahead of attacks.',
-    features: [
-      'Automated threat feed ingestion (50+ sources)',
-      'AI-driven threat prioritization (impact scoring)',
-      'IOC & TTP matching against your environment',
-      'Dark web monitoring for leaked credentials',
-      'Executive threat briefings & reporting'
-    ],
-    benefits: [
-      'Reduce mean time to detect (MTTD) by 70%',
-      'Prevent credential-based attacks',
-      'Prioritize fixes based on actual risk',
-      'Compliance-ready audit trails'
-    ],
-    pricing: {
-      basic: '599',
-      pro: '1399',
-      enterprise: '3999'
-    },
-    contactInfo: {
-      website: '/it-services/cyber-threat-intelligence',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🛡️',
-    href: '/it-services/cyber-threat-intelligence',
-    category: 'it'
-  },
-  {
-    id: 'low-code-platform-customization',
-    title: 'Low-Code Platform Customization & Integration',
-    description: 'Extend and integrate your low-code platforms (Retool, Appian, Power Apps, OutSystems) with custom components, APIs, and enterprise system connectors.',
-    features: [
-      'Custom UI component development',
-      'Enterprise system connectors (SAP, Oracle, legacy)',
-      'API Gateway & middleware integration',
-      'Performance optimization & caching',
-      'Security hardening & audit logging'
-    ],
-    benefits: [
-      'Extend low-code app capabilities by 10x',
-      'Seamless integration with legacy systems',
-      'Reduce custom dev time by 70%',
-      'Enterprise-grade security & compliance'
-    ],
-    pricing: {
-      basic: '399',
-      pro: '899',
-      enterprise: '2499'
-    },
-    contactInfo: {
-      website: '/it-services/low-code-platform-customization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🧩',
-    href: '/it-services/low-code-platform-customization',
-    category: 'it'
-  },
-  {
-    id: 'api-management-gateway',
-    title: 'API Management & Developer Gateway',
-    description: 'Full-lifecycle API management: gateway, developer portal, analytics, monetization, and security (OAuth, JWT, rate limiting) for your API products.',
-    features: [
-      'High-performance API gateway (10k+ RPS)',
-      'Developer self-service portal',
-      'Analytics: usage, latency, errors',
-      'API monetization & billing integration',
-      'Security: OAuth2, JWT validation, rate limiting'
-    ],
-    benefits: [
-      'Launch API products 5x faster',
-      'Monitor & debug API issues in real-time',
-      'Protect backend services from abuse',
-      'Revenue stream from API usage'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '1199',
-      enterprise: '3599'
-    },
-    contactInfo: {
-      website: '/it-services/api-management-gateway',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔌',
-    href: '/it-services/api-management-gateway',
-    category: 'it'
-  },
-
-// New AI services batch to insert into servicesData.ts at aiServices closing (after line 1871)
-// This content will be inserted BEFORE the final "];"
-
-  {
+  },,
+{
     id: 'ai-video-generator',
     title: 'AI Video Generator & Editor',
     description: 'Generate professional videos from text prompts or scripts: auto-scene composition, voiceover, subtitles, and multi-format export (MP4, GIF, Reels).',
@@ -1903,8 +1522,8 @@ export const aiServices: Service[] = [
     icon: '🎬',
     href: '/ai-services/ai-video-generator',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-seo-optimizer',
     title: 'AI SEO Content Optimizer',
     description: 'Real-time SEO analysis and content optimization: keyword suggestions, meta tag generation, readability scoring, and content gap analysis.',
@@ -1934,8 +1553,8 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-seo-optimizer',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-contract-manager',
     title: 'AI Contract Manager',
     description: 'End-to-end contract lifecycle management: AI-powered drafting, review, clause library, obligation tracking, and renewal alerts.',
@@ -1965,8 +1584,8 @@ export const aiServices: Service[] = [
     icon: '📝',
     href: '/ai-services/ai-contract-manager',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-personalized-learning',
     title: 'AI Personalized Learning Platform',
     description: 'Adaptive learning paths powered by AI: skill gap analysis, micro-lesson generation, progress tracking, and competency-based assessments.',
@@ -1996,8 +1615,8 @@ export const aiServices: Service[] = [
     icon: '🎓',
     href: '/ai-services/ai-personalized-learning',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-voice-agent',
     title: 'AI Voice Agent (Phone)',
     description: 'Human-like conversational AI for phone calls: inbound customer service, outbound sales calls, appointment scheduling, and support ticket creation.',
@@ -2027,8 +1646,8 @@ export const aiServices: Service[] = [
     icon: '📱',
     href: '/ai-services/ai-voice-agent',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-devops-chatbot',
     title: 'AI DevOps Chatbot',
     description: 'Natural language interface to your infrastructure: ask for logs, deployments, metrics, and incidents; get instant answers and auto-remediation suggestions.',
@@ -2058,8 +1677,8 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-devops-chatbot',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-revenue-ops',
     title: 'AI Revenue Operations (RevOps)',
     description: 'Unify sales, marketing, and customer success data with AI-driven attribution, forecasting, and go-to-market (GTM) optimization.',
@@ -2089,8 +1708,8 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/ai-revenue-ops',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-supply-demand-planner',
     title: 'AI Supply & Demand Planner',
     description: 'Demand forecasting, inventory optimization, and replenishment planning with AI-driven scenario modeling for manufacturing and retail.',
@@ -2120,39 +1739,8 @@ export const aiServices: Service[] = [
     icon: '📦',
     href: '/ai-services/ai-supply-demand-planner',
     category: 'ai'
-  },
-  {
-    id: 'ai-fraud-detection',
-    title: 'AI Fraud Detection & Prevention',
-    description: 'Real-time transaction monitoring with AI anomaly detection for fintech, e-commerce, and banking: stop fraud before it happens.',
-    features: [
-      'Real-time transaction scoring',
-      'Behavioral biometrics & pattern recognition',
-      'Chargeback prediction & prevention',
-      ' AML pattern detection',
-      'Custom rule engine + ML model ensemble'
-    ],
-    benefits: [
-      'Reduce false positives by 70%',
-      'Catch 95%+ of fraudulent transactions',
-      'Lower chargeback fees',
-      'Compliance with PCI-DSS, GDPR'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '1199',
-      enterprise: '3299'
-    },
-    contactInfo: {
-      website: '/ai-services/ai-fraud-detection',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection',
-    category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
     description: 'Automated code review with AI: detect bugs, security flaws, performance anti-patterns, and suggest fixes with before/after diffs.',
@@ -2182,8 +1770,8 @@ export const aiServices: Service[] = [
     icon: '👨\u200d💻',
     href: '/ai-services/ai-code-review-assistant',
     category: 'ai'
-  },
-  {
+  },,
+{
     id: 'ai-marketing-copy-generator',
     title: 'AI Marketing Copy Generator',
     description: 'Generate high-converting ad copy, email campaigns, social posts, and landing page content in your brand voice across 30+ languages.',
@@ -2213,40 +1801,8 @@ export const aiServices: Service[] = [
     icon: '✍️',
     href: '/ai-services/ai-marketing-copy-generator',
     category: 'ai'
-  },
-  {
-    id: 'ai-it-helpdesk',
-    title: 'AI IT Helpdesk & Support',
-    description: 'Automated Tier-1 IT support for employees: password resets, software installs, device troubleshooting, and knowledge base search.',
-    features: [
-      'Automated ticket creation & routing',
-      'Knowledge base search with semantic understanding',
-      'Password reset & MFA enrollment automation',
-      'Software request fulfillment workflows',
-      'Hardware troubleshooting decision trees'
-    ],
-    benefits: [
-      'Resolve 70% of tickets without human agent',
-      'Reduce helpdesk staffing costs by 60%',
-      'Instant employee support 24/7',
-      'Consistent, documented resolutions'
-    ],
-    pricing: {
-      basic: '299',
-      pro: '699',
-      enterprise: '1899'
-    },
-    contactInfo: {
-      website: '/it-services/ai-it-helpdesk',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🖥️',
-    href: '/it-services/ai-it-helpdesk',
-    category: 'it'
-   },
-
-   {
+  },,
+{
      id: 'ai-customer-support-agent',
      title: 'AI Customer Support Agent',
      description: "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
@@ -2268,8 +1824,8 @@ export const aiServices: Service[] = [
      icon: '🤖',
      href: '/ai-services/ai-customer-support-agent',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'autonomous-code-review-agent',
      title: 'Autonomous Code Review Agent',
      description: 'AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.',
@@ -2291,8 +1847,8 @@ export const aiServices: Service[] = [
      icon: '👩‍💻',
      href: '/ai-services/autonomous-code-review-agent',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-driven-customer-segmentation',
      title: 'AI-Driven Customer Segmentation & Persona Engine',
      description: 'Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.',
@@ -2314,8 +1870,8 @@ export const aiServices: Service[] = [
      icon: '🎯',
      href: '/ai-services/ai-driven-customer-segmentation',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-ui-generator',
      title: 'AI-Powered UI Generator (Text-to-UI)',
      description: 'Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.',
@@ -2337,8 +1893,8 @@ export const aiServices: Service[] = [
      icon: '🎨',
      href: '/ai-services/ai-powered-ui-generator',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'predictive-churn-risk',
      title: 'Predictive Churn Risk Scoring',
      description: 'Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.',
@@ -2360,8 +1916,8 @@ export const aiServices: Service[] = [
      icon: '📉',
      href: '/ai-services/predictive-churn-risk',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-seo-optimizer',
      title: 'AI-Powered SEO Content Optimizer',
      description: 'Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.',
@@ -2383,8 +1939,8 @@ export const aiServices: Service[] = [
      icon: '🔍',
      href: '/ai-services/ai-powered-seo-optimizer',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-for-code-migration',
      title: 'AI-Assisted Code Migration & Refactoring',
      description: 'Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.',
@@ -2406,8 +1962,8 @@ export const aiServices: Service[] = [
      icon: '🔀',
      href: '/ai-services/ai-for-code-migration',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-test-generation',
      title: 'AI-Powered Test Suite Generator',
      description: 'Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.',
@@ -2429,8 +1985,8 @@ export const aiServices: Service[] = [
      icon: '🧪',
      href: '/ai-services/ai-powered-test-generation',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-log-anomaly-detection',
      title: 'AI-Powered Log Anomaly Detection',
      description: 'Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.',
@@ -2452,8 +2008,8 @@ export const aiServices: Service[] = [
      icon: '📈',
      href: '/ai-services/ai-powered-log-anomaly-detection',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'generative-data-synthesis',
      title: 'Generative Data Synthesis for Model Training',
      description: 'Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.',
@@ -2475,8 +2031,8 @@ export const aiServices: Service[] = [
      icon: '🌀',
      href: '/ai-services/generative-data-synthesis',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-sustainable-ops',
      title: 'AI for Sustainable Operations (Green AI)',
      description: 'Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.',
@@ -2498,8 +2054,8 @@ export const aiServices: Service[] = [
      icon: '🌱',
      href: '/ai-services/ai-sustainable-ops',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'legal-doc-review-ai',
      title: 'AI Legal Document Review & Risk Analysis',
      description: 'Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.',
@@ -2521,8 +2077,8 @@ export const aiServices: Service[] = [
      icon: '⚖️',
      href: '/ai-services/legal-doc-review-ai',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-passwordless-auth',
      title: 'AI-Powered Passwordless Authentication',
      description: 'Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.',
@@ -2544,8 +2100,8 @@ export const aiServices: Service[] = [
      icon: '🔑',
      href: '/ai-services/ai-powered-passwordless-auth',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-tech-debt-quantifier',
      title: 'AI-Powered Tech Debt Quantifier',
      description: 'Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.',
@@ -2567,8 +2123,8 @@ export const aiServices: Service[] = [
      icon: '🗑️',
      href: '/ai-services/ai-powered-tech-debt-quantifier',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'generative-ux-research-synthesis',
      title: 'Generative UX Research Synthesis',
      description: 'Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.',
@@ -2590,8 +2146,8 @@ export const aiServices: Service[] = [
      icon: '👥',
      href: '/ai-services/generative-ux-research-synthesis',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-incident-postmortem',
      title: 'AI-Powered Incident Postmortem Generator',
      description: 'Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.',
@@ -2613,8 +2169,8 @@ export const aiServices: Service[] = [
      icon: '📝',
      href: '/ai-services/ai-powered-incident-postmortem',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-driven-api-design-assistant',
      title: 'AI-Driven API Design Assistant',
      description: 'Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.',
@@ -2636,8 +2192,8 @@ export const aiServices: Service[] = [
      icon: '🔗',
      href: '/ai-services/ai-driven-api-design-assistant',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-pr-drafting',
      title: 'AI-Powered PR Drafting & Description',
      description: 'Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.',
@@ -2659,8 +2215,8 @@ export const aiServices: Service[] = [
      icon: '📦',
      href: '/ai-services/ai-powered-pr-drafting',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'automated-data-labeling',
      title: 'Automated Data Labeling for Computer Vision & NLP',
      description: 'Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.',
@@ -2682,8 +2238,8 @@ export const aiServices: Service[] = [
      icon: '🏷️',
      href: '/ai-services/automated-data-labeling',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'meeting-ai-assistant',
      title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
      description: "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
@@ -2705,8 +2261,8 @@ export const aiServices: Service[] = [
      icon: '🎙️',
      href: '/ai-services/meeting-ai-assistant',
      category: 'ai'
-   },
-   {
+   },,
+{
      id: 'ai-powered-question-answering',
      title: 'Enterprise AI Question Answering (Internal Knowledge)',
      description: 'Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.',
@@ -2728,507 +2284,8 @@ export const aiServices: Service[] = [
      icon: '💬',
      href: '/ai-services/ai-powered-question-answering',
      category: 'ai'
-   },
-   {
-     id: 'ai-customer-support-agent',
-     title: 'AI Customer Support Agent',
-     description: "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
-     features: [
-       'Multilingual support (50+ languages)',
-       'Integrations: Zendesk, Intercom, Salesforce',
-       'Document retrieval from knowledge base (RAG)',
-       'Sentiment-aware responses & escalation',
-       'Analytics: resolution rate, CSAT impact'
-     ],
-     benefits: [
-       'Cut support costs by 70%',
-       'Instant responses (sub-second)',
-       '80%+ ticket deflection from humans',
-       'Always-on coverage across timezones'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2499' },
-     contactInfo: { website: '/ai-services/ai-customer-support-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🤖',
-     href: '/ai-services/ai-customer-support-agent',
-     category: 'ai'
-   },
-   {
-     id: 'autonomous-code-review-agent',
-     title: 'Autonomous Code Review Agent',
-     description: 'AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.',
-     features: [
-       'Static analysis + LLM-based reasoning',
-       'Security vulnerability scoring (CWE, OWASP)',
-       'Auto-suggested patches via diffs',
-       'Custom rule engine per team standards',
-       'CI/CD integration (GitHub Actions, GitLab CI)'
-     ],
-     benefits: [
-       'Catch 90%+ of bugs before merge',
-       'Reduce code review time by 60%',
-       'Enforce consistent standards automatically',
-       'Onboard new developers faster'
-     ],
-     pricing: { basic: '0', pro: '199', enterprise: '899' },
-     contactInfo: { website: '/ai-services/autonomous-code-review-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '👩‍💻',
-     href: '/ai-services/autonomous-code-review-agent',
-     category: 'ai'
-   },
-   {
-     id: 'ai-driven-customer-segmentation',
-     title: 'AI-Driven Customer Segmentation & Persona Engine',
-     description: 'Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.',
-     features: [
-       'K-means + hierarchical clustering models',
-       'Dynamic segment recalculation (daily/weekly)',
-       'Persona profiles with predictive scores',
-       'Export to CRM/CDP (Segment, HubSpot)',
-       'Campaign performance tracking per segment'
-     ],
-     benefits: [
-       'Increase conversion rates by 35%',
-       'Reduce churn with targeted retention offers',
-       'Discover hidden high-value niches',
-       'Automate personalized messaging'
-     ],
-     pricing: { basic: '399', pro: '999', enterprise: '3299' },
-     contactInfo: { website: '/ai-services/ai-driven-customer-segmentation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🎯',
-     href: '/ai-services/ai-driven-customer-segmentation',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-ui-generator',
-     title: 'AI-Powered UI Generator (Text-to-UI)',
-     description: 'Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.',
-     features: [
-       'Natural language to JSX/TSX component generation',
-       'Tailwind CSS class application',
-       'Responsive breakpoint handling',
-       'A11y attributes (aria-* roles & labels)',
-       'Export to Figma/Storybook format'
-     ],
-     benefits: [
-       'Ship UI 10x faster',
-       'Maintain design consistency automatically',
-       'Reduce frontend dev iteration cycles',
-       'Prototypes in minutes, not days'
-     ],
-     pricing: { basic: '0', pro: '149', enterprise: '699' },
-     contactInfo: { website: '/ai-services/ai-powered-ui-generator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🎨',
-     href: '/ai-services/ai-powered-ui-generator',
-     category: 'ai'
-   },
-   {
-     id: 'predictive-churn-risk',
-     title: 'Predictive Churn Risk Scoring',
-     description: 'Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.',
-     features: [
-       'Feature engineering from usage & billing data',
-       'Gradient boosting & survival analysis models',
-       'Risk score per account (1-100)',
-       'Automated retention offer triggers',
-       'Dashboard with cohort analysis'
-     ],
-     benefits: [
-       'Reduce monthly churn by 25%',
-       'Target retention spend efficiently',
-       'Identify at-risk accounts before they leave',
-       'Improve LTV prediction accuracy'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2799' },
-     contactInfo: { website: '/ai-services/predictive-churn-risk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📉',
-     href: '/ai-services/predictive-churn-risk',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-seo-optimizer',
-     title: 'AI-Powered SEO Content Optimizer',
-     description: 'Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.',
-     features: [
-       'On-page SEO scoring (0-100)',
-       'Competitor gap analysis',
-       'Automated meta title/description generation',
-       'Readability improvement suggestions',
-       'Schema.org structured data suggestions'
-     ],
-     benefits: [
-       'Increase organic traffic by 40% within 3 months',
-       'Outrank competitors on target keywords',
-       'Ensure Google E-E-A-T compliance',
-       'Automate technical SEO fixes'
-     ],
-     pricing: { basic: '99', pro: '299', enterprise: '999' },
-     contactInfo: { website: '/ai-services/ai-powered-seo-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔍',
-     href: '/ai-services/ai-powered-seo-optimizer',
-     category: 'ai'
-   },
-   {
-     id: 'ai-for-code-migration',
-     title: 'AI-Assisted Code Migration & Refactoring',
-     description: 'Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.',
-     features: [
-       'Language-to-language AST-based translation',
-       'Preserve business logic & edge cases',
-       'Interactive migration playground (preview changes)',
-       'Test generation for migrated functions',
-       'Gradual cutover strategy planning'
-     ],
-     benefits: [
-       'Reduce migration project timeline by 75%',
-       'Minimize regression risk via automated tests',
-       'Lower cost vs. manual rewrite',
-       'De-risk technical modernization'
-     ],
-     pricing: { basic: '2499', pro: '5999', enterprise: '19999' },
-     contactInfo: { website: '/ai-services/ai-for-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔀',
-     href: '/ai-services/ai-for-code-migration',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-test-generation',
-     title: 'AI-Powered Test Suite Generator',
-     description: 'Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.',
-     features: [
-       'White-box test generation from source code',
-       'Black-box tests from BDD/Gherkin specs',
-       'E2E test generation via Puppeteer/Playwright',
-       'Coverage gap analysis & prioritizing',
-       'Test flake detection & stabilization'
-     ],
-     benefits: [
-       'Achieve 80%+ code coverage automatically',
-       'Ship features faster without manual test writing',
-       'Catch regressions before production',
-       'Reduce QA manual testing effort by 90%'
-     ],
-     pricing: { basic: '0', pro: '199', enterprise: '799' },
-     contactInfo: { website: '/ai-services/ai-powered-test-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🧪',
-     href: '/ai-services/ai-powered-test-generation',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-log-anomaly-detection',
-     title: 'AI-Powered Log Anomaly Detection',
-     description: 'Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.',
-     features: [
-       'Unsupervised clustering of log events',
-       'Real-time anomaly scoring per time-series',
-       'Seamless integration with ELK/Prometheus',
-       'Alert suppression & correlation',
-       'Root-cause hinting via pattern matching'
-     ],
-     benefits: [
-       'Detect incidents 30+ minutes before monitoring',
-       'Reduce false positive alerts by 80%',
-       'Shorten MTTR with actionable insights',
-       'Discover silent failures & edge cases'
-     ],
-     pricing: { basic: '299', pro: '699', enterprise: '1899' },
-     contactInfo: { website: '/ai-services/ai-powered-log-anomaly-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📈',
-     href: '/ai-services/ai-powered-log-anomaly-detection',
-     category: 'ai'
-   },
-   {
-     id: 'generative-data-synthesis',
-     title: 'Generative Data Synthesis for Model Training',
-     description: 'Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.',
-     features: [
-       'Tabular data synthesis (CTGAN, TVAE)',
-       'Image synthesis with diffusion models',
-       'Privacy-preserving synthetic data (DP-SGD)',
-       'Data augmentation pipelines',
-       'Quality metrics (KSTest, coverage)'
-     ],
-     benefits: [
-       'Bootstrap ML projects with limited data',
-       'Balance underrepresented classes',
-       'Protect PII while retaining data utility',
-       'Simulate extreme scenarios for stress testing'
-     ],
-     pricing: { basic: '499', pro: '1199', enterprise: '3599' },
-     contactInfo: { website: '/ai-services/generative-data-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🌀',
-     href: '/ai-services/generative-data-synthesis',
-     category: 'ai'
-   },
-   {
-     id: 'ai-sustainable-ops',
-     title: 'AI for Sustainable Operations (Green AI)',
-     description: 'Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.',
-     features: [
-       'Carbon intensity forecasting per region',
-       'Job scheduling to low-carbon time windows',
-       'Resource right-sizing recommendations',
-       'Sustainability KPI dashboards',
-       'Compliance with ESG reporting standards'
-     ],
-     benefits: [
-       'Reduce cloud carbon emissions by 40%',
-       'Lower cost via energy optimization',
-       'Meet corporate sustainability goals',
-       'Public sustainability reporting for PR'
-     ],
-     pricing: { basic: '199', pro: '499', enterprise: '1499' },
-     contactInfo: { website: '/ai-services/ai-sustainable-ops', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🌱',
-     href: '/ai-services/ai-sustainable-ops',
-     category: 'ai'
-   },
-   {
-     id: 'legal-doc-review-ai',
-     title: 'AI Legal Document Review & Risk Analysis',
-     description: 'Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.',
-     features: [
-       'Clause extraction & classification (liability, IP, termination)',
-       'Risk scoring per clause (high/medium/low)',
-       'Deviation detection from standard templates',
-       'Redline suggestions with rationale',
-       'Multi-jurisdiction compliance checks'
-     ],
-     benefits: [
-       'Review NDAs in minutes instead of hours',
-       'Reduce external legal spend by 60%',
-       'Never miss risky clauses again',
-       'Scale legal review across hundreds of contracts'
-     ],
-     pricing: { basic: '499', pro: '1299', enterprise: '4999' },
-     contactInfo: { website: '/ai-services/legal-doc-review-ai', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '⚖️',
-     href: '/ai-services/legal-doc-review-ai',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-passwordless-auth',
-     title: 'AI-Powered Passwordless Authentication',
-     description: 'Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.',
-     features: [
-       'Behavioral biometrics (keystroke dynamics, mouse movements)',
-       'Device & location risk scoring',
-       'Step-up authentication for anomalies',
-       'FIDO2/WebAuthn integration',
-       'Compliance: NIST 800-63B, PSD2 SCA'
-     ],
-     benefits: [
-       'Eliminate phishing & password fatigue',
-       'Reduce authentication friction for users',
-       'Meet modern security standards without complexity',
-       'Lower support cost for password resets'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2499' },
-     contactInfo: { website: '/ai-services/ai-powered-passwordless-auth', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔑',
-     href: '/ai-services/ai-powered-passwordless-auth',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-tech-debt-quantifier',
-     title: 'AI-Powered Tech Debt Quantifier',
-     description: 'Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.',
-     features: [
-       'Static code analysis + complexity heatmaps',
-       'Dependency vulnerability & EOL detection',
-       'Duplicate code detection with CloneDR',
-       'Architecture rule validation (dependency cycles)',
-       'Remediation effort estimation (person-days)'
-     ],
-     benefits: [
-       'Make tech debt visible to leadership',
-       'Prioritize refactoring by cost vs. risk',
-       'Justify modernization budgets with data',
-       'Track debt reduction over time'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2399' },
-     contactInfo: { website: '/ai-services/ai-powered-tech-debt-quantifier', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🗑️',
-     href: '/ai-services/ai-powered-tech-debt-quantifier',
-     category: 'ai'
-   },
-   {
-     id: 'generative-ux-research-synthesis',
-     title: 'Generative UX Research Synthesis',
-     description: 'Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.',
-     features: [
-       'Transcript summarization & theme extraction',
-       'Sentiment analysis across user segments',
-       'Automatic persona generation with quotes',
-       'Journey map creation from session data',
-       'Priority ranking of pain points'
-     ],
-     benefits: [
-       'Analyze 100+ hours of user research in minutes',
-       'Uncover hidden pain points automatically',
-       'Create deliverables without manual synthesis',
-       'Make user-centric decisions faster'
-     ],
-     pricing: { basic: '199', pro: '599', enterprise: '1899' },
-     contactInfo: { website: '/ai-services/generative-ux-research-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '👥',
-     href: '/ai-services/generative-ux-research-synthesis',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-incident-postmortem',
-     title: 'AI-Powered Incident Postmortem Generator',
-     description: 'Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.',
-     features: [
-       'Timeline assembly from logs/metrics/alerts',
-       'Root cause inference via causal graph',
-       'Impact quantification (users, revenue, SLA)',
-       'Auto-generated action items with owners',
-       'Follow-up tracking & closure verification'
-     ],
-     benefits: [
-       'Write postmortems in 10 minutes vs. hours',
-       'Consistent structure & quality across teams',
-       'Identify systemic issues faster',
-       'Improve reliability documentation'
-     ],
-     pricing: { basic: '299', pro: '699', enterprise: '1999' },
-     contactInfo: { website: '/ai-services/ai-powered-incident-postmortem', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📝',
-     href: '/ai-services/ai-powered-incident-postmortem',
-     category: 'ai'
-   },
-   {
-     id: 'ai-driven-api-design-assistant',
-     title: 'AI-Driven API Design Assistant',
-     description: 'Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.',
-     features: [
-       'Natural language to OpenAPI 3.0 spec',
-       'Schema validation & best practice linting',
-       'Auto-generated client SDKs (10+ languages)',
-       'Mock server with configurable responses',
-       'Breaking change detection across versions'
-     ],
-     benefits: [
-       'Design APIs 5x faster with AI guidance',
-       'Ensure consistency & backward compatibility',
-       'Ship SDKs automatically for all platforms',
-       'Reduce design review cycles'
-     ],
-     pricing: { basic: '0', pro: '149', enterprise: '599' },
-     contactInfo: { website: '/ai-services/ai-driven-api-design-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🔗',
-     href: '/ai-services/ai-driven-api-design-assistant',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-pr-drafting',
-     title: 'AI-Powered PR Drafting & Description',
-     description: 'Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.',
-     features: [
-       'Intelligent diff summarization',
-       'JIRA/GitHub issue linking & status updates',
-       'Changelog entry drafting per semantic version',
-       'Reviewer recommendation based on ownership',
-       'Auto-update of API docs & README diffs'
-     ],
-     benefits: [
-       'Consistent, high-quality PR descriptions',
-       'Save 15+ minutes per PR on documentation',
-       'Keep changelogs and releases up-to-date',
-       'Improve code review context and velocity'
-     ],
-     pricing: { basic: '0', pro: '99', enterprise: '399' },
-     contactInfo: { website: '/ai-services/ai-powered-pr-drafting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '📦',
-     href: '/ai-services/ai-powered-pr-drafting',
-     category: 'ai'
-   },
-   {
-     id: 'automated-data-labeling',
-     title: 'Automated Data Labeling for Computer Vision & NLP',
-     description: 'Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.',
-     features: [
-       'Pre-labeling with foundation models (CLIP, YOLO)',
-       'Active learning to prioritize ambiguous samples',
-       'Collaborative annotation workspace',
-       'Quality metrics & consensus scoring',
-       'Export to all major ML data formats'
-     ],
-     benefits: [
-       'Label 10,000 images in hours, not weeks',
-       'Reduce labeling cost by 90%',
-       'Improve model accuracy with high-quality labels',
-       'Iterate on training data faster'
-     ],
-     pricing: { basic: '199', pro: '599', enterprise: '1799' },
-     contactInfo: { website: '/ai-services/automated-data-labeling', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🏷️',
-     href: '/ai-services/automated-data-labeling',
-     category: 'ai'
-   },
-   {
-     id: 'meeting-ai-assistant',
-     title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
-     description: "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
-     features: [
-       'Cloud recording & real-time transcription',
-       'Speaker identification & diarization',
-       'Action item extraction with assignees',
-       'Decision log & key quote highlights',
-       'Sync to Notion/Confluence/ClickUp'
-     ],
-     benefits: [
-       'Never miss an action item again',
-       'Reduce meeting follow-up time by 80%',
-       'Search across all past meeting transcripts',
-       'Onboard new team members with context'
-     ],
-     pricing: { basic: '0', pro: '99', enterprise: '399' },
-     contactInfo: { website: '/ai-services/meeting-ai-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '🎙️',
-     href: '/ai-services/meeting-ai-assistant',
-     category: 'ai'
-   },
-   {
-     id: 'ai-powered-question-answering',
-     title: 'Enterprise AI Question Answering (Internal Knowledge)',
-     description: 'Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.',
-     features: [
-       'RAG over private document corpus',
-       'Source citation & confidence scores',
-       'Multi-department bots (HR, Eng, Sales, Support)',
-       'Feedback loop to improve answers',
-       'Analytics: most-asked questions, gaps in docs'
-     ],
-     benefits: [
-       'Reduce internal support tickets by 50%',
-       'Onboard new hires instantly with accurate answers',
-       'Keep institutional knowledge accessible',
-       'Identify undocumented processes'
-     ],
-     pricing: { basic: '299', pro: '799', enterprise: '2299' },
-     contactInfo: { website: '/ai-services/ai-powered-question-answering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-     icon: '💬',
-     href: '/ai-services/ai-powered-question-answering',
-     category: 'ai'
-   },  {
-    id: 'ai-dyslexia-assist',
-    title: 'AI Dyslexia Assist',
-    description: `Real-time reading & writing assistance for dyslexic users with personalized text-to-speech, word prediction, and phonetic correction.`,
-    features: ["Live text highlighting", "Custom font recommendations", "Smart spell-check tuned for dyslexia", "Audio playback with adjustable speed"],
-    benefits: ["Improves reading speed by up to 40%", "Reduces writing errors by 60%", "Boosts confidence in professional communication"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/ai-services/ai-dyslexia-assist',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📖',
-    href: '/ai-services/ai-dyslexia-assist',
-    category: 'ai'
-  },
-
-  {
+   },,
+{
     id: 'ai-supply-chain-predictor',
     title: 'AI Supply Chain Predictor',
     description: `Predicts supply chain disruptions 14–30 days in advance using multi-source data: weather, geopolitical events, shipping delays, and supplier health scores.`,
@@ -3243,9 +2300,8 @@ export const aiServices: Service[] = [
     icon: '🚢',
     href: '/ai-services/ai-supply-chain-predictor',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-contract-review',
     title: 'AI Contract Review Assistant',
     description: `Automatically reviews legal contracts, flags risky clauses, suggests amendments, and benchmarks against industry standards.`,
@@ -3260,9 +2316,8 @@ export const aiServices: Service[] = [
     icon: '📝',
     href: '/ai-services/ai-contract-review',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-accessibility-auditor',
     title: 'AI Accessibility Auditor',
     description: `Automated WCAG 2.1 AA compliance scans for websites & apps with screen-reader simulation, color contrast testing, and keyboard navigation checks.`,
@@ -3277,9 +2332,8 @@ export const aiServices: Service[] = [
     icon: '♿',
     href: '/ai-services/ai-accessibility-auditor',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-mental-health-chatbot',
     title: 'AI Mental Health Companion',
     description: `Empathetic, HIPAA-compliant chatbot providing CBT-based support, mood tracking, and crisis escalation to licensed professionals.`,
@@ -3294,9 +2348,8 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-services/ai-mental-health-chatbot',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-customer-sentiment-tracker',
     title: 'AI Customer Sentiment Tracker',
     description: `Monitors support tickets, reviews, social mentions, and surveys to produce a real-time Net Promoter Score (NPS) and emotion heatmap.`,
@@ -3311,9 +2364,8 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-customer-sentiment-tracker',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-codebase-doc-generator',
     title: 'AI Codebase Documentation Generator',
     description: `Automatically generates architecture diagrams, API docs, and README files by analyzing your Git repository and code dependencies.`,
@@ -3328,9 +2380,8 @@ export const aiServices: Service[] = [
     icon: '📚',
     href: '/ai-services/ai-codebase-doc-generator',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-competitive-intel-engine',
     title: 'AI Competitive Intel Engine',
     description: `Tracks competitors' pricing changes, feature launches, hiring patterns, and customer reviews to deliver weekly strategic insights.`,
@@ -3345,9 +2396,8 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-competitive-intel-engine',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-voice-cloning-marketing',
     title: 'AI Voice Cloning for Marketing',
     description: `Clone your brand spokesperson's voice to produce personalized video ads, podcast intros, and multilingual marketing content.`,
@@ -3362,9 +2412,8 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-voice-cloning-marketing',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-fraud-detection-finance',
     title: 'AI Fraud Detection for Finance',
     description: `Real-time transaction monitoring for banks, fintechs, and accounting firms with explainable AI decisions and SAR report generation.`,
@@ -3379,9 +2428,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-fraud-detection-finance',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-legal-contract-redaction',
     title: 'AI Legal Contract Redaction',
     description: `Automatically redacts PII, trade secrets, and privileged information from legal documents before sharing or discovery.`,
@@ -3396,9 +2444,8 @@ export const aiServices: Service[] = [
     icon: '🔒',
     href: '/ai-services/ai-legal-contract-redaction',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-sustainability-carbon-tracker',
     title: 'AI Sustainability & Carbon Tracker',
     description: `Automatically calculates organizational carbon footprint from operational data (energy, travel, cloud usage) and suggests reduction strategies.`,
@@ -3413,9 +2460,8 @@ export const aiServices: Service[] = [
     icon: '🌱',
     href: '/ai-services/ai-sustainability-carbon-tracker',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-education-tutor',
     title: 'AI 1:1 Tutor for K–12 & Higher Ed',
     description: `Personalized learning companion that adapts to student's pace, identifies knowledge gaps, and provides Socratic questioning to deepen understanding.`,
@@ -3430,9 +2476,8 @@ export const aiServices: Service[] = [
     icon: '🎓',
     href: '/ai-services/ai-education-tutor',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-retail-recommendation-engine',
     title: 'AI Retail Recommendation Engine',
     description: `Product recommendation engine for e-commerce that increases AOV by 15–25% using collaborative filtering, basket analysis, and real-time behavior.`,
@@ -3447,9 +2492,8 @@ export const aiServices: Service[] = [
     icon: '🛒',
     href: '/ai-services/ai-retail-recommendation-engine',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-aiops-anomaly-detection',
     title: 'AI-AIOps Anomaly Detection',
     description: `Detects infrastructure anomalies (CPU, memory, error rates) before they cause outages using unsupervised learning and seasonal decomposition.`,
@@ -3464,9 +2508,8 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/ai-aiops-anomaly-detection',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-media-monitoring',
     title: 'AI Media & News Monitoring',
     description: `Tracks global news, podcasts, and video transcripts for brand mentions, sentiment shifts, and crisis signals in real time.`,
@@ -3481,9 +2524,8 @@ export const aiServices: Service[] = [
     icon: '📰',
     href: '/ai-services/ai-media-monitoring',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-accessibility-optimizer',
     title: 'AI Accessibility Content Optimizer',
     description: `Suggests alt-text for images, transcript generation for videos, and semantic HTML improvements to boost accessibility and SEO simultaneously.`,
@@ -3498,12 +2540,8 @@ export const aiServices: Service[] = [
     icon: '🔧',
     href: '/ai-services/ai-accessibility-optimizer',
     category: 'ai'
-  },
-
-
-// New AI services batch — inserted automatically
-
-  {
+  },,
+{
     id: 'ai-realtime-translation',
     title: 'Real-Time Translation Engine',
     description: `Sub-200ms speech-to-text and text-to-speech translation across 70+ languages with dialect preservation.`,
@@ -3518,9 +2556,8 @@ export const aiServices: Service[] = [
     icon: '🌐',
     href: '/ai-services/ai-realtime-translation',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-contract-analyzer-pro',
     title: 'Contract Analyzer Pro',
     description: `Automated legal contract review with risk scoring, clause extraction, and compliance checking against 200+ global regulations.`,
@@ -3535,26 +2572,8 @@ export const aiServices: Service[] = [
     icon: '📜',
     href: '/ai-services/ai-contract-analyzer-pro',
     category: 'ai'
-  },
-
-  {
-    id: 'ai-code-review-assistant',
-    title: 'AI Code Review Assistant',
-    description: `Static analysis + LLM-powered code review that understands intent. Catches bugs, security flaws, performance anti-patterns across 15+ languages.`,
-    features: ["Multi-language support", "Security vulnerability detection", "Performance anti-pattern\u8bc6\u522b", "Auto-suggest fixes", "GitHub/GitLab/Bitbucket integration"],
-    benefits: ["Improve code quality before merge", "Reduce senior dev review time by 60%", "Onboard juniors faster"],
-    pricing: {"basic":"99","pro":"299","enterprise":"799"},
-    contactInfo: {
-      website: '/ai-services/ai-code-review-assistant',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔍',
-    href: '/ai-services/ai-code-review-assistant',
-    category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-competitor-intelligence',
     title: 'Competitor Intelligence Engine',
     description: `Automated competitor tracking: pricing changes, feature releases, marketing campaigns from 10K+ sources. Weekly digest + real-time alerts.`,
@@ -3569,9 +2588,8 @@ export const aiServices: Service[] = [
     icon: '🎯',
     href: '/ai-services/ai-competitor-intelligence',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-email-campaign-generator',
     title: 'Email Campaign Generator',
     description: `End-to-end email marketing: Generate sequences, personalize per recipient, A/B test subject lines, optimize send times.`,
@@ -3586,26 +2604,8 @@ export const aiServices: Service[] = [
     icon: '📧',
     href: '/ai-services/ai-email-campaign-generator',
     category: 'ai'
-  },
-
-  {
-    id: 'ai-supply-chain-predictor',
-    title: 'Supply Chain Predictor',
-    description: `Demand forecasting, inventory optimization, and route planning using time-series ML. Reduces stockouts by 45% and carrying costs by 30%.`,
-    features: ["Demand forecasting (90-day)", "Inventory reorder points", "Route optimization", "Supplier risk scoring", "Real-time dashboards"],
-    benefits: ["Never run out of stock", "Lower warehouse costs", "Faster delivery times"],
-    pricing: {"basic":"399","pro":"899","enterprise":"2499"},
-    contactInfo: {
-      website: '/ai-services/ai-supply-chain-predictor',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚚',
-    href: '/ai-services/ai-supply-chain-predictor',
-    category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-voice-assistant-pro',
     title: 'Voice Assistant Pro',
     description: `Custom voice assistants for brands: wake-word detection, natural-language task execution, multi-turn dialog. Deploy on-premise or cloud.`,
@@ -3620,9 +2620,8 @@ export const aiServices: Service[] = [
     icon: '📞',
     href: '/ai-services/ai-voice-assistant-pro',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-revenue-optimizer',
     title: 'Revenue Optimization Engine',
     description: `AI-driven pricing, upsell recommendations, and churn prediction. Analyzes customer behavior, market trends to maximize LTV.`,
@@ -3637,9 +2636,8 @@ export const aiServices: Service[] = [
     icon: '💰',
     href: '/ai-services/ai-revenue-optimizer',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-knowledge-graph-builder',
     title: 'Knowledge Graph Builder',
     description: `Automatically structure unstructured data into queryable knowledge graph. Entity extraction, relationship mapping, semantic search.`,
@@ -3654,9 +2652,8 @@ export const aiServices: Service[] = [
     icon: '🕸️',
     href: '/ai-services/ai-knowledge-graph-builder',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-fraud-detection-real-time',
     title: 'Real-Time Fraud Detection',
     description: `ML models trained on transaction data to detect anomalies in milliseconds. Adaptive learning reduces false positives over time.`,
@@ -3671,9 +2668,8 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-fraud-detection-real-time',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-social-sentiment-tracker',
     title: 'Social Sentiment Tracker',
     description: `Monitor brand sentiment across Twitter, Reddit, news, forums in real-time. Crisis detection alerts before issues go viral.`,
@@ -3688,9 +2684,8 @@ export const aiServices: Service[] = [
     icon: '📢',
     href: '/ai-services/ai-social-sentiment-tracker',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-automated-reporting',
     title: 'Automated Reporting Engine',
     description: `Turn raw data into formatted PDF/PPT reports with natural language summaries. Schedule distributions to stakeholders.`,
@@ -3705,9 +2700,8 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-automated-reporting',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-predictive-maintenance-factory',
     title: 'Predictive Maintenance for Manufacturing',
     description: `IoT sensor fusion + ML to predict equipment failures 7–30 days in advance. Reduces downtime by 50%, extends asset life.`,
@@ -3722,9 +2716,8 @@ export const aiServices: Service[] = [
     icon: '🏭',
     href: '/ai-services/ai-predictive-maintenance-factory',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-customer-360',
     title: 'Customer 360 Unified Profile',
     description: `Aggregate all customer data (CRM, support, usage, billing) into single timeline. AI suggests next best action per customer.`,
@@ -3739,9 +2732,8 @@ export const aiServices: Service[] = [
     icon: '👤',
     href: '/ai-services/ai-customer-360',
     category: 'ai'
-  },
-
-  {
+  },,
+{
     id: 'ai-talent-acquisition-platform',
     title: 'AI Talent Acquisition Platform',
     description: `End-to-end recruiting: resume parsing, candidate matching, interview scheduling, bias detection. Integrates with Greenhouse, Lever.`,
@@ -3756,1840 +2748,8 @@ export const aiServices: Service[] = [
     icon: '👥',
     href: '/ai-services/ai-talent-acquisition-platform',
     category: 'ai'
-  }
-];
-
-export const itServices: Service[] = [
-  {
-    id: 'cloud-migration',
-    title: 'Cloud Migration & Modernization',
-    description: 'Seamless migration to AWS, Azure, or GCP with zero downtime, cost optimization, and infrastructure-as-code automation.',
-    features: [
-      'Multi-cloud migration planning',
-      'Zero-downtime migration execution',
-      'Cost optimization & right-sizing',
-      'Infrastructure-as-Code (Terraform/Pulumi)',
-      'Post-migration performance tuning'
-    ],
-    benefits: [
-      'Up to 40% cost savings on cloud spend',
-      '99.99% uptime SLA during migration',
-      'Eliminate technical debt',
-      'Scalable cloud-native architecture'
-    ],
-    pricing: {
-      basic: '1999',
-      pro: '4999',
-      enterprise: '9999'
-    },
-    contactInfo: {
-      website: '/it-services/cloud-migration',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '☁️',
-    href: '/it-services/cloud-migration',
-    popular: true,
-    category: 'cloud'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity & Penetration Testing',
-    description: 'Comprehensive security assessments, vulnerability management, and incident response to protect your digital assets.',
-    features: [
-      'Network & web application penetration testing',
-      'Vulnerability scanning & remediation',
-      'Security awareness training',
-      'Incident response & forensics',
-      'Compliance audits (SOC 2, ISO 27001)'
-    ],
-    benefits: [
-      'Identify critical vulnerabilities before attackers',
-      'Meet regulatory compliance requirements',
-      'Reduce breach risk by 90%',
-      '24/7 threat monitoring'
-    ],
-    pricing: {
-      basic: '2499',
-      pro: '5999',
-      enterprise: '14999'
-    },
-    contactInfo: {
-      website: '/it-services/cybersecurity',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔒',
-    href: '/it-services/cybersecurity',
-    popular: true,
-    category: 'security'
-  },
-  {
-    id: 'data-engineering',
-    title: 'Data Engineering & ETL Pipelines',
-    description: 'Build robust data pipelines, ETL/ELT workflows, and data lake architectures for real-time and batch processing.',
-    features: [
-      'ETL/ELT pipeline design & deployment',
-      'Data lake & warehouse architecture',
-      'Real-time stream processing (Kafka, Spark)',
-      'Data quality monitoring & validation',
-      'Schema evolution & versioning'
-    ],
-    benefits: [
-      'Unified data platform',
-      '50% faster data delivery',
-      'Automated data quality checks',
-      'Scalable to petabyte volumes'
-    ],
-    pricing: {
-      basic: '2999',
-      pro: '6999',
-      enterprise: '15999'
-    },
-    contactInfo: {
-      website: '/it-services/data-engineering',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔧',
-    href: '/it-services/data-engineering',
-    category: 'data'
-  },
-  {
-    id: 'devops-cicd',
-    title: 'DevOps & CI/CD Automation',
-    description: 'End-to-end CI/CD pipelines, container orchestration, GitOps workflows, and site reliability engineering.',
-    features: [
-      'Automated CI/CD pipeline setup (GitHub Actions, GitLab CI)',
-      'Kubernetes orchestration & management',
-      'Infrastructure as Code (Terraform, Ansible)',
-      '24/7 site reliability monitoring',
-      'Blue-green & canary deployments'
-    ],
-    benefits: [
-      'Deploy 10x faster with zero downtime',
-      'Automated testing & quality gates',
-      'Reduced operational overhead by 60%',
-      'Self-healing infrastructure'
-    ],
-    pricing: {
-      basic: '1999',
-      pro: '4499',
-      enterprise: '9999'
-    },
-    contactInfo: {
-      website: '/it-services/devops-cicd',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '⚙️',
-    href: '/it-services/devops-cicd',
-    popular: true,
-    category: 'automation'
-  },
-  {
-    id: 'saas-development',
-    title: 'SaaS Product Development',
-    description: 'Full-stack SaaS development from concept to launch — MVP, scaling, and product-market fit optimization.',
-    features: [
-      'MVP rapid prototyping (4-6 weeks)',
-      'Full-stack architecture design',
-      'User authentication & RBAC',
-      'Payment integration (Stripe, Paddle)',
-      'Analytics & usage tracking built-in'
-    ],
-    benefits: [
-      'Go from idea to launch in weeks',
-      'Scalable multi-tenant architecture',
-      'Built-in billing & subscription management',
-      'Post-launch support & iteration'
-    ],
-    pricing: {
-      basic: '4999',
-      pro: '12999',
-      enterprise: '29999'
-    },
-    contactInfo: {
-      website: '/it-services/saas-development',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚀',
-    href: '/it-services/saas-development',
-    category: 'it'
-  },
-  {
-    id: 'api-integration',
-    title: 'API Development & Integration',
-    description: 'Custom API design, development, and integration — REST, GraphQL, Webhooks, and third-party service connectors.',
-    features: [
-      'RESTful & GraphQL API design',
-      'Third-party API integrations',
-      'Webhook architecture & event systems',
-      'API gateway & rate limiting',
-      'API documentation & versioning (OpenAPI/Swagger)'
-    ],
-    benefits: [
-      'Seamless system interoperability',
-      'Reduced development time by 50%',
-      'Future-proof API architecture',
-      'Automated API documentation'
-    ],
-    pricing: {
-      basic: '1499',
-      pro: '3999',
-      enterprise: '8999'
-    },
-    contactInfo: {
-      website: '/it-services/api-integration',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔗',
-    href: '/it-services/api-integration',
-    category: 'it'
-  },
-  {
-    id: 'database-optimization',
-    title: 'Database Optimization & Management',
-    description: 'Database performance tuning, query optimization, migration, and high-availability clustering for PostgreSQL, MySQL, MongoDB, and more.',
-    features: [
-      'Query performance analysis & optimization',
-      'Database schema design & migration',
-      'High-availability & replication setup',
-      'Automated backup & disaster recovery',
-      'Index optimization & caching strategies'
-    ],
-    benefits: [
-      'Up to 10x query performance improvement',
-      'Zero data loss with automated backups',
-      '99.99% database uptime',
-      'Cost-efficient resource utilization'
-    ],
-    pricing: {
-      basic: '1499',
-      pro: '3499',
-      enterprise: '7999'
-    },
-    contactInfo: {
-      website: '/it-services/database-optimization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/database-optimization',
-    category: 'data'
-  },
-  {
-    id: 'monitoring-observability',
-    title: 'Monitoring & Observability',
-    description: 'Full-stack monitoring with real-time dashboards, alerting, log aggregation, and distributed tracing for your entire infrastructure.',
-    features: [
-      'Real-time dashboards & custom metrics',
-      'Proactive alerting (PagerDuty, OpsGenie)',
-      'Centralized log aggregation (ELK/Loki)',
-      'Distributed tracing (Jaeger, OpenTelemetry)',
-      'Uptime monitoring from 20+ global locations'
-    ],
-    benefits: [
-      'Mean time to detection (MTTD) reduced by 80%',
-      'Proactive issue resolution',
-      'Single pane of glass for all services',
-      'Capacity planning insights'
-    ],
-    pricing: {
-      basic: '999',
-      pro: '2499',
-      enterprise: '5999'
-    },
-    contactInfo: {
-      website: '/it-services/monitoring-observability',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📡',
-    href: '/it-services/monitoring-observability',
-    category: 'automation'
-  },
-  {
-    id: 'it-consulting',
-    title: 'IT Strategy & Digital Transformation Consulting',
-    description: 'Strategic technology consulting — digital transformation roadmaps, tech stack evaluation, and CTO-as-a-service.',
-    features: [
-      'Technology stack assessment & recommendations',
-      'Digital transformation roadmap',
-      'CTO-as-a-service (fractional)',
-      'Vendor evaluation & selection',
-      'Technical due diligence for M&A'
-    ],
-    benefits: [
-      'Data-driven technology decisions',
-      'Reduce wasted spend on wrong tools',
-      'Accelerate digital transformation by 2x',
-      'Access to C-level technical expertise'
-    ],
-    pricing: {
-      basic: '2499',
-      pro: '5999',
-      enterprise: '14999'
-    },
-    contactInfo: {
-      website: '/it-services/it-consulting',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💡',
-    href: '/it-services/it-consulting',
-    category: 'it'
-  },
-  {
-    id: 'accessibility-compliance',
-    title: 'Accessibility & WCAG Compliance',
-    description: 'Automated WCAG 2.2 auditing, AI-powered remediation suggestions, screen reader simulation, and continuous accessibility compliance monitoring.',
-    features: ['WCAG 2.2 AA/AAA automated auditing', 'Screen reader simulation & navigation testing', 'Auto-generated remediation code snippets', 'Color contrast & typography analysis', 'Continuous CI/CD accessibility gates'],
-    benefits: ['Reduce ADA lawsuit risk substantially', 'Improve UX for all users', 'Automated compliance reporting', 'Proactive CI/CD testing integration'],
-    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
-    contactInfo: { website: '/it-services/accessibility-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '♿',
-    href: '/it-services/accessibility-compliance',
-    category: 'it'
-  },
-  {
-    id: 'cloud-cost-optimization-service',
-    title: 'Cloud Cost Optimization (FinOps)',
-    description: 'ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.',
-    features: ['Multi-cloud unified cost visibility', 'ML-driven instance right-sizing', 'Reserved instance & savings plan optimizer', 'Idle resource detection & cleanup', 'Showback/chargeback automation'],
-    benefits: ['Average 35% cloud cost reduction', 'Cross-cloud spend optimization', 'Real-time anomaly detection alerts', 'Executive-ready FinOps dashboards'],
-    pricing: { basic: '499', pro: '1299', enterprise: '2999' },
-    contactInfo: { website: '/it-services/cloud-cost-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '💰',
-    href: '/it-services/cloud-cost-optimization',
-    category: 'cloud'
-  },
-  {
-    id: 'supply-chain-management-service',
-    title: 'Supply Chain Management Platform',
-    description: 'End-to-end supply chain orchestration with AI demand forecasting, multi-modal route optimization, supplier risk scoring, and real-time disruption response.',
-    features: ['AI-driven demand forecasting', 'Multi-modal route optimization', 'Supplier risk intelligence & monitoring', 'Automated disruption response playbooks', 'Warehouse operations AI optimization'],
-    benefits: ['40% reduction in stockouts', '25% lower logistics costs', 'Real-time supplier risk alerts', 'Sustainability & carbon tracking'],
-    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/supply-chain-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🚛',
-    href: '/it-services/supply-chain-management',
-    category: 'automation'
-  },
-  {
-    id: 'it-network-security-monitoring',
-    title: 'Network Security Monitoring & SIEM',
-    description: 'Real-time network traffic analysis, threat correlation, and centralized Security Information and Event Management (SIEM) for enterprises requiring continuous security posture visibility.',
-    features: ['24/7 network traffic monitoring & flow analysis', 'Centralized SIEM with log aggregation', 'Threat correlation engine with automated alerting', 'Custom dashboard & compliance reporting', 'Integration with firewalls, IDS/IPS, and endpoint protection'],
-    benefits: ['Detect lateral movement within minutes, not months', 'Centralize security visibility across all infrastructure', 'Reduce alert fatigue with intelligent correlation', 'Meet regulatory requirements with automated reports'],
-    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/network-security-monitoring', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🛡️',
-    href: '/it-services/network-security-monitoring',
-    category: 'security'
-  },
-  {
-    id: 'it-edge-computing-solutions',
-    title: 'Edge Computing & IoT Infrastructure',
-    description: 'Deploy compute closer to your data sources with edge computing architecture — low-latency processing, distributed AI inference, and resilient IoT device management.',
-    features: ['Edge server deployment & configuration', 'Container orchestration at the edge (K3s, KubeEdge)', 'IoT device provisioning & lifecycle management', 'Low-latency AI inference on edge hardware', 'Offline-first data synchronization with cloud'],
-    benefits: ['Sub-10ms response times for critical applications', 'Reduce cloud data transfer costs by 60%', 'Operate autonomously during network outages', 'Scale IoT deployments to thousands of devices'],
-    pricing: { basic: '1299', pro: '2999', enterprise: '6499' },
-    contactInfo: { website: '/it-services/edge-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📡',
-    href: '/it-services/edge-computing',
-    category: 'cloud'
-  },
-  {
-    id: 'it-disaster-recovery',
-    title: 'Disaster Recovery & Business Continuity',
-    description: 'Comprehensive disaster recovery planning, automated failover systems, and business continuity solutions ensuring zero data loss and minimal downtime for mission-critical operations.',
-    features: ['RTO/RPO analysis & recovery strategy design', 'Multi-region backup & replication automation', 'Automated failover testing & validation', 'Runbook creation & disaster response playbooks', 'Continuous compliance monitoring for DR readiness'],
-    benefits: ['Guarantee 99.99% uptime with automated failover', 'Reduce recovery time from days to minutes', 'Pass compliance DR audits on first attempt', 'Protect brand reputation with always-on services'],
-    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
-    contactInfo: { website: '/it-services/disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔄',
-    href: '/it-services/disaster-recovery',
-    category: 'cloud'
-  },
-  {
-    id: 'it-itil-service-management',
-    title: 'ITIL Service Management (ITSM) Platform',
-    description: 'Full ITIL-aligned service management with AI-powered ticketing, change management automation, CMDB discovery, and self-service portal for enterprise IT operations.',
-    features: ['AI-powered incident classification & routing', 'Automated change approval workflows', 'Service catalog & self-service portal', 'CMDB auto-discovery & dependency mapping', 'SLA monitoring & escalation engine', 'Knowledge base integration with AI search'],
-    benefits: ['Reduce ticket resolution time by 50%', 'Eliminate change-related outages with automated validation', 'Empower users with self-service capabilities', 'Maintain accurate service dependency maps'],
-    pricing: { basic: '499', pro: '1099', enterprise: '2499' },
-    contactInfo: { website: '/it-services/itil-service-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📋',
-    href: '/it-services/itil-service-management',
-    category: 'it'
-  },
-  {
-    id: 'it-zero-trust-architecture',
-    title: 'Zero Trust Security Architecture',
-    description: 'Implement Zero Trust principles across your enterprise — identity verification, micro-segmentation, least-privilege access, and continuous authentication for every request.',
-    features: ['Identity & Access Management (IAM) modernization', 'Micro-segmentation of network workloads', 'Continuous adaptive risk & trust assessment', 'Device posture checking & conditional access', 'Privileged Access Management (PAM) integration'],
-    benefits: ['Eliminate implicit trust across the network', 'Reduce breach impact with micro-segmentation', 'Meet CISA Zero Trust maturity requirements', 'Secure hybrid and remote workforces uniformly'],
-    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
-    contactInfo: { website: '/it-services/zero-trust-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔐',
-    href: '/it-services/zero-trust-architecture',
-    category: 'security'
-  },
-  {
-    id: 'it-kubernetes-management',
-    title: 'Container Orchestration & Kubernetes Management',
-    description: 'Enterprise Kubernetes deployment, management, and optimization — multi-cluster orchestration, GitOps workflows, and service mesh implementation.',
-    features: ['Multi-cluster Kubernetes orchestration', 'GitOps deployment pipelines with ArgoCD', 'Service mesh implementation (Istio, Linkerd)', 'Automated scaling and self-healing', 'Cost optimization and resource right-sizing'],
-    benefits: ['Reduce infrastructure costs by 40%', 'Zero-downtime deployments with blue-green', 'Accelerate developer velocity 3x', 'Enterprise-grade reliability and observability'],
-    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
-    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🐳',
-    href: '/it-services/kubernetes-management',
-    category: 'cloud'
-  },
-  {
-    id: 'it-penetration-testing',
-    title: 'Penetration Testing & Vulnerability Assessment',
-    description: 'Comprehensive security testing — network, web application, API, and social engineering assessments with detailed remediation reports and retesting.',
-    features: ['Black-box and white-box penetration testing', 'Web application and API security testing', 'Social engineering and phishing simulations', 'Wireless and network infrastructure testing', 'Detailed remediation reports with retesting'],
-    benefits: ['Identify vulnerabilities before attackers do', 'Meet PCI-DSS, HIPAA, and SOC 2 testing requirements', 'Reduce attack surface with actionable reports', 'Validate security controls effectiveness'],
-    pricing: { basic: '2999', pro: '5999', enterprise: '12999' },
-    contactInfo: { website: '/it-services/penetration-testing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔓',
-    href: '/it-services/penetration-testing',
-    category: 'security'
-  },
-  {
-    id: 'it-blockchain-development',
-    title: 'Blockchain Development & Smart Contract Auditing',
-    description: 'End-to-end blockchain solution development — smart contract creation, security auditing, tokenomics design, and Web3 integration for enterprises.',
-    features: ['Smart contract development and deployment', 'Formal verification and security auditing', 'Tokenomics and governance design', 'DeFi protocol integration and development', 'Enterprise blockchain consulting and strategy'],
-    benefits: ['Launch secure blockchain products faster', 'Prevent exploits with formal verification', 'Access decentralized finance opportunities', 'Enterprise-grade blockchain integration'],
-    pricing: { basic: '4999', pro: '9999', enterprise: '24999' },
-    contactInfo: { website: '/it-services/blockchain-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '⛓️',
-    href: '/it-services/blockchain-development',
-    category: 'it'
-  },
-  {
-    id: 'it-quantum-readiness',
-    title: 'Quantum Computing Readiness Assessment',
-    description: 'Evaluate your organization quantum readiness, identify cryptographic vulnerabilities, and develop migration strategies for post-quantum security standards.',
-    features: ['Post-quantum cryptography assessment', 'Quantum vulnerability scanning across systems', 'NIST PQC migration roadmap development', 'Quantum-safe encryption implementation', 'Executive quantum risk briefing and training'],
-    benefits: ['Prepare for quantum computing threats proactively', 'Comply with emerging NIST PQC standards', 'Protect long-lived encrypted data from harvest-now-decrypt-later', 'Position as quantum-ready enterprise leader'],
-    pricing: { basic: '3499', pro: '7999', enterprise: '18999' },
-    contactInfo: { website: '/it-services/quantum-readiness', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔮',
-    href: '/it-services/quantum-readiness',
-    category: 'security'
-  },
-  {
-    id: 'it-5g-network-deployment',
-    title: '5G Network Planning & Deployment',
-    description: 'End-to-end 5G network architecture, RF planning, edge computing integration, and private 5G deployment for enterprise campuses and industrial IoT.',
-    features: ['5G network architecture and RF planning', 'Private 5G network deployment for campuses', 'Edge computing integration with 5G infrastructure', 'Network slicing design and implementation', 'Industrial IoT connectivity and optimization'],
-    benefits: ['Ultra-low latency for mission-critical applications', 'Massive IoT device connectivity at scale', 'Secure private networks off public infrastructure', 'Future-proof connectivity for digital transformation'],
-    pricing: { basic: '9999', pro: '19999', enterprise: '49999' },
-    contactInfo: { website: '/it-services/5g-network-deployment', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📶',
-    href: '/it-services/5g-network-deployment',
-    category: 'cloud'
-  },
-  {
-    id: 'it-digital-twin-platform',
-    title: 'Digital Twin & IoT Platform Development',
-    description: 'Build real-time digital replicas of physical systems — factory floors, supply chains, and smart cities with predictive simulation and optimization capabilities.',
-    features: ['3D digital twin modeling and visualization', 'Real-time IoT sensor data ingestion and mapping', 'Predictive simulation and what-if scenario analysis', 'Integration with CAD, BIM, and ERP systems', 'Automated alerts and anomaly detection'],
-    benefits: ['Simulate changes before real-world implementation', 'Reduce operational downtime by 40%', 'Optimize resource allocation with predictive modeling', 'Unified visibility across complex physical-digital systems'],
-    pricing: { basic: '5999', pro: '12999', enterprise: '29999' },
-    contactInfo: { website: '/it-services/digital-twin-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🏗️',
-    href: '/it-services/digital-twin-platform',
-    category: 'automation'
-  },
-  {
-    id: 'it-microservices-architecture',
-    title: 'Microservices Architecture & API Gateway Design',
-    description: 'Design and implement scalable microservices architectures with API gateways, service discovery, distributed tracing, and event-driven communication patterns.',
-    features: ['Domain-driven service decomposition', 'API gateway design and implementation (Kong, APISIX)', 'Service mesh deployment (Istio, Linkerd)', 'Distributed tracing and observability', 'Event-driven architecture with message brokers'],
-    benefits: ['Independent deployment and scaling per service', 'Reduced blast radius for failures', 'Technology polyglotism for optimal tooling', 'Accelerated development velocity with team autonomy'],
-    pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
-    contactInfo: { website: '/it-services/microservices-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🧩',
-    href: '/it-services/microservices-architecture',
-    category: 'cloud'
-  },
-  {
-    id: 'it-observability-platform',
-    title: 'Observability Platform & SRE Consulting',
-    description: 'End-to-end observability implementation with distributed tracing, log aggregation, metrics collection, and Site Reliability Engineering best practices.',
-    features: ['Unified observability stack (Prometheus, Grafana, Jaeger)', 'Custom SLO/SLI definition and dashboard creation', 'Incident management with automated runbooks', 'Chaos engineering and resilience testing', 'SRE consulting and reliability maturity assessment'],
-    benefits: ['Reduce MTTR by 60% with intelligent alerting', 'Eliminate alert fatigue with smart correlation', 'Proactive issue detection before user impact', 'Build engineering team reliability practices'],
-    pricing: { basic: '1299', pro: '2999', enterprise: '6999' },
-    contactInfo: { website: '/it-services/observability-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📊',
-    href: '/it-services/observability-platform',
-    category: 'cloud'
-  },
-  {
-    id: 'it-data-mesh-implementation',
-    title: 'Data Mesh & Modern Data Platform Architecture',
-    description: 'Implement data mesh architecture with domain-oriented data ownership, self-serve data infrastructure, and federated computational governance.',
-    features: ['Domain-oriented data product design', 'Self-serve data platform implementation', 'Federated computational governance framework', 'Data quality and lineage automation', 'Multi-cloud data lakehouse architecture'],
-    benefits: ['Break down data silos with domain ownership', 'Scale analytics across the organization', 'Improve data quality with automated checks', 'Reduce data engineering bottleneck by 70%'],
-    pricing: { basic: '2999', pro: '6999', enterprise: '16999' },
-    contactInfo: { website: '/it-services/data-mesh', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🗄️',
-    href: '/it-services/data-mesh',
-    category: 'data'
-  },
-  {
-    id: 'it-platform-engineering',
-    title: 'Platform Engineering & Internal Developer Portal',
-    description: 'Build internal developer platforms with self-service infrastructure provisioning, golden paths, and developer experience optimization to accelerate team productivity.',
-    features: ['Internal developer platform (IDP) deployment', 'Self-service infrastructure provisioning', 'Golden path templates and scaffolding', 'Developer experience metrics and optimization', 'Integration with existing CI/CD pipelines'],
-    benefits: ['Reduce developer onboarding time by 80%', 'Eliminate infrastructure request bottleneck', 'Standardize best practices across teams', 'Accelerate feature delivery by 2-3x'],
-    pricing: { basic: '2499', pro: '5499', enterprise: '12999' },
-    contactInfo: { website: '/it-services/platform-engineering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🛠️',
-    href: '/it-services/platform-engineering',
-    category: 'cloud'
-  },
-  {
-    id: 'it-wireless-network-design',
-    title: 'Wireless Network Design & Optimization',
-    description: 'Enterprise Wi-Fi and wireless infrastructure design, site surveys, RF optimization, and capacity planning for campuses, warehouses, and smart buildings.',
-    features: ['Predictive and on-site RF surveys', 'Capacity planning and density optimization', 'IoT and sensor network design', 'Seamless roaming and load balancing', 'Security hardening (WPA3, 802.1X, NAC)'],
-    benefits: ['Eliminate dead zones with precision design', 'Support 10,000+ concurrent devices per site', 'Seamless IoT and traditional device integration', 'Future-proof for Wi-Fi 6E and Wi-Fi 7'],
-    pricing: { basic: '2999', pro: '7499', enterprise: '18999' },
-    contactInfo: { website: '/it-services/wireless-network', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📡',
-    href: '/it-services/wireless-network',
-    category: 'cloud'
-  },
-  {
-    id: 'it-automation-orchestrator',
-    title: 'IT Automation & Orchestration Platform',
-    description: 'Enterprise IT automation platform with workflow orchestration, infrastructure provisioning, configuration management, and self-healing system capabilities.',
-    features: ['Infrastructure automation with Terraform and Ansible', 'Workflow orchestration across IT systems', 'Self-healing infrastructure with event-driven automation', 'Compliance enforcement and drift detection', 'Centralized automation catalog and governance'],
-    benefits: ['Reduce manual IT operations by 80%', 'Eliminate configuration drift across environments', 'Accelerate service provisioning from days to minutes', 'Maintain compliance with automated enforcement'],
-    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
-    contactInfo: { website: '/it-services/automation-orchestrator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '⚙️',
-    href: '/it-services/automation-orchestrator',
-    category: 'automation'
-  },
-  {
-    id: 'it-serverless-architecture',
-    title: 'Serverless Architecture & Function-as-a-Service',
-    description: 'Design and migrate to serverless architectures - automatic scaling, pay-per-use pricing, and zero infrastructure management across AWS Lambda, Azure, and GCP Cloud Run.',
-    features: ['Serverless architecture design and migration', 'Cold start optimization', 'Event-driven architecture', 'Cost monitoring and function optimization', 'Multi-cloud serverless deployment'],
-    benefits: ['Reduce infrastructure costs by 80%', 'No server management', 'Auto-scaling', 'Pay per compute execution'],
-    pricing: { basic: '1799', pro: '3999', enterprise: '8999' },
-    contactInfo: { website: '/it-services/serverless-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '☁️',
-    href: '/it-services/serverless-architecture',
-    category: 'cloud'
-  },
-  {
-    id: 'it-api-management',
-    title: 'API Management Platform & Developer Portal',
-    description: 'Comprehensive API management - gateway, developer portal, monetization, analytics, and lifecycle management for enterprise API programs.',
-    features: ['API gateway with rate limiting', 'Developer portal with docs and SDKs', 'Lifecycle management', 'Monetization', 'Real-time analytics'],
-    benefits: ['Accelerate API adoption', 'Monetize APIs', 'Protect backends', 'Track performance'],
-    pricing: { basic: '1499', pro: '3299', enterprise: '7499' },
-    contactInfo: { website: '/it-services/api-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔌',
-    href: '/it-services/api-management',
-    category: 'cloud'
-  },
-  {
-    id: 'it-database-as-a-service',
-    title: 'Database-as-a-Service & Managed Data Platforms',
-    description: 'Fully managed databases - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch with automated backups, scaling, and AI-powered optimization.',
-    features: ['Multi-engine provisioning', 'Automated backups and PITR', 'AI query optimization', 'Auto-scaling and HA', 'Encryption and compliance'],
-    benefits: ['No DBA overhead needed', '99.99% uptime SLA', 'Optimize queries automatically', 'Scale effortlessly'],
-    pricing: { basic: '799', pro: '1899', enterprise: '4499' },
-    contactInfo: { website: '/it-services/database-as-a-service', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🗄️',
-    href: '/it-services/database-as-a-service',
-    category: 'cloud'
-  },
-  {
-    id: 'it-incident-response',
-    title: 'Incident Response & Security Operations Center',
-    description: '24/7 SOC and incident response - threat detection, investigation, containment, recovery with automated playbooks and forensics.',
-    features: ['24/7 monitoring', 'Auto detection and classification', 'Response playbook automation', 'Digital forensics', 'Executive reporting'],
-    benefits: ['Reduce MTTD by 80%', 'Automated containment', 'Compliance-ready docs', 'Expert IR on demand'],
-    pricing: { basic: '2999', pro: '6499', enterprise: '14999' },
-    contactInfo: { website: '/it-services/incident-response', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🚨',
-    href: '/it-services/incident-response',
-    category: 'security'
-  },
-  {
-    id: 'it-voice-infrastructure',
-    title: 'Voice Infrastructure & Contact Center Solutions',
-    description: 'Modern contact center infrastructure - SIP trunking, IVR design, call routing, quality monitoring, and AI agent assistance.',
-    features: ['SIP and VoIP infrastructure', 'Intelligent routing and IVR', 'Call quality monitoring', 'AI agent assistance', 'Omnichannel integration'],
-    benefits: ['Reduce voice costs by 40%', 'Improve CSAT with smart routing', 'Call analytics insights', 'CRM integration ready'],
-    pricing: { basic: '1299', pro: '2899', enterprise: '6499' },
-    contactInfo: { website: '/it-services/voice-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📞',
-    href: '/it-services/voice-infrastructure',
-    category: 'cloud'
-  },
-  {
-    id: 'it-identity-access-management',
-    title: 'Identity & Access Management (IAM) Platform',
-    description: 'Enterprise IAM with SSO, MFA, PAM, and automated access provisioning across cloud and on-premise systems — Zero Trust-ready identity governance.',
-    features: ['Single sign-on (SSO) with 5000+ app integrations', 'Adaptive multi-factor authentication with risk scoring', 'Privileged access management (PAM) with session recording', 'Automated access provisioning and de-provisioning', 'Identity governance with access certification workflows'],
-    benefits: ['Reduce access-related incidents by 90%', 'Achieve 100% compliance with identity best practices', 'Eliminate orphaned accounts and access creep', 'Seamless experience with frictionless SSO for users'],
-    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
-    contactInfo: { website: '/it-services/iam-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔑',
-    href: '/it-services/iam-platform',
-    category: 'security'
-  },
-  {
-    id: 'it-capacity-planning',
-    title: 'IT Capacity Planning & Resource Forecasting',
-    description: 'AI-driven capacity planning that forecasts compute, storage, and network requirements based on growth patterns and workload trends across your infrastructure.',
-    features: ['Predictive capacity forecasting with ML models', 'Workload trend analysis and seasonal pattern detection', 'Cloud vs on-prem cost comparison modeling', 'Automated right-sizing recommendations', 'Budget impact simulation for capacity decisions'],
-    benefits: ['Eliminate surprise capacity crises with early warnings', 'Optimize infrastructure spend by 25-40%', 'Plan capacity with 95% forecast accuracy', 'Make data-driven budget decisions'],
-    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
-    contactInfo: { website: '/it-services/capacity-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📊',
-    href: '/it-services/capacity-planning',
-    category: 'cloud'
-  },
-  {
-    id: 'it-backup-disaster-recovery',
-    title: 'Backup & Disaster Recovery Solutions',
-    description: 'Enterprise-grade backup, replication, and disaster recovery — automated backups, immutable storage, multi-region replication, and one-click failover.',
-    features: ['Automated incremental and full backup scheduling', 'Immutable backup storage (WORM) for ransomware protection', 'Multi-region replication for geographic redundancy', 'One-click disaster recovery with tested failover scripts', 'Compliance reporting and backup integrity verification'],
-    benefits: ['Guarantee RPO of minutes, RTO of hours', 'Protect against ransomware with immutable backups', 'Meet all regulatory data retention requirements', 'Eliminate backup failures with automated monitoring'],
-    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
-    contactInfo: { website: '/it-services/backup-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '💾',
-    href: '/it-services/backup-recovery',
-    category: 'cloud'
-  },
-  {
-    id: 'it-network-automation',
-    title: 'Network Automation & SD-WAN Management',
-    description: 'Automated network configuration, monitoring, and optimization with SD-WAN, intent-based networking, and AI-driven performance management.',
-    features: ['Intent-based network configuration automation', 'SD-WAN deployment and centralized management', 'AI-driven traffic routing and QoS optimization', 'Automated compliance checks and security policy enforcement', 'Network performance monitoring with predictive alerts'],
-    benefits: ['Reduce network change errors by 80%', 'Optimize WAN costs by 40-60% with SD-WAN', 'Automate repetitive network administration tasks', 'Proactively address performance degradations'],
-    pricing: { basic: '999', pro: '2299', enterprise: '5499' },
-    contactInfo: { website: '/it-services/network-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🌐',
-    href: '/it-services/network-automation',
-    category: 'cloud'
-  },
-  {
-    id: 'api_development',
-    title: 'API Development & Integration',
-    description: 'Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/api-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔌',
-    href: '/it-services/api-development',
-    category: 'cloud'
-  },
-  {
-    id: 'backup_disaster_recovery',
-    title: 'Backup & Disaster Recovery',
-    description: 'Enterprise backup solutions with automated disaster recovery, RPO/RSL guarantees, geo-redundant storage, and instant failover for zero data loss.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/backup-disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '💾',
-    href: '/it-services/backup-disaster-recovery',
-    category: 'cloud'
-  },
-  {
-    id: 'cybersecurity_audit',
-    title: 'Cybersecurity Audit',
-    description: 'Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/cybersecurity-audit', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔹',
-    href: '/it-services/cybersecurity-audit',
-    category: 'cloud'
-  },
-  {
-    id: 'data_pipeline_architecture',
-    title: 'Data Pipeline Architecture & Engineering',
-    description: 'Build robust data pipelines with Kafka, Spark, Airflow for real-time and batch processing at enterprise scale.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '3,999', pro: '9,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/data-pipeline-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔧',
-    href: '/it-services/data-pipeline-architecture',
-    category: 'cloud'
-  },
-  {
-    id: 'devops_consulting',
-    title: 'DevOps Consulting & Implementation',
-    description: 'End-to-end DevOps transformation with CI/CD pipeline setup, infrastructure as code, container orchestration, and team training.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '2,499', pro: '7,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/devops-consulting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '⚙️',
-    href: '/it-services/devops-consulting',
-    category: 'cloud'
-  },
-  {
-    id: 'digital_workplace',
-    title: 'Digital Workplace Solutions',
-    description: 'Modern workplace technology stack with collaboration tools, secure remote access, AI assistants, and unified communications for distributed teams.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/digital-workplace', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🏢',
-    href: '/it-services/digital-workplace',
-    category: 'cloud'
-  },
-  {
-    id: 'disaster_recovery_services',
-    title: 'Disaster Recovery & Business Continuity',
-    description: 'Enterprise DR planning, backup automation, geo-redundant infrastructure, and rapid business continuity solutions.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '2,999', pro: '8,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/disaster-recovery-services', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔄',
-    href: '/it-services/disaster-recovery-services',
-    category: 'cloud'
-  },
-  {
-    id: 'endpoint_management',
-    title: 'Endpoint Device Management (MDM)',
-    description: 'Centralized management of all endpoints — laptops, mobile devices, IoT — with automated patching, application deployment, and security policy enfor...',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/endpoint-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📱',
-    href: '/it-services/endpoint-management',
-    category: 'cloud'
-  },
-  {
-    id: 'identity_access_management',
-    title: 'Identity & Access Management (IAM)',
-    description: 'Enterprise IAM with SSO, MFA, privileged access management, and automated provisioning for secure, frictionless access across all applications.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/identity-access-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔑',
-    href: '/it-services/identity-access-management',
-    category: 'cloud'
-  },
-  {
-    id: 'it_asset_management',
-    title: 'IT Asset Management & Lifecycle',
-    description: 'Complete IT asset lifecycle management from procurement to disposal with automated discovery and license tracking.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '799', pro: '1,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/it-asset-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📦',
-    href: '/it-services/it-asset-management',
-    category: 'cloud'
-  },
-  {
-    id: 'it_service_desk',
-    title: 'IT Service Desk & Help Desk',
-    description: 'Multi-channel IT support with AI-powered ticket triage, self-service portals, SLA management, and automated resolution for 60%+ of common issues.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/it-service-desk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎧',
-    href: '/it-services/it-service-desk',
-    category: 'cloud'
-  },
-  {
-    id: 'managed_soc_security',
-    title: 'Managed SOC & Security Operations',
-    description: '24/7 Security Operations Center services with AI-powered threat detection, incident response, and continuous monitoring for your entire infrastruct...',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/managed-soc-security', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🛡️',
-    href: '/it-services/managed-soc-security',
-    category: 'cloud'
-  },
-  {
-    id: 'mobile_development',
-    title: 'Mobile App Development',
-    description: 'Build cross-platform and native mobile applications with AI-powered features, offline-first architecture, and enterprise-grade security.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/mobile-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '📱',
-    href: '/it-services/mobile-development',
-    category: 'cloud'
-  },
-  {
-    id: 'network_infrastructure',
-    title: 'Enterprise Network Infrastructure',
-    description: 'Design, deploy, and manage enterprise-grade networks with SD-WAN, wireless optimization, zero-trust architecture, and real-time performance monitor...',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/network-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🌐',
-    href: '/it-services/network-infrastructure',
-    category: 'cloud'
-  },
-  {
-    id: 'network_security_operations',
-    title: 'Network Security Operations Center',
-    description: '24/7 network security monitoring, threat detection, incident response, and vulnerability management.',
-    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
-    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
-    pricing: { basic: '4,999', pro: '12,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/network-security-operations', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🛡️',
-    href: '/it-services/network-security-operations',
-    category: 'cloud'
-  },
-  {
-    id: 'managed-soc-threat-intelligence',
-    title: 'Managed SOC & Threat Intelligence',
-    description: '24/7 Security Operations Center with AI-enhanced threat detection, incident response, and proactive threat hunting.',
-    features: ['24/7 security monitoring', 'AI-powered threat detection', 'Incident response automation', 'Proactive threat hunting', 'Compliance reporting'],
-    benefits: ['Detect threats in real-time', 'Reduce mean response time to minutes', 'Meet SOC 2 and ISO 27001 requirements', 'Protect against zero-day attacks'],
-    pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
-    contactInfo: { website: '/it-services/managed-soc-threat-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🔒',
-    href: '/it-services/managed-soc-threat-intelligence',
-    category: 'it'
-  },
-  {
-    id: 'kubernetes-management',
-    title: 'Container Orchestration & Kubernetes Management',
-    description: 'Expert Kubernetes deployment, scaling, monitoring, and optimization for containerized applications with GitOps-driven workflows.',
-    features: ['Cluster design and deployment', 'Auto-scaling configuration', 'Service mesh implementation', 'CI/CD pipeline integration', 'Cost optimization and rightsizing'],
-    benefits: ['Reduce infrastructure costs by 35%', 'Enable zero-downtime deployments', 'Scale from hundreds to thousands of pods', 'Streamline developer workflows'],
-    pricing: { basic: '999', pro: '2499', enterprise: '6999' },
-    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🐳',
-    href: '/it-services/kubernetes-management',
-    category: 'it'
-  },
-  {
-    id: 'it-service-desk-automation',
-    title: 'IT Service Desk Automation',
-    description: 'AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.',
-    features: ['Intelligent ticket classification', 'Auto-resolution engine', 'Self-service knowledge base', 'SLA monitoring and escalation', 'Performance analytics'],
-    benefits: ['Resolve 40% of tickets automatically', 'Reduce average response time by 60%', 'Improve end-user satisfaction', 'Lower IT support costs'],
-    pricing: { basic: '499', pro: '1199', enterprise: '3499' },
-    contactInfo: { website: '/it-services/it-service-desk-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🎧',
-    href: '/it-services/it-service-desk-automation',
-    category: 'it'
-  },
-  {
-    id: 'enterprise-backup-dr',
-    title: 'Enterprise Backup & Disaster Recovery',
-    description: 'Comprehensive data protection with automated backups, instant recovery, ransomware protection, and geo-redundant storage.',
-    features: ['Automated backup scheduling', 'Point-in-time recovery', 'Ransomware detection and isolation', 'Geo-redundant replication', 'Compliance-ready retention policies'],
-    benefits: ['Achieve 99.99% data durability', 'Meet RPO/RTO SLA targets', 'Protect against ransomware', 'Ensure business continuity'],
-    pricing: { basic: '299', pro: '799', enterprise: '2499' },
-    contactInfo: { website: '/it-services/enterprise-backup-dr', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '💾',
-    href: '/it-services/enterprise-backup-dr',
-    category: 'it'
-  },
-  {
-    id: 'network-architecture-sdwan',
-    title: 'Network Architecture & SD-WAN',
-    description: 'Design, deploy, and manage enterprise networks with SD-WAN, zero-trust architecture, and intelligent traffic optimization.',
-    features: ['SD-WAN design and deployment', 'Network performance monitoring', 'Zero-trust segmentation', 'Traffic optimization policies', 'Multi-site connectivity management'],
-    benefits: ['Reduce WAN costs by 50%', 'Improve application performance', 'Secure remote workforce access', 'Simplify multi-cloud networking'],
-    pricing: { basic: '799', pro: '1999', enterprise: '5499' },
-    contactInfo: { website: '/it-services/network-architecture-sdwan', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
-    icon: '🌐',
-    href: '/it-services/network-architecture-sdwan',
-    category: 'it'
-  },
-
-  {
-    id: 'it-sam-platform',
-    title: 'IT Service Asset & Configuration Management',
-    description: 'Complete IT asset discovery, configuration mapping, and dependency visualization for cloud and on-prem environments.',
-    features: [
-      'Automated discovery of servers, cloud resources, IoT devices',
-      'Configuration item (CI) relationship mapping',
-      'Change impact analysis',
-      'License compliance & inventory tracking',
-      'Integration with ITSM tools (ServiceNow, Jira)'
-    ],
-    benefits: [
-      'Reduce unplanned downtime by 40%',
-      'Accelerate change planning with dependency graphs',
-      'Maintain software license compliance',
-      'Single source of truth for CMDB'
-    ],
-    pricing: {
-      basic: '599',
-      pro: '1399',
-      enterprise: '3999'
-    },
-    contactInfo: {
-      website: '/it-services/it-sam-platform',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗺️',
-    href: '/it-services/it-sam-platform',
-    category: 'it'
-  },
-  {
-    id: 'vulnerability-assessment-penetration-testing',
-    title: 'Vulnerability Assessment & Penetration Testing',
-    description: 'Proactive security testing: automated vulnerability scanning, manual pen-testing, exploit validation, and remediation guidance for web, mobile, and network.',
-    features: [
-      'Automated vulnerability scanning (DAST, SCA, SAST)',
-      'Manual penetration testing (white/grey/black box)',
-      'Exploit validation & risk scoring',
-      'Remediation guidance & proof-of-concept fixes',
-      'Compliance reports (PCI-DSS, HIPAA, SOC2)'
-    ],
-    benefits: [
-      'Discover 95%+ of security gaps',
-      'Prioritize fixes by exploitability & impact',
-      'Meet compliance audit requirements',
-      'Reduce security incident rate'
-    ],
-    pricing: {
-      basic: '1999',
-      pro: '4999',
-      enterprise: '14999'
-    },
-    contactInfo: {
-      website: '/it-services/vulnerability-assessment-penetration-testing',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🧐',
-    href: '/it-services/vulnerability-assessment-penetration-testing',
-    category: 'it'
-  },
-  {
-    id: 'remote-it-support',
-    title: 'Remote IT Support & Helpdesk Outsourcing',
-    description: '24/7 outsourced IT helpdesk and desktop support for distributed workforces: remote troubleshooting, incident management, and user onboarding.',
-    features: [
-      '24/7/365 Tier-1/2 support (phone, chat, email)',
-      'Remote desktop access & fix (TeamViewer, AnyDesk)',
-      'Onboarding/offboarding automation',
-      'Incident ticketing & SLA management',
-      'Knowledge base & self-service portal'
-    ],
-    benefits: [
-      'Eliminate in-house helpdesk hiring',
-      'Reduce incident resolution time by 50%',
-      'Improve employee satisfaction (ESAT)',
-      'Global coverage across timezones'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '1199',
-      enterprise: '3499'
-    },
-    contactInfo: {
-      website: '/it-services/remote-it-support',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🎧',
-    href: '/it-services/remote-it-support',
-    category: 'it'
-  },
-  {
-    id: 'database-optimization',
-    title: 'Database Performance Optimization',
-    description: 'Expert tuning for PostgreSQL, MySQL, MongoDB, Redis: query optimization, index strategy, replication, and high-availability architecture.',
-    features: [
-      'Query plan analysis & index optimization',
-      'Schema redesign for performance',
-      'Connection pooling & caching strategies',
-      'Read replica & clustering setup',
-      'Slow query monitoring & auto-tuning'
-    ],
-    benefits: [
-      '2–10x faster query response times',
-      'Reduce database load by 60%',
-      'Prevent performance-related outages',
-      'Lower infrastructure costs (smaller instances)'
-    ],
-    pricing: {
-      basic: '799',
-      pro: '1899',
-      enterprise: '5499'
-    },
-    contactInfo: {
-      website: '/it-services/database-optimization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/database-optimization',
-    category: 'it'
-  },
-  {
-    id: 'endpoint-management',
-    title: 'Unified Endpoint Management (UEM)',
-    description: 'Manage and secure all devices (laptops, mobile, IoT) from a single dashboard: enrollment, policy enforcement, patch management, and remote wipe.',
-    features: [
-      'Cross-platform device enrollment (Windows, macOS, iOS, Android, Linux)',
-      'Automated patch & update deployment',
-      'Endpoint detection & response (EDR)',
-      'Application whitelisting & app catalog',
-      'Remote lock, wipe, and geofencing'
-    ],
-    benefits: [
-      'Reduce endpoint management overhead by 80%',
-      'Enforce security policy compliance automatically',
-      'Fast incident response across device fleet',
-      'Support BYOD securely'
-    ],
-    pricing: {
-      basic: '299',
-      pro: '699',
-      enterprise: '1999'
-    },
-    contactInfo: {
-      website: '/it-services/endpoint-management',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💻',
-    href: '/it-services/endpoint-management',
-    category: 'it'
-  },
-  {
-    id: 'legacy-system-modernization',
-    title: 'Legacy System Modernization & Re-Platforming',
-    description: 'Migrate from legacy mainframes, monoliths, or outdated tech stacks to cloud-native microservices with minimal business disruption.',
-    features: [
-      'System analysis & dependency discovery',
-      'Strangler fig pattern migration planning',
-      'Database migration with CDC (change data capture)',
-      'API gateway & service mesh setup',
-      'Cut-over planning & rollback strategy'
-    ],
-    benefits: [
-      'Reduce TCO by up to 70%',
-      'Improve system scalability & agility',
-      'Eliminate vendor lock-in & EOL risks',
-      'Modern developer experience (CI/CD, containers)'
-    ],
-    pricing: {
-      basic: '2499',
-      pro: '5999',
-      enterprise: '19999'
-    },
-    contactInfo: {
-      website: '/it-services/legacy-system-modernization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🏗️',
-    href: '/it-services/legacy-system-modernization',
-    category: 'it'
-  },
-  {
-    id: 'quantum-ready-security',
-    title: 'Quantum-Ready Cryptography & Security Assessment',
-    description: 'Prepare for the post-quantum era: assess cryptographic exposure, migrate to quantum-resistant algorithms (PQC), and implement hybrid security solutions.',
-    features: [
-      'Cryptographic inventory & quantum risk assessment',
-      'PQC algorithm migration planning',
-      'Hybrid RSA/PQC implementation guidance',
-      'Code & dependency remediation',
-      'Executive briefing & compliance roadmap'
-    ],
-    benefits: [
-      'Future-proof against quantum attacks',
-      'Meet emerging NIST PQC standards',
-      'Protect long-lived sensitive data',
-      'Stay ahead of regulatory requirements'
-    ],
-    pricing: {
-      basic: '1499',
-      pro: '3499',
-      enterprise: '9999'
-    },
-    contactInfo: {
-      website: '/it-services/quantum-ready-security',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔐',
-    href: '/it-services/quantum-ready-security',
-    category: 'it'
-  },
-  {
-    id: 'observability-platform',
-    title: 'Full-Stack Observability Platform',
-    description: 'Unified logs, metrics, traces, and distributed tracing with AI-powered anomaly detection and automated root-cause analysis for microservices.',
-    features: [
-      'Log aggregation & full-text search (ELK-compatible)',
-      'Metrics collection & dashboards (Prometheus/Grafana)',
-      'Distributed tracing (OpenTelemetry)',
-      'AI-driven anomaly detection & alerting',
-      'SLO/SLI tracking & error budget burn rate'
-    ],
-    benefits: [
-      'Reduce MTTR by 65%',
-      'Proactive issue detection before customers notice',
-      'Unified view across clouds & on-prem',
-      'Data-driven reliability engineering'
-    ],
-    pricing: {
-      basic: '499',
-      pro: '1199',
-      enterprise: '3299'
-    },
-    contactInfo: {
-      website: '/it-services/observability-platform',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📊',
-    href: '/it-services/observability-platform',
-    category: 'it'
-  },
-  {
-    id: 'soc-as-a-service',
-    title: 'Security Operations Center as a Service (SOCaaS)',
-    description: '24/7 managed security monitoring, threat hunting, incident response, and compliance reporting — no need to build your own SOC.',
-    features: [
-      '24/7 security monitoring (SIEM)',
-      'Threat hunting & proactive investigation',
-      'Incident response (IR) on call',
-      'Compliance reporting (PCI-DSS, HIPAA, GDPR)',
-      'Regular executive security briefings'
-    ],
-    benefits: [
-      'Enterprise-grade security without the headcount',
-      'Detect & respond to threats in minutes, not days',
-      'Pass compliance audits with ease',
-      'Predictable monthly cost vs. unpredictable breaches'
-    ],
-    pricing: {
-      basic: '1499',
-      pro: '3499',
-      enterprise: '9999'
-    },
-    contactInfo: {
-      website: '/it-services/soc-as-a-service',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚨',
-    href: '/it-services/soc-as-a-service',
-    category: 'it'
-  },
-  {
-    id: 'nodejs-performance-tuning',
-    title: 'Node.js Performance Tuning & Profiling',
-    description: 'Deep performance optimization for Node.js applications: event loop analysis, memory leak detection, concurrency tuning, and scalability architecture review.',
-    features: [
-      'Event loop delay monitoring & troubleshooting',
-      'Memory profiling & leak detection',
-      'CPU & I/O bottleneck analysis',
-      'Cluster & worker threads optimization',
-      'Garbage collection tuning'
-    ],
-    benefits: [
-      'Improve request throughput by 3–5x',
-      'Reduce latency p99 by 60%',
-      'Lower cloud compute costs (fewer instances)',
-      'Prevent runtime crashes in production'
-    ],
-    pricing: {
-      basic: '699',
-      pro: '1599',
-      enterprise: '4599'
-    },
-    contactInfo: {
-      website: '/it-services/nodejs-performance-tuning',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🟢',
-    href: '/it-services/nodejs-performance-tuning',
-    category: 'it'
-  },
-  {
-    id: 'etl-pipeline-optimization',
-    title: 'ETL Pipeline Optimization & Modernization',
-    description: 'Accelerate and stabilize data pipelines (batch & streaming): refactor legacy ETL, migrate to Airflow/DBT, add observability, and reduce cost.',
-    features: [
-      'Pipeline bottleneck analysis & profiling',
-      'Code refactoring & parallelization',
-      'Migration to cloud-native (Glue, Dataflow, Flink)',
-      'Data quality checks & anomaly detection',
-      'Cost optimization (spot instances, auto-scaling)'
-    ],
-    benefits: [
-      'Cut pipeline runtime by 70%',
-      'Reduce data engineering maintenance burden',
-      'Improve data freshness & reliability',
-      'Lower cloud processing costs'
-    ],
-    pricing: {
-      basic: '899',
-      pro: '2099',
-      enterprise: '5999'
-    },
-    contactInfo: {
-      website: '/it-services/etl-pipeline-optimization',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/etl-pipeline-optimization',
-    category: 'it'
-  },
-  {
-    id: 'incident-response-retainer',
-    title: 'Incident Response Retainer (IR)',
-    description: '24/7 on-call incident response for security breaches, ransomware, and major outages: forensic analysis, containment, eradication, and recovery.',
-    features: [
-      '24/7 on-call IR team (SANS-certified)',
-      'Forensic evidence collection & chain of custody',
-      'Containment & eradication planning',
-      'Post-incident root cause analysis (RCA)',
-      'Executive communication & regulatory reporting'
-    ],
-    benefits: [
-      'Minimize breach impact & downtime',
-      'Meet regulatory reporting deadlines (72h)',
-      'Preserve evidence for legal action',
-      'Build long-term resilience with RCA'
-    ],
-    pricing: {
-      basic: '2499',
-      pro: '5999',
-      enterprise: '19999'
-    },
-    contactInfo: {
-      website: '/it-services/incident-response-retainer',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚑',
-    href: '/it-services/incident-response-retainer',
-    category: 'it'
-   },
-  {
-    id: 'it-edge-computing-deploy',
-    title: 'Edge Computing Deployment',
-    description: `Deploys containerized workloads to global edge locations (Cloudflare Workers, Fastly Compute, AWS Lambda@Edge) for sub-10ms latency.`,
-    features: ["Multi-provider edge orchestration", "Edge cache strategy design", "Local data residency compliance", "Edge function monitoring"],
-    benefits: ["Reduces API latency by 60\u201380%", "Improves global user experience", "Lowers origin server load"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-edge-computing-deploy',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🌍',
-    href: '/it-services/it-edge-computing-deploy',
-    category: 'it'
-  },
-
-  {
-    id: 'it-disaster-recovery',
-    title: 'Disaster Recovery as a Service (DRaaS)',
-    description: `Fully managed DR with automated backups, cross-region replication, and quarterly failover testing. RTO < 4 hours, RPO < 15 minutes.`,
-    features: ["Continuous replication", "Automated failover orchestration", "DR runbook documentation", "Compliance-ready audit logs"],
-    benefits: ["Guarantees business continuity", "Meets ISO 27001 & SOC2 requirements", "Reduces DR planning overhead"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-disaster-recovery',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/it-disaster-recovery',
-    category: 'it'
-  },
-
-  {
-    id: 'it-observability-platform',
-    title: 'Full-Stack Observability Platform',
-    description: `Unified logs, metrics, traces, and profiling with AI-powered root-cause analysis. Self-hosted or cloud-hosted options.`,
-    features: ["Distributed tracing (OpenTelemetry)", "Log aggregation with semantic search", "Custom dashboard builder", "Anomaly detection + alert routing"],
-    benefits: ["Reduces MTTR by 50%", "Eliminates tool sprawl", "Provides single pane of glass"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-observability-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📡',
-    href: '/it-services/it-observability-platform',
-    category: 'it'
-  },
-
-  {
-    id: 'it-esg-compliance-automation',
-    title: 'ESG Compliance Automation',
-    description: `Automates ESG data collection from 100+ systems (cloud, HR, facilities) and generates SEC, EU CSRD, and SFDR reports.`,
-    features: ["Carbon footprint calculation engine", "Diversity metrics dashboard", "Governance policy tracker", "Report generation (XBRL support)"],
-    benefits: ["Saves 200+ manual hours per reporting cycle", "Ensures regulatory alignment", "Improves ESG ratings"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-esg-compliance-automation',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🌍',
-    href: '/it-services/it-esg-compliance-automation',
-    category: 'it'
-  },
-
-  {
-    id: 'it-kubernetes-multicloud',
-    title: 'Kubernetes Multi-Cloud Management',
-    description: `Deploy and manage Kubernetes clusters across AWS, GCP, Azure, and on-prem with a single control plane. Includes GitOps and policy enforcement.`,
-    features: ["Cluster lifecycle automation", "Cost allocation per namespace", "Security policy as code (OPA/Gatekeeper)", "Cross-cloud service mesh"],
-    benefits: ["Avoids vendor lock-in", "Optimizes spend by 30%", "Standardizes deployments"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-kubernetes-multicloud',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '☸️',
-    href: '/it-services/it-kubernetes-multicloud',
-    category: 'it'
-  },
-
-  {
-    id: 'it-automated-incident-response',
-    title: 'Automated Incident Response (SOAR)',
-    description: `Security Orchestration, Automation & Response platform that auto-remediates 40% of Tier-1 incidents using playbooks and AI decisioning.`,
-    features: ["Pre-built playbooks (phishing, malware, IAM)", "Integration with 200+ security tools", "Case management & audit trail", "AI-assisted triage suggestions"],
-    benefits: ["Cuts incident response time from hours to minutes", "Reduces SOC analyst fatigue", "Improves compliance posture"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-automated-incident-response',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚨',
-    href: '/it-services/it-automated-incident-response',
-    category: 'it'
-  },
-
-  {
-    id: 'it-data-warehouse-modernization',
-    title: 'Data Warehouse Modernization',
-    description: `Migration from legacy data warehouses (Oracle, Teradata) to modern cloud-native stacks (Snowflake, BigQuery, Databricks) with zero downtime.`,
-    features: ["Schema conversion tools", "ETL/ELT pipeline rebuild", "Query optimization", "Training for data team"],
-    benefits: ["Lowers TCO by 40\u201360%", "Enables self-service analytics", "Scales compute & storage independently"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-data-warehouse-modernization',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🏢',
-    href: '/it-services/it-data-warehouse-modernization',
-    category: 'it'
-  },
-
-  {
-    id: 'it-iot-device-management',
-    title: 'Enterprise IoT Device Management',
-    description: `Provision, monitor, and secure 10K+ IoT devices (sensors, cameras, gateways) from a single dashboard with OTA updates and zero-touch enrollment.`,
-    features: ["Device inventory & health monitoring", "Remote command & control", "Firmware OTA scheduling", "Geofencing & alerting"],
-    benefits: ["Reduces device management overhead by 70%", "Ensures firmware consistency", "Detects rogue devices"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-iot-device-management',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📱',
-    href: '/it-services/it-iot-device-management',
-    category: 'it'
-  },
-
-  {
-    id: 'it-digital-workplace-platform',
-    title: 'Digital Workplace Platform',
-    description: `Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.`,
-    features: ["Self-service IT catalog", "Automated employee lifecycle (joiner/mover/leaver)", "License optimization engine", "Employee sentiment surveys"],
-    benefits: ["Reduces SaaS sprawl", "Cuts license costs by 20%", "Improves employee satisfaction"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-digital-workplace-platform',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💼',
-    href: '/it-services/it-digital-workplace-platform',
-    category: 'it'
-  },
-
-  {
-    id: 'it-apisec-testing',
-    title: 'API Security Testing',
-    description: `Automated security scans for REST, GraphQL, and gRPC APIs. Detects OWASP API Top 10 vulnerabilities and provides remediation code snippets.`,
-    features: ["DAST + SCA for APIs", "Authentication flaw detection", "Rate-limiting & throttling tests", "CI/CD pipeline integration"],
-    benefits: ["Prevents data breaches via API", "Meets PCI & HIPAA API requirements", "Finds bugs before production"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-apisec-testing',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔐',
-    href: '/it-services/it-apisec-testing',
-    category: 'it'
-  },
-
-  {
-    id: 'it-data-lakehouse-governance',
-    title: 'Data Lakehouse Governance',
-    description: `Metadata management, lineage tracking, and access controls for Delta Lake, Apache Iceberg, or Snowflake environments.`,
-    features: ["Automated data catalog", "Column-level lineage", "Policy-based access control (RBAC/ABAC)", "Quality scorecard per dataset"],
-    benefits: ["Accelerates data discovery", "Ensures regulatory compliance (GDPR, CCPA)", "Reduces data swamp risk"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-data-lakehouse-governance',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🗄️',
-    href: '/it-services/it-data-lakehouse-governance',
-    category: 'it'
-  },
-
-  {
-    id: 'it-endpoint-detection-response',
-    title: 'Managed Endpoint Detection & Response (EDR)',
-    description: `24/7 monitored EDR service with threat hunting, ransomware rollback, and 15-minute SLA for critical alerts. Includes managed SOC.`,
-    features: ["Next-gen antivirus (NGAV)", "Behavior-based threat detection", "Incident response playbooks", "Quarterly threat hunting reports"],
-    benefits: ["Blocks 99% of endpoint attacks", "Ransomware recovery within hours", "Frees internal IT from security chores"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-endpoint-detection-response',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🛡️',
-    href: '/it-services/it-endpoint-detection-response',
-    category: 'it'
-  },
-
-  {
-    id: 'it-low-code-platform-integration',
-    title: 'Low-Code Platform Integration',
-    description: `Build & integrate internal tools on Retool, Tooljet, or internal platforms. Pre-built connectors to 200+ SaaS APIs and custom SQL/NoSQL builders.`,
-    features: ["Drag-and-drop UI builder", "Role-based access controls", "Audit logging", "One-click deployment"],
-    benefits: ["Empowers non-developers to build tools", "Reduces internal dev backlog by 40%", "Standardizes tooling across teams"],
-    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
-    contactInfo: {
-      website: '/it-services/it-low-code-platform-integration',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🧩',
-    href: '/it-services/it-low-code-platform-integration',
-    category: 'it'
-  },
-
-
-// New IT services batch — inserted automatically
-
-  {
-    id: 'it-edge-computing-orchestration',
-    title: 'Edge Computing Orchestration',
-    description: `Deploy and manage containerized workloads across distributed edge nodes. Auto-scaling, zero-trust networking, and offline sync for true edge-native applications.`,
-    features: ["Multi-cluster management", "GitOps-driven deployment", "Edge-native storage", "Offline-first sync", "Observability across regions"],
-    benefits: ["Sub-10ms latency for local users", "Reduce cloud egress costs by 70%", "Operate\u54ea\u6015\u7f51\u7edc\u4e2d\u65ad"],
-    pricing: {"basic":"349","pro":"799","enterprise":"2099"},
-    contactInfo: {
-      website: '/it-services/it-edge-computing-orchestration',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🌍',
-    href: '/it-services/it-edge-computing-orchestration',
-    category: 'it'
-  },
-
-  {
-    id: 'it-serverless-api-gateway',
-    title: 'Serverless API Gateway',
-    description: `Fully managed API gateway with rate limiting, auth, caching, and transformation. Pay-per-request pricing, auto-scaling to millions of RPS.`,
-    features: ["JWT/OAuth validation", "Request/response transformation", "Response caching (Redis)", "Rate limiting & quotas", "WebSocket support"],
-    benefits: ["Zero ops overhead", "Scale automatically", "Cut API management costs by 80%"],
-    pricing: {"basic":"149","pro":"399","enterprise":"999"},
-    contactInfo: {
-      website: '/it-services/it-serverless-api-gateway',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚪',
-    href: '/it-services/it-serverless-api-gateway',
-    category: 'it'
-  },
-
-  {
-    id: 'it-sap-integration-hub',
-    title: 'SAP Integration Hub',
-    description: `Pre-built connectors for SAP ERP, S/4HANA, SuccessFactors, and Ariba. Real-time sync, IDoc/BAPI support, and error handling out of the box.`,
-    features: ["SAP ERP BAPI/IDoc adapters", "SuccessFactors sync", "Ariba network integration", "Error reconciliation dashboard", "SAP-certified connectors"],
-    benefits: ["Integrate SAP in days not months", "Eliminate manual data entry", "Real-time business visibility"],
-    pricing: {"basic":"499","pro":"1099","enterprise":"2799"},
-    contactInfo: {
-      website: '/it-services/it-sap-integration-hub',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🏢',
-    href: '/it-services/it-sap-integration-hub',
-    category: 'it'
-  },
-
-  {
-    id: 'it-multi-cloud-cost-governance',
-    title: 'Multi-Cloud Cost Governance',
-    description: `Unified cost visibility and policy enforcement across AWS, Azure, GCP. budgets, alerts, rightsizing recommendations, and chargeback/showback.`,
-    features: ["Multi-cloud ingestion", "Budget thresholds & alerts", "Rightsizing AI", "Tag compliance enforcement", "Department chargeback"],
-    benefits: ["Prevent cost overruns", "Save 25%+ on cloud spend", "Align finance & engineering"],
-    pricing: {"basic":"199","pro":"499","enterprise":"1299"},
-    contactInfo: {
-      website: '/it-services/it-multi-cloud-cost-governance',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💸',
-    href: '/it-services/it-multi-cloud-cost-governance',
-    category: 'it'
-  },
-
-  {
-    id: 'it-automated-incident-response',
-    title: 'Automated Incident Response',
-    description: `SOAR platform: ingest alerts from any monitoring tool, run playbooks, remediate automatically. 500+ community playbooks included.`,
-    features: ["50+ integration adapters", "Visual playbook builder", "Automated remediation", "Case management", "Post-incident reports"],
-    benefits: ["MTTR reduced by 80%", "Free up on-call engineers", "Consistent response procedures"],
-    pricing: {"basic":"299","pro":"699","enterprise":"1799"},
-    contactInfo: {
-      website: '/it-services/it-automated-incident-response',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🚨',
-    href: '/it-services/it-automated-incident-response',
-    category: 'it'
-  },
-
-  {
-    id: 'it-secure-file-transfer',
-    title: 'Secure File Transfer (MFT)',
-    description: `Managed file transfer with end-to-end encryption, audit trails, and automated scheduling. Supports SFTP, FTPS, AS2, and HTTPS.`,
-    features: ["PGP/GPG encryption", "AS2 protocol support", "Workflow automation", "Compliance reports (HIPAA, PCI)", "Detailed audit logs"],
-    benefits: ["Secure B2B exchanges", "Automate file-based integrations", "Pass audits with ease"],
-    pricing: {"basic":"199","pro":"499","enterprise":"1199"},
-    contactInfo: {
-      website: '/it-services/it-secure-file-transfer',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📁',
-    href: '/it-services/it-secure-file-transfer',
-    category: 'it'
-  },
-
-  {
-    id: 'it-legacy-app-containerization',
-    title: 'Legacy App Containerization',
-    description: `Migrate monoliths and legacy apps to Docker/Kubernetes with minimal code changes. Automated dependency analysis and service extraction.`,
-    features: ["Automated dependency mapping", "Service extraction recommendations", "StatefulSet migration", "Database connection pooling", "Blue-green deployment"],
-    benefits: ["Modernize without rewrite", "Reduce infrastructure costs", "Enable CI/CD for legacy"],
-    pricing: {"basic":"399","pro":"899","enterprise":"2299"},
-    contactInfo: {
-      website: '/it-services/it-legacy-app-containerization',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🐳',
-    href: '/it-services/it-legacy-app-containerization',
-    category: 'it'
-  },
-
-  {
-    id: 'it-pcii-compliance-suite',
-    title: 'PCI DSS Compliance Suite',
-    description: `Automated PCI DSS v4.0 compliance monitoring, evidence collection, and reporting. Pre-built controls for 400+ requirements.`,
-    features: ["Control mapping (PCI DSS 4.0)", "Automated evidence collection", "Vulnerability scanning integration", "Quarterly assessment workflow", "Executive dashboards"],
-    benefits: ["Achieve compliance 10x faster", "Reduce audit costs", "Continuous monitoring"],
-    pricing: {"basic":"299","pro":"699","enterprise":"1799"},
-    contactInfo: {
-      website: '/it-services/it-pcii-compliance-suite',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💳',
-    href: '/it-services/it-pcii-compliance-suite',
-    category: 'it'
-  },
-
-  {
-    id: 'it-business-continuity-dr',
-    title: 'Business Continuity & Disaster Recovery',
-    description: `Automated backup, replication, and failover orchestration across cloud and on-premise. RPOs as low as 15 seconds, RTOs under 5 minutes.`,
-    features: ["Application-consistent backups", "Cross-region replication", "Automated failover testing", "DR runbook automation", "Compliance (ISO 27001, SOC 2)"],
-    benefits: ["Guaranteed uptime", "Minimize data loss", "Pass DR audits"],
-    pricing: {"basic":"349","pro":"799","enterprise":"2099"},
-    contactInfo: {
-      website: '/it-services/it-business-continuity-dr',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔄',
-    href: '/it-services/it-business-continuity-dr',
-    category: 'it'
-  },
-
-  {
-    id: 'it-identity-governance',
-    title: 'Identity Governance & Administration',
-    description: `Centralized IGA: lifecycle management, access certifications, separation-of-duties policies. Integrates with Active Directory, Okta, Azure AD.`,
-    features: ["Provisioning/deprovisioning workflows", "Access certification campaigns", "SoD policy engine", "Role mining & optimization", "SOD analytics"],
-    benefits: ["Eliminate orphaned accounts", "Pass SOX audits", "Reduce access risk"],
-    pricing: {"basic":"249","pro":"599","enterprise":"1499"},
-    contactInfo: {
-      website: '/it-services/it-identity-governance',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔑',
-    href: '/it-services/it-identity-governance',
-    category: 'it'
-  },
-
-  {
-    id: 'it-cloud-native-storage',
-    title: 'Cloud-Native Storage Optimizer',
-    description: `Automated storage tiering, snapshot management, and cost optimization for AWS S3, EBS, Azure Blob, GCP Cloud Storage.`,
-    features: ["Lifecycle policy automation", "Intelligent tiering (Intelligent-Tiering, Glacier)", "Snapshot retention policies", "Cost anomaly detection", "Capacity forecasting"],
-    benefits: ["Reduce storage costs by 60%", "Never run out of space", "Optimize performance tiers"],
-    pricing: {"basic":"149","pro":"399","enterprise":"999"},
-    contactInfo: {
-      website: '/it-services/it-cloud-native-storage',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💾',
-    href: '/it-services/it-cloud-native-storage',
-    category: 'it'
-  },
-
-  {
-    id: 'it-observability-unified',
-    title: 'Unified Observability Platform',
-    description: `Single pane of glass for logs, metrics, traces, and profiles. Powered by OpenTelemetry, with AI-assisted root cause analysis.`,
-    features: ["OpenTelemetry auto-instrumentation", "Log aggregation & search", "Distributed tracing", "Profiling (CPU/memory)", "AI RCA (root cause)"],
-    benefits: ["Reduce MTTR by 70%", "Cut monitoring tool sprawl", "Proactive anomaly detection"],
-    pricing: {"basic":"299","pro":"699","enterprise":"1799"},
-    contactInfo: {
-      website: '/it-services/it-observability-unified',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '📈',
-    href: '/it-services/it-observability-unified',
-    category: 'it'
-  },
-
-  {
-    id: 'it-secrets-management',
-    title: 'Secrets Management as a Service',
-    description: `Centralized secrets vault with automatic rotation, audit logs, and Just-In-Time access. Integrates with Kubernetes, VSphere, and cloud providers.`,
-    features: ["Vault as a service", "Auto-rotation (certificates, keys)", "Just-In-Time access approvals", "Audit trail & reporting", "K8s operator"],
-    benefits: ["Eliminate hardcoded secrets", "Meet compliance requirements", "Reduce breach blast radius"],
-    pricing: {"basic":"199","pro":"499","enterprise":"1299"},
-    contactInfo: {
-      website: '/it-services/it-secrets-management',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🔐',
-    href: '/it-services/it-secrets-management',
-    category: 'it'
-  },
-
-  {
-    id: 'it-multi-cloud-networking',
-    title: 'Multi-Cloud Networking',
-    description: `Global SD-WAN with direct cloud interconnect (AWS Direct Connect, Azure ExpressRoute). Secure, performant, and centrally managed.`,
-    features: ["Global backbone (100+ PoPs)", "Direct cloud connects", "Zero-trust network access", "WAN optimization", "Central policy management"],
-    benefits: ["Predictable performance", "Secure remote access", "Reduce MPLS costs"],
-    pricing: {"basic":"399","pro":"899","enterprise":"2399"},
-    contactInfo: {
-      website: '/it-services/it-multi-cloud-networking',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🌐',
-    href: '/it-services/it-multi-cloud-networking',
-    category: 'it'
-  },
-
-  {
-    id: 'it-mainframe-modernization',
-    title: 'Mainframe Modernization Service',
-    description: `Rehost, replatform, or refactor COBOL/PL1 applications to cloud. Automated code conversion, database migration, and cutover planning.`,
-    features: ["Automated COBOL to Java/TS conversion", "Database migration (DB2 \u2192 PostgreSQL)", "Replatform to Azure/AWS mainframe alternatives", "Cutover orchestration", "Regression testing suite"],
-    benefits: ["Reduce mainframe TCO by 70%", "Modernize at your own pace", "Keep business logic intact"],
-    pricing: {"basic":"599","pro":"1299","enterprise":"3499"},
-    contactInfo: {
-      website: '/it-services/it-mainframe-modernization',
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '🖥️',
-    href: '/it-services/it-mainframe-modernization',
-    category: 'it'
-  },
-  {
-    id: 'it-devsecops-1',
-    title: 'DevSecOps & Security Automation',
-    description: 'Embed security into CI/CD pipelines with automated SAST, DAST, SCA, container scanning, and infrastructure-as-code security checks — shifting security left without slowing delivery.',
-    features: [
-      'Automated SAST/DAST scanning in CI/CD',
-      'Software composition analysis (SCA) for dependencies',
-      'Container and Kubernetes security scanning',
-      'Infrastructure-as-code security validation (Terraform, CloudFormation)',
-      'Secrets detection and rotation automation',
-      'SBOM generation and vulnerability tracking',
-      'Threat modeling automation',
-      'Compliance-as-code policy enforcement',
-    ],
-    benefits: [
-      'Catch vulnerabilities 10x earlier and 100x cheaper',
-      'Automate compliance evidence collection',
-      'Deploy faster with confidence, not fear',
-      'Reduce security incident risk by 80%',
-    ],
-    pricing: {
-      basic: '$1,499/mo',
-      pro: '$4,999/mo',
-      enterprise: 'Custom'
-    },
-    contactInfo: {
-      website: '/it-devsecops-1',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💻',
-    href: '/it-devsecops-1',
-    category: 'it'
-  }
-,
-
-  {
-    id: 'it-platform-engineering-1',
-    title: 'Internal Developer Platform (IDP) Engineering',
-    description: 'Design and build an Internal Developer Platform (IDP) that provides self-service capabilities for developers — spinning up environments, deploying applications, and managing infrastructure through golden paths.',
-    features: [
-      'Self-service environment provisioning (Backstage, Port, or custom)',
-      'Golden path templates for common architectures',
-      'Internal API marketplace and service catalog',
-      'Automated deployment pipelines per service type',
-      'Developer portal with documentation and onboarding',
-      'Abstractions over cloud services for simplicity',
-      'Usage tracking and cost attribution per team',
-      'Platform observability and SLO management',
-    ],
-    benefits: [
-      'Reduce time-to-first-deploy from weeks to hours',
-      'Empower developers to self-serve without ops bottlenecks',
-      'Standardize best practices across all teams',
-      'Improve developer satisfaction and retention',
-    ],
-    pricing: {
-      basic: '$2,999/mo',
-      pro: '$8,999/mo',
-      enterprise: 'Custom'
-    },
-    contactInfo: {
-      website: '/it-platform-engineering-1',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💻',
-    href: '/it-platform-engineering-1',
-    category: 'it'
-  }
-,
-
-  {
-    id: 'it-observability-1',
-    title: 'AI-Powered Observability & SRE',
-    description: 'Comprehensive observability platform combining metrics, logs, traces, and AI-powered anomaly detection to achieve proactive reliability and reduce MTTR to minutes.',
-    features: [
-      'Unified observability (metrics, logs, traces, profiles)',
-      'AI-powered anomaly detection and root cause analysis',
-      'Automated incident classification and routing',
-      'SLO/SLI management with error budget tracking',
-      'Predictive alerting — detect issues before users do',
-      'Runbook automation and remediation playbooks',
-      'Dashboard builder with natural language queries',
-      'Integration with PagerDuty, OpsGenie, Slack, and more',
-    ],
-    benefits: [
-      'Reduce MTTR from hours to minutes',
-      'Catch anomalies humans would miss',
-      'Eliminate alert fatigue with smart grouping',
-      'Maintain 99.99% uptime with proactive reliability',
-    ],
-    pricing: {
-      basic: '$999/mo',
-      pro: '$3,499/mo',
-      enterprise: 'Custom'
-    },
-    contactInfo: {
-      website: '/it-observability-1',
-      email: 'commercial@ziontechgroup.com',
-      phone: '+1 302 464 0950'
-    },
-    icon: '💻',
-    href: '/it-observability-1',
-    category: 'it'
-  }
-,
-
-  {
+  },,
+{
     id: 'ai-gen-app-dev-1',
     title: 'AI-Powered Application Development',
     description: 'End-to-end development service for building production-ready AI applications — from LLM-powered chatbots and RAG systems to multi-agent workflows and AI-native products.',
@@ -5622,10 +2782,8 @@ export const itServices: Service[] = [
     icon: '🧠',
     href: '/ai-gen-app-dev-1',
     category: 'ai'
-  }
-,
-
-  {
+  },,
+{
     id: 'ai-ethics-audit-1',
     title: 'AI Ethics Audit & Bias Assessment',
     description: 'Independent AI ethics audits examining your AI systems for bias, fairness, transparency, and regulatory compliance. Includes algorithmic impact assessments, bias testing across protected classes, and governance framework design.',
@@ -5659,9 +2817,1258 @@ export const itServices: Service[] = [
     href: '/ai-ethics-audit-1',
     category: 'ai'
   }
-,
-
-  {
+];
+export const itServices: Service[] = [
+{
+    id: 'devops-gen-ai-ci-cd',
+    title: 'Generative AI for DevOps & CI/CD',
+    description: 'AI-powered DevOps: auto-generate CI/CD pipelines, infrastructure-as-code, deployment scripts, and incident runbooks from natural language specifications.',
+    features: [
+      'Natural language to pipeline generation',
+      'IaC template creation (Terraform, CloudFormation)',
+      'Automated incident runbook drafting',
+      'Self-healing deployment rollbacks',
+      'Performance anomaly detection & tuning'
+    ],
+    benefits: [
+      'Reduce pipeline setup time by 85%',
+      'Eliminate configuration drift',
+      'Faster incident resolution (MTTR)',
+      'Consistent infrastructure standards'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '1099',
+      enterprise: '3299'
+    },
+    contactInfo: {
+      website: '/it-services/devops-gen-ai-ci-cd',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔄',
+    href: '/it-services/devops-gen-ai-ci-cd',
+    category: 'it'
+  },,
+{
+    id: 'cloud-cost-ai-optimizer',
+    title: 'AI Cloud Cost Optimizer',
+    description: 'Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, and idle resource cleanup.',
+    features: [
+      'Multi-cloud cost aggregation & normalization',
+      'AI-driven rightsizing recommendations',
+      'Automated RI/SP purchase optimization',
+      'Idle resource detection & auto-cleanup',
+      'Anomaly detection & budget alerts'
+    ],
+    benefits: [
+      'Save 30-40% on cloud spend',
+      'Zero upfront engineering effort',
+      'Prevent cost overruns proactively',
+      'Detailed cost attribution by team/project'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: '/it-services/cloud-cost-ai-optimizer',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💸',
+    href: '/it-services/cloud-cost-ai-optimizer',
+    category: 'it'
+  },,
+{
+    id: 'data-warehouse-modernization',
+    title: 'AI Data Warehouse Modernization',
+    description: 'Modernize legacy data warehouses (Oracle, Teradata, on-prem) to cloud-native solutions (Snowflake, BigQuery, Redshift) with AI-assisted schema mapping and migration validation.',
+    features: [
+      'Legacy schema extraction & analysis',
+      'AI-powered schema mapping to target',
+      'Automated ETL/ELT pipeline generation',
+      'Data lineage & impact analysis',
+      'Post-migration validation & reconciliation'
+    ],
+    benefits: [
+      '60% faster migration timelines',
+      'Zero data loss guarantee',
+      '50% lower TCO vs traditional consultancies',
+      'Future-proof cloud-native architecture'
+    ],
+    pricing: {
+      basic: '1499',
+      pro: '3499',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/data-warehouse-modernization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🗄️',
+    href: '/it-services/data-warehouse-modernization',
+    category: 'it'
+  },,
+{
+    id: 'cyber-threat-intelligence',
+    title: 'AI Cyber Threat Intelligence Platform',
+    description: 'Proactive threat intelligence gathering, analysis, and prioritization from dark web, exploit feeds, and threat actor TTPs to stay ahead of attacks.',
+    features: [
+      'Automated threat feed ingestion (50+ sources)',
+      'AI-driven threat prioritization (impact scoring)',
+      'IOC & TTP matching against your environment',
+      'Dark web monitoring for leaked credentials',
+      'Executive threat briefings & reporting'
+    ],
+    benefits: [
+      'Reduce mean time to detect (MTTD) by 70%',
+      'Prevent credential-based attacks',
+      'Prioritize fixes based on actual risk',
+      'Compliance-ready audit trails'
+    ],
+    pricing: {
+      basic: '599',
+      pro: '1399',
+      enterprise: '3999'
+    },
+    contactInfo: {
+      website: '/it-services/cyber-threat-intelligence',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🛡️',
+    href: '/it-services/cyber-threat-intelligence',
+    category: 'it'
+  },,
+{
+    id: 'low-code-platform-customization',
+    title: 'Low-Code Platform Customization & Integration',
+    description: 'Extend and integrate your low-code platforms (Retool, Appian, Power Apps, OutSystems) with custom components, APIs, and enterprise system connectors.',
+    features: [
+      'Custom UI component development',
+      'Enterprise system connectors (SAP, Oracle, legacy)',
+      'API Gateway & middleware integration',
+      'Performance optimization & caching',
+      'Security hardening & audit logging'
+    ],
+    benefits: [
+      'Extend low-code app capabilities by 10x',
+      'Seamless integration with legacy systems',
+      'Reduce custom dev time by 70%',
+      'Enterprise-grade security & compliance'
+    ],
+    pricing: {
+      basic: '399',
+      pro: '899',
+      enterprise: '2499'
+    },
+    contactInfo: {
+      website: '/it-services/low-code-platform-customization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧩',
+    href: '/it-services/low-code-platform-customization',
+    category: 'it'
+  },,
+{
+    id: 'api-management-gateway',
+    title: 'API Management & Developer Gateway',
+    description: 'Full-lifecycle API management: gateway, developer portal, analytics, monetization, and security (OAuth, JWT, rate limiting) for your API products.',
+    features: [
+      'High-performance API gateway (10k+ RPS)',
+      'Developer self-service portal',
+      'Analytics: usage, latency, errors',
+      'API monetization & billing integration',
+      'Security: OAuth2, JWT validation, rate limiting'
+    ],
+    benefits: [
+      'Launch API products 5x faster',
+      'Monitor & debug API issues in real-time',
+      'Protect backend services from abuse',
+      'Revenue stream from API usage'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '1199',
+      enterprise: '3599'
+    },
+    contactInfo: {
+      website: '/it-services/api-management-gateway',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔌',
+    href: '/it-services/api-management-gateway',
+    category: 'it'
+  },,
+{
+    id: 'ai-it-helpdesk',
+    title: 'AI IT Helpdesk & Support',
+    description: 'Automated Tier-1 IT support for employees: password resets, software installs, device troubleshooting, and knowledge base search.',
+    features: [
+      'Automated ticket creation & routing',
+      'Knowledge base search with semantic understanding',
+      'Password reset & MFA enrollment automation',
+      'Software request fulfillment workflows',
+      'Hardware troubleshooting decision trees'
+    ],
+    benefits: [
+      'Resolve 70% of tickets without human agent',
+      'Reduce helpdesk staffing costs by 60%',
+      'Instant employee support 24/7',
+      'Consistent, documented resolutions'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1899'
+    },
+    contactInfo: {
+      website: '/it-services/ai-it-helpdesk',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🖥️',
+    href: '/it-services/ai-it-helpdesk',
+    category: 'it'
+   },,
+{
+    id: 'saas-development',
+    title: 'SaaS Product Development',
+    description: 'Full-stack SaaS development from concept to launch — MVP, scaling, and product-market fit optimization.',
+    features: [
+      'MVP rapid prototyping (4-6 weeks)',
+      'Full-stack architecture design',
+      'User authentication & RBAC',
+      'Payment integration (Stripe, Paddle)',
+      'Analytics & usage tracking built-in'
+    ],
+    benefits: [
+      'Go from idea to launch in weeks',
+      'Scalable multi-tenant architecture',
+      'Built-in billing & subscription management',
+      'Post-launch support & iteration'
+    ],
+    pricing: {
+      basic: '4999',
+      pro: '12999',
+      enterprise: '29999'
+    },
+    contactInfo: {
+      website: '/it-services/saas-development',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚀',
+    href: '/it-services/saas-development',
+    category: 'it'
+  },,
+{
+    id: 'api-integration',
+    title: 'API Development & Integration',
+    description: 'Custom API design, development, and integration — REST, GraphQL, Webhooks, and third-party service connectors.',
+    features: [
+      'RESTful & GraphQL API design',
+      'Third-party API integrations',
+      'Webhook architecture & event systems',
+      'API gateway & rate limiting',
+      'API documentation & versioning (OpenAPI/Swagger)'
+    ],
+    benefits: [
+      'Seamless system interoperability',
+      'Reduced development time by 50%',
+      'Future-proof API architecture',
+      'Automated API documentation'
+    ],
+    pricing: {
+      basic: '1499',
+      pro: '3999',
+      enterprise: '8999'
+    },
+    contactInfo: {
+      website: '/it-services/api-integration',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔗',
+    href: '/it-services/api-integration',
+    category: 'it'
+  },,
+{
+    id: 'it-consulting',
+    title: 'IT Strategy & Digital Transformation Consulting',
+    description: 'Strategic technology consulting — digital transformation roadmaps, tech stack evaluation, and CTO-as-a-service.',
+    features: [
+      'Technology stack assessment & recommendations',
+      'Digital transformation roadmap',
+      'CTO-as-a-service (fractional)',
+      'Vendor evaluation & selection',
+      'Technical due diligence for M&A'
+    ],
+    benefits: [
+      'Data-driven technology decisions',
+      'Reduce wasted spend on wrong tools',
+      'Accelerate digital transformation by 2x',
+      'Access to C-level technical expertise'
+    ],
+    pricing: {
+      basic: '2499',
+      pro: '5999',
+      enterprise: '14999'
+    },
+    contactInfo: {
+      website: '/it-services/it-consulting',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💡',
+    href: '/it-services/it-consulting',
+    category: 'it'
+  },,
+{
+    id: 'accessibility-compliance',
+    title: 'Accessibility & WCAG Compliance',
+    description: 'Automated WCAG 2.2 auditing, AI-powered remediation suggestions, screen reader simulation, and continuous accessibility compliance monitoring.',
+    features: ['WCAG 2.2 AA/AAA automated auditing', 'Screen reader simulation & navigation testing', 'Auto-generated remediation code snippets', 'Color contrast & typography analysis', 'Continuous CI/CD accessibility gates'],
+    benefits: ['Reduce ADA lawsuit risk substantially', 'Improve UX for all users', 'Automated compliance reporting', 'Proactive CI/CD testing integration'],
+    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
+    contactInfo: { website: '/it-services/accessibility-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '♿',
+    href: '/it-services/accessibility-compliance',
+    category: 'it'
+  },,
+{
+    id: 'it-itil-service-management',
+    title: 'ITIL Service Management (ITSM) Platform',
+    description: 'Full ITIL-aligned service management with AI-powered ticketing, change management automation, CMDB discovery, and self-service portal for enterprise IT operations.',
+    features: ['AI-powered incident classification & routing', 'Automated change approval workflows', 'Service catalog & self-service portal', 'CMDB auto-discovery & dependency mapping', 'SLA monitoring & escalation engine', 'Knowledge base integration with AI search'],
+    benefits: ['Reduce ticket resolution time by 50%', 'Eliminate change-related outages with automated validation', 'Empower users with self-service capabilities', 'Maintain accurate service dependency maps'],
+    pricing: { basic: '499', pro: '1099', enterprise: '2499' },
+    contactInfo: { website: '/it-services/itil-service-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📋',
+    href: '/it-services/itil-service-management',
+    category: 'it'
+  },,
+{
+    id: 'it-blockchain-development',
+    title: 'Blockchain Development & Smart Contract Auditing',
+    description: 'End-to-end blockchain solution development — smart contract creation, security auditing, tokenomics design, and Web3 integration for enterprises.',
+    features: ['Smart contract development and deployment', 'Formal verification and security auditing', 'Tokenomics and governance design', 'DeFi protocol integration and development', 'Enterprise blockchain consulting and strategy'],
+    benefits: ['Launch secure blockchain products faster', 'Prevent exploits with formal verification', 'Access decentralized finance opportunities', 'Enterprise-grade blockchain integration'],
+    pricing: { basic: '4999', pro: '9999', enterprise: '24999' },
+    contactInfo: { website: '/it-services/blockchain-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⛓️',
+    href: '/it-services/blockchain-development',
+    category: 'it'
+  },,
+{
+    id: 'managed-soc-threat-intelligence',
+    title: 'Managed SOC & Threat Intelligence',
+    description: '24/7 Security Operations Center with AI-enhanced threat detection, incident response, and proactive threat hunting.',
+    features: ['24/7 security monitoring', 'AI-powered threat detection', 'Incident response automation', 'Proactive threat hunting', 'Compliance reporting'],
+    benefits: ['Detect threats in real-time', 'Reduce mean response time to minutes', 'Meet SOC 2 and ISO 27001 requirements', 'Protect against zero-day attacks'],
+    pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
+    contactInfo: { website: '/it-services/managed-soc-threat-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔒',
+    href: '/it-services/managed-soc-threat-intelligence',
+    category: 'it'
+  },,
+{
+    id: 'kubernetes-management',
+    title: 'Container Orchestration & Kubernetes Management',
+    description: 'Expert Kubernetes deployment, scaling, monitoring, and optimization for containerized applications with GitOps-driven workflows.',
+    features: ['Cluster design and deployment', 'Auto-scaling configuration', 'Service mesh implementation', 'CI/CD pipeline integration', 'Cost optimization and rightsizing'],
+    benefits: ['Reduce infrastructure costs by 35%', 'Enable zero-downtime deployments', 'Scale from hundreds to thousands of pods', 'Streamline developer workflows'],
+    pricing: { basic: '999', pro: '2499', enterprise: '6999' },
+    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🐳',
+    href: '/it-services/kubernetes-management',
+    category: 'it'
+  },,
+{
+    id: 'it-service-desk-automation',
+    title: 'IT Service Desk Automation',
+    description: 'AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.',
+    features: ['Intelligent ticket classification', 'Auto-resolution engine', 'Self-service knowledge base', 'SLA monitoring and escalation', 'Performance analytics'],
+    benefits: ['Resolve 40% of tickets automatically', 'Reduce average response time by 60%', 'Improve end-user satisfaction', 'Lower IT support costs'],
+    pricing: { basic: '499', pro: '1199', enterprise: '3499' },
+    contactInfo: { website: '/it-services/it-service-desk-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎧',
+    href: '/it-services/it-service-desk-automation',
+    category: 'it'
+  },,
+{
+    id: 'enterprise-backup-dr',
+    title: 'Enterprise Backup & Disaster Recovery',
+    description: 'Comprehensive data protection with automated backups, instant recovery, ransomware protection, and geo-redundant storage.',
+    features: ['Automated backup scheduling', 'Point-in-time recovery', 'Ransomware detection and isolation', 'Geo-redundant replication', 'Compliance-ready retention policies'],
+    benefits: ['Achieve 99.99% data durability', 'Meet RPO/RTO SLA targets', 'Protect against ransomware', 'Ensure business continuity'],
+    pricing: { basic: '299', pro: '799', enterprise: '2499' },
+    contactInfo: { website: '/it-services/enterprise-backup-dr', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💾',
+    href: '/it-services/enterprise-backup-dr',
+    category: 'it'
+  },,
+{
+    id: 'network-architecture-sdwan',
+    title: 'Network Architecture & SD-WAN',
+    description: 'Design, deploy, and manage enterprise networks with SD-WAN, zero-trust architecture, and intelligent traffic optimization.',
+    features: ['SD-WAN design and deployment', 'Network performance monitoring', 'Zero-trust segmentation', 'Traffic optimization policies', 'Multi-site connectivity management'],
+    benefits: ['Reduce WAN costs by 50%', 'Improve application performance', 'Secure remote workforce access', 'Simplify multi-cloud networking'],
+    pricing: { basic: '799', pro: '1999', enterprise: '5499' },
+    contactInfo: { website: '/it-services/network-architecture-sdwan', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌐',
+    href: '/it-services/network-architecture-sdwan',
+    category: 'it'
+  },,
+{
+    id: 'it-sam-platform',
+    title: 'IT Service Asset & Configuration Management',
+    description: 'Complete IT asset discovery, configuration mapping, and dependency visualization for cloud and on-prem environments.',
+    features: [
+      'Automated discovery of servers, cloud resources, IoT devices',
+      'Configuration item (CI) relationship mapping',
+      'Change impact analysis',
+      'License compliance & inventory tracking',
+      'Integration with ITSM tools (ServiceNow, Jira)'
+    ],
+    benefits: [
+      'Reduce unplanned downtime by 40%',
+      'Accelerate change planning with dependency graphs',
+      'Maintain software license compliance',
+      'Single source of truth for CMDB'
+    ],
+    pricing: {
+      basic: '599',
+      pro: '1399',
+      enterprise: '3999'
+    },
+    contactInfo: {
+      website: '/it-services/it-sam-platform',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🗺️',
+    href: '/it-services/it-sam-platform',
+    category: 'it'
+  },,
+{
+    id: 'vulnerability-assessment-penetration-testing',
+    title: 'Vulnerability Assessment & Penetration Testing',
+    description: 'Proactive security testing: automated vulnerability scanning, manual pen-testing, exploit validation, and remediation guidance for web, mobile, and network.',
+    features: [
+      'Automated vulnerability scanning (DAST, SCA, SAST)',
+      'Manual penetration testing (white/grey/black box)',
+      'Exploit validation & risk scoring',
+      'Remediation guidance & proof-of-concept fixes',
+      'Compliance reports (PCI-DSS, HIPAA, SOC2)'
+    ],
+    benefits: [
+      'Discover 95%+ of security gaps',
+      'Prioritize fixes by exploitability & impact',
+      'Meet compliance audit requirements',
+      'Reduce security incident rate'
+    ],
+    pricing: {
+      basic: '1999',
+      pro: '4999',
+      enterprise: '14999'
+    },
+    contactInfo: {
+      website: '/it-services/vulnerability-assessment-penetration-testing',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧐',
+    href: '/it-services/vulnerability-assessment-penetration-testing',
+    category: 'it'
+  },,
+{
+    id: 'remote-it-support',
+    title: 'Remote IT Support & Helpdesk Outsourcing',
+    description: '24/7 outsourced IT helpdesk and desktop support for distributed workforces: remote troubleshooting, incident management, and user onboarding.',
+    features: [
+      '24/7/365 Tier-1/2 support (phone, chat, email)',
+      'Remote desktop access & fix (TeamViewer, AnyDesk)',
+      'Onboarding/offboarding automation',
+      'Incident ticketing & SLA management',
+      'Knowledge base & self-service portal'
+    ],
+    benefits: [
+      'Eliminate in-house helpdesk hiring',
+      'Reduce incident resolution time by 50%',
+      'Improve employee satisfaction (ESAT)',
+      'Global coverage across timezones'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '1199',
+      enterprise: '3499'
+    },
+    contactInfo: {
+      website: '/it-services/remote-it-support',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🎧',
+    href: '/it-services/remote-it-support',
+    category: 'it'
+  },,
+{
+    id: 'endpoint-management',
+    title: 'Unified Endpoint Management (UEM)',
+    description: 'Manage and secure all devices (laptops, mobile, IoT) from a single dashboard: enrollment, policy enforcement, patch management, and remote wipe.',
+    features: [
+      'Cross-platform device enrollment (Windows, macOS, iOS, Android, Linux)',
+      'Automated patch & update deployment',
+      'Endpoint detection & response (EDR)',
+      'Application whitelisting & app catalog',
+      'Remote lock, wipe, and geofencing'
+    ],
+    benefits: [
+      'Reduce endpoint management overhead by 80%',
+      'Enforce security policy compliance automatically',
+      'Fast incident response across device fleet',
+      'Support BYOD securely'
+    ],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1999'
+    },
+    contactInfo: {
+      website: '/it-services/endpoint-management',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-services/endpoint-management',
+    category: 'it'
+  },,
+{
+    id: 'legacy-system-modernization',
+    title: 'Legacy System Modernization & Re-Platforming',
+    description: 'Migrate from legacy mainframes, monoliths, or outdated tech stacks to cloud-native microservices with minimal business disruption.',
+    features: [
+      'System analysis & dependency discovery',
+      'Strangler fig pattern migration planning',
+      'Database migration with CDC (change data capture)',
+      'API gateway & service mesh setup',
+      'Cut-over planning & rollback strategy'
+    ],
+    benefits: [
+      'Reduce TCO by up to 70%',
+      'Improve system scalability & agility',
+      'Eliminate vendor lock-in & EOL risks',
+      'Modern developer experience (CI/CD, containers)'
+    ],
+    pricing: {
+      basic: '2499',
+      pro: '5999',
+      enterprise: '19999'
+    },
+    contactInfo: {
+      website: '/it-services/legacy-system-modernization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🏗️',
+    href: '/it-services/legacy-system-modernization',
+    category: 'it'
+  },,
+{
+    id: 'quantum-ready-security',
+    title: 'Quantum-Ready Cryptography & Security Assessment',
+    description: 'Prepare for the post-quantum era: assess cryptographic exposure, migrate to quantum-resistant algorithms (PQC), and implement hybrid security solutions.',
+    features: [
+      'Cryptographic inventory & quantum risk assessment',
+      'PQC algorithm migration planning',
+      'Hybrid RSA/PQC implementation guidance',
+      'Code & dependency remediation',
+      'Executive briefing & compliance roadmap'
+    ],
+    benefits: [
+      'Future-proof against quantum attacks',
+      'Meet emerging NIST PQC standards',
+      'Protect long-lived sensitive data',
+      'Stay ahead of regulatory requirements'
+    ],
+    pricing: {
+      basic: '1499',
+      pro: '3499',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/quantum-ready-security',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔐',
+    href: '/it-services/quantum-ready-security',
+    category: 'it'
+  },,
+{
+    id: 'observability-platform',
+    title: 'Full-Stack Observability Platform',
+    description: 'Unified logs, metrics, traces, and distributed tracing with AI-powered anomaly detection and automated root-cause analysis for microservices.',
+    features: [
+      'Log aggregation & full-text search (ELK-compatible)',
+      'Metrics collection & dashboards (Prometheus/Grafana)',
+      'Distributed tracing (OpenTelemetry)',
+      'AI-driven anomaly detection & alerting',
+      'SLO/SLI tracking & error budget burn rate'
+    ],
+    benefits: [
+      'Reduce MTTR by 65%',
+      'Proactive issue detection before customers notice',
+      'Unified view across clouds & on-prem',
+      'Data-driven reliability engineering'
+    ],
+    pricing: {
+      basic: '499',
+      pro: '1199',
+      enterprise: '3299'
+    },
+    contactInfo: {
+      website: '/it-services/observability-platform',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📊',
+    href: '/it-services/observability-platform',
+    category: 'it'
+  },,
+{
+    id: 'soc-as-a-service',
+    title: 'Security Operations Center as a Service (SOCaaS)',
+    description: '24/7 managed security monitoring, threat hunting, incident response, and compliance reporting — no need to build your own SOC.',
+    features: [
+      '24/7 security monitoring (SIEM)',
+      'Threat hunting & proactive investigation',
+      'Incident response (IR) on call',
+      'Compliance reporting (PCI-DSS, HIPAA, GDPR)',
+      'Regular executive security briefings'
+    ],
+    benefits: [
+      'Enterprise-grade security without the headcount',
+      'Detect & respond to threats in minutes, not days',
+      'Pass compliance audits with ease',
+      'Predictable monthly cost vs. unpredictable breaches'
+    ],
+    pricing: {
+      basic: '1499',
+      pro: '3499',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/soc-as-a-service',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚨',
+    href: '/it-services/soc-as-a-service',
+    category: 'it'
+  },,
+{
+    id: 'nodejs-performance-tuning',
+    title: 'Node.js Performance Tuning & Profiling',
+    description: 'Deep performance optimization for Node.js applications: event loop analysis, memory leak detection, concurrency tuning, and scalability architecture review.',
+    features: [
+      'Event loop delay monitoring & troubleshooting',
+      'Memory profiling & leak detection',
+      'CPU & I/O bottleneck analysis',
+      'Cluster & worker threads optimization',
+      'Garbage collection tuning'
+    ],
+    benefits: [
+      'Improve request throughput by 3–5x',
+      'Reduce latency p99 by 60%',
+      'Lower cloud compute costs (fewer instances)',
+      'Prevent runtime crashes in production'
+    ],
+    pricing: {
+      basic: '699',
+      pro: '1599',
+      enterprise: '4599'
+    },
+    contactInfo: {
+      website: '/it-services/nodejs-performance-tuning',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🟢',
+    href: '/it-services/nodejs-performance-tuning',
+    category: 'it'
+  },,
+{
+    id: 'etl-pipeline-optimization',
+    title: 'ETL Pipeline Optimization & Modernization',
+    description: 'Accelerate and stabilize data pipelines (batch & streaming): refactor legacy ETL, migrate to Airflow/DBT, add observability, and reduce cost.',
+    features: [
+      'Pipeline bottleneck analysis & profiling',
+      'Code refactoring & parallelization',
+      'Migration to cloud-native (Glue, Dataflow, Flink)',
+      'Data quality checks & anomaly detection',
+      'Cost optimization (spot instances, auto-scaling)'
+    ],
+    benefits: [
+      'Cut pipeline runtime by 70%',
+      'Reduce data engineering maintenance burden',
+      'Improve data freshness & reliability',
+      'Lower cloud processing costs'
+    ],
+    pricing: {
+      basic: '899',
+      pro: '2099',
+      enterprise: '5999'
+    },
+    contactInfo: {
+      website: '/it-services/etl-pipeline-optimization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔄',
+    href: '/it-services/etl-pipeline-optimization',
+    category: 'it'
+  },,
+{
+    id: 'incident-response-retainer',
+    title: 'Incident Response Retainer (IR)',
+    description: '24/7 on-call incident response for security breaches, ransomware, and major outages: forensic analysis, containment, eradication, and recovery.',
+    features: [
+      '24/7 on-call IR team (SANS-certified)',
+      'Forensic evidence collection & chain of custody',
+      'Containment & eradication planning',
+      'Post-incident root cause analysis (RCA)',
+      'Executive communication & regulatory reporting'
+    ],
+    benefits: [
+      'Minimize breach impact & downtime',
+      'Meet regulatory reporting deadlines (72h)',
+      'Preserve evidence for legal action',
+      'Build long-term resilience with RCA'
+    ],
+    pricing: {
+      basic: '2499',
+      pro: '5999',
+      enterprise: '19999'
+    },
+    contactInfo: {
+      website: '/it-services/incident-response-retainer',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚑',
+    href: '/it-services/incident-response-retainer',
+    category: 'it'
+   },,
+{
+    id: 'it-edge-computing-deploy',
+    title: 'Edge Computing Deployment',
+    description: `Deploys containerized workloads to global edge locations (Cloudflare Workers, Fastly Compute, AWS Lambda@Edge) for sub-10ms latency.`,
+    features: ["Multi-provider edge orchestration", "Edge cache strategy design", "Local data residency compliance", "Edge function monitoring"],
+    benefits: ["Reduces API latency by 60\u201380%", "Improves global user experience", "Lowers origin server load"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-edge-computing-deploy',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌍',
+    href: '/it-services/it-edge-computing-deploy',
+    category: 'it'
+  },,
+{
+    id: 'it-esg-compliance-automation',
+    title: 'ESG Compliance Automation',
+    description: `Automates ESG data collection from 100+ systems (cloud, HR, facilities) and generates SEC, EU CSRD, and SFDR reports.`,
+    features: ["Carbon footprint calculation engine", "Diversity metrics dashboard", "Governance policy tracker", "Report generation (XBRL support)"],
+    benefits: ["Saves 200+ manual hours per reporting cycle", "Ensures regulatory alignment", "Improves ESG ratings"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-esg-compliance-automation',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌍',
+    href: '/it-services/it-esg-compliance-automation',
+    category: 'it'
+  },,
+{
+    id: 'it-kubernetes-multicloud',
+    title: 'Kubernetes Multi-Cloud Management',
+    description: `Deploy and manage Kubernetes clusters across AWS, GCP, Azure, and on-prem with a single control plane. Includes GitOps and policy enforcement.`,
+    features: ["Cluster lifecycle automation", "Cost allocation per namespace", "Security policy as code (OPA/Gatekeeper)", "Cross-cloud service mesh"],
+    benefits: ["Avoids vendor lock-in", "Optimizes spend by 30%", "Standardizes deployments"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-kubernetes-multicloud',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '☸️',
+    href: '/it-services/it-kubernetes-multicloud',
+    category: 'it'
+  },,
+{
+    id: 'it-automated-incident-response',
+    title: 'Automated Incident Response (SOAR)',
+    description: `Security Orchestration, Automation & Response platform that auto-remediates 40% of Tier-1 incidents using playbooks and AI decisioning.`,
+    features: ["Pre-built playbooks (phishing, malware, IAM)", "Integration with 200+ security tools", "Case management & audit trail", "AI-assisted triage suggestions"],
+    benefits: ["Cuts incident response time from hours to minutes", "Reduces SOC analyst fatigue", "Improves compliance posture"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-automated-incident-response',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚨',
+    href: '/it-services/it-automated-incident-response',
+    category: 'it'
+  },,
+{
+    id: 'it-data-warehouse-modernization',
+    title: 'Data Warehouse Modernization',
+    description: `Migration from legacy data warehouses (Oracle, Teradata) to modern cloud-native stacks (Snowflake, BigQuery, Databricks) with zero downtime.`,
+    features: ["Schema conversion tools", "ETL/ELT pipeline rebuild", "Query optimization", "Training for data team"],
+    benefits: ["Lowers TCO by 40\u201360%", "Enables self-service analytics", "Scales compute & storage independently"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-data-warehouse-modernization',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🏢',
+    href: '/it-services/it-data-warehouse-modernization',
+    category: 'it'
+  },,
+{
+    id: 'it-iot-device-management',
+    title: 'Enterprise IoT Device Management',
+    description: `Provision, monitor, and secure 10K+ IoT devices (sensors, cameras, gateways) from a single dashboard with OTA updates and zero-touch enrollment.`,
+    features: ["Device inventory & health monitoring", "Remote command & control", "Firmware OTA scheduling", "Geofencing & alerting"],
+    benefits: ["Reduces device management overhead by 70%", "Ensures firmware consistency", "Detects rogue devices"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-iot-device-management',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📱',
+    href: '/it-services/it-iot-device-management',
+    category: 'it'
+  },,
+{
+    id: 'it-digital-workplace-platform',
+    title: 'Digital Workplace Platform',
+    description: `Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.`,
+    features: ["Self-service IT catalog", "Automated employee lifecycle (joiner/mover/leaver)", "License optimization engine", "Employee sentiment surveys"],
+    benefits: ["Reduces SaaS sprawl", "Cuts license costs by 20%", "Improves employee satisfaction"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-digital-workplace-platform',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💼',
+    href: '/it-services/it-digital-workplace-platform',
+    category: 'it'
+  },,
+{
+    id: 'it-apisec-testing',
+    title: 'API Security Testing',
+    description: `Automated security scans for REST, GraphQL, and gRPC APIs. Detects OWASP API Top 10 vulnerabilities and provides remediation code snippets.`,
+    features: ["DAST + SCA for APIs", "Authentication flaw detection", "Rate-limiting & throttling tests", "CI/CD pipeline integration"],
+    benefits: ["Prevents data breaches via API", "Meets PCI & HIPAA API requirements", "Finds bugs before production"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-apisec-testing',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔐',
+    href: '/it-services/it-apisec-testing',
+    category: 'it'
+  },,
+{
+    id: 'it-data-lakehouse-governance',
+    title: 'Data Lakehouse Governance',
+    description: `Metadata management, lineage tracking, and access controls for Delta Lake, Apache Iceberg, or Snowflake environments.`,
+    features: ["Automated data catalog", "Column-level lineage", "Policy-based access control (RBAC/ABAC)", "Quality scorecard per dataset"],
+    benefits: ["Accelerates data discovery", "Ensures regulatory compliance (GDPR, CCPA)", "Reduces data swamp risk"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-data-lakehouse-governance',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🗄️',
+    href: '/it-services/it-data-lakehouse-governance',
+    category: 'it'
+  },,
+{
+    id: 'it-endpoint-detection-response',
+    title: 'Managed Endpoint Detection & Response (EDR)',
+    description: `24/7 monitored EDR service with threat hunting, ransomware rollback, and 15-minute SLA for critical alerts. Includes managed SOC.`,
+    features: ["Next-gen antivirus (NGAV)", "Behavior-based threat detection", "Incident response playbooks", "Quarterly threat hunting reports"],
+    benefits: ["Blocks 99% of endpoint attacks", "Ransomware recovery within hours", "Frees internal IT from security chores"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-endpoint-detection-response',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🛡️',
+    href: '/it-services/it-endpoint-detection-response',
+    category: 'it'
+  },,
+{
+    id: 'it-low-code-platform-integration',
+    title: 'Low-Code Platform Integration',
+    description: `Build & integrate internal tools on Retool, Tooljet, or internal platforms. Pre-built connectors to 200+ SaaS APIs and custom SQL/NoSQL builders.`,
+    features: ["Drag-and-drop UI builder", "Role-based access controls", "Audit logging", "One-click deployment"],
+    benefits: ["Empowers non-developers to build tools", "Reduces internal dev backlog by 40%", "Standardizes tooling across teams"],
+    pricing: {"basic":"299","pro":"799","enterprise":"2499"},
+    contactInfo: {
+      website: '/it-services/it-low-code-platform-integration',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🧩',
+    href: '/it-services/it-low-code-platform-integration',
+    category: 'it'
+  },,
+{
+    id: 'it-edge-computing-orchestration',
+    title: 'Edge Computing Orchestration',
+    description: `Deploy and manage containerized workloads across distributed edge nodes. Auto-scaling, zero-trust networking, and offline sync for true edge-native applications.`,
+    features: ["Multi-cluster management", "GitOps-driven deployment", "Edge-native storage", "Offline-first sync", "Observability across regions"],
+    benefits: ["Sub-10ms latency for local users", "Reduce cloud egress costs by 70%", "Operate\u54ea\u6015\u7f51\u7edc\u4e2d\u65ad"],
+    pricing: {"basic":"349","pro":"799","enterprise":"2099"},
+    contactInfo: {
+      website: '/it-services/it-edge-computing-orchestration',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌍',
+    href: '/it-services/it-edge-computing-orchestration',
+    category: 'it'
+  },,
+{
+    id: 'it-serverless-api-gateway',
+    title: 'Serverless API Gateway',
+    description: `Fully managed API gateway with rate limiting, auth, caching, and transformation. Pay-per-request pricing, auto-scaling to millions of RPS.`,
+    features: ["JWT/OAuth validation", "Request/response transformation", "Response caching (Redis)", "Rate limiting & quotas", "WebSocket support"],
+    benefits: ["Zero ops overhead", "Scale automatically", "Cut API management costs by 80%"],
+    pricing: {"basic":"149","pro":"399","enterprise":"999"},
+    contactInfo: {
+      website: '/it-services/it-serverless-api-gateway',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🚪',
+    href: '/it-services/it-serverless-api-gateway',
+    category: 'it'
+  },,
+{
+    id: 'it-sap-integration-hub',
+    title: 'SAP Integration Hub',
+    description: `Pre-built connectors for SAP ERP, S/4HANA, SuccessFactors, and Ariba. Real-time sync, IDoc/BAPI support, and error handling out of the box.`,
+    features: ["SAP ERP BAPI/IDoc adapters", "SuccessFactors sync", "Ariba network integration", "Error reconciliation dashboard", "SAP-certified connectors"],
+    benefits: ["Integrate SAP in days not months", "Eliminate manual data entry", "Real-time business visibility"],
+    pricing: {"basic":"499","pro":"1099","enterprise":"2799"},
+    contactInfo: {
+      website: '/it-services/it-sap-integration-hub',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🏢',
+    href: '/it-services/it-sap-integration-hub',
+    category: 'it'
+  },,
+{
+    id: 'it-multi-cloud-cost-governance',
+    title: 'Multi-Cloud Cost Governance',
+    description: `Unified cost visibility and policy enforcement across AWS, Azure, GCP. budgets, alerts, rightsizing recommendations, and chargeback/showback.`,
+    features: ["Multi-cloud ingestion", "Budget thresholds & alerts", "Rightsizing AI", "Tag compliance enforcement", "Department chargeback"],
+    benefits: ["Prevent cost overruns", "Save 25%+ on cloud spend", "Align finance & engineering"],
+    pricing: {"basic":"199","pro":"499","enterprise":"1299"},
+    contactInfo: {
+      website: '/it-services/it-multi-cloud-cost-governance',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💸',
+    href: '/it-services/it-multi-cloud-cost-governance',
+    category: 'it'
+  },,
+{
+    id: 'it-secure-file-transfer',
+    title: 'Secure File Transfer (MFT)',
+    description: `Managed file transfer with end-to-end encryption, audit trails, and automated scheduling. Supports SFTP, FTPS, AS2, and HTTPS.`,
+    features: ["PGP/GPG encryption", "AS2 protocol support", "Workflow automation", "Compliance reports (HIPAA, PCI)", "Detailed audit logs"],
+    benefits: ["Secure B2B exchanges", "Automate file-based integrations", "Pass audits with ease"],
+    pricing: {"basic":"199","pro":"499","enterprise":"1199"},
+    contactInfo: {
+      website: '/it-services/it-secure-file-transfer',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📁',
+    href: '/it-services/it-secure-file-transfer',
+    category: 'it'
+  },,
+{
+    id: 'it-legacy-app-containerization',
+    title: 'Legacy App Containerization',
+    description: `Migrate monoliths and legacy apps to Docker/Kubernetes with minimal code changes. Automated dependency analysis and service extraction.`,
+    features: ["Automated dependency mapping", "Service extraction recommendations", "StatefulSet migration", "Database connection pooling", "Blue-green deployment"],
+    benefits: ["Modernize without rewrite", "Reduce infrastructure costs", "Enable CI/CD for legacy"],
+    pricing: {"basic":"399","pro":"899","enterprise":"2299"},
+    contactInfo: {
+      website: '/it-services/it-legacy-app-containerization',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🐳',
+    href: '/it-services/it-legacy-app-containerization',
+    category: 'it'
+  },,
+{
+    id: 'it-pcii-compliance-suite',
+    title: 'PCI DSS Compliance Suite',
+    description: `Automated PCI DSS v4.0 compliance monitoring, evidence collection, and reporting. Pre-built controls for 400+ requirements.`,
+    features: ["Control mapping (PCI DSS 4.0)", "Automated evidence collection", "Vulnerability scanning integration", "Quarterly assessment workflow", "Executive dashboards"],
+    benefits: ["Achieve compliance 10x faster", "Reduce audit costs", "Continuous monitoring"],
+    pricing: {"basic":"299","pro":"699","enterprise":"1799"},
+    contactInfo: {
+      website: '/it-services/it-pcii-compliance-suite',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💳',
+    href: '/it-services/it-pcii-compliance-suite',
+    category: 'it'
+  },,
+{
+    id: 'it-business-continuity-dr',
+    title: 'Business Continuity & Disaster Recovery',
+    description: `Automated backup, replication, and failover orchestration across cloud and on-premise. RPOs as low as 15 seconds, RTOs under 5 minutes.`,
+    features: ["Application-consistent backups", "Cross-region replication", "Automated failover testing", "DR runbook automation", "Compliance (ISO 27001, SOC 2)"],
+    benefits: ["Guaranteed uptime", "Minimize data loss", "Pass DR audits"],
+    pricing: {"basic":"349","pro":"799","enterprise":"2099"},
+    contactInfo: {
+      website: '/it-services/it-business-continuity-dr',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔄',
+    href: '/it-services/it-business-continuity-dr',
+    category: 'it'
+  },,
+{
+    id: 'it-identity-governance',
+    title: 'Identity Governance & Administration',
+    description: `Centralized IGA: lifecycle management, access certifications, separation-of-duties policies. Integrates with Active Directory, Okta, Azure AD.`,
+    features: ["Provisioning/deprovisioning workflows", "Access certification campaigns", "SoD policy engine", "Role mining & optimization", "SOD analytics"],
+    benefits: ["Eliminate orphaned accounts", "Pass SOX audits", "Reduce access risk"],
+    pricing: {"basic":"249","pro":"599","enterprise":"1499"},
+    contactInfo: {
+      website: '/it-services/it-identity-governance',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔑',
+    href: '/it-services/it-identity-governance',
+    category: 'it'
+  },,
+{
+    id: 'it-cloud-native-storage',
+    title: 'Cloud-Native Storage Optimizer',
+    description: `Automated storage tiering, snapshot management, and cost optimization for AWS S3, EBS, Azure Blob, GCP Cloud Storage.`,
+    features: ["Lifecycle policy automation", "Intelligent tiering (Intelligent-Tiering, Glacier)", "Snapshot retention policies", "Cost anomaly detection", "Capacity forecasting"],
+    benefits: ["Reduce storage costs by 60%", "Never run out of space", "Optimize performance tiers"],
+    pricing: {"basic":"149","pro":"399","enterprise":"999"},
+    contactInfo: {
+      website: '/it-services/it-cloud-native-storage',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💾',
+    href: '/it-services/it-cloud-native-storage',
+    category: 'it'
+  },,
+{
+    id: 'it-observability-unified',
+    title: 'Unified Observability Platform',
+    description: `Single pane of glass for logs, metrics, traces, and profiles. Powered by OpenTelemetry, with AI-assisted root cause analysis.`,
+    features: ["OpenTelemetry auto-instrumentation", "Log aggregation & search", "Distributed tracing", "Profiling (CPU/memory)", "AI RCA (root cause)"],
+    benefits: ["Reduce MTTR by 70%", "Cut monitoring tool sprawl", "Proactive anomaly detection"],
+    pricing: {"basic":"299","pro":"699","enterprise":"1799"},
+    contactInfo: {
+      website: '/it-services/it-observability-unified',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📈',
+    href: '/it-services/it-observability-unified',
+    category: 'it'
+  },,
+{
+    id: 'it-secrets-management',
+    title: 'Secrets Management as a Service',
+    description: `Centralized secrets vault with automatic rotation, audit logs, and Just-In-Time access. Integrates with Kubernetes, VSphere, and cloud providers.`,
+    features: ["Vault as a service", "Auto-rotation (certificates, keys)", "Just-In-Time access approvals", "Audit trail & reporting", "K8s operator"],
+    benefits: ["Eliminate hardcoded secrets", "Meet compliance requirements", "Reduce breach blast radius"],
+    pricing: {"basic":"199","pro":"499","enterprise":"1299"},
+    contactInfo: {
+      website: '/it-services/it-secrets-management',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔐',
+    href: '/it-services/it-secrets-management',
+    category: 'it'
+  },,
+{
+    id: 'it-multi-cloud-networking',
+    title: 'Multi-Cloud Networking',
+    description: `Global SD-WAN with direct cloud interconnect (AWS Direct Connect, Azure ExpressRoute). Secure, performant, and centrally managed.`,
+    features: ["Global backbone (100+ PoPs)", "Direct cloud connects", "Zero-trust network access", "WAN optimization", "Central policy management"],
+    benefits: ["Predictable performance", "Secure remote access", "Reduce MPLS costs"],
+    pricing: {"basic":"399","pro":"899","enterprise":"2399"},
+    contactInfo: {
+      website: '/it-services/it-multi-cloud-networking',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🌐',
+    href: '/it-services/it-multi-cloud-networking',
+    category: 'it'
+  },,
+{
+    id: 'it-mainframe-modernization',
+    title: 'Mainframe Modernization Service',
+    description: `Rehost, replatform, or refactor COBOL/PL1 applications to cloud. Automated code conversion, database migration, and cutover planning.`,
+    features: ["Automated COBOL to Java/TS conversion", "Database migration (DB2 \u2192 PostgreSQL)", "Replatform to Azure/AWS mainframe alternatives", "Cutover orchestration", "Regression testing suite"],
+    benefits: ["Reduce mainframe TCO by 70%", "Modernize at your own pace", "Keep business logic intact"],
+    pricing: {"basic":"599","pro":"1299","enterprise":"3499"},
+    contactInfo: {
+      website: '/it-services/it-mainframe-modernization',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🖥️',
+    href: '/it-services/it-mainframe-modernization',
+    category: 'it'
+  },,
+{
+    id: 'it-devsecops-1',
+    title: 'DevSecOps & Security Automation',
+    description: 'Embed security into CI/CD pipelines with automated SAST, DAST, SCA, container scanning, and infrastructure-as-code security checks — shifting security left without slowing delivery.',
+    features: [
+      'Automated SAST/DAST scanning in CI/CD',
+      'Software composition analysis (SCA) for dependencies',
+      'Container and Kubernetes security scanning',
+      'Infrastructure-as-code security validation (Terraform, CloudFormation)',
+      'Secrets detection and rotation automation',
+      'SBOM generation and vulnerability tracking',
+      'Threat modeling automation',
+      'Compliance-as-code policy enforcement',
+    ],
+    benefits: [
+      'Catch vulnerabilities 10x earlier and 100x cheaper',
+      'Automate compliance evidence collection',
+      'Deploy faster with confidence, not fear',
+      'Reduce security incident risk by 80%',
+    ],
+    pricing: {
+      basic: '$1,499/mo',
+      pro: '$4,999/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-devsecops-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-devsecops-1',
+    category: 'it'
+  },,
+{
+    id: 'it-platform-engineering-1',
+    title: 'Internal Developer Platform (IDP) Engineering',
+    description: 'Design and build an Internal Developer Platform (IDP) that provides self-service capabilities for developers — spinning up environments, deploying applications, and managing infrastructure through golden paths.',
+    features: [
+      'Self-service environment provisioning (Backstage, Port, or custom)',
+      'Golden path templates for common architectures',
+      'Internal API marketplace and service catalog',
+      'Automated deployment pipelines per service type',
+      'Developer portal with documentation and onboarding',
+      'Abstractions over cloud services for simplicity',
+      'Usage tracking and cost attribution per team',
+      'Platform observability and SLO management',
+    ],
+    benefits: [
+      'Reduce time-to-first-deploy from weeks to hours',
+      'Empower developers to self-serve without ops bottlenecks',
+      'Standardize best practices across all teams',
+      'Improve developer satisfaction and retention',
+    ],
+    pricing: {
+      basic: '$2,999/mo',
+      pro: '$8,999/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-platform-engineering-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-platform-engineering-1',
+    category: 'it'
+  },,
+{
+    id: 'it-observability-1',
+    title: 'AI-Powered Observability & SRE',
+    description: 'Comprehensive observability platform combining metrics, logs, traces, and AI-powered anomaly detection to achieve proactive reliability and reduce MTTR to minutes.',
+    features: [
+      'Unified observability (metrics, logs, traces, profiles)',
+      'AI-powered anomaly detection and root cause analysis',
+      'Automated incident classification and routing',
+      'SLO/SLI management with error budget tracking',
+      'Predictive alerting — detect issues before users do',
+      'Runbook automation and remediation playbooks',
+      'Dashboard builder with natural language queries',
+      'Integration with PagerDuty, OpsGenie, Slack, and more',
+    ],
+    benefits: [
+      'Reduce MTTR from hours to minutes',
+      'Catch anomalies humans would miss',
+      'Eliminate alert fatigue with smart grouping',
+      'Maintain 99.99% uptime with proactive reliability',
+    ],
+    pricing: {
+      basic: '$999/mo',
+      pro: '$3,499/mo',
+      enterprise: 'Custom'
+    },
+    contactInfo: {
+      website: '/it-observability-1',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '💻',
+    href: '/it-observability-1',
+    category: 'it'
+  },,
+{
     id: 'cloud-finops-1',
     title: 'Cloud FinOps & Cost Intelligence',
     description: 'Comprehensive cloud cost management service combining automated tooling, reserved instance optimization, anomaly detection, and organizational FinOps culture to reduce cloud spend by 30-40% without performance impact.',
@@ -5694,10 +4101,8 @@ export const itServices: Service[] = [
     icon: '💻',
     href: '/cloud-finops-1',
     category: 'it'
-  }
-,
-
-  {
+  },,
+{
     id: 'it-zero-trust-1',
     title: 'Zero Trust Security Implementation',
     description: 'Complete Zero Trust architecture implementation — from identity and access management to network microsegmentation, device trust, and continuous verification across your entire infrastructure.',
@@ -5732,21 +4137,706 @@ export const itServices: Service[] = [
     category: 'it'
   }
 ];
+export const cloudServices: Service[] = [
+{
+    id: 'cloud-migration',
+    title: 'Cloud Migration & Modernization',
+    description: 'Seamless migration to AWS, Azure, or GCP with zero downtime, cost optimization, and infrastructure-as-code automation.',
+    features: [
+      'Multi-cloud migration planning',
+      'Zero-downtime migration execution',
+      'Cost optimization & right-sizing',
+      'Infrastructure-as-Code (Terraform/Pulumi)',
+      'Post-migration performance tuning'
+    ],
+    benefits: [
+      'Up to 40% cost savings on cloud spend',
+      '99.99% uptime SLA during migration',
+      'Eliminate technical debt',
+      'Scalable cloud-native architecture'
+    ],
+    pricing: {
+      basic: '1999',
+      pro: '4999',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/cloud-migration',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '☁️',
+    href: '/it-services/cloud-migration',
+    popular: true,
+    category: 'cloud'
+  },,
+{
+    id: 'cloud-cost-optimization-service',
+    title: 'Cloud Cost Optimization (FinOps)',
+    description: 'ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.',
+    features: ['Multi-cloud unified cost visibility', 'ML-driven instance right-sizing', 'Reserved instance & savings plan optimizer', 'Idle resource detection & cleanup', 'Showback/chargeback automation'],
+    benefits: ['Average 35% cloud cost reduction', 'Cross-cloud spend optimization', 'Real-time anomaly detection alerts', 'Executive-ready FinOps dashboards'],
+    pricing: { basic: '499', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/it-services/cloud-cost-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💰',
+    href: '/it-services/cloud-cost-optimization',
+    category: 'cloud'
+  },,
+{
+    id: 'it-edge-computing-solutions',
+    title: 'Edge Computing & IoT Infrastructure',
+    description: 'Deploy compute closer to your data sources with edge computing architecture — low-latency processing, distributed AI inference, and resilient IoT device management.',
+    features: ['Edge server deployment & configuration', 'Container orchestration at the edge (K3s, KubeEdge)', 'IoT device provisioning & lifecycle management', 'Low-latency AI inference on edge hardware', 'Offline-first data synchronization with cloud'],
+    benefits: ['Sub-10ms response times for critical applications', 'Reduce cloud data transfer costs by 60%', 'Operate autonomously during network outages', 'Scale IoT deployments to thousands of devices'],
+    pricing: { basic: '1299', pro: '2999', enterprise: '6499' },
+    contactInfo: { website: '/it-services/edge-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📡',
+    href: '/it-services/edge-computing',
+    category: 'cloud'
+  },,
+{
+    id: 'it-disaster-recovery',
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning, automated failover systems, and business continuity solutions ensuring zero data loss and minimal downtime for mission-critical operations.',
+    features: ['RTO/RPO analysis & recovery strategy design', 'Multi-region backup & replication automation', 'Automated failover testing & validation', 'Runbook creation & disaster response playbooks', 'Continuous compliance monitoring for DR readiness'],
+    benefits: ['Guarantee 99.99% uptime with automated failover', 'Reduce recovery time from days to minutes', 'Pass compliance DR audits on first attempt', 'Protect brand reputation with always-on services'],
+    pricing: { basic: '699', pro: '1599', enterprise: '3499' },
+    contactInfo: { website: '/it-services/disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔄',
+    href: '/it-services/disaster-recovery',
+    category: 'cloud'
+  },,
+{
+    id: 'it-kubernetes-management',
+    title: 'Container Orchestration & Kubernetes Management',
+    description: 'Enterprise Kubernetes deployment, management, and optimization — multi-cluster orchestration, GitOps workflows, and service mesh implementation.',
+    features: ['Multi-cluster Kubernetes orchestration', 'GitOps deployment pipelines with ArgoCD', 'Service mesh implementation (Istio, Linkerd)', 'Automated scaling and self-healing', 'Cost optimization and resource right-sizing'],
+    benefits: ['Reduce infrastructure costs by 40%', 'Zero-downtime deployments with blue-green', 'Accelerate developer velocity 3x', 'Enterprise-grade reliability and observability'],
+    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
+    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🐳',
+    href: '/it-services/kubernetes-management',
+    category: 'cloud'
+  },,
+{
+    id: 'it-5g-network-deployment',
+    title: '5G Network Planning & Deployment',
+    description: 'End-to-end 5G network architecture, RF planning, edge computing integration, and private 5G deployment for enterprise campuses and industrial IoT.',
+    features: ['5G network architecture and RF planning', 'Private 5G network deployment for campuses', 'Edge computing integration with 5G infrastructure', 'Network slicing design and implementation', 'Industrial IoT connectivity and optimization'],
+    benefits: ['Ultra-low latency for mission-critical applications', 'Massive IoT device connectivity at scale', 'Secure private networks off public infrastructure', 'Future-proof connectivity for digital transformation'],
+    pricing: { basic: '9999', pro: '19999', enterprise: '49999' },
+    contactInfo: { website: '/it-services/5g-network-deployment', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📶',
+    href: '/it-services/5g-network-deployment',
+    category: 'cloud'
+  },,
+{
+    id: 'it-microservices-architecture',
+    title: 'Microservices Architecture & API Gateway Design',
+    description: 'Design and implement scalable microservices architectures with API gateways, service discovery, distributed tracing, and event-driven communication patterns.',
+    features: ['Domain-driven service decomposition', 'API gateway design and implementation (Kong, APISIX)', 'Service mesh deployment (Istio, Linkerd)', 'Distributed tracing and observability', 'Event-driven architecture with message brokers'],
+    benefits: ['Independent deployment and scaling per service', 'Reduced blast radius for failures', 'Technology polyglotism for optimal tooling', 'Accelerated development velocity with team autonomy'],
+    pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
+    contactInfo: { website: '/it-services/microservices-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🧩',
+    href: '/it-services/microservices-architecture',
+    category: 'cloud'
+  },,
+{
+    id: 'it-observability-platform',
+    title: 'Observability Platform & SRE Consulting',
+    description: 'End-to-end observability implementation with distributed tracing, log aggregation, metrics collection, and Site Reliability Engineering best practices.',
+    features: ['Unified observability stack (Prometheus, Grafana, Jaeger)', 'Custom SLO/SLI definition and dashboard creation', 'Incident management with automated runbooks', 'Chaos engineering and resilience testing', 'SRE consulting and reliability maturity assessment'],
+    benefits: ['Reduce MTTR by 60% with intelligent alerting', 'Eliminate alert fatigue with smart correlation', 'Proactive issue detection before user impact', 'Build engineering team reliability practices'],
+    pricing: { basic: '1299', pro: '2999', enterprise: '6999' },
+    contactInfo: { website: '/it-services/observability-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/it-services/observability-platform',
+    category: 'cloud'
+  },,
+{
+    id: 'it-platform-engineering',
+    title: 'Platform Engineering & Internal Developer Portal',
+    description: 'Build internal developer platforms with self-service infrastructure provisioning, golden paths, and developer experience optimization to accelerate team productivity.',
+    features: ['Internal developer platform (IDP) deployment', 'Self-service infrastructure provisioning', 'Golden path templates and scaffolding', 'Developer experience metrics and optimization', 'Integration with existing CI/CD pipelines'],
+    benefits: ['Reduce developer onboarding time by 80%', 'Eliminate infrastructure request bottleneck', 'Standardize best practices across teams', 'Accelerate feature delivery by 2-3x'],
+    pricing: { basic: '2499', pro: '5499', enterprise: '12999' },
+    contactInfo: { website: '/it-services/platform-engineering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛠️',
+    href: '/it-services/platform-engineering',
+    category: 'cloud'
+  },,
+{
+    id: 'it-wireless-network-design',
+    title: 'Wireless Network Design & Optimization',
+    description: 'Enterprise Wi-Fi and wireless infrastructure design, site surveys, RF optimization, and capacity planning for campuses, warehouses, and smart buildings.',
+    features: ['Predictive and on-site RF surveys', 'Capacity planning and density optimization', 'IoT and sensor network design', 'Seamless roaming and load balancing', 'Security hardening (WPA3, 802.1X, NAC)'],
+    benefits: ['Eliminate dead zones with precision design', 'Support 10,000+ concurrent devices per site', 'Seamless IoT and traditional device integration', 'Future-proof for Wi-Fi 6E and Wi-Fi 7'],
+    pricing: { basic: '2999', pro: '7499', enterprise: '18999' },
+    contactInfo: { website: '/it-services/wireless-network', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📡',
+    href: '/it-services/wireless-network',
+    category: 'cloud'
+  },,
+{
+    id: 'it-serverless-architecture',
+    title: 'Serverless Architecture & Function-as-a-Service',
+    description: 'Design and migrate to serverless architectures - automatic scaling, pay-per-use pricing, and zero infrastructure management across AWS Lambda, Azure, and GCP Cloud Run.',
+    features: ['Serverless architecture design and migration', 'Cold start optimization', 'Event-driven architecture', 'Cost monitoring and function optimization', 'Multi-cloud serverless deployment'],
+    benefits: ['Reduce infrastructure costs by 80%', 'No server management', 'Auto-scaling', 'Pay per compute execution'],
+    pricing: { basic: '1799', pro: '3999', enterprise: '8999' },
+    contactInfo: { website: '/it-services/serverless-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '☁️',
+    href: '/it-services/serverless-architecture',
+    category: 'cloud'
+  },,
+{
+    id: 'it-api-management',
+    title: 'API Management Platform & Developer Portal',
+    description: 'Comprehensive API management - gateway, developer portal, monetization, analytics, and lifecycle management for enterprise API programs.',
+    features: ['API gateway with rate limiting', 'Developer portal with docs and SDKs', 'Lifecycle management', 'Monetization', 'Real-time analytics'],
+    benefits: ['Accelerate API adoption', 'Monetize APIs', 'Protect backends', 'Track performance'],
+    pricing: { basic: '1499', pro: '3299', enterprise: '7499' },
+    contactInfo: { website: '/it-services/api-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔌',
+    href: '/it-services/api-management',
+    category: 'cloud'
+  },,
+{
+    id: 'it-database-as-a-service',
+    title: 'Database-as-a-Service & Managed Data Platforms',
+    description: 'Fully managed databases - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch with automated backups, scaling, and AI-powered optimization.',
+    features: ['Multi-engine provisioning', 'Automated backups and PITR', 'AI query optimization', 'Auto-scaling and HA', 'Encryption and compliance'],
+    benefits: ['No DBA overhead needed', '99.99% uptime SLA', 'Optimize queries automatically', 'Scale effortlessly'],
+    pricing: { basic: '799', pro: '1899', enterprise: '4499' },
+    contactInfo: { website: '/it-services/database-as-a-service', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🗄️',
+    href: '/it-services/database-as-a-service',
+    category: 'cloud'
+  },,
+{
+    id: 'it-voice-infrastructure',
+    title: 'Voice Infrastructure & Contact Center Solutions',
+    description: 'Modern contact center infrastructure - SIP trunking, IVR design, call routing, quality monitoring, and AI agent assistance.',
+    features: ['SIP and VoIP infrastructure', 'Intelligent routing and IVR', 'Call quality monitoring', 'AI agent assistance', 'Omnichannel integration'],
+    benefits: ['Reduce voice costs by 40%', 'Improve CSAT with smart routing', 'Call analytics insights', 'CRM integration ready'],
+    pricing: { basic: '1299', pro: '2899', enterprise: '6499' },
+    contactInfo: { website: '/it-services/voice-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📞',
+    href: '/it-services/voice-infrastructure',
+    category: 'cloud'
+  },,
+{
+    id: 'it-capacity-planning',
+    title: 'IT Capacity Planning & Resource Forecasting',
+    description: 'AI-driven capacity planning that forecasts compute, storage, and network requirements based on growth patterns and workload trends across your infrastructure.',
+    features: ['Predictive capacity forecasting with ML models', 'Workload trend analysis and seasonal pattern detection', 'Cloud vs on-prem cost comparison modeling', 'Automated right-sizing recommendations', 'Budget impact simulation for capacity decisions'],
+    benefits: ['Eliminate surprise capacity crises with early warnings', 'Optimize infrastructure spend by 25-40%', 'Plan capacity with 95% forecast accuracy', 'Make data-driven budget decisions'],
+    pricing: { basic: '799', pro: '1799', enterprise: '3999' },
+    contactInfo: { website: '/it-services/capacity-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📊',
+    href: '/it-services/capacity-planning',
+    category: 'cloud'
+  },,
+{
+    id: 'it-backup-disaster-recovery',
+    title: 'Backup & Disaster Recovery Solutions',
+    description: 'Enterprise-grade backup, replication, and disaster recovery — automated backups, immutable storage, multi-region replication, and one-click failover.',
+    features: ['Automated incremental and full backup scheduling', 'Immutable backup storage (WORM) for ransomware protection', 'Multi-region replication for geographic redundancy', 'One-click disaster recovery with tested failover scripts', 'Compliance reporting and backup integrity verification'],
+    benefits: ['Guarantee RPO of minutes, RTO of hours', 'Protect against ransomware with immutable backups', 'Meet all regulatory data retention requirements', 'Eliminate backup failures with automated monitoring'],
+    pricing: { basic: '599', pro: '1299', enterprise: '2999' },
+    contactInfo: { website: '/it-services/backup-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💾',
+    href: '/it-services/backup-recovery',
+    category: 'cloud'
+  },,
+{
+    id: 'it-network-automation',
+    title: 'Network Automation & SD-WAN Management',
+    description: 'Automated network configuration, monitoring, and optimization with SD-WAN, intent-based networking, and AI-driven performance management.',
+    features: ['Intent-based network configuration automation', 'SD-WAN deployment and centralized management', 'AI-driven traffic routing and QoS optimization', 'Automated compliance checks and security policy enforcement', 'Network performance monitoring with predictive alerts'],
+    benefits: ['Reduce network change errors by 80%', 'Optimize WAN costs by 40-60% with SD-WAN', 'Automate repetitive network administration tasks', 'Proactively address performance degradations'],
+    pricing: { basic: '999', pro: '2299', enterprise: '5499' },
+    contactInfo: { website: '/it-services/network-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌐',
+    href: '/it-services/network-automation',
+    category: 'cloud'
+  },,
+{
+    id: 'api_development',
+    title: 'API Development & Integration',
+    description: 'Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/api-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔌',
+    href: '/it-services/api-development',
+    category: 'cloud'
+  },,
+{
+    id: 'backup_disaster_recovery',
+    title: 'Backup & Disaster Recovery',
+    description: 'Enterprise backup solutions with automated disaster recovery, RPO/RSL guarantees, geo-redundant storage, and instant failover for zero data loss.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/backup-disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '💾',
+    href: '/it-services/backup-disaster-recovery',
+    category: 'cloud'
+  },,
+{
+    id: 'cybersecurity_audit',
+    title: 'Cybersecurity Audit',
+    description: 'Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/cybersecurity-audit', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔹',
+    href: '/it-services/cybersecurity-audit',
+    category: 'cloud'
+  },,
+{
+    id: 'data_pipeline_architecture',
+    title: 'Data Pipeline Architecture & Engineering',
+    description: 'Build robust data pipelines with Kafka, Spark, Airflow for real-time and batch processing at enterprise scale.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '3,999', pro: '9,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/data-pipeline-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔧',
+    href: '/it-services/data-pipeline-architecture',
+    category: 'cloud'
+  },,
+{
+    id: 'devops_consulting',
+    title: 'DevOps Consulting & Implementation',
+    description: 'End-to-end DevOps transformation with CI/CD pipeline setup, infrastructure as code, container orchestration, and team training.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '2,499', pro: '7,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/devops-consulting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚙️',
+    href: '/it-services/devops-consulting',
+    category: 'cloud'
+  },,
+{
+    id: 'digital_workplace',
+    title: 'Digital Workplace Solutions',
+    description: 'Modern workplace technology stack with collaboration tools, secure remote access, AI assistants, and unified communications for distributed teams.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/digital-workplace', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🏢',
+    href: '/it-services/digital-workplace',
+    category: 'cloud'
+  },,
+{
+    id: 'disaster_recovery_services',
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Enterprise DR planning, backup automation, geo-redundant infrastructure, and rapid business continuity solutions.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '2,999', pro: '8,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/disaster-recovery-services', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔄',
+    href: '/it-services/disaster-recovery-services',
+    category: 'cloud'
+  },,
+{
+    id: 'endpoint_management',
+    title: 'Endpoint Device Management (MDM)',
+    description: 'Centralized management of all endpoints — laptops, mobile devices, IoT — with automated patching, application deployment, and security policy enfor...',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/endpoint-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📱',
+    href: '/it-services/endpoint-management',
+    category: 'cloud'
+  },,
+{
+    id: 'identity_access_management',
+    title: 'Identity & Access Management (IAM)',
+    description: 'Enterprise IAM with SSO, MFA, privileged access management, and automated provisioning for secure, frictionless access across all applications.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/identity-access-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔑',
+    href: '/it-services/identity-access-management',
+    category: 'cloud'
+  },,
+{
+    id: 'it_asset_management',
+    title: 'IT Asset Management & Lifecycle',
+    description: 'Complete IT asset lifecycle management from procurement to disposal with automated discovery and license tracking.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '799', pro: '1,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/it-asset-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📦',
+    href: '/it-services/it-asset-management',
+    category: 'cloud'
+  },,
+{
+    id: 'it_service_desk',
+    title: 'IT Service Desk & Help Desk',
+    description: 'Multi-channel IT support with AI-powered ticket triage, self-service portals, SLA management, and automated resolution for 60%+ of common issues.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/it-service-desk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🎧',
+    href: '/it-services/it-service-desk',
+    category: 'cloud'
+  },,
+{
+    id: 'managed_soc_security',
+    title: 'Managed SOC & Security Operations',
+    description: '24/7 Security Operations Center services with AI-powered threat detection, incident response, and continuous monitoring for your entire infrastruct...',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/managed-soc-security', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/it-services/managed-soc-security',
+    category: 'cloud'
+  },,
+{
+    id: 'mobile_development',
+    title: 'Mobile App Development',
+    description: 'Build cross-platform and native mobile applications with AI-powered features, offline-first architecture, and enterprise-grade security.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/mobile-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '📱',
+    href: '/it-services/mobile-development',
+    category: 'cloud'
+  },,
+{
+    id: 'network_infrastructure',
+    title: 'Enterprise Network Infrastructure',
+    description: 'Design, deploy, and manage enterprise-grade networks with SD-WAN, wireless optimization, zero-trust architecture, and real-time performance monitor...',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/network-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🌐',
+    href: '/it-services/network-infrastructure',
+    category: 'cloud'
+  },,
+{
+    id: 'network_security_operations',
+    title: 'Network Security Operations Center',
+    description: '24/7 network security monitoring, threat detection, incident response, and vulnerability management.',
+    features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
+    benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
+    pricing: { basic: '4,999', pro: '12,999', enterprise: 'Custom' },
+    contactInfo: { website: '/it-services/network-security-operations', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/it-services/network-security-operations',
+    category: 'cloud'
+  },
+];
+export const securityServices: Service[] = [
+{
+    id: 'cybersecurity',
+    title: 'Cybersecurity & Penetration Testing',
+    description: 'Comprehensive security assessments, vulnerability management, and incident response to protect your digital assets.',
+    features: [
+      'Network & web application penetration testing',
+      'Vulnerability scanning & remediation',
+      'Security awareness training',
+      'Incident response & forensics',
+      'Compliance audits (SOC 2, ISO 27001)'
+    ],
+    benefits: [
+      'Identify critical vulnerabilities before attackers',
+      'Meet regulatory compliance requirements',
+      'Reduce breach risk by 90%',
+      '24/7 threat monitoring'
+    ],
+    pricing: {
+      basic: '2499',
+      pro: '5999',
+      enterprise: '14999'
+    },
+    contactInfo: {
+      website: '/it-services/cybersecurity',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔒',
+    href: '/it-services/cybersecurity',
+    popular: true,
+    category: 'security'
+  },,
+{
+    id: 'it-network-security-monitoring',
+    title: 'Network Security Monitoring & SIEM',
+    description: 'Real-time network traffic analysis, threat correlation, and centralized Security Information and Event Management (SIEM) for enterprises requiring continuous security posture visibility.',
+    features: ['24/7 network traffic monitoring & flow analysis', 'Centralized SIEM with log aggregation', 'Threat correlation engine with automated alerting', 'Custom dashboard & compliance reporting', 'Integration with firewalls, IDS/IPS, and endpoint protection'],
+    benefits: ['Detect lateral movement within minutes, not months', 'Centralize security visibility across all infrastructure', 'Reduce alert fatigue with intelligent correlation', 'Meet regulatory requirements with automated reports'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/network-security-monitoring', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/it-services/network-security-monitoring',
+    category: 'security'
+  },,
+{
+    id: 'it-zero-trust-architecture',
+    title: 'Zero Trust Security Architecture',
+    description: 'Implement Zero Trust principles across your enterprise — identity verification, micro-segmentation, least-privilege access, and continuous authentication for every request.',
+    features: ['Identity & Access Management (IAM) modernization', 'Micro-segmentation of network workloads', 'Continuous adaptive risk & trust assessment', 'Device posture checking & conditional access', 'Privileged Access Management (PAM) integration'],
+    benefits: ['Eliminate implicit trust across the network', 'Reduce breach impact with micro-segmentation', 'Meet CISA Zero Trust maturity requirements', 'Secure hybrid and remote workforces uniformly'],
+    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
+    contactInfo: { website: '/it-services/zero-trust-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔐',
+    href: '/it-services/zero-trust-architecture',
+    category: 'security'
+  },,
+{
+    id: 'it-penetration-testing',
+    title: 'Penetration Testing & Vulnerability Assessment',
+    description: 'Comprehensive security testing — network, web application, API, and social engineering assessments with detailed remediation reports and retesting.',
+    features: ['Black-box and white-box penetration testing', 'Web application and API security testing', 'Social engineering and phishing simulations', 'Wireless and network infrastructure testing', 'Detailed remediation reports with retesting'],
+    benefits: ['Identify vulnerabilities before attackers do', 'Meet PCI-DSS, HIPAA, and SOC 2 testing requirements', 'Reduce attack surface with actionable reports', 'Validate security controls effectiveness'],
+    pricing: { basic: '2999', pro: '5999', enterprise: '12999' },
+    contactInfo: { website: '/it-services/penetration-testing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔓',
+    href: '/it-services/penetration-testing',
+    category: 'security'
+  },,
+{
+    id: 'it-quantum-readiness',
+    title: 'Quantum Computing Readiness Assessment',
+    description: 'Evaluate your organization quantum readiness, identify cryptographic vulnerabilities, and develop migration strategies for post-quantum security standards.',
+    features: ['Post-quantum cryptography assessment', 'Quantum vulnerability scanning across systems', 'NIST PQC migration roadmap development', 'Quantum-safe encryption implementation', 'Executive quantum risk briefing and training'],
+    benefits: ['Prepare for quantum computing threats proactively', 'Comply with emerging NIST PQC standards', 'Protect long-lived encrypted data from harvest-now-decrypt-later', 'Position as quantum-ready enterprise leader'],
+    pricing: { basic: '3499', pro: '7999', enterprise: '18999' },
+    contactInfo: { website: '/it-services/quantum-readiness', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔮',
+    href: '/it-services/quantum-readiness',
+    category: 'security'
+  },,
+{
+    id: 'it-incident-response',
+    title: 'Incident Response & Security Operations Center',
+    description: '24/7 SOC and incident response - threat detection, investigation, containment, recovery with automated playbooks and forensics.',
+    features: ['24/7 monitoring', 'Auto detection and classification', 'Response playbook automation', 'Digital forensics', 'Executive reporting'],
+    benefits: ['Reduce MTTD by 80%', 'Automated containment', 'Compliance-ready docs', 'Expert IR on demand'],
+    pricing: { basic: '2999', pro: '6499', enterprise: '14999' },
+    contactInfo: { website: '/it-services/incident-response', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🚨',
+    href: '/it-services/incident-response',
+    category: 'security'
+  },,
+{
+    id: 'it-identity-access-management',
+    title: 'Identity & Access Management (IAM) Platform',
+    description: 'Enterprise IAM with SSO, MFA, PAM, and automated access provisioning across cloud and on-premise systems — Zero Trust-ready identity governance.',
+    features: ['Single sign-on (SSO) with 5000+ app integrations', 'Adaptive multi-factor authentication with risk scoring', 'Privileged access management (PAM) with session recording', 'Automated access provisioning and de-provisioning', 'Identity governance with access certification workflows'],
+    benefits: ['Reduce access-related incidents by 90%', 'Achieve 100% compliance with identity best practices', 'Eliminate orphaned accounts and access creep', 'Seamless experience with frictionless SSO for users'],
+    pricing: { basic: '999', pro: '2499', enterprise: '5999' },
+    contactInfo: { website: '/it-services/iam-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🔑',
+    href: '/it-services/iam-platform',
+    category: 'security'
+  },
+];
+export const dataServices: Service[] = [
+{
+    id: 'data-engineering',
+    title: 'Data Engineering & ETL Pipelines',
+    description: 'Build robust data pipelines, ETL/ELT workflows, and data lake architectures for real-time and batch processing.',
+    features: [
+      'ETL/ELT pipeline design & deployment',
+      'Data lake & warehouse architecture',
+      'Real-time stream processing (Kafka, Spark)',
+      'Data quality monitoring & validation',
+      'Schema evolution & versioning'
+    ],
+    benefits: [
+      'Unified data platform',
+      '50% faster data delivery',
+      'Automated data quality checks',
+      'Scalable to petabyte volumes'
+    ],
+    pricing: {
+      basic: '2999',
+      pro: '6999',
+      enterprise: '15999'
+    },
+    contactInfo: {
+      website: '/it-services/data-engineering',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🔧',
+    href: '/it-services/data-engineering',
+    category: 'data'
+  },,
+{
+    id: 'database-optimization',
+    title: 'Database Optimization & Management',
+    description: 'Database performance tuning, query optimization, migration, and high-availability clustering for PostgreSQL, MySQL, MongoDB, and more.',
+    features: [
+      'Query performance analysis & optimization',
+      'Database schema design & migration',
+      'High-availability & replication setup',
+      'Automated backup & disaster recovery',
+      'Index optimization & caching strategies'
+    ],
+    benefits: [
+      'Up to 10x query performance improvement',
+      'Zero data loss with automated backups',
+      '99.99% database uptime',
+      'Cost-efficient resource utilization'
+    ],
+    pricing: {
+      basic: '1499',
+      pro: '3499',
+      enterprise: '7999'
+    },
+    contactInfo: {
+      website: '/it-services/database-optimization',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '🗄️',
+    href: '/it-services/database-optimization',
+    category: 'data'
+  },,
+{
+    id: 'it-data-mesh-implementation',
+    title: 'Data Mesh & Modern Data Platform Architecture',
+    description: 'Implement data mesh architecture with domain-oriented data ownership, self-serve data infrastructure, and federated computational governance.',
+    features: ['Domain-oriented data product design', 'Self-serve data platform implementation', 'Federated computational governance framework', 'Data quality and lineage automation', 'Multi-cloud data lakehouse architecture'],
+    benefits: ['Break down data silos with domain ownership', 'Scale analytics across the organization', 'Improve data quality with automated checks', 'Reduce data engineering bottleneck by 70%'],
+    pricing: { basic: '2999', pro: '6999', enterprise: '16999' },
+    contactInfo: { website: '/it-services/data-mesh', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🗄️',
+    href: '/it-services/data-mesh',
+    category: 'data'
+  },
+];
+export const automationServices: Service[] = [
+{
+    id: 'devops-cicd',
+    title: 'DevOps & CI/CD Automation',
+    description: 'End-to-end CI/CD pipelines, container orchestration, GitOps workflows, and site reliability engineering.',
+    features: [
+      'Automated CI/CD pipeline setup (GitHub Actions, GitLab CI)',
+      'Kubernetes orchestration & management',
+      'Infrastructure as Code (Terraform, Ansible)',
+      '24/7 site reliability monitoring',
+      'Blue-green & canary deployments'
+    ],
+    benefits: [
+      'Deploy 10x faster with zero downtime',
+      'Automated testing & quality gates',
+      'Reduced operational overhead by 60%',
+      'Self-healing infrastructure'
+    ],
+    pricing: {
+      basic: '1999',
+      pro: '4499',
+      enterprise: '9999'
+    },
+    contactInfo: {
+      website: '/it-services/devops-cicd',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '⚙️',
+    href: '/it-services/devops-cicd',
+    popular: true,
+    category: 'automation'
+  },,
+{
+    id: 'monitoring-observability',
+    title: 'Monitoring & Observability',
+    description: 'Full-stack monitoring with real-time dashboards, alerting, log aggregation, and distributed tracing for your entire infrastructure.',
+    features: [
+      'Real-time dashboards & custom metrics',
+      'Proactive alerting (PagerDuty, OpsGenie)',
+      'Centralized log aggregation (ELK/Loki)',
+      'Distributed tracing (Jaeger, OpenTelemetry)',
+      'Uptime monitoring from 20+ global locations'
+    ],
+    benefits: [
+      'Mean time to detection (MTTD) reduced by 80%',
+      'Proactive issue resolution',
+      'Single pane of glass for all services',
+      'Capacity planning insights'
+    ],
+    pricing: {
+      basic: '999',
+      pro: '2499',
+      enterprise: '5999'
+    },
+    contactInfo: {
+      website: '/it-services/monitoring-observability',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    icon: '📡',
+    href: '/it-services/monitoring-observability',
+    category: 'automation'
+  },,
+{
+    id: 'supply-chain-management-service',
+    title: 'Supply Chain Management Platform',
+    description: 'End-to-end supply chain orchestration with AI demand forecasting, multi-modal route optimization, supplier risk scoring, and real-time disruption response.',
+    features: ['AI-driven demand forecasting', 'Multi-modal route optimization', 'Supplier risk intelligence & monitoring', 'Automated disruption response playbooks', 'Warehouse operations AI optimization'],
+    benefits: ['40% reduction in stockouts', '25% lower logistics costs', 'Real-time supplier risk alerts', 'Sustainability & carbon tracking'],
+    pricing: { basic: '899', pro: '1999', enterprise: '4499' },
+    contactInfo: { website: '/it-services/supply-chain-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🚛',
+    href: '/it-services/supply-chain-management',
+    category: 'automation'
+  },,
+{
+    id: 'it-digital-twin-platform',
+    title: 'Digital Twin & IoT Platform Development',
+    description: 'Build real-time digital replicas of physical systems — factory floors, supply chains, and smart cities with predictive simulation and optimization capabilities.',
+    features: ['3D digital twin modeling and visualization', 'Real-time IoT sensor data ingestion and mapping', 'Predictive simulation and what-if scenario analysis', 'Integration with CAD, BIM, and ERP systems', 'Automated alerts and anomaly detection'],
+    benefits: ['Simulate changes before real-world implementation', 'Reduce operational downtime by 40%', 'Optimize resource allocation with predictive modeling', 'Unified visibility across complex physical-digital systems'],
+    pricing: { basic: '5999', pro: '12999', enterprise: '29999' },
+    contactInfo: { website: '/it-services/digital-twin-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '🏗️',
+    href: '/it-services/digital-twin-platform',
+    category: 'automation'
+  },,
+{
+    id: 'it-automation-orchestrator',
+    title: 'IT Automation & Orchestration Platform',
+    description: 'Enterprise IT automation platform with workflow orchestration, infrastructure provisioning, configuration management, and self-healing system capabilities.',
+    features: ['Infrastructure automation with Terraform and Ansible', 'Workflow orchestration across IT systems', 'Self-healing infrastructure with event-driven automation', 'Compliance enforcement and drift detection', 'Centralized automation catalog and governance'],
+    benefits: ['Reduce manual IT operations by 80%', 'Eliminate configuration drift across environments', 'Accelerate service provisioning from days to minutes', 'Maintain compliance with automated enforcement'],
+    pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
+    contactInfo: { website: '/it-services/automation-orchestrator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    icon: '⚙️',
+    href: '/it-services/automation-orchestrator',
+    category: 'automation'
+  },
+];
+
 export const itSolutions = itServices;
-export const allServices: Service[] = [...aiServices, ...itServices];
-// Export as servicesData for backward compatibility
-export const servicesData = {
-  aiServices,
-  itServices,
-  itSolutions,
-  allServices
-}
+export const allServices: Service[] = [
+];
+
 export const getServiceById = (id: string): Service | undefined => {
-  return allServices.find(service => service.id === id);
-}
+  return allServices.find(s => s.id === id);
+};
 export const getServicesByCategory = (category: Service['category']): Service[] => {
-  return allServices.filter(service => service.category === category);
-}
+  return allServices.filter(s => s.category === category);
+};
 export const getPopularServices = (): Service[] => {
-  return allServices.filter(service => service.popular);
-}
+  return allServices.filter(s => s.popular);
+};

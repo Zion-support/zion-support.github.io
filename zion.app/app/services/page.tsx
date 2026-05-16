@@ -3,15 +3,22 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { allServices, categoryMeta } from '../data/servicesData';
+import { allServices } from '../data/servicesData';
+import type { Service } from '../data/servicesData';
+
+const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & AI', automation: 'Automation', consulting: 'Consulting' };
 
 const CATEGORIES = [
-  { key: 'all' as const, label: 'All Services' },
-  { key: 'ai' as const, label: '🧠 AI Services' },
-  { key: 'it' as const, label: '🖥️ IT Services' },
-  { key: 'saas' as const, label: '🚀 Micro SAAS' },
-  { key: 'consulting' as const, label: '📋 Consulting' },
+  { key: 'all' as const, label: 'All' },
+  { key: 'ai' as const, label: 'AI' },
+  { key: 'it' as const, label: 'IT' },
+  { key: 'cloud' as const, label: 'Cloud' },
+  { key: 'security' as const, label: 'Security' },
+  { key: 'data' as const, label: 'Data & AI' },
+  { key: 'automation' as const, label: 'Automation' },
+  { key: 'consulting' as const, label: 'Consulting' },
 ];
+
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -20,15 +27,15 @@ export default function ServicesPage() {
   const filteredServices = useMemo(() => {
     let services = allServices;
     if (activeCategory !== 'all') {
-      services = services.filter((s: any) => s.category === activeCategory);
+      services = services.filter((s: Service) => s.category === activeCategory);
     }
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       services = services.filter(
-        (s: any) =>
+        (s: Service) =>
           s.title.toLowerCase().includes(q) ||
           s.description.toLowerCase().includes(q) ||
-          s.subcategory.toLowerCase().includes(q)
+          s.category.toLowerCase().includes(q)
       );
     }
     return services;
@@ -74,14 +81,14 @@ export default function ServicesPage() {
         </div>
 
         <div className="feature-grid">
-          {filteredServices.map((service: any) => (
+          {filteredServices.map((service: Service) => (
             <div key={service.id} className="glass-card flex flex-col h-full">
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 uppercase tracking-wider">
-                    {categoryMeta[service.category]?.label}
+                    {SVC_CAT_LABELS[service.category as string] || service.category}
                   </span>
-                  <span className="text-xs text-slate-500">{service.subcategory}</span>
+                  <span className="text-xs text-slate-500">{service.category}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 leading-snug">{service.title}</h3>
                 <p className="text-slate-400 text-sm mb-4 leading-relaxed">{service.description}</p>
