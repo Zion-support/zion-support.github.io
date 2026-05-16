@@ -15,7 +15,7 @@ const FEATURED_IDS = [
 ];
 
 const stats = [
-  { value: '288+', label: 'Services & Solutions' },
+  { value: '332+', label: 'Services & Solutions' },
   { value: '6 Core Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
   { value: '24/7', label: 'Monitoring & Support' },
   { value: '99.9%', label: 'SLA Uptime Guarantee' },
@@ -38,7 +38,7 @@ export default function HomePage() {
               for Your Business
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              288+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              332+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
               From machine learning to cybersecurity, CRM automation to blockchain.
               Get a custom proposal in minutes.
             </p>
@@ -95,7 +95,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
-              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 220+ options.' },
+              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 332+ options.' },
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (
@@ -155,12 +155,14 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container-page">
           <h2 className="section-heading text-center">Our Service Categories</h2>
-          <p className="section-subheading text-center">Four core domains of expertise</p>
+          <p className="section-subheading text-center">Six core domains of expertise</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {[
               { key: 'ai', label: 'AI Services', emoji: '🧠', count: services.filter((s: any) => s.category === 'ai').length },
               { key: 'it', label: 'IT Services', emoji: '🖥️', count: services.filter((s: any) => s.category === 'it').length },
               { key: 'cloud', label: 'Cloud Services', emoji: '☁️', count: services.filter((s: any) => s.category === 'cloud').length },
+              { key: 'security', label: 'Security', emoji: '🔐', count: services.filter((s: any) => s.category === 'security').length },
+              { key: 'data', label: 'Data Analytics', emoji: '📊', count: services.filter((s: any) => s.category === 'data').length },
               { key: 'automation', label: 'Automation', emoji: '🤖', count: services.filter((s: any) => s.category === 'automation').length },
             ].map((cat: any) => (
               <Link key={cat.key} href={`/services?category=${cat.key}`} className="glass-card text-center hover:-translate-y-2 transition-transform">
