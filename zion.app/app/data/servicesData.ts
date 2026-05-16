@@ -42,7 +42,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📊',
-    href: '/data-analytics',
+    href: '/services/data-analytics',
     popular: true,
     category: 'ai'
   },
@@ -74,7 +74,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🤖',
-    href: '/ai-services/process-automation',
+    href: '/services/process-automation',
     category: 'ai'
   },
 {
@@ -105,7 +105,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💬',
-    href: '/ai-services/ai-customer-support',
+    href: '/services/ai-customer-support',
     popular: true,
     category: 'ai'
   },
@@ -137,7 +137,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '✍️',
-    href: '/ai-services/ai-content-generation',
+    href: '/services/ai-content-generation',
     category: 'ai'
   },
 {
@@ -168,7 +168,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📈',
-    href: '/ai-services/ai-sales-intelligence',
+    href: '/services/ai-sales-intelligence',
     popular: true,
     category: 'ai'
   },
@@ -200,7 +200,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🔐',
-    href: '/ai-services/ai-fraud-detection',
+    href: '/services/ai-fraud-detection',
     category: 'ai'
   },
 {
@@ -231,7 +231,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '👥',
-    href: '/ai-services/ai-hr-assistant',
+    href: '/services/ai-hr-assistant',
     category: 'ai'
   },
 {
@@ -262,7 +262,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📦',
-    href: '/ai-services/ai-supply-chain',
+    href: '/services/ai-supply-chain',
     category: 'ai'
   },
 {
@@ -293,7 +293,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎙️',
-    href: '/ai-services/ai-voice-assistant',
+    href: '/services/ai-voice-assistant',
     category: 'ai'
   },
 {
@@ -324,7 +324,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📧',
-    href: '/ai-services/ai-email-marketing',
+    href: '/services/ai-email-marketing',
     category: 'ai'
   },
 {
@@ -355,7 +355,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎥',
-    href: '/ai-services/ai-video-analytics',
+    href: '/services/ai-video-analytics',
     category: 'ai'
   },
 {
@@ -386,7 +386,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🛡️',
-    href: '/ai-services/ai-compliance',
+    href: '/services/ai-compliance',
     category: 'ai'
   },
 {
@@ -398,7 +398,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '449', pro: '899', enterprise: '2199' },
     contactInfo: { website: '/ai-services/ai-computer-vision', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '👁️',
-    href: '/ai-services/ai-computer-vision',
+    href: '/services/ai-computer-vision',
     category: 'ai'
   },
 {
@@ -410,7 +410,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '199', pro: '499', enterprise: '1199' },
     contactInfo: { website: '/ai-services/ai-knowledge-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🧠',
-    href: '/ai-services/ai-knowledge-management',
+    href: '/services/ai-knowledge-management',
     popular: true,
     category: 'ai'
   },
@@ -423,7 +423,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '349', pro: '749', enterprise: '1799' },
     contactInfo: { website: '/ai-services/ai-testing-qa', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🧪',
-    href: '/ai-services/ai-testing-qa',
+    href: '/services/ai-testing-qa',
     category: 'ai'
   },
 {
@@ -435,7 +435,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '249', pro: '599', enterprise: '1499' },
     contactInfo: { website: '/ai-services/ai-translation-services', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🌐',
-    href: '/ai-services/ai-translation-services',
+    href: '/services/ai-translation-services',
     category: 'ai'
   },
 {
@@ -447,7 +447,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '299', pro: '699', enterprise: '1599' },
     contactInfo: { website: '/ai-services/ai-employee-experience', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤝',
-    href: '/ai-services/ai-employee-experience',
+    href: '/services/ai-employee-experience',
     category: 'ai'
   },
 {
@@ -459,7 +459,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '449', pro: '999', enterprise: '2499' },
     contactInfo: { website: '/ai-services/ai-document-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📄',
-    href: '/ai-services/ai-document-intelligence',
+    href: '/services/ai-document-intelligence',
     popular: true,
     category: 'ai'
   },
@@ -472,7 +472,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '59', pro: '199', enterprise: '499' },
     contactInfo: { website: '/ai-services/ai-video-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎬',
-    href: '/ai-services/ai-video-generation',
+    href: '/services/ai-video-generation',
     category: 'ai'
   },
 {
@@ -484,7 +484,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '79', pro: '249', enterprise: '599' },
     contactInfo: { website: '/ai-services/ai-voice-cloning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🗣️',
-    href: '/ai-services/ai-voice-cloning',
+    href: '/services/ai-voice-cloning',
     category: 'ai'
   },
 {
@@ -496,7 +496,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '149', pro: '449', enterprise: '999' },
     contactInfo: { website: '/ai-services/ai-lead-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎯',
-    href: '/ai-services/ai-lead-generation',
+    href: '/services/ai-lead-generation',
     popular: true,
     category: 'ai'
   },
@@ -509,7 +509,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '39', pro: '129', enterprise: '349' },
     contactInfo: { website: '/ai-services/ai-presentation-maker', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📊',
-    href: '/ai-services/ai-presentation-maker',
+    href: '/services/ai-presentation-maker',
     category: 'ai'
   },
 {
@@ -521,7 +521,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '99', pro: '299', enterprise: '699' },
     contactInfo: { website: '/ai-services/ai-chatbot-builder-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-chatbot-builder-pro',
+    href: '/services/ai-chatbot-builder-pro',
     category: 'ai'
   },
 {
@@ -533,7 +533,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '69', pro: '199', enterprise: '499' },
     contactInfo: { website: '/ai-services/ai-code-reviewer-pro', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔍',
-    href: '/ai-services/ai-code-reviewer-pro',
+    href: '/services/ai-code-reviewer-pro',
     category: 'ai'
   },
 {
@@ -545,7 +545,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-revenue-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📈',
-    href: '/ai-services/ai-revenue-optimization',
+    href: '/services/ai-revenue-optimization',
     category: 'ai'
   },
 {
@@ -557,7 +557,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '799', pro: '1799', enterprise: '3999' },
     contactInfo: { website: '/ai-services/ai-cyber-threat-hunting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔒',
-    href: '/ai-services/ai-cyber-threat-hunting',
+    href: '/services/ai-cyber-threat-hunting',
     category: 'ai'
   },
 {
@@ -569,7 +569,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '349', pro: '799', enterprise: '1899' },
     contactInfo: { website: '/ai-services/ai-sentiment-analysis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💬',
-    href: '/ai-services/ai-sentiment-analysis',
+    href: '/services/ai-sentiment-analysis',
     category: 'ai'
   },
 {
@@ -581,7 +581,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '499', pro: '1199', enterprise: '2799' },
     contactInfo: { website: '/ai-services/ai-predictive-maintenance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚙️',
-    href: '/ai-services/ai-predictive-maintenance',
+    href: '/services/ai-predictive-maintenance',
     category: 'ai'
   },
 {
@@ -593,7 +593,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '279', pro: '649', enterprise: '1599' },
     contactInfo: { website: '/ai-services/ai-speech-voice-solutions', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎙️',
-    href: '/ai-services/ai-speech-voice-solutions',
+    href: '/services/ai-speech-voice-solutions',
     category: 'ai'
   },
 {
@@ -605,7 +605,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '399', pro: '899', enterprise: '2499' },
     contactInfo: { website: '/ai-services/ai-agentic-workflows', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-agentic-workflows',
+    href: '/services/ai-agentic-workflows',
     category: 'ai'
   },
 {
@@ -617,7 +617,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '699', pro: '1599', enterprise: '3999' },
     contactInfo: { website: '/ai-services/ai-regulatory-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📜',
-    href: '/ai-services/ai-regulatory-compliance',
+    href: '/services/ai-regulatory-compliance',
     category: 'ai'
   },
 {
@@ -629,7 +629,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '449', pro: '999', enterprise: '2299' },
     contactInfo: { website: '/ai-services/ai-talent-acquisition', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎯',
-    href: '/ai-services/ai-talent-acquisition',
+    href: '/services/ai-talent-acquisition',
     category: 'ai'
   },
 {
@@ -641,7 +641,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '799', pro: '1899', enterprise: '4499' },
     contactInfo: { website: '/ai-services/ai-fraud-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection',
+    href: '/services/ai-fraud-detection',
     category: 'ai'
   },
 {
@@ -653,7 +653,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '549', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-energy-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚡',
-    href: '/ai-services/ai-energy-optimization',
+    href: '/services/ai-energy-optimization',
     category: 'ai'
   },
 {
@@ -665,7 +665,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '349', pro: '799', enterprise: '1899' },
     contactInfo: { website: '/ai-services/ai-personalization-engine', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '✨',
-    href: '/ai-services/ai-personalization-engine',
+    href: '/services/ai-personalization-engine',
     category: 'ai'
   },
 {
@@ -677,7 +677,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-legal-doc-analysis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚖️',
-    href: '/ai-services/ai-legal-doc-analysis',
+    href: '/services/ai-legal-doc-analysis',
     category: 'ai'
   },
 {
@@ -689,7 +689,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '999', pro: '2499', enterprise: '5999' },
     contactInfo: { website: '/ai-services/ai-medical-imaging', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏥',
-    href: '/ai-services/ai-medical-imaging',
+    href: '/services/ai-medical-imaging',
     category: 'ai'
   },
 {
@@ -701,7 +701,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '699', pro: '1599', enterprise: '3499' },
     contactInfo: { website: '/ai-services/ai-supply-chain-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📦',
-    href: '/ai-services/ai-supply-chain-optimizer',
+    href: '/services/ai-supply-chain-optimizer',
     category: 'ai'
   },
 {
@@ -713,7 +713,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '449', pro: '999', enterprise: '2299' },
     contactInfo: { website: '/ai-services/ai-content-localization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🌍',
-    href: '/ai-services/ai-content-localization',
+    href: '/services/ai-content-localization',
     category: 'ai'
   },
 {
@@ -725,7 +725,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '349', pro: '799', enterprise: '1799' },
     contactInfo: { website: '/ai-services/ai-intelligent-routing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📋',
-    href: '/ai-services/ai-intelligent-routing',
+    href: '/services/ai-intelligent-routing',
     category: 'ai'
   },
 {
@@ -737,7 +737,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '2999', pro: '5999', enterprise: '14999' },
     contactInfo: { website: '/ai-services/ai-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💻',
-    href: '/ai-services/ai-code-migration',
+    href: '/services/ai-code-migration',
     category: 'ai'
   },
 {
@@ -749,7 +749,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '799', pro: '1899', enterprise: '4499' },
     contactInfo: { website: '/ai-services/ai-ethics-governance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚖️',
-    href: '/ai-services/ai-ethics-governance',
+    href: '/services/ai-ethics-governance',
     category: 'ai'
   },
 {
@@ -761,7 +761,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '899', pro: '2199', enterprise: '4999' },
     contactInfo: { website: '/ai-services/ai-spatial-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🥽',
-    href: '/ai-services/ai-spatial-computing',
+    href: '/services/ai-spatial-computing',
     category: 'ai'
   },
 {
@@ -773,7 +773,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
     contactInfo: { website: '/ai-services/ai-robotics-integration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-robotics-integration',
+    href: '/services/ai-robotics-integration',
     category: 'ai'
   },
 {
@@ -785,7 +785,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '2999', pro: '6999', enterprise: '16999' },
     contactInfo: { website: '/ai-services/ai-drug-discovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💊',
-    href: '/ai-services/ai-drug-discovery',
+    href: '/services/ai-drug-discovery',
     category: 'ai'
   },
 {
@@ -797,7 +797,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/advanced-ai-enterprise-intelligence-hub', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🧠',
-    href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
+    href: '/services/advanced-ai-enterprise-intelligence-hub',
     category: 'ai'
   },
 {
@@ -809,7 +809,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-agent-safety-evaluation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-agent-safety-evaluation',
+    href: '/services/ai-agent-safety-evaluation',
     category: 'ai'
   },
 {
@@ -821,7 +821,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-agents-autonomous', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-agents-autonomous',
+    href: '/services/ai-agents-autonomous',
     category: 'ai'
   },
 {
@@ -833,7 +833,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-context-engineering-enterprise', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-context-engineering-enterprise',
+    href: '/services/ai-context-engineering-enterprise',
     category: 'ai'
   },
 {
@@ -845,7 +845,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-copilot-enterprise', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '👤',
-    href: '/ai-services/ai-copilot-enterprise',
+    href: '/services/ai-copilot-enterprise',
     category: 'ai'
   },
 {
@@ -857,7 +857,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-edge-realtime-inference', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚡',
-    href: '/ai-services/ai-edge-realtime-inference',
+    href: '/services/ai-edge-realtime-inference',
     category: 'ai'
   },
 {
@@ -869,7 +869,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-finetuning-alignment-pipelines', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-finetuning-alignment-pipelines',
+    href: '/services/ai-finetuning-alignment-pipelines',
     category: 'ai'
   },
 {
@@ -881,7 +881,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-foundation-models-custom-training', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏗️',
-    href: '/ai-services/ai-foundation-models-custom-training',
+    href: '/services/ai-foundation-models-custom-training',
     category: 'ai'
   },
 {
@@ -893,7 +893,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-governance-trust', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚖️',
-    href: '/ai-services/ai-governance-trust',
+    href: '/services/ai-governance-trust',
     category: 'ai'
   },
 {
@@ -905,7 +905,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-integration-apis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔌',
-    href: '/ai-services/ai-integration-apis',
+    href: '/services/ai-integration-apis',
     category: 'ai'
   },
 {
@@ -917,7 +917,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-memory-agents-long-horizon', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🤖',
-    href: '/ai-services/ai-memory-agents-long-horizon',
+    href: '/services/ai-memory-agents-long-horizon',
     category: 'ai'
   },
 {
@@ -929,7 +929,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-model-orchestration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎛️',
-    href: '/ai-services/ai-model-orchestration',
+    href: '/services/ai-model-orchestration',
     category: 'ai'
   },
 {
@@ -941,7 +941,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-multimodal-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎬',
-    href: '/ai-services/ai-multimodal-intelligence',
+    href: '/services/ai-multimodal-intelligence',
     category: 'ai'
   },
 {
@@ -953,7 +953,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-observability-mlops', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📡',
-    href: '/ai-services/ai-observability-mlops',
+    href: '/services/ai-observability-mlops',
     category: 'ai'
   },
 {
@@ -965,7 +965,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-rag-knowledge-systems', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📚',
-    href: '/ai-services/ai-rag-knowledge-systems',
+    href: '/services/ai-rag-knowledge-systems',
     category: 'ai'
   },
 {
@@ -977,7 +977,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-regulated-industries', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏛️',
-    href: '/ai-services/ai-regulated-industries',
+    href: '/services/ai-regulated-industries',
     category: 'ai'
   },
 {
@@ -989,7 +989,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-security-responsible-ai', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/ai-services/ai-security-responsible-ai',
+    href: '/services/ai-security-responsible-ai',
     category: 'ai'
   },
 {
@@ -1001,7 +1001,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-strategy-roadmap', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🗺️',
-    href: '/ai-services/ai-strategy-roadmap',
+    href: '/services/ai-strategy-roadmap',
     category: 'ai'
   },
 {
@@ -1013,7 +1013,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/autonomous-growth-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📈',
-    href: '/ai-services/autonomous-growth-intelligence',
+    href: '/services/autonomous-growth-intelligence',
     category: 'ai'
   },
 {
@@ -1025,7 +1025,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/business-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📊',
-    href: '/ai-services/business-intelligence',
+    href: '/services/business-intelligence',
     category: 'ai'
   },
 {
@@ -1037,7 +1037,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/content-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📈',
-    href: '/ai-services/content-generation',
+    href: '/services/content-generation',
     category: 'ai'
   },
 {
@@ -1049,7 +1049,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/customer-experience', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💬',
-    href: '/ai-services/customer-experience',
+    href: '/services/customer-experience',
     category: 'ai'
   },
 {
@@ -1061,7 +1061,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/document-processing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔄',
-    href: '/ai-services/document-processing',
+    href: '/services/document-processing',
     category: 'ai'
   },
 {
@@ -1073,7 +1073,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/energy-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '✨',
-    href: '/ai-services/energy-management',
+    href: '/services/energy-management',
     category: 'ai'
   },
 {
@@ -1085,7 +1085,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/fraud-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/ai-services/fraud-detection',
+    href: '/services/fraud-detection',
     category: 'ai'
   },
 {
@@ -1097,7 +1097,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/generative-ai-enterprise', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🧠',
-    href: '/ai-services/generative-ai-enterprise',
+    href: '/services/generative-ai-enterprise',
     category: 'ai'
   },
 {
@@ -1109,7 +1109,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/hr-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📊',
-    href: '/ai-services/hr-analytics',
+    href: '/services/hr-analytics',
     category: 'ai'
   },
 {
@@ -1121,7 +1121,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/marketing-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📈',
-    href: '/ai-services/marketing-automation',
+    href: '/services/marketing-automation',
     category: 'ai'
   },
 {
@@ -1133,7 +1133,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/predictive-maintenance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '✨',
-    href: '/ai-services/predictive-maintenance',
+    href: '/services/predictive-maintenance',
     category: 'ai'
   },
 {
@@ -1145,7 +1145,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/quality-assurance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '✨',
-    href: '/ai-services/quality-assurance',
+    href: '/services/quality-assurance',
     category: 'ai'
   },
 {
@@ -1157,7 +1157,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
     contactInfo: { website: '/ai-services/supply-chain', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏢',
-    href: '/ai-services/supply-chain',
+    href: '/services/supply-chain',
     category: 'ai'
   },
 {
@@ -1169,7 +1169,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '1299', pro: '2999', enterprise: '7999' },
     contactInfo: { website: '/ai-services/ai-supply-chain-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔗',
-    href: '/ai-services/ai-supply-chain-intelligence',
+    href: '/services/ai-supply-chain-intelligence',
     category: 'ai'
   },
 {
@@ -1181,7 +1181,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '599', pro: '1299', enterprise: '3499' },
     contactInfo: { website: '/ai-services/ai-predictive-workforce-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '👥',
-    href: '/ai-services/ai-predictive-workforce-planning',
+    href: '/services/ai-predictive-workforce-planning',
     category: 'ai'
   },
 {
@@ -1193,7 +1193,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '499', pro: '1199', enterprise: '3999' },
     contactInfo: { website: '/ai-services/ai-voice-agent-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎙️',
-    href: '/ai-services/ai-voice-agent-platform',
+    href: '/services/ai-voice-agent-platform',
     category: 'ai'
   },
 {
@@ -1205,7 +1205,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '899', pro: '2199', enterprise: '5999' },
     contactInfo: { website: '/ai-services/ai-financial-forecasting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📊',
-    href: '/ai-services/ai-financial-forecasting',
+    href: '/services/ai-financial-forecasting',
     category: 'ai'
   },
 {
@@ -1217,7 +1217,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '399', pro: '999', enterprise: '2999' },
     contactInfo: { website: '/ai-services/ai-content-moderation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/ai-services/ai-content-moderation',
+    href: '/services/ai-content-moderation',
     category: 'ai'
   },
 {
@@ -1229,7 +1229,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '349', pro: '799', enterprise: '1999' },
     contactInfo: { website: '/ai-services/ai-customer-sentiment-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💭',
-    href: '/ai-services/ai-customer-sentiment-analytics',
+    href: '/services/ai-customer-sentiment-analytics',
     category: 'ai'
   },
 {
@@ -1241,7 +1241,7 @@ export const aiServices: Service[] = [
     pricing: { basic: '2999', pro: '7499', enterprise: '19999' },
     contactInfo: { website: '/ai-services/ai-code-migration-modernization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚙️',
-    href: '/ai-services/ai-code-migration-modernization',
+    href: '/services/ai-code-migration-modernization',
     category: 'ai'
   },
 {
@@ -1272,7 +1272,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '⚖️',
-    href: '/ai-services/ai-legal-doc-review',
+    href: '/services/ai-legal-doc-review',
     category: 'ai'
   },
 {
@@ -1303,7 +1303,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🚢',
-    href: '/ai-services/ai-supply-chain-visibility',
+    href: '/services/ai-supply-chain-visibility',
     category: 'ai'
   },
 {
@@ -1334,7 +1334,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🔒',
-    href: '/ai-services/ai-code-audit-security',
+    href: '/services/ai-code-audit-security',
     category: 'ai'
   },
 {
@@ -1365,7 +1365,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📧',
-    href: '/ai-services/ai-bdr-sdr-agent',
+    href: '/services/ai-bdr-sdr-agent',
     category: 'ai'
   },
 {
@@ -1396,7 +1396,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📚',
-    href: '/ai-services/ai-knowledge-base-agent',
+    href: '/services/ai-knowledge-base-agent',
     category: 'ai'
   },
 {
@@ -1427,7 +1427,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '👁️',
-    href: '/ai-services/ai-visual-inspection',
+    href: '/services/ai-visual-inspection',
     category: 'ai'
   },
 {
@@ -1458,7 +1458,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💬',
-    href: '/ai-services/ai-omnichannel-chatbot',
+    href: '/services/ai-omnichannel-chatbot',
     category: 'ai'
   },
 {
@@ -1489,7 +1489,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📞',
-    href: '/ai-services/ai-call-center-voice-analytics',
+    href: '/services/ai-call-center-voice-analytics',
     category: 'ai'
   },
 {
@@ -1520,7 +1520,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎬',
-    href: '/ai-services/ai-video-generator',
+    href: '/services/ai-video-generator',
     category: 'ai'
   },
 {
@@ -1551,7 +1551,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🔍',
-    href: '/ai-services/ai-seo-optimizer',
+    href: '/services/ai-seo-optimizer',
     category: 'ai'
   },
 {
@@ -1582,7 +1582,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📝',
-    href: '/ai-services/ai-contract-manager',
+    href: '/services/ai-contract-manager',
     category: 'ai'
   },
 {
@@ -1613,7 +1613,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎓',
-    href: '/ai-services/ai-personalized-learning',
+    href: '/services/ai-personalized-learning',
     category: 'ai'
   },
 {
@@ -1644,7 +1644,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📱',
-    href: '/ai-services/ai-voice-agent',
+    href: '/services/ai-voice-agent',
     category: 'ai'
   },
 {
@@ -1675,7 +1675,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🤖',
-    href: '/ai-services/ai-devops-chatbot',
+    href: '/services/ai-devops-chatbot',
     category: 'ai'
   },
 {
@@ -1706,7 +1706,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📈',
-    href: '/ai-services/ai-revenue-ops',
+    href: '/services/ai-revenue-ops',
     category: 'ai'
   },
 {
@@ -1737,7 +1737,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📦',
-    href: '/ai-services/ai-supply-demand-planner',
+    href: '/services/ai-supply-demand-planner',
     category: 'ai'
   },
 {
@@ -1768,7 +1768,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '👨\u200d💻',
-    href: '/ai-services/ai-code-review-assistant',
+    href: '/services/ai-code-review-assistant',
     category: 'ai'
   },
 {
@@ -1799,7 +1799,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '✍️',
-    href: '/ai-services/ai-marketing-copy-generator',
+    href: '/services/ai-marketing-copy-generator',
     category: 'ai'
   },
 {
@@ -1822,7 +1822,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '799', enterprise: '2499' },
      contactInfo: { website: '/ai-services/ai-customer-support-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🤖',
-     href: '/ai-services/ai-customer-support-agent',
+     href: '/services/ai-customer-support-agent',
      category: 'ai'
    },
 {
@@ -1845,7 +1845,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '0', pro: '199', enterprise: '899' },
      contactInfo: { website: '/ai-services/autonomous-code-review-agent', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '👩‍💻',
-     href: '/ai-services/autonomous-code-review-agent',
+     href: '/services/autonomous-code-review-agent',
      category: 'ai'
    },
 {
@@ -1868,7 +1868,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '399', pro: '999', enterprise: '3299' },
      contactInfo: { website: '/ai-services/ai-driven-customer-segmentation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🎯',
-     href: '/ai-services/ai-driven-customer-segmentation',
+     href: '/services/ai-driven-customer-segmentation',
      category: 'ai'
    },
 {
@@ -1891,7 +1891,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '0', pro: '149', enterprise: '699' },
      contactInfo: { website: '/ai-services/ai-powered-ui-generator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🎨',
-     href: '/ai-services/ai-powered-ui-generator',
+     href: '/services/ai-powered-ui-generator',
      category: 'ai'
    },
 {
@@ -1914,7 +1914,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '799', enterprise: '2799' },
      contactInfo: { website: '/ai-services/predictive-churn-risk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '📉',
-     href: '/ai-services/predictive-churn-risk',
+     href: '/services/predictive-churn-risk',
      category: 'ai'
    },
 {
@@ -1937,7 +1937,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '99', pro: '299', enterprise: '999' },
      contactInfo: { website: '/ai-services/ai-powered-seo-optimizer', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🔍',
-     href: '/ai-services/ai-powered-seo-optimizer',
+     href: '/services/ai-powered-seo-optimizer',
      category: 'ai'
    },
 {
@@ -1960,7 +1960,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '2499', pro: '5999', enterprise: '19999' },
      contactInfo: { website: '/ai-services/ai-for-code-migration', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🔀',
-     href: '/ai-services/ai-for-code-migration',
+     href: '/services/ai-for-code-migration',
      category: 'ai'
    },
 {
@@ -1983,7 +1983,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '0', pro: '199', enterprise: '799' },
      contactInfo: { website: '/ai-services/ai-powered-test-generation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🧪',
-     href: '/ai-services/ai-powered-test-generation',
+     href: '/services/ai-powered-test-generation',
      category: 'ai'
    },
 {
@@ -2006,7 +2006,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '699', enterprise: '1899' },
      contactInfo: { website: '/ai-services/ai-powered-log-anomaly-detection', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '📈',
-     href: '/ai-services/ai-powered-log-anomaly-detection',
+     href: '/services/ai-powered-log-anomaly-detection',
      category: 'ai'
    },
 {
@@ -2029,7 +2029,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '499', pro: '1199', enterprise: '3599' },
      contactInfo: { website: '/ai-services/generative-data-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🌀',
-     href: '/ai-services/generative-data-synthesis',
+     href: '/services/generative-data-synthesis',
      category: 'ai'
    },
 {
@@ -2052,7 +2052,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '199', pro: '499', enterprise: '1499' },
      contactInfo: { website: '/ai-services/ai-sustainable-ops', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🌱',
-     href: '/ai-services/ai-sustainable-ops',
+     href: '/services/ai-sustainable-ops',
      category: 'ai'
    },
 {
@@ -2075,7 +2075,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '499', pro: '1299', enterprise: '4999' },
      contactInfo: { website: '/ai-services/legal-doc-review-ai', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '⚖️',
-     href: '/ai-services/legal-doc-review-ai',
+     href: '/services/legal-doc-review-ai',
      category: 'ai'
    },
 {
@@ -2098,7 +2098,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '799', enterprise: '2499' },
      contactInfo: { website: '/ai-services/ai-powered-passwordless-auth', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🔑',
-     href: '/ai-services/ai-powered-passwordless-auth',
+     href: '/services/ai-powered-passwordless-auth',
      category: 'ai'
    },
 {
@@ -2121,7 +2121,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '799', enterprise: '2399' },
      contactInfo: { website: '/ai-services/ai-powered-tech-debt-quantifier', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🗑️',
-     href: '/ai-services/ai-powered-tech-debt-quantifier',
+     href: '/services/ai-powered-tech-debt-quantifier',
      category: 'ai'
    },
 {
@@ -2144,7 +2144,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '199', pro: '599', enterprise: '1899' },
      contactInfo: { website: '/ai-services/generative-ux-research-synthesis', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '👥',
-     href: '/ai-services/generative-ux-research-synthesis',
+     href: '/services/generative-ux-research-synthesis',
      category: 'ai'
    },
 {
@@ -2167,7 +2167,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '699', enterprise: '1999' },
      contactInfo: { website: '/ai-services/ai-powered-incident-postmortem', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '📝',
-     href: '/ai-services/ai-powered-incident-postmortem',
+     href: '/services/ai-powered-incident-postmortem',
      category: 'ai'
    },
 {
@@ -2190,7 +2190,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '0', pro: '149', enterprise: '599' },
      contactInfo: { website: '/ai-services/ai-driven-api-design-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🔗',
-     href: '/ai-services/ai-driven-api-design-assistant',
+     href: '/services/ai-driven-api-design-assistant',
      category: 'ai'
    },
 {
@@ -2213,7 +2213,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '0', pro: '99', enterprise: '399' },
      contactInfo: { website: '/ai-services/ai-powered-pr-drafting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '📦',
-     href: '/ai-services/ai-powered-pr-drafting',
+     href: '/services/ai-powered-pr-drafting',
      category: 'ai'
    },
 {
@@ -2236,7 +2236,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '199', pro: '599', enterprise: '1799' },
      contactInfo: { website: '/ai-services/automated-data-labeling', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🏷️',
-     href: '/ai-services/automated-data-labeling',
+     href: '/services/automated-data-labeling',
      category: 'ai'
    },
 {
@@ -2259,7 +2259,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '0', pro: '99', enterprise: '399' },
      contactInfo: { website: '/ai-services/meeting-ai-assistant', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '🎙️',
-     href: '/ai-services/meeting-ai-assistant',
+     href: '/services/meeting-ai-assistant',
      category: 'ai'
    },
 {
@@ -2282,7 +2282,7 @@ export const aiServices: Service[] = [
      pricing: { basic: '299', pro: '799', enterprise: '2299' },
      contactInfo: { website: '/ai-services/ai-powered-question-answering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
      icon: '💬',
-     href: '/ai-services/ai-powered-question-answering',
+     href: '/services/ai-powered-question-answering',
      category: 'ai'
    },
 {
@@ -2298,7 +2298,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🚢',
-    href: '/ai-services/ai-supply-chain-predictor',
+    href: '/services/ai-supply-chain-predictor',
     category: 'ai'
   },
 {
@@ -2314,7 +2314,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📝',
-    href: '/ai-services/ai-contract-review',
+    href: '/services/ai-contract-review',
     category: 'ai'
   },
 {
@@ -2330,7 +2330,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '♿',
-    href: '/ai-services/ai-accessibility-auditor',
+    href: '/services/ai-accessibility-auditor',
     category: 'ai'
   },
 {
@@ -2346,7 +2346,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🧠',
-    href: '/ai-services/ai-mental-health-chatbot',
+    href: '/services/ai-mental-health-chatbot',
     category: 'ai'
   },
 {
@@ -2362,7 +2362,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📊',
-    href: '/ai-services/ai-customer-sentiment-tracker',
+    href: '/services/ai-customer-sentiment-tracker',
     category: 'ai'
   },
 {
@@ -2378,7 +2378,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📚',
-    href: '/ai-services/ai-codebase-doc-generator',
+    href: '/services/ai-codebase-doc-generator',
     category: 'ai'
   },
 {
@@ -2394,7 +2394,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🔍',
-    href: '/ai-services/ai-competitive-intel-engine',
+    href: '/services/ai-competitive-intel-engine',
     category: 'ai'
   },
 {
@@ -2410,7 +2410,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎙️',
-    href: '/ai-services/ai-voice-cloning-marketing',
+    href: '/services/ai-voice-cloning-marketing',
     category: 'ai'
   },
 {
@@ -2426,7 +2426,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection-finance',
+    href: '/services/ai-fraud-detection-finance',
     category: 'ai'
   },
 {
@@ -2442,7 +2442,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🔒',
-    href: '/ai-services/ai-legal-contract-redaction',
+    href: '/services/ai-legal-contract-redaction',
     category: 'ai'
   },
 {
@@ -2458,7 +2458,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🌱',
-    href: '/ai-services/ai-sustainability-carbon-tracker',
+    href: '/services/ai-sustainability-carbon-tracker',
     category: 'ai'
   },
 {
@@ -2474,7 +2474,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎓',
-    href: '/ai-services/ai-education-tutor',
+    href: '/services/ai-education-tutor',
     category: 'ai'
   },
 {
@@ -2490,7 +2490,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🛒',
-    href: '/ai-services/ai-retail-recommendation-engine',
+    href: '/services/ai-retail-recommendation-engine',
     category: 'ai'
   },
 {
@@ -2506,7 +2506,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📈',
-    href: '/ai-services/ai-aiops-anomaly-detection',
+    href: '/services/ai-aiops-anomaly-detection',
     category: 'ai'
   },
 {
@@ -2522,7 +2522,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📰',
-    href: '/ai-services/ai-media-monitoring',
+    href: '/services/ai-media-monitoring',
     category: 'ai'
   },
 {
@@ -2538,7 +2538,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🔧',
-    href: '/ai-services/ai-accessibility-optimizer',
+    href: '/services/ai-accessibility-optimizer',
     category: 'ai'
   },
 {
@@ -2554,7 +2554,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🌐',
-    href: '/ai-services/ai-realtime-translation',
+    href: '/services/ai-realtime-translation',
     category: 'ai'
   },
 {
@@ -2570,7 +2570,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📜',
-    href: '/ai-services/ai-contract-analyzer-pro',
+    href: '/services/ai-contract-analyzer-pro',
     category: 'ai'
   },
 {
@@ -2586,7 +2586,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🎯',
-    href: '/ai-services/ai-competitor-intelligence',
+    href: '/services/ai-competitor-intelligence',
     category: 'ai'
   },
 {
@@ -2602,7 +2602,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📧',
-    href: '/ai-services/ai-email-campaign-generator',
+    href: '/services/ai-email-campaign-generator',
     category: 'ai'
   },
 {
@@ -2618,7 +2618,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📞',
-    href: '/ai-services/ai-voice-assistant-pro',
+    href: '/services/ai-voice-assistant-pro',
     category: 'ai'
   },
 {
@@ -2634,7 +2634,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💰',
-    href: '/ai-services/ai-revenue-optimizer',
+    href: '/services/ai-revenue-optimizer',
     category: 'ai'
   },
 {
@@ -2650,7 +2650,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🕸️',
-    href: '/ai-services/ai-knowledge-graph-builder',
+    href: '/services/ai-knowledge-graph-builder',
     category: 'ai'
   },
 {
@@ -2666,7 +2666,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🛡️',
-    href: '/ai-services/ai-fraud-detection-real-time',
+    href: '/services/ai-fraud-detection-real-time',
     category: 'ai'
   },
 {
@@ -2682,7 +2682,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📢',
-    href: '/ai-services/ai-social-sentiment-tracker',
+    href: '/services/ai-social-sentiment-tracker',
     category: 'ai'
   },
 {
@@ -2698,7 +2698,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '📊',
-    href: '/ai-services/ai-automated-reporting',
+    href: '/services/ai-automated-reporting',
     category: 'ai'
   },
 {
@@ -2714,7 +2714,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🏭',
-    href: '/ai-services/ai-predictive-maintenance-factory',
+    href: '/services/ai-predictive-maintenance-factory',
     category: 'ai'
   },
 {
@@ -2730,7 +2730,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '👤',
-    href: '/ai-services/ai-customer-360',
+    href: '/services/ai-customer-360',
     category: 'ai'
   },
 {
@@ -2746,7 +2746,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '👥',
-    href: '/ai-services/ai-talent-acquisition-platform',
+    href: '/services/ai-talent-acquisition-platform',
     category: 'ai'
   },
 {
@@ -2780,7 +2780,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🧠',
-    href: '/ai-gen-app-dev-1',
+    href: '/services/ai-gen-app-dev-1',
     category: 'ai'
   },
 {
@@ -2814,7 +2814,7 @@ export const aiServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '🧠',
-    href: '/ai-ethics-audit-1',
+    href: '/services/ai-ethics-audit-1',
     category: 'ai'
   }
 ];
@@ -2842,12 +2842,12 @@ export const itServices: Service[] = [
       enterprise: '3299'
     },
     contactInfo: {
-      website: '/it-services/devops-gen-ai-ci-cd',
+      website: '/services/devops-gen-ai-ci-cd',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔄',
-    href: '/it-services/devops-gen-ai-ci-cd',
+    href: '/services/devops-gen-ai-ci-cd',
     category: 'it'
   },
 {
@@ -2873,12 +2873,12 @@ export const itServices: Service[] = [
       enterprise: '1999'
     },
     contactInfo: {
-      website: '/it-services/cloud-cost-ai-optimizer',
+      website: '/services/cloud-cost-ai-optimizer',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💸',
-    href: '/it-services/cloud-cost-ai-optimizer',
+    href: '/services/cloud-cost-ai-optimizer',
     category: 'it'
   },
 {
@@ -2904,12 +2904,12 @@ export const itServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
-      website: '/it-services/data-warehouse-modernization',
+      website: '/services/data-warehouse-modernization',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🗄️',
-    href: '/it-services/data-warehouse-modernization',
+    href: '/services/data-warehouse-modernization',
     category: 'it'
   },
 {
@@ -2935,12 +2935,12 @@ export const itServices: Service[] = [
       enterprise: '3999'
     },
     contactInfo: {
-      website: '/it-services/cyber-threat-intelligence',
+      website: '/services/cyber-threat-intelligence',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🛡️',
-    href: '/it-services/cyber-threat-intelligence',
+    href: '/services/cyber-threat-intelligence',
     category: 'it'
   },
 {
@@ -2966,12 +2966,12 @@ export const itServices: Service[] = [
       enterprise: '2499'
     },
     contactInfo: {
-      website: '/it-services/low-code-platform-customization',
+      website: '/services/low-code-platform-customization',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🧩',
-    href: '/it-services/low-code-platform-customization',
+    href: '/services/low-code-platform-customization',
     category: 'it'
   },
 {
@@ -2997,12 +2997,12 @@ export const itServices: Service[] = [
       enterprise: '3599'
     },
     contactInfo: {
-      website: '/it-services/api-management-gateway',
+      website: '/services/api-management-gateway',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔌',
-    href: '/it-services/api-management-gateway',
+    href: '/services/api-management-gateway',
     category: 'it'
   },
 {
@@ -3028,12 +3028,12 @@ export const itServices: Service[] = [
       enterprise: '1899'
     },
     contactInfo: {
-      website: '/it-services/ai-it-helpdesk',
+      website: '/services/ai-it-helpdesk',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🖥️',
-    href: '/it-services/ai-it-helpdesk',
+    href: '/services/ai-it-helpdesk',
     category: 'it'
    },
 {
@@ -3059,12 +3059,12 @@ export const itServices: Service[] = [
       enterprise: '29999'
     },
     contactInfo: {
-      website: '/it-services/saas-development',
+      website: '/services/saas-development',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🚀',
-    href: '/it-services/saas-development',
+    href: '/services/saas-development',
     category: 'it'
   },
 {
@@ -3090,12 +3090,12 @@ export const itServices: Service[] = [
       enterprise: '8999'
     },
     contactInfo: {
-      website: '/it-services/api-integration',
+      website: '/services/api-integration',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔗',
-    href: '/it-services/api-integration',
+    href: '/services/api-integration',
     category: 'it'
   },
 {
@@ -3121,12 +3121,12 @@ export const itServices: Service[] = [
       enterprise: '14999'
     },
     contactInfo: {
-      website: '/it-services/it-consulting',
+      website: '/services/it-consulting',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💡',
-    href: '/it-services/it-consulting',
+    href: '/services/it-consulting',
     category: 'it'
   },
 {
@@ -3136,9 +3136,9 @@ export const itServices: Service[] = [
     features: ['WCAG 2.2 AA/AAA automated auditing', 'Screen reader simulation & navigation testing', 'Auto-generated remediation code snippets', 'Color contrast & typography analysis', 'Continuous CI/CD accessibility gates'],
     benefits: ['Reduce ADA lawsuit risk substantially', 'Improve UX for all users', 'Automated compliance reporting', 'Proactive CI/CD testing integration'],
     pricing: { basic: '999', pro: '2499', enterprise: '5999' },
-    contactInfo: { website: '/it-services/accessibility-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/accessibility-compliance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '♿',
-    href: '/it-services/accessibility-compliance',
+    href: '/services/accessibility-compliance',
     category: 'it'
   },
 {
@@ -3148,9 +3148,9 @@ export const itServices: Service[] = [
     features: ['AI-powered incident classification & routing', 'Automated change approval workflows', 'Service catalog & self-service portal', 'CMDB auto-discovery & dependency mapping', 'SLA monitoring & escalation engine', 'Knowledge base integration with AI search'],
     benefits: ['Reduce ticket resolution time by 50%', 'Eliminate change-related outages with automated validation', 'Empower users with self-service capabilities', 'Maintain accurate service dependency maps'],
     pricing: { basic: '499', pro: '1099', enterprise: '2499' },
-    contactInfo: { website: '/it-services/itil-service-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/itil-service-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📋',
-    href: '/it-services/itil-service-management',
+    href: '/services/itil-service-management',
     category: 'it'
   },
 {
@@ -3160,9 +3160,9 @@ export const itServices: Service[] = [
     features: ['Smart contract development and deployment', 'Formal verification and security auditing', 'Tokenomics and governance design', 'DeFi protocol integration and development', 'Enterprise blockchain consulting and strategy'],
     benefits: ['Launch secure blockchain products faster', 'Prevent exploits with formal verification', 'Access decentralized finance opportunities', 'Enterprise-grade blockchain integration'],
     pricing: { basic: '4999', pro: '9999', enterprise: '24999' },
-    contactInfo: { website: '/it-services/blockchain-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/blockchain-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⛓️',
-    href: '/it-services/blockchain-development',
+    href: '/services/blockchain-development',
     category: 'it'
   },
 {
@@ -3172,9 +3172,9 @@ export const itServices: Service[] = [
     features: ['24/7 security monitoring', 'AI-powered threat detection', 'Incident response automation', 'Proactive threat hunting', 'Compliance reporting'],
     benefits: ['Detect threats in real-time', 'Reduce mean response time to minutes', 'Meet SOC 2 and ISO 27001 requirements', 'Protect against zero-day attacks'],
     pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
-    contactInfo: { website: '/it-services/managed-soc-threat-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/managed-soc-threat-intelligence', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔒',
-    href: '/it-services/managed-soc-threat-intelligence',
+    href: '/services/managed-soc-threat-intelligence',
     category: 'it'
   },
 {
@@ -3184,9 +3184,9 @@ export const itServices: Service[] = [
     features: ['Cluster design and deployment', 'Auto-scaling configuration', 'Service mesh implementation', 'CI/CD pipeline integration', 'Cost optimization and rightsizing'],
     benefits: ['Reduce infrastructure costs by 35%', 'Enable zero-downtime deployments', 'Scale from hundreds to thousands of pods', 'Streamline developer workflows'],
     pricing: { basic: '999', pro: '2499', enterprise: '6999' },
-    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🐳',
-    href: '/it-services/kubernetes-management',
+    href: '/services/kubernetes-management',
     category: 'it'
   },
 {
@@ -3196,9 +3196,9 @@ export const itServices: Service[] = [
     features: ['Intelligent ticket classification', 'Auto-resolution engine', 'Self-service knowledge base', 'SLA monitoring and escalation', 'Performance analytics'],
     benefits: ['Resolve 40% of tickets automatically', 'Reduce average response time by 60%', 'Improve end-user satisfaction', 'Lower IT support costs'],
     pricing: { basic: '499', pro: '1199', enterprise: '3499' },
-    contactInfo: { website: '/it-services/it-service-desk-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-service-desk-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎧',
-    href: '/it-services/it-service-desk-automation',
+    href: '/services/it-service-desk-automation',
     category: 'it'
   },
 {
@@ -3208,9 +3208,9 @@ export const itServices: Service[] = [
     features: ['Automated backup scheduling', 'Point-in-time recovery', 'Ransomware detection and isolation', 'Geo-redundant replication', 'Compliance-ready retention policies'],
     benefits: ['Achieve 99.99% data durability', 'Meet RPO/RTO SLA targets', 'Protect against ransomware', 'Ensure business continuity'],
     pricing: { basic: '299', pro: '799', enterprise: '2499' },
-    contactInfo: { website: '/it-services/enterprise-backup-dr', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/enterprise-backup-dr', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💾',
-    href: '/it-services/enterprise-backup-dr',
+    href: '/services/enterprise-backup-dr',
     category: 'it'
   },
 {
@@ -3220,9 +3220,9 @@ export const itServices: Service[] = [
     features: ['SD-WAN design and deployment', 'Network performance monitoring', 'Zero-trust segmentation', 'Traffic optimization policies', 'Multi-site connectivity management'],
     benefits: ['Reduce WAN costs by 50%', 'Improve application performance', 'Secure remote workforce access', 'Simplify multi-cloud networking'],
     pricing: { basic: '799', pro: '1999', enterprise: '5499' },
-    contactInfo: { website: '/it-services/network-architecture-sdwan', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-architecture-sdwan', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🌐',
-    href: '/it-services/network-architecture-sdwan',
+    href: '/services/network-architecture-sdwan',
     category: 'it'
   },
 {
@@ -3248,12 +3248,12 @@ export const itServices: Service[] = [
       enterprise: '3999'
     },
     contactInfo: {
-      website: '/it-services/it-sam-platform',
+      website: '/services/it-sam-platform',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🗺️',
-    href: '/it-services/it-sam-platform',
+    href: '/services/it-sam-platform',
     category: 'it'
   },
 {
@@ -3279,12 +3279,12 @@ export const itServices: Service[] = [
       enterprise: '14999'
     },
     contactInfo: {
-      website: '/it-services/vulnerability-assessment-penetration-testing',
+      website: '/services/vulnerability-assessment-penetration-testing',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🧐',
-    href: '/it-services/vulnerability-assessment-penetration-testing',
+    href: '/services/vulnerability-assessment-penetration-testing',
     category: 'it'
   },
 {
@@ -3310,12 +3310,12 @@ export const itServices: Service[] = [
       enterprise: '3499'
     },
     contactInfo: {
-      website: '/it-services/remote-it-support',
+      website: '/services/remote-it-support',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🎧',
-    href: '/it-services/remote-it-support',
+    href: '/services/remote-it-support',
     category: 'it'
   },
 {
@@ -3341,12 +3341,12 @@ export const itServices: Service[] = [
       enterprise: '1999'
     },
     contactInfo: {
-      website: '/it-services/endpoint-management',
+      website: '/services/endpoint-management',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💻',
-    href: '/it-services/endpoint-management',
+    href: '/services/endpoint-management',
     category: 'it'
   },
 {
@@ -3372,12 +3372,12 @@ export const itServices: Service[] = [
       enterprise: '19999'
     },
     contactInfo: {
-      website: '/it-services/legacy-system-modernization',
+      website: '/services/legacy-system-modernization',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🏗️',
-    href: '/it-services/legacy-system-modernization',
+    href: '/services/legacy-system-modernization',
     category: 'it'
   },
 {
@@ -3403,12 +3403,12 @@ export const itServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
-      website: '/it-services/quantum-ready-security',
+      website: '/services/quantum-ready-security',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔐',
-    href: '/it-services/quantum-ready-security',
+    href: '/services/quantum-ready-security',
     category: 'it'
   },
 {
@@ -3434,12 +3434,12 @@ export const itServices: Service[] = [
       enterprise: '3299'
     },
     contactInfo: {
-      website: '/it-services/observability-platform',
+      website: '/services/observability-platform',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '📊',
-    href: '/it-services/observability-platform',
+    href: '/services/observability-platform',
     category: 'it'
   },
 {
@@ -3465,12 +3465,12 @@ export const itServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
-      website: '/it-services/soc-as-a-service',
+      website: '/services/soc-as-a-service',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🚨',
-    href: '/it-services/soc-as-a-service',
+    href: '/services/soc-as-a-service',
     category: 'it'
   },
 {
@@ -3496,12 +3496,12 @@ export const itServices: Service[] = [
       enterprise: '4599'
     },
     contactInfo: {
-      website: '/it-services/nodejs-performance-tuning',
+      website: '/services/nodejs-performance-tuning',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🟢',
-    href: '/it-services/nodejs-performance-tuning',
+    href: '/services/nodejs-performance-tuning',
     category: 'it'
   },
 {
@@ -3527,12 +3527,12 @@ export const itServices: Service[] = [
       enterprise: '5999'
     },
     contactInfo: {
-      website: '/it-services/etl-pipeline-optimization',
+      website: '/services/etl-pipeline-optimization',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔄',
-    href: '/it-services/etl-pipeline-optimization',
+    href: '/services/etl-pipeline-optimization',
     category: 'it'
   },
 {
@@ -3558,12 +3558,12 @@ export const itServices: Service[] = [
       enterprise: '19999'
     },
     contactInfo: {
-      website: '/it-services/incident-response-retainer',
+      website: '/services/incident-response-retainer',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🚑',
-    href: '/it-services/incident-response-retainer',
+    href: '/services/incident-response-retainer',
     category: 'it'
    },
 {
@@ -3574,12 +3574,12 @@ export const itServices: Service[] = [
     benefits: ["Reduces API latency by 60\u201380%", "Improves global user experience", "Lowers origin server load"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-edge-computing-deploy',
+      website: '/services/it-edge-computing-deploy',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🌍',
-    href: '/it-services/it-edge-computing-deploy',
+    href: '/services/it-edge-computing-deploy',
     category: 'it'
   },
 {
@@ -3590,12 +3590,12 @@ export const itServices: Service[] = [
     benefits: ["Saves 200+ manual hours per reporting cycle", "Ensures regulatory alignment", "Improves ESG ratings"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-esg-compliance-automation',
+      website: '/services/it-esg-compliance-automation',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🌍',
-    href: '/it-services/it-esg-compliance-automation',
+    href: '/services/it-esg-compliance-automation',
     category: 'it'
   },
 {
@@ -3606,12 +3606,12 @@ export const itServices: Service[] = [
     benefits: ["Avoids vendor lock-in", "Optimizes spend by 30%", "Standardizes deployments"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-kubernetes-multicloud',
+      website: '/services/it-kubernetes-multicloud',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '☸️',
-    href: '/it-services/it-kubernetes-multicloud',
+    href: '/services/it-kubernetes-multicloud',
     category: 'it'
   },
 {
@@ -3622,12 +3622,12 @@ export const itServices: Service[] = [
     benefits: ["Cuts incident response time from hours to minutes", "Reduces SOC analyst fatigue", "Improves compliance posture"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-automated-incident-response',
+      website: '/services/it-automated-incident-response',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🚨',
-    href: '/it-services/it-automated-incident-response',
+    href: '/services/it-automated-incident-response',
     category: 'it'
   },
 {
@@ -3638,12 +3638,12 @@ export const itServices: Service[] = [
     benefits: ["Lowers TCO by 40\u201360%", "Enables self-service analytics", "Scales compute & storage independently"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-data-warehouse-modernization',
+      website: '/services/it-data-warehouse-modernization',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🏢',
-    href: '/it-services/it-data-warehouse-modernization',
+    href: '/services/it-data-warehouse-modernization',
     category: 'it'
   },
 {
@@ -3654,12 +3654,12 @@ export const itServices: Service[] = [
     benefits: ["Reduces device management overhead by 70%", "Ensures firmware consistency", "Detects rogue devices"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-iot-device-management',
+      website: '/services/it-iot-device-management',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '📱',
-    href: '/it-services/it-iot-device-management',
+    href: '/services/it-iot-device-management',
     category: 'it'
   },
 {
@@ -3670,12 +3670,12 @@ export const itServices: Service[] = [
     benefits: ["Reduces SaaS sprawl", "Cuts license costs by 20%", "Improves employee satisfaction"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-digital-workplace-platform',
+      website: '/services/it-digital-workplace-platform',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💼',
-    href: '/it-services/it-digital-workplace-platform',
+    href: '/services/it-digital-workplace-platform',
     category: 'it'
   },
 {
@@ -3686,12 +3686,12 @@ export const itServices: Service[] = [
     benefits: ["Prevents data breaches via API", "Meets PCI & HIPAA API requirements", "Finds bugs before production"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-apisec-testing',
+      website: '/services/it-apisec-testing',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔐',
-    href: '/it-services/it-apisec-testing',
+    href: '/services/it-apisec-testing',
     category: 'it'
   },
 {
@@ -3702,12 +3702,12 @@ export const itServices: Service[] = [
     benefits: ["Accelerates data discovery", "Ensures regulatory compliance (GDPR, CCPA)", "Reduces data swamp risk"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-data-lakehouse-governance',
+      website: '/services/it-data-lakehouse-governance',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🗄️',
-    href: '/it-services/it-data-lakehouse-governance',
+    href: '/services/it-data-lakehouse-governance',
     category: 'it'
   },
 {
@@ -3718,12 +3718,12 @@ export const itServices: Service[] = [
     benefits: ["Blocks 99% of endpoint attacks", "Ransomware recovery within hours", "Frees internal IT from security chores"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-endpoint-detection-response',
+      website: '/services/it-endpoint-detection-response',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🛡️',
-    href: '/it-services/it-endpoint-detection-response',
+    href: '/services/it-endpoint-detection-response',
     category: 'it'
   },
 {
@@ -3734,12 +3734,12 @@ export const itServices: Service[] = [
     benefits: ["Empowers non-developers to build tools", "Reduces internal dev backlog by 40%", "Standardizes tooling across teams"],
     pricing: {"basic":"299","pro":"799","enterprise":"2499"},
     contactInfo: {
-      website: '/it-services/it-low-code-platform-integration',
+      website: '/services/it-low-code-platform-integration',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🧩',
-    href: '/it-services/it-low-code-platform-integration',
+    href: '/services/it-low-code-platform-integration',
     category: 'it'
   },
 {
@@ -3750,12 +3750,12 @@ export const itServices: Service[] = [
     benefits: ["Sub-10ms latency for local users", "Reduce cloud egress costs by 70%", "Operate\u54ea\u6015\u7f51\u7edc\u4e2d\u65ad"],
     pricing: {"basic":"349","pro":"799","enterprise":"2099"},
     contactInfo: {
-      website: '/it-services/it-edge-computing-orchestration',
+      website: '/services/it-edge-computing-orchestration',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🌍',
-    href: '/it-services/it-edge-computing-orchestration',
+    href: '/services/it-edge-computing-orchestration',
     category: 'it'
   },
 {
@@ -3766,12 +3766,12 @@ export const itServices: Service[] = [
     benefits: ["Zero ops overhead", "Scale automatically", "Cut API management costs by 80%"],
     pricing: {"basic":"149","pro":"399","enterprise":"999"},
     contactInfo: {
-      website: '/it-services/it-serverless-api-gateway',
+      website: '/services/it-serverless-api-gateway',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🚪',
-    href: '/it-services/it-serverless-api-gateway',
+    href: '/services/it-serverless-api-gateway',
     category: 'it'
   },
 {
@@ -3782,12 +3782,12 @@ export const itServices: Service[] = [
     benefits: ["Integrate SAP in days not months", "Eliminate manual data entry", "Real-time business visibility"],
     pricing: {"basic":"499","pro":"1099","enterprise":"2799"},
     contactInfo: {
-      website: '/it-services/it-sap-integration-hub',
+      website: '/services/it-sap-integration-hub',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🏢',
-    href: '/it-services/it-sap-integration-hub',
+    href: '/services/it-sap-integration-hub',
     category: 'it'
   },
 {
@@ -3798,12 +3798,12 @@ export const itServices: Service[] = [
     benefits: ["Prevent cost overruns", "Save 25%+ on cloud spend", "Align finance & engineering"],
     pricing: {"basic":"199","pro":"499","enterprise":"1299"},
     contactInfo: {
-      website: '/it-services/it-multi-cloud-cost-governance',
+      website: '/services/it-multi-cloud-cost-governance',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💸',
-    href: '/it-services/it-multi-cloud-cost-governance',
+    href: '/services/it-multi-cloud-cost-governance',
     category: 'it'
   },
 {
@@ -3814,12 +3814,12 @@ export const itServices: Service[] = [
     benefits: ["Secure B2B exchanges", "Automate file-based integrations", "Pass audits with ease"],
     pricing: {"basic":"199","pro":"499","enterprise":"1199"},
     contactInfo: {
-      website: '/it-services/it-secure-file-transfer',
+      website: '/services/it-secure-file-transfer',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '📁',
-    href: '/it-services/it-secure-file-transfer',
+    href: '/services/it-secure-file-transfer',
     category: 'it'
   },
 {
@@ -3830,12 +3830,12 @@ export const itServices: Service[] = [
     benefits: ["Modernize without rewrite", "Reduce infrastructure costs", "Enable CI/CD for legacy"],
     pricing: {"basic":"399","pro":"899","enterprise":"2299"},
     contactInfo: {
-      website: '/it-services/it-legacy-app-containerization',
+      website: '/services/it-legacy-app-containerization',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🐳',
-    href: '/it-services/it-legacy-app-containerization',
+    href: '/services/it-legacy-app-containerization',
     category: 'it'
   },
 {
@@ -3846,12 +3846,12 @@ export const itServices: Service[] = [
     benefits: ["Achieve compliance 10x faster", "Reduce audit costs", "Continuous monitoring"],
     pricing: {"basic":"299","pro":"699","enterprise":"1799"},
     contactInfo: {
-      website: '/it-services/it-pcii-compliance-suite',
+      website: '/services/it-pcii-compliance-suite',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💳',
-    href: '/it-services/it-pcii-compliance-suite',
+    href: '/services/it-pcii-compliance-suite',
     category: 'it'
   },
 {
@@ -3862,12 +3862,12 @@ export const itServices: Service[] = [
     benefits: ["Guaranteed uptime", "Minimize data loss", "Pass DR audits"],
     pricing: {"basic":"349","pro":"799","enterprise":"2099"},
     contactInfo: {
-      website: '/it-services/it-business-continuity-dr',
+      website: '/services/it-business-continuity-dr',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔄',
-    href: '/it-services/it-business-continuity-dr',
+    href: '/services/it-business-continuity-dr',
     category: 'it'
   },
 {
@@ -3878,12 +3878,12 @@ export const itServices: Service[] = [
     benefits: ["Eliminate orphaned accounts", "Pass SOX audits", "Reduce access risk"],
     pricing: {"basic":"249","pro":"599","enterprise":"1499"},
     contactInfo: {
-      website: '/it-services/it-identity-governance',
+      website: '/services/it-identity-governance',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔑',
-    href: '/it-services/it-identity-governance',
+    href: '/services/it-identity-governance',
     category: 'it'
   },
 {
@@ -3894,12 +3894,12 @@ export const itServices: Service[] = [
     benefits: ["Reduce storage costs by 60%", "Never run out of space", "Optimize performance tiers"],
     pricing: {"basic":"149","pro":"399","enterprise":"999"},
     contactInfo: {
-      website: '/it-services/it-cloud-native-storage',
+      website: '/services/it-cloud-native-storage',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '💾',
-    href: '/it-services/it-cloud-native-storage',
+    href: '/services/it-cloud-native-storage',
     category: 'it'
   },
 {
@@ -3910,12 +3910,12 @@ export const itServices: Service[] = [
     benefits: ["Reduce MTTR by 70%", "Cut monitoring tool sprawl", "Proactive anomaly detection"],
     pricing: {"basic":"299","pro":"699","enterprise":"1799"},
     contactInfo: {
-      website: '/it-services/it-observability-unified',
+      website: '/services/it-observability-unified',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '📈',
-    href: '/it-services/it-observability-unified',
+    href: '/services/it-observability-unified',
     category: 'it'
   },
 {
@@ -3926,12 +3926,12 @@ export const itServices: Service[] = [
     benefits: ["Eliminate hardcoded secrets", "Meet compliance requirements", "Reduce breach blast radius"],
     pricing: {"basic":"199","pro":"499","enterprise":"1299"},
     contactInfo: {
-      website: '/it-services/it-secrets-management',
+      website: '/services/it-secrets-management',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔐',
-    href: '/it-services/it-secrets-management',
+    href: '/services/it-secrets-management',
     category: 'it'
   },
 {
@@ -3942,12 +3942,12 @@ export const itServices: Service[] = [
     benefits: ["Predictable performance", "Secure remote access", "Reduce MPLS costs"],
     pricing: {"basic":"399","pro":"899","enterprise":"2399"},
     contactInfo: {
-      website: '/it-services/it-multi-cloud-networking',
+      website: '/services/it-multi-cloud-networking',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🌐',
-    href: '/it-services/it-multi-cloud-networking',
+    href: '/services/it-multi-cloud-networking',
     category: 'it'
   },
 {
@@ -3958,12 +3958,12 @@ export const itServices: Service[] = [
     benefits: ["Reduce mainframe TCO by 70%", "Modernize at your own pace", "Keep business logic intact"],
     pricing: {"basic":"599","pro":"1299","enterprise":"3499"},
     contactInfo: {
-      website: '/it-services/it-mainframe-modernization',
+      website: '/services/it-mainframe-modernization',
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🖥️',
-    href: '/it-services/it-mainframe-modernization',
+    href: '/services/it-mainframe-modernization',
     category: 'it'
   },
 {
@@ -3997,7 +3997,7 @@ export const itServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💻',
-    href: '/it-devsecops-1',
+    href: '/services/it-devsecops-1',
     category: 'it'
   },
 {
@@ -4031,7 +4031,7 @@ export const itServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💻',
-    href: '/it-platform-engineering-1',
+    href: '/services/it-platform-engineering-1',
     category: 'it'
   },
 {
@@ -4065,7 +4065,7 @@ export const itServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💻',
-    href: '/it-observability-1',
+    href: '/services/it-observability-1',
     category: 'it'
   },
 {
@@ -4099,7 +4099,7 @@ export const itServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💻',
-    href: '/cloud-finops-1',
+    href: '/services/cloud-finops-1',
     category: 'it'
   },
 {
@@ -4133,7 +4133,7 @@ export const itServices: Service[] = [
       phone: '+1 302 464 0950'
     },
     icon: '💻',
-    href: '/it-zero-trust-1',
+    href: '/services/it-zero-trust-1',
     category: 'it'
   }
 ];
@@ -4161,12 +4161,12 @@ export const cloudServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
-      website: '/it-services/cloud-migration',
+      website: '/services/cloud-migration',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '☁️',
-    href: '/it-services/cloud-migration',
+    href: '/services/cloud-migration',
     popular: true,
     category: 'cloud'
   },
@@ -4177,9 +4177,9 @@ export const cloudServices: Service[] = [
     features: ['Multi-cloud unified cost visibility', 'ML-driven instance right-sizing', 'Reserved instance & savings plan optimizer', 'Idle resource detection & cleanup', 'Showback/chargeback automation'],
     benefits: ['Average 35% cloud cost reduction', 'Cross-cloud spend optimization', 'Real-time anomaly detection alerts', 'Executive-ready FinOps dashboards'],
     pricing: { basic: '499', pro: '1299', enterprise: '2999' },
-    contactInfo: { website: '/it-services/cloud-cost-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/cloud-cost-optimization', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💰',
-    href: '/it-services/cloud-cost-optimization',
+    href: '/services/cloud-cost-optimization',
     category: 'cloud'
   },
 {
@@ -4189,9 +4189,9 @@ export const cloudServices: Service[] = [
     features: ['Edge server deployment & configuration', 'Container orchestration at the edge (K3s, KubeEdge)', 'IoT device provisioning & lifecycle management', 'Low-latency AI inference on edge hardware', 'Offline-first data synchronization with cloud'],
     benefits: ['Sub-10ms response times for critical applications', 'Reduce cloud data transfer costs by 60%', 'Operate autonomously during network outages', 'Scale IoT deployments to thousands of devices'],
     pricing: { basic: '1299', pro: '2999', enterprise: '6499' },
-    contactInfo: { website: '/it-services/edge-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/edge-computing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📡',
-    href: '/it-services/edge-computing',
+    href: '/services/edge-computing',
     category: 'cloud'
   },
 {
@@ -4201,9 +4201,9 @@ export const cloudServices: Service[] = [
     features: ['RTO/RPO analysis & recovery strategy design', 'Multi-region backup & replication automation', 'Automated failover testing & validation', 'Runbook creation & disaster response playbooks', 'Continuous compliance monitoring for DR readiness'],
     benefits: ['Guarantee 99.99% uptime with automated failover', 'Reduce recovery time from days to minutes', 'Pass compliance DR audits on first attempt', 'Protect brand reputation with always-on services'],
     pricing: { basic: '699', pro: '1599', enterprise: '3499' },
-    contactInfo: { website: '/it-services/disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔄',
-    href: '/it-services/disaster-recovery',
+    href: '/services/disaster-recovery',
     category: 'cloud'
   },
 {
@@ -4213,9 +4213,9 @@ export const cloudServices: Service[] = [
     features: ['Multi-cluster Kubernetes orchestration', 'GitOps deployment pipelines with ArgoCD', 'Service mesh implementation (Istio, Linkerd)', 'Automated scaling and self-healing', 'Cost optimization and resource right-sizing'],
     benefits: ['Reduce infrastructure costs by 40%', 'Zero-downtime deployments with blue-green', 'Accelerate developer velocity 3x', 'Enterprise-grade reliability and observability'],
     pricing: { basic: '799', pro: '1799', enterprise: '3999' },
-    contactInfo: { website: '/it-services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/kubernetes-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🐳',
-    href: '/it-services/kubernetes-management',
+    href: '/services/kubernetes-management',
     category: 'cloud'
   },
 {
@@ -4225,9 +4225,9 @@ export const cloudServices: Service[] = [
     features: ['5G network architecture and RF planning', 'Private 5G network deployment for campuses', 'Edge computing integration with 5G infrastructure', 'Network slicing design and implementation', 'Industrial IoT connectivity and optimization'],
     benefits: ['Ultra-low latency for mission-critical applications', 'Massive IoT device connectivity at scale', 'Secure private networks off public infrastructure', 'Future-proof connectivity for digital transformation'],
     pricing: { basic: '9999', pro: '19999', enterprise: '49999' },
-    contactInfo: { website: '/it-services/5g-network-deployment', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/5g-network-deployment', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📶',
-    href: '/it-services/5g-network-deployment',
+    href: '/services/5g-network-deployment',
     category: 'cloud'
   },
 {
@@ -4237,9 +4237,9 @@ export const cloudServices: Service[] = [
     features: ['Domain-driven service decomposition', 'API gateway design and implementation (Kong, APISIX)', 'Service mesh deployment (Istio, Linkerd)', 'Distributed tracing and observability', 'Event-driven architecture with message brokers'],
     benefits: ['Independent deployment and scaling per service', 'Reduced blast radius for failures', 'Technology polyglotism for optimal tooling', 'Accelerated development velocity with team autonomy'],
     pricing: { basic: '1999', pro: '4999', enterprise: '12999' },
-    contactInfo: { website: '/it-services/microservices-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microservices-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🧩',
-    href: '/it-services/microservices-architecture',
+    href: '/services/microservices-architecture',
     category: 'cloud'
   },
 {
@@ -4249,9 +4249,9 @@ export const cloudServices: Service[] = [
     features: ['Unified observability stack (Prometheus, Grafana, Jaeger)', 'Custom SLO/SLI definition and dashboard creation', 'Incident management with automated runbooks', 'Chaos engineering and resilience testing', 'SRE consulting and reliability maturity assessment'],
     benefits: ['Reduce MTTR by 60% with intelligent alerting', 'Eliminate alert fatigue with smart correlation', 'Proactive issue detection before user impact', 'Build engineering team reliability practices'],
     pricing: { basic: '1299', pro: '2999', enterprise: '6999' },
-    contactInfo: { website: '/it-services/observability-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/observability-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📊',
-    href: '/it-services/observability-platform',
+    href: '/services/observability-platform',
     category: 'cloud'
   },
 {
@@ -4261,9 +4261,9 @@ export const cloudServices: Service[] = [
     features: ['Internal developer platform (IDP) deployment', 'Self-service infrastructure provisioning', 'Golden path templates and scaffolding', 'Developer experience metrics and optimization', 'Integration with existing CI/CD pipelines'],
     benefits: ['Reduce developer onboarding time by 80%', 'Eliminate infrastructure request bottleneck', 'Standardize best practices across teams', 'Accelerate feature delivery by 2-3x'],
     pricing: { basic: '2499', pro: '5499', enterprise: '12999' },
-    contactInfo: { website: '/it-services/platform-engineering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/platform-engineering', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛠️',
-    href: '/it-services/platform-engineering',
+    href: '/services/platform-engineering',
     category: 'cloud'
   },
 {
@@ -4273,9 +4273,9 @@ export const cloudServices: Service[] = [
     features: ['Predictive and on-site RF surveys', 'Capacity planning and density optimization', 'IoT and sensor network design', 'Seamless roaming and load balancing', 'Security hardening (WPA3, 802.1X, NAC)'],
     benefits: ['Eliminate dead zones with precision design', 'Support 10,000+ concurrent devices per site', 'Seamless IoT and traditional device integration', 'Future-proof for Wi-Fi 6E and Wi-Fi 7'],
     pricing: { basic: '2999', pro: '7499', enterprise: '18999' },
-    contactInfo: { website: '/it-services/wireless-network', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/wireless-network', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📡',
-    href: '/it-services/wireless-network',
+    href: '/services/wireless-network',
     category: 'cloud'
   },
 {
@@ -4285,9 +4285,9 @@ export const cloudServices: Service[] = [
     features: ['Serverless architecture design and migration', 'Cold start optimization', 'Event-driven architecture', 'Cost monitoring and function optimization', 'Multi-cloud serverless deployment'],
     benefits: ['Reduce infrastructure costs by 80%', 'No server management', 'Auto-scaling', 'Pay per compute execution'],
     pricing: { basic: '1799', pro: '3999', enterprise: '8999' },
-    contactInfo: { website: '/it-services/serverless-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/serverless-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '☁️',
-    href: '/it-services/serverless-architecture',
+    href: '/services/serverless-architecture',
     category: 'cloud'
   },
 {
@@ -4297,9 +4297,9 @@ export const cloudServices: Service[] = [
     features: ['API gateway with rate limiting', 'Developer portal with docs and SDKs', 'Lifecycle management', 'Monetization', 'Real-time analytics'],
     benefits: ['Accelerate API adoption', 'Monetize APIs', 'Protect backends', 'Track performance'],
     pricing: { basic: '1499', pro: '3299', enterprise: '7499' },
-    contactInfo: { website: '/it-services/api-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/api-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔌',
-    href: '/it-services/api-management',
+    href: '/services/api-management',
     category: 'cloud'
   },
 {
@@ -4309,9 +4309,9 @@ export const cloudServices: Service[] = [
     features: ['Multi-engine provisioning', 'Automated backups and PITR', 'AI query optimization', 'Auto-scaling and HA', 'Encryption and compliance'],
     benefits: ['No DBA overhead needed', '99.99% uptime SLA', 'Optimize queries automatically', 'Scale effortlessly'],
     pricing: { basic: '799', pro: '1899', enterprise: '4499' },
-    contactInfo: { website: '/it-services/database-as-a-service', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/database-as-a-service', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🗄️',
-    href: '/it-services/database-as-a-service',
+    href: '/services/database-as-a-service',
     category: 'cloud'
   },
 {
@@ -4321,9 +4321,9 @@ export const cloudServices: Service[] = [
     features: ['SIP and VoIP infrastructure', 'Intelligent routing and IVR', 'Call quality monitoring', 'AI agent assistance', 'Omnichannel integration'],
     benefits: ['Reduce voice costs by 40%', 'Improve CSAT with smart routing', 'Call analytics insights', 'CRM integration ready'],
     pricing: { basic: '1299', pro: '2899', enterprise: '6499' },
-    contactInfo: { website: '/it-services/voice-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/voice-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📞',
-    href: '/it-services/voice-infrastructure',
+    href: '/services/voice-infrastructure',
     category: 'cloud'
   },
 {
@@ -4333,9 +4333,9 @@ export const cloudServices: Service[] = [
     features: ['Predictive capacity forecasting with ML models', 'Workload trend analysis and seasonal pattern detection', 'Cloud vs on-prem cost comparison modeling', 'Automated right-sizing recommendations', 'Budget impact simulation for capacity decisions'],
     benefits: ['Eliminate surprise capacity crises with early warnings', 'Optimize infrastructure spend by 25-40%', 'Plan capacity with 95% forecast accuracy', 'Make data-driven budget decisions'],
     pricing: { basic: '799', pro: '1799', enterprise: '3999' },
-    contactInfo: { website: '/it-services/capacity-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/capacity-planning', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📊',
-    href: '/it-services/capacity-planning',
+    href: '/services/capacity-planning',
     category: 'cloud'
   },
 {
@@ -4345,9 +4345,9 @@ export const cloudServices: Service[] = [
     features: ['Automated incremental and full backup scheduling', 'Immutable backup storage (WORM) for ransomware protection', 'Multi-region replication for geographic redundancy', 'One-click disaster recovery with tested failover scripts', 'Compliance reporting and backup integrity verification'],
     benefits: ['Guarantee RPO of minutes, RTO of hours', 'Protect against ransomware with immutable backups', 'Meet all regulatory data retention requirements', 'Eliminate backup failures with automated monitoring'],
     pricing: { basic: '599', pro: '1299', enterprise: '2999' },
-    contactInfo: { website: '/it-services/backup-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/backup-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💾',
-    href: '/it-services/backup-recovery',
+    href: '/services/backup-recovery',
     category: 'cloud'
   },
 {
@@ -4357,9 +4357,9 @@ export const cloudServices: Service[] = [
     features: ['Intent-based network configuration automation', 'SD-WAN deployment and centralized management', 'AI-driven traffic routing and QoS optimization', 'Automated compliance checks and security policy enforcement', 'Network performance monitoring with predictive alerts'],
     benefits: ['Reduce network change errors by 80%', 'Optimize WAN costs by 40-60% with SD-WAN', 'Automate repetitive network administration tasks', 'Proactively address performance degradations'],
     pricing: { basic: '999', pro: '2299', enterprise: '5499' },
-    contactInfo: { website: '/it-services/network-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-automation', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🌐',
-    href: '/it-services/network-automation',
+    href: '/services/network-automation',
     category: 'cloud'
   },
 {
@@ -4369,9 +4369,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/api-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/api-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔌',
-    href: '/it-services/api-development',
+    href: '/services/api-development',
     category: 'cloud'
   },
 {
@@ -4381,9 +4381,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/backup-disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/backup-disaster-recovery', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '💾',
-    href: '/it-services/backup-disaster-recovery',
+    href: '/services/backup-disaster-recovery',
     category: 'cloud'
   },
 {
@@ -4393,9 +4393,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/cybersecurity-audit', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/cybersecurity-audit', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔹',
-    href: '/it-services/cybersecurity-audit',
+    href: '/services/cybersecurity-audit',
     category: 'cloud'
   },
 {
@@ -4405,9 +4405,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '3,999', pro: '9,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/data-pipeline-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-pipeline-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔧',
-    href: '/it-services/data-pipeline-architecture',
+    href: '/services/data-pipeline-architecture',
     category: 'cloud'
   },
 {
@@ -4417,9 +4417,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '2,499', pro: '7,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/devops-consulting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/devops-consulting', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚙️',
-    href: '/it-services/devops-consulting',
+    href: '/services/devops-consulting',
     category: 'cloud'
   },
 {
@@ -4429,9 +4429,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/digital-workplace', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/digital-workplace', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏢',
-    href: '/it-services/digital-workplace',
+    href: '/services/digital-workplace',
     category: 'cloud'
   },
 {
@@ -4441,9 +4441,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '2,999', pro: '8,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/disaster-recovery-services', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/disaster-recovery-services', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔄',
-    href: '/it-services/disaster-recovery-services',
+    href: '/services/disaster-recovery-services',
     category: 'cloud'
   },
 {
@@ -4453,9 +4453,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/endpoint-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/endpoint-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📱',
-    href: '/it-services/endpoint-management',
+    href: '/services/endpoint-management',
     category: 'cloud'
   },
 {
@@ -4465,9 +4465,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/identity-access-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/identity-access-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔑',
-    href: '/it-services/identity-access-management',
+    href: '/services/identity-access-management',
     category: 'cloud'
   },
 {
@@ -4477,9 +4477,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '799', pro: '1,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/it-asset-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-asset-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📦',
-    href: '/it-services/it-asset-management',
+    href: '/services/it-asset-management',
     category: 'cloud'
   },
 {
@@ -4489,9 +4489,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/it-service-desk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-service-desk', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎧',
-    href: '/it-services/it-service-desk',
+    href: '/services/it-service-desk',
     category: 'cloud'
   },
 {
@@ -4501,9 +4501,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/managed-soc-security', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/managed-soc-security', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/it-services/managed-soc-security',
+    href: '/services/managed-soc-security',
     category: 'cloud'
   },
 {
@@ -4513,9 +4513,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/mobile-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/mobile-development', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📱',
-    href: '/it-services/mobile-development',
+    href: '/services/mobile-development',
     category: 'cloud'
   },
 {
@@ -4525,9 +4525,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '1,999', pro: '4,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/network-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-infrastructure', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🌐',
-    href: '/it-services/network-infrastructure',
+    href: '/services/network-infrastructure',
     category: 'cloud'
   },
 {
@@ -4537,9 +4537,9 @@ export const cloudServices: Service[] = [
     features: ['Enterprise-grade implementation', '24/7 monitoring', 'Compliance-ready'],
     benefits: ['Reduced risk', 'Faster response', 'Audit-ready', 'Lower costs'],
     pricing: { basic: '4,999', pro: '12,999', enterprise: 'Custom' },
-    contactInfo: { website: '/it-services/network-security-operations', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-security-operations', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/it-services/network-security-operations',
+    href: '/services/network-security-operations',
     category: 'cloud'
   },
 ];
@@ -4567,12 +4567,12 @@ export const securityServices: Service[] = [
       enterprise: '14999'
     },
     contactInfo: {
-      website: '/it-services/cybersecurity',
+      website: '/services/cybersecurity',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔒',
-    href: '/it-services/cybersecurity',
+    href: '/services/cybersecurity',
     popular: true,
     category: 'security'
   },
@@ -4583,9 +4583,9 @@ export const securityServices: Service[] = [
     features: ['24/7 network traffic monitoring & flow analysis', 'Centralized SIEM with log aggregation', 'Threat correlation engine with automated alerting', 'Custom dashboard & compliance reporting', 'Integration with firewalls, IDS/IPS, and endpoint protection'],
     benefits: ['Detect lateral movement within minutes, not months', 'Centralize security visibility across all infrastructure', 'Reduce alert fatigue with intelligent correlation', 'Meet regulatory requirements with automated reports'],
     pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/network-security-monitoring', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/network-security-monitoring', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🛡️',
-    href: '/it-services/network-security-monitoring',
+    href: '/services/network-security-monitoring',
     category: 'security'
   },
 {
@@ -4595,9 +4595,9 @@ export const securityServices: Service[] = [
     features: ['Identity & Access Management (IAM) modernization', 'Micro-segmentation of network workloads', 'Continuous adaptive risk & trust assessment', 'Device posture checking & conditional access', 'Privileged Access Management (PAM) integration'],
     benefits: ['Eliminate implicit trust across the network', 'Reduce breach impact with micro-segmentation', 'Meet CISA Zero Trust maturity requirements', 'Secure hybrid and remote workforces uniformly'],
     pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
-    contactInfo: { website: '/it-services/zero-trust-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/zero-trust-architecture', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔐',
-    href: '/it-services/zero-trust-architecture',
+    href: '/services/zero-trust-architecture',
     category: 'security'
   },
 {
@@ -4607,9 +4607,9 @@ export const securityServices: Service[] = [
     features: ['Black-box and white-box penetration testing', 'Web application and API security testing', 'Social engineering and phishing simulations', 'Wireless and network infrastructure testing', 'Detailed remediation reports with retesting'],
     benefits: ['Identify vulnerabilities before attackers do', 'Meet PCI-DSS, HIPAA, and SOC 2 testing requirements', 'Reduce attack surface with actionable reports', 'Validate security controls effectiveness'],
     pricing: { basic: '2999', pro: '5999', enterprise: '12999' },
-    contactInfo: { website: '/it-services/penetration-testing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/penetration-testing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔓',
-    href: '/it-services/penetration-testing',
+    href: '/services/penetration-testing',
     category: 'security'
   },
 {
@@ -4619,9 +4619,9 @@ export const securityServices: Service[] = [
     features: ['Post-quantum cryptography assessment', 'Quantum vulnerability scanning across systems', 'NIST PQC migration roadmap development', 'Quantum-safe encryption implementation', 'Executive quantum risk briefing and training'],
     benefits: ['Prepare for quantum computing threats proactively', 'Comply with emerging NIST PQC standards', 'Protect long-lived encrypted data from harvest-now-decrypt-later', 'Position as quantum-ready enterprise leader'],
     pricing: { basic: '3499', pro: '7999', enterprise: '18999' },
-    contactInfo: { website: '/it-services/quantum-readiness', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/quantum-readiness', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔮',
-    href: '/it-services/quantum-readiness',
+    href: '/services/quantum-readiness',
     category: 'security'
   },
 {
@@ -4631,9 +4631,9 @@ export const securityServices: Service[] = [
     features: ['24/7 monitoring', 'Auto detection and classification', 'Response playbook automation', 'Digital forensics', 'Executive reporting'],
     benefits: ['Reduce MTTD by 80%', 'Automated containment', 'Compliance-ready docs', 'Expert IR on demand'],
     pricing: { basic: '2999', pro: '6499', enterprise: '14999' },
-    contactInfo: { website: '/it-services/incident-response', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/incident-response', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🚨',
-    href: '/it-services/incident-response',
+    href: '/services/incident-response',
     category: 'security'
   },
 {
@@ -4643,9 +4643,9 @@ export const securityServices: Service[] = [
     features: ['Single sign-on (SSO) with 5000+ app integrations', 'Adaptive multi-factor authentication with risk scoring', 'Privileged access management (PAM) with session recording', 'Automated access provisioning and de-provisioning', 'Identity governance with access certification workflows'],
     benefits: ['Reduce access-related incidents by 90%', 'Achieve 100% compliance with identity best practices', 'Eliminate orphaned accounts and access creep', 'Seamless experience with frictionless SSO for users'],
     pricing: { basic: '999', pro: '2499', enterprise: '5999' },
-    contactInfo: { website: '/it-services/iam-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/iam-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔑',
-    href: '/it-services/iam-platform',
+    href: '/services/iam-platform',
     category: 'security'
   },
 ];
@@ -4673,12 +4673,12 @@ export const dataServices: Service[] = [
       enterprise: '15999'
     },
     contactInfo: {
-      website: '/it-services/data-engineering',
+      website: '/services/data-engineering',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🔧',
-    href: '/it-services/data-engineering',
+    href: '/services/data-engineering',
     category: 'data'
   },
 {
@@ -4704,12 +4704,12 @@ export const dataServices: Service[] = [
       enterprise: '7999'
     },
     contactInfo: {
-      website: '/it-services/database-optimization',
+      website: '/services/database-optimization',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '🗄️',
-    href: '/it-services/database-optimization',
+    href: '/services/database-optimization',
     category: 'data'
   },
 {
@@ -4719,9 +4719,9 @@ export const dataServices: Service[] = [
     features: ['Domain-oriented data product design', 'Self-serve data platform implementation', 'Federated computational governance framework', 'Data quality and lineage automation', 'Multi-cloud data lakehouse architecture'],
     benefits: ['Break down data silos with domain ownership', 'Scale analytics across the organization', 'Improve data quality with automated checks', 'Reduce data engineering bottleneck by 70%'],
     pricing: { basic: '2999', pro: '6999', enterprise: '16999' },
-    contactInfo: { website: '/it-services/data-mesh', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-mesh', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🗄️',
-    href: '/it-services/data-mesh',
+    href: '/services/data-mesh',
     category: 'data'
   },
 ];
@@ -4749,12 +4749,12 @@ export const automationServices: Service[] = [
       enterprise: '9999'
     },
     contactInfo: {
-      website: '/it-services/devops-cicd',
+      website: '/services/devops-cicd',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '⚙️',
-    href: '/it-services/devops-cicd',
+    href: '/services/devops-cicd',
     popular: true,
     category: 'automation'
   },
@@ -4781,12 +4781,12 @@ export const automationServices: Service[] = [
       enterprise: '5999'
     },
     contactInfo: {
-      website: '/it-services/monitoring-observability',
+      website: '/services/monitoring-observability',
       email: 'commercial@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     icon: '📡',
-    href: '/it-services/monitoring-observability',
+    href: '/services/monitoring-observability',
     category: 'automation'
   },
 {
@@ -4796,9 +4796,9 @@ export const automationServices: Service[] = [
     features: ['AI-driven demand forecasting', 'Multi-modal route optimization', 'Supplier risk intelligence & monitoring', 'Automated disruption response playbooks', 'Warehouse operations AI optimization'],
     benefits: ['40% reduction in stockouts', '25% lower logistics costs', 'Real-time supplier risk alerts', 'Sustainability & carbon tracking'],
     pricing: { basic: '899', pro: '1999', enterprise: '4499' },
-    contactInfo: { website: '/it-services/supply-chain-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/supply-chain-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🚛',
-    href: '/it-services/supply-chain-management',
+    href: '/services/supply-chain-management',
     category: 'automation'
   },
 {
@@ -4808,9 +4808,9 @@ export const automationServices: Service[] = [
     features: ['3D digital twin modeling and visualization', 'Real-time IoT sensor data ingestion and mapping', 'Predictive simulation and what-if scenario analysis', 'Integration with CAD, BIM, and ERP systems', 'Automated alerts and anomaly detection'],
     benefits: ['Simulate changes before real-world implementation', 'Reduce operational downtime by 40%', 'Optimize resource allocation with predictive modeling', 'Unified visibility across complex physical-digital systems'],
     pricing: { basic: '5999', pro: '12999', enterprise: '29999' },
-    contactInfo: { website: '/it-services/digital-twin-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/digital-twin-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏗️',
-    href: '/it-services/digital-twin-platform',
+    href: '/services/digital-twin-platform',
     category: 'automation'
   },
 {
@@ -4820,11 +4820,891 @@ export const automationServices: Service[] = [
     features: ['Infrastructure automation with Terraform and Ansible', 'Workflow orchestration across IT systems', 'Self-healing infrastructure with event-driven automation', 'Compliance enforcement and drift detection', 'Centralized automation catalog and governance'],
     benefits: ['Reduce manual IT operations by 80%', 'Eliminate configuration drift across environments', 'Accelerate service provisioning from days to minutes', 'Maintain compliance with automated enforcement'],
     pricing: { basic: '1499', pro: '3499', enterprise: '7999' },
-    contactInfo: { website: '/it-services/automation-orchestrator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/automation-orchestrator', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚙️',
-    href: '/it-services/automation-orchestrator',
+    href: '/services/automation-orchestrator',
     category: 'automation'
   },
+  // ── NEW SERVICES (autonomous batch 2025-05) ──
+
+  // AI additions
+  {
+    id: 'ai-meeting-notes-summary',
+    title: 'AI Meeting Notes & Summary Platform',
+    description: 'Auto-record, transcribe, and summarise every meeting with action items, decisions, and speaker attribution. Integrates with Zoom, Teams, Google Meet, and Slack.',
+    features: [
+      'Real-time transcription with speaker diarisation',
+      'Action item and decision extraction',
+      'Multi-platform calendar sync',
+      'Shareable branded summary packs',
+      'Slack and email distribution',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$349',
+      pro: '$698',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-meeting-notes-summary',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🤖',
+    href: '/services/ai-meeting-notes-summary',
+    category: 'ai',
+  },
+  {
+    id: 'ai-document-qa',
+    title: 'AI Document Q&A Engine',
+    description: 'Upload PDFs, Word docs, and spreadsheets; ask natural language questions and get instant cited answers with multi-document cross-referencing and role-based access control.',
+    features: [
+      'Multi-format PDF/Word/Sheets ingest',
+      'Natural language query with citations',
+      'Cross-document comparison view',
+      'Role-based access and audit log',
+      'Snippet-level answer provenance',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$299',
+      pro: '$598',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-document-qa',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📄',
+    href: '/services/ai-document-qa',
+    category: 'ai',
+  },
+  {
+    id: 'ai-expense-audit',
+    title: 'AI Expense Categorisation & Audit',
+    description: 'ML engine auto-categorises business expenses by GL code, flags policy violations, and generates audit-ready reports for your finance team.',
+    features: [
+      'Auto-categorisation by GL code',
+      'Policy violation alerting',
+      'Audit trail with full export',
+      'QuickBooks, Xero, NetSuite integrations',
+      'Custom rules engine per organisation',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$199',
+      pro: '$398',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-expense-audit',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🧾',
+    href: '/services/ai-expense-audit',
+    category: 'ai',
+  },
+  {
+    id: 'ai-social-scheduler',
+    title: 'AI Social Scheduler & Content Composer',
+    description: 'Generate, schedule, and analyse social posts across LinkedIn, X/Twitter, Instagram, and TikTok. AI suggests optimal posting times per audience segment.',
+    features: [
+      'Multi-platform publishing queue',
+      'AI caption and hashtag writer',
+      'Optimal timing engine per channel',
+      'Engagement analytics dashboard',
+      'A/B post variant testing',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$79',
+      pro: '$158',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-social-scheduler',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📱',
+    href: '/services/ai-social-scheduler',
+    category: 'ai',
+  },
+  {
+    id: 'ai-job-description-kit',
+    title: 'AI Job Description & Interview Kit',
+    description: 'Create bias-free, inclusive job descriptions tailored to your role. Auto-generate scoring rubrics and EEOC/ADA compliant interview questions.',
+    features: [
+      'Bias detection and inclusive language',
+      'Interview question generator with rubrics',
+      'Role and level templates',
+      'ATS-ready export',
+      'EEOC and ADA compliance check',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$99',
+      pro: '$198',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-job-description-kit',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📋',
+    href: '/services/ai-job-description-kit',
+    category: 'ai',
+  },
+  {
+    id: 'ai-campaign-predictor',
+    title: 'AI Campaign Performance Predictor',
+    description: 'Predict campaign outcomes before launch. Forecast CTR, conversion rate, and ROAS using historical targeting data and creative asset features.',
+    features: [
+      'ROAS and CTR forecasting',
+      'A/B test simulation engine',
+      'Audience segment scoring',
+      'Creative asset feature extractor',
+      'Multi-touch attribution model',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$249',
+      pro: '$498',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-campaign-predictor',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📈',
+    href: '/services/ai-campaign-predictor',
+    category: 'ai',
+  },
+  {
+    id: 'ai-brand-voice-guardian',
+    title: 'AI Brand Voice Guardian',
+    description: 'Maintain consistent brand voice. AI audits existing content, generates tone guidelines, and rewrites copy in real time to match your brand persona across every channel.',
+    features: [
+      'Tone profiling from existing content',
+      'Multi-channel voice adapter',
+      'Brand guideline document generator',
+      'Competitor tone comparison',
+      'Real-time style enforcement',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$149',
+      pro: '$298',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-brand-voice-guardian',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🎤',
+    href: '/services/ai-brand-voice-guardian',
+    category: 'ai',
+  },
+  {
+    id: 'ai-newsletter-engagement',
+    title: 'AI Newsletter Engagement Analyser',
+    description: 'Deep analytics for email newsletters: which topics drive opens, optimal send times, subscriber churn prediction, and A/B headline wire-frame suggestions.',
+    features: [
+      'Open-rate and click prediction',
+      'Churn alerting by subscriber cohort',
+      'Topic performance clustering',
+      'A/B headline suggestion engine',
+      'Subscriber segmentation builder',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$129',
+      pro: '$258',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-newsletter-engagement',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📧',
+    href: '/services/ai-newsletter-engagement',
+    category: 'ai',
+  },
+  {
+    id: 'ai-grant-matcher',
+    title: 'AI Grant & Funding Opportunity Matcher',
+    description: 'AI scans 50,000+ government, foundation, and corporate grant opportunities. Matches your organisation profile and auto-drafts tailored proposals in minutes.',
+    features: [
+      '50,000+ opportunity database',
+      'Auto-draft tailored proposals',
+      'Deadline and eligibility tracker',
+      'Submission pipeline dashboard',
+      'Grant success analytics',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$399',
+      pro: '$798',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-grant-matcher',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '💰',
+    href: '/services/ai-grant-matcher',
+    category: 'ai',
+  },
+  {
+    id: 'ai-compliance-generator',
+    title: 'AI Privacy Policy & Compliance Generator',
+    description: 'Generate compliant privacy policies, cookie banners, and consent management frameworks for GDPR, CCPA, HIPAA, and SOC 2 with one-click multi-version export.',
+    features: [
+      'Multi-jurisdiction template engine',
+      'Cookie banner and consent builder',
+      'Policy version history and diff',
+      'Consent audit log',
+      'Legal review export package',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$179',
+      pro: '$358',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-compliance-generator',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🔒',
+    href: '/services/ai-compliance-generator',
+    category: 'ai',
+  },
+  {
+    id: 'ai-lead-enricher',
+    title: 'AI Lead Richness Scorer & Enricher',
+    description: 'Score every inbound and outbound lead on fit, intent, and priority. Auto-enrich records with 50+ data providers including LinkedIn, Crunchbase, and Clearbit.',
+    features: [
+      'Fit and intent scoring model',
+      '50+ data provider enrichment',
+      'CRM native sync Salesforce and HubSpot',
+      'Priority queue routing',
+      'Enrichment history audit trail',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$249',
+      pro: '$498',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-lead-enricher',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🔍',
+    href: '/services/ai-lead-enricher',
+    category: 'ai',
+  },
+  {
+    id: 'ai-prd-story-gen',
+    title: 'AI PRD & User Story Generator',
+    description: 'Transform vague feature requests into comprehensive Product Requirements Documents with acceptance criteria, user flows, and ready-for-engineering technical specs.',
+    features: [
+      'Auto-PRD first-draft generator',
+      'User story with acceptance criteria boilerplate',
+      'Mermaid user-flow diagrams',
+      'Development effort estimation',
+      'Notion and Linear one-click sync',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$299',
+      pro: '$598',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-prd-story-gen',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📐',
+    href: '/services/ai-prd-story-gen',
+    category: 'ai',
+  },
+  {
+    id: 'ai-post-purchase-care',
+    title: 'AI Post-Purchase Customer Care Agent',
+    description: 'Proactive post-purchase support agent that monitors order status, delivery delays, and product issues — resolving 80% of cases before human escalation.',
+    features: [
+      'Order and shipment tracking',
+      'Proactive outreach on delays',
+      'RMA and return automation',
+      'Self-service resolution portal',
+      'SLA monitoring and alerting',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$349',
+      pro: '$698',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-post-purchase-care',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🛒',
+    href: '/services/ai-post-purchase-care',
+    category: 'ai',
+  },
+  {
+    id: 'ai-bom-procurement',
+    title: 'AI BOM & Procurement Optimiser',
+    description: 'Multi-tier bill-of-materials analyser. Optimises part sourcing, predicts shortages, recommends alternative components, and benchmarks against global market pricing for manufacturing.',
+    features: [
+      'Multi-tier BOM parsing',
+      'Supplier intelligence and scoring',
+      'Alternative component finder',
+      'Global price benchmarking',
+      'Lead-time and supply-risk prediction',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$499',
+      pro: '$998',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-bom-procurement',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🏭',
+    href: '/services/ai-bom-procurement',
+    category: 'ai',
+  },
+  {
+    id: 'ai-meeting-preread',
+    title: 'AI Meeting Pre-read Generator',
+    description: 'AI analyses your calendar, gathers Slack threads and CRM context, then auto-generates a structured meeting pre-read with agenda, talking points, and decision log.',
+    features: [
+      'Auto-agenda from calendar invite',
+      'Context assembly from Slack/CRM',
+      'Decision log and action tracker',
+      'Stakeholder routing by role',
+      'Brand template for pre-reads',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$149',
+      pro: '$298',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/ai-meeting-preread',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📑',
+    href: '/services/ai-meeting-preread',
+    category: 'ai',
+  },
+
+  // IT additions
+  {
+    id: 'it-vendor-contract-mgmt',
+    title: 'IT Vendor & Contract Management',
+    description: 'Centralise IT vendor contracts, SLAs, and renewal dates. AI monitors terms, flags expiring agreements, and automates renewal workflows with configurable approval chains.',
+    features: [
+      'Central contract repository',
+      'Automated renewal alerts',
+      'SLA tracking dashboard',
+      'Configurable approval workflows',
+      'Vendor spend analytics',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$279',
+      pro: '$558',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/it-vendor-contract-mgmt',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📝',
+    href: '/services/it-vendor-contract-mgmt',
+    category: 'it',
+  },
+  {
+    id: 'it-service-catalog-builder',
+    title: 'IT Service Catalog Builder',
+    description: 'Drag-and-drop service catalog designer for ITSM teams. Auto-generates from CMDB data, supports multi-language publication, and integrates with ServiceNow and Jira.',
+    features: [
+      'Drag-and-drop catalogue designer',
+      'CMDB auto-import and sync',
+      'Multi-language service description',
+      'Self-service portal embed',
+      'Version history and approval',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$189',
+      pro: '$378',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/it-service-catalog-builder',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🛒',
+    href: '/services/it-service-catalog-builder',
+    category: 'it',
+  },
+  {
+    id: 'it-asset-lifecycle',
+    title: 'IT Asset Lifecycle Manager',
+    description: 'Track hardware and software assets from procurement to disposal. Auto-discovery, compliance tracking, depreciation schedules, and end-of-life automation in one dashboard.',
+    features: [
+      'Auto-discovery of network assets',
+      'Compliance and licence tracking',
+      'Depreciation schedule engine',
+      'End-of-life automation',
+      'Audit-ready reporting',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$149',
+      pro: '$298',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/it-asset-lifecycle',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '💻',
+    href: '/services/it-asset-lifecycle',
+    category: 'it',
+  },
+  {
+    id: 'it-change-risk-analyser',
+    title: 'IT Change Risk Analyser',
+    description: 'Assess change request risk using historical data, blast-radius modelling, and ML-predicted outage probability. Integrates with ServiceNow and Jira change management.',
+    features: [
+      'Blast-radius graph builder',
+      'ML-predicted outage probability',
+      'Change approval workflow',
+      'Historical change success rate',
+      'SLA impact calculator',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$229',
+      pro: '$458',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/it-change-risk-analyser',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '⚡',
+    href: '/services/it-change-risk-analyser',
+    category: 'it',
+  },
+  {
+    id: 'it-vendor-trust-portal',
+    title: 'IT Vendor Risk & Trust Portal',
+    description: 'Continuous vendor monitoring with security scorecards, financial health tracking, contract expiry alerts, and automated periodic vendor reassessments.',
+    features: [
+      'Security and compliance scorecard',
+      'Financial health monitoring',
+      'Contract expiry alerting',
+      'Periodic self-assessment workflow',
+      'Task action feed per vendor',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$259',
+      pro: '$518',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/it-vendor-trust-portal',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🛡️',
+    href: '/services/it-vendor-trust-portal',
+    category: 'it',
+  },
+  {
+    id: 'it-cloud-compliance-scanner',
+    title: 'IT Cloud Compliance Scanner',
+    description: 'Continuous cloud infrastructure compliance scanning for AWS, Azure, and GCP against CIS, NIST, HIPAA, and PCI-DSS benchmarks.',
+    features: [
+      'CIS and NIST benchmark library',
+      'Multi-cloud account scanning',
+      'NIST 800-53 and HIPAA profiles',
+      'Continuous daily compliance scans',
+      'Auto-generated remediation tickets',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$179',
+      pro: '$358',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/it-cloud-compliance-scanner',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '☁️',
+    href: '/services/it-cloud-compliance-scanner',
+    category: 'it',
+  },
+
+  // Cloud additions
+  {
+    id: 'cloud-storage-tiering',
+    title: 'Cloud Storage Tiering Intelligence',
+    description: 'AI-driven storage tiering engine that automatically moves infrequently accessed data to cheaper tiers with SLA-monitored cold retrieval performance.',
+    features: [
+      'Automatic hot-to-cold tiering',
+      'SLA-monitored cold retrieval',
+      'Multi-cloud S3, GCS, Azure Blob',
+      'Per-team cost attribution',
+      'Tiering policy dashboard',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$189',
+      pro: '$378',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/cloud-storage-tiering',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🗄️',
+    href: '/services/cloud-storage-tiering',
+    category: 'cloud',
+  },
+  {
+    id: 'cloud-migration-readiness',
+    title: 'Cloud Migration Readiness Score',
+    description: 'Assess on-prem and multi-cloud workloads across 6 readiness dimensions: performance, cost, security, operability, resiliency, and team skill.',
+    features: [
+      '6-dimension readiness scorecard',
+      'Migration wave planner',
+      'TCO comparison analysis',
+      'Skill gap heat map',
+      'Executive dashboard and PDF report',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$249',
+      pro: '$498',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/cloud-migration-readiness',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📊',
+    href: '/services/cloud-migration-readiness',
+    category: 'cloud',
+  },
+  {
+    id: 'cloud-bom-visualiser',
+    title: 'Cloud BOM & Dependency Visualiser',
+    description: 'Map every cloud dependency from DNS records and load balancers to container images and Lambda layers. Visual graph with change impact analysis.',
+    features: [
+      'Full dependency graph visualisation',
+      'Change impact analysis',
+      'Real-time configuration drift alerts',
+      'Kubernetes resource aware',
+      'Export to SVG and PDF',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$179',
+      pro: '$358',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/cloud-bom-visualiser',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🔗',
+    href: '/services/cloud-bom-visualiser',
+    category: 'cloud',
+  },
+
+  // Security additions
+  {
+    id: 'security-log-orchestration',
+    title: 'Security Log Orchestration & Correlation',
+    description: 'Ingest logs from 200+ sources, normalise at scale, and run correlation rules across the full attack chain. Reduces alert fatigue with context-enriched triage views.',
+    features: [
+      '200+ log source connectors',
+      'Log parsing and normalisation',
+      'Correlation rule engine',
+      'Alert deduplication and enrichment',
+      'Forensic timeline with drill-down',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$499',
+      pro: '$998',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/security-log-orchestration',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🔍',
+    href: '/services/security-log-orchestration',
+    category: 'security',
+  },
+  {
+    id: 'security-bas-platform',
+    title: 'Security Breach & Attack Simulation Platform',
+    description: 'Automated adversary emulation: APT29, ransomware, insider-threat vectors. Subject your defences to realistic attack chains and measure D&R effectiveness against MITRE ATT&CK.',
+    features: [
+      'APT29 and MITRE ATT&CK emulation',
+      'Ransomware attack simulation',
+      'Purple team collaborative workspace',
+      'Executive risk scoring report',
+      'Detection and response metrics',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$599',
+      pro: '$1198',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/security-bas-platform',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🧪',
+    href: '/services/security-bas-platform',
+    category: 'security',
+  },
+
+  // Data additions
+  {
+    id: 'data-observability-monitor',
+    title: 'Data Observability & Quality Monitor',
+    description: 'Column-level freshness, volume, distribution drift, and schema-change detection across every pipeline and warehouse table with auto-generated lineage.',
+    features: [
+      'Column freshness and volume checks',
+      'Distribution drift detection',
+      'Schema-change alerting',
+      'End-to-end lineage viewer',
+      'Quality SLA dashboards',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$349',
+      pro: '$698',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/data-observability-monitor',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '📊',
+    href: '/services/data-observability-monitor',
+    category: 'data',
+  },
+  {
+    id: 'data-cost-finops',
+    title: 'Data Cost Governance & FinOps',
+    description: 'Track per-table, per-query cloud data spend. AI recommends materialised views, query optimisation, and warehouse right-sizing to lower your bill by 20-40%.',
+    features: [
+      'Per-query and per-table cost tracing',
+      'AI rightsizing recommendations',
+      'Materialised view recommendations',
+      'Tag-based cost governance',
+      'Chargeback and showback exports',
+    ],
+    benefits: [
+      'Increased efficiency',
+      'Professional-grade quality',
+      'Cost savings',
+      'Rapid implementation',
+    ],
+    pricing: {
+      basic: '$279',
+      pro: '$558',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/data-cost-finops',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '💵',
+    href: '/services/data-cost-finops',
+    category: 'data',
+  },
+
 ];
 
 export const itSolutions = itServices;

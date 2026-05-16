@@ -15,8 +15,8 @@ const FEATURED_IDS = [
 ];
 
 const stats = [
-  { value: '220+', label: 'Services & Solutions' },
-  { value: '4 Core Categories', label: 'AI · IT · Cloud · Automation' },
+  { value: '288+', label: 'Services & Solutions' },
+  { value: '6 Core Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
   { value: '24/7', label: 'Monitoring & Support' },
   { value: '99.9%', label: 'SLA Uptime Guarantee' },
 ];
@@ -38,7 +38,7 @@ export default function HomePage() {
               for Your Business
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              172+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              288+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
               From machine learning to cybersecurity, CRM automation to blockchain.
               Get a custom proposal in minutes.
             </p>

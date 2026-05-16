@@ -1,6 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
-import './globals.css';
+import { SITE_URL, STRUCTURED_DATA } from './utils/seoConstants';
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +31,13 @@ export const metadata: Metadata = {
   },
 };
 
+// Organization schema emitted on every page via <head>
+const orgSchema = {
+  ...STRUCTURED_DATA.ORGANIZATION,
+  url: SITE_URL,
+};
+const websiteSchema = STRUCTURED_DATA.WEBSITE;
+
 export default function RootLayout({
   children,
 }: {
@@ -38,7 +45,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen bg-slate-950 text-white antialiased">{children}</body>
+      <head>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
+      <body className="min-h-screen bg-slate-950 text-white antialiased">
+        {children}
+      </body>
     </html>
   );
 }
