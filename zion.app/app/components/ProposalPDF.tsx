@@ -1,6 +1,5 @@
 // ProposalPDF — renders the proposal document for download/email
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
-import type { ServiceData } from '@/data/servicesData';
 
 const styles = StyleSheet.create({
   page: { padding: 40, fontSize: 11, fontFamily: 'Helvetica' },
