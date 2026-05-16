@@ -36,7 +36,7 @@ export default function ProposalPDF({ data }: { data: any }) {
       <Page size="A4" style={styles.page}>
         <View style={styles.header}>
           <Text style={styles.title}>Zion Tech Group — Custom Proposal</Text>
-          <Text style={styles.subtitle}>Proposal ID: {proposalId} • Generated: {new Date(generatedAt).toLocaleDateString()}</Text>
+          <Text style={styles.title}>Proposal ID: {proposalId} • Generated: {new Date(generatedAt).toLocaleDateString()}</Text>
         </View>
 
         {/* Client Info */}

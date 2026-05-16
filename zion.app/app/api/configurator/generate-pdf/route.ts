@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
         (s: any) =>
           `<tr>
             <td style="padding:8px;border:1px solid #ddd;">${s.title}</td>
-            <td style="padding:8px;border:1px solid #ddd;">${s.subcategory}</td>
+            <td style="padding:8px;border:1px solid #ddd;">${s.category}</td>
             <td style="padding:8px;border:1px solid #ddd;">${Object.values(s.pricing)[0]}</td>
           </tr>`
       )

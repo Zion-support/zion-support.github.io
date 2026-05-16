@@ -45,7 +45,7 @@ export const aiServices: Service[] = [
     href: '/data-analytics',
     popular: true,
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-automation',
     title: 'AI Automation',
@@ -76,7 +76,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/process-automation',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-customer-support',
     title: 'AI Customer Support',
@@ -108,7 +108,7 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-customer-support',
     popular: true,
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-content-generation',
     title: 'AI Content Generation',
@@ -139,7 +139,7 @@ export const aiServices: Service[] = [
     icon: '✍️',
     href: '/ai-services/ai-content-generation',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-sales-intelligence',
     title: 'AI Sales Intelligence',
@@ -171,7 +171,7 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-sales-intelligence',
     popular: true,
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-fraud-detection',
     title: 'AI Fraud Detection',
@@ -202,7 +202,7 @@ export const aiServices: Service[] = [
     icon: '🔐',
     href: '/ai-services/ai-fraud-detection',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-hr-assistant',
     title: 'AI HR Assistant',
@@ -233,7 +233,7 @@ export const aiServices: Service[] = [
     icon: '👥',
     href: '/ai-services/ai-hr-assistant',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-supply-chain',
     title: 'AI Supply Chain Optimization',
@@ -264,7 +264,7 @@ export const aiServices: Service[] = [
     icon: '📦',
     href: '/ai-services/ai-supply-chain',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-voice-assistant',
     title: 'AI Voice Assistant',
@@ -295,7 +295,7 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-voice-assistant',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-email-marketing',
     title: 'AI Email Marketing',
@@ -326,7 +326,7 @@ export const aiServices: Service[] = [
     icon: '📧',
     href: '/ai-services/ai-email-marketing',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-video-analytics',
     title: 'AI Video Analytics',
@@ -357,7 +357,7 @@ export const aiServices: Service[] = [
     icon: '🎥',
     href: '/ai-services/ai-video-analytics',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-compliance',
     title: 'AI Compliance & Regulatory',
@@ -388,7 +388,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-compliance',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-computer-vision',
     title: 'AI Computer Vision',
@@ -400,7 +400,7 @@ export const aiServices: Service[] = [
     icon: '👁️',
     href: '/ai-services/ai-computer-vision',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-knowledge-management',
     title: 'AI Knowledge Management',
@@ -413,7 +413,7 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-knowledge-management',
     popular: true,
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-testing-qa',
     title: 'AI Testing & Quality Assurance',
@@ -425,7 +425,7 @@ export const aiServices: Service[] = [
     icon: '🧪',
     href: '/ai-services/ai-testing-qa',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-translation-services',
     title: 'AI Translation & Localization',
@@ -437,7 +437,7 @@ export const aiServices: Service[] = [
     icon: '🌐',
     href: '/ai-services/ai-translation-services',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-employee-experience',
     title: 'AI Employee Experience Platform',
@@ -449,7 +449,7 @@ export const aiServices: Service[] = [
     icon: '🤝',
     href: '/ai-services/ai-employee-experience',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-document-intelligence',
     title: 'AI Document Intelligence',
@@ -462,7 +462,7 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-document-intelligence',
     popular: true,
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-video-generation',
     title: 'AI Video Generation & Editing',
@@ -474,7 +474,7 @@ export const aiServices: Service[] = [
     icon: '🎬',
     href: '/ai-services/ai-video-generation',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-voice-cloning',
     title: 'AI Voice Cloning & Synthesis',
@@ -486,7 +486,7 @@ export const aiServices: Service[] = [
     icon: '🗣️',
     href: '/ai-services/ai-voice-cloning',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-lead-generation',
     title: 'AI Lead Generation & Enrichment',
@@ -499,7 +499,7 @@ export const aiServices: Service[] = [
     href: '/ai-services/ai-lead-generation',
     popular: true,
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-presentation-maker',
     title: 'AI Presentation & Pitch Deck Maker',
@@ -511,7 +511,7 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-presentation-maker',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-chatbot-builder-pro',
     title: 'AI Chatbot Builder Pro',
@@ -523,7 +523,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-chatbot-builder-pro',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-code-reviewer-pro',
     title: 'AI Code Reviewer Pro',
@@ -535,7 +535,7 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-code-reviewer-pro',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-revenue-optimization',
     title: 'AI Revenue Optimization & Pricing Intelligence',
@@ -547,7 +547,7 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/ai-revenue-optimization',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-cyber-threat-hunting',
     title: 'AI Cyber Threat Hunting & Incident Response',
@@ -559,7 +559,7 @@ export const aiServices: Service[] = [
     icon: '🔒',
     href: '/ai-services/ai-cyber-threat-hunting',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-sentiment-analysis',
     title: 'AI Sentiment Analysis & Brand Monitoring',
@@ -571,7 +571,7 @@ export const aiServices: Service[] = [
     icon: '💬',
     href: '/ai-services/ai-sentiment-analysis',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-predictive-maintenance',
     title: 'AI Predictive Maintenance & Asset Monitoring',
@@ -583,7 +583,7 @@ export const aiServices: Service[] = [
     icon: '⚙️',
     href: '/ai-services/ai-predictive-maintenance',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-speech-voice-solutions',
     title: 'AI Speech & Voice Solutions',
@@ -595,7 +595,7 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-speech-voice-solutions',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-agentic-workflows',
     title: 'AI Agentic Workflow Automation',
@@ -607,7 +607,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-agentic-workflows',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-regulatory-compliance-monitor',
     title: 'AI Regulatory Compliance Monitor',
@@ -619,7 +619,7 @@ export const aiServices: Service[] = [
     icon: '📜',
     href: '/ai-services/ai-regulatory-compliance',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-talent-acquisition',
     title: 'AI Talent Acquisition & Hiring Intelligence',
@@ -631,7 +631,7 @@ export const aiServices: Service[] = [
     icon: '🎯',
     href: '/ai-services/ai-talent-acquisition',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-financial-fraud-detection',
     title: 'AI Financial Fraud Detection & Prevention',
@@ -643,7 +643,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-fraud-detection',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-energy-optimization',
     title: 'AI Energy Optimization & Sustainability',
@@ -655,7 +655,7 @@ export const aiServices: Service[] = [
     icon: '⚡',
     href: '/ai-services/ai-energy-optimization',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-personalization-engine',
     title: 'AI Personalization & Recommendation Engine',
@@ -667,7 +667,7 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/ai-personalization-engine',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-legal-document-analysis',
     title: 'AI Legal Document Analysis & Contract Review',
@@ -679,7 +679,7 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-legal-doc-analysis',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-medical-imaging',
     title: 'AI Medical Imaging & Diagnostics',
@@ -691,7 +691,7 @@ export const aiServices: Service[] = [
     icon: '🏥',
     href: '/ai-services/ai-medical-imaging',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-supply-chain-optimizer',
     title: 'AI Supply Chain Optimization & Demand Forecasting',
@@ -703,7 +703,7 @@ export const aiServices: Service[] = [
     icon: '📦',
     href: '/ai-services/ai-supply-chain-optimizer',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-content-localization',
     title: 'AI Content Localization & Cultural Adaptation',
@@ -715,7 +715,7 @@ export const aiServices: Service[] = [
     icon: '🌍',
     href: '/ai-services/ai-content-localization',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-intelligent-routing',
     title: 'AI Intelligent Document Processing & Routing',
@@ -727,7 +727,7 @@ export const aiServices: Service[] = [
     icon: '📋',
     href: '/ai-services/ai-intelligent-routing',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-code-migration',
     title: 'AI Code Migration & Legacy Modernization',
@@ -739,7 +739,7 @@ export const aiServices: Service[] = [
     icon: '💻',
     href: '/ai-services/ai-code-migration',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-ethics-governance',
     title: 'AI Ethics, Safety & Governance Framework',
@@ -751,7 +751,7 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-ethics-governance',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-spatial-computing',
     title: 'AI Spatial Computing & AR/VR Analytics',
@@ -763,7 +763,7 @@ export const aiServices: Service[] = [
     icon: '🥽',
     href: '/ai-services/ai-spatial-computing',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-robotics-integration',
     title: 'AI Robotics Integration & Autonomous Systems',
@@ -775,7 +775,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-robotics-integration',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-drug-discovery',
     title: 'AI Drug Discovery & Molecular Design',
@@ -787,7 +787,7 @@ export const aiServices: Service[] = [
     icon: '💊',
     href: '/ai-services/ai-drug-discovery',
     category: 'ai'
-  },,
+  },
 {
     id: 'advanced_ai_enterprise_intelligence_hub',
     title: 'Advanced AI & Enterprise Intelligence Hub',
@@ -799,7 +799,7 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_agent_safety_evaluation',
     title: 'Ai Agent Safety Evaluation',
@@ -811,7 +811,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-agent-safety-evaluation',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_agents_autonomous',
     title: 'AI Agents & Autonomous Workflows',
@@ -823,7 +823,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-agents-autonomous',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_context_engineering_enterprise',
     title: 'Ai Context Engineering Enterprise',
@@ -835,7 +835,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-context-engineering-enterprise',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_copilot_enterprise',
     title: 'AI Copilot & Enterprise Assistants',
@@ -847,7 +847,7 @@ export const aiServices: Service[] = [
     icon: '👤',
     href: '/ai-services/ai-copilot-enterprise',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_edge_realtime_inference',
     title: 'AI Edge & Real-Time Inference',
@@ -859,7 +859,7 @@ export const aiServices: Service[] = [
     icon: '⚡',
     href: '/ai-services/ai-edge-realtime-inference',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_finetuning_alignment_pipelines',
     title: 'Ai Finetuning Alignment Pipelines',
@@ -871,7 +871,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-finetuning-alignment-pipelines',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_foundation_models_custom_training',
     title: 'AI Foundation Models & Custom Training',
@@ -883,7 +883,7 @@ export const aiServices: Service[] = [
     icon: '🏗️',
     href: '/ai-services/ai-foundation-models-custom-training',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_governance_trust',
     title: 'AI Governance & Trust',
@@ -895,7 +895,7 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-governance-trust',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_integration_apis',
     title: 'AI Integration & APIs',
@@ -907,7 +907,7 @@ export const aiServices: Service[] = [
     icon: '🔌',
     href: '/ai-services/ai-integration-apis',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_memory_agents_long_horizon',
     title: 'Ai Memory Agents Long Horizon',
@@ -919,7 +919,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-memory-agents-long-horizon',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_model_orchestration',
     title: 'AI Model Orchestration',
@@ -931,7 +931,7 @@ export const aiServices: Service[] = [
     icon: '🎛️',
     href: '/ai-services/ai-model-orchestration',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_multimodal_intelligence',
     title: 'AI Multimodal Intelligence',
@@ -943,7 +943,7 @@ export const aiServices: Service[] = [
     icon: '🎬',
     href: '/ai-services/ai-multimodal-intelligence',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_observability_mlops',
     title: 'AI Observability & MLOps',
@@ -955,7 +955,7 @@ export const aiServices: Service[] = [
     icon: '📡',
     href: '/ai-services/ai-observability-mlops',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_rag_knowledge_systems',
     title: 'AI RAG & Knowledge Systems',
@@ -967,7 +967,7 @@ export const aiServices: Service[] = [
     icon: '📚',
     href: '/ai-services/ai-rag-knowledge-systems',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_regulated_industries',
     title: 'AI for Regulated Industries',
@@ -979,7 +979,7 @@ export const aiServices: Service[] = [
     icon: '🏛️',
     href: '/ai-services/ai-regulated-industries',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_security_responsible_ai',
     title: 'AI Security & Responsible AI',
@@ -991,7 +991,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-security-responsible-ai',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai_strategy_roadmap',
     title: 'AI Strategy & Roadmap',
@@ -1003,7 +1003,7 @@ export const aiServices: Service[] = [
     icon: '🗺️',
     href: '/ai-services/ai-strategy-roadmap',
     category: 'ai'
-  },,
+  },
 {
     id: 'autonomous_growth_intelligence',
     title: 'Autonomous Growth Intelligence',
@@ -1015,7 +1015,7 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/autonomous-growth-intelligence',
     category: 'ai'
-  },,
+  },
 {
     id: 'business_intelligence',
     title: 'Business Intelligence',
@@ -1027,7 +1027,7 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/business-intelligence',
     category: 'ai'
-  },,
+  },
 {
     id: 'content_generation',
     title: 'Content Generation',
@@ -1039,7 +1039,7 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/content-generation',
     category: 'ai'
-  },,
+  },
 {
     id: 'customer_experience',
     title: 'Customer Experience',
@@ -1051,7 +1051,7 @@ export const aiServices: Service[] = [
     icon: '💬',
     href: '/ai-services/customer-experience',
     category: 'ai'
-  },,
+  },
 {
     id: 'document_processing',
     title: 'Document Processing',
@@ -1063,7 +1063,7 @@ export const aiServices: Service[] = [
     icon: '🔄',
     href: '/ai-services/document-processing',
     category: 'ai'
-  },,
+  },
 {
     id: 'energy_management',
     title: 'Energy Management',
@@ -1075,7 +1075,7 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/energy-management',
     category: 'ai'
-  },,
+  },
 {
     id: 'fraud_detection',
     title: 'Fraud Detection',
@@ -1087,7 +1087,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/fraud-detection',
     category: 'ai'
-  },,
+  },
 {
     id: 'generative_ai_enterprise',
     title: 'Generative AI Enterprise',
@@ -1099,7 +1099,7 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-services/generative-ai-enterprise',
     category: 'ai'
-  },,
+  },
 {
     id: 'hr_analytics',
     title: 'HR Analytics',
@@ -1111,7 +1111,7 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/hr-analytics',
     category: 'ai'
-  },,
+  },
 {
     id: 'marketing_automation',
     title: 'Marketing Automation',
@@ -1123,7 +1123,7 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/marketing-automation',
     category: 'ai'
-  },,
+  },
 {
     id: 'predictive_maintenance',
     title: 'Predictive Maintenance',
@@ -1135,7 +1135,7 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/predictive-maintenance',
     category: 'ai'
-  },,
+  },
 {
     id: 'quality_assurance',
     title: 'Quality Assurance',
@@ -1147,7 +1147,7 @@ export const aiServices: Service[] = [
     icon: '✨',
     href: '/ai-services/quality-assurance',
     category: 'ai'
-  },,
+  },
 {
     id: 'supply_chain',
     title: 'Supply Chain',
@@ -1159,7 +1159,7 @@ export const aiServices: Service[] = [
     icon: '🏢',
     href: '/ai-services/supply-chain',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-supply-chain-intelligence',
     title: 'AI Supply Chain Intelligence',
@@ -1171,7 +1171,7 @@ export const aiServices: Service[] = [
     icon: '🔗',
     href: '/ai-services/ai-supply-chain-intelligence',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-predictive-workforce-planning',
     title: 'AI Predictive Workforce Planning',
@@ -1183,7 +1183,7 @@ export const aiServices: Service[] = [
     icon: '👥',
     href: '/ai-services/ai-predictive-workforce-planning',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-voice-agent-platform',
     title: 'AI Voice Agent Platform',
@@ -1195,7 +1195,7 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-voice-agent-platform',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-financial-forecasting',
     title: 'AI Financial Forecasting & Planning',
@@ -1207,7 +1207,7 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-financial-forecasting',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-content-moderation',
     title: 'AI Content Moderation Platform',
@@ -1219,7 +1219,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-content-moderation',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-customer-sentiment-analytics',
     title: 'AI Customer Sentiment Analytics',
@@ -1231,7 +1231,7 @@ export const aiServices: Service[] = [
     icon: '💭',
     href: '/ai-services/ai-customer-sentiment-analytics',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-code-migration-modernization',
     title: 'AI Code Migration & Modernization',
@@ -1243,7 +1243,7 @@ export const aiServices: Service[] = [
     icon: '⚙️',
     href: '/ai-services/ai-code-migration-modernization',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-legal-doc-review',
     title: 'AI Legal Document Review',
@@ -1274,7 +1274,7 @@ export const aiServices: Service[] = [
     icon: '⚖️',
     href: '/ai-services/ai-legal-doc-review',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-supply-chain-visibility',
     title: 'AI Supply Chain Visibility Platform',
@@ -1305,7 +1305,7 @@ export const aiServices: Service[] = [
     icon: '🚢',
     href: '/ai-services/ai-supply-chain-visibility',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-code-audit-security',
     title: 'AI Code Audit & Security Scanner',
@@ -1336,7 +1336,7 @@ export const aiServices: Service[] = [
     icon: '🔒',
     href: '/ai-services/ai-code-audit-security',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-bdr-sdr',
     title: 'AI BDR/SDR Agent',
@@ -1367,7 +1367,7 @@ export const aiServices: Service[] = [
     icon: '📧',
     href: '/ai-services/ai-bdr-sdr-agent',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-knowledge-base-agent',
     title: 'AI Knowledge Base & Knowledge Graph Agent',
@@ -1398,7 +1398,7 @@ export const aiServices: Service[] = [
     icon: '📚',
     href: '/ai-services/ai-knowledge-base-agent',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-visual-inspection',
     title: 'AI Visual Inspection & Quality Control',
@@ -1429,7 +1429,7 @@ export const aiServices: Service[] = [
     icon: '👁️',
     href: '/ai-services/ai-visual-inspection',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-chatbot-omnichannel',
     title: 'AI Omnichannel Chatbot',
@@ -1460,7 +1460,7 @@ export const aiServices: Service[] = [
     icon: '💬',
     href: '/ai-services/ai-omnichannel-chatbot',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-call-center-voice-analytics',
     title: 'AI Call Center Voice Analytics',
@@ -1491,7 +1491,7 @@ export const aiServices: Service[] = [
     icon: '📞',
     href: '/ai-services/ai-call-center-voice-analytics',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-video-generator',
     title: 'AI Video Generator & Editor',
@@ -1522,7 +1522,7 @@ export const aiServices: Service[] = [
     icon: '🎬',
     href: '/ai-services/ai-video-generator',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-seo-optimizer',
     title: 'AI SEO Content Optimizer',
@@ -1553,7 +1553,7 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-seo-optimizer',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-contract-manager',
     title: 'AI Contract Manager',
@@ -1584,7 +1584,7 @@ export const aiServices: Service[] = [
     icon: '📝',
     href: '/ai-services/ai-contract-manager',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-personalized-learning',
     title: 'AI Personalized Learning Platform',
@@ -1615,7 +1615,7 @@ export const aiServices: Service[] = [
     icon: '🎓',
     href: '/ai-services/ai-personalized-learning',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-voice-agent',
     title: 'AI Voice Agent (Phone)',
@@ -1646,7 +1646,7 @@ export const aiServices: Service[] = [
     icon: '📱',
     href: '/ai-services/ai-voice-agent',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-devops-chatbot',
     title: 'AI DevOps Chatbot',
@@ -1677,7 +1677,7 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/ai-devops-chatbot',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-revenue-ops',
     title: 'AI Revenue Operations (RevOps)',
@@ -1708,7 +1708,7 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/ai-revenue-ops',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-supply-demand-planner',
     title: 'AI Supply & Demand Planner',
@@ -1739,7 +1739,7 @@ export const aiServices: Service[] = [
     icon: '📦',
     href: '/ai-services/ai-supply-demand-planner',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
@@ -1770,7 +1770,7 @@ export const aiServices: Service[] = [
     icon: '👨\u200d💻',
     href: '/ai-services/ai-code-review-assistant',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-marketing-copy-generator',
     title: 'AI Marketing Copy Generator',
@@ -1801,7 +1801,7 @@ export const aiServices: Service[] = [
     icon: '✍️',
     href: '/ai-services/ai-marketing-copy-generator',
     category: 'ai'
-  },,
+  },
 {
      id: 'ai-customer-support-agent',
      title: 'AI Customer Support Agent',
@@ -1824,7 +1824,7 @@ export const aiServices: Service[] = [
      icon: '🤖',
      href: '/ai-services/ai-customer-support-agent',
      category: 'ai'
-   },,
+   },
 {
      id: 'autonomous-code-review-agent',
      title: 'Autonomous Code Review Agent',
@@ -1847,7 +1847,7 @@ export const aiServices: Service[] = [
      icon: '👩‍💻',
      href: '/ai-services/autonomous-code-review-agent',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-driven-customer-segmentation',
      title: 'AI-Driven Customer Segmentation & Persona Engine',
@@ -1870,7 +1870,7 @@ export const aiServices: Service[] = [
      icon: '🎯',
      href: '/ai-services/ai-driven-customer-segmentation',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-ui-generator',
      title: 'AI-Powered UI Generator (Text-to-UI)',
@@ -1893,7 +1893,7 @@ export const aiServices: Service[] = [
      icon: '🎨',
      href: '/ai-services/ai-powered-ui-generator',
      category: 'ai'
-   },,
+   },
 {
      id: 'predictive-churn-risk',
      title: 'Predictive Churn Risk Scoring',
@@ -1916,7 +1916,7 @@ export const aiServices: Service[] = [
      icon: '📉',
      href: '/ai-services/predictive-churn-risk',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-seo-optimizer',
      title: 'AI-Powered SEO Content Optimizer',
@@ -1939,7 +1939,7 @@ export const aiServices: Service[] = [
      icon: '🔍',
      href: '/ai-services/ai-powered-seo-optimizer',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-for-code-migration',
      title: 'AI-Assisted Code Migration & Refactoring',
@@ -1962,7 +1962,7 @@ export const aiServices: Service[] = [
      icon: '🔀',
      href: '/ai-services/ai-for-code-migration',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-test-generation',
      title: 'AI-Powered Test Suite Generator',
@@ -1985,7 +1985,7 @@ export const aiServices: Service[] = [
      icon: '🧪',
      href: '/ai-services/ai-powered-test-generation',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-log-anomaly-detection',
      title: 'AI-Powered Log Anomaly Detection',
@@ -2008,7 +2008,7 @@ export const aiServices: Service[] = [
      icon: '📈',
      href: '/ai-services/ai-powered-log-anomaly-detection',
      category: 'ai'
-   },,
+   },
 {
      id: 'generative-data-synthesis',
      title: 'Generative Data Synthesis for Model Training',
@@ -2031,7 +2031,7 @@ export const aiServices: Service[] = [
      icon: '🌀',
      href: '/ai-services/generative-data-synthesis',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-sustainable-ops',
      title: 'AI for Sustainable Operations (Green AI)',
@@ -2054,7 +2054,7 @@ export const aiServices: Service[] = [
      icon: '🌱',
      href: '/ai-services/ai-sustainable-ops',
      category: 'ai'
-   },,
+   },
 {
      id: 'legal-doc-review-ai',
      title: 'AI Legal Document Review & Risk Analysis',
@@ -2077,7 +2077,7 @@ export const aiServices: Service[] = [
      icon: '⚖️',
      href: '/ai-services/legal-doc-review-ai',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-passwordless-auth',
      title: 'AI-Powered Passwordless Authentication',
@@ -2100,7 +2100,7 @@ export const aiServices: Service[] = [
      icon: '🔑',
      href: '/ai-services/ai-powered-passwordless-auth',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-tech-debt-quantifier',
      title: 'AI-Powered Tech Debt Quantifier',
@@ -2123,7 +2123,7 @@ export const aiServices: Service[] = [
      icon: '🗑️',
      href: '/ai-services/ai-powered-tech-debt-quantifier',
      category: 'ai'
-   },,
+   },
 {
      id: 'generative-ux-research-synthesis',
      title: 'Generative UX Research Synthesis',
@@ -2146,7 +2146,7 @@ export const aiServices: Service[] = [
      icon: '👥',
      href: '/ai-services/generative-ux-research-synthesis',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-incident-postmortem',
      title: 'AI-Powered Incident Postmortem Generator',
@@ -2169,7 +2169,7 @@ export const aiServices: Service[] = [
      icon: '📝',
      href: '/ai-services/ai-powered-incident-postmortem',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-driven-api-design-assistant',
      title: 'AI-Driven API Design Assistant',
@@ -2192,7 +2192,7 @@ export const aiServices: Service[] = [
      icon: '🔗',
      href: '/ai-services/ai-driven-api-design-assistant',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-pr-drafting',
      title: 'AI-Powered PR Drafting & Description',
@@ -2215,7 +2215,7 @@ export const aiServices: Service[] = [
      icon: '📦',
      href: '/ai-services/ai-powered-pr-drafting',
      category: 'ai'
-   },,
+   },
 {
      id: 'automated-data-labeling',
      title: 'Automated Data Labeling for Computer Vision & NLP',
@@ -2238,7 +2238,7 @@ export const aiServices: Service[] = [
      icon: '🏷️',
      href: '/ai-services/automated-data-labeling',
      category: 'ai'
-   },,
+   },
 {
      id: 'meeting-ai-assistant',
      title: 'Meeting AI Assistant (Record, Transcribe, Summarize)',
@@ -2261,7 +2261,7 @@ export const aiServices: Service[] = [
      icon: '🎙️',
      href: '/ai-services/meeting-ai-assistant',
      category: 'ai'
-   },,
+   },
 {
      id: 'ai-powered-question-answering',
      title: 'Enterprise AI Question Answering (Internal Knowledge)',
@@ -2284,7 +2284,7 @@ export const aiServices: Service[] = [
      icon: '💬',
      href: '/ai-services/ai-powered-question-answering',
      category: 'ai'
-   },,
+   },
 {
     id: 'ai-supply-chain-predictor',
     title: 'AI Supply Chain Predictor',
@@ -2300,7 +2300,7 @@ export const aiServices: Service[] = [
     icon: '🚢',
     href: '/ai-services/ai-supply-chain-predictor',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-contract-review',
     title: 'AI Contract Review Assistant',
@@ -2316,7 +2316,7 @@ export const aiServices: Service[] = [
     icon: '📝',
     href: '/ai-services/ai-contract-review',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-accessibility-auditor',
     title: 'AI Accessibility Auditor',
@@ -2332,7 +2332,7 @@ export const aiServices: Service[] = [
     icon: '♿',
     href: '/ai-services/ai-accessibility-auditor',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-mental-health-chatbot',
     title: 'AI Mental Health Companion',
@@ -2348,7 +2348,7 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-services/ai-mental-health-chatbot',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-customer-sentiment-tracker',
     title: 'AI Customer Sentiment Tracker',
@@ -2364,7 +2364,7 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-customer-sentiment-tracker',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-codebase-doc-generator',
     title: 'AI Codebase Documentation Generator',
@@ -2380,7 +2380,7 @@ export const aiServices: Service[] = [
     icon: '📚',
     href: '/ai-services/ai-codebase-doc-generator',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-competitive-intel-engine',
     title: 'AI Competitive Intel Engine',
@@ -2396,7 +2396,7 @@ export const aiServices: Service[] = [
     icon: '🔍',
     href: '/ai-services/ai-competitive-intel-engine',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-voice-cloning-marketing',
     title: 'AI Voice Cloning for Marketing',
@@ -2412,7 +2412,7 @@ export const aiServices: Service[] = [
     icon: '🎙️',
     href: '/ai-services/ai-voice-cloning-marketing',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-fraud-detection-finance',
     title: 'AI Fraud Detection for Finance',
@@ -2428,7 +2428,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-fraud-detection-finance',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-legal-contract-redaction',
     title: 'AI Legal Contract Redaction',
@@ -2444,7 +2444,7 @@ export const aiServices: Service[] = [
     icon: '🔒',
     href: '/ai-services/ai-legal-contract-redaction',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-sustainability-carbon-tracker',
     title: 'AI Sustainability & Carbon Tracker',
@@ -2460,7 +2460,7 @@ export const aiServices: Service[] = [
     icon: '🌱',
     href: '/ai-services/ai-sustainability-carbon-tracker',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-education-tutor',
     title: 'AI 1:1 Tutor for K–12 & Higher Ed',
@@ -2476,7 +2476,7 @@ export const aiServices: Service[] = [
     icon: '🎓',
     href: '/ai-services/ai-education-tutor',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-retail-recommendation-engine',
     title: 'AI Retail Recommendation Engine',
@@ -2492,7 +2492,7 @@ export const aiServices: Service[] = [
     icon: '🛒',
     href: '/ai-services/ai-retail-recommendation-engine',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-aiops-anomaly-detection',
     title: 'AI-AIOps Anomaly Detection',
@@ -2508,7 +2508,7 @@ export const aiServices: Service[] = [
     icon: '📈',
     href: '/ai-services/ai-aiops-anomaly-detection',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-media-monitoring',
     title: 'AI Media & News Monitoring',
@@ -2524,7 +2524,7 @@ export const aiServices: Service[] = [
     icon: '📰',
     href: '/ai-services/ai-media-monitoring',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-accessibility-optimizer',
     title: 'AI Accessibility Content Optimizer',
@@ -2540,7 +2540,7 @@ export const aiServices: Service[] = [
     icon: '🔧',
     href: '/ai-services/ai-accessibility-optimizer',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-realtime-translation',
     title: 'Real-Time Translation Engine',
@@ -2556,7 +2556,7 @@ export const aiServices: Service[] = [
     icon: '🌐',
     href: '/ai-services/ai-realtime-translation',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-contract-analyzer-pro',
     title: 'Contract Analyzer Pro',
@@ -2572,7 +2572,7 @@ export const aiServices: Service[] = [
     icon: '📜',
     href: '/ai-services/ai-contract-analyzer-pro',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-competitor-intelligence',
     title: 'Competitor Intelligence Engine',
@@ -2588,7 +2588,7 @@ export const aiServices: Service[] = [
     icon: '🎯',
     href: '/ai-services/ai-competitor-intelligence',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-email-campaign-generator',
     title: 'Email Campaign Generator',
@@ -2604,7 +2604,7 @@ export const aiServices: Service[] = [
     icon: '📧',
     href: '/ai-services/ai-email-campaign-generator',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-voice-assistant-pro',
     title: 'Voice Assistant Pro',
@@ -2620,7 +2620,7 @@ export const aiServices: Service[] = [
     icon: '📞',
     href: '/ai-services/ai-voice-assistant-pro',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-revenue-optimizer',
     title: 'Revenue Optimization Engine',
@@ -2636,7 +2636,7 @@ export const aiServices: Service[] = [
     icon: '💰',
     href: '/ai-services/ai-revenue-optimizer',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-knowledge-graph-builder',
     title: 'Knowledge Graph Builder',
@@ -2652,7 +2652,7 @@ export const aiServices: Service[] = [
     icon: '🕸️',
     href: '/ai-services/ai-knowledge-graph-builder',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-fraud-detection-real-time',
     title: 'Real-Time Fraud Detection',
@@ -2668,7 +2668,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     href: '/ai-services/ai-fraud-detection-real-time',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-social-sentiment-tracker',
     title: 'Social Sentiment Tracker',
@@ -2684,7 +2684,7 @@ export const aiServices: Service[] = [
     icon: '📢',
     href: '/ai-services/ai-social-sentiment-tracker',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-automated-reporting',
     title: 'Automated Reporting Engine',
@@ -2700,7 +2700,7 @@ export const aiServices: Service[] = [
     icon: '📊',
     href: '/ai-services/ai-automated-reporting',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-predictive-maintenance-factory',
     title: 'Predictive Maintenance for Manufacturing',
@@ -2716,7 +2716,7 @@ export const aiServices: Service[] = [
     icon: '🏭',
     href: '/ai-services/ai-predictive-maintenance-factory',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-customer-360',
     title: 'Customer 360 Unified Profile',
@@ -2732,7 +2732,7 @@ export const aiServices: Service[] = [
     icon: '👤',
     href: '/ai-services/ai-customer-360',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-talent-acquisition-platform',
     title: 'AI Talent Acquisition Platform',
@@ -2748,7 +2748,7 @@ export const aiServices: Service[] = [
     icon: '👥',
     href: '/ai-services/ai-talent-acquisition-platform',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-gen-app-dev-1',
     title: 'AI-Powered Application Development',
@@ -2782,7 +2782,7 @@ export const aiServices: Service[] = [
     icon: '🧠',
     href: '/ai-gen-app-dev-1',
     category: 'ai'
-  },,
+  },
 {
     id: 'ai-ethics-audit-1',
     title: 'AI Ethics Audit & Bias Assessment',
@@ -2849,7 +2849,7 @@ export const itServices: Service[] = [
     icon: '🔄',
     href: '/it-services/devops-gen-ai-ci-cd',
     category: 'it'
-  },,
+  },
 {
     id: 'cloud-cost-ai-optimizer',
     title: 'AI Cloud Cost Optimizer',
@@ -2880,7 +2880,7 @@ export const itServices: Service[] = [
     icon: '💸',
     href: '/it-services/cloud-cost-ai-optimizer',
     category: 'it'
-  },,
+  },
 {
     id: 'data-warehouse-modernization',
     title: 'AI Data Warehouse Modernization',
@@ -2911,7 +2911,7 @@ export const itServices: Service[] = [
     icon: '🗄️',
     href: '/it-services/data-warehouse-modernization',
     category: 'it'
-  },,
+  },
 {
     id: 'cyber-threat-intelligence',
     title: 'AI Cyber Threat Intelligence Platform',
@@ -2942,7 +2942,7 @@ export const itServices: Service[] = [
     icon: '🛡️',
     href: '/it-services/cyber-threat-intelligence',
     category: 'it'
-  },,
+  },
 {
     id: 'low-code-platform-customization',
     title: 'Low-Code Platform Customization & Integration',
@@ -2973,7 +2973,7 @@ export const itServices: Service[] = [
     icon: '🧩',
     href: '/it-services/low-code-platform-customization',
     category: 'it'
-  },,
+  },
 {
     id: 'api-management-gateway',
     title: 'API Management & Developer Gateway',
@@ -3004,7 +3004,7 @@ export const itServices: Service[] = [
     icon: '🔌',
     href: '/it-services/api-management-gateway',
     category: 'it'
-  },,
+  },
 {
     id: 'ai-it-helpdesk',
     title: 'AI IT Helpdesk & Support',
@@ -3035,7 +3035,7 @@ export const itServices: Service[] = [
     icon: '🖥️',
     href: '/it-services/ai-it-helpdesk',
     category: 'it'
-   },,
+   },
 {
     id: 'saas-development',
     title: 'SaaS Product Development',
@@ -3066,7 +3066,7 @@ export const itServices: Service[] = [
     icon: '🚀',
     href: '/it-services/saas-development',
     category: 'it'
-  },,
+  },
 {
     id: 'api-integration',
     title: 'API Development & Integration',
@@ -3097,7 +3097,7 @@ export const itServices: Service[] = [
     icon: '🔗',
     href: '/it-services/api-integration',
     category: 'it'
-  },,
+  },
 {
     id: 'it-consulting',
     title: 'IT Strategy & Digital Transformation Consulting',
@@ -3128,7 +3128,7 @@ export const itServices: Service[] = [
     icon: '💡',
     href: '/it-services/it-consulting',
     category: 'it'
-  },,
+  },
 {
     id: 'accessibility-compliance',
     title: 'Accessibility & WCAG Compliance',
@@ -3140,7 +3140,7 @@ export const itServices: Service[] = [
     icon: '♿',
     href: '/it-services/accessibility-compliance',
     category: 'it'
-  },,
+  },
 {
     id: 'it-itil-service-management',
     title: 'ITIL Service Management (ITSM) Platform',
@@ -3152,7 +3152,7 @@ export const itServices: Service[] = [
     icon: '📋',
     href: '/it-services/itil-service-management',
     category: 'it'
-  },,
+  },
 {
     id: 'it-blockchain-development',
     title: 'Blockchain Development & Smart Contract Auditing',
@@ -3164,7 +3164,7 @@ export const itServices: Service[] = [
     icon: '⛓️',
     href: '/it-services/blockchain-development',
     category: 'it'
-  },,
+  },
 {
     id: 'managed-soc-threat-intelligence',
     title: 'Managed SOC & Threat Intelligence',
@@ -3176,7 +3176,7 @@ export const itServices: Service[] = [
     icon: '🔒',
     href: '/it-services/managed-soc-threat-intelligence',
     category: 'it'
-  },,
+  },
 {
     id: 'kubernetes-management',
     title: 'Container Orchestration & Kubernetes Management',
@@ -3188,7 +3188,7 @@ export const itServices: Service[] = [
     icon: '🐳',
     href: '/it-services/kubernetes-management',
     category: 'it'
-  },,
+  },
 {
     id: 'it-service-desk-automation',
     title: 'IT Service Desk Automation',
@@ -3200,7 +3200,7 @@ export const itServices: Service[] = [
     icon: '🎧',
     href: '/it-services/it-service-desk-automation',
     category: 'it'
-  },,
+  },
 {
     id: 'enterprise-backup-dr',
     title: 'Enterprise Backup & Disaster Recovery',
@@ -3212,7 +3212,7 @@ export const itServices: Service[] = [
     icon: '💾',
     href: '/it-services/enterprise-backup-dr',
     category: 'it'
-  },,
+  },
 {
     id: 'network-architecture-sdwan',
     title: 'Network Architecture & SD-WAN',
@@ -3224,7 +3224,7 @@ export const itServices: Service[] = [
     icon: '🌐',
     href: '/it-services/network-architecture-sdwan',
     category: 'it'
-  },,
+  },
 {
     id: 'it-sam-platform',
     title: 'IT Service Asset & Configuration Management',
@@ -3255,7 +3255,7 @@ export const itServices: Service[] = [
     icon: '🗺️',
     href: '/it-services/it-sam-platform',
     category: 'it'
-  },,
+  },
 {
     id: 'vulnerability-assessment-penetration-testing',
     title: 'Vulnerability Assessment & Penetration Testing',
@@ -3286,7 +3286,7 @@ export const itServices: Service[] = [
     icon: '🧐',
     href: '/it-services/vulnerability-assessment-penetration-testing',
     category: 'it'
-  },,
+  },
 {
     id: 'remote-it-support',
     title: 'Remote IT Support & Helpdesk Outsourcing',
@@ -3317,7 +3317,7 @@ export const itServices: Service[] = [
     icon: '🎧',
     href: '/it-services/remote-it-support',
     category: 'it'
-  },,
+  },
 {
     id: 'endpoint-management',
     title: 'Unified Endpoint Management (UEM)',
@@ -3348,7 +3348,7 @@ export const itServices: Service[] = [
     icon: '💻',
     href: '/it-services/endpoint-management',
     category: 'it'
-  },,
+  },
 {
     id: 'legacy-system-modernization',
     title: 'Legacy System Modernization & Re-Platforming',
@@ -3379,7 +3379,7 @@ export const itServices: Service[] = [
     icon: '🏗️',
     href: '/it-services/legacy-system-modernization',
     category: 'it'
-  },,
+  },
 {
     id: 'quantum-ready-security',
     title: 'Quantum-Ready Cryptography & Security Assessment',
@@ -3410,7 +3410,7 @@ export const itServices: Service[] = [
     icon: '🔐',
     href: '/it-services/quantum-ready-security',
     category: 'it'
-  },,
+  },
 {
     id: 'observability-platform',
     title: 'Full-Stack Observability Platform',
@@ -3441,7 +3441,7 @@ export const itServices: Service[] = [
     icon: '📊',
     href: '/it-services/observability-platform',
     category: 'it'
-  },,
+  },
 {
     id: 'soc-as-a-service',
     title: 'Security Operations Center as a Service (SOCaaS)',
@@ -3472,7 +3472,7 @@ export const itServices: Service[] = [
     icon: '🚨',
     href: '/it-services/soc-as-a-service',
     category: 'it'
-  },,
+  },
 {
     id: 'nodejs-performance-tuning',
     title: 'Node.js Performance Tuning & Profiling',
@@ -3503,7 +3503,7 @@ export const itServices: Service[] = [
     icon: '🟢',
     href: '/it-services/nodejs-performance-tuning',
     category: 'it'
-  },,
+  },
 {
     id: 'etl-pipeline-optimization',
     title: 'ETL Pipeline Optimization & Modernization',
@@ -3534,7 +3534,7 @@ export const itServices: Service[] = [
     icon: '🔄',
     href: '/it-services/etl-pipeline-optimization',
     category: 'it'
-  },,
+  },
 {
     id: 'incident-response-retainer',
     title: 'Incident Response Retainer (IR)',
@@ -3565,7 +3565,7 @@ export const itServices: Service[] = [
     icon: '🚑',
     href: '/it-services/incident-response-retainer',
     category: 'it'
-   },,
+   },
 {
     id: 'it-edge-computing-deploy',
     title: 'Edge Computing Deployment',
@@ -3581,7 +3581,7 @@ export const itServices: Service[] = [
     icon: '🌍',
     href: '/it-services/it-edge-computing-deploy',
     category: 'it'
-  },,
+  },
 {
     id: 'it-esg-compliance-automation',
     title: 'ESG Compliance Automation',
@@ -3597,7 +3597,7 @@ export const itServices: Service[] = [
     icon: '🌍',
     href: '/it-services/it-esg-compliance-automation',
     category: 'it'
-  },,
+  },
 {
     id: 'it-kubernetes-multicloud',
     title: 'Kubernetes Multi-Cloud Management',
@@ -3613,7 +3613,7 @@ export const itServices: Service[] = [
     icon: '☸️',
     href: '/it-services/it-kubernetes-multicloud',
     category: 'it'
-  },,
+  },
 {
     id: 'it-automated-incident-response',
     title: 'Automated Incident Response (SOAR)',
@@ -3629,7 +3629,7 @@ export const itServices: Service[] = [
     icon: '🚨',
     href: '/it-services/it-automated-incident-response',
     category: 'it'
-  },,
+  },
 {
     id: 'it-data-warehouse-modernization',
     title: 'Data Warehouse Modernization',
@@ -3645,7 +3645,7 @@ export const itServices: Service[] = [
     icon: '🏢',
     href: '/it-services/it-data-warehouse-modernization',
     category: 'it'
-  },,
+  },
 {
     id: 'it-iot-device-management',
     title: 'Enterprise IoT Device Management',
@@ -3661,7 +3661,7 @@ export const itServices: Service[] = [
     icon: '📱',
     href: '/it-services/it-iot-device-management',
     category: 'it'
-  },,
+  },
 {
     id: 'it-digital-workplace-platform',
     title: 'Digital Workplace Platform',
@@ -3677,7 +3677,7 @@ export const itServices: Service[] = [
     icon: '💼',
     href: '/it-services/it-digital-workplace-platform',
     category: 'it'
-  },,
+  },
 {
     id: 'it-apisec-testing',
     title: 'API Security Testing',
@@ -3693,7 +3693,7 @@ export const itServices: Service[] = [
     icon: '🔐',
     href: '/it-services/it-apisec-testing',
     category: 'it'
-  },,
+  },
 {
     id: 'it-data-lakehouse-governance',
     title: 'Data Lakehouse Governance',
@@ -3709,7 +3709,7 @@ export const itServices: Service[] = [
     icon: '🗄️',
     href: '/it-services/it-data-lakehouse-governance',
     category: 'it'
-  },,
+  },
 {
     id: 'it-endpoint-detection-response',
     title: 'Managed Endpoint Detection & Response (EDR)',
@@ -3725,7 +3725,7 @@ export const itServices: Service[] = [
     icon: '🛡️',
     href: '/it-services/it-endpoint-detection-response',
     category: 'it'
-  },,
+  },
 {
     id: 'it-low-code-platform-integration',
     title: 'Low-Code Platform Integration',
@@ -3741,7 +3741,7 @@ export const itServices: Service[] = [
     icon: '🧩',
     href: '/it-services/it-low-code-platform-integration',
     category: 'it'
-  },,
+  },
 {
     id: 'it-edge-computing-orchestration',
     title: 'Edge Computing Orchestration',
@@ -3757,7 +3757,7 @@ export const itServices: Service[] = [
     icon: '🌍',
     href: '/it-services/it-edge-computing-orchestration',
     category: 'it'
-  },,
+  },
 {
     id: 'it-serverless-api-gateway',
     title: 'Serverless API Gateway',
@@ -3773,7 +3773,7 @@ export const itServices: Service[] = [
     icon: '🚪',
     href: '/it-services/it-serverless-api-gateway',
     category: 'it'
-  },,
+  },
 {
     id: 'it-sap-integration-hub',
     title: 'SAP Integration Hub',
@@ -3789,7 +3789,7 @@ export const itServices: Service[] = [
     icon: '🏢',
     href: '/it-services/it-sap-integration-hub',
     category: 'it'
-  },,
+  },
 {
     id: 'it-multi-cloud-cost-governance',
     title: 'Multi-Cloud Cost Governance',
@@ -3805,7 +3805,7 @@ export const itServices: Service[] = [
     icon: '💸',
     href: '/it-services/it-multi-cloud-cost-governance',
     category: 'it'
-  },,
+  },
 {
     id: 'it-secure-file-transfer',
     title: 'Secure File Transfer (MFT)',
@@ -3821,7 +3821,7 @@ export const itServices: Service[] = [
     icon: '📁',
     href: '/it-services/it-secure-file-transfer',
     category: 'it'
-  },,
+  },
 {
     id: 'it-legacy-app-containerization',
     title: 'Legacy App Containerization',
@@ -3837,7 +3837,7 @@ export const itServices: Service[] = [
     icon: '🐳',
     href: '/it-services/it-legacy-app-containerization',
     category: 'it'
-  },,
+  },
 {
     id: 'it-pcii-compliance-suite',
     title: 'PCI DSS Compliance Suite',
@@ -3853,7 +3853,7 @@ export const itServices: Service[] = [
     icon: '💳',
     href: '/it-services/it-pcii-compliance-suite',
     category: 'it'
-  },,
+  },
 {
     id: 'it-business-continuity-dr',
     title: 'Business Continuity & Disaster Recovery',
@@ -3869,7 +3869,7 @@ export const itServices: Service[] = [
     icon: '🔄',
     href: '/it-services/it-business-continuity-dr',
     category: 'it'
-  },,
+  },
 {
     id: 'it-identity-governance',
     title: 'Identity Governance & Administration',
@@ -3885,7 +3885,7 @@ export const itServices: Service[] = [
     icon: '🔑',
     href: '/it-services/it-identity-governance',
     category: 'it'
-  },,
+  },
 {
     id: 'it-cloud-native-storage',
     title: 'Cloud-Native Storage Optimizer',
@@ -3901,7 +3901,7 @@ export const itServices: Service[] = [
     icon: '💾',
     href: '/it-services/it-cloud-native-storage',
     category: 'it'
-  },,
+  },
 {
     id: 'it-observability-unified',
     title: 'Unified Observability Platform',
@@ -3917,7 +3917,7 @@ export const itServices: Service[] = [
     icon: '📈',
     href: '/it-services/it-observability-unified',
     category: 'it'
-  },,
+  },
 {
     id: 'it-secrets-management',
     title: 'Secrets Management as a Service',
@@ -3933,7 +3933,7 @@ export const itServices: Service[] = [
     icon: '🔐',
     href: '/it-services/it-secrets-management',
     category: 'it'
-  },,
+  },
 {
     id: 'it-multi-cloud-networking',
     title: 'Multi-Cloud Networking',
@@ -3949,7 +3949,7 @@ export const itServices: Service[] = [
     icon: '🌐',
     href: '/it-services/it-multi-cloud-networking',
     category: 'it'
-  },,
+  },
 {
     id: 'it-mainframe-modernization',
     title: 'Mainframe Modernization Service',
@@ -3965,7 +3965,7 @@ export const itServices: Service[] = [
     icon: '🖥️',
     href: '/it-services/it-mainframe-modernization',
     category: 'it'
-  },,
+  },
 {
     id: 'it-devsecops-1',
     title: 'DevSecOps & Security Automation',
@@ -3999,7 +3999,7 @@ export const itServices: Service[] = [
     icon: '💻',
     href: '/it-devsecops-1',
     category: 'it'
-  },,
+  },
 {
     id: 'it-platform-engineering-1',
     title: 'Internal Developer Platform (IDP) Engineering',
@@ -4033,7 +4033,7 @@ export const itServices: Service[] = [
     icon: '💻',
     href: '/it-platform-engineering-1',
     category: 'it'
-  },,
+  },
 {
     id: 'it-observability-1',
     title: 'AI-Powered Observability & SRE',
@@ -4067,7 +4067,7 @@ export const itServices: Service[] = [
     icon: '💻',
     href: '/it-observability-1',
     category: 'it'
-  },,
+  },
 {
     id: 'cloud-finops-1',
     title: 'Cloud FinOps & Cost Intelligence',
@@ -4101,7 +4101,7 @@ export const itServices: Service[] = [
     icon: '💻',
     href: '/cloud-finops-1',
     category: 'it'
-  },,
+  },
 {
     id: 'it-zero-trust-1',
     title: 'Zero Trust Security Implementation',
@@ -4169,7 +4169,7 @@ export const cloudServices: Service[] = [
     href: '/it-services/cloud-migration',
     popular: true,
     category: 'cloud'
-  },,
+  },
 {
     id: 'cloud-cost-optimization-service',
     title: 'Cloud Cost Optimization (FinOps)',
@@ -4181,7 +4181,7 @@ export const cloudServices: Service[] = [
     icon: '💰',
     href: '/it-services/cloud-cost-optimization',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-edge-computing-solutions',
     title: 'Edge Computing & IoT Infrastructure',
@@ -4193,7 +4193,7 @@ export const cloudServices: Service[] = [
     icon: '📡',
     href: '/it-services/edge-computing',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-disaster-recovery',
     title: 'Disaster Recovery & Business Continuity',
@@ -4205,7 +4205,7 @@ export const cloudServices: Service[] = [
     icon: '🔄',
     href: '/it-services/disaster-recovery',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-kubernetes-management',
     title: 'Container Orchestration & Kubernetes Management',
@@ -4217,7 +4217,7 @@ export const cloudServices: Service[] = [
     icon: '🐳',
     href: '/it-services/kubernetes-management',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-5g-network-deployment',
     title: '5G Network Planning & Deployment',
@@ -4229,7 +4229,7 @@ export const cloudServices: Service[] = [
     icon: '📶',
     href: '/it-services/5g-network-deployment',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-microservices-architecture',
     title: 'Microservices Architecture & API Gateway Design',
@@ -4241,7 +4241,7 @@ export const cloudServices: Service[] = [
     icon: '🧩',
     href: '/it-services/microservices-architecture',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-observability-platform',
     title: 'Observability Platform & SRE Consulting',
@@ -4253,7 +4253,7 @@ export const cloudServices: Service[] = [
     icon: '📊',
     href: '/it-services/observability-platform',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-platform-engineering',
     title: 'Platform Engineering & Internal Developer Portal',
@@ -4265,7 +4265,7 @@ export const cloudServices: Service[] = [
     icon: '🛠️',
     href: '/it-services/platform-engineering',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-wireless-network-design',
     title: 'Wireless Network Design & Optimization',
@@ -4277,7 +4277,7 @@ export const cloudServices: Service[] = [
     icon: '📡',
     href: '/it-services/wireless-network',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-serverless-architecture',
     title: 'Serverless Architecture & Function-as-a-Service',
@@ -4289,7 +4289,7 @@ export const cloudServices: Service[] = [
     icon: '☁️',
     href: '/it-services/serverless-architecture',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-api-management',
     title: 'API Management Platform & Developer Portal',
@@ -4301,7 +4301,7 @@ export const cloudServices: Service[] = [
     icon: '🔌',
     href: '/it-services/api-management',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-database-as-a-service',
     title: 'Database-as-a-Service & Managed Data Platforms',
@@ -4313,7 +4313,7 @@ export const cloudServices: Service[] = [
     icon: '🗄️',
     href: '/it-services/database-as-a-service',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-voice-infrastructure',
     title: 'Voice Infrastructure & Contact Center Solutions',
@@ -4325,7 +4325,7 @@ export const cloudServices: Service[] = [
     icon: '📞',
     href: '/it-services/voice-infrastructure',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-capacity-planning',
     title: 'IT Capacity Planning & Resource Forecasting',
@@ -4337,7 +4337,7 @@ export const cloudServices: Service[] = [
     icon: '📊',
     href: '/it-services/capacity-planning',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-backup-disaster-recovery',
     title: 'Backup & Disaster Recovery Solutions',
@@ -4349,7 +4349,7 @@ export const cloudServices: Service[] = [
     icon: '💾',
     href: '/it-services/backup-recovery',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it-network-automation',
     title: 'Network Automation & SD-WAN Management',
@@ -4361,7 +4361,7 @@ export const cloudServices: Service[] = [
     icon: '🌐',
     href: '/it-services/network-automation',
     category: 'cloud'
-  },,
+  },
 {
     id: 'api_development',
     title: 'API Development & Integration',
@@ -4373,7 +4373,7 @@ export const cloudServices: Service[] = [
     icon: '🔌',
     href: '/it-services/api-development',
     category: 'cloud'
-  },,
+  },
 {
     id: 'backup_disaster_recovery',
     title: 'Backup & Disaster Recovery',
@@ -4385,7 +4385,7 @@ export const cloudServices: Service[] = [
     icon: '💾',
     href: '/it-services/backup-disaster-recovery',
     category: 'cloud'
-  },,
+  },
 {
     id: 'cybersecurity_audit',
     title: 'Cybersecurity Audit',
@@ -4397,7 +4397,7 @@ export const cloudServices: Service[] = [
     icon: '🔹',
     href: '/it-services/cybersecurity-audit',
     category: 'cloud'
-  },,
+  },
 {
     id: 'data_pipeline_architecture',
     title: 'Data Pipeline Architecture & Engineering',
@@ -4409,7 +4409,7 @@ export const cloudServices: Service[] = [
     icon: '🔧',
     href: '/it-services/data-pipeline-architecture',
     category: 'cloud'
-  },,
+  },
 {
     id: 'devops_consulting',
     title: 'DevOps Consulting & Implementation',
@@ -4421,7 +4421,7 @@ export const cloudServices: Service[] = [
     icon: '⚙️',
     href: '/it-services/devops-consulting',
     category: 'cloud'
-  },,
+  },
 {
     id: 'digital_workplace',
     title: 'Digital Workplace Solutions',
@@ -4433,7 +4433,7 @@ export const cloudServices: Service[] = [
     icon: '🏢',
     href: '/it-services/digital-workplace',
     category: 'cloud'
-  },,
+  },
 {
     id: 'disaster_recovery_services',
     title: 'Disaster Recovery & Business Continuity',
@@ -4445,7 +4445,7 @@ export const cloudServices: Service[] = [
     icon: '🔄',
     href: '/it-services/disaster-recovery-services',
     category: 'cloud'
-  },,
+  },
 {
     id: 'endpoint_management',
     title: 'Endpoint Device Management (MDM)',
@@ -4457,7 +4457,7 @@ export const cloudServices: Service[] = [
     icon: '📱',
     href: '/it-services/endpoint-management',
     category: 'cloud'
-  },,
+  },
 {
     id: 'identity_access_management',
     title: 'Identity & Access Management (IAM)',
@@ -4469,7 +4469,7 @@ export const cloudServices: Service[] = [
     icon: '🔑',
     href: '/it-services/identity-access-management',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it_asset_management',
     title: 'IT Asset Management & Lifecycle',
@@ -4481,7 +4481,7 @@ export const cloudServices: Service[] = [
     icon: '📦',
     href: '/it-services/it-asset-management',
     category: 'cloud'
-  },,
+  },
 {
     id: 'it_service_desk',
     title: 'IT Service Desk & Help Desk',
@@ -4493,7 +4493,7 @@ export const cloudServices: Service[] = [
     icon: '🎧',
     href: '/it-services/it-service-desk',
     category: 'cloud'
-  },,
+  },
 {
     id: 'managed_soc_security',
     title: 'Managed SOC & Security Operations',
@@ -4505,7 +4505,7 @@ export const cloudServices: Service[] = [
     icon: '🛡️',
     href: '/it-services/managed-soc-security',
     category: 'cloud'
-  },,
+  },
 {
     id: 'mobile_development',
     title: 'Mobile App Development',
@@ -4517,7 +4517,7 @@ export const cloudServices: Service[] = [
     icon: '📱',
     href: '/it-services/mobile-development',
     category: 'cloud'
-  },,
+  },
 {
     id: 'network_infrastructure',
     title: 'Enterprise Network Infrastructure',
@@ -4529,7 +4529,7 @@ export const cloudServices: Service[] = [
     icon: '🌐',
     href: '/it-services/network-infrastructure',
     category: 'cloud'
-  },,
+  },
 {
     id: 'network_security_operations',
     title: 'Network Security Operations Center',
@@ -4575,7 +4575,7 @@ export const securityServices: Service[] = [
     href: '/it-services/cybersecurity',
     popular: true,
     category: 'security'
-  },,
+  },
 {
     id: 'it-network-security-monitoring',
     title: 'Network Security Monitoring & SIEM',
@@ -4587,7 +4587,7 @@ export const securityServices: Service[] = [
     icon: '🛡️',
     href: '/it-services/network-security-monitoring',
     category: 'security'
-  },,
+  },
 {
     id: 'it-zero-trust-architecture',
     title: 'Zero Trust Security Architecture',
@@ -4599,7 +4599,7 @@ export const securityServices: Service[] = [
     icon: '🔐',
     href: '/it-services/zero-trust-architecture',
     category: 'security'
-  },,
+  },
 {
     id: 'it-penetration-testing',
     title: 'Penetration Testing & Vulnerability Assessment',
@@ -4611,7 +4611,7 @@ export const securityServices: Service[] = [
     icon: '🔓',
     href: '/it-services/penetration-testing',
     category: 'security'
-  },,
+  },
 {
     id: 'it-quantum-readiness',
     title: 'Quantum Computing Readiness Assessment',
@@ -4623,7 +4623,7 @@ export const securityServices: Service[] = [
     icon: '🔮',
     href: '/it-services/quantum-readiness',
     category: 'security'
-  },,
+  },
 {
     id: 'it-incident-response',
     title: 'Incident Response & Security Operations Center',
@@ -4635,7 +4635,7 @@ export const securityServices: Service[] = [
     icon: '🚨',
     href: '/it-services/incident-response',
     category: 'security'
-  },,
+  },
 {
     id: 'it-identity-access-management',
     title: 'Identity & Access Management (IAM) Platform',
@@ -4680,7 +4680,7 @@ export const dataServices: Service[] = [
     icon: '🔧',
     href: '/it-services/data-engineering',
     category: 'data'
-  },,
+  },
 {
     id: 'database-optimization',
     title: 'Database Optimization & Management',
@@ -4711,7 +4711,7 @@ export const dataServices: Service[] = [
     icon: '🗄️',
     href: '/it-services/database-optimization',
     category: 'data'
-  },,
+  },
 {
     id: 'it-data-mesh-implementation',
     title: 'Data Mesh & Modern Data Platform Architecture',
@@ -4757,7 +4757,7 @@ export const automationServices: Service[] = [
     href: '/it-services/devops-cicd',
     popular: true,
     category: 'automation'
-  },,
+  },
 {
     id: 'monitoring-observability',
     title: 'Monitoring & Observability',
@@ -4788,7 +4788,7 @@ export const automationServices: Service[] = [
     icon: '📡',
     href: '/it-services/monitoring-observability',
     category: 'automation'
-  },,
+  },
 {
     id: 'supply-chain-management-service',
     title: 'Supply Chain Management Platform',
@@ -4800,7 +4800,7 @@ export const automationServices: Service[] = [
     icon: '🚛',
     href: '/it-services/supply-chain-management',
     category: 'automation'
-  },,
+  },
 {
     id: 'it-digital-twin-platform',
     title: 'Digital Twin & IoT Platform Development',
@@ -4812,7 +4812,7 @@ export const automationServices: Service[] = [
     icon: '🏗️',
     href: '/it-services/digital-twin-platform',
     category: 'automation'
-  },,
+  },
 {
     id: 'it-automation-orchestrator',
     title: 'IT Automation & Orchestration Platform',
@@ -4828,8 +4828,7 @@ export const automationServices: Service[] = [
 ];
 
 export const itSolutions = itServices;
-export const allServices: Service[] = [
-];
+export const allServices: Service[] = [...aiServices, ...itServices];
 
 export const getServiceById = (id: string): Service | undefined => {
   return allServices.find(s => s.id === id);
