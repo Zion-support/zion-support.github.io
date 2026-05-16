@@ -1,4 +1,13 @@
 {
-  "checks": [],
-  "lastAlert": "2026-05-14T02:48:50.885805"
+  "checks": [
+    {
+      "timestamp": "2026-05-15T03:47:00Z",
+      "name": "llm_providers",
+      "status": "fixed",
+      "details": "Updated OPENROUTER_MODEL to deepseek/deepseek-v4-flash:free, fixed content extraction from reasoning field"
+    }
+  ],
+  "lastAlert": "2026-05-16T11:44:48.252328",
+  "llm_status": "operational",
+  "fixed_at": "2026-05-15T03:47:00Z"
 }

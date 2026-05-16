@@ -1,0 +1,16 @@
+{
+  "samsunglatam@br.email.samsung.com": {
+    "email_count": 20,
+    "avg_response_time": "unknown",
+    "preferred_reply_length": "medium",
+    "typical_tone": "neutral",
+    "common_topics": []
+  },
+  "notifications@github.com": {
+    "email_count": 20,
+    "avg_response_time": "unknown",
+    "preferred_reply_length": "medium",
+    "typical_tone": "neutral",
+    "common_topics": []
+  }
+}

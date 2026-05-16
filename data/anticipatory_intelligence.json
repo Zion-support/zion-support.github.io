@@ -1,0 +1,127 @@
+{
+  "contact_cycles": {},
+  "topic_drift": {},
+  "engagement_patterns": {},
+  "forecasts": [
+    {
+      "sender": "Site Quality Monitoring Alert ",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Kleber Garcia Alcatrao <notifi",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Kleber Garcia Alcatrao <notifi",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Mail Delivery Subsystem <maile",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Bluehost <no-reply@verify.blue",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Kleber Garcia Alcatrao <notifi",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "<postmaster@5f.com.br>",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Private Jet Services Group <ma",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "\"kilo-code-bot[bot]\" <notifica",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "\"dependabot[bot]\" <notificatio",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "<postmaster@5f.com.br>",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "\"bolt-new-by-stackblitz[bot]\" ",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "\"dependabot[bot]\" <notificatio",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "\"dependabot[bot]\" <notificatio",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "<postmaster@microsoft.com>",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Jose Arberola <joseart@arcopro",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "Bluehost <no-reply@verify.blue",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "<postmaster@microsoft.com>",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "<postmaster@microsoft.com>",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    },
+    {
+      "sender": "<postmaster@microsoft.com>",
+      "next_expected": "unknown",
+      "confidence": 0.1,
+      "trajectory": "resolution"
+    }
+  ]
+}

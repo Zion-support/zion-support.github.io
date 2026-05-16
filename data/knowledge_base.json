@@ -1,0 +1,612 @@
+[
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Bundle"
+      },
+      {
+        "type": "person",
+        "value": "Split Analyzer"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Bundle"
+      },
+      {
+        "type": "person",
+        "value": "Split Analyzer"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Performance"
+      },
+      {
+        "type": "person",
+        "value": "Budget Enforcer"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Depl",
+    "points": [
+      {
+        "type": "person",
+        "value": "Hub Pages"
+      },
+      {
+        "type": "person",
+        "value": "Hub Pages"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI C",
+    "points": [
+      {
+        "type": "person",
+        "value": "Content Burst"
+      },
+      {
+        "type": "person",
+        "value": "Content Burst"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Open",
+    "points": [
+      {
+        "type": "person",
+        "value": "Contract Drift"
+      },
+      {
+        "type": "person",
+        "value": "Contract Drift"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Release"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Release"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Bundle"
+      },
+      {
+        "type": "person",
+        "value": "Split Analyzer"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Open",
+    "points": [
+      {
+        "type": "person",
+        "value": "Status Job"
+      },
+      {
+        "type": "person",
+        "value": "Annotations Open"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Open",
+    "points": [
+      {
+        "type": "person",
+        "value": "Contract Drift"
+      },
+      {
+        "type": "person",
+        "value": "Contract Drift"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Visual"
+      },
+      {
+        "type": "person",
+        "value": "Regression Detector"
+      }
+    ]
+  },
+  {
+    "subject": "Re: [Zion-support/zion.app] AI route ver",
+    "points": [
+      {
+        "type": "person",
+        "value": "Correlation Actions"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Bundle"
+      },
+      {
+        "type": "person",
+        "value": "Split Analyzer"
+      }
+    ]
+  },
+  {
+    "subject": "Re: [Zion-support/zion.app] AI route ver",
+    "points": [
+      {
+        "type": "person",
+        "value": "Correlation Actions"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI P",
+    "points": [
+      {
+        "type": "person",
+        "value": "Status Job"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Writer"
+      },
+      {
+        "type": "person",
+        "value": "Queue Guard"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      },
+      {
+        "type": "person",
+        "value": "Autonomous Changelog"
+      }
+    ]
+  },
+  {
+    "subject": "Re: [Zion-support/zion.app] AI route ver",
+    "points": [
+      {
+        "type": "person",
+        "value": "Correlation Actions"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI A",
+    "points": [
+      {
+        "type": "person",
+        "value": "Status Job"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI B",
+    "points": [
+      {
+        "type": "person",
+        "value": "Broken Link"
+      },
+      {
+        "type": "person",
+        "value": "Fixer Agent"
+      }
+    ]
+  },
+  {
+    "subject": "Re: [Zion-support/zion.app] AI route ver",
+    "points": [
+      {
+        "type": "person",
+        "value": "Correlation Actions"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI A",
+    "points": [
+      {
+        "type": "person",
+        "value": "App Improvement"
+      },
+      {
+        "type": "person",
+        "value": "On Push"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Open",
+    "points": [
+      {
+        "type": "person",
+        "value": "Contract Drift"
+      },
+      {
+        "type": "person",
+        "value": "Contract Drift"
+      }
+    ]
+  },
+  {
+    "subject": "Re: [Zion-support/zion.app] AI route ver",
+    "points": [
+      {
+        "type": "person",
+        "value": "Correlation Actions"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI a",
+    "points": [
+      {
+        "type": "person",
+        "value": "Status Job"
+      }
+    ]
+  },
+  {
+    "subject": "Re: [Zion-support/zion.app] AI route ver",
+    "points": [
+      {
+        "type": "person",
+        "value": "Correlation Actions"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Open",
+    "points": [
+      {
+        "type": "person",
+        "value": "Status Job"
+      },
+      {
+        "type": "person",
+        "value": "Annotations Open"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Auto",
+    "points": [
+      {
+        "type": "person",
+        "value": "Autonomous Custom"
+      },
+      {
+        "type": "person",
+        "value": "Lint Rules"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: Type",
+    "points": [
+      {
+        "type": "person",
+        "value": "Script Type"
+      },
+      {
+        "type": "person",
+        "value": "Dead Code"
+      }
+    ]
+  },
+  {
+    "subject": "[Zion-support/zion.app] Run failed: AI l",
+    "points": [
+      {
+        "type": "person",
+        "value": "Status Job"
+      }
+    ]
+  }
+]

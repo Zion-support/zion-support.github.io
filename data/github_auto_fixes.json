@@ -1,0 +1,13 @@
+{
+  "analyses": [
+    "No address associated with hostname (ziontechgroup.com)",
+    "DNS resolution failed for ziontechgroup.com"
+  ],
+  "dns_issue": {
+    "issue": "DNS resolution failure",
+    "confidence": 0.95,
+    "specific_fix": "Log into Bluehost and add A record pointing ziontechgroup.com to server IP",
+    "temporary_workaround": "Add domain to /etc/hosts or use IP directly in workflow"
+  },
+  "timestamp": "2026-05-15T18:53:08.995841"
+}

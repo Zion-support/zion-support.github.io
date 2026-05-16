@@ -73,7 +73,6 @@ OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openrouter/quasar-alpha")
 
 def extract_json_from_text(text: str) -> dict:
     """Extract JSON from LLM output, stripping code fences and markdown."""
-    import re
     # Strip code fences
     text = re.sub(r'^```[a-zA-Z]*\n?|\n?```$', '', text.strip(), flags=re.MULTILINE)
     # Find first JSON object
@@ -116,8 +115,29 @@ def chat(
         return _call_ollama(messages, temperature)
     if provider == "template":
         return _call_template(messages, temperature)
+    # Individual free cloud providers - route directly (skip auto chain)
+    if provider == "groq":
+        return _call_groq(messages, temperature)
+    if provider == "gemini":
+        return _call_gemini(messages, temperature)
+    if provider == "huggingface":
+        return _call_huggingface(messages, temperature)
+    if provider == "cerebras":
+        return _call_cerebras(messages, temperature)
+    if provider == "cloudflare":
+        return _call_cloudflare(messages, temperature)
+    if provider == "deepseek":
+        return _call_deepseek(messages, temperature)
+    if provider == "mistral":
+        return _call_mistral(messages, temperature)
+    if provider == "together":
+        return _call_together(messages, temperature)
+    if provider == "cohere":
+        return _call_cohere(messages, temperature)
+    if provider == "openrouter":
+        return _call_openrouter(messages, temperature)
 
-    # auto
+    # auto (fallback for unknown provider strings)
     # 1) paid cloud
     for p in [_call_openai, _call_anthropic]:
         try:
@@ -451,6 +471,7 @@ def _call_openrouter(messages, temperature):
         "model": OPENROUTER_MODEL,
         "messages": messages,
         "temperature": temperature,
+        "max_tokens": 512,
     }
     req = urllib.request.Request(
         "https://openrouter.ai/api/v1/chat/completions",
@@ -465,8 +486,11 @@ def _call_openrouter(messages, temperature):
     )
     with urllib.request.urlopen(req, timeout=25) as resp:
         data = json.loads(resp.read())
+    msg = data["choices"][0]["message"]
+    # Handle models that return content in 'reasoning' field
+    content = msg.get("content") or msg.get("reasoning") or ""
     return {
-        "content": data["choices"][0]["message"]["content"],
+        "content": content,
         "provider": "openrouter",
         "model": data.get("model", OPENROUTER_MODEL),
     }
@@ -501,7 +525,6 @@ def _call_ollama(messages, temperature):
 
 def _call_template(messages, temperature):
     """Last-resort deterministic fallback. Never raises."""
-    import random, re
     last_user_msg = next((m["content"] for m in reversed(messages) if m["role"] == "user"), "")
     lower = last_user_msg.lower()
     if any(k in lower for k in ["confirm", "scheduled", "meeting", "call", "confirmar", "reunião", "agenda"]):

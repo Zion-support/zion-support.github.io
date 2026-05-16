@@ -132,7 +132,7 @@ jobs:
       - name: Deploy (GitHub Pages auto-deploy after push)
         if: success()
         run: |
-          echo "Deploy handled by GitHub Pages (output: export, basePath: /zion.app)"
+          echo "Deploy handled by GitHub Pages (output: export, basePath: /)"
 
       - name: Upload audit reports
         if: always()

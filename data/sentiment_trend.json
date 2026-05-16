@@ -1,0 +1,11 @@
+{
+  "avg_score": -0.05,
+  "negative_count": 1,
+  "emails": [
+    {
+      "sender": "\"github-actions[bot]\" <notific",
+      "subject": "[Zion-support/zion-support.github.io] \ud83d\udd34 ",
+      "score": -1
+    }
+  ]
+}

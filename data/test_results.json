@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-05-15T04:21:58.591016",
+  "tests": {
+    "intent_classification": {
+      "passed": 3,
+      "total": 4,
+      "success": false
+    },
+    "language_detection": {
+      "passed": 3,
+      "total": 3,
+      "success": true
+    },
+    "sentiment_analysis": {
+      "passed": 3,
+      "total": 3,
+      "success": true
+    }
+  },
+  "overall_success": false
+}

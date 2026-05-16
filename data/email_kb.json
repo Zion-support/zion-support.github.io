@@ -1,0 +1,13 @@
+{
+  "responses": {
+    "general_inquiry": [
+      {
+        "response": "Thank you for your email. I'll review and respond shortly.\n\nBest regards,\nKleber Garcia Alcatr\u00e3o",
+        "success": true,
+        "timestamp": "2026-05-15T04:14:15.637675"
+      }
+    ]
+  },
+  "success_rates": {},
+  "common_qa": {}
+}

@@ -32,7 +32,7 @@ jobs:
 
       - name: Build
         env:
-          NEXT_PUBLIC_BASE_PATH: /zion.app
+          NEXT_PUBLIC_BASE_PATH: ''
         run: npm run build
 
       - name: Setup Pages

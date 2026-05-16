@@ -1,0 +1,22 @@
+{
+  "sender_preferences": {},
+  "strategy_success": {
+    "urgent": {
+      "sends": 12,
+      "replies": 0
+    },
+    "meeting": {
+      "sends": 0,
+      "replies": 0
+    },
+    "question": {
+      "sends": 0,
+      "replies": 0
+    },
+    "general": {
+      "sends": 0,
+      "replies": 0
+    }
+  },
+  "last_updated": "2026-05-15T06:03:56.128926"
+}

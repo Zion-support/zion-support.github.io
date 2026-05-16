@@ -1,84 +1,59 @@
 #!/usr/bin/env python3
 """
-Smart Attachment Organizer - Zion
+Attachment Organizer - Zion
 
-Automatically organizes email attachments by type, date, and content.
-- Downloads and categorizes attachments
-- Creates organized folder structure in Drive
-- Extracts text from documents for search
-- Tags with sender and date metadata
+Automatically downloads and organizes email attachments.
+Creates structured filing system for documents.
 
 Usage:
-  python3 attachment_organizer.py --execute --limit 20
+  python3 attachment_organizer.py --execute --limit 30
 """
 
-import sys, re, os
-from datetime import datetime
+import sys, json
 from pathlib import Path
+from datetime import datetime
 WORKSPACE = Path('/root/.openclaw/workspace')
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'lib'))
 
-from google_workspace import gmail_search, gmail_get, drive_create_folder
+from google_workspace import gmail_search, gmail_get
 
-ATTACHMENT_TYPES = {
-    'images': ['.jpg', '.jpeg', '.png', '.gif', '.webp'],
-    'documents': ['.pdf', '.doc', '.docx', '.txt', '.rtf'],
-    'spreadsheets': ['.xls', '.xlsx', '.csv'],
-    'presentations': ['.ppt', '.pptx'],
-    'archives': ['.zip', '.rar', '.7z'],
-    'financial': ['.pdf', '.xls', '.xlsx', '.csv']  # Also financial docs
-}
-
-def categorize_attachment(filename: str) -> str:
-    """Categorize attachment by file type."""
-    ext = Path(filename).suffix.lower()
+def cmd_run(dry_run: bool = False, limit: int = 30):
+    print("📁 Attachment Organizer")
     
-    for category, extensions in ATTACHMENT_TYPES.items():
-        if ext in extensions:
-            return category
+    msgs = gmail_search('label:inbox is:unread has:attachment', limit=limit * 2)
     
-    return 'other'
-
-def cmd_run(dry_run: bool, limit: int = 30):
-    print("📎 Smart Attachment Organizer")
+    attachments = []
+    organized = 0
     
-    # Find emails with attachments
-    query = 'has:attachment newer_than:30d'
-    msgs = gmail_search(query, limit=limit)
-    
-    categories = {}
-    for msg in msgs:
-        # Get attachment names from headers
-        payload = msg.get('payload', {})
-        parts = payload.get('parts', [])
+    for msg in msgs[:limit]:
+        full = gmail_get(msg['id'])
+        headers = full.get('payload', {}).get('headers', [])
+        subject = next((h['value'] for h in headers if h['name'] == 'Subject'), '')
         
-        for part in parts:
-            if part.get('filename'):
-                filename = part.get('filename', 'unknown')
-                category = categorize_attachment(filename)
-                
-                if category not in categories:
-                    categories[category] = []
-                categories[category].append(filename)
+        # Check for attachments
+        payload = full.get('payload', {})
+        
+        def find_attachments(parts):
+            for part in parts:
+                if part.get('filename'):
+                    attachments.append({
+                        'filename': part.get('filename'),
+                        'subject': subject[:30]
+                    })
+                if part.get('parts'):
+                    find_attachments(part['parts'])
+        
+        if payload.get('parts'):
+            find_attachments(payload['parts'])
+        
+        organized += 1
     
-    print(f"📊 Found {len(msgs)} emails with attachments")
-    print("\n📁 Categorization:")
+    # Save list
+    att_file = WORKSPACE / 'zion.app' / 'data' / 'attachments_list.json'
+    att_file.write_text(json.dumps(attachments, indent=2))
     
-    for cat, files in sorted(categories.items()):
-        print(f"   {cat}: {len(files)} files")
-        for f in files[:3]:
-            print(f"      - {f}")
-    
-    if dry_run:
-        print(f"\n[DRY-RUN] Would organize {len(categories)} attachment categories.")
-    else:
-        # In production, would:
-        # 1. Create folder structure in Drive
-        # 2. Download attachments
-        # 3. Upload to organized folders
-        # 4. Add metadata tags
-        print(f"\n✅ Attachments organized.")
+    print(f"✅ Found {len(attachments)} attachments in {organized} emails")
 
 def main():
     import argparse

@@ -2,13 +2,11 @@
 """
 Meeting Prep Assistant - Zion
 
-Generates pre-meeting briefings 30 minutes before scheduled meetings.
-- Lists attendees with roles/contact info
-- Shows recent email context with attendees
-- Prepares agenda based on invite description
+Prepares for upcoming meetings with context gathering.
+Creates briefing documents automatically.
 
 Usage:
-  python3 meeting_prep_assistant.py --execute
+  python3 meeting_prep_assistant.py --execute --lookback-hours 24
 """
 
 import sys, json
@@ -18,73 +16,65 @@ WORKSPACE = Path('/root/.openclaw/workspace')
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'lib'))
 
-from google_workspace import calendar_list_events, gmail_search
+from google_workspace import gmail_search, gmail_get
 
-def generate_prep_brief(event: dict) -> str:
-    """Generate a meeting prep briefing for an event."""
-    brief = f"# Meeting Prep: {event.get('summary', 'Untitled')}\n\n"
+def cmd_run(dry_run: bool, lookback_hours: int = 24):
+    print(f"📝 Meeting Prep Assistant (last {lookback_hours}h)")
     
-    # Time info
-    start = event.get('start', {}).get('dateTime', 'TBD')
-    brief += f"**When:** {start}\n\n"
-    
-    # Attendees
-    attendees = event.get('attendees', [])
-    brief += f"**Attendees ({len(attendees)}):**\n"
-    for a in attendees[:10]:
-        email = a.get('email', '')
-        name = email.split('@')[0] if email else 'Unknown'
-        brief += f"- {name} ({email})\n"
-    brief += "\n"
-    
-    # Description/Agenda
-    desc = event.get('description', '')
-    if desc:
-        brief += f"**Agenda:**\n{desc[:500]}\n\n"
-    
-    return brief
-
-def cmd_run(dry_run: bool, hours_ahead: int = 1):
-    print("🔍 Checking for upcoming meetings...")
-    
-    # Get events starting in the next hour
     now = datetime.utcnow()
-    time_min = now.isoformat() + 'Z'
+    start = now - timedelta(hours=lookback_hours)
     
-    events = calendar_list_events(max_results=10)
+    msgs = gmail_search('label:inbox is:unread', limit=50)
     
-    upcoming = []
-    for e in events:
-        # Check if start time is within next hour
-        start_str = e.get('start', {}).get('dateTime', e.get('start', {}).get('date', ''))
-        if start_str:
-            try:
-                start_time = datetime.fromisoformat(start_str.replace('Z', '+00:00'))
-                if now <= start_time <= now + timedelta(hours=hours_ahead):
-                    upcoming.append(e)
-            except:
-                pass
+    prep_items = {
+        'recent_discussions': [],
+        'action_items': [],
+        'decisions_needed': [],
+        'participants': set()
+    }
     
-    print(f"📅 Found {len(upcoming)} upcoming meetings.")
-    
-    for event in upcoming:
-        brief = generate_prep_brief(event)
-        print(brief)
+    for msg in msgs[:20]:
+        full = gmail_get(msg['id'])
+        headers = full.get('payload', {}).get('headers', [])
+        subject = next((h['value'] for h in headers if h['name'] == 'Subject'), '')
+        snippet = full.get('snippet', '')
         
-        if not dry_run:
-            # In real implementation, send briefing via email or notification
-            print("✅ Prep brief sent!\n")
+        text = f"{subject} {snippet}".lower()
+        
+        if any(kw in text for kw in ['meeting', 'call', 'discuss', 'agenda']):
+            prep_items['recent_discussions'].append(subject[:40])
+        
+        if 'action' in text or 'todo' in text or 'need to' in text:
+            prep_items['action_items'].append(snippet[:60])
+        
+        from_hdr = next((h['value'] for h in headers if h['name'] == 'From'), '')
+        if '@' in from_hdr:
+            email = from_hdr.split('<')[-1].split('>')[0].strip()
+            prep_items['participants'].add(email)
     
-    if not upcoming and dry_run:
-        print("[DRY-RUN] No meetings in next hour. Ready for production!")
+    print("\nMeeting prep summary:")
+    print(f"  Discussions: {len(prep_items['recent_discussions'])}")
+    print(f"  Action items: {len(prep_items['action_items'])}")
+    print(f"  Participants: {len(prep_items['participants'])}")
+    
+    # Save prep
+    prep_file = WORKSPACE / 'zion.app' / 'data' / 'meeting_prep.json'
+    prep_file.parent.mkdir(parents=True, exist_ok=True)
+    prep_file.write_text(json.dumps({
+        'discussions': prep_items['recent_discussions'][:10],
+        'actions': prep_items['action_items'][:10],
+        'participants': list(prep_items['participants'])[:10]
+    }, indent=2))
+    
+    print(f"\n✅ Saved meeting prep data")
 
 def main():
     import argparse
     p = argparse.ArgumentParser()
     p.add_argument('--execute', action='store_true')
-    p.add_argument('--hours', type=int, default=1)
+    p.add_argument('--lookback-hours', type=int, default=24)
     args = p.parse_args()
-    cmd_run(dry_run=not args.execute, hours_ahead=args.hours)
+    cmd_run(dry_run=not args.execute, lookback_hours=args.lookback_hours)
 
 if __name__ == '__main__':
     main()
