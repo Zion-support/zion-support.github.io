@@ -32,7 +32,8 @@
     "Add newsletter signup with value proposition",
     "[Layout/Design] Consider grouping or summarizing lower-page sections: The homepage contains a large number of sections and headings. Consider turning some repeated patterns into carousels, tabs, or collapsible sections so decision-makers can scan the page more comfortably.",
     "Address system intelligence audit findings (run system:intelligence-audit)",
-    "Implement CTA tracking for conversion funnel (run conversion:cta-implement)"
+    "Implement CTA tracking for conversion funnel (run conversion:cta-implement)",
+    "[Layout/Design] Reduce link density above the fold: There are many links in the top portion of the page. Group related actions into concise clusters so the primary narrative and CTA are easier to scan, especially on mobile."
   ],
   "implementationTasks": [
     {
@@ -844,8 +845,8 @@
     "Implement progressive web app features"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-05-14T08:54:18.053Z",
+  "updatedAt": "2026-05-16T18:19:08.298Z",
   "evolutionIdeasRun": "2026-05-14T08:54:18.053Z",
-  "layoutDesignIntelMerge": "2026-04-07T23:39:54.175Z",
+  "layoutDesignIntelMerge": "2026-05-16T18:19:08.298Z",
   "evolutionIdeasFromAuditsRun": "2026-04-07T08:36:43.040Z"
 }

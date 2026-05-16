@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-04-07T23:39:54.175Z",
+  "timestamp": "2026-05-16T18:19:08.297Z",
   "url": "https://ziontechgroup.com",
-  "score": 85,
+  "score": 80,
   "metrics": {
-    "sectionCount": 32,
-    "mainCount": 2,
-    "h2Count": 30,
-    "h3Count": 69,
-    "listCount": 5,
+    "sectionCount": 42,
+    "mainCount": 1,
+    "h2Count": 39,
+    "h3Count": 84,
+    "listCount": 1,
     "heroCtaCount": 0,
-    "heroLinkCount": 4,
+    "heroLinkCount": 16,
     "hasMaxWidth": true,
     "hasConsistentContainer": true
   },
   "diagnostics": [
     {
       "id": "structure",
-      "detail": "sections=32, main=2, h2=30, h3=69, lists=5"
+      "detail": "sections=42, main=1, h2=39, h3=84, lists=1"
     },
     {
       "id": "hero",
-      "detail": "heroCtas=0, heroLinks=4"
+      "detail": "heroCtas=0, heroLinks=16"
     },
     {
       "id": "containers",
@@ -28,6 +28,12 @@
     }
   ],
   "suggestions": [
+    {
+      "id": "hero-link-density",
+      "priority": "low",
+      "title": "Reduce link density above the fold",
+      "description": "There are many links in the top portion of the page. Group related actions into concise clusters so the primary narrative and CTA are easier to scan, especially on mobile."
+    },
     {
       "id": "page-length",
       "priority": "medium",
