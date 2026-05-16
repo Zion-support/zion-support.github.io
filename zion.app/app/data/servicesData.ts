@@ -3855,7 +3855,7 @@ export const itServices: Service[] = [
     },
     icon: '🖥️',
     href: '/services/ai-it-helpdesk',
-    category: 'it'
+    category: 'ai'
    }
 ,
 {

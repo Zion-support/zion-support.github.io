@@ -135,7 +135,7 @@ export default function HomePage() {
                       From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}
                     </span>
                   </div>
-                  <Link href={`/services#${service.id}`} className="text-sm text-purple-400 hover:underline">
+                  <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:underline">
                     Learn more →
                   </Link>
                   <p className="text-xs text-slate-500 mt-2">{service.category.charAt(0).toUpperCase() + service.category.slice(1)} • {service.category}</p>

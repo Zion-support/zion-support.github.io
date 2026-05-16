@@ -45,7 +45,7 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-slate-950 py-20">
       <div className="container-page">
         <h1 className="text-4xl font-bold text-white mb-2 text-center">Our Complete Service Catalog</h1>
-        <p className="section-subheading text-center">{allServices.length}+ real-world services across 4 domains</p>
+        <p className="section-subheading text-center">{allServices.length}+ real-world services across 6 categories</p>
 
         <div className="max-w-2xl mx-auto mt-8">
           <input

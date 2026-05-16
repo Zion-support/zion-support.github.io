@@ -4,9 +4,12 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   output: 'export',
   basePath: '',
-  assetPrefix: '',
+  assetPrefix: '/',
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
+  },
+  generateBuildId: async () => {
+    return 'zion-tech-group-v1';
   },
 };
 module.exports = nextConfig;
