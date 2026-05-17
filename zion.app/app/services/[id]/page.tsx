@@ -2,6 +2,7 @@
 import { notFound } from 'next/navigation';
 import { allServices } from '@/data/servicesData';
 import Link from 'next/link';
+import ROICalculator from '@/components/ROICalculator';
 
 const CAT_LABELS: Record<string,string> = {
   ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security',
@@ -11,7 +12,14 @@ const CAT_LABELS: Record<string,string> = {
 interface PageProps { params: Promise<{ id: string }>; }
 
 export async function generateStaticParams() {
-  return allServices.map((service) => ({ id: service.id }));
+  const params: { id: string }[] = [];
+  for (const service of allServices) {
+    params.push({ id: service.id });               // kebab / underscore as stored
+    if (service.id.includes('_')) {
+      params.push({ id: service.id.replace(/_/g, '-') }); // kebab fallback
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: PageProps) {
@@ -26,7 +34,10 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function ServicePage({ params }: PageProps) {
   const { id } = await params;
-  const service = allServices.find((s) => s.id === id);
+  // Accept both kebab-case and underscore-case IDs
+  const service = allServices.find(
+    (s) => s.id === id || s.id.replace(/-/g, '_') === id || s.id.replace(/_/g, '-') === id
+  );
   if (!service) notFound();
 
   const related = allServices
@@ -117,6 +128,9 @@ export default async function ServicePage({ params }: PageProps) {
             ))}
           </div>
         </div>
+
+        {/* ROI Calculator */}
+        <ROICalculator serviceTitle={service.title} category={service.category} />
 
         {/* Related */}
         {related.length > 0 && (
