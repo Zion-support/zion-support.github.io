@@ -2,7 +2,7 @@
 2:I[9766,[],""]
 3:I[8924,[],""]
 4:I[1959,[],"ClientPageRoot"]
-5:I[2169,["3061","static/chunks/app/zion-ai-workflow-automator/page-91eb7c826f7ac4b8.js"],"default"]
+5:I[2169,["3061","static/chunks/app/zion-ai-workflow-automator/page-bf11b6ef3f27a0a2.js"],"default"]
 8:I[4431,[],"OutletBoundary"]
 a:I[5278,[],"AsyncMetadataOutlet"]
 c:I[4431,[],"ViewportBoundary"]

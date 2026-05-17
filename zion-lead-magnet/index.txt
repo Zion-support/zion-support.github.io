@@ -2,7 +2,7 @@
 2:I[9766,[],""]
 3:I[8924,[],""]
 4:I[1959,[],"ClientPageRoot"]
-5:I[565,["4097","static/chunks/app/zion-lead-magnet/page-8234488134a8043f.js"],"default"]
+5:I[565,["4097","static/chunks/app/zion-lead-magnet/page-a56124133f58d64f.js"],"default"]
 8:I[4431,[],"OutletBoundary"]
 a:I[5278,[],"AsyncMetadataOutlet"]
 c:I[4431,[],"ViewportBoundary"]

@@ -2,7 +2,7 @@
 2:I[9766,[],""]
 3:I[8924,[],""]
 4:I[1959,[],"ClientPageRoot"]
-5:I[4306,["4090","static/chunks/app/ai-lab/autonomous-rag-knowledge-workspace/page-09667183c7b1f05f.js"],"default"]
+5:I[4306,["4090","static/chunks/app/ai-lab/autonomous-rag-knowledge-workspace/page-8d5de4d8e3766b84.js"],"default"]
 8:I[4431,[],"OutletBoundary"]
 a:I[5278,[],"AsyncMetadataOutlet"]
 c:I[4431,[],"ViewportBoundary"]

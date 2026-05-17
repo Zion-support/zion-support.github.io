@@ -2,7 +2,7 @@
 2:I[9766,[],""]
 3:I[8924,[],""]
 4:I[1959,[],"ClientPageRoot"]
-5:I[5318,["3694","static/chunks/app/zion-ai-voice-assistant/page-cd5e36301abe2930.js"],"default"]
+5:I[5318,["3694","static/chunks/app/zion-ai-voice-assistant/page-4e2ef4717484810b.js"],"default"]
 8:I[4431,[],"OutletBoundary"]
 a:I[5278,[],"AsyncMetadataOutlet"]
 c:I[4431,[],"ViewportBoundary"]
