@@ -1,4 +1,5 @@
 // app/layout.tsx
+import './globals.css';  // ← Tailwind/PostCSS entry (must be first)
 import type { Metadata } from 'next';
 import { SITE_URL, STRUCTURED_DATA } from './utils/seoConstants';
 
