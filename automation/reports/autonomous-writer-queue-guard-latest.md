@@ -1,6 +1,6 @@
 # Autonomous Writer Queue Guard
 
-- Generated at: `2026-05-14T08:51:38.351Z`
+- Generated at: `2026-05-17T20:14:16.293Z`
 - Branch: `main`
 - Writer runs active: `0`
 - Allowed max: `1`
@@ -8,5 +8,5 @@
 - Wait mode: `true`
 - Cancel stale: `false`
 - Stale threshold: `90m`
-- Waited seconds: `3`
+- Waited seconds: `2`
 
