@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 2:I[9766,[],""]
 3:I[8924,[],""]
-4:I[2332,["2619","static/chunks/2619-0f5b2ce5f55d5d71.js","2332","static/chunks/2332-015a7e2b5aa89e0d.js","7177","static/chunks/app/layout-d6fba90542cb0f97.js"],"default"]
+4:I[2332,["2619","static/chunks/2619-0f5b2ce5f55d5d71.js","2332","static/chunks/2332-b5119d4e0477776c.js","7177","static/chunks/app/layout-d6fba90542cb0f97.js"],"default"]
 5:I[1959,[],"ClientPageRoot"]
 6:I[141,["6377","static/chunks/app/zion-invoice-genius/page-9385b0e8a046ca93.js"],"default"]
 9:I[4431,[],"OutletBoundary"]
