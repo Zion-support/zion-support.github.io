@@ -25,7 +25,7 @@ const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || 
 const FEATURED_IDS = ['accessibility-compliance', 'advanced-ai-enterprise-intelligence-hub', 'ai-accessibility-auditor', 'ai-accessibility-optimizer', 'ai-analytics', 'ai-customer-support', 'ai-document-intelligence', 'ai-knowledge-management', 'ai-lead-generation', 'ai-office-automation', 'ai-sales-intelligence', 'ai-self-healing-infra', 'api-development', 'api-gateway-management'];
 
 const stats = [
-  { value: '416+', label: 'Services & Solutions' },
+  { value: '472+', label: 'Services & Solutions' },
   { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
   { value: '24/7', label: 'Monitoring & Support' },
   { value: '99.9%', label: 'SLA Uptime Guarantee' },
@@ -77,14 +77,14 @@ export default function HomePage() {
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> 416+ Services — Live Now
+              <span className="text-green-400">●</span> 472+ Services — Live Now
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="gradient-text">AI & IT Services</span><br />
               <span className="text-white">for Your Business</span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              416+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              472+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
               From machine learning to cybersecurity, CRM automation to blockchain.
               Get a custom proposal in minutes.
             </p>
@@ -93,7 +93,7 @@ export default function HomePage() {
                 ⚡ Get Your Custom Proposal →
               </Link>
               <Link href="/services" className="btn-secondary text-lg px-10 py-4">
-                🛠️ Browse All 416+ Services
+                🛠️ Browse All 472+ Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
                 ☎ +1 302 464 0950
@@ -133,7 +133,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
-              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 416+ options.' },
+              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 472+ options.' },
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (

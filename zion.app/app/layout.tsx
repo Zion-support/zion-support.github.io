@@ -1,5 +1,6 @@
 // app/layout.tsx
-import './globals.css';  // ← Tailwind/PostCSS entry (must be first)
+import './globals.css';
+import Footer from '@/components/Footer';  // ← Tailwind/PostCSS entry (must be first)
 import type { Metadata } from 'next';
 import { SITE_URL, STRUCTURED_DATA } from './utils/seoConstants';
 
@@ -60,7 +61,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-slate-950 text-white antialiased">
         {children}
-      </body>
+            <Footer />
+    </body>
     </html>
   );
 }
