@@ -149,51 +149,75 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Featured Services ── */}
+      {/* ── Services by Category (all 416 services advertised) ── */}
       <section className="py-20 bg-slate-900/30">
         <div className="container-page">
-          <h2 className="section-heading text-center">⭐ Featured Services</h2>
-          <p className="section-subheading text-center">Our most popular solutions across all 6 categories</p>
-          <div className="feature-grid mt-4">
-            {featuredServices.map((service: any) => (
-              <div key={service.id} className="glass-card flex flex-col hover:border-purple-500/40">
-                <div className="flex items-start gap-3 mb-3">
-                  <span className="text-3xl">{service.icon}</span>
-                  <h3 className="text-lg font-semibold text-white leading-snug">{service.title}</h3>
-                </div>
-                <p className="text-slate-400 text-sm mb-4 line-clamp-2">{service.description}</p>
-                <ul className="space-y-2 mb-4 flex-1">
-                  {service.features.slice(0, 3).map((f: string, i: number) => (
-                    <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
-                      <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-auto pt-4 border-t border-slate-700/50">
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-purple-300 text-sm font-medium">
-                      From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
-                    </span>
-                    <span className="text-xs text-slate-500 uppercase tracking-wider">{service.category}</span>
-                  </div>
-                  <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Learn more&nbsp;
-                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+          <h2 className="section-heading text-center">Complete Service Catalog</h2>
+          <p className="section-subheading text-center">All {services.length} services across every category — click any card for full details</p>
+          
+          {/* Per-category highlights: show first 6 services per category as rich cards */}
+          {CATEGORIES.map(cat => {
+            const catSvcs = byCategory[cat.key] || [];
+            const top6 = catSvcs.slice(0, 6);
+            return (
+              <div key={cat.key} className="mb-16 last:mb-0">
+                {/* Category header bar */}
+                <div className={`inline-flex items-center gap-3 mb-6 px-5 py-3 rounded-full bg-gradient-to-r ${cat.color} bg-opacity-10 border border-slate-700/50`}>
+                  <span className="text-2xl">{cat.emoji}</span>
+                  <h3 className="text-xl font-bold text-white">{cat.label}</h3>
+                  <span className="text-sm text-slate-400">({catSvcs.length} services)</span>
+                  <Link href={`/services?category=${cat.key}`} className="ml-2 text-sm text-purple-300 hover:text-purple-200 font-medium transition">
+                    View all →
                   </Link>
                 </div>
+                
+                {/* Top-6 grid for this category */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {top6.map((service: any) => (
+                    <div key={service.id} className="glass-card flex flex-col hover:border-purple-500/40 group">
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className="text-2xl">{service.icon}</span>
+                        <div>
+                          <h3 className="text-base font-semibold text-white leading-snug group-hover:text-purple-300 transition-colors">{service.title}</h3>
+                          <span className="text-xs text-slate-500 uppercase tracking-wider">{service.category}</span>
+                        </div>
+                      </div>
+                      <p className="text-slate-400 text-sm mb-3 line-clamp-2 flex-1">{service.description}</p>
+                      <ul className="space-y-1 mb-3">
+                        {service.features.slice(0, 2).map((f: string, i: number) => (
+                          <li key={i} className="text-slate-300 text-xs flex items-start gap-2">
+                            <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
+                            <span className="line-clamp-1">{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
+                        <span className="text-purple-300 text-sm font-semibold">
+                          From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
+                        </span>
+                        <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
+                          Learn more <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Show-more link for oversized categories */}
+                {catSvcs.length > 6 && (
+                  <div className="text-center mt-4">
+                    <Link href={`/services?category=${cat.key}`} className="text-sm text-slate-400 hover:text-purple-300 transition">
+                      + {catSvcs.length - 6} more {cat.label.toLowerCase()} →
+                    </Link>
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link href="/services" className="btn-primary">
-              View All {services.length} Services →
-            </Link>
-          </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* ── Complete Service Showcase (Horizontal Scroll) ── */}
+      {/* ── Complete Service Showcase (Horizontal Search + Scroll) ── */}
       <section className="py-20">
         <div className="container-page">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
