@@ -227,31 +227,16 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Search + Category filter */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <div className="relative flex-1">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
-              <input
-                type="text"
-                placeholder="Search all services by name or keyword…"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                className="w-full bg-slate-900/60 border border-slate-700/50 rounded-xl pl-11 pr-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/30 transition"
-              />
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <button onClick={() => setCatFilter(null)} className={`px-4 py-2 rounded-lg text-sm font-medium transition ${!catFilter ? 'bg-purple-600 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}>
-                All ({services.length})
-              </button>
-              {CATEGORIES.map(c => (
-                <button key={c.key} onClick={() => setCatFilter(c.key)} className={`px-4 py-2 rounded-lg text-sm font-medium transition ${catFilter === c.key ? 'bg-purple-600 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}>
-                  {c.emoji} {c.key.charAt(0).toUpperCase()+c.key.slice(1)} ({byCategory[c.key].length})
-                </button>
-              ))}
-            </div>
+                    {/* Category quick-links navigate to filtered services page */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            <Link href="/services" className="px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700">All ({services.length})</Link>
+            {CATEGORIES.map(c => (
+              <Link key={c.key} href={`/services?category=${c.key}`} className="px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700">
+                {c.emoji} {c.key.charAt(0).toUpperCase()+c.key.slice(1)} ({byCategory[c.key].length})
+              </Link>
+            ))}
           </div>
-
-          {/* Horizontal scroll cards */}
+{/* Horizontal scroll cards */}
           <div className="overflow-x-auto pb-4 -mb-4">
             <div className="flex gap-4" style={{ minWidth: 'max-content', paddingBottom: '8px' }}>
               {filteredShowcase.map((service: any) => {
