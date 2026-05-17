@@ -8,7 +8,7 @@ import type { Service } from './data/servicesData';
 import Footer from '@/components/Footer';
 
 // Category accent color for showcase cards (maps category key → gradient)
-/** Inline category accent colors for showcase card styles (static RGBA + hex) */
+// Category accent color for showcase card styles (static RGBA + hex)
 const catAccent: Record<string, string> = {
   ai:        '#a78bfa',
   it:        '#38bdf8',
@@ -20,16 +20,14 @@ const catAccent: Record<string, string> = {
 
 const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || CATEGORIES[0];
 
+// Stat labels
+const STAT_SERVICES = 'Services & Solutions';
+const STAT_MONITOR  = 'Monitoring & Support';
+const STAT_SLA      = 'SLA Uptime Guarantee';
+
 // Featured: pull 2 per category so every category is represented
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
 const FEATURED_IDS = ['accessibility-compliance', 'advanced-ai-enterprise-intelligence-hub', 'ai-accessibility-auditor', 'ai-accessibility-optimizer', 'ai-analytics', 'ai-customer-support', 'ai-document-intelligence', 'ai-knowledge-management', 'ai-lead-generation', 'ai-office-automation', 'ai-sales-intelligence', 'ai-self-healing-infra', 'api-development', 'api-gateway-management'];
-
-const stats = [
-  { value: '472+', label: 'Services & Solutions' },
-  { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
-  { value: '24/7', label: 'Monitoring & Support' },
-  { value: '99.9%', label: 'SLA Uptime Guarantee' },
-];
 
 const CATEGORIES = [
   { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
@@ -44,6 +42,15 @@ export default function HomePage() {
   const services: Service[] = allServices;
   const [search, setSearch] = useState('');
   const [catFilter, setCatFilter] = useState<string | null>(null);
+
+  // Dynamic stats — auto-update when catalog changes
+  const serviceCount = services.length;
+  const stats = [
+    { value: `${serviceCount}+`, label: STAT_SERVICES },
+    { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
+    { value: '24/7', label: STAT_MONITOR },
+    { value: '99.9%', label: STAT_SLA },
+  ];
 
   const featuredServices = useMemo(
     () => services.filter((s: any) => FEATURED_IDS.includes(s.id)),
@@ -84,7 +91,7 @@ export default function HomePage() {
               <span className="text-white">for Your Business</span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              472+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              {serviceCount}+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
               From machine learning to cybersecurity, CRM automation to blockchain.
               Get a custom proposal in minutes.
             </p>
