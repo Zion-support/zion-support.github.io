@@ -33,7 +33,9 @@
     "[Layout/Design] Consider grouping or summarizing lower-page sections: The homepage contains a large number of sections and headings. Consider turning some repeated patterns into carousels, tabs, or collapsible sections so decision-makers can scan the page more comfortably.",
     "Address system intelligence audit findings (run system:intelligence-audit)",
     "Implement CTA tracking for conversion funnel (run conversion:cta-implement)",
-    "[Layout/Design] Reduce link density above the fold: There are many links in the top portion of the page. Group related actions into concise clusters so the primary narrative and CTA are easier to scan, especially on mobile."
+    "[Layout/Design] Reduce link density above the fold: There are many links in the top portion of the page. Group related actions into concise clusters so the primary narrative and CTA are easier to scan, especially on mobile.",
+    "[Layout/Design] Ensure consistent max-width containers: Not all content appears to be wrapped in a consistent max-width container. Use a shared layout wrapper (e.g., max-w-7xl mx-auto px-4) to keep content readable on large screens.",
+    "[Layout/Design] Confirm semantic main content region: The live HTML did not include a <main> element. Ensure the primary content is wrapped in a semantic main region for accessibility and layout clarity."
   ],
   "implementationTasks": [
     {
@@ -845,8 +847,8 @@
     "Implement progressive web app features"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-05-16T18:19:08.298Z",
+  "updatedAt": "2026-05-17T02:30:54.832Z",
   "evolutionIdeasRun": "2026-05-14T08:54:18.053Z",
-  "layoutDesignIntelMerge": "2026-05-16T18:19:08.298Z",
+  "layoutDesignIntelMerge": "2026-05-17T02:30:54.832Z",
   "evolutionIdeasFromAuditsRun": "2026-04-07T08:36:43.040Z"
 }
