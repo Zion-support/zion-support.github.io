@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions',
-    description: '170+ real-world AI, IT, and Micro SAAS services. Custom proposals, consulting, and implementation.',
+    description: '416+ micro SAAS services, IT solutions, and AI-powered platforms. Custom proposals in minutes.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     locale: 'en_US',
