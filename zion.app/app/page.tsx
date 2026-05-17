@@ -7,6 +7,19 @@ import { allServices } from './data/servicesData';
 import type { Service } from './data/servicesData';
 import Footer from '@/components/Footer';
 
+// Category accent color for showcase cards (maps category key → gradient)
+/** Inline category accent colors for showcase card styles (static RGBA + hex) */
+const catAccent: Record<string, string> = {
+  ai:        '#a78bfa',
+  it:        '#38bdf8',
+  cloud:     '#7dd3fc',
+  security:  '#fb923c',
+  data:      '#34d399',
+  automation:'#fb7185',
+};
+
+const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || CATEGORIES[0];
+
 // Featured: pull 2 per category so every category is represented
 const FEATURED = {
   ai: ['ai-analytics','ai-customer-support','ai-content-generation','ai-voice-assistant','ai-fraud-detection','ai-knowledge-management'],
@@ -19,7 +32,7 @@ const FEATURED = {
 const FEATURED_IDS = Object.values(FEATURED).flat();
 
 const stats = [
-  { value: '333+', label: 'Services & Solutions' },
+  { value: '361+', label: 'Services & Solutions' },
   { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
   { value: '24/7', label: 'Monitoring & Support' },
   { value: '99.9%', label: 'SLA Uptime Guarantee' },
@@ -78,7 +91,7 @@ export default function HomePage() {
               <span className="text-white">for Your Business</span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              333+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              361+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
               From machine learning to cybersecurity, CRM automation to blockchain.
               Get a custom proposal in minutes.
             </p>
@@ -87,7 +100,7 @@ export default function HomePage() {
                 ⚡ Get Your Custom Proposal →
               </Link>
               <Link href="/services" className="btn-secondary text-lg px-10 py-4">
-                🛠️ Browse All 333+ Services
+                🛠️ Browse All 361+ Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
                 ☎ +1 302 464 0950
@@ -230,7 +243,7 @@ export default function HomePage() {
                   <Link
                     key={service.id}
                     href={`/services/${service.id}`}
-                    className="min-w-[260px] max-w-[260px] glass-card flex flex-col hover:border-purple-500/40 group"
+                    className="min-w-[260px] max-w-[260px] glass-card flex flex-col hover:border-purple-500/40 group border-l-2"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">{service.icon}</span>

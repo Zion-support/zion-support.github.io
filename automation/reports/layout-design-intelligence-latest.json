@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-05-17T02:30:54.831Z",
+  "timestamp": "2026-05-17T05:50:46.366Z",
   "url": "https://ziontechgroup.com",
-  "score": 75,
+  "score": 85,
   "metrics": {
-    "sectionCount": 0,
-    "mainCount": 0,
-    "h2Count": 0,
-    "h3Count": 0,
-    "listCount": 0,
+    "sectionCount": 7,
+    "mainCount": 1,
+    "h2Count": 6,
+    "h3Count": 391,
+    "listCount": 14,
     "heroCtaCount": 0,
-    "heroLinkCount": 0,
-    "hasMaxWidth": false,
+    "heroLinkCount": 2,
+    "hasMaxWidth": true,
     "hasConsistentContainer": false
   },
   "diagnostics": [
     {
       "id": "structure",
-      "detail": "sections=0, main=0, h2=0, h3=0, lists=0"
+      "detail": "sections=7, main=1, h2=6, h3=391, lists=14"
     },
     {
       "id": "hero",
-      "detail": "heroCtas=0, heroLinks=0"
+      "detail": "heroCtas=0, heroLinks=2"
     },
     {
       "id": "containers",
-      "detail": "hasMaxWidth=false, hasConsistentContainer=false"
+      "detail": "hasMaxWidth=true, hasConsistentContainer=false"
     }
   ],
   "suggestions": [
@@ -33,12 +33,6 @@
       "priority": "high",
       "title": "Ensure consistent max-width containers",
       "description": "Not all content appears to be wrapped in a consistent max-width container. Use a shared layout wrapper (e.g., max-w-7xl mx-auto px-4) to keep content readable on large screens."
-    },
-    {
-      "id": "semantic-main",
-      "priority": "high",
-      "title": "Confirm semantic main content region",
-      "description": "The live HTML did not include a <main> element. Ensure the primary content is wrapped in a semantic main region for accessibility and layout clarity."
     }
   ]
 }
