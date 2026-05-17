@@ -1,46 +1,27 @@
 # Workflow failure triage
 
-- generatedAt: 2026-05-17T20:28:51.492Z
+- generatedAt: 2026-05-17T21:30:45.921Z
 - recentRuns: 80
-- failedRuns: 23
+- failedRuns: 10
 
 ## Top failing workflows
-- Deploy on Push: 3
-- OpenAPI Contract Drift Detector: 2
-- Deploy to GitHub Pages: 2
-- Autonomous Bundle Split Analyzer: 2
-- Autonomous Changelog Generator: 2
+- AI lead gen contact route guard: 3
+- AI Content Burst: 1
+- AI Content Max Velocity Deploy: 1
+- AI Experiences Health: 1
+- AI Uninterruptable Content Loop: 1
 - AI Content Rapid: 1
 - AI Content Ideas and Evolution Deploy: 1
-- AI lead gen contact route guard: 1
-- CI/CD Pipeline: 1
-- TypeScript Type Coverage & Dead Code Check: 1
-- .github/workflows/workflow-validate-light-weekly.yml: 1
-- .github/workflows/ai-actions-pin-strict-guard.yml: 1
-- .github/workflows/workflow-reusable-ci-dispatch.yml: 1
-- .github/workflows/workflow-contracts-weekly.yml: 1
-- .github/workflows/workflow-change-guard.yml: 1
-- .github/workflows/route-slicer.yml: 1
-- .github/workflows/workflow-yaml-sanity.yml: 1
+- Deploy on Push: 1
 
 ## Latest failed runs
+- AI Content Burst | 2026-05-17T21:23:01Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26003092955
+- AI Content Max Velocity Deploy | 2026-05-17T21:14:56Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26002912993
+- AI lead gen contact route guard | 2026-05-17T21:04:55Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26002686177
+- AI Experiences Health | 2026-05-17T20:32:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001934873
+- AI Uninterruptable Content Loop | 2026-05-17T20:31:10Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001913554
+- AI lead gen contact route guard | 2026-05-17T20:31:10Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001913309
 - AI Content Rapid | 2026-05-17T20:19:49Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001649845
 - AI Content Ideas and Evolution Deploy | 2026-05-17T20:18:50Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001626333
 - Deploy on Push | 2026-05-17T20:17:35Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001596787
 - AI lead gen contact route guard | 2026-05-17T20:07:49Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001377811
-- Deploy on Push | 2026-05-17T19:52:33Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001027055
-- OpenAPI Contract Drift Detector | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017848
-- Deploy to GitHub Pages | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017822
-- CI/CD Pipeline | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017818
-- Autonomous Bundle Split Analyzer | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017813
-- Deploy on Push | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017806
-- TypeScript Type Coverage & Dead Code Check | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017805
-- Autonomous Changelog Generator | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017793
-- .github/workflows/workflow-validate-light-weekly.yml | 2026-05-17T19:52:07Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017559
-- .github/workflows/ai-actions-pin-strict-guard.yml | 2026-05-17T19:52:06Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017431
-- .github/workflows/workflow-reusable-ci-dispatch.yml | 2026-05-17T19:52:06Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017315
-- .github/workflows/workflow-contracts-weekly.yml | 2026-05-17T19:52:06Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017142
-- .github/workflows/workflow-change-guard.yml | 2026-05-17T19:52:05Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001017001
-- .github/workflows/route-slicer.yml | 2026-05-17T19:52:05Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001016915
-- .github/workflows/workflow-yaml-sanity.yml | 2026-05-17T19:52:05Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26001016805
-- Deploy to GitHub Pages | 2026-05-17T19:47:28Z | https://github.com/Zion-support/zion-support.github.io/actions/runs/26000912717
