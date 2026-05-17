@@ -1,8 +1,0 @@
-{
-  "timestamp": "2026-04-07T21:37:29.325Z",
-  "dryRun": false,
-  "maxKeepPerPrefix": 20,
-  "maxAgeDays": 30,
-  "deleted": 0,
-  "reclaimedMB": 0
-}
