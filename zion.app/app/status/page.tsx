@@ -111,3 +111,5 @@ export default function StatusPage() {
     </div>
   );
 }
+
+/*@cache-bust v2*/
