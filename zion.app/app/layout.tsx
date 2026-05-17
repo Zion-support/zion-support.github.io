@@ -2,6 +2,7 @@
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import AccessibilityEnhancer from '@/components/AccessibilityEnhancer';
 import type { Metadata } from 'next';
 import { SITE_URL, STRUCTURED_DATA } from './utils/seoConstants';
 
@@ -28,9 +29,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className="min-h-screen bg-slate-950 text-white antialiased">
-        <Navigation />
-        {children}
-        <Footer />
+        <AccessibilityEnhancer>
+          <Navigation />
+          <div id="main-content">{children}</div>
+          <Footer />
+        </AccessibilityEnhancer>
       </body>
     </html>
   );
