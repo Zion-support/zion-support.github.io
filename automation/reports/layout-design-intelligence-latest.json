@@ -1,38 +1,5 @@
 {
-  "timestamp": "2026-05-17T10:59:19.326Z",
+  "timestamp": "2026-05-17T11:58:17.699Z",
   "url": "https://ziontechgroup.com",
-  "score": 85,
-  "metrics": {
-    "sectionCount": 7,
-    "mainCount": 1,
-    "h2Count": 6,
-    "h3Count": 567,
-    "listCount": 39,
-    "heroCtaCount": 0,
-    "heroLinkCount": 2,
-    "hasMaxWidth": true,
-    "hasConsistentContainer": false
-  },
-  "diagnostics": [
-    {
-      "id": "structure",
-      "detail": "sections=7, main=1, h2=6, h3=567, lists=39"
-    },
-    {
-      "id": "hero",
-      "detail": "heroCtas=0, heroLinks=2"
-    },
-    {
-      "id": "containers",
-      "detail": "hasMaxWidth=true, hasConsistentContainer=false"
-    }
-  ],
-  "suggestions": [
-    {
-      "id": "max-width-consistency",
-      "priority": "high",
-      "title": "Ensure consistent max-width containers",
-      "description": "Not all content appears to be wrapped in a consistent max-width container. Use a shared layout wrapper (e.g., max-w-7xl mx-auto px-4) to keep content readable on large screens."
-    }
-  ]
+  "error": "HTTP 404"
 }
