@@ -4,11 +4,11 @@ import { allServices } from '@/data/servicesData';
 export default function StatusPage() {
   const checks = [
     { label: 'Homepage',               path: '/',                  status: 'operational' },
-    { label: 'Services Catalog',       path: '/services',          status: 'operational' },
-    { label: 'Pricing Calculator',     path: '/pricing-calculator',status: 'operational' },
-    { label: 'Proposal Generator',     path: '/proposal-generator',status: 'operational' },
-    { label: 'Configurator',           path: '/configurator',      status: 'operational' },
-    { label: 'Contact Page',           path: '/contact',           status: 'operational' },
+    { label: 'Services Catalog',       path: '/services/',         status: 'operational' },
+    { label: 'Pricing Calculator',     path: '/pricing-calculator/',status: 'operational' },
+    { label: 'Proposal Generator',     path: '/proposal-generator/',status: 'operational' },
+    { label: 'Configurator',           path: '/configurator/',     status: 'operational' },
+    { label: 'Contact Page',           path: '/contact/',          status: 'operational' },
   ];
 
   const uptime = '99.98%';

@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   description: 'Explore tailored technology solutions for finance, healthcare, manufacturing, e-commerce, logistics, education, government, and real estate industries.',
 };
 
+
+function industrySlug(name: string): string {
+  return name.toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
 const industries = [
   {
     icon: '🏦',
@@ -136,6 +144,7 @@ export default function IndustrySolutionsPage() {
             <div
               key={i}
               className="bg-slate-900/50 border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
+            id={industrySlug(industry.name)}
             >
               <div className="text-5xl mb-4">{industry.icon}</div>
               <h3 className="text-2xl font-bold text-white mb-3">{industry.name}</h3>

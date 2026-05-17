@@ -23,14 +23,14 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
 
 export const SOLUTION_LINKS: readonly NavigationLink[] = [
   { name: 'All Solutions',        href: '/solutions' },
-  { name: 'Healthcare',           href: '/solutions/healthcare' },
-  { name: 'Financial Services',   href: '/solutions/financial-services' },
-  { name: 'Manufacturing & Industrial', href: '/solutions/manufacturing-industrial' },
-  { name: 'E‑Commerce & Retail',  href: '/solutions/ecommerce-retail' },
-  { name: 'Technology & SaaS',    href: '/solutions/technology-and-saas' },
-  { name: 'Logistics & Supply Chain', href: '/solutions/logistics-supply-chain' },
-  { name: 'Government & Public Sector', href: '/solutions/government-and-public-sector' },
-  { name: 'Insurance',            href: '/solutions/insurance' },
+  { name: 'Healthcare',           href: '/industry-solutions#healthcare' },
+  { name: 'Financial Services',   href: '/industry-solutions#financial-services' },
+  { name: 'Manufacturing & Industrial', href: '/industry-solutions#manufacturing' },
+  { name: 'E‑Commerce & Retail',  href: '/industry-solutions#ecommerce' },
+  { name: 'Technology & SaaS',    href: '/industry-solutions#technology' },
+  { name: 'Logistics & Supply Chain', href: '/industry-solutions#logistics' },
+  { name: 'Government & Public Sector', href: '/industry-solutions#government' },
+  { name: 'Insurance',            href: '/industry-solutions#insurance' },
   INIT,
 ];
 
