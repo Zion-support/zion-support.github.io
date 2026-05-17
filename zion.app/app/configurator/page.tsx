@@ -5,7 +5,6 @@
 import { useState, useMemo } from 'react';
 import { allServices } from '@/data/servicesData';
 import { recommendServices } from '@/lib/recommend'; // reuse existing AI recommender
-import ProposalPDF from '@/components/ProposalPDF';
 import StepsIndicator from '@/components/StepsIndicator';
 
 type Step = 'budget' | 'needs' | 'services' | 'timeline' | 'review';
@@ -77,8 +76,10 @@ export default function ConfiguratorPage() {
         })
       });
       const data = await res.json();
-      if (data.proposalUrl) {
-        setProposalUrl(data.proposalUrl);
+      if (data.success && data.proposalId) {
+        setProposalUrl(`/proposals/view/${data.proposalId}`);
+      } else if (data.error) {
+        console.error('Proposal error:', data.error);
       }
     } catch (err) {
       console.error('Proposal generation failed:', err);
