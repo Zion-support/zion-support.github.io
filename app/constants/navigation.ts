@@ -54,810 +54,313 @@ export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [
 ];
 
 export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
-  ...FEATURED_AI_SERVICE_LINKS,
-  {
-    name: 'Cybersecurity Audit',
-    href: '/it-services/cybersecurity-audit',
-    aliases: ['/zion-cybersecurity-audit'],
-  },
-  { name: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-  { name: 'Property Management AI', href: '/property-management-ai' },
-  { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer' },
-  { name: 'Online Learning Platform', href: '/online-learning-platform' },
-  { name: 'Zion AI API Tester', href: '/zion-ai-api-tester' },
-  { name: 'Zion AI Database Optimizer', href: '/zion-ai-database-optimizer' },
-  { name: 'Zion AI Knowledge Base', href: '/zion-ai-knowledge-base' },
-  { name: 'Zion AI Help Desk', href: '/zion-ai-help-desk' },
-  { name: 'Zion AI Quality Assurance', href: '/zion-ai-quality-assurance' },
-  { name: 'Zion AI Report Generator', href: '/zion-ai-report-generator' },
-  { name: 'Zion AI Risk Assessor', href: '/zion-ai-risk-assessor' },
-  { name: 'Data Engineering', href: '/it-services/data-engineering' },
-  { name: 'API Development', href: '/it-services/api-development' },
-  { name: 'Mobile Development', href: '/it-services/mobile-development' },
-  { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
-  { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
-  { name: 'AI Multimodal Intelligence', href: '/ai-services/ai-multimodal-intelligence' },
-  { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
-  { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
-  { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
-  { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
-  { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
-  { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
-  { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
-  { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
-  { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
-  { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
-  { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
-  { name: 'Fine-Tuning & Alignment Pipelines', href: '/ai-services/ai-finetuning-alignment-pipelines' },
-  { name: 'Long-Horizon AI Memory & Agents', href: '/ai-services/ai-memory-agents-long-horizon' },
-  { name: 'AI Agent Safety & Evaluation', href: '/ai-services/ai-agent-safety-evaluation' },
-  { name: 'Enterprise Context Engineering', href: '/ai-services/ai-context-engineering-enterprise' },
-  { name: 'Autonomous Growth Intelligence', href: '/ai-services/autonomous-growth-intelligence' },
-  {
-    name: 'Advanced AI & Enterprise Intelligence Hub',
-    href: '/ai-services/advanced-ai-enterprise-intelligence-hub',
-  },
-  { name: 'Business Intelligence', href: '/ai-services/business-intelligence' },
-  { name: 'Content Generation', href: '/ai-services/content-generation' },
-  { name: 'Customer Experience', href: '/ai-services/customer-experience' },
-  { name: 'Document Processing', href: '/ai-services/document-processing' },
-  { name: 'Energy Management', href: '/ai-services/energy-management' },
-  { name: 'Fraud Detection', href: '/ai-services/fraud-detection' },
-  { name: 'HR Analytics', href: '/ai-services/hr-analytics' },
-  { name: 'Marketing Automation', href: '/ai-services/marketing-automation' },
-  { name: 'Predictive Maintenance', href: '/ai-services/predictive-maintenance' },
-  { name: 'Process Automation', href: '/ai-services/process-automation' },
-  { name: 'Quality Assurance', href: '/ai-services/quality-assurance' },
-  { name: 'Supply Chain', href: '/ai-services/supply-chain' },
-  { name: 'AI Computer Vision', href: '/ai-services/ai-computer-vision' },
-  { name: 'AI Knowledge Management', href: '/ai-services/ai-knowledge-management' },
-  { name: 'AI Testing & QA', href: '/ai-services/ai-testing-qa' },
-  { name: 'AI Translation & Localization', href: '/ai-services/ai-translation-services' },
-  { name: 'AI Employee Experience', href: '/ai-services/ai-employee-experience' },
-  { name: 'AI Document Intelligence', href: '/ai-services/ai-document-intelligence' },
-  { name: 'Accessibility & WCAG Compliance', href: '/it-services/accessibility-compliance' },
-  { name: 'Cloud Cost Optimization (FinOps)', href: '/it-services/cloud-cost-optimization' },
-  { name: 'Supply Chain Management', href: '/it-services/supply-chain-management' },
-  // === New standalone services added 2026-05-12 ===
-  { name: 'AI-Powered DevOps Guardian', href: '/ai-devops-guardian' },
-  { name: 'Real-Time Fraud Shield', href: '/real-time-fraud-shield' },
-  { name: 'Autonomous Lead-to-Cash', href: '/autonomous-lead-to-cash' },
-  { name: 'Intelligent Document Processing', href: '/intelligent-document-processing' },
-  { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
-  { name: 'Smart Healthcare Diagnostics', href: '/smart-healthcare-diagnostics' },
-  // === New IT Services ===
-  { name: 'Accessibility & WCAG Compliance', href: '/it-services/accessibility-compliance' },
-  { name: 'Cloud Cost Optimization (FinOps)', href: '/it-services/cloud-cost-optimization' },
-  { name: 'Supply Chain Management', href: '/it-services/supply-chain-management' },
-  { name: 'Managed SOC & Security', href: '/it-services/managed-soc-security' },
-  { name: 'Network Infrastructure', href: '/it-services/network-infrastructure' },
-  { name: 'Backup & Disaster Recovery', href: '/it-services/backup-disaster-recovery' },
-  { name: 'IT Service Desk', href: '/it-services/it-service-desk' },
-  { name: 'Endpoint Management (MDM)', href: '/it-services/endpoint-management' },
-  { name: 'Digital Workplace', href: '/it-services/digital-workplace' },
-  { name: 'Identity & Access Management', href: '/it-services/identity-access-management' },
-  { name: 'Serverless Architecture', href: '/it-services/serverless-architecture' },
-  { name: 'AI Analytics & BI', href: '/data-analytics' },
-
-  { name: 'AI Automation', href: '/ai-services/process-automation' },
-
-  { name: 'AI Customer Support', href: '/ai-services/ai-customer-support' },
-
-  { name: 'AI Content Generation', href: '/ai-services/ai-content-generation' },
-
-  { name: 'AI Sales Intelligence', href: '/ai-services/ai-sales-intelligence' },
-
-  { name: 'AI Fraud Detection', href: '/ai-services/ai-fraud-detection' },
-
-  { name: 'AI HR Assistant', href: '/ai-services/ai-hr-assistant' },
-
-  { name: 'AI Supply Chain Optimization', href: '/ai-services/ai-supply-chain' },
-
-  { name: 'AI Voice Assistant', href: '/ai-services/ai-voice-assistant' },
-
-  { name: 'AI Email Marketing', href: '/ai-services/ai-email-marketing' },
-
-  { name: 'AI Video Analytics', href: '/ai-services/ai-video-analytics' },
-
-  { name: 'AI Compliance & Regulatory', href: '/ai-services/ai-compliance' },
-
-  { name: 'AI Computer Vision', href: '/ai-services/ai-computer-vision' },
-
-  { name: 'AI Knowledge Management', href: '/ai-services/ai-knowledge-management' },
-
-  { name: 'AI Testing & Quality Assurance', href: '/ai-services/ai-testing-qa' },
-
-  { name: 'AI Translation & Localization', href: '/ai-services/ai-translation-services' },
-
-  { name: 'AI Employee Experience Platform', href: '/ai-services/ai-employee-experience' },
-
-  { name: 'AI Document Intelligence', href: '/ai-services/ai-document-intelligence' },
-
-  { name: 'AI Video Generation & Editing', href: '/ai-services/ai-video-generation' },
-
-  { name: 'AI Voice Cloning & Synthesis', href: '/ai-services/ai-voice-cloning' },
-
-  { name: 'AI Lead Generation & Enrichment', href: '/ai-services/ai-lead-generation' },
-
-  { name: 'AI Presentation & Pitch Deck Maker', href: '/ai-services/ai-presentation-maker' },
-
-  { name: 'AI Chatbot Builder Pro', href: '/ai-services/ai-chatbot-builder-pro' },
-
-  { name: 'AI Code Reviewer Pro', href: '/ai-services/ai-code-reviewer-pro' },
-
-  { name: 'AI Revenue Optimization & Pricing Intelligence', href: '/ai-services/ai-revenue-optimization' },
-
-  { name: 'AI Cyber Threat Hunting & Incident Response', href: '/ai-services/ai-cyber-threat-hunting' },
-
-  { name: 'AI Sentiment Analysis & Brand Monitoring', href: '/ai-services/ai-sentiment-analysis' },
-
-  { name: 'AI Predictive Maintenance & Asset Monitoring', href: '/ai-services/ai-predictive-maintenance' },
-
-  { name: 'AI Speech & Voice Solutions', href: '/ai-services/ai-speech-voice-solutions' },
-
-  { name: 'AI Agentic Workflow Automation', href: '/ai-services/ai-agentic-workflows' },
-
-  { name: 'AI Regulatory Compliance Monitor', href: '/ai-services/ai-regulatory-compliance' },
-
-  { name: 'AI Talent Acquisition & Hiring Intelligence', href: '/ai-services/ai-talent-acquisition' },
-
-  { name: 'AI Financial Fraud Detection & Prevention', href: '/ai-services/ai-fraud-detection' },
-
-  { name: 'AI Energy Optimization & Sustainability', href: '/ai-services/ai-energy-optimization' },
-
-  { name: 'AI Personalization & Recommendation Engine', href: '/ai-services/ai-personalization-engine' },
-
-  { name: 'AI Legal Document Analysis & Contract Review', href: '/ai-services/ai-legal-doc-analysis' },
-
-  { name: 'AI Medical Imaging & Diagnostics', href: '/ai-services/ai-medical-imaging' },
-
-  { name: 'AI Supply Chain Optimization & Demand Forecasting', href: '/ai-services/ai-supply-chain-optimizer' },
-
-  { name: 'AI Content Localization & Cultural Adaptation', href: '/ai-services/ai-content-localization' },
-
-  { name: 'AI Intelligent Document Processing & Routing', href: '/ai-services/ai-intelligent-routing' },
-
-  { name: 'AI Code Migration & Legacy Modernization', href: '/ai-services/ai-code-migration' },
-
-  { name: 'AI Ethics, Safety & Governance Framework', href: '/ai-services/ai-ethics-governance' },
-
-  { name: 'AI Spatial Computing & AR/VR Analytics', href: '/ai-services/ai-spatial-computing' },
-
-  { name: 'AI Robotics Integration & Autonomous Systems', href: '/ai-services/ai-robotics-integration' },
-
-  { name: 'AI Voice Cloning & Synthetic Media Creation', href: '/ai-services/ai-voice-cloning' },
-
-  { name: 'AI Lead Generation & Pipeline Intelligence', href: '/ai-services/ai-lead-generation' },
-
-  { name: 'AI Presentation & Report Generator', href: '/ai-services/ai-presentation-maker' },
-
-  { name: 'AI Enterprise Chatbot Builder Platform', href: '/ai-services/ai-chatbot-builder-pro' },
-
-  { name: 'AI Drug Discovery & Molecular Design', href: '/ai-services/ai-drug-discovery' },
-
-  { name: 'AI Video Generation & Synthetic Media', href: '/ai-services/ai-video-generation' },
-
-  { name: 'AI Voice Assistant & Conversational IVR', href: '/ai-services/ai-voice-assistant' },
-
-  { name: 'AI Supply Chain Intelligence & Optimization', href: '/ai-services/ai-supply-chain' },
-
-  { name: 'AI Email Marketing & Campaign Intelligence', href: '/ai-services/ai-email-marketing' },
-
-  { name: 'AI Video Analytics & Visual Intelligence', href: '/ai-services/ai-video-analytics' },
-
-  { name: 'AI Compliance Monitoring & Automated Auditing', href: '/ai-services/ai-compliance' },
-
-  { name: 'Advanced AI & Enterprise Intelligence Hub', href: '/ai-services/advanced-ai-enterprise-intelligence-hub' },
-
-  { name: 'Ai Agent Safety Evaluation', href: '/ai-services/ai-agent-safety-evaluation' },
-
-  { name: 'AI Agents & Autonomous Workflows', href: '/ai-services/ai-agents-autonomous' },
-
-  { name: 'Ai Context Engineering Enterprise', href: '/ai-services/ai-context-engineering-enterprise' },
-
-  { name: 'AI Copilot & Enterprise Assistants', href: '/ai-services/ai-copilot-enterprise' },
-
-  { name: 'AI Edge & Real-Time Inference', href: '/ai-services/ai-edge-realtime-inference' },
-
-  { name: 'Ai Finetuning Alignment Pipelines', href: '/ai-services/ai-finetuning-alignment-pipelines' },
-
-  { name: 'AI Foundation Models & Custom Training', href: '/ai-services/ai-foundation-models-custom-training' },
-
-  { name: 'AI Governance & Trust', href: '/ai-services/ai-governance-trust' },
-
-  { name: 'AI Integration & APIs', href: '/ai-services/ai-integration-apis' },
-
-  { name: 'Ai Memory Agents Long Horizon', href: '/ai-services/ai-memory-agents-long-horizon' },
-
-  { name: 'AI Model Orchestration', href: '/ai-services/ai-model-orchestration' },
-
-  { name: 'AI Multimodal Intelligence', href: '/ai-services/ai-multimodal-intelligence' },
-
-  { name: 'AI Observability & MLOps', href: '/ai-services/ai-observability-mlops' },
-
-  { name: 'AI RAG & Knowledge Systems', href: '/ai-services/ai-rag-knowledge-systems' },
-
-  { name: 'AI for Regulated Industries', href: '/ai-services/ai-regulated-industries' },
-
-  { name: 'AI Security & Responsible AI', href: '/ai-services/ai-security-responsible-ai' },
-
-  { name: 'AI Strategy & Roadmap', href: '/ai-services/ai-strategy-roadmap' },
-
-  { name: 'Autonomous Growth Intelligence', href: '/ai-services/autonomous-growth-intelligence' },
-
-  { name: 'Business Intelligence', href: '/ai-services/business-intelligence' },
-
-  { name: 'Content Generation', href: '/ai-services/content-generation' },
-
-  { name: 'Customer Experience', href: '/ai-services/customer-experience' },
-
-  { name: 'Document Processing', href: '/ai-services/document-processing' },
-
-  { name: 'Energy Management', href: '/ai-services/energy-management' },
-
-  { name: 'Fraud Detection', href: '/ai-services/fraud-detection' },
-
-  { name: 'Generative AI Enterprise', href: '/ai-services/generative-ai-enterprise' },
-
-  { name: 'HR Analytics', href: '/ai-services/hr-analytics' },
-
-  { name: 'Marketing Automation', href: '/ai-services/marketing-automation' },
-
-  { name: 'Predictive Maintenance', href: '/ai-services/predictive-maintenance' },
-
-  { name: 'Quality Assurance', href: '/ai-services/quality-assurance' },
-
-  { name: 'Supply Chain', href: '/ai-services/supply-chain' },
-
-  { name: 'AI Supply Chain Intelligence', href: '/ai-services/ai-supply-chain-intelligence' },
-
-  { name: 'AI Predictive Workforce Planning', href: '/ai-services/ai-predictive-workforce-planning' },
-
-  { name: 'AI Voice Agent Platform', href: '/ai-services/ai-voice-agent-platform' },
-
-  { name: 'AI Financial Forecasting & Planning', href: '/ai-services/ai-financial-forecasting' },
-
-  { name: 'AI Content Moderation Platform', href: '/ai-services/ai-content-moderation' },
-
-  { name: 'AI Customer Sentiment Analytics', href: '/ai-services/ai-customer-sentiment-analytics' },
-
-  { name: 'AI Code Migration & Modernization', href: '/ai-services/ai-code-migration-modernization' },
-
-  { name: 'AI Legal Document Review', href: '/ai-services/ai-legal-doc-review' },
-
-  { name: 'AI Medical Imaging Assistant', href: '/ai-services/ai-medical-imaging' },
-
-  { name: 'AI Supply Chain Visibility Platform', href: '/ai-services/ai-supply-chain-visibility' },
-
-  { name: 'AI Code Audit & Security Scanner', href: '/ai-services/ai-code-audit-security' },
-
-  { name: 'AI BDR/SDR Agent', href: '/ai-services/ai-bdr-sdr-agent' },
-
-  { name: 'AI Financial Forecasting & Budgeting', href: '/ai-services/ai-financial-forecasting' },
-
-  { name: 'AI Knowledge Base & Knowledge Graph Agent', href: '/ai-services/ai-knowledge-base-agent' },
-
-  { name: 'AI Visual Inspection & Quality Control', href: '/ai-services/ai-visual-inspection' },
-
-  { name: 'AI Omnichannel Chatbot', href: '/ai-services/ai-omnichannel-chatbot' },
-
-  { name: 'AI Call Center Voice Analytics', href: '/ai-services/ai-call-center-voice-analytics' },
-
-  { name: 'Generative AI for DevOps & CI/CD', href: '/it-services/devops-gen-ai-ci-cd' },
-
-  { name: 'AI Cloud Cost Optimizer', href: '/it-services/cloud-cost-ai-optimizer' },
-
-  { name: 'AI Data Warehouse Modernization', href: '/it-services/data-warehouse-modernization' },
-
-  { name: 'AI Cyber Threat Intelligence Platform', href: '/it-services/cyber-threat-intelligence' },
-
-  { name: 'Low-Code Platform Customization & Integration', href: '/it-services/low-code-platform-customization' },
-
-  { name: 'API Management & Developer Gateway', href: '/it-services/api-management-gateway' },
-
-  { name: 'AI Video Generator & Editor', href: '/ai-services/ai-video-generator' },
-
-  { name: 'AI SEO Content Optimizer', href: '/ai-services/ai-seo-optimizer' },
-
-  { name: 'AI Contract Manager', href: '/ai-services/ai-contract-manager' },
-
-  { name: 'AI Personalized Learning Platform', href: '/ai-services/ai-personalized-learning' },
-
-  { name: 'AI Voice Agent (Phone)', href: '/ai-services/ai-voice-agent' },
-
-  { name: 'AI DevOps Chatbot', href: '/ai-services/ai-devops-chatbot' },
-
-  { name: 'AI Revenue Operations (RevOps)', href: '/ai-services/ai-revenue-ops' },
-
-  { name: 'AI Supply & Demand Planner', href: '/ai-services/ai-supply-demand-planner' },
-
-  { name: 'AI Fraud Detection & Prevention', href: '/ai-services/ai-fraud-detection' },
-
-  { name: 'AI Code Review Assistant', href: '/ai-services/ai-code-review-assistant' },
-
-  { name: 'AI Marketing Copy Generator', href: '/ai-services/ai-marketing-copy-generator' },
-
-  { name: 'AI IT Helpdesk & Support', href: '/it-services/ai-it-helpdesk' },
-
-  { name: 'AI Customer Support Agent', href: '/ai-services/ai-customer-support-agent' },
-
-  { name: 'Autonomous Code Review Agent', href: '/ai-services/autonomous-code-review-agent' },
-
-  { name: 'AI-Driven Customer Segmentation & Persona Engine', href: '/ai-services/ai-driven-customer-segmentation' },
-
-  { name: 'AI-Powered UI Generator (Text-to-UI)', href: '/ai-services/ai-powered-ui-generator' },
-
-  { name: 'Predictive Churn Risk Scoring', href: '/ai-services/predictive-churn-risk' },
-
-  { name: 'AI-Powered SEO Content Optimizer', href: '/ai-services/ai-powered-seo-optimizer' },
-
-  { name: 'AI-Assisted Code Migration & Refactoring', href: '/ai-services/ai-for-code-migration' },
-
-  { name: 'AI-Powered Test Suite Generator', href: '/ai-services/ai-powered-test-generation' },
-
-  { name: 'AI-Powered Log Anomaly Detection', href: '/ai-services/ai-powered-log-anomaly-detection' },
-
-  { name: 'Generative Data Synthesis for Model Training', href: '/ai-services/generative-data-synthesis' },
-
-  { name: 'AI for Sustainable Operations (Green AI)', href: '/ai-services/ai-sustainable-ops' },
-
-  { name: 'AI Legal Document Review & Risk Analysis', href: '/ai-services/legal-doc-review-ai' },
-
-  { name: 'AI-Powered Passwordless Authentication', href: '/ai-services/ai-powered-passwordless-auth' },
-
-  { name: 'AI-Powered Tech Debt Quantifier', href: '/ai-services/ai-powered-tech-debt-quantifier' },
-
-  { name: 'Generative UX Research Synthesis', href: '/ai-services/generative-ux-research-synthesis' },
-
-  { name: 'AI-Powered Incident Postmortem Generator', href: '/ai-services/ai-powered-incident-postmortem' },
-
-  { name: 'AI-Driven API Design Assistant', href: '/ai-services/ai-driven-api-design-assistant' },
-
-  { name: 'AI-Powered PR Drafting & Description', href: '/ai-services/ai-powered-pr-drafting' },
-
-  { name: 'Automated Data Labeling for Computer Vision & NLP', href: '/ai-services/automated-data-labeling' },
-
-  { name: 'Meeting AI Assistant (Record, Transcribe, Summarize)', href: '/ai-services/meeting-ai-assistant' },
-
-  { name: 'Enterprise AI Question Answering (Internal Knowledge)', href: '/ai-services/ai-powered-question-answering' },
-
-  { name: 'AI Customer Support Agent', href: '/ai-services/ai-customer-support-agent' },
-
-  { name: 'Autonomous Code Review Agent', href: '/ai-services/autonomous-code-review-agent' },
-
-  { name: 'AI-Driven Customer Segmentation & Persona Engine', href: '/ai-services/ai-driven-customer-segmentation' },
-
-  { name: 'AI-Powered UI Generator (Text-to-UI)', href: '/ai-services/ai-powered-ui-generator' },
-
-  { name: 'Predictive Churn Risk Scoring', href: '/ai-services/predictive-churn-risk' },
-
-  { name: 'AI-Powered SEO Content Optimizer', href: '/ai-services/ai-powered-seo-optimizer' },
-
-  { name: 'AI-Assisted Code Migration & Refactoring', href: '/ai-services/ai-for-code-migration' },
-
-  { name: 'AI-Powered Test Suite Generator', href: '/ai-services/ai-powered-test-generation' },
-
-  { name: 'AI-Powered Log Anomaly Detection', href: '/ai-services/ai-powered-log-anomaly-detection' },
-
-  { name: 'Generative Data Synthesis for Model Training', href: '/ai-services/generative-data-synthesis' },
-
-  { name: 'AI for Sustainable Operations (Green AI)', href: '/ai-services/ai-sustainable-ops' },
-
-  { name: 'AI Legal Document Review & Risk Analysis', href: '/ai-services/legal-doc-review-ai' },
-
-  { name: 'AI-Powered Passwordless Authentication', href: '/ai-services/ai-powered-passwordless-auth' },
-
-  { name: 'AI-Powered Tech Debt Quantifier', href: '/ai-services/ai-powered-tech-debt-quantifier' },
-
-  { name: 'Generative UX Research Synthesis', href: '/ai-services/generative-ux-research-synthesis' },
-
-  { name: 'AI-Powered Incident Postmortem Generator', href: '/ai-services/ai-powered-incident-postmortem' },
-
-  { name: 'AI-Driven API Design Assistant', href: '/ai-services/ai-driven-api-design-assistant' },
-
-  { name: 'AI-Powered PR Drafting & Description', href: '/ai-services/ai-powered-pr-drafting' },
-
-  { name: 'Automated Data Labeling for Computer Vision & NLP', href: '/ai-services/automated-data-labeling' },
-
-  { name: 'Meeting AI Assistant (Record, Transcribe, Summarize)', href: '/ai-services/meeting-ai-assistant' },
-
-  { name: 'Enterprise AI Question Answering (Internal Knowledge)', href: '/ai-services/ai-powered-question-answering' },
-
-  { name: 'AI Dyslexia Assist', href: '/ai-services/ai-dyslexia-assist' },
-
-  { name: 'AI Supply Chain Predictor', href: '/ai-services/ai-supply-chain-predictor' },
-
-  { name: 'AI Contract Review Assistant', href: '/ai-services/ai-contract-review' },
-
-  { name: 'AI Accessibility Auditor', href: '/ai-services/ai-accessibility-auditor' },
-
-  { name: 'AI Mental Health Companion', href: '/ai-services/ai-mental-health-chatbot' },
-
-  { name: 'AI Customer Sentiment Tracker', href: '/ai-services/ai-customer-sentiment-tracker' },
-
-  { name: 'AI Codebase Documentation Generator', href: '/ai-services/ai-codebase-doc-generator' },
-
-  { name: 'AI Competitive Intel Engine', href: '/ai-services/ai-competitive-intel-engine' },
-
-  { name: 'AI Voice Cloning for Marketing', href: '/ai-services/ai-voice-cloning-marketing' },
-
-  { name: 'AI Fraud Detection for Finance', href: '/ai-services/ai-fraud-detection-finance' },
-
-  { name: 'AI Legal Contract Redaction', href: '/ai-services/ai-legal-contract-redaction' },
-
-  { name: 'AI Sustainability & Carbon Tracker', href: '/ai-services/ai-sustainability-carbon-tracker' },
-
-  { name: 'AI 1:1 Tutor for K–12 & Higher Ed', href: '/ai-services/ai-education-tutor' },
-
-  { name: 'AI Retail Recommendation Engine', href: '/ai-services/ai-retail-recommendation-engine' },
-
-  { name: 'AI-AIOps Anomaly Detection', href: '/ai-services/ai-aiops-anomaly-detection' },
-
-  { name: 'AI Media & News Monitoring', href: '/ai-services/ai-media-monitoring' },
-
-  { name: 'AI Accessibility Content Optimizer', href: '/ai-services/ai-accessibility-optimizer' },
-
-  { name: 'Real-Time Translation Engine', href: '/ai-services/ai-realtime-translation' },
-
-  { name: 'Contract Analyzer Pro', href: '/ai-services/ai-contract-analyzer-pro' },
-
-  { name: 'AI Code Review Assistant', href: '/ai-services/ai-code-review-assistant' },
-
-  { name: 'Competitor Intelligence Engine', href: '/ai-services/ai-competitor-intelligence' },
-
-  { name: 'Email Campaign Generator', href: '/ai-services/ai-email-campaign-generator' },
-
-  { name: 'Supply Chain Predictor', href: '/ai-services/ai-supply-chain-predictor' },
-
-  { name: 'Voice Assistant Pro', href: '/ai-services/ai-voice-assistant-pro' },
-
-  { name: 'Revenue Optimization Engine', href: '/ai-services/ai-revenue-optimizer' },
-
-  { name: 'Knowledge Graph Builder', href: '/ai-services/ai-knowledge-graph-builder' },
-
-  { name: 'Real-Time Fraud Detection', href: '/ai-services/ai-fraud-detection-real-time' },
-
-  { name: 'Social Sentiment Tracker', href: '/ai-services/ai-social-sentiment-tracker' },
-
-  { name: 'Automated Reporting Engine', href: '/ai-services/ai-automated-reporting' },
-
-  { name: 'Predictive Maintenance for Manufacturing', href: '/ai-services/ai-predictive-maintenance-factory' },
-
-  { name: 'Customer 360 Unified Profile', href: '/ai-services/ai-customer-360' },
-
-  { name: 'AI Talent Acquisition Platform', href: '/ai-services/ai-talent-acquisition-platform' },
-
-  { name: 'Cloud Migration & Modernization', href: '/it-services/cloud-migration' },
-
-  { name: 'Cybersecurity & Penetration Testing', href: '/it-services/cybersecurity' },
-
-  { name: 'Data Engineering & ETL Pipelines', href: '/it-services/data-engineering' },
-
-  { name: 'DevOps & CI/CD Automation', href: '/it-services/devops-cicd' },
-
-  { name: 'SaaS Product Development', href: '/it-services/saas-development' },
-
-  { name: 'API Development & Integration', href: '/it-services/api-integration' },
-
-  { name: 'Database Optimization & Management', href: '/it-services/database-optimization' },
-
-  { name: 'Monitoring & Observability', href: '/it-services/monitoring-observability' },
-
-  { name: 'IT Strategy & Digital Transformation Consulting', href: '/it-services/it-consulting' },
-
-  { name: 'Accessibility & WCAG Compliance', href: '/it-services/accessibility-compliance' },
-
-  { name: 'Cloud Cost Optimization (FinOps)', href: '/it-services/cloud-cost-optimization' },
-
-  { name: 'Supply Chain Management Platform', href: '/it-services/supply-chain-management' },
-
-  { name: 'Network Security Monitoring & SIEM', href: '/it-services/network-security-monitoring' },
-
-  { name: 'Edge Computing & IoT Infrastructure', href: '/it-services/edge-computing' },
-
-  { name: 'Disaster Recovery & Business Continuity', href: '/it-services/disaster-recovery' },
-
-  { name: 'ITIL Service Management (ITSM) Platform', href: '/it-services/itil-service-management' },
-
-  { name: 'Zero Trust Security Architecture', href: '/it-services/zero-trust-architecture' },
-
-  { name: 'Container Orchestration & Kubernetes Management', href: '/it-services/kubernetes-management' },
-
-  { name: 'Penetration Testing & Vulnerability Assessment', href: '/it-services/penetration-testing' },
-
-  { name: 'Blockchain Development & Smart Contract Auditing', href: '/it-services/blockchain-development' },
-
-  { name: 'Quantum Computing Readiness Assessment', href: '/it-services/quantum-readiness' },
-
-  { name: '5G Network Planning & Deployment', href: '/it-services/5g-network-deployment' },
-
-  { name: 'Digital Twin & IoT Platform Development', href: '/it-services/digital-twin-platform' },
-
-  { name: 'Microservices Architecture & API Gateway Design', href: '/it-services/microservices-architecture' },
-
-  { name: 'Observability Platform & SRE Consulting', href: '/it-services/observability-platform' },
-
-  { name: 'Data Mesh & Modern Data Platform Architecture', href: '/it-services/data-mesh' },
-
-  { name: 'Platform Engineering & Internal Developer Portal', href: '/it-services/platform-engineering' },
-
-  { name: 'Wireless Network Design & Optimization', href: '/it-services/wireless-network' },
-
-  { name: 'IT Automation & Orchestration Platform', href: '/it-services/automation-orchestrator' },
-
-  { name: 'Serverless Architecture & Function-as-a-Service', href: '/it-services/serverless-architecture' },
-
-  { name: 'API Management Platform & Developer Portal', href: '/it-services/api-management' },
-
-  { name: 'Database-as-a-Service & Managed Data Platforms', href: '/it-services/database-as-a-service' },
-
-  { name: 'Incident Response & Security Operations Center', href: '/it-services/incident-response' },
-
-  { name: 'Voice Infrastructure & Contact Center Solutions', href: '/it-services/voice-infrastructure' },
-
-  { name: 'Identity & Access Management (IAM) Platform', href: '/it-services/iam-platform' },
-
-  { name: 'IT Capacity Planning & Resource Forecasting', href: '/it-services/capacity-planning' },
-
-  { name: 'Backup & Disaster Recovery Solutions', href: '/it-services/backup-recovery' },
-
-  { name: 'Network Automation & SD-WAN Management', href: '/it-services/network-automation' },
-
-  { name: 'API Development & Integration', href: '/it-services/api-development' },
-
-  { name: 'Backup & Disaster Recovery', href: '/it-services/backup-disaster-recovery' },
-
-  { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' },
-
-  { name: 'Data Pipeline Architecture & Engineering', href: '/it-services/data-pipeline-architecture' },
-
-  { name: 'DevOps Consulting & Implementation', href: '/it-services/devops-consulting' },
-
-  { name: 'Digital Workplace Solutions', href: '/it-services/digital-workplace' },
-
-  { name: 'Disaster Recovery & Business Continuity', href: '/it-services/disaster-recovery-services' },
-
-  { name: 'Endpoint Device Management (MDM)', href: '/it-services/endpoint-management' },
-
-  { name: 'Identity & Access Management (IAM)', href: '/it-services/identity-access-management' },
-
-  { name: 'IT Asset Management & Lifecycle', href: '/it-services/it-asset-management' },
-
-  { name: 'IT Service Desk & Help Desk', href: '/it-services/it-service-desk' },
-
-  { name: 'Managed SOC & Security Operations', href: '/it-services/managed-soc-security' },
-
-  { name: 'Mobile App Development', href: '/it-services/mobile-development' },
-
-  { name: 'Enterprise Network Infrastructure', href: '/it-services/network-infrastructure' },
-
-  { name: 'Network Security Operations Center', href: '/it-services/network-security-operations' },
-
-  { name: 'Managed SOC & Threat Intelligence', href: '/it-services/managed-soc-threat-intelligence' },
-
-  { name: 'Container Orchestration & Kubernetes Management', href: '/it-services/kubernetes-management' },
-
-  { name: 'IT Service Desk Automation', href: '/it-services/it-service-desk-automation' },
-
-  { name: 'Enterprise Backup & Disaster Recovery', href: '/it-services/enterprise-backup-dr' },
-
-  { name: 'Network Architecture & SD-WAN', href: '/it-services/network-architecture-sdwan' },
-
-  { name: 'IT Service Asset & Configuration Management', href: '/it-services/it-sam-platform' },
-
-  { name: 'Vulnerability Assessment & Penetration Testing', href: '/it-services/vulnerability-assessment-penetration-testing' },
-
-  { name: 'Remote IT Support & Helpdesk Outsourcing', href: '/it-services/remote-it-support' },
-
-  { name: 'Database Performance Optimization', href: '/it-services/database-optimization' },
-
-  { name: 'Unified Endpoint Management (UEM)', href: '/it-services/endpoint-management' },
-
-  { name: 'Legacy System Modernization & Re-Platforming', href: '/it-services/legacy-system-modernization' },
-
-  { name: 'Quantum-Ready Cryptography & Security Assessment', href: '/it-services/quantum-ready-security' },
-
-  { name: 'Full-Stack Observability Platform', href: '/it-services/observability-platform' },
-
-  { name: 'Security Operations Center as a Service (SOCaaS)', href: '/it-services/soc-as-a-service' },
-
-  { name: 'Node.js Performance Tuning & Profiling', href: '/it-services/nodejs-performance-tuning' },
-
-  { name: 'ETL Pipeline Optimization & Modernization', href: '/it-services/etl-pipeline-optimization' },
-
-  { name: 'Incident Response Retainer (IR)', href: '/it-services/incident-response-retainer' },
-
-  { name: 'Edge Computing Deployment', href: '/it-services/it-edge-computing-deploy' },
-
-  { name: 'Disaster Recovery as a Service (DRaaS)', href: '/it-services/it-disaster-recovery' },
-
-  { name: 'Full-Stack Observability Platform', href: '/it-services/it-observability-platform' },
-
-  { name: 'ESG Compliance Automation', href: '/it-services/it-esg-compliance-automation' },
-
-  { name: 'Kubernetes Multi-Cloud Management', href: '/it-services/it-kubernetes-multicloud' },
-
-  { name: 'Automated Incident Response (SOAR)', href: '/it-services/it-automated-incident-response' },
-
-  { name: 'Data Warehouse Modernization', href: '/it-services/it-data-warehouse-modernization' },
-
-  { name: 'Enterprise IoT Device Management', href: '/it-services/it-iot-device-management' },
-
-  { name: 'Digital Workplace Platform', href: '/it-services/it-digital-workplace-platform' },
-
-  { name: 'API Security Testing', href: '/it-services/it-apisec-testing' },
-
-  { name: 'Data Lakehouse Governance', href: '/it-services/it-data-lakehouse-governance' },
-
-  { name: 'Managed Endpoint Detection & Response (EDR)', href: '/it-services/it-endpoint-detection-response' },
-
-  { name: 'Low-Code Platform Integration', href: '/it-services/it-low-code-platform-integration' },
-
-  { name: 'Edge Computing Orchestration', href: '/it-services/it-edge-computing-orchestration' },
-
-  { name: 'Serverless API Gateway', href: '/it-services/it-serverless-api-gateway' },
-
-  { name: 'SAP Integration Hub', href: '/it-services/it-sap-integration-hub' },
-
-  { name: 'Multi-Cloud Cost Governance', href: '/it-services/it-multi-cloud-cost-governance' },
-
-  { name: 'Automated Incident Response', href: '/it-services/it-automated-incident-response' },
-
-  { name: 'Secure File Transfer (MFT)', href: '/it-services/it-secure-file-transfer' },
-
-  { name: 'Legacy App Containerization', href: '/it-services/it-legacy-app-containerization' },
-
-  { name: 'PCI DSS Compliance Suite', href: '/it-services/it-pcii-compliance-suite' },
-
-  { name: 'Business Continuity & Disaster Recovery', href: '/it-services/it-business-continuity-dr' },
-
-  { name: 'Identity Governance & Administration', href: '/it-services/it-identity-governance' },
-
-  { name: 'Cloud-Native Storage Optimizer', href: '/it-services/it-cloud-native-storage' },
-
-  { name: 'Unified Observability Platform', href: '/it-services/it-observability-unified' },
-
-  { name: 'Secrets Management as a Service', href: '/it-services/it-secrets-management' },
-
-  { name: 'Multi-Cloud Networking', href: '/it-services/it-multi-cloud-networking' },
-
-  { name: 'Mainframe Modernization Service', href: '/it-services/it-mainframe-modernization' },
-
-  { name: 'AI 3D Asset Generator', href: '/ai-3d-asset-generator' },
-
-  { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning-studio' },
-
-  { name: 'AI Code Review & Quality Gate', href: '/ai-code-reviewer' },
-
-  { name: 'AI Quantum Computing Optimization', href: '/ai-quantum-optimizer' },
-
-  { name: 'AI Digital Twin Platform', href: '/ai-digital-twin-platform' },
-
-  { name: 'AI Ad Copy Generator', href: '/ai-ad-copy-generator' },
-
-  { name: 'AI SEO Content Optimizer', href: '/ai-seo-content-optimizer' },
-
-  { name: 'AI Conversion Rate Optimization (CRO) Engine', href: '/ai-cro-optimizer' },
-
-  { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform' },
-
-  { name: 'AI Medical Image Diagnosis', href: '/ai-medical-image-diagnosis' },
-
-  { name: 'AI Genomic Analysis Pipeline', href: '/ai-genomic-analysis' },
-
-  { name: 'AI Trading Signal Engine', href: '/ai-trading-signal-engine' },
-
-  { name: 'AI Credit Underwriting Engine', href: '/ai-credit-underwriting' },
-
-  { name: 'AI Insurance Claims Processing', href: '/ai-insurance-claims' },
-
-  { name: 'AI Tutoring Platform', href: '/ai-tutoring-platform' },
-
-  { name: 'AI Exam Proctoring System', href: '/ai-exam-proctoring' },
-
-  { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance' },
-
-  { name: 'AI Visual Quality Inspection', href: '/ai-quality-inspection' },
-
-  { name: 'AI Energy Optimization', href: '/ai-energy-optimization' },
-
-  { name: 'AI Threat Intelligence Platform', href: '/ai-threat-intelligence' },
-
-  { name: 'AI Deepfake & Synthetic Media Detection', href: '/ai-deepfake-detection' },
-
-  { name: 'AI Privileged Access Management', href: '/ai-privilege-access-manager' },
-
-  { name: 'AI Data Quality Fabric', href: '/ai-data-quality-fabric' },
-
-  { name: 'AI Feature Store', href: '/ai-feature-store' },
-
-  { name: 'AI Metadata & Data Lineage Manager', href: '/ai-metadata-management' },
-
-  { name: 'AI Infrastructure Provisioner', href: '/ai-infra-provisioner' },
-
-  { name: 'AI Log Analysis & Root Cause', href: '/ai-log-analysis' },
-
-  { name: 'AI Load & Performance Testing', href: '/ai-load-testing' },
-
-  { name: 'AI Kubernetes Optimization', href: '/ai-kubernetes-optimizer' },
-
-  { name: 'AI Serverless Platform', href: '/ai-serverless-platform' },
-
-  { name: 'AI Zero Trust Network', href: '/ai-vpc-zero-trust' },
-
-  { name: 'AI Robotic Process Automation', href: '/ai-rpa-platform' },
-
-  { name: 'AI Test Automation Framework', href: '/ai-test-automation-framework' },
-
-  { name: 'AI Low-Code Integration Platform', href: '/ai-low-code-integration' },
-
-  { name: 'AI Governance & Compliance Suite', href: '/ai-governance-compliance' },
-
-  { name: 'AI Reinforcement Learning Operations (RLOps)', href: '/ai-reinforcement-learning-ops' },
-
-  { name: 'AI Federated Learning Platform', href: '/ai-federated-learning' },
-
-  { name: 'Synthetic Monitoring & Uptime Intelligence', href: '/it-synthetic-monitoring' },
-
-  { name: 'AI API Gateway', href: '/it-api-gateway-ai' },
-
-  { name: 'AI Identity Governance & Administration', href: '/it-identity-governance' },
-
-  { name: 'Secure Managed File Transfer (MFT)', href: '/secure-file-transfer' },
-
-  { name: 'AI Secrets Management', href: '/ai-secrets-management' },
-
-  { name: 'AI LLM Router Pro', href: '/ai-services/ai-llm-router-pro' },
-
-  { name: 'AI Voice Agent Builder', href: '/ai-services/ai-voice-agent-builder' },
-
-  { name: 'AI Interview Conduct Bot', href: '/ai-services/ai-interview-conduct-bot' },
-
-  { name: 'AI Glassdoor & Review Analyzer', href: '/ai-services/ai-glassdoor-review-analyzer' },
-
-  { name: 'AI Dashboard Designer', href: '/ai-services/ai-dashboard-designer' },
-
-  { name: 'AI Tax Compliance Calculator', href: '/ai-services/ai-tax-compliance-calculator' },
-
-  { name: 'AI Bug-to-Issue Router', href: '/ai-services/ai-bug-to-issue-router' },
-
-  { name: 'AI Voice Brand Consistency Checker', href: '/ai-services/ai-voice-brand-consistency' },
-
-  { name: 'AI Personal Finance Coach', href: '/ai-services/ai-personal-finance-coach' },
-
-  { name: 'AI Nutrition & Meal Planner', href: '/ai-services/ai-nutrition-meal-planner' },
-
-  { name: 'AI Hiring Pipeline Optimizer', href: '/ai-services/ai-hiring-pipeline-optimizer' },
-
-  { name: 'AI Product Photo Enhancer', href: '/ai-services/ai-product-photo-enhancer' },
-
-  { name: 'AI Competitive Price Tracker', href: '/ai-services/ai-competitive-price-tracker' },
-
-  { name: 'AI Profitability Dashboard', href: '/ai-services/ai-profitability-dashboard' },
-
-  { name: 'IT API Load & Performance Testing', href: '/it-services/it-api-performance-testing' },
-
-  { name: 'IT Incident Response Simulator', href: '/it-services/it-incident-response-simulator' },
-
-  { name: 'IT Cloud Cost Governance', href: '/it-services/it-cloud-cost-governance' },
-
-  { name: 'IT Observability & Centralized Logging', href: '/it-services/it-observability-logging' },
-
-  { name: 'AI Knowledge Base & RAG Platform', href: '/ai-services/ai-knowledge-base-rag' },
-
-  { name: 'AI Form Filler & Automation', href: '/ai-services/ai-form-filler-intelligence' },
-
-  { name: 'AI API Orchestration Layer', href: '/ai-services/ai-api-orchestration-layer' },
-
-  { name: 'AI KYC / AML Compliance Engine', href: '/ai-services/ai-kyc-aml-compliance' },
-
-  { name: 'AI Smart Document Redactor', href: '/ai-services/ai-smart-document-redactor' },
-
-  { name: 'AI Data Quality Guardian', href: '/ai-services/ai-data-quality-guardian' },
-
-  { name: 'AI Observability Turbo', href: '/ai-services/ai-observability-turbo' },
-
-  { name: 'AI E-commerce Smart Search', href: '/ai-services/ai-ecommerce-smart-search' }
+  { name: 'Advanced AI & Enterprise Intelligence Hub', href: '/services/advanced-ai-enterprise-intelligence-hub' },
+  { name: 'Ai 3D Asset Generator', href: '/services/ai-3d-asset-generator' },
+  { name: 'AI Accessibility Auditor', href: '/services/ai-accessibility-auditor' },
+  { name: 'AI Accessibility Content Optimizer', href: '/services/ai-accessibility-optimizer' },
+  { name: 'Ai Ad Copy Generator', href: '/services/ai-ad-copy-generator' },
+  { name: 'Ai Agent Safety Evaluation', href: '/services/ai-agent-safety-evaluation' },
+  { name: 'AI Agent Tool Builder', href: '/services/ai-agent-tool-builder' },
+  { name: 'AI Agentic Workflow Automation', href: '/services/ai-agentic-workflows' },
+  { name: 'AI Agents & Autonomous Workflows', href: '/services/ai-agents-autonomous' },
+  { name: 'AI-AIOps Anomaly Detection', href: '/services/ai-aiops-anomaly-detection' },
+  { name: 'AI Analytics & BI', href: '/services/ai-analytics' },
+  { name: 'Ai Api Orchestration Layer', href: '/services/ai-api-orchestration-layer' },
+  { name: 'Automated Reporting Engine', href: '/services/ai-automated-reporting' },
+  { name: 'AI Automation', href: '/services/ai-automation' },
+  { name: 'Autonomous Code Deployment Agent', href: '/services/ai-autonomous-code-deployment' },
+  { name: 'Autonomous QA Engineering Platform', href: '/services/ai-autonomous-qa-engineering' },
+  { name: 'AI BDR/SDR Agent', href: '/services/ai-bdr-sdr' },
+  { name: 'AI BOM & Procurement Optimiser', href: '/services/ai-bom-procurement' },
+  { name: 'AI Brand Voice Guardian', href: '/services/ai-brand-voice-guardian' },
+  { name: 'Ai Bug To Issue Router', href: '/services/ai-bug-to-issue-router' },
+  { name: 'AI Call Center Voice Analytics', href: '/services/ai-call-center-voice-analytics' },
+  { name: 'AI Campaign Performance Predictor', href: '/services/ai-campaign-predictor' },
+  { name: 'Caption & Subtitle Generator', href: '/services/ai-caption-subtitle-generator' },
+  { name: 'AI Carbon Footprint Optimizer', href: '/services/ai-carbon-optimizer' },
+  { name: 'AI Chatbot Builder Pro', href: '/services/ai-chatbot-builder-pro' },
+  { name: 'AI Omnichannel Chatbot', href: '/services/ai-chatbot-omnichannel' },
+  { name: 'AI Cloud Cost Optimizer', href: '/services/ai-cloud-cost-optimizer' },
+  { name: 'AI Code Assistant (Enterprise)', href: '/services/ai-code-assistant-enterprise' },
+  { name: 'AI Code Audit & Security Scanner', href: '/services/ai-code-audit-security' },
+  { name: 'AI Code Migration & Legacy Modernization', href: '/services/ai-code-migration' },
+  { name: 'AI Code Migration Assistant', href: '/services/ai-code-migration-assistant' },
+  { name: 'AI Code Migration & Modernization', href: '/services/ai-code-migration-modernization' },
+  { name: 'AI Code Review Assistant', href: '/services/ai-code-review-assistant' },
+  { name: 'Ai Code Reviewer', href: '/services/ai-code-reviewer' },
+  { name: 'AI Code Reviewer Pro', href: '/services/ai-code-reviewer-pro' },
+  { name: 'AI Codebase Documentation Generator', href: '/services/ai-codebase-doc-generator' },
+  { name: 'AI Competitive Intel Engine', href: '/services/ai-competitive-intel-engine' },
+  { name: 'Ai Competitive Price Tracker', href: '/services/ai-competitive-price-tracker' },
+  { name: 'Competitor Intelligence Engine', href: '/services/ai-competitor-intelligence' },
+  { name: 'AI Compliance & Regulatory', href: '/services/ai-compliance' },
+  { name: 'AI Privacy Policy & Compliance Generator', href: '/services/ai-compliance-generator' },
+  { name: 'AI Computer Vision', href: '/services/ai-computer-vision' },
+  { name: 'Computer Vision Shelf Monitoring', href: '/services/ai-computer-vision-shelf-monitoring' },
+  { name: 'AI Content Generation', href: '/services/ai-content-generation' },
+  { name: 'AI Content Localization & Cultural Adaptation', href: '/services/ai-content-localization' },
+  { name: 'AI Content Moderation Platform', href: '/services/ai-content-moderation' },
+  { name: 'AI Content Moderation Platform', href: '/services/ai-content-moderation-platform' },
+  { name: 'Ai Context Engineering Enterprise', href: '/services/ai-context-engineering-enterprise' },
+  { name: 'Contract Analyzer Pro', href: '/services/ai-contract-analyzer-pro' },
+  { name: 'Contract Lifecycle Intelligence', href: '/services/ai-contract-lifecycle-intelligence' },
+  { name: 'AI Contract Manager', href: '/services/ai-contract-manager' },
+  { name: 'AI Contract Review Assistant', href: '/services/ai-contract-review' },
+  { name: 'Conversation Intelligence & Call Coach', href: '/services/ai-conversation-intelligence' },
+  { name: 'AI Copilot & Enterprise Assistants', href: '/services/ai-copilot-enterprise' },
+  { name: 'Ai Credit Underwriting', href: '/services/ai-credit-underwriting' },
+  { name: 'Ai Cro Optimizer', href: '/services/ai-cro-optimizer' },
+  { name: 'AI Cross-Lingual Bridge', href: '/services/ai-cross-lingual-bridge' },
+  { name: 'Cross-Lingual Meeting Bridge', href: '/services/ai-cross-lingual-meeting-bridge' },
+  { name: 'AI Cultural Fit Screener', href: '/services/ai-cultural-fit-screener' },
+  { name: 'Customer 360 Unified Profile', href: '/services/ai-customer-360' },
+  { name: 'AI Customer Sentiment Analytics', href: '/services/ai-customer-sentiment-analytics' },
+  { name: 'AI Customer Sentiment Tracker', href: '/services/ai-customer-sentiment-tracker' },
+  { name: 'Customer Success Predictor', href: '/services/ai-customer-success-predictor' },
+  { name: 'AI Customer Support', href: '/services/ai-customer-support' },
+  { name: 'AI Customer Support Agent', href: '/services/ai-customer-support-agent' },
+  { name: 'AI Cyber Threat Hunting & Incident Response', href: '/services/ai-cyber-threat-hunting' },
+  { name: 'Ai Dashboard Designer', href: '/services/ai-dashboard-designer' },
+  { name: 'Ai Data Quality Fabric', href: '/services/ai-data-quality-fabric' },
+  { name: 'Ai Data Quality Guardian', href: '/services/ai-data-quality-guardian' },
+  { name: 'Ai Deepfake Detection', href: '/services/ai-deepfake-detection' },
+  { name: 'AI DevOps Chatbot', href: '/services/ai-devops-chatbot' },
+  { name: 'Ai Digital Twin Platform', href: '/services/ai-digital-twin-platform' },
+  { name: 'AI Document Classifier', href: '/services/ai-document-classifier' },
+  { name: 'AI Document Intelligence', href: '/services/ai-document-intelligence' },
+  { name: 'AI Document Q&A Engine', href: '/services/ai-document-qa' },
+  { name: 'AI-Driven API Design Assistant', href: '/services/ai-driven-api-design-assistant' },
+  { name: 'AI-Driven Customer Segmentation & Persona Engine', href: '/services/ai-driven-customer-segmentation' },
+  { name: 'AI Drug Discovery & Molecular Design', href: '/services/ai-drug-discovery' },
+  { name: 'Ai Drug Discovery Platform', href: '/services/ai-drug-discovery-platform' },
+  { name: 'AI Drug Interaction Checker', href: '/services/ai-drug-interaction-checker' },
+  { name: 'Ai Dyslexia Assist', href: '/services/ai-dyslexia-assist' },
+  { name: 'Ai Ecommerce Smart Search', href: '/services/ai-ecommerce-smart-search' },
+  { name: 'AI Edge & Real-Time Inference', href: '/services/ai-edge-realtime-inference' },
+  { name: 'AI Adaptive Tutoring System', href: '/services/ai-education-adaptive-tutor' },
+  { name: 'AI 1:1 Tutor for K–12 & Higher Ed', href: '/services/ai-education-tutor' },
+  { name: 'Email Campaign Generator', href: '/services/ai-email-campaign-generator' },
+  { name: 'AI Email Marketing', href: '/services/ai-email-marketing' },
+  { name: 'AI Employee Experience Platform', href: '/services/ai-employee-experience' },
+  { name: 'AI Energy Optimization & Sustainability', href: '/services/ai-energy-optimization' },
+  { name: 'AI Ethics Audit & Bias Assessment', href: '/services/ai-ethics-audit-1' },
+  { name: 'AI Ethics, Safety & Governance Framework', href: '/services/ai-ethics-governance' },
+  { name: 'Ai Exam Proctoring', href: '/services/ai-exam-proctoring' },
+  { name: 'AI Expense Categorisation & Audit', href: '/services/ai-expense-audit' },
+  { name: 'Ai Feature Store', href: '/services/ai-feature-store' },
+  { name: 'Ai Federated Learning', href: '/services/ai-federated-learning' },
+  { name: 'AI FedRAMP Compliance Assistant', href: '/services/ai-fedrisk-compliance' },
+  { name: 'AI Financial Forecasting & Planning', href: '/services/ai-financial-forecasting' },
+  { name: 'AI Financial Fraud Detection & Prevention', href: '/services/ai-financial-fraud-detection' },
+  { name: 'Ai Finetuning Alignment Pipelines', href: '/services/ai-finetuning-alignment-pipelines' },
+  { name: 'Fintech Fraud Graph', href: '/services/ai-fintech-fraud-graph' },
+  { name: 'AI-Assisted Code Migration & Refactoring', href: '/services/ai-for-code-migration' },
+  { name: 'Ai Form Filler Intelligence', href: '/services/ai-form-filler-intelligence' },
+  { name: 'AI Foundation Models & Custom Training', href: '/services/ai-foundation-models-custom-training' },
+  { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
+  { name: 'AI Fraud Detection for Finance', href: '/services/ai-fraud-detection-finance' },
+  { name: 'Real-Time Fraud Detection', href: '/services/ai-fraud-detection-real-time' },
+  { name: 'AI Fraud Pattern Analyzer', href: '/services/ai-fraud-pattern-analyzer' },
+  { name: 'AI Full-Stack Test Generator', href: '/services/ai-fullstack-test-generator' },
+  { name: 'AI-Powered Application Development', href: '/services/ai-gen-app-dev-1' },
+  { name: 'Ai Genomic Analysis', href: '/services/ai-genomic-analysis' },
+  { name: 'Ai Glassdoor Review Analyzer', href: '/services/ai-glassdoor-review-analyzer' },
+  { name: 'Ai Governance Compliance', href: '/services/ai-governance-compliance' },
+  { name: 'AI Governance & Trust', href: '/services/ai-governance-trust' },
+  { name: 'AI Grant & Funding Opportunity Matcher', href: '/services/ai-grant-matcher' },
+  { name: 'AI Growth Intelligence Platform', href: '/services/ai-growth-intelligence' },
+  { name: 'Ai Hiring Pipeline Optimizer', href: '/services/ai-hiring-pipeline-optimizer' },
+  { name: 'AI HR Assistant', href: '/services/ai-hr-assistant' },
+  { name: 'Ai Infra Provisioner', href: '/services/ai-infra-provisioner' },
+  { name: 'Ai Insurance Claims', href: '/services/ai-insurance-claims' },
+  { name: 'AI Insurance Pricing Advisor', href: '/services/ai-insurance-pricing' },
+  { name: 'AI Integration & APIs', href: '/services/ai-integration-apis' },
+  { name: 'AI Intelligent Document Processing & Routing', href: '/services/ai-intelligent-routing' },
+  { name: 'Ai Interview Conduct Bot', href: '/services/ai-interview-conduct-bot' },
+  { name: 'AI IT Helpdesk & Support', href: '/services/ai-it-helpdesk' },
+  { name: 'AI Job Description & Interview Kit', href: '/services/ai-job-description-kit' },
+  { name: 'AI Job Matcher & Career Path', href: '/services/ai-job-matcher' },
+  { name: 'AI Knowledge Base & Knowledge Graph Agent', href: '/services/ai-knowledge-base-agent' },
+  { name: 'Ai Knowledge Base Rag', href: '/services/ai-knowledge-base-rag' },
+  { name: 'AI Knowledge Graph Builder', href: '/services/ai-knowledge-graph' },
+  { name: 'Knowledge Graph Builder', href: '/services/ai-knowledge-graph-builder' },
+  { name: 'AI Knowledge Graph Search Engine', href: '/services/ai-knowledge-graph-search-deep' },
+  { name: 'Knowledge Graph Search Engine', href: '/services/ai-knowledge-graph-search-engine' },
+  { name: 'AI Knowledge Management', href: '/services/ai-knowledge-management' },
+  { name: 'Ai Kubernetes Optimizer', href: '/services/ai-kubernetes-optimizer' },
+  { name: 'Ai Kyc Aml Compliance', href: '/services/ai-kyc-aml-compliance' },
+  { name: 'AI Lead Richness Scorer & Enricher', href: '/services/ai-lead-enricher' },
+  { name: 'AI Lead Generation & Enrichment', href: '/services/ai-lead-generation' },
+  { name: 'AI Legal Contract Redaction', href: '/services/ai-legal-contract-redaction' },
+  { name: 'AI Legal Document Review', href: '/services/ai-legal-doc-review' },
+  { name: 'AI Legal Document Analysis & Contract Review', href: '/services/ai-legal-document-analysis' },
+  { name: 'AI Legal Document Redlining & Review', href: '/services/ai-legal-redline' },
+  { name: 'AI Legal Research Engine', href: '/services/ai-legal-research' },
+  { name: 'Ai Llm Router Pro', href: '/services/ai-llm-router-pro' },
+  { name: 'Ai Load Testing', href: '/services/ai-load-testing' },
+  { name: 'Ai Log Analysis', href: '/services/ai-log-analysis' },
+  { name: 'Ai Low Code Integration', href: '/services/ai-low-code-integration' },
+  { name: 'Machine Translation Quality Engine', href: '/services/ai-machine-translation-quality' },
+  { name: 'AI Marketing Copy Generator', href: '/services/ai-marketing-copy-generator' },
+  { name: 'AI Media & News Monitoring', href: '/services/ai-media-monitoring' },
+  { name: 'Ai Medical Image Diagnosis', href: '/services/ai-medical-image-diagnosis' },
+  { name: 'AI Medical Imaging & Diagnostics', href: '/services/ai-medical-imaging' },
+  { name: 'AI Meeting Assistant Pro', href: '/services/ai-meeting-assistant-pro' },
+  { name: 'AI Meeting Notes & Summary Platform', href: '/services/ai-meeting-notes-summary' },
+  { name: 'AI Meeting Pre-read Generator', href: '/services/ai-meeting-preread' },
+  { name: 'AI Meeting Summarizer & Action Tracker', href: '/services/ai-meeting-summarizer-pro' },
+  { name: 'Ai Memory Agents Long Horizon', href: '/services/ai-memory-agents-long-horizon' },
+  { name: 'AI Mental Health Companion', href: '/services/ai-mental-health-chatbot' },
+  { name: 'Ai Metadata Management', href: '/services/ai-metadata-management' },
+  { name: 'AI Model Orchestration', href: '/services/ai-model-orchestration' },
+  { name: 'AI Multimodal Intelligence', href: '/services/ai-multimodal-intelligence' },
+  { name: 'Multimodal Video Understanding Engine', href: '/services/ai-multimodal-video-understanding' },
+  { name: 'AI Newsletter Engagement Analyser', href: '/services/ai-newsletter-engagement' },
+  { name: 'Ai Nutrition Meal Planner', href: '/services/ai-nutrition-meal-planner' },
+  { name: 'AI Observability & MLOps', href: '/services/ai-observability-mlops' },
+  { name: 'Ai Observability Turbo', href: '/services/ai-observability-turbo' },
+  { name: 'AI Omnichannel Chatbot Platform', href: '/services/ai-omnichannel-chatbot' },
+  { name: 'AI PDF Document Engine', href: '/services/ai-pdf-engine' },
+  { name: 'Ai Personal Finance Coach', href: '/services/ai-personal-finance-coach' },
+  { name: 'Real-Time Personalisation Engine', href: '/services/ai-personalisation-engine-realtime' },
+  { name: 'AI Personalization & Recommendation Engine', href: '/services/ai-personalization-engine' },
+  { name: 'AI Personalized Learning Platform', href: '/services/ai-personalized-learning' },
+  { name: 'AI Post-Purchase Customer Care Agent', href: '/services/ai-post-purchase-care' },
+  { name: 'AI-Powered Incident Postmortem Generator', href: '/services/ai-powered-incident-postmortem' },
+  { name: 'AI-Powered Log Anomaly Detection', href: '/services/ai-powered-log-anomaly-detection' },
+  { name: 'AI-Powered Passwordless Authentication', href: '/services/ai-powered-passwordless-auth' },
+  { name: 'AI-Powered PR Drafting & Description', href: '/services/ai-powered-pr-drafting' },
+  { name: 'Enterprise AI Question Answering (Internal Knowledge)', href: '/services/ai-powered-question-answering' },
+  { name: 'AI-Powered SEO Content Optimizer', href: '/services/ai-powered-seo-optimizer' },
+  { name: 'AI-Powered Tech Debt Quantifier', href: '/services/ai-powered-tech-debt-quantifier' },
+  { name: 'AI-Powered Test Suite Generator', href: '/services/ai-powered-test-generation' },
+  { name: 'AI-Powered UI Generator (Text-to-UI)', href: '/services/ai-powered-ui-generator' },
+  { name: 'AI PRD & User Story Generator', href: '/services/ai-prd-story-gen' },
+  { name: 'AI Predictive Churn & Retention', href: '/services/ai-predictive-churn' },
+  { name: 'Streaming Fraud Detection (Real-Time)', href: '/services/ai-predictive-fraud-detection-streaming' },
+  { name: 'AI Predictive Maintenance & Asset Monitoring', href: '/services/ai-predictive-maintenance' },
+  { name: 'Predictive Maintenance Advisor', href: '/services/ai-predictive-maintenance-advisor' },
+  { name: 'Predictive Maintenance for Manufacturing', href: '/services/ai-predictive-maintenance-factory' },
+  { name: 'Predictive Supply Chain Optimizer', href: '/services/ai-predictive-supply-chain-optimizer' },
+  { name: 'AI Predictive Workforce Planning', href: '/services/ai-predictive-workforce-planning' },
+  { name: 'AI Presentation & Pitch Deck Maker', href: '/services/ai-presentation-maker' },
+  { name: 'Ai Privilege Access Manager', href: '/services/ai-privilege-access-manager' },
+  { name: 'AI Procurement Intelligence', href: '/services/ai-procurement' },
+  { name: 'AI Product Analytics & Anomaly Detection', href: '/services/ai-product-analytics' },
+  { name: 'Product Analytics & AI Insights', href: '/services/ai-product-analytics-insights' },
+  { name: 'Ai Product Photo Enhancer', href: '/services/ai-product-photo-enhancer' },
+  { name: 'Ai Profitability Dashboard', href: '/services/ai-profitability-dashboard' },
+  { name: 'AI Project Planning & Scheduling', href: '/services/ai-project-planning' },
+  { name: 'Ai Quality Inspection', href: '/services/ai-quality-inspection' },
+  { name: 'Ai Quantum Optimizer', href: '/services/ai-quantum-optimizer' },
+  { name: 'AI RAG & Knowledge Systems', href: '/services/ai-rag-knowledge-systems' },
+  { name: 'AI Real Estate Valuation & Analytics', href: '/services/ai-real-estate-valuation' },
+  { name: 'Real-Time Translation Engine', href: '/services/ai-realtime-translation' },
+  { name: 'AI Red Team Automation', href: '/services/ai-red-team-automation' },
+  { name: 'AI for Regulated Industries', href: '/services/ai-regulated-industries' },
+  { name: 'AI Regulatory Compliance Monitor', href: '/services/ai-regulatory-compliance-monitor' },
+  { name: 'Ai Reinforcement Learning Ops', href: '/services/ai-reinforcement-learning-ops' },
+  { name: 'Reinforcement Learning Optimiser', href: '/services/ai-reinforcement-learning-optimiser' },
+  { name: 'AI Resume Optimizer', href: '/services/ai-resume-optimizer' },
+  { name: 'AI Retail Personalization Engine', href: '/services/ai-retail-personalization' },
+  { name: 'AI Retail Recommendation Engine', href: '/services/ai-retail-recommendation-engine' },
+  { name: 'AI Revenue Clarity & Forecasting', href: '/services/ai-revenue-clarity' },
+  { name: 'AI Revenue Operations (RevOps)', href: '/services/ai-revenue-ops' },
+  { name: 'AI Revenue Optimization & Pricing Intelligence', href: '/services/ai-revenue-optimization' },
+  { name: 'Revenue Optimization Engine', href: '/services/ai-revenue-optimizer' },
+  { name: 'AI Strategy & Roadmap Consulting', href: '/services/ai-roadmap-strategy' },
+  { name: 'AI Robotics Integration & Autonomous Systems', href: '/services/ai-robotics-integration' },
+  { name: 'AI Robotic Process Automation (RPA)', href: '/services/ai-rpa-automation' },
+  { name: 'Ai Rpa Platform', href: '/services/ai-rpa-platform' },
+  { name: 'Rx Prior-Auth Automation', href: '/services/ai-rx-prior-auth' },
+  { name: 'AI Sales Coach & Call Analysis', href: '/services/ai-sales-coach' },
+  { name: 'AI Sales Intelligence', href: '/services/ai-sales-intelligence' },
+  { name: 'Ai Secrets Management', href: '/services/ai-secrets-management' },
+  { name: 'AI Security & Responsible AI', href: '/services/ai-security-responsible-ai' },
+  { name: 'AI Sentiment Analysis & Brand Monitoring', href: '/services/ai-sentiment-analysis' },
+  { name: 'AI Sentiment & Brand Pulse Monitor', href: '/services/ai-sentiment-brand-pulse' },
+  { name: 'Ai Seo Content Optimizer', href: '/services/ai-seo-content-optimizer' },
+  { name: 'AI SEO Content Optimizer', href: '/services/ai-seo-optimizer' },
+  { name: 'Ai Serverless Platform', href: '/services/ai-serverless-platform' },
+  { name: 'Ai Smart Document Redactor', href: '/services/ai-smart-document-redactor' },
+  { name: 'AI Social Scheduler & Content Composer', href: '/services/ai-social-scheduler' },
+  { name: 'Social Sentiment Tracker', href: '/services/ai-social-sentiment-tracker' },
+  { name: 'AI Spatial Computing & AR/VR Analytics', href: '/services/ai-spatial-computing' },
+  { name: 'Spatial Computing 3D Scene Generator', href: '/services/ai-spatial-computing-3d-scene' },
+  { name: 'AI Speech & Voice Solutions', href: '/services/ai-speech-voice-solutions' },
+  { name: 'AI Strategy & Roadmap', href: '/services/ai-strategy-roadmap' },
+  { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain' },
+  { name: 'AI Supply Chain Intelligence', href: '/services/ai-supply-chain-intelligence' },
+  { name: 'AI Supply Chain Optimization & Demand Forecasting', href: '/services/ai-supply-chain-optimizer' },
+  { name: 'AI Supply Chain Predictor', href: '/services/ai-supply-chain-predictor' },
+  { name: 'AI Supply Chain Visibility Platform', href: '/services/ai-supply-chain-visibility' },
+  { name: 'AI Supply & Demand Planner', href: '/services/ai-supply-demand-planner' },
+  { name: 'AI Sustainability & Carbon Tracker', href: '/services/ai-sustainability-carbon-tracker' },
+  { name: 'AI for Sustainable Operations (Green AI)', href: '/services/ai-sustainable-ops' },
+  { name: 'Sustainable Supply Chain Radar', href: '/services/ai-sustainable-supply-chain-radar' },
+  { name: 'AI Talent Acquisition & Hiring Intelligence', href: '/services/ai-talent-acquisition' },
+  { name: 'AI Talent Acquisition Platform', href: '/services/ai-talent-acquisition-platform' },
+  { name: 'Ai Tax Compliance Calculator', href: '/services/ai-tax-compliance-calculator' },
+  { name: 'Ai Test Automation Framework', href: '/services/ai-test-automation-framework' },
+  { name: 'AI Testing & Quality Assurance', href: '/services/ai-testing-qa' },
+  { name: 'AI Threat Hunting & Investigation', href: '/services/ai-threat-hunting' },
+  { name: 'Ai Threat Intelligence', href: '/services/ai-threat-intelligence' },
+  { name: 'Ai Trading Signal Engine', href: '/services/ai-trading-signal-engine' },
+  { name: 'AI Training Data Platform', href: '/services/ai-training-data-platform' },
+  { name: 'AI Translation & Localization', href: '/services/ai-translation-services' },
+  { name: 'AI Voice Clone + Text-to-Speech Engine', href: '/services/ai-tts-voice-clone' },
+  { name: 'Ai Tutoring Platform', href: '/services/ai-tutoring-platform' },
+  { name: 'AI Video Analytics', href: '/services/ai-video-analytics' },
+  { name: 'AI Video Generation & Editing', href: '/services/ai-video-generation' },
+  { name: 'AI Video Generator & Editor', href: '/services/ai-video-generator' },
+  { name: 'Computer Vision Quality Inspection', href: '/services/ai-vision-quality-inspection' },
+  { name: 'AI Visual Inspection & Quality Control', href: '/services/ai-visual-inspection' },
+  { name: 'AI Voice Agent (Phone)', href: '/services/ai-voice-agent' },
+  { name: 'Ai Voice Agent Builder', href: '/services/ai-voice-agent-builder' },
+  { name: 'AI Voice Agent Platform', href: '/services/ai-voice-agent-platform' },
+  { name: 'AI Voice Assistant', href: '/services/ai-voice-assistant' },
+  { name: 'Voice Assistant Pro', href: '/services/ai-voice-assistant-pro' },
+  { name: 'Ai Voice Brand Consistency', href: '/services/ai-voice-brand-consistency' },
+  { name: 'AI Voice Cloning & Synthesis', href: '/services/ai-voice-cloning' },
+  { name: 'AI Voice Cloning for Marketing', href: '/services/ai-voice-cloning-marketing' },
+  { name: 'Ai Voice Cloning Studio', href: '/services/ai-voice-cloning-studio' },
+  { name: 'Voice-First CRM & Sales Assistant', href: '/services/ai-voice-first-crm' },
+  { name: 'Voice-to-Action Platform', href: '/services/ai-voice-to-action-platform' },
+  { name: 'Ai Vpc Zero Trust', href: '/services/ai-vpc-zero-trust' },
+  { name: 'Automated Data Labeling for Computer Vision & NLP', href: '/services/automated-data-labeling' },
+  { name: 'Autonomous Code Review Agent', href: '/services/autonomous-code-review-agent' },
+  { name: 'Autonomous Growth Intelligence', href: '/services/autonomous-growth-intelligence' },
+  { name: 'Brand Monitoring & Fake Domain Detection', href: '/services/brand-monitoring' },
+  { name: 'Business Intelligence', href: '/services/business-intelligence' },
+  { name: 'Computer Vision Quality Inspection', href: '/services/computer-vision-inspection' },
+  { name: 'Content Generation', href: '/services/content-generation' },
+  { name: 'Customer Experience', href: '/services/customer-experience' },
+  { name: 'Intelligent Document Processing v2', href: '/services/doc-intelligence-v2' },
+  { name: 'Document Processing', href: '/services/document-processing' },
+  { name: 'Energy Management', href: '/services/energy-management' },
+  { name: 'Fraud Detection', href: '/services/fraud-detection' },
+  { name: 'AI Copywriting & Content Studio', href: '/services/generative-ai-copywriting' },
+  { name: 'Generative AI Enterprise', href: '/services/generative-ai-enterprise' },
+  { name: 'Generative AI Legal Document Review', href: '/services/generative-ai-legal-review' },
+  { name: 'Generative AI Document Summarizer', href: '/services/generative-ai-summarization' },
+  { name: 'Generative AI Video Editor', href: '/services/generative-ai-video-editor' },
+  { name: 'Generative AI Voice Agent', href: '/services/generative-ai-voice-agent' },
+  { name: 'Generative Data Synthesis for Model Training', href: '/services/generative-data-synthesis' },
+  { name: 'Generative UX Research Synthesis', href: '/services/generative-ux-research-synthesis' },
+  { name: 'HR Analytics', href: '/services/hr-analytics' },
+  { name: 'AI Invoice Processing & Auto-Posting', href: '/services/invoice-ai-automation' },
+  { name: 'AI Legal Document Review & Risk Analysis', href: '/services/legal-doc-review-ai' },
+  { name: 'Marketing Automation', href: '/services/marketing-automation' },
+  { name: 'Meeting AI Assistant (Record, Transcribe, Summarize)', href: '/services/meeting-ai-assistant' },
+  { name: 'MLOps Platform', href: '/services/mlops-platform' },
+  { name: 'Object Detection Surveillance', href: '/services/object-detection-surveillance' },
+  { name: 'Predictive Churn Risk Scoring', href: '/services/predictive-churn-risk' },
+  { name: 'Predictive Lead Scoring Model', href: '/services/predictive-lead-scoring' },
+  { name: 'Predictive Maintenance', href: '/services/predictive-maintenance' },
+  { name: 'Quality Assurance', href: '/services/quality-assurance' },
+  { name: 'Secure File Transfer', href: '/services/secure-file-transfer' },
+  { name: 'Supply Chain', href: '/services/supply-chain' },
+  { name: 'Vector Database', href: '/services/vector-database' },
 ];
 
 export const FEATURED_PRODUCT_LINKS: readonly NavigationLink[] = [
@@ -911,4 +414,310 @@ export const PRODUCT_LINKS: readonly NavigationLink[] = [
   { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant' },
   { name: 'Autonomous Media Prompt Studio', href: '/ai-lab/autonomous-media-prompt-studio' },
   { name: 'Autonomous RAG Knowledge Workspace', href: '/ai-lab/autonomous-rag-knowledge-workspace' },
+];
+
+export const IT_SERVICE_LINKS: readonly NavigationLink[] = [
+  { name: 'Accessibility & WCAG Compliance', href: '/services/accessibility-compliance' },
+  { name: 'API Gateway & Management', href: '/services/api-gateway-management' },
+  { name: 'API Development & Integration', href: '/services/api-integration' },
+  { name: 'API Management & Developer Gateway', href: '/services/api-management-gateway' },
+  { name: 'APM Application Performance', href: '/services/apm-application-performance' },
+  { name: 'Chaos Engineering & Resilience Testing', href: '/services/chaos-engineering-svc' },
+  { name: 'AI Cloud Cost Optimizer', href: '/services/cloud-cost-ai-optimizer' },
+  { name: 'Cloud FinOps & Cost Intelligence', href: '/services/cloud-finops-1' },
+  { name: 'Cloud-Native Application Development', href: '/services/cloud-native-app-dev' },
+  { name: 'Container & Kubernetes Security', href: '/services/container-security-lifecycle' },
+  { name: 'AI Cyber Threat Intelligence Platform', href: '/services/cyber-threat-intelligence' },
+  { name: 'AI Data Warehouse Modernization', href: '/services/data-warehouse-modernization' },
+  { name: 'Database Migration Service', href: '/services/db-migration-service' },
+  { name: 'Generative AI for DevOps & CI/CD', href: '/services/devops-gen-ai-ci-cd' },
+  { name: 'DevSecOps Pipeline Automation', href: '/services/devsecops-pipeline' },
+  { name: 'Edge Computing & Edge AI Deployment', href: '/services/edge-computing-deploy' },
+  { name: 'Unified Endpoint Management (UEM)', href: '/services/endpoint-management' },
+  { name: 'Enterprise Backup & Disaster Recovery', href: '/services/enterprise-backup-dr' },
+  { name: 'ETL Pipeline Optimization & Modernization', href: '/services/etl-pipeline-optimization' },
+  { name: 'Event-Driven Architecture (EDA) Platform', href: '/services/event-driven-architecture' },
+  { name: 'EVM Smart Contract Audit', href: '/services/evm-smart-contract-audit' },
+  { name: 'Incident Response Retainer (IR)', href: '/services/incident-response-retainer' },
+  { name: 'It Api Gateway Ai', href: '/services/it-api-gateway-ai' },
+  { name: 'API Gateway Management', href: '/services/it-api-gateway-management' },
+  { name: 'API Gateway + OpenAPI Management', href: '/services/it-api-gateway-openapi' },
+  { name: 'API Management & Gateway', href: '/services/it-api-management-gateway' },
+  { name: 'It Api Performance Testing', href: '/services/it-api-performance-testing' },
+  { name: 'API Security Testing', href: '/services/it-apisec-testing' },
+  { name: 'IT Asset Lifecycle Manager', href: '/services/it-asset-lifecycle' },
+  { name: 'Automated Incident Response (SOAR)', href: '/services/it-automated-incident-response' },
+  { name: 'Backup & Disaster Recovery Platform', href: '/services/it-backup-disaster-recovery' },
+  { name: 'Backup & Disaster Recovery Solution', href: '/services/it-backup-disaster-recovery-solution' },
+  { name: 'Backup / DR/BCaaS', href: '/services/it-backup-dr-bc-as-a-service' },
+  { name: 'Blockchain Development & Smart Contract Auditing', href: '/services/it-blockchain-development' },
+  { name: 'Business Continuity & Disaster Recovery', href: '/services/it-business-continuity-dr' },
+  { name: 'Business Intelligence Cockpit', href: '/services/it-business-intelligence-cockpit' },
+  { name: 'IT Change Risk Analyser', href: '/services/it-change-risk-analyser' },
+  { name: 'CI/CD Security Gate-as-a-Service', href: '/services/it-cicd-security-gate-as-service' },
+  { name: 'IT Cloud Compliance Scanner', href: '/services/it-cloud-compliance-scanner' },
+  { name: 'It Cloud Cost Governance', href: '/services/it-cloud-cost-governance' },
+  { name: 'Cloud Cost Management Platform', href: '/services/it-cloud-cost-management-platform' },
+  { name: 'Cloud-Native Storage Optimizer', href: '/services/it-cloud-native-storage' },
+  { name: 'Code Quality & Governance Platform', href: '/services/it-code-quality-governance' },
+  { name: 'Code Quality & Pre-Merge Automation', href: '/services/it-code-quality-pre-merge' },
+  { name: 'IT Strategy & Digital Transformation Consulting', href: '/services/it-consulting' },
+  { name: 'Data Lakehouse Governance', href: '/services/it-data-lakehouse-governance' },
+  { name: 'Data Warehouse Modernization', href: '/services/it-data-warehouse-modernization' },
+  { name: 'DevOps Platform & Unified Toolchain', href: '/services/it-devops-platform-toolchain' },
+  { name: 'DevSecOps & Security Automation', href: '/services/it-devsecops-1' },
+  { name: 'Digital Workplace Platform', href: '/services/it-digital-workplace-platform' },
+  { name: 'E-Commerce Platform Advisor', href: '/services/it-e-commerce-platform-advisor' },
+  { name: 'Edge Computing Deployment', href: '/services/it-edge-computing-deploy' },
+  { name: 'Edge Computing Orchestration', href: '/services/it-edge-computing-orchestration' },
+  { name: 'Managed Endpoint Detection & Response (EDR)', href: '/services/it-endpoint-detection-response' },
+  { name: 'Endpoint Management (macOS & Windows)', href: '/services/it-endpoint-management-macos-windows' },
+  { name: 'Endpoint Security & Compliance Monitor', href: '/services/it-endpoint-security-compliance' },
+  { name: 'Endpoint Security & Compliance Monitor', href: '/services/it-endpoint-security-compliance-monitor' },
+  { name: 'ESG Compliance Automation', href: '/services/it-esg-compliance-automation' },
+  { name: 'IT Help Desk (AI-Powered)', href: '/services/it-help-desk-glucidex' },
+  { name: 'Identity & Access Management (SSO/MFA)', href: '/services/it-identity-access-management-sso' },
+  { name: 'Identity Governance & Administration', href: '/services/it-identity-governance' },
+  { name: 'It Incident Response Simulator', href: '/services/it-incident-response-simulator' },
+  { name: 'Enterprise IoT Device Management', href: '/services/it-iot-device-management' },
+  { name: 'ITIL Service Management (ITSM) Platform', href: '/services/it-itil-service-management' },
+  { name: 'Kubernetes Multi-Cloud Management', href: '/services/it-kubernetes-multicloud' },
+  { name: 'Legacy App Containerization', href: '/services/it-legacy-app-containerization' },
+  { name: 'Low-Code Platform Integration', href: '/services/it-low-code-platform-integration' },
+  { name: 'Mainframe Modernization Service', href: '/services/it-mainframe-modernization' },
+  { name: 'Multi-Cloud Cost Governance', href: '/services/it-multi-cloud-cost-governance' },
+  { name: 'Multi-Cloud Networking', href: '/services/it-multi-cloud-networking' },
+  { name: 'Next-Generation Firewall', href: '/services/it-network-firewall-next-generation' },
+  { name: 'AI-Powered Observability & SRE', href: '/services/it-observability-1' },
+  { name: 'It Observability Logging', href: '/services/it-observability-logging' },
+  { name: 'Unified Observability Platform', href: '/services/it-observability-unified' },
+  { name: 'PCI DSS Compliance Suite', href: '/services/it-pcii-compliance-suite' },
+  { name: 'Internal Developer Platform (IDP) Engineering', href: '/services/it-platform-engineering-1' },
+  { name: 'Remote Collaboration Suite', href: '/services/it-remote-collaboration-suites' },
+  { name: 'IT Service Asset & Configuration Management', href: '/services/it-sam-platform' },
+  { name: 'SAP Integration Hub', href: '/services/it-sap-integration-hub' },
+  { name: 'Secrets Management as a Service', href: '/services/it-secrets-management' },
+  { name: 'Secure File Transfer (MFT)', href: '/services/it-secure-file-transfer' },
+  { name: 'Serverless API Gateway', href: '/services/it-serverless-api-gateway' },
+  { name: 'IT Service Catalog Builder', href: '/services/it-service-catalog-builder' },
+  { name: 'IT Service Desk Automation', href: '/services/it-service-desk-automation' },
+  { name: 'It Synthetic Monitoring', href: '/services/it-synthetic-monitoring' },
+  { name: 'Unified Endpoint & Device Management', href: '/services/it-unified-endpoint-management' },
+  { name: 'IT Vendor & Contract Management', href: '/services/it-vendor-contract-mgmt' },
+  { name: 'IT Vendor Risk & Trust Portal', href: '/services/it-vendor-trust-portal' },
+  { name: 'Zero Trust Security Implementation', href: '/services/it-zero-trust-1' },
+  { name: 'Kubernetes GitOps Enterprise Platform', href: '/services/k8s-gitops-enterprise' },
+  { name: 'Container Orchestration & Kubernetes Management', href: '/services/kubernetes-management' },
+  { name: 'Legacy App Refactoring & Strangler Fig', href: '/services/legacy-app-refactor' },
+  { name: 'Legacy System Modernization & Re-Platforming', href: '/services/legacy-system-modernization' },
+  { name: 'Log Aggregation & Search', href: '/services/log-aggregation-platform' },
+  { name: 'Low-Code Platform Customization & Integration', href: '/services/low-code-platform-customization' },
+  { name: 'Mainframe Modernization', href: '/services/mainframe-modernization' },
+  { name: 'Managed SOC & Threat Intelligence', href: '/services/managed-soc-threat-intelligence' },
+  { name: 'Network Architecture & SD-WAN', href: '/services/network-architecture-sdwan' },
+  { name: 'Network Performance Monitoring', href: '/services/network-performance-monitoring' },
+  { name: 'Node.js Performance Tuning & Profiling', href: '/services/nodejs-performance-tuning' },
+  { name: 'Full-Stack Observability Platform', href: '/services/observability-platform' },
+  { name: 'Patch Management', href: '/services/patch-management' },
+  { name: 'Performance Engineering as a Service', href: '/services/performance-engineering' },
+  { name: 'Quantum-Ready Cryptography & Security Assessment', href: '/services/quantum-ready-security' },
+  { name: 'Reliability Platform & SRE Enablement', href: '/services/reliability-sre' },
+  { name: 'Remote IT Support & Helpdesk Outsourcing', href: '/services/remote-it-support' },
+  { name: 'SaaS Product Development', href: '/services/saas-development' },
+  { name: 'Security Operations Center as a Service (SOCaaS)', href: '/services/soc-as-a-service' },
+  { name: 'Technical Writing & Developer Documentation', href: '/services/tech-writing-docs' },
+  { name: 'Vulnerability Assessment & Penetration Testing', href: '/services/vulnerability-assessment-penetration-testing' },
+];
+export const CLOUD_SERVICE_LINKS: readonly NavigationLink[] = [
+  { name: 'API Development & Integration', href: '/services/api-development' },
+  { name: 'AWS Serverless Migration', href: '/services/aws-serverless-migration' },
+  { name: 'Backup & Disaster Recovery', href: '/services/backup-disaster-recovery' },
+  { name: 'CDN & Edge Cache', href: '/services/cdn-edge-cache' },
+  { name: 'AI/MLOps Cloud Platform', href: '/services/cloud-ai-mlops-platform' },
+  { name: 'Enterprise API Gateway', href: '/services/cloud-api-gateway-enterprise' },
+  { name: 'Intelligent Blob Storage Tiering', href: '/services/cloud-blob-intelligent-tiering' },
+  { name: 'Cloud BOM & Dependency Visualiser', href: '/services/cloud-bom-visualiser' },
+  { name: 'Chaos Engineering as a Service', href: '/services/cloud-chaos-engineering-platform' },
+  { name: 'Container Registry + Trivy Scan', href: '/services/cloud-container-registry-trivy-scan' },
+  { name: 'Cloud Cost Anomaly Detector', href: '/services/cloud-cost-anomaly-detector' },
+  { name: 'Cloud Cost Optimization (FinOps)', href: '/services/cloud-cost-optimization-service' },
+  { name: 'Data Lakehouse Platform', href: '/services/cloud-data-lakehouse-platform' },
+  { name: 'Disaster Recovery Orchestration', href: '/services/cloud-disaster-recovery-orchestration' },
+  { name: 'Edge AI Deployment Platform', href: '/services/cloud-edge-ai-deployment-platform' },
+  { name: 'Global Edge Computing Network', href: '/services/cloud-edge-computing-global' },
+  { name: 'Event-Driven Microservices Platform', href: '/services/cloud-event-driven-microservices' },
+  { name: 'GitOps Enterprise Platform', href: '/services/cloud-gitops-enterprise-platform' },
+  { name: 'Hybrid Multi-Cloud Orchestrator', href: '/services/cloud-hybrid-multi-cloud-orchestrator' },
+  { name: 'Hybrid + Multi-Cloud Networking', href: '/services/cloud-hybrid-multicloud-networking' },
+  { name: 'Kubernetes Cost Optimizer', href: '/services/cloud-kubernetes-cost-optimizer' },
+  { name: 'Kubernetes GitOps Platform', href: '/services/cloud-kubernetes-gitops-platform' },
+  { name: 'Cloud Migration & Modernization', href: '/services/cloud-migration' },
+  { name: 'Cloud Migration Readiness Score', href: '/services/cloud-migration-readiness' },
+  { name: 'Observability Stack as a Service', href: '/services/cloud-observability-stack' },
+  { name: 'Serverless API Platform', href: '/services/cloud-serverless-api-platform' },
+  { name: 'Serverless Framework Deployment', href: '/services/cloud-serverless-framework-deploy' },
+  { name: 'Spot Instance Optimizer', href: '/services/cloud-spot-instance-optimizer' },
+  { name: 'Cloud Storage Lifecycle & Compliance', href: '/services/cloud-storage-lifecycle-policy' },
+  { name: 'Cloud Storage Tiering Intelligence', href: '/services/cloud-storage-tiering' },
+  { name: 'Zero Trust Access Platform', href: '/services/cloud-zero-trust-access-platform' },
+  { name: 'Cloud Security Posture Management (CSPM)', href: '/services/cspm-cloud-posture' },
+  { name: 'Cybersecurity Audit', href: '/services/cybersecurity-audit' },
+  { name: 'Data Pipeline Architecture & Engineering', href: '/services/data-pipeline-architecture' },
+  { name: 'DevOps Consulting & Implementation', href: '/services/devops-consulting' },
+  { name: 'Digital Workplace Solutions', href: '/services/digital-workplace' },
+  { name: 'Disaster Recovery Platform', href: '/services/disaster-recovery-platform' },
+  { name: 'Disaster Recovery & Business Continuity', href: '/services/disaster-recovery-services' },
+  { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+  { name: 'FinOps Cloud Governance', href: '/services/fn-finops-platform' },
+  { name: 'GCP Data Analytics Platform', href: '/services/gcp-data-analytics-platform' },
+  { name: 'Hybrid Multi-Cloud Networking', href: '/services/hybrid-multi-cloud-net' },
+  { name: 'Identity & Access Management (IAM)', href: '/services/identity-access-management' },
+  { name: '5G Network Planning & Deployment', href: '/services/it-5g-network-deployment' },
+  { name: 'API Management Platform & Developer Portal', href: '/services/it-api-management' },
+  { name: 'IT Asset Management & Lifecycle', href: '/services/it-asset-management' },
+  { name: 'IT Capacity Planning & Resource Forecasting', href: '/services/it-capacity-planning' },
+  { name: 'Database-as-a-Service & Managed Data Platforms', href: '/services/it-database-as-a-service' },
+  { name: 'Disaster Recovery & Business Continuity', href: '/services/it-disaster-recovery' },
+  { name: 'Edge Computing & IoT Infrastructure', href: '/services/it-edge-computing-solutions' },
+  { name: 'Container Orchestration & Kubernetes Management', href: '/services/it-kubernetes-management' },
+  { name: 'Microservices Architecture & API Gateway Design', href: '/services/it-microservices-architecture' },
+  { name: 'Network Automation & SD-WAN Management', href: '/services/it-network-automation' },
+  { name: 'Observability Platform & SRE Consulting', href: '/services/it-observability-platform' },
+  { name: 'Platform Engineering & Internal Developer Portal', href: '/services/it-platform-engineering' },
+  { name: 'Serverless Architecture & Function-as-a-Service', href: '/services/it-serverless-architecture' },
+  { name: 'IT Service Desk & Help Desk', href: '/services/it-service-desk' },
+  { name: 'Voice Infrastructure & Contact Center Solutions', href: '/services/it-voice-infrastructure' },
+  { name: 'Wireless Network Design & Optimization', href: '/services/it-wireless-network-design' },
+  { name: 'Intelligent Load Balancer', href: '/services/load-balancer-service' },
+  { name: 'Managed SOC & Security Operations', href: '/services/managed-soc-security' },
+  { name: 'Mobile App Development', href: '/services/mobile-development' },
+  { name: 'Enterprise Network Infrastructure', href: '/services/network-infrastructure' },
+  { name: 'Network Security Operations Center', href: '/services/network-security-operations' },
+  { name: 'Serverless API Production Platform', href: '/services/serverless-api-platform' },
+  { name: 'Sovereign & Regulated Cloud Hosting', href: '/services/sovereign-cloud-hosting' },
+  { name: 'Virtual Private Cloud', href: '/services/virtual-private-cloud' },
+  { name: 'Zero-Trust Network Access (ZTNA)', href: '/services/zero-trust-network-access' },
+];
+export const SECURITY_SERVICE_LINKS: readonly NavigationLink[] = [
+  { name: 'Attack Surface Management (ASM)', href: '/services/attack-surface-management' },
+  { name: 'Automated Penetration Testing', href: '/services/automated-pen-testing' },
+  { name: 'Compliance Automation', href: '/services/compliance-automation' },
+  { name: 'Compliance Automation Engine', href: '/services/compliance-automation-engine' },
+  { name: 'Container Security Runtime', href: '/services/container-security-runtime' },
+  { name: 'Cybersecurity & Penetration Testing', href: '/services/cybersecurity' },
+  { name: 'Digital Rights Management', href: '/services/digital-rights-management' },
+  { name: 'Enterprise Data Loss Prevention (DLP)', href: '/services/enterprise-dlp' },
+  { name: 'IAM & Identity Platform', href: '/services/iam-identity-platform' },
+  { name: 'Identity & Access Management (IAM) Platform', href: '/services/it-identity-access-management' },
+  { name: 'Incident Response & Security Operations Center', href: '/services/it-incident-response' },
+  { name: 'Managed SOC + Threat Intelligence as a Service', href: '/services/it-managed-soc' },
+  { name: 'Network Security Monitoring & SIEM', href: '/services/it-network-security-monitoring' },
+  { name: 'Penetration Testing & Vulnerability Assessment', href: '/services/it-penetration-testing' },
+  { name: 'Quantum Computing Readiness Assessment', href: '/services/it-quantum-readiness' },
+  { name: 'Zero Trust Security Architecture', href: '/services/it-zero-trust-architecture' },
+  { name: 'Managed EDR + SIEM SOC Service', href: '/services/managed-edr-siem' },
+  { name: 'MISP Threat Intelligence Platform', href: '/services/misp-threat-intel' },
+  { name: 'Passwordless Authentication', href: '/services/passwordless-auth' },
+  { name: 'Payment Compliance Gateway', href: '/services/payment-compliance-gateway' },
+  { name: 'Penetration Testing & Red Team', href: '/services/pentest-redteam' },
+  { name: 'Privacy Program & Data Governance', href: '/services/privacy-program' },
+  { name: 'Privileged Access Management', href: '/services/privileged-access-management' },
+  { name: 'Ransomware Recovery & IR for Insurers', href: '/services/ransomware-recovery' },
+  { name: 'AI Threat Hunter', href: '/services/security-ai-threat-hunter' },
+  { name: 'API Security Gateway', href: '/services/security-api-security-gateway' },
+  { name: 'Security Breach & Attack Simulation Platform', href: '/services/security-bas-platform' },
+  { name: 'Browser Isolation & Web Security', href: '/services/security-browser-isolation' },
+  { name: 'Browser Isolation Platform', href: '/services/security-browser-isolation-platform' },
+  { name: 'Cloud Threat Detection & Response', href: '/services/security-cloud-threat-detection' },
+  { name: 'Cloud Zero Trust Access (ZTNA)', href: '/services/security-cloud-zero-trust-access' },
+  { name: 'Compliance & Audit Automation', href: '/services/security-compliance-audit-platform' },
+  { name: 'Identity Governance & Administration (IGA)', href: '/services/security-identity-governance-igac' },
+  { name: 'Security Log Orchestration & Correlation', href: '/services/security-log-orchestration' },
+  { name: 'Network Segmentation & Zero Trust', href: '/services/security-network-segmentation-zero-trust' },
+  { name: 'Privacy Enhancing Technologies', href: '/services/security-privacy-enhancing-technologies' },
+  { name: 'Privacy Program Automation', href: '/services/security-privacy-program-automation' },
+  { name: 'Privileged Access Management', href: '/services/security-privileged-access-management' },
+  { name: 'SBOM & Supply Chain Security', href: '/services/security-sbom-supply-chain' },
+  { name: 'Secrets Management & Vault', href: '/services/security-secrets-management-vault' },
+  { name: 'Security Awareness Training Platform', href: '/services/security-security-awareness-training' },
+  { name: 'Supply Chain SBOM & Vulnerability Intelligence', href: '/services/security-supply-chain-sbom' },
+  { name: 'Software Bill-of-Materials Manager', href: '/services/security-supply-chain-sbom-manager' },
+  { name: 'Threat Intelligence Platform', href: '/services/security-threat-intelligence-platform' },
+  { name: 'Proactive Remediation (PRM)', href: '/services/security-vulnerability-management-pra' },
+  { name: 'Web Application Firewall', href: '/services/security-web-application-firewall' },
+  { name: 'SIEM Security Platform', href: '/services/siem-security-platform' },
+  { name: 'Software Supply Chain Security', href: '/services/software-supply-chain-sec' },
+  { name: 'Zero Trust Access Gateway', href: '/services/zero-trust-access' },
+];
+export const DATA_SERVICE_LINKS: readonly NavigationLink[] = [
+  { name: 'AI Data Quality & Enforcement Engine', href: '/services/ai-data-quality-engine' },
+  { name: 'AI ETL Pipeline Builder', href: '/services/ai-etl-pipeline-builder' },
+  { name: 'Analytics Attribution & Marketing Mix Modeling', href: '/services/analytics-attribution-mix' },
+  { name: 'Batch ETL Platform', href: '/services/batch-etl-platform' },
+  { name: 'Analytics Engineering Platform', href: '/services/data-analytics-engineering-platform' },
+  { name: 'Data Cost Governance & FinOps', href: '/services/data-cost-finops' },
+  { name: 'Data Reconciliation Engine', href: '/services/data-data-reconciliation-engine' },
+  { name: 'Document Intelligence + Vector Search', href: '/services/data-document-vector-search' },
+  { name: 'Data Engineering & ETL Pipelines', href: '/services/data-engineering' },
+  { name: 'Event Sourcing & CQRS Platform', href: '/services/data-event-sourcing-platform' },
+  { name: 'Feature Store Platform', href: '/services/data-feature-store-platform' },
+  { name: 'Geospatial Analytics Engine', href: '/services/data-geospatial-analytics-engine' },
+  { name: 'Data Governance & Catalog', href: '/services/data-governance-platform' },
+  { name: 'Graph Analytics & Network Intelligence Engine', href: '/services/data-graph-analytics-engine' },
+  { name: 'Graph Analytics & Network Intelligence', href: '/services/data-graph-analytics-platform' },
+  { name: 'Image & Video Semantic Search', href: '/services/data-image-video-search' },
+  { name: 'Image and Video Search Engine', href: '/services/data-image-video-search-engine' },
+  { name: 'Data Lakehouse Platform', href: '/services/data-lakehouse' },
+  { name: 'Log Analytics & SIP Platform', href: '/services/data-log-analytics-platform' },
+  { name: 'Data Observability & Quality Monitor', href: '/services/data-observability-monitor' },
+  { name: 'PII Scanner & Classifier', href: '/services/data-pii-scanner-classifier' },
+  { name: 'Predictive Maintenance (Time-Series)', href: '/services/data-predictive-maintenance-timeseries' },
+  { name: 'Data Product Catalog & Lineage', href: '/services/data-product-catalog-svc' },
+  { name: 'Real-Time Operational Analytics', href: '/services/data-real-time-operational-analytics' },
+  { name: 'Real-Time Time-Series Analytics Platform', href: '/services/data-realtime-time-series-analytics' },
+  { name: 'Real-time Event & Trending Aggregator', href: '/services/data-realtime-trending-aggregator' },
+  { name: 'Real-Time Trending Analytics', href: '/services/data-realtime-trending-analytics' },
+  { name: 'Data Science Platform (Managed)', href: '/services/data-science-platform' },
+  { name: 'Data Sync & Change Capture', href: '/services/data-sync-engineering' },
+  { name: 'Synthetic Data Generator & Privacy Shield', href: '/services/data-synthetic-data-generator' },
+  { name: 'Unstructured Data Lake', href: '/services/data-unstructured-data-lake' },
+  { name: 'Database Optimization & Management', href: '/services/database-optimization' },
+  { name: 'Streaming ETL Pipeline', href: '/services/etl-streaming-pipeline' },
+  { name: 'Feature Engineering Platform', href: '/services/feature-engineering-platform' },
+  { name: 'Graph Database & Analytics', href: '/services/graph-database-analytics' },
+  { name: 'Data Mesh & Modern Data Platform Architecture', href: '/services/it-data-mesh-implementation' },
+  { name: 'Observability Data Lakehouse', href: '/services/observability-lakehouse' },
+  { name: 'Self-Service Analytics Platform', href: '/services/self-service-analytics' },
+  { name: 'Real-Time Streaming Analytics', href: '/services/streaming-realtime-analytics' },
+];
+export const AUTOMATION_SERVICE_LINKS: readonly NavigationLink[] = [
+  { name: 'Agentic Workflow Orchestrator', href: '/services/agentic-workflow-orchestrator' },
+  { name: 'AI-Powered Office Automation', href: '/services/ai-office-automation' },
+  { name: 'AI Self-Healing Infrastructure', href: '/services/ai-self-healing-infra' },
+  { name: 'Commercial Leasing & Property Tour Scheduler', href: '/services/automation-commercial-leasing-tour-scheduler' },
+  { name: 'Legal Document Intelligence Pipeline', href: '/services/automation-document-intelligence-pipeline' },
+  { name: 'Education Student Lifecycle Manager', href: '/services/automation-education-student-lifecycle-manager' },
+  { name: 'Integrated Commerce Automation', href: '/services/automation-integrated-commerce-automation' },
+  { name: 'Integrated Commerce Flow Orchestrator', href: '/services/automation-integrated-commerce-flows' },
+  { name: 'Invoice & Purchase Order Processing', href: '/services/automation-invoice-purchase-order-processing' },
+  { name: 'Legal Document Preparation and Filing', href: '/services/automation-legal-document-preparation' },
+  { name: 'Multi-Channel Campaign Manager', href: '/services/automation-multi-channel-campaign-manager' },
+  { name: 'Multi-Channel Campaign Orchestrator', href: '/services/automation-multi-channel-campaign-orchestrator' },
+  { name: 'Process Mining Deep Dive', href: '/services/automation-process-mining-deep-dive' },
+  { name: 'Process Mining Intelligence', href: '/services/automation-process-mining-intelligence' },
+  { name: 'Social Media Content Hub & Publisher', href: '/services/automation-social-media-content-hub' },
+  { name: 'Business Process Analysis (BPA)', href: '/services/bpa-process-analysis' },
+  { name: 'DevOps & CI/CD Automation', href: '/services/devops-cicd' },
+  { name: 'Event-Driven Orchestration', href: '/services/event-driven-orchestration' },
+  { name: 'IT Automation & Orchestration Platform', href: '/services/it-automation-orchestrator' },
+  { name: 'Digital Twin & IoT Platform Development', href: '/services/it-digital-twin-platform' },
+  { name: 'Low-Code Workflow Builder', href: '/services/low-code-workflow-builder' },
+  { name: 'Marketing Automation Platform', href: '/services/marketing-automation-svc' },
+  { name: 'Monitoring & Observability', href: '/services/monitoring-observability' },
+  { name: 'AIOps: Observability Automation', href: '/services/observability-aiops' },
+  { name: 'Queue & Messaging Platform', href: '/services/queue-messaging-platform' },
+  { name: 'Rx Prior-Auth Automation', href: '/services/rx-prior-auth' },
+  { name: 'Supply Chain Management Platform', href: '/services/supply-chain-management-service' },
+  { name: 'Supply Chain Visibility', href: '/services/supply-chain-visibility' },
+  { name: 'Workflow Automation & Integration Platform', href: '/services/workflow-automation' },
 ];
