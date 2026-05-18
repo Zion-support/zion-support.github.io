@@ -317,6 +317,18 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI News Anomaly Story Arc Detector', href: '/services/ai-news-anomaly-story-detector' },
   { name: 'AI Open-Source License Compliance Scanner', href: '/services/ai-opensource-license-compliance-scanner' },
   { name: 'AI Portfolio Variance Tax-Optimizer', href: '/services/ai-portfolio-variance-optimizer' },
+  { name: 'Marine Fisheries Sustainability', href: '/services/ai-marine-fisheries-sustainability' },
+  { name: 'Smart Grid Load Balancer', href: '/services/ai-smart-grid-load-balancer' },
+  { name: 'Supply Chain Disruption Predictor', href: '/services/ai-supply-chain-disruption-predictor' },
+  { name: 'Edplag Content Authenticity', href: '/services/ai-edplag-content-authenticity' },
+  { name: 'Deepfake Voice Spoof Detector', href: '/services/ai-deepfake-voice-spoof-detector' },
+  { name: 'Chronic Disease Progression Tracker', href: '/services/ai-chronic-disease-progression-tracker' },
+  { name: 'Athlete Performance Coach', href: '/services/ai-athlete-performance-coach' },
+  { name: 'Employee Knowledge Retriever', href: '/services/ai-employee-knowledge-retriever' },
+  { name: 'Financial Statement Analyzer', href: '/services/ai-financial-statement-analyzer' },
+  { name: 'Meeting Assistant Actions', href: '/services/ai-meeting-assistant-actions' },
+  { name: 'Powerpoint Presentation Generator', href: '/services/ai-powerpoint-presentation-generator' },
+  { name: 'Privacy Policy Impact Assessor', href: '/services/ai-privacy-policy-impact-assessor' },
 ];
 
 
@@ -417,6 +429,17 @@ export const IT_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'DRaaS — Disaster Recovery as a Service',       href: '/services/it-disaster-recovery-as-a-service' },
   { name: 'Endpoint Security & Compliance Monitor',        href: '/services/it-endpoint-security-compliance-monitor' },
   { name: 'Legacy Mainframe Modernisation',                href: '/services/it-legacy-mainframe-modernisation' },
+  { name: 'Zero Trust Network Access', href: '/services/it-zero-trust-network-access' },
+  { name: 'Self Healing Kubernetes Platform', href: '/services/it-self-healing-kubernetes-platform' },
+  { name: 'Serverless Edge Compute Platform', href: '/services/it-serverless-edge-compute-platform' },
+  { name: 'Secrets Management Hsm Vault', href: '/services/it-secrets-management-hsm-vault' },
+  { name: 'Observability Logging Tracing Platform', href: '/services/it-observability-logging-tracing-platform' },
+  { name: 'Edge Gateway Industrial Iot', href: '/services/it-edge-gateway-industrial-iot' },
+  { name: 'Low Code Workflow Automation Platform', href: '/services/it-low-code-workflow-automation-platform' },
+  { name: 'Cloud Cost Optimisation', href: '/services/it-cloud-cost-optimisation' },
+  { name: 'Load Balancer Traffic Manager', href: '/services/it-load-balancer-traffic-manager' },
+  { name: 'Performance Monitoring Observability', href: '/services/it-performance-monitoring-observability' },
+  { name: 'Wifi 6 Wifi 7 Deployment', href: '/services/it-wifi-6-wifi-7-deployment' },
 ];
 
 export const CLOUD_SERVICE_LINKS: readonly NavigationLink[] = [
@@ -482,6 +505,14 @@ export const CLOUD_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Serverless Framework Deployment', href: '/services/cloud-serverless-framework-deploy' },
   { name: 'Cloud Storage Lifecycle & Compliance', href: '/services/cloud-storage-lifecycle-policy' },
   { name: 'Zero Trust Access Platform', href: '/services/cloud-zero-trust-access-platform' },
+  { name: 'Aiops Incident Intelligence Platform', href: '/services/cloud-aiops-incident-intelligence-platform' },
+  { name: 'Cost Chargeback Showback Platform', href: '/services/cloud-cost-chargeback-showback-platform' },
+  { name: 'K8S Gitops Continuous Deployment', href: '/services/cloud-k8s-gitops-continuous-deployment' },
+  { name: 'Ai Inference Gateway', href: '/services/cloud-ai-inference-gateway' },
+  { name: 'Container Image Scanning', href: '/services/cloud-container-image-scanning' },
+  { name: 'Edge Ai Inference', href: '/services/cloud-edge-ai-inference' },
+  { name: 'Vpc Flow Logs Analytics', href: '/services/cloud-vpc-flow-logs-analytics' },
+  { name: 'Web Application Firewall', href: '/services/cloud-web-application-firewall' },
 ];
 
 export const SECURITY_SERVICE_LINKS: readonly NavigationLink[] = [
@@ -524,6 +555,12 @@ export const SECURITY_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Security Awareness Training Platform', href: '/services/security-security-awareness-training' },
   { name: 'Threat Intelligence Platform', href: '/services/security-threat-intelligence-platform' },
   { name: 'Proactive Remediation (PRM)', href: '/services/security-vulnerability-management-pra' },
+  { name: 'Container Security Runtime Scanner', href: '/services/security-container-security-runtime-scanner' },
+  { name: 'Api Security Scanner', href: '/services/security-api-security-scanner' },
+  { name: 'Incident Knowledge Base', href: '/services/security-incident-knowledge-base' },
+  { name: 'Owasp Top 10 Compliance Scanner', href: '/services/security-owasp-top-10-compliance-scanner' },
+  { name: 'Post Quantum Crypto Readiness', href: '/services/security-post-quantum-crypto-readiness' },
+  { name: 'Soc Virtual Analyst', href: '/services/security-soc-virtual-analyst' },
 ];
 
 export const DATA_SERVICE_LINKS: readonly NavigationLink[] = [
@@ -558,6 +595,13 @@ export const DATA_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'PII Scanner & Classifier', href: '/services/data-pii-scanner-classifier' },
   { name: 'Predictive Maintenance (Time-Series)', href: '/services/data-predictive-maintenance-timeseries' },
   { name: 'Real-Time Operational Analytics', href: '/services/data-real-time-operational-analytics' },
+  { name: 'Nlp Pipeline Orchestrator', href: '/services/data-nlp-pipeline-orchestrator' },
+  { name: 'Realtime Feature Store Ml', href: '/services/data-realtime-feature-store-ml' },
+  { name: 'Customer Data Platform', href: '/services/data-customer-data-platform' },
+  { name: 'Fraud Detection Ml Pipeline', href: '/services/data-fraud-detection-ml-pipeline' },
+  { name: 'Geospatial Iot Platform', href: '/services/data-geospatial-iot-platform' },
+  { name: 'Llm Evaluation Harness', href: '/services/data-llm-evaluation-harness' },
+  { name: 'Time Series Anomaly Detector', href: '/services/data-time-series-anomaly-detector' },
 ];
 
 export const AUTOMATION_SERVICE_LINKS: readonly NavigationLink[] = [
@@ -586,6 +630,13 @@ export const AUTOMATION_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Supply Chain Management Platform', href: '/services/supply-chain-management-service' },
   { name: 'Supply Chain Visibility', href: '/services/supply-chain-visibility' },
   { name: 'Workflow Automation & Integration Platform', href: '/services/workflow-automation' },
+  { name: 'Event Driven Ml Pipeline', href: '/services/automation-event-driven-ml-pipeline' },
+  { name: 'Sap Integration Rpa', href: '/services/automation-sap-integration-rpa' },
+  { name: 'Customer Onboarding Automation', href: '/services/automation-customer-onboarding-automation' },
+  { name: 'Intelligent Chatbot Builder', href: '/services/automation-intelligent-chatbot-builder' },
+  { name: 'Intelligent Document Processor', href: '/services/automation-intelligent-document-processor' },
+  { name: 'Process Mining Discovery', href: '/services/automation-process-mining-discovery' },
+  { name: 'Revenue Operations Platform', href: '/services/automation-revenue-operations-platform' },
 ];
 
 // ─── AUTOMATION HUB ROUTES ───────────────────────────────────────────────────

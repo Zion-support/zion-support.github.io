@@ -27,7 +27,16 @@ const STAT_SLA      = 'SLA Uptime Guarantee';
 
 // Featured: pull 2 per category so every category is represented
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
-const FEATURED_IDS = ['accessibility-compliance', 'advanced-ai-enterprise-intelligence-hub', 'ai-accessibility-auditor', 'ai-accessibility-optimizer', 'ai-analytics', 'ai-customer-support', 'ai-document-intelligence', 'ai-knowledge-management', 'ai-lead-generation', 'ai-office-automation', 'ai-sales-intelligence', 'ai-self-healing-infra', 'api-development', 'api-gateway-management'];
+const FEATURED_IDS = [
+  'accessibility-compliance', 'advanced-ai-enterprise-intelligence-hub',
+  'ai-accessibility-auditor', 'ai-accessibility-optimizer', 'ai-analytics',
+  'ai-customer-support', 'ai-document-intelligence', 'ai-knowledge-management',
+  'ai-lead-generation', 'ai-office-automation', 'ai-sales-intelligence',
+  'ai-self-healing-infra', 'api-development', 'api-gateway-management',
+  'ai-deepfake-voice-spoof-detector', 'ai-supply-chain-disruption-predictor',
+  'ai-chronic-disease-progression-tracker', 'ai-marine-fisheries-sustainability',
+  'it-self-healing-kubernetes-platform', 'it-zero-trust-network-access',
+];
 
 const CATEGORIES = [
   { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
@@ -87,7 +96,7 @@ export default function HomePage() {
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> 491+ Services — Live Now
+              <span className="text-green-400">●</span> {serviceCount}+ Services — Live Now
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="gradient-text">AI & IT Services</span><br />
@@ -103,7 +112,7 @@ export default function HomePage() {
                 ⚡ Get Your Custom Proposal →
               </Link>
               <Link href="/services" className="btn-secondary text-lg px-10 py-4">
-                🛠️ Browse All 491+ Services
+                🛠️ Browse All {serviceCount}+ Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
                 ☎ +1 302 464 0950
@@ -143,7 +152,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
-              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from 472+ options.' },
+              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from {serviceCount}+ options.' },
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (
