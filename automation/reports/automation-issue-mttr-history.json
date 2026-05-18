@@ -12,5 +12,12 @@
     "avgHours": 14.77,
     "samples": 62,
     "band": "healthy"
+  },
+  {
+    "generatedAt": "2026-05-18T11:08:35.363Z",
+    "openCount": 21,
+    "avgHours": 34.27,
+    "samples": 94,
+    "band": "warning"
   }
 ]
