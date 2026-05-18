@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Email Marketing Automation | Zion Tech Group",
-  description: "Intelligent email campaigns with send-time optimization, dynamic content, and behavioral segmentation.",
-  alternates: { canonical: "/ai-email-marketing-automation" },
-};
 
 export default function AiEmailMarketingAutomationPage() {
   return (

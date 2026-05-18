@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Lead Scoring | Zion Tech Group",
-  description: "AI-powered lead scoring based on behavioral signals, firmographics, and engagement history.",
-  alternates: { canonical: "/lead-scoring" },
-};
 
 export default function LeadScoringPage() {
   return (

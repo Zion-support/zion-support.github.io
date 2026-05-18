@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI UX Research Assistant | Zion Tech Group",
-  description: "Automated usability testing, heatmap generation, and AI-driven design recommendations.",
-  alternates: { canonical: "/ai-ux-research-assistant" },
-};
 
 export default function AiUxResearchAssistantPage() {
   return (

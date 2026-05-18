@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Email Marketing Pro | Zion Tech Group",
-  description: "Advanced email marketing with A/B testing, personalization, and automated nurture sequences.",
-  alternates: { canonical: "/email-marketing" },
-};
 
 export default function EmailMarketingPage() {
   return (

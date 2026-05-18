@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Content Writer Pro | Zion Tech Group",
-  description: "Advanced content generation with SEO optimization, multi-language support, and bulk creation.",
-  alternates: { canonical: "/ai-content-writer-pro" },
-};
 
 export default function AiContentWriterProPage() {
   return (

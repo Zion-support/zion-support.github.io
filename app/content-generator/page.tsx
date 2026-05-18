@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Content Generator | Zion Tech Group",
-  description: "Generate blog posts, landing pages, product descriptions, and video scripts with AI.",
-  alternates: { canonical: "/content-generator" },
-};
 
 export default function ContentGeneratorPage() {
   return (

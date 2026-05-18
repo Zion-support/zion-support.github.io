@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Contract Manager | Zion Tech Group",
-  description: "AI-powered contract analysis, risk detection, renewal tracking, and compliance monitoring.",
-  alternates: { canonical: "/contract-manager" },
-};
 
 export default function ContractManagerPage() {
   return (

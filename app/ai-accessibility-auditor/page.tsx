@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Accessibility Auditor | Zion Tech Group",
-  description: "Automated WCAG 2.2 auditing with AI remediation suggestions and continuous compliance monitoring.",
-  alternates: { canonical: "/ai-accessibility-auditor" },
-};
 
 export default function AiAccessibilityAuditorPage() {
   return (

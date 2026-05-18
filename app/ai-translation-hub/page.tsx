@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Translation Hub | Zion Tech Group",
-  description: "100+ language AI translation with context awareness, terminology management, and human-in-the-loop QA.",
-  alternates: { canonical: "/ai-translation-hub" },
-};
 
 export default function AiTranslationHubPage() {
   return (

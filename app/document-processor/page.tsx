@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Document Processor | Zion Tech Group",
-  description: "Intelligent OCR, classification, and data extraction from invoices, forms, and documents.",
-  alternates: { canonical: "/document-processor" },
-};
 
 export default function DocumentProcessorPage() {
   return (

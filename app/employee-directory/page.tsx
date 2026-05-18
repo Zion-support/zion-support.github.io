@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Employee Directory | Zion Tech Group",
-  description: "Smart employee directory with org charts, skills search, and automated onboarding integration.",
-  alternates: { canonical: "/employee-directory" },
-};
 
 export default function EmployeeDirectoryPage() {
   return (

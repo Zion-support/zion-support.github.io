@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Chat Analytics | Zion Tech Group",
-  description: "Analyze customer conversations for sentiment, topics, and actionable insights at scale.",
-  alternates: { canonical: "/chat-analytics" },
-};
 
 export default function ChatAnalyticsPage() {
   return (

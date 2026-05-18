@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Support Bot | Zion Tech Group",
-  description: "Intelligent support bot with multilingual capabilities, knowledge base sync, and escalation.",
-  alternates: { canonical: "/support-bot" },
-};
 
 export default function SupportBotPage() {
   return (

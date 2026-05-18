@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Supply Chain Commander | Zion Tech Group",
-  description: "End-to-end supply chain orchestration with demand forecasting, route optimization, and disruption response.",
-  alternates: { canonical: "/ai-supply-chain-commander" },
-};
 
 export default function AiSupplyChainCommanderPage() {
   return (

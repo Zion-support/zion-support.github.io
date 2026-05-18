@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Employee Onboarding Hub | Zion Tech Group",
-  description: "Complete onboarding automation with AI task orchestration, personalized training, and engagement tracking.",
-  alternates: { canonical: "/ai-employee-onboarding-hub" },
-};
 
 export default function AiEmployeeOnboardingHubPage() {
   return (

@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Cloud Cost Optimizer | Zion Tech Group",
-  description: "ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing and anomaly detection.",
-  alternates: { canonical: "/ai-cost-optimizer-cloud" },
-};
 
 export default function AiCostOptimizerCloudPage() {
   return (

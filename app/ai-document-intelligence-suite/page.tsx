@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI Document Intelligence Suite | Zion Tech Group",
-  description: "End-to-end intelligent document processing with OCR, classification, data extraction, and workflow automation.",
-  alternates: { canonical: "/ai-document-intelligence-suite" },
-};
 
 export default function AiDocumentIntelligenceSuitePage() {
   return (

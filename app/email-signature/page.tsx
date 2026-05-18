@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Email Signature Manager | Zion Tech Group",
-  description: "Centralized email signature management with campaign tracking and brand consistency tools.",
-  alternates: { canonical: "/email-signature" },
-};
 
 export default function EmailSignaturePage() {
   return (

@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Appointment Scheduler | Zion Tech Group",
-  description: "Intelligent appointment scheduling with calendar sync, reminders, and buffer time optimization.",
-  alternates: { canonical: "/appointment-scheduler" },
-};
 
 export default function AppointmentSchedulerPage() {
   return (

@@ -1,13 +1,5 @@
-'use client';
-
 import Link from 'next/link';
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Inventory Management Pro | Zion Tech Group",
-  description: "Full-featured inventory system with barcode scanning, multi-location support, and analytics.",
-  alternates: { canonical: "/inventory-management" },
-};
 
 export default function InventoryManagementPage() {
   return (
