@@ -17025,6 +17025,147 @@ export const automationServices: Service[] = [
     },
   },
 
+  {
+    id: 'ai-crm-automation-suite',
+    title: 'AI CRM Automation Suite',
+    description: 'Full CRM automation platform: AI lead scoring, email sequences, pipeline tracking, deal insights, automated follow-ups, and smart forecasting across HubSpot, Salesforce, and Pipedrive.',
+    icon: '🎯',
+    href: '/services/ai-crm-automation-suite',
+    popular: true,
+    category: 'ai',
+    features: [
+        'AI lead scoring + prioritization',
+        'Automated email sequences & drips',
+        'Pipeline tracking + stage automation',
+        'Conversation intelligence & call coach',
+        'Native HS / SF / Zoho integrations',
+    ],
+    benefits: [
+        '2× pipeline velocity improvement',
+        '60% less manual CRM data entry',
+        '30% higher win rates with AI insights',
+    ],
+    pricing: { basic: '299', pro: '799', enterprise: '2499' },
+    contactInfo: {
+        website: '/services/ai-crm-automation-suite',
+        email: 'kleber@ziontechgroup.com',
+        phone: '+1 302 464 0950',
+    },
+  },
+
+
+  {
+    id: 'process-automation',
+    title: 'Process Automation & BPA Suite',
+    description: 'Business process automation platform: map, model, and automate end-to-end workflows. BPMN modelling, RPA bots, approval gates, audit trails, and real-time KPI dashboards.',
+    icon: '⚙️',
+    href: '/services/process-automation',
+    popular: false,
+    category: 'automation',
+    features: [
+        'Drag-and-drop BPMN process designer',
+        'RPA bots for legacy app interactions',
+        'Approval routing + SLA tracking',
+        'Complete audit trail + compliance logs',
+    ],
+    benefits: [
+        'Cut manual process work by 80%',
+        'Eliminate human error in repeat workflows',
+        'Full visibility into process KPIs',
+    ],
+    pricing: { basic: '199', pro: '499', enterprise: '1499' },
+    contactInfo: {
+        website: '/services/process-automation',
+        email: 'kleber@ziontechgroup.com',
+        phone: '+1 302 464 0950',
+    },
+  },
+
+
+  {
+    id: 'ai-workflow-automation-builder',
+    title: 'AI Workflow Automation Builder — Starter',
+    description: 'Entry-level AI workflow builder: natural language workflow design, 100+ connectors, AI decision nodes, scheduled triggers, and human-in-the-loop approval steps for small teams.',
+    icon: '🤖',
+    href: '/services/ai-workflow-automation-builder',
+    popular: false,
+    category: 'ai',
+    features: [
+        'Natural-language workflow authoring',
+        '100+ pre-built app connectors',
+        'AI decision nodes (classify, extract, score)',
+        'Human-in-the-loop approval node',
+    ],
+    benefits: [
+        'No-code workflow creation in minutes',
+        'Replace up to 10 manual routines per team',
+    ],
+    pricing: { basic: '99', pro: '249', enterprise: '599' },
+    contactInfo: {
+        website: '/services/ai-workflow-automation-builder',
+        email: 'kleber@ziontechgroup.com',
+        phone: '+1 302 464 0950',
+    },
+  },
+
+
+  {
+    id: 'ai-workflow-automation-enterprise',
+    title: 'AI Workflow Automation — Enterprise Scale',
+    description: 'Enterprise-grade workflow orchestration: unlimited workflows, role-based access, SSO, custom AI model integration, multi-region deployment, and 24/7 dedicated support.',
+    icon: '🚀',
+    href: '/services/ai-workflow-automation-enterprise',
+    popular: false,
+    category: 'ai',
+    features: [
+        'Unlimited workflows + executions',
+        'SSO + RBAC + full audit log',
+        'Custom LLM / model bring-your-own',
+        'Multi-region deploy + disaster recovery',
+        '24/7 dedicated support + CSM',
+    ],
+    benefits: [
+        'Scale to 10,000+ automated tasks/day',
+        'Meet enterprise security & governance',
+        'Dedicated CSM for implementation',
+    ],
+    pricing: { basic: '999', pro: '2499', enterprise: '7999' },
+    contactInfo: {
+        website: '/services/ai-workflow-automation-enterprise',
+        email: 'kleber@ziontechgroup.com',
+        phone: '+1 302 464 0950',
+    },
+  },
+
+
+  {
+    id: 'ai-performance-monitoring',
+    title: 'AI-Powered Performance Monitoring',
+    description: 'Infrastructure + application performance monitoring powered by AI: anomaly detection, root-cause analysis, predictive alerts, and auto-remediation for microservices, databases, and cloud infrastructure.',
+    icon: '📈',
+    href: '/services/ai-performance-monitoring',
+    popular: false,
+    category: 'it',
+    features: [
+        'AI anomaly detection (baselines auto-calibrate)',
+        'Instant root-cause analysis with dependency graph',
+        'Predictive alerting before incidents impact users',
+        'Auto-remediation playbooks (restart, scale, reroute)',
+        'OpenTelemetry + Prometheus + Grafana native',
+    ],
+    benefits: [
+        'Cut MTTR by 70% with AI root-cause',
+        'Detect anomalies missed by threshold rules',
+        'Reduce on-call alert fatigue by 80%',
+    ],
+    pricing: { basic: '199', pro: '599', enterprise: '1999' },
+    contactInfo: {
+        website: '/services/ai-performance-monitoring',
+        email: 'kleber@ziontechgroup.com',
+        phone: '+1 302 464 0950',
+    },
+  },
+
 ];
 
 export const itSolutions = itServices;
