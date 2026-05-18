@@ -50,7 +50,7 @@ export default function Footer() {
             {SITE_NAME}
           </Link>
           <p className="text-slate-400 mt-2 text-xs leading-relaxed">
-            416+ AI, IT &amp; Micro-SaaS services — enterprise automation, cybersecurity, cloud,
+            626+ AI, IT &amp; Micro-SaaS services — enterprise automation, cybersecurity, cloud,
             and data solutions headquartered in Middletown, DE.
           </p>
           <address className="not-italic text-xs text-slate-500 mt-3 space-y-1">

@@ -180,7 +180,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Services by Category (all 416 services advertised) ── */}
+      {/* ── Services by Category (all 626 services advertised) ── */}
       <section className="py-20 bg-slate-900/30">
         <div className="container-page">
           <h2 className="section-heading text-center">Complete Service Catalog</h2>

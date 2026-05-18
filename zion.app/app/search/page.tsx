@@ -93,7 +93,7 @@ export default function SearchPage() {
         </div>
       ) : (
         <div className="text-center py-16">
-          <p className="text-slate-400 text-lg">Start typing to search 416+ services</p>
+          <p className="text-slate-400 text-lg">Start typing to search 626+ services</p>
         </div>
       )}
     </div>
