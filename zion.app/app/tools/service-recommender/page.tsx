@@ -39,7 +39,7 @@ export default function ServiceRecommenderPage() {
     <div className="container-page py-16">
       <h1 className="text-4xl font-bold text-white mb-4">Service Recommender</h1>
       <p className="text-slate-400 mb-12 max-w-2xl">
-        Answer a few questions and we&apos;ll match you with the right AI, IT, or Cloud solution from our catalog of 416+ services.
+        Answer a few questions and we&apos;ll match you with the right AI, IT, or Cloud solution from our catalog of 600+ real services across all categories.
       </p>
 
       {recommendations.length === 0 ? (
