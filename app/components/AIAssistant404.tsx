@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { Search, Home, Mail, FileText, LayoutGrid, Sparkles, Zap, ArrowRight, Fingerprint, AlertCircle, X, Bot, Send, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
+ 
 declare namespace JSX {
   interface IntrinsicElements {
     script: React.DetailedHTMLProps<React.ScriptHTMLAttributes<HTMLScriptElement>, HTMLScriptElement>;

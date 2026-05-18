@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
+ 
 declare namespace JSX {
   interface IntrinsicElements {
     script: React.DetailedHTMLProps<React.ScriptHTMLAttributes<HTMLScriptElement>, HTMLScriptElement>;
