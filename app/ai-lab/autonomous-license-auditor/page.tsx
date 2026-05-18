@@ -247,7 +247,7 @@ export default function AutonomousLicenseAuditor() {
               <Link href="/ai-lab" className="rounded-full bg-cyan-500/20 border border-cyan-400/60 px-5 py-2.5 text-sm text-cyan-300 hover:bg-cyan-500/30">
                 Back to AI Lab
               </Link>
-              <Link href="/contact" className="rounded-full bg-violet-500/20 border border-violet-400/60 px-5 py-2.5 text-sm text-violet-300 hover:bg-violet-500/30">
+              <Link href="/contact" className="rounded-full bg-violet-500/20 border border-violet-400/60 px-5 py-2.5 text-sm text-violet-300 hover:bg-violet-500/30" data-cta-event="cta_contact" data-cta-label="page">
                 Contact for Help
               </Link>
             </div>

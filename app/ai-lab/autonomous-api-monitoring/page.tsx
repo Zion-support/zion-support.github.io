@@ -116,7 +116,7 @@ export default function AutonomousAPIMonitoringPage() {
               <p className="mt-1 text-xs text-indigo-300/70">Self-healing alerts, AI root-cause analysis, zero-config setup — free consultation.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/contact?topic=api-monitoring&source=ai-lab" className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 transition-colors">
+              <Link href="/contact?topic=api-monitoring&source=ai-lab" className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 transition-colors" data-cta-event="cta_contact" data-cta-label="page">
                 Get Started Free
               </Link>
               <Link href="/services" className="rounded-lg border border-indigo-300 bg-indigo-50 px-5 py-2.5 text-sm font-semibold text-indigo-800 hover:bg-indigo-100 transition-colors">

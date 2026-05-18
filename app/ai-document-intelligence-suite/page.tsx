@@ -11,7 +11,7 @@ export default function AiDocumentIntelligenceSuitePage() {
           <h1 className="text-3xl font-bold text-white">AI Document Intelligence Suite</h1>
           <p className="mt-3 text-slate-300 max-w-2xl">End-to-end intelligent document processing with OCR, classification, data extraction, and workflow automation.</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/contact" className="rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-blue-700">
+            <Link href="/contact" className="rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-blue-700" data-cta-event="cta_contact" data-cta-label="page">
               Get Started Free
             </Link>
             <Link href="/services" className="rounded-lg border border-slate-600 bg-slate-800 px-6 py-2.5 text-sm font-semibold text-white hover:bg-slate-700">
@@ -44,7 +44,7 @@ export default function AiDocumentIntelligenceSuitePage() {
             <h3 className="font-semibold text-slate-900 mb-3">Pricing</h3>
             <p className="text-2xl font-bold text-slate-900">From $49/mo</p>
             <p className="mt-2 text-sm text-slate-600">Transparent monthly pricing. Cancel anytime. No hidden fees.</p>
-            <Link href="/contact" className="mt-4 inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+            <Link href="/contact" className="mt-4 inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700" data-cta-event="cta_contact" data-cta-label="page">
               Get a Quote
             </Link>
           </div>
