@@ -128,6 +128,96 @@ export default async function ServicePage({ params }: PageProps) {
         {/* ROI Calculator */}
         <ROICalculator serviceTitle={service.title} category={service.category} />
 
+
+
+        {/* Deployment Roadmap — AI-inferred phase + milestone plan per category */}
+        {(() => {
+          // Infer phase steps from service description + category
+          const s = service;
+          const isComplex = s.features.length >= 4;
+          const hasEnterprise = s.pricing.enterprise !== '$0';
+          const phases = (() => {
+            if (s.category === 'ai') return [
+              { label:'1. Scope & Data Audit',          weeks:'Week 1–2', tasks:['Define use-cases + success KPIs','Inventory existing data sources + formats','Data quality + labelling review','Tech-stack + model-selection workshop'], color:'#8b5cf6' },
+              { label:'2. Model & Pipeline Build',       weeks:'Week 3–5', tasks:['Fine-tune / prompt-engineer model','Build inference pipeline + API','Unit tests + eval on hold-out set','Internal demo + feedback loop'], color:'#a78bfa' },
+              { label:'3. Pilot & Evaluation',           weeks:'Week 6–7', tasks:['Pilot with 10–20 real use-cases','Collect user feedback + KPI report','Fix edge-cases + regressions','Finalize production config'], color:'#c4b5fd' },
+              { label:'4. Production Roll-out',          weeks:'Week 8',    tasks:['CI/CD pipeline + rollback plan','User training + documentation','Go-live monitoring + alert setup','30-day health-check call'], color:'#7c3aed' },
+              { label:'5. Optimize & Scale',            weeks:'Ongoing',   tasks:['Monthly quality review','Model fine-tune on new data','Usage analytics + cost optimisation','Feature backlog prioritisation'], color:'#6d28d9' },
+            ];
+            if (s.category === 'automation') return [
+              { label:'1. Process Discovery',           weeks:'Week 1–2', tasks:['Map current-state process (as-is)','Identify highest-ROI automation targets','Define success metrics (e.g. 80% less time)','Tool + platform selection'], color:'#ec4899' },
+              { label:'2. Workflow Build',              weeks:'Week 3–5', tasks:['Build first 2–3 workflow automations','Integrate source + target systems','Unit-test + staging environment test','Security + access-control review'], color:'#f472b6' },
+              { label:'3. Pilot & Iterate',             weeks:'Week 6',    tasks:['Pilot with business stakeholders','Collect process feedback + metrics','Iterate on remaining workflows','Handover SOP + knowledge transfer'], color:'#fb7185' },
+              { label:'4. Roll-out & Monitor',          weeks:'Week 7–8', tasks:['Schedule roll-out across full team','Monitoring dashboard + alerts','Documentation + training videos','Kick-off continuous improvement'], color:'#f43f5e' },
+              { label:'5. Optimize & Scale',            weeks:'Ongoing',   tasks:['Usage analytics review','New workflow requests triage','Integration cost optimisation','Quarterly roadmap sync'], color:'#e11d48' },
+            ];
+            if (s.category === 'it') return [
+              { label:'1. Discovery & Planning',        weeks:'Week 1–2', tasks:['Infrastructure audit + gap analysis','Architecture design + review','Tool + platform evaluation','Project plan + sprint breakdown'], color:'#0ea5e9' },
+              { label:'2. Environment Setup',           weeks:'Week 3–4', tasks:['Provision development + staging env','Baseline security hardening','CI/CD pipeline scaffold','Monitoring + logging baseline'], color:'#38bdf8' },
+              { label:'3. Implementation',              weeks:'Week 5–8', tasks:['Incremental feature delivery (sprints)','UAT + stakeholder sign-off','Documentation + runbooks','Load + security testing'], color:'#60a5fa' },
+              { label:'4. Production Launch',           weeks:'Week 9',    tasks:['Cut-over runbook + rollback plan','Production monitoring + on-call setup','Team training + handover','Go-live announcement'], color:'#2563eb' },
+              { label:'5. SLA Support & Iteration',     weeks:'Ongoing',   tasks:['Monthly SLA performance review','Patch + update schedule','Capacity planning','Quarterly roadmap meeting'], color:'#1d4ed8' },
+            ];
+            if (s.category === 'security') return [
+              { label:'1. Asset & Risk Assessment',     weeks:'Week 1–2', tasks:['Asset inventory + data-flow mapping','Vulnerability scanning + risk scoring','Compliance gap analysis (SOC2, NIST, etc.)','Prioritised remediation backlog'], color:'#ef4444' },
+              { label:'2. Controls Implementation',     weeks:'Week 3–6', tasks:['Deploy critical mitigation controls','IAM policy tightening','EDR + SIEM deployment + tuning','Secure configuration baseline across estate'], color:'#f87171' },
+              { label:'3. Validation & Testing',        weeks:'Week 7',    tasks:['Penetration test + red-team drill','SIEM rule tuning + alert validation','Tabletop incident response exercise','Emergency runbook finalisation'], color:'#dc2626' },
+              { label:'4. Evidential & Audit Prep',     weeks:'Week 8+',   tasks:['Evidence collection per framework','Audit-ready report generation','Programme maturity scoring','Continuous monitoring setup'], color:'#b91c1c' },
+              { label:'5. Ongoing Threat & Evolution',  weeks:'Ongoing',   tasks:['Monthly threat-intel review','Policy review + update cycle','Annual penetration test schedule','Emerging-tech risk assessment'], color:'#991b1b' },
+            ];
+            // cloud, data, and catch-all
+            return [
+              { label:'1. Requirements & Design',      weeks:'Week 1–2', tasks:['Stakeholder requirements workshop','Solution architecture + diagram review','Estimate effort + resource plan','Success metrics + SLAs agreed'], color:'#10b981' },
+              { label:'2. Foundation Build',           weeks:'Week 3–5', tasks:['Core infrastructure + data pipeline','Access control + security hardening','Integration with existing systems','Automated test suite setup'], color:'#34d399' },
+              { label:'3. Test & Validate',            weeks:'Week 6–7', tasks:['User acceptance testing','Performance + load testing','Security review + sign-off','Change management communication'], color:'#6ee7b7' },
+              { label:'4. Deployment & Stabilisation', weeks:'Week 8',    tasks:['Blue-green or canary deployment','Hypercare period (3–5 days)','Post-launch performance review','Documentation + knowledge transfer'], color:'#059669' },
+              { label:'5. Optimise & Evolve',          weeks:'Ongoing',   tasks:['Usage + cost analytics','Feature iteration backlog','Vendor relationship + renewals','Quarterly business review'], color:'#047857' },
+            ];
+          })();
+          return (
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl">🗺️</span>
+                <h2 className="text-2xl font-semibold text-white">Deployment Roadmap</h2>
+                <span className="text-xs text-slate-500 bg-slate-800 rounded-full px-3 py-1">AI-Inferred • {phases.length} phases</span>
+              </div>
+              <p className="text-slate-400 text-sm mb-8">Estimated timeline for {s.title} — adapt to your team size and complexity.</p>
+              <div className="relative">
+                {phases.map((ph, i) => (
+                  <div key={i} className="flex gap-4 pb-8 last:pb-0">
+                    {/* Timeline spine */}
+                    <div className="flex flex-col items-center gap-0 shrink-0 w-16">
+                      <div className="w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0" style={{borderColor:ph.color, background: i===0 ? ph.color : 'transparent'}}>
+                        {i === 0 && <div className="w-2 h-2 rounded-full bg-white" />}
+                      </div>
+                      {i < phases.length - 1 && <div className="flex-1 w-0.5 bg-slate-700 my-1" />}
+                    </div>
+                    {/* Phase card */}
+                    <div className="bg-slate-900/60 rounded-xl border border-slate-700/50 flex-1">
+                      <div className="flex items-center justify-between p-4 border-b border-slate-700/40">
+                        <h3 className="font-semibold text-white">{ph.label}</h3>
+                        <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-slate-800 border border-slate-600 text-slate-300">{ph.weeks}</span>
+                      </div>
+                      <ul className="p-4 space-y-2">
+                        {ph.tasks.map((t, j) => (
+                          <li key={j} className="text-sm text-slate-300 flex items-start gap-2">
+                            <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
+                            <span>{t}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-sm px-6 py-3">📅 Schedule Planning Call</a>
+                <Link href="/configurator" className="btn-secondary text-sm px-6 py-3">⚙️ Customise This Roadmap →</Link>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Related Services — expand to 8 + category link */}
         {(() => {
           const sameCat = allServices

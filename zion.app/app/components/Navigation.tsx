@@ -8,11 +8,6 @@ import {
   SOLUTION_LINKS,
   RESOURCE_LINKS,
   FEATURED_AI_SERVICE_LINKS,
-  AI_SERVICE_LINKS,
-  IT_SERVICE_LINKS,
-  CLOUD_SERVICE_LINKS,
-  SECURITY_SERVICE_LINKS,
-  FEATURED_PRODUCT_LINKS,
   type NavigationLink,
 } from '@/constants/navigation';
 
@@ -23,7 +18,6 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   function isActive(href: string): boolean {
     if (href === '/') return pathname === '/';
