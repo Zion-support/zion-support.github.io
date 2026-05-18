@@ -12,6 +12,7 @@ import AIComponent from './components/ai-components';
 import { AIComponents } from './components/ai-components';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
 import { allServices } from '@/app/data/servicesData';
+import ServiceComparisonTable from '@/app/components/ServiceComparisonTable';
 type DeploymentReadinessReport = {
   timestamp?: string;
   ready?: boolean;
@@ -884,6 +885,9 @@ export default function Home() {
             })()}
           </section>
           {/* END SERVICE CATALOG */}
+
+          {/* SERVICE COMPARISON TABLE */}
+          <ServiceComparisonTable />
 
 
         {/* AI Component Showcase */}
