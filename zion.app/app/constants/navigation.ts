@@ -14,14 +14,14 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
 
 export const SOLUTION_LINKS: readonly NavigationLink[] = [
   { name: 'All Solutions', href: '/solutions' },
-  { name: 'Healthcare', href: '/solutions/healthcare' },
-  { name: 'Financial Services', href: '/solutions/financial-services' },
-  { name: 'Manufacturing & Industrial', href: '/solutions/manufacturing-industrial' },
-  { name: 'E‑Commerce & Retail', href: '/solutions/ecommerce-retail' },
-  { name: 'Technology & SaaS', href: '/solutions/technology-and-saas' },
-  { name: 'Logistics & Supply Chain', href: '/solutions/logistics-supply-chain' },
-  { name: 'Government & Public Sector', href: '/solutions/government-and-public-sector' },
-  { name: 'Insurance', href: '/solutions/insurance' },
+  { name: 'Healthcare', href: '/industry-solutions' },
+  { name: 'Financial Services', href: '/solutions' },
+  { name: 'Manufacturing & Industrial', href: '/solutions' },
+  { name: 'E‑Commerce & Retail', href: '/solutions' },
+  { name: 'Technology & SaaS', href: '/solutions' },
+  { name: 'Logistics & Supply Chain', href: '/solutions' },
+  { name: 'Government & Public Sector', href: '/solutions' },
+  { name: 'Insurance', href: '/solutions' },
   { name: 'Industries', href: '/industry-solutions' },
 ];
 // Resource Links
