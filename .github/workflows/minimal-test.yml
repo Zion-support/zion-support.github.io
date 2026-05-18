@@ -1,0 +1,26 @@
+# Minimal test to verify build works without cache
+# Forces clean install every time
+
+name: Minimal Build Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  minimal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - run: rm -rf node_modules .next out
+      
+      - run: npm install
+      
+      - run: npm run build
