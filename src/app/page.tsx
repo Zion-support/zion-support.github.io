@@ -11,7 +11,7 @@ import AIPatternRecognizer from './components/ai-agents/pattern-recognizer';
 import AIComponent from './components/ai-components';
 import { AIComponents } from './components/ai-components';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
-
+import { allServices } from '@/app/data/servicesData';
 type DeploymentReadinessReport = {
   timestamp?: string;
   ready?: boolean;
@@ -753,6 +753,138 @@ export default function Home() {
             </div>
           </section>
         </main>
+          {/* ALL SERVICES CATALOG */}
+          <section id="all-services" className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">Complete Service Catalog</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">
+              All AI &middot; IT &middot; Cloud &middot; Security &middot; Data &amp; Automation Services
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm text-slate-600">
+              <strong>{allServices.length}</strong> production-ready services from Zion Tech Group — enterprise-grade AI, IT infrastructure, cloud native, zero-trust security, data analytics, and intelligent automation. Every listing shows features, benefits, average market prices, and direct links to the full service page.
+            </p>
+
+            {/* AI Services */}
+            {(() => {
+              const ai = allServices.filter(s => s.category === 'ai').sort((a,b) => a.title.localeCompare(b.title));
+              return ai.length > 0 ? (
+                <>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-slate-400">🤖 AI &amp; Machine Learning — {ai.length} services</p>
+                  <div className="mt-3 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {ai.map(s => (
+                      <Link key={s.id} href={s.href} className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/5">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl flex-shrink-0" role="img" aria-label={s.title}>{s.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700">{s.title}</h3>
+                            <p className="mt-1 text-xs text-slate-600 line-clamp-2">{s.description}</p>
+                            <p className="mt-2 text-xs font-medium text-slate-500">From {s.pricing.basic}/mo</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : null;
+            })()}
+
+            {/* IT + Security */}
+            {(() => {
+              const itSec = allServices.filter(s => s.category === 'it' || s.category === 'security').sort((a,b) => a.title.localeCompare(b.title));
+              return itSec.length > 0 ? (
+                <>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-slate-400">🖥️ IT &amp; Security — {itSec.length} services</p>
+                  <div className="mt-3 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {itSec.map(s => (
+                      <Link key={s.id} href={s.href} className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/5">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl flex-shrink-0" role="img" aria-label={s.title}>{s.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700">{s.title}</h3>
+                            <p className="mt-1 text-xs text-slate-600 line-clamp-2">{s.description}</p>
+                            <p className="mt-2 text-xs font-medium text-slate-500">From {s.pricing.basic}/mo</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : null;
+            })()}
+
+            {/* Cloud */}
+            {(() => {
+              const cloud = allServices.filter(s => s.category === 'cloud').sort((a,b) => a.title.localeCompare(b.title));
+              return cloud.length > 0 ? (
+                <>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-slate-400">☁️ Cloud — {cloud.length} services</p>
+                  <div className="mt-3 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {cloud.map(s => (
+                      <Link key={s.id} href={s.href} className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/5">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl flex-shrink-0" role="img" aria-label={s.title}>{s.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700">{s.title}</h3>
+                            <p className="mt-1 text-xs text-slate-600 line-clamp-2">{s.description}</p>
+                            <p className="mt-2 text-xs font-medium text-slate-500">From {s.pricing.basic}/mo</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : null;
+            })()}
+
+            {/* Data */}
+            {(() => {
+              const data = allServices.filter(s => s.category === 'data').sort((a,b) => a.title.localeCompare(b.title));
+              return data.length > 0 ? (
+                <>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-slate-400">📊 Data &amp; Analytics — {data.length} services</p>
+                  <div className="mt-3 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {data.map(s => (
+                      <Link key={s.id} href={s.href} className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/5">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl flex-shrink-0" role="img" aria-label={s.title}>{s.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700">{s.title}</h3>
+                            <p className="mt-1 text-xs text-slate-600 line-clamp-2">{s.description}</p>
+                            <p className="mt-2 text-xs font-medium text-slate-500">From {s.pricing.basic}/mo</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : null;
+            })()}
+
+            {/* Automation */}
+            {(() => {
+              const auto = allServices.filter(s => s.category === 'automation').sort((a,b) => a.title.localeCompare(b.title));
+              return auto.length > 0 ? (
+                <>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-slate-400">⚡ Automation — {auto.length} services</p>
+                  <div className="mt-3 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {auto.map(s => (
+                      <Link key={s.id} href={s.href} className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/5">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl flex-shrink-0" role="img" aria-label={s.title}>{s.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700">{s.title}</h3>
+                            <p className="mt-1 text-xs text-slate-600 line-clamp-2">{s.description}</p>
+                            <p className="mt-2 text-xs font-medium text-slate-500">From {s.pricing.basic}/mo</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : null;
+            })()}
+          </section>
+          {/* END SERVICE CATALOG */}
+
 
         {/* AI Component Showcase */}
         <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -785,6 +917,26 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+          {/* CONTACT CTA BANNER */}
+          <Link href="/contact" className="mt-6 block">
+            <section className="rounded-2xl border-2 border-blue-500 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 p-8 text-center shadow-xl">
+              <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">Ready to transform your business?</p>
+              <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+                Let Zion Tech Group build your future
+              </h2>
+              <p className="mt-3 max-w-2xl mx-auto text-sm text-blue-100">
+                <strong>Phone:</strong> +1 302 464 0950 &nbsp;&middot;&nbsp;
+                <strong>Email:</strong> kleber@ziontechgroup.com &nbsp;&middot;&nbsp;
+                <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
+              <p className="mt-1 text-xs text-blue-200">Enterprise AI &middot; IT Infrastructure &middot; Cloud &middot; Security &middot; Automation — {allServices.length}+ services, one partner</p>
+              <p className="mt-4 text-lg font-semibold text-white underline decoration-blue-300 decoration-2 underline-offset-4">
+                Get Your Free Consultation &rarr;
+              </p>
+            </section>
+          </Link>
+
     </LayoutLayout>
   );
 }
