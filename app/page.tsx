@@ -4,6 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
+import { searchServices } from './data/searchServices';
 import type { Service } from './data/servicesData';
 import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
@@ -11,6 +12,7 @@ import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
+import ServiceCounter from '@/components/ServiceCounter';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -45,15 +47,13 @@ const CATEGORIES = [
 
 export default function HomePage() {
   const services: Service[] = allServices;
-
-  // Quick-View Modal: open a service card overlay without navigating away
+  const serviceCount = searchServices.length;
     const [quickView, setQuickView] = useState<Service | null>(null);
     const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
     const [search, setSearch] = useState('');
     const [catFilter, setCatFilter] = useState<string | null>(null);
 
   // Dynamic stats — auto-update when catalog changes
-  const serviceCount = services.length;
   const stats = [
     { value: `${serviceCount}+`, label: STAT_SERVICES },
     { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
@@ -156,14 +156,14 @@ let list = services;
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> {serviceCount}+ Services — Live Now
+              <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="gradient-text">AI & IT Services</span><br />
               <span className="text-white">for Your Business</span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              {serviceCount}+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              <ServiceCounter /> real-world micro SAAS services, IT solutions, and AI-powered platforms.
               From machine learning to cybersecurity, CRM automation to blockchain.
               Get a custom proposal in minutes.
             </p>
