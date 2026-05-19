@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   description: 'Answers to the most common questions about our AI services, IT solutions, consulting, and micro-SaaS products.',
 };
 
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+};
+
 const faqs = [
   {
     category: 'General',
@@ -103,15 +109,45 @@ const faqs = [
   }
 ];
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.flatMap((section) =>
+    section.questions.map((qa) => ({
+      '@type': 'Question',
+      name: qa.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: qa.a,
+      },
+    }))
+  ),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ziontechgroup.com/' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://ziontechgroup.com/faq' },
+  ],
 };
 
 export default function FAQPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.15),transparent_60%)]" />
