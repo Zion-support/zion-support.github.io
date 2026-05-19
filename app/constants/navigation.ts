@@ -31,8 +31,6 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Proposal Generator', href: '/proposal-generator' },
   { name: 'Service Comparison', href: '/tools/service-comparison' },
   { name: 'Service Recommender', href: '/tools/service-recommender' },
-  { name: 'SSL Certificate Checker', href: '/tools/ssl-checker' },
-  { name: 'Port Scanner', href: '/tools/port-scanner' },
   { name: 'Client Portal', href: '/portal' },
 ];
 
