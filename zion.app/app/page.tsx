@@ -156,6 +156,87 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* ── Quick Access Platform Grid ── */}
+      <section className="py-20 bg-slate-900/40">
+        <div className="container-page">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Explore the <span className="gradient-text">Platform</span>
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              Jump straight into the tools and services you need — all in one place.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              {
+                title: "AI Services",
+                desc: "AI-powered tools & intelligent platforms",
+                href: "/ai-services",
+                iconBg: "bg-purple-500/15",
+                icon: "🧠",
+                accent: "border-purple-500/30 hover:border-purple-400/60",
+              },
+              {
+                title: "Tools",
+                desc: "Diagnostic & configurator utilities",
+                href: "/tools",
+                iconBg: "bg-blue-500/15",
+                icon: "⚙️",
+                accent: "border-blue-500/30 hover:border-blue-400/60",
+              },
+              {
+                title: "Pricing",
+                desc: "Transparent plans & cost estimates",
+                href: "/pricing",
+                iconBg: "bg-amber-500/15",
+                icon: "💎",
+                accent: "border-amber-500/30 hover:border-amber-400/60",
+              },
+              {
+                title: "Contact",
+                desc: "Get in touch with our team",
+                href: "/contact",
+                iconBg: "bg-cyan-500/15",
+                icon: "📬",
+                accent: "border-cyan-500/30 hover:border-cyan-400/60",
+              },
+              {
+                title: "Client Portal",
+                desc: "Billing, projects & support tickets",
+                href: "/portal",
+                iconBg: "bg-emerald-500/15",
+                icon: "🌐",
+                accent: "border-emerald-500/30 hover:border-emerald-400/60",
+              },
+              {
+                title: "Industry Solutions",
+                desc: "Healthcare, finance, SaaS & more",
+                href: "/industry-solutions",
+                iconBg: "bg-sky-500/15",
+                icon: "🏢",
+                accent: "border-sky-500/30 hover:border-sky-400/60",
+              },
+            ].map((card, i) => (
+              <Link
+                key={i}
+                href={card.href}
+                className={`glass-card flex flex-col items-center text-center gap-3 p-6 transition-all duration-300 group border ${card.accent} cursor-pointer`}
+              >
+                <div className={`${card.iconBg} w-14 h-14 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform`}>
+                  {card.icon}
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm mb-1 group-hover:text-purple-300">{card.title}</div>
+                  <div className="text-xs text-slate-500 leading-relaxed">{card.desc}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* ── How It Works ── */}
       <section className="py-20">
