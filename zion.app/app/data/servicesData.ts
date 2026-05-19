@@ -17697,11 +17697,26 @@ export const automationServices: Service[] = [
     },
   },
 
-  aiServices,
-  itServices,
-  itSolutions,
-  allServices
-}
+];
+
+
+
+export const allServices: Service[] = [
+
+  ...aiServices,
+
+  ...itServices,
+
+  ...cloudServices,
+
+  ...securityServices,
+
+  ...dataServices,
+
+  ...automationServices,
+
+];
+
 
 export const getServiceById = (id: string): Service | undefined => {
   return allServices.find(s => s.id === id);
