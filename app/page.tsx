@@ -7,6 +7,7 @@ import { allServices } from './data/servicesData';
 import serviceIndex from '../public/service-index.json';
 import type { Service } from './data/servicesData';
 import Footer from '@/components/Footer';
+import ServiceBrowser from '@/components/ServiceBrowser';
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
