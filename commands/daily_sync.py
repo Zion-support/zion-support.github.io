@@ -19,7 +19,8 @@ Usage:
 import sys, os, datetime, argparse, json, re
 from pathlib import Path
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+home = Path.home()
+WORKSPACE = home / '.openclaw' / 'workspace'
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'lib'))
 
