@@ -5,7 +5,7 @@ const fs = require('fs');
 let passed = true;
 
 try {
-  execSync('npx tsc --noEmit --pretty false', { stdio: 'pipe', cwd: 'zion.app' });
+  execSync('npx tsc --noEmit --pretty false', { stdio: 'pipe' });
   console.log('✅ Type-check clean');
 } catch(e) {
   console.log('⚠️ Type-check: ' + (e.stdout || e.message).slice(-120));
@@ -13,7 +13,7 @@ try {
 }
 
 try {
-  const size = fs.statSync('zion.app/out').size;
+  const size = fs.statSync('out').size;
   console.log(`✅ out/ exists and is ${size} bytes`);
 } catch {
   console.log('⚠️ out/ missing — will build fresh');
