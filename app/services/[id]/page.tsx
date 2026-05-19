@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { allServices } from '@/data/servicesData';
 import Link from 'next/link';
 import ROICalculator from '@/components/ROICalculator';
+import SmartServiceCard from '@/components/SmartServiceCard';
 
 const CAT_LABELS: Record<string,string> = {
   ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security',
@@ -232,20 +233,27 @@ export default async function ServicePage({ params }: PageProps) {
               <h2 className="text-2xl font-semibold text-white mb-6">Related Services</h2>
               <p className="text-slate-400 text-sm mb-6">Other {catLabel} services you may be interested in</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {sameCat.map((s) => (
-                  <Link key={s.id} href={`/services/${s.id}`}
-                    className="glass-card hover:border-purple-500/50 transition group flex flex-col">
-                    <span className="text-xs text-slate-500 uppercase tracking-wider">{s.category}</span>
-                    <h3 className="text-white font-semibold mt-1 group-hover:text-purple-400 transition leading-snug">{s.title}</h3>
-                    <p className="text-slate-400 text-sm mt-2 line-clamp-2 flex-1">{s.description}</p>
-                    <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
-                      <span className="text-purple-300 text-xs font-semibold">
-                        From {Object.values(s.pricing as Record<string,string>)[0]}/mo
-                      </span>
-                      <span className="text-xs text-slate-500 group-hover:text-purple-400 transition-colors">→</span>
-                    </div>
-                  </Link>
-                ))}
+                  {sameCat.map((s) => {
+                    // Relevance: share of features + benefits overlap
+                    const myFeats = new Set(service.features || []);
+                    const myBens  = new Set(service.benefits  || []);
+                    const sFeats  = new Set(s.features || []);
+                    const sBens   = new Set(s.benefits  || []);
+                    const sharedF = [...sFeats].filter(f => myFeats.has(f)).length;
+                    const sharedB = [...sBens].filter(b  => myBens.has(b)).length;
+                    const total   = sFeats.size + sBens.size;
+                    const relevance = total > 0 ? Math.round((sharedF + sharedB) / total * 100) : 0;
+                    const relType: 'related' | 'recommended' | 'featured' =
+                      relevance > 60 ? 'recommended' : 'related';
+                    return (
+                      <SmartServiceCard
+                        key={s.id}
+                        service={s}
+                        relationship={relType}
+                        relevance={relevance}
+                      />
+                    );
+                  })}
               </div>
               <div className="text-center mt-6">
                 <Link href={`/services?category=${service.category}`}
