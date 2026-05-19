@@ -8,6 +8,7 @@ import type { Service } from './data/servicesData';
 import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
+import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -595,6 +596,9 @@ let list = services;
           </div>
         </div>
       </section>
+
+      {/* ── Service Search — find any of 626 services ── */}
+      <ServiceGridWithSearch />
 
       {/* ── Spotlight Carousel ── */}
       <section className="py-16">
