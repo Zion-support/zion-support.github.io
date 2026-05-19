@@ -65,6 +65,7 @@
     "seo:audit": "node scripts/seo-audit.cjs",
     "deploy:status:generate": "node scripts/deploy-status-generate.cjs",
     "automation:preflight": "node scripts/automation-preflight.cjs",
+    "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs",
 
     "smoke:routes:check": "node scripts/smoke-routes-check.cjs",
     "homepage:ai-sync:check": "node scripts/homepage-ai-sync-check.cjs",
