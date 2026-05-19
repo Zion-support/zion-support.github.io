@@ -51,6 +51,8 @@ export default async function ServicePage({ params }: PageProps) {
           <span className="mx-2">/</span>
           <Link href="/services" className="hover:text-purple-400 transition">Services</Link>
           <span className="mx-2">/</span>
+          <Link href={`/services?category=${encodeURIComponent(service.category)}`} className="hover:text-purple-400 transition">{catLabel}</Link>
+          <span className="mx-2">/</span>
           <span className="text-slate-300">{service.title}</span>
         </nav>
 
