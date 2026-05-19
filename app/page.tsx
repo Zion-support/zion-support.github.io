@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import TestimonialsSection from '@/components/TestimonialsSection';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -629,8 +630,10 @@ let list = services;
         </div>
       </section>
 
+      {/* ── Testimonials — client social proof ── */}
+      <TestimonialsSection />
 
-{/* Contact Info */}
+      {/* Contact Info */}
       <section className="py-16 border-t border-slate-800">
         <div className="container-page">
           <div className="grid md:grid-cols-3 gap-8 text-center">
