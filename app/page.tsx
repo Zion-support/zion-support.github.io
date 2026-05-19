@@ -10,6 +10,7 @@ import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import ContactFunnel from '@/components/ContactFunnel';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -633,30 +634,19 @@ let list = services;
       {/* ── Testimonials — client social proof ── */}
       <TestimonialsSection />
 
-      {/* Contact Info */}
-      <section className="py-16 border-t border-slate-800">
+      <ContactFunnel />
+
+      {/* Quick Links */}
+      <section className="py-8 border-t border-slate-800">
         <div className="container-page">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2">📞 Call Us</h4>
-              <a href="tel:+13024640950" className="text-purple-300 text-lg hover:text-purple-200 transition">+1 302 464 0950</a>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2">✉️ Email</h4>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-300 text-lg hover:text-purple-200 transition">kleber@ziontechgroup.com</a>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2">📍 Visit Us</h4>
-              <p className="text-slate-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-            </div>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm">
-            <Link href="/faq" className="text-slate-400 hover:text-cyan-400 transition">❓ FAQ</Link>
-            <Link href="/industry-solutions" className="text-slate-400 hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
-            <Link href="/testimonials" className="text-slate-400 hover:text-cyan-400 transition">⭐ Testimonials</Link>
-            <Link href="/services" className="text-slate-400 hover:text-cyan-400 transition">🛠️ All Services</Link>
-            <Link href="/configurator" className="text-slate-400 hover:text-cyan-400 transition">⚙️ Configurator</Link>
-            <Link href="/proposals" className="text-slate-400 hover:text-cyan-400 transition">📄 Proposals</Link>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
+            <Link href="/faq" className="hover:text-cyan-400 transition">❓ FAQ</Link>
+            <Link href="/industry-solutions" className="hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
+            <Link href="/services" className="hover:text-cyan-400 transition">🛠️ All Services</Link>
+            <Link href="/configurator" className="hover:text-cyan-400 transition">⚙️ Configurator</Link>
+            <Link href="/proposals" className="hover:text-cyan-400 transition">📄 Proposals</Link>
+            <Link href="/partners" className="hover:text-cyan-400 transition">🤝 Partners</Link>
+            <Link href="/status" className="hover:text-green-400 transition">● System Status</Link>
           </div>
         </div>
       </section>
