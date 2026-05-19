@@ -94,6 +94,12 @@ export default function HomePage() {
     return list;
   }, [services, catFilter, search]);
 
+  // Dynamic popular services — changes automatically when catalog updates
+  const popularServices = useMemo(
+    () => services.filter((s: any) => s.popular == true).slice(0, 50),
+    [services]
+  );
+
   const byCategory = useMemo(() => {
     const map: Record<string, Service[]> = {};
     for (const c of CATEGORIES) map[c.key] = services.filter((s: any) => s.category === c.key);
@@ -181,572 +187,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Services by Category (all 626 services advertised) ── */}
-
-
-      {/* ── Service Spotlight ── */}
+      {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
           <div className="flex items-center gap-3 mb-8">
-            <span className="text-2xl">✨</span>
-            <h2 className="text-2xl font-bold text-white">Today’s Service Spotlight</h2>
-            <span className="text-xs text-slate-500 bg-slate-800 rounded-full px-3 py-1">
-              Auto-updated · Quality-ranked
-            </span>
+            <span className="text-2xl">🗂️</span>
+            <h2 className="text-2xl font-bold text-white">Browse by Category</h2>
+            <span className="text-sm text-slate-400">All {services.length}+ services across 6 domains</span>
           </div>
-          <SpotlightCard />
         </div>
-      </section>
-      {/* ── Popular Services ── */}
+        </section>
+
+        {/* ── Popular Services ── */}
+
       <section className="py-16">
         <div className="container-page">
           <div className="flex items-center gap-3 mb-8">
             <span className="text-2xl">🔥</span>
             <h2 className="text-2xl font-bold text-white">Popular Services</h2>
-            <span className="text-sm text-slate-400">(30+ top services — hard to miss)</span>
+            <span className="text-sm text-slate-400">({popularServices.length} services chosen by our clients — data-driven)</span>
           </div>
           <div className="overflow-x-auto pb-4 -mb-4">
             <div className="flex gap-4" style={{ minWidth:'max-content', paddingBottom:'8px' }}>
-              <div key="ai-analytics" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">📊</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Analytics & BI</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Transform your data into actionable insights with our advanced AI analytics platform.</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-analytics" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-carbon-optimizer" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🌿</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Carbon Footprint Optimizer</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Automated Scope 1-3 carbon accounting: ingests utility bills, cloud usage, travel itineraries, suppl</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-carbon-optimizer" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-customer-support" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">💬</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Customer Support</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">24/7 AI-powered customer service with intelligent ticket routing, auto-resolution, and sentiment ana</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-customer-support" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-document-intelligence" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">📄</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Document Intelligence</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data </p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-document-intelligence" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-knowledge-graph-search-deep" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🔍</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Knowledge Graph Search Engine</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Deep semantic search across structured + unstructured corporate knowledge: auto-builds a navigable k</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-knowledge-graph-search-deep" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-knowledge-management" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🧠</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Knowledge Management</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detec</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-knowledge-management" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-lead-generation" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🎯</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Lead Generation & Enrichment</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Automatically discover, qualify, and enrich B2B leads with web scraping, firmographic scoring, and i</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-lead-generation" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-sales-intelligence" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">📈</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Sales Intelligence</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreac</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-sales-intelligence" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-contract-lifecycle-intelligence" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Contract Lifecycle Intelligence</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">AI contract lifecycle management: extract clauses and dates, auto-flag risk, renewal calendar, bench</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-contract-lifecycle-intelligence" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-fintech-fraud-graph" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Fintech Fraud Graph</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Real-time fraud detection as a knowledge graph: entity resolution across accounts, IP, device, and c</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-fintech-fraud-graph" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-sustainable-supply-chain-radar" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Sustainable Supply Chain Radar</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Supply-chain ESG tracking: carbon-intensity per supplier tier, green-alternative sourcing score, Sco</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-sustainable-supply-chain-radar" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-voice-first-crm" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">📞</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Voice-First CRM & Sales Assistant</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Voice-first CRM for field sales and inside sales teams: automatic call transcription, real-time deal</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-voice-first-crm" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-crm-automation-suite" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🎯</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI CRM Automation Suite</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Full CRM automation platform: AI lead scoring, email sequences, pipeline tracking, deal insights, au</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-crm-automation-suite" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="ai-chronic-disease-tracker" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🏥</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">AI Chronic Disease Progression Tracker</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Longitudinal patient analytics: track chronic disease progression across EHR data, lab results, and </p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-purple-500/12 text-purple-300 border-purple-500/25">AI</span>
-                  <Link href="/services/ai-chronic-disease-tracker" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="devops-cicd" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">⚙️</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">DevOps & CI/CD Automation</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">End-to-end CI/CD pipelines, container orchestration, GitOps workflows, and site reliability engineer</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">AUTOMATION</span>
-                  <Link href="/services/devops-cicd" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="automation-integrated-commerce-flows" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Integrated Commerce Flow Orchestrator</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Commerce workflow automation: cart-to-delivery orchestrator connecting Shopify/BigCommerce/WooCommer</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">AUTOMATION</span>
-                  <Link href="/services/automation-integrated-commerce-flows" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="automation-document-intelligence-pipeline" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Legal Document Intelligence Pipeline</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">OCR + NLP document-intelligence: pipeline-abstract multi-service orchestration for contracts, invoic</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">AUTOMATION</span>
-                  <Link href="/services/automation-document-intelligence-pipeline" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="automation-multi-channel-campaign-manager" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Multi-Channel Campaign Manager</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Orchestrate campaigns across email, SMS, social, push, and ads from one campaign studio: audience-se</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">AUTOMATION</span>
-                  <Link href="/services/automation-multi-channel-campaign-manager" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="automation-multi-channel-campaign-orchestrator" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Multi-Channel Campaign Orchestrator</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Orchestrate campaigns across email, SMS, WhatsApp, Telegram, and LinkedIn with sequence branching, p</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">AUTOMATION</span>
-                  <Link href="/services/automation-multi-channel-campaign-orchestrator" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="cloud-migration" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">☁️</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Cloud Migration & Modernization</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Seamless migration to AWS, Azure, or GCP with zero downtime, cost optimization, and infrastructure-a</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-blue-500/12   text-blue-300   border-blue-500/25">CLOUD</span>
-                  <Link href="/services/cloud-migration" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="cloud-data-lakehouse-platform" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Data Lakehouse Platform</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Unified data lakehouse: ingest CSV, JSON, Parquet, and streams; implement ACID semantics with open-t</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-blue-500/12   text-blue-300   border-blue-500/25">CLOUD</span>
-                  <Link href="/services/cloud-data-lakehouse-platform" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="cloud-edge-ai-deployment-platform" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🌍</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Edge AI Deployment Platform</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">One-click edge AI model deployment to 50k+ global edge points-of-presence: ONNX/TensorRT/GGUF model </p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-blue-500/12   text-blue-300   border-blue-500/25">CLOUD</span>
-                  <Link href="/services/cloud-edge-ai-deployment-platform" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="cloud-event-driven-microservices" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Event-Driven Microservices Platform</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Event backbone as a service: managed Pub-Sub broker, event schema registry, replay from any timestam</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-blue-500/12   text-blue-300   border-blue-500/25">CLOUD</span>
-                  <Link href="/services/cloud-event-driven-microservices" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="cloud-hybrid-multicloud-networking" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Hybrid + Multi-Cloud Networking</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Zero-trust networking across on-prem/edge/cloud: cloud-router fabric connects VPCs across AWS/GCP/Az</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-blue-500/12   text-blue-300   border-blue-500/25">CLOUD</span>
-                  <Link href="/services/cloud-hybrid-multicloud-networking" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="data-graph-analytics-platform" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Graph Analytics & Network Intelligence</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Large-scale network analytics: entity relationship graph builder, centrality and community detection</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/12 text-emerald-300 border-emerald-500/25">DATA</span>
-                  <Link href="/services/data-graph-analytics-platform" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="data-realtime-trending-aggregator" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Real-time Event & Trending Aggregator</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Streaming data platform: Flink/Redpanda backbone, windowed aggregation at sub-second latency, trend-</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/12 text-emerald-300 border-emerald-500/25">DATA</span>
-                  <Link href="/services/data-realtime-trending-aggregator" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="it-api-gateway-openapi" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">API Gateway + OpenAPI Management</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Enterprise API gateway: OpenAPI 3.1 lifecycle, rate-limit/quota per key, threat-protection WAF rules</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-cyan-500/12   text-cyan-300   border-cyan-500/25">IT</span>
-                  <Link href="/services/it-api-gateway-openapi" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="it-api-management-gateway" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">API Management & Gateway</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Full API lifecycle management: unified gateway with auth, rate-limit, circuit-breaker, developer por</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-cyan-500/12   text-cyan-300   border-cyan-500/25">IT</span>
-                  <Link href="/services/it-api-management-gateway" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="it-backup-disaster-recovery-solution" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Backup & Disaster Recovery Solution</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Immutable backup engine with RPO as low as 5 minutes, RTO of 30 minutes, off-site air-gapped storage</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-cyan-500/12   text-cyan-300   border-cyan-500/25">IT</span>
-                  <Link href="/services/it-backup-disaster-recovery-solution" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="it-backup-dr-bc-as-a-service" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Backup / DR/BCaaS</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Managed backup and disaster recovery: 3-2-1-1-airgap policy, every-30s WORM snapshots, point-in-time</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-cyan-500/12   text-cyan-300   border-cyan-500/25">IT</span>
-                  <Link href="/services/it-backup-dr-bc-as-a-service" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="cybersecurity" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">🔒</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Cybersecurity & Penetration Testing</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Comprehensive security assessments, vulnerability management, and incident response to protect your </p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-red-500/12    text-red-300    border-red-500/25">SECURITY</span>
-                  <Link href="/services/cybersecurity" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="security-privileged-access-management" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Privileged Access Management</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">PAM platform: just-in-time privilege elevation, live session recording with playback, FIPS-140-2 cer</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-red-500/12    text-red-300    border-red-500/25">SECURITY</span>
-                  <Link href="/services/security-privileged-access-management" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="security-sbom-supply-chain" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">◆</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">SBOM & Supply Chain Security</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Supply chain security platform: SBOM & VEX generation (every build/build event), CVE SLSA provenance</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-red-500/12    text-red-300    border-red-500/25">SECURITY</span>
-                  <Link href="/services/security-sbom-supply-chain" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="security-supply-chain-sbom-manager" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Software Bill-of-Materials Manager</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Full SBOM lifecycle management: auto-generate SPDX and Cyclone-DX per build, license-compliance chec</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-red-500/12    text-red-300    border-red-500/25">SECURITY</span>
-                  <Link href="/services/security-supply-chain-sbom-manager" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-              <div key="security-web-application-firewall" className="min-w-[240px] glass-card flex flex-col gap-2 group hover:border-purple-500/40">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0">★</span>
-                  <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">Web Application Firewall</h3>
-                </div>
-                <p className="text-slate-400 text-xs line-clamp-2 flex-1">Managed WAF with OWASP Top-10 rulesets, API-protection for OWASP API Top-10, bot management with hum</p>
-                <div className="mt-1 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider bg-red-500/12    text-red-300    border-red-500/25">SECURITY</span>
-                  <Link href="/services/security-web-application-firewall" className="text-xs text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
-                    Details <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-slate-900/30">
-        <div className="container-page">
-          <h2 className="section-heading text-center">Complete Service Catalog</h2>
-          <p className="section-subheading text-center">All {services.length} services across every category — click any card for full details</p>
-          
-          {/* Per-category highlights: show first 6 services per category as rich cards */}
-          {CATEGORIES.map(cat => {
-            const catSvcs = byCategory[cat.key] || [];
-            const top6 = catSvcs.slice(0, 6);
-            return (
-              <div key={cat.key} className="mb-16 last:mb-0">
-                {/* Category header bar */}
-                <div className={`inline-flex items-center gap-3 mb-6 px-5 py-3 rounded-full bg-gradient-to-r ${cat.color} bg-opacity-10 border border-slate-700/50`}>
-                  <span className="text-2xl">{cat.emoji}</span>
-                  <h3 className="text-xl font-bold text-white">{cat.label}</h3>
-                  <span className="text-sm text-slate-400">({catSvcs.length} services)</span>
-                  <Link href={`/services?category=${cat.key}`} className="ml-2 text-sm text-purple-300 hover:text-purple-200 font-medium transition">
-                    View all →
-                  </Link>
-                </div>
-                
-                {/* Top-6 service grid */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {top6.map((service: any) => (
-                  <div
+              {popularServices.map((service: any) => {
+                const catMeta = CATEGORIES.find(c => c.key === service.category) || CATEGORIES[0];
+                return (
+                  <Link
                     key={service.id}
-                    className="glass-card flex flex-col hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10 group cursor-pointer relative"
+                    href={`/services/${service.id}`}
+                    className="min-w-[240px] max-w-[240px] glass-card flex flex-col hover:border-purple-500/40 group"
                   >
-                    {/* Popular badge — only if flagged in data */}
-                    {service.popular && (
-                    <span className="absolute -top-2 -right-2 z-10 text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-orange-500 to-pink-500 text-white px-2.5 py-1 rounded-full shadow-md">
-                      🔥 Popular
-                    </span>
-                    )}
-                    <div className="flex items-start gap-3 mb-3">
-                      <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{service.icon}</span>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-base font-semibold text-white leading-snug group-hover:text-purple-300 transition-colors line-clamp-2">
-                          {service.title}
-                        </h3>
-                        <span className="text-xs text-slate-500 uppercase tracking-wider">{service.category}</span>
-                      </div>
+                    <div className="flex items-start gap-3 mb-2">
+                      <span className="text-2xl shrink-0">{service.icon}</span>
+                      <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">{service.title}</h3>
                     </div>
-                    <p className="text-slate-400 text-sm mb-3 line-clamp-2 flex-1 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-1 mb-3">
-                      {service.features.slice(0, 2).map((f: string, i: number) => (
-                        <li key={i} className="text-slate-300 text-xs flex items-start gap-2">
-                          <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
-                          <span className="line-clamp-1">{f}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-slate-400 text-xs line-clamp-2 flex-1">{service.description}</p>
                     <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
-                      <span className="text-purple-300 text-sm font-semibold">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">★ Popular</span>
+                      <span className="text-purple-300 text-xs font-semibold">
                         From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
                       </span>
-                      <Link
-                        href={`/services/${service.id}`}
-                        className="text-sm text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group/learn"
-                      >
-                        Learn more <span className="group-hover/learn:translate-x-1 transition-transform">→</span>
-                      </Link>
                     </div>
-                  </div>
-                  ))}
-                </div>
-                
-                {/* Show-more link for oversized categories */}
-                {catSvcs.length > 6 && (
-                  <div className="text-center mt-4">
-                    <Link href={`/services?category=${cat.key}`} className="text-sm text-slate-400 hover:text-purple-300 transition">
-                      + {catSvcs.length - 6} more {cat.label.toLowerCase()} →
-                    </Link>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1170,3 +656,4 @@ function SpotlightCard() {
     </div>
   );
 }
+
