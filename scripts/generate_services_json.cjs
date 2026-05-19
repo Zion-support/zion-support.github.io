@@ -37,6 +37,7 @@ function main() {
       href:          svc.href || `/services/${svc.id}`,
       category:      svc.category || inferCategory(svc.id),
       industry:      svc.industry || 'General',
+      popular:       svc.popular || false,
     }))
     .sort((a, b) => a.id.localeCompare(b.id));
 
