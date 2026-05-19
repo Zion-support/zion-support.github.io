@@ -29,28 +29,6 @@ const STAT_SLA      = 'SLA Uptime Guarantee';
 
 // Featured: pull 2 per category so every category is represented
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
-const FEATURED_IDS = [
-  'accessibility-compliance',
-  'advanced-ai-enterprise-intelligence-hub',
-  'ai-accessibility-auditor',
-  'ai-accessibility-optimizer',
-  'ai-analytics',
-  'ai-customer-support',
-  'ai-document-intelligence',
-  'ai-knowledge-management',
-  'ai-lead-generation',
-  'ai-office-automation',
-  'ai-sales-intelligence',
-  'ai-self-healing-infra',
-  'api-development',
-  'api-gateway-management',
-  'ai-deepfake-detection',
-  'ai-supply-chain-predictor',
-  'ai-chronic-disease-tracker',
-  'ai-marine-fisheries-sustainability',
-  'ai-self-healing-kubernetes-platform',
-  'it-zero-trust-1'
-];
 
 const CATEGORIES = [
   { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
@@ -78,10 +56,6 @@ export default function HomePage() {
     { value: '99.9%', label: STAT_SLA },
   ];
 
-  const featuredServices = useMemo(
-    () => services.filter((s: any) => FEATURED_IDS.includes(s.id)),
-    [services]
-  );
 
   const filteredShowcase = useMemo(() => {
     let list = services;
