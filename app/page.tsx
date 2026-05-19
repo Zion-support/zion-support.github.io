@@ -107,6 +107,17 @@ export default function HomePage() {
     return map;
   }, [services]);
 
+  // Auto-pick top 6 most-documented services from live catalog for the Fresh Lab section
+  const freshFeatures = useMemo(() => {
+    return allServices
+      .map(s => ({
+        ...s,
+        _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3,
+      }))
+      .sort((a, b) => b._score - a._score)
+      .slice(0, 6);
+  }, [allServices]);
+
   return (
     <main className="min-h-screen bg-slate-950">
       {/* ── Hero ── */}
@@ -469,44 +480,7 @@ export default function HomePage() {
           <p className="section-subheading text-center">The latest platform upgrades, services, and capabilities — always evolving</p>
 
           <div className="grid md:grid-cols-3 gap-6 mt-10">
-            {[
-              {
-                title: '🤖 Autonomous Email Responder',
-                desc: 'V15/V16 AI-driven email intelligence — predictive response with auto-reply monitoring. Handles your inbox 24/7 without lifting a finger.',
-                tag: 'AI Tools',
-                color: 'from-purple-600 to-pink-500',
-              },
-              {
-                title: '⚡ Dynamic Hero Stats',
-                desc: 'Homepage numbers now auto-sync from the live service catalog. Add, rename, or retire services and the count updates instantly across the whole site.',
-                tag: 'Platform',
-                color: 'from-cyan-500 to-blue-600',
-              },
-              {
-                title: '🔍 Smart Fuzzy Search',
-                desc: 'Find exactly the right service in milliseconds. Category pill filters + hit counts show results at a glance before you even click.',
-                tag: 'Search',
-                color: 'from-green-500 to-emerald-500',
-              },
-              {
-                title: '⚙️ AI-Powered Configurator',
-                desc: 'Get a custom-tailored proposal as a PDF delivered to your inbox within 24 hours. AI matches your budget + needs to the right services.',
-                tag: 'Sales',
-                color: 'from-orange-500 to-amber-500',
-              },
-              {
-                title: '🛠️ Full Service Catalog',
-                desc: '626+ micro-SaaS, AI, IT, Cloud, Security, Data, and Automation services — all documented with pricing, features, and direct contact.',
-                tag: 'Catalog',
-                color: 'from-indigo-500 to-violet-500',
-              },
-              {
-                title: '🗺️ Industry Solutions',
-                desc: 'Healthcare, Finance, E-Commerce, Manufacturing, SaaS, and more — discover how our services apply directly to your industry.',
-                tag: 'Industries',
-                color: 'from-sky-500 to-cyan-600',
-              },
-            ].map((feat, i) => (
+            {freshFeatures.map((feat, i) => (
               <div key={i} className="glass-card flex flex-col gap-3 hover:border-purple-500/40 group">
                 <div className={`h-1 rounded-full bg-gradient-to-r ${feat.color}`} />
                 <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">{feat.tag}</span>
