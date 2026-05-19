@@ -303,6 +303,45 @@ let list = services;
         </div>
       </section>
 
+      {/* ── Category Deep-Link Strip — every category with count + gradient bar ── */}
+      <section className="py-12">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🔗</span>
+            <h2 className="text-xl font-bold text-white">Quick Links by Category</h2>
+            <span className="text-sm text-slate-400">{services.length}+ services across 6 domains</span>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {CATEGORIES.map(cat => {
+              const catServices = services.filter((s: any) => s.category === cat.key);
+              const n = catServices.length;
+              const catCounts: number[] = CATEGORIES.map(c => services.filter((s: any) => s.category === c.key).length);
+              const maxN = Math.max(...(catCounts.length > 0 ? catCounts : [1]));
+              const pct = maxN > 0 ? (n / maxN) * 100 : 0;
+              return (
+                <Link
+                  key={cat.key}
+                  href={`/services?category=${cat.key}`}
+                  className="block group"
+                >
+                  <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden mb-3">
+                    <div
+                      className="h-full rounded-full transition-all duration-500 group-hover:opacity-80"
+                      style={{ width: `${pct}%`, background: `linear-gradient(90deg, ${cat.color.replace(/from-|to-/g,'').split(' ')[0]}, ${cat.color.split(' ').pop()})` }}
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl">{cat.emoji}</span>
+                    <span className="text-2xl font-bold text-white tabular-nums">{n}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-1 group-hover:text-purple-300 transition-colors">{cat.label}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* ── Complete Service Showcase (Horizontal Scroll + Quick-View Modal) ── */}
       <section className="py-20">
         <div className="container-page">
