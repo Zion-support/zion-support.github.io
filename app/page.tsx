@@ -4,7 +4,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
-import serviceIndex from '../public/service-index.json';
 import type { Service } from './data/servicesData';
 import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
@@ -1085,12 +1084,22 @@ function SpotlightCard() {
   const [spotlight, setSpotlight] = useState<Service | null>(null);
 
   useEffect(() => {
-    const idx = Math.floor(Date.now() / 86400000 / 4) % 14; // cycle 0–13 every 4 days
-    localStorage.setItem('spotlightIdx', String(idx));
-    const pool = serviceIndex.services.slice(0, 14); // pre-ranked top-14 by quality
-    const pick = pool[idx] || pool[0];
-    const full = allServices.find((s: any) => s.id === pick.id) || pick;
-    setSpotlight(full as any);
+    let cancelled = false;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 6000);
+    fetch('/service-index.json', { signal: controller.signal })
+      .then(r => r.json())
+      .then(idx => {
+        if (cancelled) return;
+        const pool = (idx.services || []).slice(0, 14);
+        const idx2 = Math.floor(Date.now() / 86400000 / 4) % 14;
+        const pick = pool[idx2] || pool[0];
+        const full = allServices.find((s: any) => s.id === pick.id) || pick;
+        setSpotlight(full as any);
+      })
+      .catch(() => {})
+      .finally(() => clearTimeout(timeout));
+    return () => { cancelled = true; controller.abort(); clearTimeout(timeout); };
   }, []);
 
   if (!spotlight) return <p className="text-slate-400">Loading spotlight…</p>;
