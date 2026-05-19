@@ -43,9 +43,10 @@ export default function HomePage() {
   const services: Service[] = allServices;
 
   // Quick-View Modal: open a service card overlay without navigating away
-  const [quickView, setQuickView] = useState<Service | null>(null);
-  const [search, setSearch] = useState('');
-  const [catFilter, setCatFilter] = useState<string | null>(null);
+    const [quickView, setQuickView] = useState<Service | null>(null);
+    const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
+    const [search, setSearch] = useState('');
+    const [catFilter, setCatFilter] = useState<string | null>(null);
 
   // Dynamic stats — auto-update when catalog changes
   const serviceCount = services.length;
@@ -54,11 +55,21 @@ export default function HomePage() {
     { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
-  ];
+    ];
 
+  // Fetch release-signal dataset on mount
+  useEffect(() => {
+    const ac = new AbortController();
+    const t  = setTimeout(() => ac.abort(), 8_000);
+    fetch('/data/release_notes.json', { signal: ac.signal })
+      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(d  => setReleaseNotes(d.entries || []))
+      .catch(() => {/* leave empty — freshFeatures fallback handles it */})
+      .finally(() => clearTimeout(t));
+  }, []);
 
-  const filteredShowcase = useMemo(() => {
-    let list = services;
+    const filteredShowcase = useMemo(() => {
+let list = services;
     if (catFilter) list = list.filter((s: any) => s.category === catFilter);
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -81,16 +92,56 @@ export default function HomePage() {
     return map;
   }, [services]);
 
-  // Auto-pick top 6 most-documented services from live catalog for the Fresh Lab section
-  const freshFeatures = useMemo(() => {
-    return allServices
-      .map(s => ({
-        ...s,
-        _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3,
-      }))
+  // ── Release-signal news arranger ──────────────────────────────────────
+  // Pulls featured services using data/release_notes.json scoring.
+  // Falls back to freshFeatures if dataset not loaded or empty.
+  const newsItems = useMemo(() => {
+    if (!releaseNotes.length) {
+      return allServices
+        .map(s => ({ ...s, _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
+        .sort((a:any,b:any) => b._score - a._score)
+        .slice(0, 6);
+    }
+    const ENTRY_TAG_MAP: Record<string,string> = {
+      ai: 'AI & ML', it: 'IT & Infrastructure', cloud: 'Cloud Platform',
+      security: 'Security', data: 'Data & Analytics', automation: 'Automation'
+    };
+    const now   = Date.now();
+    const DAY   = 86_400_000;
+    const SCORE_RECENCY   = 5;   // +5 per day-newer
+    const SCORE_TAG       = 2;   // +2 per matched tag
+    const SCORE_FEATURED  = 3;   // +3 if featured
+    const SCORE_FEATURES  = 1;   // +1 per feature bullet
+    const lookup = new Map(allServices.map(s => [s.id, s]));
+    const merged = releaseNotes
+      .filter(r => r.featured !== false)
+      .map(r => {
+        const svc = lookup.get(r.id);
+        if (!svc) return null;
+        const daysAgo = Math.max(0, Math.round((now - new Date(r.released_at).getTime()) / DAY));
+        const tagCount = (r.tags || []).filter(t => ENTRY_TAG_MAP[t]).length;
+        return {
+          id: r.id, title: r.changelog_summary || r.changelog.slice(0, 80) + '...',
+          desc: r.changelog,
+          tag: ENTRY_TAG_MAP[(r.tags || [])[0]] || 'New',
+          color: CATEGORIES.find(c => c.key === svc.category)?.color || 'from-purple-500 to-indigo-500',
+          _score: SCORE_FEATURED * (r.featured ? 1 : 0)
+                   + SCORE_TAG       * tagCount
+                   + SCORE_FEATURES  * (svc.features?.length || 0)
+                   - SCORE_RECENCY   * daysAgo,
+        };
+      })
+      .filter(Boolean)
       .sort((a, b) => b._score - a._score)
       .slice(0, 6);
-  }, [allServices]);
+    if (merged.length) return merged;
+    // Fallback: same formula as original freshFeatures
+    return allServices
+      .map(s => ({ ...s, _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
+      .sort((a:any,b:any) => b._score - a._score)
+      .slice(0, 6);
+
+  }, [allServices, releaseNotes]);
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -484,9 +535,9 @@ export default function HomePage() {
           <p className="section-subheading text-center">The latest platform upgrades, services, and capabilities — always evolving</p>
 
           <div className="grid md:grid-cols-3 gap-6 mt-10">
-            {freshFeatures.map((feat, i) => (
+            {newsItems.map((feat, i) => (
               <div key={i} className="glass-card flex flex-col gap-3 hover:border-purple-500/40 group">
-                <div className={`h-1 rounded-full bg-gradient-to-r ${feat.color}`} />
+                <div className={`h-1 rounded-full bg-gradient-to-r ${feat.color || 'from-purple-500 to-indigo-500'}`} />
                 <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">{feat.tag}</span>
                 <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">{feat.title}</h3>
                 <p className="text-slate-400 text-sm flex-1 leading-relaxed">{feat.desc}</p>
