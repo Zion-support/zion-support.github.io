@@ -4523,6 +4523,43 @@ export const aiServices: Service[] = [
     category: 'ai',
     industry: 'General',
   },
+  {
+    id: 'offer-engine',
+    title: 'The Offer Engine',
+    description: 'AI-powered offer management: dynamically generate, test, and optimize personalized offers, discounts, and promotions across channels. Real-time A/B testing, conversion lift forecasting, and margin-safe pricing recommendations.',
+    features: [
+      'AI-powered offer generation from product catalog + audience segments',
+      'Multi-armed bandit + lift simulation for conversion uplift estimates',
+      'Margin-safe pricing recommendations with floor/ceiling guardrails',
+      'Real-time A/B testing with automatic winner promotion',
+      'Audience-personalized offers by cohort/segment/behavior',
+      'Coupon code generator with expiry, usage caps, channel gating',
+      'Attribution-linked ROI analysis per offer variant',
+      'CRM, e-commerce, and ad platform integrations',
+    ],
+    benefits: [
+      'Increase promo conversion rate by 40-80% vs static discounts',
+      'Preserve margin by capping discounts to optimal % per segment',
+      'Eliminate offer sprawl — auto-prune underperforming variants',
+      'Shorten test cycles from weeks to hours with real-time bandits',
+      'Marketing team self-serve via offer dashboard',
+    ],
+    pricing: {
+      basic: '$499/mo',
+      pro: '$1,499/mo',
+      enterprise: 'Custom',
+    },
+    contactInfo: {
+      website: '/services/offer-engine',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🔥',
+    href: '/services/offer-engine',
+    popular: true,
+    category: 'ai',
+    industry: 'General',
+  },
 ];
 
 export const itServices: Service[] = [
