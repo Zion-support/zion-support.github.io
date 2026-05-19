@@ -266,7 +266,7 @@ ${services.length > 0 ? `<p style="margin-top:12px;color:#666;font-size:14px">
                       <div className="font-semibold text-white">{s.title}</div>
                       <div className="text-sm text-slate-400 mb-2">{s.description.substring(0, 120)}...</div>
                       <div className="text-purple-300 font-medium">
-                        {Object.values(s.pricing)[0]}
+                        {String(Object.values(s.pricing)[0])}
                       </div>
                     </div>
                   </div>

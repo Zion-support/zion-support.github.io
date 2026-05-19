@@ -1,7 +1,7 @@
 // app/services/[category]/page.tsx — Category Landing Page (Server Component)
 import Link from 'next/link';
 import serviceIndex from '../../../public/service-index.json';
-import type { Service } from '../../app/data/servicesData';
+import type { Service } from '../../data/servicesData';
 
 type CategoryKey = 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation';
 
@@ -44,7 +44,7 @@ function getServiceCount(category: string, services: Service[]): number {
 function getPriceRange(category: string, services: Service[]): string {
   const prices = services
     .filter((s: Service) => s.category === category)
-    .map((s: Service) => [s.basic, s.pro, s.enterprise] as const)
+    .map((s: Service) => [(s as any).basic || s.pricing?.basic, (s as any).pro || s.pricing?.pro, (s as any).enterprise || s.pricing?.enterprise] as const)
     .flat()
     .filter((p): p is number => typeof p === 'number' && p > 0)
     .sort((a: number, b: number) => a - b);
@@ -58,8 +58,8 @@ export function generateStaticParams() {
   ).map((cat: string) => ({ category: cat }));
 }
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const category = (params.category || '').toLowerCase() as CategoryKey;
+export default function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const category = (params as any).category.toLowerCase() as CategoryKey;
   const services: Service[] = (serviceIndex as any).services;
   const meta = CATEGORY_META[category];
 
@@ -122,7 +122,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
           <div className="glass-card flex items-center gap-3 px-5 py-3">
             <div>
               <div className="text-xl font-bold text-white">
-                {categoryServices.filter((s: Service) => s.popular).length}
+                {categoryServices.filter((s: Service) => (s as any).popular).length}
               </div>
               <div className="text-xs text-slate-500">Popular services</div>
             </div>

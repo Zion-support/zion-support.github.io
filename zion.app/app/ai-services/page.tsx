@@ -94,7 +94,7 @@ export default function AIServicesPage() {
   const catCounts = useMemo(() => {
     const m: Record<string, number> = {};
     aiServices.forEach((s: Service) => {
-      const c = s.subcategory || s.tag || 'other';
+      const c = s.id.split('-').slice(0,2).join('-');  // derive subcategory from ID prefix
       m[c] = (m[c] || 0) + 1;
     });
     return Object.entries(m).sort((a, b) => b[1] - a[1]);

@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: PageProps) {
                 {Object.entries(service.pricing).map(([tier, price]) => (
                   <div key={tier} className="flex justify-between items-center py-2 border-b border-slate-700/50 last:border-0">
                     <span className="text-slate-300 capitalize">{tier}</span>
-                    <span className="text-purple-300 font-semibold">{price}</span>
+                    <span className="text-purple-300 font-semibold">{String(price)}</span>
                   </div>
                 ))}
               </div>
