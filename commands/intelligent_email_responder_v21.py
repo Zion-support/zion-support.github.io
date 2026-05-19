@@ -16,7 +16,9 @@ from collections import defaultdict
 import random
 import math
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+# Auto-resolve to current user's home — works on macOS and Linux
+home = Path.home()
+WORKSPACE = home / '.openclaw' / 'workspace'
 
 class MLTemplateOptimizerV21:
     """Machine learning for template optimization"""

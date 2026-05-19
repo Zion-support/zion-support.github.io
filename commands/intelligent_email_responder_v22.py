@@ -10,7 +10,9 @@ from datetime import datetime, timezone, timedelta
 from collections import defaultdict
 import random, math
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+# Auto-resolve to current user's home — works on macOS and Linux
+home = Path.home()
+WORKSPACE = home / '.openclaw' / 'workspace'
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
 
 # ────────────────────────────────────────────────────────
@@ -306,7 +308,7 @@ class EmailAnalyzerV10:
 # ────────────────────────────────────────────────────────
 
 def main(execute=False, limit=15, dry_run=False):
-    print("\\u{1F9E0} Intelligent Email Responder V22 — V21 + Enhanced Reply-All + Outcome Learning")
+    print("🧠 Intelligent Email Responder V22 — V21 + Enhanced Reply-All + Outcome Learning")
     analyzer  = EmailAnalyzerV10()
     fd        = ForwardDetector()
     tca       = ThreadContext()
@@ -320,17 +322,17 @@ def main(execute=False, limit=15, dry_run=False):
 
     # Pre-flight: train ML model from existing outcomes
     model = optimizer.train_from_outcomes()
-    print(f"\\u{1F4CA} ML Templates trained: {len(model)} templates")
+    print(f"📊 ML Templates trained: {len(model)} templates")
 
     # Scan pending outcomes
     pending = oa.get_pending()
     if pending:
-        print(f"\\u{1F500} {len(pending)} pending outcomes to scan...")
+        print(f"🔄 {len(pending)} pending outcomes to scan...")
 
-    print("\\u{1F50D} Scanning for unread emails...")
+    print("🔍 Scanning for unread emails...")
     emails = gmail_search('is:unread', limit=limit*2) if not dry_run else []
     if not emails:
-        print("\\u{1F4ED} No unread emails found")
+        print("📭 No unread emails found")
         return {'replied':0,'skipped':0,'archived':0,'outcomes_classified':0,'pending_scanned':0}
 
     labels = {
@@ -340,7 +342,7 @@ def main(execute=False, limit=15, dry_run=False):
         'skipped':   gmail_get_or_create_label_id('V22-Skipped')}
 
     email_queue = []
-    print(f"\\u{1F4E8} Analyzing {min(len(emails), limit*2)} emails...")
+    print(f"📨 Analyzing {min(len(emails), limit*2)} emails...")
     for msg in emails:
         try:
             full = gmail_get(msg['id'])
@@ -377,7 +379,7 @@ def main(execute=False, limit=15, dry_run=False):
         if tid and sender:
             all_participants[tid].append(sender)
 
-    print(f"\\n\\u{1F4E7} Processing {min(len(email_queue),limit)} emails...")
+    print(f"\\n📧 Processing {min(len(email_queue),limit)} emails...")
     stats = {'replied':0,'archived':0,'deferred':0,'skipped':0,'reply_all':0,'errors':0,'outcomes_classified':0}
     for email in email_queue[:limit]:
         analysis  = email['analysis']
@@ -395,7 +397,7 @@ def main(execute=False, limit=15, dry_run=False):
         thread_ctx = tca.analyze_thread(tid)
         if thread_ctx.get('conversation_length',0) > 0:
             analysis['thread_context'] = thread_ctx
-            print(f"  \\u{1F9F5} Thread {thread_ctx['conversation_length']} msgs | {thread_ctx['relationship_stage']}")
+            print(f"  🧵 Thread {thread_ctx['conversation_length']} msgs | {thread_ctx['relationship_stage']}")
 
         # V12: Tone mapping
         tone = tm.map_tone(analysis)
@@ -407,9 +409,9 @@ def main(execute=False, limit=15, dry_run=False):
         is_reply_all = reply_all_decision.get('reply_all', False)
         if is_reply_all:
             stats['reply_all'] += 1
-            print(f"  \\u{1F517} Reply-all: score={reply_all_decision.get('score',0)} | reasons={reply_all_decision.get('reasons',[])}")
+            print(f"  🔗 Reply-all: score={reply_all_decision.get('score',0)} | reasons={reply_all_decision.get('reasons',[])}")
         else:
-            print(f"  \\u{1F517} Reply-only: score={reply_all_decision.get('score',0)}")
+            print(f"  🔗 Reply-only: score={reply_all_decision.get('score',0)}")
 
         # V22: Record to outcome tracker
         template_name = optimizer.predict_best_template(analysis['intent'], {})
@@ -425,7 +427,7 @@ def main(execute=False, limit=15, dry_run=False):
 
         if dry_run:
             stats['replied'] += 1
-            print(f"   \\u{1F4EE}  [DRY-RUN] Would reply to {sender[:30]} | {analysis['intent']} | tone:{tone['tone']} | reply_all:{is_reply_all}")
+            print(f"   📮  [DRY-RUN] Would reply to {sender[:30]} | {analysis['intent']} | tone:{tone['tone']} | reply_all:{is_reply_all}")
             continue
 
         # Send
@@ -445,13 +447,13 @@ def main(execute=False, limit=15, dry_run=False):
             stats['errors'] += 1
 
     # Post-run: scan for outcomes on pending threads
-    print(f"\\n\\u{1F4AD} Scanning pending outcomes...")
+    print(f"\\n💭 Scanning pending outcomes...")
     pending_snapshot = oa.get_pending()
     # (Full thread scan requires Gmail search — skip here; caller can run classify separately)
     if pending_snapshot:
         print(f"   {len(pending_snapshot)} responses pending outcome classification")
 
-    print(f"\\n\\u{1F4CA} V22 Summary: replied={stats['replied']}, reply_all={stats['reply_all']}, errors={stats['errors']}, pending_outcomes={len(pending_snapshot)}")
+    print(f"\\n📊 V22 Summary: replied={stats['replied']}, reply_all={stats['reply_all']}, errors={stats['errors']}, pending_outcomes={len(pending_snapshot)}")
     return stats
 
 
