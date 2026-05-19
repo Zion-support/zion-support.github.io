@@ -144,6 +144,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Service Category Distribution ── */}
+      <section className="py-12 bg-gradient-to-b from-slate-950/0 to-slate-900/40">
+        <div className="container-page">
+          <h2 className="section-heading text-center">Services at a Glance</h2>
+          <p className="section-subheading text-center">
+            {services.length}+ services across 6 core domains — browse by category
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+            {CATEGORIES.map(cat => {
+              const catSvcs = byCategory[cat.key] || [];
+              const pct = services.length > 0 ? Math.round(catSvcs.length / services.length * 100) : 0;
+              return (
+              <Link
+                key={cat.key}
+                href={`/services?category=${cat.key}`}
+                className="glass-card group hover:border-purple-500/40 hover:scale-[1.03] transition-all duration-300 text-center"
+              >
+                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  {cat.emoji}
+                </div>
+                <div className="text-xl font-bold text-white leading-none">{catSvcs.length}</div>
+                <div className="text-xs text-slate-400 mt-0.5 line-clamp-1">{cat.label}</div>
+                <div className="mt-2 h-1.5 bg-slate-800 rounded-full overflow-hidden mx-auto" style={{ maxWidth: '80%' }}>
+                  <div
+                    className="h-full rounded-full"
+                    style={{
+                      width: pct + '%',
+                      background: `linear-gradient(90deg, ${cat.color.split(' ')[0]}, ${cat.color.split(' ')[1] || ''})`,
+                      transition: 'width 0.6s ease-out',
+                    }}
+                  />
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1">{pct}%</div>
+              </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* ── How It Works ── */}
       <section className="py-20">
         <div className="container-page">
