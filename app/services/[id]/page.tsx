@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: PageProps) {
   const service = allServices.find((s) => s.id === id);
   if (!service) return { title: 'Service Not Found' };
   return {
-    title: `${service.title} | Zion Tech Group`,
-    description: service.description.slice(0, 160),
+    title: service.title,
+    description: service.description || `Explore ${service.title} at Zion Tech Group — enterprise-grade solutions.`,
   };
 }
 
