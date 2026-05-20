@@ -16,8 +16,11 @@ def load_gog_tokens():
         return json.load(f)
 
 def refresh_access_token(tokens):
-    if tokens.get('expiry') and datetime.datetime.fromisoformat(tokens['expiry']) > datetime.datetime.utcnow() + datetime.timedelta(minutes=5):
-        return tokens['access_token']
+    expiry_str = tokens.get('expiry')
+    if expiry_str:
+        expiry = datetime.datetime.fromisoformat(expiry_str).replace(tzinfo=None)
+        if expiry > datetime.datetime.utcnow() + datetime.timedelta(minutes=5):
+            return tokens['access_token']
     data = urllib.parse.urlencode({
         'client_id': tokens['client_id'],
         'client_secret': tokens['client_secret'],
