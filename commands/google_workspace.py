@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """Google Workspace API helpers for Zion Org Memory system.
 
 Shared between org_memory_agent.py and vector_index.py

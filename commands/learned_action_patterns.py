@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 V25 Wave 6b — Learned Action Patterns
 

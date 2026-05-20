@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 Zion Tech Group – Email Interaction Agent
 Monitors Gmail via gog CLI, analyses each unread email with GPT‑4 (Cursor API),
