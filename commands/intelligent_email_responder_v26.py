@@ -826,35 +826,6 @@ class V26Responder:
         #  V29 DECISION: Fast-path or Full?
         # ══════════════════════════════════════════════════════
 
-                # V30: CaseRouter routes before fast/full split
-        if V30_ROUTER_ENABLED and self.case_router:
-            router_result = self.case_router.route(
-                email=email,
-                intent_raw=intent_raw,
-                intent_label=intent_label,
-                intent_cat=intent_cat,
-                urgency_val=urgency_val,
-                tone_data=tone_data,
-                profile=profile,
-                fin_result=self._fin_result,
-            )
-            _rroute = router_result.get("route", "")
-            if _rroute == "escalate":
-                return {"action": "escalated", "route": "case_router",
-                        "severity": "high", "signals": router_result.get("signals", []),
-                        "reason": router_result.get("reason", ""),
-                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
-            if _rroute == "auto_ack":
-                return {"action": "auto_ack", "route": "case_router",
-                        "reply_all": router_result.get("reply_all_ok", False),
-                        "reason": router_result.get("reason", ""),
-                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
-            if _rroute == "review":
-                return {"action": "review", "route": "case_router",
-                        "reason": router_result.get("reason", ""),
-                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
-            # full_pipeline / fast_path: continue normally
-
         detector = CascadingLatencyDetector(profile, intent_raw, cat_result, subj, snip)
         use_fast  = detector.can_fast_path
 
@@ -929,6 +900,37 @@ class V26Responder:
 
         # ③ Trim grammar check
         g_score, g_issues = _fast_grammar_check(body)
+
+        # V30: CaseRouter gates after grammar check (before detector + escalation)
+        if V30_ROUTER_ENABLED and self.case_router:
+            router_result = self.case_router.route(
+                email=email,
+                intent_raw=intent_raw,
+                intent_label=intent_label,
+                intent_cat=intent_cat,
+                urgency_val=urgency_val,
+                tone_data=tone_data,
+                profile=profile,
+                fin_result=self._fin_result,
+                grammar_score=g_score,
+            )
+            _rroute = router_result.get("route", "")
+            if _rroute == "escalate":
+                return {"action": "escalated", "route": "case_router",
+                        "severity": "high", "signals": router_result.get("signals", []),
+                        "reason": router_result.get("reason", ""),
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            if _rroute == "auto_ack":
+                return {"action": "auto_ack", "route": "case_router",
+                        "reply_all": router_result.get("reply_all_ok", False),
+                        "reason": router_result.get("reason", ""),
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            if _rroute == "review":
+                return {"action": "review", "route": "case_router",
+                        "reason": router_result.get("reason", ""),
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            # full_pipeline / fast_path: continue normally
+
 
         # ── V29: Escalation gate in fast-path ───────────────────
         if V26_ESCALATION_ENABLED and check_escalation:
@@ -1015,7 +1017,8 @@ class V26Responder:
                                   g_score, sender)
             return {"action": "send_dry_fast", "intent": intent_label,
                     "reply_all": reply_all_ok, "tone": tone_data,
-                    "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                    "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1),
+                    "reply_all_detail": reply_all_dec if reply_all_ok else {"reply_all": False, "reason": "dry_run"}}
 
         if V30_IMPROVER_ENABLED and self.response_improver:
             try:
