@@ -1,122 +1,131 @@
 #!/usr/bin/env python3
 """
-Thread Summarizer — Zion Tech Group
-
-Summarizes long email threads (>=20 messages) to concise digests.
-Saves markdown summaries locally; labels thread as 'Thread-Summarized'.
-
-Usage: python3 thread_summarizer.py [--execute] [--limit N]
+Thread Summarizer for Email Responder.
+Produces a 1-2 sentence extractive summary of an email thread.
+Falls back to empty string on any error.
 """
 
-import sys, os, re, json, datetime, argparse
+import re
 from pathlib import Path
+from typing import List, Dict
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+# Reuse the same workspace resolution as the main responder
+import sys
+home = Path.home()
+WORKSPACE = home / '.openclaw' / 'workspace'
 sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
-sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'lib'))
 
-from google_workspace import gmail_search, gmail_thread_get, gmail_batch_modify, gmail_get_or_create_label_id
-from llm_client import chat
+# We'll need to fetch thread messages; we try to import gmail_thread_get from google_workspace
+try:
+    from google_workspace import gmail_thread_get
+except Exception:
+    # Fallback function that returns empty list
+    def gmail_thread_get(thread_id):
+        return []
 
-DB_FILE = WORKSPACE / 'zion.app' / 'data' / 'thread_summaries.json'
-REPORTS_DIR = WORKSPACE / 'zion.app' / 'reports' / 'thread_summaries'
-REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+class ThreadSummarizer:
+    def __init__(self):
+        # Reuse intent keywords for scoring sentences (same as in IntentConfidenceScorer)
+        from intent_confidence_scorer import INTENT_PATTERNS
+        self.intent_keywords = {intent: set(data['keywords']) for intent, data in INTENT_PATTERNS.items()}
+        # We'll also consider common email phrases as low-value (to avoid picking signatures, etc.)
+        self.stop_phrases = {
+            'best regards', 'kind regards', 'thanks and regards', 'thank you',
+            'sincerely', 'yours faithfully', 'yours truly', 'regards', 'thanks',
+            'thank you and best regards', 'cheers', 'ciao', 'saludos', 'atenciosamente',
+            'cordialmente', 'attentamente', 'gratefully', 'respectfully'
+        }
 
-def load_db():
-    if DB_FILE.exists():
-        return json.loads(DB_FILE.read_text())
-    return {'summarized': []}
+    def _is_stop_sentence(self, sentence: str) -> bool:
+        lowered = sentence.lower().strip()
+        # Check if the sentence is mostly a stop phrase
+        for ph in self.stop_phrases:
+            if ph in lowered and len(lowered) < len(ph) + 10:
+                return True
+        return False
 
-def save_db(db):
-    DB_FILE.parent.mkdir(parents=True, exist_ok=True)
-    DB_FILE.write_text(json.dumps(db, indent=2))
+    def _score_sentence(self, sentence: str) -> float:
+        """
+        Score a sentence by the sum of intent keyword weights it contains.
+        We give each keyword a weight of 1.0. Normalize by sentence length to avoid bias towards long sentences.
+        """
+        words = re.findall(r"\b[\w']+\b", sentence.lower())
+        if not words:
+            return 0.0
+        score = 0
+        for w in words:
+            for kw_set in self.intent_keywords.values():
+                if w in kw_set:
+                    score += 1
+                    break  # each word counted at most once
+        # Normalize by number of words (but avoid zero)
+        return score / len(words)
 
-def find_candidate_threads(limit=10):
-    candidates = []
-    # Use a heuristic: threads with many participants or long snippets
-    threads = gmail_search('is:unread', limit=limit*5)
-    for t in threads:
-        tid = t.get('threadId')
-        full = gmail_thread_get(tid)
-        if not full or 'messages' not in full:
-            continue
-        count = len(full['messages'])
-        if count >= 20:
-            candidates.append(tid)
-        if len(candidates) >= limit:
-            break
-    return candidates
+    def summarize(self, thread_id: str, max_sentences: int = 2) -> str:
+        """
+        Returns a summary string of up to max_sentences sentences.
+        If any error occurs, returns empty string.
+        """
+        try:
+            if not thread_id:
+                return ""
+            # Fetch thread messages (list of message dicts)
+            messages = gmail_thread_get(thread_id)
+            if not messages:
+                return ""
 
-def extract_thread_text(thread_id):
-    thread = gmail_thread_get(thread_id)
-    if not thread or 'messages' not in thread:
-        return ''
-    texts = []
-    for m in thread['messages']:
-        headers = m.get('payload', {}).get('headers', [])
-        sender = next((h['value'] for h in headers if h['name']=='From'), 'Unknown')
-        body = m.get('snippet','')
-        texts.append(f"From: {sender}\n{body[:500]}")
-    return '\n\n---\n\n'.join(texts)
+            # Extract subject and snippet from each message
+            texts = []
+            for msg in messages:
+                # Try to get subject and snippet from the message payload
+                subject = ""
+                snippet = ""
+                payload = msg.get('payload', {})
+                headers = payload.get('headers', [])
+                for h in headers:
+                    if h.get('name', '').lower() == 'subject':
+                        subject = h.get('value', '')
+                        break
+                # The snippet is often in the top-level message dict
+                snippet = msg.get('snippet', '')
+                # Combine
+                combined = f"{subject} {snippet}".strip()
+                if combined:
+                    texts.append(combined)
 
-def summarize(text):
-    prompt = f"""Summarize this email thread concisely:
+            if not texts:
+                return ""
 
-**Key Decisions:**
-- ...
+            # Split each text into sentences (simple split by ., !, ?)
+            sentences = []
+            for t in texts:
+                # Split by punctuation followed by space or end
+                parts = re.split(r'(?<=[.!?])\s+', t)
+                for p in parts:
+                    p = p.strip()
+                    if p and len(p) >= 10:  # ignore very short fragments
+                        sentences.append(p)
 
-**Action Items:**
-- ...
+            if not sentences:
+                return ""
 
-**Open Questions:**
-- ...
+            # Score each sentence
+            scored = [(self._score_sentence(s), s) for s in sentences if not self._is_stop_sentence(s)]
+            if not scored:
+                # Fallback: if all sentences are stop phrases, just take the first two original sentences
+                return " ".join(sentences[:max_sentences])
 
-Thread:
-{text[:8000]}"""
-    try:
-        resp = chat([{"role":"user","content":prompt}], provider="auto", temperature=0.4)
-        return resp.get('content','[LLM failed]')[:2000]
-    except Exception as e:
-        return f"[Error: {e}]"
-
-def cmd_run(dry_run=True, limit=10):
-    db = load_db()
-    candidates = find_candidate_threads(limit=limit)
-    if not candidates:
-        print("✅ No long threads found.")
-        return
-    done = 0
-    for tid in candidates:
-        if tid in db.get('summarized', []):
-            continue
-        text = extract_thread_text(tid)
-        if not text:
-            continue
-        summary = summarize(text)
-        fname = REPORTS_DIR / f"thread_{tid[:8]}_{datetime.date.today().isoformat()}.md"
-        fname.write_text(summary)
-        print(f"   📝 Summary: {fname.name} ({len(summary)} chars)")
-        if not dry_run:
-            try:
-                lbl_id = gmail_get_or_create_label_id('Thread-Summarized')
-                gmail_batch_modify([tid], add_labels=[lbl_id])
-            except Exception as e:
-                print(f"   ⚠️  Label failed: {e}")
-            db['summarized'].append(tid)
-            done += 1
-    if not dry_run:
-        db['lastRun'] = datetime.datetime.utcnow().isoformat()
-        save_db(db)
-    print(f"\n✅ Summarized {done} threads.")
-    if dry_run:
-        print("💡 Add --execute to save and label.")
-
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument('--execute', action='store_true')
-    p.add_argument('--limit', type=int, default=10)
-    args = p.parse_args()
-    cmd_run(dry_run=not args.execute, limit=args.limit)
+            # Sort by score descending
+            scored.sort(key=lambda x: x[0], reverse=True)
+            # Take top max_sentences
+            top = [s for _, s in scored[:max_sentences]]
+            # Return as a single string
+            return " ".join(top)
+        except Exception:
+            # Any error -> empty string to keep system running
+            return ""
 
 if __name__ == '__main__':
-    main()
+    # Simple test (requires a valid thread_id to work; we'll just show the class)
+    summarizer = ThreadSummarizer()
+    print("ThreadSummarizer ready. Provide a thread_id to summarize.")

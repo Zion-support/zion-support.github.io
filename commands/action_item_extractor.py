@@ -8,7 +8,7 @@ import json, re
 from pathlib import Path
 from datetime import datetime, timezone
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class ActionItemExtractorV23:
     """Extract and track action items from email conversations."""

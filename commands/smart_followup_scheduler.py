@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class SmartFollowUpSchedulerV23:
     """Learn optimal follow-up timing and schedule reminders."""

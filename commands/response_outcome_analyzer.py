@@ -10,7 +10,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from collections import defaultdict
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class ResponseOutcomeAnalyzerV22:
     """Track sent responses, classify outcomes, and feed ML optimizer."""
@@ -154,4 +154,4 @@ class ResponseOutcomeAnalyzerV22:
         return [v for v in data.get('sent', {}).values() if v.get('outcome') == 'pending']
 
 # Legacy shim for V12 compatibility
-DecisionCache = lambda: __import__('pathlib').Path('/root/.openclaw/workspace/zion.app/data/reply_all_cache.json')
+DecisionCache = lambda: __import__('pathlib').Path(__file__).resolve().parent.parent / 'data' / 'reply_all_cache.json'

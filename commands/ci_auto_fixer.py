@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 CI/CD Auto-Fixer - Automatically detect and fix common GitHub Actions failures
 

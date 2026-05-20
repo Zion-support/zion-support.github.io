@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 Contract Renewal Workflow — Zion Tech Group v2
 

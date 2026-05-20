@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 Knowledge Base Auto-Update — Zion Tech Group
 
@@ -13,14 +15,14 @@ Usage:
 import sys, os, re, json, datetime, argparse
 from pathlib import Path
 
-WORKSPACE = Path('/root/.openclaw/workspace')
-sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
-sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'lib'))
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(WORKSPACE / 'commands'))
+sys.path.insert(0, str(WORKSPACE))
 
 from google_workspace import gmail_search, gmail_get
 from llm_client import chat
 
-KB_DIR = WORKSPACE / 'zion.app' / 'kb'
+KB_DIR = WORKSPACE / 'kb'
 KB_FILE = KB_DIR / 'knowledge_base.md'
 DAILY_LIMIT = 10
 LOOKBACK_DAYS = 90

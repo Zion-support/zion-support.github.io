@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 Expense Anomaly Detection — Zion Tech Group (robust v2)
 

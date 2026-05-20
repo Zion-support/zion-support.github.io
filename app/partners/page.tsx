@@ -34,6 +34,23 @@ const partnerSchema = {
 
 };
 
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Kleber Garcia Alcatrão",
+  jobTitle: "CEO",
+  worksFor: {
+    "@type": "Organization",
+    name: "Zion Tech Group",
+  },
+  telephone: "+1-302-464-0950",
+  email: "kleber@ziontechgroup.com",
+  url: SITE_URL,
+  sameAs: [
+    "https://www.linkedin.com/in/kleberalcatrao",
+  ],
+};
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -57,6 +74,7 @@ export default function PartnersPage() {
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
       <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(partnerSchema) }} />
       <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
@@ -106,23 +124,43 @@ export default function PartnersPage() {
         );
       })}
 
-      {/* CTA */}
+      {/* CTA + Inquiry Form */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-2xl p-12 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Become a Partner</h3>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Interested in partnering with Zion Tech Group? Reach out &mdash; we&apos;re always looking for aligned technology partners.
+        <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-2xl p-10 lg:p-12">
+          <h3 className="text-2xl font-bold text-white mb-2">Become a Partner</h3>
+          <p className="text-slate-400 mb-8 max-w-2xl">
+            Interested in partnering with Zion Tech Group? Fill out the form below and we&apos;ll get back to you within 1 business day.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:partners@ziontechgroup.com?subject=Partnership%20Inquiry"
-               className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
-              partner@ziontechgroup.com
-            </a>
-            <Link href="/contact"
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-              Contact Form
-            </Link>
-          </div>
+          <form action="https://formspree.io/f/xrbpgwdd" method="POST" className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <input type="hidden" name="_subject" value="Partnership Inquiry — ziontechgroup.com" />
+            <input type="text" name="name" placeholder="Your Name *" required
+                   className="col-span-full sm:col-span-1 bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500/50 transition" />
+            <input type="email" name="email" placeholder="Email *" required
+                   className="col-span-full sm:col-span-1 bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500/50 transition" />
+            <input type="text" name="company" placeholder="Company Name"
+                   className="col-span-full sm:col-span-1 bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500/50 transition" />
+            <select name="partnership_type"
+                    className="col-span-full sm:col-span-1 bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500/50 transition">
+              <option value="" disabled selected>Partnership Type</option>
+              <option value="technology">Technology Alliance</option>
+              <option value="reseller">Reseller / MSP</option>
+              <option value="referral">Referral Partner</option>
+              <option value="integration">Integration Partner</option>
+              <option value="other">Other</option>
+            </select>
+            <textarea name="message" rows={4} placeholder="Tell us about your organization and partnership interest *" required
+                      className="col-span-full bg-slate-800/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500/50 transition"></textarea>
+            <div className="col-span-full flex flex-wrap gap-3 justify-center pt-2">
+              <button type="submit"
+                      className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+                Send Inquiry
+              </button>
+              <a href="mailto:partners@ziontechgroup.com?subject=Partnership%20Inquiry"
+                 className="inline-flex items-center gap-2 bg-slate-700/60 text-slate-300 px-6 py-3 rounded-lg font-semibold hover:bg-slate-700 transition">
+                Or email partner@
+              </a>
+            </div>
+          </form>
         </div>
       </section>
     </main>

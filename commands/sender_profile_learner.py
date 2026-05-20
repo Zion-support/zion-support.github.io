@@ -9,7 +9,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from collections import defaultdict
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class SenderProfileLearnerV23:
     """Learn and maintain sender profiles for personalized responses."""

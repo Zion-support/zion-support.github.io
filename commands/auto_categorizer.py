@@ -8,7 +8,7 @@ import json, re
 from pathlib import Path
 from datetime import datetime, timezone
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class AutoCategorizerV23:
     """Categorize incoming emails by type and decide action."""

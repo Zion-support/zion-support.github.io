@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 V22 Adaptive Tone Matching — Zero-API tone analyzer.
 Analyzes sender tone from email subject + body using keyword/pattern matching.

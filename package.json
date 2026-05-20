@@ -56,6 +56,7 @@
     "automation:local:pm2:stop": "pm2 stop scripts/automation/pm2-local-automation.config.cjs",
     "automation:local:pm2:delete": "pm2 delete scripts/automation/pm2-local-automation.config.cjs",
     "ai-lab:integrity-check": "node automation/ai-ai-lab-integrity-guard.cjs",
+    "app:ai-experiences-health": "node scripts/automation/ai-experiences-health.cjs",
     "type-check": "tsc --noEmit",
     "build:check": "npm run type-check && npm run build",
     "test:ci": "npm test",
@@ -65,9 +66,14 @@
     "deploy:status:generate": "node scripts/deploy-status-generate.cjs",
     "automation:preflight": "node scripts/automation-preflight.cjs",
     "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs",
+    "autonomy:queue-guard": "node automation/autonomous-writer-queue-guard.cjs",
     "smoke:routes:check": "node scripts/smoke-routes-check.cjs",
     "homepage:ai-sync:check": "node scripts/homepage-ai-sync-check.cjs",
-    "generate:service-index": "node scripts/generate_service_index.cjs"
+    "generate:service-index": "node scripts/generate_service_index.cjs",
+    "automation:workflow-integrity:audit": "node automation/github-workflow-integrity-auditor.cjs",
+    "pin-actions:strict": "node scripts/automation/validate-pin-actions.cjs",
+    "rsc:guard": "echo \"stub: no-op\" && exit 0",
+    "pm2:drift-guard:once": "echo \"stub: no-op\" && exit 0"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",

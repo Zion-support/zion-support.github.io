@@ -8,7 +8,7 @@ import json, re
 from pathlib import Path
 from datetime import datetime, timezone
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class EnhancedReplyAllHandlerV22:
     """Analyze each email case-by-case to determine proper reply-all behavior."""
