@@ -232,7 +232,6 @@ export default function Navigation() {
                     </div>
                   </div>
                 </div>
-<<<<<<< Updated upstream
                 <div className="border-t border-slate-800 my-3" />
                 <div className="space-y-2">
                   <Link
@@ -249,14 +248,13 @@ export default function Navigation() {
                   >
                     AI Services Hub →
                   </Link>
-=======
-                {FEATURED_AI_SERVICE_LINKS.slice(featuredIndex, featuredIndex + 4).map((link, i) => (
-                  <DropdownItem key={i} link={link} />
-                ))}
-                <div className="border-t border-slate-800 my-1" />
-                <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                  More
->>>>>>> Stashed changes
+                  {FEATURED_AI_SERVICE_LINKS.slice(featuredIndex, featuredIndex + 4).map((link, i) => (
+                    <DropdownItem key={i} link={link} />
+                  ))}
+                  <div className="border-t border-slate-800 my-1" />
+                  <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+                    More
+                  </div>
                 </div>
               </div>
             )}
