@@ -974,9 +974,8 @@ class V26Responder:
                 self.stats["feedback_oracle_override"] = self.stats.get("feedback_oracle_override", 0) + 1
 
 
-        # V30: CaseRouter + ResponseImprover
-        self.case_router     = CaseRouter()      if V30_ROUTER_ENABLED   else None
-        self.response_improver = ResponseImprover() if V30_IMPROVER_ENABLED else None
+
+
 
         # ⑤ Quality gate
         min_qc = {
