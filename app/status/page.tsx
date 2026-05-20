@@ -1,4 +1,3 @@
-// app/status/page.tsx — Real-Time Site & Service Health Monitor
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
@@ -194,17 +193,46 @@ export default function StatusPage() {
                       {statusLabel[c.status]}
                     </span>
                   </td>
-                  <td className="py-4 text-right text-slate-400">
+                  <td className="py-4 text-right text-slate-500">
                     {c.responseTime != null ? `${c.responseTime}ms` : '—'}
+                    {c.statusCode != null && (
+                      <span className="ml-2 text-slate-600">({c.statusCode})</span>
+                    )}
                   </td>
                 </tr>
               ))}
+              {checks.length === 0 && (
+                <tr>
+                  <td colSpan={3} className="py-8 text-center text-slate-500">
+                    Running health checks…
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
 
-        <p className="text-slate-500 text-xs mt-6 text-center">
-          Probing from your browser · 6 s timeout · refreshes automatically every 60 s
+        {/* Legend */}
+        <div className="flex flex-wrap gap-6 justify-center text-xs text-slate-500 mt-6">
+          {Object.entries(statusLabel).filter(([k]) => k !== 'checking').map(([k, v]) => (
+            <span key={k} className="inline-flex items-center gap-1.5">
+              <span className={`h-2 w-2 rounded-full ${dotColor[k as CheckStatus]}`} />
+              {v}
+            </span>
+          ))}
+        </div>
+
+        <p className="text-center text-slate-500 text-sm mt-10">
+          Probes run in-browser on every page visit and auto-refresh every 60 seconds.{' '}
+          Results reflect the last client-side fetch — not an external monitor.{' '}
+          For immediate assistance contact{' '}
+          <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
+            kleber@ziontechgroup.com
+          </a>{' '}
+          or call{' '}
+          <a href="tel:+130****0950" className="text-purple-400 hover:text-purple-300">
+            +1 302 464 0950
+          </a>.
         </p>
       </div>
     </div>
