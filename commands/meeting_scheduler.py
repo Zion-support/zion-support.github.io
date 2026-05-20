@@ -17,14 +17,14 @@ Usage:
 import sys, os, re, json, datetime, argparse
 from pathlib import Path
 
-WORKSPACE = Path('/root/.openclaw/workspace')
-sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'commands'))
-sys.path.insert(0, str(WORKSPACE / 'zion.app' / 'lib'))
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(WORKSPACE / 'commands'))
+sys.path.insert(0, str(WORKSPACE))
 
 from google_workspace import gmail_get, gmail_create_draft_new, telegram_send
 from llm_client import chat
 
-CALENDAR_DB = WORKSPACE / 'zion.app' / 'data' / 'meeting_scheduler.json'
+CALENDAR_DB = WORKSPACE / 'data' / 'meeting_scheduler.json'
 KLEBER_EMAIL = 'kleber@ziontechgroup.com'
 
 def load_calendar_db() -> dict:
