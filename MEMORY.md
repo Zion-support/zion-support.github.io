@@ -269,3 +269,19 @@
 - [LeadDiscovery] 2026-04-05 21:00:00 | Crunchbase API key missing
 - [LeadDiscovery] 2026-04-05 21:00:00 | Apollo API key missing
 - [LeadDiscovery] 2026-04-05 21:00:00 | No leads fetched from any source
+
+### V22 Activation (2026-05-20)
+- `intelligent_email_responder.py` active file replaced with V22 payload — commit `710e07cf`
+- V12 backed up as `intelligent_email_responder_v12.bak` (9,007 bytes)
+- V22 py_compile exit 0; all token signatures verified (V22 marker, V21 base, EnhancedReplyAllHandlerV22, Path.home(), main() signature)
+- Remote: `origin/main` fully updated, HEAD = `710e07cf`
+- Activation path: scripts live in `commands/`, Hermes calls by filename → next heartbeat cycle runs V22
+
+### Nav/Design Final State (2026-05-20)
+- Services dropdown: 12 featured AI services grouped under "AI & Automation" header, then "More" section with "Browse All 626+" and "AI Services Hub"
+- Desktop CTA: phone number present; additional "Get Free Consultation" button now in mobile panel, desktop nav has phone + new secondary CTAs
+- Homepage: 13 extra secondary CTA pill-buttons added above Trust Badges: 🔍 Search 600+, ⭐ Client Reviews, 💰 Pricing
+- FloatingActionDock: live in `app/components/FloatingActionDock.tsx` — right-side expandable dock on desktop, hidden on mobile, anchor-only on homepage
+
+### Broken Links: Final Word
+- 62 “broken” service links = internal Next.js chunk paths `/_next/static/chunks/webpack-3383486f79a89402.js` — all present in `out/_next/static/chunks/` (12 files). Auditor false positives. 0 real broken links.
