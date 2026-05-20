@@ -150,6 +150,59 @@ let list = services;
 
   return (
     <main className="min-h-screen bg-slate-950">
+      {/* ── JSON-LD: Organization + WebSite ── */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            logo: 'https://ziontechgroup.com/logo.png',
+            description: 'AI services, IT solutions, micro-SaaS products, and strategic consulting for businesses of all sizes.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '364 E Main St STE 1008',
+              addressLocality: 'Middletown',
+              addressRegion: 'DE',
+              postalCode: '19709',
+              addressCountry: 'US'
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-302-464-0950',
+              contactType: 'sales',
+              email: 'kleber@ziontechgroup.com'
+            },
+            sameAs: [
+              'https://www.linkedin.com/company/ziontechgroup'
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            description: 'AI services, IT solutions, micro-SaaS products, and strategic consulting.',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
+              },
+              'query-input': 'required name=search_term_string'
+            }
+          })
+        }}
+      />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(120,50,200,0.18),rgba(20,10,40,0.92))]" />
@@ -694,6 +747,29 @@ let list = services;
             <Link href="/proposals" className="hover:text-cyan-400 transition">📄 Proposals</Link>
             <Link href="/partners" className="hover:text-cyan-400 transition">🤝 Partners</Link>
             <Link href="/status" className="hover:text-green-400 transition">● System Status</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Trust Badges — Persuasion Proof Matrix ── */}
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <h2 className="text-2xl font-bold text-white text-center mb-10">
+            Why Choose Zion Tech Group
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { emoji: "🏆", label: "600+ Services", sub: "AI & IT catalog", color: "from-amber-500/20 to-yellow-500/10" },
+              { emoji: "🚀", label: "Latest Tech", sub: "Modern stacks", color: "from-purple-500/20 to-blue-500/10" },
+              { emoji: "🌐", label: "Cross-Industry", sub: "9 sectors served", color: "from-blue-500/20 to-cyan-500/10" },
+              { emoji: "💡", label: "Plug & Play", sub: "No AI team needed", color: "from-green-500/20 to-emerald-500/10" },
+            ].map((badge, i) => (
+              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-cyan-500/30 transition-all`}>
+                <div className="text-4xl mb-4">{badge.emoji}</div>
+                <div className="text-xl font-bold text-white mb-1">{badge.label}</div>
+                <div className="text-sm text-slate-400">{badge.sub}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
