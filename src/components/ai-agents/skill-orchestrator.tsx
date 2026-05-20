@@ -285,12 +285,12 @@ export default function SkillOrchestrator() {
             </h3>
             <p className="text-sm text-gray-600">
               {nodes.find(n => n.id === selectedNode)?.description || 'No description'}
-              <div className="mt-1 flex items-center gap-2">
-                <span className={`mr-2 text-xs px-2 py-1 rounded ${getNodeColor(nodes.find(n => n.id === selectedNode)!).background}`}>
-                  {nodes.find(n => n.id === selectedNode)?.status || 'pending'}
-                </span>
-                <span className="ml-2 font-medium">{nodes.find(n => n.id === selectedNode)?.difficulty}</span>
-              </div>
+            </p>
+            <div className="mt-1 flex items-center gap-2">
+              <span className={`mr-2 text-xs px-2 py-1 rounded ${getNodeColor(nodes.find(n => n.id === selectedNode)!).background}`}>
+                {nodes.find(n => n.id === selectedNode)?.status || 'pending'}
+              </span>
+              <span className="ml-2 font-medium">{nodes.find(n => n.id === selectedNode)?.difficulty}</span>
             </div>
           </div>
         )}
@@ -317,7 +317,7 @@ export default function SkillOrchestrator() {
               </div>
             )}
             <div className="mt-2 flex justify-between items-center">
-              <span className="text-sm {getNodeStatus(node.id) === 'running' ? 'text-red-600' : 'text-gray-600'}">
+              <span className={getNodeStatus(node.id) === 'running' ? 'text-sm text-red-600' : 'text-sm text-gray-600'}>
                 Status: {getNodeStatus(node.id)}
               </span>
               <span className="text-sm font-medium">
@@ -460,7 +460,7 @@ export default function SkillOrchestrator() {
               <span className="text-gray-600">Avg. Execution Time</span>
               <span className="text-teal-600 font-bold">
                 {Math.round(executions.reduce((sum, e) => sum + e.metrics.duration, 0) / executions.length)}
-              </s>
+              </span>
             </div>
             <div className="w-full bg-teal-100 rounded-full h-2">
               <div className="h-2 rounded-full bg-teal-500" style={{ width: `${Math.min(100, avgDuration)}%` }}></div>

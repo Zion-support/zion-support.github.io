@@ -11,7 +11,7 @@ export default function InnovationIdeas() {
             <div>
               <h3 className="text-gray-800 font-semibold">Autonomous Deployment Engine</h3>
               <p className="text-gray-600">Automatically deploys new AI components to production</p>
-            <div>
+            </div>
           </div>
         </li>
         <li>

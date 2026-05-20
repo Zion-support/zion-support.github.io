@@ -1,6 +1,5 @@
 'use client';
 
-'use client';
 import { useState, useEffect } from 'react';
 
 interface ImprovementPath {
@@ -25,7 +24,6 @@ export default function AutonomousInnovationAgent() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
-    // Initialize with sample paths
     const samplePaths: ImprovementPath[] = [
       {
         id: 'inno-001',
@@ -47,7 +45,7 @@ export default function AutonomousInnovationAgent() {
 
   const submitFeedback = (cycle: FeedbackCycle) => {
     setFeedbackCycles(prev => [cycle, ...prev]);
-    setCurrentPlan(prev =>...
+    setCurrentPlan(prev => prev);
   };
 
   const getPriorityColor = (priority: string) => {
@@ -76,7 +74,6 @@ export default function AutonomousInnovationAgent() {
         </div>
       </div>
 
-      {/* Improvement Paths */}
       <div className="mb-6">
         <h3 className="font-semibold text-gray-800 mb-3">Available Paths</h3>
         <div className="space-y-2">
@@ -103,14 +100,13 @@ export default function AutonomousInnovationAgent() {
         </div>
       </div>
 
-      {/* Current Plan */}
       {currentPlan && (
         <div className="mb-8 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200 p-6">
           <h3 className="font-semibold text-purple-800 mb-3 flex items-center">
             <span className="mr-2">⚙️</span>
             Implementation Plan: {currentPlan.id}
           </h3>
-          <div className="flex flex-column mb-4">
+          <div className="mb-4">
             <div className="text-lg font-medium text-gray-800">
               {currentPlan.description}
             </div>
@@ -131,7 +127,6 @@ export default function AutonomousInnovationAgent() {
         </div>
       )}
 
-      {/* Feedback Management */}
       <div className="mb-6">
         <h3 className="font-semibold text-gray-800 mb-3">Feedback Cycles</h3>
         <div className="space-y-2">
@@ -150,38 +145,6 @@ export default function AutonomousInnovationAgent() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex items-center gap-3 mb-4">
-          <input
-            type="number"
-            placeholder="New cycle score (0-100)"
-            max="100"
-            min="0"
-            onChange={(e) => setFeedbackCycles(prev => [
-              ...prev.slice(0, 5),
-              {
-                timestep: Date.now(),
-                score: parseInt(e.target.value),
-                adjustments: currentPath?.adjustments || [],
-                improvement: Math.max(0.5, cycle.improvement + 0.1)
-              }
-            ])}
-          />
-          <button
-            type="button"
-            className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded"
-            onClick={() => setFeedbackCycles(prev => [
-              ...prev.slice(1),
-              {
-                timestep: Date.now(),
-                score: parseInt(e.target.value),
-                adjustments: currentPath?.adjustments || [],
-                improvement: Math.max(0.5, cycle.improvement + 0.1)
-              }
-            ])}
-          >
-            Submit Feedback
-          </button>
         </div>
       </div>
     </div>

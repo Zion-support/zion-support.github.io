@@ -28,17 +28,17 @@ export default function AICodeReviewer() {
     const detectedIssues: CodeIssue[] = [];
     const lines = code.split('\n');
 
-    // Analyze code patterns
     lines.forEach((line, index) => {
       const lineNum = index + 1;
       
-      // Check for common issues
+      if (line.includes('console.log')) {
         detectedIssues.push({
           id: `issue-${lineNum}-1`,
           type: 'style',
           severity: 'info',
           file: 'current-file.ts',
           line: lineNum,
+          message: 'console.log statement found',
           suggestion: 'Use a proper logging library or remove debug statements before production'
         });
       }
@@ -90,22 +90,8 @@ export default function AICodeReviewer() {
           suggestion: 'Break long lines into multiple lines for better readability'
         });
       }
-      
-      // Check for unused variables pattern
-      if (line.match(/const \w+ = .*;/) && !code.includes(line.match(/const (\w+)(?=\s*=)/)?.[1] || '', lines.slice(index + 1).join('\n'))) {
-        detectedIssues.push({
-          id: `issue-${lineNum}-6`,
-          type: 'performance',
-          severity: 'warning',
-          file: 'current-file.ts',
-          line: lineNum,
-          message: 'Potentially unused variable',
-          suggestion: 'Remove unused variables to reduce bundle size'
-        });
-      }
     });
 
-    // Check for missing patterns
     if (!code.includes('export default') && !code.includes('module.exports')) {
       detectedIssues.push({
         id: 'issue-module-1',
@@ -118,19 +104,6 @@ export default function AICodeReviewer() {
       });
     }
 
-    if (!code.includes('//') && !code.includes('/*') && code.length > 500) {
-      detectedIssues.push({
-        id: 'issue-doc-1',
-        type: 'style',
-        severity: 'info',
-        file: 'current-file.ts',
-        line: 1,
-        message: 'No comments found',
-        suggestion: 'Add JSDoc comments to explain complex logic'
-      });
-    }
-
-    // Calculate score
     let calculatedScore = 100;
     detectedIssues.forEach(issue => {
       if (issue.severity === 'critical') calculatedScore -= 15;
@@ -183,7 +156,6 @@ export default function AICodeReviewer() {
         )}
       </div>
 
-      {/* Code Input */}
       <div className="mb-6">
         <textarea
           value={code}
@@ -206,7 +178,6 @@ export default function AICodeReviewer() {
         </div>
       </div>
 
-      {/* Analysis Results */}
       {isAnalyzing && (
         <div className="text-center py-8">
           <div className="inline-block animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
@@ -214,7 +185,6 @@ export default function AICodeReviewer() {
         </div>
       )}
 
-      {/* Issues List */}
       {!isAnalyzing && issues.length > 0 && (
         <div className="space-y-3">
           <h3 className="font-semibold text-gray-900 mb-3">
@@ -245,7 +215,6 @@ export default function AICodeReviewer() {
         </div>
       )}
 
-      {/* All Clear State */}
       {!isAnalyzing && issues.length === 0 && code.length > 100 && (
         <div className="p-6 bg-green-50 rounded-lg border border-green-200 text-center">
           <div className="text-4xl mb-3">✅</div>
@@ -256,7 +225,6 @@ export default function AICodeReviewer() {
         </div>
       )}
 
-      {/* AI Intelligence Note */}
       <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
         <h3 className="font-semibold text-purple-900 mb-1">🤖 AI Code Review Intelligence</h3>
         <p className="text-sm text-purple-800">

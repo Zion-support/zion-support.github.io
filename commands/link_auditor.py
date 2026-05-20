@@ -7,7 +7,7 @@ Audit all internal links in out/ to verify they resolve correctly
 import re, json, pathlib
 from urllib.parse import urlparse
 
-BASE = pathlib.Path('/Users/klebergarciaalcatrao/zion.app')
+BASE = pathlib.Path('/root/.openclaw/workspace/zion.app')
 OUT = BASE / 'out'
 
 def extract_links_from_html(html_path):
@@ -31,6 +31,10 @@ def resolve_path(href, html_file):
     # Skip external, anchor, and special protocol links
     if href.startswith(('http', 'https', 'mailto', 'tel', '//', '#', 'data:')):
         return None, 'external'
+    
+    # Skip Next.js internal chunk files (false positives)
+    if '/_next/static/chunks/' in href and href.endswith('.js'):
+        return None, 'skipped-chunk'
     
     # Strip query and fragment
     clean = href.split('?')[0].split('#')[0]

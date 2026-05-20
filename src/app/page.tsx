@@ -922,24 +922,24 @@ export default function Home() {
         </section>
       </main>
 
-          {/* CONTACT CTA BANNER */}
-          <Link href="/contact" className="mt-6 block">
-            <section className="rounded-2xl border-2 border-blue-500 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 p-8 text-center shadow-xl">
-              <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">Ready to transform your business?</p>
-              <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
-                Let Zion Tech Group build your future
-              </h2>
-              <p className="mt-3 max-w-2xl mx-auto text-sm text-blue-100">
-                <strong>Phone:</strong> +1 302 464 0950 &nbsp;&middot;&nbsp;
-                <strong>Email:</strong> kleber@ziontechgroup.com &nbsp;&middot;&nbsp;
-                <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
-              </p>
-              <p className="mt-1 text-xs text-blue-200">Enterprise AI &middot; IT Infrastructure &middot; Cloud &middot; Security &middot; Automation — {allServices.length}+ services, one partner</p>
-              <p className="mt-4 text-lg font-semibold text-white underline decoration-blue-300 decoration-2 underline-offset-4">
-                Get Your Free Consultation &rarr;
-              </p>
-            </section>
-          </Link>
+      {/* CONTACT CTA BANNER */}
+      <Link href="/contact" className="mt-6 block">
+        <section className="rounded-2xl border-2 border-blue-500 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 p-8 text-center shadow-xl">
+          <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">Ready to transform your business?</p>
+          <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+            Let Zion Tech Group build your future
+          </h2>
+          <p className="mt-3 max-w-2xl mx-auto text-sm text-blue-100">
+            <strong>Phone:</strong> +1 302 464 0950 &nbsp;&middot;&nbsp;
+            <strong>Email:</strong> kleber@ziontechgroup.com &nbsp;&middot;&nbsp;
+            <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
+          </p>
+          <p className="mt-1 text-xs text-blue-200">Enterprise AI &middot; IT Infrastructure &middot; Cloud &middot; Security &middot; Automation — {allServices.length}+ services, one partner</p>
+          <p className="mt-4 text-lg font-semibold text-white underline decoration-blue-300 decoration-2 underline-offset-4">
+            Get Your Free Consultation &rarr;
+          </p>
+        </section>
+      </Link>
 
     </LayoutLayout>
   );

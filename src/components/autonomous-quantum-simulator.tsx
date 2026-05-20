@@ -14,15 +14,17 @@ export default function AutonomousQuantumSimulator() {
     setProgress(0);
     setResults([]);
     
-    // Simulate quantum computations
     const intervals = setInterval(() => {
-      setProgress(prev => prev + 10);
-      if (progress < 100) {
-        setResults(prevResults => [...prevResults, `Quantum state ${prev + 1} calculated`);
-      } else {
-        clearInterval(intervals);
-        setSimulationRunning(false);
-      }
+      setProgress(prev => {
+        const newProgress = prev + 10;
+        if (newProgress < 100) {
+          setResults(prevResults => [...prevResults, `Quantum state ${newProgress} calculated`]);
+        } else {
+          clearInterval(intervals);
+          setSimulationRunning(false);
+        }
+        return newProgress;
+      });
     }, 800);
   };
 
@@ -38,7 +40,7 @@ export default function AutonomousQuantumSimulator() {
           <button
             onClick={startSimulation}
             disabled={simulationRunning}
-            className={`px-4 py-2 rounded bg-indigo-600 text-white transition-colors hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed`}
+            className="px-4 py-2 rounded bg-indigo-600 text-white transition-colors hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
           >
             {simulationRunning ? 'Running...' : 'Start Simulation'}
           </button>
@@ -61,7 +63,7 @@ export default function AutonomousQuantumSimulator() {
             {results.slice(0, 3).map((result, index) => (
               <div key={index} className="flex items-center gap-1">
                 <span className="text-mono text-xs mr-1">{index + 1}.</span>
-                <span className="text-gray-700">{result}</div>
+                <span className="text-gray-700">{result}</span>
               </div>
             ))}
             {results.length > 3 && <span className="text-xs text-gray-500 mt-1">...</span>}
