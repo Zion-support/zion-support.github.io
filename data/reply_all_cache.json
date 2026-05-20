@@ -22,10 +22,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "dr-2",
-      "Bob <bob@partner.com>"
+      "Bob <bob@partner.com>",
+      "dr-2"
     ],
-    "decided_at": "2026-05-20T22:40:46.320727+00:00"
+    "decided_at": "2026-05-20T23:37:55.321529+00:00"
   },
   "dr-3": {
     "reply_all": false,
@@ -36,10 +36,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "dr-3",
-      "PayPal <paypal@paypal.com>"
+      "PayPal <paypal@paypal.com>",
+      "dr-3"
     ],
-    "decided_at": "2026-05-20T22:40:46.325267+00:00"
+    "decided_at": "2026-05-20T23:37:55.339496+00:00"
   },
   "dr-5": {
     "reply_all": false,
@@ -50,9 +50,23 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "New User <new@example.com>",
-      "dr-5"
+      "dr-5",
+      "New User <new@example.com>"
     ],
-    "decided_at": "2026-05-20T22:40:46.327942+00:00"
+    "decided_at": "2026-05-20T23:36:46.407474+00:00"
+  },
+  "dr-4": {
+    "reply_all": false,
+    "reasons": [
+      "1:1 conversation \u2192 reply-only"
+    ],
+    "score": -1,
+    "use_cc": "",
+    "reply_to_original": false,
+    "thread_participants": [
+      "dr-4",
+      "Angry Client <legal@client.com>"
+    ],
+    "decided_at": "2026-05-20T23:36:46.404980+00:00"
   }
 }

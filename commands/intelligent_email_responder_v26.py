@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from collections import defaultdict
 
-WORKSPACE  = Path(__file__).resolve().parent.parent.parent
+WORKSPACE  = Path(__file__).resolve().parent.parent
 COMMANDS   = WORKSPACE / 'commands'
 DATA       = WORKSPACE / 'data'
 V26_LOG    = DATA / 'v26_run_log.jsonl'
@@ -363,6 +363,17 @@ def _get_sig(formality: str, language: str) -> str:
 # ═══════════════════════════════════════════════════════════════
 
 _GRAMMAR_RUSH = re.compile(r'\b(?:teh|asap|gonna|wanna|lemme|kinda|dunno)\b', re.IGNORECASE)
+
+def _record_improver(body, intent_cat, lang, tone_data, g_score, sender, action_label):
+    """Centralised ResponseImprover call — used before every pipeline return point."""
+    try:
+        if V30_IMPROVER_ENABLED and self and self.response_improver:
+            self.response_improver.record_send(body, intent_cat, lang,
+                tone_data.get("formality", "neutral") if isinstance(tone_data, dict) else "neutral",
+                g_score, sender, action_label)
+    except Exception:
+        pass
+
 
 def _fast_grammar_check(body: str) -> tuple[float, list[str]]:
     """< 1ms grammar check — casual phrasing + roughness."""
@@ -796,8 +807,9 @@ class V26Responder:
             except Exception:
                 pass
         if cat_result.get("auto_archive"):
-            return {"action": "archive", "reason": cat_result.get("category", "noise"),
-                    "elapsed_ms": ms_elapsed()}
+            result = add_to_result(email, {"thread_intent": thread_intent_label, "action": "archive", "reason": cat_result.get("category", "noise"),
+                    "elapsed_ms": ms_elapsed()})
+            return result
 
         # ── V29: Escalation gate (before intent scoring) ──────────
         if V26_ESCALATION_ENABLED and check_escalation:
@@ -813,9 +825,10 @@ class V26Responder:
                     _log({"run_id": RUN_ID, "phase": "escalated",
                           "severity": esc.get("severity"), "sender": sender,
                           "signals": esc.get("signals", [])})
-                    return {"action": "escalated", "severity": esc.get("severity"),
+                    result = add_to_result(email, {"thread_intent": thread_intent_label, "action": "escalated", "severity": esc.get("severity"),
                             "signals": esc.get("signals", []),
-                            "elapsed_ms": ms_elapsed()}
+                            "elapsed_ms": ms_elapsed()})
+                    return result
             except Exception:
                 pass
 
@@ -846,12 +859,22 @@ class V26Responder:
         intent_raw = _apply_intent_boost(intent_raw, profile)
 
         if intent_raw.get("confidence_level") == "low":
-            return {"action": "review", "reason": "low_intent_confidence",
-                    "intent": intent_raw, "tone": tone_data, "elapsed_ms": ms_elapsed()}
+            result = add_to_result(email, {"thread_intent": thread_intent_label, "action": "review", "reason": "low_intent_confidence",
+                    "intent": intent_raw, "tone": tone_data, "elapsed_ms": ms_elapsed()})
+            return result
 
         intent_label = intent_raw.get("categories", ["general"])[0]
         urgency_val  = intent_raw.get("intent_details", {}).get("urgency", 3)
         intent_cat   = INTENT_MAP.get(intent_label, "general")
+
+        # ── M1: Thread Intent Classifier + Reply-All Binding ──────
+        thread_intent_label = intent_label
+        if M1_ORCHESTRATOR_ENABLED and orchestrate:
+            try:
+                orchestrate(email, thread_intent_label=thread_intent_label)
+                thread_intent_label = email.get("thread_intent_label", thread_intent_label)
+            except Exception:
+                pass
 
         # ── Wave 6a: Polarity analysis ──────────────────────────
         polarity_result = None
@@ -955,9 +978,10 @@ class V26Responder:
                 rtfb_result = self.rtfb(body, ed_rtfb, intent_label,
                                          _v25_score=_v25_score, dry_run=dry_run)
                 if rtfb_result.get("needs_review") or rtfb_result.get("tier") == "review":
-                    return {"action": "review", "reason": "rtfb_intercepted",
+                    result = add_to_result(email, {"action": "review", "reason": "rtfb_intercepted",
                             "feedback": rtfb_result, "tone": tone_data,
-                            "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                            "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+                    return result
             except Exception:
                 pass
 
@@ -979,19 +1003,22 @@ class V26Responder:
             )
             _rroute = router_result.get("route", "")
             if _rroute == "escalate":
-                return {"action": "escalated", "route": "case_router",
+                result = add_to_result(email, {"action": "escalated", "route": "case_router",
                         "severity": "high", "signals": router_result.get("signals", []),
                         "reason": router_result.get("reason", ""),
-                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+                return result
             if _rroute == "auto_ack":
-                return {"action": "auto_ack", "route": "case_router",
+                result = add_to_result(email, {"action": "auto_ack", "route": "case_router",
                         "reply_all": router_result.get("reply_all_ok", False),
                         "reason": router_result.get("reason", ""),
-                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+                return result
             if _rroute == "review":
-                return {"action": "review", "route": "case_router",
+                result = add_to_result(email, {"action": "review", "route": "case_router",
                         "reason": router_result.get("reason", ""),
-                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+                return result
             # full_pipeline / fast_path: continue normally
 
 
@@ -1006,15 +1033,17 @@ class V26Responder:
                             telegram_send(esc["telegram_alert"])
                         except Exception:
                             pass
-                    return {"action": "escalated", "severity": esc.get("severity"),
+                    result = add_to_result(email, {"action": "escalated", "severity": esc.get("severity"),
                             "signals": esc.get("signals", []),
-                            "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                            "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+                    return result
             except Exception:
                 pass
 
         # ④ Reply-all
-        reply_all_ok = False
-        use_cc       = ""
+        reply_all_dec = {"reply_all": False, "use_cc": ""}
+        reply_all_ok  = False
+        use_cc        = ""
         try:
             if always_cc and from_email_data:
                 ed   = from_email_data(email)
@@ -1042,6 +1071,20 @@ class V26Responder:
 
 
 
+        # w3-01: grammar regression alert
+        if W3_ENABLED and grammar_check:
+            try:
+                grammar_check(body, g_score, intent_cat)
+            except Exception:
+                pass
+
+        # w3-02: fast-path promoter (can flip use_fast=True here)
+        if W3_ENABLED and promotion_check:
+            try:
+                promotion_check(sender, intent_raw, intent_cat)
+            except Exception:
+                pass
+
         # ⑤ Quality gate
         min_qc = {
             "overall_score": round(g_score, 1),
@@ -1049,9 +1092,10 @@ class V26Responder:
             "issues": [{"dimension": "grammar", "msg": i} for i in g_issues[:3]],
         }
         if not min_qc["passed"]:
-            return {"action": "review", "reason": "fast_path_quality_failed",
+            result = add_to_result(email, {"action": "review", "reason": "fast_path_quality_failed",
                     "quality": min_qc, "tone": tone_data,
-                    "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+                    "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+            return result
 
         # V26: Calendar availability
         if V26_MEETING_ENABLED and get_availability_next_7_days and intent_cat in ('booking', 'sales'):
@@ -1067,6 +1111,13 @@ class V26Responder:
             except Exception:
                 pass
 
+        # w3-03: template slot quarantine tick
+        if W3_ENABLED:
+            try:
+                tick(intent_cat, lang, g_score)
+            except Exception:
+                pass
+
         # V29: Payment received acknowledgment (before send, both paths)
         if self._fin_result and self._fin_result.get("financial_type") == "payment_received":
             if lang == 'pt':
@@ -1078,25 +1129,36 @@ class V26Responder:
         if dry_run:
             _log_template_quality(intent_cat, lang, tpl, min_qc["overall_score"],
                                   g_score, sender)
-            return {"action": "send_dry_fast", "intent": intent_label,
+            result = add_to_result(email, {"action": "send_dry_fast", "intent": intent_label,
                     "reply_all": reply_all_ok, "tone": tone_data,
                     "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1),
-                    "reply_all_detail": reply_all_dec if reply_all_ok else {"reply_all": False, "reason": "dry_run"}}
+                    "thread_intent": thread_intent_label,
+                    "reply_all_detail": reply_all_dec if reply_all_ok else {"reply_all": False, "reason": "dry_run"}})
+            return result
 
-        if V30_IMPROVER_ENABLED and self.response_improver:
-            try:
-                self.response_improver.record_send(body, intent_cat, lang,
-                    tone_data.get("formality","neutral"), g_score, sender, "send_dry_fast")
-            except Exception: pass
+        _record_improver(body, intent_cat, lang, tone_data, g_score, sender, "send_dry_fast")
 
         if not HAS_GMAIL:
-            return {"action": "skip", "reason": "no_gmail",
-                    "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            result = add_to_result(email, {"action": "skip", "reason": "no_gmail",
+                    "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+            return result
 
         cc_part = f", {use_cc}" if reply_all_ok and use_cc else ""
         all_rcp = f"{sender}{cc_part}"
         subj_rep = f"Re: {subj}" if not subj.lower().startswith("re:") else subj
         res = gmail_send_reply_fixed(tid, subj_rep, body, all_rcp)
+
+        # w2-02: record send outcome for 48h poll; w2-03: expand CC list
+        if W2_ENABLED:
+            try:
+                record_send(sender, tid, intent_cat, reply_all_ok, g_score)
+            except Exception:
+                pass
+            try:
+                if expand_from_sent:
+                    expand_from_sent(sender, email.get("cc", ""), intent_label)
+            except Exception:
+                pass
 
         self.stats["reply_all_total"] += 1
         if reply_all_ok:
@@ -1105,15 +1167,12 @@ class V26Responder:
             self.stats["reply_all_missed"] += 1
         _log_template_quality(intent_cat, lang, tpl, min_qc["overall_score"],
                               g_score, sender)
-        return {"action": "send_fast", "intent": intent_label,
+        result = add_to_result(email, {"action": "send_fast", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,
-                "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
-
-        if V30_IMPROVER_ENABLED and self.response_improver:
-            try:
-                self.response_improver.record_send(body, intent_cat, lang,
-                    tone_data.get("formality","neutral"), g_score, sender, "send_fast")
-            except Exception: pass
+                "thread_intent": thread_intent_label,
+                "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+        _record_improver(body, intent_cat, lang, tone_data, g_score, sender, "send_fast")
+        return result
 
     # ═══════════════════════════════════════════════════════════════
     #  FULL PIPELINE — V26 with financial + meeting + V29 gates
@@ -1208,9 +1267,10 @@ class V26Responder:
                     _log({"run_id": RUN_ID, "phase": "escalated",
                           "severity": esc.get("severity"), "sender": sender,
                           "signals": esc.get("signals", [])})
-                    return {"action": "escalated", "severity": esc.get("severity"),
+                    result = add_to_result(email, {"action": "escalated", "severity": esc.get("severity"),
                             "signals": esc.get("signals", []),
-                            "elapsed_ms": ms(), "fast_path": False}
+                            "elapsed_ms": ms(), "fast_path": False})
+                    return result
             except Exception:
                 pass
 
@@ -1250,8 +1310,9 @@ class V26Responder:
                 rtfb_result = self.rtfb(body, ed_rtfb, intent_label,
                                          _v25_score=_v25_score, dry_run=dry_run)
                 if rtfb_result.get("needs_review") or rtfb_result.get("tier") == "review":
-                    return {"action": "review", "reason": "rtfb_intercepted",
-                            "feedback": rtfb_result, "tone": tone_data, "elapsed_ms": ms()}
+                    result = add_to_result(email, {"action": "review", "reason": "rtfb_intercepted",
+                            "feedback": rtfb_result, "tone": tone_data, "elapsed_ms": ms()})
+                    return result
             except Exception:
                 pass
 
@@ -1276,8 +1337,9 @@ class V26Responder:
             qc = _fallback_quality_check(body, lang)
 
         if not qc.get("passed", True) or not qc.get("should_send", True):
-            return {"action": "review", "reason": "quality_failed",
-                    "quality": qc, "tone": tone_data, "elapsed_ms": ms()}
+            result = add_to_result(email, {"action": "review", "reason": "quality_failed",
+                    "quality": qc, "tone": tone_data, "elapsed_ms": ms()})
+            return result
 
         # ⑪-b QR trainer
         if self.qr_trainer:
@@ -1317,13 +1379,15 @@ class V26Responder:
                 self.stats["reply_all_missed"] += 1
             _log_template_quality(intent_cat, lang, tpl_body, qc["overall_score"],
                                   _fast_grammar_check(body)[0], sender)
-            return {"action": "send_dry", "intent": intent_label,
+            result = add_to_result(email, {"action": "send_dry", "intent": intent_label,
                     "reply_all": reply_all_ok, "tone": tone_data,
                     "quality": qc, "elapsed_ms": ms(), "fast_path": False,
-                    "wave5_cc": _wave5_cc_candidates, "kb_ctx": bool(kb_ctx)}
+                    "wave5_cc": _wave5_cc_candidates, "kb_ctx": bool(kb_ctx)})
+            return result
         if not HAS_GMAIL:
-            return {"action": "skip", "reason": "no_gmail",
-                    "elapsed_ms": ms(), "fast_path": False}
+            result = add_to_result(email, {"action": "skip", "reason": "no_gmail",
+                    "elapsed_ms": ms(), "fast_path": False})
+            return result
 
         cc_part = f", {use_cc}" if reply_all_ok and use_cc else ""
         all_rcp = f"{sender}{cc_part}"
@@ -1337,10 +1401,11 @@ class V26Responder:
             self.stats["reply_all_missed"] += 1
         _log_template_quality(intent_cat, lang, tpl_body, qc["overall_score"],
                               _fast_grammar_check(body)[0], sender)
-        return {"action": "send", "intent": intent_label,
+        result = add_to_result(email, {"action": "send", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,
                 "quality": qc, "elapsed_ms": ms(), "fast_path": False,
-                "wave5_cc": _wave5_cc_candidates, "kb_ctx": bool(kb_ctx)}
+                "wave5_cc": _wave5_cc_candidates, "kb_ctx": bool(kb_ctx)})
+        return result
 
     # ── Helpers ────────────────────────────────────────────────
     def _get_name(self, sender: str) -> str:
