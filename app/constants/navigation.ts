@@ -26,6 +26,7 @@ export const SOLUTION_LINKS: readonly NavigationLink[] = [
 ];
 // Resource Links
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
+  { name: 'Partners', href: '/partners' },
   { name: 'Search', href: '/search' },
   { name: 'Pricing Calculator', href: '/pricing-calculator' },
   { name: 'Proposal Generator', href: '/proposal-generator' },
