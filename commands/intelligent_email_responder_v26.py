@@ -165,6 +165,21 @@ except Exception as _ex:
     get_availability_next_7_days = None
     format_availability      = None
 
+
+# ─── V30: CaseRouter + ResponseImprover ─────────────────────
+try:
+    from case_router          import CaseRouter
+    from response_improver    import ResponseImprover
+    V30_ROUTER_ENABLED   = True
+    V30_IMPROVER_ENABLED = True
+except Exception as _ex30:
+    print(f"⚠️ V30: optional modules not available: {_ex30}", flush=True)
+    V30_ROUTER_ENABLED   = False
+    V30_IMPROVER_ENABLED = False
+    CaseRouter     = None
+    ResponseImprover = None
+
+
 # ── Dry-run outcome pre-seed ────────────────────────────────
 def _build_dry_run_outcomes() -> dict:
     return {
@@ -807,8 +822,37 @@ class V26Responder:
         #  V29 DECISION: Fast-path or Full?
         # ══════════════════════════════════════════════════════
 
+                # V30: CaseRouter routes before fast/full split
+        if V30_ROUTER_ENABLED and self.case_router:
+            router_result = self.case_router.route(
+                email=email,
+                intent_raw=intent_raw,
+                intent_label=intent_label,
+                intent_cat=intent_cat,
+                urgency_val=urgency_val,
+                tone_data=tone_data,
+                profile=profile,
+                fin_result=self._fin_result,
+            )
+            _rroute = router_result.get("route", "")
+            if _rroute == "escalate":
+                return {"action": "escalated", "route": "case_router",
+                        "severity": "high", "signals": router_result.get("signals", []),
+                        "reason": router_result.get("reason", ""),
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            if _rroute == "auto_ack":
+                return {"action": "auto_ack", "route": "case_router",
+                        "reply_all": router_result.get("reply_all_ok", False),
+                        "reason": router_result.get("reason", ""),
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            if _rroute == "review":
+                return {"action": "review", "route": "case_router",
+                        "reason": router_result.get("reason", ""),
+                        "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            # full_pipeline / fast_path: continue normally
+
         detector = CascadingLatencyDetector(profile, intent_raw, cat_result, subj, snip)
-        use_fast = detector.can_fast_path
+        use_fast  = detector.can_fast_path
 
         if use_fast:
             fast_ms_start = time.monotonic()
@@ -925,6 +969,11 @@ class V26Responder:
                 reply_all_ok = True
                 self.stats["feedback_oracle_override"] = self.stats.get("feedback_oracle_override", 0) + 1
 
+
+        # V30: CaseRouter + ResponseImprover
+        self.case_router     = CaseRouter()      if V30_ROUTER_ENABLED   else None
+        self.response_improver = ResponseImprover() if V30_IMPROVER_ENABLED else None
+
         # ⑤ Quality gate
         min_qc = {
             "overall_score": round(g_score, 1),
@@ -965,6 +1014,12 @@ class V26Responder:
                     "reply_all": reply_all_ok, "tone": tone_data,
                     "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
 
+        if V30_IMPROVER_ENABLED and self.response_improver:
+            try:
+                self.response_improver.record_send(body, intent_cat, lang,
+                    tone_data.get("formality","neutral"), g_score, sender, "send_dry_fast")
+            except Exception: pass
+
         if not HAS_GMAIL:
             return {"action": "skip", "reason": "no_gmail",
                     "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
@@ -984,6 +1039,12 @@ class V26Responder:
         return {"action": "send_fast", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,
                 "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+
+        if V30_IMPROVER_ENABLED and self.response_improver:
+            try:
+                self.response_improver.record_send(body, intent_cat, lang,
+                    tone_data.get("formality","neutral"), g_score, sender, "send_fast")
+            except Exception: pass
 
     # ═══════════════════════════════════════════════════════════════
     #  FULL PIPELINE — V26 with financial + meeting + V29 gates
