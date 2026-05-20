@@ -186,6 +186,25 @@ try:
 except Exception as _ex_m1:
     print(f"⚠️ M1: orchestrator import failed: {_ex_m1}", flush=True)
     M1_ORCHESTRATOR_ENABLED = False
+
+# ─── w2-02 / w3-01 / w3-02 / w3-03 ───────────────────────────
+try:
+    from reply_all_outcome_poller import record_send, poll_outcome, write_profile
+    from thread_participant_expander import expand_from_sent
+    from grammar_regression_alert   import check as grammar_check
+    from fast_path_promoter         import check as promotion_check
+    from template_slot_quarantine   import quarantine_slot, tick, release_slot
+    W2_ENABLED = True
+    W3_ENABLED = True
+except Exception as _ex_w23:
+    print(f"⚠️ w2/w3: import failed: {_ex_w23}", flush=True)
+    W2_ENABLED = W3_ENABLED = False
+    record_send = poll_outcome = write_profile = None
+    expand_from_sent = None
+    grammar_check = promotion_check = None
+    quarantine_slot = tick = release_slot = None
+
+
     classify_thread = add_to_result = None
     decode_reply_all = bind = None
     orchestrate = None
