@@ -88,10 +88,11 @@ except Exception as _e:
     # keep going — some modules may be optional
 
 try:
-    from email_decision import from_email_data, decide_reply_all
+    from email_decision import from_email_data, decide_reply_all, always_cc
 except Exception:
     from_email_data  = None
     decide_reply_all = None
+    always_cc        = None
 
 # ─── Wave 2: KB Grounding RAG ────────────────────────────────────────────────
 try:
@@ -877,15 +878,23 @@ class V25Responder:
         # ③ Trim grammar check (inline, <1ms)
         g_score, g_issues = _fast_grammar_check(body)
 
-        # ④ Reply-all — email_decision layer + basic coverage (unified fast-path check)
+        # ④ Reply-all — V27 always_CC first, fall back to decide_reply_all for edge cases
         reply_all_ok = False
         use_cc       = ""
         try:
-            if decide_reply_all and from_email_data:
+            if always_cc and from_email_data:
+                # ── V27: Hard-require: always reply all unless suppressed ──────────
                 ed   = from_email_data(email)
-                rad  = decide_reply_all(ed)
-                reply_all_ok = bool(rad.get("reply_all", False))
-                use_cc       = rad.get("use_cc", "")
+                acd  = always_cc(ed)
+                if not acd.get("suppressed", False):
+                    use_cc       = acd.get("use_cc", "")
+                    reply_all_ok = bool(use_cc)
+                else:
+                    # Suppressed by fwd:/private → try legacy Decide layer
+                    if decide_reply_all:
+                        rad  = decide_reply_all(ed)
+                        reply_all_ok = bool(rad.get("reply_all", False))
+                        use_cc       = rad.get("use_cc", "")
         except Exception:
             pass
         if not reply_all_ok:

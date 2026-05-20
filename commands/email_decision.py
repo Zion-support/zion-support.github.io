@@ -116,6 +116,55 @@ def _llm_confidence(email: Email) -> float:
         m = re.search(r'0?\.\d+', txt)
         return float(m.group()) if m else 0.75
     return 0.0
+# ── V27: Always-CC hard-require ────────────────────────────────────────────────
+_SUPPRESS_CC_KW = [
+    "just you", "only you", "private", "dm me", "between us",
+    "confidential", "personal reply", "not for distribution",
+]
+
+def always_cc(email: Email) -> dict:
+    """
+    Hard-require reply-all on every outgoing reply.
+
+    Logic:
+      1. If subject starts with 'fwd:' → suppressed (don't unsilently reply-all to
+         a forwarded chain).
+      2. If private-hint keyword found in subject + thread → suppressed.
+      3. Build CC list from all unique To+CC recipients. If list is non-empty,
+         unconditionally reply-all to everyone.
+
+    Returns:
+        {use_cc: str, reason: str, suppressed: bool}
+    """
+    subj   = email.subject.lower()
+    text   = f"{email.subject} {' '.join(email.thread)}".lower()
+
+    # Suppression: forwarded emails
+    if subj.startswith("fwd:"):
+        return {"use_cc": "", "reason": "suppressed_forwarded", "suppressed": True}
+
+    # Suppression: private/confidential keywords
+    if any(kw in text for kw in _SUPPRESS_CC_KW):
+        return {"use_cc": "", "reason": "suppressed_private", "suppressed": True}
+
+    # Build CC list — every unique, valid recipient in To + CC
+    all_rcpts: list = []
+    seen: set = set()
+    for addr in email.to + email.cc:
+        a = addr.strip().lower()
+        if a and "@" in a and a not in seen:
+            seen.add(a)
+            all_rcpts.append(addr.strip())
+
+    if not all_rcpts:
+        return {"use_cc": "", "reason": "no_recipients", "suppressed": False}
+
+    n = len(all_rcpts)
+    return {
+        "use_cc":   ", ".join(all_rcpts),
+        "reason":   f"always_cc_{n}_participants",
+        "suppressed": False,
+    }
 
 # ── Public API ─────────────────────────────────────────────────────────────
 def decide_reply_all(email: Email) -> dict:
