@@ -523,9 +523,27 @@ def _apply_intent_boost(intent_raw: dict, profile: dict) -> dict:
         intent_raw["intent_boost_src"] = f"profile:{top_cat}:+{boost:.0%}"
     return intent_raw
 
+# ── w2-01: Intent bucket hash ─────────────────────────────────
+_INTENT_BUCKETS: dict = {
+    'urgent_bucket':    {'urgent', 'billing', 'legal', 'outage', 'critical', 'incident'},
+    'high_value_bucket': {'sales', 'partnership', 'booking', 'invoice'},
+    'routine_bucket':   {'support', 'follow_up', 'general'},
+    'low_priority_bucket': {'cancellation', 'informational', 'newsletter'},
+}
+
+def _normalize_intent(label: str) -> str:
+    """Map an intent label to its bucket key (for fast-path boosting)."""
+    for bucket, labels in _INTENT_BUCKETS.items():
+        if label in labels:
+            return bucket
+    return 'routine_bucket'
+
 class CascadingLatencyDetector:
+    """Decision-tree fast/slow gating with intent-bucket boost."""
+    # w2-01 intent_bucket_hash: urgent/high-value labels auto-pass confidence gate
+
     def __init__(self, profile: dict, intent_result: dict,
-                 cat_result: dict, subj: str, snip: str) -> tuple[bool, dict]:
+                 cat_result: dict, subj: str, snip: str) -> None:
         self.profile   = profile
         self.intent    = intent_result
         self.categoria = cat_result
@@ -546,8 +564,8 @@ class CascadingLatencyDetector:
         if not self.profile:
             self._reasons['profile'] = 'no_profile'
             return False
-        intent = self.intent.get('categories', ['general'])[0]
-        outcomes = self.profile.get('outcome_history', [])
+        intent     = self.intent.get('categories', ['general'])[0]
+        outcomes   = self.profile.get('outcome_history', [])
         if len(outcomes) < 2:
             self._reasons['profile'] = f'insufficient_history_{len(outcomes)}'
             return False
@@ -555,14 +573,25 @@ class CascadingLatencyDetector:
         if len(intent_outcomes) < 2:
             self._reasons['profile'] = f'low_intent_history_{len(intent_outcomes)}'
             return False
-        success_rate = sum(1 for o in intent_outcomes[-5:] if o.get('outcome') in ('positive', 'neutral')) / max(len(intent_outcomes[-5:]), 1)
+        success_rate = sum(
+            1 for o in intent_outcomes[-5:]
+            if o.get('outcome') in ('positive', 'neutral')
+        ) / max(len(intent_outcomes[-5:]), 1)
         if success_rate < 0.80:
             self._reasons['profile'] = f'success_rate_{success_rate:.0%}'
             return False
         return True
 
     def _check_intent_confidence(self) -> bool:
-        level = self.intent.get('confidence_level', 'low')
+        level  = self.intent.get('confidence_level', 'low')
+        label  = self.intent.get('categories', ['general'])[0]
+        bucket = _normalize_intent(label)
+
+        # Urgent bucket: auto-pass regardless of confidence level
+        if bucket == 'urgent_bucket':
+            self._reasons['intent_bucket'] = bucket
+            return True
+
         if level in ('very_high', 'high'):
             return True
         self._reasons['intent'] = level
@@ -595,9 +624,6 @@ class CascadingLatencyDetector:
         }
 
 
-# ═══════════════════════════════════════════════════════════════
-#  FAST-PATH PIPELINE  (~6 steps vs 14)
-# ═══════════════════════════════════════════════════════════════
 
 class V26Responder:
     def __init__(self):
