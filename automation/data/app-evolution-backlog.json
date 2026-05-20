@@ -7,10 +7,7 @@
   ],
   "newIdeas": [
     "Add industry-specific landing pages",
-    "Implement A/B testing for CTAs",
-    "[Layout/Design] Ensure consistent max-width containers: Not all content appears to be wrapped in a consistent max-width container. Use a shared layout wrapper (e.g., max-w-7xl mx-auto px-4) to keep content readable on large screens.",
-    "[Layout/Design] Break up very dense bullet sections: There are many bullet lists on the homepage. Consider grouping related bullets into cards or columns to improve visual rhythm and scanning.",
-    "[Layout/Design] Confirm semantic main content region: The live HTML did not include a <main> element. Ensure the primary content is wrapped in a semantic main region for accessibility and layout clarity."
+    "Implement A/B testing for CTAs"
   ],
   "implementationTasks": [
     {
@@ -104,6 +101,5 @@
     "Implement A/B testing for CTAs"
   ],
   "schemaVersion": 1,
-  "updatedAt": "2026-05-20T12:41:54.265Z",
-  "layoutDesignIntelMerge": "2026-05-20T12:41:54.265Z"
+  "updatedAt": "2026-05-20T12:55:39.620Z"
 }
