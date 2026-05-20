@@ -23,5 +23,87 @@
     "contact_hours": [
       -3
     ]
+  },
+  "example.com": {
+    "name": "Alice",
+    "emails": [
+      "Alice <alice@example.com>"
+    ],
+    "domains": [
+      "example.com"
+    ],
+    "first_contact": "2026-05-20T12:56:38.219017+00:00",
+    "total_messages": 8,
+    "formality": "neutral",
+    "language": "unknown",
+    "intents": {
+      "support": 8
+    },
+    "avg_response_minutes": null,
+    "response_times": [],
+    "last_interaction": "2026-05-20T13:10:54.297663+00:00",
+    "preferred_time": -3,
+    "reply_pattern": "unknown",
+    "urgency_patterns": {},
+    "contact_hours": [
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3
+    ]
+  },
+  "partner.com": {
+    "name": "Bob",
+    "emails": [
+      "Bob <bob@partner.com>"
+    ],
+    "domains": [
+      "partner.com"
+    ],
+    "first_contact": "2026-05-20T13:10:54.323836+00:00",
+    "total_messages": 1,
+    "formality": "casual",
+    "language": "en",
+    "intents": {
+      "sales": 1
+    },
+    "avg_response_minutes": null,
+    "response_times": [],
+    "last_interaction": "2026-05-20T13:10:54.323840+00:00",
+    "preferred_time": -3,
+    "reply_pattern": "unknown",
+    "urgency_patterns": {},
+    "contact_hours": [
+      -3
+    ]
+  },
+  "client.com": {
+    "name": "Carla",
+    "emails": [
+      "Carla <carla@client.com>"
+    ],
+    "domains": [
+      "client.com"
+    ],
+    "first_contact": "2026-05-20T13:10:54.324715+00:00",
+    "total_messages": 1,
+    "formality": "neutral",
+    "language": "unknown",
+    "intents": {
+      "support": 1
+    },
+    "avg_response_minutes": null,
+    "response_times": [],
+    "last_interaction": "2026-05-20T13:10:54.324718+00:00",
+    "preferred_time": -3,
+    "reply_pattern": "unknown",
+    "urgency_patterns": {},
+    "contact_hours": [
+      -3
+    ]
   }
 }

@@ -8,7 +8,7 @@ import json, re
 from pathlib import Path
 from datetime import datetime, timezone
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class ContextualMemoryBankV23:
     """Remember context across threads for continuity."""
@@ -53,6 +53,10 @@ class ContextualMemoryBankV23:
 
     def store_memory(self, thread_id, sender, subject, snippet, response=None, intent=None):
         """Store a conversation memory entry"""
+
+    def store(self, thread_id, sender, subject, snippet, response=None, intent=None):
+        """V24-compatible alias for store_memory"""
+        return self.store_memory(thread_id, sender, subject, snippet, response=response, intent=intent)
         data = self.load()
         domain = self._extract_domain(sender)
         name = self._extract_name(sender)
@@ -168,3 +172,27 @@ class ContextualMemoryBankV23:
                 lines.append(f"   • {c.get('subject', 'no subject')[:60]}")
 
         return '\n'.join(lines)
+
+
+    def recall(self, thread_id='', sender='', subject='', snippet='') -> dict:
+        """V24-compatible recall: merges sender context + recent threads."""
+        ctx = {
+            'thread_id': thread_id,
+            'participants': [sender] if sender else [],
+            'thread_history': [],
+            'known_entities': [],
+            'subject': subject,
+        }
+        try:
+            sc = self.get_sender_context(sender or '')
+            threads = sc.get('threads', [])
+            # de-duplicate and ensure thread_id in participants
+            parts = set(sc.get('threads', []))
+            if thread_id: parts.add(thread_id)
+            if sender: parts.add(sender)
+            ctx['participants'] = list(parts)
+            ctx['known_entities'] = sc.get('known_entities', [])
+            ctx['thread_history'] = self.get_recent_conversations(sender or '', limit=5)
+        except Exception:
+            pass
+        return ctx

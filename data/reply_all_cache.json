@@ -1,0 +1,41 @@
+{
+  "dr-1": {
+    "reply_all": false,
+    "reasons": [
+      "1:1 conversation \u2192 reply-only"
+    ],
+    "score": -1,
+    "use_cc": "",
+    "reply_to_original": false,
+    "thread_participants": [
+      "dr-1"
+    ],
+    "decided_at": "2026-05-20T13:10:54.301452+00:00"
+  },
+  "dr-2": {
+    "reply_all": false,
+    "reasons": [
+      "1:1 conversation \u2192 reply-only"
+    ],
+    "score": -1,
+    "use_cc": "",
+    "reply_to_original": false,
+    "thread_participants": [
+      "dr-2"
+    ],
+    "decided_at": "2026-05-20T13:10:54.324296+00:00"
+  },
+  "dr-3": {
+    "reply_all": false,
+    "reasons": [
+      "1:1 conversation \u2192 reply-only"
+    ],
+    "score": -1,
+    "use_cc": "",
+    "reply_to_original": false,
+    "thread_participants": [
+      "dr-3"
+    ],
+    "decided_at": "2026-05-20T13:10:54.325093+00:00"
+  }
+}

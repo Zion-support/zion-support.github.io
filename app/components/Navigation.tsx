@@ -44,6 +44,19 @@ export default function Navigation() {
     if (mobileOpen) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = '';
     return () => { document.body.style.overflow = ''; };
+  // Dynamic featured services rotation
+  const [featuredIndex, setFeaturedIndex] = useState(0);
+  
+  useEffect(() => {
+    // Rotate featured services every 30 seconds
+    const interval = setInterval(() => {
+      setFeaturedIndex(prev => (prev + 1) % FEATURED_AI_SERVICE_LINKS.length);
+    }, 30000); // 30 seconds
+    
+    return () => clearInterval(interval);
+  }, []);
+
+
   }, [mobileOpen]);
 
   function isActive(href: string): boolean {
@@ -219,6 +232,7 @@ export default function Navigation() {
                     </div>
                   </div>
                 </div>
+<<<<<<< Updated upstream
                 <div className="border-t border-slate-800 my-3" />
                 <div className="space-y-2">
                   <Link
@@ -235,6 +249,14 @@ export default function Navigation() {
                   >
                     AI Services Hub →
                   </Link>
+=======
+                {FEATURED_AI_SERVICE_LINKS.slice(featuredIndex, featuredIndex + 4).map((link, i) => (
+                  <DropdownItem key={i} link={link} />
+                ))}
+                <div className="border-t border-slate-800 my-1" />
+                <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+                  More
+>>>>>>> Stashed changes
                 </div>
               </div>
             )}
@@ -304,7 +326,7 @@ export default function Navigation() {
 
           {/* Featured AI */}
           <div className="text-xs text-slate-500 uppercase tracking-wider font-bold mb-2">Popular Services</div>
-          {FEATURED_AI_SERVICE_LINKS.slice(0, 8).map((link, i) => (
+          {FEATURED_AI_SERVICE_LINKS.slice(featuredIndex, featuredIndex + 6).map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
 

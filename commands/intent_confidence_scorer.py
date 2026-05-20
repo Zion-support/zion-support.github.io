@@ -7,7 +7,7 @@ Assigns confidence to intent detection. Falls back to human when uncertain.
 import json, re
 from pathlib import Path
 
-WORKSPACE = Path('/root/.openclaw/workspace')
+WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
 class IntentConfidenceScorerV23:
     """Score confidence in intent detection and suggest fallback when unsure."""
@@ -189,4 +189,61 @@ class IntentConfidenceScorerV23:
             'message': f"High confidence ({confidence_score['level']}) — auto-responding",
             'auto_respond': True,
             'verify_later': False,
+        }
+
+    def score(self, sender, subject, snippet, thread_id=None) -> dict:
+        """V24 entry — classify intent category + urgency + confidence."""
+        combined = f"{subject} {snippet}"
+        keywords = {
+            'urgent':     ['urgent', 'asap', 'emergency', 'critical', 'outage', 'down', 'broken'],
+            'booking':    ['booking', 'reservation', 'check-in', 'check-out', 'confirm', 'reserva'],
+            'sales':      ['pricing', 'quote', 'proposal', 'interest', 'buy', 'orçamento', 'valor'],
+            'support':    ['error', 'bug', 'crash', 'fix', 'issue', 'erro', 'ajuda', 'suporte'],
+            'partnership':['partner', 'partnership', 'parceria', 'collab'],
+            'cancellation':['cancel', 'refund', 'reembolso', 'chargeback', 'desistir'],
+            'follow_up':  ['follow', 'update', 'status', 'check', 'acompanhar'],
+        }
+        scores = {intent: sum(1 for kw in kws if kw.lower() in combined.lower())
+                  for intent, kws in keywords.items()}
+        best = max(scores, key=scores.get) if any(scores.values()) else 'general'
+        total = sum(scores.values())
+        conf = round(scores[best] / total, 2) if total > 0 else 0.5
+        urgency_map = {'urgent': 1, 'support': 2, 'sales': 2, 'booking': 3,
+                       'partnership': 2, 'cancellation': 2, 'follow_up': 4, 'general': 3}
+        confidence_level = 'high' if conf >= 0.7 else ('medium' if conf >= 0.4 else 'low')
+        return {
+            'categories': [best],
+            'confidence': conf,
+            'confidence_level': confidence_level,
+            'intent_details': {'urgency': urgency_map.get(best, 3), 'sender': sender, 'thread_id': thread_id or ''},
+            'suggested_action': 'auto_reply' if confidence_level == 'high' else 'draft_and_review',
+        }
+    def score(self, sender, subject, snippet, thread_id=None) -> dict:
+        """V24-compatible entry point: classify intent + confidence."""
+        combined = f"{subject} {snippet}"
+        scores = {}
+        keyword_map = {
+            'urgent':     ['urgent', 'asap', 'emergency', 'critical', 'outage', 'down'],
+            'booking':    ['booking', 'reservation', 'check-in', 'confirm'],
+            'sales':      ['pricing', 'quote', 'proposal', 'interest'],
+            'support':    ['error', 'bug', 'crash', 'issue', 'problem', 'help'],
+            'partnership':['partner', 'collab', 'alliance'],
+            'cancellation': ['cancel', 'refund'],
+            'follow_up':  ['follow', 'update', 'status'],
+        }
+        for intent, kws in keyword_map.items():
+            scores[intent] = sum(1 for kw in kws if kw.lower() in combined.lower())
+        best = max(scores, key=scores.get) if any(scores.values()) else 'general'
+        total = sum(scores.values())
+        conf = round(scores[best] / total, 2) if total > 0 else 0.5
+        urgency_map = {'urgent': 1, 'support': 2, 'sales': 3, 'booking': 3,
+                       'partnership': 2, 'cancellation': 2, 'follow_up': 4, 'general': 3}
+        urgency = urgency_map.get(best, 3)
+        level = 'high' if conf >= 0.7 else ('medium' if conf >= 0.4 else 'low')
+        return {
+            'categories': [best],
+            'confidence': conf,
+            'confidence_level': level,
+            'intent_details': {'urgency': urgency, 'sender': sender, 'thread_id': thread_id or ''},
+            'suggested_action': 'auto_reply' if level == 'high' else 'draft_and_review',
         }

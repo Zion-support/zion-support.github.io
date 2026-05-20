@@ -27,9 +27,9 @@ from pathlib import Path
 from datetime import datetime, timezone
 from collections import defaultdict
 
-WORKSPACE  = Path('/root/.openclaw/workspace')
-COMMANDS   = WORKSPACE / 'zion.app' / 'commands'
-DATA       = WORKSPACE / 'zion.app' / 'data'
+WORKSPACE  = Path(__file__).resolve().parent.parent.parent
+COMMANDS   = WORKSPACE / 'commands'
+DATA       = WORKSPACE / 'data'
 V24_LOG    = DATA / 'v24_run_log.jsonl'
 V24_STATS  = DATA / 'v24_stats.jsonl'
 LABEL_SEEN = set()
@@ -52,9 +52,21 @@ except Exception:
     def telegram_send(t):                              print(f"[TG] {t}")
     def gmail_get_or_create_label_id(n):               return f'label-{n}'
 
+
 # ─── V21 Core ──────────────────────────────────────────────────
-from ml_template_optimizer import MLTemplateOptimizerV21
-from predictive_timer        import PredictiveTimerV21
+try:
+    from ml_template_optimizer import MLTemplateOptimizerV21
+    from predictive_timer        import PredictiveTimerV21
+except Exception:
+    MLTemplateOptimizerV21 = None
+    PredictiveTimerV21      = None
+
+# ── reply-all + outcome tracker ──────────────────────────────────────────────
+
+# ─── V22 Augmentations ─────────────────────────────────────────
+from enhanced_reply_all_handler import EnhancedReplyAllHandlerV22
+from response_outcome_analyzer  import ResponseOutcomeAnalyzerV22
+
 
 # ─── V22 Augmentations ─────────────────────────────────────────
 from enhanced_reply_all_handler import EnhancedReplyAllHandlerV22
@@ -70,7 +82,7 @@ from smart_followup_scheduler import SmartFollowUpSchedulerV23
 from action_item_extractor    import ActionItemExtractorV23
 
 # ─── Adaptive Tone Matcher ──────────────────────────────────────
-from adaptive_tone_matcher import analyze_email_tone, generate_adapted_response
+from adaptive_tone_matcher import analyze_tone, generate_adapted_response
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -255,35 +267,51 @@ class V24Responder:
                    "dry_run": dry_run, "limit": limit,
                    "gmail": HAS_GMAIL})
 
-        if not HAS_GMAIL:
+        raw: list[dict] = []
+
+        if not HAS_GMAIL and not dry_run:
             telegram_send("⚠️  [V24] Gmail unavailable — skipping this run.")
             return self._finalise(run_start)
 
-        # Fetch
-        raw = gmail_search("is:unread", limit=limit * 2)
-        if not raw:
-            telegram_send("📭 [V24] No unread emails.")
-            return self._finalise(run_start)
+        # ── Dry-run stub injection ───────────────────────────────
+        if dry_run:
+            pool = [
+                {"id": "dr-1", "thread_id": "dr-1", "sender": "Alice <alice@example.com>",
+                 "subject": "Urgent: Server outage", "snippet": "Production is down, need help!",
+                 "cc": ""},
+                {"id": "dr-2", "thread_id": "dr-2", "sender": "Bob <bob@partner.com>",
+                 "subject": "Partnership proposal", "snippet": "Let's explore a strategic partnership.",
+                 "cc": ""},
+                {"id": "dr-3", "thread_id": "dr-3", "sender": "Carla <carla@client.com>",
+                 "subject": "Support: Cannot login", "snippet": "Getting error 500 on login page.",
+                 "cc": ""},
+            ]
+            print("🧪 [V24] Injecting 3 dry-run stub emails → pool (Gmail bypassed)")
+        else:
+            # Fetch from Gmail
+            raw = gmail_search("is:unread", limit=limit * 2)
+            if not raw:
+                telegram_send("📭 [V24] No unread emails.")
+                return self._finalise(run_start)
 
-        # Build enriched email records
-        pool = []
-        for msg in raw:
-            try:
-                f = gmail_get(msg["id"])
-                hdrs = {h["name"]: h["value"] for h in f.get("payload", {}).get("headers", [])}
-                pool.append({
-                    "id":        msg["id"],
-                    "thread_id": f.get("threadId", msg["id"]),
-                    "sender":    hdrs.get("From", ""),
-                    "subject":   hdrs.get("Subject", ""),
-                    "snippet":   f.get("snippet", ""),
-                    "cc":        next((h["value"] for h in f.get("payload", {}).get("headers", [])
-                                       if h["name"].lower() == "cc"), ""),
-                })
-            except Exception as ex:
-                log_event({"run_id": RUN_ID, "phase": "fetch_error",
-                           "msg_id": msg.get("id"), "err": str(ex)})
-                self.stats["errors_fetch"] += 1
+            # Build enriched email records
+            for msg in raw:
+                try:
+                    f = gmail_get(msg["id"])
+                    hdrs = {h["name"]: h["value"] for h in f.get("payload", {}).get("headers", [])}
+                    pool.append({
+                        "id":        msg["id"],
+                        "thread_id": f.get("threadId", msg["id"]),
+                        "sender":    hdrs.get("From", ""),
+                        "subject":   hdrs.get("Subject", ""),
+                        "snippet":   f.get("snippet", ""),
+                        "cc":        next((h["value"] for h in f.get("payload", {}).get("headers", [])
+                                           if h["name"].lower() == "cc"), ""),
+                    })
+                except Exception as ex:
+                    log_event({"run_id": RUN_ID, "phase": "fetch_error",
+                               "msg_id": msg.get("id"), "err": str(ex)})
+                    self.stats["errors_fetch"] += 1
 
         # Sort: forward first, then critical → high → medium → low
         def sort_key(e):
@@ -304,9 +332,9 @@ class V24Responder:
         return self._finalise(run_start)
 
     def _pipeline(self, email: dict, dry_run: bool) -> dict:
-        t0 = time.monotonic()
-        ee  = email["id"]
-        tid = email["thread_id"]
+        t0   = time.monotonic()
+        ee   = email["id"]
+        tid  = email["thread_id"]
         subj = email["subject"]
         snip = email["snippet"]
         sender = email["sender"]
@@ -315,7 +343,7 @@ class V24Responder:
         ms     = round((time.monotonic() - t0) * 1000, 1)
 
         # ── ① Tone ────────────────────────────────────────────
-        tone_data = analyze_email_tone(subj, snip)
+        tone_data = analyze_tone(subj, snip)
 
         # ── ② Sender profile ──────────────────────────────────
         profile = self.sender_learner.learn_from_email(sender, subj, snip, email)
@@ -365,6 +393,19 @@ class V24Responder:
         reply_all_dec = self.reply_all.decide(email, thread_participants=members)
         reply_all_ok  = reply_all_dec.get("reply_all", False)
         use_cc        = reply_all_dec.get("use_cc", "")
+
+        # ── ⑾ Email-decision layer (heuristic + LLM) ─────────────
+        try:
+            from email_decision import from_email_data, decide_reply_all
+            ed = from_email_data(email)
+            ra_decision = decide_reply_all(ed)
+            merged = reply_all_ok or ra_decision.get("reply_all", False)
+            if ra_decision.get("use_cc"):
+                use_cc = ra_decision["use_cc"]
+            reply_all_ok = merged
+            print(f"  🔗 2-layer: eh={reply_all_dec.get('reply_all')} em={ra_decision.get('reply_all')} → {reply_all_ok}")
+        except Exception as _ex:
+            log_event({"run_id": RUN_ID, "phase": "reply_all_decision_err", "err": str(_ex)})
 
         # ── ⑨ Template selection ──────────────────────────────
         tpl_body = TEMPLATES.get(lang, TEMPLATES["en"]).get(
