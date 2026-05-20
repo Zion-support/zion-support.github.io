@@ -39,7 +39,7 @@ guaranteeing zero accuracy regression.
 Drop-in replacement: V25Responder → V26Responder in __main__
 """
 
-import json, re, time
+import json, re, time, csv, io
 from datetime import datetime, timezone
 from pathlib import Path
 from collections import defaultdict
@@ -49,6 +49,19 @@ COMMANDS   = WORKSPACE / 'commands'
 DATA       = WORKSPACE / 'data'
 V26_LOG    = DATA / 'v26_run_log.jsonl'
 V26_STATS  = DATA / 'v26_stats.jsonl'
+V28_TQ_LOG = DATA / 'template_quality.jsonl'   # V28: per-template quality log
+V28_TQ_AUDIT = DATA / 'template_quality_audit.jsonl'  # V28: audit decisions log
+
+_PROMOTION_WINDOW     = 200   # uses before evaluating a template
+_QUARANTINE_THRESHOLD = 70.0  # rolling avg below → quarantine
+_CANONICAL_THRESHOLD  = 90.0  # rolling avg above for 14+ days → canonical
+_CANONICAL_DAYS       = 14
+_AUDIT_INTERVAL       = 50    # audit every N sends (batch-level check)
+
+# Quarantine state file — {template_key: until_iso}
+_TQ_QUARANTINE: dict = {}
+_TQ_CANONICAL:  dict = {}
+_TQ_SINCE_LAST_AUDIT = 0
 
 sys_path_flag = False
 if str(COMMANDS) not in __import__('sys').path:
@@ -391,7 +404,93 @@ def _fallback_quality_check(body: str, lang: str = 'en') -> dict:
 
 
 # ═══════════════════════════════════════════════════════════════
-# ── Wave 7: Fast-path KB grounding ─────────────────────────────────
+# ── V28: Template Quality Autocorrect ──────────────────────────────
+# ═══════════════════════════════════════════════════════════════
+
+def _get_template_key(intent_cat: str, lang: str, template: str) -> str:
+    return f"{intent_cat}|{lang}|{template}"
+
+def _log_template_quality(intent_cat: str, lang: str, template: str,
+                          quality: float, g_score: float, sender: str = "") -> None:
+    """Append one quality record to V28_TQ_LOG. Non-blocking."""
+    try:
+        row = {
+            "ts":      datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S%z"),
+            "intent":  intent_cat, "lang": lang, "template": template,
+            "quality": round(quality, 1), "g_score": round(g_score, 1),
+            "sender":  sender[:60],
+        }
+        buf = io.StringIO()
+        w = csv.DictWriter(buf, fieldnames=list(row.keys()))
+        if not V28_TQ_LOG.exists():
+            w.writeheader()
+        w.writerow(row)
+        V28_TQ_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with open(V28_TQ_LOG, "a") as f:
+            f.write(buf.getvalue())
+    except Exception:
+        pass  # quality logging must never crash a send
+
+def _audit_templates() -> None:
+    """Scan last 200 uses per (intent|lang|template) key. Quarantine/promote."""
+    global _TQ_QUARANTINE, _TQ_CANONICAL
+    try:
+        if not V28_TQ_LOG.exists():
+            return
+        import csv
+        rows = []
+        with open(V28_TQ_LOG) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                try:
+                    rows.append(next(csv.DictReader(io.StringIO(line))))
+                except Exception:
+                    pass
+
+        now   = datetime.now(timezone.utc)
+        delta = __import__("datetime").timedelta(hours=6)
+        buckets: dict[str, list[float]] = {}
+        for row in reversed(rows):
+            key = _get_template_key(row.get("intent",""), row.get("lang",""), row.get("template",""))
+            buckets.setdefault(key, []).append(float(row.get("quality", 0)))
+            if len(buckets[key]) >= _PROMOTION_WINDOW:
+                break
+
+        decisions = []
+        for key, scores in buckets.items():
+            if len(scores) < 50:
+                continue
+            avg = sum(scores) / len(scores)
+            if avg < _QUARANTINE_THRESHOLD:
+                _TQ_QUARANTINE[key] = (now + delta).isoformat()
+                decisions.append({"action": "quarantine", "key": key, "avg": round(avg, 1)})
+            elif avg >= _CANONICAL_THRESHOLD:
+                _TQ_CANONICAL[key] = now.isoformat()
+                decisions.append({"action": "canonical",  "key": key, "avg": round(avg, 1)})
+
+        if decisions:
+            try:
+                with open(V28_TQ_AUDIT, "a") as f:
+                    for entry in decisions:
+                        f.write(json.dumps({"ts": now.isoformat(), **entry}) + "\n")
+            except Exception:
+                pass
+    except Exception:
+        pass
+
+def _maybe_audit() -> None:
+    """Run audit every _AUDIT_INTERVAL sends (batch-level throttle)."""
+    global _TQ_SINCE_LAST_AUDIT
+    _TQ_SINCE_LAST_AUDIT += 1
+    if _TQ_SINCE_LAST_AUDIT >= _AUDIT_INTERVAL:
+        _TQ_SINCE_LAST_AUDIT = 0
+        _audit_templates()
+
+
+# ═══════════════════════════════════════════════════════════════
+# ── Wave 7: Fast-path KB grounding ─────────────────────────────
 def _fast_kb_context(intent_cat: str, subj: str, lang: str = 'en', max_hits: int = 2) -> str:
     """<1ms lightweight KB hit: top service title + 1-line desc for intent category."""
     try:
@@ -933,8 +1032,10 @@ class V25Responder:
             else:
                 body += "\n\nConfirmed — thank you for your payment!"
 
-        # ⑥ Send
+        # ⑥ Send — V28: log template quality before returning
         if dry_run:
+            _log_template_quality(intent_cat, lang, tpl, min_qc["overall_score"],
+                                  g_score, sender)
             return {"action": "send_dry_fast", "intent": intent_label,
                     "reply_all": reply_all_ok, "tone": tone_data,
                     "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
@@ -954,6 +1055,8 @@ class V25Responder:
             self.stats["reply_all_enforced"] += 1
         else:
             self.stats["reply_all_missed"] += 1
+        _log_template_quality(intent_cat, lang, tpl, min_qc["overall_score"],
+                              g_score, sender)
         return {"action": "send_fast", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,
                 "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
@@ -1144,6 +1247,8 @@ class V25Responder:
                 self.stats["reply_all_enforced"] += 1
             else:
                 self.stats["reply_all_missed"] += 1
+            _log_template_quality(intent_cat, lang, tpl, qc["overall_score"],
+                                  _fast_grammar_check(body)[0], sender)
             return {"action": "send_dry", "intent": intent_label,
 
                     "reply_all": reply_all_ok, "tone": tone_data,
@@ -1164,6 +1269,8 @@ class V25Responder:
             self.stats["reply_all_enforced"] += 1
         else:
             self.stats["reply_all_missed"] += 1
+        _log_template_quality(intent_cat, lang, tpl, qc["overall_score"],
+                              _fast_grammar_check(body)[0], sender)
         return {"action": "send", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,
                 "quality": qc, "elapsed_ms": ms(), "fast_path": False,
@@ -1232,6 +1339,7 @@ class V25Responder:
             "latency_speedup_est":   round(avg_full / max(avg_fast, 1), 1) if avg_fast > 0 else 0,
         }
         _log_stats(summary)
+        _maybe_audit()  # V28: batch-level quality audit
         return summary
 
 
