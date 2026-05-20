@@ -176,6 +176,21 @@ except Exception as _ex30:
     print(f"⚠️ V30: optional modules not available: {_ex30}", flush=True)
     V30_ROUTER_ENABLED   = False
     V30_IMPROVER_ENABLED = False
+
+# ─── M1: Thread Intent Classifier + Reply-All Binding ──────────
+try:
+    from classify_thread       import classify_thread, add_to_result
+    from decode_reply_all      import decode_reply_all, bind
+    from email_orchestrator    import orchestrate
+    M1_ORCHESTRATOR_ENABLED = True
+except Exception as _ex_m1:
+    print(f"⚠️ M1: orchestrator import failed: {_ex_m1}", flush=True)
+    M1_ORCHESTRATOR_ENABLED = False
+    classify_thread = add_to_result = None
+    decode_reply_all = bind = None
+    orchestrate = None
+
+
     CaseRouter     = None
     ResponseImprover = None
 
@@ -539,20 +554,6 @@ def _normalize_intent(label: str) -> str:
     return 'routine_bucket'
 
 # ── w2-01: Intent bucket hash ─────────────────────────────────
-_INTENT_BUCKETS: dict = {
-    'urgent_bucket':     {'urgent', 'billing', 'legal', 'outage', 'critical', 'incident'},
-    'high_value_bucket': {'sales', 'partnership', 'booking', 'invoice'},
-    'routine_bucket':    {'support', 'follow_up', 'general'},
-    'low_priority_bucket': {'cancellation', 'informational', 'newsletter'},
-}
-
-def _normalize_intent(label: str) -> str:
-    """Map intent label → bucket key (for fast-path confidence override)."""
-    for bucket, labels in _INTENT_BUCKETS.items():
-        if label in labels:
-            return bucket
-    return 'routine_bucket'
-
 
 
 class CascadingLatencyDetector:
