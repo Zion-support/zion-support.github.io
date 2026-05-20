@@ -21,6 +21,66 @@
       "status": "pending"
     },
     {
+      "thread_id": "dr-1",
+      "sender": "Alice <alice@example.com>",
+      "intent": "urgent",
+      "urgency": 1,
+      "delay_hours": 1.0,
+      "scheduled_at": "2026-05-20T14:34:20.942434+00:00",
+      "created_at": "2026-05-20T13:34:20.942434+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-1",
+      "sender": "Alice <alice@example.com>",
+      "intent": "urgent",
+      "urgency": 1,
+      "delay_hours": 1.0,
+      "scheduled_at": "2026-05-20T14:52:58.725875+00:00",
+      "created_at": "2026-05-20T13:52:58.725875+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-1",
+      "sender": "Alice <alice@example.com>",
+      "intent": "urgent",
+      "urgency": 1,
+      "delay_hours": 1.0,
+      "scheduled_at": "2026-05-20T14:54:25.963780+00:00",
+      "created_at": "2026-05-20T13:54:25.963780+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-1",
+      "sender": "Alice <alice@example.com>",
+      "intent": "urgent",
+      "urgency": 1,
+      "delay_hours": 1.0,
+      "scheduled_at": "2026-05-20T14:55:07.725948+00:00",
+      "created_at": "2026-05-20T13:55:07.725948+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-1",
+      "sender": "Alice <alice@example.com>",
+      "intent": "urgent",
+      "urgency": 1,
+      "delay_hours": 1.0,
+      "scheduled_at": "2026-05-20T15:01:45.091181+00:00",
+      "created_at": "2026-05-20T14:01:45.091181+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-1",
+      "sender": "Alice <alice@example.com>",
+      "intent": "urgent",
+      "urgency": 1,
+      "delay_hours": 1.0,
+      "scheduled_at": "2026-05-20T15:07:13.189061+00:00",
+      "created_at": "2026-05-20T14:07:13.189061+00:00",
+      "status": "pending"
+    },
+    {
       "thread_id": "dr-3",
       "sender": "Carla <carla@client.com>",
       "intent": "support",
@@ -41,6 +101,56 @@
       "status": "pending"
     },
     {
+      "thread_id": "dr-3",
+      "sender": "Carla <carla@client.com>",
+      "intent": "support",
+      "urgency": 2,
+      "delay_hours": 2.8,
+      "scheduled_at": "2026-05-20T16:22:20.960499+00:00",
+      "created_at": "2026-05-20T13:34:20.960499+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-3",
+      "sender": "Carla <carla@client.com>",
+      "intent": "support",
+      "urgency": 2,
+      "delay_hours": 2.8,
+      "scheduled_at": "2026-05-20T16:40:58.800644+00:00",
+      "created_at": "2026-05-20T13:52:58.800644+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-3",
+      "sender": "Carla <carla@client.com>",
+      "intent": "support",
+      "urgency": 2,
+      "delay_hours": 2.8,
+      "scheduled_at": "2026-05-20T16:42:25.975354+00:00",
+      "created_at": "2026-05-20T13:54:25.975354+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-3",
+      "sender": "Carla <carla@client.com>",
+      "intent": "support",
+      "urgency": 2,
+      "delay_hours": 2.8,
+      "scheduled_at": "2026-05-20T16:49:45.113419+00:00",
+      "created_at": "2026-05-20T14:01:45.113419+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-3",
+      "sender": "Carla <carla@client.com>",
+      "intent": "support",
+      "urgency": 2,
+      "delay_hours": 2.8,
+      "scheduled_at": "2026-05-20T16:55:13.206554+00:00",
+      "created_at": "2026-05-20T14:07:13.206554+00:00",
+      "status": "pending"
+    },
+    {
       "thread_id": "dr-2",
       "sender": "Bob <bob@partner.com>",
       "intent": "sales",
@@ -58,6 +168,66 @@
       "delay_hours": 19.2,
       "scheduled_at": "2026-05-21T08:23:41.106128+00:00",
       "created_at": "2026-05-20T13:11:41.106128+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-2",
+      "sender": "Bob <bob@partner.com>",
+      "intent": "sales",
+      "urgency": 3,
+      "delay_hours": 19.2,
+      "scheduled_at": "2026-05-21T08:46:20.959440+00:00",
+      "created_at": "2026-05-20T13:34:20.959440+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-2",
+      "sender": "Bob <bob@partner.com>",
+      "intent": "sales",
+      "urgency": 3,
+      "delay_hours": 19.2,
+      "scheduled_at": "2026-05-21T09:04:58.797266+00:00",
+      "created_at": "2026-05-20T13:52:58.797266+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-2",
+      "sender": "Bob <bob@partner.com>",
+      "intent": "sales",
+      "urgency": 3,
+      "delay_hours": 19.2,
+      "scheduled_at": "2026-05-21T09:06:25.973425+00:00",
+      "created_at": "2026-05-20T13:54:25.973425+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-2",
+      "sender": "Bob <bob@partner.com>",
+      "intent": "sales",
+      "urgency": 3,
+      "delay_hours": 19.2,
+      "scheduled_at": "2026-05-21T09:07:07.734586+00:00",
+      "created_at": "2026-05-20T13:55:07.734586+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-2",
+      "sender": "Bob <bob@partner.com>",
+      "intent": "sales",
+      "urgency": 3,
+      "delay_hours": 19.2,
+      "scheduled_at": "2026-05-21T09:13:45.111999+00:00",
+      "created_at": "2026-05-20T14:01:45.111999+00:00",
+      "status": "pending"
+    },
+    {
+      "thread_id": "dr-2",
+      "sender": "Bob <bob@partner.com>",
+      "intent": "sales",
+      "urgency": 3,
+      "delay_hours": 19.2,
+      "scheduled_at": "2026-05-21T09:19:13.205601+00:00",
+      "created_at": "2026-05-20T14:07:13.205601+00:00",
       "status": "pending"
     }
   ],

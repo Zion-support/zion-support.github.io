@@ -8,9 +8,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
+      "Alice <alice@example.com>",
       "dr-1"
     ],
-    "decided_at": "2026-05-20T13:11:41.023079+00:00"
+    "decided_at": "2026-05-20T14:07:13.189297+00:00"
   },
   "dr-2": {
     "reply_all": false,
@@ -21,9 +22,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "dr-2"
+      "dr-2",
+      "Bob <bob@partner.com>"
     ],
-    "decided_at": "2026-05-20T13:11:41.106680+00:00"
+    "decided_at": "2026-05-20T14:07:13.205820+00:00"
   },
   "dr-3": {
     "reply_all": false,
@@ -34,8 +36,9 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
+      "Carla <carla@client.com>",
       "dr-3"
     ],
-    "decided_at": "2026-05-20T13:11:41.112360+00:00"
+    "decided_at": "2026-05-20T14:07:13.206762+00:00"
   }
 }
