@@ -122,16 +122,29 @@ try:
     from response_verifier           import _score_response_quality as _v25_score
     from response_polarity_analyzer  import ResponsePolarityAnalyzer
     from learned_action_patterns     import LearnedActionPatterns
+    from attachment_awareness        import check_attachments
+    from realtime_feedback_loop      import apply_feedback
+    from quality_regression_trainer  import QualityRegressionTrainer
     V25_VERIFIER_ENABLED = True
     V25_POLARITY_ENABLED  = True
     V25_PATTERNS_ENABLED  = True
-except Exception:
-    V25_VERIFIER_ENABLED = False
-    V25_POLARITY_ENABLED  = False
-    V25_PATTERNS_ENABLED  = False
-    _v25_score         = None
-    ResponsePolarityAnalyzer = None
-    LearnedActionPatterns    = None
+    V25_ATTACH_ENABLED    = True
+    V25_RTFB_ENABLED      = True
+    V25_REGR_TRAINER_ENABLED = True
+except Exception as ex:
+    print(f"⚠️ V25 module import failed: {ex}", flush=True)
+    V25_VERIFIER_ENABLED        = False
+    V25_POLARITY_ENABLED        = False
+    V25_PATTERNS_ENABLED        = False
+    V25_ATTACH_ENABLED          = False
+    V25_RTFB_ENABLED            = False
+    V25_REGR_TRAINER_ENABLED    = False
+    _v25_score             = None
+    ResponsePolarityAnalyzer  = None
+    LearnedActionPatterns     = None
+    check_attachments         = None
+    apply_feedback            = None
+    QualityRegressionTrainer = None
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -331,6 +344,29 @@ def _fallback_quality_check(body: str, lang: str = 'en') -> dict:
 
 
 # ═══════════════════════════════════════════════════════════════
+# ── Wave 7: Fast-path KB grounding ─────────────────────────────────
+def _fast_kb_context(intent_cat: str, subj: str, max_hits: int = 2) -> str:
+    """<1ms lightweight KB hit: top service title + 1-line desc for intent category."""
+    try:
+        _build_index = globals().get('_build_index')
+        _category_buckets = globals().get('_category_buckets', {})
+        if not _category_buckets:
+            return ''
+        _build_index()
+    except Exception:
+        return ''
+    try:
+        hits = []
+        cat_key = intent_cat if intent_cat in _category_buckets else None
+        if cat_key:
+            hits = [s for s in _category_buckets.get(cat_key, [])[:15]]
+        if not hits:
+            hits = list(_category_buckets.values())[0] if _category_buckets else []
+        hits = hits[:max_hits]
+        parts = [f"{s.get('title','')} — {s.get('description','')[:90]}" for s in hits if s.get('title')]
+        return " | ".join(parts)
+    except Exception:
+        return ''
 #  FAST-THROUGH DETECTOR
 # ═══════════════════════════════════════════════════════════════
 
@@ -440,6 +476,15 @@ class V25Responder:
         # Wave 6 — polarity + action patterns
         self.polarity_analyzer = ResponsePolarityAnalyzer() if V25_POLARITY_ENABLED and ResponsePolarityAnalyzer else None
         self.action_patterns   = LearnedActionPatterns()     if V25_PATTERNS_ENABLED   and LearnedActionPatterns    else None
+
+        # Wave 8 — attachment awareness
+        self.attach_checker = check_attachments if V25_ATTACH_ENABLED and check_attachments else None
+
+        # Wave 9 — realtime feedback
+        self.rtfb = apply_feedback if V25_RTFB_ENABLED and apply_feedback else None
+
+        # Wave 10 — quality regression trainer
+        self.qr_trainer = QualityRegressionTrainer() if V25_REGR_TRAINER_ENABLED and QualityRegressionTrainer else None
 
         # ML weights (pre-loaded once)
         self.ml_weights = self.optimizer.train_from_outcomes() if self.optimizer else {}
@@ -552,6 +597,18 @@ class V25Responder:
         if profile.get("formality", "neutral") != "neutral":
             tone_data["formality"] = profile["formality"]
 
+        # ③-C Wave 8: Attachment awareness (pre-check)
+        attach_info = {"has_attachments": False, "attachment_summary": "", "stub_mode": True}
+        if self.attach_checker:
+            try:
+                attach_info = self.attach_checker(
+                    msg_id    = email.get("id", ""),
+                    snippet   = email.get("snippet", ""),
+                    subject   = email.get("subject", ""),
+                )
+            except Exception:
+                pass
+
         # ④ Categorizer (fast)
         cat_result = self.categorizer.categorize(email) if self.categorizer else {"auto_archive": False, "needs_response": True}
         if cat_result.get("auto_archive"):
@@ -634,6 +691,31 @@ class V25Responder:
         sig = _get_sig(tone_data.get("formality", "neutral"), lang)
         body_raw = tpl.format(name=name, close="—", signature="")
         body = f"{body_raw}\n\n{sig}"
+        if attach_info.get("has_attachments") and attach_info.get("attachment_summary"):
+            lang_sfx = "." if lang == "en" else "."
+            body = f"{body}\n\nI see you {attach_info['attachment_summary']}{lang_sfx}"
+
+        # ③-kb Lightweight KB inject (Wave 7)<1ms
+        kb_inject = _fast_kb_context(intent_cat, subj)
+        if kb_inject:
+            body = f"{body}\n\n_KB: {kb_inject}_"
+
+        # ③-rt Real-time feedback pre-send re-check (fast-pass only)
+        rtfb_result = {"tier": "send", "feedback": "rtfb_not_available"}
+        if self.rtfb:
+            try:
+                ed_rtfb = {"subject": subj, "snippet": snip,
+                            "sender": sender, "cc": email.get("cc", ""),
+                            "urgency": urgency_val if 'urgency_val' in dir() else 3,
+                            "tone": tone_data}
+                rtfb_result = self.rtfb(body, ed_rtfb, intent_label,
+                                         _v25_score=_v25_score, dry_run=dry_run)
+                if rtfb_result.get("needs_review") or rtfb_result.get("tier") == "review":
+                    return {"action": "review", "reason": "rtfb_intercepted",
+                            "feedback": rtfb_result, "tone": tone_data,
+                            "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)}
+            except Exception:
+                pass
 
         # ③ Trim grammar check (inline, <1ms)
         g_score, g_issues = _fast_grammar_check(body)
@@ -790,8 +872,23 @@ class V25Responder:
         # ⑨ Template selection + ⑩ Compose
         tpl_body = TEMPLATES.get(lang, TEMPLATES["en"]).get(intent_cat, TEMPLATES["en"]["general"])
         adapted  = generate_adapted_response(name, intent_label, tone_data)
-        body     = f"{adapted}\n\n{tpl_body.format(name=name, close='—', signature='')}"
+        # ③-rt Full-pipeline RTFB pre-send recheck (Wave 9)
+        rtfb_result = None
+        if self.rtfb:
+            try:
+                ed_rtfb = {"subject": subj, "snippet": snip,
+                            "sender": sender, "cc": "",
+                            "urgency": urgency_val, "tone": tone_data}
+                rtfb_result = self.rtfb(body, ed_rtfb, intent_label,
+                                         _v25_score=_v25_score, dry_run=dry_run)
+                if rtfb_result.get("needs_review") or rtfb_result.get("tier") == "review":
+                    return {"action": "review", "reason": "rtfb_intercepted",
+                            "feedback": rtfb_result, "tone": tone_data,
+                            "elapsed_ms": ms()}
+            except Exception:
+                pass
 
+        body     = f"{adapted}\n\n{tpl_body.format(name=name, close='—', signature='')}"
         # ⑪ Quality gate (V25 6-dimension verifier)
         qc = {"overall_score": 85.0, "passed": True, "issues": [],
               "dimension_scores": {}, "should_send": True}
@@ -814,6 +911,15 @@ class V25Responder:
         if not qc.get("passed", True) or not qc.get("should_send", True):
             return {"action": "review", "reason": "quality_failed",
                     "quality": qc, "tone": tone_data, "elapsed_ms": ms()}
+
+        # ⑪-b QR trainer: log quality after send for next-run regression check
+        if self.qr_trainer:
+            try:
+                _qr = self.qr_trainer.check_all()
+                if _qr.get("newly_flagged") or _qr.get("flagged"):
+                    _log({"run_id": RUN_ID, "phase": "qr_trainer", **_qr})
+            except Exception:
+                pass
 
         # ⑫ Send
         if dry_run:
