@@ -315,7 +315,7 @@ class V24Responder:
         ms     = round((time.monotonic() - t0) * 1000, 1)
 
         # ── ① Tone ────────────────────────────────────────────
-        tone_data = analyze_email_tone(subj, snip)
+        tone_data = analyze_email_tone({'subject': subj, 'body': '', 'snippet': snip})
 
         # ── ② Sender profile ──────────────────────────────────
         profile = self.sender_learner.learn_from_email(sender, subj, snip, email)
@@ -330,9 +330,9 @@ class V24Responder:
             tone_data["formality"] = profile["formality"]
 
         # ── ③ Context ─────────────────────────────────────────
-        members = [p.strip() for p in
-            self.memory_bank.recall(tid).get("participants", [sender])]
-        self.memory_bank.store(tid, sender, subj, snip)
+        profile = self.memory_bank.get_sender_context(sender)
+        members = [sender] + profile.get('related_contacts', [])
+        self.memory_bank.store_memory(tid, sender, subj, snip)
 
         # ── ④ Auto-categorize ─────────────────────────────────
         cat = self.categorizer.categorize(email)

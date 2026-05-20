@@ -16,8 +16,15 @@ def load_gog_tokens():
         return json.load(f)
 
 def refresh_access_token(tokens):
-    if tokens.get('expiry') and datetime.datetime.fromisoformat(tokens['expiry']) > datetime.datetime.utcnow() + datetime.timedelta(minutes=5):
-        return tokens['access_token']
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+    expiry_str = tokens.get('expiry', '')
+    if expiry_str:
+        try:
+            exp = datetime.datetime.fromisoformat(expiry_str.replace('Z', '+00:00'))
+            if exp.tzinfo is None: exp = exp.replace(tzinfo=datetime.timezone.utc)
+            if exp > now_utc + datetime.timedelta(minutes=5):
+                return tokens['access_token']
+        except Exception: pass
     data = urllib.parse.urlencode({
         'client_id': tokens['client_id'],
         'client_secret': tokens['client_secret'],
@@ -28,7 +35,8 @@ def refresh_access_token(tokens):
         headers={'Content-Type': 'application/x-www-form-urlencoded'})
     resp = json.loads(urllib.request.urlopen(req).read())
     tokens['access_token'] = resp['access_token']
-    tokens['expiry'] = (datetime.datetime.utcnow() + datetime.timedelta(seconds=resp['expires_in'])).isoformat()
+    exp_in = resp.get('expires_in', 3600)
+    tokens['expiry'] = (now_utc + datetime.timedelta(seconds=exp_in)).isoformat()
     with open(TOKENS_FILE, 'w') as f:
         json.dump(tokens, f)
     return tokens['access_token']
