@@ -107,6 +107,15 @@ except Exception:
     decide_reply_all = None
     always_cc        = None
 
+# ─── V28: SenderFeedbackOracle (reply-all preference learning) ───────────────
+try:
+    from intelligent_email_responder_v28 import FeedbackLearner, SenderFeedbackStore
+    V28_FEEDBACK_ENABLED = True
+except Exception:
+    FeedbackLearner       = None
+    SenderFeedbackStore   = None
+    V28_FEEDBACK_ENABLED  = False
+
 # ─── Wave 2: KB Grounding RAG ────────────────────────────────────────────────
 try:
     from kb_grounding_rag           import build_prompt_context, retrieve_context
@@ -659,6 +668,9 @@ class V26Responder:
         # ML weights (pre-loaded once)
         self.ml_weights = self.optimizer.train_from_outcomes() if self.optimizer else {}
 
+        # V28 — per-sender reply-all preference learning
+        self.feedback_oracle = FeedbackLearner() if V28_FEEDBACK_ENABLED and FeedbackLearner else None
+
         # Stats
         self.stats = defaultdict(int)
         # Reply-all compliance
@@ -903,6 +915,13 @@ class V26Responder:
             pass
         if not reply_all_ok:
             reply_all_ok = _check_reply_all_basic(body, sender, email.get("cc", ""))
+
+        # ── V28 FeedbackOracle: bias reply_all for known-sender overrides ───────
+        if self.feedback_oracle and reply_all_ok is False:
+            hint = self.feedback_oracle.route(sender)
+            if hint.get("feedback_tier") == "likely_yes":
+                reply_all_ok = True
+                self.stats["feedback_oracle_override"] = self.stats.get("feedback_oracle_override", 0) + 1
 
         # ⑤ Quality gate (minimal pass/fail)
         min_qc = {
