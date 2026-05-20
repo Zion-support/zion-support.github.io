@@ -11,9 +11,33 @@ interface CheckResult {
   path: string;
   status: CheckStatus;
   statusCode?: number;
-  responseTime?: number;   // ms
+  responseTime?: number; // ms
   lastChecked: Date;
 }
+
+const statusLabel: Record<CheckStatus, string> = {
+  checking:  'Checking…',
+  operational: 'Operational',
+  degraded:  'Degraded',
+  outage:    'Outage',
+  unknown:   'Unknown',
+};
+
+const badgeColor: Record<CheckStatus, string> = {
+  checking:  'bg-sky-500/20 ring-sky-500/30 text-sky-400',
+  operational: 'bg-green-500/20 ring-green-500/30 text-green-400',
+  degraded:  'bg-yellow-500/20 ring-yellow-500/30 text-yellow-400',
+  outage:    'bg-red-500/20 ring-red-500/30 text-red-400',
+  unknown:   'bg-slate-500/20 ring-slate-500/30 text-slate-400',
+};
+
+const dotColor: Record<CheckStatus, string> = {
+  checking:  'bg-sky-400',
+  operational: 'bg-green-400',
+  degraded:  'bg-yellow-400',
+  outage:    'bg-red-400 animate-pulse',
+  unknown:   'bg-slate-400',
+};
 
 function probeUrl(path: string): Promise<CheckResult> {
   const start = performance.now();
@@ -34,15 +58,17 @@ function probeUrl(path: string): Promise<CheckResult> {
     const timeout = setTimeout(() => {
       controller.abort();
       const elapsed = Math.round(performance.now() - start);
-      resolve({ label, path, status: 'outage', responseTime: elapsed, lastChecked: new Date() });
+      resolve({
+        label, path, status: 'outage', responseTime: elapsed,
+        lastChecked: new Date(),
+      });
     }, 6000);
 
-    // Use fetch with no-cors: opaque responses still give us timing + type 'opaque'
     fetch(path, { signal: controller.signal, cache: 'no-store' })
       .then(async (res) => {
         clearTimeout(timeout);
         const elapsed = Math.round(performance.now() - start);
-        const code = res.status; // successful response = 200-299
+        const code = res.status;
         let status: CheckStatus = 'operational';
         if (code >= 300 && code < 400) status = 'degraded';
         else if (code >= 400) status = 'outage';
@@ -54,7 +80,6 @@ function probeUrl(path: string): Promise<CheckResult> {
         if (err instanceof DOMException && err.name === 'AbortError') {
           resolve({ label, path, status: 'outage', responseTime: elapsed, lastChecked: new Date() });
         } else {
-          // Network error or CORS — treat as unknown/partial
           resolve({ label, path, status: 'unknown', responseTime: elapsed, lastChecked: new Date() });
         }
       });
@@ -80,48 +105,28 @@ export default function StatusPage() {
     setChecks(results);
     setLastRefresh(new Date());
 
-    // Derive overall status
     const degraded = results.some((r) => r.status === 'degraded' || r.status === 'unknown');
-    const outage = results.some((r) => r.status === 'outage');
-    if (outage) setOverall('outage');
+    const outage   = results.some((r) => r.status === 'outage');
+    if (outage)   setOverall('outage');
     else if (degraded) setOverall('degraded');
-    else setOverall('operational');
+    else          setOverall('operational');
   }, []);
 
   useEffect(() => {
     runChecks();
-    const interval = setInterval(runChecks, 60_000); // auto-refresh every 60s
+    const interval = setInterval(runChecks, 60_000);
     return () => clearInterval(interval);
   }, [runChecks]);
 
   const totalSvcs = allServices.length;
   const avgRt = checks.length > 0
-    ? Math.round(checks.filter((c) => c.responseTime != null).reduce((a, b) => a + (b.responseTime || 0), 0) / checks.length)
+    ? Math.round(
+        checks
+          .filter((c) => c.responseTime != null)
+          .reduce((a, b) => a + (b.responseTime ?? 0), 0) /
+        Math.max(1, checks.filter((c) => c.responseTime != null).length),
+      )
     : 0;
-
-  const dotColor: Record<CheckStatus, string> = {
-    checking:   'bg-sky-400 animate-pulse',
-    operational:'bg-green-500',
-    degraded:   'bg-yellow-500',
-    outage:     'bg-red-500',
-    unknown:    'bg-slate-500',
-  };
-
-  const statusLabel: Record<CheckStatus, string> = {
-    checking:   'Checking…',
-    operational:'Operational',
-    degraded:   'Degraded',
-    outage:     'Outage',
-    unknown:    'Unknown',
-  };
-
-  const badgeColor: Record<CheckStatus, string> = {
-    checking:   'bg-sky-500/20 ring-sky-500/30 text-sky-400',
-    operational:'bg-green-500/20 ring-green-500/30 text-green-400',
-    degraded:   'bg-yellow-500/20 ring-yellow-500/30 text-yellow-400',
-    outage:     'bg-red-500/20 ring-red-500/30 text-red-400',
-    unknown:    'bg-slate-500/20 ring-slate-500/30 text-slate-400',
-  };
 
   return (
     <div className="min-h-screen bg-slate-950 py-20">
@@ -129,7 +134,7 @@ export default function StatusPage() {
         <h1 className="text-4xl font-bold text-white mb-2">System Status</h1>
         <p className="text-slate-400 mb-10">Live health summary — refreshed every 60 seconds via client-side probes</p>
 
-        {/* Overall status */}
+        {/* Overall status card */}
         <div className="glass-card mb-10">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div className="flex items-center gap-4">
@@ -137,8 +142,8 @@ export default function StatusPage() {
               <div>
                 <p className="text-slate-400 text-sm">
                   {overall === 'operational' ? 'All systems operational' :
-                   overall === 'degraded'  ? 'Some systems degraded' :
-                   overall === 'outage'    ? 'Systems experiencing outage' :
+                   overall === 'degraded'   ? 'Some systems degraded' :
+                   overall === 'outage'     ? 'Systems experiencing outage' :
                    'Checking system status…'}
                 </p>
                 <p className="text-white text-2xl font-bold mt-1">{statusLabel[overall]}</p>
@@ -184,55 +189,22 @@ export default function StatusPage() {
                     </a>
                   </td>
                   <td className="py-4">
-                    <span
-                      className={`inline-flex items-center gap-1.5 rounded-full ring-1 px-2.5 py-0.5 text-xs font-semibold ${
-                        badgeColor[c.status]
-                      }`}
-                    >
+                    <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium ring-1 ${badgeColor[c.status]}`}>
                       <span className={`h-2 w-2 rounded-full ${dotColor[c.status]}`} />
                       {statusLabel[c.status]}
                     </span>
                   </td>
-                  <td className="py-4 text-right text-slate-500">
+                  <td className="py-4 text-right text-slate-400">
                     {c.responseTime != null ? `${c.responseTime}ms` : '—'}
-                    {c.statusCode != null && (
-                      <span className="ml-2 text-slate-600">({c.statusCode})</span>
-                    )}
                   </td>
                 </tr>
               ))}
-              {checks.length === 0 && (
-                <tr>
-                  <td colSpan={3} className="py-8 text-center text-slate-500">
-                    Running health checks…
-                  </td>
-                </tr>
-              )}
             </tbody>
           </table>
         </div>
 
-        {/* Legend */}
-        <div className="flex flex-wrap gap-6 justify-center text-xs text-slate-500 mt-6">
-          {Object.entries(statusLabel).filter(([k]) => k !== 'checking').map(([k, v]) => (
-            <span key={k} className="inline-flex items-center gap-1.5">
-              <span className={`h-2 w-2 rounded-full ${dotColor[k as CheckStatus]}`} />
-              {v}
-            </span>
-          ))}
-        </div>
-
-        <p className="text-center text-slate-500 text-sm mt-10">
-          Probes run in-browser on every page visit and auto-refresh every 60 seconds.{' '}
-          Results reflect the last client-side fetch — not an external monitor.{' '}
-          For immediate assistance contact{' '}
-          <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
-            kleber@ziontechgroup.com
-          </a>{' '}
-          or call{' '}
-          <a href="tel:+130****0950" className="text-purple-400 hover:text-purple-300">
-            +1 302 464 0950
-          </a>.
+        <p className="text-slate-500 text-xs mt-6 text-center">
+          Probing from your browser · 6 s timeout · refreshes automatically every 60 s
         </p>
       </div>
     </div>
