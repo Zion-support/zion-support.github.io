@@ -20,6 +20,27 @@
       "score": 0.889,
       "issues_count": 1,
       "response_preview": "Prezado(a) Carla,\n\n\ud83e\udd1d  Compreendo sua preocupa\u00e7\u00e3o e vou acompanhar pessoalmente.\nRecebi sua solicita\u00e7"
+    },
+    {
+      "timestamp": "2026-05-20T13:11:41.103009+00:00",
+      "intent": "urgent",
+      "score": 0.889,
+      "issues_count": 1,
+      "response_preview": "Prezado(a) Alice,\n\n\u26a0\ufe0f  Prioridade identificada \u2014 estou tratando com a m\u00e1xima aten\u00e7\u00e3o.\nRecebi sua sol"
+    },
+    {
+      "timestamp": "2026-05-20T13:11:41.108080+00:00",
+      "intent": "sales",
+      "score": 0.889,
+      "issues_count": 1,
+      "response_preview": "Ol\u00e1 Bob,\n\nRecebi sua solicita\u00e7\u00e3o sobre sales.\nVamos tocando. Qualquer novidade, aviso.\n\n\u2014 Kleber\n\nHi"
+    },
+    {
+      "timestamp": "2026-05-20T13:11:41.113499+00:00",
+      "intent": "support",
+      "score": 0.889,
+      "issues_count": 1,
+      "response_preview": "Prezado(a) Carla,\n\n\ud83e\udd1d  Compreendo sua preocupa\u00e7\u00e3o e vou acompanhar pessoalmente.\nRecebi sua solicita\u00e7"
     }
   ]
 }

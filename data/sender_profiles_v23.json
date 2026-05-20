@@ -33,19 +33,20 @@
       "example.com"
     ],
     "first_contact": "2026-05-20T12:56:38.219017+00:00",
-    "total_messages": 8,
+    "total_messages": 9,
     "formality": "neutral",
     "language": "unknown",
     "intents": {
-      "support": 8
+      "support": 9
     },
     "avg_response_minutes": null,
     "response_times": [],
-    "last_interaction": "2026-05-20T13:10:54.297663+00:00",
+    "last_interaction": "2026-05-20T13:11:41.010927+00:00",
     "preferred_time": -3,
     "reply_pattern": "unknown",
     "urgency_patterns": {},
     "contact_hours": [
+      -3,
       -3,
       -3,
       -3,
@@ -65,19 +66,20 @@
       "partner.com"
     ],
     "first_contact": "2026-05-20T13:10:54.323836+00:00",
-    "total_messages": 1,
+    "total_messages": 2,
     "formality": "casual",
     "language": "en",
     "intents": {
-      "sales": 1
+      "sales": 2
     },
     "avg_response_minutes": null,
     "response_times": [],
-    "last_interaction": "2026-05-20T13:10:54.323840+00:00",
+    "last_interaction": "2026-05-20T13:11:41.104706+00:00",
     "preferred_time": -3,
     "reply_pattern": "unknown",
     "urgency_patterns": {},
     "contact_hours": [
+      -3,
       -3
     ]
   },
@@ -90,19 +92,20 @@
       "client.com"
     ],
     "first_contact": "2026-05-20T13:10:54.324715+00:00",
-    "total_messages": 1,
+    "total_messages": 2,
     "formality": "neutral",
     "language": "unknown",
     "intents": {
-      "support": 1
+      "support": 2
     },
     "avg_response_minutes": null,
     "response_times": [],
-    "last_interaction": "2026-05-20T13:10:54.324718+00:00",
+    "last_interaction": "2026-05-20T13:11:41.108844+00:00",
     "preferred_time": -3,
     "reply_pattern": "unknown",
     "urgency_patterns": {},
     "contact_hours": [
+      -3,
       -3
     ]
   }

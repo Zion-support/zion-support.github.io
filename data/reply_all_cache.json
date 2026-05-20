@@ -10,7 +10,7 @@
     "thread_participants": [
       "dr-1"
     ],
-    "decided_at": "2026-05-20T13:10:54.301452+00:00"
+    "decided_at": "2026-05-20T13:11:41.023079+00:00"
   },
   "dr-2": {
     "reply_all": false,
@@ -23,7 +23,7 @@
     "thread_participants": [
       "dr-2"
     ],
-    "decided_at": "2026-05-20T13:10:54.324296+00:00"
+    "decided_at": "2026-05-20T13:11:41.106680+00:00"
   },
   "dr-3": {
     "reply_all": false,
@@ -36,6 +36,6 @@
     "thread_participants": [
       "dr-3"
     ],
-    "decided_at": "2026-05-20T13:10:54.325093+00:00"
+    "decided_at": "2026-05-20T13:11:41.112360+00:00"
   }
 }
