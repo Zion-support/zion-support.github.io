@@ -46,6 +46,35 @@ const CATEGORIES = [
   { key: 'automation',label: 'Automation',            emoji: '🤖', color: 'from-pink-500 to-rose-500' },
 ];
 
+// Per-industry service-category mapping (derived from service catalog)
+const INDUSTRY_CATS: Record<string,string> = {
+  "technology-&-saas": "it",
+  "media-&-entertainment": "ai",
+  "legal-&-compliance": "ai",
+  "energy-&-utilities": "ai",
+  "retail-&-e-commerce": "ai",
+  "logistics-&-supply-chain": "ai",
+  "manufacturing-&-industrial": "ai",
+  "financial-services-&-fintech": "ai",
+  "education-&-research": "ai",
+  "healthcare-&-life-sciences": "ai",
+};
+
+
+// Industries we serve — derived live from service catalog
+const INDUSTRIES = [
+  { key: "technology-&-saas",          label: "Technology & SaaS",          emoji: "🏭", color: "from-amber-500 to-orange-500", count: 145, sample: "AI Analytics & BI" },
+  { key: "media-&-entertainment",      label: "Media & Entertainment",      emoji: "🎬", color: "from-blue-500 to-cyan-500",    count: 95,  sample: "AI Knowledge Management" },
+  { key: "legal-&-compliance",         label: "Legal & Compliance",         emoji: "⚖️", color: "from-purple-500 to-pink-500",   count: 77,  sample: "Contract Lifecycle Intelligence" },
+  { key: "energy-&-utilities",          label: "Energy & Utilities",          emoji: "⚡", color: "from-green-500 to-emerald-500", count: 69,  sample: "Grid Demand Forecaster" },
+  { key: "retail-&-e-commerce",        label: "Retail & E-Commerce",        emoji: "🛒", color: "from-sky-500 to-blue-600",    count: 57,  sample: "Personalised Product Recommendations" },
+  { key: "logistics-&-supply-chain",   label: "Logistics & Supply Chain",   emoji: "🚚", color: "from-rose-500 to-red-500",    count: 57,  sample: "Sustainable Supply Chain Radar" },
+  { key: "manufacturing-&-industrial", label: "Manufacturing & Industrial", emoji: "🏗️", color: "from-yellow-500 to-amber-500", count: 25,  sample: "Computer Vision Quality Inspection" },
+  { key: "financial-services-&-fintech", label: "Financial Services & FinTech", emoji: "💳", color: "from-indigo-500 to-purple-500", count: 23, sample: "Integrated Commerce Flow Orchestrator" },
+  { key: "education-&-research",       label: "Education & Research",       emoji: "🎓", color: "from-cyan-500 to-teal-500",   count: 15,  sample: "Reinforcement Learning Optimiser" },
+  { key: "healthcare-&-life-sciences", label: "Healthcare & Life Sciences", emoji: "🏥", color: "from-pink-500 to-rose-500",   count: 12,  sample: "AI Drug Discovery & Molecular Design" },
+];
+
 export default function HomePage() {
   const services: Service[] = allServices;
   const serviceCount = searchServices.length;
@@ -750,26 +779,35 @@ let list = services;
           </div>
         </div>
       </section>
-
-      {/* ── Trust Badges — Persuasion Proof Matrix ── */}
+      {/* ── Industries We Serve — 10 verticals from service catalog ── */}
       <section className="py-16 border-t border-slate-800">
         <div className="container-page">
-          <h2 className="text-2xl font-bold text-white text-center mb-10">
-            Why Choose Zion Tech Group
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { emoji: "🏆", label: "600+ Services", sub: "AI & IT catalog", color: "from-amber-500/20 to-yellow-500/10" },
-              { emoji: "🚀", label: "Latest Tech", sub: "Modern stacks", color: "from-purple-500/20 to-blue-500/10" },
-              { emoji: "🌐", label: "Cross-Industry", sub: "9 sectors served", color: "from-blue-500/20 to-cyan-500/10" },
-              { emoji: "💡", label: "Plug & Play", sub: "No AI team needed", color: "from-green-500/20 to-emerald-500/10" },
-            ].map((badge, i) => (
-              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-cyan-500/30 transition-all`}>
-                <div className="text-4xl mb-4">{badge.emoji}</div>
-                <div className="text-xl font-bold text-white mb-1">{badge.label}</div>
-                <div className="text-sm text-slate-400">{badge.sub}</div>
-              </div>
-            ))}
+          <h2 className="text-2xl font-bold text-white text-center mb-3">Industries We Serve</h2>
+          <p className="text-slate-400 text-center mb-10">
+            Our AI & IT services cover <strong className="text-white font-semibold text-lg">{services.length}+</strong> solutions across <strong className="text-white">{INDUSTRIES.length}</strong> industries — from Healthcare to Retail.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {INDUSTRIES.map(ind => {
+              const catKey = INDUSTRY_CATS[ind.key] || ind.key.split('-')[0];
+              return (
+                <a key={ind.key}
+                  href={`/services?category=${catKey}`}
+                  className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-2xl">{ind.emoji}</span>
+                    <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">{ind.count}+</span>
+                  </div>
+                  <h3 className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors mb-1 leading-snug">{ind.label}</h3>
+                  <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{ind.sample}</p>
+                  <div className="mt-3 h-1 rounded-full overflow-hidden bg-slate-800">
+                    <div className="h-full rounded-full opacity-60 group-hover:opacity-100 transition-opacity"
+                      style={{ width: '100%', background: `linear-gradient(90deg, ${ind.color})` }}
+                    />
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
