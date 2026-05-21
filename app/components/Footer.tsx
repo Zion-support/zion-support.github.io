@@ -23,15 +23,13 @@ const ADDRESS = '364 E Main St STE 1008, Middletown DE 19709';
 function useServiceCount(): number {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    try {
-      const raw = (document.getElementById('svc-index') as HTMLScriptElement | null)?.textContent;
-      if (raw) {
-        const idx = JSON.parse(raw);
-        setCount(idx.count || idx.services?.length || 0);
-        return;
-      }
-    } catch { /* ignore */ }
-    setCount(542); // fallback
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 4000);
+    fetch('/service-index.json', { signal: ctrl.signal })
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('not found')))
+      .then(idx => setCount(idx.count || idx.services?.length || 0))
+      .catch(() => setCount(542)); // fallback
+    return () => { clearTimeout(timer); ctrl.abort(); };
   }, []);
   return count;
 }
