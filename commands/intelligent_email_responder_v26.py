@@ -632,11 +632,12 @@ def _apply_intent_boost(intent_raw: dict, profile: dict) -> dict:
     boost = min(0.12, top_count * 0.03)
     cats  = intent_raw.get("categories", [])
     if top_cat in cats:
-        intent_raw["confidence"]      = round(min(1.0, conf + boost), 3)
+        _conf = round(min(1.0, intent_raw.get("confidence", 0) + boost), 3)
+        intent_raw["confidence"] = _conf
         intent_raw["confidence_level"] = (
-            "very_high" if intent_raw["confidence_level"] >= 0.9 else
-            "high"      if intent_raw["confidence_level"] >= 0.7 else
-            intent_raw.get("confidence_level", "medium"))
+            "very_high" if _conf >= 0.9 else
+            "high"      if _conf >= 0.7 else
+            "medium" if _conf >= 0.6 else "low")
         intent_raw["intent_boost_src"] = f"profile:{top_cat}:+{boost:.0%}"
     return intent_raw
 
@@ -1332,42 +1333,31 @@ class V26Responder:
             except Exception:
                 pass
 
-            # V43 — CaseRouter BEFORE body gen: skip RTFB+grammar+calendar for fast-route
-            _v43_router_hit = False
-            if V30_ROUTER_ENABLED and self.case_router:
-                try:
-                    _cr_early = self.case_router.route(
-                        email=email, intent_raw=intent_raw, intent_label=intent_label,
-                        intent_cat=intent_cat, urgency_val=urgency_val,
-                        tone_data=tone_data, profile=profile,
-                        fin_result=self._fin_result, grammar_score=0.0,
-                    )
-                    if _cr_early.get("route") == "escalate":
-                        self.stats["action_escalated"] += 1
-                        _log({"run_id": RUN_ID, "phase": "case_router_escalated",
-                              "route": _cr_early.get("reason", "")})
-                        result = add_to_result(email, {"action": "escalated",
-                              "route": "case_router", "severity": "high",
-                              "signals": _cr_early.get("signals", []),
-                              "reason": _cr_early.get("reason", ""),
-                              "elapsed_ms": round((time.monotonic()-t0)*1000,1)})
-                        return result
-                    if _cr_early.get("route") == "auto_ack":
-                        self.stats["action_auto_ack"] += 1
-                        self.stats["reply_all_total"] += 1
-                        self.stats["reply_all_enforced"] += 1
-                        self.stats["reply_all_total"] += 1
-                        self.stats["reply_all_enforced"] += 1
-                        _log({"run_id": RUN_ID, "phase": "case_router_auto_ack",
-                              "route": _cr_early.get("reason","")})
-                        result = add_to_result(email, {"action": "auto_ack",
-                              "route": "case_router",
-                              "reason": _cr_early.get("reason",""),
-                              "elapsed_ms": round((time.monotonic()-t0)*1000,1)})
-                        return result
-                    _v43_router_hit = True
-                except Exception:
-                    pass
+        # ── V45: Single authoritative CaseRouter call
+        # (removed V43 _cr_early duplicate at L1337; one call only at L1407)
+        # Flag: ensure this was reached without a prior CaseRouter return
+        if 'V45' == 'V45' and V30_ROUTER_ENABLED and self.case_router:
+            # CXP unknown-sender skip log (V46d): CascadingLatencyDetector skips when
+            # profile.get("outcome_history") is falsy {} — should be a notable skip, not silent.
+            _cxp_outcome = profile.get("outcome_history")
+            if not _cxp_outcome:
+                _log({"run_id": RUN_ID, "phase": "cxps_skipped_unknown_sender",
+                      "sender": sender, "thread_id": tid,
+                      "reason": "no outcome_history in profile for cascading_latency gate"})
+
+            # V46d — CascadingLatencyDetector CXPs skip log for unknown senders
+
+            _cxp_profile = profile.get("outcome_history", [])
+
+            if not _cxp_profile:
+
+                _log({"run_id": RUN_ID, "phase": "cxps_unknown_sender_skip",
+
+                      "sender": sender, "thread_id": tid,
+
+                      "reason": "cxps_gate_skipped_empty_profile"})
+
+
 
 # ② Select template + compose
         tpl = TEMPLATES.get(lang, TEMPLATES["en"]).get(intent_cat, TEMPLATES["en"]["general"])

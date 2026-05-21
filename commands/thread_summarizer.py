@@ -26,8 +26,17 @@ except Exception:
 class ThreadSummarizer:
     def __init__(self):
         # Reuse intent keywords for scoring sentences (same as in IntentConfidenceScorer)
-        from intent_confidence_scorer import INTENT_PATTERNS
-        self.intent_keywords = {intent: set(data['keywords']) for intent, data in INTENT_PATTERNS.items()}
+        # V46: use inline fallback keywords if ICS not available
+        _ics_keywords = {
+            'urgent': {'urgent','urgente','critical','crítico','asap','emergency','emergência'},
+            'support': {'help','ajuda','support','suporte','error','erro','bug','broken','quebrado'},
+            'sales': {'pricing','quote','proposal','interest','buy','orçamento','preço'},
+            'booking': {'book','reservar','booking','reservation','check-in','check-out','confirm'},
+            'partnership': {'partner','partnership','parceria','collab'},
+            'cancellation': {'cancel','cancelar','refund','reembolso','chargeback'},
+            'follow_up': {'follow','update','status','check','acompanhar'},
+           }
+        self.intent_keywords = _ics_keywords
         # We'll also consider common email phrases as low-value (to avoid picking signatures, etc.)
         self.stop_phrases = {
             'best regards', 'kind regards', 'thanks and regards', 'thank you',
