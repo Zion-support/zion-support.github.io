@@ -31,6 +31,75 @@ _PROMOTION_WINDOW     = 200
 _QUARANTINE_THRESHOLD = 70.0
 _CANONICAL_THRESHOLD  = 90.0
 _CANONICAL_DAYS       = 14
+
+# ── V33: Per-Intent Calibration Schema ───────────────────────────────────
+# Maps intent_label → policy overrides (grammar threshold, reply-all policy,
+# auto-ack depth cap, escalation severity floor).
+_INTENT_POLICIES: dict = {
+    "urgent": {
+        "grammar_threshold": 55,
+        "reply_all_default": True,
+        "reply_all_reason": "intent_urgent_default_cc",
+        "max_auto_depth": 30,
+        "min_confidence": 0.75,
+    },
+    "sales_lead": {
+        "grammar_threshold": 70,
+        "reply_all_default": False,
+        "reply_all_reason": "sales_review_required",
+        "max_auto_depth": 15,
+        "min_confidence": 0.85,
+    },
+    "support_issue": {
+        "grammar_threshold": 65,
+        "reply_all_default": True,
+        "reply_all_reason": "support_default_cc",
+        "max_auto_depth": 20,
+        "min_confidence": 0.70,
+    },
+    "personal_one2one": {
+        "grammar_threshold": 75,
+        "reply_all_default": False,
+        "reply_all_reason": "personal_privacy",
+        "max_auto_depth": 10,
+        "min_confidence": 0.80,
+    },
+    "financial": {
+        "grammar_threshold": 80,
+        "reply_all_default": False,
+        "reply_all_reason": "financial_confidential",
+        "max_auto_depth": 5,
+        "min_confidence": 0.90,
+    },
+    "meeting": {
+        "grammar_threshold": 65,
+        "reply_all_default": True,
+        "reply_all_reason": "meeting_participants_cc_all",
+        "max_auto_depth": 15,
+        "min_confidence": 0.75,
+    },
+    "partnership": {
+        "grammar_threshold": 80,
+        "reply_all_default": True,
+        "reply_all_reason": "partnership_intro_cc_executives",
+        "max_auto_depth": 10,
+        "min_confidence": 0.85,
+    },
+    "cancellation": {
+        "grammar_threshold": 75,
+        "reply_all_default": True,
+        "reply_all_reason": "cancellation_review_cc_manager",
+        "max_auto_depth": 5,
+        "min_confidence": 0.80,
+    },
+    "default": {
+        "grammar_threshold": 65,
+        "reply_all_default": False,
+        "reply_all_reason": "default_no_cc",
+        "max_auto_depth": 10,
+        "min_confidence": 0.75,
+    },
+}
 _AUDIT_INTERVAL       = 50
 
 _TQ_QUARANTINE: dict = {}
@@ -205,13 +274,8 @@ except Exception as _ex_w23:
     quarantine_slot = tick = release_slot = None
 
 
-    classify_thread = add_to_result = None
-    decode_reply_all = bind = None
-    orchestrate = None
+# V33-FIX: null block moved to --verify-imports mode only
 
-
-    CaseRouter     = None
-    ResponseImprover = None
 
 
 # ── Dry-run outcome pre-seed ────────────────────────────────
@@ -548,6 +612,14 @@ def _fast_kb_context(intent_cat: str, subj: str, lang: str = 'en', max_hits: int
 
 # ── Wave 11: Post-score intent boost ────────────────────────
 def _apply_intent_boost(intent_raw: dict, profile: dict) -> dict:
+    # V33-T1: per-intent calibration — apply policy overrides before confidence boost
+    if intent_raw:
+        label = intent_raw.get("categories", [""])[0]
+        _pol  = _INTENT_POLICIES.get(label, _INTENT_POLICIES.get("default", {}))
+        if _pol:
+            intent_raw.setdefault("_policy", dict(_pol))
+            intent_raw["intent_details"] = intent_raw.get("intent_details", {})
+            intent_raw["intent_details"]["_calibrated_confidence_threshold"] = _pol["min_confidence"]
     if not profile or not intent_raw:
         return intent_raw
     known = profile.get("intents", {})
@@ -562,8 +634,8 @@ def _apply_intent_boost(intent_raw: dict, profile: dict) -> dict:
     if top_cat in cats:
         intent_raw["confidence"]      = round(min(1.0, conf + boost), 3)
         intent_raw["confidence_level"] = (
-            "very_high" if intent_raw["confidence"] >= 0.9 else
-            "high"      if intent_raw["confidence"] >= 0.7 else
+            "very_high" if intent_raw["confidence_level"] >= 0.9 else
+            "high"      if intent_raw["confidence_level"] >= 0.7 else
             intent_raw.get("confidence_level", "medium"))
         intent_raw["intent_boost_src"] = f"profile:{top_cat}:+{boost:.0%}"
     return intent_raw
@@ -607,6 +679,8 @@ def _check_dedup(thread_id: str, dry_run: bool = False) -> bool:
                         rec["sent_at"]).timestamp()
                     if last_sent is None or ts > last_sent:
                         last_sent = ts
+
+
             except Exception:
                 continue
     except Exception:
