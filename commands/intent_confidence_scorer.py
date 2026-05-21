@@ -9,6 +9,19 @@ from pathlib import Path
 
 WORKSPACE = Path(__file__).resolve().parent.parent.parent
 
+# Module-level alias used by thread_summarizer.py
+INTENT_PATTERNS = {
+    'booking':    {'keywords': ['book', 'reserva', 'reservar', 'agendar', 'quarto', 'suite', 'noites', 'check-in', 'check-in']},
+    'sales':      {'keywords': ['quote', 'proposta', 'orçamento', 'preço', 'price', 'interested', 'interessado']},
+    'support':    {'keywords': ['suporte', 'support', 'erro', 'error', 'problema', 'help', 'ajuda', 'bug']},
+    'urgent':     {'keywords': ['urgente', 'urgent', 'asap', 'imediato', 'immediate', 'crítico', 'critical']},
+    'cancellation': {'keywords': ['cancelar', 'cancel', 'refund', 'reembolso', 'reagendar', 'reschedule']},
+    'partnership': {'keywords': ['parceria', 'partnership', 'collab', 'colaboração', 'aliança']},
+}
+
+
+
+
 class IntentConfidenceScorerV23:
     """Score confidence in intent detection and suggest fallback when unsure."""
 
@@ -249,3 +262,5 @@ class IntentConfidenceScorerV23:
             'intent_details': {'urgency': urgency, 'sender': sender, 'thread_id': thread_id or ''},
             'suggested_action': 'auto_reply' if level == 'high' else 'draft_and_review',
         }
+# V23a — public name alias for import-compat with thread_summarizer + V23a core
+IntentConfidenceScorer = IntentConfidenceScorerV23

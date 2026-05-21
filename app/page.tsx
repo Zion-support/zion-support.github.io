@@ -451,60 +451,115 @@ let list = services;
         </div>
       </section>
 
-      {/* ── Complete Service Showcase (Horizontal Scroll + Quick-View Modal) ── */}
+      {/* ──       {/* ── Full Service Catalog by Category ── */}
       <section className="py-20">
         <div className="container-page">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-            <div>
-              <h2 className="section-heading">📋 Complete Service Showcase</h2>
-              <p className="section-subheading mb-0">All {services.length} services — scroll to explore. Click any card for quick details.</p>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="section-heading">📚 Full Service Catalog</h2>
+            <p className="section-subheading">
+              Browse all {services.length}&#43; services across {CATEGORIES.length} categories — clean, organized, fast
+            </p>
           </div>
+          {CATEGORIES.map(cat => {
+            const catServices = (byCategory[cat.key] || []).slice(0, 30);
+            if (catServices.length === 0) return null;
+            return (
+              <div key={cat.key} className="mb-16 last:mb-0">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-2xl">{cat.emoji}</span>
+                  <h3 className="text-xl font-bold text-white">{cat.label}</h3>
+                  <span className="text-sm text-slate-400">
+                    ({catServices.length} of {(byCategory[cat.key] || []).length})
+                  </span>
+                </div>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  {catServices.map((service: any) => {
+                    const benefit = (service.benefits && service.benefits.length > 0)
+                      ? service.benefits[0] : '';
+                    return (
+                      <Link
+                        key={service.id}
+                        href={`/services/${service.id}`}
+                        className="glass-card flex flex-col gap-2 p-4 hover:border-purple-500/40 group transition-all"
+                      >
+                        <div className="flex items-start gap-2">
+                          <span className="text-xl group-hover:scale-110 transition-transform">{service.icon}</span>
+                          <h4 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">
+                            {service.title}
+                          </h4>
+                        </div>
+                        {benefit && (
+                          <p className="text-slate-400 text-xs line-clamp-2 leading-relaxed">{benefit}</p>
+                        )}
+                        <div className="mt-auto pt-2 border-t border-slate-700/40 flex justify-end">
+                          <span className="text-purple-300 text-[10px] font-semibold">View details →</span>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+                {(byCategory[cat.key] || []).length > 30 && (
+                  <p className="text-slate-500 text-xs mt-2 text-center">
+                    Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
+                    {' '}<Link href={`/services?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
-          {/* Category quick-links navigate to filtered services page */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            <Link href="/services" className="px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700">All ({services.length})</Link>
-            {CATEGORIES.map(c => (
-              <Link key={c.key} href={`/services?category=${c.key}`} className="px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700">
-                {c.emoji} {c.key.charAt(0).toUpperCase() + c.key.slice(1)} ({byCategory[c.key].length})
+      {/* ── From the Blog ── */}
+      <section className="py-20 bg-slate-900/20 border-t border-slate-800/60">
+        <div className="container-page">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <h2 className="section-heading text-center">📝 From the Blog</h2>
+              <p className="section-subheading text-center">AI automation strategies, industry insights &amp; platform updates</p>
+            </div>
+            <Link href="/blog" className="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all">Read all articles →</Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
+                date: '2026-04-28',
+                excerpt: 'Discover five battle-tested AI automation patterns that cut operational overhead and accelerate enterprise workflow throughput — with real-world implementation examples.',
+                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
+                emoji: '🤖',
+              },
+              {
+                title: 'AI Agent Frameworks for Business Automation',
+                date: '2026-04-21',
+                excerpt: 'A deep dive into AI agent architectures: LLM orchestration, tool use, memory, and multi-agent coordination — what actually works in production.',
+                slug: '/blog/ai-agent-frameworks-for-business-automation',
+                emoji: '🧠',
+              },
+              {
+                title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
+                date: '2026-04-14',
+                excerpt: 'Machine learning approaches to FinOps: workload-aware rightsizing, anomaly detection for runaway cloud bills, and predictive capacity planning.',
+                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning',
+                emoji: '💡',
+              },
+            ].map((post: any) => (
+              <Link key={post.slug} href={post.slug} className="glass-card flex flex-col gap-3 p-6 hover:border-purple-500/40 group">
+                <span className="text-3xl">{post.emoji}</span>
+                <div>
+                  <h3 className="text-base font-semibold text-white leading-snug group-hover:text-purple-300 transition-colors line-clamp-2">{post.title}</h3>
+                  <span className="text-xs text-slate-500 mt-1 block">{post.date}</span>
+                </div>
+                <p className="text-slate-400 text-sm line-clamp-3 leading-relaxed">{post.excerpt}</p>
+                <div className="mt-auto pt-3 border-t border-slate-700/40 flex justify-end">
+                  <span className="text-purple-300 text-xs font-semibold">Read more →</span>
+                </div>
               </Link>
             ))}
           </div>
-{/* Horizontal scroll cards */}
-          <div className="overflow-x-auto pb-4 -mb-4">
-            <div className="flex gap-4" style={{ minWidth: 'max-content', paddingBottom: '8px' }}>
-              {filteredShowcase.map((service: any) => {
-                const catMeta = CATEGORIES.find(c => c.key === service.category) || CATEGORIES[0];
-                return (
-                  <Link
-                    key={service.id}
-                    href={`/services/${service.id}`}
-                    onClick={(e) => { e.preventDefault(); setQuickView(service); }}
-                    className="min-w-[260px] max-w-[260px] glass-card flex flex-col hover:border-purple-500/40 group border-l-2"
-                  >
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">{service.icon}</span>
-                      <h3 className="text-sm font-semibold text-white line-clamp-2 leading-snug">{service.title}</h3>
-                    </div>
-                    <p className="text-slate-500 text-xs mb-3 line-clamp-2 flex-1">{service.description}</p>
-                    <div className="flex items-center justify-between mt-auto pt-3 border-t border-slate-700/50">
-                      <span className="text-purple-300 text-xs font-semibold">
-                        From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
-                      </span>
-                      <span className="text-xs text-slate-500 group-hover:text-purple-400 transition-colors">→</span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
+          <div className="mt-6 text-center sm:hidden">
+            <Link href="/blog" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
           </div>
-
-          {filteredShowcase.length === 0 && (
-            <div className="text-center py-16 text-slate-400">
-              <p className="text-xl mb-2">No services match "{search}"</p>
-              <p className="text-sm">Clear filter or try different keywords.</p>
-            </div>
-          )}
         </div>
       </section>
 

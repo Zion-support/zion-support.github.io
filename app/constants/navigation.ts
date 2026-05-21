@@ -9,6 +9,7 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
   { name: 'Partners', href: '/partners' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -16,18 +17,19 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
 export const SOLUTION_LINKS: readonly NavigationLink[] = [
   { name: 'All Solutions', href: '/solutions' },
   { name: 'Healthcare', href: '/industry-solutions' },
-  { name: 'Financial Services', href: '/solutions' },
-  { name: 'Manufacturing & Industrial', href: '/solutions' },
-  { name: 'E‑Commerce & Retail', href: '/solutions' },
-  { name: 'Technology & SaaS', href: '/solutions' },
-  { name: 'Logistics & Supply Chain', href: '/solutions' },
-  { name: 'Government & Public Sector', href: '/solutions' },
-  { name: 'Insurance', href: '/solutions' },
+  { name: 'Financial Services', href: '/industry-solutions' },
+  { name: 'Manufacturing & Industrial', href: '/industry-solutions' },
+  { name: 'E‑Commerce & Retail', href: '/industry-solutions' },
+  { name: 'Technology & SaaS', href: '/industry-solutions' },
+  { name: 'Logistics & Supply Chain', href: '/industry-solutions' },
+  { name: 'Government & Public Sector', href: '/industry-solutions' },
+  { name: 'Insurance', href: '/industry-solutions' },
   { name: 'Industries', href: '/industry-solutions' },
 ];
 // Resource Links
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Partners', href: '/partners' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Search', href: '/search' },
   { name: 'Proposal Generator', href: '/proposal-generator' },
   { name: 'ROI Calculator', href: '/tools/roi-calculator' },

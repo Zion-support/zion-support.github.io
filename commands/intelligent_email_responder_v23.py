@@ -263,6 +263,19 @@ except Exception:
     def gmail_get(i): return {}
 
 
+# ════════════════════════════════════════════════════════
+# V23 — CONFIDENCE SCORER + THREAD SUMMARIZER (guarded)
+# ════════════════════════════════════════════════════════
+try:
+    from intent_confidence_scorer import IntentConfidenceScorer
+    from thread_summarizer            import ThreadSummarizer
+except Exception:
+    class IntentConfidenceScorer:
+        def score(self, _): return 0.5
+    class ThreadSummarizer:
+        def summarize(self, _): return ""
+
+
 class IntelligentEmailResponderV23:
     """V23 email responder with full intelligence pipeline.
 
@@ -288,6 +301,9 @@ class IntelligentEmailResponderV23:
         self.extractor        = ActionItemExtractorV23()
         self.semantic_intent  = SemanticIntentClassifierV23()   # V23a
         self.outcome_analyzer = ResponseOutcomeAnalyzerV22()  # outcome tracking
+        # V23 — confidence + thread summarizer
+        self.scorer      = IntentConfidenceScorer()
+        self.summarizer  = ThreadSummarizer()
 
     # ── V23 intelligence layers ────────────────────────────────────
     @staticmethod
@@ -392,16 +408,9 @@ class IntelligentEmailResponderV23:
         # 4b. Keyword-based intent confidence  → merge with semantic result
         kw_intent = self.intent_scorer.score(sender, subject, snippet, thread_id)
         merged = self.semantic_intent.merged_intent(combined_text, kw_intent)
-        # V47: inject semantic score + thread context
-        merged['score'] = sem_label.get('score', 0)
-        try:
-            from thread_summarizer import ThreadSummarizer
-            ts = ThreadSummarizer()
-            summary = ts.summarize(thread_id or '')
-            if summary:
-                merged['thread_summary'] = summary
-        except Exception:
-            pass
+        # V23 — confidence scoring + thread summarizer
+        merged['intent_confidence'] = self.scorer.score(email_data)
+        merged['thread_summary']   = self.summarizer.summarize(thread_id)
         result['intent'] = merged
         if merged.get('confidence_level') in ('very_low', 'low'):
             result['action'] = 'human'
