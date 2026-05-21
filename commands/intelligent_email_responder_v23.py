@@ -100,7 +100,7 @@ class IntelligentEmailResponderV23:
 
         # 7-8. Generate + quality check
         response = self._generate(sender, subject, snippet, intent)
-        qc = self.quality_checker.validate(subject, response)
+        qc = self.quality_checker.check_response(response, intent)
         result['quality'] = qc
 
         if not qc.get('passed', True):
@@ -113,10 +113,8 @@ class IntelligentEmailResponderV23:
         return result
 
     def _generate(self, sender, subject, snippet, intent):
-        """Generate context-aware response."""
-        profile = self.sender_learner.profiles.get(
-            self.sender_learner._extract_sender_key(sender), {}
-        )
+        """Generate context-aware response using sender profile if available."""
+        profile = self.sender_learner.get_profile(sender) or {}
         formality = profile.get('formality', 'neutral')
         lang = 'pt' if re.search(r'[ãõçêé]|não|você|obrigado', snippet, re.I) else 'en'
         primary = intent.get('categories', ['general'])[0]
