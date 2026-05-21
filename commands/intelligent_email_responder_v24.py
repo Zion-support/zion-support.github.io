@@ -63,10 +63,6 @@ except Exception:
 
 # ── reply-all + outcome tracker ──────────────────────────────────────────────
 
-# ─── V22 Augmentations ─────────────────────────────────────────
-from enhanced_reply_all_handler import EnhancedReplyAllHandlerV22
-from response_outcome_analyzer  import ResponseOutcomeAnalyzerV22
-
 
 # ─── V22 Augmentations ─────────────────────────────────────────
 from enhanced_reply_all_handler import EnhancedReplyAllHandlerV22
