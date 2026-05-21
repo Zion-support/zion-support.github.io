@@ -87,6 +87,18 @@ function collectLeafPages() {
     }
   }
 
+  // 3c) Status sub-pages: out/status/<slug>/index.html
+  const statusDir = path.join(outDir, 'status');
+  if (fs.existsSync(statusDir)) {
+    for (const entry of fs.readdirSync(statusDir, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const f = path.join(statusDir, entry.name, 'index.html');
+      if (fs.existsSync(f)) {
+        pages.push({ url: `${SITE_URL}/status/${entry.name}/`, lastmod: fs.statSync(f).mtime, priority: 0.4, changefreq: 'monthly' });
+      }
+    }
+  }
+
   // 4) Blog pages: out/blog/<slug>/index.html
   const blogDir = path.join(outDir, 'blog');
   if (fs.existsSync(blogDir)) {
