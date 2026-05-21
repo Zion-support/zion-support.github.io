@@ -115,8 +115,17 @@ let list = services;
   }, [services, catFilter, search]);
 
   // Dynamic popular services — changes automatically when catalog updates
-  const popularServices = useMemo(
-    () => services.filter((s: any) => s.popular == true).slice(0, 50),
+  const popularServices = useMemo(() =>
+    services
+      .filter((s: any) => s.popular == true)
+      .map(s => ({
+        ...s,
+        _score: (s.features?.length || 0) * 3
+              + (s.benefits?.length || 0) * 2
+              + (s.description || '').length * 0.3
+      }))
+      .sort((a: any, b: any) => b._score - a._score)
+      .slice(0, 50),
     [services]
   );
 
