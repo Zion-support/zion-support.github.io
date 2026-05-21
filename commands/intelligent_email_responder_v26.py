@@ -1331,6 +1331,40 @@ class V26Responder:
                     return _r
             except Exception:
                 pass
+
+            # V43 — CaseRouter BEFORE body gen: skip RTFB+grammar+calendar for fast-route
+            _v43_router_hit = False
+            if V30_ROUTER_ENABLED and self.case_router:
+                try:
+                    _cr_early = self.case_router.route(
+                        email=email, intent_raw=intent_raw, intent_label=intent_label,
+                        intent_cat=intent_cat, urgency_val=urgency_val,
+                        tone_data=tone_data, profile=profile,
+                        fin_result=self._fin_result, grammar_score=0.0,
+                    )
+                    if _cr_early.get("route") == "escalate":
+                        self.stats["action_escalated"] += 1
+                        _log({"run_id": RUN_ID, "phase": "case_router_escalated",
+                              "route": _cr_early.get("reason", "")})
+                        result = add_to_result(email, {"action": "escalated",
+                              "route": "case_router", "severity": "high",
+                              "signals": _cr_early.get("signals", []),
+                              "reason": _cr_early.get("reason", ""),
+                              "elapsed_ms": round((time.monotonic()-t0)*1000,1)})
+                        return result
+                    if _cr_early.get("route") == "auto_ack":
+                        self.stats["action_auto_ack"] += 1
+                        _log({"run_id": RUN_ID, "phase": "case_router_auto_ack",
+                              "route": _cr_early.get("reason","")})
+                        result = add_to_result(email, {"action": "auto_ack",
+                              "route": "case_router",
+                              "reason": _cr_early.get("reason",""),
+                              "elapsed_ms": round((time.monotonic()-t0)*1000,1)})
+                        return result
+                    _v43_router_hit = True
+                except Exception:
+                    pass
+
 # ② Select template + compose
         tpl = TEMPLATES.get(lang, TEMPLATES["en"]).get(intent_cat, TEMPLATES["en"]["general"])
         sig = _get_sig(tone_data.get("formality", "neutral"), lang)
