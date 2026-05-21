@@ -256,7 +256,7 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Primary nav links */}          {/* Primary nav links */}
+          {/* Primary nav links */}
           {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
