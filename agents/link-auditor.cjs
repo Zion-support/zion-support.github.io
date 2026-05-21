@@ -34,7 +34,8 @@ const broken = [];
 const links = new Set();
 
 // Extract internal links from pages
-const linkRegex = /href=["'](?!http|https|mailto|#)[^"']+["']/g;
+// Excludes: http, https, mailto, tel, #fragment, data:, blob:
+const linkRegex = /href=["'](?!http|https|mailto|tel|#|data:|blob:)[^"']+["']/g;
 const importRegex = /from\s+["'](?!\.|http)[^"']+["']/g;
 
 for (const file of pages) {
@@ -46,9 +47,16 @@ for (const file of pages) {
   while ((match = linkRegex.exec(content)) !== null) {
     const linkMatch = match[0].match(/href=["']([^"']+)["']/);
     if (!linkMatch) continue;
-    const link = linkMatch[1].replace(/[\s"'#].*$/, '').replace(/^\//, '');
-    if (link && !link.endsWith('.css') && !link.endsWith('.js') && !link.endsWith('.json')) {
-      links.add({ file: relPath, link });
+    
+    // Strip query/fragment before checking (\"?foo\" and \"#anchor\" are valid routes)
+    const rawLink = linkMatch[1];
+    const cleanLink = rawLink.split('?')[0].split('#')[0].replace(/[\s"'#].*$/, '').replace(/^\//, '');
+    
+    // Canonicalise dynamic route segment [id] → id for matching
+    const linkCanon = cleanLink.replace(/\[([^\]]+)\]/g, '$1');
+    
+    if (linkCanon && !linkCanon.endsWith('.css') && !linkCanon.endsWith('.js') && !linkCanon.endsWith('.json') && !linkCanon.endsWith('.xml')) {
+      links.add({ file: relPath, link: linkCanon });
     }
   }
 }
@@ -61,8 +69,25 @@ const existingPages = new Set(pages.map(f => {
   return p;
 }));
 
+// Also check public/ static assets (sitemap.xml, robots.txt, favicon, etc.)
+const publicDir = path.join(WORKSPACE, 'public');
+const publicAssets = new Set();
+try {
+  for (const f of findFiles(publicDir, [])) {
+    const name = path.relative(publicDir, f);
+    publicAssets.add(name);
+  }
+} catch (_) {}
+
 for (const { file, link } of links) {
-  const exists = [...existingPages].some(p => 
+    // Skip pages from source files that no longer exist (stale broken-links.json)
+  const absFile = path.join(WORKSPACE, file);
+  if (!fs.existsSync(absFile)) {
+    continue;
+  }
+  
+  const isPublicAsset = [...publicAssets].some(a => a === link || a.endsWith('/' + link));
+  const exists = isPublicAsset || [...existingPages].some(p => 
     p.includes(link) || link.includes(p.split('/').pop())
   );
   if (!exists && link.length > 2) {
