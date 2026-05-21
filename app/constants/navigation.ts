@@ -29,10 +29,12 @@ export const SOLUTION_LINKS: readonly NavigationLink[] = [
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Partners', href: '/partners' },
   { name: 'Search', href: '/search' },
-  { name: 'Pricing Calculator', href: '/pricing-calculator' },
   { name: 'Proposal Generator', href: '/proposal-generator' },
+  { name: 'ROI Calculator', href: '/tools/roi-calculator' },
   { name: 'Service Comparison', href: '/tools/service-comparison' },
   { name: 'Service Recommender', href: '/tools/service-recommender' },
+  { name: 'Port Scanner', href: '/tools/port-scanner' },
+  { name: 'SSL Checker', href: '/tools/ssl-checker' },
   { name: 'Client Portal', href: '/portal' },
 ];
 
@@ -483,7 +485,6 @@ export const IT_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Edge Computing Orchestration', href: '/services/it-edge-computing-orchestration' },
   { name: 'Managed Endpoint Detection & Response (EDR)', href: '/services/it-endpoint-detection-response' },
   { name: 'Endpoint Management (macOS & Windows)', href: '/services/it-endpoint-management-macos-windows' },
-  { name: 'Endpoint Security & Compliance Monitor', href: '/services/it-endpoint-security-compliance' },
   { name: 'Endpoint Security & Compliance Monitor', href: '/services/it-endpoint-security-compliance-monitor' },
   { name: 'ESG Compliance Automation', href: '/services/it-esg-compliance-automation' },
   { name: 'IT Help Desk (AI-Powered)', href: '/services/it-help-desk-glucidex' },
