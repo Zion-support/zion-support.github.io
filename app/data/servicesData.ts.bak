@@ -34,7 +34,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-3d-asset-generator',
     title: 'Ai 3D Asset Generator',
-    description: 'Ai 3D Asset Generator — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -79,7 +79,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-ad-copy-generator',
     title: 'Ai Ad Copy Generator',
-    description: 'Ai Ad Copy Generator — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -184,7 +184,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-api-orchestration-layer',
     title: 'Ai Api Orchestration Layer',
-    description: 'Ai Api Orchestration Layer — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -304,7 +304,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-bug-to-issue-router',
     title: 'Ai Bug To Issue Router',
-    description: 'Ai Bug To Issue Router — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -529,7 +529,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-code-reviewer',
     title: 'Ai Code Reviewer',
-    description: 'Ai Code Reviewer — a professional AI engine delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -604,7 +604,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-competitive-price-tracker',
     title: 'Ai Competitive Price Tracker',
-    description: 'Ai Competitive Price Tracker — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -889,7 +889,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-credit-underwriting',
     title: 'Ai Credit Underwriting',
-    description: 'Ai Credit Underwriting — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -919,7 +919,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-cro-optimizer',
     title: 'Ai Cro Optimizer',
-    description: 'Ai Cro Optimizer — a professional AI engine delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1084,7 +1084,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-dashboard-designer',
     title: 'Ai Dashboard Designer',
-    description: 'Ai Dashboard Designer — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1099,7 +1099,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-data-quality-fabric',
     title: 'Ai Data Quality Fabric',
-    description: 'Ai Data Quality Fabric — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1114,7 +1114,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-data-quality-guardian',
     title: 'Ai Data Quality Guardian',
-    description: 'Ai Data Quality Guardian — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1129,7 +1129,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-deepfake-detection',
     title: 'Ai Deepfake Detection',
-    description: 'Ai Deepfake Detection — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1159,7 +1159,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-digital-twin-platform',
     title: 'Ai Digital Twin Platform',
-    description: 'Ai Digital Twin Platform — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1279,7 +1279,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-drug-discovery-platform',
     title: 'Ai Drug Discovery Platform',
-    description: 'Ai Drug Discovery Platform — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1309,7 +1309,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-dyslexia-assist',
     title: 'Ai Dyslexia Assist',
-    description: 'Ai Dyslexia Assist — a professional AI suite delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1324,7 +1324,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-ecommerce-smart-search',
     title: 'Ai Ecommerce Smart Search',
-    description: 'Ai Ecommerce Smart Search — a professional AI suite delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1474,7 +1474,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-exam-proctoring',
     title: 'Ai Exam Proctoring',
-    description: 'Ai Exam Proctoring — a professional AI suite delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1504,7 +1504,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-feature-store',
     title: 'Ai Feature Store',
-    description: 'Ai Feature Store — a professional AI engine delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1519,7 +1519,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-federated-learning',
     title: 'Ai Federated Learning',
-    description: 'Ai Federated Learning — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1624,7 +1624,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-form-filler-intelligence',
     title: 'Ai Form Filler Intelligence',
-    description: 'Ai Form Filler Intelligence — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1759,7 +1759,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-genomic-analysis',
     title: 'Ai Genomic Analysis',
-    description: 'Ai Genomic Analysis — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1774,7 +1774,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-glassdoor-review-analyzer',
     title: 'Ai Glassdoor Review Analyzer',
-    description: 'Ai Glassdoor Review Analyzer — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1789,7 +1789,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-governance-compliance',
     title: 'Ai Governance Compliance',
-    description: 'Ai Governance Compliance — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1849,7 +1849,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-hiring-pipeline-optimizer',
     title: 'Ai Hiring Pipeline Optimizer',
-    description: 'Ai Hiring Pipeline Optimizer — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1879,7 +1879,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-infra-provisioner',
     title: 'Ai Infra Provisioner',
-    description: 'Ai Infra Provisioner — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1894,7 +1894,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-insurance-claims',
     title: 'Ai Insurance Claims',
-    description: 'Ai Insurance Claims — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -1954,7 +1954,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-interview-conduct-bot',
     title: 'Ai Interview Conduct Bot',
-    description: 'Ai Interview Conduct Bot — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2029,7 +2029,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-knowledge-base-rag',
     title: 'Ai Knowledge Base Rag',
-    description: 'Ai Knowledge Base Rag — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2119,7 +2119,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-kubernetes-optimizer',
     title: 'Ai Kubernetes Optimizer',
-    description: 'Ai Kubernetes Optimizer — a professional AI engine delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2134,7 +2134,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-kyc-aml-compliance',
     title: 'Ai Kyc Aml Compliance',
-    description: 'Ai Kyc Aml Compliance — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2254,7 +2254,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-llm-router-pro',
     title: 'Ai Llm Router Pro',
-    description: 'Ai Llm Router Pro — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2269,7 +2269,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-load-testing',
     title: 'Ai Load Testing',
-    description: 'Ai Load Testing — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2284,7 +2284,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-log-analysis',
     title: 'Ai Log Analysis',
-    description: 'Ai Log Analysis — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2299,7 +2299,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-low-code-integration',
     title: 'Ai Low Code Integration',
-    description: 'Ai Low Code Integration — a professional AI engine delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2374,7 +2374,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-medical-image-diagnosis',
     title: 'Ai Medical Image Diagnosis',
-    description: 'Ai Medical Image Diagnosis — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2494,7 +2494,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-metadata-management',
     title: 'Ai Metadata Management',
-    description: 'Ai Metadata Management — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2569,7 +2569,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-nutrition-meal-planner',
     title: 'Ai Nutrition Meal Planner',
-    description: 'Ai Nutrition Meal Planner — a professional AI suite delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2599,7 +2599,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-observability-turbo',
     title: 'Ai Observability Turbo',
-    description: 'Ai Observability Turbo — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -2644,7 +2644,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-personal-finance-coach',
     title: 'Ai Personal Finance Coach',
-    description: 'Ai Personal Finance Coach — a professional AI suite delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3004,7 +3004,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-privilege-access-manager',
     title: 'Ai Privilege Access Manager',
-    description: 'Ai Privilege Access Manager — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3064,7 +3064,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-product-photo-enhancer',
     title: 'Ai Product Photo Enhancer',
-    description: 'Ai Product Photo Enhancer — a professional AI suite delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3079,7 +3079,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-profitability-dashboard',
     title: 'Ai Profitability Dashboard',
-    description: 'Ai Profitability Dashboard — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3109,7 +3109,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-quality-inspection',
     title: 'Ai Quality Inspection',
-    description: 'Ai Quality Inspection — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3124,7 +3124,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-quantum-optimizer',
     title: 'Ai Quantum Optimizer',
-    description: 'Ai Quantum Optimizer — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3244,7 +3244,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-reinforcement-learning-ops',
     title: 'Ai Reinforcement Learning Ops',
-    description: 'Ai Reinforcement Learning Ops — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3424,7 +3424,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-rpa-platform',
     title: 'Ai Rpa Platform',
-    description: 'Ai Rpa Platform — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3484,7 +3484,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-secrets-management',
     title: 'Ai Secrets Management',
-    description: 'Ai Secrets Management — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3559,7 +3559,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-seo-content-optimizer',
     title: 'Ai Seo Content Optimizer',
-    description: 'Ai Seo Content Optimizer — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3589,7 +3589,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-serverless-platform',
     title: 'Ai Serverless Platform',
-    description: 'Ai Serverless Platform — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3604,7 +3604,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-smart-document-redactor',
     title: 'Ai Smart Document Redactor',
-    description: 'Ai Smart Document Redactor — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3874,7 +3874,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-tax-compliance-calculator',
     title: 'Ai Tax Compliance Calculator',
-    description: 'Ai Tax Compliance Calculator — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3889,7 +3889,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-test-automation-framework',
     title: 'Ai Test Automation Framework',
-    description: 'Ai Test Automation Framework — a professional AI platform delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3934,7 +3934,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-threat-intelligence',
     title: 'Ai Threat Intelligence',
-    description: 'Ai Threat Intelligence — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -3949,7 +3949,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-trading-signal-engine',
     title: 'Ai Trading Signal Engine',
-    description: 'Ai Trading Signal Engine — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -4009,7 +4009,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-tutoring-platform',
     title: 'Ai Tutoring Platform',
-    description: 'Ai Tutoring Platform — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -4129,7 +4129,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-voice-agent-builder',
     title: 'Ai Voice Agent Builder',
-    description: 'Ai Voice Agent Builder — a professional AI solution delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -4189,7 +4189,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-voice-brand-consistency',
     title: 'Ai Voice Brand Consistency',
-    description: 'Ai Voice Brand Consistency — a professional AI accelerator delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -4234,7 +4234,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-voice-cloning-studio',
     title: 'Ai Voice Cloning Studio',
-    description: 'Ai Voice Cloning Studio — a professional AI engine delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -4279,7 +4279,7 @@ export const aiServices: Service[] = [
   {
     id: 'ai-vpc-zero-trust',
     title: 'Ai Vpc Zero Trust',
-    description: 'Ai Vpc Zero Trust — a professional AI service delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -4804,7 +4804,7 @@ export const aiServices: Service[] = [
   {
     id: 'secure-file-transfer',
     title: 'Secure File Transfer',
-    description: 'Secure File Transfer — a professional AI framework delivered by Zion Tech Group. AI-powered capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact AI specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -5212,7 +5212,7 @@ export const itServices: Service[] = [
   {
     id: 'it-api-gateway-ai',
     title: 'It Api Gateway Ai',
-    description: 'It Api Gateway Ai — a professional IT service delivered by Zion Tech Group. Enterprise capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact IT specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -5272,7 +5272,7 @@ export const itServices: Service[] = [
   {
     id: 'it-api-performance-testing',
     title: 'It Api Performance Testing',
-    description: 'It Api Performance Testing — a professional IT accelerator delivered by Zion Tech Group. Enterprise capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact IT specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -5467,7 +5467,7 @@ export const itServices: Service[] = [
   {
     id: 'it-cloud-cost-governance',
     title: 'It Cloud Cost Governance',
-    description: 'It Cloud Cost Governance — a professional IT service delivered by Zion Tech Group. Enterprise capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact IT specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -5797,7 +5797,7 @@ export const itServices: Service[] = [
   {
     id: 'it-incident-response-simulator',
     title: 'It Incident Response Simulator',
-    description: 'It Incident Response Simulator — a professional IT engine delivered by Zion Tech Group. Enterprise capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact IT specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -5962,7 +5962,7 @@ export const itServices: Service[] = [
   {
     id: 'it-observability-logging',
     title: 'It Observability Logging',
-    description: 'It Observability Logging — a professional IT service delivered by Zion Tech Group. Enterprise capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact IT specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
@@ -6142,7 +6142,7 @@ export const itServices: Service[] = [
   {
     id: 'it-synthetic-monitoring',
     title: 'It Synthetic Monitoring',
-    description: 'It Synthetic Monitoring — a professional IT engine delivered by Zion Tech Group. Enterprise capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI. Contact IT specialists for a free consultation.',
+    description: 'Service description.',
     features: ['Core functionality','Professional support','Scalable deployment'],
     benefits: [],
     pricing: { basic:'TBD', pro:'TBD', enterprise:'TBD' },
