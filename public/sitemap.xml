@@ -21,8 +21,12 @@
 <url><loc>https://ziontechgroup.com/status/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://ziontechgroup.com/terms/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://ziontechgroup.com/testimonials/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+<url><loc>https://ziontechgroup.com/tools/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/zion-ai-compliance-checker/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://ziontechgroup.com/zion-ai-vendor-manager/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+<url><loc>https://ziontechgroup.com/ai/demo/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/ai/solutions-configurator/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/ai/url-audit-assistant/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/tools/ai-service-router/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/tools/port-scanner/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/tools/roi-calculator/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
@@ -665,10 +669,14 @@
 <url><loc>https://ziontechgroup.com/blog/ai-for-cybersecurity-operations-and-threat-hunting/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-cybersecurity-threat-detection/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-digital-transformation-and-change-management/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/blog/ai-for-fintech-and-digital-banking-operations/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-fleet-and-logistics-operations/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-fleet-management-and-logistics-optimization/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/blog/ai-for-government-services-and-public-sector-automation/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/blog/ai-for-healthcare-analytics-and-clinical-decision-support/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-hr-and-talent-acquisition-streamlining-recruitment/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-insurance-claims-and-underwriting/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/blog/ai-for-insurance-underwriting-and-claims-automation/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-media-and-content-production/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-procurement-and-vendor-management/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-for-product-development-and-innovation/</loc><lastmod>2026-05-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>

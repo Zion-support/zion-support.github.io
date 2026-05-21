@@ -39,6 +39,18 @@ function collectLeafPages() {
     }
   }
 
+  // 2a-1) Dynamic ai/* sub-pages (app/ai/* → out/ai/*/index.html)
+  const aiDir = path.join(outDir, 'ai');
+  if (fs.existsSync(aiDir)) {
+    for (const entry of fs.readdirSync(aiDir, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const f = path.join(aiDir, entry.name, 'index.html');
+      if (fs.existsSync(f)) {
+        pages.push({ url: `${SITE_URL}/ai/${entry.name}/`, lastmod: fs.statSync(f).mtime });
+      }
+    }
+  }
+
   // 2a) Dynamic tools/* sub-pages (app/tools/* → out/tools/*/index.html)
   const toolsDir = path.join(outDir, 'tools');
   if (fs.existsSync(toolsDir)) {
