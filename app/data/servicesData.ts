@@ -9408,6 +9408,7 @@ export const aiServices: Service[] = [
   }
 ];
 
+export const allServices = aiServices;
 export const getServiceById = (id: string): Service | undefined => { return allServices.find(s => s.id === id); };
 export const getServicesByCategory = (category: Service['category']): Service[] => { return allServices.filter(s => s.category === category); };
 export const getPopularServices = (): Service[] => { return allServices.filter(s => s.popular); };

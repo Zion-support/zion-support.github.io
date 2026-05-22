@@ -27,6 +27,9 @@ function ServicesContent() {
   const [activeCategory, setActiveCategory] = useState(urlCategory);
   const [searchQuery, setSearchQuery] = useState('');
 
+  const firstTier = (pricing: Record<string,string>): string =>
+    Object.values(pricing)[0] || 'Contact for Quote';
+
   const filteredServices = useMemo(() => {
     let services = allServices;
     if (activeCategory !== 'all') services = services.filter((s: Service) => s.category === activeCategory);
@@ -69,7 +72,7 @@ function ServicesContent() {
               </div>
               <div className="mt-auto pt-4 border-t border-slate-700/50">
                 <div className="flex justify-between items-center">
-                  <span className="text-purple-300 text-sm font-medium">Starting at {(service.pricing as Record<string,string>)[Object.keys(service.pricing)[0]]}</span>
+                  <span className="text-purple-300 text-sm font-medium">Starting at {firstTier(service.pricing)}</span>
                 </div>
                 <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:underline inline-flex items-center gap-1 mt-1">View Details →</Link>
               </div>

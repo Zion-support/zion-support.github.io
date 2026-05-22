@@ -232,7 +232,7 @@ export default function SmartSearchBar({ initialQuery = '', initialCategory = 'a
                           </p>
                         </div>
                         <span className="text-purple-400 text-xs font-semibold shrink-0 mt-1">
-                          {Object.values(svc.pricing as Record<string, string>)[0]}/mo
+                          {Object.values(svc.pricing as Record<string, string>)[0] || 'Contact for Quote'}/mo
                         </span>
                       </div>
                     </button>
