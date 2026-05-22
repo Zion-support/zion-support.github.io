@@ -35,119 +35,14 @@ _CANONICAL_DAYS       = 14
 # ── V33: Per-Intent Calibration Schema ───────────────────────────────────
 # Maps intent_label → policy overrides (grammar threshold, reply-all policy,
 # auto-ack depth cap, escalation severity floor).
-_INTENT_POLICIES: dict = {
-    "urgent": {
-        "grammar_threshold": 55,
-        "reply_all_default": True,
-        "reply_all_reason": "intent_urgent_default_cc",
-        "max_auto_depth": 30,
-        "min_confidence": 0.75,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-    "sales_lead": {
-        "grammar_threshold": 70,
-        "reply_all_default": False,
-        "reply_all_reason": "sales_review_required",
-        "max_auto_depth": 15,
-        "min_confidence": 0.85,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-    "support_issue": {
-        "grammar_threshold": 65,
-        "reply_all_default": True,
-        "reply_all_reason": "support_default_cc",
-        "max_auto_depth": 20,
-        "min_confidence": 0.70,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-    "personal_one2one": {
-        "grammar_threshold": 75,
-        "reply_all_default": False,
-        "reply_all_reason": "personal_privacy",
-        "max_auto_depth": 10,
-        "min_confidence": 0.80,
-        "send_on": "send",
-        "cc_on": "no_cc",
-        "fwd_on": None,
-    },
-    "financial": {
-        "grammar_threshold": 80,
-        "reply_all_default": False,
-        "reply_all_reason": "financial_confidential",
-        "max_auto_depth": 5,
-        "min_confidence": 0.90,
-        "send_on": "send",
-        "cc_on": "no_cc",
-        "fwd_on": None,
-    },
-    "meeting": {
-        "grammar_threshold": 65,
-        "reply_all_default": True,
-        "reply_all_reason": "meeting_participants_cc_all",
-        "max_auto_depth": 15,
-        "min_confidence": 0.75,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-    "partnership": {
-        "grammar_threshold": 80,
-        "reply_all_default": True,
-        "reply_all_reason": "partnership_intro_cc_executives",
-        "max_auto_depth": 10,
-        "min_confidence": 0.85,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-    "cancellation": {
-        "grammar_threshold": 75,
-        "reply_all_default": True,
-        "reply_all_reason": "cancellation_review_cc_manager",
-        "max_auto_depth": 5,
-        "min_confidence": 0.80,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-    "invoice": {
-        "grammar_threshold": 85,
-        "reply_all_default": False,
-        "reply_all_reason": "financial_invoice_confidential",
-        "max_auto_depth": 3,
-        "min_confidence": 0.90,
-        "send_on": "send",
-        "cc_on": "no_cc",
-        "fwd_on": None,
-    },
-    "billing": {
-        "grammar_threshold": 85,
-        "reply_all_default": False,
-        "reason": "financial_billing_confidential",
-        "max_auto_depth": 3,
-        "min_confidence": 0.90,
-        "send_on": "send",
-        "cc_on": "no_cc",
-        "fwd_on": None,
-        "reply_all_reason": "financial_billing_confidential",
-    },
-    "default": {
-        "grammar_threshold": 65,
-        "reply_all_default": False,
-        "reply_all_reason": "default_no_cc",
-        "max_auto_depth": 10,
-        "min_confidence": 0.75,
-        "send_on": "send",
-        "cc_on": "auto_ack",
-        "fwd_on": None,
-    },
-}
+# ── V39-A: IntentPolicyDB replaces inline dict ──────────────────────
+# Hot-swap by replacing data/policies/intent_policies.json · no code change.
+from commands.v33_modules.intent_policy_db import IntentPolicyDB, IntentPolicyLookup
+POLICY_DB = IntentPolicyDB.load(str(DATA / "policies" / "intent_policies.json"))
+POLICY_LOOKUP = IntentPolicyLookup(POLICY_DB)
+# Drop-in replacement: .get(label, default) mirrors V26 semantics
+
+
 _CC_COOLDOWN_DAYS = 14
 _AUDIT_INTERVAL       = 50
 
