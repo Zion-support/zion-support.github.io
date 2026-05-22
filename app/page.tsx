@@ -81,7 +81,7 @@ export default function HomePage() {
   // Stage health counts — deterministic from catalog
   const byStage = useMemo(() => {
     const acc: Record<string,number> = { published:0, beta:0, planned:0 };
-    services.forEach((s: any) => { if (s.stage && acc.hasOwnProperty(s.stage)) acc[s.stage]++; });
+    services.forEach((s: any) => { if (Object.hasOwn(acc, s.stage)) acc[s.stage]++; });
     return acc;
   }, [services]);
 

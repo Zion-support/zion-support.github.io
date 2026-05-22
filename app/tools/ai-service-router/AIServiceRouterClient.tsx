@@ -25,7 +25,7 @@ const SYNONYMS: Record<string, string[]> = {
 };
 
 function expandKeywords(raw: string): string[] {
-  const tokens = raw.toLowerCase().replace(/[^\w\s\/\-]+/g, ' ').split(/\s+/).filter(Boolean);
+  const tokens = raw.toLowerCase().replace(/[^\w\s/-]+/g, ' ').split(/\s+/).filter(Boolean);
   const expanded = new Set<string>(tokens);
   for (let i = 0; i < tokens.length - 1; i++) expanded.add(`${tokens[i]} ${tokens[i + 1]}`);
   for (const [key, syns] of Object.entries(SYNONYMS)) {
