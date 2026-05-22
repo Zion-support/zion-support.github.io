@@ -654,8 +654,34 @@ def _fast_kb_context(intent_cat: str, subj: str, lang: str = 'en', max_hits: int
     except Exception:
         return ''
 
+def _fast_faq_check(subj: str, body: str, lang: str = 'en') -> str:
+    """IDEAS-4: Q from faq.json matched against subject+body; auto-answer if clear."""
+    try:
+        from pathlib import Path as _FaqPath
+        _fp = _FaqPath(__file__).parent.parent / 'data' / 'faq.json'
+        if not _fp.exists():
+            return ''
+        _faqs = json.loads(_fp.read_text())
+        _blob = f"{subj} {body}".lower()
+        _hits = []
+        for _e in _faqs:
+            _pat = _e.get("patterns", [])
+            _q = _e.get("question", "")
+            _ans_en = _e.get("answer_en", "")
+            _ans = _e.get(f"answer_{lang}", _ans_en)
+            if any(p.lower() in _blob for p in _pat):
+                if _ans:
+                    _hits.append((_e.get('priority', 5), _q, _ans))
+        if not _hits:
+            return ''
+        _hits.sort(reverse=True)
+        _parts = []
+        for _pri, _q, _a in _hits[:1]:
+            _parts.append(f"🗌 {_q}\n_Ans: {_a}_")
+        return "\n\n".join(_parts)
+    except Exception:
+        return ''
 
-# ═══════════════════════════════════════════════════════════════
 #  FAST-THROUGH DETECTOR
 # ═══════════════════════════════════════════════════════════════
 
@@ -1421,6 +1447,10 @@ class V26Responder:
         kb_inject = _fast_kb_context(intent_cat, subj, lang)
         if kb_inject:
             body = f"{body}\n\n_KB: {kb_inject}_"
+        # IDEAS-4: FAQ auto-reply
+        faq_reply = _fast_faq_check(subj, body, lang)
+        if faq_reply:
+            body = f"{body}\n\n{faq_reply}"
 
         # ③-rt Real-time feedback
         rtfb_result = {"tier": "send", "feedback": "rtfb_not_available"}
@@ -1972,6 +2002,10 @@ class V26Responder:
                 pass
 
         body = f"{adapted}\n\n{tpl_body.format(name=name, close='—', signature='')}"
+        # IDEAS-4: FAQ auto-reply
+        faq_reply = _fast_faq_check(subj, body, lang)
+        if faq_reply:
+            body = f"{body}\n\n{faq_reply}"
 
         # ⑪ Quality gate
         qc = {"overall_score": 85.0, "passed": True, "issues": [],
