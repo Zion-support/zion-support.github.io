@@ -11,7 +11,7 @@ v33       = WORKSPACE / "commands" / "v33_modules"
 POLICY    = WORKSPACE / "data" / "policies" / "intent_policies.json"
 
 sys.path.insert(0, str(WORKSPACE))
-sys.path.insert(0, str(COMMANDS))
+# removed — workspace is not a package
 sys.path.insert(0, str(v33))
 
 passed = failed = 0
@@ -27,9 +27,7 @@ def section(t): print(f"\n{'='*53}\n[{t}]\n{'='*53}")
 print("V39-A TEST HARNESS — IntentPolicyDB · 12 assertions")
 print(f"Policy : {POLICY}  exists={POLICY.exists()}\n")
 
-from commands.v33_modules.intent_policy_db import (
-    IntentPolicyDB, IntentPolicyLookup, validate_schema
-)
+from intent_policy_db import IntentPolicyDB, IntentPolicyLookup, validate_schema
 
 # ─── A1 — DB loads ────────────────────────────────────────────────────────
 db = None
