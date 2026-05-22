@@ -1,0 +1,74 @@
+name: Storybook Snapshot Regeneration
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Daily at 9 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: storybook-snapshot
+  cancel-in-progress: true
+
+jobs:
+  storybook-regeneration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Check schema changes
+        id: schema
+        run: |
+          if [ -f scripts/check-schema-changes.sh ]; then
+            ./scripts/check-schema-changes.sh
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run Storybook Snapshot Regenerator
+        if: steps.schema.outputs.changed == 'true'
+        run: |
+          node automation/storybook-snapshot-regenerator.cjs
+        id: snapshot
+
+      - name: Create regression issue if needed
+        if: steps.schema.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPORT=".hermes/memory/storybook-regression-report.json"
+          if [ -f "$REPORT" ]; then
+            TITLE=$(jq -r '.title // empty' "$REPORT")
+            BODY=$(jq -r '.body // empty' "$REPORT")
+            STATUS=$(jq -r '.status // empty' "$REPORT")
+            if [[ -n "$TITLE" && "$STATUS" != "baseline_initialized" && "$STATUS" != "no_regression" ]]; then
+              echo "📝 Creating GitHub issue: $TITLE"
+              gh issue create --title "$TITLE" --body "$BODY" --label "storybook,visual-regression,automation" || true
+            else
+              echo "✅ No regression detected (status: $STATUS)"
+            fi
+          else
+            echo "⚠️ No report file found"
+          fi
+
+      - name: Upload snapshot artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-snapshots
+          path: .hermes/memory/storybook-snapshots/
+          retention-days: 7

@@ -1,0 +1,63 @@
+name: Dependency Health Check
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'   # Every Monday at 02:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Run dependency health script
+        run: |
+          chmod +x scripts/dependency-health.sh
+          ./scripts/dependency-health.sh
+
+      - name: Upload health reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-health-reports
+          path: .hermes/memory/*
+          retention-days: 30
+
+      - name: Create issue if vulnerabilities detected
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VULNS=$(jq '.metadata.vulnerabilities.total' .hermes/memory/dependency-audit.json)
+          if [ "$VULNS" -gt 0 ]; then
+            TITLE="⚠️ Dependency Vulnerabilities Detected"
+            BODY="The weekly dependency health check found $VULNS vulnerabilities. See the attached artifact for details."
+            gh issue create --title "$TITLE" --body "$BODY" --label "security,automation" || true
+          fi
+
+      - name: Telegram alert on failures
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d "chat_id=${TELEGRAM_CHAT_ID}" \
+            -d "text=❗ Dependency Health Check failed"

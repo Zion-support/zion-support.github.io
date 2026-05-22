@@ -1,0 +1,22 @@
+name: Coverage Gap Filler
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  fill-gaps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install jest
+        run: npm install --save-dev jest @types/jest ts-jest
+      - name: Run coverage gap filler
+        run: |
+          chmod +x ./scripts/coverage-gap-filler.sh
+          ./scripts/coverage-gap-filler.sh

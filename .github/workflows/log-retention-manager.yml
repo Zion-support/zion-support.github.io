@@ -1,0 +1,52 @@
+name: Autonomous Log Retention & Storage Optimizer
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily 02:00 UTC (off-peak)
+  workflow_dispatch:      # Manual trigger
+
+permissions:
+  contents: read
+
+jobs:
+  retention:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+
+      - name: Run Log Retention Manager
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8435383377' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RETENTION_DAYS_DAILY: ${{ secrets.RETENTION_DAYS_DAILY || '30' }}
+          RETENTION_DAYS_WEEKLY: ${{ secrets.RETENTION_DAYS_WEEKLY || '90' }}
+          RETENTION_DAYS_MONTHLY: ${{ secrets.RETENTION_DAYS_MONTHLY || '365' }}
+          RETENTION_DAYS_ARTIFACTS: ${{ secrets.RETENTION_DAYS_ARTIFACTS || '30' }}
+          RETENTION_DRY_RUN: ${{ secrets.RETENTION_DRY_RUN || 'true' }}
+        run: |
+          node automation/log-retention-manager.cjs
+
+      - name: Upload retention report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-retention-report
+          path: .hermes/memory/log-retention/latest-report.json
+          retention-days: 7

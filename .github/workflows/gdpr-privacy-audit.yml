@@ -1,0 +1,81 @@
+name: GDPR/Privacy Compliance Audit
+
+on:
+  schedule:
+    - cron: '0 19 * * 0'  # Weekly Sunday 19:00 UTC
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app/**/*.tsx'
+      - 'app/**/*.ts'
+      - 'components/**/*.tsx'
+      - 'components/**/*.ts'
+      - 'middleware.ts'
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run GDPR/Privacy audit
+        env:
+          APP_URL: ${{ secrets.APP_URL || 'https://ziontechgroup.com' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8435383377' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node automation/gdpr-privacy-audit.cjs
+
+      - name: Upload report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gdpr-privacy-report
+          path: |
+            .hermes/memory/gdpr-privacy/
+          retention-days: 30
+
+      - name: Comment PR with findings
+        if: github.event_name == 'pull_request' && always()
+        run: |
+          REPORT=".hermes/memory/gdpr-privacy/latest-report.json"
+          if [ -f "$REPORT" ]; then
+            node -e "
+              const r = require('./$REPORT');
+              const score = r.complianceScore || 0;
+              const pr = Number(process.env.PR_NUMBER);
+              const { execSync } = require('child_process');
+              if (score < 80) {
+                const body = '🛡️ **GDPR/Privacy audit — compliance issues detected**\\n\\n' +
+                  \`Compliance score: \${score}/100\\n\` +
+                  'See artifact for details. Ensure privacy compliance before merge.\\n';
+                execSync(\`gh pr comment \$PR_NUMBER --body "\${body}"\`, { stdio: 'pipe' });
+              } else {
+                execSync(\`gh pr comment \$PR_NUMBER --body '✅ GDPR/Privacy audit passed — compliance score \${score}/100.'\`, { stdio: 'pipe' });
+              }
+            "
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}

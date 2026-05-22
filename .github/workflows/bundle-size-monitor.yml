@@ -1,0 +1,144 @@
+name: Bundle Size Budget Monitor
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  bundle-size-check:
+    name: Monitor bundle growth
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write  # for posting comments
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Save bundle size snapshot
+        id: snapshot
+        run: |
+          # Snapshot current bundle size (sum of main JS + CSS)
+          SIZE=$(node -e "const fs=require('fs');const dir='.next/static/chunks'; let total=0; try { const files=fs.readdirSync(dir); for(const f of files){ total+=fs.statSync(dir+'/'+f).size; } } catch(e) { console.error('Error reading chunks:', e.message); process.exit(1); } console.log(total);")
+          echo "size=$SIZE" >> $GITHUB_OUTPUT
+          # Create bundle-analysis.json for monitor script
+          echo "{\"totalBytes\":$SIZE}" > bundle-analysis.json
+
+      - name: Load previous snapshot
+        id: prev
+        run: |
+          if [[ -f .hermes/memory/bundle-size.json ]]; then
+            PREV=$(cat .hermes/memory/bundle-size.json | jq -r .size)
+            echo "prev=$PREV" >> $GITHUB_OUTPUT
+          else
+            echo "prev=0" >> $GITHUB_OUTPUT
+          fi
+          echo "exists=$(test -f .hermes/memory/bundle-size.json && echo true || echo false)" >> $GITHUB_OUTPUT
+
+      - name: Compute delta
+        id: delta
+        run: |
+          DIFF=$(( ${{steps.snapshot.outputs.size}} - ${{steps.prev.outputs.size}} ))
+          if [[ $DIFF -lt 0 ]]; then DIFF=0; fi
+          echo "delta=$DIFF" >> $GITHUB_OUTPUT
+
+      - name: Update stored snapshot
+        run: |
+          mkdir -p .hermes/memory
+          echo "{ \"size\": ${{steps.snapshot.outputs.size}}, \"timestamp\": \"$(date -u '+%Y-%m-%dT%H:%M:%SZ')\", \"hash\": \"$(git rev-parse HEAD)\" }" > .hermes/memory/bundle-size.json
+          git add .hermes/memory/bundle-size.json
+
+      - name: Track bundle history
+        env:
+          BUNDLE_SIZE: ${{steps.snapshot.outputs.size}}
+        run: |
+          node scripts/track-bundle-history.js
+          git add .hermes/memory/bundle-history.json
+
+      - name: Commit bundle state
+        if: always()
+        run: |
+          git config user.email "ci@example.com"
+          git config user.name "CI Bot"
+          git add .hermes/memory
+          git diff --cached --quiet || (git commit -m "chore(bundle): update size metrics [skip ci]" && git push origin HEAD)
+
+      - name: Evaluate bundle trend
+        id: trend
+        run: |
+          HITS=$(jq '[.history[0:3] | map(select(.size > .size)) | length]' .hermes/memory/bundle-history.json)
+          if (( $HITS >= 3 && $(jq -r '.history[0].size' .hermes/memory/bundle-history.json) > $(jq -r '.history[2].size' .hermes/memory/bundle-history.json) * 1.05 )); then
+            echo "blocked=true" >> $GITHUB_OUTPUT
+            echo "::warning ::Bundle size increased >5% for 3 consecutive checks."
+          else
+            echo "blocked=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run build-size optimizer suggestion
+        if: steps.trend.outputs.blocked != 'true'
+        run: |
+          node automation/build-size-optimizer.cjs
+
+      - name: Run bundle size monitor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_PULL_NUMBER: ${{ github.event.pull_request.number }}
+          THRESHOLD_PERCENT: ${{ secrets.BUNDLE_SIZE_THRESHOLD || '2' }}
+        run: |
+          chmod +x scripts/bundle-size-monitor.sh
+          ./scripts/bundle-size-monitor.sh
+
+      - name: Check test status
+        id: test
+        run: |
+          npm test
+          continue-on-error: true
+
+      - name: Undo bundle optimizers if tests fail
+        if: steps.test.outcome != 'success'
+        run: |
+          git checkout HEAD~1 # Revert last commit that contained the optimizer changes
+          git push -f origin HEAD
+          # Incident note
+          echo '{"incident":"Test failures after optimization","time":"$(date -u)","hash":"$(git rev-parse HEAD)"}' > automation/incident.json
+          cp automation/incident.json reports/incident-$(date +%Y%m%d).json
+          # Telegram alert
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d "text=*🔴 Build‑Size Optimizer rollback*\nTest failures detected after automatic optimization.\nAll changes reverted."
+
+      - name: Upload bundle report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-size-report
+          path: |
+            bundle-analysis.json
+            .bundle-size-baseline.json
+            .hermes/memory/bundle-history.json
+          retention-days: 30
+
+      - name: Post PR comment on failure
+        if: failure() && github.event_name == 'pull_request'
+        run: |
+          BODY="🚨 **Bundle size check failed**\n\nThe bundle grew beyond the allowed threshold (${{ secrets.BUNDLE_SIZE_THRESHOLD || '2' }}%).\n\nCheck the uploaded artifact for details, or run `npm run build` locally and review the bundle analysis.\n\nYou can adjust the threshold by setting the `BUNDLE_SIZE_THRESHOLD` secret in repository settings."
+          gh pr comment "$GITHUB_PULL_NUMBER" --body "$BODY" || true

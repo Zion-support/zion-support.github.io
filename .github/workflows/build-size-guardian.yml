@@ -1,0 +1,179 @@
+name: Build Size Guardian (Full Spec)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-size-guardian:
+    name: Bundle Size Monitoring + Optimizer
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Need full history for state comparisons
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+          npm install --save-dev next-bundle-analyzer
+
+      - name: Build with bundle analysis
+        env:
+          ANALYZE: true
+        run: |
+          if npm run build 2>&1 | tee build.log; then
+            echo "✅ Build completed"
+          else
+            echo "❌ Build failed"
+            exit 1
+          fi
+
+          # Collect bundle stats
+          STATS_FILE=$(find .next -name "*.json" 2>/dev/null | head -1)
+          if [ -z "$STATS_FILE" ]; then
+            echo "❌ No bundle stats found"
+            exit 1
+          fi
+          cp "$STATS_FILE" bundle-analysis.json
+          echo "📊 Bundle stats saved"
+
+      - name: Snapshot current bundle size
+        id: snapshot
+        run: |
+          SIZE=$(jq -r '.totalBytes' bundle-analysis.json)
+          echo "size=$SIZE" >> $GITHUB_OUTPUT
+          echo "📦 Snapshot: ${SIZE} bytes"
+
+      - name: Load previous snapshot
+        id: prev
+        run: |
+          if [ -f .hermes/memory/bundle-size.json ]; then
+            PREV=$(jq -r '.size' .hermes/memory/bundle-size.json)
+            echo "prev=$PREV" >> $GITHUB_OUTPUT
+            echo "📦 Previous: ${PREV} bytes"
+          else
+            echo "prev=0" >> $GITHUB_OUTPUT
+            echo "📦 No previous snapshot found"
+          fi
+
+      - name: Compute delta
+        id: delta
+        run: |
+          DIFF=$(( ${{steps.snapshot.outputs.size}} - ${{steps.prev.outputs.prev}} ))
+          if [ "$DIFF" -lt 0 ]; then DIFF=0; fi
+          echo "delta=$DIFF" >> $GITHUB_OUTPUT
+          echo "📈 Delta: ${DIFF} bytes"
+
+      - name: Update stored snapshot
+        run: |
+          mkdir -p .hermes/memory
+          echo "{ \"size\": ${{steps.snapshot.outputs.size}}, \"timestamp\": \"$(date -u '+%Y-%m-%dT%H:%M:%SZ')\", \"hash\": \"$(git rev-parse HEAD)\" }" > .hermes/memory/bundle-size.json
+
+      - name: Track bundle history
+        id: track-history
+        env:
+          BUNDLE_SIZE: ${{steps.snapshot.outputs.size}}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          node scripts/track-bundle-history.js
+          git add .hermes/memory/bundle-history.json
+
+      - name: Evaluate bundle trend
+        id: trend
+        run: |
+          COUNT=$(jq '.history | length' .hermes/memory/bundle-history.json 2>/dev/null || echo "0")
+          echo "History entries: $COUNT"
+
+          if [ "$COUNT" -ge 3 ]; then
+            SIZE0=$(jq -r '.history[0].size' .hermes/memory/bundle-history.json)
+            SIZE2=$(jq -r '.history[2].size' .hermes/memory/bundle-history.json)
+            PCT=$(awk "BEGIN {printf \"%.2f\", (($SIZE0 - $SIZE2) / $SIZE2) * 100}")
+            echo "Growth over 3 runs: ${PCT}%"
+
+            if awk "BEGIN {exit !($PCT > 5)}"; then
+              echo "blocked=true" >> $GITHUB_OUTPUT
+              echo "::warning ::Bundle size increased >5% across 3 consecutive runs (${PCT}%)"
+            else
+              echo "blocked=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "blocked=false" >> $GITHUB_OUTPUT
+            echo "Insufficient history (need 3, have $COUNT)"
+          fi
+
+      - name: Prevent merging if trend failed
+        if: steps.trend.outputs.blocked == 'true'
+        run: |
+          echo "❌ Merge blocked: bundle size growth trend exceeds threshold"
+          exit 1
+
+      - name: Run build size optimizer (analysis)
+        if: steps.trend.outputs.blocked != 'true'
+        env:
+          BUNDLE_SIZE_THRESHOLD: ${{ secrets.BUNDLE_SIZE_THRESHOLD || '5' }}
+          BUNDLE_CONSECUTIVE_LIMIT: ${{ secrets.BUNDLE_CONSECUTIVE_LIMIT || '3' }}
+          BUNDLE_BASELINE: .bundle-size-baseline.json
+          BUNDLE_REPORT: bundle-analysis.json
+        run: |
+          node automation/build-size-optimizer.cjs
+          echo "✅ Optimizer analysis complete"
+        id: optimizer
+
+      - name: Upload optimizer report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-size-guardian-report
+          path: |
+            automation/reports/build-size-optimizer-latest.json
+            .hermes/memory/bundle-size.json
+            .hermes/memory/bundle-history.json
+            automation/reports/build-size-optimizer-state.json
+          retention-days: 30
+
+      - name: Run test suite
+        if: always()
+        run: npm test
+
+      - name: Telegram alert – growth blocked
+        if: steps.trend.outputs.blocked == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          MESSAGE="🚨 *Build Size Guardian*\n\nMerge blocked: bundle grew >5% across 3 consecutive runs.\nCheck PR comments for optimization guidance."
+          node automation/notify-telegram.js "$TELEGRAM_BOT_TOKEN" "$TELEGRAM_CHAT_ID" "$MESSAGE"
+
+      - name: Telegram alert – optimization suggestions
+        if: |
+          steps.optimizer.outcome == 'success' &&
+          steps.trend.outputs.blocked != 'true' &&
+          github.event_name == 'pull_request'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          REPORT="automation/reports/build-size-optimizer-latest.json"
+          if [ -f "$REPORT" ] && [ "$(jq -r '.triggered' "$REPORT")" = "true" ]; then
+            GROWTH=$(jq -r '.growthPercent' "$REPORT")
+            RECS=$(jq -r '.recommendations | length' "$REPORT")
+            MESSAGE="🔨 *Build Size Optimizer*\n\nBundle grew ${GROWTH}% — ${RECS} optimization(s) suggested.\nReview PR comment for details."
+            node automation/notify-telegram.js "$TELEGRAM_BOT_TOKEN" "$TELEGRAM_CHAT_ID" "$MESSAGE"
+          fi

@@ -1,0 +1,46 @@
+name: Security Headers & HTTPS Audit
+
+on:
+  schedule:
+    - cron: '0 18 * * *'  # Daily at 18:00 UTC
+  workflow_dispatch:
+  # Also run on deploy events if your repo supports them
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run security headers audit
+        env:
+          APP_URL: ${{ secrets.APP_URL || 'https://ziontechgroup.com' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8435383377' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node automation/security-headers-audit.cjs
+
+      - name: Upload report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-headers-report
+          path: |
+            .hermes/memory/security-headers/
+          retention-days: 30

@@ -1,0 +1,76 @@
+name: Image Optimization Audit
+
+on:
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 14 * * *'  # Daily at 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run image optimization audit
+        env:
+          APP_URL: ${{ secrets.APP_URL || 'https://ziontechgroup.com' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || '8435383377' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node automation/image-optimization-audit.cjs
+
+      - name: Upload report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: image-audit-report
+          path: |
+            .hermes/memory/image-optimization/
+          retention-days: 30
+
+      - name: Comment PR with findings
+        if: github.event_name == 'pull_request' && always()
+        run: |
+          REPORT=".hermes/memory/image-optimization/latest-report.json"
+          if [ -f "$REPORT" ]; then
+            node -e "
+              const r = require('./$REPORT');
+              const s = r.summary || {};
+              const total = s.totalIssues || 0;
+              const pr = Number(process.env.PR_NUMBER);
+              const { execSync } = require('child_process');
+              if (total > 0) {
+                const body = '🚨 **Image optimization audit found issues**\\n\\n' +
+                  \`Images: \${s.imagesScanned} | Total issues: \${total}\\n\` +
+                  \`Missing alt: \${s.missingAlt || 0}\\n\` +
+                  \`Oversized (>500KB): \${s.oversized || 0}\\n\` +
+                  \`No WebP/AVIF: \${s.missingModernFormat || 0}\\n\` +
+                  'See artifact for details. Consider optimizing images before merge.\\n';
+                execSync(\`gh pr comment \$PR_NUMBER --body "\${body}"\`, { stdio: 'pipe' });
+              } else {
+                execSync(\`gh pr comment \$PR_NUMBER --body '✅ Image audit passed — all images optimized and have alt text.'\`, { stdio: 'pipe' });
+              }
+            "
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
