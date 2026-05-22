@@ -116,6 +116,27 @@ _INTENT_POLICIES: dict = {
         "cc_on": "auto_ack",
         "fwd_on": None,
     },
+    "invoice": {
+        "grammar_threshold": 85,
+        "reply_all_default": False,
+        "reply_all_reason": "financial_invoice_confidential",
+        "max_auto_depth": 3,
+        "min_confidence": 0.90,
+        "send_on": "send",
+        "cc_on": "no_cc",
+        "fwd_on": None,
+    },
+    "billing": {
+        "grammar_threshold": 85,
+        "reply_all_default": False,
+        "reason": "financial_billing_confidential",
+        "max_auto_depth": 3,
+        "min_confidence": 0.90,
+        "send_on": "send",
+        "cc_on": "no_cc",
+        "fwd_on": None,
+        "reply_all_reason": "financial_billing_confidential",
+    },
     "default": {
         "grammar_threshold": 65,
         "reply_all_default": False,
@@ -127,6 +148,7 @@ _INTENT_POLICIES: dict = {
         "fwd_on": None,
     },
 }
+_CC_COOLDOWN_DAYS = 14
 _AUDIT_INTERVAL       = 50
 
 _TQ_QUARANTINE: dict = {}
@@ -1553,8 +1575,31 @@ class V26Responder:
                 self.stats["feedback_oracle_override"] = self.stats.get("feedback_oracle_override", 0) + 1
 
 
+        if reply_all_ok and use_cc:
+            try:
+                _cache_key = f"{sender}|{tid}"
+                _rc = {}
+                try:
+                    _rc = json.loads(Path(str(DATA / 'reply_all_cache.json')).read_text())
+                except Exception:
+                    pass
+                _prev = _rc.get(_cache_key, {})
+                _prev_cc = _prev.get("use_cc", "")
+                _prev_ts = _prev.get("decided_at", "")
+                if _prev_cc and _prev_ts:
+                    _dt_prev = datetime.fromisoformat(_prev_ts)
+                    _dtd = (datetime.now(timezone.utc) - _dt_prev).days
+                    if 0 <= _dtd < _CC_COOLDOWN_DAYS:
+                        _log({"run_id": RUN_ID, "phase": "cc_cooldown_active",
+                              "sender": sender, "thread_id": tid,
+                              "cooldown_days": _CC_COOLDOWN_DAYS, "since_days": _dtd})
+                        use_cc = ""
+            except Exception:
+                pass
 
 
+
+        # w3-01: grammar regression alert
 
         # w3-01: grammar regression alert
         if W3_ENABLED and grammar_check:
@@ -1673,7 +1718,10 @@ class V26Responder:
 
         all_rcp = f"{sender}{cc_part}"
         subj_rep = f"Re: {subj}" if not subj.lower().startswith("re:") else subj
-        res = gmail_send_reply_fixed(tid, subj_rep, body, all_rcp)
+        # V51-FEAT3: reply_to_override from policy
+        _reply_to = intent_raw.get("_policy", {}).get("reply_to_override", "")
+        res = gmail_send_reply_fixed(tid, subj_rep, body, all_rcp, thread_id=tid,
+                                     reply_to=_reply_to if _reply_to else None)
 
         # R2: dedup tracking — record successful send
         _record_send(tid, "send_fast")
@@ -2039,7 +2087,10 @@ class V26Responder:
 
         all_rcp = f"{sender}{cc_part}"
         subj_rep= f"Re: {subj}" if not subj.lower().startswith("re:") else subj
-        res = gmail_send_reply_fixed(tid, subj_rep, body, all_rcp)
+        # V51-FEAT3: reply_to_override from policy
+        _reply_to = intent_raw.get("_policy", {}).get("reply_to_override", "")
+        res = gmail_send_reply_fixed(tid, subj_rep, body, all_rcp, thread_id=tid,
+                                     reply_to=_reply_to if _reply_to else None)
 
         # R2: dedup tracking — record successful send
         _record_send(tid, "send")
