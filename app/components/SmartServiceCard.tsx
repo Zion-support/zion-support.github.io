@@ -1,11 +1,9 @@
-// app/components/SmartServiceCard.tsx — reusable service card with category styling + relevance badge
-'use client';
 import Link from 'next/link';
 
-interface SmartServiceCardProps {
+export interface SmartServiceCardProps {
   service: any;
   relationship?: 'related' | 'featured' | 'recommended';
-  relevance?: number;           // 0-100 match score (shows badge when > 40)
+  relevance?: number;
   showPricing?: boolean;
 }
 
@@ -16,11 +14,10 @@ export default function SmartServiceCard({
   showPricing = true,
 }: SmartServiceCardProps) {
   const catKey   = service.category || 'ai';
-  const isCold   = relationship === 'related';
   const isHot    = relationship === 'featured';
   const isRec    = relationship === 'recommended';
 
-  // Category accent colors map to the 6 CATEGORIES in app/page.tsx
+  // Category accent colors
   const catAccent: Record<string,string> = {
     ai:        'from-purple-500 to-indigo-500',
     it:        'from-blue-500 to-cyan-500',
@@ -31,17 +28,19 @@ export default function SmartServiceCard({
   };
   const gradient = catAccent[catKey] || catAccent.ai;
 
-  // Pricing: show first tier
-  const firstTier = service.pricing
-    ? Object.values(service.pricing as Record<string,string>)[0]
-    : 'TBD';
+  // Pricing: show first tier (null-safe)
+  const firstTier = (service.pricing && typeof service.pricing === 'object')
+    ? Object.values(service.pricing as Record<string,string>)[0] || 'Contact for Quote'
+    : 'Contact for Quote';
 
-  // Badge label
-  const badgeLabel = isHot ? '🔥 Popular'
-                   : isRec ? '⭐ Recommended'
-                   : relevance != null && relevance > 60 ? `${Math.round(relevance)}% match`
-                   : relevance != null && relevance > 40 ? `${Math.round(relevance)}% related`
-                   : null;
+  // Relevance badge display
+  const badgeLabel = isHot
+    ? null   // “Popular” shown via tag in caller
+    : isRec
+    ? '⭐ Recommended'
+    : relevance != null && relevance > 60 ? `${relevance}% match`
+    : relevance != null && relevance > 40 ? `${relevance}% related`
+    : null;
 
   return (
     <Link href={`/services/${service.id}`}
@@ -52,18 +51,25 @@ export default function SmartServiceCard({
       <div className={`h-1 rounded-full bg-gradient-to-r ${gradient}`} />
 
       {/* Relevance / Popularity badge */}
-      {badgeLabel && (
-        <span className="absolute top-3 right-3 text-[10px] font-semibold
-          px-2 py-0.5 rounded-full
-          bg-slate-800/80 border border-slate-600/60 text-slate-200 backdrop-blur-sm
-          group-hover:border-purple-500/50 transition-colors">
-          {badgeLabel}
-        </span>
-      )}
+      <div className="absolute top-3 right-3 flex gap-1">
+        {isHot && (
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full
+            bg-orange-500/12 text-orange-300 border border-orange-500/25">
+            ★ Popular
+          </span>
+        )}
+        {badgeLabel && (
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full
+            bg-slate-800/80 border border-slate-600/60 text-slate-200 backdrop-blur-sm
+            group-hover:border-purple-500/50 transition-colors">
+            {badgeLabel}
+          </span>
+        )}
+      </div>
 
       {/* Category tag */}
       <span className="text-[10px] text-slate-500 uppercase tracking-wider mt-3">
-        {service.category || 'Service'}
+        {(service.category || 'Service').charAt(0).toUpperCase() + (service.category || '').slice(1)}
       </span>
 
       {/* Title + icon */}
