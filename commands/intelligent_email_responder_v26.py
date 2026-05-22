@@ -2117,15 +2117,27 @@ class V26Responder:
 
     def _maybe_call_ask_ai_bridge(self, thread_id: str, body: str,
                                   intent_label: str, dry_run: bool) -> bool:
-        """If thread_id is listed in forcesend.txt, bypass normal gating and send now."""
+        """If thread_id is listed in forcesend.txt, bypass normal gating and send now.
+
+        forcesend.txt format: one entry per line
+          <thread_id>               → force send
+          <thread_id>|deadline:2026-06-01  → force send + inject deadline marker
+        """
         try:
             src = "/tmp/forcesend.txt" if dry_run else f"{DATA}/forcesend.txt"
-            forced_ids = {
-                line.strip().lower()
-                for line in pathlib.Path(src).read_text().splitlines()
-                if line.strip()
-            }
+            _deadline = None
+            forced_ids: set[str] = set()
+            for line in pathlib.Path(src).read_text().splitlines():
+                line = line.strip().lower()
+                if not line:
+                    continue
+                entry = line.split("|deadline:", 1)
+                forced_ids.add(entry[0])
+                if len(entry) == 2 and entry[1]:
+                    _deadline = entry[1]
             if thread_id and thread_id.lower() in forced_ids:
+                if _deadline and "__DEADLINE_URGENT__" not in body:
+                    body = f"{body}\n\n__DEADLINE_URGENT__|{_deadline}__\n"
                 return True
         except Exception:
             pass
