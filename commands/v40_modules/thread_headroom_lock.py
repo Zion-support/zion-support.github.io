@@ -59,6 +59,12 @@ def _load_policies() -> dict:
     return d
 
 
+# Test helper — not for production use
+def _test_set_remaining(lock_obj, thread_id: str, value: int) -> None:
+    """Force remaining headroom for testing."""
+    lock_obj._remaining_headroom = lambda tid, _v=value: _v
+
+
 class ThreadHeadroomLock:
     def __init__(self) -> None:
         self._policies: dict = _load_policies()["policies"]
