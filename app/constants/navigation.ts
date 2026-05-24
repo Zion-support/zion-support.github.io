@@ -192,7 +192,6 @@ export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Knowledge Graph Builder', href: '/services/ai-knowledge-graph' },
   { name: 'Knowledge Graph Builder', href: '/services/ai-knowledge-graph-builder' },
   { name: 'AI Knowledge Graph Search Engine', href: '/services/ai-knowledge-graph-search-deep' },
-  { name: 'Knowledge Graph Search Engine', href: '/services/ai-knowledge-graph-search-engine' },
   { name: 'AI Knowledge Management', href: '/services/ai-knowledge-management' },
   { name: 'Ai Kubernetes Optimizer', href: '/services/ai-kubernetes-optimizer' },
   { name: 'Ai Kyc Aml Compliance', href: '/services/ai-kyc-aml-compliance' },
