@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "meta": {
     "title": "Zion Tech Group \u2014 Full Site Deep Audit & Evolution Board",
     "version": "2.0",
@@ -472,5 +473,93 @@
     "P1_high": 7,
     "P2_medium": 12,
     "P3_low": 6
+=======
+  "me": {
+    "count": 3,
+    "tasks": [
+      {
+        "id": "fix-servicesdata-ts-schema-18-entries-wi",
+        "title": "Fix servicesData.ts schema — 18 entries with missing required fields",
+        "priority": "medium",
+        "area": "types",
+        "detail": "Blocks: 0; missing fields vary per entry. Add title/description/features/benefits/pricing/contactInfo/icon/href with sensible defaults."
+      },
+      {
+        "id": "replace-all-hardcoded-service-count-lite",
+        "title": "Replace all hardcoded service-count literals (600+ / 626 / 627) with serviceCount+",
+        "priority": "medium",
+        "area": "content",
+        "detail": "0 total occurrences in 0 page.tsx files."
+      },
+      {
+        "id": "remove-or-relocate-jest-setup-ts-__tests",
+        "title": "Remove or relocate jest.setup.ts + __tests__ from the app tree",
+        "priority": "low",
+        "area": "structure",
+        "detail": "2 jest.setup files, 1 __tests__ directories found in source"
+      }
+    ]
+  },
+  "human": {
+    "count": 3,
+    "tasks": [
+      {
+        "id": "review-components-vs-new-shared-import-p",
+        "title": "Review @/components/* vs new @shared/* import path divergence",
+        "priority": "high",
+        "area": "types",
+        "detail": "tsconfig aliases: @/* → ./app/* exists; @shared/* may not resolve if path is ./components/* at repo root"
+      },
+      {
+        "id": "disable-typescript-ignorebuilderrors-in-",
+        "title": "Disable typescript.ignoreBuildErrors in next.config.js once type-check is clean",
+        "priority": "high",
+        "area": "types",
+        "detail": "Build currently silently swallows TS errors — harmful for CI"
+      },
+      {
+        "id": "brand-book-review-servicesdata-ts-uses-c",
+        "title": "Brand-book review: servicesData.ts uses commercial@, but footer/contact uses kleber@",
+        "priority": "low",
+        "area": "brand",
+        "detail": "Confirm which address appears on service email CTA vs contact footer"
+      }
+    ]
+  },
+  "both": {
+    "count": 3,
+    "tasks": [
+      {
+        "id": "navigation-ts-fix-6-navigationlink-type-",
+        "title": "navigation.ts — fix 6 NavigationLink type: number should be NavigationLink",
+        "priority": "medium",
+        "area": "types",
+        "detail": "Fixes pre-existing at/import type mismatches in billing/resource constants"
+      },
+      {
+        "id": "add-schema-org-json-ld-to-service-detail",
+        "title": "Add schema.org JSON-LD to service-detail pages (currently missing on ~60)",
+        "priority": "medium",
+        "area": "seo",
+        "detail": "Service pages have rich data in servicesData.ts but no structured markup"
+      },
+      {
+        "id": "add-skip-link-aria-label-landmarks-to-al",
+        "title": "Add skip-link + aria-label landmarks to all 148 pages",
+        "priority": "medium",
+        "area": "a11y",
+        "detail": "Zero skip-links found; 147 of 148 pages lack ARIA landmark strings"
+      }
+    ]
+  },
+  "meta": {
+    "total_routes": 149,
+    "services_599": true,
+    "services_bad": 0,
+    "residues": 0,
+    "oh_files": 1,
+    "jest_files": 2,
+    "__tests__": 1
+>>>>>>> 4bc61ade (fix(sub-pages): JSX encoding + undeclared placeholder vars in 4 industry pages)
   }
 }
