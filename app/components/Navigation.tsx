@@ -257,6 +257,13 @@ export default function Navigation() {
           </div>
 
           {/* Primary nav links */}
+          {/* Hardcoded primary links (Home already in logo area) */}
+          <NavLink
+            key="blog"
+            link={{ name: 'Blog', href: '/blog' }}
+          />
+
+          {/* Remaining primary links from constants */}
           {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
@@ -312,6 +319,7 @@ export default function Navigation() {
           <NavLink link={{ name: 'AI Services Hub', href: '/ai-services' }} />
           <NavLink link={{ name: 'Solutions', href: '/solutions' }} />
           <NavLink link={{ name: 'Industry Solutions', href: '/industry-solutions' }} />
+          <NavLink link={{ name: 'Blog', href: '/blog' }} />
           <NavLink link={{ name: 'Pricing', href: '/pricing' }} />
           <NavLink link={{ name: 'Tools', href: '/tools' }} />
           <NavLink link={{ name: 'Partners', href: '/partners' }} />
