@@ -1,6 +1,5 @@
 // Health Check Tool — Free autonomous platform status
 'use client';
-'use client';
 import { useState, useEffect, useCallback } from 'react';
 import type { Metadata } from 'next';
 
@@ -21,6 +20,46 @@ const STATUS_COLOR: Record<Status, string> = {
   warn: 'border-yellow-500/40 bg-yellow-500/10',
   fail: 'border-red-500/40 bg-red-500/10',
 };
+
+
+
+// ─── StatusCard: reusable card for health-check results ───────────────────────────
+interface StatusCardProps {
+  name: string;
+  icon: string;
+  className: string;
+  children?: React.ReactNode;
+}
+
+function StatusCard({ name, icon, className, children }: StatusCardProps) {
+  return (
+    <div className={`border rounded-xl p-5 transition ${className}`}>
+      <div className="flex items-center gap-3">
+        <span className="text-xl">{icon}</span>
+        <div>
+          <h3 className="font-semibold">{name}</h3>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── SummaryCard: reusable stat pill for summary grids ───────────────────────────
+interface SummaryCardProps {
+  label: string;
+  value: number;
+  colorStyle: string;
+}
+
+function SummaryCard({ label, value, colorStyle }: SummaryCardProps) {
+  return (
+    <div className="bg-slate-900/80 border border-slate-700 rounded-xl p-4 text-center">
+      <div className={`text-3xl font-bold ${colorStyle}`}>{value}</div>
+      <div className="text-slate-400 text-sm">{label}</div>
+    </div>
+  );
+}
 
 export default function HealthCheckToolPage() {
   const [running, setRunning] = useState(false);
@@ -78,10 +117,12 @@ export default function HealthCheckToolPage() {
               { label: 'Passed',   val: summary.ok,     color: 'text-emerald-400' },
               { label: 'Failed',   val: summary.fail,   color: summary.fail ? 'text-red-400' : 'text-emerald-400' },
             ].map(s => (
-              <div key={s.label} className="bg-slate-900/80 border border-slate-700 rounded-xl p-4 text-center">
-                <div className={`text-3xl font-bold ${s.color}`}>{s.val}</div>
-                <div className="text-slate-400 text-sm">{s.label}</div>
-              </div>
+              <SummaryCard
+                key={s.label}
+                label={s.label}
+                value={s.val}
+                colorStyle={s.color}
+              />
             ))}
           </div>
         )}
@@ -96,18 +137,15 @@ export default function HealthCheckToolPage() {
 
         <div className="space-y-3">
           {results.map((r, i) => (
-            <div key={i} className={`border rounded-xl p-5 transition ${STATUS_COLOR[r.status]}`}>
+            <StatusCard key={i} name={r.name} icon={STATUS_ICON[r.status]} className={STATUS_COLOR[r.status]}>
               <div className="flex justify-between items-start">
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">{STATUS_ICON[r.status]}</span>
-                  <div>
-                    <h3 className="font-semibold">{r.name}</h3>
-                    <p className="text-slate-400 text-sm">{r.detail}</p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold">{r.name}</h3>
+                  <p className="text-slate-400 text-sm">{r.detail}</p>
                 </div>
                 <span className="text-xs text-slate-500 font-mono">{r.ms}ms</span>
               </div>
-            </div>
+            </StatusCard>
           ))}
         </div>
 
