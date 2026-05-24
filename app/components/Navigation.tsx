@@ -127,14 +127,14 @@ export default function Navigation() {
                 ))}
                 <div className="border-t border-slate-800 my-1" />
                 <Link
-                  href="/services"
+                  href="/services/"
                   className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors font-medium"
                   onClick={() => setSolutionsOpen(false)}
                 >
                   All Services →
                 </Link>
                 <Link
-                  href="/industry-solutions"
+                  href="/industry-solutions/"
                   className="block px-3 py-2 rounded-lg text-sm text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 transition-colors"
                   onClick={() => setSolutionsOpen(false)}
                 >
@@ -231,14 +231,14 @@ export default function Navigation() {
                 <div className="border-t border-slate-800 my-3" />
                 <div className="space-y-2">
                   <Link
-                    href="/services"
+                    href="/services/"
                     className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors font-medium"
                     onClick={() => setServicesOpen(false)}
                   >
                     Browse All Services →
                   </Link>
                   <Link
-                    href="/ai-services"
+                    href="/ai-services/"
                     className="block px-3 py-2 rounded-lg text-sm text-pink-400 hover:text-pink-300 hover:bg-pink-500/10 transition-colors"
                     onClick={() => setServicesOpen(false)}
                   >
@@ -354,7 +354,7 @@ export default function Navigation() {
           </a>
           <div className="pt-2">
             <Link
-              href="/contact"
+              href="/contact/"
               className="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-3 rounded-lg text-sm font-semibold text-white"
               onClick={() => setMobileOpen(false)}
             >

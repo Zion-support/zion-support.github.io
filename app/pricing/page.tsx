@@ -58,7 +58,7 @@ export default function PricingPage() {
               ))}
             </ul>
             <Link
-              href="/contact"
+              href="/contact/"
               className={`mt-6 block text-center rounded-full px-6 py-2.5 text-sm font-semibold ${
                 plan.featured
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
@@ -72,7 +72,7 @@ export default function PricingPage() {
       </div>
       <div className="mt-12 text-center">
         <p className="text-slate-400 mb-4">Need a custom solution? Let us build a tailored proposal.</p>
-        <Link href="/proposal-generator" className="btn-primary">Generate Custom Proposal</Link>
+        <Link href="/proposal-generator/" className="btn-primary">Generate Custom Proposal</Link>
       </div>
     </div>
   );

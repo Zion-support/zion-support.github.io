@@ -56,7 +56,7 @@ export default function ProposalsPage() {
             <div className="text-6xl mb-4">📋</div>
             <h2 className="text-xl font-semibold text-white mb-2">No Proposals Yet</h2>
             <p className="text-slate-400 mb-6">Use our configurator to generate your first custom proposal.</p>
-            <a href="/configurator" className="btn-primary inline-block">
+            <a href="/configurator/" className="btn-primary inline-block">
               Create a Proposal →
             </a>
           </div>
@@ -106,7 +106,7 @@ export default function ProposalsPage() {
             Our team will design a tailored solution based on your needs and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/configurator" className="btn-primary text-lg">
+            <a href="/configurator/" className="btn-primary text-lg">
               Start Configurator →
             </a>
             <a href="tel:+13024640950" className="btn-secondary text-lg">

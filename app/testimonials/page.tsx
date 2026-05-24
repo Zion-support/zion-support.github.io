@@ -175,7 +175,7 @@ export default function TestimonialsPage() {
             Let us show you what&apos;s possible. Schedule a free consultation today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition">
+            <Link href="/contact/" className="inline-flex items-center gap-2 bg-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition">
               Start Your Project →
             </Link>
             <a href={`tel:${contactInfo.mobile}`} className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">

@@ -88,7 +88,7 @@ function ServicesContent() {
           ))}
         </div>
         <div className="text-center mt-16">
-          <Link href="/configurator" className="btn-primary text-lg">Get Your Custom Proposal →</Link>
+          <Link href="/configurator/" className="btn-primary text-lg">Get Your Custom Proposal →</Link>
           <p className="text-slate-500 text-sm mt-4">Or call us: <a href="tel:+130****0950" className="text-purple-300">+1 302 464 0950</a></p>
         </div>
       </div>

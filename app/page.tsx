@@ -268,10 +268,10 @@ let list = services;
               Get a custom proposal in minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚡ Get Your Custom Proposal →
               </Link>
-              <Link href="/services" className="btn-secondary text-lg px-10 py-4">
+              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
                 🛠️ Browse All {serviceCount}+ Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
@@ -281,13 +281,13 @@ let list = services;
 
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
-              <Link href="/search" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+              <Link href="/search/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 🔍 Search 600+ Services
               </Link>
-              <Link href="/testimonials" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+              <Link href="/testimonials/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 ⭐ Client Reviews
               </Link>
-              <Link href="/pricing" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+              <Link href="/pricing/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 💰 Pricing
               </Link>
             </div>
@@ -553,7 +553,7 @@ let list = services;
               <h2 className="section-heading text-center">📝 From the Blog</h2>
               <p className="section-subheading text-center">AI automation strategies, industry insights &amp; platform updates</p>
             </div>
-            <Link href="/blog" className="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all">Read all articles →</Link>
+            <Link href="/blog/" className="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all">Read all articles →</Link>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -593,7 +593,7 @@ let list = services;
             ))}
           </div>
           <div className="mt-6 text-center sm:hidden">
-            <Link href="/blog" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
+            <Link href="/blog/" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
           </div>
         </div>
       </section>
@@ -683,7 +683,7 @@ let list = services;
                 >
                   View Full Page →
                 </Link>
-                <a href="/configurator" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
+                <a href="/configurator/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
                   ⚙️ Configure This Service
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-purple-300 hover:text-purple-200 px-4 py-3 self-center">
@@ -752,7 +752,7 @@ let list = services;
               Delivered to your inbox as a PDF within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚙️ Start Configurator →
               </Link>
               <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
@@ -868,13 +868,13 @@ let list = services;
       <section className="py-8 border-t border-slate-800">
         <div className="container-page">
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
-            <Link href="/faq" className="hover:text-cyan-400 transition">❓ FAQ</Link>
-            <Link href="/industry-solutions" className="hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
-            <Link href="/services" className="hover:text-cyan-400 transition">🛠️ All Services</Link>
-            <Link href="/configurator" className="hover:text-cyan-400 transition">⚙️ Configurator</Link>
-            <Link href="/proposals" className="hover:text-cyan-400 transition">📄 Proposals</Link>
-            <Link href="/partners" className="hover:text-cyan-400 transition">🤝 Partners</Link>
-            <Link href="/status" className="hover:text-green-400 transition">● System Status</Link>
+            <Link href="/faq/" className="hover:text-cyan-400 transition">❓ FAQ</Link>
+            <Link href="/industry-solutions/" className="hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
+            <Link href="/services/" className="hover:text-cyan-400 transition">🛠️ All Services</Link>
+            <Link href="/configurator/" className="hover:text-cyan-400 transition">⚙️ Configurator</Link>
+            <Link href="/proposals/" className="hover:text-cyan-400 transition">📄 Proposals</Link>
+            <Link href="/partners/" className="hover:text-cyan-400 transition">🤝 Partners</Link>
+            <Link href="/status/" className="hover:text-green-400 transition">● System Status</Link>
           </div>
         </div>
       </section>
@@ -975,7 +975,7 @@ let list = services;
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link href="/tools/ai-service-router" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
+            <Link href="/tools/ai-service-router/" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
             <p className="text-slate-500 text-xs mt-3">All tools are 100% free — no sign-up required. Your data never leaves your browser.</p>
           </div>
         </div>

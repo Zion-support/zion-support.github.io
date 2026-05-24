@@ -13,7 +13,7 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <Link href="/about" className="text-emerald-400 hover:text-emerald-300 text-sm mb-6 inline-block">← About</Link>
+        <Link href="/about/" className="text-emerald-400 hover:text-emerald-300 text-sm mb-6 inline-block">← About</Link>
         <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent">Careers at Zion Tech Group</h1>
         <p className="text-slate-400 text-lg mb-8">Build the future of AI & enterprise software. Remote-first, competitive equity, open-source contributions welcome.</p>
         <div className="space-y-4">
@@ -27,7 +27,7 @@ export default function CareersPage() {
                 <p className="text-emerald-400 text-sm">{loc}</p>
                 <p className="text-slate-400 text-sm">{desc}</p>
               </div>
-              <Link href="/contact" className="btn-secondary whitespace-nowrap ml-4">Apply</Link>
+              <Link href="/contact/" className="btn-secondary whitespace-nowrap ml-4">Apply</Link>
             </div>
           ))}
         </div>

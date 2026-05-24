@@ -99,7 +99,7 @@ export default function Page() {
               Book a Strategy Session
             </Link>
             <Link
-              href="/solutions"
+              href="/services/"
               className="rounded-xl border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Explore Solutions

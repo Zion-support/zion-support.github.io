@@ -46,10 +46,10 @@ export default function ContactPage() {
           <div className="glass-card">
             <h2 className="text-2xl font-semibold text-white mb-6">Quick Actions</h2>
             <div className="space-y-4">
-              <Link href="/configurator" className="btn-primary w-full text-center block">
+              <Link href="/configurator/" className="btn-primary w-full text-center block">
                 Get Your Custom Proposal →
               </Link>
-              <Link href="/services" className="btn-secondary w-full text-center block">
+              <Link href="/services/" className="btn-secondary w-full text-center block">
                 Browse All Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary w-full text-center block">

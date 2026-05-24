@@ -97,7 +97,7 @@ export default function ToolsIndexPage() {
 
         <div className="mt-16 text-center">
           <Link
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 text-base font-semibold text-white hover:opacity-90 transition-opacity"
           >
             Get Free Consultation →

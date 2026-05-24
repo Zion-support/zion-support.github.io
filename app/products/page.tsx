@@ -175,10 +175,10 @@ export default function ProductsPage() {
             into a single AI-first solution. Tell us what you need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+            <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
               ⚙️ Build a Custom Solution
             </Link>
-            <Link href="/contact" className="btn-secondary text-lg px-10 py-4">
+            <Link href="/contact/" className="btn-secondary text-lg px-10 py-4">
               Talk to an Expert
             </Link>
           </div>

@@ -88,7 +88,7 @@ export default function StagePage({ params }: { params: { stage: string } }) {
 
         {/* Back link */}
         <div className="text-center mt-12">
-          <Link href="/services" className="btn-secondary">← Back to Full Catalog</Link>
+          <Link href="/services/" className="btn-secondary">← Back to Full Catalog</Link>
         </div>
       </div>
     </main>

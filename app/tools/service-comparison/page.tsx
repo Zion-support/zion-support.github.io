@@ -339,7 +339,7 @@ export default function ServiceComparisonPage() {
         </div>
         {pool.length > 24 && (
           <p className="text-slate-500 text-sm text-center mt-4">
-            Showing 24 of {pool.length} — <Link href="/services" className="text-purple-400 hover:underline">View all →</Link>
+            Showing 24 of {pool.length} — <Link href="/services/" className="text-purple-400 hover:underline">View all →</Link>
           </p>
         )}
       </section>

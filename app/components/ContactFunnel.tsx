@@ -133,7 +133,7 @@ export default function ContactFunnel() {
 
         {/* ── Primary CTA ─────────────────────────── */}
         <div className="text-center mb-10">
-          <PulsingCTA href="/contact">
+          <PulsingCTA href="/contact/">
             🚀 Book a Free 30-Min Consultation
           </PulsingCTA>
           <p className="mt-3 text-slate-600 text-xs">No commitment required — we&apos;ll map your roadmap together.</p>
@@ -164,7 +164,7 @@ export default function ContactFunnel() {
           />
 
           <DirectAction
-            href="/status"
+            href="/status/"
             icon={<span>📊</span>}
             label="System Status"
             sub="24/7 uptime monitoring"

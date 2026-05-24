@@ -100,7 +100,7 @@ export default function ProductPageLayout({ data }: ProductPageLayoutProps) {
             <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8">
               {data.ctaLabel || 'Get a Custom Quote'}
             </a>
-            <a href="/configurator" className="btn-secondary text-lg px-8">
+            <a href="/configurator/" className="btn-secondary text-lg px-8">
               Get Custom Proposal →
             </a>
           </div>

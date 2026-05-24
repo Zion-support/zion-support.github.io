@@ -201,10 +201,10 @@ export default function IndustrySolutionsPage() {
               Start a custom proposal — AI matches your industry and budget to the right services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚙️ AI Configurator →
               </Link>
-              <Link href="/services" className="btn-secondary text-lg px-10 py-4">
+              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
                 🛠️ All Services
               </Link>
             </div>

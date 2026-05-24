@@ -199,7 +199,7 @@ export default function SearchPage() {
       ) : query ? (
         <div className="text-center py-16">
           <p className="text-slate-400 text-lg mb-4">No services match “{query}”</p>
-          <Link href="/search" className="btn-primary">Browse All Services</Link>
+          <Link href="/search/" className="btn-primary">Browse All Services</Link>
         </div>
       ) : (
         <div className="text-center py-16">

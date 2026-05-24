@@ -14,7 +14,7 @@ export default function Page() {
         <nav className="mb-8 text-sm text-slate-400">
           <Link href="/" className="hover:text-purple-400 transition">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/services" className="hover:text-purple-400 transition">Services</Link>
+          <Link href="/services/" className="hover:text-purple-400 transition">Services</Link>
           <span className="mx-2">/</span>
           <span className="text-slate-300">API Development & Integration</span>
         </nav>
@@ -26,7 +26,7 @@ export default function Page() {
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             {tags}
           </div>
-          <Link href="/configurator" className="btn-primary text-lg px-10 py-4 inline-block">⚡ Get Your Custom Proposal →</Link>
+          <Link href="/configurator/" className="btn-primary text-lg px-10 py-4 inline-block">⚡ Get Your Custom Proposal →</Link>
         </div>
 
         <!-- Features -->
@@ -60,8 +60,8 @@ export default function Page() {
             Whether you need a scoped proof-of-concept or a full enterprise engagement, we will tailor a plan that fits your timeline and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/configurator" className="btn-primary text-lg px-10 py-4">⚡ Get Custom Proposal</Link>
-            <Link href="/contact" className="btn-secondary text-lg px-10 py-4">Talk to an Expert</Link>
+            <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">⚡ Get Custom Proposal</Link>
+            <Link href="/contact/" className="btn-secondary text-lg px-10 py-4">Talk to an Expert</Link>
           </div>
         </section>
       </div>

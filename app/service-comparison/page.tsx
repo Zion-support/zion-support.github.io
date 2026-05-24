@@ -255,7 +255,7 @@ export default function ServiceComparisonPage() {
         <p className="text-slate-500 text-sm mb-3">
           Need a custom recommendation? Our AI matches you with the best-fit services.
         </p>
-        <Link href="/proposals" className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
+        <Link href="/proposals/" className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
           Get Your Custom Proposal →
         </Link>
       </div>

@@ -47,14 +47,14 @@ export default function AILabPage() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-cyan-700/20 transition hover:-translate-y-0.5"
             >
               Contact Us
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link
-              href="/services"
+              href="/services/"
               className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-6 py-3 text-base font-semibold text-slate-100 transition hover:border-cyan-300/70 hover:text-white"
             >
               View Services
@@ -96,7 +96,7 @@ export default function AILabPage() {
             Start with a discovery call to align your goals with the right apps, architecture, and delivery plan.
           </p>
           <Link
-            href="/contact"
+            href="/contact/"
             className="mt-6 inline-block rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Start a Conversation

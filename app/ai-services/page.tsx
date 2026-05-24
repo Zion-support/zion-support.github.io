@@ -54,7 +54,7 @@ export default function AIServicesPage() {
         <nav className="mb-8 text-sm text-slate-400">
           <Link href="/" className="hover:text-purple-400 transition">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/services" className="hover:text-purple-400 transition">Services</Link>
+          <Link href="/services/" className="hover:text-purple-400 transition">Services</Link>
           <span className="mx-2">/</span>
           <span className="text-slate-300">AI Services</span>
         </nav>
@@ -67,7 +67,7 @@ export default function AIServicesPage() {
             {aiServices.length}+ AI-powered services — from chatbots to computer vision, predictive analytics to autonomous agents.
           </p>
           <Link
-            href="/configurator"
+            href="/configurator/"
             className="btn-primary text-lg px-10 py-4 inline-block"
           >
             ⚡ Get Your Custom AI Proposal →
@@ -154,7 +154,7 @@ export default function AIServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+130****0950" className="btn-primary">📞 +1 302 464 0950</a>
-            <Link href="/contact" className="btn-secondary">✉️ Contact Us</Link>
+            <Link href="/contact/" className="btn-secondary">✉️ Contact Us</Link>
           </div>
         </div>
       </div>

@@ -123,7 +123,7 @@ export default async function ServicePage({ params }: PageProps) {
         <nav className="mb-8 text-sm text-slate-400">
           <Link href="/" className="hover:text-purple-400 transition">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/services" className="hover:text-purple-400 transition">Services</Link>
+          <Link href="/services/" className="hover:text-purple-400 transition">Services</Link>
           <span className="mx-2">/</span>
           <Link href={`/services?category=${encodeURIComponent(service.category)}`} className="hover:text-purple-400 transition">{catLabel}</Link>
           <span className="mx-2">/</span>
@@ -180,7 +180,7 @@ export default async function ServicePage({ params }: PageProps) {
                 <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary w-full text-center block">
                   ✉️ Email Us
                 </a>
-                <Link href="/configurator" className="btn-secondary w-full text-center block">
+                <Link href="/configurator/" className="btn-secondary w-full text-center block">
                   Get Custom Proposal →
                 </Link>
               </div>
@@ -288,7 +288,7 @@ export default async function ServicePage({ params }: PageProps) {
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-sm px-6 py-3">📅 Schedule Planning Call</a>
-                <Link href="/configurator" className="btn-secondary text-sm px-6 py-3">⚙️ Customise This Roadmap →</Link>
+                <Link href="/configurator/" className="btn-secondary text-sm px-6 py-3">⚙️ Customise This Roadmap →</Link>
               </div>
             </div>
           );
@@ -347,7 +347,7 @@ export default async function ServicePage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8">Get a Custom Quote</a>
-            <Link href="/pricing-calculator" className="btn-secondary text-lg px-8">Pricing Calculator</Link>
+            <Link href="/pricing-calculator/ className="btn-secondary text-lg px-8">Pricing Calculator</Link>
           </div>
         </section>
       </div>

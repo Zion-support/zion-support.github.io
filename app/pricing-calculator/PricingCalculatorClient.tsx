@@ -233,7 +233,7 @@ export default function PricingCalculatorClient() {
       {!tier.featured && overageUnits > 0 && (
         <p className="text-center text-xs text-amber-400/80 mb-4">
           ⚠️ {overageUnits} service{overageUnits > 1 ? 's' : ''} over the {tier.serviceLimit === Infinity ? '∞' : tier.serviceLimit.toString()} included — adding ${(overageUnits * 750).toLocaleString()}/mo in overage fees.
-          <a href="/pricing" className="underline ml-1">Upgrade tier →</a>
+          <a href="/pricing/" className="underline ml-1">Upgrade tier →</a>
         </p>
       )}
     </>

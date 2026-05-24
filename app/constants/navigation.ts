@@ -6,32 +6,32 @@ export type NavigationLink = {
 
 export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Home', href: '/' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Services', href: '/services' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Solutions', href: '/services/' },
+  { name: 'Services', href: '/services/' },
+  { name: 'Partners', href: '/partners/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: 'Pricing', href: '/pricing/' },
+  { name: 'Contact', href: '/contact/' },
 ];
 
 export const SOLUTION_LINKS: readonly NavigationLink[] = [
-  { name: 'All Solutions', href: '/solutions' },
-  { name: 'Healthcare', href: '/industry-solutions' },
-  { name: 'Financial Services', href: '/industry-solutions' },
-  { name: 'Manufacturing & Industrial', href: '/industry-solutions' },
-  { name: 'E‑Commerce & Retail', href: '/industry-solutions' },
-  { name: 'Technology & SaaS', href: '/industry-solutions' },
-  { name: 'Logistics & Supply Chain', href: '/industry-solutions' },
-  { name: 'Government & Public Sector', href: '/industry-solutions' },
-  { name: 'Insurance', href: '/industry-solutions' },
-  { name: 'Industries', href: '/industry-solutions' },
+  { name: 'All Solutions', href: '/services/' },
+  { name: 'Healthcare', href: '/industry-solutions/' },
+  { name: 'Financial Services', href: '/industry-solutions/' },
+  { name: 'Manufacturing & Industrial', href: '/industry-solutions/' },
+  { name: 'E‑Commerce & Retail', href: '/industry-solutions/' },
+  { name: 'Technology & SaaS', href: '/industry-solutions/' },
+  { name: 'Logistics & Supply Chain', href: '/industry-solutions/' },
+  { name: 'Government & Public Sector', href: '/industry-solutions/' },
+  { name: 'Insurance', href: '/industry-solutions/' },
+  { name: 'Industries', href: '/industry-solutions/' },
 ];
 // Resource Links
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
-  { name: 'Partners', href: '/partners' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Search', href: '/search' },
-  { name: 'Proposal Generator', href: '/proposal-generator' },
+  { name: 'Partners', href: '/partners/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: 'Search', href: '/search/' },
+  { name: 'Proposal Generator', href: '/proposal-generator/' },
   { name: 'ROI Calculator', href: '/tools/roi-calculator' },
   { name: 'Service Comparison', href: '/tools/service-comparison' },
   { name: 'Service Recommender', href: '/tools/service-recommender' },
@@ -39,7 +39,7 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
   { name: 'Port Scanner', href: '/tools/port-scanner' },
   { name: 'SSL Checker', href: '/tools/ssl-checker' },
   { name: 'Platform Status', href: '/tools/health-check' },
-  { name: 'Client Portal', href: '/portal' },
+  { name: 'Client Portal', href: '/portal/' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [

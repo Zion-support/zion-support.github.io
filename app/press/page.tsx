@@ -13,7 +13,7 @@ export default function PressPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <Link href="/about" className="text-emerald-400 hover:text-emerald-300 text-sm mb-6 inline-block">← About</Link>
+        <Link href="/about/" className="text-emerald-400 hover:text-emerald-300 text-sm mb-6 inline-block">← About</Link>
         <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text text-transparent">Press & Media</h1>
         <p className="text-slate-400 text-lg mb-8">Latest news, press releases, and thought leadership from Zion Tech Group.</p>
         <div className="space-y-6">

@@ -29,7 +29,7 @@ export default function PrivacyPage() {
               <li><strong className="text-white">Contact details</strong> — name, email address, phone number, and mailing address when you submit our contact form, request a proposal, or schedule a consultation.</li>
               <li><strong className="text-white">Company information</strong> — organisation name, size, industry, and operational context when completing our service configurator or request for proposal.</li>
               <li><strong className="text-white">Usage data</strong> — pages visited, time on site, referring URLs, device type, browser version, and interactions with navigation elements collected via first-party analytics. We do not sell or share usage data with third-party advertising networks.</li>
-              <li><strong className="text-white">Cookies</strong> — essential, analytics, preference, and marketing cookies as described in our <Link href="/cookies" className="text-emerald-400 hover:underline">Cookie Policy</Link>.</li>
+              <li><strong className="text-white">Cookies</strong> — essential, analytics, preference, and marketing cookies as described in our <Link href="/cookies/" className="text-emerald-400 hover:underline">Cookie Policy</Link>.</li>
             </ul>
           </Section>
 
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
           <Section num="4" title="Cookies">
             <p className="text-slate-300">
               We use cookies to enhance your browsing experience and analyse site traffic. For a full breakdown of
-              each cookie type, see our <Link href="/cookies" className="text-emerald-400 hover:underline">Cookie Policy</Link>.
+              each cookie type, see our <Link href="/cookies/" className="text-emerald-400 hover:underline">Cookie Policy</Link>.
             </p>
           </Section>
 
