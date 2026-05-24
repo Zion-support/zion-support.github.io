@@ -479,7 +479,7 @@
     "tasks": [
       {
         "id": "fix-servicesdata-ts-schema-18-entries-wi",
-        "title": "Fix servicesData.ts schema \u2014 18 entries with missing required fields",
+        "title": "Fix servicesData.ts schema — 18 entries with missing required fields",
         "priority": "medium",
         "area": "types",
         "detail": "Blocks: 0; missing fields vary per entry. Add title/description/features/benefits/pricing/contactInfo/icon/href with sensible defaults. RESOLVED: audit confirmed 0 entries missing required fields (all 599 entries have title/description/features/benefits/pricing/contactInfo/icon/href).",
@@ -506,6 +506,7 @@
         "title": "Fix {serviceCount}+ rendering as literal text in page.tsx L354 string-literal",
         "priority": "high",
         "area": "types",
+<<<<<<< HEAD
         "detail": "desc: \"...{serviceCount}+...\" string literal inside JS object step array becomes ${serviceCount}+ — was rendering as literal text in \"How It Works / AI-Powered Matching\" card (Step 2) instead of dynamic count."
 =======
         "title": "Fix {serviceCount}+ rendering as literal text in page.tsx L354 string-literality",
@@ -518,6 +519,9 @@
         "detail": "desc: '...{serviceCount}+...' string literal inside JS object step array becomes `\\${serviceCount}+` \u2014 was rendering as literal text in 'How It Works / AI-Powered Matching' card (Step 2) instead of dynamic count.",
         "status": "done"
 >>>>>>> ee5711b4 (chore(audit): mark 3 tasks done — hardcoded service counts fully resolved, string-literal bug at L354 closed, servicesData.ts schema audit confirms 0 missing fields)
+=======
+        "detail": "Fixed desc string literal to use ES6 template literal so the dynamic service count interpolates in the AI-Powered Matching step-2 card."
+>>>>>>> dfaa4621 (fix(task-board): rewrite zion-site-task-board.json with valid JSON — detail string used unescaped {serviceCount} which broke Node JSON.parse at position 1709 (string-literal now described without brace interpolation))
       }
     ]
   },
@@ -529,14 +533,14 @@
         "title": "Review @/components/* vs new @shared/* import path divergence",
         "priority": "high",
         "area": "types",
-        "detail": "tsconfig aliases: @/* \u2192 ./app/* exists; @shared/* may not resolve if path is ./components/* at repo root"
+        "detail": "tsconfig aliases: @/* to ./app/* exists; @shared/* may not resolve if path is ./components/* at repo root"
       },
       {
         "id": "disable-typescript-ignorebuilderrors-in-",
         "title": "Disable typescript.ignoreBuildErrors in next.config.js once type-check is clean",
         "priority": "high",
         "area": "types",
-        "detail": "Build currently silently swallows TS errors \u2014 harmful for CI"
+        "detail": "Build currently silently swallows TS errors — harmful for CI"
       },
       {
         "id": "brand-book-review-servicesdata-ts-uses-c",
@@ -552,7 +556,7 @@
     "tasks": [
       {
         "id": "navigation-ts-fix-6-navigationlink-type-",
-        "title": "navigation.ts \u2014 fix 6 NavigationLink type: number should be NavigationLink",
+        "title": "navigation.ts — fix 6 NavigationLink type: number should be NavigationLink",
         "priority": "medium",
         "area": "types",
         "detail": "Fixes pre-existing at/import type mismatches in billing/resource constants"
