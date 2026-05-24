@@ -258,21 +258,20 @@ let list = services;
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
               <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">AI & IT Services</span><br />
-              <span className="text-white">for Your Business</span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              <ServiceCounter /> real-world micro SAAS services, IT solutions, and AI-powered platforms.
-              From machine learning to cybersecurity, CRM automation to blockchain.
-              Get a custom proposal in minutes.
-            </p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="gradient-text">AI & IT Services</span><br />
+            <span className="text-white">for Your Business</span>
+          </h1>
+          <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <ServiceCounter /> real-world AI, IT, cloud, security, and automation services — from machine learning to cybersecurity, CRM automation to blockchain.
+            Get a free, custom proposal in minutes.
+          </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚡ Get Your Custom Proposal →
               </Link>
               <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
-                🛠️ Browse All {serviceCount}+ Services
+                🛠️ Explore All {serviceCount}+ Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
                 ☎ +1 302 464 0950
@@ -352,7 +351,7 @@ let list = services;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
-              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from {serviceCount}+ options.' },
+              { num: '02', title: 'AI-Powered Matching', desc: `Our AI engine recommends the best-fit services from ${serviceCount}+ options.` },
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (
