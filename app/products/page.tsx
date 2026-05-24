@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Products & Platforms | Zion Tech Group',
   description:
-    'Six product families, 626 services — AI, IT, Cloud, Security, Data, and Automation platforms for enterprise.',
+    'Six product families, 599+ services — AI, IT, Cloud, Security, Data, and Automation platforms for enterprise.',
 };
 
 const PRODUCTS: readonly {
