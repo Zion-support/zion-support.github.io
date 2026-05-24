@@ -3,6 +3,9 @@
 import { useState, useMemo, useCallback } from 'react';
 import { allServices } from '@/data/servicesData';
 
+
+const DEMO_ITEMS = 626;
+
 // ── Keywords + category weight boost ──────────────────────────────────────────
 const CAT_WEIGHT: Record<string, number> = {
   ai: 1.3, cloud: 1.2, security: 1.3, data: 1.1, it: 1.0, automation: 1.1,
@@ -145,7 +148,7 @@ export default function DemoSandboxClient() {
             Type a use-case, pick a scenario, or try a demo question. All scoring runs <strong>100% browser-side</strong> — no API call, no data sent anywhere.
           </p>
           <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-500">
-            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> 626 services indexed &nbsp;|&nbsp;
+            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> DEMO_ITEMS services indexed &nbsp;|&nbsp;
             <span>Zero server cost</span> &nbsp;|&nbsp; <span>Client-side only</span>
           </div>
         </div>
@@ -296,7 +299,7 @@ export default function DemoSandboxClient() {
         {/* Footer notes */}
         <div className="mt-12 pt-8 border-t border-slate-800/60 text-center">
           <p className="text-xs text-slate-600">
-            Demo by Zion Tech Group — 626 AI, IT, Cloud &amp; automation services indexed locally.
+            Demo by Zion Tech Group — DEMO_ITEMS AI, IT, Cloud &amp; automation services indexed locally.
             <br />No LLM API calls. No account required. Everything runs in your browser.
           </p>
         </div>
