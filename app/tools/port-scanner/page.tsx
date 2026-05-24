@@ -1,6 +1,14 @@
 // app/tools/port-scanner/page.tsx — Free Port Scanner (client-side via public API)
 'use client';
 import { pingTool } from '@/data/tools_ping_client';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Free Port Scanner | Zion Tech Group',
+  description: 'Scan a host for open ports, common TCP services, and security exposure — no sign-up required.',
+};
+
+
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';

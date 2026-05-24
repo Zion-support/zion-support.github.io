@@ -2,6 +2,14 @@
 'use client';
 
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: '550+ enterprise AI services — chatbots, RAG, computer vision, predictive analytics, autonomous agents, LLM integration, and more.',
+};
+
+
 import { useState, useMemo } from 'react';
 import { allServices } from '@/data/servicesData';
 import type { Service } from '@/data/servicesData';

@@ -1,6 +1,14 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Platform Status | Zion Tech Group',
+  description: 'Real-time platform and service status for Zion Tech Group infrastructure — uptime, incidents, and scheduled maintenance.',
+};
+
+
 import { allServices } from '@/data/servicesData';
 
 type CheckStatus = 'checking' | 'operational' | 'degraded' | 'outage' | 'unknown';

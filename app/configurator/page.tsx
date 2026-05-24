@@ -3,6 +3,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Solution Configurator | Zion Tech Group',
+  description: 'Answer a few questions — get a custom, itemised service proposal in minutes. AI, IT, cloud, security, data, automation.',
+};
+
+
 import { allServices } from '@/data/servicesData';
 import StepsIndicator from '@/components/StepsIndicator';
 

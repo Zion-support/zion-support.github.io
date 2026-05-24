@@ -2,6 +2,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'My Proposals | Zion Tech Group',
+  description: 'View and manage your custom service proposals from Zion Tech Group.',
+};
+
+
 
 interface Proposal {
   id: string;

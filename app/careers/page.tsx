@@ -1,6 +1,14 @@
 // Careers
 'use client';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Careers | Zion Tech Group',
+  description: 'Join Zion Tech Group — remote-first AI engineering, DevOps, solution architecture roles. Competitive equity, open-source culture.',
+};
+
+
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-16 px-4">

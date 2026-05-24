@@ -2,6 +2,14 @@
 'use client';
 'use client';
 import { useState, useEffect, useCallback } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Platform Health Check | Zion Tech Group',
+  description: 'Run a free autonomous platform health check — latency, uptime, and certificate status for your hosted services.',
+};
+
+
 import Link from 'next/link';
 
 type Status = 'ok' | 'warn' | 'fail';

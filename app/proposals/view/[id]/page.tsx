@@ -1,6 +1,14 @@
 // app/proposals/view/[id]/page.tsx
 // Dynamic proposal viewer — reads from automation/proposals/{id}.html or .json
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Proposal Detail | Zion Tech Group',
+  description: 'View and download your custom Zion Tech Group service proposal.',
+};
+
+
 
 // Pre-render as static — must return a non-empty array for output:export
 // '__sample__' is a sentinel; the component falls through to notFound() for it

@@ -1,6 +1,14 @@
 // Press
 'use client';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Press & Media | Zion Tech Group',
+  description: 'Latest news, press releases, and thought leadership from Zion Tech Group.',
+};
+
+
 export default function PressPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-16 px-4">

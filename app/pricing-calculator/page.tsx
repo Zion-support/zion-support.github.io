@@ -2,6 +2,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Pricing Calculator | Zion Tech Group',
+  description: 'Interactive pricing estimator for AI, IT, cybersecurity, cloud, and automation services. Get an instant cost range.',
+};
+
+
 import Link from 'next/link';
 
 const SERVICE_MULTIPLIERS: Record<string, { label: string; factor: number }> = {

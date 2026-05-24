@@ -2,6 +2,14 @@
 'use client';
 
 import { useState, useMemo, Suspense } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Enterprise AI & IT Services | Zion Tech Group',
+  description: 'Browse 550+ AI, IT, cloud, security, data analytics, and automation services — from chatbots and RAG to IoT and DevSecOps.',
+};
+
+
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import SmartSearchBar from '@/components/SmartSearchBar';

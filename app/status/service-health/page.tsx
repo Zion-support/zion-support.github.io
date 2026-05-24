@@ -1,5 +1,13 @@
 // app/status/service-health/page.tsx — Live Service Health Monitor
 import { allServices } from '@/data/servicesData';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Service Health | Zion Tech Group',
+  description: 'Live health status for individual Zion Tech Group services — response time, uptime, and incident history.',
+};
+
+
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import Link from 'next/link';

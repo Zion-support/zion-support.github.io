@@ -1,6 +1,14 @@
 // app/tools/ssl-checker/page.tsx — Free SSL/TLS Certificate Checker
 'use client';
 import { pingTool } from '@/data/tools_ping_client';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'SSL Certificate Checker | Zion Tech Group',
+  description: 'Free SSL/TLS certificate checker — validate expiry, issuer, grade, and protocol support for any domain.',
+};
+
+
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';

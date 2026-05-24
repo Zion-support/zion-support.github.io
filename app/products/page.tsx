@@ -6,3 +6,11 @@ export default function ProductsPage() {
     </div>
   );
 }
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Products | Zion Tech Group',
+  description: 'Browse our portfolio of AI platforms, automation tools, and Micro SAAS products.',
+};
+
