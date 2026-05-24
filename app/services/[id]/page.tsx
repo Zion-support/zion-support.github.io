@@ -347,7 +347,7 @@ export default async function ServicePage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8">Get a Custom Quote</a>
-            <Link href="/pricing-calculator/ className="btn-secondary text-lg px-8">Pricing Calculator</Link>
+            <Link href="/pricing-calculator/" className="btn-secondary text-lg px-8">Pricing Calculator</Link>
           </div>
         </section>
       </div>

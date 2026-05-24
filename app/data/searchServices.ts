@@ -1155,14 +1155,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/ai-knowledge-graph-search-deep"
   },
   {
-    "id": "ai-knowledge-graph-search-engine",
-    "title": "Knowledge Graph Search Engine",
-    "description": "Semantic graph search engine: turn siloed docs, databases, and APIs into a unified knowledge graph with entity disambiguation, NL query rewriting, and cited ranked answers across 50+ connected tools.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/ai-knowledge-graph-search-engine"
-  },
-  {
     "id": "ai-knowledge-management",
     "title": "AI Knowledge Management",
     "description": "Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detection, and intelligent Q&A across your document corpus.",
