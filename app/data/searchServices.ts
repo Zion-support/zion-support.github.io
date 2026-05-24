@@ -403,22 +403,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/ai-content-localization"
   },
   {
-    "id": "ai-content-moderation",
-    "title": "AI Content Moderation Platform",
-    "description": "Automated content review for user-generated platforms — detect spam, harassment, and policy violations across text, image, and video.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/ai-content-moderation"
-  },
-  {
-    "id": "ai-content-moderation-platform",
-    "title": "AI Content Moderation Platform",
-    "description": "Multi-modal moderation (text/image/video): NSFW, hate-speech, PII, copyright, brand-safety classifier; moderation queue + human-review.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/ai-content-moderation-platform"
-  },
-  {
     "id": "ai-content-moderation-suite",
     "title": "AI Content Moderation Suite | Zion Tech Group",
     "description": "Platform-agnostic content moderation: real-time text/image/video classification, multi-language support, custom policy rules, human-in-the-loop review queues, and automated takedown workflows for platforms, marketplaces, and social apps.",
@@ -1955,22 +1939,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/ai-sentiment-brand-pulse"
   },
   {
-    "id": "ai-seo-content-optimizer",
-    "title": "Ai Seo Content Optimizer",
-    "description": "Service description.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/ai-seo-content-optimizer"
-  },
-  {
-    "id": "ai-seo-optimizer",
-    "title": "AI SEO Content Optimizer",
-    "description": "Real-time SEO analysis and content optimization: keyword suggestions, meta tag generation, readability scoring, and content gap analysis.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/ai-seo-optimizer"
-  },
-  {
     "id": "ai-serverless-platform",
     "title": "Ai Serverless Platform",
     "description": "Service description.",
@@ -2371,22 +2339,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/ai-zero-trust-network-access"
   },
   {
-    "id": "analytics-attribution-mix",
-    "title": "Analytics Attribution & Marketing Mix Modeling",
-    "description": "Multi-touch attribution (first/last/linear/time-decay/position-based) + marketing mix modeling. CAC, LTV, ROAS per channel, campaign, cohort. Recommended budget allocation.",
-    "category": "data",
-    "popular": false,
-    "href": "/services/analytics-attribution-mix"
-  },
-  {
-    "id": "api-development",
-    "title": "API Development & Integration",
-    "description": "Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.",
-    "category": "cloud",
-    "popular": false,
-    "href": "/services/api-development"
-  },
-  {
     "id": "api-gateway-management",
     "title": "API Gateway & Management",
     "description": "Secure, scale, and monitor your APIs with enterprise-grade gateway management, rate limiting, and developer portal.",
@@ -2659,22 +2611,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/cloud-chaos-engineering-platform"
   },
   {
-    "id": "cloud-container-registry-trivy-scan",
-    "title": "Container Registry + Trivy Scan",
-    "description": "Private container registry with built-in Trivy CVE scanning, SBOM generation, image signing, and promotion pipeline (dev→staging→prod).",
-    "category": "cloud",
-    "popular": false,
-    "href": "/services/cloud-container-registry-trivy-scan"
-  },
-  {
-    "id": "cloud-cost-ai-optimizer",
-    "title": "AI Cloud Cost Optimizer",
-    "description": "Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, and idle resource cleanup.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/cloud-cost-ai-optimizer"
-  },
-  {
     "id": "cloud-cost-anomaly-detector",
     "title": "Cloud Cost Anomaly Detector",
     "description": "AI-powered cloud cost anomaly detection with root-cause attribution, budget forecasting, and auto-generated cost-reduction playbooks.",
@@ -2875,22 +2811,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/compliance-automation"
   },
   {
-    "id": "compliance-automation-engine",
-    "title": "Compliance Automation Engine",
-    "description": "Rule-based compliance engine that embeds regulatory logic into your data pipelines and APIs. Automates access reviews, entitlement certifications, policy violation detection, and remediation tracking.",
-    "category": "security",
-    "popular": false,
-    "href": "/services/compliance-automation-engine"
-  },
-  {
-    "id": "computer-vision-inspection",
-    "title": "Computer Vision Quality Inspection",
-    "description": "Auto-train Custom vision models for manufacturing quality control: surface defect detection, assembly verification, and real-time conveyor-belt inspection.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/computer-vision-inspection"
-  },
-  {
     "id": "container-security-lifecycle",
     "title": "Container & Kubernetes Security",
     "description": "Full container security: registry scanning (Trivy/Clair), runtime protection (Falco), OPA admission controllers, SBOM attestation per build.",
@@ -3049,22 +2969,6 @@ export const searchServices: SearchService[] = [
     "category": "data",
     "popular": false,
     "href": "/services/data-image-video-search"
-  },
-  {
-    "id": "data-image-video-search-engine",
-    "title": "Image and Video Search Engine",
-    "description": "Visual search engine for media libraries: CLIP-compatible index built from images and video frames up to 60 frames per second; multi-modal query with text or image; auto-cluster same-scene per video clip; people, location, and label auto-tags per frame.",
-    "category": "data",
-    "popular": false,
-    "href": "/services/data-image-video-search-engine"
-  },
-  {
-    "id": "data-lakehouse",
-    "title": "Data Lakehouse Platform",
-    "description": "Unified platform combining data lake flexibility with data warehouse performance — ACID transactions, time travel, and open-table format support.",
-    "category": "data",
-    "popular": false,
-    "href": "/services/data-lakehouse"
   },
   {
     "id": "data-log-analytics-platform",
@@ -3491,22 +3395,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/graphql-federation-platform"
   },
   {
-    "id": "hr-analytics",
-    "title": "HR Analytics",
-    "description": "HR Analytics transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make faster, m...",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/hr-analytics"
-  },
-  {
-    "id": "hybrid-multi-cloud-net",
-    "title": "Hybrid Multi-Cloud Networking",
-    "description": "Unified networking across private DC + public clouds: VPC peering, VPN/Direct Connect/Interconnect, centralized routing, cloud firewall, Istio/Linkerd cross-cloud mesh.",
-    "category": "cloud",
-    "popular": false,
-    "href": "/services/hybrid-multi-cloud-net"
-  },
-  {
     "id": "iam-identity-platform",
     "title": "IAM & Identity Platform",
     "description": "Cloud-native identity and access management with SSO, MFA, SCIM provisioning, and compliance reporting for enterprise.",
@@ -3545,22 +3433,6 @@ export const searchServices: SearchService[] = [
     "category": "cloud",
     "popular": false,
     "href": "/services/it-5g-network-deployment"
-  },
-  {
-    "id": "it-api-gateway-ai",
-    "title": "It Api Gateway Ai",
-    "description": "Service description.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/it-api-gateway-ai"
-  },
-  {
-    "id": "it-api-gateway-management",
-    "title": "API Gateway Management",
-    "description": "Enterprise API gateway: rate limiting, API key management, OAuth2 + mTLS, usage analytics, developer portal, request/response transforms, and dead-letter queue handling across cloud and on-prem APIs.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/it-api-gateway-management"
   },
   {
     "id": "it-api-gateway-openapi",
@@ -3819,22 +3691,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/it-digital-twin-platform"
   },
   {
-    "id": "it-digital-workplace-platform",
-    "title": "Digital Workplace Platform",
-    "description": "Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/it-digital-workplace-platform"
-  },
-  {
-    "id": "it-disaster-recovery",
-    "title": "Disaster Recovery & Business Continuity",
-    "description": "Comprehensive disaster recovery planning, automated failover systems, and business continuity solutions ensuring zero data loss and minimal downtime for mission-critical operations.",
-    "category": "cloud",
-    "popular": false,
-    "href": "/services/it-disaster-recovery"
-  },
-  {
     "id": "it-e-commerce-platform-advisor",
     "title": "E-Commerce Platform Advisor",
     "description": "Platform selection, headless storefront implementation, payments integration, and Shopify/BigCommerce/Salesforce Commerce migration guidance.",
@@ -3881,22 +3737,6 @@ export const searchServices: SearchService[] = [
     "category": "it",
     "popular": false,
     "href": "/services/it-endpoint-management-macos-windows"
-  },
-  {
-    "id": "it-endpoint-security-compliance",
-    "title": "Endpoint Security & Compliance Monitor",
-    "description": "EDR and XDR endpoint coverage with compliance attestation: CIS benchmark checks, disk-encrypt status, OS patch-level verification, software-inventory SBOM per asset, CISA KEV auto-detection, and SCAP reporting for regulated assessments.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/it-endpoint-security-compliance"
-  },
-  {
-    "id": "it-endpoint-security-compliance-monitor",
-    "title": "Endpoint Security & Compliance Monitor",
-    "description": "Endpoint security continuous monitoring: EDR detection + endpoint firewall + exploit prevention, CVE auto-fix via patch catalog, compliance posture for HIPAA/PCI/SOX/ISO27001 with automated audit evidence export.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/it-endpoint-security-compliance-monitor"
   },
   {
     "id": "it-esg-compliance-automation",
@@ -3961,22 +3801,6 @@ export const searchServices: SearchService[] = [
     "category": "it",
     "popular": false,
     "href": "/services/it-iot-device-management"
-  },
-  {
-    "id": "it-itil-service-management",
-    "title": "ITIL Service Management (ITSM) Platform",
-    "description": "Full ITIL-aligned service management with AI-powered ticketing, change management automation, CMDB discovery, and self-service portal for enterprise IT operations.",
-    "category": "it",
-    "popular": false,
-    "href": "/services/it-itil-service-management"
-  },
-  {
-    "id": "it-kubernetes-management",
-    "title": "Container Orchestration & Kubernetes Management",
-    "description": "Enterprise Kubernetes deployment, management, and optimization — multi-cluster orchestration, GitOps workflows, and service mesh implementation.",
-    "category": "cloud",
-    "popular": false,
-    "href": "/services/it-kubernetes-management"
   },
   {
     "id": "it-kubernetes-multicloud",
@@ -4667,22 +4491,6 @@ export const searchServices: SearchService[] = [
     "href": "/services/remote-it-support"
   },
   {
-    "id": "rpa-intelligent-automation",
-    "title": "RPA + Intelligent Document Processing | Zion Tech Group",
-    "description": "RPA robots augmented with AI document understanding: extract structured data from PDFs, invoices, and emails; fill ERP/CRM forms; reconcile payments; and escalate exceptions — end-to-end touchless processing.",
-    "category": "ai",
-    "popular": false,
-    "href": "/services/rpa-intelligent-automation"
-  },
-  {
-    "id": "rx-prior-auth",
-    "title": "Rx Prior-Auth Automation",
-    "description": "Automated prior authorization: eligibility check formulary check code auto-populate payer portal submission clinical note attach denial tracking remittance per payer analytics dashboard.",
-    "category": "automation",
-    "popular": false,
-    "href": "/services/rx-prior-auth"
-  },
-  {
     "id": "saas-development",
     "title": "SaaS Product Development",
     "description": "Full-stack SaaS development from concept to launch — MVP, scaling, and product-market fit optimization.",
@@ -4793,22 +4601,6 @@ export const searchServices: SearchService[] = [
     "category": "security",
     "popular": false,
     "href": "/services/security-privacy-enhancing-technologies"
-  },
-  {
-    "id": "security-privacy-program-automation",
-    "title": "Privacy Program Automation",
-    "description": "DPIA/LIA workflow, consent receipt ledger, DSAR ticketing + fulfilment SLA tracker, and automated GDPR/CCPA disclosure.",
-    "category": "security",
-    "popular": false,
-    "href": "/services/security-privacy-program-automation"
-  },
-  {
-    "id": "security-privileged-access-management",
-    "title": "Privileged Access Management",
-    "description": "PAM platform: just-in-time privilege elevation, live session recording with playback, FIPS-140-2 certified credential vault, break-glass override, least-privilege policy engine per role, and quarterly access certification auto-workflow.",
-    "category": "security",
-    "popular": true,
-    "href": "/services/security-privileged-access-management"
   },
   {
     "id": "security-sbom-supply-chain",
