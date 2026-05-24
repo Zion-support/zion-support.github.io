@@ -34,6 +34,13 @@ export default function ServiceSpotlight({ services }: { services: FeaturedServi
     return () => clearInterval(id);
   }, [next, paused, services.length]);
 
+  // Keep idx in bounds when the services array changes (e.g. filter, prop update)
+  useEffect(() => {
+    if (services.length && idx >= services.length) {
+      setIdx(services.length - 1);
+    }
+  }, [services.length]);
+
   if (!services.length) return null;
   const current = services[idx];
 
