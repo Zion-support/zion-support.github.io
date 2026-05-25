@@ -356,7 +356,7 @@ export default function Navigation() {
             <Link
               href="/contact/"
               className="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-3 rounded-lg text-sm font-semibold text-white"
-              onClick={() => setMobileOpen(false)}
+              onClick={() = data-cta-event="cta_contact" data-cta-label="Navigation"> setMobileOpen(false)}
             >
               Get Free Consultation →
             </Link>

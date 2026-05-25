@@ -95,7 +95,7 @@ export default function Page() {
             <Link
               href="/contact"
               className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
-            >
+             data-cta-event="cta_contact" data-cta-label="page">
               Book a Strategy Session
             </Link>
             <Link
