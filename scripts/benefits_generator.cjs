@@ -136,7 +136,7 @@ function generateBenefits(service) {
 // ── Parse the TS file ────────────────────────────────────────────────────
 const raw = fs.readFileSync(DATA_TS, 'utf8');
 
-// Map id → service object (reconstruct the 626-entry array)
+// Map id → service object (reconstruct the services.length-entry array)
 const ENTRY_RE = /(\{[^}]+\{[^}]+\}[^}]*\},?|,\s*\{[^}]+\},?)/g;
 const entries = raw.match(/\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g) || [];
 console.log(`Matched ${entries.length} candidate objects`);

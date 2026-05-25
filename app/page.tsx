@@ -826,7 +826,7 @@ let list = services;
         </div>
       </section>
 
-      {/* ── Service Search — find any of 626 services ── */}
+      {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
 
       {/* ── Spotlight Carousel ── */}
@@ -878,7 +878,7 @@ let list = services;
         </div>
       </section>
 
-      {/* ── Free Tools & Interactive Utilities — 626-service catalog ── */}
+      {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section className="py-16 border-t border-slate-800">
         <div className="container-page">
           <div className="text-center mb-10">
