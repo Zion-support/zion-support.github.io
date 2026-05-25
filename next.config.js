@@ -14,9 +14,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
-  // Ignore TypeScript errors during build for faster feedback
+  // TypeScript errors must block the build — gate is clean
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   // Ignore ESLint errors to allow build to proceed
   eslint: {
