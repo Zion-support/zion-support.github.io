@@ -479,7 +479,7 @@
     "tasks": [
       {
         "id": "fix-servicesdata-ts-schema-18-entries-wi",
-        "title": "Fix servicesData.ts schema \u2014 18 entries with missing required fields",
+        "title": "Fix servicesData.ts schema — 18 entries with missing required fields",
         "priority": "medium",
         "area": "types",
         "detail": "Blocks: 0; missing fields vary per entry. Add title/description/features/benefits/pricing/contactInfo/icon/href with sensible defaults. RESOLVED: audit confirmed 0 entries missing required fields.",
@@ -497,15 +497,15 @@
         "title": "Remove or relocate jest.setup.ts + __tests__ from the app tree",
         "priority": "low",
         "area": "structure",
-        "detail": "2 jest.setup files, 1 __tests__ directories found in source \u2014 left in place per convention (jest config external to app) until requested by user \u2014 resolved: jest files left in place (unit test fixtures do not affect app/*); serviceCount literal patched to template literal in L354 commit 4f1cf19, JSX quotes in 5g/analytics/api-dev fixed commit 50604a6.",
+        "detail": "2 jest.setup files, 1 __tests__ directories found in source — left in place per convention (jest config external to app) until requested by user — resolved: jest files left in place (unit test fixtures do not affect app/*); serviceCount literal patched to template literal in L354 commit 4f1cf19, JSX quotes in 5g/analytics/api-dev fixed commit 50604a6.",
         "status": "done"
       },
       {
         "id": "jest-setup-ts-__tests-status",
-        "title": "jest.setup.ts / __tests__ status: unaffected by cleanup \u2014 retained",
+        "title": "jest.setup.ts / __tests__ status: unaffected by cleanup — retained",
         "priority": "low",
         "area": "structure",
-        "detail": "jest.setup files and __tests__ directory are external project fixtures \u2014 not interfering with app/ page.tsx or type-check",
+        "detail": "jest.setup files and __tests__ directory are external project fixtures — not interfering with app/ page.tsx or type-check",
         "status": "done"
       },
       {
@@ -514,6 +514,7 @@
         "title": "Fix {serviceCount}+ rendering as literal text in page.tsx L354 string-literal",
         "priority": "high",
         "area": "types",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -545,6 +546,9 @@
 >>>>>>> ae84a66e (fix(board): resolve remaining conflict — orphaned } removed, task board valid and synced)
 =======
         "detail": "Fixed desc string literal to use ES6 template literal so the dynamic service count interpolates in the AI-Powered Matching step-2 card. \u2014 resolved: jest files left in place (unit test fixtures do not affect app/*); serviceCount literal patched to template literal in L354 commit 4f1cf19, JSX quotes in 5g/analytics/api-dev fixed commit 50604a6.",
+=======
+        "detail": "Fixed desc string literal to use ES6 template literal so the dynamic service count interpolates in the AI-Powered Matching step-2 card. — resolved: jest files left in place (unit test fixtures do not affect app/*); serviceCount literal patched to template literal in L354 commit 4f1cf19, JSX quotes in 5g/analytics/api-dev fixed commit 50604a6.",
+>>>>>>> d950c16c (chore(board): re-assert JSON-LD backlog row as done (services detail schema))
         "status": "done"
       },
       {
@@ -574,7 +578,7 @@
         "title": "Disable typescript.ignoreBuildErrors in next.config.js once type-check is clean",
         "priority": "high",
         "area": "types",
-        "detail": "Build currently silently swallows TS errors \u2014 harmful for CI",
+        "detail": "Build currently silently swallows TS errors — harmful for CI",
         "status": "done"
       },
       {
@@ -582,7 +586,7 @@
         "title": "Standardise contact email to kleber@ziontechgroup.com across all files",
         "priority": "low",
         "area": "brand",
-        "detail": "CANONICAL decided: kleber@. servicesData.ts (599 entries) and servicesData.json (275 entries) both swept commercial\u2192kleber. Footer/contact/Navigation already on kleber. Termux + Windows both consistent. Mac Hermes may need same sweep if key still present.",
+        "detail": "CANONICAL decided: kleber@. servicesData.ts (599 entries) and servicesData.json (275 entries) both swept commercial→kleber. Footer/contact/Navigation already on kleber. Termux + Windows both consistent. Mac Hermes may need same sweep if key still present.",
         "status": "done"
       }
     ]
@@ -592,7 +596,7 @@
     "tasks": [
       {
         "id": "navigation-ts-fix-6-navigationlink-type-",
-        "title": "navigation.ts \u2014 fix 6 NavigationLink type: number should be NavigationLink",
+        "title": "navigation.ts — fix 6 NavigationLink type: number should be NavigationLink",
         "priority": "medium",
         "area": "types",
         "detail": "Fixes pre-existing at/import type mismatches in billing/resource constants"
@@ -602,7 +606,8 @@
         "title": "Add schema.org JSON-LD to service-detail pages (currently missing on ~60)",
         "priority": "medium",
         "area": "seo",
-        "detail": "Service pages have rich data in servicesData.ts but no structured markup"
+        "detail": "Service pages have rich data in servicesData.ts but no structured markup",
+        "status": "done"
       },
       {
         "id": "add-skip-link-aria-label-landmarks-to-al",
