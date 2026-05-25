@@ -145,7 +145,7 @@ export default function DemoSandboxClient() {
             Type a use-case, pick a scenario, or try a demo question. All scoring runs <strong>100% browser-side</strong> — no API call, no data sent anywhere.
           </p>
           <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-500">
-            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> 626 services indexed &nbsp;|&nbsp;
+            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> {allServices.length}+ services indexed &nbsp;|&nbsp;
             <span>Zero server cost</span> &nbsp;|&nbsp; <span>Client-side only</span>
           </div>
         </div>
