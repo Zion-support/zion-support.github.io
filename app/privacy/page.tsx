@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
     'Zion Tech Group privacy policy — how we collect, use, and protect your personal information.',
-  alternates: { canonical: '/privacy' },
+  alternates: { canonical: '/privacy/' },
 };
 
 export default function PrivacyPage() {

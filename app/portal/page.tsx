@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Client Portal — Zion Tech Group',
+  title: 'Client Portal',
 };
 
 export default function PortalPage() {

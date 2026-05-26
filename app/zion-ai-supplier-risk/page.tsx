@@ -2,10 +2,10 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Supplier Risk | Zion Tech Group',
+  title: 'Zion AI Supplier Risk',
   description:
     'Monitor supplier health, geopolitical risk, and supply chain disruptions with predictive alerts.',
-  alternates: { canonical: '/zion-ai-supplier-risk' },
+  alternates: { canonical: '/zion-ai-supplier-risk/' },
 };
 
 export default function Page() {

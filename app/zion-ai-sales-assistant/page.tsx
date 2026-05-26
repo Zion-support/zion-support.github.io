@@ -2,10 +2,10 @@ import ProductPageLayout from '../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Sales Assistant | Zion Tech Group',
+  title: 'Zion AI Sales Assistant',
   description:
     'Accelerate sales cycles with AI-powered call summaries, follow-up suggestions, and competitive intelligence.',
-  alternates: { canonical: '/zion-ai-sales-assistant' },
+  alternates: { canonical: '/zion-ai-sales-assistant/' },
 };
 
 export default function Page() {

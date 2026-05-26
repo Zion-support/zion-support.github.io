@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Proposal Detail | Zion Tech Group',
+  title: 'Proposal Detail',
   description: 'View and download your custom Zion Tech Group service proposal.',
 };
 

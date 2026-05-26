@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Zion AI Workflow Orchestrator',
   description:
     'Orchestrate cross-system workflows with intelligent routing, retries, and dependency management.',
-  alternates: { canonical: '/zion-ai-workflow-orchestrator' },
+  alternates: { canonical: '/zion-ai-workflow-orchestrator/' },
 };
 
 export default function Page() {

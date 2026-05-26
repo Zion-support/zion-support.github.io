@@ -2,9 +2,9 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Pricing — Zion Tech Group',
+  title: 'Pricing',
   description: 'Transparent pricing tiers for AI, IT, and Micro-SaaS services. From startup to enterprise.',
-  alternates: { canonical: '/pricing' },
+  alternates: { canonical: '/pricing/' },
 };
 
 export default function PricingPage() {

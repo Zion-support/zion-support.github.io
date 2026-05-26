@@ -2,10 +2,10 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Talent Acquisition | Zion Tech Group',
+  title: 'Zion AI Talent Acquisition',
   description:
     'Source, screen, and qualify candidates with AI-powered matching and automated outreach workflows.',
-  alternates: { canonical: '/zion-ai-talent-acquisition' },
+  alternates: { canonical: '/zion-ai-talent-acquisition/' },
 };
 
 export default function Page() {
