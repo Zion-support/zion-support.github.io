@@ -1,6 +1,6 @@
 // app/industry-solutions/page.tsx — Industry Solutions Landing
 'use client';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 
 
 import Link from 'next/link';
@@ -46,6 +46,12 @@ const IND_COUNT: Record<string, number> = {
 
 export default function IndustrySolutionsPage() {
   const [filter, setFilter] = useState<string | null>(null);
+
+  // Read ?industry= param from URL on mount (supports direct linking)
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get('industry');
+    if (p && INDUSTRIES.includes(p as any)) setFilter(p);
+  }, []);
 
   const services: IndustryService[] = (allServices as any[]).map((s) => ({
     ...s,

@@ -329,7 +329,7 @@ export default async function ServicePage({ params }: PageProps) {
                   })}
               </div>
               <div className="text-center mt-6">
-                <Link href={`/services?category=${service.category}`}
+                <Link href={`/services/?category=${service.category}`}
                   className="text-sm text-purple-400 hover:text-purple-300 font-medium transition">
                   View all {catLabel} services →
                 </Link>

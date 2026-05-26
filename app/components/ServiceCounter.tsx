@@ -5,7 +5,7 @@ import { searchServices } from '@/data/searchServices';
 
 /** Animated number counter — counts up from 0 to target on mount */
 export default function ServiceCounter() {
-  const [displayed, setDisplayed] = useState(0);
+  const [displayed, setDisplayed] = useState(searchServices.length);
   const target  = searchServices.length;
   const started = useRef(false);
   const raf     = useRef<number>(0);

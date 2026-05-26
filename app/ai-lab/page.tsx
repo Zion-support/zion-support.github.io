@@ -19,7 +19,7 @@ const PLAYGROUND_CARDS: ToolCard[] = [
   {
     emoji: '🧩',
     name: 'Solutions Configurator',
-    href: '/ai/solutions-configurator',
+    href: '/ai/solutions-configurator/',
     description:
       'Tell us where you are, what you want to improve, and which systems you rely on. Get a deterministic, in-browser blueprint of how Zion\'s autonomous platform would be assembled for you.',
     tag: 'Interactive',
@@ -28,7 +28,7 @@ const PLAYGROUND_CARDS: ToolCard[] = [
   {
     emoji: '🔍',
     name: 'URL Audit Assistant',
-    href: '/ai/url-audit-assistant',
+    href: '/ai/url-audit-assistant/',
     description:
       'Analyze URLs for SEO, content, and technical factors. Get actionable insights on how AI could optimize your web presence — all client-side, no data leaves your browser.',
     tag: 'Tool',
@@ -37,7 +37,7 @@ const PLAYGROUND_CARDS: ToolCard[] = [
   {
     emoji: '🧪',
     name: 'AI Service Demo Sandbox',
-    href: '/ai/demo',
+    href: '/ai/demo/',
     description:
       'Try Zion\'s AI service matching tool live — no sign-up, no API key. Type a use case and get ranked service recommendations computed instantly in your browser.',
     tag: 'Demo',
@@ -46,7 +46,7 @@ const PLAYGROUND_CARDS: ToolCard[] = [
   {
     emoji: '⚡',
     name: 'Platform Health Check',
-    href: '/tools/health-check',
+    href: '/tools/health-check/',
     description:
       'Autonomous diagnostic that runs every check without any API key. Tests page render, memory, Next.js runtime, network reachability, and SSL — all client-side.',
     tag: 'Utility',
@@ -55,7 +55,7 @@ const PLAYGROUND_CARDS: ToolCard[] = [
   {
     emoji: '🛡️',
     name: 'SSL Certificate Checker',
-    href: '/tools/ssl-checker',
+    href: '/tools/ssl-checker/',
     description:
       'Verify SSL/TLS certificate validity, issuer, and expiration for any domain. Quick in-browser probe with detailed certificate chain information.',
     tag: 'Utility',
@@ -64,7 +64,7 @@ const PLAYGROUND_CARDS: ToolCard[] = [
   {
     emoji: '🌐',
     name: 'Port Scanner',
-    href: '/tools/port-scanner',
+    href: '/tools/port-scanner/',
     description:
       'Scan common ports on any hostname to check service availability. Lightweight TCP probe that runs entirely in your browser.',
     tag: 'Tool',
@@ -120,12 +120,12 @@ const DEMO_CARDS: DemoCard[] = [
 // ─── Key AI Pages ─────────────────────────────────────────────────────────
 
 const AI_PAGES = [
-  { href: '/ai-services', label: '🧠 AI Services', desc: 'Browse all AI services' },
-  { href: '/configurator', label: '⚡ Get a Custom Proposal', desc: 'AI-powered proposal engine' },
-  { href: '/services?category=ai', label: '🗂️ AI Service Catalog', desc: 'Filtered by AI category' },
-  { href: '/blog', label: '📖 AI Blog', desc: 'Latest AI insights & guides' },
-  { href: '/status', label: '📡 System Status', desc: 'Live platform health' },
-  { href: '/contact', label: '✉️ Contact Us', desc: 'Get in touch' },
+  { href: '/ai-services/', label: '🧠 AI Services', desc: 'Browse all AI services' },
+  { href: '/configurator/', label: '⚡ Get a Custom Proposal', desc: 'AI-powered proposal engine' },
+  { href: '/services/?category=ai', label: '🗂️ AI Service Catalog', desc: 'Filtered by AI category' },
+  { href: '/blog/', label: '📖 AI Blog', desc: 'Latest AI insights & guides' },
+  { href: '/status/', label: '📡 System Status', desc: 'Live platform health' },
+  { href: '/contact/', label: '✉️ Contact Us', desc: 'Get in touch' },
 ];
 
 // ─── Tag badge helper ─────────────────────────────────────────────────────

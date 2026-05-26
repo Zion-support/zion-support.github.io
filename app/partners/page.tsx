@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Partners &amp; Alliances',
+  title: 'Partners & Alliances',
   description: 'Our technology partners and strategic alliances — AWS, Microsoft, Google Cloud, NVIDIA, OpenAI, and more.',
   alternates: { canonical: '/partners/' },
 };

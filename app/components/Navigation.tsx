@@ -118,12 +118,12 @@ export default function Navigation() {
                 <div className="grid grid-cols-2 gap-2">
                   {/* Industry cards */}
                   {[
-                    { name:'Healthcare & Life Sciences', emoji:'🏥', desc:'HIPAA-compliant AI, diagnostics, patient engagement', href:'/industry-solutions/' },
-                    { name:'Financial Services & FinTech', emoji:'💳', desc:'RegTech, fraud detection, trading bots, KYC', href:'/industry-solutions/' },
-                    { name:'Manufacturing & Industrial', emoji:'🏗️', desc:'Predictive maintenance, supply chain, quality AI', href:'/industry-solutions/' },
-                    { name:'Retail & E-Commerce', emoji:'🛒', desc:'Recommendation engines, inventory AI, dynamic pricing', href:'/industry-solutions/' },
-                    { name:'Technology & SaaS', emoji:'🏭', desc:'Dev tools, platform engineering, micro-SaaS', href:'/industry-solutions/' },
-                    { name:'Logistics & Supply Chain', emoji:'🚚', desc:'Route optimization, warehouse automation, tracking', href:'/industry-solutions/' },
+                    { name:'Healthcare & Life Sciences', emoji:'🏥', desc:'HIPAA-compliant AI, diagnostics, patient engagement', href:'/industry-solutions/?industry=Healthcare' },
+                    { name:'Financial Services & FinTech', emoji:'💳', desc:'RegTech, fraud detection, trading bots, KYC', href:'/industry-solutions/?industry=Finance' },
+                    { name:'Manufacturing & Industrial', emoji:'🏗️', desc:'Predictive maintenance, supply chain, quality AI', href:'/industry-solutions/?industry=Manufacturing' },
+                    { name:'Retail & E-Commerce', emoji:'🛒', desc:'Recommendation engines, inventory AI, dynamic pricing', href:'/industry-solutions/?industry=E-Commerce' },
+                    { name:'Technology & SaaS', emoji:'🏭', desc:'Dev tools, platform engineering, micro-SaaS', href:'/industry-solutions/?industry=SaaS' },
+                    { name:'Logistics & Supply Chain', emoji:'🚚', desc:'Route optimization, warehouse automation, tracking', href:'/industry-solutions/?industry=General' },
                   ].map((ind, i) => (
                     <Link key={i} href={ind.href} onClick={() => setSolutionsOpen(false)}
                       className="block px-3 py-2.5 rounded-lg bg-slate-800/40 border border-slate-700/40 hover:border-purple-500/30 hover:bg-slate-800/70 transition-all group"

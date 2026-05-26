@@ -28,7 +28,7 @@ const PRODUCTS: readonly {
     desc: 'Generative AI, autonomous agents, computer vision, RAG platforms, LLM orchestration, and enterprise copilots.',
     emoji: '🤖',
     count: 322,
-    cta: '/services?category=ai',
+    cta: '/services/?category=ai',
     bullets: [
       'Enterprise AI Copilots & Assistants',
       'Autonomous Agents & Workflow Orchestration',
@@ -44,7 +44,7 @@ const PRODUCTS: readonly {
     desc: 'DevOps, DevSecOps, API platforms, site reliability engineering, and infrastructure-as-code tooling.',
     emoji: '🔧',
     count: 113,
-    cta: '/services?category=it',
+    cta: '/services/?category=it',
     bullets: [
       'CI/CD & Automated Deployments',
       'API Gateway & Rate-Limiting',
@@ -60,7 +60,7 @@ const PRODUCTS: readonly {
     desc: 'Multi-cloud migration, managed Kubernetes, serverless platforms, and 24/7 cloud operations.',
     emoji: '☁️',
     count: 69,
-    cta: '/services?category=cloud',
+    cta: '/services/?category=cloud',
     bullets: [
       'Multi-Cloud Migration',
       'Managed Kubernetes & Containers',
@@ -76,7 +76,7 @@ const PRODUCTS: readonly {
     desc: 'Threat detection, SIEM, SOAR, compliance automation, identity management, and zero-trust controls.',
     emoji: '🛡',
     count: 50,
-    cta: '/services?category=security',
+    cta: '/services/?category=security',
     bullets: [
       'SIEM, SOAR & XDR',
       'AI-Powered Threat Detection',
@@ -92,7 +92,7 @@ const PRODUCTS: readonly {
     desc: 'Enterprise BI, predictive analytics, data lakes, real-time streaming, and self-serve analytics tools.',
     emoji: '📊',
     count: 40,
-    cta: '/services?category=data',
+    cta: '/services/?category=data',
     bullets: [
       'Executive BI Dashboards',
       'Predictive ML Forecasting',
@@ -108,7 +108,7 @@ const PRODUCTS: readonly {
     desc: 'RPA, intelligent document processing, workflow orchestration, and hyper-automation playbooks.',
     emoji: '⚡',
     count: 32,
-    cta: '/services?category=automation',
+    cta: '/services/?category=automation',
     bullets: [
       'RPA + AI Agent Orchestration',
       'Intelligent Document Processing (IDP)',
