@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Zion AI Employee Experience',
   description:
     'Measure and improve employee engagement with pulse surveys, sentiment analysis, and action insights.',
-  alternates: { canonical: '/zion-ai-employee-experience' },
+  alternates: { canonical: '/zion-ai-employee-experience/' },
 };
 
 export default function Page() {

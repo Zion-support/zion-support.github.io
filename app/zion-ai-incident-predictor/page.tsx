@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Zion AI Incident Predictor',
   description:
     'Predict incidents and outages before they occur using anomaly detection and pattern analysis.',
-  alternates: { canonical: '/zion-ai-incident-predictor' },
+  alternates: { canonical: '/zion-ai-incident-predictor/' },
 };
 
 export default function Page() {

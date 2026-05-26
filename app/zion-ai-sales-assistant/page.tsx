@@ -1,22 +1,22 @@
-import ProductPageLayout from '@/components/ProductPageLayout';
+import ProductPageLayout from '../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Procurement Automation',
+  title: 'Zion AI Sales Assistant',
   description:
-    'Automate sourcing, vendor selection, and purchase workflows with intelligent spend analysis and approval routing.',
-  alternates: { canonical: '/zion-ai-procurement-automation/' },
+    'Accelerate sales cycles with AI-powered call summaries, follow-up suggestions, and competitive intelligence.',
+  alternates: { canonical: '/zion-ai-sales-assistant/' },
 };
 
 export default function Page() {
   return (
     <ProductPageLayout
       data={{
-        title: 'Zion AI Procurement Automation',
-        category: 'Operations',
+        title: 'Zion AI Sales Assistant',
+        category: 'Growth',
         description:
-          'Automate sourcing, vendor selection, and purchase workflows with intelligent spend analysis and approval routing.',
-        iconEmoji: '🛒',
+          'Accelerate sales cycles with AI-powered call summaries, follow-up suggestions, and competitive intelligence.',
+        iconEmoji: '📞',
         features: [
           {
             "title": "Production-Ready",
@@ -34,17 +34,17 @@ export default function Page() {
         useCases: [
           {
             "title": "Operational Efficiency",
-            "description": "Deploy Zion AI Procurement Automation to automate routine tasks and reduce manual errors.",
+            "description": "Deploy Zion AI Sales Assistant to automate routine tasks and reduce manual errors.",
             "icon": "⚡"
           },
           {
             "title": "Scalable Growth",
-            "description": "Use Zion AI Procurement Automation to handle increasing complexity without proportional headcount.",
+            "description": "Use Zion AI Sales Assistant to handle increasing complexity without proportional headcount.",
             "icon": "📈"
           }
         ],
         benefits: ["Reduced operational costs", "Faster time to value", "Enterprise-grade security"],
-        ctaLabel: 'Get Started with Zion AI Procurement Automation',
+        ctaLabel: 'Get Started with Zion AI Sales Assistant',
       }}
     />
   );

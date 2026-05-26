@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
     'Terms of Service for Zion Tech Group — governing your use of our website and services.',
-  alternates: { canonical: '/terms' },
+  alternates: { canonical: '/terms/' },
 };
 
 export default function TermsPage() {

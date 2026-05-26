@@ -243,14 +243,7 @@ export default function Navigation() {
           </div>
 
           {/* Primary nav links */}
-          {/* Hardcoded primary links (Home already in logo area) */}
-          <NavLink
-            key="blog"
-            link={{ name: 'Blog', href: '/blog/' }}
-          />
-
-          {/* Remaining primary links from constants */}
-          {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
+          {PRIMARY_NAV_LINKS.map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
 
