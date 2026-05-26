@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | Zion Tech Group',
+  title: 'About Us',
   description: 'Zion Tech Group is an AI, IT, and Micro SAAS company helping enterprises transform operations with intelligent systems.',
 };
 

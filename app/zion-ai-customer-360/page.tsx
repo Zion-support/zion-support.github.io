@@ -2,7 +2,7 @@ import ProductPageLayout from '../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Customer 360 | Zion Tech Group',
+  title: 'Zion AI Customer 360',
   description:
     'Unify customer data from all touchpoints into a single view with AI-powered insights and next-best-action recommendations.',
   alternates: { canonical: '/zion-ai-customer-360' },

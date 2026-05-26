@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Incident Predictor | Zion Tech Group',
+  title: 'Zion AI Incident Predictor',
   description:
     'Predict incidents and outages before they occur using anomaly detection and pattern analysis.',
   alternates: { canonical: '/zion-ai-incident-predictor' },

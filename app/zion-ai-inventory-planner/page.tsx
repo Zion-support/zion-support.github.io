@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Inventory Planner | Zion Tech Group',
+  title: 'Zion AI Inventory Planner',
   description:
     'Optimize inventory levels across SKUs and locations with demand-driven replenishment and safety stock AI.',
   alternates: { canonical: '/zion-ai-inventory-planner' },

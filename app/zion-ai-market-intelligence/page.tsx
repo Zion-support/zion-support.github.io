@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Market Intelligence | Zion Tech Group',
+  title: 'Zion AI Market Intelligence',
   description:
     'Track market trends, competitor moves, and industry signals with AI-powered aggregation and alerts.',
   alternates: { canonical: '/zion-ai-market-intelligence' },

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '5G & Private Network Solutions | Zion Tech Group',
+  title: '5G & Private Network Solutions',
   description: 'Private 5G networks, edge IoT, network slicing, and spectrum advisory for enterprise connectivity.',
 };
 

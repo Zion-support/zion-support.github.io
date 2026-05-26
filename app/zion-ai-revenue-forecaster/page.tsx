@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Revenue Forecaster | Zion Tech Group',
+  title: 'Zion AI Revenue Forecaster',
   description:
     'Forecast revenue with multi-signal models that factor in pipeline, seasonality, and market trends.',
   alternates: { canonical: '/zion-ai-revenue-forecaster' },

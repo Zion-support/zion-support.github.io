@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'AI Lab | Zion Tech Group',
+  title: 'AI Lab',
   description: "Explore Zion's AI Lab — interactive tools and configurators for autonomous AI solutions and architecture planning.",
 };
 

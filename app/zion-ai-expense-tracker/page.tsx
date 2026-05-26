@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Expense Tracker | Zion Tech Group',
+  title: 'Zion AI Expense Tracker',
   description:
     'Automate expense capture, categorization, and policy compliance with receipt OCR and smart routing.',
   alternates: { canonical: '/zion-ai-expense-tracker' },

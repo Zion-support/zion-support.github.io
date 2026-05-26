@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Project Portfolio | Zion Tech Group',
+  title: 'Zion AI Project Portfolio',
   description:
     'Prioritize and balance project portfolios with resource capacity, risk, and strategic alignment insights.',
   alternates: { canonical: '/zion-ai-project-portfolio' },

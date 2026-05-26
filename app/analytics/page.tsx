@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Data Analytics & BI | Zion Tech Group',
+  title: 'Data Analytics & BI',
   description: 'Executive BI dashboards, predictive forecasting, embedded analytics, and self-serve analytics platforms.',
 };
 

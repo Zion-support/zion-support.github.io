@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Schedule Optimizer | Zion Tech Group',
+  title: 'Zion AI Schedule Optimizer',
   description:
     'Optimize shift scheduling, resource allocation, and capacity planning with constraint-aware AI.',
   alternates: { canonical: '/zion-ai-schedule-optimizer' },

@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Cyber Threat Intel | Zion Tech Group',
+  title: 'Zion AI Cyber Threat Intel',
   description:
     'Aggregate and prioritize threat intelligence with automated correlation and actionable alerts.',
   alternates: { canonical: '/zion-ai-cyber-threat-intel' },

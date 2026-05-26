@@ -3,7 +3,7 @@ import { allServices } from '@/data/servicesData';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Service Health | Zion Tech Group',
+  title: 'Service Health',
   description: 'Live health status for individual Zion Tech Group services — response time, uptime, and incident history.',
 };
 

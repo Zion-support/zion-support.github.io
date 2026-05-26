@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Document Classifier | Zion Tech Group',
+  title: 'Zion AI Document Classifier',
   description:
     'Automatically classify and route documents with ML models that learn from your taxonomy.',
   alternates: { canonical: '/zion-ai-document-classifier' },

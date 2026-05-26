@@ -16,15 +16,12 @@ export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
 
 export const SOLUTION_LINKS: readonly NavigationLink[] = [
   { name: 'All Solutions', href: '/services/' },
-  { name: 'Healthcare', href: '/industry-solutions/' },
-  { name: 'Financial Services', href: '/industry-solutions/' },
-  { name: 'Manufacturing & Industrial', href: '/industry-solutions/' },
-  { name: 'E‑Commerce & Retail', href: '/industry-solutions/' },
-  { name: 'Technology & SaaS', href: '/industry-solutions/' },
-  { name: 'Logistics & Supply Chain', href: '/industry-solutions/' },
-  { name: 'Government & Public Sector', href: '/industry-solutions/' },
-  { name: 'Insurance', href: '/industry-solutions/' },
-  { name: 'Industries', href: '/industry-solutions/' },
+  { name: 'AI & Automation', href: '/services?category=ai' },
+  { name: 'IT & Infrastructure', href: '/services?category=it' },
+  { name: 'Cloud & DevOps', href: '/services?category=cloud' },
+  { name: 'Security & Compliance', href: '/services?category=security' },
+  { name: 'Data & Analytics', href: '/services?category=data' },
+  { name: 'Industry Solutions', href: '/industry-solutions/' },
 ];
 // Resource Links
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
@@ -541,8 +538,8 @@ export const IT_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Technical Writing & Developer Documentation', href: '/services/tech-writing-docs' },
   { name: 'Vulnerability Assessment & Penetration Testing', href: '/services/vulnerability-assessment-penetration-testing' },
   { name: 'AI-Powered Performance Monitoring', href: '/services/ai-performance-monitoring' },
-+  { name: 'GraphQL Federation & API Composition Platform', href: '/services/graphql-federation-platform' },
-+  { name: 'Kubernetes Operator for Database Automation', href: '/services/kubernetes-operator-database' },
+  { name: 'GraphQL Federation & API Composition Platform', href: '/services/graphql-federation-platform' },
+  { name: 'Kubernetes Operator for Database Automation', href: '/services/kubernetes-operator-database' },
  ];
 export const CLOUD_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'API Development & Integration', href: '/services/api-development' },
@@ -612,7 +609,7 @@ export const CLOUD_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Sovereign & Regulated Cloud Hosting', href: '/services/sovereign-cloud-hosting' },
   { name: 'Virtual Private Cloud', href: '/services/virtual-private-cloud' },
   { name: 'Zero-Trust Network Access (ZTNA)', href: '/services/zero-trust-network-access' },
-+  { name: 'Cloud Cost Anomaly Detector — ML-Powered', href: '/services/cloud-cost-anomaly-detector-ml' },
+  { name: 'Cloud Cost Anomaly Detector — ML-Powered', href: '/services/cloud-cost-anomaly-detector-ml' },
  ];
 export const SECURITY_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Attack Surface Management (ASM)', href: '/services/attack-surface-management' },
@@ -663,7 +660,7 @@ export const SECURITY_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'SIEM Security Platform', href: '/services/siem-security-platform' },
   { name: 'Software Supply Chain Security', href: '/services/software-supply-chain-sec' },
   { name: 'Zero Trust Access Gateway', href: '/services/zero-trust-access' },
-+  { name: 'AI DDoS Protection & Mitigation Platform', href: '/services/ai-ddos-protection-platform' },
+  { name: 'AI DDoS Protection & Mitigation Platform', href: '/services/ai-ddos-protection-platform' },
  ];
 export const DATA_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'AI Data Quality & Enforcement Engine', href: '/services/ai-data-quality-engine' },
@@ -705,7 +702,7 @@ export const DATA_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Observability Data Lakehouse', href: '/services/observability-lakehouse' },
   { name: 'Self-Service Analytics Platform', href: '/services/self-service-analytics' },
   { name: 'Real-Time Streaming Analytics', href: '/services/streaming-realtime-analytics' },
-+  { name: 'Real-Time Streaming ETL with Apache Flink', href: '/services/realtime-streaming-etl-flink' },
+  { name: 'Real-Time Streaming ETL with Apache Flink', href: '/services/realtime-streaming-etl-flink' },
  ];
 export const AUTOMATION_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Agentic Workflow Orchestrator', href: '/services/agentic-workflow-orchestrator' },
@@ -737,5 +734,5 @@ export const AUTOMATION_SERVICE_LINKS: readonly NavigationLink[] = [
   { name: 'Supply Chain Management Platform', href: '/services/supply-chain-management-service' },
   { name: 'Supply Chain Visibility', href: '/services/supply-chain-visibility' },
   { name: 'Workflow Automation & Integration Platform', href: '/services/workflow-automation' },
-+  { name: 'Event-Driven Orchestration Hub', href: '/services/event-driven-orchestration-hub' },
+  { name: 'Event-Driven Orchestration Hub', href: '/services/event-driven-orchestration-hub' },
  ];

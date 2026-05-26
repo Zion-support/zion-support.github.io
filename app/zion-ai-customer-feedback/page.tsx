@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Customer Feedback | Zion Tech Group',
+  title: 'Zion AI Customer Feedback',
   description:
     'Aggregate and analyze feedback from surveys, reviews, and support channels with sentiment and theme detection.',
   alternates: { canonical: '/zion-ai-customer-feedback' },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Zion Tech Group',
+  title: 'Terms of Service',
   description:
     'Terms of Service for Zion Tech Group — governing your use of our website and services.',
   alternates: { canonical: '/terms' },

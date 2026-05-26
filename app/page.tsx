@@ -274,8 +274,8 @@ let list = services;
                 {`🛠️ Explore All ${serviceCount}+ Services`}
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
-              </a>
+                              ☎ +1 302 464 0950
+                            </a>
             </div>
 
             {/* ── Secondary CTAs — extra discovery links ── */}
@@ -757,7 +757,7 @@ let list = services;
               <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
                 ✉️ Email Us
               </a>
-              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
+              <a href="tel:+130****0950" className="btn-secondary text-lg px-10 py-4">
                 ☎ +1 302 464 0950
               </a>
             </div>

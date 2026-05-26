@@ -1,6 +1,24 @@
 // app/utils/seoConstants.ts
 export const SITE_URL = 'https://ziontechgroup.com';
 
+export const CONTACT_INFO = {
+  email: 'kleber@ziontechgroup.com',
+  phone: '+1 302 464 0950',
+  address: {
+    street: '364 E Main St STE 1008',
+    city: 'Middletown',
+    state: 'DE',
+    zipCode: '19709',
+    country: 'US',
+  },
+};
+
+export const SOCIAL_LINKS = {
+  linkedin: 'https://www.linkedin.com/company/ziontechgroup',
+  twitter: 'https://twitter.com/ziontechgroup',
+  github: 'https://github.com/ziontechgroup',
+};
+
 export const STRUCTURED_DATA = {
   ORGANIZATION: {
     '@context': 'https://schema.org',

@@ -6,14 +6,7 @@ import { usePathname } from 'next/navigation';
 import {
   PRIMARY_NAV_LINKS,
   SOLUTION_LINKS,
-  RESOURCE_LINKS,
   FEATURED_AI_SERVICE_LINKS,
-  IT_SERVICE_LINKS,
-  CLOUD_SERVICE_LINKS,
-  SECURITY_SERVICE_LINKS,
-  DATA_SERVICE_LINKS,
-  AUTOMATION_SERVICE_LINKS,
-  AI_SERVICE_LINKS,
   type NavigationLink,
 } from '@/constants/navigation';
 
@@ -154,103 +147,72 @@ export default function Navigation() {
               Services {servicesOpen ? '▴' : '▾'}
             </button>
             {servicesOpen && (
-              <div className="absolute top-full right-0 mt-2 w-96 rounded-xl bg-slate-900/95 border border-slate-700/80 shadow-2xl shadow-purple-500/10 p-2 animate-in fade-in-0 zoom-in-95 backdrop-blur-md max-h-[80vh] overflow-y-auto">
-                <div className="grid gap-4">
-                  {/* AI & Automation Section */}
+              <div className="absolute top-full right-0 mt-2 w-[700px] rounded-xl bg-slate-900/95 border border-slate-700/80 shadow-2xl shadow-purple-500/10 p-4 animate-in fade-in-0 zoom-in-95 backdrop-blur-md max-h-[85vh] overflow-y-auto">
+                <div className="grid grid-cols-2 gap-3">
+                  {/* AI & Automation */}
                   <div>
-                    <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                      AI & Automation
-                    </div>
-                    <div className="space-y-0.5">
-                      {FEATURED_AI_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-                        <DropdownItem key={"featured-" + i} link={link} />
-                      ))}
-                    </div>
+                    <Link href="/services?category=ai" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 hover:border-purple-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-purple-400">🧠 AI & Automation</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">ML, NLP, CV, RPA, agents</div>
+                    </Link>
                   </div>
-
-                  {/* IT & Infrastructure Section */}
+                  {/* IT & Infrastructure */}
                   <div>
-                    <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                      IT & Infrastructure
-                    </div>
-                    <div className="space-y-0.5">
-                      {IT_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-                        <DropdownItem key={"it-" + i} link={link} />
-                      ))}
-                    </div>
+                    <Link href="/services?category=it" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-blue-400">🖥️ IT & Infrastructure</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">DevOps, SRE, networking, security</div>
+                    </Link>
                   </div>
-
-                  {/* Cloud & DevOps Section */}
+                  {/* Cloud & DevOps */}
                   <div>
-                    <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                      Cloud & DevOps
-                    </div>
-                    <div className="space-y-0.5">
-                      {CLOUD_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-                        <DropdownItem key={"cloud-" + i} link={link} />
-                      ))}
-                    </div>
+                    <Link href="/services?category=cloud" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-sky-500/10 to-blue-500/10 border border-sky-500/20 hover:border-sky-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-sky-400">☁️ Cloud & DevOps</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">Kubernetes, CI/CD, migrations</div>
+                    </Link>
                   </div>
-
-                  {/* Security & Compliance Section */}
+                  {/* Security */}
                   <div>
-                    <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                      Security & Compliance
-                    </div>
-                    <div className="space-y-0.5">
-                      {SECURITY_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-                        <DropdownItem key={"security-" + i} link={link} />
-                      ))}
-                    </div>
+                    <Link href="/services?category=security" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 hover:border-red-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-red-400">🔐 Security & Compliance</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">Penetration testing, IAM, SIEM</div>
+                    </Link>
                   </div>
-
-                  {/* Data & Analytics Section */}
+                  {/* Data */}
                   <div>
-                    <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                      Data & Analytics
-                    </div>
-                    <div className="space-y-0.5">
-                      {DATA_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-                        <DropdownItem key={"data-" + i} link={link} />
-                      ))}
-                    </div>
+                    <Link href="/services?category=data" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 hover:border-green-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-green-400">📊 Data & Analytics</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">ETL, BI, data lakes, streaming</div>
+                    </Link>
                   </div>
-
-                  {/* Automation Section */}
+                  {/* Automation */}
                   <div>
-                    <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                      Automation
-                    </div>
-                    <div className="space-y-0.5">
-                      {AUTOMATION_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-                        <DropdownItem key={"automation-" + i} link={link} />
-                      ))}
-                    </div>
+                    <Link href="/services?category=automation" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/20 hover:border-pink-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-pink-400">🤖 Automation</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">Workflows, RPA, process mining</div>
+                    </Link>
                   </div>
                 </div>
-                <div className="border-t border-slate-800 my-3" />
-                <div className="space-y-2">
-                  <Link
-                    href="/services/"
-                    className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors font-medium"
-                    onClick={() => setServicesOpen(false)}
-                  >
+
+                {/* Featured actions */}
+                <div className="border-t border-slate-800 my-3 pt-3 flex items-center gap-2">
+                  <Link href="/services/" onClick={() => setServicesOpen(false)}
+                    className="flex-1 text-center px-3 py-2 rounded-lg text-sm font-medium text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors border border-purple-500/20">
                     Browse All Services →
                   </Link>
-                  <Link
-                    href="/ai-services/"
-                    className="block px-3 py-2 rounded-lg text-sm text-pink-400 hover:text-pink-300 hover:bg-pink-500/10 transition-colors"
-                    onClick={() => setServicesOpen(false)}
-                  >
+                  <Link href="/ai-services/" onClick={() => setServicesOpen(false)}
+                    className="flex-1 text-center px-3 py-2 rounded-lg text-sm font-medium text-pink-400 hover:text-pink-300 hover:bg-pink-500/10 transition-colors border border-pink-500/20">
                     AI Services Hub →
                   </Link>
-                  {FEATURED_AI_SERVICE_LINKS.slice(featuredIndex, featuredIndex + 4).map((link, i) => (
-                    <DropdownItem key={i} link={link} />
-                  ))}
-                  <div className="border-t border-slate-800 my-1" />
-                  <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                    More
-                  </div>
+                  <Link href="/tools/" onClick={() => setServicesOpen(false)}
+                    className="flex-1 text-center px-3 py-2 rounded-lg text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 transition-colors border border-cyan-500/20">
+                    Free Tools →
+                  </Link>
                 </div>
               </div>
             )}
@@ -267,6 +229,17 @@ export default function Navigation() {
           {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
+
+          {/* Search button */}
+          <Link
+            href="/search/"
+            className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            aria-label="Search services"
+          >
+            <svg className="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </Link>
 
           {/* Desktop CTA */}
           <a

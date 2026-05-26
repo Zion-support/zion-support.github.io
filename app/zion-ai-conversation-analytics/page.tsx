@@ -2,7 +2,7 @@ import ProductPageLayout from '@/components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Conversation Analytics | Zion Tech Group',
+  title: 'Zion AI Conversation Analytics',
   description:
     'Analyze customer conversations across channels to surface insights, trends, and improvement opportunities.',
   alternates: { canonical: '/zion-ai-conversation-analytics' },
