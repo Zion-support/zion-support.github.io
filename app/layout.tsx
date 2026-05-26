@@ -22,8 +22,8 @@ export const metadata: Metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
-  openGraph: { type: 'website', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: '552+ micro SAAS services, IT solutions, and AI-powered platforms. Custom proposals in minutes.', url: 'https://ziontechgroup.com', siteName: 'Zion Tech Group', locale: 'en_US' },
-  twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.' },
+  openGraph: { type: 'website', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms — from machine learning and cybersecurity to cloud infrastructure and automation. Custom proposals in minutes.', url: 'https://ziontechgroup.com', siteName: 'Zion Tech Group', locale: 'en_US', images: [{ url: 'https://ziontechgroup.com/og-home.svg', width: 1200, height: 630, alt: 'Zion Tech Group — AI, IT & Micro SAAS Solutions' }] },
+  twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.', images: ['https://ziontechgroup.com/og-home.svg'] },
   alternates: { canonical: 'https://ziontechgroup.com' },
 };
 

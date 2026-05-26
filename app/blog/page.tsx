@@ -58,39 +58,6 @@ export default function BlogIndexPage() {
 
   return (
     <div className="relative min-h-screen bg-slate-950">
-      {/* JSON-LD: Blog + BreadcrumbList */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            name: "Zion Tech Group Blog",
-            description:
-              "Insights on AI, automation, enterprise IT, and digital transformation from the Zion Tech Group team.",
-            url: "https://ziontechgroup.com/blog",
-            publisher: {
-              "@type": "Organization",
-              name: "Zion Tech Group",
-              url: "https://ziontechgroup.com",
-            },
-            blogPosts: POSTS.slice(0, 10).map((p: { title: string; slug: string }) => ({
-              "@type": "BlogPosting",
-              headline: p.title,
-              url: `https://ziontechgroup.com/blog/${p.slug}`,
-            })),
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://ziontechgroup.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://ziontechgroup.com/blog" },
-              ],
-            },
-          })),
-        }}
-      />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify('{\n  "@context": "https://schema.org",\n  "@type": "Blog",\n  "name": "Zion Tech Group Blog",\n  "description": "Insights on AI, automation, enterprise IT, and digital transformation from the Zion Tech Group team.",\n  "url": "https://ziontechgroup.com/blog",\n  "publisher": {\n    "@type": "Organization",\n    "name": "Zion Tech Group",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://ziontechgroup.com/logo.png"\n    }\n  },\n  "inLanguage": "en-US"\n}') }} />
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-24 left-[-10rem] h-[32rem] w-[32rem] rounded-full bg-purple-500/15 blur-3xl" />
         <div className="absolute right-[-12rem] top-32 h-[30rem] w-[30rem] rounded-full bg-fuchsia-500/10 blur-3xl" />

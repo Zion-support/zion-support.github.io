@@ -67,30 +67,6 @@ export default function ServiceComparisonPage() {
 
   return (
     <div className="container-page py-16">
-      {/* JSON-LD: WebPage + BreadcrumbList */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Compare Services | Zion Tech Group",
-            description:
-              "Side-by-side comparison of AI, IT, cloud, and automation services. Features, pricing, and use cases at a glance.",
-            url: "https://ziontechgroup.com/service-comparison",
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://ziontechgroup.com" },
-                { "@type": "ListItem", position: 2, name: "Services", item: "https://ziontechgroup.com/services" },
-                { "@type": "ListItem", position: 3, name: "Compare Services", item: "https://ziontechgroup.com/service-comparison" },
-              ],
-            },
-          })),
-        }}
-      />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify('{\n  "@context": "https://schema.org",\n  "@type": "WebPage",\n  "name": "Service Comparison",\n  "description": "Side-by-side comparison of AI, IT, cloud, and automation services from Zion Tech Group \\u2014 features, pricing, portfolio at a glance.",\n  "url": "https://ziontechgroup.com/service-comparison"\n}') }} />
       {/* ── Header ── */}
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-white mb-3">Service Comparison</h1>

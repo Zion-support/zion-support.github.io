@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Enterprise AI & IT Services | Zion Tech Group',
-  description: 'Browse 550+ AI, IT, cloud, security, data analytics, and automation services — from chatbots and RAG to IoT and DevSecOps.',
+  description: 'Browse AI, IT, cloud, security, data analytics, and automation services — from chatbots and RAG to IoT and DevSecOps.',
 };
 
 
@@ -50,41 +50,6 @@ function ServicesContent() {
 
   return (
     <main className="min-h-screen bg-slate-950 py-20">
-      {/* JSON-LD: CollectionPage + BreadcrumbList */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "Enterprise AI & IT Services | Zion Tech Group",
-            description:
-              "Browse 550+ AI, IT, cloud, security, data analytics, and automation services — from chatbots and RAG to IoT and DevSecOps.",
-            url: "https://ziontechgroup.com/services",
-            mainEntity: {
-              "@type": "ItemList",
-              numberOfItems: allServices.length,
-              itemListElement: allServices
-                .slice(0, 20)
-                .map((s: Service, i: number) => ({
-                  "@type": "ListItem",
-                  position: i + 1,
-                  url: `https://ziontechgroup.com/services/${s.id}`,
-                  name: s.title,
-                })),
-            },
-            breadcrumb: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://ziontechgroup.com" },
-                { "@type": "ListItem", position: 2, name: "Services", item: "https://ziontechgroup.com/services" },
-              ],
-            },
-          })),
-        }}
-      />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify('{\n  "@context": "https://schema.org",\n  "@type": "CollectionPage",\n  "name": "Complete Service Catalog",\n  "description": "Browse 550+ AI, IT, cloud, security, data analytics, and automation services from Zion Tech Group \\u2014 from chatbots and RAG to IoT and DevSecOps.",\n  "url": "https://ziontechgroup.com/services"\n}') }} />
       <div className="container-page">
         <h1 className="text-4xl font-bold text-white mb-2 text-center">Our Complete Service Catalog</h1>
         <p className="section-subheading text-center">{allServices.length}+ real-world services across 6 categories</p>

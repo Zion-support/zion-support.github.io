@@ -1,0 +1,476 @@
+{
+  "meta": {
+    "title": "Zion Tech Group \u2014 Full Site Deep Audit & Evolution Board",
+    "version": "2.0",
+    "generated": "2026-05-26",
+    "routes_total": 116,
+    "service_pages": 700,
+    "blog_posts": 54,
+    "live_page_health": {
+      "all_200": true,
+      "redirects": "trailing-slash only (intentional)",
+      "https": true
+    }
+  },
+  "findings": {
+    "critical_bugs": [
+      {
+        "id": "C1",
+        "severity": "critical",
+        "file": "app/layout.tsx:25",
+        "issue": "Stale OG description says '552+' \u2014 should be dynamic service count",
+        "effect": "Social shares show wrong number"
+      },
+      {
+        "id": "C2",
+        "severity": "critical",
+        "file": "app/components/SmartSearchBar.tsx:141",
+        "issue": "Hardcoded 'Search 570+ services' \u2014 should use dynamic serviceCount",
+        "effect": "Mismatched user-facing count"
+      },
+      {
+        "id": "C3",
+        "severity": "critical",
+        "file": "Footer component (app/components/Footer.tsx)",
+        "issue": "Footer shows '0+ AI, IT & Micro-SaaS services' \u2014 broken dynamic count",
+        "effect": "Users see 0 services"
+      },
+      {
+        "id": "C4",
+        "severity": "critical",
+        "file": "Missing",
+        "issue": "No Open Graph image (og:image) anywhere",
+        "effect": "Social shares show no preview image"
+      },
+      {
+        "id": "C5",
+        "severity": "high",
+        "file": "Missing",
+        "issue": "No custom 404 page (not-found.tsx)",
+        "effect": "Default Next.js error on broken links"
+      },
+      {
+        "id": "C6",
+        "severity": "high",
+        "file": "Missing",
+        "issue": "No error.tsx or loading.tsx pages",
+        "effect": "Poor UX on errors/slow loads"
+      }
+    ],
+    "seo_gaps": [
+      {
+        "id": "S1",
+        "severity": "high",
+        "issue": "55+ routes missing from sitemap.xml: all zion-ai-* products, /about, /careers, /partners, /press, /cookies, /ai-lab, /5g-solutions, /analytics, /api-development, /blockchain-solutions, portal sub-pages",
+        "effect": "Not indexed by search engines"
+      },
+      {
+        "id": "S2",
+        "severity": "medium",
+        "issue": "No security.txt (/.well-known/security.txt)",
+        "effect": "Security researchers can't report vulnerabilities"
+      },
+      {
+        "id": "S3",
+        "severity": "low",
+        "issue": "No humans.txt",
+        "effect": "Minor branding opportunity"
+      },
+      {
+        "id": "S4",
+        "severity": "medium",
+        "issue": "Blog posts lack Article/BlogPosting JSON-LD schema",
+        "effect": "Poor rich result visibility in search"
+      },
+      {
+        "id": "S5",
+        "severity": "medium",
+        "issue": "FAQ page lacks FAQPage JSON-LD schema",
+        "effect": "Missed opportunity for FAQ rich results"
+      },
+      {
+        "id": "S6",
+        "severity": "medium",
+        "issue": "No og:image, og:image:width, og:image:height, og:image:alt",
+        "effect": "Social shares look broken"
+      },
+      {
+        "id": "S7",
+        "severity": "low",
+        "issue": "Open Graph description truncated ('Based in' \u2014 incomplete sentence)",
+        "effect": "Looks unprofessional on some platforms"
+      },
+      {
+        "id": "S8",
+        "severity": "medium",
+        "issue": "Twitter card missing image (twitter:image)",
+        "effect": "Twitter cards show no preview"
+      }
+    ],
+    "content_gaps": [
+      {
+        "id": "G1",
+        "severity": "high",
+        "file": "app/ai-lab/page.tsx",
+        "issue": "Stub page \u2014 only 10 lines, no real content",
+        "effect": "Users hit dead end"
+      },
+      {
+        "id": "G2",
+        "severity": "high",
+        "file": "app/pricing-calculator/page.tsx",
+        "issue": "Stub page \u2014 only 10 lines, minimal content",
+        "effect": "Incomplete interactive tool"
+      },
+      {
+        "id": "G3",
+        "severity": "medium",
+        "file": "app/portal/*",
+        "issue": "Portal pages very thin (31-43 lines each)",
+        "effect": "Client portal feels unfinished"
+      },
+      {
+        "id": "G4",
+        "severity": "medium",
+        "file": "app/tools/roi-calculator/page.tsx",
+        "issue": "Only 36 lines \u2014 thin content",
+        "effect": "Interactive tool with minimal UI"
+      },
+      {
+        "id": "G5",
+        "severity": "medium",
+        "file": "4 stub pages",
+        "issue": "/5g-solutions, /analytics, /api-development, /blockchain-solutions have placeholder code only",
+        "effect": "Content-less pages indexed"
+      },
+      {
+        "id": "G6",
+        "severity": "low",
+        "file": "app/status/service-health/page.tsx",
+        "issue": "Exists as route \u2014 check if properly populated",
+        "effect": "Service health page needs content"
+      },
+      {
+        "id": "G7",
+        "severity": "medium",
+        "issue": "No hero images or visual content across the site",
+        "effect": "100% text \u2014 heavy dark theme with no visual break"
+      },
+      {
+        "id": "G8",
+        "severity": "low",
+        "issue": "No case studies or portfolio section",
+        "effect": "No social proof beyond testimonials page"
+      }
+    ],
+    "ux_improvements": [
+      {
+        "id": "U1",
+        "severity": "medium",
+        "issue": "Mobile nav \u2014 hamburger menu exists but content not tested for mobile viewport",
+        "effect": "Mobile UX unknown"
+      },
+      {
+        "id": "U2",
+        "severity": "medium",
+        "issue": "Search: no filtering/sorting options visible on /search",
+        "effect": "Basic search experience"
+      },
+      {
+        "id": "U3",
+        "severity": "low",
+        "issue": "No breadcrumbs on inner pages (beyond service pages)",
+        "effect": "Navigation context missing"
+      },
+      {
+        "id": "U4",
+        "severity": "low",
+        "issue": "No 'back to top' button on long pages",
+        "effect": "Minor inconvenience on large pages"
+      },
+      {
+        "id": "U5",
+        "severity": "low",
+        "issue": "No image/logo in header \u2014 pure text branding",
+        "effect": "Less memorable branding"
+      }
+    ],
+    "performance_tech_debt": [
+      {
+        "id": "P1",
+        "severity": "medium",
+        "issue": "No lazy loading strategy visible for heavy pages (industry-solutions: 689KB)",
+        "effect": "Slow initial load"
+      },
+      {
+        "id": "P2",
+        "severity": "medium",
+        "issue": "No image optimization (images.unoptimized: true in next.config)",
+        "effect": "All images load at full resolution"
+      },
+      {
+        "id": "P3",
+        "severity": "low",
+        "issue": "Static export \u2014 no ISR/SSR available",
+        "effect": "Content updates require rebuild"
+      },
+      {
+        "id": "P4",
+        "severity": "low",
+        "issue": "4 GitHub vulnerability alerts (2 high, 2 moderate)",
+        "effect": "Security risk if left unpatched"
+      },
+      {
+        "id": "P5",
+        "severity": "medium",
+        "issue": "13000+ lines in searchServices.ts \u2014 monolithic file",
+        "effect": "Bundle size concern"
+      }
+    ]
+  },
+  "task_board": {
+    "phase_0_critical_bugfixes": [
+      {
+        "id": "T1",
+        "priority": "P0",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Fix OG description in app/layout.tsx \u2014 replace '552+' with dynamic `{serviceCount}+`",
+        "file": "app/layout.tsx:25"
+      },
+      {
+        "id": "T2",
+        "priority": "P0",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Fix SmartSearchBar.tsx \u2014 replace hardcoded '570+' with dynamic count",
+        "file": "app/components/SmartSearchBar.tsx:141"
+      },
+      {
+        "id": "T3",
+        "priority": "P0",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Fix Footer '0+' \u2014 pass serviceCount prop or make dynamic",
+        "file": "app/components/Footer.tsx"
+      },
+      {
+        "id": "T4",
+        "priority": "P1",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add og:image \u2014 create/ensure /public/og-home.svg is referenced in layout metadata",
+        "file": "app/layout.tsx"
+      },
+      {
+        "id": "T5",
+        "priority": "P1",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Create custom 404 page (app/not-found.tsx)",
+        "file": "new file"
+      },
+      {
+        "id": "T6",
+        "priority": "P1",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Create app/error.tsx with proper error UI",
+        "file": "new file"
+      }
+    ],
+    "phase_1_seo_fixes": [
+      {
+        "id": "T7",
+        "priority": "P1",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Regenerate sitemap to include all 55+ missing routes (zion-ai-*, portal, about, careers, etc.)",
+        "file": "sitemap generation"
+      },
+      {
+        "id": "T8",
+        "priority": "P1",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Create /.well-known/security.txt",
+        "file": "new file"
+      },
+      {
+        "id": "T9",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add Article/BlogPosting JSON-LD schema to blog posts",
+        "file": "blog layout"
+      },
+      {
+        "id": "T10",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add FAQPage JSON-LD to /faq page",
+        "file": "app/faq/page.tsx"
+      },
+      {
+        "id": "T11",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add LocalBusiness JSON-LD to /contact page",
+        "file": "app/contact/page.tsx"
+      },
+      {
+        "id": "T12",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Fix truncated OG description in layout.tsx",
+        "file": "app/layout.tsx"
+      },
+      {
+        "id": "T13",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add twitter:image to layout metadata",
+        "file": "app/layout.tsx"
+      }
+    ],
+    "phase_2_content_fill": [
+      {
+        "id": "T14",
+        "priority": "P1",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Fill /ai-lab page with real content (tools, demos, playground)",
+        "file": "app/ai-lab/page.tsx"
+      },
+      {
+        "id": "T15",
+        "priority": "P1",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Develop /pricing-calculator into full interactive tool",
+        "file": "app/pricing-calculator/page.tsx"
+      },
+      {
+        "id": "T16",
+        "priority": "P2",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Expand portal pages (billing, kb, projects, tickets) with real functionality",
+        "file": "app/portal/*"
+      },
+      {
+        "id": "T17",
+        "priority": "P2",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Fill 4 stub product pages (5g-solutions, analytics, api-development, blockchain-solutions)",
+        "file": "sub-pages"
+      },
+      {
+        "id": "T18",
+        "priority": "P3",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Write 12+ new blog posts (current 54 is good, 66+ would be excellent)",
+        "file": "app/blog/"
+      },
+      {
+        "id": "T19",
+        "priority": "P3",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Add case studies / portfolio section",
+        "file": "new section"
+      }
+    ],
+    "phase_3_ux_polish": [
+      {
+        "id": "T20",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add breadcrumbs to all inner pages",
+        "file": "shared component"
+      },
+      {
+        "id": "T21",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Add 'back to top' button on long pages",
+        "file": "shared component"
+      },
+      {
+        "id": "T22",
+        "priority": "P3",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Create SVG logo for header branding",
+        "file": "public/logo.svg"
+      },
+      {
+        "id": "T23",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Test and improve mobile navigation",
+        "file": "Navigation component"
+      },
+      {
+        "id": "T24",
+        "priority": "P3",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Ensure all interactive elements have proper focus states",
+        "file": "global"
+      }
+    ],
+    "phase_4_tech_debt": [
+      {
+        "id": "T25",
+        "priority": "P1",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Install node_modules and run npm audit fix for 4 vulnerabilities (2 high)",
+        "file": "npm audit"
+      },
+      {
+        "id": "T26",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Run full type-check + lint after all fixes",
+        "file": "npm run type-check && npm run lint"
+      },
+      {
+        "id": "T27",
+        "priority": "P2",
+        "assign": "me",
+        "status": "ready",
+        "desc": "Refactor searchServices.ts into smaller chunks if bundle is large",
+        "file": "app/data/searchServices.ts"
+      },
+      {
+        "id": "T28",
+        "priority": "P3",
+        "assign": "human",
+        "status": "pending",
+        "desc": "Consider adding image optimization pipeline",
+        "file": "next.config.js"
+      }
+    ]
+  },
+  "metrics": {
+    "total_tasks": 28,
+    "me_assign": 15,
+    "human_assign": 13,
+    "P0_critical": 3,
+    "P1_high": 7,
+    "P2_medium": 12,
+    "P3_low": 6
+  }
+}
