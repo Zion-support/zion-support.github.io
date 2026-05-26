@@ -1,8 +1,6 @@
 // app/services/page.tsx — Full Service Catalog
 'use client';
 
-import type { Metadata } from 'next';
-
 import { useState, useMemo, Suspense } from 'react';
 
 import { useSearchParams } from 'next/navigation';

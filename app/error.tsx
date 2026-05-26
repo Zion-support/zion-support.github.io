@@ -1,6 +1,8 @@
 // app/error.tsx — Error Boundary
 'use client';
 
+import Link from 'next/link';
+
 export default function ErrorPage({
   error,
   reset,
@@ -20,9 +22,9 @@ export default function ErrorPage({
           <button onClick={reset} className="btn-primary px-8 py-3 text-lg cursor-pointer">
             🔄 Try Again
           </button>
-          <a href="/" className="btn-secondary px-8 py-3 text-lg inline-block">
+          <Link href="/" className="btn-secondary px-8 py-3 text-lg inline-block">
             🏠 Go Home
-          </a>
+          </Link>
         </div>
         {process.env.NODE_ENV === 'development' && (
           <details className="mt-8 text-left">

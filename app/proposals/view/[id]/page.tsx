@@ -1,8 +1,7 @@
 // app/proposals/view/[id]/page.tsx
 // Dynamic proposal viewer — reads from automation/proposals/{id}.html or .json
-'use client';
-
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -84,7 +83,7 @@ ${needsList ? `<h2>Stated Needs</h2><ul>${needsList}</ul>` : ''}
     <div className="min-h-screen bg-slate-950 py-8">
       <div className="container-page">
         <div className="flex justify-between items-center mb-6">
-          <a href="/proposals/" className="text-slate-400 hover:text-white text-sm">&larr; Back to Proposals</a>
+          <Link href="/proposals/" className="text-slate-400 hover:text-white text-sm">&larr; Back to Proposals</Link>
           <button
             onClick={() => {
               const blob = new Blob([html], { type: 'text/html' });

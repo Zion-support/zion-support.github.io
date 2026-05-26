@@ -78,7 +78,7 @@ export default function AIServiceRouter() {
         <h1 className="text-4xl font-bold text-white mb-3">AI Service Router</h1>
         <p className="text-slate-300 max-w-2xl mx-auto text-lg">
           Describe what you need in plain language — our AI matches your description against{' '}
-          <strong className="text-cyan-400">{allServices.length} services</strong> in our catalog and routes you to the best fit.
+          <strong className="text-purple-400">{allServices.length} services</strong> in our catalog and routes you to the best fit.
         </p>
       </div>
 
@@ -113,7 +113,7 @@ export default function AIServiceRouter() {
         </div>
       </div>
 
-      {loading && <div className="text-center text-cyan-400 py-8 animate-pulse">Routing…</div>}
+      {loading && <div className="text-center text-purple-400 py-8 animate-pulse">Routing…</div>}
 
       {results !== null && !loading && (
         <div className="max-w-4xl mx-auto">
@@ -127,16 +127,16 @@ export default function AIServiceRouter() {
               <li key={svc.id}>
                 <Link href={svc.href}
                   className="group block bg-slate-800/60 border border-slate-700 rounded-xl p-5
-                             hover:border-cyan-400/60 hover:bg-slate-700/60 transition-all">
+                             hover:border-purple-400/60 hover:bg-slate-700/60 transition-all">
                   <div className="flex items-start gap-4">
                     {svc.icon && <span className="text-3xl flex-shrink-0">{svc.icon}</span>}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap mb-1">
-                        <span className="text-xs uppercase tracking-wider text-cyan-400 font-semibold">{svc.category}</span>
+                        <span className="text-xs uppercase tracking-wider text-purple-400 font-semibold">{svc.category}</span>
                         {svc.popular && <span className="text-xs bg-amber-900/40 text-amber-300 px-2 py-0.5 rounded-full border border-amber-700/50">Popular</span>}
-                        {i < 3 && <span className="text-xs bg-cyan-900/40 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-700/50">#{(i + 1)} match</span>}
+                        {i < 3 && <span className="text-xs bg-purple-900/40 text-purple-300 px-2 py-0.5 rounded-full border border-purple-700/50">#{(i + 1)} match</span>}
                       </div>
-                      <h2 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">{svc.title}</h2>
+                      <h2 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors">{svc.title}</h2>
                       <p className="text-slate-400 text-sm mt-1 line-clamp-2">{svc.description}</p>
                       {svc.features.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mt-3">
@@ -146,7 +146,7 @@ export default function AIServiceRouter() {
                         </div>
                       )}
                     </div>
-                    <span className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 text-xl">→</span>
+                    <span className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 text-xl">→</span>
                   </div>
                 </Link>
               </li>

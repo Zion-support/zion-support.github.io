@@ -16,7 +16,7 @@ export function LocalBusinessJsonLd() {
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
-    image: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/icon.svg`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: street,

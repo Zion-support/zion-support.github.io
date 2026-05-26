@@ -1,7 +1,5 @@
 // app/tools/ssl-checker/page.tsx — Free SSL/TLS Certificate Checker
 'use client';
-
-import type { Metadata } from 'next';
 import { pingTool } from '@/data/tools_ping_client';
 
 import { useState, useEffect } from 'react';

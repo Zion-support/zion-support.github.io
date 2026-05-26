@@ -1,8 +1,6 @@
 // app/proposal-generator/page.tsx
 'use client';
 
-import type { Metadata } from 'next';
-
 import { useState } from 'react';
 
 import Link from 'next/link';

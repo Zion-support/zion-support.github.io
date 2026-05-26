@@ -1,7 +1,5 @@
 // app/tools/service-comparison/page.tsx — Full Service Comparison
 'use client';
-
-import type { Metadata } from 'next';
 import { pingTool } from '@/data/tools_ping_client';
 
 import { useState, useMemo, useEffect } from 'react';

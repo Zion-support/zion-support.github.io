@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI in Pharmaceuticals and Life Sciences',
   description:
     'Drug discovery, clinical trial optimization, regulatory submissions, and pharmacovigilance. Accelerating life sciences with AI.',
-  alternates: { canonical: '/blog/ai-in-pharmaceuticals-and-life-sciences' },
+  alternates: { canonical: '/blog/ai-in-pharmaceuticals-and-life-sciences/' },
   openGraph: {
     title: 'AI in Pharmaceuticals and Life Sciences',
     description:
       'Drug discovery, clinical trial optimization, regulatory submissions, and pharmacovigilance. Accelerating life sciences with AI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-in-pharmaceuticals-and-life-sciences',
-  
-    images: [{ url: 'https://ziontechgroup.com/blog/ai-in-pharmaceuticals-and-life-sciences/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
+  },
 };
 
 export default function Page() {
@@ -36,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

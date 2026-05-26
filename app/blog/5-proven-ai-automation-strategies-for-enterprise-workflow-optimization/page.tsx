@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
   description:
     'Intelligent process mining, RPA + AI hybrid automation, document workflows, customer journey automation, and cross-department orchestration. ROI metrics and implementation timelines.',
-  alternates: { canonical: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization' },
+  alternates: { canonical: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization/' },
   openGraph: {
     title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
     description:
       'Intelligent process mining, RPA + AI hybrid automation, document workflows, customer journey automation, and cross-department orchestration. ROI metrics and implementation timelines.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
-  
-    images: [{ url: 'https://ziontechgroup.com/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
+  },
 };
 
 export default function Page() {
@@ -36,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

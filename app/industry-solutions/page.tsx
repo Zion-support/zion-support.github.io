@@ -1,12 +1,9 @@
 // app/industry-solutions/page.tsx — Industry Solutions Landing
 'use client';
-
-import type { Metadata } from 'next';
 import { useState, useMemo } from 'react';
 
 
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 import { allServices, type Service } from '@/data/servicesData';
 
 type IndustryService = Service & { industry: string };
@@ -208,7 +205,6 @@ export default function IndustrySolutionsPage() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+      </main>
   );
 }

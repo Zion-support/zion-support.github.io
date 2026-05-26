@@ -16,7 +16,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated WCAG 2.2 auditing, AI-powered remediation suggestions, screen reader simulation, and continuous accessibility compliance monitoring.",
     "category": "it",
     "popular": false,
-    "href": "/services/accessibility-compliance"
+    "href": "/services/accessibility-compliance/"
   },
   {
     "id": "advanced-ai-enterprise-intelligence-hub",
@@ -24,7 +24,7 @@ export const searchServices: SearchService[] = [
     "description": "Unify generative AI, autonomous agents, multimodal intelligence, RAG, governance, observability, and enterprise copilots into a single advanced AI ...",
     "category": "ai",
     "popular": false,
-    "href": "/services/advanced-ai-enterprise-intelligence-hub"
+    "href": "/services/advanced-ai-enterprise-intelligence-hub/"
   },
   {
     "id": "agentic-workflow-orchestrator",
@@ -32,7 +32,7 @@ export const searchServices: SearchService[] = [
     "description": "Orchestrate multi-agent AI workflows: DAG of agents with routing, handoff, conditional branches, state persistence, retry logic, human-review gates. LangGraph/Semantic Kernel backend.",
     "category": "automation",
     "popular": false,
-    "href": "/services/agentic-workflow-orchestrator"
+    "href": "/services/agentic-workflow-orchestrator/"
   },
   {
     "id": "ai-3d-asset-generator",
@@ -40,7 +40,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-3d-asset-generator"
+    "href": "/services/ai-3d-asset-generator/"
   },
   {
     "id": "ai-accessibility-auditor",
@@ -48,7 +48,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated WCAG 2.1 AA compliance scans for websites & apps with screen-reader simulation, color contrast testing, and keyboard navigation checks.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-accessibility-auditor"
+    "href": "/services/ai-accessibility-auditor/"
   },
   {
     "id": "ai-accessibility-optimizer",
@@ -56,7 +56,7 @@ export const searchServices: SearchService[] = [
     "description": "Suggests alt-text for images, transcript generation for videos, and semantic HTML improvements to boost accessibility and SEO simultaneously.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-accessibility-optimizer"
+    "href": "/services/ai-accessibility-optimizer/"
   },
   {
     "id": "ai-ad-copy-generator",
@@ -64,7 +64,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-ad-copy-generator"
+    "href": "/services/ai-ad-copy-generator/"
   },
   {
     "id": "ai-agent-safety-evaluation",
@@ -72,7 +72,7 @@ export const searchServices: SearchService[] = [
     "description": "",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-agent-safety-evaluation"
+    "href": "/services/ai-agent-safety-evaluation/"
   },
   {
     "id": "ai-agent-tool-builder",
@@ -80,7 +80,7 @@ export const searchServices: SearchService[] = [
     "description": "Visual no-code tool builder for LLM agents: define function-calling tools, MCP server scaffolding, OpenAPI wrapper, and sandbox test harness.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-agent-tool-builder"
+    "href": "/services/ai-agent-tool-builder/"
   },
   {
     "id": "ai-agentic-workflows",
@@ -88,7 +88,7 @@ export const searchServices: SearchService[] = [
     "description": "Autonomous AI agents that plan, execute, and monitor multi-step business workflows — from data gathering to decision execution with human-in-the-loop oversight.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-agentic-workflows"
+    "href": "/services/ai-agentic-workflows/"
   },
   {
     "id": "ai-agents-autonomous",
@@ -96,7 +96,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy autonomous AI agents that reason, plan, and act. Multi-step task execution, tool use, and human-in-the-loop controls for enterprise automation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-agents-autonomous"
+    "href": "/services/ai-agents-autonomous/"
   },
   {
     "id": "ai-aiops-anomaly-detection",
@@ -104,7 +104,7 @@ export const searchServices: SearchService[] = [
     "description": "Detects infrastructure anomalies (CPU, memory, error rates) before they cause outages using unsupervised learning and seasonal decomposition.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-aiops-anomaly-detection"
+    "href": "/services/ai-aiops-anomaly-detection/"
   },
   {
     "id": "ai-analytics",
@@ -112,7 +112,7 @@ export const searchServices: SearchService[] = [
     "description": "Transform your data into actionable insights with our advanced AI analytics platform.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-analytics"
+    "href": "/services/ai-analytics/"
   },
   {
     "id": "ai-api-orchestration-layer",
@@ -120,7 +120,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-api-orchestration-layer"
+    "href": "/services/ai-api-orchestration-layer/"
   },
   {
     "id": "ai-automated-reporting",
@@ -128,7 +128,7 @@ export const searchServices: SearchService[] = [
     "description": "Turn raw data into formatted PDF/PPT reports with natural language summaries. Schedule distributions to stakeholders.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-automated-reporting"
+    "href": "/services/ai-automated-reporting/"
   },
   {
     "id": "ai-automation",
@@ -136,7 +136,7 @@ export const searchServices: SearchService[] = [
     "description": "Streamline your business processes with intelligent automation solutions.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-automation"
+    "href": "/services/ai-automation/"
   },
   {
     "id": "ai-autonomous-code-deployment",
@@ -144,7 +144,7 @@ export const searchServices: SearchService[] = [
     "description": "Code-review finder, security scan (SAST/DAST), test-retry, feature-flag gate, rollback on error-rate spike, chat-notification on completion.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-autonomous-code-deployment"
+    "href": "/services/ai-autonomous-code-deployment/"
   },
   {
     "id": "ai-autonomous-qa-engineering",
@@ -152,7 +152,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-generate comprehensive E2E tests from user session replay; auto-fix flaky selectors; run tests on every PR; auto-open bug ticket on fail.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-autonomous-qa-engineering"
+    "href": "/services/ai-autonomous-qa-engineering/"
   },
   {
     "id": "ai-bdr-sdr",
@@ -160,7 +160,7 @@ export const searchServices: SearchService[] = [
     "description": "Autonomous AI Business Development & Sales Development Representative: prospect, qualify, email, book meetings, and nurture leads 24/7 without human intervention.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-bdr-sdr"
+    "href": "/services/ai-bdr-sdr/"
   },
   {
     "id": "ai-bom-procurement",
@@ -168,7 +168,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-tier bill-of-materials analyser. Optimises part sourcing, predicts shortages, recommends alternative components, and benchmarks against global market pricing for manufacturing.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-bom-procurement"
+    "href": "/services/ai-bom-procurement/"
   },
   {
     "id": "ai-brand-voice-guardian",
@@ -176,7 +176,7 @@ export const searchServices: SearchService[] = [
     "description": "Maintain consistent brand voice. AI audits existing content, generates tone guidelines, and rewrites copy in real time to match your brand persona across every channel.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-brand-voice-guardian"
+    "href": "/services/ai-brand-voice-guardian/"
   },
   {
     "id": "ai-bug-to-issue-router",
@@ -184,7 +184,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-bug-to-issue-router"
+    "href": "/services/ai-bug-to-issue-router/"
   },
   {
     "id": "ai-call-center-voice-analytics",
@@ -192,7 +192,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time call transcription, sentiment analysis, agent coaching insights, and compliance monitoring for contact centers.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-call-center-voice-analytics"
+    "href": "/services/ai-call-center-voice-analytics/"
   },
   {
     "id": "ai-campaign-predictor",
@@ -200,7 +200,7 @@ export const searchServices: SearchService[] = [
     "description": "Predict campaign outcomes before launch. Forecast CTR, conversion rate, and ROAS using historical targeting data and creative asset features.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-campaign-predictor"
+    "href": "/services/ai-campaign-predictor/"
   },
   {
     "id": "ai-caption-subtitle-generator",
@@ -208,7 +208,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-language ASR translation, caption formatting, SRT/VTT/WebVTT export with lip-sync timing alignment for video.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-caption-subtitle-generator"
+    "href": "/services/ai-caption-subtitle-generator/"
   },
   {
     "id": "ai-carbon-optimizer",
@@ -216,7 +216,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated Scope 1-3 carbon accounting: ingests utility bills, cloud usage, travel itineraries, supplier invoices, and calculates real-time carbon intensity scores with prioritised reduction actions and ESG report-ready outputs.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-carbon-optimizer"
+    "href": "/services/ai-carbon-optimizer/"
   },
   {
     "id": "ai-chatbot-builder-pro",
@@ -224,7 +224,7 @@ export const searchServices: SearchService[] = [
     "description": "Build intelligent, multi-channel chatbots with RAG-powered knowledge bases, workflow automation, and seamless human handoff.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-chatbot-builder-pro"
+    "href": "/services/ai-chatbot-builder-pro/"
   },
   {
     "id": "ai-chatbot-omnichannel",
@@ -232,7 +232,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified AI assistant across website chat, Messenger, WhatsApp, SMS, and voice. Context-aware conversations with seamless human handoff.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-chatbot-omnichannel"
+    "href": "/services/ai-chatbot-omnichannel/"
   },
   {
     "id": "ai-chronic-disease-tracker",
@@ -240,7 +240,7 @@ export const searchServices: SearchService[] = [
     "description": "Longitudinal patient analytics: track chronic disease progression across EHR data, lab results, and wearables. AI identifies early deterioration signals, predicts hospitalisation risk, and generates personalised care plans.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-chronic-disease-tracker"
+    "href": "/services/ai-chronic-disease-tracker/"
   },
   {
     "id": "ai-cloud-cost-optimizer",
@@ -248,7 +248,7 @@ export const searchServices: SearchService[] = [
     "description": "ML-powered cloud cost optimizer: continuously rightsizes VMs, containers, serverless across AWS/GCP/Azure — reducing cloud spend 30-50% with zero manual intervention via smart scaling policies.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-cloud-cost-optimizer"
+    "href": "/services/ai-cloud-cost-optimizer/"
   },
   {
     "id": "ai-code-assistant-enterprise",
@@ -256,7 +256,7 @@ export const searchServices: SearchService[] = [
     "description": "Private, fine-tuned AI coding copilot trained on your internal repositories with role-based access and SOC 2 compliance.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-assistant-enterprise"
+    "href": "/services/ai-code-assistant-enterprise/"
   },
   {
     "id": "ai-code-audit-security",
@@ -264,7 +264,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive static analysis powered by AI: detect vulnerabilities, code smells, license compliance issues, and security anti-patterns before they reach production.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-audit-security"
+    "href": "/services/ai-code-audit-security/"
   },
   {
     "id": "ai-code-migration",
@@ -272,7 +272,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered legacy code analysis, automated migration planning, and assisted code transformation from COBOL, mainframe, and legacy frameworks to modern cloud-native stacks.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-migration"
+    "href": "/services/ai-code-migration/"
   },
   {
     "id": "ai-code-migration-assistant",
@@ -280,7 +280,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated major-version migration: React 18→19, Python 3.9→3.12, Rails 6→7, with AST-wrapped diff PR and regression test suit.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-migration-assistant"
+    "href": "/services/ai-code-migration-assistant/"
   },
   {
     "id": "ai-code-migration-modernization",
@@ -288,7 +288,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically migrate legacy codebases to modern frameworks (COBOL → Java, jQuery → React, Python 2 → Python 3) with AI-assisted refactoring.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-migration-modernization"
+    "href": "/services/ai-code-migration-modernization/"
   },
   {
     "id": "ai-code-review-assistant",
@@ -296,7 +296,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated code review with AI: detect bugs, security flaws, performance anti-patterns, and suggest fixes with before/after diffs.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-review-assistant"
+    "href": "/services/ai-code-review-assistant/"
   },
   {
     "id": "ai-code-reviewer",
@@ -304,7 +304,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-reviewer"
+    "href": "/services/ai-code-reviewer/"
   },
   {
     "id": "ai-code-reviewer-pro",
@@ -312,7 +312,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated code review that catches bugs, security issues, performance problems, and style violations before production.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-reviewer-pro"
+    "href": "/services/ai-code-reviewer-pro/"
   },
   {
     "id": "ai-code-vulnerability-scanner",
@@ -320,7 +320,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered SAST + DAST hybrid: semantic code analysis for OWASP Top 10, CWE, and proprietary business-logic flaws. IDE plugin, CI pipeline integration, and PR comment bot with auto-generated fixes.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-code-vulnerability-scanner"
+    "href": "/services/ai-code-vulnerability-scanner/"
   },
   {
     "id": "ai-codebase-doc-generator",
@@ -328,7 +328,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically generates architecture diagrams, API docs, and README files by analyzing your Git repository and code dependencies.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-codebase-doc-generator"
+    "href": "/services/ai-codebase-doc-generator/"
   },
   {
     "id": "ai-competitive-intel-engine",
@@ -336,7 +336,7 @@ export const searchServices: SearchService[] = [
     "description": "Tracks competitors' pricing changes, feature launches, hiring patterns, and customer reviews to deliver weekly strategic insights.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-competitive-intel-engine"
+    "href": "/services/ai-competitive-intel-engine/"
   },
   {
     "id": "ai-competitive-price-tracker",
@@ -344,7 +344,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-competitive-price-tracker"
+    "href": "/services/ai-competitive-price-tracker/"
   },
   {
     "id": "ai-competitor-intelligence",
@@ -352,7 +352,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated competitor tracking: pricing changes, feature releases, marketing campaigns from 10K+ sources. Weekly digest + real-time alerts.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-competitor-intelligence"
+    "href": "/services/ai-competitor-intelligence/"
   },
   {
     "id": "ai-compliance",
@@ -360,7 +360,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated compliance monitoring, risk assessment, and audit trail management for GDPR, HIPAA, SOC 2, and more.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-compliance"
+    "href": "/services/ai-compliance/"
   },
   {
     "id": "ai-compliance-generator",
@@ -368,7 +368,7 @@ export const searchServices: SearchService[] = [
     "description": "Generate compliant privacy policies, cookie banners, and consent management frameworks for GDPR, CCPA, HIPAA, and SOC 2 with one-click multi-version export.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-compliance-generator"
+    "href": "/services/ai-compliance-generator/"
   },
   {
     "id": "ai-computer-vision",
@@ -376,7 +376,7 @@ export const searchServices: SearchService[] = [
     "description": "Image recognition, object detection, quality inspection, and visual search powered by deep learning models trained on your domain data.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-computer-vision"
+    "href": "/services/ai-computer-vision/"
   },
   {
     "id": "ai-computer-vision-shelf-monitoring",
@@ -384,7 +384,7 @@ export const searchServices: SearchService[] = [
     "description": "Retail shelf stock-out detection, facings count, planogram compliance, and out-of-stock alert to store manager via Slack/POS.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-computer-vision-shelf-monitoring"
+    "href": "/services/ai-computer-vision-shelf-monitoring/"
   },
   {
     "id": "ai-content-generation",
@@ -392,7 +392,7 @@ export const searchServices: SearchService[] = [
     "description": "Generate high-quality blog posts, social media content, ad copy, product descriptions, and email campaigns powered by advanced LLMs.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-content-generation"
+    "href": "/services/ai-content-generation/"
   },
   {
     "id": "ai-content-localization",
@@ -400,7 +400,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise-grade content localization with context-aware translation, cultural nuance adaptation, brand voice preservation, and multi-market compliance.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-content-localization"
+    "href": "/services/ai-content-localization/"
   },
   {
     "id": "ai-content-moderation",
@@ -408,7 +408,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated content review for user-generated platforms — detect spam, harassment, and policy violations across text, image, and video.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-content-moderation"
+    "href": "/services/ai-content-moderation/"
   },
   {
     "id": "ai-content-moderation-platform",
@@ -416,7 +416,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-modal moderation (text/image/video): NSFW, hate-speech, PII, copyright, brand-safety classifier; moderation queue + human-review.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-content-moderation-platform"
+    "href": "/services/ai-content-moderation-platform/"
   },
   {
     "id": "ai-content-moderation-suite",
@@ -424,7 +424,7 @@ export const searchServices: SearchService[] = [
     "description": "Platform-agnostic content moderation: real-time text/image/video classification, multi-language support, custom policy rules, human-in-the-loop review queues, and automated takedown workflows for platforms, marketplaces, and social apps.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-content-moderation-suite"
+    "href": "/services/ai-content-moderation-suite/"
   },
   {
     "id": "ai-context-engineering-enterprise",
@@ -432,7 +432,7 @@ export const searchServices: SearchService[] = [
     "description": "",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-context-engineering-enterprise"
+    "href": "/services/ai-context-engineering-enterprise/"
   },
   {
     "id": "ai-contract-analyzer-pro",
@@ -440,7 +440,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated legal contract review with risk scoring, clause extraction, and compliance checking against 200+ global regulations.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-contract-analyzer-pro"
+    "href": "/services/ai-contract-analyzer-pro/"
   },
   {
     "id": "ai-contract-lifecycle-intelligence",
@@ -448,7 +448,7 @@ export const searchServices: SearchService[] = [
     "description": "AI contract lifecycle management: extract clauses and dates, auto-flag risk, renewal calendar, benchmark against market terms, amendment tracker across 200+ contract types.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-contract-lifecycle-intelligence"
+    "href": "/services/ai-contract-lifecycle-intelligence/"
   },
   {
     "id": "ai-contract-manager",
@@ -456,7 +456,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end contract lifecycle management: AI-powered drafting, review, clause library, obligation tracking, and renewal alerts.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-contract-manager"
+    "href": "/services/ai-contract-manager/"
   },
   {
     "id": "ai-contract-review",
@@ -464,7 +464,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically reviews legal contracts, flags risky clauses, suggests amendments, and benchmarks against industry standards.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-contract-review"
+    "href": "/services/ai-contract-review/"
   },
   {
     "id": "ai-conversation-intelligence",
@@ -472,7 +472,7 @@ export const searchServices: SearchService[] = [
     "description": "Call transcript analysis: talk-listen ratio, sentiment, intent signals, competitor mentions, pricing cues, action item extraction, CRM autofill, team leaderboard coaching.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-conversation-intelligence"
+    "href": "/services/ai-conversation-intelligence/"
   },
   {
     "id": "ai-conversational-hr-onboarding",
@@ -480,7 +480,7 @@ export const searchServices: SearchService[] = [
     "description": "HR chatbot that handles new-employee paperwork, benefits enrollment, IT provisioning, I-9 verification, PTO requests, and policy questions — reducing HR admin workload by 90% and improving new-hire experience.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-conversational-hr-onboarding"
+    "href": "/services/ai-conversational-hr-onboarding/"
   },
   {
     "id": "ai-copilot-enterprise",
@@ -488,7 +488,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy AI copilots and enterprise assistants that augment human work. Context-aware, role-specific AI embedded in your tools and workflows.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-copilot-enterprise"
+    "href": "/services/ai-copilot-enterprise/"
   },
   {
     "id": "ai-credit-underwriting",
@@ -496,7 +496,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-credit-underwriting"
+    "href": "/services/ai-credit-underwriting/"
   },
   {
     "id": "ai-crm-automation-suite",
@@ -504,7 +504,7 @@ export const searchServices: SearchService[] = [
     "description": "Full CRM automation platform: AI lead scoring, email sequences, pipeline tracking, deal insights, automated follow-ups, and smart forecasting across HubSpot, Salesforce, and Pipedrive.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-crm-automation-suite"
+    "href": "/services/ai-crm-automation-suite/"
   },
   {
     "id": "ai-cro-optimizer",
@@ -512,7 +512,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-cro-optimizer"
+    "href": "/services/ai-cro-optimizer/"
   },
   {
     "id": "ai-cross-lingual-bridge",
@@ -520,7 +520,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise-grade cross-language content and support platform: semantic translation, accent-normalised speech, multilingual chatbot/knowledge base build, automatic locale detection, and compliance-checked glossary management across 80+ language pairs.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-cross-lingual-bridge"
+    "href": "/services/ai-cross-lingual-bridge/"
   },
   {
     "id": "ai-cross-lingual-meeting-bridge",
@@ -528,7 +528,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-language meeting platform: real-time simultaneous interpretation across 40+ languages and dialects, live bilingual captions, cultural-adaptation annotations, silent-watch spectator mode, executive summary auto-generation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-cross-lingual-meeting-bridge"
+    "href": "/services/ai-cross-lingual-meeting-bridge/"
   },
   {
     "id": "ai-cultural-fit-screener",
@@ -536,7 +536,7 @@ export const searchServices: SearchService[] = [
     "description": "AI evaluates resume+behavioral vs your company values: culture-fit score, behavioral alignment scoring, red-flag indicators before interview, auto short-list explanation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-cultural-fit-screener"
+    "href": "/services/ai-cultural-fit-screener/"
   },
   {
     "id": "ai-customer-360",
@@ -544,7 +544,7 @@ export const searchServices: SearchService[] = [
     "description": "Aggregate all customer data (CRM, support, usage, billing) into single timeline. AI suggests next best action per customer.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-customer-360"
+    "href": "/services/ai-customer-360/"
   },
   {
     "id": "ai-customer-sentiment-analytics",
@@ -552,7 +552,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time sentiment analysis across reviews, surveys, social media, and support interactions to drive proactive customer experience improvements.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-customer-sentiment-analytics"
+    "href": "/services/ai-customer-sentiment-analytics/"
   },
   {
     "id": "ai-customer-sentiment-tracker",
@@ -560,7 +560,7 @@ export const searchServices: SearchService[] = [
     "description": "Monitors support tickets, reviews, social mentions, and surveys to produce a real-time Net Promoter Score (NPS) and emotion heatmap.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-customer-sentiment-tracker"
+    "href": "/services/ai-customer-sentiment-tracker/"
   },
   {
     "id": "ai-customer-success-predictor",
@@ -568,7 +568,7 @@ export const searchServices: SearchService[] = [
     "description": "Early churn signal detection via usage analytics + support ticket sentiment; auto-create retention playbook per at-risk account.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-customer-success-predictor"
+    "href": "/services/ai-customer-success-predictor/"
   },
   {
     "id": "ai-customer-support",
@@ -576,7 +576,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 AI-powered customer service with intelligent ticket routing, auto-resolution, and sentiment analysis.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-customer-support"
+    "href": "/services/ai-customer-support/"
   },
   {
     "id": "ai-customer-support-agent",
@@ -584,7 +584,7 @@ export const searchServices: SearchService[] = [
     "description": "Fully automated 24/7 customer support using RAG + LLMs: answer FAQs, troubleshoot issues, process returns, and escalate complex tickets with context handoff.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-customer-support-agent"
+    "href": "/services/ai-customer-support-agent/"
   },
   {
     "id": "ai-cyber-threat-hunting",
@@ -592,7 +592,7 @@ export const searchServices: SearchService[] = [
     "description": "Proactive threat detection using advanced AI behavioral analysis, anomaly detection, and automated incident response orchestration for enterprises under constant attack.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-cyber-threat-hunting"
+    "href": "/services/ai-cyber-threat-hunting/"
   },
   {
     "id": "ai-dashboard-designer",
@@ -600,7 +600,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-dashboard-designer"
+    "href": "/services/ai-dashboard-designer/"
   },
   {
     "id": "ai-data-quality-engine",
@@ -608,7 +608,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous data quality at pipeline scale: automated profiling, statistical anomaly detection, schema drift + auto-fix. GE/Soda/DBT quality gates prevent bad data flowing to warehouse.",
     "category": "data",
     "popular": false,
-    "href": "/services/ai-data-quality-engine"
+    "href": "/services/ai-data-quality-engine/"
   },
   {
     "id": "ai-data-quality-fabric",
@@ -616,7 +616,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-data-quality-fabric"
+    "href": "/services/ai-data-quality-fabric/"
   },
   {
     "id": "ai-data-quality-guardian",
@@ -624,7 +624,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-data-quality-guardian"
+    "href": "/services/ai-data-quality-guardian/"
   },
   {
     "id": "ai-ddos-protection-platform",
@@ -632,7 +632,7 @@ export const searchServices: SearchService[] = [
     "description": "Edge-based DDoS mitigation tuned by ML: absorbs multi-Tbps volumetric attacks, distinguishes legitimate traffic spikes from attacks, and auto-scales scrubbing capacity — all with sub-millisecond routing overhead.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-ddos-protection-platform"
+    "href": "/services/ai-ddos-protection-platform/"
   },
   {
     "id": "ai-deepfake-detection",
@@ -640,7 +640,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-deepfake-detection"
+    "href": "/services/ai-deepfake-detection/"
   },
   {
     "id": "ai-devops-chatbot",
@@ -648,7 +648,7 @@ export const searchServices: SearchService[] = [
     "description": "Natural language interface to your infrastructure: ask for logs, deployments, metrics, and incidents; get instant answers and auto-remediation suggestions.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-devops-chatbot"
+    "href": "/services/ai-devops-chatbot/"
   },
   {
     "id": "ai-digital-twin-platform",
@@ -656,7 +656,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-digital-twin-platform"
+    "href": "/services/ai-digital-twin-platform/"
   },
   {
     "id": "ai-document-classifier",
@@ -664,7 +664,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-classifies invoices contracts NDAs receipts resumes medical records: routes to correct workflow extracts key fields attaches metadata search tags.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-document-classifier"
+    "href": "/services/ai-document-classifier/"
   },
   {
     "id": "ai-document-intelligence",
@@ -672,7 +672,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-document-intelligence"
+    "href": "/services/ai-document-intelligence/"
   },
   {
     "id": "ai-document-qa",
@@ -680,7 +680,7 @@ export const searchServices: SearchService[] = [
     "description": "Upload PDFs, Word docs, and spreadsheets; ask natural language questions and get instant cited answers with multi-document cross-referencing and role-based access control.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-document-qa"
+    "href": "/services/ai-document-qa/"
   },
   {
     "id": "ai-driven-api-design-assistant",
@@ -688,7 +688,7 @@ export const searchServices: SearchService[] = [
     "description": "Design, document, and validate APIs using natural language specs; auto-generate OpenAPI/Swagger definitions, SDKs, and mock servers.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-driven-api-design-assistant"
+    "href": "/services/ai-driven-api-design-assistant/"
   },
   {
     "id": "ai-driven-customer-segmentation",
@@ -696,7 +696,7 @@ export const searchServices: SearchService[] = [
     "description": "Cluster your customer base into meaningful personas using behavioral data, purchase history, and engagement patterns; deliver personalized marketing automatically.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-driven-customer-segmentation"
+    "href": "/services/ai-driven-customer-segmentation/"
   },
   {
     "id": "ai-drug-discovery",
@@ -704,7 +704,7 @@ export const searchServices: SearchService[] = [
     "description": "Accelerate pharmaceutical R&D with AI-powered molecular simulation, target identification, toxicity prediction, and clinical trial optimization.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-drug-discovery"
+    "href": "/services/ai-drug-discovery/"
   },
   {
     "id": "ai-drug-discovery-assistant",
@@ -712,7 +712,7 @@ export const searchServices: SearchService[] = [
     "description": "AI platform for early drug discovery: molecular generation, target binding affinity prediction, ADMET forecasting, patent landscape analysis, and pre-clinical trial candidate ranking powered by graph neural networks.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-drug-discovery-assistant"
+    "href": "/services/ai-drug-discovery-assistant/"
   },
   {
     "id": "ai-drug-discovery-platform",
@@ -720,7 +720,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-drug-discovery-platform"
+    "href": "/services/ai-drug-discovery-platform/"
   },
   {
     "id": "ai-drug-interaction-checker",
@@ -728,7 +728,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time 50K+ prescription/OTC interaction checker: contraindications pregnancy risk triggers prescriber alert + pharmacy workflow patient counseling sheet.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-drug-interaction-checker"
+    "href": "/services/ai-drug-interaction-checker/"
   },
   {
     "id": "ai-dyslexia-assist",
@@ -736,7 +736,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-dyslexia-assist"
+    "href": "/services/ai-dyslexia-assist/"
   },
   {
     "id": "ai-ecommerce-smart-search",
@@ -744,7 +744,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-ecommerce-smart-search"
+    "href": "/services/ai-ecommerce-smart-search/"
   },
   {
     "id": "ai-edge-realtime-inference",
@@ -752,7 +752,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy AI at the edge and in real time. Low-latency inference, on-device models, and streaming pipelines for mission-critical applications.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-edge-realtime-inference"
+    "href": "/services/ai-edge-realtime-inference/"
   },
   {
     "id": "ai-education-adaptive-tutor",
@@ -760,7 +760,7 @@ export const searchServices: SearchService[] = [
     "description": "Personalized K-12 adaptive: adjusts difficulty by mastery scaffolds strugglers accelerates high performers curriculum-standard tagged problems.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-education-adaptive-tutor"
+    "href": "/services/ai-education-adaptive-tutor/"
   },
   {
     "id": "ai-education-tutor",
@@ -768,7 +768,7 @@ export const searchServices: SearchService[] = [
     "description": "Personalized learning companion that adapts to student's pace, identifies knowledge gaps, and provides Socratic questioning to deepen understanding.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-education-tutor"
+    "href": "/services/ai-education-tutor/"
   },
   {
     "id": "ai-email-campaign-generator",
@@ -776,7 +776,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end email marketing: Generate sequences, personalize per recipient, A/B test subject lines, optimize send times.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-email-campaign-generator"
+    "href": "/services/ai-email-campaign-generator/"
   },
   {
     "id": "ai-email-marketing",
@@ -784,7 +784,7 @@ export const searchServices: SearchService[] = [
     "description": "Intelligent email campaigns with AI-powered subject lines, send-time optimization, dynamic content, and advanced segmentation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-email-marketing"
+    "href": "/services/ai-email-marketing/"
   },
   {
     "id": "ai-employee-experience",
@@ -792,7 +792,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end employee lifecycle automation from AI-powered onboarding to performance management, engagement tracking, and retention prediction.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-employee-experience"
+    "href": "/services/ai-employee-experience/"
   },
   {
     "id": "ai-energy-optimization",
@@ -800,7 +800,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-driven energy consumption optimization for buildings, data centers, and manufacturing — reduce costs, meet ESG targets, and automate sustainability reporting.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-energy-optimization"
+    "href": "/services/ai-energy-optimization/"
   },
   {
     "id": "ai-ethics-audit-1",
@@ -808,7 +808,7 @@ export const searchServices: SearchService[] = [
     "description": "Independent AI ethics audits examining your AI systems for bias, fairness, transparency, and regulatory compliance. Includes algorithmic impact assessments, bias testing across protected classes, and governance framework design.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-ethics-audit-1"
+    "href": "/services/ai-ethics-audit-1/"
   },
   {
     "id": "ai-ethics-governance",
@@ -816,7 +816,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive AI governance framework with bias detection, model explainability, audit trails, and regulatory compliance for responsible AI deployment.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-ethics-governance"
+    "href": "/services/ai-ethics-governance/"
   },
   {
     "id": "ai-etl-pipeline-builder",
@@ -824,7 +824,7 @@ export const searchServices: SearchService[] = [
     "description": "Natural language ETL builder: describe source, target, transformation — AI generates production-ready dbt/Glue/Dataflow pipeline. Auto-tests, docs, type-map.",
     "category": "data",
     "popular": false,
-    "href": "/services/ai-etl-pipeline-builder"
+    "href": "/services/ai-etl-pipeline-builder/"
   },
   {
     "id": "ai-exam-proctoring",
@@ -832,7 +832,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-exam-proctoring"
+    "href": "/services/ai-exam-proctoring/"
   },
   {
     "id": "ai-expense-audit",
@@ -840,7 +840,7 @@ export const searchServices: SearchService[] = [
     "description": "ML engine auto-categorises business expenses by GL code, flags policy violations, and generates audit-ready reports for your finance team.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-expense-audit"
+    "href": "/services/ai-expense-audit/"
   },
   {
     "id": "ai-feature-store",
@@ -848,7 +848,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-feature-store"
+    "href": "/services/ai-feature-store/"
   },
   {
     "id": "ai-federated-learning",
@@ -856,7 +856,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-federated-learning"
+    "href": "/services/ai-federated-learning/"
   },
   {
     "id": "ai-fedrisk-compliance",
@@ -864,7 +864,7 @@ export const searchServices: SearchService[] = [
     "description": "Maps your control implementations to FedRAMP Rev 5 generates POA&M tracks continuous monitoring artifacts auto-generates audit evidence bundles readiness gap report.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-fedrisk-compliance"
+    "href": "/services/ai-fedrisk-compliance/"
   },
   {
     "id": "ai-financial-forecasting",
@@ -872,7 +872,7 @@ export const searchServices: SearchService[] = [
     "description": "Revenue forecasting, cash flow prediction, and budget optimization using AI models trained on your historical and market data.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-financial-forecasting"
+    "href": "/services/ai-financial-forecasting/"
   },
   {
     "id": "ai-financial-fraud-detection",
@@ -880,7 +880,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time transaction monitoring with deep learning anomaly detection, customer behavior profiling, and automated case management for banking and fintech.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-financial-fraud-detection"
+    "href": "/services/ai-financial-fraud-detection/"
   },
   {
     "id": "ai-finetuning-alignment-pipelines",
@@ -888,7 +888,7 @@ export const searchServices: SearchService[] = [
     "description": "",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-finetuning-alignment-pipelines"
+    "href": "/services/ai-finetuning-alignment-pipelines/"
   },
   {
     "id": "ai-fintech-fraud-graph",
@@ -896,7 +896,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time fraud detection as a knowledge graph: entity resolution across accounts, IP, device, and card fingerprints; ML scoring per transaction in under 15ms; SAR and CTR auto-draft; global rule engine.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-fintech-fraud-graph"
+    "href": "/services/ai-fintech-fraud-graph/"
   },
   {
     "id": "ai-for-code-migration",
@@ -904,7 +904,7 @@ export const searchServices: SearchService[] = [
     "description": "Automate legacy codebase modernization: convert jQuery to React, Python 2 to 3, AngularJS to modern frameworks with semantic-preserving transformations.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-for-code-migration"
+    "href": "/services/ai-for-code-migration/"
   },
   {
     "id": "ai-form-filler-intelligence",
@@ -912,7 +912,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-form-filler-intelligence"
+    "href": "/services/ai-form-filler-intelligence/"
   },
   {
     "id": "ai-foundation-models-custom-training",
@@ -920,7 +920,7 @@ export const searchServices: SearchService[] = [
     "description": "Train and deploy custom foundation models. Domain-specific pretraining, fine-tuning, and model adaptation for enterprise AI with full data sovereig...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-foundation-models-custom-training"
+    "href": "/services/ai-foundation-models-custom-training/"
   },
   {
     "id": "ai-fraud-detection",
@@ -928,7 +928,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time fraud prevention using ML anomaly detection, behavioral analysis, and rule-based scoring for transactions and user activity.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-fraud-detection"
+    "href": "/services/ai-fraud-detection/"
   },
   {
     "id": "ai-fraud-detection-finance",
@@ -936,7 +936,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time transaction monitoring for banks, fintechs, and accounting firms with explainable AI decisions and SAR report generation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-fraud-detection-finance"
+    "href": "/services/ai-fraud-detection-finance/"
   },
   {
     "id": "ai-fraud-detection-real-time",
@@ -944,7 +944,7 @@ export const searchServices: SearchService[] = [
     "description": "ML models trained on transaction data to detect anomalies in milliseconds. Adaptive learning reduces false positives over time.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-fraud-detection-real-time"
+    "href": "/services/ai-fraud-detection-real-time/"
   },
   {
     "id": "ai-fraud-pattern-analyzer",
@@ -952,7 +952,7 @@ export const searchServices: SearchService[] = [
     "description": "Deep behavioral profiling: baseline per user then alerts on anomalous patterns — login geography, transaction velocity, amount/type deviation, withdrawn account signals. Links across accounts to detect ring fraud.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-fraud-pattern-analyzer"
+    "href": "/services/ai-fraud-pattern-analyzer/"
   },
   {
     "id": "ai-fullstack-test-generator",
@@ -960,7 +960,7 @@ export const searchServices: SearchService[] = [
     "description": "Reads source code + OpenAPI + DB schema produces unit + integration + E2E tests: React/Vue component API endpoint DB constraint auth flow 90%+ coverage.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-fullstack-test-generator"
+    "href": "/services/ai-fullstack-test-generator/"
   },
   {
     "id": "ai-gen-app-dev-1",
@@ -968,7 +968,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end development service for building production-ready AI applications — from LLM-powered chatbots and RAG systems to multi-agent workflows and AI-native products.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-gen-app-dev-1"
+    "href": "/services/ai-gen-app-dev-1/"
   },
   {
     "id": "ai-generative-synthetic-patient-data",
@@ -976,7 +976,7 @@ export const searchServices: SearchService[] = [
     "description": "Generate HIPAA-compliant synthetic patient records: realistic demographics, diagnoses, lab values, medications, and care pathways. Train ML models, validate software, and test integrations without real PHI.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-generative-synthetic-patient-data"
+    "href": "/services/ai-generative-synthetic-patient-data/"
   },
   {
     "id": "ai-genomic-analysis",
@@ -984,7 +984,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-genomic-analysis"
+    "href": "/services/ai-genomic-analysis/"
   },
   {
     "id": "ai-glassdoor-review-analyzer",
@@ -992,7 +992,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-glassdoor-review-analyzer"
+    "href": "/services/ai-glassdoor-review-analyzer/"
   },
   {
     "id": "ai-governance-compliance",
@@ -1000,7 +1000,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-governance-compliance"
+    "href": "/services/ai-governance-compliance/"
   },
   {
     "id": "ai-governance-trust",
@@ -1008,7 +1008,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise AI governance, compliance, and risk management. Policy enforcement, bias detection, audit trails, and responsible AI frameworks for regu...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-governance-trust"
+    "href": "/services/ai-governance-trust/"
   },
   {
     "id": "ai-grant-matcher",
@@ -1016,7 +1016,7 @@ export const searchServices: SearchService[] = [
     "description": "AI scans 50,000+ government, foundation, and corporate grant opportunities. Matches your organisation profile and auto-drafts tailored proposals in minutes.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-grant-matcher"
+    "href": "/services/ai-grant-matcher/"
   },
   {
     "id": "ai-growth-intelligence",
@@ -1024,7 +1024,7 @@ export const searchServices: SearchService[] = [
     "description": "Scans 10K+ growth levers: pricing positioning channel mix funnel competitor moves. ML ranks highest-ROI experiments per your stage market unit economics.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-growth-intelligence"
+    "href": "/services/ai-growth-intelligence/"
   },
   {
     "id": "ai-hiring-pipeline-optimizer",
@@ -1032,7 +1032,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-hiring-pipeline-optimizer"
+    "href": "/services/ai-hiring-pipeline-optimizer/"
   },
   {
     "id": "ai-hr-assistant",
@@ -1040,7 +1040,7 @@ export const searchServices: SearchService[] = [
     "description": "Intelligent HR automation for recruitment, onboarding, employee engagement, and policy Q&A using conversational AI.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-hr-assistant"
+    "href": "/services/ai-hr-assistant/"
   },
   {
     "id": "ai-infra-provisioner",
@@ -1048,7 +1048,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-infra-provisioner"
+    "href": "/services/ai-infra-provisioner/"
   },
   {
     "id": "ai-insurance-claims",
@@ -1056,7 +1056,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-insurance-claims"
+    "href": "/services/ai-insurance-claims/"
   },
   {
     "id": "ai-insurance-pricing",
@@ -1064,7 +1064,7 @@ export const searchServices: SearchService[] = [
     "description": "ML pricing model for underwriters: ingests claim history risk factors market data produces per-risk pricing with confidence interval exposure summary benchmark vs competitors.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-insurance-pricing"
+    "href": "/services/ai-insurance-pricing/"
   },
   {
     "id": "ai-integration-apis",
@@ -1072,7 +1072,7 @@ export const searchServices: SearchService[] = [
     "description": "Integrate AI into existing systems with unified APIs, event-driven pipelines, and enterprise connectors. One integration layer across LLMs, agents,...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-integration-apis"
+    "href": "/services/ai-integration-apis/"
   },
   {
     "id": "ai-intelligent-routing",
@@ -1080,7 +1080,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated document intake with AI extraction, classification, and intelligent routing to the right team or workflow — invoices, claims, applications, and contracts.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-intelligent-routing"
+    "href": "/services/ai-intelligent-routing/"
   },
   {
     "id": "ai-interview-conduct-bot",
@@ -1088,7 +1088,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-interview-conduct-bot"
+    "href": "/services/ai-interview-conduct-bot/"
   },
   {
     "id": "ai-it-helpdesk",
@@ -1096,7 +1096,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated Tier-1 IT support for employees: password resets, software installs, device troubleshooting, and knowledge base search.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-it-helpdesk"
+    "href": "/services/ai-it-helpdesk/"
   },
   {
     "id": "ai-job-description-kit",
@@ -1104,7 +1104,7 @@ export const searchServices: SearchService[] = [
     "description": "Create bias-free, inclusive job descriptions tailored to your role. Auto-generate scoring rubrics and EEOC/ADA compliant interview questions.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-job-description-kit"
+    "href": "/services/ai-job-description-kit/"
   },
   {
     "id": "ai-job-matcher",
@@ -1112,7 +1112,7 @@ export const searchServices: SearchService[] = [
     "description": "Two-sided AI: job seeker resume vs all open roles + candidate profile vs employer requirements. Fit scores gap analysis interview prep salary benchmark.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-job-matcher"
+    "href": "/services/ai-job-matcher/"
   },
   {
     "id": "ai-knowledge-base-agent",
@@ -1120,7 +1120,7 @@ export const searchServices: SearchService[] = [
     "description": "Turn your documents, wikis, and internal data into an intelligent, queryable knowledge graph with conversational AI search and automated content synchronization.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-knowledge-base-agent"
+    "href": "/services/ai-knowledge-base-agent/"
   },
   {
     "id": "ai-knowledge-base-rag",
@@ -1128,7 +1128,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-knowledge-base-rag"
+    "href": "/services/ai-knowledge-base-rag/"
   },
   {
     "id": "ai-knowledge-graph",
@@ -1136,7 +1136,7 @@ export const searchServices: SearchService[] = [
     "description": "Ingest internal docs, wikis, tickets, and code — extract entity relations, build searchable knowledge graph. Surfaces hidden connections: which team owns what, what service is blocked by which team.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-knowledge-graph"
+    "href": "/services/ai-knowledge-graph/"
   },
   {
     "id": "ai-knowledge-graph-builder",
@@ -1144,7 +1144,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-build entity/relation graph from unstructured docs + structured DBs; SPARQL/GraphQL query; graph-visualisation frontend.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-knowledge-graph-builder"
+    "href": "/services/ai-knowledge-graph-builder/"
   },
   {
     "id": "ai-knowledge-graph-search-deep",
@@ -1152,7 +1152,7 @@ export const searchServices: SearchService[] = [
     "description": "Deep semantic search across structured + unstructured corporate knowledge: auto-builds a navigable knowledge graph from Confluence, Slack, Drive, Jira, and CRM; facet navigation, path-finding between related entities, and answer synthesis with cited sources.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-knowledge-graph-search-deep"
+    "href": "/services/ai-knowledge-graph-search-deep/"
   },
   {
     "id": "ai-knowledge-graph-search-engine",
@@ -1160,7 +1160,7 @@ export const searchServices: SearchService[] = [
     "description": "Semantic graph search engine: turn siloed docs, databases, and APIs into a unified knowledge graph with entity disambiguation, NL query rewriting, and cited ranked answers across 50+ connected tools.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-knowledge-graph-search-engine"
+    "href": "/services/ai-knowledge-graph-search-engine/"
   },
   {
     "id": "ai-knowledge-management",
@@ -1168,7 +1168,7 @@ export const searchServices: SearchService[] = [
     "description": "Centralize organizational knowledge with AI-powered semantic search, auto-tagging, content gap detection, and intelligent Q&A across your document corpus.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-knowledge-management"
+    "href": "/services/ai-knowledge-management/"
   },
   {
     "id": "ai-kubernetes-optimizer",
@@ -1176,7 +1176,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-kubernetes-optimizer"
+    "href": "/services/ai-kubernetes-optimizer/"
   },
   {
     "id": "ai-kyc-aml-compliance",
@@ -1184,7 +1184,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-kyc-aml-compliance"
+    "href": "/services/ai-kyc-aml-compliance/"
   },
   {
     "id": "ai-lead-enricher",
@@ -1192,7 +1192,7 @@ export const searchServices: SearchService[] = [
     "description": "Score every inbound and outbound lead on fit, intent, and priority. Auto-enrich records with 50+ data providers including LinkedIn, Crunchbase, and Clearbit.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-lead-enricher"
+    "href": "/services/ai-lead-enricher/"
   },
   {
     "id": "ai-lead-generation",
@@ -1200,7 +1200,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically discover, qualify, and enrich B2B leads with web scraping, firmographic scoring, and intent signal detection.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-lead-generation"
+    "href": "/services/ai-lead-generation/"
   },
   {
     "id": "ai-legal-contract-redaction",
@@ -1208,7 +1208,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically redacts PII, trade secrets, and privileged information from legal documents before sharing or discovery.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-legal-contract-redaction"
+    "href": "/services/ai-legal-contract-redaction/"
   },
   {
     "id": "ai-legal-doc-review",
@@ -1216,7 +1216,7 @@ export const searchServices: SearchService[] = [
     "description": "Accelerate legal document analysis with AI: extract clauses, flag risks, summarize contracts, and generate due diligence reports in minutes.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-legal-doc-review"
+    "href": "/services/ai-legal-doc-review/"
   },
   {
     "id": "ai-legal-document-analysis",
@@ -1224,7 +1224,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated legal document review, clause extraction, risk assessment, and contract comparison powered by advanced NLP trained on legal corpora.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-legal-document-analysis"
+    "href": "/services/ai-legal-document-analysis/"
   },
   {
     "id": "ai-legal-redline",
@@ -1232,7 +1232,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated contract review against playbooks: flag risky clauses, missing obligations, fee anomalies, and unfavorable T&Cs. Generates redlines + executive summary per document type (MSA, SOW, NDA, EULA).",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-legal-redline"
+    "href": "/services/ai-legal-redline/"
   },
   {
     "id": "ai-legal-research",
@@ -1240,7 +1240,7 @@ export const searchServices: SearchService[] = [
     "description": "LLM legal research: semantic search across case law statutes regulations SEC filings patents. Produces cited answers source attribution alerts law changes per jurisdiction.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-legal-research"
+    "href": "/services/ai-legal-research/"
   },
   {
     "id": "ai-llm-router-pro",
@@ -1248,7 +1248,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-llm-router-pro"
+    "href": "/services/ai-llm-router-pro/"
   },
   {
     "id": "ai-load-testing",
@@ -1256,7 +1256,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-load-testing"
+    "href": "/services/ai-load-testing/"
   },
   {
     "id": "ai-log-analysis",
@@ -1264,7 +1264,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-log-analysis"
+    "href": "/services/ai-log-analysis/"
   },
   {
     "id": "ai-low-code-integration",
@@ -1272,7 +1272,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-low-code-integration"
+    "href": "/services/ai-low-code-integration/"
   },
   {
     "id": "ai-machine-translation-quality",
@@ -1280,7 +1280,7 @@ export const searchServices: SearchService[] = [
     "description": "Neural MT post-editing quality scoring (COMET/HYENA), terminology enforcement, auto-edit suggestion, and translation memory browser.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-machine-translation-quality"
+    "href": "/services/ai-machine-translation-quality/"
   },
   {
     "id": "ai-marine-fisheries-sustainability",
@@ -1288,7 +1288,7 @@ export const searchServices: SearchService[] = [
     "description": "Satellite + IoT ocean analytics: track fish stocks, detect illegal fishing, monitor coral reef health, and model climate impact on marine ecosystems. Supports MSC certification and UN SDG 14 reporting.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-marine-fisheries-sustainability"
+    "href": "/services/ai-marine-fisheries-sustainability/"
   },
   {
     "id": "ai-marketing-copy-generator",
@@ -1296,7 +1296,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-format copy engine: SEO blog, ad headline, landing page, LinkedIn post, email sequence — brand-voice tuned per company.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-marketing-copy-generator"
+    "href": "/services/ai-marketing-copy-generator/"
   },
   {
     "id": "ai-media-monitoring",
@@ -1304,7 +1304,7 @@ export const searchServices: SearchService[] = [
     "description": "Tracks global news, podcasts, and video transcripts for brand mentions, sentiment shifts, and crisis signals in real time.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-media-monitoring"
+    "href": "/services/ai-media-monitoring/"
   },
   {
     "id": "ai-medical-image-diagnosis",
@@ -1312,7 +1312,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-medical-image-diagnosis"
+    "href": "/services/ai-medical-image-diagnosis/"
   },
   {
     "id": "ai-medical-imaging",
@@ -1320,7 +1320,7 @@ export const searchServices: SearchService[] = [
     "description": "FDA-ready AI diagnostic support for radiology, pathology, and dermatology — detect anomalies, prioritize cases, and assist radiologists with second-opinion AI.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-medical-imaging"
+    "href": "/services/ai-medical-imaging/"
   },
   {
     "id": "ai-meeting-assistant-pro",
@@ -1328,7 +1328,7 @@ export const searchServices: SearchService[] = [
     "description": "Live transcription, action-item extraction, decision-log compiler, sentiment tracker, and auto-sync to Asana/Slack/Done with calendar.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-meeting-assistant-pro"
+    "href": "/services/ai-meeting-assistant-pro/"
   },
   {
     "id": "ai-meeting-notes-summary",
@@ -1336,7 +1336,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-record, transcribe, and summarise every meeting with action items, decisions, and speaker attribution. Integrates with Zoom, Teams, Google Meet, and Slack.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-meeting-notes-summary"
+    "href": "/services/ai-meeting-notes-summary/"
   },
   {
     "id": "ai-meeting-preread",
@@ -1344,7 +1344,7 @@ export const searchServices: SearchService[] = [
     "description": "AI analyses your calendar, gathers Slack threads and CRM context, then auto-generates a structured meeting pre-read with agenda, talking points, and decision log.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-meeting-preread"
+    "href": "/services/ai-meeting-preread/"
   },
   {
     "id": "ai-meeting-summarizer-pro",
@@ -1352,7 +1352,7 @@ export const searchServices: SearchService[] = [
     "description": "Record + transcribe with speaker diarization. AI summary: decisions made, action items, owners, deadlines, topic timeline. Auto-pushes to Slack/Asana/Notion/Jira + recurring meeting agenda builder.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-meeting-summarizer-pro"
+    "href": "/services/ai-meeting-summarizer-pro/"
   },
   {
     "id": "ai-memory-agents-long-horizon",
@@ -1360,7 +1360,7 @@ export const searchServices: SearchService[] = [
     "description": "",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-memory-agents-long-horizon"
+    "href": "/services/ai-memory-agents-long-horizon/"
   },
   {
     "id": "ai-mental-health-chatbot",
@@ -1368,7 +1368,7 @@ export const searchServices: SearchService[] = [
     "description": "Empathetic, HIPAA-compliant chatbot providing CBT-based support, mood tracking, and crisis escalation to licensed professionals.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-mental-health-chatbot"
+    "href": "/services/ai-mental-health-chatbot/"
   },
   {
     "id": "ai-metadata-management",
@@ -1376,7 +1376,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-metadata-management"
+    "href": "/services/ai-metadata-management/"
   },
   {
     "id": "ai-model-orchestration",
@@ -1384,7 +1384,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-model AI orchestration, routing, and fallback. Optimize cost, latency, and quality by routing requests to the right model for each task.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-model-orchestration"
+    "href": "/services/ai-model-orchestration/"
   },
   {
     "id": "ai-multimodal-intelligence",
@@ -1392,7 +1392,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise multimodal AI for text, video, images, and audio. Unified understanding across data types for document analysis, video insights, and int...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-multimodal-intelligence"
+    "href": "/services/ai-multimodal-intelligence/"
   },
   {
     "id": "ai-multimodal-video-understanding",
@@ -1400,7 +1400,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end video understanding pipeline: per-frame CLIP + action recognition, temporal scene segmentation, automatic transcript + OCR extraction, chapter/time-stamped topic indexing, and natural-language search across full video library.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-multimodal-video-understanding"
+    "href": "/services/ai-multimodal-video-understanding/"
   },
   {
     "id": "ai-newsletter-engagement",
@@ -1408,7 +1408,7 @@ export const searchServices: SearchService[] = [
     "description": "Deep analytics for email newsletters: which topics drive opens, optimal send times, subscriber churn prediction, and A/B headline wire-frame suggestions.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-newsletter-engagement"
+    "href": "/services/ai-newsletter-engagement/"
   },
   {
     "id": "ai-nutrition-meal-planner",
@@ -1416,7 +1416,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-nutrition-meal-planner"
+    "href": "/services/ai-nutrition-meal-planner/"
   },
   {
     "id": "ai-observability-mlops",
@@ -1424,7 +1424,7 @@ export const searchServices: SearchService[] = [
     "description": "Monitor, debug, and optimize AI systems at scale. End-to-end observability for LLMs, agents, and ML pipelines with tracing, evaluation, and cost an...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-observability-mlops"
+    "href": "/services/ai-observability-mlops/"
   },
   {
     "id": "ai-observability-turbo",
@@ -1432,7 +1432,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-observability-turbo"
+    "href": "/services/ai-observability-turbo/"
   },
   {
     "id": "ai-office-automation",
@@ -1440,7 +1440,7 @@ export const searchServices: SearchService[] = [
     "description": "AI copilot for office workflows: document classification, contract parsing, email triage, invoice data extraction, and workflow routing — all with no-code builder.",
     "category": "automation",
     "popular": false,
-    "href": "/services/ai-office-automation"
+    "href": "/services/ai-office-automation/"
   },
   {
     "id": "ai-omnichannel-chatbot",
@@ -1448,7 +1448,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified chatbot across 20+ channels: website WhatsApp Instagram SMS phone call Slack Teams. Shared conversation context handoff routing brand voice per channel.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-omnichannel-chatbot"
+    "href": "/services/ai-omnichannel-chatbot/"
   },
   {
     "id": "ai-pdf-engine",
@@ -1456,7 +1456,7 @@ export const searchServices: SearchService[] = [
     "description": "Batch PDF ingest extract transform: table layout OCR handwriting form auto-fill export DOCX CSV JSON 99%+ layout fidelity 1000-pages-per-hour.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-pdf-engine"
+    "href": "/services/ai-pdf-engine/"
   },
   {
     "id": "ai-performance-monitoring",
@@ -1464,7 +1464,7 @@ export const searchServices: SearchService[] = [
     "description": "Infrastructure + application performance monitoring powered by AI: anomaly detection, root-cause analysis, predictive alerts, and auto-remediation for microservices, databases, and cloud infrastructure.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-performance-monitoring"
+    "href": "/services/ai-performance-monitoring/"
   },
   {
     "id": "ai-personal-finance-coach",
@@ -1472,7 +1472,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-personal-finance-coach"
+    "href": "/services/ai-personal-finance-coach/"
   },
   {
     "id": "ai-personalisation-engine-realtime",
@@ -1480,7 +1480,7 @@ export const searchServices: SearchService[] = [
     "description": "Session-based recommendation: collaborative-filtering + LLM cold-start description; auto A/B homepage variant; JSON recommendation API.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-personalisation-engine-realtime"
+    "href": "/services/ai-personalisation-engine-realtime/"
   },
   {
     "id": "ai-personalization-engine",
@@ -1488,7 +1488,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time personalization for websites, apps, and e-commerce — dynamic content, product recommendations, pricing, and messaging tailored to each visitor.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-personalization-engine"
+    "href": "/services/ai-personalization-engine/"
   },
   {
     "id": "ai-personalized-learning",
@@ -1496,7 +1496,7 @@ export const searchServices: SearchService[] = [
     "description": "Adaptive learning paths powered by AI: skill gap analysis, micro-lesson generation, progress tracking, and competency-based assessments.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-personalized-learning"
+    "href": "/services/ai-personalized-learning/"
   },
   {
     "id": "ai-post-purchase-care",
@@ -1504,7 +1504,7 @@ export const searchServices: SearchService[] = [
     "description": "Proactive post-purchase support agent that monitors order status, delivery delays, and product issues — resolving 80% of cases before human escalation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-post-purchase-care"
+    "href": "/services/ai-post-purchase-care/"
   },
   {
     "id": "ai-powered-incident-postmortem",
@@ -1512,7 +1512,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically generate blameless postmortem reports from incident data: timeline reconstruction, root cause hypothesis, action items, and status tracking.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-incident-postmortem"
+    "href": "/services/ai-powered-incident-postmortem/"
   },
   {
     "id": "ai-powered-log-anomaly-detection",
@@ -1520,7 +1520,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically detect unusual patterns, spikes, and errors in logs using unsupervised ML; reduce alert fatigue and surface issues before they cause outages.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-log-anomaly-detection"
+    "href": "/services/ai-powered-log-anomaly-detection/"
   },
   {
     "id": "ai-powered-passwordless-auth",
@@ -1528,7 +1528,7 @@ export const searchServices: SearchService[] = [
     "description": "Behavioral biometrics & risk-based authentication: continuous fraud detection using device fingerprinting, typing patterns, and anomaly detection without passwords.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-passwordless-auth"
+    "href": "/services/ai-powered-passwordless-auth/"
   },
   {
     "id": "ai-powered-pr-drafting",
@@ -1536,7 +1536,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically generate PR titles, descriptions, and changelog entries from commit history and diff analysis; link to JIRA tickets and update documentation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-pr-drafting"
+    "href": "/services/ai-powered-pr-drafting/"
   },
   {
     "id": "ai-powered-question-answering",
@@ -1544,7 +1544,7 @@ export const searchServices: SearchService[] = [
     "description": "Chatbot that answers employee questions from internal docs: HR policies, engineering runbooks, sales playbooks; cite sources, track unanswered queries.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-question-answering"
+    "href": "/services/ai-powered-question-answering/"
   },
   {
     "id": "ai-powered-seo-optimizer",
@@ -1552,7 +1552,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time SEO analysis and content optimization: auto-suggest keywords, restructure sentences for readability, generate meta tags, and audit for E-E-A-T signals.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-seo-optimizer"
+    "href": "/services/ai-powered-seo-optimizer/"
   },
   {
     "id": "ai-powered-tech-debt-quantifier",
@@ -1560,7 +1560,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically identify, classify, and quantify technical debt: code complexity, duplication, outdated deps, test gaps, and architectural violations with remediation cost estimates.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-tech-debt-quantifier"
+    "href": "/services/ai-powered-tech-debt-quantifier/"
   },
   {
     "id": "ai-powered-test-generation",
@@ -1568,7 +1568,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically generate comprehensive unit, integration, and E2E tests from code, requirements, or user stories with high coverage and maintainability.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-test-generation"
+    "href": "/services/ai-powered-test-generation/"
   },
   {
     "id": "ai-powered-ui-generator",
@@ -1576,7 +1576,7 @@ export const searchServices: SearchService[] = [
     "description": "Turn natural language descriptions into production-ready React/Next.js components with Tailwind styling; customize variants, states, and accessibility attributes via chat.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-powered-ui-generator"
+    "href": "/services/ai-powered-ui-generator/"
   },
   {
     "id": "ai-prd-story-gen",
@@ -1584,7 +1584,7 @@ export const searchServices: SearchService[] = [
     "description": "Transform vague feature requests into comprehensive Product Requirements Documents with acceptance criteria, user flows, and ready-for-engineering technical specs.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-prd-story-gen"
+    "href": "/services/ai-prd-story-gen/"
   },
   {
     "id": "ai-predictive-churn",
@@ -1592,7 +1592,7 @@ export const searchServices: SearchService[] = [
     "description": "Predicts customer churn 30-90 days before event: ML ingests product usage behavior support tickets NPS scores contract data produces ranked at-risk list recommended retention.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-churn"
+    "href": "/services/ai-predictive-churn/"
   },
   {
     "id": "ai-predictive-fraud-detection-streaming",
@@ -1600,7 +1600,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time fraud scoring on Kafka event stream: feature engineering IsolationForest + XGBoost alert/block with feedback loop for model retrain.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-fraud-detection-streaming"
+    "href": "/services/ai-predictive-fraud-detection-streaming/"
   },
   {
     "id": "ai-predictive-maintenance",
@@ -1608,7 +1608,7 @@ export const searchServices: SearchService[] = [
     "description": "IoT-enabled predictive maintenance that monitors equipment health in real time, predicts failures before they happen, and optimizes maintenance schedules to reduce downtime.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-maintenance"
+    "href": "/services/ai-predictive-maintenance/"
   },
   {
     "id": "ai-predictive-maintenance-advisor",
@@ -1616,7 +1616,7 @@ export const searchServices: SearchService[] = [
     "description": "Asset remaining useful life prediction via multimodal sensor fusion — vibration, thermal, acoustic, and electrical. Plain-English root-cause narration, part recommendation, and HSE safety-risk layer for maintenance managers.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-maintenance-advisor"
+    "href": "/services/ai-predictive-maintenance-advisor/"
   },
   {
     "id": "ai-predictive-maintenance-factory",
@@ -1624,7 +1624,7 @@ export const searchServices: SearchService[] = [
     "description": "IoT sensor fusion + ML to predict equipment failures 7–30 days in advance. Reduces downtime by 50%, extends asset life.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-maintenance-factory"
+    "href": "/services/ai-predictive-maintenance-factory/"
   },
   {
     "id": "ai-predictive-maintenance-industrial",
@@ -1632,7 +1632,7 @@ export const searchServices: SearchService[] = [
     "description": "Industrial IoT predictive maintenance: sensor fusion (vibration, temperature, current, ultrasound), ML failure prediction, remaining useful life (RUL) estimation, and automated work-order creation in your CMMS.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-maintenance-industrial"
+    "href": "/services/ai-predictive-maintenance-industrial/"
   },
   {
     "id": "ai-predictive-supply-chain-optimizer",
@@ -1640,7 +1640,7 @@ export const searchServices: SearchService[] = [
     "description": "Demand forecasting XGBoost/LightGBM, inventory reorder point SDE, route optimisation OR-Tools, and supplier risk scoring per vendor.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-supply-chain-optimizer"
+    "href": "/services/ai-predictive-supply-chain-optimizer/"
   },
   {
     "id": "ai-predictive-workforce-planning",
@@ -1648,7 +1648,7 @@ export const searchServices: SearchService[] = [
     "description": "Forecast hiring needs, optimize team composition, and predict attrition risk with AI-powered HR analytics and workforce modeling.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-predictive-workforce-planning"
+    "href": "/services/ai-predictive-workforce-planning/"
   },
   {
     "id": "ai-presentation-maker",
@@ -1656,7 +1656,7 @@ export const searchServices: SearchService[] = [
     "description": "Generate polished presentations, pitch decks, and reports from outlines with data visualization, templates, and speaker notes.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-presentation-maker"
+    "href": "/services/ai-presentation-maker/"
   },
   {
     "id": "ai-privilege-access-manager",
@@ -1664,7 +1664,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-privilege-access-manager"
+    "href": "/services/ai-privilege-access-manager/"
   },
   {
     "id": "ai-procurement",
@@ -1672,7 +1672,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-sources suppliers compares prices negotiates contracts tracks delivery and manages supplier risk: e-procurement spend analysis contract mgmt supplier scorecards.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-procurement"
+    "href": "/services/ai-procurement/"
   },
   {
     "id": "ai-product-analytics",
@@ -1680,7 +1680,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous product analytics: feature adoption funnels, cohort analysis, anomaly detection on key metrics. ML-powered alert when a feature drops in adoption.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-product-analytics"
+    "href": "/services/ai-product-analytics/"
   },
   {
     "id": "ai-product-analytics-insights",
@@ -1688,7 +1688,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-insights engine: conversion funnel anomaly, feature-adoption cohort, retention waterfall, session replay auto-clip per insight.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-product-analytics-insights"
+    "href": "/services/ai-product-analytics-insights/"
   },
   {
     "id": "ai-product-photo-enhancer",
@@ -1696,7 +1696,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-product-photo-enhancer"
+    "href": "/services/ai-product-photo-enhancer/"
   },
   {
     "id": "ai-profitability-dashboard",
@@ -1704,7 +1704,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-profitability-dashboard"
+    "href": "/services/ai-profitability-dashboard/"
   },
   {
     "id": "ai-project-planning",
@@ -1712,7 +1712,7 @@ export const searchServices: SearchService[] = [
     "description": "PM-grade AI: scope→WBS→resource allocation→critical path→risk register→milestone tracking. Syncs to Jira Asana Monday auto-updates when scope changes.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-project-planning"
+    "href": "/services/ai-project-planning/"
   },
   {
     "id": "ai-quality-inspection",
@@ -1720,7 +1720,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-quality-inspection"
+    "href": "/services/ai-quality-inspection/"
   },
   {
     "id": "ai-quantum-optimizer",
@@ -1728,7 +1728,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-quantum-optimizer"
+    "href": "/services/ai-quantum-optimizer/"
   },
   {
     "id": "ai-rag-knowledge-systems",
@@ -1736,7 +1736,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise retrieval-augmented generation (RAG) for accurate, grounded AI. Connect LLMs to your knowledge bases, documents, and real-time data with...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-rag-knowledge-systems"
+    "href": "/services/ai-rag-knowledge-systems/"
   },
   {
     "id": "ai-real-estate-valuation",
@@ -1744,7 +1744,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated AVM: comps zoning property features market trends confidence interval risk score comparable sales report for residential and commercial real estate.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-real-estate-valuation"
+    "href": "/services/ai-real-estate-valuation/"
   },
   {
     "id": "ai-real-time-translation-platform",
@@ -1752,7 +1752,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time speech-to-text translation: live event captioning, multilingual Zoom/Teams captions, video subtitle generation in 100+ languages, and AI voice dubbing that preserves emotion and tone.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-real-time-translation-platform"
+    "href": "/services/ai-real-time-translation-platform/"
   },
   {
     "id": "ai-realtime-translation",
@@ -1760,7 +1760,7 @@ export const searchServices: SearchService[] = [
     "description": "Sub-200ms speech-to-text and text-to-speech translation across 70+ languages with dialect preservation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-realtime-translation"
+    "href": "/services/ai-realtime-translation/"
   },
   {
     "id": "ai-red-team-automation",
@@ -1768,7 +1768,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated adversary simulation: C2 beaconing lateral movement privilege escalation data exfiltration mapped to MITRE ATT&CK auto-remediation playbooks continuous on-env testing.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-red-team-automation"
+    "href": "/services/ai-red-team-automation/"
   },
   {
     "id": "ai-regulated-industries",
@@ -1776,7 +1776,7 @@ export const searchServices: SearchService[] = [
     "description": "AI solutions built for healthcare, finance, legal, and government. HIPAA, SOC 2, GDPR, and EU AI Act–ready with audit trails and human oversight.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-regulated-industries"
+    "href": "/services/ai-regulated-industries/"
   },
   {
     "id": "ai-regulatory-compliance-monitor",
@@ -1784,7 +1784,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous regulatory change monitoring across 150+ jurisdictions with automated impact analysis, gap detection, and compliance report generation for financial services and healthcare.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-regulatory-compliance-monitor"
+    "href": "/services/ai-regulatory-compliance-monitor/"
   },
   {
     "id": "ai-reinforcement-learning-ops",
@@ -1792,7 +1792,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-reinforcement-learning-ops"
+    "href": "/services/ai-reinforcement-learning-ops/"
   },
   {
     "id": "ai-reinforcement-learning-optimiser",
@@ -1800,7 +1800,7 @@ export const searchServices: SearchService[] = [
     "description": "RL-based continuous optimisation for resource scheduling, pricing, content delivery, manufacturing control, and inventory replenishment policies.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-reinforcement-learning-optimiser"
+    "href": "/services/ai-reinforcement-learning-optimiser/"
   },
   {
     "id": "ai-resume-optimizer",
@@ -1808,7 +1808,7 @@ export const searchServices: SearchService[] = [
     "description": "AI reads your resume vs JD: scores ATS compatibility rewrites bullet points quantifies achievements fills keyword gaps produces one-click export + cover letter draft.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-resume-optimizer"
+    "href": "/services/ai-resume-optimizer/"
   },
   {
     "id": "ai-retail-personalization",
@@ -1816,7 +1816,7 @@ export const searchServices: SearchService[] = [
     "description": "Offline + online retail: shopper behavior scoring real-time offer personalization inventory allocation basket optimization store labor scheduling per SKU.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-retail-personalization"
+    "href": "/services/ai-retail-personalization/"
   },
   {
     "id": "ai-retail-recommendation-engine",
@@ -1824,7 +1824,7 @@ export const searchServices: SearchService[] = [
     "description": "Product recommendation engine for e-commerce that increases AOV by 15–25% using collaborative filtering, basket analysis, and real-time behavior.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-retail-recommendation-engine"
+    "href": "/services/ai-retail-recommendation-engine/"
   },
   {
     "id": "ai-revenue-clarity",
@@ -1832,7 +1832,7 @@ export const searchServices: SearchService[] = [
     "description": "Ingest pipeline, CRM custom objects, deal stages. ML forecasts: probability-adjusted revenue by rep, team, region. Detect stalled deals. Auto-generate pipeline coverage report.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-revenue-clarity"
+    "href": "/services/ai-revenue-clarity/"
   },
   {
     "id": "ai-revenue-ops",
@@ -1840,7 +1840,7 @@ export const searchServices: SearchService[] = [
     "description": "Unify sales, marketing, and customer success data with AI-driven attribution, forecasting, and go-to-market (GTM) optimization.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-revenue-ops"
+    "href": "/services/ai-revenue-ops/"
   },
   {
     "id": "ai-revenue-optimization",
@@ -1848,7 +1848,7 @@ export const searchServices: SearchService[] = [
     "description": "Dynamic pricing engine powered by machine learning — analyze competitor pricing, demand elasticity, customer segments, and market conditions to maximize revenue in real time.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-revenue-optimization"
+    "href": "/services/ai-revenue-optimization/"
   },
   {
     "id": "ai-revenue-optimizer",
@@ -1856,7 +1856,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-driven pricing, upsell recommendations, and churn prediction. Analyzes customer behavior, market trends to maximize LTV.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-revenue-optimizer"
+    "href": "/services/ai-revenue-optimizer/"
   },
   {
     "id": "ai-roadmap-strategy",
@@ -1864,7 +1864,7 @@ export const searchServices: SearchService[] = [
     "description": "Executive AI strategy: opportunity assessment model selection custom vs off-the-shelf stack design data readiness audit pilot roadmap prioritization 90-day win plan.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-roadmap-strategy"
+    "href": "/services/ai-roadmap-strategy/"
   },
   {
     "id": "ai-robotics-integration",
@@ -1872,7 +1872,7 @@ export const searchServices: SearchService[] = [
     "description": "AI integration for industrial and commercial robotics — computer vision navigation, autonomous task planning, human-robot collaboration, and fleet management.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-robotics-integration"
+    "href": "/services/ai-robotics-integration/"
   },
   {
     "id": "ai-rpa-automation",
@@ -1880,7 +1880,7 @@ export const searchServices: SearchService[] = [
     "description": "Web desktop mobile RPA: automates mouse keyboard form data entry ERP tax portal batch processing screen-scrape scheduler audit log per bot.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-rpa-automation"
+    "href": "/services/ai-rpa-automation/"
   },
   {
     "id": "ai-rpa-platform",
@@ -1888,7 +1888,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-rpa-platform"
+    "href": "/services/ai-rpa-platform/"
   },
   {
     "id": "ai-rx-prior-auth",
@@ -1896,7 +1896,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated prior authorization: eligibility check formulary check code auto-populate payer portal submission clinical note attach outcome tracking denial tracking remittance per payer analytics.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-rx-prior-auth"
+    "href": "/services/ai-rx-prior-auth/"
   },
   {
     "id": "ai-sales-coach",
@@ -1904,7 +1904,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time analysis: talk-listen ratio objection handling competitor mention pricing signal detection recommended next-step per call stage with CRM auto-scorecard team leaderboard.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-sales-coach"
+    "href": "/services/ai-sales-coach/"
   },
   {
     "id": "ai-sales-intelligence",
@@ -1912,7 +1912,7 @@ export const searchServices: SearchService[] = [
     "description": "Boost revenue with AI-driven lead scoring, pipeline prediction, deal insights, and automated outreach sequencing.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-sales-intelligence"
+    "href": "/services/ai-sales-intelligence/"
   },
   {
     "id": "ai-secrets-management",
@@ -1920,7 +1920,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-secrets-management"
+    "href": "/services/ai-secrets-management/"
   },
   {
     "id": "ai-security-responsible-ai",
@@ -1928,7 +1928,7 @@ export const searchServices: SearchService[] = [
     "description": "Secure AI systems and responsible deployment. Adversarial robustness, prompt injection defense, data privacy, and AI safety controls for enterprise...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-security-responsible-ai"
+    "href": "/services/ai-security-responsible-ai/"
   },
   {
     "id": "ai-self-healing-infra",
@@ -1936,7 +1936,7 @@ export const searchServices: SearchService[] = [
     "description": "Autonomous infrastructure remediation engine that detects anomalies, diagnoses root cause, and applies fixes — rollback guaranteed — without human intervention.",
     "category": "automation",
     "popular": false,
-    "href": "/services/ai-self-healing-infra"
+    "href": "/services/ai-self-healing-infra/"
   },
   {
     "id": "ai-self-healing-kubernetes-platform",
@@ -1944,7 +1944,7 @@ export const searchServices: SearchService[] = [
     "description": "Kubernetes operations platform powered by AI: auto-remediation of failing pods, cluster drift detection, workload auto-scaling, cost-aware scheduling, and security policy enforcement with zero-downtime rollouts.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-self-healing-kubernetes-platform"
+    "href": "/services/ai-self-healing-kubernetes-platform/"
   },
   {
     "id": "ai-sentiment-analysis",
@@ -1952,7 +1952,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time brand perception tracking across social media, reviews, news, and forums. Understand customer emotion at scale and act on insights before they become crises.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-sentiment-analysis"
+    "href": "/services/ai-sentiment-analysis/"
   },
   {
     "id": "ai-sentiment-brand-pulse",
@@ -1960,7 +1960,7 @@ export const searchServices: SearchService[] = [
     "description": "Monitor brand mentions across social, reviews, news, forums. Sentiment trend analysis per region, product, issue. Alert on sentiment spike. Generate weekly brand health executive summary.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-sentiment-brand-pulse"
+    "href": "/services/ai-sentiment-brand-pulse/"
   },
   {
     "id": "ai-seo-content-optimizer",
@@ -1968,7 +1968,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-seo-content-optimizer"
+    "href": "/services/ai-seo-content-optimizer/"
   },
   {
     "id": "ai-seo-optimizer",
@@ -1976,7 +1976,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time SEO analysis and content optimization: keyword suggestions, meta tag generation, readability scoring, and content gap analysis.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-seo-optimizer"
+    "href": "/services/ai-seo-optimizer/"
   },
   {
     "id": "ai-serverless-platform",
@@ -1984,7 +1984,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-serverless-platform"
+    "href": "/services/ai-serverless-platform/"
   },
   {
     "id": "ai-smart-document-redactor",
@@ -1992,7 +1992,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-smart-document-redactor"
+    "href": "/services/ai-smart-document-redactor/"
   },
   {
     "id": "ai-social-scheduler",
@@ -2000,7 +2000,7 @@ export const searchServices: SearchService[] = [
     "description": "Generate, schedule, and analyse social posts across LinkedIn, X/Twitter, Instagram, and TikTok. AI suggests optimal posting times per audience segment.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-social-scheduler"
+    "href": "/services/ai-social-scheduler/"
   },
   {
     "id": "ai-social-sentiment-tracker",
@@ -2008,7 +2008,7 @@ export const searchServices: SearchService[] = [
     "description": "Monitor brand sentiment across Twitter, Reddit, news, forums in real-time. Crisis detection alerts before issues go viral.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-social-sentiment-tracker"
+    "href": "/services/ai-social-sentiment-tracker/"
   },
   {
     "id": "ai-spatial-computing",
@@ -2016,7 +2016,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered spatial computing platform for augmented and virtual reality experiences — 3D scene understanding, gesture recognition, and immersive analytics.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-spatial-computing"
+    "href": "/services/ai-spatial-computing/"
   },
   {
     "id": "ai-spatial-computing-3d-scene",
@@ -2024,7 +2024,7 @@ export const searchServices: SearchService[] = [
     "description": "Text/Image 3D scene via Gaussian Splatting/LRM; real-time viewer in browser via Three.js; FBX/GLTF/OBJ export for game/VR pipeline.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-spatial-computing-3d-scene"
+    "href": "/services/ai-spatial-computing-3d-scene/"
   },
   {
     "id": "ai-speech-voice-solutions",
@@ -2032,7 +2032,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise-grade speech technology including high-accuracy transcription, AI voice cloning, real-time translation, voice biometrics, and conversational AI for customer service.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-speech-voice-solutions"
+    "href": "/services/ai-speech-voice-solutions/"
   },
   {
     "id": "ai-strategy-roadmap",
@@ -2040,7 +2040,7 @@ export const searchServices: SearchService[] = [
     "description": "Align AI initiatives with business goals. Discovery workshops, use-case prioritization, vendor evaluation, and phased roadmaps for production AI at...",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-strategy-roadmap"
+    "href": "/services/ai-strategy-roadmap/"
   },
   {
     "id": "ai-supply-chain",
@@ -2048,7 +2048,7 @@ export const searchServices: SearchService[] = [
     "description": "Predictive demand forecasting, inventory optimization, and supplier risk management powered by machine learning.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-supply-chain"
+    "href": "/services/ai-supply-chain/"
   },
   {
     "id": "ai-supply-chain-intelligence",
@@ -2056,7 +2056,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end supply chain visibility with predictive disruption alerts, multi-tier vendor risk scoring, and AI-driven cost optimization.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-supply-chain-intelligence"
+    "href": "/services/ai-supply-chain-intelligence/"
   },
   {
     "id": "ai-supply-chain-optimizer",
@@ -2064,7 +2064,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end supply chain intelligence with ML demand forecasting, inventory optimization, supplier risk scoring, and logistics route planning.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-supply-chain-optimizer"
+    "href": "/services/ai-supply-chain-optimizer/"
   },
   {
     "id": "ai-supply-chain-predictor",
@@ -2072,7 +2072,7 @@ export const searchServices: SearchService[] = [
     "description": "Predicts supply chain disruptions 14–30 days in advance using multi-source data: weather, geopolitical events, shipping delays, and supplier health scores.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-supply-chain-predictor"
+    "href": "/services/ai-supply-chain-predictor/"
   },
   {
     "id": "ai-supply-chain-visibility",
@@ -2080,7 +2080,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end supply chain monitoring with AI-driven anomaly detection, predictive ETAs, and automated disruption alerts across suppliers, logistics, and inventory.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-supply-chain-visibility"
+    "href": "/services/ai-supply-chain-visibility/"
   },
   {
     "id": "ai-supply-demand-planner",
@@ -2088,7 +2088,7 @@ export const searchServices: SearchService[] = [
     "description": "Demand forecasting, inventory optimization, and replenishment planning with AI-driven scenario modeling for manufacturing and retail.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-supply-demand-planner"
+    "href": "/services/ai-supply-demand-planner/"
   },
   {
     "id": "ai-sustainability-carbon-tracker",
@@ -2096,7 +2096,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatically calculates organizational carbon footprint from operational data (energy, travel, cloud usage) and suggests reduction strategies.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-sustainability-carbon-tracker"
+    "href": "/services/ai-sustainability-carbon-tracker/"
   },
   {
     "id": "ai-sustainable-ops",
@@ -2104,7 +2104,7 @@ export const searchServices: SearchService[] = [
     "description": "Optimize compute & cloud resource usage to reduce carbon footprint: model carbon-aware scheduling, energy profiling, and sustainability reporting.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-sustainable-ops"
+    "href": "/services/ai-sustainable-ops/"
   },
   {
     "id": "ai-sustainable-supply-chain-radar",
@@ -2112,7 +2112,7 @@ export const searchServices: SearchService[] = [
     "description": "Supply-chain ESG tracking: carbon-intensity per supplier tier, green-alternative sourcing score, Scope 3 quantification, regulatory dashboard for CSRD and CBAM, and regulatory penalty simulator per scenario.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-sustainable-supply-chain-radar"
+    "href": "/services/ai-sustainable-supply-chain-radar/"
   },
   {
     "id": "ai-talent-acquisition",
@@ -2120,7 +2120,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end AI recruiting platform — candidate sourcing, resume screening, bias-free scoring, interview scheduling, and predictive hiring success modeling.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-talent-acquisition"
+    "href": "/services/ai-talent-acquisition/"
   },
   {
     "id": "ai-talent-acquisition-platform",
@@ -2128,7 +2128,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end recruiting: resume parsing, candidate matching, interview scheduling, bias detection. Integrates with Greenhouse, Lever.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-talent-acquisition-platform"
+    "href": "/services/ai-talent-acquisition-platform/"
   },
   {
     "id": "ai-tax-compliance-calculator",
@@ -2136,7 +2136,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-tax-compliance-calculator"
+    "href": "/services/ai-tax-compliance-calculator/"
   },
   {
     "id": "ai-test-automation-framework",
@@ -2144,7 +2144,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-test-automation-framework"
+    "href": "/services/ai-test-automation-framework/"
   },
   {
     "id": "ai-testing-qa",
@@ -2152,7 +2152,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated test generation, visual regression testing, and AI-powered bug detection that adapts to your application code and learns from failures.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-testing-qa"
+    "href": "/services/ai-testing-qa/"
   },
   {
     "id": "ai-threat-hunting",
@@ -2160,7 +2160,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-assisted threat hunting: hypothesis-driven search across SIEM, EDR, network, and cloud logs. Auto-generates hunting queries, correlates anomalies, and produces confirmed incidents with remediation steps.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-threat-hunting"
+    "href": "/services/ai-threat-hunting/"
   },
   {
     "id": "ai-threat-intelligence",
@@ -2168,7 +2168,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-threat-intelligence"
+    "href": "/services/ai-threat-intelligence/"
   },
   {
     "id": "ai-trading-signal-engine",
@@ -2176,7 +2176,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-trading-signal-engine"
+    "href": "/services/ai-trading-signal-engine/"
   },
   {
     "id": "ai-training-data-platform",
@@ -2184,7 +2184,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end data labeling, annotation, versioning, and quality validation platform for computer vision, NLP, and LLM fine-tuning datasets at any scale.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-training-data-platform"
+    "href": "/services/ai-training-data-platform/"
   },
   {
     "id": "ai-translation-services",
@@ -2192,7 +2192,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise translation engine with 100+ language support, context-aware Neural MT, terminology management, and human review workflows.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-translation-services"
+    "href": "/services/ai-translation-services/"
   },
   {
     "id": "ai-tts-voice-clone",
@@ -2200,7 +2200,7 @@ export const searchServices: SearchService[] = [
     "description": "Zero-shot voice clone (30 sec sample) prosody matching across 80+ languages: reads any script with brand tone for narration audiobooks courses voice at scale.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-tts-voice-clone"
+    "href": "/services/ai-tts-voice-clone/"
   },
   {
     "id": "ai-tutoring-platform",
@@ -2208,7 +2208,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-tutoring-platform"
+    "href": "/services/ai-tutoring-platform/"
   },
   {
     "id": "ai-video-analytics",
@@ -2216,7 +2216,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time video content analysis for security, retail insights, and operational intelligence using computer vision.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-video-analytics"
+    "href": "/services/ai-video-analytics/"
   },
   {
     "id": "ai-video-generation",
@@ -2224,7 +2224,7 @@ export const searchServices: SearchService[] = [
     "description": "Create professional videos from text prompts with voiceover, B-roll, transitions, and brand styling — produce enterprise-grade content in minutes.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-video-generation"
+    "href": "/services/ai-video-generation/"
   },
   {
     "id": "ai-video-generator",
@@ -2232,7 +2232,7 @@ export const searchServices: SearchService[] = [
     "description": "Generate professional videos from text prompts or scripts: auto-scene composition, voiceover, subtitles, and multi-format export (MP4, GIF, Reels).",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-video-generator"
+    "href": "/services/ai-video-generator/"
   },
   {
     "id": "ai-vision-quality-inspection",
@@ -2240,7 +2240,7 @@ export const searchServices: SearchService[] = [
     "description": "Manufacturing/production line defect detection via camera feed YOLO/RT-DETR inference, real-time alarms, and SPC (Statistical Process Control) shift reports.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-vision-quality-inspection"
+    "href": "/services/ai-vision-quality-inspection/"
   },
   {
     "id": "ai-visual-inspection",
@@ -2248,7 +2248,7 @@ export const searchServices: SearchService[] = [
     "description": "Computer vision-powered quality control for manufacturing: detect defects, classify product flaws, and ensure consistent quality on the production line.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-visual-inspection"
+    "href": "/services/ai-visual-inspection/"
   },
   {
     "id": "ai-visual-search-recommendation",
@@ -2256,7 +2256,7 @@ export const searchServices: SearchService[] = [
     "description": "Visual product discovery engine: upload any image to find visually similar products across your catalogue. Power visual search bars, Shop the Look features, and visual similarity recommendations.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-visual-search-recommendation"
+    "href": "/services/ai-visual-search-recommendation/"
   },
   {
     "id": "ai-voice-agent",
@@ -2264,7 +2264,7 @@ export const searchServices: SearchService[] = [
     "description": "Human-like conversational AI for phone calls: inbound customer service, outbound sales calls, appointment scheduling, and support ticket creation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-agent"
+    "href": "/services/ai-voice-agent/"
   },
   {
     "id": "ai-voice-agent-builder",
@@ -2272,7 +2272,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-agent-builder"
+    "href": "/services/ai-voice-agent-builder/"
   },
   {
     "id": "ai-voice-agent-platform",
@@ -2280,7 +2280,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy conversational AI voice agents for customer service, outbound calls, appointment scheduling, and lead qualification with natural speech.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-agent-platform"
+    "href": "/services/ai-voice-agent-platform/"
   },
   {
     "id": "ai-voice-assistant",
@@ -2288,7 +2288,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise-grade voice AI with natural language understanding, multi-language support, and seamless CRM integration.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-assistant"
+    "href": "/services/ai-voice-assistant/"
   },
   {
     "id": "ai-voice-assistant-pro",
@@ -2296,7 +2296,7 @@ export const searchServices: SearchService[] = [
     "description": "Custom voice assistants for brands: wake-word detection, natural-language task execution, multi-turn dialog. Deploy on-premise or cloud.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-assistant-pro"
+    "href": "/services/ai-voice-assistant-pro/"
   },
   {
     "id": "ai-voice-brand-consistency",
@@ -2304,7 +2304,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-brand-consistency"
+    "href": "/services/ai-voice-brand-consistency/"
   },
   {
     "id": "ai-voice-cloning",
@@ -2312,7 +2312,7 @@ export const searchServices: SearchService[] = [
     "description": "Clone any voice with 30 seconds of audio for voiceovers, podcasts, audiobooks, and interactive voice applications.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-cloning"
+    "href": "/services/ai-voice-cloning/"
   },
   {
     "id": "ai-voice-cloning-marketing",
@@ -2320,7 +2320,7 @@ export const searchServices: SearchService[] = [
     "description": "Clone your brand spokesperson's voice to produce personalized video ads, podcast intros, and multilingual marketing content.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-cloning-marketing"
+    "href": "/services/ai-voice-cloning-marketing/"
   },
   {
     "id": "ai-voice-cloning-studio",
@@ -2328,7 +2328,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-cloning-studio"
+    "href": "/services/ai-voice-cloning-studio/"
   },
   {
     "id": "ai-voice-first-crm",
@@ -2336,7 +2336,7 @@ export const searchServices: SearchService[] = [
     "description": "Voice-first CRM for field sales and inside sales teams: automatic call transcription, real-time deal coaching via live prompt injection, pipeline update via voice command, contact enrichment, and post-call auto-summary + next-step action items.",
     "category": "ai",
     "popular": true,
-    "href": "/services/ai-voice-first-crm"
+    "href": "/services/ai-voice-first-crm/"
   },
   {
     "id": "ai-voice-to-action-platform",
@@ -2344,7 +2344,7 @@ export const searchServices: SearchService[] = [
     "description": "ASR (speech-to-text) + LLM intent extraction + action execution: schedule meetings, create tickets, run queries — all via natural voice.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-voice-to-action-platform"
+    "href": "/services/ai-voice-to-action-platform/"
   },
   {
     "id": "ai-vpc-zero-trust",
@@ -2352,7 +2352,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-vpc-zero-trust"
+    "href": "/services/ai-vpc-zero-trust/"
   },
   {
     "id": "ai-workflow-automation-builder",
@@ -2360,7 +2360,7 @@ export const searchServices: SearchService[] = [
     "description": "Entry-level AI workflow builder: natural language workflow design, 100+ connectors, AI decision nodes, scheduled triggers, and human-in-the-loop approval steps for small teams.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-workflow-automation-builder"
+    "href": "/services/ai-workflow-automation-builder/"
   },
   {
     "id": "ai-workflow-automation-enterprise",
@@ -2368,7 +2368,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise-grade workflow orchestration: unlimited workflows, role-based access, SSO, custom AI model integration, multi-region deployment, and 24/7 dedicated support.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-workflow-automation-enterprise"
+    "href": "/services/ai-workflow-automation-enterprise/"
   },
   {
     "id": "ai-zero-trust-network-access",
@@ -2376,7 +2376,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered ZTNA platform: continuous identity verification, adaptive access policies, micro-segmentation, device posture scoring, and real-time threat-based access revocation — all enforced at the edge.",
     "category": "ai",
     "popular": false,
-    "href": "/services/ai-zero-trust-network-access"
+    "href": "/services/ai-zero-trust-network-access/"
   },
   {
     "id": "analytics-attribution-mix",
@@ -2384,7 +2384,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-touch attribution (first/last/linear/time-decay/position-based) + marketing mix modeling. CAC, LTV, ROAS per channel, campaign, cohort. Recommended budget allocation.",
     "category": "data",
     "popular": false,
-    "href": "/services/analytics-attribution-mix"
+    "href": "/services/analytics-attribution-mix/"
   },
   {
     "id": "api-development",
@@ -2392,7 +2392,7 @@ export const searchServices: SearchService[] = [
     "description": "Design, build, and manage high-performance APIs that connect systems, enable automation, and power digital products at enterprise scale.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/api-development"
+    "href": "/services/api-development/"
   },
   {
     "id": "api-gateway-management",
@@ -2400,7 +2400,7 @@ export const searchServices: SearchService[] = [
     "description": "Secure, scale, and monitor your APIs with enterprise-grade gateway management, rate limiting, and developer portal.",
     "category": "it",
     "popular": false,
-    "href": "/services/api-gateway-management"
+    "href": "/services/api-gateway-management/"
   },
   {
     "id": "api-integration",
@@ -2408,7 +2408,7 @@ export const searchServices: SearchService[] = [
     "description": "Custom API design, development, and integration — REST, GraphQL, Webhooks, and third-party service connectors.",
     "category": "it",
     "popular": false,
-    "href": "/services/api-integration"
+    "href": "/services/api-integration/"
   },
   {
     "id": "api-management-gateway",
@@ -2416,7 +2416,7 @@ export const searchServices: SearchService[] = [
     "description": "Full-lifecycle API management: gateway, developer portal, analytics, monetization, and security (OAuth, JWT, rate limiting) for your API products.",
     "category": "it",
     "popular": false,
-    "href": "/services/api-management-gateway"
+    "href": "/services/api-management-gateway/"
   },
   {
     "id": "apm-application-performance",
@@ -2424,7 +2424,7 @@ export const searchServices: SearchService[] = [
     "description": "Deep-dive application performance monitoring with distributed tracing, slow query dashboards, error tracking, and SLO/SLI burn-rate alerting.",
     "category": "it",
     "popular": false,
-    "href": "/services/apm-application-performance"
+    "href": "/services/apm-application-performance/"
   },
   {
     "id": "attack-surface-management",
@@ -2432,7 +2432,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous external attack surface discovery: internet-facing assets, domains, IPs, subdomains, APIs, TLS certs, shadow IT. Continuous monitoring. Attack vector prioritization.",
     "category": "security",
     "popular": false,
-    "href": "/services/attack-surface-management"
+    "href": "/services/attack-surface-management/"
   },
   {
     "id": "automated-data-labeling",
@@ -2440,7 +2440,7 @@ export const searchServices: SearchService[] = [
     "description": "Scale data labeling 100x with AI-assisted annotation: pre-label images, text, and audio; human-in-the-loop review; export to COCO, Pascal VOC, JSONL.",
     "category": "ai",
     "popular": false,
-    "href": "/services/automated-data-labeling"
+    "href": "/services/automated-data-labeling/"
   },
   {
     "id": "automated-pen-testing",
@@ -2448,7 +2448,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous, automated penetration testing of web apps, APIs, and infrastructure with CVE scanning, exploitable-path reporting, and fix verification.",
     "category": "security",
     "popular": false,
-    "href": "/services/automated-pen-testing"
+    "href": "/services/automated-pen-testing/"
   },
   {
     "id": "automation-commercial-leasing-tour-scheduler",
@@ -2456,7 +2456,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end commercial-property tour scheduling and lead qualification: booking agent handoff, CRM opportunity creation, automated reminders, post-tour follow-up nurturing, and leasing-commission attribution dashboard.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-commercial-leasing-tour-scheduler"
+    "href": "/services/automation-commercial-leasing-tour-scheduler/"
   },
   {
     "id": "automation-document-intelligence-pipeline",
@@ -2464,7 +2464,7 @@ export const searchServices: SearchService[] = [
     "description": "OCR + NLP document-intelligence: pipeline-abstract multi-service orchestration for contracts, invoices, and regulatory submissions; auto-classification, clause extraction, anomaly flag, e-signature ready, approval routing.",
     "category": "automation",
     "popular": true,
-    "href": "/services/automation-document-intelligence-pipeline"
+    "href": "/services/automation-document-intelligence-pipeline/"
   },
   {
     "id": "automation-education-student-lifecycle-manager",
@@ -2472,7 +2472,7 @@ export const searchServices: SearchService[] = [
     "description": "Full-cycle student lifecycle automation for higher ed and EdTech: inquiry-to-enrolment funnel, personalised nurture sequences, academic-risk detection, parents-and-alumni engagement, and LMS grade-imported at-risk alerts.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-education-student-lifecycle-manager"
+    "href": "/services/automation-education-student-lifecycle-manager/"
   },
   {
     "id": "automation-integrated-commerce-automation",
@@ -2480,7 +2480,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end e-commerce automation: product sync per multi-marketplace including Amazon, Shopify, eBay, and Etsy; inventory sync; order and workflow routing; auto-generated review request post-delivery; shipping and delivery auto-tracking; refund and return auto-processing.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-integrated-commerce-automation"
+    "href": "/services/automation-integrated-commerce-automation/"
   },
   {
     "id": "automation-integrated-commerce-flows",
@@ -2488,7 +2488,7 @@ export const searchServices: SearchService[] = [
     "description": "Commerce workflow automation: cart-to-delivery orchestrator connecting Shopify/BigCommerce/WooCommerce with payment and shipping providers, automated RMA/return-handling, subscription-billing orchestrator, revenue reconciliation engine.",
     "category": "automation",
     "popular": true,
-    "href": "/services/automation-integrated-commerce-flows"
+    "href": "/services/automation-integrated-commerce-flows/"
   },
   {
     "id": "automation-invoice-purchase-order-processing",
@@ -2496,7 +2496,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered invoice + PO processing pipeline: scans, OCR, vendor matching via payment history, line-item validation vs. PO, three-way match against GRN, GL-code auto-suggestion, ERP posting stub, and exception-routing for unmatched documents.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-invoice-purchase-order-processing"
+    "href": "/services/automation-invoice-purchase-order-processing/"
   },
   {
     "id": "automation-legal-document-preparation",
@@ -2504,7 +2504,7 @@ export const searchServices: SearchService[] = [
     "description": "Legal document preparation: template-per-case-type, clause auto-match per case facts, e-sign per jurisdiction, deadline tracking, regulatory filing per state and federal authority, and evidence binder auto-compile with exhibit order per relevance score.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-legal-document-preparation"
+    "href": "/services/automation-legal-document-preparation/"
   },
   {
     "id": "automation-multi-channel-campaign-manager",
@@ -2512,7 +2512,7 @@ export const searchServices: SearchService[] = [
     "description": "Orchestrate campaigns across email, SMS, social, push, and ads from one campaign studio: audience-segmentation engine, content-Calendar view, A/B-n testing, real-time ROI dashboard, attribution across 10 channels.",
     "category": "automation",
     "popular": true,
-    "href": "/services/automation-multi-channel-campaign-manager"
+    "href": "/services/automation-multi-channel-campaign-manager/"
   },
   {
     "id": "automation-multi-channel-campaign-orchestrator",
@@ -2520,7 +2520,7 @@ export const searchServices: SearchService[] = [
     "description": "Orchestrate campaigns across email, SMS, WhatsApp, Telegram, and LinkedIn with sequence branching, per-channel A/B testing, delay per touchpoint, re-engagement windows, engaged versus unengaged segment filter, and unified inbound conversation inbox.",
     "category": "automation",
     "popular": true,
-    "href": "/services/automation-multi-channel-campaign-orchestrator"
+    "href": "/services/automation-multi-channel-campaign-orchestrator/"
   },
   {
     "id": "automation-process-mining-deep-dive",
@@ -2528,7 +2528,7 @@ export const searchServices: SearchService[] = [
     "description": "Deep-dive process analytics: auto-discover process maps from ERP, CRM, and BPM event logs; conformance checking per transaction; bottleneck and rework hotspot analysis with cycle-time and handover waste; RPA opportunity scoring per step; executive KPI dashboard.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-process-mining-deep-dive"
+    "href": "/services/automation-process-mining-deep-dive/"
   },
   {
     "id": "automation-process-mining-intelligence",
@@ -2536,7 +2536,7 @@ export const searchServices: SearchService[] = [
     "description": "Event-log based process discovery: take event-logs from ERP, CRM, BPM systems, discover actual vs. intended process maps, identify bottleneck and deviation, quantify handoff wait time, change-impact simulation.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-process-mining-intelligence"
+    "href": "/services/automation-process-mining-intelligence/"
   },
   {
     "id": "automation-social-media-content-hub",
@@ -2544,7 +2544,7 @@ export const searchServices: SearchService[] = [
     "description": "All-in-one social media content hub: AI-assisted content ideation and drafting per platform, content calendar, multi-platform publishing (LinkedIn, X/Twitter, Instagram, Facebook, TikTok, YouTube), real-time engagement monitoring, and weekly performance reporting.",
     "category": "automation",
     "popular": false,
-    "href": "/services/automation-social-media-content-hub"
+    "href": "/services/automation-social-media-content-hub/"
   },
   {
     "id": "autonomous-code-review-agent",
@@ -2552,7 +2552,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered code review bot that analyzes pull requests for security flaws, performance antipatterns, style violations, and architectural drift across JavaScript/TypeScript, Python, and Go.",
     "category": "ai",
     "popular": false,
-    "href": "/services/autonomous-code-review-agent"
+    "href": "/services/autonomous-code-review-agent/"
   },
   {
     "id": "autonomous-growth-intelligence",
@@ -2560,7 +2560,7 @@ export const searchServices: SearchService[] = [
     "description": "Design AI-powered acquisition, conversion, retention, and expansion loops with measurable impact models and deployment-safe execution plans.",
     "category": "ai",
     "popular": false,
-    "href": "/services/autonomous-growth-intelligence"
+    "href": "/services/autonomous-growth-intelligence/"
   },
   {
     "id": "aws-serverless-migration",
@@ -2568,7 +2568,7 @@ export const searchServices: SearchService[] = [
     "description": "Migrate EC2/S3 apps to serverless: Lambda + API Gateway + DynamoDB event-driven. Schema migration dual-write zero-downtime cutover — saves compute costs 60-80%.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/aws-serverless-migration"
+    "href": "/services/aws-serverless-migration/"
   },
   {
     "id": "backup-disaster-recovery",
@@ -2576,7 +2576,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise backup solutions with automated disaster recovery, RPO/RSL guarantees, geo-redundant storage, and instant failover for zero data loss.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/backup-disaster-recovery"
+    "href": "/services/backup-disaster-recovery/"
   },
   {
     "id": "batch-etl-platform",
@@ -2584,7 +2584,7 @@ export const searchServices: SearchService[] = [
     "description": "Visual ETL/ELT builder with 400+ connectors, scheduled or event-triggered pipelines, schema drift handling, and data quality checks.",
     "category": "data",
     "popular": false,
-    "href": "/services/batch-etl-platform"
+    "href": "/services/batch-etl-platform/"
   },
   {
     "id": "bpa-process-analysis",
@@ -2592,7 +2592,7 @@ export const searchServices: SearchService[] = [
     "description": "Process discovery + event log mining, variant discovery, bottleneck detection, automation opportunity scoring. Output: BPMN design + automation ROI per task.",
     "category": "automation",
     "popular": false,
-    "href": "/services/bpa-process-analysis"
+    "href": "/services/bpa-process-analysis/"
   },
   {
     "id": "brand-monitoring",
@@ -2600,7 +2600,7 @@ export const searchServices: SearchService[] = [
     "description": "Scans global DNS+WHOIS+SSL cert feeds 24/7 for lookalike typosquatting phishing domains targeting your brand. Auto-generates registrar takedown request sent to DNS provider.",
     "category": "ai",
     "popular": false,
-    "href": "/services/brand-monitoring"
+    "href": "/services/brand-monitoring/"
   },
   {
     "id": "business-intelligence",
@@ -2608,7 +2608,7 @@ export const searchServices: SearchService[] = [
     "description": "Business Intelligence transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make ...",
     "category": "ai",
     "popular": false,
-    "href": "/services/business-intelligence"
+    "href": "/services/business-intelligence/"
   },
   {
     "id": "cdn-edge-cache",
@@ -2616,7 +2616,7 @@ export const searchServices: SearchService[] = [
     "description": "Global content delivery network with smart caching, image optimization, DDoS mitigation, and sub-50ms TTFB for static and dynamic assets.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cdn-edge-cache"
+    "href": "/services/cdn-edge-cache/"
   },
   {
     "id": "chaos-engineering-svc",
@@ -2624,7 +2624,7 @@ export const searchServices: SearchService[] = [
     "description": "Proactive chaos experiments: inject failures (latency, pod kill, DB disconnect) on non-production to validate recovery paths. Auto-generate incident response playbooks from results.",
     "category": "it",
     "popular": false,
-    "href": "/services/chaos-engineering-svc"
+    "href": "/services/chaos-engineering-svc/"
   },
   {
     "id": "cloud-ai-mlops-platform",
@@ -2632,7 +2632,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed Kubernetes GPU clusters, model registry (MLflow), distributed training orchestrator, LLM serving vLLM/TGI, and GPU auto-scaling.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-ai-mlops-platform"
+    "href": "/services/cloud-ai-mlops-platform/"
   },
   {
     "id": "cloud-api-gateway-enterprise",
@@ -2640,7 +2640,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified API gateway: JWT/OAuth2 auth, rate-limit, circuit-breaker, request/response transform, analytics, multi-tenant API key mgmt.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-api-gateway-enterprise"
+    "href": "/services/cloud-api-gateway-enterprise/"
   },
   {
     "id": "cloud-blob-intelligent-tiering",
@@ -2648,7 +2648,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto lifecycle tiering hot→cool→archive; S3-compatible API; point-in-time restore; cross-region replication; cost dashboard.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-blob-intelligent-tiering"
+    "href": "/services/cloud-blob-intelligent-tiering/"
   },
   {
     "id": "cloud-bom-visualiser",
@@ -2656,7 +2656,7 @@ export const searchServices: SearchService[] = [
     "description": "Map every cloud dependency from DNS records and load balancers to container images and Lambda layers. Visual graph with change impact analysis.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-bom-visualiser"
+    "href": "/services/cloud-bom-visualiser/"
   },
   {
     "id": "cloud-chaos-engineering-platform",
@@ -2664,7 +2664,7 @@ export const searchServices: SearchService[] = [
     "description": "Hosted chaos experiment platform: inject latency, packet loss, CPU or memory spikes, or database failover per Kubernetes namespace or instance, blast-radius boundary, auto-generated results report per scenario, and CI integration.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-chaos-engineering-platform"
+    "href": "/services/cloud-chaos-engineering-platform/"
   },
   {
     "id": "cloud-container-registry-trivy-scan",
@@ -2672,7 +2672,7 @@ export const searchServices: SearchService[] = [
     "description": "Private container registry with built-in Trivy CVE scanning, SBOM generation, image signing, and promotion pipeline (dev→staging→prod).",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-container-registry-trivy-scan"
+    "href": "/services/cloud-container-registry-trivy-scan/"
   },
   {
     "id": "cloud-cost-ai-optimizer",
@@ -2680,7 +2680,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuously analyze cloud spend (AWS, Azure, GCP) and automatically implement cost-saving actions: rightsizing, reserved instances, spot instance switching, and idle resource cleanup.",
     "category": "it",
     "popular": false,
-    "href": "/services/cloud-cost-ai-optimizer"
+    "href": "/services/cloud-cost-ai-optimizer/"
   },
   {
     "id": "cloud-cost-anomaly-detector",
@@ -2688,7 +2688,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered cloud cost anomaly detection with root-cause attribution, budget forecasting, and auto-generated cost-reduction playbooks.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-cost-anomaly-detector"
+    "href": "/services/cloud-cost-anomaly-detector/"
   },
   {
     "id": "cloud-cost-anomaly-detector-ml",
@@ -2696,7 +2696,7 @@ export const searchServices: SearchService[] = [
     "description": "ML-powered cloud cost monitoring: automatically detect anomalous spend spikes, forecast monthly costs with confidence intervals, receive root-cause attribution (service + region + tag), and set auto-throttling alerts.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-cost-anomaly-detector-ml"
+    "href": "/services/cloud-cost-anomaly-detector-ml/"
   },
   {
     "id": "cloud-cost-optimization-service",
@@ -2704,7 +2704,7 @@ export const searchServices: SearchService[] = [
     "description": "ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-cost-optimization-service"
+    "href": "/services/cloud-cost-optimization-service/"
   },
   {
     "id": "cloud-data-lakehouse-platform",
@@ -2712,7 +2712,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified data lakehouse: ingest CSV, JSON, Parquet, and streams; implement ACID semantics with open-table format Delta Lake or Iceberg engine; SQL query with cardinality optimizer; built-in BI tool connectors; schema enforcement at write time.",
     "category": "cloud",
     "popular": true,
-    "href": "/services/cloud-data-lakehouse-platform"
+    "href": "/services/cloud-data-lakehouse-platform/"
   },
   {
     "id": "cloud-disaster-recovery-orchestration",
@@ -2720,7 +2720,7 @@ export const searchServices: SearchService[] = [
     "description": "Zero-downtime DR orchestration across regions: continuous async replication, warm-standby spin-up automation in 30 seconds, failover runbook executor with per-step human-halt, DR test runner, and RPO and RTO dashboard with graded SLA.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-disaster-recovery-orchestration"
+    "href": "/services/cloud-disaster-recovery-orchestration/"
   },
   {
     "id": "cloud-edge-ai-deployment-platform",
@@ -2728,7 +2728,7 @@ export const searchServices: SearchService[] = [
     "description": "One-click edge AI model deployment to 50k+ global edge points-of-presence: ONNX/TensorRT/GGUF model package, auto-scaling inference, A/B model rollout, cold-warm-cache tiering, and robust offline-first sync for disconnected sites.",
     "category": "cloud",
     "popular": true,
-    "href": "/services/cloud-edge-ai-deployment-platform"
+    "href": "/services/cloud-edge-ai-deployment-platform/"
   },
   {
     "id": "cloud-edge-computing-global",
@@ -2736,7 +2736,7 @@ export const searchServices: SearchService[] = [
     "description": "Low-latency edge compute with Cloudflare Workers, KV storage, D1 SQL, R2 object store, and edge-geo routing across 300+ cities.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-edge-computing-global"
+    "href": "/services/cloud-edge-computing-global/"
   },
   {
     "id": "cloud-event-driven-microservices",
@@ -2744,7 +2744,7 @@ export const searchServices: SearchService[] = [
     "description": "Event backbone as a service: managed Pub-Sub broker, event schema registry, replay from any timestamp, dead-letter queue management, per-service event-sourcing, per-event observability, and fan-out handler groups.",
     "category": "cloud",
     "popular": true,
-    "href": "/services/cloud-event-driven-microservices"
+    "href": "/services/cloud-event-driven-microservices/"
   },
   {
     "id": "cloud-finops-1",
@@ -2752,7 +2752,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive cloud cost management service combining automated tooling, reserved instance optimization, anomaly detection, and organizational FinOps culture to reduce cloud spend by 30-40% without performance impact.",
     "category": "it",
     "popular": false,
-    "href": "/services/cloud-finops-1"
+    "href": "/services/cloud-finops-1/"
   },
   {
     "id": "cloud-gitops-enterprise-platform",
@@ -2760,7 +2760,7 @@ export const searchServices: SearchService[] = [
     "description": "Full GitOps on Kubernetes: ArgoCD + Argo Rollouts (canary/blue-green), Terraform provisioning, Kyverno admission policy, automated drift remediation.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-gitops-enterprise-platform"
+    "href": "/services/cloud-gitops-enterprise-platform/"
   },
   {
     "id": "cloud-hybrid-multi-cloud-orchestrator",
@@ -2768,7 +2768,7 @@ export const searchServices: SearchService[] = [
     "description": "Single-pane hybrid-multi-cloud management: deploy, monitor, and govern workloads across AWS, Azure, GCP, and on-prem from a unified control plane with standardised cost, security, and compliance dashboards.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-hybrid-multi-cloud-orchestrator"
+    "href": "/services/cloud-hybrid-multi-cloud-orchestrator/"
   },
   {
     "id": "cloud-hybrid-multicloud-networking",
@@ -2776,7 +2776,7 @@ export const searchServices: SearchService[] = [
     "description": "Zero-trust networking across on-prem/edge/cloud: cloud-router fabric connects VPCs across AWS/GCP/Azure, on-prem data-centre via WireGuard or IPSec, global anycast front-door with WAF.",
     "category": "cloud",
     "popular": true,
-    "href": "/services/cloud-hybrid-multicloud-networking"
+    "href": "/services/cloud-hybrid-multicloud-networking/"
   },
   {
     "id": "cloud-kubernetes-cost-optimizer",
@@ -2784,7 +2784,7 @@ export const searchServices: SearchService[] = [
     "description": "K8s cluster cost engine: per-container CPU and RAM right-sizing via VPA plus workload profiling, spot-compatible scheduling for bursty workloads, cost attribution per team or namespace, idle resource crawler, and budget alerts.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-kubernetes-cost-optimizer"
+    "href": "/services/cloud-kubernetes-cost-optimizer/"
   },
   {
     "id": "cloud-kubernetes-gitops-platform",
@@ -2792,7 +2792,7 @@ export const searchServices: SearchService[] = [
     "description": "GitOps-driven Kubernetes operations: declarative manifests stored in Git, automated drift detection and reconciliation, environment promotion workflows, progressive delivery (canary/blue-green), and built-in secrets management with external vault sync.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-kubernetes-gitops-platform"
+    "href": "/services/cloud-kubernetes-gitops-platform/"
   },
   {
     "id": "cloud-migration",
@@ -2800,7 +2800,7 @@ export const searchServices: SearchService[] = [
     "description": "Seamless migration to AWS, Azure, or GCP with zero downtime, cost optimization, and infrastructure-as-code automation.",
     "category": "cloud",
     "popular": true,
-    "href": "/services/cloud-migration"
+    "href": "/services/cloud-migration/"
   },
   {
     "id": "cloud-migration-readiness",
@@ -2808,7 +2808,7 @@ export const searchServices: SearchService[] = [
     "description": "Assess on-prem and multi-cloud workloads across 6 readiness dimensions: performance, cost, security, operability, resiliency, and team skill.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-migration-readiness"
+    "href": "/services/cloud-migration-readiness/"
   },
   {
     "id": "cloud-native-app-dev",
@@ -2816,7 +2816,7 @@ export const searchServices: SearchService[] = [
     "description": "Full-stack cloud-native: containerized microservices, event-driven architecture, Kubernetes, CI/CD from code to production with OpenTelemetry observability from day one.",
     "category": "it",
     "popular": false,
-    "href": "/services/cloud-native-app-dev"
+    "href": "/services/cloud-native-app-dev/"
   },
   {
     "id": "cloud-observability-stack",
@@ -2824,7 +2824,7 @@ export const searchServices: SearchService[] = [
     "description": "Pre-integrated Prometheus+Grafana+Loki+Tempo stack with 400+ dashboards, alert rules pre-built, and PagerDuty/OpsGenie on-call.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-observability-stack"
+    "href": "/services/cloud-observability-stack/"
   },
   {
     "id": "cloud-serverless-api-platform",
@@ -2832,7 +2832,7 @@ export const searchServices: SearchService[] = [
     "description": "Zero-infrastructure serverless REST + GraphQL API layer: auto-scales to millions of RPS, pay-per-invocation billing, built-in authentication, rate-limiting, caching, and observability. Includes free tier and CI/CD auto-deploy from Git.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-serverless-api-platform"
+    "href": "/services/cloud-serverless-api-platform/"
   },
   {
     "id": "cloud-serverless-framework-deploy",
@@ -2840,7 +2840,7 @@ export const searchServices: SearchService[] = [
     "description": "Infrastructure-as-code for Serverless Framework: multi-stage (dev/staging/prod), CI/CD integration, DynamoDB/Lambda/API Gateway resources.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-serverless-framework-deploy"
+    "href": "/services/cloud-serverless-framework-deploy/"
   },
   {
     "id": "cloud-spot-instance-optimizer",
@@ -2848,7 +2848,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-cloud spot and preemptible instance optimizer: smart bin-packing job scheduler, diversity-aware fallback strategy, SLA mix-ratio optimizer, graceful preempt handler with state checkpoint, and cost versus SLA trade-off dashboard.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-spot-instance-optimizer"
+    "href": "/services/cloud-spot-instance-optimizer/"
   },
   {
     "id": "cloud-storage-lifecycle-policy",
@@ -2856,7 +2856,7 @@ export const searchServices: SearchService[] = [
     "description": "S3/GCS/Azure Blob lifecycle: retention policy, litigation hold, WORM locking, legal export, and SaaS-data export automation.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-storage-lifecycle-policy"
+    "href": "/services/cloud-storage-lifecycle-policy/"
   },
   {
     "id": "cloud-storage-tiering",
@@ -2864,7 +2864,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-driven storage tiering engine that automatically moves infrequently accessed data to cheaper tiers with SLA-monitored cold retrieval performance.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-storage-tiering"
+    "href": "/services/cloud-storage-tiering/"
   },
   {
     "id": "cloud-zero-trust-access-platform",
@@ -2872,7 +2872,7 @@ export const searchServices: SearchService[] = [
     "description": "Identity-first zero trust: device posture check, per-session access policy, micro-VPN per-app access, continuous auth risk scoring.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cloud-zero-trust-access-platform"
+    "href": "/services/cloud-zero-trust-access-platform/"
   },
   {
     "id": "compliance-automation",
@@ -2880,7 +2880,7 @@ export const searchServices: SearchService[] = [
     "description": "Compliance automation platform: maps your controls to SOC 2, ISO 27001, HIPAA, PCI-DSS, and GDPR. Auto-generates evidence, provides continuous monitoring, and produces pre-built audit reports for faster certification.",
     "category": "security",
     "popular": false,
-    "href": "/services/compliance-automation"
+    "href": "/services/compliance-automation/"
   },
   {
     "id": "compliance-automation-engine",
@@ -2888,7 +2888,7 @@ export const searchServices: SearchService[] = [
     "description": "Rule-based compliance engine that embeds regulatory logic into your data pipelines and APIs. Automates access reviews, entitlement certifications, policy violation detection, and remediation tracking.",
     "category": "security",
     "popular": false,
-    "href": "/services/compliance-automation-engine"
+    "href": "/services/compliance-automation-engine/"
   },
   {
     "id": "computer-vision-inspection",
@@ -2896,7 +2896,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-train Custom vision models for manufacturing quality control: surface defect detection, assembly verification, and real-time conveyor-belt inspection.",
     "category": "ai",
     "popular": false,
-    "href": "/services/computer-vision-inspection"
+    "href": "/services/computer-vision-inspection/"
   },
   {
     "id": "container-security-lifecycle",
@@ -2904,7 +2904,7 @@ export const searchServices: SearchService[] = [
     "description": "Full container security: registry scanning (Trivy/Clair), runtime protection (Falco), OPA admission controllers, SBOM attestation per build.",
     "category": "it",
     "popular": false,
-    "href": "/services/container-security-lifecycle"
+    "href": "/services/container-security-lifecycle/"
   },
   {
     "id": "container-security-runtime",
@@ -2912,7 +2912,7 @@ export const searchServices: SearchService[] = [
     "description": "Kubernetes-aware container security with image scanning, admission control, runtime threat detection, secret scanning, and CVSS scoring in CI/CD pipelines.",
     "category": "security",
     "popular": false,
-    "href": "/services/container-security-runtime"
+    "href": "/services/container-security-runtime/"
   },
   {
     "id": "content-generation",
@@ -2920,7 +2920,7 @@ export const searchServices: SearchService[] = [
     "description": "Content Generation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automati...",
     "category": "ai",
     "popular": false,
-    "href": "/services/content-generation"
+    "href": "/services/content-generation/"
   },
   {
     "id": "cspm-cloud-posture",
@@ -2928,7 +2928,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous cloud posture: IAM overprivilege, misconfigured S3, exposed RDS, public subnets. Drift detection + auto-remediation via Terraform per AWS/GCP/Azure.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cspm-cloud-posture"
+    "href": "/services/cspm-cloud-posture/"
   },
   {
     "id": "customer-experience",
@@ -2936,7 +2936,7 @@ export const searchServices: SearchService[] = [
     "description": "Customer Experience elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every touchpoint...",
     "category": "ai",
     "popular": false,
-    "href": "/services/customer-experience"
+    "href": "/services/customer-experience/"
   },
   {
     "id": "cyber-threat-intelligence",
@@ -2944,7 +2944,7 @@ export const searchServices: SearchService[] = [
     "description": "Proactive threat intelligence gathering, analysis, and prioritization from dark web, exploit feeds, and threat actor TTPs to stay ahead of attacks.",
     "category": "it",
     "popular": false,
-    "href": "/services/cyber-threat-intelligence"
+    "href": "/services/cyber-threat-intelligence/"
   },
   {
     "id": "cybersecurity",
@@ -2952,7 +2952,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive security assessments, vulnerability management, and incident response to protect your digital assets.",
     "category": "security",
     "popular": true,
-    "href": "/services/cybersecurity"
+    "href": "/services/cybersecurity/"
   },
   {
     "id": "cybersecurity-audit",
@@ -2960,7 +2960,7 @@ export const searchServices: SearchService[] = [
     "description": "Professional cybersecurity audit services by Zion Tech Group. Advanced AI and technology solutions.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/cybersecurity-audit"
+    "href": "/services/cybersecurity-audit/"
   },
   {
     "id": "data-analytics-engineering-platform",
@@ -2968,7 +2968,7 @@ export const searchServices: SearchService[] = [
     "description": "dbt core orchestration, lineage graph, semantic layer, freshness SLAs, and an in-browser model explorer for SQL analysts.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-analytics-engineering-platform"
+    "href": "/services/data-analytics-engineering-platform/"
   },
   {
     "id": "data-cost-finops",
@@ -2976,7 +2976,7 @@ export const searchServices: SearchService[] = [
     "description": "Track per-table, per-query cloud data spend. AI recommends materialised views, query optimisation, and warehouse right-sizing to lower your bill by 20-40%.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-cost-finops"
+    "href": "/services/data-cost-finops/"
   },
   {
     "id": "data-data-reconciliation-engine",
@@ -2984,7 +2984,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated record matching across source-of-truth systems with fuzzy/phonetic/ML matching and a reconciliation dispute UI.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-data-reconciliation-engine"
+    "href": "/services/data-data-reconciliation-engine/"
   },
   {
     "id": "data-document-vector-search",
@@ -2992,7 +2992,7 @@ export const searchServices: SearchService[] = [
     "description": "Chunk embed store in vector DB; hybrid BM25 + dense retrieval; semantic reranking; per-tenant document isolation.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-document-vector-search"
+    "href": "/services/data-document-vector-search/"
   },
   {
     "id": "data-engineering",
@@ -3000,7 +3000,7 @@ export const searchServices: SearchService[] = [
     "description": "Build robust data pipelines, ETL/ELT workflows, and data lake architectures for real-time and batch processing.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-engineering"
+    "href": "/services/data-engineering/"
   },
   {
     "id": "data-event-sourcing-platform",
@@ -3008,7 +3008,7 @@ export const searchServices: SearchService[] = [
     "description": "Append-only event log per aggregate, projection workers per read-model, snapshot compaction, and Kafka-compatible event bus.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-event-sourcing-platform"
+    "href": "/services/data-event-sourcing-platform/"
   },
   {
     "id": "data-feature-store-platform",
@@ -3016,7 +3016,7 @@ export const searchServices: SearchService[] = [
     "description": "Centralised ML feature store with online (Redis) + offline (Snowflake/BigQuery) stores, point-in-time correctness, feature lineage, SDK.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-feature-store-platform"
+    "href": "/services/data-feature-store-platform/"
   },
   {
     "id": "data-geospatial-analytics-engine",
@@ -3024,7 +3024,7 @@ export const searchServices: SearchService[] = [
     "description": "Location intelligence: PostGIS spatial queries, tile-based heatmaps, delivery-route optimisation, and geofence-triggered alerts.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-geospatial-analytics-engine"
+    "href": "/services/data-geospatial-analytics-engine/"
   },
   {
     "id": "data-governance-platform",
@@ -3032,7 +3032,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified data catalog, lineage tracking, and policy enforcement engine for regulated industries with automated compliance.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-governance-platform"
+    "href": "/services/data-governance-platform/"
   },
   {
     "id": "data-graph-analytics-engine",
@@ -3040,7 +3040,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise graph analytics for fraud, risk, ESG, and recommendations: ingest tabular data to build dynamic relationship graphs, community detection, shortest-path analysis, centrality scoring, and interactive visual exploration with Cypher-like query language.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-graph-analytics-engine"
+    "href": "/services/data-graph-analytics-engine/"
   },
   {
     "id": "data-graph-analytics-platform",
@@ -3048,7 +3048,7 @@ export const searchServices: SearchService[] = [
     "description": "Large-scale network analytics: entity relationship graph builder, centrality and community detection, per-edge anomaly scoring, influencer score per node, GNN-ready feature export, and interactive graph visualisation dashboard.",
     "category": "data",
     "popular": true,
-    "href": "/services/data-graph-analytics-platform"
+    "href": "/services/data-graph-analytics-platform/"
   },
   {
     "id": "data-image-video-search",
@@ -3056,7 +3056,7 @@ export const searchServices: SearchService[] = [
     "description": "CLIP + multi-modal embedding semantic search across image and video libraries: object/scene/action detection, temporal segmentation, thumbnail clustering, natural-language query support, and vector-powered similarity matching at scale.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-image-video-search"
+    "href": "/services/data-image-video-search/"
   },
   {
     "id": "data-image-video-search-engine",
@@ -3064,7 +3064,7 @@ export const searchServices: SearchService[] = [
     "description": "Visual search engine for media libraries: CLIP-compatible index built from images and video frames up to 60 frames per second; multi-modal query with text or image; auto-cluster same-scene per video clip; people, location, and label auto-tags per frame.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-image-video-search-engine"
+    "href": "/services/data-image-video-search-engine/"
   },
   {
     "id": "data-lakehouse",
@@ -3072,7 +3072,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified platform combining data lake flexibility with data warehouse performance — ACID transactions, time travel, and open-table format support.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-lakehouse"
+    "href": "/services/data-lakehouse/"
   },
   {
     "id": "data-log-analytics-platform",
@@ -3080,7 +3080,7 @@ export const searchServices: SearchService[] = [
     "description": "Petabyte-scale log ingestion, structured parsing, Grafana/Loki/Tempo correlation, and retention tiered hot/warm/cold.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-log-analytics-platform"
+    "href": "/services/data-log-analytics-platform/"
   },
   {
     "id": "data-observability-monitor",
@@ -3088,7 +3088,7 @@ export const searchServices: SearchService[] = [
     "description": "Column-level freshness, volume, distribution drift, and schema-change detection across every pipeline and warehouse table with auto-generated lineage.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-observability-monitor"
+    "href": "/services/data-observability-monitor/"
   },
   {
     "id": "data-pii-scanner-classifier",
@@ -3096,7 +3096,7 @@ export const searchServices: SearchService[] = [
     "description": "Column-level PII detection (name/SSN/email/phone/address) across data warehouses, with automatic masking policies and compliance report.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-pii-scanner-classifier"
+    "href": "/services/data-pii-scanner-classifier/"
   },
   {
     "id": "data-pipeline-architecture",
@@ -3104,7 +3104,7 @@ export const searchServices: SearchService[] = [
     "description": "Build robust data pipelines with Kafka, Spark, Airflow for real-time and batch processing at enterprise scale.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/data-pipeline-architecture"
+    "href": "/services/data-pipeline-architecture/"
   },
   {
     "id": "data-predictive-maintenance-timeseries",
@@ -3112,7 +3112,7 @@ export const searchServices: SearchService[] = [
     "description": "Sensor TS ingestion, anomaly detection (IsolationForest/Prophet), failure-prediction XGBoost, and work-order auto-creation.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-predictive-maintenance-timeseries"
+    "href": "/services/data-predictive-maintenance-timeseries/"
   },
   {
     "id": "data-product-catalog-svc",
@@ -3120,7 +3120,7 @@ export const searchServices: SearchService[] = [
     "description": "Auto-discover data assets from warehouse/lakehouse/BI. Business glossary auto-linked. Column-level lineage: table to report to dashboard. Auto-generated data contracts per product.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-product-catalog-svc"
+    "href": "/services/data-product-catalog-svc/"
   },
   {
     "id": "data-real-time-operational-analytics",
@@ -3128,7 +3128,7 @@ export const searchServices: SearchService[] = [
     "description": "Sub-second analytics on operational DB change streams: CDC Kafka Flink aggregations → Superset/Metabase dashboards.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-real-time-operational-analytics"
+    "href": "/services/data-real-time-operational-analytics/"
   },
   {
     "id": "data-realtime-time-series-analytics",
@@ -3136,7 +3136,7 @@ export const searchServices: SearchService[] = [
     "description": "High-throughput real-time analytics for IoT, monitoring, and business metrics: stores, aggregates, and queries billions of events per day at <200ms p99 latency. Includes alert rules, anomaly detection, SQL + Python query engine, dashboards, and Grafana/PostgreSQL-compatible endpoints.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-realtime-time-series-analytics"
+    "href": "/services/data-realtime-time-series-analytics/"
   },
   {
     "id": "data-realtime-trending-aggregator",
@@ -3144,7 +3144,7 @@ export const searchServices: SearchService[] = [
     "description": "Streaming data platform: Flink/Redpanda backbone, windowed aggregation at sub-second latency, trend-detection anomaly alerts, opentelemetry distributed-tracing per event, dashboarding per team with live drill-through.",
     "category": "data",
     "popular": true,
-    "href": "/services/data-realtime-trending-aggregator"
+    "href": "/services/data-realtime-trending-aggregator/"
   },
   {
     "id": "data-realtime-trending-analytics",
@@ -3152,7 +3152,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time windowed aggregation engine: 1-minute tumbling and hopping windows per dimension, per-interval top-K ranking, out-of-norm alerting, sigma deviation triggering, and curated drill-down with root-cause dimension linking per window.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-realtime-trending-analytics"
+    "href": "/services/data-realtime-trending-analytics/"
   },
   {
     "id": "data-science-platform",
@@ -3160,7 +3160,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed data science on Kubernetes: MLflow tracking, model registry, managed feature store, KServe/Seldon inference, model CI/CD, GPU scheduling. Batch + real-time inference.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-science-platform"
+    "href": "/services/data-science-platform/"
   },
   {
     "id": "data-sync-engineering",
@@ -3168,7 +3168,7 @@ export const searchServices: SearchService[] = [
     "description": "Change data capture (CDC) sync engine that replicates real-time changes from Postgres, MySQL, MongoDB, and Snowflake to any destination with schema evolution.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-sync-engineering"
+    "href": "/services/data-sync-engineering/"
   },
   {
     "id": "data-synthetic-data-generator",
@@ -3176,7 +3176,7 @@ export const searchServices: SearchService[] = [
     "description": "Generative synthetic data platform for ML training, software testing, and GDPR/CCPA privacy compliance: maintains statistical distributions of real data while producing 100% synthetic records that pass all real-world QA and validation tests without human PII.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-synthetic-data-generator"
+    "href": "/services/data-synthetic-data-generator/"
   },
   {
     "id": "data-unstructured-data-lake",
@@ -3184,7 +3184,7 @@ export const searchServices: SearchService[] = [
     "description": "Unstructured data pipeline and lake: ingest PDF, Images, Audio, and Video at scale; auto-classify per document schema; OCR, ASR, object-detection hooks per file type; natural-language query with cited source passages.",
     "category": "data",
     "popular": false,
-    "href": "/services/data-unstructured-data-lake"
+    "href": "/services/data-unstructured-data-lake/"
   },
   {
     "id": "data-warehouse-modernization",
@@ -3192,7 +3192,7 @@ export const searchServices: SearchService[] = [
     "description": "Modernize legacy data warehouses (Oracle, Teradata, on-prem) to cloud-native solutions (Snowflake, BigQuery, Redshift) with AI-assisted schema mapping and migration validation.",
     "category": "it",
     "popular": false,
-    "href": "/services/data-warehouse-modernization"
+    "href": "/services/data-warehouse-modernization/"
   },
   {
     "id": "database-optimization",
@@ -3200,7 +3200,7 @@ export const searchServices: SearchService[] = [
     "description": "Database performance tuning, query optimization, migration, and high-availability clustering for PostgreSQL, MySQL, MongoDB, and more.",
     "category": "data",
     "popular": false,
-    "href": "/services/database-optimization"
+    "href": "/services/database-optimization/"
   },
   {
     "id": "db-migration-service",
@@ -3208,7 +3208,7 @@ export const searchServices: SearchService[] = [
     "description": "Homogeneous and heterogeneous database migrations — on-prem to cloud, between engines (Oracle→Postgres, MySQL→CockroachDB) with zero-downtime cutovers.",
     "category": "it",
     "popular": false,
-    "href": "/services/db-migration-service"
+    "href": "/services/db-migration-service/"
   },
   {
     "id": "devops-cicd",
@@ -3216,7 +3216,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end CI/CD pipelines, container orchestration, GitOps workflows, and site reliability engineering.",
     "category": "automation",
     "popular": true,
-    "href": "/services/devops-cicd"
+    "href": "/services/devops-cicd/"
   },
   {
     "id": "devops-consulting",
@@ -3224,7 +3224,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end DevOps transformation with CI/CD pipeline setup, infrastructure as code, container orchestration, and team training.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/devops-consulting"
+    "href": "/services/devops-consulting/"
   },
   {
     "id": "devops-gen-ai-ci-cd",
@@ -3232,7 +3232,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered DevOps: auto-generate CI/CD pipelines, infrastructure-as-code, deployment scripts, and incident runbooks from natural language specifications.",
     "category": "it",
     "popular": false,
-    "href": "/services/devops-gen-ai-ci-cd"
+    "href": "/services/devops-gen-ai-ci-cd/"
   },
   {
     "id": "devsecops-pipeline",
@@ -3240,7 +3240,7 @@ export const searchServices: SearchService[] = [
     "description": "Security-baked CI/CD pipeline: SAST, DAST, secrets scanning, container image signing, SBOM generation, and penetration-test gates. Enforces policy as code before every production deployment.",
     "category": "it",
     "popular": false,
-    "href": "/services/devsecops-pipeline"
+    "href": "/services/devsecops-pipeline/"
   },
   {
     "id": "digital-rights-management",
@@ -3248,7 +3248,7 @@ export const searchServices: SearchService[] = [
     "description": "Protect digital assets with AES-256 encryption, watermarking, usage restrictions, and access revocation for IP-sensitive document sharing.",
     "category": "security",
     "popular": false,
-    "href": "/services/digital-rights-management"
+    "href": "/services/digital-rights-management/"
   },
   {
     "id": "digital-workplace",
@@ -3256,7 +3256,7 @@ export const searchServices: SearchService[] = [
     "description": "Modern workplace technology stack with collaboration tools, secure remote access, AI assistants, and unified communications for distributed teams.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/digital-workplace"
+    "href": "/services/digital-workplace/"
   },
   {
     "id": "disaster-recovery-platform",
@@ -3264,7 +3264,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated backup, cross-region replication, and RTO/RPO-tested failover orchestration for VMs, databases, and containers across clouds.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/disaster-recovery-platform"
+    "href": "/services/disaster-recovery-platform/"
   },
   {
     "id": "disaster-recovery-services",
@@ -3272,7 +3272,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise DR planning, backup automation, geo-redundant infrastructure, and rapid business continuity solutions.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/disaster-recovery-services"
+    "href": "/services/disaster-recovery-services/"
   },
   {
     "id": "doc-intelligence-v2",
@@ -3280,7 +3280,7 @@ export const searchServices: SearchService[] = [
     "description": "Intelligent document processing: layout-aware OCR, handwriting recognition, table extraction, and form auto-fill. Handles invoices, contracts, medical records, and tax forms at 1000 pages per hour via REST.",
     "category": "ai",
     "popular": false,
-    "href": "/services/doc-intelligence-v2"
+    "href": "/services/doc-intelligence-v2/"
   },
   {
     "id": "document-processing",
@@ -3288,7 +3288,7 @@ export const searchServices: SearchService[] = [
     "description": "Document Processing eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Re...",
     "category": "ai",
     "popular": false,
-    "href": "/services/document-processing"
+    "href": "/services/document-processing/"
   },
   {
     "id": "edge-computing-deploy",
@@ -3296,7 +3296,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy distributed edge workloads: CDN edge functions, edge ML inference, IoT pipelines, regional failover with 10-50ms p99 latency and per-edge-node observability.",
     "category": "it",
     "popular": false,
-    "href": "/services/edge-computing-deploy"
+    "href": "/services/edge-computing-deploy/"
   },
   {
     "id": "edge-computing-platform",
@@ -3304,7 +3304,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy microservices at the network edge for sub-10ms latency, offline operation, and data sovereignty compliance.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/edge-computing-platform"
+    "href": "/services/edge-computing-platform/"
   },
   {
     "id": "endpoint-management",
@@ -3312,7 +3312,7 @@ export const searchServices: SearchService[] = [
     "description": "Manage and secure all devices (laptops, mobile, IoT) from a single dashboard: enrollment, policy enforcement, patch management, and remote wipe.",
     "category": "it",
     "popular": false,
-    "href": "/services/endpoint-management"
+    "href": "/services/endpoint-management/"
   },
   {
     "id": "energy-management",
@@ -3320,7 +3320,7 @@ export const searchServices: SearchService[] = [
     "description": "Energy Management combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that ...",
     "category": "ai",
     "popular": false,
-    "href": "/services/energy-management"
+    "href": "/services/energy-management/"
   },
   {
     "id": "enterprise-backup-dr",
@@ -3328,7 +3328,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive data protection with automated backups, instant recovery, ransomware protection, and geo-redundant storage.",
     "category": "it",
     "popular": false,
-    "href": "/services/enterprise-backup-dr"
+    "href": "/services/enterprise-backup-dr/"
   },
   {
     "id": "enterprise-dlp",
@@ -3336,7 +3336,7 @@ export const searchServices: SearchService[] = [
     "description": "Prevent data exfiltration at rest, in transit, in-use: endpoint DLP, network DLP, cloud DLP (S3/GDrive/SharePoint/Box). Content inspection + policy enforcement + remediation.",
     "category": "security",
     "popular": false,
-    "href": "/services/enterprise-dlp"
+    "href": "/services/enterprise-dlp/"
   },
   {
     "id": "etl-pipeline-optimization",
@@ -3344,7 +3344,7 @@ export const searchServices: SearchService[] = [
     "description": "Accelerate and stabilize data pipelines (batch & streaming): refactor legacy ETL, migrate to Airflow/DBT, add observability, and reduce cost.",
     "category": "it",
     "popular": false,
-    "href": "/services/etl-pipeline-optimization"
+    "href": "/services/etl-pipeline-optimization/"
   },
   {
     "id": "etl-streaming-pipeline",
@@ -3352,7 +3352,7 @@ export const searchServices: SearchService[] = [
     "description": "Sub-second streaming data pipelines with exactly-once delivery, windowed aggregations, schema evolution, and native connectors for Kafka, Pulsar, and Kinesis.",
     "category": "data",
     "popular": false,
-    "href": "/services/etl-streaming-pipeline"
+    "href": "/services/etl-streaming-pipeline/"
   },
   {
     "id": "event-driven-architecture",
@@ -3360,7 +3360,7 @@ export const searchServices: SearchService[] = [
     "description": "Design and implement event-driven microservices: Apache Kafka or Pulsar event mesh, schema registry, CQRS plus event sourcing patterns, exactly-once delivery, and replay and replay-sanitise pipelines.",
     "category": "it",
     "popular": false,
-    "href": "/services/event-driven-architecture"
+    "href": "/services/event-driven-architecture/"
   },
   {
     "id": "event-driven-orchestration",
@@ -3368,7 +3368,7 @@ export const searchServices: SearchService[] = [
     "description": "Serverless workflow engine with durable execution, retries, and visual DAG designer for complex multi-service business processes.",
     "category": "automation",
     "popular": false,
-    "href": "/services/event-driven-orchestration"
+    "href": "/services/event-driven-orchestration/"
   },
   {
     "id": "event-driven-orchestration-hub",
@@ -3376,7 +3376,7 @@ export const searchServices: SearchService[] = [
     "description": "Event-centric orchestration layer: publish/subscribe event bus with schema registry, dead-letter handling, replay, exactly-once delivery guarantees, and cross-region replication for distributed microservices.",
     "category": "ai",
     "popular": false,
-    "href": "/services/event-driven-orchestration-hub"
+    "href": "/services/event-driven-orchestration-hub/"
   },
   {
     "id": "evm-smart-contract-audit",
@@ -3384,7 +3384,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive audit: static analysis (Slither), manual line-by-line review, fuzz testing (Foundry), formal verification for critical invariants, post-audit re-audit.",
     "category": "it",
     "popular": false,
-    "href": "/services/evm-smart-contract-audit"
+    "href": "/services/evm-smart-contract-audit/"
   },
   {
     "id": "feature-engineering-platform",
@@ -3392,7 +3392,7 @@ export const searchServices: SearchService[] = [
     "description": "Feature store as-a-service: feature definition registry, feature pipeline orchestration, online + offline serving, point-in-time correctness, model drift detection.",
     "category": "data",
     "popular": false,
-    "href": "/services/feature-engineering-platform"
+    "href": "/services/feature-engineering-platform/"
   },
   {
     "id": "fn-finops-platform",
@@ -3400,7 +3400,7 @@ export const searchServices: SearchService[] = [
     "description": "Cloud financial governance platform with budget alerts, right-sizing recommendations, resource tagging enforcement, and chargeback/showback reporting.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/fn-finops-platform"
+    "href": "/services/fn-finops-platform/"
   },
   {
     "id": "fraud-detection",
@@ -3408,7 +3408,7 @@ export const searchServices: SearchService[] = [
     "description": "Fraud Detection provides enterprise-grade security controls, continuous monitoring, and compliance automation. Reduce risk exposure and accelerate ...",
     "category": "ai",
     "popular": false,
-    "href": "/services/fraud-detection"
+    "href": "/services/fraud-detection/"
   },
   {
     "id": "gcp-data-analytics-platform",
@@ -3416,7 +3416,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end GCP analytics: BigQuery, Dataflow, Pub/Sub streaming, Looker dashboards. GCS Delta Lakehouse with partition pruning and auto-clustering.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/gcp-data-analytics-platform"
+    "href": "/services/gcp-data-analytics-platform/"
   },
   {
     "id": "generative-ai-copywriting",
@@ -3424,7 +3424,7 @@ export const searchServices: SearchService[] = [
     "description": "Brand-tuned AI content generation for blogs, ads, emails, and social posts with tone control, SEO scoring, and content calendar automation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ai-copywriting"
+    "href": "/services/generative-ai-copywriting/"
   },
   {
     "id": "generative-ai-enterprise",
@@ -3432,7 +3432,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise-scale generative AI for content, code, and data. Deploy secure, governed LLM workflows with custom models, RAG, and fine-tuning for prod...",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ai-enterprise"
+    "href": "/services/generative-ai-enterprise/"
   },
   {
     "id": "generative-ai-legal-review",
@@ -3440,7 +3440,7 @@ export const searchServices: SearchService[] = [
     "description": "AI contract review that highlights risks, suggests clauses, compares against playbooks, and redlines in your firms style — cutting document review time 80%.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ai-legal-review"
+    "href": "/services/generative-ai-legal-review/"
   },
   {
     "id": "generative-ai-summarization",
@@ -3448,7 +3448,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise document summarization engine: ingest PDFs, Word docs, and transcripts to generate executive briefs, meeting notes, and compliance abstracts.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ai-summarization"
+    "href": "/services/generative-ai-summarization/"
   },
   {
     "id": "generative-ai-video-editor",
@@ -3456,7 +3456,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered video editor: auto-transcribe, auto-caption, text-to-speech voiceover, background removal, and one-click social media resizing.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ai-video-editor"
+    "href": "/services/generative-ai-video-editor/"
   },
   {
     "id": "generative-ai-voice-agent",
@@ -3464,7 +3464,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 AI voice agents for inbound support, outbound lead qualification, and appointment booking with natural voice and real-time CRM sync.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ai-voice-agent"
+    "href": "/services/generative-ai-voice-agent/"
   },
   {
     "id": "generative-data-synthesis",
@@ -3472,7 +3472,7 @@ export const searchServices: SearchService[] = [
     "description": "Create synthetic tabular, image, or text datasets to augment training data, balance classes, or simulate rare scenarios while preserving statistical fidelity.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-data-synthesis"
+    "href": "/services/generative-data-synthesis/"
   },
   {
     "id": "generative-ux-research-synthesis",
@@ -3480,7 +3480,7 @@ export const searchServices: SearchService[] = [
     "description": "Turn raw user interviews, survey responses, and usability test recordings into structured insights, personas, and actionable recommendations using AI.",
     "category": "ai",
     "popular": false,
-    "href": "/services/generative-ux-research-synthesis"
+    "href": "/services/generative-ux-research-synthesis/"
   },
   {
     "id": "graph-database-analytics",
@@ -3488,7 +3488,7 @@ export const searchServices: SearchService[] = [
     "description": "Graph database: fraud rings, social networks, knowledge graphs, recommendation engine. Neo4j + GDS — community detection, centrality, shortest-path, link prediction, visual dashboard.",
     "category": "data",
     "popular": false,
-    "href": "/services/graph-database-analytics"
+    "href": "/services/graph-database-analytics/"
   },
   {
     "id": "graphql-federation-platform",
@@ -3496,7 +3496,7 @@ export const searchServices: SearchService[] = [
     "description": "Apollo Federation 2 gateway: compose 50+ microservice schemas into a unified GraphQL API, manage subgraph schema evolution, implement distributed caching, and provide type-safe SDKs in 12 languages.",
     "category": "ai",
     "popular": false,
-    "href": "/services/graphql-federation-platform"
+    "href": "/services/graphql-federation-platform/"
   },
   {
     "id": "hr-analytics",
@@ -3504,7 +3504,7 @@ export const searchServices: SearchService[] = [
     "description": "HR Analytics transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make faster, m...",
     "category": "ai",
     "popular": false,
-    "href": "/services/hr-analytics"
+    "href": "/services/hr-analytics/"
   },
   {
     "id": "hybrid-multi-cloud-net",
@@ -3512,7 +3512,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified networking across private DC + public clouds: VPC peering, VPN/Direct Connect/Interconnect, centralized routing, cloud firewall, Istio/Linkerd cross-cloud mesh.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/hybrid-multi-cloud-net"
+    "href": "/services/hybrid-multi-cloud-net/"
   },
   {
     "id": "iam-identity-platform",
@@ -3520,7 +3520,7 @@ export const searchServices: SearchService[] = [
     "description": "Cloud-native identity and access management with SSO, MFA, SCIM provisioning, and compliance reporting for enterprise.",
     "category": "security",
     "popular": false,
-    "href": "/services/iam-identity-platform"
+    "href": "/services/iam-identity-platform/"
   },
   {
     "id": "identity-access-management",
@@ -3528,7 +3528,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise IAM with SSO, MFA, privileged access management, and automated provisioning for secure, frictionless access across all applications.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/identity-access-management"
+    "href": "/services/identity-access-management/"
   },
   {
     "id": "incident-response-retainer",
@@ -3536,7 +3536,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 on-call incident response for security breaches, ransomware, and major outages: forensic analysis, containment, eradication, and recovery.",
     "category": "it",
     "popular": false,
-    "href": "/services/incident-response-retainer"
+    "href": "/services/incident-response-retainer/"
   },
   {
     "id": "invoice-ai-automation",
@@ -3544,7 +3544,7 @@ export const searchServices: SearchService[] = [
     "description": "Invoice automation: three-way PO matching, OCR line-item extraction, GL coding by vendor and line item, approval workflow per threshold, and ERP auto-post to NetSuite, SAP, or QuickBooks with zero human touch.",
     "category": "ai",
     "popular": false,
-    "href": "/services/invoice-ai-automation"
+    "href": "/services/invoice-ai-automation/"
   },
   {
     "id": "it-5g-network-deployment",
@@ -3552,7 +3552,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end 5G network architecture, RF planning, edge computing integration, and private 5G deployment for enterprise campuses and industrial IoT.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-5g-network-deployment"
+    "href": "/services/it-5g-network-deployment/"
   },
   {
     "id": "it-api-gateway-ai",
@@ -3560,7 +3560,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-api-gateway-ai"
+    "href": "/services/it-api-gateway-ai/"
   },
   {
     "id": "it-api-gateway-management",
@@ -3568,7 +3568,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise API gateway: rate limiting, API key management, OAuth2 + mTLS, usage analytics, developer portal, request/response transforms, and dead-letter queue handling across cloud and on-prem APIs.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-api-gateway-management"
+    "href": "/services/it-api-gateway-management/"
   },
   {
     "id": "it-api-gateway-openapi",
@@ -3576,7 +3576,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise API gateway: OpenAPI 3.1 lifecycle, rate-limit/quota per key, threat-protection WAF rules, schema registry, live API analytics, developer portal with interactive docs and sandbox.",
     "category": "it",
     "popular": true,
-    "href": "/services/it-api-gateway-openapi"
+    "href": "/services/it-api-gateway-openapi/"
   },
   {
     "id": "it-api-management",
@@ -3584,7 +3584,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive API management - gateway, developer portal, monetization, analytics, and lifecycle management for enterprise API programs.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-api-management"
+    "href": "/services/it-api-management/"
   },
   {
     "id": "it-api-management-gateway",
@@ -3592,7 +3592,7 @@ export const searchServices: SearchService[] = [
     "description": "Full API lifecycle management: unified gateway with auth, rate-limit, circuit-breaker, developer portal with auto-generated OpenAPI docs, per-tenant analytics, and API monetisation. Supports REST, GraphQL, and gRPC.",
     "category": "it",
     "popular": true,
-    "href": "/services/it-api-management-gateway"
+    "href": "/services/it-api-management-gateway/"
   },
   {
     "id": "it-api-performance-testing",
@@ -3600,7 +3600,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-api-performance-testing"
+    "href": "/services/it-api-performance-testing/"
   },
   {
     "id": "it-apisec-testing",
@@ -3608,7 +3608,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated security scans for REST, GraphQL, and gRPC APIs. Detects OWASP API Top 10 vulnerabilities and provides remediation code snippets.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-apisec-testing"
+    "href": "/services/it-apisec-testing/"
   },
   {
     "id": "it-asset-lifecycle",
@@ -3616,7 +3616,7 @@ export const searchServices: SearchService[] = [
     "description": "Track hardware and software assets from procurement to disposal. Auto-discovery, compliance tracking, depreciation schedules, and end-of-life automation in one dashboard.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-asset-lifecycle"
+    "href": "/services/it-asset-lifecycle/"
   },
   {
     "id": "it-asset-management",
@@ -3624,7 +3624,7 @@ export const searchServices: SearchService[] = [
     "description": "Complete IT asset lifecycle management from procurement to disposal with automated discovery and license tracking.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-asset-management"
+    "href": "/services/it-asset-management/"
   },
   {
     "id": "it-automated-incident-response",
@@ -3632,7 +3632,7 @@ export const searchServices: SearchService[] = [
     "description": "Security Orchestration, Automation & Response platform that auto-remediates 40% of Tier-1 incidents using playbooks and AI decisioning.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-automated-incident-response"
+    "href": "/services/it-automated-incident-response/"
   },
   {
     "id": "it-automation-orchestrator",
@@ -3640,7 +3640,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise IT automation platform with workflow orchestration, infrastructure provisioning, configuration management, and self-healing system capabilities.",
     "category": "automation",
     "popular": false,
-    "href": "/services/it-automation-orchestrator"
+    "href": "/services/it-automation-orchestrator/"
   },
   {
     "id": "it-backup-disaster-recovery",
@@ -3648,7 +3648,7 @@ export const searchServices: SearchService[] = [
     "description": "Image-level backup (filesystem/DB/bare-metal), continuous replication with RPO sub-15 min, one-click full restore drill per server.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-backup-disaster-recovery"
+    "href": "/services/it-backup-disaster-recovery/"
   },
   {
     "id": "it-backup-disaster-recovery-solution",
@@ -3656,7 +3656,7 @@ export const searchServices: SearchService[] = [
     "description": "Immutable backup engine with RPO as low as 5 minutes, RTO of 30 minutes, off-site air-gapped storage, Lamport-timestamp chain-of-custody for tamper evidence, ransomware-hold per snapshot, point-in-time restore, and automated DR drill scheduling.",
     "category": "it",
     "popular": true,
-    "href": "/services/it-backup-disaster-recovery-solution"
+    "href": "/services/it-backup-disaster-recovery-solution/"
   },
   {
     "id": "it-backup-dr-bc-as-a-service",
@@ -3664,7 +3664,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed backup and disaster recovery: 3-2-1-1-airgap policy, every-30s WORM snapshots, point-in-time restore to 90 days, failover tests every 30 min, 4-hour RTO, 15-min RPO SLA.",
     "category": "it",
     "popular": true,
-    "href": "/services/it-backup-dr-bc-as-a-service"
+    "href": "/services/it-backup-dr-bc-as-a-service/"
   },
   {
     "id": "it-blockchain-development",
@@ -3672,7 +3672,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end blockchain solution development — smart contract creation, security auditing, tokenomics design, and Web3 integration for enterprises.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-blockchain-development"
+    "href": "/services/it-blockchain-development/"
   },
   {
     "id": "it-business-continuity-dr",
@@ -3680,7 +3680,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated backup, replication, and failover orchestration across cloud and on-premise. RPOs as low as 15 seconds, RTOs under 5 minutes.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-business-continuity-dr"
+    "href": "/services/it-business-continuity-dr/"
   },
   {
     "id": "it-business-intelligence-cockpit",
@@ -3688,7 +3688,7 @@ export const searchServices: SearchService[] = [
     "description": "Executive BI dashboard connecting ERP/CRM/HRIS: revenue run-rate, headcount cost, CAC/LTV, NRR, runway, and scenario modelling.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-business-intelligence-cockpit"
+    "href": "/services/it-business-intelligence-cockpit/"
   },
   {
     "id": "it-capacity-planning",
@@ -3696,7 +3696,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-driven capacity planning that forecasts compute, storage, and network requirements based on growth patterns and workload trends across your infrastructure.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-capacity-planning"
+    "href": "/services/it-capacity-planning/"
   },
   {
     "id": "it-change-risk-analyser",
@@ -3704,7 +3704,7 @@ export const searchServices: SearchService[] = [
     "description": "Assess change request risk using historical data, blast-radius modelling, and ML-predicted outage probability. Integrates with ServiceNow and Jira change management.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-change-risk-analyser"
+    "href": "/services/it-change-risk-analyser/"
   },
   {
     "id": "it-cicd-security-gate-as-service",
@@ -3712,7 +3712,7 @@ export const searchServices: SearchService[] = [
     "description": "Shift-left CI/CD security: SAST/DAST/SCA/containers per PR/push branch gate with auto-fix PRs for vulnerabilities, SBOM generation, false-positive suppression.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-cicd-security-gate-as-service"
+    "href": "/services/it-cicd-security-gate-as-service/"
   },
   {
     "id": "it-cloud-compliance-scanner",
@@ -3720,7 +3720,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous cloud infrastructure compliance scanning for AWS, Azure, and GCP against CIS, NIST, HIPAA, and PCI-DSS benchmarks.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-cloud-compliance-scanner"
+    "href": "/services/it-cloud-compliance-scanner/"
   },
   {
     "id": "it-cloud-cost-governance",
@@ -3728,7 +3728,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-cloud-cost-governance"
+    "href": "/services/it-cloud-cost-governance/"
   },
   {
     "id": "it-cloud-cost-management-platform",
@@ -3736,7 +3736,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-cloud cost visibility, rightsizing recommendations, RI/SA coverage gap, budget alert, chargeback/showback per team.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-cloud-cost-management-platform"
+    "href": "/services/it-cloud-cost-management-platform/"
   },
   {
     "id": "it-cloud-native-storage",
@@ -3744,7 +3744,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated storage tiering, snapshot management, and cost optimization for AWS S3, EBS, Azure Blob, GCP Cloud Storage.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-cloud-native-storage"
+    "href": "/services/it-cloud-native-storage/"
   },
   {
     "id": "it-code-quality-governance",
@@ -3752,7 +3752,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated code-quality scanning: static analysis, lint coverage gates, dependency vulnerability CVE detection, code smell auditor, branch-protection + quality-gate CI/CD enforcement, and actionable fix suggestions.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-code-quality-governance"
+    "href": "/services/it-code-quality-governance/"
   },
   {
     "id": "it-code-quality-pre-merge",
@@ -3760,7 +3760,7 @@ export const searchServices: SearchService[] = [
     "description": "Pre-merge quality gate: SAST, secret-scan, dependency-audit, trunk-based branch review, automated PR reviewer with inline comments, per-PR quality score, and merge-blocking on regressions across 25+ languages.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-code-quality-pre-merge"
+    "href": "/services/it-code-quality-pre-merge/"
   },
   {
     "id": "it-consulting",
@@ -3768,7 +3768,7 @@ export const searchServices: SearchService[] = [
     "description": "Strategic technology consulting — digital transformation roadmaps, tech stack evaluation, and CTO-as-a-service.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-consulting"
+    "href": "/services/it-consulting/"
   },
   {
     "id": "it-data-lakehouse-governance",
@@ -3776,7 +3776,7 @@ export const searchServices: SearchService[] = [
     "description": "Metadata management, lineage tracking, and access controls for Delta Lake, Apache Iceberg, or Snowflake environments.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-data-lakehouse-governance"
+    "href": "/services/it-data-lakehouse-governance/"
   },
   {
     "id": "it-data-mesh-implementation",
@@ -3784,7 +3784,7 @@ export const searchServices: SearchService[] = [
     "description": "Implement data mesh architecture with domain-oriented data ownership, self-serve data infrastructure, and federated computational governance.",
     "category": "data",
     "popular": false,
-    "href": "/services/it-data-mesh-implementation"
+    "href": "/services/it-data-mesh-implementation/"
   },
   {
     "id": "it-data-warehouse-modernization",
@@ -3792,7 +3792,7 @@ export const searchServices: SearchService[] = [
     "description": "Migration from legacy data warehouses (Oracle, Teradata) to modern cloud-native stacks (Snowflake, BigQuery, Databricks) with zero downtime.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-data-warehouse-modernization"
+    "href": "/services/it-data-warehouse-modernization/"
   },
   {
     "id": "it-database-as-a-service",
@@ -3800,7 +3800,7 @@ export const searchServices: SearchService[] = [
     "description": "Fully managed databases - PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch with automated backups, scaling, and AI-powered optimization.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-database-as-a-service"
+    "href": "/services/it-database-as-a-service/"
   },
   {
     "id": "it-devops-platform-toolchain",
@@ -3808,7 +3808,7 @@ export const searchServices: SearchService[] = [
     "description": "One DevOps portal: CI/CD, artifact repo, Terraform Cloud, GitOps ops config, artifact SBOM, and full audit log per pipeline.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-devops-platform-toolchain"
+    "href": "/services/it-devops-platform-toolchain/"
   },
   {
     "id": "it-devsecops-1",
@@ -3816,7 +3816,7 @@ export const searchServices: SearchService[] = [
     "description": "Embed security into CI/CD pipelines with automated SAST, DAST, SCA, container scanning, and infrastructure-as-code security checks — shifting security left without slowing delivery.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-devsecops-1"
+    "href": "/services/it-devsecops-1/"
   },
   {
     "id": "it-digital-twin-platform",
@@ -3824,7 +3824,7 @@ export const searchServices: SearchService[] = [
     "description": "Build real-time digital replicas of physical systems — factory floors, supply chains, and smart cities with predictive simulation and optimization capabilities.",
     "category": "automation",
     "popular": false,
-    "href": "/services/it-digital-twin-platform"
+    "href": "/services/it-digital-twin-platform/"
   },
   {
     "id": "it-digital-workplace-platform",
@@ -3832,7 +3832,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified intranet, collaboration, and employee apps (Microsoft 365 + Google Workspace + Slack) with streamlined onboarding and automated license management.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-digital-workplace-platform"
+    "href": "/services/it-digital-workplace-platform/"
   },
   {
     "id": "it-disaster-recovery",
@@ -3840,7 +3840,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive disaster recovery planning, automated failover systems, and business continuity solutions ensuring zero data loss and minimal downtime for mission-critical operations.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-disaster-recovery"
+    "href": "/services/it-disaster-recovery/"
   },
   {
     "id": "it-e-commerce-platform-advisor",
@@ -3848,7 +3848,7 @@ export const searchServices: SearchService[] = [
     "description": "Platform selection, headless storefront implementation, payments integration, and Shopify/BigCommerce/Salesforce Commerce migration guidance.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-e-commerce-platform-advisor"
+    "href": "/services/it-e-commerce-platform-advisor/"
   },
   {
     "id": "it-edge-computing-deploy",
@@ -3856,7 +3856,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploys containerized workloads to global edge locations (Cloudflare Workers, Fastly Compute, AWS Lambda@Edge) for sub-10ms latency.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-edge-computing-deploy"
+    "href": "/services/it-edge-computing-deploy/"
   },
   {
     "id": "it-edge-computing-orchestration",
@@ -3864,7 +3864,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy and manage containerized workloads across distributed edge nodes. Auto-scaling, zero-trust networking, and offline sync for true edge-native applications.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-edge-computing-orchestration"
+    "href": "/services/it-edge-computing-orchestration/"
   },
   {
     "id": "it-edge-computing-solutions",
@@ -3872,7 +3872,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy compute closer to your data sources with edge computing architecture — low-latency processing, distributed AI inference, and resilient IoT device management.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-edge-computing-solutions"
+    "href": "/services/it-edge-computing-solutions/"
   },
   {
     "id": "it-endpoint-detection-response",
@@ -3880,7 +3880,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 monitored EDR service with threat hunting, ransomware rollback, and 15-minute SLA for critical alerts. Includes managed SOC.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-endpoint-detection-response"
+    "href": "/services/it-endpoint-detection-response/"
   },
   {
     "id": "it-endpoint-management-macos-windows",
@@ -3888,7 +3888,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified MDM for macOS and Windows: Zero-touch enrolment, OS update enforcement, full-disk encryption, compliance, remote wipe.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-endpoint-management-macos-windows"
+    "href": "/services/it-endpoint-management-macos-windows/"
   },
   {
     "id": "it-endpoint-security-compliance",
@@ -3896,7 +3896,7 @@ export const searchServices: SearchService[] = [
     "description": "EDR and XDR endpoint coverage with compliance attestation: CIS benchmark checks, disk-encrypt status, OS patch-level verification, software-inventory SBOM per asset, CISA KEV auto-detection, and SCAP reporting for regulated assessments.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-endpoint-security-compliance"
+    "href": "/services/it-endpoint-security-compliance/"
   },
   {
     "id": "it-endpoint-security-compliance-monitor",
@@ -3904,7 +3904,7 @@ export const searchServices: SearchService[] = [
     "description": "Endpoint security continuous monitoring: EDR detection + endpoint firewall + exploit prevention, CVE auto-fix via patch catalog, compliance posture for HIPAA/PCI/SOX/ISO27001 with automated audit evidence export.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-endpoint-security-compliance-monitor"
+    "href": "/services/it-endpoint-security-compliance-monitor/"
   },
   {
     "id": "it-esg-compliance-automation",
@@ -3912,7 +3912,7 @@ export const searchServices: SearchService[] = [
     "description": "Automates ESG data collection from 100+ systems (cloud, HR, facilities) and generates SEC, EU CSRD, and SFDR reports.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-esg-compliance-automation"
+    "href": "/services/it-esg-compliance-automation/"
   },
   {
     "id": "it-help-desk-glucidex",
@@ -3920,7 +3920,7 @@ export const searchServices: SearchService[] = [
     "description": "AI triage + KB auto-resolution, ticket routing, asset CMDB auto-link, and agent copilot with runbook-snippet suggestion per ticket.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-help-desk-glucidex"
+    "href": "/services/it-help-desk-glucidex/"
   },
   {
     "id": "it-identity-access-management",
@@ -3928,7 +3928,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise IAM with SSO, MFA, PAM, and automated access provisioning across cloud and on-premise systems — Zero Trust-ready identity governance.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-identity-access-management"
+    "href": "/services/it-identity-access-management/"
   },
   {
     "id": "it-identity-access-management-sso",
@@ -3936,7 +3936,7 @@ export const searchServices: SearchService[] = [
     "description": "SSO (SAML 2.0/OIDC), adaptive MFA (TOTP/WebAuthn/risk-based), SCIM auto-provision/revoke, JIT privileged-access.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-identity-access-management-sso"
+    "href": "/services/it-identity-access-management-sso/"
   },
   {
     "id": "it-identity-governance",
@@ -3944,7 +3944,7 @@ export const searchServices: SearchService[] = [
     "description": "Centralized IGA: lifecycle management, access certifications, separation-of-duties policies. Integrates with Active Directory, Okta, Azure AD.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-identity-governance"
+    "href": "/services/it-identity-governance/"
   },
   {
     "id": "it-incident-response",
@@ -3952,7 +3952,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 SOC and incident response - threat detection, investigation, containment, recovery with automated playbooks and forensics.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-incident-response"
+    "href": "/services/it-incident-response/"
   },
   {
     "id": "it-incident-response-simulator",
@@ -3960,7 +3960,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-incident-response-simulator"
+    "href": "/services/it-incident-response-simulator/"
   },
   {
     "id": "it-iot-device-management",
@@ -3968,7 +3968,7 @@ export const searchServices: SearchService[] = [
     "description": "Provision, monitor, and secure 10K+ IoT devices (sensors, cameras, gateways) from a single dashboard with OTA updates and zero-touch enrollment.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-iot-device-management"
+    "href": "/services/it-iot-device-management/"
   },
   {
     "id": "it-itil-service-management",
@@ -3976,7 +3976,7 @@ export const searchServices: SearchService[] = [
     "description": "Full ITIL-aligned service management with AI-powered ticketing, change management automation, CMDB discovery, and self-service portal for enterprise IT operations.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-itil-service-management"
+    "href": "/services/it-itil-service-management/"
   },
   {
     "id": "it-kubernetes-management",
@@ -3984,7 +3984,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise Kubernetes deployment, management, and optimization — multi-cluster orchestration, GitOps workflows, and service mesh implementation.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-kubernetes-management"
+    "href": "/services/it-kubernetes-management/"
   },
   {
     "id": "it-kubernetes-multicloud",
@@ -3992,7 +3992,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy and manage Kubernetes clusters across AWS, GCP, Azure, and on-prem with a single control plane. Includes GitOps and policy enforcement.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-kubernetes-multicloud"
+    "href": "/services/it-kubernetes-multicloud/"
   },
   {
     "id": "it-legacy-app-containerization",
@@ -4000,7 +4000,7 @@ export const searchServices: SearchService[] = [
     "description": "Migrate monoliths and legacy apps to Docker/Kubernetes with minimal code changes. Automated dependency analysis and service extraction.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-legacy-app-containerization"
+    "href": "/services/it-legacy-app-containerization/"
   },
   {
     "id": "it-low-code-platform-integration",
@@ -4008,7 +4008,7 @@ export const searchServices: SearchService[] = [
     "description": "Build & integrate internal tools on Retool, Tooljet, or internal platforms. Pre-built connectors to 200+ SaaS APIs and custom SQL/NoSQL builders.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-low-code-platform-integration"
+    "href": "/services/it-low-code-platform-integration/"
   },
   {
     "id": "it-mainframe-modernization",
@@ -4016,7 +4016,7 @@ export const searchServices: SearchService[] = [
     "description": "Rehost, replatform, or refactor COBOL/PL1 applications to cloud. Automated code conversion, database migration, and cutover planning.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-mainframe-modernization"
+    "href": "/services/it-mainframe-modernization/"
   },
   {
     "id": "it-managed-soc",
@@ -4024,7 +4024,7 @@ export const searchServices: SearchService[] = [
     "description": "24x7 managed SOC: SIEM event correlation threat hunting from 50+ feeds incident response managed alert triage monthly executive cyber risk report compliance evidence B2B enterprise.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-managed-soc"
+    "href": "/services/it-managed-soc/"
   },
   {
     "id": "it-microservices-architecture",
@@ -4032,7 +4032,7 @@ export const searchServices: SearchService[] = [
     "description": "Design and implement scalable microservices architectures with API gateways, service discovery, distributed tracing, and event-driven communication patterns.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-microservices-architecture"
+    "href": "/services/it-microservices-architecture/"
   },
   {
     "id": "it-multi-cloud-cost-governance",
@@ -4040,7 +4040,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified cost visibility and policy enforcement across AWS, Azure, GCP. budgets, alerts, rightsizing recommendations, and chargeback/showback.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-multi-cloud-cost-governance"
+    "href": "/services/it-multi-cloud-cost-governance/"
   },
   {
     "id": "it-multi-cloud-networking",
@@ -4048,7 +4048,7 @@ export const searchServices: SearchService[] = [
     "description": "Global SD-WAN with direct cloud interconnect (AWS Direct Connect, Azure ExpressRoute). Secure, performant, and centrally managed.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-multi-cloud-networking"
+    "href": "/services/it-multi-cloud-networking/"
   },
   {
     "id": "it-network-automation",
@@ -4056,7 +4056,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated network configuration, monitoring, and optimization with SD-WAN, intent-based networking, and AI-driven performance management.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-network-automation"
+    "href": "/services/it-network-automation/"
   },
   {
     "id": "it-network-firewall-next-generation",
@@ -4064,7 +4064,7 @@ export const searchServices: SearchService[] = [
     "description": "Layer-7 NGFW with IDS/IPS, deep packet inspection, SSL decryption, geo-IP block, zero-day threat feed, and cloud-firewall auto-sync.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-network-firewall-next-generation"
+    "href": "/services/it-network-firewall-next-generation/"
   },
   {
     "id": "it-network-security-monitoring",
@@ -4072,7 +4072,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time network traffic analysis, threat correlation, and centralized Security Information and Event Management (SIEM) for enterprises requiring continuous security posture visibility.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-network-security-monitoring"
+    "href": "/services/it-network-security-monitoring/"
   },
   {
     "id": "it-observability-1",
@@ -4080,7 +4080,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive observability platform combining metrics, logs, traces, and AI-powered anomaly detection to achieve proactive reliability and reduce MTTR to minutes.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-observability-1"
+    "href": "/services/it-observability-1/"
   },
   {
     "id": "it-observability-logging",
@@ -4088,7 +4088,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-observability-logging"
+    "href": "/services/it-observability-logging/"
   },
   {
     "id": "it-observability-platform",
@@ -4096,7 +4096,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end observability implementation with distributed tracing, log aggregation, metrics collection, and Site Reliability Engineering best practices.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-observability-platform"
+    "href": "/services/it-observability-platform/"
   },
   {
     "id": "it-observability-unified",
@@ -4104,7 +4104,7 @@ export const searchServices: SearchService[] = [
     "description": "Single pane of glass for logs, metrics, traces, and profiles. Powered by OpenTelemetry, with AI-assisted root cause analysis.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-observability-unified"
+    "href": "/services/it-observability-unified/"
   },
   {
     "id": "it-pcii-compliance-suite",
@@ -4112,7 +4112,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated PCI DSS v4.0 compliance monitoring, evidence collection, and reporting. Pre-built controls for 400+ requirements.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-pcii-compliance-suite"
+    "href": "/services/it-pcii-compliance-suite/"
   },
   {
     "id": "it-penetration-testing",
@@ -4120,7 +4120,7 @@ export const searchServices: SearchService[] = [
     "description": "Comprehensive security testing — network, web application, API, and social engineering assessments with detailed remediation reports and retesting.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-penetration-testing"
+    "href": "/services/it-penetration-testing/"
   },
   {
     "id": "it-platform-engineering",
@@ -4128,7 +4128,7 @@ export const searchServices: SearchService[] = [
     "description": "Build internal developer platforms with self-service infrastructure provisioning, golden paths, and developer experience optimization to accelerate team productivity.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-platform-engineering"
+    "href": "/services/it-platform-engineering/"
   },
   {
     "id": "it-platform-engineering-1",
@@ -4136,7 +4136,7 @@ export const searchServices: SearchService[] = [
     "description": "Design and build an Internal Developer Platform (IDP) that provides self-service capabilities for developers — spinning up environments, deploying applications, and managing infrastructure through golden paths.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-platform-engineering-1"
+    "href": "/services/it-platform-engineering-1/"
   },
   {
     "id": "it-quantum-readiness",
@@ -4144,7 +4144,7 @@ export const searchServices: SearchService[] = [
     "description": "Evaluate your organization quantum readiness, identify cryptographic vulnerabilities, and develop migration strategies for post-quantum security standards.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-quantum-readiness"
+    "href": "/services/it-quantum-readiness/"
   },
   {
     "id": "it-remote-collaboration-suites",
@@ -4152,7 +4152,7 @@ export const searchServices: SearchService[] = [
     "description": "Video meetings, persistent team chat, screen/annotation, whiteboard, file sharing, and calendar sync across 15+ SaaS tools.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-remote-collaboration-suites"
+    "href": "/services/it-remote-collaboration-suites/"
   },
   {
     "id": "it-sam-platform",
@@ -4160,7 +4160,7 @@ export const searchServices: SearchService[] = [
     "description": "Complete IT asset discovery, configuration mapping, and dependency visualization for cloud and on-prem environments.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-sam-platform"
+    "href": "/services/it-sam-platform/"
   },
   {
     "id": "it-sap-integration-hub",
@@ -4168,7 +4168,7 @@ export const searchServices: SearchService[] = [
     "description": "Pre-built connectors for SAP ERP, S/4HANA, SuccessFactors, and Ariba. Real-time sync, IDoc/BAPI support, and error handling out of the box.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-sap-integration-hub"
+    "href": "/services/it-sap-integration-hub/"
   },
   {
     "id": "it-secrets-management",
@@ -4176,7 +4176,7 @@ export const searchServices: SearchService[] = [
     "description": "Centralized secrets vault with automatic rotation, audit logs, and Just-In-Time access. Integrates with Kubernetes, VSphere, and cloud providers.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-secrets-management"
+    "href": "/services/it-secrets-management/"
   },
   {
     "id": "it-secure-file-transfer",
@@ -4184,7 +4184,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed file transfer with end-to-end encryption, audit trails, and automated scheduling. Supports SFTP, FTPS, AS2, and HTTPS.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-secure-file-transfer"
+    "href": "/services/it-secure-file-transfer/"
   },
   {
     "id": "it-serverless-api-gateway",
@@ -4192,7 +4192,7 @@ export const searchServices: SearchService[] = [
     "description": "Fully managed API gateway with rate limiting, auth, caching, and transformation. Pay-per-request pricing, auto-scaling to millions of RPS.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-serverless-api-gateway"
+    "href": "/services/it-serverless-api-gateway/"
   },
   {
     "id": "it-serverless-architecture",
@@ -4200,7 +4200,7 @@ export const searchServices: SearchService[] = [
     "description": "Design and migrate to serverless architectures - automatic scaling, pay-per-use pricing, and zero infrastructure management across AWS Lambda, Azure, and GCP Cloud Run.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-serverless-architecture"
+    "href": "/services/it-serverless-architecture/"
   },
   {
     "id": "it-service-catalog-builder",
@@ -4208,7 +4208,7 @@ export const searchServices: SearchService[] = [
     "description": "Drag-and-drop service catalog designer for ITSM teams. Auto-generates from CMDB data, supports multi-language publication, and integrates with ServiceNow and Jira.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-service-catalog-builder"
+    "href": "/services/it-service-catalog-builder/"
   },
   {
     "id": "it-service-desk",
@@ -4216,7 +4216,7 @@ export const searchServices: SearchService[] = [
     "description": "Multi-channel IT support with AI-powered ticket triage, self-service portals, SLA management, and automated resolution for 60%+ of common issues.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-service-desk"
+    "href": "/services/it-service-desk/"
   },
   {
     "id": "it-service-desk-automation",
@@ -4224,7 +4224,7 @@ export const searchServices: SearchService[] = [
     "description": "AI-powered IT service management with intelligent ticket routing, auto-resolution, self-service portals, and SLA monitoring.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-service-desk-automation"
+    "href": "/services/it-service-desk-automation/"
   },
   {
     "id": "it-synthetic-monitoring",
@@ -4232,7 +4232,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-synthetic-monitoring"
+    "href": "/services/it-synthetic-monitoring/"
   },
   {
     "id": "it-unified-endpoint-management",
@@ -4240,7 +4240,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified endpoint management across Windows, macOS, iOS, Android, ChromeOS, and IoT: OS patch deployment, remote wipe, app catalog + distribution, inventory management, and compliance policy enforcement from a single console.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-unified-endpoint-management"
+    "href": "/services/it-unified-endpoint-management/"
   },
   {
     "id": "it-vendor-contract-mgmt",
@@ -4248,7 +4248,7 @@ export const searchServices: SearchService[] = [
     "description": "Centralise IT vendor contracts, SLAs, and renewal dates. AI monitors terms, flags expiring agreements, and automates renewal workflows with configurable approval chains.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-vendor-contract-mgmt"
+    "href": "/services/it-vendor-contract-mgmt/"
   },
   {
     "id": "it-vendor-trust-portal",
@@ -4256,7 +4256,7 @@ export const searchServices: SearchService[] = [
     "description": "Continuous vendor monitoring with security scorecards, financial health tracking, contract expiry alerts, and automated periodic vendor reassessments.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-vendor-trust-portal"
+    "href": "/services/it-vendor-trust-portal/"
   },
   {
     "id": "it-voice-infrastructure",
@@ -4264,7 +4264,7 @@ export const searchServices: SearchService[] = [
     "description": "Modern contact center infrastructure - SIP trunking, IVR design, call routing, quality monitoring, and AI agent assistance.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-voice-infrastructure"
+    "href": "/services/it-voice-infrastructure/"
   },
   {
     "id": "it-wireless-network-design",
@@ -4272,7 +4272,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise Wi-Fi and wireless infrastructure design, site surveys, RF optimization, and capacity planning for campuses, warehouses, and smart buildings.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/it-wireless-network-design"
+    "href": "/services/it-wireless-network-design/"
   },
   {
     "id": "it-zero-trust-1",
@@ -4280,7 +4280,7 @@ export const searchServices: SearchService[] = [
     "description": "Complete Zero Trust architecture implementation — from identity and access management to network microsegmentation, device trust, and continuous verification across your entire infrastructure.",
     "category": "it",
     "popular": false,
-    "href": "/services/it-zero-trust-1"
+    "href": "/services/it-zero-trust-1/"
   },
   {
     "id": "it-zero-trust-architecture",
@@ -4288,7 +4288,7 @@ export const searchServices: SearchService[] = [
     "description": "Implement Zero Trust principles across your enterprise — identity verification, micro-segmentation, least-privilege access, and continuous authentication for every request.",
     "category": "security",
     "popular": false,
-    "href": "/services/it-zero-trust-architecture"
+    "href": "/services/it-zero-trust-architecture/"
   },
   {
     "id": "k8s-gitops-enterprise",
@@ -4296,7 +4296,7 @@ export const searchServices: SearchService[] = [
     "description": "Enterprise Kubernetes with GitOps: ArgoCD or Flux continuous delivery, OPA or Gatekeeper policy enforcement, cluster fleet management, cost allocation, namespace quotas, and image scanning — all via Git commits.",
     "category": "it",
     "popular": false,
-    "href": "/services/k8s-gitops-enterprise"
+    "href": "/services/k8s-gitops-enterprise/"
   },
   {
     "id": "kubernetes-management",
@@ -4304,7 +4304,7 @@ export const searchServices: SearchService[] = [
     "description": "Expert Kubernetes deployment, scaling, monitoring, and optimization for containerized applications with GitOps-driven workflows.",
     "category": "it",
     "popular": false,
-    "href": "/services/kubernetes-management"
+    "href": "/services/kubernetes-management/"
   },
   {
     "id": "kubernetes-operator-database",
@@ -4312,7 +4312,7 @@ export const searchServices: SearchService[] = [
     "description": "Fully-managed PostgreSQL/MySQL/MongoDB on Kubernetes: automated backups, point-in-time recovery, connection pooling, replica failover, storage auto-scaling, and version upgrades — all via declarative Custom Resources.",
     "category": "ai",
     "popular": false,
-    "href": "/services/kubernetes-operator-database"
+    "href": "/services/kubernetes-operator-database/"
   },
   {
     "id": "legacy-app-refactor",
@@ -4320,7 +4320,7 @@ export const searchServices: SearchService[] = [
     "description": "Strangler fig: reverse-engineer monolith deps, incrementally migrate bounded contexts to modern services with feature-flags, dual-run validation, rollback at every step.",
     "category": "it",
     "popular": false,
-    "href": "/services/legacy-app-refactor"
+    "href": "/services/legacy-app-refactor/"
   },
   {
     "id": "legacy-system-modernization",
@@ -4328,7 +4328,7 @@ export const searchServices: SearchService[] = [
     "description": "Migrate from legacy mainframes, monoliths, or outdated tech stacks to cloud-native microservices with minimal business disruption.",
     "category": "it",
     "popular": false,
-    "href": "/services/legacy-system-modernization"
+    "href": "/services/legacy-system-modernization/"
   },
   {
     "id": "legal-doc-review-ai",
@@ -4336,7 +4336,7 @@ export const searchServices: SearchService[] = [
     "description": "Accelerate legal contract review by 80%: extract obligations, flag risks, suggest clauses, and compare against playbooks using LLMs fine-tuned on legal corpora.",
     "category": "ai",
     "popular": false,
-    "href": "/services/legal-doc-review-ai"
+    "href": "/services/legal-doc-review-ai/"
   },
   {
     "id": "load-balancer-service",
@@ -4344,7 +4344,7 @@ export const searchServices: SearchService[] = [
     "description": "Layer 4 and Layer 7 load balancing with health checks, sticky sessions, rate limiting, WAF included, and auto-scaling across regions.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/load-balancer-service"
+    "href": "/services/load-balancer-service/"
   },
   {
     "id": "log-aggregation-platform",
@@ -4352,7 +4352,7 @@ export const searchServices: SearchService[] = [
     "description": "Centralized log collection, structured indexing, and full-text search across all servers, containers, and services with retention policies and alerting.",
     "category": "it",
     "popular": false,
-    "href": "/services/log-aggregation-platform"
+    "href": "/services/log-aggregation-platform/"
   },
   {
     "id": "low-code-platform-customization",
@@ -4360,7 +4360,7 @@ export const searchServices: SearchService[] = [
     "description": "Extend and integrate your low-code platforms (Retool, Appian, Power Apps, OutSystems) with custom components, APIs, and enterprise system connectors.",
     "category": "it",
     "popular": false,
-    "href": "/services/low-code-platform-customization"
+    "href": "/services/low-code-platform-customization/"
   },
   {
     "id": "low-code-workflow-builder",
@@ -4368,7 +4368,7 @@ export const searchServices: SearchService[] = [
     "description": "Drag-and-drop workflow automation builder connecting SaaS apps, databases, and custom code with approval gates and error handling.",
     "category": "automation",
     "popular": false,
-    "href": "/services/low-code-workflow-builder"
+    "href": "/services/low-code-workflow-builder/"
   },
   {
     "id": "mainframe-modernization",
@@ -4376,7 +4376,7 @@ export const searchServices: SearchService[] = [
     "description": "Migrate legacy COBOL, PL/I, and JCL workloads to cloud-native microservices with automated refactoring, data migration, and parallel-run validation.",
     "category": "it",
     "popular": false,
-    "href": "/services/mainframe-modernization"
+    "href": "/services/mainframe-modernization/"
   },
   {
     "id": "managed-edr-siem",
@@ -4384,7 +4384,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 managed detection: EDR (CrowdStrike/SentinelOne) + SIEM (Splunk/QRadar/Sentinel), managed SOC tier 1/2 triage, kill-chain containment, executive monthly threat report.",
     "category": "security",
     "popular": false,
-    "href": "/services/managed-edr-siem"
+    "href": "/services/managed-edr-siem/"
   },
   {
     "id": "managed-soc-security",
@@ -4392,7 +4392,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 Security Operations Center services with AI-powered threat detection, incident response, and continuous monitoring for your entire infrastruct...",
     "category": "cloud",
     "popular": false,
-    "href": "/services/managed-soc-security"
+    "href": "/services/managed-soc-security/"
   },
   {
     "id": "managed-soc-threat-intelligence",
@@ -4400,7 +4400,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 Security Operations Center with AI-enhanced threat detection, incident response, and proactive threat hunting.",
     "category": "it",
     "popular": false,
-    "href": "/services/managed-soc-threat-intelligence"
+    "href": "/services/managed-soc-threat-intelligence/"
   },
   {
     "id": "marketing-automation",
@@ -4408,7 +4408,7 @@ export const searchServices: SearchService[] = [
     "description": "Marketing Automation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automa...",
     "category": "ai",
     "popular": false,
-    "href": "/services/marketing-automation"
+    "href": "/services/marketing-automation/"
   },
   {
     "id": "marketing-automation-svc",
@@ -4416,7 +4416,7 @@ export const searchServices: SearchService[] = [
     "description": "Full marketing automation: lead scoring, nurture campaigns, A/B test + auto-optimize, multi-channel (email/SMS/push/social/ads), CRM sync, customer journey per segment.",
     "category": "automation",
     "popular": false,
-    "href": "/services/marketing-automation-svc"
+    "href": "/services/marketing-automation-svc/"
   },
   {
     "id": "meeting-ai-assistant",
@@ -4424,7 +4424,7 @@ export const searchServices: SearchService[] = [
     "description": "Automatic meeting assistant that records, transcribes with speaker ID, generates action items, decisions, and summaries; integrates with Zoom, Teams, Google Meet.",
     "category": "ai",
     "popular": false,
-    "href": "/services/meeting-ai-assistant"
+    "href": "/services/meeting-ai-assistant/"
   },
   {
     "id": "misp-threat-intel",
@@ -4432,7 +4432,7 @@ export const searchServices: SearchService[] = [
     "description": "Private MISP TI platform: automated feed ingestion (OTX/Abuse.ch/Feodo/URLhaus), STIX/TAXII sharing, SIEM playbook sync, custom indicator lifecycle management.",
     "category": "security",
     "popular": false,
-    "href": "/services/misp-threat-intel"
+    "href": "/services/misp-threat-intel/"
   },
   {
     "id": "mlops-platform",
@@ -4440,7 +4440,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end ML lifecycle platform: experiment tracking, model registry, CI/CD for ML, feature store, and monitoring dashboards.",
     "category": "ai",
     "popular": false,
-    "href": "/services/mlops-platform"
+    "href": "/services/mlops-platform/"
   },
   {
     "id": "mobile-development",
@@ -4448,7 +4448,7 @@ export const searchServices: SearchService[] = [
     "description": "Build cross-platform and native mobile applications with AI-powered features, offline-first architecture, and enterprise-grade security.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/mobile-development"
+    "href": "/services/mobile-development/"
   },
   {
     "id": "monitoring-observability",
@@ -4456,7 +4456,7 @@ export const searchServices: SearchService[] = [
     "description": "Full-stack monitoring with real-time dashboards, alerting, log aggregation, and distributed tracing for your entire infrastructure.",
     "category": "automation",
     "popular": false,
-    "href": "/services/monitoring-observability"
+    "href": "/services/monitoring-observability/"
   },
   {
     "id": "network-architecture-sdwan",
@@ -4464,7 +4464,7 @@ export const searchServices: SearchService[] = [
     "description": "Design, deploy, and manage enterprise networks with SD-WAN, zero-trust architecture, and intelligent traffic optimization.",
     "category": "it",
     "popular": false,
-    "href": "/services/network-architecture-sdwan"
+    "href": "/services/network-architecture-sdwan/"
   },
   {
     "id": "network-infrastructure",
@@ -4472,7 +4472,7 @@ export const searchServices: SearchService[] = [
     "description": "Design, deploy, and manage enterprise-grade networks with SD-WAN, wireless optimization, zero-trust architecture, and real-time performance monitor...",
     "category": "cloud",
     "popular": false,
-    "href": "/services/network-infrastructure"
+    "href": "/services/network-infrastructure/"
   },
   {
     "id": "network-performance-monitoring",
@@ -4480,7 +4480,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end network monitoring with synthetic probes, flow analysis (NetFlow/IPFIX), path visualization, and outage alerting for hybrid infrastructure.",
     "category": "it",
     "popular": false,
-    "href": "/services/network-performance-monitoring"
+    "href": "/services/network-performance-monitoring/"
   },
   {
     "id": "network-security-operations",
@@ -4488,7 +4488,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 network security monitoring, threat detection, incident response, and vulnerability management.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/network-security-operations"
+    "href": "/services/network-security-operations/"
   },
   {
     "id": "nodejs-performance-tuning",
@@ -4496,7 +4496,7 @@ export const searchServices: SearchService[] = [
     "description": "Deep performance optimization for Node.js applications: event loop analysis, memory leak detection, concurrency tuning, and scalability architecture review.",
     "category": "it",
     "popular": false,
-    "href": "/services/nodejs-performance-tuning"
+    "href": "/services/nodejs-performance-tuning/"
   },
   {
     "id": "object-detection-surveillance",
@@ -4504,7 +4504,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time AI video analytics for security cameras: person/vehicle detection, loitering alerts, license plate recognition, and behavior anomaly flagging.",
     "category": "ai",
     "popular": false,
-    "href": "/services/object-detection-surveillance"
+    "href": "/services/object-detection-surveillance/"
   },
   {
     "id": "observability-aiops",
@@ -4512,7 +4512,7 @@ export const searchServices: SearchService[] = [
     "description": "AIOps: anomaly detection, log-based alerting, AI RCA, runbook auto-generation, incident correlation, auto-severity, self-healing remediation, MTTR tracking.",
     "category": "automation",
     "popular": false,
-    "href": "/services/observability-aiops"
+    "href": "/services/observability-aiops/"
   },
   {
     "id": "observability-lakehouse",
@@ -4520,7 +4520,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified observability: metrics, traces, logs, events in one Iceberg-format lakehouse. OpenMetadata catalog, standard SQL across all signals. Retention hours to years per data class.",
     "category": "data",
     "popular": false,
-    "href": "/services/observability-lakehouse"
+    "href": "/services/observability-lakehouse/"
   },
   {
     "id": "observability-platform",
@@ -4528,7 +4528,7 @@ export const searchServices: SearchService[] = [
     "description": "Unified logs, metrics, traces, and distributed tracing with AI-powered anomaly detection and automated root-cause analysis for microservices.",
     "category": "it",
     "popular": false,
-    "href": "/services/observability-platform"
+    "href": "/services/observability-platform/"
   },
   {
     "id": "passwordless-auth",
@@ -4536,7 +4536,7 @@ export const searchServices: SearchService[] = [
     "description": "Eliminate password-based attacks with biometric, magic link, and hardware key authentication. Passwordless by default with fallback options.",
     "category": "security",
     "popular": false,
-    "href": "/services/passwordless-auth"
+    "href": "/services/passwordless-auth/"
   },
   {
     "id": "patch-management",
@@ -4544,7 +4544,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated OS, firmware, and application patching across Windows, Linux, and macOS fleets with compliance reporting and rollback.",
     "category": "it",
     "popular": false,
-    "href": "/services/patch-management"
+    "href": "/services/patch-management/"
   },
   {
     "id": "payment-compliance-gateway",
@@ -4552,7 +4552,7 @@ export const searchServices: SearchService[] = [
     "description": "PCI-DSS Level 1 certified payment gateway adapter with tokenization, 3D Secure 2, fraud scoring, and settlement reconciliation.",
     "category": "security",
     "popular": false,
-    "href": "/services/payment-compliance-gateway"
+    "href": "/services/payment-compliance-gateway/"
   },
   {
     "id": "pentest-redteam",
@@ -4560,7 +4560,7 @@ export const searchServices: SearchService[] = [
     "description": "Full-scope pentest: external, internal, web app, API, mobile, IoT + full MITRE ATT&CK adversary-emulation red team. Findings report with PoC + remediation guidance.",
     "category": "security",
     "popular": false,
-    "href": "/services/pentest-redteam"
+    "href": "/services/pentest-redteam/"
   },
   {
     "id": "performance-engineering",
@@ -4568,7 +4568,7 @@ export const searchServices: SearchService[] = [
     "description": "Proactive performance: synthetic monitoring (Playwright), load testing (k6/Gatling), flame-graph CI gate, production profiling, quarterly roadmap review.",
     "category": "it",
     "popular": false,
-    "href": "/services/performance-engineering"
+    "href": "/services/performance-engineering/"
   },
   {
     "id": "predictive-churn-risk",
@@ -4576,7 +4576,7 @@ export const searchServices: SearchService[] = [
     "description": "Machine learning model to predict which customers will churn with 90%+ accuracy; trigger retention workflows before cancellation.",
     "category": "ai",
     "popular": false,
-    "href": "/services/predictive-churn-risk"
+    "href": "/services/predictive-churn-risk/"
   },
   {
     "id": "predictive-lead-scoring",
@@ -4584,7 +4584,7 @@ export const searchServices: SearchService[] = [
     "description": "ML lead scoring: technographics intent signals website pages email engagement ABM data produces rank-ordered lead score with explanation per scoring dimension per lead toward target ICP.",
     "category": "ai",
     "popular": false,
-    "href": "/services/predictive-lead-scoring"
+    "href": "/services/predictive-lead-scoring/"
   },
   {
     "id": "predictive-maintenance",
@@ -4592,7 +4592,7 @@ export const searchServices: SearchService[] = [
     "description": "Predictive Maintenance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities ...",
     "category": "ai",
     "popular": false,
-    "href": "/services/predictive-maintenance"
+    "href": "/services/predictive-maintenance/"
   },
   {
     "id": "privacy-program",
@@ -4600,7 +4600,7 @@ export const searchServices: SearchService[] = [
     "description": "Full privacy program: data mapping, discovery, inventory, classification, consent management, DSAR automation, PIAs, DPO support, regulatory reporting (GDPR/CCPA/PIPEDA/CPC).",
     "category": "security",
     "popular": false,
-    "href": "/services/privacy-program"
+    "href": "/services/privacy-program/"
   },
   {
     "id": "privileged-access-management",
@@ -4608,7 +4608,7 @@ export const searchServices: SearchService[] = [
     "description": "Just-in-time elevated access, session recording, and credential vaulting for admin, SSH, and database accounts across cloud and on-premise.",
     "category": "security",
     "popular": false,
-    "href": "/services/privileged-access-management"
+    "href": "/services/privileged-access-management/"
   },
   {
     "id": "process-automation",
@@ -4616,7 +4616,7 @@ export const searchServices: SearchService[] = [
     "description": "Business process automation platform: map, model, and automate end-to-end workflows. BPMN modelling, RPA bots, approval gates, audit trails, and real-time KPI dashboards.",
     "category": "ai",
     "popular": false,
-    "href": "/services/process-automation"
+    "href": "/services/process-automation/"
   },
   {
     "id": "quality-assurance",
@@ -4624,7 +4624,7 @@ export const searchServices: SearchService[] = [
     "description": "Quality Assurance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that ...",
     "category": "ai",
     "popular": false,
-    "href": "/services/quality-assurance"
+    "href": "/services/quality-assurance/"
   },
   {
     "id": "quantum-ready-security",
@@ -4632,7 +4632,7 @@ export const searchServices: SearchService[] = [
     "description": "Prepare for the post-quantum era: assess cryptographic exposure, migrate to quantum-resistant algorithms (PQC), and implement hybrid security solutions.",
     "category": "it",
     "popular": false,
-    "href": "/services/quantum-ready-security"
+    "href": "/services/quantum-ready-security/"
   },
   {
     "id": "queue-messaging-platform",
@@ -4640,7 +4640,7 @@ export const searchServices: SearchService[] = [
     "description": "High-throughput message queue with pub/sub patterns, message replay, dead-letter queues, and exactly-once delivery guarantees.",
     "category": "automation",
     "popular": false,
-    "href": "/services/queue-messaging-platform"
+    "href": "/services/queue-messaging-platform/"
   },
   {
     "id": "ransomware-recovery",
@@ -4648,7 +4648,7 @@ export const searchServices: SearchService[] = [
     "description": "Ransomware IR + recovery: forensic analysis, containment, payment negotiation assistance, clean restore from immutable backup, SLA-backed segmentation, post-incident hardening.",
     "category": "security",
     "popular": false,
-    "href": "/services/ransomware-recovery"
+    "href": "/services/ransomware-recovery/"
   },
   {
     "id": "realtime-streaming-etl-flink",
@@ -4656,7 +4656,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed Apache Flink streaming pipelines: sub-second event processing, exactly-once semantics, windowed aggregations, joins across Kafka/Pulsar/Kinesis sources, and built-in monitoring dashboards.",
     "category": "ai",
     "popular": false,
-    "href": "/services/realtime-streaming-etl-flink"
+    "href": "/services/realtime-streaming-etl-flink/"
   },
   {
     "id": "reliability-sre",
@@ -4664,7 +4664,7 @@ export const searchServices: SearchService[] = [
     "description": "SRE as a Service: SLO and SLI and SLA design, error-budget management, incident command, postmortem facilitation, and runbook automation. 99.9% uptime guarantee for regulated digital services.",
     "category": "it",
     "popular": false,
-    "href": "/services/reliability-sre"
+    "href": "/services/reliability-sre/"
   },
   {
     "id": "remote-it-support",
@@ -4672,7 +4672,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 outsourced IT helpdesk and desktop support for distributed workforces: remote troubleshooting, incident management, and user onboarding.",
     "category": "it",
     "popular": false,
-    "href": "/services/remote-it-support"
+    "href": "/services/remote-it-support/"
   },
   {
     "id": "rpa-intelligent-automation",
@@ -4680,7 +4680,7 @@ export const searchServices: SearchService[] = [
     "description": "RPA robots augmented with AI document understanding: extract structured data from PDFs, invoices, and emails; fill ERP/CRM forms; reconcile payments; and escalate exceptions — end-to-end touchless processing.",
     "category": "ai",
     "popular": false,
-    "href": "/services/rpa-intelligent-automation"
+    "href": "/services/rpa-intelligent-automation/"
   },
   {
     "id": "rx-prior-auth",
@@ -4688,7 +4688,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated prior authorization: eligibility check formulary check code auto-populate payer portal submission clinical note attach denial tracking remittance per payer analytics dashboard.",
     "category": "automation",
     "popular": false,
-    "href": "/services/rx-prior-auth"
+    "href": "/services/rx-prior-auth/"
   },
   {
     "id": "saas-development",
@@ -4696,7 +4696,7 @@ export const searchServices: SearchService[] = [
     "description": "Full-stack SaaS development from concept to launch — MVP, scaling, and product-market fit optimization.",
     "category": "it",
     "popular": false,
-    "href": "/services/saas-development"
+    "href": "/services/saas-development/"
   },
   {
     "id": "secure-file-transfer",
@@ -4704,7 +4704,7 @@ export const searchServices: SearchService[] = [
     "description": "Service description.",
     "category": "ai",
     "popular": false,
-    "href": "/services/secure-file-transfer"
+    "href": "/services/secure-file-transfer/"
   },
   {
     "id": "security-ai-threat-hunter",
@@ -4712,7 +4712,7 @@ export const searchServices: SearchService[] = [
     "description": "Autonomous AI-powered threat hunting: continuous behavioural anomaly detection, novel attack chain reconstruction, MITRE ATT&CK mapping, custom hunt queries, natural-language investigation interface, and auto-generated incident reports.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-ai-threat-hunter"
+    "href": "/services/security-ai-threat-hunter/"
   },
   {
     "id": "security-api-security-gateway",
@@ -4720,7 +4720,7 @@ export const searchServices: SearchService[] = [
     "description": "OAuth2/JWT/SAML auth, OWASP Top-10 attack detection, schema drift alert, bot detection, per-endpoint threat score card.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-api-security-gateway"
+    "href": "/services/security-api-security-gateway/"
   },
   {
     "id": "security-bas-platform",
@@ -4728,7 +4728,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated adversary emulation: APT29, ransomware, insider-threat vectors. Subject your defences to realistic attack chains and measure D&R effectiveness against MITRE ATT&CK.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-bas-platform"
+    "href": "/services/security-bas-platform/"
   },
   {
     "id": "security-browser-isolation",
@@ -4736,7 +4736,7 @@ export const searchServices: SearchService[] = [
     "description": "Remote browser isolation for internet access: containerised browser runs in cloud, pixel-streamed to the user, no download can reach the corporate device, URL categorisation, DLP inspection on every render, and SSL inspection for encoded threats.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-browser-isolation"
+    "href": "/services/security-browser-isolation/"
   },
   {
     "id": "security-browser-isolation-platform",
@@ -4744,7 +4744,7 @@ export const searchServices: SearchService[] = [
     "description": "Remote browser isolation: inspect every uncertified or risky site in cloud sandbox, drive-by download protection, credential-forwarding safe mock environment, phishing-engine sandbox analysis, bandwidth savings 30+.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-browser-isolation-platform"
+    "href": "/services/security-browser-isolation-platform/"
   },
   {
     "id": "security-cloud-threat-detection",
@@ -4752,7 +4752,7 @@ export const searchServices: SearchService[] = [
     "description": "CloudTrail/CloudAudit log analytics, IAM anomaly detection (impossible travel, priv-esc pattern), GuardDuty integration, auto-remediation.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-cloud-threat-detection"
+    "href": "/services/security-cloud-threat-detection/"
   },
   {
     "id": "security-cloud-zero-trust-access",
@@ -4760,7 +4760,7 @@ export const searchServices: SearchService[] = [
     "description": "Zero trust network access for cloud and on-prem resources: per-application least-privilege policy, device posture context, 1-click revoke per identity, 75% faster access time for legitimate users, full session recording.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-cloud-zero-trust-access"
+    "href": "/services/security-cloud-zero-trust-access/"
   },
   {
     "id": "security-compliance-audit-platform",
@@ -4768,7 +4768,7 @@ export const searchServices: SearchService[] = [
     "description": "SOC 2 Type II evidence collection, control-test automation, GRC Evidence Vault, continuous monitoring dashboard, and auditor-ready report.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-compliance-audit-platform"
+    "href": "/services/security-compliance-audit-platform/"
   },
   {
     "id": "security-identity-governance-igac",
@@ -4776,7 +4776,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated access review, SoD policy check, certification campaign, identity auto-provisioning/revocation, and entitlement analytics.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-identity-governance-igac"
+    "href": "/services/security-identity-governance-igac/"
   },
   {
     "id": "security-log-orchestration",
@@ -4784,7 +4784,7 @@ export const searchServices: SearchService[] = [
     "description": "Ingest logs from 200+ sources, normalise at scale, and run correlation rules across the full attack chain. Reduces alert fatigue with context-enriched triage views.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-log-orchestration"
+    "href": "/services/security-log-orchestration/"
   },
   {
     "id": "security-network-segmentation-zero-trust",
@@ -4792,7 +4792,7 @@ export const searchServices: SearchService[] = [
     "description": "Micro-segmentation policy design per workload, East-West traffic policy enforcement, and SIEM policy-deployment rollback alert.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-network-segmentation-zero-trust"
+    "href": "/services/security-network-segmentation-zero-trust/"
   },
   {
     "id": "security-privacy-enhancing-technologies",
@@ -4800,7 +4800,7 @@ export const searchServices: SearchService[] = [
     "description": "Privacy Enhancing Technologies consulting and implementation: differential privacy budget tracking, homomorphic encryption proof-of-concept, zero-knowledge proof circuits, TEE enclave design, synthetic data generation, and compliance audit-readiness report.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-privacy-enhancing-technologies"
+    "href": "/services/security-privacy-enhancing-technologies/"
   },
   {
     "id": "security-privacy-program-automation",
@@ -4808,7 +4808,7 @@ export const searchServices: SearchService[] = [
     "description": "DPIA/LIA workflow, consent receipt ledger, DSAR ticketing + fulfilment SLA tracker, and automated GDPR/CCPA disclosure.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-privacy-program-automation"
+    "href": "/services/security-privacy-program-automation/"
   },
   {
     "id": "security-privileged-access-management",
@@ -4816,7 +4816,7 @@ export const searchServices: SearchService[] = [
     "description": "PAM platform: just-in-time privilege elevation, live session recording with playback, FIPS-140-2 certified credential vault, break-glass override, least-privilege policy engine per role, and quarterly access certification auto-workflow.",
     "category": "security",
     "popular": true,
-    "href": "/services/security-privileged-access-management"
+    "href": "/services/security-privileged-access-management/"
   },
   {
     "id": "security-sbom-supply-chain",
@@ -4824,7 +4824,7 @@ export const searchServices: SearchService[] = [
     "description": "Supply chain security platform: SBOM & VEX generation (every build/build event), CVE SLSA provenance score, dependency-graph diff for every PR, SLSA Level 3 attestation, reproducible-build verification.",
     "category": "security",
     "popular": true,
-    "href": "/services/security-sbom-supply-chain"
+    "href": "/services/security-sbom-supply-chain/"
   },
   {
     "id": "security-secrets-management-vault",
@@ -4832,7 +4832,7 @@ export const searchServices: SearchService[] = [
     "description": "HashiCorp Vault with dynamic secrets, lease/rotation, cross-cluster replication, and full audit trail with SOC 2 Type II evidence pack.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-secrets-management-vault"
+    "href": "/services/security-secrets-management-vault/"
   },
   {
     "id": "security-security-awareness-training",
@@ -4840,7 +4840,7 @@ export const searchServices: SearchService[] = [
     "description": "Phishing simulation, training modules per role, compliance quiz tracking, gamified leaderboard, and risk scoring per employee/team.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-security-awareness-training"
+    "href": "/services/security-security-awareness-training/"
   },
   {
     "id": "security-supply-chain-sbom",
@@ -4848,7 +4848,7 @@ export const searchServices: SearchService[] = [
     "description": "Automated SBOM generation, dependency attestation, real-time CVE/SSVC scoring, exploitability prediction, automated PR patch suggestions, and SLSA provenance verification — closing the software supply-chain attack window at build time.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-supply-chain-sbom"
+    "href": "/services/security-supply-chain-sbom/"
   },
   {
     "id": "security-supply-chain-sbom-manager",
@@ -4856,7 +4856,7 @@ export const searchServices: SearchService[] = [
     "description": "Full SBOM lifecycle management: auto-generate SPDX and Cyclone-DX per build, license-compliance check, vulnerability and CVE matching per component, attestation signing, and SBOM consumer portal per vendor release.",
     "category": "security",
     "popular": true,
-    "href": "/services/security-supply-chain-sbom-manager"
+    "href": "/services/security-supply-chain-sbom-manager/"
   },
   {
     "id": "security-threat-intelligence-platform",
@@ -4864,7 +4864,7 @@ export const searchServices: SearchService[] = [
     "description": "Curated IOC/IOA feed, TI graph, MITRE ATT&CK mapping, automated SIEM rule generation, and TI alert enrichment pipeline.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-threat-intelligence-platform"
+    "href": "/services/security-threat-intelligence-platform/"
   },
   {
     "id": "security-vulnerability-management-pra",
@@ -4872,7 +4872,7 @@ export const searchServices: SearchService[] = [
     "description": "Asset inventory, CVE prioritisation by EPSS/CVSS/business criticality, SLA-gated fix workflow, and remediation effectiveness report.",
     "category": "security",
     "popular": false,
-    "href": "/services/security-vulnerability-management-pra"
+    "href": "/services/security-vulnerability-management-pra/"
   },
   {
     "id": "security-web-application-firewall",
@@ -4880,7 +4880,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed WAF with OWASP Top-10 rulesets, API-protection for OWASP API Top-10, bot management with human-versus-bot scoring, CDN-integrated DDoS mitigation, rate-limiting, geo-blocking, and custom rule pipeline per region.",
     "category": "security",
     "popular": true,
-    "href": "/services/security-web-application-firewall"
+    "href": "/services/security-web-application-firewall/"
   },
   {
     "id": "self-service-analytics",
@@ -4888,7 +4888,7 @@ export const searchServices: SearchService[] = [
     "description": "Self-service analytics for business analysts: semantic layer + named metric layer, NL to SQL, dashboard builder, governance + lineage. No SQL required by end user.",
     "category": "data",
     "popular": false,
-    "href": "/services/self-service-analytics"
+    "href": "/services/self-service-analytics/"
   },
   {
     "id": "serverless-api-platform",
@@ -4896,7 +4896,7 @@ export const searchServices: SearchService[] = [
     "description": "Production serverless API: API Gateway + Lambda, OpenAPI-first gateway, per-route WAF+Shield, distributed tracing, CI/CD spec-to-gateway pipeline.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/serverless-api-platform"
+    "href": "/services/serverless-api-platform/"
   },
   {
     "id": "siem-security-platform",
@@ -4904,7 +4904,7 @@ export const searchServices: SearchService[] = [
     "description": "Cloud-native SIEM with real-time event correlation, MITRE ATT&CK tracking, UEBA behavioral baselines, and automated incident ticketing for SOC teams.",
     "category": "security",
     "popular": false,
-    "href": "/services/siem-security-platform"
+    "href": "/services/siem-security-platform/"
   },
   {
     "id": "soc-as-a-service",
@@ -4912,7 +4912,7 @@ export const searchServices: SearchService[] = [
     "description": "24/7 managed security monitoring, threat hunting, incident response, and compliance reporting — no need to build your own SOC.",
     "category": "it",
     "popular": false,
-    "href": "/services/soc-as-a-service"
+    "href": "/services/soc-as-a-service/"
   },
   {
     "id": "software-supply-chain-sec",
@@ -4920,7 +4920,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end supply chain: SBOM generation+attestation, dependency verification, code-signing (SLSA L3+), vulnerability patch management, artifact provenance tracking.",
     "category": "security",
     "popular": false,
-    "href": "/services/software-supply-chain-sec"
+    "href": "/services/software-supply-chain-sec/"
   },
   {
     "id": "sovereign-cloud-hosting",
@@ -4928,7 +4928,7 @@ export const searchServices: SearchService[] = [
     "description": "Deploy to sovereign cloud regions (AWS GovCloud, Azure Government, GCP for Canada/Germany) with compliance audit-ready (FedRAMP, ITAR, CJIS, HIPAA, PCI, GDPR).",
     "category": "cloud",
     "popular": false,
-    "href": "/services/sovereign-cloud-hosting"
+    "href": "/services/sovereign-cloud-hosting/"
   },
   {
     "id": "streaming-realtime-analytics",
@@ -4936,7 +4936,7 @@ export const searchServices: SearchService[] = [
     "description": "Sub-second analytics on event streams: Kafka/Redpanda/PubSub to Flink/Spark — sessionization, windowed aggregates, anomaly detection. Sub-second refresh dashboard.",
     "category": "data",
     "popular": false,
-    "href": "/services/streaming-realtime-analytics"
+    "href": "/services/streaming-realtime-analytics/"
   },
   {
     "id": "supply-chain",
@@ -4944,7 +4944,7 @@ export const searchServices: SearchService[] = [
     "description": "Supply Chain delivers purpose-built AI solutions tailored to specific industry requirements. Accelerate digital transformation with domain-specific...",
     "category": "ai",
     "popular": false,
-    "href": "/services/supply-chain"
+    "href": "/services/supply-chain/"
   },
   {
     "id": "supply-chain-management-service",
@@ -4952,7 +4952,7 @@ export const searchServices: SearchService[] = [
     "description": "End-to-end supply chain orchestration with AI demand forecasting, multi-modal route optimization, supplier risk scoring, and real-time disruption response.",
     "category": "automation",
     "popular": false,
-    "href": "/services/supply-chain-management-service"
+    "href": "/services/supply-chain-management-service/"
   },
   {
     "id": "supply-chain-visibility",
@@ -4960,7 +4960,7 @@ export const searchServices: SearchService[] = [
     "description": "Real-time end-to-end supply chain control tower with GPS tracking, customs status, inventory forecasting, and disruption alerting across all carriers.",
     "category": "automation",
     "popular": false,
-    "href": "/services/supply-chain-visibility"
+    "href": "/services/supply-chain-visibility/"
   },
   {
     "id": "tech-writing-docs",
@@ -4968,7 +4968,7 @@ export const searchServices: SearchService[] = [
     "description": "Developer-first docs: OpenAPI reference, SDK guides with runnable code snippets, architecture decision records, changelog from git, embedded Swagger UI.",
     "category": "it",
     "popular": false,
-    "href": "/services/tech-writing-docs"
+    "href": "/services/tech-writing-docs/"
   },
   {
     "id": "vector-database",
@@ -4976,7 +4976,7 @@ export const searchServices: SearchService[] = [
     "description": "Managed vector database for RAG pipelines, semantic search, and similarity queries with hybrid filtering, autoscaling, and multi-modal indexing.",
     "category": "ai",
     "popular": false,
-    "href": "/services/vector-database"
+    "href": "/services/vector-database/"
   },
   {
     "id": "virtual-private-cloud",
@@ -4984,7 +4984,7 @@ export const searchServices: SearchService[] = [
     "description": "Dedicated VPC with custom CIDR, isolated network topology, private subnet routing, VPC peering, and cross-VPC transit across any cloud provider.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/virtual-private-cloud"
+    "href": "/services/virtual-private-cloud/"
   },
   {
     "id": "vulnerability-assessment-penetration-testing",
@@ -4992,7 +4992,7 @@ export const searchServices: SearchService[] = [
     "description": "Proactive security testing: automated vulnerability scanning, manual pen-testing, exploit validation, and remediation guidance for web, mobile, and network.",
     "category": "it",
     "popular": false,
-    "href": "/services/vulnerability-assessment-penetration-testing"
+    "href": "/services/vulnerability-assessment-penetration-testing/"
   },
   {
     "id": "workflow-automation",
@@ -5000,7 +5000,7 @@ export const searchServices: SearchService[] = [
     "description": "Low-code workflow builder: connect 500+ apps Zaps custom logic conditional branching retry error handling webhook triggers scheduling and approvals — replaces manual copy-paste.",
     "category": "automation",
     "popular": false,
-    "href": "/services/workflow-automation"
+    "href": "/services/workflow-automation/"
   },
   {
     "id": "zero-trust-access",
@@ -5008,7 +5008,7 @@ export const searchServices: SearchService[] = [
     "description": "Replace traditional VPN with continuous identity-verified access — least-privilege, device-aware, audit-logged connections to every app for hybrid and remote-first enterprises.",
     "category": "security",
     "popular": false,
-    "href": "/services/zero-trust-access"
+    "href": "/services/zero-trust-access/"
   },
   {
     "id": "zero-trust-network-access",
@@ -5016,6 +5016,6 @@ export const searchServices: SearchService[] = [
     "description": "Zero-trust identity-aware proxy: every connection authenticated per user/device/context. Granular per-app policies, micro-segmentation, session recording.",
     "category": "cloud",
     "popular": false,
-    "href": "/services/zero-trust-network-access"
+    "href": "/services/zero-trust-network-access/"
   }
 ];

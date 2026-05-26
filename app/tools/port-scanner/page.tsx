@@ -1,7 +1,5 @@
 // app/tools/port-scanner/page.tsx — Free Port Scanner (client-side via public API)
 'use client';
-
-import type { Metadata } from 'next';
 import { pingTool } from '@/data/tools_ping_client';
 
 import { useState, useEffect } from 'react';
@@ -44,19 +42,37 @@ export default function PortScannerPage() {
     setLoading(true); setError(''); setResults([]);
     const target = host.replace(/^https?:\/\//,'').replace(/\/.*$/,'').trim();
 
-    // Use multiple free CORS proxy endpoints for port scanning via WebSocket
-    // We check via a lightweight public API
+    // Client-side port scan simulation using DNS resolution + common service mapping
+    // NOTE: True port scanning requires server-side execution (CORS/security restrictions).
+    // This tool demonstrates which ports/names exist and how port scanning works.
     try {
       const checks = await Promise.all(COMMON_PORTS.map(async ({port, name, desc}) => {
         try {
-          const resp = await fetch(`https://api.portchecker.net/check?host=${encodeURIComponent(target)}:${port}`, {
-            signal: AbortSignal.timeout(5000),
-          });
-          const data = await resp.json();
-          return { port, name, desc, open: data.open ?? false };
+          // Try DNS resolution first as a connectivity check
+          const dnsResp = await fetch(
+            `https://dns.google/resolve?name=${encodeURIComponent(target)}&type=A`,
+            { signal: AbortSignal.timeout(4000) }
+          );
+          const dnsData = await dnsResp.json();
+          const reachable = dnsData?.Answer?.some((a: any) => a.type === 1) ?? false;
+          
+          // If DNS resolves, try a lightweight HTTP check to common web ports
+          let portOpen = false;
+          if (reachable && (port === 80 || port === 443 || port === 8080 || port === 8443)) {
+            try {
+              const protocol = port === 443 || port === 8443 ? 'https' : 'http';
+              const httpResp = await fetch(`${protocol}://${target}:${port}`, {
+                method: 'HEAD',
+                signal: AbortSignal.timeout(3000),
+                mode: 'no-cors',
+              });
+              portOpen = true; // no-cors means we got a response
+            } catch {}
+          }
+          
+          return { port, name, desc, open: portOpen, dnsResolves: reachable };
         } catch {
-          // Fallback: try WebSocket-based check
-          return { port, name, desc, open: false, error: 'timeout' };
+          return { port, name, desc, open: false, error: 'unreachable' };
         }
       }));
       setResults(checks);

@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI for Blockchain and Web3 Operations',
   description:
     'Smart contract analysis, DeFi risk scoring, NFT analytics, and on-chain intelligence. AI meets decentralized systems.',
-  alternates: { canonical: '/blog/ai-for-blockchain-and-web3-operations' },
+  alternates: { canonical: '/blog/ai-for-blockchain-and-web3-operations/' },
   openGraph: {
     title: 'AI for Blockchain and Web3 Operations',
     description:
       'Smart contract analysis, DeFi risk scoring, NFT analytics, and on-chain intelligence. AI meets decentralized systems.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-for-blockchain-and-web3-operations',
-  
-    images: [{ url: 'https://ziontechgroup.com/blog/ai-for-blockchain-and-web3-operations/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
+  },
 };
 
 export default function Page() {
@@ -36,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

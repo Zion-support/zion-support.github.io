@@ -1,7 +1,5 @@
 // Health Check Tool — Free autonomous platform status
 'use client';
-
-import type { Metadata } from 'next';
 import { useState, useEffect, useCallback } from 'react';
 
 import Link from 'next/link';

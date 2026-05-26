@@ -30,19 +30,6 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: service.title,
     description: service.description || `Explore ${service.title} at Zion Tech Group — enterprise-grade solutions.`,
-    openGraph: {
-      title: service.title,
-      description: service.description || '',
-      type: 'website',
-      url: `https://ziontechgroup.com/services/${service.id}`,
-      images: [{ url: `https://ziontechgroup.com/services/${service.id}/og.png`, width: 1200, height: 630, alt: service.title }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: service.title,
-      description: service.description || '',
-      images: [`https://ziontechgroup.com/services/${service.id}/og.png`],
-    },
   };
 }
 
@@ -67,7 +54,7 @@ export default async function ServicePage({ params }: PageProps) {
       name: "Zion Tech Group",
       url: "https://ziontechgroup.com",
     },
-    url: `https://ziontechgroup.com/services/${service.id}`,
+    url: `https://ziontechgroup.com/services/${service.id}/`,
     category: catLabel,
     serviceOutput:
       (service.features || []).slice(0, 5).join("; "),

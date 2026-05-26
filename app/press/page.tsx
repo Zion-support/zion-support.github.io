@@ -1,7 +1,5 @@
 // Press
 'use client';
-
-import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export default function PressPage() {

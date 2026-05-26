@@ -1,8 +1,6 @@
 // app/ai-services/page.tsx — AI Services Hub (replaces placeholder)
 'use client';
 
-import type { Metadata } from 'next';
-
 import Link from 'next/link';
 
 import { useState, useMemo } from 'react';

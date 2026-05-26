@@ -169,13 +169,13 @@ export default function TestimonialsPage() {
 
       {/* CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-2xl p-12 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Be Our Next Success Story?</h3>
+        <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-2xl p-12 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let us show you what&apos;s possible. Schedule a free consultation today.
+            Join hundreds of satisfied clients who have accelerated their digital transformation with Zion Tech Group.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact/" className="inline-flex items-center gap-2 bg-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition">
+            <Link href="/contact/" className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
               Start Your Project →
             </Link>
             <a href={`tel:${contactInfo.mobile}`} className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">

@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import BlogPostStructuredData from '@/components/BlogPostStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI for Agriculture and Agritech',
   description:
     'Precision agriculture, crop yield prediction, pest detection, and supply chain optimization. Data-driven farming with AI.',
-  alternates: { canonical: '/blog/ai-for-agriculture-and-agritech' },
+  alternates: { canonical: '/blog/ai-for-agriculture-and-agritech/' },
   openGraph: {
     title: 'AI for Agriculture and Agritech',
     description:
       'Precision agriculture, crop yield prediction, pest detection, and supply chain optimization. Data-driven farming with AI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-for-agriculture-and-agritech',
-  
-    images: [{ url: 'https://ziontechgroup.com/blog/ai-for-agriculture-and-agritech/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
+  },
 };
 
 export default function Page() {
@@ -37,7 +36,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

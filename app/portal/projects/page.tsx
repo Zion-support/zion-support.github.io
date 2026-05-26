@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   const projects = [
     { name: 'AI Customer Support Rollout', status: 'In Progress', progress: 65, color: 'bg-purple-500' },
     { name: 'Cloud Migration — Phase 2', status: 'Planning', progress: 15, color: 'bg-blue-500' },
-    { name: 'Security Audit & Hardening', status: 'In Review', progress: 90, color: 'bg-cyan-500' },
+    { name: 'Security Audit & Hardening', status: 'In Review', progress: 90, color: 'bg-purple-500' },
   ];
 
   return (

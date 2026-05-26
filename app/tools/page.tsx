@@ -57,13 +57,13 @@ export default function ToolsIndexPage() {
   return (
     <div className="relative min-h-screen bg-slate-950">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-16 left-[-10rem] h-[30rem] w-[30rem] rounded-full bg-cyan-500/15 blur-3xl" />
+        <div className="absolute -top-16 left-[-10rem] h-[30rem] w-[30rem] rounded-full bg-purple-500/15 blur-3xl" />
         <div className="absolute right-[-10rem] top-32 h-[26rem] w-[26rem] rounded-full bg-blue-500/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <header className="mb-16 text-center">
-          <div className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+          <div className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-purple-400">
             Free Online Tools
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">
@@ -81,14 +81,14 @@ export default function ToolsIndexPage() {
             <Link
               key={href}
               href={href}
-              className="group rounded-2xl border border-slate-800 bg-slate-900/50 p-7 hover:border-cyan-500/40 hover:bg-slate-800/60 transition-all duration-200 flex flex-col"
+              className="group rounded-2xl border border-slate-800 bg-slate-900/50 p-7 hover:border-purple-500/40 hover:bg-slate-800/60 transition-all duration-200 flex flex-col"
             >
               <span className="text-3xl mb-3">{emoji}</span>
-              <h2 className="text-lg font-semibold text-white group-hover:text-cyan-200 transition-colors mb-2">
+              <h2 className="text-lg font-semibold text-white group-hover:text-purple-200 transition-colors mb-2">
                 {title}
               </h2>
               <p className="text-sm text-slate-400 leading-relaxed flex-grow">{desc}</p>
-              <span className="mt-4 text-sm font-medium text-cyan-400 group-hover:text-cyan-300">
+              <span className="mt-4 text-sm font-medium text-purple-400 group-hover:text-purple-300">
                 Open tool →
               </span>
             </Link>

@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 // ── Tiers ────────────────────────────────────────────────────────────────
 const TIERS = [
@@ -164,8 +165,8 @@ export default function PricingCalculatorClient() {
                 onClick={() => setSupport(s.id)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   support === s.id
-                    ? 'bg-cyan-600 border border-cyan-500 text-white'
-                    : 'bg-slate-700/40 border border-slate-600 text-slate-300 hover:border-cyan-500/40 hover:text-white'
+                    ? 'bg-purple-600 border border-purple-500 text-white'
+                    : 'bg-slate-700/40 border border-slate-600 text-slate-300 hover:border-purple-500/40 hover:text-white'
                 }`}
               >
                 {s.label}
@@ -233,7 +234,7 @@ export default function PricingCalculatorClient() {
       {!tier.featured && overageUnits > 0 && (
         <p className="text-center text-xs text-amber-400/80 mb-4">
           ⚠️ {overageUnits} service{overageUnits > 1 ? 's' : ''} over the {tier.serviceLimit === Infinity ? '∞' : tier.serviceLimit.toString()} included — adding ${(overageUnits * 750).toLocaleString()}/mo in overage fees.
-          <a href="/pricing/" className="underline ml-1">Upgrade tier →</a>
+          <Link href="/pricing/" className="underline ml-1">Upgrade tier →</Link>
         </p>
       )}
     </>

@@ -92,7 +92,11 @@ function main() {
   try {
     svcDirs = fs.readdirSync(SVC_DIR)
       .filter(d => d !== 'index.txt' && !d.startsWith('.'))
-      .filter(d => fs.statSync(path.join(SVC_DIR, d)).isDirectory());
+      .filter(d => {
+        const dirPath = path.join(SVC_DIR, d);
+        try { return fs.statSync(dirPath).isDirectory() && fs.statSync(path.join(dirPath, 'index.html')).isFile(); }
+        catch(e) { return false; }
+      });
   } catch(e) {
     console.error('FATAL: cannot read out/services/:', e.message);
     process.exit(1);

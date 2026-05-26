@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Link from 'next/link';
 
 interface Feature {
   title: string;
@@ -100,9 +101,9 @@ export default function ProductPageLayout({ data }: ProductPageLayoutProps) {
             <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8">
               {data.ctaLabel || 'Get a Custom Quote'}
             </a>
-            <a href="/configurator/" className="btn-secondary text-lg px-8">
+            <Link href="/configurator/" className="btn-secondary text-lg px-8">
               Get Custom Proposal →
-            </a>
+            </Link>
           </div>
         </section>
       </div>

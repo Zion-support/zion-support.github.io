@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI for Quantum Computing and Hybrid Workloads',
   description:
     'Quantum machine learning, hybrid classical-quantum pipelines, and optimization. When quantum advantage matters for AI.',
-  alternates: { canonical: '/blog/ai-for-quantum-computing-and-hybrid-workloads' },
+  alternates: { canonical: '/blog/ai-for-quantum-computing-and-hybrid-workloads/' },
   openGraph: {
     title: 'AI for Quantum Computing and Hybrid Workloads',
     description:
       'Quantum machine learning, hybrid classical-quantum pipelines, and optimization. When quantum advantage matters for AI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-for-quantum-computing-and-hybrid-workloads',
-  
-    images: [{ url: 'https://ziontechgroup.com/blog/ai-for-quantum-computing-and-hybrid-workloads/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
+  },
 };
 
 export default function Page() {
@@ -36,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

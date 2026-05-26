@@ -2,8 +2,6 @@
 // Fully client-side: generates proposal HTML in-browser, no server needed
 'use client';
 
-import type { Metadata } from 'next';
-
 import { useState, useMemo } from 'react';
 
 import { allServices } from '@/data/servicesData';

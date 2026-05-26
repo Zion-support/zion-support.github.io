@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI for Fleet Management and Logistics Optimization',
   description:
     'Route optimization, predictive maintenance, driver behavior analytics, and real-time visibility. How AI transforms fleet operations and reduces costs.',
-  alternates: { canonical: '/blog/ai-for-fleet-management-and-logistics-optimization' },
+  alternates: { canonical: '/blog/ai-for-fleet-management-and-logistics-optimization/' },
   openGraph: {
     title: 'AI for Fleet Management and Logistics Optimization',
     description:
       'Route optimization, predictive maintenance, driver behavior analytics, and real-time visibility. How AI transforms fleet operations and reduces costs.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-for-fleet-management-and-logistics-optimization',
-  
-    images: [{ url: 'https://ziontechgroup.com/blog/ai-for-fleet-management-and-logistics-optimization/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
+  },
 };
 
 export default function Page() {
@@ -36,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

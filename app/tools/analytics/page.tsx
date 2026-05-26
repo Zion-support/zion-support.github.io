@@ -1,7 +1,5 @@
 // app/tools/analytics/page.tsx
 'use client';
-
-import type { Metadata } from 'next';
 import { useMemo } from 'react';
 
 import { getToolVisits } from '@/data/tools_tracker';

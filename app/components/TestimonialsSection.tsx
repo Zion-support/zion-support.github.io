@@ -19,7 +19,7 @@ function TestimonialSchema({ t }: { t: Testimonial }) {
     },
     reviewBody: t.review_text,
     itemReviewed: t.service_id
-      ? { '@type': 'Service', name: t.service_id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), url: `${SITE_URL}/services/${t.service_id}` }
+      ? { '@type': 'Service', name: t.service_id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), url: `${SITE_URL}/services/${t.service_id}/` }
       : { '@type': 'Organization', name: 'Zion Tech Group', url: SITE_URL },
   };
 
