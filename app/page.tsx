@@ -241,7 +241,7 @@ let list = services;
               '@type': 'SearchAction',
               target: {
                 '@type': 'EntryPoint',
-                urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
+                urlTemplate: 'https://ziontechgroup.com/search/?q={search_term_string}'
               },
               'query-input': 'required name=search_term_string'
             }
