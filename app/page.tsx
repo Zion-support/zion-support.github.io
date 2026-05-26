@@ -1,6 +1,8 @@
 // app/page.tsx — Home / Landing Page
 'use client';
 
+import type { Metadata } from 'next';
+
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';

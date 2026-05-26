@@ -1,6 +1,8 @@
 // app/proposals/page.tsx — Saved Proposals Viewer
 'use client';
 
+import type { Metadata } from 'next';
+
 import { useState, useEffect } from 'react';
 
 interface Proposal {

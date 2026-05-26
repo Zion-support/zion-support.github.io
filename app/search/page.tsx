@@ -1,6 +1,8 @@
 // app/search/page.tsx  — v2: JSON feed powered
 'use client';
 
+import type { Metadata } from 'next';
+
 import { useEffect, useState, useCallback, useMemo } from 'react';
 
 import Link from 'next/link';

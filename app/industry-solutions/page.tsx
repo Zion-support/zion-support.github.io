@@ -1,5 +1,7 @@
 // app/industry-solutions/page.tsx — Industry Solutions Landing
 'use client';
+
+import type { Metadata } from 'next';
 import { useState, useMemo } from 'react';
 
 

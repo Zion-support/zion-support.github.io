@@ -37,7 +37,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-3d-asset-generator",
     "title": "Ai 3D Asset Generator",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-3d-asset-generator"
@@ -61,7 +61,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-ad-copy-generator",
     "title": "Ai Ad Copy Generator",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-ad-copy-generator"
@@ -117,7 +117,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-api-orchestration-layer",
     "title": "Ai Api Orchestration Layer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-api-orchestration-layer"
@@ -181,7 +181,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-bug-to-issue-router",
     "title": "Ai Bug To Issue Router",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-bug-to-issue-router"
@@ -301,7 +301,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-code-reviewer",
     "title": "Ai Code Reviewer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-code-reviewer"
@@ -341,7 +341,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-competitive-price-tracker",
     "title": "Ai Competitive Price Tracker",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-competitive-price-tracker"
@@ -477,7 +477,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-credit-underwriting",
     "title": "Ai Credit Underwriting",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-credit-underwriting"
@@ -493,7 +493,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-cro-optimizer",
     "title": "Ai Cro Optimizer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-cro-optimizer"
@@ -581,7 +581,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-dashboard-designer",
     "title": "Ai Dashboard Designer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-dashboard-designer"
@@ -597,7 +597,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-data-quality-fabric",
     "title": "Ai Data Quality Fabric",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-data-quality-fabric"
@@ -605,7 +605,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-data-quality-guardian",
     "title": "Ai Data Quality Guardian",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-data-quality-guardian"
@@ -621,7 +621,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-deepfake-detection",
     "title": "Ai Deepfake Detection",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-deepfake-detection"
@@ -637,7 +637,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-digital-twin-platform",
     "title": "Ai Digital Twin Platform",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-digital-twin-platform"
@@ -701,7 +701,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-drug-discovery-platform",
     "title": "Ai Drug Discovery Platform",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-drug-discovery-platform"
@@ -717,7 +717,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-dyslexia-assist",
     "title": "Ai Dyslexia Assist",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-dyslexia-assist"
@@ -725,7 +725,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-ecommerce-smart-search",
     "title": "Ai Ecommerce Smart Search",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-ecommerce-smart-search"
@@ -813,7 +813,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-exam-proctoring",
     "title": "Ai Exam Proctoring",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-exam-proctoring"
@@ -829,7 +829,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-feature-store",
     "title": "Ai Feature Store",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-feature-store"
@@ -837,7 +837,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-federated-learning",
     "title": "Ai Federated Learning",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-federated-learning"
@@ -893,7 +893,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-form-filler-intelligence",
     "title": "Ai Form Filler Intelligence",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-form-filler-intelligence"
@@ -965,7 +965,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-genomic-analysis",
     "title": "Ai Genomic Analysis",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-genomic-analysis"
@@ -973,7 +973,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-glassdoor-review-analyzer",
     "title": "Ai Glassdoor Review Analyzer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-glassdoor-review-analyzer"
@@ -981,7 +981,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-governance-compliance",
     "title": "Ai Governance Compliance",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-governance-compliance"
@@ -1013,7 +1013,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-hiring-pipeline-optimizer",
     "title": "Ai Hiring Pipeline Optimizer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-hiring-pipeline-optimizer"
@@ -1029,7 +1029,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-infra-provisioner",
     "title": "Ai Infra Provisioner",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-infra-provisioner"
@@ -1037,7 +1037,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-insurance-claims",
     "title": "Ai Insurance Claims",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-insurance-claims"
@@ -1069,7 +1069,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-interview-conduct-bot",
     "title": "Ai Interview Conduct Bot",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-interview-conduct-bot"
@@ -1109,7 +1109,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-knowledge-base-rag",
     "title": "Ai Knowledge Base Rag",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-knowledge-base-rag"
@@ -1149,7 +1149,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-kubernetes-optimizer",
     "title": "Ai Kubernetes Optimizer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-kubernetes-optimizer"
@@ -1157,7 +1157,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-kyc-aml-compliance",
     "title": "Ai Kyc Aml Compliance",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-kyc-aml-compliance"
@@ -1221,7 +1221,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-llm-router-pro",
     "title": "Ai Llm Router Pro",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-llm-router-pro"
@@ -1229,7 +1229,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-load-testing",
     "title": "Ai Load Testing",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-load-testing"
@@ -1237,7 +1237,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-log-analysis",
     "title": "Ai Log Analysis",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-log-analysis"
@@ -1245,7 +1245,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-low-code-integration",
     "title": "Ai Low Code Integration",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-low-code-integration"
@@ -1285,7 +1285,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-medical-image-diagnosis",
     "title": "Ai Medical Image Diagnosis",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-medical-image-diagnosis"
@@ -1349,7 +1349,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-metadata-management",
     "title": "Ai Metadata Management",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-metadata-management"
@@ -1389,7 +1389,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-nutrition-meal-planner",
     "title": "Ai Nutrition Meal Planner",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-nutrition-meal-planner"
@@ -1405,7 +1405,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-observability-turbo",
     "title": "Ai Observability Turbo",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-observability-turbo"
@@ -1445,7 +1445,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-personal-finance-coach",
     "title": "Ai Personal Finance Coach",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-personal-finance-coach"
@@ -1637,7 +1637,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-privilege-access-manager",
     "title": "Ai Privilege Access Manager",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-privilege-access-manager"
@@ -1669,7 +1669,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-product-photo-enhancer",
     "title": "Ai Product Photo Enhancer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-product-photo-enhancer"
@@ -1677,7 +1677,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-profitability-dashboard",
     "title": "Ai Profitability Dashboard",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-profitability-dashboard"
@@ -1693,7 +1693,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-quality-inspection",
     "title": "Ai Quality Inspection",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-quality-inspection"
@@ -1701,7 +1701,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-quantum-optimizer",
     "title": "Ai Quantum Optimizer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-quantum-optimizer"
@@ -1765,7 +1765,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-reinforcement-learning-ops",
     "title": "Ai Reinforcement Learning Ops",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-reinforcement-learning-ops"
@@ -1861,7 +1861,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-rpa-platform",
     "title": "Ai Rpa Platform",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-rpa-platform"
@@ -1893,7 +1893,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-secrets-management",
     "title": "Ai Secrets Management",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-secrets-management"
@@ -1941,7 +1941,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-serverless-platform",
     "title": "Ai Serverless Platform",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-serverless-platform"
@@ -1949,7 +1949,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-smart-document-redactor",
     "title": "Ai Smart Document Redactor",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-smart-document-redactor"
@@ -2093,7 +2093,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-tax-compliance-calculator",
     "title": "Ai Tax Compliance Calculator",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-tax-compliance-calculator"
@@ -2101,7 +2101,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-test-automation-framework",
     "title": "Ai Test Automation Framework",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-test-automation-framework"
@@ -2125,7 +2125,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-threat-intelligence",
     "title": "Ai Threat Intelligence",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-threat-intelligence"
@@ -2133,7 +2133,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-trading-signal-engine",
     "title": "Ai Trading Signal Engine",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-trading-signal-engine"
@@ -2165,7 +2165,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-tutoring-platform",
     "title": "Ai Tutoring Platform",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-tutoring-platform"
@@ -2229,7 +2229,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-voice-agent-builder",
     "title": "Ai Voice Agent Builder",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-voice-agent-builder"
@@ -2261,7 +2261,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-voice-brand-consistency",
     "title": "Ai Voice Brand Consistency",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-voice-brand-consistency"
@@ -2285,7 +2285,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-voice-cloning-studio",
     "title": "Ai Voice Cloning Studio",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-voice-cloning-studio"
@@ -2309,7 +2309,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "ai-vpc-zero-trust",
     "title": "Ai Vpc Zero Trust",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/ai-vpc-zero-trust"
@@ -3461,7 +3461,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "it-api-performance-testing",
     "title": "It Api Performance Testing",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "it",
     "popular": false,
     "href": "/services/it-api-performance-testing"
@@ -3589,7 +3589,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "it-cloud-cost-governance",
     "title": "It Cloud Cost Governance",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "it",
     "popular": false,
     "href": "/services/it-cloud-cost-governance"
@@ -3789,7 +3789,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "it-incident-response-simulator",
     "title": "It Incident Response Simulator",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "it",
     "popular": false,
     "href": "/services/it-incident-response-simulator"
@@ -3901,7 +3901,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "it-observability-logging",
     "title": "It Observability Logging",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "it",
     "popular": false,
     "href": "/services/it-observability-logging"
@@ -4045,7 +4045,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "it-synthetic-monitoring",
     "title": "It Synthetic Monitoring",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "it",
     "popular": false,
     "href": "/services/it-synthetic-monitoring"
@@ -4501,7 +4501,7 @@ export const searchServices: SearchService[] = [
   {
     "id": "secure-file-transfer",
     "title": "Secure File Transfer",
-    "description": "Service description.",
+    "description": "Enterprise-grade AI and IT solution designed for business transformation, automation, and operational excellence.",
     "category": "ai",
     "popular": false,
     "href": "/services/secure-file-transfer"

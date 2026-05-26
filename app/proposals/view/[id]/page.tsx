@@ -1,5 +1,7 @@
 // app/proposals/view/[id]/page.tsx
 // Dynamic proposal viewer — reads from automation/proposals/{id}.html or .json
+'use client';
+
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 

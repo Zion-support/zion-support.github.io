@@ -1,5 +1,7 @@
 'use client';
 
+import type { Metadata } from 'next';
+
 import { useEffect, useState, useCallback } from 'react';
 
 import { allServices } from '@/data/servicesData';

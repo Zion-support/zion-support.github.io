@@ -1,6 +1,8 @@
 // app/service-comparison/page.tsx — Interactive service comparison matrix
 'use client';
 
+import type { Metadata } from 'next';
+
 import { useState, useMemo } from 'react';
 
 import Link from 'next/link';

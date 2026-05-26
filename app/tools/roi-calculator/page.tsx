@@ -5,6 +5,11 @@ import Link from 'next/link';
 import RouterPing from './pingClient';
 import ROICalculatorClient from './ROICalculatorClient';
 
+export const metadata: Metadata = {
+  title: 'ROI Calculator — Zion Tech Group',
+  description: 'Calculate the return on investment for AI and IT services with our free ROI calculator.',
+};
+
 export default function ROICalculatorPage() {
   return (
     <main className="min-h-screen bg-slate-950 py-20">

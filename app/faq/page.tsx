@@ -1,8 +1,15 @@
+export const metadata: Metadata = {
+  title: 'FAQ — Zion Tech Group',
+  description: 'Frequently asked questions about Zion Tech Group services, pricing, and implementation.',
+};
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
 };
+
+import type { Metadata } from 'next';
 
 const faqs = [
   {

@@ -1,5 +1,7 @@
 // app/products/page.tsx — Products & Platforms
 'use client';
+
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { allServices } from '@/data/servicesData';
 
