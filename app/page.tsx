@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { allServices } from './data/servicesData';
 import { searchServices } from './data/searchServices';
 import type { Service } from './data/servicesData';
-import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
@@ -328,14 +327,14 @@ let list = services;
                   amber:   'from-amber-500/20 to-yellow-500/10 border-amber-500/30',
                 };
                 return (
-                  <Link key={s.stage} href={`/services/stage/${s.stage}/`}
-                    className={`group block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 hover:scale-[1.04] hover:border-opacity-60 transition-all min-w-[140px]`}
+                  <div key={s.stage}
+                    className={`block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 min-w-[140px]`}
                   >
                     <div className="text-2xl mb-1">{s.emoji}</div>
                     <div className="text-xl font-bold text-white">{n}</div>
                     <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">{s.label}</div>
                     <div className="text-[10px] text-slate-500 mt-0.5">{s.sub}</div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>
@@ -379,7 +378,7 @@ let list = services;
             {CATEGORIES.map(cat => {
               const n = byCategory[cat.key]?.length ?? 0;
               return (
-              <Link key={cat.key} href={`/services?category=${cat.key}`}
+              <Link key={cat.key} href={`/services/?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{ background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)` }}/>
@@ -464,7 +463,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services?category=${cat.key}`}
+                  href={`/services/?category=${cat.key}`}
                   className="block group"
                 >
                   <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden mb-3">
@@ -535,7 +534,7 @@ let list = services;
                 {(byCategory[cat.key] || []).length > 30 && (
                   <p className="text-slate-500 text-xs mt-2 text-center">
                     Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
-                    {' '}<Link href={`/services?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
+                    {' '}<Link href={`/services/?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
                   </p>
                 )}
               </div>
@@ -560,21 +559,21 @@ let list = services;
                 title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
                 date: '2026-04-28',
                 excerpt: 'Discover five battle-tested AI automation patterns that cut operational overhead and accelerate enterprise workflow throughput — with real-world implementation examples.',
-                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
+                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization/',
                 emoji: '🤖',
               },
               {
                 title: 'AI Agent Frameworks for Business Automation',
                 date: '2026-04-21',
                 excerpt: 'A deep dive into AI agent architectures: LLM orchestration, tool use, memory, and multi-agent coordination — what actually works in production.',
-                slug: '/blog/ai-agent-frameworks-for-business-automation',
+                slug: '/blog/ai-agent-frameworks-for-business-automation/',
                 emoji: '🧠',
               },
               {
                 title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
                 date: '2026-04-14',
                 excerpt: 'Machine learning approaches to FinOps: workload-aware rightsizing, anomaly detection for runaway cloud bills, and predictive capacity planning.',
-                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning',
+                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/',
                 emoji: '💡',
               },
             ].map((post: any) => (
@@ -707,7 +706,7 @@ let list = services;
               return (
               <Link
                 key={cat.key}
-                href={`/services?category=${cat.key}`}
+                href={`/services/?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden"
               >
                 {/* Gradient border glow on hover */}
@@ -780,7 +779,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services?category=${cat.key}`}
+                  href={`/services/?category=${cat.key}`}
                   className="group relative flex flex-col items-center gap-2 p-5 rounded-2xl border border-slate-700/60 bg-slate-800/40 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all"
                 >
                   <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
@@ -845,8 +844,8 @@ let list = services;
             {[
               { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-blue-500/20 to-cyan-500/10' },
-              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-green-500/20 to-emerald-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
             ].map((badge, i) => (
               <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
@@ -892,7 +891,7 @@ let list = services;
             {[
               {
                 name: 'AI Service Router',
-                path: '/tools/ai-service-router',
+                path: '/tools/ai-service-router/',
                 emoji: '🧭',
                 gradient: 'from-purple-500 to-indigo-500',
                 desc: 'Type your need in plain language — AI matches you to the top services in real time. Zero server calls.',
@@ -901,25 +900,25 @@ let list = services;
               },
               {
                 name: 'ROI Calculator',
-                path: '/tools/roi-calculator',
+                path: '/tools/roi-calculator/',
                 emoji: '📈',
-                gradient: 'from-emerald-500 to-teal-500',
+                gradient: 'from-purple-500 to-pink-500',
                 desc: 'Estimate return on investment across AI, Automation, Cloud, Data, IT, or Security with category-specific lift multipliers.',
                 tag: '',
                 features: ['Small / Mid / Enterprise', '6-category lift model', 'Instant annual projection'],
               },
               {
                 name: 'Service Comparison',
-                path: '/tools/service-comparison',
+                path: '/tools/service-comparison/',
                 emoji: '⚖️',
-                gradient: 'from-cyan-500 to-blue-600',
+                gradient: 'from-purple-500 to-blue-600',
                 desc: 'Pick up to 3 services side-by-side on Overview, Features, Pricing, Benefits, and Timeline with full detail expansion.',
                 tag: '',
                 features: ['Up to 3-way compare', '5-tab deep breakdown', 'Full catalog browse'],
               },
               {
                 name: 'Service Recommender',
-                path: '/tools/service-recommender',
+                path: '/tools/service-recommender/',
                 emoji: '🎯',
                 gradient: 'from-amber-500 to-orange-500',
                 desc: 'Answer 4 quick qualification questions and get a personalised ranked shortlist of services matched to your industry and use case.',
@@ -928,7 +927,7 @@ let list = services;
               },
               {
                 name: 'Port Scanner',
-                path: '/tools/port-scanner',
+                path: '/tools/port-scanner/',
                 emoji: '🔍',
                 gradient: 'from-red-500 to-orange-500',
                 desc: 'Free online port scanner — enter a hostname or IP and instantly see which ports are open, filtered, or closed.',
@@ -937,9 +936,9 @@ let list = services;
               },
               {
                 name: 'SSL Certificate Checker',
-                path: '/tools/ssl-checker',
+                path: '/tools/ssl-checker/',
                 emoji: '🔒',
-                gradient: 'from-green-500 to-emerald-500',
+                gradient: 'from-purple-500 to-green-500',
                 desc: 'Check TLS certificate validity, issuer, expiry date, and chain depth for any domain — free, no account needed.',
                 tag: 'Free tool',
                 features: ['Expiry & issuer info', 'Chain depth check', 'Domain look-up'],
@@ -990,8 +989,8 @@ let list = services;
             {INDUSTRIES.map(ind => {
               const catKey = INDUSTRY_CATS[ind.key] || ind.key.split('-')[0];
               return (
-                <a key={ind.key}
-                  href={`/services?category=${catKey}`}
+                <Link key={ind.key}
+                  href={`/services/?category=${catKey}`}
                   className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-3">
@@ -1005,14 +1004,13 @@ let list = services;
                       style={{ width: '100%', background: `linear-gradient(90deg, ${ind.color})` }}
                     />
                   </div>
-                </a>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
     <FloatingActionDock />
-    <Footer />
     </main>
   );
 }

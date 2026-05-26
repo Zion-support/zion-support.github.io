@@ -4,7 +4,6 @@ import { useState, useMemo } from 'react';
 
 
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 import { allServices, type Service } from '@/data/servicesData';
 
 type IndustryService = Service & { industry: string };
@@ -206,7 +205,6 @@ export default function IndustrySolutionsPage() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+      </main>
   );
 }
