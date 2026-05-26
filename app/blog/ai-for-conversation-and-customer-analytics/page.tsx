@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI for Conversation and Customer Analytics',
   description:
     'Unifying customer data, analyzing conversations across channels, and driving next-best-action recommendations. Building a true customer 360.',
-  alternates: { canonical: '/blog/ai-for-conversation-and-customer-analytics' },
+  alternates: { canonical: '/blog/ai-for-conversation-and-customer-analytics/' },
   openGraph: {
     title: 'AI for Conversation and Customer Analytics',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

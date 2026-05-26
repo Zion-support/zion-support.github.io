@@ -31,7 +31,7 @@ function getQuery(): string {
 const CATEGORY_META: Record<string, { label: string; accent: string }> = {
   ai:        { label: 'AI Services',     accent: 'text-violet-400' },
   it:        { label: 'IT Services',     accent: 'text-blue-400'    },
-  cloud:     { label: 'Cloud',           accent: 'text-cyan-400'    },
+  cloud:     { label: 'Cloud',           accent: 'text-purple-400'    },
   security:  { label: 'Security',        accent: 'text-red-400'     },
   data:      { label: 'Data & Analytics',accent: 'text-emerald-400'},
   automation:{ label: 'Automation',     accent: 'text-amber-400'   },

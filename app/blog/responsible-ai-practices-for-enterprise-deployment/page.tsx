@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Responsible AI Practices for Enterprise Deployment',
   description:
     'Bias detection, explainability, human oversight, and governance frameworks. Aligning AI systems with organizational values and regulatory expectations.',
-  alternates: { canonical: '/blog/responsible-ai-practices-for-enterprise-deployment' },
+  alternates: { canonical: '/blog/responsible-ai-practices-for-enterprise-deployment/' },
   openGraph: {
     title: 'Responsible AI Practices for Enterprise Deployment',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

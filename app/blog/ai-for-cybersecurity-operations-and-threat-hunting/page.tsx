@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI for Cybersecurity Operations and Threat Hunting',
   description:
     'Threat detection, anomaly analysis, automated response, and security orchestration. How AI augments SOC teams and reduces mean time to detect.',
-  alternates: { canonical: '/blog/ai-for-cybersecurity-operations-and-threat-hunting' },
+  alternates: { canonical: '/blog/ai-for-cybersecurity-operations-and-threat-hunting/' },
   openGraph: {
     title: 'AI for Cybersecurity Operations and Threat Hunting',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

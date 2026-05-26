@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Insights on AI, automation, enterprise IT, and digital transformation from the Zion Tech Group team.',
-  alternates: { canonical: '/blog' },
+  alternates: { canonical: '/blog/' },
 };
 
 export default function BlogIndexPage() {
@@ -54,6 +54,16 @@ export default function BlogIndexPage() {
     { slug: 'responsible-ai-practices-for-enterprise-deployment', title: 'Responsible AI Practices for Enterprise Deployment' },
     { slug: 'securing-ai-models-a-practical-guide-to-threat-mitigation-in-production', title: 'Securing AI Models: A Practical Guide to Threat Mitigation in Production' },
     { slug: 'vector-databases-and-enterprise-rag-systems', title: 'Vector Databases and Enterprise RAG Systems' },
+    { slug: 'ai-for-agriculture-and-agritech', title: 'AI for Agriculture and Agritech' },
+    { slug: 'ai-for-blockchain-and-web3-operations', title: 'AI for Blockchain and Web3 Operations' },
+    { slug: 'ai-for-climate-tech-and-sustainability-operations', title: 'AI for Climate Tech and Sustainability Operations' },
+    { slug: 'ai-for-document-intelligence-and-intelligent-automation', title: 'AI for Document Intelligence and Intelligent Automation' },
+    { slug: 'ai-for-food-and-beverage-operations', title: 'AI for Food and Beverage Operations' },
+    { slug: 'ai-for-gaming-and-esports', title: 'AI for Gaming and Esports' },
+    { slug: 'ai-for-legal-tech-and-contract-intelligence', title: 'AI for Legal Tech and Contract Intelligence' },
+    { slug: 'ai-for-mining-and-natural-resources-operations', title: 'AI for Mining and Natural Resources Operations' },
+    { slug: 'ai-for-quantum-computing-and-hybrid-workloads', title: 'AI for Quantum Computing and Hybrid Workloads' },
+    { slug: 'ai-voice-agents-and-conversational-automation', title: 'AI Voice Agents and Conversational Automation' },
   ];
 
   return (

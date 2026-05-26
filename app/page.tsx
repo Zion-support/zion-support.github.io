@@ -206,7 +206,7 @@ let list = services;
             '@type': 'Organization',
             name: 'Zion Tech Group',
             url: 'https://ziontechgroup.com',
-            logo: 'https://ziontechgroup.com/logo.png',
+            logo: 'https://ziontechgroup.com/icon.svg',
             description: 'AI services, IT solutions, micro-SaaS products, and strategic consulting for businesses of all sizes.',
             address: {
               '@type': 'PostalAddress',
@@ -682,9 +682,9 @@ let list = services;
                 >
                   View Full Page →
                 </Link>
-                <a href="/configurator/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
+                <Link href="/configurator/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
                   ⚙️ Configure This Service
-                </a>
+                </Link>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-purple-300 hover:text-purple-200 px-4 py-3 self-center">
                   ✉ kleber@ziontechgroup.com
                 </a>
@@ -848,7 +848,7 @@ let list = services;
               { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-blue-500/20 to-cyan-500/10' },
               { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-green-500/20 to-emerald-500/10' },
             ].map((badge, i) => (
-              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-cyan-500/30 transition-all`}>
+              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
                 <div className="text-xl font-bold text-white mb-1">{badge.label}</div>
                 <div className="text-sm text-slate-400">{badge.sub}</div>
@@ -867,12 +867,12 @@ let list = services;
       <section className="py-8 border-t border-slate-800">
         <div className="container-page">
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
-            <Link href="/faq/" className="hover:text-cyan-400 transition">❓ FAQ</Link>
-            <Link href="/industry-solutions/" className="hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
-            <Link href="/services/" className="hover:text-cyan-400 transition">🛠️ All Services</Link>
-            <Link href="/configurator/" className="hover:text-cyan-400 transition">⚙️ Configurator</Link>
-            <Link href="/proposals/" className="hover:text-cyan-400 transition">📄 Proposals</Link>
-            <Link href="/partners/" className="hover:text-cyan-400 transition">🤝 Partners</Link>
+            <Link href="/faq/" className="hover:text-purple-400 transition">❓ FAQ</Link>
+            <Link href="/industry-solutions/" className="hover:text-purple-400 transition">🏭 Industry Solutions</Link>
+            <Link href="/services/" className="hover:text-purple-400 transition">🛠️ All Services</Link>
+            <Link href="/configurator/" className="hover:text-purple-400 transition">⚙️ Configurator</Link>
+            <Link href="/proposals/" className="hover:text-purple-400 transition">📄 Proposals</Link>
+            <Link href="/partners/" className="hover:text-purple-400 transition">🤝 Partners</Link>
             <Link href="/status/" className="hover:text-green-400 transition">● System Status</Link>
           </div>
         </div>
@@ -954,7 +954,7 @@ let list = services;
                   <span className="text-3xl">{tool.emoji}</span>
                   <div className="flex gap-1">
                     {tool.tag && (
-                      <span className="text-[10px] uppercase tracking-wider font-semibold text-cyan-300 bg-cyan-400/10 border border-cyan-500/30 px-2 py-0.5 rounded-full">
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-purple-300 bg-purple-400/10 border border-purple-500/30 px-2 py-0.5 rounded-full">
                         {tool.tag}
                       </span>
                     )}

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI in Construction and Project Management',
   description:
     'Schedule optimization, cost forecasting, risk prediction, and document management. How AI is transforming construction delivery and project controls.',
-  alternates: { canonical: '/blog/ai-in-construction-and-project-management' },
+  alternates: { canonical: '/blog/ai-in-construction-and-project-management/' },
   openGraph: {
     title: 'AI in Construction and Project Management',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

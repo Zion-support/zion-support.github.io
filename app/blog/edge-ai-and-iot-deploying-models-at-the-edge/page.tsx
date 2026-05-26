@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Edge AI and IoT: Deploying Models at the Edge',
   description:
     'On-device inference, model compression, latency optimization, and offline capability. When and how to move AI from cloud to edge.',
-  alternates: { canonical: '/blog/edge-ai-and-iot-deploying-models-at-the-edge' },
+  alternates: { canonical: '/blog/edge-ai-and-iot-deploying-models-at-the-edge/' },
   openGraph: {
     title: 'Edge AI and IoT: Deploying Models at the Edge',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

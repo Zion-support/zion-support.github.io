@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Customer Success: Reducing Churn and Driving Expansion',
   description:
     'Churn prediction, health scoring, next-best-action, and expansion opportunity identification. Turning customer data into retention and growth.',
-  alternates: { canonical: '/blog/ai-powered-customer-success-reducing-churn-and-driving-expansion' },
+  alternates: { canonical: '/blog/ai-powered-customer-success-reducing-churn-and-driving-expansion/' },
   openGraph: {
     title: 'AI-Powered Customer Success: Reducing Churn and Driving Expansion',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/ArticleStructuredData';
-import Breadcrumb from '@/components/Breadcrumb';
+import SiteBreadcrumbs from '@/components/SiteBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Building a Tailored Implementation Roadmap: From Proof of Concept to Full Deployment',
   description:
     'Define success criteria, proof of concept best practices, pilot scaling, full deployment planning, and change management. Milestone templates and common pitfalls.',
-  alternates: { canonical: '/blog/building-a-tailored-implementation-roadmap-from-proof-of-concept-to-full-deployment' },
+  alternates: { canonical: '/blog/building-a-tailored-implementation-roadmap-from-proof-of-concept-to-full-deployment/' },
   openGraph: {
     title: 'Building a Tailored Implementation Roadmap: From Proof of Concept to Full Deployment',
     description:
@@ -35,7 +35,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

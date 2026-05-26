@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface Proposal {
   id: string;
@@ -48,9 +49,9 @@ export default function ProposalsPage() {
             <div className="text-6xl mb-4">📋</div>
             <h2 className="text-xl font-semibold text-white mb-2">No Proposals Yet</h2>
             <p className="text-slate-400 mb-6">Use our configurator to generate your first custom proposal.</p>
-            <a href="/configurator/" className="btn-primary inline-block">
+            <Link href="/configurator/" className="btn-primary inline-block">
               Create a Proposal →
-            </a>
+            </Link>
           </div>
         ) : (
           <div className="grid gap-6">
@@ -98,9 +99,9 @@ export default function ProposalsPage() {
             Our team will design a tailored solution based on your needs and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/configurator/" className="btn-primary text-lg">
+            <Link href="/configurator/" className="btn-primary text-lg">
               Start Configurator →
-            </a>
+            </Link>
             <a href="tel:+13024640950" className="btn-secondary text-lg">
               ☎ +1 302 464 0950
             </a>

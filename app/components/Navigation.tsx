@@ -154,7 +154,7 @@ export default function Navigation() {
                     className="flex-1 text-center px-3 py-1.5 rounded-lg text-xs font-semibold text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors border border-purple-500/20"
                   >All Services →</Link>
                   <Link href="/industry-solutions/" onClick={() => setSolutionsOpen(false)}
-                    className="flex-1 text-center px-3 py-1.5 rounded-lg text-xs font-semibold text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 transition-colors border border-cyan-500/20"
+                    className="flex-1 text-center px-3 py-1.5 rounded-lg text-xs font-semibold text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors border border-purple-500/20"
                   >All Industries →</Link>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function Navigation() {
                     AI Services Hub →
                   </Link>
                   <Link href="/tools/" onClick={() => setServicesOpen(false)}
-                    className="flex-1 text-center px-3 py-2 rounded-lg text-sm font-medium text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 transition-colors border border-cyan-500/20">
+                    className="flex-1 text-center px-3 py-2 rounded-lg text-sm font-medium text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors border border-purple-500/20">
                     Free Tools →
                   </Link>
                 </div>

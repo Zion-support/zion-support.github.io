@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: PageProps) {
       name: "Zion Tech Group",
       url: "https://ziontechgroup.com",
     },
-    url: `https://ziontechgroup.com/services/${service.id}`,
+    url: `https://ziontechgroup.com/services/${service.id}/`,
     category: catLabel,
     serviceOutput:
       (service.features || []).slice(0, 5).join("; "),

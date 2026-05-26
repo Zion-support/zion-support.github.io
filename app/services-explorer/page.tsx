@@ -9,7 +9,7 @@ import type { Service } from '@/data/servicesData';
 const CAT_COLORS: Record<string, string> = {
   ai:        'bg-purple-900/50 text-purple-200 border-purple-500/30',
   it:        'bg-blue-900/50 text-blue-200 border-blue-500/30',
-  cloud:     'bg-cyan-900/50 text-cyan-200 border-cyan-500/30',
+  cloud:     'bg-purple-900/50 text-purple-200 border-purple-500/30',
   security:  'bg-orange-900/50 text-orange-200 border-orange-500/30',
   data:      'bg-emerald-900/50 text-emerald-200 border-emerald-500/30',
   automation:'bg-rose-900/50 text-rose-200 border-rose-500/30',

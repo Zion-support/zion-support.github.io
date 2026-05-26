@@ -16,7 +16,7 @@ const partnerSchema = {
   '@type': 'Organization',
   name: 'Zion Tech Group',
   url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
+  logo: `${SITE_URL}/icon.svg`,
   description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.',
   address: {
     '@type': 'PostalAddress',
@@ -107,7 +107,7 @@ export default function PartnersPage() {
                      className={`bg-gradient-to-br ${tierColors[tier]} border rounded-2xl p-8 group hover:scale-[1.02] transition-transform`}>
                   {partner.website ? (
                     <a href={partner.website} target="_blank" rel="noopener noreferrer">
-                      <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition mb-2">
+                      <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition mb-2">
                         {partner.name}&nbsp;&#8619;
                       </h3>
                     </a>

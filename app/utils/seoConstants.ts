@@ -25,7 +25,7 @@ export const STRUCTURED_DATA = {
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/icon.svg`,
     description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.',
     address: {
       '@type': 'PostalAddress',
@@ -41,7 +41,11 @@ export const STRUCTURED_DATA = {
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com',
     },
-    sameAs: [],
+    sameAs: [
+    'https://www.linkedin.com/company/ziontechgroup',
+    'https://twitter.com/ziontechgroup',
+    'https://github.com/ziontechgroup',
+  ],
   },
   WEBSITE: {
     '@context': 'https://schema.org',
@@ -53,7 +57,7 @@ export const STRUCTURED_DATA = {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+        urlTemplate: `${SITE_URL}/search/?q={search_term_string}`,
       },
       queryInput: 'required name=search_term_string',
     },
