@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Billing & Invoices — Client Portal',
+  title: 'Billing & Invoices',
   description: 'View your invoices, payment methods, and billing history. Secure client portal access.',
 };
 

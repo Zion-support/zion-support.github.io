@@ -2,10 +2,10 @@ import ProductPageLayout from '../components/ProductPageLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion AI Deal Desk | Zion Tech Group',
+  title: 'Zion AI Deal Desk',
   description:
     'Streamline quote-to-cash with automated pricing, approval routing, and contract generation.',
-  alternates: { canonical: '/zion-ai-deal-desk' },
+  alternates: { canonical: '/zion-ai-deal-desk/' },
 };
 
 export default function Page() {

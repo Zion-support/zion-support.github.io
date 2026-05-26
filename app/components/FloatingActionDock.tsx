@@ -14,7 +14,7 @@ const DOCK_ITEMS = [
   },
   {
     id: 'testimonials',
-    href: '/#testimonials',
+    href: '/testimonials/',
     emoji: '⭐',
     label: 'What Clients Say',
     action: 'anchor',
