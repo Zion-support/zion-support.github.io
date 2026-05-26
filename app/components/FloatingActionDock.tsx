@@ -9,11 +9,7 @@ const DOCK_ITEMS = [
     id: 'search',
     href: '#',
     emoji: '🔍',
-<<<<<<< HEAD
     label: 'Search',
-=======
-    label: `Search ${SERVICE_COUNT_B}+ Services`,
->>>>>>> da122184 (fix(dock): replace hardcoded '600+' in FloatingActionDock with dynamic SERVICE_COUNT_B — exports SERVICE_COUNT_B from servicesData.ts, import + template literal in dock)
     action: 'search',
     color: 'from-blue-500 to-cyan-500',
   },

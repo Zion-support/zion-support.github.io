@@ -21,8 +21,6 @@ export default function Page() {
         </nav>
 
         <div className="text-center max-w-3xl mx-auto mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <span className="text-6xl mb-4 block">📡</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">5G & Private Network Solutions</h1>
           <p className="text-xl text-slate-300 leading-relaxed mb-6">Private 5G networks, edge IoT, network slicing, and spectrum advisory for enterprise connectivity.</p>
@@ -31,11 +29,6 @@ export default function Page() {
               <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25">{tag}</span>
             ))}
           </div>
-=======
-          <span className="text-6xl mb-4 block">{\'→📡\'}</span>
-=======
-          <span className="text-6xl mb-4 block">{'→📡'}</span>
->>>>>>> 50604a68 (fix(tsx): escape JSX inline quotes in analytics/5g/api-dev service page scripts)
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">5G & Private Network Solutions</h1>
           <p className="text-xl text-slate-300 leading-relaxed mb-6">Private 5G networks, edge IoT, network slicing, and spectrum advisory for enterprise connectivity.</p>
 >>>>>>> 4bc61ade (fix(sub-pages): JSX encoding + undeclared placeholder vars in 4 industry pages)
@@ -45,7 +38,6 @@ export default function Page() {
         {/* Features */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-6">Capabilities</h2>
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { emoji: '📶', title: 'Private 5G Networks', desc: 'End-to-end private 5G deployment — spectrum, RAN, core, and device integration for campus and industrial environments.' },
@@ -59,9 +51,6 @@ export default function Page() {
               </div>
             ))}
           </div>
-=======
-    [Features content TBD — auto-populated from service data]
->>>>>>> 4bc61ade (fix(sub-pages): JSX encoding + undeclared placeholder vars in 4 industry pages)
         </div>
 
         {/* Why Zion Tech Group */}
@@ -80,9 +69,6 @@ export default function Page() {
               </li>
             ))}
           </ul>
-=======
-    [Why Zion Tech Group — expand per service page]
->>>>>>> 4bc61ade (fix(sub-pages): JSX encoding + undeclared placeholder vars in 4 industry pages)
         </div>
 
         {/* Industries */}

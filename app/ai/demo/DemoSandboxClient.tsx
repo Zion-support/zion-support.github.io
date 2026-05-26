@@ -148,11 +148,7 @@ export default function DemoSandboxClient() {
             Type a use-case, pick a scenario, or try a demo question. All scoring runs <strong>100% browser-side</strong> — no API call, no data sent anywhere.
           </p>
           <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-500">
-<<<<<<< HEAD
             <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> {allServices.length}+ services indexed &nbsp;|&nbsp;
-=======
-            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> DEMO_ITEMS services indexed &nbsp;|&nbsp;
->>>>>>> 9fc155a8 (fix(hardcoded-clean): zero remaining {626} across all non-brand .tsx files)
             <span>Zero server cost</span> &nbsp;|&nbsp; <span>Client-side only</span>
           </div>
         </div>
@@ -303,11 +299,7 @@ export default function DemoSandboxClient() {
         {/* Footer notes */}
         <div className="mt-12 pt-8 border-t border-slate-800/60 text-center">
           <p className="text-xs text-slate-600">
-<<<<<<< HEAD
                           Demo by Zion Tech Group — 600+ AI, IT, Cloud &amp; automation services indexed locally.
-=======
-            Demo by Zion Tech Group — DEMO_ITEMS AI, IT, Cloud &amp; automation services indexed locally.
->>>>>>> 9fc155a8 (fix(hardcoded-clean): zero remaining {626} across all non-brand .tsx files)
             <br />No LLM API calls. No account required. Everything runs in your browser.
           </p>
         </div>
