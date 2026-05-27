@@ -293,3 +293,60 @@ Thanks for reaching out. I've received your message and I'll get back to you wit
 
 —
 {signature}",96.4,100.0,New User <new@example.com>
+<<<<<<< HEAD
+2026-05-21T22:06:55+0000,sales,en,"Hi {name}!
+
+Thanks for reaching out. I'll review your inquiry and prepare a tailored proposal.
+
+—
+{signature}",96.4,100.0,Bob <bob@partner.com>
+2026-05-21T22:06:59+0000,general,en,"Hi {name}!
+
+Thanks for reaching out. I've received your message and I'll get back to you with details shortly.
+
+—
+{signature}",96.4,100.0,PayPal <paypal@paypal.com>
+2026-05-21T22:07:03+0000,general,en,"Hi {name}!
+
+Thanks for reaching out. I've received your message and I'll get back to you with details shortly.
+
+—
+{signature}",96.4,100.0,New User <new@example.com>
+2026-05-21T22:07:46+0000,sales,en,"Hi {name}!
+
+Thanks for reaching out. I'll review your inquiry and prepare a tailored proposal.
+
+—
+{signature}",96.4,100.0,Bob <bob@partner.com>
+2026-05-21T22:07:50+0000,general,en,"Hi {name}!
+
+Thanks for reaching out. I've received your message and I'll get back to you with details shortly.
+
+—
+{signature}",96.4,100.0,PayPal <paypal@paypal.com>
+2026-05-21T22:07:54+0000,general,en,"Hi {name}!
+
+Thanks for reaching out. I've received your message and I'll get back to you with details shortly.
+
+—
+{signature}",96.4,100.0,New User <new@example.com>
+2026-05-21T22:08:20+0000,sales,en,"Hi {name}!
+
+Thanks for reaching out. I'll review your inquiry and prepare a tailored proposal.
+
+—
+{signature}",96.4,100.0,Bob <bob@partner.com>
+2026-05-21T22:08:24+0000,general,en,"Hi {name}!
+
+Thanks for reaching out. I've received your message and I'll get back to you with details shortly.
+
+—
+{signature}",96.4,100.0,PayPal <paypal@paypal.com>
+2026-05-21T22:08:28+0000,general,en,"Hi {name}!
+
+Thanks for reaching out. I've received your message and I'll get back to you with details shortly.
+
+—
+{signature}",96.4,100.0,New User <new@example.com>
+=======
+>>>>>>> origin/main

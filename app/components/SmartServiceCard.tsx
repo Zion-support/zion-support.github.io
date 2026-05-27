@@ -1,8 +1,14 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+
+export interface SmartServiceCardProps {
+  service: any;
+=======
 import type { Service } from '@/data/servicesData';
 
 export interface SmartServiceCardProps {
   service: Service;
+>>>>>>> origin/main
   relationship?: 'related' | 'featured' | 'recommended';
   relevance?: number;
   showPricing?: boolean;
@@ -36,7 +42,11 @@ export default function SmartServiceCard({
 
   // Relevance badge display
   const badgeLabel = isHot
+<<<<<<< HEAD
+    ? null   // “Popular” shown via tag in caller
+=======
     ? null   // "Popular" shown via tag in caller
+>>>>>>> origin/main
     : isRec
     ? '⭐ Recommended'
     : relevance != null && relevance > 60 ? `${relevance}% match`
@@ -108,4 +118,8 @@ export default function SmartServiceCard({
       </div>
     </Link>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

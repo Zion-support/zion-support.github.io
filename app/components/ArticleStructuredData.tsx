@@ -1,5 +1,8 @@
 'use client';
 
+<<<<<<< HEAD
+export default function ArticleStructuredData({ article, headline, description, datePublished, slug }: any) {
+=======
 interface ArticleStructuredDataProps {
   article?: string;
   headline: string;
@@ -9,5 +12,6 @@ interface ArticleStructuredDataProps {
 }
 
 export default function ArticleStructuredData({ article, headline, description, datePublished, slug }: ArticleStructuredDataProps) {
+>>>>>>> origin/main
   return null;
 }
