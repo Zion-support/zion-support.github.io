@@ -12,10 +12,9 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
-import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 
 
-// Category accent color for showcase cards (maps category key → gradient)
+// Category accent color for showcase cards
 // Category accent color for showcase card styles (static RGBA + hex)
 const catAccent: Record<string, string> = {
   ai:        '#a78bfa',
@@ -361,9 +360,6 @@ let list = services;
           </div>
         </div>
       </section>
-
-      {/* ── Service Match Quiz — Interactive AI Tool ── */}
-      <ServiceMatchQuiz />
 
       {/* ── How It Works ── */}
       <section className="py-20">
