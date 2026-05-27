@@ -1,10 +1,16 @@
 // app/page.tsx — Home / Landing Page
 'use client';
 
+<<<<<<< HEAD
+import { useState, useMemo } from 'react';
+import Link from 'next/link';
+import { allServices } from './data/servicesData';
+import type { Service } from './data/servicesData';
+import Footer from '@/components/Footer';
+=======
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
-import { SearchService } from './data/searchServices';
 import type { Service } from './data/servicesData';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
@@ -14,6 +20,7 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
@@ -35,6 +42,19 @@ const STAT_SLA      = 'SLA Uptime Guarantee';
 
 // Featured: pull 2 per category so every category is represented
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
+<<<<<<< HEAD
+const FEATURED_IDS = [
+  'accessibility-compliance', 'advanced-ai-enterprise-intelligence-hub',
+  'ai-accessibility-auditor', 'ai-accessibility-optimizer', 'ai-analytics',
+  'ai-customer-support', 'ai-document-intelligence', 'ai-knowledge-management',
+  'ai-lead-generation', 'ai-office-automation', 'ai-sales-intelligence',
+  'ai-self-healing-infra', 'api-development', 'api-gateway-management',
+  'ai-deepfake-voice-spoof-detector', 'ai-supply-chain-disruption-predictor',
+  'ai-chronic-disease-progression-tracker', 'ai-marine-fisheries-sustainability',
+  'it-self-healing-kubernetes-platform', 'it-zero-trust-network-access',
+];
+=======
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
 
 const CATEGORIES = [
   { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
@@ -45,6 +65,18 @@ const CATEGORIES = [
   { key: 'automation',label: 'Automation',            emoji: '🤖', color: 'from-pink-500 to-rose-500' },
 ];
 
+<<<<<<< HEAD
+export default function HomePage() {
+  const services: Service[] = allServices;
+
+  // Quick-View Modal: open a service card overlay without navigating away
+  const [quickView, setQuickView] = useState<Service | null>(null);
+  const [search, setSearch] = useState('');
+  const [catFilter, setCatFilter] = useState<string | null>(null);
+
+  // Dynamic stats — auto-update when catalog changes
+  const serviceCount = services.length;
+=======
 // Per-industry service-category mapping (derived from service catalog)
 const INDUSTRY_CATS: Record<string,string> = {
   "technology-&-saas": "it",
@@ -76,25 +108,38 @@ const INDUSTRIES = [
 
 export default function HomePage() {
   const services: Service[] = allServices;
-  const serviceCount = services.length;
-  const [quickView, setQuickView] = useState<Service | null>(null);
-  const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
-  const [search, setSearch] = useState('');
-  const [catFilter, setCatFilter] = useState<string | null>(null);
 
   // Stage health counts — deterministic from catalog
   const byStage = useMemo(() => {
     const acc: Record<string,number> = { published:0, beta:0, planned:0 };
-    services.forEach((s: any) => { if (Object.hasOwn(acc, s.stage)) acc[s.stage]++; });
+    services.forEach((s: any) => { if (s.stage in acc) acc[s.stage]++; });
     return acc;
   }, [services]);
 
+  const serviceCount = allServices.length;
+    const [quickView, setQuickView] = useState<Service | null>(null);
+    const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
+    const [search, setSearch] = useState('');
+    const [catFilter, setCatFilter] = useState<string | null>(null);
+
   // Dynamic stats — auto-update when catalog changes
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
   const stats = [
     { value: `${serviceCount}+`, label: STAT_SERVICES },
     { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
+<<<<<<< HEAD
+  ];
+
+  const featuredServices = useMemo(
+    () => services.filter((s: any) => FEATURED_IDS.includes(s.id)),
+    [services]
+  );
+
+  const filteredShowcase = useMemo(() => {
+    let list = services;
+=======
     ];
 
   // Fetch release-signal dataset on mount
@@ -110,6 +155,7 @@ export default function HomePage() {
 
     const filteredShowcase = useMemo(() => {
 let list = services;
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
     if (catFilter) list = list.filter((s: any) => s.category === catFilter);
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -120,6 +166,8 @@ let list = services;
     return list;
   }, [services, catFilter, search]);
 
+<<<<<<< HEAD
+=======
   // Dynamic popular services — changes automatically when catalog updates
   const popularServices = useMemo(() =>
     services
@@ -135,12 +183,17 @@ let list = services;
     [services]
   );
 
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
   const byCategory = useMemo(() => {
     const map: Record<string, Service[]> = {};
     for (const c of CATEGORIES) map[c.key] = services.filter((s: any) => s.category === c.key);
     return map;
   }, [services]);
 
+<<<<<<< HEAD
+  return (
+    <main className="min-h-screen bg-slate-950">
+=======
   // ── Release-signal news arranger ──────────────────────────────────────
   // Pulls featured services using data/release_notes.json scoring.
   // Falls back to freshFeatures if dataset not loaded or empty.
@@ -168,7 +221,7 @@ let list = services;
         const svc = lookup.get(r.id);
         if (!svc) return null;
         const daysAgo = Math.max(0, Math.round((now - new Date(r.released_at).getTime()) / DAY));
-        const tagCount = (r.tags || []).filter((t: string) => ENTRY_TAG_MAP[t]).length;
+        const tagCount = (r.tags || []).filter(t => ENTRY_TAG_MAP[t]).length;
         return {
           id: r.id, title: r.changelog_summary || r.changelog.slice(0, 80) + '...',
           desc: r.changelog,
@@ -240,13 +293,14 @@ let list = services;
               '@type': 'SearchAction',
               target: {
                 '@type': 'EntryPoint',
-                urlTemplate: 'https://ziontechgroup.com/search/?q={search_term_string}'
+                urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
               },
               'query-input': 'required name=search_term_string'
             }
           })
         }}
       />
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(120,50,200,0.18),rgba(20,10,40,0.92))]" />
@@ -254,15 +308,38 @@ let list = services;
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
+<<<<<<< HEAD
+              <span className="text-green-400">●</span> {serviceCount}+ Services — Live Now
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="gradient-text">AI & IT Services</span><br />
+              <span className="text-white">for Your Business</span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+              {serviceCount}+ real-world micro SAAS services, IT solutions, and AI-powered platforms.
+              From machine learning to cybersecurity, CRM automation to blockchain.
+              Get a custom proposal in minutes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+                ⚡ Get Your Custom Proposal →
+              </Link>
+              <Link href="/services" className="btn-secondary text-lg px-10 py-4">
+                🛠️ Browse All {serviceCount}+ Services
+              </Link>
+              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
+                ☎ +1 302 464 0950
+              </a>
+=======
               <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
             </div>
-<h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="gradient-text">AI & IT Services</span><br />
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            {serviceCount}+ real-world micro-SaaS services, IT solutions, and AI-powered platforms.
-            From ML &amp; cybersecurity to CRM automation. Get a custom proposal in minutes — no commitment.
+            <ServiceCounter /> real-world AI, IT, cloud, security, and automation services — from machine learning to cybersecurity, CRM automation to blockchain.
+            Get a free, custom proposal in minutes.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
@@ -279,7 +356,7 @@ let list = services;
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
               <Link href="/search/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
-🔍 Search {serviceCount}+ Services
+                🔍 Search Services
               </Link>
               <Link href="/testimonials/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 ⭐ Client Reviews
@@ -287,6 +364,7 @@ let list = services;
               <Link href="/pricing/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 💰 Pricing
               </Link>
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
             </div>
 
             {/* Trust badges */}
@@ -309,6 +387,8 @@ let list = services;
                   <div className="text-sm text-slate-400 mt-1">{s.label}</div>
                 </div>
               ))}
+<<<<<<< HEAD
+=======
 
             </div>
 
@@ -336,6 +416,7 @@ let list = services;
                   </div>
                 );
               })}
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
             </div>
           </div>
         </div>
@@ -349,7 +430,11 @@ let list = services;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
+<<<<<<< HEAD
+              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from {serviceCount}+ options.' },
+=======
               { num: '02', title: 'AI-Powered Matching', desc: `Our AI engine recommends the best-fit services from ${serviceCount}+ options.` },
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (
@@ -365,6 +450,69 @@ let list = services;
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* ── Services by Category (all 600 services advertised) ── */}
+      <section className="py-20 bg-slate-900/30">
+        <div className="container-page">
+          <h2 className="section-heading text-center">Complete Service Catalog</h2>
+          <p className="section-subheading text-center">All {services.length} services across every category — click any card for full details</p>
+          
+          {/* Per-category highlights: show first 6 services per category as rich cards */}
+          {CATEGORIES.map(cat => {
+            const catSvcs = byCategory[cat.key] || [];
+            const top6 = catSvcs.slice(0, 6);
+            return (
+              <div key={cat.key} className="mb-16 last:mb-0">
+                {/* Category header bar */}
+                <div className={`inline-flex items-center gap-3 mb-6 px-5 py-3 rounded-full bg-gradient-to-r ${cat.color} bg-opacity-10 border border-slate-700/50`}>
+                  <span className="text-2xl">{cat.emoji}</span>
+                  <h3 className="text-xl font-bold text-white">{cat.label}</h3>
+                  <span className="text-sm text-slate-400">({catSvcs.length} services)</span>
+                  <Link href={`/services?category=${cat.key}`} className="ml-2 text-sm text-purple-300 hover:text-purple-200 font-medium transition">
+                    View all →
+                  </Link>
+                </div>
+                
+                {/* Top-6 grid for this category */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {top6.map((service: any) => (
+                    <div key={service.id} className="glass-card flex flex-col hover:border-purple-500/40 group">
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className="text-2xl">{service.icon}</span>
+                        <div>
+                          <h3 className="text-base font-semibold text-white leading-snug group-hover:text-purple-300 transition-colors">{service.title}</h3>
+                          <span className="text-xs text-slate-500 uppercase tracking-wider">{service.category}</span>
+                        </div>
+                      </div>
+                      <p className="text-slate-400 text-sm mb-3 line-clamp-2 flex-1">{service.description}</p>
+                      <ul className="space-y-1 mb-3">
+                        {service.features.slice(0, 2).map((f: string, i: number) => (
+                          <li key={i} className="text-slate-300 text-xs flex items-start gap-2">
+                            <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
+                            <span className="line-clamp-1">{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
+                        <span className="text-purple-300 text-sm font-semibold">
+                          From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
+                        </span>
+                        <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1 group">
+                          Learn more <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Show-more link for oversized categories */}
+                {catSvcs.length > 6 && (
+                  <div className="text-center mt-4">
+                    <Link href={`/services?category=${cat.key}`} className="text-sm text-slate-400 hover:text-purple-300 transition">
+                      + {catSvcs.length - 6} more {cat.label.toLowerCase()} →
+                    </Link>
+                  </div>
+=======
       {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
@@ -380,7 +528,7 @@ let list = services;
               <Link key={cat.key} href={`/services/?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ background: `linear-gradient(135deg, ${catAccent[cat.key] || '#a78bfa'}22, transparent 60%)` }}/>
+                  style={{ background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)` }}/>
                 <div className="relative flex items-center gap-4">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-2xl shadow-lg
                     group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
@@ -535,6 +683,7 @@ let list = services;
                     Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
                     {' '}<Link href={`/services/?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
                   </p>
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
                 )}
               </div>
             );
@@ -542,6 +691,62 @@ let list = services;
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* ── Complete Service Showcase (Horizontal Scroll + Quick-View Modal) ── */}
+      <section className="py-20">
+        <div className="container-page">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 className="section-heading">📋 Complete Service Showcase</h2>
+              <p className="section-subheading mb-0">All {services.length} services — scroll to explore. Click any card for quick details.</p>
+            </div>
+          </div>
+
+          {/* Category quick-links navigate to filtered services page */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            <Link href="/services" className="px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700">All ({services.length})</Link>
+            {CATEGORIES.map(c => (
+              <Link key={c.key} href={`/services?category=${c.key}`} className="px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700">
+                {c.emoji} {c.key.charAt(0).toUpperCase() + c.key.slice(1)} ({byCategory[c.key].length})
+              </Link>
+            ))}
+          </div>
+{/* Horizontal scroll cards */}
+          <div className="overflow-x-auto pb-4 -mb-4">
+            <div className="flex gap-4" style={{ minWidth: 'max-content', paddingBottom: '8px' }}>
+              {filteredShowcase.map((service: any) => {
+                const catMeta = CATEGORIES.find(c => c.key === service.category) || CATEGORIES[0];
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/services/${service.id}`}
+                    onClick={(e) => { e.preventDefault(); setQuickView(service); }}
+                    className="min-w-[260px] max-w-[260px] glass-card flex flex-col hover:border-purple-500/40 group border-l-2"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-2xl">{service.icon}</span>
+                      <h3 className="text-sm font-semibold text-white line-clamp-2 leading-snug">{service.title}</h3>
+                    </div>
+                    <p className="text-slate-500 text-xs mb-3 line-clamp-2 flex-1">{service.description}</p>
+                    <div className="flex items-center justify-between mt-auto pt-3 border-t border-slate-700/50">
+                      <span className="text-purple-300 text-xs font-semibold">
+                        From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
+                      </span>
+                      <span className="text-xs text-slate-500 group-hover:text-purple-400 transition-colors">→</span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {filteredShowcase.length === 0 && (
+            <div className="text-center py-16 text-slate-400">
+              <p className="text-xl mb-2">No services match "{search}"</p>
+              <p className="text-sm">Clear filter or try different keywords.</p>
+            </div>
+          )}
+=======
       {/* ── From the Blog ── */}
       <section className="py-20 bg-slate-900/20 border-t border-slate-800/60">
         <div className="container-page">
@@ -592,6 +797,7 @@ let list = services;
           <div className="mt-6 text-center sm:hidden">
             <Link href="/blog/" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
           </div>
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
         </div>
       </section>
 
@@ -680,9 +886,15 @@ let list = services;
                 >
                   View Full Page →
                 </Link>
+<<<<<<< HEAD
+                <a href="/configurator" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
+                  ⚙️ Configure This Service
+                </a>
+=======
                 <Link href="/configurator/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
                   ⚙️ Configure This Service
                 </Link>
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
                 <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-purple-300 hover:text-purple-200 px-4 py-3 self-center">
                   ✉ kleber@ziontechgroup.com
                 </a>
@@ -696,6 +908,23 @@ let list = services;
       <section className="py-20 bg-slate-900/30">
         <div className="container-page">
           <h2 className="section-heading text-center">Our Service Categories</h2>
+<<<<<<< HEAD
+          <p className="section-subheading text-center">Six core domains of expertise</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {CATEGORIES.map(cat => (
+              <Link key={cat.key} href={`/services?category=${cat.key}`} className="glass-card group hover:border-purple-500/40">
+                <div className="flex items-center gap-4">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-2xl shadow-lg`}>
+                    {cat.emoji}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">{cat.label}</h3>
+                    <p className="text-slate-400 text-sm">{byCategory[cat.key].length} services available</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+=======
           <p className="section-subheading text-center">
             Six core domains — {services.length}+ services total — click any category to filter
           </p>
@@ -735,6 +964,7 @@ let list = services;
               </Link>
             );
             })}
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
           </div>
         </div>
       </section>
@@ -749,20 +979,62 @@ let list = services;
               Delivered to your inbox as a PDF within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+=======
               <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
                 ⚙️ Start Configurator →
               </Link>
               <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
                 ✉️ Email Us
               </a>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
+<<<<<<< HEAD
+                ☎ +1 302 464 0950
+              </a>
+=======
                                             ☎ +1 302 464 0950
                                           </a>
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+{/* Contact Info */}
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-2">📞 Call Us</h4>
+              <a href="tel:+13024640950" className="text-purple-300 text-lg hover:text-purple-200 transition">+1 302 464 0950</a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-2">✉️ Email</h4>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-300 text-lg hover:text-purple-200 transition">kleber@ziontechgroup.com</a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-2">📍 Visit Us</h4>
+              <p className="text-slate-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm">
+            <Link href="/faq" className="text-slate-400 hover:text-cyan-400 transition">❓ FAQ</Link>
+            <Link href="/industry-solutions" className="text-slate-400 hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
+            <Link href="/testimonials" className="text-slate-400 hover:text-cyan-400 transition">⭐ Testimonials</Link>
+            <Link href="/services" className="text-slate-400 hover:text-cyan-400 transition">🛠️ All Services</Link>
+            <Link href="/configurator" className="text-slate-400 hover:text-cyan-400 transition">⚙️ Configurator</Link>
+            <Link href="/proposals" className="text-slate-400 hover:text-cyan-400 transition">📄 Proposals</Link>
+          </div>
+        </div>
+      </section>
+    <Footer />
+    </main>
+  );
+}
+=======
       {/* ── Category Deep-Link Strip — all 6 categories, live counts ───────── */}
       <section className="py-12 bg-slate-900/20 border-y border-slate-800/60">
         <div className="container-page">
@@ -841,7 +1113,7 @@ let list = services;
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-{ emoji: '🏆', label: `${serviceCount}+ Services`, sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
+              { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
               { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
               { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
@@ -1014,3 +1286,4 @@ let list = services;
   );
 }
 
+>>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
