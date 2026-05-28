@@ -180,4 +180,24 @@ export const allServices: Service[] = [
     pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
     category: 'ai'
   }
+
+  {
+    id: 'ai-email-intelligence-service',
+    title: 'AI Email Intelligence Service',
+    description: 'Advanced AI-powered email management system that analyzes, prioritizes, and generates intelligent responses to emails with continuous learning capabilities, automated workflow triggering, and relationship intelligence.',
+    features: [
+      'Case-by-case email analysis with intent/sentiment detection',
+      'Intelligent response generation with quality scoring',
+      'Continuous learning from sender feedback and outcomes',
+      'Automated workflow triggering based on email content',
+      'Relationship health scoring and predictive insights',
+      'Multi-channel response optimization (email, chat, SMS)',
+      'Real-time collaboration and escalation detection',
+      'Knowledge base integration for smart responses',
+      'Advanced security and compliance checking',
+      'A/B testing framework for response optimization'
+    ],
+    pricing: { basic: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },
+    category: 'ai'
+  }
 ];
