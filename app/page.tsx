@@ -837,6 +837,15 @@ let list = services;
               { key: 'V60', name: 'Workflow Automation', emoji: '⚙️', color: 'from-indigo-500/20 to-violet-500/10 border-indigo-500/30',
                 desc: 'Visual workflow builder: if/then/else branching, wait steps, CRM updates, Slack, tasks, webhooks — all without code. 14+ step types. Automates any email operation.',
                 tech: '14+ step types · CRM/Slack/Task integration · Condition branching · Template library' },
+              { key: 'V61', name: 'Deliverability', emoji: '📬', color: 'from-teal-500/20 to-cyan-500/10 border-teal-500/30',
+                desc: 'Ensures every email lands in inbox — not spam. Analyzes content for 50+ spam triggers, checks blacklist status, validates SPF/DKIM/DMARC, scores inbox placement before send. 30%+ better deliverability.',
+                tech: '50+ spam trigger patterns · Blacklist monitoring · DKIM/SPF/DMARC · Pre-flight checklist · Batch campaign analyzer' },
+              { key: 'V62', name: 'Thread Decomposition', emoji: '🔀', color: 'from-amber-500/20 to-orange-500/10 border-amber-500/30',
+                desc: 'Breaks complex multi-topic threads into sub-threads, routes each to the right person/queue, extracts action items and questions, and auto-builds a structured knowledge base from every conversation.',
+                tech: '8 category topic detection · Action item extraction · Knowledge base · Smart routing · Question summarizer' },
+              { key: 'V63', name: 'Lead Scoring', emoji: '🎯', color: 'from-rose-500/20 to-pink-500/10 border-rose-500/30',
+                desc: 'Scores leads based on behavioral signals (opens, clicks, replies, meetings). Hot/warm/cold tiering, intent detection (budget/timeline/decision), sender reputation tracking, next-best-action recommendations.',
+                tech: '20+ behavioral signals · Intent detection · Reputation scoring · Reply/open rate analytics · Next-best-action' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">
