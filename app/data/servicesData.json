@@ -17523,7 +17523,9 @@
       "Trend-detection alerting on spikes in errors or latency catches outages before customers call",
       "Per-event tracing means no more 'event-lost' midnight firefight",
       "Time-limited dashboard views are the right way to share live data with stakeholders"
-    ]
+    ],
+    "href": "/services/data-realtime-trending-aggregator",
+    "icon": "📊"
   },
   {
     "category": "cloud",
@@ -17545,7 +17547,9 @@
       "DR to a lower-cost region in under 60 minutes",
       "Apply security policy once at the edge and enforce everywhere",
       "Team can use the same VPC-IDs across dev/staging/prod in any cloud or region"
-    ]
+    ],
+    "href": "/services/cloud-hybrid-multicloud-networking",
+    "icon": "☁️"
   },
   {
     "category": "security",
@@ -17567,7 +17571,9 @@
       "1-click revocation keeps compromised identity blast-radius strictly bounded",
       "Privileged access introduced with per-session fine-grained token and audit trail",
       "Access offboarded exactly when employee leaves — zero lingering shadow-permissions"
-    ]
+    ],
+    "href": "/services/security-cloud-zero-trust-access",
+    "icon": "🔐"
   },
   {
     "category": "security",
@@ -17589,7 +17595,9 @@
       "Phishing credential reuse checks take 5 minutes not 5 days",
       "Bandwidth savings of over 30% vs. full browser VDI",
       "IT picks up no new virus protection costs on client OS"
-    ]
+    ],
+    "href": "/services/security-browser-isolation-platform",
+    "icon": "🔐"
   },
   {
     "category": "security",
@@ -17611,7 +17619,9 @@
       "PR-level dependency-diff halted before merge for transitive dependency changes",
       "Provenance scoring means you know what source you trust and what to question",
       "Regulatory audit readiness — attestation and SBOM already on-demand"
-    ]
+    ],
+    "href": "/services/security-sbom-supply-chain",
+    "icon": "🔐"
   },
   {
     "category": "automation",
@@ -17633,7 +17643,9 @@
       "No more manually matching payment-provider tables to order inboxes",
       "Subscription proration calculated correctly for thousands of cohorts without manual process",
       "Reconciliation engine runs grid-matching at 0400 and alerts you before staff arrive"
-    ]
+    ],
+    "href": "/services/automation-integrated-commerce-flows",
+    "icon": "🤖"
   },
   {
     "category": "automation",
@@ -17655,7 +17667,9 @@
       "Doc throughput of 1,000 pages/hr goes to right business flow automatically without manual triage",
       "Anomaly flag on invoices or contracts reduces processing teams' manual review time 90%",
       "Digital signature path removes the engraving bottleneck of physical signature"
-    ]
+    ],
+    "href": "/services/automation-document-intelligence-pipeline",
+    "icon": "🤖"
   },
   {
     "category": "automation",
@@ -17677,7 +17691,9 @@
       "A/B testing — test visual, copy, and send-time combinations and compare across channels",
       "Cross-channel attribution means you know which channel drove each dollar of conversion",
       "Campaign studio saves marketing teams 10+ hours per week on campaign coordination"
-    ]
+    ],
+    "href": "/services/automation-multi-channel-campaign-manager",
+    "icon": "🤖"
   },
   {
     "category": "automation",
@@ -17699,7 +17715,9 @@
       "Run change simulation before deploying to production — score change risk before approval",
       "Compliance audit trail — every generation and run timestamped schema-ready",
       "Process mining means DRI returns to business unit with insights they trust without translator"
-    ]
+    ],
+    "href": "/services/automation-process-mining-intelligence",
+    "icon": "🤖"
   },
   {
     "category": "it",
@@ -17721,7 +17739,9 @@
       "Publish API docs that developers actually use",
       "Threat protection without touching your WAF",
       "Analytics surface shows which endpoints under-utilised and which overloaded"
-    ]
+    ],
+    "href": "/services/it-api-gateway-openapi",
+    "icon": "🖥️"
   },
   {
     "category": "it",
@@ -17743,7 +17763,9 @@
       "Show board-level DR readiness on demand with pass/fail reports",
       "RTO of 4 hours means only half a day of downtime in worst case",
       "RPO of 15 minutes means zero more than 15 minutes of data lost"
-    ]
+    ],
+    "href": "/services/it-backup-dr-bc-as-a-service",
+    "icon": "🖥️"
   },
   {
     "category": "it",
@@ -17765,7 +17787,9 @@
       "No more opening a vulnerability ticket and forgetting",
       "Open-source dependency risks eliminated before deployment",
       "SBOM-fed SLA means regulatory customers can verify your software BOM on demand"
-    ]
+    ],
+    "href": "/services/it-cicd-security-gate-as-service",
+    "icon": "🖥️"
   },
   {
     "category": "it",
@@ -17787,7 +17811,9 @@
       "Zip-based export package means one-click audit response per framework",
       "Patch CVE not by its disclosure date but by its patch-readiness score",
       "Endpoint firewall stops lateral movement as EDR detects and alarms"
-    ]
+    ],
+    "href": "/services/it-endpoint-security-compliance-monitor",
+    "icon": "🖥️"
   },
   {
     "id": "ai-agentic-workflow-orchestrator",
@@ -20325,7 +20351,9 @@
       "72h time-decay model",
       "Thread repetition guard"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-377",
+    "icon": "🤖"
   },
   {
     "id": "saas-378",
@@ -20345,7 +20373,9 @@
       "Domain-based language inference fallback",
       "Subject line adaptation per locale"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-378",
+    "icon": "🤖"
   },
   {
     "id": "saas-379",
@@ -20365,7 +20395,9 @@
       "Locale-aware greetings",
       "Multi-language support"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-379",
+    "icon": "🤖"
   },
   {
     "id": "saas-380",
@@ -20385,7 +20417,9 @@
       "Weekly exec dashboard",
       "CAC + LTV comparison"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/saas-380",
+    "icon": "🛒"
   },
   {
     "id": "saas-381",
@@ -20405,7 +20439,9 @@
       "Intercom/HubSpot integration",
       "Day-N follow-up automation"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/saas-381",
+    "icon": "🛒"
   },
   {
     "id": "saas-382",
@@ -20425,7 +20461,9 @@
       "Monthly scoring report",
       "Slack/email alerts"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/saas-382",
+    "icon": "🛒"
   },
   {
     "id": "saas-383",
@@ -20445,7 +20483,9 @@
       "Pro-rata rights tracking",
       "Employee pool management"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/saas-383",
+    "icon": "🛒"
   },
   {
     "id": "saas-384",
@@ -20465,7 +20505,9 @@
       "Version control",
       "Acceptance analytics"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/saas-384",
+    "icon": "🛒"
   },
   {
     "id": "saas-385",
@@ -20485,7 +20527,9 @@
       "PDF/DOCX ingestion",
       "Risk summary report"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-385",
+    "icon": "🤖"
   },
   {
     "id": "saas-386",
@@ -20505,7 +20549,9 @@
       "LinkedIn tech stack changes",
       "G2/TrustRadius review monitoring"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-386",
+    "icon": "🤖"
   },
   {
     "id": "saas-387",
@@ -20525,7 +20571,9 @@
       "Sentiment arc per participant",
       "Jira/Asana/Linear sync"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-387",
+    "icon": "🤖"
   },
   {
     "id": "saas-388",
@@ -20545,7 +20593,9 @@
       "Gap identification",
       "Response draft from content library"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-388",
+    "icon": "🤖"
   },
   {
     "id": "saas-389",
@@ -20565,7 +20615,9 @@
       "Personalized coaching plans",
       "At-risk deal flagging"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-389",
+    "icon": "🤖"
   },
   {
     "id": "saas-390",
@@ -20585,7 +20637,9 @@
       "Multi-currency support",
       "Approval workflow routing"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/saas-390",
+    "icon": "🤖"
   },
   {
     "id": "saas-391",
@@ -20605,7 +20659,9 @@
       "Seasonal ingredient trends",
       "Menu engineering reports"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/saas-391",
+    "icon": "🛒"
   },
   {
     "id": "it-392",
@@ -20625,7 +20681,9 @@
       "Git-native policy gates",
       "GitHub/GitLab/Jenkins integration"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/it-392",
+    "icon": "🖥️"
   },
   {
     "id": "it-393",
@@ -20645,7 +20703,9 @@
       "Audit logging",
       "Encrypted tunnel setup"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/it-393",
+    "icon": "🖥️"
   },
   {
     "id": "it-394",
@@ -20665,7 +20725,9 @@
       "Log aggregation (Loki)",
       "Kubernetes observability"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/it-394",
+    "icon": "🖥️"
   },
   {
     "id": "it-395",
@@ -20685,7 +20747,9 @@
       "Continuous compliance monitoring",
       "Annual audit readiness"
     ],
-    "featured": "IT Services"
+    "featured": "IT Services",
+    "href": "/services/it-395",
+    "icon": "🖥️"
   },
   {
     "id": "ai-396",
@@ -20705,7 +20769,9 @@
       "Dedicated support channel",
       "Monthly strategy reviews"
     ],
-    "featured": "AI Services"
+    "featured": "AI Services",
+    "href": "/services/ai-396",
+    "icon": "🤖"
   },
   {
     "id": "saas-397",
@@ -20725,7 +20791,9 @@
       "Optimal reminder timing engine",
       "Decision capture from threads",
       "Accountability chain with attribution"
-    ]
+    ],
+    "href": "/services/saas-397",
+    "icon": "🛒"
   },
   {
     "id": "saas-398",
@@ -20745,7 +20813,9 @@
       "Reply probability prediction (0-100%)",
       "Top-3 ranked improvements by score lift",
       "Reading level and sentiment analysis"
-    ]
+    ],
+    "href": "/services/saas-398",
+    "icon": "🛒"
   },
   {
     "id": "saas-399",
@@ -20765,7 +20835,9 @@
       "Monthly P&L projections",
       "Runway analysis (6/12/18 month)",
       "Board-ready export (PDF)"
-    ]
+    ],
+    "href": "/services/saas-399",
+    "icon": "🛒"
   },
   {
     "id": "saas-400",
@@ -20785,7 +20857,9 @@
       "Payment scheduling",
       "1099/1099-NEC form generation",
       "Gusto/Rippling integration"
-    ]
+    ],
+    "href": "/services/saas-400",
+    "icon": "🛒"
   },
   {
     "id": "saas-401",
@@ -20805,7 +20879,9 @@
       "4h human outreach SLA for critical tier",
       "Executive escalation at 30 days",
       "Save ROI tracking dashboard"
-    ]
+    ],
+    "href": "/services/saas-401",
+    "icon": "🛒"
   },
   {
     "id": "saas-402",
@@ -20825,7 +20901,9 @@
       "Co-investment network mapping",
       "News signal triggers",
       "Personalized outreach sequence generator"
-    ]
+    ],
+    "href": "/services/saas-402",
+    "icon": "🛒"
   },
   {
     "id": "saas-403",
@@ -20845,7 +20923,9 @@
       "Weekly progress auto-reports",
       "QuickBooks/Stripe/PayPal integration",
       "Client dashboard with approval workflow"
-    ]
+    ],
+    "href": "/services/saas-403",
+    "icon": "🛒"
   },
   {
     "id": "saas-404",
@@ -20865,7 +20945,9 @@
       "Plain-English risk explanations",
       "PDF redline output with margin notes",
       "Risk severity scoring (1-10)"
-    ]
+    ],
+    "href": "/services/saas-404",
+    "icon": "🛒"
   },
   {
     "id": "saas-405",
@@ -20885,7 +20967,9 @@
       "Auto-generated 1,500w content briefs",
       "NLP entity and FAQ suggestions",
       "Internal linking recommendations"
-    ]
+    ],
+    "href": "/services/saas-405",
+    "icon": "🛒"
   },
   {
     "id": "saas-406",
@@ -20905,7 +20989,9 @@
       "CTA button copy analysis",
       "Objection handling coverage matrix",
       "Sentence-level rewrite recommendations"
-    ]
+    ],
+    "href": "/services/saas-406",
+    "icon": "🛒"
   },
   {
     "id": "saas-407",
@@ -20925,7 +21011,9 @@
       "Engagement rate benchmarking",
       "8 topic pillar content calendar",
       "Personalized LinkedIn strategy report"
-    ]
+    ],
+    "href": "/services/saas-407",
+    "icon": "🛒"
   },
   {
     "id": "it-408",
@@ -20945,7 +21033,9 @@
       "Auto-rightsizing recommendations",
       "Unused RI detection",
       "Monthly savings report"
-    ]
+    ],
+    "href": "/services/it-408",
+    "icon": "🖥️"
   },
   {
     "id": "it-409",
@@ -20965,7 +21055,9 @@
       "Monthly failover testing with runbooks",
       "One-click failback with stateful rollback",
       "SQL/Oracle/PostgreSQL/MongoDB/K8s support"
-    ]
+    ],
+    "href": "/services/it-409",
+    "icon": "🖥️"
   },
   {
     "id": "it-410",
@@ -20985,7 +21077,9 @@
       "Underutilized license flagging",
       "ISO 19770-1 audit-ready export",
       "CI/CD integration for asset discovery"
-    ]
+    ],
+    "href": "/services/it-410",
+    "icon": "🖥️"
   },
   {
     "id": "ai-411",
@@ -21005,7 +21099,9 @@
       "99.9% uptime SLA",
       "Dedicated support channel",
       "Monthly strategy reviews"
-    ]
+    ],
+    "href": "/services/ai-411",
+    "icon": "🤖"
   },
   {
     "id": "saas-webhook-debugger",
@@ -21514,38 +21610,6 @@
     "popular": false,
     "stage": "published",
     "industry": "Legal"
-  },
-  {
-    "id": "cloud-cost-anomaly-detector",
-    "title": "Cloud Cost Anomaly Detector",
-    "description": "Cloud Cost Anomaly Detector — comprehensive service from Zion Tech Group. Contact us for details.",
-    "icon": "💰",
-    "features": [
-      "Feature 1",
-      "Feature 2",
-      "Feature 3",
-      "Feature 4"
-    ],
-    "benefits": [
-      "Benefit 1",
-      "Benefit 2",
-      "Benefit 3"
-    ],
-    "pricing": {
-      "basic": "799",
-      "pro": "1999",
-      "enterprise": "5999"
-    },
-    "contactInfo": {
-      "website": "/services/cloud-cost-anomaly-detector",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "href": "/services/cloud-cost-anomaly-detector",
-    "category": "cloud",
-    "popular": false,
-    "stage": "published",
-    "industry": "Finance"
   },
   {
     "id": "it-asset-lifecycle-manager",
@@ -22362,5 +22426,705 @@
     "popular": false,
     "stage": "published",
     "industry": "Security"
+  },
+  {
+    "id": "zero-trust-network-access",
+    "title": "Zero Trust Network Access (ZTNA)",
+    "description": "Implement identity-first network security withZTNA. Replace VPN with micro-segmented, device-verified access to corporate applications — no implicit trust, every session verified.",
+    "icon": "🔐",
+    "features": [
+      "Identity-first access: verify every user and device, every session",
+      "Micro-segmentation: least-privilege access to specific applications, not networks",
+      "Device posture checks: compliance verification before access granted",
+      "Integration: Okta, Azure AD, Google Workspace, Duo, CrowdStrike",
+      "No VPN required — reduces attack surface by 95%",
+      "Cloud-native, supports hybrid and multi-cloud environments"
+    ],
+    "benefits": [
+      "Eliminates lateral movement risk from compromised VPNs",
+      "Reduces attack surface: no full network access for remote users",
+      "Improved user experience — faster than legacy VPN",
+      "Compliance: satisfies NIST 800-207 Zero Trust architecture"
+    ],
+    "pricing": {
+      "basic": "1299",
+      "pro": "3499",
+      "enterprise": "9999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/zero-trust-network-access",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "api-contract-testing",
+    "title": "API Contract Testing Platform",
+    "description": "Automated API contract testing for REST, GraphQL, and gRPC APIs. Catch breaking changes before deployment by validating API responses against OpenAPI/AsyncAPI specs in CI/CD pipelines.",
+    "icon": "📡",
+    "features": [
+      "REST, GraphQL, gRPC contract validation",
+      "OpenAPI 3.x, AsyncAPI 2.x, Protobuf schema support",
+      "CI/CD integration: GitHub Actions, GitLab, Jenkins, ArgoCD",
+      "Contract change detection with backward compatibility alerts",
+      "Schema version diffing with changelog generation",
+      "Mock server generation from contract specs"
+    ],
+    "benefits": [
+      "Catch breaking API changes before they reach production",
+      "Enable frontend-backend parallel development safely",
+      "Reduce API integration bugs by 70% in distributed systems",
+      "Contract-first development improves team coordination"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1599",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/api-contract-testing",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "iot-device-security-scanner",
+    "title": "IoT Device Security Scanner",
+    "description": "Scan and monitor IoT devices for firmware vulnerabilities, default credentials, and network exposure. Discover shadow IoT devices, classify risk, and enforce network segmentation policies.",
+    "icon": "📡",
+    "features": [
+      "Passive network scanning for IoT device discovery",
+      "Firmware CVE scanning via vendor databases (CISA, NVD)",
+      "Default credential detection and password strength analysis",
+      "Network exposure scoring: is device internet-facing or behind NAT?",
+      "Segmentation policy recommendations to isolate IoT from critical networks",
+      "Integration: Nessus, Qualys, Rapid7, Splunk, Microsoft Defender for IoT"
+    ],
+    "benefits": [
+      "Discover shadow IoT devices before attackers do",
+      "Reduce IoT attack surface by enforcing segmentation",
+      "Meet compliance: NIST IoT security guidelines, CIS Controls",
+      "Continuous monitoring vs point-in-time vulnerability scans"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2199",
+      "enterprise": "6999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/iot-device-security-scanner",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "data-lineage-tracker",
+    "title": "Data Lineage Tracker",
+    "description": "Automatically discover and visualize data flows across your data warehouse, ETL pipelines, and BI tools. Track every column from source to dashboard — essential for GDPR, CCPA, and AI governance.",
+    "icon": "🗺️",
+    "features": [
+      "Connect: Snowflake, BigQuery, Redshift, Databricks, dbt, Airflow",
+      "Column-level lineage: trace every data element end-to-end",
+      "Impact analysis: which dashboards/ML models will break if I change this table?",
+      "GDPR/CCPA right-of-access: find all personal data locations in minutes",
+      "Change detection: alert when upstream data schema changes",
+      "Data quality scoring per pipeline with anomaly detection"
+    ],
+    "benefits": [
+      "Cut data incident resolution time from days to minutes",
+      "Satisfy GDPR/CCPA data lineage requirements automatically",
+      "Enable confident data changes with impact previews",
+      "AI governance: track where training data comes from"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2999",
+      "enterprise": "8999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/data-lineage-tracker",
+    "category": "data",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "remote-work-productivity-analytics",
+    "title": "Remote Work Productivity Analytics",
+    "description": "Aggregate collaboration signals from Slack, Teams, GitHub, Jira, and email to measure team productivity and engagement — without surveillance. Manager dashboards with actionable insights.",
+    "icon": "📊",
+    "features": [
+      "Connect: Slack, Teams, GitHub, Jira, Gmail, Google Calendar, Zoom",
+      "Team engagement score: collaboration patterns vs benchmarks",
+      "Meeting overload detection: identify meeting-heavy days and suggest focus time",
+      "Knowledge gaps: detect siloed teams or isolated individuals",
+      "Manager digest: weekly summary of team health indicators",
+      "Privacy-first: aggregates anonymized signals, no individual surveillance"
+    ],
+    "benefits": [
+      "Data-driven management without invasive employee monitoring",
+      "Identify burnout risk before team members disengage",
+      "Optimize meeting schedules and focus time allocation",
+      "Measure ROI of remote work tools and hybrid policies"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/remote-work-productivity-analytics",
+    "category": "automation",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "cloud-finops-rightsizing-advisor",
+    "title": "Cloud FinOps Rightsizing Advisor",
+    "description": "AI-powered cloud resource rightsizing recommendations based on real utilization patterns. Analyzes compute, memory, and storage usage — identifies over-provisioned resources, projects savings, and implements recommendations.",
+    "icon": "💰",
+    "features": [
+      "Connect: AWS Compute Optimizer, Azure Advisor, GCP Recommender",
+      "Rightsizing recommendations with projected monthly savings",
+      "Historical utilization analysis: 30/60/90 day patterns",
+      "Scheduled rightsizing: auto-apply recommendations on timeline",
+      "Undo capability: rollback rightsizing if performance degrades",
+      "Multi-cloud unified rightsizing dashboard"
+    ],
+    "benefits": [
+      "Typical savings: 25-40% on over-provisioned compute",
+      "No performance risk: recommendations based on actual utilization",
+      "Automated application removes manual FinOps overhead",
+      "Track actual savings vs projections for accountability"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-finops-rightsizing-advisor",
+    "category": "cloud",
+    "popular": false,
+    "stage": "published",
+    "industry": "Finance"
+  },
+  {
+    "id": "security-awareness-training-tracker",
+    "title": "Security Awareness Training Tracker",
+    "description": "Track and measure employee security awareness. Automated training assignment, phishing simulation campaigns, compliance reporting, and real-time risk scoring per employee and department.",
+    "icon": "🎓",
+    "features": [
+      "Automated training paths: onboarding, GDPR, phishing, password hygiene",
+      "Phishing simulation: realistic mock phishing emails with click tracking",
+      "Risk scoring per employee: security maturity scorecard",
+      "Department-level awareness reporting for managers",
+      "Compliance reporting: SOC2, ISO27001, HIPAA awareness metrics",
+      "Integration: KnowBe4, Proofpoint, Microsoft, Google Workspace"
+    ],
+    "benefits": [
+      "Reduce phishing click rates by avg. 80% after 12 months training",
+      "Audit-ready compliance reports for security awareness programs",
+      "Identify high-risk employees who need extra training",
+      "Automate repetitive security awareness program management"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "4499"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/security-awareness-training-tracker",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "code-review-automation",
+    "title": "AI Code Review Automation",
+    "description": "Automated code review that catches bugs, security vulnerabilities, and code quality issues before human review. Integrates with GitHub/GitLab PR workflow, provides inline fix suggestions.",
+    "icon": "🔍",
+    "features": [
+      "Connect: GitHub PRs, GitLab MRs, Bitbucket, Azure DevOps",
+      "Security: OWASP Top 10, CWE Top 25, CVE matching in real-time",
+      "Code quality: cyclomatic complexity, duplication, dead code detection",
+      "Performance: identifies N+1 queries, inefficient loops, memory leaks",
+      "Inline fix suggestions with one-click apply option",
+      "Team leaderboard: bug detection rates, review turnaround time"
+    ],
+    "benefits": [
+      "Catch 60% of bugs before human code review",
+      "Reduce security vulnerabilities in code before production",
+      "Free senior engineers from repetitive low-value review work",
+      "Standardize code quality across distributed teams"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1899",
+      "enterprise": "5899"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/code-review-automation",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "email-archive-compliance",
+    "title": "Email Archive & Compliance Platform",
+    "description": "Enterprise email archiving for regulatory compliance (SEC 17a-4, FINRA, GDPR, HIPAA). Tamper-proof storage, e-discovery, legal hold, and sub-second search across millions of archived messages.",
+    "icon": "📧",
+    "features": [
+      "Archive: Gmail, Exchange, Outlook, Office 365, IMAP",
+      "Tamper-proof storage: WORM compliance, cryptographic integrity",
+      "e-Discovery: legal hold, keyword search, export for litigation",
+      "Retention policies: customizable by department, regulated industry",
+      "Full-text search across all archived mail in sub-second",
+      "Supervision workflows: manager review queues for regulated employees"
+    ],
+    "benefits": [
+      "Satisfy SEC 17a-4, FINRA, GDPR, HIPAA retention requirements",
+      "Cut e-discovery costs by 80% vs manual email retrieval",
+      "Legal hold: one-click preservation of all employee mail",
+      "Fast audit responses with instant search and export"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2499",
+      "enterprise": "7499"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/email-archive-compliance",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Legal"
+  },
+  {
+    "id": "distributed-tracing-debugger",
+    "title": "Distributed Tracing Debugger",
+    "description": "End-to-end request tracing across microservices. Identify latency bottlenecks, isolate failing services, and reconstruct the full call chain for any production incident in seconds.",
+    "icon": "🔎",
+    "features": [
+      "Connect: OpenTelemetry, Jaeger, Zipkin, AWS X-Ray, Datadog APM",
+      "Full call-graph reconstruction from any trace ID",
+      "Latency breakdown: which service in the chain caused the slowdown",
+      "Error propagation tracking: surface root-cause error, not symptom",
+      "Anomaly detection: flag unusual latency patterns per endpoint",
+      "Code-level trace viewer with actual function names"
+    ],
+    "benefits": [
+      "Cut production incident MTTR by 60% with trace-level debugging",
+      "No code changes required if using OpenTelemetry",
+      "Identify cross-service performance issues invisible to individual teams",
+      "Replace guesswork with data-driven root cause analysis"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2499",
+      "enterprise": "7999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/distributed-tracing-debugger",
+    "category": "data",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "vulnerability-prioritization-engine",
+    "title": "Vulnerability Prioritization Engine",
+    "description": "Context-aware vulnerability prioritization using exploitability, asset criticality, and threat intelligence — so your team patches what matters, not just what CVE scores suggest.",
+    "icon": "🎯",
+    "features": [
+      "Connect: Qualys, Tenable, Rapid7, CrowdStrike, Microsoft Defender",
+      "EPSS integration: map CVE to real-world exploit probability",
+      "Asset context: which vulnerable hosts are internet-facing? production? DMZ?",
+      "Threat intelligence: is this CVE being actively exploited in the wild?",
+      "CVSS override: contextual scoring beyond base CVSS vector",
+      "Remediation workflow: assign owner, track progress, notify when patched"
+    ],
+    "benefits": [
+      "Reduce alert fatigue: focus on the 5% of CVEs that are actually exploitable",
+      "Cut vulnerability remediation time by prioritizing real risk",
+      "Integrate threat intel to catch weaponized CVEs within hours of disclosure",
+      "Align patching with business criticality, not just severity scores"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2199",
+      "enterprise": "6499"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/vulnerability-prioritization-engine",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "code-complexity-analytics",
+    "title": "Code Complexity Analytics",
+    "description": "Measure and track software complexity metrics across your entire codebase. Identify high-risk modules, track technical debt accumulation, and prioritize refactoring before complexity impacts delivery velocity.",
+    "icon": "📈",
+    "features": [
+      "Metrics: cyclomatic complexity, cognitive complexity, coupling, cohesion",
+      "Language support: Python, JavaScript, TypeScript, Java, Go, Rust, C#",
+      "Repository-level dashboards: complexity trend over time",
+      "Technical debt tracking: days to pay down debt by module",
+      "PR risk scoring: flag PRs that increase complexity",
+      "Refactoring ROI: estimate time savings from simplifying complex modules"
+    ],
+    "benefits": [
+      "Identify modules at risk of high defect rates due to complexity",
+      "Track technical debt growth before it slows team velocity",
+      "Data-driven refactoring prioritization",
+      "Improve code review quality with complexity metrics per PR"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/code-complexity-analytics",
+    "category": "data",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": " sla-calculator",
+    "title": "SLA Calculator & Uptime Optimizer",
+    "description": "Calculate downtime costs, simulate availability scenarios, and design optimal SLA tiers for your service. Includes uptime tracker with real-time status pages and incident management integration.",
+    "icon": "📊",
+    "features": [
+      "SLA tier design: 99.9%, 99.95%, 99.99% with cost analysis",
+      "Downtime cost calculator: revenue, productivity, customer impact",
+      "Real-time status page: public uptime tracking with incident integration",
+      "Historical SLA compliance reporting per service",
+      "SLO tracking: error budget burn rate alerts",
+      "Contractor/vendor SLA benchmarking tool"
+    ],
+    "benefits": [
+      "Design SLA tiers grounded in business cost of downtime",
+      "Build customer trust with public, auditable status pages",
+      "Track actual uptime vs contracted SLA with confidence",
+      "Negotiate vendor contracts with data on real SLA requirements"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ sla-calculator",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "database-permission-auditor",
+    "title": "Database Permission Auditor",
+    "description": "Continuous monitoring of database access controls. Detect privilege escalations, identify over-privileged accounts, and generate compliance reports for SOX, PCI-DSS, and HIPAA database requirements.",
+    "icon": "🔑",
+    "features": [
+      "Connect: PostgreSQL, MySQL, MSSQL, Oracle, Snowflake, BigQuery",
+      "Privilege analysis: who has what access and why?",
+      "Over-privilege detection: identify accounts with more access than needed",
+      "Change detection: alert when permissions change without approval",
+      "Compliance reports: SOX, PCI-DSS, HIPAA access control requirements",
+      "Automated least-privilege remediation: generate GRANT/REVOKE scripts"
+    ],
+    "benefits": [
+      "Reduce data breach blast radius by enforcing least-privilege",
+      "Satisfy SOX/PCI-DSS database access control requirements",
+      "Detect insider threat: unusual database privilege escalation",
+      "Cut audit prep time from weeks to hours"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1899",
+      "enterprise": "5899"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/database-permission-auditor",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "incident-cost-calculator",
+    "title": "Incident Cost Calculator",
+    "description": "Quantify the real cost of production incidents: downtime, engineering time, customer impact, revenue loss, and reputational damage. Used to justify investment in reliability engineering.",
+    "icon": "💸",
+    "features": [
+      "Incident cost models: hourly downtime cost, engineering time, revenue impact",
+      "Integration: PagerDuty, OpsGenie, Jira, GitHub Actions incident data",
+      "Historical incident analysis: total cost per quarter/year",
+      "ROI calculator: compare reliability investment vs incident cost",
+      "Severity benchmarking: how does your MTTR compare to industry?",
+      "Executive reports: incident cost trends for leadership"
+    ],
+    "benefits": [
+      "Justify SRE/reliability investments with real dollar figures",
+      "Identify which incident types are most expensive to target",
+      "Track improvement: incident cost reduction over time",
+      "Post-mortem context: attach cost data to incident reviews"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "1999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/incident-cost-calculator",
+    "category": "automation",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "cloud-migration-readiness",
+    "title": "Cloud Migration Readiness Assessor",
+    "description": "Evaluate application readiness for cloud migration (AWS, Azure, GCP). Score applications on complexity, dependencies, risk factors, and estimated migration timeline and cost.",
+    "icon": "☁️",
+    "features": [
+      "Application discovery: scan on-prem apps, dependencies, traffic flows",
+      "Readiness scoring: 1-5 scale across cloud-native compatibility dimensions",
+      "Migration pattern recommendation: rehost / refactor / replatform / repurchase",
+      "Dependency mapping: which apps must migrate together?",
+      "Risk identification: legacy components that block migration",
+      "Migration project planner: timeline, effort, cost estimates per app"
+    ],
+    "benefits": [
+      "Avoid failed cloud migrations by identifying blockers upfront",
+      "Prioritize migration candidates with highest ROI and lowest risk",
+      "Reduce migration surprises with comprehensive dependency analysis",
+      "Executive visibility: migration pipeline progress dashboard"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2499",
+      "enterprise": "7999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-migration-readiness",
+    "category": "cloud",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "code-dependency-advisor",
+    "title": "Code Dependency Advisor",
+    "description": "Analyze application dependencies for security vulnerabilities, license compliance risks, and maintenance burden. Supports npm, pip, Maven, Go, Cargo — with upgrade path recommendations.",
+    "icon": "📦",
+    "features": [
+      "Package managers: npm, pip, Maven, Go modules, Cargo, NuGet",
+      "CVE scanning: flag known vulnerabilities in direct and transitive dependencies",
+      "License compliance: detect GPL, LGPL, AGPL, proprietary licenses",
+      "Maintenance burden: abandoned packages, deprecated APIs, update frequency",
+      "Upgrade path planning: which versions are compatible?",
+      "Lockfile analysis: detect sudden dependency changes in PRs"
+    ],
+    "benefits": [
+      "Eliminate supply chain attacks via compromised dependencies",
+      "Maintain license compliance across all codebases",
+      "Reduce technical debt from abandoned or outdated packages",
+      "Automate dependency updates with test-validated upgrade paths"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/code-dependency-advisor",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "user-behavior-analytics",
+    "title": "User Behavior Analytics (UEBA)",
+    "description": "ML-powered user behavior analytics to detect insider threats and account compromise. Baseline normal user behavior, alert on deviations — logons, data access, privilege use.",
+    "icon": "👤",
+    "features": [
+      "Connect: Active Directory, Azure AD, Okta, GCP, AWS, Azure, Splunk",
+      "Behavioral baselines: per-user normal working hours, locations, data access",
+      "Anomaly detection: unusual logon times, privilege escalation, data exfiltration",
+      "Peer analysis: compare user to similar role peers — flag outliers",
+      "Risk scoring: each user gets an updated risk score updated daily",
+      "Alert workflows: integrate with SIEM, SOAR, and ticketing systems"
+    ],
+    "benefits": [
+      "Detect insider threats and compromised credentials before data loss",
+      "Reduce false positives vs rule-based DLP and SIEM alerts",
+      "Identify compromised service accounts that bypass traditional AV/EDR",
+      "Satisfy NIST SP 800-53 AU-2 user activity monitoring requirements"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2999",
+      "enterprise": "8999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/user-behavior-analytics",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "api-performance-dashboard",
+    "title": "API Performance Dashboard",
+    "description": "Real-time API performance monitoring and optimization. Track latency, error rates, and throughput per endpoint — with intelligent baselining, anomaly detection, and root-cause attribution.",
+    "icon": "📊",
+    "features": [
+      "Connect: API gateways (Kong, AWS API Gateway, Apigee, Azure APIM)",
+      "Per-endpoint latency, error rate, and throughput in real-time",
+      "Intelligent baseline: per-endpoint normal range vs current",
+      "Anomaly detection: alert when P99 latency exceeds baseline by threshold",
+      "Root-cause attribution: which upstream service is causing latency?",
+      "SLO tracking: error budget consumption per API endpoint"
+    ],
+    "benefits": [
+      "Catch API performance degradation before it affects users",
+      "Identify which endpoints need optimization — data-driven",
+      "SLO compliance visibility for API product teams",
+      "Reduce P99 latency with attribution-driven optimization"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1599",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/api-performance-dashboard",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "sustainable-it-carbon-tracker",
+    "title": "Sustainable IT Carbon Tracker",
+    "description": "Measure and reduce the carbon footprint of your IT operations. Track energy consumption of cloud workloads, on-prem servers, and network equipment — generate sustainability reports for ESG compliance.",
+    "icon": "🌱",
+    "features": [
+      "Cloud carbon: AWS/Azure/GCP energy consumption estimation per service",
+      "On-prem: integrate with PDU, UPS, and DCIM systems",
+      "Carbon intensity: use real-time grid carbon factor ( electricitymap.org)",
+      "Right-sizing recommendations: reduce compute to reduce carbon",
+      "Scope 2 emissions reporting for GHG protocol compliance",
+      "ESG reporting: generate sustainability reports for investors and regulators"
+    ],
+    "benefits": [
+      "Reduce cloud carbon footprint by avg. 20% after rightsizing",
+      "Satisfy ESG reporting requirements for investors and regulators",
+      "Corporate sustainability: track progress toward net-zero IT commitments",
+      "Cost-carbon co-optimization: same actions reduce bill and carbon"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1899",
+      "enterprise": "5899"
+    },
+    "contactInfo": {
+      "website": "/services/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/sustainable-it-carbon-tracker",
+    "category": "it",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
   }
 ]
