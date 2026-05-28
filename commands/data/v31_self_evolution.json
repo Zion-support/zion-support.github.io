@@ -1,0 +1,54 @@
+{
+  "version": 31,
+  "total_emails": 1,
+  "successful_responses": 1,
+  "failed_responses": 0,
+  "learning_entries": [
+    {
+      "ts": "2026-05-28T17:15:40.777676+00:00",
+      "thread_id": "test-thread-001",
+      "sender": "test@example.com",
+      "intent": "general",
+      "lang": "en",
+      "tone": "neutral",
+      "reply_all": false,
+      "quality_score": 65,
+      "response_len": 0,
+      "successful": true
+    }
+  ],
+  "template_effectiveness": {},
+  "sender_patterns": {
+    "test@example.com": {
+      "email_count": 1,
+      "preferred_tone": {
+        "neutral": 1
+      },
+      "preferred_lang": null,
+      "reply_all_rate": 0,
+      "avg_quality": 0,
+      "intents": [
+        "general"
+      ]
+    }
+  },
+  "intent_success_rates": {
+    "general": {
+      "total": 1,
+      "successful": 1,
+      "rate": 1.0
+    }
+  },
+  "language_scores": {
+    "en": {
+      "total": 1,
+      "score_sum": 65,
+      "avg": 65.0
+    }
+  },
+  "tone_adaptation_history": [],
+  "reply_rate_by_intent": {},
+  "avg_response_time_by_intent": {},
+  "last_evolution": "2026-05-28T17:15:40.777717+00:00",
+  "evolution_streak": 0
+}
