@@ -269,8 +269,8 @@ let list = services;
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, automation, data, and micro-SaaS services — from machine learning to cybersecurity, CRM to blockchain.
-            Get a free, custom proposal in minutes.
+            {serviceCount}+ real-world services across AI, IT, cloud, security, automation, data, micro-SaaS, DevOps, blockchain, and IoT. 
+            From $299/month for micro-SaaS tools to enterprise AI solutions at $14,999+. Get a free, custom proposal in minutes.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
@@ -289,17 +289,23 @@ let list = services;
               <Link href="/search/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 🔍 Search Services
               </Link>
+              <Link href="/services/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                📋 View All {serviceCount}+ Services
+              </Link>
               <Link href="/testimonials/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 ⭐ Client Reviews
               </Link>
               <Link href="/pricing/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
-                💰 Pricing
+                💰 Pricing Guide
+              </Link>
+              <a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                ✉ Email Us
               </Link>
             </div>
 
             {/* Trust badges */}
             <div className="flex flex-wrap justify-center gap-8 text-slate-400 text-sm mb-12">
-              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support','617+ Services'].map(t => (
+              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`${serviceCount}+ Services`].map(t => (
                 <div key={t} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

@@ -8,19 +8,11 @@ import { SITE_URL, STRUCTURED_DATA } from './utils/seoConstants';
 
 export const metadata: Metadata = {
   title: { default: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', template: '%s | Zion Tech Group' },
-<<<<<<< HEAD
-  description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms. Machine learning, cybersecurity, cloud infrastructure, automation, and more. Based in Middletown, DE.',
-=======
-  description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms. Machine learning, cybersecurity, cloud infrastructure, automation, and more. Based in',
->>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
+  description: 'Zion Tech Group: 793+ AI services, IT solutions, cloud, security, automation, micro-SaaS, DevOps, blockchain, and IoT. From $299/mo micro-SaaS to $14,999+ enterprise AI. Custom proposals in US.',
   keywords: 'AI services, IT consulting, machine learning, cybersecurity, cloud migration, Micro SAAS, automation, NLP, computer vision, recommendation engine',
   authors: [{ name: 'Kleber Garcia Alcatrão', url: 'https://ziontechgroup.com' }],
   creator: 'Zion Tech Group', publisher: 'Zion Tech Group',
   robots: 'index, follow',
-<<<<<<< HEAD
-  openGraph: { type: 'website', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: '416+ micro SAAS services, IT solutions, and AI-powered platforms. Custom proposals in minutes.', url: 'https://ziontechgroup.com', siteName: 'Zion Tech Group', locale: 'en_US' },
-  twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.' },
-=======
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -32,7 +24,6 @@ export const metadata: Metadata = {
   },
   openGraph: { type: 'website', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms — from machine learning and cybersecurity to cloud infrastructure and automation. Custom proposals in minutes.', url: 'https://ziontechgroup.com', siteName: 'Zion Tech Group', locale: 'en_US', images: [{ url: 'https://ziontechgroup.com/og-home.svg', width: 1200, height: 630, alt: 'Zion Tech Group — AI, IT & Micro SAAS Solutions' }] },
   twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.', images: ['https://ziontechgroup.com/og-home.svg'] },
->>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
   alternates: { canonical: 'https://ziontechgroup.com' },
 };
 
@@ -45,11 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-<<<<<<< HEAD
-      </head>
-=======
 </head>
->>>>>>> 7ffbd02 (feat: 642 services with real pricing, 15 new micro-SAAS, email intelligence)
       <body className="min-h-screen bg-slate-950 text-white antialiased">
         <AccessibilityEnhancer>
           <Navigation />
