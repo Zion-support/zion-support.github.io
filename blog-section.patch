@@ -1,0 +1,74 @@
+diff --git a/automation/data/app-evolution-backlog.json b/automation/data/app-evolution-backlog.json
+index 072bc9389913..2a8090fead17 100644
+--- a/automation/data/app-evolution-backlog.json
++++ b/automation/data/app-evolution-backlog.json
+@@ -5,6 +5,11 @@
+   ],
+   "quickWins": [],
+   "implementationTasks": [],
+-  "updatedAt": "2026-05-27T12:19:15.673Z",
+-  "layoutDesignIntelMerge": "2026-05-27T12:19:15.673Z"
++<<<<<<< HEAD
++  "updatedAt": "2026-05-27T00:37:22.980Z",
++  "layoutDesignIntelMerge": "2026-05-27T00:37:22.980Z"
++=======
++  "updatedAt": "2026-05-27T02:01:43.577Z",
++  "layoutDesignIntelMerge": "2026-05-27T02:01:43.577Z"
++>>>>>>> origin/main
+ }
+\ No newline at end of file
+diff --git a/automation/reports/layout-design-intelligence-latest.json b/automation/reports/layout-design-intelligence-latest.json
+index eed61ab814ec..636ee17cf4f9 100644
+--- a/automation/reports/layout-design-intelligence-latest.json
++++ b/automation/reports/layout-design-intelligence-latest.json
+@@ -1,5 +1,9 @@
+ {
+-  "timestamp": "2026-05-27T12:19:15.672Z",
++<<<<<<< HEAD
++  "timestamp": "2026-05-27T00:37:22.980Z",
++=======
++  "timestamp": "2026-05-27T02:01:43.576Z",
++>>>>>>> origin/main
+   "url": "https://ziontechgroup.com",
+   "score": 85,
+   "metrics": {
+@@ -9,7 +13,11 @@
+     "h3Count": 82,
+     "listCount": 2,
+     "heroCtaCount": 0,
++<<<<<<< HEAD
++    "heroLinkCount": 7,
++=======
+     "heroLinkCount": 6,
++>>>>>>> origin/main
+     "hasMaxWidth": true,
+     "hasConsistentContainer": false
+   },
+@@ -20,7 +28,11 @@
+     },
+     {
+       "id": "hero",
++<<<<<<< HEAD
++      "detail": "heroCtas=0, heroLinks=7"
++=======
+       "detail": "heroCtas=0, heroLinks=6"
++>>>>>>> origin/main
+     },
+     {
+       "id": "containers",
+diff --git a/automation/reports/openclaw-policy-history-dashboard-latest.md b/automation/reports/openclaw-policy-history-dashboard-latest.md
+index d18530202768..920daab65ded 100644
+--- a/automation/reports/openclaw-policy-history-dashboard-latest.md
++++ b/automation/reports/openclaw-policy-history-dashboard-latest.md
+@@ -1,6 +1,10 @@
+ # OpenClaw action policy — reason history
+ 
+-_Generated: 2026-05-27T12:19:15.836Z_
++<<<<<<< HEAD
++_Generated: 2026-05-27T00:37:23.142Z_
++=======
++_Generated: 2026-05-27T02:01:43.731Z_
++>>>>>>> origin/main
+ 
+ _No policy history entries yet._ Run `npm run openclaw:actions:policy` to populate.
+ 
