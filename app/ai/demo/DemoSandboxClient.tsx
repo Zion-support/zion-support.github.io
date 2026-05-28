@@ -3,6 +3,9 @@
 import { useState, useMemo, useCallback } from 'react';
 import { allServices } from '@/data/servicesData';
 
+
+const DEMO_ITEMS = 599;
+
 // ── Keywords + category weight boost ──────────────────────────────────────────
 const CAT_WEIGHT: Record<string, number> = {
   ai: 1.3, cloud: 1.2, security: 1.3, data: 1.1, it: 1.0, automation: 1.1,
@@ -137,7 +140,7 @@ export default function DemoSandboxClient() {
       <div className="relative z-10 mx-auto max-w-5xl px-4 py-12 sm:py-16">
         {/* Header */}
         <div className="text-center mb-10">
-          <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-400 mb-3">Live Interactive Demo</span>
+          <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-purple-400 mb-3">Live Interactive Demo</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             AI Service Router Sandbox
           </h1>
@@ -145,7 +148,7 @@ export default function DemoSandboxClient() {
             Type a use-case, pick a scenario, or try a demo question. All scoring runs <strong>100% browser-side</strong> — no API call, no data sent anywhere.
           </p>
           <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-500">
-            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> 626 services indexed &nbsp;|&nbsp;
+            <span className="inline-block h-2 w-2 rounded-full bg-green-400" /> {allServices.length}+ services indexed &nbsp;|&nbsp;
             <span>Zero server cost</span> &nbsp;|&nbsp; <span>Client-side only</span>
           </div>
         </div>
@@ -176,7 +179,7 @@ export default function DemoSandboxClient() {
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="Describe your use case… e.g. 'We need HIPAA compliance monitoring + log aggregation for patient data'"
-              className="w-full bg-slate-900/60 border border-slate-700 rounded-xl px-12 py-4 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none min-h-[72px]"
+              className="w-full bg-slate-900/60 border border-slate-700 rounded-xl px-12 py-4 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none min-h-[72px]"
               rows={2}
             />
             {query && (
@@ -237,13 +240,13 @@ export default function DemoSandboxClient() {
                     i === 0
                       ? 'border-purple-500/30 bg-purple-900/10'
                       : i < 3
-                      ? 'border-cyan-500/15 bg-slate-800/30'
+                      ? 'border-purple-500/15 bg-slate-800/30'
                       : 'border-slate-800 bg-slate-900/30'
                   }`}
                 >
                   <div className="flex items-start gap-3">
                     <span className={`text-sm font-bold tabular-nums self-center ${
-                      i === 0 ? 'text-purple-400' : i < 3 ? 'text-cyan-400' : 'text-slate-500'
+                      i === 0 ? 'text-purple-400' : i < 3 ? 'text-purple-400' : 'text-slate-500'
                     }`}>#{i + 1}</span>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
@@ -257,7 +260,7 @@ export default function DemoSandboxClient() {
                       </div>
                       <p className="text-xs text-slate-400 mt-1 line-clamp-2">{s.description}</p>
                       <div className="flex flex-wrap gap-1 mt-2">
-                        {s.features.slice(0, 4).map(f => (
+                        {s.features.slice(0, 4).map((f: string) => (
                           <span key={f} className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800/40 text-slate-500">
                             {f}
                           </span>
@@ -269,7 +272,7 @@ export default function DemoSandboxClient() {
                         )}
                       </div>
                     </div>
-                    <span className={`text-base font-bold tabular-nums self-center ${i < 3 ? 'text-cyan-400' : 'text-slate-500'}`}>
+                    <span className={`text-base font-bold tabular-nums self-center ${i < 3 ? 'text-purple-400' : 'text-slate-500'}`}>
                       {sc}
                     </span>
                   </div>
@@ -296,7 +299,7 @@ export default function DemoSandboxClient() {
         {/* Footer notes */}
         <div className="mt-12 pt-8 border-t border-slate-800/60 text-center">
           <p className="text-xs text-slate-600">
-            Demo by Zion Tech Group — 626 AI, IT, Cloud &amp; automation services indexed locally.
+                          Demo by Zion Tech Group — 600+ AI, IT, Cloud &amp; automation services indexed locally.
             <br />No LLM API calls. No account required. Everything runs in your browser.
           </p>
         </div>

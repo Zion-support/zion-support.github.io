@@ -4,9 +4,8 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
-import { searchServices } from './data/searchServices';
+import { SearchService } from './data/searchServices';
 import type { Service } from './data/servicesData';
-import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
@@ -77,19 +76,18 @@ const INDUSTRIES = [
 
 export default function HomePage() {
   const services: Service[] = allServices;
+  const serviceCount = services.length;
+  const [quickView, setQuickView] = useState<Service | null>(null);
+  const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
+  const [search, setSearch] = useState('');
+  const [catFilter, setCatFilter] = useState<string | null>(null);
 
   // Stage health counts — deterministic from catalog
   const byStage = useMemo(() => {
     const acc: Record<string,number> = { published:0, beta:0, planned:0 };
-    services.forEach((s: any) => { if (s.stage && acc.hasOwnProperty(s.stage)) acc[s.stage]++; });
+    services.forEach((s: any) => { if (s.stage && Object.hasOwn(acc, s.stage)) acc[s.stage]++; });
     return acc;
   }, [services]);
-
-  const serviceCount = searchServices.length;
-    const [quickView, setQuickView] = useState<Service | null>(null);
-    const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
-    const [search, setSearch] = useState('');
-    const [catFilter, setCatFilter] = useState<string | null>(null);
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
@@ -182,8 +180,8 @@ let list = services;
                    - SCORE_RECENCY   * daysAgo,
         };
       })
-      .filter(Boolean)
-      .sort((a, b) => b._score - a._score)
+      .filter((r): r is NonNullable<typeof r> => r !== null)
+      .sort((a, b) => b!._score - a!._score)
       .slice(0, 6);
     if (merged.length) return merged;
     // Fallback: same formula as original freshFeatures
@@ -206,7 +204,7 @@ let list = services;
             '@type': 'Organization',
             name: 'Zion Tech Group',
             url: 'https://ziontechgroup.com',
-            logo: 'https://ziontechgroup.com/logo.png',
+            logo: 'https://ziontechgroup.com/icon.svg',
             description: 'AI services, IT solutions, micro-SaaS products, and strategic consulting for businesses of all sizes.',
             address: {
               '@type': 'PostalAddress',
@@ -242,7 +240,7 @@ let list = services;
               '@type': 'SearchAction',
               target: {
                 '@type': 'EntryPoint',
-                urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
+                urlTemplate: 'https://ziontechgroup.com/search/?q={search_term_string}'
               },
               'query-input': 'required name=search_term_string'
             }
@@ -258,36 +256,35 @@ let list = services;
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
               <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">AI & IT Services</span><br />
-              <span className="text-white">for Your Business</span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              <ServiceCounter /> real-world micro SAAS services, IT solutions, and AI-powered platforms.
-              From machine learning to cybersecurity, CRM automation to blockchain.
-              Get a custom proposal in minutes.
-            </p>
+<h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="gradient-text">AI & IT Services</span><br />
+            <span className="text-white">for Your Business</span>
+          </h1>
+          <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+            {serviceCount}+ real-world micro-SaaS services, IT solutions, and AI-powered platforms.
+            From ML &amp; cybersecurity to CRM automation. Get a custom proposal in minutes — no commitment.
+          </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚡ Get Your Custom Proposal →
               </Link>
-              <Link href="/services" className="btn-secondary text-lg px-10 py-4">
-                🛠️ Browse All {serviceCount}+ Services
+              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
+                {`🛠️ Explore All ${serviceCount}+ Services`}
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
-              </a>
+                              ☎ +1 302 464 0950
+                            </a>
             </div>
 
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
-              <Link href="/search" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
-                🔍 Search 600+ Services
+              <Link href="/search/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+🔍 Search {serviceCount}+ Services
               </Link>
-              <Link href="/testimonials" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+              <Link href="/testimonials/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 ⭐ Client Reviews
               </Link>
-              <Link href="/pricing" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+              <Link href="/pricing/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 💰 Pricing
               </Link>
             </div>
@@ -329,14 +326,14 @@ let list = services;
                   amber:   'from-amber-500/20 to-yellow-500/10 border-amber-500/30',
                 };
                 return (
-                  <a key={s.stage} href={`/services/stage/${s.stage}`}
-                    className={`group block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 hover:scale-[1.04] hover:border-opacity-60 transition-all min-w-[140px]`}
+                  <div key={s.stage}
+                    className={`block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 min-w-[140px]`}
                   >
                     <div className="text-2xl mb-1">{s.emoji}</div>
                     <div className="text-xl font-bold text-white">{n}</div>
                     <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">{s.label}</div>
                     <div className="text-[10px] text-slate-500 mt-0.5">{s.sub}</div>
-                  </a>
+                  </div>
                 );
               })}
             </div>
@@ -352,7 +349,7 @@ let list = services;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             {[
               { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
-              { num: '02', title: 'AI-Powered Matching', desc: 'Our AI engine recommends the best-fit services from {serviceCount}+ options.' },
+              { num: '02', title: 'AI-Powered Matching', desc: `Our AI engine recommends the best-fit services from ${serviceCount}+ options.` },
               { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
               { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
             ].map((s, i) => (
@@ -380,10 +377,10 @@ let list = services;
             {CATEGORIES.map(cat => {
               const n = byCategory[cat.key]?.length ?? 0;
               return (
-              <Link key={cat.key} href={`/services?category=${cat.key}`}
+              <Link key={cat.key} href={`/services/?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)` }}/>
+                  style={{ background: `linear-gradient(135deg, ${catAccent[cat.key] || '#a78bfa'}22, transparent 60%)` }}/>
                 <div className="relative flex items-center gap-4">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-2xl shadow-lg
                     group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
@@ -465,7 +462,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services?category=${cat.key}`}
+                  href={`/services/?category=${cat.key}`}
                   className="block group"
                 >
                   <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden mb-3">
@@ -536,7 +533,7 @@ let list = services;
                 {(byCategory[cat.key] || []).length > 30 && (
                   <p className="text-slate-500 text-xs mt-2 text-center">
                     Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
-                    {' '}<Link href={`/services?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
+                    {' '}<Link href={`/services/?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
                   </p>
                 )}
               </div>
@@ -553,7 +550,7 @@ let list = services;
               <h2 className="section-heading text-center">📝 From the Blog</h2>
               <p className="section-subheading text-center">AI automation strategies, industry insights &amp; platform updates</p>
             </div>
-            <Link href="/blog" className="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all">Read all articles →</Link>
+            <Link href="/blog/" className="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all">Read all articles →</Link>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -561,21 +558,21 @@ let list = services;
                 title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
                 date: '2026-04-28',
                 excerpt: 'Discover five battle-tested AI automation patterns that cut operational overhead and accelerate enterprise workflow throughput — with real-world implementation examples.',
-                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
+                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization/',
                 emoji: '🤖',
               },
               {
                 title: 'AI Agent Frameworks for Business Automation',
                 date: '2026-04-21',
                 excerpt: 'A deep dive into AI agent architectures: LLM orchestration, tool use, memory, and multi-agent coordination — what actually works in production.',
-                slug: '/blog/ai-agent-frameworks-for-business-automation',
+                slug: '/blog/ai-agent-frameworks-for-business-automation/',
                 emoji: '🧠',
               },
               {
                 title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
                 date: '2026-04-14',
                 excerpt: 'Machine learning approaches to FinOps: workload-aware rightsizing, anomaly detection for runaway cloud bills, and predictive capacity planning.',
-                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning',
+                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/',
                 emoji: '💡',
               },
             ].map((post: any) => (
@@ -593,7 +590,7 @@ let list = services;
             ))}
           </div>
           <div className="mt-6 text-center sm:hidden">
-            <Link href="/blog" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
+            <Link href="/blog/" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
           </div>
         </div>
       </section>
@@ -683,9 +680,9 @@ let list = services;
                 >
                   View Full Page →
                 </Link>
-                <a href="/configurator" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
+                <Link href="/configurator/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
                   ⚙️ Configure This Service
-                </a>
+                </Link>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-purple-300 hover:text-purple-200 px-4 py-3 self-center">
                   ✉ kleber@ziontechgroup.com
                 </a>
@@ -708,7 +705,7 @@ let list = services;
               return (
               <Link
                 key={cat.key}
-                href={`/services?category=${cat.key}`}
+                href={`/services/?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden"
               >
                 {/* Gradient border glow on hover */}
@@ -752,15 +749,15 @@ let list = services;
               Delivered to your inbox as a PDF within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚙️ Start Configurator →
               </Link>
               <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
                 ✉️ Email Us
               </a>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
-              </a>
+                                            ☎ +1 302 464 0950
+                                          </a>
             </div>
           </div>
         </div>
@@ -772,7 +769,7 @@ let list = services;
           <div className="text-center mb-8">
             <h2 className="text-xl font-bold text-white">Browse by Category</h2>
             <p className="text-slate-400 text-sm mt-1">
-              {serviceCount}+ services across 6 core capability areas
+              {`${serviceCount}+ services across 6 core capability areas`}
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -781,7 +778,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services?category=${cat.key}`}
+                  href={`/services/?category=${cat.key}`}
                   className="group relative flex flex-col items-center gap-2 p-5 rounded-2xl border border-slate-700/60 bg-slate-800/40 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all"
                 >
                   <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
@@ -827,7 +824,7 @@ let list = services;
         </div>
       </section>
 
-      {/* ── Service Search — find any of 626 services ── */}
+      {/* ── Service Search — find any of {serviceCount}+ services ── */}
       <ServiceGridWithSearch />
 
       {/* ── Spotlight Carousel ── */}
@@ -844,12 +841,12 @@ let list = services;
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { emoji: '🏆', label: '600+ Services', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
+{ emoji: '🏆', label: `${serviceCount}+ Services`, sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-blue-500/20 to-cyan-500/10' },
-              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-green-500/20 to-emerald-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
             ].map((badge, i) => (
-              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-cyan-500/30 transition-all`}>
+              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
                 <div className="text-xl font-bold text-white mb-1">{badge.label}</div>
                 <div className="text-sm text-slate-400">{badge.sub}</div>
@@ -868,18 +865,18 @@ let list = services;
       <section className="py-8 border-t border-slate-800">
         <div className="container-page">
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
-            <Link href="/faq" className="hover:text-cyan-400 transition">❓ FAQ</Link>
-            <Link href="/industry-solutions" className="hover:text-cyan-400 transition">🏭 Industry Solutions</Link>
-            <Link href="/services" className="hover:text-cyan-400 transition">🛠️ All Services</Link>
-            <Link href="/configurator" className="hover:text-cyan-400 transition">⚙️ Configurator</Link>
-            <Link href="/proposals" className="hover:text-cyan-400 transition">📄 Proposals</Link>
-            <Link href="/partners" className="hover:text-cyan-400 transition">🤝 Partners</Link>
-            <Link href="/status" className="hover:text-green-400 transition">● System Status</Link>
+            <Link href="/faq/" className="hover:text-purple-400 transition">❓ FAQ</Link>
+            <Link href="/industry-solutions/" className="hover:text-purple-400 transition">🏭 Industry Solutions</Link>
+            <Link href="/services/" className="hover:text-purple-400 transition">🛠️ All Services</Link>
+            <Link href="/configurator/" className="hover:text-purple-400 transition">⚙️ Configurator</Link>
+            <Link href="/proposals/" className="hover:text-purple-400 transition">📄 Proposals</Link>
+            <Link href="/partners/" className="hover:text-purple-400 transition">🤝 Partners</Link>
+            <Link href="/status/" className="hover:text-green-400 transition">● System Status</Link>
           </div>
         </div>
       </section>
 
-      {/* ── Free Tools & Interactive Utilities — 626-service catalog ── */}
+      {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section className="py-16 border-t border-slate-800">
         <div className="container-page">
           <div className="text-center mb-10">
@@ -893,34 +890,34 @@ let list = services;
             {[
               {
                 name: 'AI Service Router',
-                path: '/tools/ai-service-router',
+                path: '/tools/ai-service-router/',
                 emoji: '🧭',
                 gradient: 'from-purple-500 to-indigo-500',
-                desc: 'Type your need in plain language — AI matches you to the top services from our 626-service catalog in real time. Zero server calls.',
+                desc: 'Type your need in plain language — AI matches you to the top services in real time. Zero server calls.',
                 tag: 'New',
                 features: ['627 services scored live', 'Keyword + synonym expansion', 'Top-12 ranked results'],
               },
               {
                 name: 'ROI Calculator',
-                path: '/tools/roi-calculator',
+                path: '/tools/roi-calculator/',
                 emoji: '📈',
-                gradient: 'from-emerald-500 to-teal-500',
+                gradient: 'from-purple-500 to-pink-500',
                 desc: 'Estimate return on investment across AI, Automation, Cloud, Data, IT, or Security with category-specific lift multipliers.',
                 tag: '',
                 features: ['Small / Mid / Enterprise', '6-category lift model', 'Instant annual projection'],
               },
               {
                 name: 'Service Comparison',
-                path: '/tools/service-comparison',
+                path: '/tools/service-comparison/',
                 emoji: '⚖️',
-                gradient: 'from-cyan-500 to-blue-600',
+                gradient: 'from-purple-500 to-blue-600',
                 desc: 'Pick up to 3 services side-by-side on Overview, Features, Pricing, Benefits, and Timeline with full detail expansion.',
                 tag: '',
                 features: ['Up to 3-way compare', '5-tab deep breakdown', 'Full catalog browse'],
               },
               {
                 name: 'Service Recommender',
-                path: '/tools/service-recommender',
+                path: '/tools/service-recommender/',
                 emoji: '🎯',
                 gradient: 'from-amber-500 to-orange-500',
                 desc: 'Answer 4 quick qualification questions and get a personalised ranked shortlist of services matched to your industry and use case.',
@@ -929,7 +926,7 @@ let list = services;
               },
               {
                 name: 'Port Scanner',
-                path: '/tools/port-scanner',
+                path: '/tools/port-scanner/',
                 emoji: '🔍',
                 gradient: 'from-red-500 to-orange-500',
                 desc: 'Free online port scanner — enter a hostname or IP and instantly see which ports are open, filtered, or closed.',
@@ -938,9 +935,9 @@ let list = services;
               },
               {
                 name: 'SSL Certificate Checker',
-                path: '/tools/ssl-checker',
+                path: '/tools/ssl-checker/',
                 emoji: '🔒',
-                gradient: 'from-green-500 to-emerald-500',
+                gradient: 'from-purple-500 to-green-500',
                 desc: 'Check TLS certificate validity, issuer, expiry date, and chain depth for any domain — free, no account needed.',
                 tag: 'Free tool',
                 features: ['Expiry & issuer info', 'Chain depth check', 'Domain look-up'],
@@ -955,7 +952,7 @@ let list = services;
                   <span className="text-3xl">{tool.emoji}</span>
                   <div className="flex gap-1">
                     {tool.tag && (
-                      <span className="text-[10px] uppercase tracking-wider font-semibold text-cyan-300 bg-cyan-400/10 border border-cyan-500/30 px-2 py-0.5 rounded-full">
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-purple-300 bg-purple-400/10 border border-purple-500/30 px-2 py-0.5 rounded-full">
                         {tool.tag}
                       </span>
                     )}
@@ -975,7 +972,7 @@ let list = services;
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link href="/tools/ai-service-router" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
+            <Link href="/tools/ai-service-router/" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
             <p className="text-slate-500 text-xs mt-3">All tools are 100% free — no sign-up required. Your data never leaves your browser.</p>
           </div>
         </div>
@@ -991,8 +988,8 @@ let list = services;
             {INDUSTRIES.map(ind => {
               const catKey = INDUSTRY_CATS[ind.key] || ind.key.split('-')[0];
               return (
-                <a key={ind.key}
-                  href={`/services?category=${catKey}`}
+                <Link key={ind.key}
+                  href={`/services/?category=${catKey}`}
                   className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-3">
@@ -1006,14 +1003,13 @@ let list = services;
                       style={{ width: '100%', background: `linear-gradient(90deg, ${ind.color})` }}
                     />
                   </div>
-                </a>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
     <FloatingActionDock />
-    <Footer />
     </main>
   );
 }

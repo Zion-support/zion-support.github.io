@@ -2,13 +2,14 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
+
 import { allServices } from '@/data/servicesData';
 import type { Service } from '@/data/servicesData';
 
 const CAT_COLORS: Record<string, string> = {
   ai:        'bg-purple-900/50 text-purple-200 border-purple-500/30',
   it:        'bg-blue-900/50 text-blue-200 border-blue-500/30',
-  cloud:     'bg-cyan-900/50 text-cyan-200 border-cyan-500/30',
+  cloud:     'bg-purple-900/50 text-purple-200 border-purple-500/30',
   security:  'bg-orange-900/50 text-orange-200 border-orange-500/30',
   data:      'bg-emerald-900/50 text-emerald-200 border-emerald-500/30',
   automation:'bg-rose-900/50 text-rose-200 border-rose-500/30',
@@ -60,6 +61,40 @@ export default function ServicesExplorerPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 py-20">
+      {/* JSON-LD: CollectionPage + BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Service Explorer | Zion Tech Group",
+            description:
+              "Browse and filter 550+ enterprise AI and IT services by category, industry, stage, and keyword.",
+            url: "https://ziontechgroup.com/services-explorer",
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: services.length,
+              itemListElement: services
+                .slice(0, 20)
+                .map((svc: Service, i: number) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  url: `https://ziontechgroup.com/services/${svc.id}`,
+                  name: svc.title,
+                })),
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://ziontechgroup.com" },
+                { "@type": "ListItem", position: 2, name: "Service Explorer", item: "https://ziontechgroup.com/services-explorer" },
+              ],
+            },
+          }),
+        }}
+      />
       <div className="container-page">
         <a href="/" className="text-purple-400 text-sm hover:text-purple-300 transition">← Home</a>
 

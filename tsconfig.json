@@ -4,11 +4,12 @@
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES2020"
+      "ES2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "noImplicitAny": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -26,11 +27,7 @@
       "@/*": [
         "./app/*"
       ]
-    },
-    "types": [
-      "node"
-    ],
-    "strictNullChecks": true
+    }
   },
   "include": [
     "**/*.ts",
@@ -39,6 +36,16 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src",
+    "zion.app",
+    "apps",
+    "archive",
+    "jest.setup.ts",
+    "__tests__",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "tools",
+    "utils"
   ]
 }

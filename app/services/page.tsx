@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useMemo, Suspense } from 'react';
+
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import SmartSearchBar from '@/components/SmartSearchBar';
@@ -27,6 +28,9 @@ function ServicesContent() {
   const [activeCategory, setActiveCategory] = useState(urlCategory);
   const [searchQuery, setSearchQuery] = useState('');
 
+  const firstTier = (pricing: Record<string,string>): string =>
+    Object.values(pricing)[0] || 'Contact for Quote';
+
   const filteredServices = useMemo(() => {
     let services = allServices;
     if (activeCategory !== 'all') services = services.filter((s: Service) => s.category === activeCategory);
@@ -39,6 +43,40 @@ function ServicesContent() {
 
   return (
     <main className="min-h-screen bg-slate-950 py-20">
+      {/* JSON-LD: CollectionPage + BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Enterprise AI & IT Services | Zion Tech Group",
+            description:
+              "Browse 550+ AI, IT, cloud, security, data analytics, and automation services — from chatbots and RAG to IoT and DevSecOps.",
+            url: "https://ziontechgroup.com/services",
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: allServices.length,
+              itemListElement: allServices
+                .slice(0, 20)
+                .map((s: Service, i: number) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  url: `https://ziontechgroup.com/services/${s.id}`,
+                  name: s.title,
+                })),
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://ziontechgroup.com" },
+                { "@type": "ListItem", position: 2, name: "Services", item: "https://ziontechgroup.com/services" },
+              ],
+            },
+          }),
+        }}
+      />
       <div className="container-page">
         <h1 className="text-4xl font-bold text-white mb-2 text-center">Our Complete Service Catalog</h1>
         <p className="section-subheading text-center">{allServices.length}+ real-world services across 6 categories</p>
@@ -69,7 +107,7 @@ function ServicesContent() {
               </div>
               <div className="mt-auto pt-4 border-t border-slate-700/50">
                 <div className="flex justify-between items-center">
-                  <span className="text-purple-300 text-sm font-medium">Starting at {(service.pricing as Record<string,string>)[Object.keys(service.pricing)[0]]}</span>
+                  <span className="text-purple-300 text-sm font-medium">Starting at {firstTier(service.pricing)}</span>
                 </div>
                 <Link href={`/services/${service.id}`} className="text-sm text-purple-400 hover:underline inline-flex items-center gap-1 mt-1">View Details →</Link>
               </div>
@@ -77,8 +115,8 @@ function ServicesContent() {
           ))}
         </div>
         <div className="text-center mt-16">
-          <Link href="/configurator" className="btn-primary text-lg">Get Your Custom Proposal →</Link>
-          <p className="text-slate-500 text-sm mt-4">Or call us: <a href="tel:+130****0950" className="text-purple-300">+1 302 464 0950</a></p>
+          <Link href="/configurator/" className="btn-primary text-lg">Get Your Custom Proposal →</Link>
+          <p className="text-slate-500 text-sm mt-4">Or call us: <a href="tel:+13024640950" className="text-purple-300">+1 302 464 0950</a></p>
         </div>
       </div>
     </main>
