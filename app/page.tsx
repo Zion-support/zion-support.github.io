@@ -772,7 +772,7 @@ let list = services;
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">🤖 AI-Powered Email Intelligence Suite</h2>
             <p className="text-slate-400 text-sm max-w-2xl mx-auto">
-              27 intelligent email modules (V42–V68) that analyze every message case-by-case, choose the right tone, route to the best response strategy, and learn continuously from every interaction.
+              29 intelligent email modules (V42–V70) that analyze every message case-by-case, choose the right tone, route to the best response strategy, and learn continuously from every interaction.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -861,6 +861,12 @@ let list = services;
               { key: 'V68', name: 'Contextual Templates', emoji: '📝', color: 'from-amber-500/20 to-yellow-500/10 border-amber-500/30',
                 desc: 'Generates dynamic, different-every-time reply templates using intent + sender profiles + thread memory + reply stage + tone. 144 seeded templates across 8 reply stages and 6 tones. Never sends the same email twice.',
                 tech: '12-context variable system · Thread repetition guard · 8 reply stage classifiers · 20+ languages · Locale-aware greetings and salutations' },
+              { key: 'V69', name: 'Delegation Tracker', emoji: '📋', color: 'from-emerald-500/20 to-green-500/10 border-emerald-500/30',
+                desc: 'Parses action items from every email, creates tracked tasks with owners and due dates, syncs to Asana/Jira/Linear, sends optimal-interval reminders, and escalates overdue tasks automatically.',
+                tech: 'NLP action extraction · Decision capture · Asana/Jira/Linear hooks · 48h overdue escalation · Reminder timing engine · Accountability chain' },
+              { key: 'V70', name: 'Reply Influence Score', emoji: '📊', color: 'from-pink-500/20 to-rose-500/10 border-pink-500/30',
+                desc: 'Scores every outbound email on 50+ influence factors before it goes out — clarity, specificity, urgency, CTA, personalization, social proof — then suggests the highest-lift fixes to maximize reply rates.',
+                tech: '50+ influence factors · Per-dimension breakdown · Reply probability prediction · Top-3 actionable improvements · Estimated reply lift %' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">

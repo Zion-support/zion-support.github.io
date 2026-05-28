@@ -20706,5 +20706,305 @@
       "Monthly strategy reviews"
     ],
     "featured": "AI Services"
+  },
+  {
+    "id": "saas-397",
+    "title": "email-delegation-task-tracker",
+    "category": "saas",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 69
+    },
+    "shortDescription": 249,
+    "description": "Parses every email for action items, creates tasks with owners and due dates, syncs to Asana/Jira/Linear, and auto-escalates overdue tasks.",
+    "features": "NLP extraction engine identifies delegation verbs, owner mentions, and deadlines from email body text. Creates structured TaskRecords with platform webhooks, optimal reminder timing (2h before deadline), and 48h overdue escalation paths. Decision capture module logs thread decisions separately.",
+    "featured": [
+      "NLP action extraction (owner + due date)",
+      "Asana/Jira/Linear webhook sync",
+      "48h overdue escalation",
+      "Optimal reminder timing engine",
+      "Decision capture from threads",
+      "Accountability chain with attribution"
+    ]
+  },
+  {
+    "id": "saas-398",
+    "title": "email-reply-influence-scorer",
+    "category": "saas",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 59
+    },
+    "shortDescription": 199,
+    "description": "Scores every outbound email on 50+ influence factors before it goes out and suggests highest-lift improvements to maximize reply rates.",
+    "features": "3-pass analysis: Structure (clarity/readability), Language (specificity/value), Psychology (urgency/social proof). Outputs 0-100 composite score, per-dimension breakdown, reply probability prediction, and top-3 ranked suggestions ordered by score-lift potential. Reading level estimator included.",
+    "featured": [
+      "50+ influence factors across 8 dimensions",
+      "3-pass analysis engine (structure/language/psychology)",
+      "Per-dimension score (0-100) with weighted composite",
+      "Reply probability prediction (0-100%)",
+      "Top-3 ranked improvements by score lift",
+      "Reading level and sentiment analysis"
+    ]
+  },
+  {
+    "id": "saas-399",
+    "title": "micro-saas-revenue-forecasting",
+    "category": "saas",
+    "pricing": {
+      "monthly": "saas",
+      "setup": 39
+    },
+    "shortDescription": 149,
+    "description": "Forecast MRR, ARR, and churn scenarios for the next 12 months — best case, realistic, and worst case — with visual charts and board-ready exports.",
+    "features": "Multi-scenario revenue modeler: best case (low churn + high growth), realistic base case, and worst case (high churn + low growth). Supports Stripe/PayPal integration for live data import. Outputs monthly P&L projections, EBITDA estimates, and runway runway analysis for 6/12/18 month horizons.",
+    "featured": [
+      "12-month MRR/ARR forecasting",
+      "Best/realistic/worst case scenarios",
+      "Stripe/PayPal live data integration",
+      "Monthly P&L projections",
+      "Runway analysis (6/12/18 month)",
+      "Board-ready export (PDF)"
+    ]
+  },
+  {
+    "id": "saas-400",
+    "title": "micro-saas-payroll-automation",
+    "category": "saas",
+    "pricing": {
+      "monthly": "saas",
+      "setup": 49
+    },
+    "shortDescription": 199,
+    "description": "Automated payroll for freelancers and micro-SaaS teams: contractor timesheets, invoice generation, payment scheduling, and 1099/1099-NEC generation.",
+    "features": "Time tracking via Toggl/jira integration, contractor rate management, invoice auto-generation (white-label with your branding), payment scheduling, and annual 1099/1099-NEC IRS form generation. Multi-currency support with real-time FX conversion. Connects to Gusto and Rippling for payroll disbursement.",
+    "featured": [
+      "Toggl/Jira time integration",
+      "White-label invoice generation",
+      "Multi-currency FX conversion",
+      "Payment scheduling",
+      "1099/1099-NEC form generation",
+      "Gusto/Rippling integration"
+    ]
+  },
+  {
+    "id": "saas-401",
+    "title": "micro-saas-churn-save-playbook",
+    "category": "saas",
+    "pricing": {
+      "monthly": "saas",
+      "setup": 59
+    },
+    "shortDescription": 249,
+    "description": "Identifies at-risk customers before they churn and triggers automated save playbooks: discounts, human outreach, executive escalation, and renewal offers.",
+    "features": "20+ behavioral churn signals (login drop, feature neglect, support spike, payment failure, NPS decline). At-risk tier triggers automated drip sequence (days 1-3-7-14-30) with personalized save offers. Critical tier triggers immediate human outreach within 4h. Executive escalation at 30-day mark. Saves tracked in ROI dashboard.",
+    "featured": [
+      "20+ churn risk signals",
+      "4-tier health classification",
+      "Automated save playbook drip (1-3-7-14-30 days)",
+      "4h human outreach SLA for critical tier",
+      "Executive escalation at 30 days",
+      "Save ROI tracking dashboard"
+    ]
+  },
+  {
+    "id": "saas-402",
+    "title": "startup-investor-intel",
+    "category": "saas",
+    "pricing": {
+      "monthly": "saas",
+      "setup": 79
+    },
+    "shortDescription": 299,
+    "description": "Build a curated startup investor pipeline — tracks VC/Angel/CVC activity, portfolio focus shifts, news signals, and generates personalized outreach sequences.",
+    "features": "Investor CRM with 50K+ VC/Angel/CVC profiles. Tracks fund deployment cycles, portfolio company focus, sector偏好 shifts, and co-investment networks (who co-invests with whom). News signal trigger on portfolio company exits, new bets, or team changes. Auto-generates personalized cold outreach sequences with intro email + LinkedIn touch.",
+    "featured": [
+      "50K+ VC/Angel/CVC profiles",
+      "Fund deployment cycle tracking",
+      "Portfolio focus shift detection",
+      "Co-investment network mapping",
+      "News signal triggers",
+      "Personalized outreach sequence generator"
+    ]
+  },
+  {
+    "id": "saas-403",
+    "title": "freelancer-portal-dashboard",
+    "category": "saas",
+    "pricing": {
+      "monthly": "saas",
+      "setup": 29
+    },
+    "shortDescription": 99,
+    "description": "A professional client portal for freelancers: project workspaces, file sharing, time tracking, milestone billing, and client login dashboards.",
+    "features": "White-label client portals with project workspaces, file versioning, milestone tracking, and milestone-based billing. Client gets their own login dashboard to view progress, approve deliverables, and pay invoices. Auto-generates weekly progress reports to send to clients. Integrates with QuickBooks, Stripe, and PayPal.",
+    "featured": [
+      "White-label client portals",
+      "Milestone-based billing",
+      "File versioning and sharing",
+      "Weekly progress auto-reports",
+      "QuickBooks/Stripe/PayPal integration",
+      "Client dashboard with approval workflow"
+    ]
+  },
+  {
+    "id": "saas-404",
+    "title": "legal-contract-redline",
+    "category": "saas",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 99
+    },
+    "shortDescription": 399,
+    "description": "AI-powered legal redline: compares contract versions, flags risky clauses, and auto-drafts fair-language improvements — outputs redlined PDF with explanation notes.",
+    "features": "Ingests two PDF/DOCX contract versions, runs A/B diff analysis, and flags 30+ risk categories: unlimited liability, auto-renewal, IP assignment, non-compete traps, data lock-in, and SLA gaps. Generates fair-language replacement clauses with plain-English explanations of why each is risky and what to demand instead.",
+    "featured": [
+      "Contract A/B diff analysis",
+      "30+ risk category detection",
+      "Auto-drafted fair-language replacements",
+      "Plain-English risk explanations",
+      "PDF redline output with margin notes",
+      "Risk severity scoring (1-10)"
+    ]
+  },
+  {
+    "id": "saas-405",
+    "title": "seo-keyword-intelligence",
+    "category": "saas",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 59
+    },
+    "shortDescription": 199,
+    "description": "Discover, cluster, and prioritize SEO keywords in under 5 minutes — generates ready-to-rank content briefs with headings, word count targets, and NLP entity suggestions.",
+    "features": "Keyword research engine: paste a seed keyword or URL, get 200+ keyword clusters by search intent (informational/navigational/transactional/commercial). SERP analysis scores difficulty, volume, and CPC per cluster. Auto-generates 1,500-word content briefs with headline suggestions, NLP entity targets, internal linking recommendations, and FAQ sections.",
+    "featured": [
+      "200+ keyword cluster per seed",
+      "SERP difficulty/volume/CPC scoring",
+      "Search intent classification (4 types)",
+      "Auto-generated 1,500w content briefs",
+      "NLP entity and FAQ suggestions",
+      "Internal linking recommendations"
+    ]
+  },
+  {
+    "id": "saas-406",
+    "title": "conversion-copy-audit",
+    "category": "saas",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 49
+    },
+    "shortDescription": 179,
+    "description": "Paste any landing page or sales email copy and get a full conversion teardown: headline score, CTA strength, trust signals, objection handling, and specific rewrite recommendations.",
+    "features": "NLP-powered copywriting auditor scores 30 conversion elements: headline power (0-100), subheadline value prop, hero image alignment, CTA button copy, body scroll depth, social proof placement, objection handling coverage, and FAQ completeness. Outputs heatmap-style weakness map plus specific sentence-level rewrite suggestions for each failing element.",
+    "featured": [
+      "30-element conversion audit",
+      "Headline power score (0-100)",
+      "Heatmap-style weakness map",
+      "CTA button copy analysis",
+      "Objection handling coverage matrix",
+      "Sentence-level rewrite recommendations"
+    ]
+  },
+  {
+    "id": "saas-407",
+    "title": "ai-linkedin-intelligence",
+    "category": "saas",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 39
+    },
+    "shortDescription": 149,
+    "description": "Analyze any LinkedIn profile or company page and get competitive intelligence: messaging gaps, content performance benchmarks, and a personalized LinkedIn strategy in 3 minutes.",
+    "features": "Profile URL ingestion, NLP messaging analysis (headline, About, Experience descriptions), content topic modeling from posts (last 90 days), engagement rate benchmarking against 10 similar profiles, and personalized content calendar with 8 topic pillars. Ideal for B2B sales teams doing social selling and personal branding.",
+    "featured": [
+      "LinkedIn profile/company URL analysis",
+      "NLP messaging gap analysis",
+      "Content topic modeling (90-day window)",
+      "Engagement rate benchmarking",
+      "8 topic pillar content calendar",
+      "Personalized LinkedIn strategy report"
+    ]
+  },
+  {
+    "id": "it-408",
+    "title": "cloud-cost-anomaly-detection",
+    "category": "it",
+    "pricing": {
+      "monthly": "it",
+      "setup": 89
+    },
+    "shortDescription": 399,
+    "description": "Real-time cloud spend monitoring: detects anomalies, prevents surprise billing, and auto-rightsizes over-provisioned instances before your bill arrives.",
+    "features": "Connects to AWS Cost Explorer, GCP Billing, and Azure Cost Management. ML-powered anomaly detection modeled on normal spend patterns (7-day baseline). Auto-alerts at $100 / $500 / $1K thresholds. Auto-rightsizing recommendations for EC2, RDS, and Azure VMs. Unused Reserved Instance detection. Monthly savings report with projected annual savings.",
+    "featured": [
+      "AWS/GCP/Azure native integration",
+      "ML anomaly detection (7-day baseline)",
+      "Threshold alerts ($100/$500/$1K)",
+      "Auto-rightsizing recommendations",
+      "Unused RI detection",
+      "Monthly savings report"
+    ]
+  },
+  {
+    "id": "it-409",
+    "title": "multi-cloud-disaster-recovery",
+    "category": "it",
+    "pricing": {
+      "monthly": "it",
+      "setup": 149
+    },
+    "shortDescription": 699,
+    "description": "Automated DR orchestration across AWS/GCP/Azure: RPO/RTO targets, Failover testing, snapshot verification, and one-click failback.",
+    "features": "DR-as-Code: define RPO (recovery point objective) and RTO (recovery time objective) targets via Terraform-style config. Automated daily snapshots verified with checksum integrity. Monthly failover testing with automated runbook execution. One-click failback with stateful application rollback. Supports SQL Server, Oracle, PostgreSQL, MongoDB, and Kubernetes workloads.",
+    "featured": [
+      "DR-as-Code (Infrastructure as Config)",
+      "RPO/RTO target management",
+      "Automated snapshot + checksum verification",
+      "Monthly failover testing with runbooks",
+      "One-click failback with stateful rollback",
+      "SQL/Oracle/PostgreSQL/MongoDB/K8s support"
+    ]
+  },
+  {
+    "id": "it-410",
+    "title": "it-asset-lifecycle-manager",
+    "category": "it",
+    "pricing": {
+      "monthly": "it",
+      "setup": 49
+    },
+    "shortDescription": 199,
+    "description": "Track every hardware and software asset from procurement to retirement — license compliance, warranty tracking, refresh scheduling, and audit-ready exports.",
+    "features": "CI/CD integration for software asset discovery. Hardware registry tracks device purchase date, warranty expiry, and refresh date. License compliance engine checks SAM (Microsoft, Adobe, Autodesk) against actual deployments. Auto-flags underutilized licenses. Audit-ready CSV/PDF export for Microsoft SAM assessments and ISO 19770-1 compliance.",
+    "featured": [
+      "Hardware + software asset registry",
+      "Microsoft/Adobe/Autodesk SAM compliance",
+      "Warranty + refresh date tracking",
+      "Underutilized license flagging",
+      "ISO 19770-1 audit-ready export",
+      "CI/CD integration for asset discovery"
+    ]
+  },
+  {
+    "id": "ai-411",
+    "title": "email-intelligence-suite-api",
+    "category": "ai",
+    "pricing": {
+      "monthly": "ai",
+      "setup": 299
+    },
+    "shortDescription": 999,
+    "description": "Enterprise API license for all 29 Email Intelligence modules (V42–V70): categorized routing, tone adaptation, cross-language replies, escalation prediction, delegation tracking, and contextual templates.",
+    "features": "Full programmatic API access to every Zion Email Intelligence module. REST + webhooks. Scales to 100K emails/month. Includes SLA guarantees, dedicated support, and monthly strategy reviews.",
+    "featured": [
+      "29 email module APIs (V42-V70)",
+      "REST + webhook access",
+      "100K emails/month throughput",
+      "99.9% uptime SLA",
+      "Dedicated support channel",
+      "Monthly strategy reviews"
+    ]
   }
 ]
