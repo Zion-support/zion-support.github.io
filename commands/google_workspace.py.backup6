@@ -17,20 +17,10 @@ WORKSPACE = home / '.openclaw' / 'workspace'
 TOKENS_FILE = WORKSPACE / 'gog_tokens.json'
 
 def load_gog_tokens():
-    try:
-        with open(TOKENS_FILE) as f:
-            content = f.read().strip()
-            if not content:
-                # Return empty dict if file is empty
-                return {}
-            return json.loads(content)
-    except (FileNotFoundError, json.JSONDecodeError):
-        # Return empty dict if file doesn't exist or is invalid JSON
-        return {}
+    with open(TOKENS_FILE) as f:
+        return json.load(f)
 
 def refresh_access_token(tokens):
-    if not tokens:
-        return None
     now_utc = datetime.datetime.now(datetime.timezone.utc)
     expiry_str = tokens.get('expiry', '')
     if expiry_str:
@@ -41,56 +31,40 @@ def refresh_access_token(tokens):
                 return tokens['access_token']
         except Exception: pass
     data = urllib.parse.urlencode({
-        'client_id': tokens.get('client_id', ''),
-        'client_secret': tokens.get('client_secret', ''),
-        'refresh_token': tokens.get('refresh_token', ''),
+        'client_id': tokens['client_id'],
+        'client_secret': tokens['client_secret'],
+        'refresh_token': tokens['refresh_token'],
         'grant_type': 'refresh_token',
     }).encode()
     req = urllib.request.Request('https://oauth2.googleapis.com/token', data=data,
         headers={'Content-Type': 'application/x-www-form-urlencoded'})
-    try:
-        resp = json.loads(urllib.request.urlopen(req).read())
-        tokens['access_token'] = resp['access_token']
-        exp_in = resp.get('expires_in', 3600)
-        tokens['expiry'] = (now_utc + datetime.timedelta(seconds=exp_in)).isoformat()
-        with open(TOKENS_FILE, 'w') as f:
-            json.dump(tokens, f)
-        return tokens['access_token']
-    except Exception as e:
-        print(f"Error refreshing token: {e}")
-        return None
+    resp = json.loads(urllib.request.urlopen(req).read())
+    tokens['access_token'] = resp['access_token']
+    exp_in = resp.get('expires_in', 3600)
+    tokens['expiry'] = (now_utc + datetime.timedelta(seconds=exp_in)).isoformat()
+    with open(TOKENS_FILE, 'w') as f:
+        json.dump(tokens, f)
+    return tokens['access_token']
 
 def gog_headers():
     tokens = load_gog_tokens()
     token = refresh_access_token(tokens)
-    if token:
-        return {'Authorization': f'Bearer {token}'}
-    else:
-        # Return empty headers if no token available
-        return {}
+    return {'Authorization': f'Bearer {token}'}
 
 def goggle_search(query, limit=20):
     """Search Gmail for messages matching query."""
     url = 'https://gmail.googleapis.com/gmail/v1/users/me/messages'
     params = urllib.parse.urlencode({'q': query, 'maxResults': limit})
     req = urllib.request.Request(f'{url}?{params}', headers=gog_headers())
-    try:
-        resp = json.loads(urllib.request.urlopen(req).read())
-        return resp.get('messages', [])
-    except Exception as e:
-        print(f"Error in goggle_search: {e}")
-        return []
+    resp = json.loads(urllib.request.urlopen(req).read())
+    return resp.get('messages', [])
 
 def gmail_get(message_id):
     """Get a full Gmail message by ID."""
     url = f'https://gmail.googleapis.com/gmail/v1/users/me/messages/{message_id}'
     req = urllib.request.Request(url, headers=gog_headers())
-    try:
-        resp = json.loads(urllib.request.urlopen(req).read())
-        return resp
-    except Exception as e:
-        print(f"Error in gmail_get: {e}")
-        return {}
+    resp = json.loads(urllib.request.urlopen(req).read())
+    return resp
 
 def gmail_send_reply_fixed(to, subject, body, thread_id=None):
     """Send a reply via Gmail (fixed version)."""
@@ -127,37 +101,29 @@ def gmail_batch_modify(message_ids, add_label_ids=None, remove_label_ids=None):
         body['removeLabelIds'] = remove_label_ids
     data = json.dumps(body).encode()
     req = urllib.request.Request(url, data=data, headers={**gog_headers(), 'Content-Type': 'application/json'})
-    try:
-        resp = json.loads(urllib.request.urlopen(req).read())
-        return resp
-    except Exception as e:
-        print(f"Error in gmail_batch_modify: {e}")
-        return {}
+    resp = json.loads(urllib.request.urlopen(req).read())
+    return resp
 
 def gmail_get_or_create_label_id(label_name):
     """Get or create a Gmail label by name, returning its ID."""
     # First, try to list labels to find existing one
     url = 'https://gmail.googleapis.com/gmail/v1/users/me/labels'
     req = urllib.request.Request(url, headers=gog_headers())
-    try:
-        resp = json.loads(urllib.request.urlopen(req).read())
-        for label in resp.get('labels', []):
-            if label.get('name') == label_name:
-                return label['id']
-        # If not found, create it
-        url = 'https://gmail.googleapis.com/gmail/v1/users/me/labels'
-        label_obj = {
-            'name': label_name,
-            'labelListVisibility': 'labelShow',
-            'messageListVisibility': 'show'
-        }
-        data = json.dumps(label_obj).encode()
-        req = urllib.request.Request(url, data=data, headers={**gog_headers(), 'Content-Type': 'application/json'})
-        resp = json.loads(urllib.request.urlopen(req).read())
-        return resp.get('id')
-    except Exception as e:
-        print(f"Error in gmail_get_or_create_label_id: {e}")
-        return None
+    resp = json.loads(urllib.request.urlopen(req).read())
+    for label in resp.get('labels', []):
+        if label.get('name') == label_name:
+            return label['id']
+    # If not found, create it
+    url = 'https://gmail.googleapis.com/gmail/v1/users/me/labels'
+    label_obj = {
+        'name': label_name,
+        'labelListVisibility': 'labelShow',
+        'messageListVisibility': 'show'
+    }
+    data = json.dumps(label_obj).encode()
+    req = urllib.request.Request(url, data=data, headers={**gog_headers(), 'Content-Type': 'application/json'})
+    resp = json.loads(urllib.request.urlopen(req).read())
+    return resp.get('id')
 
 # Alias for backward compatibility
 gmail_search = goggle_search

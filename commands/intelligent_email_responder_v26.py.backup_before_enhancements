@@ -27,11 +27,6 @@ V26_STATS  = DATA / 'v26_stats.jsonl'
 V28_TQ_LOG = DATA / 'template_quality.jsonl'
 V28_TQ_AUDIT = DATA / 'template_quality_audit.jsonl'
 
-try:
-    from v32_modules.lang_detector import detect_lang, LangDetectionError
-except ImportError:
-    # Local fallback functions will be used
-    pass
 _PROMOTION_WINDOW     = 200
 _QUARANTINE_THRESHOLD = 70.0
 _CANONICAL_THRESHOLD  = 90.0
@@ -373,38 +368,7 @@ def _log_stats(record: dict):
     except Exception:
         pass
 
-def _analyze_response_effectiveness(email_id: str, intent_label: str, action_taken: str, 
-                                   tone_data: dict, quality_score: float, elapsed_ms: float) -> dict:
-    """Analyze response effectiveness for continuous improvement."""
-    effectiveness = {
-        "email_id": email_id,
-        "intent": intent_label,
-        "action": action_taken,
-        "tone": tone_data.get("formality", "neutral") if isinstance(tone_data, dict) else "neutral",
-        "quality_score": quality_score,
-        "response_time_ms": elapsed_ms,
-        "effectiveness_rating": "unknown"
-    }
-    
-    # Determine effectiveness based on quality score and response time
-    if quality_score >= 90 and elapsed_ms < 1000:
-        effectiveness["effectiveness_rating"] = "excellent"
-    elif quality_score >= 80 and elapsed_ms < 2000:
-        effectiveness["effectiveness_rating"] = "good"
-    elif quality_score >= 70:
-        effectiveness["effectiveness_rating"] = "fair"
-    else:
-        effectiveness["effectiveness_rating"] = "needs_improvement"
-    
-    # Log for analytics
-    try:
-        effectiveness_log = DATA / 'response_effectiveness.jsonl'
-        with open(effectiveness_log, 'a') as f:
-            f.write(json.dumps(effectiveness, ensure_ascii=False) + '\n')
-    except Exception:
-        pass
-    
-    return effectiveness
+
 # ═══════════════════════════════════════════════════════════════
 #  TEMPLATE LIBRARY
 # ═══════════════════════════════════════════════════════════════
@@ -1861,7 +1825,6 @@ class V26Responder:
         except Exception:
             pass
 
-        _analyze_response_effectiveness(tid, intent_label, "send_fast", tone_data, min_qc["overall_score"], round((time.monotonic() - t0) * 1000, 1))
         result = add_to_result(email, {"action": "send_fast", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,
                 "thread_intent": thread_intent_label,
@@ -2225,7 +2188,6 @@ class V26Responder:
                   "thread_id": tid})
         except Exception:
             pass
- _analyze_response_effectiveness(tid, intent_label, "send", tone_data, min_qc["overall_score"], round((time.monotonic() - t0) * 1000, 1))
 
         result = add_to_result(email, {"action": "send", "intent": intent_label,
                 "reply_all": reply_all_ok, "tone": tone_data,

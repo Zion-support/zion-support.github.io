@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
-import QRCode from 'qrcode.react';
 
 export default function QRCodeGenerator() {
   const [url, setUrl] = useState('https://ziontechgroup.com');
@@ -17,6 +16,10 @@ export default function QRCodeGenerator() {
       setValid(false);
     }
   };
+
+  const qrCodeUrl = valid && url 
+    ? 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=' + encodeURIComponent(url) + '&choe=UTF-8'
+    : '';
 
   return (
     <main className="mx-auto max-w-3xl p-8">
@@ -38,19 +41,19 @@ export default function QRCodeGenerator() {
         </label>
         {valid && url && (
           <div className="flex flex-col items-center space-y-3 pt-4">
-            <QRCode value={url} size={200} bgColor="#0f172a" fgColor="#a78bfa" />
+            <img
+              src={qrCodeUrl}
+              alt="QR Code"
+              className="border border-slate-600"
+            />
             <a
-              href={`data:image/png;base64,${(() => {
-                const canvas = document.createElement('canvas');
-                // In a real implementation you would render to canvas and convert.
-                return '';
-              })()}`}
+              href={qrCodeUrl}
               download="qr-code.png"
               className="text-sm text-purple-300 hover:underline"
             >
               Download QR Code
             </a>
-            <p className="text-xs text-slate-400">Right‑click the QR code and choose “Save image” to download.</p>
+            <p className="text-xs text-slate-400">Right-click the QR code and choose “Save image” to download.</p>
           </div>
         )}
       </div>

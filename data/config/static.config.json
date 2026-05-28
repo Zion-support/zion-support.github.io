@@ -1,0 +1,15 @@
+{
+  "config_version": "v1.0",
+  "static_site": true,
+  "output": "export",
+  "build_command": "next build --webpack",
+  "env": {
+    "NODE_VERSION": "20",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "features": {
+    "static_export": true,
+    "no_database": true,
+    "no_backend": true
+  }
+}

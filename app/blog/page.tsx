@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+
+
 export const metadata: Metadata = {
   title: 'Blog | Zion Tech Group',
   description:
@@ -106,3 +108,5 @@ export default function BlogIndexPage() {
     </div>
   );
 }
+
+

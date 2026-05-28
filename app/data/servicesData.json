@@ -17788,5 +17788,306 @@
       "Patch CVE not by its disclosure date but by its patch-readiness score",
       "Endpoint firewall stops lateral movement as EDR detects and alarms"
     ]
+  },
+  {
+    "id": "ai-powered-code-reviewer",
+    "title": "AI-Powered Code Reviewer",
+    "description": "Automated code review system that uses machine learning to identify bugs, security vulnerabilities, and code quality issues before they reach production.",
+    "icon": "\ud83d\udd0d",
+    "features": [
+      "Real-time static analysis with ML-powered bug detection",
+      "Security vulnerability scanning (OWASP Top 10)",
+      "Code smell and technical debt identification",
+      "Automated fix suggestions with confidence scores",
+      "Integration with GitHub, GitLab, and Bitbucket",
+      "Customizable rule sets per team/project",
+      "Trend analysis and improvement tracking"
+    ],
+    "benefits": [
+      "Reduce production bugs by up to 70%",
+      "Cut code review time from hours to minutes",
+      "Improve overall code quality and maintainability",
+      "Catch security issues before they become breaches",
+      "Enforce consistent coding standards automatically",
+      "Free up senior developers for higher-value tasks",
+      "Provide actionable metrics for engineering leadership"
+    ],
+    "pricing": {
+      "basic": "29",
+      "pro": "99",
+      "enterprise": "499"
+    },
+    "contactInfo": {
+      "website": "/services/ai-powered-code-reviewer",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-powered-code-reviewer",
+    "category": "ai",
+    "popular": true,
+    "tags": [
+      "developer-tools",
+      "devops",
+      "security",
+      "quality-assurance"
+    ]
+  },
+  {
+    "id": "smart-document-automation",
+    "title": "Smart Document Automation",
+    "description": "Intelligent document processing platform that automatically extracts, classifies, and routes business documents using computer vision and natural language processing.",
+    "icon": "\ud83d\udcc4",
+    "features": [
+      "OCR with 99.8% accuracy for scanned documents",
+      "AI-powered document classification and tagging",
+      "Automated data extraction from invoices, contracts, forms",
+      "Smart routing based on document content and metadata",
+      "Integration with ERP, CRM, and document management systems",
+      "Version control and audit trail for compliance",
+      "Custom workflow builder with drag-and-drop interface"
+    ],
+    "benefits": [
+      "Reduce manual data entry by 90%",
+      "Process documents 10x faster than manual methods",
+      "Eliminate data entry errors and typos",
+      "Ensure regulatory compliance with audit trails",
+      "Free up staff for customer-facing activities",
+      "Scale document processing without hiring",
+      "Gain insights from previously locked document data"
+    ],
+    "pricing": {
+      "basic": "49",
+      "pro": "149",
+      "enterprise": "799"
+    },
+    "contactInfo": {
+      "website": "/services/smart-document-automation",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/smart-document-automation",
+    "category": "ai",
+    "popular": true,
+    "tags": [
+      "document-processing",
+      "ocr",
+      "automation",
+      "enterprise"
+    ]
+  },
+  {
+    "id": "zero-trust-network-security",
+    "title": "Zero Trust Network Security",
+    "description": "Comprehensive zero trust security platform that verifies every user, device, and connection before granting access to corporate resources.",
+    "icon": "\ud83d\udd12",
+    "features": [
+      "Identity-based micro-segmentation",
+      "Continuous authentication and authorization",
+      "Device posture checking and compliance validation",
+      "Encrypted traffic inspection without performance impact",
+      "Just-in-time access provisioning",
+      "Behavioral analytics for anomaly detection",
+      "Integration with existing identity providers (AD, Okta, Azure AD)"
+    ],
+    "benefits": [
+      "Prevent lateral movement during breaches",
+      "Reduce attack surface by eliminating implicit trust",
+      "Enable secure remote work without VPN complexity",
+      "Meet compliance requirements (HIPAA, PCI-DSS, GDPR)",
+      "Reduce security alert fatigue with intelligent prioritization",
+      "Protect against insider threats and compromised credentials",
+      "Provide visibility into all network communications"
+    ],
+    "pricing": {
+      "basic": "79",
+      "pro": "249",
+      "enterprise": "1299"
+    },
+    "contactInfo": {
+      "website": "/services/zero-trust-network-security",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/zero-trust-network-security",
+    "category": "security",
+    "popular": false,
+    "tags": [
+      "cybersecurity",
+      "network-security",
+      "zero-trust",
+      "compliance"
+    ]
+  },
+  {
+    "id": "ai-customer-insights-platform",
+    "title": "AI Customer Insights Platform",
+    "description": "Advanced analytics platform that uses artificial intelligence to analyze customer interactions, feedback, and behavior to predict churn and identify upsell opportunities.",
+    "icon": "\ud83d\udc65",
+    "features": [
+      "Multi-channel customer interaction analysis",
+      "Sentiment analysis with emotion detection",
+      "Predictive churn modeling with 90%+ accuracy",
+      "Automated customer segmentation and persona generation",
+      "Real-time next-best-action recommendations",
+      "Voice of customer analysis from calls, chats, emails",
+      "Integration with CRM, helpdesk, and marketing platforms"
+    ],
+    "benefits": [
+      "Reduce customer churn by identifying at-risk accounts early",
+      "Increase customer lifetime value through targeted interventions",
+      "Improve customer satisfaction scores by 25-40%",
+      "Identify upsell and cross-sell opportunities automatically",
+      "Reduce manual analysis time from weeks to minutes",
+      "Make data-driven decisions about product improvements",
+      "Align sales, marketing, and support teams around customer needs"
+    ],
+    "pricing": {
+      "basic": "129",
+      "pro": "399",
+      "enterprise": "1999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-customer-insights-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-customer-insights-platform",
+    "category": "ai",
+    "popular": true,
+    "tags": [
+      "customer-analytics",
+      "predictive-analytics",
+      "crm",
+      "marketing"
+    ]
+  },
+  {
+    "id": "automated-compliance-monitor",
+    "title": "Automated Compliance Monitor",
+    "description": "Continuous compliance monitoring system that automatically tracks regulatory changes and ensures ongoing adherence to industry standards and government regulations.",
+    "icon": "\ud83d\udccb",
+    "features": [
+      "Real-time regulatory change tracking",
+      "Automated control testing and evidence collection",
+      "Risk scoring and prioritization based on impact",
+      "Policy management with version control and approval workflows",
+      "Audit preparation with one-click report generation",
+      "Integration with GRC, ERP, and HR systems",
+      "Customizable frameworks (SOX, GDPR, HIPAA, PCI-DSS, ISO 27001)"
+    ],
+    "benefits": [
+      "Reduce compliance management costs by 60%",
+      "Eliminate surprise findings during audits",
+      "Continuously monitor compliance posture in real-time",
+      "Reduce manual effort for control testing and evidence gathering",
+      "Respond to regulatory changes within hours, not months",
+      "Provide board-level reporting and dashboards",
+      "Reduce fines and penalties from non-compliance"
+    ],
+    "pricing": {
+      "basic": "89",
+      "pro": "279",
+      "enterprise": "1499"
+    },
+    "contactInfo": {
+      "website": "/services/automated-compliance-monitor",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/automated-compliance-monitor",
+    "category": "security",
+    "popular": false,
+    "tags": [
+      "compliance",
+      "grc",
+      "risk-management",
+      "audit"
+    ]
+  },
+  {
+    "id": "intelligent-network-optimizer",
+    "title": "Intelligent Network Optimizer",
+    "description": "AI-driven network performance optimization platform that automatically identifies bottlenecks, predicts congestion, and optimizes traffic flow across complex enterprise networks.",
+    "icon": "\u26a1",
+    "features": [
+      "Real-time network traffic analysis and baselining",
+      "ML-powered anomaly detection and root cause analysis",
+      "Predictive congestion modeling and capacity planning",
+      "Automated QoS policy optimization and traffic shaping",
+      "Application performance monitoring and correlation",
+      "Integration with SD-WAN, cloud providers, and network hardware",
+      "Digital twin simulation for change impact analysis"
+    ],
+    "benefits": [
+      "Improve network performance and reduce latency by 35-50%",
+      "Proactively prevent network outages and degradation",
+      "Optimize bandwidth utilization and reduce costs",
+      "Ensure consistent performance for critical applications",
+      "Reduce Mean Time To Detect (MTTD) and Mean Time To Resolve (MTTR)",
+      "Make data-driven decisions about network investments",
+      "Provide end-to-end visibility across hybrid environments"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "449",
+      "enterprise": "2299"
+    },
+    "contactInfo": {
+      "website": "/services/intelligent-network-optimizer",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/intelligent-network-optimizer",
+    "category": "it",
+    "popular": false,
+    "tags": [
+      "network-optimization",
+      "performance-monitoring",
+      "sd-wan",
+      "it-infrastructure"
+    ]
+  },
+  {
+    "id": "ai-content-localization-engine",
+    "title": "AI Content Localization Engine",
+    "description": "Next-generation localization platform that uses neural machine translation and cultural adaptation to automatically translate and localize content for global markets while preserving brand voice and intent.",
+    "icon": "\ud83c\udf0d",
+    "features": [
+      "Neural machine translation with human-quality output",
+      "Cultural adaptation and localization beyond literal translation",
+      "Brand voice and terminology preservation",
+      "Real-time collaboration tools for translators and reviewers",
+      "Integration with CMS, marketing automation, and product platforms",
+      "Quality scoring and automated post-editing suggestions",
+      "Support for 100+ languages and dialects"
+    ],
+    "benefits": [
+      "Reduce localization costs by 50-70% vs traditional agencies",
+      "Accelerate time-to-market for global product launches",
+      "Ensure consistent brand messaging across all markets",
+      "Eliminate localization bottlenecks in development cycles",
+      "Scale localization efforts without proportional cost increase",
+      "Improve customer engagement in local markets",
+      "Reduce reliance on expensive human translators for routine content"
+    ],
+    "pricing": {
+      "basic": "99",
+      "pro": "299",
+      "enterprise": "1499"
+    },
+    "contactInfo": {
+      "website": "/services/ai-content-localization-engine",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-content-localization-engine",
+    "category": "ai",
+    "popular": true,
+    "tags": [
+      "localization",
+      "translation",
+      "internationalization",
+      "marketing"
+    ]
   }
 ]

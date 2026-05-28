@@ -1,0 +1,43 @@
+{
+  "schema_version": "v40-a",
+  "description": "Map 6 billing fields from 26-field IRS dcRecord",
+  "field_mappings": {
+    "taxpayer_name": {
+      "idx": 0,
+      "type": "string",
+      "required": true
+    },
+    "ein": {
+      "idx": 1,
+      "type": "string",
+      "required": true
+    },
+    "tax_period": {
+      "idx": 2,
+      "type": "string",
+      "required": true
+    },
+    "gross_receipts": {
+      "idx": 3,
+      "type": "number",
+      "required": true
+    },
+    "deductions": {
+      "idx": 4,
+      "type": "number",
+      "required": false
+    },
+    "net_income": {
+      "idx": 5,
+      "type": "number",
+      "required": true
+    }
+  },
+  "total_fields": 26,
+  "billing_fields": 6,
+  "_progress": {
+    "mapped": 6,
+    "target": 6,
+    "status": "COMPLETE"
+  }
+}

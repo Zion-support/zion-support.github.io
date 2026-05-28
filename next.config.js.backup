@@ -29,6 +29,16 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
+  // V40: /consultation → /contact permanent redirect (static export)
+  async redirects() {
+    return [
+      {
+        source: '/consultation',
+        destination: '/contact',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
