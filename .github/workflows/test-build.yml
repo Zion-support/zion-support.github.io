@@ -1,0 +1,13 @@
+name: Test Build
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-node@v6
+      with:
+        node-version: '20'
+    - run: npm install --ignore-scripts 2>&1 | tail -20
+    - run: npx tsc --noEmit 2>&1 | head -50
+    - run: NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=4096' npx next build 2>&1 | tail -50
