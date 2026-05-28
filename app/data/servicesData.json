@@ -19217,5 +19217,413 @@
     "stage": "published",
     "category": "ai",
     "industry": "General"
+  },
+  {
+    "id": "ai-scheduling-intelligence",
+    "title": "AI Email Scheduling Intelligence Engine",
+    "description": "Unifies timing optimization, language detection, and sender preferences into one unified email scheduler. Sends each email at the perfect moment in the perfect language with the perfect tone. Boosts reply rates by 30-40% by hitting recipient inbox peak windows.",
+    "features": [
+      "Optimal send window per recipient timezone",
+      "16 world regions inbox peak tracking",
+      "Urgency-aware scheduling (critical bypasses queue)",
+      "Language-aware timing adaptation",
+      "Bulk send queue with priority scoring",
+      "Integrates with Gmail, Outlook, Salesforce"
+    ],
+    "benefits": [
+      "Boost reply rates by 30-40%",
+      "Hit every recipient inbox at peak moment",
+      "Never send at the wrong time again"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "449",
+      "enterprise": "25000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-scheduling-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "⏰",
+    "href": "/services/ai-scheduling-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "General"
+  },
+  {
+    "id": "ai-executive-briefing-generator",
+    "title": "AI Executive Briefing Generator",
+    "description": "Every morning generates a personalized executive briefing: top 5 urgent emails, decisions needed today, action items assigned, sentiment summary, and a 60-second executive-ready summary. Reclaim 2+ hours of executive inbox time daily.",
+    "features": [
+      "Morning briefing delivered to inbox",
+      "Top 5 urgent emails with sentiment",
+      "Decisions needed today",
+      "Personalized action items with deadlines",
+      "Sentiment arc of inbox overnight",
+      "60-second read for executives"
+    ],
+    "benefits": [
+      "Save 2+ hours of executive inbox time",
+      "Never miss a critical decision",
+      "Executive-ready inbox summary daily"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "35000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-executive-briefing-generator/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📋",
+    "href": "/services/ai-executive-briefing-generator/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "General"
+  },
+  {
+    "id": "ai-crm-email-auto-sync",
+    "title": "AI CRM Email Auto-Sync & Deal Intelligence",
+    "description": "Automatically syncs every email to Salesforce/HubSpot, updates deal stages based on email sentiment, triggers follow-ups, flags stalled deals, detects buyer intent signals, and surfaces at-risk opportunities in real-time.",
+    "features": [
+      "Auto-sync to Salesforce/HubSpot",
+      "Buyer intent signal detection",
+      "Deal stage auto-update",
+      "Stalled deal alerts",
+      "Follow-up automation",
+      "Risk scoring per deal"
+    ],
+    "benefits": [
+      "Eliminate manual CRM data entry",
+      "Catch at-risk deals before they die",
+      "Accelerate deal velocity by 25%"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "45000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-crm-email-auto-sync/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔄",
+    "href": "/services/ai-crm-email-auto-sync/",
+    "popular": true,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Sales"
+  },
+  {
+    "id": "ai-meeting-scheduler-assistant",
+    "title": "AI Meeting Scheduler Assistant",
+    "description": "AI that reads your emails to auto-schedule meetings: detects meeting requests, checks your calendar availability, proposes optimal times, sends calendar invites, handles rescheduling, sends reminders, and joins calls to take automated notes.",
+    "features": [
+      "Natural language meeting request detection",
+      "Calendar availability checking",
+      "Multi-party scheduling optimization",
+      "Automatic invite sending/rescheduling",
+      "Reminder automation",
+      "Post-meeting summary extraction"
+    ],
+    "benefits": [
+      "Eliminate 80% of meeting scheduling email",
+      "Book meetings in 1 click",
+      "Never miss a follow-up meeting"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "449",
+      "enterprise": "25000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-meeting-scheduler-assistant/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📅",
+    "href": "/services/ai-meeting-scheduler-assistant/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "General"
+  },
+  {
+    "id": "ai-customer-churn-predictor",
+    "title": "AI Customer Churn Prediction Engine",
+    "description": "Predict which customers will churn 30-60-90 days before it happens. Analyzes email engagement, support tickets, NPS scores, feature usage, and payment history. Triggers automated retention campaigns for at-risk customers.",
+    "features": [
+      "30/60/90 day churn prediction",
+      "Email engagement signal analysis",
+      "Support ticket pattern detection",
+      "Automated retention campaign triggers",
+      "Customer health scores",
+      "Segment by churn risk tier"
+    ],
+    "benefits": [
+      "Reduce churn by 25-40%",
+      "Catch churners 60 days early",
+      "Automated retention saves 3x cost vs reactive"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "1199",
+      "enterprise": "55000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-customer-churn-predictor/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "💔",
+    "href": "/services/ai-customer-churn-predictor/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "SaaS"
+  },
+  {
+    "id": "ai-support-ticket-intelligence",
+    "title": "AI Support Ticket Intelligence & Auto-Routing",
+    "description": "AI that analyzes incoming support tickets: auto-categorizes by issue type, routes to the right agent/team, suggests solutions from knowledge base, detects emotional distress, prioritizes by customer value + issue severity, and auto-responds with instant resolutions.",
+    "features": [
+      "Auto-categorize ticket type (12 categories)",
+      "Agent/team auto-routing",
+      "KB solution suggestion",
+      "Emotional distress detection",
+      "Priority by customer value + severity",
+      "Auto-response with instant resolution"
+    ],
+    "benefits": [
+      "Reduce ticket resolution time by 60%",
+      "Route tickets to right agent first time",
+      "Auto-resolve 40% of tickets instantly"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "749",
+      "enterprise": "40000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-support-ticket-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎫",
+    "href": "/services/ai-support-ticket-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Customer Success"
+  },
+  {
+    "id": "ai-procurement-intelligence",
+    "title": "AI Procurement Intelligence & Vendor Management",
+    "description": "AI that monitors vendor emails, extracts contract terms, tracks deliverables against SLAs, alerts on renewal dates, compares vendor performance, negotiates optimal renewal pricing, and manages the entire vendor lifecycle from a single dashboard.",
+    "features": [
+      "Vendor email monitoring",
+      "Contract term extraction",
+      "SLA deliverable tracking",
+      "Renewal date alerts",
+      "Vendor performance comparison",
+      "AI-negotiated renewal pricing"
+    ],
+    "benefits": [
+      "Never miss a vendor renewal date",
+      "Reduce procurement cost by 20-30%",
+      "Automate vendor relationship management"
+    ],
+    "pricing": {
+      "basic": "349",
+      "pro": "1049",
+      "enterprise": "55000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-procurement-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🛒",
+    "href": "/services/ai-procurement-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Operations"
+  },
+  {
+    "id": "ai-recruiting-talent-intelligence",
+    "title": "AI Recruiting & Talent Intelligence Platform",
+    "description": "AI that reads incoming recruiting emails, parses resumes, scores candidates against job requirements, ranks by cultural fit and skill match, schedules interviews automatically, generates interview questions, and tracks candidate sentiment throughout the pipeline.",
+    "features": [
+      "Resume parsing + scoring",
+      "Skill match ranking (0-100)",
+      "Cultural fit assessment",
+      "Interview scheduling automation",
+      "AI-generated interview questions",
+      "Candidate sentiment tracking"
+    ],
+    "benefits": [
+      "Reduce time-to-hire by 50%",
+      "Higher quality candidate shortlisting",
+      "Automated scheduling saves 5+ hours/week"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "50000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-recruiting-talent-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "👔",
+    "href": "/services/ai-recruiting-talent-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "HR"
+  },
+  {
+    "id": "ai-product-feedback-intelligence",
+    "title": "AI Product Feedback Intelligence Engine",
+    "description": "AI that reads customer feedback emails, support tickets, app reviews, and NPS responses to identify emerging themes, prioritize product features, generate actionable insights, track sentiment trends over time, and alert product teams to critical issues before they escalate.",
+    "features": [
+      "Multi-source feedback aggregation",
+      "Theme/topic extraction (NLP)",
+      "Feature prioritization scoring",
+      "Sentiment trend tracking",
+      "Critical issue alerts",
+      "Product insight reports"
+    ],
+    "benefits": [
+      "Turn feedback into roadmap priorities",
+      "Detect issues before users churn",
+      "Data-driven product decisions"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "50000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-product-feedback-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "💡",
+    "href": "/services/ai-product-feedback-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Product"
+  },
+  {
+    "id": "ai-invoice-accounts-receivable",
+    "title": "AI Invoice & Accounts Receivable Automation",
+    "description": "AI that reads vendor/client emails to extract invoice data, validates against purchase orders, detects discrepancies, routes for approval, sends payment reminders, predicts payment likelihood, and automates the entire AR/AP workflow with zero manual data entry.",
+    "features": [
+      "Invoice data extraction from emails",
+      "PO validation automation",
+      "Discrepancy detection",
+      "Approval workflow routing",
+      "Payment reminder automation",
+      "Payment prediction scoring"
+    ],
+    "benefits": [
+      "Eliminate manual invoice processing",
+      "Reduce AR days by 40%",
+      "Catch discrepancies before payment"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "50000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-invoice-accounts-receivable/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "💰",
+    "href": "/services/ai-invoice-accounts-receivable/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Finance"
+  },
+  {
+    "id": "ai-predictive-maintenance-iot",
+    "title": "AI Predictive Maintenance for IoT & Hardware",
+    "description": "AI that analyzes sensor data from IoT devices and hardware to predict failures 2-4 weeks in advance. Reduces unplanned downtime by 70%, extends equipment life by 30%, and optimizes maintenance schedules to reduce costs.",
+    "features": [
+      "2-4 week failure prediction",
+      "Sensor anomaly detection",
+      "Maintenance schedule optimization",
+      "Equipment life extension",
+      "Multi-sensor correlation",
+      "Integration with SCADA/PLC systems"
+    ],
+    "benefits": [
+      "Reduce unplanned downtime by 70%",
+      "Extend equipment life by 30%",
+      "Cut maintenance costs by 35%"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "1199",
+      "enterprise": "65000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-predictive-maintenance-iot/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔧",
+    "href": "/services/ai-predictive-maintenance-iot/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Manufacturing"
+  },
+  {
+    "id": "ai-demand-forecasting-engine",
+    "title": "AI Demand Forecasting & Inventory Optimization",
+    "description": "AI that predicts product demand 4-12 weeks ahead using historical sales, seasonality, promotions, weather, economic indicators, and competitor activity. Optimizes inventory levels, reduces stockouts by 60%, and cuts carrying costs by 25%.",
+    "features": [
+      "4-12 week demand prediction",
+      "Multi-factor model (sales/seasonality/weather)",
+      "Inventory level optimization",
+      "Stockout prediction",
+      "Safety stock calculation",
+      "Multi-SKU/category planning"
+    ],
+    "benefits": [
+      "Reduce stockouts by 60%",
+      "Cut inventory carrying costs by 25%",
+      "Optimize reorder points automatically"
+    ],
+    "pricing": {
+      "basic": "349",
+      "pro": "1049",
+      "enterprise": "55000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-demand-forecasting-engine/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📦",
+    "href": "/services/ai-demand-forecasting-engine/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Retail"
   }
 ]

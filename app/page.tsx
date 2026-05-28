@@ -819,6 +819,15 @@ let list = services;
               { key: 'V54', name: 'Attachment Intelligence', emoji: '📎', color: 'from-orange-500/20 to-amber-500/10 border-orange-500/30',
                 desc: 'Parses attachments automatically: classifies invoice/contract/proposal, extracts fields (amount, due date, parties), detects missing attachments, auto-files to SharePoint/CRM, and triggers workflows.',
                 tech: 'Doc classification · Field extraction · Missing attachment detection · Auto-filing' },
+              { key: 'V55', name: 'Scheduling Intelligence', emoji: '⏰', color: 'from-sky-500/20 to-blue-500/10 border-sky-500/30',
+                desc: 'Unifies timing, language, and sender preferences into one scheduler. Sends each email at the perfect moment in the perfect language with the perfect tone — boosting reply rates by 30-40%.',
+                tech: '16 regions inbox peak tracking · Urgency-aware queue · Timezone optimization' },
+              { key: 'V56', name: 'Executive Briefing', emoji: '📋', color: 'from-violet-500/20 to-purple-500/10 border-violet-500/30',
+                desc: 'Every morning generates a personalized executive briefing: top 5 urgent emails, decisions needed today, action items assigned, sentiment summary, and a 60-second executive-ready summary.',
+                tech: 'Morning briefing · Sentiment arc · Decision tracking · Action item assignment' },
+              { key: 'V57', name: 'CRM Auto-Sync', emoji: '🔄', color: 'from-emerald-500/20 to-teal-500/10 border-emerald-500/30',
+                desc: 'Auto-syncs every email to Salesforce/HubSpot, updates deal stages by sentiment, triggers follow-ups, flags stalled deals, detects buyer intent, and surfaces at-risk opportunities instantly.',
+                tech: 'Salesforce/HubSpot sync · Buyer intent detection · Deal risk scoring · Auto follow-up' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">
