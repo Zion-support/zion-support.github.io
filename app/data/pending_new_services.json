@@ -1010,5 +1010,12 @@
       "Patch CVE not by its disclosure date but by its patch-readiness score",
       "Endpoint firewall stops lateral movement as EDR detects and alarms"
     ]
+  },
+  {
+    "service_id": "ai-email-intelligence-service",
+    "title": "AI Email Intelligence Service",
+    "added_date": "2026-05-28",
+    "status": "pending_review",
+    "notes": "AI-powered email intelligence service with continuous learning capabilities"
   }
 ]
