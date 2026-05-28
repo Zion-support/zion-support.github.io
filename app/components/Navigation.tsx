@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
 import { usePathname } from 'next/navigation';
 import {
   PRIMARY_NAV_LINKS,
@@ -10,27 +9,13 @@ import {
   FEATURED_AI_SERVICE_LINKS,
   type NavigationLink,
 } from '@/constants/navigation';
-=======
-import {
-  PRIMARY_NAV_LINKS,
-  FEATURED_AI_SERVICE_LINKS,
-  type NavigationLink,
-} from '@/constants/navigation';
-import { NavLink } from './navigation/NavLinkItem';
-import { MobileMenu } from './navigation/MobileMenu';
-import { ServiceDropdown } from './navigation/ServiceDropdown';
-import { SolutionsDropdown } from './navigation/SolutionsDropdown';
->>>>>>> origin/main
 
 const SITE_TITLE = 'Zion Tech Group';
 const PHONE = '+1 302 464 0950';
 const EMAIL = 'kleber@ziontechgroup.com';
 
 export default function Navigation() {
-<<<<<<< HEAD
   const pathname = usePathname();
-=======
->>>>>>> origin/main
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
@@ -55,11 +40,7 @@ export default function Navigation() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-<<<<<<< HEAD
   // featured services rotation
-=======
-  // Featured services rotation
->>>>>>> origin/main
   useEffect(() => {
     const interval = setInterval(() => {
       setFeaturedIndex(prev => (prev + 1) % FEATURED_AI_SERVICE_LINKS.length);
@@ -67,7 +48,6 @@ export default function Navigation() {
     return () => clearInterval(interval);
   }, []);
 
-<<<<<<< HEAD
   function isActive(href: string): boolean {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
@@ -105,12 +85,6 @@ export default function Navigation() {
         {link.name}
       </Link>
     );
-=======
-  function closeAll() {
-    setMobileOpen(false);
-    setServicesOpen(false);
-    setSolutionsOpen(false);
->>>>>>> origin/main
   }
 
   return (
@@ -139,18 +113,17 @@ export default function Navigation() {
             >
               Solutions {solutionsOpen ? '▴' : '▾'}
             </button>
-<<<<<<< HEAD
             {solutionsOpen && (
               <div className="absolute top-full right-0 mt-2 w-[500px] rounded-xl bg-slate-900/95 border border-slate-700/80 shadow-2xl shadow-purple-500/10 p-4 animate-in fade-in-0 zoom-in-95 backdrop-blur-md">
                 <div className="grid grid-cols-2 gap-2">
                   {/* Industry cards */}
                   {[
-                    { name:'Healthcare & Life Sciences', emoji:'🏥', desc:'HIPAA-compliant AI, diagnostics, patient engagement', href:'/industry-solutions/?industry=Healthcare' },
-                    { name:'Financial Services & FinTech', emoji:'💳', desc:'RegTech, fraud detection, trading bots, KYC', href:'/industry-solutions/?industry=Finance' },
-                    { name:'Manufacturing & Industrial', emoji:'🏗️', desc:'Predictive maintenance, supply chain, quality AI', href:'/industry-solutions/?industry=Manufacturing' },
-                    { name:'Retail & E-Commerce', emoji:'🛒', desc:'Recommendation engines, inventory AI, dynamic pricing', href:'/industry-solutions/?industry=E-Commerce' },
-                    { name:'Technology & SaaS', emoji:'🏭', desc:'Dev tools, platform engineering, micro-SaaS', href:'/industry-solutions/?industry=SaaS' },
-                    { name:'Logistics & Supply Chain', emoji:'🚚', desc:'Route optimization, warehouse automation, tracking', href:'/industry-solutions/?industry=General' },
+                    { name:'Healthcare & Life Sciences', emoji:'🏥', desc:'HIPAA-compliant AI, diagnostics, patient engagement', href:'/industry-solutions/' },
+                    { name:'Financial Services & FinTech', emoji:'💳', desc:'RegTech, fraud detection, trading bots, KYC', href:'/industry-solutions/' },
+                    { name:'Manufacturing & Industrial', emoji:'🏗️', desc:'Predictive maintenance, supply chain, quality AI', href:'/industry-solutions/' },
+                    { name:'Retail & E-Commerce', emoji:'🛒', desc:'Recommendation engines, inventory AI, dynamic pricing', href:'/industry-solutions/' },
+                    { name:'Technology & SaaS', emoji:'🏭', desc:'Dev tools, platform engineering, micro-SaaS', href:'/industry-solutions/' },
+                    { name:'Logistics & Supply Chain', emoji:'🚚', desc:'Route optimization, warehouse automation, tracking', href:'/industry-solutions/' },
                   ].map((ind, i) => (
                     <Link key={i} href={ind.href} onClick={() => setSolutionsOpen(false)}
                       className="block px-3 py-2.5 rounded-lg bg-slate-800/40 border border-slate-700/40 hover:border-purple-500/30 hover:bg-slate-800/70 transition-all group"
@@ -186,12 +159,6 @@ export default function Navigation() {
                 </div>
               </div>
             )}
-=======
-            <SolutionsDropdown
-              open={solutionsOpen}
-              onClose={() => { setSolutionsOpen(false); setMobileOpen(false); }}
-            />
->>>>>>> origin/main
           </div>
 
           {/* Services dropdown */}
@@ -203,7 +170,6 @@ export default function Navigation() {
             >
               Services {servicesOpen ? '▴' : '▾'}
             </button>
-<<<<<<< HEAD
             {servicesOpen && (
               <div className="absolute top-full right-0 mt-2 w-[700px] rounded-xl bg-slate-900/95 border border-slate-700/80 shadow-2xl shadow-purple-500/10 p-4 animate-in fade-in-0 zoom-in-95 backdrop-blur-md max-h-[85vh] overflow-y-auto">
                 <div className="grid grid-cols-2 gap-3">
@@ -277,19 +243,15 @@ export default function Navigation() {
           </div>
 
           {/* Primary nav links */}
-          {PRIMARY_NAV_LINKS.map((link, i) => (
-            <NavLink key={i} link={link} />
-=======
-            <ServiceDropdown
-              open={servicesOpen}
-              onClose={() => { setServicesOpen(false); setMobileOpen(false); }}
-            />
-          </div>
+          {/* Hardcoded primary links (Home already in logo area) */}
+          <NavLink
+            key="blog"
+            link={{ name: 'Blog', href: '/blog/' }}
+          />
 
-          {/* Primary nav links */}
-          {PRIMARY_NAV_LINKS.map((link: NavigationLink, i: number) => (
-            <NavLink key={i} link={link} onNavigate={closeAll} />
->>>>>>> origin/main
+          {/* Remaining primary links from constants */}
+          {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
+            <NavLink key={i} link={link} />
           ))}
 
           {/* Search button */}
@@ -345,7 +307,6 @@ export default function Navigation() {
       </nav>
 
       {/* Mobile panel */}
-<<<<<<< HEAD
       {mobileOpen && (
         <div className="lg:hidden border-t border-slate-800 bg-slate-950/98 backdrop-blur-xl px-4 py-5 space-y-1 animate-in fade-in-0 slide-in-from-top-2 max-h-[85vh] overflow-y-auto">
           {/* Primary nav */}
@@ -398,9 +359,6 @@ export default function Navigation() {
           </div>
         </div>
       )}
-=======
-      <MobileMenu open={mobileOpen} onClose={closeAll} />
->>>>>>> origin/main
     </header>
   );
 }

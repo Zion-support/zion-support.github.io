@@ -846,6 +846,12 @@ let list = services;
               { key: 'V63', name: 'Lead Scoring', emoji: '🎯', color: 'from-rose-500/20 to-pink-500/10 border-rose-500/30',
                 desc: 'Scores leads based on behavioral signals (opens, clicks, replies, meetings). Hot/warm/cold tiering, intent detection (budget/timeline/decision), sender reputation tracking, next-best-action recommendations.',
                 tech: '20+ behavioral signals · Intent detection · Reputation scoring · Reply/open rate analytics · Next-best-action' },
+              { key: 'V64', name: 'Auto-Categorizer', emoji: '🏷️', color: 'from-violet-500/20 to-purple-500/10 border-violet-500/30',
+                desc: 'Automatically reads every email, categorizes it (billing/support/sales/legal/HR/executive), files to the right folder/CRM, sets priority, and routes to the right person — zero manual inbox management.',
+                tech: '14 intent categories · Department routing · CRM auto-sync · Auto-labeling · Spam detection · Auto-filing rules' },
+              { key: 'V65', name: 'Tone Engine', emoji: '🎭', color: 'from-indigo-500/20 to-blue-500/10 border-indigo-500/30',
+                desc: 'Dynamically adjusts email tone — if sender is frustrated, shifts to empathetic/de-escalating. If transactional, shifts to crisp professional. If urgent, shifts to assertive. Learns tone preferences over thread lifetime.',
+                tech: '6-tone categories · Phrase-level adjustments · Opening/closing line auto-selectors · Thread arc awareness' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">
