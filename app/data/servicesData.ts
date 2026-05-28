@@ -1,20 +1,3 @@
-// Service data for AI and IT solutions
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  pricing: Record<string, string>;
-  contactInfo: Record<string, string>;
-  icon: string;
-  href: string;
-  category: string;
-  popular?: boolean;
-  stage?: string;
-  industry?: string;
-}
-
 export const aiServices: Service[] = [
   {
     id: 'advanced-ai-enterprise-intelligence-hub',
@@ -9001,12 +8984,33 @@ export const aiServices: Service[] = [
     category: 'automation',
     industry: 'General',
   }
+  {
+    id: 'ai-powered-email-intelligence-suite',
+    title: 'AI-Powered Email Intelligence Suite',
+    description: 'Advanced email response system that analyzes sentiment, determines response necessity, prioritizes messages, and generates intelligent replies using machine learning and NLP techniques.',
+    features: ['Sentiment Analysis Engine','Response Necessity Detection','Priority Tagging System','Smart Follow-up Scheduler','Auto-Categorization','Response Quality Verification','Thread Continuity Intelligence'],
+    benefits: ['Reduce email response time by 80%', 'Increase response relevance by 90%', 'Decrease unnecessary auto-responses by 70%'],
+    pricing: {"basic": "149", "pro": "749", "enterprise": "25000"},
+    contactInfo: { website:'/services/ai-powered-email-intelligence-suite/', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950' },
+    icon: '✉️',
+    href: '/services/ai-powered-email-intelligence-suite/',
+    popular: true,
+    stage: 'published',
+    category: 'ai',
+    industry: 'General'
+  },  {
+    id: 'ai-email-security-guardian',
+    title: 'AI Email Security Guardian',
+    description: 'Protects against phishing, spoofing, and malware using real-time AI analysis of email headers, links, and attachments. Provides quarantine, alerts, and user training simulations.',
+    features: ['Phishing Detection Engine','Spoofing & Impersonation Guard','Malicious Link & Attachment Scanner','Real-Time Quarantine & Alerts','User Phishing Simulation Training','DMARC/DKIM/SPF Enforcement','Forensic Email Tracing'],
+    benefits: ['Reduce phishing success rate by 95%', 'Block zero-day malware threats', 'Automate incident response'],
+    pricing: {"basic": "129", "pro": "649", "enterprise": "20000"},
+    contactInfo: { website:'/services/ai-email-security-guardian/', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950' },
+    icon: '🛡️',
+    href: '/services/ai-email-security-guardian/',
+    popular: false,
+    stage: 'published',
+    category: 'ai',
+    industry: 'General'
+  }
 ];
-
-export const allServices = aiServices;
-export const SERVICE_COUNT_B = allServices.length;
-export const getServiceById = (id: string): Service | undefined => { return allServices.find(s => s.id === id); };
-export const getServicesByCategory = (category: Service['category']): Service[] => { return allServices.filter(s => s.category === category); };
-export const getPopularServices = (): Service[] => { return allServices.filter(s => s.popular); };
-
-// ─── servicesData.ts regen — dedup + TBD rewrite ───────────────────

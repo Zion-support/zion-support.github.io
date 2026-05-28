@@ -1,6 +1,8 @@
 
 #!/usr/bin/env python3
 """
+
+
 V29 — Stable Intelligence Layer (incorporates V26/V27/V28)
 
 Fixes in V29:
@@ -14,10 +16,25 @@ Fixes in V29:
   - _full_pipeline: V29 escalation gate, reply-all unification, payment_thanks
 """
 
+import sys
+from pathlib import Path
+
+WORKSPACE = Path(__file__).resolve().parent.parent
+COMMANDS = WORKSPACE / 'commands'
+if str(COMMANDS) not in sys.path:
+    sys.path.insert(0, str(COMMANDS))
+
+
 import json, re, time, csv, io
 from datetime import datetime, timezone
 from pathlib import Path
 from collections import defaultdict
+
+# V30-PX: Response Necessity Detector
+from commands.v30_modules.priority_tagger import tag_priority
+from commands.v30_modules.response_necessity_detector import detect_response_necessity
+# V30-PX: Sentiment Analyzer
+from commands.v30_modules.sentiment_analyzer import analyze_sentiment
 
 WORKSPACE  = Path(__file__).resolve().parent.parent
 COMMANDS   = WORKSPACE / 'commands'
@@ -1014,6 +1031,23 @@ class V26Responder:
         subj    = email["subject"]
         snip    = email["snippet"]
         thread_intent_label: str = "unknown"   # R3: initialise before any early-return uses it
+
+        # V30-PX: Response Necessity Detector - Early bailout for newsletters, automated messages, etc.
+        necessity_check = detect_response_necessity(email)
+        if not necessity_check['is_response_needed'] and necessity_check['confidence'] > 0.75:
+            result = add_to_result(email, {
+                'thread_intent': thread_intent_label,
+                'action': 'skip',
+                'reason': necessity_check['reason'],
+                'confidence': necessity_check['confidence'],
+                'elapsed_ms': ms_elapsed()
+            })
+            return result
+
+        # V30-PX: Sentiment Analyzer - Detect sentiment for tone adjustment and priority
+        sentiment_check = analyze_sentiment(email)
+        # Store sentiment data in email for later use in tone matching and response generation
+        email['_sentiment'] = sentiment_check
 
         # R3: dedup skip — if this thread was already replied to within 30 min, pass
         try:
