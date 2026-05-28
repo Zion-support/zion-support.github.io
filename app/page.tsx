@@ -828,6 +828,15 @@ let list = services;
               { key: 'V57', name: 'CRM Auto-Sync', emoji: '🔄', color: 'from-emerald-500/20 to-teal-500/10 border-emerald-500/30',
                 desc: 'Auto-syncs every email to Salesforce/HubSpot, updates deal stages by sentiment, triggers follow-ups, flags stalled deals, detects buyer intent, and surfaces at-risk opportunities instantly.',
                 tech: 'Salesforce/HubSpot sync · Buyer intent detection · Deal risk scoring · Auto follow-up' },
+              { key: 'V58', name: 'Competitive Intel', emoji: '🎯', color: 'from-red-500/20 to-orange-500/10 border-red-500/30',
+                desc: 'Tracks competitor mentions across ALL incoming emails. Scores sentiment, detects win/loss signals, auto-generates competitive battle cards, and alerts your team in real-time.',
+                tech: 'Win/loss signal extraction · Battle card generation · Sentiment scoring · 50+ competitors tracked' },
+              { key: 'V59', name: 'Personalization Engine', emoji: '✉️', color: 'from-pink-500/20 to-rose-500/10 border-pink-500/30',
+                desc: 'Dynamically personalizes every outbound email with recipient-specific data: company news, LinkedIn activity, mutual connections, industry trends — 3x open rates.',
+                tech: '20+ personalization tokens · Company news · Industry trends · Progressive sequence builder' },
+              { key: 'V60', name: 'Workflow Automation', emoji: '⚙️', color: 'from-indigo-500/20 to-violet-500/10 border-indigo-500/30',
+                desc: 'Visual workflow builder: if/then/else branching, wait steps, CRM updates, Slack, tasks, webhooks — all without code. 14+ step types. Automates any email operation.',
+                tech: '14+ step types · CRM/Slack/Task integration · Condition branching · Template library' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">

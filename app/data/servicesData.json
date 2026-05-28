@@ -19625,5 +19625,379 @@
     "stage": "published",
     "category": "ai",
     "industry": "Retail"
+  },
+  {
+    "id": "ai-competitive-intelligence-tracker",
+    "title": "AI Competitive Intelligence Tracker",
+    "description": "Tracks competitor mentions across all incoming emails. Alerts when a competitor is referenced, scores positive/negative/neutral mentions, generates competitive battle cards, and surfaces win/loss trends — turning every email into a market intelligence signal.",
+    "features": [
+      "Real-time competitor mention detection",
+      "Win/loss signal extraction",
+      "Sentiment scoring per competitor",
+      "Battle card auto-generation",
+      "Competitive landscape dashboard",
+      "Alert on negative competitor mentions"
+    ],
+    "benefits": [
+      "Win/loss intelligence from every email",
+      "Never miss a competitor reference",
+      "Data-driven competitive strategy"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "749",
+      "enterprise": "40000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-competitive-intelligence-tracker/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎯",
+    "href": "/services/ai-competitive-intelligence-tracker/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Sales"
+  },
+  {
+    "id": "ai-email-personalization-engine",
+    "title": "AI Email Personalization Engine",
+    "description": "Dynamically personalizes every outbound email with recipient-specific data: recent company news, LinkedIn activity, mutual connections, industry trends, and previous engagement history — making each email feel individually crafted by a human who did their research.",
+    "features": [
+      "Personalization token system (20+ tokens)",
+      "Company news integration",
+      "Industry trend insertion",
+      "Mutual connection alerts",
+      "Personal milestone recognition",
+      "Progressive personalization sequence"
+    ],
+    "benefits": [
+      "3x higher open rates with deep personalization",
+      "Emails feel individually crafted",
+      "Reduce unsubscribe rates by 60%"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "35000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-email-personalization-engine/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "✉️",
+    "href": "/services/ai-email-personalization-engine/",
+    "popular": true,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Sales"
+  },
+  {
+    "id": "ai-email-workflow-automation",
+    "title": "AI Email Workflow Automation Engine",
+    "description": "Visual workflow builder for email automation: if/then/else branching, wait steps, condition checks, CRM updates, task creation, Slack notifications, calendar events, and API webhooks — all triggered by email events without code.",
+    "features": [
+      "Visual workflow builder",
+      "14+ step types (if/else/wait/send/CRM/task/slack)",
+      "Condition-based branching",
+      "Multi-step sequence automation",
+      "Execution logging + analytics",
+      "Template workflow library"
+    ],
+    "benefits": [
+      "Automate any email workflow without code",
+      "Replace Zapier/Make for email",
+      "Save 10+ hours/week on email ops"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "50000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-email-workflow-automation/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "⚙️",
+    "href": "/services/ai-email-workflow-automation/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Operations"
+  },
+  {
+    "id": "ai-webinar-virtual-event-platform",
+    "title": "AI Webinar & Virtual Event Intelligence Platform",
+    "description": "AI-powered webinar platform: auto-generates event landing pages, sends personalized invites, runs AI-moderated Q&A, transcribes and summarizes sessions, identifies leads by engagement level, and auto-follows up with personalized content.",
+    "features": [
+      "AI landing page generator",
+      "Personalized invite automation",
+      "AI-moderated Q&A",
+      "Real-time transcription + summary",
+      "Lead engagement scoring",
+      "Automated follow-up sequences"
+    ],
+    "benefits": [
+      "Launch webinars 5x faster",
+      "AI qualifies leads during the event",
+      "Auto-follow-up increases conversion 3x"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "749",
+      "enterprise": "40000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-webinar-virtual-event-platform/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎥",
+    "href": "/services/ai-webinar-virtual-event-platform/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Marketing"
+  },
+  {
+    "id": "ai-document-collaboration-platform",
+    "title": "AI Document Collaboration & Version Control",
+    "description": "AI document platform with real-time collaboration, automatic version control, smart diff, clause tracking for legal docs, commenting with AI-suggested resolutions, and blockchain-based audit trail for compliance.",
+    "features": [
+      "Real-time multi-user collaboration",
+      "AI smart diff and change tracking",
+      "Clause-level version control",
+      "AI comment resolution suggestions",
+      "Blockchain audit trail",
+      "Contract redlining automation"
+    ],
+    "benefits": [
+      "Eliminate version confusion",
+      "Reduce document review by 60%",
+      "Compliant audit trail automatically"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "35000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-document-collaboration-platform/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📑",
+    "href": "/services/ai-document-collaboration-platform/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Legal"
+  },
+  {
+    "id": "ai-employee-onboarding-automation",
+    "title": "AI Employee Onboarding Automation",
+    "description": "AI that automates the entire onboarding journey: sends personalized welcome sequences, assigns training paths, creates accounts across 100+ tools, schedules manager check-ins, tracks completion, and escalates incomplete onboarding.",
+    "features": [
+      "Personalized welcome email sequences",
+      "Training path assignment",
+      "100+ tool account provisioning",
+      "Manager check-in scheduling",
+      "Onboarding completion tracking",
+      "HRIS integration (Workday, BambooHR)"
+    ],
+    "benefits": [
+      "Reduce onboarding time by 70%",
+      "Ensure 100% compliance completion",
+      "New hires productive day 1"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "35000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-employee-onboarding-automation/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "👋",
+    "href": "/services/ai-employee-onboarding-automation/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "HR"
+  },
+  {
+    "id": "ai-performance-review-intelligence",
+    "title": "AI Performance Review Intelligence",
+    "description": "AI that analyzes employee output, email collaboration patterns, project delivery, and goal progress to generate fair, data-driven performance reviews. Reduces manager review prep time by 80% and identifies hidden high-performers and flight risks.",
+    "features": [
+      "Output analysis (emails, docs, projects)",
+      "Collaboration network mapping",
+      "Goal progress tracking",
+      "Peer feedback synthesis",
+      "Manager review draft generation",
+      "Flight risk detection"
+    ],
+    "benefits": [
+      "Reduce review prep by 80%",
+      "Fair, data-driven reviews",
+      "Identify hidden stars + flight risks"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "749",
+      "enterprise": "45000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-performance-review-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📊",
+    "href": "/services/ai-performance-review-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "HR"
+  },
+  {
+    "id": "ai-expense-report-automation",
+    "title": "AI Expense Report & Reimbursement Automation",
+    "description": "AI reads receipts, extracts expense data, categorizes by budget line, enforces policy compliance, routes for approval, reimburses via direct deposit, and reconciles to accounting — eliminating manual expense processing entirely.",
+    "features": [
+      "Receipt OCR + data extraction",
+      "Auto-categorization by budget",
+      "Policy compliance checking",
+      "Approval workflow routing",
+      "Direct deposit reimbursement",
+      "Accounting system reconciliation"
+    ],
+    "benefits": [
+      "Eliminate manual expense processing",
+      "Reduce reimbursement cycle from 2 weeks to 2 days",
+      "100% policy compliance"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "449",
+      "enterprise": "25000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-expense-report-automation/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "💳",
+    "href": "/services/ai-expense-report-automation/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Finance"
+  },
+  {
+    "id": "ai-contract-renewal-manager",
+    "title": "AI Contract Renewal & Lifecycle Manager",
+    "description": "AI that tracks every contract lifecycle: monitors key dates (renewal, termination, auto-renewal), alerts before deadlines, scores renewal likelihood, auto-negotiates standard terms, and manages the entire renewal process from a single dashboard.",
+    "features": [
+      "Contract lifecycle tracking",
+      "Renewal/termination date alerts",
+      "Renewal likelihood scoring",
+      "Auto-renewal clause monitoring",
+      "Negotiation template suggestions",
+      "Renewal workflow automation"
+    ],
+    "benefits": [
+      "Never miss a contract renewal",
+      "Reduce renewal management by 90%",
+      "Increase renewal rates by 20%"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "50000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-contract-renewal-manager/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔄",
+    "href": "/services/ai-contract-renewal-manager/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Legal"
+  },
+  {
+    "id": "ai-ux-research-intelligence",
+    "title": "AI UX Research & User Testing Intelligence",
+    "description": "AI that recruits users, runs moderated/unmoderated tests, transcribes sessions, identifies pain points, generates UX recommendations, scores usability metrics (SUS, NPS), and tracks UX improvements over time — all automated.",
+    "features": [
+      "User recruitment automation",
+      "Moderated + unmoderated testing",
+      "Session transcription + analysis",
+      "Pain point extraction",
+      "SUS/NPS usability scoring",
+      "UX recommendation prioritization"
+    ],
+    "benefits": [
+      "Cut UX research time by 70%",
+      "Identify usability issues in hours not weeks",
+      "Data-driven UX decisions"
+    ],
+    "pricing": {
+      "basic": "349",
+      "pro": "1049",
+      "enterprise": "55000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-ux-research-intelligence/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔬",
+    "href": "/services/ai-ux-research-intelligence/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Product"
+  },
+  {
+    "id": "ai-api-integration-platform",
+    "title": "AI API Integration & iPaaS Platform",
+    "description": "AI-powered integration platform (iPaaS) that connects any app: natural language integration builder, auto-maps fields between systems, handles auth, rate limits, and errors. 500+ pre-built connectors. Replaces Zapier/Make/Integromat at 1/3 the cost.",
+    "features": [
+      "Natural language integration builder",
+      "500+ pre-built connectors",
+      "Auto field mapping",
+      "Auth + error handling",
+      "Rate limit management",
+      "Real-time + batch processing"
+    ],
+    "benefits": [
+      "Build integrations in minutes not months",
+      "1/3 the cost of Zapier Enterprise",
+      "No-code integration for any API"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "35000"
+    },
+    "contactInfo": {
+      "website": "/services/ai-api-integration-platform/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔌",
+    "href": "/services/ai-api-integration-platform/",
+    "popular": false,
+    "stage": "published",
+    "category": "ai",
+    "industry": "Technology"
   }
 ]
