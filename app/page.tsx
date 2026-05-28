@@ -1009,6 +1009,182 @@ let list = services;
           </div>
         </div>
       </section>
+
+      {/* ── Our Services & Solutions — Full Catalog Advertising ── */}
+      <section className="py-20 border-t border-slate-800 bg-gradient-to-b from-slate-900/50 to-slate-950">
+        <div className="container-page">
+          <div className="text-center mb-14">
+            <span className="inline-block text-xs font-bold tracking-widest text-purple-400 uppercase bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1 mb-4">
+              Our Services
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI · IT · Cloud · Security · Data · Automation
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-base">
+              Zion Tech Group delivers{' '}
+              <strong className="text-white">600+ production-ready solutions</strong>
+              {' '}across 6 categories — from AI and machine learning to cloud infrastructure,
+              cybersecurity, data analytics, and business process automation.
+            </p>
+          </div>
+
+          {/* Category Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-14">
+            {CATEGORIES.map((cat) => {
+              const count = services.filter((s: any) => s.category === cat.key).length;
+              return (
+                <div key={cat.key} className="group relative flex flex-col items-center gap-2 p-5 rounded-2xl border border-slate-700/60 bg-slate-800/40 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all text-center">
+                  <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
+                  <span className="text-sm font-semibold text-slate-200">{cat.label}</span>
+                  <span className="text-xs font-medium text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-full">{count} services</span>
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-[0.06] transition-opacity pointer-events-none`} />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Featured Services Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-14">
+            {[
+              {
+                emoji: "🧠", title: "AI & Machine Learning",
+                desc: "Custom LLM fine-tuning, RAG systems, neural architecture design, and AI product development. From concept to production in weeks.",
+                price: "Starting at $2,500/mo",
+                href: "/ai-ml-platform",
+                color: "from-purple-500/20 to-indigo-500/20 border-purple-500/20",
+                tag: "AI Services"
+              },
+              {
+                emoji: "☁️", title: "Cloud Infrastructure",
+                desc: "AWS, Azure & GCP architecture, migration, cost optimization, and 24/7 managed services. 99.9% uptime SLA guaranteed.",
+                price: "Starting at $1,800/mo",
+                href: "/cloud-solutions",
+                color: "from-sky-500/20 to-blue-500/20 border-sky-500/20",
+                tag: "Cloud Services"
+              },
+              {
+                emoji: "🔐", title: "Cybersecurity & Compliance",
+                desc: "Penetration testing, SOC 2 readiness, GDPR compliance, zero-trust architecture, and 24/7 threat monitoring.",
+                price: "Starting at $3,000/mo",
+                href: "/cybersecurity",
+                color: "from-red-500/20 to-orange-500/20 border-red-500/20",
+                tag: "Security Services"
+              },
+              {
+                emoji: "📊", title: "Data Analytics & BI",
+                desc: "Real-time dashboards, predictive analytics, data warehousing, ETL pipelines, and custom BI solutions that turn data into decisions.",
+                price: "Starting at $1,500/mo",
+                href: "/smart-analytics-dashboard",
+                color: "from-green-500/20 to-emerald-500/20 border-green-500/20",
+                tag: "Data Services"
+              },
+              {
+                emoji: "🤖", title: "Business Automation",
+                desc: "Workflow automation, RPA bots, intelligent document processing, and end-to-end process orchestration. Save 20+ hours/week.",
+                price: "Starting at $800/mo",
+                href: "/workflow-automation",
+                color: "from-pink-500/20 to-rose-500/20 border-pink-500/20",
+                tag: "Automation"
+              },
+              {
+                emoji: "🖥️", title: "IT Services & Support",
+                desc: "Help desk, system administration, network management, software development, and IT consulting. Remote & on-site.",
+                price: "Starting at $500/mo",
+                href: "/it-services",
+                color: "from-blue-500/20 to-cyan-500/20 border-blue-500/20",
+                tag: "IT Services"
+              },
+            ].map((svc, i) => (
+              <a key={i} href={svc.href}
+                className={`group relative flex flex-col gap-3 p-6 rounded-2xl border bg-gradient-to-br ${svc.color} hover:scale-[1.02] transition-transform`}>
+                <div className="flex items-start justify-between">
+                  <span className="text-3xl">{svc.emoji}</span>
+                  <span className="text-xs font-medium text-slate-400 bg-slate-800/60 rounded-full px-2 py-0.5">{svc.tag}</span>
+                </div>
+                <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">{svc.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed flex-1">{svc.desc}</p>
+                <div className="flex items-center justify-between pt-2 border-t border-slate-700/50">
+                  <span className="text-sm font-semibold text-green-400">{svc.price}</span>
+                  <span className="text-xs text-slate-500 group-hover:text-purple-300 transition-colors">Learn more →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Pricing Tiers */}
+          <div className="mb-14">
+            <h3 className="text-xl font-bold text-white text-center mb-8">Flexible Engagement Models</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Project-Based",
+                  price: "From $5,000",
+                  desc: "Fixed-scope projects with clear deliverables. Ideal for MVPs, migrations, and one-time implementations.",
+                  features: ["Fixed timeline & budget", "Dedicated project manager", "Source code ownership", "90-day support included"],
+                  cta: "Get a Quote",
+                  color: "border-slate-700",
+                  btn: "btn-secondary"
+                },
+                {
+                  name: "Monthly Retainer",
+                  price: "From $2,000/mo",
+                  desc: "Ongoing partnership with dedicated hours each month. Priority support and consistent innovation cadence.",
+                  features: ["Flexible monthly hours", "Priority response SLA", "Quarterly strategy reviews", "Unused hours roll over"],
+                  cta: "Start a Retainer",
+                  color: "border-purple-500/40",
+                  btn: "btn-primary"
+                },
+                {
+                  name: "Enterprise",
+                  price: "Custom",
+                  desc: "Full-stack teams embedded in your organization. White-glove service for mission-critical initiatives.",
+                  features: ["Dedicated team", "Custom SLA & uptime", "On-site availability", "Executive success manager"],
+                  cta: "Contact Us",
+                  color: "border-slate-700",
+                  btn: "btn-secondary"
+                },
+              ].map((plan, i) => (
+                <div key={i} className={`flex flex-col gap-4 p-6 rounded-2xl border bg-slate-800/40 ${plan.color}`}>
+                  <div>
+                    <h4 className="text-base font-bold text-white mb-1">{plan.name}</h4>
+                    <div className="text-2xl font-bold text-green-400">{plan.price}</div>
+                    <p className="text-slate-400 text-sm mt-2">{plan.desc}</p>
+                  </div>
+                  <ul className="flex flex-col gap-2 flex-1">
+                    {plan.features.map((f, fi) => (
+                      <li key={fi} className="flex items-center gap-2 text-sm text-slate-300">
+                        <span className="text-green-400 text-xs">✓</span> {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className={`${plan.btn} text-center text-sm py-2.5 rounded-xl`}>{plan.cta}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center rounded-2xl border border-purple-500/20 bg-gradient-to-r from-purple-900/20 via-slate-900/40 to-indigo-900/20 p-10">
+            <h3 className="text-2xl font-bold text-white mb-3">Ready to Transform Your Business?</h3>
+            <p className="text-slate-400 mb-6 max-w-lg mx-auto">
+              Get a free consultation. We'll analyze your needs and recommend the exact solutions to drive results.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="tel:+13024640950" className="btn-primary text-base px-8 py-3">
+                📞 +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-base px-8 py-3">
+                ✉️ kleber@ziontechgroup.com
+              </a>
+            </div>
+            <p className="text-slate-500 text-sm mt-4">
+              364 E Main St STE 1008 Middletown DE 19709 ·{' '}
+              <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300">ziontechgroup.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
     <FloatingActionDock />
     </main>
   );
