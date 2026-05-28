@@ -1,5 +1,3 @@
-import type { Service } from './servicesData';
-
 // Define the shape of a service
 export interface Service {
   id: string;
@@ -7,7 +5,18 @@ export interface Service {
   description: string;
   features: string[];
   pricing: Record<string, string>; // e.g., { basic: '$99/mo', pro: '$299/mo' }
-  category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation';
+  category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation' | 'micro-saas';
+  benefits?: string[];
+  popular?: boolean;
+  icon?: string;
+  href?: string;
+  industry?: string;
+  contactInfo?: {
+    website?: string;
+    email?: string;
+    phone?: string;
+    address?: string;
+  };
 }
 
 // All services offered by Zion Tech Group
