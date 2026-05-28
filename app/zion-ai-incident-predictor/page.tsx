@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Incident Predictor | Zion Tech Group',
   description:
     'Predict incidents and outages before they occur using anomaly detection and pattern analysis.',

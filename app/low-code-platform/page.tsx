@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Low Code Platform | Zion Tech Group',
   description:
     'Low Code Platform accelerates software delivery with intelligent tooling, automated code analysis, and streamlined development workflows. Ship higher-quali',

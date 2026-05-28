@@ -1,0 +1,86 @@
+[2026-05-28T17:42:12.150909+00:00] [INFO] [V32] ============================================================
+[2026-05-28T17:42:12.151963+00:00] [INFO] [V32] V32 EMAIL ORCHESTRATOR — Autonomous Decision Engine
+[2026-05-28T17:42:12.152136+00:00] [INFO] [V32] ============================================================
+[2026-05-28T17:42:12.152374+00:00] [INFO] [V32] V32 Fine-Grained Intent Classifier initialized
+[2026-05-28T17:42:12.153086+00:00] [INFO] [V32] V32 Knowledge Responder initialized with 0 service entries
+[2026-05-28T17:42:12.153327+00:00] [INFO] [V32] V32 Persona Engine initialized
+[2026-05-28T17:42:12.153550+00:00] [INFO] [V32] V32 A/B Testing Engine initialized
+[2026-05-28T17:42:12.208324+00:00] [INFO] [V32] V31 Lifecycle Engine loaded successfully
+[2026-05-28T17:42:12.208589+00:00] [INFO] [V32] V32 Orchestrator READY!
+[2026-05-28T17:42:12.208856+00:00] [INFO] [V32] [V32] Processing: thread=thread-billing-001 from=john.smith@acme.com subject=Question about Invoice #4821
+[2026-05-28T17:42:12.219556+00:00] [INFO] [V32] [V32] Intent: billing_inquiry (conf=0.4)
+[2026-05-28T17:42:12.222398+00:00] [INFO] [V32] [V32] Sentiment: disappointed (score=50.0)
+[2026-05-28T17:42:12.224910+00:00] [INFO] [V32] [V32] Service signals: {}, Relevant: 0 services
+[2026-05-28T17:42:12.226333+00:00] [INFO] [V32] [V32] Quality: 81.2 (B)
+[2026-05-28T17:42:12.227260+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=billing_inquiry quality=81.2 sentiment=disappointed
+[2026-05-28T17:42:12.227512+00:00] [INFO] [V32] [V32] Processing: thread=thread-demo-002 from=sarah.chen@startup.io subject=Would love a demo of your AI services
+[2026-05-28T17:42:12.229910+00:00] [INFO] [V32] [V32] Intent: pricing_question (conf=0.8)
+[2026-05-28T17:42:12.230259+00:00] [INFO] [V32] [V32] Sentiment: satisfied_delighted (score=50.0)
+[2026-05-28T17:42:12.230792+00:00] [INFO] [V32] [V32] Service signals: {'ai': 2}, Relevant: 0 services
+[2026-05-28T17:42:12.231545+00:00] [INFO] [V32] [V32] Quality: 76.8 (C)
+[2026-05-28T17:42:12.231809+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=pricing_question quality=76.8 sentiment=satisfied_delighted
+[2026-05-28T17:42:12.232036+00:00] [INFO] [V32] [V32] Processing: thread=thread-frustrated-00 from=angry.customer@client.com subject=URGENT: System has been down for 3 hours
+[2026-05-28T17:42:12.234613+00:00] [INFO] [V32] [V32] Intent: outage_report (conf=0.8)
+[2026-05-28T17:42:12.234960+00:00] [INFO] [V32] [V32] Sentiment: frustrated_angry (score=100.0)
+[2026-05-28T17:42:12.235121+00:00] [WARN] [V32] [V32] ESCALATION FLAGGED: None
+[2026-05-28T17:42:12.235277+00:00] [WARN] [V32] [V32 ESCALATION] thread=thread-frustrated-003 sender=angry.customer@client.com intent=outage_report reason=None
+[2026-05-28T17:42:12.236180+00:00] [INFO] [V32] [V32] Service signals: {}, Relevant: 0 services
+[2026-05-28T17:42:12.236926+00:00] [INFO] [V32] [V32] Quality: 69.1 (D)
+[2026-05-28T17:42:12.237160+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=outage_report quality=69.1 sentiment=frustrated_angry
+[2026-05-28T17:42:12.237383+00:00] [INFO] [V32] [V32] Processing: thread=thread-partnership-0 from=ceo@innovate.co subject=Partnership opportunity — AI Integration Alliance
+[2026-05-28T17:42:12.239629+00:00] [INFO] [V32] [V32] Intent: partnership_offer (conf=0.8)
+[2026-05-28T17:42:12.239957+00:00] [INFO] [V32] [V32] Sentiment: professional_neutral (score=50.0)
+[2026-05-28T17:42:12.240124+00:00] [WARN] [V32] [V32] ESCALATION FLAGGED: None
+[2026-05-28T17:42:12.240280+00:00] [WARN] [V32] [V32 ESCALATION] thread=thread-partnership-004 sender=ceo@innovate.co intent=partnership_offer reason=None
+[2026-05-28T17:42:12.240985+00:00] [INFO] [V32] [V32] Service signals: {'ai': 1}, Relevant: 0 services
+[2026-05-28T17:42:12.241765+00:00] [INFO] [V32] [V32] Quality: 68.5 (D)
+[2026-05-28T17:42:12.242015+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=partnership_offer quality=68.5 sentiment=professional_neutral
+[2026-05-28T17:42:12.242234+00:00] [INFO] [V32] [V32] Processing: thread=thread-internal-005 from=internal@ziontechgroup.com subject=INTERNAL: Access credentials for production deploy
+[2026-05-28T17:42:12.244290+00:00] [INFO] [V32] [V32] Intent: account_issue (conf=0.4)
+[2026-05-28T17:42:12.244591+00:00] [INFO] [V32] [V32] Sentiment: professional_neutral (score=50.0)
+[2026-05-28T17:42:12.245057+00:00] [INFO] [V32] [V32] Service signals: {'cloud': 1}, Relevant: 0 services
+[2026-05-28T17:42:12.246058+00:00] [INFO] [V32] [V32] Quality: 62.2 (D)
+[2026-05-28T17:42:12.246272+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=account_issue quality=62.2 sentiment=professional_neutral
+[2026-05-28T17:42:20.008309+00:00] [INFO] [V32] ============================================================
+[2026-05-28T17:42:20.009241+00:00] [INFO] [V32] V32 EMAIL ORCHESTRATOR — Autonomous Decision Engine
+[2026-05-28T17:42:20.009427+00:00] [INFO] [V32] ============================================================
+[2026-05-28T17:42:20.009826+00:00] [INFO] [V32] V32 Fine-Grained Intent Classifier initialized
+[2026-05-28T17:42:20.010273+00:00] [INFO] [V32] V32 Knowledge Responder initialized with 0 service entries
+[2026-05-28T17:42:20.010613+00:00] [INFO] [V32] V32 Persona Engine initialized
+[2026-05-28T17:42:20.010846+00:00] [INFO] [V32] V32 A/B Testing Engine initialized
+[2026-05-28T17:42:20.056794+00:00] [INFO] [V32] V31 Lifecycle Engine loaded successfully
+[2026-05-28T17:42:20.056946+00:00] [INFO] [V32] V32 Orchestrator READY!
+[2026-05-28T17:42:20.057127+00:00] [INFO] [V32] [V32] Processing: thread=thread-billing-001 from=john.smith@acme.com subject=Question about Invoice #4821
+[2026-05-28T17:42:20.067038+00:00] [INFO] [V32] [V32] Intent: billing_inquiry (conf=0.55)
+[2026-05-28T17:42:20.069647+00:00] [INFO] [V32] [V32] Sentiment: disappointed (score=50.0)
+[2026-05-28T17:42:20.072093+00:00] [INFO] [V32] [V32] Service signals: {}, Relevant: 0 services
+[2026-05-28T17:42:20.073492+00:00] [INFO] [V32] [V32] Quality: 81.2 (B)
+[2026-05-28T17:42:20.074370+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=billing_inquiry quality=81.2 sentiment=disappointed
+[2026-05-28T17:42:20.074615+00:00] [INFO] [V32] [V32] Processing: thread=thread-demo-002 from=sarah.chen@startup.io subject=Would love a demo of your AI services
+[2026-05-28T17:42:20.076875+00:00] [INFO] [V32] [V32] Intent: pricing_question (conf=0.8)
+[2026-05-28T17:42:20.077216+00:00] [INFO] [V32] [V32] Sentiment: satisfied_delighted (score=50.0)
+[2026-05-28T17:42:20.077768+00:00] [INFO] [V32] [V32] Service signals: {'ai': 2}, Relevant: 0 services
+[2026-05-28T17:42:20.078700+00:00] [INFO] [V32] [V32] Quality: 76.8 (C)
+[2026-05-28T17:42:20.078988+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=pricing_question quality=76.8 sentiment=satisfied_delighted
+[2026-05-28T17:42:20.079246+00:00] [INFO] [V32] [V32] Processing: thread=thread-frustrated-00 from=angry.customer@client.com subject=URGENT: System has been down for 3 hours
+[2026-05-28T17:42:20.081917+00:00] [INFO] [V32] [V32] Intent: outage_report (conf=0.95)
+[2026-05-28T17:42:20.082295+00:00] [INFO] [V32] [V32] Sentiment: frustrated_angry (score=100.0)
+[2026-05-28T17:42:20.082474+00:00] [WARN] [V32] [V32] ESCALATION FLAGGED: None
+[2026-05-28T17:42:20.082647+00:00] [WARN] [V32] [V32 ESCALATION] thread=thread-frustrated-003 sender=angry.customer@client.com intent=outage_report reason=None
+[2026-05-28T17:42:20.083385+00:00] [INFO] [V32] [V32] Service signals: {}, Relevant: 0 services
+[2026-05-28T17:42:20.084217+00:00] [INFO] [V32] [V32] Quality: 69.1 (D)
+[2026-05-28T17:42:20.084446+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=outage_report quality=69.1 sentiment=frustrated_angry
+[2026-05-28T17:42:20.084651+00:00] [INFO] [V32] [V32] Processing: thread=thread-partnership-0 from=ceo@innovate.co subject=Partnership opportunity — AI Integration Alliance
+[2026-05-28T17:42:20.086791+00:00] [INFO] [V32] [V32] Intent: partnership_offer (conf=0.85)
+[2026-05-28T17:42:20.087088+00:00] [INFO] [V32] [V32] Sentiment: professional_neutral (score=50.0)
+[2026-05-28T17:42:20.087234+00:00] [WARN] [V32] [V32] ESCALATION FLAGGED: None
+[2026-05-28T17:42:20.087397+00:00] [WARN] [V32] [V32 ESCALATION] thread=thread-partnership-004 sender=ceo@innovate.co intent=partnership_offer reason=None
+[2026-05-28T17:42:20.088184+00:00] [INFO] [V32] [V32] Service signals: {'ai': 1}, Relevant: 0 services
+[2026-05-28T17:42:20.089058+00:00] [INFO] [V32] [V32] Quality: 68.5 (D)
+[2026-05-28T17:42:20.089314+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=partnership_offer quality=68.5 sentiment=professional_neutral
+[2026-05-28T17:42:20.089575+00:00] [INFO] [V32] [V32] Processing: thread=thread-internal-005 from=internal@ziontechgroup.com subject=INTERNAL: Access credentials for production deploy
+[2026-05-28T17:42:20.091583+00:00] [INFO] [V32] [V32] Intent: account_issue (conf=0.55)
+[2026-05-28T17:42:20.091877+00:00] [INFO] [V32] [V32] Sentiment: professional_neutral (score=50.0)
+[2026-05-28T17:42:20.092351+00:00] [INFO] [V32] [V32] Service signals: {'cloud': 1}, Relevant: 0 services
+[2026-05-28T17:42:20.093467+00:00] [INFO] [V32] [V32] Quality: 62.2 (D)
+[2026-05-28T17:42:20.093714+00:00] [INFO] [V32] [V32] Decision: action=send_dry intent=account_issue quality=62.2 sentiment=professional_neutral

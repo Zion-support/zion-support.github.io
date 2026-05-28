@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Performance Optimization | Zion Tech Group',
   description:
     'Performance Optimization transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make faste',

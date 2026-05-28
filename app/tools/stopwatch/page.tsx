@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 export default function Stopwatch() {
   const [time, setTime] = useState(0);
@@ -30,8 +31,7 @@ export default function Stopwatch() {
 
   return (
     <main className="mx-auto max-w-md p-8 text-center">
-      <Head><title>Stopwatch</title></Head>
-      <h1 className="text-3xl font-bold mb-4">Stopwatch</h1>
+            <h1 className="text-3xl font-bold mb-4">Stopwatch</h1>
       <div className="text-6xl font-mono mb-4">{format(time)}</div>
       <div className="space-x-4">
         <button onClick={start} disabled={running} className="px-4 py-2 bg-green-500 text-white rounded">Start</button>

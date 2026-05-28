@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Healthcare AI Solutions | Zion Tech Group',
   description:
     'Streamline medical records, patient communication, and appointment scheduling with HIPAA-compliant AI workflows. Digitize intake and improve care delivery.',

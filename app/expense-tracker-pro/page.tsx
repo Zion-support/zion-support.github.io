@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Expense Tracker Pro | Zion Tech Group',
   description:
     'Expense Tracker Pro streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free your team to ',

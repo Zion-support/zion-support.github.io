@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Robotics Integration | Zion Tech Group',
   description:
     'Robotics Integration eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim o',

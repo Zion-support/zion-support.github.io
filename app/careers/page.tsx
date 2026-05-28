@@ -1,11 +1,11 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight, Zap, Globe, Heart, BookOpen, Users, Mail } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import { CONTACT_INFO } from '../utils/seoConstants';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Careers | Zion Tech Group',
   description:
     'Join Zion Tech Group. Build AI products that matter. Remote-first roles in engineering, AI, and product. Competitive benefits, growth opportunities, and a mission-driven team.',

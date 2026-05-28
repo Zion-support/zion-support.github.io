@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Edge Computing Solutions | Zion Tech Group',
   description:
     'Edge Computing Solutions connects physical operations with intelligent digital systems. Process sensor data at the edge, automate responses in real time, a',

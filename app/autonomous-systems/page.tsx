@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Autonomous Systems | Zion Tech Group',
   description:
     'Autonomous Systems explores the frontier of computing with advanced AI, simulation, and next-generation platforms. Position your team at the cutting edge w',

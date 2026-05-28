@@ -1,6 +1,7 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+
+
 
 const resources = [
   {
@@ -33,10 +34,7 @@ const resources = [
 export default function FreeResources() {
   return (
     <main className="mx-auto max-w-4xl p-8">
-      <Head>
-        <title>Free Resources | {process.env.NEXT_PUBLIC_APP_NAME}</title>
-      </Head>
-      <h1 className="text-3xl font-bold mb-4">Free Resources & Tools</h1>
+            <h1 className="text-3xl font-bold mb-4">Free Resources & Tools</h1>
       <p className="mb-6 text-gray-300">
         Explore free, open‑source tools and guides that help you build AI‑powered products without spending a dime.
       </p>

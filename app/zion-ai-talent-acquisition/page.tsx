@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Talent Acquisition | Zion Tech Group',
   description:
     'Source, screen, and qualify candidates with AI-powered matching and automated outreach workflows.',

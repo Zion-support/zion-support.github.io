@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Document Processor | Zion Tech Group',
   description:
     'Document Processor eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim ope',

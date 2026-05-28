@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight, Play, Calendar, MessageSquare, FileCode } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Demo | Zion Tech Group',
   description:
     'See Zion AI solutions in action. Book a live demo, explore use cases, or try our ROI estimator and launch advisor. No commitment required.',

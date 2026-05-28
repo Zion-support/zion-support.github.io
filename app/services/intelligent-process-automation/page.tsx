@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Intelligent Process Automation | Zion Tech Group',
   description: 'Automate complex business processes with AI-powered solutions. Discover how Zion Tech Group can help transform your business.',
   openGraph: {

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Cloud Infrastructure | Zion Tech Group',
   description:
     'Cloud Infrastructure services deliver scalable architecture, auto-scaling, IaC, and cost optimization. Modernize and manage workloads across clouds.',

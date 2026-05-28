@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Custom Software | Zion Tech Group',
   description:
     'Custom Software accelerates software delivery with intelligent tooling, automated code analysis, and streamlined development workflows. Ship higher-quality',

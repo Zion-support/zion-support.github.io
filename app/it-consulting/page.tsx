@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'IT Consulting | Zion Tech Group',
   description:
     'IT Consulting provides expert IT management, strategic consulting, and technical support services. Keep your technology infrastructure running smoothly whi',

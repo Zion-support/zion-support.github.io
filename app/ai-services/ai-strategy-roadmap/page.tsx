@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Strategy & Roadmap | Zion Tech Group',
   description:
     'Align AI initiatives with business goals. Discovery workshops, use-case prioritization, vendor evaluation, and phased roadmaps for production AI at scale.',

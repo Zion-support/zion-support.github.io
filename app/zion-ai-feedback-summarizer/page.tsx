@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Feedback Summarizer | Zion Tech Group',
   description:
     'Aggregate and summarize feedback from surveys, reviews, and support channels into actionable insights.',

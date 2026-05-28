@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Voice Synthesis | Zion Tech Group',
   description:
     'Deploy AI-powered voice synthesis for IVR, accessibility, and content creation with natural-sounding TTS.',

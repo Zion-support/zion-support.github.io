@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'System Status | Zion Tech Group',
   description:
     'System Status provides resources, documentation, and information to help you get the most from Zion Tech Group services and products.',

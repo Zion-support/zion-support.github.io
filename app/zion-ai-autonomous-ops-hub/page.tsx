@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Autonomous Ops Hub | Zion Tech Group',
   description:
     'Coordinate AI agents, workflows, and guardrails in one place. The Zion AI Autonomous Ops Hub keeps your apps improving continuously with health-aware, test-gated automation.',

@@ -1,0 +1,94 @@
+{
+  "intent_counts": {
+    "billing_inquiry": 4,
+    "pricing_question": 4,
+    "outage_report": 4,
+    "partnership_offer": 4,
+    "account_issue": 4
+  },
+  "confidence_scores": {},
+  "recent_classifications": [
+    {
+      "ts": "2026-05-28T17:42:12.218956+00:00",
+      "sender": "john.smith@acme.com",
+      "intent": "billing_inquiry",
+      "confidence": 0.4
+    },
+    {
+      "ts": "2026-05-28T17:42:12.229475+00:00",
+      "sender": "sarah.chen@startup.io",
+      "intent": "pricing_question",
+      "confidence": 0.8
+    },
+    {
+      "ts": "2026-05-28T17:42:12.234214+00:00",
+      "sender": "angry.customer@client.com",
+      "intent": "outage_report",
+      "confidence": 0.8
+    },
+    {
+      "ts": "2026-05-28T17:42:12.239217+00:00",
+      "sender": "ceo@innovate.co",
+      "intent": "partnership_offer",
+      "confidence": 0.8
+    },
+    {
+      "ts": "2026-05-28T17:42:12.243864+00:00",
+      "sender": "internal@ziontechgroup.com",
+      "intent": "account_issue",
+      "confidence": 0.4
+    },
+    {
+      "ts": "2026-05-28T17:42:20.066479+00:00",
+      "sender": "john.smith@acme.com",
+      "intent": "billing_inquiry",
+      "confidence": 0.55
+    },
+    {
+      "ts": "2026-05-28T17:42:20.076438+00:00",
+      "sender": "sarah.chen@startup.io",
+      "intent": "pricing_question",
+      "confidence": 0.8
+    },
+    {
+      "ts": "2026-05-28T17:42:20.081438+00:00",
+      "sender": "angry.customer@client.com",
+      "intent": "outage_report",
+      "confidence": 0.95
+    },
+    {
+      "ts": "2026-05-28T17:42:20.086345+00:00",
+      "sender": "ceo@innovate.co",
+      "intent": "partnership_offer",
+      "confidence": 0.85
+    },
+    {
+      "ts": "2026-05-28T17:42:20.091110+00:00",
+      "sender": "internal@ziontechgroup.com",
+      "intent": "account_issue",
+      "confidence": 0.55
+    }
+  ],
+  "sender_intents": {
+    "john.smith@acme.com": [
+      "billing_inquiry",
+      "billing_inquiry"
+    ],
+    "sarah.chen@startup.io": [
+      "pricing_question",
+      "pricing_question"
+    ],
+    "angry.customer@client.com": [
+      "outage_report",
+      "outage_report"
+    ],
+    "ceo@innovate.co": [
+      "partnership_offer",
+      "partnership_offer"
+    ],
+    "internal@ziontechgroup.com": [
+      "account_issue",
+      "account_issue"
+    ]
+  }
+}

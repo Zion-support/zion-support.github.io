@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Legal Document Analyzer | Zion Tech Group',
   description:
     'AI Legal Document Analyzer streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free your t',

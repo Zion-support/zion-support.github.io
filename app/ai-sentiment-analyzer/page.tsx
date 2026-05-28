@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Sentiment Analyzer | Zion Tech Group',
   description:
     'AI Sentiment Analyzer combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that inte',

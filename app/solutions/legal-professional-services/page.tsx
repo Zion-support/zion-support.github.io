@@ -1,11 +1,11 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 import Breadcrumb from '../../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Legal & Professional Services AI Solutions | Zion Tech Group',
   description:
     'Accelerate contract review, case management, and client intake with AI-powered legal workflows. Reduce document review time and surface risk clauses automatically.',

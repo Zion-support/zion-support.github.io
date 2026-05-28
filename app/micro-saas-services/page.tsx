@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight, Zap, Layers, Shield, BarChart3 } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Micro SAAS Services | Zion Tech Group',
   description:
     'Build and launch AI-powered micro-SaaS products with Zion Tech Group. Rapid product development, white-label solutions, and scalable deployment for startups and enterprises.',

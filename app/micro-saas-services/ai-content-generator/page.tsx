@@ -1,8 +1,8 @@
 import ErrorBoundary from '../../../components/GlobalErrorBoundary';
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',
   description: 'Professional services and solutions by Zion Tech Group.',
   keywords: 'technology, services, solutions',

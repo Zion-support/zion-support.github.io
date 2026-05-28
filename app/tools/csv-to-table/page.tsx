@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 export default function CsvToTable() {
   const [csv, setCsv] = useState('');
@@ -14,8 +15,7 @@ export default function CsvToTable() {
 
   return (
     <main className="mx-auto max-w-3xl p-8">
-      <Head><title>CSV to Table</title></Head>
-      <h1 className="text-3xl font-bold mb-4">CSV to Table Converter</h1>
+            <h1 className="text-3xl font-bold mb-4">CSV to Table Converter</h1>
       <textarea value={csv} onChange={e=>setCsv(e.target.value)} placeholder="Enter CSV (comma separated)..." className="w-full h-48 p-3 border rounded" />
       <button onClick={parse} className="mt-2 px-4 py-2 bg-purple-600 text-white rounded">Convert</button>
       {table.length>0 && (

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Quote Generator | Zion Tech Group',
   description:
     'Generate accurate quotes and proposals from product catalogs with AI-powered pricing and configuration.',

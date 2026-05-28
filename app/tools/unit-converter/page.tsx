@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 const units = {
   length: {
@@ -36,8 +37,7 @@ export default function UnitConverter() {
 
   return (
     <main className="mx-auto max-w-3xl p-8">
-      <Head><title>Unit Converter</title></Head>
-      <h1 className="text-3xl font-bold mb-4">Unit Converter</h1>
+            <h1 className="text-3xl font-bold mb-4">Unit Converter</h1>
       <div className="mb-4">
         <label className="mr-2">Category:</label>
         <select value={type} onChange={e=>{setType(e.target.value); setFrom(Object.keys(units[e.target.value as any])[0]); setTo(Object.keys(units[e.target.value as any])[1]);}} className="border rounded p-1">

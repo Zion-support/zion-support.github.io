@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Chatbot Builder | Zion Tech Group',
   description:
     'Build and deploy production-ready AI chatbots for support, sales, and internal teams — grounded in your knowledge base with human handoff, analytics, and secure integrations.',

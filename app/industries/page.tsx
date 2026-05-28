@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 import { HelpCircle } from 'lucide-react';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Industry Solutions | Zion Tech Group',
   description:
     'AI workflows tailored to your industry. Explore solutions for financial services, healthcare, ecommerce, manufacturing, legal, education, and 47 verticals.',

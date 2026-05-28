@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Multimodal Intelligence | Zion Tech Group',
   description:
     'Enterprise multimodal AI for text, video, images, and audio. Unified understanding across data types for document analysis, video insights, and intelligent content processing.',

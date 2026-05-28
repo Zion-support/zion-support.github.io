@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI-Powered Analytics | Zion Tech Group',
   description: 'Gain actionable insights from your data with AI analytics. Discover how Zion Tech Group can help transform your business.',
   openGraph: {

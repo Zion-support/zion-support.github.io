@@ -1,5 +1,6 @@
-import Head from 'next/head';
 import Link from 'next/link';
+
+
 
 const categories = [
   {
@@ -37,10 +38,7 @@ const categories = [
 export default function FreeToolsHub() {
   return (
     <main className="mx-auto max-w-5xl p-8">
-      <Head>
-        <title>Free Tools Hub | Zion Tech Group</title>
-      </Head>
-      <h1 className="text-4xl font-bold mb-4">Free Tools Hub</h1>
+            <h1 className="text-4xl font-bold mb-4">Free Tools Hub</h1>
       <p className="mb-10 text-lg text-gray-300">
         Your launchpad for free tools, resources, and monetization opportunities—all in one place.
       </p>

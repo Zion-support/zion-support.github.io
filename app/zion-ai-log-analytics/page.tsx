@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Log Analytics | Zion Tech Group',
   description:
     'Correlate and analyze logs across systems with AI-powered anomaly detection and root cause insights.',

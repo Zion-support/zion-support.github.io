@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 export default function QRCodeGenerator() {
   const [text, setText] = useState("https://example.com");
@@ -9,8 +10,7 @@ export default function QRCodeGenerator() {
 
   return (
     <main className="mx-auto max-w-md p-8 text-center">
-      <Head><title>QR Code Generator</title></Head>
-      <h1 className="text-3xl font-bold mb-4">QR Code Generator</h1>
+            <h1 className="text-3xl font-bold mb-4">QR Code Generator</h1>
       <input
         type="text"
         value={text}

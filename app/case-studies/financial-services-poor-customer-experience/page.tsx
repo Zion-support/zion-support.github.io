@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Financial Services Case Study: 90% faster processing | Zion Tech Group',
   description: 'Learn how we helped Financial Services Solutions Inc achieve 90% faster processing through Process optimization.',
   openGraph: {

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Customer Churn Predictor Pro | Zion Tech Group',
   description:
     'Zion AI Customer Churn Predictor Pro elevates customer interactions with AI-driven support, intelligent routing, and personalized engagement across every t',

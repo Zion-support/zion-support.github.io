@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Mental Health Companion | Zion Tech Group',
   description:
     'AI Mental Health Companion brings AI-powered intelligence to healthcare workflows, enabling faster diagnostics, better patient outcomes, and streamlined ad',

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Insurance AI Solutions | Zion Tech Group',
   description:
     'Streamline claims processing, fraud detection, and policy analysis for insurers. AI-powered workflows that reduce manual review and improve accuracy.',

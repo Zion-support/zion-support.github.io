@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Enterprise Context Engineering | Zion Tech Group",
   description: "Design context windows, retrieval, and memory policies that make LLMs accurate at scale. Bridge product, data, and platform teams with repeatable patterns for prompts, tools, and grounding.",
   alternates: { canonical: "/ai-services/ai-context-engineering-enterprise" },

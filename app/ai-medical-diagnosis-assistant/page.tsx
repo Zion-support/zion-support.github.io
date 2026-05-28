@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Medical Diagnosis Assistant | Zion Tech Group',
   description:
     'AI Medical Diagnosis Assistant brings AI-powered intelligence to healthcare workflows, enabling faster diagnostics, better patient outcomes, and streamline',

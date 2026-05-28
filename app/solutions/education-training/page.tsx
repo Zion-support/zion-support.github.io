@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Education & Training AI Solutions | Zion Tech Group',
   description:
     'Scale personalized learning experiences with AI. Deliver adaptive coursework, automate grading workflows, and generate engagement analytics for learners at any scale.',

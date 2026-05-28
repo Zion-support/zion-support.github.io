@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "AI Agent Safety & Evaluation | Zion Tech Group",
   description: "Red-teaming, behavioral evals, and production guardrails for autonomous and semi-autonomous AI agents. Reduce catastrophic failures, prompt injection risk, and unsafe tool use before agents touch customers or critical systems.",
   alternates: { canonical: "/ai-services/ai-agent-safety-evaluation" },

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Technology Case Study: 99% accuracy improvement | Zion Tech Group',
   description: 'Learn how we helped Technology Solutions Inc achieve 99% accuracy improvement through Intelligent chatbots.',
   openGraph: {

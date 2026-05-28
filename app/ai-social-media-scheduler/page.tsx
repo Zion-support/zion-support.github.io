@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description:
     'AI Social Media Scheduler empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automatio',

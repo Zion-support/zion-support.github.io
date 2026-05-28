@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Translator Pro | Zion Tech Group',
   description:
     'Translate content at scale with AI-powered language processing and multi-language support for documents and channels.',

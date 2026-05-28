@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 export default function QuoteOfTheDay() {
   const [quote, setQuote] = useState('');
@@ -25,8 +26,7 @@ export default function QuoteOfTheDay() {
 
   return (
     <main className="mx-auto max-w-3xl p-8">
-      <Head><title>Quote of the Day</title></Head>
-      <h1 className="text-3xl font-bold mb-4">Quote of the Day</h1>
+            <h1 className="text-3xl font-bold mb-4">Quote of the Day</h1>
       <blockquote className="border-l-4 pl-4 italic mb-4">{quote}</blockquote>
       {author && <p className="text-right mb-4">— {author}</p>}
       <button onClick={fetchQuote} className="px-4 py-2 bg-teal-600 text-white rounded">New Quote</button>

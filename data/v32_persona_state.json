@@ -1,0 +1,129 @@
+{
+  "senders": {
+    "john.smith@acme.com": {
+      "count": 2,
+      "styles": [
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 7.0,
+          "emoji_count": 0,
+          "caps_ratio": 0.069,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 4.57,
+          "urgency_signals": 0
+        },
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 7.0,
+          "emoji_count": 0,
+          "caps_ratio": 0.069,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 4.57,
+          "urgency_signals": 0
+        }
+      ]
+    },
+    "sarah.chen@startup.io": {
+      "count": 2,
+      "styles": [
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 7.6,
+          "emoji_count": 0,
+          "caps_ratio": 0.069,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 4.34,
+          "urgency_signals": 0
+        },
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 7.6,
+          "emoji_count": 0,
+          "caps_ratio": 0.069,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 4.34,
+          "urgency_signals": 0
+        }
+      ]
+    },
+    "angry.customer@client.com": {
+      "count": 2,
+      "styles": [
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 5.3,
+          "emoji_count": 0,
+          "caps_ratio": 0.084,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 4.84,
+          "urgency_signals": 1
+        },
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 5.3,
+          "emoji_count": 0,
+          "caps_ratio": 0.084,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 4.84,
+          "urgency_signals": 1
+        }
+      ]
+    },
+    "ceo@innovate.co": {
+      "count": 2,
+      "styles": [
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 5.6,
+          "emoji_count": 0,
+          "caps_ratio": 0.059,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 5.75,
+          "urgency_signals": 0
+        },
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 5.6,
+          "emoji_count": 0,
+          "caps_ratio": 0.059,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 5.75,
+          "urgency_signals": 0
+        }
+      ]
+    },
+    "internal@ziontechgroup.com": {
+      "count": 2,
+      "styles": [
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 8.7,
+          "emoji_count": 0,
+          "caps_ratio": 0.077,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 6.08,
+          "urgency_signals": 0
+        },
+        {
+          "sender_style": "neutral",
+          "avg_sentence_len": 8.7,
+          "emoji_count": 0,
+          "caps_ratio": 0.077,
+          "formal_score": 0,
+          "casual_score": 0,
+          "avg_word_len": 6.08,
+          "urgency_signals": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,12 +1,12 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Media & Entertainment AI Solutions | Zion Tech Group',
   description:
     'Automate content workflows, personalize experiences, and analyze audience behavior with AI-driven tools for media and entertainment.',

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Pricing Intelligence | Zion Tech Group',
   description:
     'Monitor competitor pricing and market signals to optimize pricing strategies and promotions.',

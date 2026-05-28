@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight, BookOpen, FileText, Megaphone } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'News & Resources | Zion Tech Group',
   description:
     'Latest news, blog posts, press releases, and resources from Zion Tech Group. Stay updated on AI solutions, product updates, and industry insights.',

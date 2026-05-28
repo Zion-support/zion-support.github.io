@@ -1,0 +1,4 @@
+{"ts": "2026-05-28T17:42:12.235623+00:00", "thread_id": "thread-frustrated-003", "sender": "angry.customer@client.com", "intent": "outage_report", "reason": null, "action": " escalated_to_human_review"}
+{"ts": "2026-05-28T17:42:12.240517+00:00", "thread_id": "thread-partnership-004", "sender": "ceo@innovate.co", "intent": "partnership_offer", "reason": null, "action": " escalated_to_human_review"}
+{"ts": "2026-05-28T17:42:20.082909+00:00", "thread_id": "thread-frustrated-003", "sender": "angry.customer@client.com", "intent": "outage_report", "reason": null, "action": " escalated_to_human_review"}
+{"ts": "2026-05-28T17:42:20.087738+00:00", "thread_id": "thread-partnership-004", "sender": "ceo@innovate.co", "intent": "partnership_offer", "reason": null, "action": " escalated_to_human_review"}

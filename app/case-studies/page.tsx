@@ -1,9 +1,9 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import CaseStudiesClient from './CaseStudiesClient';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Case Studies',
   description:
     'Real-world results from AI implementations across growth, engineering, and operations. See how teams use Zion Tech Group to deliver measurable outcomes.',

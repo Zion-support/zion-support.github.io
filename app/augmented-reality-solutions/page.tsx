@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Augmented Reality Solutions | Zion Tech Group',
   description:
     'Augmented Reality Solutions accelerates creative production with AI-assisted design, video generation, and content creation tools. Produce high-quality vis',

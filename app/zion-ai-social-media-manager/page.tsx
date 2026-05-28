@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Social Media Manager | Zion Tech Group',
   description:
     'Zion AI Social Media Manager automates scheduling, analytics, and content creation across platforms. Boost engagement and save time with AI-powered tools.',

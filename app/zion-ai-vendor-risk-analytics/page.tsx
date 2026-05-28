@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Vendor Risk Analytics | Zion Tech Group',
   description:
     'Assess and monitor vendor risk with automated scoring, compliance checks, and early warning signals.',

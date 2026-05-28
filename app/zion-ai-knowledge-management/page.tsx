@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Knowledge Management | Zion Tech Group',
   description:
     'Centralize and surface organizational knowledge with AI-powered search, tagging, and recommendations.',

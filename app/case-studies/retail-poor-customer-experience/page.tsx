@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Retail Case Study: 150% increase in capacity | Zion Tech Group',
   description: 'Learn how we helped Retail Solutions Inc achieve 150% increase in capacity through Natural language processing.',
   openGraph: {

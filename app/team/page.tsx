@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight, Users, Zap, Shield, Target, BookOpen } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Team | Zion Tech Group',
   description:
     'Meet the Zion Tech Group team. Engineers, architects, and product people building production-ready AI solutions with security-first delivery and measurable outcomes.',

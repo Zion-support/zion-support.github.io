@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Compliance Reporting | Zion Tech Group',
   description:
     'Generate audit-ready compliance reports and evidence packages with automated data aggregation.',

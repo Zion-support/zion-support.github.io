@@ -1,9 +1,9 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Innovation Bundles | Zion Tech Group',
   description:
     'Pre-designed AI bundles for faster rollout. Combine apps across customer success, revenue, operations, security, and more.',

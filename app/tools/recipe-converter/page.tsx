@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 function parseIngredient(line: string) {
   const match = line.trim().match(/^(\d+(?:\.\d+)?\s*)?([\w-]+)?\s*(.*)$/i);
@@ -32,8 +33,7 @@ export default function RecipeConverter() {
 
   return (
     <main className="mx-auto max-w-3xl p-8">
-      <Head><title>Recipe Converter</title></Head>
-      <h1 className="text-3xl font-bold mb-4">Recipe Converter</h1>
+            <h1 className="text-3xl font-bold mb-4">Recipe Converter</h1>
       <div className="mb-4">
         <label className="mr-2">Original servings:</label>
         <input type="number" value={servings} onChange={e=>setServings(parseInt(e.target.value)||1)} className="border rounded p-1 mr-4" />

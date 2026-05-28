@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Supplier Portal | Zion Tech Group',
   description:
     'Streamline supplier onboarding, performance tracking, and collaboration with AI-driven insights, document workflows, and self-service portals.',

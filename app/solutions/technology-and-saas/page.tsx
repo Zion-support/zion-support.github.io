@@ -1,11 +1,11 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Technology & SaaS AI Solutions | Zion Tech Group',
   description:
     'Accelerate product development, automate customer onboarding, and optimize conversion with AI-powered product workflows for technology and SaaS companies.',

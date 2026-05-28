@@ -1,11 +1,11 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Banking & Capital Markets AI Solutions | Zion Tech Group',
   description:
     'Deploy AI-powered fraud detection, risk scoring, and compliance workflows for KYC, AML, and regulatory reporting. Transform banking operations with intelligent automation.',

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Real Estate Analyzer | Zion Tech Group',
   description:
     'AI Real Estate Analyzer delivers purpose-built AI solutions tailored to specific industry requirements. Accelerate digital transformation with domain-speci',

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion Smart Analytics Dashboard | Zion Tech Group',
   description:
     'Zion Smart Analytics Dashboard transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make',

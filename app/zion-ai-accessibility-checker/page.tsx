@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Accessibility Checker | Zion Tech Group',
   description:
     'Scan web applications for WCAG compliance issues and generate AI-powered remediation guides. Ensure inclusive digital experiences.',

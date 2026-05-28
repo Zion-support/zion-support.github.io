@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Employee Experience | Zion Tech Group',
   description:
     'Measure and improve employee engagement with pulse surveys, sentiment analysis, and action insights.',

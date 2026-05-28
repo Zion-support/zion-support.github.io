@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Content Moderation | Zion Tech Group',
   description:
     'Zion AI Content Moderation empowers marketing and revenue teams with AI-driven campaign optimization, lead intelligence, and personalized outreach automati',

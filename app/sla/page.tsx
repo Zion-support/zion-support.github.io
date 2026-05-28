@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'SLA | Zion Tech Group',
   description:
     'Information about our policies, terms, and legal commitments. We are transparent about how we operate, protect your data, and ensure fair business practice',

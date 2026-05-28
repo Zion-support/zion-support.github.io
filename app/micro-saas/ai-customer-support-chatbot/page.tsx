@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Customer Support Chatbot | Zion Tech Group',
   description:
     'AI Customer Support Chatbot enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent',

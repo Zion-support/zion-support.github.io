@@ -1,12 +1,12 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import SolutionPageFAQ from '../../components/SolutionPageFAQ';
 import { SOLUTION_FAQS } from '../../constants/solutionFAQs';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Chemicals & Materials AI Solutions | Zion Tech Group',
   description:
     'Optimize supply chain, quality control, and sustainability compliance for chemical and materials manufacturers with AI-powered workflows.',

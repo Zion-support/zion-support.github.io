@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Cybersecurity Advanced | Zion Tech Group',
   description:
     'Cybersecurity Advanced provides enterprise-grade security controls, continuous monitoring, and compliance automation. Reduce risk exposure and accelerate a',

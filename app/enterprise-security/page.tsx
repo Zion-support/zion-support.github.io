@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Enterprise Security | Zion Tech Group',
   description:
     'Enterprise Security provides enterprise-grade security controls, continuous monitoring, and compliance automation. Reduce risk exposure and accelerate audi',

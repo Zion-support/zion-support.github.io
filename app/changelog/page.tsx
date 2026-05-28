@@ -1,5 +1,5 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
 type ChangelogEntry = {
   date: string;
@@ -25,7 +25,7 @@ const ENTRIES: ChangelogEntry[] = [
   },
 ];
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Changelog | Zion Tech Group',
   description:
     'Recent improvements to the Zion Tech Group platform, including new AI products, autonomous automation, and site experience updates.',

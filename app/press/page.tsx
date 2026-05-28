@@ -1,11 +1,11 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import { ArrowRight, FileText, Image, Download, Mail } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import { CONTACT_INFO } from '../utils/seoConstants';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Press & Media | Zion Tech Group',
   description:
     'Press releases, media kit, logos, executive bios, and media contact for Zion Tech Group. Access AI product news, launch updates, and resources for journalists and analysts.',

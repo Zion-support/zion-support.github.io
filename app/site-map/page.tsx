@@ -1,6 +1,6 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import {
   PRIMARY_NAV_LINKS,
   SOLUTION_LINKS,
@@ -10,7 +10,7 @@ import {
 } from '../constants/navigation';
 import Breadcrumb from '../components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Sitemap | Zion Tech Group',
   description:
     'Browse all pages and sections of Zion Tech Group: solutions, services, AI products, resources, and company information.',

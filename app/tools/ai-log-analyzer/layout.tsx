@@ -1,6 +1,6 @@
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Log Analyzer - Zion App',
   description: 'AI-powered log analysis and debugging assistant. Paste your logs and get instant insights, error categorization, and actionable recommendations.',
   keywords: ['log analyzer', 'debugging', 'error analysis', 'AI debugging', 'log parser'],

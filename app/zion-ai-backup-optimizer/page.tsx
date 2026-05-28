@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Backup Optimizer | Zion Tech Group',
   description:
     'Optimize backup schedules, retention, and recovery with AI-driven capacity and cost analysis.',

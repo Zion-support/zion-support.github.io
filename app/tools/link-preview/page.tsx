@@ -3,6 +3,8 @@ import { useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
 
+
+
 export default function LinkPreview() {
   const [url, setUrl] = useState("")
   const [preview, setPreview] = useState<string | null>(null)
@@ -24,8 +26,7 @@ export default function LinkPreview() {
 
   return (
     <main className="mx-auto max-w-2xl p-8">
-      <Head><title>Link Preview</title></Head>
-      <h1 className="text-3xl font-bold mb-4">Link Preview</h1>
+            <h1 className="text-3xl font-bold mb-4">Link Preview</h1>
       <input
         type="text"
         placeholder="Enter URL (without https://)"

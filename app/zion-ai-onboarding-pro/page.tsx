@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Onboarding Pro | Zion Tech Group',
   description:
     'Create personalized onboarding flows that adapt to user behavior and accelerate time-to-value.',

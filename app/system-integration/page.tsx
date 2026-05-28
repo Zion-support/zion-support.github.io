@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'System Integration | Zion Tech Group',
   description:
     'System Integration combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that integra',

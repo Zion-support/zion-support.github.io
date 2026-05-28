@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Mobile App Development | Zion Tech Group',
   description:
     'Build cross-platform and native mobile applications with AI-powered features, offline-first architecture, and enterprise-grade security.',

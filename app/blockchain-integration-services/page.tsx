@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Blockchain Integration Services | Zion Tech Group',
   description:
     'Blockchain Integration Services provides secure, transparent, and decentralized solutions for modern businesses. Build trust through immutable records, sma',

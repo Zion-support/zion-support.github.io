@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Territory Planner | Zion Tech Group',
   description:
     'Optimize sales territory assignment and coverage with AI-driven workload balancing, opportunity mapping, and quota alignment.',

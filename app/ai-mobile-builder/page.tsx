@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Mobile Builder | Zion Tech Group',
   description:
     'AI Mobile Builder delivers AI-powered mobile app development with cross-platform support, native performance, and rapid deployment. Build apps faster.',

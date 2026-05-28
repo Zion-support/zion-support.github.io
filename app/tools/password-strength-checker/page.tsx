@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
+
+
 
 export default function PasswordStrengthChecker() {
   const [pwd, setPwd] = useState('');
@@ -36,8 +37,7 @@ export default function PasswordStrengthChecker() {
 
   return (
     <main className="mx-auto max-w-3xl p-8">
-      <Head><title>Password Strength Checker</title></Head>
-      <h1 className="text-3xl font-bold mb-4">Password Strength Checker</h1>
+            <h1 className="text-3xl font-bold mb-4">Password Strength Checker</h1>
       <input type="password" value={pwd} onChange={e=>handleChange(e.target.value)} className="w-full p-2 border rounded" placeholder="Enter password" />
       <div className="mt-4 p-2 rounded" className={bg(score)}>
         <strong>Score:</strong> {score}/5 - {feedback}

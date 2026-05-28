@@ -1,10 +1,10 @@
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import AIToolCard from '../components/AIToolCard';
 import { AI_LAB_TOOLS } from './ai-lab-tools';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Lab',
   description:
     'Explore experimental and live AI tools that showcase how Zion’s autonomous agents improve and evolve ziontechgroup.com.',

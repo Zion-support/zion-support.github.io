@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Inventory Planner | Zion Tech Group',
   description:
     'Optimize inventory levels across SKUs and locations with demand-driven replenishment and safety stock AI.',

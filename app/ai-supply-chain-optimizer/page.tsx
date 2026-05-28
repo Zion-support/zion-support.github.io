@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Supply Chain Optimizer | Zion Tech Group',
   description:
     'AI Supply Chain Optimizer delivers purpose-built AI solutions tailored to specific industry requirements. Accelerate digital transformation with domain-spe',

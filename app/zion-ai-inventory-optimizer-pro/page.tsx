@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Inventory Optimizer Pro | Zion Tech Group',
   description:
     'Zion AI Inventory Optimizer Pro streamlines day-to-day operations with smart document handling, task coordination, and automated business processes. Free y',

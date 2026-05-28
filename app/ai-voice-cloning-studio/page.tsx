@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Voice Cloning Studio | Zion Tech Group',
   description:
     'AI Voice Cloning Studio enhances team communication and content workflows with AI-powered language processing, automated transcription, and intelligent tra',

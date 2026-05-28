@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Neural Memory Assistant | Zion Tech Group',
   description:
     'AI Neural Memory Assistant explores the frontier of computing with advanced AI, simulation, and next-generation platforms. Position your team at the cuttin',

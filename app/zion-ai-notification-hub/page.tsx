@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Notification Hub | Zion Tech Group',
   description:
     'Centralize multi-channel notifications with smart prioritization, batching, and delivery optimization.',

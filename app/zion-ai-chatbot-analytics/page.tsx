@@ -1,8 +1,8 @@
 import ProductPageLayout from '../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Zion AI Chatbot Analytics | Zion Tech Group',
   description:
     'Track chatbot performance, conversation flows, and improvement opportunities with AI-driven insights.',

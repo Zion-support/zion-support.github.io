@@ -1,9 +1,9 @@
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Dynamic API Monitoring',
   description:
     'Real-time performance tracking across QA/staging/prod environments with automated alerting and optimization suggestions.',

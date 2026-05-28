@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
 type ReadinessCheck = {
   name: string;
@@ -38,7 +38,7 @@ function loadReadinessReport(): ReadinessReport | null {
   }
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Deployment Readiness Console – Zion AI Lab',
   description:
     'Inspect the latest automation, UX, and link-health checks that gate autonomous deploys for ziontechgroup.com.',

@@ -1,8 +1,8 @@
 import ProductPageLayout from '../../components/ProductPageLayout';
 /* eslint-disable */
-import Metadata from 'next';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Fine-Tuning & Alignment Pipelines | Zion Tech Group",
   description: "Production-grade pipelines for supervised fine-tuning, preference optimization, and safe deployment of custom models. From curated datasets to staged rollouts and rollback.",
   alternates: { canonical: "/ai-services/ai-finetuning-alignment-pipelines" },
