@@ -171,7 +171,8 @@ _INTENT_POLICIES: dict = {
     'gdpr_request':     {'reply_all_default': False, 'reply_all_reason': 'gdpr_confidential',      'grammar_threshold': 80},
     'press_inquiry':    {'reply_all_default': True,   'reply_all_reason': 'press_cc_comms',         'grammar_threshold': 65},
     'investor_query':   {'reply_all_default': False, 'reply_all_reason': 'investor_confidential',    'grammar_threshold': 80},
-    'Urgent':           {'reply_all_default': True,   'reply_all_reason': 'urgent_default_cc',      'grammar_threshold': 55},
+    'urgent':            {'reply_all_default': True,   'reply_all_reason': 'urgent_default_cc',         'grammar_threshold': 55},
+    'Urgent':           {'reply_all_default': True,   'reply_all_reason': 'urgent_default_cc',         'grammar_threshold': 55},
     'general':          {'reply_all_default': False, 'reply_all_reason': 'default_no_cc',          'grammar_threshold': 65},
 }
 
@@ -223,11 +224,6 @@ def classify_intent(email: dict) -> dict:
     best_intent = max(scores, key=lambda k: scores[k])
     best_score  = scores[best_intent]
     confidence = min(best_score / 3.0, 1.0) if best_score > 0 else 0.3
-
-    # Override with urgency if high score
-    if scores.get('urgent', 0) >= 1.5 and scores.get('urgent', 0) >= best_score:
-        best_intent = 'urgent'
-        confidence = max(confidence, 0.8)
 
     reason = f'keyword_match:{best_intent} (score={best_score:.1f})'
     return {
@@ -496,16 +492,23 @@ _TEMPLATES = {
     'billing_inquiry': {
         'en': ("Hi {name},\n\n"
                "Thank you for reaching out regarding your billing inquiry.\n"
-               "I've reviewed your account and {'answer_specific' if ctx.get('has_answer') else 'am looking into this for you'}.\n\n"
+               "I've reviewed your account and am looking into this for you.\n\n"
                "{kb_context}\n"
                "Please don't hesitate to contact us if you have any further questions.\n\n"
                "Best regards,\nKleber Garcia Alcatrão\nZion Tech Group\n+1 302 464 0950 | kleber@ziontechgroup.com"),
     },
     'support_issue': {
         'en': ("Hi {name},\n\n"
-               "Thank you for bringing this to our attention. I've personally verified the issue and {'have a resolution ready' if ctx.get('resolved') else 'am working on a fix right now'}.\n\n"
+               "Thank you for bringing this to our attention. I've personally verified the issue and am working on a fix right now.\n\n"
                "{kb_context}\n\n"
                "I'll personally follow up within 2 business hours unless resolved sooner.\n\n"
+               "— Kleber Garcia Alcatrão\nZion Tech Group | +1 302 464 0950"),
+    },
+    'system_alert': {
+        'en': ("Hi {name},\n\n"
+               "Thank you for your message. Our team has received the system alert and is investigating immediately.\n"
+               "I'll provide an update within 30 minutes confirming the current status and estimated resolution time.\n\n"
+               "If this is a P1 incident, please call our 24/7 support line: +1 302 464 0950.\n\n"
                "— Kleber Garcia Alcatrão\nZion Tech Group | +1 302 464 0950"),
     },
     'meeting_request': {
