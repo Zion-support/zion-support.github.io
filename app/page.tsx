@@ -813,6 +813,12 @@ let list = services;
               { key: 'V52', name: 'Email Thread Summarizer', emoji: '🗂️', color: 'from-rose-500/20 to-pink-500/10 border-rose-500/30',
                 desc: 'Summarizes long threads into structured briefings: TL;DR, decisions made, open questions, action items, participant sentiment arc, and urgency level — in under 3 seconds.',
                 tech: 'TL;DR generation · Action item extraction · Sentiment arc · Urgency scoring' },
+              { key: 'V53', name: 'Language Detection', emoji: '🌍', color: 'from-cyan-600/20 to-teal-500/10 border-cyan-600/30',
+                desc: 'Detects 40+ languages in incoming emails, auto-translates, and adapts professional tone per cultural context — formal keigo for Japanese, direct for Dutch, warm for Spanish, RTL for Arabic.',
+                tech: '40+ language detection · Cultural tone adaptation · RTL support · Domain inference' },
+              { key: 'V54', name: 'Attachment Intelligence', emoji: '📎', color: 'from-orange-500/20 to-amber-500/10 border-orange-500/30',
+                desc: 'Parses attachments automatically: classifies invoice/contract/proposal, extracts fields (amount, due date, parties), detects missing attachments, auto-files to SharePoint/CRM, and triggers workflows.',
+                tech: 'Doc classification · Field extraction · Missing attachment detection · Auto-filing' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">
