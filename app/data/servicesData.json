@@ -21482,5 +21482,885 @@
     "stage": "published",
     "category": "ai",
     "industry": "Operations"
+  },
+  {
+    "id": "ai-document-redaction",
+    "title": "AI Document Redaction Engine",
+    "description": "AI Document Redaction Engine — comprehensive service from Zion Tech Group. Contact us for details.",
+    "icon": "🔒",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3",
+      "Feature 4"
+    ],
+    "benefits": [
+      "Benefit 1",
+      "Benefit 2",
+      "Benefit 3"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-document-redaction",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-document-redaction",
+    "category": "ai",
+    "popular": false,
+    "stage": "published",
+    "industry": "Legal"
+  },
+  {
+    "id": "cloud-cost-anomaly-detector",
+    "title": "Cloud Cost Anomaly Detector",
+    "description": "Cloud Cost Anomaly Detector — comprehensive service from Zion Tech Group. Contact us for details.",
+    "icon": "💰",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3",
+      "Feature 4"
+    ],
+    "benefits": [
+      "Benefit 1",
+      "Benefit 2",
+      "Benefit 3"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/cloud-cost-anomaly-detector",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-cost-anomaly-detector",
+    "category": "cloud",
+    "popular": false,
+    "stage": "published",
+    "industry": "Finance"
+  },
+  {
+    "id": "it-asset-lifecycle-manager",
+    "title": "IT Asset Lifecycle Manager",
+    "description": "IT Asset Lifecycle Manager — comprehensive service from Zion Tech Group. Contact us for details.",
+    "icon": "🖥️",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3",
+      "Feature 4"
+    ],
+    "benefits": [
+      "Benefit 1",
+      "Benefit 2",
+      "Benefit 3"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/it-asset-lifecycle-manager",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-asset-lifecycle-manager",
+    "category": "it",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "api-usage-analytics",
+    "title": "API Usage Analytics Platform",
+    "description": "API Usage Analytics Platform — comprehensive service from Zion Tech Group. Contact us for details.",
+    "icon": "📊",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3",
+      "Feature 4"
+    ],
+    "benefits": [
+      "Benefit 1",
+      "Benefit 2",
+      "Benefit 3"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/api-usage-analytics",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/api-usage-analytics",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "container-security-scanner",
+    "title": "Container Security Scanner",
+    "description": "Container Security Scanner — comprehensive service from Zion Tech Group. Contact us for details.",
+    "icon": "🐳",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3",
+      "Feature 4"
+    ],
+    "benefits": [
+      "Benefit 1",
+      "Benefit 2",
+      "Benefit 3"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/container-security-scanner",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/container-security-scanner",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "webhook-failover-router",
+    "title": "Webhook Failover Router",
+    "description": "Smart webhook delivery with automatic retry, geographic routing, and failover. Guarantees at-least-once delivery, logs every event, and replays on demand.",
+    "icon": "🔄",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "999",
+      "enterprise": "2999"
+    },
+    "contactInfo": {
+      "website": "/services/webhook-failover-router",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/webhook-failover-router",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "database-query-explainer",
+    "title": "Database Query Explainer",
+    "description": "AI-powered SQL query optimization. Paste any SQL, get index suggestions, join order analysis, and execution plan improvements for PostgreSQL/MySQL/Snowflake/BigQuery.",
+    "icon": "🔍",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "2999"
+    },
+    "contactInfo": {
+      "website": "/services/database-query-explainer",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/database-query-explainer",
+    "category": "data",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "backup-compliance-validator",
+    "title": "Backup Compliance Validator",
+    "description": "Automated backup verification against SOC2, ISO27001, GDPR. Verifies backup logs, tests restore procedures, generates audit-ready compliance reports.",
+    "icon": "✅",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "website": "/services/backup-compliance-validator",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/backup-compliance-validator",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "ssl-certificate-monitor",
+    "title": "SSL Certificate Monitor",
+    "description": "Multi-domain SSL certificate monitoring and automated renewal. Tracks expiry, chains, vulnerabilities — prevents expired certificate outages.",
+    "icon": "🔐",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "1999"
+    },
+    "contactInfo": {
+      "website": "/services/ssl-certificate-monitor",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ssl-certificate-monitor",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "network-flow-analyzer",
+    "title": "Network Flow Analyzer",
+    "description": "NetFlow/sFlow/IPFIX traffic analysis. Identify bandwidth hogs, detect anomalies, optimize QoS policies, and plan capacity for Cisco/Juniper/generic exporters.",
+    "icon": "🌐",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2199",
+      "enterprise": "6999"
+    },
+    "contactInfo": {
+      "website": "/services/network-flow-analyzer",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/network-flow-analyzer",
+    "category": "it",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "password-health-dashboard",
+    "title": "Enterprise Password Health Dashboard",
+    "description": "Scan Active Directory/Azure AD/Google Workspace for weak, expired, reused passwords. Generate NIST/SOX compliance reports with remediation guidance.",
+    "icon": "🔑",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "4499"
+    },
+    "contactInfo": {
+      "website": "/services/password-health-dashboard",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/password-health-dashboard",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "webhook-archive-replay",
+    "title": "Webhook Archive & Replay",
+    "description": "Permanent webhook event archive with full payload storage, search, and on-demand replay. Compliance audit trails, QA testing, new integration replay.",
+    "icon": "📦",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "website": "/services/webhook-archive-replay",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/webhook-archive-replay",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "log-anomaly-alerting",
+    "title": "ML Log Anomaly Alerting",
+    "description": "ML pattern recognition for production log anomalies. Learns normal patterns, alerts on deviation, reduces false positives vs rule-based alerting by 60%.",
+    "icon": "📈",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/log-anomaly-alerting",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/log-anomaly-alerting",
+    "category": "automation",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "multi-cloud-dns-failover",
+    "title": "Multi-Cloud DNS Failover",
+    "description": "Geographic health checking and automatic DNS failover across Route 53, Azure DNS, Cloudflare. HTTP/TCP/ICMP checks from 12 global locations, 60-second failover.",
+    "icon": "🌍",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "999",
+      "enterprise": "2999"
+    },
+    "contactInfo": {
+      "website": "/services/multi-cloud-dns-failover",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/multi-cloud-dns-failover",
+    "category": "cloud",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "service-catalog-api",
+    "title": "Internal Service Catalog API",
+    "description": "Internal developer portal with service registry, API documentation hub, and dependency graph. Enables self-service service discovery without spreadsheet chaos.",
+    "icon": "📚",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2499",
+      "enterprise": "7499"
+    },
+    "contactInfo": {
+      "website": "/services/service-catalog-api",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/service-catalog-api",
+    "category": "saas",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "devops-pipeline-monitor",
+    "title": "DevOps Pipeline Monitor",
+    "description": "DORA metrics tracking for GitHub Actions, GitLab CI, Jenkins, ArgoCD. Deployment frequency, lead time, MTTR, change failure rate in real time.",
+    "icon": "🚀",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2199",
+      "enterprise": "6499"
+    },
+    "contactInfo": {
+      "website": "/services/devops-pipeline-monitor",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/devops-pipeline-monitor",
+    "category": "automation",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "secrets-rotation-engine",
+    "title": "Secrets Rotation Engine",
+    "description": "Automated credential rotation for databases, APIs, service accounts. Integrates with HashiCorp Vault, AWS Secrets Manager, Azure Key Vault.",
+    "icon": "🔄",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2999",
+      "enterprise": "8999"
+    },
+    "contactInfo": {
+      "website": "/services/secrets-rotation-engine",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/secrets-rotation-engine",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
+  },
+  {
+    "id": "compliance-evidence-collector",
+    "title": "Compliance Evidence Collector",
+    "description": "Automated evidence gathering for SOC2, ISO27001, HIPAA, GDPR audits. Connects to cloud APIs and ticketing systems, generates auditor-ready report in hours.",
+    "icon": "📋",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "1499",
+      "pro": "3999",
+      "enterprise": "11999"
+    },
+    "contactInfo": {
+      "website": "/services/compliance-evidence-collector",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/compliance-evidence-collector",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Legal"
+  },
+  {
+    "id": "ml-model-drift-detector",
+    "title": "ML Model Drift Detector",
+    "description": "Monitor production ML model performance degradation and data drift. Tracks prediction distribution shifts, feature drift, accuracy degradation before bad decisions.",
+    "icon": "🤖",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2499",
+      "enterprise": "7499"
+    },
+    "contactInfo": {
+      "website": "/services/ml-model-drift-detector",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ml-model-drift-detector",
+    "category": "ai",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "infrastructure-topology-mapper",
+    "title": "Infrastructure Topology Mapper",
+    "description": "Auto-generate infrastructure diagrams from AWS/Azure/GCP APIs. Discovers resources, dependencies, data flows, produces live auto-updated diagrams.",
+    "icon": "🗺️",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "website": "/services/infrastructure-topology-mapper",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/infrastructure-topology-mapper",
+    "category": "cloud",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "incident-response-playbook",
+    "title": "Incident Response Playbook Engine",
+    "description": "Structured incident response automation: runbooks, escalation trees, stakeholder communication templates, post-incident review — triggered from a single alert.",
+    "icon": "🚨",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2199",
+      "enterprise": "6499"
+    },
+    "contactInfo": {
+      "website": "/services/incident-response-playbook",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/incident-response-playbook",
+    "category": "automation",
+    "popular": false,
+    "stage": "published",
+    "industry": "Operations"
+  },
+  {
+    "id": "ci-cd-secret-scanner",
+    "title": "CI/CD Secret Scanner",
+    "description": "Scan CI/CD pipeline logs and artifacts for exposed API keys, tokens, passwords. Prevent secret leakage in GitHub Actions, Jenkins, GitLab CI pipelines.",
+    "icon": "🔎",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "website": "/services/ci-cd-secret-scanner",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ci-cd-secret-scanner",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "databaseschema-migrator",
+    "title": "Database Schema Migration Manager",
+    "description": "Schema migration manager with rollback support, dependency analysis, and migration testing. Works across PostgreSQL, MySQL, MSSQL, Snowflake.",
+    "icon": "🔄",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1599",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "website": "/services/databaseschema-migrator",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/databaseschema-migrator",
+    "category": "data",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "k8s-cost-optimizer",
+    "title": "Kubernetes Cost Optimizer",
+    "description": "Analyze Kubernetes cluster resource usage, recommend pod right-sizing and bin-packing. Reduce K8s cloud costs by 25-40% without performance impact.",
+    "icon": "💲",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "website": "/services/k8s-cost-optimizer",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/k8s-cost-optimizer",
+    "category": "cloud",
+    "popular": false,
+    "stage": "published",
+    "industry": "Technology"
+  },
+  {
+    "id": "sso-access-auditor",
+    "title": "SSO Access Auditor",
+    "description": "Audit SSO access across Okta/Azure AD/Google Workspace. Detect unauthorized access, generate peer-privilege comparisons, flag role creep for compliance.",
+    "icon": "🔍",
+    "features": [
+      "Real-time monitoring and alerting",
+      "Integrates with major enterprise platforms",
+      "Enterprise-grade security and compliance",
+      "Scalable to any organization size",
+      "Dedicated support from Zion Tech Group",
+      "Contact: kleber@ziontechgroup.com or +1 302 464 0950"
+    ],
+    "benefits": [
+      "Reduce operational overhead and costs",
+      "Enterprise-grade reliability and security",
+      "Fast implementation with minimal disruption",
+      "Measurable ROI within first quarter",
+      "Backed by Zion Tech Group expertise"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "website": "/services/sso-access-auditor",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/sso-access-auditor",
+    "category": "security",
+    "popular": false,
+    "stage": "published",
+    "industry": "Security"
   }
 ]
