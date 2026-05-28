@@ -25743,5 +25743,719 @@
     "category": "it",
     "popular": false,
     "industry": "technology-&-saas"
+  },
+  {
+    "id": "saas-mailforge",
+    "title": "MailForge — Email Outreach Platform",
+    "description": "Cold email outreach at scale with AI personalization, A/B testing, and deliverability optimization.",
+    "icon": "📧",
+    "features": [
+      "AI email personalization",
+      "A/B testing",
+      "Deliverability optimization",
+      "CRM sync",
+      "Analytics dashboard",
+      "Unsubscribe management"
+    ],
+    "benefits": [
+      "Higher reply rates",
+      "Scale outreach 10x",
+      "Better deliverability",
+      "Reduce costs"
+    ],
+    "pricing": {
+      "basic": 399,
+      "pro": 999,
+      "enterprise": 2499
+    },
+    "contactInfo": {
+      "website": "/services/saas-mailforge",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-mailforge",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "saas-subscript-track",
+    "title": "SubscriptTrack — Subscription Analytics",
+    "description": "Track churn, MRR, LTV, and cohort analysis for SaaS businesses. Baremetrics alternative.",
+    "icon": "💰",
+    "features": [
+      "MRR tracking",
+      "Churn analysis",
+      "Cohort analysis",
+      "LTV forecasting",
+      "Slack alerts",
+      "API integration"
+    ],
+    "benefits": [
+      "Understand churn",
+      "Forecast revenue",
+      "Optimize pricing",
+      "Data SaaS health"
+    ],
+    "pricing": {
+      "basic": 249,
+      "pro": 649,
+      "enterprise": 1799
+    },
+    "contactInfo": {
+      "website": "/services/saas-subscript-track",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-subscript-track",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "financial-services-&-fintech"
+  },
+  {
+    "id": "saas-feedbackpulse",
+    "title": "FeedbackPulse — Customer Feedback Hub",
+    "description": "Collect, analyze, and act on customer feedback. NPS, CSAT, in-app surveys with AI thematic analysis.",
+    "icon": "💬",
+    "features": [
+      "NPS/CSAT surveys",
+      "In-app feedback widgets",
+      "AI thematic analysis",
+      "Ticket creation",
+      "Analytics dashboard",
+      "Slack/Jira integration"
+    ],
+    "benefits": [
+      "Close feedback loop",
+      "Prioritize by impact",
+      "Increase NPS",
+      "Reduce churn"
+    ],
+    "pricing": {
+      "basic": 199,
+      "pro": 499,
+      "enterprise": 1299
+    },
+    "contactInfo": {
+      "website": "/services/saas-feedbackpulse",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-feedbackpulse",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "saas-hireflow",
+    "title": "HireFlow — ATS for SMBs",
+    "description": "Applicant tracking system for small teams. Job posting, pipeline management, interview scheduling.",
+    "icon": "👥",
+    "features": [
+      "Job board posting",
+      "Pipeline management",
+      "Interview scheduling",
+      "Team collaboration",
+      "Offer management",
+      "Reporting"
+    ],
+    "benefits": [
+      "Hire faster",
+      "Better candidate experience",
+      "Reduce hiring bias",
+      "Affordable"
+    ],
+    "pricing": {
+      "basic": 299,
+      "pro": 799,
+      "enterprise": 1999
+    },
+    "contactInfo": {
+      "website": "/services/saas-hireflow",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-hireflow",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "saas-currencylayer-pro",
+    "title": "CurrencyLayer Pro — Multi-Currency Pricing",
+    "description": "Real-time currency conversion, automatic price adjustments, and multi-currency checkout.",
+    "icon": "💱",
+    "features": [
+      "Real-time rates",
+      "Auto price adjustment",
+      "Multi-currency checkout",
+      "Historical rates",
+      "API access",
+      "200+ currencies"
+    ],
+    "benefits": [
+      "Sell globally",
+      "Auto price updates",
+      "Reduce FX risk",
+      "Developer friendly"
+    ],
+    "pricing": {
+      "basic": 99,
+      "pro": 249,
+      "enterprise": 699
+    },
+    "contactInfo": {
+      "website": "/services/saas-currencylayer-pro",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-currencylayer-pro",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "financial-services-&-fintech"
+  },
+  {
+    "id": "saas-securevault",
+    "title": "SecureVault — Password Manager for Teams",
+    "description": "Enterprise password manager with SSO, audit logs, and breach monitoring. 1Password alternative.",
+    "icon": "🔐",
+    "features": [
+      "Team password sharing",
+      "SSO integration",
+      "Audit logs",
+      "Breach monitoring",
+      "API access",
+      "MFA enforcement"
+    ],
+    "benefits": [
+      "Secure credentials",
+      "Meet compliance",
+      "Reduce password fatigue",
+      "Team productivity"
+    ],
+    "pricing": {
+      "basic": 149,
+      "pro": 399,
+      "enterprise": 999
+    },
+    "contactInfo": {
+      "website": "/services/saas-securevault",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-securevault",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "security"
+  },
+  {
+    "id": "ai-speech-to-text-api",
+    "title": "AI Speech-to-Text API",
+    "description": "Real-time transcription for 100+ languages with speaker diarization and custom vocabulary.",
+    "icon": "🎙️",
+    "features": [
+      "Real-time streaming",
+      "100+ languages",
+      "Speaker diarization",
+      "Custom vocabulary",
+      "Punctuation",
+      "SSML support"
+    ],
+    "benefits": [
+      "Transcribe at scale",
+      "Multi-language",
+      "Speaker ID",
+      "Cost effective"
+    ],
+    "pricing": {
+      "basic": 299,
+      "pro": 799,
+      "enterprise": 1999
+    },
+    "contactInfo": {
+      "website": "/services/ai-speech-to-text-api",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-speech-to-text-api",
+    "category": "ai",
+    "popular": false,
+    "industry": "media-&-entertainment"
+  },
+  {
+    "id": "ai-entity-extraction",
+    "title": "AI Entity Extraction and NER",
+    "description": "Extract people, organizations, locations, dates, and custom entities from any text.",
+    "icon": "🏷️",
+    "features": [
+      "Pre-trained models",
+      "Custom entity training",
+      "50+ languages",
+      "Batch processing",
+      "API access",
+      "High accuracy"
+    ],
+    "benefits": [
+      "Extract structured data",
+      "Multi-language",
+      "Custom entities",
+      "99% accuracy"
+    ],
+    "pricing": {
+      "basic": 399,
+      "pro": 999,
+      "enterprise": 2499
+    },
+    "contactInfo": {
+      "website": "/services/ai-entity-extraction",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-entity-extraction",
+    "category": "ai",
+    "popular": false,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "ai-nlp-summarization",
+    "title": "AI Text Summarization API",
+    "description": "Automatic summarization for documents, articles, and reports. Extractive + abstractive.",
+    "icon": "📄",
+    "features": [
+      "Extractive summarization",
+      "Abstractive summarization",
+      "Custom length",
+      "Multi-language",
+      "Batch processing",
+      "API access"
+    ],
+    "benefits": [
+      "Summarize at scale",
+      "Save reading time",
+      "Multi-language",
+      "99% accuracy"
+    ],
+    "pricing": {
+      "basic": 199,
+      "pro": 499,
+      "enterprise": 1299
+    },
+    "contactInfo": {
+      "website": "/services/ai-nlp-summarization",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-nlp-summarization",
+    "category": "ai",
+    "popular": false,
+    "industry": "legal-&-compliance"
+  },
+  {
+    "id": "ai-bot-builder",
+    "title": "AI Chatbot Builder Platform",
+    "description": "No-code chatbot builder with NLP, multi-channel deployment, and analytics. Dialogflow alternative.",
+    "icon": "🤖",
+    "features": [
+      "No-code builder",
+      "NLP engine",
+      "Multi-channel (web/WhatsApp/Slack)",
+      "Analytics",
+      "Human handoff",
+      "Custom training"
+    ],
+    "benefits": [
+      "Build bots without code",
+      "Multi-channel",
+      "Reduce support cost",
+      "24/7 availability"
+    ],
+    "pricing": {
+      "basic": 499,
+      "pro": 1499,
+      "enterprise": 3999
+    },
+    "contactInfo": {
+      "website": "/services/ai-bot-builder",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-bot-builder",
+    "category": "ai",
+    "popular": true,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "ai-retail-demand-forecast",
+    "title": "AI Retail Demand Forecasting",
+    "description": "Predict demand for retail products using weather, events, and promotions data.",
+    "icon": "🏪",
+    "features": [
+      "Weather integration",
+      "Promotion impact",
+      "Event-aware predictions",
+      "Multi-store support",
+      "Inventory recommendations",
+      "API integration"
+    ],
+    "benefits": [
+      "Reduce stockouts 30%",
+      "Optimize inventory",
+      "Increase margins",
+      "Data-driven ordering"
+    ],
+    "pricing": {
+      "basic": 1999,
+      "pro": 4999,
+      "enterprise": 12999
+    },
+    "contactInfo": {
+      "website": "/services/ai-retail-demand-forecast",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-retail-demand-forecast",
+    "category": "ai",
+    "popular": false,
+    "industry": "retail-&-e-commerce"
+  },
+  {
+    "id": "ai-facial-recognition-api",
+    "title": "AI Facial Recognition API",
+    "description": "Face detection, verification, and identification with liveness detection. For access control and KYC.",
+    "icon": "👤",
+    "features": [
+      "Face detection",
+      "1:1 verification",
+      "1:N identification",
+      "Liveness detection",
+      "Anti-spoofing",
+      "Edge deployment"
+    ],
+    "benefits": [
+      "Secure access control",
+      "KYC compliance",
+      "Attendance automation",
+      "Fraud prevention"
+    ],
+    "pricing": {
+      "basic": 999,
+      "pro": 2499,
+      "enterprise": 6999
+    },
+    "contactInfo": {
+      "website": "/services/ai-facial-recognition-api",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-facial-recognition-api",
+    "category": "ai",
+    "popular": true,
+    "industry": "security"
+  },
+  {
+    "id": "ai-computer-vision-api",
+    "title": "AI Computer Vision API",
+    "description": "Image classification, object detection, OCR, and image tagging via simple API. Google Vision alternative.",
+    "icon": "👁️",
+    "features": [
+      "Image classification",
+      "Object detection",
+      "OCR",
+      "Image tagging",
+      "Custom models",
+      "Batch processing"
+    ],
+    "benefits": [
+      "Analyze images at scale",
+      "Custom models",
+      "Cost effective",
+      "Simple API"
+    ],
+    "pricing": {
+      "basic": 499,
+      "pro": 1499,
+      "enterprise": 3999
+    },
+    "contactInfo": {
+      "website": "/services/ai-computer-vision-api",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-computer-vision-api",
+    "category": "ai",
+    "popular": true,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "ai-hr-workforce-analytics",
+    "title": "AI HR Workforce Analytics",
+    "description": "Predict attrition, identify flight risks, optimize headcount, and improve employee engagement.",
+    "icon": "👔",
+    "features": [
+      "Attrition prediction",
+      "Flight risk scoring",
+      "Headcount optimization",
+      "Engagement analytics",
+      "Diversity insights",
+      "Manager dashboards"
+    ],
+    "benefits": [
+      "Reduce attrition 20%",
+      "Optimize headcount",
+      "Improve engagement",
+      "Data-driven HR"
+    ],
+    "pricing": {
+      "basic": 1499,
+      "pro": 3999,
+      "enterprise": 9999
+    },
+    "contactInfo": {
+      "website": "/services/ai-hr-workforce-analytics",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-hr-workforce-analytics",
+    "category": "ai",
+    "popular": false,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "it-5g-private-network",
+    "title": "Private 5G Network Design and Deploy",
+    "description": "Enterprise private 5G for factories, campuses, and warehouses. Design, spectrum, deployment, and management.",
+    "icon": "📡",
+    "features": [
+      "Network design",
+      "Spectrum acquisition",
+      "Equipment selection",
+      "Deployment",
+      "Management",
+      "SLA support"
+    ],
+    "benefits": [
+      "Ultra-low latency",
+      "High reliability",
+      "Massive IoT support",
+      "Data sovereignty"
+    ],
+    "pricing": {
+      "basic": 14999,
+      "pro": 39999,
+      "enterprise": 99999
+    },
+    "contactInfo": {
+      "website": "/services/it-5g-private-network",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-5g-private-network",
+    "category": "it",
+    "popular": false,
+    "industry": "manufacturing-&-industrial"
+  },
+  {
+    "id": "it-unified-communications",
+    "title": "Unified Communications as a Service",
+    "description": "UCaaS: voice, video, messaging, and collaboration in one platform. RingCentral alternative.",
+    "icon": "📞",
+    "features": [
+      "Voice calling",
+      "Video conferencing",
+      "Team messaging",
+      "Screen sharing",
+      "Call recording",
+      "Analytics"
+    ],
+    "benefits": [
+      "Reduce comms costs",
+      "Single platform",
+      "Remote ready",
+      "Predictable pricing"
+    ],
+    "pricing": {
+      "basic": 499,
+      "pro": 1299,
+      "enterprise": 3499
+    },
+    "contactInfo": {
+      "website": "/services/it-unified-communications",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-unified-communications",
+    "category": "it",
+    "popular": true,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "it-soc2-compliance-automation",
+    "title": "SOC2 Compliance Automation",
+    "description": "Automated SOC2 evidence collection, control testing, and audit preparation. Vanta alternative.",
+    "icon": "✅",
+    "features": [
+      "Automated evidence collection",
+      "Control testing",
+      "Audit preparation",
+      "Policy management",
+      "Risk assessment",
+      "Vendor management"
+    ],
+    "benefits": [
+      "Reduce audit prep 90%",
+      "Continuous compliance",
+      "Audit-ready always",
+      "Affordable"
+    ],
+    "pricing": {
+      "basic": 1999,
+      "pro": 4999,
+      "enterprise": 12999
+    },
+    "contactInfo": {
+      "website": "/services/it-soc2-compliance-automation",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-soc2-compliance-automation",
+    "category": "automation",
+    "popular": true,
+    "industry": "legal-&-compliance"
+  },
+  {
+    "id": "security-privacy-impact-assessment",
+    "title": "Privacy Impact Assessment Service",
+    "description": "Comprehensive privacy assessments for GDPR, CCPA, LGPD. Documentation and remediation roadmap.",
+    "icon": "🔒",
+    "features": [
+      "GDPR/CCPA/LGPD assessment",
+      "Data flow mapping",
+      "Risk scoring",
+      "Remediation roadmap",
+      "Documentation",
+      "Ongoing monitoring"
+    ],
+    "benefits": [
+      "Meet privacy regulations",
+      "Reduce compliance risk",
+      "Build customer trust",
+      "Audit-ready"
+    ],
+    "pricing": {
+      "basic": 2999,
+      "pro": 7999,
+      "enterprise": 19999
+    },
+    "contactInfo": {
+      "website": "/services/security-privacy-impact-assessment",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/security-privacy-impact-assessment",
+    "category": "security",
+    "popular": false,
+    "industry": "legal-&-compliance"
+  },
+  {
+    "id": "security-cloud-siem",
+    "title": "Cloud-Native SIEM Solution",
+    "description": "Cloud-native security information and event management. Splunk alternative.",
+    "icon": "📊",
+    "features": [
+      "Log aggregation",
+      "Real-time correlation",
+      "Threat detection",
+      "Compliance reporting",
+      "Cloud-native",
+      "ML anomaly detection"
+    ],
+    "benefits": [
+      "Reduce SIEM costs 60%",
+      "Cloud-native scale",
+      "Faster detection",
+      "Meet compliance"
+    ],
+    "pricing": {
+      "basic": 2999,
+      "pro": 7999,
+      "enterprise": 19999
+    },
+    "contactInfo": {
+      "website": "/services/security-cloud-siem",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/security-cloud-siem",
+    "category": "security",
+    "popular": true,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "cloud-serverless-platform",
+    "title": "Serverless Platform as a Service",
+    "description": "Deploy serverless functions, APIs, and event-driven apps without managing infrastructure.",
+    "icon": "⚡",
+    "features": [
+      "Function deployment",
+      "Auto-scaling",
+      "Event-driven triggers",
+      "Monitoring",
+      "Multi-region",
+      "Pay-per-execution"
+    ],
+    "benefits": [
+      "Zero infrastructure",
+      "Auto-scaling",
+      "Pay only for usage",
+      "Faster development"
+    ],
+    "pricing": {
+      "basic": 499,
+      "pro": 1499,
+      "enterprise": 3999
+    },
+    "contactInfo": {
+      "website": "/services/cloud-serverless-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-serverless-platform",
+    "category": "cloud",
+    "popular": true,
+    "industry": "technology-&-saas"
+  },
+  {
+    "id": "data-data-quality-platform",
+    "title": "Data Quality and Observability Platform",
+    "description": "Monitor, detect, and fix data quality issues across your pipelines. Monte Carlo alternative.",
+    "icon": "✅",
+    "features": [
+      "Data quality monitoring",
+      "Anomaly detection",
+      "Incident management",
+      "Lineage tracking",
+      "SLAs",
+      "Team collaboration"
+    ],
+    "benefits": [
+      "Trust your data",
+      "Catch issues early",
+      "Reduce data incidents",
+      "Meet SLAs"
+    ],
+    "pricing": {
+      "basic": 999,
+      "pro": 2499,
+      "enterprise": 5999
+    },
+    "contactInfo": {
+      "website": "/services/data-data-quality-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/data-data-quality-platform",
+    "category": "data",
+    "popular": false,
+    "industry": "technology-&-saas"
   }
 ]
