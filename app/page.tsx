@@ -807,6 +807,12 @@ let list = services;
               { key: 'V50', name: 'Email Coaching Copilot', emoji: '✨', color: 'from-yellow-500/20 to-amber-500/10 border-yellow-500/30',
                 desc: 'Real-time coaching as you type: suggests better phrasing, flags defensive language, detects passive aggression, recommends shorter sentences, and improves professional etiquette — like Grammarly for business email.',
                 tech: 'Real-time suggestions · Tone coaching · Professional etiquette' },
+              { key: 'V51', name: 'Time-to-Response Optimizer', emoji: '⏰', color: 'from-teal-500/20 to-emerald-500/10 border-teal-500/30',
+                desc: 'Learns each recipient inbox peak: best day, time-of-day, and timezone. Schedules outbound emails for optimal send windows. Boosts reply rates by 30-40% by hitting every contact at their highest-read moment.',
+                tech: 'Inbox peak learning · Timezone inference · Schedule-vs-send-now scoring' },
+              { key: 'V52', name: 'Email Thread Summarizer', emoji: '🗂️', color: 'from-rose-500/20 to-pink-500/10 border-rose-500/30',
+                desc: 'Summarizes long threads into structured briefings: TL;DR, decisions made, open questions, action items, participant sentiment arc, and urgency level — in under 3 seconds.',
+                tech: 'TL;DR generation · Action item extraction · Sentiment arc · Urgency scoring' },
             ].map(mod => (
               <div key={mod.key} className={`rounded-xl border bg-gradient-to-br ${mod.color} p-5 hover:scale-[1.02] transition-all`}>
                 <div className="flex items-center gap-3 mb-3">
