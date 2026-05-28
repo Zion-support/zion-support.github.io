@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-27T20:33:23.143Z",
-  "count": 737,
+  "generated": "2026-05-28T15:45:55.374Z",
+  "count": 778,
   "categories": {
-    "ai": 333,
+    "ai": 373,
     "it": 125,
     "data": 54,
-    "cloud": 69,
+    "cloud": 70,
     "security": 66,
     "automation": 45,
     "devops": 15,
@@ -785,6 +785,25 @@
       "source": "json"
     },
     {
+      "id": "ai-chronic-disease-tracker",
+      "title": "AI Chronic Disease Progression Tracker",
+      "description": "Longitudinal patient analytics: track chronic disease progression across EHR data, lab results, and wearables. AI identifies early deterioration signals, predicts hospitalisation risk, and generates personalised care plans.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-chronic-disease-tracker",
+      "source": "html"
+    },
+    {
       "id": "ai-cloud-cost-optimizer",
       "title": "AI Cloud Cost Optimizer",
       "description": "ML-powered cloud cost optimizer: continuously rightsizes VMs, containers, serverless across AWS/GCP/Azure — reducing cloud spend 30-50% with zero manual intervention via smart scaling policies.",
@@ -1009,6 +1028,25 @@
       ],
       "href": "/services/ai-code-reviewer-pro",
       "source": "json"
+    },
+    {
+      "id": "ai-code-vulnerability-scanner",
+      "title": "AI Code Vulnerability Scanner",
+      "description": "AI-powered SAST + DAST hybrid: semantic code analysis for OWASP Top 10, CWE, and proprietary business-logic flaws. IDE plugin, CI pipeline integration, and PR comment bot with auto-generated fixes.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-code-vulnerability-scanner",
+      "source": "html"
     },
     {
       "id": "ai-codebase-doc-generator",
@@ -1329,6 +1367,25 @@
       "source": "json"
     },
     {
+      "id": "ai-content-moderation-suite",
+      "title": "AI Content Moderation Suite",
+      "description": "Platform-agnostic content moderation: real-time text/image/video classification, multi-language support, custom policy rules, human-in-the-loop review queues, and automated takedown workflows for platforms, marketplaces, and social apps.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-content-moderation-suite",
+      "source": "html"
+    },
+    {
       "id": "ai-context-engineering-enterprise",
       "title": "Ai Context Engineering Enterprise",
       "description": "Ai Context Engineering Enterprise — a professional AI solution featuring ai-powered automation, enterprise integration, real-time analytics. Delivered by Zion Tech Group with enterprise-grade support, custom pricing, and proven implementation methodology.",
@@ -1499,6 +1556,25 @@
       "source": "json"
     },
     {
+      "id": "ai-conversational-hr-onboarding",
+      "title": "AI Conversational HR &amp; Employee Onboarding",
+      "description": "HR chatbot that handles new-employee paperwork, benefits enrollment, IT provisioning, I-9 verification, PTO requests, and policy questions — reducing HR admin workload by 90% and improving new-hire experience.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-conversational-hr-onboarding",
+      "source": "html"
+    },
+    {
       "id": "ai-copilot-enterprise",
       "title": "AI Copilot & Enterprise Assistants",
       "description": "Deploy AI copilots and enterprise assistants that augment human work. Context-aware, role-specific AI embedded in your tools and workflows.",
@@ -1548,6 +1624,25 @@
       ],
       "href": "/services/ai-credit-underwriting",
       "source": "json"
+    },
+    {
+      "id": "ai-crm-automation-suite",
+      "title": "AI CRM Automation Suite",
+      "description": "Full CRM automation platform: AI lead scoring, email sequences, pipeline tracking, deal insights, automated follow-ups, and smart forecasting across HubSpot, Salesforce, and Pipedrive.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-crm-automation-suite",
+      "source": "html"
     },
     {
       "id": "ai-cro-optimizer",
@@ -1916,6 +2011,25 @@
       "source": "json"
     },
     {
+      "id": "ai-ddos-protection-platform",
+      "title": "AI DDoS Protection &amp; Mitigation Platform",
+      "description": "Edge-based DDoS mitigation tuned by ML: absorbs multi-Tbps volumetric attacks, distinguishes legitimate traffic spikes from attacks, and auto-scales scrubbing capacity — all with sub-millisecond routing overhead.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-ddos-protection-platform",
+      "source": "html"
+    },
+    {
       "id": "ai-deepfake-detection",
       "title": "Ai Deepfake Detection",
       "description": "Ai Deepfake Detection — a professional AI solution delivered by Zion Tech Group. Enterprise-grade capabilities enable organizations to streamline operations, accelerate growth, and achieve measurable ROI.",
@@ -2187,6 +2301,25 @@
       ],
       "href": "/services/ai-drug-discovery",
       "source": "json"
+    },
+    {
+      "id": "ai-drug-discovery-assistant",
+      "title": "AI Drug Discovery &amp; Molecular Design Assistant",
+      "description": "AI platform for early drug discovery: molecular generation, target binding affinity prediction, ADMET forecasting, patent landscape analysis, and pre-clinical trial candidate ranking powered by graph neural networks.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-drug-discovery-assistant",
+      "source": "html"
     },
     {
       "id": "ai-drug-discovery-platform",
@@ -3000,6 +3133,25 @@
       ],
       "href": "/services/ai-gen-app-dev-1",
       "source": "json"
+    },
+    {
+      "id": "ai-generative-synthetic-patient-data",
+      "title": "AI Generative Synthetic Patient Data Engine",
+      "description": "Generate HIPAA-compliant synthetic patient records: realistic demographics, diagnoses, lab values, medications, and care pathways. Train ML models, validate software, and test integrations without real PHI.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-generative-synthetic-patient-data",
+      "source": "html"
     },
     {
       "id": "ai-genomic-analysis",
@@ -3962,6 +4114,25 @@
       "source": "json"
     },
     {
+      "id": "ai-marine-fisheries-sustainability",
+      "title": "AI Marine &amp; Fisheries Sustainability Monitor",
+      "description": "Satellite + IoT ocean analytics: track fish stocks, detect illegal fishing, monitor coral reef health, and model climate impact on marine ecosystems. Supports MSC certification and UN SDG 14 reporting.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-marine-fisheries-sustainability",
+      "source": "html"
+    },
+    {
       "id": "ai-marketing-copy-generator",
       "title": "AI Marketing Copy Generator",
       "description": "Multi-format copy engine: SEO blog, ad headline, landing page, LinkedIn post, email sequence — brand-voice tuned per company.",
@@ -4499,6 +4670,25 @@
       ],
       "href": "/services/ai-pdf-engine",
       "source": "json"
+    },
+    {
+      "id": "ai-performance-monitoring",
+      "title": "AI-Powered Performance Monitoring",
+      "description": "Infrastructure + application performance monitoring powered by AI: anomaly detection, root-cause analysis, predictive alerts, and auto-remediation for microservices, databases, and cloud infrastructure.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-performance-monitoring",
+      "source": "html"
     },
     {
       "id": "ai-personal-finance-coach",
@@ -5048,6 +5238,25 @@
       "source": "json"
     },
     {
+      "id": "ai-predictive-maintenance-industrial",
+      "title": "AI Predictive Maintenance — Industrial IoT",
+      "description": "Industrial IoT predictive maintenance: sensor fusion (vibration, temperature, current, ultrasound), ML failure prediction, remaining useful life (RUL) estimation, and automated work-order creation in your CMMS.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-predictive-maintenance-industrial",
+      "source": "html"
+    },
+    {
       "id": "ai-predictive-supply-chain-optimizer",
       "title": "Predictive Supply Chain Optimizer",
       "description": "Demand forecasting XGBoost/LightGBM, inventory reorder point SDE, route optimisation OR-Tools, and supplier risk scoring per vendor.",
@@ -5388,6 +5597,25 @@
       ],
       "href": "/services/ai-real-estate-valuation",
       "source": "json"
+    },
+    {
+      "id": "ai-real-time-translation-platform",
+      "title": "AI Real-Time Translation &amp; Subtitle Platform",
+      "description": "Real-time speech-to-text translation: live event captioning, multilingual Zoom/Teams captions, video subtitle generation in 100+ languages, and AI voice dubbing that preserves emotion and tone.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-real-time-translation-platform",
+      "source": "html"
     },
     {
       "id": "ai-realtime-translation",
@@ -5970,6 +6198,25 @@
       ],
       "href": "/services/ai-self-healing-infra",
       "source": "json"
+    },
+    {
+      "id": "ai-self-healing-kubernetes-platform",
+      "title": "AI Self-Healing Kubernetes Platform",
+      "description": "Kubernetes operations platform powered by AI: auto-remediation of failing pods, cluster drift detection, workload auto-scaling, cost-aware scheduling, and security policy enforcement with zero-downtime rollouts.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-self-healing-kubernetes-platform",
+      "source": "html"
     },
     {
       "id": "ai-sentiment-analysis",
@@ -6940,6 +7187,25 @@
       "source": "json"
     },
     {
+      "id": "ai-visual-search-recommendation",
+      "title": "AI Visual Search &amp; Image-Based Recommendation",
+      "description": "Visual product discovery engine: upload any image to find visually similar products across your catalogue. Power visual search bars, Shop the Look features, and visual similarity recommendations.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-visual-search-recommendation",
+      "source": "html"
+    },
+    {
       "id": "ai-voice-agent",
       "title": "AI Voice Agent (Phone)",
       "description": "Human-like conversational AI for phone calls: inbound customer service, outbound sales calls, appointment scheduling, and support ticket creation.",
@@ -7262,6 +7528,63 @@
       "source": "json"
     },
     {
+      "id": "ai-workflow-automation-builder",
+      "title": "AI Workflow Automation Builder — Starter",
+      "description": "Entry-level AI workflow builder: natural language workflow design, 100+ connectors, AI decision nodes, scheduled triggers, and human-in-the-loop approval steps for small teams.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-workflow-automation-builder",
+      "source": "html"
+    },
+    {
+      "id": "ai-workflow-automation-enterprise",
+      "title": "AI Workflow Automation — Enterprise Scale",
+      "description": "Enterprise-grade workflow orchestration: unlimited workflows, role-based access, SSO, custom AI model integration, multi-region deployment, and 24/7 dedicated support.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-workflow-automation-enterprise",
+      "source": "html"
+    },
+    {
+      "id": "ai-zero-trust-network-access",
+      "title": "AI Zero Trust Network Access (ZTNA)",
+      "description": "AI-powered ZTNA platform: continuous identity verification, adaptive access policies, micro-segmentation, device posture scoring, and real-time threat-based access revocation — all enforced at the edge.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ai-zero-trust-network-access",
+      "source": "html"
+    },
+    {
       "id": "analytics-attribution-mix",
       "title": "Analytics Attribution & Marketing Mix Modeling",
       "description": "Multi-touch attribution (first/last/linear/time-decay/position-based) + marketing mix modeling. CAC, LTV, ROAS per channel, campaign, cohort. Recommended budget allocation.",
@@ -7335,6 +7658,25 @@
       "source": "json"
     },
     {
+      "id": "api-health-monitor-dashboard",
+      "title": "API Health Monitor Dashboard",
+      "description": "Real-time API uptime monitoring with incident tracking, latency graphs, and automated alert routing. Ping any endpoint every 30s, get Slack/Telegram alerts the second it goes down.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/api-health-monitor-dashboard",
+      "source": "html"
+    },
+    {
       "id": "api-integration",
       "title": "API Development & Integration",
       "description": "Custom API design, development, and integration — REST, GraphQL, Webhooks, and third-party service connectors.",
@@ -7383,6 +7725,25 @@
       ],
       "href": "/services/api-management-gateway",
       "source": "json"
+    },
+    {
+      "id": "api-rate-limit-analyser",
+      "title": "API Rate Limit &amp; Quota Analytics Dashboard",
+      "description": "Track API rate limit consumption across all your integrations. Get alerted before you hit limits, visualize usage patterns, and forecast capacity needs. Supports 200+ API providers out of the box.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/api-rate-limit-analyser",
+      "source": "html"
     },
     {
       "id": "apm-application-performance",
@@ -8998,6 +9359,25 @@
       "source": "json"
     },
     {
+      "id": "cloud-cost-anomaly-detector-ml",
+      "title": "Cloud Cost Anomaly Detector — ML-Powered",
+      "description": "ML-powered cloud cost monitoring: automatically detect anomalous spend spikes, forecast monthly costs with confidence intervals, receive root-cause attribution (service + region + tag), and set auto-throttling alerts.",
+      "category": "cloud",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "Auto-scaling",
+        "Regional redundancy",
+        "Cost alerts",
+        "Infrastructure as code"
+      ],
+      "benefits": [],
+      "href": "/services/cloud-cost-anomaly-detector-ml",
+      "source": "html"
+    },
+    {
       "id": "cloud-cost-optimization-service",
       "title": "Cloud Cost Optimization (FinOps)",
       "description": "ML-driven cloud cost optimization across AWS, Azure, and GCP with right-sizing recommendations, reserved instance optimization, and anomaly detection.",
@@ -9681,6 +10061,44 @@
       ],
       "href": "/services/content-generation",
       "source": "json"
+    },
+    {
+      "id": "contract-clause-analyser",
+      "title": "AI Contract Clause Risk Analyser",
+      "description": "Upload any contract NDA MSA SOW and get a risk score per clause: liability, IP, termination, payment terms, compliance. Highlights unusual language and suggests red-line edits.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/contract-clause-analyser",
+      "source": "html"
+    },
+    {
+      "id": "cronjob-schedule-monitor",
+      "title": "Cronjob &amp; Scheduled Task Monitor",
+      "description": "Monitor all your cron jobs from one dashboard. Get alerted when jobs fail, miss schedules, or run too long. Track execution history, SLAs, and alerting with zero agent-side configuration.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/cronjob-schedule-monitor",
+      "source": "html"
     },
     {
       "id": "cspm-cloud-posture",
@@ -11531,6 +11949,25 @@
       "source": "json"
     },
     {
+      "id": "dns-lookup-profiler",
+      "title": "DNS Lookup Profiler &amp; Propagation Checker",
+      "description": "Check DNS records from 50+ global DNS servers simultaneously. Track propagation status after zone changes, detect DNS leaks, measure latency per server, and alert on record mismatches.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/dns-lookup-profiler",
+      "source": "html"
+    },
+    {
       "id": "doc-intelligence-v2",
       "title": "Intelligent Document Processing v2",
       "description": "Intelligent document processing: layout-aware OCR, handwriting recognition, table extraction, and form auto-fill. Handles invoices, contracts, medical records, and tax forms at 1000 pages per hour via REST.",
@@ -11626,6 +12063,25 @@
       ],
       "href": "/services/edge-computing-platform",
       "source": "json"
+    },
+    {
+      "id": "email-verification-api",
+      "title": "Email Verification &amp; Deliverability API",
+      "description": "Validate emails in real-time: syntax, DNS MX, disposable email detection, role-based detection, and SMTP connectability check. Boost deliverability and reduce bounces by 98%.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/email-verification-api",
+      "source": "html"
     },
     {
       "id": "endpoint-management",
@@ -11825,6 +12281,25 @@
       "source": "json"
     },
     {
+      "id": "event-driven-orchestration-hub",
+      "title": "Event-Driven Orchestration Hub",
+      "description": "Event-centric orchestration layer: publish/subscribe event bus with schema registry, dead-letter handling, replay, exactly-once delivery guarantees, and cross-region replication for distributed microservices.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/event-driven-orchestration-hub",
+      "source": "html"
+    },
+    {
       "id": "evm-smart-contract-audit",
       "title": "EVM Smart Contract Audit",
       "description": "Comprehensive audit: static analysis (Slither), manual line-by-line review, fuzz testing (Foundry), formal verification for critical invariants, post-audit re-audit.",
@@ -11848,6 +12323,25 @@
       ],
       "href": "/services/evm-smart-contract-audit",
       "source": "json"
+    },
+    {
+      "id": "expense-category-ai",
+      "title": "AI Expense Category Classifier API",
+      "description": "Auto-classify business expenses from receipts and invoices into your chart of accounts. AI understands context, vendor, and amount patterns. Integrates with QuickBooks, Xero, and NetSuite.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/expense-category-ai",
+      "source": "html"
     },
     {
       "id": "feature-engineering-platform",
@@ -12174,6 +12668,25 @@
       "source": "json"
     },
     {
+      "id": "graphql-federation-platform",
+      "title": "GraphQL Federation &amp; API Composition Platform",
+      "description": "Apollo Federation 2 gateway: compose 50+ microservice schemas into a unified GraphQL API, manage subgraph schema evolution, implement distributed caching, and provide type-safe SDKs in 12 languages.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/graphql-federation-platform",
+      "source": "html"
+    },
+    {
       "id": "hr-analytics",
       "title": "HR Analytics",
       "description": "HR Analytics transforms raw data into actionable intelligence with real-time dashboards, automated reporting, and predictive models. Make faster, m...",
@@ -12317,6 +12830,25 @@
       ],
       "href": "/services/invoice-ai-automation",
       "source": "json"
+    },
+    {
+      "id": "invoice-ocr-parser-api",
+      "title": "Invoice OCR Parser API",
+      "description": "Extract structured data from any invoice PDF or image. Returns JSON with line items, total, tax, vendor, and date. Supports 50+ invoice formats globally. Train custom models for your specific formats.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/invoice-ocr-parser-api",
+      "source": "html"
     },
     {
       "id": "iot-asset-tracking-iot",
@@ -15370,6 +15902,25 @@
       "source": "json"
     },
     {
+      "id": "json-formatter-validator-api",
+      "title": "JSON Formatter Validator &amp; Minifier API",
+      "description": "Instantly format, validate, minify, and beautify JSON. Also offers JSON-to-CSV, JSON-to-XML, JSON schema validation, and query (JSONPath). Free tier with no rate limits.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/json-formatter-validator-api",
+      "source": "html"
+    },
+    {
       "id": "k8s-gitops-enterprise",
       "title": "Kubernetes GitOps Enterprise Platform",
       "description": "Enterprise Kubernetes with GitOps: ArgoCD or Flux continuous delivery, OPA or Gatekeeper policy enforcement, cluster fleet management, cost allocation, namespace quotas, and image scanning — all via Git commits.",
@@ -15417,6 +15968,44 @@
       ],
       "href": "/services/kubernetes-management",
       "source": "json"
+    },
+    {
+      "id": "kubernetes-operator-database",
+      "title": "Kubernetes Operator for Database Automation",
+      "description": "Fully-managed PostgreSQL/MySQL/MongoDB on Kubernetes: automated backups, point-in-time recovery, connection pooling, replica failover, storage auto-scaling, and version upgrades — all via declarative Custom Resources.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/kubernetes-operator-database",
+      "source": "html"
+    },
+    {
+      "id": "lead-scoring-api",
+      "title": "AI Lead Scoring API",
+      "description": "Score leads in real-time with a REST API. Train custom models on your historical data, get scores 0-100 with reason codes. Integrate with any CRM in minutes.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/lead-scoring-api",
+      "source": "html"
     },
     {
       "id": "legacy-app-refactor",
@@ -15763,6 +16352,25 @@
       ],
       "href": "/services/meeting-ai-assistant",
       "source": "json"
+    },
+    {
+      "id": "meeting-notes-transcriber",
+      "title": "AI Meeting Notes Transcriber &amp; Summariser",
+      "description": "Upload any meeting recording or connect Zoom/Teams/Google Meet. Get a full transcript, key decisions, action items with owners, and an executive summary. Auto-send to Notion, Linear, or Slack.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/meeting-notes-transcriber",
+      "source": "html"
     },
     {
       "id": "micro-saas-ai-code-reviewer",
@@ -16473,6 +17081,44 @@
       "source": "json"
     },
     {
+      "id": "offer-engine",
+      "title": "The Offer Engine",
+      "description": "AI-powered offer management: dynamically generate, test, and optimize personalized offers, discounts, and promotions across channels. Real-time A/B testing, conversion lift forecasting, and margin-safe pricing recommendations.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/offer-engine",
+      "source": "html"
+    },
+    {
+      "id": "password-strength-auditor",
+      "title": "Password Strength Auditor &amp; Breach Checker",
+      "description": "Check password strength against 10M+ known breached passwords and quantum-resistant entropy scoring. API for app registration flows, plus a bulk audit tool for enterprise password hygiene.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/password-strength-auditor",
+      "source": "html"
+    },
+    {
       "id": "passwordless-auth",
       "title": "Passwordless Authentication",
       "description": "Eliminate password-based attacks with biometric, magic link, and hardware key authentication. Passwordless by default with fallback options.",
@@ -16719,6 +17365,25 @@
       "source": "json"
     },
     {
+      "id": "process-automation",
+      "title": "Process Automation &amp; BPA Suite",
+      "description": "Business process automation platform: map, model, and automate end-to-end workflows. BPMN modelling, RPA bots, approval gates, audit trails, and real-time KPI dashboards.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/process-automation",
+      "source": "html"
+    },
+    {
       "id": "quality-assurance",
       "title": "Quality Assurance",
       "description": "Quality Assurance combines AI intelligence with practical engineering to solve real business challenges. Deploy production-ready capabilities that ...",
@@ -16817,6 +17482,25 @@
       "source": "json"
     },
     {
+      "id": "realtime-streaming-etl-flink",
+      "title": "Real-Time Streaming ETL with Apache Flink",
+      "description": "Managed Apache Flink streaming pipelines: sub-second event processing, exactly-once semantics, windowed aggregations, joins across Kafka/Pulsar/Kinesis sources, and built-in monitoring dashboards.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/realtime-streaming-etl-flink",
+      "source": "html"
+    },
+    {
       "id": "reliability-sre",
       "title": "Reliability Platform & SRE Enablement",
       "description": "SRE as a Service: SLO and SLI and SLA design, error-budget management, incident command, postmortem facilitation, and runbook automation. 99.9% uptime guarantee for regulated digital services.",
@@ -16864,6 +17548,25 @@
       ],
       "href": "/services/remote-it-support",
       "source": "json"
+    },
+    {
+      "id": "rpa-intelligent-automation",
+      "title": "RPA + Intelligent Document Processing",
+      "description": "RPA robots augmented with AI document understanding: extract structured data from PDFs, invoices, and emails; fill ERP/CRM forms; reconcile payments; and escalate exceptions — end-to-end touchless processing.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/rpa-intelligent-automation",
+      "source": "html"
     },
     {
       "id": "rx-prior-auth",
@@ -17885,6 +18588,25 @@
       "source": "json"
     },
     {
+      "id": "seo-score-checker-api",
+      "title": "SEO Score Checker &amp; Site Auditor API",
+      "description": "Audit any URL for 200+ SEO factors: meta tags, structured data, Core Web Vitals, mobile usability, crawlability, schema markup, and content readability. Get a score 0-100 with prioritized fix recommendations.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/seo-score-checker-api",
+      "source": "html"
+    },
+    {
       "id": "serverless-api-platform",
       "title": "Serverless API Production Platform",
       "description": "Production serverless API: API Gateway + Lambda, OpenAPI-first gateway, per-route WAF+Shield, distributed tracing, CI/CD spec-to-gateway pipeline.",
@@ -17960,6 +18682,25 @@
       "source": "json"
     },
     {
+      "id": "social-media-post-generator",
+      "title": "AI Social Media Post Generator API",
+      "description": "Generate platform-optimized posts for LinkedIn, Twitter, Instagram, and Facebook from a single content brief. AI adapts tone, length, and hashtags per platform with media suggestions.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/social-media-post-generator",
+      "source": "html"
+    },
+    {
       "id": "software-supply-chain-sec",
       "title": "Software Supply Chain Security",
       "description": "End-to-end supply chain: SBOM generation+attestation, dependency verification, code-signing (SLSA L3+), vulnerability patch management, artifact provenance tracking.",
@@ -18008,6 +18749,25 @@
       ],
       "href": "/services/sovereign-cloud-hosting",
       "source": "json"
+    },
+    {
+      "id": "ssl-certificate-checker-api",
+      "title": "SSL Certificate Checker &amp; Expiry Alert API",
+      "description": "Monitor SSL certificates across all your domains. Get alerted 30, 14, and 3 days before expiry. Check certificate chain, TLS version, cipher strength, and vulnerability posture.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/ssl-certificate-checker-api",
+      "source": "html"
     },
     {
       "id": "streaming-realtime-analytics",
@@ -18206,6 +18966,25 @@
       ],
       "href": "/services/vulnerability-assessment-penetration-testing",
       "source": "json"
+    },
+    {
+      "id": "webhook-relay-debugger",
+      "title": "Webhook Relay &amp; Debugger",
+      "description": "Inspect, debug, and relay webhooks in real-time. Receive webhooks, view headers/payload, forward to multiple destinations, and replay events. Perfect for debugging integrations.",
+      "category": "ai",
+      "basic": "",
+      "pro": "",
+      "enterprise": "",
+      "popular": false,
+      "features": [
+        "AI-powered automation",
+        "Enterprise-grade security",
+        "24/7 monitoring",
+        "API-first integration"
+      ],
+      "benefits": [],
+      "href": "/services/webhook-relay-debugger",
+      "source": "html"
     },
     {
       "id": "workflow-automation",

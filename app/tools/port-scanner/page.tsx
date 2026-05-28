@@ -178,7 +178,7 @@ export default function PortScannerPage() {
         </div>
 
         <div className="mt-8 text-center">
-          <Link href="/services/ai-compliance/" className="text-purple-400 hover:underline text-sm">
+          <Link href="/zion-ai-compliance-checker/" className="text-purple-400 hover:underline text-sm">
             Need full infrastructure security monitoring? → IT Endpoint Security Compliance
           </Link>
         </div>
