@@ -17,6 +17,7 @@ import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import BusinessTransformationRoadmap from '@/components/BusinessTransformationRoadmap';
 import ServiceHealthMonitor from '@/components/ServiceHealthMonitor';
 import AIBusinessIntelligenceDashboard from '@/components/AIBusinessIntelligenceDashboard';
+import SecurityComplianceShowcase from '@/components/SecurityComplianceShowcase';
 import EmailCoachingShowcase from '@/components/EmailCoachingShowcase';
 
 
@@ -1064,6 +1065,9 @@ let list = services;
 
       {/* ── AI Business Intelligence Dashboard ── */}
       <AIBusinessIntelligenceDashboard />
+
+      {/* ── AI Email Security & Compliance Guardian ── */}
+      <SecurityComplianceShowcase />
 
       {/* ── AI Email Coaching & Training Platform ── */}
       <EmailCoachingShowcase />
