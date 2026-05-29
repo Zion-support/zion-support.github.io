@@ -13,6 +13,7 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
+import BusinessTransformationRoadmap from '@/components/BusinessTransformationRoadmap';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1108,6 +1109,10 @@ let list = services;
           </div>
         </div>
       </section>
+
+      {/* ── AI Business Transformation Roadmap Generator ── */}
+      <BusinessTransformationRoadmap />
+
     <FloatingActionDock />
     </main>
   );
