@@ -26,6 +26,7 @@ import AIServiceMatcher from '@/components/AIServiceMatcher';
 import ServiceStatusDashboard from '@/components/ServiceStatusDashboard';
 import ServiceCompare from '@/components/ServiceCompare';
 import CaseStudiesHub from '@/components/CaseStudiesHub';
+import ServiceRecommendationQuiz from '@/components/ServiceRecommendationQuiz';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -882,6 +883,9 @@ let list = services;
 
       {/* ── AI Case Studies Hub ── */}
       <CaseStudiesHub />
+
+      {/* ── AI Service Recommendation Quiz ── */}
+      <ServiceRecommendationQuiz />
 
         {/* ── Popular Services ── */}
 
