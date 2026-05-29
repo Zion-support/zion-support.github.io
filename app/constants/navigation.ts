@@ -6,56 +6,36 @@ export type NavigationLink = {
 
 export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Home', href: '/' },
-  { name: 'Solutions', href: '/services/' },
   { name: 'Services', href: '/services/' },
-  { name: 'Partners', href: '/partners/' },
+  { name: 'About', href: '/about/' },
   { name: 'Blog', href: '/blog/' },
-  { name: 'Pricing', href: '/pricing/' },
   { name: 'Contact', href: '/contact/' },
 ];
 
 export const SOLUTION_LINKS: readonly NavigationLink[] = [
-  { name: 'All Solutions', href: '/services/' },
+  { name: 'All Services', href: '/services/' },
   { name: 'AI & Automation', href: '/services/?category=ai' },
   { name: 'IT & Infrastructure', href: '/services/?category=it' },
-  { name: 'Cloud & DevOps', href: '/services/?category=cloud' },
-  { name: 'Security & Compliance', href: '/services/?category=security' },
+  { name: 'Cloud Services', href: '/services/?category=cloud' },
+  { name: 'Security', href: '/services/?category=security' },
   { name: 'Data & Analytics', href: '/services/?category=data' },
-  { name: 'Industry Solutions', href: '/industry-solutions/' },
+  { name: 'Micro-SaaS', href: '/services/?category=micro-saas' },
+  { name: 'DevOps', href: '/services/?category=devops' },
 ];
 // Resource Links
 export const RESOURCE_LINKS: readonly NavigationLink[] = [
-  { name: 'Partners', href: '/partners/' },
   { name: 'Blog', href: '/blog/' },
   { name: 'Search', href: '/search/' },
-  { name: 'Proposal Generator', href: '/proposal-generator/' },
-  { name: 'ROI Calculator', href: '/tools/roi-calculator/' },
-  { name: 'Service Comparison', href: '/tools/service-comparison/' },
-  { name: 'Service Recommender', href: '/tools/service-recommender/' },
-  { name: 'AI Service Router', href: '/tools/ai-service-router/' },
-  { name: 'Port Scanner', href: '/tools/port-scanner/' },
-  { name: 'SSL Checker', href: '/tools/ssl-checker/' },
-  { name: 'Platform Status', href: '/tools/health-check/' },
-  { name: 'Client Portal', href: '/portal/' },
+  { name: 'Contact', href: '/contact/' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [
-  { name: 'Zion AI Chatbot Builder', href: '/services/ai-chatbot-builder-pro/' },
-  {
-    name: 'AI-Powered DevOps',
-    href: '/services/devops-gen-ai-ci-cd/',
-    aliases: ['/services/it-devops-platform-toolchain'],
-  },
-  {
-    name: 'AI Email Analyzer',
-    href: '/services/ai-email-marketing/',
-    aliases: ['/services/ai-email-marketing'],
-  },
-  { name: 'Zion AI Code Assistant', href: '/services/ai-code-assistant-enterprise/' },
-  { name: 'Zion AI Code Reviewer', href: '/services/ai-code-migration-assistant/' },
-  { name: 'Zion AI Customer Support Pro', href: '/services/ai-customer-support/' },
-  { name: 'Zion AI Predictive Analytics', href: '/services/ai-analytics/' },
-  { name: 'Zion Security Shield', href: '/services/ai-security-responsible-ai/' },
+  { name: 'AI Chatbot Builder', href: '/services/ai-chatbot-builder/' },
+  { name: 'AI Code Reviewer', href: '/services/ai-code-reviewer/' },
+  { name: 'AI Document Intelligence', href: '/services/ai-document-intelligence/' },
+  { name: 'AI Content Generator', href: '/services/ai-content-generator/' },
+  { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection/' },
+  { name: 'Predictive Analytics Studio', href: '/services/predictive-analytics-studio/' },
 ];
 
 export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
