@@ -19140,5 +19140,594 @@
     "href": "/services/automation-it-operations-aioops",
     "category": "automation",
     "popular": true
+  },
+  {
+    "id": "ai-legal-contract-drafter",
+    "title": "AI Legal Contract Drafter",
+    "description": "Automated contract generation from plain-language descriptions: NDAs, MSAs, SOWs, employment agreements. Includes clause library, risk scoring, and multi-jurisdiction compliance.",
+    "icon": "★",
+    "features": [
+      "Plain-language to legal draft",
+      "Clause library 500+ templates",
+      "Multi-jurisdiction compliance check",
+      "Risk scoring per clause"
+    ],
+    "benefits": [
+      "Draft contracts in minutes not days",
+      "Reduce legal spend 60%",
+      "Consistent clause language",
+      "Built-in compliance guardrails"
+    ],
+    "pricing": {
+      "basic": "3999",
+      "pro": "9999",
+      "enterprise": "27999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-legal-contract-drafter",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-legal-contract-drafter",
+    "category": "ai",
+    "popular": true
+  },
+  {
+    "id": "ai-medical-imaging-assistant",
+    "title": "AI Medical Imaging Assistant",
+    "description": "FDA-aligned radiology assistant: detects anomalies in X-rays, CT, MRI with explainable heatmaps. Integrates with PACS/RIS and generates structured reports.",
+    "icon": "★",
+    "features": [
+      "Multi-modality imaging (X-ray/CT/MRI)",
+      "Explainable attention heatmaps",
+      "PACS/RIS integration (DICOM/HL7)",
+      "Structured report generation"
+    ],
+    "benefits": [
+      "Reduce radiologist workload 40%",
+      "Catch missed findings",
+      "Standardized reporting",
+      "HIPAA-compliant deployment"
+    ],
+    "pricing": {
+      "basic": "9999",
+      "pro": "24999",
+      "enterprise": "69999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-medical-imaging-assistant",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-medical-imaging-assistant",
+    "category": "ai",
+    "popular": true
+  },
+  {
+    "id": "ai-real-estate-valuator",
+    "title": "AI Real Estate Valuator",
+    "description": "Automated property valuation: comp analysis, neighborhood trends, rental yield prediction, and investment scoring for residential and commercial properties.",
+    "icon": "★",
+    "features": [
+      "Automated comp analysis",
+      "Neighborhood trend prediction",
+      "Rental yield forecasting",
+      "Investment risk scoring"
+    ],
+    "benefits": [
+      "Instant property valuations",
+      "Data-driven investment decisions",
+      "Market trend insights",
+      "Portfolio optimization"
+    ],
+    "pricing": {
+      "basic": "2999",
+      "pro": "7999",
+      "enterprise": "19999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-real-estate-valuator",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-real-estate-valuator",
+    "category": "ai",
+    "popular": false
+  },
+  {
+    "id": "ai-video-content-analyzer",
+    "title": "AI Video Content Analyzer",
+    "description": "Automated video analysis: scene detection, object tracking, speech-to-text, sentiment analysis, and content moderation for media companies and security.",
+    "icon": "★",
+    "features": [
+      "Scene detection and segmentation",
+      "Object/person tracking",
+      "Multi-language speech-to-text",
+      "Content moderation scoring"
+    ],
+    "benefits": [
+      "Automate video review workflows",
+      "Extract insights from video at scale",
+      "Real-time content moderation",
+      "Searchable video archives"
+    ],
+    "pricing": {
+      "basic": "4999",
+      "pro": "12999",
+      "enterprise": "34999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-video-content-analyzer",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-video-content-analyzer",
+    "category": "ai",
+    "popular": true
+  },
+  {
+    "id": "it-saas-integration-hub",
+    "title": "SaaS Integration Hub",
+    "description": "Enterprise iPaaS connecting 500+ SaaS apps: pre-built connectors, custom API orchestration, data transformation, and real-time sync with conflict resolution.",
+    "icon": "★",
+    "features": [
+      "500+ pre-built connectors",
+      "Custom API orchestration",
+      "Data transformation engine",
+      "Real-time sync with conflict resolution"
+    ],
+    "benefits": [
+      "Eliminate data silos",
+      "Reduce integration time 80%",
+      "Real-time data consistency",
+      "No-code workflow builder"
+    ],
+    "pricing": {
+      "basic": "2999",
+      "pro": "7999",
+      "enterprise": "21999"
+    },
+    "contactInfo": {
+      "website": "/services/it-saas-integration-hub",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-saas-integration-hub",
+    "category": "it",
+    "popular": true
+  },
+  {
+    "id": "it-mobile-device-management",
+    "title": "Mobile Device Management Platform",
+    "description": "Enterprise MDM for iOS and Android: zero-touch enrollment, app distribution, security policies, remote wipe, and compliance enforcement.",
+    "icon": "★",
+    "features": [
+      "Zero-touch enrollment (ABM/KME)",
+      "Enterprise app distribution",
+      "Security policy enforcement",
+      "Remote lock/wipe capabilities"
+    ],
+    "benefits": [
+      "Secure mobile workforce",
+      "Automated device lifecycle",
+      "Compliance reporting",
+      "Reduced IT overhead"
+    ],
+    "pricing": {
+      "basic": "1999",
+      "pro": "4999",
+      "enterprise": "14999"
+    },
+    "contactInfo": {
+      "website": "/services/it-mobile-device-management",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-mobile-device-management",
+    "category": "it",
+    "popular": false
+  },
+  {
+    "id": "it-network-segmentation-design",
+    "title": "Network Segmentation Design Service",
+    "description": "Zero-trust network architecture: micro-segmentation planning, VLAN design, firewall rule optimization, and lateral movement prevention.",
+    "icon": "★",
+    "features": [
+      "Micro-segmentation planning",
+      "VLAN/subnet architecture",
+      "Firewall rule optimization",
+      "Lateral movement prevention"
+    ],
+    "benefits": [
+      "Contain breach blast radius",
+      "Meet compliance requirements",
+      "Reduce attack surface",
+      "Simplified network management"
+    ],
+    "pricing": {
+      "basic": "7999",
+      "pro": "19999",
+      "enterprise": "49999"
+    },
+    "contactInfo": {
+      "website": "/services/it-network-segmentation-design",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-network-segmentation-design",
+    "category": "it",
+    "popular": false
+  },
+  {
+    "id": "it-erp-implementation",
+    "title": "ERP Implementation Service",
+    "description": "End-to-end ERP deployment: requirements analysis, system configuration, data migration, user training, and go-live support for SAP, Oracle, NetSuite, and Microsoft Dynamics.",
+    "icon": "★",
+    "features": [
+      "Multi-ERP expertise (SAP/Oracle/NetSuite)",
+      "Business process reengineering",
+      "Data migration and cleansing",
+      "User training and change management"
+    ],
+    "benefits": [
+      "Faster time-to-value",
+      "Reduced implementation risk",
+      "Best-practice configurations",
+      "Ongoing support partnership"
+    ],
+    "pricing": {
+      "basic": "24999",
+      "pro": "74999",
+      "enterprise": "199999"
+    },
+    "contactInfo": {
+      "website": "/services/it-erp-implementation",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-erp-implementation",
+    "category": "it",
+    "popular": false
+  },
+  {
+    "id": "cloud-kubernetes-platform-service",
+    "title": "Managed Kubernetes Platform",
+    "description": "Production-grade Kubernetes: cluster provisioning, auto-scaling, service mesh, GitOps pipelines, and 24/7 SRE monitoring across AWS EKS, Azure AKS, and GCP GKE.",
+    "icon": "★",
+    "features": [
+      "Multi-cloud K8s provisioning",
+      "Auto-scaling and cost optimization",
+      "Istio/Linkerd service mesh",
+      "GitOps deployment (ArgoCD/Flux)"
+    ],
+    "benefits": [
+      "Production-ready in days",
+      "99.99% uptime SLA",
+      "Automated operations",
+      "Multi-cloud portability"
+    ],
+    "pricing": {
+      "basic": "4999",
+      "pro": "12999",
+      "enterprise": "34999"
+    },
+    "contactInfo": {
+      "website": "/services/cloud-kubernetes-platform-service",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-kubernetes-platform-service",
+    "category": "cloud",
+    "popular": true
+  },
+  {
+    "id": "cloud-serverless-architecture",
+    "title": "Serverless Architecture Service",
+    "description": "Design and build serverless applications: Lambda/Cloud Functions, event-driven architecture, API Gateway, and cost-optimized compute for variable workloads.",
+    "icon": "★",
+    "features": [
+      "Event-driven architecture design",
+      "Lambda/Cloud Functions development",
+      "API Gateway configuration",
+      "Cost optimization strategies"
+    ],
+    "benefits": [
+      "Pay only for actual usage",
+      "Infinite scalability",
+      "Zero server management",
+      "Faster time to market"
+    ],
+    "pricing": {
+      "basic": "5999",
+      "pro": "14999",
+      "enterprise": "39999"
+    },
+    "contactInfo": {
+      "website": "/services/cloud-serverless-architecture",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-serverless-architecture",
+    "category": "cloud",
+    "popular": false
+  },
+  {
+    "id": "cloud-multi-cloud-strategy",
+    "title": "Multi-Cloud Strategy Consulting",
+    "description": "Strategic multi-cloud planning: workload placement optimization, cost comparison across providers, vendor lock-in prevention, and unified management.",
+    "icon": "★",
+    "features": [
+      "Workload placement optimization",
+      "Cost comparison (AWS/Azure/GCP)",
+      "Vendor lock-in prevention",
+      "Unified management platform"
+    ],
+    "benefits": [
+      "Best-of-breed services",
+      "Negotiation leverage",
+      "Risk diversification",
+      "Optimized cloud spend"
+    ],
+    "pricing": {
+      "basic": "7999",
+      "pro": "19999",
+      "enterprise": "54999"
+    },
+    "contactInfo": {
+      "website": "/services/cloud-multi-cloud-strategy",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-multi-cloud-strategy",
+    "category": "cloud",
+    "popular": false
+  },
+  {
+    "id": "security-soc-2-compliance",
+    "title": "SOC 2 Compliance Accelerator",
+    "description": "Fast-track SOC 2 Type II certification: gap analysis, control implementation, evidence collection, auditor coordination, and continuous compliance monitoring.",
+    "icon": "★",
+    "features": [
+      "Gap analysis and remediation",
+      "Control implementation templates",
+      "Automated evidence collection",
+      "Auditor coordination"
+    ],
+    "benefits": [
+      "Achieve SOC 2 in 3-6 months",
+      "Win enterprise deals faster",
+      "Automated compliance monitoring",
+      "Reduce audit preparation time 80%"
+    ],
+    "pricing": {
+      "basic": "14999",
+      "pro": "34999",
+      "enterprise": "79999"
+    },
+    "contactInfo": {
+      "website": "/services/security-soc-2-compliance",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/security-soc-2-compliance",
+    "category": "security",
+    "popular": true
+  },
+  {
+    "id": "security-identity-threat-protection",
+    "title": "Identity Threat Detection & Response",
+    "description": "Detect and respond to identity-based attacks: compromised credentials, privilege escalation, lateral movement, and insider threats in real-time.",
+    "icon": "★",
+    "features": [
+      "Compromised credential detection",
+      "Privilege escalation monitoring",
+      "Lateral movement detection",
+      "Insider threat analytics"
+    ],
+    "benefits": [
+      "Stop identity-based attacks",
+      "Reduce dwell time",
+      "Protect privileged accounts",
+      "Compliance reporting"
+    ],
+    "pricing": {
+      "basic": "5999",
+      "pro": "14999",
+      "enterprise": "39999"
+    },
+    "contactInfo": {
+      "website": "/services/security-identity-threat-protection",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/security-identity-threat-protection",
+    "category": "security",
+    "popular": false
+  },
+  {
+    "id": "security-application-security-testing",
+    "title": "Application Security Testing (AST)",
+    "description": "Comprehensive app security: SAST, DAST, SCA, and container scanning integrated into CI/CD pipelines with automated remediation guidance.",
+    "icon": "★",
+    "features": [
+      "SAST (static analysis)",
+      "DAST (dynamic testing)",
+      "SCA (dependency scanning)",
+      "Container image scanning"
+    ],
+    "benefits": [
+      "Shift-left security",
+      "Catch vulnerabilities before deploy",
+      "Automated remediation guidance",
+      "Compliance coverage"
+    ],
+    "pricing": {
+      "basic": "3999",
+      "pro": "9999",
+      "enterprise": "27999"
+    },
+    "contactInfo": {
+      "website": "/services/security-application-security-testing",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/security-application-security-testing",
+    "category": "security",
+    "popular": true
+  },
+  {
+    "id": "data-embedded-analytics",
+    "title": "Embedded Analytics Platform",
+    "description": "White-label analytics for SaaS products: embeddable dashboards, self-service reporting, row-level security, and usage analytics.",
+    "icon": "★",
+    "features": [
+      "Embeddable dashboard builder",
+      "Self-service report designer",
+      "Row-level security",
+      "White-label customization"
+    ],
+    "benefits": [
+      "Add analytics to your product in weeks",
+      "Increase customer retention",
+      "New revenue stream",
+      "Reduce custom reporting requests"
+    ],
+    "pricing": {
+      "basic": "3999",
+      "pro": "9999",
+      "enterprise": "27999"
+    },
+    "contactInfo": {
+      "website": "/services/data-embedded-analytics",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/data-embedded-analytics",
+    "category": "data",
+    "popular": true
+  },
+  {
+    "id": "data-etl-pipeline-builder",
+    "title": "ETL Pipeline Builder Service",
+    "description": "Build robust data pipelines: batch and streaming ETL, data quality checks, schema evolution, and automated monitoring with alerting.",
+    "icon": "★",
+    "features": [
+      "Batch and streaming ETL",
+      "Data quality validation",
+      "Schema evolution support",
+      "Automated monitoring and alerting"
+    ],
+    "benefits": [
+      "Reliable data delivery",
+      "Data quality assurance",
+      "Scalable pipeline architecture",
+      "Reduced data engineering overhead"
+    ],
+    "pricing": {
+      "basic": "4999",
+      "pro": "12999",
+      "enterprise": "34999"
+    },
+    "contactInfo": {
+      "website": "/services/data-etl-pipeline-builder",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/data-etl-pipeline-builder",
+    "category": "data",
+    "popular": false
+  },
+  {
+    "id": "data-experimentation-platform",
+    "title": "A/B Testing & Experimentation Platform",
+    "description": "Full-stack experimentation: feature flags, A/B tests, multivariate tests, and statistical analysis with guardrail metrics.",
+    "icon": "★",
+    "features": [
+      "Feature flag management",
+      "A/B and multivariate testing",
+      "Statistical significance engine",
+      "Guardrail metric monitoring"
+    ],
+    "benefits": [
+      "Data-driven product decisions",
+      "Reduce deployment risk",
+      "Increase conversion rates",
+      "Culture of experimentation"
+    ],
+    "pricing": {
+      "basic": "2999",
+      "pro": "7999",
+      "enterprise": "21999"
+    },
+    "contactInfo": {
+      "website": "/services/data-experimentation-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/data-experimentation-platform",
+    "category": "data",
+    "popular": false
+  },
+  {
+    "id": "automation-customer-communication",
+    "title": "Customer Communication Automation",
+    "description": "Omnichannel customer communication: automated transactional emails, SMS notifications, push notifications, and in-app messages with personalization.",
+    "icon": "★",
+    "features": [
+      "Multi-channel delivery (email/SMS/push)",
+      "Personalization engine",
+      "Behavioral trigger automation",
+      "Delivery optimization (send time)"
+    ],
+    "benefits": [
+      "Increase customer engagement 40%",
+      "Reduce manual communication",
+      "Consistent brand messaging",
+      "Improved deliverability rates"
+    ],
+    "pricing": {
+      "basic": "1999",
+      "pro": "4999",
+      "enterprise": "14999"
+    },
+    "contactInfo": {
+      "website": "/services/automation-customer-communication",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/automation-customer-communication",
+    "category": "automation",
+    "popular": true
+  },
+  {
+    "id": "automation-finance-operations",
+    "title": "Finance Operations Automation",
+    "description": "Automate accounts payable/receivable: invoice processing, payment approvals, reconciliation, expense management, and financial reporting.",
+    "icon": "★",
+    "features": [
+      "Invoice OCR and data extraction",
+      "Automated approval workflows",
+      "Bank reconciliation automation",
+      "Financial report generation"
+    ],
+    "benefits": [
+      "Process invoices 10x faster",
+      "Eliminate manual data entry",
+      "Improve cash flow visibility",
+      "Reduce accounting costs 50%"
+    ],
+    "pricing": {
+      "basic": "3999",
+      "pro": "9999",
+      "enterprise": "27999"
+    },
+    "contactInfo": {
+      "website": "/services/automation-finance-operations",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/automation-finance-operations",
+    "category": "automation",
+    "popular": true
   }
 ]
