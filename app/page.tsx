@@ -21,6 +21,7 @@ import DeploymentCalculator from '@/components/DeploymentCalculator';
 import CustomerSuccessPlatform from '@/components/CustomerSuccessPlatform';
 import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
+import AIServiceMatcher from '@/components/AIServiceMatcher';
 import ServiceCompare from '@/components/ServiceCompare';
 
 
@@ -671,6 +672,9 @@ let list = services;
 
       {/* ── Compare Services Widget ── */}
       <ServiceCompare />
+
+      {/* ── AI Service Matcher ── */}
+      <AIServiceMatcher />
 
         {/* ── Popular Services ── */}
 
