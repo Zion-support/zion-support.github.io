@@ -365,6 +365,208 @@ let list = services;
         </div>
       </section>
 
+      {/* ── Intelligent Features Showcase ── */}
+      <section className="py-20 bg-gradient-to-br from-slate-900/50 to-purple-950/20">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-4">
+              <span className="text-green-400">●</span> NEW: V64 Intelligent Suite
+            </div>
+            <h2 className="section-heading">🚀 Intelligent Business Automation</h2>
+            <p className="section-subheading">
+              AI-powered tools that work together to automate your workflow, boost productivity, and drive growth
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* V64 Unified Email Responder */}
+            <div className="glass-card group hover:border-purple-500/40 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-2xl shadow-lg">
+                  📧
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
+                    V64 Smart Email Responder
+                  </h3>
+                  <p className="text-xs text-purple-400 font-semibold">NEW • 10 Intelligence Layers</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 mb-3">
+                Unified email processing with case-by-case analysis, reply-all enforcement, and quality checking
+              </p>
+              <ul className="text-xs text-slate-500 space-y-1 mb-4">
+                <li>✓ Intent routing & sentiment analysis</li>
+                <li>✓ Urgency detection & escalation</li>
+                <li>✓ Template matching & task extraction</li>
+                <li>✓ Calendar integration & analytics</li>
+              </ul>
+              <Link href="/services/ai-smart-email-responder" className="text-sm text-purple-400 hover:text-purple-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Smart Email Templates */}
+            <div className="glass-card group hover:border-purple-500/40 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-2xl shadow-lg">
+                  📝
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
+                    Smart Email Templates
+                  </h3>
+                  <p className="text-xs text-blue-400 font-semibold">30+ Templates • A/B Testing</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 mb-3">
+                AI-powered templates with personalization, performance tracking, and auto-learning
+              </p>
+              <ul className="text-xs text-slate-500 space-y-1 mb-4">
+                <li>✓ 6 categories: sales, support, billing</li>
+                <li>✓ Personalization tokens</li>
+                <li>✓ A/B testing & performance tracking</li>
+                <li>✓ Auto-learning from best performers</li>
+              </ul>
+              <Link href="/services/ai-smart-email-responder" className="text-sm text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Email-to-Task Converter */}
+            <div className="glass-card group hover:border-purple-500/40 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center text-2xl shadow-lg">
+                  ✅
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-green-300 transition-colors">
+                    Email-to-Task Converter
+                  </h3>
+                  <p className="text-xs text-green-400 font-semibold">Auto-Extract • Smart Assign</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 mb-3">
+                Automatically extract action items, deadlines, and assignments from emails
+              </p>
+              <ul className="text-xs text-slate-500 space-y-1 mb-4">
+                <li>✓ Action item extraction</li>
+                <li>✓ Deadline detection & assignee ID</li>
+                <li>✓ Priority assignment & categorization</li>
+                <li>✓ Export to JSON, CSV, Markdown</li>
+              </ul>
+              <Link href="/services/ai-smart-email-responder" className="text-sm text-green-400 hover:text-green-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Email Analytics Dashboard */}
+            <div className="glass-card group hover:border-purple-500/40 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center text-2xl shadow-lg">
+                  📊
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-300 transition-colors">
+                    Email Analytics Dashboard
+                  </h3>
+                  <p className="text-xs text-orange-400 font-semibold">Real-Time • Visual Insights</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 mb-3">
+                Comprehensive analytics with response metrics, sentiment trends, and volume analysis
+              </p>
+              <ul className="text-xs text-slate-500 space-y-1 mb-4">
+                <li>✓ Response time metrics</li>
+                <li>✓ Sentiment trend analysis</li>
+                <li>✓ Volume & category breakdowns</li>
+                <li>✓ Performance KPIs & visual dashboard</li>
+              </ul>
+              <Link href="/services/ai-smart-email-responder" className="text-sm text-orange-400 hover:text-orange-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Calendar Integration */}
+            <div className="glass-card group hover:border-purple-500/40 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-2xl shadow-lg">
+                  📅
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
+                    Calendar Integration
+                  </h3>
+                  <p className="text-xs text-indigo-400 font-semibold">Auto-Schedule • Smart Detect</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 mb-3">
+                Intelligent calendar management with auto-scheduling and availability detection
+              </p>
+              <ul className="text-xs text-slate-500 space-y-1 mb-4">
+                <li>✓ Auto-schedule from emails</li>
+                <li>✓ Availability detection</li>
+                <li>✓ Time zone handling</li>
+                <li>✓ Google/Outlook export</li>
+              </ul>
+              <Link href="/services/ai-smart-email-responder" className="text-sm text-indigo-400 hover:text-indigo-300 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Interactive Tools */}
+            <div className="glass-card group hover:border-purple-500/40 hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-600 to-rose-600 flex items-center justify-center text-2xl shadow-lg">
+                  🎯
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-pink-300 transition-colors">
+                    Interactive Tools Suite
+                  </h3>
+                  <p className="text-xs text-pink-400 font-semibold">ROI Calculator • Comparison • Chat</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 mb-3">
+                Make informed decisions with our interactive calculators, comparison tools, and AI chatbot
+              </p>
+              <ul className="text-xs text-slate-500 space-y-1 mb-4">
+                <li>✓ ROI Calculator (6 categories)</li>
+                <li>✓ Service Comparison Tool</li>
+                <li>✓ AI Service Recommender Chatbot</li>
+                <li>✓ Help Center & Roadmap</li>
+              </ul>
+              <div className="flex gap-2 flex-wrap">
+                <Link href="/roi-calculator" className="text-xs text-pink-400 hover:text-pink-300 font-semibold">
+                  ROI Calculator →
+                </Link>
+                <Link href="/roadmap" className="text-xs text-pink-400 hover:text-pink-300 font-semibold">
+                  Roadmap →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-12 text-center">
+            <div className="inline-block bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-8 max-w-3xl">
+              <h3 className="text-2xl font-bold text-white mb-3">Ready to Automate Your Business?</h3>
+              <p className="text-slate-300 mb-6">
+                Get a custom demo of our intelligent automation suite and see how it can transform your workflow
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/configurator/" className="btn-primary">
+                  🚀 Get Custom Demo
+                </Link>
+                <a href="tel:+130****0950" className="btn-secondary">
+                  ☎ Call +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
