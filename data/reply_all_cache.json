@@ -21,10 +21,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "Bob <bob@partner.com>",
-      "dr-2"
+      "dr-2",
+      "Bob <bob@partner.com>"
     ],
-    "decided_at": "2026-05-28T07:26:48.840226+00:00"
+    "decided_at": "2026-05-29T15:17:36.147323+00:00"
   },
   "dr-3": {
     "reply_all": false,
@@ -35,10 +35,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "dr-3",
-      "PayPal <paypal@paypal.com>"
+      "PayPal <paypal@paypal.com>",
+      "dr-3"
     ],
-    "decided_at": "2026-05-28T07:26:48.842559+00:00"
+    "decided_at": "2026-05-29T13:50:33.649885+00:00"
   },
   "dr-5": {
     "reply_all": false,
@@ -49,10 +49,10 @@
     "use_cc": "",
     "reply_to_original": false,
     "thread_participants": [
-      "dr-5",
-      "New User <new@example.com>"
+      "New User <new@example.com>",
+      "dr-5"
     ],
-    "decided_at": "2026-05-28T07:26:48.853810+00:00"
+    "decided_at": "2026-05-29T10:33:54.004308+00:00"
   },
   "dr-4": {
     "reply_all": false,

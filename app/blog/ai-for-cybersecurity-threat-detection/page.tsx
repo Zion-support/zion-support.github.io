@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ArticleStructuredData from '@/app/components/ArticleStructuredData';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import ArticleStructuredData from '../../components/ArticleStructuredData';
+import Breadcrumb from '../../components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'AI for Cybersecurity Threat Detection | Zion Tech Group Blog',
@@ -58,11 +58,11 @@ export default function Page() {
         </header>
 
         <div className="prose-invert max-w-none">
-        <section className="mb-10">
+          <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-white">
               Anomaly Detection and Behavioral Analysis
             </h2>
-                        <p className="mb-4 leading-relaxed text-slate-300">
+            <p className="mb-4 leading-relaxed text-slate-300">
               Traditional signature-based detection misses novel attacks. AI analyzes behavioral patterns — login times, data access, network flows — to flag anomalies that may indicate compromise. The goal is reducing time to detection from days to minutes.
             </p>
             <p className="mb-4 leading-relaxed text-slate-300">
@@ -70,11 +70,11 @@ export default function Page() {
             </p>
           </section>
 
-        <section className="mb-10">
+          <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-white">
               Automated Response and Orchestration
             </h2>
-                        <p className="mb-4 leading-relaxed text-slate-300">
+            <p className="mb-4 leading-relaxed text-slate-300">
               When threats are detected, speed matters. AI can automate containment actions — blocking IPs, disabling accounts, isolating systems — while humans investigate. Define playbooks for common scenarios and use AI to execute them.
             </p>
             <p className="mb-4 leading-relaxed text-slate-300">

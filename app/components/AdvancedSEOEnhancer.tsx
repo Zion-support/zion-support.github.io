@@ -1,6 +1,5 @@
 'use client';
 import React, { useCallback, useState, useEffect } from 'react';
-import Head from 'next/head';
 
 interface SEOData {
   title: string;
@@ -139,20 +138,7 @@ const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
   }, [runOptimizations, enableAutoOptimization]);
 
   return (
-    <Head>
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
-      <meta property="og:title" content={seoData.title} />
-      <meta property="og:description" content={seoData.description} />
-      <meta property="og:image" content={seoData.ogImage} />
-      <meta property="og:type" content={seoData.ogType} />
-      <meta property="og:url" content={seoData.canonicalUrl} />
-      <meta name="twitter:card" content={seoData.twitterCard} />
-      <meta name="twitter:title" content={seoData.title} />
-      <meta name="twitter:description" content={seoData.description} />
-      <meta name="twitter:image" content={seoData.ogImage} />
+    <>
       {enableAutoOptimization && (
         <div className="seo-optimization-status">
           <h3>SEO Optimization Status</h3>
@@ -165,7 +151,7 @@ const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
           </div>
         </div>
       )}
-    </Head>
+    </>
   );
 };
 

@@ -18914,5 +18914,44 @@
     "popular": false,
     "category": "micro-saas",
     "industry": "DevOps"
+  },
+  {
+    "id": "service-health-dashboard",
+    "title": "Service Health Dashboard & Monitoring",
+    "description": "Real-time monitoring, alerting, and self-healing for web services, APIs, and infrastructure with free/open-source tools.",
+    "icon": "\ud83d\udcca",
+    "features": [
+      "HTTP/HTTPS health checks with custom intervals",
+      "Multi-channel alerts (Telegram, Email, SMS via free tiers)",
+      "Automatic service restart on failure (self-healing)",
+      "Response time and throughput metrics",
+      "Public status page generation (GitHub Pages/Netlify)",
+      "Incident logging and resolution tracking",
+      "SSL certificate expiry monitoring",
+      "Domain and DNS health checks"
+    ],
+    "benefits": [
+      "Detect downtime before customers notice",
+      "Reduce MTTR with automated self-healing",
+      "Transparent service status builds customer trust",
+      "Prevent revenue loss from unnoticed outages",
+      "Compliance with uptime SLA requirements",
+      "Zero-cost monitoring using open-source tools",
+      "Scalable from single service to microservices architecture",
+      "Detailed analytics for capacity planning"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2499",
+      "enterprise": "7999"
+    },
+    "contactInfo": {
+      "website": "/services/service-health-dashboard",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/service-health-dashboard",
+    "category": "it",
+    "popular": false
   }
 ]

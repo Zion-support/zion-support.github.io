@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ArticleStructuredData from '@/app/components/ArticleStructuredData';
+import ArticleStructuredData from '@/components/ArticleStructuredData';
 import Breadcrumb from '@/app/components/Breadcrumb';
 
 export const metadata: Metadata = {

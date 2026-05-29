@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ArticleStructuredData from '@/components/ArticleStructuredData';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import Breadcrumb from '@/app/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'RAG for Enterprise Knowledge Bases: From Documents to Answers | Zion Tech Group Blog',
+  title: 'AI in Sustainability and ESG Reporting | Zion Tech Group Blog',
   description:
-    'Retrieval-augmented generation, chunking strategies, embedding models, and evaluation. Building AI systems that answer questions from your internal documents.',
-  alternates: { canonical: '/blog/rag-for-enterprise-knowledge-bases' },
+    'Carbon footprint calculation, supply chain emissions, regulatory compliance, and automated ESG disclosure. Meeting reporting requirements with AI-powered data aggregation.',
+  alternates: { canonical: '/blog/ai-in-sustainability-and-esg-reporting' },
   openGraph: {
-    title: 'RAG for Enterprise Knowledge Bases: From Documents to Answers',
+    title: 'AI in Sustainability and ESG Reporting',
     description:
-      'Retrieval-augmented generation, chunking strategies, embedding models, and evaluation. Building AI systems that answer questions from your internal documents.',
+      'Carbon footprint calculation, supply chain emissions, regulatory compliance, and automated ESG disclosure. Meeting reporting requirements with AI-powered data aggregation.',
     type: 'article',
-    url: 'https://ziontechgroup.com/blog/rag-for-enterprise-knowledge-bases',
+    url: 'https://ziontechgroup.com/blog/ai-in-sustainability-and-esg-reporting',
   },
 };
 
@@ -21,10 +21,10 @@ export default function Page() {
   return (
     <div className="relative min-h-screen bg-slate-950">
       <ArticleStructuredData
-        headline="RAG for Enterprise Knowledge Bases: From Documents to Answers"
-        description="Retrieval-augmented generation, chunking strategies, embedding models, and evaluation. Building AI systems that answer questions from your internal documents."
+        headline="AI in Sustainability and ESG Reporting"
+        description="Carbon footprint calculation, supply chain emissions, regulatory compliance, and automated ESG disclosure. Meeting reporting requirements with AI-powered data aggregation."
         datePublished="2026-05-29"
-        slug="rag-for-enterprise-knowledge-bases"
+        slug="ai-in-sustainability-and-esg-reporting"
       />
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden"
@@ -39,7 +39,7 @@ export default function Page() {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },
-            { label: 'RAG for Enterprise Knowledge Bases: From Documents to Answers' },
+            { label: 'AI in Sustainability and ESG Reporting' },
           ]}
           className="mb-8"
         />
@@ -49,36 +49,36 @@ export default function Page() {
               May 29, 2026
             </time>
             <span className="rounded-full border border-purple-400/40 bg-purple-500/15 px-3 py-1 text-xs font-medium text-purple-200">
-              Technical Guide
+              Industry Guide
             </span>
           </div>
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            RAG for Enterprise Knowledge Bases: From Documents to Answers
+            AI in Sustainability and ESG Reporting
           </h1>
         </header>
 
         <div className="prose-invert max-w-none">
         <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-white">
-              Retrieval-Augmented Generation Basics
+              Carbon and Emissions Data Aggregation
             </h2>
                         <p className="mb-4 leading-relaxed text-slate-300">
-              RAG combines retrieval (finding relevant documents) with generation (synthesizing answers). Instead of training on your data, you index it and retrieve at query time. This approach reduces hallucination and keeps answers grounded in your sources.
+              ESG reporting requires data from disparate sources — energy bills, travel records, supply chain partners, and operational systems. AI can automate data extraction, normalize formats, and calculate Scope 1, 2, and 3 emissions.
             </p>
             <p className="mb-4 leading-relaxed text-slate-300">
-              The retrieval step is critical. Poor chunking or weak embeddings lead to irrelevant context and wrong answers. Invest in chunking strategy — semantic boundaries matter more than fixed token counts.
+              Accuracy depends on data quality. Start with high-confidence sources (utility bills, fuel consumption) and expand to estimated data where direct measurement is impractical. Document methodology for auditors.
             </p>
           </section>
 
         <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-white">
-              Evaluation and Production Readiness
+              Regulatory Compliance and Disclosure
             </h2>
                         <p className="mb-4 leading-relaxed text-slate-300">
-              RAG quality depends on retrieval recall, answer relevance, and factual accuracy. Build evaluation pipelines that measure each. Use human feedback loops to identify failure modes and improve over time.
+              CSRD, SEC climate rules, and industry frameworks impose structured disclosure requirements. AI can map your data to required metrics, flag gaps, and generate draft disclosures. Human review remains essential for material assertions.
             </p>
             <p className="mb-4 leading-relaxed text-slate-300">
-              Production RAG systems need versioning for documents and embeddings, access control, and citation tracking. Users should be able to verify where answers came from — trust requires transparency.
+              Automation reduces the manual burden of annual reporting and enables more frequent internal reporting. Use AI to maintain a living ESG data model rather than scrambling at year-end.
             </p>
           </section>
         </div>

@@ -27,6 +27,9 @@ V26_STATS  = DATA / 'v26_stats.jsonl'
 V28_TQ_LOG = DATA / 'template_quality.jsonl'
 V28_TQ_AUDIT = DATA / 'template_quality_audit.jsonl'
 
+# Import response quality feedback
+from response_quality_feedback import _score_response_quality, _log_response_quality
+
 try:
     from v32_modules.lang_detector import detect_lang, LangDetectionError
 except ImportError:
@@ -211,6 +214,14 @@ except Exception:
     FeedbackLearner       = None
     SenderFeedbackStore   = None
     V28_FEEDBACK_ENABLED  = False
+
+# ─── V31: ReplyAllOptimizer ─────────────────────────────────
+try:
+    from reply_all_optimizer import ReplyAllOptimizer
+    REPLY_ALL_OPTIMIZER_ENABLED = True
+except Exception:
+    ReplyAllOptimizer     = None
+    REPLY_ALL_OPTIMIZER_ENABLED = False
 
 # ─── Wave 2: KB Grounding RAG ───────────────────────────────
 try:
@@ -1034,10 +1045,14 @@ class V26Responder:
         self.qr_trainer = QualityRegressionTrainer() if V25_REGR_TRAINER_ENABLED and QualityRegressionTrainer else None
         self.ml_weights = self.optimizer.train_from_outcomes() if self.optimizer else {}
         self.feedback_oracle = FeedbackLearner() if V28_FEEDBACK_ENABLED and FeedbackLearner else None
+        self.reply_all_optimizer = ReplyAllOptimizer() if REPLY_ALL_OPTIMIZER_ENABLED else None
         self.stats = defaultdict(int)
         self.stats['reply_all_enforced'] = 0
         self.stats['reply_all_missed']   = 0
         self.stats['reply_all_total']    = 0
+        self.stats['reply_all_optimizer_correct'] = 0
+        self.stats['reply_all_optimizer_incorrect'] = 0
+        self.stats['reply_all_optimizer_overrides'] = 0
         self._fin_result = {}
         self.stats['action_escalated'] = 0
         self.stats['action_financial']  = 0
@@ -1640,6 +1655,20 @@ class V26Responder:
                 reply_all_ok = True
                 self.stats["feedback_oracle_override"] = self.stats.get("feedback_oracle_override", 0) + 1
 
+        # V31: ReplyAllOptimizer override
+        if self.reply_all_optimizer and reply_all_ok is False:
+            sender_addr = sender.split("@")[0] if "@" in sender else sender
+            appropriateness = self.reply_all_optimizer.get_appropriateness_ratio(sender_addr)
+            if appropriateness >= 0.7:  # Threshold for override
+                reply_all_ok = True
+                self.stats["reply_all_optimizer_overrides"] = self.stats.get("reply_all_optimizer_overrides", 0) + 1
+                self._log({
+                    "run_id": RUN_ID, 
+                    "phase": "reply_all_optimizer_override", 
+                    "sender": sender,
+                    "appropriateness": appropriateness,
+                    "threshold": 0.7
+                })
 
         if reply_all_ok and use_cc:
             try:
@@ -1753,6 +1782,13 @@ class V26Responder:
                     "quality": min_qc, "elapsed_ms": round((time.monotonic() - t0) * 1000, 1),
                     "thread_intent": thread_intent_label,
                     "reply_all_detail": reply_all_dec if reply_all_ok else {"reply_all": False, "reason": "dry_run"}})
+            # Quality feedback loop: score and log response quality (dry-run)
+            try:
+                quality_score = _score_response_quality(body, email)
+                _log_response_quality(tid, quality_score, body, email)
+            except Exception:
+                # Fail silently to not disrupt email processing
+                pass
             return result
 
         # V35: dry-run path — improver handled below after dry result
@@ -1785,14 +1821,28 @@ class V26Responder:
                     "reason": "reply_all_ok_without_cc",
                     "reply_all_ok": reply_all_ok, "use_cc": use_cc,
                     "elapsed_ms": round((time.monotonic() - t0) * 1000, 1)})
+            # Quality feedback loop: score and log response quality (dry-run)
+            try:
+                quality_score = _score_response_quality(body, email)
+                _log_response_quality(tid, quality_score, body, email)
+            except Exception:
+                # Fail silently to not disrupt email processing
+                pass
             return result
-
         all_rcp = f"{sender}{cc_part}"
         subj_rep = f"Re: {subj}" if not subj.lower().startswith("re:") else subj
         # V51-FEAT3: reply_to_override from policy
         _reply_to = intent_raw.get("_policy", {}).get("reply_to_override", "")
         res = gmail_send_reply_fixed(tid, subj_rep, body, all_rcp, thread_id=tid,
                                      reply_to=_reply_to if _reply_to else None)
+
+        # Quality feedback loop: score and log response quality (actual send)
+        try:
+            quality_score = _score_response_quality(body, email)
+            _log_response_quality(tid, quality_score, body, email)
+        except Exception:
+            # Fail silently to not disrupt email processing
+            pass
 
         # R2: dedup tracking — record successful send
         _record_send(tid, "send_fast")

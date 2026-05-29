@@ -159,6 +159,28 @@ def gmail_get_or_create_label_id(label_name):
         print(f"Error in gmail_get_or_create_label_id: {e}")
         return None
 
+def gcal_list_events(max_results=10, time_min=None, time_max=None):
+    """List events from the primary calendar."""
+    url = 'https://www.googleapis.com/calendar/v3/calendars/primary/events'
+    params = {'maxResults': max_results}
+    if time_min:
+        params['timeMin'] = time_min
+    if time_max:
+        params['timeMax'] = time_max
+    # Always show single events and order by start time
+    params['singleEvents'] = True
+    params['orderBy'] = 'startTime'
+    # Build the URL with parameters
+    query_string = urllib.parse.urlencode(params)
+    req = urllib.request.Request(f'{url}?{query_string}', headers=gog_headers())
+    try:
+        resp = json.loads(urllib.request.urlopen(req).read())
+        return resp.get('items', [])
+    except Exception as e:
+        print(f"Error in gcal_list_events: {e}")
+        return []
+
+
 # Alias for backward compatibility
 gmail_search = goggle_search
 gmail_get = gmail_get
