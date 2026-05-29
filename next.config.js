@@ -29,6 +29,10 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
+  // Turbopack root fix for subdirectory app structure
+  turbopack: {
+    root: process.cwd(),
+  },
   // V40: /consultation → /contact permanent redirect (static export)
   async redirects() {
     return [

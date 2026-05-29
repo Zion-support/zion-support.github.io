@@ -15,9 +15,10 @@ interface PageProps { params: Promise<{ id: string }>; }
 export async function generateStaticParams() {
   const params: { id: string }[] = [];
   for (const service of allServices) {
-    params.push({ id: service.id });               // kebab / underscore as stored
+    if (!service || !service.id) continue; // Safety filter
+    params.push({ id: service.id });
     if (service.id.includes('_')) {
-      params.push({ id: service.id.replace(/_/g, '-') }); // kebab fallback
+      params.push({ id: service.id.replace(/_/g, '-') });
     }
   }
   return params;
@@ -25,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
-  const service = allServices.find((s) => s.id === id);
+  const service = allServices.find((s) => s && s.id === id);
   if (!service) return { title: 'Service Not Found' };
   return {
     title: service.title,

@@ -53,10 +53,12 @@ export default function IndustrySolutionsPage() {
     if (p && INDUSTRIES.includes(p as any)) setFilter(p);
   }, []);
 
-  const services: IndustryService[] = (allServices as any[]).map((s) => ({
-    ...s,
-    industry: (s as any).industry as string,
-  }));
+  const services: IndustryService[] = (allServices as any[])
+    .filter((s) => s && s.id)
+    .map((s) => ({
+      ...s,
+      industry: (s as any).industry as string,
+    }));
 
   const filtered = filter ? services.filter((s) => s.industry === filter) : services;
 
