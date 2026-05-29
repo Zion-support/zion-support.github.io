@@ -479,6 +479,72 @@ let list = services;
         </div>
       </section>
 
+      {/* ── V70 Email Intelligence Banner ── */}
+      <section className="py-20 bg-gradient-to-b from-indigo-950 to-slate-950">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
+              📧 NEW: V70 Email Intelligence
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Ultra-Advanced Email Analysis
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              50+ intelligence layers including thread context memory, sentiment escalation detection, 
+              auto-follow-up scheduling, and multi-language support.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
+              <div className="text-3xl mb-3">🧵</div>
+              <h3 className="text-lg font-bold text-white mb-2">Thread Context Memory</h3>
+              <p className="text-slate-400 text-sm">Remembers entire conversation history for better context awareness</p>
+            </div>
+            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
+              <div className="text-3xl mb-3">📈</div>
+              <h3 className="text-lg font-bold text-white mb-2">Sentiment Escalation Detection</h3>
+              <p className="text-slate-400 text-sm">Detects frustration and anger early to prevent escalation</p>
+            </div>
+            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
+              <div className="text-3xl mb-3">⏰</div>
+              <h3 className="text-lg font-bold text-white mb-2">Auto-Follow-up Scheduler</h3>
+              <p className="text-slate-400 text-sm">Automatically schedules follow-ups if no response received</p>
+            </div>
+            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
+              <div className="text-3xl mb-3">🌐</div>
+              <h3 className="text-lg font-bold text-white mb-2">Multi-Language Support</h3>
+              <p className="text-slate-400 text-sm">Detects language and suggests responses in sender's language</p>
+            </div>
+            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
+              <div className="text-3xl mb-3">📋</div>
+              <h3 className="text-lg font-bold text-white mb-2">Attachment Intelligence</h3>
+              <p className="text-slate-400 text-sm">Analyzes attachments and suggests appropriate actions</p>
+            </div>
+            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="text-lg font-bold text-white mb-2">Priority Matrix</h3>
+              <p className="text-slate-400 text-sm">Eisenhower matrix for intelligent email prioritization</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/services/ai-powered-email-intelligence/"
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all text-center"
+            >
+              Learn More About V70
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=V70 Email Intelligence Demo"
+              className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all text-center"
+            >
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── Interactive Service Configurator ── */}
       <section className="py-20 bg-gradient-to-b from-indigo-950 to-slate-950">
         <div className="container-page">
