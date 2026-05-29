@@ -13,6 +13,7 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
+import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
 
 
@@ -463,6 +464,9 @@ let list = services;
         categoryCounts={categoryCounts}
         categoryPricing={categoryPricing}
       />
+
+      {/* ── ROI Calculator Widget ── */}
+      <ROICalculator />
 
         {/* ── Popular Services ── */}
 
