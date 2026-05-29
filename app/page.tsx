@@ -666,6 +666,56 @@ let list = services;
         </div>
       </section>
 
+      {/* ── Partner & Affiliate Program ── */}
+      <section className="py-16 bg-gradient-to-br from-amber-600/20 via-orange-600/10 to-rose-600/20">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 text-sm font-semibold mb-4">
+              🤝 NEW: Partner & Affiliate Program
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Grow Your Business with Zion
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Join 500+ partners earning up to 30% recurring commissions on 1,100+ AI, IT, and Micro-SaaS services.
+              Free training, marketing support, and a dedicated partner success team.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
+            {[
+              { icon: '🤝', title: 'Referral Partner', commission: '15%', desc: 'Earn by referring clients' },
+              { icon: '💼', title: 'Reseller Partner', commission: '25%', desc: 'Sell with white-label options' },
+              { icon: '⚡', title: 'Technology Partner', commission: 'Custom', desc: 'Co-develop solutions' },
+              { icon: '🚀', title: 'Strategic Partner', commission: '30%+', desc: 'Enterprise-level partnership' }
+            ].map((tier, i) => (
+              <div key={i} className="glass-card p-6 text-center hover:border-amber-500/40 transition-all hover:scale-105">
+                <div className="text-4xl mb-3">{tier.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-1">{tier.title}</h3>
+                <div className="text-2xl font-bold text-amber-400 mb-2">{tier.commission}</div>
+                <p className="text-slate-400 text-sm">{tier.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
+            <div className="text-center"><div className="text-2xl font-bold text-amber-400">500+</div><div className="text-slate-400 text-sm">Active Partners</div></div>
+            <div className="text-center"><div className="text-2xl font-bold text-orange-400">$12M+</div><div className="text-slate-400 text-sm">Partner Revenue</div></div>
+            <div className="text-center"><div className="text-2xl font-bold text-rose-400">45+</div><div className="text-slate-400 text-sm">Countries</div></div>
+            <div className="text-center"><div className="text-2xl font-bold text-pink-400">48h</div><div className="text-slate-400 text-sm">Approval Time</div></div>
+          </div>
+          <div className="text-center">
+            <Link
+              href="/partners"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              🤝 Become a Partner Today →
+            </Link>
+            <p className="text-slate-400 text-sm mt-4">
+              Free to apply • Commission calculator included • Monthly payouts
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
