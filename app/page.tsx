@@ -17,6 +17,7 @@ import ServiceDiscoveryQuiz from '@/components/ServiceDiscoveryQuiz';
 import ServiceComparisonTool from '@/components/ServiceComparisonTool';
 import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
+import ServiceCompare from '@/components/ServiceCompare';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -526,6 +527,9 @@ let list = services;
       {/* ── ROI Calculator Widget ── */}
       <ROICalculator />
 
+      {/* ── Compare Services Widget ── */}
+      <ServiceCompare />
+
         {/* ── Popular Services ── */}
 
       <section className="py-16">
@@ -963,8 +967,8 @@ let list = services;
             {[
               { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '30+ sectors served', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '⚖️', label: 'Compare & Choose', sub: 'Side-by-side tool', color: 'from-emerald-500/20 to-teal-500/10' },
             ].map((badge, i) => (
               <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
