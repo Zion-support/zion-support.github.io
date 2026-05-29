@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ArticleStructuredData from '@/app/components/ArticleStructuredData';
-import Breadcrumb from '@/app/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'AI Agent Frameworks for Business Automation | Zion Tech Group Blog',
@@ -20,29 +18,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="relative min-h-screen bg-slate-950">
-      <ArticleStructuredData
-        headline="AI Agent Frameworks for Business Automation"
-        description="Agentic workflows, tool use, planning and execution, multi-step reasoning. Building autonomous AI agents that complete complex business tasks end-to-end."
-        datePublished="2026-05-28"
-        slug="ai-agent-frameworks-for-business-automation"
-      />
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden="true"
-      >
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-16 left-[-9rem] h-[26rem] w-[26rem] rounded-full bg-purple-500/20 blur-3xl" />
         <div className="absolute right-[-10rem] top-24 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <Breadcrumb
-          items={[
-            { label: 'Home', href: '/' },
-            { label: 'Blog', href: '/blog' },
-            { label: 'AI Agent Frameworks for Business Automation' },
-          ]}
-          className="mb-8"
-        />
         <header className="mb-12">
           <div className="mb-4 flex-wrap items-center gap-3 text-sm flex">
             <time dateTime="2026-05-28" className="text-slate-400">
@@ -58,11 +39,11 @@ export default function Page() {
         </header>
 
         <div className="prose-invert max-w-none">
-        <section className="mb-10">
+          <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-white">
               From Chatbots to Autonomous Agents
             </h2>
-                        <p className="mb-4 leading-relaxed text-slate-300">
+            <p className="mb-4 leading-relaxed text-slate-300">
               Traditional AI assistants respond to single-turn queries. Agentic systems plan multi-step workflows, use tools (APIs, databases, search), and iterate until they achieve a goal. The shift from reactive to proactive automation is transforming enterprise workflows.
             </p>
             <p className="mb-4 leading-relaxed text-slate-300">
@@ -70,11 +51,11 @@ export default function Page() {
             </p>
           </section>
 
-        <section className="mb-10">
+          <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-white">
               Tool Use and Orchestration Patterns
             </h2>
-                        <p className="mb-4 leading-relaxed text-slate-300">
+            <p className="mb-4 leading-relaxed text-slate-300">
               Effective agents combine LLM reasoning with deterministic tools. Use the LLM for interpretation and planning; use tools for data retrieval, calculations, and system actions. This separation keeps agents reliable and auditable.
             </p>
             <p className="mb-4 leading-relaxed text-slate-300">

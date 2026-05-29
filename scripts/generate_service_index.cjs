@@ -82,7 +82,7 @@ function main() {
       popular:     !!svc.popular,
       features:    svc.features    || [],
       benefits:    svc.benefits    || [],
-      href:        svc.href        || `/services/${svc.id}`,
+      href:        svc.href        || `/${svc.category}-services/${svc.id}`,
     };
   }
   console.log(`Phase 1: servicesData.json loaded — ${Object.keys(jsonMap).length} services`);
@@ -149,7 +149,7 @@ function main() {
       popular:    false,
       features:   extractFeaturesFromHtml(sid),
       benefits:   [],
-      href:       `/services/${sid}`,
+      href:       `/${inferCategory(sid)}-services/${sid}`,
       source:     'html',
     });
     seen.add(sid);

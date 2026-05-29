@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   openGraph: { type: 'website', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: '552+ micro SAAS services, IT solutions, and AI-powered platforms. Custom proposals in minutes.', url: 'https://ziontechgroup.com', siteName: 'Zion Tech Group', locale: 'en_US' },
   twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, IT & Micro SAAS Solutions', description: 'Enterprise AI services, IT solutions, and Micro SAAS platforms.' },
   alternates: { canonical: 'https://ziontechgroup.com' },
+  metadataBase: new URL('https://ziontechgroup.com'),
 };
 
 const orgSchema = { ...STRUCTURED_DATA.ORGANIZATION, url: SITE_URL };
