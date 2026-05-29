@@ -7,6 +7,7 @@ import { AIComponents } from './components/ai-components';
 import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
 import { allServices } from '@/app/data/servicesData';
 import LiveActivityFeed from './components/marketing/LiveActivityFeed';
+import ClientTestimonials from './components/marketing/ClientTestimonials';
 
 export default function Home() {
   const confidence = getPromotionConfidence();
@@ -255,6 +256,9 @@ export default function Home() {
               </Link>
             </div>
           </section>
+
+          {/* Client Testimonials */}
+          <ClientTestimonials />
 
           <ProductRecommenderSection sectionId="ai-product-recommender" />
 
