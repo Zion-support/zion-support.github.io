@@ -42,22 +42,14 @@ export const RESOURCE_LINKS: readonly NavigationLink[] = [
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: readonly NavigationLink[] = [
-  { name: 'Zion AI Chatbot Builder', href: '/services/ai-chatbot-builder-pro' },
-  {
-    name: 'AI-Powered DevOps',
-    href: '/services/devops-gen-ai-ci-cd',
-    aliases: ['/services/it-devops-platform-toolchain'],
-  },
-  {
-    name: 'AI Email Analyzer',
-    href: '/services/ai-email-marketing',
-    aliases: ['/services/ai-email-marketing'],
-  },
-  { name: 'Zion AI Code Assistant', href: '/services/ai-code-assistant-enterprise' },
-  { name: 'Zion AI Code Reviewer', href: '/services/ai-code-migration-assistant' },
-  { name: 'Zion AI Customer Support Pro', href: '/services/ai-customer-support' },
-  { name: 'Zion AI Predictive Analytics', href: '/services/ai-analytics' },
-  { name: 'Zion Security Shield', href: '/services/ai-security-responsible-ai' },
+  { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance-platform' },
+  { name: 'AI Document Intelligence', href: '/services/ai-document-intelligence-platform' },
+  { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection-engine' },
+  { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },
+  { name: 'SOC-as-a-Service', href: '/services/soc-as-a-service' },
+  { name: 'Cloud Migration Factory', href: '/services/cloud-migration-factory' },
+  { name: 'Managed Kubernetes', href: '/services/kubernetes-management-platform' },
+  { name: 'DevSecOps Pipeline', href: '/services/devsecops-pipeline-service' },
 ];
 
 export const AI_SERVICE_LINKS: readonly NavigationLink[] = [
