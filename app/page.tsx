@@ -16,6 +16,7 @@ import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import ServiceDiscoveryQuiz from '@/components/ServiceDiscoveryQuiz';
 import ServiceComparisonTool from '@/components/ServiceComparisonTool';
 import ServiceConfigurator from '@/components/ServiceConfigurator';
+import BusinessHealthCheck from '@/components/BusinessHealthCheck';
 import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
 import ServiceCompare from '@/components/ServiceCompare';
@@ -492,6 +493,24 @@ let list = services;
             </p>
           </div>
           <ServiceConfigurator />
+        </div>
+      </section>
+
+      {/* ── Business Health Check ── */}
+      <section className="py-20 bg-gradient-to-b from-purple-950 to-slate-950">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-green-600/30 text-green-300 rounded-full text-sm font-semibold mb-4">
+              🏥 NEW: Free Business Assessment
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Business Health Check
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Get a comprehensive technology health assessment across 5 critical areas. Discover strengths, weaknesses, and personalized recommendations.
+            </p>
+          </div>
+          <BusinessHealthCheck />
         </div>
       </section>
 
