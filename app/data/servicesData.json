@@ -20588,5 +20588,600 @@
     },
     "stage": "live",
     "industry": "Enterprise"
+  },
+  {
+    "id": "ai-powered-form-builder",
+    "title": "AI-Powered Form & Survey Builder",
+    "description": "Create intelligent forms and surveys with AI that suggests questions, analyzes responses, and generates insights. Includes conditional logic, multi-language support, 200+ templates, and integrations with 50+ tools.",
+    "features": [
+      "AI question suggestions",
+      "Response analytics",
+      "Conditional logic",
+      "200+ templates",
+      "Multi-language",
+      "CRM/Slack/Sheets integration",
+      "Custom branding",
+      "HIPAA/GDPR compliant"
+    ],
+    "benefits": [
+      "3x faster form creation",
+      "40% higher completion rates",
+      "Auto-generated insights"
+    ],
+    "pricing": {
+      "starter": "19",
+      "professional": "49",
+      "enterprise": "149"
+    },
+    "icon": "📝",
+    "category": "micro-saas",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/ai-powered-form-builder/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "team-goal-tracking-okr",
+    "title": "Team Goal & OKR Tracking Platform",
+    "description": "Align your team with transparent goal tracking, OKR management, and progress dashboards. Includes 1:1 meeting agendas, weekly check-ins, and performance analytics. Integrates with Slack, Teams, and Jira.",
+    "features": [
+      "OKR management",
+      "Progress dashboards",
+      "1:1 meeting agendas",
+      "Weekly check-ins",
+      "Performance analytics",
+      "Slack/Teams/Jira integration",
+      "Custom OKR templates",
+      "Executive reporting"
+    ],
+    "benefits": [
+      "35% improvement in goal achievement",
+      "Increased team alignment",
+      "Data-driven performance reviews"
+    ],
+    "pricing": {
+      "starter": "9",
+      "professional": "29",
+      "enterprise": "79"
+    },
+    "icon": "🎯",
+    "category": "micro-saas",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/team-goal-tracking-okr/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "proposal-quoting-software",
+    "title": "Proposal & Quoting Software",
+    "description": "Create professional proposals and quotes in minutes with AI-assisted content, e-signatures, and payment collection. Includes CRM integration, template library, and real-time analytics on proposal views and acceptance rates.",
+    "features": [
+      "AI content suggestions",
+      "E-signatures",
+      "Payment collection",
+      "CRM integration",
+      "Template library",
+      "Real-time analytics",
+      "Approval workflows",
+      "Multi-currency"
+    ],
+    "benefits": [
+      "50% faster proposal creation",
+      "30% higher win rates",
+      "Automated follow-ups"
+    ],
+    "pricing": {
+      "starter": "29",
+      "professional": "79",
+      "enterprise": "199"
+    },
+    "icon": "📄",
+    "category": "micro-saas",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/proposal-quoting-software/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "employee-engagement-platform",
+    "title": "Employee Engagement & Pulse Survey Platform",
+    "description": "Measure and improve employee engagement with pulse surveys, eNPS tracking, recognition programs, and action planning. AI-powered sentiment analysis identifies trends and recommends interventions.",
+    "features": [
+      "Pulse surveys",
+      "eNPS tracking",
+      "Recognition programs",
+      "AI sentiment analysis",
+      "Action planning",
+      "Anonymous feedback",
+      "Manager dashboards",
+      "Benchmarking data"
+    ],
+    "benefits": [
+      "25% improvement in retention",
+      "Real-time engagement insights",
+      "Data-driven HR decisions"
+    ],
+    "pricing": {
+      "starter": "4",
+      "professional": "9",
+      "enterprise": "24"
+    },
+    "icon": "💬",
+    "category": "micro-saas",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/employee-engagement-platform/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "digital-business-card-platform",
+    "title": "Digital Business Card & Networking Platform",
+    "description": "Replace paper cards with smart digital business cards. NFC-enabled, analytics-tracked, with CRM sync and lead capture. Includes team management, custom designs, and integration with LinkedIn and major CRMs.",
+    "features": [
+      "NFC-enabled cards",
+      "Analytics dashboard",
+      "CRM sync",
+      "Lead capture forms",
+      "Team management",
+      "Custom designs",
+      "LinkedIn integration",
+      "QR code sharing"
+    ],
+    "benefits": [
+      "100% more leads from networking",
+      "Zero paper waste",
+      "Real-time contact analytics"
+    ],
+    "pricing": {
+      "starter": "5",
+      "professional": "15",
+      "enterprise": "49"
+    },
+    "icon": "💳",
+    "category": "micro-saas",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/digital-business-card-platform/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "ai-data-labeling-platform",
+    "title": "AI Data Labeling & Annotation Platform",
+    "description": "High-quality data labeling for ML training with AI-assisted pre-labeling, quality control, and workforce management. Supports image, text, video, and audio annotation with 99%+ accuracy.",
+    "features": [
+      "AI pre-labeling",
+      "Image annotation",
+      "Text classification",
+      "Video labeling",
+      "Audio transcription",
+      "Quality control",
+      "Workforce management",
+      "API access"
+    ],
+    "benefits": [
+      "70% faster labeling",
+      "99%+ accuracy",
+      "50% cost reduction vs manual"
+    ],
+    "pricing": {
+      "starter": "199",
+      "professional": "599",
+      "enterprise": "2499"
+    },
+    "icon": "🏷️",
+    "category": "ai",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/ai-data-labeling-platform/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "ai-predictive-analytics-suite",
+    "title": "AI Predictive Analytics & Forecasting Suite",
+    "description": "Enterprise-grade predictive analytics with automated model selection, explainable AI, and real-time forecasting. No ML expertise required — just connect your data and get predictions.",
+    "features": [
+      "Automated model selection",
+      "Explainable AI",
+      "Real-time forecasting",
+      "Data connectors (50+)",
+      "Custom dashboards",
+      "Alert system",
+      "API access",
+      "Team collaboration"
+    ],
+    "benefits": [
+      "35% improvement in forecast accuracy",
+      "Zero ML expertise required",
+      "Real-time predictions"
+    ],
+    "pricing": {
+      "starter": "199",
+      "professional": "599",
+      "enterprise": "2999"
+    },
+    "icon": "📊",
+    "category": "ai",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/ai-predictive-analytics-suite/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "ai-chatbot-builder-enterprise",
+    "title": "Enterprise AI Chatbot Builder",
+    "description": "Build and deploy AI chatbots for customer service, sales, and internal support. No-code builder with GPT-4 integration, multi-language support, and analytics. Handles 10,000+ concurrent conversations.",
+    "features": [
+      "No-code builder",
+      "GPT-4 integration",
+      "Multi-language (100+)",
+      "Analytics dashboard",
+      "CRM integration",
+      "Human handoff",
+      "Custom training",
+      "10K+ concurrent chats"
+    ],
+    "benefits": [
+      "70% reduction in support costs",
+      "24/7 instant responses",
+      "95% resolution rate"
+    ],
+    "pricing": {
+      "starter": "99",
+      "professional": "299",
+      "enterprise": "999"
+    },
+    "icon": "🤖",
+    "category": "ai",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/ai-chatbot-builder-enterprise/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "ai-financial-fraud-analyst",
+    "title": "AI Financial Fraud Detection & Prevention",
+    "description": "Real-time fraud detection for financial services with AI that analyzes transactions, identifies patterns, and prevents losses. Includes SAR filing, regulatory reporting, and case management.",
+    "features": [
+      "Real-time detection",
+      "Pattern analysis",
+      "SAR filing",
+      "Regulatory reporting",
+      "Case management",
+      "Network analysis",
+      "Risk scoring",
+      "API integration"
+    ],
+    "benefits": [
+      "95% fraud detection rate",
+      "80% false positive reduction",
+      "Automated compliance"
+    ],
+    "pricing": {
+      "starter": "499",
+      "professional": "1499",
+      "enterprise": "5999"
+    },
+    "icon": "💰",
+    "category": "ai",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/ai-financial-fraud-analyst/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "managed-dns-service",
+    "title": "Managed DNS & Traffic Management",
+    "description": "Enterprise-grade DNS management with global anycast network, DDoS protection, and intelligent traffic routing. 100% uptime SLA with automatic failover and health checks.",
+    "features": [
+      "Global anycast network",
+      "DDoS protection",
+      "Intelligent routing",
+      "Automatic failover",
+      "Health checks",
+      "DNSSEC",
+      "Traffic analytics",
+      "100% uptime SLA"
+    ],
+    "benefits": [
+      "100% DNS uptime",
+      "50% faster resolution",
+      "DDoS protection included"
+    ],
+    "pricing": {
+      "starter": "20",
+      "professional": "50",
+      "enterprise": "200"
+    },
+    "icon": "🌐",
+    "category": "it",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/managed-dns-service/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "database-as-a-service",
+    "title": "Managed Database as a Service (DBaaS)",
+    "description": "Fully managed databases with automated backups, scaling, and monitoring. Supports PostgreSQL, MySQL, MongoDB, and Redis. Includes query optimization, security patching, and 24/7 support.",
+    "features": [
+      "PostgreSQL/MySQL/MongoDB/Redis",
+      "Automated backups",
+      "Auto-scaling",
+      "Query optimization",
+      "Security patching",
+      "24/7 monitoring",
+      "Point-in-time recovery",
+      "Read replicas"
+    ],
+    "benefits": [
+      "99.99% uptime",
+      "70% reduction in DB admin time",
+      "Auto-scaling on demand"
+    ],
+    "pricing": {
+      "starter": "49",
+      "professional": "149",
+      "enterprise": "599"
+    },
+    "icon": "🗄️",
+    "category": "it",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/database-as-a-service/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "container-registry-scanning",
+    "title": "Container Registry & Security Scanning",
+    "description": "Secure container registry with vulnerability scanning, policy enforcement, and CI/CD integration. Supports Docker and OCI images with automated compliance checks.",
+    "features": [
+      "Vulnerability scanning",
+      "Policy enforcement",
+      "CI/CD integration",
+      "Image signing",
+      "Compliance checks",
+      "Access control",
+      "Audit logging",
+      "Multi-region replication"
+    ],
+    "benefits": [
+      "95% vulnerability detection",
+      "Automated compliance",
+      "Secure supply chain"
+    ],
+    "pricing": {
+      "starter": "29",
+      "professional": "79",
+      "enterprise": "299"
+    },
+    "icon": "📦",
+    "category": "it",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/container-registry-scanning/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "vulnerability-management-service",
+    "title": "Vulnerability Management as a Service",
+    "description": "Continuous vulnerability scanning, prioritization, and remediation guidance across your entire infrastructure. Includes risk scoring, compliance reporting, and integration with ticketing systems.",
+    "features": [
+      "Continuous scanning",
+      "Risk-based prioritization",
+      "Remediation guidance",
+      "Compliance reporting",
+      "Ticketing integration",
+      "Asset discovery",
+      "Trend analysis",
+      "Executive dashboards"
+    ],
+    "benefits": [
+      "90% faster vulnerability remediation",
+      "Continuous compliance",
+      "Risk-prioritized patching"
+    ],
+    "pricing": {
+      "starter": "199",
+      "professional": "599",
+      "enterprise": "1999"
+    },
+    "icon": "🛡️",
+    "category": "security",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/vulnerability-management-service/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "data-loss-prevention-service",
+    "title": "Data Loss Prevention (DLP) Service",
+    "description": "Comprehensive DLP solution that monitors, detects, and prevents data exfiltration across email, cloud, and endpoints. Includes content inspection, policy enforcement, and incident response.",
+    "features": [
+      "Content inspection",
+      "Email DLP",
+      "Cloud DLP",
+      "Endpoint DLP",
+      "Policy enforcement",
+      "Incident response",
+      "User behavior analytics",
+      "Compliance reporting"
+    ],
+    "benefits": [
+      "99% data leak prevention",
+      "Automated policy enforcement",
+      "Compliance-ready reporting"
+    ],
+    "pricing": {
+      "starter": "5",
+      "professional": "12",
+      "enterprise": "25"
+    },
+    "icon": "🔒",
+    "category": "security",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/data-loss-prevention-service/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "cloud-cost-governance",
+    "title": "Cloud Cost Governance & FinOps Platform",
+    "description": "Automated cloud cost optimization with AI-driven recommendations, budget alerts, and chargeback reporting. Supports AWS, Azure, and GCP with 40% average cost savings.",
+    "features": [
+      "AI cost recommendations",
+      "Budget alerts",
+      "Chargeback reporting",
+      "Multi-cloud support",
+      "Reserved instance optimization",
+      "Waste detection",
+      "Savings tracking",
+      "Executive dashboards"
+    ],
+    "benefits": [
+      "40% cloud cost reduction",
+      "Automated optimization",
+      "Real-time cost visibility"
+    ],
+    "pricing": {
+      "starter": "99",
+      "professional": "299",
+      "enterprise": "999"
+    },
+    "icon": "💰",
+    "category": "cloud",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/cloud-cost-governance/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "disaster-recovery-orchestration",
+    "title": "Disaster Recovery Orchestration Platform",
+    "description": "Automated disaster recovery with one-click failover, continuous replication, and compliance testing. Achieves RPO < 1 minute and RTO < 15 minutes for critical applications.",
+    "features": [
+      "One-click failover",
+      "Continuous replication",
+      "Compliance testing",
+      "RPO < 1 min",
+      "RTO < 15 min",
+      "Multi-region support",
+      "Automated runbooks",
+      "Recovery testing"
+    ],
+    "benefits": [
+      "99.99% data durability",
+      "15-minute RTO",
+      "Automated compliance testing"
+    ],
+    "pricing": {
+      "starter": "299",
+      "professional": "899",
+      "enterprise": "3999"
+    },
+    "icon": "🔄",
+    "category": "cloud",
+    "popular": false,
+    "contactInfo": {
+      "website": "/services/disaster-recovery-orchestration/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
+  },
+  {
+    "id": "api-security-gateway",
+    "title": "API Security & Threat Protection Gateway",
+    "description": "Protect your APIs from attacks with AI-powered threat detection, bot management, and rate limiting. Includes OWASP API Top 10 protection and real-time analytics.",
+    "features": [
+      "AI threat detection",
+      "Bot management",
+      "Rate limiting",
+      "OWASP API Top 10",
+      "Schema validation",
+      "Real-time analytics",
+      "Custom rules",
+      "Incident response"
+    ],
+    "benefits": [
+      "99.9% attack detection",
+      "Zero-trust API protection",
+      "Real-time threat intelligence"
+    ],
+    "pricing": {
+      "starter": "79",
+      "professional": "249",
+      "enterprise": "899"
+    },
+    "icon": "🔐",
+    "category": "security",
+    "popular": true,
+    "contactInfo": {
+      "website": "/services/api-security-gateway/",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "stage": "live",
+    "industry": "Enterprise"
   }
 ]
