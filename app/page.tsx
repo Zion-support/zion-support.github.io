@@ -718,6 +718,59 @@ let list = services;
         </div>
       </section>
 
+      {/* ── AI ROI Calculator & Business Case Generator ── */}
+      <section className="py-16 bg-gradient-to-br from-green-600/20 via-emerald-600/10 to-teal-600/20">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-semibold mb-4">
+              💰 NEW: AI ROI Calculator & Business Case Generator
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Calculate Your ROI in 2 Minutes
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Discover how much you can save with Zion's AI-powered solutions. Get personalized recommendations,
+              projected savings, implementation timeline, and a custom business case for your company.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="glass-card p-8 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-3">📊</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Smart Analysis</h3>
+                  <p className="text-slate-400 text-sm">AI analyzes your company profile and pain points</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">💵</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Projected Savings</h3>
+                  <p className="text-slate-400 text-sm">See monthly and annual cost savings</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">🎯</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Personalized ROI</h3>
+                  <p className="text-slate-400 text-sm">Custom ROI calculations for your business</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">📅</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Timeline</h3>
+                  <p className="text-slate-400 text-sm">Implementation roadmap with milestones</p>
+                </div>
+              </div>
+              <Link
+                href="/roi-calculator"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                💰 Calculate My ROI Now →
+              </Link>
+              <p className="text-slate-400 text-sm mt-4">
+                Free to use • No signup required • Instant results • Data-driven recommendations
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
