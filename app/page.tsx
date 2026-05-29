@@ -14,6 +14,7 @@ import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import ServiceDiscoveryQuiz from '@/components/ServiceDiscoveryQuiz';
+import ServiceComparisonTool from '@/components/ServiceComparisonTool';
 import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
 
@@ -453,6 +454,24 @@ let list = services;
             </p>
           </div>
           <ServiceDiscoveryQuiz />
+        </div>
+      </section>
+
+      {/* ── Service Comparison Tool — NEW Interactive Feature ── */}
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
+              🔍 NEW: Compare Services Side-by-Side
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Make Informed Decisions with Smart Comparisons
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Select 2-3 services and get detailed feature, pricing, and benefit comparisons with AI-powered recommendations
+            </p>
+          </div>
+          <ServiceComparisonTool />
         </div>
       </section>
 
