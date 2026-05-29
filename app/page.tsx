@@ -1073,6 +1073,150 @@ let list = services;
         </p>
       </div>
     </section>
+    {/* Client Success Stories */}
+    <section className="py-20 bg-slate-950 border-t border-slate-800">
+      <div className="container-page">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-900/30 border border-amber-500/30 text-amber-300 text-sm mb-4">
+            <span>⭐</span> Client Success Stories
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Real Results from Real Clients
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            702+ services delivered across 10 industries — here&apos;s what our clients achieved.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-800 p-6 hover:border-green-500/30 transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-green-900/40 flex items-center justify-center text-xl">🏥</div>
+              <div>
+                <h3 className="text-white font-bold">Healthcare Network</h3>
+                <p className="text-xs text-slate-500">500+ bed hospital system</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-green-400">50%</p>
+                <p className="text-xs text-slate-500">Faster Diagnosis</p>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-green-400">$2.1M</p>
+                <p className="text-xs text-slate-500">Annual Savings</p>
+              </div>
+            </div>
+            <p className="text-sm text-slate-400 italic mb-3">&ldquo;The AI Medical Imaging Assistant caught 12 early-stage anomalies our radiologists missed. ROI in 3 months.&rdquo;</p>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">DR</div>
+              <div>
+                <p className="text-xs text-white font-semibold">Dr. Rachel Kim</p>
+                <p className="text-xs text-slate-500">Chief Medical Officer</p>
+              </div>
+            </div>
+            <div className="mt-3 pt-3 border-t border-slate-800">
+              <p className="text-xs text-purple-400">Services: AI Medical Imaging + Cloud Security + HIPAA Compliance</p>
+            </div>
+          </div>
+
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-800 p-6 hover:border-blue-500/30 transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-blue-900/40 flex items-center justify-center text-xl">🏭</div>
+              <div>
+                <h3 className="text-white font-bold">Manufacturing Corp</h3>
+                <p className="text-xs text-slate-500">Fortune 500 manufacturer</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-blue-400">73%</p>
+                <p className="text-xs text-slate-500">Less Downtime</p>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-blue-400">$4.8M</p>
+                <p className="text-xs text-slate-500">Saved/Year</p>
+              </div>
+            </div>
+            <p className="text-sm text-slate-400 italic mb-3">&ldquo;Predictive maintenance predicted 47 equipment failures before they happened. We avoided $4.8M in unplanned downtime.&rdquo;</p>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">MJ</div>
+              <div>
+                <p className="text-xs text-white font-semibold">Mark Johnson</p>
+                <p className="text-xs text-slate-500">VP of Operations</p>
+              </div>
+            </div>
+            <div className="mt-3 pt-3 border-t border-slate-800">
+              <p className="text-xs text-purple-400">Services: AI Predictive Maintenance + IoT Platform + Edge Computing</p>
+            </div>
+          </div>
+
+          <div className="bg-slate-900/50 rounded-2xl border border-slate-800 p-6 hover:border-purple-500/30 transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-purple-900/40 flex items-center justify-center text-xl">🛒</div>
+              <div>
+                <h3 className="text-white font-bold">E-commerce Brand</h3>
+                <p className="text-xs text-slate-500">DTC brand, 2M+ customers</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-purple-400">+35%</p>
+                <p className="text-xs text-slate-500">Revenue Growth</p>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                <p className="text-2xl font-bold text-purple-400">22%</p>
+                <p className="text-xs text-slate-500">AOV Increase</p>
+              </div>
+            </div>
+            <p className="text-sm text-slate-400 italic mb-3">&ldquo;The AI pricing engine + recommendations bundle increased our average order value 22% and overall revenue 35% in 6 months.&rdquo;</p>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-white">SL</div>
+              <div>
+                <p className="text-xs text-white font-semibold">Sarah Lee</p>
+                <p className="text-xs text-slate-500">CEO & Founder</p>
+              </div>
+            </div>
+            <div className="mt-3 pt-3 border-t border-slate-800">
+              <p className="text-xs text-purple-400">Services: AI Pricing Engine + Visual Search + Marketing Automation</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+          <div className="text-center bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+            <p className="text-3xl font-bold text-white">702+</p>
+            <p className="text-xs text-slate-500 mt-1">Services Delivered</p>
+          </div>
+          <div className="text-center bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+            <p className="text-3xl font-bold text-white">98%</p>
+            <p className="text-xs text-slate-500 mt-1">Client Satisfaction</p>
+          </div>
+          <div className="text-center bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+            <p className="text-3xl font-bold text-white">$47M+</p>
+            <p className="text-xs text-slate-500 mt-1">Client Savings/Year</p>
+          </div>
+          <div className="text-center bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+            <p className="text-3xl font-bold text-white">3mo</p>
+            <p className="text-xs text-slate-500 mt-1">Avg. ROI Payback</p>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="px-8 py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-full hover:opacity-90 transition-all"
+          >
+            📧 Start Your Success Story
+          </Link>
+          <p className="text-xs text-slate-500 mt-3">
+            Contact: <a href="tel:+130****0950" className="text-purple-400 hover:underline">+1 302 464 0950</a> • <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:underline">kleber@ziontechgroup.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
     <ROICalculator />
     <ServiceComparisonTool />
     <FloatingActionDock />
