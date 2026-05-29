@@ -22,6 +22,7 @@ import VoiceVideoShowcase from '@/components/VoiceVideoShowcase';
 import IntegrationHubShowcase from '@/components/IntegrationHubShowcase';
 import EmailCoachingShowcase from '@/components/EmailCoachingShowcase';
 import EmailIntelligenceShowcase from '@/components/EmailIntelligenceShowcase';
+import WorkflowPredictiveShowcase from '@/components/WorkflowPredictiveShowcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1083,6 +1084,9 @@ let list = services;
 
       {/* ── Next-Gen Email Intelligence V89-V91 ── */}
       <EmailIntelligenceShowcase />
+
+      {/* ── AI Workflow Automation & Predictive Analytics V92-V93 ── */}
+      <WorkflowPredictiveShowcase />
 
     <FloatingActionDock />
     </main>
