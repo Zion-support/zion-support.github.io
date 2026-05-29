@@ -12,21 +12,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
-import ServiceFinderChat from '@/components/ServiceFinderChat';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-import ServiceDiscoveryQuiz from '@/components/ServiceDiscoveryQuiz';
-import ServiceComparisonTool from '@/components/ServiceComparisonTool';
-import ServiceConfigurator from '@/components/ServiceConfigurator';
-import BusinessHealthCheck from '@/components/BusinessHealthCheck';
-import DeploymentCalculator from '@/components/DeploymentCalculator';
-import CustomerSuccessPlatform from '@/components/CustomerSuccessPlatform';
-import ROICalculator from '@/components/ROICalculator';
-import PricingEstimator from '@/components/PricingEstimator';
-import AIServiceMatcher from '@/components/AIServiceMatcher';
-import ServiceStatusDashboard from '@/components/ServiceStatusDashboard';
-import ServiceCompare from '@/components/ServiceCompare';
-import CaseStudiesHub from '@/components/CaseStudiesHub';
-import ServiceRecommendationQuiz from '@/components/ServiceRecommendationQuiz';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -115,36 +101,10 @@ export default function HomePage() {
   // Dynamic stats — auto-update when catalog changes
   const stats = [
     { value: `${serviceCount}+`, label: STAT_SERVICES },
-    { value: `${CATEGORIES.length} Categories`, label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS' },
+    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
-  ];
-
-  // Category pricing for estimator widget
-  const categoryCounts = useMemo(() => {
-    const m: Record<string, number> = {};
-    for (const s of services) { m[s.category] = (m[s.category] || 0) + 1; }
-    return m;
-  }, [services]);
-
-  const categoryPricing = useMemo(() => {
-    const m: Record<string, { min: number; avg: number; max: number }> = {};
-    const byCat: Record<string, number[]> = {};
-    for (const s of services) {
-      const n = Number(s.pricing?.basic || s.pricing?.enterprise || 0);
-      if (n > 0) {
-        if (!byCat[s.category]) byCat[s.category] = [];
-        byCat[s.category].push(n);
-      }
-    }
-    for (const [cat, prices] of Object.entries(byCat)) {
-      if (prices.length > 0) {
-        const sorted = prices.sort((a: number, b: number) => a - b);
-        m[cat] = { min: sorted[0], avg: Math.round(sorted.reduce((a: number, b: number) => a + b, 0) / sorted.length), max: sorted[sorted.length - 1] };
-      }
-    }
-    return m;
-  }, [services]);
+    ];
 
   // Fetch release-signal dataset on mount
   useEffect(() => {
@@ -310,15 +270,15 @@ let list = services;
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, automation, data, and micro-SaaS services — from machine learning to cybersecurity, CRM to blockchain.
-            Get a free, custom proposal in minutes.
+            <ServiceCounter /> real-world services across 10 categories — AI, IT, Cloud, Security, Data Analytics, Automation, Micro-SaaS, DevOps, Blockchain & IoT. 
+            From machine learning to cybersecurity, invoicing to Kubernetes. Get a free, custom proposal today.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
                 ⚡ Get Your Custom Proposal →
               </Link>
               <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
-                {`🛠️ Explore All ${serviceCount}+ Services`}
+                🛠️ Explore All {serviceCount}+ Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
                 ☎ +1 302 464 0950
@@ -372,26 +332,6 @@ let list = services;
                 📍 364 E Main St STE 1008, Middletown, DE 19709
               </span>
             </div>
-
-            {/* ── Academy Banner ── */}
-            <Link href="/academy/" className="block mt-8 mb-6 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-600/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="text-4xl">🎓</div>
-                  <div className="text-left">
-                    <div className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                      NEW: AI Training Academy & Certification Programs
-                    </div>
-                    <div className="text-sm text-slate-300 mt-1">
-                      89 courses • 50K+ students • Industry certifications • Corporate training
-                    </div>
-                  </div>
-                </div>
-                <div className="text-purple-300 group-hover:text-purple-200 text-2xl transition-colors">
-                  →
-                </div>
-              </div>
-            </Link>
 
             {/* ── Service Pipeline — live stage counts ── */}
             <div className="flex flex-wrap justify-center gap-4 mt-6">
@@ -449,378 +389,6 @@ let list = services;
         </div>
       </section>
 
-      {/* ── Service Discovery Quiz — NEW Interactive Feature ── */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-purple-600/30 text-purple-300 rounded-full text-sm font-semibold mb-4">
-              🎯 NEW: Personalized Recommendations
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Find Your Perfect Solution in 2 Minutes
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Answer 5 quick questions and get AI-powered service recommendations with instant ROI calculations
-            </p>
-          </div>
-          <ServiceDiscoveryQuiz />
-        </div>
-      </section>
-
-      {/* ── Service Comparison Tool — NEW Interactive Feature ── */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
-              🔍 NEW: Compare Services Side-by-Side
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Make Informed Decisions with Smart Comparisons
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Select 2-3 services and get detailed feature, pricing, and benefit comparisons with AI-powered recommendations
-            </p>
-          </div>
-          <ServiceComparisonTool />
-        </div>
-      </section>
-
-      {/* ── V70 Email Intelligence Banner ── */}
-      <section className="py-20 bg-gradient-to-b from-indigo-950 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
-              📧 NEW: V70 Email Intelligence
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Ultra-Advanced Email Analysis
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              50+ intelligence layers including thread context memory, sentiment escalation detection, 
-              auto-follow-up scheduling, and multi-language support.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">🧵</div>
-              <h3 className="text-lg font-bold text-white mb-2">Thread Context Memory</h3>
-              <p className="text-slate-400 text-sm">Remembers entire conversation history for better context awareness</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">📈</div>
-              <h3 className="text-lg font-bold text-white mb-2">Sentiment Escalation Detection</h3>
-              <p className="text-slate-400 text-sm">Detects frustration and anger early to prevent escalation</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">⏰</div>
-              <h3 className="text-lg font-bold text-white mb-2">Auto-Follow-up Scheduler</h3>
-              <p className="text-slate-400 text-sm">Automatically schedules follow-ups if no response received</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">🌐</div>
-              <h3 className="text-lg font-bold text-white mb-2">Multi-Language Support</h3>
-              <p className="text-slate-400 text-sm">Detects language and suggests responses in sender's language</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">📋</div>
-              <h3 className="text-lg font-bold text-white mb-2">Attachment Intelligence</h3>
-              <p className="text-slate-400 text-sm">Analyzes attachments and suggests appropriate actions</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="text-lg font-bold text-white mb-2">Priority Matrix</h3>
-              <p className="text-slate-400 text-sm">Eisenhower matrix for intelligent email prioritization</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/services/ai-powered-email-intelligence/"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all text-center"
-            >
-              Learn More About V70
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=V70 Email Intelligence Demo"
-              className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all text-center"
-            >
-              Request Demo
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AI Customer Success Platform ── */}
-      <section className="py-20 bg-gradient-to-b from-purple-950 to-indigo-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-yellow-600/30 text-yellow-300 rounded-full text-sm font-semibold mb-4">
-              🌟 NEW: Customer Retention AI
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              AI Customer Success Platform
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Predict churn before it happens, optimize customer engagement, and maximize lifetime value with AI-powered health scoring and proactive interventions.
-            </p>
-          </div>
-          <CustomerSuccessPlatform />
-        </div>
-      </section>
-
-      {/* ── Interactive Service Configurator ── */}
-      <section className="py-20 bg-gradient-to-b from-indigo-950 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-600/30 text-green-300 rounded-full text-sm font-semibold mb-4">
-              🎨 NEW: Build Your Custom Solution
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Interactive Service Configurator
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Build your perfect solution by selecting services. Get bundle discounts and see real-time pricing as you configure.
-            </p>
-          </div>
-          <ServiceConfigurator />
-        </div>
-      </section>
-
-      {/* ── Business Health Check ── */}
-      <section className="py-20 bg-gradient-to-b from-purple-950 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-600/30 text-green-300 rounded-full text-sm font-semibold mb-4">
-              🏥 NEW: Free Business Assessment
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Business Health Check
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get a comprehensive technology health assessment across 5 critical areas. Discover strengths, weaknesses, and personalized recommendations.
-            </p>
-          </div>
-          <BusinessHealthCheck />
-        </div>
-      </section>
-
-      {/* ── Deployment Calculator ── */}
-      <section className="py-20 bg-gradient-to-b from-indigo-950 to-purple-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
-              🚀 NEW: Deployment Planning Tool
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Service Deployment Calculator
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Plan your implementation with confidence. Get instant estimates for deployment timelines, team requirements, prerequisites, and costs for any service.
-            </p>
-          </div>
-          <DeploymentCalculator />
-        </div>
-      </section>
-
-      {/* ── AI Proposal Generator ── */}
-      <section className="py-16 bg-gradient-to-br from-green-600/20 via-emerald-600/10 to-teal-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-semibold mb-4">
-              🚀 NEW: AI-Powered Proposal Generator
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Generate Custom Proposals in Minutes
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI-powered proposal generator creates personalized, professional proposals tailored to your business needs. Select services, get instant pricing, and receive a comprehensive proposal ready to present to stakeholders.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📋</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Step-by-Step Wizard</h3>
-                  <p className="text-slate-400 text-sm">4 simple steps to create your custom proposal</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">💰</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Instant Pricing</h3>
-                  <p className="text-slate-400 text-sm">Real-time cost calculation as you select services</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📄</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Professional Output</h3>
-                  <p className="text-slate-400 text-sm">Ready-to-present proposal with executive summary</p>
-                </div>
-              </div>
-              <Link
-                href="/proposal-generator"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                🤖 Create Your Proposal Now →
-              </Link>
-              <p className="text-slate-400 text-sm mt-4">
-                Free to use • No signup required • Takes 5 minutes
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Partner & Affiliate Program ── */}
-      <section className="py-16 bg-gradient-to-br from-amber-600/20 via-orange-600/10 to-rose-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 text-sm font-semibold mb-4">
-              🤝 NEW: Partner & Affiliate Program
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Grow Your Business with Zion
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Join 500+ partners earning up to 30% recurring commissions on 1,100+ AI, IT, and Micro-SaaS services.
-              Free training, marketing support, and a dedicated partner success team.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
-            {[
-              { icon: '🤝', title: 'Referral Partner', commission: '15%', desc: 'Earn by referring clients' },
-              { icon: '💼', title: 'Reseller Partner', commission: '25%', desc: 'Sell with white-label options' },
-              { icon: '⚡', title: 'Technology Partner', commission: 'Custom', desc: 'Co-develop solutions' },
-              { icon: '🚀', title: 'Strategic Partner', commission: '30%+', desc: 'Enterprise-level partnership' }
-            ].map((tier, i) => (
-              <div key={i} className="glass-card p-6 text-center hover:border-amber-500/40 transition-all hover:scale-105">
-                <div className="text-4xl mb-3">{tier.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-1">{tier.title}</h3>
-                <div className="text-2xl font-bold text-amber-400 mb-2">{tier.commission}</div>
-                <p className="text-slate-400 text-sm">{tier.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
-            <div className="text-center"><div className="text-2xl font-bold text-amber-400">500+</div><div className="text-slate-400 text-sm">Active Partners</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-orange-400">$12M+</div><div className="text-slate-400 text-sm">Partner Revenue</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-rose-400">45+</div><div className="text-slate-400 text-sm">Countries</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-pink-400">48h</div><div className="text-slate-400 text-sm">Approval Time</div></div>
-          </div>
-          <div className="text-center">
-            <Link
-              href="/partners"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              🤝 Become a Partner Today →
-            </Link>
-            <p className="text-slate-400 text-sm mt-4">
-              Free to apply • Commission calculator included • Monthly payouts
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AI ROI Calculator & Business Case Generator ── */}
-      <section className="py-16 bg-gradient-to-br from-green-600/20 via-emerald-600/10 to-teal-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-semibold mb-4">
-              💰 NEW: AI ROI Calculator & Business Case Generator
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Calculate Your ROI in 2 Minutes
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how much you can save with Zion's AI-powered solutions. Get personalized recommendations,
-              projected savings, implementation timeline, and a custom business case for your company.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📊</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Smart Analysis</h3>
-                  <p className="text-slate-400 text-sm">AI analyzes your company profile and pain points</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">💵</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Projected Savings</h3>
-                  <p className="text-slate-400 text-sm">See monthly and annual cost savings</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">🎯</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Personalized ROI</h3>
-                  <p className="text-slate-400 text-sm">Custom ROI calculations for your business</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📅</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Timeline</h3>
-                  <p className="text-slate-400 text-sm">Implementation roadmap with milestones</p>
-                </div>
-              </div>
-              <Link
-                href="/roi-calculator"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                💰 Calculate My ROI Now →
-              </Link>
-              <p className="text-slate-400 text-sm mt-4">
-                Free to use • No signup required • Instant results • Data-driven recommendations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AI Client Portal & Project Dashboard ── */}
-      <section className="py-16 bg-gradient-to-br from-indigo-600/20 via-violet-600/10 to-purple-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-semibold mb-4">
-              🔐 NEW: AI Client Portal & Project Dashboard
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Your Projects, Documents & Support — All in One Place
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Track project progress in real-time, access contracts and invoices, submit support tickets,
-              view ROI analytics, and communicate with your dedicated team — all from a secure client portal.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📊</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Project Tracking</h3>
-                  <p className="text-slate-400 text-sm">Real-time progress, milestones, and budget tracking</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📈</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">ROI Analytics</h3>
-                  <p className="text-slate-400 text-sm">Measure savings, uptime, and performance metrics</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">🎫</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Support Tickets</h3>
-                  <p className="text-slate-400 text-sm">Submit and track issues with AI-prioritized routing</p>
-                </div>
-              </div>
-              <Link
-                href="/client-portal"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold rounded-xl hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                🔐 Access Client Portal →
-              </Link>
-              <p className="text-slate-400 text-sm mt-4">
-                Secure login • Real-time data • Mobile-friendly • 24/7 access
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
@@ -861,31 +429,6 @@ let list = services;
           </div>
         </div>
       </section>
-
-      {/* ── Pricing Estimator Widget ── */}
-      <PricingEstimator
-        categories={CATEGORIES}
-        categoryCounts={categoryCounts}
-        categoryPricing={categoryPricing}
-      />
-
-      {/* ── ROI Calculator Widget ── */}
-      <ROICalculator />
-
-      {/* ── Compare Services Widget ── */}
-      <ServiceCompare />
-
-      {/* ── AI Service Matcher ── */}
-      <AIServiceMatcher />
-
-      {/* ── Live Service Status Dashboard ── */}
-      <ServiceStatusDashboard />
-
-      {/* ── AI Case Studies Hub ── */}
-      <CaseStudiesHub />
-
-      {/* ── AI Service Recommendation Quiz ── */}
-      <ServiceRecommendationQuiz />
 
         {/* ── Popular Services ── */}
 
@@ -1324,8 +867,8 @@ let list = services;
             {[
               { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '🌐', label: 'Cross-Industry', sub: '30+ sectors served', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '⚖️', label: 'Compare & Choose', sub: 'Side-by-side tool', color: 'from-emerald-500/20 to-teal-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
             ].map((badge, i) => (
               <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
@@ -1458,6 +1001,81 @@ let list = services;
           </div>
         </div>
       </section>
+      {/* ── Complete Services Catalog — All 10 Categories ── */}
+      <section className="py-20 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-slate-900/50 to-slate-950">
+        <div className="container-page">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">Complete Services Catalog</h2>
+          <p className="text-slate-400 text-center mb-4 max-w-3xl mx-auto">
+            <strong className="text-white">{serviceCount}+ professional services</strong> across 10 categories. 
+            AI-powered solutions, enterprise IT, cloud infrastructure, cybersecurity, automation, micro-SaaS products, DevOps, blockchain, and IoT.
+          </p>
+          <p className="text-slate-500 text-center mb-12 text-sm">
+            📞 <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">+1 302 464 0950</a>
+            {' · '}
+            <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a>
+            {' · '}364 E Main St STE 1008, Middletown, DE 19709
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            {CATEGORIES.map(cat => {
+              const catServices = byCategory[cat.key] || [];
+              const popularInCat = catServices.filter((s: any) => s.popular).slice(0, 3);
+              const samplePricing = catServices.slice(0, 5).map((s: any) => {
+                const match = s.pricing?.basic?.match(/\$(\d+)/);
+                return match ? parseInt(match[1]) : null;
+              }).filter(Boolean);
+              const minPrice = samplePricing.length ? Math.min(...samplePricing) : null;
+              return (
+                <div key={cat.key} className="rounded-xl border border-slate-800 bg-slate-900/80 hover:border-purple-500/30 p-6 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">{cat.emoji}</span>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{cat.label}</h3>
+                      <span className="text-xs text-slate-500">{catServices.length} services</span>
+                    </div>
+                  </div>
+                  {minPrice && (
+                    <p className="text-sm text-green-400 mb-3">From ${minPrice}/mo</p>
+                  )}
+                  <ul className="space-y-1.5 mb-4">
+                    {popularInCat.length > 0 ? popularInCat.map((s: any) => (
+                      <li key={s.id} className="text-xs text-slate-400 truncate">
+                        <a href={s.href} className="hover:text-purple-300 transition-colors">• {s.title}</a>
+                      </li>
+                    )) : catServices.slice(0, 3).map((s: any) => (
+                      <li key={s.id} className="text-xs text-slate-400 truncate">
+                        <a href={s.href} className="hover:text-purple-300 transition-colors">• {s.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={`/services/?category=${cat.key}`} className="text-xs text-purple-400 hover:text-purple-300 font-medium">
+                    View all {catServices.length} →
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Contact CTA */}
+          <div className="mt-16 text-center rounded-2xl border border-purple-500/20 bg-gradient-to-r from-purple-900/20 via-slate-900/50 to-blue-900/20 p-10">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+              Get a free, custom proposal for any of our {serviceCount}+ services. Our team responds within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8 py-3">
+                ✉ Request Proposal
+              </a>
+              <a href="tel:+13024640950" className="btn-secondary text-lg px-8 py-3">
+                📞 Call +1 302 464 0950
+              </a>
+            </div>
+            <p className="text-slate-500 text-sm">
+              📍 364 E Main St STE 1008, Middletown, DE 19709 · 🌐 <a href="https://ziontechgroup.com" className="text-purple-400">ziontechgroup.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
       {/* ── Industries We Serve — 10 verticals from service catalog ── */}
       <section className="py-16 border-t border-slate-800">
         <div className="container-page">
@@ -1491,7 +1109,6 @@ let list = services;
         </div>
       </section>
     <FloatingActionDock />
-    <ServiceFinderChat />
     </main>
   );
 }
