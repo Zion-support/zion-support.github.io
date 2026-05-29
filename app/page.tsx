@@ -16,6 +16,7 @@ import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
 import WorkflowPredictiveShowcase from '@/components/WorkflowPredictiveShowcase';
+import MultilangVoiceShowcase from '@/components/MultilangVoiceShowcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1075,6 +1076,9 @@ let list = services;
 
       {/* ── AI Workflow Automation & Predictive Analytics V92-V93 ── */}
       <WorkflowPredictiveShowcase />
+
+      {/* ── AI Multi-Language & Voice Intelligence V94-V95 ── */}
+      <MultilangVoiceShowcase />
 
     <FloatingActionDock />
     </main>
