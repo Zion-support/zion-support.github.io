@@ -14,6 +14,7 @@ import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import BusinessTransformationRoadmap from '@/components/BusinessTransformationRoadmap';
+import ServiceHealthMonitor from '@/components/ServiceHealthMonitor';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1112,6 +1113,9 @@ let list = services;
 
       {/* ── AI Business Transformation Roadmap Generator ── */}
       <BusinessTransformationRoadmap />
+
+      {/* ── AI Service Health Monitor & Alert System ── */}
+      <ServiceHealthMonitor />
 
     <FloatingActionDock />
     </main>
