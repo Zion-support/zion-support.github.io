@@ -771,6 +771,54 @@ let list = services;
         </div>
       </section>
 
+      {/* ── AI Client Portal & Project Dashboard ── */}
+      <section className="py-16 bg-gradient-to-br from-indigo-600/20 via-violet-600/10 to-purple-600/20">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-semibold mb-4">
+              🔐 NEW: AI Client Portal & Project Dashboard
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Your Projects, Documents & Support — All in One Place
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Track project progress in real-time, access contracts and invoices, submit support tickets,
+              view ROI analytics, and communicate with your dedicated team — all from a secure client portal.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="glass-card p-8 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-3">📊</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Project Tracking</h3>
+                  <p className="text-slate-400 text-sm">Real-time progress, milestones, and budget tracking</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">📈</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">ROI Analytics</h3>
+                  <p className="text-slate-400 text-sm">Measure savings, uptime, and performance metrics</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">🎫</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Support Tickets</h3>
+                  <p className="text-slate-400 text-sm">Submit and track issues with AI-prioritized routing</p>
+                </div>
+              </div>
+              <Link
+                href="/client-portal"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold rounded-xl hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                🔐 Access Client Portal →
+              </Link>
+              <p className="text-slate-400 text-sm mt-4">
+                Secure login • Real-time data • Mobile-friendly • 24/7 access
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Services by Category ── */}
       <section className="py-16">
         <div className="container-page">
