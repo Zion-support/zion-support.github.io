@@ -16,6 +16,7 @@ import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import BusinessTransformationRoadmap from '@/components/BusinessTransformationRoadmap';
 import ServiceHealthMonitor from '@/components/ServiceHealthMonitor';
+import AIBusinessIntelligenceDashboard from '@/components/AIBusinessIntelligenceDashboard';
 import EmailCoachingShowcase from '@/components/EmailCoachingShowcase';
 
 
@@ -1060,6 +1061,9 @@ let list = services;
 
       {/* ── AI Service Health Monitor & Alert System ── */}
       <ServiceHealthMonitor />
+
+      {/* ── AI Business Intelligence Dashboard ── */}
+      <AIBusinessIntelligenceDashboard />
 
       {/* ── AI Email Coaching & Training Platform ── */}
       <EmailCoachingShowcase />
