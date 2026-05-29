@@ -25,6 +25,7 @@ import PricingEstimator from '@/components/PricingEstimator';
 import AIServiceMatcher from '@/components/AIServiceMatcher';
 import ServiceStatusDashboard from '@/components/ServiceStatusDashboard';
 import ServiceCompare from '@/components/ServiceCompare';
+import CaseStudiesHub from '@/components/CaseStudiesHub';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -878,6 +879,9 @@ let list = services;
 
       {/* ── Live Service Status Dashboard ── */}
       <ServiceStatusDashboard />
+
+      {/* ── AI Case Studies Hub ── */}
+      <CaseStudiesHub />
 
         {/* ── Popular Services ── */}
 
