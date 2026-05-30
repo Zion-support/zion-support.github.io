@@ -28102,6 +28102,735 @@ export const allServices: Service[] = [
     popular: true,
     industry: "Cross-Industry"
   }
+,
+  {
+    id: "ai-v381-001",
+    title: "Neural Code Optimizer",
+    description: "AI-powered code review and optimization platform that analyzes your codebase for performance bottlenecks, security vulnerabilities, and architectural improvements. Leverages transformer models to suggest refactoring patterns and automated code generation.",
+    icon: "📊",
+    features: [
+      "Real-time code analysis and optimization suggestions",
+      "Automated refactoring with one-click implementation",
+      "Performance bottleneck detection and resolution",
+      "Security vulnerability scanning with AI remediation",
+      "Code generation from natural language specifications"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$99/month - 5 projects, 10K lines",
+      pro: "$299/month - 25 projects, 100K lines",
+      enterprise: "$999/month - Unlimited projects, custom models"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-001",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-001",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-002",
+    title: "DocuSense AI",
+    description: "Advanced document analysis platform using natural language processing to extract insights, summarize content, and identify key information from unstructured documents. Supports PDFs, contracts, research papers, and legal documents.",
+    icon: "📊",
+    features: [
+      "Intelligent document parsing and structure extraction",
+      "Multi-language support with 40+ languages",
+      "Automated summarization and key point extraction",
+      "Clause detection and risk assessment for contracts",
+      "Knowledge graph generation from document corpus"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$79/month - 500 documents",
+      pro: "$249/month - 5000 documents",
+      enterprise: "$799/month - Unlimited documents, API access"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-002",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-002",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-003",
+    title: "PredictIQ Analytics",
+    description: "Business intelligence platform that uses machine learning to forecast trends, predict customer behavior, and optimize decision-making. Integrates with existing data sources to provide actionable insights without data science expertise.",
+    icon: "📊",
+    features: [
+      "Time-series forecasting with 95%+ accuracy",
+      "Customer churn prediction and retention strategies",
+      "Demand forecasting for inventory optimization",
+      "Anomaly detection across business metrics",
+      "Automated report generation with natural language"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$149/month - 5 data sources",
+      pro: "$449/month - 25 data sources, custom models",
+      enterprise: "$1299/month - Unlimited sources, dedicated infrastructure"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-003",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-003",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-004",
+    title: "VisionGuard QC",
+    description: "Computer vision platform for quality control in manufacturing and production environments. Detects defects, measures dimensions, and ensures product consistency with sub-millimeter accuracy using deep learning models.",
+    icon: "📊",
+    features: [
+      "Real-time defect detection at 60 FPS",
+      "Custom model training with minimal sample data",
+      "Dimensional measurement with 0.1mm precision",
+      "Edge computing deployment for low latency",
+      "Integration with PLCs and manufacturing systems"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$199/month - 1 production line",
+      pro: "$599/month - 5 production lines",
+      enterprise: "$1999/month - Unlimited lines, on-premise deployment"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-004",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-004",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-005",
+    title: "SentimentScope CX",
+    description: "Customer experience analytics platform that analyzes sentiment across all touchpoints including support tickets, reviews, social media, and call transcripts. Provides actionable insights to improve customer satisfaction.",
+    icon: "📊",
+    features: [
+      "Multi-channel sentiment analysis in real-time",
+      "Emotion detection beyond positive/negative polarity",
+      "Topic modeling and trend identification",
+      "Alert system for negative sentiment spikes",
+      "Customer journey mapping with sentiment overlays"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$129/month - 10K interactions",
+      pro: "$399/month - 100K interactions",
+      enterprise: "$1199/month - Unlimited, custom integrations"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-005",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-005",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-006",
+    title: "FlowForge Automation",
+    description: "Intelligent workflow automation builder that uses AI to design, optimize, and execute business processes. Learns from historical data to suggest improvements and automatically adapt workflows to changing conditions.",
+    icon: "📊",
+    features: [
+      "Visual workflow designer with AI suggestions",
+      "Process mining and optimization recommendations",
+      "Adaptive workflows that adjust to context",
+      "Exception handling with intelligent routing",
+      "Performance analytics and bottleneck identification"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$179/month - 10 workflows",
+      pro: "$549/month - 50 workflows",
+      enterprise: "$1599/month - Unlimited, custom connectors"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-006",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-006",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-007",
+    title: "FraudShield AI",
+    description: "Real-time fraud detection platform using advanced machine learning to identify suspicious transactions, account takeovers, and fraudulent patterns. Adapts to new fraud tactics automatically with continuous learning.",
+    icon: "📊",
+    features: [
+      "Real-time transaction scoring in under 100ms",
+      "Behavioral biometrics for user authentication",
+      "Network analysis for fraud ring detection",
+      "Adaptive models that learn from new patterns",
+      "Explainable AI with detailed risk factors"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$299/month - 50K transactions",
+      pro: "$899/month - 500K transactions",
+      enterprise: "$2499/month - Unlimited, custom models"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-007",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-007",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-008",
+    title: "ContentGen Studio",
+    description: "Generative AI platform for creating marketing content, product descriptions, blog posts, and social media content at scale. Maintains brand voice consistency while optimizing for engagement and SEO.",
+    icon: "📊",
+    features: [
+      "Multi-format content generation (text, images, video scripts)",
+      "Brand voice training and consistency enforcement",
+      "SEO optimization with keyword integration",
+      "A/B testing variants for performance optimization",
+      "Content calendar automation and scheduling"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$89/month - 100 content pieces",
+      pro: "$269/month - 1000 content pieces",
+      enterprise: "$899/month - Unlimited, white-label option"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-008",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-008",
+    category: "AI",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-009",
+    title: "DevOps Accelerator Pro",
+    description: "Complete DevOps as a Service platform providing CI/CD pipelines, infrastructure automation, and monitoring. Includes pre-configured templates, security scanning, and compliance checks for rapid deployment.",
+    icon: "📊",
+    features: [
+      "One-click CI/CD pipeline setup for any stack",
+      "Infrastructure as Code with Terraform/Ansible",
+      "Automated security scanning in pipeline",
+      "Real-time monitoring and alerting dashboard",
+      "Compliance automation (SOC2, HIPAA, GDPR)"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$249/month - 5 projects",
+      pro: "$749/month - 25 projects",
+      enterprise: "$1999/month - Unlimited, dedicated support"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-009",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-009",
+    category: "IT",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-010",
+    title: "LegacyBridge Modernization",
+    description: "Legacy system modernization service that incrementally migrates monolithic applications to microservices architecture. Uses automated code analysis to identify migration paths while maintaining business continuity.",
+    icon: "📊",
+    features: [
+      "Automated legacy code analysis and mapping",
+      "Incremental migration with zero downtime",
+      "API gateway implementation for gradual transition",
+      "Database modernization and optimization",
+      "Performance benchmarking before and after migration"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$999/month - Small applications",
+      pro: "$2999/month - Medium complexity",
+      enterprise: "$7999/month - Enterprise-scale, custom timeline"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-010",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-010",
+    category: "IT",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-011",
+    title: "APIForge Integration",
+    description: "Enterprise API integration platform that connects disparate systems, automates data flows, and provides unified API management. Includes monitoring, rate limiting, and developer portal for API consumers.",
+    icon: "📊",
+    features: [
+      "300+ pre-built connectors for popular services",
+      "Visual API workflow designer",
+      "Real-time data transformation and mapping",
+      "API gateway with rate limiting and caching",
+      "Comprehensive logging and analytics"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$199/month - 10 integrations",
+      pro: "$599/month - 50 integrations",
+      enterprise: "$1499/month - Unlimited, custom connectors"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-011",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-011",
+    category: "IT",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-012",
+    title: "DatabaseOptimizer Pro",
+    description: "Database performance optimization service that analyzes query patterns, optimizes indexes, and provides recommendations for scaling. Supports SQL, NoSQL, and time-series databases with automated tuning.",
+    icon: "📊",
+    features: [
+      "Query performance analysis and optimization",
+      "Automated index recommendations",
+      "Schema design review and suggestions",
+      "Capacity planning and scaling recommendations",
+      "Continuous monitoring with anomaly detection"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$149/month - 3 databases",
+      pro: "$449/month - 15 databases",
+      enterprise: "$1199/month - Unlimited, 24/7 support"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-012",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-012",
+    category: "IT",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-013",
+    title: "InfraWatch 360",
+    description: "Comprehensive IT infrastructure monitoring platform providing real-time visibility into servers, networks, applications, and cloud resources. Includes predictive analytics to prevent outages before they occur.",
+    icon: "📊",
+    features: [
+      "Unified dashboard for all infrastructure components",
+      "Predictive failure detection using ML",
+      "Automated remediation for common issues",
+      "Custom alerting with escalation policies",
+      "Capacity planning and resource optimization"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$179/month - 50 resources",
+      pro: "$529/month - 250 resources",
+      enterprise: "$1399/month - Unlimited, custom integrations"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-013",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-013",
+    category: "IT",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-014",
+    title: "TechDebt Analyzer",
+    description: "Technical debt assessment and management platform that quantifies debt across your codebase, dependencies, and architecture. Provides prioritized remediation roadmap with ROI calculations.",
+    icon: "📊",
+    features: [
+      "Automated technical debt scanning and quantification",
+      "Dependency vulnerability and EOL tracking",
+      "Architecture debt identification and scoring",
+      "Prioritized remediation roadmap with ROI",
+      "Progress tracking and debt reduction metrics"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$299/month - 3 codebases",
+      pro: "$899/month - 15 codebases",
+      enterprise: "$2299/month - Unlimited, consulting included"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-014",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-014",
+    category: "IT",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-015",
+    title: "ZeroTrust Architect",
+    description: "Zero Trust security architecture implementation service that eliminates implicit trust and verifies every access request. Includes identity management, micro-segmentation, and continuous verification.",
+    icon: "📊",
+    features: [
+      "Identity and access management with MFA",
+      "Network micro-segmentation implementation",
+      "Continuous verification and risk scoring",
+      "Device trust assessment and management",
+      "Policy engine with granular access controls"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$499/month - 100 users",
+      pro: "$1499/month - 1000 users",
+      enterprise: "$3999/month - Unlimited, custom architecture"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-015",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-015",
+    category: "Security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-016",
+    title: "PenTest Cloud",
+    description: "Penetration testing as a service providing continuous security assessment of applications, APIs, and infrastructure. Combines automated scanning with expert manual testing for comprehensive coverage.",
+    icon: "📊",
+    features: [
+      "Automated vulnerability scanning (DAST/SAST)",
+      "Expert manual penetration testing",
+      "API security testing and fuzzing",
+      "Cloud configuration review (AWS/Azure/GCP)",
+      "Detailed remediation reports with PoC"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$799/month - Quarterly testing",
+      pro: "$1999/month - Monthly testing",
+      enterprise: "$4999/month - Continuous, red team exercises"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-016",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-016",
+    category: "Security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-017",
+    title: "SecureAware Training",
+    description: "Security awareness training platform with interactive simulations, phishing campaigns, and compliance modules. Tracks employee progress and provides personalized training based on risk profiles.",
+    icon: "📊",
+    features: [
+      "Interactive training modules with gamification",
+      "Simulated phishing campaigns",
+      "Compliance training (HIPAA, GDPR, SOC2)",
+      "Risk-based personalized learning paths",
+      "Analytics dashboard and reporting"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$5/user/month - Basic training",
+      pro: "$12/user/month - Advanced simulations",
+      enterprise: "$20/user/month - Custom content, dedicated CSM"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-017",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-017",
+    category: "Security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-018",
+    title: "ComplianceAuto Pilot",
+    description: "Compliance automation platform that continuously monitors controls, collects evidence, and generates audit-ready documentation. Supports multiple frameworks including SOC2, ISO 27001, HIPAA, and GDPR.",
+    icon: "📊",
+    features: [
+      "Automated control monitoring and testing",
+      "Evidence collection and organization",
+      "Multi-framework support (SOC2, ISO, HIPAA)",
+      "Policy management and version control",
+      "Audit-ready report generation"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$599/month - 1 framework",
+      pro: "$1499/month - 3 frameworks",
+      enterprise: "$3499/month - Unlimited, auditor coordination"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-018",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-018",
+    category: "Security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-019",
+    title: "TeamPulse Productivity",
+    description: "Team productivity tracking and optimization platform that measures focus time, meeting efficiency, and collaboration patterns. Provides actionable insights without invasive surveillance.",
+    icon: "📊",
+    features: [
+      "Focus time tracking and protection",
+      "Meeting effectiveness scoring",
+      "Collaboration pattern analysis",
+      "Burnout risk indicators",
+      "Team health dashboard"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$8/user/month - Basic tracking",
+      pro: "$15/user/month - Advanced analytics",
+      enterprise: "$25/user/month - Custom integrations"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-019",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-019",
+    category: "Micro-SaaS",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-020",
+    title: "InvoiceFlow Automator",
+    description: "Invoice automation platform that handles creation, delivery, tracking, and payment collection. Includes OCR for expense receipts, automated reminders, and accounting software integration.",
+    icon: "📊",
+    features: [
+      "Automated invoice generation and delivery",
+      "OCR expense receipt processing",
+      "Payment tracking and reminders",
+      "Multi-currency support",
+      "Accounting software integration (QBO, Xero)"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$29/month - 50 invoices",
+      pro: "$79/month - 500 invoices",
+      enterprise: "$199/month - Unlimited, API access"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-020",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-020",
+    category: "Micro-SaaS",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-021",
+    title: "MeetSmart Scheduler",
+    description: "AI-powered meeting scheduler that finds optimal times across time zones, prepares agendas, and generates action items. Integrates with calendar systems and video conferencing platforms.",
+    icon: "📊",
+    features: [
+      "Intelligent scheduling across time zones",
+      "Agenda preparation with context",
+      "Meeting notes and action item generation",
+      "Calendar integration (Google, Outlook)",
+      "Video conferencing auto-setup"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$12/user/month - Basic scheduling",
+      pro: "$24/user/month - AI features",
+      enterprise: "$39/user/month - Advanced analytics"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-021",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-021",
+    category: "Micro-SaaS",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-022",
+    title: "ProjectRisk Calculator",
+    description: "Project risk assessment tool that quantifies risks, predicts delays, and suggests mitigation strategies. Uses historical data and ML to provide accurate probability estimates.",
+    icon: "📊",
+    features: [
+      "Risk quantification and scoring",
+      "Delay probability prediction",
+      "Mitigation strategy suggestions",
+      "Historical project comparison",
+      "Real-time risk monitoring"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$49/month - 5 projects",
+      pro: "$129/month - 25 projects",
+      enterprise: "$299/month - Unlimited, custom models"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-022",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-022",
+    category: "Micro-SaaS",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-023",
+    title: "CloudCost Optimizer",
+    description: "Multi-cloud cost optimization platform that analyzes spending across AWS, Azure, and GCP. Provides recommendations for reserved instances, spot usage, and right-sizing to reduce costs by 30-60%.",
+    icon: "📊",
+    features: [
+      "Multi-cloud cost visibility and allocation",
+      "Reserved instance and savings plan recommendations",
+      "Right-sizing recommendations for compute",
+      "Unused resource identification and cleanup",
+      "Budget alerts and forecasting"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$299/month - $50K monthly spend",
+      pro: "$799/month - $500K monthly spend",
+      enterprise: "$1999/month - Unlimited spend, dedicated engineer"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-023",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-023",
+    category: "Cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-024",
+    title: "CloudMigrate Accelerator",
+    description: "Cloud migration platform that automates assessment, planning, and execution of workload migrations. Supports lift-and-shift, replatform, and refactoring strategies with minimal downtime.",
+    icon: "📊",
+    features: [
+      "Automated workload assessment and dependency mapping",
+      "Migration strategy recommendations",
+      "Automated migration execution with rollback",
+      "Data synchronization during migration",
+      "Post-migration optimization and monitoring"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$1499/month - 10 workloads",
+      pro: "$3999/month - 50 workloads",
+      enterprise: "$9999/month - Unlimited, migration team"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-024",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-024",
+    category: "Cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-025",
+    title: "RPA Flow Designer",
+    description: "Robotic Process Automation platform with visual workflow designer for automating repetitive tasks. Includes AI-powered document processing, API integration, and exception handling.",
+    icon: "📊",
+    features: [
+      "Visual workflow designer (no-code)",
+      "AI-powered document extraction",
+      "API and UI automation capabilities",
+      "Exception handling and human-in-the-loop",
+      "Centralized bot management and monitoring"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$399/month - 5 bots",
+      pro: "$999/month - 25 bots",
+      enterprise: "$2499/month - Unlimited, CoE setup"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-025",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-025",
+    category: "Automation",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "ai-v381-026",
+    title: "DocuProcess AI",
+    description: "Intelligent document processing platform that extracts, classifies, and validates data from any document type. Uses computer vision and NLP to handle semi-structured and unstructured documents.",
+    icon: "📊",
+    features: [
+      "Multi-format document ingestion (PDF, images, emails)",
+      "AI-powered data extraction and validation",
+      "Document classification and routing",
+      "Integration with business systems",
+      "Continuous learning from corrections"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$249/month - 1000 documents",
+      pro: "$749/month - 10000 documents",
+      enterprise: "$1999/month - Unlimited, custom models"
+    },
+    contactInfo: {
+      website: "/services/ai-v381-026",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/ai-v381-026",
+    category: "Automation",
+    popular: true,
+    industry: "Cross-Industry"
+  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => { return allServices.find(s => s.id === id); };
@@ -28506,3 +29235,31 @@ export const SRV_398 = allServices.find(s => s.id === "SRV-398");
 export const SRV_399 = allServices.find(s => s.id === "SRV-399");
 export const SRV_400 = allServices.find(s => s.id === "SRV-400");
 export const SRV_401 = allServices.find(s => s.id === "SRV-401");
+
+// V381-V385 Service Exports
+export const ai_v381_001 = allServices.find(s => s.id === "ai-v381-001");
+export const ai_v381_002 = allServices.find(s => s.id === "ai-v381-002");
+export const ai_v381_003 = allServices.find(s => s.id === "ai-v381-003");
+export const ai_v381_004 = allServices.find(s => s.id === "ai-v381-004");
+export const ai_v381_005 = allServices.find(s => s.id === "ai-v381-005");
+export const ai_v381_006 = allServices.find(s => s.id === "ai-v381-006");
+export const ai_v381_007 = allServices.find(s => s.id === "ai-v381-007");
+export const ai_v381_008 = allServices.find(s => s.id === "ai-v381-008");
+export const ai_v381_009 = allServices.find(s => s.id === "ai-v381-009");
+export const ai_v381_010 = allServices.find(s => s.id === "ai-v381-010");
+export const ai_v381_011 = allServices.find(s => s.id === "ai-v381-011");
+export const ai_v381_012 = allServices.find(s => s.id === "ai-v381-012");
+export const ai_v381_013 = allServices.find(s => s.id === "ai-v381-013");
+export const ai_v381_014 = allServices.find(s => s.id === "ai-v381-014");
+export const ai_v381_015 = allServices.find(s => s.id === "ai-v381-015");
+export const ai_v381_016 = allServices.find(s => s.id === "ai-v381-016");
+export const ai_v381_017 = allServices.find(s => s.id === "ai-v381-017");
+export const ai_v381_018 = allServices.find(s => s.id === "ai-v381-018");
+export const ai_v381_019 = allServices.find(s => s.id === "ai-v381-019");
+export const ai_v381_020 = allServices.find(s => s.id === "ai-v381-020");
+export const ai_v381_021 = allServices.find(s => s.id === "ai-v381-021");
+export const ai_v381_022 = allServices.find(s => s.id === "ai-v381-022");
+export const ai_v381_023 = allServices.find(s => s.id === "ai-v381-023");
+export const ai_v381_024 = allServices.find(s => s.id === "ai-v381-024");
+export const ai_v381_025 = allServices.find(s => s.id === "ai-v381-025");
+export const ai_v381_026 = allServices.find(s => s.id === "ai-v381-026");
