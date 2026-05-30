@@ -31798,5 +31798,155 @@
     "popular": true,
     "category": "ai",
     "industry": "Enterprise"
+  },
+  {
+    "id": "v189-email-negotiation-strategist",
+    "title": "V189: AI Email Negotiation Strategist",
+    "category": "ai",
+    "subcategory": "email-intelligence",
+    "description": "Advanced negotiation analysis for email threads. Detects tactics, calculates leverage, suggests counter-offers, tracks BATNA, and provides real-time coaching.",
+    "features": [
+      "Negotiation stage detection",
+      "Counterparty tactic analysis",
+      "Leverage scoring (0-100)",
+      "Counter-offer suggestions",
+      "BATNA assessment",
+      "Real-time coaching tips",
+      "Risk assessment",
+      "Reply-all strategy"
+    ],
+    "benefits": [
+      "Improve negotiation outcomes by 40%",
+      "Detect manipulation tactics",
+      "Make data-driven counter-offers",
+      "Know when to walk away"
+    ],
+    "pricing": {
+      "basic": 299,
+      "professional": 599,
+      "enterprise": 1499
+    },
+    "status": "active",
+    "releaseDate": "2026-05-30"
+  },
+  {
+    "id": "v190-crisis-communication-manager",
+    "title": "V190: AI Crisis Communication Manager",
+    "category": "ai",
+    "subcategory": "email-intelligence",
+    "description": "Detects and manages crisis communications. Generates templates for outages, breaches, PR issues, and recalls. Coordinates multi-stakeholder responses.",
+    "features": [
+      "Crisis type detection (outage/breach/PR/recall)",
+      "Severity assessment",
+      "Stakeholder identification",
+      "Template generation",
+      "Resolution planning",
+      "Tracking setup",
+      "Escalation triggers",
+      "Reply-all coordination"
+    ],
+    "benefits": [
+      "Respond to crises in minutes",
+      "Coordinate all stakeholders",
+      "Maintain consistent messaging",
+      "Track resolution progress"
+    ],
+    "pricing": {
+      "basic": 399,
+      "professional": 799,
+      "enterprise": 1999
+    },
+    "status": "active",
+    "releaseDate": "2026-05-30"
+  },
+  {
+    "id": "v191-cultural-intelligence",
+    "title": "V191: AI Cultural Intelligence",
+    "category": "ai",
+    "subcategory": "email-intelligence",
+    "description": "Analyzes cultural context in emails across 20+ cultures. Adapts tone and formality, avoids faux pas, and provides cultural sensitivity scoring.",
+    "features": [
+      "20+ culture profiles",
+      "Cultural mismatch detection",
+      "Taboo topic checking",
+      "Formality adaptation",
+      "Directness adjustment",
+      "Context sensitivity",
+      "Hierarchy awareness",
+      "Greeting/closing recommendations"
+    ],
+    "benefits": [
+      "Avoid cultural misunderstandings",
+      "Build stronger global relationships",
+      "Adapt communication style automatically",
+      "Score cultural sensitivity"
+    ],
+    "pricing": {
+      "basic": 249,
+      "professional": 499,
+      "enterprise": 1249
+    },
+    "status": "active",
+    "releaseDate": "2026-05-30"
+  },
+  {
+    "id": "v192-accessibility-enhancer",
+    "title": "V192: AI Accessibility Enhancer",
+    "category": "ai",
+    "subcategory": "email-intelligence",
+    "description": "Ensures emails meet WCAG accessibility standards. Checks alt text, color contrast, plain language, screen reader compatibility, and provides fixes.",
+    "features": [
+      "WCAG compliance checking",
+      "Alt text validation",
+      "Color contrast analysis",
+      "Plain language suggestions",
+      "Screen reader compatibility",
+      "Link text checking",
+      "Heading structure validation",
+      "Table accessibility"
+    ],
+    "benefits": [
+      "Ensure all recipients can read emails",
+      "Meet legal accessibility requirements",
+      "Improve readability for everyone",
+      "Score accessibility (A-F grade)"
+    ],
+    "pricing": {
+      "basic": 199,
+      "professional": 399,
+      "enterprise": 999
+    },
+    "status": "active",
+    "releaseDate": "2026-05-30"
+  },
+  {
+    "id": "v193-energy-carbon-tracker",
+    "title": "V193: AI Energy & Carbon Tracker",
+    "category": "ai",
+    "subcategory": "email-intelligence",
+    "description": "Tracks carbon footprint of email communications. Calculates CO2 emissions, suggests eco-friendly alternatives, and provides sustainability scores.",
+    "features": [
+      "Carbon footprint calculation",
+      "Energy consumption tracking",
+      "Real-world equivalents (car/lightbulb)",
+      "Sustainability scoring",
+      "Eco-friendly alternatives",
+      "Reduction strategies",
+      "Reply-all impact analysis",
+      "Cumulative impact tracking"
+    ],
+    "benefits": [
+      "Reduce email carbon footprint by 30%",
+      "Meet sustainability goals",
+      "Visualize environmental impact",
+      "Make eco-conscious decisions"
+    ],
+    "pricing": {
+      "basic": 149,
+      "professional": 299,
+      "enterprise": 749
+    },
+    "status": "active",
+    "releaseDate": "2026-05-30"
   }
 ]
