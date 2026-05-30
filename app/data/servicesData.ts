@@ -15580,6 +15580,448 @@ export const allServices: Service[] = [
     href: '/services/micro-saas-video-hosting',
     popular: true,
     industry: 'Media & Video'
+  },
+  {
+    id: 'email-context-memory-engine',
+    title: 'AI Email Context Memory Engine V251',
+    description: 'Remembers past conversations with each contact, references previous discussions automatically, builds relationship context over time, and detects communication patterns.',
+    icon: '🧠',
+    category: 'email-intelligence',
+    features: ['Conversation history recall', 'Relationship context building', 'Pattern detection', 'Fact extraction', 'Intent classification', 'Follow-up tracking', 'Contact profiles', 'Reply-all enforcement'],
+    pricing: {
+      basic: '49',
+      pro: '149',
+      enterprise: '499'
+    },
+    href: '/services/email-context-memory-engine',
+    popular: true,
+    industry: 'Email Intelligence',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'email-response-time-optimizer',
+    title: 'AI Email Response Time Optimizer V252',
+    description: 'Analyzes optimal response times per contact, predicts recipient availability, suggests best send times based on historical data.',
+    icon: '⏰',
+    category: 'email-intelligence',
+    features: ['Response time analysis', 'Availability prediction', 'Send time suggestions', 'Timezone awareness', 'Working hours respect', 'Priority scheduling', 'Response windows', 'Reply-all enforcement'],
+    pricing: {
+      basic: '39',
+      pro: '129',
+      enterprise: '449'
+    },
+    href: '/services/email-response-time-optimizer',
+    popular: true,
+    industry: 'Email Intelligence',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'email-fact-checker-engine',
+    title: 'AI Email Fact Checker V253',
+    description: 'Verifies claims and statistics in emails, cross-references with trusted sources, flags potentially misleading information, and provides citations.',
+    icon: '🔍',
+    category: 'email-intelligence',
+    features: ['Claim verification', 'Monetary validation', 'Quote checking', 'Trust scoring', 'Source referencing', 'Misinfo detection', 'Citation generation', 'Reply-all enforcement'],
+    pricing: {
+      basic: '59',
+      pro: '179',
+      enterprise: '599'
+    },
+    href: '/services/email-fact-checker-engine',
+    popular: true,
+    industry: 'Email Intelligence',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'email-tone-adapter-pro',
+    title: 'AI Email Tone Adapter Pro V254',
+    description: 'Detects recipient communication style, adapts tone to match, maintains brand voice consistency, and suggests adjustments for better reception.',
+    icon: '🎨',
+    category: 'email-intelligence',
+    features: ['Style detection', 'Tone mirroring', 'Sentiment responses', '5 tone profiles', 'Match scoring', 'Cultural sensitivity', 'Brand voice', 'Reply-all enforcement'],
+    pricing: {
+      basic: '45',
+      pro: '139',
+      enterprise: '479'
+    },
+    href: '/services/email-tone-adapter-pro',
+    popular: true,
+    industry: 'Email Intelligence',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'email-roi-tracker-engine',
+    title: 'AI Email ROI Tracker V255',
+    description: 'Tracks business value generated from emails, measures deal progression, calculates time saved, and generates monthly ROI reports.',
+    icon: '📈',
+    category: 'email-intelligence',
+    features: ['Deal tracking', 'Value extraction', 'Time savings', 'ROI metrics', 'Pipeline tracking', 'Win analytics', 'Monthly reports', 'Reply-all enforcement'],
+    pricing: {
+      basic: '69',
+      pro: '199',
+      enterprise: '699'
+    },
+    href: '/services/email-roi-tracker-engine',
+    popular: true,
+    industry: 'Email Intelligence',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: 'AI Predictive Maintenance Platform',
+    description: 'Predict equipment failures using IoT sensor data, ML anomaly detection, and predictive analytics. Reduce downtime by 70%.',
+    icon: '🔧',
+    category: 'ai',
+    features: ['IoT sensor analysis', 'Anomaly detection', 'Failure prediction', 'Maintenance scheduling', 'Health dashboards', 'Root cause analysis', 'Trend analysis', 'API integration'],
+    pricing: {
+      basic: '299',
+      pro: '899',
+      enterprise: '2999'
+    },
+    href: '/services/ai-predictive-maintenance',
+    popular: true,
+    industry: 'Manufacturing',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'ai-content-moderation',
+    title: 'AI Content Moderation Engine',
+    description: 'Detect and filter inappropriate content across text, images, and video with 99.5% accuracy. Multi-language, real-time processing.',
+    icon: '🛡️',
+    category: 'ai',
+    features: ['Text moderation', 'Image safety', 'Video analysis', '40+ languages', 'Custom policies', 'Real-time processing', 'Review queue', 'Audit logging'],
+    pricing: {
+      basic: '149',
+      pro: '499',
+      enterprise: '1499'
+    },
+    href: '/services/ai-content-moderation',
+    popular: true,
+    industry: 'Social Media',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'ai-supply-chain-optimizer',
+    title: 'AI Supply Chain Optimizer',
+    description: 'Optimize supply chain with demand forecasting, inventory optimization, route planning, and supplier risk assessment.',
+    icon: '🚛',
+    category: 'ai',
+    features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Risk scoring', 'Cost analytics', 'Disruption prediction', 'Multi-echelon', 'Real-time tracking'],
+    pricing: {
+      basic: '499',
+      pro: '1499',
+      enterprise: '4999'
+    },
+    href: '/services/ai-supply-chain-optimizer',
+    popular: true,
+    industry: 'Logistics',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'ai-code-review-assistant',
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review with security scanning, performance analysis, style enforcement, and intelligent suggestions. 20+ languages.',
+    icon: '💻',
+    category: 'ai',
+    features: ['Security scanning', 'Performance detection', 'Style enforcement', 'Refactoring', '20+ languages', 'PR integration', 'Custom rules', 'Team learning'],
+    pricing: {
+      basic: '29',
+      pro: '99',
+      enterprise: '349'
+    },
+    href: '/services/ai-code-review-assistant',
+    popular: true,
+    industry: 'Developer Tools',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'ai-customer-churn-predictor',
+    title: 'AI Customer Churn Predictor',
+    description: 'Predict churn 90 days in advance with 92% accuracy. Identify at-risk customers and trigger retention campaigns.',
+    icon: '📊',
+    category: 'ai',
+    features: ['90-day prediction', '92% accuracy', 'Driver analysis', 'Campaign triggers', 'Health scoring', 'Segment insights', 'Revenue modeling', 'CRM integration'],
+    pricing: {
+      basic: '199',
+      pro: '599',
+      enterprise: '1999'
+    },
+    href: '/services/ai-customer-churn-predictor',
+    popular: true,
+    industry: 'Customer Success',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'it-network-operations-center',
+    title: '24/7 Network Operations Center (NOC)',
+    description: 'Round-the-clock network monitoring, incident response, and performance optimization with 15-minute response SLA.',
+    icon: '🖥️',
+    category: 'it',
+    features: ['24/7 monitoring', '15-min SLA', 'Incident management', 'Performance optimization', 'Capacity planning', 'Change management', 'Root cause analysis', 'Monthly reporting'],
+    pricing: {
+      basic: '999',
+      pro: '2999',
+      enterprise: '7999'
+    },
+    href: '/services/it-network-operations-center',
+    popular: true,
+    industry: 'IT Operations',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'it-database-administration',
+    title: 'Managed Database Administration',
+    description: 'Expert DBA for PostgreSQL, MySQL, MongoDB, Redis. Performance tuning, backup management, replication, 24/7 monitoring.',
+    icon: '🗄️',
+    category: 'it',
+    features: ['Multi-database', 'Performance tuning', 'Backup & recovery', 'Replication', 'Query optimization', 'Schema migration', 'Security hardening', 'Capacity planning'],
+    pricing: {
+      basic: '499',
+      pro: '1499',
+      enterprise: '3999'
+    },
+    href: '/services/it-database-administration',
+    popular: true,
+    industry: 'Database',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'it-api-gateway-management',
+    title: 'API Gateway Management Service',
+    description: 'Deploy and optimize API gateways with rate limiting, authentication, caching, analytics, and auto-scaling.',
+    icon: '🔌',
+    category: 'it',
+    features: ['Multi-gateway', 'Rate limiting', 'OAuth2 auth', 'Caching', 'Analytics', 'Auto-scaling', 'Versioning', 'Developer portal'],
+    pricing: {
+      basic: '299',
+      pro: '899',
+      enterprise: '2499'
+    },
+    href: '/services/it-api-gateway-management',
+    popular: true,
+    industry: 'API Management',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'security-soc-as-a-service',
+    title: 'SOC-as-a-Service',
+    description: 'Enterprise SOC with 24/7 threat monitoring, SIEM management, incident response, and compliance reporting.',
+    icon: '🏢',
+    category: 'security',
+    features: ['24/7 monitoring', 'SIEM management', 'Incident response', 'Threat intelligence', 'Compliance reporting', 'Vuln management', 'Forensics', 'Dashboards'],
+    pricing: {
+      basic: '2999',
+      pro: '7999',
+      enterprise: '19999'
+    },
+    href: '/services/security-soc-as-a-service',
+    popular: true,
+    industry: 'Security Operations',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'security-cloud-posture-management',
+    title: 'Cloud Security Posture Management',
+    description: 'Monitor and remediate cloud misconfigurations across AWS, Azure, GCP. Auto-remediation and compliance.',
+    icon: '☁️',
+    category: 'security',
+    features: ['Multi-cloud', 'Auto-remediation', 'CIS benchmarks', 'Risk scoring', 'Drift detection', 'IAM analysis', 'Network review', 'Compliance'],
+    pricing: {
+      basic: '499',
+      pro: '1499',
+      enterprise: '4499'
+    },
+    href: '/services/security-cloud-posture-management',
+    popular: true,
+    industry: 'Cloud Security',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'data-real-time-analytics',
+    title: 'Real-Time Data Analytics Platform',
+    description: 'Process streaming data with sub-second latency. Kafka, Flink, and Spark with custom dashboards.',
+    icon: '⚡',
+    category: 'data',
+    features: ['Sub-second latency', 'Kafka integration', 'Flink processing', 'Dashboards', 'Alerting', 'Data enrichment', 'Historical comparison', 'Auto-scaling'],
+    pricing: {
+      basic: '399',
+      pro: '1199',
+      enterprise: '3499'
+    },
+    href: '/services/data-real-time-analytics',
+    popular: true,
+    industry: 'Analytics',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'data-governance-platform',
+    title: 'Enterprise Data Governance Platform',
+    description: 'Data catalog, lineage tracking, quality monitoring, access control, and GDPR/CCPA/HIPAA compliance.',
+    icon: '📋',
+    category: 'data',
+    features: ['Data catalog', 'Lineage tracking', 'Quality monitoring', 'Access control', 'Compliance', 'Classification', 'Workflows', 'Audit trails'],
+    pricing: {
+      basic: '599',
+      pro: '1799',
+      enterprise: '4999'
+    },
+    href: '/services/data-governance-platform',
+    popular: true,
+    industry: 'Data Governance',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'cloud-finops-platform',
+    title: 'Cloud FinOps & Cost Optimization',
+    description: 'Reduce cloud spending by 30-50% with recommendations, reserved instances, spot automation, and analytics.',
+    icon: '💰',
+    category: 'cloud',
+    features: ['Cost anomaly detection', 'RI planning', 'Spot automation', 'Multi-cloud analytics', 'Budget alerts', 'Rightsizing', 'Tag allocation', 'Dashboards'],
+    pricing: {
+      basic: '199',
+      pro: '699',
+      enterprise: '1999'
+    },
+    href: '/services/cloud-finops-platform',
+    popular: true,
+    industry: 'Cloud Cost Management',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'cloud-disaster-recovery-service',
+    title: 'Cloud Disaster Recovery as a Service',
+    description: 'RPO under 15 min, RTO under 1 hour. Multi-region replication, automated failover, DR testing.',
+    icon: '🔄',
+    category: 'cloud',
+    features: ['RPO < 15min', 'RTO < 1hr', 'Multi-region', 'Auto failover', 'DR testing', 'Integrity checks', 'Compliance', 'One-click recovery'],
+    pricing: {
+      basic: '799',
+      pro: '2499',
+      enterprise: '6999'
+    },
+    href: '/services/cloud-disaster-recovery-service',
+    popular: true,
+    industry: 'Disaster Recovery',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'micro-saas-appointment-scheduler',
+    title: 'AI Appointment Scheduling Platform',
+    description: 'Smart scheduling with timezone detection, buffer times, recurring meetings, and auto-reminders.',
+    icon: '📅',
+    category: 'micro-saas',
+    features: ['Timezone scheduling', 'Buffer management', 'Recurring meetings', 'Team sync', 'Auto-reminders', 'Calendar integrations', 'Booking pages', 'Payments'],
+    pricing: {
+      basic: '15',
+      pro: '39',
+      enterprise: '99'
+    },
+    href: '/services/micro-saas-appointment-scheduler',
+    popular: true,
+    industry: 'Productivity',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'micro-saas-invoice-generator',
+    title: 'Smart Invoice Generator & Billing',
+    description: 'Professional invoices, payment tracking, recurring billing, and expense management. Multi-currency.',
+    icon: '🧾',
+    category: 'micro-saas',
+    features: ['Invoice templates', 'Recurring billing', 'Multi-currency', 'Tax calculations', 'Payment tracking', 'Expenses', 'Accounting integration', 'Client portal'],
+    pricing: {
+      basic: '12',
+      pro: '35',
+      enterprise: '89'
+    },
+    href: '/services/micro-saas-invoice-generator',
+    popular: true,
+    industry: 'Finance',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'micro-saas-social-media-scheduler',
+    title: 'AI Social Media Scheduling & Analytics',
+    description: 'Schedule posts across platforms, AI content suggestions, engagement analytics, hashtag optimization.',
+    icon: '📱',
+    category: 'micro-saas',
+    features: ['Multi-platform', 'AI suggestions', 'Analytics', 'Hashtag optimization', 'Team collaboration', 'Content calendar', 'Best-time posting', 'Competitor analysis'],
+    pricing: {
+      basic: '19',
+      pro: '49',
+      enterprise: '149'
+    },
+    href: '/services/micro-saas-social-media-scheduler',
+    popular: true,
+    industry: 'Marketing',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'micro-saas-contract-management',
+    title: 'AI Contract Management & E-Signatures',
+    description: 'Create, negotiate, sign, and manage contracts with AI clause analysis and automated reminders.',
+    icon: '📝',
+    category: 'micro-saas',
+    features: ['AI clause analysis', 'E-signatures', 'Templates', 'Reminders', 'Version tracking', 'Compliance', 'Clause library', 'Integrations'],
+    pricing: {
+      basic: '29',
+      pro: '79',
+      enterprise: '249'
+    },
+    href: '/services/micro-saas-contract-management',
+    popular: true,
+    industry: 'Legal',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'micro-saas-knowledge-base-builder',
+    title: 'AI Knowledge Base & Help Center Builder',
+    description: 'Build help centers with AI search, auto-generated articles, multi-language support, and analytics.',
+    icon: '📚',
+    category: 'micro-saas',
+    features: ['AI search', 'Auto-articles', 'Multi-language', 'Custom branding', 'Analytics', 'Ticket deflection', 'SEO', 'API docs'],
+    pricing: {
+      basic: '25',
+      pro: '69',
+      enterprise: '199'
+    },
+    href: '/services/micro-saas-knowledge-base-builder',
+    popular: true,
+    industry: 'Customer Support',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'automation-rpa-platform',
+    title: 'Robotic Process Automation Platform',
+    description: 'Automate repetitive processes with intelligent bots. Screen scraping, API integration, document processing.',
+    icon: '🤖',
+    category: 'automation',
+    features: ['Visual builder', 'Screen scraping', 'API integration', 'Document processing', 'Error handling', 'Audit logging', 'Scheduling', 'Security'],
+    pricing: {
+      basic: '399',
+      pro: '1199',
+      enterprise: '3499'
+    },
+    href: '/services/automation-rpa-platform',
+    popular: true,
+    industry: 'Automation',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
+  },
+  {
+    id: 'automation-etl-pipeline-builder',
+    title: 'Visual ETL Pipeline Builder',
+    description: 'Build data pipelines visually with 200+ connectors, real-time transformations, and error recovery.',
+    icon: '🔗',
+    category: 'automation',
+    features: ['200+ connectors', 'Visual builder', 'Real-time transforms', 'Quality checks', 'Error recovery', 'Orchestration', 'Data lineage', 'Monitoring'],
+    pricing: {
+      basic: '199',
+      pro: '599',
+      enterprise: '1799'
+    },
+    href: '/services/automation-etl-pipeline-builder',
+    popular: true,
+    industry: 'Data Engineering',
+    contactInfo: { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008, Middletown DE 19709' }
   }
 ];
 
