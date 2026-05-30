@@ -11,15 +11,19 @@ import type { Service } from '../data/servicesData';
 
 
 
-const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & AI', automation: 'Automation' };
+const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & Analytics', automation: 'Automation', 'micro-saas': 'Micro-SaaS', devops: 'DevOps', blockchain: 'Blockchain', iot: 'IoT & Edge' };
 const CATEGORIES = [
   { key: 'all' as const, label: 'All' },
   { key: 'ai' as const, label: 'AI' },
   { key: 'it' as const, label: 'IT' },
   { key: 'cloud' as const, label: 'Cloud' },
   { key: 'security' as const, label: 'Security' },
-  { key: 'data' as const, label: 'Data & AI' },
+  { key: 'data' as const, label: 'Data' },
   { key: 'automation' as const, label: 'Automation' },
+  { key: 'micro-saas' as const, label: 'Micro-SaaS' },
+  { key: 'devops' as const, label: 'DevOps' },
+  { key: 'blockchain' as const, label: 'Blockchain' },
+  { key: 'iot' as const, label: 'IoT' },
 ];
 
 function ServicesContent() {
@@ -45,7 +49,7 @@ function ServicesContent() {
     <main className="min-h-screen bg-slate-950 py-20">
       <div className="container-page">
         <h1 className="text-4xl font-bold text-white mb-2 text-center">Our Complete Service Catalog</h1>
-        <p className="section-subheading text-center">{allServices.length}+ real-world services across 6 categories</p>
+        <p className="section-subheading text-center">{allServices.length}+ real-world services across 10 categories</p>
         {/* Smart Fuzzy Search Bar */}
         <div className="max-w-3xl mx-auto mt-8">
           <SmartSearchBar
