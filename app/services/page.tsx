@@ -11,7 +11,7 @@ import type { Service } from '../data/servicesData';
 
 
 
-const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & Analytics', automation: 'Automation', 'micro-saas': 'Micro-SaaS', devops: 'DevOps', blockchain: 'Blockchain', iot: 'IoT & Edge' };
+const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & Analytics', automation: 'Automation', 'micro-saas': 'Micro-SaaS', devops: 'DevOps', blockchain: 'Blockchain', iot: 'IoT & Edge', 'email-intelligence': 'Email Intelligence' };
 const CATEGORIES = [
   { key: 'all' as const, label: 'All' },
   { key: 'ai' as const, label: 'AI' },
@@ -24,6 +24,7 @@ const CATEGORIES = [
   { key: 'devops' as const, label: 'DevOps' },
   { key: 'blockchain' as const, label: 'Blockchain' },
   { key: 'iot' as const, label: 'IoT' },
+  { key: 'email-intelligence' as const, label: 'Email Intel' },
 ];
 
 function ServicesContent() {

@@ -22,6 +22,7 @@ const Navigation: React.FC = () => {
     { key: 'devops',    label: 'DevOps & Platform',     emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
     { key: 'blockchain',label: 'Blockchain & Web3',     emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
     { key: 'iot',       label: 'IoT & Edge',            emoji: '📡', color: 'from-teal-500 to-green-500' },
+    { key: 'email-intelligence', label: 'Email Intelligence', emoji: '📧', color: 'from-violet-500 to-purple-600' },
   ];
 
   return (
