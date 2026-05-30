@@ -38,12 +38,14 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Services</h4>
             <ul className="space-y-2.5">
               {[
-                { name: 'AI Services', href: '/ai-services/' },
-                { name: 'All Services', href: '/services/' },
+                { name: 'All Services (1116+)', href: '/services/' },
+                { name: '🧠 AI Services', href: '/services/?category=ai' },
+                { name: '🖥️ IT Services', href: '/services/?category=it' },
+                { name: '☁️ Cloud Services', href: '/services/?category=cloud' },
+                { name: '🔐 Security', href: '/services/?category=security' },
+                { name: '📊 Data & Analytics', href: '/services/?category=data' },
+                { name: '⚡ Micro-SaaS', href: '/services/?category=micro-saas' },
                 { name: 'Industry Solutions', href: '/industry-solutions/' },
-                { name: 'Pricing', href: '/pricing/' },
-                { name: 'Tools & Resources', href: '/tools/' },
-                { name: 'Service Comparison', href: '/service-comparison/' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>
@@ -52,7 +54,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company & Resources */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Company</h4>
             <ul className="space-y-2.5">
@@ -61,8 +63,24 @@ const Footer: React.FC = () => {
                 { name: 'Blog', href: '/blog/' },
                 { name: 'Careers', href: '/careers/' },
                 { name: 'Partners', href: '/partners/' },
-                { name: 'Client Portal', href: '/portal/' },
                 { name: 'Press', href: '/press/' },
+                { name: 'Testimonials', href: '/testimonials/' },
+              ].map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider pt-2">Resources</h4>
+            <ul className="space-y-2.5">
+              {[
+                { name: '🔍 Search', href: '/search/' },
+                { name: '💰 Pricing', href: '/pricing/' },
+                { name: '🛠️ Free Tools', href: '/tools/' },
+                { name: '📊 ROI Calculator', href: '/tools/roi-calculator/' },
+                { name: '📋 Proposal Generator', href: '/proposal-generator/' },
+                { name: '🟢 System Status', href: '/status/' },
+                { name: '👤 Client Portal', href: '/portal/' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>

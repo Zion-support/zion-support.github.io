@@ -221,6 +221,14 @@ export default function Navigation() {
                       <div className="text-[11px] text-slate-400 mt-0.5">Workflows, RPA, process mining</div>
                     </Link>
                   </div>
+                  {/* Micro-SaaS */}
+                  <div>
+                    <Link href="/services/?category=micro-saas" onClick={() => setServicesOpen(false)}
+                      className="block px-3 py-2 rounded-lg bg-gradient-to-r from-yellow-500/10 to-amber-500/10 border border-yellow-500/20 hover:border-yellow-500/40 transition-colors">
+                      <div className="text-xs font-bold uppercase tracking-wider text-yellow-400">⚡ Micro-SaaS</div>
+                      <div className="text-[11px] text-slate-400 mt-0.5">Lightweight tools, APIs, platforms</div>
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Featured actions */}
@@ -243,14 +251,7 @@ export default function Navigation() {
           </div>
 
           {/* Primary nav links */}
-          {/* Hardcoded primary links (Home already in logo area) */}
-          <NavLink
-            key="blog"
-            link={{ name: 'Blog', href: '/blog/' }}
-          />
-
-          {/* Remaining primary links from constants */}
-          {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
+          {PRIMARY_NAV_LINKS.filter(l => l.href !== '/').map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
 
