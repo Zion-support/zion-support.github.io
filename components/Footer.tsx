@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-emerald-400">Zion Tech Group</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI, blockchain, and 5G solutions for modern businesses.
-              We help companies transform their operations with cutting-edge technology.
+              AI services, IT solutions, cybersecurity, cloud infrastructure, data analytics,
+              automation, micro-SaaS platforms, and strategic consulting for businesses of all sizes.
             </p>
             <div className="flex space-x-4">
               <a
