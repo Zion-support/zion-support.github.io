@@ -42183,5 +42183,941 @@
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008, Middletown DE 19709"
     }
+  },
+  {
+    "id": "email-knowledge-distiller-v266",
+    "title": "AI Email Knowledge Distiller V266",
+    "description": "Extracts key knowledge from email threads into structured docs, builds team knowledge base automatically, detects and summarizes expert insights.",
+    "icon": "🧠",
+    "features": [
+      "Knowledge extraction",
+      "Expert insight detection",
+      "Thread summarization",
+      "Knowledge categorization",
+      "Team KB building",
+      "Decision tracking",
+      "Best practice capture",
+      "Reply-all enforcement"
+    ],
+    "benefits": [
+      "Build knowledge base automatically",
+      "Capture expert insights",
+      "Never lose important decisions",
+      "Searchable team knowledge"
+    ],
+    "pricing": {
+      "basic": "99",
+      "pro": "279",
+      "enterprise": "949"
+    },
+    "href": "/services/email-knowledge-distiller-v266",
+    "category": "email-intelligence",
+    "popular": true,
+    "industry": "Email Intelligence",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-ab-response-tester-v267",
+    "title": "AI Email A/B Response Tester V267",
+    "description": "Tests response variations to find most effective style, tracks open/reply rates per style, learns optimal response patterns per contact.",
+    "icon": "🔬",
+    "features": [
+      "Response variant generation",
+      "A/B testing",
+      "Performance tracking",
+      "Contact preferences",
+      "Style optimization",
+      "Confidence scoring",
+      "Learning engine",
+      "Reply-all enforcement"
+    ],
+    "benefits": [
+      "Find optimal response style",
+      "Increase reply rates by 40%",
+      "Learn per-contact preferences",
+      "Data-driven communication"
+    ],
+    "pricing": {
+      "basic": "79",
+      "pro": "229",
+      "enterprise": "799"
+    },
+    "href": "/services/email-ab-response-tester-v267",
+    "category": "email-intelligence",
+    "popular": true,
+    "industry": "Email Intelligence",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-relationship-graph-v268",
+    "title": "AI Email Relationship Graph Builder V268",
+    "description": "Maps organizational relationships from email patterns, identifies key decision-makers and influencers, suggests optimal communication paths.",
+    "icon": "🔗",
+    "features": [
+      "Relationship mapping",
+      "Decision-maker detection",
+      "Influence scoring",
+      "Communication patterns",
+      "Role identification",
+      "Network analysis",
+      "Path optimization",
+      "Reply-all enforcement"
+    ],
+    "benefits": [
+      "Understand org structure",
+      "Identify key stakeholders",
+      "Optimize communication paths",
+      "Navigate complex organizations"
+    ],
+    "pricing": {
+      "basic": "109",
+      "pro": "309",
+      "enterprise": "1049"
+    },
+    "href": "/services/email-relationship-graph-v268",
+    "category": "email-intelligence",
+    "popular": true,
+    "industry": "Email Intelligence",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-timezone-intelligence-v269",
+    "title": "AI Email Time Zone Intelligence V269",
+    "description": "Smart scheduling across global teams, detects working hours per contact, respects local business hours, finds optimal meeting times automatically.",
+    "icon": "🌍",
+    "features": [
+      "Timezone detection",
+      "Working hours detection",
+      "Optimal meeting finder",
+      "Global scheduling",
+      "Business hours respect",
+      "Overlap analysis",
+      "Auto-conversion",
+      "Reply-all enforcement"
+    ],
+    "benefits": [
+      "Schedule across 24 timezones",
+      "Respect global working hours",
+      "Find optimal meeting slots",
+      "Never schedule at 3 AM"
+    ],
+    "pricing": {
+      "basic": "59",
+      "pro": "169",
+      "enterprise": "599"
+    },
+    "href": "/services/email-timezone-intelligence-v269",
+    "category": "email-intelligence",
+    "popular": true,
+    "industry": "Email Intelligence",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-phishing-defense-v270",
+    "title": "AI Email Phishing Defense V270",
+    "description": "Advanced phishing detection with ML, checks sender reputation, URL safety, auto-quarantines suspicious emails, protects against social engineering.",
+    "icon": "🛡️",
+    "features": [
+      "ML phishing detection",
+      "Sender reputation",
+      "URL safety checks",
+      "Auto-quarantine",
+      "Social engineering defense",
+      "Credential harvest detection",
+      "Brand impersonation detection",
+      "Reply-all for safe emails"
+    ],
+    "benefits": [
+      "Block 99.5% of phishing",
+      "Protect employees",
+      "Auto-quarantine threats",
+      "Real-time threat intelligence"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "449",
+      "enterprise": "1499"
+    },
+    "href": "/services/email-phishing-defense-v270",
+    "category": "email-intelligence",
+    "popular": true,
+    "industry": "Email Intelligence",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "ai-autonomous-agent-builder",
+    "title": "AI Autonomous Agent Builder",
+    "description": "Build and deploy autonomous AI agents that execute complex tasks, make decisions, and learn from outcomes without human intervention.",
+    "icon": "🤖",
+    "features": [
+      "Visual agent builder",
+      "Multi-step task execution",
+      "Decision trees",
+      "Learning from outcomes",
+      "Tool integration",
+      "Guardrails",
+      "Monitoring dashboard",
+      "API access"
+    ],
+    "benefits": [
+      "Automate complex workflows",
+      "Agents that learn and improve",
+      "24/7 autonomous operation",
+      "Reduce manual work by 80%"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1499",
+      "enterprise": "4999"
+    },
+    "href": "/services/ai-autonomous-agent-builder",
+    "category": "ai",
+    "popular": true,
+    "industry": "AI Agents",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "ai-multimodal-reasoning",
+    "title": "AI Multimodal Reasoning Engine",
+    "description": "Process and reason across text, images, audio, and video simultaneously. Cross-modal understanding and generation.",
+    "icon": "🧩",
+    "features": [
+      "Text+image+audio+video",
+      "Cross-modal reasoning",
+      "Unified understanding",
+      "Multi-format generation",
+      "Context fusion",
+      "Temporal reasoning",
+      "Spatial awareness",
+      "API access"
+    ],
+    "benefits": [
+      "Understand complex multimodal data",
+      "Reason across formats",
+      "Generate rich content",
+      "Solve multimodal problems"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "href": "/services/ai-multimodal-reasoning",
+    "category": "ai",
+    "popular": true,
+    "industry": "Multimodal AI",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "ai-knowledge-graph-builder",
+    "title": "AI Knowledge Graph Builder",
+    "description": "Automatically build and maintain knowledge graphs from documents, emails, and data sources. Semantic search and relationship discovery.",
+    "icon": "🕸️",
+    "features": [
+      "Auto graph construction",
+      "Entity extraction",
+      "Relationship discovery",
+      "Semantic search",
+      "Graph visualization",
+      "Multi-source ingestion",
+      "Continuous updates",
+      "API access"
+    ],
+    "benefits": [
+      "Map organizational knowledge",
+      "Discover hidden relationships",
+      "Semantic search across data",
+      "Never lose context"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "1199",
+      "enterprise": "3499"
+    },
+    "href": "/services/ai-knowledge-graph-builder",
+    "category": "ai",
+    "popular": true,
+    "industry": "Knowledge Management",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "it-zero-trust-architecture",
+    "title": "Zero Trust Architecture Implementation",
+    "description": "Design and implement zero trust security model with micro-segmentation, continuous verification, and least-privilege access.",
+    "icon": "🔒",
+    "features": [
+      "Zero trust design",
+      "Micro-segmentation",
+      "Continuous verification",
+      "Least-privilege access",
+      "Identity-centric security",
+      "Policy engine",
+      "Monitoring",
+      "Compliance"
+    ],
+    "benefits": [
+      "Eliminate implicit trust",
+      "Reduce attack surface by 70%",
+      "Continuous security verification",
+      "Meet modern compliance"
+    ],
+    "pricing": {
+      "basic": "2999",
+      "pro": "8999",
+      "enterprise": "24999"
+    },
+    "href": "/services/it-zero-trust-architecture",
+    "category": "it",
+    "popular": true,
+    "industry": "Security Architecture",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "it-hybrid-cloud-management",
+    "title": "Hybrid Cloud Management Platform",
+    "description": "Unified management of on-premises, private cloud, and public cloud resources. Workload mobility, cost optimization, governance.",
+    "icon": "☁️",
+    "features": [
+      "Unified management",
+      "Workload mobility",
+      "Cost optimization",
+      "Governance policies",
+      "Multi-cloud orchestration",
+      "Resource optimization",
+      "Security policies",
+      "Analytics"
+    ],
+    "benefits": [
+      "Manage all clouds from one place",
+      "Move workloads freely",
+      "Optimize costs across clouds",
+      "Consistent governance"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "href": "/services/it-hybrid-cloud-management",
+    "category": "it",
+    "popular": true,
+    "industry": "Cloud Management",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "security-ai-threat-hunting",
+    "title": "AI-Powered Threat Hunting Service",
+    "description": "Proactive threat hunting with AI-driven hypothesis generation, behavioral analytics, and automated investigation.",
+    "icon": "🎯",
+    "features": [
+      "AI hypothesis generation",
+      "Behavioral analytics",
+      "Automated investigation",
+      "Threat correlation",
+      "IOC enrichment",
+      "Hunter playbooks",
+      "MITRE ATT&CK mapping",
+      "Reporting"
+    ],
+    "benefits": [
+      "Find hidden threats proactively",
+      "Reduce investigation time by 70%",
+      "AI-powered hypothesis testing",
+      "Expert-level hunting at scale"
+    ],
+    "pricing": {
+      "basic": "2499",
+      "pro": "7499",
+      "enterprise": "19999"
+    },
+    "href": "/services/security-ai-threat-hunting",
+    "category": "security",
+    "popular": true,
+    "industry": "Threat Hunting",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "security-ransomware-protection",
+    "title": "Advanced Ransomware Protection Suite",
+    "description": "Multi-layer ransomware defense with behavioral detection, immutable backups, rapid recovery, and threat intelligence.",
+    "icon": "🔐",
+    "features": [
+      "Behavioral detection",
+      "Immutable backups",
+      "Rapid recovery",
+      "Threat intelligence",
+      "File integrity monitoring",
+      "Process monitoring",
+      "Network analysis",
+      "Incident response"
+    ],
+    "benefits": [
+      "Block ransomware before encryption",
+      "Recover in minutes not days",
+      "Immutable backup protection",
+      "24/7 monitoring"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2999",
+      "enterprise": "8999"
+    },
+    "href": "/services/security-ransomware-protection",
+    "category": "security",
+    "popular": true,
+    "industry": "Ransomware Defense",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "data-llm-fine-tuning-platform",
+    "title": "LLM Fine-Tuning Platform",
+    "description": "Fine-tune large language models on your data with managed infrastructure, evaluation tools, and deployment pipelines.",
+    "icon": "🎓",
+    "features": [
+      "Managed fine-tuning",
+      "Data preparation",
+      "Hyperparameter optimization",
+      "Evaluation metrics",
+      "Model versioning",
+      "Deployment pipelines",
+      "Cost tracking",
+      "Multi-model support"
+    ],
+    "benefits": [
+      "Custom AI models from your data",
+      "No ML expertise needed",
+      "Deploy in days not months",
+      "Cost-effective training"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2499",
+      "enterprise": "7999"
+    },
+    "href": "/services/data-llm-fine-tuning-platform",
+    "category": "data",
+    "popular": true,
+    "industry": "ML Operations",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "data-vector-database-service",
+    "title": "Managed Vector Database Service",
+    "description": "High-performance vector database for AI applications. Semantic search, RAG infrastructure, embedding management, and similarity search.",
+    "icon": "📐",
+    "features": [
+      "Vector storage",
+      "Similarity search",
+      "Embedding management",
+      "RAG infrastructure",
+      "Auto-indexing",
+      "Scale to billions",
+      "Multi-tenancy",
+      "API access"
+    ],
+    "benefits": [
+      "Power AI applications",
+      "Millisecond semantic search",
+      "Scale to billions of vectors",
+      "Production-ready RAG"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "1999"
+    },
+    "href": "/services/data-vector-database-service",
+    "category": "data",
+    "popular": true,
+    "industry": "AI Infrastructure",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "cloud-edge-ai-deployment",
+    "title": "Edge AI Deployment Platform",
+    "description": "Deploy AI models to edge devices with optimized inference, model compression, OTA updates, and fleet management.",
+    "icon": "⚡",
+    "features": [
+      "Model optimization",
+      "Edge deployment",
+      "OTA updates",
+      "Fleet management",
+      "Model compression",
+      "Latency optimization",
+      "Offline inference",
+      "Monitoring"
+    ],
+    "benefits": [
+      "Deploy AI to any edge device",
+      "Sub-10ms inference",
+      "Work offline",
+      "Manage millions of devices"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "1199",
+      "enterprise": "3499"
+    },
+    "href": "/services/cloud-edge-ai-deployment",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Edge AI",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "cloud-ai-model-serving",
+    "title": "AI Model Serving Platform",
+    "description": "Serve ML models at scale with auto-scaling, A/B testing, canary deployments, and real-time monitoring.",
+    "icon": "🚀",
+    "features": [
+      "Auto-scaling",
+      "A/B testing",
+      "Canary deployments",
+      "Real-time monitoring",
+      "Model versioning",
+      "Batch inference",
+      "Streaming inference",
+      "Cost optimization"
+    ],
+    "benefits": [
+      "Serve models at any scale",
+      "Zero-downtime deployments",
+      "Test model improvements safely",
+      "Optimize serving costs"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "2999"
+    },
+    "href": "/services/cloud-ai-model-serving",
+    "category": "cloud",
+    "popular": true,
+    "industry": "ML Infrastructure",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-meeting-assistant",
+    "title": "AI Meeting Assistant",
+    "description": "AI-powered meeting transcription, summarization, action item extraction, and follow-up automation. Works with Zoom, Teams, Meet.",
+    "icon": "🎙️",
+    "features": [
+      "Auto transcription",
+      "AI summarization",
+      "Action item extraction",
+      "Follow-up automation",
+      "Multi-platform support",
+      "Search meetings",
+      "Share highlights",
+      "Calendar sync"
+    ],
+    "benefits": [
+      "Never miss meeting details",
+      "Automatic action items",
+      "Searchable meeting history",
+      "Save 5+ hours per week"
+    ],
+    "pricing": {
+      "basic": "15",
+      "pro": "39",
+      "enterprise": "99"
+    },
+    "href": "/services/micro-saas-ai-meeting-assistant",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Productivity",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-writing-assistant",
+    "title": "AI Writing Assistant Platform",
+    "description": "AI-powered writing tool for emails, documents, and content. Tone adjustment, grammar checking, plagiarism detection, multi-language.",
+    "icon": "✍️",
+    "features": [
+      "AI writing",
+      "Tone adjustment",
+      "Grammar checking",
+      "Plagiarism detection",
+      "Multi-language",
+      "Style guides",
+      "Team collaboration",
+      "Browser extension"
+    ],
+    "benefits": [
+      "Write 3x faster",
+      "Professional tone always",
+      "Error-free content",
+      "Multi-language support"
+    ],
+    "pricing": {
+      "basic": "12",
+      "pro": "29",
+      "enterprise": "79"
+    },
+    "href": "/services/micro-saas-ai-writing-assistant",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Productivity",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-recruiting",
+    "title": "AI Recruiting & Hiring Platform",
+    "description": "AI-powered recruitment with resume screening, candidate matching, interview scheduling, and bias reduction.",
+    "icon": "👔",
+    "features": [
+      "Resume screening",
+      "Candidate matching",
+      "Interview scheduling",
+      "Bias reduction",
+      "Skills assessment",
+      "Pipeline management",
+      "Analytics",
+      "ATS integration"
+    ],
+    "benefits": [
+      "Screen resumes in seconds",
+      "Reduce hiring bias",
+      "Fill positions 50% faster",
+      "Better candidate matching"
+    ],
+    "pricing": {
+      "basic": "49",
+      "pro": "149",
+      "enterprise": "499"
+    },
+    "href": "/services/micro-saas-ai-recruiting",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "HR Tech",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-customer-success",
+    "title": "AI Customer Success Platform",
+    "description": "Predict and prevent churn with AI health scoring, automated playbooks, usage analytics, and expansion opportunity detection.",
+    "icon": "🌟",
+    "features": [
+      "Health scoring",
+      "Churn prediction",
+      "Automated playbooks",
+      "Usage analytics",
+      "Expansion detection",
+      "NPS tracking",
+      "QBR automation",
+      "Revenue analytics"
+    ],
+    "benefits": [
+      "Reduce churn by 40%",
+      "Identify expansion revenue",
+      "Automate customer success",
+      "Data-driven retention"
+    ],
+    "pricing": {
+      "basic": "39",
+      "pro": "99",
+      "enterprise": "349"
+    },
+    "href": "/services/micro-saas-ai-customer-success",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Customer Success",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "automation-ai-process-mining",
+    "title": "AI Process Mining Platform",
+    "description": "Discover, monitor, and optimize business processes with AI. Automatic process discovery from event logs, bottleneck detection.",
+    "icon": "⛏️",
+    "features": [
+      "Process discovery",
+      "Bottleneck detection",
+      "Conformance checking",
+      "Performance analysis",
+      "Root cause analysis",
+      "Simulation",
+      "Optimization suggestions",
+      "Visual dashboards"
+    ],
+    "benefits": [
+      "Discover actual processes",
+      "Find bottlenecks instantly",
+      "Optimize operations by 30%",
+      "Data-driven process improvement"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "href": "/services/automation-ai-process-mining",
+    "category": "automation",
+    "popular": true,
+    "industry": "Process Intelligence",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "automation-intelligent-automation-hub",
+    "title": "Intelligent Automation Hub",
+    "description": "Central platform for RPA, AI, and workflow automation. Unified orchestration, bot management, and analytics.",
+    "icon": "🏠",
+    "features": [
+      "RPA orchestration",
+      "AI integration",
+      "Workflow automation",
+      "Bot management",
+      "Unified analytics",
+      "Process library",
+      "Governance",
+      "Self-service"
+    ],
+    "benefits": [
+      "Unify all automation",
+      "Scale bots enterprise-wide",
+      "Govern automation centrally",
+      "Self-service for teams"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "2499",
+      "enterprise": "7499"
+    },
+    "href": "/services/automation-intelligent-automation-hub",
+    "category": "automation",
+    "popular": true,
+    "industry": "Automation Platform",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "devops-ai-code-generation",
+    "title": "AI Code Generation Platform",
+    "description": "Generate production-ready code with AI. Full-stack development, testing, documentation, and deployment automation.",
+    "icon": "💻",
+    "features": [
+      "Full-stack generation",
+      "Multi-language",
+      "Test generation",
+      "Documentation",
+      "Code review",
+      "Security scanning",
+      "Deployment",
+      "Version control"
+    ],
+    "benefits": [
+      "Generate code 10x faster",
+      "Production-ready output",
+      "Auto-generated tests",
+      "Complete documentation"
+    ],
+    "pricing": {
+      "basic": "49",
+      "pro": "149",
+      "enterprise": "499"
+    },
+    "href": "/services/devops-ai-code-generation",
+    "category": "devops",
+    "popular": true,
+    "industry": "Developer Tools",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "devops-gitops-platform",
+    "title": "GitOps Platform",
+    "description": "Declarative GitOps for Kubernetes and cloud infrastructure. Automated deployments, drift detection, and audit trails.",
+    "icon": "🔄",
+    "features": [
+      "GitOps workflows",
+      "K8s management",
+      "Drift detection",
+      "Auto-sync",
+      "Audit trails",
+      "Multi-cluster",
+      "Policy engine",
+      "Rollback"
+    ],
+    "benefits": [
+      "Git as single source of truth",
+      "Automated deployments",
+      "Detect configuration drift",
+      "Full audit trail"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "449",
+      "enterprise": "1299"
+    },
+    "href": "/services/devops-gitops-platform",
+    "category": "devops",
+    "popular": true,
+    "industry": "GitOps",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-predictive-maintenance-ai",
+    "title": "IoT Predictive Maintenance AI",
+    "description": "Predict equipment failures with IoT sensor data and ML. Vibration analysis, thermal monitoring, and maintenance scheduling.",
+    "icon": "🔧",
+    "features": [
+      "Vibration analysis",
+      "Thermal monitoring",
+      "Failure prediction",
+      "Maintenance scheduling",
+      "Sensor fusion",
+      "Anomaly detection",
+      "Remaining life estimation",
+      "Dashboard"
+    ],
+    "benefits": [
+      "Predict failures 30 days early",
+      "Reduce downtime by 70%",
+      "Optimize maintenance costs",
+      "Extend equipment life"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1799",
+      "enterprise": "5499"
+    },
+    "href": "/services/iot-predictive-maintenance-ai",
+    "category": "iot",
+    "popular": true,
+    "industry": "Industrial IoT",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-asset-tracking-platform",
+    "title": "IoT Asset Tracking Platform",
+    "description": "Real-time asset tracking with GPS, BLE, and RFID. Geofencing, condition monitoring, and fleet management.",
+    "icon": "📍",
+    "features": [
+      "GPS/BLE/RFID tracking",
+      "Real-time location",
+      "Geofencing",
+      "Condition monitoring",
+      "Fleet management",
+      "Route optimization",
+      "Alert system",
+      "Analytics"
+    ],
+    "benefits": [
+      "Track any asset in real-time",
+      "Reduce loss and theft",
+      "Optimize fleet operations",
+      "Monitor asset conditions"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "899",
+      "enterprise": "2999"
+    },
+    "href": "/services/iot-asset-tracking-platform",
+    "category": "iot",
+    "popular": true,
+    "industry": "Asset Tracking",
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown DE 19709"
+    }
   }
 ]
