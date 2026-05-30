@@ -18,8 +18,13 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "@stripe/stripe-js": "^9.7.0",
+    "qrcode.react": "^4.2.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-cookie-consent": "^10.0.1",
+    "react-dom": "^19.2.6",
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",

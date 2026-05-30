@@ -3,6 +3,7 @@ import DonateSection from './components/DonateSection';
 import { whatsNewItems } from './features/featuredItems';
 import Link from 'next/link';
 import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
+import SmartContentSummarizer from './components/ai/SmartContentSummarizer';
 import AdSlot from './components/ai/AdSlot';
 import DependencyBadge from './components/DependencyBadge';
 import fs from 'fs';
@@ -419,6 +420,30 @@ export default function Home() {
             <p className="mt-2 text-sm text-slate-600">
               Agent pipelines for audits, performance checks, quality gates, and deployment-safe
               content evolution.
+            </p>
+          </a>
+          <a
+            href="/it-services"
+            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
+              IT Services
+            </p>
+            <h2 className="mt-2 text-lg font-semibold text-slate-900">IT Infrastructure & Support</h2>
+            <p className="mt-2 text-sm text-slate-600">
+              Expert IT management, strategic consulting, and technical support services.
+            </p>
+          </a>
+          <a
+            href="/micro-saas"
+            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+              Micro SaaS
+            </p>
+            <h2 className="mt-2 text-lg font-semibold text-slate-900">Lightweight SaaS Solutions</h2>
+            <p className="mt-2 text-sm text-slate-600">
+              Focused, lightweight SaaS solutions that solve one problem exceptionally well.
             </p>
           </a>
         </section>

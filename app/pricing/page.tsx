@@ -1,26 +1,9 @@
-import { useEffect, useState } from 'react'
-import { loadStripe } from '@stripe/stripe-js'
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+'use client';
 
 export default function PricingPage() {
-  const [stripe, setStripe] = useState<ReturnType<typeof loadStripe> | null>(null)
-
-  useEffect(() => {
-    stripePromise.then((s) => setStripe(s))
-  }, [])
-
-  const handleCheckout = async (plan: string) => {
-    if (!stripe) return
-    const res = await fetch('/api/checkout_sessions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ plan })
-    })
-    const data = await res.json()
-    const result = await stripe.redirectToCheckout({ sessionId: data.sessionId })
-    if (result.error) alert(result.error.message)
-  }
+  const handleCheckout = (plan: string) => {
+    alert(`The ${plan} plan is coming soon! Please contact us for more details.`);
+  };
 
   return (
     <div>
@@ -36,5 +19,5 @@ export default function PricingPage() {
         <button onClick={() => handleCheckout('enterprise')}>Subscribe Enterprise</button>
       </div>
     </div>
-  )
+  );
 }

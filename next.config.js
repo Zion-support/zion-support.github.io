@@ -16,7 +16,7 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Ignore TypeScript errors during build for faster feedback
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,

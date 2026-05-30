@@ -772,7 +772,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                 </a>
 
                 <a
-                  href="/contact?topic=project&source=nav-desktop"
+                  href="/contact"
                   data-cta-event="cta_primary"
                   data-cta-label="nav_desktop"
                   className="ml-2 inline-flex items-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -1049,7 +1049,7 @@ export default function Navigation({ className, children }: NavigationProps) {
                   </div>
 
                   <a
-                    href="/contact?topic=project&source=nav-mobile"
+                    href="/contact"
                     data-cta-event="cta_primary"
                     data-cta-label="nav_mobile"
                     className="mt-3 block rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 text-center text-base font-semibold text-white transition hover:from-purple-500 hover:to-pink-500"

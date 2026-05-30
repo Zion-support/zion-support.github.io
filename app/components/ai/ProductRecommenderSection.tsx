@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import type { AIProduct } from '../../config/aiCatalog';
 
 type CompanySize = 'small' | 'mid' | 'enterprise';
 type Industry =
@@ -183,7 +182,7 @@ export default function ProductRecommenderSection({
   items,
   sectionId = 'ai-product-recommender',
 }: {
-  items?: AIProduct[];
+  items?: any[];
   sectionId?: string;
 }) {
   const [companySize, setCompanySize] = useState<CompanySize>('mid');
@@ -371,4 +370,3 @@ export default function ProductRecommenderSection({
     </section>
   );
 }
-

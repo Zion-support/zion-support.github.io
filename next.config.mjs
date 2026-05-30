@@ -32,6 +32,11 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
+  webpack: (config, { isServer }) => {
+    // Resolve @/ alias → project root (matches tsconfig.json paths)
+    config.resolve.alias['@'] = config.context;
+    return config;
+  },
   experimental: {
     optimizePackageImports: ['lucide-react'],
     // Reduce memory usage during build

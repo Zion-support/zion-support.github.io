@@ -84,6 +84,72 @@ export const aiServices: Service[] = [
     icon: '🤖',
     href: '/ai-services/process-automation',
     category: 'ai'
+  },
+  {
+    id: 'ai-customer-insights',
+    title: 'AI Customer Insights Platform',
+    description: 'Analyze customer interactions across channels to uncover actionable insights that drive satisfaction, retention, and revenue growth.',
+    features: [
+      'Multi-channel sentiment analysis',
+      'Automated ticket categorization',
+      'Predictive churn detection',
+      'Customer journey mapping',
+      'Real-time alerting',
+    ],
+    benefits: [
+      'Increased customer satisfaction',
+      'Reduced support costs',
+      'Higher retention rates',
+      'Data-driven product decisions',
+      'Proactive issue resolution',
+    ],
+    pricing: {
+      basic: '499',
+      pro: '999',
+      enterprise: '1999',
+    },
+    contactInfo: {
+      website: '/ai-services/customer-insights',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '💡',
+    href: '/ai-services/customer-insights',
+    popular: true,
+    category: 'ai',
+  },
+  {
+    id: 'ai-invoice-processing',
+    title: 'AI Invoice Processing',
+    description: 'Automate invoice processing with AI-powered data extraction, validation, and approval workflows. Reduce manual effort, eliminate errors, and accelerate payment cycles.',
+    features: [
+      'AI Data Extraction',
+      'Validation & Matching',
+      'Approval Workflows',
+      'Payment Integration',
+      'Analytics & Reporting',
+    ],
+    benefits: [
+      'Reduced processing time by 80%',
+      'Eliminated manual data entry errors',
+      'Improved compliance and audit readiness',
+      'Early payment discount capture',
+      'Scalable processing capacity',
+    ],
+    pricing: {
+      basic: '299',
+      pro: '599',
+      enterprise: '1299',
+    },
+    contactInfo: {
+      website: '/micro-saas/ai-invoice-processing',
+      email: 'commercial@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+    },
+    icon: '🧾',
+    href: '/micro-saas/ai-invoice-processing',
+    popular: true,
+    category: 'ai',
   }
 ];
 

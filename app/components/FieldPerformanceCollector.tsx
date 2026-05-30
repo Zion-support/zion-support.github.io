@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { onCLS, onFCP, onFID, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals';
 
 const API_ENDPOINT = '/api/field-performance';
 
@@ -13,7 +13,7 @@ interface Metric {
   id: string;
   page: string;
   timestamp: number;
-  connection?: Navigator['connection'];
+  connection?: any;
   deviceMemory?: number;
 }
 
@@ -63,9 +63,9 @@ export default function FieldPerformanceCollector() {
       });
     });
 
-    onFID((metric) => {
+    onINP((metric) => {
       sendMetric({
-        name: 'FID',
+        name: 'INP',
         value: metric.value,
         rating: metric.rating as 'good' | 'needs-improvement' | 'poor',
         delta: metric.delta,

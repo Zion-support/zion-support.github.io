@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CsvToTable() {
   const [csv, setCsv] = useState('');
-  const [table, setTable] = useState<string[]>([]);
+  const [table, setTable] = useState<string[][]>([]);
 
   const parse = () => {
     const lines = csv.split('\n').filter(l=>l.trim()!=='' );

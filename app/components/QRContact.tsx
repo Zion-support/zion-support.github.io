@@ -1,6 +1,6 @@
 "use client";
 
-import QRCode from "qrcode.react";
+import { QRCodeSVG as QRCode } from "qrcode.react";
 
 export default function QRContact() {
   const contactUrl = typeof window !== "undefined" ? window.location.origin + "/contact" : "https://ziontechgroup.com/contact";
