@@ -14,15 +14,13 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-<<<<<<< HEAD
-=======
 import ROICalculator from '@/components/ROICalculator';
 import PricingEstimator from '@/components/PricingEstimator';
 import WorkflowPredictiveShowcase from '@/components/WorkflowPredictiveShowcase';
 import MultilangVoiceShowcase from '@/components/MultilangVoiceShowcase';
 import AdvancedIntelligenceShowcase from '@/components/AdvancedIntelligenceShowcase';
 import EmailIntelligenceV2Showcase from '@/components/EmailIntelligenceV2Showcase';
->>>>>>> f64a6151 (Add V104-V108: Advanced Email Intelligence Suite)
+import EmailCommandCenter from '@/components/EmailCommandCenter';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1072,6 +1070,9 @@ let list = services;
 
       {/* ── Email Intelligence V104-V108 ── */}
       <EmailIntelligenceV2Showcase />
+
+      {/* ── Email Command Center V109-V113 ── */}
+      <EmailCommandCenter />
 
     <FloatingActionDock />
     </main>
