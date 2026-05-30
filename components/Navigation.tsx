@@ -18,6 +18,10 @@ const Navigation: React.FC = () => {
     { key: 'security',  label: 'Security Services',     emoji: '🔐', color: 'from-red-500 to-orange-500' },
     { key: 'data',      label: 'Data Analytics',        emoji: '📊', color: 'from-green-500 to-emerald-500' },
     { key: 'automation',label: 'Automation',            emoji: '🤖', color: 'from-pink-500 to-rose-500' },
+    { key: 'micro-saas',label: 'Micro-SaaS Products',   emoji: '🚀', color: 'from-amber-500 to-orange-500' },
+    { key: 'devops',    label: 'DevOps & Platform',     emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
+    { key: 'blockchain',label: 'Blockchain & Web3',     emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
+    { key: 'iot',       label: 'IoT & Edge',            emoji: '📡', color: 'from-teal-500 to-green-500' },
   ];
 
   return (
