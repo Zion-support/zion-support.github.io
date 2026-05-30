@@ -5,7 +5,7 @@ import { useState } from 'react';
 const engines = [
   {
     id: 'v104',
-    name: 'V104: Context Memory System',
+    name: 'V104: Context Memory',
     icon: '🧠',
     description: 'Persistent memory of all email conversations with cross-thread context linking, relationship history tracking, and automatic context injection into responses.',
     features: [
@@ -92,6 +92,96 @@ const engines = [
     ],
     color: 'from-yellow-500 to-amber-500',
     useCases: ['Sales Teams', 'Marketing Professionals', 'Customer Success', 'Business Development']
+  },
+  {
+    id: 'v109',
+    name: 'V109: Negotiation Intelligence',
+    icon: '🤝',
+    description: 'Detects negotiation patterns, suggests counter-offers, tracks deal progression, and provides strategic recommendations for optimal outcomes.',
+    features: [
+      'Negotiation phase detection and tracking',
+      'Tactic recognition (anchoring, reciprocity, scarcity)',
+      'Counter-offer suggestions with strategic reasoning',
+      'Deal progression tracking across email threads',
+      'Win probability calculation',
+      'Strategic recommendations based on position analysis',
+      'Historical deal pattern analysis',
+      'Concession tracking and optimization'
+    ],
+    color: 'from-indigo-500 to-blue-500',
+    useCases: ['Sales Teams', 'Procurement', 'Business Development', 'Account Executives']
+  },
+  {
+    id: 'v110',
+    name: 'V110: Sentiment Evolution Tracker',
+    icon: '📈',
+    description: 'Tracks sentiment changes across email threads to detect relationship deterioration, escalation risks, and satisfaction trends over time.',
+    features: [
+      'Sentiment tracking across email threads',
+      'Relationship health monitoring',
+      'Trend analysis (improving/stable/declining/volatile)',
+      'Escalation risk detection and probability scoring',
+      'Satisfaction scoring over time',
+      'Proactive intervention recommendations',
+      'Key phrase extraction for sentiment context',
+      'Emotional tone detection'
+    ],
+    color: 'from-rose-500 to-pink-500',
+    useCases: ['Customer Success', 'Account Management', 'Support Teams', 'Executive Leadership']
+  },
+  {
+    id: 'v111',
+    name: 'V111: Calendar Intelligence',
+    icon: '📅',
+    description: 'Detects meeting requests, extracts time proposals, resolves conflicts, generates scheduling responses, and provides meeting prep summaries.',
+    features: [
+      'Meeting request detection and classification',
+      'Time proposal extraction and parsing',
+      'Conflict detection and resolution suggestions',
+      'Scheduling response generation',
+      'Meeting prep summaries with agenda extraction',
+      'Time zone optimization for global teams',
+      'Attendee management and coordination',
+      'Duration estimation and optimization'
+    ],
+    color: 'from-teal-500 to-cyan-500',
+    useCases: ['Executive Assistants', 'Sales Teams', 'Project Managers', 'Consultants']
+  },
+  {
+    id: 'v112',
+    name: 'V112: Document Intelligence',
+    icon: '📄',
+    description: 'Advanced processing of email attachments: PDF text extraction, image OCR, spreadsheet analysis, document summarization, and risk detection.',
+    features: [
+      'PDF text extraction and content analysis',
+      'Image OCR and text recognition',
+      'Spreadsheet data extraction and parsing',
+      'Document summarization and key points',
+      'Risk indicator detection (legal, financial, compliance)',
+      'Action item extraction from documents',
+      'Key data extraction (dates, amounts, contacts)',
+      'Automatic filing based on content type'
+    ],
+    color: 'from-amber-500 to-orange-500',
+    useCases: ['Legal Teams', 'Finance Departments', 'Compliance Officers', 'Administrative Staff']
+  },
+  {
+    id: 'v113',
+    name: 'V113: Compliance Guardian Pro',
+    icon: '🛡️',
+    description: 'Advanced compliance checking for GDPR, CCPA, HIPAA, SOX, PCI-DSS with automatic audit trails, risk scoring, and remediation recommendations.',
+    features: [
+      'Multi-framework compliance checking (GDPR, CCPA, HIPAA, SOX, PCI-DSS)',
+      'PII/PHI/PCI detection and classification',
+      'Risk scoring and severity assessment',
+      'Automatic audit trail generation',
+      'Legal hold detection and flagging',
+      'Remediation recommendations',
+      'Data subject rights verification',
+      'Consent validation and tracking'
+    ],
+    color: 'from-red-600 to-rose-600',
+    useCases: ['Legal Teams', 'Compliance Officers', 'Data Protection Officers', 'Healthcare Organizations']
   }
 ];
 
