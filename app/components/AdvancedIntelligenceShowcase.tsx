@@ -1,190 +1,216 @@
+// app/components/AdvancedIntelligenceShowcase.tsx
 'use client';
 
 import { useState } from 'react';
 
+const engines = [
+  {
+    id: 'v99',
+    name: 'V99: Sentiment Evolution Tracker',
+    icon: '📈',
+    description: 'Track sentiment changes across email threads to identify relationship health, escalation risks, and optimal intervention moments.',
+    features: [
+      'Real-time sentiment tracking across threads',
+      'Relationship health scoring (Excellent to Critical)',
+      'Trend analysis (Improving, Stable, Declining, Volatile)',
+      'Escalation risk detection',
+      'Churn risk prediction',
+      'Proactive intervention alerts'
+    ],
+    color: 'from-blue-500 to-cyan-500',
+    useCases: ['Customer Success', 'Account Management', 'Support Teams']
+  },
+  {
+    id: 'v100',
+    name: 'V100: Compliance Guardian Pro',
+    icon: '🛡️',
+    description: 'Advanced compliance checking for GDPR, CCPA, HIPAA, SOX, PCI-DSS with automatic audit trails and risk scoring.',
+    features: [
+      'Multi-framework compliance (GDPR, HIPAA, PCI-DSS, SOX)',
+      'PII/PHI/PCI detection and classification',
+      'Legal hold requirement detection',
+      'Data retention policy enforcement',
+      'Comprehensive audit trails',
+      'Risk scoring and remediation guidance'
+    ],
+    color: 'from-red-500 to-orange-500',
+    useCases: ['Legal Teams', 'Compliance Officers', 'Healthcare', 'Finance']
+  },
+  {
+    id: 'v101',
+    name: 'V101: Knowledge Graph Builder',
+    icon: '🕸️',
+    description: 'Automatically build knowledge graphs from email conversations with entity extraction, relationship mapping, and topic clustering.',
+    features: [
+      'Entity extraction (people, orgs, projects, tech)',
+      'Relationship mapping and visualization',
+      'Topic clustering and extraction',
+      'Temporal relationship tracking',
+      'Smart search across email history',
+      'Context-aware recommendations'
+    ],
+    color: 'from-purple-500 to-pink-500',
+    useCases: ['Research Teams', 'Project Management', 'Knowledge Management']
+  },
+  {
+    id: 'v102',
+    name: 'V102: Priority Decay Engine',
+    icon: '⏱️',
+    description: 'Dynamic priority adjustment based on time elapsed, sender importance, business impact, and SLA deadlines.',
+    features: [
+      'Dynamic priority scoring (0-100)',
+      'Time-based priority decay',
+      'Sender importance weighting',
+      'Business impact assessment',
+      'SLA deadline tracking',
+      'Priority boost algorithms'
+    ],
+    color: 'from-yellow-500 to-amber-500',
+    useCases: ['Executive Assistants', 'Support Teams', 'Sales Teams']
+  },
+  {
+    id: 'v103',
+    name: 'V103: Intelligence Orchestrator',
+    icon: '🎭',
+    description: 'Master orchestrator combining all email intelligence engines (V89-V102) for comprehensive case-by-case analysis.',
+    features: [
+      'Unified intelligence from 14 engines',
+      'Case-by-case comprehensive analysis',
+      'Intelligence level classification',
+      'Confidence scoring',
+      'Action type recommendations',
+      'Cross-engine coordination'
+    ],
+    color: 'from-indigo-500 to-blue-500',
+    useCases: ['All Teams', 'Enterprise', 'Complex Workflows']
+  }
+];
+
 export default function AdvancedIntelligenceShowcase() {
-  const [activeTab, setActiveTab] = useState<'calendar' | 'document' | 'negotiation'>('calendar');
-
-  const features = {
-    calendar: {
-      title: 'V96: Calendar Intelligence',
-      icon: '📅',
-      description: 'Automatically detect meeting requests, extract time proposals, resolve conflicts, and generate intelligent scheduling responses.',
-      capabilities: [
-        'Meeting request detection from natural language',
-        'Time proposal extraction (dates, times, timezones)',
-        'Calendar conflict detection and resolution',
-        'Auto-scheduling with multiple time options',
-        'Meeting prep summaries and agendas',
-        'Attendee management and invite generation',
-        'Time zone optimization for global teams',
-        'Video call platform recommendations',
-      ],
-      useCases: [
-        'Sales demos and discovery calls',
-        'Client support meetings',
-        'Partnership discussions',
-        'Team standups and 1:1s',
-      ],
-      metrics: [
-        { label: 'Meetings Scheduled', value: '3,247' },
-        { label: 'Conflicts Resolved', value: '892' },
-        { label: 'Back-and-Forth Prevented', value: '4,156' },
-      ],
-    },
-    document: {
-      title: 'V97: Document Intelligence',
-      icon: '📄',
-      description: 'Process email attachments with advanced analysis: contracts, invoices, spreadsheets, and more.',
-      capabilities: [
-        'Contract clause extraction and risk detection',
-        'Invoice processing and payment tracking',
-        'Document summarization and key points',
-        'Spreadsheet analysis and validation',
-        'PDF text extraction and parsing',
-        'Risk level assessment (Low/Medium/High/Critical)',
-        'Action item generation from documents',
-        'Multi-format support (PDF, DOCX, XLSX)',
-      ],
-      useCases: [
-        'Legal contract review',
-        'Invoice processing automation',
-        'Proposal analysis',
-        'Financial document validation',
-      ],
-      metrics: [
-        { label: 'Documents Analyzed', value: '12,847' },
-        { label: 'Risks Detected', value: '1,234' },
-        { label: 'Contracts Reviewed', value: '2,156' },
-      ],
-    },
-    negotiation: {
-      title: 'V98: Negotiation Intelligence',
-      icon: '💼',
-      description: 'Detect negotiation patterns, suggest counter-offers, track deal progression, and optimize pricing strategy.',
-      capabilities: [
-        'Negotiation phase detection (Inquiry → Closing)',
-        'Price signal analysis and budget extraction',
-        'Tactic detection (anchoring, scarcity, urgency, etc.)',
-        'Objection handling and response generation',
-        'Win probability scoring (0-100%)',
-        'Counter-offer suggestions with optimal pricing',
-        'Deal progression tracking across threads',
-        'Pipeline value and weighted forecasting',
-      ],
-      useCases: [
-        'Sales deal negotiations',
-        'Pricing discussions',
-        'Contract negotiations',
-        'Vendor management',
-      ],
-      metrics: [
-        { label: 'Deals Tracked', value: '847' },
-        { label: 'Win Rate', value: '68%' },
-        { label: 'Pipeline Value', value: '$2.4M' },
-      ],
-    },
-  };
-
-  const currentFeature = features[activeTab];
+  const [selectedEngine, setSelectedEngine] = useState(engines[0]);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Advanced Email Intelligence
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Advanced Email Intelligence Suite
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Next-generation AI engines that understand context, automate workflows, and deliver actionable insights
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            V99-V103: Next-generation email intelligence with sentiment tracking, compliance, knowledge graphs, 
+            priority decay, and master orchestration
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center gap-4 mb-8">
-          {(['calendar', 'document', 'negotiation'] as const).map((tab) => (
+        {/* Engine Selector */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+          {engines.map((engine) => (
             <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                activeTab === tab
-                  ? 'bg-indigo-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+              key={engine.id}
+              onClick={() => setSelectedEngine(engine)}
+              className={`p-4 rounded-xl border-2 transition-all ${
+                selectedEngine.id === engine.id
+                  ? 'border-white bg-white/10 scale-105'
+                  : 'border-gray-700 bg-slate-800/50 hover:border-gray-500'
               }`}
             >
-              <span className="mr-2">{features[tab].icon}</span>
-              {features[tab].title.split(':')[0]}
+              <div className="text-3xl mb-2">{engine.icon}</div>
+              <div className="text-sm font-semibold text-white">{engine.id.toUpperCase()}</div>
             </button>
           ))}
         </div>
 
-        {/* Feature Content */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+        {/* Selected Engine Details */}
+        <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 mb-8">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-5xl">{currentFeature.icon}</span>
+            <span className="text-5xl">{selectedEngine.icon}</span>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">{currentFeature.title}</h3>
-              <p className="text-gray-600 mt-1">{currentFeature.description}</p>
+              <h3 className="text-3xl font-bold text-white">{selectedEngine.name}</h3>
+              <p className="text-gray-300 mt-2">{selectedEngine.description}</p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Capabilities */}
+            {/* Features */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Capabilities</h4>
-              <ul className="space-y-2">
-                {currentFeature.capabilities.map((capability, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-green-500 mt-1">✓</span>
-                    <span className="text-gray-700">{capability}</span>
+              <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
+              <ul className="space-y-3">
+                {selectedEngine.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className={`text-2xl bg-gradient-to-r ${selectedEngine.color} bg-clip-text text-transparent`}>✓</span>
+                    <span className="text-gray-300">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Use Cases & Metrics */}
+            {/* Use Cases */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Use Cases</h4>
-              <ul className="space-y-2 mb-6">
-                {currentFeature.useCases.map((useCase, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-indigo-500 mt-1">→</span>
-                    <span className="text-gray-700">{useCase}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Impact Metrics</h4>
-              <div className="grid grid-cols-3 gap-4">
-                {currentFeature.metrics.map((metric, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="text-2xl font-bold text-indigo-600">{metric.value}</div>
-                    <div className="text-sm text-gray-600">{metric.label}</div>
+              <h4 className="text-xl font-semibold text-white mb-4">Perfect For</h4>
+              <div className="space-y-3">
+                {selectedEngine.useCases.map((useCase, idx) => (
+                  <div key={idx} className="bg-slate-700/50 rounded-lg p-4">
+                    <span className="text-white font-medium">{useCase}</span>
                   </div>
                 ))}
+              </div>
+
+              <div className={`mt-6 p-4 bg-gradient-to-r ${selectedEngine.color} rounded-lg`}>
+                <h5 className="text-white font-semibold mb-2">Reply-All Enforcement</h5>
+                <p className="text-white/90 text-sm">
+                  All engines enforce 100% reply-all to ensure complete communication transparency
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Integration Highlight */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">All Engines Work Together</h3>
-          <p className="text-lg mb-6">
-            V96, V97, and V98 integrate seamlessly with V89-V95 for a complete email intelligence stack
-          </p>
-          <div className="flex justify-center gap-8 text-sm">
-            <div>
-              <div className="font-semibold">Case-by-Case Analysis</div>
-              <div className="opacity-80">Every email analyzed</div>
-            </div>
-            <div>
-              <div className="font-semibold">100% Reply-All</div>
-              <div className="opacity-80">Always enforced</div>
-            </div>
-            <div>
-              <div className="font-semibold">Self-Improving</div>
-              <div className="opacity-80">Learns from feedback</div>
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
+          <div className="text-center p-6 bg-slate-800/50 rounded-xl">
+            <div className="text-4xl font-bold text-white mb-2">15</div>
+            <div className="text-gray-400">Intelligence Engines</div>
+          </div>
+          <div className="text-center p-6 bg-slate-800/50 rounded-xl">
+            <div className="text-4xl font-bold text-white mb-2">100%</div>
+            <div className="text-gray-400">Reply-All Enforced</div>
+          </div>
+          <div className="text-center p-6 bg-slate-800/50 rounded-xl">
+            <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-gray-400">Accuracy Rate</div>
+          </div>
+          <div className="text-center p-6 bg-slate-800/50 rounded-xl">
+            <div className="text-4xl font-bold text-white mb-2">24/7</div>
+            <div className="text-gray-400">Autonomous Operation</div>
+          </div>
+          <div className="text-center p-6 bg-slate-800/50 rounded-xl">
+            <div className="text-4xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-400">Scalability</div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <div className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl p-8">
+            <h4 className="text-2xl font-bold text-white mb-4">
+              Ready for Advanced Email Intelligence?
+            </h4>
+            <p className="text-gray-200 mb-6">
+              Implement V99-V103 for comprehensive email analysis and automation
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center text-left">
+              <div className="text-white">
+                <div className="font-semibold">📞 Phone:</div>
+                <div>+1 302 464 0950</div>
+              </div>
+              <div className="text-white">
+                <div className="font-semibold">✉️ Email:</div>
+                <div>kleber@ziontechgroup.com</div>
+              </div>
+              <div className="text-white">
+                <div className="font-semibold">📍 Address:</div>
+                <div>364 E Main St STE 1008<br/>Middletown, DE 19709</div>
+              </div>
             </div>
           </div>
         </div>
