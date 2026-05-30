@@ -108,6 +108,8 @@ export default function SchemaOrg({ type = 'Organization', data }: SchemaOrgProp
   return (
     <script
       type="application/ld+json"
+      // Safe: controlled schema data with HTML entity escaping, not user input
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: JSON.stringify(getSchema()).replace(/</g, '\\u003c') }}
     />
   );
