@@ -14,7 +14,8 @@ export const metadata: Metadata = {
       'Predictive maintenance, crew scheduling, cargo optimization, and safety analytics. How airlines and aerospace companies use AI for operational excellence.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-in-aviation-and-aerospace-operations',
-  },
+  
+    images: [{ url: 'https://ziontechgroup.com/blog/ai-in-aviation-and-aerospace-operations/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
 };
 
 export default function Page() {
@@ -35,7 +36,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <SiteBreadcrumbs
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

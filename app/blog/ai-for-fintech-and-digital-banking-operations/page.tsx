@@ -14,7 +14,8 @@ export const metadata: Metadata = {
       'Credit scoring, fraud prevention, customer onboarding, and regulatory compliance. AI-powered financial services at scale.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-for-fintech-and-digital-banking-operations',
-  },
+  
+    images: [{ url: 'https://ziontechgroup.com/blog/ai-for-fintech-and-digital-banking-operations/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
 };
 
 export default function Page() {
@@ -35,7 +36,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <SiteBreadcrumbs
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

@@ -14,7 +14,8 @@ export const metadata: Metadata = {
       'Demand forecasting, assortment optimization, personalization engines, and loss prevention. Data-driven retail in the age of AI.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-for-retail-analytics-and-personalization',
-  },
+  
+    images: [{ url: 'https://ziontechgroup.com/blog/ai-for-retail-analytics-and-personalization/og.png', width: 1200, height: 630, alt: 'Zion Tech Group' }],},
 };
 
 export default function Page() {
@@ -35,7 +36,7 @@ export default function Page() {
       </div>
 
       <article className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-        <SiteBreadcrumbs
+        <SiteBreadcrumbs items={[{label:'Home',href:'/'},{label:'Blog',href:'/blog'}]}
           items={[
             { label: 'Home', href: '/' },
             { label: 'Blog', href: '/blog' },

@@ -12,26 +12,12 @@ const CAT_LABELS: Record<string,string> = {
 
 interface PageProps { params: Promise<{ id: string }>; }
 
-// Note: All pages are statically generated at build time (output: export)
-// Top 50 services are included to keep build time reasonable
-
 export async function generateStaticParams() {
-  // Generate top 200 most important/popular services
-  const sorted = [...allServices].sort((a, b) => {
-    const scoreA = (a.features?.length || 0) * 3 + (a.benefits?.length || 0) * 2 + (a.popular ? 50 : 0);
-    const scoreB = (b.features?.length || 0) * 3 + (b.benefits?.length || 0) * 2 + (b.popular ? 50 : 0);
-    return scoreB - scoreA;
-  });
-  const top = sorted.slice(0, 200);
   const params: { id: string }[] = [];
-  const seen = new Set<string>();
-  for (const service of top) {
-    if (seen.has(service.id)) continue;
-    seen.add(service.id);
-    params.push({ id: service.id });
+  for (const service of allServices) {
+    params.push({ id: service.id });               // kebab / underscore as stored
     if (service.id.includes('_')) {
-      const alt = service.id.replace(/_/g, '-');
-      if (!seen.has(alt)) { seen.add(alt); params.push({ id: alt }); }
+      params.push({ id: service.id.replace(/_/g, '-') }); // kebab fallback
     }
   }
   return params;
@@ -44,6 +30,19 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: service.title,
     description: service.description || `Explore ${service.title} at Zion Tech Group — enterprise-grade solutions.`,
+    openGraph: {
+      title: service.title,
+      description: service.description || '',
+      type: 'website',
+      url: `https://ziontechgroup.com/services/${service.id}`,
+      images: [{ url: `https://ziontechgroup.com/services/${service.id}/og.png`, width: 1200, height: 630, alt: service.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: service.title,
+      description: service.description || '',
+      images: [`https://ziontechgroup.com/services/${service.id}/og.png`],
+    },
   };
 }
 

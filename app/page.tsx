@@ -1,11 +1,14 @@
 // app/page.tsx — Home / Landing Page
 'use client';
 
+import type { Metadata } from 'next';
+
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
-import AnimatedCounter from '@/components/AnimatedCounter';
+import { searchServices } from './data/searchServices';
 import type { Service } from './data/servicesData';
+import Footer from '@/components/Footer';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
@@ -13,18 +16,6 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
-import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-import V204V208Showcase from '@/components/V204V208Showcase';
-import V251V255Showcase from '@/components/V251V255Showcase';
-import V256V260Showcase from '@/components/V256V260Showcase';
-import V261V265Showcase from '@/components/V261V265Showcase';
-import V266V270Showcase from '@/components/V266V270Showcase';
-import V271V275Showcase from '@/components/V271V275Showcase';
-import V276V280Showcase from '@/components/V276V280Showcase';
-import V281V285Showcase from '@/components/V281V285Showcase';
-import V286V290Showcase from '@/components/V286V290Showcase';
-import V291V295Showcase from '@/components/V291V295Showcase';
-import V296V300Showcase from '@/components/V296V300Showcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -36,11 +27,6 @@ const catAccent: Record<string, string> = {
   security:  '#fb923c',
   data:      '#34d399',
   automation:'#fb7185',
-  'micro-saas': '#fbbf24',
-  devops:    '#22d3ee',
-  blockchain: '#fbbf24',
-  iot:       '#2dd4bf',
-  'email-intelligence': '#a78bfa',
 };
 
 const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || CATEGORIES[0];
@@ -54,17 +40,12 @@ const STAT_SLA      = 'SLA Uptime Guarantee';
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
 
 const CATEGORIES = [
-  { key: 'ai',        label: 'AI Services',          emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
-  { key: 'it',        label: 'IT Services',            emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
-  { key: 'cloud',     label: 'Cloud Services',          emoji: '☁️', color: 'from-sky-400 to-blue-600' },
-  { key: 'security',  label: 'Security Services',       emoji: '🔐', color: 'from-red-500 to-orange-500' },
-  { key: 'data',      label: 'Data Analytics',          emoji: '📊', color: 'from-green-500 to-emerald-500' },
-  { key: 'automation',label: 'Automation',              emoji: '🤖', color: 'from-pink-500 to-rose-500' },
-  { key: 'micro-saas',label: 'Micro-SaaS Products',     emoji: '🚀', color: 'from-amber-500 to-orange-500' },
-  { key: 'devops',    label: 'DevOps and Platform',     emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
-  { key: 'blockchain',label: 'Blockchain and Web3',     emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
-  { key: 'iot',       label: 'IoT and Edge',            emoji: '📡', color: 'from-teal-500 to-green-500' },
-  { key: 'email-intelligence', label: 'Email Intelligence', emoji: '📧', color: 'from-violet-500 to-purple-600' },
+  { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
+  { key: 'it',        label: 'IT Services',         emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
+  { key: 'cloud',     label: 'Cloud Services',       emoji: '☁️', color: 'from-sky-400 to-blue-600' },
+  { key: 'security',  label: 'Security Services',     emoji: '🔐', color: 'from-red-500 to-orange-500' },
+  { key: 'data',      label: 'Data Analytics',        emoji: '📊', color: 'from-green-500 to-emerald-500' },
+  { key: 'automation',label: 'Automation',            emoji: '🤖', color: 'from-pink-500 to-rose-500' },
 ];
 
 // Per-industry service-category mapping (derived from service catalog)
@@ -106,7 +87,7 @@ export default function HomePage() {
     return acc;
   }, [services]);
 
-  const serviceCount = allServices.length;
+  const serviceCount = searchServices.length;
     const [quickView, setQuickView] = useState<Service | null>(null);
     const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
     const [search, setSearch] = useState('');
@@ -114,11 +95,11 @@ export default function HomePage() {
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
-    { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
-    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
+    { value: `${serviceCount}+`, label: STAT_SERVICES },
+    { value: '6 Categories', label: 'AI · IT · Cloud · Security · Data · Automation' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
-  ];
+    ];
 
   // Fetch release-signal dataset on mount
   useEffect(() => {
@@ -284,7 +265,7 @@ let list = services;
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
+            <ServiceCounter /> real-world AI, IT, cloud, security, and automation services — from machine learning to cybersecurity, CRM automation to blockchain.
             Get a free, custom proposal in minutes.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -295,8 +276,8 @@ let list = services;
                 {`🛠️ Explore All ${serviceCount}+ Services`}
               </Link>
               <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
-              </a>
+                              ☎ +1 302 464 0950
+                            </a>
             </div>
 
             {/* ── Secondary CTAs — extra discovery links ── */}
@@ -314,7 +295,7 @@ let list = services;
 
             {/* Trust badges */}
             <div className="flex flex-wrap justify-center gap-8 text-slate-400 text-sm mb-12">
-              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`${serviceCount}+ Services`].map(t => (
+              {['BBB Accredited','100% US-Based Team','SLA Guaranteed','HIPAA Compliant'].map(t => (
                 <div key={t} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -332,36 +313,7 @@ let list = services;
                   <div className="text-sm text-slate-400 mt-1">{s.label}</div>
                 </div>
               ))}
-            </div>
 
-            {/* Trust Badges */}
-            <div className="mt-14 flex flex-wrap justify-center gap-4">
-              {[
-                { icon: '🏆', text: 'Industry Leading' },
-                { icon: '🔒', text: 'SOC 2 Compliant' },
-                { icon: '⚡', text: '24/7 Support' },
-                { icon: '🇺🇸', text: 'US-Based Team' },
-                { icon: '🔐', text: 'HIPAA Ready' },
-                { icon: '✅', text: '99.9% SLA' },
-              ].map((badge, i) => (
-                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/40 border border-slate-700/40 text-sm text-slate-300">
-                  <span className="text-base">{badge.icon}</span>
-                  <span>{badge.text}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* ── Contact Bar ── */}
-            <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm">
-              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
-                ✉ kleber@ziontechgroup.com
-              </a>
-              <a href="tel:+130****0950" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
-                ☎ +1 302 464 0950
-              </a>
-              <span className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-400">
-                📍 364 E Main St STE 1008, Middletown, DE 19709
-              </span>
             </div>
 
             {/* ── Service Pipeline — live stage counts ── */}
@@ -378,36 +330,20 @@ let list = services;
                   amber:   'from-amber-500/20 to-yellow-500/10 border-amber-500/30',
                 };
                 return (
-                  <div key={s.stage}
-                    className={`block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 min-w-[140px]`}
+                  <Link key={s.stage} href={`/services/stage/${s.stage}/`}
+                    className={`group block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 hover:scale-[1.04] hover:border-opacity-60 transition-all min-w-[140px]`}
                   >
                     <div className="text-2xl mb-1">{s.emoji}</div>
                     <div className="text-xl font-bold text-white">{n}</div>
                     <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">{s.label}</div>
                     <div className="text-[10px] text-slate-500 mt-0.5">{s.sub}</div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
           </div>
         </div>
       </section>
-
-      {/* ── Service Match Quiz — Interactive AI Tool ── */}
-      <ServiceMatchQuiz />
-
-      {/* ── V204-V208 Email Intelligence Showcase ── */}
-      <V204V208Showcase />
-      <V251V255Showcase />
-      <V256V260Showcase />
-      <V261V265Showcase />
-      <V266V270Showcase />
-      <V271V275Showcase />
-      <V276V280Showcase />
-      <V281V285Showcase />
-      <V286V290Showcase />
-      <V291V295Showcase />
-      <V296V300Showcase />
 
       {/* ── How It Works ── */}
       <section className="py-20">
@@ -445,7 +381,7 @@ let list = services;
             {CATEGORIES.map(cat => {
               const n = byCategory[cat.key]?.length ?? 0;
               return (
-              <Link key={cat.key} href={`/services/?category=${cat.key}`}
+              <Link key={cat.key} href={`/services?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{ background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)` }}/>
@@ -530,7 +466,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services/?category=${cat.key}`}
+                  href={`/services?category=${cat.key}`}
                   className="block group"
                 >
                   <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden mb-3">
@@ -601,7 +537,7 @@ let list = services;
                 {(byCategory[cat.key] || []).length > 30 && (
                   <p className="text-slate-500 text-xs mt-2 text-center">
                     Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
-                    {' '}<Link href={`/services/?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
+                    {' '}<Link href={`/services?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
                   </p>
                 )}
               </div>
@@ -626,21 +562,21 @@ let list = services;
                 title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
                 date: '2026-04-28',
                 excerpt: 'Discover five battle-tested AI automation patterns that cut operational overhead and accelerate enterprise workflow throughput — with real-world implementation examples.',
-                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization/',
+                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization',
                 emoji: '🤖',
               },
               {
                 title: 'AI Agent Frameworks for Business Automation',
                 date: '2026-04-21',
                 excerpt: 'A deep dive into AI agent architectures: LLM orchestration, tool use, memory, and multi-agent coordination — what actually works in production.',
-                slug: '/blog/ai-agent-frameworks-for-business-automation/',
+                slug: '/blog/ai-agent-frameworks-for-business-automation',
                 emoji: '🧠',
               },
               {
                 title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
                 date: '2026-04-14',
                 excerpt: 'Machine learning approaches to FinOps: workload-aware rightsizing, anomaly detection for runaway cloud bills, and predictive capacity planning.',
-                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/',
+                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning',
                 emoji: '💡',
               },
             ].map((post: any) => (
@@ -773,7 +709,7 @@ let list = services;
               return (
               <Link
                 key={cat.key}
-                href={`/services/?category=${cat.key}`}
+                href={`/services?category=${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden"
               >
                 {/* Gradient border glow on hover */}
@@ -846,7 +782,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services/?category=${cat.key}`}
+                  href={`/services?category=${cat.key}`}
                   className="group relative flex flex-col items-center gap-2 p-5 rounded-2xl border border-slate-700/60 bg-slate-800/40 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all"
                 >
                   <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
@@ -911,8 +847,8 @@ let list = services;
             {[
               { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-blue-500/20 to-cyan-500/10' },
+              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-green-500/20 to-emerald-500/10' },
             ].map((badge, i) => (
               <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
@@ -958,7 +894,7 @@ let list = services;
             {[
               {
                 name: 'AI Service Router',
-                path: '/tools/ai-service-router/',
+                path: '/tools/ai-service-router',
                 emoji: '🧭',
                 gradient: 'from-purple-500 to-indigo-500',
                 desc: 'Type your need in plain language — AI matches you to the top services in real time. Zero server calls.',
@@ -967,25 +903,25 @@ let list = services;
               },
               {
                 name: 'ROI Calculator',
-                path: '/tools/roi-calculator/',
+                path: '/tools/roi-calculator',
                 emoji: '📈',
-                gradient: 'from-purple-500 to-pink-500',
+                gradient: 'from-emerald-500 to-teal-500',
                 desc: 'Estimate return on investment across AI, Automation, Cloud, Data, IT, or Security with category-specific lift multipliers.',
                 tag: '',
                 features: ['Small / Mid / Enterprise', '6-category lift model', 'Instant annual projection'],
               },
               {
                 name: 'Service Comparison',
-                path: '/tools/service-comparison/',
+                path: '/tools/service-comparison',
                 emoji: '⚖️',
-                gradient: 'from-purple-500 to-blue-600',
+                gradient: 'from-cyan-500 to-blue-600',
                 desc: 'Pick up to 3 services side-by-side on Overview, Features, Pricing, Benefits, and Timeline with full detail expansion.',
                 tag: '',
                 features: ['Up to 3-way compare', '5-tab deep breakdown', 'Full catalog browse'],
               },
               {
                 name: 'Service Recommender',
-                path: '/tools/service-recommender/',
+                path: '/tools/service-recommender',
                 emoji: '🎯',
                 gradient: 'from-amber-500 to-orange-500',
                 desc: 'Answer 4 quick qualification questions and get a personalised ranked shortlist of services matched to your industry and use case.',
@@ -994,7 +930,7 @@ let list = services;
               },
               {
                 name: 'Port Scanner',
-                path: '/tools/port-scanner/',
+                path: '/tools/port-scanner',
                 emoji: '🔍',
                 gradient: 'from-red-500 to-orange-500',
                 desc: 'Free online port scanner — enter a hostname or IP and instantly see which ports are open, filtered, or closed.',
@@ -1003,9 +939,9 @@ let list = services;
               },
               {
                 name: 'SSL Certificate Checker',
-                path: '/tools/ssl-checker/',
+                path: '/tools/ssl-checker',
                 emoji: '🔒',
-                gradient: 'from-purple-500 to-green-500',
+                gradient: 'from-green-500 to-emerald-500',
                 desc: 'Check TLS certificate validity, issuer, expiry date, and chain depth for any domain — free, no account needed.',
                 tag: 'Free tool',
                 features: ['Expiry & issuer info', 'Chain depth check', 'Domain look-up'],
@@ -1056,8 +992,8 @@ let list = services;
             {INDUSTRIES.map(ind => {
               const catKey = INDUSTRY_CATS[ind.key] || ind.key.split('-')[0];
               return (
-                <Link key={ind.key}
-                  href={`/services/?category=${catKey}`}
+                <a key={ind.key}
+                  href={`/services?category=${catKey}`}
                   className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-3">
@@ -1071,13 +1007,14 @@ let list = services;
                       style={{ width: '100%', background: `linear-gradient(90deg, ${ind.color})` }}
                     />
                   </div>
-                </Link>
+                </a>
               );
             })}
           </div>
         </div>
       </section>
     <FloatingActionDock />
+    <Footer />
     </main>
   );
 }

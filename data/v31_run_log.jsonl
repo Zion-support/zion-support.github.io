@@ -1,0 +1,9 @@
+{"ts": "2026-05-30T06:22:53.866373+00:00", "sender": "John <john@client.com>", "subject": "How much does the chatbot cost?", "action": "draft_sales", "reply_all": false, "quality": 100.0, "elapsed_ms": 6.6}
+{"ts": "2026-05-30T06:22:53.868058+00:00", "sender": "Sarah <sarah@partner.io>", "subject": "Partnership proposal", "action": "draft_sales", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.6}
+{"ts": "2026-05-30T06:22:53.868828+00:00", "sender": "Angry <upset@client.com>", "subject": "UNACCEPTABLE - refund now!", "action": "escalate", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.4}
+{"ts": "2026-05-30T06:22:53.869525+00:00", "sender": "notifications@github.com", "subject": "[GitHub] Issue opened", "action": "draft_support", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.4}
+{"ts": "2026-05-30T06:22:53.870396+00:00", "sender": "Maria <maria@empresa.com>", "subject": "Hola - necesito una cotización", "action": "draft_general", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.4}
+{"ts": "2026-05-30T06:22:53.871055+00:00", "sender": "Newsletter <news@company.com>", "subject": "Weekly Digest", "action": "draft_general", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.4}
+{"ts": "2026-05-30T06:22:53.871796+00:00", "sender": "Boss <boss@bigcorp.com>", "subject": "Team: Q3 Planning Meeting", "action": "draft_sales", "reply_all": true, "quality": 100.0, "elapsed_ms": 0.5}
+{"ts": "2026-05-30T06:35:27.919380+00:00", "sender": "Test <t@x.com>", "subject": "Pricing for AI chatbot", "action": "draft_sales", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.5}
+{"ts": "2026-05-30T06:35:27.920517+00:00", "sender": "Angry <a@x.com>", "subject": "UNACCEPTABLE service", "action": "escalate", "reply_all": false, "quality": 100.0, "elapsed_ms": 0.4}
