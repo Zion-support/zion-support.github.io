@@ -28408,5 +28408,581 @@
     "category": "iot",
     "popular": true,
     "industry": "Agriculture"
+  },
+  {
+    "id": "ai-predictive-quality",
+    "title": "AI Predictive Quality Manufacturing",
+    "description": "ML-based defect prediction in manufacturing: analyze process parameters, sensor data, and historical quality to predict defects before they occur. Reduces scrap rate 45%.",
+    "icon": "🔬",
+    "features": [
+      "Real-time process parameter analysis",
+      "Sensor data fusion and anomaly detection",
+      "Defect prediction 30 minutes in advance",
+      "Root cause analysis (which parameter caused it)",
+      "SPC chart auto-generation",
+      "ERP/MES integration (SAP, Oracle)",
+      "Edge deployment for low-latency inference",
+      "Dashboard per line/shift/operator"
+    ],
+    "benefits": [
+      "Reduce scrap rate by 45%",
+      "Predict defects 30 min before they happen",
+      "Automatic root cause analysis",
+      "ROI positive within 3 months"
+    ],
+    "pricing": {
+      "basic": "2,999",
+      "pro": "6,499",
+      "enterprise": "14,999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-predictive-quality",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-predictive-quality",
+    "category": "ai",
+    "popular": true,
+    "industry": "Manufacturing"
+  },
+  {
+    "id": "ai-video-surveillance",
+    "title": "AI Video Surveillance Analytics",
+    "description": "Smart video analytics: object detection, facial recognition, crowd analysis, and anomaly detection. On-premise or cloud deployment. GDPR compliant.",
+    "icon": "📹",
+    "features": [
+      "Real-time object and vehicle detection",
+      "Facial recognition (opt-in, GDPR compliant)",
+      "Crowd density and flow analysis",
+      "Intrusion detection and perimeter security",
+      "License plate recognition (ANPR)",
+      "Behavioral anomaly detection",
+      "On-premise or cloud deployment",
+      "VMS integration (Milestone, Genetec, Avigilon)"
+    ],
+    "benefits": [
+      "Reduce security staff workload by 60%",
+      "Detect threats in real-time",
+      "GDPR compliant facial recognition",
+      "Integrate with existing camera infrastructure"
+    ],
+    "pricing": {
+      "basic": "1,499",
+      "pro": "3,999",
+      "enterprise": "9,999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-video-surveillance",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-video-surveillance",
+    "category": "ai",
+    "popular": true,
+    "industry": "Security"
+  },
+  {
+    "id": "ai-speech-recognition",
+    "title": "AI Speech Recognition & Transcription",
+    "description": "Enterprise speech-to-text: 99%+ accuracy, 100+ languages, real-time and batch processing. Zoom, Teams, and phone system integration. HIPAA compliant.",
+    "icon": "🎤",
+    "features": [
+      "99%+ accuracy speech-to-text",
+      "100+ languages supported",
+      "Real-time transcription (<200ms latency)",
+      "Speaker diarization (who said what)",
+      "Punctuation and formatting",
+      "Zoom, Teams, phone system integration",
+      "HIPAA compliant for healthcare",
+      "Custom vocabulary training"
+    ],
+    "benefits": [
+      "99%+ accuracy across 100+ languages",
+      "Real-time transcription <200ms latency",
+      "HIPAA compliant - healthcare ready",
+      "Train custom vocabularies for your domain"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1,299"
+    },
+    "contactInfo": {
+      "website": "/services/ai-speech-recognition",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-speech-recognition",
+    "category": "ai",
+    "popular": true,
+    "industry": "All"
+  },
+  {
+    "id": "ai-predictive-hiring",
+    "title": "AI Predictive Hiring & Talent Match",
+    "description": "AI-powered recruiting: resume screening, candidate-job matching, interview scheduling, and offer acceptance prediction. Reduces time-to-hire 50%.",
+    "icon": "🎯",
+    "features": [
+      "AI resume screening and ranking",
+      "Candidate-job matching (semantic search)",
+      "Interview scheduling automation",
+      "Offer acceptance prediction",
+      "Diversity analytics and bias detection",
+      "ATS integration (Greenhouse, Lever, iCIMS)",
+      "Background check automation",
+      "Onboarding checklist generation"
+    ],
+    "benefits": [
+      "Reduce time-to-hire by 50%",
+      "Improve quality of hire by 30%",
+      "Bias detection for fair hiring",
+      "Integrate with existing ATS systems"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1,299",
+      "enterprise": "2,999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-predictive-hiring",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-predictive-hiring",
+    "category": "ai",
+    "popular": true,
+    "industry": "HR"
+  },
+  {
+    "id": "it-quantum-computing",
+    "title": "Quantum Computing Consulting & Development",
+    "description": "Quantum algorithm development and consulting: optimization, ML, cryptography, and simulation. IBM Q, Google Cirq, and D-Wave certified.",
+    "icon": "⚛️",
+    "features": [
+      "Quantum algorithm design and development",
+      "Quantum machine learning (QML)",
+      "Optimization problem solving (QAOA, VQE)",
+      "Quantum cryptography and key distribution",
+      "Quantum simulation (chemistry, materials)",
+      "IBM Q, Google Cirq, D-Wave development",
+      "Hybrid classical-quantum workflows",
+      "Staff training and workshops"
+    ],
+    "benefits": [
+      "Solve previously intractable problems",
+      "Quantum advantage for optimization",
+      "Access to IBM/Google quantum hardware",
+      "Hybrid workflows - best of both worlds"
+    ],
+    "pricing": {
+      "basic": "9,999",
+      "pro": "24,999",
+      "enterprise": "59,999"
+    },
+    "contactInfo": {
+      "website": "/services/it-quantum-computing",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-quantum-computing",
+    "category": "it",
+    "popular": true,
+    "industry": "Technology"
+  },
+  {
+    "id": "it-satellite-iot",
+    "title": "Satellite IoT Connectivity Platform",
+    "description": "Global IoT connectivity via satellite: asset tracking, remote monitoring, and SCADA connectivity. Works where cellular doesn't. ORBCOMM and Iridium certified.",
+    "icon": "🛰️",
+    "features": [
+      "Global satellite IoT connectivity",
+      "Asset tracking (maritime, mining, oil/gas)",
+      "Remote SCADA/PLC connectivity",
+      "Environmental monitoring (weather, seismic)",
+      "Low-power wide-area (LPWAN) satellite",
+      "ORBCOMM and Iridium device certification",
+      "Edge compute on satellite gateway",
+      "API for device management and data"
+    ],
+    "benefits": [
+      "Connect anywhere on Earth",
+      "Track assets globally (maritime, mining, oil/gas)",
+      "Works where cellular doesn't reach",
+      "Low-power - 10-year battery life"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1,499",
+      "enterprise": "3,999"
+    },
+    "contactInfo": {
+      "website": "/services/it-satellite-iot",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-satellite-iot",
+    "category": "it",
+    "popular": true,
+    "industry": "Logistics"
+  },
+  {
+    "id": "it-digital-twin",
+    "title": "Digital Twin & Simulation Platform",
+    "description": "Create digital twins of physical assets, processes, and entire factories. Real-time simulation, predictive maintenance, and what-if analysis. Siemens and PTC alternative.",
+    "icon": "🖥️",
+    "features": [
+      "3D digital twin creation from CAD/point clouds",
+      "Real-time data integration (IoT, SCADA, ERP)",
+      "Predictive maintenance simulation",
+      "Process optimization (what-if scenarios)",
+      "Factory layout and logistics simulation",
+      "Energy consumption modeling",
+      "Siemens NX, PTC ThingWorx integration",
+      "Cloud or on-premise deployment"
+    ],
+    "benefits": [
+      "Optimize operations without physical changes",
+      "Predict failures before they happen",
+      "Reduce energy costs by 20%",
+      "Siemens/PTC alternative at 1/5 the cost"
+    ],
+    "pricing": {
+      "basic": "4,999",
+      "pro": "12,499",
+      "enterprise": "29,999"
+    },
+    "contactInfo": {
+      "website": "/services/it-digital-twin",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-digital-twin",
+    "category": "it",
+    "popular": true,
+    "industry": "Manufacturing"
+  },
+  {
+    "id": "saas-ai-accounting",
+    "title": "AI Accounting & Bookkeeping",
+    "description": "Automated bookkeeping: receipt scanning, categorization, reconciliation, and financial reporting. Xero and QuickBooks alternative with AI that learns your books.",
+    "icon": "📊",
+    "features": [
+      "AI receipt and invoice scanning",
+      "Automatic categorization (learns from your rules)",
+      "Bank reconciliation (automatic matching)",
+      "Financial reporting (P&L, balance sheet, cash flow)",
+      "Multi-entity consolidation",
+      "Sales tax calculation and filing",
+      "Xero/QuickBooks data import",
+      "CPA review portal"
+    ],
+    "benefits": [
+      "Automate 90% of bookkeeping tasks",
+      "AI learns your categorization rules",
+      "CPA-ready financial statements",
+      "Xero/QuickBooks alternative at half the price"
+    ],
+    "pricing": {
+      "basic": "49",
+      "pro": "99",
+      "enterprise": "199"
+    },
+    "contactInfo": {
+      "website": "/services/saas-ai-accounting",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-ai-accounting",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Finance"
+  },
+  {
+    "id": "saas-ai-recruiting",
+    "title": "AI Recruiting & ATS Platform",
+    "description": "Complete AI recruiting suite: job posting, candidate sourcing, screening, interviewing, and onboarding. Greenhouse and Lever alternative with better AI.",
+    "icon": "🤖",
+    "features": [
+      "AI job posting optimization",
+      "Candidate sourcing (LinkedIn, GitHub, resumes)",
+      "AI screening and ranking",
+      "Video interview analysis",
+      "Offer management and approval workflow",
+      "Onboarding automation",
+      "DEI analytics and reporting",
+      "Greenhouse/Lever data migration"
+    ],
+    "benefits": [
+      "Source candidates 10x faster",
+      "AI screening - no more resume spam",
+      "Video interview analysis for soft skills",
+      "Greenhouse/Lever alternative at 1/3 the price"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "449",
+      "enterprise": "999"
+    },
+    "contactInfo": {
+      "website": "/services/saas-ai-recruiting",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-ai-recruiting",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "HR"
+  },
+  {
+    "id": "saas-ai-legal",
+    "title": "AI Legal Practice Management",
+    "description": "Complete law firm management: case management, time tracking, billing, document automation, and AI legal research. Clio and PracticePanther alternative.",
+    "icon": "⚖️",
+    "features": [
+      "Case management and calendaring",
+      "AI time tracking (auto-detect billable work)",
+      "Trust accounting and compliance",
+      "Document automation (contracts, motions, letters)",
+      "AI legal research (case law, statutes)",
+      "Client portal and messaging",
+      "Clio/PracticePanther data migration",
+      "LEDES billing format support"
+    ],
+    "benefits": [
+      "Auto-track billable time - recover 20% more revenue",
+      "AI legal research - 10x faster",
+      "Trust accounting compliance built-in",
+      "Clio alternative at half the price"
+    ],
+    "pricing": {
+      "basic": "79",
+      "pro": "149",
+      "enterprise": "299"
+    },
+    "contactInfo": {
+      "website": "/services/saas-ai-legal",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-ai-legal",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Legal"
+  },
+  {
+    "id": "saas-ai-realestate",
+    "title": "AI Real Estate Platform",
+    "description": "AI-powered real estate: property valuation, lead scoring, automated marketing, and transaction management. Zillow and Realtor.com tools for agents.",
+    "icon": "🏠",
+    "features": [
+      "AI property valuation (comparative market analysis)",
+      "Lead scoring and nurturing",
+      "Automated listing marketing (social, email, ads)",
+      "Transaction management and e-signing",
+      "Investment analysis (cash flow, cap rate, ROI)",
+      "Virtual tour creation (AI staging)",
+      "MLS integration",
+      "Agent website and CRM included"
+    ],
+    "benefits": [
+      "Accurate property valuations in seconds",
+      "Score and nurture leads automatically",
+      "Virtual staging at 1/10 the cost",
+      "All-in-one platform - replace 5+ tools"
+    ],
+    "pricing": {
+      "basic": "99",
+      "pro": "249",
+      "enterprise": "499"
+    },
+    "contactInfo": {
+      "website": "/services/saas-ai-realestate",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-ai-realestate",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Real Estate"
+  },
+  {
+    "id": "saas-ai-fitness",
+    "title": "AI Fitness & Wellness Coaching",
+    "description": "Personalized AI fitness coaching: workout generation, nutrition tracking, form analysis (computer vision), and progress prediction. Used by 500+ gyms.",
+    "icon": "💪",
+    "features": [
+      "Personalized workout generation",
+      "Nutrition tracking and meal planning",
+      "Form analysis (computer vision)",
+      "Progress prediction and adaptation",
+      "Wearable integration (Apple Watch, Fitbit, Garmin)",
+      "Trainer dashboard (manage 100+ clients)",
+      "Branded mobile app",
+      "Class scheduling and booking"
+    ],
+    "benefits": [
+      "Personalized workouts for every member",
+      "AI form analysis - prevent injuries",
+      "Manage 100+ clients per trainer",
+      "Branded app - your gym, your brand"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "349",
+      "enterprise": "749"
+    },
+    "contactInfo": {
+      "website": "/services/saas-ai-fitness",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/saas-ai-fitness",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Health"
+  },
+  {
+    "id": "cyber-threat-intel",
+    "title": "Cyber Threat Intelligence Platform",
+    "description": "Threat intelligence aggregation, analysis, and sharing. Dark web monitoring, IOC feeds, and automated response. Integrates with all major SIEM/SOAR platforms.",
+    "icon": "🕵️",
+    "features": [
+      "Dark web monitoring (forums, marketplaces, paste sites)",
+      "IOC aggregation from 100+ sources",
+      "Threat actor profiling and campaign tracking",
+      "Automated IOC enrichment",
+      "SIEM/SOAR integration (Splunk, Sentinel, XSOAR)",
+      "STIX/TAXII sharing",
+      "Vulnerability intelligence (CVSS + exploitability)",
+      "Weekly threat briefing reports"
+    ],
+    "benefits": [
+      "Monitor the dark web 24/7",
+      "Aggregate intel from 100+ sources",
+      "Automate IOC enrichment and sharing",
+      "Integrate with existing SIEM/SOAR stack"
+    ],
+    "pricing": {
+      "basic": "2,499",
+      "pro": "5,999",
+      "enterprise": "14,999"
+    },
+    "contactInfo": {
+      "website": "/services/cyber-threat-intel",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cyber-threat-intel",
+    "category": "security",
+    "popular": true,
+    "industry": "All"
+  },
+  {
+    "id": "data-mesh",
+    "title": "Data Mesh & Decentralized Data Platform",
+    "description": "Implement data mesh architecture: domain-oriented data ownership, self-serve data infrastructure, and federated governance. Dataiku and Informatica alternative.",
+    "icon": "🕸️",
+    "features": [
+      "Domain-oriented data ownership model",
+      "Self-serve data infrastructure",
+      "Federated data governance",
+      "Data product catalog and marketplace",
+      "Data quality automation",
+      "Lineage tracking and impact analysis",
+      "Snowflake, Databricks, BigQuery integration",
+      "Change data capture (CDC) pipelines"
+    ],
+    "benefits": [
+      "Decentralize data ownership - faster delivery",
+      "Self-serve infrastructure - reduce IT bottleneck",
+      "Federated governance - scale without chaos",
+      "Snowflake/Databricks/BigQuery native"
+    ],
+    "pricing": {
+      "basic": "3,999",
+      "pro": "9,999",
+      "enterprise": "24,999"
+    },
+    "contactInfo": {
+      "website": "/services/data-mesh",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/data-mesh",
+    "category": "data",
+    "popular": true,
+    "industry": "All"
+  },
+  {
+    "id": "iot-smart-building",
+    "title": "IoT Smart Building Management",
+    "description": "Comprehensive building automation: HVAC optimization, lighting control, occupancy monitoring, and energy management. BACnet, Modbus, and KNX certified.",
+    "icon": "🏢",
+    "features": [
+      "HVAC optimization (25-40% energy savings)",
+      "Smart lighting control (occupancy-based)",
+      "Occupancy monitoring and space utilization",
+      "Indoor air quality monitoring",
+      "Predictive maintenance for building systems",
+      "BACnet, Modbus, KNX protocol support",
+      "Tenant comfort app",
+      "ESG reporting and green building certification"
+    ],
+    "benefits": [
+      "Reduce energy costs 25-40%",
+      "Optimize space utilization with occupancy data",
+      "Predictive maintenance - prevent failures",
+      "LEED/BREEAM certification support"
+    ],
+    "pricing": {
+      "basic": "2,499",
+      "pro": "5,999",
+      "enterprise": "12,999"
+    },
+    "contactInfo": {
+      "website": "/services/iot-smart-building",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/iot-smart-building",
+    "category": "iot",
+    "popular": true,
+    "industry": "Real Estate"
+  },
+  {
+    "id": "automation-test-automation",
+    "title": "Test Automation & Quality Engineering",
+    "description": "End-to-end test automation: UI, API, mobile, and performance testing. Selenium, Cypress, Playwright, and JMeter alternative with AI-powered test generation.",
+    "icon": "🧪",
+    "features": [
+      "AI test case generation from user stories",
+      "UI test automation (Selenium, Cypress, Playwright)",
+      "API testing (REST, GraphQL, gRPC)",
+      "Mobile app testing (iOS, Android)",
+      "Performance testing (load, stress, endurance)",
+      "Visual regression testing",
+      "CI/CD integration (Jenkins, GitHub Actions, GitLab CI)",
+      "Test analytics and quality dashboards"
+    ],
+    "benefits": [
+      "Generate test cases with AI - 10x faster",
+      "One platform for UI, API, mobile, and performance",
+      "Integrate with existing CI/CD pipelines",
+      "Quality dashboards - track trends over time"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1,299",
+      "enterprise": "3,499"
+    },
+    "contactInfo": {
+      "website": "/services/automation-test-automation",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/automation-test-automation",
+    "category": "automation",
+    "popular": true,
+    "industry": "All"
   }
 ]
