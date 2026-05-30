@@ -1,0 +1,600 @@
+[
+  {
+    "id": "svc-396",
+    "name": "AI Conversational Search",
+    "description": "Transform how users discover information with natural language search powered by advanced NLP. Our AI understands intent, context, and nuance to deliver precise results without keyword dependency. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Natural language query processing with contextual understanding",
+      "Multi-language support for over 40 languages",
+      "Semantic ranking and relevance scoring",
+      "Real-time conversational refinements and follow-up queries",
+      "Integration with existing knowledge bases and document stores"
+    ],
+    "pricing": {
+      "basic": "$149/month - up to 10,000 queries",
+      "pro": "$499/month - up to 100,000 queries with advanced analytics",
+      "enterprise": "$1,499/month - unlimited queries with custom model training"
+    },
+    "useCases": [
+      "Internal corporate knowledge discovery across siloed databases",
+      "E-commerce product search with conversational product recommendations",
+      "Legal and compliance document retrieval with natural language queries"
+    ]
+  },
+  {
+    "id": "svc-397",
+    "name": "AI Predictive Text",
+    "description": "Accelerate writing workflows with intelligent text prediction that adapts to your style and domain vocabulary. Our engine learns from context to suggest completions, corrections, and enhancements in real time. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Context-aware sentence and paragraph completion",
+      "Domain-specific vocabulary adaptation (medical, legal, technical)",
+      "Tone and style consistency enforcement",
+      "Real-time grammar and clarity suggestions",
+      "API integration for embedding into any text editor or platform"
+    ],
+    "pricing": {
+      "basic": "$79/month - single user with standard predictions",
+      "pro": "$249/month - team of 10 with custom vocabulary training",
+      "enterprise": "$799/month - unlimited users with on-premise deployment"
+    },
+    "useCases": [
+      "Customer support agents drafting faster, consistent responses",
+      "Content creators producing high-volume articles with brand voice",
+      "Software developers writing documentation with technical terminology"
+    ]
+  },
+  {
+    "id": "svc-398",
+    "name": "AI Image Recognition",
+    "description": "Deploy computer vision at scale to classify, detect, and analyze images and video frames with enterprise-grade accuracy. Our models handle object detection, scene understanding, and visual anomaly identification out of the box. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Object detection and classification with 95%+ accuracy",
+      "Custom model training on your proprietary image datasets",
+      "Real-time video stream analysis with sub-second latency",
+      "Visual anomaly detection for quality assurance workflows",
+      "Edge deployment support for offline and low-bandwidth environments"
+    ],
+    "pricing": {
+      "basic": "$199/month - 50,000 image analyses",
+      "pro": "$699/month - 500,000 analyses with custom models",
+      "enterprise": "$2,499/month - unlimited with dedicated GPU infrastructure"
+    },
+    "useCases": [
+      "Manufacturing quality control with automated defect detection",
+      "Retail inventory tracking through shelf and stock imagery",
+      "Healthcare radiology image pre-screening and triage"
+    ]
+  },
+  {
+    "id": "svc-399",
+    "name": "AI Chatbot Builder",
+    "description": "Build sophisticated conversational AI agents without writing code using our visual drag-and-drop chatbot designer. Deploy across web, mobile, WhatsApp, and Slack with built-in NLU and analytics. Get started by contacting +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Visual flow builder with drag-and-drop conversation design",
+      "Multi-channel deployment (web, WhatsApp, Slack, Telegram)",
+      "Built-in NLU with intent recognition and entity extraction",
+      "Human handoff and escalation workflows",
+      "Conversation analytics and user sentiment tracking"
+    ],
+    "pricing": {
+      "basic": "$99/month - 1 chatbot with 5,000 conversations",
+      "pro": "$399/month - 5 chatbots with 50,000 conversations and analytics",
+      "enterprise": "$1,299/month - unlimited bots with white-label and SSO"
+    },
+    "useCases": [
+      "E-commerce customer service with order tracking and returns",
+      "HR internal helpdesk for employee onboarding and policy queries",
+      "Lead generation bots qualifying prospects on landing pages"
+    ]
+  },
+  {
+    "id": "svc-400",
+    "name": "AI Recommendation Engine",
+    "description": "Deliver hyper-personalized product, content, and service recommendations using collaborative filtering and deep learning models. Boost engagement and conversion with real-time adaptive suggestions tailored to each user. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Collaborative and content-based hybrid recommendation models",
+      "Real-time personalization with session-level adaptation",
+      "A/B testing framework for recommendation strategies",
+      "Cold-start handling for new users and products",
+      "Dashboard with conversion and engagement metrics"
+    ],
+    "pricing": {
+      "basic": "$249/month - up to 1M recommendation requests",
+      "pro": "$799/month - up to 10M requests with custom model tuning",
+      "enterprise": "$2,999/month - unlimited with dedicated ML engineering support"
+    },
+    "useCases": [
+      "Streaming platforms suggesting next-watch content based on viewing history",
+      "E-commerce stores increasing average order value with cross-sell",
+      "News and media outlets personalizing article feeds for each reader"
+    ]
+  },
+  {
+    "id": "svc-401",
+    "name": "AI Sentiment Analysis",
+    "description": "Monitor brand perception and customer emotions across reviews, social media, and support tickets with fine-grained sentiment detection. Our AI identifies sarcasm, urgency, and emotional intensity beyond simple positive/negative labels. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Multi-dimensional sentiment scoring (emotion, urgency, sarcasm)",
+      "Aspect-based sentiment extraction for product features",
+      "Social media and review platform integration",
+      "Trend analysis with time-series sentiment dashboards",
+      "Custom label training for industry-specific categories"
+    ],
+    "pricing": {
+      "basic": "$129/month - 25,000 text analyses",
+      "pro": "$449/month - 200,000 analyses with aspect extraction",
+      "enterprise": "$1,199/month - unlimited with real-time streaming and alerts"
+    },
+    "useCases": [
+      "Brand reputation monitoring across social media and review sites",
+      "Customer support ticket prioritization based on frustration levels",
+      "Market research analyzing competitor product reviews at scale"
+    ]
+  },
+  {
+    "id": "svc-402",
+    "name": "AI Document Summarizer",
+    "description": "Condense lengthy reports, contracts, and research papers into actionable summaries in seconds. Our extractive and abstractive AI preserves key facts, figures, and decisions while reducing reading time by 80%. Reach out at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Extractive and abstractive summarization modes",
+      "Multi-document comparison and synthesis",
+      "Key entity and action item extraction",
+      "Support for PDF, DOCX, HTML, and scanned documents via OCR",
+      "Customizable summary length and focus areas"
+    ],
+    "pricing": {
+      "basic": "$89/month - 500 documents processed",
+      "pro": "$349/month - 5,000 documents with multi-doc synthesis",
+      "enterprise": "$999/month - unlimited with API access and custom templates"
+    },
+    "useCases": [
+      "Legal teams reviewing contracts and extracting key clauses quickly",
+      "Research analysts synthesizing multiple academic papers into briefings",
+      "Executives receiving daily digests of lengthy internal reports"
+    ]
+  },
+  {
+    "id": "svc-403",
+    "name": "AI Code Review Assistant",
+    "description": "Automate code review workflows with AI that detects bugs, security vulnerabilities, and style inconsistencies before human reviewers see the code. Integrate seamlessly into your CI/CD pipeline for instant feedback on every pull request. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "ai",
+    "features": [
+      "Automated bug and vulnerability detection across 20+ languages",
+      "Style guide enforcement and refactoring suggestions",
+      "Pull request integration with GitHub, GitLab, and Bitbucket",
+      "Custom rule creation for team-specific coding standards",
+      "Code complexity and maintainability scoring"
+    ],
+    "pricing": {
+      "basic": "$59/month - up to 5 developers",
+      "pro": "$199/month - up to 25 developers with custom rules",
+      "enterprise": "$599/month - unlimited developers with on-premise and audit logs"
+    },
+    "useCases": [
+      "DevOps teams reducing review bottlenecks in high-velocity sprints",
+      "Enterprise compliance ensuring code meets security standards",
+      "Startups maintaining code quality with small engineering teams"
+    ]
+  },
+  {
+    "id": "svc-404",
+    "name": "IT Patch Management",
+    "description": "Automate the discovery, testing, and deployment of security patches across your entire infrastructure from a single dashboard. Ensure compliance and reduce vulnerability windows with intelligent scheduling and rollback capabilities. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "it",
+    "features": [
+      "Automated vulnerability scanning and patch discovery",
+      "Staged rollout with test-before-deploy workflows",
+      "One-click rollback for failed patch deployments",
+      "Compliance reporting for SOC 2, HIPAA, and PCI-DSS",
+      "Cross-platform support for Windows, Linux, and macOS"
+    ],
+    "pricing": {
+      "basic": "$199/month - up to 100 endpoints",
+      "pro": "$599/month - up to 500 endpoints with compliance reports",
+      "enterprise": "$1,799/month - unlimited endpoints with SLA guarantees"
+    },
+    "useCases": [
+      "Healthcare organizations maintaining HIPAA-compliant patch cycles",
+      "Financial services meeting regulatory patch deployment timelines",
+      "MSPs managing patch cycles across multiple client environments"
+    ]
+  },
+  {
+    "id": "svc-405",
+    "name": "IT License Compliance",
+    "description": "Gain complete visibility into software license usage, renewals, and compliance across your organization. Avoid costly audit penalties and optimize spending with automated discovery and real-time entitlement tracking. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "it",
+    "features": [
+      "Automated software discovery and license entitlement mapping",
+      "Renewal alerts and optimization recommendations",
+      "Audit-ready compliance reports for major vendors",
+      "Cloud and on-premise license consolidation",
+      "Shadow IT detection and SaaS spend analysis"
+    ],
+    "pricing": {
+      "basic": "$299/month - up to 250 devices tracked",
+      "pro": "$899/month - up to 1,000 devices with vendor-specific reports",
+      "enterprise": "$2,499/month - unlimited with dedicated compliance consultant"
+    },
+    "useCases": [
+      "Large enterprises preparing for Microsoft or Oracle license audits",
+      "IT departments optimizing SaaS subscriptions and eliminating waste",
+      "Mergers and acquisitions consolidating overlapping software portfolios"
+    ]
+  },
+  {
+    "id": "svc-406",
+    "name": "IT Remote Support",
+    "description": "Provide secure, instant remote assistance to employees and clients with enterprise-grade screen sharing, file transfer, and system diagnostics. Reduce resolution times and travel costs with our all-in-one remote support platform. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "it",
+    "features": [
+      "Encrypted remote desktop access with multi-monitor support",
+      "Unattended access for after-hours maintenance",
+      "Integrated chat, file transfer, and system diagnostics",
+      "Session recording for compliance and training",
+      "Mobile device support for iOS and Android troubleshooting"
+    ],
+    "pricing": {
+      "basic": "$79/month - up to 5 technicians with 50 concurrent sessions",
+      "pro": "$249/month - up to 20 technicians with session recording",
+      "enterprise": "$699/month - unlimited technicians with SSO and custom branding"
+    },
+    "useCases": [
+      "IT helpdesks resolving employee issues without desk visits",
+      "MSPs delivering white-labeled support to SMB clients",
+      "Field service teams troubleshooting IoT devices remotely"
+    ]
+  },
+  {
+    "id": "svc-407",
+    "name": "IT Network Monitoring",
+    "description": "Monitor your entire network infrastructure in real time with intelligent alerting, topology mapping, and performance baselining. Detect outages, bottlenecks, and anomalies before they impact users with AI-driven insights. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "it",
+    "features": [
+      "Real-time network topology visualization and mapping",
+      "AI-powered anomaly detection and predictive alerting",
+      "Bandwidth utilization and traffic flow analysis",
+      "SNMP, NetFlow, and API-based device monitoring",
+      "Automated remediation playbooks for common issues"
+    ],
+    "pricing": {
+      "basic": "$149/month - up to 50 monitored devices",
+      "pro": "$499/month - up to 250 devices with NetFlow analysis",
+      "enterprise": "$1,499/month - unlimited devices with AI predictive analytics"
+    },
+    "useCases": [
+      "Data center operations teams monitoring switch and router health",
+      "Universities tracking bandwidth across campus Wi-Fi networks",
+      "Retail chains monitoring POS network connectivity across locations"
+    ]
+  },
+  {
+    "id": "svc-408",
+    "name": "Security Penetration Testing",
+    "description": "Identify vulnerabilities before attackers do with continuous automated and manual penetration testing across your applications, networks, and cloud infrastructure. Receive actionable remediation reports with severity scoring and proof-of-concept exploits. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "security",
+    "features": [
+      "Automated vulnerability scanning with manual expert validation",
+      "Web application, API, network, and cloud penetration tests",
+      "OWASP Top 10 and CWE coverage with proof-of-concept exploits",
+      "Detailed remediation reports with risk-prioritized findings",
+      "Re-testing and compliance certification after fixes"
+    ],
+    "pricing": {
+      "basic": "$999/month - quarterly automated scans with annual manual test",
+      "pro": "$2,999/month - monthly scans with bi-annual manual testing",
+      "enterprise": "$7,999/month - continuous testing with dedicated red team"
+    },
+    "useCases": [
+      "Fintech companies meeting PCI-DSS penetration testing requirements",
+      "SaaS platforms validating security before enterprise customer onboarding",
+      "Healthcare providers protecting patient data against breach vectors"
+    ]
+  },
+  {
+    "id": "svc-409",
+    "name": "Security Incident Response",
+    "description": "Respond to cyber threats within minutes with our 24/7 incident response team and automated containment playbooks. Minimize damage, preserve forensic evidence, and restore operations with expert-guided recovery. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "security",
+    "features": [
+      "24/7 on-call incident response team with SLA guarantees",
+      "Automated threat containment and isolation playbooks",
+      "Digital forensics and evidence preservation",
+      "Post-incident root cause analysis and reporting",
+      "Pre-incident readiness assessments and tabletop exercises"
+    ],
+    "pricing": {
+      "basic": "$1,499/month - retainer with 4-hour response SLA",
+      "pro": "$3,999/month - retainer with 1-hour response and forensics",
+      "enterprise": "$9,999/month - dedicated team with 15-minute response SLA"
+    },
+    "useCases": [
+      "Ransomware attacks requiring immediate containment and recovery",
+      "Data breach investigations for regulatory notification timelines",
+      "Insider threat incidents requiring forensic evidence collection"
+    ]
+  },
+  {
+    "id": "svc-410",
+    "name": "Security Email Encryption",
+    "description": "Protect sensitive communications with end-to-end email encryption that works seamlessly across all major email clients and devices. Ensure compliance with GDPR, HIPAA, and other regulations without disrupting user workflows. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "security",
+    "features": [
+      "End-to-end encryption with automatic key management",
+      "Transparent integration with Outlook, Gmail, and webmail",
+      "DLP policy enforcement for sensitive content detection",
+      "Encrypted file attachments with expiration and revocation",
+      "Compliance audit logs and delivery confirmation tracking"
+    ],
+    "pricing": {
+      "basic": "$9/user/month - standard encryption with basic DLP",
+      "pro": "$15/user/month - advanced DLP with custom policies",
+      "enterprise": "$22/user/month - full suite with on-premise key server"
+    },
+    "useCases": [
+      "Law firms protecting attorney-client privileged communications",
+      "Healthcare organizations encrypting PHI in email exchanges",
+      "Financial advisors securing client portfolio and tax document sharing"
+    ]
+  },
+  {
+    "id": "svc-411",
+    "name": "Security Access Management",
+    "description": "Centralize identity and access control across all applications with zero-trust policies, MFA, and automated provisioning. Reduce attack surface and simplify compliance with granular role-based access and just-in-time permissions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "security",
+    "features": [
+      "Single sign-on with SAML, OIDC, and social identity providers",
+      "Multi-factor authentication with biometric and hardware token support",
+      "Automated user provisioning and deprovisioning workflows",
+      "Just-in-time privileged access with approval chains",
+      "Access review campaigns and compliance reporting"
+    ],
+    "pricing": {
+      "basic": "$5/user/month - SSO and basic MFA",
+      "pro": "$10/user/month - advanced MFA with automated provisioning",
+      "enterprise": "$18/user/month - full zero-trust with privileged access management"
+    },
+    "useCases": [
+      "Enterprises consolidating access across 100+ SaaS applications",
+      "Remote-first companies enforcing zero-trust for distributed teams",
+      "Regulated industries automating access reviews for audit compliance"
+    ]
+  },
+  {
+    "id": "svc-412",
+    "name": "Micro-SaaS Survey Tool",
+    "description": "Create beautiful, logic-driven surveys in minutes and collect actionable insights with real-time analytics and automated reporting. Perfect for product teams, marketers, and researchers who need fast, affordable feedback loops. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "micro-saas",
+    "features": [
+      "Drag-and-drop survey builder with conditional logic branching",
+      "Real-time response analytics with exportable dashboards",
+      "Multi-channel distribution via email, link, embed, and QR code",
+      "Automated reporting with scheduled PDF and CSV exports",
+      "White-label branding and custom domain support"
+    ],
+    "pricing": {
+      "basic": "$19/month - 500 responses with basic analytics",
+      "pro": "$59/month - 5,000 responses with advanced logic and reports",
+      "enterprise": "$149/month - unlimited responses with white-label and API"
+    },
+    "useCases": [
+      "Product teams collecting NPS and feature request feedback",
+      "HR departments running employee engagement pulse surveys",
+      "Event organizers gathering attendee satisfaction data"
+    ]
+  },
+  {
+    "id": "svc-413",
+    "name": "Micro-SaaS CRM Lite",
+    "description": "A lightweight, no-fuss CRM designed for solopreneurs and small teams who need pipeline visibility without enterprise complexity. Track deals, manage contacts, and automate follow-ups from a clean, intuitive interface. Reach out at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "micro-saas",
+    "features": [
+      "Visual Kanban pipeline with drag-and-drop deal management",
+      "Contact management with activity timeline and notes",
+      "Automated email follow-ups and task reminders",
+      "Email integration with Gmail and Outlook sync",
+      "Simple reporting on deal velocity and win rates"
+    ],
+    "pricing": {
+      "basic": "$15/month - single user with 500 contacts",
+      "pro": "$39/month - 5 users with 5,000 contacts and automation",
+      "enterprise": "$89/month - unlimited users with API and custom fields"
+    },
+    "useCases": [
+      "Freelance consultants managing client pipelines and proposals",
+      "Small sales teams tracking leads from inquiry to close",
+      "Agencies managing multiple client accounts and renewals"
+    ]
+  },
+  {
+    "id": "svc-414",
+    "name": "Micro-SaaS Time Tracker",
+    "description": "Track time effortlessly with one-click timers, automatic idle detection, and project-based reporting designed for freelancers and small teams. Generate accurate invoices and understand where your hours go with minimal overhead. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "micro-saas",
+    "features": [
+      "One-click time tracking with automatic idle detection",
+      "Project and client-based time organization",
+      "Invoice generation from tracked hours",
+      "Weekly productivity reports and time budgeting",
+      "Browser extension and desktop app for seamless logging"
+    ],
+    "pricing": {
+      "basic": "$9/month - single user with unlimited projects",
+      "pro": "$29/month - 10 users with invoicing and reports",
+      "enterprise": "$69/month - unlimited users with integrations and audit logs"
+    },
+    "useCases": [
+      "Freelancers billing clients accurately for billable hours",
+      "Agencies tracking team utilization across client projects",
+      "Remote teams monitoring productivity without micromanagement"
+    ]
+  },
+  {
+    "id": "svc-415",
+    "name": "Micro-SaaS Invoice Generator",
+    "description": "Create professional invoices in seconds with customizable templates, automated reminders, and integrated payment collection. Simplify your billing workflow without the complexity of full accounting software. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "micro-saas",
+    "features": [
+      "Customizable invoice templates with your branding",
+      "Automated payment reminders and late fee calculations",
+      "Integrated payment links for Stripe, PayPal, and bank transfer",
+      "Recurring invoice scheduling for subscription clients",
+      "Tax calculation and multi-currency support"
+    ],
+    "pricing": {
+      "basic": "$12/month - 20 invoices with basic templates",
+      "pro": "$35/month - unlimited invoices with automation and payments",
+      "enterprise": "$79/month - unlimited with multi-entity and accountant access"
+    },
+    "useCases": [
+      "Freelancers sending branded invoices with one-click payment",
+      "Small businesses managing recurring client subscriptions",
+      "Contractors tracking project-based billing milestones"
+    ]
+  },
+  {
+    "id": "svc-416",
+    "name": "Cloud CDN Manager",
+    "description": "Optimize content delivery across global edge networks with intelligent caching, real-time purge, and performance analytics from a unified dashboard. Reduce latency and bandwidth costs while ensuring 99.99% uptime for your digital assets. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "cloud",
+    "features": [
+      "Multi-CDN orchestration with automatic failover",
+      "Real-time cache purge and content invalidation",
+      "Performance analytics with edge-level latency metrics",
+      "DDoS protection and WAF integration at the edge",
+      "Cost optimization with intelligent traffic routing"
+    ],
+    "pricing": {
+      "basic": "$99/month - 1TB transfer with single CDN",
+      "pro": "$399/month - 10TB transfer with multi-CDN and analytics",
+      "enterprise": "$1,299/month - 100TB+ with dedicated support and SLA"
+    },
+    "useCases": [
+      "Media companies streaming video to global audiences with low latency",
+      "E-commerce sites accelerating page loads for international shoppers",
+      "SaaS platforms distributing software updates via edge caching"
+    ]
+  },
+  {
+    "id": "svc-417",
+    "name": "Cloud DNS Optimizer",
+    "description": "Maximize DNS performance and reliability with intelligent traffic routing, health checking, and real-time propagation monitoring. Reduce resolution latency and improve uptime with Anycast, geo-routing, and failover capabilities. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "cloud",
+    "features": [
+      "Anycast DNS with sub-millisecond global resolution",
+      "Health-checked failover with automatic endpoint switching",
+      "Geo-routing and weighted traffic distribution",
+      "Real-time DNS propagation monitoring and alerting",
+      "DNSSEC enforcement and DDoS mitigation at the DNS layer"
+    ],
+    "pricing": {
+      "basic": "$49/month - 10 zones with basic health checks",
+      "pro": "$199/month - 100 zones with geo-routing and failover",
+      "enterprise": "$599/month - unlimited zones with dedicated Anycast nodes"
+    },
+    "useCases": [
+      "Global SaaS providers routing users to nearest healthy data center",
+      "High-traffic websites reducing DNS resolution latency worldwide",
+      "Enterprises implementing DNS-based disaster recovery strategies"
+    ]
+  },
+  {
+    "id": "svc-418",
+    "name": "Cloud Cost Optimizer",
+    "description": "Eliminate cloud waste and reduce your AWS, Azure, and GCP bills by 20-40% with AI-driven rightsizing, reserved instance planning, and anomaly detection. Gain full visibility into multi-cloud spending with actionable recommendations delivered daily. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "cloud",
+    "features": [
+      "Multi-cloud cost visibility across AWS, Azure, and GCP",
+      "AI-powered rightsizing recommendations for compute and storage",
+      "Reserved instance and savings plan optimization",
+      "Anomaly detection with real-time spend alerts",
+      "Team and project cost allocation with showback reporting"
+    ],
+    "pricing": {
+      "basic": "$149/month - up to $10K monthly cloud spend monitored",
+      "pro": "$499/month - up to $100K spend with automated actions",
+      "enterprise": "Custom pricing - unlimited spend with dedicated FinOps engineer"
+    },
+    "useCases": [
+      "Startups optimizing burn rate by eliminating idle cloud resources",
+      "Enterprises allocating cloud costs accurately across business units",
+      "DevOps teams automating scheduled shutdowns for non-production environments"
+    ]
+  },
+  {
+    "id": "svc-419",
+    "name": "Data Anonymizer",
+    "description": "Protect sensitive data in development, testing, and analytics environments with advanced anonymization techniques that preserve data utility. Apply tokenization, masking, differential privacy, and synthetic data generation to meet GDPR and CCPA requirements. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "data",
+    "features": [
+      "Automated PII detection and classification across databases",
+      "Tokenization, masking, and k-anonymity techniques",
+      "Synthetic data generation preserving statistical properties",
+      "Differential privacy for analytics and ML training datasets",
+      "Compliance reporting for GDPR, CCPA, and HIPAA"
+    ],
+    "pricing": {
+      "basic": "$299/month - up to 5 databases with basic masking",
+      "pro": "$899/month - up to 25 databases with synthetic generation",
+      "enterprise": "$2,499/month - unlimited with differential privacy and audit"
+    },
+    "useCases": [
+      "Development teams using realistic but anonymized production data for testing",
+      "Analytics teams sharing datasets externally without exposing PII",
+      "Healthcare organizations de-identifying patient records for research"
+    ]
+  },
+  {
+    "id": "svc-420",
+    "name": "Automation ChatOps",
+    "description": "Bring DevOps, IT, and business workflows into your chat platform with bot-driven automation that executes deployments, queries, and incident responses directly from Slack or Teams. Reduce context-switching and accelerate team collaboration with conversational automation. Contact +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "automation",
+    "features": [
+      "Slack and Teams bot integration with slash commands",
+      "Deployment automation with approval workflows in chat",
+      "Real-time alerting and incident triage from conversation threads",
+      "Custom command builder with webhook and API connectivity",
+      "Audit trail of all automated actions with role-based permissions"
+    ],
+    "pricing": {
+      "basic": "$99/month - 500 automated actions with basic commands",
+      "pro": "$349/month - 5,000 actions with custom command builder",
+      "enterprise": "$899/month - unlimited actions with SSO and audit compliance"
+    },
+    "useCases": [
+      "DevOps teams triggering deployments and rollbacks from Slack",
+      "IT operations acknowledging and resolving alerts without leaving chat",
+      "Engineering teams querying production metrics and logs conversationally"
+    ]
+  },
+  {
+    "id": "svc-421",
+    "name": "Automation Workflow Engine",
+    "description": "Design, deploy, and monitor complex business process automations with a visual canvas that connects 500+ apps and services. Eliminate manual handoffs and reduce errors with conditional logic, error handling, and real-time execution monitoring. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com, 364 E Main St STE 1008 Middletown DE 19709.",
+    "category": "automation",
+    "features": [
+      "Visual workflow designer with drag-and-drop canvas",
+      "500+ pre-built connectors for SaaS, databases, and APIs",
+      "Conditional branching, loops, and error handling logic",
+      "Real-time execution monitoring with retry and alerting",
+      "Version control and rollback for workflow definitions"
+    ],
+    "pricing": {
+      "basic": "$129/month - 1,000 workflow executions",
+      "pro": "$449/month - 10,000 executions with advanced logic",
+      "enterprise": "$1,199/month - unlimited with dedicated infrastructure"
+    },
+    "useCases": [
+      "Sales teams automating lead routing and CRM updates from forms",
+      "Finance departments streamlining invoice approval and payment workflows",
+      "HR automating employee onboarding sequences across multiple systems"
+    ]
+  }
+]
