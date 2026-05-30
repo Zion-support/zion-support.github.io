@@ -59693,5 +59693,603 @@
       "Logistics firms handling shipping documents",
       "Banks processing loan applications"
     ]
+  },
+  {
+    "id": "SRV-386",
+    "name": "AI Voice Cloning Studio",
+    "description": "Create hyper-realistic voice clones for branding, accessibility, and content production using advanced neural speech synthesis. Our platform delivers studio-grade voice replication with emotion control and multi-language support. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com to get started.",
+    "category": "ai",
+    "features": [
+      "Neural voice cloning from 30-second audio samples",
+      "Real-time emotion and tone modulation",
+      "Multi-language voice synthesis (40+ languages)",
+      "API integration for TTS workflows",
+      "Voice fingerprinting and anti-spoofing safeguards"
+    ],
+    "pricing": {
+      "basic": "$49/month — 5 voice clones, 10k characters/month",
+      "pro": "$199/month — 25 voice clones, 100k characters/month, priority rendering",
+      "enterprise": "$799/month — unlimited clones, custom models, SLA guarantee"
+    },
+    "useCases": [
+      "Podcast and audiobook production with consistent narration",
+      "Accessibility tools for individuals with speech impairments",
+      "Branded voice assistants for customer-facing applications"
+    ]
+  },
+  {
+    "id": "SRV-387",
+    "name": "AI Document Intelligence Platform",
+    "description": "Extract, classify, and analyze unstructured documents at scale with deep-learning OCR and semantic understanding. Automate invoice processing, contract review, and compliance auditing with 99.2% accuracy. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com for a demo.",
+    "category": "ai",
+    "features": [
+      "Deep-learning OCR with handwriting recognition",
+      "Semantic document classification and tagging",
+      "Automated data extraction with validation rules",
+      "Multi-format support (PDF, scanned images, Word, Excel)",
+      "Compliance-ready audit trail and versioning"
+    ],
+    "pricing": {
+      "basic": "$79/month — 1,000 pages/month, 5 document types",
+      "pro": "$349/month — 10,000 pages/month, unlimited types, API access",
+      "enterprise": "$1,299/month — unlimited pages, custom models, on-premise deployment"
+    },
+    "useCases": [
+      "Automated invoice and purchase order processing",
+      "Legal contract analysis and clause extraction",
+      "Medical records digitization and indexing"
+    ]
+  },
+  {
+    "id": "SRV-388",
+    "name": "AI Supply Chain Optimizer",
+    "description": "Leverage predictive analytics and reinforcement learning to optimize inventory, logistics, and demand forecasting across your supply chain. Reduce waste by up to 35% and improve delivery times with real-time adaptive routing. Contact +1 302 464 0950 or kleber@ziontechgroup.com for consultation.",
+    "category": "ai",
+    "features": [
+      "Demand forecasting with 95%+ accuracy",
+      "Dynamic inventory optimization across warehouses",
+      "Real-time route optimization for fleet logistics",
+      "Supplier risk scoring and disruption alerts",
+      "Carbon footprint tracking and sustainability reporting"
+    ],
+    "pricing": {
+      "basic": "$299/month — single warehouse, basic forecasting",
+      "pro": "$899/month — multi-warehouse, advanced routing, API integrations",
+      "enterprise": "$2,999/month — global network, custom models, dedicated support"
+    },
+    "useCases": [
+      "Retail inventory management across distributed locations",
+      "Last-mile delivery optimization for e-commerce",
+      "Manufacturing raw material procurement planning"
+    ]
+  },
+  {
+    "id": "SRV-389",
+    "name": "AI Legal Research Assistant",
+    "description": "Accelerate legal research with AI-powered case law analysis, statute interpretation, and precedent discovery across millions of legal documents. Reduce research time by 80% while improving citation accuracy. Call +1 302 464 0950 or email kleber@ziontechgroup.com to learn more.",
+    "category": "ai",
+    "features": [
+      "Natural language legal query understanding",
+      "Cross-jurisdiction case law and statute search",
+      "Automated citation verification (Shepardizing)",
+      "Brief drafting assistance with argument suggestions",
+      "Contract risk assessment and clause comparison"
+    ],
+    "pricing": {
+      "basic": "$149/month — 500 queries/month, federal cases only",
+      "pro": "$499/month — unlimited queries, state + federal, brief drafting",
+      "enterprise": "$1,499/month — full suite, custom training, team collaboration"
+    },
+    "useCases": [
+      "Litigation research and precedent discovery",
+      "Contract review and risk flagging for corporate counsel",
+      "Regulatory compliance monitoring and alert generation"
+    ]
+  },
+  {
+    "id": "SRV-390",
+    "name": "AI Customer Journey Mapper",
+    "description": "Visualize and optimize every touchpoint of the customer experience with AI-driven journey mapping and sentiment analysis. Identify friction points, predict churn, and personalize interactions at scale. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com for pricing.",
+    "category": "ai",
+    "features": [
+      "Real-time customer journey visualization",
+      "Sentiment analysis across email, chat, and voice channels",
+      "Churn prediction with intervention recommendations",
+      "A/B testing for journey optimization",
+      "Integration with CRM, CDP, and marketing platforms"
+    ],
+    "pricing": {
+      "basic": "$99/month — 10k tracked users, 3 journey maps",
+      "pro": "$399/month — 100k tracked users, unlimited maps, sentiment AI",
+      "enterprise": "$1,199/month — unlimited users, custom models, white-label option"
+    },
+    "useCases": [
+      "SaaS onboarding funnel optimization",
+      "E-commerce cart abandonment reduction",
+      "Customer support experience improvement"
+    ]
+  },
+  {
+    "id": "SRV-391",
+    "name": "AI Code Security Scanner",
+    "description": "Detect vulnerabilities, secrets, and insecure patterns in your codebase using AI-powered static and dynamic analysis. Integrate seamlessly into CI/CD pipelines for continuous security posture improvement. Reach our team at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "ai",
+    "features": [
+      "AI-powered SAST and DAST vulnerability detection",
+      "Secret and credential leak scanning across repos",
+      "OWASP Top 10 and CWE coverage with auto-remediation suggestions",
+      "CI/CD pipeline integration (GitHub, GitLab, Bitbucket)",
+      "Dependency vulnerability and license compliance checks"
+    ],
+    "pricing": {
+      "basic": "$59/month — 3 repositories, weekly scans",
+      "pro": "$249/month — 20 repositories, continuous scanning, API access",
+      "enterprise": "$899/month — unlimited repos, custom rules, on-premise scanner"
+    },
+    "useCases": [
+      "DevSecOps pipeline security automation",
+      "Open-source dependency risk management",
+      "Regulatory compliance scanning (SOC2, HIPAA, PCI-DSS)"
+    ]
+  },
+  {
+    "id": "SRV-392",
+    "name": "AI Predictive Maintenance Engine",
+    "description": "Prevent equipment failures before they happen with IoT sensor analytics and machine learning-based predictive maintenance models. Reduce unplanned downtime by up to 50% and extend asset lifespans. Contact +1 302 464 0950 or kleber@ziontechgroup.com for a tailored solution.",
+    "category": "ai",
+    "features": [
+      "Real-time IoT sensor data ingestion and anomaly detection",
+      "Remaining useful life (RUL) prediction for critical assets",
+      "Automated work order generation on failure prediction",
+      "Digital twin integration for simulation-based forecasting",
+      "Mobile alerts and maintenance scheduling dashboard"
+    ],
+    "pricing": {
+      "basic": "$199/month — 50 monitored assets, basic alerts",
+      "pro": "$699/month — 500 assets, RUL predictions, API access",
+      "enterprise": "$2,499/month — unlimited assets, custom models, edge deployment"
+    },
+    "useCases": [
+      "Manufacturing plant equipment monitoring",
+      "Fleet vehicle maintenance optimization",
+      "Energy infrastructure (wind turbines, transformers) reliability"
+    ]
+  },
+  {
+    "id": "SRV-393",
+    "name": "AI Content Personalization Engine",
+    "description": "Deliver hyper-personalized content, product recommendations, and dynamic web experiences powered by real-time behavioral AI models. Increase conversion rates by up to 40% with individualized user journeys. Get in touch at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "ai",
+    "features": [
+      "Real-time behavioral profiling and segmentation",
+      "Dynamic content and product recommendation engine",
+      "Multi-channel personalization (web, email, mobile, in-app)",
+      "A/B/n testing with automated winner selection",
+      "Privacy-compliant data handling (GDPR, CCPA)"
+    ],
+    "pricing": {
+      "basic": "$129/month — 50k monthly users, 3 channels",
+      "pro": "$499/month — 500k monthly users, all channels, API access",
+      "enterprise": "$1,799/month — unlimited users, custom models, dedicated CSM"
+    },
+    "useCases": [
+      "E-commerce product recommendation personalization",
+      "Media and publishing content curation",
+      "B2B SaaS feature adoption nudges"
+    ]
+  },
+  {
+    "id": "SRV-394",
+    "name": "IT Network Forensics Suite",
+    "description": "Investigate network incidents with full-packet capture, deep flow analysis, and automated threat reconstruction. Trace attack paths, preserve evidence chains, and accelerate incident response timelines. Contact +1 302 464 0950 or kleber@ziontechgroup.com for details.",
+    "category": "it",
+    "features": [
+      "Full packet capture with terabyte-scale retention",
+      "Deep flow analysis and protocol decoding (200+ protocols)",
+      "Automated attack timeline reconstruction",
+      "Chain-of-custody evidence export for legal proceedings",
+      "Integration with SIEM and SOAR platforms"
+    ],
+    "pricing": {
+      "basic": "$399/month — 1 TB capture storage, 10 sensors",
+      "pro": "$1,199/month — 10 TB storage, 50 sensors, advanced analytics",
+      "enterprise": "$3,999/month — unlimited storage, global deployment, 24/7 support"
+    },
+    "useCases": [
+      "Post-breach investigation and root cause analysis",
+      "Insider threat detection and evidence collection",
+      "Regulatory incident reporting and compliance forensics"
+    ]
+  },
+  {
+    "id": "SRV-395",
+    "name": "IT Cloud Migration Accelerator",
+    "description": "Plan, execute, and validate cloud migrations with automated workload assessment, dependency mapping, and zero-downtime cutover strategies. Migrate legacy applications to AWS, Azure, or GCP with confidence. Call +1 302 464 0950 or email kleber@ziontechgroup.com to start your migration.",
+    "category": "it",
+    "features": [
+      "Automated workload discovery and dependency mapping",
+      "Migration wave planning with risk scoring",
+      "Lift-and-shift, re-platform, and re-architecture templates",
+      "Real-time migration progress dashboard and rollback capability",
+      "Post-migration cost optimization and right-sizing recommendations"
+    ],
+    "pricing": {
+      "basic": "$499/month — up to 50 workloads, single cloud target",
+      "pro": "$1,499/month — up to 500 workloads, multi-cloud, automated testing",
+      "enterprise": "$4,999/month — unlimited workloads, dedicated migration team, SLA"
+    },
+    "useCases": [
+      "Legacy datacenter to cloud migration",
+      "Multi-cloud strategy implementation",
+      "Application modernization and containerization"
+    ]
+  },
+  {
+    "id": "SRV-396",
+    "name": "IT Edge Computing Platform",
+    "description": "Deploy and manage distributed compute workloads at the edge with centralized orchestration, low-latency processing, and offline resilience. Ideal for IoT, retail, and industrial environments requiring real-time decisions. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "it",
+    "features": [
+      "Centralized edge node provisioning and lifecycle management",
+      "Container and VM workload deployment with OTA updates",
+      "Offline-capable operation with sync-on-reconnect",
+      "Real-time data processing with sub-10ms latency",
+      "Hardware-agnostic support (ARM, x86, GPU edge devices)"
+    ],
+    "pricing": {
+      "basic": "$249/month — 25 edge nodes, basic orchestration",
+      "pro": "$799/month — 200 edge nodes, GPU support, advanced monitoring",
+      "enterprise": "$2,499/month — unlimited nodes, custom SLA, dedicated support engineer"
+    },
+    "useCases": [
+      "Smart retail with in-store AI video analytics",
+      "Industrial IoT predictive maintenance at the factory floor",
+      "Autonomous vehicle data preprocessing"
+    ]
+  },
+  {
+    "id": "SRV-397",
+    "name": "IT Zero Trust Architecture Service",
+    "description": "Implement a comprehensive zero-trust security model with microsegmentation, continuous identity verification, and least-privilege access across your entire infrastructure. Eliminate implicit trust and reduce lateral movement risks. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "it",
+    "features": [
+      "Network microsegmentation with policy-as-code",
+      "Continuous device and user identity verification",
+      "Least-privilege access enforcement with JIT elevation",
+      "Encrypted micro-tunnels for all east-west traffic",
+      "Compliance mapping (NIST 800-207, CISA ZT Maturity Model)"
+    ],
+    "pricing": {
+      "basic": "$599/month — up to 100 endpoints, basic segmentation",
+      "pro": "$1,799/month — 1,000 endpoints, full microsegmentation, policy engine",
+      "enterprise": "$5,999/month — unlimited endpoints, custom architecture, managed service"
+    },
+    "useCases": [
+      "Hybrid workforce secure remote access",
+      "Healthcare network segmentation for HIPAA compliance",
+      "Financial services lateral movement prevention"
+    ]
+  },
+  {
+    "id": "SRV-398",
+    "name": "Security API Gateway Shield",
+    "description": "Protect your APIs from abuse, injection attacks, and data exfiltration with an intelligent API gateway featuring rate limiting, schema validation, and behavioral anomaly detection. Secure every endpoint without compromising performance. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "security",
+    "features": [
+      "AI-driven API threat detection and blocking",
+      "OpenAPI schema validation and enforcement",
+      "Adaptive rate limiting and bot mitigation",
+      "Request/response payload encryption and masking",
+      "Comprehensive API traffic analytics and logging"
+    ],
+    "pricing": {
+      "basic": "$149/month — 10 API endpoints, 1M requests/month",
+      "pro": "$599/month — 50 endpoints, 10M requests, advanced WAF rules",
+      "enterprise": "$1,999/month — unlimited endpoints, custom rules, DDoS protection"
+    },
+    "useCases": [
+      "Public API protection for fintech applications",
+      "Microservice-to-microservice communication security",
+      "OWASP API Security Top 10 compliance"
+    ]
+  },
+  {
+    "id": "SRV-399",
+    "name": "Security Identity Governance Platform",
+    "description": "Manage, audit, and automate identity lifecycle governance across hybrid environments with role-based access control, access reviews, and compliance reporting. Ensure the right people have the right access at the right time. Call +1 302 464 0950 or email kleber@ziontechgroup.com.",
+    "category": "security",
+    "features": [
+      "Automated user provisioning and deprovisioning",
+      "Role-based and attribute-based access control (RBAC/ABAC)",
+      "Periodic access reviews with manager certification",
+      "Segregation of duties (SoD) conflict detection",
+      "Audit-ready compliance reports (SOX, GDPR, ISO 27001)"
+    ],
+    "pricing": {
+      "basic": "$299/month — 500 identities, 10 applications",
+      "pro": "$999/month — 5,000 identities, 50 applications, automated reviews",
+      "enterprise": "$3,499/month — unlimited identities, full governance suite, managed service"
+    },
+    "useCases": [
+      "Enterprise access certification campaigns",
+      "Regulatory compliance audit preparation",
+      "M&A identity consolidation and cleanup"
+    ]
+  },
+  {
+    "id": "SRV-400",
+    "name": "Security Threat Intelligence Platform",
+    "description": "Aggregate, correlate, and operationalize threat intelligence from 50+ feeds with AI-driven prioritization and automated IOC distribution to your security stack. Stay ahead of emerging threats with actionable, context-rich intelligence. Reach +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "security",
+    "features": [
+      "50+ curated threat feed aggregation and deduplication",
+      "AI-powered IOC scoring and relevance ranking",
+      "Automated IOC push to SIEM, firewall, and EDR",
+      "Dark web and deep web monitoring for brand exposure",
+      "Threat actor profiling and campaign tracking"
+    ],
+    "pricing": {
+      "basic": "$349/month — 10 feed integrations, daily updates",
+      "pro": "$1,099/month — all feeds, real-time updates, dark web monitoring",
+      "enterprise": "$3,499/month — custom intelligence requirements, dedicated analyst, API"
+    },
+    "useCases": [
+      "SOC enrichment for alert triage and investigation",
+      "Proactive threat hunting with curated IOCs",
+      "Executive threat briefing and risk reporting"
+    ]
+  },
+  {
+    "id": "SRV-401",
+    "name": "Security Data Loss Prevention Suite",
+    "description": "Prevent sensitive data exfiltration across endpoints, email, cloud storage, and network channels with content-aware DLP policies and real-time enforcement. Protect intellectual property, PII, and regulated data with granular controls. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "security",
+    "features": [
+      "Content-aware data classification (100+ data types)",
+      "Endpoint, email, cloud, and network DLP enforcement",
+      "Policy-based blocking, quarantine, and encryption actions",
+      "User behavior analytics for insider threat detection",
+      "Compliance templates for PCI-DSS, HIPAA, GDPR, CCPA"
+    ],
+    "pricing": {
+      "basic": "$249/month — 200 endpoints, email DLP only",
+      "pro": "$899/month — 2,000 endpoints, all channels, advanced analytics",
+      "enterprise": "$2,999/month — unlimited endpoints, custom classifiers, managed DLP"
+    },
+    "useCases": [
+      "Healthcare PHI protection across cloud and endpoints",
+      "Financial services PCI-DSS data leakage prevention",
+      "IP protection for R&D and engineering teams"
+    ]
+  },
+  {
+    "id": "SRV-402",
+    "name": "Micro-SaaS Subscription Billing Engine",
+    "description": "A lightweight, developer-first billing platform for SaaS startups with usage-based pricing, proration, dunning management, and revenue recognition built in. Launch subscription billing in hours, not months. Contact +1 302 464 0950 or kleber@ziontechgroup.com to get started.",
+    "category": "micro-saas",
+    "features": [
+      "Flexible pricing models (flat, usage-based, tiered, per-seat)",
+      "Automatic proration on plan upgrades and downgrades",
+      "Smart dunning with retry logic and failed payment recovery",
+      "Revenue recognition compliant with ASC 606",
+      "Developer-friendly API with SDKs for 8 languages"
+    ],
+    "pricing": {
+      "basic": "$29/month — up to $10k MRR, 2 pricing plans",
+      "pro": "$99/month — up to $100k MRR, unlimited plans, webhooks",
+      "enterprise": "$399/month — unlimited MRR, custom integrations, priority support"
+    },
+    "useCases": [
+      "Early-stage SaaS product monetization",
+      "Usage-based API pricing for developer tools",
+      "Marketplace platform transaction billing"
+    ]
+  },
+  {
+    "id": "SRV-403",
+    "name": "Micro-SaaS User Onboarding Flow Builder",
+    "description": "Design and deploy interactive product tours, checklists, and contextual tooltips that guide new users to their first value moment — no code required. Reduce time-to-value and improve activation rates by up to 60%. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "micro-saas",
+    "features": [
+      "Drag-and-drop onboarding flow designer",
+      "Interactive product tours, tooltips, and hotspots",
+      "Behavior-triggered checklists and milestone tracking",
+      "A/B testing for onboarding variant optimization",
+      "Analytics dashboard with activation and completion metrics"
+    ],
+    "pricing": {
+      "basic": "$39/month — 5 flows, 5k monthly active users",
+      "pro": "$149/month — unlimited flows, 50k MAU, A/B testing",
+      "enterprise": "$499/month — unlimited MAU, white-label, custom triggers"
+    },
+    "useCases": [
+      "SaaS product onboarding for new signups",
+      "Feature adoption campaigns for existing users",
+      "Employee training walkthroughs for internal tools"
+    ]
+  },
+  {
+    "id": "SRV-404",
+    "name": "Micro-SaaS Feedback Analytics Hub",
+    "description": "Collect, categorize, and prioritize user feedback from every channel into actionable product insights with AI-powered sentiment analysis and feature request voting. Turn customer noise into a clear product roadmap. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "micro-saas",
+    "features": [
+      "Multi-channel feedback collection (in-app, email, NPS, support tickets)",
+      "AI-powered sentiment analysis and auto-categorization",
+      "Feature request voting and prioritization boards",
+      "Customer-segmented feedback analytics",
+      "Roadmap integration with Jira, Linear, and GitHub Issues"
+    ],
+    "pricing": {
+      "basic": "$19/month — 500 feedback items/month, 2 channels",
+      "pro": "$79/month — 5,000 items, all channels, AI categorization",
+      "enterprise": "$249/month — unlimited items, custom AI models, API access"
+    },
+    "useCases": [
+      "Product-led growth feedback loop optimization",
+      "Customer success churn signal detection",
+      "Product roadmap prioritization with data-driven insights"
+    ]
+  },
+  {
+    "id": "SRV-405",
+    "name": "Micro-SaaS Team Collaboration Workspace",
+    "description": "A lightweight async collaboration tool built for distributed micro-teams with threaded discussions, decision logs, and lightweight project tracking — without the bloat of enterprise suites. Stay aligned without the meeting overload. Call +1 302 464 0950 or email kleber@ziontechgroup.com.",
+    "category": "micro-saas",
+    "features": [
+      "Threaded async discussions with decision tracking",
+      "Lightweight Kanban boards and milestone tracking",
+      "Built-in document collaboration with version history",
+      "Automated daily standup and weekly digest bots",
+      "Integrations with Slack, GitHub, Notion, and Figma"
+    ],
+    "pricing": {
+      "basic": "$9/user/month — up to 10 users, 5 projects",
+      "pro": "$19/user/month — up to 50 users, unlimited projects, automations",
+      "enterprise": "$39/user/month — unlimited users, SSO, admin controls, API"
+    },
+    "useCases": [
+      "Remote startup team daily coordination",
+      "Freelancer-client project collaboration",
+      "Cross-functional sprint planning for small teams"
+    ]
+  },
+  {
+    "id": "SRV-406",
+    "name": "Cloud Observability Platform",
+    "description": "Gain full-stack visibility into your cloud infrastructure with unified metrics, logs, and traces correlated by AI-powered root cause analysis. Detect and resolve issues before they impact users with intelligent alerting. Contact +1 302 464 0950 or kleber@ziontechgroup.com for a free trial.",
+    "category": "cloud",
+    "features": [
+      "Unified metrics, logs, and distributed traces in one platform",
+      "AI-driven anomaly detection and root cause correlation",
+      "Custom dashboards with real-time SLO tracking",
+      "Intelligent alerting with noise reduction and on-call routing",
+      "Native integrations with AWS, Azure, GCP, and Kubernetes"
+    ],
+    "pricing": {
+      "basic": "$199/month — 50 hosts, 30-day retention",
+      "pro": "$699/month — 500 hosts, 90-day retention, APM included",
+      "enterprise": "$2,499/month — unlimited hosts, 1-year retention, dedicated CSM"
+    },
+    "useCases": [
+      "Microservices performance monitoring and debugging",
+      "Cloud cost anomaly detection and optimization",
+      "Incident response with automated runbook execution"
+    ]
+  },
+  {
+    "id": "SRV-407",
+    "name": "Cloud Serverless Orchestration Service",
+    "description": "Build, deploy, and monitor complex serverless workflows across multiple cloud functions and services with visual orchestration, error handling, and cost optimization. Simplify event-driven architectures without vendor lock-in. Reach +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "cloud",
+    "features": [
+      "Visual workflow designer for serverless function chains",
+      "Built-in error handling, retries, and dead-letter queues",
+      "Cross-cloud function orchestration (AWS Lambda, Azure Functions, GCP Cloud Run)",
+      "Real-time execution tracing and cost attribution",
+      "Event-driven triggers with cron, webhook, and queue support"
+    ],
+    "pricing": {
+      "basic": "$79/month — 100k executions/month, 5 workflows",
+      "pro": "$299/month — 1M executions, unlimited workflows, advanced tracing",
+      "enterprise": "$999/month — unlimited executions, cross-cloud, priority support"
+    },
+    "useCases": [
+      "ETL pipeline orchestration across cloud services",
+      "Event-driven order processing workflows",
+      "Automated infrastructure provisioning and configuration"
+    ]
+  },
+  {
+    "id": "SRV-408",
+    "name": "Cloud Multi-Cloud Networking Hub",
+    "description": "Connect, secure, and optimize network traffic across AWS, Azure, GCP, and on-premises environments with a software-defined multi-cloud networking fabric. Achieve seamless connectivity with built-in encryption and traffic steering. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "cloud",
+    "features": [
+      "Software-defined multi-cloud network fabric",
+      "Automated transit gateway and peering configuration",
+      "End-to-end encryption with mTLS for inter-cloud traffic",
+      "Intelligent traffic steering and bandwidth optimization",
+      "Network topology visualization and compliance auditing"
+    ],
+    "pricing": {
+      "basic": "$399/month — 2 cloud providers, 10 VPCs/VNets",
+      "pro": "$1,299/month — 3 cloud providers, 50 VPCs, advanced routing",
+      "enterprise": "$3,999/month — unlimited clouds, global backbone, managed NOC"
+    },
+    "useCases": [
+      "Hybrid cloud connectivity for enterprise workloads",
+      "Disaster recovery failover across cloud regions",
+      "Global application delivery with low-latency routing"
+    ]
+  },
+  {
+    "id": "SRV-409",
+    "name": "Data Stream Processing Engine",
+    "description": "Process millions of events per second in real time with a scalable stream processing engine featuring exactly-once semantics, windowed aggregations, and complex event processing. Turn raw data streams into instant business insights. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "data",
+    "features": [
+      "Sub-millisecond event processing with exactly-once guarantees",
+      "Flexible windowing (tumbling, sliding, session) and aggregations",
+      "Complex event processing (CEP) with pattern detection",
+      "Schema registry with automatic evolution and compatibility checks",
+      "Native connectors for Kafka, Kinesis, Pulsar, and Pub/Sub"
+    ],
+    "pricing": {
+      "basic": "$199/month — 10M events/day, 3 pipelines",
+      "pro": "$799/month — 100M events/day, unlimited pipelines, CEP engine",
+      "enterprise": "$2,999/month — unlimited events, custom connectors, dedicated cluster"
+    },
+    "useCases": [
+      "Real-time fraud detection in financial transactions",
+      "Clickstream analytics and live dashboarding",
+      "IoT telemetry processing and alerting"
+    ]
+  },
+  {
+    "id": "SRV-410",
+    "name": "Automation RPA Orchestrator",
+    "description": "Design, deploy, and govern software robots that automate repetitive business processes across legacy and modern applications with an enterprise-grade RPA platform. Scale from attended desktop bots to unattended server farms. Reach +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "automation",
+    "features": [
+      "Visual low-code bot designer with recording and scripting",
+      "Attended and unattended bot execution modes",
+      "Centralized bot orchestration with scheduling and queue management",
+      "AI-enhanced document and screen understanding for bots",
+      "Enterprise governance with audit logs and role-based access"
+    ],
+    "pricing": {
+      "basic": "$149/month — 5 bots, attended mode only",
+      "pro": "$599/month — 25 bots, unattended + attended, orchestrator",
+      "enterprise": "$1,999/month — unlimited bots, AI capabilities, dedicated support"
+    },
+    "useCases": [
+      "Finance department invoice and reconciliation automation",
+      "HR employee onboarding and offboarding workflows",
+      "Customer service data entry and system updates"
+    ]
+  },
+  {
+    "id": "SRV-411",
+    "name": "Automation Workflow Intelligence Platform",
+    "description": "Orchestrate complex cross-system business workflows with AI-powered decision routing, exception handling, and process mining to continuously optimize operational efficiency. Bridge the gap between people, systems, and data in your operations. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    "category": "automation",
+    "features": [
+      "Visual workflow designer with conditional branching and parallel paths",
+      "AI-powered decision routing based on historical patterns",
+      "Process mining to discover bottlenecks and optimization opportunities",
+      "Exception handling with human-in-the-loop escalation",
+      "Pre-built connectors for 200+ enterprise applications"
+    ],
+    "pricing": {
+      "basic": "$179/month — 20 workflows, 10k executions/month",
+      "pro": "$699/month — unlimited workflows, 100k executions, process mining",
+      "enterprise": "$2,499/month — unlimited executions, AI routing, managed service"
+    },
+    "useCases": [
+      "Order-to-cash automation across ERP and CRM systems",
+      "Insurance claims processing with AI decision routing",
+      "Vendor onboarding and procurement workflow automation"
+    ]
   }
 ]

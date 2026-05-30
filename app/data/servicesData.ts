@@ -28831,6 +28831,735 @@ export const allServices: Service[] = [
     popular: true,
     industry: "Cross-Industry"
   }
+,
+  {
+    id: "SRV-386",
+    title: "AI Voice Cloning Studio",
+    description: "Create hyper-realistic voice clones for branding, accessibility, and content production using advanced neural speech synthesis. Our platform delivers studio-grade voice replication with emotion control and multi-language support. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com to get started.",
+    icon: "🧠",
+    features: [
+      "Neural voice cloning from 30-second audio samples",
+      "Real-time emotion and tone modulation",
+      "Multi-language voice synthesis (40+ languages)",
+      "API integration for TTS workflows",
+      "Voice fingerprinting and anti-spoofing safeguards"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$49/month — 5 voice clones, 10k characters/month",
+      pro: "$199/month — 25 voice clones, 100k characters/month, priority rendering",
+      enterprise: "$799/month — unlimited clones, custom models, SLA guarantee"
+    },
+    contactInfo: {
+      website: "/services/SRV-386",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-386",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-387",
+    title: "AI Document Intelligence Platform",
+    description: "Extract, classify, and analyze unstructured documents at scale with deep-learning OCR and semantic understanding. Automate invoice processing, contract review, and compliance auditing with 99.2% accuracy. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com for a demo.",
+    icon: "🧠",
+    features: [
+      "Deep-learning OCR with handwriting recognition",
+      "Semantic document classification and tagging",
+      "Automated data extraction with validation rules",
+      "Multi-format support (PDF, scanned images, Word, Excel)",
+      "Compliance-ready audit trail and versioning"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$79/month — 1,000 pages/month, 5 document types",
+      pro: "$349/month — 10,000 pages/month, unlimited types, API access",
+      enterprise: "$1,299/month — unlimited pages, custom models, on-premise deployment"
+    },
+    contactInfo: {
+      website: "/services/SRV-387",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-387",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-388",
+    title: "AI Supply Chain Optimizer",
+    description: "Leverage predictive analytics and reinforcement learning to optimize inventory, logistics, and demand forecasting across your supply chain. Reduce waste by up to 35% and improve delivery times with real-time adaptive routing. Contact +1 302 464 0950 or kleber@ziontechgroup.com for consultation.",
+    icon: "🧠",
+    features: [
+      "Demand forecasting with 95%+ accuracy",
+      "Dynamic inventory optimization across warehouses",
+      "Real-time route optimization for fleet logistics",
+      "Supplier risk scoring and disruption alerts",
+      "Carbon footprint tracking and sustainability reporting"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$299/month — single warehouse, basic forecasting",
+      pro: "$899/month — multi-warehouse, advanced routing, API integrations",
+      enterprise: "$2,999/month — global network, custom models, dedicated support"
+    },
+    contactInfo: {
+      website: "/services/SRV-388",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-388",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-389",
+    title: "AI Legal Research Assistant",
+    description: "Accelerate legal research with AI-powered case law analysis, statute interpretation, and precedent discovery across millions of legal documents. Reduce research time by 80% while improving citation accuracy. Call +1 302 464 0950 or email kleber@ziontechgroup.com to learn more.",
+    icon: "🧠",
+    features: [
+      "Natural language legal query understanding",
+      "Cross-jurisdiction case law and statute search",
+      "Automated citation verification (Shepardizing)",
+      "Brief drafting assistance with argument suggestions",
+      "Contract risk assessment and clause comparison"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$149/month — 500 queries/month, federal cases only",
+      pro: "$499/month — unlimited queries, state + federal, brief drafting",
+      enterprise: "$1,499/month — full suite, custom training, team collaboration"
+    },
+    contactInfo: {
+      website: "/services/SRV-389",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-389",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-390",
+    title: "AI Customer Journey Mapper",
+    description: "Visualize and optimize every touchpoint of the customer experience with AI-driven journey mapping and sentiment analysis. Identify friction points, predict churn, and personalize interactions at scale. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com for pricing.",
+    icon: "🧠",
+    features: [
+      "Real-time customer journey visualization",
+      "Sentiment analysis across email, chat, and voice channels",
+      "Churn prediction with intervention recommendations",
+      "A/B testing for journey optimization",
+      "Integration with CRM, CDP, and marketing platforms"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$99/month — 10k tracked users, 3 journey maps",
+      pro: "$399/month — 100k tracked users, unlimited maps, sentiment AI",
+      enterprise: "$1,199/month — unlimited users, custom models, white-label option"
+    },
+    contactInfo: {
+      website: "/services/SRV-390",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-390",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-391",
+    title: "AI Code Security Scanner",
+    description: "Detect vulnerabilities, secrets, and insecure patterns in your codebase using AI-powered static and dynamic analysis. Integrate seamlessly into CI/CD pipelines for continuous security posture improvement. Reach our team at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🧠",
+    features: [
+      "AI-powered SAST and DAST vulnerability detection",
+      "Secret and credential leak scanning across repos",
+      "OWASP Top 10 and CWE coverage with auto-remediation suggestions",
+      "CI/CD pipeline integration (GitHub, GitLab, Bitbucket)",
+      "Dependency vulnerability and license compliance checks"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$59/month — 3 repositories, weekly scans",
+      pro: "$249/month — 20 repositories, continuous scanning, API access",
+      enterprise: "$899/month — unlimited repos, custom rules, on-premise scanner"
+    },
+    contactInfo: {
+      website: "/services/SRV-391",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-391",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-392",
+    title: "AI Predictive Maintenance Engine",
+    description: "Prevent equipment failures before they happen with IoT sensor analytics and machine learning-based predictive maintenance models. Reduce unplanned downtime by up to 50% and extend asset lifespans. Contact +1 302 464 0950 or kleber@ziontechgroup.com for a tailored solution.",
+    icon: "🧠",
+    features: [
+      "Real-time IoT sensor data ingestion and anomaly detection",
+      "Remaining useful life (RUL) prediction for critical assets",
+      "Automated work order generation on failure prediction",
+      "Digital twin integration for simulation-based forecasting",
+      "Mobile alerts and maintenance scheduling dashboard"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$199/month — 50 monitored assets, basic alerts",
+      pro: "$699/month — 500 assets, RUL predictions, API access",
+      enterprise: "$2,499/month — unlimited assets, custom models, edge deployment"
+    },
+    contactInfo: {
+      website: "/services/SRV-392",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-392",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-393",
+    title: "AI Content Personalization Engine",
+    description: "Deliver hyper-personalized content, product recommendations, and dynamic web experiences powered by real-time behavioral AI models. Increase conversion rates by up to 40% with individualized user journeys. Get in touch at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🧠",
+    features: [
+      "Real-time behavioral profiling and segmentation",
+      "Dynamic content and product recommendation engine",
+      "Multi-channel personalization (web, email, mobile, in-app)",
+      "A/B/n testing with automated winner selection",
+      "Privacy-compliant data handling (GDPR, CCPA)"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$129/month — 50k monthly users, 3 channels",
+      pro: "$499/month — 500k monthly users, all channels, API access",
+      enterprise: "$1,799/month — unlimited users, custom models, dedicated CSM"
+    },
+    contactInfo: {
+      website: "/services/SRV-393",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-393",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-394",
+    title: "IT Network Forensics Suite",
+    description: "Investigate network incidents with full-packet capture, deep flow analysis, and automated threat reconstruction. Trace attack paths, preserve evidence chains, and accelerate incident response timelines. Contact +1 302 464 0950 or kleber@ziontechgroup.com for details.",
+    icon: "🖥️",
+    features: [
+      "Full packet capture with terabyte-scale retention",
+      "Deep flow analysis and protocol decoding (200+ protocols)",
+      "Automated attack timeline reconstruction",
+      "Chain-of-custody evidence export for legal proceedings",
+      "Integration with SIEM and SOAR platforms"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$399/month — 1 TB capture storage, 10 sensors",
+      pro: "$1,199/month — 10 TB storage, 50 sensors, advanced analytics",
+      enterprise: "$3,999/month — unlimited storage, global deployment, 24/7 support"
+    },
+    contactInfo: {
+      website: "/services/SRV-394",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-394",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-395",
+    title: "IT Cloud Migration Accelerator",
+    description: "Plan, execute, and validate cloud migrations with automated workload assessment, dependency mapping, and zero-downtime cutover strategies. Migrate legacy applications to AWS, Azure, or GCP with confidence. Call +1 302 464 0950 or email kleber@ziontechgroup.com to start your migration.",
+    icon: "🖥️",
+    features: [
+      "Automated workload discovery and dependency mapping",
+      "Migration wave planning with risk scoring",
+      "Lift-and-shift, re-platform, and re-architecture templates",
+      "Real-time migration progress dashboard and rollback capability",
+      "Post-migration cost optimization and right-sizing recommendations"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$499/month — up to 50 workloads, single cloud target",
+      pro: "$1,499/month — up to 500 workloads, multi-cloud, automated testing",
+      enterprise: "$4,999/month — unlimited workloads, dedicated migration team, SLA"
+    },
+    contactInfo: {
+      website: "/services/SRV-395",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-395",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-396",
+    title: "IT Edge Computing Platform",
+    description: "Deploy and manage distributed compute workloads at the edge with centralized orchestration, low-latency processing, and offline resilience. Ideal for IoT, retail, and industrial environments requiring real-time decisions. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🖥️",
+    features: [
+      "Centralized edge node provisioning and lifecycle management",
+      "Container and VM workload deployment with OTA updates",
+      "Offline-capable operation with sync-on-reconnect",
+      "Real-time data processing with sub-10ms latency",
+      "Hardware-agnostic support (ARM, x86, GPU edge devices)"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$249/month — 25 edge nodes, basic orchestration",
+      pro: "$799/month — 200 edge nodes, GPU support, advanced monitoring",
+      enterprise: "$2,499/month — unlimited nodes, custom SLA, dedicated support engineer"
+    },
+    contactInfo: {
+      website: "/services/SRV-396",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-396",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-397",
+    title: "IT Zero Trust Architecture Service",
+    description: "Implement a comprehensive zero-trust security model with microsegmentation, continuous identity verification, and least-privilege access across your entire infrastructure. Eliminate implicit trust and reduce lateral movement risks. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🖥️",
+    features: [
+      "Network microsegmentation with policy-as-code",
+      "Continuous device and user identity verification",
+      "Least-privilege access enforcement with JIT elevation",
+      "Encrypted micro-tunnels for all east-west traffic",
+      "Compliance mapping (NIST 800-207, CISA ZT Maturity Model)"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$599/month — up to 100 endpoints, basic segmentation",
+      pro: "$1,799/month — 1,000 endpoints, full microsegmentation, policy engine",
+      enterprise: "$5,999/month — unlimited endpoints, custom architecture, managed service"
+    },
+    contactInfo: {
+      website: "/services/SRV-397",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-397",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-398",
+    title: "Security API Gateway Shield",
+    description: "Protect your APIs from abuse, injection attacks, and data exfiltration with an intelligent API gateway featuring rate limiting, schema validation, and behavioral anomaly detection. Secure every endpoint without compromising performance. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🔐",
+    features: [
+      "AI-driven API threat detection and blocking",
+      "OpenAPI schema validation and enforcement",
+      "Adaptive rate limiting and bot mitigation",
+      "Request/response payload encryption and masking",
+      "Comprehensive API traffic analytics and logging"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$149/month — 10 API endpoints, 1M requests/month",
+      pro: "$599/month — 50 endpoints, 10M requests, advanced WAF rules",
+      enterprise: "$1,999/month — unlimited endpoints, custom rules, DDoS protection"
+    },
+    contactInfo: {
+      website: "/services/SRV-398",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-398",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-399",
+    title: "Security Identity Governance Platform",
+    description: "Manage, audit, and automate identity lifecycle governance across hybrid environments with role-based access control, access reviews, and compliance reporting. Ensure the right people have the right access at the right time. Call +1 302 464 0950 or email kleber@ziontechgroup.com.",
+    icon: "🔐",
+    features: [
+      "Automated user provisioning and deprovisioning",
+      "Role-based and attribute-based access control (RBAC/ABAC)",
+      "Periodic access reviews with manager certification",
+      "Segregation of duties (SoD) conflict detection",
+      "Audit-ready compliance reports (SOX, GDPR, ISO 27001)"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$299/month — 500 identities, 10 applications",
+      pro: "$999/month — 5,000 identities, 50 applications, automated reviews",
+      enterprise: "$3,499/month — unlimited identities, full governance suite, managed service"
+    },
+    contactInfo: {
+      website: "/services/SRV-399",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-399",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-400",
+    title: "Security Threat Intelligence Platform",
+    description: "Aggregate, correlate, and operationalize threat intelligence from 50+ feeds with AI-driven prioritization and automated IOC distribution to your security stack. Stay ahead of emerging threats with actionable, context-rich intelligence. Reach +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🔐",
+    features: [
+      "50+ curated threat feed aggregation and deduplication",
+      "AI-powered IOC scoring and relevance ranking",
+      "Automated IOC push to SIEM, firewall, and EDR",
+      "Dark web and deep web monitoring for brand exposure",
+      "Threat actor profiling and campaign tracking"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$349/month — 10 feed integrations, daily updates",
+      pro: "$1,099/month — all feeds, real-time updates, dark web monitoring",
+      enterprise: "$3,499/month — custom intelligence requirements, dedicated analyst, API"
+    },
+    contactInfo: {
+      website: "/services/SRV-400",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-400",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-401",
+    title: "Security Data Loss Prevention Suite",
+    description: "Prevent sensitive data exfiltration across endpoints, email, cloud storage, and network channels with content-aware DLP policies and real-time enforcement. Protect intellectual property, PII, and regulated data with granular controls. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🔐",
+    features: [
+      "Content-aware data classification (100+ data types)",
+      "Endpoint, email, cloud, and network DLP enforcement",
+      "Policy-based blocking, quarantine, and encryption actions",
+      "User behavior analytics for insider threat detection",
+      "Compliance templates for PCI-DSS, HIPAA, GDPR, CCPA"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$249/month — 200 endpoints, email DLP only",
+      pro: "$899/month — 2,000 endpoints, all channels, advanced analytics",
+      enterprise: "$2,999/month — unlimited endpoints, custom classifiers, managed DLP"
+    },
+    contactInfo: {
+      website: "/services/SRV-401",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-401",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-402",
+    title: "Micro-SaaS Subscription Billing Engine",
+    description: "A lightweight, developer-first billing platform for SaaS startups with usage-based pricing, proration, dunning management, and revenue recognition built in. Launch subscription billing in hours, not months. Contact +1 302 464 0950 or kleber@ziontechgroup.com to get started.",
+    icon: "🚀",
+    features: [
+      "Flexible pricing models (flat, usage-based, tiered, per-seat)",
+      "Automatic proration on plan upgrades and downgrades",
+      "Smart dunning with retry logic and failed payment recovery",
+      "Revenue recognition compliant with ASC 606",
+      "Developer-friendly API with SDKs for 8 languages"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$29/month — up to $10k MRR, 2 pricing plans",
+      pro: "$99/month — up to $100k MRR, unlimited plans, webhooks",
+      enterprise: "$399/month — unlimited MRR, custom integrations, priority support"
+    },
+    contactInfo: {
+      website: "/services/SRV-402",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-402",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-403",
+    title: "Micro-SaaS User Onboarding Flow Builder",
+    description: "Design and deploy interactive product tours, checklists, and contextual tooltips that guide new users to their first value moment — no code required. Reduce time-to-value and improve activation rates by up to 60%. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🚀",
+    features: [
+      "Drag-and-drop onboarding flow designer",
+      "Interactive product tours, tooltips, and hotspots",
+      "Behavior-triggered checklists and milestone tracking",
+      "A/B testing for onboarding variant optimization",
+      "Analytics dashboard with activation and completion metrics"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$39/month — 5 flows, 5k monthly active users",
+      pro: "$149/month — unlimited flows, 50k MAU, A/B testing",
+      enterprise: "$499/month — unlimited MAU, white-label, custom triggers"
+    },
+    contactInfo: {
+      website: "/services/SRV-403",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-403",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-404",
+    title: "Micro-SaaS Feedback Analytics Hub",
+    description: "Collect, categorize, and prioritize user feedback from every channel into actionable product insights with AI-powered sentiment analysis and feature request voting. Turn customer noise into a clear product roadmap. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "🚀",
+    features: [
+      "Multi-channel feedback collection (in-app, email, NPS, support tickets)",
+      "AI-powered sentiment analysis and auto-categorization",
+      "Feature request voting and prioritization boards",
+      "Customer-segmented feedback analytics",
+      "Roadmap integration with Jira, Linear, and GitHub Issues"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$19/month — 500 feedback items/month, 2 channels",
+      pro: "$79/month — 5,000 items, all channels, AI categorization",
+      enterprise: "$249/month — unlimited items, custom AI models, API access"
+    },
+    contactInfo: {
+      website: "/services/SRV-404",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-404",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-405",
+    title: "Micro-SaaS Team Collaboration Workspace",
+    description: "A lightweight async collaboration tool built for distributed micro-teams with threaded discussions, decision logs, and lightweight project tracking — without the bloat of enterprise suites. Stay aligned without the meeting overload. Call +1 302 464 0950 or email kleber@ziontechgroup.com.",
+    icon: "🚀",
+    features: [
+      "Threaded async discussions with decision tracking",
+      "Lightweight Kanban boards and milestone tracking",
+      "Built-in document collaboration with version history",
+      "Automated daily standup and weekly digest bots",
+      "Integrations with Slack, GitHub, Notion, and Figma"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$9/user/month — up to 10 users, 5 projects",
+      pro: "$19/user/month — up to 50 users, unlimited projects, automations",
+      enterprise: "$39/user/month — unlimited users, SSO, admin controls, API"
+    },
+    contactInfo: {
+      website: "/services/SRV-405",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-405",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-406",
+    title: "Cloud Observability Platform",
+    description: "Gain full-stack visibility into your cloud infrastructure with unified metrics, logs, and traces correlated by AI-powered root cause analysis. Detect and resolve issues before they impact users with intelligent alerting. Contact +1 302 464 0950 or kleber@ziontechgroup.com for a free trial.",
+    icon: "☁️",
+    features: [
+      "Unified metrics, logs, and distributed traces in one platform",
+      "AI-driven anomaly detection and root cause correlation",
+      "Custom dashboards with real-time SLO tracking",
+      "Intelligent alerting with noise reduction and on-call routing",
+      "Native integrations with AWS, Azure, GCP, and Kubernetes"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$199/month — 50 hosts, 30-day retention",
+      pro: "$699/month — 500 hosts, 90-day retention, APM included",
+      enterprise: "$2,499/month — unlimited hosts, 1-year retention, dedicated CSM"
+    },
+    contactInfo: {
+      website: "/services/SRV-406",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-406",
+    category: "cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-407",
+    title: "Cloud Serverless Orchestration Service",
+    description: "Build, deploy, and monitor complex serverless workflows across multiple cloud functions and services with visual orchestration, error handling, and cost optimization. Simplify event-driven architectures without vendor lock-in. Reach +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "☁️",
+    features: [
+      "Visual workflow designer for serverless function chains",
+      "Built-in error handling, retries, and dead-letter queues",
+      "Cross-cloud function orchestration (AWS Lambda, Azure Functions, GCP Cloud Run)",
+      "Real-time execution tracing and cost attribution",
+      "Event-driven triggers with cron, webhook, and queue support"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$79/month — 100k executions/month, 5 workflows",
+      pro: "$299/month — 1M executions, unlimited workflows, advanced tracing",
+      enterprise: "$999/month — unlimited executions, cross-cloud, priority support"
+    },
+    contactInfo: {
+      website: "/services/SRV-407",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-407",
+    category: "cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-408",
+    title: "Cloud Multi-Cloud Networking Hub",
+    description: "Connect, secure, and optimize network traffic across AWS, Azure, GCP, and on-premises environments with a software-defined multi-cloud networking fabric. Achieve seamless connectivity with built-in encryption and traffic steering. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "☁️",
+    features: [
+      "Software-defined multi-cloud network fabric",
+      "Automated transit gateway and peering configuration",
+      "End-to-end encryption with mTLS for inter-cloud traffic",
+      "Intelligent traffic steering and bandwidth optimization",
+      "Network topology visualization and compliance auditing"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$399/month — 2 cloud providers, 10 VPCs/VNets",
+      pro: "$1,299/month — 3 cloud providers, 50 VPCs, advanced routing",
+      enterprise: "$3,999/month — unlimited clouds, global backbone, managed NOC"
+    },
+    contactInfo: {
+      website: "/services/SRV-408",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-408",
+    category: "cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-409",
+    title: "Data Stream Processing Engine",
+    description: "Process millions of events per second in real time with a scalable stream processing engine featuring exactly-once semantics, windowed aggregations, and complex event processing. Turn raw data streams into instant business insights. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "📊",
+    features: [
+      "Sub-millisecond event processing with exactly-once guarantees",
+      "Flexible windowing (tumbling, sliding, session) and aggregations",
+      "Complex event processing (CEP) with pattern detection",
+      "Schema registry with automatic evolution and compatibility checks",
+      "Native connectors for Kafka, Kinesis, Pulsar, and Pub/Sub"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$199/month — 10M events/day, 3 pipelines",
+      pro: "$799/month — 100M events/day, unlimited pipelines, CEP engine",
+      enterprise: "$2,999/month — unlimited events, custom connectors, dedicated cluster"
+    },
+    contactInfo: {
+      website: "/services/SRV-409",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-409",
+    category: "data",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-410",
+    title: "Automation RPA Orchestrator",
+    description: "Design, deploy, and govern software robots that automate repetitive business processes across legacy and modern applications with an enterprise-grade RPA platform. Scale from attended desktop bots to unattended server farms. Reach +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "📊",
+    features: [
+      "Visual low-code bot designer with recording and scripting",
+      "Attended and unattended bot execution modes",
+      "Centralized bot orchestration with scheduling and queue management",
+      "AI-enhanced document and screen understanding for bots",
+      "Enterprise governance with audit logs and role-based access"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$149/month — 5 bots, attended mode only",
+      pro: "$599/month — 25 bots, unattended + attended, orchestrator",
+      enterprise: "$1,999/month — unlimited bots, AI capabilities, dedicated support"
+    },
+    contactInfo: {
+      website: "/services/SRV-410",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-410",
+    category: "automation",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "SRV-411",
+    title: "Automation Workflow Intelligence Platform",
+    description: "Orchestrate complex cross-system business workflows with AI-powered decision routing, exception handling, and process mining to continuously optimize operational efficiency. Bridge the gap between people, systems, and data in your operations. Contact +1 302 464 0950 or kleber@ziontechgroup.com.",
+    icon: "📊",
+    features: [
+      "Visual workflow designer with conditional branching and parallel paths",
+      "AI-powered decision routing based on historical patterns",
+      "Process mining to discover bottlenecks and optimization opportunities",
+      "Exception handling with human-in-the-loop escalation",
+      "Pre-built connectors for 200+ enterprise applications"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$179/month — 20 workflows, 10k executions/month",
+      pro: "$699/month — unlimited workflows, 100k executions, process mining",
+      enterprise: "$2,499/month — unlimited executions, AI routing, managed service"
+    },
+    contactInfo: {
+      website: "/services/SRV-411",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/SRV-411",
+    category: "automation",
+    popular: true,
+    industry: "Cross-Industry"
+  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => { return allServices.find(s => s.id === id); };
@@ -29263,3 +29992,31 @@ export const ai_v381_023 = allServices.find(s => s.id === "ai-v381-023");
 export const ai_v381_024 = allServices.find(s => s.id === "ai-v381-024");
 export const ai_v381_025 = allServices.find(s => s.id === "ai-v381-025");
 export const ai_v381_026 = allServices.find(s => s.id === "ai-v381-026");
+
+// V386-V390 Service Exports
+export const SRV_386 = allServices.find(s => s.id === "SRV-386");
+export const SRV_387 = allServices.find(s => s.id === "SRV-387");
+export const SRV_388 = allServices.find(s => s.id === "SRV-388");
+export const SRV_389 = allServices.find(s => s.id === "SRV-389");
+export const SRV_390 = allServices.find(s => s.id === "SRV-390");
+export const SRV_391 = allServices.find(s => s.id === "SRV-391");
+export const SRV_392 = allServices.find(s => s.id === "SRV-392");
+export const SRV_393 = allServices.find(s => s.id === "SRV-393");
+export const SRV_394 = allServices.find(s => s.id === "SRV-394");
+export const SRV_395 = allServices.find(s => s.id === "SRV-395");
+export const SRV_396 = allServices.find(s => s.id === "SRV-396");
+export const SRV_397 = allServices.find(s => s.id === "SRV-397");
+export const SRV_398 = allServices.find(s => s.id === "SRV-398");
+export const SRV_399 = allServices.find(s => s.id === "SRV-399");
+export const SRV_400 = allServices.find(s => s.id === "SRV-400");
+export const SRV_401 = allServices.find(s => s.id === "SRV-401");
+export const SRV_402 = allServices.find(s => s.id === "SRV-402");
+export const SRV_403 = allServices.find(s => s.id === "SRV-403");
+export const SRV_404 = allServices.find(s => s.id === "SRV-404");
+export const SRV_405 = allServices.find(s => s.id === "SRV-405");
+export const SRV_406 = allServices.find(s => s.id === "SRV-406");
+export const SRV_407 = allServices.find(s => s.id === "SRV-407");
+export const SRV_408 = allServices.find(s => s.id === "SRV-408");
+export const SRV_409 = allServices.find(s => s.id === "SRV-409");
+export const SRV_410 = allServices.find(s => s.id === "SRV-410");
+export const SRV_411 = allServices.find(s => s.id === "SRV-411");
