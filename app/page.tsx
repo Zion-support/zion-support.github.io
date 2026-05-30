@@ -22,6 +22,7 @@ import AdvancedIntelligenceShowcase from '@/components/AdvancedIntelligenceShowc
 import EmailIntelligenceV2Showcase from '@/components/EmailIntelligenceV2Showcase';
 import EmailCommandCenter from '@/components/EmailCommandCenter';
 import EmailIntelligenceV3Showcase from '@/components/EmailIntelligenceV3Showcase';
+import EmailIntelligenceV4Showcase from '@/components/EmailIntelligenceV4Showcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -1077,6 +1078,9 @@ let list = services;
 
       {/* ── Email Intelligence V114-V118 ── */}
       <EmailIntelligenceV3Showcase />
+
+      {/* ── Email Intelligence V119-V123 ── */}
+      <EmailIntelligenceV4Showcase />
 
     <FloatingActionDock />
     </main>

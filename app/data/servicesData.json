@@ -25746,5 +25746,499 @@
     "category": "iot",
     "popular": true,
     "industry": "Industrial & Manufacturing"
+  },
+  {
+    "id": "ai-meeting-to-action-engine",
+    "title": "AI Meeting-to-Action Engine (V119)",
+    "description": "Convert meeting transcripts into actionable tasks, calendar events, and follow-up emails with deadline tracking and accountability assignment.",
+    "icon": "📋",
+    "features": [
+      "Auto-extract action items from transcripts",
+      "Assign tasks with deadlines",
+      "Generate follow-up emails per assignee",
+      "Create calendar events from decisions",
+      "Track meeting sentiment and engagement",
+      "Detect next meeting scheduling",
+      "Decision logging and accountability",
+      "Reply-all enforcement for all participants"
+    ],
+    "benefits": [
+      "Save 4+ hours per meeting on follow-ups",
+      "Never miss an action item again",
+      "Auto-assign and track accountability",
+      "Generate perfect follow-up emails instantly",
+      "Keep all stakeholders in the loop with reply-all",
+      "Turn meetings into measurable outcomes"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "599",
+      "enterprise": "1399"
+    },
+    "contactInfo": {
+      "website": "/services/ai-meeting-to-action-engine",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-meeting-to-action-engine",
+    "category": "ai",
+    "popular": true,
+    "industry": "Productivity"
+  },
+  {
+    "id": "ai-customer-journey-orchestrator",
+    "title": "AI Customer Journey Orchestrator (V120)",
+    "description": "Map and automate the entire customer journey from awareness to advocacy with churn-risk triggers, nurture sequences, and touchpoint optimization.",
+    "icon": "🗺️",
+    "features": [
+      "12-stage customer lifecycle mapping",
+      "Automated trigger-based transitions",
+      "Churn risk scoring with intervention",
+      "Personalized nurture sequences per stage",
+      "Multi-channel orchestration",
+      "Real-time engagement scoring",
+      "Next-best-action recommendations",
+      "Win-back campaigns for churned customers"
+    ],
+    "benefits": [
+      "Reduce churn by 45% with early detection",
+      "Automate entire customer lifecycle",
+      "Personalize every touchpoint",
+      "Increase customer LTV by 60%",
+      "Multi-channel engagement automation",
+      "Data-driven customer success"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "999",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "website": "/services/ai-customer-journey-orchestrator",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-customer-journey-orchestrator",
+    "category": "ai",
+    "popular": true,
+    "industry": "Customer Success"
+  },
+  {
+    "id": "ai-email-accessibility-engine",
+    "title": "AI Email Accessibility Engine (V121)",
+    "description": "Ensure all emails meet WCAG 2.1 AA standards with auto-alt-text, reading-level optimization, screen-reader compatibility, and multi-language accessibility.",
+    "icon": "♿",
+    "features": [
+      "WCAG 2.1 AA compliance checking",
+      "Reading level analysis (Flesch-Kincaid)",
+      "Auto-generated alt text for images",
+      "Screen reader compatibility audit",
+      "Link text descriptiveness check",
+      "Multi-language detection",
+      "Auto-fix suggestions for all issues",
+      "Compliance scoring and reporting"
+    ],
+    "benefits": [
+      "Meet WCAG 2.1 AA compliance automatically",
+      "Reach 100% of your audience",
+      "Avoid accessibility lawsuits",
+      "Improve readability for all users",
+      "Support 40+ languages",
+      "Auto-fix 80% of issues instantly"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "499",
+      "enterprise": "1199"
+    },
+    "contactInfo": {
+      "website": "/services/ai-email-accessibility-engine",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-email-accessibility-engine",
+    "category": "ai",
+    "popular": true,
+    "industry": "Enterprise Communications"
+  },
+  {
+    "id": "ai-negotiation-assistant",
+    "title": "AI Negotiation Assistant (V122)",
+    "description": "Real-time negotiation coaching: detect leverage points, suggest counter-offers, track concessions, and optimize deal outcomes across email exchanges.",
+    "icon": "🤝",
+    "features": [
+      "7-phase negotiation detection",
+      "8 leverage point types identified",
+      "Concession tracking (given and received)",
+      "Counter-offer generation with templates",
+      "Deal probability scoring",
+      "Walk-away risk assessment",
+      "Tactic recommendations per phase",
+      "Value extraction from negotiations"
+    ],
+    "benefits": [
+      "Close deals 22% faster",
+      "Never miss a leverage point",
+      "Track every concession automatically",
+      "Get AI-powered counter-offer suggestions",
+      "Predict deal outcomes accurately",
+      "Coach your team in real-time"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1199",
+      "enterprise": "2999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-negotiation-assistant",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-negotiation-assistant",
+    "category": "ai",
+    "popular": true,
+    "industry": "Sales & Procurement"
+  },
+  {
+    "id": "ai-email-archival-search",
+    "title": "AI Email Archival & Search Engine (V123)",
+    "description": "Intelligent email archival with semantic search, conversation threading across years, and instant recall of any commitment, decision, or fact ever mentioned.",
+    "icon": "🔍",
+    "features": [
+      "Semantic search across all emails",
+      "Commitment and promise extraction",
+      "Decision logging with timestamps",
+      "Financial data archival",
+      "Contact information indexing",
+      "Thread-aware conversation linking",
+      "Timeline view of all interactions",
+      "Instant recall of any fact or promise"
+    ],
+    "benefits": [
+      "Find any email fact in under 10ms",
+      "Never forget a commitment made",
+      "Complete audit trail of all decisions",
+      "Search across years of emails instantly",
+      "Auto-tag and categorize everything",
+      "Perfect for legal and compliance teams"
+    ],
+    "pricing": {
+      "basic": "349",
+      "pro": "699",
+      "enterprise": "1599"
+    },
+    "contactInfo": {
+      "website": "/services/ai-email-archival-search",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-email-archival-search",
+    "category": "ai",
+    "popular": true,
+    "industry": "Legal & Compliance"
+  },
+  {
+    "id": "ai-email-complete-platform-v119-v123",
+    "title": "AI Email Complete Platform (V109-V123)",
+    "description": "The ultimate email intelligence platform combining all 15 engines: autonomous orchestration, emotional AI, revenue intelligence, compliance, analytics, scheduling, knowledge base, templates, CRM sync, security, meeting actions, journeys, accessibility, negotiation, and archival.",
+    "icon": "🏆",
+    "features": [
+      "All V109-V123 engines in one platform",
+      "15 specialized AI engines working together",
+      "Case-by-case analysis for every interaction",
+      "Guaranteed reply-all enforcement (100%)",
+      "Self-learning and self-improving AI",
+      "Enterprise security and compliance",
+      "Real-time dashboards and analytics",
+      "Unlimited scalability"
+    ],
+    "benefits": [
+      "Save 80+ hours per month across teams",
+      "500% average ROI in first quarter",
+      "Zero compliance violations",
+      "100% reply-all compliance guaranteed",
+      "Complete email command and control",
+      "The last email platform you will ever need"
+    ],
+    "pricing": {
+      "basic": "2499",
+      "pro": "5999",
+      "enterprise": "14999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-email-complete-platform-v119-v123",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-email-complete-platform-v119-v123",
+    "category": "ai",
+    "popular": true,
+    "industry": "Enterprise"
+  },
+  {
+    "id": "ai-fraud-detection-platform",
+    "title": "AI Fraud Detection Platform",
+    "description": "Real-time fraud detection across transactions, accounts, and behaviors with ML models, anomaly scoring, and automated investigation workflows.",
+    "icon": "🚨",
+    "features": [
+      "Real-time transaction monitoring",
+      "ML-based anomaly detection",
+      "Behavioral biometrics analysis",
+      "Network graph fraud detection",
+      "Automated investigation workflows",
+      "Regulatory reporting automation",
+      "False positive reduction (80%)",
+      "Multi-channel fraud prevention"
+    ],
+    "benefits": [
+      "Detect fraud in milliseconds",
+      "Reduce false positives by 80%",
+      "Prevent $millions in losses",
+      "Automate investigation workflows",
+      "Meet regulatory requirements",
+      "Stay ahead of fraud patterns"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "website": "/services/ai-fraud-detection-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/ai-fraud-detection-platform",
+    "category": "security",
+    "popular": true,
+    "industry": "Financial Services"
+  },
+  {
+    "id": "micro-saas-time-tracking",
+    "title": "AI Time Tracking & Productivity Platform",
+    "description": "Automatic time tracking with AI-powered activity detection, project allocation, productivity insights, and team analytics — no manual timers needed.",
+    "icon": "⏱️",
+    "features": [
+      "Automatic time tracking (no manual start/stop)",
+      "AI activity detection and categorization",
+      "Project and task auto-allocation",
+      "Productivity insights and focus scores",
+      "Team analytics and benchmarks",
+      "Invoice generation from tracked time",
+      "Integration with 50+ tools",
+      "Privacy-first design (no screenshots)"
+    ],
+    "benefits": [
+      "Track time without lifting a finger",
+      "Understand productivity patterns",
+      "Generate invoices automatically",
+      "Benchmark team performance",
+      "Integrate with your existing tools",
+      "Privacy-first — no surveillance"
+    ],
+    "pricing": {
+      "basic": "99",
+      "pro": "249",
+      "enterprise": "599"
+    },
+    "contactInfo": {
+      "website": "/services/micro-saas-time-tracking",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/micro-saas-time-tracking",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Productivity"
+  },
+  {
+    "id": "cloud-disaster-recovery",
+    "title": "AI Disaster Recovery Platform",
+    "description": "Automated disaster recovery with AI-powered RPO/RTO optimization, continuous replication, instant failover, and compliance-ready backup across multi-cloud.",
+    "icon": "🔄",
+    "features": [
+      "AI-optimized RPO/RTO targets",
+      "Continuous cross-region replication",
+      "Instant automated failover",
+      "Multi-cloud backup (AWS, Azure, GCP)",
+      "Compliance-ready retention policies",
+      "One-click recovery testing",
+      "Cost optimization engine",
+      "Real-time replication monitoring"
+    ],
+    "benefits": [
+      "Achieve near-zero RPO and RTO",
+      "Automate disaster recovery testing",
+      "Reduce DR costs by 50%",
+      "Meet compliance requirements",
+      "Protect across any cloud",
+      "Recover in minutes, not hours"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "website": "/services/cloud-disaster-recovery",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/cloud-disaster-recovery",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Infrastructure"
+  },
+  {
+    "id": "it-endpoint-management",
+    "title": "Unified Endpoint Management Platform",
+    "description": "Manage all devices (laptops, mobiles, IoT) from a single pane with zero-touch provisioning, compliance enforcement, and AI-powered threat detection.",
+    "icon": "💻",
+    "features": [
+      "Zero-touch device provisioning",
+      "Multi-OS support (Windows, macOS, Linux, iOS, Android)",
+      "Compliance policy enforcement",
+      "AI-powered threat detection",
+      "Remote wipe and lock",
+      "Application management and deployment",
+      "Patch management automation",
+      "Inventory and asset tracking"
+    ],
+    "benefits": [
+      "Provision devices in minutes, not days",
+      "Manage all devices from one console",
+      "Enforce compliance automatically",
+      "Detect threats before they spread",
+      "Remote management from anywhere",
+      "Reduce IT support tickets by 50%"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1199"
+    },
+    "contactInfo": {
+      "website": "/services/it-endpoint-management",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/it-endpoint-management",
+    "category": "it",
+    "popular": true,
+    "industry": "IT Management"
+  },
+  {
+    "id": "automation-ocr-platform",
+    "title": "AI OCR & Document Intelligence",
+    "description": "Extract structured data from any document type with AI-powered OCR, table detection, handwriting recognition, and automated workflow routing.",
+    "icon": "📸",
+    "features": [
+      "AI-powered OCR (99.5% accuracy)",
+      "Table and form detection",
+      "Handwriting recognition (ICR)",
+      "Multi-language document processing",
+      "Automated data extraction rules",
+      "Workflow routing and approval",
+      "Integration with ERP/CRM systems",
+      "Batch processing at scale"
+    ],
+    "benefits": [
+      "Extract data from any document type",
+      "99.5% accuracy with AI enhancement",
+      "Process thousands of documents per hour",
+      "Eliminate manual data entry",
+      "Route documents automatically",
+      "Integrate with any business system"
+    ],
+    "pricing": {
+      "basic": "249",
+      "pro": "599",
+      "enterprise": "1399"
+    },
+    "contactInfo": {
+      "website": "/services/automation-ocr-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/automation-ocr-platform",
+    "category": "automation",
+    "popular": true,
+    "industry": "Document Processing"
+  },
+  {
+    "id": "blockchain-defi-analytics",
+    "title": "DeFi Analytics & Portfolio Tracker",
+    "description": "Real-time DeFi portfolio tracking, yield optimization, risk assessment, and cross-chain analytics across 20+ blockchain networks.",
+    "icon": "📈",
+    "features": [
+      "Real-time portfolio tracking",
+      "Cross-chain analytics (20+ networks)",
+      "Yield farming optimization",
+      "Risk assessment and scoring",
+      "Transaction history and tax reporting",
+      "Gas fee optimization",
+      "DeFi protocol health monitoring",
+      "Alert system for market events"
+    ],
+    "benefits": [
+      "Track all DeFi positions in one place",
+      "Optimize yields across protocols",
+      "Assess risk before investing",
+      "Automate tax reporting",
+      "Save on gas fees",
+      "Stay ahead of market events"
+    ],
+    "pricing": {
+      "basic": "99",
+      "pro": "299",
+      "enterprise": "799"
+    },
+    "contactInfo": {
+      "website": "/services/blockchain-defi-analytics",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/blockchain-defi-analytics",
+    "category": "blockchain",
+    "popular": true,
+    "industry": "DeFi & Crypto"
+  },
+  {
+    "id": "iot-fleet-management",
+    "title": "IoT Fleet Management Platform",
+    "description": "Manage thousands of IoT devices with OTA updates, health monitoring, remote configuration, and predictive maintenance across global deployments.",
+    "icon": "🛰️",
+    "features": [
+      "Device fleet dashboard",
+      "OTA firmware updates",
+      "Remote configuration management",
+      "Health monitoring and alerting",
+      "Predictive maintenance",
+      "Geolocation tracking",
+      "Data pipeline management",
+      "Security and certificate management"
+    ],
+    "benefits": [
+      "Manage 100,000+ devices centrally",
+      "Update firmware over-the-air safely",
+      "Predict device failures before they happen",
+      "Monitor fleet health in real-time",
+      "Track devices globally",
+      "Secure every device automatically"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1199",
+      "enterprise": "2999"
+    },
+    "contactInfo": {
+      "website": "/services/iot-fleet-management",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "href": "/services/iot-fleet-management",
+    "category": "iot",
+    "popular": true,
+    "industry": "Connected Devices"
   }
 ]
