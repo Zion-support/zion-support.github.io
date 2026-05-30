@@ -1,2443 +1,1060 @@
-import Banner from './components/Banner';
-import DonateSection from './components/DonateSection';
-import { whatsNewItems } from './features/featuredItems';
+// app/page.tsx — Home / Landing Page
+'use client';
+
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import ProductRecommenderSection from './components/ai/ProductRecommenderSection';
-import SmartContentSummarizer from './components/ai/SmartContentSummarizer';
-import AdSlot from './components/ai/AdSlot';
-import DependencyBadge from './components/DependencyBadge';
-import fs from 'fs';
-import path from 'path';
-import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems } from './config/aiCatalog';
-import OpenCollectiveWidget from './components/OpenCollectiveWidget';
-import TopToolsShowcase from './components/TopToolsShowcase';
+import { allServices } from './data/servicesData';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import type { Service } from './data/servicesData';
+import ServiceBrowser from '@/components/ServiceBrowser';
+import ServiceSpotlight from '@/components/ServiceSpotlight';
+import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import ContactFunnel from '@/components/ContactFunnel';
+import ServiceCounter from '@/components/ServiceCounter';
+import FloatingActionDock from '@/components/FloatingActionDock';
+import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 
-type DeploymentReadinessReport = {
-  timestamp?: string;
-  ready?: boolean;
+
+// Category accent color for showcase cards (maps category key → gradient)
+// Category accent color for showcase card styles (static RGBA + hex)
+const catAccent: Record<string, string> = {
+  ai:        '#a78bfa',
+  it:        '#38bdf8',
+  cloud:     '#7dd3fc',
+  security:  '#fb923c',
+  data:      '#34d399',
+  automation:'#fb7185',
+  'micro-saas': '#fbbf24',
+  devops:    '#22d3ee',
+  blockchain: '#fbbf24',
+  iot:       '#2dd4bf',
+  'email-intelligence': '#a78bfa',
 };
 
-type DeployStatusReport = {
-  generatedAt?: string;
-  status?: string;
-  sha?: string;
-  netlifyDeployId?: string | null;
-  netlifyDeployUrl?: string | null;
+const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || CATEGORIES[0];
+
+// Stat labels
+const STAT_SERVICES = 'Services & Solutions';
+const STAT_MONITOR  = 'Monitoring & Support';
+const STAT_SLA      = 'SLA Uptime Guarantee';
+
+// Featured: pull 2 per category so every category is represented
+// Dynamic featured: popular services + first per category (auto-updates with catalog changes)
+
+const CATEGORIES = [
+  { key: 'ai',        label: 'AI Services',          emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
+  { key: 'it',        label: 'IT Services',            emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
+  { key: 'cloud',     label: 'Cloud Services',          emoji: '☁️', color: 'from-sky-400 to-blue-600' },
+  { key: 'security',  label: 'Security Services',       emoji: '🔐', color: 'from-red-500 to-orange-500' },
+  { key: 'data',      label: 'Data Analytics',          emoji: '📊', color: 'from-green-500 to-emerald-500' },
+  { key: 'automation',label: 'Automation',              emoji: '🤖', color: 'from-pink-500 to-rose-500' },
+  { key: 'micro-saas',label: 'Micro-SaaS Products',     emoji: '🚀', color: 'from-amber-500 to-orange-500' },
+  { key: 'devops',    label: 'DevOps and Platform',     emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
+  { key: 'blockchain',label: 'Blockchain and Web3',     emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
+  { key: 'iot',       label: 'IoT and Edge',            emoji: '📡', color: 'from-teal-500 to-green-500' },
+  { key: 'email-intelligence', label: 'Email Intelligence', emoji: '📧', color: 'from-violet-500 to-purple-600' },
+];
+
+// Per-industry service-category mapping (derived from service catalog)
+const INDUSTRY_CATS: Record<string,string> = {
+  "technology-&-saas": "it",
+  "media-&-entertainment": "ai",
+  "legal-&-compliance": "ai",
+  "energy-&-utilities": "ai",
+  "retail-&-e-commerce": "ai",
+  "logistics-&-supply-chain": "ai",
+  "manufacturing-&-industrial": "ai",
+  "financial-services-&-fintech": "ai",
+  "education-&-research": "ai",
+  "healthcare-&-life-sciences": "ai",
 };
 
-type SuppressionRegistryReport = {
-  generatedAt?: string;
-  noise?: { emaOpenIncidents?: number };
-  totalOpenIncidents?: number;
-  tuning?: { noiseLevel?: string; reason?: string };
-};
 
-type NetlifyPreviewSmokeReport = {
-  generatedAt?: string;
-  skipped?: boolean;
-  unhealthyCount?: number;
-  baseUrl?: string;
-};
+// Industries we serve — derived live from service catalog
+const INDUSTRIES = [
+  { key: "technology-&-saas",          label: "Technology & SaaS",          emoji: "🏭", color: "from-amber-500 to-orange-500", count: 145, sample: "AI Analytics & BI" },
+  { key: "media-&-entertainment",      label: "Media & Entertainment",      emoji: "🎬", color: "from-blue-500 to-cyan-500",    count: 95,  sample: "AI Knowledge Management" },
+  { key: "legal-&-compliance",         label: "Legal & Compliance",         emoji: "⚖️", color: "from-purple-500 to-pink-500",   count: 77,  sample: "Contract Lifecycle Intelligence" },
+  { key: "energy-&-utilities",          label: "Energy & Utilities",          emoji: "⚡", color: "from-green-500 to-emerald-500", count: 69,  sample: "Grid Demand Forecaster" },
+  { key: "retail-&-e-commerce",        label: "Retail & E-Commerce",        emoji: "🛒", color: "from-sky-500 to-blue-600",    count: 57,  sample: "Personalised Product Recommendations" },
+  { key: "logistics-&-supply-chain",   label: "Logistics & Supply Chain",   emoji: "🚚", color: "from-rose-500 to-red-500",    count: 57,  sample: "Sustainable Supply Chain Radar" },
+  { key: "manufacturing-&-industrial", label: "Manufacturing & Industrial", emoji: "🏗️", color: "from-yellow-500 to-amber-500", count: 25,  sample: "Computer Vision Quality Inspection" },
+  { key: "financial-services-&-fintech", label: "Financial Services & FinTech", emoji: "💳", color: "from-indigo-500 to-purple-500", count: 23, sample: "Integrated Commerce Flow Orchestrator" },
+  { key: "education-&-research",       label: "Education & Research",       emoji: "🎓", color: "from-cyan-500 to-teal-500",   count: 15,  sample: "Reinforcement Learning Optimiser" },
+  { key: "healthcare-&-life-sciences", label: "Healthcare & Life Sciences", emoji: "🏥", color: "from-pink-500 to-rose-500",   count: 12,  sample: "AI Drug Discovery & Molecular Design" },
+];
 
-type PromotionConfidenceReport = {
-  generatedAt?: string;
-  gatedThreshold?: number;
-  routeScores?: Array<{ route: string; score: number }>;
-};
+export default function HomePage() {
+  const services: Service[] = allServices;
 
-type LaunchDigestReport = {
-  generatedAt?: string;
-  totalLaunchCommits?: number;
-  weeklyHighlights?: string[];
-};
-type AutomationHealthReport = {
-  generatedAt?: string;
-  severity?: 'nominal' | 'warning' | 'critical' | string;
-  emaOpenIncidents?: number;
-  previewUnhealthyCount?: number;
-  openFingerprintIssues?: number;
-  deployStatus?: string;
-  sloScore?: number;
-  sloDeltaFromPrevious?: number | null;
-  registryGeneratedAt?: string | null;
-  telemetryFreshness?: {
-    suppressionRegistryAt?: string | null;
-    deployStatusAt?: string | null;
-    previewSmokeAt?: string | null;
-    issueIndexAt?: string | null;
-    observabilityEmaFpHistoryAt?: string | null;
-    smokeHealthHistoryAt?: string | null;
-    automationHealthHistoryAt?: string | null;
-  };
-};
+  // Stage health counts — deterministic from catalog
+  const byStage = useMemo(() => {
+    const acc: Record<string,number> = { published:0, beta:0, planned:0 };
+    services.forEach((s: any) => { if (s.stage in acc) acc[s.stage]++; });
+    return acc;
+  }, [services]);
 
-type AutomationHealthHistoryFile = {
-  points?: Array<{ sloScore?: number }>;
-};
+  const serviceCount = allServices.length;
+    const [quickView, setQuickView] = useState<Service | null>(null);
+    const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
+    const [search, setSearch] = useState('');
+    const [catFilter, setCatFilter] = useState<string | null>(null);
 
-function getDeploymentReadiness(): DeploymentReadinessReport | null {
-  try {
-    const reportPath = path.join(
-      process.cwd(),
-      'automation',
-      'reports',
-      'deployment-readiness-latest.json',
-    );
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as DeploymentReadinessReport;
-  } catch {
-    return null;
-  }
-}
+  // Dynamic stats — auto-update when catalog changes
+  const stats = [
+    { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
+    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
+    { value: '24/7', label: STAT_MONITOR },
+    { value: '99.9%', label: STAT_SLA },
+  ];
 
-function getDeployStatus(): DeployStatusReport | null {
-  try {
-    const reportPath = path.join(process.cwd(), 'automation', 'reports', 'deploy-status-latest.json');
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as DeployStatusReport;
-  } catch {
-    return null;
-  }
-}
+  // Fetch release-signal dataset on mount
+  useEffect(() => {
+    const ac = new AbortController();
+    const t  = setTimeout(() => ac.abort(), 8_000);
+    fetch('/data/release_notes.json', { signal: ac.signal })
+      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(d  => setReleaseNotes(d.entries || []))
+      .catch(() => {/* leave empty — freshFeatures fallback handles it */})
+      .finally(() => clearTimeout(t));
+  }, []);
 
-function getPromotionConfidence(): PromotionConfidenceReport | null {
-  try {
-    const reportPath = path.join(
-      process.cwd(),
-      'automation',
-      'reports',
-      'promotion-confidence-latest.json',
-    );
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as PromotionConfidenceReport;
-  } catch {
-    return null;
-  }
-}
+    const filteredShowcase = useMemo(() => {
+let list = services;
+    if (catFilter) list = list.filter((s: any) => s.category === catFilter);
+    if (search.trim()) {
+      const q = search.toLowerCase();
+      list = list.filter((s: any) =>
+        s.title.toLowerCase().includes(q) || s.description.toLowerCase().includes(q)
+      );
+    }
+    return list;
+  }, [services, catFilter, search]);
 
-function getLaunchDigest(): LaunchDigestReport | null {
-  try {
-    const reportPath = path.join(process.cwd(), 'automation', 'reports', 'ai-launch-digest-latest.json');
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as LaunchDigestReport;
-  } catch {
-    return null;
-  }
-}
+  // Dynamic popular services — changes automatically when catalog updates
+  const popularServices = useMemo(() =>
+    services
+      .filter((s: any) => s.popular == true)
+      .map(s => ({
+        ...s,
+        _score: (s.features?.length || 0) * 3
+              + (s.benefits?.length || 0) * 2
+              + (s.description || '').length * 0.3
+      }))
+      .sort((a: any, b: any) => b._score - a._score)
+      .slice(0, 50),
+    [services]
+  );
 
-function getSuppressionRegistry(): SuppressionRegistryReport | null {
-  try {
-    const reportPath = path.join(
-      process.cwd(),
-      'automation',
-      'reports',
-      'incident-suppression-registry-latest.json',
-    );
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as SuppressionRegistryReport;
-  } catch {
-    return null;
-  }
-}
+  const byCategory = useMemo(() => {
+    const map: Record<string, Service[]> = {};
+    for (const c of CATEGORIES) map[c.key] = services.filter((s: any) => s.category === c.key);
+    return map;
+  }, [services]);
 
-function getNetlifyPreviewSmoke(): NetlifyPreviewSmokeReport | null {
-  try {
-    const reportPath = path.join(
-      process.cwd(),
-      'automation',
-      'reports',
-      'netlify-preview-smoke-latest.json',
-    );
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as NetlifyPreviewSmokeReport;
-  } catch {
-    return null;
-  }
-}
+  // ── Release-signal news arranger ──────────────────────────────────────
+  // Pulls featured services using data/release_notes.json scoring.
+  // Falls back to freshFeatures if dataset not loaded or empty.
+  const newsItems = useMemo(() => {
+    if (!releaseNotes.length) {
+      return allServices
+        .map(s => ({ ...s, _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
+        .sort((a:any,b:any) => b._score - a._score)
+        .slice(0, 6);
+    }
+    const ENTRY_TAG_MAP: Record<string,string> = {
+      ai: 'AI & ML', it: 'IT & Infrastructure', cloud: 'Cloud Platform',
+      security: 'Security', data: 'Data & Analytics', automation: 'Automation'
+    };
+    const now   = Date.now();
+    const DAY   = 86_400_000;
+    const SCORE_RECENCY   = 5;   // +5 per day-newer
+    const SCORE_TAG       = 2;   // +2 per matched tag
+    const SCORE_FEATURED  = 3;   // +3 if featured
+    const SCORE_FEATURES  = 1;   // +1 per feature bullet
+    const lookup = new Map(allServices.map(s => [s.id, s]));
+    const merged = releaseNotes
+      .filter(r => r.featured !== false)
+      .map(r => {
+        const svc = lookup.get(r.id);
+        if (!svc) return null;
+        const daysAgo = Math.max(0, Math.round((now - new Date(r.released_at).getTime()) / DAY));
+        const tagCount = (r.tags || []).filter(t => ENTRY_TAG_MAP[t]).length;
+        return {
+          id: r.id, title: r.changelog_summary || r.changelog.slice(0, 80) + '...',
+          desc: r.changelog,
+          tag: ENTRY_TAG_MAP[(r.tags || [])[0]] || 'New',
+          color: CATEGORIES.find(c => c.key === svc.category)?.color || 'from-purple-500 to-indigo-500',
+          _score: SCORE_FEATURED * (r.featured ? 1 : 0)
+                   + SCORE_TAG       * tagCount
+                   + SCORE_FEATURES  * (svc.features?.length || 0)
+                   - SCORE_RECENCY   * daysAgo,
+        };
+      })
+      .filter((r): r is NonNullable<typeof r> => r !== null)
+      .sort((a, b) => b!._score - a!._score)
+      .slice(0, 6);
+    if (merged.length) return merged;
+    // Fallback: same formula as original freshFeatures
+    return allServices
+      .map(s => ({ ...s, _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
+      .sort((a:any,b:any) => b._score - a._score)
+      .slice(0, 6);
 
-function getAutomationHealth(): AutomationHealthReport | null {
-  try {
-    const reportPath = path.join(process.cwd(), 'automation', 'reports', 'automation-health-latest.json');
-    if (!fs.existsSync(reportPath)) return null;
-    return JSON.parse(fs.readFileSync(reportPath, 'utf8')) as AutomationHealthReport;
-  } catch {
-    return null;
-  }
-}
-
-function getAutomationHealthHistory(): number[] {
-  try {
-    const p = path.join(process.cwd(), 'automation', 'reports', 'automation-health-history.json');
-    if (!fs.existsSync(p)) return [];
-    const j = JSON.parse(fs.readFileSync(p, 'utf8')) as AutomationHealthHistoryFile;
-    const pts = Array.isArray(j.points) ? j.points : [];
-    return pts.slice(-18).map((x) => Number(x.sloScore ?? 0));
-  } catch {
-    return [];
-  }
-}
-
-function sloTinySpark(scores: number[]): string {
-  if (scores.length === 0) return '';
-  const last = scores.slice(-18);
-  const max = Math.max(...last, 1);
-  return last
-    .map((v) => {
-      const r = v / max;
-      if (r < 0.25) return '.';
-      if (r < 0.5) return ':';
-      if (r < 0.75) return '*';
-      return '#';
-    })
-    .join('');
-}
-
-function normalizeRouteFromHref(href: string): string {
-  if (!href.startsWith('/')) return href;
-  return href.split('#')[0]?.split('?')[0] ?? href;
-}
-
-function applyConfidenceGate<T extends { href: string }>(
-  items: T[],
-  confidence: PromotionConfidenceReport | null,
-): T[] {
-  const threshold = confidence?.gatedThreshold ?? 60;
-  const scoreByRoute = new Map((confidence?.routeScores ?? []).map((item) => [item.route, item.score]));
-  return items.filter((item) => {
-    const route = normalizeRouteFromHref(item.href);
-    const score = scoreByRoute.get(route);
-    if (typeof score !== 'number') return true;
-    return score >= threshold;
-  });
-}
-
-export default function Home() {
-  const confidence = getPromotionConfidence();
-  const aiCatalogHighlights = applyConfidenceGate(getHomepageAICatalogItems(), confidence);
-  const liveNowItems = applyConfidenceGate(getHomepageLiveNowItems(), confidence);
-  const heroCtas = applyConfidenceGate(getHomepageHeroCtas(), confidence);
-  const readiness = getDeploymentReadiness();
-  const deployStatus = getDeployStatus();
-  const digest = getLaunchDigest();
-  const suppression = getSuppressionRegistry();
-  const netlifySmoke = getNetlifyPreviewSmoke();
-  const autoHealth = getAutomationHealth();
-  const sloHistory = getAutomationHealthHistory();
-  const sloSpark = sloTinySpark(sloHistory);
-
-  const ema = suppression?.noise?.emaOpenIncidents;
-  const deployNetlify = deployStatus?.netlifyDeployUrl;
-  const emaOk = typeof ema !== 'number' || ema < 4;
-  const smokeOk =
-    !netlifySmoke ||
-    netlifySmoke.skipped === true ||
-    (typeof netlifySmoke.unhealthyCount === 'number' && netlifySmoke.unhealthyCount === 0);
-  const automationHealthOk = emaOk && smokeOk && autoHealth?.severity !== 'critical';
+  }, [allServices, releaseNotes]);
 
   return (
-    <div className="relative min-h-screen bg-gray-50">
-      <Banner items={whatsNewItems} />
-      <section
-        aria-label="Automation health"
-        className="border-b border-slate-200 bg-slate-900 text-slate-100"
-      >
-        <div className="container mx-auto flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 text-xs sm:text-sm">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span className="font-semibold text-white">Automation health</span>
-            {typeof ema === 'number' ? (
-              <span className="text-slate-300">
-                Incident EMA: <span className="font-mono text-emerald-300">{ema.toFixed(2)}</span>
-              </span>
-            ) : (
-              <span className="text-slate-400">Registry snapshot not in repo build</span>
-            )}
-            {deployStatus ? (
-              <span className="text-slate-300">
-                Deploy:{' '}
-                <span className="font-mono uppercase text-slate-100">{deployStatus.status ?? 'unknown'}</span>
-                {deployStatus.sha ? ` · ${deployStatus.sha.slice(0, 7)}` : ''}
-              </span>
-            ) : null}
-            {deployNetlify ? (
-              <a
-                href={deployNetlify}
-                className="text-cyan-300 underline decoration-cyan-500/60 underline-offset-2 hover:text-cyan-200"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Netlify preview
-              </a>
-            ) : null}
-            {netlifySmoke && !netlifySmoke.skipped && typeof netlifySmoke.unhealthyCount === 'number' ? (
-              <span className={netlifySmoke.unhealthyCount > 0 ? 'text-amber-300' : 'text-emerald-300'}>
-                Preview smoke: {netlifySmoke.unhealthyCount === 0 ? 'OK' : `${netlifySmoke.unhealthyCount} route(s)`}
-              </span>
-            ) : null}
-            {autoHealth ? (
-              <span className="text-slate-300">
-                FP issues: <span className="font-mono text-violet-300">{autoHealth.openFingerprintIssues ?? 'n/a'}</span>
-              </span>
-            ) : null}
-            {typeof autoHealth?.sloScore === 'number' ? (
-              <span className="text-slate-300">
-                SLO:{' '}
-                <span className="font-mono text-sky-300">{autoHealth.sloScore}</span>
-                {autoHealth.sloDeltaFromPrevious != null ? (
-                  <span
-                    className={
-                      autoHealth.sloDeltaFromPrevious > 0
-                        ? 'text-emerald-300'
-                        : autoHealth.sloDeltaFromPrevious < 0
-                          ? 'text-rose-300'
-                          : 'text-slate-400'
-                    }
-                  >
-                    {' '}
-                    ({autoHealth.sloDeltaFromPrevious > 0 ? '+' : ''}
-                    {autoHealth.sloDeltaFromPrevious})
-                  </span>
-                ) : null}
-                {sloSpark ? (
-                  <span className="ml-1 font-mono text-[10px] text-slate-500" title="SLO history spark (recent)">
-                    {sloSpark}
-                  </span>
-                ) : null}
-              </span>
-            ) : null}
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <span
-              className={`rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase ${
-                autoHealth?.severity === 'critical'
-                  ? 'bg-rose-900/80 text-rose-100'
-                  : automationHealthOk
-                    ? 'bg-emerald-900/80 text-emerald-200'
-                    : 'bg-amber-900/80 text-amber-100'
-              }`}
-            >
-              {autoHealth?.severity === 'critical' ? 'Critical' : automationHealthOk ? 'Nominal' : 'Review'}
-            </span>
-            <a
-              href="/ai-lab/deploy-drift-dashboard"
-              className="rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-[11px] font-semibold text-slate-100 hover:bg-slate-700"
-            >
-              Drift dashboard
-            </a>
-            <a
-              href="/automation"
-              className="rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-[11px] font-semibold text-slate-100 hover:bg-slate-700"
-            >
-              Automation
-            </a>
-            <DependencyBadge />
-          </div>
-        </div>
-      </section>
-      <main className="container mx-auto px-4 py-8">
-        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
-            Zion AI Platform
-          </p>
-          <h1 className="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">
-            AI products, autonomous workflows, and continuous app evolution
+    <main className="min-h-screen bg-slate-950">
+      {/* ── JSON-LD: Organization + WebSite ── */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            logo: 'https://ziontechgroup.com/icon.svg',
+            description: 'AI services, IT solutions, micro-SaaS products, and strategic consulting for businesses of all sizes.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '364 E Main St STE 1008',
+              addressLocality: 'Middletown',
+              addressRegion: 'DE',
+              postalCode: '19709',
+              addressCountry: 'US'
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-302-464-0950',
+              contactType: 'sales',
+              email: 'kleber@ziontechgroup.com'
+            },
+            sameAs: [
+              'https://www.linkedin.com/company/ziontechgroup'
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            description: 'AI services, IT solutions, micro-SaaS products, and strategic consulting.',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}'
+              },
+              'query-input': 'required name=search_term_string'
+            }
+          })
+        }}
+      />
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(120,50,200,0.18),rgba(20,10,40,0.92))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(59,130,246,0.12),transparent_60%)]" />
+        <div className="relative container-page pt-32 pb-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
+              <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
+            </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="gradient-text">AI & IT Services</span><br />
+            <span className="text-white">for Your Business</span>
           </h1>
-          <p className="mt-3 max-w-3xl text-slate-600">
-            Build with production-ready AI services, in-browser intelligent experiences, and
-            autonomous automation pipelines that keep improving your app quality, conversion paths,
-            and delivery speed.
+          <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <ServiceCounter /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
+            Get a free, custom proposal in minutes.
           </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <a
-              href="#ai-product-recommender"
-              className="rounded-lg bg-fuchsia-600 px-4 py-2 text-sm font-semibold text-white hover:bg-fuchsia-700"
-            >
-              Try AI Product Recommender
-            </a>
-            <a
-              href="/ai-lab"
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-            >
-              Explore AI Lab
-            </a>
-            {heroCtas.map((cta) => (
-              <a key={cta.href} href={cta.href} className={cta.className}>
-                {cta.label}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
+                ⚡ Get Your Custom Proposal →
+              </Link>
+              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
+                {`🛠️ Explore All ${serviceCount}+ Services`}
+              </Link>
+              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
+                ☎ +1 302 464 0950
               </a>
-            ))}
-            <a
-              href="/automation"
-              className="rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100"
-            >
-              View Automation Engine
-            </a>
-            <a
-              href="/ai-services/autonomous-growth-intelligence"
-              className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800 hover:bg-amber-100"
-            >
-              Explore Autonomous Growth Intelligence
-            </a>
-            <a
-              href="#ai-catalog"
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-            >
-              View all AI products & experiences
-            </a>
-          </div>
-        </section>
-
-        <section className="mt-8 grid gap-4 md:grid-cols-3">
-          <a
-            href="/ai-services"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-purple-600">
-              AI Services
-            </p>
-            <h2 className="mt-2 text-lg font-semibold text-slate-900">Enterprise AI Delivery</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Generative AI, autonomous agents, RAG, and multimodal intelligence with governance.
-            </p>
-          </a>
-          <a
-            href="/ai-lab"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-cyan-600">AI Lab</p>
-            <h2 className="mt-2 text-lg font-semibold text-slate-900">In-Browser Intelligence</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Interactive tools for readiness scoring, governance risk, rollout planning, and growth
-              strategy.
-            </p>
-          </a>
-          <a
-            href="/automation"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
-              Automation
-            </p>
-            <h2 className="mt-2 text-lg font-semibold text-slate-900">Autonomous Improvement</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Agent pipelines for audits, performance checks, quality gates, and deployment-safe
-              content evolution.
-            </p>
-          </a>
-          <a
-            href="/it-services"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
-              IT Services
-            </p>
-            <h2 className="mt-2 text-lg font-semibold text-slate-900">IT Infrastructure & Support</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Expert IT management, strategic consulting, and technical support services.
-            </p>
-          </a>
-          <a
-            href="/micro-saas"
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
-              Micro SaaS
-            </p>
-            <h2 className="mt-2 text-lg font-semibold text-slate-900">Lightweight SaaS Solutions</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Focused, lightweight SaaS solutions that solve one problem exceptionally well.
-            </p>
-          </a>
-        </section>
-
-        <section className="mt-6 rounded-2xl border border-cyan-200 bg-cyan-50/60 p-5 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">Intelligent experiences spotlight</p>
-          <h2 className="mt-2 text-xl font-semibold text-slate-900">
-            New RAG workspace + live autonomous tools now available
-          </h2>
-          <p className="mt-2 max-w-3xl text-sm text-slate-700">
-            Launch deterministic citation-quality simulations in the new Autonomous RAG Knowledge
-            Workspace, then jump to conversion, retention, incident, and deployment intelligence tools
-            already live across AI Lab.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <a
-              href="/ai-lab/autonomous-rag-knowledge-workspace"
-              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
-            >
-              Open Autonomous RAG Knowledge Workspace
-            </a>
-            <a
-              href="/ai-lab/autonomous-media-prompt-studio"
-              className="rounded-lg border border-fuchsia-300 bg-fuchsia-50 px-4 py-2 text-sm font-semibold text-fuchsia-800 hover:bg-fuchsia-100"
-            >
-              Launch Media Prompt Studio
-            </a>
-            <a
-              href="/ai-lab/autonomous-conversion-copilot"
-              className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
-            >
-              Explore Conversion Copilot
-            </a>
-            <a
-              href="/ai-lab/autonomous-revenue-forecast-studio"
-              className="rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100"
-            >
-              Open Revenue Forecast Studio
-            </a>
-            <a
-              href="/ai-lab/autonomous-incident-commander"
-              className="rounded-lg border border-rose-300 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-800 hover:bg-rose-100"
-            >
-              Open Incident Commander
-            </a>
-            <a
-              href="/ai-lab/autonomous-agent-skill-orchestrator"
-              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
-            >
-              Open Agent Skill Orchestrator
-            </a>
-            <a
-              href="/ai-lab/autonomous-experiment-priority-engine"
-              className="rounded-lg border border-sky-300 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-800 hover:bg-sky-100"
-            >
-              Open Experiment Priority Engine
-            </a>
-          </div>
-        </section>
-
-        <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
-                Deploy status intelligence
-              </p>
-              <p className="mt-1 text-sm text-slate-700">
-                {readiness
-                  ? `Latest autonomous readiness: ${readiness.ready ? 'ready to deploy' : 'blocked - needs attention'}.`
-                  : 'No local readiness report found yet. Run deploy readiness automation to populate this status.'}
-              </p>
-              {deployStatus ? (
-                <p className="mt-1 text-xs text-slate-500">
-                  Last deploy status: {deployStatus.status ?? 'unknown'} ({(deployStatus.sha ?? 'unknown').slice(0, 8)})
-                </p>
-              ) : null}
             </div>
-            <a
-              href="/ai-lab/deployment-readiness-console"
-              className="rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-800 hover:bg-indigo-100"
-            >
-              Open deployment readiness console
-            </a>
-          </div>
-        </section>
 
-        <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-            Weekly AI launch digest
-          </p>
-          <p className="mt-1 text-sm text-slate-700">
-            {digest
-              ? `${digest.totalLaunchCommits ?? 0} AI launch commits tracked in the latest digest cycle.`
-              : 'No launch digest found yet. Run the weekly digest workflow to populate this panel.'}
-          </p>
-          {digest?.weeklyHighlights?.length ? (
-            <ul className="mt-3 space-y-1 text-xs text-slate-600">
-              {digest.weeklyHighlights.slice(0, 5).map((item) => (
-                <li key={item}>- {item}</li>
-              ))}
-            </ul>
-          ) : null}
-          <div className="mt-3 flex flex-wrap gap-3">
-            <a
-              href="/ai-lab/deploy-drift-dashboard"
-              className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
-            >
-              Open deploy drift dashboard
-            </a>
-            <a
-              href="/ai-lab"
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-            >
-              Explore all AI Lab launches
-            </a>
-          </div>
-        </section>
-
-        <section
-          id="ai-solutions-architect"
-          className="mt-8 rounded-2xl border border-fuchsia-200 bg-gradient-to-r from-fuchsia-50 via-white to-violet-50 p-6 shadow-sm"
-        >
-          <p className="text-xs font-semibold uppercase tracking-wide text-fuchsia-700">
-            New intelligent experience
-          </p>
-          <h2 className="mt-2 text-2xl font-bold text-slate-900">AI Solutions Architect is live on every page</h2>
-          <p className="mt-3 max-w-3xl text-sm text-slate-700">
-            Use the floating <strong>Design my AI rollout</strong> widget (bottom-right) to generate a tailored,
-            multi-phase plan and jump directly to the most relevant Zion AI products and services.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <a
-              href="/ai-services/ai-strategy-roadmap"
-              className="rounded-lg bg-fuchsia-600 px-4 py-2 text-sm font-semibold text-white hover:bg-fuchsia-700"
-            >
-              Start with AI strategy
-            </a>
-            <a
-              href="/contact#engagement"
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-             data-cta-event="cta_contact" data-cta-label="page">
-              Talk with a solutions architect
-            </a>
-          </div>
-        </section>
-
-        <ProductRecommenderSection items={aiCatalogHighlights} sectionId="ai-product-recommender" />
-        <SmartContentSummarizer />
-
-        <section id="ai-catalog" className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-            AI products, services, and live experiences
-          </p>
-          <h2 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">
-            Everything Zion is building and shipping now
-          </h2>
-          <p className="mt-3 max-w-3xl text-sm text-slate-600">
-            Explore the complete AI catalog across live in-browser tools, autonomous improvement systems,
-            enterprise AI services, and continuously evolving product modules.
-          </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {aiCatalogHighlights.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-violet-300 hover:bg-violet-50"
-              >
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-violet-700">{item.badge}</p>
-                <h3 className="mt-2 text-base font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{item.description}</p>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-600">
-                Live now
-              </p>
-              <h2 className="mt-1 text-xl font-semibold text-slate-900">
-                New intelligent experiences and autonomous products
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Explore the newest in-browser AI launches and autonomous workflows currently
-                improving conversion, reliability, and deployment speed.
-              </p>
+            {/* ── Secondary CTAs — extra discovery links ── */}
+            <div className="flex flex-wrap justify-center gap-3 mt-2">
+              <Link href="/search/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                🔍 Search Services
+              </Link>
+              <Link href="/testimonials/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                ⭐ Client Reviews
+              </Link>
+              <Link href="/pricing/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                💰 Pricing
+              </Link>
             </div>
-            <a
-              href="/products"
-              className="rounded-lg border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-100"
-            >
-              Browse all AI products
-            </a>
-          </div>
-          <div className="mt-4 grid gap-3 md:grid-cols-3">
-            {liveNowItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
-              >
-                <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">{item.badge}</p>
-                <p className="mt-1 text-sm font-semibold text-slate-900">{item.title}</p>
-                <p className="mt-1 text-xs text-slate-600">{item.description}</p>
-              </a>
-            ))}
-            <a
-              href="/automation"
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:shadow-sm"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
-                Automation
-              </p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">Autonomous Deployment Ops</p>
-              <p className="mt-1 text-xs text-slate-600">
-                Continuous AI audits and deployment-safe improvement pipelines.
-              </p>
-            </a>
-          </div>
-        </section>
 
-        {/* AI Tools Section */}
-        <section className="mt-8 rounded-2xl border border-green-200 bg-gradient-to-r from-green-50 via-white to-emerald-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-green-700">
-                🛠️ Free AI Tools
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Use AI Tools Right Now — Free
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Calculate ROI, analyze documents, build chatbots — no signup required. 
-                Try our free in-browser AI tools.
-              </p>
-            </div>
-            <a
-              href="/ai-tools"
-              className="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
-            >
-              Try All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <a
-              href="/ai-tools"
-              className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">ROI Calculator</h3>
-              <p className="mt-2 text-sm text-slate-600">Calculate your AI investment returns</p>
-            </a>
-            <a
-              href="/ai-tools"
-              className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Document Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">AI-powered document analysis</p>
-            </a>
-            <a
-              href="/ai-tools"
-              className="rounded-xl border border-green-200 bg-white p-4 transition hover:border-green-400 hover:shadow-lg hover:shadow-green-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Chatbot Builder</h3>
-              <p className="mt-2 text-sm text-slate-600">Create AI chatbots in minutes</p>
-            </a>
-          </div>
-        </section>
-
-        {/* New AI Experiences Section */}
-        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-indigo-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-                ✨ New AI Experiences
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Interact with AI Like Never Before
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Experience voice AI, smart recommendations, intelligent notifications, and more — 
-                all running directly in your browser.
-              </p>
-            </div>
-            <a
-              href="/ai-experiences"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
-            >
-              Explore All AI Experiences
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <a
-              href="/ai-experiences"
-              className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Voice AI Assistant</h3>
-              <p className="mt-2 text-sm text-slate-600">Speak naturally and get instant AI responses</p>
-            </a>
-            <a
-              href="/ai-experiences"
-              className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Smart Recommendations</h3>
-              <p className="mt-2 text-sm text-slate-600">AI-powered suggestions personalized for you</p>
-            </a>
-            <a
-              href="/ai-experiences"
-              className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Intelligent Notifications</h3>
-              <p className="mt-2 text-sm text-slate-600">Smart alerts that learn your preferences</p>
-            </a>
-            <a
-              href="/ai-experiences"
-              className="rounded-xl border border-violet-200 bg-white p-4 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">AI Chat Companion</h3>
-              <p className="mt-2 text-sm text-slate-600">Conversational AI that truly understands</p>
-            </a>
-          </div>
-        </section>
-
-        {/* AI Operations Hub */}
-        <section className="mt-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-cyan-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-                🎛️ AI Control Center
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Manage Your AI Operations
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Monitor service health, calculate ROI, analyze documents, and access all AI tools from one dashboard.
-              </p>
-            </div>
-            <a
-              href="/ai-dashboard"
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-            >
-              Open AI Dashboard
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-4">
-            <a
-              href="/ai-dashboard"
-              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Service Health</h3>
-              <p className="mt-2 text-sm text-slate-600">Real-time monitoring</p>
-            </a>
-            <a
-              href="/ai-tools"
-              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">ROI Calculator</h3>
-              <p className="mt-2 text-sm text-slate-600">Calculate returns</p>
-            </a>
-            <a
-              href="/ai-tools"
-              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Document Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">AI analysis</p>
-            </a>
-            <a
-              href="/ai-lab"
-              className="rounded-xl border border-blue-200 bg-white p-4 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">AI Lab</h3>
-              <p className="mt-2 text-sm text-slate-600">Experiments</p>
-            </a>
-          </div>
-        </section>
-
-        {/* Developer Tools Section */}
-        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
-                🛠️ Developer AI Tools
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Free AI-Powered Developer Tools
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Analyze code complexity, test API response times, and more — all free.
-              </p>
-            </div>
-            <a
-              href="/ai-tools"
-              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
-            >
-              All Developer Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <a
-              href="/tools/json-to-typescript-converter"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">JSON to TypeScript</h3>
-              <p className="mt-2 text-sm text-slate-600">Convert JSON to TypeScript interfaces</p>
-            </a>
-            <a
-              href="/tools/code-complexity-analyzer"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Code Complexity Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">AI-powered code analysis and suggestions</p>
-            </a>
-            <a
-              href="/tools/api-response-tester"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">API Response Tester</h3>
-              <p className="mt-2 text-sm text-slate-600">Test API latency and performance</p>
-            </a>
-          </div>
-        </section>
-
-        {/* AI Status Section */}
-        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-indigo-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-                📊 AI Services Status
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Real-Time AI Service Health
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Monitor the uptime, latency, and status of all Zion AI services.
-              </p>
-            </div>
-            <a
-              href="/ai-status"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
-            >
-              View Status Dashboard
-            </a>
-          </div>
-        </section>
-
-        {/* More Developer Tools */}
-        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
-                🧰 More Developer Tools
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Additional Free AI Tools
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                File analyzer, website analyzer, and more AI-powered developer utilities.
-              </p>
-            </div>
-            <a
-              href="/ai-tools"
-              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
-            >
-              View All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <a
-              href="/tools/file-analyzer"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">File Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">AI file analysis</p>
-            </a>
-            <a
-              href="/tools/sql-query-generator"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">SQL Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">AI query builder</p>
-            </a>
-            <a
-              href="/tools/api-designer"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0119 0z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">API Designer</h3>
-              <p className="mt-2 text-sm text-slate-600">Visual API builder</p>
-            </a>
-            <a
-              href="/tools/website-analyzer"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2L2 7l10 5 10-5-10 5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Website Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">SEO & performance audit</p>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - CSS Minifier & Gitignore Generator */}
-        <section className="mt-8 rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-orange-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-rose-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                CSS & Git Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Minify or beautify CSS with live analysis stats (rules, colors, !important count).
-                Generate .gitignore files for 18+ languages, frameworks, and tools with search and custom rules.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/css-minifier-beautifier"
-              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">CSS Minifier & Beautifier</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Minify CSS for production or beautify for readability. Includes analysis panel showing rule count, unique selectors, colors used, media queries, !important usage, and size savings percentage. Toggle 2 or 4-space indentation.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/gitignore-generator"
-              className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">.gitignore Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Generate .gitignore files for 18+ languages (Node, Python, Go, Rust, Java, Swift), frameworks (Next.js, Vue, Django, Rails), DevOps (Docker, Terraform), and OS files. Search templates, pick &ldquo;Popular&rdquo; presets, add custom rules, and download instantly. 100% client-side.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - XML Formatter & HMAC Generator */}
-        <section className="mt-8 rounded-2xl border border-orange-200 bg-gradient-to-r from-orange-50 via-white to-amber-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-orange-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                XML & Crypto Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Format, validate, and minify XML with detailed stats and error reporting.
-                Generate HMAC signatures for API auth, webhooks, and request signing.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/xml-formatter-validator"
-              className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">XML Formatter & Validator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Pretty-print or minify XML with real-time validation, error details with line numbers, element/attribute stats, and configurable indentation. 100% client-side.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/hmac-generator"
-              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">HMAC Signature Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Generate HMAC-SHA256/384/512 signatures with hex and Base64 output. Perfect for webhook verification (Stripe, GitHub), API request signing, and JWT generation. Includes Node.js verification snippets.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - UUID Generator & Timestamp Converter */}
-        <section className="mt-8 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 via-white to-sky-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
-                🆕 Just Launched
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                New Developer Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Generate UUIDs (v4 &amp; v7) with bulk export, and convert timestamps between formats
-                with a live clock and time difference calculator.
-              </p>
-            </div>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/uuid-generator"
-              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">UUID Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Generate UUID v4 (random) or v7 (time-ordered) identifiers with bulk generation, format options
-                (uppercase, braces, no hyphens), copy-all, and download as .txt.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/timestamp-converter"
-              className="rounded-xl border border-sky-200 bg-white p-5 transition hover:border-sky-400 hover:shadow-lg hover:shadow-sky-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Timestamp Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert between Unix timestamps, ISO 8601, and human-readable dates. Live updating clock,
-                auto-detect format, and time difference calculator.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-sky-700 bg-sky-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Color Converter & JSON Diff Viewer */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-teal-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                🆕 Just Launched
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                New Design & Developer Tools
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert colors between HEX, RGB, HSL, and CMYK with live preview and harmonies.
-                Compare JSON objects with structural diffing and filtering.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/color-converter"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Color Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert colors between HEX, RGB, HSL, and CMYK with live preview, editable channels,
-                color harmonies (complementary, triadic, analogous), and instant CSS export.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/json-diff-viewer"
-              className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON Diff Viewer</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Compare two JSON objects side-by-side with recursive structural diffing. Filter by
-                added, removed, or changed. Shows path-level changes with copy support.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Base64 Encoder & URL Slug Generator */}
-        <section className="mt-8 rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-amber-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-rose-700">
-                🆕 What's New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Encoding & SEO Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Encode text and files to Base64 with drag-and-drop support, and generate SEO-friendly
-                URL slugs with case variants, stop word removal, and live preview.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/base64-encoder-decoder"
-              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-amber-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Base64 Encoder / Decoder</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Encode or decode text and files to/from Base64 with file upload, download output,
-                character count stats, and expansion ratio display.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/url-slug-generator"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">URL Slug Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert any text to clean, SEO-friendly URL slugs. Supports dash/underscore separators,
-                4 case styles, stop word removal, and shows all case variants.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* Even More Developer Tools */}
-        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
-                🛠️ Developer Utilities
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Essential Developer Tools
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                JWT decoder, cron generator, and more utilities.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/jwt-decoder"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">JWT Decoder</h3>
-              <p className="mt-2 text-sm text-slate-600">Decode & inspect tokens</p>
-            </a>
-            <a
-              href="/tools/cron-generator"
-              className="rounded-xl border border-cyan-200 bg-white p-4 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">Cron Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">Schedule expressions</p>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - CSV/JSON Converter & Env File Parser */}
-        <section className="mt-8 rounded-2xl border border-lime-200 bg-gradient-to-r from-lime-50 via-white to-amber-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-lime-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Data & Config Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert CSV to JSON and back with smart quoting and file upload.
-                Parse and manage .env files with auto secret detection and .env.example export.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-lime-600 px-4 py-2 text-sm font-semibold text-white hover:bg-lime-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/csv-json-converter"
-              className="rounded-xl border border-lime-200 bg-white p-5 transition hover:border-lime-400 hover:shadow-lg hover:shadow-lime-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-lime-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">CSV ↔ JSON Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Bidirectional converter between CSV and JSON. Handles quoted fields, commas, and newlines.
-                Upload files, copy output, or download results instantly.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-lime-700 bg-lime-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/env-file-parser"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Env File Parser</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Parse .env files with automatic secret detection, inline editing, secret masking,
-                and one-click .env.example generation with placeholder values.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - CSS Gradient Generator & Regex Tester */}
-        <section className="mt-8 rounded-2xl border border-pink-200 bg-gradient-to-r from-pink-50 via-white to-violet-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-pink-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Design & Regex Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Generate stunning CSS gradients with live preview, color stops, and presets.
-                Test regular expressions with real-time match highlighting and capture group inspection.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-pink-600 px-4 py-2 text-sm font-semibold text-white hover:bg-pink-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/css-gradient-generator"
-              className="rounded-xl border border-pink-200 bg-white p-5 transition hover:border-pink-400 hover:shadow-lg hover:shadow-pink-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-violet-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">CSS Gradient Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Create linear, radial, and conic gradients with a visual editor. Add color stops, pick from 8 curated presets, randomize, and copy ready-to-use CSS instantly.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-pink-700 bg-pink-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/regex-tester"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Regex Tester</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Test regular expressions with real-time match highlighting, capture group details, toggle-able flags, 10 common pattern presets, and a built-in cheat sheet.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - AI Document Analyzer */}
-        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-fuchsia-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                AI Document Analyzer — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Upload any text document or paste content for instant analysis — word counts, readability scoring,
-                keyword extraction, and writing insights. 100% client-side, nothing leaves your browser.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/document-analyzer"
-              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10 md:col-span-2"
-            >
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-xl flex items-center justify-center text-white shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            {/* Trust badges */}
+            <div className="flex flex-wrap justify-center gap-8 text-slate-400 text-sm mb-12">
+              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`${serviceCount}+ Services`].map(t => (
+                <div key={t} className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
+                  {t}
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900">AI Document Analyzer</h3>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Upload documents (TXT, MD, CSV, JSON, code files) or paste text for instant analysis.
-                    Get word counts, readability scores (Flesch), keyword extraction, reading time estimates,
-                    lexical diversity metrics, and writing improvement suggestions. Drag-and-drop support,
-                    100% private — all processing in your browser.
-                  </p>
-                  <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
+              ))}
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              {stats.map((s, i) => (
+                <div key={i} className="bg-slate-900/60 rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/30 transition-colors">
+                  <div className="text-3xl font-bold gradient-text">{s.value}</div>
+                  <div className="text-sm text-slate-400 mt-1">{s.label}</div>
                 </div>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Chmod Calculator & String Entropy Analyzer */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-teal-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Sysadmin & Security Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Build Unix file permissions visually with the Chmod Calculator — owner/group/other controls, special bits, and 12 presets.
-                Analyze string randomness and password strength with the Entropy Analyzer — character class breakdown, pattern detection, and brute-force bit estimation.
-              </p>
+              ))}
             </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/chmod-calculator"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Chmod Permission Calculator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Visually build Unix file permissions with owner/group/other toggles, SetUID/SetGID/Sticky bits, 12 common presets (644, 755, 777, etc.), and instant octal/symbolic/chmod command output.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/string-entropy-analyzer"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">String Entropy Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Analyze the randomness and information density of any string. Character class breakdown with visual bars, top-frequency characters, pattern detection warnings (sequential, keyboard patterns), unique char ratio, and brute-force bit estimation. 8 example inputs included.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
 
-        {/* What's New - Markdown Table Generator & DNS Lookup */}
-        <section className="mt-8 rounded-2xl border border-teal-200 bg-gradient-to-r from-teal-50 via-white to-cyan-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-teal-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Data & Networking Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert CSV data into clean Markdown tables, ASCII tables, or HTML with live preview, alignment controls, and instant export.
-                Query DNS records for any domain — A, AAAA, MX, TXT, NS, CNAME, SOA, and CAA — all from your browser.
-              </p>
+            {/* Trust Badges */}
+            <div className="mt-14 flex flex-wrap justify-center gap-4">
+              {[
+                { icon: '🏆', text: 'Industry Leading' },
+                { icon: '🔒', text: 'SOC 2 Compliant' },
+                { icon: '⚡', text: '24/7 Support' },
+                { icon: '🇺🇸', text: 'US-Based Team' },
+                { icon: '🔐', text: 'HIPAA Ready' },
+                { icon: '✅', text: '99.9% SLA' },
+              ].map((badge, i) => (
+                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/40 border border-slate-700/40 text-sm text-slate-300">
+                  <span className="text-base">{badge.icon}</span>
+                  <span>{badge.text}</span>
+                </div>
+              ))}
             </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/markdown-table-generator"
-              className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Markdown Table Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Paste CSV or TSV data and instantly generate Markdown tables, ASCII box tables, or HTML tables. Toggle header rows, choose alignment (left/center/right), see a live rendered preview, and copy or download the output.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/dns-lookup"
-              className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">DNS Record Lookup</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Query DNS records for any domain — A, AAAA, MX, TXT, NS, CNAME, SOA, and CAA records. Select multiple record types at once, see query times, copy individual values, and export results. Uses Google Public DNS — 100% client-side.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
 
-        {/* What's New - CORS Tester & User-Agent Parser */}
-        <section className="mt-8 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 via-white to-slate-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Web Debugging & Security Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Test CORS headers for any URL and see exactly which origins, methods, and credentials are allowed.
-                Parse User-Agent strings to detect browser, OS, device type, and bot status — including AI crawlers like GPTBot and Claude.
-              </p>
+            {/* ── Contact Bar ── */}
+            <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm">
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                ✉ kleber@ziontechgroup.com
+              </a>
+              <a href="tel:+130****0950" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
+                ☎ +1 302 464 0950
+              </a>
+              <span className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-400">
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </span>
             </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/cors-tester"
-              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">CORS Header Tester</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Test Cross-Origin Resource Sharing configuration for any URL. See allowed origins, methods, headers, and credentials at a glance. Origin verification shows exactly whether your app domain is permitted. Quick presets for common APIs.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/user-agent-parser"
-              className="rounded-xl border border-slate-200 bg-white p-5 transition hover:border-slate-400 hover:shadow-lg hover:shadow-slate-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-gray-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">User-Agent Parser</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Parse any User-Agent string to instantly detect browser name &amp; version, operating system, device type &amp; vendor, rendering engine, and CPU architecture. Includes bot detection for 20+ crawlers — Googlebot, GPTBot, Claude, Bingbot, Ahrefs, and more.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
 
-        {/* What's New - JSON Schema Validator & SQL Formatter */}
-        <section className="mt-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-blue-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Schema Validation & SQL Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Validate JSON against JSON Schema with detailed error paths and type checking.
-                Format and beautify SQL queries with intelligent keyword detection and indentation.
-              </p>
+            {/* ── Service Pipeline — live stage counts ── */}
+            <div className="flex flex-wrap justify-center gap-4 mt-6">
+              {[
+                { stage:'published', emoji:'✅', color:'emerald', label:'Published',  sub:'Live production services' },
+                { stage:'beta',      emoji:'🧪', color:'purple',   label:'Beta',       sub:'Early access — refined live' },
+                { stage:'planned',   emoji:'🚧', color:'amber',    label:'Coming Soon',sub:'In the pipeline — scheduled' },
+              ].map((s) => {
+                const n = (byStage as Record<string,number>)[s.stage] || 0;
+                const colorMap: Record<string,string> = {
+                  emerald:'from-emerald-500/20 to-green-500/10 border-emerald-500/30',
+                  purple:  'from-purple-500/20 to-indigo-500/10 border-purple-500/30',
+                  amber:   'from-amber-500/20 to-yellow-500/10 border-amber-500/30',
+                };
+                return (
+                  <div key={s.stage}
+                    className={`block rounded-xl border bg-gradient-to-br ${colorMap[s.color]} px-5 py-4 min-w-[140px]`}
+                  >
+                    <div className="text-2xl mb-1">{s.emoji}</div>
+                    <div className="text-xl font-bold text-white">{n}</div>
+                    <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">{s.label}</div>
+                    <div className="text-[10px] text-slate-500 mt-0.5">{s.sub}</div>
+                  </div>
+                );
+              })}
             </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-700"
-            >
-              All Tools
-            </a>
           </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/json-schema-validator"
-              className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON Schema Validator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Validate JSON data against JSON Schema with full support for type checking, required properties, string/number constraints, array validation, nested objects, and composition keywords (allOf, anyOf, oneOf, not). Shows exact error paths with keyword labels.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/sql-formatter"
-              className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">SQL Query Formatter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Format and beautify SQL queries with intelligent keyword capitalization, smart indentation for subqueries and CTEs, and support for SELECT, INSERT, UPDATE, CREATE TABLE, and more. Choose between spaces or tabs. Includes example queries to try instantly.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - API Request Builder & Markdown Live Editor */}
-        <section className="mt-8 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 via-white to-emerald-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                API & Markdown Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Build and test HTTP requests with full auth, headers, and body support — plus a live markdown
-                editor with instant preview and export to HTML or Markdown files.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/api-request-builder"
-              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-cyan-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">API Request Builder</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Build HTTP requests with method selection, custom headers, request body editing, Bearer/Basic/API key
-                authentication, and a formatted response viewer with timing and size metrics. Includes request history.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/markdown-live-editor"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Markdown Live Editor</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Write markdown with instant side-by-side preview. Supports headers, code blocks, tables, task lists,
-                blockquotes, and links. Export as clean HTML or Markdown file. Includes quick reference cheatsheet.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Number Base Converter & JSON Path Explorer */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-violet-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Number Systems & JSON Querying — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert between binary, octal, decimal, hex and base-36 with live bit visualization.
-                Query JSON data interactively with JSONPath expressions and instant results.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/number-base-converter"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Number Base Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert between binary, octal, decimal, hexadecimal, and base-36 in real-time.
-                Includes bit visualization (8/16/32/64-bit), signed/unsigned display, one-click copy,
-                and swap source base. Supports arbitrarily large integers.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/json-path-explorer"
-              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON Path Explorer</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Query JSON data with JSONPath expressions — see results as you type. Supports child access,
-                array indexing, slicing, wildcards, recursive descent, and filter expressions.
-                Includes collapsible tree view, syntax reference, and preloaded sample data.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Color Blindness Simulator & JSON to CSV Converter */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-cyan-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Accessibility & Data Conversion — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Simulate color blindness for accessible design reviews. Convert JSON arrays to CSV
-                with nested object flattening, custom delimiters, and live preview.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/color-blindness-simulator"
-              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Color Blindness Simulator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Preview how your designs appear to users with protanopia, deuteranopia, tritanopia,
-                and achromatopsia. Build custom palettes, compare side-by-side, check WCAG contrast
-                ratios, and get accessibility tips. 8% of men have color vision deficiency.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/json-to-csv-converter"
-              className="rounded-xl border border-cyan-200 bg-white p-5 transition hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON to CSV Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert JSON arrays, nested objects, or NDJSON to CSV with configurable delimiters,
-                automatic nested object flattening, custom null values, and quote control. Includes
-                live preview table, file upload, and one-click download. 100% client-side.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-cyan-700 bg-cyan-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Base32 Encoder & CSS Unit Converter */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-violet-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Security & CSS Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Encode and decode Base32 for 2FA secrets and API keys. Convert CSS units instantly
-                with configurable viewport and font-size settings.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/base32-encoder-decoder"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Base32 Encoder / Decoder</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Encode and decode text to Base32 — the standard used in TOTP 2FA secrets
-                (Google Authenticator), DNS records, and recovery keys. Supports Base32Hex
-                variant, includes practical examples, and one-click copy. 100% client-side.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/css-unit-converter"
-              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">CSS Unit Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert between px, rem, em, vw, vh, pt, cm, and more. Configure root font-size,
-                parent font-size, and viewport dimensions for accurate conversions. Includes
-                presets, quick CSS copy, and a full unit reference guide.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Subnet Calculator & ASCII Art Generator */}
-        <section className="mt-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-indigo-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Networking & Creative Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Calculate IP subnets with full network analysis, host ranges, and CIDR splitting.
-                Generate block-style ASCII art text for terminal banners, README headers, and more.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/subnet-calculator"
-              className="rounded-xl border border-blue-200 bg-white p-5 transition hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">IP Subnet Calculator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Enter any CIDR notation to instantly calculate network address, broadcast, first/last usable hosts,
-                subnet mask, wildcard mask, and total hosts. Includes IP class detection, private range identification,
-                subnet splitting guidance, and a quick-reference CIDR table. Perfect for network planning and troubleshooting.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/ascii-art-generator"
-              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">ASCII Art Text Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert any text into block-style ASCII art with customizable fill and empty characters (blocks, hashes, stars, binary).
-                Features a shadow variant generator, one-click copy, and download as .txt.
-                Supports A-Z, 0-9, and common symbols. Great for terminal banners, README files, and code comments.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Certificate Decoder & Image Color Extractor */}
-        <section className="mt-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-teal-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Security & Design Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Decode X.509 SSL/TLS certificates with full subject, issuer, validity, and fingerprint analysis.
-                Extract dominant color palettes from images with export to CSS, SCSS, Tailwind, and JSON.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/certificate-decoder"
-              className="rounded-xl border border-emerald-200 bg-white p-5 transition hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Certificate Decoder</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Paste any PEM-encoded X.509 certificate to instantly decode subject, issuer, validity period,
-                signature algorithm, public key info, Subject Alternative Names, and SHA-256/SHA-1 fingerprints.
-                Includes expiry warnings, CA detection, key usage display, and one-click copy.
-                Essential for DevOps, security audits, and SSL troubleshooting.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/image-color-extractor"
-              className="rounded-xl border border-pink-200 bg-white p-5 transition hover:border-pink-400 hover:shadow-lg hover:shadow-pink-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-violet-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Image Color Extractor</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Upload any image to extract its dominant color palette using k-means clustering.
-                Get colors as HEX, RGB, or HSL with percentage breakdowns. Export as CSS variables,
-                SCSS, Tailwind config, or JSON. Supports drag-and-drop, configurable palette size (3-12 colors),
-                and a visual palette strip. Perfect for designers building brand-consistent palettes.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-pink-700 bg-pink-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - HTML to JSX Converter & Mock API Generator */}
-        <section className="mt-8 rounded-2xl border border-orange-200 bg-gradient-to-r from-orange-50 via-white to-purple-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-orange-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                React & API Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert HTML to React JSX with automatic className, htmlFor, inline style, and self-closing tag conversion.
-                Generate realistic mock API data with a visual schema editor and 25+ field types.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/html-to-jsx"
-              className="rounded-xl border border-orange-200 bg-white p-5 transition hover:border-orange-400 hover:shadow-lg hover:shadow-orange-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">HTML to JSX Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Paste any HTML and instantly convert it to React-compatible JSX. Handles 12+ attribute conversions
-                including class→className, for→htmlFor, and tabindex→tabIndex. Converts inline style strings to
-                React style objects, self-closes void elements, and transforms HTML comments to JSX syntax.
-                Includes live example presets and a visual conversion reference table.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/mock-api-generator"
-              className="rounded-xl border border-purple-200 bg-white p-5 transition hover:border-purple-400 hover:shadow-lg hover:shadow-purple-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Mock API Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Build realistic fake API responses with a visual schema editor. Choose from 25+ field types
-                including uuid, name, email, phone, price, IP address, and more. Supports JSON, curl, and
-                Fetch.js output formats with configurable record count. Download as JSON or copy to clipboard.
-                Perfect for prototyping, testing, and demos without a real backend.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-purple-700 bg-purple-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - JSON to Zod & Hash Identifier */}
-        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-fuchsia-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Developer & Security Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert JSON to Zod validation schemas with smart type detection for emails, URLs, dates, and UUIDs.
-                Identify hash types across 25+ algorithms with security analysis and confidence scoring.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/json-to-zod"
-              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON to Zod Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Paste any JSON and instantly generate a complete Zod schema with TypeScript type inference.
-                Smart detection maps emails to <code className="text-xs bg-violet-50 px-1 rounded">z.string().email()</code>,
-                URLs to <code className="text-xs bg-violet-50 px-1 rounded">z.string().url()</code>, ISO dates to{' '}
-                <code className="text-xs bg-violet-50 px-1 rounded">z.string().datetime()</code>, and more.
-                Supports strict and passthrough modes, mixed-type arrays with unions, and safe key quoting.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/hash-identifier"
-              className="rounded-xl border border-indigo-200 bg-white p-5 transition hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Hash Identifier</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Paste any hash string to instantly identify its type — MD5, SHA-1, SHA-256, SHA-512, bcrypt, Argon2,
-                scrypt, NTLM, BLAKE2, SHA-3, and 20+ more algorithms. Includes security ratings (broken → strong),
-                confidence scoring, and quick examples. A reference table shows hash lengths at a glance.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - JSON to TOML Converter & CSS Specificity Calculator */}
-        <section className="mt-8 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-rose-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Config & CSS Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Convert JSON to TOML (and back) with full support for nested tables, array of tables, and all TOML data types.
-                Calculate CSS specificity scores with visual breakdowns, selector comparison, and cascade order reference.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/json-to-toml-converter"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON ↔ TOML Converter</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Convert between JSON and TOML formats with bidirectional conversion. Supports nested tables, dotted keys,
-                array of tables (Cargo.toml style), inline arrays and tables, and all TOML data types. Perfect for creating
-                Cargo.toml, pyproject.toml, or Hugo config files from JSON data. Upload files, download output, and load samples.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/css-specificity-calculator"
-              className="rounded-xl border border-rose-200 bg-white p-5 transition hover:border-rose-400 hover:shadow-lg hover:shadow-rose-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">CSS Specificity Calculator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Calculate CSS specificity scores in (a, b, c) format — IDs, classes/attributes/pseudo-classes, and elements/pseudo-elements.
-                Visual bar charts show each component, auto-ranked results show which selector wins. Compare selectors side-by-side,
-                try 18 real-world examples, and reference the full cascade order. Essential for debugging CSS conflicts.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Favicon Generator & .htaccess Generator */}
-        <section className="mt-8 rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-slate-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Favicon & Server Config Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Generate favicons from text, emoji, or uploaded images in all standard sizes with one-click download.
-                Build Apache .htaccess rules visually — redirects, rewrites, browser caching, and security headers without memorizing syntax.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/favicon-generator"
-              className="rounded-xl border border-violet-200 bg-white p-5 transition hover:border-violet-400 hover:shadow-lg hover:shadow-violet-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Favicon Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Create professional favicons from text, emoji, or uploaded images. Customize background color, text color,
-                font, and border radius. Download all standard sizes (16px to 512px) at once, with ready-to-paste HTML snippet.
-                Supports Apple Touch Icons, Android Chrome icons, and PWA splash screens.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-violet-700 bg-violet-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/htaccess-generator"
-              className="rounded-xl border border-slate-200 bg-white p-5 transition hover:border-slate-400 hover:shadow-lg hover:shadow-slate-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-blue-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">.htaccess Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Build Apache .htaccess files with a visual interface. Configure 301/302 redirects with preset templates,
-                custom mod_rewrite rules, browser caching by file type, security headers (HSTS, CSP, X-Frame-Options),
-                bot blocking, custom error pages, and more. Copy or download the generated file instantly.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-        {/* What's New - Cookie Decoder & JSON Schema Generator */}
-        <section className="mt-8 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-teal-50 p-6 shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">
-                🆕 What&apos;s New
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-slate-900">
-                Security & Schema Tools — Just Launched
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Parse and audit HTTP cookies with security analysis for Secure, HttpOnly, SameSite flags.
-                Generate JSON Schema and TypeScript types from sample data with smart format detection.
-              </p>
-            </div>
-            <a
-              href="/tools"
-              className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700"
-            >
-              All Tools
-            </a>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <a
-              href="/tools/cookie-decoder"
-              className="rounded-xl border border-amber-200 bg-white p-5 transition hover:border-amber-400 hover:shadow-lg hover:shadow-amber-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">Cookie Decoder & Analyzer</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Parse Set-Cookie and Cookie headers with full attribute breakdown — Secure, HttpOnly, SameSite, Max-Age, Domain, Path, and more.
-                Get a security score with critical/warning/info recommendations. Supports multiple cookies and includes an attribute reference guide.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-            <a
-              href="/tools/json-schema-generator"
-              className="rounded-xl border border-teal-200 bg-white p-5 transition hover:border-teal-400 hover:shadow-lg hover:shadow-teal-600/10"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center text-white mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-slate-900">JSON Schema Generator</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Paste any JSON and instantly generate a JSON Schema (2020-12 draft) and TypeScript interface.
-                Smart format detection for emails, URLs, dates, UUIDs, phone numbers, and hex colors.
-                Configurable options for required fields, additional properties, examples, and descriptions. Download as .json or .ts.
-              </p>
-              <span className="inline-block mt-3 text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-1 rounded-full">New tool</span>
-            </a>
-          </div>
-        </section>
-
-
-      <DonateSection />
-      <OpenCollectiveWidget />
-      <section className="mt-12 p-8 bg-slate-800/30 border border-slate-700 rounded-3xl text-center">
-        <h3 className="text-2xl font-bold text-white mb-4">Support Zion Tech Group</h3>
-        <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-          Your contributions help keep our free tools available and improve the platform.
-        </p>
-        <div className="flex flex-col md:flex-row justify-center gap-6">
-          <a href="https://github.com/sponsors/Zion-support" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-500 hover:to-rose-500 transition-all">
-            GitHub Sponsors
-          </a>
-          <a href="https://ko-fi.com/ziontech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-white font-semibold rounded-xl hover:from-yellow-400 hover:to-amber-500 transition-all">
-            Ko-fi
-          </a>
-          <a href="https://www.buymeacoffee.com/ziontech" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-500 hover:to-emerald-500 transition-all">
-            Buy Me a Coffee
-          </a>
         </div>
       </section>
 
-      <TopToolsShowcase />
+      {/* ── Service Match Quiz — Interactive AI Tool ── */}
+      <ServiceMatchQuiz />
 
-</main>
-    </div>
+      {/* ── How It Works ── */}
+      <section className="py-20">
+        <div className="container-page">
+          <h2 className="section-heading text-center">How It Works</h2>
+          <p className="section-subheading text-center">From inquiry to implementation in 4 simple steps</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+            {[
+              { num: '01', title: 'Tell Us Your Needs', desc: 'Share your business goals, budget, and technical requirements.' },
+              { num: '02', title: 'AI-Powered Matching', desc: `Our AI engine recommends the best-fit services from ${serviceCount}+ options.` },
+              { num: '03', title: 'Custom Proposal', desc: 'Receive a detailed PDF proposal with pricing, timeline, and next steps.' },
+              { num: '04', title: 'Launch & Scale', desc: 'We implement, monitor, and optimize your solution for maximum ROI.' },
+            ].map((s, i) => (
+              <div key={i} className="glass-card text-center hover:border-purple-500/40">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-2xl font-bold mb-4 mx-auto shadow-lg shadow-purple-600/30">
+                  {s.num}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{s.title}</h3>
+                <p className="text-slate-400 text-sm">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Services by Category ── */}
+      <section className="py-16">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🗂️</span>
+            <h2 className="text-2xl font-bold text-white">Browse by Category</h2>
+            <span className="text-sm text-slate-400">All {services.length}+ services — pick a domain below</span>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {CATEGORIES.map(cat => {
+              const n = byCategory[cat.key]?.length ?? 0;
+              return (
+              <Link key={cat.key} href={`/services/?category=${cat.key}`}
+                className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)` }}/>
+                <div className="relative flex items-center gap-4">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-2xl shadow-lg
+                    group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
+                    {cat.emoji}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors leading-tight">
+                      {cat.label}
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <p className="text-slate-400 text-sm">{n} service{n !== 1 ? 's' : ''}</p>
+                      <span className="text-slate-600 text-xs">·</span>
+                      <span className="text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        Browse →
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+            })}
+          </div>
+        </div>
+      </section>
+
+        {/* ── Popular Services ── */}
+
+      <section className="py-16">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🔥</span>
+            <h2 className="text-2xl font-bold text-white">Popular Services</h2>
+            <span className="text-sm text-slate-400">({popularServices.length} services chosen by our clients — data-driven)</span>
+          </div>
+          <div className="overflow-x-auto pb-4 -mb-4">
+            <div className="flex gap-4" style={{ minWidth:'max-content', paddingBottom:'8px' }}>
+              {popularServices.map((service: any) => {
+                const catMeta = CATEGORIES.find(c => c.key === service.category) || CATEGORIES[0];
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/services/${service.id}`}
+                    className="min-w-[240px] max-w-[240px] glass-card flex flex-col hover:border-purple-500/40 group"
+                  >
+                    <div className="flex items-start gap-3 mb-2">
+                      <span className="text-2xl shrink-0">{service.icon}</span>
+                      <h3 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">{service.title}</h3>
+                    </div>
+                    <p className="text-slate-400 text-xs line-clamp-2 flex-1">{service.description}</p>
+                    <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider bg-orange-500/12 text-orange-300 border-orange-500/25">★ Popular</span>
+                      <span className="text-purple-300 text-xs font-semibold">
+                        From {(service.pricing as Record<string, string>)[Object.keys(service.pricing)[0]]}/mo
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Category Deep-Link Strip — every category with count + gradient bar ── */}
+      <section className="py-12">
+        <div className="container-page">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🔗</span>
+            <h2 className="text-xl font-bold text-white">Quick Links by Category</h2>
+            <span className="text-sm text-slate-400">{services.length}+ services across 6 domains</span>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {CATEGORIES.map(cat => {
+              const catServices = services.filter((s: any) => s.category === cat.key);
+              const n = catServices.length;
+              const catCounts: number[] = CATEGORIES.map(c => services.filter((s: any) => s.category === c.key).length);
+              const maxN = Math.max(...(catCounts.length > 0 ? catCounts : [1]));
+              const pct = maxN > 0 ? (n / maxN) * 100 : 0;
+              return (
+                <Link
+                  key={cat.key}
+                  href={`/services/?category=${cat.key}`}
+                  className="block group"
+                >
+                  <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden mb-3">
+                    <div
+                      className="h-full rounded-full transition-all duration-500 group-hover:opacity-80"
+                      style={{ width: `${pct}%`, background: `linear-gradient(90deg, ${cat.color.replace(/from-|to-/g,'').split(' ')[0]}, ${cat.color.split(' ').pop()})` }}
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl">{cat.emoji}</span>
+                    <span className="text-2xl font-bold text-white tabular-nums">{n}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-1 group-hover:text-purple-300 transition-colors">{cat.label}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Full Service Catalog by Category ── */}
+      <section className="py-20">
+        <div className="container-page">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">📚 Full Service Catalog</h2>
+            <p className="section-subheading">
+              Browse all {services.length}&#43; services across {CATEGORIES.length} categories — clean, organized, fast
+            </p>
+          </div>
+          {CATEGORIES.map(cat => {
+            const catServices = (byCategory[cat.key] || []).slice(0, 30);
+            if (catServices.length === 0) return null;
+            return (
+              <div key={cat.key} className="mb-16 last:mb-0">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-2xl">{cat.emoji}</span>
+                  <h3 className="text-xl font-bold text-white">{cat.label}</h3>
+                  <span className="text-sm text-slate-400">
+                    ({catServices.length} of {(byCategory[cat.key] || []).length})
+                  </span>
+                </div>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  {catServices.map((service: any) => {
+                    const benefit = (service.benefits && service.benefits.length > 0)
+                      ? service.benefits[0] : '';
+                    return (
+                      <Link
+                        key={service.id}
+                        href={`/services/${service.id}`}
+                        className="glass-card flex flex-col gap-2 p-4 hover:border-purple-500/40 group transition-all"
+                      >
+                        <div className="flex items-start gap-2">
+                          <span className="text-xl group-hover:scale-110 transition-transform">{service.icon}</span>
+                          <h4 className="text-sm font-semibold text-white leading-snug line-clamp-2 group-hover:text-purple-300 transition-colors">
+                            {service.title}
+                          </h4>
+                        </div>
+                        {benefit && (
+                          <p className="text-slate-400 text-xs line-clamp-2 leading-relaxed">{benefit}</p>
+                        )}
+                        <div className="mt-auto pt-2 border-t border-slate-700/40 flex justify-end">
+                          <span className="text-purple-300 text-[10px] font-semibold">View details →</span>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+                {(byCategory[cat.key] || []).length > 30 && (
+                  <p className="text-slate-500 text-xs mt-2 text-center">
+                    Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
+                    {' '}<Link href={`/services/?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── From the Blog ── */}
+      <section className="py-20 bg-slate-900/20 border-t border-slate-800/60">
+        <div className="container-page">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <h2 className="section-heading text-center">📝 From the Blog</h2>
+              <p className="section-subheading text-center">AI automation strategies, industry insights &amp; platform updates</p>
+            </div>
+            <Link href="/blog/" className="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all">Read all articles →</Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: '5 Proven AI Automation Strategies for Enterprise Workflow Optimization',
+                date: '2026-04-28',
+                excerpt: 'Discover five battle-tested AI automation patterns that cut operational overhead and accelerate enterprise workflow throughput — with real-world implementation examples.',
+                slug: '/blog/5-proven-ai-automation-strategies-for-enterprise-workflow-optimization/',
+                emoji: '🤖',
+              },
+              {
+                title: 'AI Agent Frameworks for Business Automation',
+                date: '2026-04-21',
+                excerpt: 'A deep dive into AI agent architectures: LLM orchestration, tool use, memory, and multi-agent coordination — what actually works in production.',
+                slug: '/blog/ai-agent-frameworks-for-business-automation/',
+                emoji: '🧠',
+              },
+              {
+                title: 'AI FinOps: Cloud Cost Optimization with Machine Learning',
+                date: '2026-04-14',
+                excerpt: 'Machine learning approaches to FinOps: workload-aware rightsizing, anomaly detection for runaway cloud bills, and predictive capacity planning.',
+                slug: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/',
+                emoji: '💡',
+              },
+            ].map((post: any) => (
+              <Link key={post.slug} href={post.slug} className="glass-card flex flex-col gap-3 p-6 hover:border-purple-500/40 group">
+                <span className="text-3xl">{post.emoji}</span>
+                <div>
+                  <h3 className="text-base font-semibold text-white leading-snug group-hover:text-purple-300 transition-colors line-clamp-2">{post.title}</h3>
+                  <span className="text-xs text-slate-500 mt-1 block">{post.date}</span>
+                </div>
+                <p className="text-slate-400 text-sm line-clamp-3 leading-relaxed">{post.excerpt}</p>
+                <div className="mt-auto pt-3 border-t border-slate-700/40 flex justify-end">
+                  <span className="text-purple-300 text-xs font-semibold">Read more →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center sm:hidden">
+            <Link href="/blog/" className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-purple-500/15 text-purple-300 border border-purple-500/25 hover:bg-purple-500/25 transition-all inline-block">Read all articles →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Quick-View Modal ── */}
+      {quickView && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setQuickView(null)}
+          onKeyDown={(e) => { if (e.key === 'Escape') setQuickView(null); }}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Quick view: ${quickView.title}`}
+        >
+          <div
+            className="bg-slate-900 border border-purple-500/30 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl shadow-purple-900/30"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className={`p-6 rounded-t-2xl bg-gradient-to-r ${(CATEGORIES.find(c => c.key === quickView.category) || CATEGORIES[0]).color} bg-opacity-10`}>
+              <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4">
+                  <span className="text-4xl">{quickView.icon}</span>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{quickView.title}</h3>
+                    <span className="text-xs text-purple-300 uppercase tracking-wider">{(CATEGORIES.find(c => c.key === quickView.category) || CATEGORIES[0]).label}</span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setQuickView(null)}
+                  className="text-slate-400 hover:text-white text-2xl leading-none p-1"
+                  aria-label="Close"
+                >✕</button>
+              </div>
+              <p className="text-slate-300 text-sm mt-3 leading-relaxed">{quickView.description}</p>
+            </div>
+
+            {/* Body */}
+            <div className="p-6 space-y-6">
+              {/* Features */}
+              <div>
+                <h4 className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-3">Key Features</h4>
+                <ul className="space-y-2">
+                  {quickView.features.slice(0, 5).map((f: string, i: number) => (
+                    <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
+                      <span className="text-purple-400 mt-0.5 shrink-0">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Benefits */}
+              {quickView.benefits?.length > 0 && (
+                <div>
+                  <h4 className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-3">Benefits</h4>
+                  <ul className="space-y-2">
+                    {quickView.benefits.slice(0, 4).map((b: string, i: number) => (
+                      <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
+                        <span className="text-green-400 mt-0.5 shrink-0">▸</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Pricing */}
+              <div>
+                <h4 className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-3">Pricing</h4>
+                <div className="grid grid-cols-3 gap-3">
+                  {Object.entries(quickView.pricing as Record<string, string>).map(([tier, price]) => (
+                    <div key={tier} className="bg-slate-800/60 rounded-xl p-4 text-center border border-slate-700/50">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">{tier}</div>
+                      <div className="text-xl font-bold text-white">${price}<span className="text-xs text-slate-400 font-normal">/mo</span></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact + CTA */}
+              <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-700/50">
+                <Link
+                  href={`/services/${quickView.id}`}
+                  onClick={() => setQuickView(null)}
+                  className="btn-primary px-6 py-3 text-sm"
+                >
+                  View Full Page →
+                </Link>
+                <Link href="/configurator/" className="btn-secondary px-6 py-3 text-sm" onClick={() => setQuickView(null)}>
+                  ⚙️ Configure This Service
+                </Link>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-sm text-purple-300 hover:text-purple-200 px-4 py-3 self-center">
+                  ✉ kleber@ziontechgroup.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Category Grid ── */}
+      <section className="py-20 bg-slate-900/30">
+        <div className="container-page">
+          <h2 className="section-heading text-center">Our Service Categories</h2>
+          <p className="section-subheading text-center">
+            Six core domains — {services.length}+ services total — click any category to filter
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {CATEGORIES.map(cat => {
+              const catCount = byCategory[cat.key]?.length ?? 0;
+              return (
+              <Link
+                key={cat.key}
+                href={`/services/?category=${cat.key}`}
+                className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden"
+              >
+                {/* Gradient border glow on hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)`,
+                  }}
+                />
+                <div className="relative flex items-center gap-4">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-2xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
+                    {cat.emoji}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors leading-tight">
+                      {cat.label}
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <p className="text-slate-400 text-sm">{catCount} service{catCount !== 1 ? 's' : ''}</p>
+                      <span className="text-slate-600 text-xs">·</span>
+                      <span className="text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        Browse →
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="py-20">
+        <div className="container-page">
+          <div className="cta-section text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+              Get a custom-tailored proposal with services matched to your budget and needs.
+              Delivered to your inbox as a PDF within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
+                ⚙️ Start Configurator →
+              </Link>
+              <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
+                ✉️ Email Us
+              </a>
+              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
+                                            ☎ +1 302 464 0950
+                                          </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Category Deep-Link Strip — all 6 categories, live counts ───────── */}
+      <section className="py-12 bg-slate-900/20 border-y border-slate-800/60">
+        <div className="container-page">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-bold text-white">Browse by Category</h2>
+            <p className="text-slate-400 text-sm mt-1">
+              {`${serviceCount}+ services across 6 core capability areas`}
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {CATEGORIES.map((cat) => {
+              const count = services.filter((s: any) => s.category === cat.key).length;
+              return (
+                <Link
+                  key={cat.key}
+                  href={`/services/?category=${cat.key}`}
+                  className="group relative flex flex-col items-center gap-2 p-5 rounded-2xl border border-slate-700/60 bg-slate-800/40 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all"
+                >
+                  <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
+                  <span className="text-sm font-semibold text-slate-200 group-hover:text-white text-center leading-snug">
+                    {cat.label}
+                  </span>
+                  <span className="text-xs font-medium text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-full">
+                    {count} services
+                  </span>
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-[0.06] transition-opacity pointer-events-none`} />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── What's New / Fresh Features ── */}
+      <section className="py-20">
+        <div className="container-page">
+          <h2 className="section-heading text-center">✨ What's New at Zion Tech Group</h2>
+          <p className="section-subheading text-center">The latest platform upgrades, services, and capabilities — always evolving</p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            {newsItems.map((feat, i) => (
+              <div key={i} className="glass-card flex flex-col gap-3 hover:border-purple-500/40 group">
+                <div className={`h-1 rounded-full bg-gradient-to-r ${feat.color || 'from-purple-500 to-indigo-500'}`} />
+                <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">{feat.tag}</span>
+                <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">{feat.title}</h3>
+                <p className="text-slate-400 text-sm flex-1 leading-relaxed">{feat.desc}</p>
+                <div className="mt-auto">
+                  <span
+                    role="img"
+                    aria-hidden
+                    className="inline-block transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Service Search — find any of {serviceCount}+ services ── */}
+      <ServiceGridWithSearch />
+
+      {/* ── Spotlight Carousel ── */}
+      <section className="py-16">
+        <div className="container-page">
+          <ServiceSpotlight services={popularServices} />
+        </div>
+      </section>
+      {/* ── Trust Badges — Persuasion Proof Matrix ── */}
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <h2 className="text-2xl font-bold text-white text-center mb-10">
+            Why Choose Zion Tech Group
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
+              { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
+            ].map((badge, i) => (
+              <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
+                <div className="text-4xl mb-4">{badge.emoji}</div>
+                <div className="text-xl font-bold text-white mb-1">{badge.label}</div>
+                <div className="text-sm text-slate-400">{badge.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Testimonials — client social proof ── */}
+      <TestimonialsSection />
+
+      <ContactFunnel />
+
+      {/* Quick Links */}
+      <section className="py-8 border-t border-slate-800">
+        <div className="container-page">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
+            <Link href="/faq/" className="hover:text-purple-400 transition">❓ FAQ</Link>
+            <Link href="/industry-solutions/" className="hover:text-purple-400 transition">🏭 Industry Solutions</Link>
+            <Link href="/services/" className="hover:text-purple-400 transition">🛠️ All Services</Link>
+            <Link href="/configurator/" className="hover:text-purple-400 transition">⚙️ Configurator</Link>
+            <Link href="/proposals/" className="hover:text-purple-400 transition">📄 Proposals</Link>
+            <Link href="/partners/" className="hover:text-purple-400 transition">🤝 Partners</Link>
+            <Link href="/status/" className="hover:text-green-400 transition">● System Status</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-white mb-3">🛠️ Free Tools & Interactive Utilities</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm">
+              Explore our service catalog, calculate ROI, compare solutions, and route your needs — directly from
+              our <strong className="text-white">{services.length}+</strong> services across <strong className="text-white">{CATEGORIES.length}</strong> categories.
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                name: 'AI Service Router',
+                path: '/tools/ai-service-router/',
+                emoji: '🧭',
+                gradient: 'from-purple-500 to-indigo-500',
+                desc: 'Type your need in plain language — AI matches you to the top services in real time. Zero server calls.',
+                tag: 'New',
+                features: ['627 services scored live', 'Keyword + synonym expansion', 'Top-12 ranked results'],
+              },
+              {
+                name: 'ROI Calculator',
+                path: '/tools/roi-calculator/',
+                emoji: '📈',
+                gradient: 'from-purple-500 to-pink-500',
+                desc: 'Estimate return on investment across AI, Automation, Cloud, Data, IT, or Security with category-specific lift multipliers.',
+                tag: '',
+                features: ['Small / Mid / Enterprise', '6-category lift model', 'Instant annual projection'],
+              },
+              {
+                name: 'Service Comparison',
+                path: '/tools/service-comparison/',
+                emoji: '⚖️',
+                gradient: 'from-purple-500 to-blue-600',
+                desc: 'Pick up to 3 services side-by-side on Overview, Features, Pricing, Benefits, and Timeline with full detail expansion.',
+                tag: '',
+                features: ['Up to 3-way compare', '5-tab deep breakdown', 'Full catalog browse'],
+              },
+              {
+                name: 'Service Recommender',
+                path: '/tools/service-recommender/',
+                emoji: '🎯',
+                gradient: 'from-amber-500 to-orange-500',
+                desc: 'Answer 4 quick qualification questions and get a personalised ranked shortlist of services matched to your industry and use case.',
+                tag: '',
+                features: ['4-question qualifier', 'Industry-aware ranking', 'Direct service links'],
+              },
+              {
+                name: 'Port Scanner',
+                path: '/tools/port-scanner/',
+                emoji: '🔍',
+                gradient: 'from-red-500 to-orange-500',
+                desc: 'Free online port scanner — enter a hostname or IP and instantly see which ports are open, filtered, or closed.',
+                tag: 'Free tool',
+                features: ['TCP + UDP scan', 'Public API powered', 'Instant results'],
+              },
+              {
+                name: 'SSL Certificate Checker',
+                path: '/tools/ssl-checker/',
+                emoji: '🔒',
+                gradient: 'from-purple-500 to-green-500',
+                desc: 'Check TLS certificate validity, issuer, expiry date, and chain depth for any domain — free, no account needed.',
+                tag: 'Free tool',
+                features: ['Expiry & issuer info', 'Chain depth check', 'Domain look-up'],
+              },
+            ].map(tool => (
+              <Link
+                key={tool.name}
+                href={tool.path}
+                className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-3xl">{tool.emoji}</span>
+                  <div className="flex gap-1">
+                    {tool.tag && (
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-purple-300 bg-purple-400/10 border border-purple-500/30 px-2 py-0.5 rounded-full">
+                        {tool.tag}
+                      </span>
+                    )}
+                    <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">Free →</span>
+                  </div>
+                </div>
+                <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{tool.name}</h3>
+                <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-3">{tool.desc}</p>
+                {tool.features.length > 0 && (
+                  <div className="flex flex-wrap gap-1 mt-3">
+                    {tool.features.map(f => (
+                      <span key={f} className="text-[10px] text-slate-400 bg-slate-800/60 border border-slate-700/60 px-1.5 py-0.5 rounded">{f}</span>
+                    ))}
+                  </div>
+                )}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/tools/ai-service-router/" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
+            <p className="text-slate-500 text-xs mt-3">All tools are 100% free — no sign-up required. Your data never leaves your browser.</p>
+          </div>
+        </div>
+      </section>
+      {/* ── Industries We Serve — 10 verticals from service catalog ── */}
+      <section className="py-16 border-t border-slate-800">
+        <div className="container-page">
+          <h2 className="text-2xl font-bold text-white text-center mb-3">Industries We Serve</h2>
+          <p className="text-slate-400 text-center mb-10">
+            Our AI & IT services cover <strong className="text-white font-semibold text-lg">{services.length}+</strong> solutions across <strong className="text-white">{INDUSTRIES.length}</strong> industries — from Healthcare to Retail.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {INDUSTRIES.map(ind => {
+              const catKey = INDUSTRY_CATS[ind.key] || ind.key.split('-')[0];
+              return (
+                <Link key={ind.key}
+                  href={`/services/?category=${catKey}`}
+                  className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-2xl">{ind.emoji}</span>
+                    <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">{ind.count}+</span>
+                  </div>
+                  <h3 className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors mb-1 leading-snug">{ind.label}</h3>
+                  <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{ind.sample}</p>
+                  <div className="mt-3 h-1 rounded-full overflow-hidden bg-slate-800">
+                    <div className="h-full rounded-full opacity-60 group-hover:opacity-100 transition-opacity"
+                      style={{ width: '100%', background: `linear-gradient(90deg, ${ind.color})` }}
+                    />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    <FloatingActionDock />
+    </main>
   );
 }
+
