@@ -32468,5 +32468,146 @@
     },
     "category": "Micro-SaaS",
     "subcategory": "development"
+  },
+  {
+    "id": "v199-thread-summarizer",
+    "title": "V199: AI Thread Summarizer",
+    "description": "Condenses long email threads into concise summaries with key decisions, action items, open questions, and participant contributions. Essential for catching up on missed conversations.",
+    "features": [
+      "Thread metadata extraction",
+      "Key decision identification",
+      "Action item extraction",
+      "Open question detection",
+      "Participant contribution analysis",
+      "Executive summary generation",
+      "Timeline creation",
+      "Thread health assessment",
+      "Reply-all strategy"
+    ],
+    "benefits": [
+      "Catch up on threads in minutes",
+      "Never miss key decisions",
+      "Track action items automatically",
+      "Identify unanswered questions"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "professional": "$399/mo",
+      "enterprise": "$999/mo"
+    },
+    "category": "AI Services",
+    "subcategory": "email-intelligence"
+  },
+  {
+    "id": "v200-meeting-scheduler",
+    "title": "V200: AI Meeting Scheduler",
+    "description": "Automatically proposes meeting times based on participant availability, sends calendar invites, and handles rescheduling. Eliminates back-and-forth emails.",
+    "features": [
+      "Meeting intent detection",
+      "Participant extraction",
+      "Time slot proposal",
+      "Calendar invite generation",
+      "Confirmation email creation",
+      "Urgency-based scheduling",
+      "Business hours optimization",
+      "Time slot scoring"
+    ],
+    "benefits": [
+      "Schedule meetings in seconds",
+      "Eliminate scheduling back-and-forth",
+      "Auto-generate calendar invites",
+      "Optimize meeting times"
+    ],
+    "pricing": {
+      "basic": "$149/mo",
+      "professional": "$299/mo",
+      "enterprise": "$799/mo"
+    },
+    "category": "AI Services",
+    "subcategory": "email-intelligence"
+  },
+  {
+    "id": "v201-attachment-analyzer",
+    "title": "V201: AI Attachment Analyzer",
+    "description": "Extracts text, tables, and metadata from email attachments (PDFs, images, documents). Identifies key information, flags sensitive data, and generates summaries.",
+    "features": [
+      "Multi-format support (PDF, Word, Excel, PPT, images)",
+      "Text extraction",
+      "Table detection",
+      "Image analysis",
+      "Content analysis",
+      "Sensitive data detection",
+      "Summary generation",
+      "Security recommendations"
+    ],
+    "benefits": [
+      "Extract insights from attachments automatically",
+      "Detect sensitive data before sharing",
+      "Generate attachment summaries",
+      "Ensure attachment security"
+    ],
+    "pricing": {
+      "basic": "$179/mo",
+      "professional": "$349/mo",
+      "enterprise": "$899/mo"
+    },
+    "category": "AI Services",
+    "subcategory": "email-intelligence"
+  },
+  {
+    "id": "v202-sentiment-tracker",
+    "title": "V202: AI Sentiment Tracker",
+    "description": "Analyzes emotional tone and sentiment trends across email conversations. Detects frustration, satisfaction, urgency, and relationship health over time.",
+    "features": [
+      "Sentiment analysis (-1 to +1 scale)",
+      "Emotional tone detection",
+      "Urgency level detection",
+      "Frustration indicators",
+      "Satisfaction indicators",
+      "Relationship health tracking",
+      "Trend analysis",
+      "Response recommendations"
+    ],
+    "benefits": [
+      "Detect frustration early",
+      "Track relationship health",
+      "Respond appropriately to emotions",
+      "Prevent escalation"
+    ],
+    "pricing": {
+      "basic": "$159/mo",
+      "professional": "$319/mo",
+      "enterprise": "$849/mo"
+    },
+    "category": "AI Services",
+    "subcategory": "email-intelligence"
+  },
+  {
+    "id": "v203-priority-classifier",
+    "title": "V203: AI Priority Classifier",
+    "description": "Automatically classifies emails by priority level using multiple signals: sender importance, content urgency, deadlines, and business impact.",
+    "features": [
+      "Multi-signal priority scoring",
+      "Sender importance analysis",
+      "Content urgency detection",
+      "Deadline detection",
+      "Business impact assessment",
+      "VIP indicator detection",
+      "Response time guidance",
+      "Action recommendations"
+    ],
+    "benefits": [
+      "Never miss critical emails",
+      "Prioritize automatically",
+      "Get response time guidance",
+      "Focus on what matters most"
+    ],
+    "pricing": {
+      "basic": "$139/mo",
+      "professional": "$279/mo",
+      "enterprise": "$749/mo"
+    },
+    "category": "AI Services",
+    "subcategory": "email-intelligence"
   }
 ]
