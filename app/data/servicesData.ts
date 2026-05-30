@@ -15260,6 +15260,327 @@ export const allServices: Service[] = [
   { id: 'micro-saas-image-optimization', title: 'Image Optimization & CDN', description: 'Automatically optimize, resize, and deliver images with WebP conversion, lazy loading, and global CDN.', features: ['Auto optimization', 'WebP conversion', 'Responsive images', 'Lazy loading', 'Global CDN', 'Face detection'], benefits: ['Reduce image size 70%', 'Faster page loads', 'Auto-format conversion', 'Global delivery'], pricing: { basic: '$9/mo', pro: '$29/mo', enterprise: '$79/mo' }, contactInfo: { website: '/services/micro-saas-image-optimization', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' }, icon: '🖼️', href: '/services/micro-saas-image-optimization', popular: true, category: 'micro-saas', industry: 'Performance' },
   { id: 'micro-saas-feature-flags', title: 'Feature Flags & Rollouts', description: 'Manage feature flags with gradual rollouts, user targeting, A/B testing, and instant kill switches.', features: ['Feature flags', 'Gradual rollouts', 'User targeting', 'A/B testing', 'Kill switches', 'Analytics'], benefits: ['Deploy safely', 'Target specific users', 'A/B test features', 'Kill instantly if issues'], pricing: { basic: '$19/mo', pro: '$49/mo', enterprise: '$149/mo' }, contactInfo: { website: '/services/micro-saas-feature-flags', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' }, icon: '🚩', href: '/services/micro-saas-feature-flags', popular: true, category: 'micro-saas', industry: 'DevOps' },
 
+,
+  {
+    id: 'ai-email-priority-scorer-v246',
+    title: 'AI Email Priority Scorer (V246)',
+    description: 'Automatically score emails 1-100 based on sender importance, urgency keywords, and response time expectations.',
+    icon: '🎯',
+    category: 'ai',
+    features: ['Priority scoring 1-100', 'Urgency keyword detection', 'Sender importance tiers', 'Response time expectations', 'Critical email flagging', 'User learning adaptation', 'Batch scoring', 'Reply-all enforcement'],
+    pricing: {
+      basic: '149',
+      pro: '349',
+      enterprise: '799'
+    },
+    href: '/services/ai-email-priority-scorer-v246',
+    popular: true,
+    industry: 'Productivity'
+  },
+  {
+    id: 'ai-email-analytics-v247',
+    title: 'AI Email Analytics Dashboard (V247)',
+    description: 'Track response times, email volume, peak hours, and productivity metrics with weekly performance reports.',
+    icon: '📊',
+    category: 'ai',
+    features: ['Response time tracking', 'Email volume analytics', 'Peak hour analysis', 'Weekly performance reports', 'Productivity insights', 'Sender statistics', 'Optimization recommendations', 'Reply-all enforcement'],
+    pricing: {
+      basic: '199',
+      pro: '449',
+      enterprise: '999'
+    },
+    href: '/services/ai-email-analytics-v247',
+    popular: true,
+    industry: 'Analytics'
+  },
+  {
+    id: 'ai-email-smart-notifications-v248',
+    title: 'AI Smart Notification Engine (V248)',
+    description: 'Batch non-urgent emails, send push notifications only for high-priority, respect focus time and working hours.',
+    icon: '🔔',
+    category: 'ai',
+    features: ['Smart notification batching', 'Focus time protection', 'Working hours respect', 'Critical email alerts', 'Batch summaries', 'Do-not-disturb integration', 'Customizable thresholds', 'Reply-all enforcement'],
+    pricing: {
+      basic: '129',
+      pro: '299',
+      enterprise: '699'
+    },
+    href: '/services/ai-email-smart-notifications-v248',
+    popular: true,
+    industry: 'Productivity'
+  },
+  {
+    id: 'ai-email-collaboration-hub-v249',
+    title: 'AI Email Collaboration Hub (V249)',
+    description: 'Detect when emails need team input, suggest relevant team members to CC, track decision-making threads.',
+    icon: '🤝',
+    category: 'ai',
+    features: ['Collaboration need detection', 'Team member suggestions', 'Decision thread tracking', 'Expertise matching', 'Escalation detection', 'CC recommendations', 'Outcome tracking', 'Reply-all enforcement'],
+    pricing: {
+      basic: '179',
+      pro: '399',
+      enterprise: '899'
+    },
+    href: '/services/ai-email-collaboration-hub-v249',
+    popular: true,
+    industry: 'Team Collaboration'
+  },
+  {
+    id: 'ai-email-template-intelligence-v250',
+    title: 'AI Email Template Intelligence (V250)',
+    description: 'Auto-generate personalized templates, learn from successful responses, A/B test variations for better engagement.',
+    icon: '📝',
+    category: 'ai',
+    features: ['Auto template generation', '8 email type templates', 'Personalization engine', 'Success pattern learning', 'A/B testing', 'Customization options', 'Group greeting detection', 'Reply-all enforcement'],
+    pricing: {
+      basic: '149',
+      pro: '349',
+      enterprise: '799'
+    },
+    href: '/services/ai-email-template-intelligence-v250',
+    popular: true,
+    industry: 'Productivity'
+  },
+  {
+    id: 'ai-email-intelligence-suite-v246-v250',
+    title: 'AI Email Intelligence Suite (V246-V250)',
+    description: 'Complete suite: Priority Scorer, Analytics, Smart Notifications, Collaboration Hub, and Template Intelligence.',
+    icon: '👑',
+    category: 'ai',
+    features: ['V246 Priority Scorer', 'V247 Analytics Dashboard', 'V248 Smart Notifications', 'V249 Collaboration Hub', 'V250 Template Intelligence', 'Unified intelligence', 'Case-by-case analysis', 'Reply-all guaranteed'],
+    pricing: {
+      basic: '699',
+      pro: '1599',
+      enterprise: '3999'
+    },
+    href: '/services/ai-email-intelligence-suite-v246-v250',
+    popular: true,
+    industry: 'Enterprise AI'
+  },
+  {
+    id: 'ai-predictive-analytics-platform',
+    title: 'AI Predictive Analytics Platform',
+    description: 'Predict future trends, customer behavior, and business outcomes using advanced ML models and historical data.',
+    icon: '🔮',
+    category: 'ai',
+    features: ['Trend prediction', 'Customer behavior modeling', 'Revenue forecasting', 'Churn prediction', 'Anomaly detection', 'Custom ML models', 'Real-time predictions', 'Explainable AI'],
+    pricing: {
+      basic: '599',
+      pro: '1299',
+      enterprise: '3499'
+    },
+    href: '/services/ai-predictive-analytics-platform',
+    popular: true,
+    industry: 'Business Intelligence'
+  },
+  {
+    id: 'ai-nlp-text-analysis',
+    title: 'AI NLP Text Analysis Engine',
+    description: 'Advanced natural language processing for sentiment analysis, entity extraction, topic modeling, and text classification.',
+    icon: '📖',
+    category: 'ai',
+    features: ['Sentiment analysis', 'Entity extraction', 'Topic modeling', 'Text classification', 'Named entity recognition', 'Keyword extraction', 'Language detection', 'Multilingual support'],
+    pricing: {
+      basic: '249',
+      pro: '549',
+      enterprise: '1299'
+    },
+    href: '/services/ai-nlp-text-analysis',
+    popular: true,
+    industry: 'NLP'
+  },
+  {
+    id: 'it-cloud-cost-optimization',
+    title: 'Cloud Cost Optimization Platform',
+    description: 'Analyze and optimize cloud spending across AWS, Azure, and GCP with automated recommendations.',
+    icon: '☁️',
+    category: 'it',
+    features: ['Multi-cloud analysis', 'Cost anomaly detection', 'Reserved instance optimization', 'Right-sizing recommendations', 'Budget alerts', 'Cost allocation', 'Savings plans', 'Automated actions'],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1799'
+    },
+    href: '/services/it-cloud-cost-optimization',
+    popular: true,
+    industry: 'Cloud FinOps'
+  },
+  {
+    id: 'it-infrastructure-monitoring',
+    title: 'Infrastructure Monitoring Platform',
+    description: 'Comprehensive infrastructure monitoring with AI-powered alerting, root cause analysis, and predictive maintenance.',
+    icon: '📡',
+    category: 'it',
+    features: ['Full-stack monitoring', 'AI-powered alerting', 'Root cause analysis', 'Predictive maintenance', 'Custom dashboards', 'Log correlation', 'Performance tracking', 'SLA monitoring'],
+    pricing: {
+      basic: '249',
+      pro: '599',
+      enterprise: '1499'
+    },
+    href: '/services/it-infrastructure-monitoring',
+    popular: true,
+    industry: 'IT Operations'
+  },
+  {
+    id: 'it-devops-automation',
+    title: 'DevOps Automation Platform',
+    description: 'Automate CI/CD pipelines, infrastructure provisioning, and deployment workflows with GitOps best practices.',
+    icon: '🔄',
+    category: 'it',
+    features: ['CI/CD automation', 'Infrastructure as Code', 'GitOps workflows', 'Deployment automation', 'Testing integration', 'Security scanning', 'Rollback automation', 'Pipeline analytics'],
+    pricing: {
+      basic: '349',
+      pro: '799',
+      enterprise: '1999'
+    },
+    href: '/services/it-devops-automation',
+    popular: true,
+    industry: 'DevOps'
+  },
+  {
+    id: 'security-zero-trust-platform',
+    title: 'Zero Trust Security Platform',
+    description: 'Implement zero trust architecture with identity verification, micro-segmentation, and continuous monitoring.',
+    icon: '🛡️',
+    category: 'security',
+    features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Device trust', 'Network isolation', 'Policy enforcement', 'Threat detection', 'Compliance reporting'],
+    pricing: {
+      basic: '599',
+      pro: '1299',
+      enterprise: '3499'
+    },
+    href: '/services/security-zero-trust-platform',
+    popular: true,
+    industry: 'Cybersecurity'
+  },
+  {
+    id: 'security-iam-platform',
+    title: 'Identity & Access Management Platform',
+    description: 'Enterprise IAM with SSO, MFA, RBAC, and automated user lifecycle management.',
+    icon: '🔐',
+    category: 'security',
+    features: ['Single Sign-On (SSO)', 'Multi-Factor Auth (MFA)', 'Role-Based Access (RBAC)', 'User lifecycle management', 'Directory integration', 'Audit logging', 'Compliance reporting', 'Self-service portal'],
+    pricing: {
+      basic: '299',
+      pro: '699',
+      enterprise: '1799'
+    },
+    href: '/services/security-iam-platform',
+    popular: true,
+    industry: 'Identity Management'
+  },
+  {
+    id: 'data-data-lake-platform',
+    title: 'Data Lake Platform',
+    description: 'Scalable data lake with automated ingestion, data cataloging, governance, and analytics capabilities.',
+    icon: '🗄️',
+    category: 'data',
+    features: ['Automated ingestion', 'Data cataloging', 'Data governance', 'Schema evolution', 'Query optimization', 'Data lineage', 'Access control', 'Analytics integration'],
+    pricing: {
+      basic: '499',
+      pro: '1099',
+      enterprise: '2999'
+    },
+    href: '/services/data-data-lake-platform',
+    popular: true,
+    industry: 'Data Engineering'
+  },
+  {
+    id: 'data-streaming-analytics',
+    title: 'Real-Time Streaming Analytics',
+    description: 'Process and analyze streaming data in real-time with sub-second latency and scalable architecture.',
+    icon: '⚡',
+    category: 'data',
+    features: ['Real-time processing', 'Sub-second latency', 'Stream aggregation', 'Window functions', 'Pattern detection', 'Anomaly detection', 'Scalable architecture', 'Multi-source ingestion'],
+    pricing: {
+      basic: '399',
+      pro: '899',
+      enterprise: '2299'
+    },
+    href: '/services/data-streaming-analytics',
+    popular: true,
+    industry: 'Real-Time Analytics'
+  },
+  {
+    id: 'micro-saas-customer-feedback',
+    title: 'Customer Feedback Platform',
+    description: 'Collect, analyze, and act on customer feedback with NPS surveys, sentiment analysis, and automated insights.',
+    icon: '💬',
+    category: 'micro-saas',
+    features: ['NPS surveys', 'Sentiment analysis', 'Automated insights', 'Feedback widgets', 'Response tracking', 'Trend analysis', 'Integration hub', 'Custom branding'],
+    pricing: {
+      basic: '49',
+      pro: '129',
+      enterprise: '349'
+    },
+    href: '/services/micro-saas-customer-feedback',
+    popular: true,
+    industry: 'Customer Success'
+  },
+  {
+    id: 'micro-saas-task-automation',
+    title: 'Task Automation Platform',
+    description: 'Automate repetitive tasks with visual workflow builder, 500+ integrations, and conditional logic.',
+    icon: '⚙️',
+    category: 'micro-saas',
+    features: ['Visual workflow builder', '500+ integrations', 'Conditional logic', 'Scheduling', 'Error handling', 'Execution history', 'Team collaboration', 'API access'],
+    pricing: {
+      basic: '29',
+      pro: '79',
+      enterprise: '199'
+    },
+    href: '/services/micro-saas-task-automation',
+    popular: true,
+    industry: 'Automation'
+  },
+  {
+    id: 'micro-saas-landing-page-builder',
+    title: 'Landing Page Builder',
+    description: 'Create high-converting landing pages with drag-and-drop editor, A/B testing, and conversion optimization.',
+    icon: '🎨',
+    category: 'micro-saas',
+    features: ['Drag-and-drop editor', 'A/B testing', 'Conversion optimization', 'Mobile responsive', 'SEO optimization', 'Analytics', 'Custom domains', 'Template library'],
+    pricing: {
+      basic: '19',
+      pro: '49',
+      enterprise: '149'
+    },
+    href: '/services/micro-saas-landing-page-builder',
+    popular: true,
+    industry: 'Marketing'
+  },
+  {
+    id: 'micro-saas-email-signatures',
+    title: 'Email Signature Manager',
+    description: 'Create and manage professional email signatures for teams with brand consistency and tracking.',
+    icon: '✉️',
+    category: 'micro-saas',
+    features: ['Signature templates', 'Brand consistency', 'Team management', 'Analytics tracking', 'Campaign banners', 'Social links', 'Custom HTML', 'Centralized control'],
+    pricing: {
+      basic: '9',
+      pro: '29',
+      enterprise: '79'
+    },
+    href: '/services/micro-saas-email-signatures',
+    popular: true,
+    industry: 'Business Tools'
+  },
+  {
+    id: 'micro-saas-video-hosting',
+    title: 'Video Hosting & Analytics Platform',
+    description: 'Host, stream, and analyze videos with adaptive bitrate, engagement analytics, and CDN delivery.',
+    icon: '🎬',
+    category: 'micro-saas',
+    features: ['Video hosting', 'Adaptive streaming', 'Engagement analytics', 'CDN delivery', 'Custom player', 'Transcoding', 'Subtitle support', 'API access'],
+    pricing: {
+      basic: '29',
+      pro: '79',
+      enterprise: '249'
+    },
+    href: '/services/micro-saas-video-hosting',
+    popular: true,
+    industry: 'Media & Video'
+  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => { return allServices.find(s => s.id === id); };
