@@ -4,16 +4,49 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
-import AnimatedCounter from './components/AnimatedCounter';
+import AnimatedCounter from '@/components/AnimatedCounter';
 import type { Service } from './data/servicesData';
-import ServiceBrowser from './components/ServiceBrowser';
-import ServiceSpotlight from './components/ServiceSpotlight';
-import ServiceGridWithSearch from './components/ServiceGridWithSearch';
-import TestimonialsSection from './components/TestimonialsSection';
-import ContactFunnel from './components/ContactFunnel';
-import ServiceCounter from './components/ServiceCounter';
-import FloatingActionDock from './components/FloatingActionDock';
-import ServiceMatchQuiz from './components/ServiceMatchQuiz';
+import ServiceBrowser from '@/components/ServiceBrowser';
+import ServiceSpotlight from '@/components/ServiceSpotlight';
+import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import ContactFunnel from '@/components/ContactFunnel';
+import ServiceCounter from '@/components/ServiceCounter';
+import FloatingActionDock from '@/components/FloatingActionDock';
+import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
+import V204V208Showcase from '@/components/V204V208Showcase';
+import V251V255Showcase from '@/components/V251V255Showcase';
+import V256V260Showcase from '@/components/V256V260Showcase';
+import V261V265Showcase from '@/components/V261V265Showcase';
+import V266V270Showcase from '@/components/V266V270Showcase';
+import V271V275Showcase from '@/components/V271V275Showcase';
+import V276V280Showcase from '@/components/V276V280Showcase';
+import V281V285Showcase from '@/components/V281V285Showcase';
+import V286V290Showcase from '@/components/V286V290Showcase';
+import V291V295Showcase from '@/components/V291V295Showcase';
+import V296V300Showcase from '@/components/V296V300Showcase';
+import V301V305Showcase from '@/components/V301V305Showcase';
+import V306V310Showcase from '@/components/V306V310Showcase';
+import V311V315Showcase from '@/components/V311V315Showcase';
+import V316V320Showcase from '@/components/V316V320Showcase';
+import V321V325Showcase from '@/components/V321V325Showcase';
+import V326V330Showcase from '@/components/V326V330Showcase';
+import V331V335Showcase from '@/components/V331V335Showcase';
+import V336V340Showcase from '@/components/V336V340Showcase';
+import V341V345Showcase from '@/components/V341V345Showcase';
+import V346V350Showcase from '@/components/V346V350Showcase';
+import V351V355Showcase from '@/components/V351V355Showcase';
+import V356V360Showcase from '@/components/V356V360Showcase';
+import V361V365Showcase from '@/components/V361V365Showcase';
+import V366V370Showcase from '@/components/V366V370Showcase';
+import V371V375Showcase from '@/components/V371V375Showcase';
+import V376V380Showcase from '@/components/V376V380Showcase';
+import V381V385Showcase from '@/components/V381V385Showcase';
+import V386V390Showcase from '@/components/V386V390Showcase';
+import V391V395Showcase from '@/components/V391V395Showcase';
+import V396V400Showcase from '@/components/V396V400Showcase';
+import V401V405Showcase from '@/components/V401V405Showcase';
+
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
@@ -69,6 +102,7 @@ const INDUSTRY_CATS: Record<string,string> = {
   "healthcare-&-life-sciences": "ai",
 };
 
+
 // Industries we serve — derived live from service catalog
 const INDUSTRIES = [
   { key: "technology-&-saas",          label: "Technology & SaaS",          emoji: "🏭", color: "from-amber-500 to-orange-500", count: 145, sample: "AI Analytics & BI" },
@@ -102,7 +136,7 @@ export default function HomePage() {
   // Dynamic stats — auto-update when catalog changes
   const stats = [
     { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
-    { value: '11 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel' },
+    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
   ];
@@ -382,6 +416,40 @@ let list = services;
 
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
+
+      {/* ── V204-V208 Email Intelligence Showcase ── */}
+      <V204V208Showcase />
+      <V251V255Showcase />
+      <V256V260Showcase />
+      <V261V265Showcase />
+      <V266V270Showcase />
+      <V271V275Showcase />
+      <V276V280Showcase />
+      <V281V285Showcase />
+      <V286V290Showcase />
+      <V291V295Showcase />
+      <V296V300Showcase />
+      <V301V305Showcase />
+      <V306V310Showcase />
+      <V311V315Showcase />
+      <V316V320Showcase />
+      <V321V325Showcase />
+      <V326V330Showcase />
+      <V331V335Showcase />
+      <V336V340Showcase />
+      <V341V345Showcase />
+      <V346V350Showcase />
+      <V351V355Showcase />
+      <V356V360Showcase />
+      <V361V365Showcase />
+      <V366V370Showcase />
+      <V371V375Showcase />
+      <V376V380Showcase />
+      <V381V385Showcase />
+      <V386V390Showcase />
+      <V391V395Showcase />
+      <V396V400Showcase />
+      <V401V405Showcase />
 
       {/* ── How It Works ── */}
       <section className="py-20">
