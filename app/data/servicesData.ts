@@ -25915,6 +25915,735 @@ export const allServices: Service[] = [
     popular: true,
     industry: "Cross-Industry"
   }
+,
+  {
+    id: "v366-email-sentiment-analyzer",
+    title: "AI Email Sentiment Analyzer",
+    description: "Automatically analyze the emotional tone and sentiment of incoming and outgoing emails in real-time. Helps teams maintain professional communication by flagging potentially negative or inappropriate language before sending. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com for enterprise deployments. Visit us at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "Real-time sentiment scoring for incoming and outgoing emails",
+      "Multi-language sentiment detection supporting 40+ languages",
+      "Customizable sentiment thresholds and alert rules",
+      "Historical sentiment trend dashboards and reports",
+      "Integration with Gmail, Outlook, and Exchange"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$19/mo",
+      pro: "$49/mo",
+      enterprise: "$149/mo"
+    },
+    contactInfo: {
+      website: "/services/v366-email-sentiment-analyzer",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v366-email-sentiment-analyzer",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v367-email-urgency-detector",
+    title: "AI Email Urgency Detector",
+    description: "Intelligently prioritize your inbox by detecting time-sensitive and urgent emails using natural language understanding. Automatically surfaces critical messages so you never miss important deadlines or escalations. Reach out to us at +1 302 464 0950 or kleber@ziontechgroup.com for custom integrations. Our office is at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "AI-powered urgency scoring from 1-10 for every email",
+      "Automatic inbox reordering based on detected priority levels",
+      "Custom urgency rules based on sender, keywords, and context",
+      "Slack and Teams notifications for high-urgency messages",
+      "Learning system that adapts to your prioritization patterns"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$15/mo",
+      pro: "$39/mo",
+      enterprise: "$119/mo"
+    },
+    contactInfo: {
+      website: "/services/v367-email-urgency-detector",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v367-email-urgency-detector",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v368-email-thread-summarizer",
+    title: "AI Email Thread Summarizer",
+    description: "Condense lengthy email threads into concise, actionable summaries that capture key decisions, open questions, and next steps. Saves hours of reading time when catching up on complex conversations. Contact our team at +1 302 464 0950 or kleber@ziontechgroup.com for demos. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "One-click thread summaries with key points extraction",
+      "Timeline view showing conversation evolution and decisions",
+      "Participant contribution analysis and role identification",
+      "Automatic extraction of attachments and referenced documents",
+      "Shareable summary cards for team collaboration platforms"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$22/mo",
+      pro: "$55/mo",
+      enterprise: "$159/mo"
+    },
+    contactInfo: {
+      website: "/services/v368-email-thread-summarizer",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v368-email-thread-summarizer",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v369-email-action-item-extractor",
+    title: "AI Email Action Item Extractor",
+    description: "Automatically identify and extract tasks, deadlines, and commitments from email conversations. Converts scattered action items into organized, trackable to-do lists synced with your project management tools. Get in touch at +1 302 464 0950 or kleber@ziontechgroup.com for pricing details. Visit 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "Automatic detection of tasks, deadlines, and commitments in emails",
+      "Two-way sync with Jira, Asana, Trello, and Monday.com",
+      "Smart assignment detection identifying responsible parties",
+      "Deadline extraction with calendar integration and reminders",
+      "Follow-up tracking with overdue action item alerts"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$25/mo",
+      pro: "$59/mo",
+      enterprise: "$169/mo"
+    },
+    contactInfo: {
+      website: "/services/v369-email-action-item-extractor",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v369-email-action-item-extractor",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v370-email-intent-classifier",
+    title: "AI Email Intent Classifier",
+    description: "Categorize incoming emails by their underlying intent such as inquiry, complaint, request, feedback, or transaction. Enables intelligent routing and automated response workflows that dramatically reduce manual triage time. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com to get started. Office at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "25+ pre-built intent categories with custom intent creation",
+      "Confidence scoring for each classification with fallback routing",
+      "Automatic email routing based on detected intent",
+      "Intent trend analytics and reporting dashboards",
+      "Multi-intent detection for complex email messages"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$29/mo",
+      pro: "$69/mo",
+      enterprise: "$199/mo"
+    },
+    contactInfo: {
+      website: "/services/v370-email-intent-classifier",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v370-email-intent-classifier",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v371-ai-meeting-minutes",
+    title: "AI Meeting Minutes Generator",
+    description: "Automatically transcribe and generate structured meeting minutes from video calls and audio recordings. Extracts decisions, action items, and key discussion points with participant attribution. Reach us at +1 302 464 0950 or kleber@ziontechgroup.com for enterprise licensing. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "Real-time transcription with speaker identification",
+      "Automated extraction of decisions and action items",
+      "Integration with Zoom, Teams, Google Meet, and WebEx",
+      "Searchable meeting archive with smart indexing",
+      "Auto-distribution of minutes to participants post-meeting"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$35/mo",
+      pro: "$79/mo",
+      enterprise: "$229/mo"
+    },
+    contactInfo: {
+      website: "/services/v371-ai-meeting-minutes",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v371-ai-meeting-minutes",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v372-ai-contract-reviewer",
+    title: "AI Contract Review Assistant",
+    description: "Analyze legal contracts and agreements to identify risky clauses, missing terms, and non-standard language using advanced NLP. Reduces legal review time by up to 80% while improving consistency. Contact +1 302 464 0950 or kleber@ziontechgroup.com for a free trial. Our address is 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "Risk scoring for contract clauses with severity ratings",
+      "Comparison against standard templates and industry benchmarks",
+      "Automatic redline suggestions for problematic language",
+      "Obligation tracking and renewal date extraction",
+      "Multi-jurisdiction compliance checking across 50+ countries"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$99/mo",
+      pro: "$249/mo",
+      enterprise: "$599/mo"
+    },
+    contactInfo: {
+      website: "/services/v372-ai-contract-reviewer",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v372-ai-contract-reviewer",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v373-ai-code-reviewer",
+    title: "AI Code Review Companion",
+    description: "Provide intelligent, context-aware code reviews that catch bugs, suggest optimizations, and enforce coding standards automatically. Integrates seamlessly with your CI/CD pipeline and pull request workflow. Call +1 302 464 0950 or email kleber@ziontechgroup.com for team pricing. Visit us at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🧠",
+    features: [
+      "Automated pull request reviews with inline comments",
+      "Bug detection, security vulnerability scanning, and performance analysis",
+      "Custom coding standard enforcement per repository",
+      "Natural language explanations for suggested changes",
+      "Learning from your team's review patterns and preferences"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$45/mo",
+      pro: "$99/mo",
+      enterprise: "$279/mo"
+    },
+    contactInfo: {
+      website: "/services/v373-ai-code-reviewer",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v373-ai-code-reviewer",
+    category: "ai",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v374-network-performance-monitor",
+    title: "Network Performance Monitor Pro",
+    description: "Comprehensive network monitoring solution providing real-time visibility into bandwidth utilization, latency, packet loss, and device health across your entire infrastructure. Proactively detect and resolve network issues before they impact users. Contact +1 302 464 0950 or kleber@ziontechgroup.com for infrastructure assessments. Office: 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🖥️",
+    features: [
+      "Real-time network topology mapping with auto-discovery",
+      "Bandwidth monitoring with NetFlow and sFlow analysis",
+      "Predictive alerting using ML-based anomaly detection",
+      "Historical performance trending with 12-month retention",
+      "SNMP, WMI, and API-based device polling"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$79/mo",
+      pro: "$199/mo",
+      enterprise: "$499/mo"
+    },
+    contactInfo: {
+      website: "/services/v374-network-performance-monitor",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v374-network-performance-monitor",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v375-endpoint-management-suite",
+    title: "Unified Endpoint Management Suite",
+    description: "Manage, secure, and monitor all endpoints from a single cloud-native console including desktops, laptops, mobile devices, and IoT endpoints. Streamlines device provisioning, patch management, and policy enforcement at scale. Reach +1 302 464 0950 or kleber@ziontechgroup.com for enterprise quotes. Based at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🖥️",
+    features: [
+      "Zero-touch device enrollment and automated provisioning",
+      "Cross-platform patch management for Windows, macOS, Linux, iOS, Android",
+      "Remote troubleshooting with secure screen sharing",
+      "Application whitelisting and software distribution",
+      "Compliance posture assessment with remediation workflows"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$4/device/mo",
+      pro: "$8/device/mo",
+      enterprise: "$14/device/mo"
+    },
+    contactInfo: {
+      website: "/services/v375-endpoint-management-suite",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v375-endpoint-management-suite",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v376-it-asset-lifecycle",
+    title: "IT Asset Lifecycle Manager",
+    description: "Track and optimize your entire IT asset inventory from procurement through retirement with full lifecycle management and financial reporting. Eliminate shadow IT and maximize ROI on technology investments. Call +1 302 464 0950 or email kleber@ziontechgroup.com for a consultation. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🖥️",
+    features: [
+      "Automated hardware and software asset discovery",
+      "License compliance tracking with optimization recommendations",
+      "Depreciation calculation and financial lifecycle reporting",
+      "Vendor contract management with renewal notifications",
+      "Sustainable disposal and e-waste tracking workflows"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$59/mo",
+      pro: "$149/mo",
+      enterprise: "$399/mo"
+    },
+    contactInfo: {
+      website: "/services/v376-it-asset-lifecycle",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v376-it-asset-lifecycle",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v377-cloud-backup-orchestrator",
+    title: "Cloud Backup Orchestrator",
+    description: "Orchestrate automated backup strategies across multi-cloud environments with intelligent scheduling, deduplication, and instant recovery capabilities. Ensures business continuity with RPOs as low as 15 minutes. Contact +1 302 464 0950 or kleber@ziontechgroup.com for backup assessments. Visit 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🖥️",
+    features: [
+      "Multi-cloud backup orchestration across AWS, Azure, and GCP",
+      "Incremental forever backups with global deduplication",
+      "Instant recovery with automated failover testing",
+      "Ransomware protection with immutable backup copies",
+      "Compliance-ready retention policies with legal hold support"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$89/mo",
+      pro: "$229/mo",
+      enterprise: "$599/mo"
+    },
+    contactInfo: {
+      website: "/services/v377-cloud-backup-orchestrator",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v377-cloud-backup-orchestrator",
+    category: "it",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v378-zero-trust-gateway",
+    title: "Zero Trust Security Gateway",
+    description: "Implement zero-trust network access with continuous verification, micro-segmentation, and least-privilege access controls for every user and device. Protects against lateral movement and insider threats with real-time policy enforcement. Contact +1 302 464 0950 or kleber@ziontechgroup.com for security assessments. Office at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🔐",
+    features: [
+      "Continuous identity and device posture verification",
+      "Micro-segmentation with application-level access policies",
+      "Real-time threat detection with behavioral analytics",
+      "Encrypted traffic inspection without performance degradation",
+      "Integration with major IdPs including Okta, Azure AD, and Ping"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$12/user/mo",
+      pro: "$24/user/mo",
+      enterprise: "$45/user/mo"
+    },
+    contactInfo: {
+      website: "/services/v378-zero-trust-gateway",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v378-zero-trust-gateway",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v379-vulnerability-scanner-pro",
+    title: "Vulnerability Scanner Pro",
+    description: "Continuous vulnerability scanning and assessment for your entire attack surface including networks, web applications, APIs, and cloud configurations. Prioritizes remediation efforts with risk-based scoring and exploit intelligence. Reach +1 302 464 0950 or kleber@ziontechgroup.com for vulnerability assessments. Based at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🔐",
+    features: [
+      "Continuous scanning of internal and external attack surfaces",
+      "Web application and API vulnerability detection with OWASP coverage",
+      "Risk-based prioritization using CVSS, exploit availability, and asset criticality",
+      "Automated remediation ticketing with Jira and ServiceNow integration",
+      "Compliance reporting for PCI-DSS, HIPAA, SOC 2, and ISO 27001"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$149/mo",
+      pro: "$399/mo",
+      enterprise: "$899/mo"
+    },
+    contactInfo: {
+      website: "/services/v379-vulnerability-scanner-pro",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v379-vulnerability-scanner-pro",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v380-phishing-defense-platform",
+    title: "Advanced Phishing Defense Platform",
+    description: "Multi-layered phishing protection combining email filtering, URL analysis, attachment sandboxing, and employee simulation training. Reduces phishing success rates by 99.5% through AI-powered detection and user awareness programs. Call +1 302 464 0950 or email kleber@ziontechgroup.com for security demos. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🔐",
+    features: [
+      "AI-powered email filtering with real-time URL rewriting",
+      "Attachment sandboxing with detonation analysis",
+      "Automated phishing simulation campaigns for employee training",
+      "Impersonation detection protecting against CEO fraud and BEC",
+      "Threat intelligence feeds with 15-minute update cycles"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$3/user/mo",
+      pro: "$6/user/mo",
+      enterprise: "$12/user/mo"
+    },
+    contactInfo: {
+      website: "/services/v380-phishing-defense-platform",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v380-phishing-defense-platform",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v381-siem-log-analytics",
+    title: "SIEM Log Analytics Engine",
+    description: "Next-generation SIEM platform combining log aggregation, real-time correlation, and automated incident response with machine learning-driven threat detection. Processes millions of events per second with sub-second alerting. Contact +1 302 464 0950 or kleber@ziontechgroup.com for security operations support. Visit 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🔐",
+    features: [
+      "Petabyte-scale log ingestion with 500+ pre-built connectors",
+      "ML-powered threat detection with UEBA capabilities",
+      "Automated SOAR playbooks for incident response orchestration",
+      "Custom dashboard builder with real-time threat visualization",
+      "Compliance-ready log retention with tamper-proof storage"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$299/mo",
+      pro: "$799/mo",
+      enterprise: "$1,999/mo"
+    },
+    contactInfo: {
+      website: "/services/v381-siem-log-analytics",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v381-siem-log-analytics",
+    category: "security",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v382-micro-saas-invoice-automation",
+    title: "Invoice Automation Micro-SaaS",
+    description: "Streamline your invoicing workflow with automated invoice generation, smart reminders, and instant payment reconciliation for freelancers and small businesses. Reduces time spent on billing by 90% with AI-powered data extraction. Get started at +1 302 464 0950 or kleber@ziontechgroup.com for support. Our office is at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🚀",
+    features: [
+      "One-click invoice generation from time tracking and project data",
+      "AI-powered receipt and expense data extraction",
+      "Automated payment reminders with escalating follow-ups",
+      "Multi-currency support with real-time exchange rates",
+      "Integration with Stripe, PayPal, and bank transfer systems"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$9/mo",
+      pro: "$24/mo",
+      enterprise: "$59/mo"
+    },
+    contactInfo: {
+      website: "/services/v382-micro-saas-invoice-automation",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v382-micro-saas-invoice-automation",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v383-micro-saas-form-builder",
+    title: "Smart Form Builder & Analytics",
+    description: "Create intelligent, conditional-logic forms with built-in analytics that track completion rates, drop-off points, and user behavior patterns. Perfect for lead generation, surveys, and data collection without coding. Reach +1 302 464 0950 or kleber@ziontechgroup.com for partnership inquiries. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🚀",
+    features: [
+      "Drag-and-drop form builder with 50+ field types",
+      "Conditional logic and branching question flows",
+      "Real-time analytics with conversion funnel visualization",
+      "Multi-step forms with progress indicators and save-resume",
+      "Webhook and Zapier integrations for automated workflows"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$12/mo",
+      pro: "$29/mo",
+      enterprise: "$79/mo"
+    },
+    contactInfo: {
+      website: "/services/v383-micro-saas-form-builder",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v383-micro-saas-form-builder",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v384-micro-saas-scheduling",
+    title: "Team Scheduling Optimizer",
+    description: "AI-driven scheduling tool that finds optimal meeting times across multiple calendars while respecting focus time, time zones, and meeting preferences. Eliminates the back-and-forth of scheduling for distributed teams. Contact +1 302 464 0950 or kleber@ziontechgroup.com for team demos. Based at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🚀",
+    features: [
+      "AI-powered optimal time slot suggestions across time zones",
+      "Focus time protection with configurable no-meeting blocks",
+      "Meeting type templates with default durations and buffers",
+      "Calendar analytics showing meeting load and availability trends",
+      "Integration with Google Calendar, Outlook, and Calendly"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$8/user/mo",
+      pro: "$16/user/mo",
+      enterprise: "$32/user/mo"
+    },
+    contactInfo: {
+      website: "/services/v384-micro-saas-scheduling",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v384-micro-saas-scheduling",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v385-micro-saas-changelog",
+    title: "Product Changelog & Updates Hub",
+    description: "Beautiful, customizable product changelog that keeps your users informed about new features, improvements, and bug fixes. Includes in-app widgets, email notifications, and SEO-optimized public pages. Call +1 302 464 0950 or email kleber@ziontechgroup.com for product teams. Office at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "🚀",
+    features: [
+      "Customizable changelog page with your brand styling",
+      "In-app notification widget for new release announcements",
+      "Email digest campaigns for product update notifications",
+      "User feedback collection on new features and improvements",
+      "API and Git integration for automated changelog generation"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$15/mo",
+      pro: "$39/mo",
+      enterprise: "$89/mo"
+    },
+    contactInfo: {
+      website: "/services/v385-micro-saas-changelog",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v385-micro-saas-changelog",
+    category: "micro-saas",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v386-cloud-cost-optimizer",
+    title: "Cloud Cost Optimizer",
+    description: "Analyze and optimize your cloud spending across AWS, Azure, and GCP with intelligent recommendations for rightsizing, reserved instances, and spot usage. Typically reduces cloud bills by 30-40% within the first month. Contact +1 302 464 0950 or kleber@ziontechgroup.com for cost analysis. Visit 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "☁️",
+    features: [
+      "Multi-cloud cost visibility with unified billing dashboard",
+      "AI-powered rightsizing recommendations for compute and storage",
+      "Reserved instance and savings plan purchase recommendations",
+      "Anomaly detection with budget alerts and forecasting",
+      "Automated scheduling for non-production environment shutdowns"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$99/mo",
+      pro: "$299/mo",
+      enterprise: "$799/mo"
+    },
+    contactInfo: {
+      website: "/services/v386-cloud-cost-optimizer",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v386-cloud-cost-optimizer",
+    category: "cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v387-cloud-serverless-platform",
+    title: "Serverless Deployment Platform",
+    description: "Deploy and manage serverless applications across multiple cloud providers with unified tooling, observability, and cost management. Abstracts away infrastructure complexity while maintaining full control over deployments. Reach +1 302 464 0950 or kleber@ziontechgroup.com for architecture consultations. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "☁️",
+    features: [
+      "Multi-cloud serverless deployment with single configuration",
+      "Automatic scaling with cold-start optimization",
+      "Distributed tracing and function-level observability",
+      "Environment management with secrets rotation",
+      "Cost-per-invocation tracking and optimization alerts"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$49/mo",
+      pro: "$149/mo",
+      enterprise: "$399/mo"
+    },
+    contactInfo: {
+      website: "/services/v387-cloud-serverless-platform",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v387-cloud-serverless-platform",
+    category: "cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v388-cloud-edge-computing",
+    title: "Edge Computing Orchestrator",
+    description: "Deploy and manage containerized workloads at the edge across hundreds of locations with centralized control, OTA updates, and local AI inference capabilities. Brings cloud-native capabilities closer to your users and devices. Contact +1 302 464 0950 or kleber@ziontechgroup.com for edge architecture design. Based at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "☁️",
+    features: [
+      "Kubernetes-native edge deployment with fleet management",
+      "Over-the-air updates with rollback and canary deployment support",
+      "Local AI model inference with edge-to-cloud sync",
+      "Offline-first operation with conflict resolution",
+      "Edge-specific monitoring with latency and throughput metrics"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$199/mo",
+      pro: "$499/mo",
+      enterprise: "$1,299/mo"
+    },
+    contactInfo: {
+      website: "/services/v388-cloud-edge-computing",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v388-cloud-edge-computing",
+    category: "cloud",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v389-data-pipeline-builder",
+    title: "No-Code Data Pipeline Builder",
+    description: "Build robust ETL and ELT data pipelines visually without writing code, connecting 200+ data sources to your warehouse or lake. Handles incremental loads, schema evolution, and data quality checks automatically. Get in touch at +1 302 464 0950 or kleber@ziontechgroup.com for data architecture reviews. Office: 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "📊",
+    features: [
+      "Visual pipeline builder with drag-and-drop transformation nodes",
+      "200+ pre-built connectors for databases, APIs, and SaaS tools",
+      "Automated schema detection and evolution handling",
+      "Data quality rules with anomaly detection and alerting",
+      "Incremental loading with exactly-once delivery guarantees"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$79/mo",
+      pro: "$199/mo",
+      enterprise: "$549/mo"
+    },
+    contactInfo: {
+      website: "/services/v389-data-pipeline-builder",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v389-data-pipeline-builder",
+    category: "data",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v390-automation-workflow-engine",
+    title: "Intelligent Workflow Automation Engine",
+    description: "Design and deploy complex business process automations combining AI decisions, human approvals, and system integrations in a visual workflow editor. Replaces manual, repetitive processes with intelligent end-to-end automation. Contact +1 302 464 0950 or kleber@ziontechgroup.com for automation assessments. Located at 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "📊",
+    features: [
+      "Visual workflow designer with conditional branching and parallel execution",
+      "AI decision nodes for intelligent document processing and classification",
+      "Human-in-the-loop approval gates with escalation rules",
+      "300+ pre-built integration connectors and custom API support",
+      "Process mining and optimization recommendations"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$59/mo",
+      pro: "$159/mo",
+      enterprise: "$449/mo"
+    },
+    contactInfo: {
+      website: "/services/v390-automation-workflow-engine",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v390-automation-workflow-engine",
+    category: "automation",
+    popular: true,
+    industry: "Cross-Industry"
+  },
+  {
+    id: "v391-data-quality-monitor",
+    title: "Data Quality Monitor",
+    description: "Continuously monitor and validate your data assets against quality rules, detecting anomalies, drift, and schema changes before they impact downstream consumers. Provides data health scores and automated remediation workflows. Call +1 302 464 0950 or email kleber@ziontechgroup.com for data governance solutions. Visit 364 E Main St STE 1008 Middletown DE 19709.",
+    icon: "📊",
+    features: [
+      "Automated data profiling with quality rule generation",
+      "Real-time anomaly detection with statistical and ML-based methods",
+      "Data lineage tracking from source to consumption layer",
+      "Quality score dashboards with SLA monitoring",
+      "Automated quarantine and remediation for failing data assets"
+    ],
+    benefits: [],
+    pricing: {
+      basic: "$129/mo",
+      pro: "$329/mo",
+      enterprise: "$799/mo"
+    },
+    contactInfo: {
+      website: "/services/v391-data-quality-monitor",
+      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950"
+    },
+    href: "/services/v391-data-quality-monitor",
+    category: "data",
+    popular: true,
+    industry: "Cross-Industry"
+  }
 ];
 
 export const getServiceById = (id: string): Service | undefined => { return allServices.find(s => s.id === id); };
@@ -26235,3 +26964,31 @@ export const ai_email_coaching_platform = allServices.find(s => s.id === "ai-ema
 export const ai_email_voice_response = allServices.find(s => s.id === "ai-email-voice-response");
 export const ai_email_accessibility_suite = allServices.find(s => s.id === "ai-email-accessibility-suite");
 export const ai_email_a_b_testing = allServices.find(s => s.id === "ai-email-a-b-testing");
+
+// V366-V370 Service Exports
+export const v366_email_sentiment_analyzer = allServices.find(s => s.id === "v366-email-sentiment-analyzer");
+export const v367_email_urgency_detector = allServices.find(s => s.id === "v367-email-urgency-detector");
+export const v368_email_thread_summarizer = allServices.find(s => s.id === "v368-email-thread-summarizer");
+export const v369_email_action_item_extractor = allServices.find(s => s.id === "v369-email-action-item-extractor");
+export const v370_email_intent_classifier = allServices.find(s => s.id === "v370-email-intent-classifier");
+export const v371_ai_meeting_minutes = allServices.find(s => s.id === "v371-ai-meeting-minutes");
+export const v372_ai_contract_reviewer = allServices.find(s => s.id === "v372-ai-contract-reviewer");
+export const v373_ai_code_reviewer = allServices.find(s => s.id === "v373-ai-code-reviewer");
+export const v374_network_performance_monitor = allServices.find(s => s.id === "v374-network-performance-monitor");
+export const v375_endpoint_management_suite = allServices.find(s => s.id === "v375-endpoint-management-suite");
+export const v376_it_asset_lifecycle = allServices.find(s => s.id === "v376-it-asset-lifecycle");
+export const v377_cloud_backup_orchestrator = allServices.find(s => s.id === "v377-cloud-backup-orchestrator");
+export const v378_zero_trust_gateway = allServices.find(s => s.id === "v378-zero-trust-gateway");
+export const v379_vulnerability_scanner_pro = allServices.find(s => s.id === "v379-vulnerability-scanner-pro");
+export const v380_phishing_defense_platform = allServices.find(s => s.id === "v380-phishing-defense-platform");
+export const v381_siem_log_analytics = allServices.find(s => s.id === "v381-siem-log-analytics");
+export const v382_micro_saas_invoice_automation = allServices.find(s => s.id === "v382-micro-saas-invoice-automation");
+export const v383_micro_saas_form_builder = allServices.find(s => s.id === "v383-micro-saas-form-builder");
+export const v384_micro_saas_scheduling = allServices.find(s => s.id === "v384-micro-saas-scheduling");
+export const v385_micro_saas_changelog = allServices.find(s => s.id === "v385-micro-saas-changelog");
+export const v386_cloud_cost_optimizer = allServices.find(s => s.id === "v386-cloud-cost-optimizer");
+export const v387_cloud_serverless_platform = allServices.find(s => s.id === "v387-cloud-serverless-platform");
+export const v388_cloud_edge_computing = allServices.find(s => s.id === "v388-cloud-edge-computing");
+export const v389_data_pipeline_builder = allServices.find(s => s.id === "v389-data-pipeline-builder");
+export const v390_automation_workflow_engine = allServices.find(s => s.id === "v390-automation-workflow-engine");
+export const v391_data_quality_monitor = allServices.find(s => s.id === "v391-data-quality-monitor");
