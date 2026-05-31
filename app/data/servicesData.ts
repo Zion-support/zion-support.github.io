@@ -9960,6 +9960,151 @@ export const automationServices: Service[] = [
     industry: 'Finance',
   },
 
+
+  {
+    id: "smart-grid-optimizer",
+    title: "Smart Grid Energy Optimizer",
+    description: "AI-powered energy grid management system that predicts demand spikes, optimizes distribution across renewable and traditional sources, and reduces energy waste by up to 30%. Features real-time load balancing, predictive maintenance alerts, and carbon footprint tracking dashboards. Integrates with solar, wind, battery storage, and EV charging infrastructure.",
+    features: ["Real-time demand prediction", "Load balancing automation", "Renewable integration", "Carbon tracking", "Predictive maintenance", "EV charging optimization", "Grid resilience analytics"],
+    benefits: ["30% energy waste reduction", "Lower utility costs", "Carbon neutrality progress", "Grid stability", "Automated peak shaving"],
+    pricing: { basic: "$499/mo", pro: "$1,299/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Zap",
+    category: "automation",
+    popular: true
+  },
+  {
+    id: "ai-drug-discovery",
+    title: "AI Drug Discovery Platform",
+    description: "Accelerate pharmaceutical research with machine learning models that predict molecular interactions, identify promising drug candidates, and simulate clinical trial outcomes. Reduces drug development time from years to months. Includes toxicity screening, bioavailability prediction, and FDA submission document generation.",
+    features: ["Molecular interaction simulation", "Toxicity screening", "Bioavailability prediction", "Clinical trial simulation", "FDA document generation", "Compound library management"],
+    benefits: ["80% faster drug discovery", "Reduced R&D costs", "Higher success rates", "Regulatory compliance", "IP protection"],
+    pricing: { basic: "$2,999/mo", pro: "$7,999/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Activity",
+    category: "ai",
+    popular: true
+  },
+  {
+    id: "decentralized-identity",
+    title: "Decentralized Identity Verification",
+    description: "Blockchain-based self-sovereign identity platform that gives users control over their digital credentials. Enables instant KYC verification, reusable identity across platforms, and privacy-preserving authentication. Compliant with eIDAS, GDPR, and W3C DID standards. Ideal for banking, healthcare, and government services.",
+    features: ["Self-sovereign identity", "Instant KYC verification", "Cross-platform reusable credentials", "Privacy-preserving auth", "W3C DID compliant", "eIDAS & GDPR compliance", "Biometric binding"],
+    benefits: ["Eliminate repeated KYC", "Reduce fraud", "User data ownership", "Regulatory compliance", "Lower verification costs"],
+    pricing: { basic: "$399/mo", pro: "$1,199/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Shield",
+    category: "it",
+    popular: false
+  },
+  {
+    id: "ai-supply-chain-visibility",
+    title: "AI Supply Chain Visibility Platform",
+    description: "End-to-end supply chain tracking with AI-powered disruption prediction, inventory optimization, and supplier risk scoring. Integrates with ERP systems (SAP, Oracle), IoT sensors, and shipping APIs. Provides real-time shipment tracking, demand forecasting, and automated reorder recommendations.",
+    features: ["End-to-end tracking", "Disruption prediction", "Inventory optimization", "Supplier risk scoring", "ERP integration", "IoT sensor data fusion", "Automated reordering"],
+    benefits: ["40% inventory cost reduction", "Fewer stockouts", "Faster disruption response", "Supplier diversity insights", "Cash flow improvement"],
+    pricing: { basic: "$699/mo", pro: "$1,999/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Truck",
+    category: "automation",
+    popular: false
+  },
+  {
+    id: "generative-ai-content-studio",
+    title: "Generative AI Content Studio",
+    description: "Enterprise-grade AI content creation platform for marketing teams. Generates blog posts, social media content, ad copy, email campaigns, and product descriptions in brand voice. Includes SEO optimization, plagiarism checking, multilingual generation (30+ languages), and A/B testing for content performance.",
+    features: ["Brand voice training", "SEO content generation", "Multilingual (30+ languages)", "Plagiarism checking", "A/B content testing", "Social media scheduling integration", "Content calendar automation"],
+    benefits: ["10x content production", "Consistent brand voice", "Higher SEO rankings", "Multilingual reach", "Reduced content costs"],
+    pricing: { basic: "$149/mo", pro: "$499/mo", enterprise: "$1,299/mo" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "PenTool",
+    category: "ai",
+    popular: true
+  },
+  {
+    id: "digital-twin-factory",
+    title: "Digital Twin for Manufacturing",
+    description: "Create real-time digital replicas of physical manufacturing facilities. Simulates production line changes before implementation, predicts equipment failures, and optimizes throughput. Integrates with PLCs, SCADA, IoT sensors, and MES systems. Reduces downtime by up to 45% and increases OEE by 20%.",
+    features: ["Real-time facility replica", "Production simulation", "Predictive failure analysis", "Throughput optimization", "PLC/SCADA integration", "OEE tracking", "What-if scenario modeling"],
+    benefits: ["45% downtime reduction", "20% OEE improvement", "Risk-free process changes", "Energy optimization", "Faster new product introduction"],
+    pricing: { basic: "$1,999/mo", pro: "$4,999/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Cpu",
+    category: "it",
+    popular: false
+  },
+  {
+    id: "ai-legal-research",
+    title: "AI Legal Research Assistant",
+    description: "Natural language legal research tool that searches case law, statutes, regulations, and legal precedents across jurisdictions. Generates legal memos, contract clause suggestions, and case outcome predictions. Trained on millions of legal documents with regular updates for new rulings and legislation.",
+    features: ["Case law search across jurisdictions", "Statute & regulation lookup", "Legal memo generation", "Contract clause suggestions", "Case outcome prediction", "Citation checking", "Regulatory change alerts"],
+    benefits: ["90% faster legal research", "Better case outcomes", "Reduced billable research hours", "Comprehensive coverage", "Regular legal updates"],
+    pricing: { basic: "$299/mo", pro: "$899/mo", enterprise: "$2,499/mo" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Scale",
+    category: "ai",
+    popular: false
+  },
+  {
+    id: "autonomous-drone-surveying",
+    title: "Autonomous Drone Surveying Platform",
+    description: "AI-powered drone fleet management for land surveying, construction monitoring, agriculture, and infrastructure inspection. Features automated flight planning, photogrammetry, 3D mapping, change detection analytics, and regulatory compliance (FAA Part 107). Processes imagery using computer vision for defect detection.",
+    features: ["Automated flight planning", "Photogrammetry & 3D mapping", "Change detection analytics", "Computer vision defect detection", "FAA Part 107 compliance", "Thermal imaging analysis", "Progress reporting dashboards"],
+    benefits: ["80% faster surveys", "Safer inspections", "Higher accuracy", "Real-time progress tracking", "Reduced labor costs"],
+    pricing: { basic: "$799/mo", pro: "$2,499/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Navigation",
+    category: "automation",
+    popular: false
+  },
+  {
+    id: "conversational-ai-platform",
+    title: "Conversational AI Platform for Enterprises",
+    description: "Build, deploy, and manage AI-powered chatbots and voice assistants across web, mobile, WhatsApp, Messenger, and phone channels. Includes visual bot builder, NLU training, conversation analytics, and seamless human handoff. Pre-built templates for customer support, sales, HR, and IT helpdesk. Supports 50+ languages with sentiment-aware responses.",
+    features: ["Visual bot builder", "NLU training interface", "Multi-channel deployment", "Conversation analytics", "Seamless human handoff", "50+ language support", "Sentiment-aware responses", "Pre-built templates"],
+    benefits: ["70% automatic resolution", "24/7 availability", "Consistent service quality", "Lower support costs", "Multilingual coverage"],
+    pricing: { basic: "$349/mo", pro: "$999/mo", enterprise: "$2,999/mo" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "MessageSquare",
+    category: "ai",
+    popular: true
+  },
+  {
+    id: "ai-cyber-threat-hunting",
+    title: "AI Cyber Threat Hunting Platform",
+    description: "Proactive threat hunting powered by machine learning that identifies advanced persistent threats (APTs), zero-day exploits, and insider threats before they cause damage. Correlates telemetry from endpoints, network, cloud, and identity systems. Features automated playbook response, MITRE ATT&CK mapping, and threat intelligence feeds integration.",
+    features: ["ML-powered threat detection", "APT identification", "Zero-day exploit detection", "Insider threat analytics", "Automated response playbooks", "MITRE ATT&CK mapping", "Threat intel feed integration", "Forensic timeline reconstruction"],
+    benefits: ["95% faster threat detection", "Proactive security posture", "Reduced breach impact", "Compliance automation", "SOC efficiency gains"],
+    pricing: { basic: "$1,499/mo", pro: "$3,999/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Shield",
+    category: "it",
+    popular: true
+  },
+  {
+    id: "sustainable-packaging-ai",
+    title: "Sustainable Packaging AI Optimizer",
+    description: "AI platform that optimizes packaging designs for sustainability while maintaining product protection and cost efficiency. Analyzes material choices, dimensions, shipping configurations, and end-of-life recyclability. Generates packaging recommendations that reduce material use by up to 35% and carbon footprint by 50%. Integrates with CAD and ERP systems.",
+    features: ["Material sustainability scoring", "Dimensional optimization", "Shipping configuration analysis", "End-of-life recyclability", "Carbon footprint calculation", "CAD/ERP integration", "Cost-sustainability tradeoff analysis"],
+    benefits: ["35% material reduction", "50% carbon footprint cut", "Lower packaging costs", "Regulatory compliance", "Brand sustainability credentials"],
+    pricing: { basic: "$399/mo", pro: "$1,199/mo", enterprise: "Custom" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Recycle",
+    category: "ai",
+    popular: false
+  },
+  {
+    id: "ai-talent-marketplace",
+    title: "AI-Powered Talent Marketplace",
+    description: "Intelligent talent matching platform that uses AI to connect companies with the best professionals based on skills, culture fit, project requirements, and availability. Features automated candidate screening, skill assessment, interview scheduling, and contract management. Includes freelancer vetting, payment escrow, and project milestone tracking.",
+    features: ["AI skill matching", "Culture fit analysis", "Automated screening", "Skill assessments", "Interview scheduling", "Contract management", "Payment escrow", "Milestone tracking"],
+    benefits: ["60% faster hiring", "Better quality matches", "Reduced hiring bias", "Lower recruiting costs", "Scalable workforce"],
+    pricing: { basic: "$199/mo", pro: "$599/mo", enterprise: "$1,499/mo" },
+    contactInfo: { website: "https://ziontechgroup.com", email: "kleber@ziontechgroup.com", phone: "+1 302 464 0950" },
+    icon: "Users",
+    category: "automation",
+    popular: false
+  }
 ];
 
 export const allServices: Service[] = [
