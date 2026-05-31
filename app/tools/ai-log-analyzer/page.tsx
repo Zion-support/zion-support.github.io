@@ -1,14 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Log Analyzer | Zion Tech Group',
-  description: 'Free online ai log analyzer tool. No signup required.',
-};
-
-
 
 type AnalysisResult = {
   summary: string;

@@ -6,12 +6,6 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Search as SearchIcon, ArrowRight, Layers, FileText, Building2, Package } from 'lucide-react';
 import { AI_SERVICE_LINKS } from '../constants/navigation';
 import Breadcrumb from '../components/Breadcrumb';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Search | Zion Tech Group',
-  description: 'Search — Zion Tech Group delivers cutting-edge technology solutions.',
-};
 
 
 

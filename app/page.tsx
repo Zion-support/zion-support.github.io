@@ -14,15 +14,6 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI & IT Services for Your Business | Zion Tech Group',
-  description: 'AI & IT Services for Your Business — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
@@ -77,7 +68,6 @@ const INDUSTRY_CATS: Record<string,string> = {
   "education-&-research": "ai",
   "healthcare-&-life-sciences": "ai",
 };
-
 
 // Industries we serve — derived live from service catalog
 const INDUSTRIES = [
