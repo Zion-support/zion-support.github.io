@@ -1,4 +1,4 @@
-// Auto-generated - Total: 2346
+// Auto-generated - Total: 2371
 
 export const ai_agent_tool_builder = {"id":"ai-agent-tool-builder","title":"AI Agent Tool Builder","description":"Visual no-code tool builder for LLM agents: define function-calling tools, MCP server scaffolding, OpenAPI wrapper, and sandbox test harness.","icon":"★","features":["Drag-drop tool schema builder","MCP server scaffold + OpenAPI wrapper","Sandbox execution harness per tool","Multi-model compatibility (OpenAI/Anthropic/Google)"],"benefits":["Build tools for agents in hours, not weeks","MCP first = compatible with Claude/Copilot/GPTs","Sandbox test = no production risk","Function-calling = deterministic tool invoke"],"pricing":{"basic":"1999","pro":"4999","enterprise":"14999"},"contactInfo":{"website":"/services/ai-agent-tool-builder","email":"kleber@ziontechgroup.com","phone":"+1 302 464 0950"},"href":"/services/ai-agent-tool-builder","category":"ai","popular":false,"industry":"Technology"};
 
@@ -4692,6 +4692,56 @@ export const faq_generator = {"id":"faq-generator","name":"FAQ Generator from Em
 
 export const troubleshooting_kb_builder = {"id":"troubleshooting-kb-builder","name":"Troubleshooting KB Builder","description":"Build troubleshooting knowledge base from email support threads with solution matching and step-by-step guides.","category":"email-intelligence","price":"$149/mo","features":["Solution matching","Step-by-step guides","Error code mapping","Self-service portal"]};
 
+export const v521_thread_summarizer = {"id":"v521-thread-summarizer","name":"Thread Summarizer Pro","description":"Automatically summarize long email threads into concise executive summaries with key decisions, action items, and participants","category":"Email Intelligence","engine":"V521","price":49,"features":["Thread analysis","Decision extraction","Action item tracking","Participant identification"]};
+
+export const v521_email_digest = {"id":"v521-email-digest","name":"Email Digest Generator","description":"Generate daily or weekly email digests highlighting the most important messages and updates","category":"Email Intelligence","engine":"V521","price":39,"features":["Daily digests","Weekly summaries","Priority filtering","Custom schedules"]};
+
+export const v521_conversation_tracker = {"id":"v521-conversation-tracker","name":"Conversation Tracker","description":"Track ongoing email conversations and get alerts when threads need attention or follow-up","category":"Email Intelligence","engine":"V521","price":45,"features":["Thread monitoring","Follow-up alerts","Response tracking","Conversation history"]};
+
+export const v521_meeting_notes = {"id":"v521-meeting-notes","name":"Meeting Notes Extractor","description":"Extract meeting notes, action items, and decisions from email threads about meetings","category":"Email Intelligence","engine":"V521","price":55,"features":["Meeting extraction","Action items","Decision logging","Attendee tracking"]};
+
+export const v521_project_summary = {"id":"v521-project-summary","name":"Project Email Summary","description":"Summarize all project-related emails into comprehensive project status reports","category":"Email Intelligence","engine":"V521","price":65,"features":["Project tracking","Status reports","Milestone extraction","Team updates"]};
+
+export const v522_attachment_analyzer = {"id":"v522-attachment-analyzer","name":"Attachment Analyzer","description":"Automatically analyze email attachments to extract key information and data points","category":"Email Intelligence","engine":"V522","price":59,"features":["File type detection","Content extraction","Data point identification","Multi-format support"]};
+
+export const v522_document_summarizer = {"id":"v522-document-summarizer","name":"Document Summarizer","description":"Summarize attached documents (PDFs, Word docs, spreadsheets) into key takeaways","category":"Email Intelligence","engine":"V522","price":69,"features":["PDF summaries","Word doc analysis","Spreadsheet insights","Key metrics extraction"]};
+
+export const v522_attachment_organizer = {"id":"v522-attachment-organizer","name":"Attachment Organizer","description":"Automatically organize and categorize email attachments by type, project, or date","category":"Email Intelligence","engine":"V522","price":45,"features":["Auto-categorization","File organization","Search by content","Duplicate detection"]};
+
+export const v522_invoice_extractor = {"id":"v522-invoice-extractor","name":"Invoice Data Extractor","description":"Extract key data from invoice attachments including amounts, dates, and vendor information","category":"Email Intelligence","engine":"V522","price":79,"features":["Invoice parsing","Amount extraction","Date identification","Vendor recognition"]};
+
+export const v522_image_text_extractor = {"id":"v522-image-text-extractor","name":"Image Text Extractor","description":"Extract text from image attachments using OCR technology for searchable content","category":"Email Intelligence","engine":"V522","price":55,"features":["OCR technology","Text extraction","Multi-language support","Searchable content"]};
+
+export const v523_workflow_builder = {"id":"v523-workflow-builder","name":"Workflow Automation Builder","description":"Create automated email workflows based on triggers, conditions, and actions","category":"Email Intelligence","engine":"V523","price":89,"features":["Visual workflow builder","Trigger conditions","Automated actions","Template library"]};
+
+export const v523_auto_responder = {"id":"v523-auto-responder","name":"Smart Auto-Responder","description":"Intelligent auto-responses based on email content, sender, and context","category":"Email Intelligence","engine":"V523","price":49,"features":["Context-aware replies","Custom templates","Conditional responses","Scheduling"]};
+
+export const v523_email_router = {"id":"v523-email-router","name":"Email Router","description":"Automatically route emails to the right team member or department based on content","category":"Email Intelligence","engine":"V523","price":69,"features":["Smart routing","Team assignment","Priority handling","Load balancing"]};
+
+export const v523_follow_up_automator = {"id":"v523-follow-up-automator","name":"Follow-Up Automator","description":"Automatically schedule and send follow-up emails based on response patterns","category":"Email Intelligence","engine":"V523","price":59,"features":["Auto follow-ups","Response tracking","Custom timing","Multi-step sequences"]};
+
+export const v523_label_automator = {"id":"v523-label-automator","name":"Label & Tag Automator","description":"Automatically apply labels and tags to emails based on content and sender","category":"Email Intelligence","engine":"V523","price":39,"features":["Auto-labeling","Smart tagging","Custom rules","Bulk operations"]};
+
+export const v524_multi_language = {"id":"v524-multi-language","name":"Multi-Language Translator","description":"Translate emails between 50+ languages with cultural context preservation","category":"Email Intelligence","engine":"V524","price":79,"features":["50+ languages","Cultural context","Formal/informal modes","Auto-detection"]};
+
+export const v524_language_detector = {"id":"v524-language-detector","name":"Language Detector","description":"Automatically detect the language of incoming emails for proper routing and response","category":"Email Intelligence","engine":"V524","price":29,"features":["Auto-detection","Multi-script support","Confidence scoring","Language statistics"]};
+
+export const v524_bilingual_templates = {"id":"v524-bilingual-templates","name":"Bilingual Email Templates","description":"Create and manage bilingual email templates for international communications","category":"Email Intelligence","engine":"V524","price":49,"features":["Dual-language templates","Auto-translation","Cultural adaptation","Template library"]};
+
+export const v524_localization_helper = {"id":"v524-localization-helper","name":"Localization Helper","description":"Localize email content for different regions including date formats, currencies, and customs","category":"Email Intelligence","engine":"V524","price":59,"features":["Regional formatting","Currency conversion","Date localization","Cultural notes"]};
+
+export const v524_translation_memory = {"id":"v524-translation-memory","name":"Translation Memory","description":"Build and use translation memory for consistent terminology across all email communications","category":"Email Intelligence","engine":"V524","price":69,"features":["Terminology database","Consistency checking","Custom glossaries","Translation reuse"]};
+
+export const v525_performance_dashboard = {"id":"v525-performance-dashboard","name":"Performance Analytics Dashboard","description":"Comprehensive dashboard showing email performance metrics, response times, and engagement rates","category":"Email Intelligence","engine":"V525","price":99,"features":["Real-time metrics","Response time tracking","Engagement analytics","Team performance"]};
+
+export const v525_response_time_tracker = {"id":"v525-response-time-tracker","name":"Response Time Tracker","description":"Track and analyze email response times across teams and individuals","category":"Email Intelligence","engine":"V525","price":59,"features":["Response metrics","Team comparisons","Trend analysis","SLA monitoring"]};
+
+export const v525_engagement_analytics = {"id":"v525-engagement-analytics","name":"Engagement Analytics","description":"Analyze email engagement rates including opens, clicks, replies, and conversions","category":"Email Intelligence","engine":"V525","price":79,"features":["Open rates","Click tracking","Reply analysis","Conversion metrics"]};
+
+export const v525_productivity_reports = {"id":"v525-productivity-reports","name":"Productivity Reports","description":"Generate detailed productivity reports on email handling efficiency and workload","category":"Email Intelligence","engine":"V525","price":69,"features":["Efficiency metrics","Workload analysis","Time tracking","Performance trends"]};
+
+export const v525_custom_reports = {"id":"v525-custom-reports","name":"Custom Report Builder","description":"Build custom email analytics reports with drag-and-drop metrics and visualization options","category":"Email Intelligence","engine":"V525","price":89,"features":["Custom metrics","Drag-and-drop builder","Scheduled reports","Export options"]};
+
 export const allServices = [
   ai_agent_tool_builder,
   ai_vision_quality_inspection,
@@ -7038,5 +7088,30 @@ export const allServices = [
   kb_auto_builder_pro,
   kb_auto_builder_enterprise,
   faq_generator,
-  troubleshooting_kb_builder
+  troubleshooting_kb_builder,
+  v521_thread_summarizer,
+  v521_email_digest,
+  v521_conversation_tracker,
+  v521_meeting_notes,
+  v521_project_summary,
+  v522_attachment_analyzer,
+  v522_document_summarizer,
+  v522_attachment_organizer,
+  v522_invoice_extractor,
+  v522_image_text_extractor,
+  v523_workflow_builder,
+  v523_auto_responder,
+  v523_email_router,
+  v523_follow_up_automator,
+  v523_label_automator,
+  v524_multi_language,
+  v524_language_detector,
+  v524_bilingual_templates,
+  v524_localization_helper,
+  v524_translation_memory,
+  v525_performance_dashboard,
+  v525_response_time_tracker,
+  v525_engagement_analytics,
+  v525_productivity_reports,
+  v525_custom_reports
 ];
