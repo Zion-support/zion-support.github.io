@@ -17,7 +17,7 @@ export const DEFAULT_KEYWORDS = 'AI solutions, cybersecurity, cloud infrastructu
 // Contact Information
 export const CONTACT_INFO = {
   phone: '+1 302 464 0950',
-  email: 'commercial@ziontechgroup.com',
+  email: 'kleber@ziontechgroup.com',
   address: {
     street: '364 E Main St STE 1008',
     city: 'Middletown',

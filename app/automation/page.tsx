@@ -1,79 +1,54 @@
-import ProductPageLayout from '../components/ProductPageLayout';
-/* eslint-disable */
-import Metadata from 'next';
+// Automation Solutions - Category Page
+import Link from 'next/link';
+import { allServices } from '../data/servicesData';
 
 export const metadata = {
-  title: 'Automation | Zion Tech Group',
-  description:
-    'Automation eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim operational capacity and reduce human error.',
-  alternates: { canonical: '/automation' },
+  title: 'Automation Solutions | Zion Tech Group',
+  description: 'Intelligent process automation: RPA, workflows, and AI agents.',
 };
 
 export default function Page() {
+  const services = allServices.filter(s =>
+    s.category && s.category === 'automation' ||
+    s.category && s.category === 'automation' ||
+    (s.category || '').toLowerCase().includes('automation')
+  );
+
   return (
-    <ProductPageLayout
-      data={{
-        title: 'Automation',
-        category: 'Automation & Workflows',
-        breadcrumb: [
-          { label: 'Home', href: '/' },
-          { label: 'Automation' },
-        ],
-        caseStudy: {
-          title: 'Logistics Firm Cuts Manual Processing 60% with Workflow Automation',
-          description:
-            'A mid-size logistics company deployed Zion Workflow Automation to digitize order handoffs, approval chains, and carrier coordination. Manual processing time dropped 60% while audit trails improved compliance readiness.',
-          ctaLabel: 'View case studies',
-        },
-        description:
-          'Automation eliminates manual bottlenecks with intelligent process automation, event-driven orchestration, and cross-system integration. Reclaim operational capacity and reduce human error.',
-        iconEmoji: '🔄',
-        features: [
-                  {
-                            "title": "Visual Workflow Builder",
-                            "description": "Design complex automation flows with a drag-and-drop interface that connects triggers, conditions, and actions across systems."
-                  },
-                  {
-                            "title": "Event-Driven Orchestration",
-                            "description": "React to business events in real time with intelligent routing, parallel processing, and conditional branching."
-                  },
-                  {
-                            "title": "Error Handling & Recovery",
-                            "description": "Built-in retry logic, dead-letter queues, and self-healing mechanisms that keep workflows running reliably."
-                  },
-                  {
-                            "title": "Cross-Platform Integration",
-                            "description": "Pre-built connectors for popular business tools with webhook support and custom API integration capabilities."
-                  },
-                  {
-                            "title": "Audit Trail & Compliance",
-                            "description": "Full execution logging with immutable audit trails for regulatory compliance and operational debugging."
-                  },
-                  {
-                            "title": "Performance Optimization",
-                            "description": "Analytics on workflow execution times, bottlenecks, and throughput with AI-suggested improvements."
-                  }
-        ],
-        useCases: [
-                  {
-                            "title": "Process Digitization",
-                            "description": "Convert manual, paper-based processes into automated digital workflows with tracking and accountability.",
-                            "icon": "📱"
-                  },
-                  {
-                            "title": "Cross-Team Coordination",
-                            "description": "Automate handoffs between departments with intelligent routing, notifications, and SLA tracking.",
-                            "icon": "🔗"
-                  },
-                  {
-                            "title": "Compliance Workflows",
-                            "description": "Build auditable approval chains and documentation flows that satisfy regulatory requirements.",
-                            "icon": "✅"
-                  }
-        ],
-        benefits: ["Reduced manual processing time","Fewer human errors","Faster cross-team handoffs","Complete audit trail","Scalable process execution","Lower operational overhead"],
-        ctaLabel: 'Get Started with Automation',
-      }}
-    />
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <span className="text-6xl mb-4 block">⚡</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Automation Solutions</h1>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Intelligent process automation: RPA, workflows, and AI agents.</p>
+          <p className="text-lg text-purple-400 mt-4 font-semibold">{services.length}+ Solutions Available</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {services.slice(0, 12).map((s: any) => (
+            <Link key={s.id} href={s.href || ('/services/' + s.id)}
+              className="group block p-6 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-purple-500 transition-all hover:scale-105">
+              <span className="text-3xl mb-3 block">{s.icon}</span>
+              <h3 className="text-lg font-semibold text-white group-hover:text-purple-400 transition">{s.title || s.name || s.id}</h3>
+              <p className="text-sm text-gray-400 mt-2 line-clamp-2">{s.description}</p>
+              {s.pricing?.basic && <p className="text-purple-400 font-semibold mt-3">From ${s.pricing.basic}/mo</p>}
+            </Link>
+          ))}
+        </div>
+        <div className="text-center">
+          <Link href="/services" className="inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition">
+            View All {services.length}+ Solutions →
+          </Link>
+        </div>
+        <div className="mt-16 p-8 rounded-xl bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-800/50">
+          <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-6">Contact our team for a personalized consultation and demo.</p>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <span className="text-gray-300">📞 +1 302 464 0950</span>
+            <span className="text-gray-300">✉️ kleber@ziontechgroup.com</span>
+            <span className="text-gray-300">📍 364 E Main St STE 1008, Middletown DE 19709</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

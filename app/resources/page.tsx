@@ -1,84 +1,52 @@
-import ProductPageLayout from '../components/ProductPageLayout';
-/* eslint-disable */
-import Metadata from 'next';
+// Resources & Downloads
+import Link from 'next/link';
 
 export const metadata = {
-  title: 'Resources | Zion Tech Group',
-  description:
-    'Documentation, guides, case studies, and tools to get the most from Zion Tech Group AI solutions and services.',
-  alternates: { canonical: '/resources' },
+  title: 'Resources & Downloads | Zion Tech Group',
+  description: 'Whitepapers, e-books, templates, datasets, and tools for AI practitioners and business leaders.',
 };
 
 export default function Page() {
   return (
-    <ProductPageLayout
-      data={{
-        title: 'Resources',
-        category: 'Company & Resources',
-        description:
-          'Documentation, guides, case studies, and tools to help you get the most from Zion Tech Group services and products. Find implementation guides, best practices, and real-world examples.',
-        iconEmoji: '📚',
-        features: [
-          {
-            title: 'Documentation & Guides',
-            description:
-              'Technical documentation, API references, and step-by-step guides for implementing and integrating Zion AI solutions with your stack.',
-          },
-          {
-            title: 'Blog & Best Practices',
-            description:
-              'Articles on AI strategy, implementation patterns, and industry insights. Learn from our team and customer stories.',
-          },
-          {
-            title: 'Case Studies',
-            description:
-              'Real-world outcomes across industries: support automation, revenue lift, compliance, and operational efficiency with measurable results.',
-          },
-          {
-            title: 'ROI & Planning Tools',
-            description:
-              'Interactive estimators and planning tools to model savings, payback, and rollout options before you commit.',
-          },
-          {
-            title: 'Support & Training',
-            description:
-              'Runbooks, training materials, and support options so your team can operate and extend solutions with confidence.',
-          },
-          {
-            title: 'Security & Compliance',
-            description:
-              'Security overviews, compliance documentation, and audit support for enterprise and regulated environments.',
-          },
-        ],
-        useCases: [
-          {
-            title: 'Implementation',
-            description:
-              'Use documentation and guides to deploy Zion solutions quickly and integrate with your existing tools and workflows.',
-            icon: '🔧',
-          },
-          {
-            title: 'Strategy & ROI',
-            description:
-              'Leverage case studies and ROI tools to build business cases and align stakeholders around expected impact.',
-            icon: '📊',
-          },
-          {
-            title: 'Ongoing Success',
-            description:
-              'Access support, training, and best practices to optimize performance and expand use cases over time.',
-            icon: '📈',
-          },
-        ],
-        benefits: [
-          'Faster implementation with clear documentation',
-          'Evidence-based business cases from case studies',
-          'Self-service planning and ROI tools',
-          'Ongoing support and training',
-          'Security and compliance resources',
-        ],
-        ctaLabel: 'Explore Resources',
-      }}
-    />
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Resources & Downloads</h1>
+          <p className="text-xl text-gray-400 mb-8">Whitepapers, e-books, templates, datasets, and tools for AI practitioners and business leaders.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+            <div className="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
+              <h3 className="text-lg font-semibold text-white mb-3">🚀 Key Features</h3>
+              <ul className="text-left text-gray-400 space-y-2">
+                <li>• AI-powered intelligence</li>
+                <li>• Real-time analytics</li>
+                <li>• Enterprise security</li>
+                <li>• 24/7 support</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
+              <h3 className="text-lg font-semibold text-white mb-3">💡 Benefits</h3>
+              <ul className="text-left text-gray-400 space-y-2">
+                <li>• Save time and resources</li>
+                <li>• Increase productivity</li>
+                <li>• Reduce costs</li>
+                <li>• Scale effortlessly</li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Link href="/contact" className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition">Request a Demo</Link>
+            <Link href="/services" className="px-8 py-4 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition">Browse All Services</Link>
+          </div>
+        </div>
+        <div className="mt-12 p-8 rounded-xl bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-800/50 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <span className="text-gray-300">📞 +1 302 464 0950</span>
+            <span className="text-gray-300">✉️ kleber@ziontechgroup.com</span>
+            <span className="text-gray-300">📍 364 E Main St STE 1008, Middletown DE 19709</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

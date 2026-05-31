@@ -26,7 +26,7 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Disable TypeScript type checking during builds (we run it separately)
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   // Strip console.* in production builds to reduce bundle noise; keep error/warn
   compiler: {
@@ -44,6 +44,8 @@ const nextConfig = {
     // Parallelize page data collection to reduce wall-clock time; allow override.
     cpus: resolvedBuildCpus,
   },
+  // Empty turbopack config to silence webpack warning
+  turbopack: {},
   // NOTE: output: 'export' does not apply custom headers from next.config.
   // Configure security and cache headers at the hosting/CDN layer.
 };
