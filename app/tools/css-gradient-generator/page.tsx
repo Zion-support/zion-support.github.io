@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Plus, Trash2, RotateCcw, Palette, ArrowRight, Shuffle } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'CSS Gradient Generator | Zion Tech Group',
-  description: 'Free online css gradient generator tool. No signup required.',
-};
-
-
-
 interface ColorStop {
   id: number;
   color: string;

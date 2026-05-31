@@ -1,13 +1,6 @@
 "use client";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Semantic Memory & Wiki | Zion Tech Group',
-  description: 'Semantic Memory & Wiki — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 /**
  * Semantic Memory Cross‑Reference
  * -------------------------------

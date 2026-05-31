@@ -4,13 +4,6 @@ import Head from "next/head"
 import Link from "next/link"
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Link Preview | Zion Tech Group',
-  description: 'Free online link preview tool. No signup required.',
-};
-
-
-
 export default function LinkPreview() {
   const [url, setUrl] = useState("")
   const [preview, setPreview] = useState<string | null>(null)

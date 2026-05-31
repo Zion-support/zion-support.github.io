@@ -4,13 +4,6 @@ import { FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI Concept Explainer | Zion Tech Group',
-  description: 'Free online ai concept explainer tool. No signup required.',
-};
-
-
-
 const cannedExamples: Record<string, string> = {
   react:
     'React hooks let you manage state and lifecycle behavior in function components. Start with useState for local state and useEffect for side effects like fetching data.',

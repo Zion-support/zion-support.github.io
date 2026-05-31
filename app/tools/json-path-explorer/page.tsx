@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Search, FileJson, AlertCircle, RotateCcw, ChevronRight, ChevronDown } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'JSON Path Explorer | Zion Tech Group',
-  description: 'Free online json path explorer tool. No signup required.',
-};
-
-
-
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
 
 function evaluateJsonPath(data: JsonValue, expression: string): { result: JsonValue; error: string | null } {

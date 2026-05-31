@@ -4,13 +4,6 @@ import { useState, useCallback } from 'react';
 import { Copy, Check, ArrowLeftRight, FileJson, FileText, Download, Upload } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'JSON ↔ TOML Converter | Zion Tech Group',
-  description: 'Free online json ↔ toml converter tool. No signup required.',
-};
-
-
-
 // Lightweight JSON <-> TOML converter (no external dependency)
 // Supports: objects, arrays, strings, numbers, booleans, null, nested tables, inline tables, inline arrays
 

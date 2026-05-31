@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Binary, RotateCcw, ArrowRightLeft } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Number Base Converter | Zion Tech Group',
-  description: 'Free online number base converter tool. No signup required.',
-};
-
-
-
 const BASES = [
   { label: 'Binary', base: 2, prefix: '0b', placeholder: '1010' },
   { label: 'Octal', base: 8, prefix: '0o', placeholder: '755' },

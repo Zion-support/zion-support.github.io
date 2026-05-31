@@ -4,13 +4,6 @@ import { useState, useCallback, useMemo } from 'react';
 import { Copy, Check, Network, AlertTriangle, Info } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'IP Subnet Calculator | Zion Tech Group',
-  description: 'Free online ip subnet calculator tool. No signup required.',
-};
-
-
-
 type CopyTarget = 'network' | 'broadcast' | 'first' | 'last' | 'all' | null;
 
 export default function SubnetCalculator() {

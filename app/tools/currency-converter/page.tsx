@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Currency Converter | Zion Tech Group',
-  description: 'Free online currency converter tool. No signup required.',
-};
-
-
-
 export default function CurrencyConverter() {
   const [amount, setAmount] = useState(1);
   const [from, setFrom] = useState('USD');

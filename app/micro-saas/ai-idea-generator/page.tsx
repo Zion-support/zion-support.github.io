@@ -3,13 +3,6 @@
 import React, { useCallback, useState } from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI Micro-SaaS Idea Generator | Zion Tech Group',
-  description: 'Explore ai micro-saas idea generator. Build and launch faster with Zion Tech Group.',
-};
-
-
-
 type Role = 'user' | 'assistant';
 
 interface ChatMessage {

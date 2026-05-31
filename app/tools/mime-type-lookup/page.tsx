@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Search, FileText, Filter } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'MIME Type Lookup | Zion Tech Group',
-  description: 'Free online mime type lookup tool. No signup required.',
-};
-
-
-
 interface MimeEntry {
   type: string;
   extensions: string[];

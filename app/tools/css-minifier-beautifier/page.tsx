@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Minimize2, Maximize2, RotateCcw, FileText, BarChart3 } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'CSS Minifier & Beautifier | Zion Tech Group',
-  description: 'Free online css minifier & beautifier tool. No signup required.',
-};
-
-
-
 const SAMPLE_CSS = `/* Main layout styles */
 .container {
   max-width: 1200px;

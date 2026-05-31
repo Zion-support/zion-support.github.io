@@ -4,13 +4,6 @@ import { useState, useCallback } from 'react';
 import { Copy, Check, Trash2, Plus, Minus, AlertTriangle, CheckCircle, Info, Palette } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'CSS Specificity Calculator | Zion Tech Group',
-  description: 'Free online css specificity calculator tool. No signup required.',
-};
-
-
-
 interface Specificity {
   a: number; // IDs
   b: number; // classes, attributes, pseudo-classes

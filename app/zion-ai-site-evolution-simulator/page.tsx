@@ -4,13 +4,6 @@ import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Zion AI Site Evolution Simulator | Zion Tech Group',
-  description: 'Zion AI Site Evolution Simulator — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 type TrafficBand = 'low' | 'medium' | 'high';
 type AutomationMode = 'standard' | 'aggressive' | 'conservative';
 

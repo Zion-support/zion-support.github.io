@@ -4,13 +4,6 @@ import { useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Color Blindness Simulator | Zion Tech Group',
-  description: 'Free online color blindness simulator tool. No signup required.',
-};
-
-
-
 type DeficiencyType = 'protanopia' | 'deuteranopia' | 'tritanopia' | 'achromatopsia' | 'normal';
 
 interface DeficiencyInfo {

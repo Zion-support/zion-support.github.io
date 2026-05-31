@@ -5,13 +5,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Join Our Free Newsletter | Zion Tech Group',
-  description: 'Join Our Free Newsletter — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 export default function FreeNewsletterPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');

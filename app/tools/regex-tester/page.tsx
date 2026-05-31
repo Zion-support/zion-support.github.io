@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Search, AlertCircle, Info } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Regex Tester | Zion Tech Group',
-  description: 'Free online regex tester tool. No signup required.',
-};
-
-
-
 interface MatchResult {
   match: string;
   index: number;

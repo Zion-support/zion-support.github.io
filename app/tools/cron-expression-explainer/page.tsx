@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Clock, Info, Check, Sparkles, HelpCircle } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Cron Expression Explainer | Zion Tech Group',
-  description: 'Free online cron expression explainer tool. No signup required.',
-};
-
-
-
 interface Explanation {
   minute: string;
   hour: string;

@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Code, Zap, Brain, AlertTriangle, TrendingUp, RefreshCw } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI Code Complexity Analyzer | Zion Tech Group',
-  description: 'Free online ai code complexity analyzer tool. No signup required.',
-};
-
-
-
 interface CodeAnalysis {
   complexity: 'low' | 'medium' | 'high' | 'critical';
   lines: number;

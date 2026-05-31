@@ -1,11 +1,6 @@
 'use client';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Seo Machine Learning Platform | Zion Tech Group',
-  description: 'Seo Machine Learning Platform — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-900 py-20">

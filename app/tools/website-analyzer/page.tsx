@@ -3,16 +3,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Globe, Laptop, Sparkles, AlertTriangle, RefreshCw
-} from 'lucide-react';
-
-
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Website Analyzer | Zion Tech Group',
-  description: 'Analyze website SEO, performance, and accessibility for free.',
-};
+  Globe, Laptop, Sparkles, AlertTriangle, RefreshCw
+} from 'lucide-react';
 
 interface SEOAnalysis {
   titleLength: number;

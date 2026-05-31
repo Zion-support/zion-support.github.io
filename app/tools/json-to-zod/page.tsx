@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, FileCode2, Wand2, ArrowRight, Braces, RefreshCw } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'JSON to Zod Converter | Zion Tech Group',
-  description: 'Free online json to zod converter tool. No signup required.',
-};
-
-
-
 type ZodMode = 'strict' | 'loose';
 
 function jsonToZod(value: unknown, indent: number = 0, mode: ZodMode = 'strict'): string {

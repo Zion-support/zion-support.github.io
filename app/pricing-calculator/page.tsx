@@ -4,13 +4,6 @@ import { motion } from 'framer-motion';
 import { Check, Zap, Brain, Rocket } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Pricing Calculator | Zion Tech Group',
-  description: 'Transparent pricing for AI, IT, and SaaS development. No hidden fees.',
-};
-
-
-
 const PLANS = [
   { name: 'Starter', price: 499, icon: Zap, features: ['5 AI Services', '1,000 API calls/mo', 'Email Support', 'Basic Analytics'] },
   { name: 'Professional', price: 999, icon: Brain, popular: true, features: ['25 AI Services', '50,000 API calls/mo', 'Priority Support', 'Advanced Analytics', 'Custom Integration'] },

@@ -4,13 +4,6 @@ import { useState, useCallback } from 'react';
 import { Copy, Check, Shield, AlertCircle, Calendar, Key, User, Building2, Fingerprint } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Certificate Decoder | Zion Tech Group',
-  description: 'Free online certificate decoder tool. No signup required.',
-};
-
-
-
 interface CertField {
   label: string;
   value: string;

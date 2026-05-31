@@ -4,13 +4,6 @@ import { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Color Palette Generator | Zion Tech Group',
-  description: 'Free online color palette generator tool. No signup required.',
-};
-
-
-
 function hexToHsl(hex: string): [number, number, number] {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
   const g = parseInt(hex.slice(3, 5), 16) / 255;

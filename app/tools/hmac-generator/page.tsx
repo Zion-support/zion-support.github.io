@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Key, Lock, Eye, EyeOff } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'HMAC Signature Generator | Zion Tech Group',
-  description: 'Free online hmac signature generator tool. No signup required.',
-};
-
-
-
 type Algorithm = 'SHA-256' | 'SHA-384' | 'SHA-512';
 
 interface HmacResult {

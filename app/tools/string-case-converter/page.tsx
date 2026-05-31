@@ -4,13 +4,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Type, Shuffle } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'String Case Converter | Zion Tech Group',
-  description: 'Free online string case converter tool. No signup required.',
-};
-
-
-
 type CaseType =
   | 'camelCase'
   | 'PascalCase'

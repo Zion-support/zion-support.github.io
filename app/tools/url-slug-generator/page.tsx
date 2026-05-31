@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Type, Sparkles } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'URL Slug Generator | Zion Tech Group',
-  description: 'Free online url slug generator tool. No signup required.',
-};
-
-
-
 type Separator = '-' | '_';
 type CaseStyle = 'lower' | 'upper' | 'camel' | 'pascal';
 

@@ -4,13 +4,6 @@ import { useState, useCallback } from 'react';
 import { Copy, Check, Server, Plus, Trash2, Play, Shuffle, Download } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Mock API Generator | Zion Tech Group',
-  description: 'Free online mock api generator tool. No signup required.',
-};
-
-
-
 interface FieldDef {
   name: string;
   type: string;

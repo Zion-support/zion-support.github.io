@@ -4,13 +4,6 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Meeting Cost Calculator | Zion Tech Group',
-  description: 'Free online meeting cost calculator tool. No signup required.',
-};
-
-
-
 interface MeetingInputs {
   attendeeCount: number;
   averageHourlyRate: number;

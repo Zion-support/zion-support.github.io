@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Zap, Clock, Globe, CheckCircle, XCircle, AlertTriangle, TrendingUp } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'API Response Time Tester | Zion Tech Group',
-  description: 'Free online api response time tester tool. No signup required.',
-};
-
-
-
 interface EndpointTest {
   url: string;
   method: string;

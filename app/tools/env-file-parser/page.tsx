@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Download, FileKey, Plus, Trash2, Eye, EyeOff, Shuffle, Upload } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Env File Parser | Zion Tech Group',
-  description: 'Free online env file parser tool. No signup required.',
-};
-
-
-
 interface EnvVar {
   key: string;
   value: string;

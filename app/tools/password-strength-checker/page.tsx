@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Password Strength Checker | Zion Tech Group',
-  description: 'Free online password strength checker tool. No signup required.',
-};
-
-
-
 export default function PasswordStrengthChecker() {
   const [pwd, setPwd] = useState('');
   const [score, setScore] = useState(0);

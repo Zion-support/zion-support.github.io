@@ -4,13 +4,6 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { Activity, Cpu, HardDrive, Wifi, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Ai System Health Monitor | Zion Tech Group',
-  description: 'Ai System Health Monitor — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 interface SystemHealthMetric {
   name: string;
   value: number | string;

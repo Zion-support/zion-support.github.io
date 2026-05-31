@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, ArrowDownUp, Shield, RotateCcw, Info } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Base32 Encoder / Decoder | Zion Tech Group',
-  description: 'Free online base32 encoder / decoder tool. No signup required.',
-};
-
-
-
 const BASE32_ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
 function encodeBase32(input: string): string {

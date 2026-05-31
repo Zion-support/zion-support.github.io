@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Activity, Shield, AlertTriangle, Info } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'String Entropy Analyzer | Zion Tech Group',
-  description: 'Free online string entropy analyzer tool. No signup required.',
-};
-
-
-
 function calculateEntropy(text: string): number {
   if (!text) return 0;
   const freq: Record<string, number> = {};

@@ -4,13 +4,6 @@ import React, { useState } from 'react';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Ai Lab Rollout Blueprint | Zion Tech Group',
-  description: 'Ai Lab Rollout Blueprint — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 type CompanySize = 'small' | 'mid' | 'enterprise';
 type MotionType = 'net-new' | 'expansion' | 'modernization';
 type PrimaryObjective = 'revenue' | 'operations' | 'engineering' | 'experience' | 'compliance';

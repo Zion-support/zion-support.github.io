@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Search, CheckCircle, AlertTriangle, XCircle, Info, Copy } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'HTTP Status Code Reference | Zion Tech Group',
-  description: 'Free online http status code reference tool. No signup required.',
-};
-
-
-
 interface StatusCode {
   code: number;
   name: string;

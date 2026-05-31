@@ -3,13 +3,6 @@
 import { useState, useCallback, useMemo } from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI Document Analyzer | Zion Tech Group',
-  description: 'Free online ai document analyzer tool. No signup required.',
-};
-
-
-
 interface AnalysisResult {
   fileName: string;
   fileSize: number;

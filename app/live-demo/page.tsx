@@ -4,13 +4,6 @@ import { motion } from 'framer-motion';
 import { Play, Pause, Wand2, Bot, Mic, Eye, Code } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Live AI Demos | Zion Tech Group',
-  description: 'Live AI Demos — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 const DEMOS = [
   { id: 'chat', name: 'AI Chat', icon: Bot, description: 'Try our conversational AI', action: 'Start Chat' },
   { id: 'voice', name: 'Voice AI', icon: Mic, description: 'Speak and get voice responses', action: 'Start Listening' },

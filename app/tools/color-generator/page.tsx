@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Random Color Generator | Zion Tech Group',
-  description: 'Free online random color generator tool. No signup required.',
-};
-
-
-
 function randomHex(): string {
   return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
 }

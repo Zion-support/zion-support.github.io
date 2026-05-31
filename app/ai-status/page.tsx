@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Brain, Cpu, ArrowRight } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI Services Status Dashboard | Zion Tech Group',
-  description: 'AI Services Status Dashboard — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 interface ServiceStatus {
   name: string;
   status: 'operational' | 'degraded' | 'maintenance';

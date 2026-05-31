@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+import { Metadata } from 'next';
+
   FileText,
   Upload,
   Trash2,
@@ -14,14 +16,6 @@ import {
   Sparkles,
   Tag,
 } from 'lucide-react';
-
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'File Analyzer | Zion Tech Group',
-  description: 'Analyze file metadata, content, and properties online for free.',
-};
 
 interface FileAnalysis {
   name: string;

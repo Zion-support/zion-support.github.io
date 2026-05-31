@@ -4,13 +4,6 @@ import React, { useState } from 'react';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Ai Lab Idea To Feature Blueprint | Zion Tech Group',
-  description: 'Ai Lab Idea To Feature Blueprint — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 type Goal = 'growth' | 'efficiency' | 'experience' | 'resilience';
 
 interface IdeaFormState {

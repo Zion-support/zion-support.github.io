@@ -4,13 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Base64 Encoder/Decoder | Zion Tech Group',
-  description: 'Free online base64 encoder/decoder tool. No signup required.',
-};
-
-
-
 export default function Base64Encoder() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');

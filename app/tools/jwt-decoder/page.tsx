@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Key, Copy, Check, AlertTriangle, Clock, User, Lock, Sparkles } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'JWT Decoder | Zion Tech Group',
-  description: 'Free online jwt decoder tool. No signup required.',
-};
-
-
-
 interface JWTPart {
   value: string;
   decoded: Record<string, unknown>;

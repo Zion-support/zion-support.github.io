@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Lock, Unlock, Terminal, FileText } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Chmod Permission Calculator | Zion Tech Group',
-  description: 'Free online chmod permission calculator tool. No signup required.',
-};
-
-
-
 interface PermGroup {
   read: boolean;
   write: boolean;

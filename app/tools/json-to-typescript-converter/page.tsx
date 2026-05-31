@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
+import { Metadata } from 'next';
+
   Code,
   Copy,
   Check,
@@ -17,14 +19,6 @@ import {
   ArrowRight,
   Sparkles,
 } from 'lucide-react';
-
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'JSON to TypeScript Converter | Zion Tech Group',
-  description: 'Convert JSON schemas to TypeScript interfaces instantly.',
-};
 
 interface ConversionOptions {
   interfaceName: string;

@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'CSV to Table Converter | Zion Tech Group',
-  description: 'Free online csv to table converter tool. No signup required.',
-};
-
-
-
 export default function CsvToTable() {
   const [csv, setCsv] = useState('');
   const [table, setTable] = useState<string[][]>([]);

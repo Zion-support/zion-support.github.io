@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Plus, Trash2, Shield } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'JWT Encoder | Zion Tech Group',
-  description: 'Free online jwt encoder tool. No signup required.',
-};
-
-
-
 type Algorithm = 'HS256' | 'HS384' | 'HS512';
 
 const ALGORITHMS: Algorithm[] = ['HS256', 'HS384', 'HS512'];

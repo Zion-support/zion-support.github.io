@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Clock, Copy, RefreshCw, ArrowRight } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Timestamp Converter | Zion Tech Group',
-  description: 'Free online timestamp converter tool. No signup required.',
-};
-
-
-
 export default function TimestampConverter() {
   const [timestamp, setTimestamp] = useState('');
   const [humanReadable, setHumanReadable] = useState('');

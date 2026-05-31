@@ -4,13 +4,6 @@ import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: '📋 JSON Formatter & Validator | Zion Tech Group',
-  description: 'Free online 📋 json formatter & validator tool. No signup required.',
-};
-
-
-
 type TabType = 'format' | 'validate' | 'minify' | 'compare';
 
 interface ValidationResult {

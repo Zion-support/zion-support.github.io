@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Zap, ArrowLeftRight, RotateCcw } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Text Diff Checker | Zion Tech Group',
-  description: 'Free online text diff checker tool. No signup required.',
-};
-
-
-
 interface DiffLine {
   type: 'added' | 'removed' | 'unchanged';
   leftNum: number | null;

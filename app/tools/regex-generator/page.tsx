@@ -4,13 +4,6 @@ import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: '🔍 Regex Generator | Zion Tech Group',
-  description: 'Free online 🔍 regex generator tool. No signup required.',
-};
-
-
-
 interface RegexPattern {
   pattern: string;
   description: string;

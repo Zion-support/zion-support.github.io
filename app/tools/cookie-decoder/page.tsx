@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Cookie, AlertTriangle, Shield, ShieldCheck, ShieldAlert, Info } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Cookie Decoder & Analyzer | Zion Tech Group',
-  description: 'Free online cookie decoder & analyzer tool. No signup required.',
-};
-
-
-
 interface ParsedCookie {
   name: string;
   value: string;

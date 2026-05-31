@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Recipe Converter | Zion Tech Group',
-  description: 'Free online recipe converter tool. No signup required.',
-};
-
-
-
 function parseIngredient(line: string) {
   const match = line.trim().match(/^(\d+(?:\.\d+)?\s*)?([\w-]+)?\s*(.*)$/i);
   if (!match) return null;

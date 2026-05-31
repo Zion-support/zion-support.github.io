@@ -3,13 +3,6 @@
 import React, { useCallback, useState } from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Zion AI Code Sandbox | Zion Tech Group',
-  description: 'Zion AI Code Sandbox — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 type Role = 'user' | 'assistant';
 
 interface ChatMessage {

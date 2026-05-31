@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Stopwatch | Zion Tech Group',
-  description: 'Free online stopwatch tool. No signup required.',
-};
-
-
-
 export default function Stopwatch() {
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);

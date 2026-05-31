@@ -5,13 +5,6 @@ import Link from 'next/link';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Ai Lab Autonomous Revenue Forecast Studio | Zion Tech Group',
-  description: 'Ai Lab Autonomous Revenue Forecast Studio — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
 type Segment = 'SMB' | 'Mid-market' | 'Enterprise';
 
 const SEGMENT_BASELINES: Record<Segment, { avgDeal: number; cycleFactor: number }> = {

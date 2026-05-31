@@ -10,15 +10,6 @@ import { allServices } from '../data/servicesData';
 import type { Service } from '../data/servicesData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Our Complete Service Catalog | Zion Tech Group',
-  description: 'Our Complete Service Catalog — Zion Tech Group delivers cutting-edge technology solutions.',
-};
-
-
-
-
-
 const SVC_CAT_LABELS: Record<string,string> = { ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security', data: 'Data & Analytics', automation: 'Automation', 'micro-saas': 'Micro-SaaS', devops: 'DevOps', blockchain: 'Blockchain', iot: 'IoT & Edge', 'email-intelligence': 'Email Intelligence' };
 const CATEGORIES = [
   { key: 'all' as const, label: 'All' },

@@ -6,13 +6,6 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Markdown Preview Tool | Zion Tech Group',
-  description: 'Free online markdown preview tool tool. No signup required.',
-};
-
-
-
 export default function MarkdownPreview() {
   const [markdown, setMarkdown] = useState('# Welcome to the Markdown Preview\n\nType some *markdown* on the left pane to see the rendered output.');
 

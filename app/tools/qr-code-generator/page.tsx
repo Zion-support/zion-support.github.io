@@ -4,13 +4,6 @@ import { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Free QR Code Generator | Zion Tech Group',
-  description: 'Free online free qr code generator tool. No signup required.',
-};
-
-
-
 export default function QRCodeGenerator() {
   const [url, setUrl] = useState('https://ziontechgroup.com');
   const [valid, setValid] = useState(true);

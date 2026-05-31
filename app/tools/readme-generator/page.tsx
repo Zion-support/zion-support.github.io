@@ -3,13 +3,6 @@
 import { useState } from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI README Generator | Zion Tech Group',
-  description: 'Free online ai readme generator tool. No signup required.',
-};
-
-
-
 export default function READMEGenerator() {
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');

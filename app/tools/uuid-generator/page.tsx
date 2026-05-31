@@ -5,13 +5,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'UUID v4 Generator | Zion Tech Group',
-  description: 'Free online uuid v4 generator tool. No signup required.',
-};
-
-
-
 export default function UuidGenerator() {
   const [uuid, setUuid] = useState('');
   const generate = () => {

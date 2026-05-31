@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, ArrowDownUp, RotateCcw, Upload, FileText, X, Download } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Base64 Encoder / Decoder | Zion Tech Group',
-  description: 'Free online base64 encoder / decoder tool. No signup required.',
-};
-
-
-
 type Mode = 'encode' | 'decode';
 
 export default function Base64EncoderDecoder() {

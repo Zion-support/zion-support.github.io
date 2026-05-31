@@ -4,13 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Unit Converter | Zion Tech Group',
-  description: 'Free online unit converter tool. No signup required.',
-};
-
-
-
 const units = {
   length: {
     meters: 1,

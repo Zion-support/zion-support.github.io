@@ -4,13 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Free API Mocking | Zion Tech Group',
-  description: 'Free online free api mocking tool. No signup required.',
-};
-
-
-
 export default function ApiMockPage() {
   return (
     <main className="mx-auto max-w-4xl p-8">

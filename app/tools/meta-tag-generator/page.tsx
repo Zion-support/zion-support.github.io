@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Globe, MessageSquare, Share2, Briefcase, RotateCcw, Sparkles } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Meta Tag Generator | Zion Tech Group',
-  description: 'Free online meta tag generator tool. No signup required.',
-};
-
-
-
 interface MetaTags {
   title: string;
   description: string;
