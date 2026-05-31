@@ -84736,7 +84736,14 @@
     "description": "Map and analyze email thread relationships to identify key stakeholders, decision-makers, and communication dynamics. Uses network analysis to optimize communication strategies.",
     "category": "email-intelligence",
     "price": "$899/month",
-    "features": ["Stakeholder identification", "Reply pattern analysis", "Influence scoring", "Network centrality", "Relationship strength", "Communication optimization"]
+    "features": [
+      "Stakeholder identification",
+      "Reply pattern analysis",
+      "Influence scoring",
+      "Network centrality",
+      "Relationship strength",
+      "Communication optimization"
+    ]
   },
   {
     "id": "relationship-mapper-stakeholder",
@@ -84744,7 +84751,14 @@
     "description": "Identify and map stakeholder relationships across email threads to understand decision-making dynamics and influence networks.",
     "category": "email-intelligence",
     "price": "$1,299/month",
-    "features": ["Decision-maker detection", "Influence mapping", "Communication flow", "Role identification", "Network visualization", "Strategy recommendations"]
+    "features": [
+      "Decision-maker detection",
+      "Influence mapping",
+      "Communication flow",
+      "Role identification",
+      "Network visualization",
+      "Strategy recommendations"
+    ]
   },
   {
     "id": "relationship-mapper-influence",
@@ -84752,7 +84766,14 @@
     "description": "Calculate influence scores for email participants based on reply patterns, thread initiation, and response rates.",
     "category": "email-intelligence",
     "price": "$799/month",
-    "features": ["Influence scoring 0-100", "Reply pattern tracking", "Thread analysis", "Role detection", "Historical trends", "Team insights"]
+    "features": [
+      "Influence scoring 0-100",
+      "Reply pattern tracking",
+      "Thread analysis",
+      "Role detection",
+      "Historical trends",
+      "Team insights"
+    ]
   },
   {
     "id": "relationship-mapper-network",
@@ -84760,7 +84781,14 @@
     "description": "Optimize communication networks within teams by analyzing email thread relationships and identifying bottlenecks.",
     "category": "email-intelligence",
     "price": "$1,499/month",
-    "features": ["Network mapping", "Bottleneck detection", "Flow optimization", "Hub identification", "Bridge analysis", "Team restructuring"]
+    "features": [
+      "Network mapping",
+      "Bottleneck detection",
+      "Flow optimization",
+      "Hub identification",
+      "Bridge analysis",
+      "Team restructuring"
+    ]
   },
   {
     "id": "relationship-mapper-enterprise",
@@ -84768,7 +84796,14 @@
     "description": "Comprehensive enterprise platform for mapping, analyzing, and optimizing business relationships through email intelligence.",
     "category": "email-intelligence",
     "price": "$2,999/month",
-    "features": ["Full relationship mapping", "Cross-team analysis", "Executive dashboards", "CRM integration", "API access", "Custom reporting"]
+    "features": [
+      "Full relationship mapping",
+      "Cross-team analysis",
+      "Executive dashboards",
+      "CRM integration",
+      "API access",
+      "Custom reporting"
+    ]
   },
   {
     "id": "sentiment-evolution-tracker",
@@ -84776,7 +84811,14 @@
     "description": "Track how sentiment changes over time in email conversations. Detect escalation patterns and identify optimal intervention points.",
     "category": "email-intelligence",
     "price": "$799/month",
-    "features": ["Sentiment timeline", "Escalation detection", "Cooling-down periods", "Intervention recommendations", "Sentiment velocity", "Health scoring"]
+    "features": [
+      "Sentiment timeline",
+      "Escalation detection",
+      "Cooling-down periods",
+      "Intervention recommendations",
+      "Sentiment velocity",
+      "Health scoring"
+    ]
   },
   {
     "id": "sentiment-evolution-escalation",
@@ -84784,7 +84826,14 @@
     "description": "Prevent conversation escalation by detecting negative sentiment trends early and recommending proactive interventions.",
     "category": "email-intelligence",
     "price": "$1,199/month",
-    "features": ["Early warning system", "Trend analysis", "Auto-alerts", "Intervention templates", "De-escalation guides", "Manager notifications"]
+    "features": [
+      "Early warning system",
+      "Trend analysis",
+      "Auto-alerts",
+      "Intervention templates",
+      "De-escalation guides",
+      "Manager notifications"
+    ]
   },
   {
     "id": "sentiment-evolution-health",
@@ -84792,7 +84841,14 @@
     "description": "Monitor the health of email conversations with real-time scoring and actionable recommendations for improvement.",
     "category": "email-intelligence",
     "price": "$999/month",
-    "features": ["Health score 0-100", "Real-time monitoring", "Status tracking", "Velocity analysis", "Trend reports", "Improvement plans"]
+    "features": [
+      "Health score 0-100",
+      "Real-time monitoring",
+      "Status tracking",
+      "Velocity analysis",
+      "Trend reports",
+      "Improvement plans"
+    ]
   },
   {
     "id": "sentiment-evolution-customer",
@@ -84800,7 +84856,14 @@
     "description": "Track customer sentiment across the entire email journey from initial contact to resolution, identifying pain points.",
     "category": "email-intelligence",
     "price": "$1,599/month",
-    "features": ["Journey mapping", "Pain point detection", "Satisfaction tracking", "Churn prediction", "NPS correlation", "Retention alerts"]
+    "features": [
+      "Journey mapping",
+      "Pain point detection",
+      "Satisfaction tracking",
+      "Churn prediction",
+      "NPS correlation",
+      "Retention alerts"
+    ]
   },
   {
     "id": "sentiment-evolution-team",
@@ -84808,7 +84871,14 @@
     "description": "Monitor team communication health with sentiment analytics, burnout detection, and collaboration insights.",
     "category": "email-intelligence",
     "price": "$1,299/month",
-    "features": ["Team health scores", "Burnout detection", "Collaboration metrics", "Morale tracking", "Conflict alerts", "Wellness reports"]
+    "features": [
+      "Team health scores",
+      "Burnout detection",
+      "Collaboration metrics",
+      "Morale tracking",
+      "Conflict alerts",
+      "Wellness reports"
+    ]
   },
   {
     "id": "response-time-optimizer",
@@ -84816,7 +84886,14 @@
     "description": "Analyze optimal times to send emails for faster responses using historical data, recipient patterns, and timezone intelligence.",
     "category": "email-intelligence",
     "price": "$699/month",
-    "features": ["Optimal send time", "Historical analysis", "Timezone awareness", "Day-of-week patterns", "Response probability", "Engagement heatmaps"]
+    "features": [
+      "Optimal send time",
+      "Historical analysis",
+      "Timezone awareness",
+      "Day-of-week patterns",
+      "Response probability",
+      "Engagement heatmaps"
+    ]
   },
   {
     "id": "response-time-scheduler",
@@ -84824,7 +84901,14 @@
     "description": "Automatically schedule emails for optimal send times based on recipient engagement patterns and historical response data.",
     "category": "email-intelligence",
     "price": "$899/month",
-    "features": ["Auto-scheduling", "Multi-recipient optimization", "Timezone conversion", "Queue management", "Performance tracking", "A/B testing"]
+    "features": [
+      "Auto-scheduling",
+      "Multi-recipient optimization",
+      "Timezone conversion",
+      "Queue management",
+      "Performance tracking",
+      "A/B testing"
+    ]
   },
   {
     "id": "response-time-analytics",
@@ -84832,7 +84916,14 @@
     "description": "Comprehensive analytics platform for email response times, engagement rates, and communication efficiency.",
     "category": "email-intelligence",
     "price": "$1,199/month",
-    "features": ["Response time tracking", "Engagement analytics", "Team benchmarks", "Performance reports", "Trend analysis", "Optimization tips"]
+    "features": [
+      "Response time tracking",
+      "Engagement analytics",
+      "Team benchmarks",
+      "Performance reports",
+      "Trend analysis",
+      "Optimization tips"
+    ]
   },
   {
     "id": "response-time-global",
@@ -84840,7 +84931,14 @@
     "description": "Optimize email send times across global teams with intelligent timezone management and cultural awareness.",
     "category": "email-intelligence",
     "price": "$1,499/month",
-    "features": ["Global timezone support", "Cultural patterns", "Working hours detection", "Holiday awareness", "Multi-region optimization", "Team coordination"]
+    "features": [
+      "Global timezone support",
+      "Cultural patterns",
+      "Working hours detection",
+      "Holiday awareness",
+      "Multi-region optimization",
+      "Team coordination"
+    ]
   },
   {
     "id": "response-time-executive",
@@ -84848,7 +84946,14 @@
     "description": "Optimize email timing specifically for executive communications with priority routing and VIP response tracking.",
     "category": "email-intelligence",
     "price": "$1,999/month",
-    "features": ["Executive patterns", "Priority routing", "VIP tracking", "Meeting alignment", "Briefing integration", "Performance dashboards"]
+    "features": [
+      "Executive patterns",
+      "Priority routing",
+      "VIP tracking",
+      "Meeting alignment",
+      "Briefing integration",
+      "Performance dashboards"
+    ]
   },
   {
     "id": "content-authenticity-verifier",
@@ -84856,7 +84961,14 @@
     "description": "Detect AI-generated vs human-written emails using linguistic analysis and pattern recognition. Identify phishing and spam.",
     "category": "email-intelligence",
     "price": "$999/month",
-    "features": ["AI vs human detection", "Phishing recognition", "Spam analysis", "Linguistic fingerprinting", "Metadata verification", "Authenticity scoring"]
+    "features": [
+      "AI vs human detection",
+      "Phishing recognition",
+      "Spam analysis",
+      "Linguistic fingerprinting",
+      "Metadata verification",
+      "Authenticity scoring"
+    ]
   },
   {
     "id": "content-authenticity-phishing",
@@ -84864,7 +84976,14 @@
     "description": "Advanced phishing detection using content analysis, URL verification, and social engineering pattern recognition.",
     "category": "email-intelligence",
     "price": "$1,499/month",
-    "features": ["Pattern matching", "URL verification", "Social engineering detection", "Urgency analysis", "Credential theft prevention", "Real-time alerts"]
+    "features": [
+      "Pattern matching",
+      "URL verification",
+      "Social engineering detection",
+      "Urgency analysis",
+      "Credential theft prevention",
+      "Real-time alerts"
+    ]
   },
   {
     "id": "content-authenticity-ai-detect",
@@ -84872,7 +84991,14 @@
     "description": "Detect AI-generated email content with linguistic analysis, vocabulary diversity scoring, and structure pattern recognition.",
     "category": "email-intelligence",
     "price": "$899/month",
-    "features": ["AI probability scoring", "Linguistic analysis", "Vocabulary diversity", "Structure patterns", "Confidence levels", "Detailed reports"]
+    "features": [
+      "AI probability scoring",
+      "Linguistic analysis",
+      "Vocabulary diversity",
+      "Structure patterns",
+      "Confidence levels",
+      "Detailed reports"
+    ]
   },
   {
     "id": "content-authenticity-security",
@@ -84880,7 +85006,14 @@
     "description": "Comprehensive email security platform combining authenticity verification with threat intelligence and compliance monitoring.",
     "category": "email-intelligence",
     "price": "$2,499/month",
-    "features": ["Multi-layer verification", "Threat intelligence", "Compliance monitoring", "Security scoring", "Audit logging", "Integration APIs"]
+    "features": [
+      "Multi-layer verification",
+      "Threat intelligence",
+      "Compliance monitoring",
+      "Security scoring",
+      "Audit logging",
+      "Integration APIs"
+    ]
   },
   {
     "id": "content-authenticity-trust",
@@ -84888,7 +85021,14 @@
     "description": "Calculate trust scores for incoming emails based on sender reputation, content authenticity, and metadata verification.",
     "category": "email-intelligence",
     "price": "$1,199/month",
-    "features": ["Trust scoring 0-100", "Reputation tracking", "Content verification", "Metadata analysis", "Risk assessment", "Automated filtering"]
+    "features": [
+      "Trust scoring 0-100",
+      "Reputation tracking",
+      "Content verification",
+      "Metadata analysis",
+      "Risk assessment",
+      "Automated filtering"
+    ]
   },
   {
     "id": "meeting-action-extractor",
@@ -84896,7 +85036,14 @@
     "description": "Automatically extract and track action items from meeting-related emails with deadline detection, owner assignment, and dependency tracking.",
     "category": "email-intelligence",
     "price": "$899/month",
-    "features": ["Action item extraction", "Deadline detection", "Owner assignment", "Dependency tracking", "Progress monitoring", "Meeting summaries"]
+    "features": [
+      "Action item extraction",
+      "Deadline detection",
+      "Owner assignment",
+      "Dependency tracking",
+      "Progress monitoring",
+      "Meeting summaries"
+    ]
   },
   {
     "id": "meeting-action-tracker",
@@ -84904,7 +85051,14 @@
     "description": "Track meeting action items across email threads with automated reminders, progress updates, and completion verification.",
     "category": "email-intelligence",
     "price": "$1,199/month",
-    "features": ["Cross-thread tracking", "Auto-reminders", "Progress updates", "Completion verification", "Overdue alerts", "Status dashboards"]
+    "features": [
+      "Cross-thread tracking",
+      "Auto-reminders",
+      "Progress updates",
+      "Completion verification",
+      "Overdue alerts",
+      "Status dashboards"
+    ]
   },
   {
     "id": "meeting-action-deadline",
@@ -84912,7 +85066,14 @@
     "description": "Intelligent deadline management for meeting action items with automatic escalation, dependency resolution, and timeline optimization.",
     "category": "email-intelligence",
     "price": "$1,399/month",
-    "features": ["Deadline extraction", "Auto-escalation", "Dependency resolution", "Timeline optimization", "Calendar sync", "Notification system"]
+    "features": [
+      "Deadline extraction",
+      "Auto-escalation",
+      "Dependency resolution",
+      "Timeline optimization",
+      "Calendar sync",
+      "Notification system"
+    ]
   },
   {
     "id": "meeting-action-collaboration",
@@ -84920,7 +85081,14 @@
     "description": "Enhance meeting collaboration with intelligent action item management, team coordination, and follow-up automation.",
     "category": "email-intelligence",
     "price": "$1,699/month",
-    "features": ["Team coordination", "Task assignment", "Follow-up automation", "Collaboration scoring", "Meeting insights", "Integration hub"]
+    "features": [
+      "Team coordination",
+      "Task assignment",
+      "Follow-up automation",
+      "Collaboration scoring",
+      "Meeting insights",
+      "Integration hub"
+    ]
   },
   {
     "id": "meeting-action-enterprise",
@@ -84928,7 +85096,14 @@
     "description": "Enterprise-grade meeting intelligence platform with AI-powered action item extraction, tracking, and analytics across the organization.",
     "category": "email-intelligence",
     "price": "$3,499/month",
-    "features": ["Organization-wide tracking", "AI extraction", "Advanced analytics", "Executive dashboards", "Compliance reporting", "Full API access"]
+    "features": [
+      "Organization-wide tracking",
+      "AI extraction",
+      "Advanced analytics",
+      "Executive dashboards",
+      "Compliance reporting",
+      "Full API access"
+    ]
   },
   {
     "id": "knowledge-graph-builder",
@@ -84936,7 +85111,14 @@
     "description": "Automatically build searchable knowledge graphs from email conversations, mapping topics, people, organizations, and relationships.",
     "category": "email-intelligence",
     "price": "$1,299/month",
-    "features": ["Entity extraction", "Relationship mapping", "Topic clustering", "Temporal tracking", "Semantic search", "Graph visualization"]
+    "features": [
+      "Entity extraction",
+      "Relationship mapping",
+      "Topic clustering",
+      "Temporal tracking",
+      "Semantic search",
+      "Graph visualization"
+    ]
   },
   {
     "id": "knowledge-graph-enterprise",
@@ -84944,7 +85126,14 @@
     "description": "Enterprise-grade knowledge graph platform that turns email conversations into a searchable organizational brain.",
     "category": "email-intelligence",
     "price": "$3,999/month",
-    "features": ["Org-wide knowledge base", "AI entity recognition", "Cross-team insights", "Expert discovery", "API integration", "Custom ontologies"]
+    "features": [
+      "Org-wide knowledge base",
+      "AI entity recognition",
+      "Cross-team insights",
+      "Expert discovery",
+      "API integration",
+      "Custom ontologies"
+    ]
   },
   {
     "id": "knowledge-graph-search",
@@ -84952,7 +85141,14 @@
     "description": "Find any piece of information across your email corpus using natural language queries powered by knowledge graph intelligence.",
     "category": "email-intelligence",
     "price": "$899/month",
-    "features": ["Natural language queries", "Context-aware results", "Topic filters", "People search", "Timeline navigation", "Smart suggestions"]
+    "features": [
+      "Natural language queries",
+      "Context-aware results",
+      "Topic filters",
+      "People search",
+      "Timeline navigation",
+      "Smart suggestions"
+    ]
   },
   {
     "id": "knowledge-graph-topics",
@@ -84960,7 +85156,14 @@
     "description": "Track and visualize how topics evolve across your email communications with clustering and trend analysis.",
     "category": "email-intelligence",
     "price": "$1,099/month",
-    "features": ["Topic clustering", "Trend analysis", "Keyword extraction", "Volume tracking", "Category mapping", "Alert system"]
+    "features": [
+      "Topic clustering",
+      "Trend analysis",
+      "Keyword extraction",
+      "Volume tracking",
+      "Category mapping",
+      "Alert system"
+    ]
   },
   {
     "id": "knowledge-graph-entities",
@@ -84968,7 +85171,14 @@
     "description": "Map and analyze relationships between people, organizations, and topics mentioned in email communications.",
     "category": "email-intelligence",
     "price": "$1,499/month",
-    "features": ["Entity recognition", "Relationship scoring", "Network analysis", "Influence mapping", "Connection discovery", "Temporal tracking"]
+    "features": [
+      "Entity recognition",
+      "Relationship scoring",
+      "Network analysis",
+      "Influence mapping",
+      "Connection discovery",
+      "Temporal tracking"
+    ]
   },
   {
     "id": "negotiation-intelligence",
@@ -84976,7 +85186,14 @@
     "description": "Detect negotiation stages, leverage points, and optimal counter-offers in business email conversations using game theory.",
     "category": "email-intelligence",
     "price": "$1,599/month",
-    "features": ["Stage detection", "Leverage analysis", "Counter-offer recommendations", "BATNA analysis", "Concession tracking", "Win-win suggestions"]
+    "features": [
+      "Stage detection",
+      "Leverage analysis",
+      "Counter-offer recommendations",
+      "BATNA analysis",
+      "Concession tracking",
+      "Win-win suggestions"
+    ]
   },
   {
     "id": "negotiation-counter-offer",
@@ -84984,7 +85201,14 @@
     "description": "Generate optimal counter-offers based on negotiation history, market data, and strategic positioning analysis.",
     "category": "email-intelligence",
     "price": "$1,899/month",
-    "features": ["AI-powered recommendations", "Market benchmarking", "Strategy selection", "Win probability", "Scenario modeling", "Deal optimization"]
+    "features": [
+      "AI-powered recommendations",
+      "Market benchmarking",
+      "Strategy selection",
+      "Win probability",
+      "Scenario modeling",
+      "Deal optimization"
+    ]
   },
   {
     "id": "negotiation-leverage",
@@ -84992,7 +85216,14 @@
     "description": "Identify and quantify leverage points in negotiations including time pressure, competition, authority, and scarcity.",
     "category": "email-intelligence",
     "price": "$1,199/month",
-    "features": ["5 leverage categories", "Strength scoring", "Pattern detection", "Counter-strategies", "Real-time alerts", "Historical analysis"]
+    "features": [
+      "5 leverage categories",
+      "Strength scoring",
+      "Pattern detection",
+      "Counter-strategies",
+      "Real-time alerts",
+      "Historical analysis"
+    ]
   },
   {
     "id": "negotiation-sales",
@@ -85000,7 +85231,14 @@
     "description": "AI-powered assistant for sales negotiations with pricing guidance, objection handling, and deal-closing strategies.",
     "category": "email-intelligence",
     "price": "$2,199/month",
-    "features": ["Pricing guidance", "Objection handling", "Closing strategies", "Discount optimization", "Competitive intel", "Deal scoring"]
+    "features": [
+      "Pricing guidance",
+      "Objection handling",
+      "Closing strategies",
+      "Discount optimization",
+      "Competitive intel",
+      "Deal scoring"
+    ]
   },
   {
     "id": "negotiation-procurement",
@@ -85008,7 +85246,14 @@
     "description": "Strategic procurement negotiation platform with vendor analysis, price benchmarking, and contract optimization.",
     "category": "email-intelligence",
     "price": "$2,499/month",
-    "features": ["Vendor scoring", "Price benchmarking", "Contract analysis", "Total cost modeling", "Risk assessment", "Savings tracking"]
+    "features": [
+      "Vendor scoring",
+      "Price benchmarking",
+      "Contract analysis",
+      "Total cost modeling",
+      "Risk assessment",
+      "Savings tracking"
+    ]
   },
   {
     "id": "accessibility-auditor",
@@ -85016,7 +85261,14 @@
     "description": "Ensure all outgoing emails meet WCAG 2.1 accessibility standards with automated compliance checking and fix suggestions.",
     "category": "email-intelligence",
     "price": "$799/month",
-    "features": ["WCAG 2.1 AA checks", "Color contrast validation", "Alt text verification", "Semantic structure analysis", "Screen reader compatibility", "Plain text fallback"]
+    "features": [
+      "WCAG 2.1 AA checks",
+      "Color contrast validation",
+      "Alt text verification",
+      "Semantic structure analysis",
+      "Screen reader compatibility",
+      "Plain text fallback"
+    ]
   },
   {
     "id": "accessibility-wcag",
@@ -85024,7 +85276,14 @@
     "description": "Comprehensive WCAG 2.1 compliance checking for HTML emails with automated scoring and remediation guidance.",
     "category": "email-intelligence",
     "price": "$999/month",
-    "features": ["Full WCAG 2.1 coverage", "Automated scoring", "Fix suggestions", "Template validation", "Compliance reports", "Integration APIs"]
+    "features": [
+      "Full WCAG 2.1 coverage",
+      "Automated scoring",
+      "Fix suggestions",
+      "Template validation",
+      "Compliance reports",
+      "Integration APIs"
+    ]
   },
   {
     "id": "accessibility-screen-reader",
@@ -85032,7 +85291,14 @@
     "description": "Test email rendering across major screen readers (JAWS, NVDA, VoiceOver) to ensure accessibility for visually impaired recipients.",
     "category": "email-intelligence",
     "price": "$1,199/month",
-    "features": ["Multi-reader testing", "Rendering simulation", "Issue detection", "Fix recommendations", "Compliance scoring", "Accessibility training"]
+    "features": [
+      "Multi-reader testing",
+      "Rendering simulation",
+      "Issue detection",
+      "Fix recommendations",
+      "Compliance scoring",
+      "Accessibility training"
+    ]
   },
   {
     "id": "accessibility-design",
@@ -85040,7 +85306,14 @@
     "description": "Pre-built accessible email templates and design components that meet WCAG AA standards out of the box.",
     "category": "email-intelligence",
     "price": "$699/month",
-    "features": ["50+ accessible templates", "Color-safe palettes", "Typography system", "Component library", "Responsive design", "Dark mode support"]
+    "features": [
+      "50+ accessible templates",
+      "Color-safe palettes",
+      "Typography system",
+      "Component library",
+      "Responsive design",
+      "Dark mode support"
+    ]
   },
   {
     "id": "accessibility-compliance",
@@ -85048,7 +85321,14 @@
     "description": "Enterprise platform for ensuring organization-wide email accessibility compliance with ADA, Section 508, and WCAG standards.",
     "category": "email-intelligence",
     "price": "$2,299/month",
-    "features": ["Org-wide monitoring", "Compliance dashboards", "Automated enforcement", "Training modules", "Audit reports", "Legal protection"]
+    "features": [
+      "Org-wide monitoring",
+      "Compliance dashboards",
+      "Automated enforcement",
+      "Training modules",
+      "Audit reports",
+      "Legal protection"
+    ]
   },
   {
     "id": "burnout-prevention",
@@ -85056,7 +85336,14 @@
     "description": "Monitor email load per team member and suggest redistribution before burnout occurs. Track response burden and after-hours activity.",
     "category": "email-intelligence",
     "price": "$999/month",
-    "features": ["Per-person load monitoring", "After-hours detection", "Workload balancing", "Burnout risk scoring", "Redistribution suggestions", "Wellness breaks"]
+    "features": [
+      "Per-person load monitoring",
+      "After-hours detection",
+      "Workload balancing",
+      "Burnout risk scoring",
+      "Redistribution suggestions",
+      "Wellness breaks"
+    ]
   },
   {
     "id": "burnout-workload",
@@ -85064,7 +85351,14 @@
     "description": "Intelligently balance email workload across teams to prevent burnout and ensure equitable distribution of communication burden.",
     "category": "email-intelligence",
     "price": "$1,299/month",
-    "features": ["Smart redistribution", "Capacity planning", "Team analytics", "Auto-routing", "Load forecasting", "Manager dashboards"]
+    "features": [
+      "Smart redistribution",
+      "Capacity planning",
+      "Team analytics",
+      "Auto-routing",
+      "Load forecasting",
+      "Manager dashboards"
+    ]
   },
   {
     "id": "burnout-wellness",
@@ -85072,7 +85366,14 @@
     "description": "Protect employee digital wellness by enforcing email boundaries, detecting overwork patterns, and promoting healthy communication habits.",
     "category": "email-intelligence",
     "price": "$899/month",
-    "features": ["Boundary enforcement", "Overwork detection", "Habit coaching", "Auto-snooze", "Wellness scores", "Team reports"]
+    "features": [
+      "Boundary enforcement",
+      "Overwork detection",
+      "Habit coaching",
+      "Auto-snooze",
+      "Wellness scores",
+      "Team reports"
+    ]
   },
   {
     "id": "burnout-analytics",
@@ -85080,7 +85381,14 @@
     "description": "Comprehensive analytics platform combining email productivity metrics with wellness indicators for holistic team health monitoring.",
     "category": "email-intelligence",
     "price": "$1,599/month",
-    "features": ["Productivity metrics", "Wellness indicators", "Trend analysis", "Team health scores", "Manager alerts", "HR integration"]
+    "features": [
+      "Productivity metrics",
+      "Wellness indicators",
+      "Trend analysis",
+      "Team health scores",
+      "Manager alerts",
+      "HR integration"
+    ]
   },
   {
     "id": "burnout-enterprise",
@@ -85088,7 +85396,14 @@
     "description": "Organization-wide digital wellness platform that monitors and optimizes email health across all departments.",
     "category": "email-intelligence",
     "price": "$3,499/month",
-    "features": ["Org-wide monitoring", "Department analytics", "Executive dashboards", "Policy enforcement", "Wellness programs", "ROI tracking"]
+    "features": [
+      "Org-wide monitoring",
+      "Department analytics",
+      "Executive dashboards",
+      "Policy enforcement",
+      "Wellness programs",
+      "ROI tracking"
+    ]
   },
   {
     "id": "revenue-attribution",
@@ -85096,7 +85411,14 @@
     "description": "Track which email conversations lead to closed deals and revenue. Provides ROI analysis on email communication patterns.",
     "category": "email-intelligence",
     "price": "$1,899/month",
-    "features": ["Deal-to-email tracking", "Revenue attribution", "ROI analysis", "Pattern identification", "Sales cycle optimization", "CLV correlation"]
+    "features": [
+      "Deal-to-email tracking",
+      "Revenue attribution",
+      "ROI analysis",
+      "Pattern identification",
+      "Sales cycle optimization",
+      "CLV correlation"
+    ]
   },
   {
     "id": "revenue-attribution-sales",
@@ -85104,7 +85426,14 @@
     "description": "Measure and optimize sales team email performance with revenue attribution, conversion tracking, and deal velocity analysis.",
     "category": "email-intelligence",
     "price": "$2,299/month",
-    "features": ["Revenue per email", "Conversion tracking", "Deal velocity", "Rep performance", "Template effectiveness", "Pipeline analytics"]
+    "features": [
+      "Revenue per email",
+      "Conversion tracking",
+      "Deal velocity",
+      "Rep performance",
+      "Template effectiveness",
+      "Pipeline analytics"
+    ]
   },
   {
     "id": "revenue-attribution-marketing",
@@ -85112,7 +85441,14 @@
     "description": "Attribute revenue to marketing email campaigns with multi-touch attribution, customer journey mapping, and campaign ROI.",
     "category": "email-intelligence",
     "price": "$1,699/month",
-    "features": ["Multi-touch attribution", "Campaign ROI", "Journey mapping", "Segment analysis", "A/B test revenue", "Forecast modeling"]
+    "features": [
+      "Multi-touch attribution",
+      "Campaign ROI",
+      "Journey mapping",
+      "Segment analysis",
+      "A/B test revenue",
+      "Forecast modeling"
+    ]
   },
   {
     "id": "revenue-attribution-crm",
@@ -85120,7 +85456,14 @@
     "description": "Seamlessly integrate email revenue attribution with major CRM platforms (Salesforce, HubSpot, Pipedrive) for unified sales analytics.",
     "category": "email-intelligence",
     "price": "$2,499/month",
-    "features": ["CRM sync", "Deal tracking", "Revenue dashboards", "Custom reports", "Automated workflows", "API access"]
+    "features": [
+      "CRM sync",
+      "Deal tracking",
+      "Revenue dashboards",
+      "Custom reports",
+      "Automated workflows",
+      "API access"
+    ]
   },
   {
     "id": "revenue-attribution-executive",
@@ -85128,6 +85471,388 @@
     "description": "C-suite dashboard for email-driven revenue intelligence with predictive analytics, trend forecasting, and strategic insights.",
     "category": "email-intelligence",
     "price": "$4,999/month",
-    "features": ["Predictive analytics", "Revenue forecasting", "Strategic insights", "Board-ready reports", "Competitive benchmarking", "AI recommendations"]
+    "features": [
+      "Predictive analytics",
+      "Revenue forecasting",
+      "Strategic insights",
+      "Board-ready reports",
+      "Competitive benchmarking",
+      "AI recommendations"
+    ]
+  },
+  {
+    "id": "legal-compliance-guardian",
+    "title": "Email Legal Compliance Guardian",
+    "description": "Auto-detect GDPR, CCPA, HIPAA, SOX compliance issues in emails before sending. Prevent legal liability through real-time scanning and automated redaction.",
+    "category": "email-intelligence",
+    "price": "$1,599/month",
+    "features": [
+      "GDPR compliance",
+      "HIPAA scanning",
+      "PCI-DSS detection",
+      "PII redaction",
+      "Regulation alerts",
+      "Audit trails"
+    ]
+  },
+  {
+    "id": "legal-gdpr-compliance",
+    "title": "GDPR Email Compliance Scanner",
+    "description": "Specialized GDPR compliance scanner for emails with personal data detection, consent tracking, and cross-border transfer alerts.",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": [
+      "EU data detection",
+      "Consent verification",
+      "Data minimization",
+      "Cross-border alerts",
+      "Right to erasure",
+      "DPO notifications"
+    ]
+  },
+  {
+    "id": "legal-hipaa-protector",
+    "title": "HIPAA Email Protection Suite",
+    "description": "Protect patient health information in emails with PHI detection, encryption recommendations, and BAA compliance tracking.",
+    "category": "email-intelligence",
+    "price": "$1,899/month",
+    "features": [
+      "PHI detection",
+      "Encryption checks",
+      "BAA tracking",
+      "Breach alerts",
+      "Audit logging",
+      "Compliance reports"
+    ]
+  },
+  {
+    "id": "legal-pci-compliance",
+    "title": "PCI-DSS Email Security Scanner",
+    "description": "Detect credit card numbers and payment data in emails to ensure PCI-DSS compliance and prevent data breaches.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": [
+      "Card number detection",
+      "CVV blocking",
+      "PAN redaction",
+      "Breach prevention",
+      "Compliance scoring",
+      "Merchant alerts"
+    ]
+  },
+  {
+    "id": "legal-sox-compliance",
+    "title": "SOX Financial Email Compliance",
+    "description": "Ensure Sarbanes-Oxley compliance for financial communications with audit trail generation and disclosure detection.",
+    "category": "email-intelligence",
+    "price": "$2,199/month",
+    "features": [
+      "Financial disclosure",
+      "Audit trails",
+      "Insider trading alerts",
+      "Material information",
+      "Retention policies",
+      "Compliance reports"
+    ]
+  },
+  {
+    "id": "culture-intelligence",
+    "title": "Email Culture Intelligence Engine",
+    "description": "Detect cultural communication patterns and adapt tone for international recipients. Prevent misunderstandings across cultures.",
+    "category": "email-intelligence",
+    "price": "$1,099/month",
+    "features": [
+      "Cultural detection",
+      "Tone adaptation",
+      "Formality levels",
+      "Greeting customs",
+      "Time zone awareness",
+      "Cultural tips"
+    ]
+  },
+  {
+    "id": "culture-asian-business",
+    "title": "Asian Business Email Etiquette",
+    "description": "Specialized guidance for Japanese, Chinese, and Korean business communication with formality levels and indirect communication styles.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": [
+      "Japanese keigo",
+      "Chinese guanxi",
+      "Korean hierarchy",
+      "Indirect communication",
+      "Business card etiquette",
+      "Gift-giving norms"
+    ]
+  },
+  {
+    "id": "culture-european-business",
+    "title": "European Business Communication",
+    "description": "Navigate European business cultures with guidance for German directness, French formality, and Mediterranean relationship-building.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": [
+      "German efficiency",
+      "French formality",
+      "Italian relationships",
+      "Spanish timing",
+      "Nordic consensus",
+      "British politeness"
+    ]
+  },
+  {
+    "id": "culture-middle-eastern",
+    "title": "Middle Eastern Business Protocol",
+    "description": "Master Middle Eastern business communication with guidance on religious considerations, relationship-building, and negotiation styles.",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": [
+      "Religious sensitivity",
+      "Relationship focus",
+      "Negotiation style",
+      "Gender protocols",
+      "Ramadan timing",
+      "Hospitality customs"
+    ]
+  },
+  {
+    "id": "culture-global-teams",
+    "title": "Global Team Communication Optimizer",
+    "description": "Optimize communication for distributed global teams with cultural awareness, time zone coordination, and inclusive language.",
+    "category": "email-intelligence",
+    "price": "$1,399/month",
+    "features": [
+      "Multi-culture support",
+      "Time zone sync",
+      "Inclusive language",
+      "Cultural calendar",
+      "Translation hints",
+      "Team harmony"
+    ]
+  },
+  {
+    "id": "crisis-communication",
+    "title": "Email Crisis Communication Engine",
+    "description": "Detect PR crises and generate approved communication templates with stakeholder routing and multi-channel coordination.",
+    "category": "email-intelligence",
+    "price": "$2,499/month",
+    "features": [
+      "Crisis detection",
+      "Template generation",
+      "Stakeholder routing",
+      "Approval chains",
+      "Multi-channel",
+      "Post-crisis analysis"
+    ]
+  },
+  {
+    "id": "crisis-pr-management",
+    "title": "PR Crisis Response System",
+    "description": "Manage public relations crises with pre-approved messaging, media contact routing, and social media coordination.",
+    "category": "email-intelligence",
+    "price": "$2,899/month",
+    "features": [
+      "PR templates",
+      "Media routing",
+      "Social sync",
+      "Spokesperson alerts",
+      "Message approval",
+      "Crisis timeline"
+    ]
+  },
+  {
+    "id": "crisis-incident-response",
+    "title": "Incident Response Communication",
+    "description": "Coordinate incident response communications with severity classification, technical team alerts, and customer notifications.",
+    "category": "email-intelligence",
+    "price": "$1,999/month",
+    "features": [
+      "Severity levels",
+      "Team alerts",
+      "Customer updates",
+      "Status pages",
+      "Escalation paths",
+      "Post-mortem"
+    ]
+  },
+  {
+    "id": "crisis-executive-briefing",
+    "title": "Executive Crisis Briefing System",
+    "description": "Automated executive briefings during crises with situation summaries, impact assessments, and decision recommendations.",
+    "category": "email-intelligence",
+    "price": "$1,799/month",
+    "features": [
+      "Auto-briefings",
+      "Impact assessment",
+      "Decision support",
+      "Risk analysis",
+      "Stakeholder maps",
+      "Timeline tracking"
+    ]
+  },
+  {
+    "id": "crisis-stakeholder-mgmt",
+    "title": "Crisis Stakeholder Management Platform",
+    "description": "Manage stakeholder communications during crises with priority routing, message consistency, and feedback collection.",
+    "category": "email-intelligence",
+    "price": "$2,299/month",
+    "features": [
+      "Priority routing",
+      "Message consistency",
+      "Feedback loops",
+      "Sentiment tracking",
+      "Response monitoring",
+      "Stakeholder mapping"
+    ]
+  },
+  {
+    "id": "knowledge-transfer",
+    "title": "Email Knowledge Transfer System",
+    "description": "Automatically capture and transfer institutional knowledge when employees leave. Extract relationships, projects, and tribal knowledge.",
+    "category": "email-intelligence",
+    "price": "$1,699/month",
+    "features": [
+      "Knowledge capture",
+      "Relationship mapping",
+      "Project tracking",
+      "Commitment extraction",
+      "Tribal knowledge",
+      "Handoff packages"
+    ]
+  },
+  {
+    "id": "knowledge-employee-offboarding",
+    "title": "Employee Offboarding Knowledge Capture",
+    "description": "Comprehensive knowledge capture during employee offboarding with relationship handoffs, project status, and commitment tracking.",
+    "category": "email-intelligence",
+    "price": "$1,499/month",
+    "features": [
+      "Exit interviews",
+      "Contact handoffs",
+      "Project status",
+      "Commitment list",
+      "Documentation",
+      "Successor prep"
+    ]
+  },
+  {
+    "id": "knowledge-institutional-memory",
+    "title": "Institutional Memory Preservation",
+    "description": "Preserve institutional memory from departing employees with tribal knowledge extraction, decision history, and process documentation.",
+    "category": "email-intelligence",
+    "price": "$1,899/month",
+    "features": [
+      "Tribal knowledge",
+      "Decision history",
+      "Process docs",
+      "Workaround capture",
+      "Expert identification",
+      "Knowledge base"
+    ]
+  },
+  {
+    "id": "knowledge-succession-planning",
+    "title": "Succession Planning Intelligence",
+    "description": "Support succession planning with knowledge gap analysis, skill mapping, and mentorship coordination from email communications.",
+    "category": "email-intelligence",
+    "price": "$1,599/month",
+    "features": [
+      "Gap analysis",
+      "Skill mapping",
+      "Mentorship matching",
+      "Readiness scoring",
+      "Development plans",
+      "Knowledge transfer"
+    ]
+  },
+  {
+    "id": "knowledge-team-transitions",
+    "title": "Team Transition Management Platform",
+    "description": "Manage team reorganizations and role changes with knowledge transfer workflows, relationship mapping, and continuity tracking.",
+    "category": "email-intelligence",
+    "price": "$2,099/month",
+    "features": [
+      "Transition workflows",
+      "Relationship maps",
+      "Continuity tracking",
+      "Knowledge audits",
+      "Handoff checklists",
+      "Integration support"
+    ]
+  },
+  {
+    "id": "competitive-intelligence",
+    "title": "Email Competitive Intelligence Engine",
+    "description": "Extract competitor mentions, pricing intelligence, and market signals from emails. Provide competitive landscape analysis.",
+    "category": "email-intelligence",
+    "price": "$1,799/month",
+    "features": [
+      "Competitor tracking",
+      "Pricing intelligence",
+      "Market signals",
+      "Win/loss analysis",
+      "Feature comparison",
+      "Threat assessment"
+    ]
+  },
+  {
+    "id": "competitive-win-loss",
+    "title": "Win/Loss Analysis Platform",
+    "description": "Analyze win/loss patterns from sales emails with competitor tracking, reason extraction, and strategic recommendations.",
+    "category": "email-intelligence",
+    "price": "$1,599/month",
+    "features": [
+      "Win/loss tracking",
+      "Reason analysis",
+      "Competitor patterns",
+      "Deal insights",
+      "Sales coaching",
+      "Strategic recommendations"
+    ]
+  },
+  {
+    "id": "competitive-pricing-intel",
+    "title": "Competitive Pricing Intelligence",
+    "description": "Extract pricing information from emails to build competitive pricing databases with trend analysis and positioning insights.",
+    "category": "email-intelligence",
+    "price": "$1,399/month",
+    "features": [
+      "Price extraction",
+      "Trend analysis",
+      "Positioning maps",
+      "Discount tracking",
+      "Value propositions",
+      "Pricing alerts"
+    ]
+  },
+  {
+    "id": "competitive-market-signals",
+    "title": "Market Signal Detection System",
+    "description": "Detect market signals from customer and partner emails including product launches, partnerships, and strategic shifts.",
+    "category": "email-intelligence",
+    "price": "$1,699/month",
+    "features": [
+      "Signal detection",
+      "Launch tracking",
+      "Partnership alerts",
+      "Strategic shifts",
+      "Market trends",
+      "Opportunity identification"
+    ]
+  },
+  {
+    "id": "competitive-battlecards",
+    "title": "Sales Battlecard Generator",
+    "description": "Auto-generate sales battlecards from email intelligence with competitor profiles, objection handling, and positioning guidance.",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": [
+      "Auto-battlecards",
+      "Competitor profiles",
+      "Objection handling",
+      "Positioning guides",
+      "Win strategies",
+      "Sales enablement"
+    ]
   }
 ]
