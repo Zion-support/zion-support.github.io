@@ -81375,5 +81375,464 @@
     "category": "micro-saas",
     "popular": true,
     "industry": "Productivity"
+  },
+  {
+    "id": "ai-video-generation-suite",
+    "title": "AI Video Generation Suite",
+    "description": "Generate professional videos from text prompts with AI actors, custom scenes, and automated editing for marketing and training.",
+    "icon": "🎬",
+    "features": [
+      "Text-to-video",
+      "AI actors",
+      "Custom scenes",
+      "Auto-editing",
+      "Brand templates"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-video-generation-suite",
+    "category": "ai",
+    "popular": true,
+    "industry": "Video"
+  },
+  {
+    "id": "security-cloud-access-broker",
+    "title": "Cloud Access Security Broker",
+    "description": "CASB solution for cloud application governance with data loss prevention, threat protection, and compliance monitoring.",
+    "icon": "☁️",
+    "features": [
+      "Cloud app discovery",
+      "DLP policies",
+      "Threat protection",
+      "Compliance monitoring",
+      "User behavior analytics"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-cloud-access-broker",
+    "category": "security",
+    "popular": false,
+    "industry": "Cloud Security"
+  },
+  {
+    "id": "security-privileged-access",
+    "title": "Privileged Access Management",
+    "description": "Secure privileged accounts with just-in-time access, session recording, and credential vaulting.",
+    "icon": "🔐",
+    "features": [
+      "Just-in-time access",
+      "Session recording",
+      "Credential vaulting",
+      "Multi-factor auth",
+      "Audit trails"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2299",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-privileged-access",
+    "category": "security",
+    "popular": false,
+    "industry": "Identity Security"
+  },
+  {
+    "id": "security-incident-response",
+    "title": "Incident Response Platform",
+    "description": "Automated incident response with playbook orchestration, forensic analysis, and post-incident reporting.",
+    "icon": "🚨",
+    "features": [
+      "Playbook automation",
+      "Forensic analysis",
+      "Timeline reconstruction",
+      "Stakeholder notifications",
+      "Lessons learned"
+    ],
+    "pricing": {
+      "basic": "1299",
+      "pro": "3499",
+      "enterprise": "8999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-incident-response",
+    "category": "security",
+    "popular": true,
+    "industry": "Security Operations"
+  },
+  {
+    "id": "cloud-edge-computing-platform",
+    "title": "Edge Computing Platform",
+    "description": "Deploy and manage edge computing workloads with low-latency processing, offline capabilities, and centralized management.",
+    "icon": "📡",
+    "features": [
+      "Edge deployment",
+      "Low-latency processing",
+      "Offline mode",
+      "Central management",
+      "Auto-scaling"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-edge-computing-platform",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Edge Computing"
+  },
+  {
+    "id": "cloud-container-registry",
+    "title": "Container Registry Pro",
+    "description": "Private container registry with vulnerability scanning, image signing, replication, and access control.",
+    "icon": "📦",
+    "features": [
+      "Private registry",
+      "Vulnerability scanning",
+      "Image signing",
+      "Geo-replication",
+      "RBAC"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-container-registry",
+    "category": "cloud",
+    "popular": false,
+    "industry": "Containerization"
+  },
+  {
+    "id": "cloud-backup-disaster-recovery",
+    "title": "Cloud Backup & DR Platform",
+    "description": "Automated cloud backup with instant recovery, ransomware protection, and compliance-ready retention policies.",
+    "icon": "💾",
+    "features": [
+      "Automated backup",
+      "Instant recovery",
+      "Ransomware protection",
+      "Compliance retention",
+      "Cross-region replication"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-backup-disaster-recovery",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Backup & Recovery"
+  },
+  {
+    "id": "cloud-api-management",
+    "title": "API Management Gateway",
+    "description": "Full-featured API gateway with rate limiting, authentication, analytics, and developer portal.",
+    "icon": "🔌",
+    "features": [
+      "Rate limiting",
+      "OAuth2/JWT",
+      "API analytics",
+      "Developer portal",
+      "Monetization"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-api-management",
+    "category": "cloud",
+    "popular": false,
+    "industry": "API Management"
+  },
+  {
+    "id": "cloud-serverless-database",
+    "title": "Serverless Database Platform",
+    "description": "Auto-scaling serverless databases with pay-per-use pricing, global distribution, and instant provisioning.",
+    "icon": "🗄️",
+    "features": [
+      "Auto-scaling",
+      "Pay-per-use",
+      "Global distribution",
+      "Instant provisioning",
+      "Multi-model support"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "599",
+      "enterprise": "1999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-serverless-database",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Database"
+  },
+  {
+    "id": "data-synthetic-data-generation",
+    "title": "Synthetic Data Generation",
+    "description": "Generate privacy-safe synthetic data for testing, ML training, and analytics while preserving statistical properties.",
+    "icon": "🧪",
+    "features": [
+      "Privacy-safe data",
+      "Statistical fidelity",
+      "Multi-format output",
+      "Differential privacy",
+      "Quality validation"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-synthetic-data-generation",
+    "category": "data",
+    "popular": true,
+    "industry": "Data Privacy"
+  },
+  {
+    "id": "data-time-series-analytics",
+    "title": "Time Series Analytics Platform",
+    "description": "Specialized analytics for time-series data with forecasting, anomaly detection, and pattern recognition.",
+    "icon": "📈",
+    "features": [
+      "Forecasting",
+      "Anomaly detection",
+      "Pattern recognition",
+      "Seasonal analysis",
+      "Real-time streaming"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1799",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-time-series-analytics",
+    "category": "data",
+    "popular": false,
+    "industry": "Analytics"
+  },
+  {
+    "id": "data-collaboration-platform",
+    "title": "Data Collaboration Platform",
+    "description": "Secure data sharing and collaboration with access controls, audit trails, and version management.",
+    "icon": "🤝",
+    "features": [
+      "Secure sharing",
+      "Access controls",
+      "Audit trails",
+      "Version management",
+      "Data marketplace"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-collaboration-platform",
+    "category": "data",
+    "popular": false,
+    "industry": "Data Governance"
+  },
+  {
+    "id": "data-experimentation-platform",
+    "title": "Experimentation & A/B Testing",
+    "description": "Full-featured experimentation platform with statistical analysis, feature flags, and multi-armed bandit algorithms.",
+    "icon": "🧪",
+    "features": [
+      "A/B testing",
+      "Statistical analysis",
+      "Feature flags",
+      "Multi-armed bandit",
+      "Sequential testing"
+    ],
+    "pricing": {
+      "basic": "399",
+      "pro": "999",
+      "enterprise": "2999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-experimentation-platform",
+    "category": "data",
+    "popular": true,
+    "industry": "Product Analytics"
+  },
+  {
+    "id": "data-graph-database",
+    "title": "Graph Database Platform",
+    "description": "High-performance graph database for relationship analysis, fraud detection, and recommendation engines.",
+    "icon": "🕸️",
+    "features": [
+      "Graph queries",
+      "Relationship analysis",
+      "Fraud detection",
+      "Recommendation engine",
+      "Visual exploration"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-graph-database",
+    "category": "data",
+    "popular": false,
+    "industry": "Database"
+  },
+  {
+    "id": "saas-asset-management",
+    "title": "IT Asset Management",
+    "description": "Track and manage IT assets with lifecycle management, software licenses, and automated discovery.",
+    "icon": "💻",
+    "features": [
+      "Asset tracking",
+      "Lifecycle management",
+      "License management",
+      "Auto-discovery",
+      "Depreciation tracking"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-asset-management",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "IT Management"
+  },
+  {
+    "id": "saas-survey-platform",
+    "title": "Advanced Survey Platform",
+    "description": "Create sophisticated surveys with logic branching, panel management, advanced analytics, and white-label options.",
+    "icon": "📊",
+    "features": [
+      "Logic branching",
+      "Panel management",
+      "Advanced analytics",
+      "White-label",
+      "Multi-language"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "399",
+      "enterprise": "999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-survey-platform",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "Research"
+  },
+  {
+    "id": "saas-document-signing",
+    "title": "Electronic Signature Platform",
+    "description": "Legally-binding e-signatures with workflow automation, template library, and compliance certifications.",
+    "icon": "✍️",
+    "features": [
+      "E-signatures",
+      "Workflow automation",
+      "Template library",
+      "Compliance certs",
+      "API access"
+    ],
+    "pricing": {
+      "basic": "99",
+      "pro": "299",
+      "enterprise": "799"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-document-signing",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Document Management"
   }
 ]
