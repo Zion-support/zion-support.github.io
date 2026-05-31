@@ -1,4 +1,4 @@
-// Auto-generated - Total: 2321
+// Auto-generated - Total: 2346
 
 export const ai_agent_tool_builder = {"id":"ai-agent-tool-builder","title":"AI Agent Tool Builder","description":"Visual no-code tool builder for LLM agents: define function-calling tools, MCP server scaffolding, OpenAPI wrapper, and sandbox test harness.","icon":"★","features":["Drag-drop tool schema builder","MCP server scaffold + OpenAPI wrapper","Sandbox execution harness per tool","Multi-model compatibility (OpenAI/Anthropic/Google)"],"benefits":["Build tools for agents in hours, not weeks","MCP first = compatible with Claude/Copilot/GPTs","Sandbox test = no production risk","Function-calling = deterministic tool invoke"],"pricing":{"basic":"1999","pro":"4999","enterprise":"14999"},"contactInfo":{"website":"/services/ai-agent-tool-builder","email":"kleber@ziontechgroup.com","phone":"+1 302 464 0950"},"href":"/services/ai-agent-tool-builder","category":"ai","popular":false,"industry":"Technology"};
 
@@ -4642,6 +4642,56 @@ export const industry_compliance_rules = {"id":"industry-compliance-rules","name
 
 export const compliance_risk_assessment = {"id":"compliance-risk-assessment","name":"Compliance Risk Assessment","description":"Comprehensive risk assessment with fine potential calculations, violation severity scoring, and risk mitigation strategies.","category":"email-intelligence","price":"$349/mo","features":["Risk assessment","Fine calculations","Severity scoring","Mitigation strategies","Risk dashboards"]};
 
+export const sentiment_evolution_basic = {"id":"sentiment-evolution-basic","name":"Sentiment Evolution Basic","description":"Track sentiment changes across email threads with 5 emotion levels and trend detection.","category":"email-intelligence","price":"$79/mo","features":["5 emotion levels","Trend detection","Volatility tracking","Momentum scoring","Thread analysis"]};
+
+export const sentiment_evolution_pro = {"id":"sentiment-evolution-pro","name":"Sentiment Evolution Pro","description":"Advanced sentiment tracking with trajectory prediction, volatility analysis, and emotion heatmap visualization.","category":"email-intelligence","price":"$149/mo","features":["All Basic features","Trajectory prediction","Emotion heatmap","Volatility alerts","Historical trends"]};
+
+export const sentiment_evolution_enterprise = {"id":"sentiment-evolution-enterprise","name":"Sentiment Evolution Enterprise","description":"Enterprise sentiment tracking with real-time dashboards, multi-thread correlation, and AI-powered insights.","category":"email-intelligence","price":"$299/mo","features":["All Pro features","Real-time dashboards","Multi-thread correlation","AI insights","Custom reports"]};
+
+export const emotion_trajectory_predictor = {"id":"emotion-trajectory-predictor","name":"Emotion Trajectory Predictor","description":"Predict the emotional direction of email conversations using temporal sentiment analysis.","category":"email-intelligence","price":"$99/mo","features":["Trajectory prediction","24h forecasting","Trend classification","Confidence scoring"]};
+
+export const sentiment_volatility_monitor = {"id":"sentiment-volatility-monitor","name":"Sentiment Volatility Monitor","description":"Detect volatile email threads that may escalate with volatility scoring and early warning alerts.","category":"email-intelligence","price":"$69/mo","features":["Volatility scoring","Early warnings","Escalation prediction","Thread stability analysis"]};
+
+export const stakeholder_mapper_basic = {"id":"stakeholder-mapper-basic","name":"Stakeholder Mapper Basic","description":"Identify stakeholder roles and influence levels from email conversations.","category":"email-intelligence","price":"$99/mo","features":["7 stakeholder roles","Influence scoring","Role detection","Network mapping","Basic visualization"]};
+
+export const stakeholder_mapper_pro = {"id":"stakeholder-mapper-pro","name":"Stakeholder Mapper Pro","description":"Advanced stakeholder analysis with influence paths, gatekeeper identification, and relationship strength scoring.","category":"email-intelligence","price":"$199/mo","features":["All Basic features","Influence paths","Gatekeeper detection","Relationship strength","Decision flow mapping"]};
+
+export const stakeholder_mapper_enterprise = {"id":"stakeholder-mapper-enterprise","name":"Stakeholder Mapper Enterprise","description":"Enterprise stakeholder intelligence with organizational chart generation and strategic positioning analysis.","category":"email-intelligence","price":"$399/mo","features":["All Pro features","Org chart generation","Strategic positioning","Political mapping","Executive dashboards"]};
+
+export const influence_path_analyzer = {"id":"influence-path-analyzer","name":"Influence Path Analyzer","description":"Map influence paths between stakeholders to identify optimal communication routes for deal acceleration.","category":"email-intelligence","price":"$129/mo","features":["Path mapping","Communication routing","Bottleneck detection","Influence optimization"]};
+
+export const decision_maker_identifier = {"id":"decision-maker-identifier","name":"Decision Maker Identifier","description":"Identify key decision-makers in email threads with authority scoring and seniority detection.","category":"email-intelligence","price":"$89/mo","features":["Decision-maker detection","Authority scoring","Seniority analysis","Approval chain mapping"]};
+
+export const contract_intelligence_basic = {"id":"contract-intelligence-basic","name":"Contract Intelligence Basic","description":"Extract contract terms, payments, SLAs, and deadlines from email discussions.","category":"email-intelligence","price":"$149/mo","features":["8 contract elements","Term extraction","Obligation tracking","Deadline detection","Value calculation"]};
+
+export const contract_intelligence_pro = {"id":"contract-intelligence-pro","name":"Contract Intelligence Pro","description":"Advanced contract analysis with risk factor identification, obligation management, and auto-calendar integration.","category":"email-intelligence","price":"$299/mo","features":["All Basic features","Risk analysis","Obligation management","Calendar integration","Compliance checking"]};
+
+export const contract_intelligence_enterprise = {"id":"contract-intelligence-enterprise","name":"Contract Intelligence Enterprise","description":"Enterprise contract intelligence with clause library, amendment tracking, and legal review automation.","category":"email-intelligence","price":"$499/mo","features":["All Pro features","Clause library","Amendment tracking","Legal automation","Contract lifecycle"]};
+
+export const contract_risk_scanner = {"id":"contract-risk-scanner","name":"Contract Risk Scanner","description":"Scan contracts for risk factors including missing clauses, tight deadlines, and unfavorable terms.","category":"email-intelligence","price":"$179/mo","features":["Risk scoring","Missing clause detection","Deadline alerts","Unfavorable term flags"]};
+
+export const obligation_tracker = {"id":"obligation-tracker","name":"Contract Obligation Tracker","description":"Track and manage contract obligations with deadline reminders, responsible party assignment, and status tracking.","category":"email-intelligence","price":"$99/mo","features":["Obligation tracking","Deadline reminders","Party assignment","Status management","Penalty tracking"]};
+
+export const meeting_scheduler_basic = {"id":"meeting-scheduler-basic","name":"Meeting Scheduler Basic","description":"Detect scheduling intent from emails and propose optimal meeting times.","category":"email-intelligence","price":"$89/mo","features":["Intent detection","8 meeting types","Time slot proposals","Duration extraction","Basic scheduling"]};
+
+export const meeting_scheduler_pro = {"id":"meeting-scheduler-pro","name":"Meeting Scheduler Pro","description":"Advanced meeting scheduling with multi-timezone support, conflict detection, and calendar integration.","category":"email-intelligence","price":"$169/mo","features":["All Basic features","Multi-timezone","Conflict detection","Calendar sync","Attendee preferences"]};
+
+export const meeting_scheduler_enterprise = {"id":"meeting-scheduler-enterprise","name":"Meeting Scheduler Enterprise","description":"Enterprise scheduling with room booking, equipment reservation, and meeting analytics.","category":"email-intelligence","price":"$329/mo","features":["All Pro features","Room booking","Equipment reservation","Meeting analytics","Admin controls"]};
+
+export const timezone_optimizer = {"id":"timezone-optimizer","name":"Meeting Timezone Optimizer","description":"Find optimal meeting times across multiple timezones with fairness scoring and attendee preference matching.","category":"email-intelligence","price":"$79/mo","features":["Multi-timezone","Fairness scoring","Preference matching","Time conversion"]};
+
+export const meeting_conflict_resolver = {"id":"meeting-conflict-resolver","name":"Meeting Conflict Resolver","description":"Detect and resolve scheduling conflicts with alternative time proposals and priority-based resolution.","category":"email-intelligence","price":"$69/mo","features":["Conflict detection","Alternative proposals","Priority resolution","Auto-reschedule"]};
+
+export const kb_auto_builder_basic = {"id":"kb-auto-builder-basic","name":"Knowledge Base Auto-Builder Basic","description":"Convert email Q&A threads into searchable knowledge base articles.","category":"email-intelligence","price":"$119/mo","features":["Q&A extraction","6 article types","Auto-categorization","Tag generation","Basic search"]};
+
+export const kb_auto_builder_pro = {"id":"kb-auto-builder-pro","name":"Knowledge Base Auto-Builder Pro","description":"Advanced KB building with content quality scoring, SEO optimization, and multi-format export.","category":"email-intelligence","price":"$229/mo","features":["All Basic features","Quality scoring","SEO optimization","Multi-format export","Version control"]};
+
+export const kb_auto_builder_enterprise = {"id":"kb-auto-builder-enterprise","name":"Knowledge Base Auto-Builder Enterprise","description":"Enterprise KB with AI-powered content curation, user feedback integration, and analytics dashboards.","category":"email-intelligence","price":"$449/mo","features":["All Pro features","AI curation","Feedback integration","Analytics dashboards","Custom branding"]};
+
+export const faq_generator = {"id":"faq-generator","name":"FAQ Generator from Emails","description":"Automatically generate FAQ articles from email Q&A patterns with categorization and search optimization.","category":"email-intelligence","price":"$89/mo","features":["FAQ generation","Auto-categorization","Search optimization","Popularity ranking"]};
+
+export const troubleshooting_kb_builder = {"id":"troubleshooting-kb-builder","name":"Troubleshooting KB Builder","description":"Build troubleshooting knowledge base from email support threads with solution matching and step-by-step guides.","category":"email-intelligence","price":"$149/mo","features":["Solution matching","Step-by-step guides","Error code mapping","Self-service portal"]};
+
 export const allServices = [
   ai_agent_tool_builder,
   ai_vision_quality_inspection,
@@ -6963,5 +7013,30 @@ export const allServices = [
   regulatory_compliance_audit,
   regulatory_compliance_remediation,
   industry_compliance_rules,
-  compliance_risk_assessment
+  compliance_risk_assessment,
+  sentiment_evolution_basic,
+  sentiment_evolution_pro,
+  sentiment_evolution_enterprise,
+  emotion_trajectory_predictor,
+  sentiment_volatility_monitor,
+  stakeholder_mapper_basic,
+  stakeholder_mapper_pro,
+  stakeholder_mapper_enterprise,
+  influence_path_analyzer,
+  decision_maker_identifier,
+  contract_intelligence_basic,
+  contract_intelligence_pro,
+  contract_intelligence_enterprise,
+  contract_risk_scanner,
+  obligation_tracker,
+  meeting_scheduler_basic,
+  meeting_scheduler_pro,
+  meeting_scheduler_enterprise,
+  timezone_optimizer,
+  meeting_conflict_resolver,
+  kb_auto_builder_basic,
+  kb_auto_builder_pro,
+  kb_auto_builder_enterprise,
+  faq_generator,
+  troubleshooting_kb_builder
 ];
