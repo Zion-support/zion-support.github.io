@@ -85856,579 +85856,686 @@
     ]
   },
   {
-    "id": "emotional-intelligence-coaching",
-    "title": "Emotional Intelligence Email Coaching",
-    "description": "Real-time emotional intelligence coaching for difficult conversations with tone analysis and empathy guidance",
-    "longDescription": "Real-time emotional intelligence coaching for difficult conversations with tone analysis and empathy guidance. Part of the V666 Email Intelligence suite. Features include: Emotional tone detection, Empathy gap analysis, Tone adjustment suggestions, Relationship preservation, Difficult conversation coaching.",
-    "category": "Communication",
-    "price": "$49/mo",
+    "id": "wave94-1",
+    "title": "GovTech Digital Permitting Platform",
+    "description": "AI digital permitting: online applications, automated plan review, inspection scheduling, code compliance. Permit approval weeks to days.",
     "features": [
-      "Emotional tone detection",
-      "Empathy gap analysis",
-      "Tone adjustment suggestions",
-      "Relationship preservation",
-      "Difficult conversation coaching"
+      "Online permit portal",
+      "AI plan review",
+      "Auto inspection scheduling",
+      "Digital document mgmt",
+      "Public status dashboard",
+      "Tyler Technologies integration",
+      "Fee calculation",
+      "Mobile inspector app"
     ],
-    "icon": "Heart",
-    "color": "from-rose-500 to-pink-500",
-    "badge": "V666",
+    "benefits": [
+      "Weeks to days approval",
+      "Staff time -60%",
+      "24/7 applications",
+      "AI code review",
+      "Transparent status",
+      "Revenue +20%"
+    ],
+    "pricing": {
+      "basic": "$2,997/mo",
+      "pro": "$6,997/mo",
+      "enterprise": "$14,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🏛️",
+    "href": "https://ziontechgroup.com/services/digital-permitting",
     "popular": true,
-    "tags": [
-      "communication",
-      "v666",
-      "email-intelligence"
-    ]
+    "category": "GovTech",
+    "industry": "Government"
   },
   {
-    "id": "emotional-escalation-prevention",
-    "title": "Emotional Escalation Prevention",
-    "description": "Detect and prevent emotional escalation in email threads with early warning alerts",
-    "longDescription": "Detect and prevent emotional escalation in email threads with early warning alerts. Part of the V666 Email Intelligence suite. Features include: Escalation detection, Cooling period suggestions, De-escalation tips, Sentiment monitoring.",
-    "category": "Communication",
-    "price": "$39/mo",
+    "id": "wave94-2",
+    "title": "Citizen Services AI Chatbot",
+    "description": "24/7 government chatbot: answers, processes applications, schedules appointments, routes complaints in 50+ languages.",
     "features": [
-      "Escalation detection",
-      "Cooling period suggestions",
-      "De-escalation tips",
-      "Sentiment monitoring"
+      "NLP 50+ languages",
+      "300+ service categories",
+      "Application processing",
+      "Appointment scheduling",
+      "Complaint routing",
+      "311 system integration",
+      "WCAG 2.1 AA",
+      "Manager analytics"
     ],
-    "icon": "Shield",
-    "color": "from-blue-500 to-cyan-500",
-    "badge": "V666",
-    "popular": false,
-    "tags": [
-      "communication",
-      "v666",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "difficult-conversation-templates",
-    "title": "Difficult Conversation Templates",
-    "description": "Pre-built templates for challenging conversations with emotional intelligence built-in",
-    "longDescription": "Pre-built templates for challenging conversations with emotional intelligence built-in. Part of the V666 Email Intelligence suite. Features include: Termination conversations, Performance feedback, Conflict resolution, Bad news delivery.",
-    "category": "Communication",
-    "price": "$29/mo",
-    "features": [
-      "Termination conversations",
-      "Performance feedback",
-      "Conflict resolution",
-      "Bad news delivery"
+    "benefits": [
+      "24/7 without staff",
+      "Call volume -60%",
+      "Multilingual day one",
+      "WCAG compliant",
+      "Manager analytics",
+      "Deploy 2 weeks"
     ],
-    "icon": "MessageSquare",
-    "color": "from-purple-500 to-indigo-500",
-    "badge": "V666",
-    "popular": false,
-    "tags": [
-      "communication",
-      "v666",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "empathy-training-program",
-    "title": "Empathy Training Program",
-    "description": "Comprehensive empathy training for teams with email communication exercises",
-    "longDescription": "Comprehensive empathy training for teams with email communication exercises. Part of the V666 Email Intelligence suite. Features include: Interactive exercises, Real-world scenarios, Progress tracking, Certification.",
-    "category": "Training",
-    "price": "$199/mo",
-    "features": [
-      "Interactive exercises",
-      "Real-world scenarios",
-      "Progress tracking",
-      "Certification"
-    ],
-    "icon": "Users",
-    "color": "from-green-500 to-emerald-500",
-    "badge": "V666",
-    "popular": false,
-    "tags": [
-      "training",
-      "v666",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "tone-analyzer-pro",
-    "title": "Tone Analyzer Pro",
-    "description": "Advanced tone analysis with cultural context and professional communication scoring",
-    "longDescription": "Advanced tone analysis with cultural context and professional communication scoring. Part of the V666 Email Intelligence suite. Features include: Multi-dimensional tone analysis, Cultural sensitivity, Professional scoring, Improvement suggestions.",
-    "category": "Communication",
-    "price": "$59/mo",
-    "features": [
-      "Multi-dimensional tone analysis",
-      "Cultural sensitivity",
-      "Professional scoring",
-      "Improvement suggestions"
-    ],
-    "icon": "BarChart",
-    "color": "from-orange-500 to-red-500",
-    "badge": "V666",
-    "popular": false,
-    "tags": [
-      "communication",
-      "v666",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "meeting-scheduler-ai",
-    "title": "AI Meeting Scheduler",
-    "description": "Intelligent meeting scheduling across time zones with participant availability optimization",
-    "longDescription": "Intelligent meeting scheduling across time zones with participant availability optimization. Part of the V667 Email Intelligence suite. Features include: Multi-timezone support, Smart time suggestions, Calendar integration, Automatic rescheduling.",
-    "category": "Productivity",
-    "price": "$79/mo",
-    "features": [
-      "Multi-timezone support",
-      "Smart time suggestions",
-      "Calendar integration",
-      "Automatic rescheduling"
-    ],
-    "icon": "Calendar",
-    "color": "from-indigo-500 to-purple-500",
-    "badge": "V667",
+    "pricing": {
+      "basic": "$1,497/mo",
+      "pro": "$3,997/mo",
+      "enterprise": "$9,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🤖",
+    "href": "https://ziontechgroup.com/services/citizen-services-chatbot",
     "popular": true,
-    "tags": [
-      "productivity",
-      "v667",
-      "email-intelligence"
-    ]
+    "category": "GovTech",
+    "industry": "Citizen Services"
   },
   {
-    "id": "meeting-fatigue-detector",
-    "title": "Meeting Fatigue Detector",
-    "description": "Detect and prevent meeting fatigue with workload analysis and focus time protection",
-    "longDescription": "Detect and prevent meeting fatigue with workload analysis and focus time protection. Part of the V667 Email Intelligence suite. Features include: Fatigue scoring, Back-to-back alerts, Focus time blocking, Workload balancing.",
-    "category": "Wellness",
-    "price": "$39/mo",
+    "id": "wave94-3",
+    "title": "Public Safety Predictive Analytics",
+    "description": "AI public safety: crime forecasting, resource allocation, emergency routing, community risk. Used by 500+ US departments.",
     "features": [
-      "Fatigue scoring",
-      "Back-to-back alerts",
-      "Focus time blocking",
-      "Workload balancing"
+      "Crime hotspot prediction",
+      "Resource optimization",
+      "Emergency routing",
+      "Community risk scoring",
+      "CAD RMS integration",
+      "Body camera analytics",
+      "Recidiction prediction",
+      "Bias audit tools"
     ],
-    "icon": "Battery",
-    "color": "from-yellow-500 to-orange-500",
-    "badge": "V667",
-    "popular": false,
-    "tags": [
-      "wellness",
-      "v667",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "timezone-meeting-optimizer",
-    "title": "Time Zone Meeting Optimizer",
-    "description": "Find optimal meeting times across global teams with fairness algorithms",
-    "longDescription": "Find optimal meeting times across global teams with fairness algorithms. Part of the V667 Email Intelligence suite. Features include: Global timezone support, Fairness algorithms, Rotation scheduling, Holiday awareness.",
-    "category": "Productivity",
-    "price": "$49/mo",
-    "features": [
-      "Global timezone support",
-      "Fairness algorithms",
-      "Rotation scheduling",
-      "Holiday awareness"
+    "benefits": [
+      "Crime -15-25%",
+      "Optimal deployment",
+      "Faster response",
+      "Bias auditing",
+      "Transparency",
+      "500+ departments"
     ],
-    "icon": "Globe",
-    "color": "from-cyan-500 to-blue-500",
-    "badge": "V667",
-    "popular": false,
-    "tags": [
-      "productivity",
-      "v667",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "meeting-conflict-resolver",
-    "title": "Meeting Conflict Resolver",
-    "description": "Automatically resolve scheduling conflicts with smart prioritization and alternatives",
-    "longDescription": "Automatically resolve scheduling conflicts with smart prioritization and alternatives. Part of the V667 Email Intelligence suite. Features include: Conflict detection, Priority-based resolution, Alternative suggestions, Bulk rescheduling.",
-    "category": "Productivity",
-    "price": "$35/mo",
-    "features": [
-      "Conflict detection",
-      "Priority-based resolution",
-      "Alternative suggestions",
-      "Bulk rescheduling"
-    ],
-    "icon": "GitBranch",
-    "color": "from-red-500 to-pink-500",
-    "badge": "V667",
-    "popular": false,
-    "tags": [
-      "productivity",
-      "v667",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "meeting-analytics-dashboard",
-    "title": "Meeting Analytics Dashboard",
-    "description": "Comprehensive meeting analytics with cost tracking and productivity insights",
-    "longDescription": "Comprehensive meeting analytics with cost tracking and productivity insights. Part of the V667 Email Intelligence suite. Features include: Meeting cost calculator, Productivity metrics, Team analytics, ROI tracking.",
-    "category": "Analytics",
-    "price": "$89/mo",
-    "features": [
-      "Meeting cost calculator",
-      "Productivity metrics",
-      "Team analytics",
-      "ROI tracking"
-    ],
-    "icon": "TrendingUp",
-    "color": "from-green-500 to-teal-500",
-    "badge": "V667",
-    "popular": false,
-    "tags": [
-      "analytics",
-      "v667",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "document-version-tracker",
-    "title": "Document Version Tracker",
-    "description": "Track document versions and changes across email attachments with diff analysis",
-    "longDescription": "Track document versions and changes across email attachments with diff analysis. Part of the V668 Email Intelligence suite. Features include: Version detection, Change tracking, Diff analysis, Version history.",
-    "category": "Document Management",
-    "price": "$69/mo",
-    "features": [
-      "Version detection",
-      "Change tracking",
-      "Diff analysis",
-      "Version history"
-    ],
-    "icon": "FileText",
-    "color": "from-blue-500 to-indigo-500",
-    "badge": "V668",
+    "pricing": {
+      "basic": "$2,497/mo",
+      "pro": "$5,997/mo",
+      "enterprise": "$12,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🚔",
+    "href": "https://ziontechgroup.com/services/public-safety-analytics",
     "popular": true,
-    "tags": [
-      "document management",
-      "v668",
-      "email-intelligence"
-    ]
+    "category": "GovTech",
+    "industry": "Public Safety"
   },
   {
-    "id": "document-classifier",
-    "title": "Document Classifier",
-    "description": "Automatically classify email attachments by type, sensitivity, and compliance requirements",
-    "longDescription": "Automatically classify email attachments by type, sensitivity, and compliance requirements. Part of the V668 Email Intelligence suite. Features include: Type classification, Sensitivity detection, Compliance tagging, Auto-organization.",
-    "category": "Document Management",
-    "price": "$59/mo",
+    "id": "wave94-4",
+    "title": "Social Services Eligibility Automation",
+    "description": "AI eligibility for SNAP, Medicaid, TANF, housing. Processing weeks to minutes. Improved accuracy, fraud detection.",
     "features": [
-      "Type classification",
-      "Sensitivity detection",
-      "Compliance tagging",
-      "Auto-organization"
+      "Auto eligibility",
+      "Document verification",
+      "Multi-program",
+      "Fraud detection",
+      "Appeals workflow",
+      "State system integration",
+      "Multilingual support",
+      "Decision audit trail"
     ],
-    "icon": "Folder",
-    "color": "from-purple-500 to-pink-500",
-    "badge": "V668",
-    "popular": false,
-    "tags": [
-      "document management",
-      "v668",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "document-approval-workflow",
-    "title": "Document Approval Workflow",
-    "description": "Automated document approval workflows with multi-stage review and compliance tracking",
-    "longDescription": "Automated document approval workflows with multi-stage review and compliance tracking. Part of the V668 Email Intelligence suite. Features include: Multi-stage approval, Role-based routing, Compliance checks, Audit trail.",
-    "category": "Workflow",
-    "price": "$99/mo",
-    "features": [
-      "Multi-stage approval",
-      "Role-based routing",
-      "Compliance checks",
-      "Audit trail"
+    "benefits": [
+      "Weeks to minutes",
+      "99% accuracy",
+      "Fraud detection saves",
+      "Multilingual start",
+      "Audit trail",
+      "Staff -70%"
     ],
-    "icon": "CheckSquare",
-    "color": "from-green-500 to-emerald-500",
-    "badge": "V668",
-    "popular": false,
-    "tags": [
-      "workflow",
-      "v668",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "attachment-duplicate-detector",
-    "title": "Attachment Duplicate Detector",
-    "description": "Detect and eliminate duplicate attachments to save storage and reduce confusion",
-    "longDescription": "Detect and eliminate duplicate attachments to save storage and reduce confusion. Part of the V668 Email Intelligence suite. Features include: Duplicate detection, Hash comparison, Storage optimization, Clean-up suggestions.",
-    "category": "Document Management",
-    "price": "$29/mo",
-    "features": [
-      "Duplicate detection",
-      "Hash comparison",
-      "Storage optimization",
-      "Clean-up suggestions"
-    ],
-    "icon": "Copy",
-    "color": "from-orange-500 to-red-500",
-    "badge": "V668",
-    "popular": false,
-    "tags": [
-      "document management",
-      "v668",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "document-expiration-tracker",
-    "title": "Document Expiration Tracker",
-    "description": "Track document expiration dates and renewal requirements with automated alerts",
-    "longDescription": "Track document expiration dates and renewal requirements with automated alerts. Part of the V668 Email Intelligence suite. Features include: Expiration tracking, Renewal alerts, Compliance monitoring, Automated reminders.",
-    "category": "Compliance",
-    "price": "$79/mo",
-    "features": [
-      "Expiration tracking",
-      "Renewal alerts",
-      "Compliance monitoring",
-      "Automated reminders"
-    ],
-    "icon": "Clock",
-    "color": "from-red-500 to-orange-500",
-    "badge": "V668",
-    "popular": false,
-    "tags": [
-      "compliance",
-      "v668",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "vendor-relationship-manager",
-    "title": "Vendor Relationship Manager",
-    "description": "Comprehensive vendor relationship management with communication tracking and performance scoring",
-    "longDescription": "Comprehensive vendor relationship management with communication tracking and performance scoring. Part of the V669 Email Intelligence suite. Features include: Vendor profiles, Communication logs, Performance scoring, Relationship health.",
-    "category": "Business",
-    "price": "$149/mo",
-    "features": [
-      "Vendor profiles",
-      "Communication logs",
-      "Performance scoring",
-      "Relationship health"
-    ],
-    "icon": "Building",
-    "color": "from-indigo-500 to-blue-500",
-    "badge": "V669",
+    "pricing": {
+      "basic": "$1,997/mo",
+      "pro": "$4,997/mo",
+      "enterprise": "$9,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📋",
+    "href": "https://ziontechgroup.com/services/social-services-automation",
     "popular": true,
-    "tags": [
-      "business",
-      "v669",
-      "email-intelligence"
-    ]
+    "category": "GovTech",
+    "industry": "Social Services"
   },
   {
-    "id": "sla-compliance-monitor",
-    "title": "SLA Compliance Monitor",
-    "description": "Monitor vendor SLA compliance with real-time tracking and breach alerts",
-    "longDescription": "Monitor vendor SLA compliance with real-time tracking and breach alerts. Part of the V669 Email Intelligence suite. Features include: SLA tracking, Breach detection, Performance metrics, Compliance reports.",
-    "category": "Compliance",
-    "price": "$129/mo",
+    "id": "wave94-5",
+    "title": "Tax Revenue Optimization Platform",
+    "description": "AI tax compliance: unreported revenue ID, audit scoring, fraud detection, taxpayer services. Revenue +12%, audit costs -40%.",
     "features": [
-      "SLA tracking",
-      "Breach detection",
-      "Performance metrics",
-      "Compliance reports"
+      "Revenue identification",
+      "AI audit scoring",
+      "Fraud detection",
+      "Taxpayer portal",
+      "State system integration",
+      "Payment planning",
+      "Compliance analytics",
+      "Appeals mgmt"
     ],
-    "icon": "Target",
-    "color": "from-green-500 to-teal-500",
-    "badge": "V669",
-    "popular": false,
-    "tags": [
-      "compliance",
-      "v669",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "contract-renewal-alerts",
-    "title": "Contract Renewal Alerts",
-    "description": "Automated contract renewal tracking with early warning alerts and negotiation insights",
-    "longDescription": "Automated contract renewal tracking with early warning alerts and negotiation insights. Part of the V669 Email Intelligence suite. Features include: Renewal tracking, Early alerts, Negotiation insights, Terms comparison.",
-    "category": "Business",
-    "price": "$59/mo",
-    "features": [
-      "Renewal tracking",
-      "Early alerts",
-      "Negotiation insights",
-      "Terms comparison"
+    "benefits": [
+      "Revenue +12%",
+      "Audit costs -40%",
+      "Fraud 95%+",
+      "Self-service",
+      "Fair AI scoring",
+      "Appeals 3x faster"
     ],
-    "icon": "FileSignature",
-    "color": "from-purple-500 to-indigo-500",
-    "badge": "V669",
+    "pricing": {
+      "basic": "$3,497/mo",
+      "pro": "$7,997/mo",
+      "enterprise": "$16,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "💰",
+    "href": "https://ziontechgroup.com/services/tax-revenue-platform",
     "popular": false,
-    "tags": [
-      "business",
-      "v669",
-      "email-intelligence"
-    ]
+    "category": "GovTech",
+    "industry": "Tax Admin"
   },
   {
-    "id": "vendor-risk-assessment",
-    "title": "Vendor Risk Assessment",
-    "description": "Comprehensive vendor risk assessment with security, financial, and operational analysis",
-    "longDescription": "Comprehensive vendor risk assessment with security, financial, and operational analysis. Part of the V669 Email Intelligence suite. Features include: Risk scoring, Security assessment, Financial health, Operational reliability.",
-    "category": "Risk Management",
-    "price": "$199/mo",
+    "id": "wave95-1",
+    "title": "Satellite Operations & Mission Control SaaS",
+    "description": "Cloud satellite mission control: telemetry, orbit determination, anomaly detection, ground station scheduling. 100+ satellite constellations.",
     "features": [
+      "Real-time telemetry",
+      "Orbit prediction",
+      "AI anomaly detection",
+      "Ground station scheduling",
+      "Constellation mgmt",
+      "Space weather",
+      "AWS Ground Station",
+      "Mission planning"
+    ],
+    "benefits": [
+      "Replace \\$50M with SaaS",
+      "100+ constellation",
+      "AI prevents failures",
+      "Ground station opt",
+      "Space weather",
+      "Weeks not years"
+    ],
+    "pricing": {
+      "basic": "$4,997/mo",
+      "pro": "$12,997/mo",
+      "enterprise": "$29,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🛰️",
+    "href": "https://ziontechgroup.com/services/satellite-mission-control",
+    "popular": true,
+    "category": "SpaceTech",
+    "industry": "Satellite Ops"
+  },
+  {
+    "id": "wave95-2",
+    "title": "Space Debris Tracking & Collision Avoidance",
+    "description": "AI debris tracking: 30K+ objects, 7-day collision prediction, maneuver planning. Protect \\$10B+ satellite assets.",
+    "features": [
+      "30K+ debris catalog",
+      "7-day prediction",
+      "Auto maneuver planning",
+      "Conjunction data",
+      "Space-Track integration",
       "Risk scoring",
-      "Security assessment",
-      "Financial health",
-      "Operational reliability"
+      "Insurance docs",
+      "Operator API"
     ],
-    "icon": "AlertTriangle",
-    "color": "from-red-500 to-pink-500",
-    "badge": "V669",
+    "benefits": [
+      "7-day warnings",
+      "Auto maneuver",
+      "Protect \\$10B+",
+      "Insurance reduction",
+      "Compliance",
+      "API-first"
+    ],
+    "pricing": {
+      "basic": "$2,997/mo",
+      "pro": "$6,997/mo",
+      "enterprise": "$14,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "☄️",
+    "href": "https://ziontechgroup.com/services/space-debris-tracking",
     "popular": false,
-    "tags": [
-      "risk management",
-      "v669",
-      "email-intelligence"
-    ]
+    "category": "SpaceTech",
+    "industry": "Space Safety"
   },
   {
-    "id": "vendor-performance-analytics",
-    "title": "Vendor Performance Analytics",
-    "description": "Advanced vendor performance analytics with benchmarking and trend analysis",
-    "longDescription": "Advanced vendor performance analytics with benchmarking and trend analysis. Part of the V669 Email Intelligence suite. Features include: Performance metrics, Benchmarking, Trend analysis, ROI calculation.",
-    "category": "Analytics",
-    "price": "$109/mo",
+    "id": "wave95-3",
+    "title": "Digital Twin for Aerospace Engineering",
+    "description": "Digital replicas of aircraft, rockets, spacecraft. Structural, thermal, aerodynamic simulation. Physical tests -60%.",
     "features": [
-      "Performance metrics",
-      "Benchmarking",
-      "Trend analysis",
-      "ROI calculation"
+      "3D digital twin",
+      "FEA analysis",
+      "CFD simulation",
+      "Thermal analysis",
+      "Fatigue prediction",
+      "CATIA NX ANSYS",
+      "AR/VR viz",
+      "Cert docs"
     ],
-    "icon": "BarChart2",
-    "color": "from-cyan-500 to-blue-500",
-    "badge": "V669",
-    "popular": false,
-    "tags": [
-      "analytics",
-      "v669",
-      "email-intelligence"
-    ]
-  },
-  {
-    "id": "innovation-idea-tracker",
-    "title": "Innovation Idea Tracker",
-    "description": "Track and manage innovation ideas from emails with impact and feasibility scoring",
-    "longDescription": "Track and manage innovation ideas from emails with impact and feasibility scoring. Part of the V670 Email Intelligence suite. Features include: Idea extraction, Impact scoring, Feasibility analysis, Pipeline management.",
-    "category": "Innovation",
-    "price": "$89/mo",
-    "features": [
-      "Idea extraction",
-      "Impact scoring",
-      "Feasibility analysis",
-      "Pipeline management"
+    "benefits": [
+      "60% fewer tests",
+      "Risk-free simulation",
+      "Faster certification",
+      "Predict failures",
+      "AR/VR inspection",
+      "Digital thread"
     ],
-    "icon": "Lightbulb",
-    "color": "from-yellow-500 to-orange-500",
-    "badge": "V670",
+    "pricing": {
+      "basic": "$4,497/mo",
+      "pro": "$9,997/mo",
+      "enterprise": "$24,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "✈️",
+    "href": "https://ziontechgroup.com/services/aerospace-digital-twin",
     "popular": true,
-    "tags": [
-      "innovation",
-      "v670",
-      "email-intelligence"
-    ]
+    "category": "SpaceTech",
+    "industry": "Aerospace Eng"
   },
   {
-    "id": "innovation-pipeline-manager",
-    "title": "Innovation Pipeline Manager",
-    "description": "Manage innovation pipeline from idea to implementation with stage tracking and resource allocation",
-    "longDescription": "Manage innovation pipeline from idea to implementation with stage tracking and resource allocation. Part of the V670 Email Intelligence suite. Features include: Pipeline stages, Resource allocation, Progress tracking, Success metrics.",
-    "category": "Innovation",
-    "price": "$149/mo",
+    "id": "wave95-4",
+    "title": "Drone Fleet Management & Autonomous Operations",
+    "description": "Autonomous drone fleets for inspection, surveying, delivery. AI flight planning, BVLOS, live video analytics. Part 107 compliant.",
     "features": [
-      "Pipeline stages",
-      "Resource allocation",
-      "Progress tracking",
-      "Success metrics"
+      "Fleet management",
+      "AI flight planning",
+      "BVLOS support",
+      "Live video analytics",
+      "Inspection auto",
+      "DJI Skydio Autel",
+      "Remote ID",
+      "Weather scheduling"
     ],
-    "icon": "GitPullRequest",
-    "color": "from-green-500 to-emerald-500",
-    "badge": "V670",
+    "benefits": "$997/mo",
+    "pricing": {
+      "basic": "$2,497/mo",
+      "pro": "$5,997/mo",
+      "enterprise": "🚁"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "SpaceTech",
+    "href": true,
     "popular": false,
-    "tags": [
-      "innovation",
-      "v670",
-      "email-intelligence"
-    ]
+    "category": "Drone Ops",
+    "industry": "https://ziontechgroup.com/services/drone-fleet-management"
   },
   {
-    "id": "collaboration-opportunity-finder",
-    "title": "Collaboration Opportunity Finder",
-    "description": "Identify collaboration opportunities from email conversations with team matching",
-    "longDescription": "Identify collaboration opportunities from email conversations with team matching. Part of the V670 Email Intelligence suite. Features include: Opportunity detection, Team matching, Skill mapping, Collaboration scoring.",
-    "category": "Collaboration",
-    "price": "$69/mo",
+    "id": "wave95-5",
+    "title": "Earth Observation & Geospatial Intelligence",
+    "description": "AI satellite imagery: change detection, object recognition, crop monitoring, disaster response. Petabyte-scale processing.",
     "features": [
-      "Opportunity detection",
-      "Team matching",
-      "Skill mapping",
-      "Collaboration scoring"
+      "Change detection",
+      "Object recognition",
+      "Crop monitoring",
+      "Disaster assessment",
+      "Planet Maxar Sentinel",
+      "Time series",
+      "Custom models",
+      "API geospatial"
     ],
-    "icon": "Users",
-    "color": "from-blue-500 to-purple-500",
-    "badge": "V670",
+    "benefits": [
+      "Petabyte processing",
+      "Auto detection",
+      "Ag insights",
+      "Disaster response hours",
+      "Custom models",
+      "Multi-satellite"
+    ],
+    "pricing": {
+      "basic": "$1,497/mo",
+      "pro": "$3,997/mo",
+      "enterprise": "$9,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🌍",
+    "href": "https://ziontechgroup.com/services/geospatial-intelligence",
     "popular": false,
-    "tags": [
-      "collaboration",
-      "v670",
-      "email-intelligence"
-    ]
+    "category": "SpaceTech",
+    "industry": "Earth Obs"
   },
   {
-    "id": "improvement-suggestion-analyzer",
-    "title": "Improvement Suggestion Analyzer",
-    "description": "Analyze improvement suggestions from emails with categorization and prioritization",
-    "longDescription": "Analyze improvement suggestions from emails with categorization and prioritization. Part of the V670 Email Intelligence suite. Features include: Suggestion extraction, Auto-categorization, Priority scoring, Trend analysis.",
-    "category": "Analytics",
-    "price": "$79/mo",
+    "id": "wave96-1",
+    "title": "BCI Brain-Computer Interface Development Platform",
+    "description": "BCI platform: neural signal processing, motor imagery classification, neurofeedback. FDA 510(k) pathway support.",
     "features": [
-      "Suggestion extraction",
-      "Auto-categorization",
-      "Priority scoring",
-      "Trend analysis"
+      "Neural signal processing",
+      "Motor imagery",
+      "Neurofeedback",
+      "EEG fNIRS iEEG",
+      "FDA 510(k) docs",
+      "OpenBCI Blackrock",
+      "<10ms latency",
+      "Research tools"
     ],
-    "icon": "TrendingUp",
-    "color": "from-indigo-500 to-cyan-500",
-    "badge": "V670",
+    "benefits": "$1,997/mo",
+    "pricing": {
+      "basic": "$4,997/mo",
+      "pro": "$12,997/mo",
+      "enterprise": "🧠"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "NeuroTech",
+    "href": true,
     "popular": false,
-    "tags": [
-      "analytics",
-      "v670",
-      "email-intelligence"
-    ]
+    "category": "BCI",
+    "industry": "https://ziontechgroup.com/services/bci-platform"
   },
   {
-    "id": "innovation-impact-assessment",
-    "title": "Innovation Impact Assessment",
-    "description": "Assess innovation impact with ROI tracking and success metrics",
-    "longDescription": "Assess innovation impact with ROI tracking and success metrics. Part of the V670 Email Intelligence suite. Features include: Impact measurement, ROI tracking, Success metrics, Benchmarking.",
-    "category": "Analytics",
-    "price": "$119/mo",
+    "id": "wave96-2",
+    "title": "AI Mental Health Companion & Therapist Support",
+    "description": "AI mental health: CBT interventions, mood tracking, crisis detection, therapist augmentation. FDA breakthrough pathway.",
     "features": [
-      "Impact measurement",
-      "ROI tracking",
-      "Success metrics",
-      "Benchmarking"
+      "CBT conversations",
+      "Mood tracking",
+      "Crisis detection",
+      "Therapist dashboard",
+      "PHQ-9 GAD-7",
+      "Epic Cerner",
+      "HIPAA 42 CFR",
+      "FDA pathway"
     ],
-    "icon": "Award",
-    "color": "from-orange-500 to-red-500",
-    "badge": "V670",
+    "benefits": "$147/mo",
+    "pricing": {
+      "basic": "$397/mo",
+      "pro": "$997/mo",
+      "enterprise": "💚"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "NeuroTech",
+    "href": true,
     "popular": false,
-    "tags": [
-      "analytics",
-      "v670",
-      "email-intelligence"
-    ]
+    "category": "Mental Health",
+    "industry": "https://ziontechgroup.com/services/ai-mental-health"
+  },
+  {
+    "id": "wave96-3",
+    "title": "Precision Medicine & Genomic AI",
+    "description": "AI genomics: variant ID, pharmacogenomics, disease risk, treatment recommendations. Whole genome in hours.",
+    "features": [
+      "Genome analysis hours",
+      "Variant ID",
+      "Pharmacogenomics",
+      "Risk scoring",
+      "EHR genomics",
+      "Illumina PacBio",
+      "Clinical reports",
+      "HIPAA GINA"
+    ],
+    "benefits": "$2,497/mo",
+    "pricing": {
+      "basic": "$5,997/mo",
+      "pro": "$14,997/mo",
+      "enterprise": "🧬"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "NeuroTech",
+    "href": true,
+    "popular": false,
+    "category": "Precision Med",
+    "industry": "https://ziontechgroup.com/services/precision-medicine-ai"
+  },
+  {
+    "id": "wave96-4",
+    "title": "AI Physical Rehabilitation & Motion Analysis",
+    "description": "AI rehab via smartphone: range of motion, exercise compliance, progress tracking. \\$200K capture with a phone.",
+    "features": [
+      "Phone motion capture",
+      "ROM tracking",
+      "Exercise compliance",
+      "Progress scoring",
+      "EMR integration",
+      "Tele-rehab",
+      "Gamification",
+      "Clinician dashboard"
+    ],
+    "benefits": "$97/mo",
+    "pricing": {
+      "basic": "$247/mo",
+      "pro": "$697/mo",
+      "enterprise": "🏃"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "NeuroTech",
+    "href": true,
+    "popular": false,
+    "category": "Rehab",
+    "industry": "https://ziontechgroup.com/services/ai-rehabilitation"
+  },
+  {
+    "id": "wave96-5",
+    "title": "Clinical Trial Matching & Recruitment AI",
+    "description": "AI trial matching: NLP eligibility, EHR integration, automated outreach. Recruitment -70%.",
+    "features": [
+      "Real-time matching",
+      "NLP screening",
+      "EHR integration",
+      "Patient outreach",
+      "Site analytics",
+      "Veeva Medidata",
+      "Diversity tracking",
+      "21 CFR 11"
+    ],
+    "benefits": "$1,997/mo",
+    "pricing": {
+      "basic": "$4,997/mo",
+      "pro": "$12,997/mo",
+      "enterprise": "💊"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "NeuroTech",
+    "href": false,
+    "popular": false,
+    "category": "Clinical Trials",
+    "industry": "https://ziontechgroup.com/services/clinical-trial-matching"
+  },
+  {
+    "id": "wave97-1",
+    "title": "Autonomous Vehicle Software Platform",
+    "description": "Full-stack AV: perception, prediction, planning, control. L2+ to L4. 100M+ virtual mile simulation.",
+    "features": [
+      "Perception fusion",
+      "Prediction",
+      "Planning L2+ L4",
+      "Simulation 100M+",
+      "ISO 26262 SOTIF",
+      "NVIDIA Qualcomm",
+      "ODD management",
+      "Safety monitor"
+    ],
+    "benefits": "$9,997/mo",
+    "pricing": {
+      "basic": "$24,997/mo",
+      "pro": "$49,997/mo",
+      "enterprise": "🚗"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "AI Services",
+    "href": true,
+    "popular": false,
+    "category": "AV",
+    "industry": "https://ziontechgroup.com/services/autonomous-vehicle-platform"
+  },
+  {
+    "id": "wave97-2",
+    "title": "Industrial Robot Programming & Orchestration",
+    "description": "No-code robot programming, 500+ fleet orchestration, multi-brand, digital twin simulation.",
+    "features": [
+      "No-code programming",
+      "500+ fleet",
+      "Multi-brand",
+      "Digital twin",
+      "Path optimization",
+      "Predictive maint",
+      "OPC-UA MQTT ROS2",
+      "Safety zones"
+    ],
+    "benefits": "$4,997/mo",
+    "pricing": {
+      "basic": "$12,997/mo",
+      "pro": "$29,997/mo",
+      "enterprise": "🤖"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "AI Services",
+    "href": true,
+    "popular": false,
+    "category": "Robotics",
+    "industry": "https://ziontechgroup.com/services/robot-orchestration"
+  },
+  {
+    "id": "wave97-3",
+    "title": "Smart Building & Energy IoT Platform",
+    "description": "AI building management: HVAC, occupancy, predictive maint, energy trading. Energy -30%.",
+    "features": [
+      "HVAC optimization",
+      "Occupancy detection",
+      "Predictive maint",
+      "Air quality",
+      "Demand response",
+      "BACnet Modbus",
+      "Tenant app",
+      "ESG reporting"
+    ],
+    "benefits": "$2,997/mo",
+    "pricing": {
+      "basic": "$6,997/mo",
+      "pro": "$14,997/mo",
+      "enterprise": "🏢"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "IoT",
+    "href": false,
+    "popular": false,
+    "category": "Smart Buildings",
+    "industry": "https://ziontechgroup.com/services/smart-building-platform"
+  },
+  {
+    "id": "wave97-4",
+    "title": "Autonomous Inspection & NDT Platform",
+    "description": "AI infrastructure inspection: drone/robot + AI. Crack corrosion detection, defect classification, remaining life.",
+    "features": [
+      "Drone robot inspection",
+      "Crack corrosion detection",
+      "Defect classification",
+      "Life estimation",
+      "DJI Boston",
+      "API ASME",
+      "3D defect maps",
+      "Repair priority"
+    ],
+    "benefits": "$3,997/mo",
+    "pricing": {
+      "basic": "$8,997/mo",
+      "pro": "$19,997/mo",
+      "enterprise": "🔍"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "AI Services",
+    "href": true,
+    "popular": false,
+    "category": "Infrastructure",
+    "industry": "https://ziontechgroup.com/services/autonomous-inspection"
+  },
+  {
+    "id": "wave97-5",
+    "title": "Collaborative Robot Cobot AI Safety System",
+    "description": "AI cobot safety: skeleton tracking, intent prediction, adaptive speed. ISO/TS 15066 compliant.",
+    "features": [
+      "Skeleton tracking",
+      "Intent prediction",
+      "Adaptive speed",
+      "Force speed monitoring",
+      "Emergency stop",
+      "Universal cobot",
+      "Cert docs",
+      "Analytics"
+    ],
+    "benefits": "$1,997/mo",
+    "pricing": {
+      "basic": "$4,497/mo",
+      "pro": "$9,997/mo",
+      "enterprise": "🛡️"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "AI Services",
+    "href": false,
+    "popular": false,
+    "category": "Robotics Safety",
+    "industry": "https://ziontechgroup.com/services/cobot-safety-system"
   }
 ]
