@@ -1,16 +1,24 @@
-// Auto-generated services data
+// Service data for AI and IT solutions
+// Auto-generated from servicesData.json — do not edit manually
+
 export interface Service {
   id: string;
-  name?: string;
-  title?: string;
-  category: string;
+  title: string;
   description: string;
-  price?: string;
-  icon?: string;
-  features?: string[];
-  contactInfo?: { phone?: string; email?: string; address?: string };
-  link?: string;
-  [key: string]: unknown;
+  features: string[];
+  benefits: string[];
+  pricing: Record<string, string>;
+  contactInfo: {
+    website: string;
+    email: string;
+    phone: string;
+  };
+  icon: string;
+  href: string;
+  popular?: boolean;
+  stage?: string;
+  category: string;
+  industry: string;
 }
 
 export const allServices: Service[] = [
@@ -110444,30 +110452,1055 @@ export const allServices: Service[] = [
     ],
     "icon": "📑",
     "engineVersion": "V880"
+  },
+  {
+    "id": "edge-device-manager-001",
+    "name": "Edge Device Fleet Manager",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Device Management",
+    "description": "Complete edge device fleet management with remote monitoring, firmware OTA updates, health scoring, and automated alerting for thousands of distributed IoT devices.",
+    "features": [
+      "Remote device monitoring",
+      "OTA firmware updates",
+      "Fleet health scoring",
+      "Anomaly detection",
+      "Battery management",
+      "Temperature alerts"
+    ],
+    "benefits": [
+      "Reduce device downtime by 80%",
+      "Automated fleet health monitoring",
+      "Predictive maintenance alerts",
+      "Zero-touch provisioning"
+    ],
+    "price": "$899/month",
+    "priceRange": "$899 - $2,499/month",
+    "icon": "📡",
+    "tags": [
+      "edge",
+      "iot",
+      "fleet-management",
+      "monitoring"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-device-manager-002",
+    "name": "Edge Gateway Orchestration Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Gateway Management",
+    "description": "Orchestrate and manage edge gateways at scale with protocol translation, load balancing, failover management, and centralized configuration.",
+    "features": [
+      "Protocol translation",
+      "Load balancing",
+      "Failover management",
+      "Centralized config",
+      "Multi-cloud routing",
+      "Edge caching"
+    ],
+    "benefits": [
+      "Unified gateway management",
+      "99.99% uptime guarantee",
+      "Automatic failover",
+      "Protocol interoperability"
+    ],
+    "price": "$1,299/month",
+    "priceRange": "$1,299 - $3,999/month",
+    "icon": "🌐",
+    "tags": [
+      "edge",
+      "gateway",
+      "orchestration",
+      "iot"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-data-pipeline-001",
+    "name": "IoT Data Pipeline & Stream Processor",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Data Processing",
+    "description": "Real-time IoT data ingestion, transformation, and analytics pipeline with anomaly detection, aggregation, and seamless integration with cloud data lakes.",
+    "features": [
+      "Real-time stream processing",
+      "Anomaly detection",
+      "Data aggregation",
+      "Schema validation",
+      "Batch ingestion",
+      "Cloud lake integration"
+    ],
+    "benefits": [
+      "Process millions of events/sec",
+      "Real-time anomaly alerts",
+      "Zero data loss architecture",
+      "Auto-scaling pipelines"
+    ],
+    "price": "$1,099/month",
+    "priceRange": "$1,099 - $4,999/month",
+    "icon": "🌊",
+    "tags": [
+      "iot",
+      "stream-processing",
+      "data-pipeline",
+      "analytics"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-data-pipeline-002",
+    "name": "IoT Telemetry Analytics Dashboard",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Analytics",
+    "description": "Interactive analytics dashboard for IoT telemetry data with real-time visualization, trend analysis, predictive forecasting, and custom alerting.",
+    "features": [
+      "Real-time visualization",
+      "Trend analysis",
+      "Predictive forecasting",
+      "Custom alerts",
+      "Historical analysis",
+      "Export reports"
+    ],
+    "benefits": [
+      "360° visibility into IoT data",
+      "Predict equipment failures",
+      "Custom KPI tracking",
+      "Automated reporting"
+    ],
+    "price": "$799/month",
+    "priceRange": "$799 - $2,999/month",
+    "icon": "📊",
+    "tags": [
+      "iot",
+      "analytics",
+      "dashboard",
+      "telemetry"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "digital-twin-001",
+    "name": "Digital Twin Simulation Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Digital Twins",
+    "description": "Create digital twins of physical systems for simulation, prediction, and optimization. Test scenarios virtually before deploying to production.",
+    "features": [
+      "Virtual system modeling",
+      "Scenario simulation",
+      "Predictive maintenance",
+      "What-if analysis",
+      "Real-time sync",
+      "Performance optimization"
+    ],
+    "benefits": [
+      "Reduce testing costs by 70%",
+      "Predict failures before they happen",
+      "Optimize system performance",
+      "Virtual commissioning"
+    ],
+    "price": "$1,499/month",
+    "priceRange": "$1,499 - $5,999/month",
+    "icon": "🏗️",
+    "tags": [
+      "digital-twin",
+      "simulation",
+      "iot",
+      "optimization"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "digital-twin-002",
+    "name": "Industrial Digital Twin for Manufacturing",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Manufacturing",
+    "description": "Specialized digital twin platform for manufacturing lines with throughput simulation, defect rate prediction, energy optimization, and capacity planning.",
+    "features": [
+      "Production line modeling",
+      "Throughput simulation",
+      "Defect prediction",
+      "Energy optimization",
+      "Capacity planning",
+      "Bottleneck detection"
+    ],
+    "benefits": [
+      "Increase throughput by 25%",
+      "Reduce defects by 40%",
+      "Optimize energy usage",
+      "Plan capacity accurately"
+    ],
+    "price": "$2,499/month",
+    "priceRange": "$2,499 - $8,999/month",
+    "icon": "🏭",
+    "tags": [
+      "digital-twin",
+      "manufacturing",
+      "industrial",
+      "optimization"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-ai-001",
+    "name": "Edge AI Model Deployment Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Edge AI",
+    "description": "Deploy, quantize, and optimize AI models for edge devices with sub-millisecond inference. Supports object detection, NLP, anomaly detection, and custom models.",
+    "features": [
+      "Model quantization (INT8/INT4)",
+      "Edge deployment",
+      "Latency optimization",
+      "SLA monitoring",
+      "A/B testing",
+      "Auto-scaling"
+    ],
+    "benefits": [
+      "4x model compression",
+      "Sub-30ms inference",
+      "99.9% SLA compliance",
+      "Zero cloud dependency"
+    ],
+    "price": "$1,199/month",
+    "priceRange": "$1,199 - $4,499/month",
+    "icon": "🤖",
+    "tags": [
+      "edge-ai",
+      "model-deployment",
+      "inference",
+      "optimization"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-ai-002",
+    "name": "Edge Computer Vision Service",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Computer Vision",
+    "description": "Deploy optimized computer vision models on edge cameras for real-time object detection, people counting, license plate recognition, and quality inspection.",
+    "features": [
+      "Object detection",
+      "People counting",
+      "License plate OCR",
+      "Quality inspection",
+      "Face recognition",
+      "Anomaly detection"
+    ],
+    "benefits": [
+      "Real-time video analytics",
+      "No cloud bandwidth needed",
+      "Privacy-preserving",
+      "Works offline"
+    ],
+    "price": "$1,599/month",
+    "priceRange": "$1,599 - $5,999/month",
+    "icon": "📷",
+    "tags": [
+      "edge-ai",
+      "computer-vision",
+      "object-detection",
+      "surveillance"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-security-001",
+    "name": "IoT Security & Threat Detection Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Security",
+    "description": "Comprehensive IoT security platform with vulnerability scanning, network threat detection, certificate management, and automated incident response.",
+    "features": [
+      "Vulnerability scanning",
+      "Threat detection",
+      "Certificate management",
+      "DDoS protection",
+      "Protocol enforcement",
+      "Incident response"
+    ],
+    "benefits": [
+      "Protect 100% of IoT devices",
+      "Detect threats in real-time",
+      "Automated remediation",
+      "Compliance reporting"
+    ],
+    "price": "$1,399/month",
+    "priceRange": "$1,399 - $5,499/month",
+    "icon": "🔒",
+    "tags": [
+      "iot-security",
+      "threat-detection",
+      "vulnerability",
+      "compliance"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-security-002",
+    "name": "IoT Device Identity & Access Manager",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Identity",
+    "description": "Zero-trust identity and access management for IoT devices with certificate-based authentication, mutual TLS, role-based policies, and audit logging.",
+    "features": [
+      "Certificate-based auth",
+      "Mutual TLS",
+      "Role-based access",
+      "Audit logging",
+      "Device attestation",
+      "Key rotation"
+    ],
+    "benefits": [
+      "Zero-trust IoT security",
+      "Prevent unauthorized access",
+      "Full audit trail",
+      "Automated key management"
+    ],
+    "price": "$999/month",
+    "priceRange": "$999 - $3,499/month",
+    "icon": "🔐",
+    "tags": [
+      "iot-security",
+      "identity",
+      "zero-trust",
+      "authentication"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-connectivity-001",
+    "name": "IoT Connectivity Management Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Connectivity",
+    "description": "Manage IoT connectivity across cellular (4G/5G), LoRaWAN, NB-IoT, and WiFi networks with SIM management, data usage monitoring, and cost optimization.",
+    "features": [
+      "Multi-network support",
+      "SIM management",
+      "Data usage monitoring",
+      "Cost optimization",
+      "Network failover",
+      "Coverage mapping"
+    ],
+    "benefits": [
+      "Reduce connectivity costs 40%",
+      "Seamless network switching",
+      "Real-time usage tracking",
+      "Global coverage"
+    ],
+    "price": "$699/month",
+    "priceRange": "$699 - $2,999/month",
+    "icon": "📶",
+    "tags": [
+      "iot",
+      "connectivity",
+      "cellular",
+      "lorawan"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-connectivity-002",
+    "name": "5G Edge Computing Integration Service",
+    "category": "Edge Computing & IoT",
+    "subcategory": "5G Integration",
+    "description": "Leverage 5G MEC (Multi-access Edge Computing) for ultra-low latency applications with network slicing, edge application deployment, and QoS management.",
+    "features": [
+      "5G MEC integration",
+      "Network slicing",
+      "Edge app deployment",
+      "QoS management",
+      "Ultra-low latency",
+      "Bandwidth optimization"
+    ],
+    "benefits": [
+      "Sub-10ms latency",
+      "Dedicated network slices",
+      "Edge-native applications",
+      "5G-ready infrastructure"
+    ],
+    "price": "$2,999/month",
+    "priceRange": "$2,999 - $9,999/month",
+    "icon": "📱",
+    "tags": [
+      "5g",
+      "edge-computing",
+      "mec",
+      "network-slicing"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-platform-001",
+    "name": "Smart Building IoT Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Smart Buildings",
+    "description": "Comprehensive IoT platform for smart buildings with HVAC optimization, occupancy sensing, energy management, and predictive maintenance for building systems.",
+    "features": [
+      "HVAC optimization",
+      "Occupancy sensing",
+      "Energy management",
+      "Predictive maintenance",
+      "Air quality monitoring",
+      "Lighting control"
+    ],
+    "benefits": [
+      "Reduce energy costs 35%",
+      "Improve occupant comfort",
+      "Extend equipment life",
+      "LEED certification support"
+    ],
+    "price": "$1,799/month",
+    "priceRange": "$1,799 - $6,999/month",
+    "icon": "🏢",
+    "tags": [
+      "smart-building",
+      "iot",
+      "energy-management",
+      "hvac"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-platform-002",
+    "name": "Industrial IoT (IIoT) Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Industrial",
+    "description": "Enterprise IIoT platform for manufacturing, oil & gas, and utilities with SCADA integration, OPC-UA support, real-time monitoring, and process optimization.",
+    "features": [
+      "SCADA integration",
+      "OPC-UA support",
+      "Real-time monitoring",
+      "Process optimization",
+      "OEE tracking",
+      "Alarm management"
+    ],
+    "benefits": [
+      "Increase OEE by 20%",
+      "Reduce unplanned downtime 60%",
+      "Process optimization",
+      "Regulatory compliance"
+    ],
+    "price": "$3,499/month",
+    "priceRange": "$3,499 - $12,999/month",
+    "icon": "⚙️",
+    "tags": [
+      "iiot",
+      "industrial",
+      "scada",
+      "manufacturing"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-platform-003",
+    "name": "Agricultural IoT & Precision Farming",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Agriculture",
+    "description": "IoT platform for precision agriculture with soil moisture sensing, weather integration, crop health monitoring, automated irrigation, and yield prediction.",
+    "features": [
+      "Soil moisture sensing",
+      "Weather integration",
+      "Crop health monitoring",
+      "Automated irrigation",
+      "Yield prediction",
+      "Drone integration"
+    ],
+    "benefits": [
+      "Reduce water usage 40%",
+      "Increase crop yield 25%",
+      "Lower fertilizer costs",
+      "Data-driven farming"
+    ],
+    "price": "$899/month",
+    "priceRange": "$899 - $3,499/month",
+    "icon": "🌾",
+    "tags": [
+      "agriculture",
+      "iot",
+      "precision-farming",
+      "smart-farming"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-platform-004",
+    "name": "Fleet & Asset Tracking IoT Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Asset Tracking",
+    "description": "Real-time GPS and IoT tracking for vehicles, containers, and high-value assets with geofencing, route optimization, and condition monitoring.",
+    "features": [
+      "GPS tracking",
+      "Geofencing",
+      "Route optimization",
+      "Condition monitoring",
+      "Fuel tracking",
+      "Driver behavior analysis"
+    ],
+    "benefits": [
+      "Reduce fuel costs 20%",
+      "Improve delivery times 30%",
+      "Prevent theft",
+      "Optimize fleet utilization"
+    ],
+    "price": "$599/month",
+    "priceRange": "$599 - $2,499/month",
+    "icon": "🚛",
+    "tags": [
+      "fleet-tracking",
+      "gps",
+      "asset-tracking",
+      "logistics"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-computing-001",
+    "name": "Edge Computing Infrastructure Design",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Infrastructure",
+    "description": "Design and deploy edge computing infrastructure with micro data centers, edge servers, and optimized networking for ultra-low latency workloads.",
+    "features": [
+      "Micro data center design",
+      "Edge server deployment",
+      "Network optimization",
+      "Power management",
+      "Cooling solutions",
+      "Redundancy planning"
+    ],
+    "benefits": [
+      "Sub-5ms latency",
+      "99.99% availability",
+      "Reduced bandwidth costs",
+      "Scalable architecture"
+    ],
+    "price": "$4,999/month",
+    "priceRange": "$4,999 - $19,999/month",
+    "icon": "🖥️",
+    "tags": [
+      "edge-computing",
+      "infrastructure",
+      "micro-datacenter",
+      "low-latency"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-computing-002",
+    "name": "Edge-to-Cloud Data Synchronization",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Data Sync",
+    "description": "Bi-directional data synchronization between edge devices and cloud platforms with conflict resolution, offline-first architecture, and bandwidth optimization.",
+    "features": [
+      "Bi-directional sync",
+      "Conflict resolution",
+      "Offline-first",
+      "Bandwidth optimization",
+      "Delta sync",
+      "Encryption"
+    ],
+    "benefits": [
+      "Work offline seamlessly",
+      "Minimize data transfer",
+      "No data conflicts",
+      "Encrypted sync"
+    ],
+    "price": "$799/month",
+    "priceRange": "$799 - $2,999/month",
+    "icon": "🔄",
+    "tags": [
+      "edge",
+      "cloud",
+      "sync",
+      "offline-first"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-consulting-001",
+    "name": "IoT Architecture Consulting",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Consulting",
+    "description": "Expert IoT architecture consulting including technology selection, system design, security assessment, scalability planning, and vendor evaluation.",
+    "features": [
+      "Architecture design",
+      "Technology selection",
+      "Security assessment",
+      "Scalability planning",
+      "Vendor evaluation",
+      "ROI analysis"
+    ],
+    "benefits": [
+      "Right technology choices",
+      "Future-proof architecture",
+      "Risk mitigation",
+      "Cost optimization"
+    ],
+    "price": "$299/hour",
+    "priceRange": "$299 - $599/hour",
+    "icon": "💡",
+    "tags": [
+      "iot",
+      "consulting",
+      "architecture",
+      "strategy"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-consulting-002",
+    "name": "IoT Security Audit & Penetration Testing",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Security Audit",
+    "description": "Comprehensive IoT security audit including firmware analysis, network penetration testing, physical security assessment, and compliance gap analysis.",
+    "features": [
+      "Firmware analysis",
+      "Network pen testing",
+      "Physical security",
+      "Compliance gaps",
+      "Risk scoring",
+      "Remediation plan"
+    ],
+    "benefits": [
+      "Identify vulnerabilities",
+      "Prevent breaches",
+      "Compliance assurance",
+      "Risk reduction"
+    ],
+    "price": "$4,999/audit",
+    "priceRange": "$4,999 - $19,999/audit",
+    "icon": "🛡️",
+    "tags": [
+      "iot-security",
+      "penetration-testing",
+      "audit",
+      "compliance"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-ai-003",
+    "name": "Edge NLP & Voice Processing Service",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Edge NLP",
+    "description": "Deploy NLP and voice processing models on edge devices for real-time speech recognition, sentiment analysis, keyword spotting, and voice commands.",
+    "features": [
+      "Speech recognition",
+      "Sentiment analysis",
+      "Keyword spotting",
+      "Voice commands",
+      "Multi-language",
+      "Wake word detection"
+    ],
+    "benefits": [
+      "Real-time voice processing",
+      "Privacy-preserving",
+      "Works offline",
+      "Low power consumption"
+    ],
+    "price": "$999/month",
+    "priceRange": "$999 - $3,999/month",
+    "icon": "🎙️",
+    "tags": [
+      "edge-ai",
+      "nlp",
+      "voice",
+      "speech-recognition"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-ai-004",
+    "name": "Edge Predictive Maintenance AI",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Predictive Maintenance",
+    "description": "AI-powered predictive maintenance running on edge devices with vibration analysis, thermal monitoring, acoustic analysis, and remaining useful life prediction.",
+    "features": [
+      "Vibration analysis",
+      "Thermal monitoring",
+      "Acoustic analysis",
+      "RUL prediction",
+      "Anomaly detection",
+      "Maintenance scheduling"
+    ],
+    "benefits": [
+      "Reduce downtime 70%",
+      "Extend equipment life",
+      "Prevent catastrophic failures",
+      "Optimize spare parts"
+    ],
+    "price": "$1,899/month",
+    "priceRange": "$1,899 - $6,999/month",
+    "icon": "🔧",
+    "tags": [
+      "edge-ai",
+      "predictive-maintenance",
+      "iot",
+      "manufacturing"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-energy-001",
+    "name": "IoT Energy Management & Optimization",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Energy",
+    "description": "Smart energy management for buildings and facilities with real-time consumption monitoring, demand response, solar integration, and carbon footprint tracking.",
+    "features": [
+      "Consumption monitoring",
+      "Demand response",
+      "Solar integration",
+      "Carbon tracking",
+      "Peak shaving",
+      "Cost allocation"
+    ],
+    "benefits": [
+      "Reduce energy costs 30%",
+      "Lower carbon footprint",
+      "Demand charge savings",
+      "ESG reporting"
+    ],
+    "price": "$1,299/month",
+    "priceRange": "$1,299 - $4,999/month",
+    "icon": "⚡",
+    "tags": [
+      "energy",
+      "iot",
+      "sustainability",
+      "optimization"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-energy-002",
+    "name": "Smart Grid IoT Integration Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Smart Grid",
+    "description": "Integrate IoT devices with smart grid infrastructure for demand-side management, distributed energy resources, grid balancing, and outage detection.",
+    "features": [
+      "Demand-side management",
+      "DER integration",
+      "Grid balancing",
+      "Outage detection",
+      "Load forecasting",
+      "Voltage monitoring"
+    ],
+    "benefits": [
+      "Grid stability",
+      "Reduce peak demand",
+      "Integrate renewables",
+      "Faster outage recovery"
+    ],
+    "price": "$3,999/month",
+    "priceRange": "$3,999 - $14,999/month",
+    "icon": "🔌",
+    "tags": [
+      "smart-grid",
+      "energy",
+      "iot",
+      "utilities"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-healthcare-001",
+    "name": "Healthcare IoT Monitoring Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Healthcare",
+    "description": "HIPAA-compliant IoT platform for remote patient monitoring with wearable integration, vital sign tracking, medication adherence, and emergency alerting.",
+    "features": [
+      "Wearable integration",
+      "Vital sign tracking",
+      "Medication adherence",
+      "Emergency alerts",
+      "HIPAA compliance",
+      "Clinical dashboards"
+    ],
+    "benefits": [
+      "Reduce hospital readmissions 50%",
+      "Continuous patient monitoring",
+      "Early intervention",
+      "Regulatory compliance"
+    ],
+    "price": "$2,499/month",
+    "priceRange": "$2,499 - $8,999/month",
+    "icon": "🏥",
+    "tags": [
+      "healthcare",
+      "iot",
+      "remote-monitoring",
+      "hipaa"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-retail-001",
+    "name": "Smart Retail IoT Solutions",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Retail",
+    "description": "IoT solutions for retail with smart shelves, customer flow analytics, inventory tracking, cold chain monitoring, and loss prevention systems.",
+    "features": [
+      "Smart shelves",
+      "Customer flow analytics",
+      "Inventory tracking",
+      "Cold chain monitoring",
+      "Loss prevention",
+      "Digital signage"
+    ],
+    "benefits": [
+      "Reduce shrinkage 40%",
+      "Optimize store layout",
+      "Prevent stockouts",
+      "Improve customer experience"
+    ],
+    "price": "$1,499/month",
+    "priceRange": "$1,499 - $5,999/month",
+    "icon": "🛒",
+    "tags": [
+      "retail",
+      "iot",
+      "smart-shelves",
+      "inventory"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "digital-twin-003",
+    "name": "Smart City Digital Twin Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Smart City",
+    "description": "Create city-scale digital twins for traffic simulation, urban planning, emergency response, and infrastructure management with real-time IoT data integration.",
+    "features": [
+      "Traffic simulation",
+      "Urban planning",
+      "Emergency response",
+      "Infrastructure management",
+      "3D visualization",
+      "Real-time data integration"
+    ],
+    "benefits": [
+      "Optimize traffic flow 30%",
+      "Better urban planning",
+      "Faster emergency response",
+      "Data-driven decisions"
+    ],
+    "price": "$9,999/month",
+    "priceRange": "$9,999 - $49,999/month",
+    "icon": "🏙️",
+    "tags": [
+      "digital-twin",
+      "smart-city",
+      "urban-planning",
+      "traffic"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-computing-003",
+    "name": "Edge Kubernetes & Container Orchestration",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Edge Containers",
+    "description": "Deploy and manage containerized workloads at the edge with K3s/KubeEdge, automated rollouts, resource optimization, and centralized multi-cluster management.",
+    "features": [
+      "K3s/KubeEdge deployment",
+      "Automated rollouts",
+      "Resource optimization",
+      "Multi-cluster management",
+      "Service mesh",
+      "GitOps"
+    ],
+    "benefits": [
+      "Cloud-native at the edge",
+      "Automated deployments",
+      "Optimized resources",
+      "Centralized management"
+    ],
+    "price": "$1,999/month",
+    "priceRange": "$1,999 - $7,999/month",
+    "icon": "☸️",
+    "tags": [
+      "edge",
+      "kubernetes",
+      "containers",
+      "orchestration"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "iot-data-003",
+    "name": "IoT Data Governance & Compliance Platform",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Data Governance",
+    "description": "Comprehensive data governance for IoT deployments with data lineage tracking, privacy controls, retention policies, GDPR/CCPA compliance, and audit trails.",
+    "features": [
+      "Data lineage",
+      "Privacy controls",
+      "Retention policies",
+      "GDPR compliance",
+      "CCPA compliance",
+      "Audit trails"
+    ],
+    "benefits": [
+      "Regulatory compliance",
+      "Data privacy protection",
+      "Transparent data flows",
+      "Audit readiness"
+    ],
+    "price": "$1,699/month",
+    "priceRange": "$1,699 - $5,999/month",
+    "icon": "📋",
+    "tags": [
+      "iot",
+      "data-governance",
+      "compliance",
+      "privacy"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "edge-computing-004",
+    "name": "Edge CDN & Content Delivery Optimization",
+    "category": "Edge Computing & IoT",
+    "subcategory": "Content Delivery",
+    "description": "Edge-optimized content delivery with intelligent caching, dynamic content acceleration, image optimization, and real-time analytics for global audiences.",
+    "features": [
+      "Intelligent caching",
+      "Dynamic acceleration",
+      "Image optimization",
+      "Real-time analytics",
+      "DDoS protection",
+      "SSL/TLS management"
+    ],
+    "benefits": [
+      "50% faster page loads",
+      "Reduced origin load",
+      "Global performance",
+      "Built-in security"
+    ],
+    "price": "$499/month",
+    "priceRange": "$499 - $2,999/month",
+    "icon": "🌍",
+    "tags": [
+      "edge",
+      "cdn",
+      "content-delivery",
+      "performance"
+    ],
+    "contactInfo": {
+      "phone": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
   }
 ];
-
-export const servicesData = allServices;
-export const aiServices = allServices.filter(s => /ai/i.test(s.category));
-export const itServices = allServices.filter(s => /^it$/i.test(s.category) || /it services/i.test(s.category));
-export const cloudServices = allServices.filter(s => /cloud/i.test(s.category));
-export const securityServices = allServices.filter(s => /security/i.test(s.category));
-export const dataServices = allServices.filter(s => /data/i.test(s.category));
-export const automationServices = allServices.filter(s => /automation/i.test(s.category));
-export const microSaasServices = allServices.filter(s => /micro.?saas/i.test(s.category));
-export const devopsServices = allServices.filter(s => /devops/i.test(s.category));
-export const blockchainServices = allServices.filter(s => /blockchain/i.test(s.category));
-export const iotServices = allServices.filter(s => /iot/i.test(s.category));
-export const emailIntelligenceServices = allServices.filter(s => /email/i.test(s.category));
-
-export function getServiceById(id: string): Service | undefined {
-  return allServices.find(s => s.id === id);
-}
-
-export function getServicesByCategory(category: string): Service[] {
-  return allServices.filter(s => s.category.toLowerCase() === category.toLowerCase());
-}
-
-export function getPopularServices(limit = 20): Service[] {
-  return allServices.slice(0, limit);
-}
