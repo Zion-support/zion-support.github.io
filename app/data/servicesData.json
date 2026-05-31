@@ -121956,5 +121956,786 @@
       "address": "364 E Main St STE 1008, Middletown, DE 19709"
     },
     "link": "/services/v965-productivity-insights-engine"
+  },
+  {
+    "id": "v966-thread-summarizer",
+    "name": "AI Email Thread Summarizer V966",
+    "category": "AI Email Intelligence",
+    "icon": "📝",
+    "price": "From $299/month",
+    "description": "Auto-summarizes long email threads into concise executive summaries with action items, decisions, open questions, and key topics. Saves 30+ minutes per day.",
+    "features": [
+      "Action Item Extraction",
+      "Decision Logging",
+      "Question Tracking",
+      "Topic Identification",
+      "Complexity Scoring",
+      "Executive Summaries"
+    ],
+    "benefits": [
+      "Save 30+ min/day",
+      "Never miss action items",
+      "Instant thread comprehension"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v966-thread-summarizer"
+  },
+  {
+    "id": "v966-action-item-extractor",
+    "name": "Email Action Item Extractor",
+    "category": "AI Email Intelligence",
+    "icon": "✅",
+    "price": "From $149/month",
+    "description": "Automatically extracts action items, TODOs, and deadlines from email threads. Assigns ownership and tracks completion status.",
+    "features": [
+      "Auto-Extraction",
+      "Ownership Assignment",
+      "Deadline Tracking",
+      "Completion Status",
+      "Reminders"
+    ],
+    "benefits": [
+      "Zero missed tasks",
+      "Clear accountability",
+      "On-time delivery"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v966-action-item-extractor"
+  },
+  {
+    "id": "v966-decision-logger",
+    "name": "Email Decision Logger",
+    "category": "AI Email Intelligence",
+    "icon": "📋",
+    "price": "From $129/month",
+    "description": "Captures and logs all decisions made in email conversations. Creates searchable decision history with context and rationale.",
+    "features": [
+      "Decision Capture",
+      "Context Preservation",
+      "Searchable History",
+      "Rationale Tracking",
+      "Audit Trail"
+    ],
+    "benefits": [
+      "Decision accountability",
+      "No re-discussions",
+      "Complete audit trail"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v966-decision-logger"
+  },
+  {
+    "id": "v966-executive-digest",
+    "name": "Executive Email Digest",
+    "category": "AI Email Intelligence",
+    "icon": "📰",
+    "price": "From $199/month",
+    "description": "Generates executive-level digests from long email threads. Perfect for busy leaders who need the essentials without reading every message.",
+    "features": [
+      "Executive Summary",
+      "Key Points Only",
+      "Time-Saving Format",
+      "Priority Filtering",
+      "One-Click Review"
+    ],
+    "benefits": [
+      "Read 80% less",
+      "Stay informed",
+      "Better decisions faster"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v966-executive-digest"
+  },
+  {
+    "id": "v966-thread-complexity-analyzer",
+    "name": "Thread Complexity Analyzer",
+    "category": "AI Email Intelligence",
+    "icon": "🔬",
+    "price": "From $99/month",
+    "description": "Analyzes email thread complexity based on length, participants, depth, questions, and attachments. Helps prioritize which threads need attention first.",
+    "features": [
+      "Complexity Scoring",
+      "Factor Analysis",
+      "Priority Guidance",
+      "Thread Health",
+      "Complexity Trends"
+    ],
+    "benefits": [
+      "Smart prioritization",
+      "Focus on complex threads",
+      "Efficient processing"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v966-thread-complexity-analyzer"
+  },
+  {
+    "id": "v966-reading-time-optimizer",
+    "name": "Email Reading Time Optimizer",
+    "category": "AI Email Intelligence",
+    "icon": "⏱️",
+    "price": "From $79/month",
+    "description": "Estimates reading time for each email and provides quick-scan summaries. Helps you budget your email time and process faster.",
+    "features": [
+      "Reading Time Estimates",
+      "Quick-Scan Mode",
+      "Time Budgeting",
+      "Speed Processing",
+      "Batch Optimization"
+    ],
+    "benefits": [
+      "Time-aware processing",
+      "Faster inbox zero",
+      "Better time management"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v966-reading-time-optimizer"
+  },
+  {
+    "id": "v967-priority-queue-engine",
+    "name": "AI Priority Queue Engine V967",
+    "category": "AI Email Intelligence",
+    "icon": "⚡",
+    "price": "From $349/month",
+    "description": "Multi-signal intelligent email prioritization using sender importance, content urgency, business value, thread context, and time sensitivity.",
+    "features": [
+      "5 Signal Analysis",
+      "P0-P4 Priority Levels",
+      "Queue Positioning",
+      "VIP Detection",
+      "Business Value Scoring"
+    ],
+    "benefits": [
+      "Never miss critical emails",
+      "Smart inbox ordering",
+      "Data-driven priorities"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v967-priority-queue-engine"
+  },
+  {
+    "id": "v967-vip-sender-detection",
+    "name": "VIP Sender Detection System",
+    "category": "AI Email Intelligence",
+    "icon": "⭐",
+    "price": "From $149/month",
+    "description": "Identifies VIP senders (CEOs, executives, board members) and automatically prioritizes their emails above standard queue.",
+    "features": [
+      "Executive Detection",
+      "CC VIP Scanning",
+      "Custom VIP Lists",
+      "Priority Boost",
+      "Instant Notification"
+    ],
+    "benefits": [
+      "Never miss executive emails",
+      "Priority treatment",
+      "VIP relationship management"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v967-vip-sender-detection"
+  },
+  {
+    "id": "v967-urgency-scoring",
+    "name": "Email Urgency Scoring Engine",
+    "category": "AI Email Intelligence",
+    "icon": "🔴",
+    "price": "From $179/month",
+    "description": "Scores email urgency from content signals — critical keywords, deadlines, negative sentiment, escalation markers, and exclamation patterns.",
+    "features": [
+      "Content Analysis",
+      "Deadline Detection",
+      "Sentiment Scoring",
+      "Escalation Markers",
+      "Real-Time Alerts"
+    ],
+    "benefits": [
+      "Instant urgency awareness",
+      "Never miss deadlines",
+      "Proactive response"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v967-urgency-scoring"
+  },
+  {
+    "id": "v967-business-value-scorer",
+    "name": "Business Value Scorer",
+    "category": "AI Email Intelligence",
+    "icon": "💎",
+    "price": "From $199/month",
+    "description": "Scores the business value of each email based on monetary mentions, contract terms, revenue signals, partnership opportunities, and scale indicators.",
+    "features": [
+      "Monetary Detection",
+      "Contract Signals",
+      "Revenue Indicators",
+      "Partnership Scoring",
+      "Scale Assessment"
+    ],
+    "benefits": [
+      "Focus on high-value emails",
+      "Revenue optimization",
+      "Strategic prioritization"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v967-business-value-scorer"
+  },
+  {
+    "id": "v967-smart-inbox-organizer",
+    "name": "Smart Inbox Organizer",
+    "category": "AI Email Intelligence",
+    "icon": "📥",
+    "price": "From $129/month",
+    "description": "Automatically organizes your inbox by priority score. Critical emails at top, low-priority batched for later processing.",
+    "features": [
+      "Auto-Sorting",
+      "Priority Sections",
+      "Batch Processing",
+      "Smart Folders",
+      "Focus Mode"
+    ],
+    "benefits": [
+      "Organized inbox",
+      "Focus on what matters",
+      "Batch low-priority"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v967-smart-inbox-organizer"
+  },
+  {
+    "id": "v967-time-sensitivity-detector",
+    "name": "Time Sensitivity Detector",
+    "category": "AI Email Intelligence",
+    "icon": "⏰",
+    "price": "From $99/month",
+    "description": "Detects time-sensitive content in emails — today/tomorrow deadlines, immediate requests, and scheduling urgency.",
+    "features": [
+      "Deadline Extraction",
+      "Time Pattern Matching",
+      "Urgency Levels",
+      "Calendar Integration",
+      "Alert System"
+    ],
+    "benefits": [
+      "Never miss deadlines",
+      "Time-aware processing",
+      "Proactive scheduling"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v967-time-sensitivity-detector"
+  },
+  {
+    "id": "v968-attachment-intelligence",
+    "name": "AI Attachment Intelligence V968",
+    "category": "AI Email Intelligence",
+    "icon": "📎",
+    "price": "From $299/month",
+    "description": "Intelligent attachment analysis — document type classification, data extraction, coherence checking, missing attachment detection, and sensitive data risk assessment.",
+    "features": [
+      "Document Classification",
+      "Data Extraction",
+      "Coherence Check",
+      "Missing Detection",
+      "Risk Assessment"
+    ],
+    "benefits": [
+      "Auto-process documents",
+      "Catch missing attachments",
+      "Data security"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v968-attachment-intelligence"
+  },
+  {
+    "id": "v968-document-classifier",
+    "name": "Email Document Classifier",
+    "category": "AI Email Intelligence",
+    "icon": "🏷️",
+    "price": "From $149/month",
+    "description": "Automatically classifies email attachments into 6+ document types: contracts, invoices, proposals, reports, specifications, and spreadsheets.",
+    "features": [
+      "6+ Doc Types",
+      "Confidence Scoring",
+      "Auto-Routing",
+      "Template Matching",
+      "Custom Categories"
+    ],
+    "benefits": [
+      "Auto-categorization",
+      "Smart routing",
+      "Faster processing"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v968-document-classifier"
+  },
+  {
+    "id": "v968-missing-attachment-detector",
+    "name": "Missing Attachment Detector",
+    "category": "AI Email Intelligence",
+    "icon": "🔍",
+    "price": "From $79/month",
+    "description": "Detects when an email mentions an attachment but none is included. Prevents the classic 'forgot the attachment' embarrassment.",
+    "features": [
+      "Context Analysis",
+      "Reference Detection",
+      "Auto-Alert",
+      "Suggested Follow-Up",
+      "Pattern Learning"
+    ],
+    "benefits": [
+      "Never forget attachments",
+      "Professional image",
+      "Catch errors early"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v968-missing-attachment-detector"
+  },
+  {
+    "id": "v968-sensitive-data-scanner",
+    "name": "Attachment Sensitive Data Scanner",
+    "category": "AI Email Intelligence",
+    "icon": "🔒",
+    "price": "From $249/month",
+    "description": "Scans attachment filenames and email context for sensitive data indicators — confidential markers, financial documents, and personal information.",
+    "features": [
+      "Filename Analysis",
+      "Context Scanning",
+      "Risk Scoring",
+      "Auto-Flagging",
+      "Compliance Alerts"
+    ],
+    "benefits": [
+      "Data leak prevention",
+      "Compliance assurance",
+      "Risk mitigation"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v968-sensitive-data-scanner"
+  },
+  {
+    "id": "v968-attachment-coherence-checker",
+    "name": "Attachment Coherence Checker",
+    "category": "AI Email Intelligence",
+    "icon": "🔗",
+    "price": "From $89/month",
+    "description": "Verifies that attachments are actually referenced in the email body. Detects orphaned attachments and irrelevant file inclusions.",
+    "features": [
+      "Reference Checking",
+      "Coherence Scoring",
+      "Orphan Detection",
+      "Relevance Analysis",
+      "Warnings"
+    ],
+    "benefits": [
+      "Clean communication",
+      "Relevant attachments only",
+      "Professional emails"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v968-attachment-coherence-checker"
+  },
+  {
+    "id": "v968-filename-data-extractor",
+    "name": "Filename Data Extractor",
+    "category": "AI Email Intelligence",
+    "icon": "📊",
+    "price": "From $99/month",
+    "description": "Extracts structured data from attachment filenames — dates, version numbers, amounts, and project identifiers.",
+    "features": [
+      "Date Extraction",
+      "Version Detection",
+      "Amount Parsing",
+      "Project ID Recognition",
+      "Auto-Indexing"
+    ],
+    "benefits": [
+      "Auto-metadata",
+      "Better organization",
+      "Searchable attachments"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v968-filename-data-extractor"
+  },
+  {
+    "id": "v969-response-quality-analyzer",
+    "name": "AI Response Quality Analyzer V969",
+    "category": "AI Email Intelligence",
+    "icon": "✨",
+    "price": "From $349/month",
+    "description": "Evaluates email response quality across 8 dimensions: completeness, clarity, tone, professionalism, accuracy, timeliness, actionability, and formatting.",
+    "features": [
+      "8-Dimension Scoring",
+      "Quality Grading A+ to F",
+      "Improvement Suggestions",
+      "Strength Identification",
+      "Coaching Reports"
+    ],
+    "benefits": [
+      "Better responses",
+      "Professional consistency",
+      "Continuous improvement"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v969-response-quality-analyzer"
+  },
+  {
+    "id": "v969-tone-analyzer",
+    "name": "Email Tone Analyzer",
+    "category": "AI Email Intelligence",
+    "icon": "🎭",
+    "price": "From $149/month",
+    "description": "Analyzes emotional tone of email responses. Detects empathy, frustration, enthusiasm, and suggests tone adjustments for professional communication.",
+    "features": [
+      "Emotion Detection",
+      "Empathy Scoring",
+      "Tone Adjustment",
+      "Context-Aware",
+      "Cultural Sensitivity"
+    ],
+    "benefits": [
+      "Appropriate tone",
+      "Better relationships",
+      "Professional communication"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v969-tone-analyzer"
+  },
+  {
+    "id": "v969-professionalism-checker",
+    "name": "Email Professionalism Checker",
+    "category": "AI Email Intelligence",
+    "icon": "👔",
+    "price": "From $129/month",
+    "description": "Checks emails for professionalism — detects slang, excessive punctuation, informal abbreviations, and suggests more professional alternatives.",
+    "features": [
+      "Slang Detection",
+      "Punctuation Check",
+      "Abbreviation Scan",
+      "Capitalization",
+      "Professional Alternatives"
+    ],
+    "benefits": [
+      "Always professional",
+      "Better impression",
+      "Corporate-ready"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v969-professionalism-checker"
+  },
+  {
+    "id": "v969-response-coach",
+    "name": "AI Email Response Coach",
+    "category": "AI Email Intelligence",
+    "icon": "🎓",
+    "price": "From $199/month",
+    "description": "Real-time coaching for email responses — scores your draft and suggests specific improvements before you hit send.",
+    "features": [
+      "Real-Time Scoring",
+      "Inline Suggestions",
+      "Before/After Comparison",
+      "Skill Tracking",
+      "Weekly Reports"
+    ],
+    "benefits": [
+      "Write better emails",
+      "Learn continuously",
+      "Measurable improvement"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v969-response-coach"
+  },
+  {
+    "id": "v969-clarity-optimizer",
+    "name": "Email Clarity Optimizer",
+    "category": "AI Email Intelligence",
+    "icon": "💡",
+    "price": "From $119/month",
+    "description": "Optimizes email clarity by analyzing sentence length, jargon usage, and structural clarity. Suggests simpler, clearer alternatives.",
+    "features": [
+      "Sentence Analysis",
+      "Jargon Detection",
+      "Clarity Scoring",
+      "Rewrite Suggestions",
+      "Simplification"
+    ],
+    "benefits": [
+      "Clearer emails",
+      "Better comprehension",
+      "Fewer misunderstandings"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v969-clarity-optimizer"
+  },
+  {
+    "id": "v969-actionability-scorer",
+    "name": "Email Actionability Scorer",
+    "category": "AI Email Intelligence",
+    "icon": "🎯",
+    "price": "From $99/month",
+    "description": "Scores how actionable an email response is — checks for clear next steps, deadlines, ownership, and specific deliverables.",
+    "features": [
+      "Next Step Detection",
+      "Deadline Checking",
+      "Ownership Tracking",
+      "Specificity Scoring",
+      "Action Templates"
+    ],
+    "benefits": [
+      "Actionable responses",
+      "Clear expectations",
+      "Faster execution"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v969-actionability-scorer"
+  },
+  {
+    "id": "v970-thread-continuity-manager",
+    "name": "AI Thread Continuity Manager V970",
+    "category": "AI Email Intelligence",
+    "icon": "🔗",
+    "price": "From $299/month",
+    "description": "Detects fragmented conversations across multiple threads, consolidates scattered discussions, tracks conversation state, and ensures continuity.",
+    "features": [
+      "Fragmentation Detection",
+      "Thread Fingerprinting",
+      "Related Thread Finder",
+      "State Tracking",
+      "Consolidation Recommendations"
+    ],
+    "benefits": [
+      "Unified conversations",
+      "No lost context",
+      "Efficient communication"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v970-thread-continuity-manager"
+  },
+  {
+    "id": "v970-fragmentation-detector",
+    "name": "Conversation Fragmentation Detector",
+    "category": "AI Email Intelligence",
+    "icon": "🔀",
+    "price": "From $179/month",
+    "description": "Detects when conversations are scattered across multiple email threads. Identifies cross-references and suggests consolidation.",
+    "features": [
+      "Cross-Reference Detection",
+      "Fragment Scoring",
+      "Consolidation Alerts",
+      "Thread Mapping",
+      "History View"
+    ],
+    "benefits": [
+      "Find all related emails",
+      "Stop losing context",
+      "Unified view"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v970-fragmentation-detector"
+  },
+  {
+    "id": "v970-thread-fingerprinting",
+    "name": "Thread Fingerprinting Engine",
+    "category": "AI Email Intelligence",
+    "icon": "🔏",
+    "price": "From $149/month",
+    "description": "Generates unique fingerprints for email threads based on participants and topics. Enables instant matching of related conversations.",
+    "features": [
+      "Unique Fingerprints",
+      "Participant Matching",
+      "Topic Matching",
+      "Instant Lookup",
+      "Similarity Scoring"
+    ],
+    "benefits": [
+      "Instant thread matching",
+      "Never lose context",
+      "Smart threading"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v970-thread-fingerprinting"
+  },
+  {
+    "id": "v970-missing-participant-detector",
+    "name": "Missing Participant Detector",
+    "category": "AI Email Intelligence",
+    "icon": "👤",
+    "price": "From $99/month",
+    "description": "Detects when participants from related threads are missing from the current conversation. Ensures all stakeholders are included.",
+    "features": [
+      "Cross-Thread Analysis",
+      "Participant Tracking",
+      "Missing Alerts",
+      "Auto-CC Suggestions",
+      "Inclusion History"
+    ],
+    "benefits": [
+      "Include all stakeholders",
+      "No communication gaps",
+      "Complete conversations"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v970-missing-participant-detector"
+  },
+  {
+    "id": "v970-conversation-state-tracker",
+    "name": "Conversation State Tracker",
+    "category": "AI Email Intelligence",
+    "icon": "📊",
+    "price": "From $199/month",
+    "description": "Tracks the current state of email conversations — awaiting response, information shared, decision needed, action pending, resolved, or escalated.",
+    "features": [
+      "6+ State Types",
+      "State Transitions",
+      "Actionable Detection",
+      "History Tracking",
+      "Dashboard View"
+    ],
+    "benefits": [
+      "Know where things stand",
+      "No stalled threads",
+      "Clear status"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v970-conversation-state-tracker"
+  },
+  {
+    "id": "v970-thread-consolidator",
+    "name": "Email Thread Consolidator",
+    "category": "AI Email Intelligence",
+    "icon": "🔄",
+    "price": "From $229/month",
+    "description": "Automatically suggests and facilitates consolidation of fragmented email threads into unified conversations with full context preservation.",
+    "features": [
+      "Auto-Consolidation",
+      "Context Merging",
+      "Unified View",
+      "Participant Sync",
+      "History Preservation"
+    ],
+    "benefits": [
+      "Unified conversations",
+      "No lost context",
+      "Efficient communication"
+    ],
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "link": "/services/v970-thread-consolidator"
   }
 ]
