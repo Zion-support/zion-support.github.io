@@ -87455,5 +87455,754 @@
       "Team building suggestions",
       "Collaboration enhancement"
     ]
+  },
+  {
+    "id": "wave98-1",
+    "title": "Carbon Credit Marketplace & Verification Platform",
+    "description": "Enterprise carbon credit marketplace with blockchain verification. Source, verify, trade, and retire credits from 500+ verified projects globally.",
+    "features": [
+      "500+ verified projects",
+      "Blockchain-issued credits",
+      "AI MRV",
+      "Real-time pricing",
+      "Portfolio tracking",
+      "Verra Gold Standard",
+      "Retirement certificates",
+      "TCFD SBTi reporting"
+    ],
+    "benefits": [
+      "500+ verified projects",
+      "Blockchain-verified",
+      "Real-time pricing",
+      "Auto portfolio tracking",
+      "TCFD-ready",
+      "SBTi-aligned"
+    ],
+    "pricing": {
+      "basic": "$997/mo",
+      "pro": "$2,497/mo",
+      "enterprise": "$5,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🌱",
+    "href": "https://ziontechgroup.com/services/carbon-credit-marketplace",
+    "popular": true,
+    "category": "Climate Tech",
+    "industry": "Carbon Markets"
+  },
+  {
+    "id": "wave98-2",
+    "title": "ESG Reporting & Disclosure Automation",
+    "description": "One-click ESG reports: GRI, SASB, TCFD, CDP, EU Taxonomy. Auto-collect from 200+ sources. Months to hours.",
+    "features": [
+      "GRI SASB TCFD CDP EU Taxonomy",
+      "200+ data sources",
+      "AI data validation",
+      "Audit-ready templates",
+      "Materiality assessment",
+      "Peer benchmarking",
+      "Board dashboards",
+      "Assurance support"
+    ],
+    "benefits": [
+      "Months to hours",
+      "200+ auto collection",
+      "Audit-ready",
+      "Materiality",
+      "Peer benchmarking",
+      "Board dashboards"
+    ],
+    "pricing": {
+      "basic": "$1,497/mo",
+      "pro": "$3,997/mo",
+      "enterprise": "$9,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📊",
+    "href": "https://ziontechgroup.com/services/esg-reporting-automation",
+    "popular": true,
+    "category": "Climate Tech",
+    "industry": "ESG Reporting"
+  },
+  {
+    "id": "wave98-3",
+    "title": "Renewable Energy Asset Management",
+    "description": "AI for solar, wind, storage. Performance optimization, predictive maintenance, PPA management, energy trading. Yield +8%.",
+    "features": [
+      "Performance AI",
+      "Predictive maintenance",
+      "PPA management",
+      "Energy trading",
+      "SCADA DERMS",
+      "Degradation modeling",
+      "Revenue forecasting",
+      "Compliance"
+    ],
+    "benefits": [
+      "8% yield increase",
+      "Predict failures",
+      "PPA optimization",
+      "Trading revenue",
+      "Degradation tracking",
+      "Auto compliance"
+    ],
+    "pricing": {
+      "basic": "$2,997/mo",
+      "pro": "$6,997/mo",
+      "enterprise": "$14,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "⚡",
+    "href": "https://ziontechgroup.com/services/renewable-energy-management",
+    "popular": true,
+    "category": "Climate Tech",
+    "industry": "Energy"
+  },
+  {
+    "id": "wave98-4",
+    "title": "Circular Economy & Waste Intelligence Platform",
+    "description": "AI circular economy: waste analysis, material recovery, secondary marketplace, circular supply chain. Turn waste into revenue.",
+    "features": [
+      "Waste stream AI",
+      "Material recovery",
+      "Secondary marketplace",
+      "Circular supply chain",
+      "EPA compliance",
+      "Waste-to-revenue",
+      "Supplier scoring",
+      "SAP Oracle sustain"
+    ],
+    "benefits": [
+      "Waste cost -30%",
+      "New revenue",
+      "Circular supply chain",
+      "Compliance",
+      " Supplier scoring",
+      "Landfill diversion"
+    ],
+    "pricing": {
+      "basic": "$997/mo",
+      "pro": "$2,497/mo",
+      "enterprise": "$5,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "♻️",
+    "href": "https://ziontechgroup.com/services/circular-economy-platform",
+    "popular": false,
+    "category": "Climate Tech",
+    "industry": "Circular Econ"
+  },
+  {
+    "id": "wave98-5",
+    "title": "Climate Risk Assessment & Adaptation Planning",
+    "description": "AI climate risk: physical (flood, fire, heat, sea level), transition risk, adaptation planning. TCFD/SEC compliance.",
+    "features": [
+      "Physical risk scoring",
+      "Transition risk",
+      "Asset-level exposure",
+      "Adaptation planning",
+      "TCFD SEC",
+      "Insurance data",
+      "RCP 2.6-8.5",
+      "Supply chain risk"
+    ],
+    "benefits": [
+      "Asset-level exposure",
+      "TCFD/SEC",
+      "Adaptation",
+      "Insurance savings",
+      "Supply chain",
+      "Scenario analysis"
+    ],
+    "pricing": {
+      "basic": "$1,997/mo",
+      "pro": "$4,997/mo",
+      "enterprise": "$12,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🌊",
+    "href": "https://ziontechgroup.com/services/climate-risk-assessment",
+    "popular": true,
+    "category": "Climate Tech",
+    "industry": "Risk Mgmt"
+  },
+  {
+    "id": "wave99-1",
+    "title": "AI Quality Inspection & Visual Defect Detection",
+    "description": "Computer vision inspection: 99.9% accuracy, 100x faster than human. Any camera system. Deploy in hours.",
+    "features": [
+      "99.9% accuracy",
+      "100x faster",
+      "Any camera",
+      "Custom training",
+      "Real-time integration",
+      "Defect classification",
+      "PLC MES SAP",
+      "Continuous learning"
+    ],
+    "benefits": [
+      "99.9% accuracy",
+      "100x faster",
+      "Hours not months",
+      "Any camera",
+      "Real-time",
+      "Root cause",
+      "Continuous"
+    ],
+    "pricing": {
+      "basic": "$2,497/mo",
+      "pro": "$5,997/mo",
+      "enterprise": "$14,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔍",
+    "href": "https://ziontechgroup.com/services/ai-quality-inspection",
+    "popular": true,
+    "category": "Manufacturing",
+    "industry": "Quality"
+  },
+  {
+    "id": "wave99-2",
+    "title": "Additive Manufacturing 3D Printing Production Suite",
+    "description": "End-to-end additive: generative design, print simulation, quality monitoring, digital inventory. Weight -40%.",
+    "features": [
+      "Generative design",
+      "Print simulation",
+      "In-situ monitoring",
+      "Digital inventory",
+      "Materials DB",
+      "Post-processing",
+      "EOS HP Stratasys",
+      "Cert docs"
+    ],
+    "benefits": [
+      "40% lighter",
+      "Simulation",
+      "Print on demand",
+      "Quality auto",
+      "Auto post-process",
+      "Cert docs"
+    ],
+    "pricing": {
+      "basic": "$1,997/mo",
+      "pro": "$4,497/mo",
+      "enterprise": "$9,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🖨️",
+    "href": "https://ziontechgroup.com/services/additive-manufacturing-suite",
+    "popular": false,
+    "category": "Manufacturing",
+    "industry": "Additive"
+  },
+  {
+    "id": "wave99-3",
+    "title": "Industrial IoT & Edge AI Platform",
+    "description": "Edge AI for IoT: process optimization, anomaly detection, autonomous control. <1ms latency for real-time decisions.",
+    "features": [
+      "<1ms edge",
+      "Process opt",
+      "Anomaly detect",
+      "Auto control",
+      "Siemens ABB",
+      "5G TSN",
+      "Digital twin",
+      "Cybersecure"
+    ],
+    "benefits": "$3,997/mo",
+    "pricing": {
+      "basic": "$8,997/mo",
+      "pro": "$19,997/mo",
+      "enterprise": "📡"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Manufacturing",
+    "href": true,
+    "popular": false,
+    "category": "IIoT",
+    "industry": "https://ziontechgroup.com/services/industrial-iot-edge"
+  },
+  {
+    "id": "wave99-4",
+    "title": "Supply Chain Control Tower & Visibility Platform",
+    "description": "Real-time global visibility: track shipments, predict disruptions, optimize inventory, automate procurement.",
+    "features": [
+      "Real-time tracking",
+      "Disruption AI",
+      "Inventory opt",
+      "Auto procurement",
+      "SAP Oracle o9",
+      "Supplier risk",
+      "What-if",
+      "Carbon per shipment"
+    ],
+    "benefits": [
+      "Global visibility",
+      "Disruption predict",
+      "Inventory opt",
+      "Auto procurement",
+      "Supplier risk",
+      "Scenarios",
+      "Carbon"
+    ],
+    "pricing": {
+      "basic": "$2,997/mo",
+      "pro": "$6,997/mo",
+      "enterprise": "$14,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔗",
+    "href": "https://ziontechgroup.com/services/supply-chain-control-tower",
+    "popular": false,
+    "category": "Manufacturing",
+    "industry": "Supply Chain"
+  },
+  {
+    "id": "wave99-5",
+    "title": "Manufacturing Execution System MES AI",
+    "description": "AI MES: production scheduling, quality, traceability, OEE. OEE +15% with AI scheduling.",
+    "features": [
+      "AI scheduling",
+      "Predictive quality",
+      "Traceability",
+      "OEE +15%",
+      "SAP Siemens",
+      "Real-time dashboards",
+      "FDA ISO",
+      "Paperless"
+    ],
+    "benefits": [
+      "OEE +15%",
+      "AI scheduling",
+      "Predict quality",
+      "Traceability",
+      "Compliance",
+      "Paperless"
+    ],
+    "pricing": {
+      "basic": "$4,497/mo",
+      "pro": "$9,997/mo",
+      "enterprise": "$24,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🏭",
+    "href": "https://ziontechgroup.com/services/mes-ai-platform",
+    "popular": true,
+    "category": "Manufacturing",
+    "industry": "MES"
+  },
+  {
+    "id": "wave100-1",
+    "title": "AI Video Production & Editing Platform",
+    "description": "AI video: auto-edit, auto-caption, auto-thumbnail, auto-distribute. 10x faster. Text-to-video included.",
+    "features": [
+      "Auto-editing",
+      "Captioning 50+",
+      "Auto-thumbnail",
+      "Text-to-video",
+      "15+ platforms",
+      "Brand templates",
+      "YouTube TikTok",
+      "Analytics"
+    ],
+    "benefits": [
+      "10x faster",
+      "Auto-caption",
+      "Text-to-video",
+      "Multi-platform",
+      "Brand",
+      "Analytics"
+    ],
+    "pricing": {
+      "basic": "$197/mo",
+      "pro": "$497/mo",
+      "enterprise": "$1,297/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎬",
+    "href": "https://ziontechgroup.com/services/ai-video-production",
+    "popular": true,
+    "category": "Creative Tech",
+    "industry": "Video"
+  },
+  {
+    "id": "wave100-2",
+    "title": "Generative AI Design Studio",
+    "description": "AI design: logos, marketing, social graphics from text. Brand-consistent with style guides.",
+    "features": [
+      "Text-to-image",
+      "Logo AI",
+      "Social graphics",
+      "Brand kit",
+      "Asset management",
+      "Figma Adobe Canva",
+      "Commercial license",
+      "Batch 1000s"
+    ],
+    "benefits": [
+      "Infinite variations",
+      "Brand",
+      "1000s",
+      "Commercial",
+      "Figma/Adobe",
+      "Assets"
+    ],
+    "pricing": {
+      "basic": "$97/mo",
+      "pro": "$297/mo",
+      "enterprise": "$797/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎨",
+    "href": "https://ziontechgroup.com/services/ai-design-studio",
+    "popular": true,
+    "category": "Creative Tech",
+    "industry": "Design"
+  },
+  {
+    "id": "wave100-3",
+    "title": "Podcast & Audio Production AI Platform",
+    "description": "AI podcast: transcription, AI editing, noise removal, show notes, distribution. Studio-quality from any recording.",
+    "features": [
+      "99% transcription",
+      "Auto-edit",
+      "Noise removal",
+      "Show notes",
+      "Multi-platform",
+      "Spotify Apple",
+      "Chapters",
+      "Audiograms"
+    ],
+    "benefits": [
+      "99% accuracy",
+      "Auto-edit",
+      "Studio quality",
+      "Show notes",
+      "Distribution",
+      "Audiograms"
+    ],
+    "pricing": {
+      "basic": "$97/mo",
+      "pro": "$247/mo",
+      "enterprise": "$697/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎙️",
+    "href": "https://ziontechgroup.com/services/podcast-ai-platform",
+    "popular": false,
+    "category": "Creative Tech",
+    "industry": "Audio"
+  },
+  {
+    "id": "wave100-4",
+    "title": "AI Music Composition & Licensing Platform",
+    "description": "AI music: royalty-free for ads, videos, games, apps. Custom genres, moods, durations. Full commercial license.",
+    "features": [
+      "AI composition",
+      "Custom genre",
+      "Royalty-free",
+      "Stems",
+      "Unity Unreal",
+      "Music AI",
+      "Custom soundtracks",
+      "Copyright cleared"
+    ],
+    "benefits": [
+      "Unlimited free",
+      "Custom",
+      "Commercial",
+      "Game/film",
+      "Copyright",
+      "Soundtracks"
+    ],
+    "pricing": {
+      "basic": "$147/mo",
+      "pro": "$397/mo",
+      "enterprise": "$997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎵",
+    "href": "https://ziontechgroup.com/services/ai-music-composition",
+    "popular": true,
+    "category": "Creative Tech",
+    "industry": "Music"
+  },
+  {
+    "id": "wave100-5",
+    "title": "Immersive Experience & Metaverse Development Studio",
+    "description": "No-code metaverse builder, 3D scenes, avatars, virtual events. Web, mobile, VR.",
+    "features": [
+      "No-code 3D",
+      "Avatars",
+      "Virtual events",
+      "Web mobile VR",
+      "Unity Unreal WebXR",
+      "1000+ users",
+      "NFT tickets",
+      "Analytics"
+    ],
+    "benefits": "$497/mo",
+    "pricing": {
+      "basic": "$1,297/mo",
+      "pro": "$3,497/mo",
+      "enterprise": "🌐"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Creative Tech",
+    "href": false,
+    "popular": false,
+    "category": "Metaverse",
+    "industry": "https://ziontechgroup.com/services/immersive-experience-studio"
+  },
+  {
+    "id": "wave101-1",
+    "title": "Quantum Algorithm Development Platform",
+    "description": "Cloud quantum: write, simulate, run on real hardware. IBM, IonQ, Rigetti. Qiskit, Cirq, Q#.",
+    "features": [
+      "Algorithm IDE",
+      "100+ qubit sim",
+      "Real hardware",
+      "Qiskit Circ Q#",
+      "Quantum advantage",
+      "Hybrid workflows",
+      "Error mitigation",
+      "Quantum ML"
+    ],
+    "benefits": [
+      "Write once",
+      "Real hardware",
+      "Advantage ID",
+      "Hybrid",
+      "Error mit",
+      "Quantum ML"
+    ],
+    "pricing": {
+      "basic": "$2,497/mo",
+      "pro": "$6,997/mo",
+      "enterprise": "$16,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "⚛️",
+    "href": "https://ziontechgroup.com/services/quantum-algorithm-platform",
+    "popular": true,
+    "category": "Quantum",
+    "industry": "Research"
+  },
+  {
+    "id": "wave101-2",
+    "title": "Quantum-Safe Cryptography Migration Suite",
+    "description": "Post-quantum prep: crypto inventory, vulnerability assessment, NIST PQC migration. Protect against quantum attacks.",
+    "features": [
+      "Crypto inventory",
+      "Vulnerability",
+      "NIST PQC migration",
+      "Hybrid crypto",
+      "HSM PKI",
+      "Compliance docs",
+      "Risk scoring",
+      "Roadmap"
+    ],
+    "benefits": [
+      "Full inventory",
+      "Vuln ID",
+      "NIST PQC",
+      "Hybrid",
+      "HSM/PKI",
+      "Compliance",
+      "Risk"
+    ],
+    "pricing": {
+      "basic": "$1,997/mo",
+      "pro": "$4,997/mo",
+      "enterprise": "$12,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔐",
+    "href": "https://ziontechgroup.com/services/quantum-safe-crypto",
+    "popular": true,
+    "category": "Quantum",
+    "industry": "Cybersecurity"
+  },
+  {
+    "id": "wave101-3",
+    "title": "Computational Chemistry & Materials Science AI",
+    "description": "AI chemistry: molecular simulation, materials discovery, drug-target, catalyst design. 1000x faster.",
+    "features": [
+      "Molecular dynamics",
+      "Materials prediction",
+      "Drug-target",
+      "Catalyst",
+      "VASP Gaussian",
+      "Quantum ML",
+      "High-throughput",
+      "Publish-ready"
+    ],
+    "benefits": [
+      "1000x faster",
+      "Materials",
+      "Drug insights",
+      "Catalyst",
+      "Standard",
+      "Publish"
+    ],
+    "pricing": {
+      "basic": "$3,997/mo",
+      "pro": "$8,997/mo",
+      "enterprise": "$19,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🧪",
+    "href": "https://ziontechgroup.com/services/computational-chemistry-ai",
+    "popular": false,
+    "category": "Quantum",
+    "industry": "Materials"
+  },
+  {
+    "id": "wave101-4",
+    "title": "Quantum Optimization for Logistics & Finance",
+    "description": "Combinatorial optimization (routing, scheduling, portfolio) on quantum hardware and simulators.",
+    "features": [
+      "Route optimization",
+      "Scheduling",
+      "Portfolio",
+      "Supply chain",
+      "Real hardware",
+      "Quantum-inspired",
+      "Scenarios",
+      "API-first"
+    ],
+    "benefits": [
+      "Optimal routes",
+      "Optimal schedule",
+      "Portfolio",
+      "Supply chain",
+      "Hardware",
+      "API"
+    ],
+    "pricing": {
+      "basic": "$4,497/mo",
+      "pro": "$12,997/mo",
+      "enterprise": "$29,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📊",
+    "href": "https://ziontechgroup.com/services/quantum-optimization",
+    "popular": false,
+    "category": "Quantum",
+    "industry": "Optimization"
+  },
+  {
+    "id": "wave101-5",
+    "title": "Quantum Machine Learning Research Platform",
+    "description": "Quantum ML: quantum kernels, variational classifiers, quantum neural nets. Research platform.",
+    "features": [
+      "Quantum kernels",
+      "Variational classifiers",
+      "Quantum neural nets",
+      "Real hardware",
+      "PennyLane TFQ",
+      "Research templates",
+      "Benchmarks",
+      "Collaboration"
+    ],
+    "benefits": [
+      "Kernels",
+      "Classifiers",
+      "Neural nets",
+      "Hardware",
+      "Pennylane",
+      "Research"
+    ],
+    "pricing": {
+      "basic": "$3,497/mo",
+      "pro": "$7,997/mo",
+      "enterprise": "$18,997/mo"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🧠",
+    "href": "https://ziontechgroup.com/services/quantum-ml-platform",
+    "popular": false,
+    "category": "Quantum",
+    "industry": "ML"
   }
 ]
