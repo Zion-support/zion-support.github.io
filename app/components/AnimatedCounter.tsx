@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -41,3 +42,16 @@ export default function AnimatedCounter({ target, duration = 2000, suffix = '+',
 
   return <span ref={ref}>{prefix}{count.toLocaleString()}{suffix}</span>;
 }
+=======
+import React from 'react';
+
+const AnimatedCounter: React.FC = () => {
+  return (
+    <div className="animatedcounter-component">
+      {/* AnimatedCounter component implementation */}
+    </div>
+  );
+};
+
+export default AnimatedCounter;
+>>>>>>> d5f5cee4da73 (ZionOS: Inicialização Limpa e Segura)
