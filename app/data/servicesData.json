@@ -82833,5 +82833,464 @@
     "category": "micro-saas",
     "popular": false,
     "industry": "Marketing"
+  },
+  {
+    "id": "ai-emotion-recognition",
+    "title": "AI Emotion Recognition Platform",
+    "description": "Real-time emotion detection from facial expressions, voice tone, and text with 95% accuracy for customer service and mental health applications.",
+    "icon": "😊",
+    "features": [
+      "Facial expression analysis",
+      "Voice tone detection",
+      "Text sentiment",
+      "Real-time processing",
+      "Multi-modal fusion"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1799",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-emotion-recognition",
+    "category": "ai",
+    "popular": true,
+    "industry": "Customer Experience"
+  },
+  {
+    "id": "ai-code-generation",
+    "title": "AI Code Generation Platform",
+    "description": "Generate production-ready code from natural language descriptions with support for 20+ programming languages and frameworks.",
+    "icon": "💻",
+    "features": [
+      "Multi-language support",
+      "Code completion",
+      "Bug detection",
+      "Documentation generation",
+      "Code review"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-code-generation",
+    "category": "ai",
+    "popular": true,
+    "industry": "Developer Tools"
+  },
+  {
+    "id": "security-deception-technology",
+    "title": "Deception Technology Platform",
+    "description": "Deploy decoys and honeypots to detect advanced threats early with zero false positives and attacker behavior analysis.",
+    "icon": "🎭",
+    "features": [
+      "Decoy deployment",
+      "Honeypot management",
+      "Attacker profiling",
+      "Zero false positives",
+      "Threat intelligence"
+    ],
+    "pricing": {
+      "basic": "1999",
+      "pro": "4999",
+      "enterprise": "12999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-deception-technology",
+    "category": "security",
+    "popular": false,
+    "industry": "Threat Detection"
+  },
+  {
+    "id": "security-user-behavior-analytics",
+    "title": "User Behavior Analytics",
+    "description": "Detect insider threats and compromised accounts with ML-powered behavioral baselines and anomaly detection.",
+    "icon": "👤",
+    "features": [
+      "Behavioral baselines",
+      "Anomaly detection",
+      "Risk scoring",
+      "Insider threat detection",
+      "Automated response"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2299",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-user-behavior-analytics",
+    "category": "security",
+    "popular": true,
+    "industry": "Identity Security"
+  },
+  {
+    "id": "security-api-security-testing",
+    "title": "API Security Testing Platform",
+    "description": "Comprehensive API security testing with OWASP API Top 10 coverage, fuzzing, and authentication bypass detection.",
+    "icon": "🔌",
+    "features": [
+      "OWASP API Top 10",
+      "Fuzzing",
+      "Auth bypass detection",
+      "Rate limiting tests",
+      "Compliance checks"
+    ],
+    "pricing": {
+      "basic": "1499",
+      "pro": "3999",
+      "enterprise": "9999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-api-security-testing",
+    "category": "security",
+    "popular": false,
+    "industry": "API Security"
+  },
+  {
+    "id": "security-threat-modeling",
+    "title": "Automated Threat Modeling",
+    "description": "Automatically generate threat models from architecture diagrams with STRIDE, PASTA, and attack tree methodologies.",
+    "icon": "🎯",
+    "features": [
+      "STRIDE analysis",
+      "PASTA methodology",
+      "Attack trees",
+      "Risk quantification",
+      "Mitigation recommendations"
+    ],
+    "pricing": {
+      "basic": "1999",
+      "pro": "4999",
+      "enterprise": "12999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-threat-modeling",
+    "category": "security",
+    "popular": true,
+    "industry": "Security Architecture"
+  },
+  {
+    "id": "cloud-multi-region-deployment",
+    "title": "Multi-Region Deployment Platform",
+    "description": "Deploy applications across multiple regions with automated failover, data replication, and compliance management.",
+    "icon": "🌍",
+    "features": [
+      "Multi-region deploy",
+      "Auto-failover",
+      "Data replication",
+      "Compliance management",
+      "Latency optimization"
+    ],
+    "pricing": {
+      "basic": "1299",
+      "pro": "3499",
+      "enterprise": "8999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-multi-region-deployment",
+    "category": "cloud",
+    "popular": false,
+    "industry": "Global Infrastructure"
+  },
+  {
+    "id": "cloud-container-orchestration",
+    "title": "Container Orchestration Pro",
+    "description": "Advanced Kubernetes management with auto-scaling, service mesh, and multi-cluster federation for enterprise workloads.",
+    "icon": "☸️",
+    "features": [
+      "Auto-scaling",
+      "Service mesh",
+      "Multi-cluster",
+      "Cost optimization",
+      "Security policies"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2299",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-container-orchestration",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Containerization"
+  },
+  {
+    "id": "cloud-serverless-monitoring",
+    "title": "Serverless Monitoring Suite",
+    "description": "Comprehensive monitoring for serverless applications with cold start optimization, cost tracking, and performance analytics.",
+    "icon": "📊",
+    "features": [
+      "Cold start optimization",
+      "Cost tracking",
+      "Performance metrics",
+      "Error tracking",
+      "Distributed tracing"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-serverless-monitoring",
+    "category": "cloud",
+    "popular": false,
+    "industry": "Observability"
+  },
+  {
+    "id": "cloud-infrastructure-drift",
+    "title": "Infrastructure Drift Detection",
+    "description": "Detect and remediate infrastructure drift with continuous monitoring, policy enforcement, and automated remediation.",
+    "icon": "🔄",
+    "features": [
+      "Drift detection",
+      "Policy enforcement",
+      "Auto-remediation",
+      "Compliance reporting",
+      "Change tracking"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-infrastructure-drift",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Infrastructure Management"
+  },
+  {
+    "id": "data-privacy-preserving-ml",
+    "title": "Privacy-Preserving ML Platform",
+    "description": "Train ML models on sensitive data using federated learning, differential privacy, and secure multi-party computation.",
+    "icon": "🔒",
+    "features": [
+      "Federated learning",
+      "Differential privacy",
+      "Secure MPC",
+      "Model validation",
+      "Compliance reporting"
+    ],
+    "pricing": {
+      "basic": "1999",
+      "pro": "4999",
+      "enterprise": "12999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-privacy-preserving-ml",
+    "category": "data",
+    "popular": true,
+    "industry": "Privacy Tech"
+  },
+  {
+    "id": "data-customer-journey-analytics",
+    "title": "Customer Journey Analytics",
+    "description": "Map and optimize customer journeys across all touchpoints with attribution modeling and conversion optimization.",
+    "icon": "🗺️",
+    "features": [
+      "Journey mapping",
+      "Attribution modeling",
+      "Conversion optimization",
+      "Churn prediction",
+      "Personalization"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-customer-journey-analytics",
+    "category": "data",
+    "popular": true,
+    "industry": "Customer Analytics"
+  },
+  {
+    "id": "data-realtime-feature-store",
+    "title": "Real-Time Feature Store",
+    "description": "Serve ML features in real-time with sub-millisecond latency, feature versioning, and online/offline consistency.",
+    "icon": "⚡",
+    "features": [
+      "Sub-ms latency",
+      "Feature versioning",
+      "Online/offline sync",
+      "Feature monitoring",
+      "A/B testing"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2299",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-realtime-feature-store",
+    "category": "data",
+    "popular": false,
+    "industry": "ML Infrastructure"
+  },
+  {
+    "id": "saas-customer-onboarding",
+    "title": "Customer Onboarding Platform",
+    "description": "Automate customer onboarding with guided workflows, progress tracking, and personalized email sequences.",
+    "icon": "🎯",
+    "features": [
+      "Guided workflows",
+      "Progress tracking",
+      "Email sequences",
+      "Milestone alerts",
+      "Analytics"
+    ],
+    "pricing": {
+      "basic": "199",
+      "pro": "499",
+      "enterprise": "1299"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-customer-onboarding",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Customer Success"
+  },
+  {
+    "id": "saas-product-roadmap",
+    "title": "Product Roadmap Tool",
+    "description": "Visual product roadmap with customer feedback integration, prioritization frameworks, and stakeholder collaboration.",
+    "icon": "🗺️",
+    "features": [
+      "Visual roadmap",
+      "Feedback integration",
+      "Prioritization",
+      "Stakeholder views",
+      "Public roadmap"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "399",
+      "enterprise": "999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-product-roadmap",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "Product Management"
+  },
+  {
+    "id": "saas-affiliate-tracking",
+    "title": "Affiliate Tracking Platform",
+    "description": "Track affiliate performance with real-time analytics, automated payouts, and fraud detection.",
+    "icon": "🤝",
+    "features": [
+      "Real-time tracking",
+      "Automated payouts",
+      "Fraud detection",
+      "Performance analytics",
+      "Custom commissions"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-affiliate-tracking",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Marketing"
+  },
+  {
+    "id": "saas-event-management",
+    "title": "Event Management Platform",
+    "description": "Plan and execute virtual and in-person events with registration, ticketing, and attendee engagement tools.",
+    "icon": "🎪",
+    "features": [
+      "Registration",
+      "Ticketing",
+      "Attendee engagement",
+      "Analytics",
+      "Virtual events"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-event-management",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Events"
   }
 ]
