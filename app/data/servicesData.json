@@ -83589,5 +83589,221 @@
     "category": "micro-saas",
     "popular": true,
     "industry": "Marketing"
+  },
+  {
+    "id": "ai-code-review",
+    "title": "AI Code Review Assistant",
+    "description": "Automated code review with bug detection, security scanning, and best practice recommendations.",
+    "icon": "🔍",
+    "features": [
+      "Bug detection",
+      "Security scanning",
+      "Code quality",
+      "Performance analysis",
+      "PR integration"
+    ],
+    "pricing": {
+      "basic": "299",
+      "pro": "799",
+      "enterprise": "2499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-code-review",
+    "category": "ai",
+    "popular": true,
+    "industry": "Developer Tools"
+  },
+  {
+    "id": "ai-legal-contract",
+    "title": "AI Legal Contract Analyzer",
+    "description": "Analyze legal contracts with clause extraction, risk assessment, and compliance checking.",
+    "icon": "⚖️",
+    "features": [
+      "Clause extraction",
+      "Risk assessment",
+      "Compliance checking",
+      "Precedent analysis",
+      "Red flag detection"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2299",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-legal-contract",
+    "category": "ai",
+    "popular": false,
+    "industry": "Legal Tech"
+  },
+  {
+    "id": "ai-inventory-forecasting",
+    "title": "AI Inventory Forecasting",
+    "description": "Predict inventory needs with demand forecasting, seasonal patterns, and automated reorder suggestions.",
+    "icon": "📦",
+    "features": [
+      "Demand forecasting",
+      "Seasonal patterns",
+      "Auto-reorder",
+      "Supplier optimization",
+      "Cost reduction"
+    ],
+    "pricing": {
+      "basic": "599",
+      "pro": "1499",
+      "enterprise": "3999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-inventory-forecasting",
+    "category": "ai",
+    "popular": true,
+    "industry": "Supply Chain"
+  },
+  {
+    "id": "security-access-management",
+    "title": "Privileged Access Management",
+    "description": "Secure privileged accounts with just-in-time access, session recording, and credential vaulting.",
+    "icon": "🔐",
+    "features": [
+      "Just-in-time access",
+      "Session recording",
+      "Credential vaulting",
+      "Multi-factor auth",
+      "Audit trails"
+    ],
+    "pricing": {
+      "basic": "999",
+      "pro": "2499",
+      "enterprise": "6999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-access-management",
+    "category": "security",
+    "popular": true,
+    "industry": "Identity Security"
+  },
+  {
+    "id": "data-customer-analytics",
+    "title": "Customer Analytics Platform",
+    "description": "Analyze customer behavior with cohort analysis, funnel tracking, and predictive modeling.",
+    "icon": "📈",
+    "features": [
+      "Cohort analysis",
+      "Funnel tracking",
+      "Predictive modeling",
+      "Segmentation",
+      "Attribution"
+    ],
+    "pricing": {
+      "basic": "699",
+      "pro": "1799",
+      "enterprise": "4999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-customer-analytics",
+    "category": "data",
+    "popular": true,
+    "industry": "Analytics"
+  },
+  {
+    "id": "data-realtime-analytics",
+    "title": "Real-Time Analytics Engine",
+    "description": "Stream processing and real-time analytics with sub-second queries and interactive dashboards.",
+    "icon": "⚡",
+    "features": [
+      "Stream processing",
+      "Sub-second queries",
+      "Interactive dashboards",
+      "Alerting",
+      "Data visualization"
+    ],
+    "pricing": {
+      "basic": "899",
+      "pro": "2299",
+      "enterprise": "5999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-realtime-analytics",
+    "category": "data",
+    "popular": false,
+    "industry": "Analytics"
+  },
+  {
+    "id": "saas-feedback-collection",
+    "title": "Customer Feedback Platform",
+    "description": "Collect and analyze customer feedback with NPS surveys, sentiment analysis, and action items.",
+    "icon": "💬",
+    "features": [
+      "NPS surveys",
+      "Sentiment analysis",
+      "Action items",
+      "Trend tracking",
+      "Integration"
+    ],
+    "pricing": {
+      "basic": "149",
+      "pro": "399",
+      "enterprise": "999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-feedback-collection",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "Customer Success"
+  },
+  {
+    "id": "saas-invoice-management",
+    "title": "Invoice Management System",
+    "description": "Automate invoicing with recurring billing, payment tracking, and accounting integration.",
+    "icon": "💰",
+    "features": [
+      "Recurring billing",
+      "Payment tracking",
+      "Accounting sync",
+      "Tax calculation",
+      "Multi-currency"
+    ],
+    "pricing": {
+      "basic": "129",
+      "pro": "349",
+      "enterprise": "899"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-invoice-management",
+    "category": "micro-saas",
+    "popular": true,
+    "industry": "Finance"
   }
 ]
