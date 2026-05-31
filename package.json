@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "next dev",
-    "build": "node --max-old-space-size=4096 node_modules/next/dist/bin/next build --webpack",
+    "build": "node --max-old-space-size=4096 node_modules/next/dist/bin/next build",
     "start": "next start",
     "lint": "next lint",
     "lint:check": "next lint --max-warnings=0",
