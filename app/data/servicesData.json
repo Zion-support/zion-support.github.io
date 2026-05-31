@@ -76089,5 +76089,566 @@
     "popular": "True",
     "href": "/services/ai-flood-prediction",
     "industry": "Government"
+  },
+  {
+    "id": "ai-sentiment-trajectory-2",
+    "title": "AI Sentiment Trajectory Analyzer v2",
+    "description": "Advanced sentiment tracking with predictive escalation detection and automated intervention triggers.",
+    "features": [
+      "Predictive escalation",
+      "Automated triggers",
+      "Trend forecasting",
+      "Intervention recommendations"
+    ],
+    "benefits": [
+      "Proactive intervention",
+      "Reduced churn",
+      "Better outcomes"
+    ],
+    "pricing": {
+      "basic": "$499/mo",
+      "pro": "$1,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "TrendingUp",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-sentiment-trajectory-2",
+    "industry": "Customer Experience"
+  },
+  {
+    "id": "ai-meeting-intelligence-suite",
+    "title": "AI Meeting Intelligence Suite",
+    "description": "Complete meeting lifecycle management from scheduling to follow-up with AI-generated summaries.",
+    "features": [
+      "Smart scheduling",
+      "Action item tracking",
+      "Follow-up automation",
+      "Decision documentation"
+    ],
+    "benefits": [
+      "Never miss actions",
+      "Faster follow-ups",
+      "Decision clarity"
+    ],
+    "pricing": {
+      "basic": "$99/mo",
+      "pro": "$299/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "CalendarCheck",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-meeting-intelligence-suite",
+    "industry": "Productivity"
+  },
+  {
+    "id": "ai-knowledge-graph-builder-v2",
+    "title": "AI Knowledge Graph Builder v2",
+    "description": "Enterprise knowledge graph with NLP extraction from emails, documents, and databases.",
+    "features": [
+      "NLP extraction",
+      "Relationship mapping",
+      "Semantic search",
+      "Visual exploration"
+    ],
+    "benefits": [
+      "Connected knowledge",
+      "Faster discovery",
+      "Silo breakdown"
+    ],
+    "pricing": {
+      "basic": "$999/mo",
+      "pro": "$2,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "GitFork",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-knowledge-graph-builder-v2",
+    "industry": "Technology"
+  },
+  {
+    "id": "ai-priority-decay-engine",
+    "title": "AI Priority Decay Engine",
+    "description": "Automatically decays email priority over time to reduce inbox overwhelm and surface what matters.",
+    "features": [
+      "Time-based decay",
+      "Importance scoring",
+      "Auto-archival",
+      "Smart resurfacing"
+    ],
+    "benefits": [
+      "Reduced overwhelm",
+      "Better focus",
+      "Auto-cleanup"
+    ],
+    "pricing": {
+      "basic": "$49/mo",
+      "pro": "$149/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Clock",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-priority-decay-engine",
+    "industry": "Productivity"
+  },
+  {
+    "id": "ai-compliance-guardian-pro",
+    "title": "AI Compliance Guardian Pro",
+    "description": "Multi-regulation compliance monitoring with auto-remediation and audit trail generation.",
+    "features": [
+      "Multi-regulation",
+      "Auto-remediation",
+      "Audit trail",
+      "Policy enforcement"
+    ],
+    "benefits": [
+      "Automated compliance",
+      "Audit ready",
+      "Policy violations prevented"
+    ],
+    "pricing": {
+      "basic": "$1,499/mo",
+      "pro": "$4,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "ShieldCheck",
+    "category": "saas",
+    "popular": "True",
+    "href": "/services/ai-compliance-guardian-pro",
+    "industry": "Compliance"
+  },
+  {
+    "id": "ai-negotiation-coach-pro",
+    "title": "AI Negotiation Coach Pro",
+    "description": "Real-time negotiation coaching with strategy suggestions, BATNA calculation, and deal scoring.",
+    "features": [
+      "Real-time coaching",
+      "Strategy suggestions",
+      "BATNA calculation",
+      "Deal scoring",
+      "Scenario modeling"
+    ],
+    "benefits": [
+      "Better outcomes",
+      "Reduced anxiety",
+      "Data-driven strategy"
+    ],
+    "pricing": {
+      "basic": "$99/mo",
+      "pro": "$299/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Scale",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-negotiation-coach-pro",
+    "industry": "Business Operations"
+  },
+  {
+    "id": "ai-burnout-prevention-2",
+    "title": "AI Burnout Prevention Platform v2",
+    "description": "Advanced burnout prediction using email patterns, calendar data, and communication analysis.",
+    "features": [
+      "Email pattern analysis",
+      "Calendar overload detection",
+      "Communication analysis",
+      "Wellness recommendations"
+    ],
+    "benefits": [
+      "35% less burnout",
+      "Better balance",
+      "Early warning"
+    ],
+    "pricing": {
+      "basic": "$19/user/mo",
+      "pro": "$39/user/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Heart",
+    "category": "saas",
+    "popular": "True",
+    "href": "/services/ai-burnout-prevention-2",
+    "industry": "Human Resources"
+  },
+  {
+    "id": "ai-revenue-attribution-2",
+    "title": "AI Revenue Attribution Platform v2",
+    "description": "Multi-touch revenue attribution across email, ads, and sales touchpoints.",
+    "features": [
+      "Multi-touch attribution",
+      "Email campaign tracking",
+      "ROI by channel",
+      "Forecast integration"
+    ],
+    "benefits": [
+      "Clear ROI",
+      "Better attribution",
+      "Optimized spend"
+    ],
+    "pricing": {
+      "basic": "$499/mo",
+      "pro": "$1,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "DollarSign",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-revenue-attribution-2",
+    "industry": "Sales & Marketing"
+  },
+  {
+    "id": "ai-cross-cultural-adapter",
+    "title": "AI Cross-Cultural Communication Adapter",
+    "description": "Adapts email communication style for different cultures and communication preferences.",
+    "features": [
+      "Cultural adaptation",
+      "Communication style matching",
+      "Tone adjustment",
+      "Language localization"
+    ],
+    "benefits": [
+      "Better global communication",
+      "Cultural sensitivity",
+      "Improved relationships"
+    ],
+    "pricing": {
+      "basic": "$49/mo",
+      "pro": "$149/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Globe",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-cross-cultural-adapter",
+    "industry": "Communications"
+  },
+  {
+    "id": "ai-thread-summarizer",
+    "title": "AI Email Thread Summarizer",
+    "description": "Summarizes long email threads into actionable briefs with decision extraction and action items.",
+    "features": [
+      "Thread summarization",
+      "Decision extraction",
+      "Action items",
+      "Follow-up reminders"
+    ],
+    "benefits": [
+      "Faster reading",
+      "Decision clarity",
+      "Never miss items"
+    ],
+    "pricing": {
+      "basic": "$49/mo",
+      "pro": "$149/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "FileText",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-thread-summarizer",
+    "industry": "Productivity"
+  },
+  {
+    "id": "ai-workflow-automation",
+    "title": "AI Workflow Automation Platform",
+    "description": "No-code workflow automation triggered by email content. Features 200+ integrations and AI-assisted workflow builder.",
+    "features": [
+      "No-code builder",
+      "Email triggers",
+      "200+ integrations",
+      "AI suggestions",
+      "Approval workflows"
+    ],
+    "benefits": [
+      "10x faster automation",
+      "Self-service",
+      "AI-assisted"
+    ],
+    "pricing": {
+      "basic": "$249/mo",
+      "pro": "$699/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Workflow",
+    "category": "automation",
+    "popular": "True",
+    "href": "/services/ai-workflow-automation",
+    "industry": "Business Operations"
+  },
+  {
+    "id": "ai-meeting-minutes",
+    "title": "AI Meeting Minutes Generator",
+    "description": "Auto-generates meeting minutes from email threads and calendar events with speaker attribution.",
+    "features": [
+      "Auto minutes",
+      "Speaker attribution",
+      "Decision tracking",
+      "Action items",
+      "Calendar integration"
+    ],
+    "benefits": [
+      "Never miss decisions",
+      "Auto documentation",
+      "Action clarity"
+    ],
+    "pricing": {
+      "basic": "$49/mo",
+      "pro": "$149/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "FileCheck",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-meeting-minutes",
+    "industry": "Productivity"
+  },
+  {
+    "id": "ai-email-translation-engine",
+    "title": "AI Email Translation Engine",
+    "description": "Real-time email translation for 80+ languages with tone preservation and cultural adaptation.",
+    "features": [
+      "80+ languages",
+      "Tone preservation",
+      "Cultural adaptation",
+      "Real-time translation"
+    ],
+    "benefits": [
+      "Global communication",
+      "Cultural sensitivity",
+      "Real-time"
+    ],
+    "pricing": {
+      "basic": "$99/mo",
+      "pro": "$299/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Languages",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-email-translation-engine",
+    "industry": "Communications"
+  },
+  {
+    "id": "ai-compliance-checker",
+    "title": "AI Email Compliance Checker",
+    "description": "Checks outbound emails for regulatory compliance before sending. Features GDPR, HIPAA, PCI-DSS, and SOX.",
+    "features": [
+      "Pre-send checking",
+      "Multi-regulation",
+      "Policy enforcement",
+      "Audit trail"
+    ],
+    "benefits": [
+      "Compliance assurance",
+      "Prevention",
+      "Audit readiness"
+    ],
+    "pricing": {
+      "basic": "$149/mo",
+      "pro": "$449/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "ShieldAlert",
+    "category": "saas",
+    "popular": "True",
+    "href": "/services/ai-compliance-checker",
+    "industry": "Compliance"
+  },
+  {
+    "id": "ai-accessibility-checker",
+    "title": "AI Email Accessibility Checker",
+    "description": "Ensures emails meet accessibility standards (WCAG, Section 508) before sending.",
+    "features": [
+      "WCAG compliance",
+      "Screen reader optimization",
+      "Alt text suggestions",
+      "Color contrast checking"
+    ],
+    "benefits": [
+      "Accessibility compliance",
+      "Inclusive communication",
+      "Legal protection"
+    ],
+    "pricing": {
+      "basic": "$29/mo",
+      "pro": "$99/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Eye",
+    "category": "saas",
+    "popular": "True",
+    "href": "/services/ai-accessibility-checker",
+    "industry": "Compliance"
+  },
+  {
+    "id": "ai-carbon-footprint-calculator",
+    "title": "AI Email Carbon Footprint Calculator",
+    "description": "Calculates and offsets the carbon footprint of email communications.",
+    "features": [
+      "Carbon calculation",
+      "Offset suggestions",
+      "Green alternatives",
+      "Team dashboard"
+    ],
+    "benefits": [
+      "Carbon awareness",
+      "Offset tracking",
+      "Green communication"
+    ],
+    "pricing": {
+      "basic": "$19/mo",
+      "pro": "$49/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "Leaf",
+    "category": "saas",
+    "popular": "True",
+    "href": "/services/ai-carbon-footprint-calculator",
+    "industry": "Sustainability"
+  },
+  {
+    "id": "ai-inclusive-language-enforcer",
+    "title": "AI Inclusive Language Enforcer",
+    "description": "Detects and suggests improvements for inclusive language in outbound emails.",
+    "features": [
+      "Bias detection",
+      "Inclusive suggestions",
+      "Cultural sensitivity",
+      "Team guidelines"
+    ],
+    "benefits": [
+      "Inclusive communication",
+      "Bias reduction",
+      "Better culture"
+    ],
+    "pricing": {
+      "basic": "$29/mo",
+      "pro": "$99/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "HeartHandshake",
+    "category": "saas",
+    "popular": "True",
+    "href": "/services/ai-inclusive-language-enforcer",
+    "industry": "Human Resources"
+  },
+  {
+    "id": "ai-action-tracker",
+    "title": "AI Action Item Tracker",
+    "description": "Extracts and tracks action items from emails with deadline monitoring and follow-up reminders.",
+    "features": [
+      "Action extraction",
+      "Deadline monitoring",
+      "Follow-up reminders",
+      "Progress tracking"
+    ],
+    "benefits": [
+      "Never miss deadlines",
+      "Accountability",
+      "Follow-up automation"
+    ],
+    "pricing": {
+      "basic": "$49/mo",
+      "pro": "$149/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "https://ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "CheckSquare",
+    "category": "ai",
+    "popular": "True",
+    "href": "/services/ai-action-tracker",
+    "industry": "Productivity"
   }
 ]
