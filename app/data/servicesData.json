@@ -83805,5 +83805,194 @@
     "category": "micro-saas",
     "popular": true,
     "industry": "Finance"
+  },
+  {
+    "id": "ai-speech-recognition",
+    "title": "AI Speech Recognition Platform",
+    "description": "Enterprise-grade speech-to-text with 95%+ accuracy, 40+ languages, real-time streaming, and custom vocabulary support.",
+    "icon": "🎤",
+    "features": [
+      "Real-time transcription",
+      "40+ languages",
+      "Custom vocabulary",
+      "Speaker diarization",
+      "Noise cancellation"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/ai-speech-recognition",
+    "category": "ai",
+    "popular": true,
+    "industry": "Audio AI"
+  },
+  {
+    "id": "security-soc-as-service",
+    "title": "SOC-as-a-Service Platform",
+    "description": "24/7 managed Security Operations Center with SIEM, SOAR, threat hunting, and incident response.",
+    "icon": "🏢",
+    "features": [
+      "24/7 monitoring",
+      "SIEM management",
+      "SOAR automation",
+      "Threat hunting",
+      "Incident response"
+    ],
+    "pricing": {
+      "basic": "4999",
+      "pro": "12999",
+      "enterprise": "29999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/security-soc-as-service",
+    "category": "security",
+    "popular": true,
+    "industry": "Managed Security"
+  },
+  {
+    "id": "cloud-service-mesh",
+    "title": "Service Mesh Platform",
+    "description": "Enterprise service mesh with traffic management, mTLS security, observability, and canary deployments.",
+    "icon": "🕸️",
+    "features": [
+      "Traffic management",
+      "mTLS security",
+      "Observability",
+      "Canary deployments",
+      "Policy enforcement"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-service-mesh",
+    "category": "cloud",
+    "popular": false,
+    "industry": "Microservices"
+  },
+  {
+    "id": "cloud-data-warehouse",
+    "title": "Cloud Data Warehouse",
+    "description": "Scalable cloud data warehouse with SQL analytics, real-time ingestion, and cost-optimized storage tiers.",
+    "icon": "🏗️",
+    "features": [
+      "SQL analytics",
+      "Real-time ingestion",
+      "Storage tiers",
+      "Auto-scaling",
+      "Data sharing"
+    ],
+    "pricing": {
+      "basic": "1299",
+      "pro": "3499",
+      "enterprise": "8999"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/cloud-data-warehouse",
+    "category": "cloud",
+    "popular": true,
+    "industry": "Data Warehouse"
+  },
+  {
+    "id": "data-stream-processing",
+    "title": "Stream Processing Platform",
+    "description": "Real-time stream processing with Apache Kafka/Flink, event-driven architecture, and sub-second latency.",
+    "icon": "🌊",
+    "features": [
+      "Kafka/Flink integration",
+      "Event-driven",
+      "Sub-second latency",
+      "Windowing",
+      "Exactly-once semantics"
+    ],
+    "pricing": {
+      "basic": "799",
+      "pro": "1999",
+      "enterprise": "5499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-stream-processing",
+    "category": "data",
+    "popular": true,
+    "industry": "Streaming"
+  },
+  {
+    "id": "data-ml-experiment-tracking",
+    "title": "ML Experiment Tracking Platform",
+    "description": "Track ML experiments with version control, hyperparameter tuning, model registry, and reproducibility.",
+    "icon": "🔬",
+    "features": [
+      "Experiment tracking",
+      "Version control",
+      "Hyperparameter tuning",
+      "Model registry",
+      "Reproducibility"
+    ],
+    "pricing": {
+      "basic": "499",
+      "pro": "1299",
+      "enterprise": "3499"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/data-ml-experiment-tracking",
+    "category": "data",
+    "popular": true,
+    "industry": "MLOps"
+  },
+  {
+    "id": "saas-helpdesk-platform",
+    "title": "AI Helpdesk Platform",
+    "description": "Customer support with AI ticket routing, knowledge base, live chat, and satisfaction tracking.",
+    "icon": "🎫",
+    "features": [
+      "AI ticket routing",
+      "Knowledge base",
+      "Live chat",
+      "CSAT tracking",
+      "Multi-channel"
+    ],
+    "pricing": {
+      "basic": "179",
+      "pro": "449",
+      "enterprise": "1199"
+    },
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    },
+    "href": "/services/saas-helpdesk-platform",
+    "category": "micro-saas",
+    "popular": false,
+    "industry": "Customer Support"
   }
 ]
