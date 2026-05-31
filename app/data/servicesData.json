@@ -84929,5 +84929,205 @@
     "category": "email-intelligence",
     "price": "$3,499/month",
     "features": ["Organization-wide tracking", "AI extraction", "Advanced analytics", "Executive dashboards", "Compliance reporting", "Full API access"]
+  },
+  {
+    "id": "knowledge-graph-builder",
+    "title": "Email Knowledge Graph Builder",
+    "description": "Automatically build searchable knowledge graphs from email conversations, mapping topics, people, organizations, and relationships.",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": ["Entity extraction", "Relationship mapping", "Topic clustering", "Temporal tracking", "Semantic search", "Graph visualization"]
+  },
+  {
+    "id": "knowledge-graph-enterprise",
+    "title": "Enterprise Knowledge Intelligence Platform",
+    "description": "Enterprise-grade knowledge graph platform that turns email conversations into a searchable organizational brain.",
+    "category": "email-intelligence",
+    "price": "$3,999/month",
+    "features": ["Org-wide knowledge base", "AI entity recognition", "Cross-team insights", "Expert discovery", "API integration", "Custom ontologies"]
+  },
+  {
+    "id": "knowledge-graph-search",
+    "title": "Semantic Email Search Engine",
+    "description": "Find any piece of information across your email corpus using natural language queries powered by knowledge graph intelligence.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": ["Natural language queries", "Context-aware results", "Topic filters", "People search", "Timeline navigation", "Smart suggestions"]
+  },
+  {
+    "id": "knowledge-graph-topics",
+    "title": "Email Topic Intelligence Dashboard",
+    "description": "Track and visualize how topics evolve across your email communications with clustering and trend analysis.",
+    "category": "email-intelligence",
+    "price": "$1,099/month",
+    "features": ["Topic clustering", "Trend analysis", "Keyword extraction", "Volume tracking", "Category mapping", "Alert system"]
+  },
+  {
+    "id": "knowledge-graph-entities",
+    "title": "Entity Relationship Intelligence",
+    "description": "Map and analyze relationships between people, organizations, and topics mentioned in email communications.",
+    "category": "email-intelligence",
+    "price": "$1,499/month",
+    "features": ["Entity recognition", "Relationship scoring", "Network analysis", "Influence mapping", "Connection discovery", "Temporal tracking"]
+  },
+  {
+    "id": "negotiation-intelligence",
+    "title": "Email Negotiation Intelligence",
+    "description": "Detect negotiation stages, leverage points, and optimal counter-offers in business email conversations using game theory.",
+    "category": "email-intelligence",
+    "price": "$1,599/month",
+    "features": ["Stage detection", "Leverage analysis", "Counter-offer recommendations", "BATNA analysis", "Concession tracking", "Win-win suggestions"]
+  },
+  {
+    "id": "negotiation-counter-offer",
+    "title": "AI Counter-Offer Optimization Engine",
+    "description": "Generate optimal counter-offers based on negotiation history, market data, and strategic positioning analysis.",
+    "category": "email-intelligence",
+    "price": "$1,899/month",
+    "features": ["AI-powered recommendations", "Market benchmarking", "Strategy selection", "Win probability", "Scenario modeling", "Deal optimization"]
+  },
+  {
+    "id": "negotiation-leverage",
+    "title": "Negotiation Leverage Analyzer",
+    "description": "Identify and quantify leverage points in negotiations including time pressure, competition, authority, and scarcity.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": ["5 leverage categories", "Strength scoring", "Pattern detection", "Counter-strategies", "Real-time alerts", "Historical analysis"]
+  },
+  {
+    "id": "negotiation-sales",
+    "title": "Sales Negotiation Assistant",
+    "description": "AI-powered assistant for sales negotiations with pricing guidance, objection handling, and deal-closing strategies.",
+    "category": "email-intelligence",
+    "price": "$2,199/month",
+    "features": ["Pricing guidance", "Objection handling", "Closing strategies", "Discount optimization", "Competitive intel", "Deal scoring"]
+  },
+  {
+    "id": "negotiation-procurement",
+    "title": "Procurement Negotiation Platform",
+    "description": "Strategic procurement negotiation platform with vendor analysis, price benchmarking, and contract optimization.",
+    "category": "email-intelligence",
+    "price": "$2,499/month",
+    "features": ["Vendor scoring", "Price benchmarking", "Contract analysis", "Total cost modeling", "Risk assessment", "Savings tracking"]
+  },
+  {
+    "id": "accessibility-auditor",
+    "title": "Email Accessibility Auditor",
+    "description": "Ensure all outgoing emails meet WCAG 2.1 accessibility standards with automated compliance checking and fix suggestions.",
+    "category": "email-intelligence",
+    "price": "$799/month",
+    "features": ["WCAG 2.1 AA checks", "Color contrast validation", "Alt text verification", "Semantic structure analysis", "Screen reader compatibility", "Plain text fallback"]
+  },
+  {
+    "id": "accessibility-wcag",
+    "title": "WCAG Compliance Checker for Email",
+    "description": "Comprehensive WCAG 2.1 compliance checking for HTML emails with automated scoring and remediation guidance.",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": ["Full WCAG 2.1 coverage", "Automated scoring", "Fix suggestions", "Template validation", "Compliance reports", "Integration APIs"]
+  },
+  {
+    "id": "accessibility-screen-reader",
+    "title": "Screen Reader Email Compatibility Tester",
+    "description": "Test email rendering across major screen readers (JAWS, NVDA, VoiceOver) to ensure accessibility for visually impaired recipients.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": ["Multi-reader testing", "Rendering simulation", "Issue detection", "Fix recommendations", "Compliance scoring", "Accessibility training"]
+  },
+  {
+    "id": "accessibility-design",
+    "title": "Accessible Email Design System",
+    "description": "Pre-built accessible email templates and design components that meet WCAG AA standards out of the box.",
+    "category": "email-intelligence",
+    "price": "$699/month",
+    "features": ["50+ accessible templates", "Color-safe palettes", "Typography system", "Component library", "Responsive design", "Dark mode support"]
+  },
+  {
+    "id": "accessibility-compliance",
+    "title": "Email Accessibility Compliance Platform",
+    "description": "Enterprise platform for ensuring organization-wide email accessibility compliance with ADA, Section 508, and WCAG standards.",
+    "category": "email-intelligence",
+    "price": "$2,299/month",
+    "features": ["Org-wide monitoring", "Compliance dashboards", "Automated enforcement", "Training modules", "Audit reports", "Legal protection"]
+  },
+  {
+    "id": "burnout-prevention",
+    "title": "Email Burnout Prevention Engine",
+    "description": "Monitor email load per team member and suggest redistribution before burnout occurs. Track response burden and after-hours activity.",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": ["Per-person load monitoring", "After-hours detection", "Workload balancing", "Burnout risk scoring", "Redistribution suggestions", "Wellness breaks"]
+  },
+  {
+    "id": "burnout-workload",
+    "title": "Team Workload Balancing System",
+    "description": "Intelligently balance email workload across teams to prevent burnout and ensure equitable distribution of communication burden.",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": ["Smart redistribution", "Capacity planning", "Team analytics", "Auto-routing", "Load forecasting", "Manager dashboards"]
+  },
+  {
+    "id": "burnout-wellness",
+    "title": "Digital Wellness Email Guardian",
+    "description": "Protect employee digital wellness by enforcing email boundaries, detecting overwork patterns, and promoting healthy communication habits.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": ["Boundary enforcement", "Overwork detection", "Habit coaching", "Auto-snooze", "Wellness scores", "Team reports"]
+  },
+  {
+    "id": "burnout-analytics",
+    "title": "Email Productivity & Wellness Analytics",
+    "description": "Comprehensive analytics platform combining email productivity metrics with wellness indicators for holistic team health monitoring.",
+    "category": "email-intelligence",
+    "price": "$1,599/month",
+    "features": ["Productivity metrics", "Wellness indicators", "Trend analysis", "Team health scores", "Manager alerts", "HR integration"]
+  },
+  {
+    "id": "burnout-enterprise",
+    "title": "Enterprise Digital Wellness Platform",
+    "description": "Organization-wide digital wellness platform that monitors and optimizes email health across all departments.",
+    "category": "email-intelligence",
+    "price": "$3,499/month",
+    "features": ["Org-wide monitoring", "Department analytics", "Executive dashboards", "Policy enforcement", "Wellness programs", "ROI tracking"]
+  },
+  {
+    "id": "revenue-attribution",
+    "title": "Email Revenue Attribution Engine",
+    "description": "Track which email conversations lead to closed deals and revenue. Provides ROI analysis on email communication patterns.",
+    "category": "email-intelligence",
+    "price": "$1,899/month",
+    "features": ["Deal-to-email tracking", "Revenue attribution", "ROI analysis", "Pattern identification", "Sales cycle optimization", "CLV correlation"]
+  },
+  {
+    "id": "revenue-attribution-sales",
+    "title": "Sales Email Performance Analytics",
+    "description": "Measure and optimize sales team email performance with revenue attribution, conversion tracking, and deal velocity analysis.",
+    "category": "email-intelligence",
+    "price": "$2,299/month",
+    "features": ["Revenue per email", "Conversion tracking", "Deal velocity", "Rep performance", "Template effectiveness", "Pipeline analytics"]
+  },
+  {
+    "id": "revenue-attribution-marketing",
+    "title": "Marketing Email Revenue Tracker",
+    "description": "Attribute revenue to marketing email campaigns with multi-touch attribution, customer journey mapping, and campaign ROI.",
+    "category": "email-intelligence",
+    "price": "$1,699/month",
+    "features": ["Multi-touch attribution", "Campaign ROI", "Journey mapping", "Segment analysis", "A/B test revenue", "Forecast modeling"]
+  },
+  {
+    "id": "revenue-attribution-crm",
+    "title": "CRM Email Revenue Integration",
+    "description": "Seamlessly integrate email revenue attribution with major CRM platforms (Salesforce, HubSpot, Pipedrive) for unified sales analytics.",
+    "category": "email-intelligence",
+    "price": "$2,499/month",
+    "features": ["CRM sync", "Deal tracking", "Revenue dashboards", "Custom reports", "Automated workflows", "API access"]
+  },
+  {
+    "id": "revenue-attribution-executive",
+    "title": "Executive Revenue Intelligence Dashboard",
+    "description": "C-suite dashboard for email-driven revenue intelligence with predictive analytics, trend forecasting, and strategic insights.",
+    "category": "email-intelligence",
+    "price": "$4,999/month",
+    "features": ["Predictive analytics", "Revenue forecasting", "Strategic insights", "Board-ready reports", "Competitive benchmarking", "AI recommendations"]
   }
 ]
