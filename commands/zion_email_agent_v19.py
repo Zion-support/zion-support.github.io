@@ -544,7 +544,7 @@ Rules: Be concise, professional, address all topics, warm tone."""
         result["human_review_reasons"].append(f"Low confidence: {confidence:.2f}")
 
     # 9. Reply-all audit
-    all_recipients = parsed.get("to",[]) + parsed.get("cc",[]) + [sender]
+    all_recipients = list(parsed.get("to",[]) if isinstance(parsed.get("to"), list) else [parsed.get("to","")]) + list(parsed.get("cc",[]) if isinstance(parsed.get("cc"), list) else [parsed.get("cc","")]) + [sender]
     is_safe = len(all_recipients) <= 10 and not parsed.get("list_id")
     warnings = [f"{len(all_recipients)} recipients"] if len(all_recipients) > 10 else []
     result["audit_entry"] = audit.log_reply_all(
