@@ -1,0 +1,10 @@
+{
+  "urls": [],
+  "events": ["lead.created", "proposal.generated", "email.escalated", "circuit.opened"],
+  "headers": {
+    "X-Zion-Source": "email-agent-v8",
+    "Content-Type": "application/json"
+  },
+  "retries": 3,
+  "timeout_seconds": 10
+}
