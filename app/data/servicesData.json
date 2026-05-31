@@ -85854,5 +85854,581 @@
       "Win strategies",
       "Sales enablement"
     ]
+  },
+  {
+    "id": "emotional-intelligence-coaching",
+    "title": "Emotional Intelligence Email Coaching",
+    "description": "Real-time emotional intelligence coaching for difficult conversations with tone analysis and empathy guidance",
+    "longDescription": "Real-time emotional intelligence coaching for difficult conversations with tone analysis and empathy guidance. Part of the V666 Email Intelligence suite. Features include: Emotional tone detection, Empathy gap analysis, Tone adjustment suggestions, Relationship preservation, Difficult conversation coaching.",
+    "category": "Communication",
+    "price": "$49/mo",
+    "features": [
+      "Emotional tone detection",
+      "Empathy gap analysis",
+      "Tone adjustment suggestions",
+      "Relationship preservation",
+      "Difficult conversation coaching"
+    ],
+    "icon": "Heart",
+    "color": "from-rose-500 to-pink-500",
+    "badge": "V666",
+    "popular": true,
+    "tags": [
+      "communication",
+      "v666",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "emotional-escalation-prevention",
+    "title": "Emotional Escalation Prevention",
+    "description": "Detect and prevent emotional escalation in email threads with early warning alerts",
+    "longDescription": "Detect and prevent emotional escalation in email threads with early warning alerts. Part of the V666 Email Intelligence suite. Features include: Escalation detection, Cooling period suggestions, De-escalation tips, Sentiment monitoring.",
+    "category": "Communication",
+    "price": "$39/mo",
+    "features": [
+      "Escalation detection",
+      "Cooling period suggestions",
+      "De-escalation tips",
+      "Sentiment monitoring"
+    ],
+    "icon": "Shield",
+    "color": "from-blue-500 to-cyan-500",
+    "badge": "V666",
+    "popular": false,
+    "tags": [
+      "communication",
+      "v666",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "difficult-conversation-templates",
+    "title": "Difficult Conversation Templates",
+    "description": "Pre-built templates for challenging conversations with emotional intelligence built-in",
+    "longDescription": "Pre-built templates for challenging conversations with emotional intelligence built-in. Part of the V666 Email Intelligence suite. Features include: Termination conversations, Performance feedback, Conflict resolution, Bad news delivery.",
+    "category": "Communication",
+    "price": "$29/mo",
+    "features": [
+      "Termination conversations",
+      "Performance feedback",
+      "Conflict resolution",
+      "Bad news delivery"
+    ],
+    "icon": "MessageSquare",
+    "color": "from-purple-500 to-indigo-500",
+    "badge": "V666",
+    "popular": false,
+    "tags": [
+      "communication",
+      "v666",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "empathy-training-program",
+    "title": "Empathy Training Program",
+    "description": "Comprehensive empathy training for teams with email communication exercises",
+    "longDescription": "Comprehensive empathy training for teams with email communication exercises. Part of the V666 Email Intelligence suite. Features include: Interactive exercises, Real-world scenarios, Progress tracking, Certification.",
+    "category": "Training",
+    "price": "$199/mo",
+    "features": [
+      "Interactive exercises",
+      "Real-world scenarios",
+      "Progress tracking",
+      "Certification"
+    ],
+    "icon": "Users",
+    "color": "from-green-500 to-emerald-500",
+    "badge": "V666",
+    "popular": false,
+    "tags": [
+      "training",
+      "v666",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "tone-analyzer-pro",
+    "title": "Tone Analyzer Pro",
+    "description": "Advanced tone analysis with cultural context and professional communication scoring",
+    "longDescription": "Advanced tone analysis with cultural context and professional communication scoring. Part of the V666 Email Intelligence suite. Features include: Multi-dimensional tone analysis, Cultural sensitivity, Professional scoring, Improvement suggestions.",
+    "category": "Communication",
+    "price": "$59/mo",
+    "features": [
+      "Multi-dimensional tone analysis",
+      "Cultural sensitivity",
+      "Professional scoring",
+      "Improvement suggestions"
+    ],
+    "icon": "BarChart",
+    "color": "from-orange-500 to-red-500",
+    "badge": "V666",
+    "popular": false,
+    "tags": [
+      "communication",
+      "v666",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "meeting-scheduler-ai",
+    "title": "AI Meeting Scheduler",
+    "description": "Intelligent meeting scheduling across time zones with participant availability optimization",
+    "longDescription": "Intelligent meeting scheduling across time zones with participant availability optimization. Part of the V667 Email Intelligence suite. Features include: Multi-timezone support, Smart time suggestions, Calendar integration, Automatic rescheduling.",
+    "category": "Productivity",
+    "price": "$79/mo",
+    "features": [
+      "Multi-timezone support",
+      "Smart time suggestions",
+      "Calendar integration",
+      "Automatic rescheduling"
+    ],
+    "icon": "Calendar",
+    "color": "from-indigo-500 to-purple-500",
+    "badge": "V667",
+    "popular": true,
+    "tags": [
+      "productivity",
+      "v667",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "meeting-fatigue-detector",
+    "title": "Meeting Fatigue Detector",
+    "description": "Detect and prevent meeting fatigue with workload analysis and focus time protection",
+    "longDescription": "Detect and prevent meeting fatigue with workload analysis and focus time protection. Part of the V667 Email Intelligence suite. Features include: Fatigue scoring, Back-to-back alerts, Focus time blocking, Workload balancing.",
+    "category": "Wellness",
+    "price": "$39/mo",
+    "features": [
+      "Fatigue scoring",
+      "Back-to-back alerts",
+      "Focus time blocking",
+      "Workload balancing"
+    ],
+    "icon": "Battery",
+    "color": "from-yellow-500 to-orange-500",
+    "badge": "V667",
+    "popular": false,
+    "tags": [
+      "wellness",
+      "v667",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "timezone-meeting-optimizer",
+    "title": "Time Zone Meeting Optimizer",
+    "description": "Find optimal meeting times across global teams with fairness algorithms",
+    "longDescription": "Find optimal meeting times across global teams with fairness algorithms. Part of the V667 Email Intelligence suite. Features include: Global timezone support, Fairness algorithms, Rotation scheduling, Holiday awareness.",
+    "category": "Productivity",
+    "price": "$49/mo",
+    "features": [
+      "Global timezone support",
+      "Fairness algorithms",
+      "Rotation scheduling",
+      "Holiday awareness"
+    ],
+    "icon": "Globe",
+    "color": "from-cyan-500 to-blue-500",
+    "badge": "V667",
+    "popular": false,
+    "tags": [
+      "productivity",
+      "v667",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "meeting-conflict-resolver",
+    "title": "Meeting Conflict Resolver",
+    "description": "Automatically resolve scheduling conflicts with smart prioritization and alternatives",
+    "longDescription": "Automatically resolve scheduling conflicts with smart prioritization and alternatives. Part of the V667 Email Intelligence suite. Features include: Conflict detection, Priority-based resolution, Alternative suggestions, Bulk rescheduling.",
+    "category": "Productivity",
+    "price": "$35/mo",
+    "features": [
+      "Conflict detection",
+      "Priority-based resolution",
+      "Alternative suggestions",
+      "Bulk rescheduling"
+    ],
+    "icon": "GitBranch",
+    "color": "from-red-500 to-pink-500",
+    "badge": "V667",
+    "popular": false,
+    "tags": [
+      "productivity",
+      "v667",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "meeting-analytics-dashboard",
+    "title": "Meeting Analytics Dashboard",
+    "description": "Comprehensive meeting analytics with cost tracking and productivity insights",
+    "longDescription": "Comprehensive meeting analytics with cost tracking and productivity insights. Part of the V667 Email Intelligence suite. Features include: Meeting cost calculator, Productivity metrics, Team analytics, ROI tracking.",
+    "category": "Analytics",
+    "price": "$89/mo",
+    "features": [
+      "Meeting cost calculator",
+      "Productivity metrics",
+      "Team analytics",
+      "ROI tracking"
+    ],
+    "icon": "TrendingUp",
+    "color": "from-green-500 to-teal-500",
+    "badge": "V667",
+    "popular": false,
+    "tags": [
+      "analytics",
+      "v667",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "document-version-tracker",
+    "title": "Document Version Tracker",
+    "description": "Track document versions and changes across email attachments with diff analysis",
+    "longDescription": "Track document versions and changes across email attachments with diff analysis. Part of the V668 Email Intelligence suite. Features include: Version detection, Change tracking, Diff analysis, Version history.",
+    "category": "Document Management",
+    "price": "$69/mo",
+    "features": [
+      "Version detection",
+      "Change tracking",
+      "Diff analysis",
+      "Version history"
+    ],
+    "icon": "FileText",
+    "color": "from-blue-500 to-indigo-500",
+    "badge": "V668",
+    "popular": true,
+    "tags": [
+      "document management",
+      "v668",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "document-classifier",
+    "title": "Document Classifier",
+    "description": "Automatically classify email attachments by type, sensitivity, and compliance requirements",
+    "longDescription": "Automatically classify email attachments by type, sensitivity, and compliance requirements. Part of the V668 Email Intelligence suite. Features include: Type classification, Sensitivity detection, Compliance tagging, Auto-organization.",
+    "category": "Document Management",
+    "price": "$59/mo",
+    "features": [
+      "Type classification",
+      "Sensitivity detection",
+      "Compliance tagging",
+      "Auto-organization"
+    ],
+    "icon": "Folder",
+    "color": "from-purple-500 to-pink-500",
+    "badge": "V668",
+    "popular": false,
+    "tags": [
+      "document management",
+      "v668",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "document-approval-workflow",
+    "title": "Document Approval Workflow",
+    "description": "Automated document approval workflows with multi-stage review and compliance tracking",
+    "longDescription": "Automated document approval workflows with multi-stage review and compliance tracking. Part of the V668 Email Intelligence suite. Features include: Multi-stage approval, Role-based routing, Compliance checks, Audit trail.",
+    "category": "Workflow",
+    "price": "$99/mo",
+    "features": [
+      "Multi-stage approval",
+      "Role-based routing",
+      "Compliance checks",
+      "Audit trail"
+    ],
+    "icon": "CheckSquare",
+    "color": "from-green-500 to-emerald-500",
+    "badge": "V668",
+    "popular": false,
+    "tags": [
+      "workflow",
+      "v668",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "attachment-duplicate-detector",
+    "title": "Attachment Duplicate Detector",
+    "description": "Detect and eliminate duplicate attachments to save storage and reduce confusion",
+    "longDescription": "Detect and eliminate duplicate attachments to save storage and reduce confusion. Part of the V668 Email Intelligence suite. Features include: Duplicate detection, Hash comparison, Storage optimization, Clean-up suggestions.",
+    "category": "Document Management",
+    "price": "$29/mo",
+    "features": [
+      "Duplicate detection",
+      "Hash comparison",
+      "Storage optimization",
+      "Clean-up suggestions"
+    ],
+    "icon": "Copy",
+    "color": "from-orange-500 to-red-500",
+    "badge": "V668",
+    "popular": false,
+    "tags": [
+      "document management",
+      "v668",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "document-expiration-tracker",
+    "title": "Document Expiration Tracker",
+    "description": "Track document expiration dates and renewal requirements with automated alerts",
+    "longDescription": "Track document expiration dates and renewal requirements with automated alerts. Part of the V668 Email Intelligence suite. Features include: Expiration tracking, Renewal alerts, Compliance monitoring, Automated reminders.",
+    "category": "Compliance",
+    "price": "$79/mo",
+    "features": [
+      "Expiration tracking",
+      "Renewal alerts",
+      "Compliance monitoring",
+      "Automated reminders"
+    ],
+    "icon": "Clock",
+    "color": "from-red-500 to-orange-500",
+    "badge": "V668",
+    "popular": false,
+    "tags": [
+      "compliance",
+      "v668",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "vendor-relationship-manager",
+    "title": "Vendor Relationship Manager",
+    "description": "Comprehensive vendor relationship management with communication tracking and performance scoring",
+    "longDescription": "Comprehensive vendor relationship management with communication tracking and performance scoring. Part of the V669 Email Intelligence suite. Features include: Vendor profiles, Communication logs, Performance scoring, Relationship health.",
+    "category": "Business",
+    "price": "$149/mo",
+    "features": [
+      "Vendor profiles",
+      "Communication logs",
+      "Performance scoring",
+      "Relationship health"
+    ],
+    "icon": "Building",
+    "color": "from-indigo-500 to-blue-500",
+    "badge": "V669",
+    "popular": true,
+    "tags": [
+      "business",
+      "v669",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "sla-compliance-monitor",
+    "title": "SLA Compliance Monitor",
+    "description": "Monitor vendor SLA compliance with real-time tracking and breach alerts",
+    "longDescription": "Monitor vendor SLA compliance with real-time tracking and breach alerts. Part of the V669 Email Intelligence suite. Features include: SLA tracking, Breach detection, Performance metrics, Compliance reports.",
+    "category": "Compliance",
+    "price": "$129/mo",
+    "features": [
+      "SLA tracking",
+      "Breach detection",
+      "Performance metrics",
+      "Compliance reports"
+    ],
+    "icon": "Target",
+    "color": "from-green-500 to-teal-500",
+    "badge": "V669",
+    "popular": false,
+    "tags": [
+      "compliance",
+      "v669",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "contract-renewal-alerts",
+    "title": "Contract Renewal Alerts",
+    "description": "Automated contract renewal tracking with early warning alerts and negotiation insights",
+    "longDescription": "Automated contract renewal tracking with early warning alerts and negotiation insights. Part of the V669 Email Intelligence suite. Features include: Renewal tracking, Early alerts, Negotiation insights, Terms comparison.",
+    "category": "Business",
+    "price": "$59/mo",
+    "features": [
+      "Renewal tracking",
+      "Early alerts",
+      "Negotiation insights",
+      "Terms comparison"
+    ],
+    "icon": "FileSignature",
+    "color": "from-purple-500 to-indigo-500",
+    "badge": "V669",
+    "popular": false,
+    "tags": [
+      "business",
+      "v669",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "vendor-risk-assessment",
+    "title": "Vendor Risk Assessment",
+    "description": "Comprehensive vendor risk assessment with security, financial, and operational analysis",
+    "longDescription": "Comprehensive vendor risk assessment with security, financial, and operational analysis. Part of the V669 Email Intelligence suite. Features include: Risk scoring, Security assessment, Financial health, Operational reliability.",
+    "category": "Risk Management",
+    "price": "$199/mo",
+    "features": [
+      "Risk scoring",
+      "Security assessment",
+      "Financial health",
+      "Operational reliability"
+    ],
+    "icon": "AlertTriangle",
+    "color": "from-red-500 to-pink-500",
+    "badge": "V669",
+    "popular": false,
+    "tags": [
+      "risk management",
+      "v669",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "vendor-performance-analytics",
+    "title": "Vendor Performance Analytics",
+    "description": "Advanced vendor performance analytics with benchmarking and trend analysis",
+    "longDescription": "Advanced vendor performance analytics with benchmarking and trend analysis. Part of the V669 Email Intelligence suite. Features include: Performance metrics, Benchmarking, Trend analysis, ROI calculation.",
+    "category": "Analytics",
+    "price": "$109/mo",
+    "features": [
+      "Performance metrics",
+      "Benchmarking",
+      "Trend analysis",
+      "ROI calculation"
+    ],
+    "icon": "BarChart2",
+    "color": "from-cyan-500 to-blue-500",
+    "badge": "V669",
+    "popular": false,
+    "tags": [
+      "analytics",
+      "v669",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "innovation-idea-tracker",
+    "title": "Innovation Idea Tracker",
+    "description": "Track and manage innovation ideas from emails with impact and feasibility scoring",
+    "longDescription": "Track and manage innovation ideas from emails with impact and feasibility scoring. Part of the V670 Email Intelligence suite. Features include: Idea extraction, Impact scoring, Feasibility analysis, Pipeline management.",
+    "category": "Innovation",
+    "price": "$89/mo",
+    "features": [
+      "Idea extraction",
+      "Impact scoring",
+      "Feasibility analysis",
+      "Pipeline management"
+    ],
+    "icon": "Lightbulb",
+    "color": "from-yellow-500 to-orange-500",
+    "badge": "V670",
+    "popular": true,
+    "tags": [
+      "innovation",
+      "v670",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "innovation-pipeline-manager",
+    "title": "Innovation Pipeline Manager",
+    "description": "Manage innovation pipeline from idea to implementation with stage tracking and resource allocation",
+    "longDescription": "Manage innovation pipeline from idea to implementation with stage tracking and resource allocation. Part of the V670 Email Intelligence suite. Features include: Pipeline stages, Resource allocation, Progress tracking, Success metrics.",
+    "category": "Innovation",
+    "price": "$149/mo",
+    "features": [
+      "Pipeline stages",
+      "Resource allocation",
+      "Progress tracking",
+      "Success metrics"
+    ],
+    "icon": "GitPullRequest",
+    "color": "from-green-500 to-emerald-500",
+    "badge": "V670",
+    "popular": false,
+    "tags": [
+      "innovation",
+      "v670",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "collaboration-opportunity-finder",
+    "title": "Collaboration Opportunity Finder",
+    "description": "Identify collaboration opportunities from email conversations with team matching",
+    "longDescription": "Identify collaboration opportunities from email conversations with team matching. Part of the V670 Email Intelligence suite. Features include: Opportunity detection, Team matching, Skill mapping, Collaboration scoring.",
+    "category": "Collaboration",
+    "price": "$69/mo",
+    "features": [
+      "Opportunity detection",
+      "Team matching",
+      "Skill mapping",
+      "Collaboration scoring"
+    ],
+    "icon": "Users",
+    "color": "from-blue-500 to-purple-500",
+    "badge": "V670",
+    "popular": false,
+    "tags": [
+      "collaboration",
+      "v670",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "improvement-suggestion-analyzer",
+    "title": "Improvement Suggestion Analyzer",
+    "description": "Analyze improvement suggestions from emails with categorization and prioritization",
+    "longDescription": "Analyze improvement suggestions from emails with categorization and prioritization. Part of the V670 Email Intelligence suite. Features include: Suggestion extraction, Auto-categorization, Priority scoring, Trend analysis.",
+    "category": "Analytics",
+    "price": "$79/mo",
+    "features": [
+      "Suggestion extraction",
+      "Auto-categorization",
+      "Priority scoring",
+      "Trend analysis"
+    ],
+    "icon": "TrendingUp",
+    "color": "from-indigo-500 to-cyan-500",
+    "badge": "V670",
+    "popular": false,
+    "tags": [
+      "analytics",
+      "v670",
+      "email-intelligence"
+    ]
+  },
+  {
+    "id": "innovation-impact-assessment",
+    "title": "Innovation Impact Assessment",
+    "description": "Assess innovation impact with ROI tracking and success metrics",
+    "longDescription": "Assess innovation impact with ROI tracking and success metrics. Part of the V670 Email Intelligence suite. Features include: Impact measurement, ROI tracking, Success metrics, Benchmarking.",
+    "category": "Analytics",
+    "price": "$119/mo",
+    "features": [
+      "Impact measurement",
+      "ROI tracking",
+      "Success metrics",
+      "Benchmarking"
+    ],
+    "icon": "Award",
+    "color": "from-orange-500 to-red-500",
+    "badge": "V670",
+    "popular": false,
+    "tags": [
+      "analytics",
+      "v670",
+      "email-intelligence"
+    ]
   }
 ]
