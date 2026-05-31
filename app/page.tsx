@@ -46,11 +46,6 @@ import V386V390Showcase from '@/components/V386V390Showcase';
 import V391V395Showcase from '@/components/V391V395Showcase';
 import V396V400Showcase from '@/components/V396V400Showcase';
 import V401V405Showcase from '@/components/V401V405Showcase';
-import V406V410Showcase from '@/components/V406V410Showcase';
-import V411V415Showcase from '@/components/V411V415Showcase';
-import V416V420Showcase from '@/components/V416V420Showcase';
-import V421V425Showcase from '@/components/V421V425Showcase';
-import V446V450Showcase from '@/components/V446V450Showcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -123,7 +118,7 @@ const INDUSTRIES = [
 ];
 
 export default function HomePage() {
-  const services: Service[] = allServices || [];
+  const services: Service[] = allServices;
 
   // Stage health counts — deterministic from catalog
   const byStage = useMemo(() => {
@@ -132,7 +127,7 @@ export default function HomePage() {
     return acc;
   }, [services]);
 
-  const serviceCount = (allServices || []).length;
+  const serviceCount = allServices.length;
     const [quickView, setQuickView] = useState<Service | null>(null);
     const [releaseNotes, setReleaseNotes] = useState<any[]>([]);
     const [search, setSearch] = useState('');
@@ -195,7 +190,7 @@ let list = services;
   // Falls back to freshFeatures if dataset not loaded or empty.
   const newsItems = useMemo(() => {
     if (!releaseNotes.length) {
-      return (allServices || [])
+      return allServices
         .map(s => ({ ...s, _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
         .sort((a:any,b:any) => b._score - a._score)
         .slice(0, 6);
@@ -210,7 +205,7 @@ let list = services;
     const SCORE_TAG       = 2;   // +2 per matched tag
     const SCORE_FEATURED  = 3;   // +3 if featured
     const SCORE_FEATURES  = 1;   // +1 per feature bullet
-    const lookup = new Map((allServices || []).map(s => [s.id, s]));
+    const lookup = new Map(allServices.map(s => [s.id, s]));
     const merged = releaseNotes
       .filter(r => r.featured !== false)
       .map(r => {
@@ -234,7 +229,7 @@ let list = services;
       .slice(0, 6);
     if (merged.length) return merged;
     // Fallback: same formula as original freshFeatures
-    return (allServices || [])
+    return allServices
       .map(s => ({ ...s, _score: (s.features?.length || 0) * 3 + (s.benefits?.length || 0) * 2 + (s.description || '').length * 0.3 }))
       .sort((a:any,b:any) => b._score - a._score)
       .slice(0, 6);
@@ -455,11 +450,6 @@ let list = services;
       <V391V395Showcase />
       <V396V400Showcase />
       <V401V405Showcase />
-      <V406V410Showcase />
-      <V411V415Showcase />
-      <V416V420Showcase />
-      <V421V425Showcase />
-      <V446V450Showcase />
 
       {/* ── How It Works ── */}
       <section className="py-20">
