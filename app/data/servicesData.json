@@ -84731,559 +84731,203 @@
     ]
   },
   {
-    "id": "wave91-1",
-    "title": "AI Property Valuation & Investment Analysis",
-    "description": "AI property valuation using ML on 100M+ transactions. Instant AVM, comparable analysis, rental yield forecasting, investment ROI modeling for any US property.",
-    "features": [
-      "Automated valuation model (AVM) 95% accuracy",
-      "Comparable sales analysis",
-      "Rental yield forecasting",
-      "Investment ROI modeling",
-      "100M+ property database",
-      "Neighborhood trend analysis",
-      "Tax assessment challenge support",
-      "Integration: Zillow, Redfin, CoreLogic"
-    ],
-    "benefits": [
-      "Instant property valuations",
-      "Investment-grade analysis",
-      "Find undervalued properties",
-      "ROI projections before purchase",
-      "Challenge inaccurate tax assessments"
-    ],
-    "pricing": {
-      "basic": "$497/mo",
-      "pro": "$1,297/mo",
-      "enterprise": "$2,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🏠",
-    "href": "https://ziontechgroup.com/services/ai-property-valuation",
-    "popular": true,
-    "category": "PropTech",
-    "industry": "Real Estate"
+    "id": "thread-relationship-mapper",
+    "title": "Email Thread Relationship Mapper",
+    "description": "Map and analyze email thread relationships to identify key stakeholders, decision-makers, and communication dynamics. Uses network analysis to optimize communication strategies.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": ["Stakeholder identification", "Reply pattern analysis", "Influence scoring", "Network centrality", "Relationship strength", "Communication optimization"]
   },
   {
-    "id": "wave91-2",
-    "title": "Property Management Automation Platform",
-    "description": "Automate property management: tenant screening, lease abstraction, rent collection, maintenance routing. AI handles 80% of daily tasks.",
-    "features": [
-      "Tenant screening automation",
-      "AI lease abstraction",
-      "Rent collection & accounting",
-      "Maintenance request routing",
-      "Portfolio analytics dashboard",
-      "Tenant self-service portal",
-      "Yardi, RealPage, AppFolio integration",
-      "Escrow & compliance tracking"
-    ],
-    "benefits": [
-      "80% of tasks automated",
-      "Faster tenant placement",
-      "Reduced vacancy rates",
-      "Lower maintenance costs",
-      "Happy tenants through instant response"
-    ],
-    "pricing": {
-      "basic": "$297/mo",
-      "pro": "$797/mo",
-      "enterprise": "$1,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🏢",
-    "href": "https://ziontechgroup.com/services/property-management-automation",
-    "popular": true,
-    "category": "PropTech",
-    "industry": "Property Management"
+    "id": "relationship-mapper-stakeholder",
+    "title": "Stakeholder Relationship Intelligence",
+    "description": "Identify and map stakeholder relationships across email threads to understand decision-making dynamics and influence networks.",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": ["Decision-maker detection", "Influence mapping", "Communication flow", "Role identification", "Network visualization", "Strategy recommendations"]
   },
   {
-    "id": "wave91-3",
-    "title": "Real Estate Listing & Marketing AI",
-    "description": "AI creates stunning listings: virtual 3D tours from photos, AI virtual staging, drone photography, auto-written descriptions. Syndicates to 50+ platforms.",
-    "features": [
-      "Virtual 3D tours from photos",
-      "AI virtual staging",
-      "Drone photography automation",
-      "Auto-written descriptions",
-      "50+ platform syndication",
-      "Lead capture from tours",
-      "MLS integration",
-      "Social media ad generation"
-    ],
-    "benefits": [
-      "Sell listings 3x faster",
-      "Virtual staging saves $2,000+ per property",
-      "Descriptions that convert",
-      "Maximum exposure across all platforms",
-      "Lead capture from every tour view"
-    ],
-    "pricing": {
-      "basic": "$197/mo",
-      "pro": "$497/mo",
-      "enterprise": "$1,297/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "📸",
-    "href": "https://ziontechgroup.com/services/real-estate-marketing-ai",
-    "popular": false,
-    "category": "PropTech",
-    "industry": "Real Estate Marketing"
+    "id": "relationship-mapper-influence",
+    "title": "Email Influence Score Analytics",
+    "description": "Calculate influence scores for email participants based on reply patterns, thread initiation, and response rates.",
+    "category": "email-intelligence",
+    "price": "$799/month",
+    "features": ["Influence scoring 0-100", "Reply pattern tracking", "Thread analysis", "Role detection", "Historical trends", "Team insights"]
   },
   {
-    "id": "wave91-4",
-    "title": "Real Estate Market Intelligence Dashboard",
-    "description": "AI market intelligence: trend forecasting, neighborhood scoring, school districts, crime data, future value prediction. Find opportunities before the market.",
-    "features": [
-      "AI market trend forecasting",
-      "Neighborhood scoring multi-factor",
-      "School district analysis",
-      "Crime & safety data integration",
-      "Future value prediction",
-      "Investment opportunity alerts",
-      "100M+ transaction database",
-      "Custom investment criteria"
-    ],
-    "benefits": [
-      "Spot trends before competitors",
-      "Quantify neighborhood quality",
-      "Data-driven investment decisions",
-      "Predict future property values",
-      "Custom alerts for your specific strategy"
-    ],
-    "pricing": {
-      "basic": "$397/mo",
-      "pro": "$997/mo",
-      "enterprise": "$2,497/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "📊",
-    "href": "https://ziontechgroup.com/services/real-estate-market-intel",
-    "popular": false,
-    "category": "PropTech",
-    "industry": "Market Intelligence"
+    "id": "relationship-mapper-network",
+    "title": "Communication Network Optimizer",
+    "description": "Optimize communication networks within teams by analyzing email thread relationships and identifying bottlenecks.",
+    "category": "email-intelligence",
+    "price": "$1,499/month",
+    "features": ["Network mapping", "Bottleneck detection", "Flow optimization", "Hub identification", "Bridge analysis", "Team restructuring"]
   },
   {
-    "id": "wave91-5",
-    "title": "Transaction Management & Closing Automation",
-    "description": "AI transaction management: automated offers, counter-offer analysis, e-signing, title coordination, inspection scheduling. Close deals 40% faster.",
-    "features": [
-      "Automated offer generation",
-      "AI counter-offer analysis",
-      "Document e-signing",
-      "Title & escrow coordination",
-      "Inspection scheduling",
-      "Closing checklist automation",
-      "DocuSign, Dotloop integration",
-      "Commission tracking"
-    ],
-    "benefits": [
-      "Close deals 40% faster",
-      "Fewer fall-throughs with AI follow-up",
-      "Automated compliance",
-      "Reduce errors in paperwork",
-      "Commission tracking eliminates disputes"
-    ],
-    "pricing": {
-      "basic": "$247/mo",
-      "pro": "$697/mo",
-      "enterprise": "$1,497/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "📝",
-    "href": "https://ziontechgroup.com/services/transaction-management",
-    "popular": false,
-    "category": "PropTech",
-    "industry": "Transactions"
+    "id": "relationship-mapper-enterprise",
+    "title": "Enterprise Relationship Intelligence Platform",
+    "description": "Comprehensive enterprise platform for mapping, analyzing, and optimizing business relationships through email intelligence.",
+    "category": "email-intelligence",
+    "price": "$2,999/month",
+    "features": ["Full relationship mapping", "Cross-team analysis", "Executive dashboards", "CRM integration", "API access", "Custom reporting"]
   },
   {
-    "id": "wave92-1",
-    "title": "AI Claims Processing & Fraud Detection",
-    "description": "AI claims: auto-adjudication, fraud detection, photo damage assessment, reserve estimation. Process claims 10x faster with 95% fraud detection accuracy.",
-    "features": [
-      "AI auto-adjudication",
-      "ML fraud detection 95%+ accuracy",
-      "Photo damage assessment",
-      "Reserve estimation",
-      "Regulatory compliance",
-      "Guidewire, Duck Creek integration",
-      "Subrogation identification",
-      "Litigation risk scoring"
-    ],
-    "benefits": [
-      "10x faster claims processing",
-      "95% fraud catch rate",
-      "Accurate reserves",
-      "Lower compliance costs",
-      "Identify subrogation opportunities"
-    ],
-    "pricing": {
-      "basic": "$1,497/mo",
-      "pro": "$3,997/mo",
-      "enterprise": "$8,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🛡️",
-    "href": "https://ziontechgroup.com/services/ai-claims-processing",
-    "popular": true,
-    "category": "InsurTech",
-    "industry": "Claims"
+    "id": "sentiment-evolution-tracker",
+    "title": "Email Sentiment Evolution Tracker",
+    "description": "Track how sentiment changes over time in email conversations. Detect escalation patterns and identify optimal intervention points.",
+    "category": "email-intelligence",
+    "price": "$799/month",
+    "features": ["Sentiment timeline", "Escalation detection", "Cooling-down periods", "Intervention recommendations", "Sentiment velocity", "Health scoring"]
   },
   {
-    "id": "wave92-2",
-    "title": "Insurance Agency Management Platform",
-    "description": "AI agency management: risk assessment, automated underwriting, policy generation, renewal optimization. Increase revenue per policy 25%.",
-    "features": [
-      "AI risk assessment",
-      "Automated underwriting",
-      "Policy document generation",
-      "Renewal optimization",
-      "Customer self-service portal",
-      "Applied Epic, HawkSoft integration",
-      "Regulatory filing automation",
-      "NPS tracking"
-    ],
-    "benefits": [
-      "Revenue per policy +25%",
-      "Underwriting 10x faster",
-      "Retention optimization",
-      "Self-service portal reduces calls",
-      "Automated compliance filings",
-      "NPS tracking drives improvement"
-    ],
-    "pricing": {
-      "basic": "$597/mo",
-      "pro": "$1,497/mo",
-      "enterprise": "$3,497/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "📋",
-    "href": "https://ziontechgroup.com/services/insurance-agency-platform",
-    "popular": false,
-    "category": "InsurTech",
-    "industry": "Agency Management"
+    "id": "sentiment-evolution-escalation",
+    "title": "Conversation Escalation Prevention System",
+    "description": "Prevent conversation escalation by detecting negative sentiment trends early and recommending proactive interventions.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": ["Early warning system", "Trend analysis", "Auto-alerts", "Intervention templates", "De-escalation guides", "Manager notifications"]
   },
   {
-    "id": "wave92-3",
-    "title": "IoT Risk Prevention for Insurers",
-    "description": "IoT + AI risk prevention: real-time monitoring, preventive alerts, policyholder risk scoring. Reduce claims 30% through prevention, not just coverage.",
-    "features": [
-      "IoT sensor data ingestion",
-      "Real-time risk monitoring",
-      "Preventive alert engine",
-      "Policyholder risk scoring",
-      "Weather, flood, fire data",
-      "Loss prevention recommendations",
-      "Premium discount verification",
-      "Catastrophe modeling"
-    ],
-    "benefits": [
-      "30% claims reduction",
-      "Prevent losses before they happen",
-      "Risk-based premium accuracy",
-      "Policyholder safety improvement",
-      "Catastrophe preparation"
-    ],
-    "pricing": {
-      "basic": "$997/mo",
-      "pro": "$2,497/mo",
-      "enterprise": "$5,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "📡",
-    "href": "https://ziontechgroup.com/services/iot-risk-prevention",
-    "popular": false,
-    "category": "InsurTech",
-    "industry": "Risk Prevention"
+    "id": "sentiment-evolution-health",
+    "title": "Conversation Health Monitor",
+    "description": "Monitor the health of email conversations with real-time scoring and actionable recommendations for improvement.",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": ["Health score 0-100", "Real-time monitoring", "Status tracking", "Velocity analysis", "Trend reports", "Improvement plans"]
   },
   {
-    "id": "wave92-4",
-    "title": "Insurance Customer Intelligence Platform",
-    "description": "AI customer intelligence: behavior analysis, propensity modeling, next-best-action, cross-sell automation. Increase policyholder LTV 35%.",
-    "features": [
-      "Customer behavior analysis",
-      "Propensity modeling",
-      "Next-best-action engine",
-      "Cross-sell/upsell automation",
-      "Churn prediction",
-      "Salesforce, HubSpot integration",
-      "Campaign orchestration",
-      "Attribution modeling"
-    ],
-    "benefits": [
-      "35% higher customer LTV",
-      "Propensity scoring accuracy",
-      "Automated cross-sell",
-      "Reduce churn 25%",
-      "Revenue attribution per campaign"
-    ],
-    "pricing": {
-      "basic": "$797/mo",
-      "pro": "$1,997/mo",
-      "enterprise": "$4,497/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🧠",
-    "href": "https://ziontechgroup.com/services/insurance-customer-intel",
-    "popular": false,
-    "category": "InsurTech",
-    "industry": "Customer Intelligence"
+    "id": "sentiment-evolution-customer",
+    "title": "Customer Sentiment Journey Analytics",
+    "description": "Track customer sentiment across the entire email journey from initial contact to resolution, identifying pain points.",
+    "category": "email-intelligence",
+    "price": "$1,599/month",
+    "features": ["Journey mapping", "Pain point detection", "Satisfaction tracking", "Churn prediction", "NPS correlation", "Retention alerts"]
   },
   {
-    "id": "wave92-5",
-    "title": "Insurance Regulatory Compliance Automation",
-    "description": "AI regulatory compliance: automated monitoring, state-by-state filing, audit trails. Stay compliant across all 50 states without a 50-person legal team.",
-    "features": [
-      "Regulatory change monitoring",
-      "Automated compliance filing",
-      "State-by-state tracking",
-      "Audit trail management",
-      "SERFF, NAIC integration",
-      "Compliance risk scoring",
-      "Remediation workflow",
-      "Board compliance reporting"
-    ],
-    "benefits": [
-      "50-state compliance automation",
-      "Zero missed filings",
-      "Audit-ready at all times",
-      "Risk scoring prioritization",
-      "Board-level reporting"
-    ],
-    "pricing": {
-      "basic": "$1,297/mo",
-      "pro": "$3,497/mo",
-      "enterprise": "$7,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "⚖️",
-    "href": "https://ziontechgroup.com/services/insurance-compliance",
-    "popular": false,
-    "category": "InsurTech",
-    "industry": "Compliance"
+    "id": "sentiment-evolution-team",
+    "title": "Team Communication Wellness Dashboard",
+    "description": "Monitor team communication health with sentiment analytics, burnout detection, and collaboration insights.",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": ["Team health scores", "Burnout detection", "Collaboration metrics", "Morale tracking", "Conflict alerts", "Wellness reports"]
   },
   {
-    "id": "wave93-1",
-    "title": "Restaurant Operations & Cost Optimization AI",
-    "description": "AI restaurant management: demand forecasting, automated purchasing, waste reduction, recipe costing. Reduce food costs 20% and waste 40%.",
-    "features": [
-      "Demand forecasting per location",
-      "Automated purchasing",
-      "Waste tracking & reduction",
-      "Recipe cost optimization",
-      "Toast, Square, Clover integration",
-      "Supplier price comparison",
-      "Menu engineering analytics",
-      "Labor optimization"
-    ],
-    "benefits": [
-      "20% food cost reduction",
-      "40% waste reduction",
-      "Optimized purchasing",
-      "Better labor scheduling",
-      "Data-driven menu decisions"
-    ],
-    "pricing": {
-      "basic": "$297/mo",
-      "pro": "$797/mo",
-      "enterprise": "$1,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🍽️",
-    "href": "https://ziontechgroup.com/services/restaurant-ops-ai",
-    "popular": true,
-    "category": "Food Tech",
-    "industry": "Restaurant"
+    "id": "response-time-optimizer",
+    "title": "Email Response Time Optimizer",
+    "description": "Analyze optimal times to send emails for faster responses using historical data, recipient patterns, and timezone intelligence.",
+    "category": "email-intelligence",
+    "price": "$699/month",
+    "features": ["Optimal send time", "Historical analysis", "Timezone awareness", "Day-of-week patterns", "Response probability", "Engagement heatmaps"]
   },
   {
-    "id": "wave93-2",
-    "title": "Hotel Revenue Management & Guest Experience",
-    "description": "AI revenue management: dynamic pricing, guest preference learning, review sentiment, automated communication. Increase RevPAR 25%.",
-    "features": [
-      "Dynamic pricing per room/seat",
-      "Guest preference AI",
-      "Review sentiment analysis",
-      "Automated guest communication",
-      "Loyalty program optimization",
-      "Opera, Cloudbeds integration",
-      "RevPAR optimization",
-      "Competitive rate shopping"
-    ],
-    "benefits": [
-      "25% RevPAR increase",
-      "30% guest satisfaction increase",
-      "Dynamic pricing maximizes revenue",
-      "Review management protects brand",
-      "Loyalty drives repeat bookings"
-    ],
-    "pricing": {
-      "basic": "$497/mo",
-      "pro": "$1,297/mo",
-      "enterprise": "$2,997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🏨",
-    "href": "https://ziontechgroup.com/services/hotel-revenue-management",
-    "popular": false,
-    "category": "Hospitality",
-    "industry": "Revenue Management"
+    "id": "response-time-scheduler",
+    "title": "Smart Email Scheduling Engine",
+    "description": "Automatically schedule emails for optimal send times based on recipient engagement patterns and historical response data.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": ["Auto-scheduling", "Multi-recipient optimization", "Timezone conversion", "Queue management", "Performance tracking", "A/B testing"]
   },
   {
-    "id": "wave93-3",
-    "title": "Food Nutrition & Compliance Platform",
-    "description": "AI nutrition analysis from photos, allergen detection, FDA/school/hospital compliance. Generate labels, optimize sourcing.",
-    "features": [
-      "Nutritional analysis from photos",
-      "Allergen detection",
-      "FDA/school/hospital compliance",
-      "Ingredient sourcing optimization",
-      "Nutritics, MenuInfo integration",
-      "Label generation",
-      "Cost per nutrient optimization",
-      "Recipe compliance checking"
-    ],
-    "benefits": [
-      "Instant nutrition analysis",
-      "Allergen compliance assured",
-      "Label generation in seconds",
-      "Optimized sourcing costs",
-      "Regulatory compliance"
-    ],
-    "pricing": {
-      "basic": "$197/mo",
-      "pro": "$497/mo",
-      "enterprise": "$1,297/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🥗",
-    "href": "https://ziontechgroup.com/services/food-nutrition-platform",
-    "popular": false,
-    "category": "Food Tech",
-    "industry": "Nutrition"
+    "id": "response-time-analytics",
+    "title": "Email Response Analytics Platform",
+    "description": "Comprehensive analytics platform for email response times, engagement rates, and communication efficiency.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": ["Response time tracking", "Engagement analytics", "Team benchmarks", "Performance reports", "Trend analysis", "Optimization tips"]
   },
   {
-    "id": "wave93-4",
-    "title": "Delivery Logistics Optimization Platform",
-    "description": "AI delivery logistics: route optimization, driver allocation, ETA prediction, multi-platform management. Reduce delivery costs 25%.",
-    "features": [
-      "Route optimization AI",
-      "Driver allocation",
-      "Real-time ETA prediction",
-      "Customer communication",
-      "DoorDash, UberEats integration",
-      "Failed delivery reduction",
-      "Tip optimization",
-      "Multi-platform order management"
-    ],
-    "benefits": [
-      "25% delivery cost reduction",
-      "50% fewer failed deliveries",
-      "Accurate ETAs",
-      "Cross-platform optimization",
-      "Driver efficiency analytics"
-    ],
-    "pricing": {
-      "basic": "$397/mo",
-      "pro": "$997/mo",
-      "enterprise": "$2,497/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "🚗",
-    "href": "https://ziontechgroup.com/services/delivery-logistics",
-    "popular": false,
-    "category": "Food Tech",
-    "industry": "Delivery"
+    "id": "response-time-global",
+    "title": "Global Timezone Email Optimizer",
+    "description": "Optimize email send times across global teams with intelligent timezone management and cultural awareness.",
+    "category": "email-intelligence",
+    "price": "$1,499/month",
+    "features": ["Global timezone support", "Cultural patterns", "Working hours detection", "Holiday awareness", "Multi-region optimization", "Team coordination"]
   },
   {
-    "id": "wave93-5",
-    "title": "Menu Engineering & Pricing Intelligence",
-    "description": "AI menu engineering: price elasticity, daypart analysis, promotion effectiveness, waste prediction. Optimize every item for maximum profit.",
-    "features": [
-      "AI menu engineering",
-      "Price elasticity modeling",
-      "Daypart analysis",
-      "Promotion effectiveness",
-      "POS system integration",
-      "Waste prediction",
-      "New item forecasting",
-      "Competitive menu analysis"
-    ],
-    "benefits": [
-      "Maximize profit per item",
-      "Optimize pricing scientifically",
-      "Daypart-specific pricing",
-      "Promotion ROI tracking",
-      "Forecast new item success"
-    ],
-    "pricing": {
-      "basic": "$147/mo",
-      "pro": "$397/mo",
-      "enterprise": "$997/mo"
-    },
-    "contactInfo": {
-      "website": "https://ziontechgroup.com",
-      "email": "kleber@ziontechgroup.com",
-      "phone": "+1 302 464 0950"
-    },
-    "icon": "📈",
-    "href": "https://ziontechgroup.com/services/menu-engineering",
-    "popular": false,
-    "category": "Food Tech",
-    "industry": "Menu Intelligence"
+    "id": "response-time-executive",
+    "title": "Executive Email Engagement Optimizer",
+    "description": "Optimize email timing specifically for executive communications with priority routing and VIP response tracking.",
+    "category": "email-intelligence",
+    "price": "$1,999/month",
+    "features": ["Executive patterns", "Priority routing", "VIP tracking", "Meeting alignment", "Briefing integration", "Performance dashboards"]
+  },
+  {
+    "id": "content-authenticity-verifier",
+    "title": "Email Content Authenticity Verifier",
+    "description": "Detect AI-generated vs human-written emails using linguistic analysis and pattern recognition. Identify phishing and spam.",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": ["AI vs human detection", "Phishing recognition", "Spam analysis", "Linguistic fingerprinting", "Metadata verification", "Authenticity scoring"]
+  },
+  {
+    "id": "content-authenticity-phishing",
+    "title": "Advanced Phishing Detection Engine",
+    "description": "Advanced phishing detection using content analysis, URL verification, and social engineering pattern recognition.",
+    "category": "email-intelligence",
+    "price": "$1,499/month",
+    "features": ["Pattern matching", "URL verification", "Social engineering detection", "Urgency analysis", "Credential theft prevention", "Real-time alerts"]
+  },
+  {
+    "id": "content-authenticity-ai-detect",
+    "title": "AI Content Detection for Emails",
+    "description": "Detect AI-generated email content with linguistic analysis, vocabulary diversity scoring, and structure pattern recognition.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": ["AI probability scoring", "Linguistic analysis", "Vocabulary diversity", "Structure patterns", "Confidence levels", "Detailed reports"]
+  },
+  {
+    "id": "content-authenticity-security",
+    "title": "Email Security Authenticity Platform",
+    "description": "Comprehensive email security platform combining authenticity verification with threat intelligence and compliance monitoring.",
+    "category": "email-intelligence",
+    "price": "$2,499/month",
+    "features": ["Multi-layer verification", "Threat intelligence", "Compliance monitoring", "Security scoring", "Audit logging", "Integration APIs"]
+  },
+  {
+    "id": "content-authenticity-trust",
+    "title": "Email Trust Score System",
+    "description": "Calculate trust scores for incoming emails based on sender reputation, content authenticity, and metadata verification.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": ["Trust scoring 0-100", "Reputation tracking", "Content verification", "Metadata analysis", "Risk assessment", "Automated filtering"]
+  },
+  {
+    "id": "meeting-action-extractor",
+    "title": "Email Meeting Action Item Extractor",
+    "description": "Automatically extract and track action items from meeting-related emails with deadline detection, owner assignment, and dependency tracking.",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": ["Action item extraction", "Deadline detection", "Owner assignment", "Dependency tracking", "Progress monitoring", "Meeting summaries"]
+  },
+  {
+    "id": "meeting-action-tracker",
+    "title": "Meeting Action Item Tracking System",
+    "description": "Track meeting action items across email threads with automated reminders, progress updates, and completion verification.",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": ["Cross-thread tracking", "Auto-reminders", "Progress updates", "Completion verification", "Overdue alerts", "Status dashboards"]
+  },
+  {
+    "id": "meeting-action-deadline",
+    "title": "Meeting Deadline Intelligence System",
+    "description": "Intelligent deadline management for meeting action items with automatic escalation, dependency resolution, and timeline optimization.",
+    "category": "email-intelligence",
+    "price": "$1,399/month",
+    "features": ["Deadline extraction", "Auto-escalation", "Dependency resolution", "Timeline optimization", "Calendar sync", "Notification system"]
+  },
+  {
+    "id": "meeting-action-collaboration",
+    "title": "Meeting Collaboration Intelligence",
+    "description": "Enhance meeting collaboration with intelligent action item management, team coordination, and follow-up automation.",
+    "category": "email-intelligence",
+    "price": "$1,699/month",
+    "features": ["Team coordination", "Task assignment", "Follow-up automation", "Collaboration scoring", "Meeting insights", "Integration hub"]
+  },
+  {
+    "id": "meeting-action-enterprise",
+    "title": "Enterprise Meeting Intelligence Platform",
+    "description": "Enterprise-grade meeting intelligence platform with AI-powered action item extraction, tracking, and analytics across the organization.",
+    "category": "email-intelligence",
+    "price": "$3,499/month",
+    "features": ["Organization-wide tracking", "AI extraction", "Advanced analytics", "Executive dashboards", "Compliance reporting", "Full API access"]
   }
 ]
