@@ -117299,6 +117299,552 @@ export const allServices: Service[] = [
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
     }
+  },
+  {
+    "id": "customer-retention-ai",
+    "name": "Customer Retention AI",
+    "category": "AI Services",
+    "description": "AI-powered retention system that identifies churn signals in email communications and automatically triggers retention campaigns, offers, and executive outreach.",
+    "price": "$119/month",
+    "features": [
+      "Churn signal detection",
+      "Auto retention campaigns",
+      "Executive outreach",
+      "Offer generation",
+      "ROI tracking"
+    ],
+    "link": "/services/customer-retention-ai",
+    "icon": "🔄",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "brand-sentiment-monitor",
+    "name": "Brand Sentiment Monitor",
+    "category": "Micro SaaS",
+    "description": "Monitor brand sentiment across email communications with customers, partners, and stakeholders. Real-time alerts for reputation threats and opportunities.",
+    "price": "$79/month",
+    "features": [
+      "Brand tracking",
+      "Real-time alerts",
+      "Reputation scoring",
+      "Competitor comparison",
+      "Sentiment reports"
+    ],
+    "link": "/services/brand-sentiment-monitor",
+    "icon": "🏷️",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "employee-sentiment-tracker",
+    "name": "Employee Sentiment Tracker",
+    "category": "AI Services",
+    "description": "Track employee morale and engagement through internal email sentiment analysis. Identify burnout risks, team conflicts, and engagement issues before they escalate.",
+    "price": "$69/month",
+    "features": [
+      "Morale tracking",
+      "Burnout detection",
+      "Team conflict alerts",
+      "Engagement scoring",
+      "HR dashboards"
+    ],
+    "link": "/services/employee-sentiment-tracker",
+    "icon": "😊",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "smart-email-prioritizer",
+    "name": "Smart Email Prioritizer",
+    "category": "AI Services",
+    "description": "Dynamic email prioritization that adjusts based on time decay, sender importance, and urgency indicators. Prevents priority inflation and ensures critical items get attention first.",
+    "price": "$49/month",
+    "features": [
+      "Dynamic prioritization",
+      "Time decay",
+      "Sender importance",
+      "Urgency detection",
+      "Priority analytics"
+    ],
+    "link": "/services/smart-email-prioritizer",
+    "icon": "⚡",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "executive-inbox-manager",
+    "name": "Executive Inbox Manager",
+    "category": "AI Services",
+    "description": "Specialized inbox management for executives. AI filters noise, highlights strategic communications, and prepares briefing summaries for high-priority emails.",
+    "price": "$149/month",
+    "features": [
+      "Noise filtering",
+      "Strategic highlighting",
+      "Briefing summaries",
+      "Delegation suggestions",
+      "Time blocking"
+    ],
+    "link": "/services/executive-inbox-manager",
+    "icon": "👔",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "priority-escalation-engine",
+    "name": "Priority Escalation Engine",
+    "category": "IT Services",
+    "description": "Automatically escalate overdue high-priority emails to management. Tracks SLA compliance and ensures critical communications are never missed.",
+    "price": "$79/month",
+    "features": [
+      "Auto-escalation",
+      "SLA tracking",
+      "Management alerts",
+      "Compliance reporting",
+      "Escalation chains"
+    ],
+    "link": "/services/priority-escalation-engine",
+    "icon": "📈",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "time-sensitive-email-alerts",
+    "name": "Time-Sensitive Email Alerts",
+    "category": "Micro SaaS",
+    "description": "Smart alert system for time-sensitive emails. Detects deadlines, meeting requests, and urgent items with push notifications and calendar integration.",
+    "price": "$29/month",
+    "features": [
+      "Deadline detection",
+      "Push notifications",
+      "Calendar sync",
+      "Urgency alerts",
+      "Mobile integration"
+    ],
+    "link": "/services/time-sensitive-email-alerts",
+    "icon": "⏰",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-thread-unifier",
+    "name": "Email Thread Unifier",
+    "category": "AI Services",
+    "description": "Automatically links related emails across different threads, projects, and time periods. Creates a unified view of all communications for complete context.",
+    "price": "$69/month",
+    "features": [
+      "Thread linking",
+      "Unified view",
+      "Context preservation",
+      "Project grouping",
+      "Timeline visualization"
+    ],
+    "link": "/services/email-thread-unifier",
+    "icon": "🔗",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "project-communication-hub",
+    "name": "Project Communication Hub",
+    "category": "Micro SaaS",
+    "description": "Centralized hub for all project-related communications. Automatically aggregates emails, documents, and discussions for complete project visibility.",
+    "price": "$89/month",
+    "features": [
+      "Email aggregation",
+      "Document linking",
+      "Discussion tracking",
+      "Project timeline",
+      "Stakeholder view"
+    ],
+    "link": "/services/project-communication-hub",
+    "icon": "📁",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "communication-audit-platform",
+    "name": "Communication Audit Platform",
+    "category": "IT Services",
+    "description": "Comprehensive audit of organizational communications. Identifies information silos, communication gaps, and inefficiencies across email networks.",
+    "price": "$99/month",
+    "features": [
+      "Communication mapping",
+      "Gap detection",
+      "Silo identification",
+      "Efficiency scoring",
+      "Optimization recommendations"
+    ],
+    "link": "/services/communication-audit-platform",
+    "icon": "🔎",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-knowledge-connector",
+    "name": "Email Knowledge Connector",
+    "category": "AI Services",
+    "description": "Connects knowledge scattered across email threads. Automatically builds topic maps and knowledge graphs from email communications.",
+    "price": "$79/month",
+    "features": [
+      "Topic mapping",
+      "Knowledge graphs",
+      "Auto-linking",
+      "Insight extraction",
+      "Knowledge base building"
+    ],
+    "link": "/services/email-knowledge-connector",
+    "icon": "🌐",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "task-followthrough-tracker",
+    "name": "Task Follow-Through Tracker",
+    "category": "Micro SaaS",
+    "description": "Ensures all email action items are completed before new requests are accepted. Tracks commitments, detects incomplete work, and prevents task abandonment.",
+    "price": "$49/month",
+    "features": [
+      "Commitment tracking",
+      "Completion verification",
+      "Task blocking",
+      "Progress monitoring",
+      "Accountability reports"
+    ],
+    "link": "/services/task-followthrough-tracker",
+    "icon": "✅",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-task-extractor",
+    "name": "Email Task Extractor",
+    "category": "AI Services",
+    "description": "Automatically extracts action items, deadlines, and assignments from emails. Creates structured task lists and tracks completion across email threads.",
+    "price": "$59/month",
+    "features": [
+      "Task extraction",
+      "Deadline detection",
+      "Assignment tracking",
+      "Completion monitoring",
+      "Integration with PM tools"
+    ],
+    "link": "/services/email-task-extractor",
+    "icon": "📋",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "commitment-management-system",
+    "name": "Commitment Management System",
+    "category": "Micro SaaS",
+    "description": "Manage all commitments made via email. Track promises, deadlines, and deliverables to ensure nothing falls through the cracks.",
+    "price": "$69/month",
+    "features": [
+      "Commitment logging",
+      "Deadline tracking",
+      "Delivery verification",
+      "Overdue alerts",
+      "Performance analytics"
+    ],
+    "link": "/services/commitment-management-system",
+    "icon": "📝",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-productivity-guardian",
+    "name": "Email Productivity Guardian",
+    "category": "AI Services",
+    "description": "Guards against email overload and task fragmentation. Ensures focus on completing existing commitments before accepting new ones.",
+    "price": "$45/month",
+    "features": [
+      "Load balancing",
+      "Task fragmentation prevention",
+      "Focus protection",
+      "Capacity planning",
+      "Productivity analytics"
+    ],
+    "link": "/services/email-productivity-guardian",
+    "icon": "🛡️",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "accountability-dashboard",
+    "name": "Accountability Dashboard",
+    "category": "Micro SaaS",
+    "description": "Team accountability dashboard tracking all email commitments. Shows who promised what, when it is due, and completion status in real-time.",
+    "price": "$55/month",
+    "features": [
+      "Real-time tracking",
+      "Team visibility",
+      "Due date alerts",
+      "Completion rates",
+      "Performance metrics"
+    ],
+    "link": "/services/accountability-dashboard",
+    "icon": "📊",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "org-relationship-mapper",
+    "name": "Org Relationship Mapper",
+    "category": "AI Services",
+    "description": "Automatically maps organizational relationships and influence patterns from email communications. Identifies key stakeholders, decision makers, and communication paths.",
+    "price": "$99/month",
+    "features": [
+      "Relationship mapping",
+      "Influence analysis",
+      "Decision maker identification",
+      "Communication paths",
+      "Org visualization"
+    ],
+    "link": "/services/org-relationship-mapper",
+    "icon": "🗺️",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "stakeholder-intelligence-platform",
+    "name": "Stakeholder Intelligence Platform",
+    "category": "AI Services",
+    "description": "Comprehensive stakeholder intelligence from email analysis. Tracks influence, decision authority, communication patterns, and relationship strength.",
+    "price": "$129/month",
+    "features": [
+      "Influence scoring",
+      "Authority mapping",
+      "Pattern analysis",
+      "Relationship strength",
+      "Strategic insights"
+    ],
+    "link": "/services/stakeholder-intelligence-platform",
+    "icon": "🎯",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "communication-network-analyzer",
+    "name": "Communication Network Analyzer",
+    "category": "IT Services",
+    "description": "Analyze organizational communication networks from email data. Identify bottlenecks, information hubs, and optimize communication flows.",
+    "price": "$89/month",
+    "features": [
+      "Network visualization",
+      "Bottleneck detection",
+      "Hub identification",
+      "Flow optimization",
+      "Engagement metrics"
+    ],
+    "link": "/services/communication-network-analyzer",
+    "icon": "🕸️",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "decision-hierarchy-mapper",
+    "name": "Decision Hierarchy Mapper",
+    "category": "Micro SaaS",
+    "description": "Maps decision-making hierarchies from email approval patterns. Identifies who has authority for different types of decisions and approval thresholds.",
+    "price": "$79/month",
+    "features": [
+      "Hierarchy mapping",
+      "Authority detection",
+      "Approval tracking",
+      "Decision routing",
+      "Escalation paths"
+    ],
+    "link": "/services/decision-hierarchy-mapper",
+    "icon": "🏛️",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "influence-graph-builder",
+    "name": "Influence Graph Builder",
+    "category": "AI Services",
+    "description": "Builds influence graphs from email communication patterns. Shows who influences whom, information flow direction, and key opinion leaders.",
+    "price": "$89/month",
+    "features": [
+      "Influence mapping",
+      "Flow direction",
+      "Opinion leader detection",
+      "Network centrality",
+      "Influence scoring"
+    ],
+    "link": "/services/influence-graph-builder",
+    "icon": "📡",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-wellness-coach",
+    "name": "Email Wellness Coach",
+    "category": "AI Services",
+    "description": "AI coach that promotes healthy email habits. Monitors after-hours emailing, suggests breaks, and helps prevent email burnout for individuals and teams.",
+    "price": "$35/month",
+    "features": [
+      "Habit monitoring",
+      "Break suggestions",
+      "Burnout prevention",
+      "Wellness scores",
+      "Team health dashboards"
+    ],
+    "link": "/services/email-wellness-coach",
+    "icon": "🧘",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-sustainability-tracker",
+    "name": "Email Sustainability Tracker",
+    "category": "Micro SaaS",
+    "description": "Calculate and reduce the carbon footprint of email communications. Tracks storage, transmission energy, and suggests optimization strategies for ESG goals.",
+    "price": "$29/month",
+    "features": [
+      "Carbon tracking",
+      "Storage optimization",
+      "Energy analytics",
+      "ESG reporting",
+      "Reduction recommendations"
+    ],
+    "link": "/services/email-sustainability-tracker",
+    "icon": "🌱",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "multilingual-email-assistant",
+    "name": "Multilingual Email Assistant",
+    "category": "AI Services",
+    "description": "AI-powered multilingual email assistant supporting 40+ languages. Real-time translation, cultural adaptation, and locale-aware formatting for global teams.",
+    "price": "$69/month",
+    "features": [
+      "Real-time translation",
+      "Cultural adaptation",
+      "Locale formatting",
+      "40+ languages",
+      "Tone preservation"
+    ],
+    "link": "/services/multilingual-email-assistant",
+    "icon": "🌍",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "email-security-scorecard",
+    "name": "Email Security Scorecard",
+    "category": "Security Services",
+    "description": "Continuous security assessment of email practices. Scores phishing resistance, encryption usage, and compliance adherence with actionable improvement plans.",
+    "price": "$79/month",
+    "features": [
+      "Security scoring",
+      "Phishing resistance",
+      "Encryption tracking",
+      "Compliance checks",
+      "Improvement plans"
+    ],
+    "link": "/services/email-security-scorecard",
+    "icon": "🔒",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    "id": "smart-email-templates-ai",
+    "name": "Smart Email Templates AI",
+    "category": "Micro SaaS",
+    "description": "AI generates personalized email templates based on context, recipient, and purpose. Learns from successful emails to continuously improve template quality.",
+    "price": "$39/month",
+    "features": [
+      "Context-aware generation",
+      "Personalization",
+      "A/B testing",
+      "Performance tracking",
+      "Template library"
+    ],
+    "link": "/services/smart-email-templates-ai",
+    "icon": "📄",
+    "contactInfo": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    }
   }
 ];
 
