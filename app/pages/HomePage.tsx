@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <div className="home-page min-h-[40vh] flex flex-col items-center justify-center gap-6 bg-slate-950 px-6 py-12 text-center">
       <h1 className="text-3xl font-bold text-white sm:text-4xl">Welcome to Zion Tech Group</h1>

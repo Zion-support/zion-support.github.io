@@ -1,6 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'URL Encoder / Decoder | Zion Tech Group',
+  description: 'Free online url encoder / decoder tool. No signup required.',
+};
+
+
 
 export default function UrlEncoderDecoderPage() {
   const [input, setInput] = useState('');

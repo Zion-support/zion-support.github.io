@@ -1,4 +1,12 @@
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CSS Gradient Generator | Zion Tech Group',
+  description: 'Free online css gradient generator tool. No signup required.',
+};
+
+
 
 export default function GradientGeneratorPage() {
   const [gradientType, setGradientType] = useState<'linear' | 'radial'>('linear');

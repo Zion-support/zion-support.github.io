@@ -5,7 +5,7 @@ interface LoadingSkeletonProps {
   children?: React.ReactNode;
 }
 
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '', children }) => {
+const LoadingSkeleton = ({ className = '', children }) => {
   return (
     <div className={`loadingskeleton-component ${className}`}>
       {children}

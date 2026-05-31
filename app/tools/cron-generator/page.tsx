@@ -3,6 +3,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Copy, Sparkles, Calendar, HelpCircle } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cron Expression Generator | Zion Tech Group',
+  description: 'Free online cron expression generator tool. No signup required.',
+};
+
+
 
 const intervals = [
   { id: 'every-minute', label: 'Every minute', cron: '* * * * *', desc: 'Runs every minute' },

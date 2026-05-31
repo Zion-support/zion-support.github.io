@@ -1,4 +1,12 @@
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Color Contrast Checker | Zion Tech Group',
+  description: 'Free online color contrast checker tool. No signup required.',
+};
+
+
 
 export default function ColorContrastCheckerPage() {
   const [foreground, setForeground] = useState('#ffffff');

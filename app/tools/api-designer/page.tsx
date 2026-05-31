@@ -3,6 +3,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Plus, Trash2, Play, Sparkles, Code } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'API Designer | Zion Tech Group',
+  description: 'Free online api designer tool. No signup required.',
+};
+
+
 
 interface Endpoint {
   id: string;

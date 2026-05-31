@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Box, Layers, Paintbrush } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CSS Box Model Visualizer | Zion Tech Group',
+  description: 'Free online css box model visualizer tool. No signup required.',
+};
+
+
 
 interface BoxModel {
   margin: { top: number; right: number; bottom: number; left: number };

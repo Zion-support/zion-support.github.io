@@ -2,6 +2,14 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Build Failure Explainer | Zion Tech Group',
+  description: 'AI Build Failure Explainer — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 type FailureClass = 'missing-dep' | 'type-error' | 'route-export' | 'env-misconfig' | 'unknown';
 

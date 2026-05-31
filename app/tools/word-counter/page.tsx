@@ -2,6 +2,14 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Word Counter | Zion Tech Group',
+  description: 'Free online word counter tool. No signup required.',
+};
+
+
 
 export default function WordCounter() {
   const [text, setText] = useState('');

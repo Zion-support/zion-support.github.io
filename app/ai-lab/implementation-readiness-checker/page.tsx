@@ -2,6 +2,14 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Implementation Readiness Checker | Zion Tech Group',
+  description: 'AI Implementation Readiness Checker — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 function band(score: number): 'Ready' | 'Conditionally ready' | 'Not ready' {
   if (score >= 75) return 'Ready';

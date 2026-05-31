@@ -1,4 +1,11 @@
 'use client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Seo Ai Toolkit | Zion Tech Group',
+  description: 'Seo Ai Toolkit — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-900 py-20">

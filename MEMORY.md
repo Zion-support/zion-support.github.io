@@ -1579,3 +1579,11 @@
 - [LeadDiscovery] 2026-05-06 00:40:00 | Crunchbase API key missing
 - [LeadDiscovery] 2026-05-06 00:40:00 | Apollo API key missing
 - [LeadDiscovery] 2026-05-06 00:40:00 | No leads fetched from any source
+- [EmailInteractionEnhanced] 2026-05-30 16:22:24 | === Email Interaction Agent Enhanced Started ===
+- [EmailInteractionEnhanced] 2026-05-30 16:22:24 | gog list error: unknown flag --query
+Run with --help to see available flags
+- [EmailInteractionEnhanced] 2026-05-30 16:22:24 | === Email Interaction Agent Enhanced Completed ===
+- [EmailInteractionEnhanced] 2026-05-30 17:34:12 | === Email Interaction Agent Enhanced Started ===
+- [EmailInteractionEnhanced] 2026-05-30 17:34:12 | gog list error: unknown flag --query
+Run with --help to see available flags
+- [EmailInteractionEnhanced] 2026-05-30 17:34:12 | === Email Interaction Agent Enhanced Completed ===

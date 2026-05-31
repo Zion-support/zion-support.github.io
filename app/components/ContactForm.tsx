@@ -1,6 +1,5 @@
-import React from 'react';
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
   return (
     <div className="contactform-component">
       {/* ContactForm component implementation */}

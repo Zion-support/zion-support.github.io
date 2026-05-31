@@ -5,7 +5,7 @@ interface SimpleNavigationProps {
   children?: React.ReactNode;
 }
 
-const SimpleNavigation: React.FC<SimpleNavigationProps> = ({ className = '', children }) => {
+const SimpleNavigation = ({ className = '', children }) => {
   return (
     <div className={`simplenavigation-component ${className}`}>
       {children}

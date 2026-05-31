@@ -1,0 +1,120 @@
+{
+  "company": {
+    "name": "Zion Tech Group",
+    "tagline": "Innovative IT, AI, and Micro-SaaS Solutions",
+    "contact": {
+      "mobile": "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    "description": "Zion Tech Group provides cutting-edge technology solutions including AI-powered services, IT consulting, and custom Micro-SaaS products designed to help businesses thrive in the digital age."
+  },
+  "services": [
+    {
+      "id": "free-cdn",
+      "name": "Free CDN Services",
+      "category": "IT Services",
+      "description": "Leverage free Content Delivery Network tiers from Cloudflare, Vercel, and Netlify to accelerate your website globally with SSL, DDoS protection, and caching.",
+      "features": [
+        "Global edge network",
+        "Automatic SSL/TLS",
+        "DDoS protection",
+        "Image optimization",
+        "Analytics and insights"
+      ],
+      "pricing": "Free tier available (paid plans for advanced features)",
+      "ideal_for": "Blogs, small business websites, personal portfolios, startups"
+    },
+    {
+      "id": "5g-mobile-applications",
+      "name": "5G Mobile Applications",
+      "category": "IT Services",
+      "description": "Develop high-performance mobile applications that leverage 5G connectivity for ultra-low latency, enhanced AR/VR experiences, and real-time data processing.",
+      "features": [
+        "5G network optimization",
+        "Edge computing integration",
+        "Real-time data streaming",
+        "Enhanced security protocols",
+        "Cross-platform development (iOS/Android)"
+      ],
+      "pricing": "Starting at $5,000 for basic applications",
+      "ideal_for": "IoT applications, gaming, telemedicine, autonomous vehicles, industrial automation"
+    },
+    {
+      "id": "ai-customer-insights",
+      "name": "AI Customer Insights",
+      "category": "AI Services",
+      "description": "Transform customer data into actionable insights using machine learning algorithms that predict behavior, identify trends, and recommend personalized engagement strategies.",
+      "features": [
+        "Customer segmentation",
+        "Churn prediction",
+        "Lifetime value forecasting",
+        "Sentiment analysis",
+        "Recommendation engines",
+        "A/B testing optimization"
+      ],
+      "pricing": "Starting at $1,000/month for analysis of up to 100k customers",
+      "ideal_for": "E-commerce, SaaS companies, subscription services, retail chains"
+    },
+    {
+      "id": "ai-invoice-processing",
+      "name": "AI Invoice Processing",
+      "category": "Micro-SaaS",
+      "description": "Automate invoice processing with AI-powered data extraction, validation, and accounting system integration. Reduces manual work by 80%+.",
+      "features": [
+        "OCR and data extraction",
+        "Invoice validation",
+        "Duplicate detection",
+        "Accounting system sync (QuickBooks, Xero)",
+        "Approval workflows",
+        "Audit trail and reporting"
+      ],
+      "pricing": "$99/month for up to 500 invoices",
+      "ideal_for": "Small to medium businesses, accounting firms, freelancers"
+    },
+    {
+      "id": "ai-chronic-disease-tracker",
+      "name": "AI Chronic Disease Tracker",
+      "category": "AI Services",
+      "description": "Monitor and predict chronic disease progression using wearable device data and machine learning to provide early warnings and personalized health recommendations.",
+      "features": [
+        "Wearable data integration (Apple Watch, Fitbit)",
+        "Risk prediction models",
+        "Medication adherence tracking",
+        "Lifestyle recommendation engine",
+        "Doctor portal for patient monitoring",
+        "HIPAA-compliant data storage"
+      ],
+      "pricing": "Custom pricing based on patient volume",
+      "ideal_for": "Healthcare providers, insurance companies, wellness programs"
+    }
+  ],
+  "technologies": {
+    "ai_ml": [
+      "TensorFlow",
+      "PyTorch",
+      "scikit-learn",
+      "OpenAI GPT-4",
+      "Hugging Face Transformers"
+    ],
+    "web": [
+      "Next.js 15",
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js"
+    ],
+    "cloud": [
+      "AWS",
+      "Vercel",
+      "Netlify",
+      "Cloudflare"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Supabase"
+    ]
+  }
+}

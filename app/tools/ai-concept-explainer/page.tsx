@@ -2,6 +2,14 @@
 
 import { FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Concept Explainer | Zion Tech Group',
+  description: 'Free online ai concept explainer tool. No signup required.',
+};
+
+
 
 const cannedExamples: Record<string, string> = {
   react:

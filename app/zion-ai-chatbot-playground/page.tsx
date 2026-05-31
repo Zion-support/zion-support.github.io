@@ -1,6 +1,14 @@
 'use client';
 
 import React, { useCallback, useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Zion AI Chatbot Playground | Zion Tech Group',
+  description: 'Zion AI Chatbot Playground — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 type Role = 'user' | 'assistant';
 

@@ -3,6 +3,14 @@
 import { useState, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Layers, Eye } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CSS Box Shadow Generator | Zion Tech Group',
+  description: 'Free online css box shadow generator tool. No signup required.',
+};
+
+
 
 interface ShadowLayer {
   id: number;

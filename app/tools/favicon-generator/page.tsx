@@ -1,6 +1,14 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Favicon Generator | Zion Tech Group',
+  description: 'Free online favicon generator tool. No signup required.',
+};
+
+
 
 type FaviconMode = 'text' | 'emoji' | 'image';
 

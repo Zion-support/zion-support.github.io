@@ -1,5 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Schedule a Free Discovery Call | Zion Tech Group',
+  description: 'Schedule a Free Discovery Call — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function CalendarPage() {
   return (

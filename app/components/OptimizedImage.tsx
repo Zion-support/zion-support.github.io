@@ -1,5 +1,5 @@
 'use client';
-import React, { memo, useState } from 'react';
+import { memo, useState } from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
@@ -13,7 +13,7 @@ interface OptimizedImageProps {
   blurDataURL?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
+const OptimizedImage = memo(({
   src,
   alt,
   width = 400,

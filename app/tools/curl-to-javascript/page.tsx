@@ -3,6 +3,14 @@
 import { useState, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Terminal, Code2, AlertCircle, ChevronDown, Braces } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Curl to JavaScript Converter | Zion Tech Group',
+  description: 'Free online curl to javascript converter tool. No signup required.',
+};
+
+
 
 type OutputStyle = 'fetch' | 'axios' | 'node-fetch';
 

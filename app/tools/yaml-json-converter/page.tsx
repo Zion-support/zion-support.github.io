@@ -2,6 +2,14 @@
 
 import { useState, useCallback } from 'react';
 import { Copy, Check, ArrowLeftRight, FileJson, FileText, Download, Upload, AlertTriangle } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'YAML ↔ JSON Converter | Zion Tech Group',
+  description: 'Free online yaml ↔ json converter tool. No signup required.',
+};
+
+
 
 // Lightweight YAML parser/emitter (no external dependency needed for basic usage)
 // Supports: objects, arrays, strings, numbers, booleans, null, nested structures

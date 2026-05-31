@@ -5,7 +5,7 @@ interface NeonButtonProps {
   children?: React.ReactNode;
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
+const NeonButton = ({ className = '', children }) => {
   return (
 <div className={`neonbutton-component ${className}`}>
       {children}

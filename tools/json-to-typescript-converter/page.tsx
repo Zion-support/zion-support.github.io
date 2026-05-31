@@ -1,4 +1,12 @@
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON to TypeScript Converter | Zion Tech Group',
+  description: 'Free online json to typescript converter tool. No signup required.',
+};
+
+
 
 export default function JsonToTypescriptConverterPage() {
   const [jsonInput, setJsonInput] = useState('');

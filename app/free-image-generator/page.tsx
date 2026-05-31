@@ -2,6 +2,14 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Free Random Image Generator | Zion Tech Group',
+  description: 'Free Random Image Generator — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function ImageGenerator() {
   const [url, setUrl] = useState('https://picsum.photos/800/600');

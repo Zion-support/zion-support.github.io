@@ -8,6 +8,14 @@ import Link from 'next/link';
 import SmartSearchBar from '@/components/SmartSearchBar';
 import { allServices } from '../data/servicesData';
 import type { Service } from '../data/servicesData';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Complete Service Catalog | Zion Tech Group',
+  description: 'Our Complete Service Catalog — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 
 

@@ -1,5 +1,13 @@
 'use client';
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tools Lorem Ipsum Generator | Zion Tech Group',
+  description: 'Free online tools lorem ipsum generator tool. No signup required.',
+};
+
+
 
 export default function LoremIpsumGenerator() {
   const [text, setText] = useState('');

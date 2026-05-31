@@ -11,7 +11,7 @@ interface RecommendationWidgetProps {
   };
 }
 
-const RecommendationWidget: React.FC<RecommendationWidgetProps> = ({ data }) => {
+const RecommendationWidget = ({ data }) => {
   const [searchTerm, setSearchTerm] = React.useState('');
 
   const filteredFeatures = data.features.filter(feature =>

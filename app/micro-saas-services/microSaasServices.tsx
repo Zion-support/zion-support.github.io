@@ -5,7 +5,7 @@ interface MicroSaasServicesProps {
   children?: React.ReactNode;
 }
 
-const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({ className = '', children }) => {
+const MicroSaasServices = ({ className = '', children }) => {
   return <div className={`micro-saas-services ${className}`}>{children}</div>;
 };
 

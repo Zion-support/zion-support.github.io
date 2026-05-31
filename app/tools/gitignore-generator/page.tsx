@@ -3,6 +3,14 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, Download, Plus, Minus, Search, GitBranch, RotateCcw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '.gitignore Generator | Zion Tech Group',
+  description: 'Free online .gitignore generator tool. No signup required.',
+};
+
+
 
 type Template = {
   name: string;

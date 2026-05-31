@@ -1,6 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Color Contrast Checker | Zion Tech Group',
+  description: 'Free online ai color contrast checker tool. No signup required.',
+};
+
+
 
 export default function AIColorContrastChecker() {
   const [foreground, setForeground] = useState('#FFFFFF');

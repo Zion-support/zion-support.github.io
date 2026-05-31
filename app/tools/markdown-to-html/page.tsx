@@ -2,6 +2,14 @@
 
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '$1 | Zion Tech Group',
+  description: 'Free online $1 tool. No signup required.',
+};
+
+
 
 function markdownToHtml(md: string): string {
   let html = md;

@@ -5,7 +5,7 @@ interface LoadingProps {
   children?: React.ReactNode;
 }
 
-const Loading: React.FC<LoadingProps> = memo(({ className = '', children }) => {
+const Loading = memo(({ className = '', children }) => {
   return (
     <div
       className={`flex min-h-[40vh] items-center justify-center bg-slate-950 ${className}`}

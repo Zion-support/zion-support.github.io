@@ -7,7 +7,7 @@ interface AppErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-const AppErrorBoundary: React.FC<AppErrorBoundaryProps> = ({ className = '', children }) => {
+const AppErrorBoundary = ({ className = '', children }) => {
   return (
     <div className={`app-error-boundary ${className}`}>
       {children}

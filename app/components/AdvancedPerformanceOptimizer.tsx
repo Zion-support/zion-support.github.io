@@ -6,7 +6,7 @@ interface PerformanceOptimizerProps {
   enableOptimizations?: boolean;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const AdvancedPerformanceOptimizer = ({
   children,
   enableOptimizations = true
 }) => {

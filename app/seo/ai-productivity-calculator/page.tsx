@@ -1,6 +1,14 @@
 'use client';
 
 import DefaultSEO from '@/components/DefaultSEO';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Productivity Score Calculator | Zion Tech Group',
+  description: 'AI Productivity Score Calculator — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function SEOAIPProductivityCalculator() {
   return (

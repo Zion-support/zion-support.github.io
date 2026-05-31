@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, FileCode, Plus, Trash2, Download, Shield, ArrowRightLeft, Lock, Globe, Zap, RefreshCw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '.htaccess Generator | Zion Tech Group',
+  description: 'Free online .htaccess generator tool. No signup required.',
+};
+
+
 
 interface RedirectRule {
   source: string;

@@ -2,6 +2,14 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI ROI Calculator | Zion Tech Group',
+  description: 'Free online ai roi calculator tool. No signup required.',
+};
+
+
 
 interface ROIInputs {
   teamSize: number;

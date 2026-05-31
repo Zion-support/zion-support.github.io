@@ -1,4 +1,12 @@
 "use client";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Predictive Maintenance | Zion Tech Group',
+  description: 'Predictive Maintenance — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 /**
  * Predictive Maintenance AI Service

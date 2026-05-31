@@ -2,6 +2,14 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Quote of the Day | Zion Tech Group',
+  description: 'Free online quote of the day tool. No signup required.',
+};
+
+
 
 export default function QuoteOfTheDay() {
   const [quote, setQuote] = useState('');

@@ -1,9 +1,8 @@
-import React from 'react';
 
 const baseSkipLinkClass =
   'sr-only focus:not-sr-only focus:fixed focus:left-4 focus:z-[1000] focus:rounded-md focus:bg-slate-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:ring-2 focus:ring-purple-400';
 
-const SkipLink: React.FC = () => {
+const SkipLink = () => {
   return (
     <>
       <a href="#main-content" className={`${baseSkipLinkClass} focus:top-4`}>

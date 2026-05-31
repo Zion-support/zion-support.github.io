@@ -1,5 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Free Tools & Resources | Zion Tech Group',
+  description: 'Free online free tools & resources tool. No signup required.',
+};
+
+
 
 const tools = [
   {

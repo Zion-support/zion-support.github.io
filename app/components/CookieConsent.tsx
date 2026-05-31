@@ -5,7 +5,7 @@ interface CookieConsentProps {
   children?: React.ReactNode;
 }
 
-const CookieConsent: React.FC<CookieConsentProps> = ({ className = '', children }) => {
+const CookieConsent = ({ className = '', children }) => {
   return (
     <div className={`cookieconsent-component ${className}`}>
       {children}

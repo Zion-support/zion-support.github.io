@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, ArrowDownUp, Braces } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'HTML Entity Encoder / Decoder | Zion Tech Group',
+  description: 'Free online html entity encoder / decoder tool. No signup required.',
+};
+
+
 
 const NAMED_ENTITIES: Record<string, string> = {
   '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'",

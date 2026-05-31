@@ -1,5 +1,5 @@
 'use client';
-import React, { memo } from 'react';
+import { memo } from 'react';
 
 interface SEOHeadProps {
   title?: string;
@@ -20,7 +20,7 @@ function sanitizeJsonForScript(data: unknown): string {
   return json.replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
 }
 
-const SEOHead: React.FC<SEOHeadProps> = memo(({
+const SEOHead = memo(({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, artificial intelligence, machine learning, data analytics',

@@ -1,6 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cron Expression Parser | Zion Tech Group',
+  description: 'Free online cron expression parser tool. No signup required.',
+};
+
+
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const FIELD_NAMES = ['minute', 'hour', 'day of month', 'month', 'day of week'];

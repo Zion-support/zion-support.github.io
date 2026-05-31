@@ -15,6 +15,14 @@ import {
   Tag,
 } from 'lucide-react';
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'File Analyzer | Zion Tech Group',
+  description: 'Analyze file metadata, content, and properties online for free.',
+};
+
 interface FileAnalysis {
   name: string;
   size: string;

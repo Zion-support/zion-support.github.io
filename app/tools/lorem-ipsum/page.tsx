@@ -2,6 +2,14 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Lorem Ipsum Generator | Zion Tech Group',
+  description: 'Free online lorem ipsum generator tool. No signup required.',
+};
+
+
 
 export default function LoremIpsum() {
   const [count, setCount] = useState(150);

@@ -2,6 +2,14 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Productivity Score Calculator | Zion Tech Group',
+  description: 'Free online ai productivity score calculator tool. No signup required.',
+};
+
+
 
 interface ProductivityInputs {
   currentTaskVolume: number; // tasks per day

@@ -1,6 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Tools & Calculators | Zion Tech Group',
+  description: 'Free online ai tools & calculators tool. No signup required.',
+};
+
+
 
 const tools = [
   {

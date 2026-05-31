@@ -5,7 +5,7 @@ interface StructuredDataProps {
   children?: React.ReactNode;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
+const StructuredData = ({ className = '', children }) => {
   return (
     <div className={`structureddata-component ${className}`}>
       {children}

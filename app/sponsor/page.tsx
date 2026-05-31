@@ -1,4 +1,12 @@
 import Head from 'next/head';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Become a Sponsor | Zion Tech Group',
+  description: 'Become a Sponsor — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function Sponsor() {
   return (

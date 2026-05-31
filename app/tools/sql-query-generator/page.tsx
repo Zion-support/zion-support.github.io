@@ -8,6 +8,14 @@ import {
   Table
 } from 'lucide-react';
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'SQL Query Generator | Zion Tech Group',
+  description: 'Generate SQL queries from natural language descriptions.',
+};
+
 type DatabaseType = 'postgresql' | 'mysql' | 'sqlite' | 'mongodb';
 
 interface QueryOptions {

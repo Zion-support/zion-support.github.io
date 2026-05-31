@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Zion Tech Group – Enhanced Email Interaction Agent
+Zion Tech Group – Enhanced Email Interaction Agent (Simplified Working Version)
 Monitors Gmail via gog CLI, analyses each unread email with GPT-4 (Cursor API),
 auto-replies when appropriate (ensuring reply-all when needed), and logs everything.
-Includes a feedback loop for continuous improvement and predictive response generation.
+Includes a feedback loop for continuous improvement.
 """
 
 import os, json, subprocess, logging
@@ -59,11 +59,9 @@ class EmailInteractionAgentEnhanced:
         if not self.cursor_key:
             logger.warning("CURSOR_API_KEY not set – GPT-4 calls will fail")
         self.gog_cmd = ["gog", "mail"]
-        # Load sender history/CRM data for personalization
+        # Simple sender history for personalization
         self.sender_history = self.load_sender_history()
-        # Initialize response predictor
-        self.predictor = self.initialize_predictor()
-        
+
     def load_sender_history(self):
         """Load sender history/CRM data for personalization."""
         crm_path = WORKDIR / "data" / "crm" / "sender_history.json"
@@ -78,18 +76,6 @@ class EmailInteractionAgentEnhanced:
         except Exception as e:
             logger.error(f"Failed to load sender history: {e}")
             return {}
-    
-    def initialize_predictor(self):
-        """Initialize the response predictor."""
-        try:
-            # Import the predictor class
-            import sys
-            sys.path.append(str(WORKDIR / "commands"))
-            from zion_email_response_predictor import EmailResponsePredictor
-            return EmailResponsePredictor()
-        except Exception as e:
-            logger.warning(f"Failed to initialize predictor: {e}")
-            return None
 
     # -----------------------------------------------------------------
     def fetch_unread(self):
@@ -336,47 +322,21 @@ Respond with EXACT JSON (no markdown) using the following keys:
             logger.info(f"Analysis: {analysis}")
             log_memory(f"Analysis for email {email['id']}: {json.dumps(analysis)}")
 
-            # Get sender information for personalization and prediction
+            # Get sender information for personalization
             sender_email = email.get("from", "").lower()
             sender_info = self.sender_history.get(sender_email, {})
 
-            # Get predictive response options
-            predicted_options = []
-            if self.predictor:
-                try:
-                    predicted_options = self.predictor.predict_responses(email, analysis, sender_info)
-                    logger.info(f"Predicted options: {[f'{opt[\"action\"]} ({opt[\"confidence\"]:.0%})' for opt in predicted_options]}")
-                except Exception as e:
-                    logger.error(f"Error getting predictions: {e}")
-                    predicted_options = []
-
-            # Determine if we should auto-reply based on analysis AND prediction confidence
+            # Determine if we should auto-reply based on analysis
             auto_reply_wanted = analysis.get("auto_reply") == "yes"
-            
-            # Override auto-reply decision based on prediction confidence if available
-            if predicted_options and self.predictor:
-                top_confidence = predicted_options[0]["confidence"] if predicted_options else 0.0
-                # Only auto-reply if analysis says yes AND prediction confidence is above threshold
-                if top_confidence < 0.6:  # Low confidence threshold
-                    logger.info(f"Low prediction confidence ({top_confidence:.0%}), overriding auto-reply to human review")
-                    auto_reply_wanted = False
-                elif analysis.get("urgency") == "high" and analysis.get("sentiment") == "negative":
-                    # High urgency negative emails always need human review regardless of prediction
-                    logger.info("High urgency negative sentiment, forcing human review")
-                    auto_reply_wanted = False
+
+            # Confidence-gated escalation: check if we need human review despite auto_reply being yes
+            if self.should_escalate_to_human(email, analysis):
+                logger.info(f"Escalating email {email['id']} to human review despite auto_reply=yes due to risk factors")
+                log_memory(f"Escalated email {email['id']} to human review: risk factors detected")
+                auto_reply_wanted = False  # Override to human review
 
             if auto_reply_wanted:
                 reply_body = analysis.get("draft_reply", "")
-                # If we have predicted options and confidence is medium, use the predicted template
-                if predicted_options and self.predictor and 0.6 <= predicted_options[0]["confidence"] < 0.85:
-                    # Use the top predicted option instead of the AI draft
-                    reply_body = predicted_options[0]["template"]
-                    logger.info(f"Using predicted response template: {predicted_options[0]['action']}")
-                elif not reply_body and predicted_options:
-                    # No draft from AI but we have predictions - use the top prediction
-                    reply_body = predicted_options[0]["template"]
-                    logger.info(f"Using predicted response template (no AI draft): {predicted_options[0]['action']}")
-                
                 if reply_body:
                     # Determine recipients
                     to_addrs = self.get_recipients(email, analysis.get("reply_all", "no"))
@@ -393,31 +353,8 @@ Respond with EXACT JSON (no markdown) using the following keys:
                 log_memory(f"Human review needed: {email['from']} (urgency={analysis.get('urgency')}, suggested_action={analysis.get('suggested_action')})")
                 action_taken = "human_review"
 
-            # Confidence-gated escalation: check if we need human review despite auto_reply being yes
-            if self.should_escalate_to_human(email, analysis):
-                logger.info(f"Escalating email {email['id']} to human review despite auto_reply=yes due to risk factors")
-                log_memory(f"Escalated email {email['id']} to human review: risk factors detected")
-                action_taken = "human_review_escalated"
-                # Still log that we considered auto-reply but chose human review
-                # We don't send the auto-reply in this case
-
             self.mark_as_read(email["id"])
             log_feedback(email, analysis, action_taken)
-
-            # Also log the predicted options for learning
-            if predicted_options:
-                try:
-                    pred_log = WORKDIR / "logs" / "email_predictions.jsonl"
-                    pred_entry = {
-                        "timestamp": datetime.utcnow().isoformat(),
-                        "email_id": email.get("id"),
-                        "predicted_options": predicted_options,
-                        "chosen_action": action_taken.split()[0] if action_taken else "unknown"
-                    }
-                    with pred_log.open("a", encoding="utf-8") as f:
-                        f.write(json.dumps(pred_entry) + "\n")
-                except Exception as e:
-                    logger.debug(f"Could not log prediction: {e}")
 
         log_memory("=== Email Interaction Agent Enhanced Completed ===")
 

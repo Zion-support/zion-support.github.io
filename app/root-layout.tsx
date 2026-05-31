@@ -5,7 +5,7 @@ interface RootLayoutProps {
   children?: React.ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ 
+const RootLayout = ({ 
   className = '', 
   children 
 }) => {

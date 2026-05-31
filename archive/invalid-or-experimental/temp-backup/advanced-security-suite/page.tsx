@@ -4,6 +4,14 @@ import Head from 'next/head'
 // import Link from 'next/link'
 // import { ArrowRight } from 'lucide-react'
 import Footer from '../components/Footer'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Advanced Security Suite | Zion Tech Group',
+  description: 'Advanced Security Suite — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function Page() {
   return (

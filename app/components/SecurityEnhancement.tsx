@@ -13,7 +13,7 @@ interface SecurityStatus {
   securityHeadersPresent: boolean;
 }
 
-const SecurityEnhancement: React.FC<SecurityEnhancementProps> = ({ className = '', children }) => {
+const SecurityEnhancement = ({ className = '', children }) => {
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({
     cspEnabled: false,
     httpsEnabled: false,

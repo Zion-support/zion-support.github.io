@@ -5,7 +5,7 @@ interface ServiceTemplateProps {
   children?: React.ReactNode;
 }
 
-const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ 
+const ServiceTemplate = ({ 
   className = '', 
   children 
 }) => {

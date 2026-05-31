@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useCallback, useEffect, memo } from 'react';
+import { useCallback, useEffect, memo } from 'react';
 
 interface ConsolidatedAccessibilityProps {
   className?: string;
 }
 
-const ConsolidatedAccessibility: React.FC<ConsolidatedAccessibilityProps> = memo(({ className = '' }) => {
+const ConsolidatedAccessibility = memo(({ className = '' }) => {
   const addSkipLinks = useCallback(() => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';

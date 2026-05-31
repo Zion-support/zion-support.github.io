@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Search, Copy, Check, AlertCircle, CheckCircle, XCircle, Loader2, Shield } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CORS Header Tester | Zion Tech Group',
+  description: 'Free online cors header tester tool. No signup required.',
+};
+
+
 
 interface CorsResult {
   url: string;

@@ -38,7 +38,7 @@ interface AdvancedPerformanceEnhancerProps {
   enableOptimizations?: boolean;
 }
 
-export const AdvancedPerformanceEnhancer: React.FC<AdvancedPerformanceEnhancerProps> = ({
+export const AdvancedPerformanceEnhancer = ({
   children, enableMonitoring = true, enableOptimizations = true }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,

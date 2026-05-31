@@ -2,6 +2,14 @@
 
 import { useState, useCallback } from 'react';
 import { Copy, Check, Code, ArrowRight, RotateCcw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'HTML to JSX Converter | Zion Tech Group',
+  description: 'Free online html to jsx converter tool. No signup required.',
+};
+
+
 
 function convertHtmlToJsx(html: string): { jsx: string; warnings: string[] } {
   const warnings: string[] = [];

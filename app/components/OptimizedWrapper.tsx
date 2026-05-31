@@ -8,7 +8,7 @@ interface OptimizedWrapperProps {
   lazy?: boolean;
 }
 
-const OptimizedWrapper: React.FC<OptimizedWrapperProps> = memo(({ 
+const OptimizedWrapper = memo(({ 
   children, 
   fallback = <div>Loading...</div>,
   lazy: isLazy = false 

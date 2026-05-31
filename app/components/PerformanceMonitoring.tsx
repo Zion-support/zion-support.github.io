@@ -20,7 +20,7 @@ interface PerformanceMonitoringProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-const PerformanceMonitoring: React.FC<PerformanceMonitoringProps> = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
+const PerformanceMonitoring = memo(({ className: _className = '', enableRealTimeMonitoring = true, onMetricsUpdate }) => {
   const [, setMemoryUsage] = React.useState<{ total: number; limit: number } | null>(null);
   const [fcp, setFCP] = React.useState<number | null>(null);
   const [lcp, setLCP] = React.useState<number | null>(null);

@@ -3,6 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import DefaultSEO from '@/components/DefaultSEO';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Autonomous SEO Audit Agent | Zion Tech Group',
+  description: 'Autonomous SEO Audit Agent — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 interface SEOCheckResult {
   name: string;

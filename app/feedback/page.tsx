@@ -2,6 +2,14 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Share Your Feedback | Zion Tech Group',
+  description: 'Share Your Feedback — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function FeedbackPage() {
   return (

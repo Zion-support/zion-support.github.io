@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, Search, BookOpen, AlertCircle, Info, Shield, Zap } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'HTTP Status Code Lookup | Zion Tech Group',
+  description: 'Free online http status code lookup tool. No signup required.',
+};
+
+
 
 interface StatusCode {
   code: number;

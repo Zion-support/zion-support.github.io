@@ -5,7 +5,7 @@ interface EnhancedAnalyticsProps {
   children?: React.ReactNode;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+const EnhancedAnalytics = ({ className = '', children }) => {
   return (
     <div className={`enhancedanalytics-component ${className}`}>
       {children}

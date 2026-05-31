@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, FileCode, Minimize2, AlignLeft, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'XML Formatter & Validator | Zion Tech Group',
+  description: 'Free online xml formatter & validator tool. No signup required.',
+};
+
+
 
 const SAMPLE_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <catalog>

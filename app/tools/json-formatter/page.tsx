@@ -2,6 +2,14 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON Formatter | Zion Tech Group',
+  description: 'Free online json formatter tool. No signup required.',
+};
+
+
 
 export default function JsonFormatter() {
   const [input, setInput] = useState('{}');

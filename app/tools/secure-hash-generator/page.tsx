@@ -3,6 +3,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, X, RefreshCw, Zap, Settings } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Secure Hash Generator | Zion Tech Group',
+  description: 'Free online secure hash generator tool. No signup required.',
+};
+
+
 
 export default function SecureHashGenerator() {
   const [input, setInput] = useState('');

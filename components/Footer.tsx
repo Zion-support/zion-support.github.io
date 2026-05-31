@@ -3,12 +3,11 @@
  */
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../app/utils/seoConstants';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (

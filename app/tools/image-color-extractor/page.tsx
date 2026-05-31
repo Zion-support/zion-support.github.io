@@ -2,6 +2,14 @@
 
 import { useState, useCallback, useRef } from 'react';
 import { Copy, Check, Palette, Upload, X, Download, Shuffle } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Image Color Extractor | Zion Tech Group',
+  description: 'Free online image color extractor tool. No signup required.',
+};
+
+
 
 interface ColorInfo {
   hex: string;

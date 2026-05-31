@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Plus, Trash2, Copy, ChevronDown, ChevronUp, Clock, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'API Request Builder | Zion Tech Group',
+  description: 'Free online api request builder tool. No signup required.',
+};
+
+
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'HEAD' | 'OPTIONS';
 

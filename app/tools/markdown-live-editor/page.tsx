@@ -3,6 +3,14 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Eye, Copy, Download, RotateCcw, Maximize2, Minimize2 } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '$1 | Zion Tech Group',
+  description: 'Free online $1 tool. No signup required.',
+};
+
+
 
 const DEFAULT_MARKDOWN = `# Welcome to Markdown Live Editor
 

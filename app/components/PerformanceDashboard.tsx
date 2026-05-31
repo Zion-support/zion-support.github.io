@@ -1,9 +1,9 @@
 
 
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { usePerformanceMetrics } from '../hooks/usePerformanceMetrics';
 
-const PerformanceDashboard: React.FC = memo(() => {
+const PerformanceDashboard = memo(() => {
   const { metrics, getPerformanceScore } = usePerformanceMetrics();
   const score = getPerformanceScore();
 

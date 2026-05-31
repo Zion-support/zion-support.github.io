@@ -3,6 +3,14 @@
 import { useState, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Pipette } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Color Converter | Zion Tech Group',
+  description: 'Free online color converter tool. No signup required.',
+};
+
+
 
 interface ColorValues {
   hex: string;

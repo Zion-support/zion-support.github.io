@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useState, useEffect, memo } from 'react';
+import { useCallback, useState, useEffect, memo } from 'react';
 
 // Performance API types
 interface PerformanceEventTiming extends PerformanceEntry {
@@ -28,7 +28,7 @@ interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 
-const ConsolidatedPerformance: React.FC<ConsolidatedPerformanceProps> = memo(({
+const ConsolidatedPerformance = memo(({
   className = ''
 }) => {
   const [metrics, setMetrics] = useState({

@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, FileCode, Minus, Maximize2, RotateCcw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hello World | Zion Tech Group',
+  description: 'Free online hello world tool. No signup required.',
+};
+
+
 
 function minifyHTML(html: string): string {
   return html

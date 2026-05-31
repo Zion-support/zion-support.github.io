@@ -1,5 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Support Zion Tech Group | Zion Tech Group',
+  description: 'Support Zion Tech Group — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function Donate() {
   return (

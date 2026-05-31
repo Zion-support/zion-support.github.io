@@ -5,7 +5,7 @@ interface ContactPageProps {
   children?: React.ReactNode;
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ className = '', children }) => {
+const ContactPage = ({ className = '', children }) => {
   return <div className={`contact-page ${className}`}>{children}</div>;
 };
 

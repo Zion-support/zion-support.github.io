@@ -1,6 +1,6 @@
 'use client';
 
-import React, { memo, useEffect } from 'react';
+import { memo, useEffect } from 'react';
 
 interface AnalyticsProps {
   gaId?: string;
@@ -16,7 +16,7 @@ declare global {
   }
 }
 
-const Analytics: React.FC<AnalyticsProps> = memo(({ 
+const Analytics = memo(({ 
   gaId = process.env.NEXT_PUBLIC_GA_ID,
   gtmId = process.env.NEXT_PUBLIC_GTM_ID,
   enabled = process.env.NODE_ENV === 'production'

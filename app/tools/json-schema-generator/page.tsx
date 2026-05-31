@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, FileJson, Braces, Wand2, Download } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON Schema Generator | Zion Tech Group',
+  description: 'Free online json schema generator tool. No signup required.',
+};
+
+
 
 interface SchemaOptions {
   title: string;

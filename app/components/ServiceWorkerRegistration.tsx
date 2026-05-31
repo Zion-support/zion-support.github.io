@@ -1,7 +1,7 @@
 'use client';
-import React, { memo, useEffect } from 'react';
+import { memo, useEffect } from 'react';
 
-const ServiceWorkerRegistration: React.FC = memo(() => {
+const ServiceWorkerRegistration = memo(() => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       // Register service worker

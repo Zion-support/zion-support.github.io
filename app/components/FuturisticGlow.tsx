@@ -5,7 +5,7 @@ interface FuturisticGlowProps {
   children?: React.ReactNode;
 }
 
-const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', children }) => {
+const FuturisticGlow = ({ className = '', children }) => {
   return (
     <div className={`futuristicglow-component ${className}`}>
       {children}

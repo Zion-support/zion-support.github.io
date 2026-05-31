@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOData {
@@ -18,7 +18,7 @@ interface AdvancedSEOEnhancerProps {
   enableAutoOptimization?: boolean;
 }
 
-const AdvancedSEOEnhancer: React.FC<AdvancedSEOEnhancerProps> = ({
+const AdvancedSEOEnhancer = ({
   seoData,
   enableAutoOptimization = true
 }) => {

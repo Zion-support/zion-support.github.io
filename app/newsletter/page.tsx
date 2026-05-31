@@ -1,6 +1,14 @@
 'use client';
 import Head from 'next/head';
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Subscribe to Our Newsletter | Zion Tech Group',
+  description: 'Subscribe to Our Newsletter — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function Newsletter() {
   const [email, setEmail] = useState('');

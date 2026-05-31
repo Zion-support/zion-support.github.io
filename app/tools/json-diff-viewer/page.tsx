@@ -3,6 +3,14 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, ArrowLeftRight, Plus, Minus, RefreshCw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON Diff Viewer | Zion Tech Group',
+  description: 'Free online json diff viewer tool. No signup required.',
+};
+
+
 
 interface DiffLine {
   type: 'added' | 'removed' | 'unchanged' | 'changed';

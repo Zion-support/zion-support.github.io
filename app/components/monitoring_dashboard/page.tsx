@@ -1,4 +1,12 @@
 import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Automation Dashboard | Zion Tech Group',
+  description: 'Automation Dashboard — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function MonitoringDashboard() {
   return (

@@ -2,6 +2,14 @@
 
 import React, { useMemo, useState } from 'react';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ai Lab Roi Ops Scorecard | Zion Tech Group',
+  description: 'Ai Lab Roi Ops Scorecard — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 type ImpactLevel = 1 | 2 | 3 | 4 | 5;
 

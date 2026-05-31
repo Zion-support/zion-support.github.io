@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, Shield, AlertTriangle, Search, Info, Hash } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hash Identifier | Zion Tech Group',
+  description: 'Free online hash identifier tool. No signup required.',
+};
+
+
 
 interface HashType {
   name: string;

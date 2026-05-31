@@ -20,7 +20,7 @@ interface PerformanceOptimizerProps {
   enableOptimizations?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer = ({
   children, enableOptimizations = true
 }) => {
   useEffect(() => {

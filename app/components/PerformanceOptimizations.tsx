@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, memo } from 'react';
+import { useCallback, useEffect, memo } from 'react';
 
 interface PerformanceOptimizationsProps {
   enableImageOptimization?: boolean;
@@ -8,7 +8,7 @@ interface PerformanceOptimizationsProps {
   enableResourceHints?: boolean;
 }
 
-const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = memo(({
+const PerformanceOptimizations = memo(({
   enableImageOptimization = true, enablePreloading = true, enableResourceHints = true
 }) => {
   const __optimizeImages = useCallback(() => {

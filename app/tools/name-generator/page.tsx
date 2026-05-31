@@ -2,6 +2,14 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Random Name Generator | Zion Tech Group',
+  description: 'Free online random name generator tool. No signup required.',
+};
+
+
 
 const firstNames = ["Liam","Emma","Noah","Olivia","Ava","Isabella","Sophia","Mia","Charlotte","Amelia"]; 
 const lastNames = ["Smith","Johnson","Williams","Brown","Jones","Garcia","Miller","Davis","Rodriguez","Martinez"];

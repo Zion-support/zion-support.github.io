@@ -3,6 +3,14 @@
 import { useState, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, ArrowRightLeft, Ruler, RotateCcw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CSS Unit Converter | Zion Tech Group',
+  description: 'Free online css unit converter tool. No signup required.',
+};
+
+
 
 type UnitType = 'px' | 'rem' | 'em' | 'pt' | 'vw' | 'vh' | 'vmin' | 'vmax' | '%' | 'cm' | 'mm' | 'in';
 

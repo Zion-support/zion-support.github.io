@@ -1,5 +1,5 @@
 'use client';
-import React, { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/seoConstants';
 
@@ -7,7 +7,7 @@ interface SEOOptimizationProps {
   className?: string;
 }
 
-const SEOOptimization: React.FC<SEOOptimizationProps> = memo(({ className = '' }) => {
+const SEOOptimization = memo(({ className = '' }) => {
   const pathname = usePathname();
 
   const addStructuredData = useCallback(() => {

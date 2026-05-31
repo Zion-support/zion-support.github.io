@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 interface LazyImageProps {
@@ -11,7 +11,7 @@ interface LazyImageProps {
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage = ({
   src, alt, className = '', placeholder, onLoad, onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);

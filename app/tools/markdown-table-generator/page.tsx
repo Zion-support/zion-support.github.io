@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, RotateCcw, Table2, ArrowLeftRight, AlignLeft, AlignCenter, AlignRight, Download } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Markdown Table Generator | Zion Tech Group',
+  description: 'Free online markdown table generator tool. No signup required.',
+};
+
+
 
 type AlignOption = 'left' | 'center' | 'right';
 

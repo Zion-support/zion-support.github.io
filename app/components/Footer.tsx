@@ -20,7 +20,7 @@ const footerLinkClass =
 const footerChipLinkClass =
   'rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-1.5 text-xs font-medium text-gray-300 transition hover:border-purple-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900';
 
-const Footer: React.FC<FooterProps> = memo(({ className = '', children }) => {
+const Footer = memo(({ className = '', children }) => {
   const currentYear = new Date().getFullYear();
   const aiServices = AI_SERVICE_LINKS.slice(0, 8);
   const featuredProducts = FEATURED_PRODUCT_LINKS.slice(0, 6);

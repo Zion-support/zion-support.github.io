@@ -2,6 +2,14 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Random Joke | Zion Tech Group',
+  description: 'Free online random joke tool. No signup required.',
+};
+
+
 
 export default function JokeGenerator() {
   const [joke, setJoke] = useState<{setup:string, punchline:string}|null>(null);

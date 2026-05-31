@@ -1,7 +1,7 @@
 'use client';
 
 
-import React, { useEffect, memo } from 'react';
+import { useEffect, memo } from 'react';
 
 interface SEOEnhancementsProps {
   title?: string;
@@ -12,7 +12,7 @@ interface SEOEnhancementsProps {
   structuredData?: object;
 }
 
-const SEOEnhancements: React.FC<SEOEnhancementsProps> = memo(({
+const SEOEnhancements = memo(({
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of cutting-edge technology solutions, software development, and digital transformation services.',
   keywords = 'technology, software development, digital transformation, AI solutions, cybersecurity',

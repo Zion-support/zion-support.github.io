@@ -1,6 +1,6 @@
 
 
-import React, { memo } from 'react';
+import { memo } from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({ 
+const LoadingSpinner = memo(({ 
   size = 'md', 
   className = '', 
   text 

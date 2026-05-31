@@ -16,7 +16,7 @@ interface Slide {
   }[];
 }
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [

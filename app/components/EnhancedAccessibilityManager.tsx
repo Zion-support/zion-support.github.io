@@ -12,7 +12,7 @@ interface EnhancedAccessibilityManagerProps {
   children?: React.ReactNode;
 }
 
-const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = memo(({ 
+const EnhancedAccessibilityManager = memo(({ 
   enableAutoDetection = true, enableKeyboardShortcuts = true, enableHighContrastMode = true, children
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);

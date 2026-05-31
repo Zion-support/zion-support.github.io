@@ -2,6 +2,14 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { Copy, Check, Type, Download, Sparkles } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'ASCII Art Text Generator | Zion Tech Group',
+  description: 'Free online ascii art text generator tool. No signup required.',
+};
+
+
 
 // Block-style font (each char is 5 tall × 6 wide)
 const FONT_MAP: Record<string, string[]> = {

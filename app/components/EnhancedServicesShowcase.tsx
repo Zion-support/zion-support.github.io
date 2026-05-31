@@ -5,7 +5,7 @@ interface EnhancedServicesShowcaseProps {
   children?: React.ReactNode;
 }
 
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className = '', children }) => {
+const EnhancedServicesShowcase = ({ className = '', children }) => {
   return (
     <div className={`enhancedservicesshowcase-component ${className}`}>
       {children}

@@ -18,6 +18,14 @@ import {
   Sparkles,
 } from 'lucide-react';
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON to TypeScript Converter | Zion Tech Group',
+  description: 'Convert JSON schemas to TypeScript interfaces instantly.',
+};
+
 interface ConversionOptions {
   interfaceName: string;
   exportType: 'interface' | 'type';

@@ -1,7 +1,7 @@
 'use client';
 // import { X} from 'lucide-react';
 
-import React, { memo, useState, useEffect } from 'react';
+import { memo, useState, useEffect } from 'react';
 // import logger from '../utils/logger';
 
 interface BeforeInstallPromptEvent extends Event {
@@ -9,7 +9,7 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = memo(() => {
+const PWAInstaller = memo(() => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);

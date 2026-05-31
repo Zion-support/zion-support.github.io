@@ -5,7 +5,7 @@ interface AdminPageProps {
   children?: React.ReactNode;
 }
 
-const AdminPage: React.FC<AdminPageProps> = ({ className = '', children }) => {
+const AdminPage = ({ className = '', children }) => {
   return <div className={`admin-page ${className}`}>{children}</div>;
 };
 

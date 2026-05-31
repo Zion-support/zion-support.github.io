@@ -2,6 +2,14 @@
 import React from 'react'
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Analytics | Zion Tech Group',
+  description: 'AI Analytics — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 export default function Page() {
   return (

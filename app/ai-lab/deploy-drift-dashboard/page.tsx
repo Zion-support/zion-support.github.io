@@ -2,6 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { AILabToolLayout } from '../../components/ai-lab/AILabToolLayout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ai Lab Deploy Drift Dashboard | Zion Tech Group',
+  description: 'Ai Lab Deploy Drift Dashboard — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 type DeployStatus = {
   generatedAt?: string;

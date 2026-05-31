@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Monitor, Smartphone, Tablet, Copy, Check, Search, Info, Globe, Cpu, Eye } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'User-Agent Parser | Zion Tech Group',
+  description: 'Free online user-agent parser tool. No signup required.',
+};
+
+
 
 interface ParsedUA {
   browser: { name: string; version: string };

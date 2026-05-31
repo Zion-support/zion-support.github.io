@@ -2,6 +2,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Free Resources & Tools | Zion Tech Group',
+  description: 'Free Resources & Tools — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 const resources = [
   {

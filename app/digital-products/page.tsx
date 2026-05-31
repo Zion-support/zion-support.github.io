@@ -1,5 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Digital Products | Zion Tech Group',
+  description: 'Digital Products — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
+
 
 const products = [
   {

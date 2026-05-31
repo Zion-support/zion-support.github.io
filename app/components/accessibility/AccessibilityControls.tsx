@@ -13,7 +13,7 @@ interface AccessibilityControlsProps {
   onReducedMotionChange?: (_value: boolean) => void;
 }
 
-const AccessibilityControls: React.FC<AccessibilityControlsProps> = memo(({
+const AccessibilityControls = memo(({
   isHighContrast,
   fontSize,
   reducedMotion,

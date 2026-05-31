@@ -7,7 +7,7 @@ interface PageLoaderProps {
   fallback?: React.ReactNode;
 }
 
-const PageLoader: React.FC<PageLoaderProps> = memo(({
+const PageLoader = memo(({
   children,
   loading = false,
   fallback

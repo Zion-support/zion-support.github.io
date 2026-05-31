@@ -5,7 +5,7 @@ interface PerformanceEnhancerProps {
   children?: React.ReactNode;
 }
 
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ className = '', children }) => {
+const PerformanceEnhancer = ({ className = '', children }) => {
   return (
     <div className={`performanceenhancer-component ${className}`}>
 {children || <h2>PerformanceEnhancer</h2>}

@@ -5,7 +5,7 @@ interface ContentPreviewCardProps {
   children?: React.ReactNode;
 }
 
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
+const ContentPreviewCard = ({ className = '', children }) => {
   return (
     <div className={`contentpreviewcard-component ${className}`}>
       {children}

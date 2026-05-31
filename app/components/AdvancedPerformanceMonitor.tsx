@@ -1,6 +1,6 @@
 'use client';
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -16,7 +16,7 @@ interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
 }
 
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+const AdvancedPerformanceMonitor = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true
 }) => {

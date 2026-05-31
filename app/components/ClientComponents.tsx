@@ -55,7 +55,7 @@ interface ClientComponentsProps {
   children: React.ReactNode;
 }
 
-const ClientComponents: React.FC<ClientComponentsProps> = ({ children }) => {
+const ClientComponents = ({ children }) => {
   return (
     <AdvancedPerformanceEnhancer enableMonitoring={true} enableOptimizations={true}>
       {/* <EnhancedAccessibilityManager enableAutoDetection={true} enableKeyboardShortcuts={true}> */}

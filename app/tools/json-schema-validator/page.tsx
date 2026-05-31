@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { FileJson, Copy, Check, AlertTriangle, CheckCircle2, XCircle, Sparkles, RotateCcw } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON Schema Validator | Zion Tech Group',
+  description: 'Free online json schema validator tool. No signup required.',
+};
+
+
 
 interface ValidationError {
   path: string;

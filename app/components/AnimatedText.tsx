@@ -5,7 +5,7 @@ interface AnimatedTextProps {
   children?: React.ReactNode;
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '', children }) => {
+const AnimatedText = ({ className = '', children }) => {
   return (
     <div className={`animatedtext-component ${className}`}>
       {children}

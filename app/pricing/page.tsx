@@ -1,5 +1,12 @@
 'use client';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Pricing | Zion Tech Group',
+  description: 'Pricing — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
 export default function PricingPage() {
   const handleCheckout = (plan: string) => {
     alert(`The ${plan} plan is coming soon! Please contact us for more details.`);

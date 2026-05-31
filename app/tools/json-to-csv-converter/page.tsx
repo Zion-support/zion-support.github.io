@@ -2,6 +2,14 @@
 
 import { useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSON to CSV Converter | Zion Tech Group',
+  description: 'Free online json to csv converter tool. No signup required.',
+};
+
+
 
 interface ConversionOptions {
   delimiter: ',' | ';' | '\t' | '|';

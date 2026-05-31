@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Database, Copy, Check, Sparkles, RotateCcw, AlignLeft } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'SQL Query Formatter | Zion Tech Group',
+  description: 'Free online sql query formatter tool. No signup required.',
+};
+
+
 
 const KEYWORDS = new Set([
   'SELECT', 'FROM', 'WHERE', 'INSERT', 'INTO', 'VALUES', 'UPDATE', 'SET',

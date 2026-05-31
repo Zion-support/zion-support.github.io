@@ -3,6 +3,14 @@
 import { useState, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Copy, Check, Play, RotateCcw, ChevronRight, ChevronDown, FileJson, Lightbulb } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JSONPath Explorer | Zion Tech Group',
+  description: 'Free online jsonpath explorer tool. No signup required.',
+};
+
+
 
 interface PathResult {
   path: string;

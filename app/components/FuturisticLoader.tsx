@@ -5,7 +5,7 @@ interface FuturisticLoaderProps {
   children?: React.ReactNode;
 }
 
-const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className = '', children }) => {
+const FuturisticLoader = ({ className = '', children }) => {
   return (
     <div className={`futuristicloader-component ${className}`}>
       {children}

@@ -1,6 +1,5 @@
-import React from 'react';
 
-const AnimatedCounter: React.FC = () => {
+const AnimatedCounter = () => {
   return (
     <div className="animatedcounter-component">
       {/* AnimatedCounter component implementation */}

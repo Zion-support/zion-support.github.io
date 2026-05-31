@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, ArrowLeftRight, Download, FileJson, FileSpreadsheet, Trash2, Upload } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CSV ↔ JSON Converter | Zion Tech Group',
+  description: 'Free online csv ↔ json converter tool. No signup required.',
+};
+
+
 
 function parseCSV(text: string): { headers: string[]; rows: string[][] } {
   const lines = text.trim().split('\n');

@@ -17,7 +17,7 @@ interface BreadcrumbProps {
  * Functional breadcrumb with BreadcrumbList JSON-LD for SEO.
  * Renders Home > Parent > Current with aria-current on the last item.
  */
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
+const Breadcrumb = ({ items, className = '' }) => {
   if (items.length === 0) return null;
 
   const baseUrl = 'https://ziontechgroup.com';

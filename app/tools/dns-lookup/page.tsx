@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Copy, Check, RotateCcw, Globe, AlertTriangle, Loader2, Info } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'DNS Record Lookup | Zion Tech Group',
+  description: 'Free online dns record lookup tool. No signup required.',
+};
+
+
 
 type RecordType = 'A' | 'AAAA' | 'MX' | 'TXT' | 'NS' | 'CNAME' | 'SOA' | 'CAA' | 'PTR';
 

@@ -2,7 +2,7 @@
 import { CheckCircle, ArrowRight, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 import React from 'react'
 
-const PageOriginalPage: React.FC = () => {
+const PageOriginalPage = () => {
   const features = [
     {
       icon: Brain,

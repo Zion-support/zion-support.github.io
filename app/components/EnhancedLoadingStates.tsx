@@ -5,7 +5,7 @@ interface EnhancedLoadingStatesProps {
   children?: React.ReactNode;
 }
 
-const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
+const EnhancedLoadingStates = ({ className = '', children }) => {
   return (
 <div className={`enhancedloadingstates-component ${className}`}>
       {children}

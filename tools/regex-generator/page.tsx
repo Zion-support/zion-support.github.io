@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tools Regex Generator | Zion Tech Group',
+  description: 'Tools Regex Generator — Zion Tech Group delivers cutting-edge technology solutions.',
+};
+
 export default function RegexGeneratorPage() {
   return (
     <div className="container mx-auto px-4 py-8">

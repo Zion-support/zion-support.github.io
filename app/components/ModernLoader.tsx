@@ -5,7 +5,7 @@ interface ModernLoaderProps {
   children?: React.ReactNode;
 }
 
-const ModernLoader: React.FC<ModernLoaderProps> = ({ className = '', children }) => {
+const ModernLoader = ({ className = '', children }) => {
   return (
     <div className={`modernloader-component ${className}`}>
       {children}

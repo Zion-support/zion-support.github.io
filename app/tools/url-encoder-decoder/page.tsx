@@ -3,6 +3,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, Zap, ArrowDownUp, RotateCcw, Link2, Unlink } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'URL Encoder / Decoder | Zion Tech Group',
+  description: 'Free online url encoder / decoder tool. No signup required.',
+};
+
+
 
 export default function UrlEncoderDecoder() {
   const [input, setInput] = useState('');
