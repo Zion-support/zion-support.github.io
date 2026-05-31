@@ -84394,5 +84394,340 @@
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
     }
+  },
+  {
+    "id": "email-attachment-scanner-basic",
+    "title": "Email Attachment Virus Scanner - Basic",
+    "description": "Basic email attachment scanning with signature-based detection",
+    "category": "email-intelligence",
+    "price": "$299/month",
+    "features": [
+      "File signature scanning",
+      "Basic threat detection",
+      "Quarantine system",
+      "Daily reports"
+    ]
+  },
+  {
+    "id": "email-attachment-scanner-pro",
+    "title": "Email Attachment Virus Scanner - Pro",
+    "description": "Advanced multi-layer email attachment security scanning",
+    "category": "email-intelligence",
+    "price": "$599/month",
+    "features": [
+      "Multi-layer detection",
+      "Sandbox analysis",
+      "Real-time updates",
+      "API integration",
+      "Custom policies"
+    ]
+  },
+  {
+    "id": "email-attachment-scanner-enterprise",
+    "title": "Email Attachment Virus Scanner - Enterprise",
+    "description": "Enterprise-grade email attachment security with AI-powered threat detection",
+    "category": "email-intelligence",
+    "price": "$1,299/month",
+    "features": [
+      "AI threat detection",
+      "Zero-day protection",
+      "Advanced analytics",
+      "Compliance reporting",
+      "24/7 support"
+    ]
+  },
+  {
+    "id": "malware-quarantine-service",
+    "title": "Malware Quarantine Management",
+    "description": "Secure quarantine and analysis of malicious email attachments",
+    "category": "email-intelligence",
+    "price": "$399/month",
+    "features": [
+      "Secure isolation",
+      "Forensic analysis",
+      "Threat intelligence",
+      "Recovery options"
+    ]
+  },
+  {
+    "id": "attachment-security-audit",
+    "title": "Email Attachment Security Audit",
+    "description": "Comprehensive audit of email attachment security posture",
+    "category": "email-intelligence",
+    "price": "$2,499 one-time",
+    "features": [
+      "Security assessment",
+      "Vulnerability analysis",
+      "Compliance check",
+      "Detailed report"
+    ]
+  },
+  {
+    "id": "smart-email-filters-basic",
+    "title": "Smart Email Filters - Basic",
+    "description": "ML-powered email categorization with 6 smart categories",
+    "category": "email-intelligence",
+    "price": "$249/month",
+    "features": [
+      "6 categories",
+      "Basic ML",
+      "Auto-tagging",
+      "Priority scoring"
+    ]
+  },
+  {
+    "id": "smart-email-filters-pro",
+    "title": "Smart Email Filters - Pro",
+    "description": "Advanced intelligent email filtering with custom rules",
+    "category": "email-intelligence",
+    "price": "$499/month",
+    "features": [
+      "Custom categories",
+      "Advanced ML",
+      "Custom rules",
+      "Archive automation",
+      "Analytics"
+    ]
+  },
+  {
+    "id": "smart-email-filters-enterprise",
+    "title": "Smart Email Filters - Enterprise",
+    "description": "Enterprise email filtering with team-wide policies",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": [
+      "Team policies",
+      "Shared rules",
+      "Advanced analytics",
+      "API access",
+      "Priority support"
+    ]
+  },
+  {
+    "id": "email-categorization-consulting",
+    "title": "Email Categorization Consulting",
+    "description": "Expert consulting for email organization and filtering strategies",
+    "category": "email-intelligence",
+    "price": "$1,999 one-time",
+    "features": [
+      "Workflow analysis",
+      "Custom strategy",
+      "Implementation guide",
+      "Training session"
+    ]
+  },
+  {
+    "id": "filter-rule-optimization",
+    "title": "Email Filter Rule Optimization",
+    "description": "Optimize existing email filter rules for better performance",
+    "category": "email-intelligence",
+    "price": "$799 one-time",
+    "features": [
+      "Rule analysis",
+      "Performance tuning",
+      "Conflict resolution",
+      "Best practices"
+    ]
+  },
+  {
+    "id": "read-receipt-tracker-basic",
+    "title": "Email Read Receipt Tracker - Basic",
+    "description": "Basic read receipt tracking for individual users",
+    "category": "email-intelligence",
+    "price": "$199/month",
+    "features": [
+      "Read tracking",
+      "Basic analytics",
+      "Email history",
+      "Status dashboard"
+    ]
+  },
+  {
+    "id": "read-receipt-tracker-pro",
+    "title": "Email Read Receipt Tracker - Pro",
+    "description": "Advanced read receipt tracking with engagement analytics",
+    "category": "email-intelligence",
+    "price": "$399/month",
+    "features": [
+      "Advanced analytics",
+      "Response time tracking",
+      "Engagement reports",
+      "Export data"
+    ]
+  },
+  {
+    "id": "read-receipt-tracker-enterprise",
+    "title": "Email Read Receipt Tracker - Enterprise",
+    "description": "Enterprise read receipt management with team analytics",
+    "category": "email-intelligence",
+    "price": "$899/month",
+    "features": [
+      "Team analytics",
+      "Shared dashboards",
+      "API access",
+      "Custom reports",
+      "Priority support"
+    ]
+  },
+  {
+    "id": "email-engagement-consulting",
+    "title": "Email Engagement Consulting",
+    "description": "Expert consulting for improving email engagement rates",
+    "category": "email-intelligence",
+    "price": "$2,999 one-time",
+    "features": [
+      "Engagement analysis",
+      "Strategy development",
+      "Best practices",
+      "Implementation support"
+    ]
+  },
+  {
+    "id": "read-receipt-integration",
+    "title": "Read Receipt System Integration",
+    "description": "Integrate read receipt tracking with existing email systems",
+    "category": "email-intelligence",
+    "price": "$1,499 one-time",
+    "features": [
+      "System integration",
+      "Custom setup",
+      "Testing",
+      "Documentation"
+    ]
+  },
+  {
+    "id": "followup-automation-basic",
+    "title": "Email Follow-up Automation - Basic",
+    "description": "Basic automated follow-up with 4 predefined rules",
+    "category": "email-intelligence",
+    "price": "$299/month",
+    "features": [
+      "4 follow-up rules",
+      "Basic templates",
+      "Manual scheduling",
+      "Simple analytics"
+    ]
+  },
+  {
+    "id": "followup-automation-pro",
+    "title": "Email Follow-up Automation - Pro",
+    "description": "Advanced follow-up automation with custom rules and templates",
+    "category": "email-intelligence",
+    "price": "$599/month",
+    "features": [
+      "Custom rules",
+      "Template library",
+      "Smart scheduling",
+      "Advanced analytics",
+      "A/B testing"
+    ]
+  },
+  {
+    "id": "followup-automation-enterprise",
+    "title": "Email Follow-up Automation - Enterprise",
+    "description": "Enterprise follow-up automation with team workflows",
+    "category": "email-intelligence",
+    "price": "$1,199/month",
+    "features": [
+      "Team workflows",
+      "Advanced analytics",
+      "API access",
+      "Custom integrations",
+      "Priority support"
+    ]
+  },
+  {
+    "id": "followup-strategy-consulting",
+    "title": "Email Follow-up Strategy Consulting",
+    "description": "Expert consulting for email follow-up strategies",
+    "category": "email-intelligence",
+    "price": "$1,999 one-time",
+    "features": [
+      "Strategy development",
+      "Workflow design",
+      "Best practices",
+      "Training"
+    ]
+  },
+  {
+    "id": "followup-template-design",
+    "title": "Custom Follow-up Template Design",
+    "description": "Custom email follow-up template design and optimization",
+    "category": "email-intelligence",
+    "price": "$999 one-time",
+    "features": [
+      "5 custom templates",
+      "A/B testing",
+      "Optimization",
+      "Brand alignment"
+    ]
+  },
+  {
+    "id": "priority-scoring-basic",
+    "title": "Email Priority Scoring - Basic",
+    "description": "Basic intelligent email priority scoring",
+    "category": "email-intelligence",
+    "price": "$249/month",
+    "features": [
+      "4-factor scoring",
+      "5 priority levels",
+      "Basic notifications",
+      "Simple dashboard"
+    ]
+  },
+  {
+    "id": "priority-scoring-pro",
+    "title": "Email Priority Scoring - Pro",
+    "description": "Advanced email priority scoring with custom factors",
+    "category": "email-intelligence",
+    "price": "$499/month",
+    "features": [
+      "Custom factors",
+      "Advanced notifications",
+      "Detailed analytics",
+      "Priority rules",
+      "Export data"
+    ]
+  },
+  {
+    "id": "priority-scoring-enterprise",
+    "title": "Email Priority Scoring - Enterprise",
+    "description": "Enterprise email priority scoring with team coordination",
+    "category": "email-intelligence",
+    "price": "$999/month",
+    "features": [
+      "Team coordination",
+      "Advanced analytics",
+      "API access",
+      "Custom integrations",
+      "Priority support"
+    ]
+  },
+  {
+    "id": "priority-system-consulting",
+    "title": "Email Priority System Consulting",
+    "description": "Expert consulting for email priority management systems",
+    "category": "email-intelligence",
+    "price": "$2,499 one-time",
+    "features": [
+      "System design",
+      "Workflow optimization",
+      "Best practices",
+      "Implementation support"
+    ]
+  },
+  {
+    "id": "priority-scoring-integration",
+    "title": "Priority Scoring System Integration",
+    "description": "Integrate priority scoring with existing email and workflow systems",
+    "category": "email-intelligence",
+    "price": "$1,799 one-time",
+    "features": [
+      "System integration",
+      "Custom setup",
+      "Testing",
+      "Documentation",
+      "Training"
+    ]
   }
 ]
