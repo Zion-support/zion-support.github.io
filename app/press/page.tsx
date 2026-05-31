@@ -19,9 +19,4 @@ export default function PressPage() {
               <p className="text-purple-400 text-sm mb-1">{a.date} · {a.outlet}</p>
               <h3 className="font-semibold text-lg">{a.title}</h3>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+          ))}

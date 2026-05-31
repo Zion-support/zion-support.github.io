@@ -72,8 +72,4 @@ export default function PricingPage() {
       </div>
       <div className="mt-12 text-center">
         <p className="text-slate-400 mb-4">Need a custom solution? Let us build a tailored proposal.</p>
-        <Link href="/proposal-generator/" className="btn-primary">Generate Custom Proposal</Link>
-      </div>
-    </div>
-  );
-}
+        <Link href="/proposal-generator/" className="btn-primary">Generate Custom Proposal</Link>

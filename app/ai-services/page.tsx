@@ -151,6 +151,4 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
-    </main>
-  );
-}
+    </main>

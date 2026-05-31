@@ -9,5 +9,4 @@ export const metadata: Metadata = {
 };
 
 export default function ConsultationPage() {
-  redirect('/contact/');
-}
+  redirect('/contact/');

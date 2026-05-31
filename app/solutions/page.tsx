@@ -32,8 +32,4 @@ export default function SolutionsPage() {
             <p className="text-slate-400 text-sm">{ind.desc}</p>
             <span className="text-purple-400 text-xs mt-3 inline-block">Learn more →</span>
           </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
+        ))}

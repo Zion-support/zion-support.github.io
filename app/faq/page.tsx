@@ -205,6 +205,4 @@ export default function FAQPage() {
           </p>
         </div>
       </section>
-    </main>
-  );
-}
+    </main>
