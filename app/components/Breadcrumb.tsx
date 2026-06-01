@@ -9,4 +9,4 @@ export default function Breadcrumb({ items, className }: { items: Array<{ label:
       ))}
     </nav>
   );
-}
+}

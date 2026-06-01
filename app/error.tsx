@@ -11,30 +11,33 @@ export default function ErrorPage({
   reset: () => void;
 }) {
   return (
-    <main className="min-h-screen bg-slate-950 text-white flex items-center justify-center px-4">
+    <main className="min-h-screen bg-slate-950 flex items-center justify-center px-4">
       <div className="text-center max-w-lg">
-        <div className="text-8xl mb-4">⚠️</div>
-        <h1 className="text-3xl font-bold mb-3">Something Went Wrong</h1>
-        <p className="text-slate-400 mb-8 text-lg">
-          An unexpected error occurred. Our team has been notified.
+        <span className="text-7xl block mb-6">⚠️</span>
+        <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+        <p className="text-slate-400 mb-8">
+          {error?.message || 'An unexpected error occurred. Please try again.'}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button onClick={reset} className="btn-primary px-8 py-3 text-lg cursor-pointer">
-            🔄 Try Again
+        <div className="flex gap-4 justify-center">
+          <button
+            onClick={reset}
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+          >
+            Try Again
           </button>
-          <Link href="/" className="btn-secondary px-8 py-3 text-lg inline-block">
-            🏠 Go Home
+          <Link
+            href="/"
+            className="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold transition"
+          >
+            Go Home
           </Link>
         </div>
-        {process.env.NODE_ENV === 'development' && (
-          <details className="mt-8 text-left">
-            <summary className="text-sm text-slate-500 cursor-pointer">Error details</summary>
-            <pre className="mt-4 text-xs text-red-400 bg-slate-900 p-4 rounded-lg overflow-auto max-h-60">
-              {error.message}
-              {error.stack && `\n\n${error.stack}`}
-            </pre>
-          </details>
-        )}
+        <p className="text-slate-500 text-sm mt-8">
+          Need help? Contact us at{' '}
+          <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:underline">
+            kleber@ziontechgroup.com
+          </a>
+        </p>
       </div>
     </main>
   );
