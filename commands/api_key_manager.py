@@ -35,6 +35,7 @@ class APIKeyManager:
         'cloudflare': {'env': 'CLOUDFLARE_API_TOKEN', 'url': 'https://dash.cloudflare.com/profile/api-tokens', 'free': True, 'free_credit': '10k Neurons/day'},
         'openai': {'env': 'OPENAI_API_KEY', 'url': 'https://platform.openai.com/api-keys', 'free': False, 'free_credit': 'None'},
         'anthropic': {'env': 'ANTHROPIC_API_KEY', 'url': 'https://console.anthropic.com/settings/keys', 'free': False, 'free_credit': 'None'},
+        'glm': {'env': 'GLM_API_KEY', 'url': 'https://open.bigmodel.cn/usercenter/apikeys', 'free': True, 'free_credit': 'Free tier available'},
     }
 
     # Email/Communication
@@ -124,7 +125,7 @@ class APIKeyManager:
 
     def get_best_ai_provider(self) -> Optional[str]:
         """Return the best available AI provider (free tiers first, then paid)."""
-        priority = ['groq', 'gemini', 'deepseek', 'mistral', 'openrouter', 'huggingface', 'cerebras', 'together', 'cohere', 'openai', 'anthropic']
+        priority = ['glm', 'groq', 'gemini', 'deepseek', 'mistral', 'openrouter', 'huggingface', 'cerebras', 'together', 'cohere', 'openai', 'anthropic']
         for p in priority:
             if self.is_configured(p):
                 return p
@@ -188,6 +189,7 @@ class APIKeyManager:
             'mistral': ('https://api.mistral.ai/v1/models', {'Authorization': f'Bearer {key}'}),
             'openai': ('https://api.openai.com/v1/models', {'Authorization': f'Bearer {key}'}),
             'anthropic': ('https://api.anthropic.com/v1/messages', {'x-api-key': key, 'anthropic-version': '2023-06-01'}),
+            'glm': ('https://open.bigmodel.cn/api/paas/v4/chat/completions', {'Authorization': f'Bearer {key}'}),
         }
 
         if provider not in test_urls:
