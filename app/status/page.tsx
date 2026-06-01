@@ -234,4 +234,8 @@ export default function StatusPage() {
           <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
             +1 302 464 0950
           </a>.
-        </p>
+        </p>
+      </div>
+    </div>
+  );
+}

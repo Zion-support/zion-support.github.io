@@ -1,4 +1,6 @@
 
+'use client';
+
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
@@ -358,4 +360,6 @@ export default function Navigation() {
           </div>
         </div>
       )}
-    </header>
+    </header>
+  );
+}

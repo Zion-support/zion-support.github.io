@@ -198,4 +198,7 @@ export default function SearchPage() {
         <div className="text-center py-16">
           <p className="text-slate-400 text-lg">Start typing or pick a category above</p>
         </div>
-      )}
+      )}
+    </div>
+  );
+}

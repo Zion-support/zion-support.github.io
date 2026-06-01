@@ -106,4 +106,8 @@ export default function CareersPage() {
           <a href="mailto:kleber@ziontechgroup.com?subject=Career Inquiry" className="btn-primary">
             ✉ Send Your Resume
           </a>
-        </section>
+        </section>
+      </div>
+    </div>
+  );
+}

@@ -164,4 +164,6 @@ export default function PartnersPage() {
           </form>
         </div>
       </section>
-    </main>
+    </main>
+  );
+}

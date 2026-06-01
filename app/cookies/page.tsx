@@ -161,4 +161,7 @@ function CookieCard({ name, purpose, examples, optout }: { name: string; purpose
       </p>
       <p className="text-slate-400 text-sm">
         <span className="text-slate-500">Opt-out:</span> {optout}
-      </p>
+      </p>
+    </div>
+  );
+}
