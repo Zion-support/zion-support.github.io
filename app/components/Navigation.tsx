@@ -266,10 +266,19 @@ export default function Navigation() {
             </svg>
           </Link>
 
+          {/* Service count badge */}
+          <Link
+            href="/services/"
+            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-purple-300 border border-purple-500/20 hover:border-purple-500/40 transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+            844+ Solutions
+          </Link>
+
           {/* Desktop CTA */}
           <a
             href={`mailto:${EMAIL}`}
-            className="lg:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-pink-500 hover:bg-pink-600 transition-colors"
+            className="lg:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 transition-all shadow-lg shadow-purple-500/20"
           >
             ✉ Get Free Consultation
           </a>
