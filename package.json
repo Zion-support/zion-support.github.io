@@ -85,11 +85,13 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet-async": "^2.0.5",
+    "stripe": "^22.2.0",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
     "@next/eslint-plugin-next": "^15.5.18",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^22.10.1",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
