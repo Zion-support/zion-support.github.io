@@ -35,6 +35,7 @@ import V1066V1070Showcase from '@/components/V1066V1070Showcase';
 import V1071V1075Showcase from '@/components/V1071V1075Showcase';
 import V1076V1080Showcase from '@/components/V1076V1080Showcase';
 import V1081V1085Showcase from '@/components/V1081V1085Showcase';
+import V1086V1090Showcase from '@/components/V1086V1090Showcase';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 
 
@@ -428,6 +429,7 @@ let list = services;
       <V1071V1075Showcase />
       <V1076V1080Showcase />
       <V1081V1085Showcase />
+      <V1086V1090Showcase />
 
       {/* ── How It Works ── */}
       <section className="py-20">
