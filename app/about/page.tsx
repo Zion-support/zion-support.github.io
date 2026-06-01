@@ -1,112 +1,168 @@
-// app/about/page.tsx — Improved About Page
-import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'About Us',
-  description: 'Zion Tech Group is a US-based technology company delivering AI, IT, and Micro SAAS solutions. Learn about our mission, team, and approach.',
+  description:
+    'Learn about Zion Tech Group — our mission, team, and the AI-powered solutions that help modern businesses transform and grow.',
 };
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="relative overflow-hidden">
       {/* Hero */}
-      <section className="py-20 px-4 text-center bg-gradient-to-b from-purple-900/20 to-transparent">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+      <section className="relative overflow-hidden border-b border-purple-500/20 bg-gradient-to-b from-slate-950 via-purple-950/30 to-slate-900">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
+        <div className="relative mx-auto max-w-5xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-purple-400">
             About Zion Tech Group
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Building the Future of
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              {' '}AI-Powered{' '}
+            </span>
+            Business
           </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            We build intelligent systems that transform enterprise operations — from AI-powered automation to cloud infrastructure and beyond.
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            We are a technology company at the intersection of artificial intelligence, software
+            engineering, and business transformation. Our mission is to make enterprise-grade AI
+            accessible to teams of every size.
           </p>
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 pb-20">
-        {/* Mission */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-          <p className="text-slate-300 mb-4">
-            Zion Tech Group helps enterprises harness the power of artificial intelligence, modern cloud infrastructure, and intelligent automation to achieve measurable business outcomes. We believe every organization — from startups to Fortune 500s — deserves access to world-class technology solutions.
-          </p>
-          <p className="text-slate-300">
-            Founded and led by Kleber Garcia Alcatrão, we operate as a 100% US-based team with deep expertise across AI/ML, cybersecurity, cloud architecture, and enterprise software development.
-          </p>
-        </section>
-
-        {/* What We Do */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6">What We Do</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+      {/* Stats */}
+      <section className="border-b border-slate-800 bg-slate-900/60">
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[
-              { title: 'AI & Machine Learning', desc: 'Custom AI models, RAG systems, autonomous agents, predictive analytics, and enterprise copilots tailored to your business.' },
-              { title: 'Cloud & Infrastructure', desc: 'AWS, Azure, and Google Cloud architecture. Kubernetes, serverless, DevOps, and 24/7 managed infrastructure.' },
-              { title: 'Cybersecurity', desc: 'Zero-trust architecture, penetration testing, compliance automation (SOC2, HIPAA, NIST), and managed security operations.' },
-              { title: 'Automation & Integration', desc: 'End-to-end workflow automation, API orchestration, RPA+AI hybrid systems, and custom Micro SAAS platforms.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-slate-900/60 border border-slate-700/50 rounded-xl p-6">
-                <h3 className="text-purple-400 font-semibold mb-2">{item.title}</h3>
-                <p className="text-slate-400 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Why Zion */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group</h2>
-          <div className="space-y-4">
-            {[
-              { title: 'US-Based Team', desc: '100% US-based engineers and architects. No offshoring, no communication gaps.' },
-              { title: '600+ Services', desc: 'The most comprehensive catalog of AI, IT, and automation services — ready to deploy.' },
-              { title: 'Custom Proposals', desc: 'Every engagement starts with a free discovery call and a tailored proposal with transparent pricing.' },
-              { title: 'Proven Methodology', desc: 'AI-inferred deployment roadmaps with 5-phase delivery framework. From pilot to production in weeks.' },
-              { title: 'Enterprise Ready', desc: 'SLA guarantees, compliance frameworks, and security-first architecture baked into every solution.' },
-            ].map((item) => (
-              <div key={item.title} className="flex items-start gap-3">
-                <span className="text-green-400 mt-0.5 shrink-0">✓</span>
-                <div>
-                  <span className="text-white font-semibold">{item.title}:</span>{' '}
-                  <span className="text-slate-400">{item.desc}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Stats */}
-        <section className="mb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { value: '600+', label: 'Services' },
-              { value: '6', label: 'Categories' },
-              { value: '100%', label: 'US-Based' },
-              { value: '24/7', label: 'Support' },
+              { label: 'AI Services', value: '3,400+' },
+              { label: 'Industries Served', value: '25+' },
+              { label: 'AI Agents Deployed', value: '150+' },
+              { label: 'Countries', value: '40+' },
             ].map((stat) => (
-              <div key={stat.label} className="bg-slate-900/40 rounded-xl p-6 border border-slate-800">
-                <div className="text-3xl font-bold text-purple-400">{stat.value}</div>
-                <div className="text-slate-500 text-sm mt-1">{stat.label}</div>
+              <div key={stat.label} className="text-center">
+                <p className="text-3xl font-bold text-white sm:text-4xl">{stat.value}</p>
+                <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <section className="text-center bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-2xl p-10 border border-purple-500/20">
-          <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-            Get a free discovery call and custom proposal. No obligation, same-day turnaround.
+      {/* Mission */}
+      <section className="bg-gradient-to-b from-slate-900 to-slate-950">
+        <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-white sm:text-4xl">Our Mission</h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">
+                We believe every business deserves access to the same intelligent automation that
+                Fortune 500 companies use. Our platform of 3,400+ AI services removes the
+                complexity from AI adoption — from strategy and consulting to deployment and
+                ongoing optimization.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">
+                Through our autonomous AI agents, we continuously evolve our own platform, proving
+                every day that AI can be a reliable partner in business growth.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-900/30 to-pink-900/20 p-8">
+              <h3 className="text-xl font-semibold text-white">What Makes Us Different</h3>
+              <ul className="mt-4 space-y-3">
+                {[
+                  '3,400+ ready-to-deploy AI services across 25+ industries',
+                  'Autonomous AI agents that continuously improve your systems',
+                  'End-to-end support from strategy to deployment',
+                  'Transparent pricing with no hidden fees',
+                  'Enterprise-grade security and compliance',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
+                    <span className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                      ✓
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="border-t border-slate-800 bg-slate-950">
+        <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">Leadership</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-slate-400">
+            A team of engineers, AI researchers, and business strategists united by a shared vision.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:kleber@ziontechgroup.com" className="btn-primary">
-              ✉ Get Free Consultation
-            </a>
-            <Link href="/services/" className="btn-secondary">
-              Browse Services →
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: 'Kleber Garcia Alcatrão',
+                role: 'Founder & CEO',
+                bio: 'Visionary technologist leading Zion Tech Group AI-first transformation strategy.',
+              },
+              {
+                name: 'AI Research Team',
+                role: 'Head of AI',
+                bio: 'Our autonomous AI agents and research team continuously build and deploy new intelligent services.',
+              },
+              {
+                name: 'Engineering Team',
+                role: 'CTO',
+                bio: 'Full-stack engineers building scalable, secure, and performant AI-powered solutions.',
+              },
+            ].map((person) => (
+              <div
+                key={person.name}
+                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center"
+              >
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-600 text-2xl font-bold text-white">
+                  {person.name.charAt(0)}
+                </div>
+                <h3 className="text-lg font-semibold text-white">{person.name}</h3>
+                <p className="mt-1 text-sm text-purple-400">{person.role}</p>
+                <p className="mt-3 text-sm text-slate-400">{person.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-slate-800 bg-gradient-to-b from-slate-950 to-purple-950/20">
+        <div className="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">Ready to Transform Your Business?</h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
+            Let&apos;s discuss how our AI services and autonomous agents can accelerate your growth.
+          </p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-900/40 transition hover:shadow-xl"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/70 px-8 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-purple-400 hover:text-white"
+            >
+              View Pricing
             </Link>
           </div>
-        </section>
-      </div>
+          <p className="mt-6 text-sm text-slate-400">
+            <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
+              kleber@ziontechgroup.com
+            </a>
+            {' · '}
+            <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
+              +1 302 464 0950
+            </a>
+          </p>
+        </div>
+      </section>
     </div>
   );
-}
+}

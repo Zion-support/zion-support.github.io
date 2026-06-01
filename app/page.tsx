@@ -4,6 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
+import AnimatedCounter from '@/components/AnimatedCounter';
 import type { Service } from './data/servicesData';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
@@ -12,19 +13,8 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
-import ServiceFinderChat from '@/components/ServiceFinderChat';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-import ServiceDiscoveryQuiz from '@/components/ServiceDiscoveryQuiz';
-import ServiceComparisonTool from '@/components/ServiceComparisonTool';
-import ServiceConfigurator from '@/components/ServiceConfigurator';
-import BusinessHealthCheck from '@/components/BusinessHealthCheck';
-import DeploymentCalculator from '@/components/DeploymentCalculator';
-import CustomerSuccessPlatform from '@/components/CustomerSuccessPlatform';
-import ROICalculator from '@/components/ROICalculator';
-import PricingEstimator from '@/components/PricingEstimator';
-import AIServiceMatcher from '@/components/AIServiceMatcher';
-import ServiceStatusDashboard from '@/components/ServiceStatusDashboard';
-import ServiceCompare from '@/components/ServiceCompare';
+import V204V208Showcase from '@/components/V204V208Showcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -40,6 +30,7 @@ const catAccent: Record<string, string> = {
   devops:    '#22d3ee',
   blockchain: '#fbbf24',
   iot:       '#2dd4bf',
+  'email-intelligence': '#a78bfa',
 };
 
 const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || CATEGORIES[0];
@@ -53,16 +44,17 @@ const STAT_SLA      = 'SLA Uptime Guarantee';
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
 
 const CATEGORIES = [
-  { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
-  { key: 'it',        label: 'IT Services',         emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
-  { key: 'cloud',     label: 'Cloud Services',       emoji: '☁️', color: 'from-sky-400 to-blue-600' },
-  { key: 'security',  label: 'Security Services',     emoji: '🔐', color: 'from-red-500 to-orange-500' },
-  { key: 'data',      label: 'Data Analytics',        emoji: '📊', color: 'from-green-500 to-emerald-500' },
-  { key: 'automation',label: 'Automation',            emoji: '🤖', color: 'from-pink-500 to-rose-500' },
-  { key: 'micro-saas',label: 'Micro-SaaS Products',   emoji: '🚀', color: 'from-amber-500 to-orange-500' },
-  { key: 'devops',    label: 'DevOps and Platform',   emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
-  { key: 'blockchain',label: 'Blockchain and Web3',   emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
-  { key: 'iot',       label: 'IoT and Edge',          emoji: '📡', color: 'from-teal-500 to-green-500' },
+  { key: 'ai',        label: 'AI Services',          emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
+  { key: 'it',        label: 'IT Services',            emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
+  { key: 'cloud',     label: 'Cloud Services',          emoji: '☁️', color: 'from-sky-400 to-blue-600' },
+  { key: 'security',  label: 'Security Services',       emoji: '🔐', color: 'from-red-500 to-orange-500' },
+  { key: 'data',      label: 'Data Analytics',          emoji: '📊', color: 'from-green-500 to-emerald-500' },
+  { key: 'automation',label: 'Automation',              emoji: '🤖', color: 'from-pink-500 to-rose-500' },
+  { key: 'micro-saas',label: 'Micro-SaaS Products',     emoji: '🚀', color: 'from-amber-500 to-orange-500' },
+  { key: 'devops',    label: 'DevOps and Platform',     emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
+  { key: 'blockchain',label: 'Blockchain and Web3',     emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
+  { key: 'iot',       label: 'IoT and Edge',            emoji: '📡', color: 'from-teal-500 to-green-500' },
+  { key: 'email-intelligence', label: 'Email Intelligence', emoji: '📧', color: 'from-violet-500 to-purple-600' },
 ];
 
 // Per-industry service-category mapping (derived from service catalog)
@@ -112,37 +104,11 @@ export default function HomePage() {
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
-    { value: `${serviceCount}+`, label: STAT_SERVICES },
-    { value: `${CATEGORIES.length} Categories`, label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS' },
+    { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
+    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
   ];
-
-  // Category pricing for estimator widget
-  const categoryCounts = useMemo(() => {
-    const m: Record<string, number> = {};
-    for (const s of services) { m[s.category] = (m[s.category] || 0) + 1; }
-    return m;
-  }, [services]);
-
-  const categoryPricing = useMemo(() => {
-    const m: Record<string, { min: number; avg: number; max: number }> = {};
-    const byCat: Record<string, number[]> = {};
-    for (const s of services) {
-      const n = Number(s.pricing?.basic || s.pricing?.enterprise || 0);
-      if (n > 0) {
-        if (!byCat[s.category]) byCat[s.category] = [];
-        byCat[s.category].push(n);
-      }
-    }
-    for (const [cat, prices] of Object.entries(byCat)) {
-      if (prices.length > 0) {
-        const sorted = prices.sort((a: number, b: number) => a - b);
-        m[cat] = { min: sorted[0], avg: Math.round(sorted.reduce((a: number, b: number) => a + b, 0) / sorted.length), max: sorted[sorted.length - 1] };
-      }
-    }
-    return m;
-  }, [services]);
 
   // Fetch release-signal dataset on mount
   useEffect(() => {
@@ -308,7 +274,7 @@ let list = services;
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, automation, data, and micro-SaaS services — from machine learning to cybersecurity, CRM to blockchain.
+            <ServiceCounter /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
             Get a free, custom proposal in minutes.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -338,7 +304,7 @@ let list = services;
 
             {/* Trust badges */}
             <div className="flex flex-wrap justify-center gap-8 text-slate-400 text-sm mb-12">
-              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support','617+ Services'].map(t => (
+              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`${serviceCount}+ Services`].map(t => (
                 <div key={t} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -358,6 +324,23 @@ let list = services;
               ))}
             </div>
 
+            {/* Trust Badges */}
+            <div className="mt-14 flex flex-wrap justify-center gap-4">
+              {[
+                { icon: '🏆', text: 'Industry Leading' },
+                { icon: '🔒', text: 'SOC 2 Compliant' },
+                { icon: '⚡', text: '24/7 Support' },
+                { icon: '🇺🇸', text: 'US-Based Team' },
+                { icon: '🔐', text: 'HIPAA Ready' },
+                { icon: '✅', text: '99.9% SLA' },
+              ].map((badge, i) => (
+                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/40 border border-slate-700/40 text-sm text-slate-300">
+                  <span className="text-base">{badge.icon}</span>
+                  <span>{badge.text}</span>
+                </div>
+              ))}
+            </div>
+
             {/* ── Contact Bar ── */}
             <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm">
               <a href="mailto:kleber@ziontechgroup.com" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-700/50 text-slate-300 hover:text-purple-300 hover:border-purple-500/30 transition-all">
@@ -370,26 +353,6 @@ let list = services;
                 📍 364 E Main St STE 1008, Middletown, DE 19709
               </span>
             </div>
-
-            {/* ── Academy Banner ── */}
-            <Link href="/academy/" className="block mt-8 mb-6 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-600/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="text-4xl">🎓</div>
-                  <div className="text-left">
-                    <div className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                      NEW: AI Training Academy & Certification Programs
-                    </div>
-                    <div className="text-sm text-slate-300 mt-1">
-                      89 courses • 50K+ students • Industry certifications • Corporate training
-                    </div>
-                  </div>
-                </div>
-                <div className="text-purple-300 group-hover:text-purple-200 text-2xl transition-colors">
-                  →
-                </div>
-              </div>
-            </Link>
 
             {/* ── Service Pipeline — live stage counts ── */}
             <div className="flex flex-wrap justify-center gap-4 mt-6">
@@ -423,6 +386,9 @@ let list = services;
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
 
+      {/* ── V204-V208 Email Intelligence Showcase ── */}
+      <V204V208Showcase />
+
       {/* ── How It Works ── */}
       <section className="py-20">
         <div className="container-page">
@@ -443,378 +409,6 @@ let list = services;
                 <p className="text-slate-400 text-sm">{s.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Service Discovery Quiz — NEW Interactive Feature ── */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-purple-600/30 text-purple-300 rounded-full text-sm font-semibold mb-4">
-              🎯 NEW: Personalized Recommendations
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Find Your Perfect Solution in 2 Minutes
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Answer 5 quick questions and get AI-powered service recommendations with instant ROI calculations
-            </p>
-          </div>
-          <ServiceDiscoveryQuiz />
-        </div>
-      </section>
-
-      {/* ── Service Comparison Tool — NEW Interactive Feature ── */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
-              🔍 NEW: Compare Services Side-by-Side
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Make Informed Decisions with Smart Comparisons
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Select 2-3 services and get detailed feature, pricing, and benefit comparisons with AI-powered recommendations
-            </p>
-          </div>
-          <ServiceComparisonTool />
-        </div>
-      </section>
-
-      {/* ── V70 Email Intelligence Banner ── */}
-      <section className="py-20 bg-gradient-to-b from-indigo-950 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
-              📧 NEW: V70 Email Intelligence
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Ultra-Advanced Email Analysis
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              50+ intelligence layers including thread context memory, sentiment escalation detection, 
-              auto-follow-up scheduling, and multi-language support.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">🧵</div>
-              <h3 className="text-lg font-bold text-white mb-2">Thread Context Memory</h3>
-              <p className="text-slate-400 text-sm">Remembers entire conversation history for better context awareness</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">📈</div>
-              <h3 className="text-lg font-bold text-white mb-2">Sentiment Escalation Detection</h3>
-              <p className="text-slate-400 text-sm">Detects frustration and anger early to prevent escalation</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">⏰</div>
-              <h3 className="text-lg font-bold text-white mb-2">Auto-Follow-up Scheduler</h3>
-              <p className="text-slate-400 text-sm">Automatically schedules follow-ups if no response received</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">🌐</div>
-              <h3 className="text-lg font-bold text-white mb-2">Multi-Language Support</h3>
-              <p className="text-slate-400 text-sm">Detects language and suggests responses in sender's language</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">📋</div>
-              <h3 className="text-lg font-bold text-white mb-2">Attachment Intelligence</h3>
-              <p className="text-slate-400 text-sm">Analyzes attachments and suggests appropriate actions</p>
-            </div>
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-700">
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="text-lg font-bold text-white mb-2">Priority Matrix</h3>
-              <p className="text-slate-400 text-sm">Eisenhower matrix for intelligent email prioritization</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/services/ai-powered-email-intelligence/"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all text-center"
-            >
-              Learn More About V70
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=V70 Email Intelligence Demo"
-              className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all text-center"
-            >
-              Request Demo
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AI Customer Success Platform ── */}
-      <section className="py-20 bg-gradient-to-b from-purple-950 to-indigo-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-yellow-600/30 text-yellow-300 rounded-full text-sm font-semibold mb-4">
-              🌟 NEW: Customer Retention AI
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              AI Customer Success Platform
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Predict churn before it happens, optimize customer engagement, and maximize lifetime value with AI-powered health scoring and proactive interventions.
-            </p>
-          </div>
-          <CustomerSuccessPlatform />
-        </div>
-      </section>
-
-      {/* ── Interactive Service Configurator ── */}
-      <section className="py-20 bg-gradient-to-b from-indigo-950 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-600/30 text-green-300 rounded-full text-sm font-semibold mb-4">
-              🎨 NEW: Build Your Custom Solution
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Interactive Service Configurator
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Build your perfect solution by selecting services. Get bundle discounts and see real-time pricing as you configure.
-            </p>
-          </div>
-          <ServiceConfigurator />
-        </div>
-      </section>
-
-      {/* ── Business Health Check ── */}
-      <section className="py-20 bg-gradient-to-b from-purple-950 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-green-600/30 text-green-300 rounded-full text-sm font-semibold mb-4">
-              🏥 NEW: Free Business Assessment
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Business Health Check
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get a comprehensive technology health assessment across 5 critical areas. Discover strengths, weaknesses, and personalized recommendations.
-            </p>
-          </div>
-          <BusinessHealthCheck />
-        </div>
-      </section>
-
-      {/* ── Deployment Calculator ── */}
-      <section className="py-20 bg-gradient-to-b from-indigo-950 to-purple-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-blue-600/30 text-blue-300 rounded-full text-sm font-semibold mb-4">
-              🚀 NEW: Deployment Planning Tool
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Service Deployment Calculator
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Plan your implementation with confidence. Get instant estimates for deployment timelines, team requirements, prerequisites, and costs for any service.
-            </p>
-          </div>
-          <DeploymentCalculator />
-        </div>
-      </section>
-
-      {/* ── AI Proposal Generator ── */}
-      <section className="py-16 bg-gradient-to-br from-green-600/20 via-emerald-600/10 to-teal-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-semibold mb-4">
-              🚀 NEW: AI-Powered Proposal Generator
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Generate Custom Proposals in Minutes
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI-powered proposal generator creates personalized, professional proposals tailored to your business needs. Select services, get instant pricing, and receive a comprehensive proposal ready to present to stakeholders.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📋</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Step-by-Step Wizard</h3>
-                  <p className="text-slate-400 text-sm">4 simple steps to create your custom proposal</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">💰</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Instant Pricing</h3>
-                  <p className="text-slate-400 text-sm">Real-time cost calculation as you select services</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📄</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Professional Output</h3>
-                  <p className="text-slate-400 text-sm">Ready-to-present proposal with executive summary</p>
-                </div>
-              </div>
-              <Link
-                href="/proposal-generator"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                🤖 Create Your Proposal Now →
-              </Link>
-              <p className="text-slate-400 text-sm mt-4">
-                Free to use • No signup required • Takes 5 minutes
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Partner & Affiliate Program ── */}
-      <section className="py-16 bg-gradient-to-br from-amber-600/20 via-orange-600/10 to-rose-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 text-sm font-semibold mb-4">
-              🤝 NEW: Partner & Affiliate Program
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Grow Your Business with Zion
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Join 500+ partners earning up to 30% recurring commissions on 1,100+ AI, IT, and Micro-SaaS services.
-              Free training, marketing support, and a dedicated partner success team.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
-            {[
-              { icon: '🤝', title: 'Referral Partner', commission: '15%', desc: 'Earn by referring clients' },
-              { icon: '💼', title: 'Reseller Partner', commission: '25%', desc: 'Sell with white-label options' },
-              { icon: '⚡', title: 'Technology Partner', commission: 'Custom', desc: 'Co-develop solutions' },
-              { icon: '🚀', title: 'Strategic Partner', commission: '30%+', desc: 'Enterprise-level partnership' }
-            ].map((tier, i) => (
-              <div key={i} className="glass-card p-6 text-center hover:border-amber-500/40 transition-all hover:scale-105">
-                <div className="text-4xl mb-3">{tier.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-1">{tier.title}</h3>
-                <div className="text-2xl font-bold text-amber-400 mb-2">{tier.commission}</div>
-                <p className="text-slate-400 text-sm">{tier.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
-            <div className="text-center"><div className="text-2xl font-bold text-amber-400">500+</div><div className="text-slate-400 text-sm">Active Partners</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-orange-400">$12M+</div><div className="text-slate-400 text-sm">Partner Revenue</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-rose-400">45+</div><div className="text-slate-400 text-sm">Countries</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-pink-400">48h</div><div className="text-slate-400 text-sm">Approval Time</div></div>
-          </div>
-          <div className="text-center">
-            <Link
-              href="/partners"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              🤝 Become a Partner Today →
-            </Link>
-            <p className="text-slate-400 text-sm mt-4">
-              Free to apply • Commission calculator included • Monthly payouts
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AI ROI Calculator & Business Case Generator ── */}
-      <section className="py-16 bg-gradient-to-br from-green-600/20 via-emerald-600/10 to-teal-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-semibold mb-4">
-              💰 NEW: AI ROI Calculator & Business Case Generator
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Calculate Your ROI in 2 Minutes
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how much you can save with Zion's AI-powered solutions. Get personalized recommendations,
-              projected savings, implementation timeline, and a custom business case for your company.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📊</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Smart Analysis</h3>
-                  <p className="text-slate-400 text-sm">AI analyzes your company profile and pain points</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">💵</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Projected Savings</h3>
-                  <p className="text-slate-400 text-sm">See monthly and annual cost savings</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">🎯</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Personalized ROI</h3>
-                  <p className="text-slate-400 text-sm">Custom ROI calculations for your business</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📅</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Timeline</h3>
-                  <p className="text-slate-400 text-sm">Implementation roadmap with milestones</p>
-                </div>
-              </div>
-              <Link
-                href="/roi-calculator"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                💰 Calculate My ROI Now →
-              </Link>
-              <p className="text-slate-400 text-sm mt-4">
-                Free to use • No signup required • Instant results • Data-driven recommendations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── AI Client Portal & Project Dashboard ── */}
-      <section className="py-16 bg-gradient-to-br from-indigo-600/20 via-violet-600/10 to-purple-600/20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-indigo-400 text-sm font-semibold mb-4">
-              🔐 NEW: AI Client Portal & Project Dashboard
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Your Projects, Documents & Support — All in One Place
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Track project progress in real-time, access contracts and invoices, submit support tickets,
-              view ROI analytics, and communicate with your dedicated team — all from a secure client portal.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📊</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Project Tracking</h3>
-                  <p className="text-slate-400 text-sm">Real-time progress, milestones, and budget tracking</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">📈</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">ROI Analytics</h3>
-                  <p className="text-slate-400 text-sm">Measure savings, uptime, and performance metrics</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-3">🎫</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Support Tickets</h3>
-                  <p className="text-slate-400 text-sm">Submit and track issues with AI-prioritized routing</p>
-                </div>
-              </div>
-              <Link
-                href="/client-portal"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold rounded-xl hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                🔐 Access Client Portal →
-              </Link>
-              <p className="text-slate-400 text-sm mt-4">
-                Secure login • Real-time data • Mobile-friendly • 24/7 access
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -859,25 +453,6 @@ let list = services;
           </div>
         </div>
       </section>
-
-      {/* ── Pricing Estimator Widget ── */}
-      <PricingEstimator
-        categories={CATEGORIES}
-        categoryCounts={categoryCounts}
-        categoryPricing={categoryPricing}
-      />
-
-      {/* ── ROI Calculator Widget ── */}
-      <ROICalculator />
-
-      {/* ── Compare Services Widget ── */}
-      <ServiceCompare />
-
-      {/* ── AI Service Matcher ── */}
-      <AIServiceMatcher />
-
-      {/* ── Live Service Status Dashboard ── */}
-      <ServiceStatusDashboard />
 
         {/* ── Popular Services ── */}
 
@@ -1316,8 +891,8 @@ let list = services;
             {[
               { emoji: '🏆', label: 'Service Catalog', sub: 'AI & IT catalog', color: 'from-amber-500/20 to-yellow-500/10' },
               { emoji: '🚀', label: 'Latest Tech', sub: 'Modern stacks', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '🌐', label: 'Cross-Industry', sub: '30+ sectors served', color: 'from-purple-500/20 to-blue-500/10' },
-              { emoji: '⚖️', label: 'Compare & Choose', sub: 'Side-by-side tool', color: 'from-emerald-500/20 to-teal-500/10' },
+              { emoji: '🌐', label: 'Cross-Industry', sub: '9 sectors served', color: 'from-purple-500/20 to-blue-500/10' },
+              { emoji: '💡', label: 'Plug & Play', sub: 'No AI team needed', color: 'from-purple-500/20 to-blue-500/10' },
             ].map((badge, i) => (
               <div key={i} className={`bg-gradient-to-br ${badge.color} border border-slate-700/50 rounded-xl p-6 text-center group hover:border-purple-500/30 transition-all`}>
                 <div className="text-4xl mb-4">{badge.emoji}</div>
@@ -1450,6 +1025,35 @@ let list = services;
           </div>
         </div>
       </section>
+      {/* ── Trust Badges ── */}
+      <section className="py-12 border-t border-slate-800 bg-slate-900/30">
+        <div className="container-page">
+          <h2 className="text-xl font-bold text-white text-center mb-2">Trusted by Industry Leaders</h2>
+          <p className="text-slate-500 text-center text-sm mb-8">Enterprise-grade security, compliance, and reliability</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              { label:"SOC 2 Type II", icon:"🔒", desc:"Certified" },
+              { label:"GDPR Compliant", icon:"🇪🇺", desc:"Data Protection" },
+              { label:"HIPAA Ready", icon:"🏥", desc:"Healthcare" },
+              { label:"ISO 27001", icon:"🛡️", desc:"Security" },
+              { label:"99.99% Uptime", icon:"⚡", desc:"SLA Guaranteed" },
+              { label:"24/7 Support", icon:"🌐", desc:"Global Coverage" },
+            ].map(b => (
+              <div key={b.label} className="text-center p-4 rounded-lg border border-slate-800 bg-slate-900/50">
+                <div className="text-2xl mb-1">{b.icon}</div>
+                <div className="text-xs font-semibold text-white">{b.label}</div>
+                <div className="text-[10px] text-slate-500">{b.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-6 text-slate-500 text-xs">
+            <span>✓ 3,457+ Micro-SaaS Solutions</span>
+            <span>✓ 33 Email Intelligence Engines</span>
+            <span>✓ 43 Integrated APIs</span>
+            <span>✓ 70+ Industry Categories</span>
+          </div>
+        </div>
+      </section>
       {/* ── Industries We Serve — 10 verticals from service catalog ── */}
       <section className="py-16 border-t border-slate-800">
         <div className="container-page">
@@ -1483,7 +1087,6 @@ let list = services;
         </div>
       </section>
     <FloatingActionDock />
-    <ServiceFinderChat />
     </main>
   );
 }
