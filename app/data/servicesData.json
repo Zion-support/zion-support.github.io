@@ -36095,5 +36095,185 @@
     "popular": false,
     "category": "it",
     "industry": "Technology"
+  },
+  {
+    "id": "ai-fraud-investigation-platform",
+    "title": "AI Fraud Investigation Platform",
+    "description": "Automate fraud investigation with AI. Link analysis, pattern detection, evidence compilation, and case management for financial institutions and insurance companies.",
+    "features": [
+      "Link analysis and network visualization",
+      "Transaction pattern detection",
+      "Evidence auto-compilation",
+      "Case management workflow",
+      "SAR/STR report generation",
+      "Integration with core banking",
+      "Regulatory compliance templates",
+      "Team collaboration tools"
+    ],
+    "benefits": [
+      "Reduce investigation time by 70%",
+      "Detect complex fraud schemes",
+      "Automate regulatory reporting",
+      "Improve fraud detection rates"
+    ],
+    "pricing": {
+      "basic": "$2,499/mo",
+      "pro": "$7,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/ai-fraud-investigation-platform",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "\ud83d\udd0d",
+    "href": "/services/ai-fraud-investigation-platform",
+    "popular": true,
+    "category": "ai",
+    "industry": "Finance"
+  },
+  {
+    "id": "ai-cybersecurity-operations",
+    "title": "AI Cybersecurity Operations Center",
+    "description": "AI-powered SOC that automates threat detection, investigation, and response. Reduce alert fatigue by 90% and mean time to respond by 80%.",
+    "features": [
+      "AI alert triage and correlation",
+      "Automated threat investigation",
+      "Playbook-driven response",
+      "Threat hunting automation",
+      "Integration with 200+ security tools",
+      "Executive security dashboards",
+      "Compliance reporting",
+      "Managed SOC option"
+    ],
+    "benefits": [
+      "Reduce alert fatigue by 90%",
+      "Automate 80% of tier-1 investigations",
+      "Improve threat detection coverage",
+      "Scale security team without hiring"
+    ],
+    "pricing": {
+      "basic": "$3,999/mo",
+      "pro": "$12,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/ai-cybersecurity-operations",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "\ud83d\udee1\ufe0f",
+    "href": "/services/ai-cybersecurity-operations",
+    "popular": true,
+    "category": "ai",
+    "industry": "Cybersecurity"
+  },
+  {
+    "id": "ai-supply-chain-risk-management",
+    "title": "AI Supply Chain Risk Management",
+    "description": "Monitor and mitigate supply chain risks with AI. Supplier risk scoring, disruption prediction, alternative sourcing recommendations, and real-time monitoring.",
+    "features": [
+      "Supplier risk scoring",
+      "Geopolitical risk monitoring",
+      "Disruption prediction",
+      "Alternative sourcing recommendations",
+      "Financial health monitoring",
+      "ESG compliance tracking",
+      "Real-time alerting",
+      "Scenario modeling"
+    ],
+    "benefits": [
+      "Predict disruptions weeks in advance",
+      "Diversify supplier base proactively",
+      "Reduce supply chain costs",
+      "Improve resilience"
+    ],
+    "pricing": {
+      "basic": "$1,999/mo",
+      "pro": "$5,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/ai-supply-chain-risk-management",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "\ud83d\udd17",
+    "href": "/services/ai-supply-chain-risk-management",
+    "popular": false,
+    "category": "ai",
+    "industry": "Supply Chain"
+  },
+  {
+    "id": "ai-predictive-analytics-healthcare",
+    "title": "AI Predictive Analytics for Healthcare",
+    "description": "Predict patient outcomes, readmission risk, and disease progression with AI. Enable proactive care and reduce hospital readmissions by 30%.",
+    "features": [
+      "Readmission risk prediction",
+      "Disease progression modeling",
+      "Length of stay prediction",
+      "ICU deterioration alerts",
+      "Population health analytics",
+      "Integration with EHR systems",
+      "Clinical decision support",
+      "Outcome tracking and reporting"
+    ],
+    "benefits": [
+      "Reduce readmissions by 30%",
+      "Enable proactive care",
+      "Improve patient outcomes",
+      "Optimize resource allocation"
+    ],
+    "pricing": {
+      "basic": "$2,499/mo",
+      "pro": "$7,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/ai-predictive-analytics-healthcare",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "\ud83c\udfe5",
+    "href": "/services/ai-predictive-analytics-healthcare",
+    "popular": false,
+    "category": "ai",
+    "industry": "Healthcare"
+  },
+  {
+    "id": "ai-autonomous-vehicle-perception",
+    "title": "AI Autonomous Vehicle Perception System",
+    "description": "Computer vision and sensor fusion for autonomous vehicles. Object detection, lane tracking, pedestrian prediction, and real-time decision making.",
+    "features": [
+      "3D object detection",
+      "Lane and road boundary tracking",
+      "Pedestrian and cyclist prediction",
+      "Traffic sign and signal recognition",
+      "Sensor fusion (camera, LiDAR, radar)",
+      "Real-time processing (< 50ms)",
+      "Simulation environment",
+      "HD map integration"
+    ],
+    "benefits": [
+      "Improve autonomous driving safety",
+      "Reduce perception latency",
+      "Handle edge cases with AI",
+      "Accelerate AV development"
+    ],
+    "pricing": {
+      "basic": "$9,999/mo",
+      "pro": "$29,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/ai-autonomous-vehicle-perception",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "\ud83d\ude97",
+    "href": "/services/ai-autonomous-vehicle-perception",
+    "popular": false,
+    "category": "ai",
+    "industry": "Automotive"
   }
 ]
