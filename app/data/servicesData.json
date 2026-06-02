@@ -25539,5 +25539,542 @@
     "popular": true,
     "category": "ai",
     "industry": "Finance"
+  },
+  {
+    "id": "micro-saas-ai-talent-scout",
+    "title": "AI Talent Scout Platform",
+    "description": "AI-powered recruitment with resume parsing and diversity analytics.",
+    "features": [
+      "Resume parsing",
+      "Candidate matching",
+      "Interview scheduling",
+      "Diversity analytics",
+      "ATS integration",
+      "Employer branding",
+      "Offer management",
+      "Analytics"
+    ],
+    "benefits": [
+      "50% faster hiring",
+      "40% better match",
+      "Diversity insights",
+      "Cost reduction"
+    ],
+    "pricing": {
+      "basic": "$399/mo",
+      "pro": "$1,199/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "users",
+    "href": "/services/micro-saas-ai-talent-scout",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "HR Tech"
+  },
+  {
+    "id": "micro-saas-smart-estimator",
+    "title": "AI Estimator and Proposal Platform",
+    "description": "Generate accurate project estimates using AI historical data analysis.",
+    "features": [
+      "AI cost estimation",
+      "Scope breakdown",
+      "Proposal generator",
+      "Historical analysis",
+      "CRM integration",
+      "E-signature",
+      "Approval workflows",
+      "Analytics"
+    ],
+    "benefits": [
+      "3x faster estimates",
+      "25% more wins",
+      "Professional proposals",
+      "Data-driven pricing"
+    ],
+    "pricing": {
+      "basic": "$249/mo",
+      "pro": "$749/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "calc",
+    "href": "/services/micro-saas-smart-estimator",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "SaaS"
+  },
+  {
+    "id": "micro-saas-compliance-tracker",
+    "title": "Compliance and Audit Tracker",
+    "description": "Automated compliance tracking for SOC 2, HIPAA, GDPR with evidence collection.",
+    "features": [
+      "Compliance tracking",
+      "Evidence collection",
+      "Audit trails",
+      "Real-time scoring",
+      "Policy management",
+      "Vendor risk",
+      "Incident tracking",
+      "Reporting"
+    ],
+    "benefits": [
+      "80% audit prep saved",
+      "Real-time compliance",
+      "Always audit-ready",
+      "Multi-framework"
+    ],
+    "pricing": {
+      "basic": "$599/mo",
+      "pro": "$1,799/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "shield",
+    "href": "/services/micro-saas-compliance-tracker",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "Compliance"
+  },
+  {
+    "id": "micro-saas-knowledge-base-builder",
+    "title": "AI Knowledge Base Builder",
+    "description": "Create intelligent knowledge bases with AI content generation and smart search.",
+    "features": [
+      "AI content generation",
+      "Smart search",
+      "Analytics",
+      "Slack/Teams integration",
+      "Help desk sync",
+      "Feedback loops",
+      "Multi-language",
+      "Access control"
+    ],
+    "benefits": [
+      "70% faster KB creation",
+      "Self-service deflection",
+      "Continuous improvement",
+      "Multi-language"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$599/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "kb",
+    "href": "/services/micro-saas-knowledge-base-builder",
+    "popular": false,
+    "category": "micro-saas",
+    "industry": "SaaS"
+  },
+  {
+    "id": "micro-saas-fleet-optimizer",
+    "title": "Fleet Management Platform",
+    "description": "AI fleet management with route optimization and driver safety scoring.",
+    "features": [
+      "Route optimization",
+      "Fuel tracking",
+      "Maintenance scheduling",
+      "Driver safety",
+      "GPS tracking",
+      "Compliance",
+      "Analytics",
+      "Mobile app"
+    ],
+    "benefits": [
+      "20% fuel savings",
+      "30% less downtime",
+      "Driver safety",
+      "Compliance"
+    ],
+    "pricing": {
+      "basic": "$49/vehicle/mo",
+      "flat": "$399/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "truck",
+    "href": "/services/micro-saas-fleet-optimizer",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "Logistics"
+  },
+  {
+    "id": "it-network-as-a-service",
+    "title": "Network as a Service",
+    "description": "Fully managed enterprise network with SD-WAN and zero-trust security.",
+    "features": [
+      "SD-WAN",
+      "Zero-trust security",
+      "24/7 NOC",
+      "Predictable OPEX",
+      "Auto-scaling",
+      "QoS management",
+      "Encryption",
+      "Analytics"
+    ],
+    "benefits": [
+      "40% cost reduction",
+      "Enterprise security",
+      "Predictable costs",
+      "Zero-touch provisioning"
+    ],
+    "pricing": {
+      "basic": "$2,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "network",
+    "href": "/services/it-network-as-a-service",
+    "popular": true,
+    "category": "it",
+    "industry": "Technology"
+  },
+  {
+    "id": "it-audit-readiness",
+    "title": "Audit Readiness as a Service",
+    "description": "Continuous audit readiness with automated evidence collection.",
+    "features": [
+      "Automated evidence",
+      "Gap analysis",
+      "Policy templates",
+      "Auditor portal",
+      "Continuous monitoring",
+      "Remediation tracking",
+      "Reporting",
+      "Training"
+    ],
+    "benefits": [
+      "Always audit-ready",
+      "80% less prep time",
+      "Fewer findings",
+      "Faster audits"
+    ],
+    "pricing": {
+      "basic": "$3,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "clipboard",
+    "href": "/services/it-audit-readiness",
+    "popular": true,
+    "category": "it",
+    "industry": "Compliance"
+  },
+  {
+    "id": "it-endpoint-management",
+    "title": "Unified Endpoint Management",
+    "description": "Manage all endpoints from one platform with patch management and security.",
+    "features": [
+      "Unified management",
+      "Patch management",
+      "Security policies",
+      "Remote support",
+      "Compliance",
+      "Inventory",
+      "Application control",
+      "Analytics"
+    ],
+    "benefits": [
+      "80% faster patching",
+      "Unified visibility",
+      "Reduced risk",
+      "Compliance"
+    ],
+    "pricing": {
+      "basic": "$4/device/mo",
+      "flat": "$999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "screen",
+    "href": "/services/it-endpoint-management",
+    "popular": true,
+    "category": "it",
+    "industry": "Security"
+  },
+  {
+    "id": "it-application-modernization",
+    "title": "Legacy App Modernization",
+    "description": "Transform legacy applications to cloud-native architectures.",
+    "features": [
+      "Assessment",
+      "Architecture design",
+      "Refactoring",
+      "Re-platforming",
+      "API layer",
+      "Data migration",
+      "Testing",
+      "Optimization"
+    ],
+    "benefits": [
+      "Modern architecture",
+      "Cloud-native",
+      "Cost reduction",
+      "Faster delivery"
+    ],
+    "pricing": {
+      "assessment": "$20,000",
+      "project": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "app",
+    "href": "/services/it-application-modernization",
+    "popular": true,
+    "category": "it",
+    "industry": "Technology"
+  },
+  {
+    "id": "ai-predictive-customer-analytics",
+    "title": "Predictive Customer Analytics",
+    "description": "Predict churn, LTV, and next-best-action with ML models.",
+    "features": [
+      "Churn prediction",
+      "LTV modeling",
+      "Next-best-action",
+      "Segmentation",
+      "Journey analytics",
+      "Real-time scoring",
+      "API access",
+      "Dashboards"
+    ],
+    "benefits": [
+      "40% churn reduction",
+      "20% higher LTV",
+      "Personalized actions",
+      "Real-time insights"
+    ],
+    "pricing": {
+      "basic": "$999/mo",
+      "pro": "$3,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "chart",
+    "href": "/services/ai-predictive-customer-analytics",
+    "popular": true,
+    "category": "ai",
+    "industry": "SaaS"
+  },
+  {
+    "id": "ai-quality-assurance-automation",
+    "title": "AI Quality Assurance Platform",
+    "description": "Automated QA with test generation and intelligent bug prediction.",
+    "features": [
+      "Test generation",
+      "Visual regression",
+      "Performance testing",
+      "Bug prediction",
+      "CI/CD integration",
+      "Coverage analysis",
+      "Flaky test detection",
+      "Reporting"
+    ],
+    "benefits": [
+      "5x faster testing",
+      "99% coverage",
+      "Bug prediction",
+      "CI/CD ready"
+    ],
+    "pricing": {
+      "basic": "$499/mo",
+      "pro": "$1,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "check",
+    "href": "/services/ai-quality-assurance-automation",
+    "popular": true,
+    "category": "ai",
+    "industry": "Technology"
+  },
+  {
+    "id": "ai-recommendation-engine",
+    "title": "Enterprise Recommendation Engine",
+    "description": "AI recommendations for e-commerce with collaborative filtering and A/B testing.",
+    "features": [
+      "Collaborative filtering",
+      "Content-based",
+      "Hybrid models",
+      "A/B testing",
+      "Real-time serving",
+      "Cold start handling",
+      "Analytics",
+      "API access"
+    ],
+    "benefits": [
+      "20-35% conversion lift",
+      "Personalization",
+      "A/B testing",
+      "Real-time serving"
+    ],
+    "pricing": {
+      "basic": "$799/mo",
+      "pro": "$2,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "rec",
+    "href": "/services/ai-recommendation-engine",
+    "popular": true,
+    "category": "ai",
+    "industry": "Retail"
+  },
+  {
+    "id": "pharma-drug-discovery-ai",
+    "title": "Pharma Drug Discovery AI",
+    "description": "Accelerate drug discovery with molecular simulation and toxicity prediction.",
+    "features": [
+      "Molecular simulation",
+      "Target identification",
+      "Toxicity prediction",
+      "Clinical optimization",
+      "Literature mining",
+      "Compound screening",
+      "Regulatory",
+      "Analytics"
+    ],
+    "benefits": [
+      "50% faster discovery",
+      "Cost reduction",
+      "Higher success rates",
+      "Regulatory ready"
+    ],
+    "pricing": {
+      "basic": "$25,000",
+      "pro": "$8,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "pill",
+    "href": "/services/pharma-drug-discovery-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Pharmaceutical"
+  },
+  {
+    "id": "energy-grid-optimization",
+    "title": "AI Energy Grid Optimization",
+    "description": "Smart grid optimization with demand forecasting and renewable integration.",
+    "features": [
+      "Demand forecasting",
+      "Renewable integration",
+      "Load balancing",
+      "Predictive maintenance",
+      "Outage prediction",
+      "Energy trading",
+      "Compliance",
+      "SCADA integration"
+    ],
+    "benefits": [
+      "20% efficiency gain",
+      "Renewable optimization",
+      "Outage reduction",
+      "Cost savings"
+    ],
+    "pricing": {
+      "basic": "$20,000",
+      "pro": "$6,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "bolt",
+    "href": "/services/energy-grid-optimization",
+    "popular": true,
+    "category": "ai",
+    "industry": "Energy"
+  },
+  {
+    "id": "banking-kyc-ai",
+    "title": "Banking KYC and Onboarding AI",
+    "description": "AI-powered KYC with document verification and biometric matching.",
+    "features": [
+      "Document verification",
+      "Biometric matching",
+      "Risk scoring",
+      "PEP screening",
+      "Sanctions check",
+      "Ongoing monitoring",
+      "Compliance",
+      "Case management"
+    ],
+    "benefits": [
+      "80% faster onboarding",
+      "95% auto-approval",
+      "Regulatory compliance",
+      "Fraud prevention"
+    ],
+    "pricing": {
+      "basic": "$2/check",
+      "flat": "$1,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "bank",
+    "href": "/services/banking-kyc-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Financial"
   }
 ]

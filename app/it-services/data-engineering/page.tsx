@@ -1,7 +1,6 @@
-import Metadata from '@/components/Metadata';
 export default function Page() {
   return (<>
-    <Metadata title="Data Engineering | Zion Tech Group" description="Data Engineering — Zion Tech Group enterprise solutions." />
+     />
     <main className="min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-500/20 via-transparent to-transparent" />

@@ -13,15 +13,15 @@ export default function CaseStudiesPage() {
       title: 'AI-Powered Diagnostics for Regional Hospital Network',
       challenge: '10 hospitals struggling with diagnostic delays and radiologist shortages.',
       solution: 'Deployed AI diagnostic imaging assistant with 94% accuracy, reducing read times from 48h to 2h.',
-      results: ['87% faster diagnosis', '$2.4M annual savings', '30% improvement in patient outcomes'],
+      results: ['87% faster diagnosis', '2.4M annual savings', '30% improvement in patient outcomes'],
       services: ['AI Medical Diagnosis', 'HL7/FHIR Integration', 'HIPAA Compliance'],
     },
     {
       industry: 'Financial Services',
       title: 'Fraud Detection Engine for Regional Bank',
-      challenge: '$18M annual losses from fraudulent transactions across 200K accounts.',
+      challenge: '18M annual losses from fraudulent transactions across 200K accounts.',
       solution: 'Real-time ML fraud detection with behavioral analytics and automated blocking.',
-      results: ['94% fraud detection rate', '$12M saved annually', '0.01% false positive rate'],
+      results: ['94% fraud detection rate', '12M saved annually', '0.01% false positive rate'],
       services: ['Fraud Detection AI', 'Real-time Analytics', 'SOC 2 Compliance'],
     },
     {
@@ -35,9 +35,9 @@ export default function CaseStudiesPage() {
     {
       industry: 'Manufacturing',
       title: 'Predictive Maintenance for Automotive Supplier',
-      challenge: $6M/year in unplanned downtime across 5 production lines.',
+      challenge: 6M per year in unplanned downtime across 5 production lines.',
       solution: 'IoT sensor network + ML failure prediction with automated work orders.',
-      results: ['73% downtime reduction', '$4.2M saved', '99.1% prediction accuracy'],
+      results: ['73% downtime reduction', '4.2M saved', '99.1% prediction accuracy'],
       services: ['Predictive Maintenance', 'IoT Integration', 'Digital Twin'],
     },
     {

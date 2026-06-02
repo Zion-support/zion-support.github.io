@@ -1,7 +1,6 @@
-import Metadata from '@/components/Metadata';
 export default function Page() {
   return (<>
-    <Metadata title="AI Fraud Detection" description="AI Fraud Detection solutions for enterprise." />
+     />
     <main className="min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent" />

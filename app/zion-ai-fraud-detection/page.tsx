@@ -1,7 +1,12 @@
 import Metadata from "@/components/Metadata";
+
+export const metadata = {
+  title: "Zion AI Fraud Detection | Zion Tech Group",
+  description: "AI-powered fraud detection for real-time transaction monitoring and anomaly detection.",
+};
 export default function Page() {
   return (<>
-    <Metadata title="Zion AI Fraud Detection | Zion Tech Group" description="AI-powered fraud detection for real-time transaction monitoring and anomaly detection." />
+     />
     <main className="min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent" />

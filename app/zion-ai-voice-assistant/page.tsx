@@ -1,7 +1,6 @@
-import Metadata from '@/components/Metadata';
 export default function Page() {
   return (<>
-    <Metadata title="Zion AI Voice Assistant | Zion Tech Group" description="Zion AI Voice Assistant — Zion Tech Group enterprise solutions." />
+     />
     <main className="min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent" />
