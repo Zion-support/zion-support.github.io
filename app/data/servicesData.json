@@ -28280,5 +28280,293 @@
       "email": "kleber@ziontechgroup.com",
       "phone": "+1 302 464 0950"
     }
+  },
+  {
+    "id": "micro-saas-ai-sales-coach",
+    "title": "AI Sales Coach & Pipeline Optimizer",
+    "category": "ai",
+    "industry": "sales",
+    "icon": "\ud83c\udfc6",
+    "popular": true,
+    "pricing": {
+      "basic": "$149/mo",
+      "pro": "$399/mo",
+      "enterprise": "Custom"
+    },
+    "description": "AI-powered sales coaching that analyzes calls, emails, and pipeline data to recommend winning strategies. Real-time deal scoring, next-best-action suggestions, and automated follow-ups.",
+    "features": [
+      "AI call analysis with talk-to-listen ratio scoring",
+      "Deal health scoring with win probability",
+      "Next-best-action recommendations per opportunity",
+      "Automated follow-up email sequences",
+      "Sales playbook enforcement and coaching",
+      "Integration with Salesforce, HubSpot, Pipedrive",
+      "Revenue forecasting with pipeline analytics",
+      "Rep performance benchmarking and leaderboards"
+    ],
+    "benefits": [
+      "Increase win rates by 25-35%",
+      "Shorten sales cycles by 20%",
+      "Coach reps with AI instead of manual review",
+      "Forecast revenue with 90%+ accuracy"
+    ],
+    "contactInfo": {
+      "website": "/services/micro-saas-ai-sales-coach",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-content-planner",
+    "title": "AI Content Strategy & SEO Planner",
+    "category": "ai",
+    "industry": "marketing",
+    "icon": "\u270d\ufe0f",
+    "popular": true,
+    "pricing": {
+      "basic": "$79/mo",
+      "pro": "$249/mo",
+      "enterprise": "Custom"
+    },
+    "description": "AI-driven content strategy platform that identifies content gaps, generates topic clusters, and optimizes for SEO. Includes AI writing assistant, content calendar, and performance tracking.",
+    "features": [
+      "AI content gap analysis vs competitors",
+      "Topic cluster and pillar page planning",
+      "AI writing assistant with brand voice",
+      "SEO optimization scoring in real-time",
+      "Content calendar with team collaboration",
+      "Performance tracking and ROI attribution",
+      "Integration with WordPress, Webflow, HubSpot",
+      "Content refresh recommendations based on rankings"
+    ],
+    "benefits": [
+      "Rank for 3x more keywords in 6 months",
+      "Create content 5x faster with AI",
+      "Align content strategy with revenue goals",
+      "Automate content performance reporting"
+    ],
+    "contactInfo": {
+      "website": "/services/micro-saas-ai-content-planner",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-inventory-manager",
+    "title": "AI Inventory & Supply Chain Manager",
+    "category": "ai",
+    "industry": "supply-chain",
+    "icon": "\ud83d\udce6",
+    "popular": false,
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$549/mo",
+      "enterprise": "Custom"
+    },
+    "description": "AI-powered inventory management that predicts demand, optimizes stock levels, and automates reordering. Reduces carrying costs by 30% while preventing stockouts.",
+    "features": [
+      "AI demand forecasting with seasonality",
+      "Automatic reorder point calculation",
+      "Multi-warehouse inventory optimization",
+      "Supplier lead time tracking and alerts",
+      "Dead stock identification and liquidation",
+      "Integration with Shopify, WooCommerce, QuickBooks",
+      "Barcode and QR code scanning mobile app",
+      "Real-time inventory dashboard and alerts"
+    ],
+    "benefits": [
+      "Reduce inventory costs by 30%",
+      "Eliminate stockouts with AI predictions",
+      "Automate reordering and save 10+ hours/week",
+      "Optimize warehouse space utilization"
+    ],
+    "contactInfo": {
+      "website": "/services/micro-saas-ai-inventory-manager",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "micro-saas-ai-booking-engine",
+    "title": "AI Smart Booking & Scheduling Engine",
+    "category": "ai",
+    "industry": "productivity",
+    "icon": "\ud83d\udcc5",
+    "popular": false,
+    "pricing": {
+      "basic": "$59/mo",
+      "pro": "$179/mo",
+      "enterprise": "Custom"
+    },
+    "description": "Intelligent booking system that optimizes schedules, reduces no-shows, and maximizes utilization. AI learns booking patterns and suggests optimal availability windows.",
+    "features": [
+      "AI-optimized availability suggestions",
+      "Smart scheduling with buffer time optimization",
+      "Automated reminders via SMS, email, WhatsApp",
+      "No-show prediction and overbooking protection",
+      "Multi-timezone support with automatic conversion",
+      "Payment collection at booking time",
+      "Integration with Google Calendar, Outlook, Calendly",
+      "Analytics on booking patterns and utilization"
+    ],
+    "benefits": [
+      "Reduce no-shows by 80%",
+      "Maximize schedule utilization by 25%",
+      "Eliminate back-and-forth scheduling emails",
+      "Collect payments automatically at booking"
+    ],
+    "contactInfo": {
+      "website": "/services/micro-saas-ai-booking-engine",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "it-saas-backup-recovery",
+    "title": "IT SaaS Backup & Disaster Recovery",
+    "category": "it",
+    "industry": "technology",
+    "icon": "\ud83d\udcbe",
+    "popular": false,
+    "pricing": {
+      "basic": "$500/mo",
+      "pro": "$1,500/mo",
+      "enterprise": "Custom"
+    },
+    "description": "Protect your SaaS data with automated backups and one-click recovery for Microsoft 365, Google Workspace, Salesforce, and 50+ SaaS applications. RPO under 1 hour.",
+    "features": [
+      "Automated daily backups for 50+ SaaS apps",
+      "One-click granular recovery (files, emails, records)",
+      "Point-in-time recovery with unlimited retention",
+      "Cross-account and cross-region backup copies",
+      "Ransomware detection and alerting",
+      "Compliance reporting and audit logs",
+      "Self-service recovery portal for end users",
+      "24/7 monitoring and support"
+    ],
+    "benefits": [
+      "Protect against SaaS data loss and ransomware",
+      "Meet compliance backup requirements",
+      "Recover data in minutes, not days",
+      "Eliminate manual backup processes"
+    ],
+    "contactInfo": {
+      "website": "/services/it-saas-backup-recovery",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "it-edge-computing",
+    "title": "IT Edge Computing & IoT Infrastructure",
+    "category": "it",
+    "industry": "technology",
+    "icon": "\ud83d\udce1",
+    "popular": false,
+    "pricing": {
+      "basic": "$4,000/mo",
+      "pro": "$10,000/mo",
+      "enterprise": "Custom"
+    },
+    "description": "Design and deploy edge computing infrastructure for low-latency applications. From IoT gateways to edge data centers, with centralized management and security.",
+    "features": [
+      "Edge architecture design and deployment",
+      "IoT device management and monitoring",
+      "Edge-to-cloud data synchronization",
+      "Low-latency application hosting",
+      "Edge security and access control",
+      "Centralized management dashboard",
+      "Integration with AWS IoT, Azure IoT, GCP IoT",
+      "Predictive maintenance for edge hardware"
+    ],
+    "benefits": [
+      "Reduce latency to under 10ms",
+      "Process data locally for real-time decisions",
+      "Reduce cloud bandwidth costs by 60%",
+      "Enable offline operation for critical systems"
+    ],
+    "contactInfo": {
+      "website": "/services/it-edge-computing",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "it-itam-asset-management",
+    "title": "IT Asset Management (ITAM) & Lifecycle",
+    "category": "it",
+    "industry": "technology",
+    "icon": "\ud83d\udda5\ufe0f",
+    "popular": false,
+    "pricing": {
+      "basic": "$1,500/mo",
+      "pro": "$4,000/mo",
+      "enterprise": "Custom"
+    },
+    "description": "Complete IT asset management from procurement to disposal. Track hardware, software licenses, and cloud resources. Optimize costs and ensure compliance.",
+    "features": [
+      "Automated hardware and software discovery",
+      "Software license management and optimization",
+      "Cloud resource tracking and cost optimization",
+      "Asset lifecycle management (procure to retire)",
+      "Contract and warranty tracking",
+      "Compliance auditing and reporting",
+      "Integration with ServiceNow, Jira, SCCM",
+      "Executive dashboards and cost analytics"
+    ],
+    "benefits": [
+      "Reduce software license costs by 25%",
+      "Eliminate unused hardware and cloud waste",
+      "Pass software audits with confidence",
+      "Optimize IT spend with data-driven decisions"
+    ],
+    "contactInfo": {
+      "website": "/services/it-itam-asset-management",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
+  },
+  {
+    "id": "ai-legal-research-assistant",
+    "title": "AI Legal Research & Case Analysis",
+    "category": "ai",
+    "industry": "legal-tech",
+    "icon": "\u2696\ufe0f",
+    "popular": false,
+    "pricing": {
+      "basic": "$599/mo",
+      "pro": "$1,799/mo",
+      "enterprise": "Custom"
+    },
+    "description": "AI legal research assistant that analyzes case law, statutes, and regulations in seconds. Generate legal memos, find relevant precedents, and predict case outcomes.",
+    "features": [
+      "Natural language legal research across jurisdictions",
+      "Case law analysis with relevance scoring",
+      "Automated legal memo generation",
+      "Contract clause risk analysis",
+      "Regulatory change monitoring",
+      "Case outcome prediction based on historical data",
+      "Integration with Westlaw, LexisNexis, Clio",
+      "Citation checking and brief analysis"
+    ],
+    "benefits": [
+      "Research 10x faster than manual methods",
+      "Find relevant precedents others miss",
+      "Reduce legal research costs by 70%",
+      "Predict case outcomes with 85% accuracy"
+    ],
+    "contactInfo": {
+      "website": "/services/ai-legal-research-assistant",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
+    }
   }
 ]
