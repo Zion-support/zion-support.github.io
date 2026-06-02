@@ -31,25 +31,25 @@ export default function AIServiceAdvisor() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [msgs]);
 
   useEffect(() => {
-    if (isOpen && inputRef.current) {
+    if (open && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [isOpen]);
+  }, [open]);
 
   const handleSend = () => {
     if (!input.trim()) return;
     const u: Message = {role:'user',content:input.trim()};
-    setMsgs(p=>[...p,u]); setInput(''); setTyping(true);
+    setMsgs(p=>[...p,u]); setInput(''); setIsTyping(true);
     setTimeout(() => {
       const svcs = matchServices(u.content);
       let r = svcs.length ? `Great question! Based on your needs:\n\n${svcs.map(s=>`${s}`).join('\n')}\n\nWould you like:\n• 📞 Free consultation?\n• 📧 Detailed proposal?\n• 💬 Learn more?\n\nCall: +1 302 464 0950` : "I'd love to help! Tell me more about what you need:\n\n• AI / Machine Learning\n• Cloud migration\n• Cybersecurity\n• Data analytics\n• Automation\n• IT services\n\nOr call: +1 302 464 0950";
-      setMsgs(p=>[...p,{role:'assistant',content:r}]); setTyping(false);
+      setMsgs(p=>[...p,{role:'assistant',content:r}]); setIsTyping(false);
     }, 600+Math.random()*600);
   };
-  const onKey = (e:React.KeyboardEvent) => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();} };
+  const onKey = (e:React.KeyboardEvent) => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();handleSend();} };
   if (!open) return (
     <button onClick={()=>setOpen(true)} style={{position:'fixed',bottom:24,right:24,zIndex:9999}} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-5 py-3 shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-semibold text-sm">
       <span className="text-lg">🤖</span><span className="hidden sm:inline">AI Service Advisor</span>
@@ -67,13 +67,13 @@ export default function AIServiceAdvisor() {
             <div className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-[13px] leading-relaxed whitespace-pre-wrap ${m.role==='user'?'bg-purple-600 text-white rounded-br-sm':'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm'}`}>{m.content}</div>
           </div>
         ))}
-        {typing && <div className="flex justify-start"><div className="bg-white shadow-sm border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-2.5 text-[13px]"><span className="inline-flex gap-1"><span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span><span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'.15s'}}></span><span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'.3s'}}></span></span></div></div>}
-        <div ref={endRef}/>
+        {isTyping && <div className="flex justify-start"><div className="bg-white shadow-sm border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-2.5 text-[13px]"><span className="inline-flex gap-1"><span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span><span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'.15s'}}></span><span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{animationDelay:'.3s'}}></span></span></div></div>}
+        <div ref={messagesEndRef}/>
       </div>
       <div className="border-t border-gray-100 p-2.5 bg-white flex-shrink-0">
         <div className="flex gap-2">
           <input value={input} onChange={e=>setInput(e.target.value)} onKeyDown={onKey} placeholder="Describe your business needs..." className="flex-1 border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-purple-400" />
-          <button onClick={send} disabled={!input.trim()} className="bg-purple-600 text-white rounded-xl px-3.5 py-2 text-sm font-medium hover:bg-purple-700 disabled:opacity-40">Send</button>
+          <button onClick={handleSend} disabled={!input.trim()} className="bg-purple-600 text-white rounded-xl px-3.5 py-2 text-sm font-medium hover:bg-purple-700 disabled:opacity-40">Send</button>
         </div>
         <div className="text-center mt-1"><span className="text-[9px] text-gray-400">Powered by Zion Tech Group AI • <a href="mailto:kleber@ziontechgroup.com" className="text-purple-500 hover:underline">Contact Human</a></span></div>
       </div>
