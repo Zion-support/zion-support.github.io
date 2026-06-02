@@ -13,18 +13,10 @@ const CAT_LABELS: Record<string,string> = {
 interface PageProps { params: Promise<{ id: string }>; }
 
 // Note: All pages are statically generated at build time (output: export)
-// Only the top 20 services are included to keep build time reasonable
-
+// Now we generate static params for all services to ensure all service links work.
 export async function generateStaticParams() {
-  // Only statically generate the top 20 most important/popular services
-  const sorted = [...allServices].sort((a, b) => {
-    const scoreA = (a.features?.length || 0) * 3 + (a.benefits?.length || 0) * 2 + (a.popular ? 50 : 0);
-    const scoreB = (b.features?.length || 0) * 3 + (b.benefits?.length || 0) * 2 + (b.popular ? 50 : 0);
-    return scoreB - scoreA;
-  });
-  const top = sorted.slice(0, 20);
   const params: { id: string }[] = [];
-  for (const service of top) {
+  for (const service of allServices) {
     params.push({ id: service.id });
     if (service.id.includes('_')) {
       params.push({ id: service.id.replace(/_/g, '-') });
@@ -184,7 +176,7 @@ export default async function ServicePage({ params }: PageProps) {
                 Ready to get started? Contact us for a custom quote.
               </p>
               <div className="space-y-3">
-                <a href="tel:+13024640950" className="btn-primary w-full text-center block">
+                <a href="tel:+130****0950" className="btn-primary w-full text-center block">
                   ☎ +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary w-full text-center block">
@@ -214,8 +206,6 @@ export default async function ServicePage({ params }: PageProps) {
         {/* ROI Calculator */}
         <ROICalculator serviceTitle={service.title} category={service.category} />
 
-
-
         {/* Deployment Roadmap — AI-inferred phase + milestone plan per category */}
         {(() => {
           // Infer phase steps from service description + category
@@ -228,28 +218,28 @@ export default async function ServicePage({ params }: PageProps) {
               { label:'2. Model & Pipeline Build',       weeks:'Week 3–5', tasks:['Fine-tune / prompt-engineer model','Build inference pipeline + API','Unit tests + eval on hold-out set','Internal demo + feedback loop'], color:'#a78bfa' },
               { label:'3. Pilot & Evaluation',           weeks:'Week 6–7', tasks:['Pilot with 10–20 real use-cases','Collect user feedback + KPI report','Fix edge-cases + regressions','Finalize production config'], color:'#c4b5fd' },
               { label:'4. Production Roll-out',          weeks:'Week 8',    tasks:['CI/CD pipeline + rollback plan','User training + documentation','Go-live monitoring + alert setup','30-day health-check call'], color:'#7c3aed' },
-              { label:'5. Optimize & Scale',            weeks:'Ongoing',   tasks:['Monthly quality review','Model fine-tune on new data','Usage analytics + cost optimisation','Feature backlog prioritisation'], color:'#6d28d9' },
+              { label:'5. Optimize & Scale',            weeks:'Ongoing',   tasks:['Monthly quality review','Model fine-tune on new data','Usage analytics + cost optimisation','Feature backlog prioritisation'], color:'#6d28d9' }
             ];
             if (s.category === 'automation') return [
               { label:'1. Process Discovery',           weeks:'Week 1–2', tasks:['Map current-state process (as-is)','Identify highest-ROI automation targets','Define success metrics (e.g. 80% less time)','Tool + platform selection'], color:'#ec4899' },
               { label:'2. Workflow Build',              weeks:'Week 3–5', tasks:['Build first 2–3 workflow automations','Integrate source + target systems','Unit-test + staging environment test','Security + access-control review'], color:'#f472b6' },
               { label:'3. Pilot & Iterate',             weeks:'Week 6',    tasks:['Pilot with business stakeholders','Collect process feedback + metrics','Iterate on remaining workflows','Handover SOP + knowledge transfer'], color:'#fb7185' },
               { label:'4. Roll-out & Monitor',          weeks:'Week 7–8', tasks:['Schedule roll-out across full team','Monitoring dashboard + alerts','Documentation + training videos','Kick-off continuous improvement'], color:'#f43f5e' },
-              { label:'5. Optimize & Scale',            weeks:'Ongoing',   tasks:['Usage analytics review','New workflow requests triage','Integration cost optimisation','Quarterly roadmap sync'], color:'#e11d48' },
+              { label:'5. Optimize & Scale',            weeks:'Ongoing',   tasks:['Usage analytics review','New workflow requests triage','Integration cost optimisation','Quarterly roadmap sync'], color:'#e11d48' }
             ];
             if (s.category === 'it') return [
               { label:'1. Discovery & Planning',        weeks:'Week 1–2', tasks:['Infrastructure audit + gap analysis','Architecture design + review','Tool + platform evaluation','Project plan + sprint breakdown'], color:'#0ea5e9' },
               { label:'2. Environment Setup',           weeks:'Week 3–4', tasks:['Provision development + staging env','Baseline security hardening','CI/CD pipeline scaffold','Monitoring + logging baseline'], color:'#38bdf8' },
               { label:'3. Implementation',              weeks:'Week 5–8', tasks:['Incremental feature delivery (sprints)','UAT + stakeholder sign-off','Documentation + runbooks','Load + security testing'], color:'#60a5fa' },
               { label:'4. Production Launch',           weeks:'Week 9',    tasks:['Cut-over runbook + rollback plan','Production monitoring + on-call setup','Team training + handover','Go-live announcement'], color:'#2563eb' },
-              { label:'5. SLA Support & Iteration',     weeks:'Ongoing',   tasks:['Monthly SLA performance review','Patch + update schedule','Capacity planning','Quarterly roadmap meeting'], color:'#1d4ed8' },
+              { label:'5. SLA Support & Iteration',     weeks:'Ongoing',   tasks:['Monthly SLA performance review','Patch + update schedule','Capacity planning','Quarterly roadmap meeting'], color:'#1d4ed8' }
             ];
             if (s.category === 'security') return [
               { label:'1. Asset & Risk Assessment',     weeks:'Week 1–2', tasks:['Asset inventory + data-flow mapping','Vulnerability scanning + risk scoring','Compliance gap analysis (SOC2, NIST, etc.)','Prioritised remediation backlog'], color:'#ef4444' },
               { label:'2. Controls Implementation',     weeks:'Week 3–6', tasks:['Deploy critical mitigation controls','IAM policy tightening','EDR + SIEM deployment + tuning','Secure configuration baseline across estate'], color:'#f87171' },
               { label:'3. Validation & Testing',        weeks:'Week 7',    tasks:['Penetration test + red-team drill','SIEM rule tuning + alert validation','Tabletop incident response exercise','Emergency runbook finalisation'], color:'#dc2626' },
               { label:'4. Evidential & Audit Prep',     weeks:'Week 8+',   tasks:['Evidence collection per framework','Audit-ready report generation','Programme maturity scoring','Continuous monitoring setup'], color:'#b91c1c' },
-              { label:'5. Ongoing Threat & Evolution',  weeks:'Ongoing',   tasks:['Monthly threat-intel review','Policy review + update cycle','Annual penetration test schedule','Emerging-tech risk assessment'], color:'#991b1b' },
+              { label:'5. Ongoing Threat & Evolution',  weeks:'Ongoing',   tasks:['Monthly threat-intel review','Policy review + update cycle','Annual penetration test schedule','Emerging-tech risk assessment'], color:'#991b1b' }
             ];
             // cloud, data, and catch-all
             return [
@@ -257,7 +247,7 @@ export default async function ServicePage({ params }: PageProps) {
               { label:'2. Foundation Build',           weeks:'Week 3–5', tasks:['Core infrastructure + data pipeline','Access control + security hardening','Integration with existing systems','Automated test suite setup'], color:'#34d399' },
               { label:'3. Test & Validate',            weeks:'Week 6–7', tasks:['User acceptance testing','Performance + load testing','Security review + sign-off','Change management communication'], color:'#6ee7b7' },
               { label:'4. Deployment & Stabilisation', weeks:'Week 8',    tasks:['Blue-green or canary deployment','Hypercare period (3–5 days)','Post-launch performance review','Documentation + knowledge transfer'], color:'#059669' },
-              { label:'5. Optimise & Evolve',          weeks:'Ongoing',   tasks:['Usage + cost analytics','Feature iteration backlog','Vendor relationship + renewals','Quarterly business review'], color:'#047857' },
+              { label:'5. Optimise & Evolve',          weeks:'Ongoing',   tasks:['Usage + cost analytics','Feature iteration backlog','Vendor relationship + renewals','Quarterly business review'], color:'#047857' }
             ];
           })();
           return (
@@ -303,6 +293,7 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
           );
         })()}
+
 
         {/* Related Services — expand to 8 + category link */}
         {(() => {

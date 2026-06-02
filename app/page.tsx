@@ -4,6 +4,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { allServices } from './data/servicesData';
+import AnimatedCounter from '@/components/AnimatedCounter';
 import type { Service } from './data/servicesData';
 import ServiceBrowser from '@/components/ServiceBrowser';
 import ServiceSpotlight from '@/components/ServiceSpotlight';
@@ -13,8 +14,7 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-import ROICalculator from '@/components/ROICalculator';
-import PricingEstimator from '@/components/PricingEstimator';
+import V204V208Showcase from '@/components/V204V208Showcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -30,6 +30,7 @@ const catAccent: Record<string, string> = {
   devops:    '#22d3ee',
   blockchain: '#fbbf24',
   iot:       '#2dd4bf',
+  'email-intelligence': '#a78bfa',
 };
 
 const getCategoryMeta = (key: string) => CATEGORIES.find(c => c.key === key) || CATEGORIES[0];
@@ -43,16 +44,17 @@ const STAT_SLA      = 'SLA Uptime Guarantee';
 // Dynamic featured: popular services + first per category (auto-updates with catalog changes)
 
 const CATEGORIES = [
-  { key: 'ai',        label: 'AI Services',        emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
-  { key: 'it',        label: 'IT Services',         emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
-  { key: 'cloud',     label: 'Cloud Services',       emoji: '☁️', color: 'from-sky-400 to-blue-600' },
-  { key: 'security',  label: 'Security Services',     emoji: '🔐', color: 'from-red-500 to-orange-500' },
-  { key: 'data',      label: 'Data Analytics',        emoji: '📊', color: 'from-green-500 to-emerald-500' },
-  { key: 'automation',label: 'Automation',            emoji: '🤖', color: 'from-pink-500 to-rose-500' },
-  { key: 'micro-saas',label: 'Micro-SaaS Products',   emoji: '🚀', color: 'from-amber-500 to-orange-500' },
-  { key: 'devops',    label: 'DevOps and Platform',   emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
-  { key: 'blockchain',label: 'Blockchain and Web3',   emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
-  { key: 'iot',       label: 'IoT and Edge',          emoji: '📡', color: 'from-teal-500 to-green-500' },
+  { key: 'ai',        label: 'AI Services',          emoji: '🧠', color: 'from-purple-500 to-indigo-500' },
+  { key: 'it',        label: 'IT Services',            emoji: '🖥️', color: 'from-blue-500 to-cyan-500' },
+  { key: 'cloud',     label: 'Cloud Services',          emoji: '☁️', color: 'from-sky-400 to-blue-600' },
+  { key: 'security',  label: 'Security Services',       emoji: '🔐', color: 'from-red-500 to-orange-500' },
+  { key: 'data',      label: 'Data Analytics',          emoji: '📊', color: 'from-green-500 to-emerald-500' },
+  { key: 'automation',label: 'Automation',              emoji: '🤖', color: 'from-pink-500 to-rose-500' },
+  { key: 'micro-saas',label: 'Micro-SaaS Products',     emoji: '🚀', color: 'from-amber-500 to-orange-500' },
+  { key: 'devops',    label: 'DevOps and Platform',     emoji: '⚙️', color: 'from-cyan-500 to-blue-500' },
+  { key: 'blockchain',label: 'Blockchain and Web3',     emoji: '⛓️', color: 'from-yellow-500 to-amber-600' },
+  { key: 'iot',       label: 'IoT and Edge',            emoji: '📡', color: 'from-teal-500 to-green-500' },
+  { key: 'email-intelligence', label: 'Email Intelligence', emoji: '📧', color: 'from-violet-500 to-purple-600' },
 ];
 
 // Per-industry service-category mapping (derived from service catalog)
@@ -102,37 +104,11 @@ export default function HomePage() {
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
-    { value: `${serviceCount}+`, label: STAT_SERVICES },
-    { value: `${CATEGORIES.length} Categories`, label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS' },
+    { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
+    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
   ];
-
-  // Category pricing for estimator widget
-  const categoryCounts = useMemo(() => {
-    const m: Record<string, number> = {};
-    for (const s of services) { m[s.category] = (m[s.category] || 0) + 1; }
-    return m;
-  }, [services]);
-
-  const categoryPricing = useMemo(() => {
-    const m: Record<string, { min: number; avg: number; max: number }> = {};
-    const byCat: Record<string, number[]> = {};
-    for (const s of services) {
-      const n = Number(s.pricing?.basic || s.pricing?.enterprise || 0);
-      if (n > 0) {
-        if (!byCat[s.category]) byCat[s.category] = [];
-        byCat[s.category].push(n);
-      }
-    }
-    for (const [cat, prices] of Object.entries(byCat)) {
-      if (prices.length > 0) {
-        const sorted = prices.sort((a: number, b: number) => a - b);
-        m[cat] = { min: sorted[0], avg: Math.round(sorted.reduce((a: number, b: number) => a + b, 0) / sorted.length), max: sorted[sorted.length - 1] };
-      }
-    }
-    return m;
-  }, [services]);
 
   // Fetch release-signal dataset on mount
   useEffect(() => {
@@ -298,7 +274,7 @@ let list = services;
             <span className="text-white">for Your Business</span>
           </h1>
           <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, automation, data, and micro-SaaS services — from machine learning to cybersecurity, CRM to blockchain.
+            <ServiceCounter /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
             Get a free, custom proposal in minutes.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -328,7 +304,7 @@ let list = services;
 
             {/* Trust badges */}
             <div className="flex flex-wrap justify-center gap-8 text-slate-400 text-sm mb-12">
-              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support','617+ Services'].map(t => (
+              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`${serviceCount}+ Services`].map(t => (
                 <div key={t} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -344,6 +320,23 @@ let list = services;
                 <div key={i} className="bg-slate-900/60 rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/30 transition-colors">
                   <div className="text-3xl font-bold gradient-text">{s.value}</div>
                   <div className="text-sm text-slate-400 mt-1">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Trust Badges */}
+            <div className="mt-14 flex flex-wrap justify-center gap-4">
+              {[
+                { icon: '🏆', text: 'Industry Leading' },
+                { icon: '🔒', text: 'SOC 2 Compliant' },
+                { icon: '⚡', text: '24/7 Support' },
+                { icon: '🇺🇸', text: 'US-Based Team' },
+                { icon: '🔐', text: 'HIPAA Ready' },
+                { icon: '✅', text: '99.9% SLA' },
+              ].map((badge, i) => (
+                <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/40 border border-slate-700/40 text-sm text-slate-300">
+                  <span className="text-base">{badge.icon}</span>
+                  <span>{badge.text}</span>
                 </div>
               ))}
             </div>
@@ -392,6 +385,9 @@ let list = services;
 
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
+
+      {/* ── V204-V208 Email Intelligence Showcase ── */}
+      <V204V208Showcase />
 
       {/* ── How It Works ── */}
       <section className="py-20">
@@ -457,16 +453,6 @@ let list = services;
           </div>
         </div>
       </section>
-
-      {/* ── Pricing Estimator Widget ── */}
-      <PricingEstimator
-        categories={CATEGORIES}
-        categoryCounts={categoryCounts}
-        categoryPricing={categoryPricing}
-      />
-
-      {/* ── ROI Calculator Widget ── */}
-      <ROICalculator />
 
         {/* ── Popular Services ── */}
 
@@ -1036,6 +1022,35 @@ let list = services;
           <div className="mt-10 text-center">
             <Link href="/tools/ai-service-router/" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
             <p className="text-slate-500 text-xs mt-3">All tools are 100% free — no sign-up required. Your data never leaves your browser.</p>
+          </div>
+        </div>
+      </section>
+      {/* ── Trust Badges ── */}
+      <section className="py-12 border-t border-slate-800 bg-slate-900/30">
+        <div className="container-page">
+          <h2 className="text-xl font-bold text-white text-center mb-2">Trusted by Industry Leaders</h2>
+          <p className="text-slate-500 text-center text-sm mb-8">Enterprise-grade security, compliance, and reliability</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              { label:"SOC 2 Type II", icon:"🔒", desc:"Certified" },
+              { label:"GDPR Compliant", icon:"🇪🇺", desc:"Data Protection" },
+              { label:"HIPAA Ready", icon:"🏥", desc:"Healthcare" },
+              { label:"ISO 27001", icon:"🛡️", desc:"Security" },
+              { label:"99.99% Uptime", icon:"⚡", desc:"SLA Guaranteed" },
+              { label:"24/7 Support", icon:"🌐", desc:"Global Coverage" },
+            ].map(b => (
+              <div key={b.label} className="text-center p-4 rounded-lg border border-slate-800 bg-slate-900/50">
+                <div className="text-2xl mb-1">{b.icon}</div>
+                <div className="text-xs font-semibold text-white">{b.label}</div>
+                <div className="text-[10px] text-slate-500">{b.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-6 text-slate-500 text-xs">
+            <span>✓ 3,457+ Micro-SaaS Solutions</span>
+            <span>✓ 33 Email Intelligence Engines</span>
+            <span>✓ 43 Integrated APIs</span>
+            <span>✓ 70+ Industry Categories</span>
           </div>
         </div>
       </section>

@@ -40,4 +40,4 @@ export default function AnimatedCounter({ target, duration = 2000, suffix = '+',
   }, [isVisible, target, duration]);
 
   return <span ref={ref}>{prefix}{count.toLocaleString()}{suffix}</span>;
-}
+}

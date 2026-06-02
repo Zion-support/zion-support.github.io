@@ -21,10 +21,32 @@ export default function AIServiceAdvisor() {
   const [open, setOpen] = useState(false);
   const [msgs, setMsgs] = useState<Message[]>([{role:'assistant',content:GREETINGS.join('\n\n')}]);
   const [input, setInput] = useState('');
+<<<<<<< HEAD
   const [typing, setTyping] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => { endRef.current?.scrollIntoView({behavior:'smooth'}); }, [msgs]);
   const send = () => {
+=======
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
+  const handleSend = () => {
+>>>>>>> c9aa0f4a1be83ac63da51cc611af0e2b7826c4d1
     if (!input.trim()) return;
     const u: Message = {role:'user',content:input.trim()};
     setMsgs(p=>[...p,u]); setInput(''); setTyping(true);

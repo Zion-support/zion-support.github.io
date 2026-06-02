@@ -4,10 +4,22 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Proposal Detail | Zion Tech Group',
-  description: 'View and download your custom Zion Tech Group service proposal.',
-  alternates: { canonical: '/proposals/view/[id]' },};
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const base: Metadata = {
+    title: 'Proposal Detail | Zion Tech Group',
+    description: 'View and download your custom Zion Tech Group service proposal.',
+  };
+  if (id !== '__sample__') {
+    return {
+      ...base,
+      alternates: {
+        canonical: `/proposals/view/${id}`,
+      },
+    };
+  }
+  return base;
+}
 
 
 

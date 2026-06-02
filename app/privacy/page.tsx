@@ -156,6 +156,5 @@ function Section({ num, title, children }: { num: string; title: string; childre
         {title}
       </h2>
       {children}
-    </section>
-  );
+    </section>);
 }
