@@ -267,7 +267,7 @@ let list = services;
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
+              <span className="text-green-400">●</span> <ServiceCounter />+ Services — Live Now
             </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="gradient-text">AI & IT Services</span><br />
