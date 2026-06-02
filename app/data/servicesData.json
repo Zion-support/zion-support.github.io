@@ -26076,5 +26076,545 @@
     "popular": true,
     "category": "ai",
     "industry": "Financial"
+  },
+  {
+    "id": "micro-saas-community-platform",
+    "title": "AI Community Platform",
+    "description": "Build engaged online communities with AI moderation, content recommendations, and member analytics.",
+    "features": [
+      "AI moderation",
+      "Content recommendations",
+      "Member analytics",
+      "Gamification",
+      "Monetization",
+      "API access",
+      "White-label",
+      "Mobile SDK"
+    ],
+    "benefits": [
+      "40% more engagement",
+      "AI moderation",
+      "Monetization",
+      "Community insights"
+    ],
+    "pricing": {
+      "basic": "$299/mo",
+      "pro": "$899/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "community",
+    "href": "/services/micro-saas-community-platform",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "SaaS"
+  },
+  {
+    "id": "micro-saas-api-monetization",
+    "title": "API Monetization Platform",
+    "description": "Monetize APIs with usage-based billing, developer portal, rate limiting, and analytics.",
+    "features": [
+      "Usage billing",
+      "Developer portal",
+      "Rate limiting",
+      "Analytics",
+      "SDK generation",
+      "Documentation",
+      "Access control",
+      "Revenue analytics"
+    ],
+    "benefits": [
+      "New revenue stream",
+      "Developer self-service",
+      "Usage insights",
+      "Scalable billing"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$699/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "api",
+    "href": "/services/micro-saas-api-monetization",
+    "popular": false,
+    "category": "micro-saas",
+    "industry": "Technology"
+  },
+  {
+    "id": "micro-saas-feedback-engine",
+    "title": "Customer Feedback Intelligence",
+    "description": "AI-powered feedback collection, sentiment analysis, and action tracking for product teams.",
+    "features": [
+      "Feedback collection",
+      "Sentiment analysis",
+      "Action tracking",
+      "NPS/CSAT",
+      "Integration",
+      "Reporting",
+      "AI insights",
+      "Workflows"
+    ],
+    "benefits": [
+      "5x faster insights",
+      "AI sentiment",
+      "Action tracking",
+      "Product decisions"
+    ],
+    "pricing": {
+      "basic": "$149/mo",
+      "pro": "$499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "feedback",
+    "href": "/services/micro-saas-feedback-engine",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "Product"
+  },
+  {
+    "id": "micro-saas-legal-document-automation",
+    "title": "Legal Document Automation",
+    "description": "Generate, review, and manage legal documents with AI drafting and clause libraries.",
+    "features": [
+      "AI drafting",
+      "Clause library",
+      "Review automation",
+      "E-signature",
+      "Version control",
+      "Compliance",
+      "Analytics",
+      "Templates"
+    ],
+    "benefits": [
+      "80% faster drafting",
+      "Error reduction",
+      "Compliance",
+      "Cost savings"
+    ],
+    "pricing": {
+      "basic": "$399/mo",
+      "pro": "$1,199/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "legal",
+    "href": "/services/micro-saas-legal-document-automation",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "Legal"
+  },
+  {
+    "id": "micro-saas-smart-invoice",
+    "title": "Smart Invoice & Payment Platform",
+    "description": "AI invoice processing with auto-categorization, payment matching, and cash flow forecasting.",
+    "features": [
+      "Auto-categorization",
+      "Payment matching",
+      "Cash flow forecasting",
+      "Vendor management",
+      "Approval workflows",
+      "Multi-currency",
+      "Analytics",
+      "Integration"
+    ],
+    "benefits": [
+      "90% faster processing",
+      "Cash flow visibility",
+      "Error reduction",
+      "Vendor insights"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$599/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "invoice",
+    "href": "/services/micro-saas-smart-invoice",
+    "popular": false,
+    "category": "micro-saas",
+    "industry": "Finance"
+  },
+  {
+    "id": "it-cloud-simulation",
+    "title": "Cloud Cost Simulation Platform",
+    "description": "Simulate cloud migrations and optimize costs before committing. Multi-cloud comparison and TCO analysis.",
+    "features": [
+      "Migration simulation",
+      "Cost optimization",
+      "Multi-cloud comparison",
+      "TCO analysis",
+      "Right-sizing",
+      "Reserved instance planning",
+      "Scenario modeling",
+      "Reporting"
+    ],
+    "benefits": [
+      "40% cost avoidance",
+      "Risk-free planning",
+      "Multi-cloud insights",
+      "TCO clarity"
+    ],
+    "pricing": {
+      "basic": "$499/mo",
+      "pro": "$1,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "cloud",
+    "href": "/services/it-cloud-simulation",
+    "popular": true,
+    "category": "it",
+    "industry": "Cloud"
+  },
+  {
+    "id": "it-ai-governance-platform",
+    "title": "AI Governance and ethics Platform",
+    "description": "Enterprise AI governance with model monitoring, bias detection, and regulatory compliance.",
+    "features": [
+      "Model monitoring",
+      "Bias detection",
+      "Explainability",
+      "Regulatory compliance",
+      "Audit trails",
+      "Risk assessment",
+      "Policy management",
+      "Reporting"
+    ],
+    "benefits": [
+      "Responsible AI",
+      "Regulatory compliance",
+      "Bias prevention",
+      "Audit readiness"
+    ],
+    "pricing": {
+      "basic": "$1,999/mo",
+      "pro": "$5,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "ai-gov",
+    "href": "/services/it-ai-governance-platform",
+    "popular": true,
+    "category": "it",
+    "industry": "Technology"
+  },
+  {
+    "id": "it-business-continuity",
+    "title": "Business Continuity Planning Platform",
+    "description": "Automated business continuity planning with risk assessment, recovery workflows, and compliance.",
+    "features": [
+      "Risk assessment",
+      "Recovery planning",
+      "Workflow automation",
+      "Compliance",
+      "Testing",
+      "Reporting",
+      "Vendor management",
+      "Training"
+    ],
+    "benefits": [
+      "Always prepared",
+      "Automated planning",
+      "Compliance",
+      "Faster recovery"
+    ],
+    "pricing": {
+      "basic": "$799/mo",
+      "pro": "$2,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "bc",
+    "href": "/services/it-business-continuity",
+    "popular": false,
+    "category": "it",
+    "industry": "Technology"
+  },
+  {
+    "id": "ai-smart-build-generator",
+    "title": "AI Build and Deploy Pipeline Generator",
+    "description": "Auto-generate CI/CD pipelines, Docker configs, and infrastructure code from project analysis.",
+    "features": [
+      "CI/CD generation",
+      "Docker configs",
+      "Infrastructure as code",
+      "Security scanning",
+      "Cost optimization",
+      "Multi-cloud",
+      "Git integration",
+      "Monitoring"
+    ],
+    "benefits": [
+      "10x faster setup",
+      "Best practices",
+      "Security built-in",
+      "Cost optimized"
+    ],
+    "pricing": {
+      "basic": "$299/mo",
+      "pro": "$899/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "build",
+    "href": "/services/ai-smart-build-generator",
+    "popular": true,
+    "category": "ai",
+    "industry": "DevOps"
+  },
+  {
+    "id": "ai-code-review-assistant",
+    "title": "AI Code Review Assistant",
+    "description": "Automated code review with security scanning, quality scoring, and improvement suggestions.",
+    "features": [
+      "Security scanning",
+      "Quality scoring",
+      "Improvement suggestions",
+      "Best practices",
+      "Multi-language",
+      "CI/CD integration",
+      "Team analytics",
+      "Learning"
+    ],
+    "benefits": [
+      "50% faster reviews",
+      "Security issues caught",
+      "Quality improvement",
+      "Team learning"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$699/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "code",
+    "href": "/services/ai-code-review-assistant",
+    "popular": true,
+    "category": "ai",
+    "industry": "Developer"
+  },
+  {
+    "id": "ai-supply-chain-risk",
+    "title": "AI Supply Chain Risk Management",
+    "description": "Monitor and predict supply chain disruptions with AI risk scoring and alternative sourcing.",
+    "features": [
+      "Risk scoring",
+      "Disruption prediction",
+      "Alternative sourcing",
+      "Supplier monitoring",
+      "Scenario planning",
+      "Compliance",
+      "Reporting",
+      "Integration"
+    ],
+    "benefits": [
+      "Proactive risk management",
+      "Alternative sourcing",
+      "Cost avoidance",
+      "Resilience"
+    ],
+    "pricing": {
+      "basic": "$1,499/mo",
+      "pro": "$4,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "risk",
+    "href": "/services/ai-supply-chain-risk",
+    "popular": true,
+    "category": "ai",
+    "industry": "Logistics"
+  },
+  {
+    "id": "telecom-customer-experience-ai",
+    "title": "Telecom Customer Experience AI",
+    "description": "AI-powered customer experience optimization for telecom with churn prediction and personalization.",
+    "features": [
+      "Churn prediction",
+      "Personalization",
+      "Journey optimization",
+      "Sentiment analysis",
+      "Next-best-action",
+      "Omnichannel",
+      "Analytics",
+      "Real-time scoring"
+    ],
+    "benefits": [
+      "30% less churn",
+      "Personalized CX",
+      "Real-time insights",
+      "Revenue growth"
+    ],
+    "pricing": {
+      "basic": "$2,999/mo",
+      "pro": "$8,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "telecom-cx",
+    "href": "/services/telecom-customer-experience-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Telecom"
+  },
+  {
+    "id": "media-content-ai",
+    "title": "Media Content AI Platform",
+    "description": "AI content generation, moderation, and recommendation for media companies and publishers.",
+    "features": [
+      "Content generation",
+      "Moderation",
+      "Recommendation",
+      "Personalization",
+      "Analytics",
+      "Multi-format",
+      "API access",
+      "Rights management"
+    ],
+    "benefits": [
+      "10x content production",
+      "Quality moderation",
+      "Engagement growth",
+      "Audience insights"
+    ],
+    "pricing": {
+      "basic": "$999/mo",
+      "pro": "$2,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "media",
+    "href": "/services/media-content-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Media"
+  },
+  {
+    "id": "real-estate-valuation-ai",
+    "title": "Real Estate Valuation AI",
+    "description": "Automated property valuations using AI market analysis and comparable sales data.",
+    "features": [
+      "Automated valuations",
+      "Market analysis",
+      "Comparable sales",
+      "Investment scoring",
+      "Portfolio analysis",
+      "Trend prediction",
+      "Risk assessment",
+      "Reporting"
+    ],
+    "benefits": [
+      "Instant valuations",
+      "Market insights",
+      "Investment decisions",
+      "Portfolio optimization"
+    ],
+    "pricing": {
+      "basic": "$29/report",
+      "unlimited": "$499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "realestate",
+    "href": "/services/real-estate-valuation-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Real Estate"
+  },
+  {
+    "id": "agriculture-crop-ai",
+    "title": "Agriculture Crop Intelligence AI",
+    "description": "AI crop monitoring with satellite imagery, yield prediction, and precision farming recommendations.",
+    "features": [
+      "Satellite monitoring",
+      "Yield prediction",
+      "Pest detection",
+      "Irrigation optimization",
+      "Soil analysis",
+      "Weather integration",
+      "Farm analytics",
+      "Mobile app"
+    ],
+    "benefits": [
+      "20% higher yields",
+      "30% less water",
+      "Pest early warning",
+      "Cost optimization"
+    ],
+    "pricing": {
+      "basic": "$5/hectare/mo",
+      "farm": "$299/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "agri",
+    "href": "/services/agriculture-crop-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Agriculture"
   }
 ]
