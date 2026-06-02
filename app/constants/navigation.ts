@@ -2,14 +2,15 @@ export type NavigationLink = {
   name: string;
   href: string;
   aliases?: readonly string[];
+  badge?: string;
 };
 
 export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Home', href: '/' },
   { name: 'Solutions', href: '/solutions' },
-  { name: 'Services', href: '/services' },
+  { name: 'Services', href: '/services', badge: '864+' },
   { name: 'Products', href: '/products' },
-  { name: 'AI Services', href: '/ai-services' },
+  { name: 'AI Services', href: '/ai-services', badge: 'New' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },

@@ -24819,5 +24819,725 @@
     "popular": true,
     "category": "ai",
     "industry": "Agriculture"
+  },
+  {
+    "id": "micro-saas-white-label-analytics",
+    "title": "White-Label Analytics Dashboard",
+    "description": "Embed analytics into your SaaS product with tenant isolation and real-time visualization.",
+    "features": [
+      "Pre-built dashboard widgets",
+      "Custom report builder",
+      "Tenant isolation",
+      "Real-time visualization",
+      "White-label branding",
+      "API access",
+      "Scheduled reports",
+      "Role-based access"
+    ],
+    "benefits": [
+      "New revenue stream",
+      "25% higher retention",
+      "Reduced dev time",
+      "Customer self-service"
+    ],
+    "pricing": {
+      "basic": "$299/mo",
+      "pro": "$999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "chart",
+    "href": "/services/micro-saas-white-label-analytics",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "SaaS"
+  },
+  {
+    "id": "micro-saas-feature-flag-platform",
+    "title": "Feature Flag & Rollout Platform",
+    "description": "Manage feature flags, gradual rollouts, and A/B tests with environment management and audit logs.",
+    "features": [
+      "Feature flags",
+      "Gradual rollouts",
+      "A/B testing",
+      "Environment management",
+      "Audit logs",
+      "Real-time updates",
+      "SDK 10+ languages",
+      "Rollback automation"
+    ],
+    "benefits": [
+      "Safer deployments",
+      "Instant rollback",
+      "Data-driven rollouts",
+      "Cross-platform SDKs"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$699/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "flag",
+    "href": "/services/micro-saas-feature-flag-platform",
+    "popular": false,
+    "category": "micro-saas",
+    "industry": "DevOps"
+  },
+  {
+    "id": "micro-saas-multi-tenant-crm",
+    "title": "Multi-Tenant CRM Platform",
+    "description": "White-label CRM with contact management, pipeline tracking, email automation, and tenant isolation.",
+    "features": [
+      "Contact management",
+      "Pipeline tracking",
+      "Email automation",
+      "Analytics",
+      "Tenant isolation",
+      "White-label branding",
+      "API access",
+      "Workflow automation"
+    ],
+    "benefits": [
+      "Faster time-to-market",
+      "Per-tenant isolation",
+      "Revenue opportunity",
+      "Complete customization"
+    ],
+    "pricing": {
+      "basic": "$499/mo",
+      "pro": "$1,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "users",
+    "href": "/services/micro-saas-multi-tenant-crm",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "SaaS"
+  },
+  {
+    "id": "micro-saas-webhook-management",
+    "title": "Webhook Management Platform",
+    "description": "Centralized webhook delivery with retry logic, failure alerting, payload transformation, and analytics.",
+    "features": [
+      "Webhook routing",
+      "Retry logic",
+      "Failure alerting",
+      "Payload transformation",
+      "Delivery analytics",
+      "Rate limiting",
+      "Secret management",
+      "Event filtering"
+    ],
+    "benefits": [
+      "Reliable delivery",
+      "Failure visibility",
+      "Easy integration",
+      "Scalable infrastructure"
+    ],
+    "pricing": {
+      "basic": "$149/mo",
+      "pro": "$499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "link",
+    "href": "/services/micro-saas-webhook-management",
+    "popular": false,
+    "category": "micro-saas",
+    "industry": "Technology"
+  },
+  {
+    "id": "micro-saas-rbac-service",
+    "title": "RBAC as a Service",
+    "description": "Role-based access control platform with granular permissions, audit trails, and SSO integration.",
+    "features": [
+      "Granular permissions",
+      "Role hierarchies",
+      "Audit trails",
+      "SSO integration",
+      "Policy engine",
+      "Multi-tenant",
+      "SDK access",
+      "Compliance reporting"
+    ],
+    "benefits": [
+      "Enterprise security",
+      "Drop-in integration",
+      "Compliance ready",
+      "Reduced dev time"
+    ],
+    "pricing": {
+      "basic": "$249/mo",
+      "pro": "$799/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "lock",
+    "href": "/services/micro-saas-rbac-service",
+    "popular": true,
+    "category": "micro-saas",
+    "industry": "Security"
+  },
+  {
+    "id": "it-vciso-service",
+    "title": "vCISO as a Service",
+    "description": "Virtual Chief Information Security Officer for security strategy and compliance leadership.",
+    "features": [
+      "Security strategy",
+      "Policy development",
+      "Compliance management",
+      "Incident response",
+      "Risk assessments",
+      "Vendor security",
+      "Board reporting",
+      "Security training"
+    ],
+    "benefits": [
+      "Executive expertise",
+      "Cost-effective",
+      "Compliance leadership",
+      "Incident readiness"
+    ],
+    "pricing": {
+      "basic": "$5,000/mo",
+      "pro": "$10,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "shield",
+    "href": "/services/it-vciso-service",
+    "popular": true,
+    "category": "it",
+    "industry": "Security"
+  },
+  {
+    "id": "it-platform-engineering",
+    "title": "Platform Engineering as a Service",
+    "description": "Build internal developer platforms with self-service infrastructure, golden paths, and CI/CD templates.",
+    "features": [
+      "Internal developer platform",
+      "Self-service infrastructure",
+      "Golden paths",
+      "CI/CD templates",
+      "Developer experience",
+      "Documentation",
+      "Cost optimization",
+      "Platform analytics"
+    ],
+    "benefits": [
+      "10x faster onboarding",
+      "Developer productivity",
+      "Reduced toil",
+      "Standardized workflows"
+    ],
+    "pricing": {
+      "basic": "$8,000/mo",
+      "pro": "$15,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "building",
+    "href": "/services/it-platform-engineering",
+    "popular": true,
+    "category": "it",
+    "industry": "Technology"
+  },
+  {
+    "id": "it-siem-service",
+    "title": "Managed SIEM & Log Analytics",
+    "description": "24/7 security monitoring with AI threat detection, log correlation, and compliance reporting.",
+    "features": [
+      "Log collection",
+      "AI threat detection",
+      "Compliance reporting",
+      "Incident triage",
+      "Dashboard creation",
+      "Alert management",
+      "Forensic analysis",
+      "Managed response"
+    ],
+    "benefits": [
+      "24/7 monitoring",
+      "AI detection",
+      "Compliance ready",
+      "Expert analysts"
+    ],
+    "pricing": {
+      "basic": "$1,999/mo",
+      "pro": "$5,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "search",
+    "href": "/services/it-siem-service",
+    "popular": true,
+    "category": "it",
+    "industry": "Security"
+  },
+  {
+    "id": "it-data-governance",
+    "title": "Data Governance & Quality",
+    "description": "Enterprise data governance with catalog, lineage tracking, quality scoring, and policy enforcement.",
+    "features": [
+      "Data catalog",
+      "Data lineage",
+      "Quality scoring",
+      "Policy enforcement",
+      "Stewardship",
+      "Classification",
+      "Access control",
+      "Compliance"
+    ],
+    "benefits": [
+      "Trusted data",
+      "Regulatory compliance",
+      "Data quality",
+      "Clear ownership"
+    ],
+    "pricing": {
+      "basic": "$2,499/mo",
+      "pro": "$7,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "clipboard",
+    "href": "/services/it-data-governance",
+    "popular": false,
+    "category": "it",
+    "industry": "Data"
+  },
+  {
+    "id": "it-cio-advisory",
+    "title": "CIO Advisory & IT Strategy",
+    "description": "Strategic IT leadership advisory including technology roadmaps and digital transformation.",
+    "features": [
+      "Technology roadmaps",
+      "Vendor evaluation",
+      "Budget planning",
+      "Digital transformation",
+      "IT governance",
+      "Risk management",
+      "Board presentations",
+      "M&A technology"
+    ],
+    "benefits": [
+      "Strategic leadership",
+      "Cost optimization",
+      "Risk reduction",
+      "Board-ready insights"
+    ],
+    "pricing": {
+      "basic": "$4,000/mo",
+      "pro": "$15,000",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "target",
+    "href": "/services/it-cio-advisory",
+    "popular": true,
+    "category": "it",
+    "industry": "Technology"
+  },
+  {
+    "id": "ai-customer-service-automation",
+    "title": "AI Customer Service Automation",
+    "description": "End-to-end customer service automation with AI chatbots, ticket classification, and quality analytics.",
+    "features": [
+      "AI chatbot",
+      "Ticket classification",
+      "Response suggestions",
+      "Quality analytics",
+      "Human handoff",
+      "Knowledge base",
+      "Multi-language",
+      "Analytics dashboard"
+    ],
+    "benefits": [
+      "80% self-service",
+      "3x faster resolution",
+      "Consistent quality",
+      "Cost reduction"
+    ],
+    "pricing": {
+      "basic": "$599/mo",
+      "pro": "$1,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "headset",
+    "href": "/services/ai-customer-service-automation",
+    "popular": true,
+    "category": "ai",
+    "industry": "Technology"
+  },
+  {
+    "id": "ai-supply-chain-visibility",
+    "title": "AI Supply Chain Visibility Platform",
+    "description": "Real-time supply chain visibility with demand sensing, inventory optimization, and disruption prediction.",
+    "features": [
+      "Demand sensing",
+      "Inventory optimization",
+      "Supplier risk scoring",
+      "Disruption prediction",
+      "Real-time tracking",
+      "Multi-tier visibility",
+      "Scenario planning",
+      "Control tower"
+    ],
+    "benefits": [
+      "30% inventory reduction",
+      "25% better OTIF",
+      "Risk mitigation",
+      "Cost optimization"
+    ],
+    "pricing": {
+      "basic": "$1,999/mo",
+      "pro": "$5,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "chain",
+    "href": "/services/ai-supply-chain-visibility",
+    "popular": true,
+    "category": "ai",
+    "industry": "Logistics"
+  },
+  {
+    "id": "ai-pricing-intelligence",
+    "title": "AI Pricing Intelligence Platform",
+    "description": "Dynamic pricing optimization using competitor monitoring, demand elasticity, and A/B testing.",
+    "features": [
+      "Competitor monitoring",
+      "Demand elasticity",
+      "Customer segmentation",
+      "A/B testing",
+      "Revenue optimization",
+      "Market basket analysis",
+      "Promotion optimization",
+      "Real-time pricing"
+    ],
+    "benefits": [
+      "5-15% revenue increase",
+      "Competitive intelligence",
+      "Data-driven pricing",
+      "Promotion ROI"
+    ],
+    "pricing": {
+      "basic": "$999/mo",
+      "pro": "$2,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "dollar",
+    "href": "/services/ai-pricing-intelligence",
+    "popular": true,
+    "category": "ai",
+    "industry": "Retail"
+  },
+  {
+    "id": "ai-video-analytics",
+    "title": "AI Video Analytics Platform",
+    "description": "Real-time video analysis for security, retail, and manufacturing with object detection and behavior analysis.",
+    "features": [
+      "Object detection",
+      "Behavior analysis",
+      "Facial recognition",
+      "Crowd analytics",
+      "Real-time alerts",
+      "Edge processing",
+      "Historical search",
+      "Privacy masking"
+    ],
+    "benefits": [
+      "24/7 automated monitoring",
+      "Real-time alerts",
+      "Historical search",
+      "Privacy compliant"
+    ],
+    "pricing": {
+      "basic": "$5,000",
+      "pro": "$2,500/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "video",
+    "href": "/services/ai-video-analytics",
+    "popular": true,
+    "category": "ai",
+    "industry": "Security"
+  },
+  {
+    "id": "ai-contract-lifecycle",
+    "title": "AI Contract Lifecycle Management",
+    "description": "End-to-end contract management with AI drafting, review, approval workflows, and risk analysis.",
+    "features": [
+      "AI contract drafting",
+      "Clause extraction",
+      "Approval workflows",
+      "Obligation tracking",
+      "Renewal management",
+      "Risk analysis",
+      "E-signature",
+      "Analytics"
+    ],
+    "benefits": [
+      "80% faster review",
+      "Risk visibility",
+      "Obligation compliance",
+      "Cost control"
+    ],
+    "pricing": {
+      "basic": "$799/mo",
+      "pro": "$2,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "doc",
+    "href": "/services/ai-contract-lifecycle",
+    "popular": true,
+    "category": "ai",
+    "industry": "Legal"
+  },
+  {
+    "id": "gov-digital-services",
+    "title": "Government Digital Services Platform",
+    "description": "Modern digital services for government with case management and Section 508 accessibility.",
+    "features": [
+      "Citizen portal",
+      "Case management",
+      "Form automation",
+      "Document processing",
+      "Compliance tracking",
+      "Section 508 access",
+      "Multi-agency",
+      "Analytics"
+    ],
+    "benefits": [
+      "50% faster processing",
+      "Citizen satisfaction",
+      "Cost reduction",
+      "Accessibility compliance"
+    ],
+    "pricing": {
+      "basic": "$15,000",
+      "pro": "$5,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "building",
+    "href": "/services/gov-digital-services",
+    "popular": true,
+    "category": "ai",
+    "industry": "Government"
+  },
+  {
+    "id": "telecom-network-ai",
+    "title": "Telecom Network AI Optimization",
+    "description": "AI-powered network optimization with predictive maintenance and traffic optimization.",
+    "features": [
+      "Predictive maintenance",
+      "Traffic optimization",
+      "Anomaly detection",
+      "Customer experience",
+      "Capacity planning",
+      "Root cause analysis",
+      "SLA monitoring",
+      "Energy optimization"
+    ],
+    "benefits": [
+      "30% less downtime",
+      "20% capacity gain",
+      "Customer satisfaction",
+      "Energy reduction"
+    ],
+    "pricing": {
+      "basic": "$10,000",
+      "pro": "$4,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "signal",
+    "href": "/services/telecom-network-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Telecom"
+  },
+  {
+    "id": "hospitality-revenue-ai",
+    "title": "Hospitality Revenue Management AI",
+    "description": "AI-powered revenue optimization for hotels with dynamic pricing and demand forecasting.",
+    "features": [
+      "Dynamic pricing",
+      "Demand forecasting",
+      "Guest segmentation",
+      "Competitive intelligence",
+      "Channel optimization",
+      "Length-of-stay optimization",
+      "Group pricing",
+      "Reporting"
+    ],
+    "benefits": [
+      "15-25% RevPAR increase",
+      "Competitive pricing",
+      "Forecasting accuracy",
+      "Channel optimization"
+    ],
+    "pricing": {
+      "basic": "$3/room/mo",
+      "pro": "$499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "hotel",
+    "href": "/services/hospitality-revenue-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Hospitality"
+  },
+  {
+    "id": "autonomous-vehicle-ai",
+    "title": "Autonomous Vehicle AI Platform",
+    "description": "AI platform for autonomous vehicle development with sensor fusion and safety validation.",
+    "features": [
+      "Sensor fusion",
+      "Path planning",
+      "Object detection",
+      "Simulation",
+      "HD mapping",
+      "Regulatory compliance",
+      "Fleet management",
+      "Safety validation"
+    ],
+    "benefits": [
+      "Faster development",
+      "Safety validation",
+      "Regulatory compliance",
+      "Simulation at scale"
+    ],
+    "pricing": {
+      "basic": "$50,000",
+      "pro": "$10,000/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "car",
+    "href": "/services/autonomous-vehicle-ai",
+    "popular": true,
+    "category": "ai",
+    "industry": "Automotive"
+  },
+  {
+    "id": "esg-reporting-platform",
+    "title": "ESG Reporting & Compliance Platform",
+    "description": "Environmental, Social, and Governance reporting with AI data collection and carbon accounting.",
+    "features": [
+      "Data collection",
+      "Carbon accounting",
+      "Compliance reporting",
+      "Stakeholder dashboards",
+      "Benchmarking",
+      "Audit trail",
+      "Scenario analysis",
+      "Integration"
+    ],
+    "benefits": [
+      "Regulatory compliance",
+      "Stakeholder transparency",
+      "Benchmarking",
+      "Audit readiness"
+    ],
+    "pricing": {
+      "basic": "$1,499/mo",
+      "pro": "$4,499/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/contact",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "leaf",
+    "href": "/services/esg-reporting-platform",
+    "popular": true,
+    "category": "ai",
+    "industry": "Finance"
   }
 ]

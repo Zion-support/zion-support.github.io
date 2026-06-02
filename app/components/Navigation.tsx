@@ -56,10 +56,12 @@ export default function Navigation() {
 
   function NavLink({ link }: { link: NavigationLink }) {
     const active = isActive(link.href);
+    const hasBadge = !!link.badge;
+    const isNew = link.badge === 'New';
     return (
       <Link
         href={link.href}
-        className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+        className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1.5 ${
           active
             ? 'text-purple-400 bg-purple-500/10'
             : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
@@ -67,6 +69,13 @@ export default function Navigation() {
         onClick={() => { setMobileOpen(false); setServicesOpen(false); setSolutionsOpen(false); }}
       >
         {link.name}
+        {hasBadge && (
+          <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold ${
+            isNew ? 'bg-green-500/20 text-green-400' : 'bg-purple-500/20 text-purple-400'
+          }`}>
+            {link.badge}
+          </span>
+        )}
       </Link>
     );
   }
