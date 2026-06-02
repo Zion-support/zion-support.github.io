@@ -6,8 +6,17 @@ import ROICalculator from '@/components/ROICalculator';
 import SmartServiceCard from '@/components/SmartServiceCard';
 
 const CAT_LABELS: Record<string,string> = {
-  ai: 'AI Services', it: 'IT', cloud: 'Cloud', security: 'Security',
-  data: 'Data & AI', automation: 'Automation', consulting: 'Consulting',
+  ai: 'AI Services', it: 'IT Services', cloud: 'Cloud Services', security: 'Security',
+  data: 'Data & Analytics', automation: 'Automation', consulting: 'Consulting',
+  'micro-saas': 'Micro-SaaS', 'ai-services': 'AI Services', 'it-services': 'IT Services',
+  'cloud-services': 'Cloud Services', 'data-services': 'Data Services',
+  'security-services': 'Security Services', 'automation-services': 'Automation Services',
+  fintech: 'FinTech', edtech: 'EdTech', healthcare: 'Healthcare',
+  iot: 'IoT', devops: 'DevOps', blockchain: 'Blockchain',
+  'healthcare-it': 'Healthcare IT', 'manufacturing-tech': 'Manufacturing Tech',
+  'retail-tech': 'Retail Tech', 'energy-tech': 'Energy Tech', 'logistics-tech': 'Logistics Tech',
+  'construction-tech': 'Construction Tech', 'cybersecurity': 'Cybersecurity',
+  agritech: 'AgriTech',
 };
 
 interface PageProps { params: Promise<{ id: string }>; }

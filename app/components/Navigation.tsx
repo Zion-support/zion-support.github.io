@@ -281,7 +281,7 @@ export default function Navigation() {
             className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-purple-300 border border-purple-500/20 hover:border-purple-500/40 transition-colors"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
-            1630+ Solutions
+            1239+ Solutions
           </Link>
 
           {/* Desktop CTA */}

@@ -8,7 +8,7 @@ export type NavigationLink = {
 export const PRIMARY_NAV_LINKS: readonly NavigationLink[] = [
   { name: 'Home', href: '/' },
   { name: 'Solutions', href: '/solutions' },
-  { name: 'Services', href: '/services', badge: '1630+' },
+  { name: 'Services', href: '/services', badge: '1239+' },
   { name: 'Products', href: '/products' },
   { name: 'AI Services', href: '/ai-services', badge: 'New' },
   { name: 'Pricing', href: '/pricing' },
