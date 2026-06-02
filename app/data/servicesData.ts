@@ -20355,6 +20355,172 @@ export const wave168EdtechServices: Service[] = [
 ];
 
 
+export const wave169AiServices: Service[] = [
+  {
+    id: 'ai-legal-document-analysis',
+    title: 'AI Legal Document Analysis Platform',
+    description: 'AI-powered legal document analysis for contract review, clause extraction, risk assessment, and precedent search. Reduces legal review time by 80%.',
+    features: ["Contract clause extraction", "Risk scoring per clause", "Precedent search across case law", "Redline generation", "Obligation extraction", "Integration with DocuSign, Ironclad", "Custom legal domain models", "Multi-language support"],
+    benefits: ["Reduce legal review time by 80%", "Identify risky clauses automatically", "Standardize contract language", "Scale legal team capacity"],
+    pricing: {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/ai-legal-document-analysis", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '⚖️', href: '/services/ai-legal-document-analysis', popular: true, category: 'ai', industry: 'Legal',
+  },
+  {
+    id: 'ai-meeting-room-booking',
+    title: 'AI Smart Meeting Room Booking',
+    description: 'AI-powered meeting room optimization with automatic room selection based on attendee count, equipment needs, and calendar analysis.',
+    features: ["Auto room selection by requirements", "Conflict detection and resolution", "Equipment matching", "Automatic release of unused rooms", "Calendar integration", "Occupancy analytics", "Waitlist management", "Mobile check-in"],
+    benefits: ["Eliminate meeting room conflicts", "Increase room utilization by 35%", "Reduce phantom bookings", "Optimize space planning"],
+    pricing: {"basic": "$199/mo", "pro": "$599/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/ai-meeting-room-booking", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🏢', href: '/services/ai-meeting-room-booking', popular: false, category: 'ai', industry: 'Corporate',
+  },
+  {
+    id: 'ai-social-listening-platform',
+    title: 'AI Social Listening & Brand Monitoring',
+    description: 'Real-time brand monitoring across social media, news, forums, and review sites. AI-powered sentiment analysis, trend detection, and crisis alerting.',
+    features: ["Multi-platform monitoring (20+ sources)", "Real-time sentiment analysis", "Trend and topic detection", "Competitor benchmarking", "Crisis detection and alerting", "Influencer identification", "Custom reporting dashboards", "API and webhook integration"],
+    benefits: ["Protect brand reputation in real-time", "Identify crises before they escalate", "Track competitor movements", "Data-driven PR strategy"],
+    pricing: {"basic": "$399/mo", "pro": "$1,299/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/ai-social-listening-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '👂', href: '/services/ai-social-listening-platform', popular: true, category: 'ai', industry: 'Marketing',
+  },
+  {
+    id: 'ai-expense-auditor',
+    title: 'AI Expense Audit & Compliance',
+    description: 'Automated expense report auditing with AI. Detect policy violations, duplicate submissions, suspicious patterns, and non-compliant receipts.',
+    features: ["Receipt OCR and validation", "Policy violation detection", "Duplicate expense detection", "Suspicious pattern analysis", "Per diem and mileage calculation", "Integration with SAP Concur, Expensify", "Audit trail and reporting", "Real-time submission feedback"],
+    benefits: ["Reduce expense fraud by 60%", "Cut audit time by 90%", "Ensure policy compliance", "Reclaim overpayments"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/ai-expense-auditor", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🧾', href: '/services/ai-expense-auditor', popular: false, category: 'ai', industry: 'Finance',
+  },
+  {
+    id: 'ai-video-interview-analyzer',
+    title: 'AI Video Interview Analysis Platform',
+    description: 'AI-powered video interview analysis for hiring. Evaluate candidate responses, communication skills, and role fit with standardized assessment criteria.',
+    features: ["Response quality analysis", "Communication skills scoring", "Sentiment and confidence detection", "Structured interview templates", "Bias detection and mitigation", "Candidate comparison reports", "Integration with ATS", "Interview recording and playback"],
+    benefits: ["Reduce time-to-hire by 40%", "Standardize interview evaluation", "Reduce unconscious bias", "Scale hiring without adding recruiters"],
+    pricing: {"basic": "$599/mo", "pro": "$1,799/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/ai-video-interview-analyzer", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🎥', href: '/services/ai-video-interview-analyzer', popular: false, category: 'ai', industry: 'HR',
+  },
+  {
+    id: 'ai-customer-feedback-analyzer',
+    title: 'AI Customer Feedback Analyzer',
+    description: 'Analyze customer feedback from surveys, reviews, support tickets, and social media. AI-powered theme extraction, sentiment tracking, and actionable insight generation.',
+    features: ["Multi-source feedback aggregation", "AI theme and topic extraction", "Sentiment trend tracking", "NPS and CSAT analysis", "Actionable insight generation", "Integration with Zendesk, SurveyMonkey", "Custom categorization models", "Executive summary reports"],
+    benefits: ["Understand customer pain points at scale", "Track satisfaction trends over time", "Prioritize product improvements", "Close the feedback loop faster"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/ai-customer-feedback-analyzer", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '💬', href: '/services/ai-customer-feedback-analyzer', popular: true, category: 'ai', industry: 'Customer Success',
+  }
+];
+
+
+export const wave169ItServices: Service[] = [
+  {
+    id: 'it-it-asset-management',
+    title: 'IT Asset Management Platform',
+    description: 'Comprehensive IT asset management covering hardware, software, and cloud resources. Automated discovery, lifecycle management, and compliance tracking.',
+    features: ["Automated asset discovery", "Hardware and software inventory", "License management", "Lifecycle tracking", "Compliance reporting", "Integration with SCCM, Intune", "Cost optimization insights", "Disposal and decommissioning workflows"],
+    benefits: ["Complete IT asset visibility", "Optimize software license costs", "Ensure compliance", "Reduce shadow IT"],
+    pricing: {"basic": "$399/mo", "pro": "$1,299/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/it-it-asset-management", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🖥️', href: '/services/it-it-asset-management', popular: false, category: 'it', industry: 'Technology',
+  },
+  {
+    id: 'it-network-automation-platform',
+    title: 'Network Automation Platform',
+    description: 'Automate network configuration, monitoring, and troubleshooting. Infrastructure as Code for networks with compliance checking and change management.',
+    features: ["Network configuration automation", "Compliance checking", "Change management workflows", "Network monitoring and alerting", "Integration with Cisco, Juniper, Arista", "Rollback capabilities", "Network documentation auto-generation", "Zero-touch provisioning"],
+    benefits: ["Reduce network configuration errors", "Automate repetitive network tasks", "Ensure compliance", "Faster network deployments"],
+    pricing: {"basic": "$1,999/mo", "pro": "$5,999/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/it-network-automation-platform", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🌐', href: '/services/it-network-automation-platform', popular: false, category: 'it', industry: 'Technology',
+  }
+];
+
+
+export const wave169MicroSaasServices: Service[] = [
+  {
+    id: 'micro-saas-waitlist-manager',
+    title: 'LaunchList — Waitlist Management Micro-SaaS',
+    description: 'Beautiful waitlist pages with referral tracking, position management, and email campaigns. Perfect for product launches, beta access, and exclusive memberships.',
+    features: ["Custom waitlist landing pages", "Referral tracking and rewards", "Position management", "Email drip campaigns", "Analytics and conversion tracking", "Custom branding", "API and webhook integration", "Priority tier management"],
+    benefits: ["Build pre-launch buzz", "Grow waitlist through referrals", "Convert waitlist to customers", "Professional launch experience"],
+    pricing: {"basic": "$29/mo", "pro": "$89/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/micro-saas-waitlist-manager", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '📋', href: '/services/micro-saas-waitlist-manager', popular: true, category: 'micro-saas', industry: 'Marketing',
+  },
+  {
+    id: 'micro-saas-status-page',
+    title: 'StatusPulse — Status Page Micro-SaaS',
+    description: 'Beautiful status pages for SaaS companies. Real-time incident communication, subscriber notifications, and uptime tracking. Custom domain and branding.',
+    features: ["Real-time status updates", "Incident communication", "Email/SMS subscriber notifications", "Uptime tracking and SLA reporting", "Custom domain and branding", "Integration with monitoring tools", "Historical incident archive", "Team management"],
+    benefits: ["Build customer trust with transparency", "Reduce support tickets during incidents", "Professional incident communication", "Custom branded status page"],
+    pricing: {"basic": "$19/mo", "pro": "$59/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/micro-saas-status-page", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🟢', href: '/services/micro-saas-status-page', popular: false, category: 'micro-saas', industry: 'SaaS',
+  },
+  {
+    id: 'micro-saas-knowledge-base',
+    title: 'KnowledgeBase Pro — Knowledge Base Micro-SaaS',
+    description: 'Self-service knowledge base for SaaS companies. AI-powered search, article suggestions, and analytics. Reduce support tickets by 40%.',
+    features: ["AI-powered search", "Article editor with templates", "Category and tag management", "Analytics and search insights", "Custom branding and domain", "Integration with Intercom, Zendesk", "Multi-language support", "Feedback and rating system"],
+    benefits: ["Reduce support tickets by 40%", "Improve customer self-service", "AI-powered content suggestions", "Professional knowledge base"],
+    pricing: {"basic": "$39/mo", "pro": "$119/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/micro-saas-knowledge-base", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '📚', href: '/services/micro-saas-knowledge-base', popular: true, category: 'micro-saas', industry: 'SaaS',
+  },
+  {
+    id: 'micro-saas-affiliate-manager',
+    title: 'AffiliateHub — Affiliate Management Micro-SaaS',
+    description: 'Affiliate program management for SaaS and e-commerce. Track referrals, manage commissions, and provide affiliates with marketing materials and dashboards.',
+    features: ["Affiliate signup and onboarding", "Referral tracking (cookies, links)", "Commission management and payouts", "Affiliate dashboard", "Marketing material library", "Fraud detection", "Integration with Stripe, PayPal", "Custom commission rules"],
+    benefits: ["Grow through affiliate marketing", "Automate commission tracking", "Prevent affiliate fraud", "Professional affiliate program"],
+    pricing: {"basic": "$49/mo", "pro": "$149/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/micro-saas-affiliate-manager", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🤝', href: '/services/micro-saas-affiliate-manager', popular: false, category: 'micro-saas', industry: 'Marketing',
+  }
+];
+
+
+export const wave169SecurityServices: Service[] = [
+  {
+    id: 'security-penetration-testing-service',
+    title: 'Automated Penetration Testing Service',
+    description: 'AI-powered automated penetration testing for web applications, APIs, and networks. Continuous vulnerability assessment with detailed remediation guidance.',
+    features: ["Automated web app scanning", "API security testing", "Network vulnerability assessment", "OWASP Top 10 coverage", "Detailed remediation reports", "Continuous monitoring", "Integration with Jira, ServiceNow", "Compliance reporting (PCI, SOC2)"],
+    benefits: ["Continuous security assessment", "Find vulnerabilities before attackers", "Automated compliance reporting", "Reduce pen testing costs by 70%"],
+    pricing: {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/security-penetration-testing-service", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🔓', href: '/services/security-penetration-testing-service', popular: true, category: 'security', industry: 'Technology',
+  },
+  {
+    id: 'security-cloud-access-security-broker',
+    title: 'Cloud Access Security Broker (CASB)',
+    description: 'CASB solution for visibility and control over cloud applications. Shadow IT discovery, data loss prevention, threat protection, and compliance monitoring across SaaS.',
+    features: ["Shadow IT discovery", "Cloud app risk assessment", "Data loss prevention for cloud", "Threat protection (UEBA)", "Compliance monitoring (GDPR, HIPAA)", "Integration with 1000+ cloud apps", "Real-time policy enforcement", "Cloud security posture dashboard"],
+    benefits: ["Discover and control shadow IT", "Prevent data leaks in cloud apps", "Meet compliance requirements", "Unified cloud security visibility"],
+    pricing: {"basic": "$1,499/mo", "pro": "$4,499/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/security-cloud-access-security-broker", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '☁️', href: '/services/security-cloud-access-security-broker', popular: false, category: 'security', industry: 'Technology',
+  },
+  {
+    id: 'security-endpoint-detection-response',
+    title: 'Endpoint Detection & Response (EDR) Platform',
+    description: 'Next-gen EDR with AI-powered threat detection, automated response, and forensic investigation. Protect endpoints from malware, ransomware, and advanced threats.',
+    features: ["AI-powered threat detection", "Automated threat response", "Behavioral analysis", "Ransomware protection", "Forensic investigation tools", "Threat intelligence integration", "Integration with SIEM/SOAR", "Managed detection option"],
+    benefits: ["Detect advanced threats in real-time", "Automated response reduces MTTR", "Protect against ransomware", "Full forensic visibility"],
+    pricing: {"basic": "$799/mo", "pro": "$2,499/mo", "enterprise": "Custom"},
+    contactInfo: {"website": "/services/security-endpoint-detection-response", "email": "kleber@ziontechgroup.com", "phone": "+1 302 464 0950"},
+    icon: '🛡️', href: '/services/security-endpoint-detection-response', popular: true, category: 'security', industry: 'Technology',
+  }
+];
+
+
 export const allServices: Service[] = [
   ...aiServices,
   ...itServices,
@@ -20394,6 +20560,10 @@ export const allServices: Service[] = [
   ...wave168RetailTechServices,
   ...wave168ManufacturingTechServices,
   ...wave168EdtechServices,
+  ...wave169AiServices,
+  ...wave169ItServices,
+  ...wave169MicroSaasServices,
+  ...wave169SecurityServices,
 ].filter((s): s is Service => s !== undefined);
 
 
