@@ -37,6 +37,7 @@
 <url><loc>https://ziontechgroup.com/tools/ssl-checker/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/services/accessibility-compliance/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/advanced-ai-enterprise-intelligence-hub/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/advanced-phishing-detection/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/agentic-workflow-orchestrator/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-3d-asset-generator/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-3d-printing-optimizer/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -116,6 +117,7 @@
 <url><loc>https://ziontechgroup.com/services/ai-code-migration-modernization/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-code-review/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-code-review-assistant/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/ai-code-review-sentinel/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-code-reviewer/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-code-reviewer-pro/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-code-vulnerability-scanner/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -251,6 +253,7 @@
 <url><loc>https://ziontechgroup.com/services/ai-email-quality-assurance/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-email-quality-gate/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-email-response-coach/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/ai-email-security-guardian/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-email-workflow-automation/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-emergency-dispatch-router/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-emotion-recognition-hr/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -418,6 +421,7 @@
 <url><loc>https://ziontechgroup.com/services/ai-multilingual-auto-detect/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-multilingual-meeting-notes/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-multilingual-response-engine/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/ai-multimodal-content-factory/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-multimodal-intelligence/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-multimodal-video-understanding/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-museum-guide/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -590,6 +594,7 @@
 <url><loc>https://ziontechgroup.com/services/ai-project-health-monitor/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-project-management/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-project-planning/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/ai-prompt-optimization-engine/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-proposal-generator/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-qbr-automation/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-quality-control-vision/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -709,6 +714,7 @@
 <url><loc>https://ziontechgroup.com/services/ai-sustainable-ops/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-sustainable-supply-chain-radar/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-synthetic-biology-designer/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/ai-synthetic-data-generator/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-talent-acquisition/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-talent-acquisition-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-talent-marketplace-matcher/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -792,6 +798,7 @@
 <url><loc>https://ziontechgroup.com/services/ai-worker-safety-exoskeleton/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-workflow-automation-builder/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-workflow-automation-enterprise/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/ai-workflow-memory-layer/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-workforce-planning/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-workforce-scheduling-optimization/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/ai-workplace-safety-monitor/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -909,6 +916,7 @@
 <url><loc>https://ziontechgroup.com/services/cloud-zero-trust-access-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/compliance-automation/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/compliance-automation-engine/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/compliance-monitoring-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/computer-vision-inspection/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/container-security-lifecycle/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/container-security-runtime/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -946,6 +954,7 @@
 <url><loc>https://ziontechgroup.com/services/data-lakehouse/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/data-lakehouse-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/data-log-analytics-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/data-loss-prevention-dlp/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/data-machine-learning-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/data-nlp-pipeline-orchestrator/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/data-observability-monitor/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -1266,6 +1275,7 @@
 <url><loc>https://ziontechgroup.com/services/security-ai-threat-hunter/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/security-api-security-api-gateway/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/security-api-security-gateway/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://ziontechgroup.com/services/security-awareness-training/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/security-bas-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/security-browser-isolation/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/services/security-browser-isolation-platform/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
