@@ -98,17 +98,17 @@ Once running, use Telegram commands:
 
 ## 🔧 Configuration
 
-All secrets live in `zion.app/.env` (copied from `.env.example`):
+All secrets live in `zion.app/secrets/.env.shared`:
 
 ```bash
-# At least one of these is needed for AI synthesis during rate limits
-GROQ_API_KEY=gsk_...
-GEMINI_API_KEY=AI...
+# Seed real values from vault only; do not paste keys here
+GROQ_API_KEY=sk-or-v1-your-api-key-here
+GEMINI_API_KEY=sk-or-v1-your-api-key-here
 # Optional others: OPENAI_API_KEY, ANTHROPIC_API_KEY, OPENROUTER_API_KEY, ...
 
-# Telegram credentials (for bot; sending uses built-in gateway credentials)
-TELEGRAM_BOT_TOKEN=8716864917:...
-TELEGRAM_CHAT_ID=8435383377
+# Telegram credentials
+TELEGRAM_BOT_TOKEN=ghp_***
+TELEGRAM_CHAT_ID=
 ```
 
 ## 📁 File Structure

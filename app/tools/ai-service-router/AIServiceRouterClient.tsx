@@ -4,8 +4,8 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { allServices } from '@/data/servicesData';
 import type { Service } from '@/data/servicesData';
+import { ProposeBanner } from './router-action';
 
-// ── Keyword → category boost map ─────────────────────────────────────────
 const CATEGORY_WEIGHT: Record<string, number> = {
   ai: 1.3, it: 1.2, cloud: 1.2, security: 1.3, data: 1.2, automation: 1.1,
 };
@@ -56,16 +56,75 @@ export default function AIServiceRouter() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Service[] | null>(null);
   const [loading, setLoading] = useState(false);
+  const [proposalResult, setProposalResult] = useState<Record<string, unknown> | null>(null);
+  const [proposalError, setProposalError] = useState<string | null>(null);
+  const [proposalSaving, setProposalSaving] = useState(false);
   const keywords = useMemo(() => expandKeywords(query), [query]);
+
+  function openService(service: Service | undefined) {
+    const endpoint = '/api/ai-service-router';
+    const score = service && typeof (service as Service & { _score?: number | null })._score === 'number'
+      ? (service as Service & { _score?: number | null })._score ?? undefined
+      : undefined;
+    const payload = {
+      action: {
+        type: 'route' as const,
+        query: query.trim() || undefined,
+        matchedKeywords: keywords,
+        sourceRoute: 'ai-service-router',
+      },
+      service: service
+        ? {
+            id: typeof service.id === 'string' && service.id ? service.id : service.title.replace(/\s+/g, '-').toLowerCase() || 'service',
+            title: service.title,
+            description: service.description,
+            category: service.category,
+            href: service.href,
+          }
+        : null,
+      score: typeof score === 'number' && Number.isFinite(score) ? Math.max(0, score) : undefined,
+    };
+
+    if (!service?.href) return;
+    setProposalSaving(true);
+    setProposalError(null);
+    setProposalResult(null);
+    (async () => {
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = response.ok ? (await response.json().catch(() => null)) : null;
+        if (data && response.ok) {
+          setProposalSaving(false);
+          setProposalResult(data as Record<string, unknown>);
+        } else {
+          throw new Error('proposal generation failed');
+        }
+      } catch {
+        setProposalSaving(false);
+        setProposalError('Could not generate service proposal. Try again.');
+      }
+    })();
+  }
+
+  function dismissProposal() {
+    setProposalResult(null);
+    setProposalError(null);
+  }
 
   const handleSearch = (q: string) => {
     setQuery(q);
     setLoading(true);
+    setProposalResult(null);
+    setProposalError(null);
     queueMicrotask(() => {
       const scored = allServices
         .map(s => ({ ...s, _score: scoreService(s, keywords) }))
         .filter(s => s._score > 0)
-        .sort((a, b) => b._score - a._score)
+        .sort((a, b) => Number(b._score) - Number(a._score))
         .slice(0, 12);
       setResults(scored);
       setLoading(false);
@@ -126,6 +185,7 @@ export default function AIServiceRouter() {
             {results.map((svc, i) => (
               <li key={svc.id}>
                 <Link href={svc.href}
+                  onClick={(e) => { e.preventDefault(); openService(svc); }}
                   className="group block bg-slate-800/60 border border-slate-700 rounded-xl p-5
                              hover:border-purple-400/60 hover:bg-slate-700/60 transition-all">
                   <div className="flex items-start gap-4">
@@ -169,7 +229,20 @@ export default function AIServiceRouter() {
           {allServices.filter(s => s.category === 'cloud').length} · security {allServices.filter(s => s.category === 'security').length} · data{' '}
           {allServices.filter(s => s.category === 'data').length} · automation {allServices.filter(s => s.category === 'automation').length}
         </p>
-        <p className="mt-1">All scoring runs locally in your browser — no server round-trips, zero data leaves your device.</p>
+        <p className="mt-1">All scoring runs locally in your browser — service proposals are generated server-side.</p>
+      </div>
+
+      <div className="mt-4 space-y-3 max-w-4xl mx-auto">
+        {proposalError && (
+          <div className="rounded-xl border border-red-900/60 bg-red-950/60 p-4 text-sm text-red-200">{proposalError}</div>
+        )}
+        {proposalResult ? (
+          <ProposeBanner result={proposalResult as any} />
+        ) : proposalSaving ? (
+          <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-4 text-sm text-slate-300 text-center">Generating proposal…</div>
+        ) : (
+          <button onClick={dismissProposal} className="block mx-auto text-xs text-slate-500 hover:text-slate-300 transition-colors">Dismiss proposal</button>
+        )}
       </div>
     </div>
   );

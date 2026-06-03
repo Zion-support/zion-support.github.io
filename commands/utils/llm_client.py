@@ -167,3 +167,34 @@ def status() -> dict:
 
 if __name__ == "__main__":
     print(json.dumps(status(), indent=2))
+
+
+# ── Legacy compatibility: chat() wrapper ─────────────────────────────────────
+# Many older modules call chat(messages, provider="auto", ...) and expect
+# response["content"]. This thin adapter bridges that interface to llm_query().
+
+def chat(messages, provider=None, temperature=0.3, max_tokens=150, model=None):
+    """
+    Legacy wrapper for modules that call chat(messages, provider=..., ...).
+
+    Flattens a chat-style messages list into a single prompt and delegates to llm_query().
+    Returns a dict with at least a "content" key: {"content": str, ...}
+    """
+    if not isinstance(messages, list) or not messages:
+        return {"content": "", "error": "empty messages"}
+
+    # Flatten messages into a single prompt string
+    parts = []
+    for m in messages:
+        if isinstance(m, dict):
+            role = (m.get("role") or "user").capitalize()
+            content = (m.get("content") or "").strip()
+            if content:
+                parts.append(f"{role}: {content}")
+        elif isinstance(m, str):
+            parts.append(m.strip())
+    prompt = "\n\n".join(parts) if parts else "(empty prompt)"
+
+    result = llm_query(prompt, temperature=temperature, max_tokens=max_tokens, model=model)
+    return {"content": result.get("response", ""), "error": result.get("error")}
+

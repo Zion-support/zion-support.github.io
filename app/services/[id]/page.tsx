@@ -50,7 +50,18 @@ export default async function ServicePage({ params }: PageProps) {
   const service = allServices.find(
     (s) => s.id === id || s.id.replace(/-/g, '_') === id || s.id.replace(/_/g, '-') === id
   );
-  if (!service) notFound();
+  const serviceFromSlug = !service
+    ? allServices.find((s) => {
+        try {
+          return new RegExp("^" + id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "-", "i").test(s.id);
+        } catch {
+          return false;
+        }
+      })
+    : undefined;
+  const resolved = service || serviceFromSlug;
+  if (!resolved) notFound();
+  const service = resolved;
 
   const catLabel = CAT_LABELS[service.category] || service.category;
 
