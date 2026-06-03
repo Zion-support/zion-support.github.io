@@ -19,9 +19,9 @@ None — all clear ✅
 ## In Progress (P1)
 | ID | Task | Owner | Status |
 |-----|------|-------|--------|
-| P1-1 | Wave 209 research | @tablet | ✅ Done — 5 services: Kafka, Meilisearch, Plane, Playwright, Kong Gateway |
+| P1-1 | Wave 209 integration | @tablet + @OWL | ✅ Done — pushed 1a8beeda, CI/CD building |
 | P1-2 | Site quality pass — thin pages, empty benefits | @Windows_quel | 🔄 Active — re-scan & fix |
-| P1-3 | Full site link crawl + fix broken links | @OWL | 🔄 Active — build running (10min+) |
+| P1-3 | Full site link crawl + fix broken links | @OWL | 🔄 Active — waiting for CI/CD deploy |
 | P1-4 | Dashboard v3 — real-time data, agent auto-update | @OWL | 🔄 Active — enhancing now |
 
 ## Backlog (P2)
@@ -53,9 +53,9 @@ None — all clear ✅
 | 197-206 | ~160 services | ✅ Integrated |
 | 207 | 15 services | ✅ Integrated (5 OWL + 10 Carol) |
 | 208 | 14 services | ✅ Integrated (5 OWL new categories + 9 Carol) |
-| **209** | **5 services** | **🔬 Research done — Kafka, Meilisearch, Plane, Playwright, Kong Gateway** |
+| **209** | **5 services** | **✅ Integrated — Kafka, Meilisearch, Plane, Playwright, Kong Gateway** |
 | **772+** | **Base services** | **✅ In servicesData.ts** |
-| **Total** | **~790 services** | **🔄 Build running — may stall (memory pressure)** |
+| **Total** | **~795 services** | **✅ Pushed 1a8beeda — CI/CD building** |
 
 ## Schema Rules (MUST FOLLOW)
 1. **Category values**: always lowercase (`ai`, `micro-saas`, `it`, `security`, `cloud`, `data`, `automation`)
