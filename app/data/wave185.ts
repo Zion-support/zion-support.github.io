@@ -1,11 +1,19 @@
 // Wave 185 services - OWL
 // 4 new services across 4 categories
 
+interface Service {
+  id: string; title: string; description: string; features: string[]; benefits: string[];
+  pricing: { basic: string; pro: string; enterprise: string };
+  contactInfo: { website: string; email: string; phone: string };
+  icon: string; href: string; popular?: boolean; category: string; industry: string;
+  stage?: 'published' | 'beta' | 'planned';
+}
+
 export const wave185MicroSaasServices: Service[] = [
   {
     id: 'microsaas-project-management',
     title: 'ProjectHub - Project Management',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'Productivity',
     description: 'Intuitive project management platform with Kanban boards, Gantt charts, time tracking, and team collaboration features. Built for small to mid-size teams.',
     features: ["Kanban Boards", "Gantt Charts", "Time Tracking", "Team Collaboration", "Custom Workflows"],
@@ -19,7 +27,7 @@ export const wave185MicroSaasServices: Service[] = [
   {
     id: 'microsaas-customer-portal',
     title: 'ClientPortal - Customer Portal',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'Customer Success',
     description: 'White-label customer portal with ticket management, knowledge base, billing overview, and self-service options. Reduces support load while improving customer satisfaction.',
     features: ["Ticket Management", "Knowledge Base", "Billing Overview", "Self-service Options", "Custom Branding"],
@@ -36,7 +44,7 @@ export const wave185CloudServices: Service[] = [
   {
     id: 'cloud-cost-optimization',
     title: 'Cloud Cost Optimization Service',
-    category: 'Cloud',
+    category: 'cloud',
     industry: 'FinOps',
     description: 'Expert cloud cost optimization service including resource right-sizing, reserved instance planning, waste elimination, and FinOps governance implementation.',
     features: ["Resource Right-sizing", "Reserved Instance Planning", "Waste Elimination", "FinOps Governance", "Monthly Reporting"],
@@ -53,7 +61,7 @@ export const wave185DataServices: Service[] = [
   {
     id: 'data-data-lake-platform',
     title: 'Data Lake Platform',
-    category: 'Data',
+    category: 'data',
     industry: 'Data Engineering',
     description: 'Managed data lake platform with ingestion, cataloging, governance, and analytics capabilities. Supports structured and semi-structured data at scale.',
     features: ["Data Ingestion", "Data Cataloging", "Data Governance", "Analytics Integration", "Schema Management"],

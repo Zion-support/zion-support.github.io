@@ -1,11 +1,19 @@
 // Wave 184 services - OWL
 // 5 new services across 5 categories
 
+interface Service {
+  id: string; title: string; description: string; features: string[]; benefits: string[];
+  pricing: { basic: string; pro: string; enterprise: string };
+  contactInfo: { website: string; email: string; phone: string };
+  icon: string; href: string; popular?: boolean; category: string; industry: string;
+  stage?: 'published' | 'beta' | 'planned';
+}
+
 export const wave184MicroSaasServices: Service[] = [
   {
     id: 'microsaas-email-campaign-manager',
     title: 'CampaignHub - Email Campaign Manager',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'Marketing',
     description: 'All-in-one email campaign platform with drag-and-drop editor, A/B testing, automation workflows, and deliverability optimization for growing businesses.',
     features: ["Drag-drop Editor", "A/B Testing", "Automation Workflows", "Deliverability Optimization", "Audience Segmentation"],
@@ -19,7 +27,7 @@ export const wave184MicroSaasServices: Service[] = [
   {
     id: 'microsaas-time-tracker',
     title: 'TimeTrack Pro - Time Tracking',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'Productivity',
     description: 'Simple yet powerful time tracking and timesheet management for teams. Features project tracking, invoicing integration, and productivity analytics.',
     features: ["Time Tracking", "Timesheets", "Project Budgeting", "Invoice Generation", "Productivity Reports"],
@@ -33,7 +41,7 @@ export const wave184MicroSaasServices: Service[] = [
   {
     id: 'microsaas-survey-builder',
     title: 'SurveyLab - Survey Builder',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'Research',
     description: 'Professional survey and feedback collection platform with advanced logic, branching, and analytics. Perfect for market research and customer feedback.',
     features: ["Drag-drop Builder", "Conditional Logic", "Multi-language", "Analytics Dashboard", "API Access"],
@@ -50,7 +58,7 @@ export const wave184ItServices: Service[] = [
   {
     id: 'it-network-infrastructure-audit',
     title: 'Network Infrastructure Audit',
-    category: 'IT',
+    category: 'it',
     industry: 'IT Services',
     description: 'Comprehensive network assessment covering topology analysis, bandwidth optimization, security posture, and hardware lifecycle management.',
     features: ["Topology Analysis", "Bandwidth Optimization", "Security Assessment", "Hardware Lifecycle", "Recommendations Report"],
@@ -64,7 +72,7 @@ export const wave184ItServices: Service[] = [
   {
     id: 'it-data-center-optimization',
     title: 'Data Center Optimization',
-    category: 'IT',
+    category: 'it',
     industry: 'IT Infrastructure',
     description: 'Comprehensive data center assessment and optimization service covering cooling, power, space utilization, and workload placement for maximum efficiency.',
     features: ["Cooling Optimization", "Power Efficiency", "Space Utilization", "Workload Placement", "Capacity Planning"],

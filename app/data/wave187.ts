@@ -1,4 +1,13 @@
-import { Service } from './servicesData';
+// Wave 187 services — @tablet_kleber_bot
+// 4 services across 4 categories (AI, Data, Cloud, Automation)
+
+interface Service {
+  id: string; title: string; description: string; features: string[]; benefits: string[];
+  pricing: { basic: string; pro: string; enterprise: string };
+  contactInfo: { website: string; email: string; phone: string };
+  icon: string; href: string; popular?: boolean; category: string; industry: string;
+  stage?: 'published' | 'beta' | 'planned';
+}
 
 export const wave187DataServices: Service[] = [
   {

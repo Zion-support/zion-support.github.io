@@ -1,11 +1,19 @@
 // Wave 183 services - OWL
 // 10 new services across 7 categories
 
+interface Service {
+  id: string; title: string; description: string; features: string[]; benefits: string[];
+  pricing: { basic: string; pro: string; enterprise: string };
+  contactInfo: { website: string; email: string; phone: string };
+  icon: string; href: string; popular?: boolean; category: string; industry: string;
+  stage?: 'published' | 'beta' | 'planned';
+}
+
 export const wave183AiServices: Service[] = [
   {
     id: 'ai-employee-engagement-analytics',
     title: 'Employee Engagement Analytics',
-    category: 'AI',
+    category: 'ai',
     industry: 'Human Resources',
     description: 'AI-powered employee engagement platform that analyzes survey data, communication patterns, and productivity metrics to predict turnover and recommend interventions.',
     features: ["Sentiment Analysis", "Turnover Prediction", "Engagement Scoring", "Action Recommendations", "Anonymous Feedback"],
@@ -19,7 +27,7 @@ export const wave183AiServices: Service[] = [
   {
     id: 'ai-customer-lifetime-value-prediction',
     title: 'Customer Lifetime Value Prediction',
-    category: 'AI',
+    category: 'ai',
     industry: 'Analytics',
     description: 'ML-powered CLV prediction engine that forecasts customer revenue potential using behavioral data, purchase history, and engagement metrics.',
     features: ["CLV Forecasting", "Behavioral Segmentation", "Churn Risk Scoring", "Retention Recommendations", "Revenue Attribution"],
@@ -33,7 +41,7 @@ export const wave183AiServices: Service[] = [
   {
     id: 'ai-legal-document-summarizer',
     title: 'Legal Document AI Summarizer',
-    category: 'AI',
+    category: 'ai',
     industry: 'Legal Tech',
     description: 'AI-powered legal document analysis and summarization tool. Extracts key clauses, obligations, and risks from contracts, briefs, and compliance documents.',
     features: ["Clause Extraction", "Risk Identification", "Obligation Tracking", "Multi-format Support", "Citation Analysis"],
@@ -50,7 +58,7 @@ export const wave183MicroSaasServices: Service[] = [
   {
     id: 'microsaas-ticket-desk',
     title: 'TicketDesk - Help Desk',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'SaaS',
     description: 'Lightweight help desk and ticketing system with SLA tracking, canned responses, and knowledge base integration. Perfect for small teams.',
     features: ["Ticket Management", "SLA Tracking", "Canned Responses", "Knowledge Base", "Team Collaboration"],
@@ -64,7 +72,7 @@ export const wave183MicroSaasServices: Service[] = [
   {
     id: 'microsaas-review-tracker',
     title: 'ReviewTracker - Review Management',
-    category: 'Micro-SaaS',
+    category: 'micro-saas',
     industry: 'Marketing',
     description: 'Monitor and respond to online reviews across Google, Yelp, Trustpilot, and industry-specific platforms. AI-suggested responses and sentiment tracking.',
     features: ["Multi-platform Monitoring", "AI Response Suggestions", "Sentiment Tracking", "Review Widget", "Analytics Dashboard"],
@@ -81,7 +89,7 @@ export const wave183ItServices: Service[] = [
   {
     id: 'it-disaster-recovery-planning',
     title: 'IT Disaster Recovery Planning',
-    category: 'IT',
+    category: 'it',
     industry: 'IT Services',
     description: 'Comprehensive disaster recovery assessment, planning, and implementation service. Includes RTO/RPO analysis, backup strategy design, failover testing.',
     features: ["RTO/RPO Analysis", "Backup Strategy", "Failover Testing", "DR Runbooks", "Compliance Mapping"],
@@ -98,7 +106,7 @@ export const wave183SecurityServices: Service[] = [
   {
     id: 'security-application-security-audit',
     title: 'Application Security Audit',
-    category: 'Security',
+    category: 'security',
     industry: 'Cybersecurity',
     description: 'In-depth application security assessment covering OWASP Top 10, API security, authentication flows, and data protection.',
     features: ["OWASP Top 10 Analysis", "API Security Testing", "Manual Pentest", "Automated Scanning", "Remediation Roadmap"],
@@ -115,7 +123,7 @@ export const wave183CloudServices: Service[] = [
   {
     id: 'cloud-container-platform',
     title: 'Managed Kubernetes Platform',
-    category: 'Cloud',
+    category: 'cloud',
     industry: 'Cloud Infrastructure',
     description: 'Fully managed Kubernetes platform with automated scaling, monitoring, and security. Includes Helm charts, service mesh, and CI/CD pipeline integration.',
     features: ["Managed K8s Clusters", "Auto-scaling", "Monitoring & Alerts", "Service Mesh", "CI/CD Integration"],
@@ -132,7 +140,7 @@ export const wave183DataServices: Service[] = [
   {
     id: 'data-metadata-management',
     title: 'Enterprise Metadata Management',
-    category: 'Data',
+    category: 'data',
     industry: 'Data Governance',
     description: 'Centralized metadata management platform with data cataloging, glossary management, and lineage tracking. Supports 50+ data sources.',
     features: ["Data Catalog", "Business Glossary", "Lineage Tracking", "Impact Analysis", "Tagging & Classification"],
@@ -149,7 +157,7 @@ export const wave183AutomationServices: Service[] = [
   {
     id: 'automation-digital-process-automation',
     title: 'Digital Process Automation Platform',
-    category: 'Automation',
+    category: 'automation',
     industry: 'Business Process',
     description: 'Low-code digital process automation platform for transforming paper-based and manual workflows into streamlined digital processes.',
     features: ["Low-code Designer", "Form Builder", "Workflow Automation", "E-signatures", "Analytics"],
