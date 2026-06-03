@@ -19050,6 +19050,17 @@ export const newAutomationServices: Service[] = [
     contactInfo: {website:'/services/automation-governance-risk-compliance', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '⚖️', href: '/services/automation-governance-risk-compliance', popular: false, category: 'automation', industry: 'Technology',
   }
+,
+  {
+    id: 'automation-workflow-orchestration',
+    title: 'Workflow Orchestration Engine',
+    description: 'Enterprise workflow orchestration. Visual designer, SLA monitoring, error handling, and integration with 200+ systems.',
+    features: ["Visual workflow designer", "SLA monitoring and alerting", "Error handling and retry logic", "Integration with 200+ systems", "Version control", "Audit trails", "Scalable execution engine", "API-first architecture"],
+    benefits: ["Automate complex workflows", "Reduce manual effort", "Ensure SLA compliance", "Scale without code changes"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/automation-workflow-orchestration', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '⚙️', href: '/services/automation-workflow-orchestration', popular: false, category: 'automation', industry: 'Technology',
+  }
 ];
 
 
@@ -19229,6 +19240,37 @@ export const additionalNewAiServices: Service[] = [
     contactInfo: {website:'/services/ai-neuromorphic-computing', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🧠', href: '/services/ai-neuromorphic-computing', popular: false, category: 'ai', industry: 'Technology',
   }
+,
+  {
+    id: 'ai-fine-tuning-platform',
+    title: 'AI Model Fine-Tuning Platform',
+    description: 'Fine-tune LLMs and foundation models on your data. Managed training, RLHF, LoRA/QLoRA support, and model evaluation with A/B testing.',
+    features: ["Managed fine-tuning pipelines", "LoRA and QLoRA support", "RLHF and DPO alignment", "Model evaluation and A/B testing", "Integration with HuggingFace, OpenAI", "Dataset management and versioning", "Cost optimization (spot instances)", "Model registry and deployment"],
+    benefits: ["Custom models for your domain", "10x cheaper than training from scratch", "Maintain data privacy", "Iterate quickly on model improvements"],
+    pricing: {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-fine-tuning-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🎯', href: '/services/ai-fine-tuning-platform', popular: true, category: 'ai', industry: 'Technology',
+  },
+  {
+    id: 'ai-computer-vision-inspection',
+    title: 'AI Computer Vision for Visual Inspection',
+    description: 'Automated visual inspection for manufacturing, logistics, and quality control. Detect defects, classify objects, and verify assembly with 99%+ accuracy.',
+    features: ["Defect detection and classification", "Object counting and verification", "Assembly verification", "Integration with industrial cameras", "Edge deployment on NVIDIA Jetson", "Custom model training", "Real-time alerting", "Historical trend analysis"],
+    benefits: ["Reduce defect escape rate by 90%", "Automate manual inspection", "Improve product quality", "Lower labor costs"],
+    pricing: {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-computer-vision-inspection', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '👁️', href: '/services/ai-computer-vision-inspection', popular: false, category: 'ai', industry: 'Manufacturing',
+  },
+  {
+    id: 'ai-speech-analytics',
+    title: 'AI Speech Analytics Platform',
+    description: 'Analyze customer calls with AI. Sentiment analysis, topic detection, compliance monitoring, and agent coaching insights.',
+    features: ["Real-time transcription", "Sentiment analysis", "Topic and keyword detection", "Compliance monitoring", "Agent coaching insights", "Integration with Twilio, Genesys", "Custom vocabulary", "Call summarization"],
+    benefits: ["Improve customer satisfaction", "Ensure compliance", "Coach agents effectively", "Automate call review"],
+    pricing: {"basic": "$399/mo", "pro": "$1,199/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-speech-analytics', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🎙️', href: '/services/ai-speech-analytics', popular: false, category: 'ai', industry: 'Technology',
+  }
 ];
 
 
@@ -19387,6 +19429,27 @@ export const additionalNewMicroSaaS: Service[] = [
     contactInfo: {website:'/services/micro-saas-subscription-analytics', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '📈', href: '/services/micro-saas-subscription-analytics', popular: false, category: 'micro-saas', industry: 'SaaS',
   }
+,
+  {
+    id: 'micro-saas-referral-program',
+    title: 'ReferralHub — Referral Program Platform',
+    description: 'Launch and manage referral programs for SaaS. Track referrals, automate rewards, and measure ROI with built-in analytics.',
+    features: ["Referral link generation", "Automated reward fulfillment", "Fraud detection", "Integration with Stripe, PayPal", "Custom branding", "Analytics and ROI tracking", "Multi-tier referral programs", "API for custom integrations"],
+    benefits: ["Acquire customers at 5x lower cost", "Automate referral tracking", "Increase word-of-mouth", "Measure referral ROI"],
+    pricing: {"basic": "$29/mo", "pro": "$99/mo", "enterprise": "$299/mo"},
+    contactInfo: {website:'/services/micro-saas-referral-program', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🤝', href: '/services/micro-saas-referral-program', popular: false, category: 'micro-saas', industry: 'SaaS',
+  },
+  {
+    id: 'micro-saas-status-page',
+    title: 'StatusPage — Service Status Communication',
+    description: 'Beautiful status pages for SaaS companies. Incident communication, subscriber notifications, and uptime history with custom domains.',
+    features: ["Custom domain status pages", "Incident management", "Subscriber notifications (email, SMS, Slack)", "Uptime history and SLA reporting", "Integration with Pingdom, Datadog", "Custom branding", "API for status updates", "Maintenance scheduling"],
+    benefits: ["Reduce support tickets during incidents", "Transparent communication", "Professional brand image", "Automated subscriber updates"],
+    pricing: {"basic": "$19/mo", "pro": "$59/mo", "enterprise": "$199/mo"},
+    contactInfo: {website:'/services/micro-saas-status-page', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '📡', href: '/services/micro-saas-status-page', popular: false, category: 'micro-saas', industry: 'SaaS',
+  }
 ];
 
 
@@ -19464,6 +19527,17 @@ export const additionalNewItServices: Service[] = [
     pricing: {"basic": "$399/mo", "pro": "$1,199/mo", "enterprise": "Custom"},
     contactInfo: {website:'/services/it-digital-experience-monitoring', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '👁️', href: '/services/it-digital-experience-monitoring', popular: false, category: 'it', industry: 'Technology',
+  }
+,
+  {
+    id: 'it-vendor-management',
+    title: 'IT Vendor Management Platform',
+    description: 'Centralize vendor management. Contract tracking, performance scoring, risk assessment, and renewal management for all IT vendors.',
+    features: ["Vendor database and profiles", "Contract tracking and alerts", "Performance scoring", "Risk assessment", "Renewal management", "Spend analysis", "Integration with procurement tools", "Compliance tracking"],
+    benefits: ["Reduce vendor sprawl", "Optimize contract renewals", "Mitigate vendor risk", "Centralize vendor data"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/it-vendor-management', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🤝', href: '/services/it-vendor-management', popular: false, category: 'it', industry: 'Technology',
   }
 ];
 
@@ -19543,6 +19617,17 @@ export const additionalNewSecurityServices: Service[] = [
     contactInfo: {website:'/services/security-breach-simulation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🎯', href: '/services/security-breach-simulation', popular: false, category: 'security', industry: 'Technology',
   }
+,
+  {
+    id: 'security-data-loss-prevention',
+    title: 'Data Loss Prevention (DLP) Platform',
+    description: 'Prevent sensitive data exfiltration across endpoints, cloud, and email. Content inspection, policy enforcement, and incident response.',
+    features: ["Content inspection (regex, ML, fingerprinting)", "Endpoint DLP", "Cloud DLP (SaaS, IaaS)", "Email DLP", "Policy enforcement and blocking", "Incident response workflows", "Integration with Microsoft Purview, Symantec", "Compliance reporting (GDPR, HIPAA, PCI)"],
+    benefits: ["Prevent data breaches", "Meet compliance requirements", "Monitor data movement", "Automate incident response"],
+    pricing: {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/security-data-loss-prevention', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔒', href: '/services/security-data-loss-prevention', popular: false, category: 'security', industry: 'Technology',
+  }
 ];
 
 
@@ -19610,6 +19695,17 @@ export const additionalNewCloudServices: Service[] = [
     pricing: {"basic": "$2,999/mo", "pro": "$8,999/mo", "enterprise": "Custom"},
     contactInfo: {website:'/services/cloud-sovereign-cloud', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🏛️', href: '/services/cloud-sovereign-cloud', popular: false, category: 'cloud', industry: 'Technology',
+  }
+,
+  {
+    id: 'cloud-disaster-recovery',
+    title: 'Cloud Disaster Recovery as a Service',
+    description: 'Automated cloud disaster recovery. Continuous replication, automated failover, and regular DR testing with RPO/RTO guarantees.',
+    features: ["Continuous data replication", "Automated failover and failback", "Regular DR testing", "RPO/RTO guarantees", "Integration with AWS, Azure, GCP", "Runbook automation", "Compliance reporting", "24/7 monitoring"],
+    benefits: ["Meet business continuity requirements", "Automate DR testing", "Reduce RTO to minutes", "Pay only for what you use"],
+    pricing: {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/cloud-disaster-recovery', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔄', href: '/services/cloud-disaster-recovery', popular: false, category: 'cloud', industry: 'Technology',
   }
 ];
 
@@ -19688,6 +19784,17 @@ export const additionalNewDataServices: Service[] = [
     pricing: {"basic": "$599/mo", "pro": "$1,799/mo", "enterprise": "Custom"},
     contactInfo: {website:'/services/data-data-contracts-enforcement', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '📋', href: '/services/data-data-contracts-enforcement', popular: false, category: 'data', industry: 'Technology',
+  }
+,
+  {
+    id: 'data-data-catalog',
+    title: 'AI-Powered Data Catalog',
+    description: 'Automated data catalog with AI-powered discovery, classification, and lineage. Find, understand, and trust your data assets.',
+    features: ["Automated data discovery", "AI classification and tagging", "Data lineage tracking", "Quality scoring", "Integration with Snowflake, Databricks, BigQuery", "Collaboration and glossary", "Access control", "Usage analytics"],
+    benefits: ["Find data assets instantly", "Understand data lineage", "Ensure data quality", "Enable self-service analytics"],
+    pricing: {"basic": "$599/mo", "pro": "$1,799/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/data-data-catalog', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '📚', href: '/services/data-data-catalog', popular: false, category: 'data', industry: 'Technology',
   }
 ];
 
