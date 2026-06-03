@@ -39,7 +39,7 @@ import { wave186AiServices, wave186MicroSaasServices, wave186ItServices, wave186
 
 import { wave188AiServices, wave188MicroSaasServices, wave188HealthcareItServices, wave188ItServices, wave188SecurityServices, wave188CloudServices, wave188DataServices, wave188AutomationServices } from './wave188';
 
-import { wave189AiServices, wave189MicroSaasServices, wave189ItServices } from './wave189';
+import { wave189AiServices, wave189MicroSaasServices, wave189ItServices, wave189SecurityServices, wave189CloudServices, wave189DataServices, wave189AutomationServices } from './wave189';
 
 import { wave190AiServices, wave190MicroSaasServices, wave190ItServices, wave190SecurityServices, wave190CloudServices, wave190DataServices, wave190AutomationServices } from './wave190';
 
@@ -20033,6 +20033,10 @@ export const allServices: Service[] = [
   ...wave189AiServices,
   ...wave189MicroSaasServices,
   ...wave189ItServices,
+  ...wave189SecurityServices,
+  ...wave189CloudServices,
+  ...wave189DataServices,
+  ...wave189AutomationServices,
   ...wave190AiServices,
   ...wave190MicroSaasServices,
   ...wave190ItServices,

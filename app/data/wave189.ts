@@ -11,7 +11,7 @@ export const wave189AiServices: Service[] = [
     features: ['Solidity IDE', 'Automated Testing', 'Gas Optimization', 'Multi-Chain Deploy', 'Audit Reports'],
     benefits: ['Ship contracts faster', 'Reduce vulnerabilities 80%'],
     pricing: { basic: '$199/mo', pro: '$499/mo', enterprise: '$1,499/mo' },
-    contactInfo: { website: '/services/ai-smart-contract-lifecycle', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/ai-smart-contract-lifecycle', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📋', href: '/services/ai-smart-contract-lifecycle', popular: false, category: 'ai', industry: 'Blockchain',
   },
 ];
@@ -24,7 +24,7 @@ export const wave189DataServices: Service[] = [
     features: ['Golden Record', 'Data Stewardship', 'Workflow Engine', 'Quality Rules', 'Multi-domain'],
     benefits: ['Single source of truth', '60% less data errors'],
     pricing: { basic: '$799/mo', pro: '$2,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/data-mdm-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-mdm-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '📇', href: '/services/data-mdm-platform', popular: false, category: 'data', industry: 'Enterprise',
   },
   {
@@ -34,7 +34,7 @@ export const wave189DataServices: Service[] = [
     features: ['Inventory Optimization', 'Demand Forecasting', 'Logistics Analytics', 'Supplier Risk', 'What-If Scenarios'],
     benefits: ['Reduce inventory 25%', 'Prevent stockouts'],
     pricing: { basic: '$599/mo', pro: '$1,499/mo', enterprise: '$4,999/mo' },
-    contactInfo: { website: '/services/data-supply-chain-analytics', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/data-supply-chain-analytics', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔗', href: '/services/data-supply-chain-analytics', popular: false, category: 'data', industry: 'Supply Chain',
   },
 ];
@@ -47,7 +47,7 @@ export const wave189CloudServices: Service[] = [
     features: ['Unified Dashboard', 'Cost Allocation', 'Policy Enforcement', 'Auto-Scaling', 'Multi-Cloud K8s'],
     benefits: ['Reduce complexity 70%', 'Single pane of glass'],
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/cloud-hybrid-cloud-management', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/cloud-hybrid-cloud-management', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '☁️', href: '/services/cloud-hybrid-cloud-management', popular: false, category: 'cloud', industry: 'Technology',
   },
 ];
@@ -60,7 +60,7 @@ export const wave189SecurityServices: Service[] = [
     features: ['Access Certification', 'Role Mining', 'Lifecycle Automation', 'Policy Violation', 'Audit Ready'],
     benefits: ['Reduce access risk 80%', 'Automate compliance'],
     pricing: { basic: '$349/mo', pro: '$899/mo', enterprise: '$2,499/mo' },
-    contactInfo: { website: '/services/security-identity-governance', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/security-identity-governance', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🔐', href: '/services/security-identity-governance', popular: true, category: 'security', industry: 'Technology',
   },
 ];
@@ -73,7 +73,7 @@ export const wave189AutomationServices: Service[] = [
     features: ['IoT Integration', 'Digital Twins', 'Predictive Maintenance', 'Production Optimization', 'MES Connect'],
     benefits: ['30% less downtime', '20% higher throughput'],
     pricing: { basic: '$1,999/mo', pro: '$4,999/mo', enterprise: 'Custom' },
-    contactInfo: { website: '/services/automation-smart-manufacturing', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/automation-smart-manufacturing', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🏭', href: '/services/automation-smart-manufacturing', popular: false, category: 'automation', industry: 'Manufacturing',
   },
 ];
@@ -86,7 +86,7 @@ export const wave189ItServices: Service[] = [
     features: ['AI Personalization', 'Gamification', 'Virtual Classroom', 'Certification Paths', 'Analytics'],
     benefits: ['40% better completion', 'Scalable to millions'],
     pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: '$1,999/mo' },
-    contactInfo: { website: '/services/it-edtech-learning-platform', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/it-edtech-learning-platform', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '🎓', href: '/services/it-edtech-learning-platform', popular: true, category: 'it', industry: 'Education',
   },
 ];
@@ -99,7 +99,7 @@ export const wave189MicroSaasServices: Service[] = [
     features: ['Document Generation', 'Clause Library', 'E-Signature', 'Contract Analytics', 'Version Control'],
     benefits: ['Draft 10x faster', 'Reduce review time 70%'],
     pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: '$599/mo' },
-    contactInfo: { website: '/services/microsaas-legal-document', email: 'commercial@ziontechgroup.com', phone: '+1 302 464 0950' },
+    contactInfo: { website: '/services/microsaas-legal-document', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     icon: '⚖️', href: '/services/microsaas-legal-document', popular: false, category: 'Micro-SaaS', industry: 'Legal',
   },
 ];
