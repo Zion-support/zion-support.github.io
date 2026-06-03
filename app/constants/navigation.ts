@@ -9,6 +9,7 @@ export const PRIMARY_NAV_LINKS: NavigationLink[] = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Contact', href: '/contact' },
+  { name: 'AI Agents', href: '/dashboard' },
 ];
 
 export const SOLUTION_LINKS: NavigationLink[] = [
@@ -24,8 +25,8 @@ export const SOLUTION_LINKS: NavigationLink[] = [
 export const RESOURCE_LINKS: NavigationLink[] = [
   { name: 'Blog', href: '/blog' },
   { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api' },
   { name: 'Status', href: '/status' },
+  { name: 'AI Agent Dashboard', href: '/dashboard' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: NavigationLink[] = [

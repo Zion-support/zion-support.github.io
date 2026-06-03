@@ -101,7 +101,7 @@ export default function Navigation() {
                 ))}
                 <div className="border-t border-slate-800 my-1" />
                 <Link href="/services" className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300" onClick={() => setServicesOpen(false)}>
-                  All (491, 235, 85)+ Services →
+                  All 759 Services →
                 </Link>
               </div>
             )}
@@ -136,11 +136,9 @@ export default function Navigation() {
       {/* Mobile panel */}
       {mobileOpen && (
         <div className="lg:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 py-4 space-y-3 animate-in fade-in-0 slide-in-from-top-2">
-          <NavLink link={{ name: 'Home', href: '/' }} />
-          <NavLink link={{ name: 'Services', href: '/services' }} />
-          <NavLink link={{ name: 'Solutions', href: '/solutions' }} />
-          <NavLink link={{ name: 'Pricing', href: '/pricing' }} />
-          <NavLink link={{ name: 'Contact', href: '/contact' }} />
+          {PRIMARY_NAV_LINKS.map((link, i) => (
+            <NavLink key={i} link={link} />
+          ))}
           <div className="border-t border-slate-800 pt-2">
             <div className="text-xs text-slate-500 uppercase tracking-wider font-bold mb-2">Featured AI</div>
             {FEATURED_AI_SERVICE_LINKS.slice(0, 4).map((link, i) => (
