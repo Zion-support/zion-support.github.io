@@ -41,6 +41,8 @@ import { wave188AiServices, wave188MicroSaasServices, wave188HealthcareItService
 
 import { wave189AiServices, wave189MicroSaasServices, wave189ItServices, wave189SecurityServices, wave189CloudServices, wave189DataServices, wave189AutomationServices } from './wave189';
 
+import { wave180AiServices, wave180MicroSaasServices, wave180ItServices, wave180SecurityServices, wave180CloudServices, wave180DataServices, wave180AutomationServices } from './wave180';
+
 
 export const aiServices: Service[] = [
   {
@@ -20029,6 +20031,13 @@ export const allServices: Service[] = [
   ...wave189CloudServices,
   ...wave189DataServices,
   ...wave189AutomationServices,
+  ...wave180AiServices,
+  ...wave180MicroSaasServices,
+  ...wave180ItServices,
+  ...wave180SecurityServices,
+  ...wave180CloudServices,
+  ...wave180DataServices,
+  ...wave180AutomationServices,
 ].filter((s): s is Service => s !== undefined);
 
 
