@@ -15,6 +15,8 @@ export interface Service {
   stage?: 'published' | 'beta' | 'planned';
 }
 
+import { wave163AiServices, wave163MicroSaasServices, wave163ItServices, wave163SecurityServices, wave163CloudServices, wave163DataServices, wave163AutomationServices } from './wave163';
+
 export const aiServices: Service[] = [
   {
     id: 'advanced-ai-enterprise-intelligence-hub',
@@ -21089,6 +21091,13 @@ export const allServices: Service[] = [
   ...wave173ItServices,
   ...wave173MicroSaasServices,
   ...wave173SecurityServices,
+  ...wave163AiServices,
+  ...wave163MicroSaasServices,
+  ...wave163ItServices,
+  ...wave163SecurityServices,
+  ...wave163CloudServices,
+  ...wave163DataServices,
+  ...wave163AutomationServices,
 ].filter((s): s is Service => s !== undefined);
 
 
