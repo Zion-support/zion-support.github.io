@@ -1,0 +1,52 @@
+name: Unstoppable Retry Guardian
+'on':
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '*/30 * * * *'
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Self-healing retry wrapper
+        run: |
+          ATTEMPTS=3
+          DELAY=10
+          N=1
+          until [ $N -gt $ATTEMPTS ]; do
+            echo "Attempt $N/$ATTEMPTS"
+            npm run lint && npm run type-check && npm run build && break || true
+            if [ $N -lt $ATTEMPTS ]; then
+              echo "Retrying in ${DELAY}s..."
+              sleep $DELAY
+              DELAY=$((DELAY*2))
+            fi
+            N=$((N+1))
+          done
+          if [ $N -gt $ATTEMPTS ]; then
+            echo "::error::Unstoppable guard: checks failed after $((N-1)) attempts"
+            exit 1
+          fi
+      - name: Open issue on persistent failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Unstoppable guard: checks failed on ${context.sha.slice(0,7)}`,
+              body: `The unstoppable guard job failed after retries. See workflow run for details.`
+            })
