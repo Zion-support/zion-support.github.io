@@ -39,6 +39,7 @@ import { wave196AiServices, wave196MicroSaasServices, wave196ItServices, wave196
 import { wave197AiServices, wave197MicroSaasServices, wave197DataServices, wave197SecurityServices, wave197CloudServices, wave197AutomationServices, wave197ItServices, wave197EmailIntelligenceServices, wave197BlockchainServices, wave197IotServices } from './wave197';
 import { wave198AiServices, wave198MicroSaasServices, wave198DataServices, wave198SecurityServices, wave198CloudServices, wave198AutomationServices, wave198ItServices, wave198HealthcareItServices, wave198EdtechServices, wave198FintechServices } from './wave198';
 import { wave199AiServices, wave199MicroSaasServices, wave199DataServices, wave199SecurityServices, wave199CloudServices, wave199AutomationServices, wave199ItServices, wave199HealthcareItServices } from './wave199';
+import { wave200AiServices, wave200MicroSaasServices, wave200DataServices, wave200SecurityServices, wave200CloudServices, wave200AutomationServices, wave200ItServices, wave200HealthcareItServices } from './wave200';
 
 
 export const aiServices: Service[] = [
@@ -1463,4 +1464,12 @@ export const allServices: Service[] = [
   ...wave199AutomationServices,
   ...wave199ItServices,
   ...wave199HealthcareItServices,
+  ...wave200AiServices,
+  ...wave200MicroSaasServices,
+  ...wave200DataServices,
+  ...wave200SecurityServices,
+  ...wave200CloudServices,
+  ...wave200AutomationServices,
+  ...wave200ItServices,
+  ...wave200HealthcareItServices,
 ].filter((s: Service) => s.benefits.length > 0);
