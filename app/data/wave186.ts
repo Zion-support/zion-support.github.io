@@ -1,7 +1,7 @@
 // Wave 186 services - OWL
 // 6 new services across 6 categories
 
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 export const wave186AiServices: Service[] = [
   {

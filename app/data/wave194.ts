@@ -1,4 +1,4 @@
-import type { Service } from './servicesData';
+import type { Service } from './serviceTypes';
 
 export const wave194AiServices: Service[] = [
   {

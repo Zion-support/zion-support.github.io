@@ -1,7 +1,7 @@
 // Wave 192 services - OWL
 // 10 new services — Cybersecurity, FinTech, HealthTech, Logistics, PropTech, CleanTech
 
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 export const wave192AiServices: Service[] = [
   {

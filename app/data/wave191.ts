@@ -1,7 +1,7 @@
 // Wave 191 services - OWL
 // 10 new services — MarTech, PropTech, GovTech, Philanthropy, Travel, Entertainment
 
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 export const wave191AiServices: Service[] = [
   {

@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 201 — Specialty Platforms & Emerging Tech (10 services)
 export const wave201AiServices: Service[] = [

@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 199 — Next Gen AI & IT Services (10 services)
 export const wave199AiServices: Service[] = [

@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 204 — Specialized AI & Business Tools (10 services)
 export const wave204AiServices: Service[] = [

@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 200 — Milestone: Next-Gen Platforms & Tools (10 services)
 export const wave200AiServices: Service[] = [

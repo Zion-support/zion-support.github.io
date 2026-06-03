@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 206 — Underrepresented Categories Focus (10 services)
 export const wave206AiServices: Service[] = [

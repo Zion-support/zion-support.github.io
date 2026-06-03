@@ -1,7 +1,7 @@
 // Wave 190 services - OWL
 // 10 new services — EnergyTech, GovTech, InsurTech, RealEstate, SpaceTech, SportsTech
 
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 export const wave190AiServices: Service[] = [
   {

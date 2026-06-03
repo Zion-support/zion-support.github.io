@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 208 — GreenTech, SpaceTech & Advanced Analytics (10 services)
 export const wave208AiServices: Service[] = [

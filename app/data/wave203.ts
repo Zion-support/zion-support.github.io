@@ -1,4 +1,4 @@
-import { Service } from './servicesData';
+import { Service } from './serviceTypes';
 
 // Wave 203 — Enterprise Platforms & Developer Tools (10 services)
 export const wave203AiServices: Service[] = [
