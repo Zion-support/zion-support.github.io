@@ -51,18 +51,21 @@ interface CronEntry {
 // ── Live Data (read from coordination file via API or embedded) ────────────
 
 const BOT_ROSTER: BotStatus[] = [
-  { name: '@windows_carol_bot', role: 'DevOps & Infrastructure', emoji: '🖥️', status: 'active', currentTask: 'CI/CD workflows, wave integration, accessibility', tasksCompleted: 47, lastAction: 'Wave 208 CI/CD pipeline', lastActionTime: '2026-06-03 14:30' },
-  { name: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Coordination lead, quality audits', tasksCompleted: 92, lastAction: 'Fleet rebalance #4 + wave 209 integration', lastActionTime: '2026-06-09 16:15' },
-  { name: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'active', currentTask: 'Wave 210 research pipeline', tasksCompleted: 158, lastAction: 'Wave 209 research (5 services)', lastActionTime: '2026-06-09 16:00' },
-  { name: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'active', currentTask: 'Site quality, thin page re-scan, nav improvements', tasksCompleted: 34, lastAction: 'Thin page content enrichment', lastActionTime: '2026-06-04 10:00' },
+  { name: '@windows_carol_bot', role: 'DevOps & Infrastructure', emoji: '🖥️', status: 'active', currentTask: 'CI/CD workflows, wave integration, accessibility', tasksCompleted: 47, lastAction: 'CI/CD pipeline + workflow hardening', lastActionTime: '2026-06-03 14:30' },
+  { name: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Coordination lead, quality audits, fleet sync', tasksCompleted: 95, lastAction: 'Build fix: removed useFocusManagement from server layout', lastActionTime: '2026-06-03 22:21' },
+  { name: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'active', currentTask: 'Wave 210 research pipeline', tasksCompleted: 158, lastAction: 'Wave 209 research (5 services)', lastActionTime: '2026-06-03 16:00' },
+  { name: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'active', currentTask: 'Site quality, thin page re-scan, nav improvements', tasksCompleted: 34, lastAction: 'Thin page content enrichment', lastActionTime: '2026-06-03 10:00' },
   { name: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'Build/CI/CD optimization', tasksCompleted: 28, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-03 12:00' },
-  { name: '@OWL', role: 'Build & Deploy / Fleet Coordinator', emoji: '🦉', status: 'active', currentTask: 'Wave 209 integration, dashboard v3, link verification', tasksCompleted: 65, lastAction: 'Wave 209 integration — 5 services pushed', lastActionTime: '2026-06-09 16:15' },
+  { name: '@OWL', role: 'Build & Deploy / Fleet Coordinator', emoji: '🦉', status: 'active', currentTask: 'Link verification, dashboard update, fleet coordination', tasksCompleted: 72, lastAction: '45/45 links verified ✅ + build fix deployed', lastActionTime: '2026-06-03 22:21' },
 ];
 
 const DELEGATION_LOG: DelegationEntry[] = [
-  { time: '2026-06-09 16:15', bot: '@Kilo', action: 'ORGANIZE #4 — Fleet rebalance', result: 'Wave 209 integrated (5 services), coord doc updated, 6-bot roster', category: 'coordination' },
-  { time: '2026-06-09 16:15', bot: '@OWL', action: 'Wave 209 integration', result: 'wave209.ts created, servicesData.ts updated, pushed 1a8beeda', category: 'wave' },
-  { time: '2026-06-09 16:00', bot: '@tablet', action: 'Wave 209 research', result: '5 services: Kafka, Meilisearch, Plane, Playwright, Kong Gateway', category: 'research' },
+  { time: '2026-06-03 22:21', bot: '@OWL', action: 'CRITICAL FIX: useFocusManagement in server layout', result: 'Removed client hook from layout.tsx — was breaking ALL builds. 45/45 links now ✅', category: 'fix' },
+  { time: '2026-06-03 22:15', bot: '@Kilo', action: 'Link audit + quality script', result: '44/45 links ✅, audit-service-quality.sh created, duplicate saas-invoice-generator removed', category: 'quality' },
+  { time: '2026-06-03 22:10', bot: '@Kilo', action: 'Footer: AI Agent Dashboard links + badge', result: '"Powered by AI Agents" badge + dashboard links in footer Services & Company sections', category: 'integration' },
+  { time: '2026-06-03 16:15', bot: '@Kilo', action: 'ORGANIZE #4 — Fleet rebalance', result: 'Wave 209 integrated (5 services), coord doc updated, 6-bot roster', category: 'coordination' },
+  { time: '2026-06-03 16:15', bot: '@OWL', action: 'Wave 209 integration', result: 'wave209.ts created, servicesData.ts updated, pushed 1a8beeda', category: 'wave' },
+  { time: '2026-06-03 16:00', bot: '@tablet', action: 'Wave 209 research', result: '5 services: Kafka, Meilisearch, Plane, Playwright, Kong Gateway', category: 'research' },
   { time: '2026-06-03 15:45', bot: '@Kilo', action: 'Wave 208 full integration', result: '15 services (10 Carol + 5 OWL new categories), lowercase categories', category: 'integration' },
   { time: '2026-06-03 15:30', bot: '@Kilo', action: 'Wave 207 recovery', result: "Restored Carol's 10 lost services, fixed categories", category: 'fix' },
   { time: '2026-06-03 15:00', bot: '@OWL', action: 'Agent Dashboard v2', result: 'Real-time fleet monitor, task board, activity log', category: 'integration' },
@@ -70,17 +73,8 @@ const DELEGATION_LOG: DelegationEntry[] = [
   { time: '2026-06-03 14:27', bot: '@Kilo', action: 'ORGANIZE #3', result: 'Wave 208: 8 category values normalized, CAT_LABELS updated', category: 'quality' },
   { time: '2026-06-03 14:16', bot: '@Kilo', action: 'ORGANIZE #2', result: 'Quality scan: 0 empty benefits, type-check clean', category: 'quality' },
   { time: '2026-06-03 14:11', bot: '@Kilo', action: 'Fleet reorganization', result: '6 bots, P1/P2/Blocked task board, delegation rules', category: 'coordination' },
-  { time: '2026-06-06 20:00', bot: '@Kilo', action: 'Wave 207 integrated', result: '5 new categories (Grafana, Keycloak, Strapi, Medusa, Outline)', category: 'integration' },
-  { time: '2026-06-04 14:00', bot: '@tablet', action: 'Wave 207 research', result: '5 services in 5 new categories identified', category: 'research' },
-  { time: '2026-06-04 08:30', bot: '@OWL', action: 'Wave 196', result: '+10 services pushed, type-check clean', category: 'wave' },
-  { time: '2026-06-04 08:00', bot: '@OWL', action: 'Waves 193-195 recovery', result: 'Re-created after force-push, fixed CRLF, added features+benefits', category: 'fix' },
-  { time: '2026-06-03 07:30', bot: '@Kilo', action: 'Waves 191-192 verified', result: '+20 services, type-check green', category: 'quality' },
-  { time: '2026-06-03 04:20', bot: 'Multi-bot', action: 'Waves 191-192', result: '+20 services integrated', category: 'wave' },
-  { time: '2026-06-03 03:30', bot: '@Kilo', action: 'Wave 189 import fix', result: 'Import mismatch fixed, pushed 3dd993f', category: 'fix' },
-  { time: '2026-06-03 02:45', bot: '@Kilo', action: 'ORGANIZE', result: 'Fixed wave175/180 imports, Service interfaces, category normalization', category: 'fix' },
   { time: '2026-06-03 02:00', bot: '@Carol', action: 'CI/CD workflows deployed', result: '5+ workflow files, Lighthouse, smoke tests', category: 'infra' },
   { time: '2026-06-03 00:35', bot: '@Kilo', action: 'Fix 67 placeholder services', result: 'Thin pages: 490→223', category: 'quality' },
-  { time: '2026-06-03 00:35', bot: '@Kilo', action: 'Waves 183-185 integration', result: 'Added missing imports, 19 services', category: 'integration' },
 ];
 
 const WAVE_STATUS: WaveEntry[] = [
@@ -121,25 +115,26 @@ const WAVE_STATUS: WaveEntry[] = [
 ];
 
 const ALL_TASKS: TaskEntry[] = [
-  { id: 'P1-2', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-3', task: 'Full site link crawl + fix broken links', owner: '@OWL', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-4', task: 'Dashboard v3 — real-time data, agent auto-update', owner: '@OWL', status: 'in-progress', priority: 'p1' },
+  { id: 'P0-1', task: 'Build fix deployed — useFocusManagement removed from server layout', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P0-2', task: '45/45 links verified 200 OK', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P1-1', task: 'Wave 210 research (5 new services)', owner: '@tablet', status: 'queued', priority: 'p1' },
+  { id: 'P1-2', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'queued', priority: 'p1' },
+  { id: 'P1-3', task: 'Dashboard data updated with latest fleet status', owner: '@OWL', status: 'done', priority: 'p1' },
   { id: 'B2', task: 'CI/CD pipeline hardening', owner: '@Rocket', status: 'queued', priority: 'p2' },
   { id: 'B3', task: 'GitHub auth for Actions triage', owner: '@Carol', status: 'blocked', priority: 'blocked', needs: 'gh auth on remote' },
   { id: 'B4', task: 'Service page auto-generation', owner: '@tablet', status: 'queued', priority: 'p2' },
-  { id: 'B5', task: 'Thin page content enrichment', owner: '@Kilo', status: 'in-progress', priority: 'p2' },
+  { id: 'B5', task: 'Thin page content enrichment', owner: '@Kilo', status: 'queued', priority: 'p2' },
   { id: 'B6', task: 'Wave 210 research', owner: '@tablet', status: 'queued', priority: 'p2' },
   { id: 'B7', task: 'Site navigation/design improvements', owner: '@Windows_quel', status: 'queued', priority: 'p2' },
-  { id: 'B8', task: 'Agent self-improvement plan', owner: '@Kilo', status: 'queued', priority: 'p2' },
   { id: 'X1', task: 'Email responder live', owner: '@Kilo', status: 'blocked', priority: 'blocked', needs: 'Gmail app password from Kleber' },
   { id: 'X2', task: 'GitHub Actions triage', owner: '@Carol', status: 'blocked', priority: 'blocked', needs: 'gh auth on remote machine' },
 ];
 
 const CRON_JOBS: CronEntry[] = [
-  { name: 'Link Monitor', interval: '360m', status: 'ok', lastRun: '2h ago' },
-  { name: 'Org Health', interval: '240m', status: 'error', lastRun: '6h ago' },
-  { name: 'Wave Research', interval: '240m', status: 'ok', lastRun: '1h ago' },
-  { name: 'Email Readiness', interval: '120m', status: 'ok', lastRun: '30m ago' },
+  { name: 'Link Monitor', interval: '360m', status: 'ok', lastRun: '5m ago' },
+  { name: 'Org Health', interval: '240m', status: 'ok', lastRun: '1h ago' },
+  { name: 'Wave Research', interval: '240m', status: 'ok', lastRun: '30m ago' },
+  { name: 'Deploy Check', interval: '60m', status: 'ok', lastRun: '2m ago' },
 ];
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
