@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -50,15 +51,17 @@ export default function Navigation() {
 
   function isActive(href: string): boolean {
     if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
+    return !!pathname && pathname.startsWith(href);
   }
 
   function NavLink({ link }: { link: NavigationLink }) {
     const active = isActive(link.href);
+    const hasBadge = !!link.badge;
+    const isNew = link.badge === 'New';
     return (
       <Link
         href={link.href}
-        className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+        className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1.5 ${
           active
             ? 'text-purple-400 bg-purple-500/10'
             : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
@@ -66,6 +69,13 @@ export default function Navigation() {
         onClick={() => { setMobileOpen(false); setServicesOpen(false); setSolutionsOpen(false); }}
       >
         {link.name}
+        {hasBadge && (
+          <span className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold ${
+            isNew ? 'bg-green-500/20 text-green-400' : 'bg-purple-500/20 text-purple-400'
+          }`}>
+            {link.badge}
+          </span>
+        )}
       </Link>
     );
   }
@@ -265,10 +275,19 @@ export default function Navigation() {
             </svg>
           </Link>
 
+          {/* Service count badge */}
+          <Link
+            href="/services/"
+            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-purple-300 border border-purple-500/20 hover:border-purple-500/40 transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+            1239+ Solutions
+          </Link>
+
           {/* Desktop CTA */}
           <a
             href={`mailto:${EMAIL}`}
-            className="lg:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-pink-500 hover:bg-pink-600 transition-colors"
+            className="lg:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 transition-all shadow-lg shadow-purple-500/20"
           >
             ✉ Get Free Consultation
           </a>

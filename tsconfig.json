@@ -49,6 +49,7 @@
     "**/*.test.*",
     "**/*.spec.*",
     "tools",
-    "utils"
+    "utils",
+    "llama.cpp/**"
   ]
 }
