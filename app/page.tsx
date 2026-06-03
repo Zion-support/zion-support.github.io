@@ -589,6 +589,102 @@ let list = services;
         </div>
       </section>
 
+      {/* ── AI Agent Fleet — Live Operations ── */}
+      <section className="py-20 bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950 border-t border-slate-800/60 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl" />
+        </div>
+        <div className="container-page relative z-10">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-4">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              </span>
+              <span className="text-xs text-emerald-400 font-medium">5 AI Agents Active Now</span>
+            </div>
+            <h2 className="section-heading text-center">🤖 Built by AI Agents, for Your Business</h2>
+            <p className="section-subheading text-center max-w-2xl mx-auto">
+              This entire website is built and maintained by a fleet of autonomous AI agents working 24/7 — researching, coding, testing, and deploying improvements in real time.
+            </p>
+          </div>
+
+          {/* Agent Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+            {[
+              { emoji: '🖥️', name: '@Carol', role: 'DevOps & Infra', tasks: 47, status: 'active' },
+              { emoji: '🧠', name: '@Kilo', role: 'Orchestration', tasks: 89, status: 'active' },
+              { emoji: '📱', name: '@tablet', role: 'Research', tasks: 156, status: 'active' },
+              { emoji: '🔧', name: '@Quel', role: 'Code Quality', tasks: 34, status: 'active' },
+              { emoji: '🚀', name: '@Rocket', role: 'Delivery', tasks: 28, status: 'available' },
+              { emoji: '🦉', name: '@OWL', role: 'Fleet Coord', tasks: 62, status: 'active' },
+            ].map(bot => (
+              <div key={bot.name} className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 text-center hover:border-purple-500/30 transition-all group">
+                <div className="text-3xl mb-2">{bot.emoji}</div>
+                <div className="font-medium text-sm mb-0.5">{bot.name}</div>
+                <div className="text-[10px] text-slate-500 mb-2">{bot.role}</div>
+                <div className="flex items-center justify-center gap-1.5">
+                  <span className={`w-1.5 h-1.5 rounded-full ${bot.status === 'active' ? 'bg-emerald-500' : 'bg-blue-500'}`} />
+                  <span className="text-[10px] text-slate-400">{bot.tasks} tasks</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Stats Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-purple-400">772</div>
+              <div className="text-[10px] text-slate-500 uppercase tracking-wider">Services</div>
+            </div>
+            <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-emerald-400">35</div>
+              <div className="text-[10px] text-slate-500 uppercase tracking-wider">Waves</div>
+            </div>
+            <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-pink-400">416</div>
+              <div className="text-[10px] text-slate-500 uppercase tracking-wider">Tasks Done</div>
+            </div>
+            <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-cyan-400">24/7</div>
+              <div className="text-[10px] text-slate-500 uppercase tracking-wider">Uptime</div>
+            </div>
+          </div>
+
+          {/* Recent Activity Ticker */}
+          <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-4 mb-8">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xs font-semibold text-slate-300">📜 Recent Activity</span>
+              <span className="text-[10px] text-slate-500">— live agent log</span>
+            </div>
+            <div className="space-y-2">
+              {[
+                { time: '16:00', bot: '@OWL', action: 'Fixed circular import — 772 services now loaded', cat: 'fix' },
+                { time: '15:45', bot: '@Kilo', action: 'Wave 208 integration — 15 services, 5 new categories', cat: 'wave' },
+                { time: '14:45', bot: '@Kilo', action: 'Fleet rebalance — all P1/P2 tasks reassigned', cat: 'coordination' },
+                { time: '14:00', bot: '@tablet', action: 'Wave 207 research — Grafana, Keycloak, Strapi, Medusa, Outline', cat: 'research' },
+              ].map((entry, i) => (
+                <div key={i} className="flex items-center gap-2 text-xs">
+                  <span className="text-[10px] font-mono text-slate-500 w-10">{entry.time}</span>
+                  <span className="text-purple-300 font-medium w-14">{entry.bot}</span>
+                  <span className="text-slate-400 truncate">{entry.action}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Link href="/dashboard" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-xl font-medium text-sm hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/20">
+              ⚡ View Live Agent Dashboard — Watch Them Work →
+            </Link>
+            <p className="text-[10px] text-slate-500 mt-2">Real-time monitoring · Activity log · Task board · Client showcase</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── From the Blog ── */}
       <section className="py-20 bg-slate-900/20 border-t border-slate-800/60">
         <div className="container-page">

@@ -5,6 +5,15 @@ import { useState } from 'react';
 
 const DOCK_ITEMS = [
   {
+    id: 'agent-dashboard',
+    href: '/dashboard',
+    emoji: '⚡',
+    label: 'AI Agents Live',
+    action: 'nav',
+    color: 'from-purple-500 to-pink-500',
+    priority: true,
+  },
+  {
     id: 'search',
     href: '#',
     emoji: '🔍',
@@ -43,14 +52,6 @@ const DOCK_ITEMS = [
     label: 'Service Statistics',
     action: 'nav',
     color: 'from-emerald-500 to-green-500',
-  },
-  {
-    id: 'agent-dashboard',
-    href: '/dashboard',
-    emoji: '⚡',
-    label: 'Agent Dashboard',
-    action: 'nav',
-    color: 'from-violet-500 to-purple-500',
   },
   {
     id: 'contact',
@@ -127,12 +128,16 @@ export default function FloatingActionDock() {
                 key={item.id}
                 href={item.href}
                 onClick={() => doAction(item)}
-                className="group flex items-center gap-3 bg-slate-900/90 border border-slate-700/70 rounded-2xl px-4 py-2.5 shadow-xl hover:border-purple-500/50 transition-all duration-200 max-w-[260px] backdrop-blur-xl"
+                className={`group flex items-center gap-3 rounded-2xl px-4 py-2.5 shadow-xl transition-all duration-200 max-w-[260px] backdrop-blur-xl ${
+                  'priority' in item && item.priority
+                    ? 'bg-gradient-to-r from-purple-900/90 to-pink-900/90 border border-purple-500/50 hover:border-purple-400 shadow-purple-500/20'
+                    : 'bg-slate-900/90 border border-slate-700/70 hover:border-purple-500/50'
+                }`}
               >
-                <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-base shrink-0`}>
+                <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-base shrink-0 ${'priority' in item && item.priority ? 'animate-pulse' : ''}`}>
                   {item.emoji}
                 </div>
-                <span className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors whitespace-nowrap">
+                <span className={`text-sm font-medium transition-colors whitespace-nowrap ${'priority' in item && item.priority ? 'text-purple-200 group-hover:text-white' : 'text-white group-hover:text-purple-300'}`}>
                   {item.label}
                 </span>
               </Link>
