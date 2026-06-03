@@ -52,15 +52,17 @@ interface CronEntry {
 
 const BOT_ROSTER: BotStatus[] = [
   { name: '@windows_carol_bot', role: 'DevOps & Infrastructure', emoji: '🖥️', status: 'active', currentTask: 'CI/CD workflows, wave integration, accessibility', tasksCompleted: 47, lastAction: 'Wave 208 CI/CD pipeline', lastActionTime: '2026-06-03 14:30' },
-  { name: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Coordination lead, quality audits', tasksCompleted: 89, lastAction: 'Fleet rebalance + wave 207 recovery', lastActionTime: '2026-06-03 14:45' },
-  { name: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'active', currentTask: 'Wave 209 research pipeline', tasksCompleted: 156, lastAction: 'Wave 208 research (15 services)', lastActionTime: '2026-06-03 14:00' },
-  { name: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'active', currentTask: 'Site quality, thin page re-scan', tasksCompleted: 34, lastAction: 'Thin page content enrichment', lastActionTime: '2026-06-04 10:00' },
+  { name: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Coordination lead, quality audits', tasksCompleted: 92, lastAction: 'Fleet rebalance #4 + wave 209 integration', lastActionTime: '2026-06-09 16:15' },
+  { name: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'active', currentTask: 'Wave 210 research pipeline', tasksCompleted: 158, lastAction: 'Wave 209 research (5 services)', lastActionTime: '2026-06-09 16:00' },
+  { name: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'active', currentTask: 'Site quality, thin page re-scan, nav improvements', tasksCompleted: 34, lastAction: 'Thin page content enrichment', lastActionTime: '2026-06-04 10:00' },
   { name: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'Build/CI/CD optimization', tasksCompleted: 28, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-03 12:00' },
-  { name: '@OWL', role: 'Build & Deploy / Fleet Coordinator', emoji: '🦉', status: 'active', currentTask: 'Wave integration, bug fixes, fleet coordination', tasksCompleted: 62, lastAction: 'Circular import fix — 772 services', lastActionTime: '2026-06-09 16:00' },
+  { name: '@OWL', role: 'Build & Deploy / Fleet Coordinator', emoji: '🦉', status: 'active', currentTask: 'Wave 209 integration, dashboard v3, link verification', tasksCompleted: 65, lastAction: 'Wave 209 integration — 5 services pushed', lastActionTime: '2026-06-09 16:15' },
 ];
 
 const DELEGATION_LOG: DelegationEntry[] = [
-  { time: '2026-06-09 16:00', bot: '@OWL', action: 'Circular import fix', result: 'Extracted Service type to serviceTypes.ts — 772 services (was 762)', category: 'fix' },
+  { time: '2026-06-09 16:15', bot: '@Kilo', action: 'ORGANIZE #4 — Fleet rebalance', result: 'Wave 209 integrated (5 services), coord doc updated, 6-bot roster', category: 'coordination' },
+  { time: '2026-06-09 16:15', bot: '@OWL', action: 'Wave 209 integration', result: 'wave209.ts created, servicesData.ts updated, pushed 1a8beeda', category: 'wave' },
+  { time: '2026-06-09 16:00', bot: '@tablet', action: 'Wave 209 research', result: '5 services: Kafka, Meilisearch, Plane, Playwright, Kong Gateway', category: 'research' },
   { time: '2026-06-03 15:45', bot: '@Kilo', action: 'Wave 208 full integration', result: '15 services (10 Carol + 5 OWL new categories), lowercase categories', category: 'integration' },
   { time: '2026-06-03 15:30', bot: '@Kilo', action: 'Wave 207 recovery', result: "Restored Carol's 10 lost services, fixed categories", category: 'fix' },
   { time: '2026-06-03 15:00', bot: '@OWL', action: 'Agent Dashboard v2', result: 'Real-time fleet monitor, task board, activity log', category: 'integration' },
@@ -115,17 +117,20 @@ const WAVE_STATUS: WaveEntry[] = [
   { wave: '206', services: '8', status: 'ok', integrator: '@OWL' },
   { wave: '207', services: '15', status: 'ok', integrator: '@Kilo + @tablet' },
   { wave: '208', services: '14', status: 'ok', integrator: '@Kilo + @Carol' },
+  { wave: '209', services: '5', status: 'ok', integrator: '@tablet + @OWL' },
 ];
 
 const ALL_TASKS: TaskEntry[] = [
   { id: 'P1-2', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-3', task: 'Wave 209 research pipeline', owner: '@tablet', status: 'queued', priority: 'p1' },
-  { id: 'P1-4', task: 'Full site link crawl + fix broken links', owner: '@OWL', status: 'in-progress', priority: 'p1' },
+  { id: 'P1-3', task: 'Full site link crawl + fix broken links', owner: '@OWL', status: 'in-progress', priority: 'p1' },
+  { id: 'P1-4', task: 'Dashboard v3 — real-time data, agent auto-update', owner: '@OWL', status: 'in-progress', priority: 'p1' },
   { id: 'B2', task: 'CI/CD pipeline hardening', owner: '@Rocket', status: 'queued', priority: 'p2' },
   { id: 'B3', task: 'GitHub auth for Actions triage', owner: '@Carol', status: 'blocked', priority: 'blocked', needs: 'gh auth on remote' },
   { id: 'B4', task: 'Service page auto-generation', owner: '@tablet', status: 'queued', priority: 'p2' },
   { id: 'B5', task: 'Thin page content enrichment', owner: '@Kilo', status: 'in-progress', priority: 'p2' },
-  { id: 'B6', task: 'Wave 209+ research pipeline', owner: '@tablet', status: 'queued', priority: 'p2' },
+  { id: 'B6', task: 'Wave 210 research', owner: '@tablet', status: 'queued', priority: 'p2' },
+  { id: 'B7', task: 'Site navigation/design improvements', owner: '@Windows_quel', status: 'queued', priority: 'p2' },
+  { id: 'B8', task: 'Agent self-improvement plan', owner: '@Kilo', status: 'queued', priority: 'p2' },
   { id: 'X1', task: 'Email responder live', owner: '@Kilo', status: 'blocked', priority: 'blocked', needs: 'Gmail app password from Kleber' },
   { id: 'X2', task: 'GitHub Actions triage', owner: '@Carol', status: 'blocked', priority: 'blocked', needs: 'gh auth on remote machine' },
 ];
@@ -196,7 +201,7 @@ export default function AgentDashboard() {
   }, []);
 
   const activeBots = BOT_ROSTER.filter(b => b.status === 'active').length;
-  const totalServices = 772;
+  const totalServices = 795;
   const totalWaves = WAVE_STATUS.length;
   const completedActions = DELEGATION_LOG.length;
   const totalTasksCompleted = BOT_ROSTER.reduce((s, b) => s + b.tasksCompleted, 0);
