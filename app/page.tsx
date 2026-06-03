@@ -105,7 +105,7 @@ export default function HomePage() {
   const stats = [
     { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
     { value: '11 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel' },
-    { value: '24/7', label: STAT_MONITOR },
+    { value: <Link href="/dashboard" className="text-purple-400 hover:text-purple-300 transition">⚡ Live Agents</Link>, label: '6 AI agents working 24/7' },
     { value: '99.9%', label: STAT_SLA },
   ];
 
@@ -290,6 +290,9 @@ let list = services;
 
             {/* ── Secondary CTAs — extra discovery links ── */}
             <div className="flex flex-wrap justify-center gap-3 mt-2">
+              <Link href="/dashboard" className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 text-sm hover:bg-purple-500/30 hover:text-white transition-all font-medium">
+                ⚡ Agent Dashboard
+              </Link>
               <Link href="/search/" className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300 text-sm hover:bg-slate-700/80 hover:text-purple-300 hover:border-purple-500/30 transition-all">
                 🔍 Search Services
               </Link>
