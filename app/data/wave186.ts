@@ -80,3 +80,5 @@ export const wave186MicroSaasServices: Service[] = [
     icon: '🗳️', href: '/services/microsaas-feature-voting', popular: false, category: 'Micro-SaaS', industry: 'SaaS',
   },
 ];
+
+export const wave186CloudServices: Service[] = [];

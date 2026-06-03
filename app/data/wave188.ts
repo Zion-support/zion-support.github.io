@@ -93,3 +93,5 @@ export const wave188ItServices: Service[] = [
     icon: '🎫', href: '/services/it-itsm-platform', popular: true, category: 'it', industry: 'Technology',
   },
 ];
+
+export const wave188AutomationServices: Service[] = [];
