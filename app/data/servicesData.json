@@ -50298,5 +50298,113 @@
     "popular": true,
     "category": "healthcare-it",
     "industry": "Healthcare"
+  },
+  {
+    "id": "ai-supply-chain-risk",
+    "title": "AI Supply Chain Risk Intelligence",
+    "description": "Monitor supply chain risks in real-time. Supplier financial health, geopolitical risk, natural disaster impact, and alternative sourcing recommendations.",
+    "features": [
+      "Supplier financial health monitoring",
+      "Geopolitical risk scoring",
+      "Natural disaster impact analysis",
+      "Alternative supplier recommendations",
+      "Multi-tier supply chain mapping",
+      "Integration with SAP, Oracle",
+      "Risk alert dashboard",
+      "Scenario modeling"
+    ],
+    "benefits": [
+      "Prevent supply disruptions",
+      "Diversify supplier base",
+      "Real-time risk visibility",
+      "Data-driven sourcing decisions"
+    ],
+    "pricing": {
+      "basic": "$799/mo",
+      "pro": "$2,399/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/ai-supply-chain-risk",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔗",
+    "href": "/services/ai-supply-chain-risk",
+    "popular": false,
+    "category": "ai",
+    "industry": "Supply Chain"
+  },
+  {
+    "id": "data-privacy-consent-management",
+    "title": "Privacy & Consent Management Platform",
+    "description": "GDPR, CCPA, and global privacy compliance. Consent collection, data subject request management, and privacy impact assessments.",
+    "features": [
+      "Consent collection and management",
+      "Data subject request (DSR) automation",
+      "Privacy impact assessments",
+      "Cookie consent banner",
+      "Global privacy law coverage",
+      "Integration with OneTrust, TrustArc",
+      "Audit trail and reporting",
+      "Data mapping and inventory"
+    ],
+    "benefits": [
+      "Avoid GDPR fines up to 4% revenue",
+      "Automate DSR workflows",
+      "Build customer trust",
+      "Centralize privacy compliance"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$599/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/data-privacy-consent-management",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔒",
+    "href": "/services/data-privacy-consent-management",
+    "popular": false,
+    "category": "data",
+    "industry": "Legal"
+  },
+  {
+    "id": "security-zero-trust-network",
+    "title": "Zero Trust Network Access (ZTNA)",
+    "description": "Replace VPN with zero trust. Identity-based access, micro-segmentation, and continuous verification for hybrid workforces.",
+    "features": [
+      "Identity-based access control",
+      "Micro-segmentation",
+      "Continuous device and user verification",
+      "Replace traditional VPN",
+      "Integration with IdP (Okta, Azure AD)",
+      "Shadow IT discovery",
+      "Access analytics and audit",
+      "Support for remote and hybrid work"
+    ],
+    "benefits": [
+      "Eliminate VPN complexity",
+      "Reduce attack surface",
+      "Secure remote access",
+      "Meet zero trust mandates"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$599/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/security-zero-trust-network",
+      "email": "kleber@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🔐",
+    "href": "/services/security-zero-trust-network",
+    "popular": true,
+    "category": "security",
+    "industry": "Technology"
   }
 ]

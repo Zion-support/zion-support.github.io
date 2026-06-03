@@ -19085,6 +19085,17 @@ export const newAutomationServices: Service[] = [
     contactInfo: {website:'/services/logistics-tech-last-mile-optimization', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🚚', href: '/services/logistics-tech-last-mile-optimization', popular: true, category: 'logistics-tech', industry: 'Logistics',
   }
+,
+  {
+    id: 'automation-intelligent-document-processing',
+    title: 'Intelligent Document Processing (IDP)',
+    description: 'Automate document-heavy workflows. OCR, classification, extraction, and routing for invoices, claims, applications, and forms.',
+    features: ["OCR and intelligent document classification", "Key-value extraction", "Workflow routing and approval", "Integration with RPA tools (UiPath, Automation Anywhere)", "Custom model training", "Human-in-the-loop validation", "Analytics on processing accuracy", "API and batch processing"],
+    benefits: ["Process documents 10x faster", "Reduce manual data entry 90%", "Improve accuracy", "Scale without hiring"],
+    pricing: {"basic": "$399/mo", "pro": "$1,199/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/automation-intelligent-document-processing', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '📑', href: '/services/automation-intelligent-document-processing', popular: true, category: 'automation', industry: 'Technology',
+  }
 ];
 
 
@@ -19327,6 +19338,27 @@ export const additionalNewAiServices: Service[] = [
     contactInfo: {website:'/services/ai-multimodal-search', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🔎', href: '/services/ai-multimodal-search', popular: true, category: 'ai', industry: 'Technology',
   }
+,
+  {
+    id: 'ai-supply-chain-risk',
+    title: 'AI Supply Chain Risk Intelligence',
+    description: 'Monitor supply chain risks in real-time. Supplier financial health, geopolitical risk, natural disaster impact, and alternative sourcing recommendations.',
+    features: ["Supplier financial health monitoring", "Geopolitical risk scoring", "Natural disaster impact analysis", "Alternative supplier recommendations", "Multi-tier supply chain mapping", "Integration with SAP, Oracle", "Risk alert dashboard", "Scenario modeling"],
+    benefits: ["Prevent supply disruptions", "Diversify supplier base", "Real-time risk visibility", "Data-driven sourcing decisions"],
+    pricing: {"basic": "$799/mo", "pro": "$2,399/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-supply-chain-risk', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔗', href: '/services/ai-supply-chain-risk', popular: false, category: 'ai', industry: 'Supply Chain',
+  },
+  {
+    id: 'ai-customer-data-platform',
+    title: 'AI-Powered Customer Data Platform',
+    description: 'Unify customer data from all sources. AI segmentation, predictive analytics, and activation across marketing channels.',
+    features: ["Customer data unification", "Identity resolution", "AI segmentation and lookalike", "Predictive analytics (LTV, churn)", "Activation across email, ads, SMS", "Integration with Segment, mParticle", "Privacy-compliant data handling", "Real-time customer profiles"],
+    benefits: ["360-degree customer view", "AI-driven segmentation", "Predict customer behavior", "Activate data across channels"],
+    pricing: {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-customer-data-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '👤', href: '/services/ai-customer-data-platform', popular: false, category: 'ai', industry: 'Marketing',
+  }
 ];
 
 
@@ -19537,6 +19569,17 @@ export const additionalNewMicroSaaS: Service[] = [
     pricing: {"basic": "$49/mo", "pro": "$149/mo", "enterprise": "$449/mo"},
     contactInfo: {website:'/services/micro-saas-feature-flags', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🚩', href: '/services/micro-saas-feature-flags', popular: true, category: 'micro-saas', industry: 'SaaS',
+  }
+,
+  {
+    id: 'micro-saas-api-monetization',
+    title: 'APIMonetize — API Monetization Platform',
+    description: 'Turn APIs into revenue streams. Usage-based billing, developer portals, rate limiting, and analytics for API-first businesses.',
+    features: ["Usage-based billing", "Developer portal with docs", "Rate limiting and quotas", "API key management", "Analytics and revenue tracking", "Integration with Stripe, PayPal", "SDK generation", "Webhook notifications"],
+    benefits: ["Monetize existing APIs", "Self-service developer onboarding", "Usage-based pricing flexibility", "Reduce billing engineering"],
+    pricing: {"basic": "$99/mo", "pro": "$299/mo", "enterprise": "$899/mo"},
+    contactInfo: {website:'/services/micro-saas-api-monetization', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '💰', href: '/services/micro-saas-api-monetization', popular: true, category: 'micro-saas', industry: 'SaaS',
   }
 ];
 
@@ -19780,6 +19823,27 @@ export const additionalNewSecurityServices: Service[] = [
     contactInfo: {website:'/services/cybersecurity-pentest-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🔓', href: '/services/cybersecurity-pentest-automation', popular: true, category: 'cybersecurity', industry: 'Technology',
   }
+,
+  {
+    id: 'ai-synthetic-media-detection',
+    title: 'AI Synthetic Media Detection Suite',
+    description: 'Detect AI-generated text, images, video, and audio. Protect against deepfakes, AI-written content fraud, and synthetic identity attacks.',
+    features: ["AI text detection (GPT, Claude, Gemini)", "Image provenance analysis", "Video deepfake detection", "Audio voice clone detection", "API for real-time scanning", "Browser extension for content verification", "Batch scanning for enterprises", "Confidence scoring with explanations"],
+    benefits: ["Protect against AI fraud", "Verify content authenticity", "Meet regulatory requirements", "Brand and reputation protection"],
+    pricing: {"basic": "$399/mo", "pro": "$1,199/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-synthetic-media-detection', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🕵️', href: '/services/ai-synthetic-media-detection', popular: true, category: 'cybersecurity', industry: 'Technology',
+  },
+  {
+    id: 'security-zero-trust-network',
+    title: 'Zero Trust Network Access (ZTNA)',
+    description: 'Replace VPN with zero trust. Identity-based access, micro-segmentation, and continuous verification for hybrid workforces.',
+    features: ["Identity-based access control", "Micro-segmentation", "Continuous device and user verification", "Replace traditional VPN", "Integration with IdP (Okta, Azure AD)", "Shadow IT discovery", "Access analytics and audit", "Support for remote and hybrid work"],
+    benefits: ["Eliminate VPN complexity", "Reduce attack surface", "Secure remote access", "Meet zero trust mandates"],
+    pricing: {"basic": "$199/mo", "pro": "$599/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/security-zero-trust-network', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔐', href: '/services/security-zero-trust-network', popular: true, category: 'security', industry: 'Technology',
+  }
 ];
 
 
@@ -19880,6 +19944,17 @@ export const additionalNewCloudServices: Service[] = [
     pricing: {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
     contactInfo: {website:'/services/energy-tech-carbon-tracking', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🌍', href: '/services/energy-tech-carbon-tracking', popular: true, category: 'energy-tech', industry: 'Energy',
+  }
+,
+  {
+    id: 'cloud-finops-platform',
+    title: 'Cloud FinOps Platform',
+    description: 'Cloud cost optimization and financial management. Multi-cloud cost visibility, waste detection, reserved instance management, and chargeback.',
+    features: ["Multi-cloud cost visibility (AWS, Azure, GCP)", "Waste detection and auto-remediation", "Reserved instance and savings plan management", "Chargeback and showback", "Budget alerts and forecasting", "Integration with CloudHealth, Spot.io", "Kubernetes cost allocation", "FinOps best practices dashboard"],
+    benefits: ["Reduce cloud spend 30%", "Automate cost optimization", "Chargeback accuracy", "FinOps culture enablement"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/cloud-finops-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '☁️', href: '/services/cloud-finops-platform', popular: true, category: 'cloud', industry: 'Technology',
   }
 ];
 
@@ -20011,6 +20086,17 @@ export const additionalNewDataServices: Service[] = [
     pricing: {"basic": "$199/mo", "pro": "$599/mo", "enterprise": "$1,499/mo"},
     contactInfo: {website:'/services/agritech-greenhouse-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🏠', href: '/services/agritech-greenhouse-automation', popular: false, category: 'agritech', industry: 'Agriculture',
+  }
+,
+  {
+    id: 'data-privacy-consent-management',
+    title: 'Privacy & Consent Management Platform',
+    description: 'GDPR, CCPA, and global privacy compliance. Consent collection, data subject request management, and privacy impact assessments.',
+    features: ["Consent collection and management", "Data subject request (DSR) automation", "Privacy impact assessments", "Cookie consent banner", "Global privacy law coverage", "Integration with OneTrust, TrustArc", "Audit trail and reporting", "Data mapping and inventory"],
+    benefits: ["Avoid GDPR fines up to 4% revenue", "Automate DSR workflows", "Build customer trust", "Centralize privacy compliance"],
+    pricing: {"basic": "$199/mo", "pro": "$599/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/data-privacy-consent-management', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔒', href: '/services/data-privacy-consent-management', popular: false, category: 'data', industry: 'Legal',
   }
 ];
 
