@@ -23,6 +23,8 @@ import { wave176AiServices, wave176MicroSaasServices, wave176ItServices, wave176
 
 import { wave177AiServices, wave177MicroSaasServices, wave177ItServices, wave177SecurityServices, wave177CloudServices, wave177DataServices, wave177AutomationServices } from './wave177';
 
+import { wave183AiServices, wave183MicroSaasServices, wave183ItServices, wave183SecurityServices, wave183CloudServices, wave183DataServices, wave183AutomationServices } from './wave183';
+
 export const aiServices: Service[] = [
   {
     id: 'advanced-ai-enterprise-intelligence-hub',
@@ -20244,6 +20246,13 @@ export const allServices: Service[] = [
   ...additionalNewManufacturingTechServices,
   ...additionalNewAiServicesServices,
   ...additionalNewItServicesServices,
+  ...wave183AiServices,
+  ...wave183MicroSaasServices,
+  ...wave183ItServices,
+  ...wave183SecurityServices,
+  ...wave183CloudServices,
+  ...wave183DataServices,
+  ...wave183AutomationServices,
 ].filter((s): s is Service => s !== undefined);
 
 
