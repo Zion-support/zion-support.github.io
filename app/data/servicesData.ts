@@ -44,6 +44,7 @@ import { wave201AiServices, wave201MicroSaasServices, wave201DataServices, wave2
 import { wave202AiServices, wave202MicroSaasServices, wave202DataServices, wave202SecurityServices, wave202CloudServices, wave202AutomationServices, wave202ItServices, wave202HealthcareItServices } from './wave202';
 import { wave203AiServices, wave203MicroSaasServices, wave203DataServices, wave203SecurityServices, wave203CloudServices, wave203AutomationServices, wave203ItServices, wave203HealthcareItServices } from './wave203';
 import { wave204AiServices, wave204MicroSaasServices, wave204DataServices, wave204SecurityServices, wave204CloudServices, wave204AutomationServices, wave204ItServices, wave204HealthcareItServices } from './wave204';
+import { wave205AiServices, wave205MicroSaasServices, wave205DataServices, wave205SecurityServices, wave205CloudServices, wave205AutomationServices, wave205ItServices, wave205HealthcareItServices } from './wave205';
 
 
 export const aiServices: Service[] = [
@@ -1508,4 +1509,12 @@ export const allServices: Service[] = [
   ...wave204AutomationServices,
   ...wave204ItServices,
   ...wave204HealthcareItServices,
+  ...wave205AiServices,
+  ...wave205MicroSaasServices,
+  ...wave205DataServices,
+  ...wave205SecurityServices,
+  ...wave205CloudServices,
+  ...wave205AutomationServices,
+  ...wave205ItServices,
+  ...wave205HealthcareItServices,
 ].filter((s: Service) => s.benefits.length > 0);
