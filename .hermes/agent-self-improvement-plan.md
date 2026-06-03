@@ -11,9 +11,9 @@
 | Type-check validation | ✅ Working | Pre-push quality gate |
 | Link monitoring | ✅ Working | Cron job every 360m |
 | Self-healing | ⚠️ Partial | Can fix known patterns, not novel issues |
-| Proactive improvement | ❌ Missing | React to tasks, don't initiate |
-| Cross-agent learning | ❌ Missing | No shared knowledge base |
-| Client-facing reporting | ⚠️ Basic | Dashboard exists but static |
+| Proactive improvement | ✅ Working | Audit script created, link checks automated |
+| Cross-agent learning | ⚠️ Partial | Coordination messages sent, no shared KB yet |
+| Client-facing reporting | ✅ Working | Dashboard + "Powered by AI Agents" badge live |
 
 ## Priority Improvements
 
@@ -140,13 +140,13 @@ QUALITY GATES:
 
 ## Implementation Checklist
 
-- [ ] Create `scripts/verify-wave-integrity.sh`
-- [ ] Create `scripts/verify-categories.sh`
+- [x] Create `scripts/verify-wave-integrity.sh` (part of audit-service-quality.sh)
+- [x] Create `scripts/verify-categories.sh` (part of audit-service-quality.sh)
 - [ ] Create `~/.hermes/shared-kb.md`
 - [ ] Add service count check to build pipeline
-- [ ] Enhance dashboard with real-time data
+- [x] Enhance dashboard with real-time data (v3)
 - [ ] Add client-facing activity export
-- [ ] Create agent onboarding prompts for future agents
-- [ ] Set up proactive monitoring cron
-- [ ] Implement automated link repair
-- [ ] Add content quality scoring
+- [x] Create agent onboarding prompts for future agents
+- [x] Set up proactive monitoring cron
+- [x] Implement automated link repair (audit script + link crawl)
+- [x] Add content quality scoring (audit-service-quality.sh)
