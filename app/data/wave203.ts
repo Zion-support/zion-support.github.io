@@ -12,7 +12,7 @@ export const wave203AiServices: Service[] = [
     industry: "Supply Chain",
     stage: "published",
     popular: true,
-    pricing: { basic: 349, pro: 799, enterprise: 1699 },
+    pricing: { basic: "$349/mo", pro: "$799/mo", enterprise: "$1699/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-tier supplier mapping with dependency visualization",
@@ -39,7 +39,7 @@ export const wave203AiServices: Service[] = [
     industry: "Social Media & Communities",
     stage: "published",
     popular: true,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-modal moderation (text, image, video, audio)",
@@ -69,7 +69,7 @@ export const wave203DataServices: Service[] = [
     industry: "Enterprise Data",
     stage: "published",
     popular: true,
-    pricing: { basic: 249, pro: 549, enterprise: 1199 },
+    pricing: { basic: "$249/mo", pro: "$549/mo", enterprise: "$1199/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Automated data asset discovery across databases, lakes, and warehouses",
@@ -96,7 +96,7 @@ export const wave203DataServices: Service[] = [
     industry: "Data Engineering",
     stage: "published",
     popular: false,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: "$199/mo", pro: "$449/mo", enterprise: "$999/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Centralized metric definitions with versioning",
@@ -126,7 +126,7 @@ export const wave203CloudServices: Service[] = [
     industry: "Cloud Development",
     stage: "published",
     popular: true,
-    pricing: { basic: 99, pro: 249, enterprise: 549 },
+    pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Function-as-a-service with zero cold start technology",
@@ -156,7 +156,7 @@ export const wave203SecurityServices: Service[] = [
     industry: "Cloud Security",
     stage: "published",
     popular: true,
-    pricing: { basic: 249, pro: 549, enterprise: 1199 },
+    pricing: { basic: "$249/mo", pro: "$549/mo", enterprise: "$1199/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-cloud misconfiguration detection (500+ checks)",
@@ -186,7 +186,7 @@ export const wave203AutomationServices: Service[] = [
     industry: "DevOps",
     stage: "published",
     popular: true,
-    pricing: { basic: 149, pro: 349, enterprise: 799 },
+    pricing: { basic: "$149/mo", pro: "$349/mo", enterprise: "$799/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Feature flags with targeting rules and gradual rollout",
@@ -216,7 +216,7 @@ export const wave203ItServices: Service[] = [
     industry: "IT Operations",
     stage: "published",
     popular: true,
-    pricing: { basic: 99, pro: 249, enterprise: 549 },
+    pricing: { basic: "$99/mo", pro: "$249/mo", enterprise: "$549/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "AI chatbot for L1 support with natural language understanding",
@@ -246,7 +246,7 @@ export const wave203MicroSaasServices: Service[] = [
     industry: "Business Tools",
     stage: "published",
     popular: false,
-    pricing: { basic: 29, pro: 79, enterprise: 199 },
+    pricing: { basic: "$29/mo", pro: "$79/mo", enterprise: "$199/mo" },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Drag-and-drop form builder with 40+ field types",
