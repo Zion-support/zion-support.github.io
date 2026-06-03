@@ -196,7 +196,7 @@ export default function AgentDashboard() {
   }, []);
 
   const activeBots = BOT_ROSTER.filter(b => b.status === 'active').length;
-  const totalServices = 795;
+  const totalServices = 759;
   const totalWaves = WAVE_STATUS.length;
   const completedActions = DELEGATION_LOG.length;
   const totalTasksCompleted = BOT_ROSTER.reduce((s, b) => s + b.tasksCompleted, 0);
