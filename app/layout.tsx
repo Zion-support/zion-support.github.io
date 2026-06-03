@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import SkipLink from './components/SkipLink';
+import EnhancedSkipLink from './components/EnhancedSkipLink';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
@@ -18,6 +19,7 @@ import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidg
 import AIExperienceLoader from './components/AIExperienceLoader';
 import ErrorTracker from './components/ErrorTracker';
 import FieldPerformanceCollector from './components/FieldPerformanceCollector';
+import { useFocusManagement } from './hooks/useFocusManagement';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
@@ -70,6 +72,8 @@ export default function RootLayout({
 }: {
   children: ReactNode;
 }) {
+  useFocusManagement();
+
   return (
     <>
       {/* JSON-LD: Organization */}
@@ -98,7 +102,7 @@ export default function RootLayout({
           <Analytics />
           <CtaTracking />
           <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
-            <SkipLink />
+            <EnhancedSkipLink />
             <ReadingProgressBar />
             <Header />
             <main className="relative z-10 flex-1" id="main-content" tabIndex={-1} role="main">
