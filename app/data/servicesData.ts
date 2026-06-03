@@ -17,6 +17,8 @@ export interface Service {
 
 import { wave174AiServices, wave174MicroSaasServices, wave174ItServices, wave174SecurityServices, wave174CloudServices, wave174DataServices, wave174AutomationServices } from './wave174';
 
+import { wave175AiServices, wave175MicroSaasServices, wave175ItServices, wave175SecurityServices, wave175CloudServices, wave175DataServices, wave175AutomationServices } from './wave175';
+
 export const aiServices: Service[] = [
   {
     id: 'advanced-ai-enterprise-intelligence-hub',
@@ -19294,6 +19296,13 @@ export const allServices: Service[] = [
   ...wave174CloudServices,
   ...wave174DataServices,
   ...wave174AutomationServices,
+  ...wave175AiServices,
+  ...wave175MicroSaasServices,
+  ...wave175ItServices,
+  ...wave175SecurityServices,
+  ...wave175CloudServices,
+  ...wave175DataServices,
+  ...wave175AutomationServices,
 ].filter((s): s is Service => s !== undefined);
 
 
