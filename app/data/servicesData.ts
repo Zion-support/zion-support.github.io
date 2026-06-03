@@ -19074,6 +19074,17 @@ export const newAutomationServices: Service[] = [
     contactInfo: {website:'/services/logistics-tech-supply-chain-visibility', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '📦', href: '/services/logistics-tech-supply-chain-visibility', popular: false, category: 'logistics-tech', industry: 'Logistics',
   }
+,
+  {
+    id: 'logistics-tech-last-mile-optimization',
+    title: 'Last-Mile Delivery Optimization',
+    description: 'AI last-mile delivery optimization. Route planning, driver tracking, customer notifications, and proof of delivery.',
+    features: ["Dynamic route optimization", "Real-time driver tracking", "Customer ETA notifications", "Proof of delivery (photo, signature)", "Capacity planning", "Integration with carriers (UPS, FedEx, USPS)", "Delivery analytics", "Returns management"],
+    benefits: ["Reduce last-mile costs 20%", "Improve delivery experience", "Real-time visibility", "Automated proof of delivery"],
+    pricing: {"basic": "$349/mo", "pro": "$1,049/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/logistics-tech-last-mile-optimization', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🚚', href: '/services/logistics-tech-last-mile-optimization', popular: true, category: 'logistics-tech', industry: 'Logistics',
+  }
 ];
 
 
@@ -19295,6 +19306,27 @@ export const additionalNewAiServices: Service[] = [
     contactInfo: {website:'/services/ai-document-understanding-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '📄', href: '/services/ai-document-understanding-platform', popular: true, category: 'ai', industry: 'Technology',
   }
+,
+  {
+    id: 'ai-legal-contract-analysis',
+    title: 'AI Contract Analysis & Lifecycle Management',
+    description: 'Analyze contracts with AI. Clause extraction, risk scoring, obligation tracking, and renewal management.',
+    features: ["Contract clause extraction", "Risk scoring and flagging", "Obligation and milestone tracking", "Renewal and expiration alerts", "Template library with fallback clauses", "Version comparison", "Integration with DocuSign, Ironclad", "Bulk contract analysis"],
+    benefits: ["Review contracts 10x faster", "Never miss a renewal", "Identify risky clauses automatically", "Centralize contract management"],
+    pricing: {"basic": "$399/mo", "pro": "$1,199/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-legal-contract-analysis', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '📝', href: '/services/ai-legal-contract-analysis', popular: false, category: 'ai', industry: 'Legal',
+  },
+  {
+    id: 'ai-multimodal-search',
+    title: 'Multimodal AI Search Engine',
+    description: 'Search across text, images, video, and audio with a single query. Embedding-based semantic search for enterprise knowledge.',
+    features: ["Text, image, video, audio search", "Semantic embedding search", "Cross-modal queries (text\u2192image, image\u2192text)", "Custom index creation", "Real-time indexing", "Integration with Elasticsearch, Pinecone, Weaviate", "Access control and permissions", "Analytics dashboard"],
+    benefits: ["Search all content types in one place", "Find results keyword search misses", "Index enterprise knowledge", "Scale to billions of items"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/ai-multimodal-search', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔎', href: '/services/ai-multimodal-search', popular: true, category: 'ai', industry: 'Technology',
+  }
 ];
 
 
@@ -19495,6 +19527,17 @@ export const additionalNewMicroSaaS: Service[] = [
     contactInfo: {website:'/services/retail-tech-personalization-engine', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🛒', href: '/services/retail-tech-personalization-engine', popular: false, category: 'retail-tech', industry: 'Retail',
   }
+,
+  {
+    id: 'micro-saas-feature-flags',
+    title: 'FeatureFlag Pro — Feature Management',
+    description: 'Feature flags, progressive rollouts, and experimentation platform. Ship code safely with canary releases and A/B testing.',
+    features: ["Feature flags (boolean, percentage, user-based)", "Canary releases", "A/B testing and experimentation", "Kill switches for instant rollback", "Segment targeting", "SDKs for 20+ languages", "Integration with GitHub, GitLab, LaunchDarkly migration", "Audit log and approval workflows"],
+    benefits: ["Ship code safely", "Reduce rollback time to seconds", "Experiment without risk", "Gradual rollout to users"],
+    pricing: {"basic": "$49/mo", "pro": "$149/mo", "enterprise": "$449/mo"},
+    contactInfo: {website:'/services/micro-saas-feature-flags', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🚩', href: '/services/micro-saas-feature-flags', popular: true, category: 'micro-saas', industry: 'SaaS',
+  }
 ];
 
 
@@ -19605,6 +19648,27 @@ export const additionalNewItServices: Service[] = [
     contactInfo: {website:'/services/edtech-learning-management-system', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🎓', href: '/services/edtech-learning-management-system', popular: false, category: 'edtech', industry: 'Education',
   }
+,
+  {
+    id: 'edtech-student-success-analytics',
+    title: 'Student Success Analytics Platform',
+    description: 'Predict and prevent student dropout. Early warning systems, intervention tracking, and engagement analytics for higher education.',
+    features: ["Dropout risk prediction", "Early warning alerts", "Intervention tracking", "Engagement analytics", "Course performance analysis", "Advisor workflow tools", "Integration with Canvas, Blackboard", "FERPA-compliant data handling"],
+    benefits: ["Increase retention 15%", "Early intervention for at-risk students", "Data-driven advising", "Meet accreditation requirements"],
+    pricing: {"basic": "$299/mo", "pro": "$899/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/edtech-student-success-analytics', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '📊', href: '/services/edtech-student-success-analytics', popular: false, category: 'edtech', industry: 'Education',
+  },
+  {
+    id: 'healthcare-it-clinical-trial-matching',
+    title: 'AI Clinical Trial Matching Platform',
+    description: 'Match patients to clinical trials using AI. EHR integration, eligibility screening, and enrollment tracking.',
+    features: ["Patient-trial matching algorithm", "EHR/EMR integration", "Eligibility pre-screening", "Enrollment tracking", "Site performance analytics", "Patient consent management", "Integration with Epic, Cerner, TriNetX", "HIPAA and 21 CFR Part 11 compliance"],
+    benefits: ["Accelerate trial enrollment", "Improve patient access to trials", "Reduce screening failures", "Meet enrollment targets faster"],
+    pricing: {"basic": "$999/mo", "pro": "$2,999/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/healthcare-it-clinical-trial-matching', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🧬', href: '/services/healthcare-it-clinical-trial-matching', popular: true, category: 'healthcare-it', industry: 'Healthcare',
+  }
 ];
 
 
@@ -19705,6 +19769,17 @@ export const additionalNewSecurityServices: Service[] = [
     contactInfo: {website:'/services/cybersecurity-threat-intelligence-platform', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '🛡️', href: '/services/cybersecurity-threat-intelligence-platform', popular: true, category: 'cybersecurity', industry: 'Technology',
   }
+,
+  {
+    id: 'cybersecurity-pentest-automation',
+    title: 'Automated Penetration Testing Platform',
+    description: 'AI-powered automated penetration testing. Continuous vulnerability scanning, exploit simulation, and remediation guidance.',
+    features: ["Automated vulnerability scanning", "Exploit simulation (safe)", "Remediation prioritization", "Compliance reporting (OWASP, NIST)", "API and web app testing", "Network segmentation testing", "Integration with Burp Suite, Nessus", "Continuous security assessment"],
+    benefits: ["Find vulnerabilities before attackers", "Continuous security validation", "Reduce pentest costs 70%", "Automated compliance reporting"],
+    pricing: {"basic": "$599/mo", "pro": "$1,799/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/cybersecurity-pentest-automation', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🔓', href: '/services/cybersecurity-pentest-automation', popular: true, category: 'cybersecurity', industry: 'Technology',
+  }
 ];
 
 
@@ -19794,6 +19869,17 @@ export const additionalNewCloudServices: Service[] = [
     pricing: {"basic": "$1,499/mo", "pro": "$4,499/mo", "enterprise": "Custom"},
     contactInfo: {website:'/services/energy-tech-smart-grid-management', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
     icon: '⚡', href: '/services/energy-tech-smart-grid-management', popular: false, category: 'energy-tech', industry: 'Energy',
+  }
+,
+  {
+    id: 'energy-tech-carbon-tracking',
+    title: 'Enterprise Carbon Tracking Platform',
+    description: 'Scope 1, 2, and 3 carbon emissions tracking. Automated data collection, reporting, and reduction recommendations.',
+    features: ["Scope 1, 2, 3 emissions tracking", "Automated data collection from utilities", "Reduction scenario modeling", "GHG Protocol compliance", "Integration with ERP and IoT", "Supplier emissions tracking", "Audit-ready reporting", "Science-based target setting"],
+    benefits: ["Meet ESG reporting requirements", "Identify reduction opportunities", "Audit-ready data", "Track progress to net zero"],
+    pricing: {"basic": "$499/mo", "pro": "$1,499/mo", "enterprise": "Custom"},
+    contactInfo: {website:'/services/energy-tech-carbon-tracking', email:'kleber@ziontechgroup.com', phone:'+1 302 464 0950'},
+    icon: '🌍', href: '/services/energy-tech-carbon-tracking', popular: true, category: 'energy-tech', industry: 'Energy',
   }
 ];
 
