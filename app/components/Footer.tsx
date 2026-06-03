@@ -47,6 +47,7 @@ const Footer: React.FC = () => {
                 { name: 'Blockchain & Web3', href: '/services/?category=blockchain' },
                 { name: 'IoT & Edge', href: '/services/?category=iot' },
                 { name: 'Pricing', href: '/pricing/' },
+                { name: '⚡ AI Agent Dashboard', href: '/dashboard/' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>
@@ -66,6 +67,7 @@ const Footer: React.FC = () => {
                 { name: 'Partners', href: '/partners/' },
                 { name: 'Client Portal', href: '/portal/' },
                 { name: 'Press', href: '/press/' },
+                { name: '⚡ AI Agent Dashboard', href: '/dashboard/' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>
@@ -102,6 +104,15 @@ const Footer: React.FC = () => {
           <p className="text-slate-500 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-medium">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+              </span>
+              Powered by AI Agents
+            </span>
+          </div>
           <div className="flex gap-6">
             {[
               { name: 'Privacy Policy', href: '/privacy/' },
