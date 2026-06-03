@@ -12,7 +12,7 @@ export const wave201AiServices: Service[] = [
     industry: "Cybersecurity & AI",
     stage: "published",
     popular: true,
-    pricing: { basic: 449, pro: 999, enterprise: 2199 },
+    pricing: { basic: '$449/mo', pro: '$999/mo', enterprise: '$2199/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Continuous network traffic analysis with behavioral baselines",
@@ -39,7 +39,7 @@ export const wave201AiServices: Service[] = [
     industry: "Sales & Marketing",
     stage: "published",
     popular: true,
-    pricing: { basic: 299, pro: 699, enterprise: 1499 },
+    pricing: { basic: '$299/mo', pro: '$699/mo', enterprise: '$1499/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Unified revenue data model across CRM, marketing, and billing",
@@ -69,7 +69,7 @@ export const wave201DataServices: Service[] = [
     industry: "Machine Learning",
     stage: "published",
     popular: false,
-    pricing: { basic: 349, pro: 799, enterprise: 1699 },
+    pricing: { basic: '$349/mo', pro: '$799/mo', enterprise: '$1699/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Centralized feature registry with versioning and lineage",
@@ -96,7 +96,7 @@ export const wave201DataServices: Service[] = [
     industry: "Data Privacy",
     stage: "published",
     popular: false,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Statistical distribution matching with fidelity scoring",
@@ -126,7 +126,7 @@ export const wave201CloudServices: Service[] = [
     industry: "Cloud Operations",
     stage: "published",
     popular: true,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Automated agentless discovery of servers, apps, and dependencies",
@@ -156,7 +156,7 @@ export const wave201SecurityServices: Service[] = [
     industry: "Identity & Access",
     stage: "published",
     popular: false,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Automated joiner-mover-leaver provisioning workflows",
@@ -186,7 +186,7 @@ export const wave201AutomationServices: Service[] = [
     industry: "DevSecOps",
     stage: "published",
     popular: true,
-    pricing: { basic: 149, pro: 349, enterprise: 799 },
+    pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-framework support: Terraform, CloudFormation, K8s, Ansible",
@@ -213,7 +213,7 @@ export const wave201AutomationServices: Service[] = [
     industry: "Software Testing",
     stage: "published",
     popular: false,
-    pricing: { basic: 129, pro: 299, enterprise: 649 },
+    pricing: { basic: '$129/mo', pro: '$299/mo', enterprise: '$649/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Subset extraction with referential integrity preservation",
@@ -243,7 +243,7 @@ export const wave201ItServices: Service[] = [
     industry: "IT Operations",
     stage: "published",
     popular: true,
-    pricing: { basic: 149, pro: 349, enterprise: 799 },
+    pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Synthetic transaction monitoring from global vantage points",
@@ -273,7 +273,7 @@ export const wave201MicroSaasServices: Service[] = [
     industry: "SaaS & Analytics",
     stage: "published",
     popular: false,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-tenant architecture with per-tenant customization",

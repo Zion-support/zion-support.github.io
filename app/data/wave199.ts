@@ -12,7 +12,7 @@ export const wave199AiServices: Service[] = [
     industry: "Logistics & Warehousing",
     stage: "published",
     popular: false,
-    pricing: { basic: 149, pro: 349, enterprise: 799 },
+    pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Robot fleet layout designer with drag-and-drop warehouse mapping",
@@ -39,7 +39,7 @@ export const wave199AiServices: Service[] = [
     industry: "Security & Media",
     stage: "published",
     popular: false,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Image forensics analysis (Error Level Analysis, metadata inspection)",
@@ -66,7 +66,7 @@ export const wave199AiServices: Service[] = [
     industry: "Enterprise Software",
     stage: "published",
     popular: true,
-    pricing: { basic: 129, pro: 299, enterprise: 649 },
+    pricing: { basic: '$129/mo', pro: '$299/mo', enterprise: '$649/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-format ingestion (PDF, TIFF, JPEG, PNG, DOCX)",
@@ -96,7 +96,7 @@ export const wave199DataServices: Service[] = [
     industry: "Enterprise Data",
     stage: "published",
     popular: false,
-    pricing: { basic: 299, pro: 699, enterprise: 1499 },
+    pricing: { basic: '$299/mo', pro: '$699/mo', enterprise: '$1499/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Data product catalog with searchable metadata registry",
@@ -123,7 +123,7 @@ export const wave199DataServices: Service[] = [
     industry: "Data Engineering",
     stage: "published",
     popular: false,
-    pricing: { basic: 149, pro: 349, enterprise: 799 },
+    pricing: { basic: '$149/mo', pro: '$349/mo', enterprise: '$799/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Automated profiling for new and changed datasets",
@@ -153,7 +153,7 @@ export const wave199CloudServices: Service[] = [
     industry: "Cloud Operations",
     stage: "published",
     popular: true,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Multi-cloud cost aggregation and normalization",
@@ -180,7 +180,7 @@ export const wave199CloudServices: Service[] = [
     industry: "Cloud Infrastructure",
     stage: "published",
     popular: false,
-    pricing: { basic: 99, pro: 249, enterprise: 549 },
+    pricing: { basic: '$99/mo', pro: '$249/mo', enterprise: '$549/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Single pane of glass for Route53, Cloud DNS, Azure DNS",
@@ -210,7 +210,7 @@ export const wave199SecurityServices: Service[] = [
     industry: "Application Security",
     stage: "published",
     popular: true,
-    pricing: { basic: 249, pro: 549, enterprise: 1199 },
+    pricing: { basic: '$249/mo', pro: '$549/mo', enterprise: '$1199/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "SBOM generation and continuous integrity verification",
@@ -240,7 +240,7 @@ export const wave199AutomationServices: Service[] = [
     industry: "Business Process",
     stage: "published",
     popular: false,
-    pricing: { basic: 199, pro: 449, enterprise: 999 },
+    pricing: { basic: '$199/mo', pro: '$449/mo', enterprise: '$999/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Event log ingestion from ERP, CRM, and BPM systems",
@@ -270,7 +270,7 @@ export const wave199ItServices: Service[] = [
     industry: "IT Operations",
     stage: "published",
     popular: false,
-    pricing: { basic: 79, pro: 199, enterprise: 449 },
+    pricing: { basic: '$79/mo', pro: '$199/mo', enterprise: '$449/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "Auto-discovery of network-connected devices and software",
@@ -300,7 +300,7 @@ export const wave199MicroSaasServices: Service[] = [
     industry: "Marketing & Affiliate",
     stage: "published",
     popular: false,
-    pricing: { basic: 29, pro: 79, enterprise: 199 },
+    pricing: { basic: '$29/mo', pro: '$79/mo', enterprise: '$199/mo' },
     contactInfo: { website: "https://ziontechgroup.com", email: "commercial@ziontechgroup.com", phone: "+1 302 464 0950" },
     features: [
       "One-click link monetization with interstitial ad insertion",
