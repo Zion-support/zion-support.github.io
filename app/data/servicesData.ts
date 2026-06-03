@@ -27,6 +27,8 @@ import { wave183AiServices, wave183MicroSaasServices, wave183ItServices, wave183
 
 import { wave184MicroSaasServices, wave184ItServices } from './wave184';
 
+import { wave185MicroSaasServices, wave185CloudServices, wave185DataServices } from './wave185';
+
 export const aiServices: Service[] = [
   {
     id: 'advanced-ai-enterprise-intelligence-hub',
@@ -20257,6 +20259,9 @@ export const allServices: Service[] = [
   ...wave183AutomationServices,
   ...wave184MicroSaasServices,
   ...wave184ItServices,
+  ...wave185MicroSaasServices,
+  ...wave185CloudServices,
+  ...wave185DataServices,
 ].filter((s): s is Service => s !== undefined);
 
 
