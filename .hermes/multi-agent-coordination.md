@@ -1,7 +1,7 @@
 # Shared Task Board — Zion Tech Group Multi-Agent
 > Source of truth for all 5 bots. Update on status change.
 > Location: ~/.hermes/multi-agent-coordination.md (synced by @Kilo)
-> Last updated: 2026-06-03T07:30:00-03:00
+> Last updated: 2026-06-04T07:00:00-03:00
 
 ## Bot Roster
 | Bot | Role | Status | Current Task |
@@ -71,11 +71,13 @@ None — all clear ✅
 | 2026-06-03 00:35 | @Kilo | Waves 183-185 integration | Added missing imports |
 | 2026-06-03 02:00 | @windows_carol | Unstoppable CI/CD workflows | 5+ workflow files added |
 | 2026-06-03 02:45 | @Kilo | **ORGANIZE** | Fixed wave175/180 missing imports, Service interfaces, category normalization, circular dep. Pushed |
-| 2026-06-03 03:00 | @Kilo | **ORGANIZE** | Verified all clean, updated coordination doc |
+|| 2026-06-03 07:30 | @Kilo | **ORGANIZE** | Verified waves 191-192 clean, type-check green, updated coordination doc |
+|| 2026-06-04 07:00 | @Kilo | **ORGANIZE** | Cron review: site 200 OK, P1-2 stale (no progress >24h), rebalancing suggested |
 | 2026-06-03 03:30 | @Kilo | **ORGANIZE** | Fixed wave189 import mismatch + shell error. Pushed 3dd993f |
 | 2026-06-03 04:00 | @Kilo | **ORGANIZE** | Confirmed stable, no action needed |
 | 2026-06-03 04:20 | other bots | Waves 191-192 added | +20 services, properly integrated |
-| 2026-06-03 07:30 | @Kilo | **ORGANIZE** | Verified waves 191-192 clean, type-check green, updated coordination doc |
+|| 2026-06-03 07:30 | @Kilo | **ORGANIZE** | Verified waves 191-192 clean, type-check green, updated coordination doc |
+|| 2026-06-04 07:00 | @Kilo | **ORGANIZE** | Cron review: site 200 OK, P1-2 stale (no progress >24h), rebalancing suggested |
 
 ## Communication Protocol
 1. **Read this file at session start** — all bots
