@@ -14,7 +14,6 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
-import V204V208Showcase from '@/components/V204V208Showcase';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -105,7 +104,7 @@ export default function HomePage() {
   // Dynamic stats — auto-update when catalog changes
   const stats = [
     { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
-    { value: '10 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT' },
+    { value: '11 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel' },
     { value: '24/7', label: STAT_MONITOR },
     { value: '99.9%', label: STAT_SLA },
   ];
@@ -267,7 +266,7 @@ let list = services;
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> <ServiceCounter />+ Services — Live Now
+              <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
             </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="gradient-text">AI & IT Services</span><br />
@@ -385,9 +384,6 @@ let list = services;
 
       {/* ── Service Match Quiz — Interactive AI Tool ── */}
       <ServiceMatchQuiz />
-
-      {/* ── V204-V208 Email Intelligence Showcase ── */}
-      <V204V208Showcase />
 
       {/* ── How It Works ── */}
       <section className="py-20">
@@ -1022,58 +1018,6 @@ let list = services;
           <div className="mt-10 text-center">
             <Link href="/tools/ai-service-router/" className="btn-primary text-base px-8 py-3">🚀 Find Your Perfect Service</Link>
             <p className="text-slate-500 text-xs mt-3">All tools are 100% free — no sign-up required. Your data never leaves your browser.</p>
-          </div>
-        </div>
-      </section>
-      {/* ── Trust Badges ── */}
-      <section className="py-12 border-t border-slate-800 bg-slate-900/30">
-        <div className="container-page">
-          <h2 className="text-xl font-bold text-white text-center mb-2">Trusted by Industry Leaders</h2>
-          <p className="text-slate-500 text-center text-sm mb-8">Enterprise-grade security, compliance, and reliability</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              { label:"SOC 2 Type II", icon:"🔒", desc:"Certified" },
-              { label:"GDPR Compliant", icon:"🇪🇺", desc:"Data Protection" },
-              { label:"HIPAA Ready", icon:"🏥", desc:"Healthcare" },
-              { label:"ISO 27001", icon:"🛡️", desc:"Security" },
-              { label:"99.99% Uptime", icon:"⚡", desc:"SLA Guaranteed" },
-              { label:"24/7 Support", icon:"🌐", desc:"Global Coverage" },
-            ].map(b => (
-              <div key={b.label} className="text-center p-4 rounded-lg border border-slate-800 bg-slate-900/50">
-                <div className="text-2xl mb-1">{b.icon}</div>
-                <div className="text-xs font-semibold text-white">{b.label}</div>
-                <div className="text-[10px] text-slate-500">{b.desc}</div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 flex flex-wrap justify-center gap-6 text-slate-500 text-xs">
-            <span>✓ 3,457+ Micro-SaaS Solutions</span>
-            <span>✓ 33 Email Intelligence Engines</span>
-            <span>✓ 43 Integrated APIs</span>
-            <span>✓ 70+ Industry Categories</span>
-          </div>
-        </div>
-      </section>
-      {/* ── Contact CTA Section ── */}
-      <section className="py-20 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-purple-950/10 to-slate-950">
-        <div className="container-page text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-            Get a free custom quote for any of our {services.length}+ AI, IT, and Micro-SaaS solutions. Our experts are ready to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-            <a href="/contact" className="btn-primary text-lg px-10 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 transition-all shadow-lg shadow-purple-500/20 font-semibold">
-              ✉ Get Free Consultation
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4 rounded-xl border border-slate-700 text-slate-300 font-semibold hover:border-purple-500/40 transition-colors">
-              📧 kleber@ziontechgroup.com
-            </a>
-            <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4 rounded-xl border border-slate-700 text-slate-300 font-semibold hover:border-purple-500/40 transition-colors">
-              ☎ +1 302 464 0950
-            </a>
-          </div>
-          <div className="text-slate-500 text-sm">
-            📍 364 E Main St STE 1008, Middletown, DE 19709 &nbsp;|&nbsp; 🕐 Mon-Fri 9AM-6PM EST
           </div>
         </div>
       </section>
