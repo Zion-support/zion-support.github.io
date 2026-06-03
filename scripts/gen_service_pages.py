@@ -53,7 +53,7 @@ for s in services:
     pricing = s.get('pricing', {})
     
     html = TPL.format(
-        title=s['title'], desc=s['description'], id=s['id'],
+        title=s.get('title', s.get('name', '')), desc=s.get('description', ''), id=s['id'],
         features=features, benefits=benefits,
         basic=pricing.get('basic', 'Contact us for pricing'),
         pro=pricing.get('pro', 'Contact us for pricing'),
