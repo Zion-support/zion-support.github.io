@@ -54222,5 +54222,191 @@
     "popular": true,
     "category": "it",
     "industry": "Healthcare"
+  },
+  {
+    "id": "data-catalog-governance",
+    "title": "Data Catalog & Governance Platform",
+    "description": "Automated data discovery, classification, and governance with lineage tracking and policy enforcement.",
+    "features": [
+      "Automated discovery",
+      "Data lineage",
+      "Policy enforcement",
+      "PII detection",
+      "Glossary management"
+    ],
+    "benefits": [
+      "Find data instantly",
+      "Ensure compliance"
+    ],
+    "pricing": {
+      "basic": "$799/mo",
+      "pro": "$1,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/data-catalog-governance",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📚",
+    "href": "/services/data-catalog-governance",
+    "popular": true,
+    "category": "data",
+    "industry": "Finance"
+  },
+  {
+    "id": "cloud-finops-cost-optimization",
+    "title": "Cloud FinOps Cost Optimization Platform",
+    "description": "Multi-cloud cost management with rightsizing recommendations, reserved instance planning, and chargeback reporting.",
+    "features": [
+      "Cost anomaly detection",
+      "Rightsizing recommendations",
+      "RI/SP planning",
+      "Chargeback reports",
+      "Multi-cloud dashboards"
+    ],
+    "benefits": [
+      "Reduce cloud spend 35%",
+      "Eliminate waste"
+    ],
+    "pricing": {
+      "basic": "$199/mo",
+      "pro": "$499/mo",
+      "enterprise": "$1,499/mo"
+    },
+    "contactInfo": {
+      "website": "/services/cloud-finops-cost-optimization",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "💰",
+    "href": "/services/cloud-finops-cost-optimization",
+    "popular": true,
+    "category": "cloud",
+    "industry": "Technology"
+  },
+  {
+    "id": "automation-smart-contract-lifecycle",
+    "title": "Automation Smart Contract Lifecycle Management",
+    "description": "End-to-end smart contract management from drafting to execution with AI clause analysis and compliance checks.",
+    "features": [
+      "AI clause analysis",
+      "Template library",
+      "Version control",
+      "Compliance checks",
+      "Digital signatures"
+    ],
+    "benefits": [
+      "Reduce legal review 60%",
+      "Ensure compliance"
+    ],
+    "pricing": {
+      "basic": "$399/mo",
+      "pro": "$999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/automation-smart-contract-lifecycle",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📋",
+    "href": "/services/automation-smart-contract-lifecycle",
+    "popular": false,
+    "category": "automation",
+    "industry": "Legal"
+  },
+  {
+    "id": "microsaas-churn-prediction-suite",
+    "title": "Micro-SaaS Churn Prediction Suite",
+    "description": "Predictive analytics for SaaS businesses to identify at-risk customers and automate retention campaigns.",
+    "features": [
+      "Churn scoring",
+      "Retention automation",
+      "Revenue forecasting",
+      "Customer health dashboards",
+      "CRM integration"
+    ],
+    "benefits": [
+      "Reduce churn 25%",
+      "Increase LTV"
+    ],
+    "pricing": {
+      "basic": "$99/mo",
+      "pro": "$299/mo",
+      "enterprise": "$799/mo"
+    },
+    "contactInfo": {
+      "website": "/services/microsaas-churn-prediction-suite",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "📊",
+    "href": "/services/microsaas-churn-prediction-suite",
+    "popular": false,
+    "category": "micro-saas",
+    "industry": "Technology"
+  },
+  {
+    "id": "healthcare-clinical-trial-management",
+    "title": "Healthcare Clinical Trial Management System",
+    "description": "End-to-end clinical trial management with patient recruitment, regulatory compliance, and real-time analytics.",
+    "features": [
+      "Patient recruitment",
+      "EDC/eCRF management",
+      "Regulatory compliance",
+      "Site management",
+      "Real-time analytics"
+    ],
+    "benefits": [
+      "Accelerate trials 30%",
+      "Ensure FDA compliance"
+    ],
+    "pricing": {
+      "basic": "$2,499/mo",
+      "pro": "$5,999/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/healthcare-clinical-trial-management",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🧬",
+    "href": "/services/healthcare-clinical-trial-management",
+    "popular": true,
+    "category": "it",
+    "industry": "Healthcare"
+  },
+  {
+    "id": "it-it-service-management-itsm",
+    "title": "IT IT Service Management (ITSM) Platform",
+    "description": "Modern ITSM with AI-powered ticket routing, SLA management, change management, and self-service portal.",
+    "features": [
+      "AI ticket routing",
+      "SLA management",
+      "Change management",
+      "Self-service portal",
+      "CMDB integration"
+    ],
+    "benefits": [
+      "Reduce resolution time 50%",
+      "Improve CSAT 40%"
+    ],
+    "pricing": {
+      "basic": "$15/user/mo",
+      "pro": "$35/user/mo",
+      "enterprise": "Custom"
+    },
+    "contactInfo": {
+      "website": "/services/it-it-service-management-itsm",
+      "email": "commercial@ziontechgroup.com",
+      "phone": "+1 302 464 0950"
+    },
+    "icon": "🎫",
+    "href": "/services/it-it-service-management-itsm",
+    "popular": true,
+    "category": "it",
+    "industry": "Enterprise"
   }
 ]
