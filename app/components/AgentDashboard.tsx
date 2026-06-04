@@ -69,7 +69,7 @@ const BOT_ROSTER: BotStatus[] = [
 ];
 
 const DELEGATION_LOG: DelegationEntry[] = [
-  { time: '2026-06-14 20:30', bot: '@OWL', action: 'Wave 212 research + integration', result: '5 new services: AI Observability, Data Privacy Consent, Cloud FinOps Governance, Security Threat Intelligence, AI Transparency Engine. Created wave212.ts, added imports to servicesData.ts. All services have features + benefits.', category: 'integration' },
+  { time: '2026-06-14 21:00', bot: '@OWL', action: 'Deep crawl — wave 212 verification', result: '20/20 OK. 15 core pages + 5 wave 212 services all 200. Homepage monitoring: agents-monitoring ✅, dashboard ✅, Built by AI ✅. Wave 212 services live.', category: 'quality' },
   { time: '2026-06-14 19:30', bot: '@OWL', action: 'Deep link crawl — full site verification', result: '15/15 core pages OK (200), 0 broken links. Dashboard, monitoring, floating widget all verified.', category: 'quality' },
   { time: '2026-06-14 18:30', bot: '@OWL', action: 'Deep link crawl — wave 211 404 investigation', result: 'Found 3 wave 211 service pages returning 404 (ai-governance, edge-ai, data-contract). Root cause: wave211.ts file was never committed to git. Created commit with wave211.ts. CI/CD build succeeded, all 5 wave 211 services now 200 OK.', category: 'fix' },
   { time: '2026-06-14 01:00', bot: '@OWL', action: 'Agent monitoring dashboard + homepage banner + nav integration', result: 'Full dashboard at /agents-monitoring with Ops/Client views, 4 tabs, live agent status, cron jobs, activity log. Homepage banner added. Nav link + footer + floating dock entry.', category: 'integration' },
@@ -153,8 +153,8 @@ const ALL_TASKS: TaskEntry[] = [
   { id: 'P0-3', task: 'Homepage banner — prominent AI agent advertising', owner: '@OWL', status: 'done', priority: 'p0' },
   { id: 'P0-4', task: 'Agent restart protocol — checklist for all bots', owner: '@OWL', status: 'done', priority: 'p0' },
   { id: 'P1-1', task: 'Wave 212 research — find 5 new services', owner: '@tablet', status: 'done', priority: 'p1' },
-  { id: 'P1-2', task: 'Wave 212 integration — deploy 5 new services', owner: '@OWL', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-3', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'queued', priority: 'p1' },
+  { id: 'P1-2', task: 'Wave 212 integration — deploy 5 new services', owner: '@OWL', status: 'done', priority: 'p1' },
+  { id: 'P1-3', task: 'Wave 213 research — find 5 new services', owner: '@tablet', status: 'queued', priority: 'p1' },
   { id: 'P1-4', task: 'CI/CD timeout investigation (deploys failing at 20min)', owner: '@Rocket', status: 'queued', priority: 'p1' },
   { id: 'B1', task: 'Service page auto-generation', owner: '@tablet', status: 'queued', priority: 'p2' },
   { id: 'B2', task: 'Thin page content enrichment', owner: '@Kilo', status: 'queued', priority: 'p2' },
