@@ -14,6 +14,7 @@ import ContactFunnel from '@/components/ContactFunnel';
 import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
+import AgentsMonitoring from '@/components/AgentsMonitoring';
 
 
 // Category accent color for showcase cards (maps category key → gradient)
@@ -430,6 +431,9 @@ let list = services;
               </Link>
               <Link href="/dashboard?mode=client" className="inline-flex items-center gap-2 bg-slate-800/60 border border-slate-700/60 text-slate-300 px-8 py-3.5 rounded-xl font-medium text-sm hover:bg-slate-700/80 hover:text-white hover:border-purple-500/30 transition-all">
                 🤖 Meet the Agents
+              </Link>
+              <Link href="/agents-monitoring" className="inline-flex items-center gap-2 bg-slate-800/60 border border-slate-700/60 text-slate-300 px-8 py-3.5 rounded-xl font-medium text-sm hover:bg-slate-700/80 hover:text-white hover:border-purple-500/30 transition-all">
+                📊 Agent Operations
               </Link>
             </div>
             <p className="text-[10px] text-slate-600 mt-4">Real-time monitoring · Updated every second · All agents check this dashboard on restart</p>
