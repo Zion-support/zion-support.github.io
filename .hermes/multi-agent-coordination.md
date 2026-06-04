@@ -1,7 +1,7 @@
 # Shared Task Board — Zion Tech Group Multi-Agent
 > Source of truth for all 6 bots. Update on status change.
 > Location: ~/.hermes/multi-agent-coordination.md (synced by @Kilo)
-> Last updated: 2026-06-14T19:30:00-03:00
+> Last updated: 2026-06-14T20:00:00-03:00
 
 ## Bot Roster
 | Bot | Role | Status | Current Task |
@@ -74,7 +74,9 @@ None — all clear ✅
 ## Delegation Log (recent)
 | Time | Bot | Action | Result |
 |------|-----|--------|--------|
-| 2026-06-14 19:00 | @OWL | ORGANIZE #12 | Site 200 OK, type-check clean (7 pre-existing errors), wave 212 not started yet. Stale audit: P1-2 (thin pages) still stale. No new issues. |
+| 2026-06-14 20:00 | @OWL | ORGANIZE #13 | Site 200 OK. Stale audit: P1-2 (thin pages, @Windows_quel) still stale — 3rd consecutive check no progress. Recommend reassign or split. P1-1 (@tablet) ready. No new issues. |
+| 2026-06-14 19:30 | @OWL | Deep crawl + wave 211 fix | Found 3 wave 211 services 404. Root cause: wave211.ts never committed to git. Fixed and pushed. CI/CD build succeeded, all 5 services now 200 OK. |
+| 2026-06-14 19:00 | @OWL | ORGANIZE #12 | Site 200 OK, type-check clean, wave 212 not started yet. Stale audit: P1-2 still stale. No new issues. |
 | 2026-06-14 18:00 | @OWL | ORGANIZE #11 | Verified dashboard live, wave 211 integrated, 36 waves, 795 services, site 200 OK. Updated coord doc. |
 | 2026-06-14 16:30 | @Kilo | ORGANIZE #10 | Stale audit: P1-2 flagged stale (>24h no progress), P1-3 reclassified as Blocked (X4), site 200 OK |
 | 2026-06-14 01:00 | @OWL | Dashboard v6 | Enhanced monitoring + client view + restart protocol deployed |

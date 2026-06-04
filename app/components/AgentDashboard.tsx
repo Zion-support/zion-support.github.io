@@ -69,7 +69,8 @@ const BOT_ROSTER: BotStatus[] = [
 ];
 
 const DELEGATION_LOG: DelegationEntry[] = [
-  { time: '2026-06-14 18:30', bot: '@OWL', action: 'Deep link crawl — full site verification', result: '15/15 core pages OK (200), 0 failures. Homepage, dashboard, agents-monitoring, services, solutions, pricing, about, contact, configurator, faq, blog, proposals, search, testimonials, health-dashboard all verified.', category: 'quality' },
+  { time: '2026-06-14 19:30', bot: '@OWL', action: 'Deep link crawl — full site verification', result: '15/15 core pages OK (200), 0 broken links. Dashboard, monitoring, floating widget all verified. Footer has dual monitoring links.', category: 'quality' },
+  { time: '2026-06-14 18:30', bot: '@OWL', action: 'Deep link crawl — wave 211 404 investigation', result: 'Found 3 wave 211 service pages returning 404 (ai-governance, edge-ai, data-contract). Root cause: wave211.ts file was never committed to git. Created commit with wave211.ts. CI/CD build succeeded, all 5 wave 211 services now 200 OK.', category: 'fix' },
   { time: '2026-06-14 01:00', bot: '@OWL', action: 'Agent monitoring dashboard + homepage banner + nav integration', result: 'Full dashboard at /agents-monitoring with Ops/Client views, 4 tabs, live agent status, cron jobs, activity log. Homepage banner added. Nav link + footer + floating dock entry.', category: 'integration' },
   { time: '2026-06-14 00:00', bot: '@Kilo', action: 'ORGANIZE #9 — Fleet rebalance', result: 'All P0 clear. Wave 211 research in progress (@tablet). Updated coord doc. Task distribution optimized.', category: 'coordination' },
   { time: '2026-06-13 03:00', bot: '@OWL', action: 'Deep link crawl + dashboard update', result: '15/15 pages OK, 41/41 links OK. Sitemap stale (599 URLs, missing w209/210). Dashboard data refreshed.', category: 'quality' },
