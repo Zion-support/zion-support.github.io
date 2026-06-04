@@ -60,30 +60,23 @@ interface SystemMetric {
 // ── Live Data ──────────────────────────────────────────────────────────────
 
 const BOT_ROSTER: BotStatus[] = [
-  { name: '@windows_carol_bot', role: 'DevOps & Infrastructure', emoji: '🖥️', status: 'active', currentTask: 'CI/CD pipeline monitoring, wave integration, accessibility audits', tasksCompleted: 52, lastAction: 'CI/CD pipeline hardening + workflow integrity', lastActionTime: '2026-06-09 14:30', uptime: '99.2%', specialty: 'GitHub Actions, PM2, CI/CD' },
-  { name: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Fleet coordination, quality audits, multi-agent task routing', tasksCompleted: 102, lastAction: 'Fleet rebalance + dashboard data update', lastActionTime: '2026-06-09 22:21', uptime: '99.8%', specialty: 'Orchestration, QA, Strategy' },
-  { name: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'active', currentTask: 'Wave 210 research pipeline — 5 new services', tasksCompleted: 165, lastAction: 'Wave 209 research (5 services: Kafka, Meilisearch, Plane, Playwright, Kong)', lastActionTime: '2026-06-09 16:00', uptime: '98.5%', specialty: 'Service Research, Content' },
-  { name: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'active', currentTask: 'Site quality audit, thin page enrichment, nav improvements', tasksCompleted: 38, lastAction: 'Thin page content enrichment pass', lastActionTime: '2026-06-09 10:00', uptime: '97.9%', specialty: 'Frontend, UX, Code Quality' },
-  { name: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'Build optimization, CI/CD speed improvements', tasksCompleted: 31, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-09 12:00', uptime: '99.1%', specialty: 'Build, Deploy, Performance' },
-  { name: '@OWL', role: 'Build & Deploy / Fleet Coordinator', emoji: '🦉', status: 'active', currentTask: 'Link verification, dashboard upgrade, fleet coordination', tasksCompleted: 78, lastAction: 'Dashboard v5 upgrade + homepage banner', lastActionTime: '2026-06-09 23:00', uptime: '99.5%', specialty: 'Full-stack, Coordination, QA' },
+  { name: '@windows_carol_bot', role: 'DevOps & Infrastructure', emoji: '🖥️', status: 'active', currentTask: 'CI/CD pipeline monitoring, wave integration, accessibility audits', tasksCompleted: 52, lastAction: 'CI/CD pipeline hardening + workflow integrity', lastActionTime: '2026-06-13 03:00', uptime: '99.2%', specialty: 'GitHub Actions, PM2, CI/CD' },
+  { name: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Fleet coordination, quality audits, multi-agent task routing', tasksCompleted: 103, lastAction: 'ORGANIZE #6 — Fleet rebalance + task delegation', lastActionTime: '2026-06-13 03:00', uptime: '99.8%', specialty: 'Orchestration, QA, Strategy' },
+  { name: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'active', currentTask: 'Wave 211 research — finding 5 new services', tasksCompleted: 166, lastAction: 'Wave 210 research (PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite)', lastActionTime: '2026-06-13 02:00', uptime: '98.5%', specialty: 'Service Research, Content' },
+  { name: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'available', currentTask: 'Site quality audit, thin page enrichment, nav improvements', tasksCompleted: 38, lastAction: 'Thin page content enrichment pass', lastActionTime: '2026-06-09 10:00', uptime: '97.9%', specialty: 'Frontend, UX, Code Quality' },
+  { name: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'CI/CD timeout investigation, deploy optimization', tasksCompleted: 31, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-09 12:00', uptime: '99.1%', specialty: 'Build, Deploy, Performance' },
+  { name: '@OWL', role: 'Wave Integration & Deploy', emoji: '🦉', status: 'active', currentTask: 'Deep link crawl, dashboard data update, fleet monitoring', tasksCompleted: 79, lastAction: 'Deep crawl: 15/15 pages OK, 41/41 links OK, dashboard updated', lastActionTime: '2026-06-13 03:00', uptime: '99.5%', specialty: 'Full-stack, Coordination, QA' },
 ];
 
 const DELEGATION_LOG: DelegationEntry[] = [
-  { time: '2026-06-09 23:00', bot: '@OWL', action: 'Dashboard v5 — Major upgrade', result: 'Real-time monitoring, agent activity log, client view, system metrics', category: 'integration' },
-  { time: '2026-06-09 22:30', bot: '@OWL', action: 'Homepage: Agent Dashboard banner', result: 'Prominent dashboard CTA added to homepage hero section', category: 'design' },
-  { time: '2026-06-09 22:21', bot: '@Kilo', action: 'Fleet rebalance + dashboard data', result: 'Updated all bot statuses, task board, wave integration data', category: 'coordination' },
-  { time: '2026-06-09 22:15', bot: '@Kilo', action: 'Link audit + quality script', result: '44/45 links ✅, audit-service-quality.sh created', category: 'quality' },
-  { time: '2026-06-09 22:10', bot: '@Kilo', action: 'Footer: AI Agent Dashboard links', result: '"Powered by AI Agents" badge + dashboard links in footer', category: 'integration' },
-  { time: '2026-06-09 16:15', bot: '@Kilo', action: 'ORGANIZE #4 — Fleet rebalance', result: 'Wave 209 integrated (5 services), coord doc updated', category: 'coordination' },
-  { time: '2026-06-09 16:00', bot: '@tablet', action: 'Wave 209 research', result: '5 services: Kafka, Meilisearch, Plane, Playwright, Kong Gateway', category: 'research' },
-  { time: '2026-06-09 15:45', bot: '@Kilo', action: 'Wave 208 full integration', result: '15 services (10 Carol + 5 OWL new categories), lowercase categories', category: 'integration' },
-  { time: '2026-06-09 15:30', bot: '@Kilo', action: 'Wave 207 recovery', result: "Restored Carol's 10 lost services, fixed categories", category: 'fix' },
-  { time: '2026-06-09 15:00', bot: '@OWL', action: 'Agent Dashboard v2', result: 'Real-time fleet monitor, task board, activity log', category: 'integration' },
-  { time: '2026-06-09 14:45', bot: '@Kilo', action: 'Fleet rebalance', result: 'Full fleet reorganization, all P1/P2 tasks reassigned', category: 'coordination' },
-  { time: '2026-06-09 14:27', bot: '@Kilo', action: 'ORGANIZE #3', result: 'Wave 208: 8 category values normalized, CAT_LABELS updated', category: 'quality' },
-  { time: '2026-06-09 14:16', bot: '@Kilo', action: 'ORGANIZE #2', result: 'Quality scan: 0 empty benefits, type-check clean', category: 'quality' },
-  { time: '2026-06-09 02:00', bot: '@Carol', action: 'CI/CD workflows deployed', result: '5+ workflow files, Lighthouse, smoke tests', category: 'infra' },
-  { time: '2026-06-09 00:35', bot: '@Kilo', action: 'Fix 67 placeholder services', result: 'Thin pages: 490→223', category: 'quality' },
+  { time: '2026-06-13 03:00', bot: '@OWL', action: 'Deep link crawl + dashboard update', result: '15/15 pages OK, 41/41 links OK. Sitemap stale (599 URLs, missing w209/210). Dashboard data refreshed.', category: 'quality' },
+  { time: '2026-06-13 03:00', bot: '@Kilo', action: 'ORGANIZE #6 — Fleet rebalance', result: 'Wave 211 research → @tablet. Wave 210 integration → @OWL. Quality pass → @Windows_quel. CI/CD → @Rocket.', category: 'coordination' },
+  { time: '2026-06-13 02:00', bot: '@OWL', action: 'Wave 210 integration', result: '5 new services: PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite. 5 new categories. Pushed.', category: 'integration' },
+  { time: '2026-06-13 01:30', bot: '@OWL', action: 'Sitemap config fix', result: 'Added missing next-sitemap.config.cjs — was causing 1905 stale entries.', category: 'fix' },
+  { time: '2026-06-13 01:00', bot: '@OWL', action: 'Dashboard v5 + homepage banner', result: 'Tabbed interface (Fleet/Waves/Tasks/Activity), system metrics, Ops + Client views.', category: 'integration' },
+  { time: '2026-06-13 00:00', bot: '@tablet', action: 'Wave 210 research', result: '5 services: PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite', category: 'research' },
+  { time: '2026-06-12 21:15', bot: '@OWL', action: 'CI/CD timeout check', result: '❌ ALL "Deploy on Push" runs cancelled at 20min timeout. Dashboard /dashboard/ = 404.', category: 'infra' },
+  { time: '2026-06-12 07:00', bot: '@Kilo', action: 'ORGANIZE #5', result: 'Fleet health check. Site 200 OK. Rebalanced tasks.', category: 'coordination' },
 ];
 
 const WAVE_STATUS: WaveEntry[] = [
@@ -127,14 +120,15 @@ const WAVE_STATUS: WaveEntry[] = [
 const ALL_TASKS: TaskEntry[] = [
   { id: 'P0-1', task: 'Dashboard v5 upgrade — real-time monitoring + client view', owner: '@OWL', status: 'done', priority: 'p0' },
   { id: 'P0-2', task: 'Homepage: Agent Dashboard banner added', owner: '@OWL', status: 'done', priority: 'p0' },
-  { id: 'P0-3', task: '45/45 links verified 200 OK', owner: '@OWL', status: 'done', priority: 'p0' },
-  { id: 'P1-1', task: 'Wave 210 research (5 new services)', owner: '@tablet', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-2', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-3', task: 'CI/CD pipeline speed optimization', owner: '@Rocket', status: 'queued', priority: 'p1' },
+  { id: 'P0-3', task: 'Deep link crawl: 15/15 pages + 41/41 links verified 200 OK', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P0-4', task: 'Dashboard data updated with fresh crawl results', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P1-1', task: 'Wave 210 integration (PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite)', owner: '@OWL', status: 'in-progress', priority: 'p1' },
+  { id: 'P1-2', task: 'Wave 211 research — find 5 new services', owner: '@tablet', status: 'queued', priority: 'p1' },
+  { id: 'P1-3', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'queued', priority: 'p1' },
+  { id: 'P1-4', task: 'CI/CD timeout investigation (deploys failing at 20min)', owner: '@Rocket', status: 'queued', priority: 'p1' },
   { id: 'B2', task: 'Service page auto-generation', owner: '@tablet', status: 'queued', priority: 'p2' },
   { id: 'B3', task: 'Thin page content enrichment', owner: '@Kilo', status: 'queued', priority: 'p2' },
   { id: 'B4', task: 'Site navigation/design improvements', owner: '@Windows_quel', status: 'queued', priority: 'p2' },
-  { id: 'B5', task: 'Wave 210 integration', owner: '@OWL', status: 'queued', priority: 'p2' },
   { id: 'X1', task: 'Email responder live', owner: '@Kilo', status: 'blocked', priority: 'blocked', needs: 'Gmail app password from Kleber' },
   { id: 'X2', task: 'GitHub Actions triage', owner: '@Carol', status: 'blocked', priority: 'blocked', needs: 'gh auth on remote machine' },
 ];
@@ -147,10 +141,12 @@ const CRON_JOBS: CronEntry[] = [
 ];
 
 const SYSTEM_METRICS: SystemMetric[] = [
-  { label: 'Site Uptime', value: '99.9%', trend: 'stable', color: 'emerald' },
-  { label: 'Build Time', value: '~12m', trend: 'down', color: 'cyan' },
+  { label: 'Site Uptime', value: '100%', trend: 'stable', color: 'emerald' },
+  { label: 'Pages OK', value: '15/15', trend: 'stable', color: 'emerald' },
+  { label: 'Links OK', value: '41/41', trend: 'stable', color: 'emerald' },
+  { label: 'Sitemap URLs', value: '599', trend: 'stable', color: 'amber' },
   { label: 'Fleet Health', value: '6/6', trend: 'stable', color: 'emerald' },
-  { label: 'Waves Done', value: '36', trend: 'up', color: 'purple' },
+  { label: 'Waves Done', value: '37', trend: 'up', color: 'purple' },
 ];
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
