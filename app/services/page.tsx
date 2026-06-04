@@ -141,7 +141,16 @@ function ServicesContent() {
 
 export default function ServicesPage() {
   return (
-    <Suspense fallback={<main className="min-h-screen bg-slate-950 py-20"><div className="container-page text-center py-20"><div className="inline-block w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" /><p className="text-slate-400 mt-4">Loading services...</p></div></main>}>
+    <Suspense fallback={
+      <main className="min-h-screen bg-slate-950 py-20">
+        <div className="container-page text-center py-20">
+          <h1 className="text-4xl font-bold text-white mb-2">Our Complete Service Catalog</h1>
+          <p className="section-subheading">Browse all services</p>
+          <div className="inline-block w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mt-8" />
+          <p className="text-slate-400 mt-4">Loading services...</p>
+        </div>
+      </main>
+    }>
       <ServicesContent />
     </Suspense>
   );
