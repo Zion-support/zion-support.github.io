@@ -69,13 +69,16 @@ None — all clear ✅
 7. **CRLF check**: ensure wave files use LF line endings, not CRLF (causes SWC wasm compiler crash on Node v26)
 
 ## Site State
-- **Build**: 🔄 CI/CD deploy pending (pushed f21e3bc — Dashboard v5 + homepage banner + link fixes)
+- **Build**: ✅ CI/CD deployed (commit 1a26640 — sitemap config fix pushed)
 - **Type-check**: ✅ `npx tsc --noEmit` — clean (no errors in our files)
 - **Services**: ~795 in servicesData.ts (waves 174-209)
-- **Site**: 200 OK — https://ziontechgroup.com (main page + static pages)
-- **Dashboard**: 404 — awaiting CI/CD deploy (new page v5, not yet deployed)
-- **Working pages**: / (200), /services/ (200), /blog/ (200), /contact/ (200), /about/ (200), /configurator/ (200), /proposals/ (200), /careers/ (200), /faq/ (200), /search/ (200), /pricing/ (200), /privacy/ (200), /terms/ (200), /sitemap.xml (200)
-- **Failing pages**: /dashboard/ (404), wave 208-209 service pages (404) — all awaiting deploy
+- **Site**: 200 OK — https://ziontechgroup.com
+- **Dashboard**: ✅ 200 OK — /dashboard/ live with v5 (Ops + Client views)
+- **Working pages**: / (200), /dashboard/ (200), /services/ (200), /blog/ (200), /contact/ (200), /about/ (200), /configurator/ (200), /proposals/ (200), /careers/ (200), /faq/ (200), /search/ (200), /pricing/ (200), /privacy/ (200), /terms/ (200), /sitemap.xml (200)
+- **Failing pages**: wave 209-210 service detail pages (404) — sitemap stale, needs regeneration
+- **Sitemap**: Fixed — next-sitemap.config.cjs was missing, now added. Will regenerate on next deploy.
+- **Homepage banner**: ✅ Live — "Powered by AI Agents" section with live stats
+- **Cron jobs**: 4 active (link-monitor, org-health, wave-research, email-readiness)
 - **Link crawl**: 16 OK, 19 404 — ALL 404s are new pages not yet deployed. No broken links in code.
 - **Root cause**: Previous deploys cancelled at 20min timeout. Fix: timeout increased to 30min.
 - **Cron jobs**: 4 active (link-monitor, org-health, wave-research, email-readiness)
@@ -97,6 +100,7 @@ None — all clear ✅
 | 2026-06-12 21:15 | @OWL | CI/CD CHECK | ❌ ALL "Deploy on Push" runs cancelled at 20min timeout. Dashboard /dashboard/ = 404 |
 | 2026-06-13 00:00 | @tablet | Wave 210 research | 5 new services: PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite |
 | 2026-06-12 07:00 | @Kilo | ORGANIZE | Fleet health check. Site 200 OK. Rebalanced tasks. |
+| 2026-06-13 01:30 | @OWL | Sitemap config fix | Added missing next-sitemap.config.cjs — was causing 1905 stale entries. Dashboard v5 + homepage banner now live (200 OK). |
 
 ## Communication Protocol
 1. **Read this file at session start** — all bots
