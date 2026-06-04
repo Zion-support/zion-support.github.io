@@ -8,8 +8,8 @@ export const PRIMARY_NAV_LINKS: NavigationLink[] = [
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Pricing', href: '/pricing' },
-  { name: 'About', href: '/about' },
-  { name: '⚡ AI Agents Live', href: '/agents-monitoring' },
+  { name: '⚡ AI Agents', href: '/dashboard' },
+  { name: 'Agent Monitoring', href: '/agents-monitoring/' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -21,16 +21,13 @@ export const SOLUTION_LINKS: NavigationLink[] = [
   { name: 'IT Services', href: '/services?category=it' },
   { name: 'Automation', href: '/services?category=automation' },
   { name: 'Micro-SaaS', href: '/services?category=micro-saas' },
-  { name: 'DevOps', href: '/services?category=devops' },
 ];
 
 export const RESOURCE_LINKS: NavigationLink[] = [
   { name: 'Blog', href: '/blog' },
-  { name: 'FAQ', href: '/faq' },
-  { name: 'Proposals', href: '/proposals' },
-  { name: 'Configurator', href: '/configurator' },
-  { name: '⚡ AI Agent Dashboard', href: '/dashboard' },
-  { name: '📊 Agent Monitoring', href: '/agents-monitoring' },
+  { name: 'Documentation', href: '/docs' },
+  { name: 'Status', href: '/status' },
+  { name: 'AI Agent Dashboard', href: '/dashboard' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: NavigationLink[] = [

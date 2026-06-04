@@ -1,158 +1,146 @@
 import { Service } from './serviceTypes';
 
-// Wave 212 — AI Observability, Data Privacy, Cloud FinOps, Security Threat Intel & AI Transparency (5 services)
-// Research by @tablet_kleber_bot — 2026-06-14
-// New categories: ai-observability, data-privacy, cloud-finops, security-threat-intel, ai-transparency
-
-export const wave212AiObservabilityServices: Service[] = [
+export const wave212PerformanceTestingServices: Service[] = [
   {
-    id: 'ai-observability-monitoring-platform',
-    title: 'AI Observability & Monitoring Platform',
-    description: 'Full-stack AI observability platform that monitors model performance, data drift, prediction quality, and infrastructure health across all ML pipelines in production. Unlike traditional APM tools purpose-built for software, this platform understands ML-specific concepts — feature distributions, embedding drift, concept drift, label quality, and model staleness. Integrated with Kubernetes, SageMaker, Vertex AI, and custom inference endpoints.',
-    category: 'ai',
-    icon: '📡',
-    href: '/services/ai-observability-monitoring-platform',
+    id: 'k6',
+    title: 'k6 Load Testing',
+    description: 'k6 is a modern load testing tool, building on Load Impact\'s legacy to become the open source developers love. It helps you test the performance of your APIs, microservices, and websites.',
+    category: 'performance-testing',
+    icon: '🏃',
+    href: '/services/k6',
     industry: 'Technology & SaaS',
     stage: 'published',
     popular: true,
-    pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
+    pricing: { basic: 'Free (OSS)', pro: 'Free tier (50K VUs)', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Real-time model performance monitoring with custom ML metrics',
-      'Automated data drift detection using statistical tests (PSI, KL divergence, KS test)',
-      'Feature attribution tracking and explanation consistency across model versions',
-      'Kubernetes-native deployment with Helm charts and operator pattern',
-      'Slack/PagerDuty/Teams alerting with ML-specific notification templates',
-      'Model registry integration with MLflow, SageMaker, Vertex AI, and custom endpoints'
+      'Developer-centric with Go and JavaScript scripting API',
+      'Cloud and local execution options',
+      'Integrates with CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins)',
+      'Supports HTTP/1.1, HTTP/2, WebSocket, and more protocols',
+      'Provides detailed metrics and trend analysis'
     ],
     benefits: [
-      'Reduce model degradation incidents by 80% with proactive drift detection',
-      'Cut ML infrastructure costs by 35% through right-sizing recommendations',
-      'Achieve regulatory compliance with full audit trails and explainability reports',
-      'Accelerate model deployment cycles with automated quality gates and shadow testing',
-      'Unify observability across 100+ models with a single pane of glass dashboard'
+      'Catch performance regressions before they reach production',
+      'Scale tests from a few virtual users to thousands',
+      'Run tests in CI/CD for every pull request',
+      'Used by Grafana Labs, Shopify, and Microsoft for performance validation'
     ]
   }
 ];
 
-export const wave212DataPrivacyServices: Service[] = [
+export const wave212ChaosEngineeringServices: Service[] = [
   {
-    id: 'data-privacy-consent-management',
-    title: 'Data Privacy & Consent Management Platform',
-    description: 'Enterprise-grade consent and privacy management platform that automates GDPR, CCPA, LGPD, and POPIA compliance across all customer touchpoints. Provides real-time consent collection, preference centers, data subject request (DSR) automation, privacy impact assessments, and cross-border data transfer management. Designed for organizations processing millions of customer records who need to demonstrate compliance to regulators and auditors.',
-    category: 'security',
-    icon: '🛡️',
-    href: '/services/data-privacy-consent-management',
-    industry: 'Legal & Compliance',
-    stage: 'published',
-    pricing: { basic: '$599/mo', pro: '$1,799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
-    features: [
-      'Universal consent management with SDK for web, mobile, and server-side',
-      'Automated data subject access requests (DSAR) with 30-day SLA guarantee',
-      'Privacy impact assessment (PIA) automation with risk scoring and mitigation workflows',
-      'Cross-border data transfer management with Standard Contractual Clause generation',
-      'Real-time violation detection and remediation with audit trail for regulators',
-      'Integration with 200+ marketing, analytics, and CRM platforms via API'
-    ],
-    benefits: [
-      'Eliminate manual DSAR processing and reduce response time from weeks to hours',
-      'Avoid regulatory fines up to 4% of global revenue with automated compliance workflows',
-      'Increase customer trust with transparent preference centers and consent receipts',
-      'Reduce legal review costs by 60% with automated privacy impact assessments',
-      'Scale compliance across all jurisdictions without adding headcount'
-    ]
-  }
-];
-
-export const wave212CloudFinOpsServices: Service[] = [
-  {
-    id: 'cloud-finops-governance-platform',
-    title: 'Cloud FinOps Governance & Cost Intelligence Platform',
-    description: 'Advanced cloud financial operations platform that provides multi-cloud cost allocation, commitment management, anomaly detection, and chargeback automation across AWS, Azure, and Google Cloud. Goes beyond basic cost dashboards with AI-powered waste detection, reserved instance optimization, savings plan recommendations, and unit economics tracking. Designed for engineering-led organizations that want to treat cloud spend as a first-class operational metric.',
-    category: 'devops',
-    icon: '💰',
-    href: '/services/cloud-finops-governance-platform',
+    id: 'chaos-mesh',
+    title: 'Chaos Mesh Cloud-native Chaos Engineering',
+    description: 'Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes environments. It helps you improve the resilience of your systems by injecting faults.',
+    category: 'chaos-engineering',
+    icon: '🌪️',
+    href: '/services/chaos-mesh',
     industry: 'Technology & SaaS',
     stage: 'published',
     popular: true,
-    pricing: { basic: '$799/mo', pro: '$2,499/mo', enterprise: 'Custom' },
+    pricing: { basic: 'Free (OSS)', pro: 'Free tier (community support)', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Multi-cloud cost allocation with tag enforcement and account hierarchy mapping',
-      'AI-powered waste detection identifying idle resources, overprovisioned instances, and orphan volumes',
-      'Reserved Instance and Savings Plan optimization with 12-month commitment modeling',
-      'Unit economics dashboard tracking cost per transaction, user, API call, and feature delivery',
-      'Automated chargeback showback reports with engineering team Slack notifications',
-      'Anomaly detection with configurable thresholds and root cause analysis across dimensions'
+      'Kubernetes-native, installed via Helm or Operators',
+      'Supports pod, network, filesystem, and time chaos experiments',
+      'Provides a web dashboard for experiment management',
+      'Integrates with Prometheus for monitoring experiment impact',
+      'Supports scheduling and auto-rollback of experiments'
     ],
     benefits: [
-      'Reduce cloud spend by 30-45% through automated waste identification and remediation',
-      'Increase Reserved Instance coverage from typical 30% to 85%+ with optimization recommendations',
-      'Enable engineering teams to own cloud costs with self-service allocation dashboards',
-      'Prevent budget overruns with real-time anomaly detection and automated threshold alerts',
-      'Demonstrate cloud ROI to leadership with unit economics and cost-per-delivery metrics'
+      'Proactively identify system weaknesses before they cause outages',
+      'Run experiments in production with safety controls',
+      'Improve system resilience and mean time to recovery (MTTR)',
+      'Used by Alibaba Cloud, ByteDance, and Schneider Electric'
     ]
   }
 ];
 
-export const wave212SecurityThreatIntelServices: Service[] = [
+export const wave212ServiceMeshServices: Service[] = [
   {
-    id: 'security-threat-intelligence-platform',
-    title: 'Security Threat Intelligence & Attack Surface Management',
-    description: 'Enterprise threat intelligence platform that continuously monitors your external attack surface, dark web presence, brand impersonation, and adversary infrastructure. Combines automated OSINT collection with curated threat feeds, IOC matching, and machine learning to identify threats before they materialize. Integrates with SIEM, SOAR, and ticketing platforms to automate response workflows. Designed for security teams who need to move from reactive detection to proactive threat anticipation.',
-    category: 'security',
-    icon: '🔍',
-    href: '/services/security-threat-intelligence-platform',
-    industry: 'Financial Services & FinTech',
-    stage: 'published',
-    pricing: { basic: '$1,299/mo', pro: '$3,999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
-    features: [
-      'Continuous external attack surface monitoring across 500+ internet-facing assets',
-      'Dark web and criminal forum monitoring for leaked credentials, data dumps, and brand mentions',
-      'Brand impersonation detection across domain registrations, social media, and mobile app stores',
-      'Automated IOC enrichment and correlation with your SIEM/SOAR platforms',
-      'Threat actor profiling with infrastructure tracking and TTP mapping using MITRE ATT&CK',
-      'Executive risk dashboard with trend analysis, benchmarking, and quarterly threat reports'
-    ],
-    benefits: [
-      'Reduce mean time to detect (MTTD) threats by 70% with continuous surface monitoring',
-      'Prevent credential-stuffing attacks with early warning of leaked employee credentials',
-      'Identify and takedown phishing domains and impersonation sites within hours, not weeks',
-      'Cut threat intelligence analyst workload by 50% through automated IOC enrichment',
-      'Demonstrate security leadership to board with quantified risk reduction reporting'
-    ]
-  }
-];
-
-export const wave212AiTransparencyServices: Service[] = [
-  {
-    id: 'ai-transparency-explainability-engine',
-    title: 'AI Transparency & Explainability Engine',
-    description: 'Drop-in AI explainability engine that makes any black-box model transparent and auditable. Provides local explanations (SHAP, LIME, Integrated Gradients) for individual predictions and global explanations for overall model behavior. Designed for regulated industries — healthcare, finance, insurance, and government — where AI decisions must be explainable to regulators, auditors, and affected individuals. Works with any model framework: TensorFlow, PyTorch, scikit-learn, XGBoost, and API-based models.',
-    category: 'ai',
-    icon: '🔬',
-    href: '/services/ai-transparency-explainability-engine',
-    industry: 'Healthcare & Life Sciences',
+    id: 'linkerd',
+    title: 'Linkerd Service Mesh',
+    description: 'Linkerd is a lightweight, ultra-secure service mesh for Kubernetes. It provides observability, reliability, and security without requiring application changes.',
+    category: 'service-mesh',
+    icon: '🔗',
+    href: '/services/linkerd',
+    industry: 'Technology & SaaS',
     stage: 'published',
     popular: true,
-    pricing: { basic: '$599/mo', pro: '$1,799/mo', enterprise: 'Custom' },
+    pricing: { basic: 'Free (OSS)', pro: 'Free tier (community support)', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Universal model support — works with any ML framework via model-agnostic SHAP implementation',
-      'Local prediction explanations with natural language summaries for non-technical stakeholders',
-      'Global feature interaction analysis and partial dependence visualization',
-      'Counterfactual explanations showing what input changes would alter model decisions',
-      'Regulatory report generator for EU AI Act, SR 11-7, and FDA AI/ML guidance compliance',
-      'REST API and Python SDK for integration into existing ML pipelines and applications'
+      'Zero-trust security with automatic mTLS between services',
+      'Fine-grained traffic control (retries, timeouts, circuit breaking)',
+      'Deep observability with request-level metrics and distributed tracing',
+      'Lightweight data plane (written in Rust) for minimal latency',
+      'Simple installation and upgrades via Helm or CLI'
     ],
     benefits: [
-      'Meet regulatory requirements for AI explainability in healthcare, finance, and government',
-      'Increase model adoption by 40% when stakeholders understand and trust predictions',
-      'Identify hidden bias in training data through feature attribution analysis',
-      'Reduce model audit preparation time from months to days with automated compliance reports',
-      'Enable A/B testing of model explanations to optimize stakeholder communication'
+      'Secure service-to-service communication without application changes',
+      'Improve reliability with automatic retries and timeouts',
+      'Gain visibility into service dependencies and performance',
+      'Used by PayPal, Expedia, and Homeland Security for zero-trust networking'
+    ]
+  }
+];
+
+export const wave212APIGatewayServices: Service[] = [
+  {
+    id: 'kong',
+    title: 'Kong API Gateway',
+    description: 'Kong is a cloud-native API gateway that delivers high performance and extensibility for managing, securing, and orchestrating APIs and microservices.',
+    category: 'api-gateway',
+    icon: '🚪',
+    href: '/services/kong',
+    industry: 'Technology & SaaS',
+    stage: 'published',
+    popular: true,
+    pricing: { basic: 'Free (OSS)', pro: 'Free tier (1M requests/month)', enterprise: 'Custom' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'High-performance plugin architecture (authentication, rate limiting, logging)',
+      'Supports multiple protocols: HTTP/1.1, HTTP/2, WebSocket, TCP, TLS',
+      'Provides declarative configuration via Kong Ingress Controller',
+      'Integrates with major identity providers (OAuth2, OpenID Connect, LDAP)',
+      'Offers detailed analytics and monitoring through Kong Manager'
+    ],
+    benefits: [
+      'Centralize API management, security, and traffic control',
+      'Scale to handle thousands of requests per second with low latency',
+      'Extend functionality with custom plugins in Lua, Go, or Python',
+      'Used by NASA, Yahoo, and The New York Times for API management'
+    ]
+  }
+];
+
+export const wave212EventStreamingServices: Service[] = [
+  {
+    id: 'pulsar',
+    title: 'Apache Pulsar Event Streaming',
+    description: 'Apache Pulsar is a cloud-native, distributed messaging and streaming platform built for geo-replication, multi-tenancy, and high performance.',
+    category: 'event-streaming',
+    icon: '⚡',
+    href: '/services/pulsar',
+    industry: 'Technology & SaaS',
+    stage: 'published',
+    popular: true,
+    pricing: { basic: 'Free (OSS)', pro: 'Free tier (community support)', enterprise: 'Custom' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Multi-tenancy and geo-replication built-in',
+      'Separation of compute and storage for independent scaling',
+      'Schema Registry for data validation and evolution',
+      'Functions and IO connectors for lightweight stream processing',
+      'Native Kubernetes operator for easy deployment and management'
+    ],
+    benefits: [
+      'Eliminate data silos with seamless cross-region and cross-cloud streaming',
+      'Reduce operational overhead with serverless streaming architecture',
+      'Ensure data quality and compatibility with schema evolution',
+      'Used by Splunk, Tencent, and Yahoo! for mission-critical event streaming'
     ]
   }
 ];
