@@ -48,6 +48,7 @@ const Footer: React.FC = () => {
                 { name: 'IoT & Edge', href: '/services?category=iot' },
                 { name: 'Pricing', href: '/pricing' },
                 { name: '⚡ AI Agent Dashboard', href: '/dashboard' },
+                { name: '📊 Agent Monitoring', href: '/agents-monitoring' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>
@@ -68,6 +69,7 @@ const Footer: React.FC = () => {
                 { name: 'Client Portal', href: '/portal' },
                 { name: 'Press', href: '/press' },
                 { name: '⚡ AI Agent Dashboard', href: '/dashboard' },
+                { name: '📊 Agent Monitoring', href: '/agents-monitoring' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-slate-400 hover:text-purple-400 text-sm transition-colors">{l.name}</Link>

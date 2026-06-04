@@ -19,6 +19,7 @@ import AiSolutionsArchitectWidget from './components/ai/AiSolutionsArchitectWidg
 import AIExperienceLoader from './components/AIExperienceLoader';
 import ErrorTracker from './components/ErrorTracker';
 import FieldPerformanceCollector from './components/FieldPerformanceCollector';
+import FloatingAgentStatus from './components/FloatingAgentStatus';
 import { AutoJsonLd } from './hooks/useAutoJsonLdPage';
 import './globals.css';
 
@@ -118,6 +119,7 @@ export default function RootLayout({
             <CookieConsentBanner />
             <ErrorTracker />
             <FieldPerformanceCollector />
+            <FloatingAgentStatus />
           </div>
         </body>
       </html>

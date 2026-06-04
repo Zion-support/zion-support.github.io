@@ -1,14 +1,13 @@
-import AgentsMonitoring from '@/components/AgentsMonitoring';
+// app/agents-monitoring/page.tsx — Public Agent Monitoring Dashboard
+import { Metadata } from 'next';
+import AgentDashboard from '@/components/AgentDashboard';
+
+export const metadata: Metadata = {
+  title: 'AI Agent Operations — Live Monitoring | Zion Tech Group',
+  description: 'Real-time monitoring of Zion Tech Group AI agent fleet. Watch 6 autonomous agents build, test, and deploy 795+ services 24/7.',
+  alternates: { canonical: 'https://ziontechgroup.com/agents-monitoring' },
+};
 
 export default function AgentsMonitoringPage() {
-  return (
-    <main className="min-h-screen bg-slate-950">
-      <div className="container-page py-16">
-        <h1 className="text-3xl font-bold text-center mb-8">
-          🤖 Agent Operations Dashboard
-        </h1>
-        <AgentsMonitoring />
-      </div>
-    </main>
-  );
+  return <AgentDashboard />;
 }

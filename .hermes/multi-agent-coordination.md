@@ -74,6 +74,10 @@ None — all clear ✅
 - **Ops View**: Fleet status, wave integration grid, task board, delegation log with category filters, system metrics, cron job health, quick links
 - **Client View**: Public-facing metrics, agent fleet showcase, recent activity feed, wave progress grid, CTA to configurator
 - **Data**: Update BOT_ROSTER, DELEGATION_LOG, ALL_TASKS, WAVE_STATUS in AgentDashboard.tsx when status changes
+- **Public monitoring page**: /agents-monitoring — always accessible, no auth needed
+- **Floating agent widget**: Bottom-right on ALL pages — shows live agent count, click to expand
+- **Footer links**: "📊 Agent Monitoring" in Services + Company columns
+- **Homepage banner**: "This Website is Built by AI Agents" — between hero and quiz sections
 
 ## Delegation Log (recent)
 | Time | Bot | Action | Result |
