@@ -119,13 +119,13 @@ export default function HomePage() {
   // Agent stats for banner
   const activeBots = 6;
   const totalServices = serviceCount;
-  const totalWaves = 37;
+  const totalWaves = 36; // 36 wave files (174-210)
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
     { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
-    { value: '11 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel' },
-    { value: <Link href="/dashboard" className="text-purple-400 hover:text-purple-300 transition">⚡ Live Agents</Link>, label: '6 AI agents working 24/7' },
+    { value: '16 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel · Database · Collaboration · Media · IaC · Low-Code' },
+    { value: <Link href="/agents-monitoring" className="text-purple-400 hover:text-purple-300 transition">⚡ 6 Live Agents</Link>, label: 'Working 24/7 on this site' },
     { value: '99.9%', label: STAT_SLA },
   ];
 

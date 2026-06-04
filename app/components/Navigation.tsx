@@ -18,13 +18,14 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   function isActive(href: string): boolean {
     if (href === '/') return pathname === '/';
     return pathname?.startsWith(href) ?? false;
   }
 
-  function NavLink({ link }: { link: NavigationLink }) {
+  function NavLink({ link, onClick }: { link: NavigationLink; onClick?: () => void }) {
     const active = isActive(link.href);
     return (
       <Link
@@ -34,7 +35,7 @@ export default function Navigation() {
             ? 'text-purple-400 bg-purple-500/10'
             : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
         }`}
-        onClick={() => setMobileOpen(false)}
+        onClick={onClick}
       >
         {link.name}
       </Link>
@@ -53,17 +54,42 @@ export default function Navigation() {
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1">
+          {/* Services dropdown */}
+          <div className="relative group">
+            <button
+              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+              onClick={() => { setServicesOpen(!servicesOpen); setSolutionsOpen(false); setResourcesOpen(false); }}
+              aria-expanded={servicesOpen}
+            >
+              Services ▾
+            </button>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-1 w-72 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 z-50">
+                <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">Featured AI</div>
+                {FEATURED_AI_SERVICE_LINKS.slice(0, 6).map((link, i) => (
+                  <Link key={i} href={link.href} className="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800" onClick={() => setServicesOpen(false)}>
+                    {link.name}
+                  </Link>
+                ))}
+                <div className="border-t border-slate-800 my-1" />
+                <Link href="/services" className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300" onClick={() => setServicesOpen(false)}>
+                  All Services →
+                </Link>
+              </div>
+            )}
+          </div>
+
           {/* Solutions dropdown */}
           <div className="relative group">
             <button
               className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1"
-              onClick={() => setSolutionsOpen(!solutionsOpen)}
+              onClick={() => { setSolutionsOpen(!solutionsOpen); setServicesOpen(false); setResourcesOpen(false); }}
               aria-expanded={solutionsOpen}
             >
               Solutions ▾
             </button>
             {solutionsOpen && (
-              <div className="absolute top-full right-0 mt-1 w-56 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 animate-in fade-in-0 zoom-in-95">
+              <div className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 z-50">
                 {SOLUTION_LINKS.map((link, i) => (
                   <Link
                     key={i}
@@ -74,41 +100,37 @@ export default function Navigation() {
                     {link.name}
                   </Link>
                 ))}
-                <div className="border-t border-slate-800 my-1" />
-                <Link href="/services" className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300" onClick={() => setSolutionsOpen(false)}>
-                  All Services →
-                </Link>
               </div>
             )}
           </div>
 
-          {/* Services dropdown */}
+          {/* Resources dropdown */}
           <div className="relative group">
             <button
               className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1"
-              onClick={() => setServicesOpen(!servicesOpen)}
-              aria-expanded={servicesOpen}
+              onClick={() => { setResourcesOpen(!resourcesOpen); setServicesOpen(false); setSolutionsOpen(false); }}
+              aria-expanded={resourcesOpen}
             >
-              Services ▾
+              Resources ▾
             </button>
-            {servicesOpen && (
-              <div className="absolute top-full right-0 mt-1 w-72 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 animate-in fade-in-0 zoom-in-95">
-                <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">Featured AI</div>
-                {FEATURED_AI_SERVICE_LINKS.slice(0, 6).map((link, i) => (
-                  <Link key={i} href={link.href} className="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800" onClick={() => setServicesOpen(false)}>
+            {resourcesOpen && (
+              <div className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 z-50">
+                {RESOURCE_LINKS.map((link, i) => (
+                  <Link
+                    key={i}
+                    href={link.href}
+                    className="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800"
+                    onClick={() => setResourcesOpen(false)}
+                  >
                     {link.name}
                   </Link>
                 ))}
-                <div className="border-t border-slate-800 my-1" />
-                <Link href="/services" className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300" onClick={() => setServicesOpen(false)}>
-                  All 759 Services →
-                </Link>
               </div>
             )}
           </div>
 
-          {/* Primary nav links */}
-          {PRIMARY_NAV_LINKS.filter(l => l.href !== '/' && l.href !== '/services' && l.href !== '/solutions').map((link, i) => (
+          {/* Primary nav links (Pricing, About, Contact, AI Agents) */}
+          {PRIMARY_NAV_LINKS.filter(l => !['/', '/services', '/solutions'].includes(l.href)).map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
 
@@ -135,15 +157,32 @@ export default function Navigation() {
 
       {/* Mobile panel */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 py-4 space-y-3 animate-in fade-in-0 slide-in-from-top-2">
+        <div className="lg:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
           {PRIMARY_NAV_LINKS.map((link, i) => (
-            <NavLink key={i} link={link} />
+            <NavLink key={i} link={link} onClick={() => setMobileOpen(false)} />
           ))}
-          <div className="border-t border-slate-800 pt-2">
-            <div className="text-xs text-slate-500 uppercase tracking-wider font-bold mb-2">Featured AI</div>
-            {FEATURED_AI_SERVICE_LINKS.slice(0, 4).map((link, i) => (
-              <NavLink key={i} link={link} />
+          <div className="border-t border-slate-800 pt-2 mt-2">
+            <div className="text-[10px] text-slate-500 uppercase tracking-wider font-bold mb-1 px-3">Solutions</div>
+            {SOLUTION_LINKS.map((link, i) => (
+              <NavLink key={i} link={link} onClick={() => setMobileOpen(false)} />
             ))}
+          </div>
+          <div className="border-t border-slate-800 pt-2 mt-2">
+            <div className="text-[10px] text-slate-500 uppercase tracking-wider font-bold mb-1 px-3">Featured AI</div>
+            {FEATURED_AI_SERVICE_LINKS.slice(0, 6).map((link, i) => (
+              <NavLink key={i} link={link} onClick={() => setMobileOpen(false)} />
+            ))}
+          </div>
+          <div className="border-t border-slate-800 pt-2 mt-2">
+            <div className="text-[10px] text-slate-500 uppercase tracking-wider font-bold mb-1 px-3">Resources</div>
+            {RESOURCE_LINKS.map((link, i) => (
+              <NavLink key={i} link={link} onClick={() => setMobileOpen(false)} />
+            ))}
+          </div>
+          <div className="pt-3">
+            <Link href="/contact" className="block text-center px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-sm font-semibold text-white" onClick={() => setMobileOpen(false)}>
+              Get Free Consultation
+            </Link>
           </div>
         </div>
       )}
