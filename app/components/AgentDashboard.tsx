@@ -593,8 +593,8 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
                   </div>
                 </div>
                 <div className="p-4 space-y-2">
-                  {TASKS.filter(t => t.priority === 'p0' || t.priority === 'p1').map(t => (
-                    <div key={t.id} className={`flex items-center gap-2 rounded-lg px-3 py-2 ${t.priority === 'p0' ? 'bg-red-500/5 border border-red-500/10' : 'bg-amber-500/5 border border-amber-500/10'}`}>
+                  {TASKS.filter(t => t.priority === 'p1').map(t => (
+                    <div key={t.id} className="flex items-center gap-2 rounded-lg px-3 py-2 bg-amber-500/5 border border-amber-500/10">
                       <span className="text-[10px] font-mono text-amber-400 w-8">{t.id}</span>
                       <span className="flex-1 text-xs">{t.task}</span>
                       <span className="text-[10px] text-purple-300">{t.owner}</span>
@@ -609,6 +609,7 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
                         <span className="flex-1 text-xs text-slate-400">{t.task}</span>
                         <span className="text-[10px] text-purple-300">{t.owner}</span>
                         <StatusBadge status={t.status} />
+                        {t.note && <span className="text-[9px] text-amber-400/70">⚠ {t.note}</span>}
                       </div>
                     ))}
                   </div>
