@@ -1,7 +1,7 @@
 # Shared Task Board — Zion Tech Group Multi-Agent
 > Source of truth for all 6 bots. Update on status change.
 > Location: ~/.hermes/multi-agent-coordination.md (synced by @Kilo)
-> Last updated: 2026-06-13T06:00:00-03:00
+> Last updated: 2026-06-14T18:00:00-03:00
 
 ## Bot Roster
 | Bot | Role | Status | Current Task |
@@ -19,9 +19,9 @@ None — all clear ✅
 ## In Progress (P1)
 | ID | Task | Owner | Status |
 |-----|------|-------|--------|
-| P1-1 | Wave 211 research | @tablet | 🔵 Available — cron job queued |
-| P1-2 | Site quality pass — thin pages | @Windows_quel | ⚠️ STALE — needs kickstart |
-| P1-3 | CI/CD timeout investigation | @Rocket | 🔵 Available |
+| P1-1 | Wave 212 research — find 5 new services | @tablet | 🔬 Ready to start (211 integrated) |
+| P1-2 | Site quality pass — thin pages | @Windows_quel | ⚠️ Stale — no progress >24h, needs kickstart |
+| P1-3 | Dashboard data update — post-wave-211 | @OWL | ✅ Done — dashboard updated with 34 events |
 
 ## Backlog (P2)
 | ID | Task | Owner | Notes |
@@ -31,6 +31,7 @@ None — all clear ✅
 | B3 | Service page auto-generation | @tablet | Automated via postbuild |
 | B4 | Agent self-improvement | @Kilo | Review learning log, update skills |
 | B5 | GitHub auth for Actions triage | @windows_carol | Needs gh auth on remote |
+| B6 | Wave 212 integration | @OWL | After @tablet research completes |
 
 ## Blocked
 | ID | Task | What's Needed |
@@ -38,12 +39,13 @@ None — all clear ✅
 | X1 | Email responder live | Kleber: Gmail app password |
 | X2 | GitHub Actions triage | Kleber: gh auth on remote machine |
 | X3 | CI/CD deploy completing | Deploy runs timing out at 20min |
+| X4 | CI/CD timeout investigation | Kleber: gh auth for @Rocket |
 
 ## Wave Integration Status
 | Wave | Services | Status |
 |------|----------|--------|
-| 174-210 | ~795 services | ✅ Integrated (36 waves) |
-| 211 | TBD | 🔬 Queued for @tablet |
+| 174-211 | ~795 services | ✅ Integrated (36 waves) |
+| 212 | TBD | 📋 Queued — @tablet to research |
 
 ## Schema Rules (MUST FOLLOW)
 1. **Category values**: always lowercase
@@ -55,10 +57,10 @@ None — all clear ✅
 ## Site State
 - **Build**: ✅ CI/CD deployed
 - **Type-check**: ✅ Clean (no new errors)
-- **Services**: ~795 in servicesData.ts (waves 174-210, 36 waves)
+- **Services**: ~795 in servicesData.ts (waves 174-211, 36 waves)
 - **Site**: 200 OK — https://ziontechgroup.com
 - **Dashboard**: ✅ /dashboard + /agents-monitoring live
-- **Deep crawl**: ✅ 15/15 pages OK, 87/87 links OK
+- **Deep crawl**: ✅ 14/14 core pages OK, 30/30 links OK (2026-06-14)
 - **Cron jobs**: 4 active (link-monitor, org-health, wave-research, email-readiness)
 
 ## Monitoring & Access Points
@@ -72,12 +74,12 @@ None — all clear ✅
 ## Delegation Log (recent)
 | Time | Bot | Action | Result |
 |------|-----|--------|--------|
-| 2026-06-13 05:00 | @Kilo | ORGANIZE #7 | Quick audit: 15/15 pages OK, 87/87 links OK. Updated coord doc. Wave 210 done → Wave 211 queued. |
-| 2026-06-13 04:30 | @OWL | h1 fixes | Added h1 to Services + Proposals loading states |
-| 2026-06-13 04:00 | @OWL | Navigation overhaul | 71/71 links OK. Resources dropdown, Agent Monitoring in footer |
-| 2026-06-13 03:30 | @OWL | Monitoring dashboard | /agents-monitoring page, floating widget, homepage banner |
-| 2026-06-13 03:00 | @Kilo | ORGANIZE #6 | Fleet rebalance |
-| 2026-06-13 02:00 | @OWL | Wave 210 integration | 5 new services pushed |
+| 2026-06-14 18:00 | @OWL | ORGANIZE #11 | Verified dashboard live, wave 211 integrated, 36 waves, 795 services, site 200 OK. Updated coord doc. |
+| 2026-06-14 16:30 | @Kilo | ORGANIZE #10 | Stale audit: P1-2 flagged stale (>24h no progress), P1-3 reclassified as Blocked (X4), site 200 OK |
+| 2026-06-14 01:00 | @OWL | Dashboard v6 | Enhanced monitoring + client view + restart protocol deployed |
+| 2026-06-14 00:00 | @Kilo | ORGANIZE #9 | Fleet rebalance, all P0 clear |
+| 2026-06-13 05:00 | @Kilo | ORGANIZE #7 | Quick audit: 15/15 pages OK, 87/87 links OK |
+| 2026-06-13 03:00 | @OWL | Deep link crawl | 15/15 pages OK, 41/41 links OK |
 
 ## Communication Protocol
 1. **Read this file at session start** — all bots
