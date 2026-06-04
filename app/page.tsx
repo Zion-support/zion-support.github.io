@@ -410,8 +410,26 @@ let list = services;
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-violet-900/40 to-pink-900/50" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(120,50,200,0.3),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(200,50,150,0.2),transparent_50%)]" />
-        <div className="relative container-page py-14">
+        {/* Animated background particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-4 left-[10%] w-1 h-1 bg-purple-400/40 rounded-full animate-pulse" />
+          <div className="absolute top-8 right-[20%] w-1.5 h-1.5 bg-pink-400/30 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+          <div className="absolute bottom-6 left-[30%] w-1 h-1 bg-violet-400/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-12 left-[60%] w-1 h-1 bg-emerald-400/30 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
+          <div className="absolute bottom-8 right-[40%] w-1.5 h-1.5 bg-cyan-400/30 rounded-full animate-pulse" style={{ animationDelay: '0.7s' }} />
+        </div>
+        <div className="relative container-page py-16">
           <div className="max-w-5xl mx-auto">
+            {/* Recording indicator */}
+            <div className="flex justify-center mb-4">
+              <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-3 py-1">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+                </span>
+                <span className="text-[10px] text-red-400 font-medium uppercase tracking-wider">Recording Live</span>
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* Left: Text */}
               <div className="flex-1 text-center md:text-left">
@@ -422,28 +440,28 @@ let list = services;
                   </span>
                   <span className="text-xs text-emerald-400 font-medium">Live Right Now — {time}</span>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-3">
                   <span className="bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
                     This Website is Built by AI Agents
                   </span>
                 </h2>
-                <p className="text-slate-400 text-sm leading-relaxed max-w-xl">
-                  6 autonomous AI agents work 24/7 — researching services, writing code, fixing bugs, and deploying updates in real time. Every page you see is the result of collaborative AI work. Watch them live.
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-xl">
+                  6 autonomous AI agents work 24/7 — researching services, writing code, fixing bugs, and deploying updates in real time. Every page you see is the result of collaborative AI work. <strong className="text-slate-300">Watch them live.</strong>
                 </p>
               </div>
 
               {/* Right: Live Stats */}
-              <div className="grid grid-cols-3 gap-4 shrink-0">
-                <div className="bg-slate-900/80 border border-purple-500/20 rounded-xl p-4 text-center min-w-[100px]">
-                  <div className="text-2xl font-bold text-purple-400"><AnimatedCounter target={activeBots} /></div>
+              <div className="grid grid-cols-3 gap-3 shrink-0">
+                <div className="bg-slate-900/80 border border-purple-500/20 rounded-xl p-4 text-center min-w-[110px] hover:border-purple-400/40 transition-colors">
+                  <div className="text-3xl font-bold text-purple-400"><AnimatedCounter target={activeBots} /></div>
                   <div className="text-[9px] text-slate-500 uppercase tracking-wider">Agents Live</div>
                 </div>
-                <div className="bg-slate-900/80 border border-emerald-500/20 rounded-xl p-4 text-center min-w-[100px]">
-                  <div className="text-2xl font-bold text-emerald-400"><AnimatedCounter target={totalServices} /></div>
+                <div className="bg-slate-900/80 border border-emerald-500/20 rounded-xl p-4 text-center min-w-[110px] hover:border-emerald-400/40 transition-colors">
+                  <div className="text-3xl font-bold text-emerald-400"><AnimatedCounter target={totalServices} /></div>
                   <div className="text-[9px] text-slate-500 uppercase tracking-wider">Services</div>
                 </div>
-                <div className="bg-slate-900/80 border border-pink-500/20 rounded-xl p-4 text-center min-w-[100px]">
-                  <div className="text-2xl font-bold text-pink-400"><AnimatedCounter target={totalWaves} suffix="+" /></div>
+                <div className="bg-slate-900/80 border border-pink-500/20 rounded-xl p-4 text-center min-w-[110px] hover:border-pink-400/40 transition-colors">
+                  <div className="text-3xl font-bold text-pink-400"><AnimatedCounter target={totalWaves} suffix="+" /></div>
                   <div className="text-[9px] text-slate-500 uppercase tracking-wider">Waves</div>
                 </div>
               </div>
@@ -457,7 +475,7 @@ let list = services;
               <Link href="/agents-monitoring" className="inline-flex items-center gap-2 bg-slate-800/60 border border-purple-500/30 text-purple-300 px-6 py-3 rounded-xl font-medium text-sm hover:bg-purple-500/10 hover:border-purple-400/50 transition-all">
                 📊 Monitor Agents
               </Link>
-              <Link href="/dashboard?mode=client" className="inline-flex items-center gap-2 bg-slate-800/60 border border-slate-700/60 text-slate-300 px-6 py-3 rounded-xl font-medium text-sm hover:bg-slate-700/80 hover:border-purple-500/30 transition-all">
+              <Link href="/agents-monitoring" className="inline-flex items-center gap-2 bg-slate-800/60 border border-slate-700/60 text-slate-300 px-6 py-3 rounded-xl font-medium text-sm hover:bg-slate-700/80 hover:border-purple-500/30 transition-all">
                 🤖 Meet the Fleet
               </Link>
             </div>

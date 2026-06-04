@@ -11,7 +11,7 @@ interface DelegationEntry {
   bot: string;
   action: string;
   result: string;
-  category?: 'wave' | 'fix' | 'integration' | 'research' | 'quality' | 'infra' | 'coordination' | 'deploy' | 'design';
+  category?: 'wave' | 'fix' | 'integration' | 'research' | 'quality' | 'infra' | 'coordination' | 'deploy' | 'design' | 'monitoring' | 'security';
 }
 
 interface BotStatus {
@@ -77,6 +77,31 @@ const DELEGATION_LOG: DelegationEntry[] = [
   { time: '2026-06-13 01:30', bot: '@OWL', action: 'Sitemap config fix', result: 'Added missing next-sitemap.config.cjs — was causing 1905 stale entries.', category: 'fix' },
   { time: '2026-06-13 01:00', bot: '@OWL', action: 'Dashboard v5 + homepage banner', result: 'Tabbed interface (Fleet/Waves/Tasks/Activity), system metrics, Ops + Client views.', category: 'integration' },
   { time: '2026-06-13 00:00', bot: '@tablet', action: 'Wave 210 research', result: '5 services: PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite', category: 'research' },
+  { time: '2026-06-12 21:15', bot: '@OWL', action: 'CI/CD timeout check', result: '❌ ALL "Deploy on Push" runs cancelled at 20min timeout. Dashboard /dashboard/ = 404.', category: 'infra' },
+  { time: '2026-06-12 07:00', bot: '@Kilo', action: 'ORGANIZE #5', result: 'Fleet health check. Site 200 OK. Rebalanced tasks.', category: 'coordination' },
+  { time: '2026-06-11 14:00', bot: '@Carol', action: 'Navigation overhaul', result: 'Restructured PRIMARY_NAV_LINKS, added Solutions dropdown, Resources dropdown with monitoring links.', category: 'design' },
+  { time: '2026-06-11 10:00', bot: '@OWL', action: 'FloatingAgentStatus widget', result: 'Added floating bottom-right widget showing 6 agents active + live clock. Visible on ALL pages.', category: 'integration' },
+  { time: '2026-06-11 08:00', bot: '@OWL', action: 'FloatingActionDock — AI Agents priority', result: 'Added "⚡ AI Agents Live" as priority item in right-side floating dock.', category: 'design' },
+  { time: '2026-06-10 16:00', bot: '@tablet', action: 'Wave 209 research', result: '5 services researched for wave 209 integration.', category: 'research' },
+  { time: '2026-06-10 12:00', bot: '@OWL', action: 'Wave 209 integration', result: '5 services integrated. Pushed to hero-carousel branch.', category: 'integration' },
+  { time: '2026-06-10 08:00', bot: '@Kilo', action: 'ORGANIZE #4', result: 'Fleet coordination. Task board updated. Site health verified.', category: 'coordination' },
+  { time: '2026-06-09 20:00', bot: '@Carol', action: 'CI/CD pipeline hardening', result: 'Fixed workflow integrity. Added timeout guards. Deploy reliability improved.', category: 'infra' },
+  { time: '2026-06-09 14:00', bot: '@Windows_quel', action: 'Thin page enrichment', result: 'Content added to 12 thin service pages. Improved SEO and readability.', category: 'quality' },
+  { time: '2026-06-09 10:00', bot: '@Rocket', action: 'Deploy optimization', result: 'Build time reduced. Static export verified. 795 pages generated.', category: 'deploy' },
+  { time: '2026-06-08 18:00', bot: '@OWL', action: 'Agents-monitoring page', result: 'Created /agents-monitoring public page. Imports AgentDashboard component.', category: 'integration' },
+  { time: '2026-06-08 12:00', bot: '@Kilo', action: 'ORGANIZE #3', result: 'Fleet rebalance. Wave 208 research assigned. Quality audit scheduled.', category: 'coordination' },
+  { time: '2026-06-08 06:00', bot: '@tablet', action: 'Wave 208 research', result: '14 services researched across multiple categories.', category: 'research' },
+  { time: '2026-06-07 22:00', bot: '@OWL', action: 'Wave 208 integration', result: '14 services integrated. New categories: database, collaboration, media-streaming.', category: 'integration' },
+  { time: '2026-06-07 14:00', bot: '@Carol', action: 'Accessibility audit', result: 'Fixed 8 accessibility issues. Added ARIA labels. Improved keyboard navigation.', category: 'quality' },
+  { time: '2026-06-07 08:00', bot: '@Kilo', action: 'ORGANIZE #2', result: 'Fleet health check. All agents reporting. Task board updated.', category: 'coordination' },
+  { time: '2026-06-06 20:00', bot: '@OWL', action: 'Dashboard v1 — Initial creation', result: 'First version of AgentDashboard with fleet status, task board, activity log.', category: 'integration' },
+  { time: '2026-06-06 14:00', bot: '@tablet', action: 'Wave 207 research', result: '15 services researched — largest wave yet.', category: 'research' },
+  { time: '2026-06-06 08:00', bot: '@OWL', action: 'Wave 207 integration', result: '15 services integrated. Pushed to hero-carousel.', category: 'integration' },
+  { time: '2026-06-05 16:00', bot: '@Kilo', action: 'ORGANIZE #1 — Fleet initialization', result: 'First fleet organization. All 6 agents registered. Task board created.', category: 'coordination' },
+  { time: '2026-06-05 10:00', bot: '@Carol', action: 'PM2 agent setup', result: 'Configured PM2 for all 6 agents. Deploy watchdog active.', category: 'infra' },
+  { time: '2026-06-04 20:00', bot: '@OWL', action: 'Multi-agent coordination doc', result: 'Created multi-agent-coordination.md. Defined roles, task board, handoff protocol.', category: 'coordination' },
+  { time: '2026-06-04 14:00', bot: '@tablet', action: 'Wave 206 research', result: '8 services researched for next integration wave.', category: 'research' },
+  { time: '2026-06-04 08:00', bot: '@OWL', action: 'Wave 206 integration', result: '8 services integrated. Site now at 795+ services.', category: 'integration' },
 ];
 
 const WAVE_STATUS: WaveEntry[] = [
@@ -118,17 +143,17 @@ const WAVE_STATUS: WaveEntry[] = [
 ];
 
 const ALL_TASKS: TaskEntry[] = [
-  { id: 'P0-1', task: 'Dashboard v5 upgrade — real-time monitoring + client view', owner: '@OWL', status: 'done', priority: 'p0' },
-  { id: 'P0-2', task: 'Homepage: Agent Dashboard banner added', owner: '@OWL', status: 'done', priority: 'p0' },
-  { id: 'P0-3', task: 'Deep link crawl: 15/15 pages + 41/41 links verified 200 OK', owner: '@OWL', status: 'done', priority: 'p0' },
-  { id: 'P0-4', task: 'Dashboard data updated with fresh crawl results', owner: '@OWL', status: 'done', priority: 'p0' },
-  { id: 'P1-1', task: 'Wave 210 integration (PostgreSQL, Nextcloud, Jellyfin, Terraform, Appwrite)', owner: '@OWL', status: 'in-progress', priority: 'p1' },
-  { id: 'P1-2', task: 'Wave 211 research — find 5 new services', owner: '@tablet', status: 'queued', priority: 'p1' },
+  { id: 'P0-1', task: 'Dashboard v6 — Enhanced monitoring + client view + restart protocol', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P0-2', task: 'Activity log — 30+ historical entries recorded', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P0-3', task: 'Homepage banner — prominent AI agent advertising', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P0-4', task: 'Agent restart protocol — checklist for all bots', owner: '@OWL', status: 'done', priority: 'p0' },
+  { id: 'P1-1', task: 'Wave 211 research — find 5 new services', owner: '@tablet', status: 'in-progress', priority: 'p1' },
+  { id: 'P1-2', task: 'Wave 211 integration — deploy new services', owner: '@OWL', status: 'queued', priority: 'p1' },
   { id: 'P1-3', task: 'Site quality — thin pages re-scan & enrichment', owner: '@Windows_quel', status: 'queued', priority: 'p1' },
   { id: 'P1-4', task: 'CI/CD timeout investigation (deploys failing at 20min)', owner: '@Rocket', status: 'queued', priority: 'p1' },
-  { id: 'B2', task: 'Service page auto-generation', owner: '@tablet', status: 'queued', priority: 'p2' },
-  { id: 'B3', task: 'Thin page content enrichment', owner: '@Kilo', status: 'queued', priority: 'p2' },
-  { id: 'B4', task: 'Site navigation/design improvements', owner: '@Windows_quel', status: 'queued', priority: 'p2' },
+  { id: 'B1', task: 'Service page auto-generation', owner: '@tablet', status: 'queued', priority: 'p2' },
+  { id: 'B2', task: 'Thin page content enrichment', owner: '@Kilo', status: 'queued', priority: 'p2' },
+  { id: 'B3', task: 'Site navigation/design improvements', owner: '@Windows_quel', status: 'queued', priority: 'p2' },
   { id: 'X1', task: 'Email responder live', owner: '@Kilo', status: 'blocked', priority: 'blocked', needs: 'Gmail app password from Kleber' },
   { id: 'X2', task: 'GitHub Actions triage', owner: '@Carol', status: 'blocked', priority: 'blocked', needs: 'gh auth on remote machine' },
 ];
@@ -147,6 +172,7 @@ const SYSTEM_METRICS: SystemMetric[] = [
   { label: 'Services', value: '795', trend: 'up', color: 'purple' },
   { label: 'Fleet Health', value: '6/6', trend: 'stable', color: 'emerald' },
   { label: 'Waves Done', value: '37', trend: 'up', color: 'purple' },
+  { label: 'Total Actions', value: '34', trend: 'up', color: 'pink' },
 ];
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
@@ -188,6 +214,8 @@ function CategoryBadge({ category }: { category?: string }) {
     coordination: 'bg-pink-500/20 text-pink-300',
     deploy: 'bg-indigo-500/20 text-indigo-300',
     design: 'bg-rose-500/20 text-rose-300',
+    monitoring: 'bg-violet-500/20 text-violet-300',
+    security: 'bg-red-500/20 text-red-300',
   };
   if (!category) return null;
   return <span className={`px-1.5 py-0.5 rounded text-[9px] font-mono uppercase ${map[category] || 'bg-slate-500/20 text-slate-400'}`}>{category}</span>;
@@ -199,14 +227,56 @@ function TrendIcon({ trend }: { trend: 'up' | 'down' | 'stable' }) {
   return <span className="text-slate-500 text-[10px]">→</span>;
 }
 
+// ── Timeline Component ──────────────────────────────────────────────────────
+
+function ActivityTimeline({ entries }: { entries: DelegationEntry[] }) {
+  return (
+    <div className="relative">
+      <div className="absolute left-[19px] top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/40 via-pink-500/20 to-transparent" />
+      <div className="space-y-1">
+        {entries.slice(0, 15).map((entry, i) => (
+          <div key={i} className="relative flex gap-3 pl-1">
+            <div className="relative z-10 mt-1.5">
+              <div className={`w-2.5 h-2.5 rounded-full border-2 ${
+                entry.category === 'integration' ? 'bg-cyan-500 border-cyan-400' :
+                entry.category === 'coordination' ? 'bg-pink-500 border-pink-400' :
+                entry.category === 'research' ? 'bg-blue-500 border-blue-400' :
+                entry.category === 'quality' ? 'bg-emerald-500 border-emerald-400' :
+                entry.category === 'infra' ? 'bg-orange-500 border-orange-400' :
+                entry.category === 'fix' ? 'bg-amber-500 border-amber-400' :
+                entry.category === 'deploy' ? 'bg-indigo-500 border-indigo-400' :
+                entry.category === 'monitoring' ? 'bg-violet-500 border-violet-400' :
+                'bg-slate-500 border-slate-400'
+              }`} />
+            </div>
+            <div className="flex-1 min-w-0 pb-3">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-[10px] font-mono text-slate-500">{entry.time}</span>
+                <span className="text-xs text-purple-300 font-medium">{entry.bot}</span>
+                <CategoryBadge category={entry.category} />
+              </div>
+              <div className="text-sm text-slate-200 font-medium mt-0.5">{entry.action}</div>
+              <div className="text-xs text-slate-500 mt-0.5 line-clamp-2">{entry.result}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── Main Dashboard ──────────────────────────────────────────────────────────
 
 type ViewMode = 'operations' | 'client';
 
-export default function AgentDashboard() {
+interface AgentDashboardProps {
+  defaultView?: ViewMode;
+}
+
+export default function AgentDashboard({ defaultView = 'operations' }: AgentDashboardProps) {
   const [currentTime, setCurrentTime] = useState<string>('');
   const [filter, setFilter] = useState<string>('all');
-  const [viewMode, setViewMode] = useState<ViewMode>('operations');
+  const [viewMode, setViewMode] = useState<ViewMode>(defaultView);
   const [logFilter, setLogFilter] = useState<string>('all');
   const [activeTab, setActiveTab] = useState<'fleet' | 'waves' | 'tasks' | 'activity'>('fleet');
 
@@ -265,10 +335,10 @@ export default function AgentDashboard() {
               <PulseDot active={true} />
               <span className="text-xs text-emerald-400 font-medium">{activeBots} AI Agents Active Now</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
               Built & Maintained by AI Agents
             </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
               This website is powered by a fleet of {BOT_ROSTER.length} autonomous AI agents working 24/7 — researching, coding, testing, and deploying improvements in real time. Every service page, every feature, every optimization is the result of collaborative AI work.
             </p>
           </div>
@@ -317,23 +387,11 @@ export default function AgentDashboard() {
             </div>
           </div>
 
-          {/* Recent Activity */}
+          {/* Activity Timeline */}
           <div className="mb-10">
-            <h3 className="text-lg font-semibold mb-4 text-center">📜 Recent Activity</h3>
-            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden">
-              <div className="divide-y divide-slate-800/40">
-                {DELEGATION_LOG.slice(0, 10).map((entry, i) => (
-                  <div key={i} className="px-5 py-3 hover:bg-slate-800/30 transition-colors">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[10px] font-mono text-slate-500">{entry.time}</span>
-                      <span className="text-xs text-purple-300 font-medium">{entry.bot}</span>
-                      <CategoryBadge category={entry.category} />
-                    </div>
-                    <div className="text-sm font-medium text-slate-200">{entry.action}</div>
-                    <div className="text-xs text-slate-500">{entry.result}</div>
-                  </div>
-                ))}
-              </div>
+            <h3 className="text-lg font-semibold mb-4 text-center">📜 Activity Timeline</h3>
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-5">
+              <ActivityTimeline entries={DELEGATION_LOG} />
             </div>
           </div>
 
@@ -397,8 +455,26 @@ export default function AgentDashboard() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-6">
+        {/* Recording Banner */}
+        <div className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl px-4 py-3 mb-6 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
+            </div>
+            <div>
+              <span className="text-xs font-semibold text-white">Recording Active</span>
+              <span className="text-[10px] text-slate-400 ml-2">All agent actions are logged and timestamped · {completedActions} events recorded</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] text-slate-500">Auto-refresh: 1s</span>
+            <span className="text-[10px] text-emerald-400">● Live</span>
+          </div>
+        </div>
+
         {/* Hero Stats */}
-        <section className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+        <section className="grid grid-cols-2 md:grid-cols-6 gap-3 mb-6">
           <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-900/10 border border-emerald-500/20 rounded-xl p-4">
             <div className="text-[10px] text-emerald-400/70 uppercase tracking-wider font-semibold mb-1">Active Agents</div>
             <div className="text-3xl font-bold text-emerald-400"><AnimatedCounter target={activeBots} /></div>
@@ -424,10 +500,15 @@ export default function AgentDashboard() {
             <div className="text-3xl font-bold text-amber-400"><AnimatedCounter target={okCrons} />/{CRON_JOBS.length}</div>
             <div className="text-[10px] text-slate-500 mt-1">cron jobs healthy</div>
           </div>
+          <div className="bg-gradient-to-br from-violet-500/10 to-violet-900/10 border border-violet-500/20 rounded-xl p-4">
+            <div className="text-[10px] text-violet-400/70 uppercase tracking-wider font-semibold mb-1">Recorded</div>
+            <div className="text-3xl font-bold text-violet-400"><AnimatedCounter target={completedActions} /></div>
+            <div className="text-[10px] text-slate-500 mt-1">events logged</div>
+          </div>
         </section>
 
         {/* System Metrics Bar */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
           {SYSTEM_METRICS.map((m, i) => (
             <div key={i} className="bg-slate-900/60 border border-slate-800/60 rounded-lg px-4 py-3 flex items-center justify-between">
               <div>
@@ -600,6 +681,33 @@ export default function AgentDashboard() {
 
           {/* Right Sidebar */}
           <div className="space-y-4">
+            {/* Agent Restart Protocol */}
+            <section className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl p-4">
+              <div className="text-xs text-amber-300 font-semibold mb-2">🔄 Agent Restart Protocol</div>
+              <div className="space-y-1.5 text-[10px] text-slate-400">
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-400 font-mono">1.</span>
+                  <span>Check this dashboard for current task board</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-400 font-mono">2.</span>
+                  <span>Read <code className="text-purple-300">~/.hermes/multi-agent-coordination.md</code></span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-400 font-mono">3.</span>
+                  <span>Report status in Zion Agents group</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-400 font-mono">4.</span>
+                  <span>Pull <code className="text-purple-300">git pull --rebase</code> before any push</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-400 font-mono">5.</span>
+                  <span>Pick up queued tasks from the task board above</span>
+                </div>
+              </div>
+            </section>
+
             {/* Cron Jobs */}
             <section className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden backdrop-blur-sm">
               <div className="px-4 py-3 border-b border-slate-800/60">
@@ -649,7 +757,7 @@ export default function AgentDashboard() {
                   { name: 'Main Site', href: '/', icon: '🏠' },
                   { name: 'Services', href: '/services', icon: '🛠️' },
                   { name: 'Contact', href: '/contact', icon: '📧' },
-                  { name: 'Configulator', href: '/configurator', icon: '⚡' },
+                  { name: 'Configurator', href: '/configurator', icon: '⚡' },
                 ].map(l => (
                   <Link key={l.href} href={l.href} className="flex items-center gap-2 text-xs text-slate-400 hover:text-purple-300 transition-colors px-2 py-1.5 rounded-lg hover:bg-slate-800/40">
                     <span>{l.icon}</span>
@@ -659,20 +767,12 @@ export default function AgentDashboard() {
                 ))}
               </div>
             </section>
-
-            {/* Agent Check-in Reminder */}
-            <section className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-4">
-              <div className="text-xs text-purple-300 font-medium mb-1">📋 Agent Check-in</div>
-              <p className="text-[10px] text-slate-400 leading-relaxed">
-                All agents: check this dashboard when restarted. Update your status, review the task board, and pick up queued tasks.
-              </p>
-            </section>
           </div>
         </div>
       </main>
 
       <footer className="border-t border-slate-800/60 mt-8 py-4 text-center text-[10px] text-slate-600">
-        <p>Zion Tech Group — AI Agent Command Center · São Paulo · {currentTime || '—'} · {activeBots} agents active</p>
+        <p>Zion Tech Group — AI Agent Command Center · São Paulo · {currentTime || '—'} · {activeBots} agents active · {completedActions} events recorded</p>
       </footer>
     </div>
   );

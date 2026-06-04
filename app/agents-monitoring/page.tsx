@@ -1,4 +1,4 @@
-// app/agents-monitoring/page.tsx — Public Agent Monitoring Dashboard
+// app/agents-monitoring/page.tsx — Public Agent Monitoring Dashboard (Client View)
 import { Metadata } from 'next';
 import AgentDashboard from '@/components/AgentDashboard';
 
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function AgentsMonitoringPage() {
-  return <AgentDashboard />;
+  return <AgentDashboard defaultView="client" />;
 }
