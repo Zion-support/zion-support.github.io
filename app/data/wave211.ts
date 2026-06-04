@@ -1,160 +1,160 @@
 import { Service } from './serviceTypes';
 
-// Wave 211 — AI Governance, Edge AI, Data Contract, FinOps & AI Red Teaming (5 services)
-// Research by @tablet_kleber_bot — 2026-06-13
-// New categories: ai-governance, edge-ai, data-contract, finops, ai-red-team
+// Wave 211 — AI Agent Orchestration, Data Product Marketplace, Zero-Trust Network, Synthetic Data & MLOps Registry (5 services)
+// Research by @tablet_kleber_bot — 2026-06-14
+// New categories: ai-agent-orchestration, data-product, zero-trust, synthetic-data, mlops
 
-export const wave211AiGovernanceServices: Service[] = [
+export const wave211AiAgentOrchestrationServices: Service[] = [
   {
-    id: 'ai-governance-compliance-platform',
-    title: 'AI Governance & Compliance Platform',
-    description: 'Enterprise AI governance platform that provides model inventory, bias detection, explainability, audit trails, and regulatory compliance automation for all AI/ML systems. As the EU AI Act enforcement begins in 2026 and US state-level AI regulations multiply, organizations need centralized oversight of every model in production — from training data lineage to inference monitoring.',
+    id: 'ai-agent-orchestration-platform',
+    title: 'AI Agent Orchestration Platform',
+    description: 'Enterprise platform for building, deploying, and managing autonomous AI agent fleets that collaborate on complex multi-step workflows. As AI moves from chatbots to agentic systems in 2026, organizations need orchestration layers that handle agent-to-agent communication, task decomposition, tool access governance, and failure recovery. This platform provides a visual agent builder, pre-built agent templates for common enterprise tasks, and real-time monitoring of agent behavior and costs.',
     category: 'ai',
-    icon: '🏛️',
-    href: '/services/ai-governance-compliance-platform',
-    industry: 'Regulated Industries',
+    icon: '🤖',
+    href: '/services/ai-agent-orchestration-platform',
+    industry: 'Technology & SaaS',
     stage: 'published',
     popular: true,
     pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Centralized model registry with full lifecycle tracking — from experimentation to production retirement',
-      'Automated bias and fairness testing across demographic groups with configurable thresholds',
-      'Explainability dashboards with SHAP/LIME integration for every model prediction',
-      'Regulatory compliance automation: EU AI Act risk classification, NIST AI RMF, NYC Local Law 144',
-      'Audit trail with immutable logs for every model change, approval, and deployment',
-      'Policy-as-code guardrails that block non-compliant models from reaching production',
-      'Automated model cards and documentation generation for stakeholder transparency'
+      'Visual agent builder with drag-and-drop workflow designer — no coding required for common patterns',
+      'Pre-built agent templates: research analyst, code reviewer, customer support triage, data pipeline monitor',
+      'Agent-to-agent communication protocol with task delegation, result aggregation, and conflict resolution',
+      'Tool access governance with granular permissions — control which APIs, databases, and systems each agent can access',
+      'Real-time agent behavior monitoring with cost tracking per agent, per task, and per workflow',
+      'Automatic failure recovery with retry logic, fallback agents, and human-in-the-loop escalation',
+      'Integration with OpenAI Agents SDK, LangChain, CrewAI, AutoGen, and custom agent frameworks'
     ],
     benefits: [
-      'Avoid EU AI Act fines of up to €35M or 7% of global revenue for non-compliant AI systems',
-      'Reduce AI risk incidents by 80% with proactive bias and drift monitoring',
-      'Accelerate AI deployment with automated compliance checks replacing manual review cycles',
-      'Build stakeholder trust with transparent, auditable AI decision-making'
+      'Automate complex multi-step workflows that previously required 5-10 FTEs across departments',
+      'Reduce AI agent costs by 60% with intelligent task routing and model selection per subtask',
+      'Deploy agent fleets in days instead of months with pre-built templates and visual tooling',
+      'Maintain full auditability and governance over autonomous agent actions for compliance'
     ]
   }
 ];
 
-export const wave211EdgeAiServices: Service[] = [
+export const wave211DataProductMarketplaceServices: Service[] = [
   {
-    id: 'edge-ai-inference-platform',
-    title: 'Edge AI Inference Platform',
-    description: 'Deploy and manage AI models on edge devices — from IoT sensors and cameras to factory floors and retail stores — with sub-10ms latency and no cloud dependency. As enterprises push AI to the edge for real-time decisions, data sovereignty, and bandwidth savings, this platform handles model optimization, OTA updates, and fleet-wide monitoring across thousands of devices.',
-    category: 'infrastructure',
-    icon: '📡',
-    href: '/services/edge-ai-inference-platform',
-    industry: 'Manufacturing & Retail',
-    stage: 'published',
-    popular: false,
-    pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
-    features: [
-      'Model optimization with quantization, pruning, and distillation for ARM, x86, and GPU edge hardware',
-      'Over-the-air (OTA) model updates with rollback, canary deployment, and A/B testing across device fleets',
-      'Real-time fleet monitoring: device health, inference latency, accuracy drift, and resource utilization',
-      'Support for NVIDIA Jetson, Intel Movidius, Raspberry Pi, AWS Panorama, and custom silicon',
-      'Offline-first architecture — devices operate fully without cloud connectivity, sync when available',
-      'Edge-to-cloud hybrid mode for federated learning and aggregated analytics',
-      'Security: encrypted model artifacts, secure boot, device attestation, and tamper detection'
-    ],
-    benefits: [
-      'Achieve sub-10ms inference latency — 100x faster than cloud round-trip for real-time decisions',
-      'Reduce cloud inference costs by 70-90% by processing data locally on edge devices',
-      'Maintain operations during network outages with fully autonomous edge inference',
-      'Keep sensitive data on-device for GDPR/HIPAA compliance — no data leaves the premises'
-    ]
-  }
-];
-
-export const wave211DataContractServices: Service[] = [
-  {
-    id: 'data-contract-enforcement-platform',
-    title: 'Data Contract Enforcement Platform',
-    description: 'Data contracts are the #1 trending data architecture pattern in 2026 — agreements between data producers and consumers that define schema, semantics, SLAs, and quality expectations. This platform automates data contract creation, validation, testing, and enforcement across your entire data ecosystem, preventing the broken pipelines that cost enterprises an average of $12.9M annually.',
+    id: 'data-product-marketplace-platform',
+    title: 'Data Product Marketplace Platform',
+    description: 'Internal data product marketplace that enables teams to publish, discover, evaluate, and subscribe to trusted data products across the organization. In 2026, leading enterprises are shifting from raw data sharing to curated data products — with defined schemas, SLAs, quality guarantees, and usage analytics. This platform operationalizes the data mesh principle of treating data as a product, providing the marketplace infrastructure that makes it real.',
     category: 'data',
-    icon: '📋',
-    href: '/services/data-contract-enforcement-platform',
+    icon: '🏪',
+    href: '/services/data-product-marketplace-platform',
     industry: 'Data Engineering',
     stage: 'published',
     popular: false,
     pricing: { basic: '$399/mo', pro: '$1,199/mo', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Declarative data contract definition with schema, semantics, SLAs, and quality rules in YAML/JSON',
-      'Automated contract testing in CI/CD pipelines — block deployments that break consumer contracts',
-      'Schema evolution management with backward/forward compatibility checks and automated migration',
-      'Data quality enforcement with freshness, completeness, uniqueness, and distribution monitoring',
-      'Contract versioning with changelog, deprecation policies, and consumer notification workflows',
-      'Integration with dbt, Airflow, Kafka, Snowflake, BigQuery, Databricks, and Fivetran',
-      'Contract marketplace — discover, evaluate, and subscribe to data products across the organization'
+      'Self-service data product publishing with schema documentation, sample queries, and quality scorecards',
+      'Search and discovery engine with natural language search, tags, ratings, and usage recommendations',
+      'Automated data product onboarding — schema validation, access provisioning, and consumer contract generation',
+      'Usage analytics dashboard: query volume, consumer satisfaction, freshness, and downstream impact tracking',
+      'Data product versioning with backward compatibility guarantees and automated consumer migration',
+      'Integration with Snowflake, Databricks, BigQuery, dbt, and any JDBC/ODBC data source',
+      'Monetization support with internal chargeback and cost allocation per data product and consumer'
     ],
     benefits: [
-      'Eliminate 80% of data pipeline failures caused by unexpected schema or semantic changes',
-      'Reduce data incident MTTR from hours to minutes with automated contract violation detection',
-      'Enable data mesh adoption with clear ownership, SLAs, and self-service data discovery',
-      'Shift-left data quality — catch breaking changes before they reach production consumers'
+      'Reduce time-to-data from weeks to minutes with self-service discovery and instant provisioning',
+      'Increase data team productivity by 40% through reusable, well-documented data products',
+      'Establish clear data ownership and accountability with published SLAs and quality guarantees',
+      'Enable data mesh architecture without building marketplace infrastructure from scratch'
     ]
   }
 ];
 
-export const wave211FinOpsServices: Service[] = [
+export const wave211ZeroTrustNetworkServices: Service[] = [
   {
-    id: 'finops-cloud-cost-intelligence',
-    title: 'FinOps Cloud Cost Intelligence Platform',
-    description: 'FinOps is now a $15B+ discipline in 2026, with 78% of enterprises reporting cloud waste averaging 32% of their cloud spend. This platform provides AI-powered cost optimization across AWS, Azure, and GCP — with automated rightsizing, reserved capacity planning, waste elimination, and chargeback/showback reporting. It goes beyond basic monitoring to actually implement savings autonomously.',
-    category: 'cloud',
-    icon: '💰',
-    href: '/services/finops-cloud-cost-intelligence',
-    industry: 'Technology & SaaS',
+    id: 'zero-trust-network-access-platform',
+    title: 'Zero-Trust Network Access (ZTNA) Platform',
+    description: 'Enterprise zero-trust network access platform that replaces legacy VPNs with identity-aware, least-privilege access to internal applications and resources. In 2026, with 72% of enterprises operating hybrid work models and 68% of breaches involving compromised credentials (Verizon DBIR 2025), traditional perimeter-based security is obsolete. This platform enforces continuous verification — every user, device, and session is authenticated and authorized for each specific resource, eliminating lateral movement and reducing breach blast radius to near zero.',
+    category: 'security',
+    icon: '🔐',
+    href: '/services/zero-trust-network-access-platform',
+    industry: 'Financial Services & FinTech',
     stage: 'published',
     popular: true,
-    pricing: { basic: '$199/mo', pro: '$599/mo', enterprise: 'Custom' },
+    pricing: { basic: '$15/user/mo', pro: '$35/user/mo', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'AI-powered rightsizing recommendations with one-click implementation for EC2, RDS, Azure VMs, and GCE',
-      'Reserved Instance and Savings Plan optimizer — analyze coverage, recommend purchases, and automate renewals',
-      'Waste detection: orphaned volumes, idle load balancers, unused IPs, and zombie resources auto-remediation',
-      'Kubernetes cost allocation by namespace, deployment, pod, and container with efficiency scoring',
-      'Chargeback/showback reporting with custom cost allocation tags and department-level dashboards',
-      'Anomaly detection with ML-based spend forecasting and budget breach alerts',
-      'FinOps maturity assessment with benchmarking against industry peers and actionable improvement roadmap'
+      'Identity-aware access proxy — every request authenticated via SSO/MFA before reaching any application',
+      'Device posture checking: OS version, encryption status, EDR health, and compliance before granting access',
+      'Micro-segmentation with per-application access policies — users see only resources they are authorized for',
+      'Continuous session monitoring with real-time risk scoring and automatic session termination on anomaly',
+      'Browser-based access to web apps, SSH, RDP, databases, and Kubernetes — no client software required',
+      'Full audit logging of every access request, data transfer, and session activity for compliance reporting',
+      'Integration with Okta, Azure AD, Google Workspace, CrowdStrike, and any SAML/OIDC identity provider'
     ],
     benefits: [
-      'Reduce cloud spend by 30-45% on average — typical enterprise saves $500K-$2M annually',
-      'Automate 80% of cost optimization tasks that currently require dedicated FinOps engineers',
-      'Provide finance and engineering teams a single source of truth for cloud cost accountability',
-      'Achieve FinOps Foundation certification readiness with documented processes and controls'
+      'Eliminate VPN vulnerabilities — ZTNA reduces attack surface by 80% compared to traditional VPNs',
+      'Achieve SOC 2, ISO 27001, and PCI-DSS compliance with continuous verification and audit trails',
+      'Support seamless hybrid work — employees access internal apps from any device, any location, securely',
+      'Reduce breach blast radius to a single application — attackers cannot move laterally through the network'
     ]
   }
 ];
 
-export const wave211AiRedTeamServices: Service[] = [
+export const wave211SyntheticDataServices: Service[] = [
   {
-    id: 'ai-red-team-security-lab',
-    title: 'AI Red Team & Adversarial Security Lab',
-    description: 'As enterprises deploy LLMs and AI agents at scale, a new attack surface emerges: prompt injection, jailbreaking, data extraction, model manipulation, and supply chain poisoning. This service provides continuous adversarial testing of your AI systems using the latest attack techniques — combining automated AI security scanners with expert human red teamers who specialize in LLM vulnerabilities.',
-    category: 'security',
-    icon: '🔴',
-    href: '/services/ai-red-team-security-lab',
-    industry: 'Enterprise AI',
+    id: 'synthetic-data-generation-platform',
+    title: 'Synthetic Data Generation Platform',
+    description: 'AI-powered synthetic data platform that generates statistically equivalent, privacy-safe datasets for software testing, ML training, and data sharing. In 2026, with GDPR fines exceeding €4B cumulatively and new AI training data regulations emerging, organizations cannot afford to use real customer data for development and testing. This platform uses generative models to create synthetic datasets that preserve the statistical properties, correlations, and edge cases of production data — without containing any real personal information.',
+    category: 'data',
+    icon: '🧬',
+    href: '/services/synthetic-data-generation-platform',
+    industry: 'Healthcare & Life Sciences',
     stage: 'published',
     popular: false,
-    pricing: { basic: '$999/mo', pro: '$2,999/mo', enterprise: 'Custom' },
+    pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
     contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Automated prompt injection testing with 200+ attack vectors including indirect, multi-turn, and encoded payloads',
-      'Jailbreak resistance evaluation against known and novel bypass techniques for GPT-4, Claude, Gemini, and open-source models',
-      'Data exfiltration testing — attempt to extract system prompts, training data, and sensitive context from AI applications',
-      'Model manipulation testing: goal hijacking, role confusion, and tool misuse in AI agent architectures',
-      'Supply chain security scanning for poisoned datasets, backdoored models, and compromised model hubs',
-      'Human-led red team exercises with custom attack scenarios tailored to your AI use cases',
-      'Remediation guidance with prioritized findings, fix templates, and retesting validation'
+      'Statistical fidelity engine — synthetic data preserves distributions, correlations, and rare edge cases from source data',
+      'Privacy guarantee with differential privacy metrics and formal re-identification risk scoring',
+      'Support for tabular, time-series, relational, and text data with referential integrity across tables',
+      'Conditional generation — create synthetic datasets with specific characteristics for targeted testing scenarios',
+      'Data augmentation mode — expand small datasets 10-100x while maintaining statistical properties',
+      'Quality assessment dashboard with similarity scores, privacy metrics, and downstream ML model performance comparison',
+      'One-click export to CSV, Parquet, databases, or direct integration with ML training pipelines'
     ],
     benefits: [
-      'Identify AI-specific vulnerabilities that traditional penetration testing completely misses',
-      'Meet emerging AI security requirements in SOC 2, ISO 42001, and NIST AI RMF frameworks',
-      'Prevent costly AI incidents — a single prompt injection attack can expose millions of records',
-      'Build customer and regulator confidence with certified AI security assessments'
+      'Eliminate privacy risk in development and testing — synthetic data contains zero real personal information',
+      'Accelerate ML model development by generating unlimited training data without manual labeling',
+      'Enable safe data sharing with partners, vendors, and offshore teams without legal or compliance risk',
+      'Reduce data-related development bottlenecks by 70% — teams get production-like data on demand'
+    ]
+  }
+];
+
+export const wave211MLOpsRegistryServices: Service[] = [
+  {
+    id: 'mlops-model-registry-platform',
+    title: 'MLOps Model Registry & Experiment Tracking',
+    description: 'Enterprise MLOps platform that provides centralized model registry, experiment tracking, automated model validation, and one-click deployment across cloud and on-premise infrastructure. In 2026, the average enterprise has 50-200 ML models in production, yet 60% lack proper versioning, reproducibility, or deployment governance (Gartner). This platform brings software engineering best practices — version control, CI/CD, testing, and rollback — to the ML lifecycle, enabling teams to move from notebook experiments to production-grade ML systems.',
+    category: 'devtools',
+    icon: '⚙️',
+    href: '/services/mlops-model-registry-platform',
+    industry: 'Technology & SaaS',
+    stage: 'published',
+    popular: false,
+    pricing: { basic: '$349/mo', pro: '$999/mo', enterprise: 'Custom' },
+    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Centralized model registry with full lineage tracking — from training data and hyperparameters to deployment artifacts',
+      'Experiment tracking with automatic logging of metrics, parameters, artifacts, and environment configurations',
+      'Automated model validation gates — accuracy thresholds, bias checks, latency requirements, and regression tests',
+      'One-click deployment to AWS SageMaker, Google Vertex AI, Azure ML, Kubernetes, and on-premise servers',
+      'A/B testing and canary deployment with automatic rollback on performance degradation',
+      'Model versioning with semantic versioning, tags, and approval workflows for production promotion',
+      'Integration with MLflow, Kubeflow, Weights & Biases, DVC, and any Python-based ML framework'
+    ],
+    benefits: [
+      'Reduce model deployment time from weeks to hours with automated validation and one-click deployment',
+      'Ensure full reproducibility — every model can be retrained from exact data, code, and configuration',
+      'Prevent production incidents with automated quality gates that catch regressions before deployment',
+      'Scale ML operations from 5 to 200+ models without proportional increase in MLOps headcount'
     ]
   }
 ];
