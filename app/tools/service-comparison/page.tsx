@@ -9,7 +9,12 @@ import SmartServiceCard from '@/components/SmartServiceCard';
 
 const CAT_LABELS: Record<string,string> = {
   ai:'AI Services', it:'IT', cloud:'Cloud', security:'Security',
-  data:'Data & Analytics', automation:'Automation',
+  data:'Data & Analytics', automation:'Automation', 'micro-saas':'Micro-SaaS',
+  devops:'DevOps', blockchain:'Blockchain', iot:'IoT', 'email-intelligence':'Email Intel',
+  observability:'Observability', identity:'Identity', cms:'CMS', ecommerce:'E-Commerce',
+  documentation:'Documentation', 'ai-ml-ops':'AI/ML Ops', devsecops:'DevSecOps',
+  fintech:'FinTech', edtech:'EdTech', 'healthcare-it':'Healthcare IT',
+  'data-streaming':'Data Streaming', search:'Search', api:'API Management',
 };
 
 const TABS = [
