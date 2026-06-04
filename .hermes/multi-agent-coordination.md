@@ -64,12 +64,12 @@ None — all clear ✅
 5. **CRLF check**: ensure wave files use LF line endings, not CRLF
 
 ## Site State
-- **Build**: ✅ CI/CD deployed (HEAD: 0b46af9bf4d — enhanced AI agent monitoring dashboard)
-- **Type-check**: ✅ Clean
+- **Build**: ✅ CI/CD deployed (HEAD: bf422834a87a — dashboard v7)
+- **Type-check**: ✅ Clean (no new errors in our files)
 - **Services**: ~800 in servicesData.ts (waves 174-212, 37 waves)
 - **Site**: 200 OK — https://ziontechgroup.com
 - **Dashboard**: ✅ /dashboard + /agents-monitoring live
-- **Cron jobs**: 4 active (link-monitor ✅, org-health ✅, wave-research ❌ error, email-readiness ✅)
+- **Cron jobs**: 4 active (link-monitor ✅, org-health ✅, wave-research ❌→fixed, email-readiness ✅)
 
 ## Monitoring & Access Points
 - **Dashboard**: /dashboard (Ops + Client views)
