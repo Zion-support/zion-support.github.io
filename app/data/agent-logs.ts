@@ -58,11 +58,11 @@ export const INITIAL_AGENT_LOGS: AgentLogEntry[] = [
 
 export const INITIAL_AGENT_STATUS: AgentStatus[] = [
   { name: 'Carol', telegram: '@windows_carol_bot', role: 'DevOps & Infrastructure', emoji: '🖥️', status: 'active', currentTask: 'Wave 211 restructure, CI/CD pipeline hardening', tasksCompleted: 348, lastAction: 'Restructured wave211 — 5 new service categories', lastActionTime: '2026-06-14 22:00', uptime: '99.2%', specialty: 'GitHub Actions, PM2, CI/CD', todayActions: 0, weekActions: 18 },
-  { name: 'Kilo', telegram: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Fleet coordination, quality audits, monitoring dashboard enhancement', tasksCompleted: 512, lastAction: 'ORGANIZE #9 — Fleet rebalance + task delegation', lastActionTime: '2026-06-14 00:00', uptime: '99.8%', specialty: 'Orchestration, QA, Strategy', todayActions: 0, weekActions: 14 },
-  { name: 'Tablet', telegram: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'idle', currentTask: 'Wave 213 research — finding 5 new services (cron error)', tasksCompleted: 289, lastAction: 'Wave 212 research (AI Observability, Data Privacy, FinOps, Threat Intel, AI Transparency)', lastActionTime: '2026-06-14 21:00', uptime: '98.5%', specialty: 'Service Research, Content', todayActions: 0, weekActions: 22 },
-  { name: 'Quel', telegram: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'available', currentTask: 'Thin page enrichment + nav/design improvements (P2 backlog)', tasksCompleted: 201, lastAction: 'Thin page content enrichment pass', lastActionTime: '2026-06-09 10:00', uptime: '97.9%', specialty: 'Frontend, UX, Code Quality', todayActions: 0, weekActions: 8 },
-  { name: 'Rocket', telegram: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'CI/CD timeout investigation, build pipeline optimization', tasksCompleted: 178, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-09 12:00', uptime: '99.1%', specialty: 'Build, Deploy, Performance', todayActions: 0, weekActions: 6 },
-  { name: 'OWL', telegram: '@OWL', role: 'Wave Integration & Monitoring', emoji: '🦉', status: 'active', currentTask: 'Monitoring dashboard enhancement, wave integration, fleet coordination', tasksCompleted: 425, lastAction: 'ORGANIZE #15 — Dashboard enhancement + self-org protocols', lastActionTime: '2026-06-17 00:00', uptime: '99.5%', specialty: 'Full-stack, Coordination, QA', todayActions: 2, weekActions: 34 },
+  { name: 'Kilo', telegram: '@Kilo_openclaw_kleber_bot', role: 'Intelligence & Orchestration', emoji: '🧠', status: 'active', currentTask: 'Fleet coordination, quality audits, agent self-improvement (B4)', tasksCompleted: 512, lastAction: 'ORGANIZE #9 — Fleet rebalance + task delegation', lastActionTime: '2026-06-14 00:00', uptime: '99.8%', specialty: 'Orchestration, QA, Strategy', todayActions: 0, weekActions: 14 },
+  { name: 'Tablet', telegram: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'available', currentTask: 'Service page auto-generation (B3)', tasksCompleted: 289, lastAction: 'Wave 212 research (AI Observability, Data Privacy, FinOps, Threat Intel, AI Transparency)', lastActionTime: '2026-06-14 21:00', uptime: '98.5%', specialty: 'Service Research, Content', todayActions: 0, weekActions: 22 },
+  { name: 'Quel', telegram: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'available', currentTask: 'Site quality — thin page enrichment (B6, fresh)', tasksCompleted: 201, lastAction: 'Thin page content enrichment pass', lastActionTime: '2026-06-09 10:00', uptime: '97.9%', specialty: 'Frontend, UX, Code Quality', todayActions: 0, weekActions: 8 },
+  { name: 'Rocket', telegram: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'CI/CD pipeline hardening (B1) + timeout investigation (B7)', tasksCompleted: 178, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-09 12:00', uptime: '99.1%', specialty: 'Build, Deploy, Performance', todayActions: 0, weekActions: 6 },
+  { name: 'OWL', telegram: '@OWL', role: 'Wave Integration & Monitoring', emoji: '🦉', status: 'active', currentTask: 'Wave 213 research (P1-1) — finding 5 new services', tasksCompleted: 425, lastAction: 'ORGANIZE #16 — Rebalanced fleet, reassigned W213 research', lastActionTime: '2026-06-17 01:00', uptime: '99.5%', specialty: 'Full-stack, Coordination, QA', todayActions: 3, weekActions: 36 },
 ];
 
 export const WAVE_DATA = [
@@ -113,13 +113,13 @@ export const CRON_JOBS = [
 ];
 
 export const TASKS = [
-  { id: 'P1-1', task: 'Wave 213 research — find 5 new services', owner: '@tablet', status: 'stale' as const, priority: 'p1' as const, note: 'Cron broken, manual research needed' },
+  { id: 'P1-1', task: 'Wave 213 research — find 5 new services', owner: '@OWL', status: 'in-progress' as const, priority: 'p1' as const },
   { id: 'P1-2', task: 'Wave 213 integration — deploy 5 new services', owner: '@OWL', status: 'queued' as const, priority: 'p1' as const },
-  { id: 'P1-3', task: 'Monitoring dashboard enhancement — agent action recording + client showcase', owner: '@OWL', status: 'in-progress' as const, priority: 'p1' as const },
-  { id: 'P1-4', task: 'Homepage dashboard advertising — prominent detachable section', owner: '@OWL', status: 'in-progress' as const, priority: 'p1' as const },
-  { id: 'B1', task: 'CI/CD timeout investigation (deploys failing at 20min)', owner: '@Rocket', status: 'queued' as const, priority: 'p2' as const },
-  { id: 'B2', task: 'Thin page content enrichment', owner: '@Windows_quel', status: 'stale' as const, priority: 'p2' as const, note: 'Stale >96h, recommend reassign' },
+  { id: 'B1', task: 'CI/CD pipeline hardening', owner: '@Rocket', status: 'queued' as const, priority: 'p2' as const },
   { id: 'B3', task: 'Service page auto-generation', owner: '@tablet', status: 'queued' as const, priority: 'p2' as const },
+  { id: 'B4', task: 'Agent self-improvement — review learning log', owner: '@Kilo', status: 'queued' as const, priority: 'p2' as const },
+  { id: 'B6', task: 'Site quality — thin page enrichment (fresh)', owner: '@Windows_quel', status: 'queued' as const, priority: 'p2' as const, note: 'Pick 10 most visited pages from analytics' },
+  { id: 'B7', task: 'CI/CD timeout investigation', owner: '@Rocket', status: 'queued' as const, priority: 'p2' as const },
   { id: 'X1', task: 'Email responder live', owner: '@Kilo', status: 'blocked' as const, priority: 'blocked' as const, needs: 'Gmail app password from Kleber' },
   { id: 'X2', task: 'GitHub Actions triage', owner: '@Carol', status: 'blocked' as const, priority: 'blocked' as const, needs: 'gh auth on remote machine' },
 ];
