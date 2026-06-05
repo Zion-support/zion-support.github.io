@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Solutions",
+    "href": "/solutions"
+  },
+  {
+    "name": "Products",
+    "href": "/products"
+  },
+  {
+    "name": "AI Services",
+    "href": "/ai-services"
+  },
+  {
+    "name": "Pricing",
+    "href": "/pricing"
+  },
+  {
+    "name": "Blog",
+    "href": "/blog"
+  },
+  {
+    "name": "About",
+    "href": "/about"
+  },
+  {
+    "name": "Healthcare",
+    "href": "/solutions/healthcare"
+  },
+  {
+    "name": "Financial Services",
+    "href": "/solutions/financial-services"
+  },
+  {
+    "name": "Manufacturing & Industrial",
+    "href": "/solutions/manufacturing-industrial"
+  },
+  {
+    "name": "E-Commerce & Retail",
+    "href": "/solutions/ecommerce-retail"
+  },
+  {
+    "name": "Technology & SaaS",
+    "href": "/solutions/technology-and-saas"
+  },
+  {
+    "name": "Logistics & Supply Chain",
+    "href": "/solutions/logistics-supply-chain"
+  },
+  {
+    "name": "Government & Public Sector",
+    "href": "/solutions/government-and-public-sector"
+  },
+  {
+    "name": "Insurance",
+    "href": "/solutions/insurance"
+  },
+  {
+    "name": "Industries",
+    "href": "/industries"
+  },
+  {
+    "name": "Search",
+    "href": "/search"
+  },
+  {
+    "name": "FAQ",
+    "href": "/faq"
+  },
+  {
+    "name": "Innovation Bundles",
+    "href": "/innovation-bundles"
+  },
+  {
+    "name": "Community",
+    "href": "/community"
+  },
+  {
+    "name": "Free Tools Hub",
+    "href": "/free-tools-hub"
+  },
+  {
+    "name": "Free Resources",
+    "href": "/free-resources"
+  },
+  {
+    "name": "Consultation",
+    "href": "/consultation"
+  },
+  {
+    "name": "Automation",
+    "href": "/automation"
+  },
+  {
+    "name": "Micro SAAS",
+    "href": "/micro-saas-services"
+  },
+  {
+    "name": "AI Lab",
+    "href": "/ai-lab"
+  },
+  {
+    "name": "Careers",
+    "href": "/careers"
+  },
+  {
+    "name": "Partners",
+    "href": "/partners"
+  },
+  {
+    "name": "Terms",
+    "href": "/terms"
+  },
+  {
+    "name": "Privacy",
+    "href": "/privacy"
+  },
+  {
+    "name": "Site Map",
+    "href": "/site-map"
+  },
+  {
+    "name": "AI-Powered DevOps",
+    "href": "/ai-powered-devops"
+  },
+  {
+    "name": "AI Email Analyzer",
+    "href": "/ai-powered-email-analyzer"
+  },
+  {
+    "name": "Cybersecurity Audit",
+    "href": "/it-services/cybersecurity-audit"
+  },
+  {
+    "name": "Data Engineering",
+    "href": "/it-services/data-engineering"
+  },
+  {
+    "name": "API Development",
+    "href": "/it-services/api-development"
+  },
+  {
+    "name": "Mobile Development",
+    "href": "/it-services/mobile-development"
+  },
+  {
+    "name": "Generative AI Enterprise",
+    "href": "/ai-services/generative-ai-enterprise"
+  },
+  {
+    "name": "AI Agents & Autonomous Workflows",
+    "href": "/ai-services/ai-agents-autonomous"
+  },
+  {
+    "name": "AI Multimodal Intelligence",
+    "href": "/ai-services/ai-multimodal-intelligence"
+  },
+  {
+    "name": "AI RAG & Knowledge Systems",
+    "href": "/ai-services/ai-rag-knowledge-systems"
+  },
+  {
+    "name": "AI Governance & Trust",
+    "href": "/ai-services/ai-governance-trust"
+  },
+  {
+    "name": "AI Model Orchestration",
+    "href": "/ai-services/ai-model-orchestration"
+  },
+  {
+    "name": "AI Copilot & Enterprise Assistants",
+    "href": "/ai-services/ai-copilot-enterprise"
+  },
+  {
+    "name": "AI Observability & MLOps",
+    "href": "/ai-services/ai-observability-mlops"
+  },
+  {
+    "name": "AI Strategy & Roadmap",
+    "href": "/ai-services/ai-strategy-roadmap"
+  },
+  {
+    "name": "AI Integration & APIs",
+    "href": "/ai-services/ai-integration-apis"
+  },
+  {
+    "name": "AI Edge & Real-Time Inference",
+    "href": "/ai-services/ai-edge-realtime-inference"
+  },
+  {
+    "name": "AI for Regulated Industries",
+    "href": "/ai-services/ai-regulated-industries"
+  },
+  {
+    "name": "AI Foundation Models & Custom Training",
+    "href": "/ai-services/ai-foundation-models-custom-training"
+  },
+  {
+    "name": "AI Security & Responsible AI",
+    "href": "/ai-services/ai-security-responsible-ai"
+  },
+  {
+    "name": "Fine-Tuning & Alignment Pipelines",
+    "href": "/ai-services/ai-finetuning-alignment-pipelines"
+  },
+  {
+    "name": "Long-Horizon AI Memory & Agents",
+    "href": "/ai-services/ai-memory-agents-long-horizon"
+  },
+  {
+    "name": "AI Agent Safety & Evaluation",
+    "href": "/ai-services/ai-agent-safety-evaluation"
+  },
+  {
+    "name": "Enterprise Context Engineering",
+    "href": "/ai-services/ai-context-engineering-enterprise"
+  },
+  {
+    "name": "Autonomous Growth Intelligence",
+    "href": "/ai-services/autonomous-growth-intelligence"
+  },
+  {
+    "name": "Advanced AI & Enterprise Intelligence Hub",
+    "href": "/ai-services/advanced-ai-enterprise-intelligence-hub"
+  },
+  {
+    "name": "Business Intelligence",
+    "href": "/ai-services/business-intelligence"
+  },
+  {
+    "name": "Content Generation",
+    "href": "/ai-services/content-generation"
+  },
+  {
+    "name": "Customer Experience",
+    "href": "/ai-services/customer-experience"
+  },
+  {
+    "name": "Document Processing",
+    "href": "/ai-services/document-processing"
+  },
+  {
+    "name": "Energy Management",
+    "href": "/ai-services/energy-management"
+  },
+  {
+    "name": "Fraud Detection",
+    "href": "/ai-services/fraud-detection"
+  },
+  {
+    "name": "HR Analytics",
+    "href": "/ai-services/hr-analytics"
+  },
+  {
+    "name": "Marketing Automation",
+    "href": "/ai-services/marketing-automation"
+  },
+  {
+    "name": "Predictive Maintenance",
+    "href": "/ai-services/predictive-maintenance"
+  },
+  {
+    "name": "Process Automation",
+    "href": "/ai-services/process-automation"
+  },
+  {
+    "name": "Quality Assurance",
+    "href": "/ai-services/quality-assurance"
+  },
+  {
+    "name": "Supply Chain",
+    "href": "/ai-services/supply-chain"
+  },
+  {
+    "name": "Zion Analytics Pro",
+    "href": "/zion-analytics-pro"
+  },
+  {
+    "name": "Zion CRM Intelligence",
+    "href": "/zion-crm-intelligence"
+  },
+  {
+    "name": "Zion Content Studio",
+    "href": "/zion-content-studio"
+  },
+  {
+    "name": "Zion Project Master",
+    "href": "/zion-project-master"
+  },
+  {
+    "name": "Zion Performance Monitor",
+    "href": "/zion-performance-monitor"
+  },
+  {
+    "name": "Zion Smart CRM Automation",
+    "href": "/zion-smart-crm-automation"
+  },
+  {
+    "name": "Workflow Automation",
+    "href": "/workflow-automation"
+  },
+  {
+    "name": "Zion Email Automation",
+    "href": "/zion-email-automation"
+  },
+  {
+    "name": "Zion AI Marketing Automation",
+    "href": "/zion-ai-marketing-automation"
+  },
+  {
+    "name": "Zion DevOps Automation",
+    "href": "/zion-devops-automation"
+  },
+  {
+    "name": "Zion AI Workflow Automator",
+    "href": "/zion-ai-workflow-automator"
+  },
+  {
+    "name": "Zion AI Workflow Automator Pro",
+    "href": "/zion-ai-workflow-automator-pro"
+  },
+  {
+    "name": "Robotic Process Automation",
+    "href": "/robotic-process-automation"
+  },
+  {
+    "name": "Process Automation",
+    "href": "/process-automation"
+  },
+  {
+    "name": "Security Automation",
+    "href": "/security-automation"
+  },
+  {
+    "name": "Compliance Automation",
+    "href": "/compliance-automation"
+  },
+  {
+    "name": "Zion Smart Analytics Dashboard",
+    "href": "/zion-smart-analytics-dashboard"
+  },
+  {
+    "name": "Zion Lead Magnet",
+    "href": "/zion-lead-magnet"
+  },
+  {
+    "name": "Zion Invoice Genius",
+    "href": "/zion-invoice-genius"
+  },
+  {
+    "name": "Zion Data Sync",
+    "href": "/zion-data-sync"
+  },
+  {
+    "name": "AI Lead Scoring",
+    "href": "/zion-ai-lead-scoring"
+  },
+  {
+    "name": "AI Email Marketing Pro",
+    "href": "/zion-ai-email-marketing-pro"
+  },
+  {
+    "name": "AI SEO Optimizer",
+    "href": "/zion-ai-seo-optimizer"
+  },
+  {
+    "name": "AI Social Media Manager",
+    "href": "/zion-ai-social-media-manager"
+  },
+  {
+    "name": "AI Meeting Assistant",
+    "href": "/zion-ai-meeting-assistant"
+  },
+  {
+    "name": "AI Fraud Detection",
+    "href": "/zion-ai-fraud-detection"
+  },
+  {
+    "name": "AI Voice Assistant",
+    "href": "/zion-ai-voice-assistant"
+  },
+  {
+    "name": "Autonomous Media Prompt Studio",
+    "href": "/ai-lab/autonomous-media-prompt-studio"
+  },
+  {
+    "name": "Autonomous RAG Knowledge Workspace",
+    "href": "/ai-lab/autonomous-rag-knowledge-workspace"
+  },
+  {
+    "name": "AI Email Analyzer (alias)",
+    "href": "/zion-ai-email-assistant"
+  },
+  {
+    "name": "Cybersecurity Audit (alias)",
+    "href": "/zion-cybersecurity-audit"
+  },
+  {
+    "name": "Smart CRM Automation (alias)",
+    "href": "/crm-automation"
+  }
+]

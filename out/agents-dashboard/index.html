@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zion Agents — Live Monitoring Dashboard</title>
+<meta name="description" content="Real-time monitoring dashboard for Zion Tech Group AI agents. Live status, task board, activity feed, and fleet metrics." />
+<style>
+  :root {
+    --bg: #0b1120;
+    --card: rgba(255,255,255,0.025);
+    --card-border: rgba(255,255,255,0.07);
+    --text: #e2e8f0;
+    --muted: #8b97a8;
+    --purple: #a78bfa;
+    --pink: #ec4899;
+    --green: #10b981;
+    --yellow: #f59e0b;
+    --red: #ef4444;
+    --blue: #3b82f6;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--purple); }
+  body::before {
+    content: "";
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(ellipse at top, rgba(167,139,250,0.08), transparent 55%),
+                radial-gradient(ellipse at bottom, rgba(236,72,153,0.05), transparent 55%);
+  }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    background: rgba(11,17,32,0.75);
+  }
+  .nav {
+    max-width: 1400px; margin: 0 auto; padding: 14px 20px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  .logo { font-size: 18px; font-weight: 700; letter-spacing: -0.2px; background: linear-gradient(90deg,#a78bfa,#ec4899); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .pill { font-size: 12px; color: var(--muted); background: rgba(255,255,255,0.05); padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); text-decoration: none; }
+  main { max-width: 1400px; margin: 0 auto; padding: 28px 20px 80px; }
+  .hero { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+  h1 { font-size: 28px; font-weight: 700; margin: 0; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 14px; margin-bottom: 36px; }
+  .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 18px 22px; position: relative; overflow: hidden; }
+  .stat::after { content: ""; position: absolute; top: -30%; right: -10%; width: 90px; height: 90px; border-radius: 50%; background: radial-gradient(circle, rgba(167,139,250,0.12), transparent 70%); }
+  .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.4px; }
+  .stat-value { font-size: 36px; font-weight: 700; margin-top: 6px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 20px; margin-bottom: 36px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-bottom: 36px; }
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 18px; padding: 22px; backdrop-filter: blur(4px); }
+  .section-title { font-size: 17px; font-weight: 600; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; color: var(--text); }
+  .section-sub { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+  .agent-card {
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+    padding: 20px; transition: .2s; position: relative;
+  }
+  .agent-card:hover { border-color: rgba(167,139,250,0.25); transform: translateY(-2px); }
+  .agent-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .agent-top h3 { font-size: 15px; margin: 0; }
+  .role { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .badge { font-size: 11px; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+  .badge.online  { background: rgba(16,185,129,.1); color: var(--green); border: 1px solid rgba(16,185,129,.22); }
+  .badge.offline { background: rgba(239,68,68,.08); color: var(--red);   border: 1px solid rgba(239,68,68,.22); }
+  .metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 14px; }
+  .metric-label { font-size: 11px; color: var(--muted); }
+  .metric-value { font-size: 17px; font-weight: 700; margin-top: 2px; color: var(--text); }
+  .actions { margin-top: 14px; }
+  .action { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 12px; }
+  .action:last-child { border: none; }
+  .action .kind { font-weight: 700; min-width: 52px; text-transform: uppercase; letter-spacing: .4px; font-size: 10px; padding-top: 2px; }
+  .kind.assign { color: var(--purple); }
+  .kind.done   { color: var(--green); }
+  .kind.online { color: var(--blue); }
+  .kind.status { color: var(--yellow); }
+  .action .desc { color: var(--muted); flex: 1; }
+  .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .column {
+    background: rgba(255,255,255,0.015); border: 1px dashed rgba(255,255,255,0.1); border-radius: 16px; padding: 14px;
+    border-top: 3px solid var(--muted);
+  }
+  .column.todo  { border-top-color: var(--yellow); }
+  .column.doing { border-top-color: var(--purple); }
+  .column.done  { border-top-color: var(--green); }
+  .col-title { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: .6px; margin-bottom: 10px; display: flex; justify-content: space-between; }
+  .col-title .count { background: rgba(255,255,255,0.06); padding: 2px 8px; border-radius: 999px; }
+  .task { background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+  .task:last-child { margin-bottom: 0; }
+  .task .title { font-size: 13px; font-weight: 600; color: var(--text); }
+  .task .who  { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .tag { font-size: 10px; padding: 3px 8px; border-radius: 999px; font-weight: 700; margin-top: 8px; display: inline-block; letter-spacing: .3px; }
+  .tag.todo  { background: rgba(245,158,11,.1); color: var(--yellow); border: 1px solid rgba(245,158,11,.15); }
+  .tag.doing { background: rgba(167,139,250,.1); color: var(--purple); border: 1px solid rgba(167,139,250,.15); }
+  .tag.done  { background: rgba(16,185,129,.1); color: var(--green); border: 1px solid rgba(16,185,129,.15); }
+  .feed { display: flex; flex-direction: column; gap: 6px; max-height: 640px; overflow-y: auto; padding-right: 4px; }
+  .feed-item { background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 14px 18px; display: flex; gap: 14px; align-items: flex-start; }
+  .feed-time { color: var(--muted); font-size: 12px; min-width: 150px; font-variant-numeric: tabular-nums; padding-top: 1px; }
+  .feed-agent { font-weight: 700; color: var(--text); min-width: 160px; font-size: 13px; padding-top: 1px; }
+  .feed-action { color: var(--muted); font-size: 13px; line-height: 1.4; }
+  footer { max-width: 1400px; margin: 40px auto 0; padding: 0 20px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 16px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  @media (max-width: 780px) {
+    .grid-2, .board { grid-template-columns: 1fr; }
+    .feed-time { min-width: auto; display: block; }
+    .feed-item { flex-direction: column; gap: 4px; }
+    .feed-agent { min-width: auto; }
+    .hero { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="/" class="logo">⚡ Zion Agents</a>
+    <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+      <span id="clock" class="pill"></span>
+      <a href="/" class="pill">← Back to site</a>
+      <button id="refresh" class="pill" style="cursor:pointer;">🔄 Refresh</button>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div>
+      <h1>Live Agent Monitoring</h1>
+      <p class="subtitle">Real-time fleet health · task board · agent activity</p>
+    </div>
+    <div id="updated" class="pill" style="height:auto; white-space:nowrap;"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="grid-2">
+    <div>
+      <div class="section-title">🤖 Agents</div>
+      <div class="grid-3" id="agents"></div>
+    </div>
+    <div>
+      <div class="section-title">📋 Task Board</div>
+      <p class="section-sub">Delegated / in-progress / completed tasks from agent monitor logs</p>
+      <div class="board" id="board"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="section-title">📊 Client View — Agents in Action</div>
+    <p class="section-sub">Real-time snapshot of our autonomous fleet delivering measurable outcomes.</p>
+    <div id="client-stats" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:14px;"></div>
+  </div>
+  <div class="card">
+    <div class="section-title">📜 Recent Activity</div>
+    <div class="feed" id="feed"></div>
+  </div>
+</main>
+<footer>
+  <div>© 2026 Zion Tech Group · Monitoring powered by live agent telemetry</div>
+  <div>Auto-refresh in <strong id="countdown">60</strong>s · <code style="color:var(--muted)">/api/agents-monitoring.json</code></div>
+</footer>
+<script>
+const API = '/api/agents-monitoring.json';
+let countdown = 60, timer = null, board = { todo: [], doing: [], done: [] };
+
+function fmtTime(iso){ if (!iso) return '—'; const d = new Date(iso); if (isNaN(d)) return iso; return fmt(d); }
+function fmt(d){ return d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}) + ' · ' + d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}); }
+
+function kindClass(k){ const x=(k||'').toUpperCase(); if(x==='DONE') return 'done'; if(x==='ASSIGN') return 'assign'; if(x==='ONLINE') return 'online'; if(x==='STATUS') return 'status'; return 'other'; }
+function updateClock(){ document.getElementById('clock').textContent = fmt(new Date()); const el = document.getElementById('countdown'); if (el) el.textContent = countdown; }
+
+function tick(){
+  countdown--;
+  document.getElementById('countdown').textContent = countdown;
+  if(countdown<=0){ countdown=60; refresh(); }
+}
+
+function renderStats(data){
+  const total = (data?.fleet?.total) || 0;
+  const online = (data?.fleet?.online) || 0;
+  const tasks = ((data?.agents) || []).reduce((s,a)=>s+(a.taskCount||0), 0);
+  const onlineAgents = ((data?.agents)||[]).filter(a=>a.status==='online').length;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="stat-label">🤖 Agents</div><div class="stat-value">${total}</div></div>
+    <div class="stat"><div class="stat-label">🟢 Online</div><div class="stat-value" style="color:var(--green)">${onlineAgents}</div></div>
+    <div class="stat"><div class="stat-label">✅ Completed Tasks</div><div class="stat-value" style="color:var(--purple)">${tasks}</div></div>
+    <div class="stat"><div class="stat-label">📊 Fleet Health</div><div class="stat-value" style="font-size:22px;margin-top:12px">${total>0 && onlineAgents>0 ? '<span style="color:var(--green)">Healthy</span>' : '<span style="color:var(--yellow)">Checking...</span>'}</div></div>
+    <div class="stat"><div class="stat-label">🕒 Last Update</div><div class="stat-value" style="font-size:15px;margin-top:10px">${fmtTime(data?.generatedAt)}</div></div>
+  `;
+}
+
+function renderClientStats(data){
+  const cv = data?.clientView || {};
+  const el = document.getElementById('client-stats');
+  if (!el) return;
+  document.getElementById('client-stats').innerHTML = `
+    <div class="card"><div class="metric-label">🕒 Avg. Response Time</div><div class="metric-value" style="color:var(--green)">${cv.avgResponseMs ?? '—'} ms</div></div>
+    <div class="card"><div class="metric-label">✅ Tasks Completed (24h)</div><div class="metric-value" style="color:var(--purple)">${cv.tasks24h ?? '—'}</div></div>
+    <div class="card"><div class="metric-label">🔁 Actions Today</div><div class="metric-value">${cv.actionsToday ?? '—'}</div></div>
+    <div class="card"><div class="metric-label">⭐ Client Success Score</div><div class="metric-value" style="color:var(--yellow)">${cv.successScore ?? '—'}/100</div></div>
+  `;
+}
+
+function renderAgentCard(a){
+  const last = a.lastSeen ? new Date(a.lastSeen) : null;
+  const lastText = last && !isNaN(last) ? last.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false}) + ' · ' + last.toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '—';
+  const statusCls = a.status==='online' ? 'online' : 'offline';
+  const statusText = a.status==='online' ? '● Online' : '○ Offline';
+  return `
+    <article class="agent-card">
+      <div class="agent-top">
+        <div>
+          <h3>@${a.username}</h3>
+          <div class="role">${a.role}</div>
+        </div>
+        <span class="badge ${statusCls}">${statusText}</span>
+      </div>
+      <div class="metrics">
+        <div><div class="metric-label">Tasks</div><div class="metric-value">${a.taskCount||0}</div></div>
+        <div><div class="metric-label">Role</div><div class="metric-value" style="font-size:12px">${a.role.split(' ').slice(0,2).join(' ')}</div></div>
+        <div><div class="metric-label">Last Seen</div><div class="metric-value" style="font-size:13px">${lastText}</div></div>
+      </div>
+      ${a.recentActions && a.recentActions.length ? `
+      <div class="actions">
+        <div class="action">
+          <span class="kind ${kindClass(a.recentActions[0].description.split(':')[0])}">${a.recentActions[0].description.split(':')[0].trim()}</span>
+          <span class="desc">${a.recentActions[0].description.split(':').slice(1).join(':').trim()}</span>
+        </div>
+      </div>` : ''}
+    </article>
+  `;
+}
+
+function renderBoard(data){
+  const agentsMap = {};
+  ((data?.agents)||[]).forEach(a=>agentsMap[a.username] = a);
+  const rows = ((data?.recentActivity)||[]).slice().reverse().filter(item=>{
+    const kind = item.action.split(' — ')[0].toUpperCase();
+    const text = item.action.split(' — ').slice(1).join(' — ');
+    return text && text.trim().length > 0;
+  }).map(item=>{
+    const kind = item.action.split(' — ')[0].toUpperCase();
+    const text = item.action.split(' — ').slice(1).join(' — ');
+    const agent = item.agent || 'unknown';
+    if (kind === 'DONE') board.done.unshift({ agent, text });
+    else if (kind === 'ASSIGN') board.doing.unshift({ agent, text });
+    else if (kind === 'ONLINE') board.todo.unshift({ agent, text });
+    else board.todo.unshift({ agent, text });
+  });
+
+  ['todo','doing','done'].forEach(k=>{ board[k] = board[k].slice(0,20); });
+
+  const columns = [
+    { key: 'todo', label: 'To Do' , cls: 'todo' },
+    { key: 'doing', label: 'In Progress', cls: 'doing' },
+    { key: 'done', label: 'Done', cls: 'done' },
+  ];
+
+  document.getElementById('board').innerHTML = columns.map(col => `
+    <div class="column ${col.cls}">
+      <div class="col-title">${col.label} <span class="count">${board[col.key].length}</span></div>
+      ${board[col.key].length === 0 ? '<div style="font-size:12px;color:var(--muted);padding:14px 4px">No items</div>' : ''}
+      ${board[col.key].map(t=>`
+        <div class="task">
+          <div class="title">${t.text}</div>
+          <div class="who">@${t.agent}</div>
+          <span class="tag ${col.cls}">${t.text.toLowerCase().startsWith('online') ? 'PING' : col.label}</span>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+function renderFeed(data){
+  const items = ((data?.recentActivity)||[]).slice(0,80);
+  const el = document.getElementById('feed');
+  if (!el) return;
+  if (!items.length){ el.innerHTML = '<div class="agent-card" style="text-align:center;color:var(--muted)">No recent activity yet. Actions will appear here as agents work.</div>'; return; }
+  el.innerHTML = items.map(item => {
+    const kind = item.action.split(' — ')[0].toUpperCase();
+    const text = item.action.split(' — ').slice(1).join(' — ');
+    const t = item.ts ? new Date(item.ts) : null;
+    const timeStr = (t && !isNaN(t)) ? fmt(t) : '';
+    return `<div class="feed-item">
+      <div class="feed-time">${timeStr}</div>
+      <div class="feed-agent">@${item.agent}</div>
+      <div class="feed-kind ${kindClass(kind)}">${kind}</div>
+      <div class="feed-action">${text}</div>
+    </div>`;
+  }).join('');
+}
+
+async function refresh(){
+  board = { todo: [], doing: [], done: [] };
+  try {
+    const res = await fetch(API);
+    if (!res.ok) throw new Error('status ' + res.status);
+    const data = await res.json();
+    renderStats(data);
+    renderClientStats(data);
+    renderBoard(data);
+    document.getElementById('agents').innerHTML = ((data?.agents)||[]).map(renderAgentCard).join('');
+    renderFeed(data);
+    document.getElementById('updated').textContent = 'Updated ' + fmtTime(data?.generatedAt);
+  } catch (e) {
+    document.getElementById('updated').textContent = 'Error loading data';
+  }
+  updateClock();
+}
+
+(function init(){
+  updateClock();
+  refresh();
+  if (timer) clearInterval(timer);
+  timer = setInterval(()=>{ tick(); updateClock(); }, 1000);
+  document.getElementById('refresh').onclick = () => { countdown = 60; refresh(); };
+})();
+</script>
+</body>
+</html>
