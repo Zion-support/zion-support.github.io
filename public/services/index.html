@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — Zion Tech Group</title>
+</head>
+<body>
+<h1>All Services</h1>
+<ul id="list"></ul>
+<script>
+fetch('/api/services-catalog.json')
+  .then(r=>r.json())
+  .then(d => {
+    const list = document.getElementById('list');
+    (d || []).forEach(s => {
+      const a = document.createElement('a');
+      a.href = s.href;
+      a.textContent = s.name;
+      const li = document.createElement('li');
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  });
+</script>
+</body>
+</html>

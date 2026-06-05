@@ -142,6 +142,11 @@
     </div>
   </div>
   <div class="card">
+    <div class="section-title">📊 Client View — Agents in Action</div>
+    <p class="section-sub">Real-time snapshot of our autonomous fleet delivering measurable outcomes.</p>
+    <div id="client-stats" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:14px;"></div>
+  </div>
+  <div class="card">
     <div class="section-title">📜 Recent Activity</div>
     <div class="feed" id="feed"></div>
   </div>
@@ -177,6 +182,18 @@ function renderStats(data){
     <div class="stat"><div class="stat-label">✅ Completed Tasks</div><div class="stat-value" style="color:var(--purple)">${tasks}</div></div>
     <div class="stat"><div class="stat-label">📊 Fleet Health</div><div class="stat-value" style="font-size:22px;margin-top:12px">${total>0 && onlineAgents>0 ? '<span style="color:var(--green)">Healthy</span>' : '<span style="color:var(--yellow)">Checking...</span>'}</div></div>
     <div class="stat"><div class="stat-label">🕒 Last Update</div><div class="stat-value" style="font-size:15px;margin-top:10px">${fmtTime(data?.generatedAt)}</div></div>
+  `;
+}
+
+function renderClientStats(data){
+  const cv = data?.clientView || {};
+  const el = document.getElementById('client-stats');
+  if (!el) return;
+  document.getElementById('client-stats').innerHTML = `
+    <div class="card"><div class="metric-label">🕒 Avg. Response Time</div><div class="metric-value" style="color:var(--green)">${cv.avgResponseMs ?? '—'} ms</div></div>
+    <div class="card"><div class="metric-label">✅ Tasks Completed (24h)</div><div class="metric-value" style="color:var(--purple)">${cv.tasks24h ?? '—'}</div></div>
+    <div class="card"><div class="metric-label">🔁 Actions Today</div><div class="metric-value">${cv.actionsToday ?? '—'}</div></div>
+    <div class="card"><div class="metric-label">⭐ Client Success Score</div><div class="metric-value" style="color:var(--yellow)">${cv.successScore ?? '—'}/100</div></div>
   `;
 }
 
@@ -276,6 +293,7 @@ async function refresh(){
     if (!res.ok) throw new Error('status ' + res.status);
     const data = await res.json();
     renderStats(data);
+    renderClientStats(data);
     renderBoard(data);
     document.getElementById('agents').innerHTML = ((data?.agents)||[]).map(renderAgentCard).join('');
     renderFeed(data);

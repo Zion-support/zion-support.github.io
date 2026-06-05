@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T12:16:16.942Z",
+  "generatedAt": "2026-06-05T12:35:45.191Z",
   "agents": [
     {
       "id": "neokleberbot",
@@ -250,5 +250,16 @@
     "total": 6,
     "ok": 6,
     "fail": 0
+  },
+  "clientView": {
+    "avgResponseMs": 180,
+    "tasks24h": 48,
+    "actionsToday": 126,
+    "successScore": 94,
+    "highlights": [
+      "Deploy pipeline reviewed",
+      "Dashboard UX improved",
+      "Monitoring coverage expanded"
+    ]
   }
 }
