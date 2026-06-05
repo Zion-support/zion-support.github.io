@@ -148,6 +148,15 @@
     <div id="client-stats" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:14px;"></div>
   </div>
   <div class="card">
+    <div class="section-title">📝 Agent Action Logger</div>
+    <p class="section-sub">Record actions directly into dashboard history (browser storage). Use <code>AGENT</code> and <code>ACTION</code> below.</p>
+    <form id="log-form" class="flex flex-col sm:flex-row gap-3">
+      <input id="log-agent" placeholder="Agent (e.g. neo_kleber_bot)" className="flex-1 rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 text-sm text-white" />
+      <input id="log-action" placeholder="Action (e.g. ASSIGN — Build pricing page)" className="flex-[2] rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 text-sm text-white" />
+      <button type="submit" className="rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-500 transition">Log</button>
+    </form>
+  </div>
+  <div class="card">
     <div class="section-title">📜 Recent Activity</div>
     <div class="feed" id="feed"></div>
   </div>
@@ -160,6 +169,7 @@
 const API = '/api/agents-monitoring.json';
 let countdown = 60, timer = null, board = { todo: [], doing: [], done: [] };
 const LOCAL_KEY = 'zion_dashboard_events_v1';
+const RESTART_KEY = 'zion_dashboard_restart_protocol';
 function loadLocalEvents(){
   try { return JSON.parse(localStorage.getItem(LOCAL_KEY) || '[]'); } catch(e){ return []; }
 }
@@ -168,6 +178,23 @@ function saveLocalEvent(evt){
   list.unshift(evt);
   if (list.length > 200) list.length = 200;
   localStorage.setItem(LOCAL_KEY, JSON.stringify(list));
+}
+function ensureRestartProtocol(){
+  if (!localStorage.getItem(RESTART_KEY)) {
+    localStorage.setItem(RESTART_KEY, JSON.stringify({
+      rule: '@<bot> → ONLINE ← : restarted',
+      reminder: 'Post restart marker on restart so fleet health reflects true status.',
+      lastSeenTs: null
+    }));
+  }
+}
+function getRestartProtocol(){
+  try { return JSON.parse(localStorage.getItem(RESTART_KEY) || 'null'); } catch(e){ return null; }
+}
+function bumpRestartSeen(){
+  const rp = getRestartProtocol() || {};
+  rp.lastSeenTs = new Date().toISOString();
+  localStorage.setItem(RESTART_KEY, JSON.stringify(rp));
 }
 
 
