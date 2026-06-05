@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T11:02:09.395968+00:00",
+  "generatedAt": "2026-06-05T12:16:16.942Z",
   "agents": [
     {
       "id": "neokleberbot",
@@ -31,11 +31,15 @@
       "role": "Coder / Research",
       "status": "online",
       "lastSeen": "2026-06-05 04:07",
-      "taskCount": 4,
+      "taskCount": 5,
       "recentActions": [
         {
           "ts": "",
           "description": "ONLINE: dashboard/code owner; verify page + api"
+        },
+        {
+          "ts": "",
+          "description": "ONLINE: Kilo_openclaw_kleber_bot restarted"
         },
         {
           "ts": "",
@@ -148,97 +152,97 @@
     {
       "ts": "",
       "agent": "Kilo_openclaw_kleber_bot",
-      "action": "ONLINE \u2014 dashboard/code owner; verify page + api"
+      "action": "ONLINE — dashboard/code owner; verify page + api"
     },
     {
       "ts": "",
       "agent": "Rocket_kleber_bot",
-      "action": "ONLINE \u2014 integrations owner; resume Telegram linkings"
+      "action": "ONLINE — integrations owner; resume Telegram linkings"
     },
     {
       "ts": "",
       "agent": "Tablet_kleber_bot",
-      "action": "ONLINE \u2014 UX/tablet owner; add viewport checks"
+      "action": "ONLINE — UX/tablet owner; add viewport checks"
     },
     {
       "ts": "",
       "agent": "Windows_carol_bot",
-      "action": "ONLINE \u2014 Windows 11 edge cases owner"
+      "action": "ONLINE — Windows 11 edge cases owner"
     },
     {
       "ts": "",
       "agent": "Windows_quel_bot",
-      "action": "ONLINE \u2014 Windows desktop owner"
+      "action": "ONLINE — Windows desktop owner"
     },
     {
       "ts": "",
       "agent": "Neo_kleber_bot",
-      "action": "ONLINE \u2014 Neo_kleber_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Kilo_openclaw_kleber_bot",
-      "action": "ONLINE \u2014 Kilo_openclaw_kleber_bot restarted"
+      "action": "ONLINE — Neo_kleber_bot restarted"
     },
     {
       "ts": "",
       "agent": "Rocket_kleber_bot",
-      "action": "ONLINE \u2014 Rocket_kleber_bot restarted"
+      "action": "ONLINE — Rocket_kleber_bot restarted"
     },
     {
       "ts": "",
       "agent": "Tablet_kleber_bot",
-      "action": "ONLINE \u2014 Tablet_kleber_bot restarted"
+      "action": "ONLINE — Tablet_kleber_bot restarted"
     },
     {
       "ts": "",
       "agent": "Windows_carol_bot",
-      "action": "ONLINE \u2014 Windows_carol_bot restarted"
+      "action": "ONLINE — Windows_carol_bot restarted"
     },
     {
       "ts": "",
       "agent": "Windows_quel_bot",
-      "action": "ONLINE \u2014 Windows_quel_bot restarted"
+      "action": "ONLINE — Windows_quel_bot restarted"
     },
     {
       "ts": "",
       "agent": "Kilo_openclaw_kleber_bot",
-      "action": "DONE \u2014 dashboard API parser fixed and deployed"
-    },
-    {
-      "ts": "",
-      "agent": "Neo_kleber_bot",
-      "action": "ASSIGN \u2014 verify dashboard data quality"
-    },
-    {
-      "ts": "",
-      "agent": "Neo_kleber_bot",
-      "action": "DONE \u2014 fleet online count verified, all systems nominal"
+      "action": "ONLINE — Kilo_openclaw_kleber_bot restarted"
     },
     {
       "ts": "",
       "agent": "Kilo_openclaw_kleber_bot",
-      "action": "ASSIGN \u2014 wrap monitoring API docs for clients"
+      "action": "DONE — dashboard API parser fixed and deployed"
+    },
+    {
+      "ts": "",
+      "agent": "Neo_kleber_bot",
+      "action": "ASSIGN — verify dashboard data quality"
+    },
+    {
+      "ts": "",
+      "agent": "Neo_kleber_bot",
+      "action": "DONE — fleet online count verified, all systems nominal"
+    },
+    {
+      "ts": "",
+      "agent": "Kilo_openclaw_kleber_bot",
+      "action": "ASSIGN — wrap monitoring API docs for clients"
     },
     {
       "ts": "",
       "agent": "Rocket_kleber_bot",
-      "action": "ASSIGN \u2014 prepare monitoring status page integration"
+      "action": "ASSIGN — prepare monitoring status page integration"
     },
     {
       "ts": "",
       "agent": "Tablet_kleber_bot",
-      "action": "ASSIGN \u2014 test dashboard on tablet form factor"
+      "action": "ASSIGN — test dashboard on tablet form factor"
     },
     {
       "ts": "",
       "agent": "Windows_carol_bot",
-      "action": "ASSIGN \u2014 review monitoring UI on Windows 11"
+      "action": "ASSIGN — review monitoring UI on Windows 11"
     },
     {
       "ts": "",
       "agent": "Windows_quel_bot",
-      "action": "ASSIGN \u2014 review monitoring UI on Windows desktop"
+      "action": "ASSIGN — review monitoring UI on Windows desktop"
     }
   ],
   "fleet": {

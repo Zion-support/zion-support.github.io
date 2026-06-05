@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-06-05T12:30:54.698Z",
+  "preDeployRepoCheck": true,
+  "sourceFilesPresent": true,
+  "missingSourceFiles": [],
+  "dashboardHtmlSize": 16254,
+  "monitoringJsonPresent": true,
+  "monitoringJsonAgentsCount": 6
+}
