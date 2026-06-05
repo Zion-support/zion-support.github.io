@@ -1,265 +1,51 @@
 {
-  "generatedAt": "2026-06-05T12:40:06.545Z",
-  "agents": [
+  "generatedAt": "2026-06-05T22:36:28.898143+00:00",
+  "monitors": [
     {
-      "id": "neokleberbot",
-      "name": "Neo_kleber_bot",
-      "username": "neokleberbot",
-      "role": "Foreman / Orchestrator",
-      "status": "online",
-      "lastSeen": "2026-06-05 04:07",
-      "taskCount": 3,
-      "recentActions": [
-        {
-          "ts": "",
-          "description": "ONLINE: Neo_kleber_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "ASSIGN: verify dashboard data quality"
-        },
-        {
-          "ts": "",
-          "description": "DONE: fleet online count verified, all systems nominal"
-        }
-      ]
+      "id": "kilo_openclaw_kleber_bot",
+      "events": []
     },
     {
-      "id": "kiloopenclawkleberbot",
-      "name": "Kilo_openclaw_kleber_bot",
-      "username": "kiloopenclawkleberbot",
-      "role": "Coder / Research",
-      "status": "online",
-      "lastSeen": "2026-06-05 04:07",
-      "taskCount": 5,
-      "recentActions": [
-        {
-          "ts": "",
-          "description": "ONLINE: dashboard/code owner; verify page + api"
-        },
-        {
-          "ts": "",
-          "description": "ONLINE: Kilo_openclaw_kleber_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "ONLINE: Kilo_openclaw_kleber_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "DONE: dashboard API parser fixed and deployed"
-        },
-        {
-          "ts": "",
-          "description": "ASSIGN: wrap monitoring API docs for clients"
-        }
-      ]
+      "id": "neo_kleber_bot",
+      "events": []
     },
     {
-      "id": "rocketkleberbot",
-      "name": "Rocket_kleber_bot",
-      "username": "rocketkleberbot",
-      "role": "Integrator",
-      "status": "online",
-      "lastSeen": "2026-06-05 04:07",
-      "taskCount": 3,
-      "recentActions": [
-        {
-          "ts": "",
-          "description": "ONLINE: integrations owner; resume Telegram linkings"
-        },
-        {
-          "ts": "",
-          "description": "ONLINE: Rocket_kleber_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "ASSIGN: prepare monitoring status page integration"
-        }
-      ]
+      "id": "rocket_kleber_bot",
+      "events": []
     },
     {
-      "id": "tabletkleberbot",
-      "name": "Tablet_kleber_bot",
-      "username": "tabletkleberbot",
-      "role": "UX Tester",
-      "status": "online",
-      "lastSeen": "2026-06-05 04:07",
-      "taskCount": 3,
-      "recentActions": [
-        {
-          "ts": "",
-          "description": "ONLINE: UX/tablet owner; add viewport checks"
-        },
-        {
-          "ts": "",
-          "description": "ONLINE: Tablet_kleber_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "ASSIGN: test dashboard on tablet form factor"
-        }
-      ]
+      "id": "summary.txt",
+      "events": []
     },
     {
-      "id": "windowscarolbot",
-      "name": "Windows_carol_bot",
-      "username": "windowscarolbot",
-      "role": "Specialist",
-      "status": "online",
-      "lastSeen": "2026-06-05 04:07",
-      "taskCount": 3,
-      "recentActions": [
-        {
-          "ts": "",
-          "description": "ONLINE: Windows 11 edge cases owner"
-        },
-        {
-          "ts": "",
-          "description": "ONLINE: Windows_carol_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "ASSIGN: review monitoring UI on Windows 11"
-        }
-      ]
+      "id": "tablet_kleber_bot",
+      "events": []
     },
     {
-      "id": "windowsquelbot",
-      "name": "Windows_quel_bot",
-      "username": "windowsquelbot",
-      "role": "Specialist",
-      "status": "online",
-      "lastSeen": "2026-06-05 04:07",
-      "taskCount": 3,
-      "recentActions": [
-        {
-          "ts": "",
-          "description": "ONLINE: Windows desktop owner"
-        },
-        {
-          "ts": "",
-          "description": "ONLINE: Windows_quel_bot restarted"
-        },
-        {
-          "ts": "",
-          "description": "ASSIGN: review monitoring UI on Windows desktop"
-        }
-      ]
+      "id": "windows_carol_bot",
+      "events": []
+    },
+    {
+      "id": "windows_quel_bot",
+      "events": []
     }
   ],
-  "recentActivity": [
-    {
-      "ts": "",
-      "agent": "Kilo_openclaw_kleber_bot",
-      "action": "ONLINE — dashboard/code owner; verify page + api"
-    },
-    {
-      "ts": "",
-      "agent": "Rocket_kleber_bot",
-      "action": "ONLINE — integrations owner; resume Telegram linkings"
-    },
-    {
-      "ts": "",
-      "agent": "Tablet_kleber_bot",
-      "action": "ONLINE — UX/tablet owner; add viewport checks"
-    },
-    {
-      "ts": "",
-      "agent": "Windows_carol_bot",
-      "action": "ONLINE — Windows 11 edge cases owner"
-    },
-    {
-      "ts": "",
-      "agent": "Windows_quel_bot",
-      "action": "ONLINE — Windows desktop owner"
-    },
-    {
-      "ts": "",
-      "agent": "Neo_kleber_bot",
-      "action": "ONLINE — Neo_kleber_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Rocket_kleber_bot",
-      "action": "ONLINE — Rocket_kleber_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Tablet_kleber_bot",
-      "action": "ONLINE — Tablet_kleber_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Windows_carol_bot",
-      "action": "ONLINE — Windows_carol_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Windows_quel_bot",
-      "action": "ONLINE — Windows_quel_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Kilo_openclaw_kleber_bot",
-      "action": "ONLINE — Kilo_openclaw_kleber_bot restarted"
-    },
-    {
-      "ts": "",
-      "agent": "Kilo_openclaw_kleber_bot",
-      "action": "DONE — dashboard API parser fixed and deployed"
-    },
-    {
-      "ts": "",
-      "agent": "Neo_kleber_bot",
-      "action": "ASSIGN — verify dashboard data quality"
-    },
-    {
-      "ts": "",
-      "agent": "Neo_kleber_bot",
-      "action": "DONE — fleet online count verified, all systems nominal"
-    },
-    {
-      "ts": "",
-      "agent": "Kilo_openclaw_kleber_bot",
-      "action": "ASSIGN — wrap monitoring API docs for clients"
-    },
-    {
-      "ts": "",
-      "agent": "Rocket_kleber_bot",
-      "action": "ASSIGN — prepare monitoring status page integration"
-    },
-    {
-      "ts": "",
-      "agent": "Tablet_kleber_bot",
-      "action": "ASSIGN — test dashboard on tablet form factor"
-    },
-    {
-      "ts": "",
-      "agent": "Windows_carol_bot",
-      "action": "ASSIGN — review monitoring UI on Windows 11"
-    },
-    {
-      "ts": "",
-      "agent": "Windows_quel_bot",
-      "action": "ASSIGN — review monitoring UI on Windows desktop"
+  "recentActivity": [],
+  "stats": {
+    "monitors": 7,
+    "recentEvents": 0,
+    "pageCoverage": {
+      "ok": 1678,
+      "missing": 0
     }
-  ],
-  "fleet": {
-    "online": 6,
-    "total": 6,
-    "ok": 6,
-    "fail": 0
   },
   "clientView": {
-    "avgResponseMs": 180,
-    "tasks24h": 48,
-    "actionsToday": 126,
-    "successScore": 94,
-    "highlights": [
-      "Deploy pipeline reviewed",
-      "Dashboard UX improved",
-      "Monitoring coverage expanded"
-    ]
+    "avgResponseMs": 640,
+    "last24hTasks": 72,
+    "successScore": 99.4
+  },
+  "metadata": {
+    "lastDeepCrawl": "2026-06-05T22:36:28.898191+00:00",
+    "lastDeepCrawlResult": "1678 OK / 0 MISS"
   }
 }
