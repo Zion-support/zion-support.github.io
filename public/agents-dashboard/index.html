@@ -124,8 +124,9 @@
 <main>
   <div class="hero">
     <div>
+      <div class="badge online" style="display:inline-block;margin-bottom:10px;">📡 Real-time</div>
       <h1>Live Agent Monitoring</h1>
-      <p class="subtitle">Real-time fleet health · task board · agent activity</p>
+      <p class="subtitle">Real-time fleet health · task board · agent activity · local history</p>
     </div>
     <div id="updated" class="pill" style="height:auto; white-space:nowrap;"></div>
   </div>
@@ -158,6 +159,17 @@
 <script>
 const API = '/api/agents-monitoring.json';
 let countdown = 60, timer = null, board = { todo: [], doing: [], done: [] };
+const LOCAL_KEY = 'zion_dashboard_events_v1';
+function loadLocalEvents(){
+  try { return JSON.parse(localStorage.getItem(LOCAL_KEY) || '[]'); } catch(e){ return []; }
+}
+function saveLocalEvent(evt){
+  const list = loadLocalEvents();
+  list.unshift(evt);
+  if (list.length > 200) list.length = 200;
+  localStorage.setItem(LOCAL_KEY, JSON.stringify(list));
+}
+
 
 function fmtTime(iso){ if (!iso) return '—'; const d = new Date(iso); if (isNaN(d)) return iso; return fmt(d); }
 function fmt(d){ return d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}) + ' · ' + d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}); }
@@ -268,23 +280,42 @@ function renderBoard(data){
 }
 
 function renderFeed(data){
-  const items = ((data?.recentActivity)||[]).slice(0,80);
+  const items = ((data?.recentActivity)||[]).slice(0,80).map(it => ({
+    kind: String(it.action || '').split(' — ')[0].toUpperCase(),
+    text: String(it.action || '').split(' — ').slice(1).join(' — ') || '',
+    agent: it.agent || 'unknown',
+    ts: it.ts || null,
+    source: it.source || 'remote'
+  }));
+  // merge local recorded events
+  const local = loadLocalEvents();
+  const combined = local.length ? [...local, ...items] : items;
+  const seen = new Set();
+  const merged = [];
+  for (const ev of combined) {
+    const key = `${ev.agent}::${ev.kind}::${ev.text}::${ev.ts || ''}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    merged.push(ev);
+  }
+  merged.sort((a,b) => String(b.ts||'').localeCompare(String(a.ts||'')));
+  const visible = merged.slice(0, 120);
   const el = document.getElementById('feed');
   if (!el) return;
-  if (!items.length){ el.innerHTML = '<div class="agent-card" style="text-align:center;color:var(--muted)">No recent activity yet. Actions will appear here as agents work.</div>'; return; }
-  el.innerHTML = items.map(item => {
-    const kind = item.action.split(' — ')[0].toUpperCase();
-    const text = item.action.split(' — ').slice(1).join(' — ');
+  if (!visible.length){ el.innerHTML = '<div class="agent-card" style="text-align:center;color:var(--muted)">No recent activity yet. Actions will appear here as agents work.</div>'; return; }
+  el.innerHTML = visible.map(item => {
     const t = item.ts ? new Date(item.ts) : null;
     const timeStr = (t && !isNaN(t)) ? fmt(t) : '';
+    const marker = item.source === 'local' ? '<div style="font-size:10px;color:var(--muted);margin-top:2px">recorded</div>' : '';
     return `<div class="feed-item">
       <div class="feed-time">${timeStr}</div>
       <div class="feed-agent">@${item.agent}</div>
-      <div class="feed-kind ${kindClass(kind)}">${kind}</div>
-      <div class="feed-action">${text}</div>
+      <div class="feed-kind ${kindClass(item.kind)}">${item.kind}</div>
+      <div class="feed-action">${item.text}${marker}</div>
     </div>`;
   }).join('');
 }
+
 
 async function refresh(){
   board = { todo: [], doing: [], done: [] };
@@ -298,6 +329,7 @@ async function refresh(){
     document.getElementById('agents').innerHTML = ((data?.agents)||[]).map(renderAgentCard).join('');
     renderFeed(data);
     document.getElementById('updated').textContent = 'Updated ' + fmtTime(data?.generatedAt);
+    saveLocalEvent({ agent: 'system', kind: 'REFRESH', text: 'Dashboard refreshed', ts: new Date().toISOString(), source: 'local' });
   } catch (e) {
     document.getElementById('updated').textContent = 'Error loading data';
   }
