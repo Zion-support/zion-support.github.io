@@ -439,7 +439,7 @@ let list = services;
             {CATEGORIES.map(cat => {
               const n = byCategory[cat.key]?.length ?? 0;
               return (
-              <Link key={cat.key} href={`/services/?category=${cat.key}`}
+              <Link key={cat.key} href={`/services/${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{ background: `linear-gradient(135deg, ${cat.color.replace('from-','').replace('to-','').split(' ')[0]}22, transparent 60%)` }}/>
@@ -524,7 +524,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services/?category=${cat.key}`}
+                  href={`/services/${cat.key}`}
                   className="block group"
                 >
                   <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden mb-3">
@@ -595,7 +595,7 @@ let list = services;
                 {(byCategory[cat.key] || []).length > 30 && (
                   <p className="text-slate-500 text-xs mt-2 text-center">
                     Showing 30 of {(byCategory[cat.key] || []).length} {cat.label.toLowerCase()} services
-                    {' '}<Link href={`/services/?category=${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
+                    {' '}<Link href={`/services/${cat.key}`} className="text-purple-400 hover:text-purple-300 underline">view all →</Link>
                   </p>
                 )}
               </div>
@@ -767,7 +767,7 @@ let list = services;
               return (
               <Link
                 key={cat.key}
-                href={`/services/?category=${cat.key}`}
+                href={`/services/${cat.key}`}
                 className="glass-card group hover:border-purple-500/40 hover:scale-[1.015] transition-all duration-300 relative overflow-hidden"
               >
                 {/* Gradient border glow on hover */}
@@ -840,7 +840,7 @@ let list = services;
               return (
                 <Link
                   key={cat.key}
-                  href={`/services/?category=${cat.key}`}
+                  href={`/services/${cat.key}`}
                   className="group relative flex flex-col items-center gap-2 p-5 rounded-2xl border border-slate-700/60 bg-slate-800/40 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all"
                 >
                   <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
@@ -1103,7 +1103,7 @@ let list = services;
               const catKey = INDUSTRY_CATS[ind.key] || ind.key.split('-')[0];
               return (
                 <Link key={ind.key}
-                  href={`/services/?category=${catKey}`}
+                  href={`/services/${catKey}`}
                   className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-3">
