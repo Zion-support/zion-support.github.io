@@ -146,16 +146,16 @@ export default function Navigation() {
                     </Link>
                   ))}
                   {/* Category quick-links */}
-                  <Link href="/services/?category=ai" onClick={() => setSolutionsOpen(false)}
+                  <Link href="/services/ai/" onClick={() => setSolutionsOpen(false)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-purple-400 bg-purple-500/10 border border-purple-500/20 hover:border-purple-500/40 transition-colors"
                   >🧠 AI Services</Link>
-                  <Link href="/services/?category=it" onClick={() => setSolutionsOpen(false)}
+                  <Link href="/services/it-services/" onClick={() => setSolutionsOpen(false)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-colors"
                   >🖥️ IT Services</Link>
-                  <Link href="/services/?category=cloud" onClick={() => setSolutionsOpen(false)}
+                  <Link href="/services/cloud-services/" onClick={() => setSolutionsOpen(false)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-sky-400 bg-sky-500/10 border border-sky-500/20 hover:border-sky-500/40 transition-colors"
                   >☁️ Cloud Services</Link>
-                  <Link href="/services/?category=security" onClick={() => setSolutionsOpen(false)}
+                  <Link href="/services/cybersecurity/" onClick={() => setSolutionsOpen(false)}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-orange-400 bg-orange-500/10 border border-orange-500/20 hover:border-orange-500/40 transition-colors"
                   >🔐 Security</Link>
                 </div>
@@ -185,7 +185,7 @@ export default function Navigation() {
                 <div className="grid grid-cols-2 gap-3">
                   {/* AI & Automation */}
                   <div>
-                    <Link href="/services/?category=ai" onClick={() => setServicesOpen(false)}
+                    <Link href="/services/ai/" onClick={() => setServicesOpen(false)}
                       className="block px-3 py-2 rounded-lg bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 hover:border-purple-500/40 transition-colors">
                       <div className="text-xs font-bold uppercase tracking-wider text-purple-400">🧠 AI & Automation</div>
                       <div className="text-[11px] text-slate-400 mt-0.5">ML, NLP, CV, RPA, agents</div>
@@ -193,7 +193,7 @@ export default function Navigation() {
                   </div>
                   {/* IT & Infrastructure */}
                   <div>
-                    <Link href="/services/?category=it" onClick={() => setServicesOpen(false)}
+                    <Link href="/services/it-services/" onClick={() => setServicesOpen(false)}
                       className="block px-3 py-2 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-colors">
                       <div className="text-xs font-bold uppercase tracking-wider text-blue-400">🖥️ IT & Infrastructure</div>
                       <div className="text-[11px] text-slate-400 mt-0.5">DevOps, SRE, networking, security</div>
@@ -201,7 +201,7 @@ export default function Navigation() {
                   </div>
                   {/* Cloud & DevOps */}
                   <div>
-                    <Link href="/services/?category=cloud" onClick={() => setServicesOpen(false)}
+                    <Link href="/services/cloud-services/" onClick={() => setServicesOpen(false)}
                       className="block px-3 py-2 rounded-lg bg-gradient-to-r from-sky-500/10 to-blue-500/10 border border-sky-500/20 hover:border-sky-500/40 transition-colors">
                       <div className="text-xs font-bold uppercase tracking-wider text-sky-400">☁️ Cloud & DevOps</div>
                       <div className="text-[11px] text-slate-400 mt-0.5">Kubernetes, CI/CD, migrations</div>
@@ -209,7 +209,7 @@ export default function Navigation() {
                   </div>
                   {/* Security */}
                   <div>
-                    <Link href="/services/?category=security" onClick={() => setServicesOpen(false)}
+                    <Link href="/services/cybersecurity/" onClick={() => setServicesOpen(false)}
                       className="block px-3 py-2 rounded-lg bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 hover:border-red-500/40 transition-colors">
                       <div className="text-xs font-bold uppercase tracking-wider text-red-400">🔐 Security & Compliance</div>
                       <div className="text-[11px] text-slate-400 mt-0.5">Penetration testing, IAM, SIEM</div>
@@ -217,7 +217,7 @@ export default function Navigation() {
                   </div>
                   {/* Data */}
                   <div>
-                    <Link href="/services/?category=data" onClick={() => setServicesOpen(false)}
+                    <Link href="/services/data-analytics/" onClick={() => setServicesOpen(false)}
                       className="block px-3 py-2 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 hover:border-green-500/40 transition-colors">
                       <div className="text-xs font-bold uppercase tracking-wider text-green-400">📊 Data & Analytics</div>
                       <div className="text-[11px] text-slate-400 mt-0.5">ETL, BI, data lakes, streaming</div>
@@ -225,7 +225,7 @@ export default function Navigation() {
                   </div>
                   {/* Automation */}
                   <div>
-                    <Link href="/services/?category=automation" onClick={() => setServicesOpen(false)}
+                    <Link href="/services/workflow-automation/" onClick={() => setServicesOpen(false)}
                       className="block px-3 py-2 rounded-lg bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/20 hover:border-pink-500/40 transition-colors">
                       <div className="text-xs font-bold uppercase tracking-wider text-pink-400">🤖 Automation</div>
                       <div className="text-[11px] text-slate-400 mt-0.5">Workflows, RPA, process mining</div>

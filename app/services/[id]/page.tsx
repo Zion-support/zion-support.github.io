@@ -61,31 +61,30 @@ export default async function ServicePage({ params }: PageProps) {
     : undefined;
   const resolved = service || serviceFromSlug;
   if (!resolved) notFound();
-  const service = resolved;
-
-  const catLabel = CAT_LABELS[service.category] || service.category;
+  const serviceFinal = resolved;
+  const catLabel = CAT_LABELS[serviceFinal.category] || serviceFinal.category;
 
   // Schema.org structured data for rich search snippets on service pages
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.title,
-    description: service.description || "",
+    name: serviceFinal.title,
+    description: serviceFinal.description || "",
     provider: {
       "@type": "Organization",
       name: "Zion Tech Group",
       url: "https://ziontechgroup.com",
     },
-    url: `https://ziontechgroup.com/services/${service.id}/`,
+    url: `https://ziontechgroup.com/services/${serviceFinal.id}/`,
     category: catLabel,
     serviceOutput:
-      (service.features || []).slice(0, 5).join("; "),
+      (serviceFinal.features || []).slice(0, 5).join("; "),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: catLabel,
       itemListElement:
-        service.pricing && Object.keys(service.pricing).length > 0
-          ? Object.entries(service.pricing).map(([tier, price]) => ({
+        serviceFinal.pricing && Object.keys(serviceFinal.pricing).length > 0
+          ? Object.entries(serviceFinal.pricing).map(([tier, price]) => ({
               "@type": "Offer",
               price: String(price).replace(/[^0-9.-]/g, ""),
               priceCurrency: "USD",
@@ -117,13 +116,13 @@ export default async function ServicePage({ params }: PageProps) {
         "@type": "ListItem",
         position: 3,
         name: catLabel,
-        item: `https://ziontechgroup.com/services/?category=${encodeURIComponent(service.category)}`,
+        item: `https://ziontechgroup.com/services/?category=${encodeURIComponent(serviceFinal.category)}`,
       },
       {
         "@type": "ListItem",
         position: 4,
-        name: service.title,
-        item: `https://ziontechgroup.com/services/${service.id}`,
+        name: serviceFinal.title,
+        item: `https://ziontechgroup.com/services/${serviceFinal.id}`,
       },
     ],
   };
@@ -147,9 +146,9 @@ export default async function ServicePage({ params }: PageProps) {
           <span className="mx-2">/</span>
           <Link href="/services/" className="hover:text-purple-400 transition">Services</Link>
           <span className="mx-2">/</span>
-          <Link href={`/services/?category=${encodeURIComponent(service.category)}`} className="hover:text-purple-400 transition">{catLabel}</Link>
+          <Link href={`/services/?category=${encodeURIComponent(serviceFinal.category)}`} className="hover:text-purple-400 transition">{catLabel}</Link>
           <span className="mx-2">/</span>
-          <span className="text-slate-300">{service.title}</span>
+          <span className="text-slate-300">{serviceFinal.title}</span>
         </nav>
 
         {/* Hero */}
@@ -157,8 +156,8 @@ export default async function ServicePage({ params }: PageProps) {
           <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-900/30 text-purple-300 uppercase tracking-wider">
             {catLabel}
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 mt-3">{service.title}</h1>
-          <p className="text-slate-400 leading-relaxed max-w-3xl">{service.description}</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 mt-3">{serviceFinal.title}</h1>
+          <p className="text-slate-400 leading-relaxed max-w-3xl">{serviceFinal.description}</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
@@ -166,7 +165,7 @@ export default async function ServicePage({ params }: PageProps) {
           <div className="lg:col-span-2 glass-card">
             <h2 className="text-2xl font-semibold text-white mb-6">Features</h2>
             <ul className="space-y-3">
-              {service.features.map((feature, i) => (
+              {serviceFinal.features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-3 text-slate-300">
                   <span className="text-purple-400 mt-1 shrink-0">✦</span>
                   <span>{feature}</span>
@@ -180,13 +179,13 @@ export default async function ServicePage({ params }: PageProps) {
             <div className="glass-card">
               <h2 className="text-xl font-semibold text-white mb-4">Pricing</h2>
               <div className="space-y-3">
-                {Object.entries(service.pricing).map(([tier, price]) => (
-                  <div key={tier} className="flex justify-between items-center py-2 border-b border-slate-700/50 last:border-0">
-                    <span className="text-slate-300 capitalize">{tier}</span>
-                    <span className="text-purple-300 font-semibold">{price as string}</span>
-                  </div>
-                ))}
-              </div>
+              {Object.entries(serviceFinal.pricing).map(([tier, price]) => (
+                <div key={tier} className="flex justify-between items-center py-2 border-b border-slate-700/50 last:border-0">
+                  <span className="text-slate-300 capitalize">{tier}</span>
+                  <span className="text-purple-300 font-semibold">{price as string}</span>
+                </div>
+              ))}
+            </div>
             </div>
 
             {/* CTA */}
@@ -214,7 +213,7 @@ export default async function ServicePage({ params }: PageProps) {
         <div className="glass-card mb-12">
           <h2 className="text-2xl font-semibold text-white mb-6">Benefits</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {service.benefits.map((benefit, i) => (
+            {serviceFinal.benefits.map((benefit, i) => (
               <div key={i} className="flex items-start gap-3 p-4 bg-slate-900/50 rounded-xl border border-slate-700/50">
                 <span className="text-green-400 text-lg shrink-0">✓</span>
                 <span className="text-slate-300">{benefit}</span>
@@ -277,7 +276,7 @@ export default async function ServicePage({ params }: PageProps) {
                 <h2 className="text-2xl font-semibold text-white">Deployment Roadmap</h2>
                 <span className="text-xs text-slate-500 bg-slate-800 rounded-full px-3 py-1">AI-Inferred • {phases.length} phases</span>
               </div>
-              <p className="text-slate-400 text-sm mb-8">Estimated timeline for {s.title} — adapt to your team size and complexity.</p>
+              <p className="text-slate-400 text-sm mb-8">Estimated timeline for {serviceFinal.title} — adapt to your team size and complexity.</p>
               <div className="relative">
                 {phases.map((ph, i) => (
                   <div key={i} className="flex gap-4 pb-8 last:pb-0">
@@ -321,11 +320,11 @@ export default async function ServicePage({ params }: PageProps) {
             .filter((s) => s.category === service.category && s.id !== service.id)
             .slice(0, 8);
           if (sameCat.length === 0) return null;
-          const catLabel = (CAT_LABELS[service.category] || service.category).replace(' Services', '');
+          const catLabelRel = (CAT_LABELS[service.category] || service.category).replace(' Services', '');
           return (
             <div className="mb-12">
               <h2 className="text-2xl font-semibold text-white mb-6">Related Services</h2>
-              <p className="text-slate-400 text-sm mb-6">Other {catLabel} services you may be interested in</p>
+              <p className="text-slate-400 text-sm mb-6">Other {catLabelRel} services you may be interested in</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {sameCat.map((s) => {
                     // Relevance: share of features + benefits overlap
@@ -352,7 +351,7 @@ export default async function ServicePage({ params }: PageProps) {
               <div className="text-center mt-6">
                 <Link href={`/services?category=${service.category}`}
                   className="text-sm text-purple-400 hover:text-purple-300 font-medium transition">
-                  View all {catLabel} services →
+                  View all {catLabelRel} services →
                 </Link>
               </div>
             </div>
@@ -363,7 +362,7 @@ export default async function ServicePage({ params }: PageProps) {
         <section className="cta-section text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how {service.title} can transform your business.
+            Let&apos;s discuss how {serviceFinal.title} can transform your business.
             364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
