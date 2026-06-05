@@ -130,6 +130,12 @@
     </div>
     <div id="updated" class="pill" style="height:auto; white-space:nowrap;"></div>
   </div>
+  <div class="card" id="protocol" style="border-color:rgba(167,139,250,.25);display:none;">
+    <div class="section-title">🔁 Restart Protocol</div>
+    <p class="section-sub" style="color:#c4b5fd">On every restart, agents must post <code>@<bot> → ONLINE ← : restarted</code> to keep fleet health accurate.</p>
+    <div id="protocol-rule" class="text-sm text-slate-300"></div>
+    <button id="ack-protocol" class="pill" style="cursor:pointer;margin-top:8px;">Mark as acknowledged</button>
+  </div>
   <div class="stats" id="stats"></div>
   <div class="grid-2">
     <div>
@@ -158,6 +164,22 @@
   </div>
   <div class="card">
     <div class="section-title">📜 Recent Activity</div>
+    <div class="feed-controls" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:10px;">
+      <select id="feed-filter" className="rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-sm text-white">
+        <option value="all">All agents</option>
+      </select>
+      <select id="kind-filter" className="rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-sm text-white">
+        <option value="all">All kinds</option>
+        <option value="ASSIGN">Assign</option>
+        <option value="DONE">Done</option>
+        <option value="ONLINE">Online</option>
+        <option value="STATUS">Status</option>
+      </select>
+      <label style="display:flex; align-items:center; gap:6px; font-size:12px; color:var(--muted);">
+        <input id="autoscroll" type="checkbox" checked /> Auto-scroll
+      </label>
+      <button id="export-feed" className="pill" style="cursor:pointer;">Export CSV</button>
+    </div>
     <div class="feed" id="feed"></div>
   </div>
 </main>
@@ -222,6 +244,16 @@ function renderStats(data){
     <div class="stat"><div class="stat-label">📊 Fleet Health</div><div class="stat-value" style="font-size:22px;margin-top:12px">${total>0 && onlineAgents>0 ? '<span style="color:var(--green)">Healthy</span>' : '<span style="color:var(--yellow)">Checking...</span>'}</div></div>
     <div class="stat"><div class="stat-label">🕒 Last Update</div><div class="stat-value" style="font-size:15px;margin-top:10px">${fmtTime(data?.generatedAt)}</div></div>
   `;
+}
+function renderProtocol(){
+  const el = document.getElementById('protocol');
+  const rule = getRestartProtocol();
+  if (!el || !rule) return;
+  el.style.display = 'block';
+  const ruleEl = document.getElementById('protocol-rule');
+  if (ruleEl) ruleEl.innerHTML = `<strong>Protocol:</strong> ${rule.rule}<br/><strong>Last seen:</strong> ${fmtTime(rule.lastSeenTs)}`;
+  const btn = document.getElementById('ack-protocol');
+  if (btn) btn.onclick = () => { el.style.display = 'none'; };
 }
 
 function renderClientStats(data){
@@ -314,7 +346,6 @@ function renderFeed(data){
     ts: it.ts || null,
     source: it.source || 'remote'
   }));
-  // merge local recorded events
   const local = loadLocalEvents();
   const combined = local.length ? [...local, ...items] : items;
   const seen = new Set();
@@ -326,10 +357,15 @@ function renderFeed(data){
     merged.push(ev);
   }
   merged.sort((a,b) => String(b.ts||'').localeCompare(String(a.ts||'')));
-  const visible = merged.slice(0, 120);
+  window.__feedSource = merged;
+  let visible = merged.slice(0, 200);
+  const agentFilter = document.getElementById('feed-filter')?.value;
+  const kindFilter = document.getElementById('kind-filter')?.value;
+  if (agentFilter && agentFilter !== 'all') visible = visible.filter(i => i.agent === agentFilter);
+  if (kindFilter && kindFilter !== 'all') visible = visible.filter(i => i.kind === kindFilter);
   const el = document.getElementById('feed');
   if (!el) return;
-  if (!visible.length){ el.innerHTML = '<div class="agent-card" style="text-align:center;color:var(--muted)">No recent activity yet. Actions will appear here as agents work.</div>'; return; }
+  if (!visible.length){ el.innerHTML = '<div class="agent-card" style="text-align:center;color:var(--muted)">No recent activity matches filters.</div>'; return; }
   el.innerHTML = visible.map(item => {
     const t = item.ts ? new Date(item.ts) : null;
     const timeStr = (t && !isNaN(t)) ? fmt(t) : '';
@@ -341,6 +377,33 @@ function renderFeed(data){
       <div class="feed-action">${item.text}${marker}</div>
     </div>`;
   }).join('');
+  const ascroll = document.getElementById('autoscroll');
+  if (ascroll && ascroll.checked) el.scrollTop = 0;
+}
+function refreshAgentOptions(data){
+  const agents = [...new Set(((data?.agents)||[]).map(a => a.username))].sort();
+  const sel = document.getElementById('feed-filter');
+  if (!sel) return;
+  const prev = sel.value;
+  sel.innerHTML = '<option value="all">All agents</option>' + agents.map(a => `<option value="${a}">@${a}</option>`).join('');
+  sel.value = ['all', ...agents].includes(prev) ? prev : 'all';
+}
+function exportFeed(){
+  const rows = window.__feedSource || [];
+  if (!rows.length) return;
+  const header = 'timestamp,agent,kind,text,source\n';
+  const body = rows.map(r => [
+    r.ts || '',
+    (r.agent || '').replace(/"/g, '""'),
+    (r.kind || '').replace(/"/g, '""'),
+    (r.text || '').replace(/"/g, '""'),
+    (r.source || 'remote').replace(/"/g, '""')
+  ].map(v => v.includes(',') || v.includes('"') ? `"${v}"` : v).join(',')).join('\n');
+  const blob = new Blob([header + body], {type: 'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'agents-feed.csv'; a.click();
+  URL.revokeObjectURL(url);
 }
 
 
@@ -354,6 +417,8 @@ async function refresh(){
     renderClientStats(data);
     renderBoard(data);
     document.getElementById('agents').innerHTML = ((data?.agents)||[]).map(renderAgentCard).join('');
+    renderAgentOptions?.(data);
+    refreshAgentOptions(data);
     renderFeed(data);
     document.getElementById('updated').textContent = 'Updated ' + fmtTime(data?.generatedAt);
     saveLocalEvent({ agent: 'system', kind: 'REFRESH', text: 'Dashboard refreshed', ts: new Date().toISOString(), source: 'local' });
