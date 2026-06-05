@@ -38,14 +38,10 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Services</h4>
             <ul className="space-y-2.5">
               {[
-                { name: 'AI Services', href: '/ai-services/' },
+                { name: 'AI Services Hub', href: '/ai-services/' },
                 { name: 'All Services', href: '/services/' },
-                { name: 'Micro-SaaS', href: '/services/micro-saas' },
-                { name: 'Cloud & DevOps', href: '/services/cloud' },
-                { name: 'Security', href: '/services/security' },
-                { name: 'Data & Analytics', href: '/services/data' },
-                { name: 'Blockchain & Web3', href: '/services/blockchain' },
-                { name: 'IoT & Edge', href: '/services/iot' },
+                { name: 'Industry Solutions', href: '/industry-solutions/' },
+                { name: 'Free Tools Hub', href: '/free-tools-hub/' },
                 { name: 'Pricing', href: '/pricing/' },
               ].map(l => (
                 <li key={l.href}>
@@ -60,11 +56,11 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Company</h4>
             <ul className="space-y-2.5">
               {[
-                { name: 'About Us', href: '/about/' },
+                { name: 'About', href: '/about/' },
                 { name: 'Blog', href: '/blog/' },
+                { name: 'Case Studies', href: '/case-studies/' },
                 { name: 'Careers', href: '/careers/' },
                 { name: 'Partners', href: '/partners/' },
-                { name: 'Client Portal', href: '/portal/' },
                 { name: 'Press', href: '/press/' },
               ].map(l => (
                 <li key={l.href}>
