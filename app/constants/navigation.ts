@@ -9,34 +9,33 @@ export const PRIMARY_NAV_LINKS: NavigationLink[] = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Pricing', href: '/pricing' },
   { name: '⚡ AI Agents', href: '/dashboard' },
-  { name: 'Agent Monitoring', href: '/agents-monitoring/' },
+  { name: 'Agent Monitoring', href: '/agents-monitoring' },
   { name: 'Contact', href: '/contact' },
 ];
 
 export const SOLUTION_LINKS: NavigationLink[] = [
-  { name: 'AI Solutions', href: '/services?category=ai' },
-  { name: 'Cloud Migration', href: '/services?category=cloud' },
-  { name: 'Cybersecurity', href: '/services?category=security' },
-  { name: 'Data Analytics', href: '/services?category=data' },
-  { name: 'IT Services', href: '/services?category=it' },
-  { name: 'Automation', href: '/services?category=automation' },
-  { name: 'Micro-SaaS', href: '/services?category=micro-saas' },
+  { name: 'AI Solutions', href: '/services' },
+  { name: 'Cloud Migration', href: '/services' },
+  { name: 'Cybersecurity', href: '/services' },
+  { name: 'Data Analytics', href: '/services' },
+  { name: 'IT Services', href: '/services' },
+  { name: 'Automation', href: '/services' },
 ];
 
 export const RESOURCE_LINKS: NavigationLink[] = [
-  { name: 'Blog', href: '/blog' },
-  { name: 'Documentation', href: '/docs' },
-  { name: 'Status', href: '/status' },
   { name: 'AI Agent Dashboard', href: '/dashboard' },
+  { name: 'Agent Monitoring', href: '/agents-monitoring' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Partners', href: '/partners' },
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: NavigationLink[] = [
-  { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
-  { name: 'AI Document Understanding', href: '/services/ai-document-understanding' },
-  { name: 'AI Governance', href: '/services/ai-governance' },
-  { name: 'AI Computer Vision', href: '/services/ai-computer-vision-inspection' },
-  { name: 'AI Conversational Analytics', href: '/services/ai-conversational-analytics' },
-  { name: 'Speech Recognition', href: '/services/speech-recognition' },
-  { name: 'Data Observability', href: '/services/data-observability' },
-  { name: 'Test Automation', href: '/services/test-automation' },
+  { name: 'AI Fraud Detection', href: '/services' },
+  { name: 'AI Document Understanding', href: '/services' },
+  { name: 'AI Governance', href: '/services' },
+  { name: 'AI Computer Vision', href: '/services' },
+  { name: 'AI Conversational Analytics', href: '/services' },
+  { name: 'Speech Recognition', href: '/services' },
+  { name: 'Data Observability', href: '/services' },
+  { name: 'Test Automation', href: '/services' },
 ];

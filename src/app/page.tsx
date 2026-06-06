@@ -116,6 +116,39 @@ export default function Home() {
             </Link>
           </section>
 
+          {/* Agent Monitoring Dashboard CTA */}
+          <section className="mt-6 rounded-2xl border-2 border-purple-500/40 bg-gradient-to-r from-purple-900/80 via-slate-900 to-pink-900/80 p-6 shadow-xl">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                  </span>
+                  <p className="text-xs font-bold uppercase tracking-wider text-green-400">Live Now</p>
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-1">🤖 AI Agent Operations Dashboard</h2>
+                <p className="text-sm text-slate-300 max-w-xl">
+                  Watch our AI agent fleet work in real time — {allServices.length}+ services cataloged across 44 development waves, with multiple agents active 24/7. See what they&apos;ve built and what they&apos;re working on right now.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 shrink-0">
+                <Link
+                  href="/dashboard"
+                  className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2.5 text-sm font-semibold text-white hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/25"
+                >
+                  🖥️ Agent Dashboard
+                </Link>
+                <Link
+                  href="/agents-monitoring"
+                  className="rounded-full border border-purple-400/50 bg-purple-500/10 px-6 py-2.5 text-sm font-semibold text-purple-300 hover:bg-purple-500/20 transition-all"
+                >
+                  👤 Client View
+                </Link>
+              </div>
+            </div>
+          </section>
+
           <section className="mt-6 rounded-2xl border border-cyan-200 bg-cyan-50/60 p-5 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700">
               Intelligent experiences spotlight
