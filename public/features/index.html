@@ -1,44 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Features — Zion Tech Group</title>
-<meta name="description" content="Explore the full feature set of the Zion platform." />
-<link rel="canonical" href="https://ziontechgroup.com/features" />
-<style>
-  :root { --bg:#0b1120; --card:rgba(255,255,255,0.025); --card-border:rgba(255,255,255,0.07); --text:#e2e8f0; --muted:#8b97a8; --purple:#a78bfa; --green:#10b981; }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  a { color: var(--purple); }
-  header { border-bottom: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(12px); background: rgba(11,17,32,0.75); position: sticky; top: 0; z-index: 50; }
-  .nav { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; gap: 10px; align-items: center; }
-  .logo { font-size: 16px; font-weight: 700; background: linear-gradient(90deg,#a78bfa,#ec4899); -webkit-background-clip: text; background-clip: text; color: transparent; text-decoration: none; }
-  main { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
-  h1 { font-size: 26px; margin: 0 0 10px; }
-  .sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
-  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 18px 22px; margin-bottom: 14px; }
-  .badge { display: inline-block; background: rgba(167,139,250,.12); color: var(--purple); border: 1px solid rgba(167,139,250,.22); padding: 4px 10px; border-radius: 999px; font-size: 12px; margin-bottom: 10px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 14px; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Features | ZionTech Group</title>
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --surface: #111621;
+      --surface-2: #18202e;
+      --text: #e8ecf1;
+      --muted: #9aa3b2;
+      --accent: #4f7cff;
+      --accent-2: #22c55e;
+      --line: #232d3b;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: #7fb3ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+      background: rgba(11,14,20,0.7);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--text); font-weight: 700; font-size: 18px;
+    }
+    .logo-mark {
+      width: 24px; height: 24px; border-radius: 6px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 14px; border-radius: 8px; font-weight: 600;
+      transition: transform .05s ease, background .2s ease;
+    }
+    .btn-primary {
+      background: var(--accent); color: white; border: none;
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--muted); border: 1px solid var(--line);
+    }
+    .btn-ghost:hover { color: var(--text); border-color: #3a4758; }
+
+    .hero {
+      padding: 96px 0 80px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(1100px 600px at 10% -10%, rgba(79,124,255,0.18), transparent 70%),
+        linear-gradient(180deg, rgba(17,22,33,0.6), transparent);
+    }
+    .eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent); background: rgba(79,124,255,0.12); padding: 6px 10px; border-radius: 6px;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: clamp(36px, 4vw, 52px); line-height: 1.08; margin: 14px 0 10px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); font-size: 18px; max-width: 680px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 56px 0 96px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 22px 18px;
+      transition: transform .15s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: #2c3a4e; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .card .badge {
+      font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--accent-2);
+    }
+    .card h2 { font-size: 22px; margin: 8px 0 8px; letter-spacing: -0.01em; }
+    .card p { color: var(--muted); font-size: 15px; margin: 0 0 18px; }
+    .meta {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 14px; border-top: 1px solid var(--line);
+      font-size: 13px; color: var(--muted);
+    }
+    .tag-list, .cta-list { display: flex; gap: 10px; flex-wrap: wrap; }
+    footer {
+      border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 13px;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="nav">
-    <a class="logo" href="/">Zion Tech Group</a>
-    <a style="color:var(--muted); font-size:13px; text-decoration:none;" href="/services">← Services</a>
-  </div>
-</header>
-<main>
-  <div class="badge">Service</div>
-  <h1>Features</h1>
-  <p class="sub">Explore the full feature set of the Zion platform.</p>
-  <div class="grid">
-    <div class="card"><strong>Outcome:</strong> Measurable business impact with clear KPIs.</div>
-    <div class="card"><strong>Delivery:</strong> Agile sprints with weekly demos and transparent reporting.</div>
-    <div class="card"><strong>Stack:</strong> Modern cloud-native tooling, AI-first architecture.</div>
-  </div>
-  <div class="card">Ready to start? <a href="/contact">Contact us</a> for a scoping call within 24 hours.</div>
-</main>
+  <header>
+    <div class="wrap">
+      <div class="logo"><div class="logo-mark"></div> ZionTech Group</div>
+      <a class="btn btn-primary" href="/contact">Get started</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">AI Capabilities</span>
+      <h1>AI features built for revenue, ops, and trust.</h1>
+      <p class="lead">Every capability below is designed for production: measurable ROI, secure data handling, and integrations with your existing stack.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid">
+
+      <article class="card">
+        <div class="badge">Shortlist</div>
+        <h2>AI Chat Builder</h2>
+        <p>Launch a branded AI assistant in days that answers from your knowledge base, routes complex cases, and logs every interaction for continuous improvement.</p>
+        <div class="meta">
+          <div class="tag-list">
+            <span>support</span><span>knowledge</span><span>onboarding</span>
+          </div>
+          <div class="cta-list">
+            <a class="btn btn-primary" href="/features/ai-chat-builder">View&nbsp;details</a>
+            <a class="btn btn-ghost" href="/contact">Book demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge">High Impact / Fast to Deliver</div>
+        <h2>Document Intelligence Pipeline</h2>
+        <p>Turn PDFs, invoices, contracts, and forms into structured data with OCR + LLM extraction, validation rules, and export into your ERP/CRM.</p>
+        <div class="meta">
+          <div class="tag-list">
+            <span>ocr</span><span>extraction</span><span>finance</span>
+          </div>
+          <div class="cta-list">
+            <a class="btn btn-ghost" href="/contact">Book demo</a>
+            <a class="btn btn-ghost" href="/contact">Download brief</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="badge">Growth</div>
+        <h2>Internal Upskilling Accelerator</h2>
+        <p>A firm-wide AI adoption program that combines role-specific copilots, playbooks, workshops, and usage metrics to move teams from curiosity to measurable output.</p>
+        <div class="meta">
+          <div class="tag-list">
+            <span>training</span><span>adoption</span><span>governance</span>
+          </div>
+          <div class="cta-list">
+            <a class="btn btn-ghost" href="/contact">Book demo</a>
+            <a class="btn btn-ghost" href="/contact">Download brief</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© ZionTech Group</div>
+  </footer>
 </body>
 </html>
