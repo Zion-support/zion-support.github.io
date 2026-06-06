@@ -1,39 +1,84 @@
 {
-  "generatedAt": "2026-06-06T01:30:16.752140+00:00",
+  "generatedAt": "2026-06-06T01:33:29.251617+00:00",
   "monitors": [
     {
       "id": "kilo_openclaw_kleber_bot",
-      "events": []
+      "events": [
+        "kilo_openclaw_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard"
+      ]
     },
     {
       "id": "neo_kleber_bot",
-      "events": []
+      "events": [
+        "neo_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard"
+      ]
     },
     {
       "id": "rocket_kleber_bot",
-      "events": []
-    },
-    {
-      "id": "summary.txt",
-      "events": []
+      "events": [
+        "rocket_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard"
+      ]
     },
     {
       "id": "tablet_kleber_bot",
-      "events": []
+      "events": [
+        "tablet_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard"
+      ]
     },
     {
       "id": "windows_carol_bot",
-      "events": []
+      "events": [
+        "windows_carol_bot \u2192 ONLINE \u2190 : refreshed dashboard"
+      ]
     },
     {
       "id": "windows_quel_bot",
-      "events": []
+      "events": [
+        "windows_quel_bot \u2192 ONLINE \u2190 : refreshed dashboard"
+      ]
     }
   ],
-  "recentActivity": [],
+  "recentActivity": [
+    {
+      "agent": "kilo_openclaw_kleber_bot",
+      "action": "kilo_openclaw_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard",
+      "ts": "2026-06-06T01:33:29.251617+00:00",
+      "source": "local"
+    },
+    {
+      "agent": "neo_kleber_bot",
+      "action": "neo_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard",
+      "ts": "2026-06-06T01:33:29.251617+00:00",
+      "source": "local"
+    },
+    {
+      "agent": "rocket_kleber_bot",
+      "action": "rocket_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard",
+      "ts": "2026-06-06T01:33:29.251617+00:00",
+      "source": "local"
+    },
+    {
+      "agent": "tablet_kleber_bot",
+      "action": "tablet_kleber_bot \u2192 ONLINE \u2190 : refreshed dashboard",
+      "ts": "2026-06-06T01:33:29.251617+00:00",
+      "source": "local"
+    },
+    {
+      "agent": "windows_carol_bot",
+      "action": "windows_carol_bot \u2192 ONLINE \u2190 : refreshed dashboard",
+      "ts": "2026-06-06T01:33:29.251617+00:00",
+      "source": "local"
+    },
+    {
+      "agent": "windows_quel_bot",
+      "action": "windows_quel_bot \u2192 ONLINE \u2190 : refreshed dashboard",
+      "ts": "2026-06-06T01:33:29.251617+00:00",
+      "source": "local"
+    }
+  ],
   "stats": {
-    "monitors": 7,
-    "recentEvents": 0,
+    "monitors": 6,
+    "recentEvents": 6,
     "pageCoverage": {
       "ok": 1678,
       "missing": 0
@@ -42,10 +87,11 @@
   "clientView": {
     "avgResponseMs": 640,
     "last24hTasks": 72,
-    "successScore": 99.4
+    "successScore": 99.4,
+    "uptimePct": 99.98
   },
   "metadata": {
-    "lastDeepCrawl": "2026-06-06T01:30:16.752140+00:00",
+    "lastDeepCrawl": "2026-06-06T01:33:29.251617+00:00",
     "lastDeepCrawlResult": "1678 OK / 0 MISS"
   }
 }
