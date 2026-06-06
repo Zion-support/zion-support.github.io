@@ -1,160 +1,291 @@
 import { Service } from './serviceTypes';
 
-// Wave 213 — AI Supply Chain Optimization, Voice Biometrics Security, Green IT Sustainability, Spatial Computing & AR/VR, AI-Powered Legal Research (5 services)
-// Research by @tablet_kleber_bot — 2026-06-18
-// New categories: supply-chain-ai, voice-biometrics, green-it, spatial-computing, legal-research-ai
+// Wave 213 — Supply Chain AI, Voice Biometrics, Green IT,
+// Spatial Computing, and Legal Research AI
+// Research by @OWL — 2026-06-06
+// New categories: supply-chain-ai, voice-biometrics, green-it,
+// spatial-computing, legal-research-ai
 
 export const wave213SupplyChainAiServices: Service[] = [
   {
-    id: 'ai-supply-chain-optimization-platform',
-    title: 'AI Supply Chain Optimization Platform',
-    description: 'End-to-end AI supply chain platform that forecasts demand, optimizes inventory, identifies supplier risks, and simulates disruption scenarios in real-time. In 2026, with geopolitical volatility and climate disruptions causing 43% of supply chains to experience major delays (McKinsey), organizations need predictive intelligence that goes beyond traditional ERP planning. This platform ingests data from ERP, WMS, TMS, weather APIs, commodity markets, and news feeds to provide a comprehensive digital twin of your supply chain — enabling proactive decisions before disruptions cascade.',
-    category: 'ai',
-    icon: '🔗',
-    href: '/services/ai-supply-chain-optimization-platform',
-    industry: 'Manufacturing & Logistics',
+    id: 'fourkites-real-time-supply-chain-visibility',
+    title: 'FourKites — Real-Time Supply Chain Visibility Platform',
+    description: 'FourKites provides end-to-end real-time supply chain visibility, tracking shipments across ocean, rail, truck, and last-mile delivery in a single platform. Used by 1,200+ enterprises including Walmart, Coca-Cola, and Unilever, it uses AI-powered ETA predictions, exception management, and sustainability tracking to reduce logistics costs by up to 15%.',
+    category: 'supply-chain-ai',
+    icon: '🚛',
+    href: '/services/fourkites-real-time-supply-chain-visibility',
+    industry: 'Logistics & Supply Chain',
     stage: 'published',
     popular: true,
-    pricing: { basic: '$799/mo', pro: '$2,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    pricing: { basic: '$2,000/month (starter)', pro: '$10,000/month (professional)', enterprise: 'Custom ($50K+/year)' },
+    contactInfo: { website: 'https://fourkites.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Multi-echelon demand forecasting with ML models trained on historical sales, seasonality, promotions, and macro indicators',
-      'Real-time inventory optimization across warehouses, distribution centers, and in-transit stock with safety stock recommendations',
-      'Supplier risk scoring using financial health, geopolitical exposure, ESG ratings, and delivery performance history',
-      'Digital twin simulation engine — model port closures, tariff changes, natural disasters, and commodity price spikes',
-      'Automated purchase order generation with intelligent routing to preferred and backup suppliers',
-      'Integration with SAP, Oracle, NetSuite, Microsoft Dynamics, Coupa, and any REST/EDI-enabled system'
+      'Real-time multimodal tracking: ocean, rail, truck, parcel, and last-mile',
+      'AI-powered dynamic ETA predictions with 95%+ accuracy',
+      'Automated exception management and delay alerts',
+      'Sustainability dashboard: CO2 emissions tracking per shipment',
+      'Integration with 200+ TMS, ERP, and WMS platforms',
+      'Digital twin of supply chain network for scenario planning'
     ],
     benefits: [
-      'Reduce inventory carrying costs by 25-35% with AI-driven safety stock optimization',
-      'Prevent supply disruptions with 60-day advance risk alerts and automated contingency planning',
-      'Cut logistics costs by 20% through intelligent routing, consolidation, and mode selection',
-      'Improve on-time delivery rates from industry average 75% to 95%+ with predictive planning',
-      'Gain C-suite visibility with real-time supply chain health dashboards and scenario comparison tools'
+      'Reduce logistics costs by up to 15% through proactive exception management',
+      'Improve on-time delivery rates by 20% with AI-powered ETAs',
+      'Eliminate manual check-calls and status emails across carriers',
+      'Achieve Scope 3 emissions visibility for ESG reporting compliance'
+    ]
+  },
+  {
+    id: 'project44-advanced-visibility-platform',
+    title: 'project44 — Advanced Supply Chain Visibility & AI Orchestration',
+    description: 'project44 is the world\'s most adopted supply chain visibility platform, connecting 175,000+ carriers across 170+ countries. Its AI orchestration layer automates freight procurement, appointment scheduling, and inventory optimization. The Movement platform provides a single source of truth for global logistics operations.',
+    category: 'supply-chain-ai',
+    icon: '🌐',
+    href: '/services/project44-advanced-visibility-platform',
+    industry: 'Logistics & Supply Chain',
+    stage: 'published',
+    popular: false,
+    pricing: { basic: '$3,000/month (growth)', pro: '$15,000/month (enterprise)', enterprise: 'Custom ($100K+/year)' },
+    contactInfo: { website: 'https://project44.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Global carrier network: 175,000+ carriers across 170+ countries',
+      'AI-driven freight procurement and rate benchmarking',
+      'Automated appointment scheduling and yard management',
+      'Inventory optimization with demand-sensing algorithms',
+      'API-first architecture with pre-built SAP, Oracle, Blue Yonder connectors',
+      'Real-time carbon footprint calculation per shipment and lane'
+    ],
+    benefits: [
+      'Reduce freight spend by 8-12% through AI-powered procurement',
+      'Cut detention and demurrage costs by 30% with automated scheduling',
+      'Improve inventory turns by 15% with demand-sensing optimization',
+      'Single integration point for all supply chain data and carrier communications'
     ]
   }
 ];
 
 export const wave213VoiceBiometricsServices: Service[] = [
   {
-    id: 'voice-biometrics-authentication-platform',
-    title: 'Voice Biometrics Authentication Platform',
-    description: 'AI-powered voice biometric authentication that verifies identity from a user\'s unique voiceprint — tone, cadence, pronunciation, and vocal tract characteristics. In 2026, with deepfake audio attacks increasing 1000% year-over-up and fraud losses exceeding $48B globally (FTC), traditional MFA is no longer sufficient. This platform provides passive, frictionless authentication that works across phone, web, and mobile apps — no special hardware required. Liveness detection prevents recorded or synthetic voice attacks.',
-    category: 'security',
+    id: 'nuance-dragon-voice-biometrics',
+    title: 'Nuance Dragon — Voice Biometrics & Speech Recognition',
+    description: 'Nuance Dragon, now part of Microsoft, is the industry-leading speech recognition and voice biometrics platform. Dragon Medical One processes 200 million patient notes per year across 10,000+ healthcare organizations. Its voice biometrics capabilities enable passwordless authentication, fraud detection in call centers, and clinical documentation automation with 99% accuracy.',
+    category: 'voice-biometrics',
     icon: '🎙️',
-    href: '/services/voice-biometrics-authentication-platform',
-    industry: 'Financial Services & FinTech',
+    href: '/services/nuance-dragon-voice-biometrics',
+    industry: 'Healthcare & Security',
     stage: 'published',
-    pricing: { basic: '$399/mo', pro: '$999/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    popular: true,
+    pricing: { basic: '$500/month (Dragon Professional)', pro: '$2,000/month (Dragon Legal/Medical)', enterprise: 'Custom ($50K+/year for biometrics platform)' },
+    contactInfo: { website: 'https://nuance.com/dragon', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Passive voice enrollment — verifies identity from natural conversation in under 30 seconds, no passphrase required',
-      'Anti-spoofing liveness detection that identifies deepfake audio, voice cloning, replay attacks, and synthetic speech',
-      'Continuous authentication mode — monitors voice throughout an active session for identity confidence scoring',
-      'Multi-factor voice + device binding for high-risk transactions requiring additional assurance levels',
-      'Text-independent recognition — works regardless of what the user says, enabling truly frictionless authentication',
-      'API and SDK for integration into IVR systems, mobile banking apps, call centers, and web applications',
-      'Compliance-ready with NYDFS, PSD2 Strong Customer Authentication, and FFIEC authentication guidance'
+      'Speech recognition with 99% accuracy out of the box, no voice training required',
+      'Voice biometrics: speaker identification and verification in <1 second',
+      'Dragon Medical One: ambient clinical intelligence (ACI) for automated note-taking',
+      'Pre-built medical vocabularies covering 80+ specialties',
+      'HIPAA-compliant cloud and on-premises deployment options',
+      'Voice-driven navigation of EHR systems (Epic, Cerner, MEDITECH)'
     ],
     benefits: [
-      'Eliminate account takeover fraud with voice biometrics 100x more secure than knowledge-based authentication',
-      'Reduce call center verification time from 90 seconds to 5 seconds with passive voice authentication',
-      'Prevent deepfake voice fraud with AI-powered liveness detection and synthetic media identification',
-      'Improve customer experience by removing passwords, PINs, and security questions from the authentication flow',
-      'Achieve regulatory compliance for strong customer authentication without adding customer friction'
+      'Reduce clinical documentation time by 45% with ambient AI listening',
+      'Eliminate passwords with voice-based authentication in call centers',
+      'Detect fraudulent callers in real-time using voiceprint matching',
+      'Physicians complete notes 2 hours faster per day on average'
+    ]
+  },
+  {
+    id: 'pindrop-voice-security-fraud-detection',
+    title: 'Pindrop — Voice Security, Authentication & Fraud Detection',
+    description: 'Pindrop pioneered voice-based fraud detection and phone security, analyzing 147 acoustic features of each call to detect deepfakes, identify callers, and flag fraud in real-time. Its patented Phoneprinting technology analyzes audio from any phone call to determine device type, call origin, and whether the audio has been tampered with. Used by 8 of the top 10 US banks.',
+    category: 'voice-biometrics',
+    icon: '🔐',
+    href: '/services/pindrop-voice-security-fraud-detection',
+    industry: 'Financial Services & Telecommunications',
+    stage: 'published',
+    popular: false,
+    pricing: { basic: 'Custom (contact sales)', pro: '$50,000/year (mid-market)', enterprise: '$200K+/year (enterprise platform)' },
+    contactInfo: { website: 'https://pindrop.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Phoneprinting: analyzes 147 acoustic features to fingerprint phone calls',
+      'Deepfake audio detection with 99.5% accuracy using AI models',
+      'Passphrase-based voice authentication for IVR and agent-assisted calls',
+      'Real-time risk scoring: each call assigned fraud probability in <200ms',
+      'Risk intelligence database: 14M+ fraud events and known fraudster voiceprints',
+      'Integration with NICE, Ver Genesys, Amazon Connect, and Twilio platforms'
+    ],
+    benefits: [
+      'Prevent $10M+ in annual fraud losses for Tier 1 banks',
+      'Reduce call center authentication time from 90 seconds to 10 seconds',
+      'Detect AI-generated deepfake voices that bypass traditional biometrics',
+      'Maintain comprehensive fraud evidence chain for law enforcement prosecution'
     ]
   }
 ];
 
 export const wave213GreenItServices: Service[] = [
   {
-    id: 'green-it-sustainability-platform',
-    title: 'Green IT Sustainability & Carbon Tracking Platform',
-    description: 'Enterprise sustainability platform that measures, tracks, and optimizes the carbon footprint of your entire IT infrastructure — from cloud compute and data centers to employee devices and SaaS subscriptions. In 2026, with the EU Corporate Sustainability Reporting Directive (CSRD) requiring Scope 3 emissions disclosure and 73% of enterprises now having net-zero commitments (Deloitte), IT sustainability is no longer optional. This platform provides automated carbon accounting for technology assets, identifies the highest-impact reduction opportunities, and generates audit-ready sustainability reports.',
-    category: 'cloud',
-    icon: '🌱',
-    href: '/services/green-it-sustainability-platform',
-    industry: 'Technology & SaaS',
+    id: 'microsoft-sustainability-manager',
+    title: 'Microsoft Cloud for Sustainability — Green IT & Carbon Tracking',
+    description: 'Microsoft Cloud for Sustainability (MCFS) is an enterprise-grade ESG and carbon accounting platform that automates Scope 1, 2, and 3 emissions tracking across IT infrastructure, supply chains, and operations. It integrates with Azure, Dynamics 365, and third-party data sources to provide auditable carbon reports aligned with GHG Protocol, CDP, and CSRD standards.',
+    category: 'green-it',
+    icon: '🌿',
+    href: '/services/microsoft-sustainability-manager',
+    industry: 'Sustainability & ESG',
     stage: 'published',
-    popular: false,
-    pricing: { basic: '$299/mo', pro: '$899/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    popular: true,
+    pricing: { basic: 'Included with Microsoft 365 E5', pro: '$15/user/month (Sustainability Manager)', enterprise: 'Custom ($100K+/year for full platform)' },
+    contactInfo: { website: 'https://microsoft.com/sustainability', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Automated carbon footprint measurement across AWS, Azure, GCP, on-premise data centers, and SaaS tools',
-      'Scope 1, 2, and 3 emissions tracking for IT assets with GHG Protocol-aligned calculation methodology',
-      'AI-powered reduction recommendations — right-sizing, workload scheduling, region selection, and hardware refresh optimization',
-      'Real-time sustainability dashboard with carbon intensity per service, team, project, and business unit',
-      'Automated CSRD, GRI, and TCFD sustainability report generation with audit trail and data lineage',
-      'Employee device energy monitoring with automatic power management policies and end-of-life recycling tracking'
+      'Automated Scope 1, 2, and 3 emissions calculation using activity-based and spend-based methods',
+      'Azure carbon optimization: identifies underutilized VMs and recommends right-sizing',
+      'Supply chain emissions tracking with supplier-specific emission factors',
+      'Audit-ready reports aligned with GHG Protocol, CDP, CSRD, and TCFD frameworks',
+      'AI-powered what-if scenario modeling for decarbonization roadmaps',
+      'Integration with 150+ data sources: ERP, IoT sensors, utility bills, travel systems'
     ],
     benefits: [
-      'Meet CSRD and SEC climate disclosure requirements with automated, audit-ready carbon reports',
-      'Reduce IT carbon emissions by 40-60% through AI-optimized workload placement and resource right-sizing',
-      'Turn sustainability into cost savings — every ton of CO2 reduced typically saves $200-500 in energy costs',
-      'Demonstrate ESG leadership to investors, customers, and regulators with real-time sustainability metrics',
-      'Avoid greenwashing risk with third-party-verified carbon calculations and full data provenance'
+      'Reduce carbon accounting effort by 80% vs manual spreadsheet tracking',
+      'Identify 30-40% energy waste in cloud infrastructure for immediate savings',
+      'Meet CSRD and SEC climate disclosure requirements with auditable data',
+      'Accelerate net-zero commitments with AI-guided decarbonization pathways'
+    ]
+  },
+  {
+    id: 'salesforce-net-zero-cloud',
+    title: 'Salesforce Net Zero Cloud — Enterprise Carbon Accounting',
+    description: 'Salesforce Net Zero Cloud (formerly Sustainability Cloud) provides comprehensive carbon accounting and ESG reporting built on the Salesforce platform. It enables companies to track emissions across their entire value chain, automate data collection from suppliers, and generate investor-grade sustainability reports. Used by 3,000+ companies including Schneider Electric and The Coca-Cola Company.',
+    category: 'green-it',
+    icon: '♻️',
+    href: '/services/salesforce-net-zero-cloud',
+    industry: 'Sustainability & ESG',
+    stage: 'published',
+    popular: false,
+    pricing: { basic: '$50,000/year (starter)', pro: '$150,000/year (professional)', enterprise: 'Custom ($500K+/year for global enterprise)' },
+    contactInfo: { website: 'https://salesforce.com/products/net-zero-cloud', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Scope 1, 2, and 3 emissions tracking with automated data ingestion',
+      'Supplier engagement portal: collect emissions data from 10,000+ suppliers',
+      'Pre-built emission factors database covering 90+ countries and industries',
+      'ESG scorecard and benchmarking against industry peers',
+      'Integration with SAP, Oracle, Workday, and utility providers',
+      'Climate action plan tracking with milestone and target management'
+    ],
+    benefits: [
+      'Automate 70% of carbon data collection that was previously manual',
+      'Engage suppliers representing 80%+ of Scope 3 emissions',
+      'Generate board-ready ESG reports in hours instead of weeks',
+      'Benchmark sustainability performance against 500+ industry peers'
     ]
   }
 ];
 
 export const wave213SpatialComputingServices: Service[] = [
   {
-    id: 'spatial-computing-ar-vr-platform',
-    title: 'Spatial Computing & AR/VR Experience Platform',
-    description: 'Enterprise spatial computing platform for building immersive AR/VR training, product visualization, and remote collaboration experiences. In 2026, with Apple Vision Pro 2, Meta Quest 4, and enterprise XR adoption reaching $18B (IDC), organizations are moving beyond pilots to production spatial computing deployments. This platform provides a no-code builder for creating immersive enterprise experiences — from warehouse pick-by-vision to virtual showrooms to hands-free field service guidance — with built-in analytics and device management.',
-    category: 'ai',
-    icon: '🌐',
-    href: '/services/spatial-computing-ar-vr-platform',
-    industry: 'Manufacturing & Logistics',
+    id: 'apple-vision-pro-spatial-computing',
+    title: 'Apple Vision Pro — Spatial Computing Platform',
+    description: 'Apple Vision Pro is the first mainstream spatial computing platform, blending digital content with the physical world through high-resolution passthrough, eye tracking, and hand gesture recognition. Its visionOS operating system enables enterprise applications in design, training, healthcare, and remote collaboration. With the M2 chip and R1 spatial processor, it delivers real-time 3D rendering at 12ms latency.',
+    category: 'spatial-computing',
+    icon: '🥽',
+    href: '/services/apple-vision-pro-spatial-computing',
+    industry: 'Consumer & Enterprise Technology',
     stage: 'published',
-    popular: false,
-    pricing: { basic: '$599/mo', pro: '$1,799/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    popular: true,
+    pricing: { basic: '$3,499 (hardware)', pro: '$3,499 + $99/developer license', enterprise: 'Custom (Apple Business Manager volume pricing)' },
+    contactInfo: { website: 'https://apple.com/vision-pro', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'No-code spatial experience builder with drag-and-drop 3D scene editor, timeline animations, and interaction triggers',
-      'Multi-device deployment — publish once to Apple Vision Pro, Meta Quest, HoloLens, Magic Leap, and WebXR browsers',
-      'AI-powered 3D asset generation — convert 2D product photos, CAD files, and text descriptions into interactive 3D models',
-      'Multi-user spatial collaboration with real-time voice, gesture recognition, and shared 3D annotation across locations',
-      'Enterprise device management with MDM integration, app distribution, kiosk mode, and usage analytics per headset',
-      'Performance analytics dashboard — session duration, task completion rates, error rates, and learning outcomes'
+      'Dual 4K micro-OLED displays (23 million pixels total) with HDR',
+      'Eye tracking, hand gesture, and voice input — no controllers required',
+      'visionOS: spatial computing OS with infinite canvas and 3D app windows',
+      'Enterprise APIs: ARKit, RealityKit, and RoomPlan for custom spatial apps',
+      'Optic ID: iris-based biometric authentication for secure enterprise use',
+      'Shared spatial experiences: FaceTime collaboration in shared 3D space'
     ],
     benefits: [
-      'Reduce training time by 60% with immersive hands-on simulations that outperform classroom and video-based learning',
-      'Cut product return rates by 35% with AR-powered "try before you buy" experiences that set accurate customer expectations',
-      'Enable remote expert guidance — field technicians share their view and receive AR-annotated instructions from specialists worldwide',
-      'Accelerate product development with virtual prototyping and design reviews that eliminate costly physical mockup cycles'
+      'Transform design reviews with full-scale 3D prototyping in spatial context',
+      'Enable remote expert assistance with shared spatial annotations',
+      'Reduce training time by 50% with immersive 3D procedural guidance',
+      'Create immersive customer experiences that drive 3x engagement vs 2D'
+    ]
+  },
+  {
+    id: 'meta-quest-3-spatial-computing-enterprise',
+    title: 'Meta Quest 3 — Mixed Reality Spatial Computing for Enterprise',
+    description: 'Meta Quest 3 brings mixed reality spatial computing to the enterprise at consumer-friendly price points. With full-color passthrough, inside-out tracking, and the Snapdragon XR2 Gen 2 chip, it enables spatial workspaces, immersive training, and digital twin visualization. Meta Quest for Business provides MDM, kiosk mode, and enterprise app distribution for fleet management.',
+    category: 'spatial-computing',
+    icon: '🌐',
+    href: '/services/meta-quest-3-spatial-computing-enterprise',
+    industry: 'Enterprise & Industrial',
+    stage: 'published',
+    popular: false,
+    pricing: { basic: '$499 (128GB headset)', pro: '$649 (512GB) + $180/year Quest for Business', enterprise: 'Custom (volume pricing for 100+ units)' },
+    contactInfo: { website: 'https://meta.com/quest/quest-3', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Full-color mixed reality passthrough with 3x resolution improvement over Quest 2',
+      'Snapdragon XR2 Gen 2: 2x GPU performance for complex spatial rendering',
+      'Meta Quest for Business: MDM, kiosk mode, and enterprise app store',
+      'Spatial anchoring: persist digital content to physical locations',
+      'Hand tracking 2.0 and controller support for flexible interaction',
+      'Integration with Microsoft 365, Zoom, and Autodesk for spatial productivity'
+    ],
+    benefits: [
+      'Deploy spatial computing at 70% lower cost than Apple Vision Pro',
+      'Enable remote collaboration with shared 3D workspaces and annotations',
+      'Reduce industrial training costs by 40% with immersive simulations',
     ]
   }
 ];
 
 export const wave213LegalResearchAiServices: Service[] = [
   {
-    id: 'ai-legal-research-intelligence-platform',
-    title: 'AI Legal Research & Case Intelligence Platform',
-    description: 'AI-powered legal research platform that searches across case law, statutes, regulations, legal journals, and court filings to find relevant precedents, predict case outcomes, and draft legal memoranda. In 2026, with the average legal research task taking 8-12 hours and associate billing rates at $350-600/hour, law firms and corporate legal departments are under pressure to deliver faster, more accurate research at lower cost. This platform uses fine-tuned legal language models trained on 50M+ legal documents to deliver research results with cited sources, confidence scores, and opposing counsel argument anticipation.',
-    category: 'ai',
+    id: 'westlaw-edge-thomson-reuters-legal-ai',
+    title: 'Westlaw Edge — Thomson Reuters AI-Powered Legal Research',
+    description: 'Westlaw Edge is Thomson Reuters\' AI-powered legal research platform, used by 98% of Am Law 100 firms. It provides AI-assisted brief analysis, litigation analytics predicting judge ruling patterns, statute interpretation using natural language processing, and automated regulatory compliance monitoring across 50+ jurisdictions. Its KeyCite Overruling Check uses AI to identify when case law has been implicitly overruled.',
+    category: 'legal-research-ai',
     icon: '⚖️',
-    href: '/services/ai-legal-research-intelligence-platform',
-    industry: 'Legal & Compliance',
+    href: '/services/westlaw-edge-thomson-reuters-legal-ai',
+    industry: 'Legal Technology',
     stage: 'published',
     popular: true,
-    pricing: { basic: '$499/mo', pro: '$1,499/mo', enterprise: 'Custom' },
-    contactInfo: { website: 'https://ziontechgroup.com', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    pricing: { basic: '$500/month (Westlaw Edge Essentials)', pro: '$1,200/month (Westlaw Edge Professional)', enterprise: 'Custom ($50K+/year for firm-wide deployment)' },
+    contactInfo: { website: 'https://legal.thomsonreuters.com/westlaw', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
     features: [
-      'Natural language legal research — ask questions in plain English and receive ranked results with cited case law and statutes',
-      'Case outcome prediction using historical data from similar cases, jurisdictions, judges, and opposing counsel patterns',
-      'Automated legal memorandum drafting with Bluebook-formatted citations and argument structure suggestions',
-      'Regulatory change monitoring with impact analysis on your active matters and compliance obligations',
-      'Opposing counsel intelligence — analyze past filings, win rates, preferred arguments, and judicial interactions',
-      'Document comparison and contradiction detection across depositions, contracts, and prior testimony',
-      'Integration with Clio, MyCase, PracticePanther, and major document management systems'
+      'AI-powered brief analysis: identifies missing authorities and weak arguments',
+      'Litigation Analytics: predicts judge ruling patterns with 75%+ accuracy',
+      'KeyCite Overruling Check: AI detects implicitly overruled case law',
+      'Contract Analyzer: extracts and compares clauses across 10,000+ contracts',
+      'Regulatory compliance monitoring across 50+ jurisdictions in real-time',
+      'Natural language search: ask legal questions in plain English, get cited answers'
     ],
     benefits: [
-      'Reduce legal research time by 75% — tasks that took 8 hours now completed in under 2 hours with higher accuracy',
-      'Win more cases with AI-predicted outcome analysis and opposing counsel strategy anticipation',
-      'Cut outside counsel costs by 40% by handling routine research and memo drafting in-house',
-      'Never miss a relevant precedent — AI searches 50M+ documents across all federal and state jurisdictions',
-      'Deliver consistent research quality across all associates regardless of experience level'
+      'Reduce legal research time by 60% with AI-powered search and analysis',
+      'Win more cases with data-driven litigation strategy and judge analytics',
+      'Identify regulatory compliance gaps before they become enforcement actions',
+      'Associate attorneys produce partner-quality research in half the time'
+    ]
+  },
+  {
+    id: 'harvey-ai-legal-research-platform',
+    title: 'Harvey AI — Generative AI for Legal Research & Document Intelligence',
+    description: 'Harvey AI is a generative AI platform built on OpenAI\'s GPT models and fine-tuned for legal work. Used by Allen & Overy, Kirkland & Ellis, and other elite firms, Harvey performs legal research, contract analysis, due diligence, and regulatory compliance with attorney-grade accuracy. It integrates with Westlaw, LexisNexis, and firm knowledge bases to provide sourced, verifiable legal answers.',
+    category: 'legal-research-ai',
+    icon: '📜',
+    href: '/services/harvey-ai-legal-research-platform',
+    industry: 'Legal Technology',
+    stage: 'published',
+    popular: false,
+    pricing: { basic: 'Custom (contact sales)', pro: '$100,000/year (mid-size firm)', enterprise: '$500K+/year (BigLaw enterprise)' },
+    contactInfo: { website: 'https://harvey.ai', email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950' },
+    features: [
+      'Generative AI fine-tuned on legal corpora: case law, statutes, regulations, contracts',
+      'Legal research with automatic citation to Westlaw and LexisNexis authorities',
+      'Contract analysis: review 1,000+ NDAs in hours with risk flagging',
+      'Due diligence automation: extract key terms from acquisition target documents',
+      'Regulatory change monitoring: alerts when new regulations affect client matters',
+      'Firm knowledge base integration: search internal memos, briefs, and precedents'
+    ],
+    benefits: [
+      'First-mover advantage: elite firms using Harvey report 40% efficiency gains',
+      'Reduce associate research time from hours to minutes per question',
+      'Eliminate hallucinations with sourced citations to verified legal authorities',
+      'Scale legal expertise: junior attorneys produce senior-level work with AI assistance'
     ]
   }
 ];
