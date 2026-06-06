@@ -44,6 +44,7 @@ import { wave212PerformanceTestingServices, wave212ChaosEngineeringServices, wav
 import { wave213SupplyChainAiServices, wave213VoiceBiometricsServices, wave213GreenItServices, wave213SpatialComputingServices, wave213LegalResearchAiServices } from './wave213';
 import { wave214DeveloperExperiencePlatformsServices, wave214AiCodeReviewServices, wave214EdgeComputingServices, wave214DataObservabilityServices, wave214IncidentManagementServices } from './wave214';
 import { wave215QuantumComputingServices, wave215NeuromorphicProcessingServices, wave215DigitalTwinPlatforms, wave215HomomorphicEncryptionServices, wave215AutonomousDroneDelivery } from './wave215';
+import { wave216SwarmIntelligenceServices, wave216EdgeAiInferenceServices, wave216SyntheticDataGenerationServices, wave216AiGovernanceComplianceServices, wave216AutonomousRpaServices, wave216FederatedLearningServices, wave216SpaceComputingServices } from './wave216';
 
 export const aiServices: Service[] = [
   {
@@ -1464,4 +1465,11 @@ export const allServices: Service[] = [
   ...wave215DigitalTwinPlatforms,
   ...wave215HomomorphicEncryptionServices,
   ...wave215AutonomousDroneDelivery,
+  ...wave216SwarmIntelligenceServices,
+  ...wave216EdgeAiInferenceServices,
+  ...wave216SyntheticDataGenerationServices,
+  ...wave216AiGovernanceComplianceServices,
+  ...wave216AutonomousRpaServices,
+  ...wave216FederatedLearningServices,
+  ...wave216SpaceComputingServices,
 ].filter((s: Service) => s.benefits.length > 0);

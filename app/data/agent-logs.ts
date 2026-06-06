@@ -28,6 +28,7 @@ export interface AgentStatus {
 }
 
 export const INITIAL_AGENT_LOGS: AgentLogEntry[] = [
+  { id: 'log-066', timestamp: '2026-06-19 12:00', bot: '@OWL', action: 'Wave 216 — 10 new services across 7 categories', result: 'Swarm Intelligence (Kilobots, Hivemapper), Edge AI Inference (NVIDIA Jetson, Qualcomm AI Engine), Synthetic Data Generation (Mostly AI), AI Governance (IBM AI Factsheets), Autonomous RPA (UiPath Agents), Federated Learning (Intel OpenFL), Space Computing (LeoLabs). All integrated into servicesData.ts. 43 waves, ~810 services total.', category: 'wave', duration: '2h' },
   { id: 'log-039', timestamp: '2026-06-17 12:00', bot: '@OWL', action: 'Monitoring dashboard v2 — Enhanced homepage banner + fleet data', result: 'Created AgentsMonitoring.tsx component with live fleet status, stats, recent activity. Updated agent-logs.ts with latest data. Homepage now shows prominent AI agent banner between hero and content.', category: 'monitoring', duration: '45m' },
   { id: 'log-040', timestamp: '2026-06-17 00:00', bot: '@OWL', action: 'ORGANIZE #15 — Fleet self-organization + monitoring dashboard enhancement', result: 'Site 200 OK. Updated coord doc with org intelligence section. P1-2 stale >96h. Wave-research cron flagged ❌. Fleet: 3 active, 2 available.', category: 'coordination', duration: '30m' },
   { id: 'log-041', timestamp: '2026-06-15 02:00', bot: '@OWL', action: 'ORGANIZE #14 — Stale audit + fleet balance', result: 'Site 200 OK. P1-2 stale >72h across 5 checks. Wave 212 done (37 waves, ~800 services). Fleet balance OK.', category: 'coordination', duration: '20m' },
@@ -63,7 +64,7 @@ export const INITIAL_AGENT_STATUS: AgentStatus[] = [
   { name: 'Tablet', telegram: '@tablet_kleber_bot', role: 'Content & Research', emoji: '📱', status: 'available', currentTask: 'Wave 213 research — finding 5 new services', tasksCompleted: 289, lastAction: 'Wave 212 research (AI Observability, Data Privacy, FinOps, Threat Intel, AI Transparency)', lastActionTime: '2026-06-14 21:00', uptime: '98.5%', specialty: 'Service Research, Content', todayActions: 0, weekActions: 22 },
   { name: 'Quel', telegram: '@Windows_quel_bot', role: 'Code & Implementation', emoji: '🔧', status: 'available', currentTask: 'Site quality — thin page enrichment', tasksCompleted: 201, lastAction: 'Thin page content enrichment pass', lastActionTime: '2026-06-09 10:00', uptime: '97.9%', specialty: 'Frontend, UX, Code Quality', todayActions: 0, weekActions: 8 },
   { name: 'Rocket', telegram: '@Rocket_Kleber_bot', role: 'Integration & Delivery', emoji: '🚀', status: 'available', currentTask: 'CI/CD pipeline hardening + timeout investigation', tasksCompleted: 178, lastAction: 'Deployment pipeline hardening', lastActionTime: '2026-06-09 12:00', uptime: '99.1%', specialty: 'Build, Deploy, Performance', todayActions: 0, weekActions: 6 },
-  { name: 'OWL', telegram: '@OWL', role: 'Wave Integration & Monitoring', emoji: '🦉', status: 'active', currentTask: 'Monitoring dashboard v2 + homepage banner', tasksCompleted: 430, lastAction: 'Created AgentsMonitoring homepage component + enhanced dashboard', lastActionTime: '2026-06-17 12:00', uptime: '99.5%', specialty: 'Full-stack, Coordination, QA', todayActions: 5, weekActions: 42 },
+  { name: 'OWL', telegram: '@OWL', role: 'Wave Integration & Monitoring', emoji: '🦉', status: 'active', currentTask: 'Wave 216 integration — 10 new services across 7 categories', tasksCompleted: 431, lastAction: 'Wave 216: Swarm Intelligence, Edge AI, Synthetic Data, AI Governance, RPA, Federated Learning, Space Computing', lastActionTime: '2026-06-19 12:00', uptime: '99.5%', specialty: 'Full-stack, Coordination, QA', todayActions: 12, weekActions: 54 },
 ];
 
 export const WAVE_DATA = [
@@ -107,6 +108,7 @@ export const WAVE_DATA = [
   { wave: '213', services: 5, status: 'ok' as const, integrator: '@OWL' },
   { wave: '214', services: 5, status: 'ok' as const, integrator: '@OWL' },
   { wave: '215', services: 7, status: 'ok' as const, integrator: '@OWL' },
+  { wave: '216', services: 10, status: 'ok' as const, integrator: '@OWL' },
 ];
 
 export const CRON_JOBS = [
@@ -117,8 +119,8 @@ export const CRON_JOBS = [
 ];
 
 export const TASKS = [
-  { id: 'P1-1', task: 'Wave 215 research + integration', owner: '@OWL', status: 'done' as const, priority: 'p1' as const, note: '7 services: Quantum, Neuromorphic, Digital Twin, Homomorphic Encryption, Autonomous Drones' },
-  { id: 'P1-2', task: 'Deploy /solutions/ + /industry-solutions/ pages', owner: '@OWL', status: 'in-progress' as const, priority: 'p1' as const, note: 'Pages exist locally, need CI/CD build' },
+  { id: 'P1-1', task: 'Wave 216 research + integration', owner: '@OWL', status: 'done' as const, priority: 'p1' as const, note: '10 services: Swarm Intelligence, Edge AI, Synthetic Data, AI Governance, RPA, Federated Learning, Space Computing' },
+  { id: 'P1-2', task: 'Wave 217 research — next 5-10 services', owner: '@tablet', status: 'queued' as const, priority: 'p1' as const, note: 'Explore: Carbon Capture Tech, Brain-Computer Interfaces, Smart Materials, Precision Fermentation' },
   { id: 'B1', task: 'CI/CD pipeline hardening', owner: '@Rocket', status: 'queued' as const, priority: 'p2' as const },
   { id: 'B3', task: 'Service page auto-generation', owner: '@tablet', status: 'queued' as const, priority: 'p2' as const },
   { id: 'B4', task: 'Agent self-improvement — review learning log', owner: '@Kilo', status: 'queued' as const, priority: 'p2' as const },
