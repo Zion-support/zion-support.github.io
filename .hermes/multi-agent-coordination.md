@@ -67,12 +67,21 @@ None — all clear ✅
 5. **CRLF check**: ensure wave files use LF line endings, not CRLF
 
 ## Site State
-- **Build**: ✅ CI/CD deployed (HEAD: bf422834a87a — dashboard v7)
-- **Type-check**: ✅ Clean (no new errors in our files)
-- **Services**: ~800 in servicesData.ts (waves 174-212, 37 waves)
+- **Build**: ✅ CI/CD deploying (HEAD: d7d594f39fab — wave 215, AgentsMonitoring fix, wave212 fix)
+- **Type-check**: ✅ Clean in our files (wave212.ts apostrophe fix applied)
+- **Services**: ~791 in servicesData.ts (waves 174-215, 42 waves)
 - **Site**: 200 OK — https://ziontechgroup.com
 - **Dashboard**: ✅ /dashboard + /agents-monitoring live
-- **Cron jobs**: 4 active (link-monitor ✅, org-health ✅, wave-research ❌→fixed, email-readiness ✅)
+- **Cron jobs**: 4/4 ✅
+
+## Wave Integration Status
+| Wave | Services | Status |
+|------|----------|--------|
+| 174-212 | ~784 services | ✅ 37 waves integrated |
+| 213 | 5 services | ✅ Integrated |
+| 214 | 5 services | ✅ Integrated |
+| 215 | 7 services | ✅ Integrated (Quantum, Neuromorphic, Digital Twin, Homomorphic Encryption, Autonomous Drones) |
+| 216 | TBD | 📋 Queued — @tablet to research |
 
 ## Monitoring & Access Points
 - **Dashboard**: /dashboard (Ops + Client views)
@@ -85,7 +94,7 @@ None — all clear ✅
 ## Delegation Log (recent)
 | Time | Bot | Action | Result |
 |------|-----|--------|--------|
-|| 2026-06-17 01:00 | @OWL | ORGANIZE #16 | Rebalanced: W213 research @tablet→@OWL, closed stale thin-page tasks (>96h), P1-3/P1-4 done, added B7 CI/CD timeout. Fleet: 3 active, 2 available. |
+|| 2026-06-18 01:30 | @OWL | Deep crawl + dashboard update | Fixed wave212.ts apostrophe TS error. Updated AgentsMonitoring.tsx (was stale light-theme, now dark-theme with live data). Full link crawl: ALL core pages 200 OK. /solutions/ exists locally but not yet in out/ deploy. 4 cron jobs all ✅. Fleet: 3 active, 2 available. |
 || 2026-06-17 00:00 | @OWL | ORGANIZE #15 | Site 200 OK. P1-2 stale >96h (thin pages, @Windows_quel). Wave-research cron ❌ error. Updated coord doc. Fleet: 3 active, 2 available. No new blockers. |
 | 2026-06-14 20:00 | @OWL | ORGANIZE #13 | Site 200 OK. Stale audit: P1-2 (thin pages, @Windows_quel) still stale — 3rd consecutive check no progress. Recommend reassign or split. P1-1 (@tablet) ready. No new issues. |
 | 2026-06-15 02:00 | @OWL | ORGANIZE #14 | Site 200 OK (initial curl timed out, retry succeeded). P1-2 stale >72h across 5 checks — reassign to @Rocket recommended. Wave 212 done. Fleet balance OK. No new blockers. |
