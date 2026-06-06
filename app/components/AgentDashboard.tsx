@@ -260,7 +260,7 @@ function AddLogEntryForm({ onAdd }: { onAdd: (entry: AgentLogEntry) => void }) {
 
 function ClientShowcaseView({ logs, statuses, onSwitchView }: { logs: AgentLogEntry[]; statuses: AgentStatus[]; onSwitchView: () => void }) {
   const activeBots = statuses.filter(b => b.status === 'active').length;
-  const totalServices = 795;
+  const totalServices = 767;
   const totalWaves = WAVE_DATA.length;
   const totalTasksCompleted = statuses.reduce((s, b) => s + b.tasksCompleted, 0);
   const totalServicesInWaves = WAVE_DATA.reduce((s, w) => s + w.services, 0);
@@ -418,7 +418,7 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
 
   // Derived data
   const activeBots = statuses.filter(b => b.status === 'active').length;
-  const totalServices = 795;
+  const totalServices = 767;
   const totalWaves = WAVE_DATA.length;
   const completedActions = logs.length;
   const totalTasksCompleted = statuses.reduce((s, b) => s + b.tasksCompleted, 0);

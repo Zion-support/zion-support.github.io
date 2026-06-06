@@ -28,8 +28,8 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 export default function AgentsMonitoring() {
   const [time, setTime] = useState('');
   const activeBots = 6;
-  const totalServices = 784;
-  const totalWaves = 37;
+  const totalServices = 767;
+  const totalWaves = 45;
 
   useEffect(() => {
     const update = () => setTime(new Date().toLocaleTimeString('en-US', {
