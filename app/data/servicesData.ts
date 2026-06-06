@@ -47,6 +47,7 @@ import { wave215QuantumComputingServices, wave215NeuromorphicProcessingServices,
 import { wave216SwarmIntelligenceServices, wave216EdgeAiInferenceServices, wave216SyntheticDataGenerationServices, wave216AiGovernanceComplianceServices, wave216AutonomousRpaServices, wave216FederatedLearningServices, wave216SpaceComputingServices } from './wave216';
 import { wave217CarbonCaptureTechServices, wave217BrainComputerInterfaceServices, wave217PrecisionFermentationServices, wave217AutonomousMarineVehicleServices, wave217SmartGridEnergyServices, wave217AiDrugDiscoveryServices, wave2173dPrintedElectronicsServices } from './wave217';
 import { wave218RegenerativeAgricultureAiServices, wave218AutonomousConstructionServices, wave218EmotionAiServices, wave218SatelliteInternetServices, wave218AiLegalAssistantServices, wave218NuclearFusionEnergyServices, wave218HolographicDisplayServices } from './wave218';
+import { wave219AutonomousWarehouseRoboticsServices, wave219AiMusicGenerationServices, wave219DigitalIdentityVerificationServices, wave219SmartCityIotServices, wave219AiPoweredCybersecurityServices, wave219VerticalFarmingServices, wave219WearableHealthTechServices } from './wave219';
 
 export const aiServices: Service[] = [
   {
@@ -1488,4 +1489,11 @@ export const allServices: Service[] = [
   ...wave218AiLegalAssistantServices,
   ...wave218NuclearFusionEnergyServices,
   ...wave218HolographicDisplayServices,
+  ...wave219AutonomousWarehouseRoboticsServices,
+  ...wave219AiMusicGenerationServices,
+  ...wave219DigitalIdentityVerificationServices,
+  ...wave219SmartCityIotServices,
+  ...wave219AiPoweredCybersecurityServices,
+  ...wave219VerticalFarmingServices,
+  ...wave219WearableHealthTechServices,
 ].filter((s: Service) => s.benefits.length > 0);
