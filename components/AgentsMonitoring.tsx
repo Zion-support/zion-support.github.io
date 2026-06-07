@@ -279,9 +279,13 @@ export default function AgentsMonitoring() {
               <span className="text-slate-400 text-xs">Latest Deploy</span>
               <span className="text-white font-mono text-xs">{systemMetrics.lastDeploy}</span>
             </div>
-            <div className="flex flex-col">
+            <div>
               <span className="text-slate-400 text-xs">Status</span>
               <span className="text-emerald-300 font-semibold">Operational</span>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/[0.06] p-3">
+              <p className="text-xs text-slate-300">Support is assisted by intelligent AIs. Talk to us directly for help.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-xs text-blue-300 hover:text-blue-200">Contact support</a>
             </div>
           </div>
         </div>
