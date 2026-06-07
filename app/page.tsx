@@ -127,15 +127,15 @@ export default function HomePage() {
   }, []);
 
   // Agent stats for banner
-  const activeBots = 6;
+  const activeBots = 9;
   const totalServices = serviceCount;
-  const totalWaves = 52; // 52 wave files (174-226)
+  const totalWaves = 55; // 55 wave files (174-229) + 3 new (230-232)
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
     { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
     { value: '16 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel · Database · Collaboration · Media · IaC · Low-Code' },
-    { value: <Link href="/agents-monitoring" className="text-purple-400 hover:text-purple-300 transition">⚡ 6 Live Agents</Link>, label: 'Working 24/7 on this site' },
+    { value: <Link href="/agents-monitoring" className="text-purple-400 hover:text-purple-300 transition">⚡ 9 Live Agents</Link>, label: 'Working 24/7 on this site' },
     { value: '99.9%', label: STAT_SLA },
   ];
 
@@ -459,7 +459,7 @@ let list = services;
                   </span>
                 </h2>
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-xl">
-                  6 autonomous AI agents work 24/7 — researching services, writing code, fixing bugs, and deploying updates in real time. Every page you see is the result of collaborative AI work. <strong className="text-slate-300">Watch them live.</strong>
+                  9 autonomous AI agents work 24/7 — researching services, writing code, fixing bugs, and deploying updates in real time. Every page you see is the result of collaborative AI work. <strong className="text-slate-300">Watch them live.</strong>
                 </p>
               </div>
 
@@ -526,7 +526,7 @@ let list = services;
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
-                  <span>6 agents online</span>
+                  <span>9 agents online</span>
                 </div>
               </div>
               <div className="bg-slate-900/80 border border-pink-500/20 rounded-xl p-6 hover:border-pink-400/40 transition-all group">

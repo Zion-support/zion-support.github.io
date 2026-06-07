@@ -53,6 +53,9 @@ import { wave226MicroSaasInvoiceTrackerServices, wave226AiMeetingSummarizerServi
 import { wave227MicroSaasSimpleCrmServices, wave227AiSocialMediaCalendarServices, wave227ItManagedPrintServices, wave227SecurityEmailDmarcServices, wave227DataCdpSetupServices } from './wave227';
 import { wave228AiIncidentResponseServices, wave228MicroSaasSubscriptionBillingServices, wave228ItCapacityPlanningServices, wave228MicroSaasReviewMgmtServices } from './wave228';
 import { wave229AiInsuranceClaimsServices, wave229ItZeroTrustNetworkServices, wave229SecurityThreatIntelServices, wave229MicroSaasEventPlatformServices } from './wave229';
+import { wave230AiLegalDocReviewServices, wave230ItMdrCybersecurityServices, wave230MicroSaasClientPortalServices } from './wave230';
+import { wave231AiServices, wave231ItServices, wave231MicroSaasServices } from './wave231';
+import { wave232Services } from './wave232';
 
 export const aiServices: Service[] = [
   {
@@ -1519,4 +1522,11 @@ export const allServices: Service[] = [
   ...wave229ItZeroTrustNetworkServices,
   ...wave229SecurityThreatIntelServices,
   ...wave229MicroSaasEventPlatformServices,
+  ...wave230AiLegalDocReviewServices,
+  ...wave230ItMdrCybersecurityServices,
+  ...wave230MicroSaasClientPortalServices,
+  ...wave231AiServices,
+  ...wave231ItServices,
+  ...wave231MicroSaasServices,
+  ...wave232Services,
 ].filter((s: Service) => s.benefits.length > 0);
