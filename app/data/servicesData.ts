@@ -50,6 +50,7 @@ import { wave223AiSupplyChainDigitalTwinServices, wave223MicroSaasWhiteLabelServ
 import { wave224AiManufacturingQcServices, wave224ItUedrServices, wave224DataFraudGraphServices } from './wave224';
 import { wave225MicroSaasBoardMgmtServices, wave225AiTranslationServices, wave225SecurityCnappServices, wave225DataCatalogAiServices } from './wave225';
 import { wave226MicroSaasInvoiceTrackerServices, wave226AiMeetingSummarizerServices, wave226ItServiceDeskAutomationServices, wave226SecurityDlpServices } from './wave226';
+import { wave227MicroSaasSimpleCrmServices, wave227AiSocialMediaCalendarServices, wave227ItManagedPrintServices, wave227SecurityEmailDmarcServices, wave227DataCdpSetupServices } from './wave227';
 
 export const aiServices: Service[] = [
   {
@@ -1503,4 +1504,9 @@ export const allServices: Service[] = [
   ...wave226AiMeetingSummarizerServices,
   ...wave226ItServiceDeskAutomationServices,
   ...wave226SecurityDlpServices,
+  ...wave227MicroSaasSimpleCrmServices,
+  ...wave227AiSocialMediaCalendarServices,
+  ...wave227ItManagedPrintServices,
+  ...wave227SecurityEmailDmarcServices,
+  ...wave227DataCdpSetupServices,
 ].filter((s: Service) => s.benefits.length > 0);
