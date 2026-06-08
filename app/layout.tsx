@@ -24,7 +24,7 @@ import { AutoJsonLd } from './hooks/useAutoJsonLdPage';
 import './globals.css';
 
 const siteUrl = 'https://ziontechgroup.com';
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const inter = Inter({ subsets: ['latin'], display: 'swap', fallback: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'] });
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -95,6 +95,8 @@ export default function RootLayout({
       <AutoJsonLd />
       <html lang="en" dir="ltr">
         <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         </head>

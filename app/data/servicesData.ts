@@ -79,48 +79,27 @@ export const aiServices: Service[] = [
   ...wave205AiServices,
   ...wave206AiServices,
   ...wave207AiServices,
-  ...wave208AiMlOpsServices,
   ...wave208AiServices,
-  ...wave208DevSecOpsServices,
-  ...wave208EdTechServices,
-  ...wave208FinTechServices,
+  ...wave208AiMlOpsServices,
+  ...wave210DatabaseServices,
   ...wave213AiTranslationServices,
   ...wave213CodeGenerationServices,
   ...wave213DigitalHumansServices,
-  ...wave213PredictiveMaintenanceServices,
-  ...wave213UptimeMonitoringServices,
   ...wave214AiCodeReviewServices,
-  ...wave214DeveloperExperiencePlatformsServices,
-  ...wave214EdgeComputingServices,
-  ...wave214IncidentManagementServices,
+  ...wave215HomomorphicEncryptionServices,
   ...wave216AiGovernanceComplianceServices,
-  ...wave216AutonomousRpaServices,
-  ...wave216EdgeAiInferenceServices,
-  ...wave216FederatedLearningServices,
-  ...wave216SpaceComputingServices,
   ...wave216SwarmIntelligenceServices,
   ...wave216SyntheticDataGenerationServices,
   ...wave217AiDrugDiscoveryServices,
-  ...wave217AutonomousMarineVehicleServices,
   ...wave217BrainComputerInterfaceServices,
-  ...wave217CarbonCaptureTechServices,
-  ...wave217PrecisionFermentationServices,
-  ...wave217SmartGridEnergyServices,
-  ...wave218AiLegalAssistantServices,
   ...wave218EmotionAiServices,
   ...wave218RegenerativeAgricultureAiServices,
-  ...wave218SatelliteInternetServices,
+  ...wave218AiLegalAssistantServices,
   ...wave219AiMusicGenerationServices,
   ...wave219AiPoweredCybersecurityServices,
-  ...wave219AutonomousWarehouseRoboticsServices,
-  ...wave219DigitalIdentityVerificationServices,
-  ...wave219SmartCityIotServices,
-  ...wave219VerticalFarmingServices,
-  ...wave219WearableHealthTechServices,
   ...wave220AiAccessibilityTestingServices,
   ...wave220AiContractLifecycleServices,
   ...wave220AiVideoAnalyticsServices,
-  ...wave220AutonomousVehicleTelemetryServices,
   ...wave220SyntheticVoiceCloningServices,
 ];
 
@@ -133,7 +112,6 @@ export const itServices: Service[] = [
   ...wave179ItServices,
   ...wave180ItServices,
   ...wave183ItServices,
-  ...wave184ItServices,
   ...wave186ItServices,
   ...wave187HealthcareItServices,
   ...wave188HealthcareItServices,
@@ -169,6 +147,8 @@ export const itServices: Service[] = [
   ...wave207ItServices,
   ...wave208HealthcareItServices,
   ...wave208ItServices,
+  ...wave218AutonomousConstructionServices,
+  ...wave219WearableHealthTechServices,
 ];
 
 export const cloudServices: Service[] = [
@@ -238,6 +218,7 @@ export const securityServices: Service[] = [
   ...wave206SecurityServices,
   ...wave207SecurityServices,
   ...wave208SecurityServices,
+  ...wave219AiPoweredCybersecurityServices,
 ];
 
 export const dataServices: Service[] = [
@@ -274,6 +255,7 @@ export const dataServices: Service[] = [
   ...wave207DataServices,
   ...wave208DataServices,
   ...wave209DataStreamingServices,
+  ...wave210DatabaseServices,
   ...wave214DataObservabilityServices,
 ];
 
@@ -309,6 +291,8 @@ export const automationServices: Service[] = [
   ...wave206AutomationServices,
   ...wave207AutomationServices,
   ...wave208AutomationServices,
+  ...wave210LowCodeServices,
+  ...wave216AutonomousRpaServices,
 ];
 
 export const microSaasServices: Service[] = [
@@ -358,6 +342,8 @@ export const devOpsServices: Service[] = [
   ...wave211SecurityScanningServices,
   ...wave212ChaosEngineeringServices,
   ...wave212ServiceMeshServices,
+  ...wave214DeveloperExperiencePlatformsServices,
+  ...wave214IncidentManagementServices,
 ];
 
 export const emailIntelligenceServices: Service[] = [
@@ -370,17 +356,19 @@ export const otherServices: Service[] = [
   ...wave197IotServices,
   ...wave198EdtechServices,
   ...wave198FintechServices,
+  ...wave199HealthcareItServices,
+  ...wave203HealthcareItServices,
   ...wave207CmsServices,
   ...wave207DocumentationServices,
   ...wave207EcommerceServices,
   ...wave207IdentityServices,
   ...wave207ObservabilityServices,
   ...wave208IotServices,
+  ...wave208DevSecOpsServices,
   ...wave209ApiServices,
   ...wave209SearchServices,
   ...wave209TestingServices,
   ...wave210CollaborationServices,
-  ...wave210DatabaseServices,
   ...wave210LowCodeServices,
   ...wave210MediaStreamingServices,
   ...wave212APIGatewayServices,
@@ -393,6 +381,7 @@ export const otherServices: Service[] = [
   ...wave218AutonomousConstructionServices,
   ...wave218HolographicDisplayServices,
   ...wave218NuclearFusionEnergyServices,
+  ...wave218SatelliteInternetServices,
 ];
 
 export const allServices: Service[] = [
@@ -408,5 +397,20 @@ export const allServices: Service[] = [
   ...otherServices,
 ];
 
-export const allServicesFlat = allServices;
+export const allServicesFlat = allServices; allServicesFlat; 
+export const aiServicesSet = new Set(aiServices.map((s) => s.id));
+export const itServicesSet = new Set(itServices.map((s) => s.id));
+export const cloudServicesSet = new Set(cloudServices.map((s) => s.id));
+export const securityServicesSet = new Set(securityServices.map((s) => s.id));
+export const dataServicesSet = new Set(dataServices.map((s) => s.id));
+export const automationServicesSet = new Set(automationServices.map((s) => s.id));
+export const microSaasServicesSet = new Set(microSaasServices.map((s) => s.id));
+export const devOpsServicesSet = new Set(devOpsServices.map((s) => s.id));
+export const otherServicesSet = new Set(otherServices.map((s) => s.id));
+export const allServicesSet = new Set(allServices.map((s) => s.id));
 
+export const allCategories = ['ai','it','cloud','security','data','automation','microSaas','devOps','emailIntelligence','other']; 
+export const categoryDescriptions: Record<string,string> = { ai:'AI / ML services', it:'IT Services', cloud:'Cloud Services', security:'Security Services', data:'Data & Analytics', automation:'Process Automation', microSaas:'Micro-SaaS Products', devOps:'DevOps & SRE', emailIntelligence:'Email Intelligence', other:'Emerging & Other'}; 
+export const categoryHrefs: Record<string,string> = { ai:'/services/ai', it:'/services/it', cloud:'/services/cloud', security:'/services/security', data:'/services/data', automation:'/services/automation', microSaas:'/services/micro-saas', devOps:'/services/devops', emailIntelligence:'/services/email-intelligence', other:'/services/other'}; 
+export const countsByCategory: Record<string,number> = { ai:aiServices.length, it:itServices.length, cloud:cloudServices.length, security:securityServices.length, data:dataServices.length, automation:automationServices.length, microSaas:microSaasServices.length, devOps:devOpsServices.length, emailIntelligence:emailIntelligenceServices.length, other:otherServices.length}; 
+export const categoryLabelMap: Record<string,string> = { ai:'AI & Machine Learning', it:'IT Solutions', cloud:'Cloud Infrastructure', security:'Cyber Security', data:'Data & Analytics', automation:'Automation & Integration', microSaas:'Micro-SaaS', devOps:'DevOps & SRE', emailIntelligence:'Email Intelligence', other:'Emerging Tech'}; 
