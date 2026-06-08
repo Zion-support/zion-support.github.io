@@ -11,7 +11,6 @@ import ServiceSpotlight from '@/components/ServiceSpotlight';
 import ServiceGridWithSearch from '@/components/ServiceGridWithSearch';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactFunnel from '@/components/ContactFunnel';
-import ServiceCounter from '@/components/ServiceCounter';
 import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import AgentsMonitoring from '../components/AgentsMonitoring';
@@ -133,7 +132,7 @@ export default function HomePage() {
 
   // Dynamic stats — auto-update when catalog changes
   const stats = [
-    { value: <AnimatedCounter target={serviceCount} suffix="+" />, label: STAT_SERVICES },
+    { value: '396+ Services', label: STAT_SERVICES },
     { value: '16 Categories', label: 'AI · IT · Cloud · Security · Data · Automation · Micro-SaaS · DevOps · Blockchain · IoT · Email Intel · Database · Collaboration · Media · IaC · Low-Code' },
     { value: <Link href="/agents-monitoring" className="text-purple-400 hover:text-purple-300 transition">⚡ 6 Live Agents</Link>, label: 'Working 24/7 on this site' },
     { value: '99.9%', label: STAT_SLA },
@@ -295,25 +294,25 @@ let list = services;
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(59,130,246,0.12),transparent_60%)]" />
         <div className="relative container-page pt-32 pb-24">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> <ServiceCounter /> Services — Live Now
+            <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-purple-900/40 border border-purple-500/40 text-purple-200 text-base font-medium mb-8">
+              <span className="text-green-400">●</span> Client Delivery Index — Live
             </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
             <span className="gradient-text">AI & IT Services</span><br />
             <span className="text-white">for Your Business</span>
           </h1>
-          <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <ServiceCounter /> real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
+          <p className="text-xl md:text-2xl text-slate-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+            real-world AI, IT, cloud, security, data, automation, micro-SaaS, DevOps, blockchain, and IoT services — from machine learning to cybersecurity, CRM to 5G networks.
             Get a free, custom proposal in minutes.
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="/configurator/" className="btn-primary text-lg px-10 py-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+              <Link href="/configurator/" className="btn-primary text-lg px-12 py-4 rounded-2xl">
                 ⚡ Get Your Custom Proposal →
               </Link>
-              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
-                {`🛠️ Explore All ${serviceCount}+ Services`}
+              <Link href="/services/" className="btn-secondary text-lg px-12 py-4 rounded-2xl">
+                🛠️ Explore Services
               </Link>
-              <a href="tel:+13024640950" className="btn-secondary text-lg px-10 py-4">
+              <a href="tel:+13024640950" className="btn-secondary text-lg px-12 py-4 rounded-2xl">
                 ☎ +1 302 464 0950
               </a>
             </div>
@@ -336,7 +335,7 @@ let list = services;
 
             {/* Trust badges */}
             <div className="flex flex-wrap justify-center gap-8 text-slate-400 text-sm mb-12">
-              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`${serviceCount}+ Services`].map(t => (
+              {['US-Based Team','SLA Guaranteed','HIPAA Compliant','24/7 Support',`Client Delivery Ledger`].map(t => (
                 <div key={t} className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

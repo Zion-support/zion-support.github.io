@@ -1,5 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { allServices } from '../app/data/servicesData';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 type Agent = {
   name: string;
@@ -64,7 +68,7 @@ export default function AgentsMonitoring() {
   }, []);
 
   const totalActionsToday = agents.reduce((sum, a) => sum + a.todayActions, 0);
-  const totalServices = 1216;
+  const totalServices = allServices.length;
 
   const systemMetrics = {
     cpu: 26,
@@ -92,7 +96,7 @@ export default function AgentsMonitoring() {
           <div>
             <h3 className="text-xl font-bold text-white mb-1">🤖 Live Operations — Zion Agent Fleet</h3>
             <p className="text-slate-300 text-sm md:text-base">
-              {totalServices}+ services delivered · {agents.length} online agents · always-on delivery, monitoring, and support for clients.
+              {totalServices.toLocaleString()} services delivered · {agents.length} online agents · always-on delivery, monitoring, and support for clients.
             </p>
             <p className="text-slate-400 text-xs mt-2">
               Last refreshed: {new Date(now).toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', month: 'short', day: 'numeric' })}

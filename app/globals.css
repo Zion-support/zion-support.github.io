@@ -12,3 +12,28 @@ html {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+/* Visibility & readability baseline */
+body {
+  color: #e5e7eb; /* higher-contrast slate-200 default */
+  background: #0b0f1a;
+}
+
+/* Ensure inputs/buttons don’t clip text */
+button,
+input,
+textarea,
+select,
+a {
+  min-height: 2.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+/* Improve contrast on common muted text containers */
+.text-slate-400,
+.text-slate-500 {
+  color: #cbd5e1; /* slate-300 */
+}
