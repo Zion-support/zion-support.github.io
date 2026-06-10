@@ -40,6 +40,7 @@ export const wave247AiTranslationServices: Service[] = [
 export const wave247DigitalHumansServices: Service[] = [
   {
     id: 'synthesia-digital-humans-platform',
+    title: 'Synthesia AI Digital Humans Platform',
     description: 'Synthesia is the leading AI video generation platform that creates photorealistic digital human presenters from text. Users type a script, select from 240+ AI avatars (diverse in ethnicity, age, and language), and Synthesia generates a professional video with natural lip-sync, gestures, and voice in 140+ languages. Used by 50,000+ companies including Google, Nike, and the BBC for training, marketing, and internal communications, Synthesia reduces video production costs by 90% and time from weeks to minutes. Its enterprise platform includes custom avatar creation (digital twins of real people), API access, and analytics on viewer engagement.',
     category: 'digital-humans-platform',
     icon: '🧑‍💻',
@@ -70,7 +71,8 @@ export const wave247DigitalHumansServices: Service[] = [
 export const wave247PredictiveMaintenanceServices: Service[] = [
   {
     id: 'upkeep-predictive-maintenance-ai',
-    description: 'Upkeep (formerly Asset Reliability Platform) is the leading AI-powered predictive maintenance platform that uses machine learning to predict equipment failures before they happen. By analyzing sensor data, maintenance logs, and operational patterns, Upkeep identifies anomalies and predicts remaining useful life for critical assets, reducing unplanned downtime by 50% and maintenance costs by 30%. Used by 3,000+ facilities including PepsiCo, Mars, and the US military, Upkeep integrates with existing IoT sensors, SCADA systems, and ERP platforms. Its mobile-first CMMS (Computerized Maintenance Management System) enables technicians to receive AI-generated work orders, access equipment history, and log maintenance activities from the field.',
+    title: 'Upkeep AI Predictive Maintenance Platform',
+    description: 'Upkeep (formerly Asset Reliability Platform) is the leading AI-powered predictive maintenance platform that uses machine learning to predict equipment failures before they happen.',
     category: 'predictive-maintenance-ai',
     icon: '🔧',
     href: '/services/upkeep-predictive-maintenance-ai',

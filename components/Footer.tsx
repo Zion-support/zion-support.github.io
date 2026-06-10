@@ -5,7 +5,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../app/utils/seoConstants';
 
 const Footer: React.FC = () => {
@@ -25,27 +25,30 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a
                 href={SOCIAL_LINKS.linkedin}
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-gray-400 hover:text-emerald-400 transition-colors text-xs font-bold"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                in
               </a>
               <a
                 href={SOCIAL_LINKS.twitter}
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-gray-400 hover:text-emerald-400 transition-colors text-xs font-bold"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter"
               >
-                <Twitter className="h-5 w-5" />
+                𝕏
               </a>
               <a
                 href={SOCIAL_LINKS.github}
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-gray-400 hover:text-emerald-400 transition-colors text-xs font-bold"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
-                <Github className="h-5 w-5" />
+                GH
               </a>
             </div>
           </div>

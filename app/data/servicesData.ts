@@ -71,6 +71,8 @@ import { wave244InfrastructureAsCodeServices, wave244AiProcurementServices, wave
 import { wave245AiAgentOrchestrationServices, wave245DataProductPlatformServices, wave245ZeroTrustSecurityServices, wave245SyntheticDataGenerationServices, wave245MlopsPlatformServices } from './wave245';
 import { wave246AiCodeReviewServices, wave246IncidentManagementServices, wave246DeveloperExperienceServices, wave246EdgeAiInferenceServices, wave246AiGovernanceServices } from './wave246';
 import { wave247AiTranslationServices, wave247DigitalHumansServices, wave247PredictiveMaintenanceServices, wave247UptimeMonitoringServices, wave247AiCodeGenerationServices } from './wave247';
+import { wave248AiServices, wave248ItServices, wave248MicroSaasServices } from './wave248';
+import { wave249AiServices, wave249ItServices, wave249MicroSaasServices } from './wave249';
 
 export const aiServices: Service[] = [
   {
@@ -1599,4 +1601,10 @@ export const allServices: Service[] = [
   ...wave247PredictiveMaintenanceServices,
   ...wave247UptimeMonitoringServices,
   ...wave247AiCodeGenerationServices,
+  ...wave248AiServices,
+  ...wave248ItServices,
+  ...wave248MicroSaasServices,
+  ...wave249AiServices,
+  ...wave249ItServices,
+  ...wave249MicroSaasServices,
 ].filter((s: Service) => s.benefits.length > 0);
