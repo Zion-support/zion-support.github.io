@@ -139,7 +139,7 @@ export default function AgentsMonitoringPage() {
             <div className="text-xs text-blue-300">Today's Actions</div>
           </div>
           <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 border border-pink-500/30 rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-pink-300">{4}</div>
+            <div className="text-2xl font-bold text-pink-300">52</div>
             <div className="text-xs text-pink-400">Services Catalog</div>
           </div>
         </div>
