@@ -300,7 +300,7 @@ export default function AgentsMonitoring() {
             </div>
             <div className="flex flex-col">
               <span className="text-slate-400 text-xs">Email Sends Ready</span>
-              <span className="text-pink-300 font-semibold">13 leads</span>
+              <span className="text-pink-300 font-semibold">16 leads</span>
             </div>
             <div className="flex flex-col">
               <span className="text-slate-400 text-xs">Latest Deploy</span>
