@@ -58,7 +58,7 @@ a {
   border: 0;
 }
 
-.focus:not-sr-only {
+.focus\:not-sr-only:focus {
   position: static;
   width: auto;
   height: auto;
@@ -68,31 +68,76 @@ a {
 }
 
 .glass-card {
-  @apply bg-slate-900/60 border border-slate-700/50 rounded-xl p-6;
+  background-color: rgb(15 23 42 / 0.6);
+  border: 1px solid rgb(51 65 85 / 0.5);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent;
+  background: linear-gradient(to right, #a78bfa, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:from-purple-500 hover:to-pink-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #9333ea, #db2777);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #7c3aed, #be185d);
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700/60 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-slate-700/80 hover:border-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: rgb(30 41 59 / 0.6);
+  border: 1px solid rgb(51 65 85 / 0.6);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(51 65 85 / 0.8);
+  border-color: rgb(168 85 247 / 0.3);
 }
 
 .section-heading {
-  @apply text-3xl font-bold text-white mb-4;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
 }
 
 .section-subheading {
-  @apply text-slate-400 text-lg max-w-3xl mx-auto;
+  color: #94a3b8;
+  font-size: 1.125rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-section {
-  @apply glass-card text-center;
+  background-color: rgb(15 23 42 / 0.6);
+  border: 1px solid rgb(51 65 85 / 0.5);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 /* Line clamp utilities */
