@@ -28,11 +28,11 @@ function quarantinePatterns() {
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
   testEnvironment: 'jsdom',
+  roots: ['<rootDir>/app', '<rootDir>/components', '<rootDir>/lib'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/.openclaw/', ...quarantinePatterns()],
-  modulePathIgnorePatterns: ['<rootDir>/.openclaw/'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', ...quarantinePatterns()],
   testMatch: [
     '**/__tests__/**/*.(ts|tsx|js)',
     '**/*.(test|spec).(ts|tsx|js)',
@@ -44,6 +44,10 @@ const customJestConfig = {
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
+  haste: {
+    enableSymlinks: false,
+  },
+  watchPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/out/'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

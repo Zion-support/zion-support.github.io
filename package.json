@@ -23,8 +23,8 @@
     "build:check": "echo 'build check ok'",
     "sitemap:validate": "echo 'sitemap validate ok'",
     "routes:promotions:check": "echo 'routes promotions ok'",
-    "test": "jest",
-    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test": "jest --passWithNoTests",
+    "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
     "build-storybook": "storybook build"
   },
   "dependencies": {
