@@ -1,7 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+<<<<<<< Updated upstream
 import { useState, useEffect, useCallback } from 'react';
+=======
+import { useState, useEffect, useRef } from 'react';
+>>>>>>> Stashed changes
 import { usePathname } from 'next/navigation';
 import {
   PRIMARY_NAV_LINKS,
@@ -16,6 +20,7 @@ const SITE_TITLE = 'Zion Tech Group';
 export default function Navigation() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+<<<<<<< Updated upstream
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,6 +46,30 @@ export default function Navigation() {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
+=======
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
+  const mobilePanelRef = useRef<HTMLDivElement>(null);
+
+  // Close mobile panel on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+    setSolutionsOpen(false);
+    setResourcesOpen(false);
+  }, [pathname]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobilePanelRef.current && !mobilePanelRef.current.contains(event.target as Node)) {
+        setMobileOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+>>>>>>> Stashed changes
   }, []);
 
   function isActive(href: string): boolean {
@@ -109,11 +138,15 @@ export default function Navigation() {
   }
 
   return (
+<<<<<<< Updated upstream
     <header className={`sticky top-0 z-50 border-b transition-all duration-300 ${
       scrolled
         ? 'border-slate-800/80 bg-slate-950/90 backdrop-blur-2xl shadow-lg shadow-black/20'
         : 'border-slate-800/40 bg-slate-950/70 backdrop-blur-xl'
     }`}>
+=======
+    <header id="site-navigation" className="sticky top-0 z-50 w-full border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-xl">
+>>>>>>> Stashed changes
       <nav className="container-page flex h-16 items-center justify-between gap-4" aria-label="Main navigation">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0 group" aria-label="Zion Tech Group home">
@@ -126,6 +159,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop nav */}
+<<<<<<< Updated upstream
         <div className="hidden lg:flex items-center gap-0.5">
           <Dropdown id="services" label="Services" links={FEATURED_AI_SERVICE_LINKS} wide />
           <Dropdown id="solutions" label="Solutions" links={SOLUTION_LINKS} />
@@ -133,6 +167,91 @@ export default function Navigation() {
 
           {/* Direct links */}
           {PRIMARY_NAV_LINKS.filter(l => ['/pricing', '/contact'].includes(l.href)).map((link, i) => (
+=======
+        <div className="hidden lg:flex items-center gap-1">
+          {/* Services dropdown */}
+          <div className="relative group">
+            <button
+              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+              onClick={() => { setServicesOpen(!servicesOpen); setSolutionsOpen(false); setResourcesOpen(false); }}
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+            >
+              Services ▾
+            </button>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-1 w-72 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 z-50" role="menu">
+                <div className="px-3 py-1.5 text-[10px] uppercase font-bold text-slate-500 tracking-wider">Featured AI</div>
+                {FEATURED_AI_SERVICE_LINKS.slice(0, 6).map((link, i) => (
+                  <Link key={i} href={link.href} className="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800" onClick={() => setServicesOpen(false)} role="menuitem">
+                    {link.name}
+                  </Link>
+                ))}
+                <div className="border-t border-slate-800 my-1" />
+                <Link href="/services" className="block px-3 py-2 rounded-lg text-sm text-purple-400 hover:text-purple-300" onClick={() => setServicesOpen(false)} role="menuitem">
+                  All Services →
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Solutions dropdown */}
+          <div className="relative group">
+            <button
+              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+              onClick={() => { setSolutionsOpen(!solutionsOpen); setServicesOpen(false); setResourcesOpen(false); }}
+              aria-expanded={solutionsOpen}
+              aria-haspopup="true"
+            >
+              Solutions ▾
+            </button>
+            {solutionsOpen && (
+              <div className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 z-50" role="menu">
+                {SOLUTION_LINKS.map((link, i) => (
+                  <Link
+                    key={i}
+                    href={link.href}
+                    className="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800"
+                    onClick={() => setSolutionsOpen(false)}
+                    role="menuitem"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Resources dropdown */}
+          <div className="relative group">
+            <button
+              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+              onClick={() => { setResourcesOpen(!resourcesOpen); setServicesOpen(false); setSolutionsOpen(false); }}
+              aria-expanded={resourcesOpen}
+              aria-haspopup="true"
+            >
+              Resources ▾
+            </button>
+            {resourcesOpen && (
+              <div className="absolute top-full left-0 mt-1 w-56 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl p-2 z-50" role="menu">
+                {RESOURCE_LINKS.map((link, i) => (
+                  <Link
+                    key={i}
+                    href={link.href}
+                    className="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800"
+                    onClick={() => setResourcesOpen(false)}
+                    role="menuitem"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Primary nav links (Pricing, About, Contact, AI Agents) */}
+          {PRIMARY_NAV_LINKS.filter(l => !['/', '/services', '/solutions'].includes(l.href)).map((link, i) => (
+>>>>>>> Stashed changes
             <NavLink key={i} link={link} />
           ))}
 
@@ -160,9 +279,15 @@ export default function Navigation() {
 
         {/* Mobile hamburger */}
         <button
+<<<<<<< Updated upstream
           className="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+=======
+          className="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+>>>>>>> Stashed changes
           aria-expanded={mobileOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,6 +301,7 @@ export default function Navigation() {
 
       {/* Mobile panel */}
       {mobileOpen && (
+<<<<<<< Updated upstream
         <div className="lg:hidden border-t border-slate-800 bg-slate-950/98 backdrop-blur-2xl">
           <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
             {/* Mobile search */}
@@ -199,6 +325,15 @@ export default function Navigation() {
             </div>
 
             {PRIMARY_NAV_LINKS.filter(l => !['/pricing', '/contact'].includes(l.href)).map((link, i) => (
+=======
+        <div ref={mobilePanelRef} className="lg:hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
+          {PRIMARY_NAV_LINKS.map((link, i) => (
+            <NavLink key={i} link={link} onClick={() => setMobileOpen(false)} />
+          ))}
+          <div className="border-t border-slate-800 pt-2 mt-2">
+            <div className="text-[10px] text-slate-500 uppercase tracking-wider font-bold mb-1 px-3">Solutions</div>
+            {SOLUTION_LINKS.map((link, i) => (
+>>>>>>> Stashed changes
               <NavLink key={i} link={link} onClick={() => setMobileOpen(false)} />
             ))}
 

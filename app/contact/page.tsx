@@ -49,15 +49,41 @@ export default function ContactPage() {
             <h2 className="text-2xl font-semibold text-white mb-6">Quick Actions</h2>
             <div className="space-y-4">
               <Link href="/configurator/" className="btn-primary w-full text-center block">
-                Get Your Custom Proposal →
+                ⚙️ Get Your Custom Proposal →
               </Link>
               <Link href="/services/" className="btn-secondary w-full text-center block">
-                Browse All Services
+                🛠️ Browse All Services
               </Link>
               <a href="tel:+13024640950" className="btn-secondary w-full text-center block">
                 ☎ Call Now
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Service Categories Quick Links */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-white text-center mb-8">Browse by Category</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { key: 'ai', label: 'AI Services', emoji: '🧠' },
+              { key: 'it', label: 'IT Services', emoji: '🖥️' },
+              { key: 'cloud', label: 'Cloud', emoji: '☁️' },
+              { key: 'security', label: 'Security', emoji: '🔐' },
+              { key: 'data', label: 'Data', emoji: '📊' },
+              { key: 'automation', label: 'Automation', emoji: '🤖' },
+            ].map(cat => (
+              <Link
+                key={cat.key}
+                href={`/services?category=${cat.key}`}
+                className="glass-card text-center hover:border-purple-500/40 transition-all group"
+              >
+                <div className="text-3xl mb-2">{cat.emoji}</div>
+                <div className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">
+                  {cat.label}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -79,4 +105,4 @@ export default function ContactPage() {
       </div>
     </main>
   );
-}
+}
