@@ -50,6 +50,8 @@ const recentActions: Action[] = [
   { id: 'a102', timestamp: '2026-06-19 15:30', bot: '@Cloud_Windows_bot', agentName: 'Cloud', action: 'SOC 2 compliance verification', result: 'All security controls verified. Zero findings.', category: 'monitoring', duration: '40m', impact: 'Compliance met' },
   { id: 'a101', timestamp: '2026-06-19 15:00', bot: '@windows_carol_bot', agentName: 'Carol', action: 'Deep site crawl — all links verified 200', result: 'Homepage, services, categories, monitoring, pricing all return 200.', category: 'quality', duration: '15m', impact: '0 broken links' },
   { id: 'a100', timestamp: '2026-06-19 14:30', bot: '@windows_carol_bot', agentName: 'Carol', action: 'Deployed waves 259-261 to production (+22 services)', result: 'AI/IT/Micro-SaaS services deployed with market pricing.', category: 'deploy', duration: '38m', impact: '+22 services deployed' },
+  { id: 'a099', timestamp: '2026-06-19 14:00', bot: '@Kilo_openclaw_kleber_bot', agentName: 'Kilo', action: 'Fixed CI/CD — jest config roots + passWithNoTests', result: 'Jest no longer scans home directory. Tests pass.', category: 'fix', duration: '20m', impact: 'Pipeline fixed' },
+  { id: 'a098', timestamp: '2026-06-19 13:30', bot: '@tablet_kleber_bot', agentName: 'Tablet', action: 'Wave 267 created — 5 new real services', result: 'AI Voice Agent, Churn Prediction, Feature Flags, ITIL Desk, Video Analyzer.', category: 'content', duration: '1h', impact: '+5 services' },
 ];
 
 const categoryColor: Record<string, string> = {
