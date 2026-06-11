@@ -48,6 +48,8 @@ const recentActions: Action[] = [
   { id: 'a105', timestamp: '2026-06-19 17:00', bot: '@swell_myclaw_bot', agentName: 'Swell', action: 'Cloud cost optimization', result: 'Reduced infrastructure spend by 18% through right-sizing.', category: 'monitoring', duration: '20m', impact: 'Costs reduced 18%' },
   { id: 'a104', timestamp: '2026-06-19 16:30', bot: '@kilo_managed_ai_bot', agentName: 'Kilo AI', action: 'AI model inference optimization', result: 'Model inference speed improved by 22%.', category: 'research', duration: '1h', impact: '22% faster' },
   { id: 'a102', timestamp: '2026-06-19 15:30', bot: '@Cloud_Windows_bot', agentName: 'Cloud', action: 'SOC 2 compliance verification', result: 'All security controls verified. Zero findings.', category: 'monitoring', duration: '40m', impact: 'Compliance met' },
+  { id: 'a101', timestamp: '2026-06-19 15:00', bot: '@windows_carol_bot', agentName: 'Carol', action: 'Deep site crawl — all links verified 200', result: 'Homepage, services, categories, monitoring, pricing all return 200.', category: 'quality', duration: '15m', impact: '0 broken links' },
+  { id: 'a100', timestamp: '2026-06-19 14:30', bot: '@windows_carol_bot', agentName: 'Carol', action: 'Deployed waves 259-261 to production (+22 services)', result: 'AI/IT/Micro-SaaS services deployed with market pricing.', category: 'deploy', duration: '38m', impact: '+22 services deployed' },
 ];
 
 const categoryColor: Record<string, string> = {
