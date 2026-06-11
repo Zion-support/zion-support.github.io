@@ -34,14 +34,15 @@ const catEmoji: Record<string, string> = {
   monitoring: '📊', integration: '🔗', quality: '✅', research: '🔬',
 };
 
-// Animated heartbeat dot component
-function HeartbeatDot({ size = 'sm' }: { size?: 'sm' | 'md' }) {
-  const s = size === 'md' ? 'w-3 h-3' : 'w-2 h-2';
-  const ps = size === 'md' ? 'w-3 h-3' : 'w-2 h-2';
+// Animated heartbeat dot with glow effect
+function HeartbeatDot({ size = 'sm', color = 'emerald' }: { size?: 'sm' | 'md' | 'lg'; color?: 'emerald' | 'red' | 'amber' }) {
+  const s = size === 'lg' ? 'w-4 h-4' : size === 'md' ? 'w-3 h-3' : 'w-2 h-2';
+  const pingColor = color === 'red' ? 'bg-red-400' : color === 'amber' ? 'bg-amber-400' : 'bg-emerald-400';
+  const dotColor = color === 'red' ? 'bg-red-500' : color === 'amber' ? 'bg-amber-500' : 'bg-emerald-500';
   return (
     <span className={`relative flex ${s} shrink-0`}>
-      <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75`} />
-      <span className={`relative inline-flex rounded-full ${ps} bg-emerald-500`} />
+      <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${pingColor} opacity-75`} />
+      <span className={`relative inline-flex rounded-full ${s} ${dotColor}`} />
     </span>
   );
 }
