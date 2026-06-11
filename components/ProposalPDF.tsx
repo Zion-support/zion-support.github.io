@@ -1,6 +1,6 @@
 'use client';
 
-import type { Proposal } from '../lib/portal-storage';
+import type { Proposal } from '../lib/portal-storage.js';
 
 // Stub: @react-pdf/renderer not installed
 // Install with: npm install @react-pdf/renderer
