@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Security Services | Zion Tech Group',
@@ -8,5 +7,18 @@ export const metadata: Metadata = {
 };
 
 export default function SecurityServicesPage() {
-  redirect('/services/?category=security');
+  return (
+    <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#020617' }}>
+      <div style={{ textAlign: 'center', padding: '2rem' }}>
+        <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>Redirecting to Security Services...</p>
+        <meta httpEquiv="refresh" content="0;url=/services/?category=security" />
+        <script dangerouslySetInnerHTML={{ __html: `window.location.replace('/services/?category=security');` }} />
+        <p style={{ marginTop: '1rem' }}>
+          <a href="/services/?category=security" style={{ color: '#a78bfa', textDecoration: 'underline' }}>
+            Click here if not redirected
+          </a>
+        </p>
+      </div>
+    </main>
+  );
 }

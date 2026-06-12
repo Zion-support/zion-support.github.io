@@ -73,6 +73,30 @@ import { wave246AiCodeReviewServices, wave246IncidentManagementServices, wave246
 import { wave247AiTranslationServices, wave247DigitalHumansServices, wave247PredictiveMaintenanceServices, wave247UptimeMonitoringServices, wave247AiCodeGenerationServices } from './wave247';
 import { wave248AiServices, wave248ItServices, wave248MicroSaasServices } from './wave248';
 import { wave249AiServices, wave249ItServices, wave249MicroSaasServices } from './wave249';
+import { wave250AiDevopsPlatformServices, wave250CloudCostOptimizationServices, wave250DataMeshPlatformServices, wave250AiCustomerSupportServices, wave250EdgeAiPlatformServices } from './wave250';
+import { wave251AiVideoGenerationServices, wave251BlockchainIdentityServices, wave251SmartBuildingIotServices, wave251AiFinancialPlanningServices, wave251RoboticProcessAutomationServices } from './wave251';
+import { wave252AiCodeSecurityServices, wave252NaturalLanguageDataServices, wave252AiRecruitingServices, wave252DigitalTwinSimulationServices, wave252AiAccessibilityTestingServices } from './wave252';
+import { wave253AiSupplyChainServices, wave253VoiceCloningAiServices, wave253AiLegalResearchServices, wave253AutonomousMobileRobotsServices, wave253AiClimateRiskServices } from './wave253';
+import { wave254AiServices, wave254ItServices, wave254MicroSaasServices } from './wave254';
+import { wave255AiServices, wave255ItServices, wave255MicroSaasServices } from './wave255';
+import { wave256AiServices, wave256ItServices, wave256MicroSaasServices } from './wave256';
+import { wave257AiServices, wave257ItServices, wave257MicroSaasServices } from './wave257';
+import { wave258AiServices, wave258ItServices, wave258MicroSaasServices } from './wave258';
+import { wave259AiServices, wave259ItServices, wave259MicroSaasServices } from './wave259';
+import { wave260AiServices, wave260ItServices, wave260MicroSaasServices } from './wave260';
+import { wave261AiServices, wave261ItServices, wave261MicroSaasServices } from './wave261';
+import { wave262AiServices, wave262ItServices, wave262MicroSaasServices } from './wave262';
+import { wave263AiServices, wave263ItServices, wave263MicroSaasServices } from './wave263';
+import { wave264Services } from './wave264';
+import { wave265Services, wave266Services } from './wave265';
+import { wave267Services } from './wave267';
+import { wave268Services } from './wave268';
+import { wave269Services } from './wave269';
+import { wave270Services } from './wave270';
+import { wave271Services } from './wave271';
+import { wave272Services } from './wave272';
+import { wave273Services } from './wave273';
+import { wave274Services } from './wave274';
 
 export const aiServices: Service[] = [
   {
@@ -1607,4 +1631,65 @@ export const allServices: Service[] = [
   ...wave249AiServices,
   ...wave249ItServices,
   ...wave249MicroSaasServices,
+  ...wave250AiDevopsPlatformServices,
+  ...wave250CloudCostOptimizationServices,
+  ...wave250DataMeshPlatformServices,
+  ...wave250AiCustomerSupportServices,
+  ...wave250EdgeAiPlatformServices,
+  ...wave251AiVideoGenerationServices,
+  ...wave251BlockchainIdentityServices,
+  ...wave251SmartBuildingIotServices,
+  ...wave251AiFinancialPlanningServices,
+  ...wave251RoboticProcessAutomationServices,
+  ...wave252AiCodeSecurityServices,
+  ...wave252NaturalLanguageDataServices,
+  ...wave252AiRecruitingServices,
+  ...wave252DigitalTwinSimulationServices,
+  ...wave252AiAccessibilityTestingServices,
+  ...wave253AiSupplyChainServices,
+  ...wave253VoiceCloningAiServices,
+  ...wave253AiLegalResearchServices,
+  ...wave253AutonomousMobileRobotsServices,
+  ...wave253AiClimateRiskServices,
+  ...wave254AiServices,
+  ...wave254ItServices,
+  ...wave254MicroSaasServices,
+  ...wave255AiServices,
+  ...wave255ItServices,
+  ...wave255MicroSaasServices,
+  ...wave256AiServices,
+  ...wave256ItServices,
+  ...wave256MicroSaasServices,
+  ...wave257AiServices,
+  ...wave257ItServices,
+  ...wave257MicroSaasServices,
+  ...wave258AiServices,
+  ...wave258ItServices,
+  ...wave258MicroSaasServices,
+  ...wave259AiServices,
+  ...wave259ItServices,
+  ...wave259MicroSaasServices,
+  ...wave260AiServices,
+  ...wave260ItServices,
+  ...wave260MicroSaasServices,
+  ...wave261AiServices,
+  ...wave261ItServices,
+  ...wave261MicroSaasServices,
+  ...wave262AiServices,
+  ...wave262ItServices,
+  ...wave262MicroSaasServices,
+  ...wave263AiServices,
+  ...wave263ItServices,
+  ...wave263MicroSaasServices,
+  ...wave264Services,
+  ...wave265Services,
+  ...wave266Services,
+  ...wave267Services,
+  ...wave268Services,
+  ...wave269Services,
+  ...wave270Services,
+  ...wave271Services,
+  ...wave272Services,
+  ...wave273Services,
+  ...wave274Services,
 ].filter((s: Service) => s.benefits.length > 0);

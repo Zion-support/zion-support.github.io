@@ -1,12 +1,24 @@
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'IoT & Edge Services | Zion Tech Group',
-  description: 'IoT and edge computing services — device management, edge AI, sensor networks, and industrial IoT solutions.',
+  title: 'IoT Services | Zion Tech Group',
+  description: 'Internet of Things services — IoT platforms, device management, edge computing, and smart systems integration.',
   alternates: { canonical: 'https://ziontechgroup.com/services/?category=iot' },
 };
 
-export default function IoTServicesPage() {
-  redirect('/services/?category=iot');
+export default function IotServicesPage() {
+  return (
+    <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#020617' }}>
+      <div style={{ textAlign: 'center', padding: '2rem' }}>
+        <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>Redirecting to IoT Services...</p>
+        <meta httpEquiv="refresh" content="0;url=/services/?category=iot" />
+        <script dangerouslySetInnerHTML={{ __html: `window.location.replace('/services/?category=iot');` }} />
+        <p style={{ marginTop: '1rem' }}>
+          <a href="/services/?category=iot" style={{ color: '#a78bfa', textDecoration: 'underline' }}>
+            Click here if not redirected
+          </a>
+        </p>
+      </div>
+    </main>
+  );
 }

@@ -9,14 +9,23 @@ const Navigation: React.FC = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const SOLUTIONS = [
+    { key: 'ai', label: 'AI & Machine Learning', emoji: '🧠', desc: '550+ AI services' },
+    { key: 'it', label: 'IT & Infrastructure', emoji: '🖥️', desc: '180+ IT services' },
+    { key: 'cloud', label: 'Cloud & DevOps', emoji: '☁️', desc: '90+ cloud services' },
+    { key: 'security', label: 'Cybersecurity', emoji: '🔐', desc: '95+ security services' },
+    { key: 'micro-saas', label: 'Micro-SaaS Products', emoji: '🚀', desc: '65+ SaaS solutions' },
+    { key: 'data', label: 'Data & Analytics', emoji: '📊', desc: '70+ data services' },
+  ];
+
   const CATEGORIES = [
-    { key: 'ai',        label: 'AI Services',           emoji: '🧠', count: '550+' },
-    { key: 'it',        label: 'IT Services',            emoji: '🖥️', count: '180+' },
-    { key: 'cloud',     label: 'Cloud Services',          emoji: '☁️', count: '90+' },
-    { key: 'security',  label: 'Security Services',        emoji: '🔐', count: '95+' },
-    { key: 'data',      label: 'Data Analytics',           emoji: '📊', count: '70+' },
-    { key: 'automation',label: 'Automation & DevOps',      emoji: '🤖', count: '55+' },
-    { key: 'micro-saas',label: 'Micro-SaaS Solutions',     emoji: '🚀', count: '65+' },
+    { key: 'ai', label: 'AI Services', emoji: '🧠', count: '550+' },
+    { key: 'it', label: 'IT Services', emoji: '🖥️', count: '180+' },
+    { key: 'cloud', label: 'Cloud Services', emoji: '☁️', count: '90+' },
+    { key: 'security', label: 'Security Services', emoji: '🔐', count: '95+' },
+    { key: 'data', label: 'Data Analytics', emoji: '📊', count: '70+' },
+    { key: 'automation', label: 'Automation & DevOps', emoji: '🤖', count: '55+' },
+    { key: 'micro-saas', label: 'Micro-SaaS Solutions', emoji: '🚀', count: '65+' },
   ];
 
   return (
@@ -89,8 +98,12 @@ const Navigation: React.FC = () => {
             <Link href="/contact" className="text-gray-300 hover:text-emerald-400 hover:bg-slate-800/50 px-3 py-2 rounded-lg text-sm font-medium transition-all">
               Contact
             </Link>
-            <Link href="/agents-monitoring" className="inline-flex items-center gap-2 text-white hover:text-emerald-200 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-lg">
-              📊 Monitoring
+            <Link href="/agents-monitoring" className="inline-flex items-center gap-2 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-lg">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+              </span>
+              📊 Live Monitoring
             </Link>
           </div>
 
