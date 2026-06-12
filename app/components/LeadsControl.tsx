@@ -252,7 +252,7 @@ export default function LeadsControl() {
   const [priorityFilter, setPriorityFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
-  const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats' | 'email' | 'analytics'>('leads');
+  const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats' | 'email' | 'analytics' | 'partnerships'>('leads');
   const [currentTime, setCurrentTime] = useState('');
   const [composeTemplate, setComposeTemplate] = useState('');
   const [composeSubject, setComposeSubject] = useState('');
@@ -656,6 +656,7 @@ export default function LeadsControl() {
             { id: 'stats' as const, label: '📊 Pipeline' },
             { id: 'email' as const, label: '📬 Emails' },
             { id: 'analytics' as const, label: '📈 Analytics' },
+            { id: 'partnerships' as const, label: `🤝 Partnerships (${leads.filter(l => l.source === 'Email Partnership').length})` },
           ]).map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 text-xs py-2 rounded-md transition font-medium whitespace-nowrap ${activeTab === tab.id ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800/60'}`}>
               {tab.label}
@@ -953,6 +954,103 @@ export default function LeadsControl() {
                 <div><span className="text-slate-400">Mobile:</span> <span className="text-slate-200">+1 302 464 0950</span></div>
                 <div><span className="text-slate-400">Email:</span> <span className="text-slate-200">kleber@ziontechgroup.com</span></div>
                 <div className="md:col-span-2"><span className="text-slate-400">Address:</span> <span className="text-slate-200">364 E Main St STE 1008, Middletown, DE 19709</span></div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── Partnerships Tab ─────────────────────────────────────────────────── */}
+        {activeTab === 'partnerships' && (
+          <div className="space-y-6">
+            {/* Partnership Overview */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              {(() => {
+                const p = leads.filter(l => l.source === 'Email Partnership');
+                const stages = [
+                  { label: 'Identified', status: 'new', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20' },
+                  { label: 'Contacted', status: 'contacted', color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
+                  { label: 'Replied', status: 'replied', color: 'text-purple-400', bg: 'bg-purple-500/10 border-purple-500/20' },
+                  { label: 'Qualified', status: 'qualified', color: 'text-emerald-400', bg: 'bg-emerald-500/10 border-emerald-500/20' },
+                  { label: 'Converted', status: 'converted', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20' },
+                ];
+                return stages.map(s => {
+                  const count = p.filter(l => l.status === s.status).length;
+                  return (
+                    <div key={s.status} className={"rounded-lg p-4 text-center border " + s.bg}>
+                      <div className={"text-3xl font-bold " + s.color}>{count}</div>
+                      <div className="text-[10px] text-slate-500 mt-1">{s.label}</div>
+                      <div className="text-[9px] text-slate-600">{p.length > 0 ? Math.round((count / p.length) * 100) : 0}%</div>
+                    </div>
+                  );
+                });
+              })()}
+            </div>
+
+            {/* Partnership Leads List */}
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">Partnership Leads ({leads.filter(l => l.source === 'Email Partnership').length})</h3>
+              <div className="space-y-3">
+                {leads.filter(l => l.source === 'Email Partnership').sort((a, b) => b.score - a.score).map(l => {
+                  const statusColors: Record<string, string> = { new: 'bg-blue-500', contacted: 'bg-amber-500', replied: 'bg-purple-500', qualified: 'bg-emerald-500', converted: 'bg-green-500', lost: 'bg-red-500' };
+                  const statusLabels: Record<string, string> = { new: '🆕 New', contacted: '📧 Contacted', replied: '💬 Replied', qualified: '✅ Qualified', converted: '🎉 Converted', lost: '❌ Lost' };
+                  return (
+                    <div key={l.id} className="bg-slate-800/50 rounded-lg p-4 hover:bg-slate-800/70 transition">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-sm font-semibold text-slate-100">{l.company}</span>
+                            <span className="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300">{l.industry}</span>
+                            <span className={"text-[9px] px-1.5 py-0.5 rounded " + (statusColors[l.status] ? 'text-white ' + statusColors[l.status] : 'bg-slate-600 text-slate-300')}>{statusLabels[l.status] || l.status}</span>
+                            {l.website && <a href={l.website} target="_blank" rel="noopener" className="text-[10px] text-cyan-400 hover:underline">🌐 Website</a>}
+                          </div>
+                          <div className="text-xs text-slate-400 mt-1">{l.contact} · {l.email}</div>
+                          <div className="text-[11px] text-slate-500 mt-2 leading-relaxed">{l.notes}</div>
+                          <div className="flex items-center gap-3 mt-2 flex-wrap">
+                            <span className="text-[9px] text-slate-500">Size: <span className="text-slate-300">{l.companySize || 'N/A'}</span></span>
+                            <span className="text-[9px] text-slate-500">Budget: <span className="text-slate-300">{l.budgetRange || 'N/A'}</span></span>
+                            <span className="text-[9px] text-slate-500">Timeline: <span className="text-slate-300">{l.decisionTimeline || 'N/A'}</span></span>
+                            <span className="text-[9px] text-slate-500">Services: <span className="text-amber-300">{l.services.slice(0, 2).join(', ')}{l.services.length > 2 ? '...' : ''}</span></span>
+                          </div>
+                        </div>
+                        <div className="text-right shrink-0 flex flex-col items-end gap-1">
+                          <div className="text-lg font-bold text-amber-400">{l.score}</div>
+                          <div className="text-[8px] text-slate-500 uppercase">Score</div>
+                          <div className="text-[9px] text-slate-600 mt-1">{l.dateFound}</div>
+                          <div className="text-[9px] text-slate-600">Last: {l.lastContact || '—'}</div>
+                        </div>
+                      </div>
+                      {/* Quick Actions */}
+                      <div className="mt-3 pt-3 border-t border-slate-700/50 flex items-center gap-2">
+                        <button onClick={() => { navigator.clipboard.writeText(l.email || ''); }} className="text-[10px] px-2 py-1 rounded bg-slate-700/50 text-slate-300 hover:bg-slate-700 transition">📋 Copy Email</button>
+                        {l.email && <a href={"mailto:" + l.email + "?subject=Re: Partnership Discussion - Zion Tech Group"} className="text-[10px] px-2 py-1 rounded bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition">📧 Compose</a>}
+                        {l.website && <a href={l.website} target="_blank" rel="noopener" className="text-[10px] px-2 py-1 rounded bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 transition">🌐 Visit</a>}
+                        <div className="flex-1" />
+                        <button onClick={() => setLeads(prev => prev.map(lead => lead.id === l.id ? { ...lead, status: 'contacted' as LeadStatus, lastContact: new Date().toISOString().split('T')[0] } : lead))} className="text-[10px] px-2 py-1 rounded bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition">📧 Mark Contacted</button>
+                        <button onClick={() => setLeads(prev => prev.map(lead => lead.id === l.id ? { ...lead, status: 'replied' as LeadStatus, lastContact: new Date().toISOString().split('T')[0] } : lead))} className="text-[10px] px-2 py-1 rounded bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition">💬 Mark Replied</button>
+                        <button onClick={() => setLeads(prev => prev.map(lead => lead.id === l.id ? { ...lead, status: 'qualified' as LeadStatus } : lead))} className="text-[10px] px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 transition">✅ Qualify</button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Partnership Email Activity */}
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">📨 Partnership Email Activity</h3>
+              <div className="space-y-2">
+                {EMAIL_ACTIVITY.filter(e => e.classification === 'partnership').map(email => (
+                  <div key={email.id} className="bg-slate-800/50 rounded-lg p-3 flex items-center justify-between hover:bg-slate-800/70 transition">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-slate-200">{email.recipient}</span>
+                        <span className="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300">{email.classification}</span>
+                      </div>
+                      <div className="text-[10px] text-slate-500 truncate">{email.subject}</div>
+                    </div>
+                    <div className="text-[9px] text-slate-500 shrink-0 ml-3">{email.timestamp.split('T')[1]?.slice(0, 5) || ''}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
