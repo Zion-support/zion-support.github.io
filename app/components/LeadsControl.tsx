@@ -107,7 +107,7 @@ function revenuePotential(lead: Lead): number {
 
 // ─── Sample data ─────────────────────────────────────────────────────────────
 
-const INDUSTRIES = ['all', 'SaaS', 'Healthcare', 'Retail', 'FinTech', 'Cloud', 'EdTech', 'Banking', 'Logistics', 'Healthcare IT', 'Retail/E-commerce', 'Cybersecurity', 'Insurance', 'Legal Tech', 'Real Estate Tech', 'Manufacturing'];
+const INDUSTRIES = ['all', 'SaaS', 'Healthcare', 'Retail', 'FinTech', 'Cloud', 'EdTech', 'Banking', 'Logistics', 'Healthcare IT', 'Retail/E-commerce', 'Cybersecurity', 'Insurance', 'Legal Tech', 'Real Estate Tech', 'Manufacturing', 'AI/Voice', 'AI/Chatbot', 'AI/Platform', 'Cloud/AI', 'Cloud/Monitoring', 'AI/Discovery'];
 
 const MANUAL_LEADS: Lead[] = [
   { id: 'l001', company: 'TechStart Inc', contact: 'Sarah Chen', email: 'sarah@techstart.io', source: 'LinkedIn', industry: 'SaaS', status: 'new', score: 85, notes: 'Looking for AI chatbot solution', dateFound: '2026-06-10', lastContact: '', services: ['AI Chatbot Builder', 'AI Customer Support Copilot'], website: 'https://techstart.io', linkedin: 'https://linkedin.com/company/techstart', companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '1-3 months' },
@@ -244,7 +244,7 @@ export default function LeadsControl() {
   const [priorityFilter, setPriorityFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
-  const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats' | 'email'>('leads');
+  const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats' | 'email' | 'analytics'>('leads');
   const [currentTime, setCurrentTime] = useState('');
   const [composeTemplate, setComposeTemplate] = useState('');
   const [composeSubject, setComposeSubject] = useState('');
@@ -642,6 +642,7 @@ export default function LeadsControl() {
             { id: 'templates' as const, label: `📧 Templates (${OUTREACH_TEMPLATES.length})` },
             { id: 'stats' as const, label: '📊 Pipeline' },
             { id: 'email' as const, label: '📬 Email Activity' },
+            { id: 'analytics' as const, label: '📈 Analytics' },
           ]).map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 text-xs py-2 rounded-md transition font-medium whitespace-nowrap ${activeTab === tab.id ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800/60'}`}>
               {tab.label}
@@ -901,6 +902,131 @@ export default function LeadsControl() {
                 <div><span className="text-slate-400">Mobile:</span> <span className="text-slate-200">+1 302 464 0950</span></div>
                 <div><span className="text-slate-400">Email:</span> <span className="text-slate-200">kleber@ziontechgroup.com</span></div>
                 <div className="md:col-span-2"><span className="text-slate-400">Address:</span> <span className="text-slate-200">364 E Main St STE 1008, Middletown, DE 19709</span></div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── Analytics Tab ──────────────────────────────────────────────────── */}
+        {activeTab === 'analytics' && (
+          <div className="space-y-6">
+            {/* Key Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-amber-400">${(stats.totalRevenue / 1000).toFixed(0)}K</div>
+                <div className="text-[10px] text-slate-500 mt-1">Total Pipeline Value</div>
+              </div>
+              <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-emerald-400">{stats.total > 0 ? ((stats.converted / stats.total) * 100).toFixed(1) : 0}%</div>
+                <div className="text-[10px] text-slate-500 mt-1">Conversion Rate</div>
+              </div>
+              <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-cyan-400">${stats.total > 0 ? Math.round(stats.totalRevenue / stats.total / 1000) : 0}K</div>
+                <div className="text-[10px] text-slate-500 mt-1">Avg Deal Size</div>
+              </div>
+              <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-purple-400">{stats.avgScore}</div>
+                <div className="text-[10px] text-slate-500 mt-1">Avg Lead Score</div>
+              </div>
+            </div>
+
+            {/* Lead Source Breakdown */}
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">📊 Lead Sources</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {(() => {
+                  const sources = ['LinkedIn', 'Referral', 'Cold Outreach', 'Email Partnership', 'Web Search', 'Conference', 'Manual Entry'];
+                  const colors = ['text-blue-400', 'text-emerald-400', 'text-amber-400', 'text-purple-400', 'text-cyan-400', 'text-pink-400', 'text-slate-400'];
+                  return sources.map((src, i) => {
+                    const count = leads.filter(l => l.source === src).length;
+                    if (count === 0) return null;
+                    return (
+                      <div key={i} className="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div className={`text-2xl font-bold ${colors[i]}`}>{count}</div>
+                        <div className="text-[10px] text-slate-500">{src}</div>
+                        <div className="text-[9px] text-slate-600">{((count / leads.length) * 100).toFixed(0)}%</div>
+                      </div>
+                    );
+                  });
+                })()}
+              </div>
+            </div>
+
+            {/* Industry Breakdown */}
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">🏭 Industry Breakdown</h3>
+              <div className="space-y-2">
+                {(() => {
+                  const industries = [...new Set(leads.map(l => l.industry))];
+                  return industries.map(ind => {
+                    const count = leads.filter(l => l.industry === ind).length;
+                    const pct = (count / leads.length) * 100;
+                    return (
+                      <div key={ind} className="flex items-center gap-3">
+                        <span className="text-xs text-slate-400 w-32 truncate">{ind}</span>
+                        <div className="flex-1 h-5 bg-slate-800 rounded-full overflow-hidden">
+                          <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 rounded-full" style={{ width: `${Math.max(5, pct)}%` }} />
+                        </div>
+                        <span className="text-xs text-slate-500 w-16 text-right">{count} ({pct.toFixed(0)}%)</span>
+                      </div>
+                    );
+                  });
+                })()}
+              </div>
+            </div>
+
+            {/* Follow-up Reminders */}
+            <div className="bg-gradient-to-r from-red-500/10 to-amber-500/10 border border-red-500/20 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-red-300 mb-4">⏰ Follow-up Reminders</h3>
+              <div className="space-y-3">
+                {leads
+                  .filter(l => l.status !== 'converted' && l.status !== 'lost')
+                  .map(l => {
+                    const daysSince = l.lastContact ? Math.floor((Date.now() - new Date(l.lastContact).getTime()) / 86400000) : Math.floor((Date.now() - new Date(l.dateFound).getTime()) / 86400000);
+                    const needsFollowUp = daysSince >= 3;
+                    const urgency = daysSince >= 7 ? '🔴' : daysSince >= 3 ? '🟡' : '🟢';
+                    return { ...l, daysSince, needsFollowUp, urgency };
+                  })
+                  .filter(l => l.needsFollowUp)
+                  .sort((a, b) => b.daysSince - a.daysSince)
+                  .slice(0, 10)
+                  .map(l => (
+                    <div key={l.id} className="bg-slate-900/60 rounded-lg p-3 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg">{l.urgency}</span>
+                        <div>
+                          <div className="text-xs font-semibold text-slate-200">{l.company}</div>
+                          <div className="text-[10px] text-slate-500">{l.contact} · {l.industry} · Score: {l.score}</div>
+                        </div>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <div className="text-xs text-slate-400">{l.daysSince}d ago</div>
+                        <div className="text-[10px] text-slate-500">{l.lastContact || l.dateFound}</div>
+                      </div>
+                    </div>
+                  ))}
+                {leads.filter(l => {
+                  const days = l.lastContact ? Math.floor((Date.now() - new Date(l.lastContact).getTime()) / 86400000) : Math.floor((Date.now() - new Date(l.dateFound).getTime()) / 86400000);
+                  return days >= 3 && l.status !== 'converted' && l.status !== 'lost';
+                }).length === 0 && (
+                  <div className="text-center py-6 text-slate-500">
+                    <div className="text-3xl mb-2">✅</div>
+                    <div className="text-sm">All leads are up to date!</div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* AI Scoring Suggestions */}
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-purple-300 mb-4">🤖 AI Scoring Suggestions</h3>
+              <div className="space-y-2 text-xs text-slate-400">
+                <p>💡 <strong className="text-slate-300">Enterprise + Immediate timeline</strong> → Score 90+ (high intent)</p>
+                <p>💡 <strong className="text-slate-300">$100K+ budget + 1-3 months</strong> → Score 85+ (qualified)</p>
+                <p>💡 <strong className="text-slate-300">SMB + 6+ months</strong> → Score 50-60 (nurture)</p>
+                <p>💡 <strong className="text-slate-300">Email Partnership source</strong> → +10 bonus (warm lead)</p>
+                <p>💡 <strong className="text-slate-300">No contact in 7+ days</strong> → -10 penalty (decay)</p>
+                <p>💡 <strong className="text-slate-300">Multiple pain points matched</strong> → +5 per match</p>
               </div>
             </div>
           </div>
