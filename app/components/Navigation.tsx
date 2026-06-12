@@ -159,12 +159,12 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Primary nav links (Pricing, About, Contact, AI Agents) */}
-          {PRIMARY_NAV_LINKS.filter(l => !['/', '/services', '/solutions'].includes(l.href)).map((link, i) => (
+          {/* Primary nav links — filtered to exclude links we render separately below */}
+          {PRIMARY_NAV_LINKS.filter(l => !['/', '/services', '/solutions', '/agents-monitoring'].includes(l.href)).map((link, i) => (
             <NavLink key={i} link={link} />
           ))}
 
-          {/* Agent Dashboard - Always visible with live indicator */}
+          {/* Agent Dashboard — prominently styled with live pulse indicator */}
           <Link href="/agents-monitoring" className="relative ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-600/80 to-purple-600/80 text-xs font-semibold text-white hover:from-violet-500 hover:to-purple-500 transition-all flex items-center gap-1.5">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />

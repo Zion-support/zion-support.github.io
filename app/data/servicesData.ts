@@ -92,6 +92,8 @@ import { wave265Services, wave266Services } from './wave265';
 import { wave267Services } from './wave267';
 import { wave268Services } from './wave268';
 import { wave269Services } from './wave269';
+import { wave270Services } from './wave270';
+import { wave271Services } from './wave271';
 
 export const aiServices: Service[] = [
   {
@@ -1682,4 +1684,6 @@ export const allServices: Service[] = [
   ...wave267Services,
   ...wave268Services,
   ...wave269Services,
+  ...wave270Services,
+  ...wave271Services,
 ].filter((s: Service) => s.benefits.length > 0);
