@@ -1,0 +1,351 @@
+{
+  "run_time": "2026-06-12T12:02:17.323928",
+  "total_scanned": 50,
+  "replied": 10,
+  "skipped": 40,
+  "errors": 0,
+  "drafts_saved": 0,
+  "replied_emails": [
+    {
+      "id": "19ebc2a31061d4d0",
+      "thread_id": "19ebc2a31061d4d0",
+      "from": "Kathlen Sambo no TikTok <notification@service.tiktok.com>",
+      "subject": "\ud83d\udc64 Voc\u00ea conhece Kathlen Sambo?",
+      "date": "Fri, 12 Jun 2026 14:09:00 +0000",
+      "classification": "general",
+      "sent_id": "19ebc59a7921008b"
+    },
+    {
+      "id": "19ebc23ae3338af5",
+      "thread_id": "19ebc23ae3338af5",
+      "from": "\"Ita\u00fa Personnalit\u00e9\" <itau.personnalite@itau.com.br>",
+      "subject": "Gerencie o uso do seu Limite da Conta com facilidade.",
+      "date": "Fri, 12 Jun 2026 08:01:55 -0600",
+      "classification": "general",
+      "sent_id": "19ebc59be2b3dc7a"
+    },
+    {
+      "id": "19ebc2048e9fbbe7",
+      "thread_id": "19eb7fb0252c0575",
+      "from": "Mariana Pimentel <mariana.pimentel@ziontechgroup.com>",
+      "subject": "Re: Contrata\u00e7\u00e3o de recursos t\u00e9cnicos - RC26-04916",
+      "date": "Fri, 12 Jun 2026 10:57:45 -0300",
+      "classification": "general",
+      "sent_id": "19ebc59cd944db15"
+    },
+    {
+      "id": "19ebc1d2958931bd",
+      "thread_id": "19ebc1c00489ee6d",
+      "from": "Retell AI Team <support@retellai.com>",
+      "subject": "Re: Voice AI Partnership - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:54:47 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc59d72e62171"
+    },
+    {
+      "id": "19ebc1c59015ad2f",
+      "thread_id": "19ebc1c00489ee6d",
+      "from": "Evy AI <support@retellai.com>",
+      "subject": "Re: Voice AI Partnership - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:53:54 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc59e4737a69f"
+    },
+    {
+      "id": "19ebc1a73fcd317b",
+      "thread_id": "19ebb193562e7279",
+      "from": "Retell AI Team <support@retellai.com>",
+      "subject": "Re: Voice AI Partnership Opportunity - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:51:50 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc59f9bdcb986"
+    },
+    {
+      "id": "19ebc0fcfd0787fe",
+      "thread_id": "19ebc0fcfd0787fe",
+      "from": "\"A.I. Chatbots\" <contact@stammer.ai>",
+      "subject": "Ticket Received - Re: Ticket Received - Re: Ticket Received - Re: Ticket Received - Re: Ticket Received - Voice AI Partnership Opportunity - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:40:12 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc5a0b1f209c0"
+    },
+    {
+      "id": "19ebc0fba3ccf88d",
+      "thread_id": "19ebc0fba3ccf88d",
+      "from": "\"A.I. Chatbots\" <contact@stammer.ai>",
+      "subject": "Ticket Received - Re: Ticket Received - Re: Ticket Received - Re: Ticket Received - Voice AI Partnership - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:40:07 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc5a1486f8a45"
+    },
+    {
+      "id": "19ebc0fad88af79f",
+      "thread_id": "19ebc0fad88af79f",
+      "from": "\"A.I. Chatbots\" <contact@stammer.ai>",
+      "subject": "Ticket Received - Re: Ticket Received - Re: Ticket Received - Re: Ticket Received - Re: Ticket Received - Voice AI Partnership Opportunity - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:40:03 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc5a252952ac7"
+    },
+    {
+      "id": "19ebc0f97f7649ec",
+      "thread_id": "19ebc0f97f7649ec",
+      "from": "\"A.I. Chatbots\" <contact@stammer.ai>",
+      "subject": "Ticket Received - Re: Ticket Received - Re: Ticket Received - Re: Ticket Received - Partnership Follow-up - Zion Tech Group",
+      "date": "Fri, 12 Jun 2026 13:39:58 +0000",
+      "classification": "partnership",
+      "sent_id": "19ebc5a2f88d1ae4"
+    }
+  ],
+  "skipped_emails": [
+    {
+      "id": "19ebc4416cef0d2a",
+      "from": "Mail Delivery System <MAILER-DAEMON@mailstream-eu1.mxrecord.io>",
+      "subject": "Undelivered Mail Returned to Sender",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebc4347e330a09",
+      "from": "Partnerships <gtm-partnerships+noreply@anthropic.com>",
+      "subject": "Re: AI Infrastructure Partnership - Zion Tech Group",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebc42d4fb811bc",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "Re: [Zion-support/zion-support.github.io] \ud83d\udd34 Core Web Vitals Below Threshold \u2014 2026-03-09 (Issue #34456)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebc29c587f6f40",
+      "from": "Mail Delivery System <MAILER-DAEMON@mailstream-eu1.mxrecord.io>",
+      "subject": "Undelivered Mail Returned to Sender",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebc29bd0016ad9",
+      "from": "Partnerships <gtm-partnerships+noreply@anthropic.com>",
+      "subject": "Re: AI Infrastructure Partnership - Zion Tech Group",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebc27df5bfc4d9",
+      "from": "Veloe <noreply@novidades.veloe.com.br>",
+      "subject": "Eco IlhaBela e Veloe",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebc212940225bd",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "[Zion-support/zion-support.github.io] Unstoppable guard: checks failed on 3a087c8 (Issue #36471)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1e031c95b47",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1df31db4197",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1de86160605",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1dde3b3c172",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1dd7beca4f2",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1dc8be81eec",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1dc65cdf1b8",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1db671cab73",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1db26fab03f",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1dadfa3c9ab",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1da7a51caeb",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "[Zion-support/zion-support.github.io] Auto security patch broke build on 3990156 (Issue #36454)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1d98507ec05",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1d8e917b343",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1d1adf29a4a",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "[Zion-support/zion-support.github.io] Unstoppable guard: checks failed on 3990156 (Issue #36453)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1cffa1bd1e1",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1cee137bd8b",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1cec5e6096c",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1ce6894e77b",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1ce2ecd3f82",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1cb192e2d7d",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "[Zion-support/zion-support.github.io] Dependency audit failed on 3990156 (Issue #36452)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1c54f9a6d06",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "[Zion-support/zion-support.github.io] Broken links detected on 3990156 (Issue #36451)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1c483657d05",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1c4022fd25b",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1c33f1fc60d",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Delay)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1c1043ac060",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1bfd95d1813",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1be6ef3ca0a",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1bdf8be6c6b",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1bd8c086a41",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb16d3754b4b7",
+      "from": "\"github-actions[bot]\" <notifications@github.com>",
+      "subject": "[Zion-support/zion-support.github.io] Lighthouse CI failed on 1dd7259 (Issue #36450)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb1487583a25b",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb147a99c537f",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    },
+    {
+      "id": "19ebb147a2f44fbc",
+      "from": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>",
+      "subject": "Delivery Status Notification (Failure)",
+      "skip_reason": "auto/system sender"
+    }
+  ],
+  "error_details": [],
+  "by_classification": {
+    "skip": 40,
+    "general": 3,
+    "partnership": 7
+  },
+  "skip_reasons": {
+    "auto/system sender": 40
+  }
+}

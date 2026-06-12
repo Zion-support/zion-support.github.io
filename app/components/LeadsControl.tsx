@@ -1,7 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
+
+// ─── Types ───────────────────────────────────────────────────────────────────
+
+type LeadStatus = 'new' | 'contacted' | 'replied' | 'qualified' | 'converted' | 'lost';
+type Priority = 'hot' | 'warm' | 'cold';
+type CompanySize = 'SMB' | 'Mid-Market' | 'Enterprise';
+type DecisionTimeline = 'Immediate' | '1-3 months' | '3-6 months' | '6+ months';
+type BudgetRange = '$1K-$10K' | '$10K-$50K' | '$50K-$100K' | '$100K+';
 
 interface Lead {
   id: string;
@@ -10,7 +18,7 @@ interface Lead {
   email: string;
   source: string;
   industry: string;
-  status: 'new' | 'contacted' | 'replied' | 'qualified' | 'converted' | 'lost';
+  status: LeadStatus;
   score: number;
   notes: string;
   dateFound: string;
@@ -18,6 +26,11 @@ interface Lead {
   services: string[];
   website?: string;
   painPoints?: string[];
+  // Enrichment fields
+  linkedin?: string;
+  companySize?: CompanySize;
+  budgetRange?: BudgetRange;
+  decisionTimeline?: DecisionTimeline;
 }
 
 interface OutreachTemplate {
@@ -29,55 +42,120 @@ interface OutreachTemplate {
   industry?: string;
 }
 
-// Original manual leads
+interface EmailActivity {
+  id: string;
+  recipient: string;
+  subject: string;
+  classification: string;
+  timestamp: string;
+  status: 'sent' | 'replied' | 'bounced';
+}
+
+interface GmailStatus {
+  connected: boolean;
+  tokenValid: boolean;
+  lastSyncTime: string;
+  emailsProcessedToday: number;
+}
+
+interface FilterPreset {
+  id: string;
+  name: string;
+  filters: {
+    status: string;
+    industry: string;
+    priority: string;
+    dateFrom: string;
+    dateTo: string;
+  };
+}
+
+interface PipelineStage {
+  label: string;
+  count: number;
+  total: number;
+  color: string;
+  avgDaysInStage: number;
+}
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function getPriority(score: number): Priority {
+  if (score >= 80) return 'hot';
+  if (score >= 60) return 'warm';
+  return 'cold';
+}
+
+function getPriorityConfig(priority: Priority) {
+  switch (priority) {
+    case 'hot':
+      return { emoji: '🔥', label: 'Hot', bg: 'bg-red-500/20', text: 'text-red-300', border: 'border-red-500/30' };
+    case 'warm':
+      return { emoji: '🌡️', label: 'Warm', bg: 'bg-amber-500/20', text: 'text-amber-300', border: 'border-amber-500/30' };
+    case 'cold':
+      return { emoji: '❄️', label: 'Cold', bg: 'bg-blue-500/20', text: 'text-blue-300', border: 'border-blue-500/30' };
+  }
+}
+
+function revenuePotential(lead: Lead): number {
+  const base = lead.industry === 'FinTech' || lead.industry === 'Banking' ? 80000 :
+    lead.industry === 'Healthcare' || lead.industry === 'Healthcare IT' ? 60000 :
+    lead.industry === 'Cybersecurity' ? 70000 :
+    lead.industry === 'Cloud' ? 50000 : 30000;
+  return Math.round((lead.score / 100) * base);
+}
+
+// ─── Sample data ─────────────────────────────────────────────────────────────
+
+const INDUSTRIES = ['all', 'SaaS', 'Healthcare', 'Retail', 'FinTech', 'Cloud', 'EdTech', 'Banking', 'Logistics', 'Healthcare IT', 'Retail/E-commerce', 'Cybersecurity', 'Insurance', 'Legal Tech', 'Real Estate Tech', 'Manufacturing'];
+
 const MANUAL_LEADS: Lead[] = [
-  { id: 'l001', company: 'TechStart Inc', contact: 'Sarah Chen', email: 'sarah@techstart.io', source: 'LinkedIn', industry: 'SaaS', status: 'new', score: 85, notes: 'Looking for AI chatbot solution', dateFound: '2026-06-10', lastContact: '', services: ['AI Chatbot Builder', 'AI Customer Support Copilot'] },
-  { id: 'l002', company: 'MedFlow Health', contact: 'Dr. James Wilson', email: 'jwilson@medflow.com', source: 'Web Search', industry: 'Healthcare', status: 'contacted', score: 92, notes: 'Needs patient scheduling AI + HIPAA compliance', dateFound: '2026-06-09', lastContact: '2026-06-11', services: ['AI Patient Scheduling', 'AI Clinical Trial Matching'] },
-  { id: 'l003', company: 'RetailMax Corp', contact: 'Maria Garcia', email: 'mgarcia@retailmax.com', source: 'Cold Outreach', industry: 'Retail', status: 'replied', score: 78, notes: 'Interested in personalization engine', dateFound: '2026-06-08', lastContact: '2026-06-10', services: ['AI Retail Personalization', 'Subscription Analytics'] },
-  { id: 'l004', company: 'FinanceHub', contact: 'Robert Kim', email: 'rkim@financehub.io', source: 'Referral', industry: 'FinTech', status: 'qualified', score: 95, notes: 'Ready to sign for fraud detection + financial close automation', dateFound: '2026-06-07', lastContact: '2026-06-11', services: ['AI Fraud Detection', 'AI Financial Close Automation'] },
-  { id: 'l005', company: 'CloudScale Systems', contact: 'Alex Turner', email: 'aturner@cloudscale.io', source: 'LinkedIn', industry: 'Cloud', status: 'new', score: 88, notes: 'Needs cloud cost optimization + DRaaS', dateFound: '2026-06-11', lastContact: '', services: ['Cloud Cost Optimization', 'DRaaS'] },
-  { id: 'l006', company: 'EduLearn Platform', contact: 'Lisa Park', email: 'lpark@edulearn.com', source: 'Web Search', industry: 'EdTech', status: 'contacted', score: 82, notes: 'Looking for personalized learning platform', dateFound: '2026-06-09', lastContact: '2026-06-10', services: ['AI Personalized Learning', 'AI Form Builder'] },
-  { id: 'l007', company: 'SecureBank', contact: 'Michael Brown', email: 'mbrown@securebank.com', source: 'Conference', industry: 'Banking', status: 'new', score: 90, notes: 'Needs MDR 24/7 + zero trust network', dateFound: '2026-06-11', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'] },
-  { id: 'l008', company: 'LogiTrans', contact: 'David Lee', email: 'dlee@logitrans.com', source: 'Cold Outreach', industry: 'Logistics', status: 'contacted', score: 75, notes: 'Interested in supply chain risk intelligence', dateFound: '2026-06-08', lastContact: '2026-06-09', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'] },
+  { id: 'l001', company: 'TechStart Inc', contact: 'Sarah Chen', email: 'sarah@techstart.io', source: 'LinkedIn', industry: 'SaaS', status: 'new', score: 85, notes: 'Looking for AI chatbot solution', dateFound: '2026-06-10', lastContact: '', services: ['AI Chatbot Builder', 'AI Customer Support Copilot'], website: 'https://techstart.io', linkedin: 'https://linkedin.com/company/techstart', companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '1-3 months' },
+  { id: 'l002', company: 'MedFlow Health', contact: 'Dr. James Wilson', email: 'jwilson@medflow.com', source: 'Referral', industry: 'Healthcare', status: 'contacted', score: 92, notes: 'Needs patient scheduling AI + HIPAA compliance', dateFound: '2026-06-09', lastContact: '2026-06-11', services: ['AI Patient Scheduling', 'AI Clinical Trial Matching'], website: 'https://medflow.com', linkedin: 'https://linkedin.com/company/medflow', companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: 'Immediate' },
+  { id: 'l003', company: 'RetailMax Corp', contact: 'Maria Garcia', email: 'mgarcia@retailmax.com', source: 'LinkedIn', industry: 'Retail', status: 'replied', score: 78, notes: 'Interested in personalization engine', dateFound: '2026-06-08', lastContact: '2026-06-10', services: ['AI Retail Personalization', 'Subscription Analytics'], website: 'https://retailmax.com', linkedin: 'https://linkedin.com/company/retailmax', companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
+  { id: 'l004', company: 'FinanceHub', contact: 'Robert Kim', email: 'rkim@financehub.io', source: 'LinkedIn', industry: 'FinTech', status: 'qualified', score: 95, notes: 'Ready to sign for fraud detection + financial close automation', dateFound: '2026-06-07', lastContact: '2026-06-11', services: ['AI Fraud Detection', 'AI Financial Close Automation'], website: 'https://financehub.io', linkedin: 'https://linkedin.com/company/financehub', companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: 'Immediate' },
+  { id: 'l005', company: 'CloudScale Systems', contact: 'Alex Turner', email: 'aturner@cloudscale.io', source: 'LinkedIn', industry: 'Cloud', status: 'new', score: 88, notes: 'Needs cloud cost optimization + DRaaS', dateFound: '2026-06-11', lastContact: '', services: ['Cloud Cost Optimization', 'DRaaS'], website: 'https://cloudscale.io', companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '1-3 months' },
+  { id: 'l006', company: 'EduLearn Platform', contact: 'Lisa Park', email: 'lpark@edulearn.com', source: 'Referral', industry: 'EdTech', status: 'contacted', score: 82, notes: 'Looking for personalized learning platform', dateFound: '2026-06-09', lastContact: '2026-06-10', services: ['AI Personalized Learning', 'AI Form Builder'], website: 'https://edulearn.com', companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '3-6 months' },
+  { id: 'l007', company: 'SecureBank', contact: 'Michael Brown', email: 'mbrown@securebank.com', source: 'LinkedIn', industry: 'Banking', status: 'new', score: 90, notes: 'Needs MDR 24/7 + zero trust network', dateFound: '2026-06-11', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], website: 'https://securebank.com', linkedin: 'https://linkedin.com/company/securebank', companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: 'Immediate' },
+  { id: 'l008', company: 'LogiTrans', contact: 'David Lee', email: 'dlee@logitrans.com', source: 'LinkedIn', industry: 'Logistics', status: 'contacted', score: 75, notes: 'Interested in supply chain risk intelligence', dateFound: '2026-06-08', lastContact: '2026-06-09', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], website: 'https://logitrans.com', companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '1-3 months' },
 ];
 
-// Auto-discovered prospects from lead finder
 const DISCOVERED_LEADS: Lead[] = [
-  { id: 'd001', company: 'HealthTech Solutions', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Healthcare IT', status: 'new', score: 72, notes: 'Healthcare IT company seeking AI solutions for patient analytics', dateFound: '2026-06-12', lastContact: '', services: ['AI Patient Scheduling', 'AI Clinical Trial Matching'], painPoints: ['EHR integration', 'patient data analytics', 'HIPAA compliance'] },
-  { id: 'd002', company: 'PayGuard Financial', contact: 'Discovery', email: '', source: 'Web Search', industry: 'FinTech', status: 'new', score: 68, notes: 'FinTech company exploring AI fraud detection and compliance automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['fraud detection', 'compliance AI', 'AML'] },
-  { id: 'd003', company: 'ShopSmart AI', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Retail/E-commerce', status: 'new', score: 65, notes: 'E-commerce platform looking for AI personalization and recommendation engine', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['recommendation engine', 'churn prediction', 'dynamic pricing'] },
-  { id: 'd004', company: 'EduVance Learning', contact: 'Discovery', email: '', source: 'Web Search', industry: 'EdTech', status: 'new', score: 63, notes: 'EdTech company seeking adaptive learning and automated grading solutions', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['personalized learning', 'automated grading', 'engagement AI'] },
-  { id: 'd005', company: 'LogiFlow Systems', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Logistics', status: 'new', score: 61, notes: 'Logistics company exploring AI route optimization and demand forecasting', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['route optimization', 'demand forecasting', 'predictive maintenance'] },
-  { id: 'd006', company: 'MediCore Health', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Healthcare IT', status: 'new', score: 70, notes: 'Healthcare organization seeking clinical decision support AI', dateFound: '2026-06-12', lastContact: '', services: ['AI Clinical Trial Matching', 'AI Patient Scheduling'], painPoints: ['clinical decision support', 'AI diagnostics', 'operational efficiency'] },
-  { id: 'd007', company: 'FinSecure Global', contact: 'Discovery', email: '', source: 'Web Search', industry: 'FinTech', status: 'new', score: 67, notes: 'Financial services firm exploring AI risk assessment and credit scoring', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['risk assessment', 'credit scoring', 'regulatory compliance'] },
-  { id: 'd008', company: 'RetailHub Pro', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Retail/E-commerce', status: 'new', score: 62, notes: 'Retail company seeking AI inventory management and customer segmentation', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['inventory AI', 'customer segmentation', 'conversion optimization'] },
-  { id: 'd009', company: 'LearnTech Academy', contact: 'Discovery', email: '', source: 'Web Search', industry: 'EdTech', status: 'new', score: 59, notes: 'Education platform looking for AI tutor and content generation', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['AI tutor', 'content generation', 'student analytics'] },
-  { id: 'd010', company: 'ChainSync Logistics', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Logistics', status: 'new', score: 58, notes: 'Supply chain company exploring predictive maintenance and risk intelligence', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['predictive maintenance', 'supply chain visibility', 'risk intelligence'] },
-  { id: 'd011', company: 'CyberShield Inc', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Cybersecurity', status: 'new', score: 66, notes: 'Cybersecurity company seeking AI threat detection and SIEM solutions', dateFound: '2026-06-12', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], painPoints: ['threat detection', 'SIEM AI', 'zero trust'] },
-  { id: 'd012', company: 'InsureTech Pro', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Insurance', status: 'new', score: 64, notes: 'Insurance company exploring AI claims processing and risk scoring', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['claims automation', 'risk scoring', 'fraud detection'] },
-  { id: 'd013', company: 'LegalAI Systems', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Legal Tech', status: 'new', score: 60, notes: 'Legal tech company seeking AI contract analysis and compliance', dateFound: '2026-06-12', lastContact: '', services: ['AI Document Processing Pipeline', 'AI Compliance Monitor'], painPoints: ['contract analysis', 'legal research AI', 'compliance'] },
-  { id: 'd014', company: 'PropTech Valuations', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Real Estate Tech', status: 'new', score: 57, notes: 'Real estate tech company exploring AI property valuation and market prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Predictive Churn Analytics', 'Subscription Analytics'], painPoints: ['property valuation AI', 'market prediction', 'virtual tours'] },
-  { id: 'd015', company: 'FactoryAI Manufacturing', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Manufacturing', status: 'new', score: 69, notes: 'Manufacturing company seeking Industry 4.0 AI and predictive maintenance', dateFound: '2026-06-12', lastContact: '', services: ['Predictive Maintenance IoT', 'AI Supply Chain Risk'], painPoints: ['predictive maintenance', 'quality AI', 'digital twin'] },
-  { id: 'd016', company: 'MedVista Health Systems', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Healthcare IT', status: 'new', score: 71, notes: 'Healthcare IT provider exploring AI-powered clinical documentation and EHR optimization', dateFound: '2026-06-12', lastContact: '', services: ['AI Patient Scheduling', 'AI Clinical Trial Matching'], painPoints: ['EHR integration', 'clinical documentation AI', 'interoperability'] },
-  { id: 'd017', company: 'ClearPay FinTech', contact: 'Discovery', email: '', source: 'Web Search', industry: 'FinTech', status: 'new', score: 66, notes: 'Payment processing company seeking AI transaction monitoring and regulatory reporting automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['transaction monitoring', 'regulatory reporting', 'payment fraud'] },
-  { id: 'd018', company: 'StyleNest Commerce', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Retail/E-commerce', status: 'new', score: 64, notes: 'Fashion e-commerce platform looking for AI-driven product recommendations and visual search', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['visual search', 'product recommendations', 'return rate reduction'] },
-  { id: 'd019', company: 'SkillForge Academy', contact: 'Discovery', email: '', source: 'Web Search', industry: 'EdTech', status: 'new', score: 62, notes: 'Online learning platform seeking AI skill-gap analysis and adaptive curriculum generation', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['skill-gap analysis', 'curriculum automation', 'learner retention'] },
-  { id: 'd020', company: 'FreightWise Global', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Logistics', status: 'new', score: 60, notes: 'Freight forwarding company exploring AI shipment tracking and customs documentation automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['shipment tracking', 'customs automation', 'carrier optimization'] },
-  { id: 'd021', company: 'SentinelOne Defense', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Cybersecurity', status: 'new', score: 73, notes: 'Cybersecurity firm seeking AI-powered endpoint detection and automated incident response', dateFound: '2026-06-12', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], painPoints: ['endpoint detection', 'incident response automation', 'threat hunting'] },
-  { id: 'd022', company: 'PolicyBridge Insurance', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Insurance', status: 'new', score: 65, notes: 'Insurance brokerage exploring AI underwriting automation and customer risk profiling', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['underwriting automation', 'risk profiling', 'policy administration'] },
-  { id: 'd023', company: 'LexiCounsel Partners', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Legal Tech', status: 'new', score: 58, notes: 'Legal tech startup seeking AI legal research automation and deposition summarization', dateFound: '2026-06-12', lastContact: '', services: ['AI Document Processing Pipeline', 'AI Compliance Monitor'], painPoints: ['legal research AI', 'deposition summarization', 'case law analysis'] },
-  { id: 'd024', company: 'UrbanNest Realty Tech', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Real Estate Tech', status: 'new', score: 56, notes: 'PropTech company exploring AI rental price optimization and tenant screening automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Predictive Churn Analytics', 'Subscription Analytics'], painPoints: ['rental pricing AI', 'tenant screening', 'property management automation'] },
-  { id: 'd025', company: 'PrecisionWorks Manufacturing', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Manufacturing', status: 'new', score: 67, notes: 'Industrial manufacturer seeking AI-powered quality inspection and production line optimization', dateFound: '2026-06-12', lastContact: '', services: ['Predictive Maintenance IoT', 'AI Supply Chain Risk'], painPoints: ['quality inspection AI', 'production optimization', 'defect detection'] },
-  { id: 'd026', company: 'HealthBridge Analytics', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Healthcare IT', status: 'new', score: 74, notes: 'Healthcare analytics firm exploring AI population health management and readmission prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Clinical Trial Matching', 'AI Patient Scheduling'], painPoints: ['population health AI', 'readmission prediction', 'care coordination'] },
-  { id: 'd027', company: 'VaultEdge Capital', contact: 'Discovery', email: '', source: 'Web Search', industry: 'FinTech', status: 'new', score: 63, notes: 'Wealth management platform seeking AI portfolio optimization and client risk assessment', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['portfolio optimization', 'client risk assessment', 'regulatory compliance'] },
-  { id: 'd028', company: 'CartLoop Retail', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Retail/E-commerce', status: 'new', score: 61, notes: 'D2C brand platform exploring AI cart abandonment recovery and customer lifetime value prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['cart abandonment', 'CLV prediction', 'omnichannel personalization'] },
-  { id: 'd029', company: 'BrightPath Education', contact: 'Discovery', email: '', source: 'Web Search', industry: 'EdTech', status: 'new', score: 59, notes: 'K-12 edtech company seeking AI attendance tracking and early intervention prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['attendance tracking', 'early intervention', 'parent engagement'] },
-  { id: 'd030', company: 'PortLink Maritime', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Logistics', status: 'new', score: 57, notes: 'Maritime logistics company exploring AI port congestion prediction and vessel routing optimization', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['port congestion', 'vessel routing', 'fuel optimization'] },
-  { id: 'd031', company: 'CyberFortress Security', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Cybersecurity', status: 'new', score: 70, notes: 'Managed security provider seeking AI vulnerability prioritization and automated patch management', dateFound: '2026-06-12', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], painPoints: ['vulnerability prioritization', 'patch management', 'security posture'] },
-  { id: 'd032', company: 'SureGuard Underwriters', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Insurance', status: 'new', score: 62, notes: 'Commercial insurance provider exploring AI claims adjudication and subrogation detection', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['claims adjudication', 'subrogation detection', 'loss reserving'] },
-  { id: 'd033', company: 'ContractMind Legal', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Legal Tech', status: 'new', score: 55, notes: 'Contract lifecycle management platform seeking AI clause extraction and obligation tracking', dateFound: '2026-06-12', lastContact: '', services: ['AI Document Processing Pipeline', 'AI Compliance Monitor'], painPoints: ['clause extraction', 'obligation tracking', 'contract risk scoring'] },
-  { id: 'd034', company: 'HomeSphere PropTech', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Real Estate Tech', status: 'new', score: 54, notes: 'Smart home real estate platform exploring AI energy efficiency scoring and maintenance prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Predictive Churn Analytics', 'Subscription Analytics'], painPoints: ['energy scoring', 'maintenance prediction', 'smart home integration'] },
-  { id: 'd035', company: 'AutoMate Industrial', contact: 'Discovery', email: '', source: 'Web Search', industry: 'Manufacturing', status: 'new', score: 68, notes: 'Automotive parts manufacturer seeking AI robotic process automation and supply chain digitization', dateFound: '2026-06-12', lastContact: '', services: ['Predictive Maintenance IoT', 'AI Supply Chain Risk'], painPoints: ['robotic automation', 'supply chain digitization', 'yield optimization'] },
+  { id: 'd001', company: 'HealthTech Solutions', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Healthcare IT', status: 'new', score: 72, notes: 'Healthcare IT company seeking AI solutions for patient analytics', dateFound: '2026-06-12', lastContact: '', services: ['AI Patient Scheduling', 'AI Clinical Trial Matching'], painPoints: ['EHR integration', 'patient data analytics', 'HIPAA compliance'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '1-3 months' },
+  { id: 'd002', company: 'PayGuard Financial', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'FinTech', status: 'new', score: 68, notes: 'FinTech company exploring AI fraud detection and compliance automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['fraud detection', 'compliance AI', 'AML'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '3-6 months' },
+  { id: 'd003', company: 'ShopSmart AI', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Retail/E-commerce', status: 'new', score: 65, notes: 'E-commerce platform looking for AI personalization and recommendation engine', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['recommendation engine', 'churn prediction', 'dynamic pricing'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '1-3 months' },
+  { id: 'd004', company: 'EduVance Learning', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'EdTech', status: 'new', score: 63, notes: 'EdTech company seeking adaptive learning and automated grading solutions', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['personalized learning', 'automated grading', 'engagement AI'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '3-6 months' },
+  { id: 'd005', company: 'LogiFlow Systems', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Logistics', status: 'new', score: 61, notes: 'Logistics company exploring AI route optimization and demand forecasting', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['route optimization', 'demand forecasting', 'predictive maintenance'], companySize: 'Mid-Market', budgetRange: '$10K-$50K', decisionTimeline: '6+ months' },
+  { id: 'd006', company: 'MediCore Health', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Healthcare IT', status: 'new', score: 70, notes: 'Healthcare organization seeking clinical decision support AI', dateFound: '2026-06-12', lastContact: '', services: ['AI Clinical Trial Matching', 'AI Patient Scheduling'], painPoints: ['clinical decision support', 'AI diagnostics', 'operational efficiency'], companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
+  { id: 'd007', company: 'FinSecure Global', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'FinTech', status: 'new', score: 67, notes: 'Financial services firm exploring AI risk assessment and credit scoring', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['risk assessment', 'credit scoring', 'regulatory compliance'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '1-3 months' },
+  { id: 'd008', company: 'RetailHub Pro', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Retail/E-commerce', status: 'new', score: 62, notes: 'Retail company seeking AI inventory management and customer segmentation', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['inventory AI', 'customer segmentation', 'conversion optimization'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '3-6 months' },
+  { id: 'd009', company: 'LearnTech Academy', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'EdTech', status: 'new', score: 59, notes: 'Education platform looking for AI tutor and content generation', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['AI tutor', 'content generation', 'student analytics'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd010', company: 'ChainSync Logistics', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Logistics', status: 'new', score: 58, notes: 'Supply chain company exploring predictive maintenance and risk intelligence', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['predictive maintenance', 'supply chain visibility', 'risk intelligence'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '3-6 months' },
+  { id: 'd011', company: 'CyberShield Inc', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Cybersecurity', status: 'new', score: 66, notes: 'Cybersecurity company seeking AI threat detection and SIEM solutions', dateFound: '2026-06-12', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], painPoints: ['threat detection', 'SIEM AI', 'zero trust'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '1-3 months' },
+  { id: 'd012', company: 'InsureTech Pro', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Insurance', status: 'new', score: 64, notes: 'Insurance company exploring AI claims processing and risk scoring', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['claims automation', 'risk scoring', 'fraud detection'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '3-6 months' },
+  { id: 'd013', company: 'LegalAI Systems', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Legal Tech', status: 'new', score: 60, notes: 'Legal tech company seeking AI contract analysis and compliance', dateFound: '2026-06-12', lastContact: '', services: ['AI Document Processing Pipeline', 'AI Compliance Monitor'], painPoints: ['contract analysis', 'legal research AI', 'compliance'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: 'Immediate' },
+  { id: 'd014', company: 'PropTech Valuations', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Real Estate Tech', status: 'new', score: 57, notes: 'Real estate tech company exploring AI property valuation and market prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Predictive Churn Analytics', 'Subscription Analytics'], painPoints: ['property valuation AI', 'market prediction', 'virtual tours'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd015', company: 'FactoryAI Manufacturing', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Manufacturing', status: 'new', score: 69, notes: 'Manufacturing company seeking Industry 4.0 AI and predictive maintenance', dateFound: '2026-06-12', lastContact: '', services: ['Predictive Maintenance IoT', 'AI Supply Chain Risk'], painPoints: ['predictive maintenance', 'quality AI', 'digital twin'], companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
+  { id: 'd016', company: 'MedVista Health Systems', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Healthcare IT', status: 'new', score: 71, notes: 'Healthcare IT provider exploring AI-powered clinical documentation and EHR optimization', dateFound: '2026-06-12', lastContact: '', services: ['AI Patient Scheduling', 'AI Clinical Trial Matching'], painPoints: ['EHR integration', 'clinical documentation AI', 'interoperability'], companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
+  { id: 'd017', company: 'ClearPay FinTech', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'FinTech', status: 'new', score: 66, notes: 'Payment processing company seeking AI transaction monitoring and regulatory reporting automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['transaction monitoring', 'regulatory reporting', 'payment fraud'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '1-3 months' },
+  { id: 'd018', company: 'StyleNest Commerce', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Retail/E-commerce', status: 'new', score: 64, notes: 'Fashion e-commerce platform looking for AI-driven product recommendations and visual search', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['visual search', 'product recommendations', 'return rate reduction'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '1-3 months' },
+  { id: 'd019', company: 'SkillForge Academy', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'EdTech', status: 'new', score: 62, notes: 'Online learning platform seeking AI skill-gap analysis and adaptive curriculum generation', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['skill-gap analysis', 'curriculum automation', 'learner retention'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd020', company: 'FreightWise Global', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Logistics', status: 'new', score: 60, notes: 'Freight forwarding company exploring AI shipment tracking and customs documentation automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['shipment tracking', 'customs automation', 'carrier optimization'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '3-6 months' },
+  { id: 'd021', company: 'SentinelOne Defense', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Cybersecurity', status: 'new', score: 73, notes: 'Cybersecurity firm seeking AI-powered endpoint detection and automated incident response', dateFound: '2026-06-12', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], painPoints: ['endpoint detection', 'incident response automation', 'threat hunting'], companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: 'Immediate' },
+  { id: 'd022', company: 'PolicyBridge Insurance', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Insurance', status: 'new', score: 65, notes: 'Insurance brokerage exploring AI underwriting automation and customer risk profiling', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['underwriting automation', 'risk profiling', 'policy administration'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '3-6 months' },
+  { id: 'd023', company: 'LexiCounsel Partners', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Legal Tech', status: 'new', score: 58, notes: 'Legal tech startup seeking AI legal research automation and deposition summarization', dateFound: '2026-06-12', lastContact: '', services: ['AI Document Processing Pipeline', 'AI Compliance Monitor'], painPoints: ['legal research AI', 'deposition summarization', 'case law analysis'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '3-6 months' },
+  { id: 'd024', company: 'UrbanNest Realty Tech', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Real Estate Tech', status: 'new', score: 56, notes: 'PropTech company exploring AI rental price optimization and tenant screening automation', dateFound: '2026-06-12', lastContact: '', services: ['AI Predictive Churn Analytics', 'Subscription Analytics'], painPoints: ['rental pricing AI', 'tenant screening', 'property management automation'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd025', company: 'PrecisionWorks Manufacturing', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Manufacturing', status: 'new', score: 67, notes: 'Industrial manufacturer seeking AI-powered quality inspection and production line optimization', dateFound: '2026-06-12', lastContact: '', services: ['Predictive Maintenance IoT', 'AI Supply Chain Risk'], painPoints: ['quality inspection AI', 'production optimization', 'defect detection'], companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
+  { id: 'd026', company: 'HealthBridge Analytics', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Healthcare IT', status: 'new', score: 74, notes: 'Healthcare analytics firm exploring AI population health management and readmission prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Clinical Trial Matching', 'AI Patient Scheduling'], painPoints: ['population health AI', 'readmission prediction', 'care coordination'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '1-3 months' },
+  { id: 'd027', company: 'VaultEdge Capital', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'FinTech', status: 'new', score: 63, notes: 'Wealth management platform seeking AI portfolio optimization and client risk assessment', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['portfolio optimization', 'client risk assessment', 'regulatory compliance'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '3-6 months' },
+  { id: 'd028', company: 'CartLoop Retail', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Retail/E-commerce', status: 'new', score: 61, notes: 'D2C brand platform exploring AI cart abandonment recovery and customer lifetime value prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Retail Personalization', 'Subscription Analytics'], painPoints: ['cart abandonment', 'CLV prediction', 'omnichannel personalization'], companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '1-3 months' },
+  { id: 'd029', company: 'BrightPath Education', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'EdTech', status: 'new', score: 59, notes: 'K-12 edtech company seeking AI attendance tracking and early intervention prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Personalized Learning', 'AI Form Builder'], painPoints: ['attendance tracking', 'early intervention', 'parent engagement'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd030', company: 'PortLink Maritime', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Logistics', status: 'new', score: 57, notes: 'Maritime logistics company exploring AI port congestion prediction and vessel routing optimization', dateFound: '2026-06-12', lastContact: '', services: ['AI Supply Chain Risk', 'Predictive Maintenance IoT'], painPoints: ['port congestion', 'vessel routing', 'fuel optimization'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '6+ months' },
+  { id: 'd031', company: 'CyberFortress Security', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Cybersecurity', status: 'new', score: 70, notes: 'Managed security provider seeking AI vulnerability prioritization and automated patch management', dateFound: '2026-06-12', lastContact: '', services: ['MDR 24/7', 'Zero Trust Network Access'], painPoints: ['vulnerability prioritization', 'patch management', 'security posture'], companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: 'Immediate' },
+  { id: 'd032', company: 'SureGuard Underwriters', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Insurance', status: 'new', score: 62, notes: 'Commercial insurance provider exploring AI claims adjudication and subrogation detection', dateFound: '2026-06-12', lastContact: '', services: ['AI Fraud Detection', 'AI Financial Close Automation'], painPoints: ['claims adjudication', 'subrogation detection', 'loss reserving'], companySize: 'Mid-Market', budgetRange: '$10K-$50K', decisionTimeline: '3-6 months' },
+  { id: 'd033', company: 'ContractMind Legal', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Legal Tech', status: 'new', score: 55, notes: 'Contract lifecycle management platform seeking AI clause extraction and obligation tracking', dateFound: '2026-06-12', lastContact: '', services: ['AI Document Processing Pipeline', 'AI Compliance Monitor'], painPoints: ['clause extraction', 'obligation tracking', 'contract risk scoring'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd034', company: 'HomeSphere PropTech', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Real Estate Tech', status: 'new', score: 54, notes: 'Smart home real estate platform exploring AI energy efficiency scoring and maintenance prediction', dateFound: '2026-06-12', lastContact: '', services: ['AI Predictive Churn Analytics', 'Subscription Analytics'], painPoints: ['energy scoring', 'maintenance prediction', 'smart home integration'], companySize: 'SMB', budgetRange: '$1K-$10K', decisionTimeline: '6+ months' },
+  { id: 'd035', company: 'AutoMate Industrial', contact: 'Discovery', email: '', source: 'LinkedIn', industry: 'Manufacturing', status: 'new', score: 68, notes: 'Automotive parts manufacturer seeking AI robotic process automation and supply chain digitization', dateFound: '2026-06-12', lastContact: '', services: ['Predictive Maintenance IoT', 'AI Supply Chain Risk'], painPoints: ['robotic automation', 'supply chain digitization', 'yield optimization'], companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
 ];
 
 const ALL_LEADS: Lead[] = [...MANUAL_LEADS, ...DISCOVERED_LEADS];
@@ -97,6 +175,27 @@ const OUTREACH_TEMPLATES: OutreachTemplate[] = [
   { id: 't012', name: 'Follow-Up #2 (7 days)', subject: '{{contact}}, quick question about {{company}} + AI', body: "Hi {{contact}},\n\nJust one quick question: Is {{company}} currently exploring any AI or automation initiatives?\n\nIf yes, I'd love to share what we're building for similar {{industry}} companies.\n\nIf no, no worries — I'll check back in a few months.\n\nEither way, happy to connect.\n\nBest,\nKleber Garcia\nZion Tech Group\n📱 +1 302 464 0950", category: 'Follow-Up' },
 ];
 
+// ─── email Activity data ───────────────────────────────────────────────────
+
+const EMAIL_ACTIVITY: EmailActivity[] = [
+  { id: 'e001', recipient: 'sarah@techstart.io', subject: 'Custom AI Solutions for TechStart Inc — Free Proposal Inside', classification: 'Introduction', timestamp: '2026-06-12T09:15:00', status: 'sent' },
+  { id: 'e002', recipient: 'jwilson@medflow.com', subject: 'AI Solutions for MedFlow Health', classification: 'Introduction', timestamp: '2026-06-11T14:30:00', status: 'replied' },
+  { id: 'e003', recipient: 'mgarcia@retailmax.com', subject: 'Following up: AI solutions for RetailMax Corp', classification: 'Follow-Up', timestamp: '2026-06-11T10:00:00', status: 'replied' },
+  { id: 'e004', recipient: 'rkim@financehub.io', subject: 'Custom Proposal for FinanceHub — Ready to Review', classification: 'Proposal', timestamp: '2026-06-10T16:45:00', status: 'sent' },
+  { id: 'e005', recipient: 'lpark@edulearn.com', subject: 'Personalized learning AI for EduLearn Platform', classification: 'Introduction', timestamp: '2026-06-10T11:20:00', status: 'bounced' },
+  { id: 'e006', recipient: 'mbrown@securebank.com', subject: 'SecureBank + AI threat detection — 24/7 protection', classification: 'Introduction', timestamp: '2026-06-09T08:00:00', status: 'sent' },
+  { id: 'e007', recipient: 'dlee@logitrans.com', subject: 'Cut LogiTrans logistics costs with AI — 30% savings', classification: 'Introduction', timestamp: '2026-06-09T09:30:00', status: 'sent' },
+];
+
+const GMAIL_STATUS: GmailStatus = {
+  connected: true,
+  tokenValid: true,
+  lastSyncTime: '2026-06-12T09:45:00',
+  emailsProcessedToday: 7,
+};
+
+// ─── Styles ──────────────────────────────────────────────────────────────────
+
 const STATUS_COLORS: Record<string, string> = {
   new: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
   contacted: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
@@ -115,22 +214,58 @@ const STATUS_LABELS: Record<string, string> = {
   lost: '❌ Lost',
 };
 
-const INDUSTRIES = ['all', 'SaaS', 'Healthcare', 'Retail', 'FinTech', 'Cloud', 'EdTech', 'Banking', 'Logistics', 'Healthcare IT', 'Retail/E-commerce', 'Cybersecurity', 'Insurance', 'Legal Tech', 'Real Estate Tech', 'Manufacturing'];
+const SMS = ['all', 'SaaS', 'Healthcare', 'Retail', 'FinTech', 'Cloud', 'EdTech', 'Banking', 'Logistics', 'Healthcare IT', 'Retail/E-commerce', 'Cybersecurity', 'Insurance', 'Legal Tech', 'Real Estate Tech', 'Manufacturing'] as const;
+
+const QUICK_REPLY_TEMPLATES = [
+  { label: 'Interested — Schedule Call', subject: 'Great! Let\'s Schedule a Call', body: 'Thanks for your interest! Would any of these times work for a quick 15-min call?\n\n• Today 3-5 PM\n• Tomorrow 10-12 PM\n\nBest,\nKleber Garcia' },
+  { label: 'Send More Info', subject: 'More Details About Our AI Solutions', body: 'Happy to share more details! Here\'s an overview of what we can build for you:\n\n• Custom AI solution tailored to your needs\n• ROI projection document\n• Implementation timeline\n\nLet me know if you\'d like to schedule a deeper dive!\n\nBest,\nKleber Garcia' },
+  { label: 'Not Right Now', subject: 'No Worries — Staying in Touch', body: 'Totally understand — timing isn\'t everything. I\'ll check back in a few weeks.\n\nIn the meantime, feel free to reach out if anything changes.\n\nBest,\nKleber Garcia' },
+  { label: 'Wrong Contact', subject: 'Reaching the Right Person', body: 'Thanks for letting me know! Could you point me to the right person for AI/automation initiatives at your company?\n\nBest,\nKleber Garcia' },
+];
+
+// ─── Component ───────────────────────────────────────────────────────────────
 
 export default function LeadsControl() {
   const [leads, setLeads] = useState<Lead[]>(ALL_LEADS);
   const [filter, setFilter] = useState<string>('all');
   const [industryFilter, setIndustryFilter] = useState<string>('all');
+  const [priorityFilter, setPriorityFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
-  const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats'>('leads');
+  const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats' | 'email'>('leads');
   const [currentTime, setCurrentTime] = useState('');
   const [composeTemplate, setComposeTemplate] = useState('');
   const [composeSubject, setComposeSubject] = useState('');
   const [composeBody, setComposeBody] = useState('');
   const [showAddLead, setShowAddLead] = useState(false);
-  const [newLead, setNewLead] = useState<Partial<Lead>>({ company: '', contact: '', email: '', industry: '', notes: '', services: [] });
+  const [selectedLeads, setSelectedLeads] = useState<Set<string>>(new Set());
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+  const [showPresets, setShowPresets] = useState(false);
+  const [filterPresets, setFilterPresets] = useState<FilterPreset[]>([
+    { id: 'p1', name: '🔥 Hot Leads', filters: { status: 'all', industry: 'all', priority: 'hot', dateFrom: '', dateTo: '' } },
+    { id: 'p2', name: '🆕 New This Week', filters: { status: 'new', industry: 'all', priority: 'all', dateFrom: '2026-06-07', dateTo: '2026-06-12' } },
+    { id: 'p3', name: '🏥 Healthcare', filters: { status: 'all', industry: 'Healthcare IT', priority: 'all', dateFrom: '', dateTo: '' } },
+  ]);
+  const [newLead, setNewLead] = useState<Partial<Lead>>({
+    company: '', contact: '', email: '', industry: '', notes: '', services: [],
+    website: '', linkedin: '', companySize: undefined, budgetRange: undefined, decisionTimeline: undefined,
+  });
+  const [bulkStatus, setBulkStatus] = useState<LeadStatus>('contacted');
+  const [showBulkMenu, setShowBulkMenu] = useState(false);
 
+  // ── Keyboard shortcuts ─────────────────────────────────────────────────────
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); setSearchQuery(''); const el = document.querySelector<HTMLInputElement>('input[placeholder*="Search"]'); el?.focus(); }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'a' && e.shiftKey) { e.preventDefault(); const visible = activeTab === 'leads' ? manualLeads : discoveredLeads; setSelectedLeads(new Set(visible.map(l => l.id))); }
+      if (e.key === 'Escape') { setSelectedLead(null); setShowAddLead(false); setShowBulkMenu(false); setShowPresets(false); }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  });
+
+  // ── Clock ───────────────────────────────────────────────────────────────────
   useEffect(() => {
     const update = () => setCurrentTime(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }));
     update();
@@ -138,20 +273,35 @@ export default function LeadsControl() {
     return () => clearInterval(interval);
   }, []);
 
-  const filteredLeads = leads.filter(l => {
-    if (filter !== 'all' && l.status !== filter) return false;
-    if (industryFilter !== 'all' && l.industry !== industryFilter) return false;
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      return l.company.toLowerCase().includes(q) || l.contact.toLowerCase().includes(q) || l.email.toLowerCase().includes(q) || l.industry.toLowerCase().includes(q);
-    }
-    return true;
-  });
+  // ── Filtering ─────────────────────────────────────────────────────────────
+  const filteredLeads = useMemo(() => {
+    return leads.filter(l => {
+      if (filter !== 'all' && l.status !== filter) return false;
+      if (industryFilter !== 'all' && l.industry !== industryFilter) return false;
+      if (priorityFilter !== 'all' && getPriority(l.score) !== priorityFilter) return false;
+      if (dateFrom && l.dateFound < dateFrom) return false;
+      if (dateTo && l.dateFound > dateTo) return false;
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase();
+        return l.company.toLowerCase().includes(q) ||
+          l.contact.toLowerCase().includes(q) ||
+          l.email.toLowerCase().includes(q) ||
+          l.industry.toLowerCase().includes(q) ||
+          l.notes.toLowerCase().includes(q) ||
+          l.services.some(s => s.toLowerCase().includes(q)) ||
+          (l.website || '').toLowerCase().includes(q) ||
+          (l.linkedin || '').toLowerCase().includes(q) ||
+          (l.painPoints || []).some(p => p.toLowerCase().includes(q));
+      }
+      return true;
+    });
+  }, [leads, filter, industryFilter, priorityFilter, dateFrom, dateTo, searchQuery]);
 
   const manualLeads = filteredLeads.filter(l => l.id.startsWith('l'));
   const discoveredLeads = filteredLeads.filter(l => l.id.startsWith('d'));
 
-  const stats = {
+  // ── Stats ───────────────────────────────────────────────────────────────────
+  const stats = useMemo(() => ({
     total: leads.length,
     manual: leads.filter(l => l.id.startsWith('l')).length,
     discovered: leads.filter(l => l.id.startsWith('d')).length,
@@ -161,14 +311,52 @@ export default function LeadsControl() {
     qualified: leads.filter(l => l.status === 'qualified').length,
     converted: leads.filter(l => l.status === 'converted').length,
     avgScore: Math.round(leads.reduce((s, l) => s + l.score, 0) / leads.length),
-    highScore: leads.filter(l => l.score >= 80).length,
-  };
+    hot: leads.filter(l => getPriority(l.score) === 'hot').length,
+    warm: leads.filter(l => getPriority(l.score) === 'warm').length,
+    cold: leads.filter(l => getPriority(l.score) === 'cold').length,
+    totalRevenue: leads.reduce((s, l) => s + revenuePotential(l), 0),
+  }), [leads]);
 
-  const updateLeadStatus = (id: string, status: Lead['status']) => {
+  const pipelineStages: PipelineStage[] = useMemo(() => [
+    { label: 'New', count: stats.new, total: stats.total, color: '#3b82f6', avgDaysInStage: 2 },
+    { label: 'Contacted', count: stats.contacted, total: stats.total, color: '#f59e0b', avgDaysInStage: 3 },
+    { label: 'Replied', count: stats.replied, total: stats.total, color: '#a855f7', avgDaysInStage: 5 },
+    { label: 'Qualified', count: stats.qualified, total: stats.total, color: '#10b981', avgDaysInStage: 7 },
+    { label: 'Converted', count: stats.converted, total: stats.total, color: '#22c55e', avgDaysInStage: 14 },
+  ], [stats]);
+
+  // ── Actions ─────────────────────────────────────────────────────────────────
+  const updateLeadStatus = useCallback((id: string, status: LeadStatus) => {
     setLeads(prev => prev.map(l => l.id === id ? { ...l, status, lastContact: new Date().toISOString().split('T')[0] } : l));
-  };
+  }, []);
 
-  const openCompose = (lead: Lead, templateId?: string) => {
+  const toggleLeadSelection = useCallback((id: string) => {
+    setSelectedLeads(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }, []);
+
+  const toggleSelectAll = useCallback(() => {
+    const visible = activeTab === 'leads' ? manualLeads : discoveredLeads;
+    const allSelected = visible.every(l => selectedLeads.has(l.id));
+    if (allSelected) {
+      setSelectedLeads(prev => {
+        const next = new Set(prev);
+        visible.forEach(l => next.delete(l.id));
+        return next;
+      });
+    } else {
+      setSelectedLeads(prev => {
+        const next = new Set(prev);
+        visible.forEach(l => next.add(l.id));
+        return next;
+      });
+    }
+  }, [activeTab, manualLeads, discoveredLeads, selectedLeads]);
+
+  const openCompose = useCallback((lead: Lead, templateId?: string) => {
     setSelectedLead(lead);
     if (templateId) {
       const t = OUTREACH_TEMPLATES.find(t => t.id === templateId);
@@ -182,18 +370,26 @@ export default function LeadsControl() {
       setComposeSubject('');
       setComposeBody('');
     }
-  };
+  }, []);
 
-  const handleTemplateChange = (lead: Lead, templateId: string) => {
+  const handleTemplateChange = useCallback((lead: Lead, templateId: string) => {
     const t = OUTREACH_TEMPLATES.find(t => t.id === templateId);
     if (t) {
       setComposeTemplate(templateId);
       setComposeSubject(t.subject.replace(/{{company}}/g, lead.company).replace(/{{contact}}/g, lead.contact).replace(/{{industry}}/g, lead.industry).replace(/{{services}}/g, lead.services.join(', ')));
       setComposeBody(t.body.replace(/{{company}}/g, lead.company).replace(/{{contact}}/g, lead.contact).replace(/{{industry}}/g, lead.industry).replace(/{{services}}/g, lead.services.join('\n• ')));
     }
-  };
+  }, []);
 
-  const addLead = () => {
+  const handleQuickReply = useCallback((idx: number, lead: Lead) => {
+    const tpl = QUICK_REPLY_TEMPLATES[idx];
+    setSelectedLead(lead);
+    setComposeTemplate('quick');
+    setComposeSubject(tpl.subject.replace(/{{company}}/g, lead.company).replace(/{{contact}}/g, lead.contact));
+    setComposeBody(tpl.body.replace(/{{company}}/g, lead.company).replace(/{{contact}}/g, lead.contact));
+  }, []);
+
+  const addLead = useCallback(() => {
     if (!newLead.company) return;
     const lead: Lead = {
       id: `l${Date.now()}`,
@@ -208,34 +404,180 @@ export default function LeadsControl() {
       dateFound: new Date().toISOString().split('T')[0],
       lastContact: '',
       services: newLead.services || [],
+      website: newLead.website || '',
+      linkedin: newLead.linkedin || '',
+      companySize: newLead.companySize,
+      budgetRange: newLead.budgetRange,
+      decisionTimeline: newLead.decisionTimeline,
     };
     setLeads(prev => [lead, ...prev]);
-    setNewLead({ company: '', contact: '', email: '', industry: '', notes: '', services: [] });
+    setNewLead({ company: '', contact: '', email: '', industry: '', notes: '', services: [], website: '', linkedin: '', companySize: undefined, budgetRange: undefined, decisionTimeline: undefined });
     setShowAddLead(false);
+  }, [newLead]);
+
+  const bulkExport = useCallback(() => {
+    const selectedList = leads.filter(l => selectedLeads.has(l.id));
+    if (selectedList.length === 0) return;
+    const rows = ['Company,Contact,Email,Industry,Score,Priority,Status,Services,Website,Company Size,Budget,Timeline'];
+    selectedList.forEach(l => {
+      rows.push(`"${l.company}","${l.contact}","${l.email}","${l.industry}",${l.score},"${getPriority(l.score)}","${l.status}","${l.services.join('; ')}","${l.website || ''}","${l.companySize || ''}","${l.budgetRange || ''}","${l.decisionTimeline || ''}"`);
+    });
+    const csv = rows.join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `leads_${new Date().toISOString().split('T')[0]}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setSelectedLeads(new Set());
+  }, [leads, selectedLeads]);
+
+  const bulkStatusUpdate = useCallback(() => {
+    if (selectedLeads.size === 0) return;
+    setLeads(prev => prev.map(l => selectedLeads.has(l.id) ? { ...l, status: bulkStatus, lastContact: new Date().toISOString().split('T')[0] } : l));
+    setShowBulkMenu(false);
+    setSelectedLeads(new Set());
+  }, [selectedLeads, bulkStatus]);
+
+  const saveFilterPreset = useCallback(() => {
+    const name = prompt('Preset name:');
+    if (!name) return;
+    setFilterPresets(prev => [...prev, {
+      id: `p${Date.now()}`, name,
+      filters: { status: filter, industry: industryFilter, priority: priorityFilter, dateFrom, dateTo },
+    }]);
+  }, [filter, industryFilter, priorityFilter, dateFrom, dateTo]);
+
+  const loadFilterPreset = useCallback((preset: FilterPreset) => {
+    setFilter(preset.filters.status);
+    setIndustryFilter(preset.filters.industry);
+    setPriorityFilter(preset.filters.priority);
+    setDateFrom(preset.filters.dateFrom);
+    setDateTo(preset.filters.dateTo);
+    setShowPresets(false);
+  }, []);
+
+  const deleteFilterPreset = useCallback((id: string) => {
+    setFilterPresets(prev => prev.filter(p => p.id !== id));
+  }, []);
+
+  // ── Email stats ────────────────────────────────────────────────────────────
+  const today = '2026-06-12';
+  const weekAgo = '2026-06-05';
+  const emailsToday = EMAIL_ACTIVITY.filter(e => e.timestamp.startsWith(today)).length;
+  const emailsThisWeek = EMAIL_ACTIVITY.filter(e => e.timestamp >= weekAgo).length;
+  const emailByClassification = EMAIL_ACTIVITY.reduce<Record<string, number>>((acc, e) => { acc[e.classification] = (acc[e.classification] || 0) + 1; return acc; }, {});
+
+  // ── Render helpers ─────────────────────────────────────────────────────────
+  const renderLeadCard = (lead: Lead) => {
+    const priority = getPriority(lead.score);
+    const pConfig = getPriorityConfig(priority);
+    const isSelected = selectedLeads.has(lead.id);
+
+    return (
+      <div key={lead.id} className={`bg-slate-900/80 border rounded-xl p-4 transition-all hover:border-amber-500/30 ${isSelected ? 'border-amber-500/60 ring-1 ring-amber-500/20' : 'border-slate-800/80'}`}>
+        <div className="flex items-start gap-3">
+          {/* Checkbox */}
+          <input
+            type="checkbox"
+            checked={isSelected}
+            onChange={() => toggleLeadSelection(lead.id)}
+            className="mt-1.5 w-4 h-4 rounded border-slate-600 bg-slate-800 text-amber-500 focus:ring-amber-500/30 accent-amber-500"
+          />
+          <div className="flex-1 min-w-0">
+            {/* Header row */}
+            <div className="flex items-center gap-2 mb-1 flex-wrap">
+              {lead.website ? (
+                <a href={lead.website} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-slate-200 hover:text-amber-400 transition underline decoration-amber-400/30 underline-offset-2">{lead.company}</a>
+              ) : (
+                <h3 className="text-sm font-semibold text-slate-200">{lead.company}</h3>
+              )}
+              <span className={`px-2 py-0.5 rounded-full text-[9px] font-mono border ${STATUS_COLORS[lead.status]}`}>{STATUS_LABELS[lead.status]}</span>
+              <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-semibold border ${pConfig.bg} ${pConfig.text} ${pConfig.border}`}>{pConfig.emoji} {pConfig.label}</span>
+              <span className="text-[9px] text-cyan-400 font-mono">Score: {lead.score}</span>
+              {lead.companySize && <span className="text-[9px] bg-slate-700/50 text-slate-400 px-1.5 py-0.5 rounded">{lead.companySize}</span>}
+              {lead.budgetRange && <span className="text-[9px] bg-green-500/10 text-green-300 px-1.5 py-0.5 rounded">{lead.budgetRange}</span>}
+              {lead.decisionTimeline && <span className="text-[9px] bg-purple-500/10 text-purple-300 px-1.5 py-0.5 rounded">⏱ {lead.decisionTimeline}</span>}
+              <span className="text-[9px] text-slate-500 bg-slate-800 px-1.5 py-0.5 rounded">{lead.source}</span>
+            </div>
+
+            {/* Contact info */}
+            <div className="text-xs text-slate-400 mb-1">
+              {lead.contact} {lead.email ? `· ${lead.email}` : ''} · {lead.industry}
+              {lead.linkedin && <> · <a href={lead.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">LinkedIn</a></>}
+            </div>
+
+            {/* Notes */}
+            <div className="text-xs text-slate-500 mb-2">{lead.notes}</div>
+
+            {/* Pain points */}
+            {lead.painPoints && lead.painPoints.length > 0 && (
+              <div className="flex flex-wrap gap-1 mb-1">
+                {lead.painPoints.map(p => (<span key={p} className="text-[9px] bg-red-500/10 text-red-300 px-1.5 py-0.5 rounded">⚠ {p}</span>))}
+              </div>
+            )}
+
+            {/* Services */}
+            <div className="flex flex-wrap gap-1 mb-2">
+              {lead.services.map(s => (<span key={s} className="text-[9px] bg-purple-500/10 text-purple-300 px-1.5 py-0.5 rounded">{s}</span>))}
+            </div>
+
+            {/* Quick reply row */}
+            <div className="flex flex-wrap gap-1">
+              {lead.status === 'new' && <button onClick={() => updateLeadStatus(lead.id, 'contacted')} className="text-[10px] bg-amber-600 text-white px-2 py-1 rounded-lg hover:bg-amber-500">📧 Contacted</button>}
+              {lead.status === 'contacted' && <button onClick={() => updateLeadStatus(lead.id, 'replied')} className="text-[10px] bg-purple-600 text-white px-2 py-1 rounded-lg hover:bg-purple-500">💬 Replied</button>}
+              {lead.status === 'replied' && <button onClick={() => updateLeadStatus(lead.id, 'qualified')} className="text-[10px] bg-emerald-600 text-white px-2 py-1 rounded-lg hover:bg-emerald-500">✅ Qualify</button>}
+              {lead.status === 'qualified' && <button onClick={() => updateLeadStatus(lead.id, 'converted')} className="text-[10px] bg-green-600 text-white px-2 py-1 rounded-lg hover:bg-green-500">🎉 Convert</button>}
+              <button onClick={() => openCompose(lead, 't001')} className="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded-lg hover:bg-slate-600">📧 Compose</button>
+              {QUICK_REPLY_TEMPLATES.map((tpl, qi) => (
+                <button key={qi} onClick={() => handleQuickReply(qi, lead)} className="text-[10px] bg-slate-800 text-slate-400 px-2 py-1 rounded-lg hover:bg-slate-700 hover:text-slate-200" title={tpl.subject}>{tpl.label}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   };
 
-  const bulkAction = (action: string) => {
-    const visibleIds = (activeTab === 'leads' ? manualLeads : discoveredLeads).map(l => l.id);
-    if (action === 'export') {
-      const csv = 'Company,Contact,Email,Industry,Score,Status,Services\n' +
-        visibleIds.map(id => {
-          const l = leads.find(x => x.id === id);
-          return l ? `"${l.company}","${l.contact}","${l.email}","${l.industry}",${l.score},"${l.status}","${l.services.join('; ')}"` : '';
-        }).filter(Boolean).join('\n');
-      const blob = new Blob([csv], { type: 'text/csv' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `leads_${new Date().toISOString().split('T')[0]}.csv`;
-      a.click();
-      URL.revokeObjectURL(url);
-    } else if (action === 'mark-contacted') {
-      setLeads(prev => prev.map(l => visibleIds.includes(l.id) && l.status === 'new' ? { ...l, status: 'contacted' as const, lastContact: new Date().toISOString().split('T')[0] } : l));
-    }
+  // ── SVG Funnel Chart ───────────────────────────────────────────────────────
+  const renderFunnelChart = () => {
+    const stages = pipelineStages;
+    const maxCount = Math.max(...stages.map(s => s.count), 1);
+    const width = 500;
+    const height = 280;
+    const barHeight = 44;
+    const gap = 8;
+    const maxBarWidth = 420;
+
+    return (
+      <svg viewBox={`0 0 ${width} ${height}`} className="w-full max-w-lg mx-auto" style={{ maxHeight: `${height}px` }}>
+        {stages.map((stage, i) => {
+          const y = i * (barHeight + gap) + 10;
+          const barW = Math.max(40, (stage.count / maxCount) * maxBarWidth);
+          const x = (width - barW) / 2;
+          const pct = stage.total > 0 ? Math.round((stage.count / stage.total) * 100) : 0;
+          const convRate = i > 0 ? (stage.count / Math.max(stages[i - 1].count, 1) * 100).toFixed(0) : '—';
+
+          return (
+            <g key={i}>
+              <rect x={x} y={y} width={barW} height={barHeight} rx={8} fill={stage.color} opacity={0.85} />
+              <text x={width / 2} y={y + barHeight / 2 - 5} textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">{stage.label}</text>
+              <text x={width / 2} y={y + barHeight / 2 + 10} textAnchor="middle" fill="white" fontSize="10" opacity={0.9}>{stage.count} leads · {pct}% · {stage.avgDaysInStage}d avg</text>
+              {i > 0 && (
+                <text x={width - 50} y={y + barHeight / 2 + 4} textAnchor="middle" fill="#94a3b8" fontSize="9">↑ {convRate}%</text>
+              )}
+            </g>
+          );
+        })}
+      </svg>
+    );
   };
 
+  // ── Main render ─────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      {/* Header */}
       <header className="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -246,6 +588,11 @@ export default function LeadsControl() {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            {/* Gmail status indicator */}
+            <div className={`flex items-center gap-1.5 text-[10px] px-2 py-1 rounded-lg border ${GMAIL_STATUS.connected && GMAIL_STATUS.tokenValid ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' : 'bg-red-500/10 border-red-500/30 text-red-400'}`}>
+              <div className={`w-1.5 h-1.5 rounded-full ${GMAIL_STATUS.connected && GMAIL_STATUS.tokenValid ? 'bg-emerald-400 animate-pulse' : 'bg-red-400'}`} />
+              Gmail {GMAIL_STATUS.connected && GMAIL_STATUS.tokenValid ? 'Connected' : 'Disconnected'}
+            </div>
             <Link href="/agents-monitoring" className="text-xs text-slate-400 hover:text-white transition border border-slate-700/60 rounded-lg px-3 py-1.5">📊 Dashboard</Link>
             <Link href="/" className="text-xs text-slate-400 hover:text-white transition border border-slate-700/60 rounded-lg px-3 py-1.5">← Main Site</Link>
           </div>
@@ -254,7 +601,7 @@ export default function LeadsControl() {
 
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Stats Bar */}
-        <section className="grid grid-cols-3 md:grid-cols-10 gap-2 mb-6">
+        <section className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-11 gap-2 mb-6">
           {[
             { label: 'Total', value: stats.total, color: 'text-purple-400', border: 'border-purple-500/20' },
             { label: 'Manual', value: stats.manual, color: 'text-blue-400', border: 'border-blue-500/20' },
@@ -264,8 +611,9 @@ export default function LeadsControl() {
             { label: 'Replied', value: stats.replied, color: 'text-purple-400', border: 'border-purple-500/20' },
             { label: 'Qualified', value: stats.qualified, color: 'text-emerald-400', border: 'border-emerald-500/20' },
             { label: 'Converted', value: stats.converted, color: 'text-green-400', border: 'border-green-500/20' },
-            { label: 'High Score', value: stats.highScore, color: 'text-amber-400', border: 'border-amber-500/20' },
-            { label: 'Avg Score', value: stats.avgScore, color: 'text-cyan-400', border: 'border-cyan-500/20' },
+            { label: '🔥 Hot', value: stats.hot, color: 'text-red-400', border: 'border-red-500/20' },
+            { label: '🌡️ Warm', value: stats.warm, color: 'text-amber-400', border: 'border-amber-500/20' },
+            { label: '❄️ Cold', value: stats.cold, color: 'text-blue-400', border: 'border-blue-500/20' },
           ].map((s, i) => (
             <div key={i} className={`bg-slate-900/80 border ${s.border} rounded-xl p-2.5 text-center`}>
               <div className={`text-xl font-bold ${s.color}`}>{s.value}</div>
@@ -275,71 +623,112 @@ export default function LeadsControl() {
         </section>
 
         {/* Tabs */}
-        <div className="flex gap-1 mb-4 bg-slate-900/40 rounded-lg p-1 border border-slate-800/40">
+        <div className="flex gap-1 mb-4 bg-slate-900/40 rounded-lg p-1 border border-slate-800/40 overflow-x-auto">
           {([
             { id: 'leads' as const, label: `🎯 Manual Leads (${manualLeads.length})` },
             { id: 'discovered' as const, label: `🔍 Discovered (${discoveredLeads.length})` },
             { id: 'templates' as const, label: `📧 Templates (${OUTREACH_TEMPLATES.length})` },
             { id: 'stats' as const, label: '📊 Pipeline' },
+            { id: 'email' as const, label: '📬 Email Activity' },
           ]).map(tab => (
-            <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 text-xs py-2 rounded-md transition font-medium ${activeTab === tab.id ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800/60'}`}>
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 text-xs py-2 rounded-md transition font-medium whitespace-nowrap ${activeTab === tab.id ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800/60'}`}>
               {tab.label}
             </button>
           ))}
         </div>
 
-        {/* Leads Tab */}
+        {/* ── Leads / Discovered Tabs ──────────────────────────────────────── */}
         {(activeTab === 'leads' || activeTab === 'discovered') && (
           <div>
-            <div className="flex gap-2 mb-4 flex-wrap items-center">
-              <input value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="Search..." className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2 w-40 placeholder-slate-500" />
-              <select value={industryFilter} onChange={e => setIndustryFilter(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
-                {INDUSTRIES.map(ind => <option key={ind} value={ind}>{ind === 'all' ? 'All Industries' : ind}</option>)}
-              </select>
-              {['all', 'new', 'contacted', 'replied', 'qualified', 'converted', 'lost'].map(s => (
-                <button key={s} onClick={() => setFilter(s)} className={`text-[10px] px-3 py-1.5 rounded-lg border transition ${filter === s ? 'bg-amber-600 text-white border-amber-500' : 'bg-slate-800 text-slate-400 border-slate-700 hover:border-slate-500'}`}>
-                  {s === 'all' ? 'All' : STATUS_LABELS[s] || s}
-                </button>
-              ))}
-              <div className="flex-1" />
-              <button onClick={() => setShowAddLead(true)} className="text-[10px] bg-emerald-600 text-white px-3 py-1.5 rounded-lg hover:bg-emerald-500">+ Add Lead</button>
-              <button onClick={() => bulkAction('export')} className="text-[10px] bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg hover:bg-slate-600">📥 Export CSV</button>
-              {activeTab === 'discovered' && (
-                <button onClick={() => bulkAction('mark-contacted')} className="text-[10px] bg-amber-600 text-white px-3 py-1.5 rounded-lg hover:bg-amber-500">📧 Mark All Contacted</button>
-              )}
-            </div>
-            <div className="space-y-3">
-              {(activeTab === 'leads' ? manualLeads : discoveredLeads).map(lead => (
-                <div key={lead.id} className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 hover:border-amber-500/30 transition-all">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1 flex-wrap">
-                        <h3 className="text-sm font-semibold text-slate-200">{lead.company}</h3>
-                        <span className={`px-2 py-0.5 rounded-full text-[9px] font-mono border ${STATUS_COLORS[lead.status]}`}>{STATUS_LABELS[lead.status]}</span>
-                        <span className="text-[9px] text-cyan-400">Score: {lead.score}</span>
-                        <span className="text-[9px] text-slate-500 bg-slate-800 px-1.5 py-0.5 rounded">{lead.source}</span>
-                      </div>
-                      <div className="text-xs text-slate-400 mb-1">{lead.contact} {lead.email ? `· ${lead.email}` : ''} · {lead.industry}</div>
-                      <div className="text-xs text-slate-500 mb-2">{lead.notes}</div>
-                      {lead.painPoints && lead.painPoints.length > 0 && (
-                        <div className="flex flex-wrap gap-1 mb-1">
-                          {lead.painPoints.map(p => (<span key={p} className="text-[9px] bg-red-500/10 text-red-300 px-1.5 py-0.5 rounded">⚠ {p}</span>))}
+            {/* Search & Filters */}
+            <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-3 mb-4">
+              <div className="flex gap-2 mb-3 flex-wrap items-center">
+                <div className="relative flex-1 min-w-[200px]">
+                  <input value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="Search across all fields... (⌘K)" className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2 pl-8 placeholder-slate-500" />
+                  <span className="absolute left-2.5 top-2 text-slate-500 text-xs">🔍</span>
+                </div>
+                <select value={industryFilter} onChange={e => setIndustryFilter(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
+                  {INDUSTRIES.map(ind => <option key={ind} value={ind}>{ind === 'all' ? 'All Industries' : ind}</option>)}
+                </select>
+                <select value={priorityFilter} onChange={e => setPriorityFilter(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
+                  <option value="all">All Priorities</option>
+                  <option value="hot">🔥 Hot (80+)</option>
+                  <option value="warm">🌡️ Warm (60-79)</option>
+                  <option value="cold">❄️ Cold (&lt;60)</option>
+                </select>
+                <input type="date" value={dateFrom} onChange={e => setDateFrom(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2" placeholder="From" title="Date from" />
+                <input type="date" value={dateTo} onChange={e => setDateTo(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2" placeholder="To" title="Date to" />
+                <button onClick={() => setShowPresets(!showPresets)} className="text-[10px] bg-slate-700 text-slate-300 px-3 py-2 rounded-lg hover:bg-slate-600">💾 Presets</button>
+                <button onClick={saveFilterPreset} className="text-[10px] bg-slate-700 text-slate-300 px-3 py-2 rounded-lg hover:bg-slate-600" title="Save current filters as preset">+ Save</button>
+              </div>
+
+              {/* Status filter row */}
+              <div className="flex gap-1 flex-wrap items-center">
+                {['all', 'new', 'contacted', 'replied', 'qualified', 'converted', 'lost'].map(s => (
+                  <button key={s} onClick={() => setFilter(s)} className={`text-[10px] px-3 py-1.5 rounded-lg border transition ${filter === s ? 'bg-amber-600 text-white border-amber-500' : 'bg-slate-800 text-slate-400 border-slate-700 hover:border-slate-500'}`}>
+                    {s === 'all' ? 'All' : STATUS_LABELS[s] || s}
+                  </button>
+                ))}
+                <div className="flex-1" />
+
+                {/* Bulk actions */}
+                {selectedLeads.size > 0 && (
+                  <div className="flex items-center gap-2 ml-2">
+                    <span className="text-[10px] text-amber-400 font-semibold">{selectedLeads.size} selected</span>
+                    <div className="relative">
+                      <button onClick={() => setShowBulkMenu(!showBulkMenu)} className="text-[10px] bg-amber-600 text-white px-3 py-1.5 rounded-lg hover:bg-amber-500">⚡ Bulk Actions ▾</button>
+                      {showBulkMenu && (
+                        <div className="absolute right-0 top-full mt-1 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-40 min-w-[180px]">
+                          <div className="p-2 space-y-1">
+                            <div className="text-[9px] text-slate-500 uppercase px-2 py-1">Change Status</div>
+                            {(['contacted', 'replied', 'qualified', 'converted', 'lost'] as LeadStatus[]).map(s => (
+                              <button key={s} onClick={() => { setBulkStatus(s); bulkStatusUpdate(); }} className="block w-full text-left text-[10px] text-slate-300 hover:bg-slate-700 px-2 py-1 rounded">→ {STATUS_LABELS[s]}</button>
+                            ))}
+                            <div className="border-t border-slate-700 my-1" />
+                            <button onClick={bulkExport} className="block w-full text-left text-[10px] text-slate-300 hover:bg-slate-700 px-2 py-1 rounded">📥 Export Selected CSV</button>
+                            <button onClick={() => setSelectedLeads(new Set())} className="block w-full text-left text-[10px] text-red-400 hover:bg-slate-700 px-2 py-1 rounded">✕ Clear Selection</button>
+                          </div>
                         </div>
                       )}
-                      <div className="flex flex-wrap gap-1">
-                        {lead.services.map(s => (<span key={s} className="text-[9px] bg-purple-500/10 text-purple-300 px-1.5 py-0.5 rounded">{s}</span>))}
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-1 shrink-0">
-                      {lead.status === 'new' && <button onClick={() => updateLeadStatus(lead.id, 'contacted')} className="text-[10px] bg-amber-600 text-white px-3 py-1.5 rounded-lg hover:bg-amber-500">📧 Contacted</button>}
-                      {lead.status === 'contacted' && <button onClick={() => updateLeadStatus(lead.id, 'replied')} className="text-[10px] bg-purple-600 text-white px-3 py-1.5 rounded-lg hover:bg-purple-500">💬 Replied</button>}
-                      {lead.status === 'replied' && <button onClick={() => updateLeadStatus(lead.id, 'qualified')} className="text-[10px] bg-emerald-600 text-white px-3 py-1.5 rounded-lg hover:bg-emerald-500">✅ Qualify</button>}
-                      {lead.status === 'qualified' && <button onClick={() => updateLeadStatus(lead.id, 'converted')} className="text-[10px] bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-500">🎉 Convert</button>}
-                      <button onClick={() => openCompose(lead, 't001')} className="text-[10px] bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg hover:bg-slate-600">📧 Compose</button>
                     </div>
                   </div>
+                )}
+
+                <button onClick={() => setShowAddLead(true)} className="text-[10px] bg-emerald-600 text-white px-3 py-1.5 rounded-lg hover:bg-emerald-500">+ Add Lead</button>
+                <button onClick={bulkExport} className="text-[10px] bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg hover:bg-slate-600">📥 Export CSV</button>
+                {activeTab === 'discovered' && (
+                  <button onClick={() => { setBulkStatus('contacted'); bulkStatusUpdate(); }} className="text-[10px] bg-amber-600 text-white px-3 py-1.5 rounded-lg hover:bg-amber-500">📧 Mark All Contacted</button>
+                )}
+              </div>
+
+              {/* Filter presets dropdown */}
+              {showPresets && (
+                <div className="mt-2 bg-slate-800/80 border border-slate-700 rounded-lg p-2">
+                  <div className="text-[9px] text-slate-500 uppercase mb-1">Saved Presets</div>
+                  <div className="flex flex-wrap gap-1">
+                    {filterPresets.map(p => (
+                      <div key={p.id} className="flex items-center gap-1">
+                        <button onClick={() => loadFilterPreset(p)} className="text-[10px] bg-slate-700 text-slate-300 px-2 py-1 rounded hover:bg-slate-600">{p.name}</button>
+                        <button onClick={() => deleteFilterPreset(p.id)} className="text-[9px] text-red-400 hover:text-red-300">✕</button>
+                      </div>
+                    ))}
+                    {filterPresets.length === 0 && <span className="text-[10px] text-slate-500">No presets saved yet</span>}
+                  </div>
                 </div>
-              ))}
+              )}
+            </div>
+
+            {/* Select all row */}
+            {(activeTab === 'leads' ? manualLeads : discoveredLeads).length > 0 && (
+              <div className="flex items-center gap-2 mb-2">
+                <input type="checkbox" checked={(activeTab === 'leads' ? manualLeads : discoveredLeads).every(l => selectedLeads.has(l.id))} onChange={toggleSelectAll} className="w-3.5 h-3.5 rounded border-slate-600 bg-slate-800 accent-amber-500" />
+                <span className="text-[10px] text-slate-500">Select all visible (⇧⌘A) · Esc to clear modals</span>
+              </div>
+            )}
+
+            {/* Lead cards */}
+            <div className="space-y-3">
+              {(activeTab === 'leads' ? manualLeads : discoveredLeads).map(renderLeadCard)}
               {(activeTab === 'leads' ? manualLeads : discoveredLeads).length === 0 && (
                 <div className="text-center py-12 text-slate-500">
                   <div className="text-4xl mb-3">🔍</div>
@@ -351,7 +740,7 @@ export default function LeadsControl() {
           </div>
         )}
 
-        {/* Templates Tab */}
+        {/* ── Templates Tab ───────────────────────────────────────────────── */}
         {activeTab === 'templates' && (
           <div className="space-y-4">
             <div className="flex gap-2 mb-4 flex-wrap">
@@ -375,31 +764,49 @@ export default function LeadsControl() {
           </div>
         )}
 
-        {/* Stats Tab */}
+        {/* ── Stats / Pipeline Tab ────────────────────────────────────────── */}
         {activeTab === 'stats' && (
           <div className="space-y-6">
+            {/* SVG Funnel */}
             <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
               <h3 className="text-sm font-semibold text-slate-200 mb-4">Pipeline Funnel</h3>
-              <div className="space-y-3">
-                {[
-                  { label: 'New', count: stats.new, total: stats.total, color: 'bg-blue-500' },
-                  { label: 'Contacted', count: stats.contacted, total: stats.total, color: 'bg-amber-500' },
-                  { label: 'Replied', count: stats.replied, total: stats.total, color: 'bg-purple-500' },
-                  { label: 'Qualified', count: stats.qualified, total: stats.total, color: 'bg-emerald-500' },
-                  { label: 'Converted', count: stats.converted, total: stats.total, color: 'bg-green-500' },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="text-xs text-slate-400 w-20">{item.label}</span>
-                    <div className="flex-1 h-6 bg-slate-800 rounded-full overflow-hidden">
-                      <div className={`h-full ${item.color} rounded-full flex items-center justify-end pr-2`} style={{ width: `${Math.max(5, (item.count / item.total) * 100)}%` }}>
-                        <span className="text-[10px] text-white font-bold">{item.count}</span>
+              {renderFunnelChart()}
+              <div className="grid grid-cols-5 gap-2 mt-4">
+                {pipelineStages.map((stage, i) => (
+                  <div key={i} className="text-center">
+                    <div className="text-[10px] text-slate-400">{stage.label}</div>
+                    <div className="text-sm font-bold" style={{ color: stage.color }}>{stage.count}</div>
+                    <div className="text-[9px] text-slate-500">{stage.avgDaysInStage}d avg</div>
+                    {i > 0 && (
+                      <div className="text-[9px] text-emerald-400">
+                        {stage.count / Math.max(pipelineStages[i - 1].count, 1) * 100 | 0}% conv.
                       </div>
-                    </div>
-                    <span className="text-xs text-slate-500 w-12 text-right">{Math.round((item.count / item.total) * 100)}%</span>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Revenue Potential */}
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">💰 Revenue Potential</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-amber-400">${(stats.totalRevenue / 1000).toFixed(0)}K</div>
+                  <div className="text-[10px] text-slate-500">Total Pipeline Value</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-emerald-400">${(stats.totalRevenue * 0.15 / 1000).toFixed(0)}K</div>
+                  <div className="text-[10px] text-slate-500">Est. at 15% Close Rate</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-cyan-400">${(stats.totalRevenue * 0.3 / 1000).toFixed(0)}K</div>
+                  <div className="text-[10px] text-slate-500">Est. at 30% Close Rate</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Lead Generation Strategy */}
             <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl p-6">
               <h3 className="text-sm font-semibold text-amber-300 mb-3">📋 Lead Generation Strategy</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -408,8 +815,6 @@ export default function LeadsControl() {
                   { title: '📧 Cold Outreach Best Practices', desc: 'Research company first. Reference their recent news. Keep under 150 words. Specific CTA.' },
                   { title: '💬 Follow-Up Schedule', desc: 'Day 1: Initial. Day 3: Follow-up. Day 7: Re-engage. Day 14: Final. Then monthly nurture.' },
                   { title: '🎯 Conversion Tips', desc: 'Free proposal. Reference similar companies. ROI projection. <150 words. One clear CTA.' },
-                  { title: '🏥 Healthcare IT', desc: 'Lead with HIPAA compliance. Emphasize patient outcomes. Reference EHR integration.' },
-                  { title: '💰 FinTech', desc: 'Lead with fraud reduction stats. Emphasize regulatory compliance. Reference real-time processing.' },
                 ].map((s, i) => (
                   <div key={i} className="bg-slate-900/60 rounded-lg p-3">
                     <div className="text-xs font-semibold text-slate-200">{s.title}</div>
@@ -418,69 +823,72 @@ export default function LeadsControl() {
                 ))}
               </div>
             </div>
+          </div>
+        )}
+
+        {/* ── Email Activity Tab ─────────────────────────────────────────────── */}
+        {activeTab === 'email' && (
+          <div className="space-y-6">
+            {/* Gmail Status */}
             <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
-              <h3 className="text-sm font-semibold text-slate-200 mb-3">📊 Lead Sources</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {[
-                  { source: 'LinkedIn', count: leads.filter(l => l.source === 'LinkedIn').length, color: 'text-blue-400' },
-                  { source: 'Web Search', count: leads.filter(l => l.source === 'Web Search').length, color: 'text-cyan-400' },
-                  { source: 'Referral', count: leads.filter(l => l.source === 'Referral').length, color: 'text-emerald-400' },
-                  { source: 'Cold Outreach', count: leads.filter(l => l.source === 'Cold Outreach').length, color: 'text-amber-400' },
-                ].map((s, i) => (
-                  <div key={i} className="bg-slate-800/50 rounded-lg p-3 text-center">
-                    <div className={`text-lg font-bold ${s.color}`}>{s.count}</div>
-                    <div className="text-[9px] text-slate-500">{s.source}</div>
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">📬 Gmail Integration</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className={`text-2xl font-bold ${GMAIL_STATUS.connected && GMAIL_STATUS.tokenValid ? 'text-emerald-400' : 'text-red-400'}`}>
+                    {GMAIL_STATUS.connected && GMAIL_STATUS.tokenValid ? '✓' : '✗'}
+                  </div>
+                  <div className="text-[10px] text-slate-500">Connection</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-cyan-400">{GMAIL_STATUS.emailsProcessedToday}</div>
+                  <div className="text-[10px] text-slate-500">Processed Today</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-purple-400">{EMAIL_ACTIVITY.length}</div>
+                  <div className="text-[10px] text-slate-500">Total Activities</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-amber-400">{GMAIL_STATUS.lastSyncTime}</div>
+                  <div className="text-[10px] text-slate-500">Last Sync</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Email Activity List */}
+            <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-slate-200 mb-4">Recent Email Activity</h3>
+              <div className="space-y-3">
+                {EMAIL_ACTIVITY.map(email => (
+                  <div key={email.id} className="bg-slate-800/50 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-semibold text-slate-200">{email.recipient}</span>
+                        <span className="text-[9px] bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded">{email.classification}</span>
+                        <span className={`text-[9px] px-1.5 py-0.5 rounded ${email.status === 'sent' ? 'bg-emerald-500/20 text-emerald-300' : email.status === 'replied' ? 'bg-blue-500/20 text-blue-300' : 'bg-red-500/20 text-red-300'}`}>
+                          {email.status}
+                        </span>
+                      </div>
+                      <div className="text-xs text-slate-400 truncate">{email.subject}</div>
+                    </div>
+                    <div className="text-[10px] text-slate-500 shrink-0 ml-4">{email.timestamp}</div>
                   </div>
                 ))}
+                {EMAIL_ACTIVITY.length === 0 && (
+                  <div className="text-center py-8 text-slate-500">
+                    <div className="text-3xl mb-2">📭</div>
+                    <div className="text-sm">No email activity yet</div>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-        )}
 
-        {/* Add Lead Modal */}
-        {showAddLead && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" onClick={() => setShowAddLead(false)}>
-            <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 max-w-lg w-full" onClick={e => e.stopPropagation()}>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold">+ Add New Lead</h3>
-                <button onClick={() => setShowAddLead(false)} className="text-slate-400 hover:text-white text-xl">✕</button>
-              </div>
-              <div className="space-y-3">
-                <input value={newLead.company || ''} onChange={e => setNewLead(p => ({ ...p, company: e.target.value }))} placeholder="Company name *" className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2" />
-                <input value={newLead.contact || ''} onChange={e => setNewLead(p => ({ ...p, contact: e.target.value }))} placeholder="Contact name" className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2" />
-                <input value={newLead.email || ''} onChange={e => setNewLead(p => ({ ...p, email: e.target.value }))} placeholder="Email" className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2" />
-                <select value={newLead.industry || ''} onChange={e => setNewLead(p => ({ ...p, industry: e.target.value }))} className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
-                  <option value="">Select industry...</option>
-                  {INDUSTRIES.filter(i => i !== 'all').map(ind => <option key={ind} value={ind}>{ind}</option>)}
-                </select>
-                <textarea value={newLead.notes || ''} onChange={e => setNewLead(p => ({ ...p, notes: e.target.value }))} placeholder="Notes..." rows={3} className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2 resize-none" />
-                <button onClick={addLead} className="w-full px-4 py-2 bg-emerald-600 text-white text-xs rounded-lg hover:bg-emerald-500 font-medium">Add Lead</button>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Compose Modal */}
-        {selectedLead && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" onClick={() => setSelectedLead(null)}>
-            <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold">📧 Compose to {selectedLead.contact}</h3>
-                <button onClick={() => setSelectedLead(null)} className="text-slate-400 hover:text-white text-xl">✕</button>
-              </div>
-              <div className="space-y-3">
-                <div className="text-xs text-slate-400">To: {selectedLead.contact} &lt;{selectedLead.email}&gt; · {selectedLead.company} · {selectedLead.industry}</div>
-                <select value={composeTemplate} onChange={e => handleTemplateChange(selectedLead, e.target.value)} className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
-                  <option value="">Select template...</option>
-                  {OUTREACH_TEMPLATES.map(t => <option key={t.id} value={t.id}>{t.name}{t.industry ? ` (${t.industry})` : ''}</option>)}
-                </select>
-                <input value={composeSubject} onChange={e => setComposeSubject(e.target.value)} placeholder="Subject..." className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2" />
-                <textarea value={composeBody} onChange={e => setComposeBody(e.target.value)} rows={12} className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2 resize-none font-mono" />
-                <div className="flex gap-2">
-                  <button onClick={() => { if (selectedLead.email) window.open(`mailto:${selectedLead.email}?subject=${encodeURIComponent(composeSubject)}&body=${encodeURIComponent(composeBody)}`); }} className="px-4 py-2 bg-amber-600 text-white text-xs rounded-lg hover:bg-amber-500">📧 Open in Email</button>
-                  <button onClick={() => { updateLeadStatus(selectedLead.id, 'contacted'); setSelectedLead(null); }} className="px-4 py-2 bg-emerald-600 text-white text-xs rounded-lg hover:bg-emerald-500">✅ Mark Contacted</button>
-                  <button onClick={() => setSelectedLead(null)} className="px-4 py-2 bg-slate-700 text-slate-300 text-xs rounded-lg hover:bg-slate-600">Cancel</button>
-                </div>
+            {/* Contact Info */}
+            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6">
+              <h3 className="text-sm font-semibold text-purple-300 mb-3">📞 Contact Details</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                <div><span className="text-slate-400">Mobile:</span> <span className="text-slate-200">+1 302 464 0950</span></div>
+                <div><span className="text-slate-400">Email:</span> <span className="text-slate-200">kleber@ziontechgroup.com</span></div>
+                <div className="md:col-span-2"><span className="text-slate-400">Address:</span> <span className="text-slate-200">364 E Main St STE 1008, Middletown, DE 19709</span></div>
               </div>
             </div>
           </div>
