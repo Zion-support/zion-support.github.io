@@ -637,11 +637,11 @@ export default function LeadsControl() {
         {/* Tabs */}
         <div className="flex gap-1 mb-4 bg-slate-900/40 rounded-lg p-1 border border-slate-800/40 overflow-x-auto">
           {([
-            { id: 'leads' as const, label: `🎯 Manual Leads (${manualLeads.length})` },
+            { id: 'leads' as const, label: `🎯 Manual (${manualLeads.length})` },
             { id: 'discovered' as const, label: `🔍 Discovered (${discoveredLeads.length})` },
             { id: 'templates' as const, label: `📧 Templates (${OUTREACH_TEMPLATES.length})` },
             { id: 'stats' as const, label: '📊 Pipeline' },
-            { id: 'email' as const, label: '📬 Email Activity' },
+            { id: 'email' as const, label: '📬 Emails' },
             { id: 'analytics' as const, label: '📈 Analytics' },
           ]).map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 text-xs py-2 rounded-md transition font-medium whitespace-nowrap ${activeTab === tab.id ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800/60'}`}>
@@ -649,6 +649,44 @@ export default function LeadsControl() {
             </button>
           ))}
         </div>
+
+        {/* ── Kanban Board View ─────────────────────────────────────────────── */}
+        {activeTab === 'leads' && manualLeads.length > 0 && (
+          <div className="mb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <h3 className="text-xs font-semibold text-slate-300">📋 Kanban Board</h3>
+              <div className="flex-1" />
+              <span className="text-[9px] text-slate-500">{manualLeads.length} leads</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+              {(['new', 'contacted', 'replied', 'qualified', 'converted', 'lost'] as LeadStatus[]).map(status => {
+                const statusLeads = manualLeads.filter(l => l.status === status);
+                const colors: Record<string, string> = { new: 'border-blue-500/30 bg-blue-500/5', contacted: 'border-amber-500/30 bg-amber-500/5', replied: 'border-purple-500/30 bg-purple-500/5', qualified: 'border-emerald-500/30 bg-emerald-500/5', converted: 'border-green-500/30 bg-green-500/5', lost: 'border-red-500/30 bg-red-500/5' };
+                return (
+                  <div key={status} className={`rounded-xl border ${colors[status]} p-2 min-h-[120px]`}>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[10px] font-semibold text-slate-300">{STATUS_LABELS[status]}</span>
+                      <span className="text-[9px] text-slate-500 bg-slate-800 px-1.5 py-0.5 rounded">{statusLeads.length}</span>
+                    </div>
+                    <div className="space-y-1.5">
+                      {statusLeads.slice(0, 5).map(l => (
+                        <div key={l.id} className="bg-slate-800/80 rounded-lg p-2 cursor-pointer hover:bg-slate-700/80 transition" onClick={() => { setSelectedLead(l); setActiveTab('leads'); }}>
+                          <div className="text-[10px] font-semibold text-slate-200 truncate">{l.company}</div>
+                          <div className="text-[8px] text-slate-500 truncate">{l.contact} · {l.industry}</div>
+                          <div className="flex items-center justify-between mt-1">
+                            <span className="text-[8px] text-cyan-400">{l.score}pts</span>
+                            <span className="text-[7px] text-slate-600">{l.lastContact || 'no contact'}</span>
+                          </div>
+                        </div>
+                      ))}
+                      {statusLeads.length > 5 && <div className="text-[8px] text-slate-500 text-center">+{statusLeads.length - 5} more</div>}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* ── Leads / Discovered Tabs ──────────────────────────────────────── */}
         {(activeTab === 'leads' || activeTab === 'discovered') && (
