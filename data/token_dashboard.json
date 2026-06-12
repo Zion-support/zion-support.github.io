@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-06-12T15:14:58.176533+00:00",
+  "status": "critical",
+  "expiry": "2026-06-12T16:00:45.688052+00:00",
+  "remaining_days": 0.03,
+  "refresh_count": 1,
+  "last_refresh": "2026-06-12T13:04:35.884477+00:00",
+  "failure_count": 0,
+  "last_failure_time": null,
+  "last_status": "ok",
+  "gmail_api_ok": true,
+  "gmail_api_message": "Gmail API OK \u2014 authenticated as kleber@ziontechgroup.com",
+  "needs_attention": true,
+  "backoff_seconds": 0,
+  "proactive_refresh_days": 7,
+  "auto_refresh_buffer_days": 1
+}
