@@ -38,6 +38,12 @@ a {
   color: #cbd5e1;
 }
 
+/* ── Marquee Animation ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* Mobile padding for sticky CTA spacing */
 @media (max-width: 1023px) {
   main {

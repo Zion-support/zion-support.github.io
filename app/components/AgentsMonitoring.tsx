@@ -134,8 +134,8 @@ export default function AgentsMonitoring() {
 
   const activeBots = AGENTS.filter(a => a.status === 'active').length;
   const totalActions = actions.length;
-  const totalWaves = 63;
-  const totalServices = 502;
+  const totalWaves = 83;
+  const totalServices = 850;
   const avgUptime = '99.97%';
 
   const filteredActions = actions.filter(a =>
@@ -178,6 +178,32 @@ export default function AgentsMonitoring() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
                 <span className="text-xs text-emerald-400 font-medium">{time} BRT — {activeBots} Agents Active — {avgUptime} Uptime</span>
+              </div>
+            </div>
+
+            {/* ── Live Action Ticker ── */}
+            <div className="mt-8 max-w-4xl mx-auto">
+              <div className="bg-slate-900/60 border border-slate-800/60 rounded-xl overflow-hidden">
+                <div className="flex items-center gap-2 px-4 py-2 border-b border-slate-800/40">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  </span>
+                  <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Live Agent Activity</span>
+                  <span className="text-[10px] text-slate-600 ml-auto">{time} BRT</span>
+                </div>
+                <div className="overflow-hidden h-8 relative">
+                  <div className="absolute whitespace-nowrap animate-[marquee_30s_linear_infinite] flex items-center h-full gap-6 px-4">
+                    {actions.slice(0, 10).map((a, i) => (
+                      <span key={a.id + i} className="text-[11px] text-slate-400 inline-flex items-center gap-1.5">
+                        <span className="text-purple-400 font-medium">{a.agent}</span>
+                        <span className="text-slate-500">—</span>
+                        <span className="truncate max-w-xs">{a.action}</span>
+                        <span className="text-emerald-400/70">{a.impact}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 
