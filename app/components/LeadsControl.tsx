@@ -224,16 +224,19 @@ const TASKS: Task[] = [
   { id: 't001', title: 'Raynmaker discovery call', description: 'Monday June 15, 1pm ET with Devon Bush & Douglas Carlson. Prepare AI discovery deck.', dueDate: '2026-06-15', priority: 'high', status: 'pending', relatedLead: 'e006' },
   { id: 't002', title: 'Retell AI ChatDash application', description: 'Submit white-label partnership application at chat-dash.com/partners/retell', dueDate: '2026-06-16', priority: 'high', status: 'pending', relatedLead: 'e001' },
   { id: 't003', title: 'Tax document review', description: 'Review DCTFweb - Guia de Pagamento (ref 05/2026, due 19/06) from Contábil Vieira', dueDate: '2026-06-19', priority: 'medium', status: 'pending' },
-  { id: 't004', title: 'Follow up with Pictory', description: 'Check on partnership inquiry status. They said they\'d get back with next steps.', dueDate: '2026-06-17', priority: 'medium', status: 'pending', relatedLead: 'e009' },
-  { id: 't005', title: 'Awaz.ai partnership response', description: 'João asked about white-label/reseller program. Send follow-up with specific questions.', dueDate: '2026-06-16', priority: 'medium', status: 'pending', relatedLead: 'e010' },
-  { id: 't006', title: 'Datadog follow-up', description: 'Datadog Partner Network said they\'ll respond within 48h. Follow up if no response.', dueDate: '2026-06-17', priority: 'low', status: 'pending', relatedLead: 'e005' },
-  { id: 't007', title: 'Stammer.ai partnership details', description: 'Review stammer.ai platform for white-label fit. Contact Aline for technical docs.', dueDate: '2026-06-18', priority: 'low', status: 'pending', relatedLead: 'e002' },
+  { id: 't004', title: 'Follow up with Pictory', description: 'Check on partnership inquiry status.', dueDate: '2026-06-17', priority: 'medium', status: 'pending', relatedLead: 'e009' },
+  { id: 't005', title: 'Awaz.ai partnership follow-up', description: 'Follow up with João on white-label/reseller program.', dueDate: '2026-06-16', priority: 'medium', status: 'pending', relatedLead: 'e010' },
+  { id: 't006', title: 'Datadog follow-up', description: 'Datadog Partner Network said they\'ll respond within 48h.', dueDate: '2026-06-17', priority: 'low', status: 'pending', relatedLead: 'e005' },
+  { id: 't007', title: 'Stammer.ai partnership review', description: 'Review stammer.ai platform for white-label fit.', dueDate: '2026-06-18', priority: 'low', status: 'pending', relatedLead: 'e002' },
 ];
+
+// ─── Task State (interactive) ───────────────────────────────────────────────
+const [taskList, setTaskList] = useState<Task[]>(TASKS);
 
 const GMAIL_STATUS: GmailStatus = {
   connected: true,
   tokenValid: true,
-  lastSyncTime: '2026-06-12T22:12:00',
+  lastSyncTime: '2026-06-12T23:12:00',
   emailsProcessedToday: 18,
 };
 
@@ -680,7 +683,7 @@ export default function LeadsControl() {
             { id: 'email' as const, label: '📬 Emails' },
             { id: 'analytics' as const, label: '📈 Analytics' },
             { id: 'partnerships' as const, label: `🤝 Partnerships (${leads.filter(l => l.source === 'Email Partnership').length})` },
-            { id: 'tasks' as const, label: `✅ Tasks (${TASKS.filter(t => t.status === 'pending').length})` },
+            { id: 'tasks' as const, label: `✅ Tasks (${taskList.filter(t => t.status === 'pending').length})` },
           ]).map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 text-xs py-2 rounded-md transition font-medium whitespace-nowrap ${activeTab === tab.id ? 'bg-amber-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800/60'}`}>
               {tab.label}
@@ -1295,19 +1298,19 @@ export default function LeadsControl() {
             {/* Task Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-amber-400">{TASKS.filter(t => t.status === 'pending').length}</div>
+                <div className="text-2xl font-bold text-amber-400">{taskList.filter(t => t.status === 'pending').length}</div>
                 <div className="text-[9px] text-slate-500">Pending</div>
               </div>
               <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-red-400">{TASKS.filter(t => t.priority === 'high' && t.status === 'pending').length}</div>
+                <div className="text-2xl font-bold text-red-400">{taskList.filter(t => t.priority === 'high' && t.status === 'pending').length}</div>
                 <div className="text-[9px] text-slate-500">High Priority</div>
               </div>
               <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-emerald-400">{TASKS.filter(t => t.status === 'completed').length}</div>
+                <div className="text-2xl font-bold text-emerald-400">{taskList.filter(t => t.status === 'completed').length}</div>
                 <div className="text-[9px] text-slate-500">Completed</div>
               </div>
               <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-cyan-400">{TASKS.length}</div>
+                <div className="text-2xl font-bold text-cyan-400">{taskList.length}</div>
                 <div className="text-[9px] text-slate-500">Total</div>
               </div>
             </div>
@@ -1316,7 +1319,7 @@ export default function LeadsControl() {
             <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-6">
               <h3 className="text-sm font-semibold text-slate-200 mb-4">📋 Upcoming Tasks</h3>
               <div className="space-y-3">
-                {TASKS.filter(t => t.status === 'pending').sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()).map(t => {
+                {taskList.filter(t => t.status === 'pending').sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()).map(t => {
                   const daysUntil = Math.ceil((new Date(t.dueDate).getTime() - Date.now()) / 86400000);
                   const urgency = daysUntil <= 1 ? '🔴' : daysUntil <= 3 ? '🟡' : '🟢';
                   const priorityColors = { high: 'border-red-500/30 bg-red-500/5', medium: 'border-amber-500/30 bg-amber-500/5', low: 'border-slate-500/30 bg-slate-500/5' };
@@ -1337,13 +1340,30 @@ export default function LeadsControl() {
                         </div>
                       </div>
                       <div className="mt-3 pt-2 border-t border-slate-700/50 flex items-center gap-2 ml-6">
-                        <button onClick={() => setLeads(prev => prev)} className="text-[10px] px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 transition">✅ Complete</button>
+                        <button onClick={() => setTaskList(prev => prev.map(task => task.id === t.id ? { ...task, status: 'completed' as const } : task))} className="text-[10px] px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 transition">✅ Complete</button>
                       </div>
                     </div>
                   );
                 })}
               </div>
             </div>
+            {/* Completed Tasks */}
+            {taskList.filter(t => t.status === 'completed').length > 0 && (
+              <div className="bg-slate-900/80 border border-slate-800/50 rounded-xl p-6">
+                <h3 className="text-sm font-semibold text-slate-400 mb-4">✅ Completed ({taskList.filter(t => t.status === 'completed').length})</h3>
+                <div className="space-y-2">
+                  {taskList.filter(t => t.status === 'completed').map(t => (
+                    <div key={t.id} className="bg-slate-800/30 rounded-lg p-3 flex items-center justify-between opacity-60">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs">✅</span>
+                        <span className="text-xs text-slate-400 line-through">{t.title}</span>
+                      </div>
+                      <button onClick={() => setTaskList(prev => prev.map(task => task.id === t.id ? { ...task, status: 'pending' as const } : task))} className="text-[9px] px-2 py-1 rounded bg-slate-700/50 text-slate-400 hover:bg-slate-700 transition">↩️ Undo</button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
