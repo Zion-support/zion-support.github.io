@@ -694,6 +694,42 @@ export default function LeadsControl() {
           </div>
         </div>
 
+        {/* ── Next Actions — Priority Queue ──────────────────────────────────── */}
+        <div className="bg-gradient-to-r from-red-500/10 to-amber-500/10 border border-red-500/20 rounded-xl p-4 mb-6">
+          <h3 className="text-xs font-semibold text-red-300 mb-3">⚡ Next Actions — Priority Queue</h3>
+          <div className="space-y-2">
+            {leads
+              .filter(l => l.status !== 'converted' && l.status !== 'lost')
+              .sort((a, b) => {
+                const scoreA = (a.score * 10) + (a.decisionTimeline === 'Immediate' ? 100 : a.decisionTimeline === '1-3 months' ? 50 : 0) + (a.lastContact ? -20 : 20);
+                const scoreB = (b.score * 10) + (b.decisionTimeline === 'Immediate' ? 100 : b.decisionTimeline === '1-3 months' ? 50 : 0) + (b.lastContact ? -20 : 20);
+                return scoreB - scoreA;
+              })
+              .slice(0, 6)
+              .map(l => {
+                const daysSince = l.lastContact ? Math.floor((Date.now() - new Date(l.lastContact).getTime()) / 86400000) : Math.floor((Date.now() - new Date(l.dateFound).getTime()) / 86400000);
+                const urgency = daysSince >= 7 ? '🔴' : daysSince >= 3 ? '🟡' : '🟢';
+                const action = l.lastContact ? `Follow-up (${daysSince}d ago)` : 'Initial contact';
+                return (
+                  <div key={l.id} className="bg-slate-900/60 rounded-lg p-2.5 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-sm shrink-0">{urgency}</span>
+                      <div className="min-w-0">
+                        <div className="text-[11px] font-semibold text-slate-200 truncate">{l.company} <span className="text-slate-500">·</span> <span className="text-amber-400">{l.score}</span></div>
+                        <div className="text-[9px] text-slate-500">{l.industry} · {action}</div>
+                      </div>
+                    </div>
+                    <div className="shrink-0 flex items-center gap-1.5">
+                      {l.email && <a href={"mailto:" + l.email} className="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">📧</a>}
+                      {l.website && <a href={l.website} target="_blank" rel="noopener" className="text-[9px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30">🌐</a>}
+                      <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400">{l.decisionTimeline || 'N/A'}</span>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+
         {/* ── Lead Scoring Distribution ─────────────────────────────────────── */}
         <div className="bg-slate-900/80 border border-slate-800/80 rounded-xl p-4 mb-6">
           <h3 className="text-xs font-semibold text-slate-300 mb-3">📊 Lead Score Distribution</h3>
