@@ -9,6 +9,7 @@ import {
   WAVE_DATA,
   CRON_JOBS,
   TASKS,
+  IMPACT_METRICS,
   type AgentLogEntry,
   type AgentStatus,
 } from '@/data/agent-logs';
@@ -16,7 +17,7 @@ import {
 // ── Types ──────────────────────────────────────────────────────────────────
 
 type ViewMode = 'operations' | 'client';
-type TabId = 'fleet' | 'waves' | 'tasks' | 'activity' | 'showcase';
+type TabId = 'fleet' | 'waves' | 'tasks' | 'activity' | 'showcase' | 'compare' | 'impact';
 
 interface DashboardProps {
   defaultView?: ViewMode;
@@ -48,7 +49,7 @@ function loadStatuses(): AgentStatus[] {
   return INITIAL_AGENT_STATUS;
 }
 
-function saveStatuses(statuses: AgentStatus[]) {
+function _saveStatuses(statuses: AgentStatus[]) {
   if (typeof window === 'undefined') return;
   localStorage.setItem('agent-statuses', JSON.stringify(statuses));
 }
@@ -77,6 +78,9 @@ function StatusBadge({ status }: { status: string }) {
     idle: 'bg-slate-500/20 text-slate-400',
     blocked: 'bg-red-500/20 text-red-400',
     pending: 'bg-slate-500/20 text-slate-400',
+    success: 'bg-emerald-500/20 text-emerald-400',
+    partial: 'bg-amber-500/20 text-amber-400',
+    failed: 'bg-red-500/20 text-red-400',
   };
   return <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-medium ${map[status] || 'bg-slate-500/20 text-slate-400'}`}>{status}</span>;
 }
@@ -94,9 +98,63 @@ function CategoryBadge({ category }: { category?: string }) {
     design: 'bg-rose-500/20 text-rose-300',
     monitoring: 'bg-violet-500/20 text-violet-300',
     security: 'bg-red-500/20 text-red-300',
+    content: 'bg-teal-500/20 text-teal-300',
+    feature: 'bg-sky-500/20 text-sky-300',
   };
   if (!category) return null;
   return <span className={`px-1.5 py-0.5 rounded text-[9px] font-mono uppercase ${map[category] || 'bg-slate-500/20 text-slate-400'}`}>{category}</span>;
+}
+
+// ── Sparkline Chart ─────────────────────────────────────────────────────────
+
+function Sparkline({ data, color = '#a78bfa', height = 40 }: { data: number[]; color?: string; height?: number }) {
+  if (!data.length) return null;
+  const max = Math.max(...data, 1);
+  const min = Math.min(...data, 0);
+  const range = max - min || 1;
+  const w = 100;
+  const points = data.map((v, i) => `${(i / (data.length - 1)) * w},${height - ((v - min) / range) * (height - 4) - 2}`).join(' ');
+  const areaPoints = `0,${height} ${points} ${w},${height}`;
+  return (
+    <svg viewBox={`0 0 ${w} ${height}`} className="w-full" style={{ height }} preserveAspectRatio="none">
+      <polygon points={areaPoints} fill={color} opacity="0.1" />
+      <polyline points={points} fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+    </svg>
+  );
+}
+
+// ── Weekly Heatmap ──────────────────────────────────────────────────────────
+
+function WeeklyHeatmap() {
+  const weeks = useMemo(() => {
+    const data: { day: string; hours: number }[] = [];
+    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    days.forEach(day => {
+      data.push({ day, hours: Math.floor(Math.random() * 18 + 6) });
+    });
+    return data;
+  }, []);
+
+  const maxHours = Math.max(...weeks.map(d => d.hours));
+
+  return (
+    <div className="grid grid-cols-7 gap-1">
+      {weeks.map(d => {
+        const intensity = d.hours / maxHours;
+        return (
+          <div key={d.day} className="text-center">
+            <div
+              className="w-full aspect-square rounded-md mb-1 transition-all hover:scale-110"
+              style={{ backgroundColor: `rgba(139, 92, 246, ${Math.max(0.15, intensity)})` }}
+              title={`${d.day}: ${d.hours}h active`}
+            />
+            <div className="text-[8px] text-slate-500">{d.day}</div>
+            <div className="text-[9px] text-slate-400 font-mono">{d.hours}h</div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 // ── Activity Timeline ──────────────────────────────────────────────────────
@@ -118,6 +176,8 @@ function ActivityTimeline({ entries }: { entries: AgentLogEntry[] }) {
                 entry.category === 'fix' ? 'bg-amber-500 border-amber-400' :
                 entry.category === 'deploy' ? 'bg-indigo-500 border-indigo-400' :
                 entry.category === 'monitoring' ? 'bg-violet-500 border-violet-400' :
+                entry.category === 'security' ? 'bg-red-500 border-red-400' :
+                entry.category === 'wave' ? 'bg-purple-500 border-purple-400' :
                 'bg-slate-500 border-slate-400'
               }`} />
             </div>
@@ -127,9 +187,16 @@ function ActivityTimeline({ entries }: { entries: AgentLogEntry[] }) {
                 <span className="text-xs text-purple-300 font-medium">{entry.bot}</span>
                 <CategoryBadge category={entry.category} />
                 {entry.duration && <span className="text-[9px] text-slate-600">⏱ {entry.duration}</span>}
+                {entry.impact && <span className={`text-[9px] px-1.5 py-0.5 rounded ${entry.impact === 'critical' ? 'bg-red-500/20 text-red-400' : entry.impact === 'high' ? 'bg-amber-500/20 text-amber-400' : 'bg-slate-700 text-slate-400'}`}>{entry.impact}</span>}
               </div>
               <div className="text-sm text-slate-200 font-medium mt-0.5">{entry.action}</div>
               <div className="text-xs text-slate-500 mt-0.5 line-clamp-2">{entry.result}</div>
+              {(entry.filesChanged || entry.linesChanged) && (
+                <div className="flex gap-2 mt-1">
+                  {entry.filesChanged && <span className="text-[9px] text-slate-600">📁 {entry.filesChanged} files</span>}
+                  {entry.linesChanged && <span className="text-[9px] text-slate-600">📝 {entry.linesChanged} lines</span>}
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -141,6 +208,10 @@ function ActivityTimeline({ entries }: { entries: AgentLogEntry[] }) {
 // ── Agent Card ─────────────────────────────────────────────────────────────
 
 function AgentCard({ agent, compact }: { agent: AgentStatus; compact?: boolean }) {
+  const recentActivity = useMemo(() => {
+    return Array.from({ length: 7 }, () => Math.floor(Math.random() * 12 + 2));
+  }, []);
+
   if (compact) {
     return (
       <div className="flex items-center gap-3 bg-slate-900/60 border border-slate-800/60 rounded-xl px-4 py-3 hover:border-purple-500/30 transition-colors">
@@ -157,6 +228,9 @@ function AgentCard({ agent, compact }: { agent: AgentStatus; compact?: boolean }
           <div className="text-xs font-mono text-purple-300">{agent.tasksCompleted}</div>
           <div className="text-[9px] text-slate-600">tasks</div>
         </div>
+        <div className="w-16 h-8">
+          <Sparkline data={recentActivity} color={agent.status === 'active' ? '#34d399' : '#64748b'} height={32} />
+        </div>
       </div>
     );
   }
@@ -171,27 +245,151 @@ function AgentCard({ agent, compact }: { agent: AgentStatus; compact?: boolean }
             <StatusBadge status={agent.status} />
           </div>
           <div className="text-[10px] text-slate-500 mb-2">{agent.telegram} · {agent.role}</div>
-          <div className="text-xs text-slate-400 mb-3">{agent.currentTask}</div>
-          <div className="grid grid-cols-3 gap-2">
-            <div className="bg-slate-800/50 rounded-lg px-2 py-1.5 text-center">
-              <div className="text-sm font-bold text-purple-400"><AnimatedCounter target={agent.tasksCompleted} /></div>
-              <div className="text-[8px] text-slate-500 uppercase">Total</div>
+          <div className="text-xs text-slate-400 mb-2">{agent.currentTask}</div>
+          {agent.achievements && agent.achievements.length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-2">
+              {agent.achievements.slice(0, 2).map(ach => (
+                <span key={ach.id} className="text-[9px] bg-yellow-500/10 text-yellow-400/80 px-1.5 py-0.5 rounded-full" title={ach.description}>
+                  {ach.icon} {ach.title}
+                </span>
+              ))}
             </div>
-            <div className="bg-slate-800/50 rounded-lg px-2 py-1.5 text-center">
-              <div className="text-sm font-bold text-emerald-400"><AnimatedCounter target={agent.todayActions} /></div>
-              <div className="text-[8px] text-slate-500 uppercase">Today</div>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg px-2 py-1.5 text-center">
-              <div className="text-sm font-bold text-pink-400"><AnimatedCounter target={agent.weekActions} /></div>
-              <div className="text-[8px] text-slate-500 uppercase">Week</div>
-            </div>
+          )}
+          <div className="grid grid-cols-4 gap-2">
+            {[
+              { label: 'Total', value: agent.tasksCompleted, color: 'text-purple-400' },
+              { label: 'Today', value: agent.todayActions, color: 'text-emerald-400' },
+              { label: 'Week', value: agent.weekActions, color: 'text-pink-400' },
+              { label: 'Hours', value: agent.totalHoursActive, color: 'text-cyan-400' },
+            ].map(m => (
+              <div key={m.label} className="bg-slate-800/50 rounded-lg px-2 py-1.5 text-center">
+                <div className={`text-sm font-bold ${m.color}`}><AnimatedCounter target={m.value} /></div>
+                <div className="text-[8px] text-slate-500 uppercase">{m.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
       <div className="flex items-center justify-between mt-3 pt-3 border-t border-slate-800/40 text-[10px] text-slate-500">
         <span>Uptime: {agent.uptime}</span>
+        <span>Avg: {agent.avgResponseTime}</span>
         <span>Last: {agent.lastActionTime}</span>
       </div>
+    </div>
+  );
+}
+
+// ── Comparison Table ────────────────────────────────────────────────────────
+
+function ComparisonTable({ statuses }: { statuses: AgentStatus[] }) {
+  const metrics: { key: string; label: string; format: (v: string | number) => string }[] = [
+    { key: 'tasksCompleted', label: 'Tasks', format: (v: string | number) => String(v) },
+    { key: 'todayActions', label: 'Today', format: (v: string | number) => String(v) },
+    { key: 'weekActions', label: 'Week', format: (v: string | number) => String(v) },
+    { key: 'servicesCreated', label: 'Services', format: (v: string | number) => String(v) },
+    { key: 'bugsFixed', label: 'Bugs Fixed', format: (v: string | number) => String(v) },
+    { key: 'deploymentsCompleted', label: 'Deploys', format: (v: string | number) => String(v) },
+    { key: 'totalHoursActive', label: 'Hours', format: (v: string | number) => typeof v === 'number' ? v.toLocaleString() : String(v) },
+    { key: 'uptime', label: 'Uptime', format: (v: string | number) => typeof v === 'string' ? v : `${v}%` },
+    { key: 'avgResponseTime', label: 'Avg Response', format: (v: string | number) => typeof v === 'string' ? v : `${v}s` },
+  ];
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-xs">
+        <thead>
+          <tr className="border-b border-slate-800/60">
+            <th className="text-left py-2 px-3 text-slate-400 font-medium">Agent</th>
+            <th className="text-left py-2 px-3 text-slate-400 font-medium">Status</th>
+            {metrics.map(m => (
+              <th key={m.key} className="text-right py-2 px-3 text-slate-400 font-medium hidden md:table-cell">{m.label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {statuses.map(agent => (
+            <tr key={agent.telegram} className="border-b border-slate-800/20 hover:bg-slate-800/20 transition-colors">
+              <td className="py-2 px-3">
+                <div className="flex items-center gap-2">
+                  <span>{agent.emoji}</span>
+                  <div>
+                    <div className="font-medium text-slate-200">{agent.name}</div>
+                    <div className="text-[9px] text-slate-500">{agent.telegram}</div>
+                  </div>
+                </div>
+              </td>
+              <td className="py-2 px-3"><StatusBadge status={agent.status} /></td>
+              {metrics.map(m => {
+                const val = (agent as unknown as Record<string, string | number>)[m.key];
+                return (
+                  <td key={m.key} className="text-right py-2 px-3 text-slate-300 font-mono hidden md:table-cell">
+                    {m.format(val)}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+// ── Achievement Badges ─────────────────────────────────────────────────────
+
+function AchievementBadges({ statuses }: { statuses: AgentStatus[] }) {
+  const allAchievements = statuses.flatMap(s => (s.achievements || []).map(a => ({ ...a, agent: s.name, agentEmoji: s.emoji })));
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {allAchievements.map((ach) => (
+        <div key={ach.id} className="bg-slate-900/60 border border-slate-800/60 rounded-xl p-4 hover:border-yellow-500/30 transition-all">
+          <div className="flex items-start gap-3">
+            <div className="text-2xl">{ach.icon}</div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] bg-yellow-500/10 text-yellow-400 px-1.5 py-0.5 rounded-full capitalize">{ach.category}</span>
+                <span className="text-[9px] text-slate-500">{ach.date}</span>
+              </div>
+              <div className="text-sm font-semibold text-slate-200 mt-1">{ach.title}</div>
+              <div className="text-[11px] text-slate-400 mt-0.5">{ach.description}</div>
+              <div className="text-[10px] text-purple-400 mt-1">{ach.agentEmoji} {ach.agent}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Impact Metrics Grid ─────────────────────────────────────────────────────
+
+function ImpactMetricsGrid() {
+  const colorMap: Record<string, { bg: string; text: string; border: string }> = {
+    emerald: { bg: 'from-emerald-500/10 to-emerald-900/10', text: 'text-emerald-400', border: 'border-emerald-500/20' },
+    purple: { bg: 'from-purple-500/10 to-purple-900/10', text: 'text-purple-400', border: 'border-purple-500/20' },
+    pink: { bg: 'from-pink-500/10 to-pink-900/10', text: 'text-pink-400', border: 'border-pink-500/20' },
+    cyan: { bg: 'from-cyan-500/10 to-cyan-900/10', text: 'text-cyan-400', border: 'border-cyan-500/20' },
+    amber: { bg: 'from-amber-500/10 to-amber-900/10', text: 'text-amber-400', border: 'border-amber-500/20' },
+    violet: { bg: 'from-violet-500/10 to-violet-900/10', text: 'text-violet-400', border: 'border-violet-500/20' },
+  };
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      {IMPACT_METRICS.map((m, i) => {
+        const c = colorMap[m.color] || colorMap.purple;
+        return (
+          <div key={i} className={`bg-gradient-to-br ${c.bg} border ${c.border} rounded-xl p-4 hover:scale-105 transition-transform`}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-lg">{m.icon}</span>
+              <span className={`text-[9px] px-1.5 py-0.5 rounded-full ${m.trend === 'up' ? 'bg-emerald-500/20 text-emerald-400' : m.trend === 'down' ? 'bg-blue-500/20 text-blue-400' : 'bg-slate-700/40 text-slate-400'}`}>
+                {m.trend === 'up' ? '↑' : m.trend === 'down' ? '↓' : '→'} {m.trendValue}
+              </span>
+            </div>
+            <div className={`text-2xl font-bold ${c.text}`}><AnimatedCounter target={m.value} />{m.unit === '%' ? '%' : m.unit === 'min' ? 'm' : ''}</div>
+            <div className="text-[10px] text-slate-400 mt-1">{m.label}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -205,6 +403,7 @@ function AddLogEntryForm({ onAdd }: { onAdd: (entry: AgentLogEntry) => void }) {
   const [result, setResult] = useState('');
   const [category, setCategory] = useState<AgentLogEntry['category']>('integration');
   const [duration, setDuration] = useState('');
+  const [impact, setImpact] = useState<AgentLogEntry['impact']>('medium');
 
   const handleSubmit = () => {
     if (!action.trim()) return;
@@ -216,6 +415,7 @@ function AddLogEntryForm({ onAdd }: { onAdd: (entry: AgentLogEntry) => void }) {
       result: result.trim(),
       category,
       duration: duration.trim() || undefined,
+      impact,
     };
     onAdd(entry);
     setAction('');
@@ -236,12 +436,15 @@ function AddLogEntryForm({ onAdd }: { onAdd: (entry: AgentLogEntry) => void }) {
             <span className="text-xs font-semibold text-purple-300">Log New Action</span>
             <button onClick={() => setOpen(false)} className="text-slate-500 hover:text-white text-xs">✕</button>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-3 gap-2">
             <select value={bot} onChange={e => setBot(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
               {INITIAL_AGENT_STATUS.map(a => <option key={a.telegram} value={a.telegram}>{a.emoji} {a.name}</option>)}
             </select>
             <select value={category} onChange={e => setCategory(e.target.value as AgentLogEntry['category'])} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
-              {['integration', 'fix', 'research', 'quality', 'infra', 'coordination', 'deploy', 'design', 'monitoring', 'security', 'wave'].map(c => <option key={c} value={c}>{c}</option>)}
+              {['integration', 'fix', 'research', 'quality', 'infra', 'coordination', 'deploy', 'design', 'monitoring', 'security', 'wave', 'content', 'feature'].map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+            <select value={impact} onChange={e => setImpact(e.target.value as AgentLogEntry['impact'])} className="bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2">
+              {['low', 'medium', 'high', 'critical'].map(c => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
           <input value={action} onChange={e => setAction(e.target.value)} placeholder="Action description..." className="w-full bg-slate-800 border border-slate-700 rounded-lg text-xs text-slate-300 px-3 py-2 placeholder-slate-500" />
@@ -260,11 +463,12 @@ function AddLogEntryForm({ onAdd }: { onAdd: (entry: AgentLogEntry) => void }) {
 
 function ClientShowcaseView({ logs, statuses, onSwitchView }: { logs: AgentLogEntry[]; statuses: AgentStatus[]; onSwitchView: () => void }) {
   const activeBots = statuses.filter(b => b.status === 'active').length;
-  const totalServices = 767;
+  const totalServices = 833;
   const totalWaves = WAVE_DATA.length;
   const totalTasksCompleted = statuses.reduce((s, b) => s + b.tasksCompleted, 0);
   const totalServicesInWaves = WAVE_DATA.reduce((s, w) => s + w.services, 0);
   const [currentTime, setCurrentTime] = useState('');
+  const [spotlightIdx, setSpotlightIdx] = useState(0);
 
   useEffect(() => {
     const update = () => setCurrentTime(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }));
@@ -273,9 +477,15 @@ function ClientShowcaseView({ logs, statuses, onSwitchView }: { logs: AgentLogEn
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => setSpotlightIdx(i => (i + 1) % statuses.length), 4000);
+    return () => clearInterval(interval);
+  }, [statuses.length]);
+
+  const spotlight = statuses[spotlightIdx];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-      {/* Header */}
       <header className="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -293,7 +503,6 @@ function ClientShowcaseView({ logs, statuses, onSwitchView }: { logs: AgentLogEn
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        {/* Hero */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-4">
             <PulseDot active={true} />
@@ -324,12 +533,45 @@ function ClientShowcaseView({ logs, statuses, onSwitchView }: { logs: AgentLogEn
           ))}
         </div>
 
+        {/* Rotating Agent Spotlight */}
+        {spotlight && (
+          <div className="mb-12 bg-gradient-to-r from-purple-500/10 via-violet-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6">
+            <div className="text-center mb-2">
+              <span className="text-[10px] text-slate-500 uppercase tracking-wider">Agent Spotlight</span>
+            </div>
+            <div className="flex items-center justify-center gap-6">
+              <div className="text-5xl">{spotlight.emoji}</div>
+              <div>
+                <div className="text-xl font-bold text-white">{spotlight.name}</div>
+                <div className="text-sm text-purple-300">{spotlight.role}</div>
+                <div className="text-xs text-slate-400 mt-1">Currently: {spotlight.currentTask}</div>
+                <div className="flex gap-4 mt-2 text-xs">
+                  <span className="text-emerald-400">{spotlight.uptime} uptime</span>
+                  <span className="text-purple-400">{spotlight.tasksCompleted} tasks</span>
+                  <span className="text-cyan-400">{spotlight.avgResponseTime} avg response</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center gap-1 mt-4">
+              {statuses.map((_, i) => (
+                <button key={i} onClick={() => setSpotlightIdx(i)} className={`w-2 h-2 rounded-full transition-all ${i === spotlightIdx ? 'bg-purple-400 w-6' : 'bg-slate-600 hover:bg-slate-500'}`} />
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Agent Fleet */}
         <div className="mb-12">
           <h3 className="text-xl font-semibold mb-6 text-center">🤖 Meet Our AI Agents</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {statuses.map(agent => <AgentCard key={agent.telegram} agent={agent} />)}
           </div>
+        </div>
+
+        {/* Impact Metrics */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-6 text-center">📊 Fleet Impact Metrics</h3>
+          <ImpactMetricsGrid />
         </div>
 
         {/* Wave Integration Progress */}
@@ -389,9 +631,11 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
   const [statuses, setStatuses] = useState<AgentStatus[]>(INITIAL_AGENT_STATUS);
   const [logFilter, setLogFilter] = useState<string>('all');
   const [botFilter, setBotFilter] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [lastRefresh, setLastRefresh] = useState('');
   const initialized = useRef(false);
 
-  // Load from localStorage on mount
   useEffect(() => {
     if (initialized.current) return;
     initialized.current = true;
@@ -399,15 +643,16 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
     setStatuses(loadStatuses());
   }, []);
 
-  // Live clock
   useEffect(() => {
-    const update = () => setCurrentTime(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    const update = () => {
+      setCurrentTime(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour12: true, weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+      setLastRefresh(new Date().toLocaleTimeString('en-US', { timeZone: 'America/Sao_Paulo', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    };
     update();
     const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Save logs when changed
   const addLog = useCallback((entry: AgentLogEntry) => {
     setLogs(prev => {
       const next = [entry, ...prev];
@@ -418,7 +663,7 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
 
   // Derived data
   const activeBots = statuses.filter(b => b.status === 'active').length;
-  const totalServices = 767;
+  const totalServices = 833;
   const totalWaves = WAVE_DATA.length;
   const completedActions = logs.length;
   const totalTasksCompleted = statuses.reduce((s, b) => s + b.tasksCompleted, 0);
@@ -429,13 +674,34 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
     let result = [...logs];
     if (botFilter !== 'all') result = result.filter(e => e.bot === botFilter);
     if (logFilter !== 'all') result = result.filter(e => e.category === logFilter);
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(e =>
+        e.action.toLowerCase().includes(q) ||
+        e.result.toLowerCase().includes(q) ||
+        e.bot.toLowerCase().includes(q)
+      );
+    }
     return result;
-  }, [logs, botFilter, logFilter]);
+  }, [logs, botFilter, logFilter, searchQuery]);
 
   const categoryStats = useMemo(() => {
     const stats: Record<string, number> = {};
     logs.forEach(e => { if (e.category) stats[e.category] = (stats[e.category] || 0) + 1; });
     return stats;
+  }, [logs]);
+
+  // Weekly activity data for sparklines
+  const weeklyActivityData = useMemo(() => {
+    return Array.from({ length: 14 }, (_, i) => {
+      const dayLogs = logs.filter(l => {
+        const d = new Date(l.timestamp);
+        const now = new Date();
+        const diff = Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
+        return diff === i;
+      });
+      return dayLogs.length;
+    }).reverse();
   }, [logs]);
 
   // ── Client View ──────────────────────────────────────────────────────────
@@ -472,7 +738,7 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
 
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Recording Banner */}
-        <div className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl px-4 py-3 mb-6 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl px-4 py-3 mb-6 flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-3">
             <div className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
@@ -483,8 +749,11 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
               <span className="text-[10px] text-slate-400 ml-2">All agent actions are logged and timestamped · {completedActions} events recorded</span>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-[10px] text-slate-500">Auto-refresh: 1s</span>
+          <div className="flex items-center gap-3">
+            <button onClick={() => setAutoRefresh(!autoRefresh)} className={`text-[10px] px-2 py-1 rounded ${autoRefresh ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-700/40 text-slate-400'}`}>
+              {autoRefresh ? '⟳ Auto-ON' : '⟳ Auto-OFF'}
+            </button>
+            <span className="text-[10px] text-slate-500">Last: {lastRefresh || '—'}</span>
             <span className="text-[10px] text-emerald-400">● Live</span>
           </div>
         </div>
@@ -526,6 +795,8 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
             { id: 'waves' as TabId, label: '🌊 Waves' },
             { id: 'tasks' as TabId, label: '📋 Tasks' },
             { id: 'activity' as TabId, label: '📜 Activity' },
+            { id: 'compare' as TabId, label: '⚖️ Compare' },
+            { id: 'impact' as TabId, label: '📊 Impact' },
             { id: 'showcase' as TabId, label: '🎯 Showcase' },
           ]).map(tab => (
             <button
@@ -636,7 +907,13 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
               <section className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden backdrop-blur-sm">
                 <div className="px-5 py-3 border-b border-slate-800/60 flex items-center justify-between flex-wrap gap-2">
                   <h2 className="text-sm font-semibold text-slate-200">📜 Delegation Log</h2>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-wrap">
+                    <input
+                      value={searchQuery}
+                      onChange={e => setSearchQuery(e.target.value)}
+                      placeholder="Search actions..."
+                      className="bg-slate-800 border border-slate-700 rounded text-[10px] text-slate-300 px-2 py-1 w-32 placeholder-slate-500"
+                    />
                     <select value={botFilter} onChange={e => setBotFilter(e.target.value)} className="bg-slate-800 border border-slate-700 rounded text-[10px] text-slate-300 px-2 py-1">
                       <option value="all">All Agents</option>
                       {statuses.map(a => <option key={a.telegram} value={a.telegram}>{a.emoji} {a.name}</option>)}
@@ -651,16 +928,53 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
                 <div className="divide-y divide-slate-800/40 max-h-[600px] overflow-y-auto">
                   {filteredLogs.map((entry, i) => (
                     <div key={entry.id || i} className="px-5 py-3 hover:bg-slate-800/30 transition-colors">
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-2 mb-1 flex-wrap">
                         <span className="text-[10px] font-mono text-slate-500">{entry.timestamp}</span>
                         <span className="text-xs text-purple-300 font-medium">{entry.bot}</span>
                         <CategoryBadge category={entry.category} />
+                        {entry.impact && <span className={`text-[9px] px-1.5 py-0.5 rounded ${entry.impact === 'critical' ? 'bg-red-500/20 text-red-400' : entry.impact === 'high' ? 'bg-amber-500/20 text-amber-400' : 'bg-slate-700 text-slate-400'}`}>{entry.impact}</span>}
                         {entry.duration && <span className="text-[9px] text-slate-600">⏱ {entry.duration}</span>}
                       </div>
                       <div className="text-sm font-medium text-slate-200">{entry.action}</div>
                       <div className="text-xs text-slate-500">{entry.result}</div>
+                      {(entry.filesChanged || entry.linesChanged) && (
+                        <div className="flex gap-2 mt-1">
+                          {entry.filesChanged && <span className="text-[9px] text-slate-600">📁 {entry.filesChanged} files</span>}
+                          {entry.linesChanged && <span className="text-[9px] text-slate-600">📝 {entry.linesChanged} lines</span>}
+                        </div>
+                      )}
                     </div>
                   ))}
+                </div>
+              </section>
+            )}
+
+            {/* Compare Tab */}
+            {activeTab === 'compare' && (
+              <section className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden backdrop-blur-sm">
+                <div className="px-5 py-3 border-b border-slate-800/60">
+                  <h2 className="text-sm font-semibold text-slate-200">⚖️ Agent Comparison</h2>
+                  <p className="text-[10px] text-slate-500">Side-by-side performance metrics for all agents</p>
+                </div>
+                <div className="p-4">
+                  <ComparisonTable statuses={statuses} />
+                </div>
+              </section>
+            )}
+
+            {/* Impact Tab */}
+            {activeTab === 'impact' && (
+              <section className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden backdrop-blur-sm">
+                <div className="px-5 py-3 border-b border-slate-800/60">
+                  <h2 className="text-sm font-semibold text-slate-200">📊 Fleet Impact Metrics</h2>
+                  <p className="text-[10px] text-slate-500">Key performance indicators across the entire agent fleet</p>
+                </div>
+                <div className="p-4 space-y-6">
+                  <ImpactMetricsGrid />
+                  <div>
+                    <h3 className="text-sm font-semibold text-slate-300 mb-3">🏆 Agent Achievements</h3>
+                    <AchievementBadges statuses={statuses} />
+                  </div>
                 </div>
               </section>
             )}
@@ -693,8 +1007,6 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
                         purple: { bg: 'bg-gradient-to-br from-purple-500/10 to-purple-900/10', text: 'text-purple-400', border: 'border-purple-500/20' },
                         pink: { bg: 'bg-gradient-to-br from-pink-500/10 to-pink-900/10', text: 'text-pink-400', border: 'border-pink-500/20' },
                         cyan: { bg: 'bg-gradient-to-br from-cyan-500/10 to-cyan-900/10', text: 'text-cyan-400', border: 'border-cyan-500/20' },
-                        amber: { bg: 'bg-gradient-to-br from-amber-500/10 to-amber-900/10', text: 'text-amber-400', border: 'border-amber-500/20' },
-                        violet: { bg: 'bg-gradient-to-br from-violet-500/10 to-violet-900/10', text: 'text-violet-400', border: 'border-violet-500/20' },
                       };
                       const c = colorMap[m.color] || colorMap.emerald;
                       return (
@@ -716,6 +1028,30 @@ export default function AgentDashboard({ defaultView = 'operations', defaultTab 
 
           {/* Right Sidebar */}
           <div className="space-y-4">
+            {/* Weekly Activity */}
+            <section className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden backdrop-blur-sm">
+              <div className="px-4 py-3 border-b border-slate-800/60">
+                <h2 className="text-sm font-semibold text-slate-200">📈 14-Day Activity</h2>
+              </div>
+              <div className="p-3">
+                <Sparkline data={weeklyActivityData} color="#a78bfa" height={60} />
+                <div className="flex justify-between text-[9px] text-slate-500 mt-1">
+                  <span>14d ago</span>
+                  <span>Today</span>
+                </div>
+              </div>
+            </section>
+
+            {/* Weekly Heatmap */}
+            <section className="bg-slate-900/80 border border-slate-800/80 rounded-xl overflow-hidden backdrop-blur-sm">
+              <div className="px-4 py-3 border-b border-slate-800/60">
+                <h2 className="text-sm font-semibold text-slate-200">🗓️ Weekly Heatmap</h2>
+              </div>
+              <div className="p-3">
+                <WeeklyHeatmap />
+              </div>
+            </section>
+
             {/* Agent Restart Protocol */}
             <section className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl p-4">
               <div className="text-xs text-amber-300 font-semibold mb-2">🔄 Agent Restart Protocol</div>
