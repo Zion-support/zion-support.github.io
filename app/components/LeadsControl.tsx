@@ -164,6 +164,7 @@ const DISCOVERED_LEADS: Lead[] = [
   { id: 'e005', company: 'Datadog', contact: 'Partnerships', email: 'partners@datadog.zendesk.com', source: 'Email Partnership', industry: 'Cloud/Monitoring', status: 'replied', score: 94, notes: 'Monitoring and security platform. Partnership for AI-powered observability and monitoring solutions.', dateFound: '2026-06-12', lastContact: '2026-06-12', services: ['MDR 24/7', 'Zero Trust Network Access', 'AI Compliance Monitor'], website: 'https://datadoghq.com', companySize: 'Enterprise', budgetRange: '$100K+', decisionTimeline: '3-6 months' },
   { id: 'e006', company: 'Raynmaker', contact: 'Devon', email: 'devon@raynmaker.ai', source: 'Email Partnership', industry: 'AI/Discovery', status: 'replied', score: 87, notes: 'AI discovery platform. Scheduled discovery call. Interested in AI-powered search and discovery solutions.', dateFound: '2026-06-12', lastContact: '2026-06-12', services: ['AI Customer Support Copilot', 'AI Retail Personalization', 'AI Form Builder'], website: 'https://raynmaker.ai', companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: 'Immediate' },
   { id: 'e007', company: 'Pathors', contact: 'Partnerships', email: 'contact@pathors.com', source: 'Email Partnership', industry: 'AI/Platform', status: 'replied', score: 82, notes: 'AI platform partnership opportunity. Interested in co-development and integration.', dateFound: '2026-06-12', lastContact: '2026-06-12', services: ['AI Code Review Copilot', 'AI Compliance Monitor', 'AI Document Processing Pipeline'], website: 'https://pathors.com', companySize: 'SMB', budgetRange: '$10K-$50K', decisionTimeline: '3-6 months' },
+  { id: 'e008', company: 'Cartesia', contact: 'Support', email: 'support@cartesia.ai', source: 'Email Partnership', industry: 'AI/Voice', status: 'replied', score: 86, notes: 'AI voice technology platform. Invited to join customer portal. Partnership potential for voice AI solutions.', dateFound: '2026-06-12', lastContact: '2026-06-12', services: ['AI Voice Agent', 'AI Customer Support Copilot'], website: 'https://cartesia.ai', companySize: 'Mid-Market', budgetRange: '$50K-$100K', decisionTimeline: '1-3 months' },
 ];
 
 const ALL_LEADS: Lead[] = [...MANUAL_LEADS, ...DISCOVERED_LEADS];
@@ -327,6 +328,7 @@ export default function LeadsControl() {
     warm: leads.filter(l => getPriority(l.score) === 'warm').length,
     cold: leads.filter(l => getPriority(l.score) === 'cold').length,
     totalRevenue: leads.reduce((s, l) => s + revenuePotential(l), 0),
+    emailPartnerships: leads.filter(l => l.source === 'Email Partnership').length,
   }), [leads]);
 
   const pipelineStages: PipelineStage[] = useMemo(() => [
@@ -1071,9 +1073,36 @@ export default function LeadsControl() {
         )}
       </main>
 
-      <footer className="border-t border-slate-800/60 mt-8 py-4 text-center text-[10px] text-slate-600">
-        <p>Zion Tech Group — Leads Control · {currentTime || '—'} · {stats.total} leads · {stats.discovered} discovered</p>
+      <footer className="border-t border-slate-800/60 mt-8 py-6 text-center">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-xs">
+            <div>
+              <div className="text-slate-500 mb-1">📞 Mobile</div>
+              <a href="tel:+13024640950" className="text-slate-300 hover:text-amber-400 transition">+1 302 464 0950</a>
+            </div>
+            <div>
+              <div className="text-slate-500 mb-1">📧 Email</div>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-amber-400 transition">kleber@ziontechgroup.com</a>
+            </div>
+            <div>
+              <div className="text-slate-500 mb-1">📍 Address</div>
+              <span className="text-slate-300">364 E Main St STE 1008, Middletown, DE 19709</span>
+            </div>
+          </div>
+          <div className="text-[10px] text-slate-600">
+            Zion Tech Group — Leads Control · {currentTime || '—'} · {stats.total} leads · {stats.discovered} discovered · {stats.emailPartnerships} email partnerships
+          </div>
+        </div>
       </footer>
+
+      {/* Floating Quick Add Button */}
+      <button
+        onClick={() => setShowAddLead(true)}
+        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white text-2xl shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:scale-110 transition-all z-40 flex items-center justify-center"
+        title="Quick Add Lead"
+      >
+        +
+      </button>
     </div>
   );
 }
