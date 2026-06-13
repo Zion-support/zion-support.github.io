@@ -76,7 +76,7 @@ CLASSIFICATION_RULES: Dict[str, List[str]] = {
     CAT_CUSTOMER: [
         "support", "help", "issue", "problem", "bug", "error",
         "broken", "not working", "troubleshoot", "fix",
-        "refund", "cancel", "subscription", "account",
+        "refund", "subscription", "account",
         "how do i", "how to", "question about",
         "feature request", "feedback", "complaint",
         "invoice", "billing", "payment", "charge",
@@ -616,6 +616,24 @@ def cmd_stats():
     print("=" * 50)
     return 0
 
+def cmd_cleanup(logger):
+    """Mark all unread messages as read (cleanup after misclassification)."""
+    access = get_access_token()
+    headers = {"Authorization": "Bearer " + access, "Content-Type": "application/json"}
+    url = GMAIL_API + "/messages?q=is:unread&maxResults=50"
+    result = api_request(url, headers)
+    msg_ids = result.get("messages", [])
+    cleaned = 0
+    for m in msg_ids:
+        try:
+            api_request(GMAIL_API + "/messages/" + m["id"] + "/modify", headers, method="POST",
+                        data={"removeLabelIds": ["UNREAD"]})
+            cleaned += 1
+        except Exception as e:
+            logger.warning("Failed to mark read %s: %s", m["id"], e)
+    print(f"Cleaned {cleaned} unread messages")
+    return 0
+
 # ── CLI ────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Email Auto-Responder v2 — Direct Gmail API")
@@ -624,10 +642,13 @@ def main():
     parser.add_argument("--verbose", action="store_true", default=False, help="Verbose logging")
     parser.add_argument("--json-output", action="store_true", default=False, help="JSON summary output")
     parser.add_argument("--stats", action="store_true", default=False, help="Show statistics")
+    parser.add_argument("--cleanup", action="store_true", default=False, help="Mark all unread as read")
     args = parser.parse_args()
 
     if args.stats:
         sys.exit(cmd_stats())
+    if args.cleanup:
+        sys.exit(cmd_cleanup(logging.getLogger("email_responder_v2")))
 
     logger = setup_logging(verbose=args.verbose)
     summary = process_emails(send_mode=args.send, max_emails=args.max_emails, logger=logger)
