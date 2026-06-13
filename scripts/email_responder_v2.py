@@ -468,6 +468,7 @@ def process_emails(send_mode, max_emails, logger):
     replied = 0
     skipped = 0
     errors = 0
+    human_review = 0
 
     for msg in messages:
         parsed = parse_message(msg)
@@ -520,6 +521,7 @@ def process_emails(send_mode, max_emails, logger):
             logger.info("→ Flagged for human review (marking read)")
             mark_as_read(msg_id, logger)
             action = "human_review"
+            human_review += 1
         else:
             # Smart template selection based on category + industry
             industry = detect_industry(subject, body_text)
@@ -566,6 +568,8 @@ def process_emails(send_mode, max_emails, logger):
     state["total_processed"] = state.get("total_processed", 0) + len(results)
     state["total_replied"] = state.get("total_replied", 0) + replied
     state["total_errors"] = state.get("total_errors", 0) + errors
+    state["total_skipped"] = state.get("total_skipped", 0) + skipped
+    state["total_human_review"] = state.get("total_human_review", 0) + human_review
     state["last_run"] = run_timestamp
     save_state(state)
 
@@ -587,6 +591,31 @@ def process_emails(send_mode, max_emails, logger):
     logger.info("=" * 60)
     return summary
 
+def cmd_stats():
+    """Show responder statistics."""
+    state = load_state()
+    log = load_log(logging.getLogger("email_responder_v2"))
+    print("=" * 50)
+    print("  Email Auto-Responder v2 — Statistics")
+    print("=" * 50)
+    print(f"  Total Processed:    {state.get('total_processed', 0)}")
+    print(f"  Total Replied:      {state.get('total_replied', 0)}")
+    print(f"  Total Skipped:      {state.get('total_skipped', 0)}")
+    print(f"  Total Errors:       {state.get('total_errors', 0)}")
+    print(f"  Human Review:       {state.get('total_human_review', 0)}")
+    print(f"  Last Run:           {state.get('last_run', 'never')}")
+    if log:
+        # Category breakdown
+        cats: Dict[str, int] = {}
+        for e in log:
+            c = e.get("category", "unknown")
+            cats[c] = cats.get(c, 0) + 1
+        print(f"\n  Classification Breakdown:")
+        for cat, count in sorted(cats.items(), key=lambda x: -x[1]):
+            print(f"    {cat:20s} {count}")
+    print("=" * 50)
+    return 0
+
 # ── CLI ────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Email Auto-Responder v2 — Direct Gmail API")
@@ -594,7 +623,11 @@ def main():
     parser.add_argument("--max-emails", type=int, default=20, help="Max unread emails (default: 20)")
     parser.add_argument("--verbose", action="store_true", default=False, help="Verbose logging")
     parser.add_argument("--json-output", action="store_true", default=False, help="JSON summary output")
+    parser.add_argument("--stats", action="store_true", default=False, help="Show statistics")
     args = parser.parse_args()
+
+    if args.stats:
+        sys.exit(cmd_stats())
 
     logger = setup_logging(verbose=args.verbose)
     summary = process_emails(send_mode=args.send, max_emails=args.max_emails, logger=logger)
