@@ -50,6 +50,14 @@ SPAM_SUBJECT_PATTERNS = [
     r"(act now|expires? (today|soon)|last chance|final reminder)",
     r"(unsubscribe|manage preferences|email preferences)",
     r"(delivery status|undeliverable|message not delivered)",
+    r"Run (failed|passed|error)",           # GitHub Actions CI notifications
+    r"\[Zion-support/",                      # Our own repo CI notifications
+    r"(Lighthouse|CI\/CD|workflow|build)\b", # CI/CD system notifications
+]
+
+# ── Auto-archive senders (mark read + remove from inbox) ────────────────────
+AUTO_ARCHIVE_SENDERS = [
+    "notifications@github.com",
 ]
 
 # ── Classification rules ───────────────────────────────────────────────────
@@ -85,9 +93,48 @@ TEMPLATE_MAP: Dict[str, str] = {
     CAT_CUSTOMER: "free-audit",
     CAT_PARTNERSHIP: "proposal-ready",
     CAT_OTHER: "free-audit",
-    CAT_REVIEW: "",
+    CAT_REVIEW: "free-audit",  # gentle auto-reply for unclear emails
     CAT_SPAM: "",
 }
+
+# ── Industry detection for smart template selection ─────────────────────────
+INDUSTRY_TEMPLATE_MAP: Dict[str, str] = {
+    "healthcare": "intro-ai-healthcare",
+    "fintech": "intro-fintech",
+    "retail": "intro-retail",
+    "edtech": "intro-edtech",
+    "logistics": "intro-logistics",
+}
+
+INDUSTRY_KEYWORDS: Dict[str, List[str]] = {
+    "healthcare": ["health", "medical", "patient", "clinical", "hospital", "hipaa", "doctor", "healthcare"],
+    "fintech": ["financial", "banking", "fintech", "payment", "fraud", "credit", "trading", "invest"],
+    "retail": ["retail", "ecommerce", "e-commerce", "shop", "store", "product", "merchant"],
+    "edtech": ["education", "edtech", "learning", "student", "school", "university", "course"],
+    "logistics": ["logistics", "supply chain", "shipping", "warehouse", "delivery", "freight"],
+}
+
+def detect_industry(subject: str, body: str) -> str:
+    """Detect industry from email content. Returns industry key or 'universal'."""
+    combined = (subject + " " + body).lower()
+    for industry, keywords in INDUSTRY_KEYWORDS.items():
+        if any(kw in combined for kw in keywords):
+            return industry
+    return "universal"
+
+def select_template(category: str, industry: str, templates: Dict) -> str:
+    """Select best template based on category + detected industry."""
+    # Try industry-specific first
+    if industry != "universal":
+        tpl_id = INDUSTRY_TEMPLATE_MAP.get(industry)
+        if tpl_id and tpl_id in templates:
+            return tpl_id
+    # Fall back to category default
+    tpl_id = TEMPLATE_MAP.get(category, "free-audit")
+    if tpl_id and tpl_id in templates:
+        return tpl_id
+    # Last resort: any available template
+    return "free-audit"
 
 # ── Blocked senders (never auto-reply) ─────────────────────────────────────
 BLOCKED_SENDERS = [
@@ -233,6 +280,17 @@ def mark_as_read(message_id, logger):
         logger.debug("Marked read: %s", message_id)
     except Exception as e:
         logger.warning("Failed to mark read %s: %s", message_id, e)
+
+def auto_archive(message_id, logger):
+    """Mark as read and archive (remove from INBOX)."""
+    access = get_access_token()
+    headers = {"Authorization": "Bearer " + access, "Content-Type": "application/json"}
+    try:
+        api_request(GMAIL_API + "/messages/" + message_id + "/modify", headers, method="POST",
+                    data={"removeLabelIds": ["UNREAD", "INBOX"]})
+        logger.info("Auto-archived: %s", message_id)
+    except Exception as e:
+        logger.warning("Failed to archive %s: %s", message_id, e)
 
 # ── Email parsing ──────────────────────────────────────────────────────────
 def extract_email(raw):
@@ -446,14 +504,38 @@ def process_emails(send_mode, max_emails, logger):
         logger.info("Classification: %s (confidence: %.2f) — %s", category, confidence, reason)
 
         if category == CAT_SPAM:
-            logger.info("→ Spam — marking read, no reply")
-            action = "spam"
-            mark_as_read(msg_id, logger)
+            # Auto-archive known noise senders, just mark read for others
+            if any(s in sender_email_addr for s in AUTO_ARCHIVE_SENDERS):
+                logger.info("→ Auto-archiving noise sender: %s", sender_email_addr)
+                auto_archive(msg_id, logger)
+                action = "archived"
+            else:
+                logger.info("→ Spam — marking read, no reply")
+                action = "spam"
+                mark_as_read(msg_id, logger)
         elif category == CAT_REVIEW:
-            logger.info("→ Flagged for human review (not marking read)")
-            action = "human_review"
+            # Send gentle auto-review reply using smart template
+            industry = detect_industry(subject, body_text)
+            template_id = select_template(CAT_REVIEW, industry, templates)
+            template = templates.get(template_id)
+            if template and sender_email_addr:
+                reply_subject, reply_body = render_template(template, {"from": sender, "subject": subject, "body": body_text}, logger)
+                success = send_reply_gmail(sender_email_addr, reply_subject, reply_body, thread_id, msg_id, not send_mode, logger)
+                if success:
+                    action = "replied" if send_mode else "dry_run_reply"
+                    replied += 1
+                    mark_as_read(msg_id, logger)
+                    logger.info("→ Auto-replied to unclear email (template: %s)", template_id)
+                else:
+                    action = "human_review"
+                    logger.info("→ Failed to send auto-reply, flagging for review")
+            else:
+                logger.info("→ Flagged for human review (no template or sender)")
+                action = "human_review"
         else:
-            template_id = TEMPLATE_MAP.get(category, "free-audit")
+            # Smart template selection based on category + industry
+            industry = detect_industry(subject, body_text)
+            template_id = select_template(category, industry, templates)
             template = templates.get(template_id)
             if not template:
                 logger.warning("Template '%s' not found — flagging for review", template_id)

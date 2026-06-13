@@ -231,7 +231,7 @@ const TASKS: Task[] = [
 ];
 
 // ─── Task State (interactive) ───────────────────────────────────────────────
-const [taskList, setTaskList] = useState<Task[]>(TASKS);
+const [taskList, setTaskList] = useState<Task[]>(() => loadFromStorage('zion_tasks', TASKS));
 
 const GMAIL_STATUS: GmailStatus = {
   connected: true,
@@ -271,13 +271,24 @@ const QUICK_REPLY_TEMPLATES = [
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
+// ─── localStorage helpers ────────────────────────────────────────────────────
+function loadFromStorage<T>(key: string, fallback: T): T {
+  if (typeof window === 'undefined') return fallback;
+  try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; } catch { return fallback; }
+}
+function saveToStorage(key: string, value: unknown) {
+  if (typeof window === 'undefined') return;
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* quota */ }
+}
+
 export default function LeadsControl() {
-  const [leads, setLeads] = useState<Lead[]>(ALL_LEADS);
+  const [leads, setLeads] = useState<Lead[]>(() => loadFromStorage('zion_leads', ALL_LEADS));
   const [filter, setFilter] = useState<string>('all');
   const [industryFilter, setIndustryFilter] = useState<string>('all');
   const [priorityFilter, setPriorityFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
+  const [detailLead, setDetailLead] = useState<Lead | null>(null);
   const [activeTab, setActiveTab] = useState<'leads' | 'discovered' | 'templates' | 'stats' | 'email' | 'analytics' | 'partnerships' | 'tasks'>('leads');
   const [currentTime, setCurrentTime] = useState('');
   const [composeTemplate, setComposeTemplate] = useState('');
@@ -288,6 +299,7 @@ export default function LeadsControl() {
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
   const [showPresets, setShowPresets] = useState(false);
+  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [filterPresets, setFilterPresets] = useState<FilterPreset[]>([
     { id: 'p1', name: '🔥 Hot Leads', filters: { status: 'all', industry: 'all', priority: 'hot', dateFrom: '', dateTo: '' } },
     { id: 'p2', name: '🆕 New This Week', filters: { status: 'new', industry: 'all', priority: 'all', dateFrom: '2026-06-07', dateTo: '2026-06-12' } },
@@ -300,12 +312,23 @@ export default function LeadsControl() {
   const [bulkStatus, setBulkStatus] = useState<LeadStatus>('contacted');
   const [showBulkMenu, setShowBulkMenu] = useState(false);
 
+  // Persist leads & tasks to localStorage on change
+  useEffect(() => { saveToStorage('zion_leads', leads); }, [leads]);
+  useEffect(() => { saveToStorage('zion_tasks', taskList); }, [taskList]);
+
   // ── Keyboard shortcuts ─────────────────────────────────────────────────────
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); setSearchQuery(''); const el = document.querySelector<HTMLInputElement>('input[placeholder*="Search"]'); el?.focus(); }
       if ((e.metaKey || e.ctrlKey) && e.key === 'a' && e.shiftKey) { e.preventDefault(); const visible = activeTab === 'leads' ? manualLeads : discoveredLeads; setSelectedLeads(new Set(visible.map(l => l.id))); }
-      if (e.key === 'Escape') { setSelectedLead(null); setShowAddLead(false); setShowBulkMenu(false); setShowPresets(false); }
+      if (e.key === 'Escape') { setSelectedLead(null); setShowAddLead(false); setShowBulkMenu(false); setShowPresets(false); setDetailLead(null); setShowKeyboardHelp(false); }
+      if (e.key === '?' && !e.metaKey && !e.ctrlKey) { e.preventDefault(); setShowKeyboardHelp(prev => !prev); }
+      // Tab shortcuts: 1-8
+      if (e.key >= '1' && e.key <= '8' && !e.metaKey && !e.ctrlKey) {
+        const tabs: typeof activeTab[] = ['leads', 'discovered', 'templates', 'stats', 'email', 'analytics', 'partnerships', 'tasks'];
+        const idx = parseInt(e.key) - 1;
+        if (tabs[idx]) { e.preventDefault(); setActiveTab(tabs[idx]); }
+      }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
@@ -527,7 +550,7 @@ export default function LeadsControl() {
     const isSelected = selectedLeads.has(lead.id);
 
     return (
-      <div key={lead.id} className={`bg-slate-900/80 border rounded-xl p-4 transition-all hover:border-amber-500/30 ${isSelected ? 'border-amber-500/60 ring-1 ring-amber-500/20' : 'border-slate-800/80'}`}>
+      <div key={lead.id} className={`bg-slate-900/80 border rounded-xl p-4 transition-all hover:border-amber-500/30 cursor-pointer ${isSelected ? 'border-amber-500/60 ring-1 ring-amber-500/20' : 'border-slate-800/80'}`} onClick={() => setDetailLead(lead)}>
         <div className="flex items-start gap-3">
           {/* Checkbox */}
           <input
@@ -646,6 +669,7 @@ export default function LeadsControl() {
             </div>
             <Link href="/agents-monitoring" className="text-xs text-slate-400 hover:text-white transition border border-slate-700/60 rounded-lg px-3 py-1.5">📊 Dashboard</Link>
             <Link href="/" className="text-xs text-slate-400 hover:text-white transition border border-slate-700/60 rounded-lg px-3 py-1.5">← Main Site</Link>
+            <button onClick={() => setShowKeyboardHelp(true)} className="text-xs text-slate-400 hover:text-white transition border border-slate-700/60 rounded-lg px-2 py-1.5" title="Keyboard shortcuts (?)">⌨️</button>
           </div>
         </div>
       </header>
@@ -1705,6 +1729,8 @@ export default function LeadsControl() {
         </div>
       </div>
 
+      {/* Keyboard help button in header - ⌨️ */}
+      {/* Floating Quick Add Button */}
       <button
         onClick={() => setShowAddLead(true)}
         className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white text-2xl shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:scale-110 transition-all z-40 flex items-center justify-center"
@@ -1712,6 +1738,123 @@ export default function LeadsControl() {
       >
         +
       </button>
+
+      {/* ── Lead Detail Modal ───────────────────────────────────────────────── */}
+      {detailLead && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" onClick={() => setDetailLead(null)}>
+          <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 max-w-2xl w-full mx-4 max-h-[85vh] overflow-y-auto shadow-2xl" onClick={e => e.stopPropagation()}>
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h2 className="text-xl font-bold text-slate-100">{detailLead.company}</h2>
+                <p className="text-sm text-slate-400 mt-1">{detailLead.industry} · {detailLead.source}</p>
+              </div>
+              <button onClick={() => setDetailLead(null)} className="text-slate-400 hover:text-white text-xl">✕</button>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              <div className="bg-slate-800/60 rounded-lg p-3 text-center">
+                <div className="text-lg font-bold text-amber-400">{detailLead.score}</div>
+                <div className="text-[9px] text-slate-500">Score</div>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 text-center">
+                <div className="text-lg font-bold text-purple-400">{detailLead.status}</div>
+                <div className="text-[9px] text-slate-500">Status</div>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 text-center">
+                <div className="text-lg font-bold text-cyan-400">{detailLead.companySize || 'N/A'}</div>
+                <div className="text-[9px] text-slate-500">Size</div>
+              </div>
+              <div className="bg-slate-800/60 rounded-lg p-3 text-center">
+                <div className="text-lg font-bold text-emerald-400">{detailLead.budgetRange || 'N/A'}</div>
+                <div className="text-[9px] text-slate-500">Budget</div>
+              </div>
+            </div>
+
+            <div className="space-y-3 mb-4">
+              <div className="text-xs text-slate-400"><span className="text-slate-500">Contact:</span> {detailLead.contact} {detailLead.email ? `· ${detailLead.email}` : ''}</div>
+              <div className="text-xs text-slate-400"><span className="text-slate-500">Timeline:</span> {detailLead.decisionTimeline || 'N/A'} · <span className="text-slate-500">Found:</span> {detailLead.dateFound} · <span className="text-slate-500">Last Contact:</span> {detailLead.lastContact || 'Never'}</div>
+              {detailLead.notes && <div className="text-xs text-slate-300 bg-slate-800/40 rounded-lg p-3">{detailLead.notes}</div>}
+              {detailLead.painPoints && detailLead.painPoints.length > 0 && (
+                <div>
+                  <div className="text-[10px] text-slate-500 uppercase mb-1">Pain Points</div>
+                  <div className="flex flex-wrap gap-1">
+                    {detailLead.painPoints.map(p => (<span key={p} className="text-[10px] bg-red-500/10 text-red-300 px-2 py-0.5 rounded">⚠ {p}</span>))}
+                  </div>
+                </div>
+              )}
+              <div>
+                <div className="text-[10px] text-slate-500 uppercase mb-1">Services</div>
+                <div className="flex flex-wrap gap-1">
+                  {detailLead.services.map(s => (<span key={s} className="text-[10px] bg-purple-500/10 text-purple-300 px-2 py-0.5 rounded">{s}</span>))}
+                </div>
+              </div>
+            </div>
+
+            {/* Related email activity */}
+            {(() => {
+              const related = EMAIL_ACTIVITY.filter(e => e.recipient.includes(detailLead.email?.split('@')[0] || '') || e.subject.includes(detailLead.company));
+              if (related.length === 0) return null;
+              return (
+                <div className="mb-4">
+                  <div className="text-[10px] text-slate-500 uppercase mb-2">📧 Related Email Activity</div>
+                  <div className="space-y-1.5">
+                    {related.slice(0, 5).map(e => (
+                      <div key={e.id} className="bg-slate-800/40 rounded-lg p-2 flex items-center justify-between">
+                        <div className="min-w-0 flex-1">
+                          <div className="text-[10px] text-slate-300 truncate">{e.subject}</div>
+                          <div className="text-[9px] text-slate-500">→ {e.recipient}</div>
+                        </div>
+                        <span className="text-[9px] text-slate-500 shrink-0 ml-2">{e.timestamp.split('T')[1]?.slice(0, 5)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Quick actions */}
+            <div className="flex gap-2 pt-3 border-t border-slate-700/50">
+              {detailLead.email && <a href={`mailto:${detailLead.email}?subject=Re: Partnership Discussion - Zion Tech Group`} className="text-xs px-3 py-2 rounded-lg bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">📧 Compose</a>}
+              {detailLead.website && <a href={detailLead.website} target="_blank" rel="noopener" className="text-xs px-3 py-2 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30">🌐 Visit</a>}
+              {detailLead.linkedin && <a href={detailLead.linkedin} target="_blank" rel="noopener" className="text-xs px-3 py-2 rounded-lg bg-blue-500/20 text-blue-300 hover:bg-blue-500/30">💼 LinkedIn</a>}
+              <div className="flex-1" />
+              {detailLead.status === 'new' && <button onClick={() => { updateLeadStatus(detailLead.id, 'contacted'); setDetailLead(null); }} className="text-xs px-3 py-2 rounded-lg bg-amber-600 text-white hover:bg-amber-500">📧 Mark Contacted</button>}
+              {detailLead.status === 'contacted' && <button onClick={() => { updateLeadStatus(detailLead.id, 'replied'); setDetailLead(null); }} className="text-xs px-3 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-500">💬 Mark Replied</button>}
+              {detailLead.status === 'replied' && <button onClick={() => { updateLeadStatus(detailLead.id, 'qualified'); setDetailLead(null); }} className="text-xs px-3 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-500">✅ Qualify</button>}
+              {detailLead.status === 'qualified' && <button onClick={() => { updateLeadStatus(detailLead.id, 'converted'); setDetailLead(null); }} className="text-xs px-3 py-2 rounded-lg bg-green-600 text-white hover:bg-green-500">🎉 Convert</button>}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Keyboard Shortcuts Help ──────────────────────────────────────────── */}
+      {showKeyboardHelp && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" onClick={() => setShowKeyboardHelp(false)}>
+          <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-bold text-slate-100">⌨️ Keyboard Shortcuts</h2>
+              <button onClick={() => setShowKeyboardHelp(false)} className="text-slate-400 hover:text-white text-xl">✕</button>
+            </div>
+            <div className="space-y-2 text-xs">
+              {[
+                ['⌘K', 'Focus search bar'],
+                ['⇧⌘A', 'Select all visible leads'],
+                ['1-8', 'Switch tabs (1=Manual, 2=Discovered, ...)'],
+                ['?', 'Toggle this help'],
+                ['Esc', 'Close modals / clear selection'],
+              ].map(([key, desc]) => (
+                <div key={key} className="flex items-center gap-3">
+                  <kbd className="bg-slate-800 border border-slate-600 rounded px-2 py-1 text-[10px] font-mono text-amber-300 min-w-[48px] text-center">{key}</kbd>
+                  <span className="text-slate-400">{desc}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 pt-3 border-t border-slate-700/50 text-[10px] text-slate-500">
+              Click any lead card to view details · Press <kbd className="bg-slate-800 border border-slate-600 rounded px-1 text-amber-300">?</kbd> to toggle this help
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
