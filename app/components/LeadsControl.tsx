@@ -2029,6 +2029,51 @@ export default function LeadsControl() {
                   input.click();
                 }} className="w-full text-xs px-4 py-2.5 rounded-lg bg-slate-700 text-slate-300 hover:bg-slate-600 font-medium">📤 Import JSON Backup</button>
                 <button onClick={() => {
+                  const input = document.createElement('input');
+                  input.type = 'file';
+                  input.accept = '.csv';
+                  input.onchange = (e) => {
+                    const file = (e.target as HTMLInputElement).files?.[0];
+                    if (!file) return;
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                      try {
+                        const text = ev.target?.result as string;
+                        const lines = text.split('\n').filter(l => l.trim());
+                        const headers = lines[0].toLowerCase().split(',').map(h => h.trim());
+                        let added = 0;
+                        lines.slice(1).forEach(line => {
+                          const vals = line.split(',').map(v => v.trim().replace(/"/g, ''));
+                          const get = (name: string) => {
+                            const idx = headers.indexOf(name);
+                            return idx >= 0 ? vals[idx] : '';
+                          };
+                          const company = get('company') || get('name') || get('organization') || vals[0] || 'Unknown';
+                          const email = get('email') || '';
+                          const contact = get('contact') || get('name') || '';
+                          const industry = get('industry') || 'Other';
+                          if (!company) return;
+                          const newLead: Lead = {
+                            id: `l${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+                            company, contact, email, source: 'CSV Import', industry,
+                            status: 'new',
+                            score: 50,
+                            notes: `Imported from CSV on ${new Date().toLocaleDateString()}`,
+                            dateFound: new Date().toISOString().split('T')[0],
+                            lastContact: '', services: [],
+                            activities: [{ id: `act_${Date.now()}`, leadId: `l${Date.now()}`, action: 'Lead imported from CSV', timestamp: new Date().toISOString() }],
+                          };
+                          setLeads(prev => [newLead, ...prev]);
+                          added++;
+                        });
+                        if (added > 0) setActiveTab('leads');
+                      } catch { /* invalid CSV */ }
+                    };
+                    reader.readAsText(file);
+                  };
+                  input.click();
+                }} className="w-full text-xs px-4 py-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 font-medium">📥 Import CSV Leads</button>
+                <button onClick={() => {
                   if (confirm('Clear all leads and tasks? This cannot be undone.')) {
                     setLeads([]);
                     setTaskList([]);
