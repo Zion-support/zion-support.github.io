@@ -95,7 +95,7 @@ TEMPLATE_MAP: Dict[str, str] = {
     CAT_CUSTOMER: "free-audit",
     CAT_PARTNERSHIP: "proposal-ready",
     CAT_OTHER: "free-audit",
-    CAT_REVIEW: "free-audit",  # gentle auto-reply for unclear emails
+    CAT_REVIEW: "",  # Don't auto-reply to unclear emails; mark read + flag
     CAT_SPAM: "",
 }
 
@@ -516,24 +516,10 @@ def process_emails(send_mode, max_emails, logger):
                 action = "spam"
                 mark_as_read(msg_id, logger)
         elif category == CAT_REVIEW:
-            # Send gentle auto-review reply using smart template
-            industry = detect_industry(subject, body_text)
-            template_id = select_template(CAT_REVIEW, industry, templates)
-            template = templates.get(template_id)
-            if template and sender_email_addr:
-                reply_subject, reply_body = render_template(template, {"from": sender, "subject": subject, "body": body_text}, logger)
-                success = send_reply_gmail(sender_email_addr, reply_subject, reply_body, thread_id, msg_id, not send_mode, logger)
-                if success:
-                    action = "replied" if send_mode else "dry_run_reply"
-                    replied += 1
-                    mark_as_read(msg_id, logger)
-                    logger.info("→ Auto-replied to unclear email (template: %s)", template_id)
-                else:
-                    action = "human_review"
-                    logger.info("→ Failed to send auto-reply, flagging for review")
-            else:
-                logger.info("→ Flagged for human review (no template or sender)")
-                action = "human_review"
+            # Mark read but don't auto-reply — flag for human review
+            logger.info("→ Flagged for human review (marking read)")
+            mark_as_read(msg_id, logger)
+            action = "human_review"
         else:
             # Smart template selection based on category + industry
             industry = detect_industry(subject, body_text)
