@@ -9045,3 +9045,442 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 	Is the server running on that host and accepting TCP/IP connections?
 
 - [2026-04-05 21:00:01] Onboarding: === Customer Onboarding finished ===
+- [2026-06-30 14:52:15] EnhancedEmailMiner: Processing email 19ed2874eb902fb5: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:15] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:15] EnhancedEmailMiner: Processing email 19ed2874ce8e548d: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:15] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:16] EnhancedEmailMiner: Processing email 19ed287483312b72: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:16] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:16] EnhancedEmailMiner: Processing email 19ed2874376f7642: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:16] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:16] EnhancedEmailMiner: Processing email 19ed287392d0b4ff: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:16] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:17] EnhancedEmailMiner: Processing email 19ed28738b76aa51: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:17] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:17] EnhancedEmailMiner: Processing email 19ed28731f2be627: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:17] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:18] EnhancedEmailMiner: Processing email 19ed2872fa530d56: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:18] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:18] EnhancedEmailMiner: Processing email 19ed2872ae534316: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:18] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:19] EnhancedEmailMiner: Processing email 19ed28728ad6e26f: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:19] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:19] EnhancedEmailMiner: Processing email 19ed28725ffe6df1: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:19] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:20] EnhancedEmailMiner: Processing email 19ed287218120d89: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:20] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:20] EnhancedEmailMiner: Processing email 19ed2871f17b4a69: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:20] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:20] EnhancedEmailMiner: Processing email 19ed286ad959bde8: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:20] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:21] EnhancedEmailMiner: Processing email 19ed286a84888f91: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:21] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:21] EnhancedEmailMiner: Processing email 19ed2869f6ea11fe: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:21] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:22] EnhancedEmailMiner: Processing email 19ed2869c8d5ebbb: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:22] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:22] EnhancedEmailMiner: Processing email 19ed2869b75f9666: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:22] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:23] EnhancedEmailMiner: Processing email 19ed28699949fd24: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:23] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:23] EnhancedEmailMiner: Processing email 19ed2869926550c3: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:23] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:24] EnhancedEmailMiner: Processing email 19ed286945b77710: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:24] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:24] EnhancedEmailMiner: Processing email 19ed28693a53d14b: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:24] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:24] EnhancedEmailMiner: Processing email 19ed28691ffcbbac: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:24] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:25] EnhancedEmailMiner: Processing email 19ed2868e0e50a0f: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:25] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:25] EnhancedEmailMiner: Processing email 19ed2868c2234624: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:25] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:26] EnhancedEmailMiner: Processing email 19ed286883a72ada: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:26] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:26] EnhancedEmailMiner: Processing email 19ed28686458dba5: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:26] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:27] EnhancedEmailMiner: Processing email 19ed286850ece7f5: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:27] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:27] EnhancedEmailMiner: Processing email 19ed28682f402801: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:27] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:28] EnhancedEmailMiner: Processing email 19ed2867f748b879: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:28] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:28] EnhancedEmailMiner: Processing email 19ed2867e855ea5f: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:28] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:29] EnhancedEmailMiner: Processing email 19ed28516e6028c7: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:29] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:29] EnhancedEmailMiner: Processing email 19ed2851019ebb35: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:29] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:30] EnhancedEmailMiner: Processing email 19ed2850eb06fdce: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:30] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:30] EnhancedEmailMiner: Processing email 19ed2850603dd50a: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:30] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:31] EnhancedEmailMiner: Processing email 19ed2850567ebb2b: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:31] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:31] EnhancedEmailMiner: Processing email 19ed2850100bdcd2: from=Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+- [2026-06-30 14:52:31] EnhancedEmailMiner: Skipping duplicate sender in batch: mailer-daemon@googlemail.com
+- [2026-06-30 14:52:31] EnhancedEmailMiner: Processing email 19ed28500e56dc5d: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:31] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:32] EnhancedEmailMiner: Processing email 19ed284fa304fe96: from="Kleber Garcia Alcatrão @ Zion Tech Group" <kleber@ziontechgroup.com>
+- [2026-06-30 14:52:32] EnhancedEmailMiner: Skipping duplicate sender in batch: kleber@ziontechgroup.com
+- [2026-06-30 14:52:32] EnhancedEmailMiner: Inserted 0 new leads from historical mining
+- [2026-06-30 14:52:32] EnhancedEmailMiner: Skipped 5 existing leads
+- [2026-06-30 14:52:32] EnhancedEmailMiner: Processing time: 93.79 seconds
+- [2026-06-30 14:52:32] EnhancedEmailMiner: Emails processed per second: 2.13
+- [2026-06-30 14:52:32] EnhancedEmailMiner: === Enhanced historical email miner completed ===
+- [2026-06-30 14:55:18] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 14:55:18] EnhancedEmailMiner: Email processing window: 2026-05-31 14:55:18Z to present
+- [2026-06-30 14:55:18] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 22:41:38Z
+- [2026-06-30 14:55:18] EnhancedEmailMiner: Scanning chunk: 2026-06-16 22:41:38Z to 2026-06-16 22:46:38Z
+- [2026-06-30 14:55:18] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 14:55:24] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 14:55:24] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 14:56:51] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 14:56:51] EnhancedEmailMiner: Email processing window: 2026-05-31 14:56:51Z to present
+- [2026-06-30 14:56:51] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 22:46:38Z
+- [2026-06-30 14:56:51] EnhancedEmailMiner: Scanning chunk: 2026-06-16 22:46:38Z to 2026-06-16 22:51:38Z
+- [2026-06-30 14:56:51] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 14:56:57] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 14:56:57] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 14:58:54] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 14:58:54] EnhancedEmailMiner: Email processing window: 2026-05-31 14:58:54Z to present
+- [2026-06-30 14:58:54] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 22:51:38Z
+- [2026-06-30 14:58:54] EnhancedEmailMiner: Scanning chunk: 2026-06-16 22:51:38Z to 2026-06-16 22:56:38Z
+- [2026-06-30 14:58:54] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 14:59:00] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 14:59:00] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:01:02] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:01:02] EnhancedEmailMiner: Email processing window: 2026-05-31 15:01:02Z to present
+- [2026-06-30 15:01:02] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 22:56:38Z
+- [2026-06-30 15:01:02] EnhancedEmailMiner: Scanning chunk: 2026-06-16 22:56:38Z to 2026-06-16 23:01:38Z
+- [2026-06-30 15:01:02] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:01:08] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:01:08] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:05:43] WebProspector: === Starting web prospecting for IT service leads ===
+- [2026-06-30 15:05:43] WebProspector: Keywords file not found: /data/data/com.termux/files/home/zion-support.github.io/it_service_keywords.txt
+- [2026-06-30 15:05:43] WebProspector: No keywords loaded, exiting
+- [2026-06-30 15:07:06] WebProspector: === Starting web prospecting for IT service leads ===
+- [2026-06-30 15:07:06] WebProspector: Falling back to inline service keywords
+- [2026-06-30 15:07:06] WebProspector: Loaded 18 keywords for prospecting
+- [2026-06-30 15:07:06] WebProspector: Searching for: "IT services" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'IT services': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "managed IT" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'managed IT': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "cloud migration" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'cloud migration': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "cybersecurity" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'cybersecurity': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "data recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'data recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "network infrastructure" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'network infrastructure': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "endpoint management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:07] WebProspector: Error during search for keyword 'endpoint management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:07] WebProspector: Searching for: "SOP automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'SOP automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "digital transformation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'digital transformation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "IT consulting" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'IT consulting': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "technical support" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'technical support': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "help desk" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'help desk': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "server management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'server management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "virtualization" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'virtualization': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "disaster recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'disaster recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "compliance automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:08] WebProspector: Error during search for keyword 'compliance automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:08] WebProspector: Searching for: "IT monitoring" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:09] WebProspector: Error during search for keyword 'IT monitoring': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:09] WebProspector: Searching for: "identity management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:07:09] WebProspector: Error during search for keyword 'identity management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:07:09] WebProspector: === Web Prospecting Complete ===
+- [2026-06-30 15:07:09] WebProspector:   Keywords processed: 18
+- [2026-06-30 15:07:09] WebProspector:   URLs searched: 0
+- [2026-06-30 15:07:09] WebProspector:   Emails found: 0
+- [2026-06-30 15:07:09] WebProspector:   New leads added: 0
+- [2026-06-30 15:07:29] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:07:29] EnhancedEmailMiner: Email processing window: 2026-05-31 15:07:29Z to present
+- [2026-06-30 15:07:29] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:01:38Z
+- [2026-06-30 15:07:29] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:01:38Z to 2026-06-16 23:06:38Z
+- [2026-06-30 15:07:29] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:07:35] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:07:35] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:08:59] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:08:59] EnhancedEmailMiner: Email processing window: 2026-05-31 15:08:59Z to present
+- [2026-06-30 15:08:59] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:06:38Z
+- [2026-06-30 15:08:59] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:06:38Z to 2026-06-16 23:11:38Z
+- [2026-06-30 15:08:59] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:09:05] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:09:05] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:09:11] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:09:11] EnhancedEmailMiner: Email processing window: 2026-05-31 15:09:11Z to present
+- [2026-06-30 15:09:11] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:11:38Z
+- [2026-06-30 15:09:11] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:11:38Z to 2026-06-16 23:16:38Z
+- [2026-06-30 15:09:11] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:09:17] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:09:17] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:10:54] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:10:54] EnhancedEmailMiner: Email processing window: 2026-05-31 15:10:54Z to present
+- [2026-06-30 15:10:54] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:16:38Z
+- [2026-06-30 15:10:54] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:16:38Z to 2026-06-16 23:21:38Z
+- [2026-06-30 15:10:54] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:11:00] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:11:00] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:12:56] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:12:56] EnhancedEmailMiner: Email processing window: 2026-05-31 15:12:56Z to present
+- [2026-06-30 15:12:56] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:21:38Z
+- [2026-06-30 15:12:56] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:21:38Z to 2026-06-16 23:26:38Z
+- [2026-06-30 15:12:56] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:13:02] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:13:02] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:15:34] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:15:34] EnhancedEmailMiner: Email processing window: 2026-05-31 15:15:34Z to present
+- [2026-06-30 15:15:34] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:26:38Z
+- [2026-06-30 15:15:34] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:26:38Z to 2026-06-16 23:31:38Z
+- [2026-06-30 15:15:34] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:15:44] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:15:44] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:21:01] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:21:01] EnhancedEmailMiner: Email processing window: 2026-05-31 15:21:01Z to present
+- [2026-06-30 15:21:01] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:31:38Z
+- [2026-06-30 15:21:01] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:31:38Z to 2026-06-16 23:36:38Z
+- [2026-06-30 15:21:01] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:21:13] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:21:13] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:21:57] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:21:57] EnhancedEmailMiner: Email processing window: 2026-05-31 15:21:57Z to present
+- [2026-06-30 15:21:57] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:36:38Z
+- [2026-06-30 15:21:57] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:36:38Z to 2026-06-16 23:41:38Z
+- [2026-06-30 15:21:57] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:22:13] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:22:13] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:31:24] WebProspector: === Starting web prospecting for IT service leads ===
+- [2026-06-30 15:31:24] WebProspector: Falling back to inline service keywords
+- [2026-06-30 15:31:24] WebProspector: Loaded 18 keywords for prospecting
+- [2026-06-30 15:31:24] WebProspector: Searching for: "IT services" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'IT services': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "managed IT" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'managed IT': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "cloud migration" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'cloud migration': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "cybersecurity" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'cybersecurity': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "data recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'data recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "network infrastructure" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'network infrastructure': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "endpoint management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'endpoint management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "SOP automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:25] WebProspector: Error during search for keyword 'SOP automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:25] WebProspector: Searching for: "digital transformation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'digital transformation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "IT consulting" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'IT consulting': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "technical support" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'technical support': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "help desk" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'help desk': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "server management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'server management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "virtualization" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'virtualization': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "disaster recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'disaster recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "compliance automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'compliance automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "IT monitoring" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:26] WebProspector: Error during search for keyword 'IT monitoring': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:26] WebProspector: Searching for: "identity management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:27] WebProspector: Error during search for keyword 'identity management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:27] WebProspector: === Web Prospecting Complete ===
+- [2026-06-30 15:31:27] WebProspector:   Keywords processed: 18
+- [2026-06-30 15:31:27] WebProspector:   URLs searched: 0
+- [2026-06-30 15:31:27] WebProspector:   Emails found: 0
+- [2026-06-30 15:31:27] WebProspector:   New leads added: 0
+- [2026-06-30 15:31:44] WebProspector: === Starting web prospecting for IT service leads ===
+- [2026-06-30 15:31:44] WebProspector: Falling back to inline service keywords
+- [2026-06-30 15:31:44] WebProspector: Loaded 18 keywords for prospecting
+- [2026-06-30 15:31:44] WebProspector: Searching for: "IT services" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:44] WebProspector: Error during search for keyword 'IT services': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:44] WebProspector: Searching for: "managed IT" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:44] WebProspector: Error during search for keyword 'managed IT': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:44] WebProspector: Searching for: "cloud migration" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:45] WebProspector: Error during search for keyword 'cloud migration': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:45] WebProspector: Searching for: "cybersecurity" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:45] WebProspector: Error during search for keyword 'cybersecurity': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:45] WebProspector: Searching for: "data recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:45] WebProspector: Error during search for keyword 'data recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:45] WebProspector: Searching for: "network infrastructure" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:45] WebProspector: Error during search for keyword 'network infrastructure': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:45] WebProspector: Searching for: "endpoint management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:45] WebProspector: Error during search for keyword 'endpoint management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:45] WebProspector: Searching for: "SOP automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:45] WebProspector: Error during search for keyword 'SOP automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:45] WebProspector: Searching for: "digital transformation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:46] WebProspector: Error during search for keyword 'digital transformation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:46] WebProspector: Searching for: "IT consulting" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:46] WebProspector: Error during search for keyword 'IT consulting': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:46] WebProspector: Searching for: "technical support" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:46] WebProspector: Error during search for keyword 'technical support': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:46] WebProspector: Searching for: "help desk" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:46] WebProspector: Error during search for keyword 'help desk': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:46] WebProspector: Searching for: "server management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:46] WebProspector: Error during search for keyword 'server management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:46] WebProspector: Searching for: "virtualization" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:46] WebProspector: Error during search for keyword 'virtualization': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:46] WebProspector: Searching for: "disaster recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:47] WebProspector: Error during search for keyword 'disaster recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:47] WebProspector: Searching for: "compliance automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:47] WebProspector: Error during search for keyword 'compliance automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:47] WebProspector: Searching for: "IT monitoring" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:47] WebProspector: Error during search for keyword 'IT monitoring': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:47] WebProspector: Searching for: "identity management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:31:47] WebProspector: Error during search for keyword 'identity management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:31:47] WebProspector: === Web Prospecting Complete ===
+- [2026-06-30 15:31:47] WebProspector:   Keywords processed: 18
+- [2026-06-30 15:31:47] WebProspector:   URLs searched: 0
+- [2026-06-30 15:31:47] WebProspector:   Emails found: 0
+- [2026-06-30 15:31:47] WebProspector:   New leads added: 0
+- [2026-06-30 15:32:02] WebProspector: === Starting web prospecting for IT service leads ===
+- [2026-06-30 15:32:02] WebProspector: Falling back to inline service keywords
+- [2026-06-30 15:32:02] WebProspector: Loaded 18 keywords for prospecting
+- [2026-06-30 15:32:02] WebProspector: Searching for: "IT services" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:02] WebProspector: Error during search for keyword 'IT services': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:02] WebProspector: Searching for: "managed IT" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:02] WebProspector: Error during search for keyword 'managed IT': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:02] WebProspector: Searching for: "cloud migration" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'cloud migration': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "cybersecurity" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'cybersecurity': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "data recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'data recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "network infrastructure" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'network infrastructure': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "endpoint management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'endpoint management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "SOP automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'SOP automation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "digital transformation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'digital transformation': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "IT consulting" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:03] WebProspector: Error during search for keyword 'IT consulting': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:03] WebProspector: Searching for: "technical support" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:04] WebProspector: Error during search for keyword 'technical support': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:04] WebProspector: Searching for: "help desk" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:04] WebProspector: Error during search for keyword 'help desk': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:04] WebProspector: Searching for: "server management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:04] WebProspector: Error during search for keyword 'server management': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:04] WebProspector: Searching for: "virtualization" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:04] WebProspector: Error during search for keyword 'virtualization': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:04] WebProspector: Searching for: "disaster recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:04] WebProspector: Error during search for keyword 'disaster recovery': _aget_url() https://duckduckgo.com DuckDuckGoSearchException: Ratelimit
+- [2026-06-30 15:32:04] WebProspector: Searching for: "compliance automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:05] WebProspector: Error during search for keyword 'compliance automation': _extract_vqd() keywords='"compliance automation" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:32:05] WebProspector: Searching for: "IT monitoring" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:05] WebProspector: Error during search for keyword 'IT monitoring': _extract_vqd() keywords='"IT monitoring" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:32:05] WebProspector: Searching for: "identity management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:32:05] WebProspector: Error during search for keyword 'identity management': _extract_vqd() keywords='"identity management" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:32:05] WebProspector: === Web Prospecting Complete ===
+- [2026-06-30 15:32:05] WebProspector:   Keywords processed: 18
+- [2026-06-30 15:32:05] WebProspector:   URLs searched: 0
+- [2026-06-30 15:32:05] WebProspector:   Emails found: 0
+- [2026-06-30 15:32:05] WebProspector:   New leads added: 0
+- [2026-06-30 15:34:28] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:34:28] EnhancedEmailMiner: Email processing window: 2026-05-31 15:34:28Z to present
+- [2026-06-30 15:34:28] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:41:38Z
+- [2026-06-30 15:34:28] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:41:38Z to 2026-06-16 23:46:38Z
+- [2026-06-30 15:34:28] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:34:34] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:34:34] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:35:58] WebProspector: === Starting web prospecting for IT service leads ===
+- [2026-06-30 15:35:58] WebProspector: Falling back to inline service keywords
+- [2026-06-30 15:35:58] WebProspector: Loaded 18 keywords for prospecting
+- [2026-06-30 15:35:58] WebProspector: Searching for: "IT services" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:35:59] WebProspector: Error during search for keyword 'IT services': _extract_vqd() keywords='"IT services" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:35:59] WebProspector: Searching for: "managed IT" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:35:59] WebProspector: Error during search for keyword 'managed IT': _extract_vqd() keywords='"managed IT" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:35:59] WebProspector: Searching for: "cloud migration" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:35:59] WebProspector: Error during search for keyword 'cloud migration': _extract_vqd() keywords='"cloud migration" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:35:59] WebProspector: Searching for: "cybersecurity" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:35:59] WebProspector: Error during search for keyword 'cybersecurity': _extract_vqd() keywords='"cybersecurity" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:35:59] WebProspector: Searching for: "data recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:35:59] WebProspector: Error during search for keyword 'data recovery': _extract_vqd() keywords='"data recovery" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:35:59] WebProspector: Searching for: "network infrastructure" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:00] WebProspector: Error during search for keyword 'network infrastructure': _extract_vqd() keywords='"network infrastructure" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:00] WebProspector: Searching for: "endpoint management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:00] WebProspector: Error during search for keyword 'endpoint management': _extract_vqd() keywords='"endpoint management" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:00] WebProspector: Searching for: "SOP automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:00] WebProspector: Error during search for keyword 'SOP automation': _extract_vqd() keywords='"SOP automation" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:00] WebProspector: Searching for: "digital transformation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:00] WebProspector: Error during search for keyword 'digital transformation': _extract_vqd() keywords='"digital transformation" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:00] WebProspector: Searching for: "IT consulting" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:00] WebProspector: Error during search for keyword 'IT consulting': _extract_vqd() keywords='"IT consulting" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:00] WebProspector: Searching for: "technical support" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:01] WebProspector: Error during search for keyword 'technical support': _extract_vqd() keywords='"technical support" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:01] WebProspector: Searching for: "help desk" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:01] WebProspector: Error during search for keyword 'help desk': _extract_vqd() keywords='"help desk" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:01] WebProspector: Searching for: "server management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:01] WebProspector: Error during search for keyword 'server management': _extract_vqd() keywords='"server management" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:01] WebProspector: Searching for: "virtualization" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:01] WebProspector: Error during search for keyword 'virtualization': _extract_vqd() keywords='"virtualization" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:01] WebProspector: Searching for: "disaster recovery" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:02] WebProspector: Error during search for keyword 'disaster recovery': _extract_vqd() keywords='"disaster recovery" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:02] WebProspector: Searching for: "compliance automation" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:02] WebProspector: Error during search for keyword 'compliance automation': _extract_vqd() keywords='"compliance automation" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:02] WebProspector: Searching for: "IT monitoring" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:02] WebProspector: Error during search for keyword 'IT monitoring': _extract_vqd() keywords='"IT monitoring" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:02] WebProspector: Searching for: "identity management" company OR "provider" OR "services" OR "firm"
+- [2026-06-30 15:36:02] WebProspector: Error during search for keyword 'identity management': _extract_vqd() keywords='"identity management" company OR "provider" OR "services" OR "firm"' Could not extract vqd.
+- [2026-06-30 15:36:02] WebProspector: === Web Prospecting Complete ===
+- [2026-06-30 15:36:02] WebProspector:   Keywords processed: 18
+- [2026-06-30 15:36:02] WebProspector:   URLs searched: 0
+- [2026-06-30 15:36:02] WebProspector:   Emails found: 0
+- [2026-06-30 15:36:02] WebProspector:   New leads added: 0
+- [2026-06-30 15:36:29] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:36:29] EnhancedEmailMiner: Email processing window: 2026-05-31 15:36:29Z to present
+- [2026-06-30 15:36:29] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:46:38Z
+- [2026-06-30 15:36:29] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:46:38Z to 2026-06-16 23:51:38Z
+- [2026-06-30 15:36:29] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:36:50] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:36:50] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:38:13] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:38:13] EnhancedEmailMiner: Email processing window: 2026-05-31 15:38:13Z to present
+- [2026-06-30 15:38:13] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:51:38Z
+- [2026-06-30 15:38:13] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:51:38Z to 2026-06-16 23:56:38Z
+- [2026-06-30 15:38:13] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/16 in:anywhere
+- [2026-06-30 15:38:19] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:38:19] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:39:16] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:39:16] EnhancedEmailMiner: Email processing window: 2026-05-31 15:39:16Z to present
+- [2026-06-30 15:39:16] EnhancedEmailMiner: Resuming from last scan position: 2026-06-16 23:56:38Z
+- [2026-06-30 15:39:16] EnhancedEmailMiner: Scanning chunk: 2026-06-16 23:56:38Z to 2026-06-17 00:01:38Z
+- [2026-06-30 15:39:16] EnhancedEmailMiner: Gmail query: after:2026/06/16 before:2026/06/17 in:anywhere
+- [2026-06-30 15:39:22] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:39:22] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:40:15] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:40:15] EnhancedEmailMiner: Email processing window: 2026-05-31 15:40:15Z to present
+- [2026-06-30 15:40:15] EnhancedEmailMiner: Resuming from last scan position: 2026-06-17 00:01:38Z
+- [2026-06-30 15:40:15] EnhancedEmailMiner: Scanning chunk: 2026-06-17 00:01:38Z to 2026-06-17 00:06:38Z
+- [2026-06-30 15:40:15] EnhancedEmailMiner: Gmail query: after:2026/06/17 before:2026/06/17 in:anywhere
+- [2026-06-30 15:40:21] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:40:21] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:41:29] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:41:29] EnhancedEmailMiner: Email processing window: 2026-05-31 15:41:29Z to present
+- [2026-06-30 15:41:29] EnhancedEmailMiner: Resuming from last scan position: 2026-06-17 00:06:38Z
+- [2026-06-30 15:41:29] EnhancedEmailMiner: Scanning chunk: 2026-06-17 00:06:38Z to 2026-06-17 00:11:38Z
+- [2026-06-30 15:41:29] EnhancedEmailMiner: Gmail query: after:2026/06/17 before:2026/06/17 in:anywhere
+- [2026-06-30 15:41:35] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:41:35] EnhancedEmailMiner: No results found in this chunk
+- [2026-06-30 15:42:29] EnhancedEmailMiner: === Starting enhanced historical email miner ===
+- [2026-06-30 15:42:29] EnhancedEmailMiner: Email processing window: 2026-05-31 15:42:29Z to present
+- [2026-06-30 15:42:29] EnhancedEmailMiner: Resuming from last scan position: 2026-06-17 00:11:38Z
+- [2026-06-30 15:42:29] EnhancedEmailMiner: Scanning chunk: 2026-06-17 00:11:38Z to 2026-06-17 00:16:38Z
+- [2026-06-30 15:42:29] EnhancedEmailMiner: Gmail query: after:2026/06/17 before:2026/06/17 in:anywhere
+- [2026-06-30 15:42:35] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
+- [2026-06-30 15:42:35] EnhancedEmailMiner: No results found in this chunk
