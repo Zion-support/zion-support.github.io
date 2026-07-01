@@ -38,6 +38,66 @@ Want a sample failure scenario and runbook?
 Kleber
 kleber@ziontechgroup.com | +1 302 464 0950
 
+---
+
+### Subject: Stop identity sprawl before audit season
+Hi [First],
+
+Access reviews often create audit evidence after the fact. We pair identity governance with automated provisioning clean-up, so reviewers see reconciled roles and current access.
+
+Worth a 15-minute mapping call?
+
+Kleber
+kleber@ziontechgroup.com | +1 302 464 0950
+
+---
+
+### Subject: Reduce change outages without extra headcount
+Hi [First],
+
+Network changes still cause preventable outages when config drift and rollback delays compound. We can scope an automation-first change pipeline with validation gates and vendor coverage.
+
+I can return a 2-page baseline evaluation.
+
+Kleber
+kleber@ziontechgroup.com | +1 302 464 0950
+
+---
+
+### Subject: Make cloud spend explainable to finance
+Hi [First],
+
+Cloud cost surprises usually come from unbudgeted growth, shadow resources, or missing ownership. We pair anomaly detection with accountable cost owners and safe automation.
+
+Happy to share the cost-attribution checklist.
+
+Kleber
+kleber@ziontechgroup.com | +1 302 464 0950
+
+---
+
+### Subject: Reduce secrets exposure time from days to minutes
+Hi [First],
+
+Most teams learn about leaks from public feeds or bad actors. We monitor public repos, CI logs, and leaks feeds, then automate rotation and severity triage.
+
+Send “send overview” for one short diagnostic note.
+
+Kleber
+kleber@ziontechgroup.com | +1 302 464 0950
+
+---
+
+### Subject: Build referral growth without support overhead
+Hi [First],
+
+Happy customers can become repeatable growth, but referral programs usually leak value through fraud, manual payouts, and weak tracking.
+
+We offer small but buildable referral automation with fraud detection and payout workflows.
+
+Kleber
+kleber@ziontechgroup.com | +1 302 464 0950
+
 ## Micro-SaaS
 
 ### Subject: Founder revenue intelligence in one view

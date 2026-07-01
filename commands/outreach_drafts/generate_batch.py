@@ -109,11 +109,12 @@ def score_lead(lead: Dict) -> float:
 
 
 def pick_services(lead: Dict) -> List[Dict]:
-    text = ' '.join(str(lead.get(k, '')).lower() for k in ['title', 'company', 'target_services', 'notes'])
+    text = ' '.join(str(lead.get(k, '')).lower() for k in ['title', 'company', 'target_services', 'notes', 'services_offered'])
     picked = []
     seen = set()
     for rule in SERVICE_MATCH_RULES:
-        if rule['name'] in seen:
+        key = rule['name']
+        if key in seen:
             continue
         if any(k in text for k in rule['keywords']):
             picked.append({
@@ -122,13 +123,14 @@ def pick_services(lead: Dict) -> List[Dict]:
                 'template': rule['template'],
                 'service_ids': rule['service_ids'],
             })
-            seen.add(rule['name'])
+            seen.add(key)
     return picked
 
 
 def render_draft(lead: Dict, service: Dict, day_type='initial') -> Dict[str, str]:
     company = lead.get('company') or 'your team'
     name = lead.get('contact_name') or 'there'
+    email = lead.get('email') or ''
     subject = service['subject']
     body = f"""Hi {name},
 
@@ -146,7 +148,7 @@ Kleber
 Kleber@ziontechgroup.com | +1 302 464 0950
 Zion Tech Group
 """
-    return {'subject': subject, 'body': body.strip()}
+    return {'subject': subject, 'body': body.strip(), 'to_email': email, 'to_name': name}
 
 
 def main():

@@ -9484,3 +9484,11 @@ connection to server at "localhost" (::1), port 5432 failed: Connection refused
 - [2026-06-30 15:42:29] EnhancedEmailMiner: Gmail query: after:2026/06/17 before:2026/06/17 in:anywhere
 - [2026-06-30 15:42:35] EnhancedEmailMiner: Gmail search failed after 3 retries: [Errno 2] No such file or directory: '/root/.openclaw/workspace/gog_tokens.json'
 - [2026-06-30 15:42:35] EnhancedEmailMiner: No results found in this chunk
+- [2026-07-01 05:34:40] EmailOutreachV2: === Email Outreach Agent V2 started ===
+- [2026-07-01 05:34:40] EmailOutreachV2: Loaded 210 sent-email dedupe entries
+- [2026-07-01 05:34:40] EmailOutreachV2: Loaded 3 leads from out/lead_batch_001.json
+- [2026-07-01 05:34:40] EmailOutreachV2: Skipping lead without email: Atlas Industrial Controls
+- [2026-07-01 05:34:40] EmailOutreachV2: Skipping lead without email: Meridian SaaS Finance
+- [2026-07-01 05:34:40] EmailOutreachV2: Skipping lead without email: Northwind Legal Ops
+- [2026-07-01 05:34:40] EmailOutreachV2: Email Outreach Agent V2 finished - processed 0 leads
+- [2026-07-01 05:34:40] EmailOutreachV2: === Email Outreach Agent V2 completed ===
