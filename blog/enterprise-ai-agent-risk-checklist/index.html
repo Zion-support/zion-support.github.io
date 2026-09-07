@@ -1,0 +1,280 @@
+<!--
+Blog: Enterprise AI Agent Risk Checklist: What to Gate Before Production — Zion Tech Group
+SEO: Family A / site.css only. Wave 4 ship pack.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enterprise AI Agent Risk Checklist: What to Gate Before Production | Zion Tech Group</title>
+<meta name="description" content="Enterprise AI agent risk checklist: data, actions, spend, and audit gates before production; HITL defaults; and Discovery $99 to map the first agent — no fake scores or certs.">
+<meta name="keywords" content="AI agent risk checklist, enterprise AI agents, human-in-the-loop, AI agent governance, Discovery $99">
+<link rel="canonical" href="https://ziontechgroup.com/blog/enterprise-ai-agent-risk-checklist/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Enterprise AI Agent Risk Checklist: What to Gate Before Production | Zion Tech Group">
+<meta property="og:description" content="Pre-production gates for data, actions, spend, and audit — plus Discovery $99 to map the first agent.">
+<meta property="og:url" content="https://ziontechgroup.com/blog/enterprise-ai-agent-risk-checklist/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://ziontechgroup.com/og-blog-pricing.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enterprise AI Agent Risk Checklist: What to Gate Before Production">
+<link rel="preload" href="/assets/css/site.css" as="style">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/icon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Enterprise AI Agent Risk Checklist: What to Gate Before Production",
+  "description": "Enterprise AI agent risk checklist: data, actions, spend, and audit gates before production; HITL defaults; and Discovery $99 to map the first agent — no fake scores or certs.",
+  "image": "https://ziontechgroup.com/og-blog-pricing.svg",
+  "author": {"@type": "Organization", "name": "Zion Tech Group", "url": "https://ziontechgroup.com"},
+  "publisher": {"@type": "Organization", "name": "Zion Tech Group", "url": "https://ziontechgroup.com"},
+  "datePublished": "2026-09-07",
+  "dateModified": "2026-09-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://ziontechgroup.com/blog/enterprise-ai-agent-risk-checklist/"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should be on an enterprise AI agent risk checklist before production?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four risk classes plus HITL and ownership: data (what may be read/retained), actions (what may be written, with an approval matrix), spend (envelopes, tags, kill switch), and audit (step log and replay). Add a named agent owner, security review of allowlists, and a human gate on irreversible steps. Deep read: AI agent governance for enterprise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should an agent act without a human?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only on reversible, low-blast-radius steps that already have a definition of done: classify, enrich, draft, route. Writes to a system of record, production access, refunds, and customer-facing closures stay behind a human-in-the-loop gate until the runbook says otherwise. Default production posture is read + suggest or tightly scoped writes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you need a certification to start gating AI agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Governance starts with owners, tool scope, spend envelopes, and an audit trail. Zion does not sell a fake SOC 2, ISO, or HIPAA certificate as a substitute for those controls. In regulated stacks we map your existing control language to the agent design — see Fintech IT / AI when payments or identity are in scope."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Discovery $99 produce for agent risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A first-agent map: the job, the tools, the hottest risk class, the human gate, and who owns exceptions. It is not an implementation and it does not include a promised risk-reduction percentage. Book via /discovery/. Next tracks may be AI consulting, FinOps, Starter, or stop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do spend risks relate to FinOps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Model/API quotas, owner tags, and kill switches are FinOps controls applied to agent workloads. Pair the spend class with FinOps consulting. We do not invent savings percentages for governed agents — you measure against the baseline set with the envelope."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="/">Zion Tech Group</a>
+    <button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <nav class="links" aria-label="Primary">
+      <a href="/services/">Services</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <a class="cta" href="/discovery/">Discovery $99</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" class="section">
+  <div class="wrap">
+    <p class="crumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / AI agent risk checklist</p>
+    <p class="chips" aria-label="Eyebrow">
+      <span class="badge">September 7, 2026</span>
+      <span class="badge">Enterprise</span>
+      <span class="badge">Agents</span>
+      <span class="badge">Commercial</span>
+    </p>
+    <h1>Enterprise AI Agent Risk Checklist: What to Gate Before Production</h1>
+    <p class="lead">Enterprises do not stall on model quality first. They stall when an agent can read a mailbox, call a CRM, and “just try” a write with no owner on the exception queue. Map the first agent with <a href="/discovery/">Discovery $99</a> before unsupervised writes land in production.</p>
+
+    <div class="cta-box">
+      <p><strong>Map your first agent — Discovery $99</strong></p>
+      <p>We write the job, the tools, the hottest risk class, the human gate, and who owns exceptions. You decide the next track.</p>
+      <p><a class="btn" href="/discovery/">Map your first agent — Discovery $99</a> <a class="btn alt" href="/autonomous-ai-agents/">Autonomous agents</a></p>
+    </div>
+
+    <p>This checklist is the pre-production gate for CIO, CISO, and ops buyers. Product detail lives on <a href="/autonomous-ai-agents/">autonomous AI agents</a>. The long-form control narrative is <a href="/blog/ai-agent-governance-enterprise/">AI agent governance for enterprise</a>. Strategy framing sits on <a href="/ai-consulting-services/">AI consulting services</a>. Spend envelopes pair with <a href="/finops-consulting/">FinOps consulting</a>.</p>
+    <p>We will not invent a governance score, a “risk reduced” percentage, or a certification you can print on a slide. The test is operational: can a reviewer see what the agent did, why it stopped, and who was supposed to pick up the thread?</p>
+
+    <h2>Data risks</h2>
+    <p>What may the agent read, retrieve, or embed? Customer records, tickets, contracts, and chat history are not “context.” They are data with an access and retention rule.</p>
+    <p><strong>Gate before production — data</strong></p>
+    <ul>
+      <li>Named corpus: which systems and indexes the agent may retrieve from — unit- or tenant-scoped, not a shared kitchen sink.</li>
+      <li>Allow-list of sources; ban on pasting secrets into unmanaged chats or consumer models.</li>
+      <li>Retention rule for prompts, tool outputs, and embeddings — who can see them, how long they live.</li>
+      <li>PII / customer / regulated handling written in the same language your security team already uses — not a slide that says “enterprise-grade.”</li>
+      <li>No cross-business-unit retrieval “for better answers” without an explicit decision and owner.</li>
+    </ul>
+    <p>Failure modes are familiar: a shared retrieval index across units, a prompt that pastes another customer’s thread, a plugin that ships content to a consumer endpoint with no data-processing language. We do not claim a data-loss percentage. We ask whether a reviewer can say which corpus the last step used.</p>
+    <p>In stricter industries, map to existing control language. Fintech-style identity and ledger patterns: <a href="/fintech-it-ai/">Fintech IT / AI</a>. Do not treat that page as a fake certification — it is industry framing for the same checklist.</p>
+
+    <h2>Action risks</h2>
+    <p>What may the agent change? Read and draft are usually acceptable on a first agent. Writes to CRM, ERP, identity, payments, or infrastructure are a different class.</p>
+    <p><strong>Gate before production — actions</strong></p>
+    <ul>
+      <li>Action matrix: allowed / allowed-with-approval / forbidden — per tool, not per slogan.</li>
+      <li>Destructive vs reversible called out. Refunds, provisions, access grants, and customer-facing closures stay behind a human gate until the runbook says otherwise.</li>
+      <li>Demo tools disconnected. A connector that was “just for the pilot” is still a production risk if the key lives.</li>
+      <li>Least privilege service principal — not a copied admin token from a laptop demo.</li>
+      <li>Definition of done for the job. “Help the business with AI” is not a job; “enrich and route L1 tickets of type X” is.</li>
+    </ul>
+    <p>Closing a customer-facing ticket or changing production access without a gate is how you create incidents, not how you prove autonomy. Product language for that boundary is on <a href="/autonomous-ai-agents/">autonomous AI agents</a>.</p>
+
+    <div class="cta-box">
+      <p><strong>Map your first agent — Discovery $99</strong></p>
+      <p>Job, tools, and irreversible actions on one page.</p>
+      <p><a class="btn" href="/discovery/">Map your first agent — Discovery $99</a> <a class="btn alt" href="/blog/ai-agent-governance-enterprise/">Governance deep read</a></p>
+    </div>
+
+    <h2>Spend risks</h2>
+    <p>Every tool call and every retry is a cost event. Agents are chatty by default: they re-read the thread, re-embed the same document, and loop when the job is unclear. A shared API key with no budget is a credit card on the table.</p>
+    <p><strong>Gate before production — spend</strong></p>
+    <ul>
+      <li>Per-workflow keys or budgets — not one org-wide key for every pilot.</li>
+      <li>Spend envelope with a named person who can pause the job in the same shift.</li>
+      <li>Owner tags on model/API and cloud lines so finance can see which workflow burned the budget.</li>
+      <li>Kill switch that does not require a vendor ticket to stop a runaway loop.</li>
+      <li>Baseline taken when the envelope is set — so usage is measured against something real.</li>
+    </ul>
+    <p>Pair this class with <a href="/finops-consulting/">FinOps consulting</a>. We will not invent a savings percentage for “governed agents.” You measure usage against the baseline you take when the envelope is set. A copilot with an untagged key is still an unowned bill.</p>
+
+    <h2>Audit / ownership</h2>
+    <p>If you cannot reconstruct the last twenty steps, you do not have an enterprise agent. You have a conversation that vanished.</p>
+    <p><strong>Gate before production — audit</strong></p>
+    <ul>
+      <li>Step log: who invoked the job, which tools ran, what was retrieved, what was proposed, who approved, why the agent stopped.</li>
+      <li>Log stored where your existing review process can read it — incident review, change advisory, or examiner request.</li>
+      <li>Replay path for a decision — not a narrative slide after the fact.</li>
+    </ul>
+    <p><strong>Gate before production — ownership (RACI)</strong></p>
+    <ul>
+      <li>Agent owner (business) — definition of done and exception priority.</li>
+      <li>Security — allow-lists, data class, tool privilege review.</li>
+      <li>Platform / IT — runtime, keys, kill switch, logging.</li>
+      <li>Ops / service desk — queue handoff when the agent stops.</li>
+    </ul>
+    <p>Builders do not silently own production allowlists without security review. Separated duties are part of the checklist, not a later “maturity” phase. Deep control write-up: <a href="/blog/ai-agent-governance-enterprise/">AI agent governance for enterprise</a>.</p>
+    <p>For payments, identity, or regulated ledger stacks, keep <a href="/fintech-it-ai/">Fintech IT / AI</a> in the same conversation as pattern language — not as a substitute for the step log. Zion will not print a fake audit certification in place of that log.</p>
+
+    <h2>HITL defaults</h2>
+    <p>Human-in-the-loop is not a person sitting on every token. It is a gate on the steps that can hurt you. Design the gate the way you would design a change window: default deny on irreversible actions, default allow on reversible preparation.</p>
+    <p><strong>Default production posture for a first agent</strong></p>
+    <ol class="steps">
+      <li><strong>Intake</strong> — read the ticket, email, or form from sources the system of record already allows.</li>
+      <li><strong>Classify</strong> — type, severity, queue. Escalate when confidence is low or the schema does not match.</li>
+      <li><strong>Enrich</strong> — attach approved context only.</li>
+      <li><strong>Draft</strong> — a reply or internal note a human can accept, edit, or reject.</li>
+      <li><strong>Route</strong> — the right queue or owner. <strong>Stop.</strong> Do not close. Do not send. Do not write — unless the runbook and the gate say so.</li>
+    </ol>
+    <p>The human is the authority on send, write, refund, provision, and close. You can later move a narrow class of writes behind an automated rule if the definition of done is boring and the blast radius is small. You do not start there.</p>
+    <p>HITL also needs an exception path faster than the agent. If the only way to stop a runaway job is to open a vendor ticket, you do not have a kill switch. The owner named in Discovery must be able to disable the agent in the same shift the anomaly appears. Isolation is part of HITL: no other tenant’s or unit’s tickets in the same step.</p>
+    <p>When Discovery shows more than one job, <a href="/ai-consulting-services/">AI consulting</a> is where the action matrix and HITL map get written. Discovery itself stays cheap and narrow on purpose: one agent, one gate, one owner.</p>
+
+    <div class="cta-box">
+      <p><strong>Map your first agent — Discovery $99</strong></p>
+      <p>Controls first: job, tools, gate, owner. Autonomy only where the runbook allows it.</p>
+      <p><a class="btn" href="/discovery/">Map your first agent — Discovery $99</a> <a class="btn alt" href="/ai-consulting-services/">AI consulting</a></p>
+    </div>
+
+    <h2>Discovery as the paid map</h2>
+    <p>The commercial path is a first-agent map, not a transformation program.</p>
+    <ol class="steps">
+      <li><strong>Discovery ($99)</strong> — 30 minutes on the queue, the system of record, the tool list, and the irreversible actions. Book via <a href="/discovery/">Discovery</a>.</li>
+      <li><strong>Written follow-up</strong> — job, risk class (data / actions / spend / audit), human gate, exception owner, and whether the next track is consulting, a managed agent, FinOps, or stop.</li>
+      <li><strong>Build only after the boundary is written</strong> — tools, stop rules, step log, kill switch. No unsupervised closures as a default.</li>
+    </ol>
+    <p>Published path chips only: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo · Response within 24h. Starter implements one governed agent end-to-end. Growth operates and iterates under agreed controls. Prices and industry context also sit under <a href="/solutions/">solutions</a> — the offer itself is on Discovery and the service landings.</p>
+    <p>If Discovery shows that you do not have a job — only a desire for “an agent” — we will say so. That is a successful diagnostic. Paying $99 to avoid a six-figure platform with no owner is the point of the offer.</p>
+    <p>Prefer email? <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+
+    <div class="cta-box">
+      <p><strong>Map your first agent — Discovery $99</strong></p>
+      <p>Controls first: job, tools, gate, owner. Autonomy only where the runbook allows it.</p>
+      <p><a class="btn" href="/discovery/">Map your first agent — Discovery $99</a> <a class="btn alt" href="/contact/">Contact</a></p>
+    </div>
+
+    <h2>FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>What should be on an enterprise AI agent risk checklist before production?</summary>
+        <p>Four risk classes plus HITL and ownership: data (what may be read/retained), actions (what may be written, with an approval matrix), spend (envelopes, tags, kill switch), and audit (step log and replay). Add a named agent owner, security review of allowlists, and a human gate on irreversible steps. Deep read: <a href="/blog/ai-agent-governance-enterprise/">AI agent governance for enterprise</a>.</p>
+      </details>
+      <details>
+        <summary>When should an agent act without a human?</summary>
+        <p>Only on reversible, low-blast-radius steps that already have a definition of done: classify, enrich, draft, route. Writes to a system of record, production access, refunds, and customer-facing closures stay behind a human-in-the-loop gate until the runbook says otherwise. Default production posture is read + suggest or tightly scoped writes.</p>
+      </details>
+      <details>
+        <summary>Do you need a certification to start gating AI agents?</summary>
+        <p>No. Governance starts with owners, tool scope, spend envelopes, and an audit trail. Zion does not sell a fake SOC 2, ISO, or HIPAA certificate as a substitute for those controls. In regulated stacks we map your existing control language to the agent design — see <a href="/fintech-it-ai/">Fintech IT / AI</a> when payments or identity are in scope.</p>
+      </details>
+      <details>
+        <summary>What does Discovery $99 produce for agent risk?</summary>
+        <p>A first-agent map: the job, the tools, the hottest risk class, the human gate, and who owns exceptions. It is not an implementation and it does not include a promised risk-reduction percentage. Book via <a href="/discovery/">Discovery</a>. Next tracks may be AI consulting, FinOps, Starter, or stop.</p>
+      </details>
+      <details>
+        <summary>How do spend risks relate to FinOps?</summary>
+        <p>Model/API quotas, owner tags, and kill switches are FinOps controls applied to agent workloads. Pair the spend class with <a href="/finops-consulting/">FinOps consulting</a>. We do not invent savings percentages for governed agents — you measure against the baseline set with the envelope.</p>
+      </details>
+    </div>
+
+    <p class="see-also">See also: <a href="/autonomous-ai-agents/">Autonomous AI agents</a> · <a href="/blog/ai-agent-governance-enterprise/">AI agent governance for enterprise</a> · <a href="/finops-consulting/">FinOps consulting</a> · <a href="/ai-consulting-services/">AI consulting services</a> · <a href="/fintech-it-ai/">Fintech IT / AI</a> · <a href="/solutions/">Solutions</a> · <a href="/discovery/">Discovery $99</a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h3>Company</h3>
+      <a href="/about/">About</a>
+      <a href="/partners/">Partners</a>
+    </div>
+    <div>
+      <h3>Offer</h3>
+      <a href="/plans/">Plans</a>
+      <a href="/discovery/">Discovery $99</a>
+      <a href="/solutions/">Solutions</a>
+    </div>
+    <div>
+      <h3>Resources</h3>
+      <a href="/blog/">Blog</a>
+      <a href="/resources/">Resources</a>
+      <a href="/services/">Services</a>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <a href="/privacy/">Privacy</a>
+      <a href="/cookie-policy/">Cookies</a>
+      <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px">© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</div>
+</footer>
+</body>
+</html>
