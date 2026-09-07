@@ -8,7 +8,36 @@ DISCOVERED = Path("/Users/miami2/zion.app/app/data/discovered_leads.json")
 LOG_PATH = Path("/Users/miami2/zion.app/outreach-send-log.jsonl")
 REPORT = Path("/Users/miami2/zion.app/automation/reports/live-discovered-send-cycle-latest.json")
 ACCOUNT = "kleber@ziontechgroup.com"
-ALLOW_SEND = "LIVE_SEND_ALLOW_SEND" in os.environ
+
+# Canonical send adapter toggle
+# Honors ZION_SEND_ADAPTER/trigger unless the legacy LIVE_SEND_ALLOW_SEND is present.
+ZION_SEND_ADAPTER = os.environ.get("ZION_SEND_ADAPTER", "").strip() == "1"
+ZION_SEND_ADAPTER_TRIGGER = os.environ.get("ZION_SEND_ADAPTER_TRIGGER", "env").strip().lower()
+_adapter_allows_send_env = lambda: ZION_SEND_ADAPTER and (
+    ZION_SEND_ADAPTER_TRIGGER == "manual"
+    or ("LIVE_SEND_ALLOW_SEND" in os.environ and os.environ.get("DRY_RUN_OUTREACH", "0").strip() != "1")
+)
+ALLOW_SEND = "LIVE_SEND_ALLOW_SEND" in os.environ or _adapter_allows_send_env()
+
+# Optional send backend: auto/gog/composio
+ZION_SEND_BACKEND = os.environ.get("ZION_SEND_BACKEND", "auto").strip().lower()
+
+def _send_discovered_email_backend(to_email, subject, body):
+    if ZION_SEND_BACKEND == "composio":
+        cmd = [
+            "python3",
+            str(Path("/Users/miami2/zion.app/automation/scripts/composio_send_adapter.py")),
+            "gmail",
+            "--to", to_email,
+            "--subject", subject,
+            "--body", body,
+            "--sender", "Zion <noreply@ziontechgroup.com>",
+        ]
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        if r.returncode == 0:
+            return "sent", None
+        return "failed", (r.stderr.strip() or r.stdout.strip() or f"exit {r.returncode}")
+    return send_discovered_email(to_email, subject, body)
 
 def is_already_sent(email):
     if not LOG_PATH.exists():
@@ -86,7 +115,7 @@ def main():
             f"Atenciosamente,\nKleber | Zion Tech Group\n{ACCOUNT}"
         )
 
-        status, error = send_discovered_email(email, subject, body)
+        status, error = _send_discovered_email_backend(email, subject, body)
 
         log_entry = {
             "timestamp": datetime.now(timezone.utc).isoformat(),

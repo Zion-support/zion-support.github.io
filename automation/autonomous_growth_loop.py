@@ -28,6 +28,10 @@ if dry_run == "" or dry_run is None:
     os.environ["DRY_RUN_OUTREACH"] = "0"
     dry_run = "0"
 
+# Canonical send adapter passthrough for wrapper report clarity
+ZION_SEND_ADAPTER = os.environ.get("ZION_SEND_ADAPTER", "").strip() == "1"
+ZION_SEND_ADAPTER_TRIGGER = os.environ.get("ZION_SEND_ADAPTER_TRIGGER", "env").strip().lower()
+
 run_id = str(uuid.uuid4())[:8]
 ts_now = datetime.now(timezone.utc).isoformat()
 
