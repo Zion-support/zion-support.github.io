@@ -2,20 +2,28 @@
   "defaultLang": "pt",
   "languages": [
     { "id": "pt", "hreflang": "pt-BR", "label": "PT", "htmlLang": "pt-BR" },
-    { "id": "en", "hreflang": "en", "label": "EN", "htmlLang": "en" }
+    { "id": "en", "hreflang": "en", "label": "EN", "htmlLang": "en" },
+    { "id": "es", "hreflang": "es", "label": "ES", "htmlLang": "es" },
+    { "id": "fr", "hreflang": "fr", "label": "FR", "htmlLang": "fr" }
   ],
   "pairs": [
-    { "pt": "/", "en": "/en/" },
-    { "pt": "/contato/", "en": "/contact/" },
-    { "pt": "/fale-conosco/", "en": "/contact/" },
-    { "pt": "/privacidade/", "en": "/privacy/" },
-    { "pt": "/precos/", "en": "/pricing/" },
-    { "pt": "/plans/", "en": "/pricing/" },
-    { "pt": "/blog/pt/", "en": "/blog/" },
-    { "pt": "/custo-cloud/", "en": "/finops-consulting/" },
-    { "pt": "/whatsapp/", "en": "/whatsapp/" },
-    { "pt": "/discovery/", "en": "/discovery/" },
-    { "pt": "/partners/", "en": "/partners/" },
-    { "pt": "/indique/", "en": "/referral/" }
+    { "pt": "/", "en": "/en/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/pt/", "en": "/en/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/contato/", "en": "/en/contact/", "es": "/es/contacto/", "fr": "/fr/contact/" },
+    { "pt": "/contact/", "en": "/en/contact/", "es": "/es/contacto/", "fr": "/fr/contact/" },
+    { "pt": "/fale-conosco/", "en": "/en/contact/", "es": "/es/contacto/", "fr": "/fr/contact/" },
+    { "pt": "/privacidade/", "en": "/privacy/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/privacy/", "en": "/privacy/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/precos/", "en": "/en/plans/", "es": "/es/planes/", "fr": "/fr/tarifs/" },
+    { "pt": "/pricing/", "en": "/en/plans/", "es": "/es/planes/", "fr": "/fr/tarifs/" },
+    { "pt": "/plans/", "en": "/en/plans/", "es": "/es/planes/", "fr": "/fr/tarifs/" },
+    { "pt": "/discovery/", "en": "/en/discovery/", "es": "/es/discovery/", "fr": "/fr/discovery/" },
+    { "pt": "/blog/pt/", "en": "/blog/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/custo-cloud/", "en": "/finops-consulting/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/whatsapp/", "en": "/whatsapp/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/partners/", "en": "/partners/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/indique/", "en": "/referral/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/services/", "en": "/en/services/", "es": "/es/", "fr": "/fr/" },
+    { "pt": "/agents/", "en": "/en/agents/", "es": "/es/", "fr": "/fr/" }
   ]
 }
