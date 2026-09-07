@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brief de 60 segundos | Zion Tech Group</title>
+<meta name="description" content="Monte um brief de 60 segundos e mande no WhatsApp. Discovery $99. Sem formulario eterno.">
+<link rel="canonical" href="https://ziontechgroup.com/brief-60s/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Brief de 60 segundos — Zion Tech Group">
+<meta property="og:url" content="https://ziontechgroup.com/brief-60s/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<style>body{margin:0;background:#070b16;color:#f4f7ff;font:18px/1.65 system-ui,sans-serif}.wrap{max-width:740px;margin:0 auto;padding:48px 24px 80px}a{color:#22d3ee}.muted{color:#9aa8c7}label{display:block;margin:12px 0 6px}select,textarea{width:100%;background:#0e1628;border:1px solid #2a3654;color:#f4f7ff;border-radius:12px;padding:12px;font:inherit}textarea{min-height:120px}.btn{display:inline-block;margin:10px 8px 0 0;padding:12px 18px;border-radius:12px;background:#0069ff;color:#fff;font-weight:700;border:0;cursor:pointer;text-decoration:none}.card{background:#0e1628;border:1px solid #2a3654;border-radius:16px;padding:20px;margin:18px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.grid{grid-template-columns:1fr}}</style>
+</head>
+<body>
+<main class="wrap">
+<p><a href="/">Zion</a> · <a href="/comece/">Comece</a> · <a href="/precos/">Precos</a> · <a href="/whatsapp/">WhatsApp</a></p>
+<h1>Brief de 60 segundos</h1>
+<p class="muted">Roda no navegador. Abre o WhatsApp com o recorte. Discovery $99 no fim.</p>
+<div class="card">
+<div class="grid">
+<div><label for="area">Area</label><select id="area"><option value="atendimento no WhatsApp">WhatsApp</option><option value="agente no Telegram">Telegram</option><option value="agente de voz no telefone">Voz</option><option value="automacao n8n">n8n</option><option value="FinOps e custo de cloud">FinOps</option><option value="field service onsite">Field services</option></select></div>
+<div><label for="urgencia">Urgencia</label><select id="urgencia"><option value="neste trimestre" selected>Neste trimestre</option><option value="vazando dinheiro agora">Vazando dinheiro</option></select></div>
+</div>
+<label for="nota">Nota</label><textarea id="nota" placeholder="Ex.: fila de 40 conversas/dia."></textarea>
+<p><button class="btn" type="button" id="go">Abrir WhatsApp</button> <a class="btn" href="/discovery/">Discovery $99</a></p>
+<label for="preview">Mensagem</label><textarea id="preview" readonly></textarea>
+</div>
+<p><a href="/bot-telegram-empresas/">Bot Telegram</a> · <a href="/agente-voz-ia-telefone/">Voz</a> · <a href="/automacao-n8n-empresas/">n8n</a> · <a href="/para-contabilidades/">Contabil</a></p>
+<p class="muted">kleber@ziontechgroup.com · +1 302 464 0950</p>
+</main>
+<script>
+(function(){
+function msg(){var extra=(document.getElementById("nota").value||"").trim();var t="Ola Kleber, vim de ziontechgroup.com/brief-60s. Recorte: "+document.getElementById("area").value+". Urgencia: "+document.getElementById("urgencia").value+".";if(extra)t+=" Nota: "+extra;return t;}
+function render(){document.getElementById("preview").value=msg();}
+document.getElementById("area").addEventListener("change",render);
+document.getElementById("urgencia").addEventListener("change",render);
+document.getElementById("nota").addEventListener("input",render);
+document.getElementById("go").addEventListener("click",function(){location.href="https://wa.me/13024640950?text="+encodeURIComponent(msg());});
+render();
+})();
+</script>
+</body></html>
