@@ -1,0 +1,21 @@
+{
+  "defaultLang": "pt",
+  "languages": [
+    { "id": "pt", "hreflang": "pt-BR", "label": "PT", "htmlLang": "pt-BR" },
+    { "id": "en", "hreflang": "en", "label": "EN", "htmlLang": "en" }
+  ],
+  "pairs": [
+    { "pt": "/", "en": "/en/" },
+    { "pt": "/contato/", "en": "/contact/" },
+    { "pt": "/fale-conosco/", "en": "/contact/" },
+    { "pt": "/privacidade/", "en": "/privacy/" },
+    { "pt": "/precos/", "en": "/pricing/" },
+    { "pt": "/plans/", "en": "/pricing/" },
+    { "pt": "/blog/pt/", "en": "/blog/" },
+    { "pt": "/custo-cloud/", "en": "/finops-consulting/" },
+    { "pt": "/whatsapp/", "en": "/whatsapp/" },
+    { "pt": "/discovery/", "en": "/discovery/" },
+    { "pt": "/partners/", "en": "/partners/" },
+    { "pt": "/indique/", "en": "/referral/" }
+  ]
+}
