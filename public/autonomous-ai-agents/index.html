@@ -12,40 +12,9 @@
 <meta property="og:url" content="https://ziontechgroup.com/autonomous-ai-agents/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:linear-gradient(160deg,#020617 0%,#0f172a 45%,#1e1b4b 100%);color:#e2e8f0;line-height:1.65;min-height:100vh}
-a{color:#67e8f9;text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:960px;margin:0 auto;padding:28px 20px 64px}
-nav.top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:28px;font-size:.92rem}
-nav.top .brand{font-weight:800;font-size:1.15rem;background:linear-gradient(135deg,#00d4ff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.badge{display:inline-block;background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.35);color:#c4b5fd;border-radius:999px;padding:3px 10px;font-size:.75rem;font-weight:600;letter-spacing:.02em;margin-right:6px}
-h1{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.2;margin:12px 0 12px;background:linear-gradient(135deg,#e2e8f0,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-h2{color:#f1f5f9;font-size:1.35rem;margin:32px 0 12px}
-.lead{color:#cbd5e1;font-size:1.08rem;margin-bottom:24px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
-.card{background:rgba(15,23,42,.62);border:1px solid rgba(124,58,237,.28);border-radius:14px;padding:18px}
-.card h3{margin:0 0 8px;color:#c4b5fd;font-size:1.02rem}
-.card p,.card li{color:#cbd5e1;font-size:.95rem}
-ol.steps{padding-left:20px}ol.steps li{margin:8px 0}
-.cta{margin:32px 0;padding:22px;border-radius:16px;background:linear-gradient(135deg,rgba(0,105,255,.25),rgba(124,58,237,.25));border:1px solid rgba(0,212,255,.25);text-align:center}
-.btn{display:inline-block;margin:6px;padding:12px 20px;border-radius:12px;font-weight:700;background:linear-gradient(135deg,#0069ff,#00d4ff);color:#fff}
-.btn.alt{background:transparent;border:1px solid rgba(167,139,250,.5);color:#e2e8f0}
-footer{margin-top:48px;padding-top:20px;border-top:1px solid rgba(148,163,184,.2);color:#94a3b8;font-size:.88rem}
-ul.clean{padding-left:18px}ul.clean li{margin:6px 0}
-.crumb{color:#94a3b8;font-size:.85rem;margin-bottom:10px}
-.crumb a{color:#a5b4fc}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
-.chip{background:rgba(15,23,42,.62);border:1px solid rgba(124,58,237,.28);border-radius:999px;padding:6px 12px;font-size:.82rem;color:#cbd5e1}
-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid rgba(148,163,184,.18);vertical-align:top}
-th{color:#c4b5fd;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
-.faq details{background:rgba(15,23,42,.62);border:1px solid rgba(124,58,237,.28);border-radius:12px;padding:12px 16px;margin:10px 0}
-.faq summary{cursor:pointer;font-weight:700;color:#e2e8f0}
-.faq details p{margin:10px 0 4px;color:#cbd5e1}
-.see-also{color:#94a3b8;font-size:.92rem;margin:20px 0}
-.scroll{overflow-x:auto}
-</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Autonomous AI Agents","description":"Deploy autonomous AI agents with governance, guardrails, and a clear path from Discovery $99 to managed Growth. Outcomes-first agents — not chatbot demos.","url":"https://ziontechgroup.com/autonomous-ai-agents/","areaServed":"Worldwide","provider":{"@type":"Organization","name":"Zion Tech Group","url":"https://ziontechgroup.com","email":"kleber@ziontechgroup.com","telephone":"+1 302 464 0950"},"offers":{"@type":"Offer","name":"Discovery","description":"Map one process, estimate ROI, and receive an executive readout before you fund an agent.","price":"99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://ziontechgroup.com/discovery/"}}</script>
+<link rel="preload" href="/assets/css/site.css" as="style">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 <div class="wrap">
@@ -112,9 +81,9 @@ th{color:#c4b5fd;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
   </div>
 </section>
 
-<section>
-  <h2>Governance — five points before production</h2>
-  <p>The five points below are the production minimum. CIO/CISO questions — data, actions, spend, audit, and ownership — are expanded in <a href="#enterprise-governance">Enterprise AI agent governance &amp; risk</a>.</p>
+<section id="controls-before-autonomy">
+  <h2>Controls before autonomy</h2>
+  <p>Autonomy without controls is shadow IT. The five points below are the production minimum — write them before the first unattended tool call. CIO/CISO questions — data, actions, spend, audit, and ownership — are expanded in <a href="#enterprise-governance">Enterprise AI agent governance &amp; risk</a>. No fake compliance badges on this page.</p>
   <ol class="steps">
     <li><strong>Named owner</strong> — a human who can pause the agent and change the allowed-tool list.</li>
     <li><strong>Allowed tools only</strong> — the agent cannot invent a new integration at runtime.</li>
@@ -122,6 +91,21 @@ th{color:#c4b5fd;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
     <li><strong>Audit log</strong> — tool calls, inputs, and outcomes are written down.</li>
     <li><strong>Kill switch &amp; rollback</strong> — disable the agent without taking the rest of the stack down.</li>
   </ol>
+</section>
+
+<section id="first-workflow-discovery">
+  <h2>First workflow via Discovery</h2>
+  <p>Do not start with a platform rollout. Map <strong>one workflow</strong> in Discovery $99: the system of record, the allowed tools, the human gate, and whether an agent is even in scope. If Discovery says wait or do-not-build, that is the deliverable — not a failed sale.</p>
+  <div class="grid">
+    <div class="card"><h3>What Discovery writes</h3><p>One process, data/action/spend boundary, ROI sketch (order of magnitude — not a guarantee), and a 30-minute readout. Offer details stay on <a href="/discovery/">/discovery/</a>.</p></div>
+    <div class="card"><h3>When to Consulte</h3><p>Multi-tenant, regulated, or unclear enterprise scope — use <a href="/contact/">Consulte</a> before Starter. Growth and SLA are scoped after the first agent is governed.</p></div>
+  </div>
+  <div class="cta">
+    <p><strong>Controls first. Then one workflow. Then autonomy.</strong></p>
+    <a class="btn" href="/discovery/">Discovery $99</a>
+    <a class="btn alt" href="/contact/">Consulte (enterprise)</a>
+    <a class="btn alt" href="/plans/">Plans</a>
+  </div>
 </section>
 
 <section id="enterprise-governance">
@@ -187,7 +171,7 @@ th{color:#c4b5fd;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
       <tr><td><a href="/discovery/">Discovery</a></td><td>$99</td><td>One process mapped, ROI sketch, data/action/spend boundary, 30-min readout</td></tr>
       <tr><td><a href="/ai-consulting-services/">Consulting</a></td><td>$499</td><td>Roadmap, ROI order, HITL gates, build / wait / do-not-build</td></tr>
       <tr><td><a href="/plans/">Starter</a></td><td>$2,500</td><td>First production agent for that process — five-point checklist live</td></tr>
-      <tr><td><a href="/pricing/">Growth</a></td><td>$8,000/mo</td><td>Managed agents, change control, spend envelope, written SLA</td></tr>
+      <tr><td><a href="/plans/">Growth</a></td><td>$8,000/mo</td><td>Managed agents, change control, spend envelope, written SLA</td></tr>
     </tbody>
   </table>
   </div>
@@ -257,12 +241,13 @@ th{color:#c4b5fd;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
   <a class="btn" href="/discovery/">Map your first agent — Discovery $99</a>
   <a class="btn alt" href="/contact/">Or write Zion</a>
 </div>
-<p class="see-also">See also: <a href="/discovery/">Discovery $99</a> · <a href="/agents/">/agents/</a> (capability hub, not a duplicate) · <a href="/ai-services/">AI services hub</a> · <a href="/ai-consulting-services/">AI consulting services</a> · <a href="/finops-consulting/">FinOps consulting</a> · <a href="/managed-it-services/">Managed IT</a> · <a href="/fintech-it-ai/">Fintech IT / AI</a> · <a href="/healthcare-it-hipaa/">Healthcare IT / HIPAA</a> · <a href="#enterprise-governance">Enterprise governance</a> · <a href="#helpdesk-automation">Helpdesk automation</a> · <a href="/blog/ai-agent-governance-enterprise/">AI agent governance</a> · <a href="/blog/ai-helpdesk-automation/">AI helpdesk automation</a> · <a href="/blog/ai-automation-for-msps/">AI automation for MSPs</a> · <a href="/blog/autonomous-ai-agents-for-business/">Autonomous agents blog</a> · <a href="/plans/">Plans</a> · <a href="/pricing/">Pricing</a></p>
+<p class="see-also">See also: <a href="/discovery/">Discovery $99</a> · <a href="/agents/">/agents/</a> (capability hub, not a duplicate) · <a href="/ai-services/">AI services hub</a> · <a href="/ai-consulting-services/">AI consulting services</a> · <a href="/finops-consulting/">FinOps consulting</a> · <a href="/managed-it-services/">Managed IT</a> · <a href="/fintech-it-ai/">Fintech IT / AI</a> · <a href="/healthcare-it-hipaa/">Healthcare IT / HIPAA</a> · <a href="#enterprise-governance">Enterprise governance</a> · <a href="#helpdesk-automation">Helpdesk automation</a> · <a href="/blog/ai-agent-governance-enterprise/">AI agent governance</a> · <a href="/blog/ai-helpdesk-automation/">AI helpdesk automation</a> · <a href="/blog/ai-automation-for-msps/">AI automation for MSPs</a> · <a href="/blog/autonomous-ai-agents-for-business/">Autonomous agents blog</a> · <a href="#controls-before-autonomy">Controls before autonomy</a> · <a href="#first-workflow-discovery">First workflow</a> · <a href="/plans/">Plans</a></p>
 
 <footer>
   <p>© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p>
   <p><a href="/">Home</a> · <a href="/ai-services/">AI services</a> · <a href="/ai-consulting-services/">AI consulting</a> · <a href="/discovery/">Discovery</a> · <a href="/plans/">Plans</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
 </footer>
 </div>
+<script src="/assets/js/zion-shell.js" defer></script>
 </body>
 </html>
