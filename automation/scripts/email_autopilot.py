@@ -473,6 +473,8 @@ def run_hot_followup_scan(max_results: int = 20) -> dict:
         summary["errors"].append({"hot_search": str(e)})
         return summary
 
+    if isinstance(hits, dict):
+        hits = hits.get("threads", [])
     if not isinstance(hits, list):
         summary["errors"].append({"hot_search": "unexpected gog output"})
         return summary
