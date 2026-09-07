@@ -1,0 +1,14 @@
+{
+  "scanned": 25,
+  "skipped_noise": 0,
+  "skipped_sent": 0,
+  "classified": {
+    "support": 7,
+    "other": 18
+  },
+  "drafts_created": 0,
+  "memory_written": 0,
+  "content_ideas": 0,
+  "errors": [],
+  "updatedAt": "2026-09-07T11:25:30.487473+00:00"
+}
