@@ -1,0 +1,23 @@
+{
+  "dry_run_command": "cd /Users/miami2/zion.app && SEND_DRY_RUN=1 ZTG_SEND_COUNT=1 python3 lead-crm/_small_wave_send_run.py",
+  "live_single_send_command": "cd /Users/miami2/zion.app && ZTG_SEND_ALLOWED=1 ZTG_SEND_COUNT=1 python3 lead-crm/_small_wave_send_run.py",
+  "preconditions": [
+    "lead-crm/outreach_ready_canonical.json must exist with a 'ready' array containing at least one lead with a non-empty 'email' field",
+    "Python module path must include repo root so 'from commands.google_workspace import gmail_send_new' resolves",
+    "Gmail API must be enabled and the sender account must have an active OAuth/authorized credentials",
+    "lead-crm/outreach_sent_history.jsonl must be writable for deduplication",
+    "For send_cold_outreach_v2.py alternative path: ZION_SEND_ADAPTER=1 must be set, and when ZION_SEND_ADAPTER_TRIGGER=env (default) LIVE_SEND_ALLOW_SEND must be present and DRY_RUN_OUTREACH must not be '1'",
+    "For send_cold_outreach_v2.py alternative path: gog CLI must be installed and authenticated for kleber@ziontechgroup.com"
+  ],
+  "report_path": "/Users/miami2/zion.app/automation/reports/send-path-readiness-2026-09-07.json",
+  "residual_risks": [
+    "send_cold_outreach_v2.py has no built-in single-email cap; a live run with a full leads file will dispatch to all unsent leads, not just one",
+    "send_cold_outreach_v2.py defaults to gog backend; gog CLI auth expiry or account issues will cause live failures",
+    "_small_wave_send_run.py hard-codes the repo path via a fallback chain; running from an unexpected working directory could resolve to the wrong REPO",
+    "_small_wave_send_run.py imports from commands.google_workspace; if that module is missing or broken, the script fails before sending",
+    "Both scripts append to log files; concurrent or overlapping runs can race on writes and corrupt JSONL",
+    "Gmail API rate limits (429) will stop the batch mid-run; only _small_wave_send_run.py has explicit 429 handling",
+    "send_cold_outreach_v2.py filters generic emails unless priority=alta, which can silently skip intended targets",
+    "The v2 adapter toggle (ZION_SEND_ADAPTER) is currently disabled by default, as evidenced by recent 'send_disabled' entries in outreach-send-log-campaign.jsonl"
+  ]
+}

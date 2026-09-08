@@ -1,0 +1,20 @@
+name: Zion Lead-to-Revenue v2.0
+
+# Disabled: .github/scripts/composio/lead-to-revenue-v2.mjs is missing.
+# Growth loop lives in Grok Automations (ZIO-282), not this cron.
+# Do not remint Composio Connect Links from CI.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lead-to-revenue:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Guard
+        run: |
+          echo "Lead-to-Revenue v2 is disabled. Script lead-to-revenue-v2.mjs is not in the repo."
+          exit 1

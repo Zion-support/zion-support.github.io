@@ -1,0 +1,72 @@
+{
+  "categories": [
+    {
+      "category": "Managed Service Providers (MSPs)",
+      "companies": [
+        "ConnectWise",
+        "Kaseya",
+        "NinjaOne",
+        "Datto",
+        "Atera Networks"
+      ],
+      "rationale": "MSPs seek white-label AI/IT services to expand client offerings without building internal delivery."
+    },
+    {
+      "category": "System Integrators (SIs)",
+      "companies": [
+        "Cognizant",
+        "Infosys",
+        "Wipro",
+        "TCS",
+        "Accenture"
+      ],
+      "rationale": "Large SIs subcontract niche AI/IT work and need reliable regional delivery partners."
+    },
+    {
+      "category": "SaaS Vendors",
+      "companies": [
+        "HubSpot",
+        "Zendesk",
+        "Intercom",
+        "Salesforce",
+        "Freshworks"
+      ],
+      "rationale": "SaaS platforms need implementation and AI-enablement partners for customer success."
+    },
+    {
+      "category": "Cloud Marketplaces",
+      "companies": [
+        "AWS Marketplace",
+        "Azure Marketplace",
+        "Google Cloud Marketplace",
+        "Salesforce AppExchange",
+        "Snowflake Marketplace"
+      ],
+      "rationale": "Marketplace distribution accelerates reach; listing AI/IT services creates inbound demand."
+    },
+    {
+      "category": "Training Academies",
+      "companies": [
+        "General Assembly",
+        "Pluralsight",
+        "Udemy for Business",
+        "Coursera for Business",
+        "Skillsoft"
+      ],
+      "rationale": "Co-branded upskilling programs generate leads and position Zion as a knowledge leader."
+    },
+    {
+      "category": "Industry Associations",
+      "companies": [
+        "CompTIA",
+        "ISACA",
+        "AIPMM",
+        "IAAP",
+        "CSA"
+      ],
+      "rationale": "Associations provide membership access, event speaking slots, and referral credibility."
+    }
+  ],
+  "prospects_count": 20,
+  "report_path": "/Users/miami2/zion.app/automation/reports/partner-prospects-2026-09-07.json"
+}

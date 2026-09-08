@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-09-07T22:22:47.435727+00:00",
+  "generated_by": "fresh-lead-refill-v2",
+  "total_leads": 2,
+  "leads": [
+    {
+      "empresa": "Xovak Studio",
+      "email": "hello@xovakstudio.com",
+      "site": "https://xovakstudio.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Top white-label agency partner for 2026. Offers custom web/enterprise software. Could be partner for Zion to provide AI/QA services under their brand, or client needing AI capabilities they don't have",
+      "fonte": "outreach-pipeline",
+      "tipo": "agency_usa",
+      "prioridade": "alta",
+      "contato_proventivo": "hello@xovakstudio.com",
+      "created_at": "2026-09-07T22:22:47.434234+00:00"
+    },
+    {
+      "empresa": "Entech (Cloud Migration for Mid-Sized Firms)",
+      "email": "info@entechus.com",
+      "site": "https://www.entechus.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Cloud migration services for mid-sized firms. Florida-focused. Mid-market = Zion's sweet spot. Could be competitive intel or partnership opportunity depending on service overlap.",
+      "fonte": "outreach-pipeline",
+      "tipo": "company_usa",
+      "prioridade": "alta",
+      "contato_proventivo": "info@entechus.com",
+      "created_at": "2026-09-07T22:22:47.434874+00:00"
+    }
+  ]
+}

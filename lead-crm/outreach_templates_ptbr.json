@@ -1,0 +1,27 @@
+{
+  "templates": {
+    "primary_subjects": [
+      "Redução de custos cloud + IA e automação para [empresa]",
+      "Avaliação de cibersegurança e automação com IA — Zion Tech Group",
+      "Oportunidade: FinOps, IA e cibersegurança para [empresa]"
+    ],
+    "followup_1_subjects": [
+      "Re: Redução de custos e automação — Zion Tech Group",
+      "Re: Avaliação de cibersegurança — Zion Tech Group",
+      "Re: Oportunidade em FinOps e IA — Zion Tech Group"
+    ],
+    "followup_2_subjects": [
+      "Última tentativa: redução de custos e segurança — Zion Tech Group",
+      "Fechando o loop: cibersegurança e IA — Zion Tech Group",
+      "Última chance: cases e ferramentas gratuitas — Zion Tech Group"
+    ],
+    "followup_1_bodies": [
+      "Olá! Só para não perder o contato.\n\nSomos a Zion Tech Group e ajudamos empresas como a [empresa] a reduzir custos operacionais com Cloud Cost Optimization, AI Automation e Cybersecurity Assessment.\n\nAgende 15min: https://calendly.com/kleber-ziontechgroup",
+      "Olá! Retomando o contato por aqui.\n\nA Zion Tech Group entrega resultados práticos em FinOps, automação com IA e avaliação de cibersegurança.\n\nQuer conversar 15min? https://calendly.com/kleber-ziontechgroup"
+    ],
+    "followup_2_bodies": [
+      "Olá!\n\nDuas mensagens sem resposta. Entendo que está ocupado.\n\nSe quiser conhecer nossas ferramentas gratuitas e cases em Cloud Cost Optimization, AI Automation e Cybersecurity Assessment: https://ziontechgroup.com\n\nAbraço,\nKleber",
+      "Olá!\n\nEsta é a última tentativa deste ciclo.\n\nSe fizer sentido em algum momento, aqui vai o link com cases e ferramentas gratuitas: https://ziontechgroup.com\n\nAbraço,\nKleber"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "total_redirect_routes": 93,
+  "total_sitemap_urls": 7558,
+  "missing_pages_count": 14,
+  "duplicate_sitemap_entries": 199,
+  "top_missing": [
+    "/industries/",
+    "/free-tools-hub/",
+    "/consultation/",
+    "/status/",
+    "/configurator/",
+    "/dashboard/",
+    "/docs/",
+    "/services/cloud/",
+    "/services/security/",
+    "/services/data/"
+  ],
+  "report_path": "/Users/miami2/zion.app/automation/reports/seo-audit-2026-09-07.json",
+  "recommended_fixes": [
+    {
+      "route": "/industries/",
+      "recommendation": "Add /industries/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/free-tools-hub/",
+      "recommendation": "Add /free-tools-hub/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/consultation/",
+      "recommendation": "Add /consultation/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/status/",
+      "recommendation": "Add /status/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/configurator/",
+      "recommendation": "Add /configurator/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/dashboard/",
+      "recommendation": "Add /dashboard/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/docs/",
+      "recommendation": "Add /docs/index.html or update sitemap to remove this entry."
+    },
+    {
+      "route": "/services/cloud/",
+      "recommendation": "Create /services/cloud/index.html or remove redirect from _redirects."
+    },
+    {
+      "route": "/services/security/",
+      "recommendation": "Create /services/security/index.html or remove redirect from _redirects."
+    },
+    {
+      "route": "/services/data/",
+      "recommendation": "Create /services/data/index.html or remove redirect from _redirects."
+    }
+  ]
+}

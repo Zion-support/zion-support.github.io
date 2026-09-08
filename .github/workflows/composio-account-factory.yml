@@ -1,0 +1,19 @@
+name: Composio Account Factory
+on:
+  workflow_dispatch:
+
+jobs:
+  factory:
+    if: false
+    runs-on: ubuntu-latest
+    env:
+      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+      USER_EMAIL: kleber@ziontechgroup.com
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Guard
+        run: |
+          echo "Account factory is disabled. Do not remint Composio Connect Links from CI."
+          exit 1

@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "total_crawled": 600,
+    "http_200": 600,
+    "broken_count": 0,
+    "redirect_count": 0,
+    "elapsed_s": 98.12
+  },
+  "broken": [],
+  "redirects": []
+}
