@@ -1,79 +1,73 @@
-# Zion Tech Group — Memory & Status
+# MEMORY — Zion Tech Group
 
-## Última atualização: 2026-09-05T21:40 UTC (18:40 BRT)
+## CEO
+- **Kleber Garcia Alcatrão** — CEO e Fundador
+- Email: kleber@ziontechgroup.com
+- Site: ziontechgroup.com
+- Plataforma: Termux/Android + Hermes Agent
 
-- **CEO**: Kleber Garcia Alcatrão
-- **Empresa**: Zion Tech Group
-- **E-mail**: kleber@ziontechgroup.com
-- **Telefone**: +1 302 464 0950
-- **Timezone operacional**: America/Sao_Paulo (Calendly account TZ America/New_York)
-- **Site**: https://ziontechgroup.com
-- **Endereço**: 364 E Main St STE 1008, Middletown, DE 19709
-- **GitHub**: Zion-support
-- **Notion memory**: https://app.notion.com/p/3d2b94b0eaf7819daf03e8a7a737a73a
-- **Calendly Discovery**: https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1
+## Status do Site (2026-09-04)
 
-## Ofertas
+### Rotas Online (HTTP 200)
+- /services/
+- /tools/
+- /integrations/composio/
+- /contact/
+- /new-ai-services/
+- /stripe/
+- /search/
+- /terms/
+- /status-page/
+- /sitemap.xml
+- /privacy-policy/
 
-- Discovery $99 → /discovery/ /book/
-- Consulting $499 → /booking/
-- Starter $2,500 → /plans/
-- Growth $8,000/mo → /plans/
-- WhatsApp comercial: https://wa.me/13024640950
-- Indicações: https://ziontechgroup.com/indique/
+### Rotas Instáveis (HTTP 000 — timeout/DNS)
+- /blog/
+- /about/
+- /faq/
+- /solutions/
+- /pricing/
+- /use-cases/
+- /products/
+- /proposal/
+- /ai/
+- /docs/
+- /robots.txt
+- /monetization-hub/
 
-## Conversão agora
+### Rotas com 404 (criadas em public/, pendente deploy)
+- /industry/
+- /solutions/government/
+- /trust/
+- /zion-composio-automation-stack/
+- /whatsapp-business-automation/
 
-- Stripe livemode (3 contas Ziontechgroup): 0 charges recentes
-- Calendly 05–19/09: 0 eventos ativos
-- HubSpot Kenlo deal 64709043508 stage contractsent — NÃO alterar amount, NÃO e-mail Nicolas neste fim de semana
-- Segunda P0: portal https://www.kenlo.com.br/integre-conosco
-- Segunda P1: primeiro Discovery pago / primeiro Calendly booked
-- Encaminhar /indique/ para 3 conhecidos (MSP, imobiliária, clínica)
+## Git State
+- HEAD local: d647c20c43d42dbf7cbac05e0e44c2ddf8fa3d4c
+- HEAD remoto: f3e134ca17e7e97a52110786f17b5d613bad943b
+- Local está 140 commits à frente do remoto
+- Push bloqueado: non-fast-forward + regras do repositório
+- Conflitos: 0 após abort do rebase
+- Páginas 404 criadas em public/ (5 diretórios) — aguardam commit/push
 
-## Inbox (sábado 05/09)
+## Ficheiros Chave
+- cleber-ceo-profile.md: 616 bytes (memória/)
+- zion-ceo-status.md: 1928 bytes (home/)
+- tarefas.md: 1311 bytes (zion/)
+- tarefas-monetizacao.md: 1745 bytes (zion/)
+- MEMORY.md (repo): 1301 bytes (Zion-Tech-Group/)
 
-- Sem inbound humano comercial novo
-- Follow-ups já enviados hoje: Suzano (bounce Itaqui), PRODEMGE, Forplas, Cooper, CODERP, Zoomtech, DirecTV María Araceli
-- Draft interno: CEO playbook segunda (Kenlo + 3 indicações) — não enviar agora
-- Airbnb Letícia Bertioga 18–21 Dez: late checkout segunda 15:00 confirmado. Não reenviar. express@airbnb.com bounceia.
-- Cold / Hunter / Apollo / LinkedIn: paused. Hunter até 2026-09-23. Apollo HOLD.
-- OpenRouter: recarregar crédito ou worker Telegram fica mudo
+## Bloqueios Identificados
+1. **Git push**: force-push rejeitado por regras do repositório; o local está 140 commits à frente do remoto
+2. **Composio CLI**: não executa em Termux/Android (binário aarch64 presente mas falha com "cannot execute")
+3. **Site instável**: múltiplas rotas com HTTP 000 (timeout/DNS) — pode ser CDN propagation ou DNS
 
-## Linear vivo
+## Próximos Passos
+1. Resolver Git: usar estratégia pull+rebase sem stash (ou cherry-pick das páginas 404)
+2. Deploy das 5 páginas 404 criadas
+3. Resolver rotas com HTTP 000 (verificar DNS/CDN, aguardar propagação)
+4. Actualizar estado do Composio CLI
 
-- Done: ZIO-284 /book/
-- In Progress: ZIO-282 Grok automations, ZIO-283 CI hardening + rotate CF token
-- Urgent/High backlog: ZIO-285 /telegram/ (live 200 às 18:39 — confirmar cache), ZIO-280 industries 404s, ZIO-286 pricing/catalog JS, ZIO-287 Monday warm pipeline, ZIO-281 ASSEFAZ+Transportes RJ, ZIO-172 Nibo prazos
+---
 
-## Site live (curl ~18:39 BRT)
-
-- 200: `/` `/discovery/` `/book/` `/booking/` `/pricing/` `/contact/` `/contato/` `/about/` `/ai-agents/` `/diagnostico/` `/telegram/`
-- 404: `/whatsapp/` `/referral/`
-- Catalog health watchdog falhando. telegram-ai-reply-worker deploy falhou.
-
-## Calendário
-
-- Sáb 05: Nibo Pro Labore + Recibo 10:00 (passou). ASSEFAZ + Transportes RJ 16:30 (passou).
-- Dom 06 13:00: Deploy restore — fix industries 404s.
-- Ter 08 10:00: Nibo Resumo Folha.
-
-## Política
-
-- Sem cold send no fim de semana.
-- Sem segunda onda de follow-up de hardware agora.
-- Agent operacional pode SEND ack/cliente/Airbnb (cap 5/run). Nunca inventar preço/SLA/contrato/dados bancários.
-- Não misturar voz Airbnb com pitch Zion.
-- Não remintar Composio Connect Links.
-- Não reabrir fila outreach-ready.json.
-
-## Família / comercial
-
-- Carlos Alcatrão — carlos@ziontechgroup.com (comercial)
-- Ewerton Alcatrão — account manager
-
-## Repositório
-
-- CWD Termux: `/data/data/com.termux/files/home/ztg/repo`
-- Branch: `main`
-- gh-pages worktree: `/data/data/com.termux/files/home/ztg/gh-pages`
+*Actualizado automaticamente pelo Hermes Agent — 2026-09-04*
