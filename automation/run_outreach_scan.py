@@ -52,7 +52,7 @@ else:
             'date': parts[1],
             'from': parts[2],
             'subject': parts[3],
-            'labels': parts[4] if len(parts) > 4 else '',
+            'labels': parts[4] if len(parts) > 4 else ''
         })
 
 history = load_history()
