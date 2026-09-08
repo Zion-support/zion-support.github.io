@@ -1,0 +1,86 @@
+{
+  "exit_code": 0,
+  "broken_routes": [],
+  "results": [
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/pricing/",
+      "requested_url": "https://ziontechgroup.com/pricing/",
+      "title": "Preços e Serviços Premium | Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/pricing/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/contact/",
+      "requested_url": "https://ziontechgroup.com/contact/",
+      "title": "Contact | Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/contact/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/about/",
+      "requested_url": "https://ziontechgroup.com/about/",
+      "title": "About Zion Tech Group — 26 Years IT, Now AI — Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/about/index.html"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/services/",
+      "requested_url": "https://ziontechgroup.com/services/",
+      "title": "Serviços de IA e TI | Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/services/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/services/ai-agents-autonomous/",
+      "requested_url": "https://ziontechgroup.com/services/ai-agents-autonomous/",
+      "title": "Not a packaged SKU — AI Agents Autonomous · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/services/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/services/cloud-cost-optimization-service/",
+      "requested_url": "https://ziontechgroup.com/services/cloud-cost-optimization-service/",
+      "title": "Not a packaged SKU — Cloud Cost Optimization Service · Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/services/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/blog/",
+      "requested_url": "https://ziontechgroup.com/blog/",
+      "title": "Blog — Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/blog/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/partners/",
+      "requested_url": "https://ziontechgroup.com/partners/",
+      "title": "Partners | Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/partners/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/careers/",
+      "requested_url": "https://ziontechgroup.com/careers/",
+      "title": "Careers | Zion Tech Group",
+      "canonical": "https://ziontechgroup.com/careers/"
+    },
+    {
+      "section": "PRIMARY",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/",
+      "requested_url": "https://ziontechgroup.com/",
+      "title": "Zion Tech Group | Advanced AI Services & IT Solutions",
+      "canonical": "https://ziontechgroup.com/"
+    }
+  ]
+}
