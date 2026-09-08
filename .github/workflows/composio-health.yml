@@ -2,31 +2,43 @@ name: Composio Health & Credentials Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *'
-
-concurrency:
-  group: composio-health
-  cancel-in-progress: true
+    - cron: '*/30 * * * *'
+  push:
+    paths:
+      - '.github/workflows/composio-health.yml'
+    branches:
+      - main
 
 jobs:
   health-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     env:
       COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Install Composio CLI
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Composio
+        run: npm install -g composio
+
+      - name: Composio Whoami
+        run: composio whoami
+
+      - name: List Connected Accounts
+        run: composio connections list
+
+      - name: List Toolkits (1Password focus)
+        run: composio tools list _1password 2>/dev/null || echo "1Password tools not available"
+
+      - name: 1Password List Vaults
+        run: composio execute _1PASSWORD_LIST_VAULTS -d '{}' || echo "1Password vault listing failed"
+
+      - name: Summary
         run: |
-          curl -fsSL https://composio.dev/install | bash
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-      - run: composio whoami 2>&1 || echo "WHOAMI_FAILED"
-
-      - name: List Connections
-        run: |
-          echo "=== Connections ==="
-          composio connections list 2>&1
-
-      - run: echo "Done $(date -u)"
+          echo "Composio health check completed at $(date -u)"
+          echo "Key set: $([ -n "$COMPOSIO_API_KEY" ] && echo 'yes' || echo 'no')"

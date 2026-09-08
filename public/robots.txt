@@ -1,8 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /private/
-Disallow: /success-stories/
+Disallow: /_redirects
 
-Sitemap: https://ziontechgroup.com/sitemap-0.xml
-Sitemap: https://ziontechgroup.com/sitemap-money.xml
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
