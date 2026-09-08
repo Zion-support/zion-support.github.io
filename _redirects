@@ -5,6 +5,7 @@
 /ai-observability-2026-6565/ /services/?category=ai 301
 /ai-resources /docs/ai-resources/index.html 200
 /ai-resources/ /docs/ai-resources/index.html 200
+/admin-dashboard/ /dashboard/ 301
 /ai-roi-calculator /docs/ai-roi-calculator/index.html 200
 /ai-roi-calculator/ /docs/ai-roi-calculator/index.html 200
 /ai-services-index /services/ 301
@@ -142,6 +143,7 @@
 /service-areas /docs/service-areas/index.html 200
 /service-areas/ /docs/service-areas/index.html 200
 /service-discovery /service-discovery/index.html 200
+/services/cloud/ /services/cloud-edge-computing/index.html 301
 /services /services/ 301
 /services /services/index.html 200
 /services/ /services/index.html 200
