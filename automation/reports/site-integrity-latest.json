@@ -6,7 +6,8 @@
     "redirect_count": 7,
     "elapsed_s": 0,
     "script": "automation/check_routes.py",
-    "timestamp": "2026-09-08T01:55:00-03:00"
+    "timestamp": "2026-09-08T01:55:00-03:00",
+    "probe_timestamp": "2026-09-08T11:06:53.667725+00:00"
   },
   "broken": [],
   "redirects": [
@@ -17,5 +18,82 @@
     "https://ziontechgroup.com/industries/financial-services",
     "https://ziontechgroup.com/free-consultation",
     "https://ziontechgroup.com/tools/phishing-analyzer"
+  ],
+  "latest_probe": [
+    {
+      "path": "/",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/"
+    },
+    {
+      "path": "/about",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/about/"
+    },
+    {
+      "path": "/services",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/services/"
+    },
+    {
+      "path": "/solutions",
+      "status_code": 200,
+      "final_url": "https://ziontechgroup.com/solutions"
+    },
+    {
+      "path": "/industries",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/industries/"
+    },
+    {
+      "path": "/free-consultation",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/free-consultation/"
+    },
+    {
+      "path": "/status-page",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/status-page/"
+    },
+    {
+      "path": "/public-roadmap",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/public-roadmap/"
+    },
+    {
+      "path": "/tools/phishing-analyzer",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/tools/phishing-analyzer/"
+    },
+    {
+      "path": "/contact",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/contact/"
+    },
+    {
+      "path": "/careers",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/careers/"
+    },
+    {
+      "path": "/blog",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/blog/"
+    },
+    {
+      "path": "/case-studies",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/case-studies/"
+    },
+    {
+      "path": "/privacy-policy",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/privacy-policy/"
+    },
+    {
+      "path": "/terms",
+      "status_code": 301,
+      "final_url": "https://ziontechgroup.com/terms/"
+    }
   ]
 }
