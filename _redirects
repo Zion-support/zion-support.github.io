@@ -24,3 +24,6 @@
 
 # pt-BR canonical redirect (fixes 404)
 /pt-BR/*	/pt-BR/:splat	200
+
+/blog/how-much-does-ai-consultant-cost-2026/  /blog/how-much-does-ai-consultant-cost-2026/index.html  200
+/blog/how-much-does-ai-consultant-cost-2026 /blog/how-much-does-ai-consultant-cost-2026/index.html 200
