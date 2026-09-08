@@ -1,0 +1,16 @@
+{
+  "run_id": "fbce6b60",
+  "ts": "2026-09-08T10:44:29.200744+00:00",
+  "status": "ok",
+  "exit_code": 0,
+  "command": "python3 autonomous_growth_loop.py",
+  "leads_processed": 66,
+  "already_sent": 64,
+  "no_email": 2,
+  "skipped_total": 66,
+  "send_log_total": 1519,
+  "send_succeeded": 1514,
+  "send_failed": 5,
+  "send_attempted": 1519,
+  "last_send_ts": "2026-09-06T06:55:19.966962+00:00"
+}
