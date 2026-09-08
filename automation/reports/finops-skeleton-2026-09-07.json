@@ -1,0 +1,70 @@
+{
+  "assumptions": [
+    "Baseline cloud spend is estimated between $5,000 and $50,000/month based on typical SMB to mid-market profiles.",
+    "Savings are derived from rightsizing compute, reserved instance/commitment planning, storage tiering, and idle resource cleanup.",
+    "Zion Tech Group services align with existing pricing tiers: Discovery ($99), Consulting ($499), Starter ($2,500/mo), and Growth ($8,000/mo).",
+    "FinOps automation assumes 1-2 full-time equivalents for the first 90 days, supplemented by consulting sprints.",
+    "Savings are realized gradually: quick wins in days 1-30, structural optimizations in days 31-60, and governance automation in days 61-90.",
+    "Cloud provider APIs and tagging standards are assumed to be accessible; no vendor contract renegotiations are included in the model.",
+    "Savings percentages are industry-aligned and not vendor-specific: low 10%, mid 20%, high 35% of monthly cloud spend."
+  ],
+  "scenarios": {
+    "low": {
+      "monthly_cloud_spend_usd": 8000,
+      "monthly_savings_percent": 10,
+      "monthly_savings_usd": 800,
+      "monthly_finops_cost_usd": 2500,
+      "net_monthly_impact_usd": -1700,
+      "payback_months": 3,
+      "notes": "Assumes Starter-tier engagement with limited automation coverage and manual governance cadence."
+    },
+    "mid": {
+      "monthly_cloud_spend_usd": 20000,
+      "monthly_savings_percent": 20,
+      "monthly_savings_usd": 4000,
+      "monthly_finops_cost_usd": 5000,
+      "net_monthly_impact_usd": -1000,
+      "payback_months": 2,
+      "notes": "Assumes Consulting plus partial automation. Governance cadence weekly. Mixed reserved instance coverage."
+    },
+    "high": {
+      "monthly_cloud_spend_usd": 45000,
+      "monthly_savings_percent": 35,
+      "monthly_savings_usd": 15750,
+      "monthly_finops_cost_usd": 8000,
+      "net_monthly_impact_usd": 7750,
+      "payback_months": 0.6,
+      "notes": "Assumes Growth-tier engagement with full automation, continuous optimization, and multi-cloud chargeback reporting."
+    }
+  },
+  "plan_30_60_90": {
+    "days_1_30": {
+      "focus": "Discovery and quick wins",
+      "activities": [
+        "Run Discovery engagement ($99) to map cloud accounts, tags, billing exports, and top spend services.",
+        "Identify idle/unused resources and apply immediate decommission or pause policies.",
+        "Establish baseline dashboards and tagging standards.",
+        "Deliver initial right-sizing recommendations for the top 20% of cost drivers."
+      ]
+    },
+    "days_31_60": {
+      "focus": "Structural optimization",
+      "activities": [
+        "Execute Consulting roadmap ($499) to validate savings model and prioritize workloads.",
+        "Implement reserved instance / savings plan coverage for steady-state workloads.",
+        "Automate storage tiering and lifecycle policies.",
+        "Introduce budget alerts, anomaly detection, and weekly FinOps review cadence."
+      ]
+    },
+    "days_61_90": {
+      "focus": "Governance automation and scaling",
+      "activities": [
+        "Transition to Starter or Growth-tier automation ($2,500-$8,000/mo) for continuous rightsizing and forecasting.",
+        "Deploy chargeback/showback reports and integrate with internal finance workflows.",
+        "Train internal teams on FinOps policies and define escalation paths.",
+        "Re-measure savings and iterate on optimization backlog for next quarter."
+      ]
+    }
+  },
+  "report_path": "/Users/miami2/zion.app/automation/reports/finops-skeleton-2026-09-07.json"
+}

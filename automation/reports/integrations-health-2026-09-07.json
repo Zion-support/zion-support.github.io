@@ -1,0 +1,12 @@
+{
+  "dry_run_ok": true,
+  "small_wave_blocked": true,
+  "cron_jobs_found": 13,
+  "report_path": "/Users/miami2/zion.app/automation/reports/integrations-health-2026-09-07.json",
+  "enable_commands": [
+    "ZION_SEND_ADAPTER=1 ZION_SEND_ADAPTER_TRIGGER=manual python3 /Users/miami2/zion.app/automation/send_cold_outreach_v2.py",
+    "ZION_SEND_ADAPTER=1 LIVE_SEND_ALLOW_SEND=1 python3 /Users/miami2/zion.app/automation/send_cold_outreach_v2.py",
+    "ZTG_SEND_ALLOWED=1 ZTG_SEND_COUNT=1 python3 /Users/miami2/zion.app/lead-crm/_small_wave_send_run.py",
+    "SEND_DRY_RUN=1 ZTG_SEND_ALLOWED=1 ZTG_SEND_COUNT=1 python3 /Users/miami2/zion.app/lead-crm/_small_wave_send_run.py"
+  ]
+}
