@@ -18,3 +18,12 @@
 /integrations/composio/    /integrations/composio/index.html  200
 /solutions/government/     /solutions/government/index.html  200
 /whatsapp-business-automation/ /whatsapp-business-automation/index.html  200
+# Blog posts from zion-tech-group (Sep 2026)
+/blog/hermes-agent-introducao/	/blog/hermes-agent-introducao/index.html	200
+/blog/zephyr-solar-esclarecimento/	/blog/zephyr-solar-esclarecimento/index.html	200
+
+# pt-BR canonical redirect (fixes 404)
+/pt-BR/*	/pt-BR/:splat	200
+
+/blog/how-much-does-ai-consultant-cost-2026/  /blog/how-much-does-ai-consultant-cost-2026/index.html  200
+/blog/how-much-does-ai-consultant-cost-2026 /blog/how-much-does-ai-consultant-cost-2026/index.html 200
