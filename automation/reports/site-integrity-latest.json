@@ -1,11 +1,21 @@
 {
   "summary": {
-    "total_crawled": 11,
-    "http_200": 11,
+    "total_crawled": 8,
+    "http_200": 8,
     "broken_count": 0,
-    "redirect_count": 0,
-    "elapsed_s": 0
+    "redirect_count": 7,
+    "elapsed_s": 0,
+    "script": "automation/check_routes.py",
+    "timestamp": "2026-09-08T01:55:00-03:00"
   },
   "broken": [],
-  "redirects": []
+  "redirects": [
+    "https://ziontechgroup.com/public-roadmap",
+    "https://ziontechgroup.com/status-page",
+    "https://ziontechgroup.com/use-cases",
+    "https://ziontechgroup.com/solutions/healthcare",
+    "https://ziontechgroup.com/industries/financial-services",
+    "https://ziontechgroup.com/free-consultation",
+    "https://ziontechgroup.com/tools/phishing-analyzer"
+  ]
 }

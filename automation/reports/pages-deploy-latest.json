@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-09-08T00:00:00Z",
+  "status": "push_failed",
+  "error": "Updates were rejected because the remote contains work that you do not have locally. Non-fast-forward.",
+  "commit_sha": "3d5d6845975",
+  "dirty_files_count": 3,
+  "recommended_action": "Integrar mudanças remotas antes de enviar: execute git pull --rebase origin main e depois git push origin main."
+}
