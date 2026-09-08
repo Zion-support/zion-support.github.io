@@ -33,6 +33,9 @@
   <url><loc>https://ziontechgroup.com/enterprise/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://ziontechgroup.com/consulting/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://ziontechgroup.com/discovery/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/growth/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/composio/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/free-audit/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ziontechgroup.com/managed-it-services/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://ziontechgroup.com/it-consulting/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://ziontechgroup.com/services/growth-services/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
