@@ -857,3 +857,9 @@
 /use-cases /use-cases/ 301
 /use-cases/ /use-cases/index.html 200
 /workflows/deploy.yml/ai-lab /ai-lab/index.html 200
+
+# Growth wave 1 — new pages
+/services/growth-services/  /services/growth-services/index.html  200
+/services/composio-automation/  /services/composio-automation/index.html  200
+/free-audit/  /free-audit/index.html  200
+/ai-consulting-services/  /ai-consulting-services/index.html  200

@@ -7196,6 +7196,7 @@
 <url><loc>https://ziontechgroup.com/fintech-it-ai/</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/healthcare-it-hipaa/</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/managed-it-services/</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<<<<<<< HEAD
 <url><loc>https://ziontechgroup.com/blog/accessibility-compliance-2026-6803/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/agentes-telegram-para-empresas/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-3d-asset-generator-2026-9202/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
@@ -7364,4 +7365,7 @@
 <url><loc>https://ziontechgroup.com/blog/responsible-ai-production-data-governance-checklist-enterprises/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/managed-it-pricing-startups-smbs-latam-co-managed-vs-msp/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/blog/green-it-sustentabilidade-reduzindo-custo-carbono-data-centers/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+=======
+<url><loc>https://ziontechgroup.com/growth/</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+>>>>>>> f039ba6e0 (fix: restore /growth/ page content and add to sitemap)
 </urlset>
