@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "locale": "pt-BR",
+    "source": "automation/reports/outreach-template-audit-2026-09-07.json",
+    "fixes_applied": [
+      "P0 | Added primary_bodies to all templates",
+      "P0 | Added missing follow-up variants covering all primary subjects",
+      "P1 | Rewrote near-duplicate subjects to improve diversity and reduce similarity",
+      "P2 | Expanded service coverage with Cybersecurity Assessment and FinOps angles",
+      "P2 | Added persona-specific follow-up variants for enterprise/smb/startup"
+    ]
+  },
+  "outreach_templates": [
+    {
+      "id": "ptbr_01",
+      "service": "AI Automation",
+      "persona": "enterprise",
+      "subject": "Proposta de automação inteligente para {company}",
+      "primary_body": "Olá, time da {company}. Aqui é da Zion Tech Group. Queremos entender seus desafios de automação e ver onde IA pode gerar ganhos rápidos em eficiência e receita. Podemos conversar 15 minutos esta semana?",
+      "followup_1_body": "A {company} pode acelerar ganhos com IA se começarmos por um processo crítico com medição rigorosa. Queremos propor um piloto enterprise com governança, saving targets e segurança. Podemos detalhar em 30 minutos?",
+      "followup_2_body": "A {company} não precisa de um projeto longo para ver valor. Podemos rodar um piloto curto, com métricas e governance mínimos. Queremos enviar um plano estruturado?"
+    },
+    {
+      "id": "ptbr_02",
+      "service": "AI Automation",
+      "persona": "smb",
+      "subject": "Vamos escalar {company} com IA aplicada",
+      "primary_body": "A {company} pode ganhar escala reduzindo trabalho repetitivo com automação inteligente. Vamos apresentar um diagnóstico rápido sem custo. Podemos agendar uma breve chamada?",
+      "followup_1_body": "Se a {company} priorizar um fluxo com alto retorno, a IA entrega economia rápida sem complexidade. Queremos sugerir um piloto simples e barato para validar ganho antes de expandir. Podemos conversar?",
+      "followup_2_body": "A {company} pode validar o retorno de IA com um experimento pequeno e barato. Queremos enviar um exemplo de fluxo automatizado adaptado ao seu segmento?"
+    },
+    {
+      "id": "ptbr_03",
+      "service": "AI Automation",
+      "persona": "startup",
+      "subject": "Automação com IA: caso para {company}",
+      "primary_body": "Olá, identificamos que {company} tem potencial para aplicar IA em processos operacionais. Queremos propor um experimento rápido com resultado mensurável. Abro 20 minutos para alinhar.",
+      "followup_1_body": "Para a {company}, automação com IA pode aumentar velocidade sem aumentar custo fixo. Queremos propor um experimento leve com métrica clara para escala. Abro 20 minutos para alinhar.",
+      "followup_2_body": "A {company} pode testar um fluxo automatizado em poucos dias, sem investimento pesado. Queremos propor um experimento prático e compartilhar métricas de sucesso?"
+    },
+    {
+      "id": "ptbr_04",
+      "service": "AI Automation",
+      "persona": "enterprise",
+      "subject": "IA aplicada para operações de {company}",
+      "primary_body": "A automação com IA pode transformar gargalos da {company} em vantagem competitiva. Queremos trocar 15 minutos para desenhar um piloto prático e sem risco.",
+      "followup_1_body": "A {company} pode acelerar ganhos com IA se começarmos por um processo crítico com medição rigorosa. Queremos propor um piloto enterprise com governança, saving targets e segurança. Podemos detalhar em 30 minutos?",
+      "followup_2_body": "A {company} não precisa de um projeto longo para ver valor. Podemos rodar um piloto curto, com métricas e governance mínimos. Queremos enviar um plano estruturado?"
+    },
+    {
+      "id": "ptbr_05",
+      "service": "AI Automation",
+      "persona": "smb",
+      "subject": "Eficiência operacional com IA para {company}",
+      "primary_body": "IA generativa pode acelerar respostas da {company} sem aumentar headcount. Queremos mostrar um caso aplicado ao seu segmento. Podemos conversar?",
+      "followup_1_body": "Se a {company} priorizar um fluxo com alto retorno, a IA entrega economia rápida sem complexidade. Queremos sugerir um piloto simples e barato para validar ganho antes de expandir. Podemos conversar?",
+      "followup_2_body": "A {company} pode validar o retorno de IA com um experimento pequeno e barato. Queremos enviar um exemplo de fluxo automatizado adaptado ao seu segmento?"
+    },
+    {
+      "id": "ptbr_06",
+      "service": "AI Automation",
+      "persona": "startup",
+      "subject": "FinOps, IA e cibersegurança — sinergia para {company}",
+      "primary_body": "Além de IA, enxergamos oportunidade de reduzir custos cloud e risco cibernético na {company}. Queremos propor um pacote FinOps + cibersegurança com início rápido. Podemos alinhar?",
+      "followup_1_body": "Para a {company}, automação com IA pode aumentar velocidade sem aumentar custo fixo. Queremos propor um experimento leve com métrica clara para escala. Abro 20 minutos para alinhar.",
+      "followup_2_body": "A {company} pode testar um fluxo automatizado em poucos dias, sem investimento pesado. Queremos propor um experimento prático e compartilhar métricas de sucesso?"
+    },
+    {
+      "id": "ptbr_07",
+      "service": "AI Automation",
+      "persona": "enterprise",
+      "subject": "Redução de custos cloud e risco para {company}",
+      "primary_body": "A {company} pode reduzir desperdício em cloud com FinOps e ganhar previsibilidade de custo. Queremos apresentar um diagnóstico rápido de 20 minutos.",
+      "followup_1_body": "A {company} pode ganhar tração mais rápido se priorizarmos um processo de alto impacto para automação com IA. Queremos sugerir um piloto rápido com medição. Podemos alinhar?",
+      "followup_2_body": "A {company} pode avançar sem arriscado investimento inicial. Queremos compartilhar um plano simples e rápido para gerar ganhos mensuráveis em até 4 semanas."
+    },
+    {
+      "id": "ptbr_08",
+      "service": "AI Automation",
+      "persona": "smb",
+      "subject": "Cybersecurity Assessment para {company}",
+      "primary_body": "Queremos propor à {company} um Cybersecurity Assessment com foco em riscos reais do seu negócio, não checklist genérico. Podemos iniciar uma avaliação rápida?",
+      "followup_1_body": "A {company} pode ganhar tração mais rápido se priorizarmos um processo de alto impacto para automação com IA. Queremos sugerir um piloto rápido com medição. Podemos alinhar?",
+      "followup_2_body": "A {company} pode avançar sem arriscado investimento inicial. Queremos compartilhar um plano simples e rápido para gerar ganhos mensuráveis em até 4 semanas."
+    },
+    {
+      "id": "ptbr_09",
+      "service": "AI Automation",
+      "persona": "startup",
+      "subject": "IA generativa para operações de {company}",
+      "primary_body": "A {company} pode capturar valor com IA generativa em atendimento, vendas ou operações. Vamos sugerir um piloto direcionado ao seu modelo de negócio.",
+      "followup_1_body": "A {company} pode ganhar tração mais rápido se priorizarmos um processo de alto impacto para automação com IA. Queremos sugerir um piloto rápido com medição. Podemos alinhar?",
+      "followup_2_body": "A {company} pode avançar sem arriscado investimento inicial. Queremos compartilhar um plano simples e rápido para gerar ganhos mensuráveis em até 4 semanas."
+    },
+    {
+      "id": "ptbr_10",
+      "service": "Cybersecurity Assessment",
+      "persona": "enterprise",
+      "subject": "Avaliação de maturidade em cibersegurança para {company}",
+      "primary_body": "Vamos fazer uma avaliação de maturidade em cibersegurança para a {company}, com plano prático de prioridades e mitigação de risco. Podemos agendar?",
+      "followup_1_body": "A {company} pode ganhar tração mais rápido se priorizarmos um processo de alto impacto para automação com IA. Queremos sugerir um piloto rápido com medição. Podemos alinhar?",
+      "followup_2_body": "A {company} pode avançar sem arriscado investimento inicial. Queremos compartilhar um plano simples e rápido para gerar ganhos mensuráveis em até 4 semanas."
+    },
+    {
+      "id": "ptbr_11",
+      "service": "FinOps",
+      "persona": "smb",
+      "subject": "Otimização financeira de cloud para {company}",
+      "primary_body": "A {company} pode ganhar controle financeiro sobre cloud com FinOps estruturado. Queremos propor um plano rápido com saving targets claros. Abro 30 minutos para detalhar.",
+      "followup_1_body": "A {company} pode ganhar tração mais rápido se priorizarmos um processo de alto impacto para automação com IA. Queremos sugerir um piloto rápido com medição. Podemos alinhar?",
+      "followup_2_body": "A {company} pode avançar sem arriscado investimento inicial. Queremos compartilhar um plano simples e rápido para gerar ganhos mensuráveis em até 4 semanas."
+    },
+    {
+      "id": "ptbr_12",
+      "service": "Cybersecurity Assessment",
+      "persona": "startup",
+      "subject": "Playbook de IA e automação para {company}",
+      "primary_body": "Queremos compartilhar um playbook de IA e automação aplicado ao mercado da {company}, com exemplos práticos e casos comparáveis. Podemos enviar e seguir com dúvidas?",
+      "followup_1_body": "A {company} pode ganhar tração mais rápido se priorizarmos um processo de alto impacto para automação com IA. Queremos sugerir um piloto rápido com medição. Podemos alinhar?",
+      "followup_2_body": "A {company} pode avançar sem arriscado investimento inicial. Queremos compartilhar um plano simples e rápido para gerar ganhos mensuráveis em até 4 semanas."
+    }
+  ]
+}
