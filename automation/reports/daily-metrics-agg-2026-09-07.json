@@ -1,0 +1,180 @@
+{
+  "date": "2026-09-07",
+  "generated_at": "2026-09-09T23:17:19.758238Z",
+  "kpi": {
+    "generated_at": "2026-09-07",
+    "total_leads": 75,
+    "with_email_pct": 74.67,
+    "unique_domains": 75,
+    "already_sent_count": 56,
+    "queue_remaining": 19,
+    "queue_health_pct": 25.33,
+    "avg_score": 89.32
+  },
+  "metrics": {
+    "metrics_path": "/Users/miami2/zion.app/automation/reports/daily-metrics-2026-09-07.json",
+    "site_coverage_pct": 74.67,
+    "outreach_readiness": "ready-blocked",
+    "actions": [
+      "Enable the live send adapter using one of the documented enable_commands to unblock outreach.",
+      "Verify sender account health and provider quota once the send path is enabled.",
+      "Refresh integrations-health after enable to confirm small_wave_blocked clears."
+    ]
+  },
+  "integrations": {
+    "dry_run_ok": true,
+    "small_wave_blocked": true,
+    "cron_jobs_found": 13,
+    "report_path": "/Users/miami2/zion.app/automation/reports/integrations-health-2026-09-07.json",
+    "enable_commands": [
+      "ZION_SEND_ADAPTER=1 ZION_SEND_ADAPTER_TRIGGER=manual python3 /Users/miami2/zion.app/automation/send_cold_outreach_v2.py",
+      "ZION_SEND_ADAPTER=1 LIVE_SEND_ALLOW_SEND=1 python3 /Users/miami2/zion.app/automation/send_cold_outreach_v2.py",
+      "ZTG_SEND_ALLOWED=1 ZTG_SEND_COUNT=1 python3 /Users/miami2/zion.app/lead-crm/_small_wave_send_run.py",
+      "SEND_DRY_RUN=1 ZTG_SEND_ALLOWED=1 ZTG_SEND_COUNT=1 python3 /Users/miami2/zion.app/lead-crm/_small_wave_send_run.py"
+    ]
+  },
+  "security": {
+    "audit_date": "2026-09-07",
+    "domain": "ziontechgroup.com",
+    "headers_ok": false,
+    "https_enforced": true,
+    "secret_files_found": 0,
+    "robots_exposed": true,
+    "sitemap_exposed": true,
+    "tls_ok": true,
+    "report_path": "/Users/miami2/zion.app/automation/reports/security-audit-2026-09-07.json",
+    "details": {
+      "headers": {
+        "/": {
+          "hsts": "max-age=31556952",
+          "missing": [
+            "X-Content-Type-Options",
+            "X-Frame-Options",
+            "Content-Security-Policy",
+            "Referrer-Policy",
+            "Permissions-Policy"
+          ]
+        },
+        "/services/": {
+          "hsts": "max-age=31556952",
+          "missing": [
+            "X-Content-Type-Options",
+            "X-Frame-Options",
+            "Content-Security-Policy",
+            "Referrer-Policy",
+            "Permissions-Policy"
+          ]
+        },
+        "/contact/": {
+          "hsts": "max-age=31556952",
+          "missing": [
+            "X-Content-Type-Options",
+            "X-Frame-Options",
+            "Content-Security-Policy",
+            "Referrer-Policy",
+            "Permissions-Policy"
+          ]
+        }
+      },
+      "https_enforcement": {
+        "http_redirect": "301 Moved Permanently to https://ziontechgroup.com/",
+        "http_robots_redirect": "301 to https://ziontechgroup.com/robots.txt",
+        "http_sitemap_redirect": "301 to https://ziontechgroup.com/sitemap.xml",
+        "all_pages_served_over_https": true
+      },
+      "secrets_scan": {
+        "secret_files_found": 0,
+        "scanned_paths": [
+          "/Users/miami2/zion.app"
+        ],
+        "patterns_checked": [
+          ".env",
+          "*.pem",
+          "*.key",
+          "*.p12",
+          "*.pfx",
+          "*.secret"
+        ],
+        "notes": "Files with 'password', 'auth', 'token', 'secret' in names are documentation/workflow files, not actual secret containers."
+      },
+      "robots_txt": {
+        "exposed": true,
+        "url": "https://ziontechgroup.com/robots.txt",
+        "content_summary": "Allow: /, Disallow: /api/, /private/, /success-stories/; Sitemaps referenced"
+      },
+      "sitemap_xml": {
+        "exposed": true,
+        "url": "https://ziontechgroup.com/sitemap.xml",
+        "content_summary": "Standard XML sitemap with multiple URLs"
+      },
+      "tls_certificate": {
+        "subject": "CN=ziontechgroup.com",
+        "issuer": "C=US; O=Let's Encrypt; CN=YR1",
+        "expire_date": "Oct 12 00:26:21 2026 GMT",
+        "verification": "ok"
+      }
+    }
+  },
+  "seo": {
+    "total_redirect_routes": 93,
+    "total_sitemap_urls": 7558,
+    "missing_pages_count": 14,
+    "duplicate_sitemap_entries": 199,
+    "top_missing": [
+      "/industries/",
+      "/free-tools-hub/",
+      "/consultation/",
+      "/status/",
+      "/configurator/",
+      "/dashboard/",
+      "/docs/",
+      "/services/cloud/",
+      "/services/security/",
+      "/services/data/"
+    ],
+    "report_path": "/Users/miami2/zion.app/automation/reports/seo-audit-2026-09-07.json",
+    "recommended_fixes": [
+      {
+        "route": "/industries/",
+        "recommendation": "Add /industries/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/free-tools-hub/",
+        "recommendation": "Add /free-tools-hub/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/consultation/",
+        "recommendation": "Add /consultation/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/status/",
+        "recommendation": "Add /status/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/configurator/",
+        "recommendation": "Add /configurator/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/dashboard/",
+        "recommendation": "Add /dashboard/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/docs/",
+        "recommendation": "Add /docs/index.html or update sitemap to remove this entry."
+      },
+      {
+        "route": "/services/cloud/",
+        "recommendation": "Create /services/cloud/index.html or remove redirect from _redirects."
+      },
+      {
+        "route": "/services/security/",
+        "recommendation": "Create /services/security/index.html or remove redirect from _redirects."
+      },
+      {
+        "route": "/services/data/",
+        "recommendation": "Create /services/data/index.html or remove redirect from _redirects."
+      }
+    ]
+  },
+  "scored_leads": {}
+}
