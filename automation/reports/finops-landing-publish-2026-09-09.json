@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-09-09",
+  "source": "automation/reports/finops-content-brief-2026-09-07.json",
+  "output": "public/services/finops/index.html",
+  "headline": "FinOps para o mercado brasileiro: reduza custos de nuvem sem perder desempenho",
+  "sections": [
+    "Visibilidade financeira unificada por workload",
+    "Right-sizing e reservas comprovados para AWS, GCP e Azure",
+    "Governança de gastos com tagging e orçamento por time",
+    "Segurança e conformidade sem aumento de capex",
+    "ROI mensurável em 30, 60 e 90 dias",
+    "Modelo operacional contínuo em vez de consultoria pontual"
+  ],
+  "internal_links_used": [
+    "/services/",
+    "/services/cloud-services/",
+    "/services/ai-services/",
+    "/blog/",
+    "/discovery/",
+    "/contact/",
+    "/plans/"
+  ],
+  "json_ld_embedded": true,
+  "status": "created"
+}
