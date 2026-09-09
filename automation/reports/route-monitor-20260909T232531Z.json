@@ -1,0 +1,229 @@
+{
+  "generated_at": "2026-09-09T23:25:31Z",
+  "spec_name": "ZTG Static Site Monitoring Spec",
+  "spec_version": "2026-09-07",
+  "target": "Zion Tech Group static site",
+  "summary": {
+    "total_routes": 15,
+    "passed": 15,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "failures": [],
+  "results": [
+    {
+      "path": "/",
+      "url": "https://ziontechgroup.com/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 211.3,
+      "content_passed": [
+        "<title>",
+        "canonical"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/"
+    },
+    {
+      "path": "/about/",
+      "url": "https://ziontechgroup.com/about/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 186.6,
+      "content_passed": [
+        "<title>",
+        "h1"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/about/"
+    },
+    {
+      "path": "/services/",
+      "url": "https://ziontechgroup.com/services/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 183.7,
+      "content_passed": [
+        "<title>",
+        "canonical"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/services/"
+    },
+    {
+      "path": "/solutions/",
+      "url": "https://ziontechgroup.com/solutions/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 184.2,
+      "content_passed": [
+        "<title>",
+        "h1"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/solutions/"
+    },
+    {
+      "path": "/industries/",
+      "url": "https://ziontechgroup.com/industries/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 174.4,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/industries/"
+    },
+    {
+      "path": "/partners/",
+      "url": "https://ziontechgroup.com/partners/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 199.6,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/partners/"
+    },
+    {
+      "path": "/blog/",
+      "url": "https://ziontechgroup.com/blog/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 198.9,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/blog/"
+    },
+    {
+      "path": "/contact/",
+      "url": "https://ziontechgroup.com/contact/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 205.4,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/contact/"
+    },
+    {
+      "path": "/pricing/",
+      "url": "https://ziontechgroup.com/pricing/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 206.2,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/pricing/"
+    },
+    {
+      "path": "/careers/",
+      "url": "https://ziontechgroup.com/careers/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 189.4,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/careers/"
+    },
+    {
+      "path": "/privacy-policy/",
+      "url": "https://ziontechgroup.com/privacy-policy/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 171.4,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/privacy-policy/"
+    },
+    {
+      "path": "/terms/",
+      "url": "https://ziontechgroup.com/terms/",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 197.2,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/terms/"
+    },
+    {
+      "path": "/sitemap.xml",
+      "url": "https://ziontechgroup.com/sitemap.xml",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 234.2,
+      "content_passed": [
+        "<urlset"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/sitemap.xml"
+    },
+    {
+      "path": "/404.html",
+      "url": "https://ziontechgroup.com/404.html",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 194.1,
+      "content_passed": [
+        "<title>"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/404.html"
+    },
+    {
+      "path": "/robots.txt",
+      "url": "https://ziontechgroup.com/robots.txt",
+      "expect_status": 200,
+      "status": 200,
+      "response_time_ms": 194.1,
+      "content_passed": [
+        "User-agent"
+      ],
+      "content_failed": [],
+      "error": null,
+      "passed": true,
+      "final_url": "https://ziontechgroup.com/robots.txt"
+    }
+  ]
+}
