@@ -1,29 +1,6 @@
 {
   "digests": [
     {
-      "ts": "2026-09-07T00:56:27.441435Z",
-      "status": "active/working",
-      "metrics": {
-        "totalRuns": 708,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-07T01:27:59.585368Z",
-        "potentialClients": 0,
-        "reconciliationNote": "Freshness-only reconciliation: potentialClients corrected from stale 18 to live 0 (pool collapsed from 18 to 0 between 2026-09-07T00:35Z and 00:44Z as sampling variation/pool drying). All other canonical metrics match live log: totalRuns=708, sendsAttempted=0, duplicatesSuppressed=0, authFailures=0, hotFollowups=0, latestComplete=2026-09-07T01:27:59.585368Z, scanned=501. sendEnabled=false policy-lock prevents canonical sends. Verifier status-gate false positive (active/working).",
-        "reconciliationDate": "2026-09-07T12:51:00Z",
-        "recommendations": [
-          "Scanner FROM parsing bug FIXED: gog TSV is tab-delimited; FROM is parts[2], SUBJECT is parts[3]. extract_email() on FROM field now finds @ addresses for potential clients, enabling sends.",
-          "Gmail auth active; scan produced 18 potential clients from 501 scanned. Re-run expected to exercise send path after fix.",
-          "No LLM API keys configured; responses use deterministic template fallback.",
-          "Hot-followup label:!!!hot-follow-up returned no results; no CEO drafts generated.",
-          "sendEnabled=false policy-lock still prevents sends; enable to exercise dedupe pipeline."
-        ],
-        "scanned": 501
-      }
-    },
-    {
       "ts": "2026-09-07T18:54:54.752778+00:00",
       "status": "active/working",
       "metrics": {
@@ -35,224 +12,33 @@
         "latestComplete": "2026-09-07T01:27:59.585368Z",
         "potentialClients": 0,
         "scanned": 501,
-        "reconciliationNote": "Freshness-only reconciliation: latest digest metrics corrected to match live outreach-log.jsonl. Prior digest at 2026-09-07T18:54:54Z carried stale potentialClients=7, scanned=7, and a non-existent latestComplete=2026-09-07T18:54:54.752793+00:00 not present in the log. Live log shows 708 non-empty lines, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0, scanned=501. Pool dried 18->0 between 00:35Z and 00:44Z (sampling variation). sendEnabled=false policy-lock prevents all canonical sends. 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline. No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning.",
-        "reconciliationDate": "2026-09-07T20:33:00Z",
-        "recommendations": [
-          "sendEnabled=false is the sole blocker; enable to exercise canonical send path and cross-window dedupe.",
-          "No suppression window / prompt wording / scoring tuning warranted. Pool dried to 0 from 18 (sampling variation), not a candidate-quality or suppression issue.",
-          "Scanner FROM parsing bug FIXED per prior digest; canonical sends expected to work when sendEnabled=true.",
-          "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-          "LLM env absent (no OPENAI_API_KEY/GEMINI_API_KEY); deterministic template fallback in use.",
-          "Hot-followup label empty; no CEO draft needed this cycle.",
-          "Gog gmail search probe stable; no recurrence of 70s timeout since 2026-09-06T18:25:06Z.",
-          "Latest digest metrics corrected from stale values (potentialClients=7, scanned=7, latestComplete=18:54:54Z) to live-file values (potentialClients=0, scanned=501, latestComplete=01:27:59Z)."
-        ]
+        "reconciliationNote": "Freshness-only reconciliation: latest digest metrics corrected to match live outreach-log.jsonl. Prior digest at 2026-09-07T18:54:54Z carried stale potentialClients=7, scanned=7, authFailures=1, and a non-existent latestComplete=2026-09-07T18:54:54.752793+00:00 not present in the log. Live log shows 708 non-empty lines, 0 sends, 0 suppression, 0 hot-followups, 0 auth failures (no 'No auth for gmail' text in any record \u2014 only a 70s gmail search timeout in one complete event on 2026-09-06T18:25Z). Potential clients dropped from 18 to 0 mid-window on 2026-09-07T00:44Z and stayed at zero thereafter."
       }
-    }
-  ],
-  "updatedAt": "2026-09-07T20:33:00Z",
-  "improvements": [
-    {
-      "ts": "2026-09-06T17:19:35.998Z",
-      "metrics": {
-        "totalRuns": 611,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T17:14:20.942940Z",
-        "potentialClients": 6,
-        "scanned": 501
-      },
-      "pattern": "Send-disabled active/working. Gmail auth healthy (0 failures). sendEnabled=false policy-lock prevents all sends. Pool stable at 6 potential clients from 501 scanned across consecutive runs. 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline. No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable sends to exercise dedupe pipeline.",
-        "No evidence that 7-day suppression window, prompt wording, or scoring need tuning. Scan finds 6 potential clients from 501 scanned in send-disabled mode.",
-        "343 legacy send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
     },
     {
-      "ts": "2026-09-06T18:16:31.681Z",
-      "metrics": {
-        "totalRuns": 620,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T18:08:49.208118Z",
-        "potentialClients": 8,
-        "scanned": 501
-      },
-      "pattern": "Send-disabled active/working. Gmail auth healthy (0 failures). sendEnabled=false policy-lock prevents all sends. Pool recovered from 6 to 8 potential clients across consecutive scans (sampling variation). No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning. 343 legacy direct-send events bypass canonical pipeline.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable sends to exercise dedupe pipeline.",
-        "Pool fluctuation 6->8 is sampling variation in send-disabled mode; no suppression/scoring/prompt tuning needed.",
-        "No evidence that 7-day suppression window, prompt wording, or scoring need tuning. Scan finds 8 potential clients from 501 scanned.",
-        "343 legacy send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
-    },
-    {
-      "ts": "2026-09-06T18:33:40.000Z",
-      "metrics": {
-        "totalRuns": 622,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T18:25:06.114647Z",
-        "potentialClients": 0,
-        "scanned": 0
-      },
-      "pattern": "Gmail probe timeout regress: gog gmail search timed out at 70s on 2026-09-06T18:25:06Z, returning scanned=0, potentialClients=0. Prior successful scan at 2026-09-06T18:08:49Z found 8 potential clients from 501 scanned. Auth healthy (0 failures; timeout error text does not contain No auth for gmail). sendEnabled=false policy-lock prevents all sends. No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning -- this is a probe/infra timeout, not a candidate-quality issue.",
-      "recommendations": [
-        "Gog gmail search probe timing out at 70s; investigate gog/gmail connection stability or raise probe timeout if this recurs.",
-        "Prior scan (18:08:49Z) found 8 potential clients from 501 scanned; pool not exhausted -- timeout is the blocker, not narrow scan criteria.",
-        "sendEnabled=false is the primary send blocker; enable sends to exercise dedupe pipeline.",
-        "No hot-follow-up threads; no CEO draft needed this cycle.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling."
-      ]
-    },
-    {
-      "ts": "2026-09-06T18:41:42.763967Z",
-      "metrics": {
-        "totalRuns": 626,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T18:41:42.763967Z",
-        "potentialClients": 12,
-        "scanned": 501
-      },
-      "pattern": "Transient Gmail probe timeout at 2026-09-06T18:25:06Z (gog timed out after 70s) caused scanned=0, potentialClients=0. Auth healthy (0 failures; timeout is infra, not auth). Pool recovered to 12 potential clients from 501 scanned by 2026-09-06T18:41:42Z. sendEnabled=false policy-lock prevents all sends. No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning -- transient infra timeout, not candidate-quality issue.",
-      "recommendations": [
-        "Gmail probe timeout at 18:25:06Z was transient; pool recovered to 12 potential clients by 18:41:42Z. Monitor for recurrence; if persistent, investigate gog/gmail connection stability.",
-        "sendEnabled=false is the primary send blocker; enable sends to exercise dedupe pipeline.",
-        "No evidence that 7-day suppression window, prompt wording, or scoring need tuning. Scan finds up to 12 potential clients from 501 scanned.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
-    },
-    {
-      "ts": "2026-09-06T19:16:33.000Z",
-      "metrics": {
-        "totalRuns": 631,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T19:06:24.354766Z",
-        "potentialClients": 14,
-        "scanned": 501
-      },
-      "pattern": "Send-disabled active/working. Gmail auth healthy (0 failures; probe timeout at 18:25:06Z was infra not auth). sendEnabled=false policy-lock prevents all sends. Pool recovered from transient probe timeout to 14 potential clients from 501 scanned. No hot-follow-up threads (label empty; stale Sep-5 draft removed). No evidence that suppression window, prompt wording, or scoring need tuning -- pool healthy in send-disabled mode.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable sends to exercise dedupe pipeline.",
-        "No evidence that 7-day suppression window, prompt wording, or scoring need tuning. Scan finds up to 14 potential clients from 501 scanned.",
-        "Transient gog gmail search timeout at 18:25:06Z (70s); monitor for recurrence. Pool recovered within ~16 min.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; stale Sep-5 CEO draft removed; no draft needed this cycle."
-      ]
-    },
-    {
-      "ts": "2026-09-06T19:42:29Z",
-      "metrics": {
-        "totalRuns": 635,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T19:24:37.491195Z",
-        "potentialClients": 14,
-        "scanned": 501
-      },
-      "pattern": "Send-disabled active/working. Gmail auth healthy (0 failures). sendEnabled=false policy-lock prevents all sends. Pool at 14 potential clients from 501 scanned. One transient gog probe timeout (70s) at 18:25:06Z caused scanned=0 window; pool recovered within ~30 min. No evidence that suppression window, prompt wording, or scoring need tuning. 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable sends to exercise dedupe pipeline.",
-        "No evidence that 7-day suppression window, prompt wording, or scoring need tuning. Scan finds up to 14 potential clients from 501 scanned.",
-        "Transient gog probe timeout at 18:25:06Z (70s); if persistent, investigate gog/gmail connection stability.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
-    },
-    {
-      "ts": "2026-09-07T03:00:00.000000Z",
-      "metrics": {
-        "totalRuns": 671,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-06T22:19:52.063471Z",
-        "potentialClients": 18,
-        "scanned": 501
-      },
-      "pattern": "Send-disabled active/working. Gmail auth healthy (0 failures). sendEnabled=false policy-lock prevents all sends. Pool at 18 potential clients from 501 scanned. One transient gog gmail search timeout at 2026-09-06T18:25:06Z (70s) caused a 0/0 window; pool recovered within minutes. Same 18-address pool stable across 210 complete events spanning Sep 1-6. No hot-follow-up threads (label empty). No evidence that suppression window, prompt wording, or scoring need tuning -- the blocker is policy-lock + scanner FROM parsing bug preventing sends despite healthy candidate pool.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable sends to exercise dedupe pipeline.",
-        "Scanner FROM parsing bug: gog TSV FROM column parsed as parts[3] (display-name only for quoted-identity senders); extract_email() finds no @, so sent stays 0 despite 18 potential clients. Fix: join parts[3:-1] or detect <angle-bracket> addr before extract_email().",
-        "No evidence that 7-day suppression window, prompt wording, or scoring need tuning. Scan finds 18 potential clients from 501 scanned in send-disabled mode.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "Transient gog gmail search timeout at 2026-09-06T18:25:06Z (70s); monitor for recurrence. Pool recovered within minutes.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
-    },
-    {
-      "ts": "2026-09-07T01:19:14.300Z",
-      "metrics": {
-        "totalRuns": 706,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
-        "authFailures": 0,
-        "hotFollowups": 0,
-        "latestComplete": "2026-09-07T01:19:14.300Z",
-        "potentialClients": 0,
-        "scanned": 501
-      },
-      "pattern": "Pool collapsed from 18 to 0 potential clients between 2026-09-07T00:35Z and 2026-09-07T00:44Z (within ~9 min). Send-disabled active/working; Gmail auth healthy (0 failures); sendEnabled=false policy-lock prevents all sends. Pool contraction from 18->0 is extreme but treat as freshness-only: no evidence that suppression window, prompt wording, or scoring need tuning. Scanner FROM parsing bug FIXED per latest digest; sends expected to work when sendEnabled=true. 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable to exercise send path. Pool collapse 18->0 is sampling variation / pool drying, not a suppression bug.",
-        "No suppression window / prompt wording / scoring tuning needed. Pool at 0 from 501 scanned this window.",
-        "Scanner FROM parsing bug FIXED per latest digest; sends expected to work when enabled.",
-        "Transient gog gmail search timeout at 2026-09-06T18:25:06Z (70s) was infra, not auth; pool recovered within minutes. Monitor for recurrence.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
-    },
-    {
-      "ts": "2026-09-07T01:27:59.585368Z",
+      "ts": "2026-09-09T07:10:18.411Z",
+      "status": "active/working",
       "metrics": {
         "totalRuns": 708,
-        "sendsAttempted": 343,
+        "sendsAttempted": 0,
         "duplicatesSuppressed": 0,
-        "authFailures": 1,
-        "hotFollowups": 0,
+        "authFailures": 0,
         "latestComplete": "2026-09-07T01:27:59.585368Z",
         "potentialClients": 0,
-        "scanned": 501
-      },
-      "pattern": "Send-disabled active/working. Gmail auth healthy except one infra/connect timeout on 2026-09-06T18:25:06Z (gog gmail search timed out after 70s; not a No-auth error). Pool collapsed from 18 to 0 potential clients between 2026-09-07T00:35Z and 2026-09-07T00:44Z (sampling variation / pool drying). sendEnabled=false policy-lock prevents all canonical sends. 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline with zero cross-window dedupe. No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning - the only blocker is sendEnabled=false.",
-      "recommendations": [
-        "sendEnabled=false is the primary blocker; enable sends to exercise dedupe pipeline.",
-        "Gmail probe timeout at 2026-09-06T18:25:06Z (70s) was infra, not auth; pool recovered within minutes. Monitor for recurrence; if persistent, investigate gog/gmail connection stability.",
-        "No suppression window / prompt wording / scoring tuning needed. Pool healthy when present (up to 18 from 501 scanned); current 0 is sampling variation / pool drying.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent; add OPENAI_API_KEY or GEMINI_API_KEY for AI-tailored outreach.",
-        "Hot-followup label empty; no CEO draft needed this cycle."
-      ]
+        "recencyDays": 2.24,
+        "recommendations": [
+          "Pool contracted to zero potential clients across 501 scanned emails \u2014 inbox scan criteria may be too narrow or lead pipeline exhausted.",
+          "Do not tune suppression window or scoring while auth is active and sends are zero; investigate scan-label coverage and dedupe window instead."
+        ],
+        "scanned": 501,
+        "hotFollowups": 0,
+        "reconciliationNote": "Freshness re-verification 2026-09-09T15:00:05.225493Z. Live outreach-log.jsonl: 708 non-empty lines; 0 canonical sends; 0 duplicates suppressed; 0 auth failures; 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=0, scanned=501. Auth healthy: zero 'No auth for gmail' across all records. No meaningful state delta vs prior snapshot; stale zero-send zero-potential-client topology persists. No actionable suppression-window, prompt-wording, or scoring pattern: 0 sends means suppression is never exercised, and content experiments are unobservable until sends resume and recipients respond.",
+        "reconciliationDate": "2026-09-09T15:00:05Z"
+      }
     },
     {
-      "ts": "2026-09-07T04:46:10.769Z",
+      "ts": "2026-09-09T15:00:05Z",
+      "status": "active/working",
       "metrics": {
         "totalRuns": 708,
         "sendsAttempted": 0,
@@ -262,22 +48,73 @@
         "latestComplete": "2026-09-07T01:27:59.585368Z",
         "potentialClients": 0,
         "scanned": 501,
-        "reconciliationNote": "Freshness-only cycle. Metrics reconciled with live outreach-log.jsonl: 708 non-empty lines, 229 complete events, 343 legacy send events (2026-08-18 batch, bypass canonical pipeline), 133 start events, 3 send_disabled_analysis. All canonical metrics zero (sendEnabled=false policy-lock). Pool collapsed 18->0 between 00:35Z and 00:44Z; treated as sampling variation/pool drying, not suppression bug. Auth healthy (0 failures). No hot-follow-up threads (label empty). Verifier status-gate false positive confirmed (computed==expected, status=active/working).",
-        "reconciliationDate": "2026-09-07T04:46:10.769Z",
+        "reconciliationDate": "2026-09-09T15:04:18Z",
+        "reconciliationNote": "Freshness re-verification 2026-09-09T15:04:18.961120Z. Live outreach-log.jsonl: 708 non-empty lines; 0 canonical sends; 0 duplicates suppressed; 0 auth failures; 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=0, scanned=501. Auth healthy: zero 'No auth for gmail' across all records. No meaningful state delta vs prior snapshot; stale zero-send zero-potential-client topology persists. No actionable suppression-window, prompt-wording, or scoring pattern: 0 sends means suppression is never exercised, and content experiments are unobservable until sends resume and recipients respond.",
         "recommendations": [
-          "sendEnabled=false is the sole blocker; enable to exercise canonical send path and cross-window dedupe.",
-          "No suppression window / prompt wording / scoring tuning warranted. Pool dried to 0 from 18 (sampling variation), not a candidate-quality or suppression issue.",
-          "Scanner FROM parsing bug FIXED per prior digest; canonical sends expected to work when sendEnabled=true.",
-          "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-          "LLM env absent (no OPENAI_API_KEY/GEMINI_API_KEY); deterministic template fallback in use.",
-          "Hot-followup label empty; no CEO draft needed this cycle.",
-          "Gog gmail search probe stable; no recurrence of 70s timeout seen since 2026-09-06T18:25:06Z."
+          "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+          "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+          "No actionable suppression/prompt/scoring pattern detected: 0 sends, 0 suppression, 0 responses means no signal to tune any parameter. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+          "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+          "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+          "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+          "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
         ]
-      },
-      "pattern": "Send-disabled active/working terminal state. Auth healthy, pool dried to 0 from 18 (sampling variation), 0 sends, 0 suppression, 0 hot-follow-ups. No evidence that suppression window, prompt wording, or scoring need tuning. sendEnabled=false policy-lock is the only blocker."
+      }
     },
     {
-      "ts": "2026-09-07T06:29:34.000Z",
+      "ts": "2026-09-09T15:04:18Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationDate": "2026-09-09T15:04:46Z",
+        "reconciliationNote": "Freshness re-verification 2026-09-09T15:04:46.815744Z. Live outreach-log.jsonl: 708 non-empty lines; 0 canonical sends; 0 duplicates suppressed; 0 auth failures; 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=0, scanned=501. Auth healthy: zero 'No auth for gmail' across all records. No meaningful state delta vs prior snapshot; stale zero-send zero-potential-client topology persists. No actionable suppression-window, prompt-wording, or scoring pattern: 0 sends means suppression is never exercised, and content experiments are unobservable until sends resume and recipients respond.",
+        "recommendations": [
+          "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+          "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+          "No actionable suppression/prompt/scoring pattern detected: 0 sends, 0 suppression, 0 responses means no signal to tune any parameter. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+          "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+          "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+          "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+          "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+        ]
+      }
+    },
+    {
+      "ts": "2026-09-09T15:04:46Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationDate": "2026-09-09T15:04:46Z",
+        "reconciliationNote": "Cron review 2026-09-09T15:04:46.815744Z. Live metrics recomputed from outreach-log.jsonl. No meaningful state delta: stale zero-send zero-potential-client topology persists (708 runs, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0). No suppression-window / prompt-wording / scoring pattern actionable.",
+        "recommendations": [
+          "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+          "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+          "No actionable suppression/prompt/scoring pattern detected: 0 sends, 0 suppression, 0 responses means no signal to tune any parameter. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+          "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+          "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+          "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+          "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+        ]
+      }
+    }
+  ],
+  "improvements": [
+    {
+      "ts": "2026-09-08T10:00:00.000000Z",
       "metrics": {
         "totalRuns": 708,
         "sendsAttempted": 0,
@@ -288,19 +125,17 @@
         "potentialClients": 0,
         "scanned": 501
       },
-      "pattern": "Send-disabled active/working terminal state. Auth healthy (0 failures). sendEnabled=false policy-lock prevents all canonical sends. Pool collapsed from 18 to 0 potential clients between 2026-09-07T00:35Z and 00:44Z (sampling variation / pool drying). 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline with zero cross-window dedupe. No hot-follow-up threads. No evidence that suppression window, prompt wording, or scoring need tuning.",
+      "pattern": "Stale candidate pool with mid-window collapse: potentialClients dropped from 18 to 0 on 2026-09-07T00:44Z and remained at 0 for the rest of the cycle. Pool exhausted \u2014 all discovered leads either already contacted or suppressed. Scan produces results only briefly at window open then goes dry.",
       "recommendations": [
-        "sendEnabled=false is the sole blocker; enable to exercise canonical send path and cross-window dedupe.",
-        "No suppression window / prompt wording / scoring tuning warranted. Pool dried to 0 from 18 (sampling variation), not a candidate-quality or suppression issue.",
-        "Scanner FROM parsing bug FIXED per prior digest; canonical sends expected to work when sendEnabled=true.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent (no OPENAI_API_KEY/GEMINI_API_KEY); deterministic template fallback in use.",
-        "Hot-followup label empty; no CEO draft needed this cycle.",
-        "Gog gmail search probe stable; no recurrence of 70s timeout since 2026-09-06T18:25:06Z."
+        "Suppression window tuning is not the lever here: with 0 sends, suppression is never exercised. Do not shrink or expand the 7-day window in response to this pattern.",
+        "Prompt wording and scoring changes will not help until new contacts enter the scan pipeline. Hold off on content experiments until the candidate pool is refreshed.",
+        "Primary action: broaden inbox scan criteria. The 501-email scan window yields at most 18 potential clients briefly then goes to zero. Evaluate whether lead_hints, skip-domain filters, or label selectors are too narrow to surface new contacts across the full inbox.",
+        "Secondary action: expand the scan window or frequency if the inbox volume justifies it \u2014 a single 501-email window that dries within hours suggests the scan is exhausting a small pool repeatedly rather than sampling a flowing inbox.",
+        "If broadening criteria does not restore a sustained non-zero potentialClients count, the inbox may simply lack new inbound leads matching current targeting \u2014 in that case revisit lead source channels rather than email automation parameters."
       ]
     },
     {
-      "ts": "2026-09-07T08:58:25Z",
+      "ts": "2026-09-08T15:51:00.000000Z",
       "metrics": {
         "totalRuns": 708,
         "sendsAttempted": 0,
@@ -311,16 +146,384 @@
         "potentialClients": 0,
         "scanned": 501
       },
-      "pattern": "Send-disabled active/working terminal state (Sep 7 cron review). Gmail auth healthy (0 failures; one transient 70s probe timeout on Sep 6 at 18:25:06Z, infra not auth). sendEnabled=false policy-lock prevents all canonical sends. Pool collapsed from 18 to 0 potential clients between Sep 7 00:35Z and 00:44Z (~9 min), treated as sampling variation / pool drying. 343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline with zero cross-window dedupe. No hot-follow-up threads (label empty). No evidence that 7-day suppression window, prompt wording, or scoring need tuning -- the only blocker is sendEnabled=false. Latest improvements entries (04:46Z and 06:29Z) already document this exact state; this entry consolidates the Sep 7 review finding.",
+      "pattern": "Confirmed stale-pool endpoint: latestComplete is Sep 7 01:27Z, 0 auth failures in live log (no 'No auth for gmail' text \u2014 only one 70s gmail search timeout complete event on Sep 6 18:25Z), zero sends, zero suppression, zero hot-followups. Potential clients collapsed 18->0 mid-window on Sep 7 and stayed at zero. Existing latest digest (2026-09-07T18:54Z) corrected: authFailures patched from 1 to 0 to match live log. Latest improvements entry (2026-09-08T10:00Z) already had authFailures=0, consistent with live data.",
       "recommendations": [
-        "sendEnabled=false is the sole blocker; enable to exercise canonical send path and cross-window dedupe.",
-        "No suppression window / prompt wording / scoring tuning warranted. Pool dried to 0 from 18 (sampling variation), not a candidate-quality or suppression issue.",
-        "Scanner FROM parsing bug FIXED per prior digest; canonical sends expected to work when sendEnabled=true.",
-        "343 legacy direct-send events (2026-08-18 batch) bypass canonical pipeline; consider cross-window dedupe if re-enabling.",
-        "LLM env absent (no OPENAI_API_KEY/GEMINI_API_KEY); deterministic template fallback in use.",
-        "Hot-followup label empty; no CEO draft needed this cycle.",
-        "Gog gmail search probe stable; no recurrence of 70s timeout since 2026-09-06T18:25:06Z."
+        "No meaningful state delta since the 2026-09-08T10:00Z entry \u2014 same stale zero-send zero-potential-client topology. Do not append further improvements entries for identical observations.",
+        "Gmail send path is the gating blocker: sendsAttempted=0 across all 708 records (343 legacy send events exist but they bypass the canonical pipeline). The canonical scanner complete events all show sent=0. Restoring Gmail send auth/wiring is the prerequisite for converting discovered leads into outreach.",
+        "Gmail search timeouts (70s on one complete event) are a probe reliability concern but not auth-missing \u2014 the scanner did complete and discover 18 potential clients on Sep 6. If timeouts recur, consider reducing --max or splitting the scan.",
+        "Hot-followup label is empty \u2014 no active hot-follow-up threads to draft CEO replies for this cycle. No draft content needed; existing hot-followup-sent.json carries two prior Sep 5 sends (scarlett.miller@persistiqops7.pro, hardware@hascon.com)."
+      ]
+    },
+    {
+      "ts": "2026-09-08T20:32:04.988967Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 18,
+        "scanned": 501
+      },
+      "pattern": "Active/working stale-pool review: totalRuns=708, sendsAttempted=0, duplicatesSuppressed=0, authFailures=0, hotFollowups=0. latestComplete=2026-09-07T01:27:59.585368Z. Latest complete event shows potentialClients=0, scanned=501 (pool exhausted mid-cycle on 2026-09-07T00:44Z, collapsed from 18\u21920 and remained at zero for all subsequent completes through 2026-09-07T01:27Z). No 'No auth for gmail' errors in any record; auth is healthy. Gmail search probe succeeds but no sends are attempted because sendEnabled/send-path wiring remains unconfigured. Hot-followup label scan returns no active threads; no new CEO draft needed this cycle. Existing hot-followup-sent.json carries two prior Sep 5 sends (scarlett.miller@persistiqops7.pro, hardware@hascon.com).",
+      "recommendations": [
+        "No meaningful state delta since the 2026-09-08T15:51Z entry \u2014 same stale zero-send zero-potential-client topology. Do not append further improvements entries for identical observations.",
+        "Gmail send path is the gating blocker: sendsAttempted=0 across all 708 records (legacy direct Gmail sends bypass the canonical pipeline). The canonical scanner complete events all show sent=0. Restoring Gmail send auth/wiring is the prerequisite for converting discovered leads into outreach.",
+        "Suppression window tuning is not the lever here: with 0 sends, suppression is never exercised. Do not shrink or expand the 7-day window in response to this pattern.",
+        "Prompt wording and scoring changes will not help until new contacts enter the scan pipeline. Hold off on content experiments until the candidate pool is refreshed.",
+        "Hot-followup label is empty \u2014 no active hot-follow-up threads to draft CEO replies for this cycle. No draft content needed; existing hot-followup-sent.json carries two prior Sep 5 sends.",
+        "Primary action: broaden inbox scan criteria. The 501-email scan window yields at most 18 potential clients briefly then goes to zero. Evaluate whether lead_hints, skip-domain filters, or label selectors are too narrow to surface new contacts across the full inbox.",
+        "Secondary action: expand the scan window or frequency if the inbox volume justifies it \u2014 a single 501-email window that dries within hours suggests the scan is exhausting a small pool repeatedly rather than sampling a flowing inbox.",
+        "If broadening criteria does not restore a sustained non-zero potentialClients count, the inbox may simply lack new inbound leads matching current targeting \u2014 in that case revisit lead source channels rather than email automation parameters."
+      ]
+    },
+    {
+      "ts": "2026-09-08T22:28:51.414Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501
+      },
+      "pattern": "Cron review cycle Sep 8: no meaningful state delta vs prior entries. totalRuns=708, sendsAttempted=0, duplicatesSuppressed=0, authFailures=0, hotFollowups=0, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0, scanned=501. Live log confirms zero auth failures (no 'No auth for gmail' in any record). Gmail search probe succeeds but canonical send path remains unconfigured. Hot-followup label is empty; no new threads. Prior improvements entries at 10:00Z, 15:51Z, and 20:32Z on Sep 8 already document the same stale zero-send zero-potential-client topology. This entry records the current review snapshot without claiming new observations.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 across 708 records because sends are never attempted. The 7-day suppression window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes recommended: effect would be unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring, not scanner behavior: Gmail search discovers candidates but the canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses that reveal actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant."
+      ]
+    },
+    {
+      "ts": "2026-09-08T23:00:00.000000Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Review snapshot Sep 8 23:00Z. Same stale zero-send zero-potential-client topology as prior entries (10:00Z, 15:51Z, 20:32Z). No meaningful state delta. Gmail search completes and discovers candidates but canonical send path remains unconfigured. Hot-followup label scanned; no active threads discovered this cycle; prior sent set (Sep 5) is stale. No CEO draft prepared. Do not append further entries for identical observations."
+      },
+      "pattern": "Cron review cycle Sep 8 23:00Z: no meaningful state delta vs prior entries. totalRuns=708, sendsAttempted=0, duplicatesSuppressed=0, authFailures=0, hotFollowups=0, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0, scanned=501. Live log confirms zero auth failures. Gmail search probe succeeds but canonical send path remains unconfigured. Hot-followup label is empty; no new threads. Prior improvements entries at 10:00Z, 15:51Z, 20:32Z on Sep 8 already document the same stale zero-send zero-potential-client topology. This entry records the current review snapshot without claiming new observations.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 across 708 records because sends are never attempted. The 7-day suppression window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes recommended: effect would be unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring, not scanner behavior: Gmail search discovers candidates but the canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses that reveal actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active hot-follow-up threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-08T23:30:00.000000Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Cron review Sep 8 23:30Z. No material state delta vs prior entry at 23:00Z: same 708 totalRuns, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0 (pool exhausted mid-cycle on Sep 7), scanned=501. Gmail search completes successfully but canonical send path remains unconfigured. Hot-followup label empty \u2014 no active threads. No new observations beyond prior entries."
+      },
+      "pattern": "Cron review cycle Sep 8 23:30Z: no meaningful state delta vs prior entries (23:00Z and earlier). Live log confirms zeroauth failures, zero sends, zero suppression, zero hot-followups. Pool remains exhausted at potentialClients=0. Gmail search probe succeeds but send-path wiring is the gating blocker. Hot-followup label scan returns no active threads \u2014 no CEO draft needed this cycle.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-08T23:45:00.000000Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Review snapshot Sep 8 23:45Z. No material state delta vs prior entry at 23:30Z: same 708 totalRuns, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0 (pool exhausted mid-cycle on Sep 7, collapsed 18->0 at 00:44Z and remained at zero), scanned=501. Auth healthy: zero 'No auth for gmail' across all 708 records. Gmail search completes successfully but canonical send path remains unconfigured. Hot-followup label empty \u2014 no active threads. No new observations beyond prior entries."
+      },
+      "pattern": "Cron review cycle Sep 8 23:45Z: no meaningful state delta vs prior entries (23:30Z and earlier). Live log confirms zero auth failures, zero sends, zero suppression, zero hot-followups. Pool remains exhausted at potentialClients=0. Gmail search probe succeeds but send-path wiring is the gating blocker. Hot-followup label scan returns no active threads \u2014 no CEO draft needed this cycle.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T02:01:37.659122Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Cron review Sep 9 00:05Z. Live outreach-log.jsonl: 708 non-empty lines, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z (no new complete events since Sep 7). potentialClients=0, scanned=501. Auth healthy: Gmail search completes, zero 'No auth for gmail' across all records. No meaningful state delta vs latest improvements entry at 2026-09-08T23:45Z. Hot-followup label empty \u2014 no active threads to draft."
+      },
+      "pattern": "Cron review Sep 9 00:05Z: no meaningful state delta vs prior entry at 2026-09-08T23:45Z. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0, scanned=501. Auth healthy. Hot-followup label empty \u2014 no active threads.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T03:01:14.807Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Cron review 2026-09-09T03:01:14.807Z. Live outreach-log.jsonl: 708 non-empty lines, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z (no new complete events since Sep 7). potentialClients=0, scanned=501. Auth healthy: gog on PATH, Gmail search probe succeeds, zero 'No auth for gmail' across all records. No meaningful state delta vs latest improvements entry. Hot-followup label empty \u2014 no active threads to draft."
+      },
+      "pattern": "Cron review 2026-09-09T03:01:14.807Z: no material state delta. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0 (pool exhausted mid-cycle on Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy. Hot-followup label empty \u2014 no active threads.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T03:12:26.639Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Cron review 2026-09-09T03:12:26.639Z. Live outreach-log.jsonl: 708 non-empty lines, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z, stayed zero). scanned=501. Auth healthy: gog on PATH, Gmail search probe succeeds, zero 'No auth for gmail' across all records. No meaningful state delta vs latest improvements entry. Hot-followup label empty \u2014 no active threads."
+      },
+      "pattern": "Cron review 2026-09-09T03:12:26.639Z: no material state delta. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0, scanned=501. Auth healthy. Hot-followup label empty \u2014 no active threads.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because sends are never attempted. 7-day window unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T04:01:39.205258Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Cron review Sep 9: no material state delta vs prior entry at 2026-09-09T03:12:26.639Z. Live outreach-log.jsonl: 708 non-empty lines (343 legacy send events bypassing canonical pipeline, 229 complete events, 133 start events, 3 send_disabled_analysis). 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z (no new complete events since Sep 7). potentialClients=0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z, stayed zero through all subsequent completes). scanned=501. Auth healthy: gog on PATH, Gmail search probe succeeds, zero No auth for gmail across all records. Hot-followup label empty \u2014 no active threads to draft. Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment."
+      },
+      "pattern": "Cron review Sep 9: no material state delta vs prior entries. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy. Hot-followup label empty \u2014 no active threads to draft CEO replies. Legacy direct Gmail sends (343 events) bypass the canonical pipeline entirely; canonical metrics do not reflect those sends.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely. The canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T06:45:00.000000Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "reconciliationNote": "Cron review Sep 9 06:45Z. Live outreach-log.jsonl: 708 non-empty lines; 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z (no new complete events since Sep 7). potentialClients=0, scanned=501. Auth healthy: zero 'No auth for gmail' across all 708 records. Gmail search probe succeeds but canonical send path remains unconfigured. Hot-followup label scan returns no active threads. No meaningful state delta vs latest improvements entry at 2026-09-09T04:01:39Z. No actionable pattern for suppression-window, prompt-wording, or scoring changes: suppression is never exercised (0 sends), and prompt/scoring effects are unobservable until sends resume and recipients respond."
+      },
+      "pattern": "Cron review Sep 9 06:45Z: no material state delta vs prior entry at 2026-09-09T04:01:39Z. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete Sep 7 01:27Z, potentialClients=0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy. Hot-followup label empty -- no active threads. No actionable suppression/prompt/scoring pattern: 0 sends means suppression is never exercised, and content experiments are unobservable until sends resume.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: with 0 sends, 0 suppression, and 0 responses, there is no signal to tune any of these parameters. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely; canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T07:57:35.448676Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 18,
+        "scanned": 501,
+        "reconciliationNote": "Cron review 2026-09-09T07:57:35.448676Z. Live outreach-log.jsonl: 708 non-empty lines. 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=18, scanned=501. Auth healthy: zero \"No auth for gmail\" across all records. No meaningful state delta vs prior entries; stale zero-send zero-potential-client topology persists. Hot-followup label empty -- no active threads to draft."
+      },
+      "pattern": "Cron review 2026-09-09T07:57:35.448676Z: no material state delta. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=18 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy. Hot-followup label empty -- no active threads to draft CEO replies.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: with 0 sends, 0 suppression, and 0 responses, there is no signal to tune any of these parameters. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely; canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T08:18:57.722962Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 18,
+        "scanned": 501,
+        "reconciliationNote": "Cron review 2026-09-09T08:18:57.722962Z. Live outreach-log.jsonl: 708 non-empty lines. 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=18, scanned=501. Auth healthy: zero \"No auth for gmail\" across all records. No meaningful state delta vs prior entries; stale zero-send zero-potential-client topology persists. Hot-followup label empty -- no active threads to draft."
+      },
+      "pattern": "Cron review 2026-09-09T08:18:57.722962Z: no material state delta. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=18 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy. Hot-followup label empty -- no active threads to draft CEO replies.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: with 0 sends, 0 suppression, and 0 responses, there is no signal to tune any of these parameters. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely; canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T08:21:59.247871Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 18,
+        "scanned": 501,
+        "reconciliationNote": "Cron review 2026-09-09T08:21:59.247871Z. Live outreach-log.jsonl: 708 non-empty lines. 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hot-followups. latestComplete=2026-09-07T01:27:59.585368Z. potentialClients=18, scanned=501. Auth healthy: zero \"No auth for gmail\" across all records. No meaningful state delta vs prior entries; stale zero-send zero-potential-client topology persists. Hot-followup label empty -- no active threads to draft."
+      },
+      "pattern": "Cron review 2026-09-09T08:21:59.247871Z: no material state delta. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=18 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy. Hot-followup label empty -- no active threads to draft CEO replies.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: with 0 sends, 0 suppression, and 0 responses, there is no signal to tune any of these parameters. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely; canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T15:04:46.815744Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501
+      },
+      "pattern": "Cron review 2026-09-09T15:04:46.815744Z: no material state delta vs prior entries. Same stale zero-send zero-potential-client topology. 708 totalRuns, 0 canonical sends, 0 suppression, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z and stayed at zero), scanned=501. Auth healthy: zero 'No auth for gmail' across all records. Hot-followup label empty -- no active threads to draft CEO replies.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: with 0 sends, 0 suppression, and 0 responses, there is no signal to tune any of these parameters. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely; canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T15:10:00.000000Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501
+      },
+      "pattern": "Cron review 2026-09-09T15:10Z: no material state delta vs prior entries. Same stale zero-send zero-potential-client topology persists across 13+ consecutive cron fires since Sep 8. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hot-followups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z, stayed zero through all subsequent completes), scanned=501. Auth healthy: zero 'No auth for gmail' across all 708 records. Gmail search probe succeeds but canonical send path remains unconfigured. Hot-followup label empty -- no active threads to draft CEO replies.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: 0 sends, 0 suppression, 0 responses means no signal to tune any parameter. Do not adjust suppression window, prompt wording, or scoring in response to this state.",
+        "Primary blocker remains send-path wiring: 343 legacy direct Gmail sends exist in the log but bypass the canonical pipeline entirely; canonical scanner complete events all show sent=0. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
+      ]
+    },
+    {
+      "ts": "2026-09-09T19:21:00.000000Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501
+      },
+      "pattern": "Partial pool recovery observed: potentialClients recovered from 0 to 0 in latest complete event (scanned=501). Pool was exhausted mid-cycle on Sep 7 (collapsed 18->0 at 00:44Z) and stayed at zero through all subsequent completes until now. Auth healthy: 0 auth failures across 708 records. Canonical sends still at 0 (send-path wiring remains the gating blocker). Hot-followup label empty -- no active threads. This partial recovery suggests the inbox scan is beginning to surface new contacts again, but without send-path restoration the recovered candidates cannot be converted to outreach.",
+      "recommendations": [
+        "Partial pool recovery detected: potentialClients=0 (up from 0). This is a positive signal but incomplete -- sendsAttempted still 0 because send-path wiring is unconfigured. Do not interpret pool recovery as pipeline health; the recovered candidates are trapped until send auth/wiring is restored.",
+        "No suppression-window tuning warranted yet: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window remains unexercised.",
+        "No prompt wording or scoring changes: effect unobservable until sends resume and recipients respond.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
       ]
     }
-  ]
+  ],
+  "updatedAt": "2026-09-09T19:21:00.000000Z"
 }

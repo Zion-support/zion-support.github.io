@@ -1,0 +1,89 @@
+{
+  "plan_path": "/Users/miami2/zion.app/automation/reports/next-wave-plan-2026-09-07.json",
+  "tasks_count": 8,
+  "wave_name": "Wave 4",
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Expand service catalog pages for high-ROI services",
+      "owner": "Content Agent",
+      "preconditions": [
+        "new-it-services-and-leads.md reviewed and prioritized",
+        "Site source branch main is current"
+      ],
+      "expected_output": "Static HTML pages deployed for AI Process Automation, AI Customer Support, and Cloud Migration under /services/* with unique <title> and meta description"
+    },
+    {
+      "id": "T2",
+      "title": "Rebuild outreach-ready queue from current lead sources",
+      "owner": "Outreach Agent",
+      "preconditions": [
+        "lead-crm/all-leads.json exists with non-empty leads",
+        "outreach_sent_history.jsonl readable",
+        "exclusion-list.json reviewed"
+      ],
+      "expected_output": "outreach_ready_canonical.json updated with deduped leads having valid email and no recent send within 14 days"
+    },
+    {
+      "id": "T3",
+      "title": "Execute Wave 4 outreach batch",
+      "owner": "Outreach Agent",
+      "preconditions": [
+        "ZTG_SEND_ALLOWED=1 set",
+        "T2 output has >=1 ready leads",
+        "Recent send rate within Gmail API limits"
+      ],
+      "expected_output": "20 emails sent, outreach_sent_history.jsonl appended, ready queue reduced accordingly"
+    },
+    {
+      "id": "T4",
+      "title": "Check inbox for replies and trigger hot follow-ups",
+      "owner": "Outreach Agent",
+      "preconditions": [
+        "Gmail API credentials active",
+        "Subject filter `Parceria Zion Tech Group` or `Re:` usable"
+      ],
+      "expected_output": "Reply report file created; for any reply from lead domain within 7 days, follow-up email sent"
+    },
+    {
+      "id": "T5",
+      "title": "Fix lead miner timeouts for continuous sourcing",
+      "owner": "Site Ops",
+      "preconditions": [
+        "lead-crm/historical_email_miner.py present",
+        "Current QUERY_TIMEOUT_SECONDS <= 10"
+      ],
+      "expected_output": "Miner timeout increased to 30s or async batch implemented; miner_health.json shows status ok"
+    },
+    {
+      "id": "T6",
+      "title": "Run SEO cleanup on existing static pages",
+      "owner": "Content Agent",
+      "preconditions": [
+        "Static HTML pages readable",
+        "Duplicate or thin pages identified"
+      ],
+      "expected_output": "Top 20 pages audited; duplicate titles fixed; pages under 300 words flagged; sitemap.xml refreshed"
+    },
+    {
+      "id": "T7",
+      "title": "Activate automated content publishing for new services",
+      "owner": "Content Agent",
+      "preconditions": [
+        "T1 pages drafted",
+        "GitHub Actions workflow available or cms script present"
+      ],
+      "expected_output": "Content agent run completed; at least 2 blog/support pages published to /blog/* or /services/*"
+    },
+    {
+      "id": "T8",
+      "title": "Validate site health, fallback routes, and deploy",
+      "owner": "Site Ops",
+      "preconditions": [
+        "main branch has T1/T7 changes",
+        "_redirects file present"
+      ],
+      "expected_output": "All primary routes return HTTP 200; fallback /tools/* and /services/* resolve; deploy to gh-pages confirmed"
+    }
+  ]
+}

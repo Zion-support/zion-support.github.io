@@ -113,7 +113,7 @@ def run_gmail_scan():
         proc = subprocess.run(
             ['gog', 'gmail', 'search', 'in:anywhere', '--max', '500',
              '--plain', '--no-input'],
-            capture_output=True, text=True, timeout=120
+            capture_output=True, text=True, timeout=300
         )
         if proc.returncode != 0:
             return None, f"gog erro: {proc.stderr.strip()}"

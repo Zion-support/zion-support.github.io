@@ -3,7 +3,7 @@
 Verifies that the live homepage is NOT still showing the build-failed fallback text.
 """
 
-import json, urllib.request
+import json, urllib.request, ssl
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -18,8 +18,17 @@ def main():
     ok = False
     html = ''
     try:
+        # Work around missing/untrusted local CA bundle on macOS cron runners.
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = True
+        ctx.verify_mode = ssl.CERT_REQUIRED
+        try:
+            ctx.load_verify_locations(cafile=None)
+        except Exception:
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
         req = urllib.request.Request(URL, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=20) as r:
+        with urllib.request.urlopen(req, timeout=20, context=ctx) as r:
             html = r.read().decode('utf-8', errors='ignore')
         ok = FAIL_FRAG.lower() not in html.lower()
     except Exception as e:

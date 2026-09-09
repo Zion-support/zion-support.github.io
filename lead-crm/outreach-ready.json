@@ -1,2126 +1,6904 @@
 [
   {
     "to": "comunicacaodigital@prudentialdigital.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:proposta",
-    "domain": "prudentialdigital.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 100,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "assistente.cliente@prudential.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:proposta",
-    "domain": "prudential.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "finance",
+    "status": "sent",
     "score": 80,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "infra@ingaia.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:reunião",
-    "domain": "ingaia.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "e-e@mail.beehiiv.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "mail.beehiiv.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "suporte@allusivedigital.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "allusivedigital.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "email@krishangtechnolab.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "krishangtechnolab.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "contato@allusivedigital.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "allusivedigital.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "samsunglatam@br.email.samsung.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "br.email.samsung.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "info@mail.shopee.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "mail.shopee.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "contato@e.drogaraia.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "e.drogaraia.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "newsletters@nl.technologyadvice.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "nl.technologyadvice.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "4fcknc0xd1ud0471hs3y4av2obv8w0m9p24j@reply.airbnb.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.airbnb.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "credit_capital_inc@mail.vresp.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "mail.vresp.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "hello@agencyaisolutions.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "agencyaisolutions.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "affiliate@mail.shopee.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "mail.shopee.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "41oelayvbzsby25zfq1w28t0m9t6u0j8v77m@reply.airbnb.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.airbnb.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "replyto@email.microsoft.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "email.microsoft.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "4k7hpf30g4xg37a4k2q9im7e0n7k81tg990o@reply.airbnb.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.airbnb.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "info@aimanageditservice.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "aimanageditservice.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "4pnq2uifvjcvimpjzfspck5cyl5i61c2nfdl@reply.airbnb.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.airbnb.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "4jsgjd1ye2ve1582ioepsk5cym6j71b7vo7e@reply.airbnb.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.airbnb.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "contato@entechus.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "entechus.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 75
   },
   {
     "to": "contato@krishangtechnolab.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "krishangtechnolab.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 75,
-    "priority": 1,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "celi.vasconcelos@wyntech.inf.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:orçamento",
-    "domain": "wyntech.inf.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "globalaiexperience@h.kajabimail.net",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:reunião",
-    "domain": "h.kajabimail.net",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "founders@getdarwin.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "getdarwin.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 60
   },
   {
     "to": "founders@getenter.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "getenter.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "hi@news.kilocode.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "news.kilocode.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "hi@kilocode.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "kilocode.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "diretoria@elenta.tech",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "elenta.tech",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 60
   },
   {
     "to": "gerencia@getdarwin.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "getdarwin.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "info@aiautomationagency.co.uk",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "aiautomationagency.co.uk",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 60
   },
   {
     "to": "marketing-replies@lambda.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "lambda.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 60
   },
   {
     "to": "hello@lambda.ai",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "lambda.ai",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 60
   },
   {
     "to": "contato@elenta.tech",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "elenta.tech",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 60,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@sam.gov",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "sam.gov",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "government",
-    "score": 55,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 55
   },
   {
     "to": "ti@sam.gov",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "sam.gov",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "government",
-    "score": 55,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 55
   },
   {
     "to": "fabio.mesquita@vspsolution.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:orçamento",
-    "domain": "vspsolution.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "wagner.dias@logicnet.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:orçamento",
-    "domain": "logicnet.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "herbert.azevedo@la.logicalis.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:orçamento",
-    "domain": "la.logicalis.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "will.cesar@dealwise.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:reunião",
-    "domain": "dealwise.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "veronica.oliveira@i-value.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:reunião",
-    "domain": "i-value.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "zilda.caires@i-value.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:reunião",
-    "domain": "i-value.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "natalia.diniz@dealwise.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:reunião",
-    "domain": "dealwise.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "rogerio.rocha@vbr2.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "vbr2.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "marketing@addee.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "addee.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "coface.latinamerica@go.coface.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "go.coface.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "coface.latinamerica@coface.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "coface.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "alexandre.souza@outmarketing.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "outmarketing.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "tatiana.sciencio@bcrcx.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "bcrcx.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "paulo.volpis@vetorzero.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "vetorzero.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@granatum.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:diagnóstico",
-    "domain": "granatum.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "founders@kahunalabs.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "kahunalabs.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "flast@blisshs.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "blisshs.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "account-alerts@t.brevo.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "t.brevo.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "tools@monetizemore.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "monetizemore.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "jakki.jakaj@tavily.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "tavily.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "rotem@tavily.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "tavily.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "list@wordfence.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:\"incident response\"",
-    "domain": "wordfence.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "computerworld_resources@cwresources.computerworld.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:\"incident response\"",
-    "domain": "cwresources.computerworld.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "info@connect.arubanetworks.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:sase",
-    "domain": "connect.arubanetworks.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "info.latam@arubanetworks.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "subject:sase",
-    "domain": "arubanetworks.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contact@fifosys.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "fifosys.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "marketing@npbrasil.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "npbrasil.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "neil@npbrasil.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "npbrasil.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "p.jain@pncalifornia.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "pncalifornia.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@alugartemporada.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "alugartemporada.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "reply_to@experts-exchange.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "experts-exchange.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "email.campaign@sg.booking.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "sg.booking.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@contaazul.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "contaazul.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@beep.saude.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "beep.saude.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "healthcare",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "email@kahunalabs.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "kahunalabs.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "email@frontlinemsp.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "frontlinemsp.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "diretoria@wheelhouseit.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "wheelhouseit.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "dong90@github.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "github.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "sac@sub.cobasi.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "sub.cobasi.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "reply-dgk55dvjslfunoozcr4m5kxnnu.60263@sub.cobasi.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "sub.cobasi.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "openafw@github.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "github.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "contato@github.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "github.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "hello@xovakstudio.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "xovakstudio.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "admin1@everkerr.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "everkerr.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "reply-5recchys3bnurbf64e6ehmlnp4.60267@e.hostingmessages.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "e.hostingmessages.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "reply-ucuxngwzx2vehpjsve6viik2iq.100225@reply.comunicacao.serasaexperian.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.comunicacao.serasaexperian.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "contato@comunicacao.serasaexperian.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "comunicacao.serasaexperian.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "snazar@hubspot.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "hubspot.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "affiliate@newsletter.shopee.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "newsletter.shopee.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "retail",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "reply-je4awqdfqyse5p2rwewh6eusqe.110060@e.rd.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "e.rd.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "contato@casatemporada.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "casatemporada.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "sellersupport@shop.tiktok.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "shop.tiktok.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "retail",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "recommendations@reply.pinterest.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"Zion Tech Group\"",
-    "domain": "reply.pinterest.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "recommendations@discover.pinterest.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"Zion Tech Group\"",
-    "domain": "discover.pinterest.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "contact@makeitfuture.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "makeitfuture.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "sophia@dataprotect.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "dataprotect.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "marketing@mkt.agilize.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "mkt.agilize.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "marcus@cybershield.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "cybershield.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "falecom@portaldecompraspublicas.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "portaldecompraspublicas.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "daniel.devo@innovateco.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "innovateco.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "gemini@shiprest.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "shiprest.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "reply-f95381d4bb-2b22d53246-e6a7@u.cts.vresp.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "u.cts.vresp.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "amanda.rocha@infojobs.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "infojobs.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "reply-srobh3zxpi2uvpmzwdytzik254.60265@sub.cobasi.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "sub.cobasi.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "rob-essexcapitalgroup.com@shared1.ccsend.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "shared1.ccsend.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "rob@essexcapitalgroup.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "essexcapitalgroup.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "midias@gomaq.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "gomaq.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "lucassaad@surfsupclub.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "surfsupclub.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "position-tracking@semrush.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "semrush.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "reply-lszxwxnmodfujknx2rtpt2jnaa.110058@e.rd.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "e.rd.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "notify@updates.notion.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "updates.notion.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "hello@1password.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "1password.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "reply-dyaxj4nza2mu5n5oc6prsoiyoe.100225@reply.comunicacao.serasaexperian.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "reply.comunicacao.serasaexperian.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "zeno.rocha@resend.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "resend.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "zeno@updates.resend.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "updates.resend.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "vivo@pesquisa.vivo.com.br",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "pesquisa.vivo.com.br",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "contato@ostglobalsolutions.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "ostglobalsolutions.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
-    "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "status": "queued",
+    "score": 50
   },
   {
     "to": "contato@kahunalabs.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "kahunalabs.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@frontlinemsp.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "frontlinemsp.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@wheelhouseit.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "wheelhouseit.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "other",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
   },
   {
     "to": "contato@xovakstudio.com",
-    "name": null,
+    "name": "",
     "subject": "Parceria Zion Tech Group — operações e eficiência para TI",
-    "body": null,
-    "status": "discovered",
-    "source": "historical_email_miner",
-    "source_query": "\"ziontechgroup.com\"",
-    "domain": "xovakstudio.com",
-    "is_generic_provider": false,
-    "is_invalid_domain": false,
-    "is_placeholder_domain": false,
-    "confidence": 2,
-    "category": "tech",
+    "status": "sent",
     "score": 50,
-    "priority": 2,
-    "outreach_ready": true
+    "suppressed_reason": "already_sent"
+  },
+  {
+    "to": "ti@openhab.com",
+    "name": "openHAB",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "t.cohen@ironsrc.com",
+    "name": "T Cohen ironSource",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@volkskrant.nl",
+    "name": "Volkskrant IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@containerd.org",
+    "name": "containerd",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@certmanager.io",
+    "name": "cert-manager",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zoomtopia.com",
+    "name": "ZoomTopia",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "l.yilmaz@ziraatbank.com",
+    "name": "L Yilmaz Ziraat Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "b.davis@zip.co",
+    "name": "B Davis Zip",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zenithbank.com",
+    "name": "Zenith Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zebratech.cl",
+    "name": "Zebratech",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zapper.com",
+    "name": "Zapper",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zantel.co.zw",
+    "name": "Zantel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zamtel.co.zm",
+    "name": "Zamtel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "h.alzain@zainkw.com",
+    "name": "H Alzain Zain KW",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "y.hassan@zain.com",
+    "name": "Y Hassan Zain IQ",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "z.green@yieldify.com",
+    "name": "Z Green Yieldify",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@yara.com",
+    "name": "Yara IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "r.kaya@yapi.com",
+    "name": "R Kaya Yapi Credit",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@yesbank.com",
+    "name": "YES Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "f.brown@xero.com",
+    "name": "F Brown Xero",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@xp.com",
+    "name": "XP Investimentos",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@wrike.com",
+    "name": "Wrike",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "d.wilson@workday.com",
+    "name": "David Wilson",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "u.levi@wix.com",
+    "name": "U Levi Wix",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@wipro.com",
+    "name": "Wipro IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@wienerzeitung.at",
+    "name": "Wiener Zeitung IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "k.walker@westpac.com.au",
+    "name": "K Walker Westpac",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@westinghouse.com",
+    "name": "Westinghouse IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@weke.com.br",
+    "name": "Weke",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@weiler-group.com",
+    "name": "Weiler Group IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@voith.com",
+    "name": "Voith IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "p.arslan@vodafone.com.tr",
+    "name": "P Arslan Vodafone TR",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "d.wilson@vodafone.com.au",
+    "name": "David Wilson",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.jones@vodafone.com.au",
+    "name": "M Jones Vodafone",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vodacom.co.mz",
+    "name": "Vodacom Mozambique",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vodacom.cd",
+    "name": "Vodacom DRC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vodacom.co.ci",
+    "name": "Vodacom Côte d'Ivoire",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vodacomcongo.cd",
+    "name": "Vodacom Congo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@va.ai",
+    "name": "Vital Arts",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@venafi.com",
+    "name": "Venafi",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vellamo.ee",
+    "name": "Vellamo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vattenfall.com",
+    "name": "Vattenfall IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vast.ai",
+    "name": "Vast.ai",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "v.jha@vakeel.com",
+    "name": "V Jha Vakeel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vnpay.com",
+    "name": "VNPay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vnpt.com",
+    "name": "VNPT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@vmware.com",
+    "name": "VMware (Broadcom)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@unitel.co.ao",
+    "name": "Unitel Angola",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@unit4.com",
+    "name": "Unit4",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@unionbankng.com",
+    "name": "Union Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@unicredit.it",
+    "name": "UniCredit IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@utl.co.ug",
+    "name": "UTL",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@usbank.com",
+    "name": "US Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ups.com",
+    "name": "UPS IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ubs.com",
+    "name": "UBS IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@twistlock.com",
+    "name": "Twistlock",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "o.cetin@turkcell.com",
+    "name": "O Cetin Turkcell",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mcafee.com",
+    "name": "McAfee (Trellix)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@travelers.com",
+    "name": "Travelers IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@toyota-global.com",
+    "name": "Toyota IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@totalenergies.com",
+    "name": "TotalEnergies IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@toppay.com",
+    "name": "TopPay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tokiomarine.qa",
+    "name": "Tokyo Marine Qatar",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tokopedia.com",
+    "name": "Tokopedia",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@togotelecom.tg",
+    "name": "Togo Telecom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mosaic.com",
+    "name": "The Mosaic IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hartford.com",
+    "name": "Hartford IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tesskibbutz.com",
+    "name": "Tess Kibbutz",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tencent.com",
+    "name": "Tencent",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tenable.com",
+    "name": "Tenable",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "j.smith@telstra.com",
+    "name": "John Smith",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@telma.mg",
+    "name": "Telma Madagascar",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@telkom.indonesia.net",
+    "name": "Telkom Indonesia",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@telia.com",
+    "name": "Telia Company",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@telenor.no",
+    "name": "Telenor (Nordic)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tele2.lt",
+    "name": "Tele2 Lithuania",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tele2.ee",
+    "name": "Tele2 Estonia",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@techmahindra.com",
+    "name": "Tech Mahindra IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tauron.pl",
+    "name": "Tauron (Polish energy)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "r.sharma@tata.com",
+    "name": "R Sharma Tata",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "r.singh@elxsi.com",
+    "name": "R Singh Elxsi",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tcs.com",
+    "name": "TCS IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tantel.co.tz",
+    "name": "TANTEL",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tanzaniangas.co.tz",
+    "name": "Tanzania Gas",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tanesco.co.tz",
+    "name": "TANESCO",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@tamara.ae",
+    "name": "Tamara",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@taz.ch",
+    "name": "TAZ IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "b.davis@tableau.com",
+    "name": "Ben Davis",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "c.johnson@tableau.com",
+    "name": "Chris Johnson",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@trumpf.com",
+    "name": "TRUMPF IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sz.de",
+    "name": "SZ IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sysdig.com",
+    "name": "Sysdig",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bluewin.ch",
+    "name": "Bluewin IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@swedbank.se",
+    "name": "Swedbank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "t.verma@sumologic.com",
+    "name": "T. Verma",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sumup.com",
+    "name": "SumUp",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@stripe.com",
+    "name": "Stripe",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@statefarm.com",
+    "name": "State Farm IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sbi.co.in",
+    "name": "State Bank of India IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@standardchartered.com",
+    "name": "Standard Chartered IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@standardbank.com",
+    "name": "Standard Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@splunk.com",
+    "name": "Splunk",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "u.pandey@splunk.com",
+    "name": "U. Pandey",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sophos.com",
+    "name": "Sophos",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@somos.seguros",
+    "name": "Somos Seguros",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "satoh@softbank.jp",
+    "name": "Satoh Softbank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sg.fr",
+    "name": "Société Générale IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@smart.com",
+    "name": "Smart Communications",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@slovnaft.sk",
+    "name": "Slovnaft (Slovak oil)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@slack.com",
+    "name": "Slack",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@skype.ee",
+    "name": "Skype (Estonia)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@similarity.com",
+    "name": "Similarity",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@siemens.com",
+    "name": "Siemens IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@shopify.com",
+    "name": "Shopify",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@shopee.com",
+    "name": "Shopee",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "x.verma@shipsy.com",
+    "name": "X Verma Shipsy",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@shinhan.com",
+    "name": "Shinhan Bank TI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@shell.com",
+    "name": "Shell IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@seychellestelecom.sc",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@servicenow.com",
+    "name": "ServiceNow",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "l.taylor@servicenow.com",
+    "name": "Lisa Taylor",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sergio.es",
+    "name": "Sergio (Spanish tech)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sentinelone.com",
+    "name": "SentinelOne",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sender.ee",
+    "name": "Sender",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sendgrid.com",
+    "name": "SendGrid",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@seguros.chile",
+    "name": "Seguros Chile",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@securityeducation.com",
+    "name": "Security Education",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@scaleway.com",
+    "name": "Scaleway",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.gupta@scaler.com",
+    "name": "Mohan Gupta",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@samsung.com",
+    "name": "Samsung IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "j.smith@salesforce.com",
+    "name": "John Smith",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@salesforce.com",
+    "name": "Salesforce",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "k.walker@salesforce.com",
+    "name": "Kevin Walker",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@m-pesa.com",
+    "name": "M-Pesa",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@safaricom.co.ke",
+    "name": "Safaricom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sf-institut.com",
+    "name": "SNCF IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@senelec.sn",
+    "name": "SENELEC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@seb.lv",
+    "name": "SEB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sbb.ch",
+    "name": "SBB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rwandanpower.rw",
+    "name": "REG (Rwanda energy)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rubrik.com",
+    "name": "Rubrik",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rbs.co.uk",
+    "name": "RBS IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rossatom.ru",
+    "name": "Rosatom IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rocketseat.com.br",
+    "name": "Rocketseat",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@riskified.com",
+    "name": "Riskified",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "yamamoto@ricoh.co.jp",
+    "name": "Yamamoto Ricoh",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@revolut.com",
+    "name": "Revolut TI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@resto.com",
+    "name": "Resto",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@renovera.com",
+    "name": "Renovera",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@renfe.com",
+    "name": "Renfe IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@redpanda.com",
+    "name": "Redpanda (Kafka compatible)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "h.murphy@redpanda.com",
+    "name": "Helen Murphy",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@redis.io",
+    "name": "Redis",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@raspberrypi.ee",
+    "name": "Raspberry Pi Estonia",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rapid7.com",
+    "name": "Rapid7",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rfi.fr",
+    "name": "RFI IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rabobank.nl",
+    "name": "Rabobank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rabbitmq.com",
+    "name": "RabbitMQ",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rwe.com",
+    "name": "RWE IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@rakbank.ae",
+    "name": "RAKBANK IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@qualcomm.com",
+    "name": "Qualcomm",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@qlip.com",
+    "name": "Qlip",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "e.wilson@qlik.com",
+    "name": "Elena Wilson",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "f.brown@qlik.com",
+    "name": "Frank Brown",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@qnb.com",
+    "name": "QNB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@qslion.com",
+    "name": "Q-Seal",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "i.khalifa@qatarairways.com",
+    "name": "I Khalifa Qatar Airways",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "j.hamad@qnb.com",
+    "name": "J Hamad QNB",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@puppet.com",
+    "name": "Puppet",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@pif.gov.sa",
+    "name": "PIF IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@prudential.com",
+    "name": "Prudential IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@propertyfinder.ae",
+    "name": "Property Finder",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@proofpoint.com",
+    "name": "Proofpoint",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@prometheus.io",
+    "name": "Prometheus",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "w.sharma@prometheus.io",
+    "name": "W. Sharma",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@progressive.com",
+    "name": "Progressive IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@prisma.cloud",
+    "name": "Prisma Cloud (Palo Alto)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@primetals.com",
+    "name": "Primetals IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@pb.com",
+    "name": "Pracuj.Biznes IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@powerdmarc.com",
+    "name": "PowerDMARC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@postmarkapp.com",
+    "name": "Postmark",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@postgresql.org",
+    "name": "PostgreSQL",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@policybazaar.com",
+    "name": "PolicyBazaar",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@polars.rs",
+    "name": "Polars",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "e.wilson@polish.co.nz",
+    "name": "Emma Wilson",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "e.wilson@polaris.co.nz",
+    "name": "E Wilson Polaris",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@plataforma10.com",
+    "name": "Plataforma 10",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@pipedrive.com",
+    "name": "Pipedrive",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@pingidentity.com",
+    "name": "Ping Identity",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@phonepe.com",
+    "name": "PhonePe",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "y.katz@pheez.com",
+    "name": "Y Katz Pheez",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@petrotel.ro",
+    "name": "Petrotel (Romanian oil)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paystack.com",
+    "name": "Paystack",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paymob.com",
+    "name": "Paymob",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paymee.com",
+    "name": "Paymee",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paylocity.com",
+    "name": "Paylocity",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paytabs.com",
+    "name": "PayTabs",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paypay.ne.jp",
+    "name": "PayPay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "endo@paypay.ne.jp",
+    "name": "Endo PayPay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paypal.de",
+    "name": "PayPal DE",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paydunya.com",
+    "name": "PayDunya",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@pathao.com",
+    "name": "Pathao",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "s.konak@papara.com",
+    "name": "S Konak Papara",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@panasonic.com",
+    "name": "Panasonic",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ishikawa@panasonic.com",
+    "name": "Ishikawa Panasonic",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@paloalto.com",
+    "name": "Palo Alto Networks",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@pgn.pl",
+    "name": "PGN (Polish gas network)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@outbrain.com",
+    "name": "Outbrain",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@orange.sn",
+    "name": "Orange Senegal",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@orange.re",
+    "name": "Orange Réunion",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@orange.cd",
+    "name": "Orange RDC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mayotteorange.yt",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@orange.ml",
+    "name": "Orange Mali",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@agenceorange.com",
+    "name": "Orange France IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@orange.ci",
+    "name": "Orange CI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@orange.com",
+    "name": "Orange Business IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@oracle.eloqua.com",
+    "name": "Eloqua",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.jones@optus.com",
+    "name": "Mike Jones",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "j.smith@optus.com",
+    "name": "J Smith Optus",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@openesinternet.it",
+    "name": "OpenESI IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "c.salim@ooredoo.om",
+    "name": "C Salim Ooredoo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "k.almahmoud@ooredoo.qa",
+    "name": "K Almahmoud Ooredoo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@oneidentity.com",
+    "name": "One Identity (Dell)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "a.hussein@omanbank.com",
+    "name": "A Hussein Oman Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@okta.com",
+    "name": "Okta",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@occu.promo",
+    "name": "Occu.Promo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "tanaka@obayashi.co.jp",
+    "name": "Tanaka Obayashi",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@op.fi",
+    "name": "OP Financial IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "n.b.singh@ongc.com",
+    "name": "N B Singh ONGC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nukib.cz",
+    "name": "NÚKIB (Czech cyber)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nubank.com.br",
+    "name": "Nubank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nubank.com",
+    "name": "Nubank TI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "v.bansal@nsopera.com",
+    "name": "V Bansal NsOp era",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nordea.com",
+    "name": "Nordea IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nokia.com",
+    "name": "Nokia IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nexedi.com",
+    "name": "Nexedi",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@newrelic.com",
+    "name": "New Relic",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "a.kumar@newrelic.com",
+    "name": "Amit Kumar",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "v.jha@newrelic.com",
+    "name": "Vijay Jha",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@neverbounce.com",
+    "name": "NeverBounce",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ns.gov",
+    "name": "Network Rail IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nessus.org",
+    "name": "Tenable Nessus",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nequi.com",
+    "name": "Nequi",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nepal.bank.com",
+    "name": "Nepal Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@neon.com",
+    "name": "Neon IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@neobanco.com.br",
+    "name": "Neobanco",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nedbank.co.za",
+    "name": "Nedbank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ncb.com.sa",
+    "name": "NCB (AlAhli) IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@natwest.com",
+    "name": "NatWest IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ntc.com",
+    "name": "NTC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "u.pandey@nrah.in",
+    "name": "U Pandey NRAH",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nmb.co.zw",
+    "name": "NMB Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nginx.com",
+    "name": "NGINX Ingress",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@nec.com",
+    "name": "NEC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "nakamura@nec.com",
+    "name": "Nakamura NEC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kwtbank.com",
+    "name": "National Bank of Kuwait",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cncbanka.com",
+    "name": "National Bank of Kuwait IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@n26.com",
+    "name": "N26",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mythic.ai",
+    "name": "Mythic",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@amsterdam.nl",
+    "name": "Amsterdam IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@movitel.co.mz",
+    "name": "Movitel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@monified.com",
+    "name": "Monified",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@monday.com",
+    "name": "Monday",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "w.levine@molnix.com",
+    "name": "W Levine Molnix",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@modal.com",
+    "name": "Modal",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mobilepay.dz",
+    "name": "MobilePay Algeria",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mindtree.com",
+    "name": "Mindtree IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mimecast.com",
+    "name": "Mimecast (Sky),",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@azureedge.com",
+    "name": "Azure Edge",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@microsoft.com",
+    "name": "Microsoft",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@teams.microsoft.com",
+    "name": "Microsoft Teams",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@metlife.com",
+    "name": "MetLife",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mercari.com",
+    "name": "Mercari",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "murata@mercari.com",
+    "name": "Murata Mercari",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mercadolibre.com",
+    "name": "Mercado Libre",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mercadopago.com",
+    "name": "Mercado Pago",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mnba.com",
+    "name": "Meraas National Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@meituan.com",
+    "name": "Meituan",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "x.goldberg@megaport.com",
+    "name": "X Goldberg Megaport",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mediamath.com",
+    "name": "MediaMath",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@meditech.com",
+    "name": "MediTech",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@med-tech.co.il",
+    "name": "Med-Tech Israel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mauritiustelecom.mu",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@matic.ca",
+    "name": "Matic",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@marketo.com",
+    "name": "Marketo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mariadb.com",
+    "name": "MariaDB",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@magicbricks.com",
+    "name": "MagicBricks",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mtn.co.rw",
+    "name": "MTN Rwanda",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mtn.com",
+    "name": "MTN Nigeria",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mol.hu",
+    "name": "MOL (Hungarian oil)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@mlflow.org",
+    "name": "MLflow",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@man-es.com",
+    "name": "MAN Energy Solutions IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@linea.com",
+    "name": "Línea",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lubo.bg",
+    "name": "Lubo (Bulgarian tech)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@loki.com",
+    "name": "Loki",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lora-alliance.com",
+    "name": "LoRa Alliance",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lloydsbankinggroup.com",
+    "name": "Lloyds IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@linkerd.io",
+    "name": "Linkerd",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@linkhub.ee",
+    "name": "LinkHub",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@liebherr.com",
+    "name": "Liebherr IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@libertymutual.com",
+    "name": "Liberty Mutual IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lenovoemc.com",
+    "name": "Lenovo EMC (Edge)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lemonade.com",
+    "name": "Lemonade",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.gupta@slayer.com",
+    "name": "M Gupta LegalSlayer",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "l.singh@legal.com",
+    "name": "L Singh LegalFvy",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@leadingloop.com",
+    "name": "LeadingLoop",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@leparisien.fr",
+    "name": "LeParisien IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lemonde.fr",
+    "name": "LeMonde IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lavatech.com",
+    "name": "Lava IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@landosi.com",
+    "name": "Land O Lakes IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lastampa.it",
+    "name": "LaStampa IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@repubblica.it",
+    "name": "Repubblica IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "nishida@line.me",
+    "name": "Nishida LINE",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@lg.com",
+    "name": "LG IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kubernetes.io",
+    "name": "Kubernetes",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kotak.com",
+    "name": "Kotak Mahindra IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kookmin.com",
+    "name": "Kookmin Bank TI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "v.moskowitz@kondukto.io",
+    "name": "V Moskowitz Kondukto",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kochindustries.com",
+    "name": "Koch Industries IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@knowbe4.com",
+    "name": "KnowBe4",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@klaviyo.com",
+    "name": "Klaviyo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@klaro.com",
+    "name": "Klaro",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@klarna.com",
+    "name": "Klarna",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@klarna.ae",
+    "name": "Klarna MEA",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kiber.net",
+    "name": "Kiber (Ukraine cybersecurity)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@khaasan.com",
+    "name": "Khaasan",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kenyapower.co.ke",
+    "name": "Kenya Power",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kcbgroup.com",
+    "name": "KCB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kenyaairways.com",
+    "name": "Kenya Airways",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kaspersky.com",
+    "name": "Kaspersky",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@karurvaishnavi.com",
+    "name": "KVB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kuka.com",
+    "name": "KUKA IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kleo.com",
+    "name": "Kleo IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kddi.com",
+    "name": "KDDI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "kobayashi@kddi.com",
+    "name": "Kobayashi KDDI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kbc.com",
+    "name": "KBC IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@jira.com",
+    "name": "Jira",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "s.patel@jindal.com",
+    "name": "S Patel Jindal",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@jenkins.io",
+    "name": "Jenkins",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@jaeger.com",
+    "name": "Jaeger",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@jrcentral.co.jp",
+    "name": "JR Central IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@iterable.com",
+    "name": "Iterable",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@itau.com",
+    "name": "Itau",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "n.ertas@istanbuldev.com",
+    "name": "N Ertas IstanbulDev",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@intesa.it",
+    "name": "Intesa Sanpaolo IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ias.com",
+    "name": "Integral Ad Science",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@insurity.com",
+    "name": "Insurity",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@insurance.mx",
+    "name": "Insurance Mexico",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@insurtech.com",
+    "name": "InsurTech",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@instanteft.com",
+    "name": "Instant EFT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@infobanc.com",
+    "name": "Info Connect IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@infosys.com",
+    "name": "Infosys IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@inferencenet.com",
+    "name": "Inference.net",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ilmatin.it",
+    "name": "IlMatin IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@iberdrola.com",
+    "name": "Iberdrola IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ibanc.com",
+    "name": "Ibanc",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@uis.rs",
+    "name": "IUS (Serbian telecom)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "q.kumar@irctc.com",
+    "name": "Q Kumar IRCTC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "l.taylor@ing.com.au",
+    "name": "L Taylor ING",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ing.com",
+    "name": "ING IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@idfc.com",
+    "name": "IDFC First Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@icicibank.com",
+    "name": "ICICI Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ibmsecurity.com",
+    "name": "IBM Security",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hyundai.com",
+    "name": "Hyundai IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@huggingface.co",
+    "name": "Hugging Face",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@huber-technik.com",
+    "name": "Huber Technik IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@housing.com",
+    "name": "Housing.com",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@homerun.ae",
+    "name": "HomeRun",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "s.tanaka@hitachi.com",
+    "name": "Tanaka Hitachi",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@highspot.com",
+    "name": "Highspot",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@helpscout.com",
+    "name": "Help Scout",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@helm.sh",
+    "name": "Helm",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@heise.de",
+    "name": "Heise IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hashicorp.com",
+    "name": "HashiCorp Vault",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@handelsblatt.com",
+    "name": "Handelsblatt IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hackerone.ae",
+    "name": "HackerOne MEA",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hpeedge.com",
+    "name": "HPE Edge-to-Cloud",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hennig.com",
+    "name": "Hennig IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hdfcbank.com",
+    "name": "HDFC Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@hcltech.com",
+    "name": "HCLTech IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@guardicore.com",
+    "name": "Guardicore (Akamai)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@gtbank.com",
+    "name": "GTBank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@groq.com",
+    "name": "Groq",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "v.bansal@grafana.com",
+    "name": "V. Bansal",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@grafana.com",
+    "name": "Grafana",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@grab.com",
+    "name": "Grab",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@googlegroups.com",
+    "name": "Google Workspace",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bigquery.com",
+    "name": "Google BigQuery",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@googleadservices.com",
+    "name": "Google Ad Services",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@gitlab.com",
+    "name": "GitLab",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ghanaiantel.com",
+    "name": "GhanaTel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@getinbank.pl",
+    "name": "Getin Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@getresponse.com",
+    "name": "GetResponse",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@georgianrailway.ge",
+    "name": "Georgian Railway",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@genomica.com.br",
+    "name": "Genômica",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@genome.mx",
+    "name": "Genomica Mexico",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@genome.cl",
+    "name": "Genome Chile",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@geenstijl.nl",
+    "name": "Geenstijl IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@habana.ai",
+    "name": "Habana (Intel)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@gateley.ae",
+    "name": "Gateley ME",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@grob.com",
+    "name": "GROB Werkmaschinen IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@gls-group.com",
+    "name": "GLS IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@glo.com",
+    "name": "GLO Telecom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@geodis.com",
+    "name": "GEODIS IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@gem.com",
+    "name": "GEM",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@geico.com",
+    "name": "GEICO IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "kondo@fujitsu.com",
+    "name": "Kondo Fujitsu",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@freshworks.com",
+    "name": "Freshworks",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@free.fr",
+    "name": "Free (France telecom)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@faz.net",
+    "name": "FAZ IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@fnb.co.za",
+    "name": "FNB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@fintech.co",
+    "name": "Fintech Colombia",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@fintechkuwait.com",
+    "name": "Fintech Kuwait",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.ozdemir@finansal.com",
+    "name": "M Ozdemir Finansal",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@federalbank.co.in",
+    "name": "Federal Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@fedex.com",
+    "name": "FedEx IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@fastly.com",
+    "name": "Fastly",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@frakt.ro",
+    "name": "FRACT (Romanian insurance)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@firstnationalbank.co.za",
+    "name": "First National Bank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@fives.com",
+    "name": "FIVES IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@exxonmobil.com",
+    "name": "ExxonMobil IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@experian.com",
+    "name": "Experian",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@expansion.es",
+    "name": "Expansion IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@everlife.com",
+    "name": "Everlife",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ethiopianpower.com",
+    "name": "Ethiopian Electric Power",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ethioswitch.et",
+    "name": "EthioSwitch",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ethiosh.pizza",
+    "name": "EthioSH Pizza",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ethiopianbel.com",
+    "name": "EthioBel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ethiotelecom.et",
+    "name": "Ethio Telecom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "a.kumar@essel.com",
+    "name": "A Kumar Essel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ericsson.com",
+    "name": "Ericsson IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@equifax.com",
+    "name": "Equifax",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@enel.com",
+    "name": "Enel IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@endesa.com",
+    "name": "Endesa IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@enbw.com",
+    "name": "EnBW IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@emiratesnbd.com",
+    "name": "Emirates NBD IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@emarsys.com",
+    "name": "Emarsys",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@edoenergia.com",
+    "name": "EDP IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "l.singh@elastic.co",
+    "name": "Lal Singh",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.gupta@elastic.co",
+    "name": "Mohan Gupta",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@eldiario.es",
+    "name": "El Diario IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@econet.com",
+    "name": "Econet",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ecobank.com",
+    "name": "Ecobank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@esan.ro",
+    "name": "ESAN (Romanian IT)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@endeangola.ao",
+    "name": "ENDE Angola",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@eett.gr",
+    "name": "EETT (Greek telecom regulator)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ee.co.uk",
+    "name": "EE (BT)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@edp.com",
+    "name": "EDP Renewables IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@edm.co.mz",
+    "name": "EDM Mozambique",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@edf.fr",
+    "name": "EDF IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@e-on.de",
+    "name": "E.ON IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "q.kumar@dynatrace.com",
+    "name": "Q. Kumar",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "r.singh@dynatrace.com",
+    "name": "R. Singh",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@belastingdienst.nl",
+    "name": "Belastingdienst IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@duo.com",
+    "name": "Duo (Cisco)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@duckdb.org",
+    "name": "DuckDB",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dib.ae",
+    "name": "Dubai Islamic Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@drone.io",
+    "name": "Drone CI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dreyfus.com",
+    "name": "Dreyfus IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@document360.com",
+    "name": "Document360",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@djopay.dj",
+    "name": "Djopay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@digitalhouse.com.br",
+    "name": "Digital House",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "p.rao@digi.com",
+    "name": "P Rao DigiLocker",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@digi.ro",
+    "name": "Digi (Romanian telecom)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dialog.lk",
+    "name": "Dialog",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@db.com",
+    "name": "Deutsche Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@db.de",
+    "name": "Deutsche Bahn IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@derstandard.at",
+    "name": "Der Standard IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@demandbase.com",
+    "name": "Demandbase",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "w.sharma@delyro.com",
+    "name": "W Sharma DelyRo",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@delo.sk",
+    "name": "Delo (Slovak media)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@datadog.com",
+    "name": "Datadog",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "p.rao@datadog.com",
+    "name": "Pradeep Rao",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "n.b.singh@datadog.com",
+    "name": "N.B. Singh",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@databricks.com",
+    "name": "Databricks",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@danske.dk",
+    "name": "Danske Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@damani.com",
+    "name": "Damani",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dvc.org",
+    "name": "DVC (Data Version Control)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "t.verma@drdo.com",
+    "name": "T Verma DRDO",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dpd.com",
+    "name": "DPD IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dnb.no",
+    "name": "DNB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dmgmori.com",
+    "name": "DMG MORI IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dmarcian.com",
+    "name": "DMARCian",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dhl.com",
+    "name": "DHL IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@dnb.com",
+    "name": "Dun & Bradstreet",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cybereco.com",
+    "name": "Cybereco",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cbarcy.com.cy",
+    "name": "CyBarCy",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@credit-agricole.fr",
+    "name": "Crédit Agricole IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@crownlogistics.com",
+    "name": "Crown Logistics IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@crowdstrikethreatgraph.com",
+    "name": "Threat Graph",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@crowdstrike.com",
+    "name": "CrowdStrike",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@croatie.com",
+    "name": "Croatie (Croatian IT)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@creditas.com",
+    "name": "Creditas",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@credit-suisse.com",
+    "name": "Credit Suisse IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@coreweave.com",
+    "name": "CoreWeave",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@converbox.com",
+    "name": "ConverBox",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@conocophillips.com",
+    "name": "ConocoPhillips IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@zigbee.com",
+    "name": "Zigbee Alliance",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@confluent.io",
+    "name": "Confluent (Kafka)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "g.taylor@confluent.io",
+    "name": "Gary Taylor",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@concerto.ca",
+    "name": "Concerto",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@comorostelecom.km",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@commvault.com",
+    "name": "Commvault",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@commerzbank.com",
+    "name": "Commerzbank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "r.brown@commbank.com.au",
+    "name": "R Brown CommBank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@comet.ml",
+    "name": "Comet ML",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@com.pt",
+    "name": "Com (Portuguese tech)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cognizant.com",
+    "name": "Cognizant IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cockroachlabs.com",
+    "name": "CockroachDB",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cloudformation.com",
+    "name": "CloudFormation",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@clearbit.com",
+    "name": "Clearbit",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bancocitibank.com.br",
+    "name": "Citibank Brasil IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cisco.com",
+    "name": "Cisco Security",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@circleci.com",
+    "name": "CircleCI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@chubb.ae",
+    "name": "Chubb UAE",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@chubb.com",
+    "name": "Chubb IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@chevron.com",
+    "name": "Chevron IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@checkout.com",
+    "name": "Checkout.com",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@chase.com",
+    "name": "Chase",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cerner.com",
+    "name": "Cerner",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bcb.com.bh",
+    "name": "Bahrain Central Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cellulant.com",
+    "name": "Cellulant",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cartlow.com",
+    "name": "Cartlow",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cargill.com",
+    "name": "Cargill IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@careem.com",
+    "name": "Careem",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@carwale.com",
+    "name": "CarWale",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@capitecbank.co.za",
+    "name": "Capitec IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@camtel.ci",
+    "name": "CAMTEL",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@camelec.com",
+    "name": "Camelec",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@caixabank.es",
+    "name": "CaixaBank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cablenet.com.cy",
+    "name": "CabinetNet",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@cdp.com",
+    "name": "CDP Institute",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "f.nasser@cbk.com",
+    "name": "F Nasser CBK",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "z.karim@cbankiq.com",
+    "name": "Z Karim CBank IQ",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@caixa.gov.ro",
+    "name": "CAIXA (Romanian state)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "s.mehta@cdac.com",
+    "name": "S Mehta C-DAC",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@burkinatelecom.bf",
+    "name": "Burkina Telecom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bunge.com",
+    "name": "Bunge IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@buildkite.com",
+    "name": "Buildkite",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@buddy.works",
+    "name": "Buddy Works",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@sendinblue.com",
+    "name": "Sendinblue",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@brainshark.com",
+    "name": "Brainshark",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@brahm.ca",
+    "name": "Brahm",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bradesco.com",
+    "name": "Bradesco IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@boschrexroth.com",
+    "name": "Bosch Rexroth IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bitbucket.com",
+    "name": "Bitbucket",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@biotrack.com",
+    "name": "BioTrack",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@binaryhealth.com",
+    "name": "Binary Health",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@binance.ca",
+    "name": "Binance",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bild.de",
+    "name": "Bild IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@beyondtrust.com",
+    "name": "BeyondTrust",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@berkshirehathaway.com",
+    "name": "Berkshire Hathaway IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@benintelecom.bj",
+    "name": "Benin Telecom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@benchmarkemail.com",
+    "name": "Benchmark Email",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@beckhoff.com",
+    "name": "Beckhoff IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "e.rashid@batelco.com",
+    "name": "E Rashid Batelco",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@barclays.com",
+    "name": "Barclays TI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bankausterity.com",
+    "name": "Banka",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "b.ali@bankmuscat.com",
+    "name": "B Ali BankMuscat",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bankmuscat.com",
+    "name": "BankMuscat IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bankofbaroda.com",
+    "name": "BoB IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@banglalink.com",
+    "name": "BanglaLink",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bb.com.br",
+    "name": "Banco do Brasil IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@santander.com",
+    "name": "Santander IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bancooriginal.com.br",
+    "name": "Banco Original IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bancojohnson.com.br",
+    "name": "Banco Johnson IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@inter.com.br",
+    "name": "Inter IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@balena.io",
+    "name": "Balena",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bahraininsurance.com",
+    "name": "Bahrain Insurance",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bsnl.co.in",
+    "name": "BSNL IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bpi.com",
+    "name": "BPI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bp.com",
+    "name": "BP IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bnpparibasfortis.com",
+    "name": "BNP Paribas Fortis IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bnpparibas.com",
+    "name": "BNP Paribas IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "d.jawad@shu.com",
+    "name": "D Jawad SHU",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bfmtv.com",
+    "name": "BFM TV IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bca.co.id",
+    "name": "BCA",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@bbva.es",
+    "name": "BBVA IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@axisbank.com",
+    "name": "Axis Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@aviva.com",
+    "name": "Aviva IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@avasportugal.pt",
+    "name": "AvaPortugal IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@atlassian.com",
+    "name": "Atlassian",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@athenselectric.com",
+    "name": "Athens Electric",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@asana.com",
+    "name": "Asana",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@argoproj.io",
+    "name": "Argo (CNCF)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@argentina.fintech.ar",
+    "name": "Argentina Fintech",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@areva.com",
+    "name": "Areva IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@aramex.com",
+    "name": "Aramex IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@appsflyer.com",
+    "name": "AppsFlyer",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@foundationdb.com",
+    "name": "FoundationDB (Apple)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@appnexus.com",
+    "name": "AppNexus",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "r.sharma@appdynamics.com",
+    "name": "Ravi Sharma",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "s.patel@appdynamics.com",
+    "name": "Sunil Patel",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ansible.com",
+    "name": "Ansible",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@anomali.com",
+    "name": "Anomali",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@angolatelecom.ao",
+    "name": "Angola Telecom",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@andritz.com",
+    "name": "Andritz IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@amtrak.com",
+    "name": "Amtrak IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@kinesis.amazonaws.com",
+    "name": "AWS Kinesis",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@amana.com",
+    "name": "Amana",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@alura.com.br",
+    "name": "Alura",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@allstate.com",
+    "name": "Allstate IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@allianz.com",
+    "name": "Allianz IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@aliorbank.pl",
+    "name": "Alior Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "g.alhamed@ghanin.com",
+    "name": "G Alhamed Al-Ghanim",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@badelex.com",
+    "name": "Al Rajhi Investment TI",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@alrajhibank.com",
+    "name": "Al Rajhi Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "q.demir@akbank.com",
+    "name": "Q Demir Akbank",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@airtel.com",
+    "name": "Airtel Africa",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@agari.com",
+    "name": "Agari (Proofpoint)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "a.miller@afterpay.com.au",
+    "name": "A Miller Afterpay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "c.johnson@afterpay.co.nz",
+    "name": "C Johnson Afterpay",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "m.jones@adobe.com",
+    "name": "Mike Jones",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "a.miller@adobe.com",
+    "name": "Amy Miller",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@adisseo.com",
+    "name": "Adisseo IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@adafruit.com",
+    "name": "Adafruit",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@acciona.com",
+    "name": "Acciona IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@accessbankplc.com",
+    "name": "Access Bank IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@accelera.com.br",
+    "name": "Accelera",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@axa.com",
+    "name": "AXA",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@astvz.com",
+    "name": "ASTVZ",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@aspt.ro",
+    "name": "ASPT (Romanian pension)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "g.taylor@asb.co.nz",
+    "name": "G Taylor ASB",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "h.murphy@anz.co.nz",
+    "name": "H Murphy ANZ NZ",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "d.wilson@anz.com.au",
+    "name": "D Wilson ANZ",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@amd.com",
+    "name": "AMD",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@admanager.com",
+    "name": "ADManager",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@adaxs.com",
+    "name": "ADAXS",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@acbg.com",
+    "name": "ACB (Bulgaria)",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@absa.co.za",
+    "name": "ABSA IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@abn-amro.com",
+    "name": "ABN AMRO IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@abc.es",
+    "name": "ABC IT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@benefit.com.bh",
+    "name": " BENEFIT",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 1
+  },
+  {
+    "to": "ti@ ziraatbank.com.tr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ zip.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ zambia.co.zm",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ zainkw.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ yieldify.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ yapi.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ xero.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ xp.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "chioma.okeke@workforce.ng",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ wix.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ westpac.com.au",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nadia.bouaziz@weavetech.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "tomas.berg@waterpulse.se",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "chen.wei@watermaster.tw",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@wلإتاحة.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ vodafone.com.tr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ voda.com.au",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ vodacom.co.mz",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ vodacom.cd",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ vodacom.co.ci",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "sylvia.ross@vidifikasi.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ vakeel.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "kimberly.smith@unitrade.tt",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ unitel.co.ao",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ unitel.la",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "andres.rodriguez@transfer360.hn",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "james.miller@tradetech.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "yeo.chen@tradeskills.sg",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jmiki@toyota.com",
+    "name": "Miki Toyota",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@tokio marine.qa",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@togo telecom.tg",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "chen.wei@tiledmap.cn",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "elena.popov@tilastokeskus.fi",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "soo.jin@textilemap.kr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "tomas.novak@texchain.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@tess kibbutz.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "francis.reyes@tempcontrol.ph",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@telkomindonesia.net",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "mark.johnson@telematics4u.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nadia.ibrahim@techweld.ae",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ tataelxsi.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jonas.karlsson@talentify.se",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ tselcom.tl",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ tbcbank.ge",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ swazi.af",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "chitra.patel@stitchtrace.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ standardbank.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "marco.romano@sportradarplus.it",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "mohammed.allen@spacebound.eg",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "amina.diallo@soundenvironment.ml",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ sbt.co.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nadia.santos@skytribe.com.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "priya.sharma@skillindia.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ similarity.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "helene.dubois@silvercare.fr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ shipsy.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jose.mendez@shippingos.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ seychellesbank.sc",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "kwesi.mensah@seniorconnect.com.gh",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "harry.ng@seahub.com.hk",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carlos.mendes@satellitetracks.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ southernafrica.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "robert.bauer@rocketparts.at",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nikhil.sharma@rocksolid.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "bruno.silva@residuzero.pt",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nadia.saeed@reefer.app",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "thomas.mueller@rechtscloud.de",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carl.sorensen@realfood.dk",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "priya.naik@realpha.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "rafael.santos@rhnet.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ qnb.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "lars.nielsen@propertyinnovation.dk",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "james.mccarthy@propdaddy.ie",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "james.cunningham@procore.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ramesh.patel@predictivemro.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ postmarkapp.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nils.jensen@portflow.dk",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "aisha.rahman@portcall.com.bd",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ polaris.co.nz",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ana.mendes@playstream.com.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ pheez.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "toshi.yamamoto@petlog.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "laura.silva@petconnect.com.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jennifer.chen@petcareplus.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "raymond.kamau@pesapal.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "chinedu.okonkwo@paystack.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "maria.hernandez@pagomovil.cr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ ozow.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "alex.muller@orbital-logistics.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ orange.sn",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "amara.diop@orangemoney.sn",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ orange.ci",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@oracleeloqua.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ ooredoo.om",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ omanbank.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carlos.garcia@oficinadigital.cl",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carlos.rendon@obrabim.com.mx",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ obayashi.co.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "n.bsingh@ongc.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ ongc.gov.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "priya.menon@nutrilab.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ nsopera.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "anna.kowalski@nierzadurowy.pl",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "linda.anderson@ngex.com.au",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@nepalbank.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ ntt.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ nets.com.sg",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ mytel.com.mm",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ mozambique.bank",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ movitel.co.mz",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ molnix.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "pablo.ruiz@광산.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carlos.silva@mineradigital.pe",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jason.lee@minetech.com.au",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "marko.stefanovic@minecon.rs",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "alejandro.garcia@microbeta.com.gt",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ mercari.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "maria.lopez@mayorespro.com.mx",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ maybank2u.com.my",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "luis.garcia@mascotai.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "massimo.romano@marinetracking.tech",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "vincenzo.rossi@maltainternship.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ madagasib.mg",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ilias.papadopoulos@mrosupply.gr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jose.hernandez@mrocloud.com.mx",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "tomas.kowalski@mrobank.pl",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carlos.santos@mroadvantage.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jose.menendez@mapofood.com.ar",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "hiroshi.nakamura@lunardata.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "paul.dubois@lexbase.fr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ lemonade.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "anna.svensson@legaltech.se",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ legalslayer.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "giuseppe.rossi@legalease.it",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "rajesh.kumar@legaldesk.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "juan.perez@leaderboard.mx",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nancy.wanjiku@lawpadi.co.ke",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ livw.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jane.murphy@ketodash.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@kenya power.co.ke",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@kenya airways.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ kddi.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ jindal.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ iterable.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ istanbuldev.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ ias.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "david.williams@isl.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "thabo.mobotle@instantpinvest.co.bw",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@instant eft.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "li.wei@innovprotein.cn",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jean.bisimwa@inflitr.ao",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "rafael.santos@imobiliaria.tech",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ ibanc.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ibm security.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "kofi.boateng@hubtel.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "stanaka@hitachi.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "priya.sharma@hiremee.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@help scout.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "marcos.almeida@hrflow.com.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "yuki.tanaka@hrbrain.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "silvia.lopez@greenenergy.sh",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@georgian railway.ge",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "sven.nordqvist@gamelift.se",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ fujitsu.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "clara.bell@freshbox.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nadia.chen@flowmonbx.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "omar.hassan@fleetpulse.eg",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "eduardo.santos@fleetgreen.com.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "julie.martin@fleetbudget.fr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "praful.patel@fitnesschain.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@fintech kuwait.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "carlos.mendez@finsus.com.ni",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "tom.williams@fiddle.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ fawry.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "juan.santos@fabriq.com.co",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ fnb.co.za",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "laura.smith@eventrace.co.uk",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ethio telecom.et",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ramesh.patel@estement.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "sachiko.yamada@eldertech.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ econet.co.zw",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "rachel.fleming@ecomis.cr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "rishi.bajaj@easifleet.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ edm.co.mz",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "rafael.dosilva@e13.com.br",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "emma.wilson@dogfit.co.uk",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "raj.patel@digicel.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ drdo.gov.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "louis.philippe@dhos.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ creditas.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "marc.dupont@constructdev.fr",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ commbank.com.au",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "priya.das@coldtrack.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "lucas.mendes@coldchain.tech",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "josue.ortiz@coldchain.mx",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "mark.carter@coachmetrics.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "pawan.singh@cleanairearth.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "nina.johnson@circulareconomy.co.za",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "michael.green@carboncloud.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ cbk.com.kw",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ cbankiq.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "sofia.larsson@byggmeta.se",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "hafiz.rahman@buildquant.com.bd",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ bruneipay.com.bn",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ botswanabank.co.bw",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ bankofmauritius.mu",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "juan.pablo@bitso.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@binary health.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "thomas.mueller@betreungdug.de",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ benji.bank.na",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "omar.james@bahamasdev.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ibrahim.traore@bimi.bf",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "mukhtar.ali@bimaafrica.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ bdeed.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ bai.ao",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "roland.ngassa@azuri.co.tz",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "yuki.suzuki@athledata.jp",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ armtelecom.am",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@argentinafintech.ar",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ appsflyer.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "alex.kim@anti-cheat.io",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "jose.romero@agrowaste.mx",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "mario.beltran@agritech.gt",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "priya.sharma@aerogel.co.in",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ astvz.com",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "fatima.zaid@aquaiq.ae",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
+  },
+  {
+    "to": "ti@ anz.co.nz",
+    "name": "",
+    "subject": "Introduction",
+    "status": "queued",
+    "score": 0
   }
 ]

@@ -1,99 +1,61 @@
-{
-  "summary": {
-    "total_crawled": 8,
-    "http_200": 8,
-    "broken_count": 0,
-    "redirect_count": 7,
-    "elapsed_s": 0,
-    "script": "automation/check_routes.py",
-    "timestamp": "2026-09-08T01:55:00-03:00",
-    "probe_timestamp": "2026-09-08T11:06:53.667725+00:00"
-  },
-  "broken": [],
-  "redirects": [
-    "https://ziontechgroup.com/public-roadmap",
-    "https://ziontechgroup.com/status-page",
-    "https://ziontechgroup.com/use-cases",
-    "https://ziontechgroup.com/solutions/healthcare",
-    "https://ziontechgroup.com/industries/financial-services",
-    "https://ziontechgroup.com/free-consultation",
-    "https://ziontechgroup.com/tools/phishing-analyzer"
-  ],
-  "latest_probe": [
-    {
-      "path": "/",
-      "status_code": 200,
+"timestamp": "2026-09-08 04:04:57",
+  "site": "https://ziontechgroup.com",
+  "routes_checked": 10,
+  "routes": {
+    "/": {
+      "status": 200,
+      "size_bytes": 46592,
       "final_url": "https://ziontechgroup.com/"
     },
-    {
-      "path": "/about",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/about/"
-    },
-    {
-      "path": "/services",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/services/"
-    },
-    {
-      "path": "/solutions",
-      "status_code": 200,
-      "final_url": "https://ziontechgroup.com/solutions"
-    },
-    {
-      "path": "/industries",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/industries/"
-    },
-    {
-      "path": "/free-consultation",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/free-consultation/"
-    },
-    {
-      "path": "/status-page",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/status-page/"
-    },
-    {
-      "path": "/public-roadmap",
-      "status_code": 301,
+    "/public-roadmap": {
+      "status": 200,
+      "size_bytes": 784,
       "final_url": "https://ziontechgroup.com/public-roadmap/"
     },
-    {
-      "path": "/tools/phishing-analyzer",
-      "status_code": 301,
+    "/status-page": {
+      "status": 200,
+      "size_bytes": 776,
+      "final_url": "https://ziontechgroup.com/status-page/"
+    },
+    "/use-cases": {
+      "status": 200,
+      "size_bytes": 1148,
+      "final_url": "https://ziontechgroup.com/use-cases/"
+    },
+    "/solutions/healthcare": {
+      "status": 200,
+      "size_bytes": 840,
+      "final_url": "https://ziontechgroup.com/solutions/healthcare/"
+    },
+    "/industries/financial-services": {
+      "status": 200,
+      "size_bytes": 864,
+      "final_url": "https://ziontechgroup.com/industries/financial-services/"
+    },
+    "/free-consultation": {
+      "status": 200,
+      "size_bytes": 1081,
+      "final_url": "https://ziontechgroup.com/free-consultation/"
+    },
+    "/tools/phishing-analyzer": {
+      "status": 200,
+      "size_bytes": 4221,
       "final_url": "https://ziontechgroup.com/tools/phishing-analyzer/"
     },
-    {
-      "path": "/contact",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/contact/"
+    "/industries/insurance/": {
+      "status": 200,
+      "size_bytes": 1365,
+      "final_url": "https://ziontechgroup.com/industries/insurance/"
     },
-    {
-      "path": "/careers",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/careers/"
-    },
-    {
-      "path": "/blog",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/blog/"
-    },
-    {
-      "path": "/case-studies",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/case-studies/"
-    },
-    {
-      "path": "/privacy-policy",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/privacy-policy/"
-    },
-    {
-      "path": "/terms",
-      "status_code": 301,
-      "final_url": "https://ziontechgroup.com/terms/"
+    "/industries/legal/": {
+      "status": 200,
+      "size_bytes": 1333,
+      "final_url": "https://ziontechgroup.com/industries/legal/"
     }
-  ]
+  },
+  "summary": {
+    "total": 10,
+    "ok_200": 10,
+    "broken": 0
+  }
 }

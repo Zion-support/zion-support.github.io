@@ -1,4 +1,3 @@
-
 {"timestamp": "2026-09-04T15:37:39.552510+00:00", "email": "comunicacaodigital@prudentialdigital.com.br", "message_id": "1a06d11850f0c0e0", "error": null, "status": "sent"}
 {"timestamp": "2026-09-04T15:38:34.466922+00:00", "email": "assistente.cliente@prudential.com", "message_id": "1a06d125d4883681", "error": null, "status": "sent"}
 {"timestamp": "2026-09-04T15:38:37.711278+00:00", "email": "celi.vasconcelos@wyntech.inf.br", "message_id": "1a06d12683457b63", "error": null, "status": "sent"}
@@ -60,3 +59,8 @@
 {"timestamp": "2026-09-04T17:39:56.463561+00:00", "email": "snazar@hubspot.com", "message_id": "1a06d8179e59d6f5", "error": null, "status": "sent"}
 {"timestamp": "2026-09-04T17:39:59.753796+00:00", "email": "affiliate@newsletter.shopee.com.br", "message_id": "1a06d8186325944b", "error": null, "status": "sent"}
 {"timestamp": "2026-09-04T17:40:03.142008+00:00", "email": "affiliate@mail.shopee.com.br", "message_id": "1a06d819377a59f2", "error": null, "status": "sent"}
+{"timestamp": "2026-09-08T12:46:21.139989+00:00", "email": "sgp@saopaulo.sp.leg.br", "message_id": null, "error": "HTTP Error 400: Bad Request", "status": "error"}
+{"timestamp": "2026-09-08T12:46:21.355704+00:00", "email": "info@innovationexperience.org", "message_id": null, "error": "HTTP Error 400: Bad Request", "status": "error"}
+{"timestamp": "2026-09-08T12:46:21.555124+00:00", "email": "contato@placehub.io", "message_id": null, "error": "HTTP Error 400: Bad Request", "status": "error"}
+{"timestamp": "2026-09-08T12:46:21.777251+00:00", "email": "support@gsdcouncil.org", "message_id": null, "error": "HTTP Error 400: Bad Request", "status": "error"}
+{"timestamp": "2026-09-08T12:46:21.994818+00:00", "email": "info@goodfirms.co", "message_id": null, "error": "HTTP Error 400: Bad Request", "status": "error"}

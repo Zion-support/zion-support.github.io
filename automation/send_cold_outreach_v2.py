@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""Processa leads do zion_leads_free.json e envia cold outreach via gog gmail — versão corrigida."""
+"""Processa leads do zion_leads_free.json e envia cold outreach via gog gmail — versão corrigida.
+
+USO (Lead Forge):
+    python3 send_cold_outreach_v2.py            # envia emails
+    python3 send_cold_outreach_v2.py --forge   # só forja/valida leads, atualiza pool, não envia
+    python3 send_cold_outreach_v2.py --report  # imprime métricas do último forge (queries_used, etc.)
+    python3 send_cold_outreach_v2.py --dry-run # simula envio sem actually enviar
+
+OUTPUTS (persistidos em disco, lidos pelo --report):
+    /Users/miami2/zion.app/automation/data/forge_run.json   — métricas da última execução:queries_used, pages_checked, forged, existing_pool, new_total_after_merge, fonte, timestamp
+"""
 
 import json, subprocess, sys, re
 import os

@@ -1,3 +1,4 @@
+#!/usr/bin/env /usr/bin/python3
 import json, sys
 from pathlib import Path
 
