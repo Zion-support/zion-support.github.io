@@ -1,0 +1,44 @@
+{
+  "name": "ZTG Static Site Monitoring Spec",
+  "version": "2026-09-07",
+  "target": "Zion Tech Group static site",
+  "probe_routes": [
+    { "path": "/", "expect_status": 200, "content_checks": ["<title>", "canonical"] },
+    { "path": "/about/", "expect_status": 200, "content_checks": ["<title>", "h1"] },
+    { "path": "/services/", "expect_status": 200, "content_checks": ["<title>", "canonical"] },
+    { "path": "/solutions/", "expect_status": 200, "content_checks": ["<title>", "h1"] },
+    { "path": "/industries/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/partners/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/blog/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/contact/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/pricing/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/careers/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/privacy-policy/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/terms/", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/sitemap.xml", "expect_status": 200, "content_checks": ["<urlset"] },
+    { "path": "/404.html", "expect_status": 200, "content_checks": ["<title>"] },
+    { "path": "/robots.txt", "expect_status": 200, "content_checks": ["User-agent"] }
+  ],
+  "pass_fail_criteria": {
+    "pass": "All probed routes return HTTP 200 within tolerance, canonical/title/h1 checks pass, response time < 3000ms, no unexpected redirects.",
+    "fail": "Any expected route returns 404, 5xx, redirect loop, wrong canonical/title, or response time > 3000ms on 2 consecutive probes."
+  },
+  "alert_channels": [
+    "hermes-cron-notify",
+    "email",
+    "system-log"
+  ],
+  "cron_cadences": [
+    { "label": "critical", "schedule": "*/5 * * * *", "routes": ["/", "/about/", "/services/", "/contact/", "/sitemap.xml"] },
+    { "label": "full", "schedule": "0 * * * *", "routes": "all" },
+    { "label": "deep", "schedule": "0 0 * * *", "routes": "all", "checks": ["content_signature", "canonical_hash"] }
+  ],
+  "recovery_actions": [
+    "Propagation wait: re-probe 404/5xx routes after 180s before classifying failure.",
+    "404 investigation: confirm file exists in repo/build output; check _headers/.htaccess rewrite rules; inspect redirect chains for broken targets.",
+    "404 recovery: restore missing asset from prior build or redeploy last known good commit; verify by re-probe.",
+    "5xx investigation: check hosting platform status; inspect build artifact integrity and resource limits.",
+    "5xx recovery: redeploy from last known good commit or trigger fresh build; verify platform capacity.",
+    "Persistent failure: open incident channel and halt dependent automations if >3 consecutive failures."
+  ]
+}

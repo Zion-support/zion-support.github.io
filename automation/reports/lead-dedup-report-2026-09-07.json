@@ -1,0 +1,23 @@
+{
+  "report_path": "/Users/miami2/zion.app/automation/reports/lead-dedup-report-2026-09-07.json",
+  "generated_at": "2026-09-09",
+  "inputs": {
+    "canonical_ready_list_length": 75,
+    "sent_history_entries": 66
+  },
+  "metrics": {
+    "total_leads": 75,
+    "non_empty_leads": 56,
+    "exact_duplicates_all": 1,
+    "exact_duplicate_emails": {
+      "": 19
+    },
+    "exact_duplicates_non_empty": 0,
+    "domain_duplicates": 0,
+    "unique_domain_count": 56,
+    "emails_seen_in_sent_history": 56,
+    "usable_queue_size": 0
+  },
+  "candidates": [],
+  "notes": "Usable queue is empty; all non-empty leads are already present in sent history (status=sent). No unblocked candidates for next send-run."
+}

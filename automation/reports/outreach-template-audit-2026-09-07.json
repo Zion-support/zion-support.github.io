@@ -1,0 +1,15 @@
+{
+  "template_count_by_service": {
+    "AI Automation": 9,
+    "FinOps": 1
+  },
+  "near_duplicate_subjects": 25,
+  "report_path": "/Users/miami2/zion.app/automation/reports/outreach-template-audit-2026-09-07.json",
+  "top_fixes": [
+    "P0 | Add primary_bodies array to outreach_templates_ptbr.json; currently primary subjects exist but no primary body templates are defined.",
+    "P0 | Add missing follow-up variants: 3 primary subjects exist but only 2 followup_1 bodies and 2 followup_2 bodies. Add at least 1 missing followup_1_body and 1 missing followup_2_body to cover all primary subjects.",
+    "P1 | Reduce near-duplicate subject similarity: 25 near-duplicate subject pairs detected (>=85% similarity). Vary framing by persona/service.",
+    "P2 | Expand templates to cover additional services referenced in send plan, such as Cybersecurity Assessment and FinOps-specific angles, beyond the single generic 'Oportunidade: FinOps, IA e cibersegurança' template.",
+    "P2 | Add persona-specific follow-up variants for 'enterprise', 'smb', and 'startup' segments. Current templates are generic and do not differentiate by persona."
+  ]
+}
