@@ -30,3 +30,14 @@
 
 # pt-br lowercase alias
 /pt-br/*	/pt-br/:splat	200
+
+
+# Industries subpages (200 - served from industries/<name>/index.html)
+/industries/insurance/ /industries/insurance/index.html 200
+/industries/insurance /industries/insurance/index.html 200
+/industries/legal/ /industries/legal/index.html 200
+/industries/legal /industries/legal/index.html 200
+/industries/healthcare/ /industries/healthcare/index.html 200
+/industries/healthcare /industries/healthcare/index.html 200
+/pricing/ /pricing/index.html 200
+/pricing /pricing/index.html 200
