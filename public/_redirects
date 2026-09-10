@@ -5,8 +5,7 @@
 
 /case-studies/    /contact/    301
 /industries/    /services/    301
-/free-tools-hub/    /free-tools-hub/index.html    200
-/free-tools-hub     /free-tools-hub/index.html    200
+/free-tools-hub/    /tools/    301
 /products/    /services/    301
 /consultation/    /contact/    301
 /site-map/    /    301
@@ -107,7 +106,11 @@
 /services/growth-services /services/growth-services/index.html 200
 /services/composio-automation/  /services/composio-automation/index.html  200
 /services/composio-automation /services/composio-automation/index.html 200
-/blog/ai-roi-calculator-business-case/  /blog/ai-roi-calculator-business-case/index.html  200
-/blog/ai-roi-calculator-business-case  /blog/ai-roi-calculator-business-case/index.html  200
-/case-studies/ai-helpdesk-automation/  /case-studies/ai-helpdesk-automation/index.html  200
-/case-studies/ai-helpdesk-automation  /case-studies/ai-helpdesk-automation/index.html  200
+
+# Orphan pages — /ai-ops/, /ai-implementation/, /ai-compliance/
+/ai-ops/ /ai-ops/index.html 200
+/ai-ops /ai-ops/index.html 200
+/ai-implementation/ /ai-implementation/index.html 200
+/ai-implementation /ai-implementation/index.html 200
+/ai-compliance/ /ai-compliance/index.html 200
+/ai-compliance /ai-compliance/index.html 200
