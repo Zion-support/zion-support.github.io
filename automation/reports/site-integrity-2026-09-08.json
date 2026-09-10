@@ -1,0 +1,158 @@
+{
+  "timestamp": "2026-09-08T10:20:00-03:00",
+  "site": "https://ziontechgroup.com",
+  "checks_performed": {
+    "live_http_probe": {
+      "script": "/Users/miami2/zion.app/automation/probes/site_probe_20260908.py",
+      "routes_checked": 8,
+      "all_200": true,
+      "broken": 0
+    },
+    "bfs_crawl": {
+      "script": "/Users/miami2/zion.app/automation/integrity_live_crawl.py",
+      "pages_crawled": 94,
+      "http_200": 94,
+      "redirects": 0,
+      "broken": 0,
+      "result": "site clean — no broken URLs"
+    },
+    "route_triple_comparison": {
+      "description": "out/ (local build) vs origin/gh-pages (deployed) vs live (curl) for 7 target routes",
+      "routes": [
+        {
+          "route": "/public-roadmap",
+          "out_bytes": 3493,
+          "ghpages_bytes": 857,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/public-roadmap/",
+          "ghpages_canonical": "https://ziontechgroup.com/heritage/",
+          "live_canonical": "https://ziontechgroup.com/public-roadmap/",
+          "live_meta_refresh": "0; url=/services/",
+          "live_robots": "noindex, follow",
+          "status": "MISMATCH_ROOT",
+          "note": "Live serves root-level 857-byte alias (canonical→/heritage/, refresh→/services/) NOT the 3493-byte out/ file. gh-pages root file != out/ file."
+        },
+        {
+          "route": "/status-page",
+          "out_bytes": 779,
+          "ghpages_bytes": 776,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/status-page/",
+          "ghpages_canonical": "https://ziontechgroup.com/status/",
+          "live_canonical": "https://ziontechgroup.com/status-page/",
+          "live_meta_refresh": "0; url=/status/",
+          "live_robots": "noindex, follow",
+          "status": "MISMATCH_ROOT",
+          "note": "Live serves gh-pages root file (canonical→/status/, refresh→/status/) not out/ file. out/ and docs/ both have /status-page/ canonical — deployed version differs."
+        },
+        {
+          "route": "/use-cases",
+          "out_bytes": 1143,
+          "ghpages_bytes": 1148,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/use-cases/",
+          "ghpages_canonical": "https://ziontechgroup.com/success-stories/",
+          "live_canonical": "https://ziontechgroup.com/success-stories/",
+          "live_meta_refresh": "none",
+          "live_robots": "none",
+          "status": "MISMATCH_ROOT",
+          "note": "Live serves gh-pages root file (canonical→/success-stories/) not out/ file (canonical→/use-cases/). out/ file is a real use-cases page; deployed version is an alias."
+        },
+        {
+          "route": "/solutions/healthcare",
+          "out_bytes": 3639,
+          "ghpages_bytes": 840,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/solutions/healthcare/",
+          "ghpages_canonical": "https://ziontechgroup.com/services/",
+          "live_canonical": "https://ziontechgroup.com/solutions/healthcare/",
+          "live_meta_refresh": "0; url=/services/",
+          "live_robots": "noindex, follow",
+          "status": "MISMATCH_ROOT",
+          "note": "Live serves gh-pages root file (canonical→/services/, refresh→/services/) not out/ file. out/ has a real healthcare solutions page; deployed version is an alias."
+        },
+        {
+          "route": "/industries/financial-services",
+          "out_bytes": 3674,
+          "ghpages_bytes": 864,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/industries/financial-services/",
+          "ghpages_canonical": "https://ziontechgroup.com/services/",
+          "live_canonical": "https://ziontechgroup.com/industries/financial-services/",
+          "live_meta_refresh": "0; url=/services/",
+          "live_robots": "noindex, follow",
+          "status": "MISMATCH_ROOT",
+          "note": "out/ and docs/ have 3674-byte real page; gh-pages root has 864-byte alias (canonical→/services/, refresh→/services/). Live serves the alias. docs/ version (778 bytes) also differs from out/ (3674 bytes)."
+        },
+        {
+          "route": "/free-consultation",
+          "out_bytes": 3724,
+          "ghpages_bytes": 1081,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/free-consultation/",
+          "ghpages_canonical": "https://ziontechgroup.com/book/",
+          "live_canonical": "https://ziontechgroup.com/free-consultation/",
+          "live_meta_refresh": "none",
+          "live_robots": "none",
+          "status": "MISMATCH_ROOT",
+          "note": "Live serves gh-pages root file (canonical→/book/) not out/ file (canonical→/free-consultation/). out/ has a real free-consultation page (3724 bytes); deployed version is a 1081-byte alias to /book/."
+        },
+        {
+          "route": "/tools/phishing-analyzer",
+          "out_bytes": 4749,
+          "ghpages_bytes": 939,
+          "live_status": 200,
+          "out_canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+          "ghpages_canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+          "live_canonical": "https://ziontechgroup.com/tools/phishing-analyzer/",
+          "live_meta_refresh": "none",
+          "live_robots": "none",
+          "status": "CONSISTENT",
+          "note": "All three sources agree: canonical→self, no redirect. The 939-byte gh-pages file is a stub but serves correctly."
+        }
+      ]
+    },
+    "public_alias_directory": {
+      "description": "public/ serves as HTML alias layer (gh-pages ignores Netlify _redirects)",
+      "status_page_alias": "public/status-page/index.html — canonical→/status-page/, meta-refresh→/status-page/ (self-referential, no external redirect)",
+      "financial_services_alias": "public/industries/financial-services/index.html — canonical→self, full marketing page (NOT an alias)",
+      "notes": "public/ aliases exist for status-page but NOT for industries/financial-services (which has a real marketing page in public/). This means the root-level industries/financial-services/index.html on gh-pages is a separate file, not served from public/."
+    },
+    "redirects_comparison": {
+      "root_redirects": "local _redirects has /industries/financial-services and /free-consultation 200 rules pointing to index.html files",
+      "public_redirects": "public/_redirects focuses on service/blog aliases; no /industries/financial-services or /free-consultation 200 rules",
+      "ghpages_redirects": "origin/gh-pages:_redirects matches root _redirects (200 rules for target routes present)",
+      "live_redirects": "Live _redirects does NOT contain /industries/financial-services or /free-consultation rules — GitHub Pages is NOT reading the Netlify-style _redirects file for these routes",
+      "conclusion": "GitHub Pages serves the root-level index.html files directly. The _redirects file is not active on Pages for these routes. The deployed root-level files ARE the served content."
+    }
+  },
+  "summary": {
+    "all_routes_200": true,
+    "broken_urls": 0,
+    "mismatches": 6,
+    "consistent": 1,
+    "mismatch_routes": [
+      "/public-roadmap",
+      "/status-page",
+      "/use-cases",
+      "/solutions/healthcare",
+      "/industries/financial-services",
+      "/free-consultation"
+    ],
+    "consistent_routes": [
+      "/tools/phishing-analyzer"
+    ]
+  },
+  "key_findings": [
+    "FINDING 1 (root-level alias drift): gh-pages root level has 857-1081 byte alias files for 6 of 7 target routes. These files have canonical tags pointing to DIFFERENT URLs than out/ (e.g. /public-roadmap out/→self, gh-pages→/heritage/; /free-consultation out/→self, gh-pages→/book/). The live site serves these aliases, not the out/ files.",
+    "FINDING 2 (out/ files are the real pages): out/ contains full 3493-4749 byte pages for all 7 routes. These are the pages the local build produces. They are NOT deployed — the deployed versions are smaller alias/stub files.",
+    "FINDING 3 (docs/ vs out/ divergence for financial-services): docs/industries/financial-services/index.html is 3674 bytes (same as out/) but gh-pages docs/ version is 778 bytes. The docs/ tree on gh-pages has a stale/shorter version.",
+    "FINDING 4 (public/ alias layer incomplete): public/status-page/index.html exists as a self-referential alias (canonical→/status-page/, refresh→/status-page/). public/industries/financial-services/index.html is a full marketing page, not an alias. This explains why the root-level financial-services file on gh-pages is a separate file.",
+    "FINDING 5 (GitHub Pages _redirects ignored): Live _redirects does not contain /industries/financial-services or /free-consultation rules. GitHub Pages is serving root-level index.html files directly — the Netlify-style _redirects are not active on Pages for these routes.",
+    "FINDING 6 (tools/phishing-analyzer is the only consistent route): All three sources (out/, gh-pages, live) agree — canonical→self, no redirect, 200 OK. This is the only route without a mismatch.",
+    "FINDING 7 (BFS crawl clean): 94 pages crawled, 0 broken, 0 redirects. The site is internally consistent from a link perspective — no 404s or broken internal links."
+  ],
+  "discrepancy_type": "content_drift",
+  "discrepancy_description": "The local build (out/) produces full pages for all 7 target routes. The deployed site (gh-pages root level) serves smaller alias/stub files for 6 of 7 routes, with canonical tags pointing to different URLs. The live site matches gh-pages, not out/. This is a content drift between local build and deployed site — the out/ files are not what is served.",
+  "recommended_action": "Review whether the root-level alias files on gh-pages are intentional (they are lightweight 'not a packaged SKU' pages that redirect/canonical to real pages). If the out/ files are the intended content, the build/deploy process needs to copy out/ files to the root level of the Pages source, replacing the current alias files. If the alias files are intentional, reconcile the canonical tags so out/ matches what is deployed."
+}

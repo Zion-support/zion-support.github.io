@@ -1,0 +1,234 @@
+[
+  {
+    "email": "contact@nubank.com",
+    "name": "Nubank",
+    "company": "Nubank",
+    "role": "TI",
+    "personal_note": "Maior banco digital da América Latina, 80M+ clientes. Infraestrutura cloud massiva.",
+    "motivo": "latam fintech nubank"
+  },
+  {
+    "email": "ti@itau.com",
+    "name": "Itaú",
+    "company": "Itaú",
+    "role": "TI",
+    "personal_note": "Maior banco do Brasil. Modernização de legado com IA e cloud.",
+    "motivo": "latam banco itau"
+  },
+  {
+    "email": "contact@bb.com.br",
+    "name": "Banco do Brasil",
+    "company": "Banco do Brasil",
+    "role": "TI",
+    "personal_note": "Banco estatal brasileiro. Digitalização de serviços.",
+    "motivo": "latam bb"
+  },
+  {
+    "email": "ti@santander.com.br",
+    "name": "Santander Brasil",
+    "company": "Santander Brasil",
+    "role": "TI",
+    "personal_note": "Banco global com grande operação no Brasil. Infraestrutura fintech.",
+    "motivo": "latam santander"
+  },
+  {
+    "email": "contact@azul.com.br",
+    "name": "Azul Airlines",
+    "company": "Azul Airlines",
+    "role": "TI",
+    "personal_note": "Linha aérea brasileira. Infraestrutura cloud e reservas em tempo real.",
+    "motivo": "latam azul"
+  },
+  {
+    "email": "ti@vale.com",
+    "name": "Vale",
+    "company": "Vale",
+    "role": "TI",
+    "personal_note": "Maior mineradora do mundo. Digitalização de operações e IoT.",
+    "motivo": "latam vale"
+  },
+  {
+    "email": "contact@petrobras.com.br",
+    "name": "Petrobras",
+    "company": "Petrobras",
+    "role": "TI",
+    "personal_note": "Empresa de petróleo brasileira. Digitalização industrial.",
+    "motivo": "latam petrobras"
+  },
+  {
+    "email": "ti@bradesco.com.br",
+    "name": "Bradesco",
+    "company": "Bradesco",
+    "role": "TI",
+    "personal_note": "Maior banco privado do Brasil. Transformação digital.",
+    "motivo": "latam bradesco"
+  },
+  {
+    "email": "contact@totvs.com.br",
+    "name": "TOTVS",
+    "company": "TOTVS",
+    "role": "TI",
+    "personal_note": "Maior ERP latino-americano. Modernização com IA.",
+    "motivo": "latam totvs"
+  },
+  {
+    "email": "ti@arezzo.com.br",
+    "name": "Arezzo",
+    "company": "Arezzo",
+    "role": "TI",
+    "personal_note": "Fintech de crédito imobiliário. Infraestrutura de scoring.",
+    "motivo": "latam arezzo"
+  },
+  {
+    "email": "contact@creditas.com.br",
+    "name": "Creditas",
+    "company": "Creditas",
+    "role": "TI",
+    "personal_note": "Fintech de garantia imobiliária. Infraestrutura de lending.",
+    "motivo": "latam creditas"
+  },
+  {
+    "email": "ti@olinda.com.br",
+    "name": "Olinda",
+    "company": "Olinda",
+    "role": "TI",
+    "personal_note": "Fintech de previdência. Infraestrutura de dados.",
+    "motivo": "latam olinda"
+  },
+  {
+    "email": "contact@leiapix.com",
+    "name": "LeiaPix",
+    "company": "LeiaPix",
+    "role": "TI",
+    "personal_note": "Startup de animação 3D (anterior Ludo.ai). Infraestrutura de IA.",
+    "motivo": "latam leiapix"
+  },
+  {
+    "email": "ti@mca.com.br",
+    "name": "MCA",
+    "company": "MCA",
+    "role": "TI",
+    "personal_note": "CSP brasileiro. Infraestrutura de cloud e managed services.",
+    "motivo": "latam cloud mca"
+  },
+  {
+    "email": "contact@teko.net",
+    "name": "Teko",
+    "company": "Teko",
+    "role": "TI",
+    "personal_note": "MSP brasileiro. Infraestrutura de TI para PMEs.",
+    "motivo": "latam teko"
+  },
+  {
+    "email": "ti@accref.com.br",
+    "name": "AccRef",
+    "company": "AccRef",
+    "role": "TI",
+    "personal_note": "MSP brasileiro. Infraestrutura de managed IT.",
+    "motivo": "latam accref"
+  },
+  {
+    "email": "contact@andela.com",
+    "name": "Andela",
+    "company": "Andela",
+    "role": "TI",
+    "personal_note": "Plataforma de talento tecnológico africano. Infraestrutura global.",
+    "motivo": "africa andela"
+  },
+  {
+    "email": "ti@flutterwave.com",
+    "name": "Flutterwave",
+    "company": "Flutterwave",
+    "role": "TI",
+    "personal_note": "Fintech africana, unicorn. Infraestrutura de pagamentos PAN-Africana.",
+    "motivo": "africa flutterwave"
+  },
+  {
+    "email": "contact@paystack.com",
+    "name": "Paystack",
+    "company": "Paystack",
+    "role": "TI",
+    "personal_note": "Payment gateway africano (Stripe). Infraestrutura de payments.",
+    "motivo": "africa paystack"
+  },
+  {
+    "email": "ti@konga.com",
+    "name": "Konga",
+    "company": "Konga",
+    "role": "TI",
+    "personal_note": "E-commerce keniano. Infraestrutura de marketplace.",
+    "motivo": "africa konga"
+  },
+  {
+    "email": "contact@jumia.com",
+    "name": "Jumia",
+    "company": "Jumia",
+    "role": "TI",
+    "personal_note": "E-commerce africano. Infraestrutura de marketplace em escala.",
+    "motivo": "africa jumia"
+  },
+  {
+    "email": "ti@noon.com",
+    "name": "Noon",
+    "company": "Noon",
+    "role": "TI",
+    "personal_note": "E-commerce do Golfo (Emirados). Infraestrutura de fulfillment.",
+    "motivo": "me noon"
+  },
+  {
+    "email": "contact@careem.com",
+    "name": "Careem",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Ride-hailing do Golfo (Uber). Infraestrutura de mobility.",
+    "motivo": "me careem"
+  },
+  {
+    "email": "ti@swvl.com",
+    "name": "Swvl",
+    "company": "Swvl",
+    "role": "TI",
+    "personal_note": "Transportecole collective (Egito/C 좀더). Infraestrutura de transporte.",
+    "motivo": "me swvl"
+  },
+  {
+    "email": "contact@recharge.com",
+    "name": "Recharge",
+    "company": "Recharge",
+    "role": "TI",
+    "personal_note": "Fintech de recargas (Índia). Infraestrutura de payments.",
+    "motivo": "me recharge"
+  },
+  {
+    "email": "ti@bhartipay.com",
+    "name": "Bharati Pay",
+    "company": "Bharati Pay",
+    "role": "TI",
+    "personal_note": "Fintech Índia. Infraestrutura de payments.",
+    "motivo": "me bharati"
+  },
+  {
+    "email": "contact@triviasystems.com",
+    "name": "Trivas",
+    "company": "Trivas",
+    "role": "TI",
+    "personal_note": "MSP europeu. Infraestrutura de managed IT.",
+    "motivo": "eu trivas"
+  },
+  {
+    "email": "ti@it-supply.com",
+    "name": "IT Supply",
+    "company": "IT Supply",
+    "role": "TI",
+    "personal_note": "MSP europeu. Infraestrutura de cloud e TI.",
+    "motivo": "eu itsupply"
+  },
+  {
+    "email": "contact@hawkswest.com",
+    "name": "HawksWest",
+    "company": "HawksWest",
+    "role": "TI",
+    "personal_note": "MSP espanhol. Infraestrutura de TI.",
+    "motivo": "eu hawks"
+  }
+]

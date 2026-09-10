@@ -1,0 +1,1274 @@
+[
+  {
+    "email": "ti@polskabank.pl",
+    "name": "Polish Bank",
+    "company": "Polish Bank",
+    "role": "TI",
+    "personal_note": "Banking PL. Infra de TI.",
+    "motivo": "pl bank"
+  },
+  {
+    "email": "contact@kronos.pl",
+    "name": "Kronos PL",
+    "company": "Kronos",
+    "role": "TI",
+    "personal_note": "IT services PL. Infra de TI.",
+    "motivo": "pl kronos"
+  },
+  {
+    "email": "ti@stafor.com",
+    "name": "Stafor",
+    "company": "Stafor",
+    "role": "TI",
+    "personal_note": "IT services PL. Infra de TI.",
+    "motivo": "pl stafor"
+  },
+  {
+    "email": "contact@airbank.cz",
+    "name": "AirBank",
+    "company": "AirBank",
+    "role": "TI",
+    "personal_note": "Fintech CZ. Infra de TI.",
+    "motivo": "cz airbank"
+  },
+  {
+    "email": "ti@travel.cz",
+    "name": "Travel.cz",
+    "company": "Travel.cz",
+    "role": "TI",
+    "personal_note": "Tech CZ. Infra de TI.",
+    "motivo": "cz travel"
+  },
+  {
+    "email": "contact@shipIt.cz",
+    "name": "ShipIt CZ",
+    "company": "ShipIt",
+    "role": "TI",
+    "personal_note": "Logistics CZ. Infra de TI.",
+    "motivo": "cz shipit"
+  },
+  {
+    "email": "ti@tatrabanka.sk",
+    "name": "Tatra Banka",
+    "company": "Tatra Banka",
+    "role": "TI",
+    "personal_note": "Banking SK. Infra de TI.",
+    "motivo": "sk tatra"
+  },
+  {
+    "email": "contact@slovnaft.sk",
+    "name": "Slovnaft",
+    "company": "Slovnaft",
+    "role": "TI",
+    "personal_note": "Energy SK. Infra de TI.",
+    "motivo": "sk slovnaft"
+  },
+  {
+    "email": "ti@ott.com.hu",
+    "name": "OTT Hungary",
+    "company": "OTT",
+    "role": "TI",
+    "personal_note": "Fintech HU. Infra de payments.",
+    "motivo": "hu ott"
+  },
+  {
+    "email": "contact@iskonto.hu",
+    "name": "Iskonto",
+    "company": "Iskonto",
+    "role": "TI",
+    "personal_note": "Banking HU. Infra de TI.",
+    "motivo": "hu iskonto"
+  },
+  {
+    "email": "ti@opten.com",
+    "name": "Otten",
+    "company": "Otten",
+    "role": "TI",
+    "personal_note": "Fintech HU. Infra de TI.",
+    "motivo": "hu otten"
+  },
+  {
+    "email": "contact@pcp.ro",
+    "name": "PCP Romania",
+    "company": "PCP",
+    "role": "TI",
+    "personal_note": "Fintech RO. Infra de TI.",
+    "motivo": "ro pcp"
+  },
+  {
+    "email": "ti@ingatlan.com",
+    "name": "Ingatlan",
+    "company": "Ingatlan",
+    "role": "TI",
+    "personal_note": "Real estate tech RO. Infra de TI.",
+    "motivo": "ro ingatlan"
+  },
+  {
+    "email": "contact@bitcoin.ro",
+    "name": "Bitcoin RO",
+    "company": "Bitcoin RO",
+    "role": "TI",
+    "personal_note": "Crypto/fintech RO. Infra de TI.",
+    "motivo": "ro bitcoinro"
+  },
+  {
+    "email": "ti@payboleto.com",
+    "name": "PayBoleto",
+    "company": "PayBoleto",
+    "role": "TI",
+    "personal_note": "Fintech BG. Infra de payments.",
+    "motivo": "bg payboleto"
+  },
+  {
+    "email": "contact@abv.bg",
+    "name": "ABV Bulgaria",
+    "company": "ABV",
+    "role": "TI",
+    "personal_note": "Fintech BG. Infra de TI.",
+    "motivo": "bg abv"
+  },
+  {
+    "email": "contact@erpnet.hr",
+    "name": "ErPNet",
+    "company": "ErPNet",
+    "role": "TI",
+    "personal_note": "IT services HR. Infra de TI.",
+    "motivo": "hr erpnet"
+  },
+  {
+    "email": "ti@raiffeisen.hr",
+    "name": "Raiffeisen HR",
+    "company": "Raiffeisen",
+    "role": "TI",
+    "personal_note": "Banking HR. Infra de TI.",
+    "motivo": "hr raif"
+  },
+  {
+    "email": "ti@firstbank.rs",
+    "name": "First Bank",
+    "company": "First Bank",
+    "role": "TI",
+    "personal_note": "Banking RS. Infra de TI.",
+    "motivo": "rs firstbank"
+  },
+  {
+    "email": "contact@ella.rs",
+    "name": "Ella",
+    "company": "Ella",
+    "role": "TI",
+    "personal_note": "Fintech RS. Infra de TI.",
+    "motivo": "rs ella"
+  },
+  {
+    "email": "contact@bpfs.ba",
+    "name": "BPFS",
+    "company": "BPFS",
+    "role": "TI",
+    "personal_note": "Fintech BA. Infra de TI.",
+    "motivo": "ba bpfs"
+  },
+  {
+    "email": "ti@nlblge.si",
+    "name": "NLB Banka",
+    "company": "NLB Banka",
+    "role": "TI",
+    "personal_note": "Banking SI. Infra de TI.",
+    "motivo": "si nlb"
+  },
+  {
+    "email": "contact@altimax.si",
+    "name": "Altimax",
+    "company": "Altimax",
+    "role": "TI",
+    "personal_note": "IT services SI. Infra de TI.",
+    "motivo": "si altimax"
+  },
+  {
+    "email": "ti@albanianbank.com",
+    "name": "Albanian Bank",
+    "company": "Albanian Bank",
+    "role": "TI",
+    "personal_note": "Banking AL. Infra de TI.",
+    "motivo": "al albank"
+  },
+  {
+    "email": "contact@kredytalk.com",
+    "name": "Kredytalk",
+    "company": "Kredytalk",
+    "role": "TI",
+    "personal_note": "Fintech AL. Infra de payments.",
+    "motivo": "al kredytalk"
+  },
+  {
+    "email": "contact@maktel.com",
+    "name": "Maktel",
+    "company": "Maktel",
+    "role": "TI",
+    "personal_note": "Telecom MK. Infra de TI.",
+    "motivo": "mk maktel"
+  },
+  {
+    "email": "ti@procreditbank.mk",
+    "name": "ProCredit Bank",
+    "company": "ProCredit Bank",
+    "role": "TI",
+    "personal_note": "Banking MK. Infra de TI.",
+    "motivo": "mk procredit"
+  },
+  {
+    "email": "contact@ fastcall.lt",
+    "name": "FastCall",
+    "company": "FastCall",
+    "role": "TI",
+    "personal_note": "Fintech LT. Infra de TI.",
+    "motivo": "lt fastcall"
+  },
+  {
+    "email": "ti@seb.lt",
+    "name": "SEB Bankas",
+    "company": "SEB Bankas",
+    "role": "TI",
+    "personal_note": "Banking LT. Infra de TI.",
+    "motivo": "lt seb"
+  },
+  {
+    "email": "contact@pariter.lv",
+    "name": "Pariter",
+    "company": "Pariter",
+    "role": "TI",
+    "personal_note": "Banking LV. Infra de TI.",
+    "motivo": "lv pariter"
+  },
+  {
+    "email": "ti@citadele.lv",
+    "name": "Citadele",
+    "company": "Citadele",
+    "role": "TI",
+    "personal_note": "Banking LV. Infra de TI.",
+    "motivo": "lv citadele"
+  },
+  {
+    "email": "ti@luminor.ee",
+    "name": "Luminor",
+    "company": "Luminor",
+    "role": "TI",
+    "personal_note": "Banking EE. Infra de TI.",
+    "motivo": "ee luminor"
+  },
+  {
+    "email": "contact@skype.ee",
+    "name": "Skype HQ",
+    "company": "Skype",
+    "role": "TI",
+    "personal_note": "Tech EE. Infra de TI.",
+    "motivo": "ee skype"
+  },
+  {
+    "email": "contact@ moldova.bank",
+    "name": "Moldova Bank",
+    "company": "Moldova Bank",
+    "role": "TI",
+    "personal_note": "Banking MD. Infra de TI.",
+    "motivo": "md moldova"
+  },
+  {
+    "email": "ti@maib.md",
+    "name": "Maib",
+    "company": "Maib",
+    "role": "TI",
+    "personal_note": "Banking MD. Infra de TI.",
+    "motivo": "md maib"
+  },
+  {
+    "email": "contact@ georgianbank.gov",
+    "name": "Georgian Bank",
+    "company": "Georgian Bank",
+    "role": "TI",
+    "personal_note": "Banking GE. Infra de TI.",
+    "motivo": "ge georgian"
+  },
+  {
+    "email": "ti@ TBCbank.ge",
+    "name": "TBC Bank",
+    "company": "TBC Bank",
+    "role": "TI",
+    "personal_note": "Banking GE. Infra de TI.",
+    "motivo": "ge tbc"
+  },
+  {
+    "email": "contact@ armpay.am",
+    "name": "ArmPay",
+    "company": "ArmPay",
+    "role": "TI",
+    "personal_note": "Fintech AM. Infra de TI.",
+    "motivo": "am armpay"
+  },
+  {
+    "email": "ti@ armtelecom.am",
+    "name": "ArmTelecom",
+    "company": "ArmTelecom",
+    "role": "TI",
+    "personal_note": "Telecom AM. Infra de TI.",
+    "motivo": "am armtel"
+  },
+  {
+    "email": "contact@kyrgyzbank.kg",
+    "name": "Kyrgyz Bank",
+    "company": "Kyrgyz Bank",
+    "role": "TI",
+    "personal_note": "Banking KG. Infra de TI.",
+    "motivo": "kg kyrgyz"
+  },
+  {
+    "email": "ti@millennium.kg",
+    "name": "Millennium",
+    "company": "Millennium",
+    "role": "TI",
+    "personal_note": "Banking KG. Infra de TI.",
+    "motivo": "kg millennium"
+  },
+  {
+    "email": "contact@ motor.kg",
+    "name": "Motor",
+    "company": "Motor",
+    "role": "TI",
+    "personal_note": "Banking KG. Infra de TI.",
+    "motivo": "kg motor"
+  },
+  {
+    "email": "ti@tojikpay.tj",
+    "name": "TojikPay",
+    "company": "TojikPay",
+    "role": "TI",
+    "personal_note": "Fintech TJ. Infra de payments.",
+    "motivo": "tj tojik"
+  },
+  {
+    "email": "contact@ talcom.tj",
+    "name": "Talcom",
+    "company": "Talcom",
+    "role": "TI",
+    "personal_note": "Telecom TJ. Infra de TI.",
+    "motivo": "tj talcom"
+  },
+  {
+    "email": "ti@turkmenbank.tm",
+    "name": "Turkmen Bank",
+    "company": "Turkmen Bank",
+    "role": "TI",
+    "personal_note": "Banking TM. Infra de TI.",
+    "motivo": "tm turkmen"
+  },
+  {
+    "email": "contact@ capitecbank.co.za",
+    "name": "Capitec Bank",
+    "company": "Capitec",
+    "role": "TI",
+    "personal_note": "Banking ZA. Infra de TI.",
+    "motivo": "za capitec"
+  },
+  {
+    "email": "ti@ fnb.co.za",
+    "name": "FNB South Africa",
+    "company": "FNB",
+    "role": "TI",
+    "personal_note": "Banking ZA. Infra de TI.",
+    "motivo": "za fnb"
+  },
+  {
+    "email": "contact@ paygate.co.za",
+    "name": "PayGate",
+    "company": "PayGate",
+    "role": "TI",
+    "personal_note": "Fintech ZA. Infra de payments.",
+    "motivo": "za paygate"
+  },
+  {
+    "email": "ti@ ozow.com",
+    "name": "Ozow",
+    "company": "Ozow",
+    "role": "TI",
+    "personal_note": "Fintech ZA. Infra de payments.",
+    "motivo": "za ozow"
+  },
+  {
+    "email": "contact@ namibiabank.com.na",
+    "name": "Namibia Bank",
+    "company": "Namibia Bank",
+    "role": "TI",
+    "personal_note": "Banking NA. Infra de TI.",
+    "motivo": "na namibia"
+  },
+  {
+    "email": "ti@ benji.bank.na",
+    "name": "Benji Bank",
+    "company": "Benji",
+    "role": "TI",
+    "personal_note": "Fintech NA. Infra de TI.",
+    "motivo": "na benji"
+  },
+  {
+    "email": "ti@ botswanabank.co.bw",
+    "name": "Botswana Bank",
+    "company": "Botswana Bank",
+    "role": "TI",
+    "personal_note": "Banking BW. Infra de TI.",
+    "motivo": "bw botswana"
+  },
+  {
+    "email": "contact@ payfast.co.bw",
+    "name": "PayFast BW",
+    "company": "PayFast",
+    "role": "TI",
+    "personal_note": "Fintech BW. Infra de payments.",
+    "motivo": "bw payfast"
+  },
+  {
+    "email": "contact@ zambia.bank",
+    "name": "Zambia Bank",
+    "company": "Zambia Bank",
+    "role": "TI",
+    "personal_note": "Banking ZM. Infra de TI.",
+    "motivo": "zm zambia"
+  },
+  {
+    "email": "ti@ zambia.co.zm",
+    "name": "Zambia Telecom",
+    "company": "Zambia Telecom",
+    "role": "TI",
+    "personal_note": "Telecom ZM. Infra de TI.",
+    "motivo": "zm zambiatel"
+  },
+  {
+    "email": "ti@ econet.co.zw",
+    "name": "Econet",
+    "company": "Econet",
+    "role": "TI",
+    "personal_note": "Telecom/ZW. Infra de TI.",
+    "motivo": "zw econet"
+  },
+  {
+    "email": "contact@ ecoCash.co.zw",
+    "name": "ecoCash",
+    "company": "ecoCash",
+    "role": "TI",
+    "personal_note": "Fintech ZW. Infra de payments.",
+    "motivo": "zw ecocash"
+  },
+  {
+    "email": "ti@ mozambique.bank",
+    "name": "Mozambique Bank",
+    "company": "Mozambique Bank",
+    "role": "TI",
+    "personal_note": "Banking MZ. Infra de TI.",
+    "motivo": "mz mozambique"
+  },
+  {
+    "email": "contact@ m-pesa.co.mz",
+    "name": "M-Pesa MZ",
+    "company": "M-Pesa",
+    "role": "TI",
+    "personal_note": "Fintech MZ. Infra de payments.",
+    "motivo": "mz mpesa"
+  },
+  {
+    "email": "contact@ telecel.ao",
+    "name": "Telecel",
+    "company": "Telecel",
+    "role": "TI",
+    "personal_note": "Telecom AO. Infra de TI.",
+    "motivo": "ao telecel"
+  },
+  {
+    "email": "ti@ bAI.ao",
+    "name": "BAI Angola",
+    "company": "BAI",
+    "role": "TI",
+    "personal_note": "Banking AO. Infra de TI.",
+    "motivo": "ao bai"
+  },
+  {
+    "email": "ti@ swazi.af",
+    "name": "Swazi Bank",
+    "company": "Swazi Bank",
+    "role": "TI",
+    "personal_note": "Banking SZ. Infra de TI.",
+    "motivo": "sz swazi"
+  },
+  {
+    "email": "contact@ lebank.co.ls",
+    "name": "LeBank",
+    "company": "LeBank",
+    "role": "TI",
+    "personal_note": "Banking LS. Infra de TI.",
+    "motivo": "ls lebank"
+  },
+  {
+    "email": "ti@ madagasib.mg",
+    "name": "MadagasIB",
+    "company": "MadagasIB",
+    "role": "TI",
+    "personal_note": "Banking MG. Infra de TI.",
+    "motivo": "mg madagasib"
+  },
+  {
+    "email": "contact@ madagasipay.mg",
+    "name": "Madagasipay",
+    "company": "Madagasipay",
+    "role": "TI",
+    "personal_note": "Fintech MG. Infra de payments.",
+    "motivo": "mg madagasipay"
+  },
+  {
+    "email": "contact@ enex.io",
+    "name": "Enex",
+    "company": "Enex",
+    "role": "TI",
+    "personal_note": "Fintech MU. Infra de TI.",
+    "motivo": "mu enex"
+  },
+  {
+    "email": "ti@ bankofmauritius.mu",
+    "name": "Bank of Mauritius",
+    "company": "BoM",
+    "role": "TI",
+    "personal_note": "Central bank. Infra de TI.",
+    "motivo": "mu bom"
+  },
+  {
+    "email": "ti@ seychellesbank.sc",
+    "name": "Seychelles Bank",
+    "company": "Seychelles Bank",
+    "role": "TI",
+    "personal_note": "Banking SC. Infra de TI.",
+    "motivo": "sc seychelles"
+  },
+  {
+    "email": "contact@ comores.bm",
+    "name": "Comores",
+    "company": "Comores",
+    "role": "TI",
+    "personal_note": "Banking KM. Infra de TI.",
+    "motivo": "km comores"
+  },
+  {
+    "email": "ti@ southernafrica.co",
+    "name": "SouthAfrican Tech",
+    "company": "SA Tech",
+    "role": "TI",
+    "personal_note": "Tech hub ZA. Infra de TI.",
+    "motivo": "za sat"
+  },
+  {
+    "email": "contact@ myanmarpay.com.mm",
+    "name": "MyanmarPay",
+    "company": "MyanmarPay",
+    "role": "TI",
+    "personal_note": "Fintech MM. Infra de payments.",
+    "motivo": "mm myanmarpay"
+  },
+  {
+    "email": "ti@ mytel.com.mm",
+    "name": "Mytel",
+    "company": "Mytel",
+    "role": "TI",
+    "personal_note": "Telecom MM. Infra de TI.",
+    "motivo": "mm mytel"
+  },
+  {
+    "email": "contact@ laosbank.com",
+    "name": "Laos Bank",
+    "company": "Laos Bank",
+    "role": "TI",
+    "personal_note": "Banking LAO. Infra de TI.",
+    "motivo": "lao laosbank"
+  },
+  {
+    "email": "ti@ unitel.la",
+    "name": "Unitel Laos",
+    "company": "Unitel",
+    "role": "TI",
+    "personal_note": "Telecom LAO. Infra de TI.",
+    "motivo": "lao unitel"
+  },
+  {
+    "email": "contact@ bruneibank.bn",
+    "name": "Brunei Bank",
+    "company": "Brunei Bank",
+    "role": "TI",
+    "personal_note": "Banking BN. Infra de TI.",
+    "motivo": "bn brunei"
+  },
+  {
+    "email": "ti@ bruneipay.com.bn",
+    "name": "BruneiPay",
+    "company": "BruneiPay",
+    "role": "TI",
+    "personal_note": "Fintech BN. Infra de payments.",
+    "motivo": "bn brunepay"
+  },
+  {
+    "email": "contact@ timor.bank",
+    "name": "Timor Bank",
+    "company": "Timor Bank",
+    "role": "TI",
+    "personal_note": "Banking TL. Infra de TI.",
+    "motivo": "tl timor"
+  },
+  {
+    "email": "ti@ tselcom.tl",
+    "name": "TSELCOM",
+    "company": "TSELCOM",
+    "role": "TI",
+    "personal_note": "Telecom TL. Infra de TI.",
+    "motivo": "tl tselcom"
+  },
+  {
+    "email": "contact@ ovo.com.my",
+    "name": "OVO Malaysia",
+    "company": "OVO",
+    "role": "TI",
+    "personal_note": "Fintech MY. Infra de payments.",
+    "motivo": "my ovo"
+  },
+  {
+    "email": "ti@ maybank2u.com.my",
+    "name": "Maybank2u",
+    "company": "Maybank2u",
+    "role": "TI",
+    "personal_note": "Banking MY. Infra de TI.",
+    "motivo": "my maybank2u"
+  },
+  {
+    "email": "contact@ paynow.com.sg",
+    "name": "PayNow",
+    "company": "PayNow",
+    "role": "TI",
+    "personal_note": "Fintech SG. Infra de payments.",
+    "motivo": "sg paynow"
+  },
+  {
+    "email": "ti@ nets.com.sg",
+    "name": "NETS",
+    "company": "NETS",
+    "role": "TI",
+    "personal_note": "Payments SG. Infra de TI.",
+    "motivo": "sg nets"
+  },
+  {
+    "email": "contact@ ricoh.co.jp",
+    "name": "Ricoh",
+    "company": "Ricoh",
+    "role": "TI",
+    "personal_note": "IT services JP. Infra de TI.",
+    "motivo": "jp ricoh"
+  },
+  {
+    "email": "ti@ kddi.com",
+    "name": "KDDI",
+    "company": "KDDI",
+    "role": "TI",
+    "personal_note": "Telecom JP. Infra de TI.",
+    "motivo": "jp kddi"
+  },
+  {
+    "email": "contact@ nec.com",
+    "name": "NEC",
+    "company": "NEC",
+    "role": "TI",
+    "personal_note": "IT hardware JP. Infra de TI.",
+    "motivo": "jp nec"
+  },
+  {
+    "email": "ti@ fujitsu.com",
+    "name": "Fujitsu",
+    "company": "Fujitsu",
+    "role": "TI",
+    "personal_note": "IT services JP. Infra de TI.",
+    "motivo": "jp fujitsu"
+  },
+  {
+    "email": "contact@ hitachi.com",
+    "name": "Hitachi",
+    "company": "Hitachi",
+    "role": "TI",
+    "personal_note": "IT enterprise JP. Infra de TI.",
+    "motivo": "jp hitachi"
+  },
+  {
+    "email": "ti@ obayashi.co.jp",
+    "name": "Obayashi",
+    "company": "Obayashi",
+    "role": "TI",
+    "personal_note": "Construction IT JP. Infra de TI.",
+    "motivo": "jp obayashi"
+  },
+  {
+    "email": "contact@ takemaru.jp",
+    "name": "Takemaru",
+    "company": "Takemaru",
+    "role": "TI",
+    "personal_note": "Retail tech JP. Infra de TI.",
+    "motivo": "jp takemaru"
+  },
+  {
+    "email": "contact@ line pay.com",
+    "name": "Line Pay",
+    "company": "Line Pay",
+    "role": "TI",
+    "personal_note": "Fintech JP. Infra de payments.",
+    "motivo": "jp linepay"
+  },
+  {
+    "email": "ti@ mercari.com",
+    "name": "Mercari",
+    "company": "Mercari",
+    "role": "TI",
+    "personal_note": "E-commerce JP. Infra de TI.",
+    "motivo": "jp mercari"
+  },
+  {
+    "email": "contact@ paypay.ne.jp",
+    "name": "PayPay JP",
+    "company": "PayPay",
+    "role": "TI",
+    "personal_note": "Fintech JP. Infra de payments.",
+    "motivo": "jp paypay"
+  },
+  {
+    "email": "ti@ sbt.co.jp",
+    "name": "SoftBank Telecom",
+    "company": "SoftBank",
+    "role": "TI",
+    "personal_note": "Telecom JP. Infra de TI.",
+    "motivo": "jp softbanktel"
+  },
+  {
+    "email": "contact@ panasonic.com",
+    "name": "Panasonic",
+    "company": "Panasonic",
+    "role": "TI",
+    "personal_note": "IT enterprise JP. Infra de TI.",
+    "motivo": "jp panasonic"
+  },
+  {
+    "email": "ti@ ntt.com",
+    "name": "NTT",
+    "company": "NTT",
+    "role": "TI",
+    "personal_note": "Telecom JP. Infra de TI.",
+    "motivo": "jp ntt"
+  },
+  {
+    "email": "contact@ optus.com.au",
+    "name": "Optus",
+    "company": "Optus",
+    "role": "TI",
+    "personal_note": "Telecom AU. Infra de TI.",
+    "motivo": "au optus"
+  },
+  {
+    "email": "ti@ voda.com.au",
+    "name": "Vodafone AU",
+    "company": "Vodafone",
+    "role": "TI",
+    "personal_note": "Telecom AU. Infra de TI.",
+    "motivo": "au voda"
+  },
+  {
+    "email": "contact@ anz.com.au",
+    "name": "ANZ Bank",
+    "company": "ANZ",
+    "role": "TI",
+    "personal_note": "Banking AU. Infra de TI.",
+    "motivo": "au anz"
+  },
+  {
+    "email": "ti@ commbank.com.au",
+    "name": "CommBank",
+    "company": "CommBank",
+    "role": "TI",
+    "personal_note": "Banking AU. Infra de TI.",
+    "motivo": "au commbank"
+  },
+  {
+    "email": "contact@ ing.com.au",
+    "name": "ING AU",
+    "company": "ING AU",
+    "role": "TI",
+    "personal_note": "Banking AU. Infra de TI.",
+    "motivo": "au ing"
+  },
+  {
+    "email": "ti@ westpac.com.au",
+    "name": "Westpac",
+    "company": "Westpac",
+    "role": "TI",
+    "personal_note": "Banking AU. Infra de TI.",
+    "motivo": "au westpac"
+  },
+  {
+    "email": "contact@ afterpay.com.au",
+    "name": "Afterpay",
+    "company": "Afterpay",
+    "role": "TI",
+    "personal_note": "Fintech AU. Infra de payments.",
+    "motivo": "au afterpay"
+  },
+  {
+    "email": "ti@ zip.co",
+    "name": "Zip Co",
+    "company": "Zip Co",
+    "role": "TI",
+    "personal_note": "Fintech AU. Infra de TI.",
+    "motivo": "au zipco"
+  },
+  {
+    "email": "contact@ up.com.au",
+    "name": "Afterpay",
+    "company": "Afterpay",
+    "role": "TI",
+    "personal_note": "Fintech AU. Infra de TI.",
+    "motivo": "au up"
+  },
+  {
+    "email": "contact@ afterpay.co.nz",
+    "name": "Afterpay NZ",
+    "company": "Afterpay",
+    "role": "TI",
+    "personal_note": "Fintech NZ. Infra de payments.",
+    "motivo": "nz afterpay"
+  },
+  {
+    "email": "ti@ polaris.co.nz",
+    "name": "Polaris",
+    "company": "Polaris",
+    "role": "TI",
+    "personal_note": "Fintech NZ. Infra de TI.",
+    "motivo": "nz polaris"
+  },
+  {
+    "email": "contact@ enjin.fund",
+    "name": "Enjin",
+    "company": "Enjin",
+    "role": "TI",
+    "personal_note": "Crypto/NFT NZ. Infra de TI.",
+    "motivo": "nz enjin"
+  },
+  {
+    "email": "ti@ xero.com",
+    "name": "Xero",
+    "company": "Xero",
+    "role": "TI",
+    "personal_note": "SaaS accounting NZ. Infra de TI.",
+    "motivo": "nz xero"
+  },
+  {
+    "email": "contact@ asb.co.nz",
+    "name": "ASB Bank",
+    "company": "ASB",
+    "role": "TI",
+    "personal_note": "Banking NZ. Infra de TI.",
+    "motivo": "nz asb"
+  },
+  {
+    "email": "ti@ anz.co.nz",
+    "name": "ANZ NZ",
+    "company": "ANZ NZ",
+    "role": "TI",
+    "personal_note": "Banking NZ. Infra de TI.",
+    "motivo": "nz anz"
+  },
+  {
+    "email": "contact@ tata steel.com",
+    "name": "Tata Steel",
+    "company": "Tata Steel",
+    "role": "TI",
+    "personal_note": "Heavy industry IN. Infra de TI.",
+    "motivo": "in tatasteel"
+  },
+  {
+    "email": "ti@ jindal.com",
+    "name": "Jindal",
+    "company": "Jindal",
+    "role": "TI",
+    "personal_note": "Heavy industry IN. Infra de TI.",
+    "motivo": "in jindal"
+  },
+  {
+    "email": "contact@ esselgroup.com",
+    "name": "Essel Group",
+    "company": "Essel",
+    "role": "TI",
+    "personal_note": "Conglomerate IN. Infra de TI.",
+    "motivo": "in essel"
+  },
+  {
+    "email": "ti@ vakeel.com",
+    "name": "Vakeel",
+    "company": "Vakeel",
+    "role": "TI",
+    "personal_note": "Legal-tech IN. Infra de TI.",
+    "motivo": "in vakeel"
+  },
+  {
+    "email": "contact@ legalfy.com",
+    "name": "LegalFvy",
+    "company": "LegalFvy",
+    "role": "TI",
+    "personal_note": "Legal-tech IN. Infra de TI.",
+    "motivo": "in legalfy"
+  },
+  {
+    "email": "ti@ legalslayer.com",
+    "name": "LegalSlayer",
+    "company": "LegalSlayer",
+    "role": "TI",
+    "personal_note": "Legal-tech IN. Infra de TI.",
+    "motivo": "in legalslayer"
+  },
+  {
+    "email": "contact@ digilocker.gov.in",
+    "name": "DigiLocker",
+    "company": "DigiLocker",
+    "role": "TI",
+    "personal_note": "Gov-tech IN. Infra de TI.",
+    "motivo": "in digilocker"
+  },
+  {
+    "email": "ti@ ongc.gov.in",
+    "name": "ONGC",
+    "company": "ONGC",
+    "role": "TI",
+    "personal_note": "Energy gov IN. Infra de TI.",
+    "motivo": "in ongc"
+  },
+  {
+    "email": "contact@ indianrail.gov.in",
+    "name": "Indian Rail",
+    "company": "IRCTC",
+    "role": "TI",
+    "personal_note": "Gov-tech IN. Infra de TI.",
+    "motivo": "in irctc"
+  },
+  {
+    "email": "ti@ tataelxsi.com",
+    "name": "Tata Elxsi",
+    "company": "Tata Elxsi",
+    "role": "TI",
+    "personal_note": "Semiconductor/EMSME IN. Infra de TI.",
+    "motivo": "in tataelxsi"
+  },
+  {
+    "email": "contact@ cdac.in",
+    "name": "C-DAC",
+    "company": "C-DAC",
+    "role": "TI",
+    "personal_note": "Gov R&D IN. Infra de TI.",
+    "motivo": "in cdac"
+  },
+  {
+    "email": "ti@ drdo.gov.in",
+    "name": "DRDO",
+    "company": "DRDO",
+    "role": "TI",
+    "personal_note": "Gov R&D IN. Infra de TI.",
+    "motivo": "in drdo"
+  },
+  {
+    "email": "contact@ nrah.in",
+    "name": "NRAH",
+    "company": "NRAH",
+    "role": "TI",
+    "personal_note": "E-commerce IN. Infra de TI.",
+    "motivo": "in nrah"
+  },
+  {
+    "email": "ti@ nsopera.com",
+    "name": "NsOp era",
+    "company": "NsOp era",
+    "role": "TI",
+    "personal_note": "E-commerce IN. Infra de TI.",
+    "motivo": "in nsopera"
+  },
+  {
+    "email": "contact@ delyro.com",
+    "name": "DelyRo",
+    "company": "DelyRo",
+    "role": "TI",
+    "personal_note": "Logistics IN. Infra de TI.",
+    "motivo": "in delyro"
+  },
+  {
+    "email": "ti@ shipsy.com",
+    "name": "Shipsy",
+    "company": "Shipsy",
+    "role": "TI",
+    "personal_note": "Logistics IN. Infra de TI.",
+    "motivo": "in shipsy"
+  },
+  {
+    "email": "contact@ zainiraq.com",
+    "name": "Zain Iraq",
+    "company": "Zain Iraq",
+    "role": "TI",
+    "personal_note": "Telecom IQ. Infra de TI.",
+    "motivo": "iq zain"
+  },
+  {
+    "email": "ti@ cbankiq.com",
+    "name": "CB Iraq",
+    "company": "CB Iraq",
+    "role": "TI",
+    "personal_note": "Banking IQ. Infra de TI.",
+    "motivo": "iq cbankiq"
+  },
+  {
+    "email": "contact@ iraqbank.com",
+    "name": "Iraq Bank",
+    "company": "Iraq Bank",
+    "role": "TI",
+    "personal_note": "Banking IQ. Infra de TI.",
+    "motivo": "iq iraqbank"
+  },
+  {
+    "email": "ti@ omanbank.com",
+    "name": "Oman Bank",
+    "company": "Oman Bank",
+    "role": "TI",
+    "personal_note": "Banking OM. Infra de TI.",
+    "motivo": "om omanbank"
+  },
+  {
+    "email": "contact@ bankmuscat.com",
+    "name": "BankMuscat",
+    "company": "BankMuscat",
+    "role": "TI",
+    "personal_note": "Banking OM. Infra de TI.",
+    "motivo": "om bm"
+  },
+  {
+    "email": "ti@ ooredoo.om",
+    "name": "Ooredoo Oman",
+    "company": "Ooredoo",
+    "role": "TI",
+    "personal_note": "Telecom OM. Infra de TI.",
+    "motivo": "om ooredoo"
+  },
+  {
+    "email": "contact@ bna.net",
+    "name": "BNB",
+    "company": "BNB",
+    "role": "TI",
+    "personal_note": "Central bank BH. Infra de TI.",
+    "motivo": "bh bna"
+  },
+  {
+    "email": "ti@ bdeed.com",
+    "name": "BDEE",
+    "company": "BDEE",
+    "role": "TI",
+    "personal_note": "Dev Bank BH. Infra de TI.",
+    "motivo": "bh bdee"
+  },
+  {
+    "email": "contact@ batelco.com.bh",
+    "name": "Batelco",
+    "company": "Batelco",
+    "role": "TI",
+    "personal_note": "Telecom BH. Infra de TI.",
+    "motivo": "bh batelco"
+  },
+  {
+    "email": "ti@ cbk.com.kw",
+    "name": "CBK",
+    "company": "CBK",
+    "role": "TI",
+    "personal_note": "Central bank KW. Infra de TI.",
+    "motivo": "kw cbk"
+  },
+  {
+    "email": "contact@ alghanim.com",
+    "name": "Al-Ghanim",
+    "company": "Al-Ghanim",
+    "role": "TI",
+    "personal_note": "Conglomerate KW. Infra de TI.",
+    "motivo": "kw ghanim"
+  },
+  {
+    "email": "ti@ zainkw.com",
+    "name": "Zain Kuwait",
+    "company": "Zain KW",
+    "role": "TI",
+    "personal_note": "Telecom KW. Infra de TI.",
+    "motivo": "kw zain"
+  },
+  {
+    "email": "contact@ qatarairways.com",
+    "name": "Qatar Airways",
+    "company": "Qatar Airways",
+    "role": "TI",
+    "personal_note": "Aviation QA. Infra de TI.",
+    "motivo": "qa qairways"
+  },
+  {
+    "email": "ti@ qnb.com",
+    "name": "QNB",
+    "company": "QNB",
+    "role": "TI",
+    "personal_note": "Banking QA. Infra de TI.",
+    "motivo": "qa qnb"
+  },
+  {
+    "email": "contact@ ooredoo.qa",
+    "name": "Ooredoo Qatar",
+    "company": "Ooredoo",
+    "role": "TI",
+    "personal_note": "Telecom QA. Infra de TI.",
+    "motivo": "qa ooredoo"
+  },
+  {
+    "email": "ti@ ziraatbank.com.tr",
+    "name": "Ziraat Bank",
+    "company": "Ziraat Bank",
+    "role": "TI",
+    "personal_note": "Banking TR. Infra de TI.",
+    "motivo": "tr ziraat"
+  },
+  {
+    "email": "contact@ finansal.com.tr",
+    "name": "Finansal",
+    "company": "Finansal",
+    "role": "TI",
+    "personal_note": "Fintech TR. Infra de TI.",
+    "motivo": "tr finansal"
+  },
+  {
+    "email": "ti@ istanbuldev.com",
+    "name": "IstanbulDev",
+    "company": "IstanbulDev",
+    "role": "TI",
+    "personal_note": "IT services TR. Infra de TI.",
+    "motivo": "tr istanbuldev"
+  },
+  {
+    "email": "contact@ turkcell.com.tr",
+    "name": "Turkcell",
+    "company": "Turkcell",
+    "role": "TI",
+    "personal_note": "Telecom TR. Infra de TI.",
+    "motivo": "tr turkcell"
+  },
+  {
+    "email": "ti@ vodafone.com.tr",
+    "name": "Vodafone TR",
+    "company": "Vodafone TR",
+    "role": "TI",
+    "personal_note": "Telecom TR. Infra de TI.",
+    "motivo": "tr vodafone"
+  },
+  {
+    "email": "contact@ akbank.com",
+    "name": "Akbank",
+    "company": "Akbank",
+    "role": "TI",
+    "personal_note": "Banking TR. Infra de TI.",
+    "motivo": "tr akbank"
+  },
+  {
+    "email": "ti@ yapi.com",
+    "name": "Yapi Credit",
+    "company": "Yapi Credit",
+    "role": "TI",
+    "personal_note": "Fintech TR. Infra de TI.",
+    "motivo": "tr yapi"
+  },
+  {
+    "email": "contact@ papara.com",
+    "name": "Papara",
+    "company": "Papara",
+    "role": "TI",
+    "personal_note": "Fintech TR. Infra de payments.",
+    "motivo": "tr papara"
+  },
+  {
+    "email": "ti@ livw.com",
+    "name": "LIVW",
+    "company": "LIVW",
+    "role": "TI",
+    "personal_note": "Fintech TR. Infra de TI.",
+    "motivo": "tr livw"
+  },
+  {
+    "email": "contact@ istanbulsa.com",
+    "name": "IstanbulSa",
+    "company": "IstanbulSa",
+    "role": "TI",
+    "personal_note": "Fintech TR. Infra de TI.",
+    "motivo": "tr istanbulsa"
+  },
+  {
+    "email": "contact@ iron_source.com",
+    "name": "ironSource",
+    "company": "ironSource",
+    "role": "TI",
+    "personal_note": "Ad-tech/ SaaS IL. Infra de TI.",
+    "motivo": "il ironsrc"
+  },
+  {
+    "email": "ti@ wix.com",
+    "name": "Wix",
+    "company": "Wix",
+    "role": "TI",
+    "personal_note": "SaaS IL. Infra de TI.",
+    "motivo": "il wix"
+  },
+  {
+    "email": "contact@ kondukto.io",
+    "name": "Kondukto",
+    "company": "Kondukto",
+    "role": "TI",
+    "personal_note": "DevSecOps SaaS IL. Infra de TI.",
+    "motivo": "il kondukto"
+  },
+  {
+    "email": "ti@ molnix.com",
+    "name": "Molnix",
+    "company": "Molnix",
+    "role": "TI",
+    "personal_note": "SaaS IL. Infra de TI.",
+    "motivo": "il molnix"
+  },
+  {
+    "email": "contact@ megaport.com",
+    "name": "Megaport",
+    "company": "Megaport",
+    "role": "TI",
+    "personal_note": "Network SaaS IL. Infra de TI.",
+    "motivo": "il megaport"
+  },
+  {
+    "email": "ti@ pheez.com",
+    "name": "Pheez",
+    "company": "Pheez",
+    "role": "TI",
+    "personal_note": "Fintech SaaS IL. Infra de TI.",
+    "motivo": "il pheez"
+  },
+  {
+    "email": "contact@ goodwill.co.il",
+    "name": "Goodwill",
+    "company": "Goodwill",
+    "role": "TI",
+    "personal_note": "SaaS IL. Infra de TI.",
+    "motivo": "il goodwill"
+  },
+  {
+    "email": "ti@ yieldify.com",
+    "name": "Yieldify",
+    "company": "Yieldify",
+    "role": "TI",
+    "personal_note": "SaaS IL. Infra de TI.",
+    "motivo": "il yieldify"
+  }
+]

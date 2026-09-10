@@ -1,0 +1,82 @@
+{
+  "jobs": [
+    {
+      "name": "Daily Leads & Outreach Check",
+      "prompt": "Run the daily leads and outreach status check for Zion Tech Group. From /Users/miami2/zion.app/automation, execute: python3 scripts/cron_daily_leads_check.py\n\nThis script:\n1. Scans Gmail inbox for new potential leads (via reseed_from_outreach.py)\n2. Compiles fresh leads from all discovery sources (compile_leads.py merge)\n3. Checks outreach send log for today's send/fail counts\n4. Reads the growth engine report for current status\n5. Writes reports/daily-leads-check-latest.json\n\nReport the summary to the Zion Agents Telegram group.",
+      "skills": [],
+      "model": "upstage/solar-pro4:free",
+      "provider": "nous",
+      "script": "cron_daily_leads_check.py",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "display": "daily at 08:00"
+      },
+      "schedule_display": "daily at 08:00",
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003886112318",
+        "chat_name": "Zion Agents",
+        "thread_id": null,
+        "user_id": "8435383377"
+      },
+      "enabled_toolsets": ["terminal", "file"],
+      "workdir": "/Users/miami2/zion.app/automation"
+    },
+    {
+      "name": "Weekly Growth Progress Report",
+      "prompt": "Generate the weekly growth progress report for Zion Tech Group. From /Users/miami2/zion.app/automation, execute: python3 scripts/cron_weekly_growth_report.py\n\nThis script:\n1. Aggregates leads from data/zion_leads_free.json (by priority and type)\n2. Parses outreach-send-log.jsonl for 7-day and all-time stats\n3. Reads growth-engine-report-latest.json for engine status\n4. Reads ceo-status.json for site/deploy/CRM state\n5. Reads cron-status-report.json for site coverage\n6. Generates a Telegram-ready weekly summary\n7. Writes reports/weekly-growth-progress-latest.json\n\nDeliver the Telegram summary to the Zion Agents Telegram group.",
+      "skills": [],
+      "model": "upstage/solar-pro4:free",
+      "provider": "nous",
+      "script": "cron_weekly_growth_report.py",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 8 * * 1",
+        "display": "weekly on Monday at 08:30"
+      },
+      "schedule_display": "weekly on Monday at 08:30",
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003886112318",
+        "chat_name": "Zion Agents",
+        "thread_id": null,
+        "user_id": "8435383377"
+      },
+      "enabled_toolsets": ["terminal", "file"],
+      "workdir": "/Users/miami2/zion.app/automation"
+    },
+    {
+      "name": "Biweekly Content Calendar Refresh",
+      "prompt": "Run the biweekly content calendar refresh for Zion Tech Group. From /Users/miami2/zion.app/automation, execute: python3 scripts/cron_biweekly_content_calendar.py\n\nThis script:\n1. Counts existing blog posts and extracts existing titles from /Users/miami2/zion.app/blog\n2. Loads the previous blog content plan (if any)\n3. Checks if a refresh is needed (calendar older than 14 days or new posts published)\n4. Generates a 14-day content calendar with cluster-balanced topics\n5. Identifies missing content clusters (gaps in coverage)\n6. Writes reports/content-calendar-biweekly-latest.json\n\nDeliver the Telegram summary to the Zion Agents Telegram group.",
+      "skills": [],
+      "model": "upstage/solar-pro4:free",
+      "provider": "nous",
+      "script": "cron_biweekly_content_calendar.py",
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 */14 * *",
+        "display": "every 14 days at 10:00"
+      },
+      "schedule_display": "every 14 days at 10:00",
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003886112318",
+        "chat_name": "Zion Agents",
+        "thread_id": null,
+        "user_id": "8435383377"
+      },
+      "enabled_toolsets": ["terminal", "file"],
+      "workdir": "/Users/miami2/zion.app/automation"
+    }
+  ]
+}

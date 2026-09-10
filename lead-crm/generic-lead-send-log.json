@@ -1,0 +1,268 @@
+{
+  "send_type": "generic-lead-approved",
+  "description": "Generic email leads (info@/contact@/founders@/hello@/etc.) — filtrados como único/contato apropriado",
+  "total_attempted": 26,
+  "timestamp": "2026-09-10T00:26:48.520442+00:00",
+  "results": [
+    {
+      "to": "hello@agencyaisolutions.com",
+      "domain": "agencyaisolutions.com",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d6dea22bdb3\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d6dea22bdb3\",\"timestamp\":\"2026-09-10T00:26:39Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:39.922646+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "suporte@allusivedigital.com",
+      "domain": "allusivedigital.com",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d70caa7125e\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d70caa7125e\",\"timestamp\":\"2026-09-10T00:26:40Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:40.306060+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "email@krishangtechnolab.com",
+      "domain": "krishangtechnolab.com",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d717b251352\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d717b251352\",\"timestamp\":\"2026-09-10T00:26:40Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:40.362244+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "info@mail.shopee.com.br",
+      "domain": "mail.shopee.com.br",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d73bd504364\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d73bd504364\",\"timestamp\":\"2026-09-10T00:26:40Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:40.807985+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "newsletters@nl.technologyadvice.com",
+      "domain": "nl.technologyadvice.com",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d767c6743f1\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d767c6743f1\",\"timestamp\":\"2026-09-10T00:26:41Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:41.221358+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@entechus.com",
+      "domain": "entechus.com",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d7728c4f225\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d7728c4f225\",\"timestamp\":\"2026-09-10T00:26:41Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:41.273663+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@e.drogaraia.com.br",
+      "domain": "e.drogaraia.com.br",
+      "score": 75,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d794f6c1efc\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d794f6c1efc\",\"timestamp\":\"2026-09-10T00:26:41Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:41.669363+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "founders@getdarwin.ai",
+      "domain": "getdarwin.ai",
+      "score": 60,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d7bfb62c325\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d7bfb62c325\",\"timestamp\":\"2026-09-10T00:26:41Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:42.121165+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "founders@getenter.ai",
+      "domain": "getenter.ai",
+      "score": 60,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d7cec092395\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d7cec092395\",\"timestamp\":\"2026-09-10T00:26:42Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:42.219891+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "hello@lambda.ai",
+      "domain": "lambda.ai",
+      "score": 60,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d7d592064c4\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d7d592064c4\",\"timestamp\":\"2026-09-10T00:26:42Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:42.267986+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@elenta.tech",
+      "domain": "elenta.tech",
+      "score": 60,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d7f9aacf21e\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d7f9aacf21e\",\"timestamp\":\"2026-09-10T00:26:42Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:42.683327+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "info@aiautomationagency.co.uk",
+      "domain": "aiautomationagency.co.uk",
+      "score": 60,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d804fc5ae60\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d804fc5ae60\",\"timestamp\":\"2026-09-10T00:26:42Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:42.747850+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "founders@kahunalabs.com",
+      "domain": "kahunalabs.com",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d829c03728a\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d829c03728a\",\"timestamp\":\"2026-09-10T00:26:42Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:43.166975+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@kahunalabs.com",
+      "domain": "kahunalabs.com",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d88ffd4e119\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d88ffd4e119\",\"timestamp\":\"2026-09-10T00:26:44Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:44.262491+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@frontlinemsp.com",
+      "domain": "frontlinemsp.com",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d8c2f8c97b2\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d8c2f8c97b2\",\"timestamp\":\"2026-09-10T00:26:44Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:44.712544+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@wheelhouseit.com",
+      "domain": "wheelhouseit.com",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d8cf9eae5a7\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d8cf9eae5a7\",\"timestamp\":\"2026-09-10T00:26:44Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:44.771795+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contato@xovakstudio.com",
+      "domain": "xovakstudio.com",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d8d4c310122\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d8d4c310122\",\"timestamp\":\"2026-09-10T00:26:44Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:44.823044+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "marketing@addee.com.br",
+      "domain": "addee.com.br",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d8f6e52cafc\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d8f6e52cafc\",\"timestamp\":\"2026-09-10T00:26:45Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:45.894195+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "hello@1password.com",
+      "domain": "1password.com",
+      "score": 50,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d966aae99cb\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d966aae99cb\",\"timestamp\":\"2026-09-10T00:26:46Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:46.339020+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "hello@canary.is",
+      "domain": "canary.is",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d98da330cfb\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d98da330cfb\",\"timestamp\":\"2026-09-10T00:26:46Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:46.726721+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "info@innovationglobalexperience.org",
+      "domain": "innovationglobalexperience.org",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d9b49a7ee23\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d9b49a7ee23\",\"timestamp\":\"2026-09-10T00:26:46Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:47.114562+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "sales@pro.io",
+      "domain": "pro.io",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d9bf842240e\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d9bf842240e\",\"timestamp\":\"2026-09-10T00:26:47Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:47.164779+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "partners@pro.io",
+      "domain": "pro.io",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4d9dfec2d93a\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4d9dfec2d93a\",\"timestamp\":\"2026-09-10T00:26:47Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:47.605413+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contact@intellectit.com.au",
+      "domain": "intellectit.com.au",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4da10939fbfb\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4da10939fbfb\",\"timestamp\":\"2026-09-10T00:26:47Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:48.045504+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contact@gridware.com.au",
+      "domain": "gridware.com.au",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4da1bdcadc0c\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4da1bdcadc0c\",\"timestamp\":\"2026-09-10T00:26:47Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:48.092898+00:00",
+      "note": "generic-lead-approved"
+    },
+    {
+      "to": "contact@cybercx.com.au",
+      "domain": "cybercx.com.au",
+      "score": 35,
+      "status": "failed",
+      "http_status": 403,
+      "error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a4da3f8ae439c\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a38a4da3f8ae439c\",\"timestamp\":\"2026-09-10T00:26:48Z\",\"zone\":\"api.resend.com\",\"cloudflare_error\":true,\"retryable\":false,",
+      "timestamp": "2026-09-10T00:26:48.520348+00:00",
+      "note": "generic-lead-approved"
+    }
+  ]
+}

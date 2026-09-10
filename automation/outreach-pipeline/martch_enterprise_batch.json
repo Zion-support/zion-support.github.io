@@ -1,0 +1,378 @@
+[
+  {
+    "email": "contact@braze.com",
+    "name": "Braze",
+    "company": "Braze",
+    "role": "Contato",
+    "personal_note": "MarTech platform. Infra de TI.",
+    "motivo": "martech braze"
+  },
+  {
+    "email": "ti@amplitude.com",
+    "name": "Amplitude",
+    "company": "Amplitude",
+    "role": "TI",
+    "personal_note": "Product analytics. Infra de TI.",
+    "motivo": "martech amplitude"
+  },
+  {
+    "email": "contact@segment.com",
+    "name": "Segment",
+    "company": "Segment",
+    "role": "Contato",
+    "personal_note": "Customer data platform. Infra de TI.",
+    "motivo": "martech segment"
+  },
+  {
+    "email": "ti@mixpanel.com",
+    "name": "Mixpanel",
+    "company": "Mixpanel",
+    "role": "TI",
+    "personal_note": "Product analytics. Infra de TI.",
+    "motivo": "martech mixpanel"
+  },
+  {
+    "email": "contact@hotjar.com",
+    "name": "Hotjar",
+    "company": "Hotjar",
+    "role": "Contato",
+    "personal_note": "Behavior analytics. Infra de TI.",
+    "motivo": "martech hotjar"
+  },
+  {
+    "email": "ti@fullstory.com",
+    "name": "FullStory",
+    "company": "FullStory",
+    "role": "TI",
+    "personal_note": "Digital analytics. Infra de TI.",
+    "motivo": "martech fullstory"
+  },
+  {
+    "email": "contact@clarity.ms",
+    "name": "Clarity",
+    "company": "Clarity",
+    "role": "Contato",
+    "personal_note": "Web analytics. Infra de TI.",
+    "motivo": "martech clarity"
+  },
+  {
+    "email": "ti@optimizely.com",
+    "name": "Optimizely",
+    "company": "Optimizely",
+    "role": "TI",
+    "personal_note": "Experimentation platform. Infra de TI.",
+    "motivo": "martech optimizely"
+  },
+  {
+    "email": "contact@vwo.com",
+    "name": "VWO",
+    "company": "VWO",
+    "role": "Contato",
+    "personal_note": "A/B testing. Infra de TI.",
+    "motivo": "martech vwo"
+  },
+  {
+    "email": "ti@launchdarkly.com",
+    "name": "LaunchDarkly",
+    "company": "LaunchDarkly",
+    "role": "TI",
+    "personal_note": "Feature flag platform. Infra de TI.",
+    "motivo": "martech ld"
+  },
+  {
+    "email": "contact@accenture.com",
+    "name": "Accenture",
+    "company": "Accenture",
+    "role": "Contato",
+    "personal_note": "IT services. Infra de TI.",
+    "motivo": "it svc accenture"
+  },
+  {
+    "email": "ti@deloitte.com",
+    "name": "Deloitte",
+    "company": "Deloitte",
+    "role": "TI",
+    "personal_note": "IT consulting. Infra de TI.",
+    "motivo": "it svc deloitte"
+  },
+  {
+    "email": "contact@pwc.com",
+    "name": "PwC",
+    "company": "PwC",
+    "role": "Contato",
+    "personal_note": "IT consulting. Infra de TI.",
+    "motivo": "it svc pwc"
+  },
+  {
+    "email": "ti@ey.com",
+    "name": "EY",
+    "company": "EY",
+    "role": "TI",
+    "personal_note": "IT consulting. Infra de TI.",
+    "motivo": "it svc ey"
+  },
+  {
+    "email": "contact@kpmg.com",
+    "name": "KPMG",
+    "company": "KPMG",
+    "role": "Contato",
+    "personal_note": "IT consulting. Infra de TI.",
+    "motivo": "it svc kpmg"
+  },
+  {
+    "email": "ti@ibm.com",
+    "name": "IBM",
+    "company": "IBM",
+    "role": "TI",
+    "personal_note": "IT services. Infra de TI.",
+    "motivo": "it svc ibm"
+  },
+  {
+    "email": "contact@cisco.com",
+    "name": "Cisco",
+    "company": "Cisco",
+    "role": "Contato",
+    "personal_note": "Network IT. Infra de TI.",
+    "motivo": "it svc cisco"
+  },
+  {
+    "email": "ti@broadcom.com",
+    "name": "Broadcom",
+    "company": "Broadcom",
+    "role": "TI",
+    "personal_note": "IT enterprise. Infra de TI.",
+    "motivo": "it svc broadcom"
+  },
+  {
+    "email": "contact@hpe.com",
+    "name": "HPE",
+    "company": "HPE",
+    "role": "Contato",
+    "personal_note": "IT infrastructure. Infra de TI.",
+    "motivo": "it svc hpe"
+  },
+  {
+    "email": "ti@dell.com",
+    "name": "Dell",
+    "company": "Dell",
+    "role": "TI",
+    "personal_note": "IT hardware/services. Infra de TI.",
+    "motivo": "it svc dell"
+  },
+  {
+    "email": "contact@atos.net",
+    "name": "Atos",
+    "company": "Atos",
+    "role": "Contato",
+    "personal_note": "IT services EU. Infra de TI.",
+    "motivo": "eu atos"
+  },
+  {
+    "email": "ti@siemens.com",
+    "name": "Siemens",
+    "company": "Siemens",
+    "role": "TI",
+    "personal_note": "Industrial IT. Infra de TI.",
+    "motivo": "eu siemens"
+  },
+  {
+    "email": "contact@schneider-electric.com",
+    "name": "Schneider Electric",
+    "company": "Schneider Electric",
+    "role": "Contato",
+    "personal_note": "Energy IT. Infra de TI.",
+    "motivo": "eu schneider"
+  },
+  {
+    "email": "ti@thalesgroup.com",
+    "name": "Thales",
+    "company": "Thales",
+    "role": "TI",
+    "personal_note": "Defense/security IT. Infra de TI.",
+    "motivo": "eu thales"
+  },
+  {
+    "email": "contact@capgemini.com",
+    "name": "Capgemini",
+    "company": "Capgemini",
+    "role": "Contato",
+    "personal_note": "IT services EU. Infra de TI.",
+    "motivo": "eu capgemini"
+  },
+  {
+    "email": "ti@infosys.com",
+    "name": "Infosys",
+    "company": "Infosys",
+    "role": "TI",
+    "personal_note": "IT services EU. Infra de TI.",
+    "motivo": "eu infosys"
+  },
+  {
+    "email": "contact@tcs.com",
+    "name": "TCS",
+    "company": "TCS",
+    "role": "Contato",
+    "personal_note": "IT services EU. Infra de TI.",
+    "motivo": "eu tcs"
+  },
+  {
+    "email": "ti@wipro.com",
+    "name": "Wipro",
+    "company": "Wipro",
+    "role": "TI",
+    "personal_note": "IT services EU. Infra de TI.",
+    "motivo": "eu wipro"
+  },
+  {
+    "email": "contact@techm.com",
+    "name": "Tech Mahindra",
+    "company": "Tech Mahindra",
+    "role": "Contato",
+    "personal_note": "IT services Asia. Infra de TI.",
+    "motivo": "asia techm"
+  },
+  {
+    "email": "ti@lenovo.com",
+    "name": "Lenovo",
+    "company": "Lenovo",
+    "role": "TI",
+    "personal_note": "IT hardware/services. Infra de TI.",
+    "motivo": "asia lenovo"
+  },
+  {
+    "email": "contact@honor.com",
+    "name": "Honor",
+    "company": "Honor",
+    "role": "Contato",
+    "personal_note": "IT hardware. Infra de TI.",
+    "motivo": "asia honor"
+  },
+  {
+    "email": "ti@huawei.com",
+    "name": "Huawei",
+    "company": "Huawei",
+    "role": "TI",
+    "personal_note": "IT telecom. Infra de TI.",
+    "motivo": "asia huawei"
+  },
+  {
+    "email": "contact@zte.com",
+    "name": "ZTE",
+    "company": "ZTE",
+    "role": "Contato",
+    "personal_note": "Telecom IT. Infra de TI.",
+    "motivo": "asia zte"
+  },
+  {
+    "email": "ti@ibm.com",
+    "name": "IBM LATAM",
+    "company": "IBM LATAM",
+    "role": "TI",
+    "personal_note": "IT services LATAM. Infra de TI.",
+    "motivo": "latam ibm"
+  },
+  {
+    "email": "contact@consolidated.com",
+    "name": "Consolidated",
+    "company": "Consolidated",
+    "role": "Contato",
+    "personal_note": "IT services LATAM. Infra de TI.",
+    "motivo": "latam consol"
+  },
+  {
+    "email": "contact@alsea.com",
+    "name": "Alsea",
+    "company": "Alsea",
+    "role": "Contato",
+    "personal_note": "IT services LATAM. Infra de TI.",
+    "motivo": "latam alsea"
+  },
+  {
+    "email": "contact@arabtec.com",
+    "name": "ArabTec",
+    "company": "ArabTec",
+    "role": "Contato",
+    "personal_note": "IT services ME. Infra de TI.",
+    "motivo": "me arabtec"
+  },
+  {
+    "email": "ti@ittc.com",
+    "name": "ITTC",
+    "company": "ITTC",
+    "role": "TI",
+    "personal_note": "IT services ME. Infra de TI.",
+    "motivo": "me ittc"
+  },
+  {
+    "email": "contact@etl.com",
+    "name": "ETL",
+    "company": "ETL",
+    "role": "Contato",
+    "personal_note": "IT services ME. Infra de TI.",
+    "motivo": "me etl"
+  },
+  {
+    "email": "contact@mailchimp.com",
+    "name": "Mailchimp",
+    "company": "Mailchimp",
+    "role": "Contato",
+    "personal_note": "Email marketing. Infra de TI.",
+    "motivo": "martech mailchimp"
+  },
+  {
+    "email": "ti@sendgrid.com",
+    "name": "SendGrid",
+    "company": "SendGrid",
+    "role": "TI",
+    "personal_note": "Email API. Infra de TI.",
+    "motivo": "martech sendgrid"
+  },
+  {
+    "email": "contact@activecampaign.com",
+    "name": "ActiveCampaign",
+    "company": "ActiveCampaign",
+    "role": "Contato",
+    "personal_note": "Marketing automation. Infra de TI.",
+    "motivo": "martech activecampaign"
+  },
+  {
+    "email": "ti@klaviyo.com",
+    "name": "Klaviyo",
+    "company": "Klaviyo",
+    "role": "TI",
+    "personal_note": "Email/SMS marketing. Infra de TI.",
+    "motivo": "martech klaviyo"
+  },
+  {
+    "email": "contact@drip.com",
+    "name": "Drip",
+    "company": "Drip",
+    "role": "Contato",
+    "personal_note": "E-commerce marketing. Infra de TI.",
+    "motivo": "martech drip"
+  },
+  {
+    "email": "ti@customer.io",
+    "name": "Customer.io",
+    "company": "Customer.io",
+    "role": "TI",
+    "personal_note": "Messaging platform. Infra de TI.",
+    "motivo": "martech customerio"
+  },
+  {
+    "email": "contact@Iterable.com",
+    "name": "Iterable",
+    "company": "Iterable",
+    "role": "Contato",
+    "personal_note": "Marketing platform. Infra de TI.",
+    "motivo": "martech iterable"
+  },
+  {
+    "email": "ti@tinypulse.com",
+    "name": "TinyPulse",
+    "company": "TinyPulse",
+    "role": "TI",
+    "personal_note": "Employee engagement. Infra de TI.",
+    "motivo": "martech tinypulse"
+  }
+]

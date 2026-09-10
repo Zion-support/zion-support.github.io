@@ -1,0 +1,522 @@
+[
+  {
+    "email": "ti@pb.com",
+    "name": "Pracuj.Biznes IT",
+    "company": "Pracuj Group (Polish job platform)",
+    "role": "TI",
+    "personal_note": "Polish employment platform IT infrastructure. Infra TI.",
+    "motivo": "pl pracuj"
+  },
+  {
+    "email": "contact@crenitte.com",
+    "name": "CreNitte",
+    "company": "CreNitte (Poland fintech)",
+    "role": "Contato",
+    "personal_note": "Polish fintech platform. Infra TI.",
+    "motivo": "pl crenitte"
+  },
+  {
+    "email": "ti@getinbank.pl",
+    "name": "Getin Bank IT",
+    "company": "Getin Bank (Poland)",
+    "role": "TI",
+    "personal_note": "Polish banking IT infrastructure. Infra TI.",
+    "motivo": "pl getinbank"
+  },
+  {
+    "email": "contact@bankmillennium.pl",
+    "name": "Millennium Bank IT",
+    "company": "Millennium Bank (Poland)",
+    "role": "Contato",
+    "personal_note": "Polish banking IT. Infra TI.",
+    "motivo": "pl millennium"
+  },
+  {
+    "email": "ti@aliorbank.pl",
+    "name": "Alior Bank IT",
+    "company": "Alior Bank (Poland)",
+    "role": "TI",
+    "personal_note": "Polish banking IT. Infra TI.",
+    "motivo": "pl aliorbank"
+  },
+  {
+    "email": "contact@peo.pl",
+    "name": "PEO (Polish pension fund)",
+    "company": "PEO (Poland)",
+    "role": "Contato",
+    "personal_note": "Polish pension fund IT. Infra TI.",
+    "motivo": "pl peo"
+  },
+  {
+    "email": "ti@pgn.pl",
+    "name": "PGN (Polish gas network)",
+    "company": "PGN (Poland)",
+    "role": "TI",
+    "personal_note": "Polish energy infrastructure IT. Infra TI.",
+    "motivo": "pl pgn"
+  },
+  {
+    "email": "contact@pge.pl",
+    "name": "PGE (Polish energy)",
+    "company": "PGE (Poland)",
+    "role": "Contato",
+    "personal_note": "Polish energy group IT. Infra TI.",
+    "motivo": "pl pge"
+  },
+  {
+    "email": "ti@tauron.pl",
+    "name": "Tauron (Polish energy)",
+    "company": "Tauron (Poland)",
+    "role": "TI",
+    "personal_note": "Polish energy IT. Infra TI.",
+    "motivo": "pl tauron"
+  },
+  {
+    "email": "contact@eon.pl",
+    "name": "E.ON Poland",
+    "company": "E.ON Poland",
+    "role": "Contato",
+    "personal_note": "Polish energy IT. Infra TI.",
+    "motivo": "pl eon"
+  },
+  {
+    "email": "ti@nukib.cz",
+    "name": "NÚKIB (Czech cyber)",
+    "company": "NÚKIB (Czech National Security)",
+    "role": "TI",
+    "personal_note": "Czech infrastructure cybersecurity. Infra TI.",
+    "motivo": "cz nukib"
+  },
+  {
+    "email": "contact@gov.cz",
+    "name": "Czech Government IT",
+    "company": "Czech Government IT",
+    "role": "Contato",
+    "personal_note": "Czech government IT services. Infra TI.",
+    "motivo": "cz gov"
+  },
+  {
+    "email": "ti@slovnaft.sk",
+    "name": "Slovnaft (Slovak oil)",
+    "company": "Slovnaft (Slovakia)",
+    "role": "TI",
+    "personal_note": "Slovak refining/energy IT. Infra TI.",
+    "motivo": "sk slovnaft"
+  },
+  {
+    "email": "contact@petrol.si",
+    "name": "Petrol (Slovenia energy)",
+    "company": "Petrol (Slovenia)",
+    "role": "Contato",
+    "personal_note": "Slovenian energy IT. Infra TI.",
+    "motivo": "si petrol"
+  },
+  {
+    "email": "ti@delo.sk",
+    "name": "Delo (Slovak media)",
+    "company": "Delo (Slovakia)",
+    "role": "TI",
+    "personal_note": "Slovak media IT infrastructure. Infra TI.",
+    "motivo": "sk delo"
+  },
+  {
+    "email": "contact@posta.si",
+    "name": "Pošta Slovenije",
+    "company": "Pošta Slovenije",
+    "role": "Contato",
+    "personal_note": "Slovenian postal IT. Infra TI.",
+    "motivo": "si posta"
+  },
+  {
+    "email": "ti@mol.hu",
+    "name": "MOL (Hungarian oil)",
+    "company": "MOL (Hungary)",
+    "role": "TI",
+    "personal_note": "Hungarian energy IT infrastructure. Infra TI.",
+    "motivo": "hu mol"
+  },
+  {
+    "email": "contact@benit.hu",
+    "name": "Benit (Hungarian IT)",
+    "company": "Benit (Hungary)",
+    "role": "Contato",
+    "personal_note": "Hungarian IT services. Infra TI.",
+    "motivo": "hu benit"
+  },
+  {
+    "email": "ti@petrotel.ro",
+    "name": "Petrotel (Romanian oil)",
+    "company": "Petrotel (Romania)",
+    "role": "TI",
+    "personal_note": "Romanian energy IT. Infra TI.",
+    "motivo": "ro petrotel"
+  },
+  {
+    "email": "contact@rompetrol.ro",
+    "name": "RomPetrol (Romania)",
+    "company": "RomPetrol (Romania)",
+    "role": "Contato",
+    "personal_note": "Romanian energy IT. Infra TI.",
+    "motivo": "ro rompetrol"
+  },
+  {
+    "email": "ti@esan.ro",
+    "name": "ESAN (Romanian IT)",
+    "company": "ESAN (Romania)",
+    "role": "TI",
+    "personal_note": "Romanian IT services. Infra TI.",
+    "motivo": "ro esan"
+  },
+  {
+    "email": "contact@orbitro.ro",
+    "name": "Orbitro (Romanian space)",
+    "company": "Orbitro (Romania)",
+    "role": "Contato",
+    "personal_note": "Romanian aerospace IT. Infra TI.",
+    "motivo": "ro orbitro"
+  },
+  {
+    "email": "ti@lubo.bg",
+    "name": "Lubo (Bulgarian tech)",
+    "company": "Lubo (Bulgaria)",
+    "role": "TI",
+    "personal_note": "Bulgarian IT services. Infra TI.",
+    "motivo": "bg lubo"
+  },
+  {
+    "email": "contact@bg telecom.bg",
+    "name": "Bulgarian Telecom",
+    "company": "Bulgarian Telecom",
+    "role": "Contato",
+    "personal_note": "Bulgarian telecom IT. Infra TI.",
+    "motivo": "bg telecom"
+  },
+  {
+    "email": "ti@uis.rs",
+    "name": "IUS (Serbian telecom)",
+    "company": "IUS (Serbia)",
+    "role": "TI",
+    "personal_note": "Serbian telecom IT. Infra TI.",
+    "motivo": "rs uis"
+  },
+  {
+    "email": "contact@mtel.si",
+    "name": "Mtel (Slovenian telecom)",
+    "company": "Mtel (Slovenia)",
+    "role": "Contato",
+    "personal_note": "Slovenian telecom IT. Infra TI.",
+    "motivo": "si mtel"
+  },
+  {
+    "email": "ti@croatie.com",
+    "name": "Croatie (Croatian IT)",
+    "company": "Croatie (Croatia)",
+    "role": "TI",
+    "personal_note": "Croatian IT services. Infra TI.",
+    "motivo": "hr croatie"
+  },
+  {
+    "email": "contact@ukrtelecom.ua",
+    "name": "Ukrtelecom",
+    "company": "Ukrtelecom (Ukraine)",
+    "role": "Contato",
+    "personal_note": "Ukrainian telecom IT. Infra TI.",
+    "motivo": "ua ukrtelecom"
+  },
+  {
+    "email": "ti@kiber.net",
+    "name": "Kiber (Ukraine cybersecurity)",
+    "company": "Kiber (Ukraine)",
+    "role": "TI",
+    "personal_note": "Ukrainian cybersecurity IT. Infra TI.",
+    "motivo": "ua kiber"
+  },
+  {
+    "email": "contact@beltelecom.by",
+    "name": "Beltelecom",
+    "company": "Beltelecom (Belarus)",
+    "role": "Contato",
+    "personal_note": "Belarusian telecom IT. Infra TI.",
+    "motivo": "by beltelecom"
+  },
+  {
+    "email": "ti@Georgian Railway.ge",
+    "name": "Georgian Railway",
+    "company": "Georgian Railway",
+    "role": "TI",
+    "personal_note": "Georgian railway IT. Infra TI.",
+    "motivo": "ge georgianrailway"
+  },
+  {
+    "email": "contact@ArmenTel.am",
+    "name": "ArmenTel",
+    "company": "ArmenTel (Armenia)",
+    "role": "Contato",
+    "personal_note": "Armenian telecom IT. Infra TI.",
+    "motivo": "am armentel"
+  },
+  {
+    "email": "ti@tele2.lt",
+    "name": "Tele2 Lithuania",
+    "company": "Tele2 (Lithuania)",
+    "role": "TI",
+    "personal_note": "Lithuanian telecom IT. Infra TI.",
+    "motivo": "lt tele2"
+  },
+  {
+    "email": "contact@tele2.lv",
+    "name": "Tele2 Latvia",
+    "company": "Tele2 (Latvia)",
+    "role": "Contato",
+    "personal_note": "Latvian telecom IT. Infra TI.",
+    "motivo": "lv tele2"
+  },
+  {
+    "email": "ti@tele2.ee",
+    "name": "Tele2 Estonia",
+    "company": "Tele2 (Estonia)",
+    "role": "TI",
+    "personal_note": "Estonian telecom IT. Infra TI.",
+    "motivo": "ee tele2"
+  },
+  {
+    "email": "contact@telia.ee",
+    "name": "Telia Estonia",
+    "company": "Telia (Estonia)",
+    "role": "Contato",
+    "personal_note": "Estonian telecom IT. Infra TI.",
+    "motivo": "ee telia"
+  },
+  {
+    "email": "ti@telenor.no",
+    "name": "Telenor (Nordic)",
+    "company": "Telenor Group",
+    "role": "TI",
+    "personal_note": "Nordic telecom IT infrastructure. Infra TI.",
+    "motivo": "no telenor"
+  },
+  {
+    "email": "contact@telenor.com",
+    "name": "Telenor Norway",
+    "company": "Telenor Norway",
+    "role": "Contato",
+    "personal_note": "Norwegian telecom IT. Infra TI.",
+    "motivo": "no telenor2"
+  },
+  {
+    "email": "ti@telia.com",
+    "name": "Telia Company",
+    "company": "Telia Company (Nordic/Baltic)",
+    "role": "TI",
+    "personal_note": "Nordic/Baltic telecom IT. Infra TI.",
+    "motivo": "no telia"
+  },
+  {
+    "email": "contact@tele2.se",
+    "name": "Tele2 Sweden",
+    "company": "Tele2 Sweden",
+    "role": "Contato",
+    "personal_note": "Swedish telecom IT. Infra TI.",
+    "motivo": "se tele2"
+  },
+  {
+    "email": "ti@geenstijl.nl",
+    "name": "Geenstijl IT",
+    "company": "Geenstijl (Dutch media)",
+    "role": "TI",
+    "personal_note": "Dutch media IT infrastructure. Infra TI.",
+    "motivo": "nl geenstijl"
+  },
+  {
+    "email": "contact@ad.nl",
+    "name": "AD (Dutch newspaper)",
+    "company": "Algemeen Dagblad",
+    "role": "Contato",
+    "personal_note": "Dutch newspaper IT. Infra TI.",
+    "motivo": "nl ad"
+  },
+  {
+    "email": "ti@volkskrant.nl",
+    "name": "Volkskrant IT",
+    "company": "de Volkskrant",
+    "role": "TI",
+    "personal_note": "Dutch newspaper IT. Infra TI.",
+    "motivo": "nl volkskrant"
+  },
+  {
+    "email": "contact@stadnl.nl",
+    "name": "Stad.nl (Dutch city platform)",
+    "company": "Stad.nl (Netherlands)",
+    "role": "Contato",
+    "personal_note": "Dutch city platform IT. Infra TI.",
+    "motivo": "nl stadnl"
+  },
+  {
+    "email": "ti@belastingdienst.nl",
+    "name": "Belastingdienst IT",
+    "company": "Dutch Tax Authority",
+    "role": "TI",
+    "personal_note": "Dutch tax authority IT. Infra TI.",
+    "motivo": "nl belastingdienst"
+  },
+  {
+    "email": "contact@rijksoverheid.nl",
+    "name": "Rijksoverheid IT",
+    "company": "Dutch Government",
+    "role": "Contato",
+    "personal_note": "Dutch government IT services. Infra TI.",
+    "motivo": "nl rijksoverheid"
+  },
+  {
+    "email": "ti@amsterdam.nl",
+    "name": "Amsterdam IT",
+    "company": "Municipality of Amsterdam",
+    "role": "TI",
+    "personal_note": "Dutch municipal IT infrastructure. Infra TI.",
+    "motivo": "nl amsterdam"
+  },
+  {
+    "email": "ti@eldiario.es",
+    "name": "El Diario IT",
+    "company": "El Diario (Spanish news)",
+    "role": "TI",
+    "personal_note": "Spanish news IT infrastructure. Infra TI.",
+    "motivo": "es eldiario"
+  },
+  {
+    "email": "contact@20minutos.es",
+    "name": "20 Minutos IT",
+    "company": "20 Minutos (Spanish media)",
+    "role": "Contato",
+    "personal_note": "Spanish media IT. Infra TI.",
+    "motivo": "es 20minutos"
+  },
+  {
+    "email": "ti@abc.es",
+    "name": "ABC IT",
+    "company": "ABC (Spanish newspaper)",
+    "role": "TI",
+    "personal_note": "Spanish newspaper IT. Infra TI.",
+    "motivo": "es abc"
+  },
+  {
+    "email": "contact@elmundo.es",
+    "name": "ElMundo IT",
+    "company": "ElMundo (Spanish news)",
+    "role": "Contato",
+    "personal_note": "Spanish news IT. Infra TI.",
+    "motivo": "es elmundo"
+  },
+  {
+    "email": "ti@expansion.es",
+    "name": "Expansion IT",
+    "company": "Expansion (Spanish business)",
+    "role": "TI",
+    "personal_note": "Spanish business IT. Infra TI.",
+    "motivo": "es expansion"
+  },
+  {
+    "email": "contact@lavanguardia.com",
+    "name": "La Vanguardia IT",
+    "company": "La Vanguardia (Spanish news)",
+    "role": "Contato",
+    "personal_note": "Spanish news IT. Infra TI.",
+    "motivo": "es lavanguardia"
+  },
+  {
+    "email": "ti@sergio.es",
+    "name": "Sergio (Spanish tech)",
+    "company": "Sergio.es",
+    "role": "TI",
+    "personal_note": "Spanish tech IT. Infra TI.",
+    "motivo": "es sergio"
+  },
+  {
+    "email": "ti@repubblica.it",
+    "name": "Repubblica IT",
+    "company": "La Repubblica (Italian news)",
+    "role": "TI",
+    "personal_note": "Italian news IT infrastructure. Infra TI.",
+    "motivo": "it repubblica"
+  },
+  {
+    "email": "contact@corriere.it",
+    "name": "Corriere IT",
+    "company": "Corriere della Sera",
+    "role": "Contato",
+    "personal_note": "Italian newspaper IT. Infra TI.",
+    "motivo": "it corriere"
+  },
+  {
+    "email": "ti@lastampa.it",
+    "name": "LaStampa IT",
+    "company": "La Stampa (Italian news)",
+    "role": "TI",
+    "personal_note": "Italian newspaper IT. Infra TI.",
+    "motivo": "it lastampa"
+  },
+  {
+    "email": "contact@ilmessaggero.it",
+    "name": "IlMessaggero IT",
+    "company": "IlMessaggero (Italian news)",
+    "role": "Contato",
+    "personal_note": "Italian news IT. Infra TI.",
+    "motivo": "it ilmessaggero"
+  },
+  {
+    "email": "ti@ilmatin.it",
+    "name": "IlMatin IT",
+    "company": "Il Mattino (Italian news)",
+    "role": "TI",
+    "personal_note": "Italian newspaper IT. Infra TI.",
+    "motivo": "it ilmattino"
+  },
+  {
+    "email": "contact@ilsole24ore.com",
+    "name": "IlSole24Ore IT",
+    "company": "Il Sole 24 Ore (Italian financial)",
+    "role": "Contato",
+    "personal_note": "Italian financial IT. Infra TI.",
+    "motivo": "it ilsole24ore"
+  },
+  {
+    "email": "ti@openesinternet.it",
+    "name": "OpenESI IT",
+    "company": "OpenESI (Italian tech)",
+    "role": "TI",
+    "personal_note": "Italian tech IT. Infra TI.",
+    "motivo": "it openesi"
+  },
+  {
+    "email": "contact@publico.pt",
+    "name": "Público IT",
+    "company": "Público (Portuguese news)",
+    "role": "Contato",
+    "personal_note": "Portuguese news IT. Infra TI.",
+    "motivo": "pt publico"
+  },
+  {
+    "email": "ti@avasportugal.pt",
+    "name": "AvaPortugal IT",
+    "company": "AvaPortugal",
+    "role": "TI",
+    "personal_note": "Portuguese IT infrastructure. Infra TI.",
+    "motivo": "pt avaportugal"
+  },
+  {
+    "email": "contact@ge.pt",
+    "name": "GE (Portuguese engineering)",
+    "company": "Gazeta Engineering",
+    "role": "Contato",
+    "personal_note": "Portuguese engineering IT. Infra TI.",
+    "motivo": "pt ge"
+  },
+  {
+    "email": "ti@com.pt",
+    "name": "Com (Portuguese tech)",
+    "company": "Com (Portugal)",
+    "role": "TI",
+    "personal_note": "Portuguese tech IT. Infra TI.",
+    "motivo": "pt com"
+  }
+]

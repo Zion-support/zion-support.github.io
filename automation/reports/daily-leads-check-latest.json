@@ -1,0 +1,50 @@
+{
+  "run_at": "2026-09-09T12:00:47.064628+00:00",
+  "run_type": "daily_leads_check",
+  "leads": {
+    "total_in_queue": 63,
+    "source_file": "/Users/miami2/zion.app/automation/data/zion_leads_free.json",
+    "reseed": {
+      "returncode": 0,
+      "stdout": "group.com (Cloud Migration & FinOps)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia Alcatrão @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n  ➕ \"Kleber Garcia AlcatrÃƒÂ£o @ Zion Tech Group\" → kleber@ziontechgroup.com (AI Automation)\n\n[4] Merge com fila existente...\n  📂 Leads existentes na fila: 63\n  ⏭  Duplicado (já na fila): atendimento@jfbinvest.com.br\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n  ⏭  Duplicado (já na fila): kleber@ziontechgroup.com\n\n[5] Salvando fila atualizada...\n  💾 Fila salva: /Users/miami2/zion.app/automation/data/zion_leads_free.json\n  📊 Total na fila: 63\n\n============================================================\nRESUMO DO RESEED\n============================================================\nadded: 0\nskipped: 3 (already sent)\nqueue_size: 63\nerrors: none\n\nNovos leads adicionados:\n  • jfbinvest.com.br | atendimento@jfbinvest.com.br | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | Cloud Migration & FinOps\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia Alcatrão @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n  • \"Kleber Garcia AlcatrÃƒÂ£o @ Zion Tech Group\" | kleber@ziontechgroup.com | AI Automation\n",
+      "stderr": ""
+    },
+    "total_after_reseed": 63
+  },
+  "outreach": {
+    "send_log": {
+      "total_entries": 1519,
+      "sent": 1514,
+      "failed": 5,
+      "recent_by_date": {
+        "2026-09-03": {
+          "sent": 316,
+          "failed": 5
+        },
+        "2026-09-04": {
+          "sent": 15,
+          "failed": 0
+        },
+        "2026-09-05": {
+          "sent": 4,
+          "failed": 0
+        },
+        "2026-09-06": {
+          "sent": 1179,
+          "failed": 0
+        }
+      },
+      "last_send_ts": "2026-09-06T06:55:19.966962+00:00"
+    }
+  },
+  "growth_engine": {
+    "status": "ok",
+    "dry_run": false,
+    "send_log_total": 1519,
+    "send_succeeded": 1514,
+    "send_failed": 5,
+    "last_send_ts": "2026-09-06T06:55:19.966962+00:00",
+    "last_error": null
+  },
+  "summary": "📊 Daily Leads & Outreach Check — 2026-09-09T12:00Z\nLeads in queue: 63 (+0 from Gmail scan)\nOutreach today: 0 sent, 0 failed\nOutreach total: 1514 sent, 5 failed (across 1519 entries)\nGrowth engine: ok (last send: 2026-09-06T06:55:19.966962+00:00)"
+}

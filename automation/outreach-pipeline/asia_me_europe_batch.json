@@ -1,0 +1,322 @@
+[
+  {
+    "email": "contact@paytm.com",
+    "name": "Paytm",
+    "company": "Paytm",
+    "role": "TI",
+    "personal_note": "Fintech indiano, 350M+ usuários. Infraestrutura de payments.",
+    "motivo": "india paytm"
+  },
+  {
+    "email": "ti@flipkart.com",
+    "name": "Flipkart",
+    "company": "Flipkart",
+    "role": "TI",
+    "personal_note": "E-commerce indiano. Infraestrutura de marketplace em escala.",
+    "motivo": "india flipkart"
+  },
+  {
+    "email": "contact@ola.com",
+    "name": "Ola Cabs",
+    "company": "Ola Cabs",
+    "role": "TI",
+    "personal_note": "Mobilidade indiano. Infraestrutura de mobility.",
+    "motivo": "india ola"
+  },
+  {
+    "email": "ti@swiggy.com",
+    "name": "Swiggy",
+    "company": "Swiggy",
+    "role": "TI",
+    "personal_note": "Food delivery indiano. Infraestrutura de logistics.",
+    "motivo": "india swiggy"
+  },
+  {
+    "email": "contact@zomato.com",
+    "name": "Zomato",
+    "company": "Zomato",
+    "role": "TI",
+    "personal_note": "Food delivery indiano. Infraestrutura de logistics.",
+    "motivo": "india zomato"
+  },
+  {
+    "email": "ti@payu.in",
+    "name": "PayU India",
+    "company": "PayU India",
+    "role": "TI",
+    "personal_note": "Payment gateway indiano. Infraestrutura de payments.",
+    "motivo": "india payu"
+  },
+  {
+    "email": "contact@phonePe.in",
+    "name": "PhonePe",
+    "company": "PhonePe",
+    "role": "TI",
+    "personal_note": "Fintech indiano, 300M+ usuários. Infraestrutura de payments.",
+    "motivo": "india phonepe"
+  },
+  {
+    "email": "ti@credalife.com",
+    "name": "CreditLife",
+    "company": "CreditLife",
+    "role": "TI",
+    "personal_note": "Fintech indiano de crédito. Infraestrutura de lending.",
+    "motivo": "india credalife"
+  },
+  {
+    "email": "contact@policybazaar.india.com",
+    "name": "Policybazaar",
+    "company": "Policybazaar",
+    "role": "TI",
+    "personal_note": "Insurance tech indiano. Infraestrutura de comparação de seguros.",
+    "motivo": "india policybazaar"
+  },
+  {
+    "email": "ti@upstox.com",
+    "name": "Upstox",
+    "company": "Upstox",
+    "role": "TI",
+    "personal_note": "Fintech de trading indiano. Infraestrutura de securities.",
+    "motivo": "india upstox"
+  },
+  {
+    "email": "contact@zerodha.com",
+    "name": "Zerodha",
+    "company": "Zerodha",
+    "role": "TI",
+    "personal_note": "Corretora online indiano. Infraestrutura de trading.",
+    "motivo": "india zerodha"
+  },
+  {
+    "email": "ti@groww.com",
+    "name": "Groww",
+    "company": "Groww",
+    "role": "TI",
+    "personal_note": "Fintech de investimentos indiano. Infraestrutura de investments.",
+    "motivo": "india groww"
+  },
+  {
+    "email": "contact@credRib solvency.com",
+    "name": "Cred Rib",
+    "company": "CredRib",
+    "role": "TI",
+    "personal_note": "Fintech indiano de crédito pessoal. Infraestrutura de lending.",
+    "motivo": "india credrib"
+  },
+  {
+    "email": "ti@okcredit.com",
+    "name": "OkCredit",
+    "company": "OkCredit",
+    "role": "TI",
+    "personal_note": "Fintech de dívidas indiano. Infraestrutura de payments.",
+    "motivo": "india okcredit"
+  },
+  {
+    "email": "ti@pathao.com",
+    "name": "Pathao",
+    "company": "Pathao",
+    "role": "TI",
+    "personal_note": "Mobilidade bangladesha. Infraestrutura de mobility.",
+    "motivo": "bd pathao"
+  },
+  {
+    "email": "contact@foodpanda.com.bd",
+    "name": "Foodpanda BD",
+    "company": "Foodpanda BD",
+    "role": "TI",
+    "personal_note": "Food delivery bangladesha. Infraestrutura de logistics.",
+    "motivo": "bd foodpanda"
+  },
+  {
+    "email": "ti@bikroy.com.bd",
+    "name": "Bikroy BD",
+    "company": "Bikroy BD",
+    "role": "TI",
+    "personal_note": "Marketplace bangladesha. Infraestrutura de classifieds.",
+    "motivo": "bd bikroy"
+  },
+  {
+    "email": "contact@daraz.com.bd",
+    "name": "Daraz BD",
+    "company": "Daraz BD",
+    "role": "TI",
+    "personal_note": "E-commerce bangladesha. Infraestrutura de marketplace.",
+    "motivo": "bd daraz"
+  },
+  {
+    "email": "ti@sri.com.lk",
+    "name": "SRI",
+    "company": "SRI",
+    "role": "TI",
+    "personal_note": "Fintech de pagamentos srilanque. Infraestrutura de payments.",
+    "motivo": "lk sri"
+  },
+  {
+    "email": "contact@dialog.lk",
+    "name": "Dialog",
+    "company": "Dialog",
+    "role": "TI",
+    "personal_note": "Telecom srilanque. Infraestrutura de rede e fintech.",
+    "motivo": "lk dialog"
+  },
+  {
+    "email": "contact@daraz.pk",
+    "name": "Daraz PK",
+    "company": "Daraz PK",
+    "role": "TI",
+    "personal_note": "E-commerce paquistanês. Infraestrutura de marketplace.",
+    "motivo": "pk daraz"
+  },
+  {
+    "email": "ti@careem.com.pk",
+    "name": "Careem PK",
+    "company": "Careem PK",
+    "role": "TI",
+    "personal_note": "Mobilidade paquistanês. Infraestrutura de mobility.",
+    "motivo": "pk careem"
+  },
+  {
+    "email": "contact@foodpanda.pk",
+    "name": "Foodpanda PK",
+    "company": "Foodpanda PK",
+    "role": "TI",
+    "personal_note": "Food delivery paquistanês. Infraestrutura de logistics.",
+    "motivo": "pk foodpanda"
+  },
+  {
+    "email": "ti@jazz.com.pk",
+    "name": "Jazz",
+    "company": "Jazz",
+    "role": "TI",
+    "personal_note": "Telecom paquistanês. Infraestrutura de rede.",
+    "motivo": "pk jazz"
+  },
+  {
+    "email": "contact@careem.com",
+    "name": "Careem",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobilidade do Golfo. Infraestrutura de mobility.",
+    "motivo": "me careem"
+  },
+  {
+    "email": "ti@careem.com",
+    "name": "Careem",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobilidade do Golfo. Infraestrutura de mobility.",
+    "motivo": "me careem dup"
+  },
+  {
+    "email": "contact@ride.com",
+    "name": "Careem RIDE",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobilidade do Golfo. Infraestrutura de mobility.",
+    "motivo": "me careem ride"
+  },
+  {
+    "email": "ti@careem.com.sa",
+    "name": "Careem SA",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobilidade do Golfo. Infraestrutura de mobility.",
+    "motivo": "me careem sa"
+  },
+  {
+    "email": "contact@kayak.com",
+    "name": "Kayak",
+    "company": "Kayak",
+    "role": "TI",
+    "personal_note": "Viagem online. Infraestrutura de travel tech.",
+    "motivo": "me kayak"
+  },
+  {
+    "email": "ti@booking.com",
+    "name": "Booking.com",
+    "company": "Booking.com",
+    "role": "TI",
+    "personal_note": "Viagem online. Infraestrutura de travel tech.",
+    "motivo": "me booking"
+  },
+  {
+    "email": "contact@expedia.com",
+    "name": "Expedia",
+    "company": "Expedia",
+    "role": "TI",
+    "personal_note": "Viagem online. Infraestrutura de travel tech.",
+    "motivo": "me expedia"
+  },
+  {
+    "email": "ti@hotels.com",
+    "name": "Hotels.com",
+    "company": "Hotels.com",
+    "role": "TI",
+    "personal_note": "Viagem online. Infraestrutura de travel tech.",
+    "motivo": "me hotels"
+  },
+  {
+    "email": "contact@spotify.com",
+    "name": "Spotify",
+    "company": "Spotify",
+    "role": "TI",
+    "personal_note": "Streaming musical sueco. Infraestrutura de media em escala.",
+    "motivo": "eu spotify"
+  },
+  {
+    "email": "ti@netflix.com",
+    "name": "Netflix",
+    "company": "Netflix",
+    "role": "TI",
+    "personal_note": "Streaming de vídeo global. Infraestrutura de CDN em escala.",
+    "motivo": "eu netflix"
+  },
+  {
+    "email": "contact@allserve.com",
+    "name": "Allserve",
+    "company": "Allserve",
+    "role": "TI",
+    "personal_note": "IT services europeu. Infraestrutura de TI.",
+    "motivo": "eu allserve"
+  },
+  {
+    "email": "ti@dimensiondata.com",
+    "name": "Dimension Data",
+    "company": "Dimension Data",
+    "role": "TI",
+    "personal_note": "Enterprise IT services. Infraestrutura de TI.",
+    "motivo": "eu dimensiondata"
+  },
+  {
+    "email": "contact@atradius.com",
+    "name": "Atradius",
+    "company": "Atradius",
+    "role": "TI",
+    "personal_note": "Seguros de crédito europeus. Infraestrutura de dados.",
+    "motivo": "eu atradius"
+  },
+  {
+    "email": "ti@dresdnerbank.de",
+    "name": "Dresdner Bank",
+    "company": "Dresdner Bank",
+    "role": "TI",
+    "personal_note": "Banco alemão. Infraestrutura de banking.",
+    "motivo": "eu dresdner"
+  },
+  {
+    "email": "contact@ing.nl",
+    "name": "ING",
+    "company": "ING",
+    "role": "TI",
+    "personal_note": "Banco holandês. Infraestrutura de banking.",
+    "motivo": "eu ing"
+  },
+  {
+    "email": "ti@abnomb.nl",
+    "name": "ABN AMRO",
+    "company": "ABN AMRO",
+    "role": "TI",
+    "personal_note": "Banco holandês. Infraestrutura de banking.",
+    "motivo": "eu abn"
+  }
+]

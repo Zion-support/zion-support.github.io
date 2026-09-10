@@ -1,0 +1,418 @@
+[
+  {
+    "email": "contact@shoppersdrugmart.ca",
+    "name": "Shoppers Drug Mart",
+    "company": "Shoppers Drug Mart",
+    "role": "TI",
+    "personal_note": "Farmácia retail canadense. Infraestrutura de e-commerce e dados.",
+    "motivo": "canada retail"
+  },
+  {
+    "email": "ti@aircanada.com",
+    "name": "Air Canada",
+    "company": "Air Canada",
+    "role": "TI",
+    "personal_note": "Linha aérea canadense. Infraestrutura de reservas e operações.",
+    "motivo": "canada airline"
+  },
+  {
+    "email": "contact@walmart.ca",
+    "name": "Walmart Canada",
+    "company": "Walmart Canada",
+    "role": "TI",
+    "personal_note": "Varejo massivo canadense. Infraestrutura de supply chain e e-commerce.",
+    "motivo": "canada retail walmart"
+  },
+  {
+    "email": "ti@cibc.com",
+    "name": "CIBC",
+    "company": "CIBC",
+    "role": "TI",
+    "personal_note": "Banco canadense. Infraestrutura fintech e cloud.",
+    "motivo": "canada fintech cibc"
+  },
+  {
+    "email": "contact@rbc.com",
+    "name": "RBC",
+    "company": "RBC",
+    "role": "TI",
+    "personal_note": "Maior banco do Canadá. Transformação digital.",
+    "motivo": "canada fintech rbc"
+  },
+  {
+    "email": "ti@td.com",
+    "name": "TD Bank",
+    "company": "TD Bank",
+    "role": "TI",
+    "personal_note": "Banco canadense global. Infraestrutura financeira.",
+    "motivo": "canada fintech td"
+  },
+  {
+    "email": "contact@scotia.com",
+    "name": "Scotiabank",
+    "company": "Scotiabank",
+    "role": "TI",
+    "personal_note": "Banco canadense global. Digitalização de serviços.",
+    "motivo": "canada fintech scotiabank"
+  },
+  {
+    "email": "ti@bmo.com",
+    "name": "BMO",
+    "company": "BMO",
+    "role": "TI",
+    "personal_note": "Banco canadense. Infraestrutura de tecnologia financeira.",
+    "motivo": "canada fintech bmo"
+  },
+  {
+    "email": "contact@laurentian.com",
+    "name": "Laurentian",
+    "company": "Laurentian",
+    "role": "TI",
+    "personal_note": "Banco canadense. Infraestrutura digital.",
+    "motivo": "canada fintech laurentian"
+  },
+  {
+    "email": "ti@northerntrust.com",
+    "name": "Northern Trust",
+    "company": "Northern Trust",
+    "role": "TI",
+    "personal_note": "Instituição financeira canadense. Infraestrutura de asset management.",
+    "motivo": "canada finance northern"
+  },
+  {
+    "email": "contact@wealthsimple.com",
+    "name": "Wealthsimple",
+    "company": "Wealthsimple",
+    "role": "TI",
+    "personal_note": "Fintech de investimentos canadense. Infraestrutura de trading.",
+    "motivo": "canada fintech wealthsimple"
+  },
+  {
+    "email": "ti@questrade.com",
+    "name": "Questrade",
+    "company": "Questrade",
+    "role": "TI",
+    "personal_note": "Corretora online canadense. Infraestrutura de trading digital.",
+    "motivo": "canada fintech questrade"
+  },
+  {
+    "email": "contact@stripe.com",
+    "name": "Stripe",
+    "company": "Stripe",
+    "role": "TI",
+    "personal_note": "Fintech global. Infraestrutura de pagamentos.",
+    "motivo": "canada stripe"
+  },
+  {
+    "email": "contact@shopify.com",
+    "name": "Shopify",
+    "company": "Shopify",
+    "role": "TI",
+    "personal_note": "E-commerce platform global. Infraestrutura cloud massiva.",
+    "motivo": "canada shopify"
+  },
+  {
+    "email": "ti@wix.com",
+    "name": "Wix",
+    "company": "Wix",
+    "role": "TI",
+    "personal_note": "Platforma de websites. Infraestrutura de SaaS.",
+    "motivo": "canada wix"
+  },
+  {
+    "email": "contact@momentum.ai",
+    "name": "Momentum",
+    "company": "Momentum",
+    "role": "TI",
+    "personal_note": "Fintech de pagamentos canadense. Infraestrutura mobile.",
+    "motivo": "canada fintech momentum"
+  },
+  {
+    "email": "contact@payfos.com",
+    "name": "Payfos",
+    "company": "Payfos",
+    "role": "TI",
+    "personal_note": "Payment gateway canadense. Infraestrutura de pagamentos.",
+    "motivo": "canada fintech payfos"
+  },
+  {
+    "email": "ti@moneris.com",
+    "name": "Moneris",
+    "company": "Moneris",
+    "role": "TI",
+    "personal_note": "Payment processor canadense. Infraestrutura de transactions.",
+    "motivo": "canada fintech moneris"
+  },
+  {
+    "email": "contact@mercadolibre.com",
+    "name": "Mercado Libre",
+    "company": "Mercado Libre",
+    "role": "TI",
+    "personal_note": "E-commerce e fintech latino-americana. Infraestrutura massiva.",
+    "motivo": "arg ecommerce mercadolibre"
+  },
+  {
+    "email": "ti@financial.com.ar",
+    "name": "Financial Solutions",
+    "company": "Financial Solutions",
+    "role": "TI",
+    "personal_note": "Fintech argentina. Infraestrutura financeira.",
+    "motivo": "arg fintech financial"
+  },
+  {
+    "email": "contact@iti.com.ar",
+    "name": "ITI",
+    "company": "ITI",
+    "role": "TI",
+    "personal_note": "ERP argentino. Infraestrutura de software empresarial.",
+    "motivo": "arg erp iti"
+  },
+  {
+    "email": "ti@artech.com.ar",
+    "name": "Artech",
+    "company": "Artech",
+    "role": "TI",
+    "personal_note": "Desenvolvedora argentina de software. Infraestrutura de desenvolvimento.",
+    "motivo": "arg software artech"
+  },
+  {
+    "email": "contact@sofid.com",
+    "name": "SOFID",
+    "company": "SOFID",
+    "role": "TI",
+    "personal_note": "Software argentino para sacredores. Infraestrutura de TI.",
+    "motivo": "arg sofid"
+  },
+  {
+    "email": "contact@ Falabella.com",
+    "name": "Falabella",
+    "company": "Falabella",
+    "role": "TI",
+    "personal_note": "Grupo varejista chileno. Infraestrutura de retail e fintech.",
+    "motivo": "chile retail falabella"
+  },
+  {
+    "email": "ti@entel.cl",
+    "name": "Entel",
+    "company": "Entel",
+    "role": "TI",
+    "personal_note": "Operadora de telecomunicaciones chilena. Infraestrutura de rede.",
+    "motivo": "chile telecom entel"
+  },
+  {
+    "email": "contact@movistar.cl",
+    "name": "Movistar",
+    "company": "Movistar",
+    "role": "TI",
+    "personal_note": "Operadora de telecomunicaciones chilena. Infraestrutura de rede.",
+    "motivo": "chile telecom movistar"
+  },
+  {
+    "email": "ti@itam.cl",
+    "name": "ITAM",
+    "company": "ITAM",
+    "role": "TI",
+    "personal_note": "IT services chileno. Infraestrutura de TI.",
+    "motivo": "chile itam"
+  },
+  {
+    "email": "contact@intelit.com",
+    "name": "Intelit",
+    "company": "Intelit",
+    "role": "TI",
+    "personal_note": "MSP chileno. Infraestrutura de managed services.",
+    "motivo": "chile intelit"
+  },
+  {
+    "email": "contact@bancolombia.com",
+    "name": "Bancolombia",
+    "company": "Bancolombia",
+    "role": "TI",
+    "personal_note": "Maior banco da Colômbia. Infraestrutura fintech.",
+    "motivo": "colombia bancolombia"
+  },
+  {
+    "email": "ti@aviana.com",
+    "name": "Aviana",
+    "company": "Aviana",
+    "role": "TI",
+    "personal_note": "Fintech colombiana. Infraestrutura de pagamentos.",
+    "motivo": "colombia aviana"
+  },
+  {
+    "email": "contact@nuvi.com",
+    "name": "Nuvi",
+    "company": "Nuvi",
+    "role": "TI",
+    "personal_note": "Fintech colombiana. Infraestrutura financeira.",
+    "motivo": "colombia nuvi"
+  },
+  {
+    "email": "ti@bancolombia.com",
+    "name": "Bancolombia Digital",
+    "company": "Bancolombia",
+    "role": "TI",
+    "personal_note": "Divisão digital do Bancolombia. Infraestrutura de banking.",
+    "motivo": "colombia bancolombia digital"
+  },
+  {
+    "email": "contact@topsoftware.com",
+    "name": "Top Software",
+    "company": "Top Software",
+    "role": "TI",
+    "personal_note": "Desenvolvedora colombiana de software. Infraestrutura de TI.",
+    "motivo": "colombia topsoftware"
+  },
+  {
+    "email": "contact@monterrey.com",
+    "name": "Monterrey Tech",
+    "company": "Monterrey Tech",
+    "role": "TI",
+    "personal_note": "Instituição de tecnologia mexicana. Infraestrutura de educação.",
+    "motivo": "mexico monterrey"
+  },
+  {
+    "email": "ti@softtek.com",
+    "name": "Softtek",
+    "company": "Softtek",
+    "role": "TI",
+    "personal_note": "Enterprise IT services mexicana. Infraestrutura de TI.",
+    "motivo": "mexico softtek"
+  },
+  {
+    "email": "contact@kant Ark.com",
+    "name": "Kant Ark",
+    "company": "Kant Ark",
+    "role": "TI",
+    "personal_note": "MSP mexicano. Infraestrutura de managed services.",
+    "motivo": "mexico kantark"
+  },
+  {
+    "email": "ti@ibm.com",
+    "name": "IBM Mexico",
+    "company": "IBM Mexico",
+    "role": "TI",
+    "personal_note": "Filial mexicana da IBM. Infraestrutura de enterprise.",
+    "motivo": "mexico ibm"
+  },
+  {
+    "email": "contact@banorte.com",
+    "name": "Banorte",
+    "company": "Banorte",
+    "role": "TI",
+    "personal_note": "Maior banco privado do México. Infraestrutura fintech.",
+    "motivo": "mexico banorte"
+  },
+  {
+    "email": "ti@bbvanbox.com",
+    "name": "BBVA México",
+    "company": "BBVA México",
+    "role": "TI",
+    "personal_note": "Banco global com operação massiva no México. Infraestrutura digital.",
+    "motivo": "mexico bbva"
+  },
+  {
+    "email": "contact@bcp.com.pe",
+    "name": "BCP",
+    "company": "BCP",
+    "role": "TI",
+    "personal_note": "Maior banco do Peru. Infraestrutura digital.",
+    "motivo": "peru bcp"
+  },
+  {
+    "email": "ti@interbank.com.pe",
+    "name": " Interbank",
+    "company": "Interbank",
+    "role": "TI",
+    "personal_note": "Maior rede bancária do Peru. Infraestrutura fintech.",
+    "motivo": "peru interbank"
+  },
+  {
+    "email": "contact@celula.com",
+    "name": "Celula",
+    "company": "Celula",
+    "role": "TI",
+    "personal_note": "Startup peruana de health tech. Infraestrutura de dados.",
+    "motivo": "peru celula"
+  },
+  {
+    "email": "contact@election.com",
+    "name": "Election Data",
+    "company": "Election Data",
+    "role": "TI",
+    "personal_note": "Company de datos electorales. Infraestrutura de dados.",
+    "motivo": "venezuela election"
+  },
+  {
+    "email": "ti@sirius.com",
+    "name": "Sirius",
+    "company": "Sirius",
+    "role": "TI",
+    "personal_note": "ISP venezuelano. Infraestrutura de rede.",
+    "motivo": "venezuela sirius"
+  },
+  {
+    "email": "contact@bofintech.com",
+    "name": "Bofintech",
+    "company": "Bofintech",
+    "role": "TI",
+    "personal_note": "Fintech boliviana. Infraestrutura financeira.",
+    "motivo": "bolivia bofintech"
+  },
+  {
+    "email": "ti@empresasbolivia.com",
+    "name": "Empresas Bolivia",
+    "company": "Empresas Bolivia",
+    "role": "TI",
+    "personal_note": "Concessionária elétrica boliviana. Infraestrutura de dados.",
+    "motivo": "bolivia empresas"
+  },
+  {
+    "email": "contact@telemar.com.py",
+    "name": "Telemar",
+    "company": "Telemar",
+    "role": "TI",
+    "personal_note": "Telecom paraguaia. Infraestrutura de rede.",
+    "motivo": "paraguay telemar"
+  },
+  {
+    "email": "ti@datatel.com",
+    "name": "Datatel",
+    "company": "Datatel",
+    "role": "TI",
+    "personal_note": "IT services paraguaio. Infraestrutura de TI.",
+    "motivo": "paraguay datatel"
+  },
+  {
+    "email": "contact@antel.com.uy",
+    "name": "ANTEL",
+    "company": "ANTEL",
+    "role": "TI",
+    "personal_note": "Operadora de telecomunicaciones uruguesa. Infraestrutura de rede.",
+    "motivo": "uruguay antel"
+  },
+  {
+    "email": "ti@montevideo.com",
+    "name": "Montevideo Digital",
+    "company": "Montevideo Digital",
+    "role": "TI",
+    "personal_note": "MSP uruguaio. Infraestrutura de managed services.",
+    "motivo": "uruguay montevideo"
+  },
+  {
+    "email": "contact@ptla.com.ec",
+    "name": "PTLA",
+    "company": "PTLA",
+    "role": "TI",
+    "personal_note": "ISP equatoriano. Infraestrutura de rede.",
+    "motivo": "ecuador ptla"
+  },
+  {
+    "email": "ti@servicioo.com",
+    "name": "Servicioo",
+    "company": "Servicioo",
+    "role": "TI",
+    "personal_note": "IT services equatoriano. Infraestrutura de TI.",
+    "motivo": "ecuador servicioo"
+  }
+]

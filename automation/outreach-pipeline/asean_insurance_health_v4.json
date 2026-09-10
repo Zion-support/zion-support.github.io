@@ -1,0 +1,322 @@
+[
+  {
+    "email": "contact@gojek.com",
+    "name": "Gojek",
+    "company": "Gojek",
+    "role": "Contato",
+    "personal_note": "Super app ID. Infra de TI.",
+    "motivo": "id gojek"
+  },
+  {
+    "email": "ti@tokopedia.com",
+    "name": "Tokopedia",
+    "company": "Tokopedia",
+    "role": "TI",
+    "personal_note": "E-commerce ID. Infra de TI.",
+    "motivo": "id tokopedia"
+  },
+  {
+    "email": "contact@digital.com",
+    "name": "Digital Indonesia",
+    "company": "Digital Indonesia",
+    "role": "Contato",
+    "personal_note": "Telco ID. Infra de TI.",
+    "motivo": "id digital"
+  },
+  {
+    "email": "ti@telkom Indonesia.net",
+    "name": "Telkom Indonesia",
+    "company": "Telkom Indonesia",
+    "role": "TI",
+    "personal_note": "Telco ID. Infra de TI.",
+    "motivo": "id telkom"
+  },
+  {
+    "email": "contact@bankmandiri.co.id",
+    "name": "Bank Mandiri",
+    "company": "Bank Mandiri",
+    "role": "Contato",
+    "personal_note": "Banking ID. Infra de TI.",
+    "motivo": "id mandiri"
+  },
+  {
+    "email": "ti@bca.co.id",
+    "name": "BCA",
+    "company": "BCA",
+    "role": "TI",
+    "personal_note": "Banking ID. Infra de TI.",
+    "motivo": "id bca"
+  },
+  {
+    "email": "contact@ln.co.id",
+    "name": "Linasoft",
+    "company": "Linasoft",
+    "role": "Contato",
+    "personal_note": "IT services ID. Infra de TI.",
+    "motivo": "id lina"
+  },
+  {
+    "email": "contact@vib.com",
+    "name": "VIB",
+    "company": "VIB",
+    "role": "Contato",
+    "personal_note": "Banking VN. Infra de TI.",
+    "motivo": "vn vib"
+  },
+  {
+    "email": "ti@vnpt.com",
+    "name": "VNPT",
+    "company": "VNPT",
+    "role": "TI",
+    "personal_note": "Telecom VN. Infra de TI.",
+    "motivo": "vn vnpt"
+  },
+  {
+    "email": "contact@vietinbank.com",
+    "name": "VietinBank",
+    "company": "VietinBank",
+    "role": "Contato",
+    "personal_note": "Banking VN. Infra de TI.",
+    "motivo": "vn vietin"
+  },
+  {
+    "email": "ti@vnpay.com",
+    "name": "VNPay",
+    "company": "VNPay",
+    "role": "TI",
+    "personal_note": "Payments VN. Infra de TI.",
+    "motivo": "vn vnpay"
+  },
+  {
+    "email": "contact@bdo.com",
+    "name": "BDO",
+    "company": "BDO",
+    "role": "Contato",
+    "personal_note": "Banking PH. Infra de TI.",
+    "motivo": "ph bdo"
+  },
+  {
+    "email": "ti@bpi.com",
+    "name": "BPI",
+    "company": "BPI",
+    "role": "TI",
+    "personal_note": "Banking PH. Infra de TI.",
+    "motivo": "ph bpi"
+  },
+  {
+    "email": "contact@globe.com",
+    "name": "Globe Telecom",
+    "company": "Globe",
+    "role": "Contato",
+    "personal_note": "Telco PH. Infra de TI.",
+    "motivo": "ph globe"
+  },
+  {
+    "email": "ti@smart.com",
+    "name": "Smart Communications",
+    "company": "Smart",
+    "role": "TI",
+    "personal_note": "Telco PH. Infra de TI.",
+    "motivo": "ph smart"
+  },
+  {
+    "email": "contact@bikroy.com",
+    "name": "Bikroy",
+    "company": "Bikroy",
+    "role": "Contato",
+    "personal_note": "E-commerce BD. Infra de TI.",
+    "motivo": "bd bikroy"
+  },
+  {
+    "email": "ti@pathao.com",
+    "name": "Pathao",
+    "company": "Pathao",
+    "role": "TI",
+    "personal_note": "Ride-hailing BD. Infra de TI.",
+    "motivo": "bd pathao"
+  },
+  {
+    "email": "contact@mytel.com",
+    "name": "MyTel",
+    "company": "MyTel",
+    "role": "Contato",
+    "personal_note": "Telco BD. Infra de TI.",
+    "motivo": "bd mytel"
+  },
+  {
+    "email": "ti@banglalink.com",
+    "name": "BanglaLink",
+    "company": "BanglaLink",
+    "role": "TI",
+    "personal_note": "Telco BD. Infra de TI.",
+    "motivo": "bd banglalink"
+  },
+  {
+    "email": "contact@sri lanka bank.com",
+    "name": "Sri Lanka Bank",
+    "company": "Srilanka Bank",
+    "role": "Contato",
+    "personal_note": "Banking LK. Infra de TI.",
+    "motivo": "lk slbank"
+  },
+  {
+    "email": "ti@dialog.lk",
+    "name": "Dialog",
+    "company": "Dialog",
+    "role": "TI",
+    "personal_note": "Telco LK. Infra de TI.",
+    "motivo": "lk dialog"
+  },
+  {
+    "email": "contact@heyalu.com",
+    "name": "Heyalu",
+    "company": "Heyalu",
+    "role": "Contato",
+    "personal_note": "IT services LK. Infra de TI.",
+    "motivo": "lk heyalu"
+  },
+  {
+    "email": "ti@ntc.com",
+    "name": "NTC",
+    "company": "NTC",
+    "role": "TI",
+    "personal_note": "Telco NP. Infra de TI.",
+    "motivo": "np ntc"
+  },
+  {
+    "email": "contact@ Nepal Telecom.com",
+    "name": "Nepal Telecom",
+    "company": "Nepal Telecom",
+    "role": "Contato",
+    "personal_note": "Telco NP. Infra de TI.",
+    "motivo": "np ntctel"
+  },
+  {
+    "email": "ti@ Nepal Bank.com",
+    "name": "Nepal Bank",
+    "company": "Nepal Bank",
+    "role": "TI",
+    "personal_note": "Banking NP. Infra de TI.",
+    "motivo": "np nepalbank"
+  },
+  {
+    "email": "contact@allianz.com",
+    "name": "Allianz",
+    "company": "Allianz",
+    "role": "Contato",
+    "personal_note": "Insurance. Infra de TI.",
+    "motivo": "ins allianz"
+  },
+  {
+    "email": "ti@axa.com",
+    "name": "AXA",
+    "company": "AXA",
+    "role": "TI",
+    "personal_note": "Insurance. Infra de TI.",
+    "motivo": "ins axa"
+  },
+  {
+    "email": "contact@prudential.com",
+    "name": "Prudential",
+    "company": "Prudential",
+    "role": "Contato",
+    "personal_note": "Insurance. Infra de TI.",
+    "motivo": "ins prudential"
+  },
+  {
+    "email": "ti@metlife.com",
+    "name": "MetLife",
+    "company": "MetLife",
+    "role": "TI",
+    "personal_note": "Insurance. Infra de TI.",
+    "motivo": "ins metlife"
+  },
+  {
+    "email": "contact@liife.com",
+    "name": "LIIFE",
+    "company": "LIIFE",
+    "role": "Contato",
+    "personal_note": "InsurTech. Infra de TI.",
+    "motivo": "ins liife"
+  },
+  {
+    "email": "ti@insurtech.com",
+    "name": "InsurTech",
+    "company": "InsurTech",
+    "role": "TI",
+    "personal_note": "InsurTech. Infra de TI.",
+    "motivo": "ins insurtech"
+  },
+  {
+    "email": "contact@epic.com",
+    "name": "Epic",
+    "company": "Epic",
+    "role": "Contato",
+    "personal_note": "Healthcare IT. Infra de TI.",
+    "motivo": "health epic"
+  },
+  {
+    "email": "ti@cerner.com",
+    "name": "Cerner",
+    "company": "Cerner",
+    "role": "TI",
+    "personal_note": "Healthcare IT. Infra de TI.",
+    "motivo": "health cerner"
+  },
+  {
+    "email": "contact@allscripts.com",
+    "name": "Allscripts",
+    "company": "Allscripts",
+    "role": "Contato",
+    "personal_note": "Healthcare IT. Infra de TI.",
+    "motivo": "health allscripts"
+  },
+  {
+    "email": "ti@meditech.com",
+    "name": "MediTech",
+    "company": "MediTech",
+    "role": "TI",
+    "personal_note": "Healthcare IT. Infra de TI.",
+    "motivo": "health meditech"
+  },
+  {
+    "email": "contact@philips health.com",
+    "name": "Philips Health",
+    "company": "Philips Health",
+    "role": "Contato",
+    "personal_note": "Healthcare IT. Infra de TI.",
+    "motivo": "health philips"
+  },
+  {
+    "email": "ti@chase.com",
+    "name": "Chase",
+    "company": "Chase",
+    "role": "TI",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "fin chase"
+  },
+  {
+    "email": "contact@bofa.com",
+    "name": "Bank of America",
+    "company": "BofA",
+    "role": "Contato",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "fin bofa"
+  },
+  {
+    "email": "ti@usbank.com",
+    "name": "US Bank",
+    "company": "US Bank",
+    "role": "TI",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "fin usbank"
+  },
+  {
+    "email": "contact@pnc.com",
+    "name": "PNC",
+    "company": "PNC",
+    "role": "Contato",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "fin pnc"
+  }
+]

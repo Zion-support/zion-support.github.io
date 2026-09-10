@@ -1,0 +1,306 @@
+[
+  {
+    "email": "contact@paytm.com",
+    "name": "Paytm",
+    "company": "Paytm",
+    "role": "TI",
+    "personal_note": "Fintech IN. Infra de payments.",
+    "motivo": "in paytm"
+  },
+  {
+    "email": "ti@flipkart.com",
+    "name": "Flipkart",
+    "company": "Flipkart",
+    "role": "TI",
+    "personal_note": "E-commerce IN. Infra de marketplace.",
+    "motivo": "in flipkart"
+  },
+  {
+    "email": "contact@ola.com",
+    "name": "Ola",
+    "company": "Ola",
+    "role": "TI",
+    "personal_note": "Mobility IN. Infra de TI.",
+    "motivo": "in ola"
+  },
+  {
+    "email": "ti@swiggy.com",
+    "name": "Swiggy",
+    "company": "Swiggy",
+    "role": "TI",
+    "personal_note": "Food delivery IN. Infra de TI.",
+    "motivo": "in swiggy"
+  },
+  {
+    "email": "contact@zomato.com",
+    "name": "Zomato",
+    "company": "Zomato",
+    "role": "TI",
+    "personal_note": "Food delivery IN. Infra de TI.",
+    "motivo": "in zomato"
+  },
+  {
+    "email": "ti@payu.in",
+    "name": "PayU India",
+    "company": "PayU",
+    "role": "TI",
+    "personal_note": "Fintech IN. Infra de payments.",
+    "motivo": "in payu"
+  },
+  {
+    "email": "contact@phonepe.in",
+    "name": "PhonePe",
+    "company": "PhonePe",
+    "role": "TI",
+    "personal_note": "Fintech IN. Infra de payments.",
+    "motivo": "in phonepe"
+  },
+  {
+    "email": "ti@credalife.com",
+    "name": "CredAlife",
+    "company": "CredAlife",
+    "role": "TI",
+    "personal_note": "Fintech IN. Infra de TI.",
+    "motivo": "in credalife"
+  },
+  {
+    "email": "contact@policybazaar.india.com",
+    "name": "PolicyBazaar",
+    "company": "PolicyBazaar",
+    "role": "TI",
+    "personal_note": "Insurtech IN. Infra de TI.",
+    "motivo": "in policybazaar"
+  },
+  {
+    "email": "ti@upstox.com",
+    "name": "Upstox",
+    "company": "Upstox",
+    "role": "TI",
+    "personal_note": "FinTech/brokerage IN. Infra de TI.",
+    "motivo": "in upstox"
+  },
+  {
+    "email": "contact@zerodha.com",
+    "name": "Zerodha",
+    "company": "Zerodha",
+    "role": "TI",
+    "personal_note": "FinTech/brokerage IN. Infra de TI.",
+    "motivo": "in zerodha"
+  },
+  {
+    "email": "ti@groww.com",
+    "name": "Groww",
+    "company": "Groww",
+    "role": "TI",
+    "personal_note": "FinTech/investing IN. Infra de TI.",
+    "motivo": "in groww"
+  },
+  {
+    "email": "ti@okcredit.com",
+    "name": "OkCredit",
+    "company": "OkCredit",
+    "role": "TI",
+    "personal_note": "Fintech IN. Infra de TI.",
+    "motivo": "in okcredit"
+  },
+  {
+    "email": "ti@pathao.com",
+    "name": "Pathao",
+    "company": "Pathao",
+    "role": "TI",
+    "personal_note": "Mobility BD. Infra de TI.",
+    "motivo": "bd pathao"
+  },
+  {
+    "email": "contact@foodpanda.com.bd",
+    "name": "Foodpanda BD",
+    "company": "Foodpanda",
+    "role": "TI",
+    "personal_note": "Food delivery BD. Infra de TI.",
+    "motivo": "bd foodpanda"
+  },
+  {
+    "email": "ti@bikroy.com.bd",
+    "name": "Bikroy",
+    "company": "Bikroy",
+    "role": "TI",
+    "personal_note": "E-commerce BD. Infra de TI.",
+    "motivo": "bd bikroy"
+  },
+  {
+    "email": "contact@daraz.com.bd",
+    "name": "Daraz",
+    "company": "Daraz",
+    "role": "TI",
+    "personal_note": "E-commerce BD. Infra de TI.",
+    "motivo": "bd daraz"
+  },
+  {
+    "email": "ti@sri.com.lk",
+    "name": "SRI Lanka",
+    "company": "SRI",
+    "role": "TI",
+    "personal_note": "IT services LK. Infra de TI.",
+    "motivo": "lk sri"
+  },
+  {
+    "email": "contact@dialog.lk",
+    "name": "Dialog",
+    "company": "Dialog",
+    "role": "TI",
+    "personal_note": "Telecom LK. Infra de TI.",
+    "motivo": "lk dialog"
+  },
+  {
+    "email": "contact@daraz.pk",
+    "name": "Daraz PK",
+    "company": "Daraz",
+    "role": "TI",
+    "personal_note": "E-commerce PK. Infra de TI.",
+    "motivo": "pk daraz"
+  },
+  {
+    "email": "ti@careem.com.pk",
+    "name": "Careem PK",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobility PK. Infra de TI.",
+    "motivo": "pk careem"
+  },
+  {
+    "email": "contact@foodpanda.pk",
+    "name": "Foodpanda PK",
+    "company": "Foodpanda",
+    "role": "TI",
+    "personal_note": "Food delivery PK. Infra de TI.",
+    "motivo": "pk foodpanda"
+  },
+  {
+    "email": "ti@jazz.com.pk",
+    "name": "Jazz Pakistan",
+    "company": "Jazz",
+    "role": "TI",
+    "personal_note": "Telecom PK. Infra de TI.",
+    "motivo": "pk jazz"
+  },
+  {
+    "email": "ti@careem.com",
+    "name": "Careem",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobility ME. Infra de TI.",
+    "motivo": "me careem"
+  },
+  {
+    "email": "contact@ride.com",
+    "name": "Ride",
+    "company": "Ride",
+    "role": "TI",
+    "personal_note": "Mobility ME. Infra de TI.",
+    "motivo": "me ride"
+  },
+  {
+    "email": "ti@careem.com.sa",
+    "name": "Careem SA",
+    "company": "Careem",
+    "role": "TI",
+    "personal_note": "Mobility SA. Infra de TI.",
+    "motivo": "sa careem"
+  },
+  {
+    "email": "contact@kayak.com",
+    "name": "Kayak",
+    "company": "Kayak",
+    "role": "TI",
+    "personal_note": "Travel tech. Infra de TI.",
+    "motivo": "us kayak"
+  },
+  {
+    "email": "ti@booking.com",
+    "name": "Booking.com",
+    "company": "Booking.com",
+    "role": "TI",
+    "personal_note": "Travel tech. Infra de TI.",
+    "motivo": "nl booking"
+  },
+  {
+    "email": "contact@expedia.com",
+    "name": "Expedia",
+    "company": "Expedia",
+    "role": "TI",
+    "personal_note": "Travel tech. Infra de TI.",
+    "motivo": "us expedia"
+  },
+  {
+    "email": "ti@hotels.com",
+    "name": "Hotels.com",
+    "company": "Hotels.com",
+    "role": "TI",
+    "personal_note": "Travel tech. Infra de TI.",
+    "motivo": "us hotels"
+  },
+  {
+    "email": "contact@spotify.com",
+    "name": "Spotify",
+    "company": "Spotify",
+    "role": "TI",
+    "personal_note": "Music tech. Infra de TI.",
+    "motivo": "se spotify"
+  },
+  {
+    "email": "ti@netflix.com",
+    "name": "Netflix",
+    "company": "Netflix",
+    "role": "TI",
+    "personal_note": "Streaming tech. Infra de TI.",
+    "motivo": "us netflix"
+  },
+  {
+    "email": "contact@allserve.com",
+    "name": "AllServe",
+    "company": "AllServe",
+    "role": "TI",
+    "personal_note": "IT services. Infra de TI.",
+    "motivo": "us allserve"
+  },
+  {
+    "email": "ti@dimensiondata.com",
+    "name": "Dimension Data",
+    "company": "Dimension Data",
+    "role": "TI",
+    "personal_note": "IT services/APAC. Infra de TI.",
+    "motivo": "za dimensiondata"
+  },
+  {
+    "email": "contact@atradius.com",
+    "name": "Atradius",
+    "company": "Atradius",
+    "role": "TI",
+    "personal_note": "Insurance/credit. Infra de TI.",
+    "motivo": "nl atradius"
+  },
+  {
+    "email": "ti@dresdnerbank.de",
+    "name": "Dresdner Bank",
+    "company": "Dresdner Bank",
+    "role": "TI",
+    "personal_note": "Banking DE. Infra de TI.",
+    "motivo": "de dresdner"
+  },
+  {
+    "email": "contact@ing.nl",
+    "name": "ING",
+    "company": "ING",
+    "role": "TI",
+    "personal_note": "Banking NL. Infra de TI.",
+    "motivo": "nl ing"
+  },
+  {
+    "email": "ti@abnomb.nl",
+    "name": "ABN AMRO",
+    "company": "ABN AMRO",
+    "role": "TI",
+    "personal_note": "Banking NL. Infra de TI.",
+    "motivo": "nl abn"
+  }
+]

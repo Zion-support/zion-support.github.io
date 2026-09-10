@@ -1,0 +1,426 @@
+[
+  {
+    "email": "ti@lemonde.fr",
+    "name": "LeMonde IT",
+    "company": "Le Monde (French news)",
+    "role": "TI",
+    "personal_note": "French daily newspaper IT infrastructure. Infra TI.",
+    "motivo": "fr lemonde"
+  },
+  {
+    "email": "contact@france24.com",
+    "name": "France24 IT",
+    "company": "France24 (French news)",
+    "role": "Contato",
+    "personal_note": "French news network IT. Infra TI.",
+    "motivo": "fr france24"
+  },
+  {
+    "email": "ti@leparisien.fr",
+    "name": "LeParisien IT",
+    "company": "Le Parisien (French news)",
+    "role": "TI",
+    "personal_note": "French regional newspaper IT. Infra TI.",
+    "motivo": "fr leparisien"
+  },
+  {
+    "email": "contact@20minutes.fr",
+    "name": "20Minutes IT",
+    "company": "20 Minutes (French news)",
+    "role": "Contato",
+    "personal_note": "French free daily IT. Infra TI.",
+    "motivo": "fr 20minutes"
+  },
+  {
+    "email": "ti@rfi.fr",
+    "name": "RFI IT",
+    "company": "Radio France Internationale",
+    "role": "TI",
+    "personal_note": "French international radio IT. Infra TI.",
+    "motivo": "fr rfi"
+  },
+  {
+    "email": "contact@francetv.fr",
+    "name": "FranceTV IT",
+    "company": "France Télévisions",
+    "role": "Contato",
+    "personal_note": "French public TV IT. Infra TI.",
+    "motivo": "fr francedv"
+  },
+  {
+    "email": "ti@bfmtv.com",
+    "name": "BFM TV IT",
+    "company": "BFM TV (French news)",
+    "role": "TI",
+    "personal_note": "French news channel IT. Infra TI.",
+    "motivo": "fr bfmtv"
+  },
+  {
+    "email": "contact@ouci.français.fr",
+    "name": "Ouci (French tech)",
+    "company": "Ouci (France)",
+    "role": "Contato",
+    "personal_note": "French tech platform IT. Infra TI.",
+    "motivo": "fr ouci"
+  },
+  {
+    "email": "ti@sz.de",
+    "name": "SZ IT",
+    "company": "Süddeutsche Zeitung (German newspaper)",
+    "role": "TI",
+    "personal_note": "German national newspaper IT. Infra TI.",
+    "motivo": "de sz"
+  },
+  {
+    "email": "contact@zeit.de",
+    "name": "Zeit IT",
+    "company": "Die Zeit (German weekly)",
+    "role": "Contato",
+    "personal_note": "German weekly newspaper IT. Infra TI.",
+    "motivo": "de zeit"
+  },
+  {
+    "email": "ti@faZ.net",
+    "name": "FAZ IT",
+    "company": "Frankfurter Allgemeine Zeitung",
+    "role": "TI",
+    "personal_note": "German national newspaper IT. Infra TI.",
+    "motivo": "de faz"
+  },
+  {
+    "email": "contact@spiegel.de",
+    "name": "Spiegel IT",
+    "company": "Der Spiegel (German news)",
+    "role": "Contato",
+    "personal_note": "German news magazine IT. Infra TI.",
+    "motivo": "de spiegel"
+  },
+  {
+    "email": "ti@bild.de",
+    "name": "Bild IT",
+    "company": "Bild (German tabloid)",
+    "role": "TI",
+    "personal_note": "German tabloid IT. Infra TI.",
+    "motivo": "de bild"
+  },
+  {
+    "email": "contact@tagesschau.de",
+    "name": "Tagesschau IT",
+    "company": "ARD Tagesschau (German news)",
+    "role": "Contato",
+    "personal_note": "German public news IT. Infra TI.",
+    "motivo": "de tagesschau"
+  },
+  {
+    "email": "ti@heise.de",
+    "name": "Heise IT",
+    "company": "Heise (German tech publisher)",
+    "role": "TI",
+    "personal_note": "German tech publisher IT. Infra TI.",
+    "motivo": "de heise"
+  },
+  {
+    "email": "contact@ct.de",
+    "name": "ct IT",
+    "company": "c't (German tech magazine)",
+    "role": "Contato",
+    "personal_note": "German tech magazine IT. Infra TI.",
+    "motivo": "de ct"
+  },
+  {
+    "email": "ti@handelsblatt.com",
+    "name": "Handelsblatt IT",
+    "company": "Handelsblatt (German business)",
+    "role": "TI",
+    "personal_note": "German business newspaper IT. Infra TI.",
+    "motivo": "de handelsblatt"
+  },
+  {
+    "email": "contact@manager magazin.de",
+    "name": "Manager Magazin IT",
+    "company": "Manager Magazin (German business)",
+    "role": "Contato",
+    "personal_note": "German business magazine IT. Infra TI.",
+    "motivo": "de managermagazin"
+  },
+  {
+    "email": "ti@derstandard.at",
+    "name": "Der Standard IT",
+    "company": "Der Standard (Austrian news)",
+    "role": "TI",
+    "personal_note": "Austrian daily newspaper IT. Infra TI.",
+    "motivo": "at derstandard"
+  },
+  {
+    "email": "contact@orf.at",
+    "name": "ORF IT",
+    "company": "ORF (Austrian public broadcaster)",
+    "role": "Contato",
+    "personal_note": "Austrian public broadcaster IT. Infra TI.",
+    "motivo": "at orf"
+  },
+  {
+    "email": "ti@wienerzeitung.at",
+    "name": "Wiener Zeitung IT",
+    "company": "Wiener Zeitung (Austrian news)",
+    "role": "TI",
+    "personal_note": "Austrian semi-official gazette IT. Infra TI.",
+    "motivo": "at wienerzeitung"
+  },
+  {
+    "email": "contact@nzz.ch",
+    "name": "NZZ IT",
+    "company": "Neue Zürcher Zeitung (Swiss news)",
+    "role": "Contato",
+    "personal_note": "Swiss national newspaper IT. Infra TI.",
+    "motivo": "ch nzz"
+  },
+  {
+    "email": "ti@taz.ch",
+    "name": "TAZ IT",
+    "company": "Tages-Anzeiger (Swiss news)",
+    "role": "TI",
+    "personal_note": "Swiss daily newspaper IT. Infra TI.",
+    "motivo": "ch taz"
+  },
+  {
+    "email": "contact@baz.ch",
+    "name": "BAZ IT",
+    "company": "Basler Zeitung (Swiss news)",
+    "role": "Contato",
+    "personal_note": "Swiss regional newspaper IT. Infra TI.",
+    "motivo": "ch baz"
+  },
+  {
+    "email": "ti@bluewin.ch",
+    "name": "Bluewin IT",
+    "company": "Swisscom Bluewin",
+    "role": "TI",
+    "personal_note": "Swiss telecoms portal IT. Infra TI.",
+    "motivo": "ch bluewin"
+  },
+  {
+    "email": "contact@telebasel.ch",
+    "name": "TeleBasel IT",
+    "company": "Tele Basel (Swiss telecom)",
+    "role": "Contato",
+    "personal_note": "Swiss regional telecom IT. Infra TI.",
+    "motivo": "ch telebasel"
+  },
+  {
+    "email": "ti@caixa.gov.ro",
+    "name": "CAIXA (Romanian state)",
+    "company": "CAIXA (Romania)",
+    "role": "TI",
+    "personal_note": "Romanian state development bank IT. Infra TI.",
+    "motivo": "ro caixa"
+  },
+  {
+    "email": "contact@bcr.ro",
+    "name": "BCR (Romanian central bank)",
+    "company": "Banca Națională a României",
+    "role": "Contato",
+    "personal_note": "Romanian central bank IT. Infra TI.",
+    "motivo": "ro bcr"
+  },
+  {
+    "email": "ti@aspt.ro",
+    "name": "ASPT (Romanian pension)",
+    "company": "ASPT (Romania pension fund)",
+    "role": "TI",
+    "personal_note": "Romanian pension fund IT. Infra TI.",
+    "motivo": "ro aspt"
+  },
+  {
+    "email": "contact@btu.ro",
+    "name": "BTU (Romanian gas)",
+    "company": "BTU (Romania gas distribution)",
+    "role": "Contato",
+    "personal_note": "Romanian gas distribution IT. Infra TI.",
+    "motivo": "ro btu"
+  },
+  {
+    "email": "ti@frakt.ro",
+    "name": "FRACT (Romanian insurance)",
+    "company": "FRACT (Romania insurance)",
+    "role": "TI",
+    "personal_note": "Romanian insurance IT. Infra TI.",
+    "motivo": "ro fract"
+  },
+  {
+    "email": "contact@sf.ro",
+    "name": "SF (Romanian leasing)",
+    "company": "SF Romania (leasing company)",
+    "role": "Contato",
+    "personal_note": "Romanian leasing IT. Infra TI.",
+    "motivo": "ro sf"
+  },
+  {
+    "email": "ti@digi.ro",
+    "name": "Digi (Romanian telecom)",
+    "company": "Digi Romania",
+    "role": "TI",
+    "personal_note": "Romanian telecom IT. Infra TI.",
+    "motivo": "ro digi"
+  },
+  {
+    "email": "contact@bgbg.bg",
+    "name": "BGBG (Bulgarian bank)",
+    "company": "BGBG Bank (Bulgaria)",
+    "role": "Contato",
+    "personal_note": "Bulgarian banking IT. Infra TI.",
+    "motivo": "bg bgbg"
+  },
+  {
+    "email": "ti@acbg.com",
+    "name": "ACB (Bulgaria)",
+    "company": "ACB (Bulgaria)",
+    "role": "TI",
+    "personal_note": "Bulgarian financial IT. Infra TI.",
+    "motivo": "bg acbg"
+  },
+  {
+    "email": "ti@athenselectric.com",
+    "name": "Athens Electric",
+    "company": "Athens Electricity Authority",
+    "role": "TI",
+    "personal_note": "Greek utility IT infrastructure. Infra TI.",
+    "motivo": "gr athenselectric"
+  },
+  {
+    "email": "contact@hellenicpost.gr",
+    "name": "Hellenic Post",
+    "company": "Hellenic Post (Greece)",
+    "role": "Contato",
+    "personal_note": "Greek postal service IT. Infra TI.",
+    "motivo": "gr hellenicpost"
+  },
+  {
+    "email": "ti@eett.gr",
+    "name": "EETT (Greek telecom regulator)",
+    "company": "EETT (Greece)",
+    "role": "TI",
+    "personal_note": "Greek telecom regulatory IT. Infra TI.",
+    "motivo": "gr eett"
+  },
+  {
+    "email": "contact@cyta.gr",
+    "name": "CYTA (Cyprus telecom)",
+    "company": "CYTA (Cyprus)",
+    "role": "Contato",
+    "personal_note": "Cypriot telecom IT. Infra TI.",
+    "motivo": "cy cyta"
+  },
+  {
+    "email": "ti@cablenet.com.cy",
+    "name": "CabinetNet",
+    "company": "CabinetNet (Cyprus telecom)",
+    "role": "TI",
+    "personal_note": "Cypriot telecom IT. Infra TI.",
+    "motivo": "cy cablenet"
+  },
+  {
+    "email": "contact@mtncy.com.cy",
+    "name": "MTN Cyprus",
+    "company": "MTN Cyprus",
+    "role": "Contato",
+    "personal_note": "Cypriot telecom IT. Infra TI.",
+    "motivo": "cy mtncy"
+  },
+  {
+    "email": "ti@cbarcy.com.cy",
+    "name": "CyBarCy",
+    "company": "CyBarCy (Cyprus banking)",
+    "role": "TI",
+    "personal_note": "Cypriot banking IT. Infra TI.",
+    "motivo": "cy cbarcy"
+  },
+  {
+    "email": "contact@cybarcy.com.cy",
+    "name": "CyBarCy Bank",
+    "company": "CyBarCy Bank (Cyprus)",
+    "role": "Contato",
+    "personal_note": "Cypriot banking IT. Infra TI.",
+    "motivo": "cy cybarcy"
+  },
+  {
+    "email": "ti@skype.ee",
+    "name": "Skype (Estonia)",
+    "company": "Skype (Estonia/Luxembourg)",
+    "role": "TI",
+    "personal_note": "Video communication platform IT. Infra TI.",
+    "motivo": "ee skype"
+  },
+  {
+    "email": "contact@turbooug.ee",
+    "name": "TurboOÜ",
+    "company": "TurboOÜ (Estonia)",
+    "role": "Contato",
+    "personal_note": "Estonian tech company IT. Infra TI.",
+    "motivo": "ee turboog"
+  },
+  {
+    "email": "ti@linkhub.ee",
+    "name": "LinkHub",
+    "company": "LinkHub (Estonia)",
+    "role": "TI",
+    "personal_note": "Estonian IT platform. Infra TI.",
+    "motivo": "ee linkhub"
+  },
+  {
+    "email": "contact@lattice.ee",
+    "name": "Lattice",
+    "company": "Lattice (Estonia tech)",
+    "role": "Contato",
+    "personal_note": "Estonian tech IT. Infra TI.",
+    "motivo": "ee lattice"
+  },
+  {
+    "email": "ti@vellamo.ee",
+    "name": "Vellamo",
+    "company": "Vellamo (Estonia cybersecurity)",
+    "role": "TI",
+    "personal_note": "Estonian cybersecurity IT. Infra TI.",
+    "motivo": "ee vellamo"
+  },
+  {
+    "email": "contact@cyber.ee",
+    "name": "Cyber.ee",
+    "company": "Cyber.ee (Estonia cyber)",
+    "role": "Contato",
+    "personal_note": "Estonian cyber platform IT. Infra TI.",
+    "motivo": "ee cyber"
+  },
+  {
+    "email": "ti@raspberrypi.ee",
+    "name": "Raspberry Pi Estonia",
+    "company": "Raspberry Pi Estonia",
+    "role": "TI",
+    "personal_note": "Estonian Raspberry Pi community IT. Infra TI.",
+    "motivo": "ee raspberry"
+  },
+  {
+    "email": "contact@nixx.ee",
+    "name": "Nixx",
+    "company": "Nixx (Estonia fintech)",
+    "role": "Contato",
+    "personal_note": "Estonian fintech IT. Infra TI.",
+    "motivo": "ee nixx"
+  },
+  {
+    "email": "ti@sender.ee",
+    "name": "Sender",
+    "company": "Sender (Estonia fintech)",
+    "role": "TI",
+    "personal_note": "Estonian fintech platform IT. Infra TI.",
+    "motivo": "ee sender"
+  },
+  {
+    "email": "contact@wise.ee",
+    "name": "Wise Estonia",
+    "company": "Wise (Estonia office)",
+    "role": "Contato",
+    "personal_note": "Estonian fintech office IT. Infra TI.",
+    "motivo": "ee wise"
+  }
+]

@@ -1,0 +1,410 @@
+[
+  {
+    "email": "ti@chubb.com",
+    "name": "Chubb",
+    "company": "Chubb",
+    "role": "TI",
+    "personal_note": "Insurance. Infra de TI.",
+    "motivo": "us chubb"
+  },
+  {
+    "email": "contact@mercer.com",
+    "name": "Mercer",
+    "company": "Mercer",
+    "role": "TI",
+    "personal_note": "Consultoria. Infra de TI.",
+    "motivo": "us mercer"
+  },
+  {
+    "email": "ti@prudential.com",
+    "name": "Prudential",
+    "company": "Prudential",
+    "role": "TI",
+    "personal_note": "Seguros. Infra de TI.",
+    "motivo": "us prudential"
+  },
+  {
+    "email": "contact@fpsg.com",
+    "name": "FPSG",
+    "company": "FPSG",
+    "role": "TI",
+    "personal_note": "Financeiros NJ. Infra de TI.",
+    "motivo": "us fpsg"
+  },
+  {
+    "email": "ti@wakefern.com",
+    "name": "Wakefern",
+    "company": "Wakefern",
+    "role": "TI",
+    "personal_note": "Varejo. Infra de TI.",
+    "motivo": "us wakefern"
+  },
+  {
+    "email": "contact@schneider-electric.com",
+    "name": "Schneider Electric",
+    "company": "Schneider Electric",
+    "role": "TI",
+    "personal_note": "Industrial. Infra de TI.",
+    "motivo": "us schneider"
+  },
+  {
+    "email": "ti@honeywell.com",
+    "name": "Honeywell",
+    "company": "Honeywell",
+    "role": "TI",
+    "personal_note": "Industrial. Infra de TI.",
+    "motivo": "us honeywell"
+  },
+  {
+    "email": "contact@philips.com",
+    "name": "Philips",
+    "company": "Philips",
+    "role": "TI",
+    "personal_note": "Saúde. Infra de TI.",
+    "motivo": "us philips"
+  },
+  {
+    "email": "ti@siemens.com",
+    "name": "Siemens",
+    "company": "Siemens",
+    "role": "TI",
+    "personal_note": "Industrial. Infra de TI.",
+    "motivo": "us siemens"
+  },
+  {
+    "email": "contact@ascap.com",
+    "name": "ASCAP",
+    "company": "ASCAP",
+    "role": "TI",
+    "personal_note": "Direitos musicais. Infra de TI.",
+    "motivo": "us ascap"
+  },
+  {
+    "email": "ti@bmo.com",
+    "name": "BMO",
+    "company": "BMO",
+    "role": "TI",
+    "personal_note": "Banco. Infra de TI.",
+    "motivo": "us bmo"
+  },
+  {
+    "email": "contact@rbc.com",
+    "name": "RBC",
+    "company": "RBC",
+    "role": "TI",
+    "personal_note": "Banco. Infra de TI.",
+    "motivo": "us rbc"
+  },
+  {
+    "email": "ti@cibc.com",
+    "name": "CIBC",
+    "company": "CIBC",
+    "role": "TI",
+    "personal_note": "Banco. Infra de TI.",
+    "motivo": "us cibc"
+  },
+  {
+    "email": "contact@td.com",
+    "name": "TD Bank",
+    "company": "TD Bank",
+    "role": "TI",
+    "personal_note": "Banco. Infra de TI.",
+    "motivo": "us td"
+  },
+  {
+    "email": "ti@scotia.com",
+    "name": "Scotiabank",
+    "company": "Scotiabank",
+    "role": "TI",
+    "personal_note": "Banco. Infra de TI.",
+    "motivo": "us scotia"
+  },
+  {
+    "email": "contact@revolut.com",
+    "name": "Revolut",
+    "company": "Revolut",
+    "role": "TI",
+    "personal_note": "Fintech UK. Infra de payments.",
+    "motivo": "uk revolut"
+  },
+  {
+    "email": "ti@monzo.com",
+    "name": "Monzo",
+    "company": "Monzo",
+    "role": "TI",
+    "personal_note": "Fintech UK. Infra de banking.",
+    "motivo": "uk monzo"
+  },
+  {
+    "email": "contact@wise.com",
+    "name": "Wise",
+    "company": "Wise",
+    "role": "TI",
+    "personal_note": "Fintech. Infra de payments.",
+    "motivo": "uk wise"
+  },
+  {
+    "email": "ti@starlingbank.com",
+    "name": "Starling Bank",
+    "company": "Starling Bank",
+    "role": "TI",
+    "personal_note": "Fintech UK. Infra de banking.",
+    "motivo": "uk starling"
+  },
+  {
+    "email": "contact@n26.com",
+    "name": "N26",
+    "company": "N26",
+    "role": "TI",
+    "personal_note": "Fintech DE. Infra de banking.",
+    "motivo": "de n26"
+  },
+  {
+    "email": "ti@klarna.com",
+    "name": "Klarna",
+    "company": "Klarna",
+    "role": "TI",
+    "personal_note": "Fintech SE. Infra de payments.",
+    "motivo": "se klarna"
+  },
+  {
+    "email": "contact@adyen.com",
+    "name": "Adyen",
+    "company": "Adyen",
+    "role": "TI",
+    "personal_note": "Fintech NL. Infra de payments.",
+    "motivo": "nl adyen"
+  },
+  {
+    "email": "ti@stripe.com",
+    "name": "Stripe",
+    "company": "Stripe",
+    "role": "TI",
+    "personal_note": "Fintech IE/US. Infra de payments.",
+    "motivo": "ie stripe"
+  },
+  {
+    "email": "contact@checkout.com",
+    "name": "Checkout.com",
+    "company": "Checkout.com",
+    "role": "TI",
+    "personal_note": "Fintech UK/IE. Infra payments.",
+    "motivo": "uk checkout"
+  },
+  {
+    "email": "ti@sumup.com",
+    "name": "SumUp",
+    "company": "SumUp",
+    "role": "TI",
+    "personal_note": "Fintech DE/UK. Infra payments.",
+    "motivo": "de sumup"
+  },
+  {
+    "email": "contact@worldpay.com",
+    "name": "Worldpay",
+    "company": "Worldpay",
+    "role": "TI",
+    "personal_note": "Fintech UK. Infra payments.",
+    "motivo": "uk worldpay"
+  },
+  {
+    "email": "ti@payoneer.com",
+    "name": "Payoneer",
+    "company": "Payoneer",
+    "role": "TI",
+    "personal_note": "Fintech. Infra payments.",
+    "motivo": "us payoneer"
+  },
+  {
+    "email": "contact@paypal.com",
+    "name": "PayPal",
+    "company": "PayPal",
+    "role": "TI",
+    "personal_note": "Fintech US. Infra payments.",
+    "motivo": "us paypal"
+  },
+  {
+    "email": "ti@square.com",
+    "name": "Square",
+    "company": "Square",
+    "role": "TI",
+    "personal_note": "Fintech US. Infra payments.",
+    "motivo": "us square"
+  },
+  {
+    "email": "contact@blocktower.com",
+    "name": "Block Tower",
+    "company": "Block Tower",
+    "role": "TI",
+    "personal_note": "Crypto fund. Infra de TI.",
+    "motivo": "us blocktower"
+  },
+  {
+    "email": "ti@cloudflare.com",
+    "name": "Cloudflare",
+    "company": "Cloudflare",
+    "role": "TI",
+    "personal_note": "Cloud/CDN. Infra de edge.",
+    "motivo": "us cloudflare"
+  },
+  {
+    "email": "contact@digitalocean.com",
+    "name": "DigitalOcean",
+    "company": "DigitalOcean",
+    "role": "TI",
+    "personal_note": "Cloud. Infra de VPS.",
+    "motivo": "us digitalocean"
+  },
+  {
+    "email": "ti@hetzner.com",
+    "name": "Hetzner",
+    "company": "Hetzner",
+    "role": "TI",
+    "personal_note": "Cloud DE. Infra VPS.",
+    "motivo": "de hetzner"
+  },
+  {
+    "email": "contact@scaleway.com",
+    "name": "Scaleway",
+    "company": "Scaleway",
+    "role": "TI",
+    "personal_note": "Cloud FR. Infra cloud.",
+    "motivo": "fr scaleway"
+  },
+  {
+    "email": "ti@ovhcloud.com",
+    "name": "OVHcloud",
+    "company": "OVHcloud",
+    "role": "TI",
+    "personal_note": "Cloud FR. Infra cloud.",
+    "motivo": "fr ovh"
+  },
+  {
+    "email": "contact@libero.com",
+    "name": "Libero Cloud",
+    "company": "Libero Cloud",
+    "role": "TI",
+    "personal_note": "Cloud IT. Infra cloud.",
+    "motivo": "it libero"
+  },
+  {
+    "email": "ti@watchguard.com",
+    "name": "WatchGuard",
+    "company": "WatchGuard",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra firewalls.",
+    "motivo": "us watchguard"
+  },
+  {
+    "email": "contact@sophos.com",
+    "name": "Sophos",
+    "company": "Sophos",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra security.",
+    "motivo": "uk sophos"
+  },
+  {
+    "email": "ti@cisco.com",
+    "name": "Cisco",
+    "company": "Cisco",
+    "role": "TI",
+    "personal_note": "Networking/security. Infra TI.",
+    "motivo": "us cisco"
+  },
+  {
+    "email": "contact@paloaltonetworks.com",
+    "name": "Palo Alto Networks",
+    "company": "Palo Alto Networks",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra firewalls.",
+    "motivo": "us paloalto"
+  },
+  {
+    "email": "ti@checkpoint.com",
+    "name": "Check Point",
+    "company": "Check Point",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra firewalls.",
+    "motivo": "il checkpoint"
+  },
+  {
+    "email": "contact@crowdstrike.com",
+    "name": "CrowdStrike",
+    "company": "CrowdStrike",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra endpoint.",
+    "motivo": "us crowdstrike"
+  },
+  {
+    "email": "ti@sentinelone.com",
+    "name": "SentinelOne",
+    "company": "SentinelOne",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra endpoint.",
+    "motivo": "us sentinelone"
+  },
+  {
+    "email": "contact@zscaler.com",
+    "name": "Zscaler",
+    "company": "Zscaler",
+    "role": "TI",
+    "personal_note": "Cloud security. Infra security.",
+    "motivo": "us zscaler"
+  },
+  {
+    "email": "ti@okta.com",
+    "name": "Okta",
+    "company": "Okta",
+    "role": "TI",
+    "personal_note": "Identity/security. Infra IAM.",
+    "motivo": "us okta"
+  },
+  {
+    "email": "contact@auth0.com",
+    "name": "Auth0",
+    "company": "Auth0",
+    "role": "TI",
+    "personal_note": "Identity/security. Infra auth.",
+    "motivo": "us auth0"
+  },
+  {
+    "email": "ti@qualys.com",
+    "name": "Qualys",
+    "company": "Qualys",
+    "role": "TI",
+    "personal_note": "Cybersecurity/scanning. Vulnerability mgmt.",
+    "motivo": "us qualys"
+  },
+  {
+    "email": "contact@rapid7.com",
+    "name": "Rapid7",
+    "company": "Rapid7",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Security analytics.",
+    "motivo": "us rapid7"
+  },
+  {
+    "email": "ti@tenable.com",
+    "name": "Tenable",
+    "company": "Tenable",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Infra vulnerability.",
+    "motivo": "us tenable"
+  },
+  {
+    "email": "contact@mandiant.com",
+    "name": "Mandiant",
+    "company": "Mandiant",
+    "role": "TI",
+    "personal_note": "Incident response. Threat intel.",
+    "motivo": "us mandiant"
+  },
+  {
+    "email": "ti@fireeye.com",
+    "name": "FireEye",
+    "company": "FireEye",
+    "role": "TI",
+    "personal_note": "Cybersecurity. Threat detection.",
+    "motivo": "us fireeye"
+  }
+]

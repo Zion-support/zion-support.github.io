@@ -1,0 +1,506 @@
+[
+  {
+    "email": "contact@nequipay.com",
+    "name": "Nequi",
+    "company": "Nequi",
+    "role": "TI",
+    "personal_note": "Fintech CO. Infra de payments.",
+    "motivo": "co nequi"
+  },
+  {
+    "email": "ti@fintech.co",
+    "name": "Fintech.co",
+    "company": "Fintech.co",
+    "role": "TI",
+    "personal_note": "Fintech CO. Infra de payments.",
+    "motivo": "co fintechco"
+  },
+  {
+    "email": "contact@plata.com",
+    "name": "Plata",
+    "company": "Plata",
+    "role": "TI",
+    "personal_note": "Fintech CO. Infra de TI.",
+    "motivo": "co plata"
+  },
+  {
+    "email": "ti@bancolombia.com",
+    "name": "Bancolombia",
+    "company": "Bancolombia",
+    "role": "TI",
+    "personal_note": "Banco CO. Infra de TI.",
+    "motivo": "co bancolombia"
+  },
+  {
+    "email": "contact@aviana.com",
+    "name": "Aviana",
+    "company": "Aviana",
+    "role": "TI",
+    "personal_note": "IT services CO. Infra de TI.",
+    "motivo": "co aviana"
+  },
+  {
+    "email": "contact@bcp.com.pe",
+    "name": "BCP",
+    "company": "BCP",
+    "role": "TI",
+    "personal_note": "Banco PE. Infra de TI.",
+    "motivo": "pe bcp"
+  },
+  {
+    "email": "ti@interbank.com.pe",
+    "name": "Interbank",
+    "company": "Interbank",
+    "role": "TI",
+    "personal_note": "Banco PE. Infra de TI.",
+    "motivo": "pe interbank"
+  },
+  {
+    "email": "contact@celula.com",
+    "name": "Celula",
+    "company": "Celula",
+    "role": "TI",
+    "personal_note": "Fintech PE. Infra de TI.",
+    "motivo": "pe celula"
+  },
+  {
+    "email": "ti@sirius.com",
+    "name": "Sirius",
+    "company": "Sirius",
+    "role": "TI",
+    "personal_note": "Fintech PE. Infra de TI.",
+    "motivo": "pe sirius"
+  },
+  {
+    "email": "contact@topsoftware.com",
+    "name": "TopSoftware",
+    "company": "TopSoftware",
+    "role": "TI",
+    "personal_note": "IT services PE. Infra de TI.",
+    "motivo": "pe topsw"
+  },
+  {
+    "email": "ti@entel.cl",
+    "name": "Entel",
+    "company": "Entel",
+    "role": "TI",
+    "personal_note": "Telecom CL. Infra de TI.",
+    "motivo": "cl entel"
+  },
+  {
+    "email": "contact@movistar.cl",
+    "name": "Movistar CL",
+    "company": "Movistar",
+    "role": "TI",
+    "personal_note": "Telecom CL. Infra de TI.",
+    "motivo": "cl movistar"
+  },
+  {
+    "email": "ti@itam.cl",
+    "name": "ITAM",
+    "company": "ITAM",
+    "role": "TI",
+    "personal_note": "IT services CL. Infra de TI.",
+    "motivo": "cl itam"
+  },
+  {
+    "email": "contact@intelit.com",
+    "name": "Intelit",
+    "company": "Intelit",
+    "role": "TI",
+    "personal_note": "IT services CL. Infra de TI.",
+    "motivo": "cl intelit"
+  },
+  {
+    "email": "ti@financial.com.ar",
+    "name": "Financial AR",
+    "company": "Financial",
+    "role": "TI",
+    "personal_note": "Fintech AR. Infra de TI.",
+    "motivo": "ar financial"
+  },
+  {
+    "email": "contact@iti.com.ar",
+    "name": "ITI AR",
+    "company": "ITI",
+    "role": "TI",
+    "personal_note": "IT services AR. Infra de TI.",
+    "motivo": "ar iti"
+  },
+  {
+    "email": "ti@artech.com.ar",
+    "name": "Artech",
+    "company": "Artech",
+    "role": "TI",
+    "personal_note": "IT services AR. Infra de TI.",
+    "motivo": "ar artech"
+  },
+  {
+    "email": "contact@sofid.com",
+    "name": "SOFID",
+    "company": "SOFID",
+    "role": "TI",
+    "personal_note": "IT services AR. Infra de TI.",
+    "motivo": "ar sofid"
+  },
+  {
+    "email": "ti@ibm.com",
+    "name": "IBM AR",
+    "company": "IBM",
+    "role": "TI",
+    "personal_note": "IT services. Infra de TI.",
+    "motivo": "ar ibm"
+  },
+  {
+    "email": "contact@antel.com.uy",
+    "name": "Antel",
+    "company": "Antel",
+    "role": "TI",
+    "personal_note": "Telecom UY. Infra de TI.",
+    "motivo": "uy antel"
+  },
+  {
+    "email": "ti@datatel.com",
+    "name": "Datatel",
+    "company": "Datatel",
+    "role": "TI",
+    "personal_note": "IT services UY. Infra de TI.",
+    "motivo": "uy datatel"
+  },
+  {
+    "email": "contact@antel.com.uy",
+    "name": "Montevideo Tech",
+    "company": "Montevideo Tech",
+    "role": "TI",
+    "personal_note": "IT services UY. Infra de TI.",
+    "motivo": "uy montevideo"
+  },
+  {
+    "email": "contact@telemar.com.py",
+    "name": "Telemar",
+    "company": "Telemar",
+    "role": "TI",
+    "personal_note": "Telecom PY. Infra de TI.",
+    "motivo": "py telemar"
+  },
+  {
+    "email": "ti@datatel.com",
+    "name": "Datatel PY",
+    "company": "Datatel",
+    "role": "TI",
+    "personal_note": "IT services PY. Infra de TI.",
+    "motivo": "py datatel2"
+  },
+  {
+    "email": "contact@ptla.com.ec",
+    "name": "PTLA",
+    "company": "PTLA",
+    "role": "TI",
+    "personal_note": "Telecom/EC. Infra de TI.",
+    "motivo": "ec ptla"
+  },
+  {
+    "email": "ti@servicioo.com",
+    "name": "Servicioo",
+    "company": "Servicioo",
+    "role": "TI",
+    "personal_note": "IT services EC. Infra de TI.",
+    "motivo": "ec servicioo"
+  },
+  {
+    "email": "contact@cellulant.com",
+    "name": "Cellulant",
+    "company": "Cellulant",
+    "role": "TI",
+    "personal_note": "Fintech payments KE. Infra de TI.",
+    "motivo": "ke cellulant"
+  },
+  {
+    "email": "ti@mprbank.com",
+    "name": "MPR Bank",
+    "company": "MPR Bank",
+    "role": "TI",
+    "personal_note": "Fintech KE. Infra de TI.",
+    "motivo": "ke mpr"
+  },
+  {
+    "email": "contact@malipel.com",
+    "name": "MaliPel",
+    "company": "MaliPel",
+    "role": "TI",
+    "personal_note": "Fintech KE. Infra de TI.",
+    "motivo": "ke malipel"
+  },
+  {
+    "email": "ti@ghanaipay.com",
+    "name": "Ghanaipay",
+    "company": "Ghanaipay",
+    "role": "TI",
+    "personal_note": "Fintech GH. Infra de TI.",
+    "motivo": "gh ghanaipay"
+  },
+  {
+    "email": "contact@latent.com",
+    "name": "Latent Pay",
+    "company": "Latent Pay",
+    "role": "TI",
+    "personal_note": "Fintech GH. Infra de TI.",
+    "motivo": "gh latent"
+  },
+  {
+    "email": "ti@payzone.ma",
+    "name": "PayZone MA",
+    "company": "PayZone",
+    "role": "TI",
+    "personal_note": "Fintech MA. Infra de TI.",
+    "motivo": "ma payzone"
+  },
+  {
+    "email": "contact@albarid.com",
+    "name": "Al Barid",
+    "company": "Al Barid",
+    "role": "TI",
+    "personal_note": "Fintech MA. Infra de TI.",
+    "motivo": "ma albarid"
+  },
+  {
+    "email": "contact@e-dinar.com",
+    "name": "E-Dinar",
+    "company": "E-Dinar",
+    "role": "TI",
+    "personal_note": "Fintech TN. Infra de TI.",
+    "motivo": "tn edinar"
+  },
+  {
+    "email": "ti@techinnovation.tn",
+    "name": "TechInnovation TN",
+    "company": "TechInnovation",
+    "role": "TI",
+    "personal_note": "Tech hub TN. Infra de TI.",
+    "motivo": "tn techinnov"
+  },
+  {
+    "email": "contact@ethio telecom.com",
+    "name": "Ethio Telecom",
+    "company": "Ethio Telecom",
+    "role": "TI",
+    "personal_note": "Telecom ET. Infra de TI.",
+    "motivo": "et ethio"
+  },
+  {
+    "email": "ti@ethiomobile.com",
+    "name": "EthioMobile",
+    "company": "EthioMobile",
+    "role": "TI",
+    "personal_note": "Mobile fintech ET. Infra de TI.",
+    "motivo": "et ethiomob"
+  },
+  {
+    "email": "contact@truemoney.com",
+    "name": "TrueMoney",
+    "company": "TrueMoney",
+    "role": "TI",
+    "personal_note": "Fintech TH. Infra de payments.",
+    "motivo": "th truemoney"
+  },
+  {
+    "email": "ti@scb.com",
+    "name": "SCB Thailand",
+    "company": "SCB",
+    "role": "TI",
+    "personal_note": "Banking TH. Infra de TI.",
+    "motivo": "th scb"
+  },
+  {
+    "email": "contact@tunect.com",
+    "name": "Tunect",
+    "company": "Tunect",
+    "role": "TI",
+    "personal_note": "Fintech TH. Infra de TI.",
+    "motivo": "th tunect"
+  },
+  {
+    "email": "ti@aba.com.kh",
+    "name": "ABA Cambodia",
+    "company": "ABA",
+    "role": "TI",
+    "personal_note": "Banking/fintech KH. Infra de TI.",
+    "motivo": "kh aba"
+  },
+  {
+    "email": "contact@waing.com",
+    "name": "Waing",
+    "company": "Waing",
+    "role": "TI",
+    "personal_note": "Tech KH. Infra de TI.",
+    "motivo": "kh waing"
+  },
+  {
+    "email": "contact@kpay.com.mm",
+    "name": "KPay Myanmar",
+    "company": "KPay",
+    "role": "TI",
+    "personal_note": "Fintech MM. Infra de payments.",
+    "motivo": "mm kpay"
+  },
+  {
+    "email": "ti@aye.com.mm",
+    "name": "Aye Bank",
+    "company": "Aye Bank",
+    "role": "TI",
+    "personal_note": "Banking MM. Infra de TI.",
+    "motivo": "mm aye"
+  },
+  {
+    "email": "contact@kaspi.kz",
+    "name": "Kaspi.kz",
+    "company": "Kaspi.kz",
+    "role": "TI",
+    "personal_note": "Fintech/super app KZ. Infra de TI.",
+    "motivo": "kz kaspi"
+  },
+  {
+    "email": "ti@halykbank.kz",
+    "name": "Halyk Bank",
+    "company": "Halyk Bank",
+    "role": "TI",
+    "personal_note": "Banking KZ. Infra de TI.",
+    "motivo": "kz halyk"
+  },
+  {
+    "email": "contact@forte.kz",
+    "name": "Forte",
+    "company": "Forte",
+    "role": "TI",
+    "personal_note": "Payments KZ. Infra de TI.",
+    "motivo": "kz forte"
+  },
+  {
+    "email": "ti@click.uz",
+    "name": "Click Uz",
+    "company": "Click",
+    "role": "TI",
+    "personal_note": "E-commerce/fintech UZ. Infra de TI.",
+    "motivo": "uz click"
+  },
+  {
+    "email": "contact@payme.uz",
+    "name": "Payme",
+    "company": "Payme",
+    "role": "TI",
+    "personal_note": "Fintech UZ. Infra de payments.",
+    "motivo": "uz payme"
+  },
+  {
+    "email": "ti@apisi.uz",
+    "name": "Apisi",
+    "company": "Apisi",
+    "role": "TI",
+    "personal_note": "IT services UZ. Infra de TI.",
+    "motivo": "uz apisi"
+  },
+  {
+    "email": "ti@ Fawry.com",
+    "name": "Fawry",
+    "company": "Fawry",
+    "role": "TI",
+    "personal_note": "Fintech EG. Infra de payments.",
+    "motivo": "eg fawry"
+  },
+  {
+    "email": "contact@paymob.com",
+    "name": "Paymob",
+    "company": "Paymob",
+    "role": "TI",
+    "personal_note": "Fintech EG. Infra de payments.",
+    "motivo": "eg paymob"
+  },
+  {
+    "email": "ti@instapay.com.eg",
+    "name": "InstaPay EG",
+    "company": "InstaPay",
+    "role": "TI",
+    "personal_note": "Fintech EG. Infra de TI.",
+    "motivo": "eg instapay"
+  },
+  {
+    "email": "contact@joipay.com",
+    "name": "JoiPay",
+    "company": "JoiPay",
+    "role": "TI",
+    "personal_note": "Fintech JO. Infra de TI.",
+    "motivo": "jo joipay"
+  },
+  {
+    "email": "ti@jordanpay.com",
+    "name": "JordanPay",
+    "company": "JordanPay",
+    "role": "TI",
+    "personal_note": "Fintech JO. Infra de payments.",
+    "motivo": "jo jordanpay"
+  },
+  {
+    "email": "ti@middleeast.com.lb",
+    "name": "MiddleEast Tech",
+    "company": "MiddleEast Tech",
+    "role": "TI",
+    "personal_note": "IT services LB. Infra de TI.",
+    "motivo": "lb met"
+  },
+  {
+    "email": "contact@imedia.com.lb",
+    "name": "iMedia",
+    "company": "iMedia",
+    "role": "TI",
+    "personal_note": "IT services LB. Infra de TI.",
+    "motivo": "lb imedia"
+  },
+  {
+    "email": "contact@emiratesns.com",
+    "name": "Emirates NBD",
+    "company": "Emirates NBD",
+    "role": "TI",
+    "personal_note": "Banking AE. Infra de TI.",
+    "motivo": "ae enbd"
+  },
+  {
+    "email": "ti@ajr.com",
+    "name": "AJR",
+    "company": "AJR",
+    "role": "TI",
+    "personal_note": "IT services AE. Infra de TI.",
+    "motivo": "ae ajr"
+  },
+  {
+    "email": "contact@paytabs.com",
+    "name": "PayTabs",
+    "company": "PayTabs",
+    "role": "TI",
+    "personal_note": "Fintech AE. Infra de payments.",
+    "motivo": "ae paytabs"
+  },
+  {
+    "email": "contact@kakaopay.com",
+    "name": "KakaoPay",
+    "company": "KakaoPay",
+    "role": "TI",
+    "personal_note": "Fintech KR. Infra de payments.",
+    "motivo": "kr kakaopay"
+  },
+  {
+    "email": "ti@toss.im",
+    "name": "Toss",
+    "company": "Toss",
+    "role": "TI",
+    "personal_note": "Fintech KR. Infra de payments.",
+    "motivo": "kr toss2"
+  },
+  {
+    "email": "contact@karn.co.kr",
+    "name": "Karn",
+    "company": "Karn",
+    "role": "TI",
+    "personal_note": "Fintech KR. Infra de TI.",
+    "motivo": "kr karn"
+  }
+]

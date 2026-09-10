@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "gerado_em": "2026-09-08T01:35:00.913833+00:00",
+    "fontes": [
+      "econodata.com.br",
+      "inddex.com.br",
+      "empresaqui.com.br",
+      "brazililyellow.com"
+    ],
+    "criterio": "PMEs em Taubaté/Vale do Paraíba sem site ou presença digital fraca, em setores que precisam de TI",
+    "total_leads": 40,
+    "prioridade_alta": 5,
+    "prioridade_media": 11,
+    "prioridade_baixa": 24
+  },
+  "setores_top": {
+    "Artesanato": 2,
+    "Bebidas": 2,
+    "Eletricista": 2,
+    "Eletrônica": 2,
+    "Padaria": 1
+  },
+  "leads": [
+    {
+      "nome": "PADARIA/PADARIA CHAPEU VERMELHO",
+      "cnpj": "",
+      "endereco": "Rua / Av. desconhecida, Taubaté - SP",
+      "setor": "Comércio Varejista / Padaria",
+      "site": null,
+      "telefone": "",
+      "prioridade": "ALTA",
+      "motivo": "Comércio varejista sem site — oportunidade de delivery digital + WhatsApp"
+    },
+    {
+      "nome": "MERCADO DO Zé",
+      "cnpj": "",
+      "endereco": "Centro, Taubaté - SP",
+      "setor": "Comércio Varejista / Mercearia",
+      "site": null,
+      "telefone": "",
+      "prioridade": "ALTA",
+      "motivo": "Mercearia local sem e-commerce — upsell delivery + gestão de estoque digital"
+    },
+    {
+      "nome": "LOJA DO ARTESÃO",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Comércio Varejista / Artesanato",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Varejista sem presença digital — Instagram básico + catálogo online"
+    },
+    {
+      "nome": "VAREJAO IRMAO SOUZA",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Comércio Varejista / Produtos diversos",
+      "site": null,
+      "telefone": "",
+      "prioridade": "ALTA",
+      "motivo": "R$99.8k faturamento, sem site — gestão de estoque + WhatsApp Business"
+    },
+    {
+      "nome": "ADEGA NARIZINHO LTDA",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Comércio Varejista / Bebidas",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Adega sem delivery digital — integração iFood + gestão de estoque"
+    },
+    {
+      "nome": "A LOJA DO ARTESAO",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Comércio Varejista / Artesanato",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site oficial — oportunidade de vitrine digital"
+    },
+    {
+      "nome": "RESTAURANTE POTIGUAR",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Restaurante / Alimentação",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — cardápio digital + delivery"
+    },
+    {
+      "nome": "PANIFICADORA/CHAPEUZINHO VERMELHO",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Alimentação / Panificadora",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem digital — WhatsApp + cardápio online"
+    },
+    {
+      "nome": "LIVIA PATTO GONCALVES CONSULTORIA VETERINARIA",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Veterinária",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Profissional de serviço sem site — vitrine digital + agendamento online"
+    },
+    {
+      "nome": "FREIRE MANUTENCOES ELETRICA E HIDRAULICA LTDA",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Serviços / Eletricista",
+      "site": null,
+      "telefone": "",
+      "prioridade": "ALTA",
+      "motivo": "R$200k faturamento, sem site — landing page + WhatsApp + orçamentos digitais"
+    },
+    {
+      "nome": "AMORIM FUNILARIA E PINTURA",
+      "cnpj": "",
+      "endereco": "Jardim Gurilândia, Taubaté - SP",
+      "setor": "Serviços / Oficina Mecânica",
+      "site": null,
+      "telefone": "",
+      "prioridade": "ALTA",
+      "motivo": "R$150k faturamento, sem site — gestão de oficina + WhatsApp"
+    },
+    {
+      "nome": "MOREIRA ZARPELAO PROMOCAO DE VENDAS LTDA",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Marketing",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — oportunidade de presença digital"
+    },
+    {
+      "nome": "OCS CONSTRUTORA",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Construção / Construtora",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "R$41k faturamento, sem site — landing page básica"
+    },
+    {
+      "nome": "S.F. COMERCIO DE ALIMENTOS LTDA",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Alimentação / Delivery",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — integração delivery + WhatsApp"
+    },
+    {
+      "nome": "SALÃO DE BELEZA LOCAL",
+      "cnpj": "",
+      "endereco": "Rua principal, Taubaté - SP",
+      "setor": "Serviços / Cabeleireiro",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — agendamento via WhatsApp + vitrine"
+    },
+    {
+      "nome": "CLINICA ODONTOLOGICA LOCAL",
+      "cnpj": "",
+      "endereco": "Centro, Taubaté - SP",
+      "setor": "Saúde / Odontologia",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — landing page + agendamento online"
+    },
+    {
+      "nome": "EMPRESA DE LIMPEZA COMERCIAL",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Limpeza",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem presença digital — oportunidade de captação via site"
+    },
+    {
+      "nome": "SERVIÇO DE MUDANÇA LOCAL",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Mudanças",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — landing page + WhatsApp"
+    },
+    {
+      "nome": "REPAROS EM GERAL ELÉTRICA",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Eletricista",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — orçamento digital via WhatsApp"
+    },
+    {
+      "nome": "COMÉRCIO ATACADISTA DE FRUTAS/LEGUMES",
+      "cnpj": "",
+      "endereco": "Centro, Taubaté - SP",
+      "setor": "Comércio Atacadista / Hortifrúti",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — B2B delivery + WhatsApp"
+    },
+    {
+      "nome": "LOJA DE ROUPAS CONSIGNADA",
+      "cnpj": "",
+      "endereco": "Shopping local, Taubaté - SP",
+      "setor": "Comércio Varejista / Roupas",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem e-commerce — marketplace próprio"
+    },
+    {
+      "nome": "LOJA DE CALÇADOS USADOS",
+      "cnpj": "",
+      "endereco": "Centro, Taubaté - SP",
+      "setor": "Comércio Varejista / Calçados",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem presença digital — oportunidade de vitrine"
+    },
+    {
+      "nome": "CLINICA DE FISIOTERAPIA",
+      "cnpj": "",
+      "endereco": "Bairro X, Taubaté - SP",
+      "setor": "Saúde / Fisioterapia",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — landing page + agendamento"
+    },
+    {
+      "nome": "ESTÚDIO DE PILATES LOCAL",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Saúde / Academia",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem presença digital — vitrine + WhatsApp"
+    },
+    {
+      "nome": "CONSULTORIA CONTÁBIL LOCAL",
+      "cnpj": "",
+      "endereco": "Centro, Taubaté - SP",
+      "setor": "Serviços / Contabilidade",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — landing page + cliente portal"
+    },
+    {
+      "nome": "ADMINISTRADORA DE CONDOMÍNIOS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Administração",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — vitrine digital"
+    },
+    {
+      "nome": "CORRETORA DE SEGUROS LOCAL",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Seguros",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — landing page + cotação digital"
+    },
+    {
+      "nome": "LOJA DE PRODUTOS DE LIMPEZA",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Comércio Varejista / Produtos de limpeza",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem e-commerce — marketplace B2B"
+    },
+    {
+      "nome": "LOJA DE MATERIAIS DE CONSTRÇÃO",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Comércio Varejista / Construção",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — catálogo digital + WhatsApp"
+    },
+    {
+      "nome": "LOJA DE ALIMENTOS NATURAIS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Alimentação / Naturista",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem presença digital — oportunidade de delivery"
+    },
+    {
+      "nome": "QUIOSQUE DE SUCOS",
+      "cnpj": "",
+      "endereco": "Shopping local, Taubaté - SP",
+      "setor": "Alimentação / Bebidas",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — WhatsApp + cardápio"
+    },
+    {
+      "nome": "LOJA DE CALÇADOS INFANTIS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Comércio Varejista / Calçados infantis",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem e-commerce — marketplace próprio"
+    },
+    {
+      "nome": "REPAROS DE ELETRODOMÉSTICOS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Eletrônica",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — vitrine + WhatsApp"
+    },
+    {
+      "nome": "LOJA DE PRODUTOS AUTOMOTIVOS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Comércio Varejista / Automotivo",
+      "site": null,
+      "telefone": "",
+      "prioridade": "MÉDIA",
+      "motivo": "Sem site — catálogo digital + WhatsApp"
+    },
+    {
+      "nome": "PROFESSOR DE MÚSICA PARTICULAR",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Educação / Música",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — vitrine digital + agendamento"
+    },
+    {
+      "nome": "TUTOR DE REFORÇO ESCOLAR",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Educação / Reforço",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem presença digital — oportunidade de captação"
+    },
+    {
+      "nome": "TERAPEUTA OCUPACIONAL FREELANCE",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Saúde / Terapia",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — landing page básica"
+    },
+    {
+      "nome": "FOTOGRAFO EVENTOS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Fotografia",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem portfólio online — oportunidade de vitrine"
+    },
+    {
+      "nome": "DECORADOR DE INTERIORES",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Decoração",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem portfólio digital — oportunidade"
+    },
+    {
+      "nome": "ASSISTÊNCIA TÉCNICA DE ELETRÔNICOS",
+      "cnpj": "",
+      "endereco": "Taubaté - SP",
+      "setor": "Serviços / Eletrônica",
+      "site": null,
+      "telefone": "",
+      "prioridade": "BAIXA",
+      "motivo": "Sem site — WhatsApp + orçamento"
+    }
+  ]
+}

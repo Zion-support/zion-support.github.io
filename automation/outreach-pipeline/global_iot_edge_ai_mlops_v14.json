@@ -1,0 +1,498 @@
+[
+  {
+    "email": "ti@toyota-global.com",
+    "name": "Toyota IT",
+    "company": "Toyota Motor Corp",
+    "role": "TI",
+    "personal_note": "Global vehicle & IT infrastructure. Infra TI.",
+    "motivo": "japan toyota"
+  },
+  {
+    "email": "contact@fujitsu.com",
+    "name": "Fujitsu",
+    "company": "Fujitsu Ltd",
+    "role": "Contato",
+    "personal_note": "IT services & infrastructure. Infra TI.",
+    "motivo": "japan fujitsu"
+  },
+  {
+    "email": "ti@nec.com",
+    "name": "NEC",
+    "company": "NEC Corp",
+    "role": "TI",
+    "personal_note": "IT/network infrastructure. Infra TI.",
+    "motivo": "japan nec"
+  },
+  {
+    "email": "contact@ricoh.com",
+    "name": "Ricoh",
+    "company": "Ricoh Co",
+    "role": "Contato",
+    "personal_note": "Office/ imaging IT. Infra TI.",
+    "motivo": "japan ricoh"
+  },
+  {
+    "email": "ti@kddi.com",
+    "name": "KDDI",
+    "company": "KDDI Corp",
+    "role": "TI",
+    "personal_note": "Telecom & IT infrastructure. Infra TI.",
+    "motivo": "japan kddi"
+  },
+  {
+    "email": "contact@softbank.jp",
+    "name": "SoftBank",
+    "company": "SoftBank Group",
+    "role": "Contato",
+    "personal_note": "Telecom/cloud IT. Infra TI.",
+    "motivo": "japan softbank"
+  },
+  {
+    "email": "ti@panasonic.com",
+    "name": "Panasonic",
+    "company": "Panasonic Holdings",
+    "role": "TI",
+    "personal_note": "Industrial/IT systems. Infra TI.",
+    "motivo": "japan panasonic"
+  },
+  {
+    "email": "contact@obayashi.co.jp",
+    "name": "Obayashi",
+    "company": "Obayashi Corp",
+    "role": "Contato",
+    "personal_note": "Construction IT/infra. Infra TI.",
+    "motivo": "japan obayashi"
+  },
+  {
+    "email": "ti@mercari.com",
+    "name": "Mercari",
+    "company": "Mercari Inc",
+    "role": "TI",
+    "personal_note": "E-commerce platform. Infra TI.",
+    "motivo": "japan mercari"
+  },
+  {
+    "email": "contact@line.me",
+    "name": "LINE",
+    "company": "LINE Yahoo",
+    "role": "Contato",
+    "personal_note": "Messaging platform. Infra TI.",
+    "motivo": "japan line"
+  },
+  {
+    "email": "ti@paypay.ne.jp",
+    "name": "PayPay",
+    "company": "PayPay Corp",
+    "role": "TI",
+    "personal_note": "Payment platform. Infra TI.",
+    "motivo": "japan paypay"
+  },
+  {
+    "email": "j.smith@telstra.com",
+    "name": "John Smith",
+    "company": "Telstra",
+    "role": "TI",
+    "personal_note": "Telecom infrastructure. Infra TI.",
+    "motivo": "aus telstra"
+  },
+  {
+    "email": "m.jones@optus.com",
+    "name": "Mike Jones",
+    "company": "Optus (Singtel)",
+    "role": "TI",
+    "personal_note": "Telecom infrastructure. Infra TI.",
+    "motivo": "aus optus"
+  },
+  {
+    "email": "d.wilson@vodafone.com.au",
+    "name": "David Wilson",
+    "company": "Vodafone Australia",
+    "role": "TI",
+    "personal_note": "Telecom infrastructure. Infra TI.",
+    "motivo": "aus vodafone"
+  },
+  {
+    "email": "r.brown@commbank.com.au",
+    "name": "Robert Brown",
+    "company": "Commonwealth Bank",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "aus commbank"
+  },
+  {
+    "email": "l.taylor@ing.com.au",
+    "name": "Lisa Taylor",
+    "company": "ING Australia",
+    "role": "TI",
+    "personal_note": "Banking IT. Infra TI.",
+    "motivo": "aus ing"
+  },
+  {
+    "email": "k.walker@westpac.com.au",
+    "name": "Kevin Walker",
+    "company": "Westpac",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "aus westpac"
+  },
+  {
+    "email": "a.miller@afterpay.com.au",
+    "name": "Amy Miller",
+    "company": "Afterpay (Block)",
+    "role": "TI",
+    "personal_note": "Payment platform IT. Infra TI.",
+    "motivo": "aus afterpay"
+  },
+  {
+    "email": "b.davis@zip.co",
+    "name": "Ben Davis",
+    "company": "Zip Co",
+    "role": "TI",
+    "personal_note": "Buy-now-pay-later IT. Infra TI.",
+    "motivo": "aus zip"
+  },
+  {
+    "email": "c.johnson@afterpay.co.nz",
+    "name": "Chris Johnson",
+    "company": "Afterpay NZ",
+    "role": "TI",
+    "personal_note": "Payment platform IT. Infra TI.",
+    "motivo": "nz afterpay"
+  },
+  {
+    "email": "e.wilson@polish.co.nz",
+    "name": "Emma Wilson",
+    "company": "Polaris (NZ fintech)",
+    "role": "TI",
+    "personal_note": "Fintech infrastructure. Infra TI.",
+    "motivo": "nz polaris"
+  },
+  {
+    "email": "f.brown@xero.com",
+    "name": "Frank Brown",
+    "company": "Xero",
+    "role": "TI",
+    "personal_note": "Cloud accounting platform. Infra TI.",
+    "motivo": "nz xero"
+  },
+  {
+    "email": "g.taylor@asb.co.nz",
+    "name": "Gary Taylor",
+    "company": "ASB Bank",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "nz asb"
+  },
+  {
+    "email": "h.murphy@anz.co.nz",
+    "name": "Helen Murphy",
+    "company": "ANZ NZ",
+    "role": "TI",
+    "personal_note": "Banking IT. Infra TI.",
+    "motivo": "nz anz"
+  },
+  {
+    "email": "r.sharma@tata.com",
+    "name": "Raj Sharma",
+    "company": "Tata Group",
+    "role": "TI",
+    "personal_note": "Conglomerate IT. Infra TI.",
+    "motivo": "india tata"
+  },
+  {
+    "email": "s.patel@jindal.com",
+    "name": "Sunil Patel",
+    "company": "Jindal Steel",
+    "role": "TI",
+    "personal_note": "Industrial IT. Infra TI.",
+    "motivo": "india jindal"
+  },
+  {
+    "email": "a.kumar@essel.com",
+    "name": "Amit Kumar",
+    "company": "Essel Group",
+    "role": "TI",
+    "personal_note": "Media/IT infrastructure. Infra TI.",
+    "motivo": "india essel"
+  },
+  {
+    "email": "v.jha@vakeel.com",
+    "name": "Vijay Jha",
+    "company": "Vakeel (legal tech)",
+    "role": "TI",
+    "personal_note": "Legal tech platform. Infra TI.",
+    "motivo": "india vakeel"
+  },
+  {
+    "email": "l.singh@legal.com",
+    "name": "Lal Singh",
+    "company": "LegalTech India",
+    "role": "TI",
+    "personal_note": "Legal IT services. Infra TI.",
+    "motivo": "india legaltech"
+  },
+  {
+    "email": "m.gupta@scaler.com",
+    "name": "Mohan Gupta",
+    "company": "Scaler Academy",
+    "role": "TI",
+    "personal_note": "EdTech infrastructure. Infra TI.",
+    "motivo": "india scaler"
+  },
+  {
+    "email": "p.rao@digi.com",
+    "name": "Prakash Rao",
+    "company": "Digi Technologies",
+    "role": "TI",
+    "personal_note": "Digital services IT. Infra TI.",
+    "motivo": "india digi"
+  },
+  {
+    "email": "n.b.singh@ongc.com",
+    "name": "N.B. Singh",
+    "company": "ONGC",
+    "role": "TI",
+    "personal_note": "Oil/gas IT infrastructure. Infra TI.",
+    "motivo": "india ongc"
+  },
+  {
+    "email": "q.kumar@irctc.com",
+    "name": "Q Kumar",
+    "company": "IRCTC",
+    "role": "TI",
+    "personal_note": "Rail travel IT. Infra TI.",
+    "motivo": "india irctc"
+  },
+  {
+    "email": "r.singh@elxsi.com",
+    "name": "Ravi Singh",
+    "company": "Elxsi",
+    "role": "TI",
+    "personal_note": "Visual computing IT. Infra TI.",
+    "motivo": "india elxsi"
+  },
+  {
+    "email": "y.hassan@zain.com",
+    "name": "Youssef Hassan",
+    "company": "Zain Group",
+    "role": "TI",
+    "personal_note": "Telecom IT infrastructure. Infra TI.",
+    "motivo": "me zain"
+  },
+  {
+    "email": "z.karim@cbankiq.com",
+    "name": "Zayn Karim",
+    "company": "CBK (Kuwait)",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "me cbk"
+  },
+  {
+    "email": "a.hussein@omanbank.com",
+    "name": "Ahmed Hussein",
+    "company": "Bank Muscat",
+    "role": "TI",
+    "personal_note": "Banking IT. Infra TI.",
+    "motivo": "me omanbank"
+  },
+  {
+    "email": "b.ali@bankmuscat.com",
+    "name": "Basem Ali",
+    "company": "Bank Muscat",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "me bankmuscat"
+  },
+  {
+    "email": "c.salim@ooredoo.om",
+    "name": "Ali Salim",
+    "company": "Ooredoo Oman",
+    "role": "TI",
+    "personal_note": "Telecom IT infrastructure. Infra TI.",
+    "motivo": "me ooredoo"
+  },
+  {
+    "email": "d.jawad@shu.com",
+    "name": "Dawood Jawad",
+    "company": "Sharjah University",
+    "role": "TI",
+    "personal_note": "University IT infrastructure. Infra TI.",
+    "motivo": "me shu"
+  },
+  {
+    "email": "e.rashid@batelco.com",
+    "name": "Eissa Rashid",
+    "company": "Batelco (Bahrain)",
+    "role": "TI",
+    "personal_note": "Telecom IT. Infra TI.",
+    "motivo": "me batelco"
+  },
+  {
+    "email": "f.nasser@cbk.com",
+    "name": "Fahad Nasser",
+    "company": "CBK Kuwait",
+    "role": "TI",
+    "personal_note": "Banking IT. Infra TI.",
+    "motivo": "me cbk2"
+  },
+  {
+    "email": "g.alhamed@ghanin.com",
+    "name": "Ghazi Alhamed",
+    "company": "Ghana National Bank",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "me ghanin"
+  },
+  {
+    "email": "h.alzain@zainkw.com",
+    "name": "Hatem Alzain",
+    "company": "Zain Kuwait",
+    "role": "TI",
+    "personal_note": "Telecom IT. Infra TI.",
+    "motivo": "me zainkw"
+  },
+  {
+    "email": "i.khalifa@qatarairways.com",
+    "name": "Ibrahim Khalifa",
+    "company": "Qatar Airways",
+    "role": "TI",
+    "personal_note": "Aviation IT infrastructure. Infra TI.",
+    "motivo": "me qatarairways"
+  },
+  {
+    "email": "j.hamad@qnb.com",
+    "name": "Jassim Hamad",
+    "company": "QNB (Qatar)",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "me qnb"
+  },
+  {
+    "email": "k.almahmoud@ooredoo.qa",
+    "name": "Khaled Almahmoud",
+    "company": "Ooredoo Qatar",
+    "role": "TI",
+    "personal_note": "Telecom IT. Infra TI.",
+    "motivo": "me ooredooqa"
+  },
+  {
+    "email": "l.yilmaz@ziraatbank.com",
+    "name": "Levent Yilmaz",
+    "company": "Ziraat Bank (Turkey)",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "tur ziraatbank"
+  },
+  {
+    "email": "m.ozdemir@finansal.com",
+    "name": "Mehmet Ozdemir",
+    "company": "Finansal (Turkey fintech)",
+    "role": "TI",
+    "personal_note": "Fintech IT infrastructure. Infra TI.",
+    "motivo": "tur finansal"
+  },
+  {
+    "email": "n.ertas@istanbuldev.com",
+    "name": "Nuri Ertas",
+    "company": "Istanbul Dev (tech hub)",
+    "role": "TI",
+    "personal_note": "Software/IT development. Infra TI.",
+    "motivo": "tur istanbuldev"
+  },
+  {
+    "email": "o.cetin@turkcell.com",
+    "name": "Orhan Cetin",
+    "company": "Turkcell",
+    "role": "TI",
+    "personal_note": "Telecom IT infrastructure. Infra TI.",
+    "motivo": "tur turkcell"
+  },
+  {
+    "email": "p.arslan@vodafone.com.tr",
+    "name": "Pinar Arslan",
+    "company": "Vodafone Turkey",
+    "role": "TI",
+    "personal_note": "Telecom IT. Infra TI.",
+    "motivo": "tur vodafone"
+  },
+  {
+    "email": "q.demir@akbank.com",
+    "name": "Qadir Demir",
+    "company": "Akbank",
+    "role": "TI",
+    "personal_note": "Banking IT infrastructure. Infra TI.",
+    "motivo": "tur akbank"
+  },
+  {
+    "email": "r.kaya@yapi.com",
+    "name": "Riza Kaya",
+    "company": "Yapi Kredi",
+    "role": "TI",
+    "personal_note": "Banking IT. Infra TI.",
+    "motivo": "tur yapi"
+  },
+  {
+    "email": "s.konak@papara.com",
+    "name": "Serkan Konak",
+    "company": "Papara (Turkey fintech)",
+    "role": "TI",
+    "personal_note": "Fintech platform IT. Infra TI.",
+    "motivo": "tur papara"
+  },
+  {
+    "email": "t.cohen@ironsrc.com",
+    "name": "Tomer Cohen",
+    "company": "IronSource (Unity)",
+    "role": "TI",
+    "personal_note": "Adtech/infrastructure. Infra TI.",
+    "motivo": "isra ironsrc"
+  },
+  {
+    "email": "u.levi@wix.com",
+    "name": "Uri Levi",
+    "company": "Wix.com",
+    "role": "TI",
+    "personal_note": "Website platform IT. Infra TI.",
+    "motivo": "isra wix"
+  },
+  {
+    "email": "v.moskowitz@kondukto.io",
+    "name": "Victor Moskowitz",
+    "company": "Kondukto (DevSecOps)",
+    "role": "TI",
+    "personal_note": "App security platform. Infra TI.",
+    "motivo": "isra kondukto"
+  },
+  {
+    "email": "w.levine@molnix.com",
+    "name": "William Levine",
+    "company": "Molnix (ITOM)",
+    "role": "TI",
+    "personal_note": "IT operations platform. Infra TI.",
+    "motivo": "isra molnix"
+  },
+  {
+    "email": "x.goldberg@megaport.com",
+    "name": "Xavier Goldberg",
+    "company": "Megaport (network-as-a-service)",
+    "role": "TI",
+    "personal_note": "Network infrastructure. Infra TI.",
+    "motivo": "isra megaport"
+  },
+  {
+    "email": "y.katz@pheez.com",
+    "name": "Yaakov Katz",
+    "company": "Pheez (logistics tech)",
+    "role": "TI",
+    "personal_note": "Logistics tech platform. Infra TI.",
+    "motivo": "isra pheez"
+  },
+  {
+    "email": "z.green@yieldify.com",
+    "name": "Zev Green",
+    "company": "Yieldify (CRO platform)",
+    "role": "TI",
+    "personal_note": "Conversion optimization. Infra TI.",
+    "motivo": "isra yieldify"
+  }
+]

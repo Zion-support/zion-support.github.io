@@ -1,0 +1,290 @@
+[
+  {
+    "email": "contact@paypay.ne.jp",
+    "name": "PayPay",
+    "company": "PayPay",
+    "role": "TI",
+    "personal_note": "Pagamentos mobile japoneses, 30M+ usuários. Infraestrutura em escala.",
+    "motivo": "asia fintech paypay"
+  },
+  {
+    "email": "ti@line.me",
+    "name": "LINE",
+    "company": "LINE",
+    "role": "TI",
+    "personal_note": "Super app japonesa, 90M+ usuários. Infraestrutura de messaging e pagamentos.",
+    "motivo": "asia line"
+  },
+  {
+    "email": "contact@merpay.com",
+    "name": "Merpay",
+    "company": "Merpay",
+    "role": "TI",
+    "personal_note": "Wallet digital japonesa (Mercado Pago). Infraestrutura de pagamentos.",
+    "motivo": "asia merpay"
+  },
+  {
+    "email": "ti@kakao.com",
+    "name": "Kakao",
+    "company": "Kakao",
+    "role": "TI",
+    "personal_note": "Super app coreana, 45M+ usuários. Infraestrutura de messageria e serviços.",
+    "motivo": "asia kakao"
+  },
+  {
+    "email": "contact@kakaobank.com",
+    "name": "KakaoBank",
+    "company": "KakaoBank",
+    "role": "TI",
+    "personal_note": "Banco digital coreano, 20M+ clientes. Infraestrutura fintech.",
+    "motivo": "asia kakao bank"
+  },
+  {
+    "email": "ti@naver.com",
+    "name": "Naver",
+    "company": "Naver",
+    "role": "TI",
+    "personal_note": "Search e platforma coreana. Infraestrutura de cloud e AI.",
+    "motivo": "asia naver"
+  },
+  {
+    "email": "contact@toss.im",
+    "name": "Toss",
+    "company": "Toss",
+    "role": "TI",
+    "personal_note": "Fintech coreana, 15M+ usuários. Infraestrutura financeira.",
+    "motivo": "asia toss"
+  },
+  {
+    "email": "ti@grab.com",
+    "name": "Grab",
+    "company": "Grab",
+    "role": "TI",
+    "personal_note": "Super app sudeste asiático. Infraestrutura de mobility e pagamentos.",
+    "motivo": "asia grab"
+  },
+  {
+    "email": "contact@gojek.com",
+    "name": "Gojek",
+    "company": "Gojek",
+    "role": "TI",
+    "personal_note": "Super app indonésia. Infraestrutura de mobility e payments.",
+    "motivo": "asia gojek"
+  },
+  {
+    "email": "ti@sea.com",
+    "name": "Sea Group",
+    "company": "Sea Group",
+    "role": "TI",
+    "personal_note": "Corp scalars asiática (Shopee, Garena, SeaMoney). Infraestrutura massiva.",
+    "motivo": "asia sea"
+  },
+  {
+    "email": "contact@shopee.com",
+    "name": "Shopee",
+    "company": "Shopee",
+    "role": "TI",
+    "personal_note": "E-commerce asiático. Infraestrutura de marketplace em escala.",
+    "motivo": "asia shopee"
+  },
+  {
+    "email": "ti@lau.com",
+    "name": "Grab Financial",
+    "company": "Grab Financial",
+    "role": "TI",
+    "personal_note": "Fintech division da Grab. Infraestrutura de pagamentos.",
+    "motivo": "asia grab fintech"
+  },
+  {
+    "email": "contact@instamojo.com",
+    "name": "Instamojo",
+    "company": "Instamojo",
+    "role": "TI",
+    "personal_note": "Pagamentos India. Infraestrutura de payment gateway.",
+    "motivo": "asia india payments"
+  },
+  {
+    "email": "ti@razorpay.com",
+    "name": "Razorpay",
+    "company": "Razorpay",
+    "role": "TI",
+    "personal_note": "Payment gateway India, 100M+ transações/mês. Infraestrutura massiva.",
+    "motivo": "asia razorpay"
+  },
+  {
+    "email": "contact@phonepe.com",
+    "name": "PhonePe",
+    "company": "PhonePe",
+    "role": "TI",
+    "personal_note": "Wallet digital India, 300M+ usuários. Infraestrutura fintech.",
+    "motivo": "asia phonepe"
+  },
+  {
+    "email": "ti@paytm.com",
+    "name": "Paytm",
+    "company": "Paytm",
+    "role": "TI",
+    "personal_note": "Fintech India, 350M+ usuários. Infraestrutura financeira.",
+    "motivo": "asia paytm"
+  },
+  {
+    "email": "contact@policybazaar.com",
+    "name": "PolicyBazaar",
+    "company": "PolicyBazaar",
+    "role": "TI",
+    "personal_note": "Insurance tech India. Infraestrutura de comparação de seguros.",
+    "motivo": "asia policybazaar"
+  },
+  {
+    "email": "ti@credilife.com",
+    "name": "CreditLife",
+    "company": "CreditLife",
+    "role": "TI",
+    "personal_note": "Fintech India de crédito. Infraestrutura de lending.",
+    "motivo": "asia credilife"
+  },
+  {
+    "email": "contact@bikroy.com",
+    "name": "Bikroy",
+    "company": "Bikroy",
+    "role": "TI",
+    "personal_note": "Marketplace imobiliário Bangladesh. Infraestrutura de listing.",
+    "motivo": "asia bikroy"
+  },
+  {
+    "email": "ti@daraz.com",
+    "name": "Daraz",
+    "company": "Daraz",
+    "role": "TI",
+    "personal_note": "E-commerce Bangladesh/Pakistão. Infraestrutura de marketplace.",
+    "motivo": "asia daraz"
+  },
+  {
+    "email": "contact@mealacarte.com",
+    "name": "Mealacarte",
+    "company": "Mealacarte",
+    "role": "TI",
+    "personal_note": "Food delivery Tailândia. Infraestrutura de logistics.",
+    "motivo": "asia mealacarte"
+  },
+  {
+    "email": "ti@grabfood.com",
+    "name": "GrabFood",
+    "company": "GrabFood",
+    "role": "TI",
+    "personal_note": "Food delivery SE Asia. Infraestrutura de fulfillment.",
+    "motivo": "asia grabfood"
+  },
+  {
+    "email": "contact@cloud360.com.sg",
+    "name": "Cloud360 SG",
+    "company": "Cloud360 SG",
+    "role": "TI",
+    "personal_note": "Cloud managed services Singapura. Infraestrutura cloud.",
+    "motivo": "asia cloud360"
+  },
+  {
+    "email": "ti@megacloud.sg",
+    "name": "MegaCloud",
+    "company": "MegaCloud",
+    "role": "TI",
+    "personal_note": "Cloud provider Singapura. Infraestrutura de VPS e cloud.",
+    "motivo": "asia megacloud"
+  },
+  {
+    "email": "contact@itconsult.com.my",
+    "name": "ITConsult MY",
+    "company": "ITConsult MY",
+    "role": "TI",
+    "personal_note": "MSP Malaysiano. Infraestrutura de managed services.",
+    "motivo": "asia itconsult"
+  },
+  {
+    "email": "ti@syscraft.com.my",
+    "name": "SysCraft",
+    "company": "SysCraft",
+    "role": "TI",
+    "personal_note": "IT services Malaysiano. Infraestrutura de cloud e segurança.",
+    "motivo": "asia syscraft"
+  },
+  {
+    "email": "contact@digitech.com.ph",
+    "name": "Digitech PH",
+    "company": "Digitech PH",
+    "role": "TI",
+    "personal_note": "IT services filipino. Infraestrutura de cloud e redes.",
+    "motivo": "asia digitech"
+  },
+  {
+    "email": "ti@cctech.com.ph",
+    "name": "CCTech",
+    "company": "CCTech",
+    "role": "TI",
+    "personal_note": "Cloud e IT services filipino. Infraestrutura de TI.",
+    "motivo": "asia cctech"
+  },
+  {
+    "email": "contact@cloudlabs.vn",
+    "name": "CloudLabs VN",
+    "company": "CloudLabs VN",
+    "role": "TI",
+    "personal_note": "Cloud provider Vietnamita. Infraestrutura de VPS e cloud.",
+    "motivo": "asia cloudlabs"
+  },
+  {
+    "email": "ti@techgs.com",
+    "name": "TechGS",
+    "company": "TechGS",
+    "role": "TI",
+    "personal_note": "IT services Myanmar. Infraestrutura de cloud e networking.",
+    "motivo": "asia techgs"
+  },
+  {
+    "email": "contact@vncloud.vn",
+    "name": "VNCloud",
+    "company": "VNCloud",
+    "role": "TI",
+    "personal_note": "Cloud provider Vietnamita. Infraestrutura de VPS e storage.",
+    "motivo": "asia vncloud"
+  },
+  {
+    "email": "ti@aiven.io",
+    "name": "Aiven",
+    "company": "Aiven",
+    "role": "TI",
+    "personal_note": "Cloud data platform (Finlandia). Infraestrutura de Kafka e db.",
+    "motivo": "eu aiven"
+  },
+  {
+    "email": "contact@buster.ai",
+    "name": "Buster AI",
+    "company": "Buster AI",
+    "role": "TI",
+    "personal_note": "AI security startup (Israel). Infraestrutura de ML defense.",
+    "motivo": "eu buster"
+  },
+  {
+    "email": "ti@deepinst.com",
+    "name": "DeepInstinct",
+    "company": "DeepInstinct",
+    "role": "TI",
+    "personal_note": "AI cybersecurity (Israel). Infraestrutura de threat prevention.",
+    "motivo": "eu deepinstinct"
+  },
+  {
+    "email": "contact@cure53.de",
+    "name": "Cure53",
+    "company": "Cure53",
+    "role": "TI",
+    "personal_note": "Security audit firm (Alemanha). Infraestrutura de pentest.",
+    "motivo": "eu cure53"
+  },
+  {
+    "email": "ti@hacken.io",
+    "name": "Hacken",
+    "company": "Hacken",
+    "role": "TI",
+    "personal_note": "Blockchain security auditor. Infraestrutura de smart contract audit.",
+    "motivo": "eu hacken"
+  }
+]

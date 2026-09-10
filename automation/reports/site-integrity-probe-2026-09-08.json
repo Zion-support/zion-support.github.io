@@ -1,0 +1,66 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/",
+    "size_bytes": 46592,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/public-roadmap",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/public-roadmap/",
+    "size_bytes": 784,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/status-page",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/status-page/",
+    "size_bytes": 776,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/use-cases",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/use-cases/",
+    "size_bytes": 1148,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/solutions/healthcare",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/solutions/healthcare/",
+    "size_bytes": 840,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/industries/financial-services",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/industries/financial-services/",
+    "size_bytes": 864,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/free-consultation",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/free-consultation/",
+    "size_bytes": 1081,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  },
+  {
+    "route": "/tools/phishing-analyzer",
+    "status": 200,
+    "final_url": "https://ziontechgroup.com/tools/phishing-analyzer/",
+    "size_bytes": 4221,
+    "content_type": "text/html; charset=utf-8",
+    "ok": true
+  }
+]

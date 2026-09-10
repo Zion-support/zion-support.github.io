@@ -1,0 +1,198 @@
+{
+  "generated_at": "2026-09-09T08:29:40.341514+00:00",
+  "leads_total": 380,
+  "sent_seen": 2304,
+  "categories": {
+    "has_any_contact": 347,
+    "has_valid_email": 347,
+    "already_sent": 8,
+    "blocked_domain": 1,
+    "generic_only": 3,
+    "non_generic": 344,
+    "eligible": 339
+  },
+  "service_distribution": {
+    "AI Automation": 76,
+    "Cloud Cost": 94,
+    "Cybersecurity": 210
+  },
+  "deduped_eligible_emails": 22,
+  "top_eligible": [
+    {
+      "empresa": "Beep Saúde",
+      "email": "de@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "beepsaúde@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "beeps@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "beeps@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "beep@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "beep@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "vendas@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "vendas@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "comercial@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "comercial@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "suporte@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "suporte@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "atendimento@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "atendimento@beep.saude.com.br"
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "de.beep@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "contact_raw": "saúde.beep@beep.saude.com.br"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "blisshealth@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "blisshealth@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "bliss.health@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "bliss.health@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "blissh@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "blissh@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "bhealth@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "bhealth@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "bliss@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "bliss@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "health@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "health@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "vendas@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "vendas@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "comercial@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "comercial@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "suporte@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "suporte@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "atendimento@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "atendimento@bliss.health"
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "health.bliss@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "health.bliss@bliss.health"
+    },
+    {
+      "empresa": "Lead",
+      "email": "support@pricelabs.co",
+      "domain": "pricelabs.co",
+      "priority": "alta",
+      "service": "AI Automation",
+      "contact_raw": "support@pricelabs.co"
+    },
+    {
+      "empresa": "Prodam SP (Governo do Estado)",
+      "email": "prodamestado@prodam.sp.gov.br",
+      "domain": "prodam.sp.gov.br",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "prodamestado@prodam.sp.gov.br"
+    },
+    {
+      "empresa": "Prodam SP (Governo do Estado)",
+      "email": "prodam.estado@prodam.sp.gov.br",
+      "domain": "prodam.sp.gov.br",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "contact_raw": "prodam.estado@prodam.sp.gov.br"
+    }
+  ]
+}

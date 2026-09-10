@@ -1,0 +1,602 @@
+[
+  {
+    "email": "contact@crowdstrike.com",
+    "name": "CrowdStrike",
+    "company": "CrowdStrike",
+    "role": "Contato",
+    "personal_note": "Endpoint security. Infra TI.",
+    "motivo": "cybersec crowdstrike"
+  },
+  {
+    "email": "ti@sentinelone.com",
+    "name": "SentinelOne",
+    "company": "SentinelOne",
+    "role": "TI",
+    "personal_note": "Endpoint protection. Infra TI.",
+    "motivo": "cybersec sentinelone"
+  },
+  {
+    "email": "contact@zscaler.com",
+    "name": "Zscaler",
+    "company": "Zscaler",
+    "role": "Contato",
+    "personal_note": "Cloud security. Infra TI.",
+    "motivo": "cybersec zscaler"
+  },
+  {
+    "email": "ti@proofpoint.com",
+    "name": "Proofpoint",
+    "company": "Proofpoint",
+    "role": "TI",
+    "personal_note": "Security/compliance. Infra TI.",
+    "motivo": "cybersec proofpoint"
+  },
+  {
+    "email": "contact@fireeye.com",
+    "name": "Mandiant (FireEye)",
+    "company": "Mandiant",
+    "role": "Contato",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "cybersec mandiant"
+  },
+  {
+    "email": "ti@paloalto.com",
+    "name": "Palo Alto Networks",
+    "company": "Palo Alto Networks",
+    "role": "TI",
+    "personal_note": "Network security. Infra TI.",
+    "motivo": "cybersec paloalto"
+  },
+  {
+    "email": "contact@checkpoint.com",
+    "name": "Check Point",
+    "company": "Check Point",
+    "role": "Contato",
+    "personal_note": "Network security. Infra TI.",
+    "motivo": "cybersec checkpoint"
+  },
+  {
+    "email": "ti@sophos.com",
+    "name": "Sophos",
+    "company": "Sophos",
+    "role": "TI",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec sophos"
+  },
+  {
+    "email": "contact@trendmicro.com",
+    "name": "Trend Micro",
+    "company": "Trend Micro",
+    "role": "Contato",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec trendmicro"
+  },
+  {
+    "email": "ti@cisco.com",
+    "name": "Cisco Security",
+    "company": "Cisco",
+    "role": "TI",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec cisco"
+  },
+  {
+    "email": "contact@barracuda.com",
+    "name": "Barracuda Networks",
+    "company": "Barracuda",
+    "role": "Contato",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec barracuda"
+  },
+  {
+    "email": "ti@commvault.com",
+    "name": "Commvault",
+    "company": "Commvault",
+    "role": "TI",
+    "personal_note": "Backup/recovery. Infra TI.",
+    "motivo": "cybersec commvault"
+  },
+  {
+    "email": "contact@veeam.com",
+    "name": "Veeam",
+    "company": "Veeam",
+    "role": "Contato",
+    "personal_note": "Backup. Infra TI.",
+    "motivo": "cybersec veeam"
+  },
+  {
+    "email": "ti@rubrik.com",
+    "name": "Rubrik",
+    "company": "Rubrik",
+    "role": "TI",
+    "personal_note": "Data security. Infra TI.",
+    "motivo": "cybersec rubrik"
+  },
+  {
+    "email": "contact@arcserve.com",
+    "name": "Arcserve",
+    "company": "Arcserve",
+    "role": "Contato",
+    "personal_note": "Backup. Infra TI.",
+    "motivo": "cybersec arcserve"
+  },
+  {
+    "email": "ti@okta.com",
+    "name": "Okta",
+    "company": "Okta",
+    "role": "TI",
+    "personal_note": "IAM. Infra TI.",
+    "motivo": "cybersec okta"
+  },
+  {
+    "email": "contact@forgerock.com",
+    "name": "ForgeRock",
+    "company": "ForgeRock (Oracle)",
+    "role": "Contato",
+    "personal_note": "IAM. Infra TI.",
+    "motivo": "cybersec forgerock"
+  },
+  {
+    "email": "ti@pingidentity.com",
+    "name": "Ping Identity",
+    "company": "Ping Identity",
+    "role": "TI",
+    "personal_note": "IAM. Infra TI.",
+    "motivo": "cybersec ping"
+  },
+  {
+    "email": "contact@auth0.com",
+    "name": "Auth0 (Okta)",
+    "company": "Auth0",
+    "role": "Contato",
+    "personal_note": "Auth. Infra TI.",
+    "motivo": "cybersec auth0"
+  },
+  {
+    "email": "ti@duo.com",
+    "name": "Duo (Cisco)",
+    "company": "Duo Security",
+    "role": "TI",
+    "personal_note": "MFA. Infra TI.",
+    "motivo": "cybersec duo"
+  },
+  {
+    "email": "contact@wiz.io",
+    "name": "Wiz",
+    "company": "Wiz",
+    "role": "Contato",
+    "personal_note": "Cloud security. Infra TI.",
+    "motivo": "cybersec wiz"
+  },
+  {
+    "email": "ti@prisma.cloud",
+    "name": "Prisma Cloud (Palo Alto)",
+    "company": "Prisma Cloud",
+    "role": "TI",
+    "personal_note": "Cloud security. Infra TI.",
+    "motivo": "cybersec prisma"
+  },
+  {
+    "email": "contact@lacework.com",
+    "name": "Lacework (NTT)",
+    "company": "Lacework",
+    "role": "Contato",
+    "personal_note": "CSPM. Infra TI.",
+    "motivo": "cybersec lacework"
+  },
+  {
+    "email": "ti@sysdig.com",
+    "name": "Sysdig",
+    "company": "Sysdig",
+    "role": "TI",
+    "personal_note": "Cloud sec/observability. Infra TI.",
+    "motivo": "cybersec sysdig"
+  },
+  {
+    "email": "contact@twistlock.com",
+    "name": "Twistlock (Palo Alto)",
+    "company": "Twistlock",
+    "role": "Contato",
+    "personal_note": "Container security. Infra TI.",
+    "motivo": "cybersec twistlock"
+  },
+  {
+    "email": "ti@splunk.com",
+    "name": "Splunk (Cisco)",
+    "company": "Splunk",
+    "role": "TI",
+    "personal_note": "SIEM/observability. Infra TI.",
+    "motivo": "cybersec splunk"
+  },
+  {
+    "email": "contact@elastic.co",
+    "name": "Elastic (SIEM)",
+    "company": "Elastic",
+    "role": "Contato",
+    "personal_note": "SIEM/security. Infra TI.",
+    "motivo": "cybersec elastic"
+  },
+  {
+    "email": "ti@ibm security.com",
+    "name": "IBM Security",
+    "company": "IBM",
+    "role": "TI",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec ibm"
+  },
+  {
+    "email": "contact@microfocus.com",
+    "name": "Micro Focus (OpenText)",
+    "company": "OpenText (ex-Micro Focus)",
+    "role": "Contato",
+    "personal_note": "Security/ops. Infra TI.",
+    "motivo": "cybersec opentext"
+  },
+  {
+    "email": "ti@mcafee.com",
+    "name": "McAfee (Trellix)",
+    "company": "Trellix (McAfee/Gartner)",
+    "role": "TI",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec mcafee"
+  },
+  {
+    "email": "contact@bitdefender.com",
+    "name": "Bitdefender",
+    "company": "Bitdefender",
+    "role": "Contato",
+    "personal_note": "Endpoint security. Infra TI.",
+    "motivo": "cybersec bitdefender"
+  },
+  {
+    "email": "ti@kaspersky.com",
+    "name": "Kaspersky",
+    "company": "Kaspersky",
+    "role": "TI",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec kaspersky"
+  },
+  {
+    "email": "contact@eset.com",
+    "name": "ESET",
+    "company": "ESET",
+    "role": "Contato",
+    "personal_note": "Security. Infra TI.",
+    "motivo": "cybersec eset"
+  },
+  {
+    "email": "ti@mimecast.com",
+    "name": "Mimecast (Sky),",
+    "company": "Mimecast",
+    "role": "TI",
+    "personal_note": "Email security. Infra TI.",
+    "motivo": "cybersec mimecast"
+  },
+  {
+    "email": "contact@barracudanetworks.com",
+    "name": "Barracuda",
+    "company": "Barracuda",
+    "role": "Contato",
+    "personal_note": "Email security. Infra TI.",
+    "motivo": "cybersec barracuda email"
+  },
+  {
+    "email": "ti@agari.com",
+    "name": "Agari (Proofpoint)",
+    "company": "Agari",
+    "role": "TI",
+    "personal_note": "Email security. Infra TI.",
+    "motivo": "cybersec agari"
+  },
+  {
+    "email": "contact@valimail.com",
+    "name": "Valimail",
+    "company": "Valimail",
+    "role": "Contato",
+    "personal_note": "Email auth. Infra TI.",
+    "motivo": "cybersec valimail"
+  },
+  {
+    "email": "ti@dmarcian.com",
+    "name": "DMARCian",
+    "company": "DMARCian (PowerDMARC)",
+    "role": "TI",
+    "personal_note": "DMARC. Infra TI.",
+    "motivo": "cybersec dmarcian"
+  },
+  {
+    "email": "contact@easydmarc.com",
+    "name": "EasyDMARC",
+    "company": "EasyDMARC",
+    "role": "Contato",
+    "personal_note": "DMARC. Infra TI.",
+    "motivo": "cybersec easydmarc"
+  },
+  {
+    "email": "ti@powerdmarc.com",
+    "name": "PowerDMARC",
+    "company": "PowerDMARC",
+    "role": "TI",
+    "personal_note": "DMARC. Infra TI.",
+    "motivo": "cybersec powerdmarc"
+  },
+  {
+    "email": "contact@ RecordedFuture.com",
+    "name": "Recorded Future",
+    "company": "Recorded Future (Google)",
+    "role": "Contato",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "cybersec recordedfuture"
+  },
+  {
+    "email": "ti@crowdstrikethreatgraph.com",
+    "name": "Threat Graph",
+    "company": "CrowdStrike Threat Graph",
+    "role": "TI",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "cybersec threatgraph"
+  },
+  {
+    "email": "contact@threatconnect.com",
+    "name": "ThreatConnect",
+    "company": "ThreatConnect",
+    "role": "Contato",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "cybersec threatconnect"
+  },
+  {
+    "email": "ti@anomali.com",
+    "name": "Anomali",
+    "company": "Anomali (Threat intel)",
+    "role": "TI",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "cybersec anomali"
+  },
+  {
+    "email": "contact@threatq.com",
+    "name": "ThreatQ",
+    "company": "ThreatQ",
+    "role": "Contato",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "cybersec threatq"
+  },
+  {
+    "email": "ti@tenable.com",
+    "name": "Tenable",
+    "company": "Tenable",
+    "role": "TI",
+    "personal_note": "Vulnerability mgmt. Infra TI.",
+    "motivo": "cybersec tenable"
+  },
+  {
+    "email": "contact@qualys.com",
+    "name": "Qualys",
+    "company": "Qualys",
+    "role": "Contato",
+    "personal_note": "VM. Infra TI.",
+    "motivo": "cybersec qualys"
+  },
+  {
+    "email": "ti@rapid7.com",
+    "name": "Rapid7",
+    "company": "Rapid7",
+    "role": "TI",
+    "personal_note": "Sec analytics. Infra TI.",
+    "motivo": "cybersec rapid7"
+  },
+  {
+    "email": "contact@insightvm.com",
+    "name": "InsightVM (Rapid7)",
+    "company": "InsightVM",
+    "role": "Contato",
+    "personal_note": "Vulnerability scan. Infra TI.",
+    "motivo": "cybersec insightvm"
+  },
+  {
+    "email": "ti@nessus.org",
+    "name": "Tenable Nessus",
+    "company": "Nessus",
+    "role": "TI",
+    "personal_note": "Vulnerability scanner. Infra TI.",
+    "motivo": "cybersec nessus"
+  },
+  {
+    "email": "contact@bullphighting.com",
+    "name": "BullPhishing",
+    "company": "BullPhishing",
+    "role": "Contato",
+    "personal_note": "Phishing simulation. Infra TI.",
+    "motivo": "cybersec bullphish"
+  },
+  {
+    "email": "ti@knowbe4.com",
+    "name": "KnowBe4",
+    "company": "KnowBe4",
+    "role": "TI",
+    "personal_note": "Security awareness. Infra TI.",
+    "motivo": "cybersec knowbe4"
+  },
+  {
+    "email": "contact@phishme.com",
+    "name": "PhishMe (Cofense)",
+    "company": "Cofense",
+    "role": "Contato",
+    "personal_note": "Phishing defense. Infra TI.",
+    "motivo": "cybersec cofense"
+  },
+  {
+    "email": "ti@securityeducation.com",
+    "name": "Security Education",
+    "company": "Security Education Platform",
+    "role": "TI",
+    "personal_note": "Awareness training. Infra TI.",
+    "motivo": "cybersec seced"
+  },
+  {
+    "email": "contact@infosecinstitute.com",
+    "name": "InfoSec Institute",
+    "company": "InfoSec Institute",
+    "role": "Contato",
+    "personal_note": "Training. Infra TI.",
+    "motivo": "cybersec infosecinstitute"
+  },
+  {
+    "email": "ti@twistlock.com",
+    "name": "Twistlock",
+    "company": "Twistlock",
+    "role": "TI",
+    "personal_note": "Container security. Infra TI.",
+    "motivo": "cybersec twistlock cn"
+  },
+  {
+    "email": "contact@aquasec.com",
+    "name": "Aqua Security",
+    "company": "Aqua Security",
+    "role": "Contato",
+    "personal_note": "Cloud-native sec. Infra TI.",
+    "motivo": "cybersec aquasec"
+  },
+  {
+    "email": "ti@sysdig.com",
+    "name": "Sysdig",
+    "company": "Sysdig",
+    "role": "TI",
+    "personal_note": "Container observ. Infra TI.",
+    "motivo": "cybersec sysdig cn"
+  },
+  {
+    "email": "contact@pure secops.com",
+    "name": "Pure SecOps",
+    "company": "PureSecOps",
+    "role": "Contato",
+    "personal_note": "SecOps platform. Infra TI.",
+    "motivo": "cybersec puresecops"
+  },
+  {
+    "email": "ti@guardicore.com",
+    "name": "Guardicore (Akamai)",
+    "company": "Guardicore",
+    "role": "TI",
+    "personal_note": "Micro-segmentation. Infra TI.",
+    "motivo": "cybersec guardicore"
+  },
+  {
+    "email": "contact@cyberark.com",
+    "name": "CyberArk",
+    "company": "CyberArk",
+    "role": "Contato",
+    "personal_note": "PAM. Infra TI.",
+    "motivo": "cybersec cyberark"
+  },
+  {
+    "email": "ti@venafi.com",
+    "name": "Venafi",
+    "company": "Venafi (CyberArk)",
+    "role": "TI",
+    "personal_note": "Machine identity. Infra TI.",
+    "motivo": "cybersec venafi"
+  },
+  {
+    "email": "contact@thycotic.com",
+    "name": "Thycotic (Delinea)",
+    "company": "Delinea",
+    "role": "Contato",
+    "personal_note": "PAM. Infra TI.",
+    "motivo": "cybersec thymotic"
+  },
+  {
+    "email": "ti@beyondtrust.com",
+    "name": "BeyondTrust",
+    "company": "BeyondTrust",
+    "role": "TI",
+    "personal_note": "PAM. Infra TI.",
+    "motivo": "cybersec beyondtrust"
+  },
+  {
+    "email": "contact@secretserver.com",
+    "name": "Secret Server",
+    "company": "Thycotic Secret Server",
+    "role": "Contato",
+    "personal_note": "Secrets mgmt. Infra TI.",
+    "motivo": "cybersec secretserver"
+  },
+  {
+    "email": "ti@hashicorp.com",
+    "name": "HashiCorp Vault",
+    "company": "HashiCorp",
+    "role": "TI",
+    "personal_note": "Secrets mgmt. Infra TI.",
+    "motivo": "cybersec vault"
+  },
+  {
+    "email": "contact@auth0.com",
+    "name": "Auth0",
+    "company": "Auth0",
+    "role": "Contato",
+    "personal_note": "Auth. Infra TI.",
+    "motivo": "cybersec auth0 again"
+  },
+  {
+    "email": "ti@okta.com",
+    "name": "Okta",
+    "company": "Okta",
+    "role": "TI",
+    "personal_note": "IAM. Infra TI.",
+    "motivo": "cybersec okta again"
+  },
+  {
+    "email": "contact@adp.com",
+    "name": "ADP",
+    "company": "ADP",
+    "role": "Contato",
+    "personal_note": "HR/Payroll. Infra TI.",
+    "motivo": "cybersec adp"
+  },
+  {
+    "email": "ti@paylocity.com",
+    "name": "Paylocity",
+    "company": "Paylocity",
+    "role": "TI",
+    "personal_note": "HR/Payroll. Infra TI.",
+    "motivo": "cybersec paylocity"
+  },
+  {
+    "email": "ti@oneidentity.com",
+    "name": "One Identity (Dell)",
+    "company": "One Identity",
+    "role": "TI",
+    "personal_note": "IAM. Infra TI.",
+    "motivo": "cybersec oneidentity"
+  },
+  {
+    "email": "contact@manageengine.com",
+    "name": "ManageEngine (Zoho)",
+    "company": "ManageEngine",
+    "role": "Contato",
+    "personal_note": "IT mgmt. Infra TI.",
+    "motivo": "cybersec manageengine"
+  },
+  {
+    "email": "ti@admanager.com",
+    "name": "ADManager",
+    "company": "ADManager (ManageEngine)",
+    "role": "TI",
+    "personal_note": "AD mgmt. Infra TI.",
+    "motivo": "cybersec admanager"
+  },
+  {
+    "email": "contact@ active directory.com",
+    "name": "Active Directory Tools",
+    "company": "AD Tools",
+    "role": "Contato",
+    "personal_note": "AD mgmt. Infra TI.",
+    "motivo": "cybersec adtools"
+  },
+  {
+    "email": "ti@adaxs.com",
+    "name": "ADAXS",
+    "company": "ADAXS (Delinea)",
+    "role": "TI",
+    "personal_note": "AD security. Infra TI.",
+    "motivo": "cybersec adaxs"
+  }
+]

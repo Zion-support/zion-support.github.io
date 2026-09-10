@@ -1,0 +1,30 @@
+{
+  "contato@infopremium.com.br": {
+    "last_status": "failed",
+    "last_http_status": 403,
+    "last_error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a50257e797c90\",\"error_code\":1010,\"e",
+    "last_subject": "IA, automação e FinOps: o braço tecnológico que sua empresa precisa em 2026",
+    "last_attempt": "2026-09-10T00:28:31.283179+00:00"
+  },
+  "sac@casatech.com.br": {
+    "last_status": "failed",
+    "last_http_status": 403,
+    "last_error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a50291b9fc623\",\"error_code\":1010,\"e",
+    "last_subject": "Segurança de dados e LGPD: como a CasaTech se protege em 2026?",
+    "last_attempt": "2026-09-10T00:28:31.732921+00:00"
+  },
+  "sac@fundacaovici.com.br": {
+    "last_status": "failed",
+    "last_http_status": 403,
+    "last_error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a5029ee471610\",\"error_code\":1010,\"e",
+    "last_subject": "Tecnologia a serviço da inclusão: como a Vici pode ampliar seu impacto com IA",
+    "last_attempt": "2026-09-10T00:28:31.814476+00:00"
+  },
+  "contato@jaul.com.br": {
+    "last_status": "failed",
+    "last_http_status": 403,
+    "last_error": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a38a502a5bbdc5e3\",\"error_code\":1010,\"e",
+    "last_subject": "Sobrevivendo à tempestade: Como a Jaul protege seu negócio com TI resiliente em tempos de crise",
+    "last_attempt": "2026-09-10T00:28:31.880090+00:00"
+  }
+}

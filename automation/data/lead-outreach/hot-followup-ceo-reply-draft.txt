@@ -1,0 +1,53 @@
+HOT-FOLLOWUP CEO REPLY DRAFT — NOT SENT
+========================================
+Status: No active hot-follow-up threads found (label:!!!hot-follow-up returned no results).
+Action: No draft required this cycle. Existing hot-followup-sent.json carries prior Sep 5 sends.
+
+Current metrics snapshot:
+- totalRuns: 708
+- sendsAttempted: 0 (canonical)
+- duplicatesSuppressed: 0
+- authFailures: 0
+- hotFollowups: 0
+- latestComplete: 2026-09-07T01:27:59.585368Z
+- potentialClients: 0 (pool exhausted mid-cycle Sep 7, collapsed 18->0 at 00:44Z)
+- scanned: 501
+- authHealthy: true (zero 'No auth for gmail' across all records; gog on PATH)
+
+No new hot-follow-up thread discovered this cycle. The prior Sep 5 sends
+(scarlett.miller@persistiqops7.pro, hardware@hascon.com) are stale — their
+threads have already been replied to and are not active. No fresh draft needed.
+
+Draft template for future cycles (when an active thread exists):
+
+Subject: Re: <original subject>
+
+Oi,
+
+Obrigado pelo contato e pela oportunidade de colaboração.
+
+Gostaria de propor dois próximos passos concretos que podem ser úteis agora:
+
+1. Uma demonstração rápida dos nossos novos serviços de IA — automação de
+   fluxos, processamento inteligente de documentos e IA conversacional —
+   ajustada aos seus gargalos atuais. Podemos fazer em 30 minutos, sem
+   compromisso.
+
+2. Nossa Free Tools Hub (ziontechgroup.com/free-tools-hub) — um conjunto de
+   utilitários gratuitos que você pode testar hoje e compartilhar com sua
+   equipe enquanto escopamos o engagement maior.
+
+Se agora não for o momento certo, sem problemas — me avise o que faria
+sentido na sua agenda.
+
+Reserve uma chamada rápida: https://calendly.com/kleber-ziontechgroup
+Mais sobre o que fazemos: https://ziontechgroup.com
+
+Abraço,
+Kleber Garcia Alcatrão
+CEO, Zion Tech Group
+
+---
+Draft prepared: 2026-09-10T00:47:21Z
+Send status: NOT SENT (no active hot-follow-up thread; send not configured)
+File: hot-followup-ceo-reply-draft.txt (prepared for review, not dispatched)

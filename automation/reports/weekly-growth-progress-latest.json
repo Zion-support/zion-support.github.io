@@ -1,0 +1,153 @@
+{
+  "run_at": "2026-09-08T02:00:36.071768+00:00",
+  "period": "2026-09-01 to 2026-09-08",
+  "run_type": "weekly_growth_progress",
+  "leads": {
+    "total": 38,
+    "by_priority": {
+      "alta": 18,
+      "media": 19,
+      "baixa": 1,
+      "unknown": 0
+    },
+    "by_type": {
+      "company_brazil": 8,
+      "government_rfp": 7,
+      "github_repo": 5,
+      "agency_usa": 4,
+      "email_inbound_lead": 4,
+      "company_usa": 3,
+      "government_bpa": 2,
+      "agency_brazil": 2,
+      "government_brazil": 1,
+      "company_international": 1,
+      "agency_international": 1
+    },
+    "generated_at": "2026-09-08T01:58:32.740092+00:00",
+    "sources": []
+  },
+  "outreach": {
+    "total_entries": 1519,
+    "sent": 1514,
+    "failed": 5,
+    "sent_last_7d": 1514,
+    "failed_last_7d": 5,
+    "by_day": {
+      "2026-09-03": {
+        "sent": 316,
+        "failed": 5
+      },
+      "2026-09-04": {
+        "sent": 15,
+        "failed": 0
+      },
+      "2026-09-05": {
+        "sent": 4,
+        "failed": 0
+      },
+      "2026-09-06": {
+        "sent": 1179,
+        "failed": 0
+      }
+    },
+    "last_send_ts": "2026-09-06T06:55:19.966962+00:00",
+    "last_10_sends": [
+      {
+        "to": "camila.gomes@stacklab.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:19.966962+00:00"
+      },
+      {
+        "to": "camila.gomes@stacklab.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:19.443407+00:00"
+      },
+      {
+        "to": "andre.silva@metricflow.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:18.274361+00:00"
+      },
+      {
+        "to": "andre.silva@metricflow.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:17.133858+00:00"
+      },
+      {
+        "to": "pedro.carvalho@zerotrustops.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:15.958158+00:00"
+      },
+      {
+        "to": "pedro.carvalho@zerotrustops.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:14.663207+00:00"
+      },
+      {
+        "to": "maria.rocha@cognita.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:12.467582+00:00"
+      },
+      {
+        "to": "maria.rocha@cognita.com",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:12.008033+00:00"
+      },
+      {
+        "to": "davi.barbosa@aetherlabs.com.br",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:10.443622+00:00"
+      },
+      {
+        "to": "davi.barbosa@aetherlabs.com.br",
+        "subject": "Automação com IA para ",
+        "ts": "2026-09-06T06:55:10.144945+00:00"
+      }
+    ]
+  },
+  "growth_engine": {
+    "status": "ok",
+    "dry_run": false,
+    "send_log_total": 1519,
+    "send_succeeded": 1514,
+    "send_failed": 5,
+    "last_send_ts": "2026-09-06T06:55:19.966962+00:00",
+    "last_error": null,
+    "run_id": "3feaf413"
+  },
+  "daily_check_ref": "📊 Daily Leads & Outreach Check — 2026-09-08T01:58Z\nLeads in queue: 38 (+1 from Gmail scan)\nOutreach today: 0 sent, 0 failed\nOutreach total: 1514 sent, 5 failed (across 1519 entries)\nGrowth engine: ok (last send: 2026-09-06T06:55:19.966962+00:00)",
+  "site_health": {
+    "site_coverage_pct": 74.67,
+    "outreach_readiness": "ready-blocked",
+    "actions": [
+      "Enable the live send adapter using one of the documented enable_commands to unblock outreach.",
+      "Verify sender account health and provider quota once the send path is enabled.",
+      "Refresh integrations-health after enable to confirm small_wave_blocked clears."
+    ],
+    "metrics_file": "/Users/miami2/zion.app/automation/reports/daily-metrics-2026-09-07.json"
+  },
+  "cron_health": {
+    "total_jobs": 32,
+    "ok_count": 14,
+    "error_count": 9,
+    "paused_count": 9,
+    "site_working": true,
+    "email_working": false,
+    "critical_issues_count": 9,
+    "recommendations": [
+      "CRITICAL: Pin 6 drifted jobs to current model (upstage/solar-pro4:free) using 'hermes cron edit <id> --provider nous --model upstage/solar-pro4:free'. Affected: Lead Outreach High Frequency (95dd81daa613), zion-daily-growth-loop (4a73e84e878a), github lead discovery (c7e504f18e36), CRM Lead Outreach Loop (8c6c935d3c18), Zion Autonomous Growth Loop (6586b09226e3), lead-forge-weekly-refresh (608e9bbe9f15).",
+      "CRITICAL: Email outreach is partially down - the high-frequency lead outreach (every 1m) and CRM loop (every 30m) are not sending. Only the backup AI Email Lead Outreach Agent (every 1m) and zion-live-send-cycle (every 30m) are functional.",
+      "MEDIUM: Resolve TERMINAL_CWD lock timeouts affecting Homepage sanity check, discovered-leads-live-sender, and teste-enquetes-telegram. Stagger schedules or remove workdir from competing jobs.",
+      "MEDIUM: 9 jobs are paused - some with valid reasons (duplicate monitoring), others paused due to lock timeouts that could be resumed after fixing contention.",
+      "LOW: Verify that the 6 paused jobs with model drift (CEO Hot Followup Reply, outreach dry-run scan, Autonomous Growth Engine Loop, etc.) also need model pinning if resumed.",
+      "Site health is GOOD: main monitoring jobs (Site Link Integrity Monitor, site health check, zion-site-integrity-check, site watchdog deploy watch) all OK. Homepage returns 200 OK.",
+      "Growth loops are DOWN: zion-daily-growth-loop and Zion Autonomous Growth Loop both failing due to model drift. Lead Forge weekly refresh also down. These need immediate pinning to resume autonomous growth pipeline."
+    ]
+  },
+  "ceo_status": {
+    "site_online": true,
+    "deploy_status": "live",
+    "lead_crm_total": 138,
+    "outreach_status": "blocked_no_outreach_ready_leads"
+  },
+  "telegram_summary": "📈 SEMANAL GROWTH REPORT — Zion Tech Group\nPeríodo: 2026-09-01 to 2026-09-08\n\n🎯 LEADS\n  Total na fila: 38\n  Prioridade Alta: 18\n  Prioridade Média: 19\n  Prioridade Baixa: 1\n  Tipos: company_brazil=8, government_rfp=7, github_repo=5, agency_usa=4, email_inbound_lead=4\n\n📧 OUTREACH (7 dias)\n  Enviados: 1514\n  Falhas: 5\n  Total histórico: 1514 ok, 5 falhas\n  Último envio: 2026-09-06T06:55:19.966962+00:00\n\n🚀 GROWTH ENGINE\n  Status: ok\n  Dry run: False\n  Último erro: nenhum\n\n🌐 SITE\n  Online: True\n  Deploy: live\n  CRM Leads: 138\n  Outreach: blocked_no_outreach_ready_leads\n  Coverage: 74.67%\n  Readiness: ready-blocked\n\n🔧 CRON JOBS\n  Total: 32 | OK: 14 | Erro: 9 | Pausado: 9\n  Site: True | Email: False\n  Issues críticos: 9\n\n⚠️ AÇÕES: ready-blocked"
+}

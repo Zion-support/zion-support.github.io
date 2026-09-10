@@ -1,0 +1,210 @@
+[
+  {
+    "email": "contact@chicagobloggers.com",
+    "name": "Chicago Tech Alliance",
+    "company": "Chicago Tech Alliance",
+    "role": "TI",
+    "personal_note": "Associação de tecnologia de Chicago. Infraestrutura de TI.",
+    "motivo": "us chicago alliance"
+  },
+  {
+    "email": "ti@opswat.com",
+    "name": "OpsWAT",
+    "company": "OpsWAT",
+    "role": "TI",
+    "personal_note": "Empresa de segurança de endpoints dos EUA. Infraestrutura de segurança.",
+    "motivo": "us opswat security"
+  },
+  {
+    "email": "contact@carbonblack.com",
+    "name": "Carbon Black",
+    "company": "Carbon Black",
+    "role": "TI",
+    "personal_note": "Enterprise security company. Infraestrutura de endpoint security.",
+    "motivo": "us carbonblack"
+  },
+  {
+    "email": "ti@virusbulletin.com",
+    "name": "Virus Bulletin",
+    "company": "Virus Bulletin",
+    "role": "TI",
+    "personal_note": "Empresa de segurança de malware. Infraestrutura de segurança.",
+    "motivo": "us virusbulletin"
+  },
+  {
+    "email": "contact@esentire.com",
+    "name": "Esentire",
+    "company": "Esentire",
+    "role": "TI",
+    "personal_note": "MSP dos EUA. Infraestrutura de managed security.",
+    "motivo": "us esentire msp"
+  },
+  {
+    "email": "ti@intrinsec.com",
+    "name": "Intrinsec",
+    "company": "Intrinsec",
+    "role": "TI",
+    "personal_note": "MSP de segurança dos EUA. Infraestrutura de security.",
+    "motivo": "us intrinsec"
+  },
+  {
+    "email": "contact@spiderdynamics.com",
+    "name": "Spider Dynamics",
+    "company": "Spider Dynamics",
+    "role": "TI",
+    "personal_note": "Empresa de cybersecurity dos EUA. Infraestrutura de security.",
+    "motivo": "us spiderdynamics"
+  },
+  {
+    "email": "ti@threatstack.com",
+    "name": "Threat Stack",
+    "company": "Threat Stack",
+    "role": "TI",
+    "personal_note": "Empresa de cloud security dos EUA. Infraestrutura de security.",
+    "motivo": "us threatstack"
+  },
+  {
+    "email": "contact@securonix.com",
+    "name": "Securonix",
+    "company": "Securonix",
+    "role": "TI",
+    "personal_note": "Empresa de SIEM dos EUA. Infraestrutura de security analytics.",
+    "motivo": "us securonix"
+  },
+  {
+    "email": "ti@exabeam.com",
+    "name": "Exabeam",
+    "company": "Exabeam",
+    "role": "TI",
+    "personal_note": "Empresa de UEBA dos EUA. Infraestrutura de security analytics.",
+    "motivo": "us exabeam"
+  },
+  {
+    "email": "contact@endgame.com",
+    "name": "Endgame",
+    "company": "Endgame",
+    "role": "TI",
+    "personal_note": "Empresa de endpoint security dos EUA. Infraestrutura de security.",
+    "motivo": "us endgame"
+  },
+  {
+    "email": "ti@crowdstike.com",
+    "name": "CrowdStrike",
+    "company": "CrowdStrike",
+    "role": "TI",
+    "personal_note": "Empresa de cloud security dos EUA. Infraestrutura de security.",
+    "motivo": "us crowdstrike"
+  },
+  {
+    "email": "contact@ Recordedfuture.com",
+    "name": "Recorded Future",
+    "company": "Recorded Future",
+    "role": "TI",
+    "personal_note": "Empresa de threat intelligence dos EUA. Infraestrutura de TI.",
+    "motivo": "us recordedfuture"
+  },
+  {
+    "email": "ti@rapid7.com",
+    "name": "Rapid7",
+    "company": "Rapid7",
+    "role": "TI",
+    "personal_note": "Empresa de security analytics dos EUA. Infraestrutura de security.",
+    "motivo": "us rapid7"
+  },
+  {
+    "email": "contact@tenable.com",
+    "name": "Tenable",
+    "company": "Tenable",
+    "role": "TI",
+    "personal_note": "Empresa de vulnerability management dos EUA. Infraestrutura de security.",
+    "motivo": "us tenable"
+  },
+  {
+    "email": "ti@qualys.com",
+    "name": "Qualys",
+    "company": "Qualys",
+    "role": "TI",
+    "personal_note": "Empresa de vulnerability management dos EUA. Infraestrutura de security.",
+    "motivo": "us qualys"
+  },
+  {
+    "email": "contact@accuvant.com",
+    "name": "Accuvant",
+    "company": "Accuvant",
+    "role": "TI",
+    "personal_note": "Empresa de security consulting dos EUA. Infraestrutura de TI.",
+    "motivo": "us accuvant"
+  },
+  {
+    "email": "ti@optiv.com",
+    "name": "Optiv",
+    "company": "Optiv",
+    "role": "TI",
+    "personal_note": "Empresa de security solutions dos EUA. Infraestrutura de security.",
+    "motivo": "us optiv"
+  },
+  {
+    "email": "contact@mandiant.com",
+    "name": "Mandiant",
+    "company": "Mandiant",
+    "role": "TI",
+    "personal_note": "Empresa de incident response dos EUA. Infraestrutura de security.",
+    "motivo": "us mandiant"
+  },
+  {
+    "email": "ti@fireeye.com",
+    "name": "FireEye",
+    "company": "FireEye",
+    "role": "TI",
+    "personal_note": "Empresa de threat intelligence dos EUA. Infraestrutura de security.",
+    "motivo": "us fireeye"
+  },
+  {
+    "email": "contact@paloaltonetworks.com",
+    "name": "Palo Alto Networks",
+    "company": "Palo Alto Networks",
+    "role": "TI",
+    "personal_note": "Empresa de cybersecurity dos EUA. Infraestrutura de security.",
+    "motivo": "us paloaltonetworks"
+  },
+  {
+    "email": "ti@checkpoint.com",
+    "name": "Check Point",
+    "company": "Check Point",
+    "role": "TI",
+    "personal_note": "Empresa de cybersecurity de Israel. Infraestrutura de security.",
+    "motivo": "israel checkpoint"
+  },
+  {
+    "email": "contact@claroty.com",
+    "name": "Claroty",
+    "company": "Claroty",
+    "role": "TI",
+    "personal_note": "Empresa de industrial security de Israel. Infraestrutura de security.",
+    "motivo": "israel claroty"
+  },
+  {
+    "email": "ti@snyk.com",
+    "name": "Snyk",
+    "company": "Snyk",
+    "role": "TI",
+    "personal_note": "Empresa de developer security de Israel. Infraestrutura de security.",
+    "motivo": "israel snyk"
+  },
+  {
+    "email": "contact@checkpoint.com",
+    "name": "Check Point",
+    "company": "Check Point",
+    "role": "TI",
+    "personal_note": "Empresa de cybersecurity de Israel. Infraestrutura de security.",
+    "motivo": "israel checkpoint"
+  },
+  {
+    "email": "ti@ibm.com",
+    "name": "IBM Security",
+    "company": "IBM",
+    "role": "TI",
+    "personal_note": "IBM Security division. Infraestrutura de enterprise security.",
+    "motivo": "ibm security"
+  }
+]

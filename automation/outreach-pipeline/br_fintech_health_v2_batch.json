@@ -1,0 +1,266 @@
+[
+  {
+    "email": "contact@neonomics.com.br",
+    "name": "Neonomics",
+    "company": "Neonomics",
+    "role": "TI",
+    "personal_note": "Fintech BR. Infraestrutura de dados.",
+    "motivo": "br neonomics"
+  },
+  {
+    "email": "ti@stone.com.br",
+    "name": "Stone",
+    "company": "Stone",
+    "role": "TI",
+    "personal_note": "Fintech BR. Infraestrutura de payments.",
+    "motivo": "br stone"
+  },
+  {
+    "email": "contato@picpay.com",
+    "name": "PicPay",
+    "company": "PicPay",
+    "role": "TI",
+    "personal_note": "Fintech BR. Infraestrutura de payments.",
+    "motivo": "br picpay"
+  },
+  {
+    "email": "contato@magna.com.br",
+    "name": "Magna",
+    "company": "Magna",
+    "role": "TI",
+    "personal_note": "Financeiro BR. Infraestrutura de TI.",
+    "motivo": "br magna"
+  },
+  {
+    "email": "contato@asml.com.br",
+    "name": "ASML BR",
+    "company": "ASML",
+    "role": "TI",
+    "personal_note": "Equipamentos industriais. Infraestrutura de TI.",
+    "motivo": "br asml"
+  },
+  {
+    "email": "contato@fitreceita.com.br",
+    "name": "FitReceita",
+    "company": "FitReceita",
+    "role": "TI",
+    "personal_note": "Healthtech/Fintech saude. Infraestrutura.",
+    "motivo": "br fitreceita"
+  },
+  {
+    "email": "contato@telemedicina.com.br",
+    "name": "Telemedicina BR",
+    "company": "Telemedicina BR",
+    "role": "TI",
+    "personal_note": "Healthtech. Infraestrutura de telemedicine.",
+    "motivo": "br telemedicina"
+  },
+  {
+    "email": "ti@danisystems.com.br",
+    "name": "Dani Systems",
+    "company": "Dani Systems",
+    "role": "TI",
+    "personal_note": "IT services BR. Infraestrutura de TI.",
+    "motivo": "br danisys"
+  },
+  {
+    "email": "contato@holosmed.com.br",
+    "name": "HolosMed",
+    "company": "HolosMed",
+    "role": "TI",
+    "personal_note": "Healthtech. Infraestrutura de dados.",
+    "motivo": "br holosmed"
+  },
+  {
+    "email": "contato@genomika.com.br",
+    "name": "Genomika",
+    "company": "Genomika",
+    "role": "TI",
+    "personal_note": "Healthtech/genomica. Infraestrutura.",
+    "motivo": "br genomika"
+  },
+  {
+    "email": "contato@cloudmanaged.com.br",
+    "name": "CloudManaged",
+    "company": "CloudManaged",
+    "role": "TI",
+    "personal_note": "MSP BR. Infraestrutura de managed services.",
+    "motivo": "br cloudmgd"
+  },
+  {
+    "email": "contato@tiwares.com.br",
+    "name": "TI Wares",
+    "company": "TI Wares",
+    "role": "TI",
+    "personal_note": "MSP BR. Infraestrutura de TI.",
+    "motivo": "br tiwares"
+  },
+  {
+    "email": "contato@agenciadigital.com.br",
+    "name": "AgenciaDigital",
+    "company": "AgenciaDigital",
+    "role": "TI",
+    "personal_note": "Marketing digital. Infraestrutura.",
+    "motivo": "br agenciaD"
+  },
+  {
+    "email": "contato@webguard.com.br",
+    "name": "WebGuard",
+    "company": "WebGuard",
+    "role": "TI",
+    "personal_note": "Cybersecurity BR. Infraestrutura de security.",
+    "motivo": "br webguard"
+  },
+  {
+    "email": "ti@locaweb.com.br",
+    "name": "Locaweb",
+    "company": "Locaweb",
+    "role": "TI",
+    "personal_note": "Web hosting BR. Infraestrutura de cloud.",
+    "motivo": "br locaweb"
+  },
+  {
+    "email": "contato@digitallabs.com.br",
+    "name": "DigitalLabs",
+    "company": "DigitalLabs",
+    "role": "TI",
+    "personal_note": "Dev studio BR. Infraestrutura de TI.",
+    "motivo": "br digitallabs"
+  },
+  {
+    "email": "contato@safepixel.com.br",
+    "name": "SafePixel",
+    "company": "SafePixel",
+    "role": "TI",
+    "personal_note": "Cybersecurity/DPO BR. Infraestrutura.",
+    "motivo": "br safepixel"
+  },
+  {
+    "email": "contato@n5tech.com.br",
+    "name": "N5Tech",
+    "company": "N5Tech",
+    "role": "TI",
+    "personal_note": "MSP BR. Infraestrutura de TI.",
+    "motivo": "br n5tech"
+  },
+  {
+    "email": "contato@arquivei.com.br",
+    "name": "Arquivei",
+    "company": "Arquivei",
+    "role": "TI",
+    "personal_note": "Fintech/e-invoice BR. Infraestrutura.",
+    "motivo": "br arquivei"
+  },
+  {
+    "email": "contato@totvs.com.br",
+    "name": "TOTVS",
+    "company": "TOTVS",
+    "role": "TI",
+    "personal_note": "ERP BR. Infraestrutura de TI.",
+    "motivo": "br totvs"
+  },
+  {
+    "email": "contato@fluxo.com.br",
+    "name": "Fluxo",
+    "company": "Fluxo",
+    "role": "TI",
+    "personal_note": "Fintech BR. Infraestrutura de payments.",
+    "motivo": "br fluxo"
+  },
+  {
+    "email": "contato@botcity.org",
+    "name": "BotCity",
+    "company": "BotCity",
+    "role": "TI",
+    "personal_note": "RPA BR. Infraestrutura de automation.",
+    "motivo": "br botcity"
+  },
+  {
+    "email": "contato@biocon.com.br",
+    "name": "BioCon",
+    "company": "BioCon",
+    "role": "TI",
+    "personal_note": "Healthtech BR. Infraestrutura de TI.",
+    "motivo": "br biocon"
+  },
+  {
+    "email": "contato@nuvem.pt",
+    "name": "Nuvem PT",
+    "company": "Nuvem PT",
+    "role": "TI",
+    "personal_note": "Cloud BR/PT. Infraestrutura de VPS.",
+    "motivo": "pt nuvem"
+  },
+  {
+    "email": "ti@digitalhouse.com.br",
+    "name": "DigitalHouse",
+    "company": "DigitalHouse",
+    "role": "TI",
+    "personal_note": "Edtech/IT BR. Infraestrutura.",
+    "motivo": "br digitalhouse"
+  },
+  {
+    "email": "contact@transferwise.com",
+    "name": "TransferWise/Wise",
+    "company": "Wise",
+    "role": "TI",
+    "personal_note": "Fintech cross-border. Infraestrutura de payments.",
+    "motivo": "uk wise2"
+  },
+  {
+    "email": "ti@n26.com",
+    "name": "N26",
+    "company": "N26",
+    "role": "TI",
+    "personal_note": "Fintech DE. Infraestrutura de banking.",
+    "motivo": "de n26_2"
+  },
+  {
+    "email": "contact@breeder.co",
+    "name": "Breeder",
+    "company": "Breeder",
+    "role": "TI",
+    "personal_note": "Fintech/insurtech. Infraestrutura de TI.",
+    "motivo": "us breeder"
+  },
+  {
+    "email": "ti@checkout.com",
+    "name": "Checkout.com",
+    "company": "Checkout.com",
+    "role": "TI",
+    "personal_note": "Fintech UK/IE. Infraestrutura de payments.",
+    "motivo": "uk checkout2"
+  },
+  {
+    "email": "contact@adyen.com",
+    "name": "Adyen",
+    "company": "Adyen",
+    "role": "TI",
+    "personal_note": "Fintech NL. Infraestrutura de payments.",
+    "motivo": "nl adyen2"
+  },
+  {
+    "email": "ti@stripe.com",
+    "name": "Stripe",
+    "company": "Stripe",
+    "role": "TI",
+    "personal_note": "Fintech IE/US. Infraestrutura de payments.",
+    "motivo": "ie stripe2"
+  },
+  {
+    "email": "contact@klarna.com",
+    "name": "Klarna",
+    "company": "Klarna",
+    "role": "TI",
+    "personal_note": "Fintech SE. Infraestrutura de payments.",
+    "motivo": "se klarna2"
+  },
+  {
+    "email": "contact@sumup.com",
+    "name": "SumUp",
+    "company": "SumUp",
+    "role": "TI",
+    "personal_note": "Fintech DE/UK. Infraestrutura de payments.",
+    "motivo": "de sumup2"
+  }
+]

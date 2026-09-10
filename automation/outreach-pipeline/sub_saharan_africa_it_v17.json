@@ -1,0 +1,744 @@
+[
+  {
+    "email": "ti@ethio telecom.et",
+    "name": "Ethio Telecom",
+    "company": "Ethio Telecom (Ethiopia)",
+    "role": "TI",
+    "personal_note": "Ethiopian state telecom. Infra TI.",
+    "motivo": "eth ethio telecom"
+  },
+  {
+    "email": "contact@ethiotelecom.et",
+    "name": "Ethio Telecom",
+    "company": "Ethio Telecom (Ethiopia)",
+    "role": "Contato",
+    "personal_note": "Ethiopian state telecom. Infra TI.",
+    "motivo": "eth ethio telecom2"
+  },
+  {
+    "email": "ti@ethioswitch.et",
+    "name": "EthioSwitch",
+    "company": "EthioSwitch (Ethiopia data center)",
+    "role": "TI",
+    "personal_note": "Ethiopian data center infrastructure. Infra TI.",
+    "motivo": "eth ethioswitch"
+  },
+  {
+    "email": "contact@ethiopian airlines.com",
+    "name": "Ethiopian Airlines",
+    "company": "Ethiopian Airlines",
+    "role": "Contato",
+    "personal_note": "Ethiopian national carrier IT. Infra TI.",
+    "motivo": "eth ethiopianairlines"
+  },
+  {
+    "email": "ti@ethiopianpower.com",
+    "name": "Ethiopian Electric Power",
+    "company": "Ethiopian Electric Power",
+    "role": "TI",
+    "personal_note": "Ethiopian power utility IT. Infra TI.",
+    "motivo": "eth ethiopianpower"
+  },
+  {
+    "email": "contact@ethiopianexpress.com",
+    "name": "Ethiopian Express",
+    "company": "Ethiopian Express (logistics)",
+    "role": "Contato",
+    "personal_note": "Ethiopian logistics IT. Infra TI.",
+    "motivo": "eth ethiopianexpress"
+  },
+  {
+    "email": "ti@ethiopianbel.com",
+    "name": "EthioBel",
+    "company": "EthioBel (Ethiopia brewery)",
+    "role": "TI",
+    "personal_note": "Ethiopian brewery IT infrastructure. Infra TI.",
+    "motivo": "eth ethiobel"
+  },
+  {
+    "email": "contact@ethiofarm.com",
+    "name": "EthioFarm",
+    "company": "EthioFarm (Ethiopia agri)",
+    "role": "Contato",
+    "personal_note": "Ethiopian agriculture platform IT. Infra TI.",
+    "motivo": "eth ethiofarm"
+  },
+  {
+    "email": "ti@ethiosh.pizza",
+    "name": "EthioSH Pizza",
+    "company": "EthioSH Pizza (Ethiopia food)",
+    "role": "TI",
+    "personal_note": "Ethiopian food service IT. Infra TI.",
+    "motivo": "eth ethioshpizza"
+  },
+  {
+    "email": "contact@ethiosmart.com",
+    "name": "EthioSmart",
+    "company": "EthioSmart (Ethiopia telecom reseller)",
+    "role": "Contato",
+    "personal_note": "Ethiopian telecom reseller IT. Infra TI.",
+    "motivo": "eth ethiosmart"
+  },
+  {
+    "email": "ti@mtn.com",
+    "name": "MTN Nigeria",
+    "company": "MTN Group (Nigeria)",
+    "role": "TI",
+    "personal_note": "West African telecom giant IT infrastructure. Infra TI.",
+    "motivo": "ng mtn"
+  },
+  {
+    "email": "contact@mtnnigeria.com",
+    "name": "MTN Nigeria",
+    "company": "MTN Nigeria",
+    "role": "Contato",
+    "personal_note": "Nigerian telecom IT. Infra TI.",
+    "motivo": "ng mtnnigeria"
+  },
+  {
+    "email": "ti@airtel.com",
+    "name": "Airtel Africa",
+    "company": "Airtel Africa",
+    "role": "TI",
+    "personal_note": "Pan-African telecom IT infrastructure. Infra TI.",
+    "motivo": "ng airtel"
+  },
+  {
+    "email": "contact@airtel africa.com",
+    "name": "Airtel Africa",
+    "company": "Airtel Africa",
+    "role": "Contato",
+    "personal_note": "Pan-African telecom IT. Infra TI.",
+    "motivo": "ng airtelafrica"
+  },
+  {
+    "email": "ti@glo.com",
+    "name": "GLO Telecom",
+    "company": "GLO Telecom (Nigeria)",
+    "role": "TI",
+    "personal_note": "Nigerian telecom IT infrastructure. Infra TI.",
+    "motivo": "ng glo"
+  },
+  {
+    "email": "contact@globacom.com",
+    "name": "GLO Telecom",
+    "company": "Globacom (Nigeria)",
+    "role": "Contato",
+    "personal_note": "Nigerian telecom IT. Infra TI.",
+    "motivo": "ng globacom"
+  },
+  {
+    "email": "ti@econet.com",
+    "name": "Econet",
+    "company": "Econet Wireless (Zimbabwe)",
+    "role": "TI",
+    "personal_note": "Zimbabwean telecom IT. Infra TI.",
+    "motivo": "zw econet"
+  },
+  {
+    "email": "contact@ecoweb.com",
+    "name": "EcoWeb",
+    "company": "EcoWeb (Zimbabwe telecom)",
+    "role": "Contato",
+    "personal_note": "Zimbabwean telecom IT. Infra TI.",
+    "motivo": "zw ecoweb"
+  },
+  {
+    "email": "ti@zamtel.co.zm",
+    "name": "Zamtel",
+    "company": "Zambia Telecom",
+    "role": "TI",
+    "personal_note": "Zambian telecom IT infrastructure. Infra TI.",
+    "motivo": "zm zamtel"
+  },
+  {
+    "email": "contact@zamtel.co.zm",
+    "name": "ZamTel",
+    "company": "Zambia Telecom",
+    "role": "Contato",
+    "personal_note": "Zambian telecom IT. Infra TI.",
+    "motivo": "zm zamtel2"
+  },
+  {
+    "email": "ti@zantel.co.zw",
+    "name": "Zantel",
+    "company": "Zantel (Zimbabwe)",
+    "role": "TI",
+    "personal_note": "Zimbabwean telecom IT. Infra TI.",
+    "motivo": "zw zantel"
+  },
+  {
+    "email": "ti@safaricom.co.ke",
+    "name": "Safaricom",
+    "company": "Safaricom (Kenya)",
+    "role": "TI",
+    "personal_note": "Kenyan telecom giant IT infrastructure. Infra TI.",
+    "motivo": "ke safaricom"
+  },
+  {
+    "email": "contact@safaricom.co.ke",
+    "name": "Safaricom",
+    "company": "Safaricom (Kenya)",
+    "role": "Contato",
+    "personal_note": "Kenyan telecom IT. Infra TI.",
+    "motivo": "ke safaricom2"
+  },
+  {
+    "email": "ti@kenya power.co.ke",
+    "name": "Kenya Power",
+    "company": "Kenya Power (Kenya)",
+    "role": "TI",
+    "personal_note": "Kenyan power utility IT. Infra TI.",
+    "motivo": "ke kenypower"
+  },
+  {
+    "email": "contact@kenyapower.co.ke",
+    "name": "Kenya Power",
+    "company": "Kenya Power",
+    "role": "Contato",
+    "personal_note": "Kenyan power utility IT. Infra TI.",
+    "motivo": "ke kenypower2"
+  },
+  {
+    "email": "ti@kenya airways.com",
+    "name": "Kenya Airways",
+    "company": "Kenya Airways",
+    "role": "TI",
+    "personal_note": "Kenyan national airline IT. Infra TI.",
+    "motivo": "ke kenyairways"
+  },
+  {
+    "email": "contact@kenya airways.com",
+    "name": "Kenya Airways",
+    "company": "Kenya Airways",
+    "role": "Contato",
+    "personal_note": "Kenyan airline IT. Infra TI.",
+    "motivo": "ke kenyairways2"
+  },
+  {
+    "email": "ti@tantel.co.tz",
+    "name": "TANTEL",
+    "company": "Tanzania Telecom (TANTEL)",
+    "role": "TI",
+    "personal_note": "Tanzanian telecom IT infrastructure. Infra TI.",
+    "motivo": "tz tantel"
+  },
+  {
+    "email": "contact@tantel.co.tz",
+    "name": "TANTEL",
+    "company": "Tanzania Telecom",
+    "role": "Contato",
+    "personal_note": "Tanzanian telecom IT. Infra TI.",
+    "motivo": "tz tantel2"
+  },
+  {
+    "email": "ti@tanesco.co.tz",
+    "name": "TANESCO",
+    "company": "Tanzania Electric Supply Co.",
+    "role": "TI",
+    "personal_note": "Tanzanian power utility IT. Infra TI.",
+    "motivo": "tz tanesco"
+  },
+  {
+    "email": "contact@tanesco.co.tz",
+    "name": "TANESCO",
+    "company": "TANESCO (Tanzania)",
+    "role": "Contato",
+    "personal_note": "Tanzanian power IT. Infra TI.",
+    "motivo": "tz tanesco2"
+  },
+  {
+    "email": "ti@tanzaniangas.co.tz",
+    "name": "Tanzania Gas",
+    "company": "Tanzania Gas Company",
+    "role": "TI",
+    "personal_note": "Tanzanian gas distribution IT. Infra TI.",
+    "motivo": "tz tanzaniagas"
+  },
+  {
+    "email": "ti@utl.co.ug",
+    "name": "UTL",
+    "company": "Uganda Telecom Ltd",
+    "role": "TI",
+    "personal_note": "Ugandan telecom IT. Infra TI.",
+    "motivo": "ug utl"
+  },
+  {
+    "email": "contact@utl.co.ug",
+    "name": "UTL",
+    "company": "Uganda Telecom",
+    "role": "Contato",
+    "personal_note": "Ugandan telecom IT. Infra TI.",
+    "motivo": "ug utl2"
+  },
+  {
+    "email": "ti@mtn.co.rw",
+    "name": "MTN Rwanda",
+    "company": "MTN Rwanda",
+    "role": "TI",
+    "personal_note": "Rwandan telecom IT. Infra TI.",
+    "motivo": "rw mtnrw"
+  },
+  {
+    "email": "contact@mtn.co.rw",
+    "name": "MTN Rwanda",
+    "company": "MTN Rwanda",
+    "role": "Contato",
+    "personal_note": "Rwandan telecom IT. Infra TI.",
+    "motivo": "rw mtnrw2"
+  },
+  {
+    "email": "ti@rwandanpower.rw",
+    "name": "REG (Rwanda energy)",
+    "company": "Rwanda Energy Group",
+    "role": "TI",
+    "personal_note": "Rwandan power utility IT. Infra TI.",
+    "motivo": "rw rwandanpower"
+  },
+  {
+    "email": "contact@rwandanpower.rw",
+    "name": "REG Rwanda",
+    "company": "Rwanda Energy Group",
+    "role": "Contato",
+    "personal_note": "Rwandan energy IT. Infra TI.",
+    "motivo": "rw rwandanpower2"
+  },
+  {
+    "email": "ti@ Vodacom.co.ci",
+    "name": "Vodacom Côte d'Ivoire",
+    "company": "Vodacom Côte d'Ivoire",
+    "role": "TI",
+    "personal_note": "Ivorian telecom IT. Infra TI.",
+    "motivo": "ci vodacom"
+  },
+  {
+    "email": "contact@Vodacom.ci",
+    "name": "Vodacom CI",
+    "company": "Vodacom Côte d'Ivoire",
+    "role": "Contato",
+    "personal_note": "Ivorian telecom IT. Infra TI.",
+    "motivo": "ci vodacom2"
+  },
+  {
+    "email": "ti@ Orange.ci",
+    "name": "Orange CI",
+    "company": "Orange Côte d'Ivoire",
+    "role": "TI",
+    "personal_note": "Ivorian telecom IT. Infra TI.",
+    "motivo": "ci orangeci"
+  },
+  {
+    "email": "contact@Orange.ci",
+    "name": "Orange CI",
+    "company": "Orange Côte d'Ivoire",
+    "role": "Contato",
+    "personal_note": "Ivorian telecom IT. Infra TI.",
+    "motivo": "ci orangeci2"
+  },
+  {
+    "email": "ti@camtel.ci",
+    "name": "CAMTEL",
+    "company": "Cameroon Telecom",
+    "role": "TI",
+    "personal_note": "Cameroonian telecom IT. Infra TI.",
+    "motivo": "cm camtel"
+  },
+  {
+    "email": "contact@camtel.ci",
+    "name": "CAMTEL",
+    "company": "Cameroon Telecom",
+    "role": "Contato",
+    "personal_note": "Cameroonian telecom IT. Infra TI.",
+    "motivo": "cm camtel2"
+  },
+  {
+    "email": "ti@camelec.com",
+    "name": "Camelec",
+    "company": "Camelec (Cameroon electricity)",
+    "role": "TI",
+    "personal_note": "Cameroonian power IT. Infra TI.",
+    "motivo": "cm camelec"
+  },
+  {
+    "email": "contact@ Vodacom.cd",
+    "name": "Vodacom DRC",
+    "company": "Vodacom DRC",
+    "role": "Contato",
+    "personal_note": "DRC telecom IT. Infra TI.",
+    "motivo": "cd vodacdocd"
+  },
+  {
+    "email": "ti@ Vodacom.cd",
+    "name": "Vodacom DRC",
+    "company": "Vodacom DRC",
+    "role": "TI",
+    "personal_note": "DRC telecom IT infrastructure. Infra TI.",
+    "motivo": "cd vodacdocd2"
+  },
+  {
+    "email": "contact@ Orange.cd",
+    "name": "Orange RDC",
+    "company": "Orange RDC (DRC)",
+    "role": "Contato",
+    "personal_note": "DRC telecom IT. Infra TI.",
+    "motivo": "cd orangecd"
+  },
+  {
+    "email": "ti@Orange.cd",
+    "name": "Orange RDC",
+    "company": "Orange RDC (DRC)",
+    "role": "TI",
+    "personal_note": "DRC telecom IT. Infra TI.",
+    "motivo": "cd orangecd2"
+  },
+  {
+    "email": "contact@ Vodacom Congo",
+    "name": "Vodacom Congo",
+    "company": "Vodacom Congo (Congo-Brazzaville)",
+    "role": "Contato",
+    "personal_note": "Congolese telecom IT. Infra TI.",
+    "motivo": "cg vodacomcg"
+  },
+  {
+    "email": "ti@ Vodacom Congo",
+    "name": "Vodacom Congo",
+    "company": "Vodacom Congo",
+    "role": "TI",
+    "personal_note": "Congolese telecom IT. Infra TI.",
+    "motivo": "cg vodacomcg2"
+  },
+  {
+    "email": "contact@ Airtel Congo",
+    "name": "Airtel Congo",
+    "company": "Airtel Congo (Congo-Brazzaville)",
+    "role": "Contato",
+    "personal_note": "Congolese telecom IT. Infra TI.",
+    "motivo": "cg airtelcg"
+  },
+  {
+    "email": "ti@ vodacom.co.mz",
+    "name": "Vodacom Mozambique",
+    "company": "Vodacom Mozambique",
+    "role": "TI",
+    "personal_note": "Mozambican telecom IT. Infra TI.",
+    "motivo": "mz vodacom"
+  },
+  {
+    "email": "contact@ vodacom.co.mz",
+    "name": "Vodacom Mozambique",
+    "company": "Vodacom Mozambique",
+    "role": "Contato",
+    "personal_note": "Mozambican telecom IT. Infra TI.",
+    "motivo": "mz vodacom2"
+  },
+  {
+    "email": "ti@ Movitel.co.mz",
+    "name": "Movitel",
+    "company": "Movitel (Mozambique)",
+    "role": "TI",
+    "personal_note": "Mozambican telecom IT. Infra TI.",
+    "motivo": "mz movitel"
+  },
+  {
+    "email": "contact@ Movitel.co.mz",
+    "name": "Movitel",
+    "company": "Movitel (Mozambique)",
+    "role": "Contato",
+    "personal_note": "Mozambican telecom IT. Infra TI.",
+    "motivo": "mz movitel2"
+  },
+  {
+    "email": "ti@ EDM.co.mz",
+    "name": "EDM Mozambique",
+    "company": "EDM (Mozambique energy)",
+    "role": "TI",
+    "personal_note": "Mozambican power utility IT. Infra TI.",
+    "motivo": "mz edm"
+  },
+  {
+    "email": "contact@ EDM.co.mz",
+    "name": "EDM Mozambique",
+    "company": "EDM (Mozambique)",
+    "role": "Contato",
+    "personal_note": "Mozambican energy IT. Infra TI.",
+    "motivo": "mz edm2"
+  },
+  {
+    "email": "ti@ Angola telecom",
+    "name": "Angola Telecom",
+    "company": "Angola Telecom",
+    "role": "TI",
+    "personal_note": "Angolan telecom IT infrastructure. Infra TI.",
+    "motivo": "ao angolatelecom"
+  },
+  {
+    "email": "contact@ Angola telecom",
+    "name": " Angola Telecom",
+    "company": "Angola Telecom",
+    "role": "Contato",
+    "personal_note": "Angolan telecom IT. Infra TI.",
+    "motivo": "ao angolatelecom2"
+  },
+  {
+    "email": "ti@ Unitel.co.ao",
+    "name": "Unitel Angola",
+    "company": "Unitel (Angola)",
+    "role": "TI",
+    "personal_note": "Angolan telecom IT. Infra TI.",
+    "motivo": "ao unitel"
+  },
+  {
+    "email": "contact@ Unitel.co.ao",
+    "name": "Unitel Angola",
+    "company": "Unitel (Angola)",
+    "role": "Contato",
+    "personal_note": "Angolan telecom IT. Infra TI.",
+    "motivo": "ao unitel2"
+  },
+  {
+    "email": "ti@ ENDE Angola",
+    "name": "ENDE Angola",
+    "company": "ENDE (Angola energy)",
+    "role": "TI",
+    "personal_note": "Angolan power utility IT. Infra TI.",
+    "motivo": "ao ende"
+  },
+  {
+    "email": "contact@ ENDE Angola",
+    "name": "ENDE Angola",
+    "company": "ENDE (Angola)",
+    "role": "Contato",
+    "personal_note": "Angolan energy IT. Infra TI.",
+    "motivo": "ao ende2"
+  },
+  {
+    "email": "ti@ Orange.sn",
+    "name": "Orange Senegal",
+    "company": "Orange Senegal",
+    "role": "TI",
+    "personal_note": "Senegalese telecom IT. Infra TI.",
+    "motivo": "sn orangesn"
+  },
+  {
+    "email": "contact@ Orange.sn",
+    "name": "Orange Senegal",
+    "company": "Orange Senegal",
+    "role": "Contato",
+    "personal_note": "Senegalese telecom IT. Infra TI.",
+    "motivo": "sn orangesn2"
+  },
+  {
+    "email": "ti@SENELEC.sn",
+    "name": "SENELEC",
+    "company": "SENELEC (Senegal energy)",
+    "role": "TI",
+    "personal_note": "Senegalese power IT. Infra TI.",
+    "motivo": "sn senelec"
+  },
+  {
+    "email": "contact@SENELEC.sn",
+    "name": "SENELEC",
+    "company": "SENELEC (Senegal)",
+    "role": "Contato",
+    "personal_note": "Senegalese energy IT. Infra TI.",
+    "motivo": "sn senelec2"
+  },
+  {
+    "email": "ti@Orange.ml",
+    "name": "Orange Mali",
+    "company": "Orange Mali",
+    "role": "TI",
+    "personal_note": "Malian telecom IT. Infra TI.",
+    "motivo": "ml orangeml"
+  },
+  {
+    "email": "contact@Orange.ml",
+    "name": "Orange Mali",
+    "company": "Orange Mali",
+    "role": "Contato",
+    "personal_note": "Malian telecom IT. Infra TI.",
+    "motivo": "ml orangeml2"
+  },
+  {
+    "email": "ti@ Orange.ci",
+    "name": "Orange CI",
+    "company": "Orange Côte d'Ivoire",
+    "role": "TI",
+    "personal_note": "Ivorian telecom IT. Infra TI.",
+    "motivo": "ci orange3"
+  },
+  {
+    "email": "contact@Orange.ci",
+    "name": "Orange CI",
+    "company": "Orange Côte d'Ivoire",
+    "role": "Contato",
+    "personal_note": "Ivorian telecom IT. Infra TI.",
+    "motivo": "ci orange4"
+  },
+  {
+    "email": "contact@ghanaiantel.com",
+    "name": "GhanaTel",
+    "company": "Ghana Telecom",
+    "role": "Contato",
+    "personal_note": "Ghanaian telecom IT. Infra TI.",
+    "motivo": "gh ghanatel"
+  },
+  {
+    "email": "ti@ghanaiantel.com",
+    "name": "GhanaTel",
+    "company": "Ghana Telecom",
+    "role": "TI",
+    "personal_note": "Ghanaian telecom IT infrastructure. Infra TI.",
+    "motivo": "gh ghanatel2"
+  },
+  {
+    "email": "contact@togo telecom.tg",
+    "name": "Togo Telecom",
+    "company": "Togo Telecom",
+    "role": "Contato",
+    "personal_note": "Togolese telecom IT. Infra TI.",
+    "motivo": "tg togo telecom"
+  },
+  {
+    "email": "ti@togo telecom.tg",
+    "name": "Togo Telecom",
+    "company": "Togo Telecom",
+    "role": "TI",
+    "personal_note": "Togolese telecom IT. Infra TI.",
+    "motivo": "tg togo telecom2"
+  },
+  {
+    "email": "contact@ Benin telecom",
+    "name": "Benin Telecom",
+    "company": "Benin Telecom",
+    "role": "Contato",
+    "personal_note": "Beninese telecom IT. Infra TI.",
+    "motivo": "bj benintelecom"
+  },
+  {
+    "email": "ti@Benin telecom",
+    "name": "Benin Telecom",
+    "company": "Benin Telecom",
+    "role": "TI",
+    "personal_note": "Beninese telecom IT. Infra TI.",
+    "motivo": "bj benintelecom2"
+  },
+  {
+    "email": "contact@Burkina telecom",
+    "name": "Burkina Telecom",
+    "company": "Burkina Faso Telecom",
+    "role": "Contato",
+    "personal_note": "Burkinabé telecom IT. Infra TI.",
+    "motivo": "bf burkinatelecom"
+  },
+  {
+    "email": "ti@Burkina telecom",
+    "name": "Burkina Telecom",
+    "company": "Burkina Faso Telecom",
+    "role": "TI",
+    "personal_note": "Burkinabé telecom IT. Infra TI.",
+    "motivo": "bf burkinatelecom2"
+  },
+  {
+    "email": "ti@ Madagascar Orange",
+    "company": "Orange Madagascar",
+    "role": "TI",
+    "personal_note": "Madagascan telecom IT infrastructure. Infra TI.",
+    "motivo": "mg orange"
+  },
+  {
+    "email": "contact@Orange Madagascar",
+    "company": "Orange Madagascar",
+    "role": "Contato",
+    "personal_note": "Madagascan telecom IT. Infra TI.",
+    "motivo": "mg orange2"
+  },
+  {
+    "email": "ti@Telma.mg",
+    "name": "Telma Madagascar",
+    "company": "Telma (Madagascar telecom)",
+    "role": "TI",
+    "personal_note": "Madagascan telecom IT. Infra TI.",
+    "motivo": "mg telma"
+  },
+  {
+    "email": "contact@Telma.mg",
+    "name": "Telma Madagascar",
+    "company": "Telma (Madagascar)",
+    "role": "Contato",
+    "personal_note": "Madagascan telecom IT. Infra TI.",
+    "motivo": "mg telma2"
+  },
+  {
+    "email": "ti@Mauritius Telecom",
+    "company": "Mauritius Telecom",
+    "role": "TI",
+    "personal_note": "Mauritian telecom IT infrastructure. Infra TI.",
+    "motivo": "mu mauritustelecom"
+  },
+  {
+    "email": "contact@Mauritius Telecom",
+    "company": "Mauritius Telecom",
+    "role": "Contato",
+    "personal_note": "Mauritian telecom IT. Infra TI.",
+    "motivo": "mu mauritustelecom2"
+  },
+  {
+    "email": "ti@Seychelles Telecom",
+    "company": "Seychelles Telecom",
+    "role": "TI",
+    "personal_note": "Seychellois telecom IT. Infra TI.",
+    "motivo": "sc seychellestelecom"
+  },
+  {
+    "email": "contact@Seychelles Telecom",
+    "company": "Seychelles Telecom",
+    "role": "Contato",
+    "personal_note": "Seychellois telecom IT. Infra TI.",
+    "motivo": "sc seychellestelecom2"
+  },
+  {
+    "email": "ti@Orange.re",
+    "name": "Orange Réunion",
+    "company": "Orange Réunion (France)",
+    "role": "TI",
+    "personal_note": "Réunion Island telecom IT. Infra TI.",
+    "motivo": "re orangere"
+  },
+  {
+    "email": "contact@Orange.re",
+    "name": "Orange Réunion",
+    "company": "Orange Réunion",
+    "role": "Contato",
+    "personal_note": "Réunion telecom IT. Infra TI.",
+    "motivo": "re orangere2"
+  },
+  {
+    "email": "ti@Mayotte Orange",
+    "company": "Orange Mayotte (France)",
+    "role": "TI",
+    "personal_note": "Mayotte telecom IT. Infra TI.",
+    "motivo": "yt orangeyt"
+  },
+  {
+    "email": "contact@Mayotte Orange",
+    "company": "Orange Mayotte",
+    "role": "Contato",
+    "personal_note": "Mayotte telecom IT. Infra TI.",
+    "motivo": "yt orangeyt2"
+  },
+  {
+    "email": "ti@ Comoros Telecom",
+    "company": "Comoros Telecom",
+    "role": "TI",
+    "personal_note": "Comorian telecom IT. Infra TI.",
+    "motivo": "km comoristelecom"
+  },
+  {
+    "email": "contact@Comoros Telecom",
+    "company": "Comoros Telecom",
+    "role": "Contato",
+    "personal_note": "Comorian telecom IT. Infra TI.",
+    "motivo": "km comoristelecom2"
+  }
+]

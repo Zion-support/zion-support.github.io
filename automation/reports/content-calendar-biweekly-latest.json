@@ -1,0 +1,114 @@
+{
+  "run_at": "2026-09-08T02:00:06.413482+00:00",
+  "run_type": "biweekly_content_calendar_refresh",
+  "needs_refresh": true,
+  "new_posts_published": true,
+  "blog_post_count": 311,
+  "last_known_count": 0,
+  "existing_plan_ts": null,
+  "existing_topics_count": 278,
+  "calendar": [
+    {
+      "date": "2026-09-08",
+      "cluster": "AI Automation & Agents",
+      "title": "Building AI Agent Workflows for Small Business",
+      "target_url": "/blog/building-ai-agent-workflows-for-small-business/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-10",
+      "cluster": "Cybersecurity & Privacy",
+      "title": "Zero Trust for SMBs: Implementation Checklist",
+      "target_url": "/blog/zero-trust-for-smbs-implementation-checklist/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-12",
+      "cluster": "Cloud Migration & FinOps",
+      "title": "Cloud Cost Optimization for Growing Startups",
+      "target_url": "/blog/cloud-cost-optimization-for-growing-startups/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-14",
+      "cluster": "SaaS & Startups",
+      "title": "Pricing Strategy for AI SaaS Products",
+      "target_url": "/blog/pricing-strategy-for-ai-saas-products/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-16",
+      "cluster": "Digital Transformation",
+      "title": "Measuring AI ROI: Frameworks for Enterprises",
+      "target_url": "/blog/measuring-ai-roi-frameworks-for-enterprises/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-18",
+      "cluster": "Brazilian Market (PT-BR)",
+      "title": "Adoção de IA nas PMEs brasileiras: Guia 2026",
+      "target_url": "/blog/ado-o-de-ia-nas-pmes-brasileiras-guia-2026/",
+      "lang": "pt-BR",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-20",
+      "cluster": "DevOps & Engineering",
+      "title": "CI/CD for ML Models: MLOps Best Practices",
+      "target_url": "/blog/ci-cd-for-ml-models-mlops-best-practices/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-22",
+      "cluster": "AI Automation & Agents",
+      "title": "RAG for Customer Support: A Practical Guide",
+      "target_url": "/blog/rag-for-customer-support-a-practical-guide/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-24",
+      "cluster": "AI Automation & Agents",
+      "title": "AI-Powered Data Pipelines: Architecture Patterns",
+      "target_url": "/blog/ai-powered-data-pipelines-architecture-patterns/",
+      "lang": "en",
+      "status": "planned"
+    },
+    {
+      "date": "2026-09-26",
+      "cluster": "AI Automation & Agents",
+      "title": "No-Code AI Automation for Non-Technical Teams",
+      "target_url": "/blog/no-code-ai-automation-for-non-technical-teams/",
+      "lang": "en",
+      "status": "planned"
+    }
+  ],
+  "missing_clusters": [
+    "AI Automation & Agents",
+    "Cybersecurity & Privacy",
+    "Cloud Migration & FinOps",
+    "Healthcare & Biotech",
+    "Brazilian Market (PT-BR)",
+    "SaaS & Startups",
+    "DevOps & Engineering",
+    "Digital Transformation"
+  ],
+  "total_planned": 10,
+  "content_clusters_available": [
+    "AI Automation & Agents",
+    "Cybersecurity & Privacy",
+    "Cloud Migration & FinOps",
+    "Healthcare & Biotech",
+    "Brazilian Market (PT-BR)",
+    "SaaS & Startups",
+    "DevOps & Engineering",
+    "Digital Transformation"
+  ],
+  "telegram_summary": "📅 CONTENT CALENDAR REFRESH — Zion Tech Group (Biweekly)\nAtualizado: 2026-09-08 02:00 UTC\n\n🎯 Posts no blog: 311\nNovos posts desde última atualização: sim\nCalendário atualizado: sim\n\n📝 Próximos 14 dias (10 posts planejados):\n  • [2026-09-08] Building AI Agent Workflows for Small Business (en) — planned\n  • [2026-09-10] Zero Trust for SMBs: Implementation Checklist (en) — planned\n  • [2026-09-12] Cloud Cost Optimization for Growing Startups (en) — planned\n  • [2026-09-14] Pricing Strategy for AI SaaS Products (en) — planned\n  • [2026-09-16] Measuring AI ROI: Frameworks for Enterprises (en) — planned\n  • [2026-09-18] Adoção de IA nas PMEs brasileiras: Guia 2026 (pt-BR) — planned\n  • [2026-09-20] CI/CD for ML Models: MLOps Best Practices (en) — planned\n\n⚠️ Clusters sem posts: 8\n  AI Automation & Agents, Cybersecurity & Privacy, Cloud Migration & FinOps\n\nPosts planned: 10 | Already exists: 0"
+}

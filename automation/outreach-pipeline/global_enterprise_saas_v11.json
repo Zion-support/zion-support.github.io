@@ -1,0 +1,602 @@
+[
+  {
+    "email": "contact@workday.com",
+    "name": "Workday",
+    "company": "Workday",
+    "role": "Contato",
+    "personal_note": "Enterprise SaaS HR/Finance. Infra TI.",
+    "motivo": "us enterprise saas workday"
+  },
+  {
+    "email": "ti@serviceNow.com",
+    "name": "ServiceNow",
+    "company": "ServiceNow",
+    "role": "TI",
+    "personal_note": "ITSM workflow. Infra TI.",
+    "motivo": "us enterprise saas servicenow"
+  },
+  {
+    "email": "contact@salesforce.com",
+    "name": "Salesforce",
+    "company": "Salesforce",
+    "role": "Contato",
+    "personal_note": "CRM SaaS. Infra TI.",
+    "motivo": "us enterprise saas salesforce"
+  },
+  {
+    "email": "ti@microsoft.com",
+    "name": "Microsoft",
+    "company": "Microsoft",
+    "role": "TI",
+    "personal_note": "Cloud + Enterprise. Infra TI.",
+    "motivo": "us enterprise microsoft"
+  },
+  {
+    "email": "contact@oracle.com",
+    "name": "Oracle",
+    "company": "Oracle",
+    "role": "Contato",
+    "personal_note": "DB + Cloud ERP. Infra TI.",
+    "motivo": "us enterprise oracle"
+  },
+  {
+    "email": "ti@vmware.com",
+    "name": "VMware (Broadcom)",
+    "company": "VMware",
+    "role": "TI",
+    "personal_note": "Virtualization/Cloud. Infra TI.",
+    "motivo": "us enterprise vmware"
+  },
+  {
+    "email": "contact@okta.com",
+    "name": "Okta",
+    "company": "Okta",
+    "role": "Contato",
+    "personal_note": "Identity mgmt. Infra TI.",
+    "motivo": "us enterprise okta"
+  },
+  {
+    "email": "ti@crowdstrike.com",
+    "name": "CrowdStrike",
+    "company": "CrowdStrike",
+    "role": "TI",
+    "personal_note": "Endpoint security. Infra TI.",
+    "motivo": "us enterprise crowdstrike"
+  },
+  {
+    "email": "contact@zscaler.com",
+    "name": "Zscaler",
+    "company": "Zscaler",
+    "role": "Contato",
+    "personal_note": "Cloud security. Infra TI.",
+    "motivo": "us enterprise zscaler"
+  },
+  {
+    "email": "ti@proofpoint.com",
+    "name": "Proofpoint",
+    "company": "Proofpoint",
+    "role": "TI",
+    "personal_note": "Security/compliance. Infra TI.",
+    "motivo": "us enterprise proofpoint"
+  },
+  {
+    "email": "contact@fireeye.com",
+    "name": "Mandiant (FireEye)",
+    "company": "Mandiant",
+    "role": "Contato",
+    "personal_note": "Threat intel. Infra TI.",
+    "motivo": "us enterprise mandiant"
+  },
+  {
+    "email": "ti@sentinelone.com",
+    "name": "SentinelOne",
+    "company": "SentinelOne",
+    "role": "TI",
+    "personal_note": "Endpoint protection. Infra TI.",
+    "motivo": "us enterprise sentinelone"
+  },
+  {
+    "email": "contact@sumologic.com",
+    "name": "Sumo Logic",
+    "company": "Sumo Logic",
+    "role": "Contato",
+    "personal_note": "Cloud observability. Infra TI.",
+    "motivo": "us enterprise sumologic"
+  },
+  {
+    "email": "ti@datadog.com",
+    "name": "Datadog",
+    "company": "Datadog",
+    "role": "TI",
+    "personal_note": "Observability. Infra TI.",
+    "motivo": "us enterprise datadog"
+  },
+  {
+    "email": "contact@newrelic.com",
+    "name": "New Relic",
+    "company": "New Relic",
+    "role": "Contato",
+    "personal_note": "Observability. Infra TI.",
+    "motivo": "us enterprise newrelic"
+  },
+  {
+    "email": "ti@slack.com",
+    "name": "Slack (Salesforce)",
+    "company": "Slack",
+    "role": "TI",
+    "personal_note": "Collaboration. Infra TI.",
+    "motivo": "us enterprise slack"
+  },
+  {
+    "email": "contact@zoom.us",
+    "name": "Zoom",
+    "company": "Zoom",
+    "role": "Contato",
+    "personal_note": "Video/collaboration. Infra TI.",
+    "motivo": "us enterprise zoom"
+  },
+  {
+    "email": "ti@teams.microsoft.com",
+    "name": "Microsoft Teams",
+    "company": "Microsoft",
+    "role": "TI",
+    "personal_note": "Collaboration. Infra TI.",
+    "motivo": "us enterprise teams"
+  },
+  {
+    "email": "contact@webx.com",
+    "name": "Webex (Cisco)",
+    "company": "Cisco Webex",
+    "role": "Contato",
+    "personal_note": "Collaboration. Infra TI.",
+    "motivo": "us enterprise webex"
+  },
+  {
+    "email": "ti@googlegroups.com",
+    "name": "Google Workspace",
+    "company": "Google Workspace",
+    "role": "TI",
+    "personal_note": "Collaboration suite. Infra TI.",
+    "motivo": "us enterprise gworkspace"
+  },
+  {
+    "email": "contact@sage.com",
+    "name": "Sage",
+    "company": "Sage (UK/FR)",
+    "role": "Contato",
+    "personal_note": "ERP/accounting. Infra TI.",
+    "motivo": "eu enterprise sage"
+  },
+  {
+    "email": "ti@unit4.com",
+    "name": "Unit4",
+    "company": "Unit4 (Sweden)",
+    "role": "TI",
+    "personal_note": "ERP/Finance. Infra TI.",
+    "motivo": "eu enterprise unit4"
+  },
+  {
+    "email": "contact@adyen.com",
+    "name": "Adyen",
+    "company": "Adyen (NL)",
+    "role": "Contato",
+    "personal_note": "Payments platform. Infra TI.",
+    "motivo": "eu enterprise adyen"
+  },
+  {
+    "email": "ti@stripe.com",
+    "name": "Stripe",
+    "company": "Stripe (IE/US)",
+    "role": "TI",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "eu enterprise stripe"
+  },
+  {
+    "email": "contact@revolut.com",
+    "name": "Revolut",
+    "company": "Revolut (UK)",
+    "role": "Contato",
+    "personal_note": "Fintech. Infra TI.",
+    "motivo": "eu enterprise revolut"
+  },
+  {
+    "email": "ti@klarna.com",
+    "name": "Klarna",
+    "company": "Klarna (SE)",
+    "role": "TI",
+    "personal_note": "BNPL payments. Infra TI.",
+    "motivo": "eu enterprise klarna"
+  },
+  {
+    "email": "contact@wise.com",
+    "name": "Wise (TransferWise)",
+    "company": "Wise (UK/EN)",
+    "role": "Contato",
+    "personal_note": "Money transfer. Infra TI.",
+    "motivo": "eu enterprise wise"
+  },
+  {
+    "email": "ti@n26.com",
+    "name": "N26",
+    "company": "N26 (DE)",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "eu enterprise n26"
+  },
+  {
+    "email": "contact@checkout.com",
+    "name": "Checkout.com",
+    "company": "Checkout.com (UK)",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "eu enterprise checkout"
+  },
+  {
+    "email": "ti@sumup.com",
+    "name": "SumUp",
+    "company": "SumUp (DE/UK)",
+    "role": "TI",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "eu enterprise sumup"
+  },
+  {
+    "email": "contact@docaposte.fr",
+    "name": "DigiDoc (La Poste)",
+    "company": "DigiDoc/Docaposte",
+    "role": "Contato",
+    "personal_note": "Digital services. Infra TI.",
+    "motivo": "fr enterprise docaposte"
+  },
+  {
+    "email": "ti@free.fr",
+    "name": "Free (France telecom)",
+    "company": "Free (Iliad)",
+    "role": "TI",
+    "personal_note": "Telecom. Infra TI.",
+    "motivo": "fr enterprise free"
+  },
+  {
+    "email": "contact@ovhcloud.com",
+    "name": "OVHcloud",
+    "company": "OVHcloud (FR)",
+    "role": "Contato",
+    "personal_note": "Cloud hosting. Infra TI.",
+    "motivo": "fr enterprise ovh"
+  },
+  {
+    "email": "ti@scaleway.com",
+    "name": "Scaleway",
+    "company": "Scaleway (FR)",
+    "role": "TI",
+    "personal_note": "Cloud. Infra TI.",
+    "motivo": "fr enterprise scaleway"
+  },
+  {
+    "email": "contact@jeef .com",
+    "name": "Jeed",
+    "company": "Jeed (FR fintech)",
+    "role": "Contato",
+    "personal_note": "French fintech. Infra TI.",
+    "motivo": "fr enterprise jeed"
+  },
+  {
+    "email": "ti@experian.com",
+    "name": "Experian",
+    "company": "Experian",
+    "role": "TI",
+    "personal_note": "Credit/data analytics. Infra TI.",
+    "motivo": "emea enterprise experian"
+  },
+  {
+    "email": "contact@transunion.com",
+    "name": "TransUnion",
+    "company": "TransUnion",
+    "role": "Contato",
+    "personal_note": "Credit bureau. Infra TI.",
+    "motivo": "emea enterprise transunion"
+  },
+  {
+    "email": "ti@equifax.com",
+    "name": "Equifax",
+    "company": "Equifax",
+    "role": "TI",
+    "personal_note": "Credit data. Infra TI.",
+    "motivo": "emea enterprise equifax"
+  },
+  {
+    "email": "contact@bisnode.com",
+    "name": "Bisnode (Visma)",
+    "company": "Bisnode",
+    "role": "Contato",
+    "personal_note": "Business data. Infra TI.",
+    "motivo": "emea enterprise bisnode"
+  },
+  {
+    "email": "ti@dnb.com",
+    "name": "Dun & Bradstreet",
+    "company": "D&B",
+    "role": "TI",
+    "personal_note": "Business data. Infra TI.",
+    "motivo": "emea enterprise dnb"
+  },
+  {
+    "email": "contact@paytm.com",
+    "name": "Paytm",
+    "company": "Paytm (One97)",
+    "role": "Contato",
+    "personal_note": "India payments. Infra TI.",
+    "motivo": "apac enterprise paytm"
+  },
+  {
+    "email": "ti@phonePe.com",
+    "name": "PhonePe",
+    "company": "PhonePe (Flipkart/Walmart)",
+    "role": "TI",
+    "personal_note": "India payments. Infra TI.",
+    "motivo": "apac enterprise phonepe"
+  },
+  {
+    "email": "contact@cred.rb",
+    "name": "CRED",
+    "company": "CRED (India fintech)",
+    "role": "Contato",
+    "personal_note": "India fintech. Infra TI.",
+    "motivo": "apac enterprise cred"
+  },
+  {
+    "email": "ti@policybazaar.com",
+    "name": "PolicyBazaar",
+    "company": "PolicyBazaar",
+    "role": "TI",
+    "personal_note": "Indian insurtech. Infra TI.",
+    "motivo": "apac enterprise policybazaar"
+  },
+  {
+    "email": "contact@acko.com",
+    "name": "Acko",
+    "company": "Acko (India insurance)",
+    "role": "Contato",
+    "personal_note": "Insurtech. Infra TI.",
+    "motivo": "apac enterprise acko"
+  },
+  {
+    "email": "ti@carwale.com",
+    "name": "CarWale",
+    "company": "CarWale (India auto)",
+    "role": "TI",
+    "personal_note": "Auto platform. Infra TI.",
+    "motivo": "apac enterprise carwale"
+  },
+  {
+    "email": "contact@commonfloor.com",
+    "name": "CommonFloor",
+    "company": "CommonFloor (India realty)",
+    "role": "Contato",
+    "personal_note": "PropTech. Infra TI.",
+    "motivo": "apac enterprise commonfloor"
+  },
+  {
+    "email": "ti@magicbricks.com",
+    "name": "MagicBricks",
+    "company": "MagicBricks (India realty)",
+    "role": "TI",
+    "personal_note": "PropTech. Infra TI.",
+    "motivo": "apac enterprise magicbricks"
+  },
+  {
+    "email": "contact@99acres.com",
+    "name": "99acres",
+    "company": "99acres (India realty)",
+    "role": "Contato",
+    "personal_note": "PropTech. Infra TI.",
+    "motivo": "apac enterprise 99acres"
+  },
+  {
+    "email": "ti@housing.com",
+    "name": "Housing.com",
+    "company": "Housing.com (India)",
+    "role": "TI",
+    "personal_note": "PropTech. Infra TI.",
+    "motivo": "apac enterprise housing"
+  },
+  {
+    "email": "contact@alipay.com",
+    "name": "Alipay",
+    "company": "Alipay (Ant Group)",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "apac enterprise alipay"
+  },
+  {
+    "email": "ti@tencent.com",
+    "name": "Tencent",
+    "company": "Tencent",
+    "role": "TI",
+    "personal_note": "Internet suite. Infra TI.",
+    "motivo": "apac enterprise tencent"
+  },
+  {
+    "email": "contact@jd.com",
+    "name": "JD.com",
+    "company": "JD.com",
+    "role": "Contato",
+    "personal_note": "E-commerce. Infra TI.",
+    "motivo": "apac enterprise jd"
+  },
+  {
+    "email": "ti@meituan.com",
+    "name": "Meituan",
+    "company": "Meituan",
+    "role": "TI",
+    "personal_note": "Local services. Infra TI.",
+    "motivo": "apac enterprise meituan"
+  },
+  {
+    "email": "contact@didi.com",
+    "name": "Didi Chuxing",
+    "company": "Didi",
+    "role": "Contato",
+    "personal_note": "Mobility. Infra TI.",
+    "motivo": "apac enterprise didi"
+  },
+  {
+    "email": "ti@grab.com",
+    "name": "Grab",
+    "company": "Grab (SEA)",
+    "role": "TI",
+    "personal_note": "Super app. Infra TI.",
+    "motivo": "sea enterprise grab"
+  },
+  {
+    "email": "contact@gojek.com",
+    "name": "Gojek",
+    "company": "Gojek (SEA)",
+    "role": "Contato",
+    "personal_note": "Super app. Infra TI.",
+    "motivo": "sea enterprise gojek"
+  },
+  {
+    "email": "contact@sea.com",
+    "name": "Sea (Shopee)",
+    "company": "Sea Group (Shopee)",
+    "role": "Contato",
+    "personal_note": "E-commerce/gaming. Infra TI.",
+    "motivo": "sea enterprise sea"
+  },
+  {
+    "email": "ti@toppay.com",
+    "name": "TopPay",
+    "company": "TopPay (SEA payments)",
+    "role": "TI",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "sea enterprise toppay"
+  },
+  {
+    "email": "contact@paymaya.com",
+    "name": "PayMaya",
+    "company": "Maya (PayMaya)",
+    "role": "Contato",
+    "personal_note": "Philippines payments. Infra TI.",
+    "motivo": "sea enterprise paymaya"
+  },
+  {
+    "email": "ti@mercadopago.com",
+    "name": "Mercado Pago",
+    "company": "Mercado Libre",
+    "role": "TI",
+    "personal_note": "LatAm payments. Infra TI.",
+    "motivo": "latam enterprise mercadopago"
+  },
+  {
+    "email": "contact@ubank.com",
+    "name": "UBank",
+    "company": "UBank (Brazil)",
+    "role": "Contato",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "latam enterprise ubank"
+  },
+  {
+    "email": "ti@itau.com",
+    "name": "Itau",
+    "company": "Itau Unibanco",
+    "role": "TI",
+    "personal_note": "Brazilian banking. Infra TI.",
+    "motivo": "latam enterprise itau"
+  },
+  {
+    "email": "contact@bb.com",
+    "name": "Banco do Brasil",
+    "company": "Banco do Brasil",
+    "role": "Contato",
+    "personal_note": "Brazilian banking. Infra TI.",
+    "motivo": "latam enterprise bb"
+  },
+  {
+    "email": "ti@renovera.com",
+    "name": "Renovera",
+    "company": "Renovera (Brazil fintech)",
+    "role": "TI",
+    "personal_note": "Brazilian fintech. Infra TI.",
+    "motivo": "latam enterprise renovera"
+  },
+  {
+    "email": "contact@almofada.com",
+    "name": "Almofada",
+    "company": "Almofada (Brazil)",
+    "role": "Contato",
+    "personal_note": "Brazilian fintech. Infra TI.",
+    "motivo": "latam enterprise almofada"
+  },
+  {
+    "email": "ti@ Creditas.com",
+    "name": "Creditas",
+    "company": "Creditas (Brazil lending)",
+    "role": "TI",
+    "personal_note": "Lending. Infra TI.",
+    "motivo": "latam enterprise creditas"
+  },
+  {
+    "email": "contact@simulator.com",
+    "name": "Simulator",
+    "company": "Simulator (Brazil fintech)",
+    "role": "Contato",
+    "personal_note": "Fintech. Infra TI.",
+    "motivo": "latam enterprise simulator"
+  },
+  {
+    "email": "ti@ xp.com",
+    "name": "XP Investimentos",
+    "company": "XP (Brazil wealth)",
+    "role": "TI",
+    "personal_note": "Wealth management. Infra TI.",
+    "motivo": "latam enterprise xp"
+  },
+  {
+    "email": "contact@vmgi.com",
+    "name": "VMG Investments",
+    "company": "VMG (Brazil asset mgmt)",
+    "role": "Contato",
+    "personal_note": "Asset management. Infra TI.",
+    "motivo": "latam enterprise vmgi"
+  },
+  {
+    "email": "ti@firstnationalbank.co.za",
+    "name": "First National Bank",
+    "company": "FNB (FirstRand)",
+    "role": "TI",
+    "personal_note": "South African banking. Infra TI.",
+    "motivo": "africa enterprise fnb"
+  },
+  {
+    "email": "contact@capitecbank.co.za",
+    "name": "Capitec Bank",
+    "company": "Capitec",
+    "role": "Contato",
+    "personal_note": "SA digital banking. Infra TI.",
+    "motivo": "africa enterprise capitec"
+  },
+  {
+    "email": "ti@ standardbank.com",
+    "name": "Standard Bank",
+    "company": "Standard Bank",
+    "role": "TI",
+    "personal_note": "SA banking. Infra TI.",
+    "motivo": "africa enterprise standardbank"
+  },
+  {
+    "email": "contact@ absa.co.za",
+    "name": "ABSA Bank",
+    "company": "ABSA (Barclays SA)",
+    "role": "Contato",
+    "personal_note": "SA banking. Infra TI.",
+    "motivo": "africa enterprise absa"
+  },
+  {
+    "email": "ti@nmb.co.zw",
+    "name": "NMB Bank",
+    "company": "NMB Bank (Zimbabwe)",
+    "role": "TI",
+    "personal_note": "Zimbabwe banking. Infra TI.",
+    "motivo": "africa enterprise nmb"
+  }
+]

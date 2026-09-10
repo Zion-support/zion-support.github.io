@@ -1,0 +1,362 @@
+[
+  {
+    "email": "ti@nubank.com.br",
+    "name": "Nubank",
+    "company": "Nubank",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "br fintech nubank"
+  },
+  {
+    "email": "contact@mercadopago.com.br",
+    "name": "Mercado Pago",
+    "company": "Mercado Libre",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "br payments mercadopago"
+  },
+  {
+    "email": "ti@neobanco.com.br",
+    "name": "Neobanco",
+    "company": "Neobanco",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "br neobanco"
+  },
+  {
+    "email": "contact@agibank.com.br",
+    "name": "AgiBank",
+    "company": "AgiBank",
+    "role": "Contato",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "br agibank"
+  },
+  {
+    "email": "ti@itau.com",
+    "name": "Itau",
+    "company": "Itau",
+    "role": "TI",
+    "personal_note": "Banking. Infra TI.",
+    "motivo": "br banking itau"
+  },
+  {
+    "email": "contact@landb.com",
+    "name": "Landb",
+    "company": "Landb",
+    "role": "Contato",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "mx fintech landb"
+  },
+  {
+    "email": "ti@resto.com",
+    "name": "Resto",
+    "company": "Resto",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "mx fintech resto"
+  },
+  {
+    "email": "contact@clip.com",
+    "name": "Clip",
+    "company": "Clip",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "mx payments clip"
+  },
+  {
+    "email": "ti@klaro.com",
+    "name": "Klaro",
+    "company": "Klaro",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "mx fintech klaro"
+  },
+  {
+    "email": "contact@finanzano.mx",
+    "name": "Finanzano",
+    "company": "Finanzano",
+    "role": "Contato",
+    "personal_note": "Personal finance. Infra TI.",
+    "motivo": "mx fintech finanzano"
+  },
+  {
+    "email": "ti@nequi.com",
+    "name": "Nequi",
+    "company": "Nequi",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "co fintech nequi"
+  },
+  {
+    "email": "contact@aventus.com",
+    "name": "Aventus",
+    "company": "Aventus",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "co payments aventus"
+  },
+  {
+    "email": "ti@plataforma10.com",
+    "name": "Plataforma 10",
+    "company": "Plataforma 10",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "co fintech p10"
+  },
+  {
+    "email": "contact@rutas.com",
+    "name": "Rutas",
+    "company": "Rutas",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "co payments rutas"
+  },
+  {
+    "email": "ti@fintech.co",
+    "name": "Fintech Colombia",
+    "company": "Fintech Colombia",
+    "role": "TI",
+    "personal_note": "Fintech platform. Infra TI.",
+    "motivo": "co fintech platform"
+  },
+  {
+    "email": "contact@chilefintech.cl",
+    "name": "ChileFinTech",
+    "company": "ChileFinTech Association",
+    "role": "Contato",
+    "personal_note": "FinTech Association. Infra TI.",
+    "motivo": "cl fintech assoc"
+  },
+  {
+    "email": "ti@linea.com",
+    "name": "Línea",
+    "company": "Línea",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "cl fintech linea"
+  },
+  {
+    "email": "contact@plata.cl",
+    "name": "Plata",
+    "company": "Plata",
+    "role": "Contato",
+    "personal_note": "Digital payments. Infra TI.",
+    "motivo": "cl payments plata"
+  },
+  {
+    "email": "ti@zebratech.cl",
+    "name": "Zebratech",
+    "company": "Zebratech",
+    "role": "TI",
+    "personal_note": "Fintech tech. Infra TI.",
+    "motivo": "cl fintech zebratech"
+  },
+  {
+    "email": "contact@chilepagos.cl",
+    "name": "ChilePagos",
+    "company": "ChilePagos",
+    "role": "Contato",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "cl payment gateway"
+  },
+  {
+    "email": "ti@mercadolibre.com",
+    "name": "Mercado Libre",
+    "company": "Mercado Libre",
+    "role": "TI",
+    "personal_note": "E-commerce & fintech. Infra TI.",
+    "motivo": "ar ecommerce mercadolibre"
+  },
+  {
+    "email": "contact@nuula.com",
+    "name": "Nuula",
+    "company": "Nuula",
+    "role": "Contato",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "ar fintech nuula"
+  },
+  {
+    "email": "ti@gem.com",
+    "name": "GEM",
+    "company": "GEM",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "ar fintech gem"
+  },
+  {
+    "email": "contact@itba.com",
+    "name": "ITBA",
+    "company": "ITBA (Instituto Tecnologico)",
+    "role": "Contato",
+    "personal_note": "Tech institute. Infra TI.",
+    "motivo": "ar tech institute"
+  },
+  {
+    "email": "ti@argentina fintech.ar",
+    "name": "Argentina Fintech",
+    "company": "Argentina Fintech Association",
+    "role": "TI",
+    "personal_note": "Fintech Assoc. Infra TI.",
+    "motivo": "ar fintech assoc"
+  },
+  {
+    "email": "contact@zi.pi",
+    "name": "Zi Pi",
+    "company": "Zi Pi",
+    "role": "Contato",
+    "personal_note": "Health data platform. Infra TI.",
+    "motivo": "latam healthtech zipi"
+  },
+  {
+    "email": "ti@va.ai",
+    "name": "Vital Arts",
+    "company": "Vital Arts",
+    "role": "TI",
+    "personal_note": "Healthtech platform. Infra TI.",
+    "motivo": "latam healthtech vitalarts"
+  },
+  {
+    "email": "contact@biocut.com",
+    "name": "BioCut",
+    "company": "BioCut",
+    "role": "Contato",
+    "personal_note": "Health biotech. Infra TI.",
+    "motivo": "latam healthtech biocut"
+  },
+  {
+    "email": "ti@genome.cl",
+    "name": "Genome Chile",
+    "company": "Genome Chile",
+    "role": "TI",
+    "personal_note": "Genomics. Infra TI.",
+    "motivo": "latam healthtech genomics"
+  },
+  {
+    "email": "contact@la térreas.com",
+    "name": "La Térreas",
+    "company": "La Térreas (Health)",
+    "role": "Contato",
+    "personal_note": "Health platform. Infra TI.",
+    "motivo": "latam health la terreas"
+  },
+  {
+    "email": "ti@genomica.com.br",
+    "name": "Genômica",
+    "company": "Genômica (Brazil)",
+    "role": "TI",
+    "personal_note": "Genomics Brazil. Infra TI.",
+    "motivo": "br healthtech genomicas"
+  },
+  {
+    "email": "contact@saude.ai",
+    "name": "Saúde.ai",
+    "company": "Saúde.ai",
+    "role": "Contato",
+    "personal_note": "Health AI platform. Infra TI.",
+    "motivo": "br health ai saude"
+  },
+  {
+    "email": "ti@biotrack.com",
+    "name": "BioTrack",
+    "company": "BioTrack",
+    "role": "TI",
+    "personal_note": "Biotech tracking. Infra TI.",
+    "motivo": "latam biotech biotrack"
+  },
+  {
+    "email": "contact@biolink.com",
+    "name": "BioLink",
+    "company": "BioLink",
+    "role": "Contato",
+    "personal_note": "Health biotech. Infra TI.",
+    "motivo": "latam biotech biolink"
+  },
+  {
+    "email": "ti@genome.mx",
+    "name": "Genomica Mexico",
+    "company": "Genomica Mexico",
+    "role": "TI",
+    "personal_note": "Genomics Mexico. Infra TI.",
+    "motivo": "mx healthtech genomics"
+  },
+  {
+    "email": "ti@seguros.chile",
+    "name": "Seguros Chile",
+    "company": "Seguros Chile",
+    "role": "TI",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "cl insurtech seguros"
+  },
+  {
+    "email": "contact@aseguramos.com",
+    "name": "Aseguramos",
+    "company": "Aseguramos",
+    "role": "Contato",
+    "personal_note": "Insurance platform. Infra TI.",
+    "motivo": "ar insurtech aseguramos"
+  },
+  {
+    "email": "ti@insurance.mx",
+    "name": "Insurance Mexico",
+    "company": "Insurance Mexico",
+    "role": "TI",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "mx insurtech"
+  },
+  {
+    "email": "contact@seguros.col",
+    "name": "Seguros Colombia",
+    "company": "Seguros Colombia",
+    "role": "Contato",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "co insurtech seguros col"
+  },
+  {
+    "email": "ti@somos.seguros",
+    "name": "Somos Seguros",
+    "company": "Somos Seguros",
+    "role": "TI",
+    "personal_note": "InsurTech platform. Infra TI.",
+    "motivo": "br insurtech somos"
+  },
+  {
+    "email": "contact@kairos.insurance",
+    "name": "Kairos Insurance",
+    "company": "Kairos Insurance",
+    "role": "Contato",
+    "personal_note": "InsurTech. Infra TI.",
+    "motivo": "insurtech kairos"
+  },
+  {
+    "email": "ti@everlife.com",
+    "name": "Everlife",
+    "company": "Everlife Insurance",
+    "role": "TI",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "insurtech everlife"
+  },
+  {
+    "email": "contact@assur.ai",
+    "name": "Assur.ai",
+    "company": "Assur.ai",
+    "role": "Contato",
+    "personal_note": "InsurTech AI. Infra TI.",
+    "motivo": "insurtech assurai"
+  },
+  {
+    "email": "ti@ Lemonade.com",
+    "name": "Lemonade",
+    "company": "Lemonade",
+    "role": "TI",
+    "personal_note": "InsurTech. Infra TI.",
+    "motivo": "insurtech lemonade"
+  },
+  {
+    "email": "contact@ alice.com",
+    "name": "Alice",
+    "company": "Alice (InsurTech)",
+    "role": "Contato",
+    "personal_note": "InsurTech benefits. Infra TI.",
+    "motivo": "insurtech alice"
+  }
+]

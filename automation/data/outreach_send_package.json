@@ -1,0 +1,558 @@
+{
+  "ready_to_send": true,
+  "source": "outreach_send_queue_verified.json",
+  "leads_count": 33,
+  "leads": [
+    {
+      "empresa": "360 Smart Networks",
+      "email": "smartnetworks@360smartnetworks.com",
+      "domain": "360smartnetworks.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para 360 Smart Networks",
+      "body": "Olá, analisei o perfil da 360 Smart Networks e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "smartnetworks@360smartnetworks.com",
+      "verification": {
+        "score": 1,
+        "accepted": true,
+        "reasons": [
+          "no name-match"
+        ]
+      }
+    },
+    {
+      "empresa": "Advanced IT (Chicago SMB focus)",
+      "email": "advancedfocus@advancedit.net",
+      "domain": "advancedit.net",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Advanced IT (Chicago SMB focus)",
+      "body": "Olá, analisei o perfil da Advanced IT (Chicago SMB focus) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "advancedfocus@advancedit.net",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Allusivedigital",
+      "email": "allusivedigitalallusivedigital@allusivedigital.com",
+      "domain": "allusivedigital.com",
+      "priority": "alta",
+      "service": "AI Automation",
+      "subject": "Automação com IA para Allusivedigital",
+      "body": "Olá, analisei o perfil da Allusivedigital e identifiquei uma oportunidade em AI Automation.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Criar chatbots e assistentes de IA para atendimento e operações\n• Automatizar pipelines de dados e análises com IA generativa\n• Implementar RAG e agentes para conhecimento\n• Integrar IA em fluxos existentes sem refatoração completa\n\nPosso agendar uma conversa rápida.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "allusivedigitalallusivedigital@allusivedigital.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Apptunix",
+      "email": "apptunixapptunix@apptunix.com",
+      "domain": "apptunix.com",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Apptunix",
+      "body": "Olá, analisei o perfil da Apptunix e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "apptunixapptunix@apptunix.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Beep Saúde",
+      "email": "de@beep.saude.com.br",
+      "domain": "beep.saude.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Beep Saúde",
+      "body": "Olá, analisei o perfil da Beep Saúde e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "beepsaúde@beep.saude.com.br",
+      "verification": {
+        "score": 1,
+        "accepted": true,
+        "reasons": [
+          "no name-match"
+        ]
+      }
+    },
+    {
+      "empresa": "Bliss Health",
+      "email": "blisshealth@bliss.health",
+      "domain": "bliss.health",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Bliss Health",
+      "body": "Olá, analisei o perfil da Bliss Health e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "blisshealth@bliss.health",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Brite-Star",
+      "email": "britestar@britestar.com",
+      "domain": "britestar.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Brite-Star",
+      "body": "Olá, analisei o perfil da Brite-Star e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "britestar@britestar.com",
+      "verification": {
+        "score": 1,
+        "accepted": true,
+        "reasons": [
+          "no name-match"
+        ]
+      }
+    },
+    {
+      "empresa": "Conta Azul",
+      "email": "contaazul@contaazul.com",
+      "domain": "contaazul.com",
+      "priority": "alta",
+      "service": "AI Automation",
+      "subject": "Automação com IA para Conta Azul",
+      "body": "Olá, analisei o perfil da Conta Azul e identifiquei uma oportunidade em AI Automation.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Criar chatbots e assistentes de IA para atendimento e operações\n• Automatizar pipelines de dados e análises com IA generativa\n• Implementar RAG e agentes para conhecimento\n• Integrar IA em fluxos existentes sem refatoração completa\n\nPosso agendar uma conversa rápida.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "contaazul@contaazul.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Darwin AI (getdarwin.ai)",
+      "email": "darwingetdarwinai@getdarwin.ai",
+      "domain": "getdarwin.ai",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Darwin AI (getdarwin.ai)",
+      "body": "Olá, analisei o perfil da Darwin AI (getdarwin.ai) e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "darwingetdarwinai@getdarwin.ai",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "DoodleWeb",
+      "email": "doodlewebdoodleweb@doodleweb.io",
+      "domain": "doodleweb.io",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para DoodleWeb",
+      "body": "Olá, analisei o perfil da DoodleWeb e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "doodlewebdoodleweb@doodleweb.io",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Elenta Technology LLC",
+      "email": "elentallc@elenta.tech",
+      "domain": "elenta.tech",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Elenta Technology LLC",
+      "body": "Olá, analisei o perfil da Elenta Technology LLC e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "elentallc@elenta.tech",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Entech (Cloud Migration for Mid-Sized Firms)",
+      "email": "entechfirms@entechus.com",
+      "domain": "entechus.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Entech (Cloud Migration for Mid-Sized Firms)",
+      "body": "Olá, analisei o perfil da Entech (Cloud Migration for Mid-Sized Firms) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "entechfirms@entechus.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Enter (getenter.ai)",
+      "email": "entergetenterai@getenter.ai",
+      "domain": "getenter.ai",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Enter (getenter.ai)",
+      "body": "Olá, analisei o perfil da Enter (getenter.ai) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "entergetenterai@getenter.ai",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Frontline Managed Services",
+      "email": "frontlineservices@frontlinemsp.com",
+      "domain": "frontlinemsp.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Frontline Managed Services",
+      "body": "Olá, analisei o perfil da Frontline Managed Services e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "frontlineservices@frontlinemsp.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Guiss Consulting",
+      "email": "guissconsulting@guiss.com.br",
+      "domain": "guiss.com.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Guiss Consulting",
+      "body": "Olá, analisei o perfil da Guiss Consulting e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "guissconsulting@guiss.com.br",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "IRS - Small Business IT/ Cloud BPA",
+      "email": "irsbpa@ostglobalsolutions.com",
+      "domain": "ostglobalsolutions.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para IRS - Small Business IT/ Cloud BPA",
+      "body": "Olá, analisei o perfil da IRS - Small Business IT/ Cloud BPA e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "irsbpa@ostglobalsolutions.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Integris (Premium National MSP)",
+      "email": "integrismsp@integris.com",
+      "domain": "integris.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Integris (Premium National MSP)",
+      "body": "Olá, analisei o perfil da Integris (Premium National MSP) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "integrismsp@integris.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Kahuna Labs (Google Startup Cloud AI Accelerator)",
+      "email": "kahunaaccelerator@kahunalabs.com",
+      "domain": "kahunalabs.com",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Kahuna Labs (Google Startup Cloud AI Accelerator)",
+      "body": "Olá, analisei o perfil da Kahuna Labs (Google Startup Cloud AI Accelerator) e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "kahunaaccelerator@kahunalabs.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Krishang Technolab",
+      "email": "krishangtechnolab@krishangtechnolab.com",
+      "domain": "krishangtechnolab.com",
+      "priority": "alta",
+      "service": "AI Automation",
+      "subject": "Automação com IA para Krishang Technolab",
+      "body": "Olá, analisei o perfil da Krishang Technolab e identifiquei uma oportunidade em AI Automation.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Criar chatbots e assistentes de IA para atendimento e operações\n• Automatizar pipelines de dados e análises com IA generativa\n• Implementar RAG e agentes para conhecimento\n• Integrar IA em fluxos existentes sem refatoração completa\n\nPosso agendar uma conversa rápida.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "krishangtechnolab@krishangtechnolab.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "MIS Solutions",
+      "email": "missolutions@mis-solutions.com",
+      "domain": "mis-solutions.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para MIS Solutions",
+      "body": "Olá, analisei o perfil da MIS Solutions e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "missolutions@mis-solutions.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Natura",
+      "email": "naturanatura@natura.com",
+      "domain": "natura.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Natura",
+      "body": "Olá, analisei o perfil da Natura e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "naturanatura@natura.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Origen Tech",
+      "email": "origentech@origentech.com",
+      "domain": "origentech.com",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Origen Tech",
+      "body": "Olá, analisei o perfil da Origen Tech e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "origentech@origentech.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Prodam SP (Governo do Estado)",
+      "email": "prodamestado@prodam.sp.gov.br",
+      "domain": "prodam.sp.gov.br",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Prodam SP (Governo do Estado)",
+      "body": "Olá, analisei o perfil da Prodam SP (Governo do Estado) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "prodamestado@prodam.sp.gov.br",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "ProviDyn",
+      "email": "providynprovidyn@providyn.com",
+      "domain": "providyn.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para ProviDyn",
+      "body": "Olá, analisei o perfil da ProviDyn e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "providynprovidyn@providyn.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Radix",
+      "email": "radixradix@radix.com.br",
+      "domain": "radix.com.br",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Radix",
+      "body": "Olá, analisei o perfil da Radix e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "radixradix@radix.com.br",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Rio AI City Project / Prefeitura RJ",
+      "email": "riorj@rio.rj.gov.br",
+      "domain": "rio.rj.gov.br",
+      "priority": "alta",
+      "service": "Cloud Cost",
+      "subject": "Otimização de custos cloud para Rio AI City Project / Prefeitura RJ",
+      "body": "Olá, analisei o perfil da Rio AI City Project / Prefeitura RJ e identifiquei uma oportunidade em Cloud Cost Optimization.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Auditar e otimizar instâncias, armazenamento e data transfer\n• Implementar FinOps com dashboards e alertas de custo\n• Planejar migração com redução de 20-40% nos custos\n• Negociar com provedores e reserved instances\n\nSe gestão de custos cloud é uma dor atual, podemos conversar rapidamente.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "riorj@rio.rj.gov.br",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Stone (Pagamentos)",
+      "email": "stonepagamentos@stone.com.br",
+      "domain": "stone.com.br",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Stone (Pagamentos)",
+      "body": "Olá, analisei o perfil da Stone (Pagamentos) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "stonepagamentos@stone.com.br",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Taskip",
+      "email": "taskiptaskip@taskip.net",
+      "domain": "taskip.net",
+      "priority": "alta",
+      "service": "AI Automation",
+      "subject": "Automação com IA para Taskip",
+      "body": "Olá, analisei o perfil da Taskip e identifiquei uma oportunidade em AI Automation.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Criar chatbots e assistentes de IA para atendimento e operações\n• Automatizar pipelines de dados e análises com IA generativa\n• Implementar RAG e agentes para conhecimento\n• Integrar IA em fluxos existentes sem refatoração completa\n\nPosso agendar uma conversa rápida.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "taskiptaskip@taskip.net",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Veristor",
+      "email": "veristorveristor@veristor.com",
+      "domain": "veristor.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para Veristor",
+      "body": "Olá, analisei o perfil da Veristor e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "veristorveristor@veristor.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "WheelHouse IT (Top-100 MSP)",
+      "email": "wheelhousemsp@wheelhouseit.com",
+      "domain": "wheelhouseit.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para WheelHouse IT (Top-100 MSP)",
+      "body": "Olá, analisei o perfil da WheelHouse IT (Top-100 MSP) e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "wheelhousemsp@wheelhouseit.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Wildlife Studios",
+      "email": "wildlifestudios@wildlifestudios.com.br",
+      "domain": "wildlifestudios.com.br",
+      "priority": "alta",
+      "service": "AI Automation",
+      "subject": "Automação com IA para Wildlife Studios",
+      "body": "Olá, analisei o perfil da Wildlife Studios e identifiquei uma oportunidade em AI Automation.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Criar chatbots e assistentes de IA para atendimento e operações\n• Automatizar pipelines de dados e análises com IA generativa\n• Implementar RAG e agentes para conhecimento\n• Integrar IA em fluxos existentes sem refatoração completa\n\nPosso agendar uma conversa rápida.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "wildlifestudios@wildlifestudios.com.br",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "Xovak Studio",
+      "email": "xovakstudio@xovakstudio.com",
+      "domain": "xovakstudio.com",
+      "priority": "alta",
+      "service": "AI Automation",
+      "subject": "Automação com IA para Xovak Studio",
+      "body": "Olá, analisei o perfil da Xovak Studio e identifiquei uma oportunidade em AI Automation.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Criar chatbots e assistentes de IA para atendimento e operações\n• Automatizar pipelines de dados e análises com IA generativa\n• Implementar RAG e agentes para conhecimento\n• Integrar IA em fluxos existentes sem refatoração completa\n\nPosso agendar uma conversa rápida.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "xovakstudio@xovakstudio.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    },
+    {
+      "empresa": "trueITpros",
+      "email": "trueitprostrueitpros@trueitpros.com",
+      "domain": "trueitpros.com",
+      "priority": "alta",
+      "service": "Cybersecurity",
+      "subject": "Proteção cibernética para trueITpros",
+      "body": "Olá, analisei o perfil da trueITpros e identifiquei uma oportunidade em Cybersecurity.\n\nA Zion Tech Group ajuda organizações como a sua a:\n• Implementar monitoramento de ameaças 24/7 e resposta a incidentes\n• Cumprir frameworks como ISO 27001, NIST e LGPD\n• Proteger dados sensíveis com arquiteturas zero-trust\n• Reduzir riscos com auditorias e treinamentos\n\nPosso agendar uma conversa rápida para entender suas prioridades.\n\nAtenciosamente,\n Kleber | Zion Tech Group\n kleber@ziontechgroup.com",
+      "contact_raw": "trueitprostrueitpros@trueitpros.com",
+      "verification": {
+        "score": 2,
+        "accepted": true,
+        "reasons": []
+      }
+    }
+  ],
+  "summary": {
+    "total": 34,
+    "accepted": 33,
+    "rejected": 1,
+    "service_distribution": {
+      "Cybersecurity": 19,
+      "AI Automation": 7,
+      "Cloud Cost": 8
+    },
+    "domain_distribution": {
+      "360smartnetworks.com": 1,
+      "advancedit.net": 1,
+      "allusivedigital.com": 1,
+      "apptunix.com": 1,
+      "beep.saude.com.br": 1,
+      "bliss.health": 1,
+      "britestar.com": 1,
+      "contaazul.com": 1,
+      "getdarwin.ai": 1,
+      "doodleweb.io": 1,
+      "elenta.tech": 1,
+      "entechus.com": 1,
+      "getenter.ai": 1,
+      "frontlinemsp.com": 1,
+      "guiss.com.br": 1,
+      "ostglobalsolutions.com": 1,
+      "integris.com": 1,
+      "kahunalabs.com": 1,
+      "krishangtechnolab.com": 1,
+      "pricelabs.co": 1,
+      "mis-solutions.com": 1,
+      "natura.com": 1,
+      "origentech.com": 1,
+      "prodam.sp.gov.br": 1,
+      "providyn.com": 1,
+      "radix.com.br": 1,
+      "rio.rj.gov.br": 1,
+      "stone.com.br": 1,
+      "taskip.net": 1,
+      "veristor.com": 1,
+      "wheelhouseit.com": 1,
+      "wildlifestudios.com.br": 1,
+      "xovakstudio.com": 1,
+      "trueitpros.com": 1
+    },
+    "priority_distribution": {
+      "alta": 34
+    }
+  },
+  "generated_at": "2026-09-09T08:31:53.256071+00:00"
+}

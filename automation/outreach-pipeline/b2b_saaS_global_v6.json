@@ -1,0 +1,402 @@
+[
+  {
+    "email": "contact@zoho.com",
+    "name": "Zoho",
+    "company": "Zoho",
+    "role": "Contato",
+    "personal_note": "SaaS suite. Infra de TI.",
+    "motivo": "saaS zoho"
+  },
+  {
+    "email": "ti@freshworks.com",
+    "name": "Freshworks",
+    "company": "Freshworks",
+    "role": "TI",
+    "personal_note": "SaaS CRM. Infra de TI.",
+    "motivo": "saaS freshworks"
+  },
+  {
+    "email": "contact@hubspot.com",
+    "name": "HubSpot",
+    "company": "HubSpot",
+    "role": "Contato",
+    "personal_note": "CRM SaaS. Infra de TI.",
+    "motivo": "saaS hubspot"
+  },
+  {
+    "email": "ti@salesforce.com",
+    "name": "Salesforce",
+    "company": "Salesforce",
+    "role": "TI",
+    "personal_note": "CRM SaaS. Infra de TI.",
+    "motivo": "saaS salesforce"
+  },
+  {
+    "email": "contact@zendesk.com",
+    "name": "Zendesk",
+    "company": "Zendesk",
+    "role": "Contato",
+    "personal_note": "Support SaaS. Infra de TI.",
+    "motivo": "saaS zendesk"
+  },
+  {
+    "email": "ti@atlassian.com",
+    "name": "Atlassian",
+    "company": "Atlassian",
+    "role": "TI",
+    "personal_note": "Collaboration SaaS. Infra de TI.",
+    "motivo": "saaS atlassian"
+  },
+  {
+    "email": "contact@mailchimp.com",
+    "name": "Mailchimp",
+    "company": "Mailchimp",
+    "role": "Contato",
+    "personal_note": "Email marketing. Infra de TI.",
+    "motivo": "saaS mailchimp"
+  },
+  {
+    "email": "ti@sendgrid.com",
+    "name": "SendGrid",
+    "company": "SendGrid",
+    "role": "TI",
+    "personal_note": "Email API. Infra de TI.",
+    "motivo": "saaS sendgrid"
+  },
+  {
+    "email": "contact@activecampaign.com",
+    "name": "ActiveCampaign",
+    "company": "ActiveCampaign",
+    "role": "Contato",
+    "personal_note": "Marketing automation. Infra de TI.",
+    "motivo": "saaS activecampaign"
+  },
+  {
+    "email": "ti@klaviyo.com",
+    "name": "Klaviyo",
+    "company": "Klaviyo",
+    "role": "TI",
+    "personal_note": "E-commerce marketing. Infra de TI.",
+    "motivo": "saaS klaviyo"
+  },
+  {
+    "email": "contact@intercom.com",
+    "name": "Intercom",
+    "company": "Intercom",
+    "role": "Contato",
+    "personal_note": "Customer messaging. Infra de TI.",
+    "motivo": "saaS intercom"
+  },
+  {
+    "email": "ti@help scout.com",
+    "name": "Help Scout",
+    "company": "Help Scout",
+    "role": "TI",
+    "personal_note": "Support SaaS. Infra de TI.",
+    "motivo": "saaS helps scout"
+  },
+  {
+    "email": "contact@helpjuice.com",
+    "name": "HelpJuice",
+    "company": "HelpJuice",
+    "role": "Contato",
+    "personal_note": "Knowledge base. Infra de TI.",
+    "motivo": "saaS helpjuice"
+  },
+  {
+    "email": "ti@document360.com",
+    "name": "Document360",
+    "company": "Document360",
+    "role": "TI",
+    "personal_note": "Knowledge base. Infra de TI.",
+    "motivo": "saaS doc360"
+  },
+  {
+    "email": "contact@notion.so",
+    "name": "Notion",
+    "company": "Notion",
+    "role": "Contato",
+    "personal_note": "Productivity SaaS. Infra de TI.",
+    "motivo": "saaS notion"
+  },
+  {
+    "email": "ti@slack.com",
+    "name": "Slack",
+    "company": "Slack",
+    "role": "TI",
+    "personal_note": "Collaboration. Infra de TI.",
+    "motivo": "saaS slack"
+  },
+  {
+    "email": "contact@teams.com",
+    "name": "Teams",
+    "company": "Teams",
+    "role": "Contato",
+    "personal_note": "Collaboration. Infra de TI.",
+    "motivo": "saaS teams"
+  },
+  {
+    "email": "ti@asana.com",
+    "name": "Asana",
+    "company": "Asana",
+    "role": "TI",
+    "personal_note": "Project management. Infra de TI.",
+    "motivo": "saaS asana"
+  },
+  {
+    "email": "contact@trello.com",
+    "name": "Trello",
+    "company": "Trello",
+    "role": "Contato",
+    "personal_note": "Project management. Infra de TI.",
+    "motivo": "saaS trello"
+  },
+  {
+    "email": "ti@monday.com",
+    "name": "Monday",
+    "company": "Monday",
+    "role": "TI",
+    "personal_note": "Work OS. Infra de TI.",
+    "motivo": "saaS monday"
+  },
+  {
+    "email": "contact@clickup.com",
+    "name": "ClickUp",
+    "company": "ClickUp",
+    "role": "Contato",
+    "personal_note": "Productivity. Infra de TI.",
+    "motivo": "saaS clickup"
+  },
+  {
+    "email": "ti@wrike.com",
+    "name": "Wrike",
+    "company": "Wrike",
+    "role": "TI",
+    "personal_note": "Project management. Infra de TI.",
+    "motivo": "saaS wrike"
+  },
+  {
+    "email": "contact@basecamp.com",
+    "name": "Basecamp",
+    "company": "Basecamp",
+    "role": "Contato",
+    "personal_note": "Project management. Infra de TI.",
+    "motivo": "saaS basecamp"
+  },
+  {
+    "email": "ti@jira.com",
+    "name": "Jira",
+    "company": "Jira",
+    "role": "TI",
+    "personal_note": "Issue tracking. Infra de TI.",
+    "motivo": "saaS jira"
+  },
+  {
+    "email": "contact@confluence.com",
+    "name": "Confluence",
+    "company": "Confluence",
+    "role": "Contato",
+    "personal_note": "Collaboration. Infra de TI.",
+    "motivo": "saaS confluence"
+  },
+  {
+    "email": "ti@github.com",
+    "name": "GitHub",
+    "company": "GitHub",
+    "role": "TI",
+    "personal_note": "Dev platform. Infra de TI.",
+    "motivo": "devops github"
+  },
+  {
+    "email": "contact@gitlab.com",
+    "name": "GitLab",
+    "company": "GitLab",
+    "role": "Contato",
+    "personal_note": "Dev platform. Infra de TI.",
+    "motivo": "devops gitlab"
+  },
+  {
+    "email": "ti@bitbucket.com",
+    "name": "Bitbucket",
+    "company": "Bitbucket",
+    "role": "TI",
+    "personal_note": "Dev platform. Infra de TI.",
+    "motivo": "devops bitbucket"
+  },
+  {
+    "email": "contact@jira.com",
+    "name": "Jira",
+    "company": "Jira",
+    "role": "Contato",
+    "personal_note": "Issue tracking. Infra de TI.",
+    "motivo": "devops jira"
+  },
+  {
+    "email": "ti@circleci.com",
+    "name": "CircleCI",
+    "company": "CircleCI",
+    "role": "TI",
+    "personal_note": "CI/CD. Infra de TI.",
+    "motivo": "devops circleci"
+  },
+  {
+    "email": "contact@travis-ci.com",
+    "name": "Travis CI",
+    "company": "Travis CI",
+    "role": "Contato",
+    "personal_note": "CI/CD. Infra de TI.",
+    "motivo": "devops travisci"
+  },
+  {
+    "email": "ti@jenkins.io",
+    "name": "Jenkins",
+    "company": "Jenkins",
+    "role": "TI",
+    "personal_note": "CI/CD. Infra de TI.",
+    "motivo": "devops jenkins"
+  },
+  {
+    "email": "contact@docker.com",
+    "name": "Docker",
+    "company": "Docker",
+    "role": "Contato",
+    "personal_note": "Container. Infra de TI.",
+    "motivo": "devops docker"
+  },
+  {
+    "email": "ti@kubernetes.io",
+    "name": "Kubernetes",
+    "company": "Kubernetes",
+    "role": "TI",
+    "personal_note": "Orchestration. Infra de TI.",
+    "motivo": "devops kubernetes"
+  },
+  {
+    "email": "contact@terraform.io",
+    "name": "Terraform",
+    "company": "Terraform",
+    "role": "Contato",
+    "personal_note": "IaC. Infra de TI.",
+    "motivo": "devops terraform"
+  },
+  {
+    "email": "ti@ansible.com",
+    "name": "Ansible",
+    "company": "Ansible",
+    "role": "TI",
+    "personal_note": "Automation. Infra de TI.",
+    "motivo": "devops ansible"
+  },
+  {
+    "email": "contact@chef.io",
+    "name": "Chef",
+    "company": "Chef",
+    "role": "Contato",
+    "personal_note": "Automation. Infra de TI.",
+    "motivo": "devops chef"
+  },
+  {
+    "email": "ti@puppet.com",
+    "name": "Puppet",
+    "company": "Puppet",
+    "role": "TI",
+    "personal_note": "Automation. Infra de TI.",
+    "motivo": "devops puppet"
+  },
+  {
+    "email": "contact@saltstack.com",
+    "name": "SaltStack",
+    "company": "SaltStack",
+    "role": "Contato",
+    "personal_note": "Automation. Infra de TI.",
+    "motivo": "devops saltstack"
+  },
+  {
+    "email": "ti@cloudformation.com",
+    "name": "CloudFormation",
+    "company": "CloudFormation",
+    "role": "TI",
+    "personal_note": "IaC. Infra de TI.",
+    "motivo": "devops cloudformation"
+  },
+  {
+    "email": "contact@datadog.com",
+    "name": "Datadog",
+    "company": "Datadog",
+    "role": "Contato",
+    "personal_note": "Monitoring. Infra de TI.",
+    "motivo": "monitoring datadog"
+  },
+  {
+    "email": "ti@newrelic.com",
+    "name": "New Relic",
+    "company": "New Relic",
+    "role": "TI",
+    "personal_note": "Observability. Infra de TI.",
+    "motivo": "monitoring newrelic"
+  },
+  {
+    "email": "contact@dynatrace.com",
+    "name": "Dynatrace",
+    "company": "Dynatrace",
+    "role": "Contato",
+    "personal_note": "Observability. Infra de TI.",
+    "motivo": "monitoring dynatrace"
+  },
+  {
+    "email": "ti@splunk.com",
+    "name": "Splunk",
+    "company": "Splunk",
+    "role": "TI",
+    "personal_note": "Observability. Infra de TI.",
+    "motivo": "monitoring splunk"
+  },
+  {
+    "email": "contact@elastic.co",
+    "name": "Elastic",
+    "company": "Elastic",
+    "role": "Contato",
+    "personal_note": "Observability. Infra de TI.",
+    "motivo": "monitoring elastic"
+  },
+  {
+    "email": "ti@grafana.com",
+    "name": "Grafana",
+    "company": "Grafana",
+    "role": "TI",
+    "personal_note": "Observability. Infra de TI.",
+    "motivo": "monitoring grafana"
+  },
+  {
+    "email": "contact@prometheus.io",
+    "name": "Prometheus",
+    "company": "Prometheus",
+    "role": "Contato",
+    "personal_note": "Monitoring. Infra de TI.",
+    "motivo": "monitoring prometheus"
+  },
+  {
+    "email": "ti@loki.com",
+    "name": "Loki",
+    "company": "Loki",
+    "role": "TI",
+    "personal_note": "Logging. Infra de TI.",
+    "motivo": "monitoring loki"
+  },
+  {
+    "email": "contact@tempo.com",
+    "name": "Tempo",
+    "company": "Tempo",
+    "role": "Contato",
+    "personal_note": "Tracing. Infra de TI.",
+    "motivo": "monitoring tempo"
+  },
+  {
+    "email": "ti@jaeger.com",
+    "name": "Jaeger",
+    "company": "Jaeger",
+    "role": "TI",
+    "personal_note": "Tracing. Infra de TI.",
+    "motivo": "monitoring jaeger"
+  }
+]

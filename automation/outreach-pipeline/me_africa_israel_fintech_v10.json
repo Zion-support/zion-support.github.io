@@ -1,0 +1,682 @@
+[
+  {
+    "email": "contact@tabby.com",
+    "name": "Tabby",
+    "company": "Tabby (Buy Now Pay Later)",
+    "role": "Contato",
+    "personal_note": "BNPL fintech. Infra TI.",
+    "motivo": "me fintech tabby"
+  },
+  {
+    "email": "ti@klarna.ae",
+    "name": "Klarna MEA",
+    "company": "Klarna",
+    "role": "TI",
+    "personal_note": "BNPL. Infra TI.",
+    "motivo": "me fintech klarna"
+  },
+  {
+    "email": "contact@stc pay.com",
+    "name": "STC Pay",
+    "company": "STC Pay (Saudi Telecom)",
+    "role": "Contato",
+    "personal_note": "Digital wallet. Infra TI.",
+    "motivo": "me fintech stc pay"
+  },
+  {
+    "email": "ti@benefit.com.bh",
+    "name": " BENEFIT",
+    "company": " BENEFIT (Bahrain)",
+    "role": "TI",
+    "personal_note": "Digital payments. Infra TI.",
+    "motivo": "me fintech benefit"
+  },
+  {
+    "email": "contact@mashreq neo.com",
+    "name": "Mashreq Neo",
+    "company": "Mashreq Bank",
+    "role": "Contato",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "me fintech mashreq"
+  },
+  {
+    "email": "ti@tamara.ae",
+    "name": "Tamara",
+    "company": "Tamara (BNPL)",
+    "role": "TI",
+    "personal_note": "BNPL. Infra TI.",
+    "motivo": "me bnpl tamara"
+  },
+  {
+    "email": "contact@lyrin.io",
+    "name": "Lyrin",
+    "company": "Lyrin (Fintech Infra)",
+    "role": "Contato",
+    "personal_note": "Fintech infra. Infra TI.",
+    "motivo": "me fintech lyrin"
+  },
+  {
+    "email": "ti@payTabs.com",
+    "name": "PayTabs",
+    "company": "PayTabs",
+    "role": "TI",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "me payments paytabs"
+  },
+  {
+    "email": "contact@payfort.com",
+    "name": "PayFort",
+    "company": "PayFort (Amazon)",
+    "role": "Contato",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "me payments payfort"
+  },
+  {
+    "email": "ti@checkout.com",
+    "name": "Checkout.com",
+    "company": "Checkout.com (Dubai office)",
+    "role": "TI",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "me payments checkout"
+  },
+  {
+    "email": "contact@qnb.com",
+    "name": "QNB",
+    "company": "Qatar National Bank",
+    "role": "Contato",
+    "personal_note": "Banking. Infra TI.",
+    "motivo": "me banking qnb"
+  },
+  {
+    "email": "ti@qslion.com",
+    "name": "Q-Seal",
+    "company": "Qatar Financial Centre",
+    "role": "TI",
+    "personal_note": "Digital signature. Infra TI.",
+    "motivo": "me fintech qseal"
+  },
+  {
+    "email": "contact@qfc.co",
+    "name": "QFC Authority",
+    "company": "Qatar Financial Centre",
+    "role": "Contato",
+    "personal_note": "Fintech hub. Infra TI.",
+    "motivo": "me fintech qfc"
+  },
+  {
+    "email": "ti@qlip.com",
+    "name": "Qlip",
+    "company": "Qlip (Saudi BNPL)",
+    "role": "TI",
+    "personal_note": "BNPL. Infra TI.",
+    "motivo": "me bnpl qlip"
+  },
+  {
+    "email": "contact@sarwa.com",
+    "name": "Sarwa",
+    "company": "Sarwa (Investment)",
+    "role": "Contato",
+    "personal_note": "Investment platform. Infra TI.",
+    "motivo": "me wealth sarwa"
+  },
+  {
+    "email": "ti@kwtbank.com",
+    "name": "National Bank of Kuwait",
+    "company": "NBK",
+    "role": "TI",
+    "personal_note": "Banking. Infra TI.",
+    "motivo": "me banking nbk"
+  },
+  {
+    "email": "contact@bankmuscat.com",
+    "name": "Bank Muscat",
+    "company": "Bank Muscat",
+    "role": "Contato",
+    "personal_note": "Banking. Infra TI.",
+    "motivo": "me banking bankmuscat"
+  },
+  {
+    "email": "ti@bankausterity.com",
+    "name": "Banka",
+    "company": "Banka (Kuwait)",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "me fintech banka"
+  },
+  {
+    "email": "contact@raisin.com",
+    "name": "Raisin (Kuwait)",
+    "company": "Raisin",
+    "role": "Contato",
+    "personal_note": "Savings platform. Infra TI.",
+    "motivo": "me fintech raisin"
+  },
+  {
+    "email": "ti@fintech kuwait.com",
+    "name": "Fintech Kuwait",
+    "company": "Fintech Association Kuwait",
+    "role": "TI",
+    "personal_note": "Fintech assoc. Infra TI.",
+    "motivo": "me fintech kuwait assoc"
+  },
+  {
+    "email": "contact@fawry.com",
+    "name": "Fawry",
+    "company": "Fawry (Egypt)",
+    "role": "Contato",
+    "personal_note": "Digital payments. Infra TI.",
+    "motivo": "me fintech fawry"
+  },
+  {
+    "email": "ti@paymob.com",
+    "name": "Paymob",
+    "company": "Paymob (Egypt)",
+    "role": "TI",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "me payments paymob"
+  },
+  {
+    "email": "contact@ayden.com",
+    "name": "PaySky",
+    "company": "PaySky (Egypt)",
+    "role": "Contato",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "me payments paysky"
+  },
+  {
+    "email": "ti@monified.com",
+    "name": "Monified",
+    "company": "Monified (Fintech)",
+    "role": "TI",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "me fintech monified"
+  },
+  {
+    "email": "contact@kenz.com",
+    "name": "Kenz",
+    "company": "Kenz (Egypt loyalty)",
+    "role": "Contato",
+    "personal_note": "Loyalty & payments. Infra TI.",
+    "motivo": "me fintech kenz"
+  },
+  {
+    "email": "ti@paymee.com",
+    "name": "Paymee",
+    "company": "Paymee (Morocco)",
+    "role": "TI",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "me payments paymee"
+  },
+  {
+    "email": "contact@limamoney.com",
+    "name": "Lima Money",
+    "company": "Lima Money (Morocco)",
+    "role": "Contato",
+    "personal_note": "Digital banking. Infra TI.",
+    "motivo": "me fintech lima"
+  },
+  {
+    "email": "ti@amana.com",
+    "name": "Amana",
+    "company": "Amana (Morocco fintech)",
+    "role": "TI",
+    "personal_note": "Fintech. Infra TI.",
+    "motivo": "me fintech amana"
+  },
+  {
+    "email": "contact@instaPay.ma",
+    "name": "InstaPay",
+    "company": "InstaPay (Morocco)",
+    "role": "Contato",
+    "personal_note": "Mobile payments. Infra TI.",
+    "motivo": "me payments instapay"
+  },
+  {
+    "email": "ti@mobilepay.dz",
+    "name": "MobilePay Algeria",
+    "company": "MobilePay Algeria",
+    "role": "TI",
+    "personal_note": "Mobile payments. Infra TI.",
+    "motivo": "me payments mobilepay dz"
+  },
+  {
+    "email": "contact@flutterwave.com",
+    "name": "Flutterwave",
+    "company": "Flutterwave (Nigeria)",
+    "role": "Contato",
+    "personal_note": "Payments infrastructure. Infra TI.",
+    "motivo": "af fintech flutterwave"
+  },
+  {
+    "email": "ti@paystack.com",
+    "name": "Paystack",
+    "company": "Paystack (PayPal/Stripe)",
+    "role": "TI",
+    "personal_note": "Payments. Infra TI.",
+    "motivo": "af payments paystack"
+  },
+  {
+    "email": "contact@ Interswitch.com",
+    "name": "Interswitch",
+    "company": "Interswitch (Nigeria)",
+    "role": "Contato",
+    "personal_note": "Payment processing. Infra TI.",
+    "motivo": "af fintech interswitch"
+  },
+  {
+    "email": "ti@paydunya.com",
+    "name": "PayDunya",
+    "company": "PayDunya (Senegal)",
+    "role": "TI",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "af payments paydunya"
+  },
+  {
+    "email": "contact@thunes.com",
+    "name": "Thunes",
+    "company": "Thunes (Singapore/Dubai)",
+    "role": "Contato",
+    "personal_note": "Cross-border payments. Infra TI.",
+    "motivo": "af cross-border thunes"
+  },
+  {
+    "email": "ti@cellulant.com",
+    "name": "Cellulant",
+    "company": "Cellulant (Kenya/Nigeria)",
+    "role": "TI",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "af payments cellulant"
+  },
+  {
+    "email": "contact@mobilis.com",
+    "name": "Mobilis Mobile",
+    "company": "Mobilis (Cameroon)",
+    "role": "Contato",
+    "personal_note": "Mobile money. Infra TI.",
+    "motivo": "af payments mobilis"
+  },
+  {
+    "email": "ti@zapper.com",
+    "name": "Zapper",
+    "company": "Zapper (South Africa)",
+    "role": "TI",
+    "personal_note": "Payment app. Infra TI.",
+    "motivo": "af payments zapper"
+  },
+  {
+    "email": "contact@ozow.com",
+    "name": "Ozow",
+    "company": "Ozow (South Africa)",
+    "role": "Contato",
+    "personal_note": "EFT payments. Infra TI.",
+    "motivo": "af payments ozow"
+  },
+  {
+    "email": "ti@instant EFT.com",
+    "name": "Instant EFT",
+    "company": "Instant EFT (South Africa)",
+    "role": "TI",
+    "personal_note": "EFT payments. Infra TI.",
+    "motivo": "af payments instant"
+  },
+  {
+    "email": "contact@telebirr.com",
+    "name": "Telebirr",
+    "company": "Telebirr (Ethio Telecom)",
+    "role": "Contato",
+    "personal_note": "Mobile money. Infra TI.",
+    "motivo": "af mobile money telebirr"
+  },
+  {
+    "email": "ti@m-pesa.com",
+    "name": "M-Pesa",
+    "company": "Safaricom M-Pesa",
+    "role": "TI",
+    "personal_note": "Mobile money. Infra TI.",
+    "motivo": "af mobile money mpesa"
+  },
+  {
+    "email": "contact@tappaya.com",
+    "name": "Tappaya",
+    "company": "Tappaya (Kenya)",
+    "role": "Contato",
+    "personal_note": "Payment gateway. Infra TI.",
+    "motivo": "af payments tappaya"
+  },
+  {
+    "email": "ti@djopay.dj",
+    "name": "Djopay",
+    "company": "Djopay (Djibouti)",
+    "role": "TI",
+    "personal_note": "Mobile money. Infra TI.",
+    "motivo": "af mobile money djopay"
+  },
+  {
+    "email": "contact@wave.com",
+    "name": "Wave",
+    "company": "Wave (Senegal/Africa)",
+    "role": "Contato",
+    "personal_note": "Mobile money. Infra TI.",
+    "motivo": "af mobile money wave"
+  },
+  {
+    "email": "ti@damani.com",
+    "name": "Damani",
+    "company": "Damani (UAE Health)",
+    "role": "TI",
+    "personal_note": "Health insurance. Infra TI.",
+    "motivo": "me insurtech damani"
+  },
+  {
+    "email": "contact@allianz.eg",
+    "name": "Allianz Egypt",
+    "company": "Allianz Egypt",
+    "role": "Contato",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "me insurtech allianz eg"
+  },
+  {
+    "email": "ti@chubb.ae",
+    "name": "Chubb UAE",
+    "company": "Chubb Middle East",
+    "role": "TI",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "me insurtech chubb"
+  },
+  {
+    "email": "contact@metlife.ae",
+    "name": "MetLife UAE",
+    "company": "MetLife Middle East",
+    "role": "Contato",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "me insurtech metlife"
+  },
+  {
+    "email": "ti@tokio marine.qa",
+    "name": "Tokyo Marine Qatar",
+    "company": "Tokyo Marine (Qatar)",
+    "role": "TI",
+    "personal_note": "Marine insurance. Infra TI.",
+    "motivo": "me insurtech tokio"
+  },
+  {
+    "email": "contact@jumia.com",
+    "name": "Jumia",
+    "company": "Jumia (Africa e-commerce)",
+    "role": "Contato",
+    "personal_note": "E-commerce. Infra TI.",
+    "motivo": "af ecommerce jumia"
+  },
+  {
+    "email": "ti@cartlow.com",
+    "name": "Cartlow",
+    "company": "Cartlow (Egypt e-commerce)",
+    "role": "TI",
+    "personal_note": "E-commerce. Infra TI.",
+    "motivo": "af ecommerce cartlow"
+  },
+  {
+    "email": "contact@talabat.com",
+    "name": "Talabat",
+    "company": "Talabat (Delivery)",
+    "role": "Contato",
+    "personal_note": "Food delivery. Infra TI.",
+    "motivo": "me ecommerce talabat"
+  },
+  {
+    "email": "ti@careem.com",
+    "name": "Careem",
+    "company": "Careem (Uber)",
+    "role": "TI",
+    "personal_note": "Super app. Infra TI.",
+    "motivo": "me ecommerce careem"
+  },
+  {
+    "email": "contact@noon.com",
+    "name": "Noon",
+    "company": "Noon (E-commerce)",
+    "role": "Contato",
+    "personal_note": "E-commerce. Infra TI.",
+    "motivo": "me ecommerce noon"
+  },
+  {
+    "email": "ti@propertyfinder.ae",
+    "name": "Property Finder",
+    "company": "Property Finder (UAE)",
+    "role": "TI",
+    "personal_note": "PropTech. Infra TI.",
+    "motivo": "me proptech finder"
+  },
+  {
+    "email": "contact@Bayut.com",
+    "name": "Bayut",
+    "company": "Bayut (UAE/PropTech)",
+    "role": "Contato",
+    "personal_note": "Real estate. Infra TI.",
+    "motivo": "me proptech bayut"
+  },
+  {
+    "email": "ti@homerun.ae",
+    "name": "HomeRun",
+    "company": "HomeRun (Dubai real estate)",
+    "role": "TI",
+    "personal_note": "PropTech. Infra TI.",
+    "motivo": "me proptech homerun"
+  },
+  {
+    "email": "contact@aylanetworks.com",
+    "name": "Ayla Networks",
+    "company": "Ayla Networks (IoT)",
+    "role": "Contato",
+    "personal_note": "IoT platform. Infra TI.",
+    "motivo": "me iot ayla"
+  },
+  {
+    "email": "ti@tess kibbutz.com",
+    "name": "Tess Kibbutz",
+    "company": "Tess Kibbutz (AgriTech)",
+    "role": "TI",
+    "personal_note": "AgriTech. Infra TI.",
+    "motivo": "me agri tess"
+  },
+  {
+    "email": "contact@protect.ae",
+    "name": "Protect Middle East",
+    "company": "Protect ME (Cybersec)",
+    "role": "Contato",
+    "personal_note": "Cybersecurity. Infra TI.",
+    "motivo": "me sec protect"
+  },
+  {
+    "email": "ti@cybereco.com",
+    "name": "Cybereco",
+    "company": "Cybereco (Saudi)",
+    "role": "TI",
+    "personal_note": "Security services. Infra TI.",
+    "motivo": "me sec cybereco"
+  },
+  {
+    "email": "contact@interpol digital.com",
+    "name": "Interpol Digital",
+    "company": "Interpol Digital Crime",
+    "role": "Contato",
+    "personal_note": "Digital forensics. Infra TI.",
+    "motivo": "me sec interpol"
+  },
+  {
+    "email": "ti@hackerone.ae",
+    "name": "HackerOne MEA",
+    "company": "HackerOne (Dubai office)",
+    "role": "TI",
+    "personal_note": "Bug bounty. Infra TI.",
+    "motivo": "me sec hackerone"
+  },
+  {
+    "email": "contact@Vulcan cyber.com",
+    "name": "Vulcan Cyber",
+    "company": "Vulcan Cyber (Israel/ME)",
+    "role": "Contato",
+    "personal_note": "Vulnerability mgmt. Infra TI.",
+    "motivo": "me sec vulcan"
+  },
+  {
+    "email": "contact@payoneer.com",
+    "name": "Payoneer",
+    "company": "Payoneer",
+    "role": "Contato",
+    "personal_note": "Cross-border payments. Infra TI.",
+    "motivo": "is fintech payoneer"
+  },
+  {
+    "email": "ti@ similarity.com",
+    "name": "Similarity",
+    "company": "Similarity (Israel fintech)",
+    "role": "TI",
+    "personal_note": "Fraud detection. Infra TI.",
+    "motivo": "is fintech similarity"
+  },
+  {
+    "email": "contact@ fraud.objects.com",
+    "name": "Fraud Objects",
+    "company": "Fraud Objects (Israel)",
+    "role": "Contato",
+    "personal_note": "Fraud prevention. Infra TI.",
+    "motivo": "is fintech fraud objects"
+  },
+  {
+    "email": "ti@riskified.com",
+    "name": "Riskified",
+    "company": "Riskified (Israel)",
+    "role": "TI",
+    "personal_note": "Fraud prevention. Infra TI.",
+    "motivo": "is fintech riskified"
+  },
+  {
+    "email": "contact@signautics.com",
+    "name": "Signautics",
+    "company": "Signautics (Israel)",
+    "role": "Contato",
+    "personal_note": "Identity verification. Infra TI.",
+    "motivo": "is fintech signautics"
+  },
+  {
+    "email": "ti@insurity.com",
+    "name": "Insurity",
+    "company": "Insurity (Israel)",
+    "role": "TI",
+    "personal_note": "Insurance tech. Infra TI.",
+    "motivo": "is insurtech insurity"
+  },
+  {
+    "email": "contact@novation .com",
+    "name": "Novation",
+    "company": "Novation (Israel fintech)",
+    "role": "Contato",
+    "personal_note": "Fintech infrastructure. Infra TI.",
+    "motivo": "is fintech novation"
+  },
+  {
+    "email": "ti@ ibanc.com",
+    "name": "Ibanc",
+    "company": "Ibanc (Israel banking)",
+    "role": "TI",
+    "personal_note": "B2B banking. Infra TI.",
+    "motivo": "is fintech ibanc"
+  },
+  {
+    "email": "contact@tenjin.com",
+    "name": "Tenjin",
+    "company": "Tenjin (Israel mobile)",
+    "role": "Contato",
+    "personal_note": "Mobile analytics. Infra TI.",
+    "motivo": "is analytics tenjin"
+  },
+  {
+    "email": "ti@ AppsFlyer.com",
+    "name": "AppsFlyer",
+    "company": "AppsFlyer (Israel)",
+    "role": "TI",
+    "personal_note": "Mobile marketing. Infra TI.",
+    "motivo": "is analytics appsflyer"
+  },
+  {
+    "email": "contact@medial early.com",
+    "name": "Medial Early",
+    "company": "Medial Early (Israel health)",
+    "role": "Contato",
+    "personal_note": "Health analytics. Infra TI.",
+    "motivo": "is health medial"
+  },
+  {
+    "email": "ti@binary health.com",
+    "name": "Binary Health",
+    "company": "Binary Health (Israel)",
+    "role": "TI",
+    "personal_note": "Health data. Infra TI.",
+    "motivo": "is health binary"
+  },
+  {
+    "email": "contact@liora medical.com",
+    "name": "Liora Medical",
+    "company": "Liora Medical (Israel)",
+    "role": "Contato",
+    "personal_note": "Health platform. Infra TI.",
+    "motivo": "is health liora"
+  },
+  {
+    "email": "ti@med-tech.co.il",
+    "name": "Med-Tech Israel",
+    "company": "Med-Tech Israel Assoc",
+    "role": "TI",
+    "personal_note": "HealthTech assoc. Infra TI.",
+    "motivo": "is health medtech assoc"
+  },
+  {
+    "email": "contact@knowbi.com",
+    "name": "Knowbi",
+    "company": "Knowbi (Israel insurtech)",
+    "role": "Contato",
+    "personal_note": "Data analytics. Infra TI.",
+    "motivo": "is insurtech knowbi"
+  },
+  {
+    "email": "ti@bahraininsurance.com",
+    "name": "Bahrain Insurance",
+    "company": "Bahrain Insurance Co",
+    "role": "TI",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "me insurtech bahrain"
+  },
+  {
+    "email": "contact@omaninsurance.com",
+    "name": "Oman Insurance",
+    "company": "Oman Insurance Co",
+    "role": "Contato",
+    "personal_note": "Insurance. Infra TI.",
+    "motivo": "me insurtech oman"
+  },
+  {
+    "email": "ti@khaasan.com",
+    "name": "Khaasan",
+    "company": "Khaasan (Saudi health)",
+    "role": "TI",
+    "personal_note": "Health platform. Infra TI.",
+    "motivo": "me health khaasan"
+  },
+  {
+    "email": "contact @arabhealth.com",
+    "name": "Arab Health",
+    "company": "Arab Health Expo",
+    "role": "Contato",
+    "personal_note": "Health expo & tech. Infra TI.",
+    "motivo": "me health arab"
+  },
+  {
+    "email": "ti@gateley.ae",
+    "name": "Gateley ME",
+    "company": "Gateley Middle East",
+    "role": "TI",
+    "personal_note": "Legal tech. Infra TI.",
+    "motivo": "me legal gateley"
+  }
+]

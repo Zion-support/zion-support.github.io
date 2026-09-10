@@ -1,0 +1,394 @@
+[
+  {
+    "email": "ti@spotify.com",
+    "name": "Spotify",
+    "company": "Spotify",
+    "role": "TI",
+    "personal_note": "Music tech. Infra de TI.",
+    "motivo": "se spotify"
+  },
+  {
+    "email": "contact@ikea.com",
+    "name": "IKEA",
+    "company": "IKEA",
+    "role": "Contato",
+    "personal_note": "Retail tech. Infra de TI.",
+    "motivo": "se ikea"
+  },
+  {
+    "email": "ti@ericsson.com",
+    "name": "Ericsson",
+    "company": "Ericsson",
+    "role": "TI",
+    "personal_note": "Telecom. Infra de TI.",
+    "motivo": "se ericsson"
+  },
+  {
+    "email": "contact@volvo.com",
+    "name": "Volvo",
+    "company": "Volvo",
+    "role": "Contato",
+    "personal_note": "Auto tech. Infra de TI.",
+    "motivo": "se volvo"
+  },
+  {
+    "email": "ti@sandvik.com",
+    "name": "Sandvik",
+    "company": "Sandvik",
+    "role": "TI",
+    "personal_note": "Industrial tech. Infra de TI.",
+    "motivo": "se sandvik"
+  },
+  {
+    "email": "contact@alphabit.com",
+    "name": "Alphabit",
+    "company": "Alphabit",
+    "role": "Contato",
+    "personal_note": "IT services SE. Infra de TI.",
+    "motivo": "se alphabit"
+  },
+  {
+    "email": "ti@northstream.com",
+    "name": "Northstream",
+    "company": "Northstream",
+    "role": "TI",
+    "personal_note": "Strategy consulting SE. Infra de TI.",
+    "motivo": "se northstream"
+  },
+  {
+    "email": "ti@adyen.com",
+    "name": "Adyen",
+    "company": "Adyen",
+    "role": "TI",
+    "personal_note": "Payments. Infra de TI.",
+    "motivo": "nl adyen"
+  },
+  {
+    "email": "contact@ing.com",
+    "name": "ING Bank",
+    "company": "ING",
+    "role": "Contato",
+    "personal_note": "Banking NL. Infra de TI.",
+    "motivo": "nl ing"
+  },
+  {
+    "email": "ti@axa.com",
+    "name": "AXA",
+    "company": "AXA",
+    "role": "TI",
+    "personal_note": "Insurance IT. Infra de TI.",
+    "motivo": "nl axa"
+  },
+  {
+    "email": "contact@philips.com",
+    "name": "Philips",
+    "company": "Philips",
+    "role": "Contato",
+    "personal_note": "Health tech NL. Infra de TI.",
+    "motivo": "nl philips"
+  },
+  {
+    "email": "ti@shell.com",
+    "name": "Shell",
+    "company": "Shell",
+    "role": "TI",
+    "personal_note": "Energy IT. Infra de TI.",
+    "motivo": "nl shell"
+  },
+  {
+    "email": "contact@roche.com",
+    "name": "Roche",
+    "company": "Roche",
+    "role": "Contato",
+    "personal_note": "Pharma tech CH. Infra de TI.",
+    "motivo": "ch roche"
+  },
+  {
+    "email": "ti@novartis.com",
+    "name": "Novartis",
+    "company": "Novartis",
+    "role": "TI",
+    "personal_note": "Pharma tech CH. Infra de TI.",
+    "motivo": "ch novartis"
+  },
+  {
+    "email": "contact@ubs.com",
+    "name": "UBS",
+    "company": "UBS",
+    "role": "Contato",
+    "personal_note": "Banking CH. Infra de TI.",
+    "motivo": "ch ubs"
+  },
+  {
+    "email": "ti@zurich.com",
+    "name": "Zurich Insurance",
+    "company": "Zurich",
+    "role": "TI",
+    "personal_note": "Insurance IT CH. Infra de TI.",
+    "motivo": "ch zurich"
+  },
+  {
+    "email": "contact@fastreaper.com",
+    "name": "FastRaiser",
+    "company": "FastRaiser",
+    "role": "Contato",
+    "personal_note": "Venture capital CH. Infra de TI.",
+    "motivo": "ch fastraiser"
+  },
+  {
+    "email": "contact@canva.com",
+    "name": "Canva",
+    "company": "Canva",
+    "role": "Contato",
+    "personal_note": "Design tech AU. Infra de TI.",
+    "motivo": "au canva"
+  },
+  {
+    "email": "ti@atlassian.com",
+    "name": "Atlassian",
+    "company": "Atlassian",
+    "role": "TI",
+    "personal_note": "Software AU. Infra de TI.",
+    "motivo": "au atlassian"
+  },
+  {
+    "email": "contact@seek.com.au",
+    "name": "Seek",
+    "company": "Seek",
+    "role": "Contato",
+    "personal_note": "Job platform AU. Infra de TI.",
+    "motivo": "au seek"
+  },
+  {
+    "email": "ti@reliance.com.au",
+    "name": "Reliance",
+    "company": "Reliance",
+    "role": "TI",
+    "personal_note": "Retail tech AU. Infra de TI.",
+    "motivo": "au reliance"
+  },
+  {
+    "email": "contact@news.com.au",
+    "name": "News Corp AU",
+    "company": "News Corp",
+    "role": "Contato",
+    "personal_note": "Media tech AU. Infra de TI.",
+    "motivo": "au newscorp"
+  },
+  {
+    "email": "contact@grupo.com",
+    "name": "Grupo",
+    "company": "Grupo",
+    "role": "Contato",
+    "personal_note": "Conglomerado LATAM. Infra de TI.",
+    "motivo": "latam grupo"
+  },
+  {
+    "email": "ti@sigma.com",
+    "name": "Sigma",
+    "company": "Sigma",
+    "role": "TI",
+    "personal_note": "Pharma LATAM. Infra de TI.",
+    "motivo": "latam sigma"
+  },
+  {
+    "email": "contact@américa.com",
+    "name": "América",
+    "company": "América",
+    "role": "Contato",
+    "personal_note": "Retail LATAM. Infra de TI.",
+    "motivo": "latam america"
+  },
+  {
+    "email": "ti@w لإتاحة.com",
+    "name": "W para",
+    "company": "W",
+    "role": "TI",
+    "personal_note": "IT services LATAM. Infra de TI.",
+    "motivo": "latam wpara"
+  },
+  {
+    "email": "contact@sendinblue.com",
+    "name": "Sendinblue",
+    "company": "Sendinblue",
+    "role": "Contato",
+    "personal_note": "Email marketing EU. Infra de TI.",
+    "motivo": "martech sendinblue"
+  },
+  {
+    "email": "ti@mailjet.com",
+    "name": "Mailjet",
+    "company": "Mailjet",
+    "role": "TI",
+    "personal_note": "Email API EU. Infra de TI.",
+    "motivo": "martech mailjet"
+  },
+  {
+    "email": "contact@getresponse.com",
+    "name": "GetResponse",
+    "company": "GetResponse",
+    "role": "Contato",
+    "personal_note": "Email marketing EU. Infra de TI.",
+    "motivo": "martech getresponse"
+  },
+  {
+    "email": "ti@convertkit.com",
+    "name": "ConvertKit",
+    "company": "ConvertKit",
+    "role": "TI",
+    "personal_note": "Creator marketing. Infra de TI.",
+    "motivo": "martech convertkit"
+  },
+  {
+    "email": "contact@aw.a.app",
+    "name": "AWA",
+    "company": "AWA",
+    "role": "Contato",
+    "personal_note": "App analytics. Infra de TI.",
+    "motivo": "martech awa"
+  },
+  {
+    "email": "ti@clevertap.com",
+    "name": "Clevertap",
+    "company": "Clevertap",
+    "role": "TI",
+    "personal_note": "Engagement platform. Infra de TI.",
+    "motivo": "martech clevertap"
+  },
+  {
+    "email": "contact@moengage.com",
+    "name": "MoEngage",
+    "company": "MoEngage",
+    "role": "Contato",
+    "personal_note": "Engagement platform. Infra de TI.",
+    "motivo": "martech moengage"
+  },
+  {
+    "email": "ti@webengage.com",
+    "name": "WebEngage",
+    "company": "WebEngage",
+    "role": "TI",
+    "personal_note": "Engagement platform. Infra de TI.",
+    "motivo": "martech webengage"
+  },
+  {
+    "email": "contact@johnson.com",
+    "name": "Johnson Controls",
+    "company": "Johnson Controls",
+    "role": "Contato",
+    "personal_note": "Building tech. Infra de TI.",
+    "motivo": "industry johnson"
+  },
+  {
+    "email": "ti@siemens-healthineers.com",
+    "name": "Siemens Healthineers",
+    "company": "Siemens Healthineers",
+    "role": "TI",
+    "personal_note": "Health tech. Infra de TI.",
+    "motivo": "industry siemenshealth"
+  },
+  {
+    "email": "contact@ge.com",
+    "name": "GE",
+    "company": "GE",
+    "role": "Contato",
+    "personal_note": "Industrial tech. Infra de TI.",
+    "motivo": "industry ge"
+  },
+  {
+    "email": "ti@rolls-royce.com",
+    "name": "Rolls-Royce",
+    "company": "Rolls-Royce",
+    "role": "TI",
+    "personal_note": "Aerospace tech. Infra de TI.",
+    "motivo": "industry rollsroyce"
+  },
+  {
+    "email": "contact@ba 완만한.com",
+    "name": "BA",
+    "company": "BA",
+    "role": "Contato",
+    "personal_note": "Aviation tech. Infra de TI.",
+    "motivo": "industry ba"
+  },
+  {
+    "email": "contact@ibm.com",
+    "name": "IBM Asia",
+    "company": "IBM Asia",
+    "role": "Contato",
+    "personal_note": "IT services Asia. Infra de TI.",
+    "motivo": "asia ibm2"
+  },
+  {
+    "email": "ti@cognizant.com",
+    "name": "Cognizant",
+    "company": "Cognizant",
+    "role": "TI",
+    "personal_note": "IT consulting. Infra de TI.",
+    "motivo": "it cognizant"
+  },
+  {
+    "email": "contact@techdata.com",
+    "name": "TechData",
+    "company": "TechData",
+    "role": "Contato",
+    "personal_note": "IT distribution. Infra de TI.",
+    "motivo": "it techdata"
+  },
+  {
+    "email": "ti@cdw.com",
+    "name": "CDW",
+    "company": "CDW",
+    "role": "TI",
+    "personal_note": "IT distribution. Infra de TI.",
+    "motivo": "it cdw"
+  },
+  {
+    "email": "contact@insight.com",
+    "name": "Insight",
+    "company": "Insight",
+    "role": "Contato",
+    "personal_note": "IT distribution. Infra de TI.",
+    "motivo": "it insight"
+  },
+  {
+    "email": "ti@capitalone.com",
+    "name": "Capital One",
+    "company": "Capital One",
+    "role": "TI",
+    "personal_note": "Banking tech US. Infra de TI.",
+    "motivo": "us capitalone"
+  },
+  {
+    "email": "contact@wellsfargo.com",
+    "name": "Wells Fargo",
+    "company": "Wells Fargo",
+    "role": "Contato",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "us wellsfargo"
+  },
+  {
+    "email": "ti@citi.com",
+    "name": "Citi",
+    "company": "Citi",
+    "role": "TI",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "us citi"
+  },
+  {
+    "email": "contact@bny.com",
+    "name": "BNY Mellon",
+    "company": "BNY Mellon",
+    "role": "Contato",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "us bny"
+  },
+  {
+    "email": "ti@morganstanley.com",
+    "name": "Morgan Stanley",
+    "company": "Morgan Stanley",
+    "role": "TI",
+    "personal_note": "Banking US. Infra de TI.",
+    "motivo": "us morganstanley"
+  }
+]

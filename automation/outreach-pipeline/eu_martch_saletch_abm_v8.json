@@ -1,0 +1,402 @@
+[
+  {
+    "email": "contact@braze.com",
+    "name": "Braze",
+    "company": "Braze",
+    "role": "Contato",
+    "personal_note": "Engagement platform. Infra TI.",
+    "motivo": "uk martch braze"
+  },
+  {
+    "email": "ti@ Iterable.com",
+    "name": "Iterable",
+    "company": "Iterable",
+    "role": "TI",
+    "personal_note": "Customer engagement. Infra TI.",
+    "motivo": "uk martch iterable"
+  },
+  {
+    "email": "contact@customer.io",
+    "name": "Customer.io",
+    "company": "Customer.io",
+    "role": "Contato",
+    "personal_note": "Behavioral messaging. Infra TI.",
+    "motivo": "martch customerio"
+  },
+  {
+    "email": "ti@sendinblue.com",
+    "name": "Sendinblue",
+    "company": "Brevo (Sendinblue)",
+    "role": "TI",
+    "personal_note": "Email marketing. Infra TI.",
+    "motivo": "martch sendinblue"
+  },
+  {
+    "email": "contact@mailgun.com",
+    "name": "Mailgun",
+    "company": "Mailgun (Sinch)",
+    "role": "Contato",
+    "personal_note": "Email API. Infra TI.",
+    "motivo": "martch mailgun"
+  },
+  {
+    "email": "ti@ Postmarkapp.com",
+    "name": "Postmark",
+    "company": "Postmark (Wildbit)",
+    "role": "TI",
+    "personal_note": "Transactional email. Infra TI.",
+    "motivo": "martch postmark"
+  },
+  {
+    "email": "contact@elasticemail.com",
+    "name": "Elastic Email",
+    "company": "Elastic Email",
+    "role": "Contato",
+    "personal_note": "Email marketing. Infra TI.",
+    "motivo": "martch elasticemail"
+  },
+  {
+    "email": "ti@emarsys.com",
+    "name": "Emarsys",
+    "company": "Emarsys (Viacom)",
+    "role": "TI",
+    "personal_note": "CRM marketing. Infra TI.",
+    "motivo": "martch emarsys"
+  },
+  {
+    "email": "contact@klaviyo.com",
+    "name": "Klaviyo",
+    "company": "Klaviyo",
+    "role": "Contato",
+    "personal_note": "E-commerce marketing. Infra TI.",
+    "motivo": "martch klaviyo"
+  },
+  {
+    "email": "ti@cdp.com",
+    "name": "CDP Institute",
+    "company": "CDP Institute",
+    "role": "TI",
+    "personal_note": "Customer data. Infra TI.",
+    "motivo": "martch cdp institute"
+  },
+  {
+    "email": "contact@thetrade desk.com",
+    "name": "The Trade Desk",
+    "company": "The Trade Desk",
+    "role": "Contato",
+    "personal_note": "Programmatic ads. Infra TI.",
+    "motivo": "adtech tradedesk"
+  },
+  {
+    "email": "ti@appnexus.com",
+    "name": "AppNexus",
+    "company": "AppNexus (Microsoft)",
+    "role": "TI",
+    "personal_note": "Ad tech platform. Infra TI.",
+    "motivo": "adtech appnexus"
+  },
+  {
+    "email": "contact@rubiconproject.com",
+    "name": "Rubicon Project",
+    "company": "Rubicon Project",
+    "role": "Contato",
+    "personal_note": "Ad exchange. Infra TI.",
+    "motivo": "adtech rubicon"
+  },
+  {
+    "email": "ti@googleadservices.com",
+    "name": "Google Ad Services",
+    "company": "Google",
+    "role": "TI",
+    "personal_note": "Ad services. Infra TI.",
+    "motivo": "adtech google"
+  },
+  {
+    "email": "contact@taboola.com",
+    "name": "Taboola",
+    "company": "Taboola",
+    "role": "Contato",
+    "personal_note": "Content discovery. Infra TI.",
+    "motivo": "adtech taboola"
+  },
+  {
+    "email": "ti@outbrain.com",
+    "name": "Outbrain",
+    "company": "Outbrain",
+    "role": "TI",
+    "personal_note": "Content recs. Infra TI.",
+    "motivo": "adtech outbrain"
+  },
+  {
+    "email": "contact@adroll.com",
+    "name": "AdRoll",
+    "company": "AdRoll",
+    "role": "Contato",
+    "personal_note": "Ad retargeting. Infra TI.",
+    "motivo": "adtech adroll"
+  },
+  {
+    "email": "ti@mediamath.com",
+    "name": "MediaMath",
+    "company": "MediaMath",
+    "role": "TI",
+    "personal_note": "Programmatic platform. Infra TI.",
+    "motivo": "adtech mediamath"
+  },
+  {
+    "email": "contact@doubleverify.com",
+    "name": "DoubleVerify",
+    "company": "DoubleVerify",
+    "role": "Contato",
+    "personal_note": "Ad verification. Infra TI.",
+    "motivo": "adtech doubleverify"
+  },
+  {
+    "email": "ti@ IAS.com",
+    "name": "Integral Ad Science",
+    "company": "Integral Ad Science (IAS)",
+    "role": "TI",
+    "personal_note": "Ad verification. Infra TI.",
+    "motivo": "adtech ias"
+  },
+  {
+    "email": "contact@outreach.io",
+    "name": "Outreach",
+    "company": "Outreach",
+    "role": "Contato",
+    "personal_note": "Sales engagement. Infra TI.",
+    "motivo": "saletch outreach"
+  },
+  {
+    "email": "ti@Salesforce.com",
+    "name": "Salesforce",
+    "company": "Salesforce",
+    "role": "TI",
+    "personal_note": "CRM. Infra TI.",
+    "motivo": "saletch salesforce"
+  },
+  {
+    "email": "contact@hubspot.com",
+    "name": "HubSpot",
+    "company": "HubSpot",
+    "role": "Contato",
+    "personal_note": "CRM & marketing. Infra TI.",
+    "motivo": "saletch hubspot"
+  },
+  {
+    "email": "ti@zoomtopia.com",
+    "name": "ZoomTopia",
+    "company": "ZoomTopia",
+    "role": "TI",
+    "personal_note": "Sales intelligence. Infra TI.",
+    "motivo": "saletch zoomtopia"
+  },
+  {
+    "email": "contact@seismic.com",
+    "name": "Seismic",
+    "company": "Seismic",
+    "role": "Contato",
+    "personal_note": "Sales enablement. Infra TI.",
+    "motivo": "saletch seismic"
+  },
+  {
+    "email": "ti@highspot.com",
+    "name": "Highspot",
+    "company": "Highspot",
+    "role": "TI",
+    "personal_note": "Sales enablement. Infra TI.",
+    "motivo": "saletch highspot"
+  },
+  {
+    "email": "contact@showpad.com",
+    "name": "Showpad",
+    "company": "Showpad",
+    "role": "Contato",
+    "personal_note": "Sales enablement. Infra TI.",
+    "motivo": "saletch showpad"
+  },
+  {
+    "email": "ti@leadingloop.com",
+    "name": "LeadingLoop",
+    "company": "LeadingLoop",
+    "role": "TI",
+    "personal_note": "Sales engagement. Infra TI.",
+    "motivo": "saletch leadingloop"
+  },
+  {
+    "email": "contact@insightly.com",
+    "name": "Insightly",
+    "company": "Insightly",
+    "role": "Contato",
+    "personal_note": "CRM. Infra TI.",
+    "motivo": "saletch insightly"
+  },
+  {
+    "email": "ti@pipedrive.com",
+    "name": "Pipedrive",
+    "company": "Pipedrive",
+    "role": "TI",
+    "personal_note": "Sales CRM. Infra TI.",
+    "motivo": "saletch pipedrive"
+  },
+  {
+    "email": "contact@6sense.com",
+    "name": "6sense",
+    "company": "6sense",
+    "role": "Contato",
+    "personal_note": "ABM platform. Infra TI.",
+    "motivo": "abm 6sense"
+  },
+  {
+    "email": "ti@demandbase.com",
+    "name": "Demandbase",
+    "company": "Demandbase",
+    "role": "TI",
+    "personal_note": "ABM platform. Infra TI.",
+    "motivo": "abm demandbase"
+  },
+  {
+    "email": "contact@terminus.com",
+    "name": "Terminus",
+    "company": "Terminus",
+    "role": "Contato",
+    "personal_note": "ABM platform. Infra TI.",
+    "motivo": "abm terminus"
+  },
+  {
+    "email": "ti@brainshark.com",
+    "name": "Brainshark",
+    "company": "Brainshark",
+    "role": "TI",
+    "personal_note": "Sales readiness. Infra TI.",
+    "motivo": "saletch brainshark"
+  },
+  {
+    "email": "contact@churnzero.com",
+    "name": "ChurnZero",
+    "company": "ChurnZero",
+    "role": "Contato",
+    "personal_note": "Customer success. Infra TI.",
+    "motivo": "salestech churnzero"
+  },
+  {
+    "email": "ti@marketo.com",
+    "name": "Marketo",
+    "company": "Marketo (Adobe)",
+    "role": "TI",
+    "personal_note": "Marketing automation. Infra TI.",
+    "motivo": "martch marketo"
+  },
+  {
+    "email": "contact@act-on.com",
+    "name": "Act-On",
+    "company": "Act-On",
+    "role": "Contato",
+    "personal_note": "Marketing automation. Infra TI.",
+    "motivo": "martch acton"
+  },
+  {
+    "email": "ti@oracle Eloqua.com",
+    "name": "Eloqua",
+    "company": "Oracle Eloqua",
+    "role": "TI",
+    "personal_note": "Marketing automation. Infra TI.",
+    "motivo": "martch eloqua"
+  },
+  {
+    "email": "contact@constantcontact.com",
+    "name": "Constant Contact",
+    "company": "Constant Contact (Monster)",
+    "role": "Contato",
+    "personal_note": "Email marketing. Infra TI.",
+    "motivo": "martch constantcontact"
+  },
+  {
+    "email": "ti@getresponse.com",
+    "name": "GetResponse",
+    "company": "GetResponse",
+    "role": "TI",
+    "personal_note": "Email marketing. Infra TI.",
+    "motivo": "martch getresponse"
+  },
+  {
+    "email": "contact@aweber.com",
+    "name": "AWeber",
+    "company": "AWeber",
+    "role": "Contato",
+    "personal_note": "Email marketing. Infra TI.",
+    "motivo": "esp aweber"
+  },
+  {
+    "email": "ti@benchmarkemail.com",
+    "name": "Benchmark Email",
+    "company": "Benchmark Email",
+    "role": "TI",
+    "personal_note": "Email marketing. Infra TI.",
+    "motivo": "esp benchmark"
+  },
+  {
+    "email": "contact@systeme.io",
+    "name": "Systeme.io",
+    "company": "Systeme.io",
+    "role": "Contato",
+    "personal_note": "Marketing platform. Infra TI.",
+    "motivo": "esp systeme"
+  },
+  {
+    "email": "ti@converbox.com",
+    "name": "ConverBox",
+    "company": "ConverBox",
+    "role": "TI",
+    "personal_note": "Lead capture. Infra TI.",
+    "motivo": "martch converbox"
+  },
+  {
+    "email": "contact@optinmonster.com",
+    "name": "OptinMonster",
+    "company": "OptinMonster",
+    "role": "Contato",
+    "personal_note": "Conversion optimization. Infra TI.",
+    "motivo": "martch optinmonster"
+  },
+  {
+    "email": "ti@clearbit.com",
+    "name": "Clearbit",
+    "company": "Clearbit (HubSpot)",
+    "role": "TI",
+    "personal_note": "Data enrichment. Infra TI.",
+    "motivo": "lead gen clearbit"
+  },
+  {
+    "email": "contact@fullcontact.com",
+    "name": "FullContact",
+    "company": "FullContact",
+    "role": "Contato",
+    "personal_note": "Contact data. Infra TI.",
+    "motivo": "lead gen fullcontact"
+  },
+  {
+    "email": "ti@neverbounce.com",
+    "name": "NeverBounce",
+    "company": "NeverBounce (TowerData)",
+    "role": "TI",
+    "personal_note": "Email verification. Infra TI.",
+    "motivo": "lead gen neverbounce"
+  },
+  {
+    "email": "contact@zerobounce.net",
+    "name": "ZeroBounce",
+    "company": "ZeroBounce",
+    "role": "Contato",
+    "personal_note": "Email validation. Infra TI.",
+    "motivo": "lead gen zerobounce"
+  },
+  {
+    "email": "ti@occu.promo",
+    "name": "Occu.Promo",
+    "company": "Occu.Promo",
+    "role": "TI",
+    "personal_note": "B2B lead gen. Infra TI.",
+    "motivo": "lead gen occu promo"
+  }
+]

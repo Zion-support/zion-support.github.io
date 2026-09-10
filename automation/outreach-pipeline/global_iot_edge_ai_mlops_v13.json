@@ -1,0 +1,802 @@
+[
+  {
+    "email": "contact@particle.io",
+    "name": "Particle",
+    "company": "Particle (IoT)",
+    "role": "Contato",
+    "personal_note": "IoT platform. Infra TI.",
+    "motivo": "iot particle"
+  },
+  {
+    "email": "ti@balena.io",
+    "name": "Balena",
+    "company": "Balena (IoT device mgmt)",
+    "role": "TI",
+    "personal_note": "IoT fleet mgmt. Infra TI.",
+    "motivo": "iot balena"
+  },
+  {
+    "email": "contact@thingsboard.io",
+    "name": "ThingsBoard",
+    "company": "ThingsBoard (IoT)",
+    "role": "Contato",
+    "personal_note": "IoT platform. Infra TI.",
+    "motivo": "iot thingsboard"
+  },
+  {
+    "email": "ti@openhab.com",
+    "name": "openHAB",
+    "company": "openHAB (home auto)",
+    "role": "TI",
+    "personal_note": "Home automation. Infra TI.",
+    "motivo": "iot openhab"
+  },
+  {
+    "email": "contact@home-assistant.io",
+    "name": "Home Assistant",
+    "company": "Home Assistant",
+    "role": "Contato",
+    "personal_note": "Home automation. Infra TI.",
+    "motivo": "iot homeassistant"
+  },
+  {
+    "email": "ti@zigbee.com",
+    "name": "Zigbee Alliance",
+    "company": "Connectivity Standards Alliance",
+    "role": "TI",
+    "personal_note": "MQTT / Zigbee Alliance. Infra TI.",
+    "motivo": "iot zigbee"
+  },
+  {
+    "email": "contact@lora-alliance.org",
+    "name": "LoRa Alliance",
+    "company": "LoRa Alliance",
+    "role": "Contato",
+    "personal_note": "LoRaWAN standards. Infra TI.",
+    "motivo": "iot lora"
+  },
+  {
+    "email": "ti@lora-alliance.com",
+    "name": "LoRa Alliance",
+    "company": "LoRa Alliance",
+    "role": "TI",
+    "personal_note": "LoRaWAN. Infra TI.",
+    "motivo": "iot lora2"
+  },
+  {
+    "email": "contact@mydevices.com",
+    "name": "myDevices",
+    "company": "myDevices (Cayenne)",
+    "role": "Contato",
+    "personal_note": "IoT platform. Infra TI.",
+    "motivo": "iot mydevices"
+  },
+  {
+    "email": "ti@adafruit.com",
+    "name": "Adafruit",
+    "company": "Adafruit (IoT/electronics)",
+    "role": "TI",
+    "personal_note": "IoT hardware. Infra TI.",
+    "motivo": "iot adafruit"
+  },
+  {
+    "email": "contact@cloudflare.com",
+    "name": "Cloudflare Workers",
+    "company": "Cloudflare",
+    "role": "Contato",
+    "personal_note": "Edge computing. Infra TI.",
+    "motivo": "edge cloudflare"
+  },
+  {
+    "email": "ti@fastly.com",
+    "name": "Fastly",
+    "company": "Fastly",
+    "role": "TI",
+    "personal_note": "Edge cloud. Infra TI.",
+    "motivo": "edge fastly"
+  },
+  {
+    "email": "contact@awswavelength.com",
+    "name": "AWS Wavelength",
+    "company": "AWS",
+    "role": "Contato",
+    "personal_note": "Edge computing. Infra TI.",
+    "motivo": "edge aws"
+  },
+  {
+    "email": "ti@azureedge.com",
+    "name": "Azure Edge",
+    "company": "Microsoft Azure",
+    "role": "TI",
+    "personal_note": "Edge computing. Infra TI.",
+    "motivo": "edge azure"
+  },
+  {
+    "email": "contact@gcedge.com",
+    "name": "Google Edge",
+    "company": "Google Cloud",
+    "role": "Contato",
+    "personal_note": "Edge TPU. Infra TI.",
+    "motivo": "edge google"
+  },
+  {
+    "email": "ti@hpeedge.com",
+    "name": "HPE Edge-to-Cloud",
+    "company": "HPE",
+    "role": "TI",
+    "personal_note": "Edge computing. Infra TI.",
+    "motivo": "edge hpe"
+  },
+  {
+    "email": "contact@delledge.com",
+    "name": "Dell Edge",
+    "company": "Dell Technologies",
+    "role": "Contato",
+    "personal_note": "Edge computing. Infra TI.",
+    "motivo": "edge dell"
+  },
+  {
+    "email": "ti@lenovoemc.com",
+    "name": "Lenovo EMC (Edge)",
+    "company": "Lenovo",
+    "role": "TI",
+    "personal_note": "Edge storage. Infra TI.",
+    "motivo": "edge lenovo"
+  },
+  {
+    "email": "contact@cirruslogis.com",
+    "name": "Cirrus Logis",
+    "company": "Cirrus Logistics",
+    "role": "Contato",
+    "personal_note": "Edge logistics. Infra TI.",
+    "motivo": "edge cirrus"
+  },
+  {
+    "email": "ti@nexedi.com",
+    "name": "Nexedi",
+    "company": "Nexedi (edge ERP)",
+    "role": "TI",
+    "personal_note": "Edge ERP. Infra TI.",
+    "motivo": "edge nexedi"
+  },
+  {
+    "email": "contact@nvidia.com",
+    "name": "NVIDIA",
+    "company": "NVIDIA",
+    "role": "Contato",
+    "personal_note": "GPU/AI compute. Infra TI.",
+    "motivo": "ai infra nvidia"
+  },
+  {
+    "email": "ti@amd.com",
+    "name": "AMD",
+    "company": "AMD",
+    "role": "TI",
+    "personal_note": "GPU/CPU. Infra TI.",
+    "motivo": "ai infra amd"
+  },
+  {
+    "email": "contact@intel.com",
+    "name": "Intel",
+    "company": "Intel",
+    "role": "Contato",
+    "personal_note": "CPU/AI. Infra TI.",
+    "motivo": "ai infra intel"
+  },
+  {
+    "email": "ti@qualcomm.com",
+    "name": "Qualcomm",
+    "company": "Qualcomm",
+    "role": "TI",
+    "personal_note": "AI chips. Infra TI.",
+    "motivo": "ai infra qualcomm"
+  },
+  {
+    "email": "contact@graphcore.ai",
+    "name": "Graphcore",
+    "company": "Graphcore (IPU)",
+    "role": "Contato",
+    "personal_note": "AI compute. Infra TI.",
+    "motivo": "ai infra graphcore"
+  },
+  {
+    "email": "ti@groq.com",
+    "name": "Groq",
+    "company": "Groq (LPU AI)",
+    "role": "TI",
+    "personal_note": "AI inference. Infra TI.",
+    "motivo": "ai infra groq"
+  },
+  {
+    "email": "contact@cerebras.com",
+    "name": "Cerebras Systems",
+    "company": "Cerebras",
+    "role": "Contato",
+    "personal_note": "AI wafer-scale. Infra TI.",
+    "motivo": "ai infra cerebras"
+  },
+  {
+    "email": "ti@habana.ai",
+    "name": "Habana (Intel)",
+    "company": "Gaudi AI (Intel Habana)",
+    "role": "TI",
+    "personal_note": "AI accelerators. Infra TI.",
+    "motivo": "ai infra habana"
+  },
+  {
+    "email": "contact@tenstorrent.com",
+    "name": "Tenstorrent",
+    "company": "Tenstorrent (AI)",
+    "role": "Contato",
+    "personal_note": "AI chips. Infra TI.",
+    "motivo": "ai infra tenstorrent"
+  },
+  {
+    "email": "ti@mythic.ai",
+    "name": "Mythic",
+    "company": "Mythic (analog AI)",
+    "role": "TI",
+    "personal_note": "Edge AI. Infra TI.",
+    "motivo": "ai infra mythic"
+  },
+  {
+    "email": "contact@runpod.com",
+    "name": "RunPod",
+    "company": "RunPod (GPU cloud)",
+    "role": "Contato",
+    "personal_note": "GPU cloud. Infra TI.",
+    "motivo": "ai cloud runpod"
+  },
+  {
+    "email": "ti@vast.ai",
+    "name": "Vast.ai",
+    "company": "Vast.ai (GPU marketplace)",
+    "role": "TI",
+    "personal_note": "GPU rental. Infra TI.",
+    "motivo": "ai cloud vast"
+  },
+  {
+    "email": "contact@lambdalabs.com",
+    "name": "Lambda Labs",
+    "company": "Lambda Labs (GPU cloud)",
+    "role": "Contato",
+    "personal_note": "GPU cloud. Infra TI.",
+    "motivo": "ai cloud lambda"
+  },
+  {
+    "email": "ti@coreweave.com",
+    "name": "CoreWeave",
+    "company": "CoreWeave (GPU cloud)",
+    "role": "TI",
+    "personal_note": "GPU cloud. Infra TI.",
+    "motivo": "ai cloud coreweave"
+  },
+  {
+    "email": "contact@rocm.ai",
+    "name": "ROCm (AMD AI)",
+    "company": "AMD ROCm",
+    "role": "Contato",
+    "personal_note": "AI software. Infra TI.",
+    "motivo": "ai infra rocm"
+  },
+  {
+    "email": "ti@huggingface.co",
+    "name": "Hugging Face",
+    "company": "Hugging Face",
+    "role": "TI",
+    "personal_note": "ML platform. Infra TI.",
+    "motivo": "ai ml huggingface"
+  },
+  {
+    "email": "contact@replicate.com",
+    "name": "Replicate",
+    "company": "Replicate (AI models)",
+    "role": "Contato",
+    "personal_note": "AI model deployment. Infra TI.",
+    "motivo": "ai ml replicate"
+  },
+  {
+    "email": "ti@modal.com",
+    "name": "Modal",
+    "company": "Modal (AI infra)",
+    "role": "TI",
+    "personal_note": "Serverless AI. Infra TI.",
+    "motivo": "ai ml modal"
+  },
+  {
+    "email": "contact@bananadev.com",
+    "name": "Banana Dev",
+    "company": "Banana (AI deployment)",
+    "role": "Contato",
+    "personal_note": "ML deployment. Infra TI.",
+    "motivo": "ai ml banana"
+  },
+  {
+    "email": "ti@inferencenet.com",
+    "name": "Inference.net",
+    "company": "Inference (AI service)",
+    "role": "TI",
+    "personal_note": "AI inference. Infra TI.",
+    "motivo": "ai ml inferencenet"
+  },
+  {
+    "email": "contact@wandb.com",
+    "name": "Weights & Biases",
+    "company": "W&B",
+    "role": "Contato",
+    "personal_note": "ML tracking. Infra TI.",
+    "motivo": "mlops wandb"
+  },
+  {
+    "email": "ti@comet.ml",
+    "name": "Comet ML",
+    "company": "Comet ML",
+    "role": "TI",
+    "personal_note": "ML observability. Infra TI.",
+    "motivo": "mlops comet"
+  },
+  {
+    "email": "contact@neptune.ai",
+    "name": "Neptune.ai",
+    "company": "Neptune.ai (ML tracking)",
+    "role": "Contato",
+    "personal_note": "ML metadata. Infra TI.",
+    "motivo": "mlops neptune"
+  },
+  {
+    "email": "ti@mlflow.org",
+    "name": "MLflow",
+    "company": "MLflow (Databricks)",
+    "role": "TI",
+    "personal_note": "ML lifecycle. Infra TI.",
+    "motivo": "mlops mlflow"
+  },
+  {
+    "email": "contact@feast.ai",
+    "name": "Feast (Feature Store)",
+    "company": "Feast",
+    "role": "Contato",
+    "personal_note": "Feature store. Infra TI.",
+    "motivo": "mlops feast"
+  },
+  {
+    "email": "ti@dvc.org",
+    "name": "DVC (Data Version Control)",
+    "company": "DVC",
+    "role": "TI",
+    "personal_note": "Data versioning. Infra TI.",
+    "motivo": "mlops dvc"
+  },
+  {
+    "email": "contact@iterative.ai",
+    "name": "Iterative (DVC/CML)",
+    "company": "Iterative",
+    "role": "Contato",
+    "personal_note": "MLOps. Infra TI.",
+    "motivo": "mlops iterative"
+  },
+  {
+    "email": "ti@databricks.com",
+    "name": "Databricks",
+    "company": "Databricks",
+    "role": "TI",
+    "personal_note": "Data/AI platform. Infra TI.",
+    "motivo": "mlops databricks"
+  },
+  {
+    "email": "contact@snowflake.com",
+    "name": "Snowflake",
+    "company": "Snowflake",
+    "role": "Contato",
+    "personal_note": "Data cloud. Infra TI.",
+    "motivo": "mlops snowflake"
+  },
+  {
+    "email": "ti@bigquery.com",
+    "name": "Google BigQuery",
+    "company": "Google Cloud BigQuery",
+    "role": "TI",
+    "personal_note": "Data warehouse. Infra TI.",
+    "motivo": "mlops bigquery"
+  },
+  {
+    "email": "contact@clickhouse.com",
+    "name": "ClickHouse",
+    "company": "ClickHouse (Yandex)",
+    "role": "Contato",
+    "personal_note": "OLAP database. Infra TI.",
+    "motivo": "data infra clickhouse"
+  },
+  {
+    "email": "ti@duckdb.org",
+    "name": "DuckDB",
+    "company": "DuckDB (in-process SQL)",
+    "role": "TI",
+    "personal_note": "Analytical DB. Infra TI.",
+    "motivo": "data infra duckdb"
+  },
+  {
+    "email": "contact@datafusion.apache.org",
+    "name": "DataFusion",
+    "company": "Apache DataFusion",
+    "role": "Contato",
+    "personal_note": "Query engine. Infra TI.",
+    "motivo": "data infra datafusion"
+  },
+  {
+    "email": "ti@polars.rs",
+    "name": "Polars",
+    "company": "Polars (Rust data frame)",
+    "role": "TI",
+    "personal_note": "Data processing. Infra TI.",
+    "motivo": "data infra polars"
+  },
+  {
+    "email": "contact@dask.org",
+    "name": "Dask",
+    "company": "Dask (parallel Python)",
+    "role": "Contato",
+    "personal_note": "Parallel computing. Infra TI.",
+    "motivo": "data infra dask"
+  },
+  {
+    "email": "ti@confluent.io",
+    "name": "Confluent (Kafka)",
+    "company": "Confluent",
+    "role": "TI",
+    "personal_note": "Streaming platform. Infra TI.",
+    "motivo": "data streaming confluent"
+  },
+  {
+    "email": "contact@kafka.apache.org",
+    "name": "Apache Kafka",
+    "company": "Apache Kafka",
+    "role": "Contato",
+    "personal_note": "Messaging. Infra TI.",
+    "motivo": "data streaming kafka"
+  },
+  {
+    "email": "ti@redpanda.com",
+    "name": "Redpanda (Kafka compatible)",
+    "company": "Redpanda",
+    "role": "TI",
+    "personal_note": "Streaming. Infra TI.",
+    "motivo": "data streaming redpanda"
+  },
+  {
+    "email": "contact@pulsar.apache.org",
+    "name": "Apache Pulsar",
+    "company": "Apache Pulsar",
+    "role": "Contato",
+    "personal_note": "Messaging. Infra TI.",
+    "motivo": "data streaming pulsar"
+  },
+  {
+    "email": "ti@rabbitmq.com",
+    "name": "RabbitMQ",
+    "company": "RabbitMQ (VMware Broadcom)",
+    "role": "TI",
+    "personal_note": "Messaging. Infra TI.",
+    "motivo": "data streaming rabbitmq"
+  },
+  {
+    "email": "contact@nats.io",
+    "name": "NATS.io",
+    "company": "NATS (Anti-Matter)",
+    "role": "Contato",
+    "personal_note": "Messaging. Infra TI.",
+    "motivo": "data streaming nats"
+  },
+  {
+    "email": "ti@kinesis.amazonaws.com",
+    "name": "AWS Kinesis",
+    "company": "Amazon Kinesis",
+    "role": "TI",
+    "personal_note": "Streaming. Infra TI.",
+    "motivo": "data streaming kinesis"
+  },
+  {
+    "email": "contact@eventgrid.azure.com",
+    "name": "Azure Event Grid",
+    "company": "Microsoft",
+    "role": "Contato",
+    "personal_note": "Eventing. Infra TI.",
+    "motivo": "data streaming eventgrid"
+  },
+  {
+    "email": "ti@pubsub.google.com",
+    "name": "Google Pub/Sub",
+    "company": "Google Cloud",
+    "role": "TI",
+    "personal_note": "Messaging. Infra TI.",
+    "motivo": "data streaming pubsub"
+  },
+  {
+    "email": "contact@sqs.amazonaws.com",
+    "name": "AWS SQS",
+    "company": "Amazon SQS",
+    "role": "Contato",
+    "personal_note": "Queueing. Infra TI.",
+    "motivo": "data streaming sqs"
+  },
+  {
+    "email": "ti@postgresql.org",
+    "name": "PostgreSQL",
+    "company": "PostgreSQL Global Dev",
+    "role": "TI",
+    "personal_note": "Open source DB. Infra TI.",
+    "motivo": "data db postgres"
+  },
+  {
+    "email": "contact@mysql.com",
+    "name": "MySQL (Oracle)",
+    "company": "MySQL",
+    "role": "Contato",
+    "personal_note": "Database. Infra TI.",
+    "motivo": "data db mysql"
+  },
+  {
+    "email": "ti@mariadb.com",
+    "name": "MariaDB",
+    "company": "MariaDB Foundation",
+    "role": "TI",
+    "personal_note": "Database. Infra TI.",
+    "motivo": "data db mariadb"
+  },
+  {
+    "email": "contact@mongodb.com",
+    "name": "MongoDB",
+    "company": "MongoDB",
+    "role": "Contato",
+    "personal_note": "NoSQL DB. Infra TI.",
+    "motivo": "data db mongodb"
+  },
+  {
+    "email": "ti@redis.io",
+    "name": "Redis",
+    "company": "Redis Ltd",
+    "role": "TI",
+    "personal_note": "In-memory DB. Infra TI.",
+    "motivo": "data db redis"
+  },
+  {
+    "email": "contact@cassandra.apache.org",
+    "name": "Apache Cassandra",
+    "company": "Apache Cassandra",
+    "role": "Contato",
+    "personal_note": "NoSQL DB. Infra TI.",
+    "motivo": "data db cassandra"
+  },
+  {
+    "email": "ti@cockroachlabs.com",
+    "name": "CockroachDB",
+    "company": "Cockroach Labs",
+    "role": "TI",
+    "personal_note": "Distributed SQL. Infra TI.",
+    "motivo": "data db cockroach"
+  },
+  {
+    "email": "contact@yugabyte.com",
+    "name": "YugabyteDB",
+    "company": "Yugabyte",
+    "role": "Contato",
+    "personal_note": "Distributed SQL. Infra TI.",
+    "motivo": "data db yugabyte"
+  },
+  {
+    "email": "ti@foundationdb.com",
+    "name": "FoundationDB (Apple)",
+    "company": "Apple FoundationDB",
+    "role": "TI",
+    "personal_note": "Distributed DB. Infra TI.",
+    "motivo": "data db foundationdb"
+  },
+  {
+    "email": "contact@vitess.io",
+    "name": "Vitess (Vtgate)",
+    "company": "Vitess (YouTube/Google)",
+    "role": "Contato",
+    "personal_note": "MySQL sharding. Infra TI.",
+    "motivo": "data db vitess"
+  },
+  {
+    "email": "ti@kubernetes.io",
+    "name": "Kubernetes",
+    "company": "CNCF Kubernetes",
+    "role": "TI",
+    "personal_note": "Orchestration. Infra TI.",
+    "motivo": "k8s kubernetes"
+  },
+  {
+    "email": "contact@docker.com",
+    "name": "Docker",
+    "company": "Docker (Mirantis)",
+    "role": "Contato",
+    "personal_note": "Containers. Infra TI.",
+    "motivo": "k8s docker"
+  },
+  {
+    "email": "ti@containerd.org",
+    "name": "containerd",
+    "company": "containerd (CNCF)",
+    "role": "TI",
+    "personal_note": "Container runtime. Infra TI.",
+    "motivo": "k8s containerd"
+  },
+  {
+    "email": "contact@podman.io",
+    "name": "Podman",
+    "company": "Podman (Red Hat)",
+    "role": "Contato",
+    "personal_note": "Containers. Infra TI.",
+    "motivo": "k8s podman"
+  },
+  {
+    "email": "ti@helm.sh",
+    "name": "Helm",
+    "company": "Helm (CNCF)",
+    "role": "TI",
+    "personal_note": "K8s package mgmt. Infra TI.",
+    "motivo": "k8s helm"
+  },
+  {
+    "email": "contact@istio.io",
+    "name": "Istio",
+    "company": "Istio (CNCF)",
+    "role": "Contato",
+    "personal_note": "Service mesh. Infra TI.",
+    "motivo": "k8s istio"
+  },
+  {
+    "email": "ti@linkerd.io",
+    "name": "Linkerd",
+    "company": "Linkerd (CNCF)",
+    "role": "TI",
+    "personal_note": "Service mesh. Infra TI.",
+    "motivo": "k8s linkerd"
+  },
+  {
+    "email": "contact@envoyproxy.dev",
+    "name": "Envoy Proxy",
+    "company": "Envoy (CNCF)",
+    "role": "Contato",
+    "personal_note": "Proxy. Infra TI.",
+    "motivo": "k8s envoy"
+  },
+  {
+    "email": "ti@prometheus.io",
+    "name": "Prometheus",
+    "company": "Prometheus (CNCF)",
+    "role": "TI",
+    "personal_note": "Monitoring. Infra TI.",
+    "motivo": "k8s prometheus"
+  },
+  {
+    "email": "contact@grafana.com",
+    "name": "Grafana",
+    "company": "Grafana Labs",
+    "role": "Contato",
+    "personal_note": "Observability. Infra TI.",
+    "motivo": "k8s grafana"
+  },
+  {
+    "email": "ti@argoproj.io",
+    "name": "Argo (CNCF)",
+    "company": "Argo Project",
+    "role": "TI",
+    "personal_note": "GitOps. Infra TI.",
+    "motivo": "k8s argo"
+  },
+  {
+    "email": "contact@fluxcd.io",
+    "name": "Flux (CNCF)",
+    "company": "Flux CD",
+    "role": "Contato",
+    "personal_note": "GitOps. Infra TI.",
+    "motivo": "k8s flux"
+  },
+  {
+    "email": "ti@certmanager.io",
+    "name": "cert-manager",
+    "company": "cert-manager (CNCF)",
+    "role": "TI",
+    "personal_note": "TLS certs. Infra TI.",
+    "motivo": "k8s certmanager"
+  },
+  {
+    "email": "contact@externaldns.org",
+    "name": "ExternalDNS",
+    "company": "ExternalDNS (CNCF)",
+    "role": "Contato",
+    "personal_note": "DNS mgmt. Infra TI.",
+    "motivo": "k8s externaldns"
+  },
+  {
+    "email": "ti@nginx.com",
+    "name": "NGINX Ingress",
+    "company": "NGINX (F5)",
+    "role": "TI",
+    "personal_note": "Ingress. Infra TI.",
+    "motivo": "k8s ingress"
+  },
+  {
+    "email": "contact@jenkins.io",
+    "name": "Jenkins",
+    "company": "Jenkins (CD Foundation)",
+    "role": "Contato",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd jenkins"
+  },
+  {
+    "email": "ti@gitlab.com",
+    "name": "GitLab",
+    "company": "GitLab",
+    "role": "TI",
+    "personal_note": "Dev platform. Infra TI.",
+    "motivo": "cicd gitlab"
+  },
+  {
+    "email": "contact@github.com",
+    "name": "GitHub Actions",
+    "company": "GitHub (Microsoft)",
+    "role": "Contato",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd github"
+  },
+  {
+    "email": "ti@circleci.com",
+    "name": "CircleCI",
+    "company": "CircleCI",
+    "role": "TI",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd circleci"
+  },
+  {
+    "email": "contact@travis-ci.com",
+    "name": "Travis CI",
+    "company": "Travis CI",
+    "role": "Contato",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd travis"
+  },
+  {
+    "email": "ti@drone.io",
+    "name": "Drone CI",
+    "company": "Drone (CNCF)",
+    "role": "TI",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd drone"
+  },
+  {
+    "email": "contact@codeship.com",
+    "name": "CodeShip",
+    "company": "CodeShip (CloudBees)",
+    "role": "Contato",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd codeship"
+  },
+  {
+    "email": "ti@buildkite.com",
+    "name": "Buildkite",
+    "company": "Buildkite (Shopify)",
+    "role": "TI",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd buildkite"
+  },
+  {
+    "email": "contact@semaphorecli.com",
+    "name": "Semaphore CI",
+    "company": "Semaphore",
+    "role": "Contato",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd semaphore"
+  },
+  {
+    "email": "ti@buddy.works",
+    "name": "Buddy Works",
+    "company": "Buddy (CI/CD)",
+    "role": "TI",
+    "personal_note": "CI/CD. Infra TI.",
+    "motivo": "cicd buddy"
+  }
+]

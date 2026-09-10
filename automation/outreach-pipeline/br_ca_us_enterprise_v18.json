@@ -1,0 +1,370 @@
+[
+  {
+    "email": "ti@weke.com.br",
+    "name": "Weke",
+    "company": "Weke Tecnologia",
+    "role": "TI",
+    "personal_note": "Software house. Infra TI.",
+    "motivo": "br weke"
+  },
+  {
+    "email": "contact@weke.com.br",
+    "name": "Weke",
+    "company": "Weke Tecnologia",
+    "role": "Contato",
+    "personal_note": "Software house. Infra TI.",
+    "motivo": "br weke2"
+  },
+  {
+    "email": "ti@accelera.com.br",
+    "name": "Accelera",
+    "company": "Accelera Tecnologia",
+    "role": "TI",
+    "personal_note": "Dev ops platform. Infra TI.",
+    "motivo": "br accelera"
+  },
+  {
+    "email": "contact@accelera.com.br",
+    "name": "Accelera",
+    "company": "Accelera Tecnologia",
+    "role": "Contato",
+    "personal_note": "Dev ops. Infra TI.",
+    "motivo": "br accelera2"
+  },
+  {
+    "email": "ti@digitalhouse.com.br",
+    "name": "Digital House",
+    "company": "Digital House",
+    "role": "TI",
+    "personal_note": "Coding bootcamp. Infra TI.",
+    "motivo": "br digitalhouse"
+  },
+  {
+    "email": "contact@digitalhouse.com.br",
+    "name": "Digital House",
+    "company": "Digital House",
+    "role": "Contato",
+    "personal_note": "Bootcamp. Infra TI.",
+    "motivo": "br digitalhouse2"
+  },
+  {
+    "email": "ti@rocketseat.com.br",
+    "name": "Rocketseat",
+    "company": "Rocketseat",
+    "role": "TI",
+    "personal_note": "Dev education platform. Infra TI.",
+    "motivo": "br rocketseat"
+  },
+  {
+    "email": "contact@rocketseat.com.br",
+    "name": "Rocketseat",
+    "company": "Rocketseat",
+    "role": "Contato",
+    "personal_note": "Dev education. Infra TI.",
+    "motivo": "br rocketseat2"
+  },
+  {
+    "email": "ti@alura.com.br",
+    "name": "Alura",
+    "company": "Alura (TotalNet)",
+    "role": "TI",
+    "personal_note": "Online education. Infra TI.",
+    "motivo": "br alura"
+  },
+  {
+    "email": "contact@alura.com.br",
+    "name": "Alura",
+    "company": "Alura",
+    "role": "Contato",
+    "personal_note": "EdTech. Infra TI.",
+    "motivo": "br alura2"
+  },
+  {
+    "email": "ti@concerto.ca",
+    "name": "Concerto",
+    "company": "Concerto Technologies",
+    "role": "TI",
+    "personal_note": "Cloud consulting. Infra TI.",
+    "motivo": "ca concerto"
+  },
+  {
+    "email": "contact@concerto.ca",
+    "name": "Concerto",
+    "company": "Concerto Technologies",
+    "role": "Contato",
+    "personal_note": "Cloud consulting. Infra TI.",
+    "motivo": "ca concerto2"
+  },
+  {
+    "email": "ti@matic.ca",
+    "name": "Matic",
+    "company": "Matic Software",
+    "role": "TI",
+    "personal_note": "Software dev shop. Infra TI.",
+    "motivo": "ca matic"
+  },
+  {
+    "email": "contact@matic.ca",
+    "name": "Matic",
+    "company": "Matic Software",
+    "role": "Contato",
+    "personal_note": "Software dev. Infra TI.",
+    "motivo": "ca matic2"
+  },
+  {
+    "email": "ti@binance.ca",
+    "name": "Binance",
+    "company": "Binance (Canada office)",
+    "role": "TI",
+    "personal_note": "Crypto exchange IT. Infra TI.",
+    "motivo": "ca binance"
+  },
+  {
+    "email": "contact@binance.ca",
+    "name": "Binance",
+    "company": "Binance (Canada)",
+    "role": "Contato",
+    "personal_note": "Crypto exchange IT. Infra TI.",
+    "motivo": "ca binance2"
+  },
+  {
+    "email": "ti@shopify.com",
+    "name": "Shopify",
+    "company": "Shopify",
+    "role": "TI",
+    "personal_note": "E-commerce platform. Infra TI.",
+    "motivo": "ca shopify"
+  },
+  {
+    "email": "contact@shopify.com",
+    "name": "Shopify",
+    "company": "Shopify",
+    "role": "Contato",
+    "personal_note": "E-commerce platform. Infra TI.",
+    "motivo": "ca shopify2"
+  },
+  {
+    "email": "ti@brahm.ca",
+    "name": "Brahm",
+    "company": "Brahm Software",
+    "role": "TI",
+    "personal_note": "Dev studio. Infra TI.",
+    "motivo": "ca brahm"
+  },
+  {
+    "email": "contact@brahm.ca",
+    "name": "Brahm",
+    "company": "Brahm Software",
+    "role": "Contato",
+    "personal_note": "Dev studio. Infra TI.",
+    "motivo": "ca brahm2"
+  },
+  {
+    "email": "j.smith@salesforce.com",
+    "name": "John Smith",
+    "company": "Salesforce San Francisco",
+    "role": "TI",
+    "personal_note": "CRM platform. Infra TI.",
+    "motivo": "us salesforce"
+  },
+  {
+    "email": "m.jones@adobe.com",
+    "name": "Mike Jones",
+    "company": "Adobe",
+    "role": "TI",
+    "personal_note": "Creative cloud IT. Infra TI.",
+    "motivo": "us adobe"
+  },
+  {
+    "email": "d.wilson@workday.com",
+    "name": "David Wilson",
+    "company": "Workday",
+    "role": "TI",
+    "personal_note": "HR/finance platform. Infra TI.",
+    "motivo": "us workday"
+  },
+  {
+    "email": "l.taylor@servicenow.com",
+    "name": "Lisa Taylor",
+    "company": "ServiceNow",
+    "role": "TI",
+    "personal_note": "Workflow platform. Infra TI.",
+    "motivo": "us servicenow"
+  },
+  {
+    "email": "k.walker@salesforce.com",
+    "name": "Kevin Walker",
+    "company": "Salesforce",
+    "role": "TI",
+    "personal_note": "CRM platform. Infra TI.",
+    "motivo": "us salesforce2"
+  },
+  {
+    "email": "a.miller@adobe.com",
+    "name": "Amy Miller",
+    "company": "Adobe",
+    "role": "TI",
+    "personal_note": "Creative cloud IT. Infra TI.",
+    "motivo": "us adobe2"
+  },
+  {
+    "email": "b.davis@tableau.com",
+    "name": "Ben Davis",
+    "company": "Tableau (Salesforce)",
+    "role": "TI",
+    "personal_note": "BI platform IT. Infra TI.",
+    "motivo": "us tableau"
+  },
+  {
+    "email": "c.johnson@tableau.com",
+    "name": "Chris Johnson",
+    "company": "Tableau",
+    "role": "TI",
+    "personal_note": "BI platform IT. Infra TI.",
+    "motivo": "us tableau2"
+  },
+  {
+    "email": "e.wilson@qlik.com",
+    "name": "Elena Wilson",
+    "company": "Qlik",
+    "role": "TI",
+    "personal_note": "BI platform IT. Infra TI.",
+    "motivo": "us qlik"
+  },
+  {
+    "email": "f.brown@qlik.com",
+    "name": "Frank Brown",
+    "company": "Qlik",
+    "role": "TI",
+    "personal_note": "BI platform IT. Infra TI.",
+    "motivo": "us qlik2"
+  },
+  {
+    "email": "g.taylor@confluent.io",
+    "name": "Gary Taylor",
+    "company": "Confluent",
+    "role": "TI",
+    "personal_note": "Kafka streaming. Infra TI.",
+    "motivo": "us confluent"
+  },
+  {
+    "email": "h.murphy@redpanda.com",
+    "name": "Helen Murphy",
+    "company": "Redpanda",
+    "role": "TI",
+    "personal_note": "Streaming platform. Infra TI.",
+    "motivo": "us redpanda"
+  },
+  {
+    "email": "r.sharma@appdynamics.com",
+    "name": "Ravi Sharma",
+    "company": "AppDynamics (Cisco)",
+    "role": "TI",
+    "personal_note": "APM platform IT. Infra TI.",
+    "motivo": "us appdynamics"
+  },
+  {
+    "email": "s.patel@appdynamics.com",
+    "name": "Sunil Patel",
+    "company": "AppDynamics",
+    "role": "TI",
+    "personal_note": "APM platform IT. Infra TI.",
+    "motivo": "us appdynamics2"
+  },
+  {
+    "email": "a.kumar@newrelic.com",
+    "name": "Amit Kumar",
+    "company": "New Relic",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us newrelic"
+  },
+  {
+    "email": "v.jha@newrelic.com",
+    "name": "Vijay Jha",
+    "company": "New Relic",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us newrelic2"
+  },
+  {
+    "email": "l.singh@elastic.co",
+    "name": "Lal Singh",
+    "company": "Elastic (ELK)",
+    "role": "TI",
+    "personal_note": "Search analytics. Infra TI.",
+    "motivo": "us elastic"
+  },
+  {
+    "email": "m.gupta@elastic.co",
+    "name": "Mohan Gupta",
+    "company": "Elastic",
+    "role": "TI",
+    "personal_note": "Search analytics. Infra TI.",
+    "motivo": "us elastic2"
+  },
+  {
+    "email": "p.rao@datadog.com",
+    "name": "Pradeep Rao",
+    "company": "Datadog",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us datadog"
+  },
+  {
+    "email": "n.b.singh@datadog.com",
+    "name": "N.B. Singh",
+    "company": "Datadog",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us datadog2"
+  },
+  {
+    "email": "q.kumar@dynatrace.com",
+    "name": "Q. Kumar",
+    "company": "Dynatrace",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us dynatrace"
+  },
+  {
+    "email": "r.singh@dynatrace.com",
+    "name": "R. Singh",
+    "company": "Dynatrace",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us dynatrace2"
+  },
+  {
+    "email": "t.verma@sumologic.com",
+    "name": "T. Verma",
+    "company": "Sumo Logic",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us sumologic"
+  },
+  {
+    "email": "u.pandey@splunk.com",
+    "name": "U. Pandey",
+    "company": "Splunk",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us splunk"
+  },
+  {
+    "email": "v.bansal@grafana.com",
+    "name": "V. Bansal",
+    "company": "Grafana Labs",
+    "role": "TI",
+    "personal_note": "Observability platform. Infra TI.",
+    "motivo": "us grafana"
+  },
+  {
+    "email": "w.sharma@prometheus.io",
+    "name": "W. Sharma",
+    "company": "Prometheus (CNCF)",
+    "role": "TI",
+    "personal_note": "Monitoring platform. Infra TI.",
+    "motivo": "us prometheus"
+  }
+]

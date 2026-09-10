@@ -1,0 +1,210 @@
+[
+  {
+    "email": "contato@mercadopago.com.br",
+    "name": "Mercado Pago",
+    "company": "Mercado Pago",
+    "role": "TI/Integrações",
+    "personal_note": "Principal gateway de pagamento LATAM. Integrações de API e automação de pagamentos.",
+    "motivo": "fintech latam"
+  },
+  {
+    "email": "contato@neonomics.com.br",
+    "name": "Neonomics",
+    "company": "Neonomics",
+    "role": "DevOps",
+    "personal_note": "Fintech de pagamentos B2B. Infraestrutura de API escalável.",
+    "motivo": "fintech brasil"
+  },
+  {
+    "email": "ti@stone.com.br",
+    "name": "Stone",
+    "company": "Stone",
+    "role": "TI",
+    "personal_note": "Empresa de tecnologia financeira multibanco. Necessidades massivas de cloud e automação.",
+    "motivo": "fintech stone"
+  },
+  {
+    "email": "contato@picpay.com",
+    "name": "PicPay",
+    "company": "PicPay",
+    "role": "TI",
+    "personal_note": "Wallet digital com 70M+ usuários. Infraestrutura em escala.",
+    "motivo": "fintech picpay"
+  },
+  {
+    "email": "contato@magna.com.br",
+    "name": "Magna Invest",
+    "company": "Magna Invest",
+    "role": "TI",
+    "personal_note": "Fintech de investimentos. Plataformas de trading precisam de baixa latência.",
+    "motivo": "fintech magna"
+  },
+  {
+    "email": "contato@asml.com.br",
+    "name": "ASML Brazil",
+    "company": "ASML Brazil",
+    "role": "TI",
+    "personal_note": "Filial brasileira de semicondutor. Automação de laboratório e cloud computing.",
+    "motivo": "enterprise cloud"
+  },
+  {
+    "email": "contato@fitreceita.com.br",
+    "name": "FitReceita",
+    "company": "FitReceita",
+    "role": "CTO",
+    "personal_note": "Health tech digitalização de receituário. OCR + IA para saúde.",
+    "motivo": "healthtech"
+  },
+  {
+    "email": "contato@telemedicina.com.br",
+    "name": "Telemedicina Brasil",
+    "company": "Telemedicina Brasil",
+    "role": "TI",
+    "personal_note": "Plataforma de telemedicina. Chatbots, triagem automática, EHR.",
+    "motivo": "healthtech telemedicine"
+  },
+  {
+    "email": "ti@danisystems.com.br",
+    "name": "Dani Systems",
+    "company": "Dani Systems",
+    "role": "TI",
+    "personal_note": "Tecnologia hospitalar. Integração de sistemas de saúde.",
+    "motivo": "healthtech hospital"
+  },
+  {
+    "email": "contato@holosmed.com.br",
+    "name": "Holos Medical",
+    "company": "Holos Medical",
+    "role": "CTO",
+    "personal_note": "Health tech com IA para diagnóstico. Infraestrutura de ML em escala.",
+    "motivo": "healthtech ai"
+  },
+  {
+    "email": "contato@genomika.com.br",
+    "name": "Genomika",
+    "company": "Genomika",
+    "role": "Bioinformatics",
+    "personal_note": "Análise genômica com IA. Processamento massivo de dados genômicos na nuvem.",
+    "motivo": "healthtech genomics"
+  },
+  {
+    "email": "contato@cloudmanaged.com.br",
+    "name": "Cloud Managed",
+    "company": "Cloud Managed",
+    "role": "Gerente de Contas",
+    "personal_note": "MSP brasileiro focado em migração para a nuvem. Otimização de custos AWS/Azure.",
+    "motivo": "brazil msp"
+  },
+  {
+    "email": "contato@tiwares.com.br",
+    "name": "TIWares",
+    "company": "TIWares",
+    "role": "TI",
+    "personal_note": "Provedor de serviços de TI e cloud para empresas brasileiras.",
+    "motivo": "brazil msp"
+  },
+  {
+    "email": "contato@agenciadigital.com.br",
+    "name": "Agência Digital XP",
+    "company": "Agência Digital XP",
+    "role": "Diretor de Tecnologia",
+    "personal_note": "Agência digital que precisa de automação de campanhas e analytics em tempo real.",
+    "motivo": "agency digital"
+  },
+  {
+    "email": "contato@webguard.com.br",
+    "name": "WebGuard",
+    "company": "WebGuard",
+    "role": "CTO",
+    "personal_note": "Cibersegurança para PMEs brasileiras. Monitoramento contínuo e resposta a incidentes.",
+    "motivo": "security brazil"
+  },
+  {
+    "email": "ti@locaweb.com.br",
+    "name": "Locaweb",
+    "company": "Locaweb",
+    "role": "TI",
+    "personal_note": "Maior provedor de hospedagem e 클라우드 no Brasil. Automação de infraestrutura.",
+    "motivo": "hosting cloud"
+  },
+  {
+    "email": "contato@digitallabs.com.br",
+    "name": "Digital Labs",
+    "company": "Digital Labs",
+    "role": "Diretor Comercial",
+    "personal_note": "Agência de marketing digital com foco em automação de funis e IA generativa.",
+    "motivo": "agency marketing"
+  },
+  {
+    "email": "contato@safepixel.com.br",
+    "name": "SafePixel",
+    "company": "SafePixel",
+    "role": "CTO",
+    "personal_note": "Segurança cibernética para empresas brasileiras. IA para detecção de ameaças.",
+    "motivo": "security startup"
+  },
+  {
+    "email": "contato@n5tech.com.br",
+    "name": "N5 Technology",
+    "company": "N5 Technology",
+    "role": "TI",
+    "personal_note": "Tecnologia bancária B2B. Automação de processos financeiros.",
+    "motivo": "fintech b2b"
+  },
+  {
+    "email": "contato@arquivei.com.br",
+    "name": "Arquivei",
+    "company": "Arquivei",
+    "role": "CTO",
+    "personal_note": "Plataforma de emissão de NF-e e SPED. Necessidade de processamento documental com IA.",
+    "motivo": "fintech invoice"
+  },
+  {
+    "email": "contato@totvs.com.br",
+    "name": "TOTVS",
+    "company": "TOTVS",
+    "role": "TI",
+    "personal_note": "Maior empresa de software empresarial da América Latina. Modernização de legado com IA.",
+    "motivo": "enterprise erp"
+  },
+  {
+    "email": "contato@fluxo.com.br",
+    "name": "Fluxo",
+    "company": "Fluxo",
+    "role": "CTO",
+    "personal_note": "Fintech de gestão financeira para PMEs. Automação de conciliação bancária.",
+    "motivo": "fintech pmE"
+  },
+  {
+    "email": "contato@botcity.org",
+    "name": "BotCity",
+    "company": "BotCity",
+    "role": "CTO",
+    "personal_note": "Automação de RPA e bots para empresas brasileiras. Integração com IA generativa.",
+    "motivo": "rpa automation"
+  },
+  {
+    "email": "contato@biocon.com.br",
+    "name": "BioCon",
+    "company": "BioCon",
+    "role": "TI",
+    "personal_note": "Health tech com foco em imagens médicas. Processamento de images com IA.",
+    "motivo": "healthtech imaging"
+  },
+  {
+    "email": "contato@nuvem.pt",
+    "name": "Nuvem.pt",
+    "company": "Nuvem.pt",
+    "role": "TI",
+    "personal_note": "Provedor cloud português. Migrações e otimização de infraestrutura.",
+    "motivo": "portugal cloud"
+  },
+  {
+    "email": "ti@digitalhouse.com.br",
+    "name": "Digital House",
+    "company": "Digital House",
+    "role": "TI",
+    "personal_note": "EdTech com plataforma de aprendizado. Automação de avaliações e recomendação com IA.",
+    "motivo": "edtech ai"
+  }
+]

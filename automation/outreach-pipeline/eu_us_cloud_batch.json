@@ -1,0 +1,330 @@
+[
+  {
+    "email": "contact@transferwise.com",
+    "name": "Wise",
+    "company": "Wise",
+    "role": "TI",
+    "personal_note": "Fintech global, plataforma de Transferências internacionais. Infraestrutura em escala global.",
+    "motivo": "fintech global wise"
+  },
+  {
+    "email": "ti@n26.com",
+    "name": "N26",
+    "company": "N26",
+    "role": "TI",
+    "personal_note": "Banco digital europeu, 7M+ clientes. Necessidades massivas de cloud e automação.",
+    "motivo": "fintech n26"
+  },
+  {
+    "email": "contact@breeder.co",
+    "name": "Breeder",
+    "company": "Breeder",
+    "role": "CTO",
+    "personal_note": "Platforma de crédito B2B europeia. Infraestrutura cloud escalável.",
+    "motivo": "fintech breeder"
+  },
+  {
+    "email": "ti@checkout.com",
+    "name": "Checkout.com",
+    "company": "Checkout.com",
+    "role": "TI",
+    "personal_note": "Gateway de pagamentos global. Infraestrutura de alta disponibilidade.",
+    "motivo": "fintech checkout"
+  },
+  {
+    "email": "contact@adyen.com",
+    "name": "Adyen",
+    "company": "Adyen",
+    "role": "TI",
+    "personal_note": "Payment platform unicorn. Infraestrutura global de pagamentos.",
+    "motivo": "fintech adyen"
+  },
+  {
+    "email": "ti@stripe.com",
+    "name": "Stripe",
+    "company": "Stripe",
+    "role": "TI",
+    "personal_note": "Plataforma de pagamentos global. Infraestrutura em escala.",
+    "motivo": "fintech stripe"
+  },
+  {
+    "email": "contact@klarna.com",
+    "name": "Klarna",
+    "company": "Klarna",
+    "role": "TI",
+    "personal_note": "Buy now pay later, 150M+ clientes. Infraestrutura massiva.",
+    "motivo": "fintech klarna"
+  },
+  {
+    "email": "contact@sumup.com",
+    "name": "SumUp",
+    "company": "SumUp",
+    "role": "TI",
+    "personal_note": "Pagamentos mobile, 4M+ comerciantes. Infraestrutura global.",
+    "motivo": "fintech sumup"
+  },
+  {
+    "email": "ti@ricardo.com",
+    "name": "Ricardo",
+    "company": "Ricardo",
+    "role": "TI",
+    "personal_note": "Marketplace europeu. Infraestrutura de e-commerce em escala.",
+    "motivo": "marketplace ricardo"
+  },
+  {
+    "email": "contact@homeday.com",
+    "name": "Homeday",
+    "company": "Homeday",
+    "role": "CTO",
+    "personal_note": "Marketplace imobiliário europeu. IA para valuation e matching.",
+    "motivo": "proptech homeday"
+  },
+  {
+    "email": "ti@cloudflare.com",
+    "name": "Cloudflare",
+    "company": "Cloudflare",
+    "role": "TI",
+    "personal_note": "Infraestrutura web global. Edge computing e segurança.",
+    "motivo": "cloud cloudflare"
+  },
+  {
+    "email": "contact@digitalocean.com",
+    "name": "DigitalOcean",
+    "company": "DigitalOcean",
+    "role": "TI",
+    "personal_note": "Cloud host para desenvolvedores. Infraestrutura escalável.",
+    "motivo": "cloud digitalocean"
+  },
+  {
+    "email": "contact@heroku.com",
+    "name": "Heroku",
+    "company": "Heroku",
+    "role": "TI",
+    "personal_note": "PaaS cloud. Infraestrutura de deploy escalável.",
+    "motivo": "cloud heroku"
+  },
+  {
+    "email": "ti@linode.com",
+    "name": "Linode",
+    "company": "Linode",
+    "role": "TI",
+    "personal_note": "Cloud provider. Infraestrutura de VMs e managed services.",
+    "motivo": "cloud linode"
+  },
+  {
+    "email": "contact@vultr.com",
+    "name": "Vultr",
+    "company": "Vultr",
+    "role": "TI",
+    "personal_note": "Cloud provider global. Infraestrutura de HNS e bare metal.",
+    "motivo": "cloud vultr"
+  },
+  {
+    "email": "ti@scaleway.com",
+    "name": "Scaleway",
+    "company": "Scaleway",
+    "role": "TI",
+    "personal_note": "Cloud europeu (Frância). Infraestrutura cloud europeia.",
+    "motivo": "cloud scaleway"
+  },
+  {
+    "email": "contact@ovhcloud.com",
+    "name": "OVHcloud",
+    "company": "OVHcloud",
+    "role": "TI",
+    "personal_note": "Maior provedor cloud europeu. Infraestrutura massiva.",
+    "motivo": "cloud ovh"
+  },
+  {
+    "email": "ti@hetzner.com",
+    "name": "Hetzner",
+    "company": "Hetzner",
+    "role": "TI",
+    "personal_note": "Cloud e hosting europeu. Infraestrutura de baixo custo.",
+    "motivo": "cloud hetzner"
+  },
+  {
+    "email": "contact@mongodb.com",
+    "name": "MongoDB",
+    "company": "MongoDB",
+    "role": "TI",
+    "personal_note": "Database company. Infraestrutura de dados distribuída.",
+    "motivo": "data mongodb"
+  },
+  {
+    "email": "ti@redis.io",
+    "name": "Redis",
+    "company": "Redis",
+    "role": "TI",
+    "personal_note": "In-memory database. Infraestrutura de cache distribuída.",
+    "motivo": "data redis"
+  },
+  {
+    "email": "contact@elastic.co",
+    "name": "Elastic",
+    "company": "Elastic",
+    "role": "TI",
+    "personal_note": "Search e analytics. Infraestrutura de dados em escala.",
+    "motivo": "data elastic"
+  },
+  {
+    "email": "ti@datadog.com",
+    "name": "Datadog",
+    "company": "Datadog",
+    "role": "TI",
+    "personal_note": "Observabilidade e monitoring. Infraestrutura de métricas em tempo real.",
+    "motivo": "monitoring datadog"
+  },
+  {
+    "email": "contact@newrelic.com",
+    "name": "New Relic",
+    "company": "New Relic",
+    "role": "TI",
+    "personal_note": "Observabilidade SaaS. Infraestrutura de telemetria.",
+    "motivo": "monitoring newrelic"
+  },
+  {
+    "email": "ti@logz.io",
+    "name": "Logz.io",
+    "company": "Logz.io",
+    "role": "TI",
+    "personal_note": "Log management e analytics. Infraestrutura de logs em escala.",
+    "motivo": "monitoring logz"
+  },
+  {
+    "email": "contact@twilio.com",
+    "name": "Twilio",
+    "company": "Twilio",
+    "role": "TI",
+    "personal_note": "Communications API. Infraestrutura de comunicações globais.",
+    "motivo": "api twilio"
+  },
+  {
+    "email": "ti@sendgrid.com",
+    "name": "SendGrid",
+    "company": "SendGrid",
+    "role": "TI",
+    "personal_note": "Email delivery API. Infraestrutura de entrega de email em escala.",
+    "motivo": "api sendgrid"
+  },
+  {
+    "email": "contact@auth0.com",
+    "name": "Auth0",
+    "company": "Auth0",
+    "role": "TI",
+    "personal_note": "Identity platform. Infraestrutura de autenticação global.",
+    "motivo": "security auth0"
+  },
+  {
+    "email": "ti@okta.com",
+    "name": "Okta",
+    "company": "Okta",
+    "role": "TI",
+    "personal_note": "Identity and access management. Infraestrutura de segurança.",
+    "motivo": "security okta"
+  },
+  {
+    "email": "contact@crowdstrike.com",
+    "name": "CrowdStrike",
+    "company": "CrowdStrike",
+    "role": "TI",
+    "personal_note": "Cybersecurity cloud. Infraestrutura de threat detection.",
+    "motivo": "security crowdstrike"
+  },
+  {
+    "email": "ti@zscaler.com",
+    "name": "Zscaler",
+    "company": "Zscaler",
+    "role": "TI",
+    "personal_note": "Cloud security. Infraestrutura de zero trust.",
+    "motivo": "security zscaler"
+  },
+  {
+    "email": "contact@palantir.com",
+    "name": "Palantir",
+    "company": "Palantir",
+    "role": "TI",
+    "personal_note": "Data integration e analytics. Infraestrutura de big data.",
+    "motivo": "data palantir"
+  },
+  {
+    "email": "ti@snowflake.com",
+    "name": "Snowflake",
+    "company": "Snowflake",
+    "role": "TI",
+    "personal_note": "Data cloud. Infraestrutura de data warehouse.",
+    "motivo": "data snowflake"
+  },
+  {
+    "email": "contact@databricks.com",
+    "name": "Databricks",
+    "company": "Databricks",
+    "role": "TI",
+    "personal_note": "Data analytics e ML platform. Infraestrutura de dados.",
+    "motivo": "data databricks"
+  },
+  {
+    "email": "ti@confluent.io",
+    "name": "Confluent",
+    "company": "Confluent",
+    "role": "TI",
+    "personal_note": "Data streaming platform. Infraestrutura Kafka.",
+    "motivo": "data confluent"
+  },
+  {
+    "email": "contact@kafka.apache.org",
+    "name": "Apache Kafka",
+    "company": "Apache Kafka",
+    "role": "TI",
+    "personal_note": "Distributed streaming platform. Infraestrutura de eventos.",
+    "motivo": "data kafka"
+  },
+  {
+    "email": "ti@airbnb.com",
+    "name": "Airbnb",
+    "company": "Airbnb",
+    "role": "TI",
+    "personal_note": "Marketplace global. Infraestrutura de booking em escala.",
+    "motivo": "marketplace airbnb"
+  },
+  {
+    "email": "contact@uber.com",
+    "name": "Uber",
+    "company": "Uber",
+    "role": "TI",
+    "personal_note": "Platforma global de mobility. Infraestrutura em escala massiva.",
+    "motivo": "platform uber"
+  },
+  {
+    "email": "ti@lyft.com",
+    "name": "Lyft",
+    "company": "Lyft",
+    "role": "TI",
+    "personal_note": "Mobility platform. Infraestrutura de dispatch em tempo real.",
+    "motivo": "platform lyft"
+  },
+  {
+    "email": "contact@doordash.com",
+    "name": "DoorDash",
+    "company": "DoorDash",
+    "role": "TI",
+    "personal_note": "Food delivery platform. Infraestrutura de logistics em tempo real.",
+    "motivo": "platform doordash"
+  },
+  {
+    "email": "ti@instacart.com",
+    "name": "Instacart",
+    "company": "Instacart",
+    "role": "TI",
+    "personal_note": "Grocery delivery. Infraestrutura de fulfillment em escala.",
+    "motivo": "platform instacart"
+  },
+  {
+    "email": "contact@grubhub.com",
+    "name": "Grubhub",
+    "company": "Grubhub",
+    "role": "TI",
+    "personal_note": "Food delivery. Infraestrutura de orders e fulfillment.",
+    "motivo": "platform grubhub"
+  }
+]
