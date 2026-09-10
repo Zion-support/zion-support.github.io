@@ -6,40 +6,40 @@ After editing, commit and push to deploy.
 
 ---
 
-### Pages with SHORT TITLES (<30 chars) — expanded to 40-60 chars with keywords
+### Pages with SHORT TITLES (<30 chars) — expand to 40-60 chars
 
 | URL | Current Title (chars) | Suggested Title |
 |-----|----------------------|-----------------|
-| /contact/ | Contact \| Zion Tech Group (25) | Contate a Zion Tech Group — IA, Automação e Cloud para Empresas |
-| /blog/ | Blog — Zion Tech Group (22) | Blog — AI, Automação e TI para Empresas \| Zion Tech Group |
-| /growth/ | Growth \| Zion Tech Group (24) | Growth — Operação Contínua de IA e Automação \| Zion Tech Group |
-| /discovery/ | Discovery \| Zion Tech Group (27) | Discovery $99 — Diagnóstico AI/IT em 7 Dias \| Zion Tech Group |
-| /case-studies/ | Case Studies \| Zion Tech Group (30) | Casos de Sucesso — AI e Automação que Funcionam \| Zion Tech Group |
-| /enterprise/ | Enterprise \| Zion Tech Group (28) | Enterprise AI — Automação para Grandes Operações \| Zion Tech Group |
-| /consulting/ | Consulting \| Zion Tech Group (28) | Consultoria AI e TI — Estratégia e Implementação \| Zion Tech Group |
-| /marketplace/ | Marketplace \| Zion Tech Group (29) | Marketplace de Ferramentas AI e Automação \| Zion Tech Group |
-| /partners/ | Partners \| Zion Tech Group (26) | Programa de Parceiros AI — Co-venda e Receita Recorrente |
-| /ai-services/ | AI Services — Zion Tech Group (29) | Serviços de AI e Automação para Empresas \| Zion Tech Group |
+| /contact/ | Contact | Zion Tech Group (25) | Contacte a Zion Tech Group — AI e Automação |
+| /blog/ | Blog — Zion Tech Group (22) | Blog — AI, Automação e TI para Empresas | Zion |
+| /growth/ | Growth | Zion Tech Group (24) | Crescimento e Automação para PMEs — Zion Tech Group |
+| /discovery/ | Discovery | Zion Tech Group (27) | Discovery $99 — Diagnóstico AI/IT em 7 Dias |
+| /case-studies/ | Case Studies | Zion Tech Group (30) | Casos de Sucesso — AI e Automação que Funcionam |
+| /enterprise/ | Enterprise | Zion Tech Group (28) | Enterprise AI e Automação para Grandes Empresas |
+| /consulting/ | Consulting | Zion Tech Group (28) | Consultoria AI e TI — Roadmap e Implementação |
+| /marketplace/ | Marketplace | Zion Tech Group (29) | Marketplace de Ferramentas AI e Automação |
+| /partners/ | Partners | Zion Tech Group (26) | Programa de Parceiros AI — Co-venda e Receita |
+| /ai-services/ | AI Services — Zion Tech Group (29) | Serviços de AI e Automação para Empresas |
 | /privacy/ | Privacy — Zion Tech Group (25) | Política de Privacidade — Zion Tech Group |
 | /industries/ | Indústrias — Zion Tech Group (28) | Indústrias Transformadas por AI — Fintech, Saúde, Logística |
-| /affiliate/ | Affiliate · Zion Tech Group (27) | Programa de Afiliados — AI e Automação \| Zion Tech Group |
+| /affiliate/ | Affiliate · Zion Tech Group (27) | Programa de Afiliados — AI e Automação |
 | /managed-it-services/ | Managed IT · Zion Tech Group (28) | Managed IT Services — Suporte 24/7 para AI e Cloud |
 | /it-consulting/ | IT consulting · Zion Tech Group (28) | Consultoria em TI e AI — Estratégia e Implementação |
 
 ---
 
-### Pages with MISSING or SHORT DESCRIPTIONS (<120 chars) — rewritten for conversion
+### Pages with MISSING or SHORT DESCRIPTIONS (<120 chars)
 
 | URL | Current (chars) | Suggested Description (120-160 chars) |
 |-----|-----------------|--------------------------------------|
-| /services/ | 106ch | Serviços completos de AI e TI: cloud, segurança, dados, IoT, blockchain. Do diagnóstico à operação contínua. |
-| /pricing/ | 112ch | Planos transparentes: Discovery $99, Consulting $499, Starter $2.500, Growth $8.000/mês. Agente dedicado, SLA escrito. |
+| /services/ | 106ch | Serviços completos de AI e TI para empresas: cloud, segurança, dados, IoT, blockchain. Do diagnóstico à operação contínua. |
+| /pricing/ | 112ch | Planos transparentes de AI e automação: Discovery $99, Consulting $499, Starter $2.500, Growth $8.000/mês. |
 | /contact/ | 86ch | Fale com a Zion Tech Group. Consultoria AI, automação, cloud e cybersecurity. Resposta em até 24h. |
-| /growth/ | 85ch | Growth $8.000/mês: agente dedicado, SLA escrito, operação contínua em 231 países. Field services inclusos. |
+| /growth/ | 85ch | Crescimento para PMEs: outbound, parcerias, conteúdo e automação. Ação proativa, sem projeto eterno. |
 | /discovery/ | 88ch | Discovery $99 — Diagnóstico de processo AI/IT em até 7 dias. Mapa, relatório e sessão de 30 min. |
 | /case-studies/ | 91ch | Casos reais de AI e automação: resultados mensuráveis, prazos curtos, ROI comprovado. |
 | /enterprise/ | 89ch | AI e automação enterprise: governança, integração, SLA. Implementação segura para grandes operações. |
-| /consulting/ | 89ch | Consultoria AI e TI: roadmap, arquitetura, implementação. 26+ anos de experiência em tecnologia. |
+| /consulting/ | 89ch | Consultoria AI e TI: roadmap, arquitetura, implementação. 26 anos de experiência em tecnologia. |
 | /marketplace/ | 90ch | Marketplace de ferramentas e integrações AI/IT: automação, observabilidade, FinOps, cybersecurity. |
 | /partners/ | 87ch | Programa de parceiros AI: co-venda, comissão recorrente, onboarding estruturado. |
 | /ai-services/ | 81ch | Serviços de AI para empresas: strategy, integration, implementation. Comece pelo $99 Discovery. |
@@ -76,7 +76,7 @@ After editing, commit and push to deploy.
 ### Pages with NO META DESCRIPTION (critical)
 
 - /privacy/ — add description
-- /industries/ — add description
+- /industries/ — add description  
 - /affiliate/ — add description
 - /managed-it-services/ — add description
 - /it-consulting/ — add description
