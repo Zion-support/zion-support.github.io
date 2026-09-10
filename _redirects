@@ -114,3 +114,13 @@
 /ai-implementation /ai-implementation/index.html 200
 /ai-compliance/ /ai-compliance/index.html 200
 /ai-compliance /ai-compliance/index.html 200
+
+# Industries subpages (200 - served from public/industries/<name>/index.html)
+/industries/insurance/ /industries/insurance/index.html 200
+/industries/insurance /industries/insurance/index.html 200
+/industries/legal/ /industries/legal/index.html 200
+/industries/legal /industries/legal/index.html 200
+/industries/healthcare/ /industries/healthcare/index.html 200
+/industries/healthcare /industries/healthcare/index.html 200
+/pricing/ /pricing/index.html 200
+/pricing /pricing/index.html 200
