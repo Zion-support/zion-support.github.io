@@ -523,7 +523,31 @@
         "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+(responses) accumulate to measure reply rate and quality by variant.",
         "Hot-followup label empty -- no active threads to draft CEO replies for this cycle. No draft content needed."
       ]
+    },
+    {
+      "ts": "2026-09-10T00:47:21.256620Z",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "recencyDays": 2.34
+      },
+      "pattern": "Cron review 2026-09-09T21:43Z (UTC-03 \u2192 UTC): no meaningful state delta since prior entries. totalRuns=708, sendsAttempted=0, duplicatesSuppressed=0, authFailures=0, hotFollowups=0, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0, scanned=501. Auth healthy (zero 'No auth for gmail' across all records). Gmail search probe succeeds. Hot-followup label empty (label:!!!hot-follow-up returns no results) \u2014 no active threads to draft CEO replies. No suppression-window, prompt-wording, or scoring pattern actionable: 0 sends means suppression is never exercised and content experiments are unobservable until sends resume.",
+      "recommendations": [
+        "No suppression-window tuning warranted: duplicatesSuppressed=0 because canonical sends are never attempted. The 7-day window is unexercised, not misconfigured.",
+        "No prompt wording or scoring changes: effect unobservable until canonical sends resume and recipients respond.",
+        "No actionable suppression/prompt/scoring pattern detected: 0 sends, 0 suppression, 0 responses means no signal to tune any parameter.",
+        "Primary blocker remains send-path wiring: Gmail search discovers candidates but canonical send pipeline does not convert them. Restoring send auth/wiring is prerequisite for any suppression/prompt/scoring experiment.",
+        "If send path becomes available, re-evaluate suppression window only after at least one send burst produces responses revealing actual duplicate-contact patterns across windows.",
+        "If send path becomes available, re-evaluate prompt wording and scoring after enough sends+responses accumulate to measure reply rate and quality by variant.",
+        "Hot-followup label empty \u2014 no active threads to draft CEO replies for this cycle. No draft file written."
+      ]
     }
   ],
-  "updatedAt": "2026-09-09T19:21:00.000000Z"
+  "updatedAt": "2026-09-10T00:47:21.256620Z"
 }

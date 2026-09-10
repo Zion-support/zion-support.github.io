@@ -20,6 +20,7 @@ Standalone usage (mirrors the existing CLI contract)::
 Environment
 -----------
 COMPOSIO_API_KEY            — Composio API key (also accepted as paylaod key).
+COMPOSIO_BASE_URL           — Override API base URL (default: https://backend.composio.dev/api/).
 """
 from __future__ import annotations
 
@@ -67,8 +68,11 @@ def _get_sdk() -> tuple[Any, str | None]:
         return None, _sdk_error
 
     try:
-        sdk = _composio_sdk.Composio(api_key=api_key)
-        # Quick connectivity probe — do not block on a heavy call.
+        # Pass base_url directly to the SDK constructor
+        base_url = os.environ.get(
+            "COMPOSIO_BASE_URL", "https://backend.composio.dev/api/"
+        )
+        sdk = _composio_sdk.Composio(api_key=api_key, base_url=base_url)
         _sdk_error = None
         _sdk = sdk
         return sdk, None

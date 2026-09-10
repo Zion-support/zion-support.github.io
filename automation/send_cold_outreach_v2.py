@@ -251,17 +251,18 @@ def choose_primary_source(primary: Path, fallback: Path, primary_requires_min: i
     fallback_exists = fallback.exists()
     if not primary_exists and not fallback_exists:
         return None, None
-    if primary_exists and not fallback_exists:
-        return primary, load_leads(primary)
-    if fallback_exists and not primary_exists:
-        return fallback, load_leads(fallback)
-    primary_leads = load_leads(primary)
-    fallback_leads = load_leads(fallback)
-    usable_primary = [l for l in primary_leads if isinstance(l, dict) and any(l.get(k) for k in ("contato_proventivo", "email", "site"))]
-    usable_fallback = [l for l in fallback_leads if isinstance(l, dict) and any(l.get(k) for k in ("contato_proventivo", "email", "site"))]
-    if len(usable_primary) >= primary_requires_min and len(usable_primary) >= len(usable_fallback):
-        return primary, primary_leads
-    return fallback, fallback_leads
+    # Always try primary first — it's the validated free-lead pool
+    if primary_exists:
+        primary_leads = load_leads(primary)
+        usable_primary = [l for l in primary_leads if isinstance(l, dict) and any(l.get(k) for k in ("contato_proventivo", "email", "site"))]
+        if len(usable_primary) >= primary_requires_min:
+            return primary, primary_leads
+    # Fallback only if primary insufficient or missing
+    if fallback_exists:
+        fallback_leads = load_leads(fallback)
+        if fallback_leads:
+            return fallback, fallback_leads
+    return None, None
 
 def main():
     chosen_source, leads = choose_primary_source(LEADS_PRIMARY, LEADS_FALLBACK)

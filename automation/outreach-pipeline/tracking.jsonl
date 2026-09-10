@@ -1,6 +1,3 @@
-{"template": "cold_outreach", "email": "contato@empresa1.com.br", "subject": "Introdução — Empresa 1 / CTO", "status": "dry_run", "ts": "2026-09-01T15:24:28.546875+00:00", "error": null}
-{"template": "cold_outreach", "email": "hello@empresa2.com", "subject": "Introdução — Empresa 2 / Head de Operações", "status": "dry_run", "ts": "2026-09-01T15:24:28.547392+00:00", "error": null}
-{"template": "cold_outreach", "email": "cto@startupbrasil.io", "subject": "Introdução — StartupBrasil / CEO", "status": "dry_run", "ts": "2026-09-01T15:24:28.548202+00:00", "error": null}
 {"template": "cold_outreach", "email": "FLast@blisshs.com", "subject": "Introdução — Bliss Health / Fundador", "status": "sent", "ts": "2026-09-01T15:36:23.251744+00:00", "error": null}
 {"template": "cold_outreach", "email": "tecnologia@beepsaude.com.br", "subject": "Introdução — Beep Saúde / TI/tecnologia", "status": "sent", "ts": "2026-09-01T15:37:05.113260+00:00", "error": null}
 {"template": "cold_outreach", "email": "prodam@prodam.sp.gov.br", "subject": "Introdução — Prodam SP (Governo do Estado) / TI do Governo", "status": "sent", "ts": "2026-09-01T15:37:12.103564+00:00", "error": null}
@@ -124,3 +121,46 @@
 {"template": "cold_outreach", "email": "contato@github.com", "subject": "Introdução — Vector (Observability Data Pipeline) / Contato", "status": "sent", "ts": "2026-09-01T19:24:46.005565+00:00", "error": null}
 {"template": "cold_outreach", "email": "contato@github.com", "subject": "Introdução — Orchest (Data Pipeline Platform) / Contato", "status": "sent", "ts": "2026-09-01T19:24:49.409336+00:00", "error": null}
 {"template": "cold_outreach", "email": "hello@entechus.com", "subject": "Introdução — Entech (Cloud Migration for Mid-Sized Firms) / Contato", "status": "sent", "ts": "2026-09-01T19:24:53.331838+00:00", "error": null}
+{"template": "cold_outreach", "email": "FLast@blisshs.com", "subject": "Introdução — Bliss Health / Fundador", "status": "sent", "ts": "2026-09-10T01:09:22.630155+00:00", "error": null}
+{"template": "cold_outreach", "email": "FLast@blisshs.com", "subject": "Introdução — Bliss Health / Fundador", "status": "sent", "ts": "2026-09-10T01:35:28.250829+00:00", "error": null}
+{"template": "cold_outreach", "email": "FLast@blisshs.com", "subject": "Introdução — Bliss Health / Fundador", "status": "sent", "ts": "2026-09-10T01:36:47.976304+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@mercadopago.com.br", "subject": "Introdução — Mercado Pago / TI/Integrações", "status": "sent", "ts": "2026-09-10T01:36:51.331033+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@neonomics.com.br", "subject": "Introdução — Neonomics / DevOps", "status": "sent", "ts": "2026-09-10T01:36:54.698980+00:00", "error": null}
+{"template": "cold_outreach", "email": "ti@stone.com.br", "subject": "Introdução — Stone / TI", "status": "sent", "ts": "2026-09-10T01:36:57.986827+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@picpay.com", "subject": "Introdução — PicPay / TI", "status": "sent", "ts": "2026-09-10T01:37:01.216297+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@magna.com.br", "subject": "Introdução — Magna Invest / TI", "status": "sent", "ts": "2026-09-10T01:37:04.495610+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@asml.com.br", "subject": "Introdução — ASML Brazil / TI", "status": "sent", "ts": "2026-09-10T01:37:07.719520+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@fitreceita.com.br", "subject": "Introdução — FitReceita / CTO", "status": "sent", "ts": "2026-09-10T01:37:10.975734+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@telemedicina.com.br", "subject": "Introdução — Telemedicina Brasil / TI", "status": "sent", "ts": "2026-09-10T01:37:14.355108+00:00", "error": null}
+{"template": "cold_outreach", "email": "ti@danisystems.com.br", "subject": "Introdução — Dani Systems / TI", "status": "sent", "ts": "2026-09-10T01:37:17.517047+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@holosmed.com.br", "subject": "Introdução — Holos Medical / CTO", "status": "sent", "ts": "2026-09-10T01:37:20.817718+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@genomika.com.br", "subject": "Introdução — Genomika / Bioinformatics", "status": "sent", "ts": "2026-09-10T01:37:24.006491+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@cloudmanaged.com.br", "subject": "Introdução — Cloud Managed / Gerente de Contas", "status": "sent", "ts": "2026-09-10T01:37:27.261512+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@tiwares.com.br", "subject": "Introdução — TIWares / TI", "status": "sent", "ts": "2026-09-10T01:37:30.443736+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@agenciadigital.com.br", "subject": "Introdução — Agência Digital XP / Diretor de Tecnologia", "status": "sent", "ts": "2026-09-10T01:37:33.651610+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@webguard.com.br", "subject": "Introdução — WebGuard / CTO", "status": "sent", "ts": "2026-09-10T01:37:36.987074+00:00", "error": null}
+{"template": "cold_outreach", "email": "ti@locaweb.com.br", "subject": "Introdução — Locaweb / TI", "status": "sent", "ts": "2026-09-10T01:37:40.159974+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@digitallabs.com.br", "subject": "Introdução — Digital Labs / Diretor Comercial", "status": "sent", "ts": "2026-09-10T01:37:43.403519+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@safepixel.com.br", "subject": "Introdução — SafePixel / CTO", "status": "sent", "ts": "2026-09-10T01:37:47.544250+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@n5tech.com.br", "subject": "Introdução — N5 Technology / TI", "status": "sent", "ts": "2026-09-10T01:37:52.437032+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@arquivei.com.br", "subject": "Introdução — Arquivei / CTO", "status": "sent", "ts": "2026-09-10T01:37:56.022447+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@totvs.com.br", "subject": "Introdução — TOTVS / TI", "status": "sent", "ts": "2026-09-10T01:38:00.194766+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@fluxo.com.br", "subject": "Introdução — Fluxo / CTO", "status": "sent", "ts": "2026-09-10T01:38:04.897197+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@botcity.org", "subject": "Introdução — BotCity / CTO", "status": "sent", "ts": "2026-09-10T01:38:09.211772+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@biocon.com.br", "subject": "Introdução — BioCon / TI", "status": "sent", "ts": "2026-09-10T01:38:14.798712+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@nuvem.pt", "subject": "Introdução — Nuvem.pt / TI", "status": "sent", "ts": "2026-09-10T01:38:19.843863+00:00", "error": null}
+{"template": "cold_outreach", "email": "ti@digitalhouse.com.br", "subject": "Introdução — Digital House / TI", "status": "sent", "ts": "2026-09-10T01:38:24.724305+00:00", "error": null}
+{"template": "cold_outreach", "email": "FLast@blisshs.com", "subject": "Introdução — Bliss Health / Fundador", "status": "sent", "ts": "2026-09-10T01:39:11.124553+00:00", "error": null}
+{"template": "cold_outreach", "email": "contato@empresa1.com.br", "subject": "Introdução — Empresa 1 / CTO", "status": "sent", "ts": "2026-09-10T01:39:35.714085+00:00", "error": null}
+{"template": "cold_outreach", "email": "hello@empresa2.com", "subject": "Introdução — Empresa 2 / Head de Operações", "status": "sent", "ts": "2026-09-10T01:39:39.081511+00:00", "error": null}
+{"template": "cold_outreach", "email": "cto@startupbrasil.io", "subject": "Introdução — StartupBrasil / CEO", "status": "sent", "ts": "2026-09-10T01:39:42.479936+00:00", "error": null}
+{"template": "cold_outreach", "email": "info@github.com", "subject": "Introdução — n8n-io / Maintainer", "status": "sent", "ts": "2026-09-10T01:39:45.806800+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@crossx-it.de", "subject": "Introdução — CrossX-IT GmbH / Managing Director", "status": "sent", "ts": "2026-09-10T01:39:49.412177+00:00", "error": null}
+{"template": "cold_outreach", "email": "info@bitefex.de", "subject": "Introdução — BITEFEX GmbH / CEO", "status": "sent", "ts": "2026-09-10T01:39:53.097374+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@cloudkleyer.de", "subject": "Introdução — cloudKleyer Frankfurt GmbH / Managing Partner", "status": "sent", "ts": "2026-09-10T01:39:56.770300+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@sacredbyte.de", "subject": "Introdução — Sacred Byte GmbH / Founder", "status": "sent", "ts": "2026-09-10T01:40:00.151641+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@cgtechnologies.com", "subject": "Introdução — CG Technologies / President", "status": "sent", "ts": "2026-09-10T01:40:03.760654+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@f12networks.com", "subject": "Introdução — F12 Networks / CEO", "status": "sent", "ts": "2026-09-10T01:40:07.818345+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@itweapons.com", "subject": "Introdução — IT Weapons (Konica Minolta Canada) / National Director", "status": "sent", "ts": "2026-09-10T01:40:12.019465+00:00", "error": null}
+{"template": "cold_outreach", "email": "contact@403tech.com", "subject": "Introdução — 403Tech / President", "status": "sent", "ts": "2026-09-10T01:40:15.350313+00:00", "error": null}
+{"template": "cold_outreach", "email": "FLast@blisshs.com", "subject": "Introdução — Bliss Health / Fundador", "status": "sent", "ts": "2026-09-10T01:40:18.716369+00:00", "error": null}
