@@ -20,13 +20,15 @@ from rewrite_next_leftovers import (
 PT_NAV = [
     ("/services/", "Serviços"),
     ("/plans/", "Planos"),
-    ("/blog/", "Blog"),
+    ("/para/", "Para você"),
+    ("/faq/", "FAQ"),
     ("/contact/", "Contato"),
 ]
 EN_NAV = [
+    ("/solutions/", "Solutions"),
     ("/services/", "Services"),
     ("/plans/", "Plans"),
-    ("/blog/", "Blog"),
+    ("/faq/", "FAQ"),
     ("/contact/", "Contact"),
 ]
 

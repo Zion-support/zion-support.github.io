@@ -22,9 +22,11 @@
     .brand { text-decoration: none; }
     .brand strong { display: block; font-size: 1.35rem; background: linear-gradient(90deg,#c084fc,#f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .brand small { display: block; letter-spacing: .18em; text-transform: uppercase; font-size: .68rem; color: #94a3b8; }
+    .nav { position: relative; }
     .nav-links { display: flex; flex-wrap: wrap; gap: .65rem 1rem; align-items: center; }
     .nav-links a { color: #cbd5e1; text-decoration: none; font-size: .9rem; }
     .nav-links a:hover { color: #fff; }
+    .menu { display: none; background: none; border: 1px solid #475569; color: #fff; border-radius: 8px; padding: 8px 10px; cursor: pointer; }
     .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: .8rem; padding: .75rem 1.2rem; font-weight: 650; text-decoration: none; }
     .btn-primary { background: linear-gradient(90deg,#7c3aed,#db2777); color: #fff; }
     .btn-ghost { border: 1px solid #475569; color: #e2e8f0; }
@@ -64,7 +66,11 @@
     label { display: block; font-size: .8rem; color: #cbd5e1; margin: .7rem 0 .25rem; }
     input, select { width: 100%; background: #0f172a; color: #fff; border: 1px solid #334155; border-radius: .6rem; padding: .55rem .7rem; }
     .hidden { display: none !important; }
-    @media (max-width: 800px) { .nav-links { display: none; } }
+    @media (max-width: 800px) {
+      .menu { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 12px 1.25rem 18px; background: rgba(2,6,23,.96); border-bottom: 1px solid rgba(51,65,85,.7); flex-direction: column; align-items: stretch; }
+      .nav-links.open { display: flex; }
+    }
   </style>
 </head>
 <body>
@@ -78,17 +84,18 @@
         <strong>Zion Tech Group</strong>
         <small>AI Delivery Studio</small>
       </a>
+      <button class="menu" type="button" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
       <nav class="nav-links" aria-label="Main">
         <a href="/">Home</a>
         <a href="/solutions/">Solutions</a>
         <a href="/services/">Services</a>
-        <a href="/pricing/">Pricing</a>
+        <a href="/plans/">Plans</a>
         <a href="/ai-services/">AI Services</a>
-        <a href="/products/">Products</a>
         <a href="/about/">Company</a>
-        <a href="/book/">Book</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
         <a href="/search/">Quick Find <span class="pill">Ctrl/⌘ K</span></a>
-        <a class="btn btn-primary" href="/start-project/">Start Project</a>
+        <a class="btn btn-primary" href="/discovery/">Discovery $99</a>
       </nav>
     </div>
   </header>
@@ -105,9 +112,9 @@
       </div>
       <div class="row">
         <a class="btn btn-primary" href="/contact/">Start a Project →</a>
-        <a class="btn btn-ghost" href="/book/">Book Discovery $99</a>
+        <a class="btn btn-ghost" href="/discovery/">Book Discovery $99</a>
         <a class="btn btn-ghost" href="/solutions/">Explore Solutions</a>
-        <a class="btn btn-soft" href="/pricing/">View Pricing</a>
+        <a class="btn btn-soft" href="/plans/">View Pricing</a>
         <a class="btn btn-soft" href="#advanced-ai">Advanced AI Services →</a>
       </div>
       <div class="grid g3" style="margin-top:1.5rem">
@@ -226,6 +233,8 @@
         <a class="card" href="#advisor"><h3>Launch advisor</h3><p>Get a rollout recommendation by goal</p></a>
         <a class="card" href="/case-studies/"><h3>Case studies</h3><p>Real results from real teams</p></a>
         <a class="card" href="/industries/"><h3>Industry solutions</h3><p>AI workflows tailored to your vertical</p></a>
+        <a class="card" href="/para/"><h3>Para o seu tipo de operação</h3><p>Verticais PT: imobiliária, clínica, MSP, logística, varejo</p></a>
+        <a class="card" href="/mapa-do-site/"><h3>Site map</h3><p>Human routes — not the 10k URL dump</p></a>
         <a class="card" href="/services/"><h3>App library</h3><p>Browse featured AI apps by outcome</p></a>
         <a class="card" href="/blog/"><h3>Blog &amp; resources</h3><p>AI strategy, security, and implementation insights</p></a>
         <a class="card" href="/solutions/"><h3>Solutions hub</h3><p>Browse all AI solutions and product paths</p></a>
@@ -434,6 +443,7 @@
       <details><summary>Can Zion integrate with our existing tools and data stack?</summary><p>Yes. We design for existing systems, APIs, data pipelines, and team handoffs from day one.</p></details>
       <details><summary>What does ownership look like after go-live?</summary><p>You own the system. We provide runbooks, training, and optional ongoing optimization.</p></details>
       <details><summary>Can we start with a single app or do we need a full bundle?</summary><p>Start with one app. Bundles are optional accelerators once the first workflow is proven.</p></details>
+      <details><summary>How do we reach Zion on WhatsApp?</summary><p>WhatsApp is live at <a href="/whatsapp/">/whatsapp/</a> and <a href="https://wa.me/13024640950">wa.me/13024640950</a>. It does not depend on a pending deploy. Portuguese operators can also start at <a href="/para/">/para/</a>.</p></details>
     </section>
 
     <section class="wrap">
@@ -470,9 +480,9 @@
         <h2>Ready for a Tailored AI Delivery Plan?</h2>
         <p class="lede" style="margin:0 auto 1rem">Combine app modules, integration architecture, and engineering support into one measurable roadmap.</p>
         <div class="row" style="justify-content:center">
-          <a class="btn btn-primary" href="/book/">Book Discovery $99</a>
+          <a class="btn btn-primary" href="/discovery/">Book Discovery $99</a>
           <a class="btn btn-ghost" href="/contact/">Talk to Engineering</a>
-          <a class="btn btn-soft" href="/pricing/">View Pricing</a>
+          <a class="btn btn-soft" href="/plans/">View Pricing</a>
         </div>
       </div>
     </section>
@@ -500,13 +510,19 @@
         <a href="/careers/">Careers</a>
         <a href="/contact/">Contact</a>
         <a href="/partners/">Partners</a>
+        <a href="/para/">Para você</a>
       </div>
       <div>
         <strong>Resources</strong>
-        <a href="/pricing/">Pricing</a>
+        <a href="/plans/">Plans</a>
+        <a href="/discovery/">Discovery $99</a>
         <a href="/services/">Services</a>
         <a href="/solutions/">Solutions</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/whatsapp/">WhatsApp</a>
+        <a href="/mapa-do-site/">Site map</a>
         <a href="/privacy/">Privacy</a>
+        <a href="/privacidade/">Privacidade</a>
         <a href="/terms/">Terms of Service</a>
       </div>
     </div>
