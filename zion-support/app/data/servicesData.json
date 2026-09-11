@@ -2602,6 +2602,1336 @@
       "status": "active",
       "created_at": "2026-09-11T19:33:06.842148+00:00",
       "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1137,
+      "name": "Hermes WhatsApp ERP Bridge",
+      "slug": "hermes-whatsapp-erp-bridge",
+      "description": "Ponte WhatsApp Business com ERPs via Hermes Agent — pedidos, NFs e estoque.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes whatsapp erp bridge",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1138,
+      "name": "Hermes Telegram Commerce",
+      "slug": "hermes-telegram-commerce",
+      "description": "Bot Telegram de e-commerce com catálogo, carrinho e pagamento via PIX.",
+      "category": "messaging",
+      "icon": "ShoppingBag",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes telegram commerce",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1139,
+      "name": "Hermes Discord DevOps Hub",
+      "slug": "hermes-discord-devops-hub",
+      "description": "Hub Discord com alerts CI/CD, logs deploy e integração com ZTG pipelines.",
+      "category": "messaging",
+      "icon": "Terminal",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes discord devops hub",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1140,
+      "name": "Hermes Slack Incident Bot",
+      "slug": "hermes-slack-incident-bot",
+      "description": "Bot Slack de incidentes com runbook automático e escalação on-call.",
+      "category": "messaging",
+      "icon": "AlertTriangle",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes slack incident bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1141,
+      "name": "Hermes Email Drip AI",
+      "slug": "hermes-email-drip-ai",
+      "description": "Sequências de email com copywriting GPT-4 e segmentação comportamental.",
+      "category": "messaging",
+      "icon": "Mail",
+      "price": 1197,
+      "features": [
+        "Automação completa de hermes email drip ai",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1142,
+      "name": "Hermes Teams Status Sync",
+      "slug": "hermes-teams-status-sync",
+      "description": "Sincroniza status Teams com Jira, Linear e GitHub Projects automaticamente.",
+      "category": "messaging",
+      "icon": "RefreshCw",
+      "price": 997,
+      "features": [
+        "Automação completa de hermes teams status sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1143,
+      "name": "Hermes Instagram Shop Agent",
+      "slug": "hermes-instagram-shop-agent",
+      "description": "Agent Instagram DM com respostas produto, link de pagamento e follow-up.",
+      "category": "messaging",
+      "icon": "ShoppingCart",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes instagram shop agent",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1144,
+      "name": "Hermes LinkedIn Sales Navigator",
+      "slug": "hermes-linkedin-sales-navigator",
+      "description": "Automação LinkedIn com prospecção, conexão e sequência de nurturing.",
+      "category": "messaging",
+      "icon": "Target",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes linkedin sales navigator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1145,
+      "name": "Hermes Voice AI Receptionist",
+      "slug": "hermes-voice-ai-receptionist",
+      "description": "Recepcionista de voz com IA — agenda, roteamento e transcrição.",
+      "category": "messaging",
+      "icon": "PhoneIncoming",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes voice ai receptionist",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1146,
+      "name": "Hermes SMS OTP Service",
+      "slug": "hermes-sms-otp-service",
+      "description": "Serviço de SMS OTP e verificação com fallback WhatsApp.",
+      "category": "messaging",
+      "icon": "Smartphone",
+      "price": 897,
+      "features": [
+        "Automação completa de hermes sms otp service",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1147,
+      "name": "Hermes GitHub Actions Forge",
+      "slug": "hermes-github-actions-forge",
+      "description": "Templates GitHub Actions otimizados — matrix builds, caching, deploy auto.",
+      "category": "devops",
+      "icon": "GitBranch",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes github actions forge",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1148,
+      "name": "Hermes Docker Swarm Ops",
+      "slug": "hermes-docker-swarm-ops",
+      "description": "Orquestração Docker Swarm com rolling updates e health checks.",
+      "category": "devops",
+      "icon": "Container",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes docker swarm ops",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1149,
+      "name": "Hermes K8s Helm Charts",
+      "slug": "hermes-k8s-helm-charts",
+      "description": "Helm charts customizados para K8s — ingress, cert-manager, autoscaling.",
+      "category": "devops",
+      "icon": "Package",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes k8s helm charts",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1150,
+      "name": "Hermes Terraform Modules",
+      "slug": "hermes-terraform-modules",
+      "description": "Módulos Terraform reutilizáveis para AWS, GCP e Azure.",
+      "category": "devops",
+      "icon": "Code",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes terraform modules",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1151,
+      "name": "Hermes Prometheus Stack",
+      "slug": "hermes-prometheus-stack",
+      "description": "Stack Prometheus + Grafana com dashboards pré-configurados e alertas.",
+      "category": "devops",
+      "icon": "Activity",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes prometheus stack",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1152,
+      "name": "Hermes ELK Log Center",
+      "slug": "hermes-elk-log-center",
+      "description": "Central de logs ELK com parsing automático e alertas de anomalias.",
+      "category": "devops",
+      "icon": "FileText",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes elk log center",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1153,
+      "name": "Hermes ArgoCD Sync",
+      "slug": "hermes-argocd-sync",
+      "description": "Sync GitOps via ArgoCD com drift detection e auto-reconcile.",
+      "category": "devops",
+      "icon": "GitMerge",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes argocd sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1154,
+      "name": "Hermes Lambda Deploy",
+      "slug": "hermes-lambda-deploy",
+      "description": "Deploy serverless automatizado — Lambda, Functions e edge workers.",
+      "category": "devops",
+      "icon": "Zap",
+      "price": 1197,
+      "features": [
+        "Automação completa de hermes lambda deploy",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1155,
+      "name": "Hermes DB Schema Sync",
+      "slug": "hermes-db-schema-sync",
+      "description": "Sincronização de schema de banco com versionamento e rollback.",
+      "category": "devops",
+      "icon": "Database",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes db schema sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1156,
+      "name": "Hermes Env Cloner",
+      "slug": "hermes-env-cloner",
+      "description": "Clonagem de ambientes dev/staging com dados anonimizados.",
+      "category": "devops",
+      "icon": "Clone",
+      "price": 1097,
+      "features": [
+        "Automação completa de hermes env cloner",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1157,
+      "name": "Hermes OWASP Scanner",
+      "slug": "hermes-owasp-scanner",
+      "description": "Scanner OWASP Top 10 — SQLi, XSS, CSRF com relatório executivo.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes owasp scanner",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1158,
+      "name": "Hermes Pentest Agent",
+      "slug": "hermes-pentest-agent",
+      "description": "Agente de pentest com reconnaissance, exploitation e relatório.",
+      "category": "security",
+      "icon": "Lock",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes pentest agent",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1159,
+      "name": "Hermes Splunk Connector",
+      "slug": "hermes-splunk-connector",
+      "description": "Conector Splunk com correlação de eventos e alertas customizados.",
+      "category": "security",
+      "icon": "Eye",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes splunk connector",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1160,
+      "name": "Hermes Zero Trust Gate",
+      "slug": "hermes-zero-trust-gate",
+      "description": "Gateway Zero Trust com mTLS, identity-aware proxy e micro-segmentação.",
+      "category": "security",
+      "icon": "ShieldCheck",
+      "price": 3497,
+      "features": [
+        "Automação completa de hermes zero trust gate",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1161,
+      "name": "Hermes Vault Operator",
+      "slug": "hermes-vault-operator",
+      "description": "Operador HashiCorp Vault com rotação dinâmica de secrets.",
+      "category": "security",
+      "icon": "Key",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes vault operator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1162,
+      "name": "Hermes Cloudflare WAF",
+      "slug": "hermes-cloudflare-waf",
+      "description": "Gerenciamento Cloudflare WAF com regras customizadas e bot fight mode.",
+      "category": "security",
+      "icon": "ShieldAlert",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes cloudflare waf",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1163,
+      "name": "Hermes SOC2 Auditor",
+      "slug": "hermes-soc2-auditor",
+      "description": "Auditoria SOC2 automatizada com coleta de evidências e gap analysis.",
+      "category": "security",
+      "icon": "ClipboardCheck",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes soc2 auditor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1164,
+      "name": "Hermes Incident Playbook",
+      "slug": "hermes-incident-playbook",
+      "description": "Playbooks de resposta a incidentes com runbooks automatizados.",
+      "category": "security",
+      "icon": "AlertTriangle",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes incident playbook",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1165,
+      "name": "Hermes Okta Provisioner",
+      "slug": "hermes-okta-provisioner",
+      "description": "Provisionamento Okta/SSO com lifecycle management e MFA enforcement.",
+      "category": "security",
+      "icon": "UserCheck",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes okta provisioner",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1166,
+      "name": "Hermes CVE Monitor",
+      "slug": "hermes-cve-monitor",
+      "description": "Monitor de CVEs com alertas para dependências do seu stack.",
+      "category": "security",
+      "icon": "Radio",
+      "price": 1197,
+      "features": [
+        "Automação completa de hermes cve monitor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1167,
+      "name": "Hermes Airflow DAGs",
+      "slug": "hermes-airflow-dags",
+      "description": "DAGs Apache Airflow prontas para ETL, ML pipelines e data sync.",
+      "category": "data",
+      "icon": "GitBranch",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes airflow dags",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1168,
+      "name": "Hermes Kafka Streams",
+      "slug": "hermes-kafka-streams",
+      "description": "Streams Kafka com processamento real-time e connectores pré-build.",
+      "category": "data",
+      "icon": "Activity",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes kafka streams",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1169,
+      "name": "Hermes Snowflake Sync",
+      "slug": "hermes-snowflake-sync",
+      "description": "Sync Snowflake com pipelines CDC, clustering e performance tuning.",
+      "category": "data",
+      "icon": "CloudSnow",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes snowflake sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1170,
+      "name": "Hermes Feast Feature Store",
+      "slug": "hermes-feast-feature-store",
+      "description": "Feature store Feast com offline/online serving e point-in-time joins.",
+      "category": "data",
+      "icon": "Cpu",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes feast feature store",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1171,
+      "name": "Hermes Great Expectations",
+      "slug": "hermes-great-expectations",
+      "description": "Data validation Great Expectations com suites customizadas e alertas.",
+      "category": "data",
+      "icon": "CheckCircle",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes great expectations",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1172,
+      "name": "Hermes DBT Transform",
+      "slug": "hermes-dbt-transform",
+      "description": "Transformações DBT com testes, docs e lineage automatizados.",
+      "category": "data",
+      "icon": "ArrowRight",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes dbt transform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1173,
+      "name": "Hermes DataHub Catalog",
+      "slug": "hermes-datahub-catalog",
+      "description": "Catálogo DataHub com metadata harvesting, lineage e ownership.",
+      "category": "data",
+      "icon": "BookOpen",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes datahub catalog",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1174,
+      "name": "Hermes Prophet Forecast",
+      "slug": "hermes-prophet-forecast",
+      "description": "Forecasting com Prophet — séries temporais, holidays e changepoints.",
+      "category": "data",
+      "icon": "TrendingUp",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes prophet forecast",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1175,
+      "name": "Hermes CDP Segment",
+      "slug": "hermes-cdp-segment",
+      "description": "Customer Data Platform com segmentação unificada e activation APIs.",
+      "category": "data",
+      "icon": "Users",
+      "price": 2797,
+      "features": [
+        "Automação completa de hermes cdp segment",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1176,
+      "name": "Hermes Delta Lake House",
+      "slug": "hermes-delta-lake-house",
+      "description": "Lakehouse com Delta Lake, time travel, vacuum e Z-ordering.",
+      "category": "data",
+      "icon": "Layers",
+      "price": 2597,
+      "features": [
+        "Automação completa de hermes delta lake house",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1177,
+      "name": "Hermes HubSpot Sync",
+      "slug": "hermes-hubspot-sync",
+      "description": "Sync bidirecional HubSpot com mapeamento de campos customizados.",
+      "category": "crm",
+      "icon": "RefreshCw",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes hubspot sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1178,
+      "name": "Hermes Zendesk Agent",
+      "slug": "hermes-zendesk-agent",
+      "description": "Bot Zendesk com triagem IA, sugestão de macros e SLA tracking.",
+      "category": "crm",
+      "icon": "Headphones",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes zendesk agent",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1179,
+      "name": "Hermes Pipedrive Forge",
+      "slug": "hermes-pipedrive-forge",
+      "description": "Pipeline Pipedrive com automação de atividades e follow-up.",
+      "category": "crm",
+      "icon": "TrendingUp",
+      "price": 1197,
+      "features": [
+        "Automação completa de hermes pipedrive forge",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1180,
+      "name": "Hermes Salesforce Link",
+      "slug": "hermes-salesforce-link",
+      "description": "Integração Salesforce com sync de leads, opportunities e custom objects.",
+      "category": "crm",
+      "icon": "Cloud",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes salesforce link",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1181,
+      "name": "Hermes Lead Enrichment",
+      "slug": "hermes-lead-enrichment",
+      "description": "Enriquecimento de leads com Clearbit, Apollo e validação de emails.",
+      "category": "crm",
+      "icon": "Database",
+      "price": 997,
+      "features": [
+        "Automação completa de hermes lead enrichment",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1182,
+      "name": "Hermes Journey Builder",
+      "slug": "hermes-journey-builder",
+      "description": "Construtor de jornadas com triggers, splits e personalização.",
+      "category": "crm",
+      "icon": "Map",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes journey builder",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1183,
+      "name": "Hermes DocuSign Flow",
+      "slug": "hermes-docusign-flow",
+      "description": "Automação DocuSign com templates, lembretes e archiving.",
+      "category": "crm",
+      "icon": "FileSignature",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes docusign flow",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1184,
+      "name": "Hermes NPS Collector",
+      "slug": "hermes-nps-collector",
+      "description": "Coleta NPS multi-canal com análise de sentimento e follow-up.",
+      "category": "crm",
+      "icon": "Star",
+      "price": 797,
+      "features": [
+        "Automação completa de hermes nps collector",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1185,
+      "name": "Hermes Churn Predictor",
+      "slug": "hermes-churn-predictor",
+      "description": "Modelo de churn prediction com scoring diário e retention triggers.",
+      "category": "crm",
+      "icon": "AlertCircle",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes churn predictor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1186,
+      "name": "Hermes Proposal AI",
+      "slug": "hermes-proposal-ai",
+      "description": "Gerador de propostas com IA, pricing engine e aprovação workflow.",
+      "category": "crm",
+      "icon": "FileText",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes proposal ai",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1187,
+      "name": "Hermes Evals Suite",
+      "slug": "hermes-evals-suite",
+      "description": "Suite de avaliação LLM — MMLU, GSM8K, HumanEval, MT-Bench.",
+      "category": "ai",
+      "icon": "BarChart",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes evals suite",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1188,
+      "name": "Hermes Axolotl Tuner",
+      "slug": "hermes-axolotl-tuner",
+      "description": "Fine-tuning via Axolotl — LoRA, QLoRA, GPTQ com dataset pipelines.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes axolotl tuner",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1189,
+      "name": "Hermes ComfyUI Flows",
+      "slug": "hermes-comfyui-flows",
+      "description": "Workflows ComfyUI para geração de imagens, vídeos e áudio IA.",
+      "category": "ai",
+      "icon": "Palette",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes comfyui flows",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1190,
+      "name": "Hermes Ultralytics YOLO",
+      "slug": "hermes-ultralytics-yolo",
+      "description": "Pipeline YOLO para detecção, segmentação e tracking de objetos.",
+      "category": "ai",
+      "icon": "Eye",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes ultralytics yolo",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1191,
+      "name": "Hermes LangChain RAG",
+      "slug": "hermes-langchain-rag",
+      "description": "RAG com LangChain — chunking, embeddings, reranking e evaluation.",
+      "category": "ai",
+      "icon": "Search",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes langchain rag",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1192,
+      "name": "Hermes RecSys Engine",
+      "slug": "hermes-recsys-engine",
+      "description": "Sistema de recomendação com two-tower, ANN e A/B testing.",
+      "category": "ai",
+      "icon": "ThumbsUp",
+      "price": 2297,
+      "features": [
+        "Automação completa de hermes recsys engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1193,
+      "name": "Hermes CrewAI Swarm",
+      "slug": "hermes-crewai-swarm",
+      "description": "Orquestração multi-agente com CrewAI, AutoGen e tool calling.",
+      "category": "ai",
+      "icon": "Bot",
+      "price": 3497,
+      "features": [
+        "Automação completa de hermes crewai swarm",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1194,
+      "name": "Hermes Whisper Transcribe",
+      "slug": "hermes-whisper-transcribe",
+      "description": "Transcrição Whisper com diarização, timestamps e tradução.",
+      "category": "ai",
+      "icon": "Mic",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes whisper transcribe",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1195,
+      "name": "Hermes PyOD Anomaly",
+      "slug": "hermes-pyod-anomaly",
+      "description": "Detecção de anomalias PyOD — Isolation Forest, LOF, autoencoders.",
+      "category": "ai",
+      "icon": "AlertCircle",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes pyod anomaly",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1196,
+      "name": "Hermes SHAP Explainer",
+      "slug": "hermes-shap-explainer",
+      "description": "Explicabilidade SHAP/LIME com relatórios de fairness e bias audit.",
+      "category": "ai",
+      "icon": "Scale",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes shap explainer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1197,
+      "name": "Hermes LGPD Guardian",
+      "slug": "hermes-lgpd-guardian",
+      "description": "Compliance LGPD com DPIA, consentimento, data mapping e DSR automation.",
+      "category": "compliance",
+      "icon": "Shield",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes lgpd guardian",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1198,
+      "name": "Hermes ISO 27001 Kit",
+      "slug": "hermes-iso27001-kit",
+      "description": "Kit ISO 27001 com ISMS, risk assessment e tratamento de não-conformidades.",
+      "category": "compliance",
+      "icon": "CheckSquare",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes iso27001 kit",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1199,
+      "name": "Hermes HIPAA Vault",
+      "slug": "hermes-hipaa-vault",
+      "description": "Vault HIPAA com criptografia PHI, audit trail e BAA management.",
+      "category": "compliance",
+      "icon": "Heart",
+      "price": 2797,
+      "features": [
+        "Automação completa de hermes hipaa vault",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1200,
+      "name": "Hermes PCI QSA Prep",
+      "slug": "hermes-pci-qsa-prep",
+      "description": "Preparação PCI DSS com SAQ, ASV scanning e compensating controls.",
+      "category": "compliance",
+      "icon": "CreditCard",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes pci qsa prep",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1201,
+      "name": "Hermes Data Lifecycle",
+      "slug": "hermes-data-lifecycle",
+      "description": "Lifecycle de dados com retention policies, archival e right to erasure.",
+      "category": "compliance",
+      "icon": "Clock",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes data lifecycle",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1202,
+      "name": "Hermes Health FHIR",
+      "slug": "hermes-health-fhir",
+      "description": "Integração FHIR para healthtechs — EHR, telemedicine e interoperabilidade.",
+      "category": "industry",
+      "icon": "Heart",
+      "price": 3497,
+      "features": [
+        "Automação completa de hermes health fhir",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1203,
+      "name": "Hermes Fintech Open Banking",
+      "slug": "hermes-fintech-open-banking",
+      "description": "Open Banking com consent, PIX, boletos e account aggregation.",
+      "category": "industry",
+      "icon": "DollarSign",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes fintech open banking",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1204,
+      "name": "Hermes E-com MercadoLivre",
+      "slug": "hermes-ecom-mercadolivre",
+      "description": "Integração Mercado Livre — listings, orders, shipping e reviews.",
+      "category": "industry",
+      "icon": "ShoppingCart",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes ecom mercadolivre",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1205,
+      "name": "Hermes EdTech LMS",
+      "slug": "hermes-edtech-lms",
+      "description": "LMS com cursos adaptativos, SCORM, gamificação e analytics.",
+      "category": "industry",
+      "icon": "GraduationCap",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes edtech lms",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1206,
+      "name": "Hermes IoT Smart City",
+      "slug": "hermes-iot-smart-city",
+      "description": "Plataforma IoT smart city — sensores, dashboards e predictive analytics.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 3997,
+      "features": [
+        "Automação completa de hermes iot smart city",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T23:41:28.837790+00:00",
+      "updated_at": "2026-09-11T23:41:28.837790+00:00"
     }
   ],
   "meta": {
