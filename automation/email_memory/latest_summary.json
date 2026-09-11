@@ -12,10 +12,16 @@
     "sent": 0,
     "errors": [],
     "backend": "none",
-    "updatedAt": "2026-09-11T23:24:14.750274+00:00"
+    "updatedAt": "2026-09-11T23:25:20.519325+00:00"
   },
   "hot_followup": {
-    "skipped": true
+    "hot_threads_found": 0,
+    "drafts_created": 0,
+    "sent": 0,
+    "skipped_sent": 0,
+    "skipped_noise": 0,
+    "errors": [],
+    "backend": "none"
   },
   "known_deals": {
     "queued": 0,
@@ -24,5 +30,5 @@
     "errors": []
   },
   "sendEnabled": true,
-  "updatedAt": "2026-09-11T23:24:14.751326+00:00"
+  "updatedAt": "2026-09-11T23:25:20.521001+00:00"
 }
