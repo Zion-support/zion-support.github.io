@@ -35,6 +35,9 @@ def main() -> int:
 
     contact = read("contact/index.html")
     check("<style" in contact and "/assets/css/site.css" in contact, "contact has inline + linked site.css")
+    check("temporarily unavailable" not in contact.lower(), "contact is not a stub")
+    check("<form" in contact.lower(), "contact has a form")
+    check("kleber@ziontechgroup.com" in contact, "contact lists commercial email")
     plans = read("plans/index.html")
     check("<style" in plans, "plans has inline CSS")
 
@@ -116,6 +119,18 @@ def main() -> int:
     discovery = read("discovery/index.html")
     check("buy.stripe.com/9B69AU8NW5dt71t8BG4ZG09" in discovery, "discovery BRL Stripe link untouched")
     check("buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b" in discovery, "discovery USD Stripe link untouched")
+    check("temporarily unavailable" not in discovery.lower(), "discovery is not a stub")
+
+    healthcare = read("industries/healthcare/index.html")
+    check("ziontechgroup.com/industries/healthcare/" in healthcare, "healthcare canonical is self-referencing")
+    check("http-equiv" not in healthcare.lower() or "refresh" not in healthcare.lower(), "healthcare has no meta refresh")
+    check("url=/services/" not in healthcare.lower() and 'url="/services/"' not in healthcare.lower(), "healthcare does not bounce to /services/")
+    check("temporarily unavailable" not in healthcare.lower(), "healthcare is not a stub")
+    check("Hello Doc" in healthcare or "intake" in healthcare.lower(), "healthcare has industry content")
+
+    fin = read("industries/financial-services/index.html")
+    check("ziontechgroup.com/industries/financial-services/" in fin, "financial-services canonical is self-referencing")
+    check("http-equiv" not in fin.lower() or "refresh" not in fin.lower(), "financial-services has no meta refresh")
 
     if fail:
         print(f"{fail} check(s) failed")

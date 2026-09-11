@@ -55,3 +55,15 @@
 - READ → IMPLEMENT → VALIDATE → COMMIT
 - Verify live before reporting success
 - No approval loops except destructive ops
+
+## Hermes cron model IDs (do not use `local`)
+Nous/OpenRouter rejects `model=local` with `HTTP 400: local is not a valid model ID`.
+That failure has burned hundreds of consecutive runs on coordinator, delegator, service-discovery, GitHub Actions status, and route-recovery jobs.
+
+Pin every drifted job to a live Nous id. Proven working on 2026-09-11: `nous` + `stepfun/step-3.7-flash:free`.
+
+```bash
+bash scripts/pin-hermes-local-model-jobs.sh
+```
+
+Job ids and names live in `automation/hermes-cron-model-pin.json`. Never create or edit a cron with `--model local`.

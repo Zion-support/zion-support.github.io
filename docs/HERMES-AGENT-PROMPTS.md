@@ -44,6 +44,10 @@ Prioritize what reduces future user steering — fix the root so they don't have
 - Statuses: discovered, qualified, contacted, converted
 - Send via: Gmail (himimalaya CLI), verified patterns only
 
+## Hermes cron models
+Never use `--model local`. Nous returns `HTTP 400: local is not a valid model ID`.
+Pin with `bash scripts/pin-hermes-local-model-jobs.sh` (see `docs/HERMES-CRON-MODEL-PIN.md`).
+
 ## Monetization Stack
 - **Payment:** Stripe (subscriptions + one-time)
 - **Booking:** Calendly integration

@@ -8,7 +8,7 @@ USO (Lead Forge):
     python3 send_cold_outreach_v2.py --dry-run # simula envio sem actually enviar
 
 OUTPUTS (persistidos em disco, lidos pelo --report):
-    /Users/miami2/zion.app/automation/data/forge_run.json   — métricas da última execução:queries_used, pages_checked, forged, existing_pool, new_total_after_merge, fonte, timestamp
+    <repo>/automation/data/forge_run.json — métricas da última execução
 """
 
 import json, subprocess, sys, re
@@ -16,12 +16,12 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-LEADS_PRIMARY = Path("/Users/miami2/zion.app/automation/data/zion_leads_free.json")
-LEADS_PRIMARY_FALLBACK = Path("/Users/miami2/zion.app/lead-crm/outreach_ready_canonical.json")
+BASE = Path(__file__).resolve().parent.parent
+LEADS_PRIMARY = BASE / "automation" / "data" / "zion_leads_free.json"
+LEADS_PRIMARY_FALLBACK = BASE / "lead-crm" / "outreach_ready_canonical.json"
 LEADS_FALLBACK = LEADS_PRIMARY_FALLBACK
-LOG_PATH = Path("/Users/miami2/zion.app/outreach-send-log-campaign.jsonl")
+LOG_PATH = BASE / "outreach-send-log-campaign.jsonl"
 ACCOUNT = "kleber@ziontechgroup.com"
-BASE = Path("/Users/miami2/zion.app")
 
 # Canonical send adapter toggle
 # Enable with ZION_SEND_ADAPTER=1 without changing global policy defaults.
@@ -46,7 +46,7 @@ def _send_email_via_backend(to_email, subject, body):
     if backend == "composio":
         cmd = [
             "python3",
-            str(Path("/Users/miami2/zion.app/automation/scripts/composio_send_adapter.py")),
+            str(BASE / "automation" / "scripts" / "composio_send_adapter.py"),
             "gmail",
             "--to", to_email,
             "--subject", subject,
@@ -67,7 +67,10 @@ BLOCKED_DOMAINS = [
     "angellist.com", "wellfound.com", "producthunt.com",
 ]
 
-GENERIC_EMAILS = {"info@", "contact@", "hello@", "admin@", "support@", "sales@", "ceo@", "founder@", "founders@"}
+GENERIC_EMAILS = {
+    "info@", "contact@", "hello@", "admin@", "support@", "sales@", "ceo@",
+    "founder@", "founders@", "ti@", "webmaster@", "marketing@", "newsletter@",
+}
 
 def is_already_sent(email, log_path):
     """Verifica se o email foi enviado com sucesso (somente status 'sent')."""

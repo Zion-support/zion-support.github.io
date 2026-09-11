@@ -176,16 +176,86 @@ def family_a(
     schema: dict | None = None,
 ) -> str:
     if nav_items is None:
-        nav_items = [
-            ("/services/", "Services"),
-            ("/plans/", "Plans"),
-            ("/blog/", "Blog"),
-            ("/contact/", "Contact"),
-        ]
+        if lang.lower().startswith("pt"):
+            nav_items = [
+                ("/services/", "Serviços"),
+                ("/plans/", "Planos"),
+                ("/para/", "Para você"),
+                ("/faq/", "FAQ"),
+                ("/whatsapp/", "WhatsApp"),
+                ("/contact/", "Contato"),
+            ]
+        else:
+            nav_items = [
+                ("/solutions/", "Solutions"),
+                ("/services/", "Services"),
+                ("/plans/", "Plans"),
+                ("/faq/", "FAQ"),
+                ("/whatsapp/", "WhatsApp"),
+                ("/contact/", "Contact"),
+            ]
     nav_html = "".join(f'      <a href="{escape(h)}">{escape(l)}</a>\n' for h, l in nav_items)
     json_block = ""
     if schema:
         json_block = f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>\n'
+    if lang.lower().startswith("pt"):
+        foot = """    <div>
+      <h3>Empresa</h3>
+      <a href="/about/">Sobre</a>
+      <a href="/partners/">Parceiros</a>
+      <a href="/contact/">Contato</a>
+      <a href="/indique/">Indique</a>
+    </div>
+    <div>
+      <h3>Oferta</h3>
+      <a href="/plans/">Planos</a>
+      <a href="/discovery/">Discovery $99</a>
+      <a href="/comece/">Comece</a>
+      <a href="/cpa/">CPA</a>
+    </div>
+    <div>
+      <h3>Recursos</h3>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/mapa-do-site/">Mapa do site</a>
+      <a href="/whatsapp/">WhatsApp</a>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/cookie-policy/">Cookies</a>
+      <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
+    </div>"""
+    else:
+        foot = """    <div>
+      <h3>Company</h3>
+      <a href="/about/">About</a>
+      <a href="/partners/">Partners</a>
+      <a href="/contact/">Contact</a>
+      <a href="/careers/">Careers</a>
+    </div>
+    <div>
+      <h3>Offer</h3>
+      <a href="/plans/">Plans</a>
+      <a href="/discovery/">Discovery $99</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/cpa/">CPA</a>
+    </div>
+    <div>
+      <h3>Resources</h3>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/mapa-do-site/">Site map</a>
+      <a href="/whatsapp/">WhatsApp</a>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <a href="/privacy/">Privacy</a>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/cookie-policy/">Cookies</a>
+      <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
+    </div>"""
     return f"""<!DOCTYPE html>
 <html lang="{escape(lang)}">
 <head>
@@ -225,29 +295,7 @@ def family_a(
 </main>
 <footer>
   <div class="wrap foot">
-    <div>
-      <h3>Company</h3>
-      <a href="/about/">About</a>
-      <a href="/partners/">Partners</a>
-    </div>
-    <div>
-      <h3>Offer</h3>
-      <a href="/plans/">Plans</a>
-      <a href="/discovery/">Discovery $99</a>
-      <a href="/solutions/">Solutions</a>
-    </div>
-    <div>
-      <h3>Resources</h3>
-      <a href="/blog/">Blog</a>
-      <a href="/resources/">Resources</a>
-      <a href="/services/">Services</a>
-    </div>
-    <div>
-      <h3>Legal</h3>
-      <a href="/privacy/">Privacy</a>
-      <a href="/cookie-policy/">Cookies</a>
-      <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
-    </div>
+{foot}
   </div>
   <div class="wrap" style="margin-top:18px">© {date.today().year} Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</div>
 </footer>

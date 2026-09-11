@@ -1,0 +1,184 @@
+#!/usr/bin/env python3
+"""Unit tests for email autopilot classification — no Gmail / gog required."""
+
+from __future__ import annotations
+
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "automation" / "scripts"))
+
+import email_autopilot as ea  # noqa: E402
+
+
+class DomainAndSkipTests(unittest.TestCase):
+    def test_github_notifications_are_noise(self):
+        contact = "notifications@github.com"
+        self.assertTrue(ea.domain_matches(contact, ea.SKIP_DOMAINS))
+        noise, _ = ea.is_noise_sender(contact, "GitHub <notifications@github.com>")
+        self.assertTrue(noise)
+
+    def test_does_not_false_positive_similar_domain(self):
+        self.assertFalse(ea.domain_matches("ceo@notgithub.com", ea.SKIP_DOMAINS))
+        self.assertFalse(ea.domain_matches("alerts@evilegithub.com", ea.SKIP_DOMAINS))
+
+    def test_xai_quiet_report(self):
+        self.assertTrue(
+            ea.is_quiet_automation_report(
+                "Quiet inbox, no replies needed",
+                "(a) SENT: none (0/5)\nSkipped: Samsung promo",
+                "noreply@x.ai",
+            )
+        )
+        self.assertFalse(
+            ea.is_quiet_automation_report(
+                "Elastic DD link ready",
+                "(a) SENT (1/5) Re: Elastic Partner DD",
+                "noreply@x.ai",
+            )
+        )
+
+
+class ClassifyTests(unittest.TestCase):
+    def test_bounce(self):
+        c = ea.classify_message(
+            "1",
+            "Delivery Status Notification (Failure)",
+            "mailer-daemon@googlemail.com",
+            "Message not delivered to contact@runpod.com",
+        )
+        self.assertEqual(c["label"], "bounce")
+
+    def test_suppress(self):
+        c = ea.classify_message("1", "Please stop", "Ada <ada@acme.com>", "unsubscribe me")
+        self.assertEqual(c["label"], "suppress")
+        c = ea.classify_message("1", "Please stop", "Ada <ada@acme.com>", "unsubscribe me")
+        self.assertEqual(c["label"], "suppress")
+
+    def test_quiet_grok_archived(self):
+        c = ea.classify_message(
+            "1",
+            "Quiet day — no client replies",
+            "noreply@x.ai",
+            "Zion Client Email Agent is ready\n(a) SENT: none (0/5)",
+        )
+        self.assertEqual(c["label"], "automation_quiet")
+        self.assertIn("archive", c["actions"])
+
+    def test_grok_sent_is_not_archived_as_quiet(self):
+        c = ea.classify_message(
+            "1",
+            "Elastic DD link ready",
+            "noreply@x.ai",
+            "(a) SENT (1/5) Re: Elastic Partner DD → melissa@elastic.co",
+        )
+        self.assertEqual(c["label"], "automation_action")
+
+    def test_samsung_promo_noise(self):
+        c = ea.classify_message(
+            "1",
+            "Você tem mais de R$ 4.000 OFF esperando",
+            "samsunglatam@br.email.samsung.com",
+            "Não perca as ofertas da Tech Week",
+        )
+        self.assertEqual(c["label"], "noise")
+
+    def test_stripe_security_needs_human(self):
+        c = ea.classify_message(
+            "1",
+            "Um dispositivo não reconhecido entrou na sua conta Stripe",
+            "notifications@stripe.com",
+            "Se você fez isso, não é preciso fazer nada.",
+        )
+        self.assertEqual(c["label"], "security")
+        self.assertIn("needs_human", c["actions"])
+
+    def test_nibo_accounting(self):
+        c = ea.classify_message(
+            "1",
+            "Novos documentos para Kleber",
+            "obrigacoes@nibo.com.br",
+            "Existem novos documentos da empresa ZION",
+        )
+        self.assertEqual(c["label"], "accounting")
+
+    def test_voicemail(self):
+        c = ea.classify_message(
+            "1",
+            "Correio de voz de (13) 98137-0461",
+            "noreply@voicemail.goto.com",
+            "Nova mensagem do correio de voz",
+        )
+        self.assertEqual(c["label"], "voicemail")
+
+    def test_vendor_wts(self):
+        c = ea.classify_message(
+            "1",
+            "WTS: HP EliteBook 840G8",
+            "p.jain@pncalifornia.com",
+            "We have the following laptops to offer",
+        )
+        self.assertIn(c["label"], {"vendor_offer", "noise"})
+
+    def test_rfq_portuguese(self):
+        c = ea.classify_message(
+            "1",
+            "Pedido de orçamento",
+            "Ana Costa <ana@industria.com.br>",
+            "Podem enviar um orçamento de automação para a planta?",
+        )
+        self.assertEqual(c["label"], "rfq")
+        self.assertIn("draft_reply", c["actions"])
+
+    def test_partnership(self):
+        c = ea.classify_message(
+            "1",
+            "Parceria comercial",
+            "João <joao@msp.com.br>",
+            "Gostaríamos de discutir uma parceria em automação.",
+        )
+        self.assertEqual(c["label"], "lead_opportunity")
+
+    def test_github_not_support(self):
+        c = ea.classify_message(
+            "1",
+            "Re: [Zion-support] Restore healthcare pages",
+            "notifications@github.com",
+            "kilo-code-bot left a comment on this pull request ticket",
+        )
+        self.assertEqual(c["label"], "noise")
+
+    def test_inbound_reply(self):
+        c = ea.classify_message(
+            "1",
+            "Re: Discovery next step",
+            "Carla <carla@kenlo.com.br>",
+            "Thanks, can we talk Thursday?",
+        )
+        self.assertEqual(c["label"], "inbound_reply")
+
+
+class DraftAndLangTests(unittest.TestCase):
+    def test_lang_pt(self):
+        self.assertEqual(ea.detect_lang("Olá, obrigado pelo projeto"), "pt")
+
+    def test_lang_es(self):
+        self.assertEqual(ea.detect_lang("Gracias, hay una oportunidad de proyecto"), "es")
+
+    def test_lang_en(self):
+        self.assertEqual(ea.detect_lang("Thanks for the proposal"), "en")
+
+    def test_draft_points_to_book_not_broken_discovery(self):
+        body = ea.build_reply_draft("Ana", "Parceria", "pt")
+        self.assertIn("https://ziontechgroup.com/book/", body)
+        self.assertIn("SAIR", body)
+
+    def test_extract_name_from_header(self):
+        self.assertEqual(ea.extract_name("Ana Costa <ana@industria.com.br>"), "Ana")
+        self.assertEqual(ea.extract_name("ana.costa@industria.com.br"), "Ana Costa")
+
+
+if __name__ == "__main__":
+    unittest.main()
