@@ -1,0 +1,105 @@
+{
+  "account": "kleber@ziontechgroup.com",
+  "updated": "2026-09-11",
+  "labels": {
+    "Zion/Grok-Automations": "Label_959",
+    "Zion/Finance": "Label_960",
+    "Zion/Leads": "Label_961",
+    "Auto-Archived": "Label_642",
+    "GitHub/Archived": "Label_703",
+    "Promotion": "Label_653",
+    "Vendor": "Label_654",
+    "Needs-Response": "Label_636",
+    "Newsletter": "Label_622"
+  },
+  "filters": [
+    {
+      "from": "noreply@x.ai",
+      "addLabelIds": ["Label_959"],
+      "note": "All Grok automation reports"
+    },
+    {
+      "from": "noreply@x.ai",
+      "containWords": ["Quiet"],
+      "addLabelIds": ["Label_959", "Label_642"],
+      "removeLabelIds": ["INBOX", "UNREAD"],
+      "note": "Quiet inbox / quiet day — do not ping CEO"
+    },
+    {
+      "from": "noreply@x.ai",
+      "containWords": ["No new"],
+      "addLabelIds": ["Label_959", "Label_642"],
+      "removeLabelIds": ["INBOX", "UNREAD"],
+      "note": "No-new-replies status mail"
+    },
+    {
+      "from": "noreply@x.ai",
+      "containWords": ["no replies"],
+      "addLabelIds": ["Label_959", "Label_642"],
+      "removeLabelIds": ["INBOX", "UNREAD"],
+      "note": "No-replies status mail"
+    },
+    {
+      "from": "notifications@github.com",
+      "addLabelIds": ["Label_703"],
+      "removeLabelIds": ["INBOX", "UNREAD"],
+      "note": "GitHub notification flood"
+    },
+    {
+      "from": "samsunglatam@br.email.samsung.com",
+      "addLabelIds": ["Label_653"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "no-reply@e.bluehost.com",
+      "addLabelIds": ["Label_653"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "notification@service.tiktok.com",
+      "addLabelIds": ["Label_653"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "hello@automailer.io",
+      "addLabelIds": ["Label_622"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "p.jain@pncalifornia.com",
+      "addLabelIds": ["Label_654"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "obrigacoes@nibo.com.br",
+      "addLabelIds": ["Label_960"],
+      "removeLabelIds": ["INBOX"]
+    },
+    {
+      "from": "notifications@stripe.com",
+      "addLabelIds": ["Label_960"],
+      "note": "Keep in inbox — security / billing"
+    },
+    {
+      "from": "marketing@mkt.agilize.com.br",
+      "addLabelIds": ["Label_622"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "mailer-daemon@googlemail.com",
+      "addLabelIds": ["Label_642"],
+      "removeLabelIds": ["INBOX", "UNREAD"],
+      "note": "Cold-outreach bounce storm"
+    },
+    {
+      "from": "messages-noreply@linkedin.com",
+      "addLabelIds": ["Label_653"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
+    },
+    {
+      "from": "noreply@voicemail.goto.com",
+      "addLabelIds": ["Label_636"],
+      "note": "Keep in inbox — real inbound call"
+    }
+  ]
+}

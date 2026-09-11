@@ -4,14 +4,19 @@ import json, subprocess, sys, os
 from datetime import datetime, timezone
 from pathlib import Path
 
-LEADS_PATH = Path("/Users/miami2/zion.app/automation/data/zion_leads_free.json")
-LOG_PATH = Path("/Users/miami2/zion.app/outreach-send-log.jsonl")
+_REPO = Path(__file__).resolve().parent.parent
+LEADS_PATH = _REPO / "automation" / "data" / "zion_leads_free.json"
+LOG_PATH = _REPO / "outreach-send-log.jsonl"
 ACCOUNT = "kleber@ziontechgroup.com"
 
 BLOCKED = ["google.com", "github.com", "clutch.co", "sam.gov", "goodfirms.co",
            "linkedin.com", "facebook.com", "twitter.com", "x.com",
            "verifier.me", "hunter.io", "lobster.com", "crunchbase.com",
            "angellist.com", "wellfound.com", "producthunt.com"]
+GENERIC_LOCAL = {
+    "info", "contact", "hello", "admin", "support", "sales", "ti", "webmaster",
+    "noreply", "no-reply", "marketing", "newsletter", "mailer-daemon",
+}
 
 ALREADY_SENT = set()
 if LOG_PATH.exists():
@@ -98,8 +103,10 @@ def _send_email(to_email, subject, body):
     except Exception as e:
         return "failed", str(e)
 
+DRY_RUN = "--send" not in sys.argv and os.environ.get("ZION_EMAIL_SEND_ENABLED", "0") != "1"
 print(f"Total leads: {len(leads)}")
 print(f"Já enviados: {len(ALREADY_SENT)}")
+print(f"Mode: {'DRY RUN (pass --send to deliver)' if DRY_RUN else 'LIVE SEND'}")
 print()
 
 enviados = 0
@@ -119,14 +126,22 @@ for i, lead in enumerate(leads):
         print(f"[{i+1}/{len(leads)}] ⏭ {empresa} — duplicado ({el})")
         continue
     dominio = el.split("@")[-1] if "@" in el else ""
+    local = el.split("@")[0] if "@" in el else el
     if any(bd in dominio for bd in BLOCKED):
         pulados += 1
         print(f"[{i+1}/{len(leads)}] ⏭ {empresa} — domínio bloqueado ({dominio})")
         continue
+    if local in GENERIC_LOCAL:
+        pulados += 1
+        print(f"[{i+1}/{len(leads)}] ⏭ {empresa} — local-part genérico ({el})")
+        continue
     service = lead.get("servico_relevante", "AI Automation")
     subject, body = _build_email(empresa, service)
     print(f"[{i+1}/{len(leads)}] 📤 {empresa} → {el} ({service})")
-    status, error = _send_email(el, subject, body)
+    if DRY_RUN:
+        status, error = "dry_run", None
+    else:
+        status, error = _send_email(el, subject, body)
     log_entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "to": el,
@@ -143,6 +158,9 @@ for i, lead in enumerate(leads):
         enviados += 1
         ALREADY_SENT.add(el)
         print(f"      ✅ Enviado")
+    elif status == "dry_run":
+        pulados += 1
+        print(f"      ⏸ Dry-run (not sent)")
     else:
         falhados += 1
         print(f"      ❌ Falhou: {error}")

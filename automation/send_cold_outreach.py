@@ -5,11 +5,15 @@ import json, subprocess, sys, re
 from datetime import datetime, timezone
 from pathlib import Path
 
-LEADS_PATH = Path("/Users/miami2/zion.app/automation/data/zion_leads_free.json")
-LOG_PATH = Path("/Users/miami2/zion.app/outreach-send-log.jsonl")
+_REPO = Path(__file__).resolve().parent.parent
+LEADS_PATH = _REPO / "automation" / "data" / "zion_leads_free.json"
+LOG_PATH = _REPO / "outreach-send-log.jsonl"
 ACCOUNT = "kleber@ziontechgroup.com"
 
-GENERIC_EMAILS = {"info@", "contact@", "hello@", "admin@", "support@", "sales@", "CEO@", "ceo@", "founder@", "founders@", "hello@", "team@"}
+GENERIC_EMAILS = {
+    "info@", "contact@", "hello@", "admin@", "support@", "sales@", "CEO@", "ceo@",
+    "founder@", "founders@", "hello@", "team@", "ti@", "webmaster@",
+}
 
 EXCLUDE_DOMAINS = ["ziontechgroup.com"]
 

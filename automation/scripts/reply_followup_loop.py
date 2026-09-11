@@ -16,7 +16,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO = Path('/Users/miami2/zion.app')
+REPO = Path(__file__).resolve().parents[2]
 DISCOVERED = REPO / 'app' / 'data' / 'discovered_leads.json'
 LEDGER = REPO / 'outreach_monitor' / 'processed' / 'hot_followup_reply_ledger.jsonl'
 LEDGER2 = REPO / 'lead-crm' / 'outreach_sent_history.jsonl'
