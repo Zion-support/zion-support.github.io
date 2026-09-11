@@ -1,0 +1,33 @@
+{
+  "error": "HTTP 400: local is not a valid model ID",
+  "provider": "nous",
+  "model": "stepfun/step-3.7-flash:free",
+  "note": "Hermes gateway rejects model id 'local'. Pin these jobs on Termux with scripts/pin-hermes-local-model-jobs.sh. Do not set --model local.",
+  "jobs": [
+    {
+      "id": "fb3d274edc27",
+      "name": "Zion Service Discovery + Page Deployment for agents group",
+      "bot": "New_Tablet_Kleber_bot"
+    },
+    {
+      "id": "e3c19238fdbc",
+      "name": "zion-agent-coordinator",
+      "bot": "New_Tablet_Kleber_bot"
+    },
+    {
+      "id": "f684cb1dd80f",
+      "name": "zion-delegator-brief",
+      "bot": "New_Tablet_Kleber_bot"
+    },
+    {
+      "id": "6251974df2e8",
+      "name": "ZTG GitHub Actions status",
+      "bot": "Junction Bot"
+    },
+    {
+      "id": "9979b4b8453c",
+      "name": "ztg-route-recovery-monitor",
+      "bot": "Junction Bot"
+    }
+  ]
+}
