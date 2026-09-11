@@ -23,13 +23,13 @@
   <div class="wrap navin">
     <a class="brand" href="/">Zion Tech Group</a>
     <button class="menu" aria-label="Abrir menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-    <nav class="links" aria-label="Principal">
-      <a href="/services/">Serviços</a>
-      <a href="/plans/">Planos</a>
-      <a href="/industries/">Indústrias</a>
-      <a href="/blog/">Blog</a>
-      <a href="/contact/">Contato</a>
-      <a class="cta" href="/discovery/">Discovery $99</a>
+    <nav class="links" id="zion-menu" aria-label="Principal">
+      <a href="/services/" data-nav="services">Serviços</a>
+      <a href="/solutions/" data-nav="solutions">Soluções</a>
+      <a href="/plans/" data-nav="plans">Planos</a>
+      <a href="/blog/" data-nav="blog">Blog</a>
+      <a href="/contact/" data-nav="contact">Contato</a>
+      <a class="cta" href="/discovery/" data-nav="discovery">Discovery $99</a>
     </nav>
   </div>
 </header>
@@ -104,5 +104,6 @@
     </div>
   </div>
 </footer>
+<script src="/assets/js/zion-shell.js" defer></script>
 </body>
 </html>
