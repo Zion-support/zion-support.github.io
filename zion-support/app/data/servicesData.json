@@ -1,0 +1,2612 @@
+{
+  "services": [
+    {
+      "id": 1000,
+      "name": "WhatsApp Business Automation",
+      "slug": "whatsapp-business-automation",
+      "description": "Automação completa de WhatsApp Business com respostas inteligentes, agendamento e campanhas.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 1497,
+      "features": [
+        "Automação completa de whatsapp business automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924677",
+      "updated_at": "2026-09-11T09:56:17.924697"
+    },
+    {
+      "id": 1001,
+      "name": "Telegram Bot Builder",
+      "slug": "telegram-bot-builder",
+      "description": "Criação de bots Telegram com comandos customizados, webhooks e integrações.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 1997,
+      "features": [
+        "Automação completa de telegram bot builder",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924712",
+      "updated_at": "2026-09-11T09:56:17.924717"
+    },
+    {
+      "id": 1002,
+      "name": "Slack Workflow Engine",
+      "slug": "slack-workflow-engine",
+      "description": "Automação de workflows Slack com triggers, ações e notificações.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 297,
+      "features": [
+        "Automação completa de slack workflow engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924728",
+      "updated_at": "2026-09-11T09:56:17.924732"
+    },
+    {
+      "id": 1003,
+      "name": "Discord Community Manager",
+      "slug": "discord-community-manager",
+      "description": "Gerenciamento de comunidades Discord com moderação automática e engajamento.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 1997,
+      "features": [
+        "Automação completa de discord community manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924743",
+      "updated_at": "2026-09-11T09:56:17.924747"
+    },
+    {
+      "id": 1004,
+      "name": "Email Sequence Automation",
+      "slug": "email-sequence-automation",
+      "description": "Sequências de email automatizadas com personalização e tracking.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 297,
+      "features": [
+        "Automação completa de email sequence automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924758",
+      "updated_at": "2026-09-11T09:56:17.924762"
+    },
+    {
+      "id": 1005,
+      "name": "SMS Campaign Manager",
+      "slug": "sms-campaign-manager",
+      "description": "Campanhas SMS com segmentação, agendamento e analytics.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 799,
+      "features": [
+        "Automação completa de sms campaign manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924773",
+      "updated_at": "2026-09-11T09:56:17.924777"
+    },
+    {
+      "id": 1006,
+      "name": "Microsoft Teams Integration",
+      "slug": "microsoft-teams-integration",
+      "description": "Integração com Teams para notificações, reuniões e automações.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 1497,
+      "features": [
+        "Automação completa de microsoft teams integration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924787",
+      "updated_at": "2026-09-11T09:56:17.924792"
+    },
+    {
+      "id": 1007,
+      "name": "LinkedIn Outreach Automation",
+      "slug": "linkedin-outreach-automation",
+      "description": "Automação de outreach LinkedIn com sequências personalizadas.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 2497,
+      "features": [
+        "Automação completa de linkedin outreach automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924807",
+      "updated_at": "2026-09-11T09:56:17.924813"
+    },
+    {
+      "id": 1008,
+      "name": "Instagram DM Automation",
+      "slug": "instagram-dm-automation",
+      "description": "Respostas automáticas e gestão de DMs no Instagram.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 2497,
+      "features": [
+        "Automação completa de instagram dm automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924826",
+      "updated_at": "2026-09-11T09:56:17.924832"
+    },
+    {
+      "id": 1009,
+      "name": "Facebook Messenger Bot",
+      "slug": "facebook-messenger-bot",
+      "description": "Chatbot para Facebook Messenger com fluxos conversacionais.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 2497,
+      "features": [
+        "Automação completa de facebook messenger bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924843",
+      "updated_at": "2026-09-11T09:56:17.924848"
+    },
+    {
+      "id": 1010,
+      "name": "CI/CD Pipeline Builder",
+      "slug": "ci-cd-pipeline-builder",
+      "description": "Construção de pipelines CI/CD com GitHub Actions, GitLab CI e Jenkins.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 799,
+      "features": [
+        "Automação completa de ci/cd pipeline builder",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924858",
+      "updated_at": "2026-09-11T09:56:17.924863"
+    },
+    {
+      "id": 1011,
+      "name": "Docker Container Manager",
+      "slug": "docker-container-manager",
+      "description": "Gerenciamento de containers Docker com orquestração e monitoramento.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 1497,
+      "features": [
+        "Automação completa de docker container manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924871",
+      "updated_at": "2026-09-11T09:56:17.924876"
+    },
+    {
+      "id": 1012,
+      "name": "Kubernetes Deploy Assistant",
+      "slug": "kubernetes-deploy-assistant",
+      "description": "Deploy automatizado em Kubernetes com rollback e health checks.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 297,
+      "features": [
+        "Automação completa de kubernetes deploy assistant",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924884",
+      "updated_at": "2026-09-11T09:56:17.924888"
+    },
+    {
+      "id": 1013,
+      "name": "Infrastructure as Code",
+      "slug": "infrastructure-as-code",
+      "description": "Criação de infraestrutura com Terraform, Pulumi e CloudFormation.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 1497,
+      "features": [
+        "Automação completa de infrastructure as code",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924897",
+      "updated_at": "2026-09-11T09:56:17.924901"
+    },
+    {
+      "id": 1014,
+      "name": "Monitoring & Alerting Setup",
+      "slug": "monitoring-and-alerting-setup",
+      "description": "Configuração de monitoramento com Prometheus, Grafana e PagerDuty.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 497,
+      "features": [
+        "Automação completa de monitoring & alerting setup",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924910",
+      "updated_at": "2026-09-11T09:56:17.924915"
+    },
+    {
+      "id": 1015,
+      "name": "Log Aggregation Pipeline",
+      "slug": "log-aggregation-pipeline",
+      "description": "Pipeline de agregação de logs com ELK Stack e Loki.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 1997,
+      "features": [
+        "Automação completa de log aggregation pipeline",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924923",
+      "updated_at": "2026-09-11T09:56:17.924928"
+    },
+    {
+      "id": 1016,
+      "name": "Auto-Scaling Configuration",
+      "slug": "auto-scaling-configuration",
+      "description": "Configuração de auto-scaling para aplicações cloud-native.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 997,
+      "features": [
+        "Automação completa de auto-scaling configuration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924936",
+      "updated_at": "2026-09-11T09:56:17.924940"
+    },
+    {
+      "id": 1017,
+      "name": "Database Migration Tool",
+      "slug": "database-migration-tool",
+      "description": "Migrações de banco de dados automatizadas com rollback seguro.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 997,
+      "features": [
+        "Automação completa de database migration tool",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924948",
+      "updated_at": "2026-09-11T09:56:17.924953"
+    },
+    {
+      "id": 1018,
+      "name": "SSL Certificate Manager",
+      "slug": "ssl-certificate-manager",
+      "description": "Gerenciamento de certificados SSL com renovação automática.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 1497,
+      "features": [
+        "Automação completa de ssl certificate manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924964",
+      "updated_at": "2026-09-11T09:56:17.924969"
+    },
+    {
+      "id": 1019,
+      "name": "Environment Provisioning",
+      "slug": "environment-provisioning",
+      "description": "Provisionamento de ambientes dev/staging/prod sob demanda.",
+      "category": "devops",
+      "icon": "Server",
+      "price": 997,
+      "features": [
+        "Automação completa de environment provisioning",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924978",
+      "updated_at": "2026-09-11T09:56:17.924982"
+    },
+    {
+      "id": 1020,
+      "name": "Vulnerability Scanner",
+      "slug": "vulnerability-scanner",
+      "description": "Scan de vulnerabilidades em aplicações e dependências.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 1497,
+      "features": [
+        "Automação completa de vulnerability scanner",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.924991",
+      "updated_at": "2026-09-11T09:56:17.924996"
+    },
+    {
+      "id": 1021,
+      "name": "Secret Detection & Rotation",
+      "slug": "secret-detection-and-rotation",
+      "description": "Detecção de secrets em código e rotação automática.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 1997,
+      "features": [
+        "Automação completa de secret detection & rotation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925004",
+      "updated_at": "2026-09-11T09:56:17.925009"
+    },
+    {
+      "id": 1022,
+      "name": "Access Control Auditor",
+      "slug": "access-control-auditor",
+      "description": "Auditoria de controles de acesso e permissões.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 1997,
+      "features": [
+        "Automação completa de access control auditor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925018",
+      "updated_at": "2026-09-11T09:56:17.925023"
+    },
+    {
+      "id": 1023,
+      "name": "Compliance Checker",
+      "slug": "compliance-checker",
+      "description": "Verificação de conformidade com LGPD, GDPR e SOC2.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 297,
+      "features": [
+        "Automação completa de compliance checker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925031",
+      "updated_at": "2026-09-11T09:56:17.925036"
+    },
+    {
+      "id": 1024,
+      "name": "Penetration Testing Assistant",
+      "slug": "penetration-testing-assistant",
+      "description": "Assistente de penetration testing com relatórios detalhados.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 297,
+      "features": [
+        "Automação completa de penetration testing assistant",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925044",
+      "updated_at": "2026-09-11T09:56:17.925048"
+    },
+    {
+      "id": 1025,
+      "name": "Firewall Rule Optimizer",
+      "slug": "firewall-rule-optimizer",
+      "description": "Otimização de regras de firewall e security groups.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 497,
+      "features": [
+        "Automação completa de firewall rule optimizer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925058",
+      "updated_at": "2026-09-11T09:56:17.925063"
+    },
+    {
+      "id": 1026,
+      "name": "Incident Response Playbook",
+      "slug": "incident-response-playbook",
+      "description": "Playbooks automatizados de resposta a incidentes.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 997,
+      "features": [
+        "Automação completa de incident response playbook",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925071",
+      "updated_at": "2026-09-11T09:56:17.925076"
+    },
+    {
+      "id": 1027,
+      "name": "Security Header Analyzer",
+      "slug": "security-header-analyzer",
+      "description": "Análise de headers de segurança HTTP.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 2497,
+      "features": [
+        "Automação completa de security header analyzer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925084",
+      "updated_at": "2026-09-11T09:56:17.925088"
+    },
+    {
+      "id": 1028,
+      "name": "Dependency Audit",
+      "slug": "dependency-audit",
+      "description": "Auditoria de dependências com CVEs conhecidas.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 2497,
+      "features": [
+        "Automação completa de dependency audit",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925099",
+      "updated_at": "2026-09-11T09:56:17.925103"
+    },
+    {
+      "id": 1029,
+      "name": "IAM Policy Generator",
+      "slug": "iam-policy-generator",
+      "description": "Geração de políticas IAM com least privilege.",
+      "category": "security",
+      "icon": "Shield",
+      "price": 799,
+      "features": [
+        "Automação completa de iam policy generator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925111",
+      "updated_at": "2026-09-11T09:56:17.925116"
+    },
+    {
+      "id": 1030,
+      "name": "ETL Pipeline Builder",
+      "slug": "etl-pipeline-builder",
+      "description": "Construção de pipelines ETL com validação e monitoramento.",
+      "category": "data",
+      "icon": "Database",
+      "price": 799,
+      "features": [
+        "Automação completa de etl pipeline builder",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925124",
+      "updated_at": "2026-09-11T09:56:17.925129"
+    },
+    {
+      "id": 1031,
+      "name": "Data Quality Checker",
+      "slug": "data-quality-checker",
+      "description": "Verificação de qualidade de dados com regras customizáveis.",
+      "category": "data",
+      "icon": "Database",
+      "price": 799,
+      "features": [
+        "Automação completa de data quality checker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925136",
+      "updated_at": "2026-09-11T09:56:17.925142"
+    },
+    {
+      "id": 1032,
+      "name": "Database Schema Designer",
+      "slug": "database-schema-designer",
+      "description": "Design de schema de banco de dados com best practices.",
+      "category": "data",
+      "icon": "Database",
+      "price": 1497,
+      "features": [
+        "Automação completa de database schema designer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925149",
+      "updated_at": "2026-09-11T09:56:17.925154"
+    },
+    {
+      "id": 1033,
+      "name": "Data Warehouse Setup",
+      "slug": "data-warehouse-setup",
+      "description": "Configuração de data warehouse com BigQuery, Snowflake ou Redshift.",
+      "category": "data",
+      "icon": "Database",
+      "price": 799,
+      "features": [
+        "Automação completa de data warehouse setup",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925163",
+      "updated_at": "2026-09-11T09:56:17.925168"
+    },
+    {
+      "id": 1034,
+      "name": "Real-time Analytics Pipeline",
+      "slug": "real-time-analytics-pipeline",
+      "description": "Pipeline de analytics em tempo real com Kafka e Flink.",
+      "category": "data",
+      "icon": "Database",
+      "price": 799,
+      "features": [
+        "Automação completa de real-time analytics pipeline",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925176",
+      "updated_at": "2026-09-11T09:56:17.925180"
+    },
+    {
+      "id": 1035,
+      "name": "Data Catalog Generator",
+      "slug": "data-catalog-generator",
+      "description": "Geração automática de catálogo de dados com metadados.",
+      "category": "data",
+      "icon": "Database",
+      "price": 1997,
+      "features": [
+        "Automação completa de data catalog generator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925188",
+      "updated_at": "2026-09-11T09:56:17.925193"
+    },
+    {
+      "id": 1036,
+      "name": "Backup & Recovery Automation",
+      "slug": "backup-and-recovery-automation",
+      "description": "Automação de backup e recuperação de bancos de dados.",
+      "category": "data",
+      "icon": "Database",
+      "price": 1497,
+      "features": [
+        "Automação completa de backup & recovery automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925201",
+      "updated_at": "2026-09-11T09:56:17.925206"
+    },
+    {
+      "id": 1037,
+      "name": "Data Masking Tool",
+      "slug": "data-masking-tool",
+      "description": "Mascaramento de dados sensíveis para ambientes de desenvolvimento.",
+      "category": "data",
+      "icon": "Database",
+      "price": 497,
+      "features": [
+        "Automação completa de data masking tool",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925214",
+      "updated_at": "2026-09-11T09:56:17.925219"
+    },
+    {
+      "id": 1038,
+      "name": "Query Optimizer",
+      "slug": "query-optimizer",
+      "description": "Otimização de queries SQL com sugestões de indexação.",
+      "category": "data",
+      "icon": "Database",
+      "price": 997,
+      "features": [
+        "Automação completa de query optimizer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925229",
+      "updated_at": "2026-09-11T09:56:17.925234"
+    },
+    {
+      "id": 1039,
+      "name": "Data Lineage Tracker",
+      "slug": "data-lineage-tracker",
+      "description": "Rastreamento de linhagem de dados entre sistemas.",
+      "category": "data",
+      "icon": "Database",
+      "price": 2497,
+      "features": [
+        "Automação completa de data lineage tracker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925242",
+      "updated_at": "2026-09-11T09:56:17.925249"
+    },
+    {
+      "id": 1040,
+      "name": "CRM Data Sync",
+      "slug": "crm-data-sync",
+      "description": "Sincronização de dados entre CRMs e ferramentas externas.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 1997,
+      "features": [
+        "Automação completa de crm data sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925258",
+      "updated_at": "2026-09-11T09:56:17.925263"
+    },
+    {
+      "id": 1041,
+      "name": "Lead Scoring Engine",
+      "slug": "lead-scoring-engine",
+      "description": "Engine de scoring de leads com machine learning.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 1997,
+      "features": [
+        "Automação completa de lead scoring engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925272",
+      "updated_at": "2026-09-11T09:56:17.925276"
+    },
+    {
+      "id": 1042,
+      "name": "Sales Pipeline Automation",
+      "slug": "sales-pipeline-automation",
+      "description": "Automação de pipeline de vendas com triggers e ações.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 2497,
+      "features": [
+        "Automação completa de sales pipeline automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925284",
+      "updated_at": "2026-09-11T09:56:17.925289"
+    },
+    {
+      "id": 1043,
+      "name": "Customer Segmentation",
+      "slug": "customer-segmentation",
+      "description": "Segmentação de clientes com clustering e personas.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 997,
+      "features": [
+        "Automação completa de customer segmentation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925297",
+      "updated_at": "2026-09-11T09:56:17.925301"
+    },
+    {
+      "id": 1044,
+      "name": "Email-to-CRM Integration",
+      "slug": "email-to-crm-integration",
+      "description": "Integração de emails com CRM para tracking automático.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 2497,
+      "features": [
+        "Automação completa de email-to-crm integration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925309",
+      "updated_at": "2026-09-11T09:56:17.925314"
+    },
+    {
+      "id": 1045,
+      "name": "Meeting Scheduler",
+      "slug": "meeting-scheduler",
+      "description": "Agendamento de reuniões com sincronização de calendário.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 497,
+      "features": [
+        "Automação completa de meeting scheduler",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925322",
+      "updated_at": "2026-09-11T09:56:17.925326"
+    },
+    {
+      "id": 1046,
+      "name": "Proposal Generator",
+      "slug": "proposal-generator",
+      "description": "Geração automática de propostas comerciais personalizadas.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 497,
+      "features": [
+        "Automação completa de proposal generator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925334",
+      "updated_at": "2026-09-11T09:56:17.925338"
+    },
+    {
+      "id": 1047,
+      "name": "Contract Management",
+      "slug": "contract-management",
+      "description": "Gerenciamento de contratos com alertas de renovação.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 799,
+      "features": [
+        "Automação completa de contract management",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925350",
+      "updated_at": "2026-09-11T09:56:17.925355"
+    },
+    {
+      "id": 1048,
+      "name": "Customer Health Score",
+      "slug": "customer-health-score",
+      "description": "Score de saúde do cliente com indicadores de churn.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 2497,
+      "features": [
+        "Automação completa de customer health score",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925367",
+      "updated_at": "2026-09-11T09:56:17.925372"
+    },
+    {
+      "id": 1049,
+      "name": "Referral Program Manager",
+      "slug": "referral-program-manager",
+      "description": "Gerenciamento de programas de indicação e recompensas.",
+      "category": "crm",
+      "icon": "Users",
+      "price": 497,
+      "features": [
+        "Automação completa de referral program manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925380",
+      "updated_at": "2026-09-11T09:56:17.925385"
+    },
+    {
+      "id": 1050,
+      "name": "LLM Fine-Tuning Pipeline",
+      "slug": "llm-fine-tuning-pipeline",
+      "description": "Pipeline de fine-tuning para modelos de linguagem.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 997,
+      "features": [
+        "Automação completa de llm fine-tuning pipeline",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925394",
+      "updated_at": "2026-09-11T09:56:17.925398"
+    },
+    {
+      "id": 1051,
+      "name": "RAG System Builder",
+      "slug": "rag-system-builder",
+      "description": "Construção de sistemas Retrieval-Augmented Generation.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 2497,
+      "features": [
+        "Automação completa de rag system builder",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925406",
+      "updated_at": "2026-09-11T09:56:17.925410"
+    },
+    {
+      "id": 1052,
+      "name": "AI Agent Orchestrator",
+      "slug": "ai-agent-orchestrator",
+      "description": "Orquestração de agentes AI com coordenação e fallback.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 799,
+      "features": [
+        "Automação completa de ai agent orchestrator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925418",
+      "updated_at": "2026-09-11T09:56:17.925423"
+    },
+    {
+      "id": 1053,
+      "name": "Prompt Engineering Studio",
+      "slug": "prompt-engineering-studio",
+      "description": "Studio de engenharia de prompts com versionamento e testes.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 297,
+      "features": [
+        "Automação completa de prompt engineering studio",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925432",
+      "updated_at": "2026-09-11T09:56:17.925437"
+    },
+    {
+      "id": 1054,
+      "name": "Vector Database Setup",
+      "slug": "vector-database-setup",
+      "description": "Configuração de vector databases com Pinecone, Weaviate ou Chroma.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 2497,
+      "features": [
+        "Automação completa de vector database setup",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925445",
+      "updated_at": "2026-09-11T09:56:17.925449"
+    },
+    {
+      "id": 1055,
+      "name": "Model Evaluation Framework",
+      "slug": "model-evaluation-framework",
+      "description": "Framework de avaliação de modelos com benchmarks customizados.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 1997,
+      "features": [
+        "Automação completa de model evaluation framework",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925457",
+      "updated_at": "2026-09-11T09:56:17.925462"
+    },
+    {
+      "id": 1056,
+      "name": "AI Cost Optimizer",
+      "slug": "ai-cost-optimizer",
+      "description": "Otimização de custos de inferência de modelos AI.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 497,
+      "features": [
+        "Automação completa de ai cost optimizer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925472",
+      "updated_at": "2026-09-11T09:56:17.925479"
+    },
+    {
+      "id": 1057,
+      "name": "Content Moderation AI",
+      "slug": "content-moderation-ai",
+      "description": "Moderação de conteúdo com modelos de classificação.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 799,
+      "features": [
+        "Automação completa de content moderation ai",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925488",
+      "updated_at": "2026-09-11T09:56:17.925493"
+    },
+    {
+      "id": 1058,
+      "name": "Speech-to-Text Pipeline",
+      "slug": "speech-to-text-pipeline",
+      "description": "Pipeline de transcrição de áudio com Whisper e similares.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 1497,
+      "features": [
+        "Automação completa de speech-to-text pipeline",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925503",
+      "updated_at": "2026-09-11T09:56:17.925537"
+    },
+    {
+      "id": 1059,
+      "name": "Image Generation Workflow",
+      "slug": "image-generation-workflow",
+      "description": "Workflow de geração de imagens com Stable Diffusion e DALL-E.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 2497,
+      "features": [
+        "Automação completa de image generation workflow",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925551",
+      "updated_at": "2026-09-11T09:56:17.925556"
+    },
+    {
+      "id": 1060,
+      "name": "LGPD Compliance Checker",
+      "slug": "lgpd-compliance-checker",
+      "description": "Verificação de conformidade com LGPD.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 2497,
+      "features": [
+        "Automação completa de lgpd compliance checker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925566",
+      "updated_at": "2026-09-11T09:56:17.925572"
+    },
+    {
+      "id": 1061,
+      "name": "GDPR Data Mapping",
+      "slug": "gdpr-data-mapping",
+      "description": "Mapeamento de dados para conformidade GDPR.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 497,
+      "features": [
+        "Automação completa de gdpr data mapping",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925580",
+      "updated_at": "2026-09-11T09:56:17.925585"
+    },
+    {
+      "id": 1062,
+      "name": "SOC2 Evidence Collector",
+      "slug": "soc2-evidence-collector",
+      "description": "Coleta automatizada de evidências SOC2.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 997,
+      "features": [
+        "Automação completa de soc2 evidence collector",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925593",
+      "updated_at": "2026-09-11T09:56:17.925597"
+    },
+    {
+      "id": 1063,
+      "name": "Privacy Policy Generator",
+      "slug": "privacy-policy-generator",
+      "description": "Geração de políticas de privacidade personalizadas.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 497,
+      "features": [
+        "Automação completa de privacy policy generator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925606",
+      "updated_at": "2026-09-11T09:56:17.925610"
+    },
+    {
+      "id": 1064,
+      "name": "Data Retention Manager",
+      "slug": "data-retention-manager",
+      "description": "Gerenciamento de retenção de dados com políticas automáticas.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 2497,
+      "features": [
+        "Automação completa de data retention manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925618",
+      "updated_at": "2026-09-11T09:56:17.925623"
+    },
+    {
+      "id": 1065,
+      "name": "Consent Management Platform",
+      "slug": "consent-management-platform",
+      "description": "Plataforma de gestão de consentimento de cookies e dados.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 497,
+      "features": [
+        "Automação completa de consent management platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925632",
+      "updated_at": "2026-09-11T09:56:17.925637"
+    },
+    {
+      "id": 1066,
+      "name": "Audit Trail Logger",
+      "slug": "audit-trail-logger",
+      "description": "Registro de auditoria imutável para compliance.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 2497,
+      "features": [
+        "Automação completa de audit trail logger",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925645",
+      "updated_at": "2026-09-11T09:56:17.925649"
+    },
+    {
+      "id": 1067,
+      "name": "Risk Assessment Tool",
+      "slug": "risk-assessment-tool",
+      "description": "Ferramenta de avaliação de riscos com matriz de impacto.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 997,
+      "features": [
+        "Automação completa de risk assessment tool",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925657",
+      "updated_at": "2026-09-11T09:56:17.925663"
+    },
+    {
+      "id": 1068,
+      "name": "Regulatory Change Tracker",
+      "slug": "regulatory-change-tracker",
+      "description": "Monitoramento de mudanças regulatórias e alertas.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 2497,
+      "features": [
+        "Automação completa de regulatory change tracker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925674",
+      "updated_at": "2026-09-11T09:56:17.925679"
+    },
+    {
+      "id": 1069,
+      "name": "Data Subject Request Handler",
+      "slug": "data-subject-request-handler",
+      "description": "Gestão de requisições de titulares de dados.",
+      "category": "compliance",
+      "icon": "FileCheck",
+      "price": 497,
+      "features": [
+        "Automação completa de data subject request handler",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925688",
+      "updated_at": "2026-09-11T09:56:17.925692"
+    },
+    {
+      "id": 1070,
+      "name": "E-commerce Inventory Sync",
+      "slug": "e-commerce-inventory-sync",
+      "description": "Sincronização de inventário entre marketplaces e ERPs.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 997,
+      "features": [
+        "Automação completa de e-commerce inventory sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925701",
+      "updated_at": "2026-09-11T09:56:17.925706"
+    },
+    {
+      "id": 1071,
+      "name": "Healthcare Appointment Bot",
+      "slug": "healthcare-appointment-bot",
+      "description": "Bot de agendamento para clínicas e hospitais.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 997,
+      "features": [
+        "Automação completa de healthcare appointment bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925714",
+      "updated_at": "2026-09-11T09:56:17.925718"
+    },
+    {
+      "id": 1072,
+      "name": "Real Estate Listing Manager",
+      "slug": "real-estate-listing-manager",
+      "description": "Gestão de listagens imobiliárias com multi-canal.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 1997,
+      "features": [
+        "Automação completa de real estate listing manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925726",
+      "updated_at": "2026-09-11T09:56:17.925732"
+    },
+    {
+      "id": 1073,
+      "name": "Legal Document Analyzer",
+      "slug": "legal-document-analyzer",
+      "description": "Análise de documentos jurídicos com extração de cláusulas.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 297,
+      "features": [
+        "Automação completa de legal document analyzer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925739",
+      "updated_at": "2026-09-11T09:56:17.925747"
+    },
+    {
+      "id": 1074,
+      "name": "Education LMS Integration",
+      "slug": "education-lms-integration",
+      "description": "Integração com plataformas LMS para gestão de cursos.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 1997,
+      "features": [
+        "Automação completa de education lms integration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925756",
+      "updated_at": "2026-09-11T09:56:17.925760"
+    },
+    {
+      "id": 1075,
+      "name": "Restaurant Order Manager",
+      "slug": "restaurant-order-manager",
+      "description": "Gestão de pedidos para restaurantes com integração iFood.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 2497,
+      "features": [
+        "Automação completa de restaurant order manager",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925768",
+      "updated_at": "2026-09-11T09:56:17.925774"
+    },
+    {
+      "id": 1076,
+      "name": "Logistics Route Optimizer",
+      "slug": "logistics-route-optimizer",
+      "description": "Otimização de rotas de entrega com algoritmos genéticos.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 297,
+      "features": [
+        "Automação completa de logistics route optimizer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925782",
+      "updated_at": "2026-09-11T09:56:17.925786"
+    },
+    {
+      "id": 1077,
+      "name": "Financial Reconciliation",
+      "slug": "financial-reconciliation",
+      "description": "Reconciliação financeira automática com conciliação de pagamentos.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 2497,
+      "features": [
+        "Automação completa de financial reconciliation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925795",
+      "updated_at": "2026-09-11T09:56:17.925800"
+    },
+    {
+      "id": 1078,
+      "name": "Insurance Claims Processor",
+      "slug": "insurance-claims-processor",
+      "description": "Processamento de sinistros de seguro com validação automática.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 497,
+      "features": [
+        "Automação completa de insurance claims processor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925810",
+      "updated_at": "2026-09-11T09:56:17.925815"
+    },
+    {
+      "id": 1079,
+      "name": "Manufacturing Quality Control",
+      "slug": "manufacturing-quality-control",
+      "description": "Controle de qualidade em manufatura com visão computacional.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 799,
+      "features": [
+        "Automação completa de manufacturing quality control",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T09:56:17.925824",
+      "updated_at": "2026-09-11T09:56:17.925829"
+    },
+    {
+      "id": 1080,
+      "name": "Telegram Bot Automation",
+      "slug": "telegram-bot-automation",
+      "description": "Automação de bots Telegram com respostas IA, comandos personalizados e integração com CRM.",
+      "category": "messaging",
+      "icon": "MessageCircle",
+      "price": 1297,
+      "features": [
+        "Automação completa de telegram bot automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1081,
+      "name": "Slack Workflow Automation",
+      "slug": "slack-workflow-automation",
+      "description": "Automação de fluxos Slack com triggers, notificações e integração com ferramentas DevOps.",
+      "category": "messaging",
+      "icon": "Slack",
+      "price": 1597,
+      "features": [
+        "Automação completa de slack workflow automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1082,
+      "name": "Discord Community Bot",
+      "slug": "discord-community-bot",
+      "description": "Bot Discord para moderação, onboarding e engajamento de comunidades tech.",
+      "category": "messaging",
+      "icon": "MessageSquare",
+      "price": 997,
+      "features": [
+        "Automação completa de discord community bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1083,
+      "name": "SMS Marketing Platform",
+      "slug": "sms-marketing-platform",
+      "description": "Plataforma de campanhas SMS com segmentação, agendamento e métricas em tempo real.",
+      "category": "messaging",
+      "icon": "Smartphone",
+      "price": 897,
+      "features": [
+        "Automação completa de sms marketing platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1084,
+      "name": "LinkedIn Outreach Bot",
+      "slug": "linkedin-outreach-bot",
+      "description": "Bot de prospecção LinkedIn com mensagens personalizadas e follow-up automático.",
+      "category": "messaging",
+      "icon": "Linkedin",
+      "price": 1897,
+      "features": [
+        "Automação completa de linkedin outreach bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1085,
+      "name": "Chatbot Multi-Channel",
+      "slug": "chatbot-multi-channel",
+      "description": "Chatbot unificado para web, mobile e redes sociais com IA conversacional.",
+      "category": "messaging",
+      "icon": "Bot",
+      "price": 2197,
+      "features": [
+        "Automação completa de chatbot multi channel",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1086,
+      "name": "Voice Call Automation",
+      "slug": "voice-call-automation",
+      "description": "Automação de chamadas de voz com transcrição, análise de sentimento e roteamento IA.",
+      "category": "messaging",
+      "icon": "Phone",
+      "price": 1697,
+      "features": [
+        "Automação completa de voice call automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1087,
+      "name": "Docker Container Management",
+      "slug": "docker-container-management",
+      "description": "Gerenciamento automatizado de containers Docker com monitoramento e scaling.",
+      "category": "devops",
+      "icon": "Container",
+      "price": 1497,
+      "features": [
+        "Automação completa de docker container management",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1088,
+      "name": "Kubernetes Orchestration",
+      "slug": "kubernetes-orchestration",
+      "description": "Orquestração K8s com auto-scaling, deploy canary e rollback automático.",
+      "category": "devops",
+      "icon": "Cloud",
+      "price": 2497,
+      "features": [
+        "Automação completa de kubernetes orchestration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1089,
+      "name": "Monitoring & Alerting",
+      "slug": "monitoring-alerting",
+      "description": "Stack de monitoramento com Prometheus, Grafana e alertas inteligentes via IA.",
+      "category": "devops",
+      "icon": "Activity",
+      "price": 1297,
+      "features": [
+        "Automação completa de monitoring alerting",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1090,
+      "name": "Log Aggregation System",
+      "slug": "log-aggregation-system",
+      "description": "Agregação de logs centralizada com ELK Stack e análise de anomalias.",
+      "category": "devops",
+      "icon": "FileText",
+      "price": 1097,
+      "features": [
+        "Automação completa de log aggregation system",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1091,
+      "name": "GitOps Workflow Engine",
+      "slug": "gitops-workflow-engine",
+      "description": "Engine GitOps com ArgoCD, sync automático e drift detection.",
+      "category": "devops",
+      "icon": "GitMerge",
+      "price": 1897,
+      "features": [
+        "Automação completa de gitops workflow engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1092,
+      "name": "Serverless Deployment",
+      "slug": "serverless-deployment",
+      "description": "Deploy serverless automatizado para AWS Lambda, GCP Functions e Azure Functions.",
+      "category": "devops",
+      "icon": "Zap",
+      "price": 1397,
+      "features": [
+        "Automação completa de serverless deployment",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1093,
+      "name": "Penetration Testing Suite",
+      "slug": "penetration-testing-suite",
+      "description": "Suite de pentest automatizado com relatórios detalhados e remediação guiada.",
+      "category": "security",
+      "icon": "Lock",
+      "price": 2997,
+      "features": [
+        "Automação completa de penetration testing suite",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1094,
+      "name": "SIEM Integration",
+      "slug": "siem-integration",
+      "description": "Integração SIEM com coleta de logs, correlação de eventos e resposta a incidentes.",
+      "category": "security",
+      "icon": "Eye",
+      "price": 2497,
+      "features": [
+        "Automação completa de siem integration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1095,
+      "name": "Zero Trust Architecture",
+      "slug": "zero-trust-architecture",
+      "description": "Implementação de arquitetura Zero Trust com micro-segmentação e identidade.",
+      "category": "security",
+      "icon": "ShieldCheck",
+      "price": 3497,
+      "features": [
+        "Automação completa de zero trust architecture",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1096,
+      "name": "Secrets Management",
+      "slug": "secrets-management",
+      "description": "Gerenciamento de secrets com HashiCorp Vault, rotação automática e auditoria.",
+      "category": "security",
+      "icon": "Key",
+      "price": 1297,
+      "features": [
+        "Automação completa de secrets management",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1097,
+      "name": "WAF Configuration",
+      "slug": "waf-configuration",
+      "description": "Configuração de Web Application Firewall com regras customizadas e bot mitigation.",
+      "category": "security",
+      "icon": "ShieldAlert",
+      "price": 1597,
+      "features": [
+        "Automação completa de waf configuration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1098,
+      "name": "Compliance Automation",
+      "slug": "compliance-automation",
+      "description": "Automação de compliance com auditoria contínua e relatórios regulatórios.",
+      "category": "security",
+      "icon": "CheckSquare",
+      "price": 1897,
+      "features": [
+        "Automação completa de compliance automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1099,
+      "name": "Incident Response Bot",
+      "slug": "incident-response-bot",
+      "description": "Bot de resposta a incidentes com playbooks automatizados e escalação inteligente.",
+      "category": "security",
+      "icon": "AlertTriangle",
+      "price": 2197,
+      "features": [
+        "Automação completa de incident response bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1100,
+      "name": "Identity Access Management",
+      "slug": "identity-access-management",
+      "description": "Gestão de identidade e acesso com SSO, MFA e provisionamento automático.",
+      "category": "security",
+      "icon": "UserCheck",
+      "price": 1797,
+      "features": [
+        "Automação completa de identity access management",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1101,
+      "name": "Threat Intelligence Feed",
+      "slug": "threat-intelligence-feed",
+      "description": "Feed de inteligência de ameaças com indicadores de compromisso e alertas proativos.",
+      "category": "security",
+      "icon": "Radio",
+      "price": 1497,
+      "features": [
+        "Automação completa de threat intelligence feed",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1102,
+      "name": "Data Pipeline Orchestration",
+      "slug": "data-pipeline-orchestration",
+      "description": "Orquestração de pipelines de dados com Apache Airflow e monitoramento em tempo real.",
+      "category": "data",
+      "icon": "GitBranch",
+      "price": 1997,
+      "features": [
+        "Automação completa de data pipeline orchestration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1103,
+      "name": "Real-time Analytics",
+      "slug": "real-time-analytics",
+      "description": "Analytics em tempo real com Apache Kafka, Flink e dashboards interativos.",
+      "category": "data",
+      "icon": "BarChart",
+      "price": 2197,
+      "features": [
+        "Automação completa de real time analytics",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1104,
+      "name": "Data Warehouse Automation",
+      "slug": "data-warehouse-automation",
+      "description": "Automação de data warehouse com ETL, modelagem e governança de dados.",
+      "category": "data",
+      "icon": "Database",
+      "price": 2497,
+      "features": [
+        "Automação completa de data warehouse automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1105,
+      "name": "ML Feature Store",
+      "slug": "ml-feature-store",
+      "description": "Feature store para ML com versionamento, lineage e serving de features.",
+      "category": "data",
+      "icon": "Cpu",
+      "price": 1897,
+      "features": [
+        "Automação completa de ml feature store",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1106,
+      "name": "Data Quality Framework",
+      "slug": "data-quality-framework",
+      "description": "Framework de qualidade de dados com validação, profiling e alertas de anomalias.",
+      "category": "data",
+      "icon": "CheckCircle",
+      "price": 1397,
+      "features": [
+        "Automação completa de data quality framework",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1107,
+      "name": "Data Catalog System",
+      "slug": "data-catalog-system",
+      "description": "Catálogo de dados automatizado com metadata harvesting e lineage tracking.",
+      "category": "data",
+      "icon": "BookOpen",
+      "price": 1697,
+      "features": [
+        "Automação completa de data catalog system",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1108,
+      "name": "Predictive Analytics Engine",
+      "slug": "predictive-analytics-engine",
+      "description": "Engine de analytics preditivo com modelos ML e forecasting automatizado.",
+      "category": "data",
+      "icon": "TrendingUp",
+      "price": 2297,
+      "features": [
+        "Automação completa de predictive analytics engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1109,
+      "name": "Customer Data Platform",
+      "slug": "customer-data-platform",
+      "description": "Plataforma de dados de cliente unificada com segmentação e ativação em tempo real.",
+      "category": "data",
+      "icon": "Users",
+      "price": 2797,
+      "features": [
+        "Automação completa de customer data platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1110,
+      "name": "Data Lake Architecture",
+      "slug": "data-lake-architecture",
+      "description": "Arquitetura data lake com Delta Lake, governança e acesso self-service.",
+      "category": "data",
+      "icon": "Layers",
+      "price": 2597,
+      "features": [
+        "Automação completa de data lake architecture",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1111,
+      "name": "Customer Support Bot",
+      "slug": "customer-support-bot",
+      "description": "Bot de suporte ao cliente com IA, base de conhecimento e escalação inteligente.",
+      "category": "crm",
+      "icon": "Headphones",
+      "price": 1297,
+      "features": [
+        "Automação completa de customer support bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1112,
+      "name": "CRM Data Enrichment",
+      "slug": "crm-data-enrichment",
+      "description": "Enriquecimento automático de dados CRM com fontes externas e validação.",
+      "category": "crm",
+      "icon": "Database",
+      "price": 997,
+      "features": [
+        "Automação completa de crm data enrichment",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1113,
+      "name": "Customer Journey Mapping",
+      "slug": "customer-journey-mapping",
+      "description": "Mapeamento de jornada do cliente com analytics de touchpoints e otimização.",
+      "category": "crm",
+      "icon": "Map",
+      "price": 1697,
+      "features": [
+        "Automação completa de customer journey mapping",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1114,
+      "name": "Customer Feedback Loop",
+      "slug": "customer-feedback-loop",
+      "description": "Loop de feedback automatizado com NPS, análise de sentimento e action items.",
+      "category": "crm",
+      "icon": "MessageCircle",
+      "price": 897,
+      "features": [
+        "Automação completa de customer feedback loop",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1115,
+      "name": "Account Health Score",
+      "slug": "account-health-score",
+      "description": "Score de saúde de contas com indicadores de churn e expansão.",
+      "category": "crm",
+      "icon": "Heart",
+      "price": 1097,
+      "features": [
+        "Automação completa de account health score",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1116,
+      "name": "Customer Onboarding Flow",
+      "slug": "customer-onboarding-flow",
+      "description": "Fluxo de onboarding automatizado com checklists, tutoriais e milestones.",
+      "category": "crm",
+      "icon": "UserPlus",
+      "price": 1197,
+      "features": [
+        "Automação completa de customer onboarding flow",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1117,
+      "name": "AI Model Monitoring",
+      "slug": "ai-model-monitoring",
+      "description": "Monitoramento de modelos ML com drift detection, performance tracking e alertas.",
+      "category": "ai",
+      "icon": "Activity",
+      "price": 1997,
+      "features": [
+        "Automação completa de ai model monitoring",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1118,
+      "name": "LLM Fine-tuning Pipeline",
+      "slug": "llm-finetuning-pipeline",
+      "description": "Pipeline de fine-tuning para LLMs com dataset management e avaliação automatizada.",
+      "category": "ai",
+      "icon": "Brain",
+      "price": 2997,
+      "features": [
+        "Automação completa de llm finetuning pipeline",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1119,
+      "name": "AI Content Generation",
+      "slug": "ai-content-generation",
+      "description": "Geração de conteúdo com IA para marketing, documentação e social media.",
+      "category": "ai",
+      "icon": "PenTool",
+      "price": 1497,
+      "features": [
+        "Automação completa de ai content generation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1120,
+      "name": "Computer Vision Pipeline",
+      "slug": "computer-vision-pipeline",
+      "description": "Pipeline de computer vision com detecção, classificação e segmentação de objetos.",
+      "category": "ai",
+      "icon": "Eye",
+      "price": 2497,
+      "features": [
+        "Automação completa de computer vision pipeline",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1121,
+      "name": "NLP Text Analytics",
+      "slug": "nlp-text-analytics",
+      "description": "Analytics de texto com NLP para extração de entidades, sentimento e sumarização.",
+      "category": "ai",
+      "icon": "Type",
+      "price": 1697,
+      "features": [
+        "Automação completa de nlp text analytics",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1122,
+      "name": "Recommendation Engine",
+      "slug": "recommendation-engine",
+      "description": "Engine de recomendação com collaborative filtering e deep learning.",
+      "category": "ai",
+      "icon": "ThumbsUp",
+      "price": 2197,
+      "features": [
+        "Automação completa de recommendation engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1123,
+      "name": "AI Agent Orchestration",
+      "slug": "ai-agent-orchestration",
+      "description": "Orquestração de agentes IA com multi-agent coordination e tool use.",
+      "category": "ai",
+      "icon": "Bot",
+      "price": 3497,
+      "features": [
+        "Automação completa de ai agent orchestration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1124,
+      "name": "Speech-to-Text Service",
+      "slug": "speech-to-text-service",
+      "description": "Serviço de transcrição de áudio com suporte multi-idioma e diarização.",
+      "category": "ai",
+      "icon": "Mic",
+      "price": 1297,
+      "features": [
+        "Automação completa de speech to text service",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1125,
+      "name": "Anomaly Detection System",
+      "slug": "anomaly-detection-system",
+      "description": "Sistema de detecção de anomalias com modelos não-supervisionados e alertas.",
+      "category": "ai",
+      "icon": "AlertCircle",
+      "price": 1897,
+      "features": [
+        "Automação completa de anomaly detection system",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1126,
+      "name": "AI Ethics & Bias Audit",
+      "slug": "ai-ethics-bias-audit",
+      "description": "Auditoria de ética e viés em modelos IA com relatórios de fairness e explicabilidade.",
+      "category": "ai",
+      "icon": "Scale",
+      "price": 1597,
+      "features": [
+        "Automação completa de ai ethics bias audit",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1127,
+      "name": "GDPR Compliance Suite",
+      "slug": "gdpr-compliance-suite",
+      "description": "Suite completa de compliance GDPR com DPIA, consent management e data mapping.",
+      "category": "compliance",
+      "icon": "Shield",
+      "price": 2497,
+      "features": [
+        "Automação completa de gdpr compliance suite",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1128,
+      "name": "SOC2 Automation",
+      "slug": "soc2-automation",
+      "description": "Automação SOC2 com coleta de evidências, controles e relatórios de auditoria.",
+      "category": "compliance",
+      "icon": "CheckSquare",
+      "price": 2997,
+      "features": [
+        "Automação completa de soc2 automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1129,
+      "name": "HIPAA Compliance Tool",
+      "slug": "hipaa-compliance-tool",
+      "description": "Ferramenta de compliance HIPAA com criptografia, auditoria e access controls.",
+      "category": "compliance",
+      "icon": "Heart",
+      "price": 2797,
+      "features": [
+        "Automação completa de hipaa compliance tool",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1130,
+      "name": "PCI DSS Scanner",
+      "slug": "pci-dss-scanner",
+      "description": "Scanner PCI DSS com assessment de vulnerabilidades e gap analysis.",
+      "category": "compliance",
+      "icon": "CreditCard",
+      "price": 2197,
+      "features": [
+        "Automação completa de pci dss scanner",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1131,
+      "name": "Data Retention Policy",
+      "slug": "data-retention-policy",
+      "description": "Política de retenção de dados com automação de purging e archival.",
+      "category": "compliance",
+      "icon": "Clock",
+      "price": 1397,
+      "features": [
+        "Automação completa de data retention policy",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1132,
+      "name": "Healthcare Patient Portal",
+      "slug": "healthcare-patient-portal",
+      "description": "Portal de pacientes com agendamento, telemedicine e prontuário eletrônico.",
+      "category": "industry",
+      "icon": "Heart",
+      "price": 3497,
+      "features": [
+        "Automação completa de healthcare patient portal",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1133,
+      "name": "Fintech KYC Automation",
+      "slug": "fintech-kyc-automation",
+      "description": "Automação KYC/AML com verificação de identidade, documentação e risk scoring.",
+      "category": "industry",
+      "icon": "DollarSign",
+      "price": 2997,
+      "features": [
+        "Automação completa de fintech kyc automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1134,
+      "name": "E-commerce Personalization",
+      "slug": "ecommerce-personalization",
+      "description": "Personalização de e-commerce com recomendações, pricing dinâmico e A/B testing.",
+      "category": "industry",
+      "icon": "ShoppingCart",
+      "price": 1997,
+      "features": [
+        "Automação completa de ecommerce personalization",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1135,
+      "name": "EdTech Learning Platform",
+      "slug": "edtech-learning-platform",
+      "description": "Plataforma de ensino com cursos adaptativos, gamificação e analytics de aprendizado.",
+      "category": "industry",
+      "icon": "GraduationCap",
+      "price": 2497,
+      "features": [
+        "Automação completa de edtech learning platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    },
+    {
+      "id": 1136,
+      "name": "PropTech Smart Building",
+      "slug": "proptech-smart-building",
+      "description": "Solução de smart building com IoT, energy management e predictive maintenance.",
+      "category": "industry",
+      "icon": "Building",
+      "price": 3997,
+      "features": [
+        "Automação completa de proptech smart building",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-11T19:33:06.842148+00:00",
+      "updated_at": "2026-09-11T19:33:06.842148+00:00"
+    }
+  ],
+  "meta": {
+    "total": 80,
+    "generated_at": "2026-09-11T09:56:55.735299",
+    "version": "1.0"
+  }
+}
