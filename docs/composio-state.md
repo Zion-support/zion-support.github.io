@@ -1,40 +1,27 @@
-# Zion Composio Master — Estado Real e Próximos Passos
+# Zion Composio state (2026-09-11)
 
-Gerado automaticamente pela verificação do repo.
+## 1Password Teams (agents)
 
-## Conexões ativas
+Live at https://ziontechgroup.1password.com  
+Vault **Zion Agent Credentials** `qvoxujxka43fr3kyzmb3qsidpi`  
+Write connection `zion-teams-write` / `_1password_winful-mast` **verified** (LIST + CREATE).
 
-- Calendly `kleber-ziontechgroup`
-- WhatsApp
-- Stripe
-- Resend
-- Brevo
-- Firecrawl
-- SERPAPI
-- Tavily
-- 1Password
+Do not use the old `my.1password.com` Kleber Zion trial for agents.
 
-## Conexões ausentes
+## Active (selected)
 
-- HubSpot
-- Gmail
-- Notion
-- Slack
-- SendGrid
-- ActiveCampaign
-- Linear
-- Asana
-- Airtable
-- Salesforce
-- Pipedrive
+Calendly, WhatsApp, Stripe, Resend, Firecrawl, SerpApi, GitHub, Gmail, Notion,
+Slack, HubSpot, Linear, OpenRouter, Hugging Face (account), Google Workspace.
 
-## Melhorias aplicadas
+## Needs human / new key
 
-- Workflows quebrados por nome de segredo sem prefixo foram ajustados.
-- Novo orquestrador mestre `composio-zion-master.yml` criado para usar apenas conexões confirmadas.
+- Cloudflare API **token** (current header is invalid)
+- Tavily `tvly-` key (account exists, password unknown)
+- SendGrid API key (no account)
+- ActiveCampaign (optional)
+- Brevo IP allowlist `52.72.72.59`
+- 1Password Teams payment method
+- Hugging Face access token
+- Firecrawl credits are exhausted this billing period
 
-## Próximos passos para extrair potencial máximo
-
-1. Conectar os apps ausentes no dashboard da Composio.
-2. Usar `composio-zion-master.yml` como base única para todos os jobs.
-3. Eliminar workflows obsoletos e consolidar em `master` + 1 por domínio: `lead`, `billing`, `content`, `crm`.
+Secrets stay in 1Password. Never commit `ops_`, `re_`, or account passwords.
