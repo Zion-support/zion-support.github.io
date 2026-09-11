@@ -4,13 +4,17 @@ on:
   pull_request:
     paths:
       - "automation/scripts/email_autopilot.py"
+      - "automation/scripts/email_case_engine.py"
       - "automation/tests/test_email_autopilot.py"
+      - "automation/tests/test_email_case_engine.py"
       - "automation/gmail_filters.json"
       - ".github/workflows/email-autopilot.yml"
   push:
     paths:
       - "automation/scripts/email_autopilot.py"
+      - "automation/scripts/email_case_engine.py"
       - "automation/tests/test_email_autopilot.py"
+      - "automation/tests/test_email_case_engine.py"
       - "automation/gmail_filters.json"
       - ".github/workflows/email-autopilot.yml"
   workflow_dispatch:
@@ -27,4 +31,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Run email autopilot unit tests
-        run: python3 automation/tests/test_email_autopilot.py
+        run: |
+          python3 automation/tests/test_email_autopilot.py
+          python3 automation/tests/test_email_case_engine.py
+          python3 automation/scripts/email_case_engine.py --replay

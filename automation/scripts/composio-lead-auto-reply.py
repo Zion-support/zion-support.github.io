@@ -13,7 +13,16 @@ import os
 import sys
 import json
 from datetime import datetime
-from composio import Composio
+from pathlib import Path
+
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+try:
+    from composio import Composio
+except ImportError:  # optional — engine still classifies locally
+    Composio = None
 
 # ========== CONFIG ==========
 GMAIL_LABEL_PROCESSING = os.environ.get("ZION_GMAIL_LABEL_PROCESSING", "lead-processing")
@@ -70,8 +79,36 @@ def fetch_unread_emails(sdk):
     return messages[:20]
 
 def classify_email(sdk, subject, snippet, from_address):
-    """Classifica se é lead, suporte, ou outro."""
-    prompt = f"""
+    """Classifica com o engine local (rápido, sem LLM). GPT só se COMPOSIO_USE_LLM=1."""
+    try:
+        from email_case_engine import analyze_email
+        decision = analyze_email(subject=subject, sender=from_address, body=snippet)
+        mapped = {
+            "lead": "lead",
+            "lead_opportunity": "lead",
+            "rfq": "lead",
+            "inbound_reply": "lead",
+            "hot_lead": "lead",
+            "support": "support",
+        }.get(decision.label, "other")
+        if decision.intent in {"pricing_rfq", "hot_lead", "partnership", "meeting_request",
+                               "inbound_reply_positive"}:
+            mapped = "lead"
+        elif decision.intent == "support_incident":
+            mapped = "support"
+        elif decision.should_reply is False:
+            mapped = "other"
+        return {
+            "category": mapped,
+            "score": int(round(decision.confidence * 10)),
+            "reason": decision.reason,
+            "intent": decision.intent,
+            "decision": decision.to_legacy_dict(),
+        }
+    except Exception as e:
+        print(f"  ⚠ engine local falhou ({e}); fallback other")
+    if os.environ.get("COMPOSIO_USE_LLM") == "1":
+        prompt = f"""
 Você é um assistant de intelligence de leads. Classifique este email:
 
 Assunto: {subject}
@@ -80,26 +117,45 @@ Conteúdo (snippet): {snippet[:500]}
 
 Responda APENAS com um JSON: {{"category": "lead"|"support"|"other", "score": 0-10, "reason": "breve explicação"}}
 """
-    result = tool_execute(
-        sdk,
-        "COMPOSIO-GPT_COMPLETIONS",
-        {"prompt": prompt, "max_tokens": 200},
-    )
-    
-    if result:
-        text = result.get("content", result.get("text", ""))
-        try:
-            # Tenta extrair JSON da resposta
-            import re
-            match = re.search(r'\{[\s\S]*\}', text)
-            if match:
-                return json.loads(match.group())
-        except:
-            pass
+        result = tool_execute(
+            sdk,
+            "COMPOSIO-GPT_COMPLETIONS",
+            {"prompt": prompt, "max_tokens": 200},
+        )
+        if result:
+            text = result.get("content", result.get("text", ""))
+            try:
+                import re
+                match = re.search(r"\{[\s\S]*\}", text)
+                if match:
+                    return json.loads(match.group())
+            except Exception:
+                pass
     return {"category": "other", "score": 0, "reason": "não classificado"}
 
-def generate_auto_reply(sdk, sender_name, category, subject, snippet):
-    """Gera auto-reply personalizado baseado na classificação."""
+def generate_auto_reply(sdk, sender_name, category, subject, snippet, intent=None):
+    """Gera auto-reply personalizado por intent (engine local)."""
+    try:
+        from email_case_engine import analyze_email, build_reply_for_intent
+        decision = analyze_email(subject=subject, sender=sender_name, body=snippet)
+        use_intent = intent or decision.intent
+        text = build_reply_for_intent(use_intent, sender_name, decision.language, subject)
+        if text:
+            return text
+        if not decision.should_reply:
+            return ""
+    except Exception as e:
+        print(f"  ⚠ draft local falhou ({e})")
+    if category not in {"lead", "support"}:
+        return ""
+    if os.environ.get("COMPOSIO_USE_LLM") != "1":
+        try:
+            from email_case_engine import build_reply_for_intent as _draft
+            lang = "pt"
+            mapped = "partnership" if category == "lead" else "support_incident"
+            return _draft(mapped, sender_name, lang, subject) or ""
+        except Exception:
+            return ""
     if category == "lead":
         tone = "entusiásta e profissional"
         cta = "agendar uma breve conversa de descoberta"
@@ -295,12 +351,17 @@ def main():
         print("  🧠 Classificando...")
         classification = classify_email(sdk, subject, snippet, from_addr)
         print(f"  → {classification['category']} (score: {classification['score']}): {classification['reason']}")
+        decision = classification.get("decision") or {}
         
-        # 2b. Gerar auto-reply
+        # 2b. Gerar auto-reply (intent-specific; skip OTP/legal/noise)
         print("  ✍️ Gerando auto-reply...")
-        reply_text = generate_auto_reply(sdk, sender_name, classification['category'], subject, snippet)
+        reply_text = generate_auto_reply(
+            sdk, sender_name, classification['category'], subject, snippet,
+            intent=classification.get("intent"),
+        )
         
-        # 2c. Ações por categoria
+        # 2c. Ações por categoria — never send secrets, legal, or ticket acks
+        auto_ok = bool(decision.get("auto_send_allowed")) and bool(reply_text)
         if classification['category'] == "lead":
             print("  💼 Criando deal no HubSpot...")
             create_hubspot_deal(sdk, sender_name, subject, snippet, 
@@ -310,9 +371,11 @@ def main():
             create_notion_log(sdk, sender_name, subject, classification['category'],
                             classification['score'], reply_text)
             
-            print("  📤 Enviando auto-reply...")
-            if not dry_run:
+            if auto_ok and not dry_run:
+                print("  📤 Enviando auto-reply...")
                 send_auto_reply(sdk, msg_id, reply_text, from_addr)
+            else:
+                print("  📝 Draft only (send gated by intent/confidence/dry-run)")
         
         elif classification['category'] == "support":
             print("  📋 Criando issue no Linear...")

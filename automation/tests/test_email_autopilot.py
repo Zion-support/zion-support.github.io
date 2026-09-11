@@ -158,6 +158,23 @@ class ClassifyTests(unittest.TestCase):
             "Thanks, can we talk Thursday?",
         )
         self.assertEqual(c["label"], "inbound_reply")
+        self.assertEqual(c.get("intent"), "meeting_request")
+
+    def test_otp_not_archived_as_tiktok_noise(self):
+        c = ea.classify_message(
+            "1",
+            "TikTok Shop Partner Center verification code",
+            "partner@email.tiktok.com",
+            "enter this code : YBSM62 Verification codes expire after 2 hours. Do not forward.",
+        )
+        self.assertEqual(c["label"], "otp")
+        self.assertIn("needs_human", c["actions"])
+        self.assertFalse(c.get("should_reply"))
+
+    def test_rfq_draft_is_not_generic_partnership(self):
+        body = ea.build_reply_draft("Paulo", "Solicitação de proposta", "pt", intent="pricing_rfq")
+        self.assertIn("24–48h", body)
+        self.assertNotIn("Discovery (US$99)", body)
 
 
 class DraftAndLangTests(unittest.TestCase):

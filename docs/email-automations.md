@@ -2,6 +2,32 @@
 
 Last audited: 2026-09-11 (Kleber inbox + repo scripts).
 
+## Case-by-case engine (2026-09-11)
+
+`automation/scripts/email_case_engine.py` scores **each** inbound message and maps it to one action. Autopilot and Composio auto-reply both use it.
+
+| Intent | Action | Auto-send |
+| --- | --- | --- |
+| OTP / verification code | Hold for Kleber | Never |
+| Security (Stripe, Brevo, Google) | Escalate | Never |
+| Bounce / delay | Archive + suppress bad address | Never |
+| GitHub / Grok quiet / newsletter | Archive | Never |
+| Accounting (Nibo) | Route finance | Never |
+| Legal / DD questionnaire | Human | Never |
+| Ticket auto-ack (e.g. Clara meajuda@) | Log outreach hit — do **not** re-pitch | Never |
+| Internal (@ziontechgroup.com) | Route internal | Never |
+| RFQ / quote | Draft 24–48h ack to commercial@ | No (draft only) |
+| Meeting request | Draft book/Calendly | High confidence only |
+| Partnership / positive reply | Draft Discovery CTA | High confidence only |
+| Support incident | Ack + route support | No |
+
+```bash
+python3 automation/scripts/email_case_engine.py --replay
+python3 automation/tests/test_email_case_engine.py
+python3 automation/scripts/email_autopilot.py --replay-cases
+python3 automation/scripts/email_autopilot.py --max 25 --hot-max 8
+```
+
 ## What was broken
 
 1. **Grok “Zion Client Email Agent”** emailed Kleber on every quiet run (`Quiet inbox, no replies needed`). That mail landed in Inbox unread, so the agent spent the next run skipping its own reports. Several runs per day.

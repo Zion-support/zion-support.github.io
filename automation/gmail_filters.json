@@ -97,9 +97,29 @@
       "removeLabelIds": ["INBOX", "UNREAD"]
     },
     {
-      "from": "noreply@voicemail.goto.com",
+      "from": "account-alerts@t.brevo.com",
+      "addLabelIds": ["Label_960"],
+      "note": "Keep in inbox — Brevo security IP alert"
+    },
+    {
+      "from": "google-workspace-alerts-noreply@google.com",
+      "addLabelIds": ["Label_959"],
+      "note": "Workspace status — ops, no auto-reply"
+    },
+    {
+      "from": "partner@email.tiktok.com",
       "addLabelIds": ["Label_636"],
-      "note": "Keep in inbox — real inbound call"
+      "note": "OTP / Partner Center codes — never auto-reply"
+    },
+    {
+      "from": "falecom@portaldecompraspublicas.com.br",
+      "addLabelIds": ["Label_961"],
+      "note": "Gov tenders — sales human review"
+    },
+    {
+      "from": "groups-noreply@linkedin.com",
+      "addLabelIds": ["Label_653"],
+      "removeLabelIds": ["INBOX", "UNREAD"]
     }
   ]
 }

@@ -9,6 +9,10 @@ Safe-by-default:
 
 Quiet Grok/x.ai status mail, GitHub bots, newsletters, vendor WTS, and
 accounting docs are skipped so the CEO inbox stays for humans.
+
+Each message is scored by email_case_engine (intent + policy + reply
+template) so an RFQ, a meeting request, and a verification code never
+get the same action.
 """
 
 from __future__ import annotations
@@ -24,14 +28,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
+SCRIPTS = Path(__file__).resolve().parent
 if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
+
+import email_case_engine as case_engine  # noqa: E402
 
 SEND_ENABLED = os.environ.get("ZION_EMAIL_SEND_ENABLED", "0") == "1"
 ACCOUNT = os.environ.get("ZION_EMAIL_ACCOUNT", "kleber@ziontechgroup.com")
-BOOK_URL = "https://ziontechgroup.com/book/"
-SITE_URL = "https://ziontechgroup.com"
-CALENDLY_URL = "https://calendly.com/kleber-ziontechgroup"
+BOOK_URL = case_engine.BOOK_URL
+SITE_URL = case_engine.SITE_URL
+CALENDLY_URL = case_engine.CALENDLY_URL
 
 EMAIL_MEMORY_DIR = REPO / "automation" / "email_memory"
 MEMORY_INBOX = EMAIL_MEMORY_DIR / "inbox_sightings.jsonl"
@@ -39,6 +48,7 @@ MEMORY_CLASSIFICATIONS = EMAIL_MEMORY_DIR / "classifications.jsonl"
 MEMORY_HISTORY = EMAIL_MEMORY_DIR / "success_history.jsonl"
 MEMORY_CONTENT_IDEAS = EMAIL_MEMORY_DIR / "content_ideas.jsonl"
 MEMORY_LATEST = EMAIL_MEMORY_DIR / "latest_summary.json"
+MEMORY_CASES = EMAIL_MEMORY_DIR / "case_decisions.jsonl"
 LEDGER_REPLY = REPO / "outreach_monitor" / "processed" / "reply_to_revenue_ledger.jsonl"
 PENDING_QUEUE = REPO / "outreach_monitor" / "processed" / "pending_ceo_drafts.jsonl"
 HOT_FOLLOWUP_LEDGER = REPO / "outreach_monitor" / "processed" / "hot_followup_reply_ledger.jsonl"
@@ -46,40 +56,11 @@ HOT_FOLLOWUP_SENT = REPO / "hot-followup-sent.json"
 
 _DIRS_READY = False
 
-SKIP_DOMAINS = frozenset({
-    "github.com", "notifications.github.com", "gitlab.com", "jira.atlassian.com",
-    "trello.com", "linear.app", "figma.com", "netlify.com", "vercel.com",
-    "docs.google.com", "calendar.google.com", "meet.google.com",
-    "x.ai", "grok.com",
-    "email.samsung.com", "br.email.samsung.com",
-    "e.bluehost.com", "bluehost.com",
-    "service.tiktok.com", "email.tiktok.com", "tiktok.com",
-    "automailer.io",
-    "linkedin.com", "facebookmail.com",
-    "mkt.agilize.com.br", "agilize.com.br",
-    "pncalifornia.com",
-    "nvidia.com",
-    "stackblitz.com",
-    "cloudflare.com",
-})
-
-SKIP_SENDERS_SUBSTR = (
-    "noreply", "no-reply", "mailer-daemon", "notifications@", "bounce",
-    "newsletter@", "marketing@", "promo@", "donotreply", "do-not-reply",
-)
-
-ACCOUNTING_DOMAINS = frozenset({
-    "nibo.com.br", "contabilvieira.com.br", "sieg.com.br",
-})
-
-SECURITY_SENDERS = frozenset({
-    "notifications@stripe.com", "security@stripe.com",
-    "no-reply@accounts.google.com", "no-reply@google.com",
-})
-
-VOICEMAIL_DOMAINS = frozenset({
-    "voicemail.goto.com", "goto.com",
-})
+SKIP_DOMAINS = case_engine.SKIP_DOMAINS
+SKIP_SENDERS_SUBSTR = case_engine.SKIP_SENDERS_SUBSTR
+ACCOUNTING_DOMAINS = case_engine.ACCOUNTING_DOMAINS
+SECURITY_SENDERS = case_engine.SECURITY_SENDERS
+VOICEMAIL_DOMAINS = case_engine.VOICEMAIL_DOMAINS
 
 SERVICE_LINES = [
     "AI Automation & Integration",
@@ -100,7 +81,7 @@ def ensure_dirs() -> None:
     EMAIL_MEMORY_DIR.mkdir(parents=True, exist_ok=True)
     for p in [
         MEMORY_INBOX, MEMORY_CLASSIFICATIONS, MEMORY_HISTORY, MEMORY_CONTENT_IDEAS,
-        LEDGER_REPLY, PENDING_QUEUE, HOT_FOLLOWUP_LEDGER,
+        MEMORY_CASES, LEDGER_REPLY, PENDING_QUEUE, HOT_FOLLOWUP_LEDGER,
     ]:
         p.parent.mkdir(parents=True, exist_ok=True)
         if not p.exists():
@@ -108,37 +89,10 @@ def ensure_dirs() -> None:
     _DIRS_READY = True
 
 
-def extract_email(from_header: str) -> str:
-    if not from_header:
-        return ""
-    m = re.search(r"<([^>]+)>", from_header)
-    return (m.group(1) if m else from_header).strip().lower()
-
-
-def extract_name(from_header: str) -> str:
-    if not from_header:
-        return "there"
-    m = re.match(r'"?([^"<@]+)"?\s*<', from_header.strip())
-    if m:
-        token = m.group(1).strip().split()[0]
-        if token:
-            return token
-    local = extract_email(from_header).split("@")[0]
-    cleaned = re.sub(r"[._+\-]+", " ", local).strip()
-    return cleaned.title() if cleaned else "there"
-
-
-def sender_domain(contact: str) -> str:
-    if "@" not in contact:
-        return ""
-    return contact.rsplit("@", 1)[-1].lower().strip(">. ")
-
-
-def domain_matches(contact: str, domains: frozenset[str]) -> bool:
-    host = sender_domain(contact)
-    if not host:
-        return False
-    return any(host == d or host.endswith("." + d) for d in domains)
+extract_email = case_engine.extract_email
+extract_name = case_engine.extract_name
+sender_domain = case_engine.sender_domain
+domain_matches = case_engine.domain_matches
 
 
 def is_noise_sender(contact: str, sender: str = "") -> tuple[bool, str]:
@@ -164,194 +118,21 @@ def is_quiet_automation_report(subject: str, body: str, contact: str) -> bool:
 
 
 def classify_message(message_id: str, subject: str, sender: str, body: str) -> dict:
-    contact = extract_email(sender)
-    text = f"{subject}\n{body}".lower()
-    subj = (subject or "").lower()
-
-    if any(k in text for k in ["unsubscribe", "remove me", "do not contact", "please stop", "parar de receber", "sair da lista"]):
-        return {
-            "label": "suppress",
-            "priority": "high",
-            "actions": ["suppress_thread"],
-            "reason": "explicit stop/unsubscribe request",
-        }
-
-    if "mailer-daemon" in contact or "delivery status notification" in subj or "undeliverable" in subj:
-        return {
-            "label": "bounce",
-            "priority": "low",
-            "actions": ["archive"],
-            "reason": "bounce / delivery failure",
-        }
-
-    if contact.lower() in SECURITY_SENDERS or any(
-        k in subj for k in ["verification code", "unrecognized device", "new sign-in", "security alert"]
-    ):
-        return {
-            "label": "security",
-            "priority": "high",
-            "actions": ["needs_human"],
-            "reason": "security / login / verification",
-        }
-
-    if domain_matches(contact, VOICEMAIL_DOMAINS) or "correio de voz" in subj or "voicemail" in subj:
-        return {
-            "label": "voicemail",
-            "priority": "high",
-            "actions": ["needs_human"],
-            "reason": "inbound voicemail",
-        }
-
-    if is_quiet_automation_report(subject, body, contact):
-        return {
-            "label": "automation_quiet",
-            "priority": "low",
-            "actions": ["archive"],
-            "reason": "Grok/x.ai quiet-status report",
-        }
-
-    if domain_matches(contact, frozenset({"x.ai", "grok.com"})):
-        sent_hit = bool(re.search(r"sent\s*\(\s*[1-9]", text)) or "needs kleber" in text
-        if sent_hit:
-            return {
-                "label": "automation_action",
-                "priority": "medium",
-                "actions": ["store_history"],
-                "reason": "Grok agent sent mail or flagged CEO action",
-            }
-        return {
-            "label": "automation_status",
-            "priority": "low",
-            "actions": ["archive"],
-            "reason": "Grok/x.ai status mail",
-        }
-
-    noise, noise_reason = is_noise_sender(contact, sender)
-    if noise:
-        return {
-            "label": "noise",
-            "priority": "low",
-            "actions": ["archive"],
-            "reason": noise_reason,
-        }
-
-    if domain_matches(contact, ACCOUNTING_DOMAINS) or "novos documentos" in subj:
-        return {
-            "label": "accounting",
-            "priority": "medium",
-            "actions": ["route_finance"],
-            "reason": "accounting / Nibo documents",
-        }
-
-    if subj.startswith("wts:") or "we have the following laptops" in text:
-        return {
-            "label": "vendor_offer",
-            "priority": "low",
-            "actions": ["archive"],
-            "reason": "hardware vendor offer",
-        }
-
-    if any(k in text for k in ["orçamento", "orcamento", "rfq", "solicitação de proposta", "solicitacao de proposta", "request for quote", "request for proposal"]):
-        return {
-            "label": "rfq",
-            "priority": "high",
-            "actions": ["draft_reply", "store_history"],
-            "reason": "budget/quote request",
-        }
-
-    if re.search(r"\b(partnership|collaboration|parceria|proposta|projeto)\b", text):
-        return {
-            "label": "lead_opportunity",
-            "priority": "high",
-            "actions": ["draft_reply", "store_history"],
-            "reason": "partnership/collaboration signal",
-        }
-
-    if subj.startswith("re:") or subj.startswith("res:"):
-        return {
-            "label": "inbound_reply",
-            "priority": "high",
-            "actions": ["draft_reply", "store_history"],
-            "reason": "existing conversation reply",
-        }
-
-    if any(k in text for k in ["quote", "budget"]) and any(k in text for k in ["need", "preciso", "can you", "vocês", "voces"]):
-        return {
-            "label": "rfq",
-            "priority": "high",
-            "actions": ["draft_reply", "store_history"],
-            "reason": "budget/quote request",
-        }
-
-    if any(k in text for k in ["abrir ticket", "support ticket", "chamado de suporte"]) or (
-        any(k in text for k in ["incidente", "outage", "downtime"]) and "client" in text
-    ):
-        return {
-            "label": "support",
-            "priority": "medium",
-            "actions": ["route_support"],
-            "reason": "support/systems signal",
-        }
-
-    if any(k in text for k in ["unsubscribe", "newsletter", "promotions", "tech week", "% off", "você tem mais"]):
-        return {
-            "label": "noise",
-            "priority": "low",
-            "actions": ["archive"],
-            "reason": "newsletter/promo noise",
-        }
-
-    return {
-        "label": "other",
-        "priority": "low",
-        "actions": [],
-        "reason": "default catch-all",
-        "message_id": message_id,
-    }
+    """Case-by-case analysis via email_case_engine (legacy dict shape)."""
+    return case_engine.classify_message(message_id, subject, sender, body)
 
 
-def detect_lang(text: str) -> str:
-    t = (text or "").lower()
-    if any(w in t for w in ["obrigado", "projeto", "serviços", "servicos", "abraço", "abraco", "olá", "ola ", "oi,", "vocês", "voces"]):
-        return "pt"
-    if any(w in t for w in ["gracias", "oportunidad", "proyecto", "servicios", "saludos"]):
-        return "es"
-    return "en"
+detect_lang = case_engine.detect_lang
 
 
-def build_reply_draft(name: str, subject: str, lang: str = "pt") -> str:
+def build_reply_draft(name: str, subject: str, lang: str = "pt", intent: str | None = None) -> str:
+    if intent:
+        tailored = case_engine.build_reply_for_intent(intent, name, lang, subject)
+        if tailored:
+            return tailored
     first = name or "there"
-    if lang == "es":
-        return (
-            f"{first},\n\n"
-            "Gracias por el contacto. Veo potencial para avanzar juntos.\n\n"
-            f"Servicios de IA y automatización: {SITE_URL}\n"
-            f"Agenda Discovery ($99): {BOOK_URL}\n"
-            f"Calendly: {CALENDLY_URL}\n\n"
-            "Saludos,\nKleber Garcia Alcatrão\nCEO, Zion Tech Group\n"
-            f"{SITE_URL}\nkleber@ziontechgroup.com"
-        )
-    if lang == "pt":
-        return (
-            f"{first},\n\n"
-            "Obrigado pelo contato. Vejo potencial para avançarmos juntos.\n\n"
-            f"Serviços de IA e automação: {SITE_URL}\n"
-            f"Agende o Discovery (US$99): {BOOK_URL}\n"
-            f"Calendly: {CALENDLY_URL}\n\n"
-            "Para sair da lista, responda SAIR ou STOP.\n\n"
-            "Um abraço,\nKleber Garcia Alcatrão\nCEO, Zion Tech Group\n"
-            f"{SITE_URL}\nkleber@ziontechgroup.com"
-        )
-    return (
-        f"{first},\n\n"
-        "Thanks for reaching out. I see strong potential to move forward together.\n\n"
-        f"AI & automation services: {SITE_URL}\n"
-        f"Book Discovery ($99): {BOOK_URL}\n"
-        f"Calendly: {CALENDLY_URL}\n\n"
-        "Reply STOP to opt out.\n\n"
-        "Best,\nKleber Garcia Alcatrão\nCEO, Zion Tech Group\n"
-        f"{SITE_URL}\nkleber@ziontechgroup.com"
-    )
+    generic = case_engine.build_reply_for_intent("partnership", first, lang, subject)
+    return generic or ""
 
 
 def gog(*args: str, timeout: int = 60) -> str:
@@ -423,6 +204,17 @@ def store_classification(message_id: str, classification: dict):
         "ts": int(time.time()),
         "message_id": message_id,
         "classification": classification,
+    })
+    append_jsonl(MEMORY_CASES, {
+        "ts": int(time.time()),
+        "message_id": message_id,
+        "intent": classification.get("intent"),
+        "label": classification.get("label"),
+        "primary_action": classification.get("primary_action"),
+        "confidence": classification.get("confidence"),
+        "should_reply": classification.get("should_reply"),
+        "auto_send_allowed": classification.get("auto_send_allowed"),
+        "reason": classification.get("reason"),
     })
 
 
@@ -558,6 +350,7 @@ def run_inbox_scan(max_results: int = 25) -> dict:
         "skipped_sent": 0,
         "skipped_dup": 0,
         "classified": {},
+        "intents": {},
         "drafts_created": 0,
         "needs_human": 0,
         "memory_written": 0,
@@ -617,7 +410,9 @@ def run_inbox_scan(max_results: int = 25) -> dict:
         classification = classify_message(mid, subject, sender, body)
         store_classification(mid, classification)
         label = classification.get("label", "other")
+        intent = classification.get("intent") or label
         summary["classified"][label] = summary["classified"].get(label, 0) + 1
+        summary["intents"][intent] = summary["intents"].get(intent, 0) + 1
         actions = classification.get("actions", [])
 
         if "archive" in actions:
@@ -647,6 +442,8 @@ def run_inbox_scan(max_results: int = 25) -> dict:
                 "from": contact,
                 "subject": subject,
                 "status": classification.get("label"),
+                "intent": intent,
+                "primary_action": classification.get("primary_action"),
                 "mode": "manual_review",
                 "reason": classification.get("reason"),
                 "created_at": datetime.now(timezone.utc).isoformat(),
@@ -665,9 +462,19 @@ def run_inbox_scan(max_results: int = 25) -> dict:
 
         if "draft_reply" in actions:
             name = extract_name(sender)
-            lang = detect_lang(f"{subject}\n{body}")
-            draft_body = build_reply_draft(name, subject, lang)
-            queue_draft(mid, tid, contact, name, subject, lang, draft_body)
+            lang = classification.get("language") or detect_lang(f"{subject}\n{body}")
+            draft_body = classification.get("reply_body") or build_reply_draft(
+                name, subject, lang, intent=intent,
+            )
+            queue_draft(
+                mid, tid, contact, name, subject, lang, draft_body,
+                extra={
+                    "intent": intent,
+                    "confidence": classification.get("confidence"),
+                    "auto_send_allowed": bool(classification.get("auto_send_allowed")) and SEND_ENABLED,
+                    "primary_action": classification.get("primary_action"),
+                },
+            )
             queued.add(tid)
             summary["drafts_created"] += 1
 
@@ -735,10 +542,26 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
             summary["skipped_noise"] += 1
             continue
 
-        lang = detect_lang(f"{subject}\n{body}")
+        classification = classify_message(mid, subject, sender, body)
+        if "archive" in classification.get("actions", []) or classification.get("label") in {
+            "noise", "bounce", "otp", "security", "accounting", "vendor_offer",
+        }:
+            summary["skipped_noise"] += 1
+            continue
+        lang = classification.get("language") or detect_lang(f"{subject}\n{body}")
         name = extract_name(sender)
-        draft_body = build_reply_draft(name, subject, lang)
-        queue_draft(mid, tid, contact, name, subject or "Following up — Zion Tech Group", lang, draft_body, extra={"hot_followup": True})
+        intent = classification.get("intent") or "follow_up_nudge"
+        draft_body = classification.get("reply_body") or build_reply_draft(
+            name, subject, lang, intent=intent,
+        )
+        queue_draft(
+            mid, tid, contact, name, subject or "Following up — Zion Tech Group", lang, draft_body,
+            extra={
+                "hot_followup": True,
+                "intent": intent,
+                "confidence": classification.get("confidence"),
+            },
+        )
         record_hot_sent(tid, mid, contact, subject, "dry_run" if not SEND_ENABLED else "live_send")
         append_jsonl(HOT_FOLLOWUP_LEDGER, {
             "ts": int(time.time()),
@@ -762,7 +585,18 @@ def main(argv: list[str] | None = None):
     parser.add_argument("--max", type=int, default=25, help="Max inbox threads to scan")
     parser.add_argument("--hot-max", type=int, default=8, help="Max HOT FOLLOW-UP threads")
     parser.add_argument("--inbox-only", action="store_true")
+    parser.add_argument(
+        "--replay-cases", action="store_true",
+        help="Replay built-in inbox cases (no Gmail) and exit",
+    )
     args = parser.parse_args(argv)
+
+    if args.replay_cases:
+        report = case_engine.replay_demo_cases()
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        if report["failed"]:
+            raise SystemExit(1)
+        return report
 
     mode = "LIVE SEND" if SEND_ENABLED else "DRY RUN"
     print(f"[email_autopilot] mode={mode} account={ACCOUNT} repo={REPO}")
