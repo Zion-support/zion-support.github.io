@@ -49,6 +49,7 @@
       "product": "zion_playbook_ai_ops_2026",
       "price_id": "price_1UEcrVJRA2AketBh8DQFmAh7",
       "url": "https://buy.stripe.com/bJe6oIggo5dt0D56ty4ZR0O",
+      "success": "/payment-success/?sku=playbook",
       "library": "/library/playbook/",
       "page": "/store/playbook/"
     },
@@ -60,6 +61,7 @@
       "product": "zion_prompt_pack_2026",
       "price_id": "price_1UEcrWJRA2AketBhGvRXufRt",
       "url": "https://buy.stripe.com/dRmcN6d4ceO30D53hm4ZR0P",
+      "success": "/payment-success/?sku=prompts",
       "library": "/library/prompts/",
       "page": "/store/prompts/"
     },
@@ -71,6 +73,7 @@
       "product": "zion_whatsapp_sales_kit",
       "price_id": "price_1UEcrWJRA2AketBh7z5XXRqA",
       "url": "https://buy.stripe.com/dRmbJ2aW40Xd85xdW04ZR0Q",
+      "success": "/payment-success/?sku=whatsapp-kit",
       "library": "/library/whatsapp-kit/",
       "page": "/store/whatsapp-kit/"
     },
@@ -82,6 +85,7 @@
       "product": "zion_ai_credits_100",
       "price_id": "price_1UEcrZJRA2AketBhYruefKnQ",
       "url": "https://buy.stripe.com/4gM4gAc08cFV85x5pu4ZR0R",
+      "success": "/payment-success/?sku=credits-100",
       "library": "/store/credits/",
       "page": "/store/credits/"
     },
@@ -93,6 +97,7 @@
       "product": "zion_kickoff_deposit",
       "price_id": "price_1UEcrYJRA2AketBhiJr2gtS2",
       "url": "https://buy.stripe.com/eVq14ofck35ldpRdW04ZR0S",
+      "success": "/payment-success/?sku=deposit",
       "library": "/book/",
       "page": "/store/"
     }
@@ -107,6 +112,7 @@
       "product": "zion_ai_ops_desk_mo",
       "price_id": "price_1UEcrXJRA2AketBhmtASUxv8",
       "url": "https://buy.stripe.com/cNi28sd4cfS74Tl8BG4ZR0T",
+      "success": "/payment-success/?sku=ops-desk",
       "page": "/subscribe/"
     },
     {
@@ -117,6 +123,7 @@
       "product": "zion_ai_ops_desk_yr",
       "price_id": "price_1UEcraJRA2AketBhyimrVNeQ",
       "url": "https://buy.stripe.com/dRm3cw8NW0XdbhJf044ZR0V",
+      "success": "/payment-success/?sku=ops-desk-annual",
       "page": "/subscribe/"
     },
     {
@@ -127,6 +134,7 @@
       "product": "zion_founder_hours_mo",
       "price_id": "price_1UEcrYJRA2AketBhIBShpHjp",
       "url": "https://buy.stripe.com/8x23cw0hqgWb85x3hm4ZR0U",
+      "success": "/payment-success/?sku=founder-hours",
       "page": "/subscribe/"
     }
   ],
