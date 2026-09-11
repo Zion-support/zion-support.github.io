@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-09-11T23:34:47.658980Z",
+  "base_url": "https://ziontechgroup.com",
+  "checked_endpoints": [
+    {
+      "endpoint": "/hermes-agents",
+      "status": 404
+    },
+    {
+      "endpoint": "/help",
+      "status": 301
+    },
+    {
+      "endpoint": "/documentation",
+      "status": 404
+    },
+    {
+      "endpoint": "/docs",
+      "status": 301
+    },
+    {
+      "endpoint": "/hermes-agents/",
+      "status": 404
+    },
+    {
+      "endpoint": "/help/",
+      "status": 200
+    },
+    {
+      "endpoint": "/documentation/",
+      "status": 404
+    },
+    {
+      "endpoint": "/docs/",
+      "status": 200
+    },
+    {
+      "endpoint": "/consultation",
+      "status": 301
+    },
+    {
+      "endpoint": "/support",
+      "status": 301
+    }
+  ],
+  "404_found": [
+    {
+      "endpoint": "/hermes-agents",
+      "status": 404
+    },
+    {
+      "endpoint": "/documentation",
+      "status": 404
+    },
+    {
+      "endpoint": "/hermes-agents/",
+      "status": 404
+    },
+    {
+      "endpoint": "/documentation/",
+      "status": 404
+    }
+  ],
+  "total_checked": 10,
+  "total_404s": 4
+}
