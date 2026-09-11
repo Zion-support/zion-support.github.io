@@ -1,0 +1,151 @@
+{
+  "updated": "2026-09-11",
+  "account": "acct_1U8rFeJRA2AketBh",
+  "promo": {
+    "code": "ZIONLAUNCH10",
+    "percent": 10,
+    "note": "First purchase only. Enter at Stripe Checkout."
+  },
+  "core": [
+    {
+      "sku": "discovery",
+      "name": "AI/IT Discovery",
+      "price": "$99",
+      "interval": "one-time",
+      "url": "https://buy.stripe.com/3cIdRa6FO5dt0D53hm4ZG05",
+      "success": "/book/"
+    },
+    {
+      "sku": "consulting",
+      "name": "AI Consulting",
+      "price": "$499",
+      "interval": "one-time",
+      "url": "https://buy.stripe.com/4gM14ofck0Xd1H94lq4ZG08",
+      "success": "/success-stories/"
+    },
+    {
+      "sku": "starter",
+      "name": "Starter Implementation",
+      "price": "$2,500",
+      "interval": "one-time",
+      "url": "https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06",
+      "success": "/payment-success/?sku=starter"
+    },
+    {
+      "sku": "growth",
+      "name": "Growth Retainer",
+      "price": "$8,000/mo",
+      "interval": "month",
+      "url": "https://buy.stripe.com/aFa5kEd4c21h3PhdW04ZG07",
+      "success": "/payment-success/?sku=growth"
+    }
+  ],
+  "selfServe": [
+    {
+      "sku": "playbook",
+      "name": "AI Ops Playbook 2026",
+      "price": "$49",
+      "interval": "one-time",
+      "product": "zion_playbook_ai_ops_2026",
+      "price_id": "price_1UEcrVJRA2AketBh8DQFmAh7",
+      "url": "https://buy.stripe.com/bJe6oIggo5dt0D56ty4ZR0O",
+      "library": "/library/playbook/",
+      "page": "/store/playbook/"
+    },
+    {
+      "sku": "prompts",
+      "name": "Agent Prompt Pack",
+      "price": "$29",
+      "interval": "one-time",
+      "product": "zion_prompt_pack_2026",
+      "price_id": "price_1UEcrWJRA2AketBhGvRXufRt",
+      "url": "https://buy.stripe.com/dRmcN6d4ceO30D53hm4ZR0P",
+      "library": "/library/prompts/",
+      "page": "/store/prompts/"
+    },
+    {
+      "sku": "whatsapp-kit",
+      "name": "WhatsApp Sales Kit",
+      "price": "$79",
+      "interval": "one-time",
+      "product": "zion_whatsapp_sales_kit",
+      "price_id": "price_1UEcrWJRA2AketBh7z5XXRqA",
+      "url": "https://buy.stripe.com/dRmbJ2aW40Xd85xdW04ZR0Q",
+      "library": "/library/whatsapp-kit/",
+      "page": "/store/whatsapp-kit/"
+    },
+    {
+      "sku": "credits-100",
+      "name": "AI Credits $100 pack",
+      "price": "$99",
+      "interval": "one-time",
+      "product": "zion_ai_credits_100",
+      "price_id": "price_1UEcrZJRA2AketBhYruefKnQ",
+      "url": "https://buy.stripe.com/4gM4gAc08cFV85x5pu4ZR0R",
+      "library": "/store/credits/",
+      "page": "/store/credits/"
+    },
+    {
+      "sku": "deposit",
+      "name": "Project Kickoff Deposit",
+      "price": "$1,000",
+      "interval": "one-time",
+      "product": "zion_kickoff_deposit",
+      "price_id": "price_1UEcrYJRA2AketBhiJr2gtS2",
+      "url": "https://buy.stripe.com/eVq14ofck35ldpRdW04ZR0S",
+      "library": "/book/",
+      "page": "/store/"
+    }
+  ],
+  "subscriptions": [
+    {
+      "sku": "ops-desk",
+      "name": "AI Ops Desk",
+      "price": "$299/mo",
+      "interval": "month",
+      "trial_days": 7,
+      "product": "zion_ai_ops_desk_mo",
+      "price_id": "price_1UEcrXJRA2AketBhmtASUxv8",
+      "url": "https://buy.stripe.com/cNi28sd4cfS74Tl8BG4ZR0T",
+      "page": "/subscribe/"
+    },
+    {
+      "sku": "ops-desk-annual",
+      "name": "AI Ops Desk annual",
+      "price": "$2,990/yr",
+      "interval": "year",
+      "product": "zion_ai_ops_desk_yr",
+      "price_id": "price_1UEcraJRA2AketBhyimrVNeQ",
+      "url": "https://buy.stripe.com/dRm3cw8NW0XdbhJf044ZR0V",
+      "page": "/subscribe/"
+    },
+    {
+      "sku": "founder-hours",
+      "name": "Founder Office Hours",
+      "price": "$149/mo",
+      "interval": "month",
+      "product": "zion_founder_hours_mo",
+      "price_id": "price_1UEcrYJRA2AketBhIBShpHjp",
+      "url": "https://buy.stripe.com/8x23cw0hqgWb85x3hm4ZR0U",
+      "page": "/subscribe/"
+    }
+  ],
+  "highEnd": [
+    {"sku": "identity", "name": "Identity & SSO sprint", "price": "$4,800", "url": "https://buy.stripe.com/6oU7sM6FO6hxetVaJO4ZR0i"},
+    {"sku": "bec", "name": "Email / BEC playbook", "price": "$3,200", "url": "https://buy.stripe.com/4gM6oI5BK6hxgC3dW04ZR0j"},
+    {"sku": "dr", "name": "Backup & DR tabletop", "price": "$2,800", "url": "https://buy.stripe.com/eVq4gAc086hxclNf044ZR0k"},
+    {"sku": "voice", "name": "Voice agent production", "price": "$5,500", "url": "https://buy.stripe.com/fZueVe0hqgWbadFaJO4ZR0l"},
+    {"sku": "whatsapp-crm", "name": "WhatsApp / CRM agent", "price": "live SKU", "url": "https://buy.stripe.com/cNi6oIfckcFVbhJ7xC4ZR0a"},
+    {"sku": "red-team", "name": "AI red team sprint", "price": "live SKU", "url": "https://buy.stripe.com/eVq5kE6FO7lB2Ld19e4ZR04"},
+    {"sku": "mlops", "name": "MLOps / LLMOps foundation", "price": "live SKU", "url": "https://buy.stripe.com/bJe9AU5BKgWbetV4lq4ZR02"},
+    {"sku": "data-platform", "name": "Data platform modernization", "price": "live SKU", "url": "https://buy.stripe.com/dRm7sM7JS7lB99BbNS4ZR03"},
+    {"sku": "api-sec", "name": "API security program", "price": "live SKU", "url": "https://buy.stripe.com/dRmeVe3tC49p1H9dW04ZR0r"},
+    {"sku": "landing-zone", "name": "Cloud landing zone", "price": "$52,000", "url": "https://buy.stripe.com/5kQ6oI8NW8pF1H919e4ZR0v"},
+    {"sku": "rag-prod", "name": "Production RAG agent", "price": "$55,000", "url": "https://buy.stripe.com/14A7sM8NWgWb1H95pu4ZR00"},
+    {"sku": "soc2", "name": "SOC 2 / ISO readiness", "price": "$38,000", "url": "https://buy.stripe.com/00w9AU8NWaxNdpRg484ZR0t"},
+    {"sku": "ai-security", "name": "AI security snapshot", "price": "$18,000", "url": "https://buy.stripe.com/fZudRa3tC6hx1H95pu4ZR05"},
+    {"sku": "ir", "name": "Incident response retainer", "price": "$9,500/mo", "url": "https://buy.stripe.com/28EaEY0hqdJZ3Ph9FK4ZR09"},
+    {"sku": "evalops", "name": "EvalOps retainer", "price": "$6,800/mo", "url": "https://buy.stripe.com/7sY9AU2py21h2Ld8BG4ZR0x"},
+    {"sku": "agent-fleet", "name": "Agent fleet (atelier)", "price": "live SKU", "url": "https://buy.stripe.com/dRm4gA1lufS73Ph5pu4ZQ46"}
+  ]
+}

@@ -3,36 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Programa de Afiliados — AI e Automação</title>
+  <title>Affiliate program — 20% on self-serve Stripe | Zion Tech Group</title>
+  <meta name="description" content="Zion affiliate program: 20% of the first 12 months on self-serve Stripe SKUs. Cookie + client_reference_id tracking. $100 payout minimum.">
   <link rel="canonical" href="https://ziontechgroup.com/affiliate/">
-  <meta name="description" content="Programa de afiliados da Zion Tech Group: commission, tracking, materiais de divulgação.">
-  <style>
-    :root { color-scheme: dark; --bg:#0a0e14; --fg:#e6edf3; --muted:#8b949e; --accent:#58a6ff; --ok:#3fb950; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
-    main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
-    a { color: var(--accent); }
-    .ok { color: var(--ok); }
-    .btn { display:inline-block; margin: 6px 10px 6px 0; padding: 12px 18px; border-radius: 10px; background: var(--accent); color: #0a0e14; font-weight: 700; text-decoration: none; }
-    .btn.ghost { background: transparent; color: var(--fg); border: 1px solid #30363d; }
-    .foot { margin-top: 48px; font-size: 14px; color: var(--muted); }
-  </style>
+  <link rel="stylesheet" href="/css/zion-money.css">
 </head>
 <body>
-  <main>
-    <p><a href="/">← Zion Tech Group</a></p>
-    <h1>Affiliate</h1>
-    <p class="ok">No public affiliate program is live. Updated 2026-09-03. We do not pay commissions on self-serve Stripe links.</p>
-    <p>Partnerships are booked as paid work:</p>
-    <ol>
-      <li>Book a 30-minute discovery — <strong>$99</strong>.</li>
-      <li>If there is a reseller or referral motion, it is written into a consulting or retainer agreement.</li>
-    </ol>
-    <p>
-      <a class="btn" href="/book/">Book $99</a>
-      <a class="btn ghost" href="https://buy.stripe.com/3cIdRa6FO5dt0D53hm4ZG05">Pay $99</a>
-    </p>
-    <p class="foot"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-  </main>
+  <div class="wrap">
+    <nav class="top">
+      <a href="/">Home</a>
+      <a href="/store/">Store</a>
+      <a href="/subscribe/">Subscribe</a>
+      <a href="/pricing/">Pricing</a>
+    </nav>
+    <p class="pill">Live · 60-day cookie · Stripe client_reference_id</p>
+    <h1>Earn 20% on self-serve checkout</h1>
+    <p class="lede">Share a referral link. When someone pays a store, subscription, Discovery, Consulting, Starter, or Growth Payment Link, Stripe receives <code>client_reference_id=ref_YOURCODE</code>. We pay 20% of collected revenue for the first 12 months of that customer, monthly, after a $100 balance, via Wise or Stripe.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>1. Pick a code</h3>
+        <p class="muted">Letters, numbers, dash, underscore. 3–40 characters.</p>
+        <label>Your code <input id="code" maxlength="40" placeholder="acme-agency"></label>
+        <p class="muted" id="preview"></p>
+        <a class="btn" id="copy" href="#">Copy link</a>
+      </article>
+      <article class="card">
+        <h3>2. Register</h3>
+        <p class="muted">Email Kleber so payouts are not guessed from a random code.</p>
+        <label>Name <input id="name" placeholder="Your name"></label>
+        <label>Pay-to email <input id="email" type="email" placeholder="you@company.com"></label>
+        <a class="btn" id="register" href="mailto:kleber@ziontechgroup.com">Email registration</a>
+      </article>
+      <article class="card">
+        <h3>3. What pays</h3>
+        <ul>
+          <li>Store kits $29–$99</li>
+          <li>Credits and $1,000 deposit</li>
+          <li>Ops Desk / Founder Hours</li>
+          <li>Discovery $99, Consulting $499</li>
+          <li>Starter $2,500 and Growth $8,000/mo</li>
+        </ul>
+        <p class="muted">High-end atelier SKUs and field-services rate cards are excluded unless written into a partner agreement.</p>
+      </article>
+    </div>
+    <p class="note">This is first-party tracking on Zion pages — not PartnerStack. Refunds reverse the commission. Self-referrals are void. Tax invoices required above $600/year in the US.</p>
+    <footer>
+      <a href="/store/">Send people here</a> · <a href="/privacy/">Privacy</a> · kleber@ziontechgroup.com
+    </footer>
+  </div>
+  <script src="/assets/js/zion-checkout.js"></script>
+  <script>
+    function link() {
+      var c = (document.getElementById("code").value || "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 40);
+      return c ? "https://ziontechgroup.com/store/?ref=" + encodeURIComponent(c) : "https://ziontechgroup.com/store/";
+    }
+    function sync() {
+      document.getElementById("preview").textContent = link();
+    }
+    document.getElementById("code").addEventListener("input", sync);
+    document.getElementById("copy").addEventListener("click", function (e) {
+      e.preventDefault();
+      var l = link();
+      if (navigator.clipboard) navigator.clipboard.writeText(l);
+      this.textContent = "Copied";
+    });
+    document.getElementById("register").addEventListener("click", function (e) {
+      e.preventDefault();
+      var c = (document.getElementById("code").value || "").trim();
+      var n = (document.getElementById("name").value || "").trim();
+      var em = (document.getElementById("email").value || "").trim();
+      var body = "Affiliate registration%0AName: " + encodeURIComponent(n) + "%0AEmail: " + encodeURIComponent(em) + "%0ACode: " + encodeURIComponent(c) + "%0ALink: " + encodeURIComponent(link());
+      location.href = "mailto:kleber@ziontechgroup.com?subject=" + encodeURIComponent("Affiliate signup " + c) + "&body=" + body;
+    });
+    sync();
+  </script>
 </body>
 </html>

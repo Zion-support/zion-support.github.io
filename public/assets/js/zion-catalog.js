@@ -4,6 +4,8 @@
     {cat:"plano",title:"Consulting $499",desc:"Estrategia, roadmap e 3 sessoes de 1h.",href:"/booking/"},
     {cat:"plano",title:"Starter $2.500",desc:"Implementacao de 1 automacao + 30 dias.",href:"/booking/"},
     {cat:"plano",title:"Growth $8.000/mes",desc:"Automacoes continuas, 24/7 e SLA.",href:"/plans/"},
+    {cat:"plano",title:"Store $29+",desc:"Playbook, prompts, WhatsApp kit, creditos.",href:"/store/"},
+    {cat:"plano",title:"Ops Desk $299/mes",desc:"Trial de 7 dias no Stripe.",href:"/subscribe/"},
     {cat:"plano",title:"Parceria CPA",desc:"Pague por lead, reuniao ou fechamento.",href:"/cpa/"},
     {cat:"servico",title:"Agentes de IA",desc:"Atendimento, vendas e operacoes.",href:"/agents/"},
     {cat:"servico",title:"Agentes Telegram",desc:"Worker + listener, mesmo chat, 24/7.",href:"/telegram/"},

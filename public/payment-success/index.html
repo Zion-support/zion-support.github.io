@@ -1,8 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Payment received · Zion Tech Group</title>
-<link rel="canonical" href="https://ziontechgroup.com/success-stories/">
-<meta http-equiv="refresh" content="0; url=/success-stories/">
-<style>body{font-family:system-ui;background:#0b1220;color:#e6f0ff;max-width:720px;margin:0 auto;padding:48px 24px}a{color:#a78bfa}</style></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment received · Zion Tech Group</title>
+  <link rel="canonical" href="https://ziontechgroup.com/payment-success/">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="/css/zion-money.css">
+</head>
 <body>
-<p>Paid links land on <a href="/success-stories/">/success-stories/</a>. Book Discovery only if you have not already.</p>
-</body></html>
+  <div class="wrap">
+    <nav class="top">
+      <a href="/">Home</a>
+      <a href="/store/">Store</a>
+      <a href="/subscribe/">Subscribe</a>
+      <a href="/book/">Book</a>
+    </nav>
+    <p class="pill">Stripe checkout complete</p>
+    <h1>Payment received</h1>
+    <p class="lede" id="lede">Your Stripe receipt is the license. Open the matching library page below. For retainers we follow up from kleber@ziontechgroup.com.</p>
+    <div class="grid" id="next"></div>
+    <p class="note">If you used an affiliate link, <code>client_reference_id</code> is already on the Checkout Session. Promo code for a future first purchase: <strong>ZIONLAUNCH10</strong>.</p>
+    <footer>
+      <a href="/pricing/">Pricing</a> · <a href="mailto:kleber@ziontechgroup.com">Need a receipt forwarded?</a>
+    </footer>
+  </div>
+  <script>
+    var SKU = {
+      playbook: { title: "Open the AI Ops Playbook", href: "/library/playbook/", extra: "You can keep this URL." },
+      prompts: { title: "Open the Prompt Pack", href: "/library/prompts/", extra: "50 prompts, copy freely." },
+      "whatsapp-kit": { title: "Open the WhatsApp Sales Kit", href: "/library/whatsapp-kit/", extra: "Scripts + 7-day sequence." },
+      "credits-100": { title: "Credits are on the ledger", href: "/store/credits/", extra: "Email kleber@ with your Stripe receipt to assign the $100 pack." },
+      deposit: { title: "Book the kickoff slot", href: "/book/", extra: "Deposit applies to Starter or Growth." },
+      "ops-desk": { title: "Ops Desk trial is on", href: "/subscribe/", extra: "Send Slack/WhatsApp access to kleber@ziontechgroup.com." },
+      "ops-desk-annual": { title: "Annual Ops Desk is on", href: "/subscribe/", extra: "We schedule the first review this week." },
+      "founder-hours": { title: "Book both office-hour sessions", href: "/book/", extra: "Use the Discovery calendar and note Founder Hours in the invite." },
+      starter: { title: "Starter is paid", href: "/book/", extra: "We send a kickoff agenda within one business day." },
+      growth: { title: "Growth retainer is on", href: "/offers/", extra: "Expect a Slack/WhatsApp channel invite." },
+      discovery: { title: "Pick the Meet slot", href: "/book/", extra: "Calendly is the only booking path." },
+      consulting: { title: "Consulting paid", href: "/success-stories/", extra: "We schedule the working session from email." }
+    };
+    var sku = new URLSearchParams(location.search).get("sku") || "";
+    var box = document.getElementById("next");
+    function card(title, href, extra) {
+      var a = document.createElement("article");
+      a.className = "card";
+      a.innerHTML = "<h3>" + title + "</h3><p class=\"muted\">" + extra + "</p><a class=\"btn\" href=\"" + href + "\">Continue</a>";
+      box.appendChild(a);
+    }
+    if (SKU[sku]) {
+      document.getElementById("lede").textContent = "SKU " + sku + " is paid. Continue:";
+      card(SKU[sku].title, SKU[sku].href, SKU[sku].extra);
+    } else {
+      card("Open the store library", "/store/", "If you bought a kit, the library link is also in the receipt description.");
+      card("Book Discovery", "/book/", "Services and retainers start with a Meet slot.");
+    }
+    card("See all live prices", "/pricing/", "Same Stripe account.");
+  </script>
+  <script src="/assets/js/zion-checkout.js"></script>
+</body>
+</html>

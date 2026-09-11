@@ -1,0 +1,27 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: linear-gradient(135deg, #0b1220 0%, #1a1a2e 50%, #0f3460 100%); color: #e6f0ff; min-height: 100vh; line-height: 1.6; }
+a { color: #a78bfa; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 48px 20px 80px; }
+nav.top { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-bottom: 28px; font-size: .95rem; }
+nav.top a { color: #cbd5e1; text-decoration: none; }
+nav.top a:hover { color: #fff; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; background: linear-gradient(135deg, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+h2 { color: #fff; margin: 28px 0 12px; font-size: 1.45rem; }
+.lede { color: #94a3b8; max-width: 720px; margin-bottom: 24px; font-size: 1.08rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+.card { background: rgba(15, 23, 42, .72); border: 1px solid rgba(124, 58, 237, .25); border-radius: 16px; padding: 22px; }
+.card:hover { border-color: rgba(167, 139, 250, .55); }
+.card h3 { color: #fff; margin-bottom: 6px; }
+.price { font-size: 1.85rem; font-weight: 800; color: #a78bfa; margin: 10px 0; }
+.price span { font-size: .95rem; color: #94a3b8; font-weight: 500; }
+.muted { color: #94a3b8; }
+.btn { display: inline-block; margin: 8px 8px 0 0; padding: 12px 18px; border-radius: 12px; background: linear-gradient(135deg, #7c3aed, #db2777); color: #fff; font-weight: 700; text-decoration: none; }
+.ghost { background: #0f172a; border: 1px solid #334155; }
+.pill { display: inline-block; border-radius: 999px; border: 1px solid rgba(168, 85, 247, .35); background: rgba(168, 85, 247, .12); color: #f3e8ff; padding: .25rem .7rem; font-size: .75rem; margin-bottom: 8px; }
+ul { color: #cbd5e1; margin: 10px 0 4px 18px; }
+footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(124, 58, 237, .18); color: #94a3b8; }
+.note { background: rgba(15, 23, 42, .8); border: 1px dashed #334155; border-radius: 12px; padding: 14px 16px; color: #cbd5e1; margin: 16px 0; }
+input, textarea { width: 100%; background: #0f172a; color: #fff; border: 1px solid #334155; border-radius: .6rem; padding: .65rem .75rem; margin: .35rem 0 10px; }
+label { display: block; font-size: .85rem; color: #cbd5e1; }
+.row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 8px; }
