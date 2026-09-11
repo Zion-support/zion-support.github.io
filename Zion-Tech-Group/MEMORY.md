@@ -71,3 +71,23 @@
 ---
 
 *Actualizado automaticamente pelo Hermes Agent — 2026-09-04*
+
+<!-- ZION-EMAIL-OPS:BEGIN -->
+## Email ops (continuous agent)
+
+- Updated: 2026-09-11T22:35:08.284939+00:00
+- Send enabled: False
+- Inbox scanned: 0; drafts: 0; needs human: 0; backend: none
+- Hot follow-up drafts: 0
+- Classified: {}
+- CTA: https://ziontechgroup.com/discovery/ / https://ziontechgroup.com/book/
+
+### Open commercial memory
+
+- **Clara** (meajuda@clara.com.br): partnership_ticket — waiting_analysis_1039168
+- **Fergus Martin** (fmartin@ilha.capital): discovery_booked — post_discovery_2026-09-10
+- **Prudential** (assistente.cliente@prudential.com): partner_process — needs_human_trabalhe_conosco
+- **Kenlo** (kenlo): contract_64709043508 — waiting_do_not_nag_daily
+- **Elastic** (melissa@elastic.co): partner_dd — questionnaire_sent_2026-09-10
+- **Zenvia bounce** (atendimento@zenvia.com): bounce — stored_bounce
+<!-- ZION-EMAIL-OPS:END -->

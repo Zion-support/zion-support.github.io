@@ -5,7 +5,7 @@ Uses commands.google_workspace for auth/API.
 import sys, json, time, re
 from pathlib import Path
 
-REPO = Path('/data/data/com.termux/files/home/zion-support.github.io')
+REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
 from commands.google_workspace import gog_headers, gmail_search, gmail_get, gmail_thread_get
@@ -222,12 +222,19 @@ def main():
     try:
         interest_q = (
             '!category:promotions !in:spam !in:trash '
-            'newer_than:7d "partnership" OR "collaboration" OR "proposal" '
+            'newer_than:7d ("partnership" OR "collaboration" OR "proposal" OR "parceria") '
+            '-from:github.com -from:notifications@github.com -from:x.ai -from:grok.com '
             '-"support reminder" -"rate the support" -"support survey" -"zendesk"'
         )
         inbox = search_all_folders(interest_q, limit=20)
-        report['new_inbox_interest_count'] = len(inbox)
-        report['new_inbox_examples'] = inbox[:5]
+        real = []
+        for item in inbox:
+            blob = json.dumps(item, ensure_ascii=False).lower()
+            if any(n in blob for n in ("github.com", "x.ai", "grok.com", "noreply@")):
+                continue
+            real.append(item)
+        report['new_inbox_interest_count'] = len(real)
+        report['new_inbox_examples'] = real[:5]
     except Exception as e:
         report['errors'].append({'inbox_probe': repr(e)})
 

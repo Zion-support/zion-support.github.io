@@ -6,8 +6,22 @@
     "url": "https://ziontechgroup.com",
     "online": true,
     "homepage_http": 200,
-    "live_routes": ["/", "/pricing/", "/checkout/", "/booking/", "/affiliate/", "/new-ai-services/", "/tools/", "/sitemap.xml/"],
-    "broken_routes": ["/testimonials/", "/service-comparison/", "/tools/2026-ma-due-diligence-checklist/", "/monetization-hub/"],
+    "live_routes": [
+      "/",
+      "/pricing/",
+      "/checkout/",
+      "/booking/",
+      "/affiliate/",
+      "/new-ai-services/",
+      "/tools/",
+      "/sitemap.xml/"
+    ],
+    "broken_routes": [
+      "/testimonials/",
+      "/service-comparison/",
+      "/tools/2026-ma-due-diligence-checklist/",
+      "/monetization-hub/"
+    ],
     "broken_count": 4,
     "note": "404 fallbacks exist in public/ but GitHub Pages build is stuck/errored; routes remain 404 live.",
     "page_count_in_repo": 329
@@ -31,8 +45,17 @@
     "miner_avg_query_s": 10.3
   },
   "outreach": {
-    "status": "blocked_by_config_or_env",
+    "status": "autopilot_dry_run",
     "monitor_inbox_interest": 52,
-    "hot_followup_sent": 0
+    "hot_followup_sent": 0,
+    "hot_followup_drafts": 0
+  },
+  "email_ops": {
+    "status": "running",
+    "send_enabled": false,
+    "last_inbox_scanned": 0,
+    "last_drafts": 0,
+    "backend": "none",
+    "updated_at": "2026-09-11T22:35 UTC"
   }
 }

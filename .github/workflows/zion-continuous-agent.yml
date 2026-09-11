@@ -1,0 +1,55 @@
+name: Zion continuous email agent
+
+on:
+  schedule:
+    - cron: "12,32,52 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: zion-continuous-email-agent
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run continuous email agent
+        env:
+          GOG_TOKENS_JSON: ${{ secrets.GOG_TOKENS_JSON }}
+          ZION_EMAIL_SEND_ENABLED: "0"
+          ZION_EMAIL_GMAIL_DRAFTS: "1"
+          ZION_EMAIL_ACCOUNT: kleber@ziontechgroup.com
+        run: |
+          set -euo pipefail
+          python3 automation/tests/test_email_autopilot.py
+          python3 automation/scripts/email_autopilot.py --max 30 --hot-max 8
+
+      - name: Commit memory and content
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "zion-continuous-agent"
+          git config user.email "kleber@ziontechgroup.com"
+          git add \
+            Zion-Tech-Group/MEMORY.md \
+            ceo-status.json \
+            automation/email_memory/known_deals.json \
+            automation/email_memory/agent_state.json \
+            automation/email_memory/latest_summary.json \
+            automation/content/generated/ \
+            outreach_monitor/processed/pending_ceo_drafts.jsonl \
+            || true
+          if git diff --cached --quiet; then
+            echo "No memory/content changes"
+            exit 0
+          fi
+          git commit -m "chore(email-ops): continuous agent memory and content"
+          git push || echo "Push skipped (no write or non-fast-forward)"

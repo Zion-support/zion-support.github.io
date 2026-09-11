@@ -159,6 +159,67 @@ class ClassifyTests(unittest.TestCase):
         )
         self.assertEqual(c["label"], "inbound_reply")
 
+    def test_clara_ticket_ack_is_inbound_reply(self):
+        c = ea.classify_message(
+            "1a08d03211778232",
+            "Solicitação Recebida! Parceria Zion Tech Group — crescimento para Clara",
+            "Clara <meajuda@clara.com.br>",
+            "Sua solicitação (1039168) foi recebida, e nosso time já está analisando.",
+        )
+        self.assertEqual(c["label"], "inbound_reply")
+        self.assertIn("draft_reply", c["actions"])
+
+    def test_discovery_paid_calendar_is_success_win_not_reply(self):
+        c = ea.classify_message(
+            "cal1",
+            "New Event: AI/IT Discovery — PAGO $99",
+            "Calendly <calendar-notification@calendly.com>",
+            "AI/IT Discovery $99 paid. Kleber Garcia Alcatrão and Fergus Martin.",
+        )
+        self.assertEqual(c["label"], "success_win")
+        self.assertIn("store_history", c["actions"])
+        self.assertNotIn("draft_reply", c["actions"])
+
+    def test_human_accepted_meeting_is_success_win_with_followup(self):
+        c = ea.classify_message(
+            "1a08696143b434b8",
+            "Accepted: Fergus Martin and Kleber Garcia Alcatrão",
+            "Fergus Martin <fmartin@ilha.capital>",
+            "Fergus Martin has accepted this invitation.",
+        )
+        self.assertEqual(c["label"], "success_win")
+        self.assertIn("draft_reply", c["actions"])
+        self.assertIn("store_history", c["actions"])
+
+    def test_google_calendar_notification_without_discovery_is_noise(self):
+        c = ea.classify_message(
+            "gcal",
+            "Accepted: Weekly standup",
+            "Calendar <calendar-notification@google.com>",
+            "This is a calendar notification.",
+        )
+        self.assertEqual(c["label"], "noise")
+
+    def test_procurement_digest(self):
+        c = ea.classify_message(
+            "lic1",
+            "Alerta de Licitações — novas oportunidades",
+            "Portal <alertas@portaldecompraspublicas.com.br>",
+            "Novas licitações de TI na sua região.",
+        )
+        self.assertEqual(c["label"], "procurement_digest")
+        self.assertIn("needs_human", c["actions"])
+        self.assertNotIn("draft_reply", c["actions"])
+
+    def test_github_re_subject_is_still_noise_not_inbound(self):
+        c = ea.classify_message(
+            "gh2",
+            "Re: [Zion-support/zion-support.github.io] Catalog watchdog",
+            "kilo-code-bot <notifications@github.com>",
+            "You were mentioned in a pull request ticket.",
+        )
+        self.assertEqual(c["label"], "noise")
+
 
 class DraftAndLangTests(unittest.TestCase):
     def test_lang_pt(self):
@@ -178,6 +239,22 @@ class DraftAndLangTests(unittest.TestCase):
     def test_extract_name_from_header(self):
         self.assertEqual(ea.extract_name("Ana Costa <ana@industria.com.br>"), "Ana")
         self.assertEqual(ea.extract_name("ana.costa@industria.com.br"), "Ana Costa")
+
+    def test_deal_followup_clara_and_fergus_keep_book_cta(self):
+        clara = ea.build_deal_followup({
+            "name": "Clara",
+            "kind": "partnership_ticket",
+            "lang": "pt",
+        })
+        self.assertIn("https://ziontechgroup.com/book/", clara)
+        self.assertIn("SAIR", clara)
+        fergus = ea.build_deal_followup({
+            "name": "Fergus",
+            "kind": "discovery_booked",
+            "lang": "en",
+        })
+        self.assertIn("https://ziontechgroup.com/book/", fergus)
+        self.assertIn("Discovery", fergus)
 
 
 if __name__ == "__main__":

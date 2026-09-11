@@ -77,3 +77,16 @@ STRICTLY FORBIDDEN:
 - Save preferences, corrections, platform quirks
 - Do NOT save: TODO state, verbose logs, easily-re-discovered facts
 - Declarative facts only: "User prefers X" — NOT "Always do X"
+
+## Continuous email (script-only, no LLM)
+Inbox scan + follow-up drafts + commercial memory + a service article.
+
+```bash
+bash scripts/run-zion-continuous-agent.sh
+```
+
+GitHub Actions: `.github/workflows/zion-continuous-agent.yml` (every ~20 min after merge to `main`).
+Gmail token secret: `GOG_TOKENS_JSON`. Send stays off (`ZION_EMAIL_SEND_ENABLED=0`).
+Never attach an LLM cron to the inbox scan — that hits `HTTP 400: local is not a valid model ID`.
+See `docs/email-automations.md`.
+

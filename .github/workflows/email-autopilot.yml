@@ -6,13 +6,17 @@ on:
       - "automation/scripts/email_autopilot.py"
       - "automation/tests/test_email_autopilot.py"
       - "automation/gmail_filters.json"
+      - "automation/email_memory/known_deals.json"
       - ".github/workflows/email-autopilot.yml"
+      - ".github/workflows/zion-continuous-agent.yml"
   push:
     paths:
       - "automation/scripts/email_autopilot.py"
       - "automation/tests/test_email_autopilot.py"
       - "automation/gmail_filters.json"
+      - "automation/email_memory/known_deals.json"
       - ".github/workflows/email-autopilot.yml"
+      - ".github/workflows/zion-continuous-agent.yml"
   workflow_dispatch:
 
 permissions:

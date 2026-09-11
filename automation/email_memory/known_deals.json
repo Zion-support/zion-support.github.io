@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Clara",
+    "contact": "meajuda@clara.com.br",
+    "thread_id": "1a08d03211778232",
+    "kind": "partnership_ticket",
+    "status": "waiting_analysis_1039168",
+    "cta": "followup",
+    "lang": "pt",
+    "subject": "Parceria Zion Tech Group — crescimento para Clara",
+    "gmail_draft_id": "r-3211490672530199327",
+    "note": "Ticket ack 2026-09-10. Draft follow-up created; do not send until Kleber reviews."
+  },
+  {
+    "name": "Fergus Martin",
+    "contact": "fmartin@ilha.capital",
+    "thread_id": "1a08696143b434b8",
+    "kind": "discovery_booked",
+    "status": "post_discovery_2026-09-10",
+    "cta": "followup",
+    "lang": "en",
+    "subject": "Zion AI/IT Discovery follow-up",
+    "gmail_draft_id": "r-9184651382819522222",
+    "note": "Accepted Discovery 10 Sep 16:00 BRT, PAGO $99. Store as success_win. Draft follow-up in Gmail."
+  },
+  {
+    "name": "Prudential",
+    "contact": "assistente.cliente@prudential.com",
+    "kind": "partner_process",
+    "status": "needs_human_trabalhe_conosco",
+    "cta": "needs_human",
+    "note": "Partnerships only via Trabalhe Conosco on prudential.com.br — do not nag."
+  },
+  {
+    "name": "Kenlo",
+    "contact": "kenlo",
+    "kind": "contract_64709043508",
+    "status": "waiting_do_not_nag_daily",
+    "cta": "needs_human"
+  },
+  {
+    "name": "Elastic",
+    "contact": "melissa@elastic.co",
+    "kind": "partner_dd",
+    "status": "questionnaire_sent_2026-09-10",
+    "cta": "needs_human",
+    "note": "Partner DD questionnaire — complete in Smartsheet, do not auto-reply."
+  },
+  {
+    "name": "Zenvia bounce",
+    "contact": "atendimento@zenvia.com",
+    "kind": "bounce",
+    "status": "stored_bounce",
+    "cta": "needs_human",
+    "note": "Bounce — store, do not retry from autopilot."
+  }
+]

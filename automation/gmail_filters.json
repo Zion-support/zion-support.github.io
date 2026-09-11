@@ -100,6 +100,22 @@
       "from": "noreply@voicemail.goto.com",
       "addLabelIds": ["Label_636"],
       "note": "Keep in inbox — real inbound call"
+    },
+    {
+      "from": "calendar-notification@google.com",
+      "addLabelIds": ["Label_642"],
+      "removeLabelIds": ["INBOX", "UNREAD"],
+      "note": "Calendar bots — store Discovery paid in memory, never reply"
+    },
+    {
+      "from": "meajuda@clara.com.br",
+      "addLabelIds": ["Label_961", "Label_636"],
+      "note": "Partnership ticket — keep, draft follow-up only"
+    },
+    {
+      "from": "fmartin@ilha.capital",
+      "addLabelIds": ["Label_961", "Label_636"],
+      "note": "Discovery booked (success_win) — keep, draft follow-up only"
     }
   ]
 }

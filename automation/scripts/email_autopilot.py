@@ -28,12 +28,22 @@ if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
 SEND_ENABLED = os.environ.get("ZION_EMAIL_SEND_ENABLED", "0") == "1"
+GMAIL_DRAFTS = os.environ.get("ZION_EMAIL_GMAIL_DRAFTS", "1") == "1"
 ACCOUNT = os.environ.get("ZION_EMAIL_ACCOUNT", "kleber@ziontechgroup.com")
 BOOK_URL = "https://ziontechgroup.com/book/"
+DISCOVERY_URL = "https://ziontechgroup.com/discovery/"
 SITE_URL = "https://ziontechgroup.com"
 CALENDLY_URL = "https://calendly.com/kleber-ziontechgroup"
-
+MEMORY_MD = REPO / "Zion-Tech-Group" / "MEMORY.md"
+CEO_STATUS = REPO / "ceo-status.json"
+CONTENT_DIR = REPO / "automation" / "content" / "generated"
 EMAIL_MEMORY_DIR = REPO / "automation" / "email_memory"
+KNOWN_DEALS = EMAIL_MEMORY_DIR / "known_deals.json"
+AGENT_STATE = EMAIL_MEMORY_DIR / "agent_state.json"
+MEMORY_BEGIN = "<!-- ZION-EMAIL-OPS:BEGIN -->"
+MEMORY_END = "<!-- ZION-EMAIL-OPS:END -->"
+KNOWN_DEAL_COOLDOWN_S = 7 * 24 * 3600
+
 MEMORY_INBOX = EMAIL_MEMORY_DIR / "inbox_sightings.jsonl"
 MEMORY_CLASSIFICATIONS = EMAIL_MEMORY_DIR / "classifications.jsonl"
 MEMORY_HISTORY = EMAIL_MEMORY_DIR / "success_history.jsonl"
@@ -61,11 +71,17 @@ SKIP_DOMAINS = frozenset({
     "nvidia.com",
     "stackblitz.com",
     "cloudflare.com",
+    "news.kilocode.ai", "kilocode.ai",
+    "emkt.b3.com.br", "b3.com.br",
+    "comunicacao.serasaexperian.com.br", "serasaexperian.com.br",
+    "marketing.valr.com", "valr.com",
+    "t.brevo.com",
 })
 
 SKIP_SENDERS_SUBSTR = (
     "noreply", "no-reply", "mailer-daemon", "notifications@", "bounce",
     "newsletter@", "marketing@", "promo@", "donotreply", "do-not-reply",
+    "calendar-notification@",
 )
 
 ACCOUNTING_DOMAINS = frozenset({
@@ -200,6 +216,52 @@ def classify_message(message_id: str, subject: str, sender: str, body: str) -> d
             "priority": "high",
             "actions": ["needs_human"],
             "reason": "inbound voicemail",
+        }
+
+    if (
+        "ai/it discovery" in text
+        or "discovery $99" in text
+        or "pago $99" in text
+        or "paid $99" in text
+    ) and (
+        "calendly" in contact
+        or "calendar-notification" in contact
+        or "accepted" in subj
+        or "new event" in subj
+    ):
+        return {
+            "label": "success_win",
+            "priority": "high",
+            "actions": ["store_history"],
+            "reason": "Discovery booked / paid — store as successful case",
+        }
+
+    if "solicitação recebida" in subj or "solicitacao recebida" in subj:
+        return {
+            "label": "inbound_reply",
+            "priority": "high",
+            "actions": ["draft_reply", "store_history"],
+            "reason": "vendor acknowledged our partnership outreach",
+        }
+
+    if (
+        subj.startswith("accepted:")
+        and "calendar-notification" not in contact
+        and not domain_matches(contact, frozenset({"calendar.google.com"}))
+    ):
+        return {
+            "label": "success_win",
+            "priority": "high",
+            "actions": ["draft_reply", "store_history"],
+            "reason": "meeting accepted — follow up and store as a win",
+        }
+
+    if "portaldecompraspublicas" in contact or "alerta de licitações" in subj or "alerta de licitacoes" in subj:
+        return {
+            "label": "procurement_digest",
+            "priority": "medium",
+            "actions": ["needs_human", "store_history"],
+            "reason": "public-procurement digest — pick real RFQs by hand",
         }
 
     if is_quiet_automation_report(subject, body, contact):
@@ -354,6 +416,39 @@ def build_reply_draft(name: str, subject: str, lang: str = "pt") -> str:
     )
 
 
+def build_deal_followup(deal: dict) -> str:
+    name = deal.get("name") or "there"
+    lang = deal.get("lang") or "pt"
+    kind = deal.get("kind") or ""
+    if kind == "partnership_ticket" and lang == "pt":
+        return (
+            f"{name},\n\n"
+            "Obrigado pela confirmação. O ticket de parceria já está com o time de vocês.\n\n"
+            "Enquanto a análise segue, o caminho mais rápido para um piloto conjunto é o Discovery (US$99):\n"
+            f"{DISCOVERY_URL}\n"
+            f"Agenda: {BOOK_URL}\n\n"
+            "Zion cobre automação de IA, integrações, cloud/FinOps e operação de campo. "
+            "Se quiserem um comentário extra no ticket (escopo, SLA, cobertura), respondam este fio.\n\n"
+            "Para sair da lista, responda SAIR ou STOP.\n\n"
+            "Um abraço,\nKleber Garcia Alcatrão\nCEO, Zion Tech Group\n"
+            f"{SITE_URL}\nkleber@ziontechgroup.com"
+        )
+    if kind == "discovery_booked":
+        return (
+            f"{name},\n\n"
+            "Thank you for accepting the Zion AI/IT Discovery. I want to lock the next step while it is fresh.\n\n"
+            "Typical follow-on after Discovery:\n"
+            "- AI automation for ops (intake, triage, reporting)\n"
+            "- Cloud / FinOps on the stack you already run\n"
+            "- A scoped SOW only after we agree the process and ROI\n\n"
+            f"Book the follow-up or send the workflow you want automated:\n{DISCOVERY_URL}\n{BOOK_URL}\n\n"
+            "Reply STOP to opt out.\n\n"
+            "Best,\nKleber Garcia Alcatrão\nCEO, Zion Tech Group\n"
+            f"{SITE_URL}\nkleber@ziontechgroup.com"
+        )
+    return build_reply_draft(name, deal.get("subject") or "", lang)
+
+
 def gog(*args: str, timeout: int = 60) -> str:
     cmd = ["gog", *args]
     try:
@@ -377,6 +472,63 @@ def gog_json(*args: str, timeout: int = 60):
         return json.loads(out)
     except json.JSONDecodeError:
         return []
+
+
+def bootstrap_gog_tokens() -> None:
+    raw = (os.environ.get("GOG_TOKENS_JSON") or "").strip()
+    if not raw:
+        return
+    dest = Path.home() / ".openclaw" / "workspace" / "gog_tokens.json"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(raw, encoding="utf-8")
+
+
+def _gmail_api():
+    bootstrap_gog_tokens()
+    try:
+        from commands.google_workspace import gog_headers, gmail_search, gmail_get, gmail_create_draft
+        gog_headers()
+        return gmail_search, gmail_get, gmail_create_draft
+    except Exception:
+        return None
+
+
+def search_hits(query: str, limit: int) -> tuple[list, str]:
+    api = _gmail_api()
+    if api:
+        gmail_search, _, _ = api
+        try:
+            return gmail_search(query, limit=limit, all_folders=True) or [], "gmail_api"
+        except Exception as e:
+            return [], f"gmail_api_error:{e}"
+    hits = _normalize_hits(gog_json("gmail", "search", query, f"--max={limit}", "--account", ACCOUNT))
+    return hits, "gog" if hits else "none"
+
+
+def fetch_message(mid: str) -> dict:
+    api = _gmail_api()
+    if api:
+        _, gmail_get, _ = api
+        try:
+            msg = gmail_get(mid)
+            return msg if isinstance(msg, dict) else {}
+        except Exception:
+            return {}
+    msg = gog_json("gmail", "get", str(mid), "--account", ACCOUNT)
+    return msg if isinstance(msg, dict) else {}
+
+
+def maybe_create_gmail_draft(tid: str, subject: str, body: str, to_addr: str) -> str | None:
+    if not GMAIL_DRAFTS or SEND_ENABLED:
+        return None
+    api = _gmail_api()
+    if not api:
+        return None
+    _, _, gmail_create_draft = api
+    try:
+        return gmail_create_draft(tid, subject, body, to_addr)
+    except Exception:
+        return None
 
 
 def load_jsonl(path: Path):
@@ -449,6 +601,49 @@ def write_latest_summary(summary: dict):
     ensure_dirs()
     summary["updatedAt"] = datetime.now(timezone.utc).isoformat()
     MEMORY_LATEST.write_text(json.dumps(summary, indent=2, ensure_ascii=False))
+
+
+def load_agent_state() -> dict:
+    try:
+        data = json.loads(AGENT_STATE.read_text(encoding="utf-8") or "{}")
+        return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def save_agent_state(state: dict) -> None:
+    ensure_dirs()
+    AGENT_STATE.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def recently_drafted(thread_id: str, within_seconds: int = KNOWN_DEAL_COOLDOWN_S) -> bool:
+    if not thread_id:
+        return False
+    drafted = load_agent_state().get("drafted_threads") or {}
+    row = drafted.get(thread_id) if isinstance(drafted, dict) else None
+    if not isinstance(row, dict):
+        return False
+    try:
+        ts = int(row.get("ts") or 0)
+    except (TypeError, ValueError):
+        return False
+    return (int(time.time()) - ts) < within_seconds
+
+
+def mark_thread_drafted(thread_id: str, contact: str, kind: str, gmail_draft_id: str | None = None) -> None:
+    if not thread_id:
+        return
+    state = load_agent_state()
+    drafted = state.get("drafted_threads") if isinstance(state.get("drafted_threads"), dict) else {}
+    drafted[thread_id] = {
+        "ts": int(time.time()),
+        "contact": contact,
+        "kind": kind,
+        "gmail_draft_id": gmail_draft_id,
+        "iso": datetime.now(timezone.utc).isoformat(),
+    }
+    state["drafted_threads"] = drafted
+    save_agent_state(state)
 
 
 def load_hot_sent() -> dict:
@@ -566,10 +761,8 @@ def run_inbox_scan(max_results: int = 25) -> dict:
     }
 
     try:
-        hits = gog_json(
-            "gmail", "search", "in:inbox newer_than:2d",
-            f"--max={max_results}", "--account", ACCOUNT,
-        )
+        hits, backend = search_hits("in:inbox newer_than:2d", max_results)
+        summary["backend"] = backend
     except Exception as e:
         summary["errors"].append({"search": str(e)})
         write_latest_summary(summary)
@@ -594,11 +787,11 @@ def run_inbox_scan(max_results: int = 25) -> dict:
         seen_threads.add(tid)
 
         try:
-            msg = gog_json("gmail", "get", str(mid), "--account", ACCOUNT)
+            msg = fetch_message(str(mid))
         except Exception as e:
             summary["errors"].append({"gmail_get": str(e)})
             continue
-        if not isinstance(msg, dict):
+        if not isinstance(msg, dict) or not msg:
             continue
 
         subject, sender = _headers_from_msg(msg)
@@ -659,7 +852,16 @@ def run_inbox_scan(max_results: int = 25) -> dict:
             summary["skipped_sent"] += 1
             continue
 
-        if tid in queued:
+        if "store_history" in actions:
+            store_history(contact, subject, classification, body)
+            summary["memory_written"] += 1
+
+        if classification.get("label") in {"lead_opportunity", "rfq", "inbound_reply", "success_win"}:
+            content = generate_service_content(classification, body)
+            store_content_idea(tid, content["title"], content["body"])
+            summary["content_ideas"] += 1
+
+        if tid in queued or recently_drafted(tid):
             summary["skipped_dup"] += 1
             continue
 
@@ -668,17 +870,10 @@ def run_inbox_scan(max_results: int = 25) -> dict:
             lang = detect_lang(f"{subject}\n{body}")
             draft_body = build_reply_draft(name, subject, lang)
             queue_draft(mid, tid, contact, name, subject, lang, draft_body)
+            draft_id = maybe_create_gmail_draft(tid, subject, draft_body, contact)
+            mark_thread_drafted(tid, contact, label, draft_id)
             queued.add(tid)
             summary["drafts_created"] += 1
-
-        if "store_history" in actions:
-            store_history(contact, subject, classification, body)
-            summary["memory_written"] += 1
-
-        if classification.get("label") in {"lead_opportunity", "rfq", "inbound_reply"}:
-            content = generate_service_content(classification, body)
-            store_content_idea(tid, content["title"], content["body"])
-            summary["content_ideas"] += 1
 
     write_latest_summary(summary)
     return summary
@@ -695,11 +890,12 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
     }
 
     try:
-        hits = gog_json(
-            "gmail", "search",
-            'label:"!!!!HOT FOLLOW-UP" newer_than:14d -from:me',
-            f"--max={max_results}", "--account", ACCOUNT,
-        )
+        hits, backend = search_hits('label:"!!!!HOT FOLLOW-UP" newer_than:14d -from:me', max_results)
+        if not hits:
+            alt, backend2 = search_hits("label:!!!hot-follow-up newer_than:14d -from:me", max_results)
+            if alt:
+                hits, backend = alt, backend2
+        summary["backend"] = backend
     except Exception as e:
         summary["errors"].append({"hot_search": str(e)})
         return summary
@@ -717,15 +913,15 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
             continue
         summary["hot_threads_found"] += 1
 
-        if tid in hot_sent or tid in queued:
+        if tid in hot_sent or tid in queued or recently_drafted(tid):
             summary["skipped_sent"] += 1
             continue
 
         try:
-            msg = gog_json("gmail", "get", str(mid), "--account", ACCOUNT)
+            msg = fetch_message(str(mid))
         except Exception:
             continue
-        if not isinstance(msg, dict):
+        if not isinstance(msg, dict) or not msg:
             continue
 
         subject, sender = _headers_from_msg(msg)
@@ -739,6 +935,8 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
         name = extract_name(sender)
         draft_body = build_reply_draft(name, subject, lang)
         queue_draft(mid, tid, contact, name, subject or "Following up — Zion Tech Group", lang, draft_body, extra={"hot_followup": True})
+        draft_id = maybe_create_gmail_draft(tid, subject, draft_body, contact)
+        mark_thread_drafted(tid, contact, "hot_followup", draft_id)
         record_hot_sent(tid, mid, contact, subject, "dry_run" if not SEND_ENABLED else "live_send")
         append_jsonl(HOT_FOLLOWUP_LEDGER, {
             "ts": int(time.time()),
@@ -757,26 +955,174 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
     return summary
 
 
+SERVICE_ARTICLES = [
+    (
+        "ai-automation-for-ops",
+        "AI automation that cuts operational hours",
+        "Zion maps one process in the $99 Discovery, then automates the repeatable steps — intake, triage, handoff, and reporting — without a packaged SKU.",
+    ),
+    (
+        "healthcare-intake-and-charting",
+        "Healthcare intake, scheduling, and charting",
+        "Clinics lose hours on intake and documentation. Zion scopes healthcare work after Discovery: triage, appointments, and charting workflows with measurable ROI.",
+    ),
+    (
+        "finops-and-cloud-cost",
+        "FinOps and cloud cost control",
+        "Cloud waste shows up as idle capacity and unused reservations. Zion's FinOps work starts with a cost map in Discovery, then automation on the waste that pays back.",
+    ),
+    (
+        "partnership-and-field-coverage",
+        "Partnership coverage for field and IT services",
+        "MSPs and operators need coverage and SLAs, not another tool. Zion partners after a paid Discovery so the delivery model is explicit before any SOW.",
+    ),
+]
+
+
+def write_service_article(summary: dict) -> str | None:
+    CONTENT_DIR.mkdir(parents=True, exist_ok=True)
+    day = datetime.now(timezone.utc)
+    topic, title, body = SERVICE_ARTICLES[day.timetuple().tm_yday % len(SERVICE_ARTICLES)]
+    path = CONTENT_DIR / f"{day.date().isoformat()}-{topic}.md"
+    if path.exists():
+        return str(path)
+    wins = [r for r in load_jsonl(MEMORY_HISTORY)[-20:] if r.get("label") in {"success_win", "lead_opportunity", "rfq", "inbound_reply"}]
+    win_lines = "\n".join(
+        f"- {w.get('contact')} — {w.get('subject')}" for w in wins[-5:]
+    ) or "- (no commercial threads stored yet this cycle)"
+    path.write_text(
+        f"# {title}\n\n"
+        f"**Date:** {day.date().isoformat()}\n"
+        f"**Author:** Zion Tech Group (continuous agent)\n\n"
+        f"{body}\n\n"
+        f"Book Discovery: {DISCOVERY_URL} · Calendar: {BOOK_URL}\n\n"
+        f"## Recent commercial memory\n\n{win_lines}\n",
+        encoding="utf-8",
+    )
+    summary["content_file"] = str(path.relative_to(REPO))
+    return str(path)
+
+
+def write_ops_memory(combined: dict) -> None:
+    inbox = combined.get("inbox") or {}
+    hot = combined.get("hot_followup") or {}
+    deals = []
+    if KNOWN_DEALS.exists():
+        try:
+            deals = json.loads(KNOWN_DEALS.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            deals = []
+    deal_lines = "\n".join(
+        f"- **{d.get('name')}** ({d.get('contact')}): {d.get('kind')} — {d.get('status')}"
+        for d in deals if isinstance(d, dict)
+    ) or "- none listed"
+    block = (
+        f"{MEMORY_BEGIN}\n"
+        f"## Email ops (continuous agent)\n\n"
+        f"- Updated: {datetime.now(timezone.utc).isoformat()}\n"
+        f"- Send enabled: {SEND_ENABLED}\n"
+        f"- Inbox scanned: {inbox.get('scanned', 0)}; drafts: {inbox.get('drafts_created', 0)}; "
+        f"needs human: {inbox.get('needs_human', 0)}; backend: {inbox.get('backend', 'n/a')}\n"
+        f"- Hot follow-up drafts: {hot.get('drafts_created', 0)}\n"
+        f"- Classified: {json.dumps(inbox.get('classified') or {}, ensure_ascii=False)}\n"
+        f"- CTA: {DISCOVERY_URL} / {BOOK_URL}\n\n"
+        f"### Open commercial memory\n\n{deal_lines}\n"
+        f"{MEMORY_END}\n"
+    )
+    if MEMORY_MD.exists():
+        text = MEMORY_MD.read_text(encoding="utf-8")
+        if MEMORY_BEGIN in text and MEMORY_END in text:
+            text = re.sub(
+                re.escape(MEMORY_BEGIN) + r".*?" + re.escape(MEMORY_END),
+                block.strip(),
+                text,
+                flags=re.S,
+            )
+        else:
+            text = text.rstrip() + "\n\n" + block
+        MEMORY_MD.write_text(text, encoding="utf-8")
+    if CEO_STATUS.exists():
+        try:
+            status = json.loads(CEO_STATUS.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            status = {}
+        status["email_ops"] = {
+            "status": "running",
+            "send_enabled": SEND_ENABLED,
+            "last_inbox_scanned": inbox.get("scanned", 0),
+            "last_drafts": inbox.get("drafts_created", 0),
+            "backend": inbox.get("backend"),
+            "cta": DISCOVERY_URL,
+            "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M UTC"),
+        }
+        outreach = status.get("outreach") if isinstance(status.get("outreach"), dict) else {}
+        if inbox.get("backend") not in {None, "none", "gmail_api_error"}:
+            outreach["monitor_inbox_interest"] = inbox.get("scanned", 0)
+        outreach["hot_followup_drafts"] = hot.get("drafts_created", 0)
+        if outreach.get("status") == "blocked_by_config_or_env":
+            outreach["status"] = "autopilot_dry_run" if not SEND_ENABLED else "autopilot_live"
+        status["outreach"] = outreach
+        CEO_STATUS.write_text(json.dumps(status, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def run_known_deal_followups() -> dict:
+    summary = {"queued": 0, "skipped": 0, "errors": []}
+    if not KNOWN_DEALS.exists():
+        return summary
+    try:
+        deals = json.loads(KNOWN_DEALS.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        summary["errors"].append(str(e))
+        return summary
+    queued = pending_thread_ids()
+    for deal in deals:
+        if not isinstance(deal, dict) or deal.get("cta") != "followup":
+            summary["skipped"] += 1
+            continue
+        tid = str(deal.get("thread_id") or "")
+        contact = (deal.get("contact") or "").lower()
+        if not tid or tid in queued or already_sent_to(contact) or recently_drafted(tid):
+            summary["skipped"] += 1
+            continue
+        name = deal.get("name") or extract_name(contact)
+        lang = deal.get("lang") or "pt"
+        subject = deal.get("subject") or f"Follow-up — {name}"
+        draft = build_deal_followup(deal)
+        queue_draft(tid, tid, contact, name, subject, lang, draft, extra={"known_deal": True})
+        draft_id = maybe_create_gmail_draft(tid, subject, draft, contact)
+        mark_thread_drafted(tid, contact, deal.get("kind") or "known_deal", draft_id)
+        summary["queued"] += 1
+    return summary
+
+
 def main(argv: list[str] | None = None):
     parser = argparse.ArgumentParser(description="Zion email autopilot")
     parser.add_argument("--max", type=int, default=25, help="Max inbox threads to scan")
     parser.add_argument("--hot-max", type=int, default=8, help="Max HOT FOLLOW-UP threads")
     parser.add_argument("--inbox-only", action="store_true")
+    parser.add_argument("--no-content", action="store_true")
     args = parser.parse_args(argv)
 
+    bootstrap_gog_tokens()
     mode = "LIVE SEND" if SEND_ENABLED else "DRY RUN"
     print(f"[email_autopilot] mode={mode} account={ACCOUNT} repo={REPO}")
 
     inbox = run_inbox_scan(max_results=args.max)
     hot = {"skipped": True} if args.inbox_only else run_hot_followup_scan(max_results=args.hot_max)
+    deals = run_known_deal_followups()
+    if not args.no_content:
+        write_service_article(inbox)
 
     combined = {
         "inbox": inbox,
         "hot_followup": hot,
+        "known_deals": deals,
         "sendEnabled": SEND_ENABLED,
-        "cta": BOOK_URL,
+        "cta": DISCOVERY_URL,
     }
-    print(json.dumps(combined, indent=2, ensure_ascii=False))
+    write_ops_memory(combined)
+    write_latest_summary({"inbox": inbox, "hot_followup": hot, "known_deals": deals, "sendEnabled": SEND_ENABLED})
+    print(json.dumps(combined, indent=2, ensure_ascii=False, default=str))
     return combined
 
 
