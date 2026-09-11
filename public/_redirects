@@ -11,8 +11,11 @@
 /products/    /services/    301
 /consultation/    /contact/    301
 /site-map/    /    301
-/faq/    /about/    301
-/status/    /    301
+# FAQ and status are real pages — do not 301 them away.
+/faq /faq/index.html 200
+/faq/ /faq/index.html 200
+/status /status/index.html 200
+/status/ /status/index.html 200
 /configurator/    /contact/    301
 /dashboard/    /contact/    301
 /docs/    /    301
@@ -70,8 +73,11 @@
 /solutions/healthcare /solutions/healthcare/index.html 200
 /solutions/healthcare/ /solutions/healthcare/index.html 200
 # QA pass 2 — durable aliases (Cloudflare / Netlify). GitHub Pages uses the HTML files.
-/book /booking/ 301
-/book/ /booking/ 301
+# Canonical booking URL is /book/. Aliases keep their HTML and point canonical at /book/.
+/booking /book/ 301
+/booking/ /book/ 301
+/discovery /book/ 301
+/discovery/ /book/ 301
 /success-stories /success-stories/index.html 200
 /success-stories/ /success-stories/index.html 200
 /privacy /privacy/index.html 200
