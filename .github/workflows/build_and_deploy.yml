@@ -29,7 +29,11 @@ jobs:
         run: |
           set -euo pipefail
           missing=0
-          for f in index.html book/index.html plans/index.html discovery/index.html; do
+          for f in index.html book/index.html plans/index.html discovery/index.html \
+                   autonomous-agent-services/index.html \
+                   services/autonomous-agent-installation/index.html \
+                   services/autonomous-agent-configuration/index.html \
+                   services/autonomous-agent-maintenance/index.html; do
             if [ ! -f "out/$f" ]; then
               echo "::error::Missing out/$f"
               missing=1
