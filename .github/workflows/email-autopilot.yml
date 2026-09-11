@@ -1,0 +1,30 @@
+name: Email autopilot tests
+
+on:
+  pull_request:
+    paths:
+      - "automation/scripts/email_autopilot.py"
+      - "automation/tests/test_email_autopilot.py"
+      - "automation/gmail_filters.json"
+      - ".github/workflows/email-autopilot.yml"
+  push:
+    paths:
+      - "automation/scripts/email_autopilot.py"
+      - "automation/tests/test_email_autopilot.py"
+      - "automation/gmail_filters.json"
+      - ".github/workflows/email-autopilot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run email autopilot unit tests
+        run: python3 automation/tests/test_email_autopilot.py

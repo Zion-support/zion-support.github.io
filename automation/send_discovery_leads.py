@@ -3,7 +3,8 @@
 import json, subprocess, sys, os
 from pathlib import Path
 
-LEADS_PATH = Path("/Users/miami2/zion.app/automation/data/zion_leads_free.json")
+_REPO = Path(__file__).resolve().parent.parent
+LEADS_PATH = _REPO / "automation" / "data" / "zion_leads_free.json"
 WRAPPER_PATH = Path("/tmp/zion_outreach_wrapper.json")
 
 # Ler leads (formato lista)
@@ -18,7 +19,7 @@ print(f"Converted {len(leads_list)} leads → {WRAPPER_PATH}")
 # Rodar send_cold_outreach v2 com o arquivo convertido
 env = os.environ.copy()
 result = subprocess.run(
-    ["python3", "/Users/miami2/zion.app/automation/send_cold_outreach_v2.py"],
+    ["python3", str(_REPO / "automation" / "send_cold_outreach_v2.py")],
     capture_output=True, text=True, timeout=120, env=env
 )
 print(result.stdout[-3000:] if result.stdout else "")
