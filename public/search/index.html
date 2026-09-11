@@ -1,12 +1,94 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Not a packaged SKU — Search · Zion Tech Group</title>
-<link rel="canonical" href="https://ziontechgroup.com/services/">
-<meta name="robots" content="noindex, follow">
-<meta name="description" content="Not a packaged SKU. Zion scopes work after the $99 AI/IT Discovery at /book/.">
-<meta http-equiv="refresh" content="0; url=/services/">
-<style>body{font-family:system-ui;background:#0b1220;color:#e6f0ff;max-width:720px;margin:0 auto;padding:48px 24px;line-height:1.65}a{color:#a78bfa}</style></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick Find · Zion Tech Group</title>
+<meta name="description" content="Find live Zion routes: plans, Discovery $99, FAQ, WhatsApp, Portuguese verticals, and the human site map. Not the 10k sitemap dump.">
+<link rel="canonical" href="https://ziontechgroup.com/search/">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+.filter{width:100%;max-width:560px;padding:12px 14px;border-radius:12px;border:1px solid #2a3654;background:#0e1628;color:#f4f7ff;font:inherit;margin:18px 0 8px}
+.list a{display:block;padding:10px 0;border-bottom:1px solid rgba(42,54,84,.7);color:#c5d0e8}
+.list a:hover{color:#22d3ee}
+.list small{display:block;color:#9aa8c7;font-size:.85rem}
+.hidden{display:none}
+</style>
+</head>
 <body>
-<h1>Search</h1>
-<p>No packaged SKU, no free consultation, and no leftover service catalog. Work is scoped after the $99 Discovery.</p>
-<p><a href="/services/">Services</a> · <a href="/discovery/">Book $99</a> · <a href="/plans/">Prices</a></p>
-</body></html>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="/">Zion Tech Group</a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links" aria-label="Primary">
+<a href="/solutions/">Solutions</a>
+<a href="/services/">Services</a>
+<a href="/plans/">Plans</a>
+<a href="/faq/">FAQ</a>
+<a href="/whatsapp/">WhatsApp</a>
+<a href="/contact/">Contact</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+</nav></div></header>
+<main id="conteudo" class="section"><div class="wrap">
+<p class="crumb"><a href="/">Home</a> / Search</p>
+<h1>Find a live page.</h1>
+<p class="lead">Filter human routes. For the full Portuguese index use <a href="/mapa-do-site/">/mapa-do-site/</a>. Official menu: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>
+<label for="q" class="eyebrow">Filter</label>
+<input id="q" class="filter" type="search" placeholder="plans, logística, FAQ, privacy…" autocomplete="off">
+<p class="lead" id="count"></p>
+<div class="list" id="results"></div>
+</div></main>
+<footer><div class="wrap foot">
+<div><h3>Company</h3><a href="/about/">About</a><a href="/partners/">Partners</a><a href="/contact/">Contact</a></div>
+<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a><a href="/solutions/">Solutions</a></div>
+<div><h3>Resources</h3><a href="/faq/">FAQ</a><a href="/mapa-do-site/">Site map</a><a href="/whatsapp/">WhatsApp</a></div>
+<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/privacidade/">Privacidade</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
+</div></footer>
+<script>
+const ROUTES = [
+  ["/discovery/", "Discovery $99", "Paid intake. Stripe checkout."],
+  ["/plans/", "Plans", "Discovery, Consulting, Starter, Growth."],
+  ["/precos/", "Preços", "Portuguese alias of /plans/."],
+  ["/booking/", "Booking", "Live Calendly after Discovery."],
+  ["/contact/", "Contact", "Form, email, phone."],
+  ["/whatsapp/", "WhatsApp", "wa.me commercial line."],
+  ["/faq/", "FAQ", "Price, HIPAA, timeline."],
+  ["/para/", "Para você", "Portuguese vertical hub."],
+  ["/mapa-do-site/", "Mapa do site", "Human sitemap, not sitemap.xml."],
+  ["/services/", "Services", "Family A catalog."],
+  ["/solutions/", "Solutions", "Industry and product paths."],
+  ["/ai-services/", "AI Services", "Advanced AI catalog."],
+  ["/industries/", "Industries", "Healthcare, insurance, legal, fintech."],
+  ["/industries/healthcare/", "Healthcare", "Hello Doc / intake."],
+  ["/industries/financial-services/", "Financial services", "Fraud, onboarding, close."],
+  ["/industries/legal/", "Legal", "Contracts and review."],
+  ["/industries/insurance/", "Insurance", "Claims and underwriting."],
+  ["/imobiliaria/", "Imobiliária", "Portal lead that dies on WhatsApp."],
+  ["/para-imobiliarias/", "Para imobiliárias", "Commercial real-estate page."],
+  ["/clinica/", "Clínica", "No-show and confirmation."],
+  ["/logistica/", "Logística", "Exception in the driver group."],
+  ["/varejo/", "Varejo", "Order on WhatsApp, stock in a sheet."],
+  ["/oficinas/", "Oficinas", "Quote and status, no DMS SKU."],
+  ["/saloes/", "Salões", "Chair empty, confirmation on Zap."],
+  ["/estetica/", "Estética", "Alias of /saloes/."],
+  ["/msp/", "MSP", "Alias of /para-msps/."],
+  ["/para-msps/", "Para MSPs", "Ticket queue before agents."],
+  ["/privacy/", "Privacy", "English privacy policy."],
+  ["/privacidade/", "Privacidade", "Portuguese alias of /privacy/."],
+  ["/about/", "About", "Company."],
+  ["/blog/", "Blog", "Guides and notes."]
+];
+const box = document.getElementById("results");
+const count = document.getElementById("count");
+function render(q) {
+  const needle = (q || "").trim().toLowerCase();
+  const hits = ROUTES.filter(([href, title, blurb]) => !needle || (href + " " + title + " " + blurb).toLowerCase().includes(needle));
+  count.textContent = hits.length + " route" + (hits.length === 1 ? "" : "s");
+  box.innerHTML = hits.map(([href, title, blurb]) => '<a href="'+href+'"><strong>'+title+'</strong> <code>'+href+'</code><small>'+blurb+'</small></a>').join("");
+}
+document.getElementById("q").addEventListener("input", e => render(e.target.value));
+render("");
+</script>
+</body>
+</html>
