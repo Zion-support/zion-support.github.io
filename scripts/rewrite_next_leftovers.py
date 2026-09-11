@@ -182,6 +182,7 @@ def family_a(
                 ("/plans/", "Planos"),
                 ("/para/", "Para você"),
                 ("/faq/", "FAQ"),
+                ("/whatsapp/", "WhatsApp"),
                 ("/contact/", "Contato"),
             ]
         else:
@@ -190,6 +191,7 @@ def family_a(
                 ("/services/", "Services"),
                 ("/plans/", "Plans"),
                 ("/faq/", "FAQ"),
+                ("/whatsapp/", "WhatsApp"),
                 ("/contact/", "Contact"),
             ]
     nav_html = "".join(f'      <a href="{escape(h)}">{escape(l)}</a>\n' for h, l in nav_items)

@@ -22,6 +22,7 @@ PT_NAV = [
     ("/plans/", "Planos"),
     ("/para/", "Para você"),
     ("/faq/", "FAQ"),
+    ("/whatsapp/", "WhatsApp"),
     ("/contact/", "Contato"),
 ]
 EN_NAV = [
@@ -29,6 +30,7 @@ EN_NAV = [
     ("/services/", "Services"),
     ("/plans/", "Plans"),
     ("/faq/", "FAQ"),
+    ("/whatsapp/", "WhatsApp"),
     ("/contact/", "Contact"),
 ]
 
