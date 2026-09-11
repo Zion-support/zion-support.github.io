@@ -48,6 +48,8 @@
 /industries/legal/ /industries/legal/index.html 200
 /industries/financial-services/ /industries/financial-services/index.html 200
 /industries/financial-services /industries/financial-services/index.html 200
+/solutions/industries /industries/ 301
+/solutions/industries/ /industries/ 301
 /tools/ai-quick-audit /tools/ai-quick-audit/index.html 200
 /tools/ai-quick-audit/ /tools/ai-quick-audit/index.html 200
 /tools/phishing-analyzer /tools/phishing-analyzer/index.html 200
