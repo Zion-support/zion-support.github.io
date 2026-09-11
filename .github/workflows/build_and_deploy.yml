@@ -29,7 +29,7 @@ jobs:
         run: |
           set -euo pipefail
           missing=0
-          for f in index.html book/index.html plans/index.html discovery/index.html; do
+          for f in index.html book/index.html plans/index.html discovery/index.html contact/index.html industries/healthcare/index.html; do
             if [ ! -f "out/$f" ]; then
               echo "::error::Missing out/$f"
               missing=1
@@ -37,6 +37,22 @@ jobs:
               echo "ok out/$f"
             fi
           done
+          if grep -qi "temporarily unavailable" out/contact/index.html out/discovery/index.html out/industries/healthcare/index.html; then
+            echo "::error::Money page still a stub (temporarily unavailable)"
+            missing=1
+          fi
+          if ! grep -q "<form" out/contact/index.html; then
+            echo "::error::out/contact/index.html has no form"
+            missing=1
+          fi
+          if grep -qi 'http-equiv="refresh"' out/industries/healthcare/index.html; then
+            echo "::error::out/industries/healthcare/index.html still meta-refreshes"
+            missing=1
+          fi
+          if ! grep -q "ziontechgroup.com/industries/healthcare/" out/industries/healthcare/index.html; then
+            echo "::error::healthcare canonical is not self-referencing"
+            missing=1
+          fi
           if [ ! -f out/robots.txt ] && [ ! -f out/sitemap-0.xml ]; then
             echo "::warning::No robots.txt or sitemap-0.xml in artifact"
           fi

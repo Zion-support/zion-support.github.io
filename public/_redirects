@@ -4,7 +4,9 @@
 /sitemap.xml  /sitemap-0.xml  301
 
 /case-studies/    /contact/    301
-/industries/    /services/    301
+# Industry hub is a real page. Do not prefix-redirect /industries/* to /services/.
+/industries /industries/index.html 200
+/industries/ /industries/index.html 200
 /free-tools-hub/    /tools/    301
 /products/    /services/    301
 /consultation/    /contact/    301
@@ -41,6 +43,8 @@
 /industries/insurance/ /industries/insurance/index.html 200
 /industries/healthcare/ /industries/healthcare/index.html 200
 /industries/legal/ /industries/legal/index.html 200
+/industries/financial-services/ /industries/financial-services/index.html 200
+/industries/financial-services /industries/financial-services/index.html 200
 /tools/ai-quick-audit /tools/ai-quick-audit/index.html 200
 /tools/ai-quick-audit/ /tools/ai-quick-audit/index.html 200
 /tools/phishing-analyzer /tools/phishing-analyzer/index.html 200
@@ -113,5 +117,6 @@
 /ai-implementation/ /ai-implementation/index.html 200
 /ai-implementation /ai-implementation/index.html 200
 /ai-compliance/ /ai-compliance/index.html 200
-/ai-compliance /ai-compliance/index.html 200/ai-fintech-automation/ /ai-services/ 301
+/ai-compliance /ai-compliance/index.html 200
+/ai-fintech-automation/ /ai-services/ 301
 /ai-fintech-automation /ai-services/ 301
