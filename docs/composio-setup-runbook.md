@@ -27,6 +27,7 @@ SendGrid, ActiveCampaign, Brevo IP allowlist, and 1Password billing.
 
 ## Workflows
 
-- `composio-1password-sync` — lists vaults + items daily 06:00 UTC and on dispatch.
+- `composio-1password-sync` (`.github/workflows/composio-1password-sync.yml`) — lists vaults + items every 6 hours and on dispatch.
+- `onepassword-sync` (`.github/workflows/onepassword-sync.yml`) — same vault check daily at 06:00 UTC and on dispatch.
 - After rotating the write connection, update GitHub secret
   `COMPOSIO_1PASSWORD_CONNECTION_ID` to `_1password_winful-mast`.

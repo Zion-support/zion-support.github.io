@@ -33,10 +33,12 @@ Also required: `COMPOSIO_API_KEY`.
 
 ## Workflows
 
-- `.github/workflows/composio-1password-sync.yml`
-- `.github/workflows/onepassword-sync.yml`
+Both run `.github/scripts/composio/onepassword-list-vault.mjs` (`_1PASSWORD_LIST_VAULTS` then `_1PASSWORD_LIST_ITEMS` for `qvoxujxka43fr3kyzmb3qsidpi`). The job fails if the vault is missing or empty.
 
-Both list vaults, then list items in `qvoxujxka43fr3kyzmb3qsidpi`.
+| Workflow `name` | File | Schedule |
+| --- | --- | --- |
+| `composio-1password-sync` | `.github/workflows/composio-1password-sync.yml` | every 6 hours + dispatch |
+| `onepassword-sync` | `.github/workflows/onepassword-sync.yml` | daily 06:00 UTC + dispatch |
 
 ## Reconnecting 1Password in Composio
 

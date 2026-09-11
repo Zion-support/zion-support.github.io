@@ -22,6 +22,6 @@ Slack, HubSpot, Linear, OpenRouter, Hugging Face (account), Google Workspace.
 - Brevo IP allowlist `52.72.72.59`
 - 1Password Teams payment method
 - Hugging Face access token
-- Firecrawl credits are exhausted this billing period
+- Firecrawl credits — check the live dashboard (this snapshot had 0 remaining on 2026-09-11)
 
 Secrets stay in 1Password. Never commit `ops_`, `re_`, or account passwords.

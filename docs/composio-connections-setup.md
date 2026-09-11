@@ -17,7 +17,7 @@ Email used for accounts: `kleber@ziontechgroup.com`.
 | Notion, Linear, Discord, Canva, YouTube, WhatsApp, Telegram | Connected |
 | OpenRouter | Connected (credits ~45, usage ~45.20) |
 | Hugging Face | Username `kleberalcatrao` (mint a token at https://huggingface.co/settings/tokens) |
-| Firecrawl | Plan 1000 credits, **0 remaining** this period (ends ~2026-09-22) |
+| Firecrawl | Connected. Credit balance changes; check the Firecrawl dashboard instead of this doc. |
 | SerpApi | Connected |
 | Apollo, Hunter, noCRM, Sentry, Perplexity, SuperMemory, Cursor | Connected |
 | Google Ads / Search Console / Analytics | Connected |
