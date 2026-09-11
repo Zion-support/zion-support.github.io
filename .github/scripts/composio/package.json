@@ -1,0 +1,8 @@
+{
+  "name": "zion-composio-1password-sync",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@composio/core": "^0.6.0"
+  }
+}
