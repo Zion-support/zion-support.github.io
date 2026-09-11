@@ -1,0 +1,636 @@
+{
+  "updated": "2026-09-11",
+  "policy": "Queue unique commercial-intent briefs. Never enqueue near-duplicate SKUs. Fill JSON under content-loop/briefs/ before publish.",
+  "topics": [
+    {
+      "slug": "ai-automation-workflow-optimization",
+      "title": "AI Automation Workflow Optimization: Sequence Before You Scale",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "ai automation workflow optimization"
+    },
+    {
+      "slug": "rag-for-customer-support-a-practical-guide",
+      "title": "RAG for Customer Support: A Practical Guide",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "RAG for customer support"
+    },
+    {
+      "slug": "no-code-ai-automation-for-non-technical-teams",
+      "title": "No-Code AI Automation for Non-Technical Teams",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "no-code AI automation"
+    },
+    {
+      "slug": "ci-cd-for-ml-models-mlops-best-practices",
+      "title": "CI/CD for ML Models: MLOps Best Practices",
+      "cluster": "DevOps",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "CI/CD for ML models"
+    },
+    {
+      "slug": "pricing-strategy-for-ai-saas-products",
+      "title": "Pricing Strategy for AI SaaS Products",
+      "cluster": "SaaS",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "AI SaaS pricing"
+    },
+    {
+      "slug": "adocao-de-ia-nas-pmes-brasileiras-guia-2026",
+      "title": "Adoção de IA nas PMEs brasileiras: Guia 2026",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "primary_keyword": "adoção de IA PME Brasil"
+    },
+    {
+      "slug": "lgpd-e-ia-compliance-empresas-brasileiras",
+      "title": "LGPD e IA: compliance para empresas brasileiras",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "primary_keyword": "LGPD IA empresas"
+    },
+    {
+      "slug": "automacao-de-vendas-com-ia-empresas-brasileiras",
+      "title": "Automação de vendas com IA para empresas brasileiras",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "primary_keyword": "automação de vendas IA"
+    },
+    {
+      "slug": "helpdesk-24x7-com-agente-sem-fechar-chamado",
+      "title": "Helpdesk 24x7 com agente: capturar, não fechar sozinho",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "primary_keyword": "helpdesk 24x7 IA"
+    },
+    {
+      "slug": "vciso-para-pme-o-que-esta-no-retainer",
+      "title": "vCISO para PME: o que está no retainer",
+      "cluster": "Cybersecurity",
+      "lang": "pt-BR",
+      "status": "queued",
+      "primary_keyword": "vCISO PME"
+    },
+    {
+      "slug": "finops-cloud-brasil-por-onde-comecar",
+      "title": "FinOps cloud no Brasil: por onde começar",
+      "cluster": "FinOps",
+      "lang": "pt-BR",
+      "status": "queued",
+      "primary_keyword": "FinOps Brasil"
+    },
+    {
+      "slug": "ai-agents-for-accounting-firms",
+      "title": "AI Agents for Accounting Firms: Intake, Not Advice",
+      "cluster": "Verticals",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "AI agents for accounting firms"
+    },
+    {
+      "slug": "ai-agents-for-real-estate-brokerages",
+      "title": "AI Agents for Real Estate Brokerages: First Response Rules",
+      "cluster": "Verticals",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "AI agents real estate"
+    },
+    {
+      "slug": "ai-agents-for-dental-clinics",
+      "title": "AI Agents for Dental Clinics: Scheduling Without Diagnosing",
+      "cluster": "Verticals",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "AI agents dental clinic"
+    },
+    {
+      "slug": "managed-it-for-law-firms-ai-constraints",
+      "title": "Managed IT for Law Firms: AI Constraints Before Convenience",
+      "cluster": "Verticals",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "managed IT law firms AI"
+    },
+    {
+      "slug": "hipaa-vs-lgpd-ai-workloads",
+      "title": "HIPAA vs LGPD for AI Workloads: What Transfers, What Doesn't",
+      "cluster": "Compliance",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "HIPAA vs LGPD AI"
+    },
+    {
+      "slug": "soc-2-for-ai-powered-services",
+      "title": "SOC 2 for AI-Powered Services: Evidence an Auditor Will Ask",
+      "cluster": "Compliance",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "SOC 2 AI services"
+    },
+    {
+      "slug": "human-in-the-loop-design-for-agents",
+      "title": "Human-in-the-Loop Design for Production Agents",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "human in the loop AI agents"
+    },
+    {
+      "slug": "kill-switch-patterns-for-enterprise-agents",
+      "title": "Kill-Switch Patterns for Enterprise Agents",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "AI agent kill switch"
+    },
+    {
+      "slug": "step-logs-for-agent-qbrs",
+      "title": "Step Logs You Can Show in a QBR",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "AI agent audit log"
+    },
+    {
+      "slug": "google-search-console-for-ai-agencies",
+      "title": "Using Search Console When Your Agency Site Has Catalog Bloat",
+      "cluster": "SEO",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "Search Console agency site"
+    },
+    {
+      "slug": "llms-txt-for-b2b-service-firms",
+      "title": "llms.txt for B2B Service Firms: Honest Facts Beats Hype",
+      "cluster": "SEO",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "llms.txt B2B"
+    },
+    {
+      "slug": "programmatic-seo-quality-bar-2026",
+      "title": "Programmatic SEO in 2026: Unique Value or Don't Index",
+      "cluster": "SEO",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "programmatic SEO 2026 quality"
+    },
+    {
+      "slug": "internal-links-from-guides-to-discovery",
+      "title": "Internal Links From Guides to Discovery Without Being Spam",
+      "cluster": "SEO",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "internal links commercial pages"
+    },
+    {
+      "slug": "calendly-paid-discovery-vs-free-consult",
+      "title": "Paid Discovery vs Free Consult: Why the Funnel Changed",
+      "cluster": "Commercial",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "paid discovery vs free consult"
+    },
+    {
+      "slug": "stripe-checkout-for-services-firms",
+      "title": "Stripe Checkout for Services Firms: Discovery Then Scope",
+      "cluster": "Commercial",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "Stripe checkout consulting"
+    },
+    {
+      "slug": "when-not-to-build-an-ai-agent",
+      "title": "When Not to Build an AI Agent",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "when not to build AI agent"
+    },
+    {
+      "slug": "multi-tenant-prompt-memory-is-a-breach",
+      "title": "Shared Prompt Memory Across Tenants Is a Breach Waiting",
+      "cluster": "Cybersecurity",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "multi-tenant AI memory"
+    },
+    {
+      "slug": "backup-restore-test-before-agents",
+      "title": "Restore a Backup Before You Add an Agent",
+      "cluster": "Managed IT",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "backup restore test MSP"
+    },
+    {
+      "slug": "microsoft-365-least-privilege-for-agents",
+      "title": "Microsoft 365 Least Privilege for Agents",
+      "cluster": "Cybersecurity",
+      "lang": "en",
+      "status": "queued",
+      "primary_keyword": "Microsoft 365 AI agent permissions"
+    },
+    {
+      "slug": "msp-psa-agent-isolation-checklist",
+      "title": "PSA Agent Isolation Checklist for Multi-Tenant MSPs",
+      "cluster": "AI Agents & MSPs",
+      "lang": "en",
+      "status": "queued",
+      "parent": "ai-agents-for-msps-first-workflow",
+      "angle": "Control list a NOC lead can print before connecting an agent to ConnectWise, Autotask, or Halo.",
+      "primary_keyword": "MSP PSA AI agent isolation"
+    },
+    {
+      "slug": "after-hours-msp-agent-paging-rules",
+      "title": "After-Hours MSP Agents: Capture Context, Page a Human",
+      "cluster": "AI Agents & MSPs",
+      "lang": "en",
+      "status": "queued",
+      "parent": "ai-agents-for-msps-first-workflow",
+      "angle": "Severity rules and paging, not unsupervised remediations at 2 a.m.",
+      "primary_keyword": "after hours MSP AI agent"
+    },
+    {
+      "slug": "msp-agent-cost-model-usage-vs-managed-layer",
+      "title": "MSP Agent Cost Model: Usage vs the Managed Layer",
+      "cluster": "AI Agents & MSPs",
+      "lang": "en",
+      "status": "queued",
+      "parent": "ai-agents-for-msps-first-workflow",
+      "angle": "How to tag model spend per queue without fake deflection percentages.",
+      "primary_keyword": "MSP AI agent cost"
+    },
+    {
+      "slug": "tag-llm-spend-per-workflow",
+      "title": "How to Tag LLM Spend Per Workflow",
+      "cluster": "FinOps & Cloud",
+      "lang": "en",
+      "status": "queued",
+      "parent": "ai-finops-for-growing-companies",
+      "angle": "Key layout and naming so finance can see noisy agents.",
+      "primary_keyword": "tag LLM spend per workflow"
+    },
+    {
+      "slug": "kill-noisy-agent-loops-finops",
+      "title": "Kill Noisy Agent Loops Before They Become the Bill",
+      "cluster": "FinOps & Cloud",
+      "lang": "en",
+      "status": "queued",
+      "parent": "ai-finops-for-growing-companies",
+      "angle": "Retry caps and context-window defaults.",
+      "primary_keyword": "agent loop cost control"
+    },
+    {
+      "slug": "ai-finops-for-msps",
+      "title": "AI FinOps for MSPs: Pass Through Usage Without Surprising Tenants",
+      "cluster": "FinOps & Cloud",
+      "lang": "en",
+      "status": "queued",
+      "parent": "ai-finops-for-growing-companies",
+      "angle": "Per-tenant usage tags on a managed desk.",
+      "primary_keyword": "AI FinOps MSP"
+    },
+    {
+      "slug": "agent-eval-gold-set-for-smes",
+      "title": "Build a Gold-Set Eval for SME Agents",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "parent": "adaptive-ai-agents-for-business",
+      "angle": "Replay last week’s tickets.",
+      "primary_keyword": "AI agent evaluation gold set"
+    },
+    {
+      "slug": "when-agents-should-not-adapt",
+      "title": "When Business Agents Should Not Adapt",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "parent": "adaptive-ai-agents-for-business",
+      "angle": "Writes, identity, payments.",
+      "primary_keyword": "agent stop rules"
+    },
+    {
+      "slug": "adaptive-agents-vs-rpa",
+      "title": "Adaptive Agents vs RPA: Different Failure Modes",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "parent": "adaptive-ai-agents-for-business",
+      "angle": "Brittleness vs silent drift.",
+      "primary_keyword": "adaptive agents vs RPA"
+    },
+    {
+      "slug": "whatsapp-oficial-api-vs-numero-pessoal",
+      "title": "API oficial do WhatsApp vs número pessoal",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "agente-de-ia-para-whatsapp-empresas",
+      "angle": "Arquitetura, não gato.",
+      "primary_keyword": "WhatsApp Business API empresas"
+    },
+    {
+      "slug": "lgpd-historico-whatsapp-agente",
+      "title": "LGPD no histórico do agente de WhatsApp",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "agente-de-ia-para-whatsapp-empresas",
+      "angle": "Retenção e memória.",
+      "primary_keyword": "LGPD WhatsApp bot"
+    },
+    {
+      "slug": "agente-whatsapp-imobiliaria-primeiro-atendimento",
+      "title": "Primeiro atendimento de imobiliária com agente",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "agente-de-ia-para-whatsapp-empresas",
+      "angle": "Lead, não proposta.",
+      "primary_keyword": "agente IA imobiliária WhatsApp"
+    },
+    {
+      "slug": "small-business-agent-draft-dont-send",
+      "title": "Draft-Don’t-Send: The Default for SME Agents",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "parent": "building-ai-agent-workflows-for-small-business",
+      "angle": "Customer-facing policy.",
+      "primary_keyword": "AI agent draft don't send"
+    },
+    {
+      "slug": "connect-gmail-agent-least-privilege",
+      "title": "Connect Gmail to an Agent With Least Privilege",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "parent": "building-ai-agent-workflows-for-small-business",
+      "angle": "OAuth scopes that are not the whole mailbox.",
+      "primary_keyword": "Gmail AI agent OAuth"
+    },
+    {
+      "slug": "sme-agent-disable-switch",
+      "title": "Your SME Agent Needs a Disable Switch",
+      "cluster": "AI Agents",
+      "lang": "en",
+      "status": "queued",
+      "parent": "building-ai-agent-workflows-for-small-business",
+      "angle": "Kill without calling a vendor.",
+      "primary_keyword": "disable AI agent"
+    },
+    {
+      "slug": "preview-environment-ttl-finops",
+      "title": "Preview Environments Need a TTL",
+      "cluster": "FinOps & Cloud",
+      "lang": "en",
+      "status": "queued",
+      "parent": "cloud-cost-optimization-for-growing-startups",
+      "angle": "CI cost leaks.",
+      "primary_keyword": "preview environment cost TTL"
+    },
+    {
+      "slug": "startup-log-ingestion-waste",
+      "title": "Debug Logs Are Eating the Cloud Bill",
+      "cluster": "FinOps & Cloud",
+      "lang": "en",
+      "status": "queued",
+      "parent": "cloud-cost-optimization-for-growing-startups",
+      "angle": "Ingestion vs query.",
+      "primary_keyword": "cloud log ingestion cost"
+    },
+    {
+      "slug": "when-startups-should-buy-savings-plans",
+      "title": "When Startups Should Buy Savings Plans",
+      "cluster": "FinOps & Cloud",
+      "lang": "en",
+      "status": "queued",
+      "parent": "cloud-cost-optimization-for-growing-startups",
+      "angle": "After shape stabilizes.",
+      "primary_keyword": "startup AWS savings plans"
+    },
+    {
+      "slug": "composio-vs-make-n8n-for-agents",
+      "title": "Composio vs Make vs n8n for Agents",
+      "cluster": "Integrations",
+      "lang": "en",
+      "status": "queued",
+      "parent": "composio-vs-zapier-for-ai-agents-2026",
+      "angle": "Three layers.",
+      "primary_keyword": "Composio vs Make vs n8n"
+    },
+    {
+      "slug": "expired-oauth-kills-agents",
+      "title": "Expired OAuth Kills Agents Faster Than Bad Prompts",
+      "cluster": "Integrations",
+      "lang": "en",
+      "status": "queued",
+      "parent": "composio-vs-zapier-for-ai-agents-2026",
+      "angle": "Connection health.",
+      "primary_keyword": "OAuth expired AI agent"
+    },
+    {
+      "slug": "when-to-keep-zapier-with-agents",
+      "title": "Keep Zapier for Deterministic Steps Beside Agents",
+      "cluster": "Integrations",
+      "lang": "en",
+      "status": "queued",
+      "parent": "composio-vs-zapier-for-ai-agents-2026",
+      "angle": "Hybrid.",
+      "primary_keyword": "Zapier plus AI agents"
+    },
+    {
+      "slug": "sla-helpdesk-pme-brasil",
+      "title": "SLA de helpdesk que uma PME consegue medir",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "empresa-de-ti-terceirizada-pme-brasil",
+      "angle": "Severidade e relógio.",
+      "primary_keyword": "SLA helpdesk PME"
+    },
+    {
+      "slug": "dpa-msp-lgpd-encerramento",
+      "title": "DPA e encerramento com MSP",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "empresa-de-ti-terceirizada-pme-brasil",
+      "angle": "Tickets e backups na saída.",
+      "primary_keyword": "DPA MSP LGPD"
+    },
+    {
+      "slug": "co-managed-com-um-analista-interno",
+      "title": "Co-managed quando você já tem um analista",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "empresa-de-ti-terceirizada-pme-brasil",
+      "angle": "Divisão de responsabilidades.",
+      "primary_keyword": "co-managed TI PME"
+    },
+    {
+      "slug": "hermes-cron-model-pin-guide",
+      "title": "Pin Hermes Cron Off model=local",
+      "cluster": "Hermes & Automation",
+      "lang": "en",
+      "status": "queued",
+      "parent": "hermes-agent-uninterrupted-ops-loop",
+      "angle": "HTTP 400 failure mode.",
+      "primary_keyword": "Hermes cron model local"
+    },
+    {
+      "slug": "hermes-skills-for-seo-briefs",
+      "title": "Hermes Skills for SEO Briefs, Not Thin Pages",
+      "cluster": "Hermes & Automation",
+      "lang": "en",
+      "status": "queued",
+      "parent": "hermes-agent-uninterrupted-ops-loop",
+      "angle": "Skill design.",
+      "primary_keyword": "Hermes SEO skill"
+    },
+    {
+      "slug": "git-native-content-loop-github-actions",
+      "title": "Git-Native Content Loop on GitHub Actions",
+      "cluster": "Hermes & Automation",
+      "lang": "en",
+      "status": "queued",
+      "parent": "hermes-agent-uninterrupted-ops-loop",
+      "angle": "CI publisher.",
+      "primary_keyword": "GitHub Actions SEO content loop"
+    },
+    {
+      "slug": "prepare-for-zion-discovery-call",
+      "title": "How to Prepare for the Zion Discovery Call",
+      "cluster": "Commercial",
+      "lang": "en",
+      "status": "queued",
+      "parent": "what-you-get-from-99-ai-it-discovery",
+      "angle": "Artifacts to bring.",
+      "primary_keyword": "prepare AI discovery call"
+    },
+    {
+      "slug": "discovery-vs-499-consulting",
+      "title": "Discovery $99 vs Consulting $499",
+      "cluster": "Commercial",
+      "lang": "en",
+      "status": "queued",
+      "parent": "what-you-get-from-99-ai-it-discovery",
+      "angle": "When the longer session is worth it.",
+      "primary_keyword": "AI consulting 499 vs 99"
+    },
+    {
+      "slug": "why-zion-discovery-is-paid",
+      "title": "Why Zion Discovery Is Paid",
+      "cluster": "Commercial",
+      "lang": "en",
+      "status": "queued",
+      "parent": "what-you-get-from-99-ai-it-discovery",
+      "angle": "Filter and written work.",
+      "primary_keyword": "paid discovery call AI"
+    },
+    {
+      "slug": "smb-mfa-admin-accounts",
+      "title": "SMB Admin Accounts: MFA and No Shared Passwords",
+      "cluster": "Cybersecurity",
+      "lang": "en",
+      "status": "queued",
+      "parent": "zero-trust-for-smbs-implementation-checklist",
+      "angle": "The first Zero Trust hour.",
+      "primary_keyword": "SMB MFA admin accounts"
+    },
+    {
+      "slug": "oauth-app-review-for-smes",
+      "title": "Review OAuth Apps Before You Add an AI Agent",
+      "cluster": "Cybersecurity",
+      "lang": "en",
+      "status": "queued",
+      "parent": "zero-trust-for-smbs-implementation-checklist",
+      "angle": "Mailbox-wide scopes.",
+      "primary_keyword": "OAuth app review SME"
+    },
+    {
+      "slug": "contractor-laptop-access-smb",
+      "title": "Contractor Laptops in an SMB Zero Trust Model",
+      "cluster": "Cybersecurity",
+      "lang": "en",
+      "status": "queued",
+      "parent": "zero-trust-for-smbs-implementation-checklist",
+      "angle": "Browser isolation vs domain join.",
+      "primary_keyword": "contractor device access SMB"
+    },
+    {
+      "slug": "qualificacao-inbound-agente-pme",
+      "title": "Qualificação de inbound com agente em PME",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "agente-de-ia-para-vendas-pme",
+      "angle": "Campos mínimos.",
+      "primary_keyword": "qualificação inbound IA"
+    },
+    {
+      "slug": "agente-vendas-nao-da-desconto",
+      "title": "Por que o agente não deve dar desconto",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "agente-de-ia-para-vendas-pme",
+      "angle": "Política comercial.",
+      "primary_keyword": "IA desconto vendas"
+    },
+    {
+      "slug": "crm-planilha-agente-vendas",
+      "title": "CRM vs planilha quando entra o agente",
+      "cluster": "Brazilian Market (PT-BR)",
+      "lang": "pt-BR",
+      "status": "queued",
+      "parent": "agente-de-ia-para-vendas-pme",
+      "angle": "Fonte da verdade.",
+      "primary_keyword": "CRM agente vendas PME"
+    },
+    {
+      "slug": "ai-roi-unit-of-work-examples",
+      "title": "AI ROI Units of Work You Can Actually Count",
+      "cluster": "Digital Transformation",
+      "lang": "en",
+      "status": "queued",
+      "parent": "measuring-ai-roi-frameworks-for-enterprises",
+      "angle": "Tickets, docs, batches.",
+      "primary_keyword": "AI ROI unit of work"
+    },
+    {
+      "slug": "include-exception-queue-in-ai-roi",
+      "title": "Put the Exception Queue in the ROI Denominator",
+      "cluster": "Digital Transformation",
+      "lang": "en",
+      "status": "queued",
+      "parent": "measuring-ai-roi-frameworks-for-enterprises",
+      "angle": "Hidden human cost.",
+      "primary_keyword": "AI exception queue cost"
+    },
+    {
+      "slug": "kill-criteria-for-ai-pilots",
+      "title": "Kill Criteria for AI Pilots",
+      "cluster": "Digital Transformation",
+      "lang": "en",
+      "status": "queued",
+      "parent": "measuring-ai-roi-frameworks-for-enterprises",
+      "angle": "When to stop.",
+      "primary_keyword": "AI pilot kill criteria"
+    }
+  ]
+}

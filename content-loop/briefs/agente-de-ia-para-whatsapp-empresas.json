@@ -1,0 +1,127 @@
+{
+  "slug": "agente-de-ia-para-whatsapp-empresas",
+  "lang": "pt-BR",
+  "cluster": "Brazilian Market (PT-BR)",
+  "title": "Agente de IA para WhatsApp: o que mapear antes de ligar o bot",
+  "h1": "Agente de IA para WhatsApp: o que mapear antes de ligar o bot",
+  "description": "Agente de IA para WhatsApp em empresas: rascunho, não fechamento; LGPD; fila humana. Discovery US$ 99 — sem consulta grátis e sem percentual mágico de atendimento.",
+  "keywords": [
+    "agente de IA para WhatsApp",
+    "WhatsApp bot empresas",
+    "automação WhatsApp LGPD"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 9,
+  "tags": "WhatsApp, PME, Brasil",
+  "excerpt": "O primeiro agente de WhatsApp classifica, pede o dado que falta e rascunha. Ele não fecha contrato, não marca procedimento clínico e não inventa preço.",
+  "primary_keyword": "agente de IA para WhatsApp",
+  "intro": [
+    "No Brasil, “agente de IA para WhatsApp” lidera busca por um motivo simples: a fila já está no aplicativo. Clínicas, imobiliárias e escritórios querem resposta rápida. O erro é ligar um bot que fala como humano e escreve no CRM sem dono.",
+    "A Zion não vende um SKU de chatbot. O caminho vivo é o <a href=\"/book/\">Discovery de US$ 99</a> (sessão de 30 minutos). Não há consulta grátis. Guias irmãos: <a href=\"/blog/planilha-erp-whatsapp/\">planilha, ERP e WhatsApp</a> e <a href=\"/blog/whatsapp-clinica-odontologica-no-show/\">no-show em clínica</a>.",
+    "Escreva o script como se fosse um funcionário novo: o que pode dizer, o que deve perguntar, quando chama um humano. Se o script não cabe em uma página, o bot vai improvisar — e improvisar em clínica ou imobiliária é risco jurídico, não inovação."
+  ],
+  "sections": [
+    {
+      "h2": "O que o agente pode fazer no dia um",
+      "paras": [
+        "Ler a mensagem, identificar intenção grosseira (preço, horário, humano), pedir o dado que falta, rascunhar resposta a partir de um script aprovado, abrir ticket. Enviar ao cliente só depois que um humano aceitou um conjunto-ouro de respostas."
+      ],
+      "bullets": [
+        "Dentro: horário de funcionamento, pedir documento, encaminhar para a fila certa.",
+        "Fora até haver regra escrita: desconto, diagnóstico, confirmação de cirurgia, dados de terceiro.",
+        "Teste: dá para desligar o agente sem cair o número da empresa?"
+      ]
+    },
+    {
+      "h2": "LGPD não é um rodapé",
+      "paras": [
+        "WhatsApp carrega dado pessoal no padrão. Base legal, retenção, quem vê o histórico, e o que o modelo pode guardar em memória. Se o agente “aprende o cliente” misturando conversas, você criou um arquivo pessoal sem contrato. Saúde: <a href=\"/blog/hipaa-lgpd-automacao-dados-pacientes-guia-healthtechs/\">HIPAA, LGPD e dados de pacientes</a>."
+      ]
+    },
+    {
+      "h2": "Integração com a planilha e o ERP",
+      "paras": [
+        "Se o fechamento ainda vive em planilha, o agente não deve ser a fonte da verdade. Ele rascunha a linha; um humano confirma. Quando a cópia manual for o problema, leia <a href=\"/blog/planilha-erp-whatsapp/\">quando parar de copiar dados</a>."
+      ]
+    },
+    {
+      "h2": "Como a Zion entra",
+      "paras": [
+        "No Discovery você traz um número, um script atual e a ação irreversível que te preocupa. Saímos com o mapa do primeiro fluxo. Implementação é escopo à parte — <a href=\"/plans/\">planos</a>."
+      ]
+    },
+    {
+      "h2": "Notas de campo",
+      "paras": [
+        "Escreva o script como se fosse um funcionário novo: o que pode dizer, o que deve perguntar, quando chama um humano. Se o script não cabe em uma página, o bot vai improvisar — e improvisar em clínica ou imobiliária é risco jurídico, não inovação.",
+        "Separe o número oficial do número da dona. Agente em número pessoal mistura família, cliente e LGPD. API oficial existe por um motivo.",
+        "Meça fila: tempo até primeira resposta humana depois do rascunho, não “mensagens do bot.” Bot falador com humano ausente só treina o cliente a desistir."
+      ]
+    },
+    {
+      "h2": "Como usar este guia no Discovery",
+      "paras": [
+        "Se você chegou aqui buscando “agente de IA para WhatsApp”, o próximo passo não é um RFP de plataforma. É nomear a fila, a ferramenta que dói se o agente escrever nela, e a pessoa que desliga o fluxo. Traga esses três itens para o <a href=\"/book/\">Discovery de US$ 99</a>.",
+        "Implementação, retainer e integração com WhatsApp, CRM ou PSA são escopos depois do mapa. Não há sessão gratuita. Links antigos de Calendly estão inativos. Preços vivos ficam em <a href=\"/plans/\">/plans/</a>.",
+        "Recuse qualquer parceiro que precise inventar percentual de economia ou de tickets para justificar o trabalho. Unidade de trabalho, custo etiquetado e regra de parada cabem em uma página. Se não cabem, o projeto ainda não existe.",
+        "A Zion é uma firma de TI em Delaware com agentes em produção em dezenas de toolkits Composio. Isso não vira catálogo de SKU. O único produto agendável hoje é o mapa pago. O restante se escreve depois, ou não se escreve.",
+        "Depois do mapa, o critério de sucesso é operacional: o humano vê o passo, o stop, e retoma o fio. Se isso não for demonstrável, não publique o agente — e não publique a página fingindo que o agente já existe."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "O agente pode atender 24 horas sozinho?",
+      "a": "Pode capturar e classificar 24 horas. Envio ao cliente e qualquer escrita em sistema de registro dependem da regra. Madrugada sem humano na exceção é risco, não cobertura."
+    },
+    {
+      "q": "Precisa de API oficial do WhatsApp?",
+      "a": "Para operação séria, sim. Extensão de navegador e número pessoal não são arquitetura. Discovery mapeia o caminho; não inclui o contrato com a Meta."
+    },
+    {
+      "q": "Consulta é grátis?",
+      "a": "Não. O único agendamento ativo é o Discovery pago. Links antigos de “30 minute meeting” estão inativos."
+    }
+  ],
+  "cta": {
+    "h2": "Mapear o primeiro fluxo de WhatsApp — US$ 99",
+    "p": "Traga o número e o script. Escrevemos o que o agente pode dizer e onde ele para."
+  },
+  "related": [
+    {
+      "href": "/blog/agentes-telegram-para-empresas/",
+      "label": "Agentes Telegram"
+    },
+    {
+      "href": "/blog/automacao-clinicas-lgpd/",
+      "label": "Automação e LGPD em clínicas"
+    },
+    {
+      "href": "/blog/building-ai-agent-workflows-for-small-business/",
+      "label": "Workflows for small business"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "whatsapp-oficial-api-vs-numero-pessoal",
+      "title": "API oficial do WhatsApp vs número pessoal",
+      "angle": "Arquitetura, não gato.",
+      "primary_keyword": "WhatsApp Business API empresas",
+      "lang": "pt-BR"
+    },
+    {
+      "slug": "lgpd-historico-whatsapp-agente",
+      "title": "LGPD no histórico do agente de WhatsApp",
+      "angle": "Retenção e memória.",
+      "primary_keyword": "LGPD WhatsApp bot",
+      "lang": "pt-BR"
+    },
+    {
+      "slug": "agente-whatsapp-imobiliaria-primeiro-atendimento",
+      "title": "Primeiro atendimento de imobiliária com agente",
+      "angle": "Lead, não proposta.",
+      "primary_keyword": "agente IA imobiliária WhatsApp",
+      "lang": "pt-BR"
+    }
+  ]
+}

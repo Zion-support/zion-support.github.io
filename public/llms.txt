@@ -41,3 +41,26 @@ GitHub check `Workers Builds: ziontechgroup` is a Cloudflare hook on this repo, 
 - Sentry project `ziontechgroup-com` exists on org zion-holdings. Leftover `javascript-nextjs` is unused.
 - Linear leftover outreach and Gmail-deploy noise ZIO-198–279 is archived except ZIO-225 (Composio Optimization Sprint). Do not email leftover Zion Outreach contacts.
 - Not ziontech.biz, not ziontechnologies.org, not the Instagram website field (still ziontechgroup.com.br).
+
+## Indexable blog (quality loop)
+
+- Zero Trust for SMBs: An Implementation Checklist You Can Finish: https://ziontechgroup.com/blog/zero-trust-for-smbs-implementation-checklist/
+- What You Get From a $99 AI/IT Discovery (and What You Don’t): https://ziontechgroup.com/blog/what-you-get-from-99-ai-it-discovery/
+- Measuring AI ROI: A Framework That Survives a Board Packet: https://ziontechgroup.com/blog/measuring-ai-roi-frameworks-for-enterprises/
+- Hermes Agent for IT Companies: An Uninterrupted Ops and Content Loop: https://ziontechgroup.com/blog/hermes-agent-uninterrupted-ops-loop/
+- Empresa de TI terceirizada para PME: MSP, co-managed e o primeiro SLA: https://ziontechgroup.com/blog/empresa-de-ti-terceirizada-pme-brasil/
+- Composio vs Zapier for AI Agents in 2026: Auth, Tools, and Stop Rules: https://ziontechgroup.com/blog/composio-vs-zapier-for-ai-agents-2026/
+- Cloud Cost Optimization for Growing Startups: Fix the Bill Without Slowing Shipping: https://ziontechgroup.com/blog/cloud-cost-optimization-for-growing-startups/
+- Building AI Agent Workflows for Small Business Without Hiring a Platform Team: https://ziontechgroup.com/blog/building-ai-agent-workflows-for-small-business/
+- AI FinOps for Growing Companies: Govern Model Spend Before It Surprises Finance: https://ziontechgroup.com/blog/ai-finops-for-growing-companies/
+- AI Agents for MSPs: Pick the First Workflow Without Creating Incidents: https://ziontechgroup.com/blog/ai-agents-for-msps-first-workflow/
+- Agente de IA para WhatsApp: o que mapear antes de ligar o bot: https://ziontechgroup.com/blog/agente-de-ia-para-whatsapp-empresas/
+- Agente de IA para vendas em PMEs: rascunho, qualificação, stop: https://ziontechgroup.com/blog/agente-de-ia-para-vendas-pme/
+- Adaptive AI Agents for Business: Change the Workflow, Not the Goal: https://ziontechgroup.com/blog/adaptive-ai-agents-for-business/
+- Pay vs Consulte: How to Choose Your First AI Automation Engagement: https://ziontechgroup.com/blog/pay-vs-consulte-ai-automation/
+- Enterprise AI Agent Risk Checklist: What to Gate Before Production: https://ziontechgroup.com/blog/enterprise-ai-agent-risk-checklist/
+- Discovery $99 vs Starter $2,500: Which Zion Path Fits Your First AI/IT Win: https://ziontechgroup.com/blog/discovery-vs-starter-zion/
+- Co-Managed IT vs MSP: Which Model Fits Mid-Market and AI-First Teams: https://ziontechgroup.com/blog/co-managed-it-vs-msp/
+- Managed IT for AI-First Companies: Ops, Security, and Cost in One Model: https://ziontechgroup.com/blog/managed-it-for-ai-first-companies/
+- GenAI FinOps at Scale: Governing LLM and Cloud Spend Together: https://ziontechgroup.com/blog/genai-finops-at-scale/
+- AI Helpdesk Automation: Triage and Route Without Unsupervised Closures: https://ziontechgroup.com/blog/ai-helpdesk-automation/

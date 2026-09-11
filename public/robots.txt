@@ -3,4 +3,18 @@ Allow: /
 Disallow: /_redirects
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
+Sitemap: https://ziontechgroup.com/sitemap-blog.xml
+Sitemap: https://ziontechgroup.com/sitemap-money.xml
+Sitemap: https://ziontechgroup.com/sitemap-para-icp.xml
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /

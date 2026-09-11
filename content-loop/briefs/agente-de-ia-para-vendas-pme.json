@@ -1,0 +1,123 @@
+{
+  "slug": "agente-de-ia-para-vendas-pme",
+  "lang": "pt-BR",
+  "cluster": "Brazilian Market (PT-BR)",
+  "title": "Agente de IA para vendas em PMEs: rascunho, qualificação, stop",
+  "h1": "Agente de IA para vendas em PMEs: rascunho, qualificação, stop",
+  "description": "Agente de IA para vendas em PMEs brasileiras: qualifica e rascunha. Não fecha, não dá desconto solto. Discovery US$ 99, sem consulta grátis.",
+  "keywords": [
+    "agente de IA para vendas",
+    "IA vendas PME",
+    "SDR com IA Brasil"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 8,
+  "tags": "Vendas, PME, Brasil",
+  "excerpt": "Vendas com agente começa na qualificação. Fechamento sem humano é como deixar o estagiário assinar o contrato.",
+  "primary_keyword": "agente de IA para vendas",
+  "intro": [
+    "Buscas por agente de IA para vendas cresceram no Brasil junto com WhatsApp. O padrão que funciona em PME é o mesmo do helpdesk: classificar, pedir o que falta, rascunhar. Não é um closer autônomo.",
+    "A Zion mapeia o primeiro fluxo no <a href=\"/book/\">Discovery de US$ 99</a>. Contexto de consultoria: <a href=\"/blog/ai-bdr-sdr-roi-and-cost-model/\">BDR/SDR cost model</a> (sem percentuais inventados de pipeline).",
+    "Defina três campos mínimos antes de qualquer escrita no CRM: nome, telefone ou e-mail, e origem. Sem isso o agente duplica lead e o comercial perde fé no funil."
+  ],
+  "sections": [
+    {
+      "h2": "Onde o agente ajuda um comercial pequeno",
+      "paras": [
+        "Triagem de inbound, enriquecer o card no CRM se a API existir, rascunhar o primeiro follow-up a partir de um script, lembrar o humano do SLA. Ele não inventa desconto nem promete prazo de entrega."
+      ]
+    },
+    {
+      "h2": "CRM ou planilha",
+      "paras": [
+        "Se o funil é planilha, o agente não vira CRM. Ele sugere a linha. Duplicar lead é pior que responder tarde. Defina a chave (telefone/e-mail) antes de qualquer escrita automática."
+      ]
+    },
+    {
+      "h2": "Compliance comercial",
+      "paras": [
+        "Não treine o modelo com conversas de clientes misturadas. Não grave áudio sem aviso. Se o setor é regulado (saúde, financeiro), o script precisa de revisão humana sempre — não “na maioria das vezes.”"
+      ]
+    },
+    {
+      "h2": "Caminho comercial da Zion",
+      "paras": [
+        "Discovery escreve o job. Starter só depois. Preços em <a href=\"/plans/\">/plans/</a>. Não há comissão de afiliado público."
+      ]
+    },
+    {
+      "h2": "Notas de campo",
+      "paras": [
+        "Defina três campos mínimos antes de qualquer escrita no CRM: nome, telefone ou e-mail, e origem. Sem isso o agente duplica lead e o comercial perde fé no funil.",
+        "Desconto, prazo e escopo são verbos humanos. O agente pode dizer “vou encaminhar.” Não pode dizer “fica em dez por cento.” Grave isso no script, não só no prompt.",
+        "Se a prospecção fria entrar na conversa, pare. Lista sem base legal e sem opt-out queima o domínio e o WhatsApp Business. Discovery não inclui campanha fria.",
+        "Combine um horário em que um humano revisa os rascunhos. Sem essa janela o comercial acorda com dezenas de mensagens já enviadas e nenhum contexto. Rascunho sem revisão não é velocidade. É dívida."
+      ]
+    },
+    {
+      "h2": "Como usar este guia no Discovery",
+      "paras": [
+        "Se você chegou aqui buscando “agente de IA para vendas”, o próximo passo não é um RFP de plataforma. É nomear a fila, a ferramenta que dói se o agente escrever nela, e a pessoa que desliga o fluxo. Traga esses três itens para o <a href=\"/book/\">Discovery de US$ 99</a>.",
+        "Implementação, retainer e integração com WhatsApp, CRM ou PSA são escopos depois do mapa. Não há sessão gratuita. Links antigos de Calendly estão inativos. Preços vivos ficam em <a href=\"/plans/\">/plans/</a>.",
+        "Recuse qualquer parceiro que precise inventar percentual de economia ou de tickets para justificar o trabalho. Unidade de trabalho, custo etiquetado e regra de parada cabem em uma página. Se não cabem, o projeto ainda não existe.",
+        "A Zion é uma firma de TI em Delaware com agentes em produção em dezenas de toolkits Composio. Isso não vira catálogo de SKU. O único produto agendável hoje é o mapa pago. O restante se escreve depois, ou não se escreve.",
+        "Depois do mapa, o critério de sucesso é operacional: o humano vê o passo, o stop, e retoma o fio. Se isso não for demonstrável, não publique o agente — e não publique a página fingindo que o agente já existe."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "O agente substitui o SDR?",
+      "a": "Não no primeiro fluxo. Ele reduz trabalho repetitivo de triagem. Conversas que mudam preço, prazo ou escopo continuam humanas."
+    },
+    {
+      "q": "Pode disparar prospecção fria sozinho?",
+      "a": "Não como padrão. Volume sem lista consentida e sem opt-out é risco de reputação e de LGPD. Discovery não inclui campanha fria."
+    },
+    {
+      "q": "Quanto custa começar?",
+      "a": "Discovery é US$ 99. Implementação é escopo escrito depois. Não cotamos “pipeline gerado.”"
+    }
+  ],
+  "cta": {
+    "h2": "Mapear o primeiro fluxo de vendas — US$ 99",
+    "p": "Traga o inbound e o script. Definimos o que o agente rascunha e o que só o humano fecha."
+  },
+  "related": [
+    {
+      "href": "/blog/agente-de-ia-para-whatsapp-empresas/",
+      "label": "Agente WhatsApp"
+    },
+    {
+      "href": "/blog/ai-consulting-services-for-business/",
+      "label": "AI consulting"
+    },
+    {
+      "href": "/blog/how-much-does-ai-consultant-cost-2026/",
+      "label": "AI consultant cost"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "qualificacao-inbound-agente-pme",
+      "title": "Qualificação de inbound com agente em PME",
+      "angle": "Campos mínimos.",
+      "primary_keyword": "qualificação inbound IA",
+      "lang": "pt-BR"
+    },
+    {
+      "slug": "agente-vendas-nao-da-desconto",
+      "title": "Por que o agente não deve dar desconto",
+      "angle": "Política comercial.",
+      "primary_keyword": "IA desconto vendas",
+      "lang": "pt-BR"
+    },
+    {
+      "slug": "crm-planilha-agente-vendas",
+      "title": "CRM vs planilha quando entra o agente",
+      "angle": "Fonte da verdade.",
+      "primary_keyword": "CRM agente vendas PME",
+      "lang": "pt-BR"
+    }
+  ]
+}

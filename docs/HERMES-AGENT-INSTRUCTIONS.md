@@ -42,8 +42,16 @@
 - Never ask user to do something you can do
 - Only ask for: security, billing, legal, personal preferences
 
+## Content creation loop (uninterrupted SEO)
+- Engine: `python3 scripts/content_loop/run.py --limit 2 --refresh-index`
+- Briefs: `content-loop/briefs/*.json` · queue: `content-loop/bank.json`
+- Skill: `skills/content-loop/SKILL.md` · docs: `docs/HERMES-CONTENT-LOOP.md`
+- GitHub Action: `.github/workflows/content-loop.yml` (daily 07:00 UTC)
+- Quality posts only (no SKU stubs). CTA is Discovery $99 at `/book/`.
+- Exponential growth = satellite topics in `bank.json`, not thin catalog pages.
+
 ## Proactivity
-- Check git status, cron health, lead pipeline in first 3 turns
+- Check git status, cron health, lead pipeline, and content-loop remaining briefs in first 3 turns
 - Surface problems before being asked
 
 ## Forbidden Outputs

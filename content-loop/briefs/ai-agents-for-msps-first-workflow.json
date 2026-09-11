@@ -1,0 +1,149 @@
+{
+  "slug": "ai-agents-for-msps-first-workflow",
+  "lang": "en",
+  "cluster": "AI Agents & MSPs",
+  "title": "AI Agents for MSPs: Pick the First Workflow Without Creating Incidents",
+  "h1": "AI Agents for MSPs: Pick the First Workflow Without Creating Incidents",
+  "description": "How MSPs should choose the first AI agent workflow: intake, classify, draft, stop. Isolation, PSA/RMM gates, and Discovery $99 — no fake ticket-cut percentages.",
+  "keywords": [
+    "ai agents for msps",
+    "MSP AI agent workflow",
+    "multi-tenant AI helpdesk",
+    "PSA RMM agent automation"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 9,
+  "tags": "MSP, Agents, Helpdesk",
+  "excerpt": "The first MSP agent is a queued job with stop rules. If it can write to a customer tenant without a human gate, it is not a first workflow.",
+  "primary_keyword": "ai agents for msps",
+  "intro": [
+    "Search Console still shows <strong>ai agents for msps</strong> as a real query with almost no clicks. That is not a content gap in the abstract. It is a buyer asking whether an agent can sit on a PSA queue without becoming an incident.",
+    "Zion does not sell a packaged “AI helpdesk SKU.” The live offer is a <a href=\"/book/\">$99 AI/IT Discovery</a> that maps one workflow: the queue, the tools, the tenant boundary, and who owns exceptions. Implementation is scoped after that map exists.",
+    "If you already run an MSP desk, start with intake. Do not start with unsupervised remediations. The longer version of the operating model is in <a href=\"/blog/ai-automation-for-msps/\">AI automation for MSPs</a> and <a href=\"/blog/ai-helpdesk-automation/\">helpdesk automation</a>.",
+    "A technician should be able to answer three questions after the first week: which queue is in scope, which tool the agent is allowed to call, and what happens when confidence is low. If any of those answers is “it depends on the model,” you do not have a workflow. You have a chat window attached to production.",
+    "Most MSPs already have the ingredients: a PSA with categories, an RMM with alerts, a runbook that is half-written in someone’s head. The agent’s job is to sit on that, not to replace the technician’s judgment on irreversible work. Write the stop before you write the prompt.",
+    "A PSA category named “other” is not a workflow. Split it before you connect a model. The first month of an MSP agent is almost always taxonomy work: severity, customer, asset, and whether this is a request or an incident. Skip that and the model will sound confident while routing password resets into the network queue."
+  ],
+  "sections": [
+    {
+      "h2": "What “first workflow” actually means",
+      "paras": [
+        "A first workflow is a job an agent can finish or stop. It has a system of record (usually the PSA), a tool list, and a definition of done that a technician can audit. “Handle the helpdesk” is not a workflow. It is a slogan that hides write access.",
+        "For most MSPs the first job is the front of the queue: read the ticket, attach customer and asset context if the PSA allows it, classify severity, draft an internal note or a reply, and stop. Closing a customer-facing ticket or changing production access is later — and only with a human gate.",
+        "Run the first workflow on a single customer or a synthetic queue before you touch the rest of the tenant list. Watch for accidental cross-tenant retrieval (“similar tickets”) — that is the fastest way to turn a demo into an incident report. Isolation is cheaper to design on day one than to retrofit after a leak."
+      ],
+      "bullets": [
+        "<strong>In:</strong> classify, enrich, draft, route, page a human on severity rules.",
+        "<strong>Out until written:</strong> password resets that change identity, firewall changes, backup job edits, cross-tenant “similar ticket” lookup.",
+        "<strong>Test:</strong> can a tech see the step log and pick up the thread in under a minute?"
+      ]
+    },
+    {
+      "h2": "Isolation is the product",
+      "paras": [
+        "Multi-tenant is the constraint generic “AI for ITSM” decks skip. The agent may only call the PSA, RMM, or documentation for the customer on that ticket. Prompt history and retrieval stay inside the tenant boundary."
+      ],
+      "h3s": [
+        {
+          "h3": "Minimum controls before any write",
+          "paras": [
+            "Least privilege by default: read and draft. Writes and remote actions behind HITL. A kill switch that disables the agent without taking down the PSA. A step log you can show in a QBR."
+          ],
+          "bullets": [
+            "Per-tenant tool tokens — not one shared PSA key for every customer.",
+            "No shared memory across tenants.",
+            "Exception queue owned by a named person, not “the AI.”"
+          ]
+        }
+      ]
+    },
+    {
+      "h2": "Cost without invented savings",
+      "paras": [
+        "We will not invent a percentage of tickets deflected. Cost is two layers: model and tool usage that scales with volume, and the managed layer (design, tenant-safe integration, monitoring, exception queue). Usage should be tagged per workflow so a noisy loop is visible.",
+        "Discovery at $99 produces the map, not a retainer. See <a href=\"/plans/\">live plans</a>. The ops stack those tickets sit on is <a href=\"/managed-it-services/\">managed IT</a>."
+      ]
+    },
+    {
+      "h2": "How Discovery scopes the first agent",
+      "paras": [
+        "Book a 30-minute Google Meet via <a href=\"/book/\">/book/</a>. You leave with a first-agent sketch: queue, tools, stop rules, and a yes/no on whether consulting or a managed agent is the next track. There is no free consultation. Older “30 minute meeting” Calendly links are inactive."
+      ],
+      "bullets": [
+        "Bring one queue name and which PSA/RMM it lives in.",
+        "Bring the action you are afraid the agent might take.",
+        "If isolation cannot be written, do not build yet."
+      ]
+    },
+    {
+      "h2": "Field notes from scoping calls",
+      "paras": [
+        "A PSA category named “other” is not a workflow. Split it before you connect a model. The first month of an MSP agent is almost always taxonomy work: severity, customer, asset, and whether this is a request or an incident. Skip that and the model will sound confident while routing password resets into the network queue.",
+        "Ask the service desk which tickets they already copy-paste between tools. That glue is the agent candidate. If nobody can show you a repeated copy-paste, you do not have volume — you have a political request for “AI” on a slide.",
+        "Keep a rollback: disable the agent, leave the PSA up. Practice that rollback once before go-live. Cron jobs that cannot be paused are not automation. They are a second outage domain."
+      ]
+    },
+    {
+      "h2": "How to use this guide in Discovery",
+      "paras": [
+        "If you arrived on this page for “ai agents for msps”, the next step is not a platform RFP. Name the queue, the tool that would hurt if an agent wrote to it, and the person who can disable the flow. Bring those three to <a href=\"/book/\">Discovery at $99</a>.",
+        "Implementation, retainers, and PSA/WhatsApp/CRM wiring are scoped after the map. There is no complimentary session. Older Calendly links are inactive. Live prices sit on <a href=\"/plans/\">/plans/</a>.",
+        "Refuse a partner who needs an invented savings or ticket percentage to justify the work. A unit of work, tagged cost, and a stop rule fit on one page. If they do not, the project does not exist yet.",
+        "Zion is a Delaware IT firm with production agents on dozens of Composio toolkits. That is not a SKU catalog. The only bookable product today is the paid map. Everything else is written after — or not at all.",
+        "After the map, success is operational: a human can see the step, the stop, and pick up the thread. If that is not demonstrable, do not ship the agent — and do not publish a page that pretends the agent already exists."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Will an MSP agent close tickets without a technician?",
+      "a": "Only when the job, tools, and stop rules say so — and the first workflow almost never does. Classify, enrich, draft, and route. Closing customer-facing work or changing production access without a human gate creates incidents."
+    },
+    {
+      "q": "How do you keep tenants separate?",
+      "a": "Per-tenant context, tool permissions, and no shared prompt memory. The agent may use an approved runbook. It must not pull another customer’s tickets, credentials, or monitoring into the same step."
+    },
+    {
+      "q": "What does the $99 Discovery produce?",
+      "a": "A first-agent map: the queue, the system of record, the tool list, the approval gates, and who owns exceptions. It is not an implementation and it does not include a promised ticket-volume cut."
+    }
+  ],
+  "cta": {
+    "h2": "Map the first MSP agent — Discovery $99",
+    "p": "We map the queue, the tenant boundary, and the human gates. Then you decide whether a managed agent is the right next step."
+  },
+  "related": [
+    {
+      "href": "/blog/ai-automation-for-msps/",
+      "label": "AI automation for MSPs"
+    },
+    {
+      "href": "/blog/ai-helpdesk-automation/",
+      "label": "Helpdesk automation"
+    },
+    {
+      "href": "/blog/enterprise-ai-agent-risk-checklist/",
+      "label": "Agent risk checklist"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "msp-psa-agent-isolation-checklist",
+      "title": "PSA Agent Isolation Checklist for Multi-Tenant MSPs",
+      "angle": "Control list a NOC lead can print before connecting an agent to ConnectWise, Autotask, or Halo.",
+      "primary_keyword": "MSP PSA AI agent isolation"
+    },
+    {
+      "slug": "after-hours-msp-agent-paging-rules",
+      "title": "After-Hours MSP Agents: Capture Context, Page a Human",
+      "angle": "Severity rules and paging, not unsupervised remediations at 2 a.m.",
+      "primary_keyword": "after hours MSP AI agent"
+    },
+    {
+      "slug": "msp-agent-cost-model-usage-vs-managed-layer",
+      "title": "MSP Agent Cost Model: Usage vs the Managed Layer",
+      "angle": "How to tag model spend per queue without fake deflection percentages.",
+      "primary_keyword": "MSP AI agent cost"
+    }
+  ]
+}

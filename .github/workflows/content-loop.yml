@@ -1,0 +1,50 @@
+name: Content creation loop
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max quality posts to publish this run"
+        required: false
+        default: "2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-loop
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Quality-gate tests
+        run: python3 tests/test_content_loop.py
+
+      - name: Publish next briefs
+        run: |
+          python3 scripts/content_loop/run.py --limit "${{ github.event.inputs.limit || '2' }}" --refresh-index
+
+      - name: Commit if the loop produced pages
+        run: |
+          git config user.name "zion-content-loop"
+          git config user.email "kleber@ziontechgroup.com"
+          git add content-loop public/blog public/sitemap-blog.xml public/robots.txt public/llms.txt
+          if git diff --staged --quiet; then
+            echo "No content-loop changes"
+            exit 0
+          fi
+          git commit -m "content-loop: publish next quality SEO posts"
+          git push

@@ -32,6 +32,12 @@ Surface problems before the user asks.
 Prioritize what reduces future user steering — fix the root so they don't have to ask again.
 ```
 
+## Content loop
+```
+python3 scripts/content_loop/run.py --limit 2 --refresh-index
+```
+Follow `skills/content-loop/SKILL.md`. Quality gates reject stubs and fake ROI. Spawn satellites into `content-loop/bank.json`. Never `--model local`.
+
 ## Site Maintenance Patterns
 - New route: create `route-name/index.html` + add to `_redirects` + add to `sitemap.xml`
 - Route priority: tools/* > services/* > integrations/* > blog/*

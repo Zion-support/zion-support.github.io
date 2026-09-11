@@ -1,0 +1,12 @@
+{
+  "name": "zion-content-creation-loop",
+  "schedule": "30 7 * * 1-5",
+  "provider": "nous",
+  "model": "stepfun/step-3.7-flash:free",
+  "workdir": "REPO_ROOT",
+  "never": ["--model local"],
+  "prompt_file": "skills/content-loop/SKILL.md",
+  "docs": "docs/HERMES-CONTENT-LOOP.md",
+  "deliver": "telegram",
+  "command": "python3 scripts/content_loop/run.py --limit 2 --refresh-index"
+}

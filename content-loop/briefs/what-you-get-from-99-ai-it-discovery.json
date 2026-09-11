@@ -1,0 +1,124 @@
+{
+  "slug": "what-you-get-from-99-ai-it-discovery",
+  "lang": "en",
+  "cluster": "Commercial",
+  "title": "What You Get From a $99 AI/IT Discovery (and What You Don’t)",
+  "h1": "What You Get From a $99 AI/IT Discovery (and What You Don’t)",
+  "description": "Zion’s $99 AI/IT Discovery is a 30-minute Google Meet plus written follow-up. No free consultation, no implementation, no fake ROI. Book the live Calendly event.",
+  "keywords": [
+    "$99 AI discovery",
+    "AI IT discovery Zion",
+    "paid discovery call"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 7,
+  "tags": "Discovery, Pricing",
+  "excerpt": "Discovery is a map. It is not a free consult, not a retainer, and not a promise that an agent will run the company.",
+  "primary_keyword": "$99 AI discovery",
+  "intro": [
+    "Public 2026 AI-consulting writeups price discovery in the thousands. Zion’s live Discovery is $99 for a 30-minute Google Meet with Kleber Alcatrao. The only active Calendly event is <code>zion-tech-group-ai-it-discovery-1</code>. Older consultation links are inactive.",
+    "Pay optional Stripe first or book the slot. Either way you are buying a map, not a build. Plans: <a href=\"/plans/\">/plans/</a>. Book: <a href=\"/book/\">/book/</a>. Compare tracks: <a href=\"/blog/discovery-vs-starter-zion/\">Discovery vs Starter</a>.",
+    "Bring constraints, not a vision deck. The useful artifacts are: the queue name, the tool that would hurt, and whether anyone can disable a future agent. Vision without those three becomes a complimentary-sounding workshop we do not sell."
+  ],
+  "sections": [
+    {
+      "h2": "What the 30 minutes are for",
+      "paras": [
+        "One workflow. The system of record. The irreversible action. Whether isolation can be written. You should leave with a recommended track: stop, consulting ($499), Starter ($2,500), or a later Growth retainer — not a 40-page deck."
+      ]
+    },
+    {
+      "h2": "What Discovery is not",
+      "paras": [
+        "Not implementation. Not a free hour. Not a packaged RPA catalog. Not leftover <code>/services/*</code> URLs. Those pages are honest closers, not products. The only $99 offer is this Discovery."
+      ],
+      "bullets": [
+        "No invented ticket-deflection or cloud-savings percentage.",
+        "No obligation to buy Starter.",
+        "No access to expired CRM numbers we do not have."
+      ]
+    },
+    {
+      "h2": "How to prepare",
+      "paras": [
+        "Bring the queue name, the tool that would hurt if the agent wrote to it, and last month’s relevant invoice if cost is the issue. If you are in Brazil and the queue is WhatsApp, say so — the map changes. <a href=\"/blog/agente-de-ia-para-whatsapp-empresas/\">Agente de IA para WhatsApp</a>."
+      ]
+    },
+    {
+      "h2": "After the call",
+      "paras": [
+        "Written follow-up: first-workflow sketch, constraints, yes/no. If we should not work together, that is a successful Discovery. Stripe success currently routes through <a href=\"/success-stories/\">/success-stories/</a>."
+      ]
+    },
+    {
+      "h2": "Field notes from scoping calls",
+      "paras": [
+        "Bring constraints, not a vision deck. The useful artifacts are: the queue name, the tool that would hurt, and whether anyone can disable a future agent. Vision without those three becomes a complimentary-sounding workshop we do not sell.",
+        "If we tell you not to build yet, that is the deliverable. Paying $99 to avoid a $2,500 wrong Starter is a successful Discovery.",
+        "Credentials stay with you. We do not need production admin on the call. Screenshare the map, not the break-glass password."
+      ]
+    },
+    {
+      "h2": "How to use this guide in Discovery",
+      "paras": [
+        "If you arrived on this page for “$99 AI discovery”, the next step is not a platform RFP. Name the queue, the tool that would hurt if an agent wrote to it, and the person who can disable the flow. Bring those three to <a href=\"/book/\">Discovery at $99</a>.",
+        "Implementation, retainers, and PSA/WhatsApp/CRM wiring are scoped after the map. There is no complimentary session. Older Calendly links are inactive. Live prices sit on <a href=\"/plans/\">/plans/</a>.",
+        "Refuse a partner who needs an invented savings or ticket percentage to justify the work. A unit of work, tagged cost, and a stop rule fit on one page. If they do not, the project does not exist yet.",
+        "Zion is a Delaware IT firm with production agents on dozens of Composio toolkits. That is not a SKU catalog. The only bookable product today is the paid map. Everything else is written after — or not at all.",
+        "After the map, success is operational: a human can see the step, the stop, and pick up the thread. If that is not demonstrable, do not ship the agent — and do not publish a page that pretends the agent already exists."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a free consultation?",
+      "a": "No. Older Calendly “30 Minute Meeting” and /consultation links are inactive. The live event is paid Discovery."
+    },
+    {
+      "q": "Can I pay the $99 after the call?",
+      "a": "You can book the Meet first or pay Stripe first. The product is the same map. Implementation is always a separate scope."
+    },
+    {
+      "q": "Will you sign an NDA on the call?",
+      "a": "Say so when you book. Do not paste secrets into a form. Discovery does not require production credentials."
+    }
+  ],
+  "cta": {
+    "h2": "Book the live Discovery",
+    "p": "30 minutes, Google Meet, written follow-up. $99. No free consultation."
+  },
+  "related": [
+    {
+      "href": "/book/",
+      "label": "Book"
+    },
+    {
+      "href": "/blog/discovery-vs-starter-zion/",
+      "label": "Discovery vs Starter"
+    },
+    {
+      "href": "/blog/how-much-does-ai-consultant-cost-2026/",
+      "label": "Consultant cost 2026"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "prepare-for-zion-discovery-call",
+      "title": "How to Prepare for the Zion Discovery Call",
+      "angle": "Artifacts to bring.",
+      "primary_keyword": "prepare AI discovery call"
+    },
+    {
+      "slug": "discovery-vs-499-consulting",
+      "title": "Discovery $99 vs Consulting $499",
+      "angle": "When the longer session is worth it.",
+      "primary_keyword": "AI consulting 499 vs 99"
+    },
+    {
+      "slug": "why-zion-discovery-is-paid",
+      "title": "Why Zion Discovery Is Paid",
+      "angle": "Filter and written work.",
+      "primary_keyword": "paid discovery call AI"
+    }
+  ]
+}

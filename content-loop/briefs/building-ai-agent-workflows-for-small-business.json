@@ -1,0 +1,124 @@
+{
+  "slug": "building-ai-agent-workflows-for-small-business",
+  "lang": "en",
+  "cluster": "AI Agents",
+  "title": "Building AI Agent Workflows for Small Business Without Hiring a Platform Team",
+  "h1": "Building AI Agent Workflows for Small Business Without Hiring a Platform Team",
+  "description": "A practical path to the first AI agent workflow for small business: one job, approved tools, stop rules, and Discovery $99. Skip the platform shopping spree.",
+  "keywords": [
+    "building AI agent workflows for small business",
+    "small business AI agents",
+    "SME automation"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 8,
+  "tags": "SMB, Agents",
+  "excerpt": "Small businesses do not need an agent platform. They need one job that already happens every day, with a stop rule a owner can explain.",
+  "primary_keyword": "building AI agent workflows for small business",
+  "intro": [
+    "If you run a small company, you do not have a platform team. You have a WhatsApp thread, a spreadsheet, and a person who already does the work. An agent that cannot sit on that work with a stop rule is a chatbot with a new invoice.",
+    "Zion maps the first workflow in a <a href=\"/book/\">$99 Discovery</a>. There is no free consultation. We will not tell you the agent will “run the business.” Related: <a href=\"/blog/ai-consulting-services-for-business/\">what consulting actually delivers</a>.",
+    "Your first agent should be allowed to fail closed: draft sits in a folder the owner already checks. If the owner does not already check that folder, you added a silent queue, not automation."
+  ],
+  "sections": [
+    {
+      "h2": "Pick work that already has a definition of done",
+      "paras": [
+        "Good first jobs: classify inbound email, draft a reply from an approved script, copy a confirmed order into the spreadsheet, remind a human that a document is missing. Bad first jobs: refunds, identity changes, anything that sends money or legally binds the company without a person."
+      ],
+      "bullets": [
+        "Name the queue (inbox, WhatsApp, form).",
+        "Name the system of record (Sheet, ERP, PSA).",
+        "Name the irreversible action — and keep it human."
+      ]
+    },
+    {
+      "h2": "Tools before models",
+      "paras": [
+        "The model is the cheap part. Auth to Gmail, WhatsApp, the ERP, or the calendar is the work. If the agent cannot call the tool with a least-privilege token, you are pasting screenshots into ChatGPT. That is fine for a pilot. It is not a workflow."
+      ]
+    },
+    {
+      "h2": "A one-page operating brief",
+      "paras": [
+        "Write: trigger, tools, draft vs send, stop, owner, how to disable. If you cannot disable it without calling a vendor, do not connect production inboxes. Governance patterns: <a href=\"/blog/ai-agent-governance-enterprise/\">enterprise governance</a> still apply at SME scale — just shorter."
+      ]
+    },
+    {
+      "h2": "What you buy from Zion",
+      "paras": [
+        "Discovery maps the job. Consulting ($499) or Starter ($2,500) is only after that map. Growth retainers exist for companies that already have a first workflow in production. See <a href=\"/plans/\">plans</a>."
+      ]
+    },
+    {
+      "h2": "Field notes from scoping calls",
+      "paras": [
+        "Your first agent should be allowed to fail closed: draft sits in a folder the owner already checks. If the owner does not already check that folder, you added a silent queue, not automation.",
+        "Count how many times the same reply was sent last week. If the number is small, a snippet in the helpdesk is cheaper than an agent. Agents earn their keep on repetition plus tool calls, not on novelty.",
+        "Write the disable switch in the same password manager as the domain registrar. When a loop goes wrong on a Friday, you will not want to open a vendor ticket."
+      ]
+    },
+    {
+      "h2": "How to use this guide in Discovery",
+      "paras": [
+        "If you arrived on this page for “building AI agent workflows for small business”, the next step is not a platform RFP. Name the queue, the tool that would hurt if an agent wrote to it, and the person who can disable the flow. Bring those three to <a href=\"/book/\">Discovery at $99</a>.",
+        "Implementation, retainers, and PSA/WhatsApp/CRM wiring are scoped after the map. There is no complimentary session. Older Calendly links are inactive. Live prices sit on <a href=\"/plans/\">/plans/</a>.",
+        "Refuse a partner who needs an invented savings or ticket percentage to justify the work. A unit of work, tagged cost, and a stop rule fit on one page. If they do not, the project does not exist yet.",
+        "Zion is a Delaware IT firm with production agents on dozens of Composio toolkits. That is not a SKU catalog. The only bookable product today is the paid map. Everything else is written after — or not at all.",
+        "After the map, success is operational: a human can see the step, the stop, and pick up the thread. If that is not demonstrable, do not ship the agent — and do not publish a page that pretends the agent already exists."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do we need LangGraph, CrewAI, or a custom platform?",
+      "a": "Not for the first workflow. You need a trigger, a tool with scoped auth, a draft/send policy, and a log. Frameworks come after the job is written."
+    },
+    {
+      "q": "Can the agent talk to customers on day one?",
+      "a": "Draft, don’t send, until a human has accepted a gold set of replies. Customer-facing send is a later branch."
+    },
+    {
+      "q": "Is Discovery an implementation?",
+      "a": "No. It is a 30-minute working session plus a written follow-up. Implementation is a separate, priced scope."
+    }
+  ],
+  "cta": {
+    "h2": "Map the first SME workflow — $99",
+    "p": "Bring the inbox or the WhatsApp. We write the job, the tools, and the stop."
+  },
+  "related": [
+    {
+      "href": "/blog/ai-consulting-services-for-business/",
+      "label": "AI consulting for business"
+    },
+    {
+      "href": "/blog/agente-de-ia-para-whatsapp-empresas/",
+      "label": "Agente de IA para WhatsApp"
+    },
+    {
+      "href": "/blog/pay-vs-consulte-ai-automation/",
+      "label": "Pay vs consulte"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "small-business-agent-draft-dont-send",
+      "title": "Draft-Don’t-Send: The Default for SME Agents",
+      "angle": "Customer-facing policy.",
+      "primary_keyword": "AI agent draft don't send"
+    },
+    {
+      "slug": "connect-gmail-agent-least-privilege",
+      "title": "Connect Gmail to an Agent With Least Privilege",
+      "angle": "OAuth scopes that are not the whole mailbox.",
+      "primary_keyword": "Gmail AI agent OAuth"
+    },
+    {
+      "slug": "sme-agent-disable-switch",
+      "title": "Your SME Agent Needs a Disable Switch",
+      "angle": "Kill without calling a vendor.",
+      "primary_keyword": "disable AI agent"
+    }
+  ]
+}

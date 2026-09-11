@@ -1,0 +1,73 @@
+{
+  "site": {
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "email": "kleber@ziontechgroup.com",
+    "phone": "+1 302 464 0950",
+    "address": "364 E Main St STE 1008, Middletown, DE 19709"
+  },
+  "offers": {
+    "discovery": {
+      "name": "AI/IT Discovery",
+      "price_usd": 99,
+      "url": "/book/",
+      "stripe": "https://buy.stripe.com/3cIdRa6FO5dt0D53hm4ZG05",
+      "calendly": "https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1"
+    },
+    "consulting": {
+      "name": "Consulting",
+      "price_usd": 499,
+      "url": "/plans/",
+      "stripe": "https://buy.stripe.com/4gM14ofck0Xd1H94lq4ZG08"
+    },
+    "starter": {
+      "name": "Starter",
+      "price_usd": 2500,
+      "url": "/plans/",
+      "stripe": "https://buy.stripe.com/7sY00k7JScFV99Bf044ZG06"
+    },
+    "growth": {
+      "name": "Growth",
+      "price_usd": 8000,
+      "url": "/plans/",
+      "stripe": "https://buy.stripe.com/aFa5kEd4c21h3PhdW04ZG07"
+    }
+  },
+  "money_pages": [
+    "/book/",
+    "/discovery/",
+    "/plans/",
+    "/contact/",
+    "/managed-it-services/",
+    "/ai-consulting-services/",
+    "/autonomous-ai-agents/"
+  ],
+  "quality_gates": {
+    "min_words": 700,
+    "min_sections": 4,
+    "min_faqs": 3,
+    "min_internal_links": 3,
+    "min_description": 110,
+    "max_description": 165,
+    "require_canonical": true,
+    "require_schema": true,
+    "require_cta_book": true,
+    "forbid_substrings": [
+      "temporarily unavailable",
+      "lorem ipsum",
+      "guaranteed ROI",
+      "reduce tickets by",
+      "save 40%",
+      "save 60%",
+      "book a free consultation",
+      "schedule a free consultation",
+      "complimentary consultation today"
+    ]
+  },
+  "loop": {
+    "daily_limit": 2,
+    "satellites_per_publish": 3,
+    "max_queue": 240,
+    "index_featured": 24
+  }
+}

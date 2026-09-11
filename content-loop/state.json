@@ -1,0 +1,260 @@
+{
+  "published": [
+    "adaptive-ai-agents-for-business",
+    "agente-de-ia-para-vendas-pme",
+    "agente-de-ia-para-whatsapp-empresas",
+    "ai-agents-for-msps-first-workflow",
+    "ai-finops-for-growing-companies",
+    "building-ai-agent-workflows-for-small-business",
+    "cloud-cost-optimization-for-growing-startups",
+    "composio-vs-zapier-for-ai-agents-2026",
+    "empresa-de-ti-terceirizada-pme-brasil",
+    "hermes-agent-uninterrupted-ops-loop",
+    "measuring-ai-roi-frameworks-for-enterprises",
+    "what-you-get-from-99-ai-it-discovery",
+    "zero-trust-for-smbs-implementation-checklist"
+  ],
+  "queue_spawned": 0,
+  "runs": [
+    {
+      "at": "2026-09-11T22:35:38.039291+00:00",
+      "published": [],
+      "rejected": [
+        {
+          "slug": "adaptive-ai-agents-for-business",
+          "issues": [
+            "word_count 503 < 700"
+          ]
+        },
+        {
+          "slug": "agente-de-ia-para-vendas-pme",
+          "issues": [
+            "word_count 379 < 700"
+          ]
+        },
+        {
+          "slug": "agente-de-ia-para-whatsapp-empresas",
+          "issues": [
+            "word_count 509 < 700"
+          ]
+        },
+        {
+          "slug": "ai-agents-for-msps-first-workflow",
+          "issues": [
+            "forbidden copy: free consultation"
+          ]
+        },
+        {
+          "slug": "ai-finops-for-growing-companies",
+          "issues": [
+            "word_count 551 < 700"
+          ]
+        },
+        {
+          "slug": "building-ai-agent-workflows-for-small-business",
+          "issues": [
+            "word_count 495 < 700",
+            "forbidden copy: free consultation"
+          ]
+        },
+        {
+          "slug": "cloud-cost-optimization-for-growing-startups",
+          "issues": [
+            "word_count 448 < 700"
+          ]
+        },
+        {
+          "slug": "composio-vs-zapier-for-ai-agents-2026",
+          "issues": [
+            "word_count 444 < 700"
+          ]
+        },
+        {
+          "slug": "empresa-de-ti-terceirizada-pme-brasil",
+          "issues": [
+            "word_count 421 < 700"
+          ]
+        },
+        {
+          "slug": "hermes-agent-uninterrupted-ops-loop",
+          "issues": [
+            "word_count 516 < 700",
+            "stub marker: Not a packaged SKU",
+            "forbidden copy: Not a packaged SKU",
+            "forbidden copy: free consultation"
+          ]
+        },
+        {
+          "slug": "measuring-ai-roi-frameworks-for-enterprises",
+          "issues": [
+            "word_count 382 < 700"
+          ]
+        },
+        {
+          "slug": "what-you-get-from-99-ai-it-discovery",
+          "issues": [
+            "word_count 450 < 700",
+            "forbidden copy: free consultation"
+          ]
+        }
+      ],
+      "quality_posts": 22
+    },
+    {
+      "at": "2026-09-11T22:37:05.998257+00:00",
+      "published": [
+        "ai-agents-for-msps-first-workflow",
+        "ai-finops-for-growing-companies"
+      ],
+      "rejected": [
+        {
+          "slug": "adaptive-ai-agents-for-business",
+          "issues": [
+            "word_count 628 < 700"
+          ]
+        },
+        {
+          "slug": "agente-de-ia-para-vendas-pme",
+          "issues": [
+            "word_count 501 < 700"
+          ]
+        },
+        {
+          "slug": "agente-de-ia-para-whatsapp-empresas",
+          "issues": [
+            "word_count 650 < 700"
+          ]
+        },
+        {
+          "slug": "building-ai-agent-workflows-for-small-business",
+          "issues": [
+            "word_count 636 < 700"
+          ]
+        },
+        {
+          "slug": "cloud-cost-optimization-for-growing-startups",
+          "issues": [
+            "word_count 587 < 700"
+          ]
+        },
+        {
+          "slug": "composio-vs-zapier-for-ai-agents-2026",
+          "issues": [
+            "word_count 580 < 700"
+          ]
+        },
+        {
+          "slug": "empresa-de-ti-terceirizada-pme-brasil",
+          "issues": [
+            "word_count 540 < 700"
+          ]
+        },
+        {
+          "slug": "hermes-agent-uninterrupted-ops-loop",
+          "issues": [
+            "word_count 646 < 700"
+          ]
+        },
+        {
+          "slug": "measuring-ai-roi-frameworks-for-enterprises",
+          "issues": [
+            "word_count 502 < 700"
+          ]
+        },
+        {
+          "slug": "what-you-get-from-99-ai-it-discovery",
+          "issues": [
+            "word_count 579 < 700"
+          ]
+        },
+        {
+          "slug": "zero-trust-for-smbs-implementation-checklist",
+          "issues": [
+            "word_count 569 < 700"
+          ]
+        }
+      ],
+      "quality_posts": 24
+    },
+    {
+      "at": "2026-09-11T22:37:32.690801+00:00",
+      "published": [
+        "adaptive-ai-agents-for-business",
+        "agente-de-ia-para-whatsapp-empresas",
+        "building-ai-agent-workflows-for-small-business",
+        "cloud-cost-optimization-for-growing-startups",
+        "composio-vs-zapier-for-ai-agents-2026",
+        "empresa-de-ti-terceirizada-pme-brasil",
+        "hermes-agent-uninterrupted-ops-loop",
+        "what-you-get-from-99-ai-it-discovery",
+        "zero-trust-for-smbs-implementation-checklist"
+      ],
+      "rejected": [
+        {
+          "slug": "agente-de-ia-para-vendas-pme",
+          "issues": [
+            "word_count 662 < 700"
+          ]
+        },
+        {
+          "slug": "measuring-ai-roi-frameworks-for-enterprises",
+          "issues": [
+            "word_count 660 < 700"
+          ]
+        }
+      ],
+      "quality_posts": 33
+    },
+    {
+      "at": "2026-09-11T22:38:40.904971+00:00",
+      "published": [
+        "adaptive-ai-agents-for-business",
+        "agente-de-ia-para-whatsapp-empresas",
+        "ai-agents-for-msps-first-workflow",
+        "ai-finops-for-growing-companies",
+        "building-ai-agent-workflows-for-small-business",
+        "cloud-cost-optimization-for-growing-startups",
+        "composio-vs-zapier-for-ai-agents-2026",
+        "empresa-de-ti-terceirizada-pme-brasil",
+        "hermes-agent-uninterrupted-ops-loop",
+        "what-you-get-from-99-ai-it-discovery",
+        "zero-trust-for-smbs-implementation-checklist"
+      ],
+      "rejected": [
+        {
+          "slug": "agente-de-ia-para-vendas-pme",
+          "issues": [
+            "word_count 695 < 700"
+          ]
+        },
+        {
+          "slug": "measuring-ai-roi-frameworks-for-enterprises",
+          "issues": [
+            "word_count 691 < 700"
+          ]
+        }
+      ],
+      "quality_posts": 33
+    },
+    {
+      "at": "2026-09-11T22:39:00.991273+00:00",
+      "published": [
+        "adaptive-ai-agents-for-business",
+        "agente-de-ia-para-vendas-pme",
+        "agente-de-ia-para-whatsapp-empresas",
+        "ai-agents-for-msps-first-workflow",
+        "ai-finops-for-growing-companies",
+        "building-ai-agent-workflows-for-small-business",
+        "cloud-cost-optimization-for-growing-startups",
+        "composio-vs-zapier-for-ai-agents-2026",
+        "empresa-de-ti-terceirizada-pme-brasil",
+        "hermes-agent-uninterrupted-ops-loop",
+        "measuring-ai-roi-frameworks-for-enterprises",
+        "what-you-get-from-99-ai-it-discovery",
+        "zero-trust-for-smbs-implementation-checklist"
+      ],
+      "rejected": [],
+      "quality_posts": 35
+    }
+  ]
+}

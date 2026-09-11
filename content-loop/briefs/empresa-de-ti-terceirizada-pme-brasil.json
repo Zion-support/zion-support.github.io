@@ -1,0 +1,127 @@
+{
+  "slug": "empresa-de-ti-terceirizada-pme-brasil",
+  "lang": "pt-BR",
+  "cluster": "Brazilian Market (PT-BR)",
+  "title": "Empresa de TI terceirizada para PME: MSP, co-managed e o primeiro SLA",
+  "h1": "Empresa de TI terceirizada para PME: MSP, co-managed e o primeiro SLA",
+  "description": "Como uma PME brasileira escolhe empresa de TI terceirizada em 2026: MSP vs co-managed, SLA honesto, LGPD. Discovery US$ 99 — sem consulta grátis.",
+  "keywords": [
+    "empresa de TI terceirizada",
+    "MSP para PME",
+    "TI terceirizada Brasil"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 9,
+  "tags": "MSP, PME, Brasil",
+  "excerpt": "Terceirizar TI não é “alguém no WhatsApp.” É um SLA, um dono da identidade e um caminho para desligar o contrato.",
+  "primary_keyword": "empresa de TI terceirizada",
+  "intro": [
+    "PME brasileira busca empresa de TI terceirizada quando o sócio virou helpdesk. O mercado oferece MSP, co-managed, field service e vCISO no mesmo folder. Você precisa de um modelo, não de um catálogo.",
+    "A Zion não opera field service nacional. Mapeamos o que você realmente precisa — desk, cloud, identidade, automação com agentes — no <a href=\"/book/\">Discovery de US$ 99</a>. Comparação em inglês: <a href=\"/blog/co-managed-it-vs-msp/\">co-managed vs MSP</a>.",
+    "Peça o último teste de restore, não o slide de backup. PME perde dados em ransomware com backup “verde” que nunca restaurou o arquivo que importa."
+  ],
+  "sections": [
+    {
+      "h2": "MSP vs co-managed",
+      "paras": [
+        "MSP assume operação com SLA. Co-managed divide: você fica com prioridade de negócio, o parceiro fica com patch, backup, identidade. PME com um analista interno quase sempre deveria ser co-managed, não “substitui o rapaz.”"
+      ]
+    },
+    {
+      "h2": "SLA que dá para auditar",
+      "paras": [
+        "Tempo de resposta por severidade, janela de patch, RPO/RTO de backup, quem é o admin do tenant Microsoft/Google. Multa no contrato sem métrica mensurável é teatro."
+      ],
+      "bullets": [
+        "Quem tem a senha break-glass?",
+        "O backup foi restaurado de verdade no último trimestre?",
+        "O agente de IA, se existir, tem kill switch?"
+      ]
+    },
+    {
+      "h2": "LGPD e suboperadores",
+      "paras": [
+        "Terceirizar TI é transferir operação, não responsabilidade. Lista de suboperadores, DPA, e o que acontece com o histórico de tickets no encerramento. Sem isso, não assine."
+      ]
+    },
+    {
+      "h2": "Onde a Zion entra",
+      "paras": [
+        "Discovery esclarece se o próximo passo é consultoria, um primeiro fluxo de agente, ou um modelo gerenciado. Preços: <a href=\"/plans/\">/plans/</a>. Managed IT em inglês: <a href=\"/blog/managed-it-services-pricing/\">pricing</a>."
+      ]
+    },
+    {
+      "h2": "Notas de campo",
+      "paras": [
+        "Peça o último teste de restore, não o slide de backup. PME perde dados em ransomware com backup “verde” que nunca restaurou o arquivo que importa.",
+        "Pergunte quem é o admin do tenant Microsoft 365 no dia da rescisão. Se a resposta for “a gente vê depois,” você está comprando um sequestro suave de identidade.",
+        "Field service nacional e agente de IA não são o mesmo produto. Se você precisa de visita na loja, diga isso no Discovery. Forçar automação em cima de cabo solto não reduz chamado."
+      ]
+    },
+    {
+      "h2": "Como usar este guia no Discovery",
+      "paras": [
+        "Se você chegou aqui buscando “empresa de TI terceirizada”, o próximo passo não é um RFP de plataforma. É nomear a fila, a ferramenta que dói se o agente escrever nela, e a pessoa que desliga o fluxo. Traga esses três itens para o <a href=\"/book/\">Discovery de US$ 99</a>.",
+        "Implementação, retainer e integração com WhatsApp, CRM ou PSA são escopos depois do mapa. Não há sessão gratuita. Links antigos de Calendly estão inativos. Preços vivos ficam em <a href=\"/plans/\">/plans/</a>.",
+        "Recuse qualquer parceiro que precise inventar percentual de economia ou de tickets para justificar o trabalho. Unidade de trabalho, custo etiquetado e regra de parada cabem em uma página. Se não cabem, o projeto ainda não existe.",
+        "A Zion é uma firma de TI em Delaware com agentes em produção em dezenas de toolkits Composio. Isso não vira catálogo de SKU. O único produto agendável hoje é o mapa pago. O restante se escreve depois, ou não se escreve.",
+        "Depois do mapa, o critério de sucesso é operacional: o humano vê o passo, o stop, e retoma o fio. Se isso não for demonstrável, não publique o agente — e não publique a página fingindo que o agente já existe."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "A Zion substitui um MSP com técnico nas capitais?",
+      "a": "Não. Não vendemos field service nacional. Se você precisa de visita presencial, o Discovery pode dizer isso com clareza em vez de forçar um agente."
+    },
+    {
+      "q": "Consulta de 30 minutos é grátis?",
+      "a": "Não. O evento ativo no Calendly é o Discovery pago. Links antigos estão inativos."
+    },
+    {
+      "q": "Dá para começar só com backup e identidade?",
+      "a": "Sim, e costuma ser o primeiro SLA honesto. Automação com agentes vem depois da casa mínima."
+    }
+  ],
+  "cta": {
+    "h2": "Mapear o modelo — US$ 99",
+    "p": "MSP, co-managed ou só o primeiro SLA. Escrevemos o que você realmente precisa."
+  },
+  "related": [
+    {
+      "href": "/blog/co-managed-it-vs-msp/",
+      "label": "Co-managed vs MSP"
+    },
+    {
+      "href": "/blog/managed-it-for-ai-first-companies/",
+      "label": "Managed IT for AI-first"
+    },
+    {
+      "href": "/blog/zero-trust-for-smbs-implementation-checklist/",
+      "label": "Zero Trust SMB"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "sla-helpdesk-pme-brasil",
+      "title": "SLA de helpdesk que uma PME consegue medir",
+      "angle": "Severidade e relógio.",
+      "primary_keyword": "SLA helpdesk PME",
+      "lang": "pt-BR"
+    },
+    {
+      "slug": "dpa-msp-lgpd-encerramento",
+      "title": "DPA e encerramento com MSP",
+      "angle": "Tickets e backups na saída.",
+      "primary_keyword": "DPA MSP LGPD",
+      "lang": "pt-BR"
+    },
+    {
+      "slug": "co-managed-com-um-analista-interno",
+      "title": "Co-managed quando você já tem um analista",
+      "angle": "Divisão de responsabilidades.",
+      "primary_keyword": "co-managed TI PME",
+      "lang": "pt-BR"
+    }
+  ]
+}

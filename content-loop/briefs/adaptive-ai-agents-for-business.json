@@ -1,0 +1,125 @@
+{
+  "slug": "adaptive-ai-agents-for-business",
+  "lang": "en",
+  "cluster": "AI Agents",
+  "title": "Adaptive AI Agents for Business: Change the Workflow, Not the Goal",
+  "h1": "Adaptive AI Agents for Business: Change the Workflow, Not the Goal",
+  "description": "Adaptive AI agents for business should change steps when the job changes — with stop rules, evals, and a human owner. Map the first agent with Discovery $99.",
+  "keywords": [
+    "adaptive ai agents for business",
+    "adaptive agents",
+    "agent evaluation",
+    "business AI agents"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 8,
+  "tags": "Agents, Governance",
+  "excerpt": "Adaptive does not mean unsupervised. It means the agent can pick the next approved step — and stop when the map ends.",
+  "primary_keyword": "adaptive ai agents for business",
+  "intro": [
+    "“Adaptive AI agents for business” shows up in search with almost no useful landing. Most pages treat adaptive as a personality: the bot that “learns your company.” That is how you get prompt drift and a silent policy change.",
+    "An adaptive agent is allowed to choose among written steps when inputs change. It is not allowed to invent a new write to production because the last ticket looked similar. Product detail: <a href=\"/autonomous-ai-agents/\">autonomous AI agents</a>. Risk list: <a href=\"/blog/enterprise-ai-agent-risk-checklist/\">enterprise agent risk checklist</a>.",
+    "Draw the graph on one page before any framework. Boxes are tools. Diamonds are branches that already have an owner. If you need a second page, the first workflow is too big."
+  ],
+  "sections": [
+    {
+      "h2": "Adaptive vs autonomous vs chatbot",
+      "paras": [
+        "A chatbot answers. An autonomous agent takes a job, uses tools, and stops. Adaptive means the next tool call can depend on what the last tool returned — still inside a graph you can draw on a whiteboard."
+      ],
+      "bullets": [
+        "Chatbot: retrieve and reply. No production writes.",
+        "Scripted agent: fixed sequence. Easy to audit, brittle when the ticket is missing a field.",
+        "Adaptive agent: branches that are pre-approved. Missing branch → escalate."
+      ]
+    },
+    {
+      "h2": "Where adaptation earns its keep",
+      "paras": [
+        "Intake forms that are incomplete. Vendors that return three different error shapes. Languages on the same queue. The agent should request the missing field, pick the parser that matched, or route to a human — not “figure it out.”"
+      ]
+    },
+    {
+      "h2": "Evals before you let it branch",
+      "paras": [
+        "If you cannot replay last week’s tickets through the graph and see where it would have branched, you do not have an adaptive agent. You have a prompt. Keep a gold set. Change the graph in version control. See <a href=\"/blog/ai-agent-governance-enterprise/\">agent governance</a>."
+      ]
+    },
+    {
+      "h2": "Commercial path",
+      "paras": [
+        "Discovery ($99) maps one job and whether any branch is justified. We will not promise that the agent “learns” your business in a week. Book via <a href=\"/book/\">/book/</a>. Plans: <a href=\"/plans/\">/plans/</a>. Consulting context: <a href=\"/ai-consulting-services/\">AI consulting services</a>."
+      ]
+    },
+    {
+      "h2": "Field notes from scoping calls",
+      "paras": [
+        "Draw the graph on one page before any framework. Boxes are tools. Diamonds are branches that already have an owner. If you need a second page, the first workflow is too big.",
+        "Adaptation that rewrites the graph from production traces without review is just unsupervised policy change. Keep the gold set in git. Promote a new branch the same way you promote code.",
+        "Language switching, missing fields, and vendor error shapes are legitimate adaptive cases. Refunds, identity, and wire transfers are not. Write that list on the wall."
+      ]
+    },
+    {
+      "h2": "How to use this guide in Discovery",
+      "paras": [
+        "If you arrived on this page for “adaptive ai agents for business”, the next step is not a platform RFP. Name the queue, the tool that would hurt if an agent wrote to it, and the person who can disable the flow. Bring those three to <a href=\"/book/\">Discovery at $99</a>.",
+        "Implementation, retainers, and PSA/WhatsApp/CRM wiring are scoped after the map. There is no complimentary session. Older Calendly links are inactive. Live prices sit on <a href=\"/plans/\">/plans/</a>.",
+        "Refuse a partner who needs an invented savings or ticket percentage to justify the work. A unit of work, tagged cost, and a stop rule fit on one page. If they do not, the project does not exist yet.",
+        "Zion is a Delaware IT firm with production agents on dozens of Composio toolkits. That is not a SKU catalog. The only bookable product today is the paid map. Everything else is written after — or not at all.",
+        "After the map, success is operational: a human can see the step, the stop, and pick up the thread. If that is not demonstrable, do not ship the agent — and do not publish a page that pretends the agent already exists."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does adaptive mean the agent trains on our data overnight?",
+      "a": "Not in a first deployment. Adaptation here is branching among approved steps. Weight updates, fine-tunes, or memory across customers are separate projects with their own isolation rules."
+    },
+    {
+      "q": "When should a branch escalate instead of continuing?",
+      "a": "When the next tool is a write, when confidence is below the written threshold, when the tenant is unknown, or when the gold-set eval for that branch is missing."
+    },
+    {
+      "q": "What do we walk out of Discovery with?",
+      "a": "A one-page graph: start, tools, branches, stop, owner. Then a yes/no on whether to implement."
+    }
+  ],
+  "cta": {
+    "h2": "Draw the first graph — Discovery $99",
+    "p": "We write the branches and the stops. Learning later is optional. Isolation is not."
+  },
+  "related": [
+    {
+      "href": "/blog/autonomous-ai-agents-for-business/",
+      "label": "Autonomous agents for business"
+    },
+    {
+      "href": "/blog/ai-agent-governance-enterprise/",
+      "label": "Agent governance"
+    },
+    {
+      "href": "/blog/enterprise-ai-agent-risk-checklist/",
+      "label": "Risk checklist"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "agent-eval-gold-set-for-smes",
+      "title": "Build a Gold-Set Eval for SME Agents",
+      "angle": "Replay last week’s tickets.",
+      "primary_keyword": "AI agent evaluation gold set"
+    },
+    {
+      "slug": "when-agents-should-not-adapt",
+      "title": "When Business Agents Should Not Adapt",
+      "angle": "Writes, identity, payments.",
+      "primary_keyword": "agent stop rules"
+    },
+    {
+      "slug": "adaptive-agents-vs-rpa",
+      "title": "Adaptive Agents vs RPA: Different Failure Modes",
+      "angle": "Brittleness vs silent drift.",
+      "primary_keyword": "adaptive agents vs RPA"
+    }
+  ]
+}

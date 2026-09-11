@@ -1,0 +1,120 @@
+{
+  "slug": "measuring-ai-roi-frameworks-for-enterprises",
+  "lang": "en",
+  "cluster": "Digital Transformation",
+  "title": "Measuring AI ROI: A Framework That Survives a Board Packet",
+  "h1": "Measuring AI ROI: A Framework That Survives a Board Packet",
+  "description": "Measure AI ROI with a unit of work, cost tags, and a human baseline — not a vendor percentage. Framework for enterprises, then Discovery $99 to map the first metric.",
+  "keywords": [
+    "measuring AI ROI",
+    "AI ROI framework enterprises",
+    "AI business case"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 8,
+  "tags": "ROI, Board, AI",
+  "excerpt": "AI ROI is unit cost versus a human baseline you already trust. If you cannot name the unit, you do not have ROI. You have a demo.",
+  "primary_keyword": "measuring AI ROI",
+  "intro": [
+    "Boards are done with transformation decks. They want the unit: cost per ticket classified, per contract extracted, per overnight batch — against the human baseline and the new model invoice.",
+    "Zion will not invent a return percentage. We will map the first metric in <a href=\"/book/\">Discovery $99</a>. Longer case writeup: <a href=\"/blog/ai-consulting-roi-board/\">ROI for the board</a> and <a href=\"/blog/ai-roi-calculator-business-case/\">ROI calculator</a>.",
+    "Pick a sample size you can actually label: fifty tickets, twenty contracts, one overnight batch window. A year of unlabelled history is not a baseline. It is a pile."
+  ],
+  "sections": [
+    {
+      "h2": "Name the unit before the model",
+      "paras": [
+        "If the workflow is “customer support,” you cannot measure it. If the workflow is “classify severity and draft the first internal note,” you can count. Pair that count with tagged usage. <a href=\"/blog/ai-finops-for-growing-companies/\">AI FinOps</a>."
+      ]
+    },
+    {
+      "h2": "Baseline without theater",
+      "paras": [
+        "Sample last month’s queue. Time-to-first-response, error rate, rework. Do not use a vendor’s “industry average.” If you do not have the sample, Discovery’s job is to say so."
+      ]
+    },
+    {
+      "h2": "Costs the slide forgets",
+      "paras": [
+        "Eval traffic, retries, human exception queue, integration auth, and the week you pause because OAuth expired. Those belong in the denominator. Governance: <a href=\"/blog/ai-agent-governance-enterprise/\">agent governance</a>."
+      ]
+    },
+    {
+      "h2": "What goes in the packet",
+      "paras": [
+        "One workflow, unit, baseline, cost tags, stop rules, decision: scale, iterate, or kill. Not a five-year NPV with a made-up adoption curve."
+      ]
+    },
+    {
+      "h2": "Field notes from scoping calls",
+      "paras": [
+        "Pick a sample size you can actually label: fifty tickets, twenty contracts, one overnight batch window. A year of unlabelled history is not a baseline. It is a pile.",
+        "Put exception-queue hours in the denominator. If a human still touches every item, you bought a draft assistant. Price it like one.",
+        "Kill criteria belong in the packet: error rate, cost per unit, or time-to-first-response worse than baseline for two consecutive weeks. Without kill criteria, the pilot cannot fail — and therefore cannot succeed.",
+        "If two departments cannot agree on the unit, you do not have an ROI problem. You have a product-definition problem. Discovery should say that out loud before anyone buys GPUs."
+      ]
+    },
+    {
+      "h2": "How to use this guide in Discovery",
+      "paras": [
+        "If you arrived on this page for “measuring AI ROI”, the next step is not a platform RFP. Name the queue, the tool that would hurt if an agent wrote to it, and the person who can disable the flow. Bring those three to <a href=\"/book/\">Discovery at $99</a>.",
+        "Implementation, retainers, and PSA/WhatsApp/CRM wiring are scoped after the map. There is no complimentary session. Older Calendly links are inactive. Live prices sit on <a href=\"/plans/\">/plans/</a>.",
+        "Refuse a partner who needs an invented savings or ticket percentage to justify the work. A unit of work, tagged cost, and a stop rule fit on one page. If they do not, the project does not exist yet.",
+        "Zion is a Delaware IT firm with production agents on dozens of Composio toolkits. That is not a SKU catalog. The only bookable product today is the paid map. Everything else is written after — or not at all.",
+        "After the map, success is operational: a human can see the step, the stop, and pick up the thread. If that is not demonstrable, do not ship the agent — and do not publish a page that pretends the agent already exists."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can you calculate ROI on the Discovery call?",
+      "a": "We can sketch the unit and whether data exists. A board-ready number needs the sample and the invoice. Discovery does not include a full model."
+    },
+    {
+      "q": "What if the baseline is embarrassing?",
+      "a": "Then that is the finding. Shipping an agent on top of an unmeasured queue just automates the mess."
+    },
+    {
+      "q": "Is there a free ROI workshop?",
+      "a": "No. Paid Discovery is the entry. Implementation and retainers are separate."
+    }
+  ],
+  "cta": {
+    "h2": "Map the first metric — $99",
+    "p": "Bring the queue sample and the invoice if you have them. We write the unit."
+  },
+  "related": [
+    {
+      "href": "/blog/ai-consulting-roi-board/",
+      "label": "ROI for the board"
+    },
+    {
+      "href": "/blog/ai-roi-calculator-business-case/",
+      "label": "ROI calculator"
+    },
+    {
+      "href": "/blog/how-much-does-ai-consultant-cost-2026/",
+      "label": "Consultant cost"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "ai-roi-unit-of-work-examples",
+      "title": "AI ROI Units of Work You Can Actually Count",
+      "angle": "Tickets, docs, batches.",
+      "primary_keyword": "AI ROI unit of work"
+    },
+    {
+      "slug": "include-exception-queue-in-ai-roi",
+      "title": "Put the Exception Queue in the ROI Denominator",
+      "angle": "Hidden human cost.",
+      "primary_keyword": "AI exception queue cost"
+    },
+    {
+      "slug": "kill-criteria-for-ai-pilots",
+      "title": "Kill Criteria for AI Pilots",
+      "angle": "When to stop.",
+      "primary_keyword": "AI pilot kill criteria"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "ai-finops-for-growing-companies",
+  "lang": "en",
+  "cluster": "FinOps & Cloud",
+  "title": "AI FinOps for Growing Companies: Govern Model Spend Before It Surprises Finance",
+  "h1": "AI FinOps for Growing Companies: Govern Model Spend Before It Surprises Finance",
+  "description": "AI FinOps for growing companies: tag model and cloud spend, kill noisy loops, and map the first control with Discovery $99. No invented savings percentages.",
+  "keywords": [
+    "ai finops",
+    "GenAI cost optimization",
+    "LLM spend governance",
+    "cloud cost AI workloads"
+  ],
+  "date": "2026-09-11",
+  "read_minutes": 8,
+  "tags": "FinOps, GenAI, Cloud",
+  "excerpt": "AI FinOps is tagging, stop rules, and a person who owns the bill — not a dashboard that promises a percentage saved.",
+  "primary_keyword": "ai finops",
+  "intro": [
+    "Google already shows impressions for <strong>ai finops</strong> on this domain. Buyers are not looking for another cloud-waste infographic. They are looking for who owns model invoices when a loop retries the same context on every ticket update.",
+    "Zion’s live commercial path is still <a href=\"/book/\">Discovery at $99</a>. We do not quote a fake hours-saved figure or a guaranteed cloud reduction. We map which workloads are in scope, how usage will be tagged, and what stays human. Deeper cost design lives in <a href=\"/blog/genai-cost-optimization/\">GenAI cost optimization</a> and <a href=\"/blog/finops-consulting-services/\">FinOps consulting</a>.",
+    "If finance cannot see which workflow caused yesterday’s spike, the model is not the problem. The missing dimension is. Tagging is a design choice: keys, projects, customer ids, environment. Without that, every optimization meeting becomes a guess.",
+    "Growing companies also confuse eval spend with production spend. The gold set that replays last week’s tickets should live on a separate key. Otherwise a well-meaning engineer can 10× the bill while “improving quality” and nobody can prove it.",
+    "Put a daily cap on the production key that is slightly above last week’s p95. Caps are not punishment. They are how you notice a retry storm at 2 a.m. instead of on the credit-card statement."
+  ],
+  "sections": [
+    {
+      "h2": "Two bills, one owner",
+      "paras": [
+        "Growing companies usually discover AI cost as two invoices that nobody reconciled: cloud (GPU, egress, logging) and model/API usage. If those sit on a shared key, finance sees a blob. Engineering sees a feature. Nobody can kill the noisy path."
+      ],
+      "bullets": [
+        "Tag by workflow, environment, and customer — not one key for “the AI project.”",
+        "Cap retries and context window by default. Chatty agents are a cost bug.",
+        "Separate eval spend from production spend so experiments cannot hide in prod."
+      ]
+    },
+    {
+      "h2": "What to measure before you optimize",
+      "paras": [
+        "Measure unit cost against an operational unit you already trust: per ticket classified, per document extracted, per overnight batch. If you cannot name the unit, you do not have a FinOps problem yet. You have an undefined product.",
+        "Cloud waste still matters — idle GPU, unattached disks, log ingestion from debug flags left on. Treat that as classic FinOps. Model spend is a new line, not a replacement."
+      ]
+    },
+    {
+      "h2": "Controls that survive the first month",
+      "paras": [
+        "Budgets without a kill switch are slideshows. The first controls are boring: per-workflow keys, daily spend alerts, a named owner, and a rule that a new agent cannot go to production without a cost tag. See also <a href=\"/blog/genai-finops-at-scale/\">GenAI FinOps at scale</a>."
+      ]
+    },
+    {
+      "h2": "Discovery path",
+      "paras": [
+        "Bring last month’s model invoice (or the shared key statement) and one production workflow. Discovery maps what to tag first and whether consulting or a Starter implementation is next. Prices: <a href=\"/plans/\">/plans/</a>. Book: <a href=\"/book/\">/book/</a>."
+      ]
+    },
+    {
+      "h2": "Field notes from scoping calls",
+      "paras": [
+        "Put a daily cap on the production key that is slightly above last week’s p95. Caps are not punishment. They are how you notice a retry storm at 2 a.m. instead of on the credit-card statement.",
+        "If you use more than one model vendor, normalize the unit to tokens or to workflow completions — not to “calls.” A call that stuffed the entire ticket history into context is not the same product as a classify-only call.",
+        "Finance should see a line for eval/replay separate from serving. Otherwise every quality improvement looks like a production regression in the bill, and teams stop measuring."
+      ]
+    },
+    {
+      "h2": "How to use this guide in Discovery",
+      "paras": [
+        "If you arrived on this page for “ai finops”, the next step is not a platform RFP. Name the queue, the tool that would hurt if an agent wrote to it, and the person who can disable the flow. Bring those three to <a href=\"/book/\">Discovery at $99</a>.",
+        "Implementation, retainers, and PSA/WhatsApp/CRM wiring are scoped after the map. There is no complimentary session. Older Calendly links are inactive. Live prices sit on <a href=\"/plans/\">/plans/</a>.",
+        "Refuse a partner who needs an invented savings or ticket percentage to justify the work. A unit of work, tagged cost, and a stop rule fit on one page. If they do not, the project does not exist yet.",
+        "Zion is a Delaware IT firm with production agents on dozens of Composio toolkits. That is not a SKU catalog. The only bookable product today is the paid map. Everything else is written after — or not at all.",
+        "After the map, success is operational: a human can see the step, the stop, and pick up the thread. If that is not demonstrable, do not ship the agent — and do not publish a page that pretends the agent already exists."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is AI FinOps different from cloud FinOps?",
+      "a": "Same discipline, extra invoice. Cloud FinOps still covers compute, storage, and egress. AI FinOps adds model/API usage, eval traffic, and agent loops that can retry without a human noticing."
+    },
+    {
+      "q": "Can you promise a percentage saved?",
+      "a": "No. Anyone quoting a guaranteed cut before seeing your keys, retries, and workloads is selling a slide. We map tags, caps, and owners first."
+    },
+    {
+      "q": "What does Discovery include?",
+      "a": "A 30-minute working session plus a written follow-up: which workflow to tag first, what to cap, and whether to proceed. It is $99. It is not an implementation."
+    }
+  ],
+  "cta": {
+    "h2": "Map the first cost control — Discovery $99",
+    "p": "Bring the invoice. We map tags, caps, and the owner of the bill."
+  },
+  "related": [
+    {
+      "href": "/blog/genai-cost-optimization/",
+      "label": "GenAI cost optimization"
+    },
+    {
+      "href": "/blog/finops-consulting-services/",
+      "label": "FinOps consulting"
+    },
+    {
+      "href": "/blog/cloud-cost-optimization-for-growing-startups/",
+      "label": "Startup cloud cost"
+    }
+  ],
+  "satellites": [
+    {
+      "slug": "tag-llm-spend-per-workflow",
+      "title": "How to Tag LLM Spend Per Workflow",
+      "angle": "Key layout and naming so finance can see noisy agents.",
+      "primary_keyword": "tag LLM spend per workflow"
+    },
+    {
+      "slug": "kill-noisy-agent-loops-finops",
+      "title": "Kill Noisy Agent Loops Before They Become the Bill",
+      "angle": "Retry caps and context-window defaults.",
+      "primary_keyword": "agent loop cost control"
+    },
+    {
+      "slug": "ai-finops-for-msps",
+      "title": "AI FinOps for MSPs: Pass Through Usage Without Surprising Tenants",
+      "angle": "Per-tenant usage tags on a managed desk.",
+      "primary_keyword": "AI FinOps MSP"
+    }
+  ]
+}
