@@ -1,0 +1,118 @@
+{
+  "updated": "2026-09-11",
+  "currency": "USD",
+  "livemode": true,
+  "category": "autonomous-agents",
+  "success_base": "https://ziontechgroup.com/contact/?paid=",
+  "hub": "/autonomous-agent-services/",
+  "skus": [
+    {
+      "id": "agent-install-sprint",
+      "family": "installation",
+      "name": "Agent Install Sprint",
+      "name_pt": "Sprint de Instalação de Agente",
+      "price": 4800,
+      "interval": "one_time",
+      "payment_link": "https://buy.stripe.com/4gMcN68NWbBR5Xp2di4ZR0I",
+      "plink": "plink_1UEazbJRA2AketBhYbCKkmXG",
+      "url": "/services/autonomous-agent-installation/",
+      "description": "One production autonomous agent installed with tools, guardrails, runbook, and kill switch. Five-day sprint."
+    },
+    {
+      "id": "agent-production-install",
+      "family": "installation",
+      "name": "Agent Production Install",
+      "name_pt": "Instalação de Produção de Agente",
+      "price": 7500,
+      "interval": "one_time",
+      "payment_link": "https://buy.stripe.com/cNiaEY9S00XdclNcRW4ZR0H",
+      "plink": "plink_1UEazbJRA2AketBhk6ljG8Tb",
+      "url": "/services/autonomous-agent-installation/",
+      "description": "Full production install of one autonomous agent: integrations, HITL gates, audit log, handover, and 14-day hypercare."
+    },
+    {
+      "id": "agent-fleet-install",
+      "family": "installation",
+      "name": "Agent Fleet Install",
+      "name_pt": "Instalação de Frota de Agentes",
+      "price": 14500,
+      "interval": "one_time",
+      "payment_link": "https://buy.stripe.com/9B69AU2py49p99BcRW4ZR0F",
+      "plink": "plink_1UEazaJRA2AketBhWXcmaTZc",
+      "url": "/services/autonomous-agent-installation/",
+      "description": "Install up to three coordinated autonomous agents with shared memory, orchestration, and a fleet runbook."
+    },
+    {
+      "id": "agent-config-sprint",
+      "family": "configuration",
+      "name": "Agent Config Sprint",
+      "name_pt": "Sprint de Configuração de Agente",
+      "price": 3200,
+      "interval": "one_time",
+      "payment_link": "https://buy.stripe.com/6oUcN63tCfS75Xp05a4ZR0G",
+      "plink": "plink_1UEazaJRA2AketBh2cGC1RJG",
+      "url": "/services/autonomous-agent-configuration/",
+      "description": "Configure tool allowlist, human-in-the-loop gates, spend envelope, and named owner for an existing agent."
+    },
+    {
+      "id": "agent-governance-config",
+      "family": "configuration",
+      "name": "Agent Governance Config",
+      "name_pt": "Configuração de Governança de Agente",
+      "price": 6500,
+      "interval": "one_time",
+      "payment_link": "https://buy.stripe.com/3cIdRafckbBR1H95pu4ZR0M",
+      "plink": "plink_1UEazdJRA2AketBhwpvop8vN",
+      "url": "/services/autonomous-agent-configuration/",
+      "description": "Governance pack: audit log, kill switch, data boundary, policy pack, and CIO/CISO readout for autonomous agents."
+    },
+    {
+      "id": "agent-config-retainer",
+      "family": "configuration",
+      "name": "Agent Config Retainer",
+      "name_pt": "Retainer de Configuração de Agente",
+      "price": 1500,
+      "interval": "month",
+      "payment_link": "https://buy.stripe.com/3cIbJ24xG35l2Ld2di4ZR0J",
+      "plink": "plink_1UEazcJRA2AketBhnwPs7uOi",
+      "url": "/services/autonomous-agent-configuration/",
+      "description": "Monthly change control for agent configuration: prompt, tools, gates, and spend envelope updates."
+    },
+    {
+      "id": "agent-health-audit",
+      "family": "maintenance",
+      "name": "Agent Health Audit",
+      "name_pt": "Auditoria de Saúde de Agente",
+      "price": 1200,
+      "interval": "one_time",
+      "payment_link": "https://buy.stripe.com/cNibJ28NW21hadF9FK4ZR0K",
+      "plink": "plink_1UEazcJRA2AketBhpUHvSTOC",
+      "url": "/services/autonomous-agent-maintenance/",
+      "description": "One-time health audit of deployed autonomous agents: failures, spend, drift, and a written repair plan."
+    },
+    {
+      "id": "agent-care-plan",
+      "family": "maintenance",
+      "name": "Agent Care Plan",
+      "name_pt": "Plano de Cuidado de Agente",
+      "price": 1999,
+      "interval": "month",
+      "payment_link": "https://buy.stripe.com/14AcN65BKgWb1H9bNS4ZR0L",
+      "plink": "plink_1UEazcJRA2AketBhBRViH6Aj",
+      "url": "/services/autonomous-agent-maintenance/",
+      "description": "Managed monitoring, weekly prompt tuning, and incident review for deployed autonomous agents. Cancel anytime."
+    },
+    {
+      "id": "agent-production-ops",
+      "family": "maintenance",
+      "name": "Agent Production Ops",
+      "name_pt": "Operações de Produção de Agente",
+      "price": 3500,
+      "interval": "month",
+      "payment_link": "https://buy.stripe.com/8x23cw1lubBR4Tl7xC4ZR0N",
+      "plink": "plink_1UEazeJRA2AketBhaBrQ6ER0",
+      "url": "/services/autonomous-agent-maintenance/",
+      "description": "Production operations for autonomous agents: 4-hour SLA, on-call incident response, change control, and monthly executive report."
+    }
+  ]
+}
