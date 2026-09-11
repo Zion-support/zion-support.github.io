@@ -38,7 +38,12 @@
   <div class="wrap">
     <p class="eyebrow">Contato</p>
     <h1>Resposta comercial em 24h.</h1>
-    <p class="lead">Kleber Garcia Alcatrao · Zion Tech Group. Middletown, Delaware. Escolha o canal ou envie o formulário abaixo.</p>
+    <p class="lead">Kleber Garcia Alcatrao · Zion Tech Group. Middletown, Delaware. Escolha o canal ou envie o formulário abaixo. Após o checkout Stripe, esta página abre com <code>?paid=</code> para o onboarding.</p>
+    <div id="paid-box" class="cta-box" hidden>
+      <p><strong>Pagamento recebido.</strong> O Stripe redirecionou você aqui após o checkout.</p>
+      <p id="paid-sku"></p>
+      <p>Envie e-mail para <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> com o nome do SKU. Enviamos o horário de kickoff e a lista de acessos. WhatsApp: <a href="https://wa.me/13024640950">+1 302 464 0950</a>.</p>
+    </div>
     <div class="grid">
       <article class="card">
         <h3>E-mail</h3>
@@ -59,6 +64,15 @@
         <p><a class="btn" href="/discovery/">Pagar Discovery</a></p>
       </article>
     </div>
+
+    <h2>Pacotes de agentes autônomos</h2>
+    <p>Instalação, configuração ou manutenção com checkout Stripe ao vivo: <a href="/autonomous-agent-services/">/autonomous-agent-services/</a>.</p>
+    <p class="chips">
+      <a class="chip" href="/services/autonomous-agent-installation/">Instalação</a>
+      <a class="chip" href="/services/autonomous-agent-configuration/">Configuração</a>
+      <a class="chip" href="/services/autonomous-agent-maintenance/">Manutenção</a>
+      <a class="chip" href="/plans/">Planos</a>
+    </p>
 
     <h2>Formulário</h2>
     <p class="lead">Sem consulta grátis. Descreva o processo que precisa de automação. Resposta em até 24h úteis.</p>
@@ -110,5 +124,28 @@
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  var paid = params.get('paid');
+  if (!paid) return;
+  var labels = {
+    'agent-install-sprint': 'Agent Install Sprint — $4,800',
+    'agent-production-install': 'Agent Production Install — $7,500',
+    'agent-fleet-install': 'Agent Fleet Install — $14,500',
+    'agent-config-sprint': 'Agent Config Sprint — $3,200',
+    'agent-governance-config': 'Agent Governance Config — $6,500',
+    'agent-config-retainer': 'Agent Config Retainer — $1,500/mo',
+    'agent-health-audit': 'Agent Health Audit — $1,200',
+    'agent-care-plan': 'Agent Care Plan — $1,999/mo',
+    'agent-production-ops': 'Agent Production Ops — $3,500/mo',
+    '1': 'Your Stripe payment'
+  };
+  var box = document.getElementById('paid-box');
+  var sku = document.getElementById('paid-sku');
+  sku.textContent = 'SKU: ' + (labels[paid] || paid);
+  box.hidden = false;
+})();
+</script>
 </body>
 </html>
