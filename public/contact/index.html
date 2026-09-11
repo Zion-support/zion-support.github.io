@@ -3,23 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contacte a Zion Tech Group — AI e Automação</title>
+<title>Contact Zion Tech Group — AI, automation, autonomous agents</title>
 <link rel="canonical" href="https://ziontechgroup.com/contact/">
 <meta name="robots" content="index,follow">
-<meta name="description" content="Fale com a Zion Tech Group. Consultoria AI, automação, cloud e cybersecurity. Resposta em até 24h.">
-<style>
-body{font-family:Inter,system-ui,sans-serif;background:#0b0f17;color:#e7ecf1;margin:0}
-.wrap{max-width:960px;margin:0 auto;padding:48px 24px}
-h1{font-size:28px;margin-bottom:12px}
-a{color:#7dd3fc}
-.btn{display:inline-block;margin-top:18px;padding:10px 14px;background:#0ea5e9;color:#fff;border-radius:10px;text-decoration:none}
-</style>
+<meta name="description" content="Contact Zion Tech Group. After Stripe checkout we start onboarding here. Email, WhatsApp, Discovery $99. Response within 24 hours.">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 <div class="wrap">
+<nav class="top" aria-label="Primary">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/services/">Services</a>
+  <a href="/autonomous-agent-services/">Agent SKUs</a>
+  <a href="/plans/">Plans</a>
+  <a href="/discovery/">Discovery $99</a>
+</nav>
+<p class="crumb"><a href="/">Home</a> / Contact</p>
 <h1>Contact</h1>
-<p>This page is temporarily unavailable. Explore our AI &amp; IT services and free tools.</p>
-<a class="btn" href="/services/">Browse Services</a>
+<p class="lead">We respond within 24 hours. If you just paid a Stripe Payment Link, this page is the onboarding landing — keep the paid flag in the URL when you write us.</p>
+
+<div id="paid-box" class="cta" hidden>
+  <p><strong>Payment received.</strong> Stripe redirected you here after checkout.</p>
+  <p id="paid-sku"></p>
+  <p>Email <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> with the SKU name and we send the kickoff slot and access list. WhatsApp: <a href="https://wa.me/13024640950">+1 302 464 0950</a>.</p>
 </div>
+
+<div class="grid">
+  <div class="card">
+    <h3>Email</h3>
+    <p><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+  </div>
+  <div class="card">
+    <h3>Phone / WhatsApp</h3>
+    <p><a href="https://wa.me/13024640950">+1 302 464 0950</a></p>
+  </div>
+  <div class="card">
+    <h3>Discovery $99</h3>
+    <p>If the first workflow is still unmapped. <a href="/discovery/">Book Discovery</a>.</p>
+  </div>
+</div>
+
+<section>
+  <h2>Autonomous agent packages</h2>
+  <p>Install, configure, or maintain with live Stripe checkout: <a href="/autonomous-agent-services/">/autonomous-agent-services/</a>.</p>
+  <p class="chips">
+    <a class="chip" href="/services/autonomous-agent-installation/">Installation</a>
+    <a class="chip" href="/services/autonomous-agent-configuration/">Configuration</a>
+    <a class="chip" href="/services/autonomous-agent-maintenance/">Maintenance</a>
+    <a class="chip" href="/plans/">Plans</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709</p>
+</footer>
+</div>
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  var paid = params.get('paid');
+  if (!paid) return;
+  var labels = {
+    'agent-install-sprint': 'Agent Install Sprint — $4,800',
+    'agent-production-install': 'Agent Production Install — $7,500',
+    'agent-fleet-install': 'Agent Fleet Install — $14,500',
+    'agent-config-sprint': 'Agent Config Sprint — $3,200',
+    'agent-governance-config': 'Agent Governance Config — $6,500',
+    'agent-config-retainer': 'Agent Config Retainer — $1,500/mo',
+    'agent-health-audit': 'Agent Health Audit — $1,200',
+    'agent-care-plan': 'Agent Care Plan — $1,999/mo',
+    'agent-production-ops': 'Agent Production Ops — $3,500/mo',
+    '1': 'Your Stripe payment'
+  };
+  var box = document.getElementById('paid-box');
+  var sku = document.getElementById('paid-sku');
+  sku.textContent = 'SKU: ' + (labels[paid] || paid);
+  box.hidden = false;
+})();
+</script>
+<script src="/assets/js/zion-shell.js" defer></script>
 </body>
 </html>
