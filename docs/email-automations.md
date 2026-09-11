@@ -4,13 +4,13 @@ Last audited: 2026-09-11 (Kleber inbox + continuous agent).
 
 ## Continuous loop (what runs every ~20 minutes)
 
-Three layers, all **draft-only** until Kleber sets `ZION_EMAIL_SEND_ENABLED=1`:
+Three layers, **live send on** (max 5 per run; noise/GitHub/Grok never sent):
 
 | Layer | How | What it does |
 | --- | --- | --- |
-| GitHub Actions | `.github/workflows/zion-continuous-agent.yml` cron `12,32,52 * * * *` | Tests + `email_autopilot.py`. Commits memory/content if the run wrote files. Needs secret `GOG_TOKENS_JSON` for live Gmail. |
-| Termux / Hermes | `bash scripts/run-zion-continuous-agent.sh` | **Script-only** (no LLM). Avoids `HTTP 400: local is not a valid model ID`. |
-| This cloud agent / Grok | Gmail drafts + classifier | Same rules: never auto-send; never reply to Grok/GitHub/newsletters. |
+| GitHub Actions | `.github/workflows/zion-continuous-agent.yml` cron `12,32,52 * * * *` + push to `main` | Tests + `email_autopilot.py` with `ZION_EMAIL_SEND_ENABLED=1`. Needs secret `GOG_TOKENS_JSON` for Gmail. |
+| Termux / Hermes | `bash scripts/run-zion-continuous-agent.sh` | **Script-only** (no LLM). Send defaults **on**. |
+| This cloud agent / Grok | Gmail send + classifier | Same skip list: never reply to Grok/GitHub/newsletters. |
 
 ```bash
 python3 automation/tests/test_email_autopilot.py
@@ -18,19 +18,11 @@ python3 automation/scripts/email_autopilot.py --max 25 --hot-max 8
 bash scripts/run-zion-continuous-agent.sh
 ```
 
-Default is dry-run: Gmail **drafts** (`ZION_EMAIL_GMAIL_DRAFTS=1`), plus:
+Live send is **on**: `ZION_EMAIL_SEND_ENABLED=1`, cap `ZION_EMAIL_MAX_SENDS=5`. Cooldown 7 days per thread. GitHub/Grok/newsletters/security never send.
 
-- `automation/email_memory/latest_summary.json` — last scan counts
-- `automation/email_memory/known_deals.json` — Clara, Fergus, Prudential, Kenlo, Elastic
-- `automation/email_memory/agent_state.json` — 7-day cooldown so the same thread is not re-drafted
-- `automation/email_memory/success_history.jsonl` — wins / RFQs / inbound replies
-- `Zion-Tech-Group/MEMORY.md` — block between `<!-- ZION-EMAIL-OPS:BEGIN -->` / `END`
-- `automation/content/generated/YYYY-MM-DD-*.md` — rotating service articles
-- `outreach_monitor/processed/pending_ceo_drafts.jsonl` — local draft queue
+Live Gmail in Actions still needs repo secret **`GOG_TOKENS_JSON`**. Without it the job writes memory/content only.
 
-Live Gmail in Actions: store the gog token blob as repo secret **`GOG_TOKENS_JSON`**. Without it, the job still writes content + memory from `known_deals.json` and skips the inbox API.
-
-Do **not** live-send. `ZION_EMAIL_SEND_ENABLED` stays `0` unless Kleber turns it on.
+Sent 2026-09-11 (not drafts): Clara ticket 1039168 and Fergus Discovery follow-up.
 
 ## What was broken
 
@@ -46,8 +38,8 @@ Do **not** live-send. `ZION_EMAIL_SEND_ENABLED` stays `0` unless Kleber turns it
 
 | Thread / party | Status | Agent action |
 | --- | --- | --- |
-| Clara `meajuda@clara.com.br` ticket **1039168** | Partnership received 2026-09-10 | Gmail **draft** follow-up (not sent) |
-| Fergus Martin `fmartin@ilha.capital` | Discovery accepted 10 Sep 16:00 BRT, **PAGO $99** | Store as `success_win`; Gmail **draft** post-Discovery follow-up |
+| Clara `meajuda@clara.com.br` ticket **1039168** | Partnership received 2026-09-10 | Follow-up **SENT** 2026-09-11 |
+| Fergus Martin `fmartin@ilha.capital` | Discovery accepted 10 Sep 16:00 BRT, **PAGO $99** | `success_win`; post-Discovery follow-up **SENT** 2026-09-11 |
 | Calendly / Google calendar-notification | Same Discovery paid | Store history only — **never reply** to calendar bots |
 | Prudential `assistente.cliente@prudential.com` | Partnerships only via Trabalhe Conosco | `needs_human` |
 | Kenlo contract `64709043508` | Waiting | `needs_human` |
@@ -63,7 +55,7 @@ Do **not** live-send. `ZION_EMAIL_SEND_ENABLED` stays `0` unless Kleber turns it
 | TikTok Shop verification code | Auth — do not auto-archive |
 | Kenlo / Elastic / Prudential | Facts or process Kleber owns |
 | Copa Energia / DirecTV / ASSEFAZ / Transportes RJ RFQs | Open, facts needed |
-| Clara + Fergus Gmail drafts | Review and send from Gmail if the copy is right |
+| Clara + Fergus follow-ups | **SENT** 2026-09-11 — wait for their reply |
 
 ## Gmail labels
 

@@ -45,17 +45,20 @@
     "miner_avg_query_s": 10.3
   },
   "outreach": {
-    "status": "autopilot_dry_run",
+    "status": "autopilot_live",
     "monitor_inbox_interest": 52,
     "hot_followup_sent": 0,
     "hot_followup_drafts": 0
   },
   "email_ops": {
     "status": "running",
-    "send_enabled": false,
+    "send_enabled": true,
+    "max_sends": 5,
     "last_inbox_scanned": 0,
+    "last_sent": 0,
     "last_drafts": 0,
     "backend": "none",
-    "updated_at": "2026-09-11T22:35 UTC"
+    "cta": "https://ziontechgroup.com/discovery/",
+    "updated_at": "2026-09-11T23:24 UTC"
   }
 }

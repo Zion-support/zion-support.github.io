@@ -9,24 +9,20 @@
     "needs_human": 0,
     "memory_written": 0,
     "content_ideas": 0,
+    "sent": 0,
     "errors": [],
     "backend": "none",
-    "updatedAt": "2026-09-11T22:35:08.282843+00:00",
-    "content_file": "automation/content/generated/2026-09-11-finops-and-cloud-cost.md"
+    "updatedAt": "2026-09-11T23:24:14.750274+00:00"
   },
   "hot_followup": {
-    "hot_threads_found": 0,
-    "drafts_created": 0,
-    "skipped_sent": 0,
-    "skipped_noise": 0,
-    "errors": [],
-    "backend": "none"
+    "skipped": true
   },
   "known_deals": {
     "queued": 0,
+    "sent": 0,
     "skipped": 6,
     "errors": []
   },
-  "sendEnabled": false,
-  "updatedAt": "2026-09-11T22:35:08.285394+00:00"
+  "sendEnabled": true,
+  "updatedAt": "2026-09-11T23:24:14.751326+00:00"
 }

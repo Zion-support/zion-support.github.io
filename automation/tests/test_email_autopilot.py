@@ -257,5 +257,22 @@ class DraftAndLangTests(unittest.TestCase):
         self.assertIn("Discovery", fergus)
 
 
+class SendGateTests(unittest.TestCase):
+    def test_rejects_noise_and_security(self):
+        self.assertFalse(ea.can_send_to("notifications@github.com"))
+        self.assertFalse(ea.can_send_to("noreply@x.ai"))
+        self.assertFalse(ea.can_send_to("notifications@stripe.com"))
+        self.assertFalse(ea.can_send_to("calendar-notification@google.com"))
+
+    def test_allows_real_humans(self):
+        self.assertTrue(ea.can_send_to("ana@industria.com.br"))
+        self.assertTrue(ea.can_send_to("fmartin@ilha.capital"))
+        self.assertTrue(ea.can_send_to("meajuda@clara.com.br"))
+
+    def test_max_sends_default(self):
+        self.assertGreaterEqual(ea.MAX_SENDS, 1)
+        self.assertLessEqual(ea.MAX_SENDS, 5)
+
+
 if __name__ == "__main__":
     unittest.main()

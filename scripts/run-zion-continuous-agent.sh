@@ -3,6 +3,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
-export ZION_EMAIL_SEND_ENABLED="${ZION_EMAIL_SEND_ENABLED:-0}"
+export ZION_EMAIL_SEND_ENABLED="${ZION_EMAIL_SEND_ENABLED:-1}"
+export ZION_EMAIL_MAX_SENDS="${ZION_EMAIL_MAX_SENDS:-5}"
 export ZION_EMAIL_GMAIL_DRAFTS="${ZION_EMAIL_GMAIL_DRAFTS:-1}"
 python3 automation/scripts/email_autopilot.py --max "${1:-30}" --hot-max "${2:-8}"

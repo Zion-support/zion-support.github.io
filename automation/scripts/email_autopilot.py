@@ -2,13 +2,11 @@
 """
 Zion Email Autopilot — triage + reply/follow-up drafts + memory extraction.
 
-Safe-by-default:
-- sendEnabled=False → no live sends, only drafts and memory updates.
-- Uses gog CLI for Gmail access when present.
-- Writes structured outputs under automation/email_memory/ and outreach_monitor/processed/.
-
-Quiet Grok/x.ai status mail, GitHub bots, newsletters, vendor WTS, and
-accounting docs are skipped so the CEO inbox stays for humans.
+Safe-by-default unless `ZION_EMAIL_SEND_ENABLED=1`:
+- send off → Gmail drafts + memory only
+- send on → live replies, max 5 per run, skip noise domains, 7-day cooldown
+- Quiet Grok/x.ai status mail, GitHub bots, newsletters, vendor WTS, and
+  accounting docs are skipped so the CEO inbox stays for humans.
 """
 
 from __future__ import annotations
@@ -29,6 +27,10 @@ if str(REPO) not in sys.path:
 
 SEND_ENABLED = os.environ.get("ZION_EMAIL_SEND_ENABLED", "0") == "1"
 GMAIL_DRAFTS = os.environ.get("ZION_EMAIL_GMAIL_DRAFTS", "1") == "1"
+try:
+    MAX_SENDS = max(0, int(os.environ.get("ZION_EMAIL_MAX_SENDS", "5")))
+except ValueError:
+    MAX_SENDS = 5
 ACCOUNT = os.environ.get("ZION_EMAIL_ACCOUNT", "kleber@ziontechgroup.com")
 BOOK_URL = "https://ziontechgroup.com/book/"
 DISCOVERY_URL = "https://ziontechgroup.com/discovery/"
@@ -55,6 +57,7 @@ HOT_FOLLOWUP_LEDGER = REPO / "outreach_monitor" / "processed" / "hot_followup_re
 HOT_FOLLOWUP_SENT = REPO / "hot-followup-sent.json"
 
 _DIRS_READY = False
+_sends_this_run = 0
 
 SKIP_DOMAINS = frozenset({
     "github.com", "notifications.github.com", "gitlab.com", "jira.atlassian.com",
@@ -519,7 +522,7 @@ def fetch_message(mid: str) -> dict:
 
 
 def maybe_create_gmail_draft(tid: str, subject: str, body: str, to_addr: str) -> str | None:
-    if not GMAIL_DRAFTS or SEND_ENABLED:
+    if not GMAIL_DRAFTS:
         return None
     api = _gmail_api()
     if not api:
@@ -529,6 +532,58 @@ def maybe_create_gmail_draft(tid: str, subject: str, body: str, to_addr: str) ->
         return gmail_create_draft(tid, subject, body, to_addr)
     except Exception:
         return None
+
+
+def can_send_to(contact: str, sender: str = "") -> bool:
+    addr = (contact or "").strip().lower()
+    if not addr or "@" not in addr:
+        return False
+    if addr in SECURITY_SENDERS:
+        return False
+    if is_noise_sender(addr, sender or contact)[0]:
+        return False
+    if domain_matches(addr, SKIP_DOMAINS):
+        return False
+    return True
+
+
+def record_sent(contact: str, thread_id: str, message_id: str, subject: str) -> None:
+    append_jsonl(LEDGER_REPLY, {
+        "ts": int(time.time()),
+        "to": contact,
+        "thread_id": thread_id,
+        "message_id": message_id,
+        "subject": subject,
+        "mode": "live_send",
+    })
+
+
+def maybe_send_reply(tid: str, subject: str, body: str, to_addr: str) -> str | None:
+    global _sends_this_run
+    if not SEND_ENABLED or _sends_this_run >= MAX_SENDS or not can_send_to(to_addr):
+        return None
+    bootstrap_gog_tokens()
+    try:
+        from commands.google_workspace import gmail_send_reply_fixed
+        result = gmail_send_reply_fixed(tid, subject, body, to_addr)
+    except Exception:
+        return None
+    if not isinstance(result, dict) or not result.get("success"):
+        return None
+    mid = str(result.get("message_id") or "")
+    _sends_this_run += 1
+    record_sent(to_addr, tid, mid, subject)
+    return mid or "sent"
+
+
+def deliver_reply(tid: str, subject: str, body: str, to_addr: str) -> tuple[str, str | None]:
+    sent_id = maybe_send_reply(tid, subject, body, to_addr)
+    if sent_id:
+        return "sent", sent_id
+    draft_id = maybe_create_gmail_draft(tid, subject, body, to_addr)
+    if draft_id:
+        return "draft", draft_id
+    return "queued", None
 
 
 def load_jsonl(path: Path):
@@ -630,16 +685,41 @@ def recently_drafted(thread_id: str, within_seconds: int = KNOWN_DEAL_COOLDOWN_S
     return (int(time.time()) - ts) < within_seconds
 
 
-def mark_thread_drafted(thread_id: str, contact: str, kind: str, gmail_draft_id: str | None = None) -> None:
+def recently_sent(thread_id: str, within_seconds: int = KNOWN_DEAL_COOLDOWN_S) -> bool:
+    if not thread_id:
+        return False
+    drafted = load_agent_state().get("drafted_threads") or {}
+    row = drafted.get(thread_id) if isinstance(drafted, dict) else None
+    if not isinstance(row, dict) or not row.get("sent"):
+        return False
+    try:
+        ts = int(row.get("ts") or 0)
+    except (TypeError, ValueError):
+        return False
+    return (int(time.time()) - ts) < within_seconds
+
+
+def mark_thread_drafted(
+    thread_id: str,
+    contact: str,
+    kind: str,
+    gmail_draft_id: str | None = None,
+    sent: bool = False,
+    gmail_message_id: str | None = None,
+) -> None:
     if not thread_id:
         return
     state = load_agent_state()
     drafted = state.get("drafted_threads") if isinstance(state.get("drafted_threads"), dict) else {}
+    prev = drafted.get(thread_id) if isinstance(drafted.get(thread_id), dict) else {}
     drafted[thread_id] = {
+        **prev,
         "ts": int(time.time()),
         "contact": contact,
         "kind": kind,
-        "gmail_draft_id": gmail_draft_id,
+        "gmail_draft_id": gmail_draft_id or prev.get("gmail_draft_id"),
+        "gmail_message_id": gmail_message_id or prev.get("gmail_message_id"),
+        "sent": bool(sent or prev.get("sent")),
         "iso": datetime.now(timezone.utc).isoformat(),
     }
     state["drafted_threads"] = drafted
@@ -757,6 +837,7 @@ def run_inbox_scan(max_results: int = 25) -> dict:
         "needs_human": 0,
         "memory_written": 0,
         "content_ideas": 0,
+        "sent": 0,
         "errors": [],
     }
 
@@ -848,7 +929,7 @@ def run_inbox_scan(max_results: int = 25) -> dict:
             summary["memory_written"] += 1
             continue
 
-        if already_sent_to(contact):
+        if already_sent_to(contact) or recently_sent(tid):
             summary["skipped_sent"] += 1
             continue
 
@@ -861,7 +942,7 @@ def run_inbox_scan(max_results: int = 25) -> dict:
             store_content_idea(tid, content["title"], content["body"])
             summary["content_ideas"] += 1
 
-        if tid in queued or recently_drafted(tid):
+        if tid in queued or (not SEND_ENABLED and recently_drafted(tid)):
             summary["skipped_dup"] += 1
             continue
 
@@ -870,10 +951,20 @@ def run_inbox_scan(max_results: int = 25) -> dict:
             lang = detect_lang(f"{subject}\n{body}")
             draft_body = build_reply_draft(name, subject, lang)
             queue_draft(mid, tid, contact, name, subject, lang, draft_body)
-            draft_id = maybe_create_gmail_draft(tid, subject, draft_body, contact)
-            mark_thread_drafted(tid, contact, label, draft_id)
+            mode, delivered_id = deliver_reply(tid, subject, draft_body, contact)
+            mark_thread_drafted(
+                tid,
+                contact,
+                label,
+                gmail_draft_id=delivered_id if mode == "draft" else None,
+                sent=mode == "sent",
+                gmail_message_id=delivered_id if mode == "sent" else None,
+            )
             queued.add(tid)
-            summary["drafts_created"] += 1
+            if mode == "sent":
+                summary["sent"] += 1
+            else:
+                summary["drafts_created"] += 1
 
     write_latest_summary(summary)
     return summary
@@ -884,6 +975,7 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
     summary = {
         "hot_threads_found": 0,
         "drafts_created": 0,
+        "sent": 0,
         "skipped_sent": 0,
         "skipped_noise": 0,
         "errors": [],
@@ -913,7 +1005,7 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
             continue
         summary["hot_threads_found"] += 1
 
-        if tid in hot_sent or tid in queued or recently_drafted(tid):
+        if tid in hot_sent or tid in queued or recently_sent(tid) or (not SEND_ENABLED and recently_drafted(tid)):
             summary["skipped_sent"] += 1
             continue
 
@@ -935,22 +1027,32 @@ def run_hot_followup_scan(max_results: int = 8) -> dict:
         name = extract_name(sender)
         draft_body = build_reply_draft(name, subject, lang)
         queue_draft(mid, tid, contact, name, subject or "Following up — Zion Tech Group", lang, draft_body, extra={"hot_followup": True})
-        draft_id = maybe_create_gmail_draft(tid, subject, draft_body, contact)
-        mark_thread_drafted(tid, contact, "hot_followup", draft_id)
-        record_hot_sent(tid, mid, contact, subject, "dry_run" if not SEND_ENABLED else "live_send")
+        mode, delivered_id = deliver_reply(tid, subject, draft_body, contact)
+        mark_thread_drafted(
+            tid,
+            contact,
+            "hot_followup",
+            gmail_draft_id=delivered_id if mode == "draft" else None,
+            sent=mode == "sent",
+            gmail_message_id=delivered_id if mode == "sent" else None,
+        )
+        record_hot_sent(tid, mid, contact, subject, "live_send" if mode == "sent" else "dry_run")
         append_jsonl(HOT_FOLLOWUP_LEDGER, {
             "ts": int(time.time()),
             "thread_id": tid,
             "message_id": mid,
             "contact": contact,
             "subject": subject,
-            "status": "drafted",
+            "status": "sent" if mode == "sent" else "drafted",
             "avoid_duplicate": True,
             "dedup_key": re.sub(r"[^a-z0-9]", "", contact),
-            "mode": "dry_run" if not SEND_ENABLED else "live_send",
+            "mode": "live_send" if mode == "sent" else "dry_run",
         })
         queued.add(tid)
-        summary["drafts_created"] += 1
+        if mode == "sent":
+            summary["sent"] += 1
+        else:
+            summary["drafts_created"] += 1
 
     return summary
 
@@ -1020,8 +1122,9 @@ def write_ops_memory(combined: dict) -> None:
         f"{MEMORY_BEGIN}\n"
         f"## Email ops (continuous agent)\n\n"
         f"- Updated: {datetime.now(timezone.utc).isoformat()}\n"
-        f"- Send enabled: {SEND_ENABLED}\n"
-        f"- Inbox scanned: {inbox.get('scanned', 0)}; drafts: {inbox.get('drafts_created', 0)}; "
+        f"- Send enabled: {SEND_ENABLED} (max {MAX_SENDS}/run)\n"
+        f"- Inbox scanned: {inbox.get('scanned', 0)}; sent: {inbox.get('sent', 0)}; "
+        f"drafts: {inbox.get('drafts_created', 0)}; "
         f"needs human: {inbox.get('needs_human', 0)}; backend: {inbox.get('backend', 'n/a')}\n"
         f"- Hot follow-up drafts: {hot.get('drafts_created', 0)}\n"
         f"- Classified: {json.dumps(inbox.get('classified') or {}, ensure_ascii=False)}\n"
@@ -1049,7 +1152,9 @@ def write_ops_memory(combined: dict) -> None:
         status["email_ops"] = {
             "status": "running",
             "send_enabled": SEND_ENABLED,
+            "max_sends": MAX_SENDS,
             "last_inbox_scanned": inbox.get("scanned", 0),
+            "last_sent": inbox.get("sent", 0),
             "last_drafts": inbox.get("drafts_created", 0),
             "backend": inbox.get("backend"),
             "cta": DISCOVERY_URL,
@@ -1059,14 +1164,17 @@ def write_ops_memory(combined: dict) -> None:
         if inbox.get("backend") not in {None, "none", "gmail_api_error"}:
             outreach["monitor_inbox_interest"] = inbox.get("scanned", 0)
         outreach["hot_followup_drafts"] = hot.get("drafts_created", 0)
-        if outreach.get("status") == "blocked_by_config_or_env":
-            outreach["status"] = "autopilot_dry_run" if not SEND_ENABLED else "autopilot_live"
+        outreach["hot_followup_sent"] = hot.get("sent", 0)
+        if SEND_ENABLED:
+            outreach["status"] = "autopilot_live"
+        elif outreach.get("status") == "blocked_by_config_or_env":
+            outreach["status"] = "autopilot_dry_run"
         status["outreach"] = outreach
         CEO_STATUS.write_text(json.dumps(status, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def run_known_deal_followups() -> dict:
-    summary = {"queued": 0, "skipped": 0, "errors": []}
+    summary = {"queued": 0, "sent": 0, "skipped": 0, "errors": []}
     if not KNOWN_DEALS.exists():
         return summary
     try:
@@ -1081,7 +1189,10 @@ def run_known_deal_followups() -> dict:
             continue
         tid = str(deal.get("thread_id") or "")
         contact = (deal.get("contact") or "").lower()
-        if not tid or tid in queued or already_sent_to(contact) or recently_drafted(tid):
+        if not tid or tid in queued or already_sent_to(contact) or recently_sent(tid):
+            summary["skipped"] += 1
+            continue
+        if not SEND_ENABLED and recently_drafted(tid):
             summary["skipped"] += 1
             continue
         name = deal.get("name") or extract_name(contact)
@@ -1089,9 +1200,19 @@ def run_known_deal_followups() -> dict:
         subject = deal.get("subject") or f"Follow-up — {name}"
         draft = build_deal_followup(deal)
         queue_draft(tid, tid, contact, name, subject, lang, draft, extra={"known_deal": True})
-        draft_id = maybe_create_gmail_draft(tid, subject, draft, contact)
-        mark_thread_drafted(tid, contact, deal.get("kind") or "known_deal", draft_id)
-        summary["queued"] += 1
+        mode, delivered_id = deliver_reply(tid, subject, draft, contact)
+        mark_thread_drafted(
+            tid,
+            contact,
+            deal.get("kind") or "known_deal",
+            gmail_draft_id=delivered_id if mode == "draft" else None,
+            sent=mode == "sent",
+            gmail_message_id=delivered_id if mode == "sent" else None,
+        )
+        if mode == "sent":
+            summary["sent"] += 1
+        else:
+            summary["queued"] += 1
     return summary
 
 
@@ -1103,9 +1224,11 @@ def main(argv: list[str] | None = None):
     parser.add_argument("--no-content", action="store_true")
     args = parser.parse_args(argv)
 
+    global _sends_this_run
+    _sends_this_run = 0
     bootstrap_gog_tokens()
     mode = "LIVE SEND" if SEND_ENABLED else "DRY RUN"
-    print(f"[email_autopilot] mode={mode} account={ACCOUNT} repo={REPO}")
+    print(f"[email_autopilot] mode={mode} max_sends={MAX_SENDS} account={ACCOUNT} repo={REPO}")
 
     inbox = run_inbox_scan(max_results=args.max)
     hot = {"skipped": True} if args.inbox_only else run_hot_followup_scan(max_results=args.hot_max)

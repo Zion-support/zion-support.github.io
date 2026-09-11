@@ -86,7 +86,7 @@ bash scripts/run-zion-continuous-agent.sh
 ```
 
 GitHub Actions: `.github/workflows/zion-continuous-agent.yml` (every ~20 min after merge to `main`).
-Gmail token secret: `GOG_TOKENS_JSON`. Send stays off (`ZION_EMAIL_SEND_ENABLED=0`).
+Gmail token secret: `GOG_TOKENS_JSON`. Send is on (`ZION_EMAIL_SEND_ENABLED=1`, max 5/run).
 Never attach an LLM cron to the inbox scan — that hits `HTTP 400: local is not a valid model ID`.
 See `docs/email-automations.md`.
 

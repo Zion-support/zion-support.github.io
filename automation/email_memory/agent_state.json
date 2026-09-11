@@ -1,18 +1,22 @@
 {
   "drafted_threads": {
     "1a08d03211778232": {
-      "ts": 1789166130,
+      "ts": 1789167600,
       "contact": "meajuda@clara.com.br",
       "kind": "partnership_ticket",
       "gmail_draft_id": "r-3211490672530199327",
-      "iso": "2026-09-11T22:35:30.015045+00:00"
+      "gmail_message_id": "1a092c679910384d",
+      "sent": true,
+      "iso": "2026-09-11T22:50:00+00:00"
     },
     "1a08696143b434b8": {
-      "ts": 1789166130,
+      "ts": 1789167600,
       "contact": "fmartin@ilha.capital",
       "kind": "discovery_booked",
       "gmail_draft_id": "r-9184651382819522222",
-      "iso": "2026-09-11T22:35:30.015045+00:00"
+      "gmail_message_id": "1a092c67e96668c5",
+      "sent": true,
+      "iso": "2026-09-11T22:50:00+00:00"
     }
   }
 }
