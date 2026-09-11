@@ -15,10 +15,22 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe live homepage advertising + catalog JS
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Probe homepage advertising + catalog JS
+        env:
+          PROBE_LIVE: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: |
           set -euo pipefail
-          html=$(curl -fsSL https://ziontechgroup.com/)
+          if [ "${PROBE_LIVE}" = "true" ]; then
+            html=$(curl -fsSL https://ziontechgroup.com/)
+            js=$(curl -fsSL https://ziontechgroup.com/assets/js/zion-catalog.js)
+          else
+            html=$(cat public/index.html)
+            js=$(cat public/assets/js/zion-catalog.js)
+          fi
           must=(
             "Catálogo vivo"
             "Diagnóstico rápido"
@@ -40,7 +52,6 @@ jobs:
               echo "OK: $s"
             fi
           done
-          js=$(curl -fsSL https://ziontechgroup.com/assets/js/zion-catalog.js)
           js_must=(
             'Discovery $99'
             "Agentes Telegram"
@@ -56,30 +67,56 @@ jobs:
               echo "OK JS: $s"
             fi
           done
-          routes=(
-            https://ziontechgroup.com/
-            https://ziontechgroup.com/services/
-            https://ziontechgroup.com/agents/
-            https://ziontechgroup.com/plans/
-            https://ziontechgroup.com/discovery/
-            https://ziontechgroup.com/booking/
-            https://ziontechgroup.com/cpa/
-            https://ziontechgroup.com/free-ai-it-tools/
-            https://ziontechgroup.com/academy/
-            https://ziontechgroup.com/blog/
-            https://ziontechgroup.com/telegram/
-            https://ziontechgroup.com/pricing/
-            https://ziontechgroup.com/finops-consulting/
-            https://ziontechgroup.com/assets/js/zion-catalog.js
-          )
-          for u in "${routes[@]}"; do
-            code=$(curl -sI -o /dev/null -w "%{http_code}" "$u")
-            echo "$code $u"
-            case "$code" in
-              200|301|302) ;;
-              *) echo "BAD STATUS $code $u"; fail=1 ;;
-            esac
-          done
+          if [ "${PROBE_LIVE}" = "true" ]; then
+            routes=(
+              https://ziontechgroup.com/
+              https://ziontechgroup.com/services/
+              https://ziontechgroup.com/agents/
+              https://ziontechgroup.com/plans/
+              https://ziontechgroup.com/discovery/
+              https://ziontechgroup.com/booking/
+              https://ziontechgroup.com/cpa/
+              https://ziontechgroup.com/free-ai-it-tools/
+              https://ziontechgroup.com/academy/
+              https://ziontechgroup.com/blog/
+              https://ziontechgroup.com/telegram/
+              https://ziontechgroup.com/pricing/
+              https://ziontechgroup.com/finops-consulting/
+              https://ziontechgroup.com/assets/js/zion-catalog.js
+            )
+            for u in "${routes[@]}"; do
+              code=$(curl -sI -o /dev/null -w "%{http_code}" "$u")
+              echo "$code $u"
+              case "$code" in
+                200|301|302) ;;
+                *) echo "BAD STATUS $code $u"; fail=1 ;;
+              esac
+            done
+          else
+            for rel in \
+              public/index.html \
+              public/services/index.html \
+              public/agents/index.html \
+              public/plans/index.html \
+              public/discovery/index.html \
+              public/booking/index.html \
+              public/cpa/index.html \
+              public/free-ai-it-tools/index.html \
+              public/academy/index.html \
+              public/blog/index.html \
+              public/telegram/index.html \
+              public/pricing/index.html \
+              public/finops-consulting/index.html \
+              public/assets/js/zion-catalog.js
+            do
+              if [ ! -e "$rel" ]; then
+                echo "MISSING FILE $rel"
+                fail=1
+              else
+                echo "OK FILE $rel"
+              fi
+            done
+          fi
           if [ "$fail" -ne 0 ]; then
             echo "Watchdog found gaps."
             exit 1

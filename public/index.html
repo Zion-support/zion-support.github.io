@@ -232,6 +232,7 @@
         <a class="card" href="#advanced-ai"><h3>Advanced AI Services</h3><p>Generative AI, agents, orchestration, copilots</p></a>
         <a class="card" href="#roi"><h3>ROI planner</h3><p>Model savings and payback windows</p></a>
         <a class="card" href="#advisor"><h3>Launch advisor</h3><p>Get a rollout recommendation by goal</p></a>
+        <a class="card" href="#catalogo-vivo"><h3>Catálogo vivo</h3><p>Discovery, Telegram, WhatsApp, CPA, Agentes, FinOps</p></a>
         <a class="card" href="/case-studies/"><h3>Case studies</h3><p>Real results from real teams</p></a>
         <a class="card" href="/industries/"><h3>Industry solutions</h3><p>AI workflows tailored to your vertical</p></a>
         <a class="card" href="/para/"><h3>Para o seu tipo de operação</h3><p>Verticais PT: imobiliária, clínica, MSP, logística, varejo</p></a>
@@ -241,6 +242,38 @@
         <a class="card" href="/solutions/"><h3>Solutions hub</h3><p>Browse all AI solutions and product paths</p></a>
         <a class="card" href="#faq"><h3>Planning FAQ</h3><p>Review adoption and delivery answers</p></a>
       </div>
+    </section>
+
+    <section class="wrap" id="catalogo-vivo">
+      <p class="section-kicker">Catálogo vivo</p>
+      <h2>Live catalog of plans, channels, and tools</h2>
+      <p class="lede">Official menu: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo. Diagnóstico rápido at <a href="/diagnostico/">/diagnostico/</a>. Full Portuguese grid: <a href="/catalogo/">/catalogo/</a>.</p>
+      <div class="grid g3">
+        <a class="card" href="/discovery/"><h3>Discovery</h3><p>$99 map of one process in 7 days</p></a>
+        <a class="card" href="/diagnostico/"><h3>Diagnóstico rápido</h3><p>Free process snapshot, then Discovery if it pays</p></a>
+        <a class="card" href="/telegram/"><h3>Telegram</h3><p>Same-chat agents, 24/7</p></a>
+        <a class="card" href="/whatsapp/"><h3>WhatsApp</h3><p>Live commercial line</p></a>
+        <a class="card" href="/cpa/"><h3>CPA</h3><p>Pay on lead, meeting, or close</p></a>
+        <a class="card" href="/agents/"><h3>Agentes</h3><p>Support, sales, and ops agents</p></a>
+        <a class="card" href="/free-ai-it-tools/"><h3>Ferramentas</h3><p>Free AI/IT utilities</p></a>
+        <a class="card" href="/academy/"><h3>Academia</h3><p>Internal team enablement</p></a>
+        <a class="card" href="/finops-consulting/"><h3>FinOps</h3><p>Cloud waste, then a scoped recorte</p></a>
+      </div>
+      <label class="muted" for="catalog-q" style="display:block;margin-top:1.2rem">Filter</label>
+      <input id="catalog-q" type="search" placeholder="Discovery, Telegram, FinOps…" style="width:min(420px,100%);padding:.7rem 1rem;border-radius:.8rem;border:1px solid #334155;background:#0f172a;color:#e2e8f0;margin:.4rem 0 1rem">
+      <select id="catalog-cat" aria-label="Catalog category" style="padding:.7rem 1rem;border-radius:.8rem;border:1px solid #334155;background:#0f172a;color:#e2e8f0">
+        <option value="">todos</option>
+      </select>
+      <div id="catalog-chips" class="row" style="margin:.8rem 0"></div>
+      <div id="catalog-grid" class="grid g3"></div>
+      <p id="catalog-empty" hidden>Nenhum item neste filtro.</p>
+    </section>
+
+    <section class="wrap" id="diagnostico">
+      <p class="section-kicker">Diagnóstico rápido</p>
+      <h2>One process. A number. Then Discovery $99 if it is worth it.</h2>
+      <p class="lede">Use the estimator below or open <a href="/diagnostico/">/diagnostico/</a>. FinOps waste is calculated in the browser — no queue.</p>
+      <div id="finops-estimator"></div>
     </section>
 
     <section class="wrap">
@@ -568,5 +601,6 @@
     calc();
     document.getElementById('ready').addEventListener('input',e=>{document.getElementById('readyVal').textContent=e.target.value;});
   </script>
+  <script src="/assets/js/zion-catalog.js" defer></script>
 </body>
 </html>
