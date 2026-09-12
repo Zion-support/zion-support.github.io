@@ -30,6 +30,10 @@ jobs:
       - name: Run continuous email agent
         env:
           GOG_TOKENS_JSON: ${{ secrets.GOG_TOKENS_JSON }}
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NOUS_API_KEY: ${{ secrets.NOUS_API_KEY }}
           ZION_EMAIL_SEND_ENABLED: "1"
           ZION_EMAIL_MAX_SENDS: "5"
           ZION_EMAIL_GMAIL_DRAFTS: "1"

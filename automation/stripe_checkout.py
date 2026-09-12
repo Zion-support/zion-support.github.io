@@ -72,7 +72,10 @@ def ensure_stripe():
 
 def load_api_key():
     """Carrega a Stripe API key de environment, arquivo, ou prompt."""
-    key = os.environ.get("STRIPE_API_KEY", "").strip()
+    key = (
+        os.environ.get("STRIPE_API_KEY", "").strip()
+        or os.environ.get("STRIPE_SECRET_KEY", "").strip()
+    )
     if key:
         return key
 

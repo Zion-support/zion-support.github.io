@@ -6,7 +6,7 @@ subscriptions, e lida com webhooks de lifecycle.
 
 Requirements:
   - stripe package (pip install stripe)
-  - STRIPE_API_KEY environment variable (sk_live_... or sk_test_...)
+  - STRIPE_API_KEY or STRIPE_SECRET_KEY environment variable (sk_live_... or sk_test_...)
   - STRIPE_WEBHOOK_SECRET for webhook signature verification
 
 Usage:
@@ -25,7 +25,10 @@ from urllib.parse import urlencode
 
 # ── Configuration ────────────────────────────────────────────────────────────
 
-STRIPE_API_KEY = os.environ.get("STRIPE_API_KEY", "")
+STRIPE_API_KEY = (
+    os.environ.get("STRIPE_API_KEY", "").strip()
+    or os.environ.get("STRIPE_SECRET_KEY", "").strip()
+)
 WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "")
 

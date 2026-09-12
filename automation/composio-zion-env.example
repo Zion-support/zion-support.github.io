@@ -25,7 +25,8 @@ PASSO 4: Testar
 # ============================================================
 # ESSENCIAL — Obrigatório para todos os scripts
 # ============================================================
-export COMPOSIO_API_KEY="sk_..."  # ← Substituir pelo API key real do Composio Dashboard
+export COMPOSIO_API_KEY=""  # 1Password: Zion Composio keys 2026-09-12
+export COMPOSIO_1PASSWORD_CONNECTION_ID=""  # Composio alias zion-teams-write
 
 # ============================================================
 # GITHUB — Daily Digest + Release Automation + DevOps Agent
@@ -105,7 +106,8 @@ export ZION_NEWSLETTER_LIST="leads@ziontechgroup.com"  # ← Lista para newslett
 # ============================================================
 # STRIPE — Revenue Automation
 # ============================================================
-export STRIPE_API_KEY="sk_..."                    # ← API key do Stripe
+export STRIPE_API_KEY=""                      # 1Password: Zion Stripe live 2026-09-12
+export STRIPE_SECRET_KEY=""                   # GitHub Actions alias for STRIPE_API_KEY
 
 # ============================================================
 # GOOGLE SHEETS — Google Sheets Reports
@@ -138,8 +140,46 @@ export SUPABASE_ANON_KEY="..."                    # ← Anon key do Supabase
 # ============================================================
 # CLOUDFLARE — (scripts futuros — Cloudflare Agent)
 # ============================================================
-export CLOUDFLARE_API_TOKEN="..."                 # ← API token do Cloudflare
-export CLOUDFLARE_ACCOUNT_ID="..."                # ← Account ID
+export CLOUDFLARE_API_TOKEN=""                 # GH secret CLOUDFLARE_API_TOKEN
+export CLOUDFLARE_ACCOUNT_ID=""                # GH secret CLOUDFLARE_ACCOUNT_ID
+export CLOUDFLARE_WORKERS_AI_TOKEN=""
+export CLOUDFLARE_R2_ACCESS_KEY_ID=""
+export CLOUDFLARE_R2_SECRET_ACCESS_KEY=""
+
+# ============================================================
+# LLM / SEARCH / EMAIL — loaded 2026-09-12 from 1Password
+# Values: vault Zion Agent Credentials. Never commit real keys.
+# Catalog: docs/secrets-inventory.md
+# ============================================================
+export OPENAI_API_KEY=""
+export OPENROUTER_API_KEY=""
+export GEMINI_API_KEY=""
+export GOOGLE_API_KEY=""
+export GOOGLE_OAUTH_CLIENT_ID=""
+export GOOGLE_OAUTH_CLIENT_SECRET=""
+export GROQ_API_KEY=""
+export MISTRAL_API_KEY=""
+export HUGGINGFACE_API_KEY=""
+export COHERE_API_KEY=""
+export NOUS_API_KEY=""
+export MINIMAX_API_KEY=""
+export RESEND_API_KEY=""
+export BREVO_API_KEY=""
+export FIRECRAWL_API_KEY=""
+export TAVILY_API_KEY=""
+export SERPAPI_API_KEY=""
+export HUNTER_API_KEY=""
+export APOLLO_API_KEY=""
+export SUPERMEMORY_API_KEY=""
+export BROWSERLESS_API_KEY=""
+export JIRA_API_TOKEN=""
+export OP_SERVICE_ACCOUNT_TOKEN=""
+export ZION_GITHUB_PAT=""
+export CURSOR_API_KEY=""                      # 1Password only: Zion ops Jira Browserless Cursor Gateway
+export CLAWFY_API_KEY=""                      # 1Password only
+export GATEWAY_TOKEN=""                       # 1Password only
+export XIAOMI_API_KEY=""                      # 1Password: Zion Xiaomi 2026-09-12
+export GMAIL_APP_PASSWORD=""                  # 1Password: Zion Google OAuth and API
 
 # ============================================================
 # SALESFORCE — (scripts futuros — Salesforce CRM)

@@ -23,6 +23,11 @@ API_KEY = os.environ.get("COMPOSIO_API_KEY", "")
 OP_TOKEN = os.environ.get("OP_SERVICE_ACCOUNT_TOKEN", "")
 OP_HOST = os.environ.get("OP_CONNECT_HOST", "vault.1password.com")
 USER_ID = "kleber@ziontechgroup.com"
+ZION_OP_VAULT_ID = os.environ.get("ZION_OP_VAULT_ID", "qvoxujxka43fr3kyzmb3qsidpi")
+ZION_OP_VAULT_NAME = "Zion Agent Credentials"
+COMPOSIO_1PASSWORD_ACCOUNT = os.environ.get(
+    "COMPOSIO_1PASSWORD_CONNECTION_ID", "zion-teams-write"
+)
 
 
 def main():
@@ -58,6 +63,9 @@ def main():
         print("  Busque por '1Password' e conecte")
 
     print(f"\n  OP_CONNECT_HOST: {OP_HOST}")
+    print(f"  Vault: {ZION_OP_VAULT_NAME} ({ZION_OP_VAULT_ID})")
+    print(f"  Composio 1Password account: {COMPOSIO_1PASSWORD_ACCOUNT}")
+    print("  Inventory (names only): docs/secrets-inventory.md")
 
     # 3. Tentar conectar via SDK
     print("\n--- Tentando conectar via SDK ---")
