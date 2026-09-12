@@ -14,6 +14,7 @@ ALIASES = [
     "/roteiros/",
     "/direitos/",
     "/free-ai-itools/",
+    "/field-services-brazil/",
     "/agents/",
     "/ai/demo/",
     "/free-ai-it-tools/",

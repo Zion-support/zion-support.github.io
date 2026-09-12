@@ -27,6 +27,7 @@
 /services/managed-observability-247/    /services/    301
 # GitHub Pages does not apply Netlify _redirects. Real HTML aliases live in public/:
 # /direitos/ → /direitos-globais/, /free-ai-itools/ → /free-ai-it-tools/,
+# /field-services-brazil/ → /field-services/brazil/,
 # /finops/ → /finops-consulting/, /roteiros/, /agents/, /ai/demo/ are real index.html pages.
 /finops/ /finops-consulting/ 301
 /finops /finops-consulting/ 301
@@ -34,6 +35,8 @@
 /free-ai-itools /free-ai-it-tools/ 302
 /direitos/ /direitos-globais/ 302
 /direitos /direitos-globais/ 302
+/field-services-brazil/ /field-services/brazil/ 301
+/field-services-brazil /field-services/brazil/ 301
 /free-consultation /free-consultation/index.html 200
 /free-consultation/ /free-consultation/index.html 200
 /free-audit /free-audit/index.html 200

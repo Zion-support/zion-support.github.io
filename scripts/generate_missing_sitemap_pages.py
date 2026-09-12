@@ -633,6 +633,9 @@ def alias_pages() -> dict[str, str]:
 
     pages["direitos/index.html"] = redirect_page(f"{SITE}/direitos/", "/direitos-globais/", "Direitos")
     pages["free-ai-itools/index.html"] = redirect_page(f"{SITE}/free-ai-itools/", "/free-ai-it-tools/", "Free AI IT tools")
+    pages["field-services-brazil/index.html"] = redirect_page(
+        f"{SITE}/field-services-brazil/", "/field-services/brazil/", "Field Services Brazil"
+    )
 
     pages["agents/index.html"] = chrome(
         "AI Agents",
