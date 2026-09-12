@@ -68,6 +68,39 @@ jobs:
             echo "::error::ai-automation still meta-refreshes away from the SKU"
             missing=1
           fi
+          if ! grep -q 'index,follow' out/services/ai-automation/index.html; then
+            echo "::error::ai-automation missing robots index,follow"
+            missing=1
+          fi
+          if ! grep -q 'ziontechgroup.com/services/ai-automation/' out/services/ai-automation/index.html; then
+            echo "::error::ai-automation canonical is not self-referencing"
+            missing=1
+          fi
+          if grep -E 'buy\.stripe\.com/[^"'"'"' ]*ZG05' out/plans/index.html; then
+            echo "::error::plans still has ZG05 checkout href"
+            missing=1
+          fi
+          if ! grep -q '044ZG06' out/plans/index.html; then
+            echo "::error::plans missing Starter Pay ZG06"
+            missing=1
+          fi
+          if ! grep -q '8BG4ZG09' out/plans/index.html; then
+            echo "::error::plans missing Discovery BRL ZG09"
+            missing=1
+          fi
+          if ! grep -q 'hm4ZG0b' out/plans/index.html; then
+            echo "::error::plans missing Discovery USD ZG0b"
+            missing=1
+          fi
+          if ! grep -q 'index,follow' out/plans/index.html; then
+            echo "::error::plans missing robots index,follow"
+            missing=1
+          fi
+          plink_n="$(grep -oE 'buy\.stripe\.com/[A-Za-z0-9]+' out/plans/index.html | sort -u | wc -l | tr -d ' ')"
+          if [ "$plink_n" -lt 8 ]; then
+            echo "::error::plans has ${plink_n} unique Stripe hrefs, need >=8"
+            missing=1
+          fi
           if ! grep -q '05a4ZH0C' out/field-services/brazil/index.html; then
             echo "::error::field-services/brazil missing T&M Daily plink ZH0C"
             missing=1
