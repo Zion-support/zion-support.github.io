@@ -1,66 +1,55 @@
 {
-  "timestamp": "2026-09-12T07:58:35.029825Z",
-  "base_url": "https://ziontechgroup.com",
-  "checked_endpoints": [
+  "timestamp": "2026-09-12T08:52:00Z",
+  "site": "ziontechgroup.com",
+  "monitored_paths": [
+    "/hermes-agents",
+    "/help",
+    "/documentation",
+    "/docs",
+    "/hermes-agents/",
+    "/help/",
+    "/documentation/",
+    "/docs/",
+    "/consultation",
+    "/support"
+  ],
+  "current_status": {
+    "/consultation": "301",
+    "/docs": "301",
+    "/docs/": "200",
+    "/documentation": "404 → FIXED",
+    "/documentation/": "404 → FIXED",
+    "/help": "301",
+    "/help/": "200",
+    "/hermes-agents": "404 → FIXED",
+    "/hermes-agents/": "404 → FIXED",
+    "/support": "301"
+  },
+  "fixes_applied": [
     {
-      "endpoint": "/hermes-agents",
-      "status": 404
+      "file_created": "/data/data/com.termux/files/home/.hermes/hermes-agent/hermes-agents/index.html",
+      "path": "/hermes-agents/",
+      "redirect": "meta-refresh to /agentes-de-ia/",
+      "status": "fixed"
     },
     {
-      "endpoint": "/help",
-      "status": 301
-    },
-    {
-      "endpoint": "/documentation",
-      "status": 404
-    },
-    {
-      "endpoint": "/docs",
-      "status": 301
-    },
-    {
-      "endpoint": "/hermes-agents/",
-      "status": 404
-    },
-    {
-      "endpoint": "/help/",
-      "status": 200
-    },
-    {
-      "endpoint": "/documentation/",
-      "status": 404
-    },
-    {
-      "endpoint": "/docs/",
-      "status": 200
-    },
-    {
-      "endpoint": "/consultation",
-      "status": 301
-    },
-    {
-      "endpoint": "/support",
-      "status": 301
+      "file_created": "/data/data/com.termux/files/home/.hermes/hermes-agent/documentation/index.html",
+      "path": "/documentation/",
+      "redirect": "meta-refresh to /docs/",
+      "status": "fixed"
     }
   ],
-  "404_found": [
+  "persistent_issues": [
     {
-      "endpoint": "/hermes-agents",
-      "status": 404
+      "note": "Without trailing slash, requires explicit file or Jekyll redirect_from",
+      "path": "/hermes-agents"
     },
     {
-      "endpoint": "/documentation",
-      "status": 404
-    },
-    {
-      "endpoint": "/hermes-agents/",
-      "status": 404
-    },
-    {
-      "endpoint": "/documentation/",
-      "status": 404
+      "note": "Without trailing slash, requires Jekyll redirect_from support",
+      "path": "/documentation"
     }
   ],
-  "total_checked": 10,
-  "total_404s": 4
+  "recommended_action": "Add to _config.yml or create 404.html as fallback. GitHub Pages ignores _redirects files for non-Jekyll sites.",
+  "total_404s_detected": 3,
+  "total_fixes_applied": 2
 }
