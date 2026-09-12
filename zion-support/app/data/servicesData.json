@@ -3932,6 +3932,1336 @@
       "status": "active",
       "created_at": "2026-09-11T23:41:28.837790+00:00",
       "updated_at": "2026-09-11T23:41:28.837790+00:00"
+    },
+    {
+      "id": 1207,
+      "name": "Hermes HIPAA Data Masking",
+      "slug": "hermes-hipaa-data-masking",
+      "description": "Mascaramento automático de PHI em ambientes dev/staging.",
+      "category": "healthcare",
+      "icon": "Shield",
+      "price": 2297,
+      "features": [
+        "Automação completa de hermes hipaa data masking",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1208,
+      "name": "Hermes Telemedicine Scheduler",
+      "slug": "hermes-telemedicine-scheduler",
+      "description": "Agendamento integrado para telemedicina com lembretes e filas.",
+      "category": "healthcare",
+      "icon": "Calendar",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes telemedicine scheduler",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1209,
+      "name": "Hermes e-Prescription Gateway",
+      "slug": "hermes-eprescription-gateway",
+      "description": "Gateway de receituário digital com assinatura e validação.",
+      "category": "healthcare",
+      "icon": "FileText",
+      "price": 2897,
+      "features": [
+        "Automação completa de hermes eprescription gateway",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1210,
+      "name": "Hermes Medical Coding AI",
+      "slug": "hermes-medical-coding-ai",
+      "description": "Codificação automática AI de CID-10, TUSS e CBHPM.",
+      "category": "healthcare",
+      "icon": "Brain",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes medical coding ai",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1211,
+      "name": "Hermes Lab Integration",
+      "slug": "hermes-lab-integration",
+      "description": "Integração com laboratórios — recebimento de laudos via HL7/FHIR.",
+      "category": "healthcare",
+      "icon": "Activity",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes lab integration",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1212,
+      "name": "Hermes Insurance Claims",
+      "slug": "hermes-insurance-claims",
+      "description": "Automação de guias TISS com validação e envio automático.",
+      "category": "healthcare",
+      "icon": "CreditCard",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes insurance claims",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1213,
+      "name": "Hermes Patient Outreach",
+      "slug": "hermes-patient-outreach",
+      "description": "Campanhas de outreach para pacientes com follow-up inteligente.",
+      "category": "healthcare",
+      "icon": "Users",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes patient outreach",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1214,
+      "name": "Hermes Clinical Trial Tracker",
+      "slug": "hermes-clinical-trial-tracker",
+      "description": "Tracking de ensaios clínicos com milestones e compliance.",
+      "category": "healthcare",
+      "icon": "ClipboardList",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes clinical trial tracker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1215,
+      "name": "Hermes Pharmacovigilance",
+      "slug": "hermes-pharmacovigilance",
+      "description": "Farmacovigilância com detecção de eventos adversos e relatórios.",
+      "category": "healthcare",
+      "icon": "AlertTriangle",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes pharmacovigilance",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1216,
+      "name": "Hermes Wearable Data Hub",
+      "slug": "hermes-wearable-data-hub",
+      "description": "Integração com wearables — Apple Health, Fitbit, Garmin data hub.",
+      "category": "healthcare",
+      "icon": "Watch",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes wearable data hub",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1217,
+      "name": "Hermes ZAP Imoveis Sync",
+      "slug": "hermes-zap-imoveis-sync",
+      "description": "Sync ZAP/Imóveis com MLS, portais e CRM imobiliário.",
+      "category": "realestate",
+      "icon": "Home",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes zap imoveis sync",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1218,
+      "name": "Hermes iugu Billing",
+      "slug": "hermes-iugu-billing",
+      "description": "Cobrança recorrente iugu para aluguéis e condomínios.",
+      "category": "realestate",
+      "icon": "DollarSign",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes iugu billing",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1219,
+      "name": "Hermes Virtual Tour Engine",
+      "slug": "hermes-virtual-tour-engine",
+      "description": "Engine de tours virtuais com Matterport e renders 3D.",
+      "category": "realestate",
+      "icon": "Camera",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes virtual tour engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1220,
+      "name": "Hermes Proprietor Portal",
+      "slug": "hermes-proprietor-portal",
+      "description": "Portal do proprietário com extratos, documentos e boletos.",
+      "category": "realestate",
+      "icon": "UserCheck",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes proprietor portal",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1221,
+      "name": "Hermes Lease Automation",
+      "slug": "hermes-lease-automation",
+      "description": "Automação de contratos de locação com assinatura digital.",
+      "category": "realestate",
+      "icon": "FileSignature",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes lease automation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1222,
+      "name": "Hermes Property Valuation",
+      "slug": "hermes-property-valuation",
+      "description": "Avaliação imobiliária automatizada com comparativos de mercado.",
+      "category": "realestate",
+      "icon": "BarChart",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes property valuation",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1223,
+      "name": "Hermes Syndication Platform",
+      "slug": "hermes-syndication-platform",
+      "description": "Plataforma de syndication para crowdfunding imobiliário.",
+      "category": "realestate",
+      "icon": "TrendingUp",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes syndication platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1224,
+      "name": "Hermes Facility Management",
+      "slug": "hermes-facility-management",
+      "description": "Gestão de facilities com manutenção preventiva e tickets.",
+      "category": "realestate",
+      "icon": "Building",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes facility management",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1225,
+      "name": "Hermes Lead Qualification RE",
+      "slug": "hermes-lead-qualification-re",
+      "description": "Qualificação de leads imobiliários com scoring e nurturing.",
+      "category": "realestate",
+      "icon": "Target",
+      "price": 1197,
+      "features": [
+        "Automação completa de hermes lead qualification re",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1226,
+      "name": "Hermes Neighborhood Analytics",
+      "slug": "hermes-neighborhood-analytics",
+      "description": "Análise de bairro com demografia, infraestrutura e preço/m².",
+      "category": "realestate",
+      "icon": "Map",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes neighborhood analytics",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1227,
+      "name": "Hermes Contract Analyzer",
+      "slug": "hermes-contract-analyzer",
+      "description": "Análise de contratos com IA — cláusulas, riscos e sugestões.",
+      "category": "legal",
+      "icon": "FileText",
+      "price": 2297,
+      "features": [
+        "Automação completa de hermes contract analyzer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1228,
+      "name": "Hermes Process Monitor",
+      "slug": "hermes-process-monitor",
+      "description": "Monitoramento de processos judiciais com andamentos automáticos.",
+      "category": "legal",
+      "icon": "Gavel",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes process monitor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1229,
+      "name": "Hermes Legal CRM",
+      "slug": "hermes-legal-crm",
+      "description": "CRM jurídico com prazos, publicações e intimações.",
+      "category": "legal",
+      "icon": "Users",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes legal crm",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1230,
+      "name": "Hermes E-Doc Signer",
+      "slug": "hermes-edoc-signer",
+      "description": "Assinatura eletrônica de documentos com validade jurídica.",
+      "category": "legal",
+      "icon": "PenTool",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes edoc signer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1231,
+      "name": "Hermes ODR Platform",
+      "slug": "hermes-odr-platform",
+      "description": "Plataforma ODR — resolução online de disputas com mediação.",
+      "category": "legal",
+      "icon": "Scale",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes odr platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1232,
+      "name": "Hermes Compliance Checker",
+      "slug": "hermes-compliance-checker",
+      "description": "Verificador de compliance com legislação atualizada.",
+      "category": "legal",
+      "icon": "CheckSquare",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes compliance checker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1233,
+      "name": "Hermes IP Portfolio",
+      "slug": "hermes-ip-portfolio",
+      "description": "Gestão de portfolio de PI com renovamentos e monitoramento.",
+      "category": "legal",
+      "icon": "Shield",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes ip portfolio",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1234,
+      "name": "Hermes Discovery Engine",
+      "slug": "hermes-discovery-engine",
+      "description": "E-discovery com coleta, processamento e review de documentos.",
+      "category": "legal",
+      "icon": "Search",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes discovery engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1235,
+      "name": "Hermes Notary Bot",
+      "slug": "hermes-notary-bot",
+      "description": "Bot para reconhecimento de firma e autenticações digitais.",
+      "category": "legal",
+      "icon": "FileCheck",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes notary bot",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1236,
+      "name": "Hermes Precedent Search",
+      "slug": "hermes-precedent-search",
+      "description": "Busca de jurisprudência e precedentes com IA.",
+      "category": "legal",
+      "icon": "BookOpen",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes precedent search",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1237,
+      "name": "Hermes Adaptive Learning",
+      "slug": "hermes-adaptive-learning",
+      "description": "Plataforma de aprendizado adaptativo com IA e spaced repetition.",
+      "category": "education",
+      "icon": "Brain",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes adaptive learning",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1238,
+      "name": "Hermes Cert Validator",
+      "slug": "hermes-cert-validator",
+      "description": "Validação de certificados com blockchain e verificação QR.",
+      "category": "education",
+      "icon": "Award",
+      "price": 1197,
+      "features": [
+        "Automação completa de hermes cert validator",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1239,
+      "name": "Hermes Exam Proctor",
+      "slug": "hermes-exam-proctor",
+      "description": "Proctoring de provas online com detecção de fraude por IA.",
+      "category": "education",
+      "icon": "Eye",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes exam proctor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1240,
+      "name": "Hermes Content Authoring",
+      "slug": "hermes-content-authoring",
+      "description": "Autoria de conteúdo SCORM/xAPI com templates e assets.",
+      "category": "education",
+      "icon": "PenTool",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes content authoring",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1241,
+      "name": "Hermes Student Success",
+      "slug": "hermes-student-success",
+      "description": "Plataforma de student success com alertas e intervenções.",
+      "category": "education",
+      "icon": "TrendingUp",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes student success",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1242,
+      "name": "Hermes Cohort Analytics",
+      "slug": "hermes-cohort-analytics",
+      "description": "Analytics de cohort com retention, completion e NPS.",
+      "category": "education",
+      "icon": "BarChart",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes cohort analytics",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1243,
+      "name": "Hermes Peer Review",
+      "slug": "hermes-peer-review",
+      "description": "Sistema de peer review com rubricas e feedback estruturado.",
+      "category": "education",
+      "icon": "Users",
+      "price": 1297,
+      "features": [
+        "Automação completa de hermes peer review",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1244,
+      "name": "Hermes MOOC Platform",
+      "slug": "hermes-mooc-platform",
+      "description": "Plataforma MOOC com vídeos, quizzes e community.",
+      "category": "education",
+      "icon": "Globe",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes mooc platform",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1245,
+      "name": "Hermes Skill Gap Analyzer",
+      "slug": "hermes-skill-gap-analyzer",
+      "description": "Análise de skill gaps com plano de desenvolvimento individual.",
+      "category": "education",
+      "icon": "Target",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes skill gap analyzer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1246,
+      "name": "Hermes Internship Hub",
+      "slug": "hermes-internship-hub",
+      "description": "Hub de estágios com vagas, candidaturas e avaliação.",
+      "category": "education",
+      "icon": "Briefcase",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes internship hub",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1247,
+      "name": "Hermes Last Mile Tracker",
+      "slug": "hermes-last-mile-tracker",
+      "description": "Rastreamento last mile com ETAs, fotos e proof of delivery.",
+      "category": "logistics",
+      "icon": "MapPin",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes last mile tracker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1248,
+      "name": "Hermas Route Optimizer",
+      "slug": "hermes-route-optimizer",
+      "description": "Otimizador de rotas com múltiplas paradas e restrições.",
+      "category": "logistics",
+      "icon": "Navigation",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes route optimizer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1249,
+      "name": "Hermes Fleet Management",
+      "slug": "hermes-fleet-management",
+      "description": "Gestão de frota com telemetria, manutenção e custos.",
+      "category": "logistics",
+      "icon": "Truck",
+      "price": 2297,
+      "features": [
+        "Automação completa de hermes fleet management",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1250,
+      "name": "Hermes Warehouse WMS",
+      "slug": "hermes-warehouse-wms",
+      "description": "WMS com picking, packing, inventário e integração e-commerce.",
+      "category": "logistics",
+      "icon": "Package",
+      "price": 2797,
+      "features": [
+        "Automação completa de hermes warehouse wms",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1251,
+      "name": "Hermes Freight Marketplace",
+      "slug": "hermes-freight-marketplace",
+      "description": "Marketplace de fretes com cotação e booking automático.",
+      "category": "logistics",
+      "icon": "Globe",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes freight marketplace",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1252,
+      "name": "Hermes Cold Chain Monitor",
+      "slug": "hermes-cold-chain-monitor",
+      "description": "Monitoramento de cadeia de frio com alertas de temperatura.",
+      "category": "logistics",
+      "icon": "Thermometer",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes cold chain monitor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1253,
+      "name": "Hermes Returns Portal",
+      "slug": "hermes-returns-portal",
+      "description": "Portal de devoluções com autorização, coleta e estorno.",
+      "category": "logistics",
+      "icon": "RefreshCw",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes returns portal",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1254,
+      "name": "Hermes Cross Dock",
+      "slug": "hermes-cross-dock",
+      "description": "Cross-docking com consolidação e expedição automática.",
+      "category": "logistics",
+      "icon": "GitMerge",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes cross dock",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1255,
+      "name": "Hermes Supplier Portal",
+      "slug": "hermes-supplier-portal",
+      "description": "Portal do fornecedor com pedidos, notas e compliance.",
+      "category": "logistics",
+      "icon": "Users",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes supplier portal",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1256,
+      "name": "Hermes Demand Forecast",
+      "slug": "hermes-demand-forecast",
+      "description": "Forecasting de demanda com machine learning e promoções.",
+      "category": "logistics",
+      "icon": "TrendingUp",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes demand forecast",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1257,
+      "name": "Hermes Carbon Tracker",
+      "slug": "hermes-carbon-tracker",
+      "description": "Rastreamento de emissões de carbono com inventário GHG.",
+      "category": "sustainability",
+      "icon": "Leaf",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes carbon tracker",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1258,
+      "name": "Hermes ESG Reporter",
+      "slug": "hermes-esg-reporter",
+      "description": "Relatórios ESG com frameworks GRI, SASB, TCFD.",
+      "category": "sustainability",
+      "icon": "BarChart",
+      "price": 2297,
+      "features": [
+        "Automação completa de hermes esg reporter",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1259,
+      "name": "Hermes Waste Optimizer",
+      "slug": "hermes-waste-optimizer",
+      "description": "Otimização de resíduos com rastreabilidade e destinação.",
+      "category": "sustainability",
+      "icon": "RefreshCw",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes waste optimizer",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1260,
+      "name": "Hermes Green Procurement",
+      "slug": "hermes-green-procurement",
+      "description": "Compras sustentáveis com score ambiental de fornecedores.",
+      "category": "sustainability",
+      "icon": "ShoppingCart",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes green procurement",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1261,
+      "name": "Hermes Energy Monitor",
+      "slug": "hermes-energy-monitor",
+      "description": "Monitoramento de energia com eficiência e renewáveis.",
+      "category": "sustainability",
+      "icon": "Zap",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes energy monitor",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1262,
+      "name": "Hermes Circular Economy",
+      "slug": "hermes-circular-economy",
+      "description": "Economia circular com logística reversa e reciclagem.",
+      "category": "sustainability",
+      "icon": "RefreshCw",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes circular economy",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1263,
+      "name": "Hermes Biodiversity Index",
+      "slug": "hermes-biodiversity-index",
+      "description": "Índice de biodiversidade com monitoramento e relatórios.",
+      "category": "sustainability",
+      "icon": "Eye",
+      "price": 1597,
+      "features": [
+        "Automação completa de hermes biodiversity index",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1264,
+      "name": "Hermes Water Stewardship",
+      "slug": "hermes-water-stewardship",
+      "description": "Gestão hídrica com consumo, reuso e eficiência.",
+      "category": "sustainability",
+      "icon": "Activity",
+      "price": 1397,
+      "features": [
+        "Automação completa de hermes water stewardship",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1265,
+      "name": "Hermes Social Impact",
+      "slug": "hermes-social-impact",
+      "description": "Medição de impacto social com indicadores e storytelling.",
+      "category": "sustainability",
+      "icon": "Heart",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes social impact",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1266,
+      "name": "Hermes Climate Risk",
+      "slug": "hermes-climate-risk",
+      "description": "Análise de risco climático com cenários e mitigação.",
+      "category": "sustainability",
+      "icon": "AlertTriangle",
+      "price": 2197,
+      "features": [
+        "Automação completa de hermes climate risk",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1267,
+      "name": "Hermes Pix Instant",
+      "slug": "hermes-pix-instant",
+      "description": "PIX instantâneo com conciliação e cashback automático.",
+      "category": "fintech",
+      "icon": "Zap",
+      "price": 1497,
+      "features": [
+        "Automação completa de hermes pix instant",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1268,
+      "name": "Hermes Open Finance Hub",
+      "slug": "hermes-open-finance-hub",
+      "description": "Hub Open Finance com consent, dados e iniciação de pagamento.",
+      "category": "fintech",
+      "icon": "Cloud",
+      "price": 2797,
+      "features": [
+        "Automação completa de hermes open finance hub",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1269,
+      "name": "Hermes Fraud Detection",
+      "slug": "hermes-fraud-detection",
+      "description": "Detecção de fraude com ML em tempo real e scoring.",
+      "category": "fintech",
+      "icon": "ShieldAlert",
+      "price": 2297,
+      "features": [
+        "Automação completa de hermes fraud detection",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1270,
+      "name": "Hermes Credit Bureau",
+      "slug": "hermes-credit-bureau",
+      "description": "Integração credit bureau com scoring e decision engine.",
+      "category": "fintech",
+      "icon": "BarChart",
+      "price": 1997,
+      "features": [
+        "Automação completa de hermes credit bureau",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1271,
+      "name": "Hermes Crypto Custody",
+      "slug": "hermes-crypto-custody",
+      "description": "Custódia criptográfica institucional com multi-sig e HSM.",
+      "category": "fintech",
+      "icon": "Lock",
+      "price": 2997,
+      "features": [
+        "Automação completa de hermes crypto custody",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1272,
+      "name": "Hermes BNPL Engine",
+      "slug": "hermes-bnpl-engine",
+      "description": "Engine BNPL com checkout, parcelamento e cobrança.",
+      "category": "fintech",
+      "icon": "CreditCard",
+      "price": 1797,
+      "features": [
+        "Automação completa de hermes bnpl engine",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1273,
+      "name": "Hermes RegTech KYC",
+      "slug": "hermes-regtech-kyc",
+      "description": "KYC/AML com document verification, screening e due diligence.",
+      "category": "fintech",
+      "icon": "UserCheck",
+      "price": 1697,
+      "features": [
+        "Automação completa de hermes regtech kyc",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1274,
+      "name": "Hermes Embedded Finance",
+      "slug": "hermes-embedded-finance",
+      "description": "Embedded finance com APIs banking-as-a-service.",
+      "category": "fintech",
+      "icon": "Code",
+      "price": 2497,
+      "features": [
+        "Automação completa de hermes embedded finance",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1275,
+      "name": "Hermes Neobank Core",
+      "slug": "hermes-neobank-core",
+      "description": "Core bancário de neobank com ledger, contas e cartões.",
+      "category": "fintech",
+      "icon": "DollarSign",
+      "price": 3497,
+      "features": [
+        "Automação completa de hermes neobank core",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
+    },
+    {
+      "id": 1276,
+      "name": "Hermes Chargeback Defender",
+      "slug": "hermes-chargeback-defender",
+      "description": "Defesa de chargebacks com automação e representment.",
+      "category": "fintech",
+      "icon": "Shield",
+      "price": 1897,
+      "features": [
+        "Automação completa de hermes chargeback defender",
+        "Dashboard de métricas em tempo real",
+        "Suporte prioritário 24/7",
+        "Integrações com ferramentas populares",
+        "Documentação e treinamento incluídos"
+      ],
+      "status": "active",
+      "created_at": "2026-09-12T01:56:23.049660+00:00",
+      "updated_at": "2026-09-12T01:56:23.049660+00:00"
     }
   ],
   "meta": {
