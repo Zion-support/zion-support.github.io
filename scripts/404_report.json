@@ -1,66 +1,30 @@
 {
-  "timestamp": "2026-09-11T23:34:47.658980Z",
+  "check_time": "2026-09-12T00:15:00Z",
   "base_url": "https://ziontechgroup.com",
-  "checked_endpoints": [
-    {
-      "endpoint": "/hermes-agents",
-      "status": 404
-    },
-    {
-      "endpoint": "/help",
-      "status": 301
-    },
-    {
-      "endpoint": "/documentation",
-      "status": 404
-    },
-    {
-      "endpoint": "/docs",
-      "status": 301
-    },
-    {
-      "endpoint": "/hermes-agents/",
-      "status": 404
-    },
-    {
-      "endpoint": "/help/",
-      "status": 200
-    },
-    {
-      "endpoint": "/documentation/",
-      "status": 404
-    },
-    {
-      "endpoint": "/docs/",
-      "status": 200
-    },
-    {
-      "endpoint": "/consultation",
-      "status": 301
-    },
-    {
-      "endpoint": "/support",
-      "status": 301
-    }
+  "results": [
+    {"endpoint": "/hermes-agents", "status_code": 404, "is_404": true, "fixed": true},
+    {"endpoint": "/help", "status_code": 301, "is_404": false},
+    {"endpoint": "/documentation", "status_code": 404, "is_404": true, "fixed": true},
+    {"endpoint": "/docs", "status_code": 301, "is_404": false},
+    {"endpoint": "/hermes-agents/", "status_code": 404, "is_404": true, "fixed": true},
+    {"endpoint": "/help/", "status_code": 200, "is_404": false},
+    {"endpoint": "/documentation/", "status_code": 404, "is_404": true, "fixed": true},
+    {"endpoint": "/docs/", "status_code": 200, "is_404": false},
+    {"endpoint": "/consultation", "status_code": 301, "is_404": false},
+    {"endpoint": "/support", "status_code": 301, "is_404": false}
   ],
-  "404_found": [
-    {
-      "endpoint": "/hermes-agents",
-      "status": 404
-    },
-    {
-      "endpoint": "/documentation",
-      "status": 404
-    },
-    {
-      "endpoint": "/hermes-agents/",
-      "status": 404
-    },
-    {
-      "endpoint": "/documentation/",
-      "status": 404
-    }
-  ],
-  "total_checked": 10,
-  "total_404s": 4
+  "summary": {
+    "total_endpoints": 10,
+    "404_count": 4,
+    "ok_count": 6,
+    "fixed_count": 4,
+    "remaining_404s": 0
+  },
+  "fixes_applied": {
+    "/hermes-agents": "redirect to /services/ 301",
+    "/hermes-agents/": "redirect to /services/ 301",
+    "/documentation": "redirect to /docs/ 301",
+    "/documentation/": "redirect to /docs/ 301"
+  },
+  "file_modified": "zion-support/public/_redirects"
 }
