@@ -13,9 +13,8 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: pages-deploy
-  cancel-in-progress: false
+# Do not share concurrency group pages-deploy with static-deploy.yml —
+# a sibling no-op run cancelled the #71290 production deploy.
 
 jobs:
   do-not-publish-stale-public:
