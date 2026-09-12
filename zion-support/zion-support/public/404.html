@@ -23,11 +23,19 @@
     a { color: #4d9de0; text-decoration: none; }
     a:hover { text-decoration: underline; }
   </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404 - Página não encontrada</h1>
+    <p>Redirecionando para a página correta...</p>
+    <p><a href="/docs/">Ir para Documentação</a></p>
+  </div>
   <script>
-    // JavaScript redirects for 404 pages on GitHub Pages
-    // Maps common mistyped or renamed paths to correct destinations
     (function() {
       var path = window.location.pathname;
+      var trailing = path.endsWith('/');
+      var pathWithoutTrailing = trailing ? path.slice(0, -1) : path;
+      
       var redirects = {
         "/hermes-agents": "/docs/",
         "/hermes-agents/": "/docs/",
@@ -41,17 +49,21 @@
         "/support/": "/docs/"
       };
       
+      // Check exact match first
       if (redirects[path]) {
         window.location.href = redirects[path];
+        return;
       }
+      
+      // Check without trailing slash
+      if (redirects[pathWithoutTrailing]) {
+        window.location.href = redirects[pathWithoutTrailing];
+        return;
+      }
+      
+      // Default redirect
+      window.location.href = "/docs/";
     })();
   </script>
-</head>
-<body>
-  <div class="container">
-    <h1>404 - Página não encontrada</h1>
-    <p>Redirecionando para a página correta...</p>
-    <p><a href="/docs/">Ir para Documentação</a></p>
-  </div>
 </body>
 </html>
