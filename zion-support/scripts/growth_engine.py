@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate 80 NEW unique Hermes Agent services avoiding all existing ones."""
+"""Growth Engine: generate 100 NEW unique Hermes Agent services (v3 batch)."""
 import json
 from datetime import datetime, timezone
 
-DATA_PATH = 'app/data/servicesData.json'
+DATA_PATH = '/data/data/com.termux/files/home/.hermes/hermes-agent/zion-support/app/data/servicesData.json'
 
 with open(DATA_PATH) as f:
     data = json.load(f)
@@ -13,99 +13,134 @@ max_id = max(s['id'] for s in services)
 existing_slugs = {s['slug'] for s in services}
 existing_names = {s['name'] for s in services}
 
-NEW_SERVICES = [
-    # HEALTHCARE
-    {"name": "Hermes HIPAA Data Masking", "slug": "hermes-hipaa-data-masking", "category": "healthcare", "icon": "Shield", "price": 2297, "description": "Mascaramento automático de PHI em ambientes dev/staging."},
-    {"name": "Hermes Telemedicine Scheduler", "slug": "hermes-telemedicine-scheduler", "category": "healthcare", "icon": "Calendar", "price": 1597, "description": "Agendamento integrado para telemedicina com lembretes e filas."},
-    {"name": "Hermes e-Prescription Gateway", "slug": "hermes-eprescription-gateway", "category": "healthcare", "icon": "FileText", "price": 2897, "description": "Gateway de receituário digital com assinatura e validação."},
-    {"name": "Hermes Medical Coding AI", "slug": "hermes-medical-coding-ai", "category": "healthcare", "icon": "Brain", "price": 1997, "description": "Codificação automática AI de CID-10, TUSS e CBHPM."},
-    {"name": "Hermes Lab Integration", "slug": "hermes-lab-integration", "category": "healthcare", "icon": "Activity", "price": 1797, "description": "Integração com laboratórios — recebimento de laudos via HL7/FHIR."},
-    {"name": "Hermes Insurance Claims", "slug": "hermes-insurance-claims", "category": "healthcare", "icon": "CreditCard", "price": 1697, "description": "Automação de guias TISS com validação e envio automático."},
-    {"name": "Hermes Patient Outreach", "slug": "hermes-patient-outreach", "category": "healthcare", "icon": "Users", "price": 1397, "description": "Campanhas de outreach para pacientes com follow-up inteligente."},
-    {"name": "Hermes Clinical Trial Tracker", "slug": "hermes-clinical-trial-tracker", "category": "healthcare", "icon": "ClipboardList", "price": 2497, "description": "Tracking de ensaios clínicos com milestones e compliance."},
-    {"name": "Hermes Pharmacovigilance", "slug": "hermes-pharmacovigilance", "category": "healthcare", "icon": "AlertTriangle", "price": 2197, "description": "Farmacovigilância com detecção de eventos adversos e relatórios."},
-    {"name": "Hermes Wearable Data Hub", "slug": "hermes-wearable-data-hub", "category": "healthcare", "icon": "Watch", "price": 1897, "description": "Integração com wearables — Apple Health, Fitbit, Garmin data hub."},
+# 100 NEW services — v3 naming: "Hermes [Descriptor] [Noun]"
+new_services = [
+    # === MESSAGING (14) ===
+    {"name": "Hermes WhatsApp Lead Qualifier Bot", "slug": "hermes-whatsapp-lead-qualifier-bot", "category": "messaging", "icon": "Filter", "price": 1697, "description": "Bot WhatsApp com qualificação automática de leads, lead scoring e nurturing."},
+    {"name": "Hermes Telegram E-Learning Platform", "slug": "hermes-telegram-elearning-platform", "category": "messaging", "icon": "BookOpen", "price": 2497, "description": "Plataforma de cursos no Telegram com quizzes, certificados e tracking."},
+    {"name": "Hermes Discord Event Manager", "slug": "hermes-discord-event-manager", "category": "messaging", "icon": "Calendar", "price": 1497, "description": "Gestor de eventos Discord com RSVPs, reminders e community challenges."},
+    {"name": "Hermes Slack Analytics Reporter", "slug": "hermes-slack-analytics-reporter", "category": "messaging", "icon": "BarChart", "price": 1597, "description": "Reporter Slack com engagement analytics, activity heatmaps e sentiment tracking."},
+    {"name": "Hermes Email Warmup Engine", "slug": "hermes-email-warmup-engine", "category": "messaging", "icon": "Thermometer", "price": 1197, "description": "Engine de email warmup com gradual sending, reputation monitoring e ISP relations."},
+    {"name": "Hermes Teams Poll & Survey Bot", "slug": "hermes-teams-poll-survey-bot", "category": "messaging", "icon": "ThumbsUp", "price": 897, "description": "Bot Teams com polls, surveys, quizzes e real-time results dashboard."},
+    {"name": "Hermes Instagram Story Commerce", "slug": "hermes-instagram-story-commerce", "category": "messaging", "icon": "ShoppingBag", "price": 1797, "description": "Commerce em Instagram Stories com product tags, swipe-up e checkout integrado."},
+    {"name": "Hermes LinkedIn Sales Navigator AI", "slug": "hermes-linkedin-sales-nav-ai", "category": "messaging", "icon": "Compass", "price": 2497, "description": "AI para LinkedIn Sales Navigator com lead recommendations e sequence automation."},
+    {"name": "Hermes Voicebot Multi-Language", "slug": "hermes-voicebot-multilang", "category": "messaging", "icon": "Globe", "price": 3497, "description": "Voicebot multilíngue com TTS/STT, dialect detection e cultural adaptation."},
+    {"name": "Hermes SMS Loyalty Platform", "slug": "hermes-sms-loyalty-platform", "category": "messaging", "icon": "Award", "price": 1497, "description": "Plataforma SMS loyalty com points, tiers, rewards e referral tracking."},
+    {"name": "Hermes Facebook Messenger Commerce", "slug": "hermes-fbmessenger-commerce", "category": "messaging", "icon": "ShoppingCart", "price": 1897, "description": "Commerce via Facebook Messenger com catalog, cart e payment integration."},
+    {"name": "Hermes Threema Work Secure Comms", "slug": "hermes-threema-work-secure", "category": "messaging", "icon": "Lock", "price": 2497, "description": "Comunicação segura Threema Work com Swiss hosting e GDPR compliance."},
+    {"name": "Hermes Snapchat AR Commerce", "slug": "hermes-snapchat-ar-commerce", "category": "messaging", "icon": "Camera", "price": 2997, "description": "AR Commerce Snapchat com try-on, product visualization e shoppable lenses."},
+    {"name": "Hermes Line Official Account AI", "slug": "hermes-line-official-ai", "category": "messaging", "icon": "Bot", "price": 2197, "description": "AI Line Official Account com rich menus, LIFF apps e message delivery."},
 
-    # REAL ESTATE / PROPTECH
-    {"name": "Hermes ZAP Imoveis Sync", "slug": "hermes-zap-imoveis-sync", "category": "realestate", "icon": "Home", "price": 1897, "description": "Sync ZAP/Imóveis com MLS, portais e CRM imobiliário."},
-    {"name": "Hermes iugu Billing", "slug": "hermes-iugu-billing", "category": "realestate", "icon": "DollarSign", "price": 1297, "description": "Cobrança recorrente iugu para aluguéis e condomínios."},
-    {"name": "Hermes Virtual Tour Engine", "slug": "hermes-virtual-tour-engine", "category": "realestate", "icon": "Camera", "price": 2497, "description": "Engine de tours virtuais com Matterport e renders 3D."},
-    {"name": "Hermes Proprietor Portal", "slug": "hermes-proprietor-portal", "category": "realestate", "icon": "UserCheck", "price": 1597, "description": "Portal do proprietário com extratos, documentos e boletos."},
-    {"name": "Hermes Lease Automation", "slug": "hermes-lease-automation", "category": "realestate", "icon": "FileSignature", "price": 1797, "description": "Automação de contratos de locação com assinatura digital."},
-    {"name": "Hermes Property Valuation", "slug": "hermes-property-valuation", "category": "realestate", "icon": "BarChart", "price": 1997, "description": "Avaliação imobiliária automatizada com comparativos de mercado."},
-    {"name": "Hermes Syndication Platform", "slug": "hermes-syndication-platform", "category": "realestate", "icon": "TrendingUp", "price": 2997, "description": "Plataforma de syndication para crowdfunding imobiliário."},
-    {"name": "Hermes Facility Management", "slug": "hermes-facility-management", "category": "realestate", "icon": "Building", "price": 1697, "description": "Gestão de facilities com manutenção preventiva e tickets."},
-    {"name": "Hermes Lead Qualification RE", "slug": "hermes-lead-qualification-re", "category": "realestate", "icon": "Target", "price": 1197, "description": "Qualificação de leads imobiliários com scoring e nurturing."},
-    {"name": "Hermes Neighborhood Analytics", "slug": "hermes-neighborhood-analytics", "category": "realestate", "icon": "Map", "price": 1497, "description": "Análise de bairro com demografia, infraestrutura e preço/m²."},
+    # === DEVOPS (14) ===
+    {"name": "Hermes GitLab CI/CD Accelerator", "slug": "hermes-gitlab-cicd-accelerator", "category": "devops", "icon": "GitBranch", "price": 1497, "description": "Accelerator GitLab CI/CD com templates, caching e deployment strategies."},
+    {"name": "Hermes BuildKit Image Builder", "slug": "hermes-buildkit-image-builder", "category": "devops", "icon": "Container", "price": 1297, "description": "Builder BuildKit com multi-stage, layer caching e image optimization."},
+    {"name": "Hermes Crossplane Cloud Composer", "slug": "hermes-crossplane-cloud-composer", "category": "devops", "icon": "Cloud", "price": 2197, "description": "Composer Crossplane com composite resources, claims e provider packages."},
+    {"name": "Hermes Flux GitOps Controller", "slug": "hermes-flux-gitops-controller", "category": "devops", "icon": "GitMerge", "price": 1697, "description": "Controller Flux com Kustomization, HelmRelease e image automation."},
+    {"name": "Hermes Cortex Metrics Backend", "slug": "hermes-cortex-metrics-backend", "category": "devops", "icon": "Activity", "price": 1897, "description": "Backend Cortex com blocks storage, alertmanager e multi-tenancy."},
+    {"name": "Hermes Backstage Developer Portal", "slug": "hermes-backstage-dev-portal", "category": "devops", "icon": "Book", "price": 2997, "description": "Developer portal Backstage com software catalog, tech docs e plugins."},
+    {"name": "Hermes Spinnaker Delivery Pipeline", "slug": "hermes-spinnaker-delivery-pipeline", "category": "devops", "icon": "GitBranch", "price": 2497, "description": "Pipeline Spinnaker com multi-cloud deployment, canary analysis e pipeline templates."},
+    {"name": "Hermes Istio Service Mesh Ops", "slug": "hermes-istio-mesh-ops", "category": "devops", "icon": "Network", "price": 2197, "description": "Ops Istio com traffic management, security policies e observability."},
+    {"name": "Hermes Envoy Edge Proxy", "slug": "hermes-envoy-edge-proxy", "category": "devops", "icon": "Globe", "price": 1897, "description": "Edge proxy Envoy with xDS, circuit breaking, retries e external auth."},
+    {"name": "Hermes Nomad Workload Scheduler", "slug": "hermes-nomad-scheduler", "category": "devops", "icon": "Cpu", "price": 1697, "description": "Scheduler Nomad com task drivers, device plugins e multi-region."},
+    {"name": "Hermes Tekton Pipeline Engine", "slug": "hermes-tekton-pipeline-engine", "category": "devops", "icon": "GitMerge", "price": 1497, "description": "Engine Tekton com Tasks, Pipelines, TriggerTemplates e interceptors."},
+    {"name": "Hermes Fluent Bit Log Router", "slug": "hermes-fluentbit-log-router", "category": "devops", "icon": "FileText", "price": 1197, "description": "Router Fluent Bit com multi-output, filters e Kubernetes metadata."},
+    {"name": "Hermes Linkerd Mesh Lite", "slug": "hermes-linkerd-mesh-lite", "category": "devops", "icon": "Network", "price": 1497, "description": "Mesh Linkerd com mTLS, traffic split e golden metrics."},
+    {"name": "Hermes Vagrant Environment Builder", "slug": "hermes-vagrant-env-builder", "category": "devops", "icon": "Box", "price": 897, "description": "Builder Vagrant com multi-machine, providers e provisioning."},
 
-    # LEGAL / LEGALTECH
-    {"name": "Hermes Contract Analyzer", "slug": "hermes-contract-analyzer", "category": "legal", "icon": "FileText", "price": 2297, "description": "Análise de contratos com IA — cláusulas, riscos e sugestões."},
-    {"name": "Hermes Process Monitor", "slug": "hermes-process-monitor", "category": "legal", "icon": "Gavel", "price": 1897, "description": "Monitoramento de processos judiciais com andamentos automáticos."},
-    {"name": "Hermes Legal CRM", "slug": "hermes-legal-crm", "category": "legal", "icon": "Users", "price": 1597, "description": "CRM jurídico com prazos, publicações e intimações."},
-    {"name": "Hermes E-Doc Signer", "slug": "hermes-edoc-signer", "category": "legal", "icon": "PenTool", "price": 1297, "description": "Assinatura eletrônica de documentos com validade jurídica."},
-    {"name": "Hermes ODR Platform", "slug": "hermes-odr-platform", "category": "legal", "icon": "Scale", "price": 1997, "description": "Plataforma ODR — resolução online de disputas com mediação."},
-    {"name": "Hermes Compliance Checker", "slug": "hermes-compliance-checker", "category": "legal", "icon": "CheckSquare", "price": 1797, "description": "Verificador de compliance com legislação atualizada."},
-    {"name": "Hermes IP Portfolio", "slug": "hermes-ip-portfolio", "category": "legal", "icon": "Shield", "price": 2497, "description": "Gestão de portfolio de PI com renovamentos e monitoramento."},
-    {"name": "Hermes Discovery Engine", "slug": "hermes-discovery-engine", "category": "legal", "icon": "Search", "price": 2197, "description": "E-discovery com coleta, processamento e review de documentos."},
-    {"name": "Hermes Notary Bot", "slug": "hermes-notary-bot", "category": "legal", "icon": "FileCheck", "price": 1397, "description": "Bot para reconhecimento de firma e autenticações digitais."},
-    {"name": "Hermes Precedent Search", "slug": "hermes-precedent-search", "category": "legal", "icon": "BookOpen", "price": 1697, "description": "Busca de jurisprudência e precedentes com IA."},
+    # === SECURITY (15) ===
+    {"name": "Hermes Burp Suite Enterprise", "slug": "hermes-burp-suite-enterprise", "category": "security", "icon": "Target", "price": 3497, "description": "Enterprise Burp Suite com scan schedules, CI/CD integration e compliance reports."},
+    {"name": "Hermes AWS IAM Access Analyzer", "slug": "hermes-aws-iam-analyzer", "category": "security", "icon": "UserCheck", "price": 1897, "description": "Analyzer AWS IAM com unused access, policy validation e cross-account analysis."},
+    {"name": "Hermes Azure Sentinel SIEM", "slug": "hermes-azure-sentinel-siem", "category": "security", "icon": "Shield", "price": 3997, "description": "SIEM Azure Sentinel com analytics rules, hunting queries e threat intelligence."},
+    {"name": "Hermes Keycloak Identity Broker", "slug": "hermes-keycloak-identity-broker", "category": "security", "icon": "Users", "price": 1997, "description": "Identity broker Keycloak com SSO, identity brokering e user federation."},
+    {"name": "Hermes OWASP Dependency Check", "slug": "hermes-owasp-dependency-check", "category": "security", "icon": "Package", "price": 1297, "description": "Check OWASP com vulnerability detection, suppression e CVSS scoring."},
+    {"name": "Hermes Falco Runtime Security", "slug": "hermes-falco-runtime-security", "category": "security", "icon": "AlertTriangle", "price": 2497, "description": "Runtime security Falco com custom rules, output plugins e incident response."},
+    {"name": "Hermes WireGuard VPN Manager", "slug": "hermes-wireguard-vpn-manager", "category": "security", "icon": "Wifi", "price": 1497, "description": "Manager WireGuard com key management, peer routing e auto-configuration."},
+    {"name": "Hermes CrowdStrike Falcon Deploy", "slug": "hermes-crowdstrike-falcon-deploy", "category": "security", "icon": "ShieldCheck", "price": 4497, "description": "Deploy CrowdStrike Falcon com EDR, threat hunting e IOA/IOC management."},
+    {"name": "Hermes Qualys Vulnerability Mgmt", "slug": "hermes-qualys-vuln-mgmt", "category": "security", "icon": "Search", "price": 2997, "description": "Vulnerability management Qualys com scanning, prioritization e remediation workflows."},
+    {"name": "Hermes Tenable.io Exposure Mgmt", "slug": "hermes-tenable-exposure-mgmt", "category": "security", "icon": "Eye", "price": 3497, "description": "Exposure management Tenable.io com asset discovery, risk scoring e predictive prioritization."},
+    {"name": "Hermes Snyk Container Security", "slug": "hermes-snyk-container-security", "category": "security", "icon": "Container", "price": 1997, "description": "Container security Snyk com image scanning, base image recommendations e fix PRs."},
+    {"name": "Hermes SonarQube Code Quality", "slug": "hermes-sonarqube-code-quality", "category": "security", "icon": "Code", "price": 2197, "description": "Code quality SonarQube com quality gates, security hotspots e technical debt."},
+    {"name": "Hermes Checkmarx SAST Integration", "slug": "hermes-checkmarx-sast", "category": "security", "icon": "Search", "price": 2497, "description": "Integration Checkmarx com incremental scanning, query suite customization e reporting."},
+    {"name": "Hermes Rapid7 InsightVM", "slug": "hermes-rapid7-insightvm", "category": "security", "icon": "ShieldAlert", "price": 3497, "description": "InsightVM Rapid7 com real-time vulnerability data, live dashboards e remediation."},
+    {"name": "Hermes BeyondTrust PAM", "slug": "hermes-beyondtrust-pam", "category": "security", "icon": "Key", "price": 2997, "description": "PAM BeyondTrust com privileged session management, credential vaulting e access control."},
 
-    # EDUCATION / EDTECH
-    {"name": "Hermes Adaptive Learning", "slug": "hermes-adaptive-learning", "category": "education", "icon": "Brain", "price": 2497, "description": "Plataforma de aprendizado adaptativo com IA e spaced repetition."},
-    {"name": "Hermes Cert Validator", "slug": "hermes-cert-validator", "category": "education", "icon": "Award", "price": 1197, "description": "Validação de certificados com blockchain e verificação QR."},
-    {"name": "Hermes Exam Proctor", "slug": "hermes-exam-proctor", "category": "education", "icon": "Eye", "price": 1897, "description": "Proctoring de provas online com detecção de fraude por IA."},
-    {"name": "Hermes Content Authoring", "slug": "hermes-content-authoring", "category": "education", "icon": "PenTool", "price": 1597, "description": "Autoria de conteúdo SCORM/xAPI com templates e assets."},
-    {"name": "Hermes Student Success", "slug": "hermes-student-success", "category": "education", "icon": "TrendingUp", "price": 1997, "description": "Plataforma de student success com alertas e intervenções."},
-    {"name": "Hermes Cohort Analytics", "slug": "hermes-cohort-analytics", "category": "education", "icon": "BarChart", "price": 1697, "description": "Analytics de cohort com retention, completion e NPS."},
-    {"name": "Hermes Peer Review", "slug": "hermes-peer-review", "category": "education", "icon": "Users", "price": 1297, "description": "Sistema de peer review com rubricas e feedback estruturado."},
-    {"name": "Hermes MOOC Platform", "slug": "hermes-mooc-platform", "category": "education", "icon": "Globe", "price": 2997, "description": "Plataforma MOOC com vídeos, quizzes e community."},
-    {"name": "Hermes Skill Gap Analyzer", "slug": "hermes-skill-gap-analyzer", "category": "education", "icon": "Target", "price": 1797, "description": "Análise de skill gaps com plano de desenvolvimento individual."},
-    {"name": "Hermes Internship Hub", "slug": "hermes-internship-hub", "category": "education", "icon": "Briefcase", "price": 1497, "description": "Hub de estágios com vagas, candidaturas e avaliação."},
+    # === DATA (15) ===
+    {"name": "Hermes Spark Structured Streaming", "slug": "hermes-spark-structured-streaming", "category": "data", "icon": "Zap", "price": 2997, "description": "Structured streaming Spark com watermarking, state management e exactly-once."},
+    {"name": "Hermes DuckDB Analytics Engine", "slug": "hermes-duckdb-analytics-engine", "category": "data", "icon": "Database", "price": 1497, "description": "Analytics engine DuckDB com columnar storage, vectorized execution e parallel queries."},
+    {"name": "Hermes ClickHouse Columnar Store", "slug": "hermes-clickhouse-columnar", "category": "data", "icon": "Database", "price": 2497, "description": "Columnar store ClickHouse com MergeTree engines, materialized views e sharding."},
+    {"name": "Hermes Delta Lake ACID Engine", "slug": "hermes-delta-lake-acid", "category": "data", "icon": "Layers", "price": 2497, "description": "ACID engine Delta Lake com time travel, vacuum e Z-ordering."},
+    {"name": "Hermes Hudi Incremental Pipeline", "slug": "hermes-hudi-incremental-pipeline", "category": "data", "icon": "TrendingUp", "price": 2197, "description": "Incremental pipeline Hudi com COW/MOR tables, clustering e compaction."},
+    {"name": "Hermes Flink Stream Processing", "slug": "hermes-flink-stream-processing", "category": "data", "icon": "Zap", "price": 3497, "description": "Stream processing Flink com event time, windows e stateful processing."},
+    {"name": "Hermes Pulsar Messaging Storage", "slug": "hermes-pulsar-messaging-storage", "category": "data", "icon": "Radio", "price": 2197, "description": "Messaging storage Pulsar com tiered storage, geo-replication e schema registry."},
+    {"name": "Hermes Cassandra NoSQL Scale", "slug": "hermes-cassandra-nosql-scale", "category": "data", "icon": "Database", "price": 2997, "description": "NoSQL scale Cassandra com multi-DC, vnodes e lightweight transactions."},
+    {"name": "Hermes Neo4j Graph Analytics", "slug": "hermes-neo4j-graph-analytics", "category": "data", "icon": "Share2", "price": 2497, "description": "Graph analytics Neo4j com Cypher queries, graph algorithms e GDS library."},
+    {"name": "Hermes ScyllaDB High-Perf NoSQL", "slug": "hermes-scylladb-highperf", "category": "data", "icon": "Database", "price": 2997, "description": "High-performance NoSQL ScyllaDB com shard-aware drivers e consistent performance."},
+    {"name": "Hermes QuestDB Time-Series DB", "slug": "hermes-questdb-timeseries", "category": "data", "icon": "Clock", "price": 1897, "description": "Time-series DB QuestDB com SQL support, relational joins e high ingestion."},
+    {"name": "Hermes TimescaleDB Hypertables", "slug": "hermes-timescaledb-hypertables", "category": "data", "icon": "Clock", "price": 2197, "description": "Hypertables TimescaleDB com compression, continuous aggregates e retention policies."},
+    {"name": "Hermes InfluxDB Metrics Stack", "slug": "hermes-influxdb-metrics-stack", "category": "data", "icon": "Activity", "price": 1797, "description": "Metrics stack InfluxDB com TICK stack, Flux language e downsampling."},
+    {"name": "Hermes Splunk Observability Suite", "slug": "hermes-splunk-observability", "category": "data", "icon": "BarChart", "price": 3997, "description": "Observability suite Splunk com logs, metrics, traces e IT service intelligence."},
+    {"name": "Hermes Databricks Lakehouse Platform", "slug": "hermes-databricks-lakehouse", "category": "data", "icon": "Layers", "price": 4497, "description": "Lakehouse Databricks com Delta Lake, MLflow e Unity Catalog."},
 
-    # LOGISTICS / SUPPLY CHAIN
-    {"name": "Hermes Last Mile Tracker", "slug": "hermes-last-mile-tracker", "category": "logistics", "icon": "MapPin", "price": 1897, "description": "Rastreamento last mile com ETAs, fotos e proof of delivery."},
-    {"name": "Hermas Route Optimizer", "slug": "hermes-route-optimizer", "category": "logistics", "icon": "Navigation", "price": 1997, "description": "Otimizador de rotas com múltiplas paradas e restrições."},
-    {"name": "Hermes Fleet Management", "slug": "hermes-fleet-management", "category": "logistics", "icon": "Truck", "price": 2297, "description": "Gestão de frota com telemetria, manutenção e custos."},
-    {"name": "Hermes Warehouse WMS", "slug": "hermes-warehouse-wms", "category": "logistics", "icon": "Package", "price": 2797, "description": "WMS com picking, packing, inventário e integração e-commerce."},
-    {"name": "Hermes Freight Marketplace", "slug": "hermes-freight-marketplace", "category": "logistics", "icon": "Globe", "price": 2497, "description": "Marketplace de fretes com cotação e booking automático."},
-    {"name": "Hermes Cold Chain Monitor", "slug": "hermes-cold-chain-monitor", "category": "logistics", "icon": "Thermometer", "price": 1697, "description": "Monitoramento de cadeia de frio com alertas de temperatura."},
-    {"name": "Hermes Returns Portal", "slug": "hermes-returns-portal", "category": "logistics", "icon": "RefreshCw", "price": 1397, "description": "Portal de devoluções com autorização, coleta e estorno."},
-    {"name": "Hermes Cross Dock", "slug": "hermes-cross-dock", "category": "logistics", "icon": "GitMerge", "price": 1597, "description": "Cross-docking com consolidação e expedição automática."},
-    {"name": "Hermes Supplier Portal", "slug": "hermes-supplier-portal", "category": "logistics", "icon": "Users", "price": 1797, "description": "Portal do fornecedor com pedidos, notas e compliance."},
-    {"name": "Hermes Demand Forecast", "slug": "hermes-demand-forecast", "category": "logistics", "icon": "TrendingUp", "price": 2197, "description": "Forecasting de demanda com machine learning e promoções."},
+    # === CRM (13) ===
+    {"name": "Hermes HubSpot Operations Hub", "slug": "hermes-hubspot-ops-hub", "category": "crm", "icon": "Settings", "price": 1997, "description": "Operations Hub HubSpot com sync, programmable automation e data quality."},
+    {"name": "Hermes Pipedrive Deal Intelligence", "slug": "hermes-pipedrive-deal-intel", "category": "crm", "icon": "TrendingUp", "price": 1697, "description": "Deal intelligence Pipedrive com AI scoring, activity reminders e goal tracking."},
+    {"name": "Hermes Monday.com Workflows", "slug": "hermes-monday-com-workflows", "category": "crm", "icon": "Workflow", "price": 1497, "description": "Workflows Monday.com com automations, integrations e board templates."},
+    {"name": "Hermes Notion CRM Workspace", "slug": "hermes-notion-crm-workspace", "category": "crm", "icon": "Book", "price": 1297, "description": "CRM workspace Notion com databases, relations e rollups."},
+    {"name": "Hermes Airtable CRM Builder", "slug": "hermes-airtable-crm-builder", "category": "crm", "icon": "Grid", "price": 1097, "description": "CRM builder Airtable com linked records, automations e interface designer."},
+    {"name": "Hermes Nimble Social CRM", "slug": "hermes-nimble-social-crm", "category": "crm", "icon": "Users", "price": 1797, "description": "Social CRM Nimble com social listening, contact enrichment e smart segments."},
+    {"name": "Hermes Engagely Customer Success", "slug": "hermes-engagely-customer-success", "category": "crm", "icon": "Heart", "price": 2197, "description": "Customer success Engagely com CSAT, surveys, feedback e reporting."},
+    {"name": "Hermes LoyaltyLion Rewards Platform", "slug": "hermes-loyaltylion-rewards", "category": "crm", "icon": "Award", "price": 2497, "description": "Rewards platform LoyaltyLion com points, tiers, referrals e VIP programs."},
+    {"name": "Hermes Yotpo Reviews Engine", "slug": "hermes-yotpo-reviews-engine", "category": "crm", "icon": "Star", "price": 1997, "description": "Reviews engine Yotpo com visual UGC, reviews, ratings e loyalty."},
+    {"name": "Hermes Intercom Fin AI Agent", "slug": "hermes-intercom-fin-agent", "category": "crm", "icon": "Bot", "price": 2497, "description": "AI Agent Intercom Fin com conversational support, smart routing e product tours."},
+    {"name": "Hermes Zendesk AI Assistant", "slug": "hermes-zendesk-ai-assistant", "category": "crm", "icon": "Bot", "price": 1997, "description": "AI Assistant Zendesk com auto-tagging, macro suggestions e workflow automation."},
+    {"name": "Hermes Kustomer Omnichannel Desk", "slug": "hermes-kustomer-omni-desk", "category": "crm", "icon": "Headphones", "price": 2997, "description": "Omnichannel desk Kustomer com customer timeline, AI chatbots e CRM."},
+    {"name": "Hermes Freshworks 360 Platform", "slug": "hermes-freshworks-360", "category": "crm", "icon": "Package", "price": 3497, "description": "Platform Freshworks 360 com CRM, ITSM, HR e marketing automation."},
 
-    # SUSTAINABILITY / ESG
-    {"name": "Hermes Carbon Tracker", "slug": "hermes-carbon-tracker", "category": "sustainability", "icon": "Leaf", "price": 1997, "description": "Rastreamento de emissões de carbono com inventário GHG."},
-    {"name": "Hermes ESG Reporter", "slug": "hermes-esg-reporter", "category": "sustainability", "icon": "BarChart", "price": 2297, "description": "Relatórios ESG com frameworks GRI, SASB, TCFD."},
-    {"name": "Hermes Waste Optimizer", "slug": "hermes-waste-optimizer", "category": "sustainability", "icon": "RefreshCw", "price": 1697, "description": "Otimização de resíduos com rastreabilidade e destinação."},
-    {"name": "Hermes Green Procurement", "slug": "hermes-green-procurement", "category": "sustainability", "icon": "ShoppingCart", "price": 1497, "description": "Compras sustentáveis com score ambiental de fornecedores."},
-    {"name": "Hermes Energy Monitor", "slug": "hermes-energy-monitor", "category": "sustainability", "icon": "Zap", "price": 1797, "description": "Monitoramento de energia com eficiência e renewáveis."},
-    {"name": "Hermes Circular Economy", "slug": "hermes-circular-economy", "category": "sustainability", "icon": "RefreshCw", "price": 1897, "description": "Economia circular com logística reversa e reciclagem."},
-    {"name": "Hermes Biodiversity Index", "slug": "hermes-biodiversity-index", "category": "sustainability", "icon": "Eye", "price": 1597, "description": "Índice de biodiversidade com monitoramento e relatórios."},
-    {"name": "Hermes Water Stewardship", "slug": "hermes-water-stewardship", "category": "sustainability", "icon": "Activity", "price": 1397, "description": "Gestão hídrica com consumo, reuso e eficiência."},
-    {"name": "Hermes Social Impact", "slug": "hermes-social-impact", "category": "sustainability", "icon": "Heart", "price": 1697, "description": "Medição de impacto social com indicadores e storytelling."},
-    {"name": "Hermes Climate Risk", "slug": "hermes-climate-risk", "category": "sustainability", "icon": "AlertTriangle", "price": 2197, "description": "Análise de risco climático com cenários e mitigação."},
+    # === AI (14) ===
+    {"name": "Hermes AutoGen Multi-Agent Studio", "slug": "hermes-autogen-agent-studio", "category": "ai", "icon": "Users", "price": 2997, "description": "Multi-agent studio AutoGen com code execution, group chat e teachability."},
+    {"name": "Hermes Semantic Kernel Orchestrator", "slug": "hermes-semantic-kernel-orch", "category": "ai", "icon": "Cpu", "price": 2197, "description": "Orchestrator Semantic Kernel com skills, planners e memory connectors."},
+    {"name": "Hermes Prompt Flow Designer", "slug": "hermes-prompt-flow-designer", "category": "ai", "icon": "GitBranch", "price": 1497, "description": "Designer Prompt Flow com DAG building, variant management e evaluation."},
+    {"name": "Hermes LLM Router & Gateway", "slug": "hermes-llm-router-gateway", "category": "ai", "icon": "Radio", "price": 1997, "description": "Router LLM com load balancing, fallback strategies e cost optimization."},
+    {"name": "Hermes Evaluation Framework", "slug": "hermes-eval-framework", "category": "ai", "icon": "CheckCircle", "price": 1797, "description": "Evaluation framework com LLM-as-judge, human eval, benchmarks e reports."},
+    {"name": "Hermes Guardrails AI Safety", "slug": "hermes-guardrails-ai-safety", "category": "ai", "icon": "ShieldCheck", "price": 1997, "description": "AI safety Guardrails com validation, redaction e output filtering."},
+    {"name": "Hermes Replicate Model Hub", "slug": "hermes-replicate-model-hub", "category": "ai", "icon": "Cloud", "price": 1497, "description": "Model hub Replicate com Cog packages, hardware scaling e webhooks."},
+    {"name": "Hermes Ollama Local Inference", "slug": "hermes-ollama-local-inference", "category": "ai", "icon": "Server", "price": 997, "description": "Local inference Ollama com model management, quantization e API proxy."},
+    {"name": "Hermes Llama.cpp Optimized Engine", "slug": "hermes-llamacpp-optimized-engine", "category": "ai", "icon": "Cpu", "price": 1297, "description": "Optimized engine llama.cpp com GGUF support, GPU offloading e batched inference."},
+    {"name": "Hermes Tokenizer Studio", "slug": "hermes-tokenizer-studio", "category": "ai", "icon": "Type", "price": 897, "description": "Tokenizer studio com BPE, WordPiece, Unigram e vocabulary optimization."},
+    {"name": "Hermes Embedding Factory", "slug": "hermes-embedding-factory", "category": "ai", "icon": "Layers", "price": 1497, "description": "Embedding factory com vector storage, similarity search e re-ranking."},
+    {"name": "Hermes Chainlit Chat UI Builder", "slug": "hermes-chainlit-chat-builder", "category": "ai", "icon": "MessageSquare", "price": 1297, "description": "Chat UI builder Chainlit com elements, steps e authentication."},
+    {"name": "Hermes Griptape Framework", "slug": "hermes-griptape-framework", "category": "ai", "icon": "Zap", "price": 1997, "description": "Framework Griptape com structures, tools, memory e rulesets."},
+    {"name": "Hermes LiteLLM Proxy Server", "slug": "hermes-litellm-proxy", "category": "ai", "icon": "Radio", "price": 1797, "description": "Proxy server LiteLLM com unified API, caching, budget management e logging."},
 
-    # FINTECH ADVANCED
-    {"name": "Hermes Pix Instant", "slug": "hermes-pix-instant", "category": "fintech", "icon": "Zap", "price": 1497, "description": "PIX instantâneo com conciliação e cashback automático."},
-    {"name": "Hermes Open Finance Hub", "slug": "hermes-open-finance-hub", "category": "fintech", "icon": "Cloud", "price": 2797, "description": "Hub Open Finance com consent, dados e iniciação de pagamento."},
-    {"name": "Hermes Fraud Detection", "slug": "hermes-fraud-detection", "category": "fintech", "icon": "ShieldAlert", "price": 2297, "description": "Detecção de fraude com ML em tempo real e scoring."},
-    {"name": "Hermes Credit Bureau", "slug": "hermes-credit-bureau", "category": "fintech", "icon": "BarChart", "price": 1997, "description": "Integração credit bureau com scoring e decision engine."},
-    {"name": "Hermes Crypto Custody", "slug": "hermes-crypto-custody", "category": "fintech", "icon": "Lock", "price": 2997, "description": "Custódia criptográfica institucional com multi-sig e HSM."},
-    {"name": "Hermes BNPL Engine", "slug": "hermes-bnpl-engine", "category": "fintech", "icon": "CreditCard", "price": 1797, "description": "Engine BNPL com checkout, parcelamento e cobrança."},
-    {"name": "Hermes RegTech KYC", "slug": "hermes-regtech-kyc", "category": "fintech", "icon": "UserCheck", "price": 1697, "description": "KYC/AML com document verification, screening e due diligence."},
-    {"name": "Hermes Embedded Finance", "slug": "hermes-embedded-finance", "category": "fintech", "icon": "Code", "price": 2497, "description": "Embedded finance com APIs banking-as-a-service."},
-    {"name": "Hermes Neobank Core", "slug": "hermes-neobank-core", "category": "fintech", "icon": "DollarSign", "price": 3497, "description": "Core bancário de neobank com ledger, contas e cartões."},
-    {"name": "Hermes Chargeback Defender", "slug": "hermes-chargeback-defender", "category": "fintech", "icon": "Shield", "price": 1897, "description": "Defesa de chargebacks com automação e representment."},
+    # === COMPLIANCE (8) ===
+    {"name": "Hermes ISO 27001 ISMS", "slug": "hermes-iso27001-isms", "category": "compliance", "icon": "Award", "price": 3497, "description": "ISMS ISO 27001 com risk assessment, statement of applicability e internal audits."},
+    {"name": "Hermes DPA Generator AI", "slug": "hermes-dpa-generator-ai", "category": "compliance", "icon": "FileSignature", "price": 1497, "description": "DPA generator AI com clause library, jurisdiction-specific templates e review workflow."},
+    {"name": "Hermes Cookiebot Consent Mgmt", "slug": "hermes-cookiebot-consent-mgmt", "category": "compliance", "icon": "ShieldCheck", "price": 1497, "description": "Consent management Cookiebot com scanning, Categorization e geo-targeting."},
+    {"name": "Hermes Termly Policy Generator", "slug": "hermes-termly-policy-gen", "category": "compliance", "icon": "FileText", "price": 997, "description": "Policy generator Termly com privacy, terms, cookies e disclaimer."},
+    {"name": "Hermes CIPP GDPR Compliance", "slug": "hermes-cipp-gdpr-compliance", "category": "compliance", "icon": "Globe", "price": 2497, "description": "GDPR compliance CIPP com data mapping, DSAR handling e breach notification."},
+    {"name": "Hermes Standard Contractual Clauses", "slug": "hermes-scc-generator", "category": "compliance", "icon": "FileSignature", "price": 1997, "description": "SCC generator com EU 2021/914 templates, TIA workflow e multi-module support."},
+    {"name": "Hermes DPOrganizer Privacy Suite", "slug": "hermes-dporganizer-privacy", "category": "compliance", "icon": "Shield", "price": 2997, "description": "Privacy suite DPOrganizer com data inventory, assessments e vendor management."},
+    {"name": "Hermes Proteus Cyber Risk Mgmt", "slug": "hermes-proteus-cyber-risk", "category": "compliance", "icon": "AlertTriangle", "price": 2497, "description": "Cyber risk management Proteus com threat modeling, quantification e reporting."},
+
+    # === INDUSTRY (7) ===
+    {"name": "Hermes Shopify Plus Automation", "slug": "hermes-shopify-plus-automation", "category": "industry", "icon": "ShoppingBag", "price": 2997, "description": "Automation Shopify Plus com checkout extensibility, B2B e Shop Pay."},
+    {"name": "Hermes Magento Commerce Cloud", "slug": "hermes-magento-cloud", "category": "industry", "icon": "ShoppingCart", "price": 3497, "description": "Commerce Cloud Magento com PWA Studio, B2B features e cloud hosting."},
+    {"name": "Hermes BigCommerce Headless", "slug": "hermes-bigcommerce-headless", "category": "industry", "icon": "Globe", "price": 2497, "description": "Headless BigCommerce com Stencil themes, multi-storefront e APIs."},
+    {"name": "Hermes HubSpot CMS Development", "slug": "hermes-hubspot-cms-dev", "category": "industry", "icon": "Code", "price": 2497, "description": "CMS development HubSpot com themes, modules e serverless functions."},
+    {"name": "Hermes WordPress VIP Platform", "slug": "hermes-wp-vip-platform", "category": "industry", "icon": "Globe", "price": 2997, "description": "VIP platform WordPress com enterprise hosting, edge caching e workflows."},
+    {"name": "Hermes Webflow Enterprise Design", "slug": "hermes-webflow-enterprise", "category": "industry", "icon": "Palette", "price": 2497, "description": "Enterprise design Webflow com CMS, e-commerce, localization e memberships."},
+    {"name": "Hermes Docusaurus Doc Platform", "slug": "hermes-docusaurus-doc-platform", "category": "industry", "icon": "BookOpen", "price": 1497, "description": "Doc platform Docusaurus com versioning, search, i18n e MDX."},
 ]
 
+# Generate with dedup check
 now = datetime.now(timezone.utc).isoformat()
 added = 0
 skipped = 0
 
-for svc in NEW_SERVICES:
+for svc in new_services:
     if svc['slug'] in existing_slugs or svc['name'] in existing_names:
         skipped += 1
+        print(f"SKIP: {svc['slug']}")
         continue
     max_id += 1
     new_svc = {
@@ -128,14 +163,14 @@ for svc in NEW_SERVICES:
         "updated_at": now
     }
     services.append(new_svc)
+    existing_slugs.add(svc['slug'])
+    existing_names.add(svc['name'])
     added += 1
 
-data['services'] = services
-
+# Write back
 with open(DATA_PATH, 'w') as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
-print(f"Added: {added}")
+print(f"\nAdded: {added}")
 print(f"Skipped: {skipped}")
 print(f"Total: {len(services)}")
-print(f"New max ID: {max_id}")
