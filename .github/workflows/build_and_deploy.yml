@@ -16,7 +16,7 @@ concurrency:
 jobs:
   validate-pages-artifact:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,8 +30,11 @@ jobs:
           set -euo pipefail
           missing=0
           for f in index.html book/index.html plans/index.html discovery/index.html \
+                   enterprise/index.html field-services/index.html \
+                   field-services/brazil/index.html \
                    contact/index.html industries/healthcare/index.html \
                    autonomous-agent-services/index.html \
+                   services/ai-automation/index.html \
                    services/autonomous-agent-installation/index.html \
                    services/autonomous-agent-configuration/index.html \
                    services/autonomous-agent-maintenance/index.html; do
@@ -42,6 +45,33 @@ jobs:
               echo "ok out/$f"
             fi
           done
+          for f in out/plans/index.html out/discovery/index.html \
+                   out/enterprise/index.html out/services/ai-automation/index.html; do
+            if grep -q '/_next' "$f"; then
+              echo "::error::$f still references /_next"
+              missing=1
+            fi
+            if ! grep -q '/assets/css/site.css' "$f"; then
+              echo "::error::$f is not Family A (missing site.css)"
+              missing=1
+            fi
+          done
+          if grep -q '044ZG05' out/services/ai-automation/index.html; then
+            echo "::error::ai-automation still uses legacy ZG05 CTA"
+            missing=1
+          fi
+          if ! grep -q '044ZG06' out/services/ai-automation/index.html; then
+            echo "::error::ai-automation missing Starter Pay ZG06"
+            missing=1
+          fi
+          if grep -qi 'http-equiv="refresh"' out/services/ai-automation/index.html; then
+            echo "::error::ai-automation still meta-refreshes away from the SKU"
+            missing=1
+          fi
+          if ! grep -q '05a4ZH0C' out/field-services/brazil/index.html; then
+            echo "::error::field-services/brazil missing T&M Daily plink ZH0C"
+            missing=1
+          fi
           if grep -qi "temporarily unavailable" out/contact/index.html out/discovery/index.html out/industries/healthcare/index.html; then
             echo "::error::Money page still a stub (temporarily unavailable)"
             missing=1
