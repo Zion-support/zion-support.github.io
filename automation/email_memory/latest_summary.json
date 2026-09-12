@@ -12,8 +12,7 @@
     "sent": 0,
     "errors": [],
     "backend": "none",
-    "updatedAt": "2026-09-12T01:27:53.478186+00:00",
-    "content_file": "automation/content/generated/2026-09-12-partnership-and-field-coverage.md"
+    "updatedAt": "2026-09-12T06:24:59.652304+00:00"
   },
   "hot_followup": {
     "hot_threads_found": 0,
@@ -31,5 +30,5 @@
     "errors": []
   },
   "sendEnabled": true,
-  "updatedAt": "2026-09-12T01:27:53.479960+00:00"
+  "updatedAt": "2026-09-12T06:24:59.654053+00:00"
 }
