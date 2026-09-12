@@ -25,7 +25,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Prepare Pages artifact
         run: bash scripts/prepare-pages-out.sh
       - name: Guard money pages in artifact
@@ -36,8 +36,8 @@ jobs:
                    services/ai-automation/index.html; do
             test -f "out/$f" || { echo "::error::Missing out/$f"; exit 1; }
           done
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: out
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
