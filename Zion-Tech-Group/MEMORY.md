@@ -75,7 +75,7 @@
 <!-- ZION-EMAIL-OPS:BEGIN -->
 ## Email ops (continuous agent)
 
-- Updated: 2026-09-12T06:24:59.653481+00:00
+- Updated: 2026-09-12T11:11:49.743250+00:00
 - Send enabled: True (max 5/run)
 - Inbox scanned: 0; sent: 0; drafts: 0; needs human: 0; backend: none
 - Hot follow-up drafts: 0
