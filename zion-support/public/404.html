@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página não encontrada | Zion Tech Group</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #1a1a2e;
+      color: #eee;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    h1 { color: #ff6b35; }
+    a { color: #4d9de0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404 - Página não encontrada</h1>
+    <p>Redirecionando para a página correta...</p>
+    <p><a href="/docs/">Ir para Documentação</a></p>
+  </div>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var redirects = {"/hermes-agents": "/docs/",
+    "/hermes-agents/": "/docs/",
+    "/documentation": "/docs/",
+    "/documentation/": "/docs/",
+    "/help": "/docs/",
+    "/help/": "/docs/",
+    "/consultation": "/docs/",
+    "/support": "/docs/"};
+      
+      if (redirects[path]) {
+        window.location.href = redirects[path];
+      } else {
+        window.location.href = "/docs/";
+      }
+    }());
+  </script>
+</body>
+</html>

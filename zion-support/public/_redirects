@@ -1,0 +1,10 @@
+# Redirects for ziontechgroup.com
+# GitHub Pages style redirects via 404.html or static files
+
+# Hermes Agents
+/hermes-agents /docs/ 301
+/hermes-agents/ /docs/ 301
+
+# Documentation  
+/documentation /docs/ 301
+/documentation/ /docs/ 301
