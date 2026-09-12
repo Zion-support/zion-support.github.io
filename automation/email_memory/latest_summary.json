@@ -12,7 +12,7 @@
     "sent": 0,
     "errors": [],
     "backend": "none",
-    "updatedAt": "2026-09-12T11:11:49.742061+00:00"
+    "updatedAt": "2026-09-12T14:11:43.108934+00:00"
   },
   "hot_followup": {
     "hot_threads_found": 0,
@@ -30,5 +30,5 @@
     "errors": []
   },
   "sendEnabled": true,
-  "updatedAt": "2026-09-12T11:11:49.743797+00:00"
+  "updatedAt": "2026-09-12T14:11:43.109932+00:00"
 }
