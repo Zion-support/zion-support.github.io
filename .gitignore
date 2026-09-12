@@ -38,3 +38,6 @@ crawl_report.txt
 live_integrity_check_v2.py
 sitemap_integrity_check.py
 sitemap_integrity_check_concurrent.py
+.bytecode-fingerprint
+.update-incomplete
+venv/
