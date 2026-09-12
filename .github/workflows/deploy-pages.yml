@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+# Same path as a stale-branch workflow that published a 360KB ./public/
+# over production (2026-09-12). This copy is a no-op on main so GitHub
+# keeps the workflow name but does not ship a second Pages artifact.
+# Production deploy is .github/workflows/static-deploy.yml only.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  do-not-publish-stale-public:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Use static-deploy.yml (prepare-pages-out.sh from main)."
