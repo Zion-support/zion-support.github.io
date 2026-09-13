@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Zion Tech Group</title>
+  <link>https://ziontechgroup.com</link>
+  <description>AI, IT &amp; Micro SAAS Solutions — 9 services and growing.</description>
+  <language>en-us</language>
+  <lastBuildDate>Sun, 13 Sep 2026 05:06:26 +0000</lastBuildDate>
+  <atom:link href="https://ziontechgroup.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+  <item>
+    <title>AI-Powered Healthcare Innovation Platform</title>
+    <link>https://ziontechgroup.com/services/10-ai-powered-healthcare-innovation-platform/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/10-ai-powered-healthcare-innovation-platform/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Revolutionize healthcare delivery with artificial intelligence for improved patient outcomes, operational efficiency, and medical research acceleration.]]></description>
+  </item>
+  <item>
+    <title>AI-Powered Enterprise Risk Management Platform</title>
+    <link>https://ziontechgroup.com/services/7-ai-powered-enterprise-risk-management-platform/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/7-ai-powered-enterprise-risk-management-platform/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Leverage artificial intelligence to identify, assess, and mitigate enterprise risks in real-time across financial, operational, strategic, and compliance domains.]]></description>
+  </item>
+  <item>
+    <title>AI-Powered Supply Chain Optimization Platform</title>
+    <link>https://ziontechgroup.com/services/8-ai-powered-supply-chain-optimization-platform/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/8-ai-powered-supply-chain-optimization-platform/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Transform your supply chain with artificial intelligence for end-to-end visibility, predictive analytics, and autonomous optimization across global networks.]]></description>
+  </item>
+  <item>
+    <title>AI-Powered Customer Experience Intelligence Platform</title>
+    <link>https://ziontechgroup.com/services/9-ai-powered-customer-experience-intelligence-platform/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/9-ai-powered-customer-experience-intelligence-platform/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Elevate customer experiences with artificial intelligence that analyzes behavior, predicts needs, and personalizes interactions across all touchpoints.]]></description>
+  </item>
+  <item>
+    <title>Advanced Cybersecurity AI Defense</title>
+    <link>https://ziontechgroup.com/services/advanced-cybersecurity-ai-defense-i9j0k1l2/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/advanced-cybersecurity-ai-defense-i9j0k1l2/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Next-generation AI-powered cybersecurity platform that provides proactive threat detection, automated response, and continuous security posture management.]]></description>
+  </item>
+  <item>
+    <title>AI-Powered Digital Twin</title>
+    <link>https://ziontechgroup.com/services/ai-powered-digital-twin-q7r8s9t0/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-powered-digital-twin-q7r8s9t0/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Create intelligent digital twins of physical assets, systems, or processes using AI and IoT data for predictive analytics and optimization.]]></description>
+  </item>
+  <item>
+    <title>Enterprise AI Governance Platform</title>
+    <link>https://ziontechgroup.com/services/enterprise-ai-governance-platform-e5f6g7h8/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/enterprise-ai-governance-platform-e5f6g7h8/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Comprehensive AI governance solution that ensures compliance, transparency, and ethical AI deployment across your organization.]]></description>
+  </item>
+  <item>
+    <title>Hyperautomation Enterprise Suite</title>
+    <link>https://ziontechgroup.com/services/hyperautomation-enterprise-suite-m3n4o5p6/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/hyperautomation-enterprise-suite-m3n4o5p6/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[End-to-end hyperautomation platform combining RPA, AI, and process mining to automate complex business processes at scale.]]></description>
+  </item>
+  <item>
+    <title>Quantum Computing Optimization Service</title>
+    <link>https://ziontechgroup.com/services/quantum-computing-optimization-service-a1b2c3d4/</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/services/quantum-computing-optimization-service-a1b2c3d4/</guid>
+    <pubDate>Sun, 13 Sep 2026 05:06:26 +0000</pubDate>
+    <category>AI Services</category>
+    <description><![CDATA[Enterprise-grade quantum computing optimization service that helps organizations leverage quantum algorithms for complex optimization problems in logistics, finance, and cryptography.]]></description>
+  </item>
+</channel>
+</rss>
