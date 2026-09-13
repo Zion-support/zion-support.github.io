@@ -1,8 +1,7 @@
 name: Simple Static Deploy
 
 # Production Pages is build_type=workflow (not gh-pages branch).
-# peaceiris → gh-pages does NOT update ziontechgroup.com.
-# Last good publisher: e23c3b71 (upload-pages-artifact + deploy-pages@v4).
+# Last good publisher: e23c3b71 — no environment gate, deploy-pages@v4.
 
 on:
   push:
@@ -20,9 +19,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,5 +27,4 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
