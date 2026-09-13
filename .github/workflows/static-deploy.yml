@@ -1,23 +1,30 @@
-name: Static Deploy
+name: Simple Static Deploy
+
+# Production Pages is build_type=workflow (not gh-pages branch).
+# Last good publisher: e23c3b71 — no environment gate, deploy-pages@v4.
+
 on:
   push:
-    branches: [main]
+    branches: [main, cursor/restore-pages-outage-0b5b]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          keep_files: false
+          path: out
+      - uses: actions/deploy-pages@v4
