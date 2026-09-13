@@ -11,6 +11,7 @@ mkdir -p out
 if [ -d public ]; then
   cp -a public/. out/
 fi
+# public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
 for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents; do

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// generate-sitemap-feed.cjs — dynamic sitemap.xml + feed.xml from build artifacts
+// generate-sitemap-feed.cjs — feed.xml from build artifacts + commercial sitemap-0
 // Reads: out/service-index.json, out/blog/*/index.html, out/index.html
-// Writes: out/sitemap.xml, out/feed.xml
+// Writes: out/feed.xml; delegates sitemap-0 + sitemapindex to generate-commercial-sitemap.cjs
 
 const fs = require('fs');
 const path = require('path');
@@ -258,14 +258,9 @@ function main() {
   }
   console.log(`blog items: ${blogEntries.length}`);
 
-  // Write sitemap
-  const sitemap = buildSitemap(pages);
-  const smPath = path.join(outDir, 'sitemap.xml');
-  fs.writeFileSync(smPath, sitemap);
-  console.log(`sitemap.xml: ${pages.length} urls`);
-  // Also update public/sitemap.xml for direct GitHub Pages serving
-  const publicSm = path.join(process.cwd(), 'public', 'sitemap.xml');
-  fs.writeFileSync(publicSm, sitemap);
+  // Commercial sitemap-0 + sitemapindex (do not republish the fat hashed urlset)
+  const commercial = require('./generate-commercial-sitemap.cjs');
+  commercial.main();
 
   // Write feed
   const feedContent = buildFeed(allServices, blogEntries);

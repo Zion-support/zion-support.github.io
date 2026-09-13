@@ -967,6 +967,7 @@
 /tools/ /tools/index.html 200
 / /index.html 200
 /sitemap.xml /sitemap.xml 200
+/sitemap-0.xml /sitemap-0.xml 200
 /robots.txt /robots.txt 200
 /blog/ai-email-intelligence-automation-scale /blog/ai-email-intelligence-automation-scale/index.html 200
 /blog/ai-observability-production-monitoring-2026 /blog/ai-observability-production-monitoring-2026/index.html 200
