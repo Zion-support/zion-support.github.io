@@ -13,7 +13,7 @@ if [ -d public ]; then
 fi
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
-for d in field-services field-services-brazil plans discovery enterprise; do
+for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents; do
   if [ -f "$d/index.html" ] && [ ! -f "out/$d/index.html" ]; then
     mkdir -p "out/$d"
     cp -a "$d/index.html" "out/$d/index.html"
@@ -22,6 +22,18 @@ done
 if [ -f field-services/brazil/index.html ] && [ ! -f out/field-services/brazil/index.html ]; then
   mkdir -p out/field-services/brazil
   cp -a field-services/brazil/index.html out/field-services/brazil/index.html
+fi
+
+# Dual-path blog posts (public wins). Slug hubs only — never walk the whole repo.
+if [ -d blog ]; then
+  for f in blog/*/index.html; do
+    [ -f "$f" ] || continue
+    rel="${f#blog/}"
+    if [ ! -f "out/blog/$rel" ]; then
+      mkdir -p "out/blog/$(dirname "$rel")"
+      cp -a "$f" "out/blog/$rel"
+    fi
+  done
 fi
 
 # Family A chrome assets
