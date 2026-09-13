@@ -3,8 +3,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+# contents: write is required for peaceiris to push gh-pages.
+# keep_files: true — do not wipe leftover production paths (e.g. /enterprise/).
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 jobs:
@@ -20,4 +22,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          keep_files: false
+          keep_files: true
