@@ -5,7 +5,7 @@ name: Simple Static Deploy
 
 on:
   push:
-    branches: [main, cursor/restore-pages-outage-0b5b]
+    branches: [main, cursor/field-services-family-a-0b5b]
   workflow_dispatch:
 
 permissions:
