@@ -1,25 +1,35 @@
-name: Static Deploy
+name: Simple Static Deploy
+
+# Production Pages is build_type=workflow (not gh-pages branch).
+# peaceiris → gh-pages does NOT update ziontechgroup.com.
+# Last good publisher: e23c3b71 (upload-pages-artifact + deploy-pages@v4).
+
 on:
   push:
-    branches: [main]
+    branches: [main, cursor/restore-pages-outage-0b5b]
   workflow_dispatch:
-# contents: write is required for peaceiris to push gh-pages.
-# keep_files: true — do not wipe leftover production paths (e.g. /enterprise/).
+
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          keep_files: true
+          path: out
+      - id: deployment
+        uses: actions/deploy-pages@v4
