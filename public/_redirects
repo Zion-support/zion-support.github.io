@@ -1,3 +1,11 @@
+# Content Growth GO aliases (out of sitemap). GitHub Pages ignores _redirects;
+# public/<alias>/index.html stubs are what actually ship via prepare-pages-out.sh.
+/agents /autonomous-ai-agents/ 301
+/agents/ /autonomous-ai-agents/ 301
+/ai-services /ai-consulting-services/ 301
+/ai-services/ /ai-consulting-services/ 301
+/finops /finops-consulting/ 301
+/finops/ /finops-consulting/ 301
 /field-services-brazil/ /field-services/brazil/ 301
 /field-services-brazil /field-services/brazil/ 301
 /services/ai /services/ai/index.html 200
