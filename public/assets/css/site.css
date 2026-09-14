@@ -58,5 +58,10 @@ div.cta{margin:32px 0;padding:22px;border-radius:16px;background:linear-gradient
 @media(min-width:800px){.country-list{columns:3}}
 .country-list a{display:block;padding:3px 0;color:#cbd5e1}
 .note{background:rgba(15,23,42,.5);border-left:3px solid #a78bfa;padding:10px 14px;margin:16px 0;color:var(--muted);font-size:.92rem}
+.langsw{display:inline-flex;gap:6px;margin-left:8px;font-size:.85rem}
+.langsw a{padding:4px 8px;border-radius:8px;border:1px solid #2a3654;color:#c5d0e8;text-decoration:none}
+.langsw a[aria-current="true"]{background:#1a2440;color:#fff;border-color:#8b5cf6}
+.payrow,.pay{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.btn.sm,.pay a{font-size:.88rem;padding:8px 12px}
 .howto ol{color:var(--muted);padding-left:20px}
 .howto li{margin:8px 0}
