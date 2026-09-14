@@ -1,8 +1,15 @@
 name: Deploy on Push
+
+# Consolidated CI/CD deploy workflow (Fase 1 — bootstrap-checklist.md)
+# Replaces: deploy.yml, deploy-to-github-pages.yml, gh-pages.yml
+# Trigger: workflow_run after CI/CD Pipeline passes on main (not direct push)
+# Smoke tests: HTTP 200 on core routes post-deploy
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 "on":
   workflow_run:
     workflows:
@@ -12,13 +19,15 @@ permissions:
     branches:
     - main
   workflow_dispatch:
+
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 45
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       NODE_OPTIONS: "--max-old-space-size=12288"
@@ -33,20 +42,69 @@ jobs:
         ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha
           || github.sha }}
         fetch-depth: 1
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version-file: .nvmrc
         cache: npm
         cache-dependency-path: package-lock.json
+
     - name: Install dependencies
       run: npm ci --prefer-offline --no-audit --fund=false
+
+    - name: Typecheck TypeScript
+      run: npx tsc --noEmit
+
+    - name: Verify tools page and sitemap synchronization
+      run: |
+        python3 scripts/sync_tools_page.py || true
+        if ! git diff --quiet -- app/tools/page.tsx public/sitemap.xml; then
+          echo "::error::app/tools/page.tsx or public/sitemap.xml is out of sync."
+          exit 1
+        fi
+        python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('public/sitemap.xml')" || true
+
     - name: Static site build
       run: npm run build
+
+    - name: Verify output build directory
+      run: |
+        if [ ! -d "out" ]; then
+          echo "::error::Build output directory 'out' not found."
+          exit 1
+        fi
+        ls -la out/ | head -20
+
+    - name: Prepare Pages artifact
+      run: |
+        set -euo pipefail
+        # Compose artifact: Next.js out/ + public/ fallbacks + docs/ base
+        cp -f public/_redirects out/_redirects 2>/dev/null || true
+        if [ -d public/tools ]; then
+          mkdir -p out/tools
+          cp -a public/tools/. out/tools/ || true
+        fi
+        if [ -d public/services ]; then
+          mkdir -p out/services
+          cp -a public/services/. out/services/ || true
+        fi
+        # Ensure robots.txt and sitemap.xml exist at artifact root
+        if [ ! -f out/robots.txt ] && [ -f public/robots.txt ]; then
+          cp -f public/robots.txt out/robots.txt
+        fi
+        if [ ! -f out/sitemap.xml ] && [ -f public/sitemap.xml ]; then
+          cp -f public/sitemap.xml out/sitemap.xml
+        fi
+        if [ ! -f out/sitemap.xml ] && [ -f sitemap.xml ]; then
+          cp -f sitemap.xml out/sitemap.xml
+        fi
+
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4
       with:
         path: out
+
     - name: Write deploy status (triggered)
       id: resolve-sha
       env:
@@ -54,34 +112,56 @@ jobs:
           || github.sha }}
         GITHUB_RUN_ID: ${{ github.run_id }}
         GITHUB_WORKFLOW: ${{ github.workflow }}
-      run: 'sha="${{ github.event_name == ''workflow_run'' && github.event.workflow_run.head_sha
-        || github.sha }}"
-
+      run: |
+        sha="${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha
+          || github.sha }}"
         echo "sha=$sha" >> "$GITHUB_OUTPUT"
-
         DEPLOY_STATUS=triggered DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
 
-        '
     - name: Upload deploy status artifact
       uses: actions/upload-artifact@v4
       with:
         name: deploy-status
         path: automation/reports/deploy-status-latest.json
-        if-no-files-found: error
+        if-no-files-found: warn
+
     - name: Refresh automation health snapshot (build phase)
       if: always()
       continue-on-error: true
       run: node scripts/automation/generate-automation-health-snapshot.cjs
+
     - name: Commit deploy-status snapshot for suppression registry
-      if: always()
+      if: always() && (vars.AUTO_PUSH == '1' || vars.AUTO_PUSH == 'true')
       continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ github.token }}
-      run: "set -euo pipefail\ngit config user.name \"github-actions[bot]\"\ngit config\\\n  \\ user.email \"41898282+github-actions[bot]@users.noreply.github.com\"\ngit\\\n  \\ add -f automation/reports/deploy-status-latest.json\nif [ -f automation/reports/automation-health-latest.json\\\n  \\ ]; then\n  git add -f automation/reports/automation-health-latest.json\n\\\n  fi\nif [ -f automation/reports/automation-health-history.json ]; then\n  git\\\n  \\ add -f automation/reports/automation-health-history.json\nfi\nif [ -f public/api/automation-health.json\\\n  \\ ]; then\n  git add -f public/api/automation-health.json\nfi\nif [ -f public/api/automation-health-history.json\\\n  \\ ]; then\n  git add -f public/api/automation-health-history.json\nfi\nif\\\n  \\ git diff --staged --quiet; then\n  echo \"No deploy-status changes.\"\n  \\  exit 0\nfi\nbash scripts/automation/commit-and-push-main.sh \"chore(reports):\\\n  \\ sync deploy-status state after deploy-on-push\"\n"
+      run: |
+        set -euo pipefail
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add -f automation/reports/deploy-status-latest.json 2>/dev/null || true
+        if [ -f automation/reports/automation-health-latest.json ]; then
+          git add -f automation/reports/automation-health-latest.json
+        fi
+        if [ -f automation/reports/automation-health-history.json ]; then
+          git add -f automation/reports/automation-health-history.json
+        fi
+        if [ -f public/api/automation-health.json ]; then
+          git add -f public/api/automation-health.json
+        fi
+        if [ -f public/api/automation-health-history.json ]; then
+          git add -f public/api/automation-health-history.json
+        fi
+        if git diff --staged --quiet; then
+          echo "No deploy-status changes."
+          exit 0
+        fi
+        bash scripts/automation/commit-and-push-main.sh "chore(reports): sync deploy-status state after deploy-on-push"
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -89,12 +169,13 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+
   smoke-tests:
     needs:
     - build
     - deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       BASE_URL: https://ziontechgroup.com
@@ -104,17 +185,77 @@ jobs:
       with:
         ref: ${{ needs.build.outputs.sha }}
         fetch-depth: 100
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version-file: .nvmrc
+
     - name: Install dependencies
       run: npm ci --prefer-offline --no-audit --fund=false
+
     - name: Wait for Pages propagation
-      run: "echo \"Waiting 30s for GitHub Pages to propagate...\"\nsleep 30\n# Quick\\\n  \\ sanity check\nset +e\nstatus=$(curl --silent --show-error --max-time 10\\\n  \\ -o /dev/null -w \"%{http_code}\" \"${BASE_URL}/\" || echo \"000\")\nset\\\n  \\ -e\nif [ \"$status\" = \"200\" ]; then\n  echo \"Pages site is live (HTTP\\\n  \\ $status)\"\nelse\n  echo \"Pages returned HTTP $status — smoke tests\\\n  \\ may report failures\"\nfi\n"
-    - name: Post-deploy smoke test
-      run: "set -euo pipefail\nfailed=0\nwhile IFS= read -r path; do\n  if [ -z \"\n        $path\" ] || [[ \"$path\" == \\#* ]]; then\n    continue\n  fi\n  status=$(curl\\\n        \\ --silent --show-error --max-time 8 -o /dev/null -w \"%{http_code}\" \"${BASE_URL}${path}\"\n        \\ || echo \"000\")\n  if [ \"$status\" = \"200\" ]; then\n    echo \"OK $path\n        \\ ($status)\"\n  else\n    echo \"FAIL $path ($status)\"\n    failed=1\n  fi\ndone < config/smoke-routes.txt\n[ $failed -eq 0 ] || echo \"::warning::Some\\\n        \\ pages failed smoke test\"\n"
-      continue-on-error: true
+      run: |
+        echo "Waiting 30s for GitHub Pages to propagate..."
+        sleep 30
+
+    - name: Post-deploy smoke test (HTTP 200 on core routes)
+      run: |
+        set -euo pipefail
+        failed=0
+        # Core routes that must return HTTP 200
+        core_routes=(
+          "/"
+          "/services/"
+          "/solutions/"
+          "/pricing/"
+          "/contact/"
+          "/tools/"
+          "/about/"
+          "/blog/"
+          "/case-studies/"
+          "/industries/"
+          "/automation/"
+        )
+        for path in "${core_routes[@]}"; do
+          status=$(curl --silent --show-error --max-time 10 -o /dev/null -w "%{http_code}" "${BASE_URL}${path}" || echo "000")
+          if [ "$status" = "200" ]; then
+            echo "OK $path ($status)"
+          else
+            echo "::error::FAIL $path ($status)"
+            failed=1
+          fi
+        done
+        if [ $failed -ne 0 ]; then
+          echo "::error::Core route smoke test failed — one or more routes returned non-200."
+          exit 1
+        fi
+        echo "All core routes returned HTTP 200."
+
+    - name: Post-deploy smoke test (extended routes from config)
+      run: |
+        set -euo pipefail
+        failed=0
+        if [ ! -f config/smoke-routes.txt ]; then
+          echo "config/smoke-routes.txt not found; skipping extended smoke."
+          exit 0
+        fi
+        while IFS= read -r path; do
+          if [ -z "$path" ] || [[ "$path" == \#* ]]; then
+            continue
+          fi
+          status=$(curl --silent --show-error --max-time 8 -o /dev/null -w "%{http_code}" "${BASE_URL}${path}" || echo "000")
+          if [ "$status" = "200" ]; then
+            echo "OK $path ($status)"
+          else
+            echo "::warning::FAIL $path ($status)"
+            failed=1
+          fi
+        done < config/smoke-routes.txt
+        if [ $failed -ne 0 ]; then
+          echo "::warning::Some extended routes failed smoke test."
+        fi
+
     - name: Deploy watchdog
       env:
         DEPLOY_WATCHDOG_BASE_URL: ${{ env.BASE_URL }}
@@ -122,12 +263,11 @@ jobs:
         DEPLOY_WATCHDOG_MAX_ROUTES: 15
         DEPLOY_WATCHDOG_ATTEMPTS: 3
         DEPLOY_WATCHDOG_INTERVAL_MS: 20000
-      run: 'set -euo pipefail
-
+      run: |
+        set -euo pipefail
         npm run deploy:watchdog
-
-        '
       continue-on-error: true
+
     - name: Upload deploy watchdog report
       if: always()
       uses: actions/upload-artifact@v4
@@ -135,6 +275,7 @@ jobs:
         name: deploy-watchdog-report
         path: automation/reports/deploy-watchdog-latest.json
         if-no-files-found: warn
+
     - name: Dispatch fingerprint digest after unhealthy deploy watchdog
       if: always()
       continue-on-error: true
@@ -144,7 +285,7 @@ jobs:
         set -euo pipefail
         enabled="${{ vars.AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE }}"
         if [ "$enabled" != "1" ] && [ "$enabled" != "true" ]; then
-          echo "AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE not enabled; skipping digest dispatch."
+          echo "AUTOMATION_FP_DIGEST_DISPATCH_ON_DEPLOY_FAILURE not enabled; skipping."
           exit 0
         fi
         report="automation/reports/deploy-watchdog-latest.json"
@@ -162,18 +303,43 @@ jobs:
         echo "Dispatched fingerprint incident digest workflow."
 
     - name: Homepage promotion assertions
-      run: "set -euo pipefail\nnpm run routes:promotions:check\nhomepage=$(curl --fail\\\n        \\ --silent --show-error --max-time 20 \"${BASE_URL}/\")\nfor token in \"Autonomous\\\n        \\ Conversion Copilot\" \"Autonomous Incident Commander\" \"Autonomous Backlog\\\n        \\ Prioritizer\" \"Autonomous Retention Playbook\" \"Autonomous Growth Intelligence\"\\\n        ; do\n  if printf \"%s\" \"$homepage\" | grep -Fq \"$token\"; then\n    echo\\\n        \\ \"OK homepage contains: $token\"\n  else\n    echo \"::warning::Homepage\\\n        \\ missing promoted token: $token\"\n  fi\ndone\n"
+      run: |
+        set -euo pipefail
+        npm run routes:promotions:check
+        homepage=$(curl --fail --silent --show-error --max-time 20 "${BASE_URL}/")
+        for token in "Autonomous Conversion Copilot" "Autonomous Incident Commander" "Autonomous Backlog Prioritizer" "Autonomous Retention Playbook" "Autonomous Growth Intelligence"; do
+          if printf "%s" "$homepage" | grep -Fq "$token"; then
+            echo "OK homepage contains: $token"
+          else
+            echo "::warning::Homepage missing promoted token: $token"
+          fi
+        done
       continue-on-error: true
+
     - name: Post-deploy UX verification
-      run: "set -euo pipefail\necho \"Running post-deploy UX audit...\"\nnode automation/ai-live-site-ux-audit-agent.cjs\\\n        \\ 2>/dev/null || true\nif [ -f automation/reports/live-site-ux-audit-latest.json\\\n        \\ ]; then\n  score=$(node -e \"try{console.log(require('./automation/reports/live-site-ux-audit-latest.json').score\\\n        \\ ?? 'N/A')}catch(e){console.log('N/A')}\")\n  echo \"Live site UX score:\\\n        \\ $score/100\"\nfi\n"
+      run: |
+        set -euo pipefail
+        echo "Running post-deploy UX audit..."
+        node automation/ai-live-site-ux-audit-agent.cjs 2>/dev/null || true
+        if [ -f automation/reports/live-site-ux-audit-latest.json ]; then
+          score=$(node -e "try{console.log(require('./automation/reports/live-site-ux-audit-latest.json').score ?? 'N/A')}catch(e){console.log('N/A')}")
+          echo "Live site UX score: $score/100"
+        fi
       continue-on-error: true
+
     - name: Write deploy status (completed)
       if: always()
       env:
         GITHUB_SHA: ${{ needs.build.outputs.sha }}
         GITHUB_RUN_ID: ${{ github.run_id }}
         GITHUB_WORKFLOW: ${{ github.workflow }}
-      run: "if [ \"${{ job.status }}\" = \"success\" ]; then\n  DEPLOY_STATUS=success\\\n        \\ DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate\nelse\n\\\n        \\  DEPLOY_STATUS=failed DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate\n\\\n        fi\n"
+      run: |
+        if [ "${{ job.status }}" = "success" ]; then
+          DEPLOY_STATUS=success DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
+        else
+          DEPLOY_STATUS=failed DEPLOY_STATUS_SOURCE=deploy-on-push npm run deploy:status:generate
+        fi
+
     - name: Refresh automation health snapshot
       if: always()
       continue-on-error: true

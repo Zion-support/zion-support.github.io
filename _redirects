@@ -3,7 +3,6 @@
 /agents-monitoring /agents-monitoring/ 301
 /agents-monitoring/ /agents-monitoring/ 301
 /ai /ai/ 301
-/ai /tools 301
 /ai-lab /ai-lab/index.html 200
 /ai-lab/ /ai-lab/index.html 200
 /ai-observability-2026-6565/ /services/?category=ai 301
@@ -13,8 +12,6 @@
 /ai-roi-calculator/ /docs/ai-roi-calculator/index.html 200
 /ai-services-index /services/ 301
 /ai-services-index/ /services/ 301
-/ai/ /ai/ 301
-/ai/ /tools 301
 /ai/ai-readiness-assessment /ai/ai-readiness-assessment/ 301
 /ai/ai-readiness-assessment/ /ai/ai-readiness-assessment/ 301
 /automation /automation/index.html 200
@@ -85,9 +82,7 @@
 /privacy /privacy/ 301
 /privacy/ /privacy/ 301
 /proposal /contact 301
-/proposal /proposal/ 301
 /proposal/ /contact 301
-/proposal/ /proposal/ 301
 /proposals /proposals/ 301
 /proposals/ /proposals/ 301
 /public-roadmap /public-roadmap/ 301
@@ -686,7 +681,18 @@
 /tools/ssl-checker/ /tools/ssl-checker/ 301
 /use-cases /use-cases/ 301
 /use-cases/ /use-cases/index.html 200
+
+# Fallbacks for uncovered top-level routes
+/help/ /services/ 301
+/support/ /services/ 301
+/help /services/ 301
+/support /services/ 301
+/ai-lab/ /ai-lab/index.html 200
+/automation/ /automation/index.html 200
+/ai-lab /ai-lab/index.html 200
+/automation /automation/index.html 200
 /business-customers /business-customers/index.html 200
+# New routes
 /status/ /status/index.html 200
 /resources/ resources/index.html 200
 /status/ status/index.html 200
@@ -705,13 +711,8 @@
 /lead-crm/ /lead-crm/index.html 200
 /roicalculator /roicalculator/ 301
 /roicalculator/ /roicalculator/index.html 200
+# Service pages (fix 404 regression)
 /services/ai-agents-autonomous /services/ai-agents-autonomous/index.html 200
 /services/ai-agents-autonomous/ /services/ai-agents-autonomous/index.html 200
 /services/cloud-cost-optimization-service /services/cloud-cost-optimization-service/index.html 200
 /services/cloud-cost-optimization-service/ /services/cloud-cost-optimization-service/index.html 200
-/managed-it-services-small-business-2026-6559/ /it-consulting-services/ 301
-/cybersecurity-platform-msp-2026-6558/ /cybersecurity-platform-msp-2026-6558/ 301
-/cloud-cost-ai-optimizer-2026-6534/ /cloud-cost-ai-optimizer-2026-6534/ 301
-/ai-observability-2026-6565/ /ai-observability-2026-6565/ 301
-/it-consulting-2026-6570/ /it-consulting-services/ 301
-/cloud-migration-services-2026-6572/ /cloud-migration-services-2026-6572/ 301
