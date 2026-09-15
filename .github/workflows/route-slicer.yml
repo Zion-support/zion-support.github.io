@@ -1,5 +1,8 @@
 name: Autonomous Lazy-Loading Route Slicer
-on:
+permissions:
+  contents: read
+"on":
+  # Cron disabled: production is static public/, Next bundle stats do not exist.
   workflow_dispatch:
     inputs:
       apply:
@@ -7,8 +10,6 @@ on:
         required: false
         default: 'false'
         type: boolean
-permissions:
-  contents: read
 jobs:
   route-slicer:
     name: Skip on static GitHub Pages site

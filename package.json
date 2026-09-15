@@ -6,7 +6,8 @@
   "packageManager": "npm@10.9.8",
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "bash scripts/cf-static-build.sh",
+    "build:next": "next build --webpack",
     "build:ci": "node scripts/build-wrapper.cjs",
     "build:check": "npm run type-check && node scripts/build-wrapper.cjs",
     "start": "next start",
@@ -20,10 +21,13 @@
     "deploy:contents": "node scripts/deploy-gh-pages-contents.cjs main",
     "deploy:status:generate": "node scripts/generate-deploy-status.js",
     "automation:preflight": "node scripts/checks/automation-preflight-check.cjs",
+    "workflows:contracts:node": "node scripts/checks/automation-preflight-check.cjs",
     "deploy:watchdog": "node scripts/checks/deploy-watchdog-check.cjs",
     "ai-lab:integrity-check": "node scripts/checks/ai-lab-integrity-check.cjs",
     "smoke:routes:check": "node scripts/checks/smoke-routes-check.cjs",
     "homepage:ai-sync:check": "node scripts/checks/homepage-ai-sync-check.cjs",
+    "homepage:confidential:check": "node scripts/checks/success-stories-confidential-check.cjs",
+    "deploy:cf": "npx wrangler deploy --assets ./public",
     "sitemap:validate": "node scripts/generate-commercial-sitemap.cjs",
     "routes:promotions:check": "echo 'routes promotions ok'",
     "test": "jest --passWithNoTests",
@@ -33,6 +37,11 @@
     "deploy:verify": "node scripts/verify-deploy.cjs",
     "rsc:guard": "echo 'rsc:guard ok'",
     "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json"
+  },
+  "cloudflare": {
+    "installCommand": "true",
+    "buildCommand": "bash scripts/cf-static-build.sh",
+    "deployCommand": "npx wrangler deploy"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",

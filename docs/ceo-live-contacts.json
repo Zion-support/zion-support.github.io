@@ -1,0 +1,315 @@
+{
+  "updated": "2026-09-15T20:50Z",
+  "owner": "carlos@ziontechgroup.com",
+  "ceo": "kleber@ziontechgroup.com",
+  "contacts": [
+    {
+      "org": "Fundação Assefaz",
+      "role": "Compras e Contratos / CCC-GNAF",
+      "people": [
+        {"name": "Halberty Amorim", "email": "contratos@assefaz.org.br", "phone": "+55 61 2108-0456"},
+        {"name": "José Roberto Soares", "email": "jose.roberto@assefaz.org.br"},
+        {"name": "Glauber Arrighi", "email": "glauber.arrighi@assefaz.org.br"},
+        {"name": "Jossenildo Santos", "email": "jossenildo.santos@assefaz.org.br"}
+      ],
+      "status": "NetApp storage support in force. 2026-09-15: offered Free Discovery + AI consulting trial (does not change storage contract).",
+      "do_not_disclose": ["contract values", "PIX / bank details"]
+    },
+    {
+      "org": "Caloi",
+      "role": "TI / Pagamentos",
+      "people": [
+        {"name": "Mouriza Rabela", "email": "mrabela@caloi.com"},
+        {"name": "Victor Jardim", "email": "vsjardim@caloi.com"},
+        {"name": "Joseane Campos", "email": "jcampos@caloi.com"},
+        {"name": "Pagamentos TI", "email": "pagamentosti@caloi.com"}
+      ],
+      "dead": ["imanso@caloi.com", "vsjardim@caloi.com", "jcampos@caloi.com", "mrabela@caloi.com"],
+      "status": "Historical 24x7 SP + Manaus. Google 550 on imanso/vsjardim/jcampos/mrabela. 2026-09-15: Free Discovery sent to pagamentosti@caloi.com only."
+    },
+    {
+      "org": "Fundação Adib Jatene",
+      "role": "Contratos",
+      "people": [
+        {"name": "Gyovanna Dantas", "email": "gyovanna.dantas@fajsaude.com.br"},
+        {"name": "Wesley Santos", "email": "wesley.santos@fajsaude.com.br"},
+        {"name": "Vanessa", "email": "vanessaft@fajsaude.com.br"}
+      ],
+      "status": "Minuta blocked on park yes/no (Rodrigo/Rogerio dantepazzanese.org.br). Carlos owns minuta. Do not invent assets.",
+      "owner": "carlos@ziontechgroup.com"
+    },
+    {
+      "org": "FUNCATE / Somatica",
+      "role": "Workstation RFQ",
+      "people": [
+        {"name": "Paulo Sergio Blotto", "email": "pauloblotto@somaticabrasil.com", "phone": "+55 11 3486"},
+        {"name": "Somatica comercial", "email": "comercial@somaticabrasil.com"}
+      ],
+      "status": "Carlos has PDF with Zion margin. Attach PDF (CIF, 21 ddl, no DIFAL). No prices in email body."
+    },
+    {
+      "org": "ClickHouse",
+      "people": [{"name": "Rafael", "email": "rafael@clickhouse.com"}],
+      "status": "Prior project. Last Zion notes Jul 2026 were generic — follow up short, no invented 60% metrics."
+    },
+    {
+      "org": "Elastic",
+      "people": [{"name": "Partner Team", "email": "admin@partners.elastic.co"}],
+      "status": "Partner portal access pending since 2026-07-24."
+    },
+    {
+      "org": "Park Place Technologies",
+      "people": [
+        {"name": "Erick Mendes", "email": "erick.mendes@parkplacetech.com"},
+        {"name": "Mathias Pellissari", "email": "mathias.pellissari@parkplacetech.com"}
+      ],
+      "status": "Reschedule Teams. They sell to us; we sell Brazil field to them. Waiting on their times."
+    },
+    {
+      "org": "Tech Domain",
+      "people": [{"name": "Ali Naqi", "email": ""}],
+      "status": "Call Thu 2026-09-17 10:00–10:30 BRT. Overflow field coverage."
+    },
+    {
+      "org": "Fundação Getulio Vargas",
+      "people": [{"name": "Mauro Aparecido Castello Faria", "email": "mauro.faria@fgv.br"}],
+      "status": "2026-09-15: one clean Free Discovery restart (prior July subjects were garbled). Do not triple-send."
+    },
+    {
+      "org": "Ilha Capital",
+      "people": [
+        {"name": "Camila Santos", "email": "csantos@ilha.capital"},
+        {"name": "F. Martin", "email": "fmartin@ilha.capital"}
+      ],
+      "status": "NDA Clicksign envelope 20260915. Kleber signed. Carlos witness still pending as of Camila 2026-09-15 18:14 UTC. Deadline 2026-10-15. Do not forward token. Do not put CPF in email."
+    },
+    {
+      "org": "SKY / DIRECTV Ecuador",
+      "people": [
+        {"name": "Lourdes Jiménez", "email": "lejimenez@directv.com.ec"},
+        {"name": "María Araceli Álvarez", "email": "malvar17@directvla.com.ar"}
+      ],
+      "status": "2026 field renewal document pack complete. Do not publish PO or account codes. Do not mix sales into the PO thread."
+    },
+    {
+      "org": "Intersoftkk",
+      "people": [
+        {"name": "John Fernandes", "email": "john.fernandes@intersoftkk.com"},
+        {"name": "Marcello Rodrigues", "email": "marcello.rodrigues@intersoftkk.com"},
+        {"name": "Wayne Hibbert", "email": "wayne.hibbert@intersoftkk.com", "note": "550 bounce — do not rely on this mailbox"}
+      ],
+      "status": "China Band 2 won. John flagged AI-generated mail — never send generic AI-audit pitches on those threads. Mexico/Brazil technician RFQ still open."
+    },
+    {
+      "org": "CODERP (Companhia de Desenvolvimento de Ribeirão Preto)",
+      "role": "Compras / TI",
+      "people": [
+        {"name": "Camila Prieto", "email": "crprieto@coderp.ribeiraopreto.sp.gov.br"},
+        {"name": "Camila Prieto (legacy)", "email": "cprieto@coderp.sp.gov.br"},
+        {"name": "Compras", "email": "compras@coderp.ribeiraopreto.sp.gov.br"}
+      ],
+      "status": "Historical HP/Dell 24x7 RFQs 2024–2026. 2026-09-15: Free Discovery + AI trial (new offer, not a quote chase). Carlos owns any PDF."
+    },
+    {
+      "org": "PRODAM",
+      "role": "Núcleo de Licitações",
+      "people": [
+        {"name": "Wesley Mesquita", "email": "wesleymsilva@prodam.sp.gov.br", "phone": "+55 11 95169-9875"},
+        {"name": "Compras NLI", "email": "compranli@prodam.sp.gov.br"}
+      ],
+      "status": "2024 VoIP RFQ declined (no OEM firmware). 2026-09-15: Free Discovery + AI trial. Do not reopen VoIP firmware. Do not invent VoIP prices."
+    },
+    {
+      "org": "BANESE",
+      "role": "Contratos de tecnologia",
+      "people": [
+        {"name": "Emily Santana", "email": "emily.santana@terceiros.banese.com.br"},
+        {"name": "Contratos Tecnologia", "email": "contratos.tecnologia@banese.com.br"}
+      ],
+      "status": "IBM maintenance proposal updated 2026-07-23. 2026-09-15: Free Discovery + AI trial while they analyze. Carlos owns IBM PDF. No invented IBM prices."
+    },
+    {
+      "org": "Prefeitura de São José dos Campos",
+      "role": "TI / Compras",
+      "people": [
+        {"name": "Joana Cristina da Silva", "email": "joana.cristina@sjc.sp.gov.br"},
+        {"name": "Andrea Motta", "email": "andrea.motta@sjc.sp.gov.br"}
+      ],
+      "status": "EMC storage 24x7 RFQ Aug–Dec 2024, no close. 2026-09-15: Free Discovery + AI trial. Carlos owns any PDF."
+    },
+    {
+      "org": "PRODEMGE",
+      "people": [{"name": "Compras", "email": "compras@prodemge.gov.br"}],
+      "status": "Cotação 753762 servidores 24x7 Sep 2024. 2026-09-15: Free Discovery + AI trial. Do not republish old prices."
+    },
+    {
+      "org": "Suzano",
+      "role": "TI",
+      "people": [
+        {"name": "Jonas Junior", "email": "jonasjunior@suzano.com.br"},
+        {"name": "Marcelo Silveira", "email": "cmsilveira@suzano.com.br"}
+      ],
+      "status": "Won 2024 Precision 7920 HDD + PSU PO. Returning client. 2026-09-15: Free Discovery + AI trial."
+    },
+    {
+      "org": "Cooper (Cooperativa Vale do Itajaí)",
+      "role": "TI / Segurança da Informação",
+      "people": [
+        {"name": "Paulo Roberto Boscheti", "email": "paulo@cooper.coop.br", "phone": "+55 47 3144-1000", "mobile": "+55 47 99187-8852"},
+        {"name": "Leonel Bruno Curtipassi", "email": "leonel.curtipassi@cooper.coop.br"},
+        {"name": "Lucio", "email": "lucio@cooper.coop.br"}
+      ],
+      "status": "Oracle R740 lease closed Sep 2026 (they evolved elsewhere). Backup device: Paulo asked interest; Kleber requested spec; Carlos prices when model/capacity arrives. Tape library removal Jun 2026 still open. Do not resend garbled Parceria AI mail to Leonel. Returning client = Free Discovery."
+    },
+    {
+      "org": "Instituto Dante Pazzanese",
+      "role": "TI (park extras for FAJ minuta)",
+      "people": [
+        {"name": "Aldo Levi Gomes Barroso", "email": "aldo.levi@dantepazzanese.org.br"},
+        {"name": "Rodrigo Leite", "email": "roleite@dantepazzanese.org.br"}
+      ],
+      "status": "2026-09-15: asked Aldo yes/no whether 2025 extra storages enter FAJ prorrogação park. Do not invent asset lists in new mail. Carlos owns minuta after yes/no."
+    },
+    {
+      "org": "Cockroach Labs",
+      "people": [{"name": "Rohit Singh", "email": "rohit.singh@cockroachlabs.com"}],
+      "status": "Paid Discovery booked Tue 2026-09-22 13:00 ET / 14:00 BRT. Already confirmed. Do not resend."
+    },
+    {
+      "org": "BBP Telecom",
+      "people": [
+        {"name": "Marcio Araujo", "email": "maraujo@bbptelecom.com.br"},
+        {"name": "E. Silva", "email": "esilva@bbptelecom.com.br"}
+      ],
+      "status": "2023 Dell PowerVault 124T repair quote. 2026-09-15: Free Discovery + AI trial. Do not republish old repair prices."
+    },
+    {
+      "org": "Accor",
+      "role": "IT Service Delivery",
+      "people": [
+        {"name": "Gilvan Rodrigues", "email": "Gilvan.RODRIGUES@accor.com", "phone": "+55 11 3818-6280"},
+        {"name": "Igor Rosa", "email": "Igor.ROSA@accor.com"}
+      ],
+      "status": "2024 IBM Hortolândia DC takeout. Gilvan still waiting on disposal certificate (last chase Oct 2024). 2026-09-15: Carlos owns certificate; Free Discovery offered as a separate subject. Always CC carlos@ and commercial@."
+    },
+    {
+      "org": "Calçados Bottero",
+      "role": "TI",
+      "people": [
+        {"name": "Patrick Pereira Fagundes", "email": "Patrick@bottero.net", "phone": "+55 51 3543-5400"},
+        {"name": "Douglas", "email": "douglas@bottero.net"}
+      ],
+      "status": "Won 2023 IBM TS3100 LTO6 tape-library repair. 2026-09-15: Free Discovery + AI trial. Do not republish repair prices."
+    },
+    {
+      "org": "Grupo Massa / TV Iguaçu",
+      "people": [{"name": "Almir Nascimento", "email": "almir.nascimento@grupomassa.com.br"}],
+      "status": "2024 HP ProLiant PSU quote. 2026-09-15: Free Discovery + AI trial."
+    },
+    {
+      "org": "ACSP",
+      "people": [{"name": "André Schwartz", "email": "aschwartz@acsp.com.br"}],
+      "status": "Historical hardware coverage. 2026-09-15: Free Discovery sent (carlos CC). Always add commercial@ going forward."
+    },
+    {
+      "org": "FGC",
+      "people": [{"name": "Rogério Santos", "email": "rogerio.santos@fgc.org.br", "note": "blocked / bounce — do not retry"}],
+      "status": "Dead mailbox 2026-09-15."
+    },
+    {
+      "org": "Figwal",
+      "people": [
+        {"name": "Marlêne", "email": "marlene@figwal.com.br", "note": "550 user unknown"},
+        {"name": "Ricardo Nakao", "email": "ricardonakao@figwal.com.br"}
+      ],
+      "status": "Historical HP server. marlene@ bounced. Do not retry marlene@."
+    },
+    {
+      "org": "IMS / Metodista",
+      "people": [
+        {"name": "Eduardo Garcia", "email": "eduardo.garcia@metodista.br"},
+        {"name": "Josiane Santos", "email": "josiane.santos1@metodista.br"}
+      ],
+      "status": "Historical TI coverage. 2026-09-15: Free Discovery. Always CC carlos@ and commercial@ on any follow-up."
+    },
+    {
+      "org": "Carvalho Hosken",
+      "people": [
+        {"name": "Gestão de Contratos", "email": "gestaodecontratos@carvalhohosken.com.br"},
+        {"name": "Adriana Cerqueira", "email": "", "note": "claimed NFs 3406/3407 paid Sep 2025"}
+      ],
+      "status": "Do NOT mix Free Discovery into the NF collections thread. Historical 2022 invoices. Skip sales restart."
+    },
+    {
+      "org": "SENAI-SP",
+      "people": [{"name": "Fabio Castro", "email": "fabio.castro@sp.senai.br"}],
+      "status": "Historical storage maintenance. 2026-09-15: Free Discovery new subject (not the 2022 NF/cancel thread)."
+    },
+    {
+      "org": "Raia Drogasil",
+      "people": [{"name": "Allan Ribeiro", "email": "alribeiro@rd.com.br"}],
+      "status": "2022 Field Service RFP round 1. 2026-09-15: Free Discovery new subject. Do not reopen RFP attachments."
+    },
+    {
+      "org": "Synchro",
+      "people": [
+        {"name": "Thais Santos", "email": "thais.santos@synchro.com.br", "note": "maternity auto-reply"},
+        {"name": "Compras ADS", "email": "compras.ads@synchro.com.br"},
+        {"name": "Lucas Fernando", "email": "lucas.fernando@synchro.com.br"}
+      ],
+      "status": "2026-09-15 Discovery to Thais → forwarded to compras.ads@. No second mail this week."
+    },
+    {
+      "org": "Wobben",
+      "people": [
+        {"name": "TI", "email": "infoit@wobben.com.br"},
+        {"name": "Alessandra Theodoro", "email": "alessandra.theodoro@wobben.com.br"}
+      ],
+      "status": "2026-09-15 Free Discovery. No second mail this week."
+    },
+    {
+      "org": "State Grid",
+      "people": [{"name": "Felipe Figueiredo", "email": "felipe.figueiredo@stategrid.com.br"}],
+      "dead": ["jeff.chien@stategrid.com.br", "camilla.fischer@stategrid.com.br"],
+      "status": "Historical IBM magnetic-head coverage question. 2026-09-15 Discovery bounced on Jeff/Camilla; resent to Felipe only."
+    },
+    {
+      "org": "TJMSP",
+      "people": [
+        {"name": "Otávio Fonseca", "email": "otavio.fonseca@tjmsp.jus.br"},
+        {"name": "Anderson Ciocca", "email": "anderson.ciocca@tjmsp.jus.br"}
+      ],
+      "status": "2026-09-15 declined Discovery: park renewed 2024/2025 Dell 5-year warranty. Do not follow up."
+    },
+    {
+      "org": "Prefeitura de Votorantim",
+      "people": [{"name": "Cristina Dias", "email": "adm.ti@votorantim.sp.gov.br"}],
+      "status": "2022 server warranty RFQ. 2026-09-15 Free Discovery. No second mail this week."
+    },
+    {
+      "org": "FIESP",
+      "people": [
+        {"name": "Samuel Lopes Nogueira", "email": "samuel.nogueira@fiesp.com.br"},
+        {"name": "F. Paganini", "email": "fpaganini@fiesp.com.br"}
+      ],
+      "status": "2022 Tandberg Neo tape. 2026-09-15 Free Discovery (not the old diagnostic). No second mail this week."
+    },
+    {
+      "org": "TRE-SP",
+      "people": [
+        {"name": "Milena Monchelato", "email": "milena.monchelato@tre-sp.jus.br"},
+        {"name": "SEPEC", "email": "sepec@tre-sp.jus.br"},
+        {"name": "Fernando Colpas", "email": "fernando.colpas@tre-sp.jus.br"}
+      ],
+      "status": "2023 large-format plotter RFQ. 2026-09-15 Free Discovery. No second mail this week."
+    },
+    {
+      "org": "Acelen",
+      "people": [
+        {"name": "Vânia Ferreira", "email": "vania.ferreira.ext@acelen.com"},
+        {"name": "Robson Veras", "email": "rveras@acelen.com"}
+      ],
+      "status": "2026-09-15 Free Discovery new subject (not 2023 SAP/QAT). No second mail this week."
+    }
+  ]
+}

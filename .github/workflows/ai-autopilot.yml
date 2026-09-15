@@ -4,6 +4,8 @@ name: AI Services Autopilot
 # public/index.html and would re-publish client prices / confidential copy.
 # Run via workflow_dispatch if Kleber wants a trends refresh.
 
+# Daily cron disabled: autopilot was rewriting homepage case copy with
+# confidential commercial terms. Run only by hand after review.
 on:
   workflow_dispatch:
 

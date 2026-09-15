@@ -1,0 +1,32 @@
+name: Homepage commercial check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - cursor/email-ceo-actions-homepage-services-373f
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: homepage-sku-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Homepage Stripe SKUs still published
+        run: node scripts/checks/homepage-ai-sync-check.cjs
+      - name: Success stories have no confidential commercial terms
+        run: node scripts/checks/success-stories-confidential-check.cjs
+      - name: Cloudflare static worker is present
+        run: node scripts/checks/wrangler-static-check.cjs
