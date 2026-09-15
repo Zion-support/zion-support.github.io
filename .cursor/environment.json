@@ -1,0 +1,17 @@
+{
+  "name": "Zion Tech Group static site",
+  "install": "npm install --legacy-peer-deps && bash scripts/prepare-pages-out.sh && node scripts/generate_service_index.cjs",
+  "terminals": [
+    {
+      "name": "static-site",
+      "command": "python3 -m http.server 3000 --directory out",
+      "description": "Serves the built GitHub Pages artifact (out/) at http://localhost:3000. Rebuild it with `bash scripts/prepare-pages-out.sh` after editing pages."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ]
+}
