@@ -60,7 +60,7 @@ Do not mail again before **22 Sep** unless they reply.
 | SEFAZ-MG | Elisa Lustosa `elisa.lustosa@fazenda.mg.gov.br` | New offer; do not re-quote Quantum iScalar i40. |
 | TJPE | Luciano Valença `luciano.valenca@tjpe.jus.br` | New offer; Dell R610/R710/R900 2021 RFQ. |
 | AGENERSA | `lcmesquita@agenersa.rj.gov.br` | New offer; Dispensa 02800/2022. |
-| Synchro | Thaís Santos `thais.santos@synchro.com.br`, Lucas Fernando | New offer; not the old SSD-case RFQ. |
+| Synchro | Compras ADS `compras.ads@synchro.com.br`, Lucas Fernando | Thaís Santos OOO maternity 15 Sep — redirected here. New offer; not the old SSD-case RFQ. |
 | Funcional | `emachado@funcionalcorp.com.br` | New offer; not the old storage-disk RFQ. |
 | Sicoob | Américo Batista `americo.batista@sicoob.com.br` | New offer to the 2022 AD-SICOOB contact (generic AI blast on 6 Sep went to other mailboxes). |
 
