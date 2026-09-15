@@ -1,9 +1,10 @@
-# Production site is static HTML in public/ (GitHub Pages).
-# Workers Builds must not run `next build` from package.json.
+# Production site is static HTML in public/ (GitHub Pages via static-deploy.yml).
+# Workers Builds must deploy those files as assets — never detect Next.js
+# from package.json or run `npm run build`.
 name = "ziontechgroup"
-compatibility_date = "2026-01-15"
-main = "workers/static-passthrough.js"
+compatibility_date = "2024-09-23"
+workers_dev = false
 
 [assets]
 directory = "./public"
-binding = "ASSETS"
+not_found_handling = "404-page"
