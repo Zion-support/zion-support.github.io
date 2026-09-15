@@ -14,7 +14,7 @@ fi
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
-for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents healthcare-it-hipaa fintech-it-ai; do
+for d in field-services field-services-brazil plans discovery enterprise about solutions blog managed-it-services ai-consulting-services finops-consulting autonomous-ai-agents healthcare-it-hipaa fintech-it-ai success-stories brazil-24x7-coverage gpu-cloud-latam voice-ai-latam remote-hands-miami us-l2-network-onsite china-dc-engineers information-security-services high-performance-workstations; do
   if [ -f "$d/index.html" ] && [ ! -f "out/$d/index.html" ]; then
     mkdir -p "out/$d"
     cp -a "$d/index.html" "out/$d/index.html"
