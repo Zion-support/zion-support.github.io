@@ -1,9 +1,14 @@
 # Cloudflare Workers Builds: static HTML in public/. Not Next.js, not Pages.
 # Dashboard Worker name must stay ziontechgroup (WRANGLER_CI_OVERRIDE_NAME can override).
 name = "ziontechgroup"
+main = "cf-worker.js"
 compatibility_date = "2026-09-15"
+
+[build]
+command = "bash scripts/cf-static-build.sh"
 
 [assets]
 directory = "./public"
+binding = "ASSETS"
 html_handling = "auto-trailing-slash"
 not_found_handling = "none"

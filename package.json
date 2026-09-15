@@ -6,7 +6,7 @@
   "packageManager": "npm@10.9.8",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/cf-or-next-build.cjs",
+    "build": "bash scripts/cf-static-build.sh",
     "build:next": "next build --webpack",
     "build:ci": "node scripts/build-wrapper.cjs",
     "build:check": "npm run type-check && node scripts/build-wrapper.cjs",
@@ -25,6 +25,7 @@
     "ai-lab:integrity-check": "node scripts/checks/ai-lab-integrity-check.cjs",
     "smoke:routes:check": "node scripts/checks/smoke-routes-check.cjs",
     "homepage:ai-sync:check": "node scripts/checks/homepage-ai-sync-check.cjs",
+    "homepage:confidential:check": "node scripts/checks/success-stories-confidential-check.cjs",
     "sitemap:validate": "node scripts/generate-commercial-sitemap.cjs",
     "routes:promotions:check": "echo 'routes promotions ok'",
     "test": "jest --passWithNoTests",
