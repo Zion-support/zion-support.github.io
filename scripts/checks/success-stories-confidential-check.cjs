@@ -30,6 +30,11 @@ const forbidden = [
   /\bCODERP\b/i,
   /\bPRODAM\b/i,
   /\bBANESE\b/i,
+  /\bAccor\b/i,
+  /\bBottero\b/i,
+  /Carvalho Hosken/i,
+  /Iguaçu/i,
+  /Grupo Massa/i,
 ];
 
 let failed = false;

@@ -23,9 +23,17 @@ Keep the sidebar small. Nested agent labels stay hidden. Filters skip the inbox 
 | Zion Grow/Action | Partner / grow queue |
 | Needs Kleber | Escalation |
 
+## Outbound CC rule (automation)
+
+Every commercial send from Kleber includes **both**:
+- `carlos@ziontechgroup.com`
+- `commercial@ziontechgroup.com`
+
+Do not send client mail with only one of them. Internal finance (Agilize) may stay Carlos-only.
+
 ## Hidden (do not delete — high volume or duplicates)
 
-Nest under `Zion/Archive-Agents/` and hide: Hot-Follow-Up, No-Hurry, Legacy-Urgent, CEO-Replied-old, Action-Required-old, To-Follow-Up, Notification-old, Marketing, Newsletters-old, Promotion, SaneArchive, SaneCC, Auto, Zapier, Auto-Replied, Human-Review, GitHub, Grow-Promo, Bulk-Archived, Grow/Partners.
+Nest under `Zion/Archive-Agents/` and hide: Hot-Follow-Up, No-Hurry, Legacy-Urgent, CEO-Replied-old, Action-Required-old, To-Follow-Up, To-Respond-old, Notification-old, Marketing, Newsletters-old, Promotion, SaneArchive, SaneCC, Auto, Zapier, Auto-Replied, Human-Review, GitHub, Grow-Promo, Bulk-Archived, Grow/Partners, Airbnb, Leads-old, Bounces.
 
 `Zion/Finance/Cobranca-2` is the old COBRANCA 2 label (hidden).
 

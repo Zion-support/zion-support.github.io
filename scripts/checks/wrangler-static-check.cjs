@@ -21,6 +21,11 @@ if (wrangler.includes("pages_build_output_dir")) {
   console.error("wrangler-static-check: pages_build_output_dir must stay off (Workers vs Pages)");
   process.exit(1);
 }
+const pkg = fs.readFileSync(path.join(__dirname, "..", "..", "package.json"), "utf8");
+if (!pkg.includes('"installCommand": "true"') || !pkg.includes("cf-static-build.sh")) {
+  console.error("wrangler-static-check: package.json cloudflare.installCommand must skip npm ci");
+  process.exit(1);
+}
 if (!fs.existsSync(worker)) {
   console.error("wrangler-static-check: missing src/index.js");
   process.exit(1);
