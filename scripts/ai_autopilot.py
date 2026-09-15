@@ -13,6 +13,7 @@ action stays human-approved). The 3 live links on the page stay fixed.
 """
 import re
 import sys
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -58,20 +59,23 @@ def fetch_trends():
 
 def main():
     now = datetime.now(timezone.utc)
+    stamp = now.strftime("%B %d, %Y")
     html = PAGE.read_text(encoding="utf-8")
     original = html
 
     trends = fetch_trends()
     items = " · ".join(
-        f'<a href="{escape(link, quote=True)}" target="_blank" rel="noopener">{escape(title)}</a>'
+        '<a href="{}" target="_blank" rel="noopener">{}</a>'.format(
+            escape(link, quote=True), escape(title)
+        )
         for title, link in trends
     ) or "AI market scan in progress"
 
     block = (
-        f"{START}\n"
-        f'  <p class="subheadline" style="font-size:1rem">'
-        f"🔎 Trending in AI right now (auto-updated {now:%B %d, %Y}}): {items}</p>\n"
-        f"  {END}"
+        START + "\n"
+        + '  <p class="subheadline" style="font-size:1rem">'
+        + "Trending in AI right now (auto-updated " + stamp + "): " + items + "</p>\n"
+        + "  " + END
     )
 
     if START in html and END in html:
@@ -84,7 +88,7 @@ def main():
         )
     else:
         # First run: insert trends block right after the AI services intro paragraph.
-        anchor = 'Subscribe instantly with secure Stripe checkout.</p>'
+        anchor = "Subscribe instantly with secure Stripe checkout.</p>"
         if anchor in html:
             html = html.replace(anchor, anchor + "\n" + block, 1)
         else:
@@ -92,7 +96,7 @@ def main():
 
     # Keep the section heading month current.
     html = re.sub(
-        r'(<h2 id="ai-services-2026">🚀 New — Agentic AI Services \()[^)]*(\)</h2>)',
+        r'(<h2 id="ai-services-2026">[^()]*\()[^)]*(\)</h2>)',
         lambda m: m.group(1) + now.strftime("%B %Y") + m.group(2),
         html,
         count=1,
@@ -106,10 +110,9 @@ def main():
 
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with LOG.open("a", encoding="utf-8") as f:
-        f.write(f"{now.isoformat()} trends={len(trends)} changed={html != original}\n")
+        f.write("{} trends={} changed={}\n".format(now.isoformat(), len(trends), html != original))
     return 0
 
 
 if __name__ == "__main__":
-    import urllib.parse  # noqa: E402  (kept here so header imports stay minimal)
     sys.exit(main())
