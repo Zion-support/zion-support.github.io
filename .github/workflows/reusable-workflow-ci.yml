@@ -26,13 +26,13 @@ jobs:
           echo "Skipping npm ci: package.json still lists Next.js scripts, but"
           echo "workflows:contracts:node is not defined and .nvmrc is absent."
           echo "run_contracts=${{ inputs.run_contracts }}"
-          python3 -c "
-from pathlib import Path
-files = list(Path('.github/workflows').glob('*.yml'))
-assert files, 'no workflow files'
-for p in files:
-    text = p.read_text()
-    assert text.strip(), p
-    assert 'on:' in text or '\"on\":' in text, p
-print('workflow files present:', len(files))
-"
+          python3 - <<'PY'
+          from pathlib import Path
+          files = list(Path('.github/workflows').glob('*.yml'))
+          assert files, 'no workflow files'
+          for p in files:
+              text = p.read_text()
+              assert text.strip(), p
+              assert 'on:' in text or '"on":' in text, p
+          print('workflow files present:', len(files))
+          PY
