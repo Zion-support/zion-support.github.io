@@ -1,0 +1,36 @@
+name: Cloudflare static worker
+
+# Workers Builds (Cloudflare GitHub app) still npm-ci's this repo unless the
+# dashboard sets SKIP_DEPENDENCY_INSTALL=true. This workflow never installs Next.
+
+on:
+  pull_request:
+  push:
+    branches:
+    - main
+    - cursor/email-ceo-actions-homepage-services-373f
+    - cursor/ceo-ops-oldest-mail-ci-ba35
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cf-static-worker-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  wrangler-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Static wrangler config
+        run: node scripts/checks/wrangler-static-check.cjs
+      - name: Prepare public/
+        run: bash scripts/cf-static-build.sh
+      - name: Wrangler dry-run (no npm ci of Next)
+        run: npx --yes wrangler@4 deploy --dry-run --outdir /tmp/wrangler-dry

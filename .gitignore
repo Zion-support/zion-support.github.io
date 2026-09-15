@@ -1,6 +1,7 @@
 .next/
 node_modules/
 core
+out/
 
 MEMORY.md
 logs/
