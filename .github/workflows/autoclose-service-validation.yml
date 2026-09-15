@@ -3,8 +3,6 @@ name: Auto-close service-validation bot issues
 on:
   issues:
     types: [opened, labeled]
-  schedule:
-    - cron: '17 * * * *'  # hourly sweep for stragglers
   workflow_dispatch:
 
 permissions:
@@ -20,14 +18,3 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.number }}
         run: gh issue close "$ISSUE" --reason "not planned" --comment "Auto-closed: bot-generated service-validation issue. Tracking: #71148."
-
-      - name: Hourly sweep - close any open service-validation issues
-        if: github.event_name != 'issues'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh issue list --label service-validation --state open --limit 500 --json number \
-            --jq '.[].number | select(. != 71148)' | \
-          while read -r n; do
-            gh issue close "$n" --reason "not planned" --comment "Auto-closed: bot-generated service-validation issue. Tracking: #71148." || true
-          done
