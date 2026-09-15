@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Setup Node.js
+        if: hashFiles('automation/gha-npm-cache-audit.cjs') != ''
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
@@ -28,9 +29,15 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
+        if: hashFiles('automation/gha-npm-cache-audit.cjs') != ''
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Strict npm cache audit
         env:
           GHA_NPM_CACHE_AUDIT_STRICT: '1'
-        run: node automation/gha-npm-cache-audit.cjs
+        run: |
+          if [ -f automation/gha-npm-cache-audit.cjs ]; then
+            node automation/gha-npm-cache-audit.cjs
+          else
+            echo "automation/gha-npm-cache-audit.cjs is not on this branch; skipping"
+          fi

@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
@@ -31,20 +29,26 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
+        if: hashFiles('automation/openclaw-pr-hotfile-comment.cjs') != ''
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Refresh hot-file router snapshot
         run: |
           set -euo pipefail
-          npm run openclaw:conflict:predict
-          npm run openclaw:hot:patch:route
+          npm run --if-present openclaw:conflict:predict
+          npm run --if-present openclaw:hot:patch:route
 
       - name: Comment and label when PR touches hot files
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
           PR="${{ github.event.pull_request.number }}"
+          if [ ! -f automation/openclaw-pr-hotfile-comment.cjs ]; then
+            echo "openclaw hot-file scripts are not on this branch; skipping"
+            exit 0
+          fi
           FILES="$(gh pr diff "$PR" --name-only | paste -sd "," -)"
           export FILES
           node automation/openclaw-pr-hotfile-comment.cjs > /tmp/hot.md
