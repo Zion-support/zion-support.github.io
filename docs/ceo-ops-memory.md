@@ -45,7 +45,7 @@ Gmail **filter create** needs settings scope — 403 in this agent. Until filter
 
 ## Contacts restarted 15 Sep (Free Discovery + AI trial — new thread)
 
-Do not mail again before **22 Sep** unless they reply.
+Do not mail again before **22 Sep** unless they reply. Evening batch (this run) also sent: Vibra, SANASA, TRF1, Câmara SP, Nova Engevix, TRF2, SMSA-BH. Parallel agents also sent Raia Drogasil, SENAI-SP, Wobben, UNICAMP FCM, Denso, Ativa1, Server-on.
 
 | Org | People | Notes |
 | --- | --- | --- |
@@ -63,6 +63,20 @@ Do not mail again before **22 Sep** unless they reply.
 | Synchro | Compras ADS `compras.ads@synchro.com.br`, Lucas Fernando | Thaís Santos OOO maternity 15 Sep — redirected here. New offer; not the old SSD-case RFQ. |
 | Funcional | `emachado@funcionalcorp.com.br` | New offer; not the old storage-disk RFQ. |
 | Sicoob | Américo Batista `americo.batista@sicoob.com.br` | New offer to the 2022 AD-SICOOB contact (generic AI blast on 6 Sep went to other mailboxes). |
+| Ativa1 | Francisco `francisco@ativa1.com.br` | New offer; not the old SAS kit quote. Thread `1a0a6d44d6c57290`. |
+| Server-on | Michael Pereira `michael.pereira@server-on.com.br` | New offer; not the old LTO6 drive quote. Thread `1a0a6d471651341c`. |
+| Vibra Energia | Daniel Bahiense `dbahiense@vibraenergia.com.br`, Renato `rpalmeida@vibraenergia.com.br`, Michel Torres `mtorres@vibraenergia.com.br` | New offer; **do not** re-quote 2022 IBM HMC / x3550 motherboard repair (delivered — anonymized on `/cases/`). Thread `1a0a6d925b1af0ac`. |
+| SANASA | Tatiane Paiva `tatiane.paiva@sanasa.com.br` | New offer; not orçamento 2022/670. Also known: Renan Costa, Maury Brasca (older). Thread `1a0a6d928e5ef2c9`. |
+| TRF1 | Rafael Moraes `rafael.moraes@trf1.jus.br`, Luiz Costa `luiz.costa@trf1.jus.br` | New offer; not Huawei RAS 2023 bid. Thread `1a0a6d92b4bab7fc`. |
+| Câmara Municipal de São Paulo | Denis Moreira `denismoreira@saopaulo.sp.leg.br` | New offer; not 2022 TI support quote. **Not** Câmara Santos. Thread `1a0a6d9b486a1e79`. |
+| Nova Engevix | Marcos Maciel `marcos.maciel@novaengevix.com.br` | New offer after delivered repair (CNPJ moved to Florianópolis). Thread `1a0a6d9b8fe80b62`. |
+| TRF2 | `compras@trf2.jus.br` | New offer; not IBM hardware support 2020. Thread `1a0a6d9bba9e8dce`. |
+| SMSA-BH / PBH | Marcus Vinícius `marcuspbh@gmail.com`, `nucleoinvestimentosmsa@pbh.gov.br` | New offer; not nobreak/network RFQ. Thread `1a0a6da730dae0ab`. |
+| Raia Drogasil | Allan Ribeiro `alribeiro@rd.com.br` | Parallel agent; not 2022 Field Service RFP. |
+| SENAI-SP | Fábio Castro `fabio.castro@sp.senai.br` | Parallel agent; not old storage NF. |
+| Wobben | `infoit@wobben.com.br`, Alessandra Theodoro `alessandra.theodoro@wobben.com.br` | Parallel agent; field contract known. |
+| UNICAMP FCM | Aline `absilva@unicamp.br`, `compras@fcm.unicamp.br` | Parallel agent; P2000 process closed 2024 with other vendor. |
+| Denso | Jaclinton Silva `jaclinton.silva@denso-ts.it`, Marcel Mesquita `marcel.mesquita@denso-ts.it` | Parallel agent; not old server coverage addendum. |
 
 ## Do not restart / do not mail again this week
 
@@ -74,7 +88,14 @@ Do not mail again before **22 Sep** unless they reply.
 - CGDF Michelle Santiago — mailed 14 Sep; wait until **21 Sep**.
 - Copa Energia — Discovery/RFQ mail 5 Sep; Leonardo Nakashima OOO until **21 Sep**; Amauri Custodio paternity until **28 Sep**. Next mail after they return.
 - INPI — Daniele redirected to `compras@inpi.gov.br` in 2022; last follow-up **14 Sep**. Wait until 21 Sep.
-- Anyone who already received Discovery on 15 Sep (CODERP, PRODAM, BANESE, SJC, Suzano, PRODEMGE, ACSP, BBP, Bottero, TV Iguaçu, Don Paco, Zoom, Unicamp, Accor certificate thread, FGV Mauro, plus the 15 Sep evening batch above).
+- Anyone who already received Discovery on 15 Sep (CODERP Camila `crprieto@coderp.ribeiraopreto.sp.gov.br`, PRODAM, BANESE, SJC, Suzano including Valdir Soldera, PRODEMGE, ACSP, BBP, Bottero, TV Iguaçu, Don Paco, Zoom, Unicamp, Accor certificate thread, FGV Mauro, plus the 15 Sep evening batch above).
+- PGE-SP `pge-apoiodsat2@sp.gov.br` — last mailed **13 Sep**. Wait until **20 Sep**.
+- GVS Pedro Cavalcanti `pedro.cavalcanti@gvs.com` — last mailed **13 Sep**. Wait until **20 Sep**.
+- IPSOS Dell TL4000 — Carlos closed (“não vamos mais perder tempo”); charge diagnostic only. Do **not** send Discovery.
+- Ricardo (`ricardo.cgid@gmail.com`) LTO6 diagnostic-fee dispute 2023 — closed billing, not a Discovery restart.
+- Otávio Fonseca TJMSP — **declined 15 Sep** (park renewed Dell 5yr). Kleber already acknowledged. Do not restart.
+- Speedware / Amílcar — live: schedule 3PAR 8200 FGV (proposal already with Carlos). DL380 cage closed. Carlos was mailed 15 Sep 20:44. **Do not third-ping Carlos tonight.**
+- State Grid `jeff.chien@` and `camilla.fischer@` — bounced 15 Sep. Felipe Figueiredo already mailed. Do not retry the 550s.
 
 ## Bounces / dead mailboxes
 
@@ -84,6 +105,11 @@ Do not mail again before **22 Sep** unless they reply.
 - `rodrigo.soares@apas.com.br` — 550 blocked 15 Sep.
 - `anderson.santos@apas.com.br` — 550 blocked 15 Sep.
 - `lcmesquita@agenersa.rj.gov.br` — address not found 15 Sep. Do not retry that mailbox.
+- `jeff.chien@stategrid.com.br` / `camilla.fischer@stategrid.com.br` — mailbox does not exist / mail flow rule. Use Felipe Figueiredo only.
+
+Gmail **filter create** still 403 (settings scope). Deleted empty `Zion/Leads` (Label_979). Visible set remains CEO/1–3 + Zion/Carlos, Won, 24x7, Finance, Legal, LICITACAO. Inbox empty as of 15 Sep ~20:55 UTC.
+
+Public site: anonymized **energy-sector IBM HMC / x3550 motherboard repair** card on `/`, `/cases/`, `/success-stories/` (no Vibra name, no prices). Static `/zion-email-automation/` describes commercial mail ops and sells only the four official SKUs.
 
 ## Public site
 
