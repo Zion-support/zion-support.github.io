@@ -2,15 +2,15 @@ name: AI Services Autopilot
 
 # Manual only. Daily cron disabled 15 Sep 2026: this job rewrites
 # public/index.html and would re-publish client prices / confidential copy.
-# Run via workflow_dispatch if Kleber wants a trends refresh.
+# Do not deploy Pages from here — Simple Static Deploy owns github-pages
+# artifacts. A second upload in the same environment caused
+# "Multiple artifacts named github-pages" (run 35008160472).
 
 on:
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: ai-autopilot
@@ -26,26 +26,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run AI research autopilot
-        run: python3 scripts/ai_autopilot.py
-
-      - name: Commit homepage updates
+      - name: Run AI research autopilot (no Pages deploy)
         run: |
+          python3 scripts/ai_autopilot.py
           git config user.name "zion-ai-autopilot"
           git config user.email "kleber@ziontechgroup.com"
-          git add public/index.html cron_output/ai_autopilot.log
+          git add public/index.html cron_output/ai_autopilot.log || true
           if git diff --cached --quiet; then
             echo "No homepage changes - skipping commit"
           else
+            echo "::warning::Autopilot drafted homepage changes. Review before merge — do not publish client names or contract prices."
             git commit -m "chore(autopilot): refresh AI services trends $(date -u +%Y-%m-%d)"
             git push
           fi
-
-      - name: Prepare pages
-        run: bash scripts/prepare-pages-out.sh
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-
-      - uses: actions/deploy-pages@v4

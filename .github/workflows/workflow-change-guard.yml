@@ -30,28 +30,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate-contracts:
-    uses: ./.github/workflows/reusable-workflow-ci.yml
-    with:
-      run_contracts: true
-
-  automation-guard:
-    needs: validate-contracts
+  static-site-guard:
+    name: Static Pages site — skip npm contracts
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
-        with:
-          node-version-file: '.nvmrc'
-          cache: npm
-          cache-dependency-path: package-lock.json
-
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
-
-      - name: Automation preflight
-        run: npm run automation:preflight
+      - uses: actions/checkout@v4
+      - name: Confirm Pages publisher and skip Next.js npm ci
+        run: |
+          echo "This repo publishes public/ via .github/workflows/static-deploy.yml."
+          test -f .github/workflows/static-deploy.yml
+          test -f scripts/prepare-pages-out.sh
+          echo "npm ci / workflows:contracts:node are not required for the static HTML site."
+          echo "Route-slicer, Autopilot Pages deploy, and Next ANALYZE builds stay skipped."
