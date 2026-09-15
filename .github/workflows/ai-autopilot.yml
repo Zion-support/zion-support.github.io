@@ -1,13 +1,10 @@
 name: AI Services Autopilot
 
-# Runs daily: researches newest AI tools, refreshes the homepage
-# 'New - Agentic AI Services' section, commits, and deploys Pages.
-# Note: GITHUB_TOKEN pushes do not re-trigger static-deploy.yml,
-# so this workflow deploys Pages itself.
+# Manual only. Daily cron disabled 15 Sep 2026: this job rewrites
+# public/index.html and would re-publish client prices / confidential copy.
+# Run via workflow_dispatch if Kleber wants a trends refresh.
 
 on:
-  schedule:
-    - cron: "0 12 * * *"   # daily 12:00 UTC
   workflow_dispatch:
 
 permissions:
