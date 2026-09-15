@@ -1,0 +1,9 @@
+# Production site is static HTML in public/ (GitHub Pages via static-deploy.yml).
+# Workers Builds: no Next.js. Deploy assets only. Requires public/404.html
+# because not_found_handling = "404-page".
+name = "ziontechgroup"
+compatibility_date = "2024-09-23"
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
