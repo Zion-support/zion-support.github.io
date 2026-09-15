@@ -28,7 +28,7 @@ Operational notes for Carlos (`carlos@ziontechgroup.com`) and commercial (`comme
 | `Zion/Noise` | Bulk promo (hidden). |
 | `Zion/Archive-Agents/SaneArchive` | Historical bulk archive. |
 
-Empty `Zion/Leads` deleted 15/09/2026. Do not delete parent `Zion`. Do not put suppliers (WorldTech, DCM) on `Zion/Noise`. Gmail filter API is 403 — trash at the thread until filters can be created in the account UI. Oldest-mail cursor after 12 Sep 2023 promo pass: page token `14775071693864199238`.
+Empty `Zion/Leads` deleted 15/09/2026. Do not delete parent `Zion`. Do not put suppliers (WorldTech, DCM, Speedware) on `Zion/Noise`. Gmail filter API is 403 — trash at the thread until filters can be created in the account UI. Oldest-mail cursor after 11–12 Sep 2023 promo pass: page token `17403983635013996897`.
 
 ## Contacts (CRM)
 
@@ -53,6 +53,8 @@ Empty `Zion/Leads` deleted 15/09/2026. Do not delete parent `Zion`. Do not put s
 | CIASC | COLIC | colic@ciasc.sc.gov.br (cc laercio@, nholiveira@) — edital OceanStor 5800 V5 previsto outubro/2026 |
 | Jiliti | Subcontracting desk (Patricia Clevy left) | subcontracting@jiliti-group.com — no open LATECOERE renewal |
 | WorldTech | Cris Dantier (supplier, not client) | cdantier@worldtechsolutions.net — 3PAR 8450 PN 792655-001 quoted 18/02/2026; Compellent 2023 closed |
+| Speedware | Amílcar D. Catharino Jr. (supplier) | amilcar@speedware.com.br — **3PAR 8200 FGV** repair quote already sent; Carlos must pick Tue–Fri date. **DL380 Gen11 LFF cage: closed** (HPE no solution). Do not mix the two in one follow-up. |
+| TRT2 | Gustavo Oliveira (SAACSTIC) | saacstic@trt2.jus.br — 15/09: will check TIC projects and call if they want a meeting. Wait; do not re-pitch process 11843/2022. |
 | DCM | Daniel Pechmann (supplier) | daniel@dcmtech.com.br |
 | Agilize | Victoria (Unique) | suporte@agilize.zendesk.com — PRAIA DIGITAL IMOVEIS LTDA CNPJ 66.652.895/0001-57 — **canonical ticket #2423990** (merged #2424853 / #2425417 / #2425418) |
 | Intersoftkk | Marcello Rodrigues | marcello.rodrigues@intersoftkk.com (EUC BGV) |
@@ -69,6 +71,7 @@ Empty `Zion/Leads` deleted 15/09/2026. Do not delete parent `Zion`. Do not put s
 7. **ASSEFAZ** — open NetApp call is late; diagnose. Do not send another generic restart to José Roberto.
 8. **CIASC** — wait for October edital; do not Discovery-pitch over the OceanStor thread.
 9. **NB Tech / Suzano nobreaks** — Carlos must confirm brand/model of the 15x 1.2 kVA units.
+10. **Speedware 3PAR FGV** — schedule the repair with the client (Tue–Fri). Do not re-open the DL380 cage.
 
 ## Homepage (public)
 
@@ -76,4 +79,4 @@ Official Stripe menu only: Discovery $99, Consulting $499, Starter $2,500, Growt
 
 ## Skip this week (already mailed 15/09 or last 7 days)
 
-Intergriffes, TRT2, INPI, Eletronuclear, UERJ, Cachoeiro Nilson DELL, ZE Techno Break, Accor, Bottero, ASSEFAZ contratos, PRODEMGE, BANESE, BBP Telecom, Suzano (Jonas/Matheus/Limeira HDD), Cyrela/RJZ, LATECOERE/Jiliti, CIASC OceanStor, plus the 15/09 Discovery batch (TJMSP, FIESP, Votorantim, Cachoeiro CTI, State Grid, TRT20, FDE, Cataguá, TRE-SP, SGB, Acelen, INEA, SEM-RJ, DBS Eng TV, TRT1 Paulus).
+Intergriffes, TRT2 (Gustavo SAACSTIC — waiting), INPI, Eletronuclear, UERJ, Cachoeiro Nilson DELL, ZE Techno Break, Accor, Bottero, ASSEFAZ contratos, PRODEMGE, BANESE, BBP Telecom, Suzano (Jonas/Matheus/Limeira HDD), Cyrela/RJZ, LATECOERE/Jiliti, CIASC OceanStor, Speedware (same-day 3PAR clarify), plus the 15/09 Discovery batch (TJMSP, FIESP, Votorantim, Cachoeiro CTI, State Grid, TRT20, FDE, Cataguá, TRE-SP, SGB, Acelen, INEA, SEM-RJ, DBS Eng TV, TRT1 Paulus).
