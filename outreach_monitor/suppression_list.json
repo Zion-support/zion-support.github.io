@@ -1,0 +1,28 @@
+{
+  "_comment": "Do-not-send list for Zion outreach automation. Seeded from docs/ceo-ops-memory.md and observed Gmail bounces (15 Sep 2026). The filter script scripts/automation/filter-outreach-suppression.cjs removes any recipient whose address matches 'addresses', whose domain matches 'domains', or that matches a 'patterns' regex. Keeps the automation from re-mailing dead/550-blocked mailboxes and non-prospect tooling/newsletter senders.",
+  "updatedAt": "2026-09-15",
+  "addresses": [
+    { "email": "marlene@figwal.com.br", "type": "bounce", "reason": "550 user unknown" },
+    { "email": "imanso@caloi.com", "type": "bounce", "reason": "Google 550 blocked" },
+    { "email": "vsjardim@caloi.com", "type": "bounce", "reason": "Google 550 blocked" },
+    { "email": "jcampos@caloi.com", "type": "bounce", "reason": "Google 550 blocked" },
+    { "email": "mrabela@caloi.com", "type": "bounce", "reason": "Google 550 blocked" },
+    { "email": "rodrigo.soares@apas.com.br", "type": "bounce", "reason": "550 blocked 15 Sep" },
+    { "email": "anderson.santos@apas.com.br", "type": "bounce", "reason": "550 blocked 15 Sep" },
+    { "email": "lcmesquita@agenersa.rj.gov.br", "type": "bounce", "reason": "address not found 15 Sep" },
+    { "email": "americo.batista@sicoob.com.br", "type": "bounce", "reason": "Outlook rejected/communication failure 15 Sep" },
+    { "email": "jeff.chien@stategrid.com.br", "type": "bounce", "reason": "recipient not found 15 Sep" },
+    { "email": "camilla.fischer@stategrid.com.br", "type": "bounce", "reason": "admin mail-flow rule blocked 15 Sep" },
+    { "email": "dbahiense@vibraenergia.com.br", "type": "bounce", "reason": "message blocked 15 Sep" },
+    { "email": "wayne.hibbert@intersoftkk.com", "type": "bounce", "reason": "recipient not found 14 Sep" },
+    { "email": "editors@channelpronetwork.com", "type": "non_prospect", "reason": "trade publication editorial inbox, not a client" },
+    { "email": "gmailgenius@wordzen.com", "type": "non_prospect", "reason": "SaaS tool sender, not a client" },
+    { "email": "bob@scrubly.com", "type": "non_prospect", "reason": "email list-cleaning tool, not a client" },
+    { "email": "hi@app.kilocode.ai", "type": "non_prospect", "reason": "AI dev tool, not a client" },
+    { "email": "mauro.faria@fgv.br", "type": "do_not_mail_this_week", "reason": "Discovery already sent 15 Sep; do not third-ping before 22 Sep" }
+  ],
+  "domains": [],
+  "patterns": [
+    { "regex": "^(no-?reply|do-?not-?reply|postmaster|mailer-daemon|notifications?)@", "type": "non_prospect", "reason": "automated / no-reply system addresses" }
+  ]
+}
