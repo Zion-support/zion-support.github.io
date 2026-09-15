@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T18:55Z",
+  "updated": "2026-09-15T20:50Z",
   "owner": "carlos@ziontechgroup.com",
   "ceo": "kleber@ziontechgroup.com",
   "contacts": [
@@ -239,6 +239,77 @@
         {"name": "Adriana Cerqueira", "email": "", "note": "claimed NFs 3406/3407 paid Sep 2025"}
       ],
       "status": "Do NOT mix Free Discovery into the NF collections thread. Historical 2022 invoices. Skip sales restart."
+    },
+    {
+      "org": "SENAI-SP",
+      "people": [{"name": "Fabio Castro", "email": "fabio.castro@sp.senai.br"}],
+      "status": "Historical storage maintenance. 2026-09-15: Free Discovery new subject (not the 2022 NF/cancel thread)."
+    },
+    {
+      "org": "Raia Drogasil",
+      "people": [{"name": "Allan Ribeiro", "email": "alribeiro@rd.com.br"}],
+      "status": "2022 Field Service RFP round 1. 2026-09-15: Free Discovery new subject. Do not reopen RFP attachments."
+    },
+    {
+      "org": "Synchro",
+      "people": [
+        {"name": "Thais Santos", "email": "thais.santos@synchro.com.br", "note": "maternity auto-reply"},
+        {"name": "Compras ADS", "email": "compras.ads@synchro.com.br"},
+        {"name": "Lucas Fernando", "email": "lucas.fernando@synchro.com.br"}
+      ],
+      "status": "2026-09-15 Discovery to Thais → forwarded to compras.ads@. No second mail this week."
+    },
+    {
+      "org": "Wobben",
+      "people": [
+        {"name": "TI", "email": "infoit@wobben.com.br"},
+        {"name": "Alessandra Theodoro", "email": "alessandra.theodoro@wobben.com.br"}
+      ],
+      "status": "2026-09-15 Free Discovery. No second mail this week."
+    },
+    {
+      "org": "State Grid",
+      "people": [{"name": "Felipe Figueiredo", "email": "felipe.figueiredo@stategrid.com.br"}],
+      "dead": ["jeff.chien@stategrid.com.br", "camilla.fischer@stategrid.com.br"],
+      "status": "Historical IBM magnetic-head coverage question. 2026-09-15 Discovery bounced on Jeff/Camilla; resent to Felipe only."
+    },
+    {
+      "org": "TJMSP",
+      "people": [
+        {"name": "Otávio Fonseca", "email": "otavio.fonseca@tjmsp.jus.br"},
+        {"name": "Anderson Ciocca", "email": "anderson.ciocca@tjmsp.jus.br"}
+      ],
+      "status": "2026-09-15 declined Discovery: park renewed 2024/2025 Dell 5-year warranty. Do not follow up."
+    },
+    {
+      "org": "Prefeitura de Votorantim",
+      "people": [{"name": "Cristina Dias", "email": "adm.ti@votorantim.sp.gov.br"}],
+      "status": "2022 server warranty RFQ. 2026-09-15 Free Discovery. No second mail this week."
+    },
+    {
+      "org": "FIESP",
+      "people": [
+        {"name": "Samuel Lopes Nogueira", "email": "samuel.nogueira@fiesp.com.br"},
+        {"name": "F. Paganini", "email": "fpaganini@fiesp.com.br"}
+      ],
+      "status": "2022 Tandberg Neo tape. 2026-09-15 Free Discovery (not the old diagnostic). No second mail this week."
+    },
+    {
+      "org": "TRE-SP",
+      "people": [
+        {"name": "Milena Monchelato", "email": "milena.monchelato@tre-sp.jus.br"},
+        {"name": "SEPEC", "email": "sepec@tre-sp.jus.br"},
+        {"name": "Fernando Colpas", "email": "fernando.colpas@tre-sp.jus.br"}
+      ],
+      "status": "2023 large-format plotter RFQ. 2026-09-15 Free Discovery. No second mail this week."
+    },
+    {
+      "org": "Acelen",
+      "people": [
+        {"name": "Vânia Ferreira", "email": "vania.ferreira.ext@acelen.com"},
+        {"name": "Robson Veras", "email": "rveras@acelen.com"}
+      ],
+      "status": "2026-09-15 Free Discovery new subject (not 2023 SAP/QAT). No second mail this week."
     }
   ]
 }

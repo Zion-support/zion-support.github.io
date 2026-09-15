@@ -15,13 +15,10 @@ Keep the sidebar small. Nested agent labels stay hidden. Filters skip the inbox 
 | Zion/24x7-Contracts | FAJ, Caloi, ASSEFAZ-class coverage |
 | Zion/Action | Internal commercial follow-through |
 | Zion/Keep | Do not trash (finance, HAB, Agilize) |
-| Zion/Finance | Collections |
-| 🔴 1. Unanswered RFQ | Genuine RFQs only |
+| Zion/Finance | Collections / Agilize / Crypto.com BRL close |
 | 📅 Meetings | Calendar |
-| LICITACAO | Public-sector bids |
+| LICITACAO | Public-sector bids (not Portal de Compras alerts) |
 | Client | Named customers |
-| Zion Grow/Action | Partner / grow queue |
-| Needs Kleber | Escalation |
 
 ## Outbound CC rule (automation)
 
@@ -33,7 +30,9 @@ Do not send client mail with only one of them. Internal finance (Agilize) may st
 
 ## Hidden (do not delete — high volume or duplicates)
 
-Nest under `Zion/Archive-Agents/` and hide: Hot-Follow-Up, No-Hurry, Legacy-Urgent, CEO-Replied-old, Action-Required-old, To-Follow-Up, To-Respond-old, Notification-old, Marketing, Newsletters-old, Promotion, SaneArchive, SaneCC, Auto, Zapier, Auto-Replied, Human-Review, GitHub, Grow-Promo, Bulk-Archived, Grow/Partners, Airbnb, Leads-old, Bounces.
+Nest under `Zion/Archive-Agents/` and hide: Hot-Follow-Up, No-Hurry, Legacy-Urgent, CEO-Replied-old, Action-Required-old, To-Follow-Up, To-Respond-old, Notification-old, Marketing, Newsletters-old, Promotion, SaneArchive, SaneCC, Auto, Zapier, Auto-Replied, Human-Review, GitHub, Grow-Promo, Bulk-Archived, Grow/Partners, Airbnb, Leads-old, Bounces, System/Bounces, Zion/Noise.
+
+2026-09-15: Client, Meetings, Zion/Action, Zion/Keep set to LABEL_SHOW. Airbnb + Human-Review nested under Archive-Agents.
 
 `Zion/Finance/Cobranca-2` is the old COBRANCA 2 label (hidden).
 
