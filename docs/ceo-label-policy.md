@@ -27,9 +27,13 @@ Keep the sidebar small. Nested agent labels stay hidden. Filters skip the inbox 
 | Zion Grow/Finance | Grow finance |
 | Zion Grow/Partners | Partners |
 
-## Hidden (do not delete — high volume)
+## Hidden (do not delete — high volume or duplicates)
 
-🗑 Spam Review, 📣 Marketing, 📰 Newsletters, Promotion, 🗄 Archive - SaneArchive / SaneCC / Auto / Nuclear, System newsletters, Zapier alerts, CI/GitHub archives, duplicate “1: to respond” / CEO-Replied / Action Required / Urgent.
+Nest under `Zion/Archive-Agents/` and hide: Hot-Follow-Up, No-Hurry, Legacy-Urgent, CEO-Replied-old, Action-Required-old, To-Follow-Up, Notification-old, plus Marketing, Newsletters, Promotion, SaneArchive, Zapier, Auto-Replied, Human Review, GitHub/Archived.
+
+`Zion/Finance/Cobranca-2` is the old COBRANCA 2 label (hidden).
+
+Visible operating set stays: CEO/1, CEO/2, Zion/Carlos, Won, Legal, 24x7, Action, Keep, Finance, Unanswered RFQ, Meetings, LICITACAO, Cobrança, !RENEWABLE'S, Client, Zion Grow/Action, Zion Grow/Partners, Needs Kleber Input.
 
 ## Deleted
 

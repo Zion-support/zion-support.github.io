@@ -1,6 +1,6 @@
 /**
  * Cloudflare Worker: serve static HTML from public/ via ASSETS.
- * Keep in sync with src/index.js (wrangler main).
+ * Production site is not Next.js.
  */
 export default {
   async fetch(request, env) {

@@ -2,8 +2,7 @@ name: Autonomous Lazy-Loading Route Slicer
 permissions:
   contents: read
 "on":
-  schedule:
-  - cron: 0 4 * * 0
+  # Cron disabled: production is static public/, Next bundle stats do not exist.
   workflow_dispatch:
     inputs:
       apply:

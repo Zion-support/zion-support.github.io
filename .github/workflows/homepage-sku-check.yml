@@ -29,4 +29,4 @@ jobs:
       - name: Success stories have no confidential commercial terms
         run: node scripts/checks/success-stories-confidential-check.cjs
       - name: Cloudflare static worker is present
-        run: test -f wrangler.toml && test -f cf-worker.js && test -f scripts/cf-static-build.sh
+        run: node scripts/checks/wrangler-static-check.cjs

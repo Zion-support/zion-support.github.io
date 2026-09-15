@@ -24,6 +24,8 @@ const required = [
   "eVq6oI7JqetS60j9qlcMM17",
   "8x2eVe6Fm71qfATaupcMM1d",
   "bJedRa0hqbBR71t2di4ZR1l",
+  "calendly.com/kleber-ziontechgroup",
+  "Free Discovery",
 ];
 const missing = required.filter((token) => !html.includes(token));
 if (missing.length) {

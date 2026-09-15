@@ -12,7 +12,7 @@
         {"name": "Glauber Arrighi", "email": "glauber.arrighi@assefaz.org.br"},
         {"name": "Jossenildo Santos", "email": "jossenildo.santos@assefaz.org.br"}
       ],
-      "status": "NetApp storage support renewal in force (confirmed 2026-09-09). Logo vector still owed for 2025 sponsorship video — send for next event.",
+      "status": "NetApp storage support in force. 2026-09-15: offered Free Discovery + AI consulting trial (does not change storage contract).",
       "do_not_disclose": ["contract values", "PIX / bank details"]
     },
     {
@@ -25,7 +25,7 @@
         {"name": "Pagamentos TI", "email": "pagamentosti@caloi.com"}
       ],
       "dead": ["imanso@caloi.com", "vsjardim@caloi.com", "jcampos@caloi.com", "mrabela@caloi.com"],
-      "status": "Historical 24x7 SP + Manaus. 2026 outreach live. Google 550 on imanso/vsjardim/jcampos/mrabela. Try pagamentosti@caloi.com or phone. Do not resend to bounced boxes."
+      "status": "Historical 24x7 SP + Manaus. Google 550 on imanso/vsjardim/jcampos/mrabela. 2026-09-15: Free Discovery sent to pagamentosti@caloi.com only."
     },
     {
       "org": "Fundação Adib Jatene",
@@ -71,17 +71,34 @@
       "status": "Call Thu 2026-09-17 10:00–10:30 BRT. Overflow field coverage."
     },
     {
+      "org": "Fundação Getulio Vargas",
+      "people": [{"name": "Mauro Aparecido Castello Faria", "email": "mauro.faria@fgv.br"}],
+      "status": "2026-09-15: one clean Free Discovery restart (prior July subjects were garbled). Do not triple-send."
+    },
+    {
       "org": "Ilha Capital",
-      "status": "NDA Clicksign envelope 20260915. Kleber signed. Carlos witness — sign in portal. Deadline 2026-10-15. Do not forward token. Do not put CPF in email."
+      "people": [
+        {"name": "Camila Santos", "email": "csantos@ilha.capital"},
+        {"name": "F. Martin", "email": "fmartin@ilha.capital"}
+      ],
+      "status": "NDA Clicksign envelope 20260915. Kleber signed. Carlos witness still pending as of Camila 2026-09-15 18:14 UTC. Deadline 2026-10-15. Do not forward token. Do not put CPF in email."
     },
     {
       "org": "SKY / DIRECTV Ecuador",
-      "status": "2026 field renewal document pack complete. Do not publish PO or account codes."
+      "people": [
+        {"name": "Lourdes Jiménez", "email": "lejimenez@directv.com.ec"},
+        {"name": "María Araceli Álvarez", "email": "malvar17@directvla.com.ar"}
+      ],
+      "status": "2026 field renewal document pack complete. Do not publish PO or account codes. Do not mix sales into the PO thread."
     },
     {
-      "org": "Intersoftkk / China DC",
-      "people": [{"name": "Wayne Hibbert", "email": "wayne.hibbert@intersoftkk.com", "note": "550 bounce — do not rely on this mailbox"}],
-      "status": "Band 2 won. Do not publish the commercial rate on case pages."
+      "org": "Intersoftkk",
+      "people": [
+        {"name": "John Fernandes", "email": "john.fernandes@intersoftkk.com"},
+        {"name": "Marcello Rodrigues", "email": "marcello.rodrigues@intersoftkk.com"},
+        {"name": "Wayne Hibbert", "email": "wayne.hibbert@intersoftkk.com", "note": "550 bounce — do not rely on this mailbox"}
+      ],
+      "status": "China Band 2 won. John flagged AI-generated mail — never send generic AI-audit pitches on those threads. Mexico/Brazil technician RFQ still open."
     }
   ]
 }

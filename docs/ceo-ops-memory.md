@@ -1,9 +1,16 @@
 # Zion CEO operations memory (Kleber Garcia Alcatrão)
 
-Last updated: 2026-09-15 (evening). Help **carlos@ziontechgroup.com** first on every commercial loop.
+Last updated: 2026-09-15 evening (loop 4). Help **carlos@ziontechgroup.com** first on every commercial loop.
 
 ## Public-site rule
-Success stories and homepage “inbox wins” are sector-level only. Never publish PO numbers, account codes, contract end dates, asset model lists, or named contract rates on case pages. SKU prices and Stripe links stay on product cards and service pages. Live contacts: `docs/ceo-live-contacts.json`. Labels: `docs/ceo-label-policy.md`.
+Success stories and homepage “inbox wins” are sector-level only. Never publish PO numbers, account codes, contract end dates, asset model lists, or named contract rates on case pages. SKU prices and Stripe links stay on product cards and service pages. **Returning clients: Free Discovery + AI consulting trial (Calendly, $0). New logos: Discovery $99 Stripe.** Live contacts: `docs/ceo-live-contacts.json`. Labels: `docs/ceo-label-policy.md`.
+
+## Open for Carlos (now)
+- **Ilha Capital Clicksign**: Camila 18:14 UTC — only Carlos witness signature left. Envelope 20260915. Sign in portal today.
+- FUNCATE workstation PDF attach today
+- FAJ minuta after park yes/no
+- Tech Domain Thu 17/09 10:00 BRT
+- Caloi: phone if needed; only pagamentosti@ is a live mailbox
 
 ## Identity
 - CEO: Kleber Garcia Alcatrão — kleber@ziontechgroup.com — +1 302 464 0950
