@@ -41,7 +41,8 @@ Delete empty duplicates (`Zion/Leads`). Do not delete parent `Zion`. Gmail filte
 | TRT20 | SECT | sect@trt20.jus.br |
 | FDE-SP | Pesquisa de preços | pesquisapreco@fde.sp.gov.br |
 | Cataguá | Adriano Gimenes | adriano.gimenes@catagua.com.br |
-| Intergriffes | André Inocencio | andre.inocencio@intergriffes.com.br |
+| TRE-SP | Milena Monchelato, Fernando Colpas, SEPEC | milena.monchelato@tre-sp.jus.br, fernando.colpas@tre-sp.jus.br, sepec@tre-sp.jus.br |
+| SGB | Regina Fátima da C. Siebra (DIINFO) | regina.siebra@sgb.gov.br |
 | Agilize | Victoria (Unique) | suporte@agilize.zendesk.com — PRAIA DIGITAL IMOVEIS LTDA CNPJ 66.652.895/0001-57 — tickets #2423990 / #2424853 |
 | Intersoftkk | Marcello Rodrigues | marcello.rodrigues@intersoftkk.com (EUC BGV) |
 
@@ -59,4 +60,4 @@ Official Stripe menu only: Discovery $99, Consulting $499, Starter $2,500, Growt
 
 ## Skip this week (already mailed 15/09 or last 7 days)
 
-Intergriffes, TRT2, INPI, Eletronuclear, UERJ, Cachoeiro Nilson DELL, ZE Techno Break, Accor, Bottero, ASSEFAZ contratos, plus the 15/09 Discovery batch (TJMSP, FIESP, Votorantim, Cachoeiro CTI, State Grid, TRT20, FDE, Cataguá).
+Intergriffes, TRT2, INPI, Eletronuclear, UERJ, Cachoeiro Nilson DELL, ZE Techno Break, Accor, Bottero, ASSEFAZ contratos, PRODEMGE, plus the 15/09 Discovery batch (TJMSP, FIESP, Votorantim, Cachoeiro CTI, State Grid, TRT20, FDE, Cataguá, TRE-SP, SGB).
