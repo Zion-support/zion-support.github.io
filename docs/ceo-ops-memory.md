@@ -42,6 +42,7 @@ Gmail **filter create** needs settings scope — 403 in this agent. Until filter
 9. **Cockroach Labs** — Rohit Singh paid Discovery. **Tue 22 Sep 14:00 BRT** Meet `https://meet.google.com/iwn-nmbs-kxb`.
 10. **São Bernardo do Campo** — Waldir Silva `waldir.silva@saobernardo.sp.gov.br` + Jeferson Loredo. Replied **15 Sep**: old Dell/EMC extension aborted; process restarted June 2026 as “Garantia e Manutenção do Data Center”. Kleber already answered same day. **Live. Do not send generic Discovery this week.** Also Claudio/Leonel LTO parts thread last mailed 5 Sep.
 11. **FGV** — Live 2026 renewal `SDCOMPRASTIC-6963` (Patrícia / Mauro Faria). Discovery already sent to Mauro 15 Sep. Edson Correia 3PAR last mailed 12 Sep. **Do not third-ping this week.**
+12. **Speedware (vendor) / FGV 3PAR 8200** — Amílcar D. Catharino Jr. `amilcar@speedware.com.br` (+55 11 3868-3891 / +55 11 98541-7278). Live repair thread "Coleta logs": logs collected, Speedware sent repair proposal, agenda ter–sex confirmed 01/06. **Ball is with Carlos: give the aceite on Speedware's proposal and schedule the date with FGV, then reply in-thread; SDM triggers the visit.** DL380 Gen11 LFF/SFF cage adaptation = CLOSED (HPE has no solution). Kleber acknowledged 15 Sep evening.
 
 ## Contacts restarted 15 Sep (Free Discovery + AI trial — new thread)
 
@@ -105,6 +106,23 @@ Do not mail again before **22 Sep** unless they reply. Evening batch (this run) 
 - `rodrigo.soares@apas.com.br` — 550 blocked 15 Sep.
 - `anderson.santos@apas.com.br` — 550 blocked 15 Sep.
 - `lcmesquita@agenersa.rj.gov.br` — address not found 15 Sep. Do not retry that mailbox.
+- `americo.batista@sicoob.com.br` — Outlook rejected/communication failure 15 Sep. Use another 2022 AD-SICOOB contact.
+- `jeff.chien@stategrid.com.br` — recipient not found 15 Sep. `camilla.fischer@stategrid.com.br` — admin mail-flow rule blocked 15 Sep. State Grid mailboxes dead; find a current contact before re-mailing.
+- `dbahiense@vibraenergia.com.br` — message blocked 15 Sep (Vibra). Use `rpalmeida@` / `mtorres@` if needed.
+- `wayne.hibbert@intersoftkk.com` — recipient not found 14 Sep.
+- All the above are now in `outreach_monitor/suppression_list.json`.
+
+## Automation & CI (15 Sep evening continuation)
+
+- **Outreach suppression**: `outreach_monitor/suppression_list.json` + `scripts/automation/filter-outreach-suppression.cjs`. Run the filter before any send (writes `lead-crm/outreach_ready_filtered.json`); `--check` exits 1 if a suppressed address is still in the canonical set. On 15 Sep the canonical 24 → 19 deliverable (dropped bounces + wordzen/scrubly/kilocode/channelpro tooling + Mauro/FGV already-contacted).
+- **GitHub Actions fixed**: `reusable-workflow-ci.yml` had a `run: |` block whose inline `python3 -c` lines started at column 0, breaking the YAML → startup_failure (0s red X) on every push. Rewrote it as an indented heredoc; validated with PyYAML + actionlint. Added `.npmrc` (`legacy-peer-deps=true`) so Cloudflare Workers Builds / Codespaces `npm install` stop failing on the Storybook 8-vs-10 peer conflict.
+- **Cloudflare "Workers Builds: ziontechgroup"** still red until the dashboard build var `SKIP_DEPENDENCY_INSTALL=true` is set (external, Cloudflare console) — but with `.npmrc` the install no longer hard-fails.
+
+## Agent Gmail scope limits (confirmed 15 Sep)
+
+- `create_filter` → 403 (needs settings scope). `delete_label` → server error (same class); **cannot delete labels** from this agent, so "reduce labels" is limited to leaving empties in place. Empty `AIRBNB` (0 threads) flagged for manual delete.
+- Thread/message label + trash + reply all work. Noise handled by tagging `CEO/3-Noise Trashed` then `trash_thread`.
+- 15 Sep evening noise trashed: TikTok contact ping, Supermemory changelog, Linear changelog, Serasa marketing alert, Kajabi/Innovation Experience marketing.
 - `jeff.chien@stategrid.com.br` / `camilla.fischer@stategrid.com.br` — mailbox does not exist / mail flow rule. Use Felipe Figueiredo only.
 
 Gmail **filter create** still 403 (settings scope). Deleted empty `Zion/Leads` (Label_979). Visible set remains CEO/1–3 + Zion/Carlos, Won, 24x7, Finance, Legal, LICITACAO. Inbox empty as of 15 Sep ~20:55 UTC.
