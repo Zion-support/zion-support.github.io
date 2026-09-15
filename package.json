@@ -32,7 +32,13 @@
     "build:win": "node scripts/windows-build-guard.cjs && next build",
     "deploy:verify": "node scripts/verify-deploy.cjs",
     "rsc:guard": "echo 'rsc:guard ok'",
-    "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json"
+    "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json",
+    "deploy:cf": "npx wrangler deploy --assets ./public"
+  },
+  "cloudflare": {
+    "installCommand": "true",
+    "buildCommand": "bash scripts/cf-static-build.sh",
+    "deployCommand": "npx wrangler deploy"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
