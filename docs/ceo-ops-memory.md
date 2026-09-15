@@ -33,7 +33,7 @@ Delete empty duplicates (`Zion/Leads`). Do not delete parent `Zion`. Gmail filte
 
 | Account | People | Mail |
 | --- | --- | --- |
-| TJMSP | Otávio Fonseca, Anderson Ciocca | otavio.fonseca@tjmsp.jus.br, anderson.ciocca@tjmsp.jus.br |
+| TJMSP | Otávio Fonseca, Anderson Ciocca. **15/09/2026:** parque renovado 2024/2025 para Dell com garantia 5 anos — sem demanda HPE blade agora. Stay in touch only. | otavio.fonseca@tjmsp.jus.br, anderson.ciocca@tjmsp.jus.br |
 | FIESP | Samuel Nogueira | samuel.nogueira@fiesp.com.br (cc fpaganini@, jgermano@) |
 | Pref. Votorantim | Cristina Dias | adm.ti@votorantim.sp.gov.br |
 | CTI Cachoeiro | Thaís / cotações | cti.cotacoes@cachoeiro.es.gov.br |
