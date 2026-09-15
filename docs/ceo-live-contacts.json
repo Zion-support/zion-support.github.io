@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15",
+  "updated": "2026-09-15T18:45Z",
   "owner": "carlos@ziontechgroup.com",
   "ceo": "kleber@ziontechgroup.com",
   "contacts": [
@@ -99,6 +99,81 @@
         {"name": "Wayne Hibbert", "email": "wayne.hibbert@intersoftkk.com", "note": "550 bounce — do not rely on this mailbox"}
       ],
       "status": "China Band 2 won. John flagged AI-generated mail — never send generic AI-audit pitches on those threads. Mexico/Brazil technician RFQ still open."
+    },
+    {
+      "org": "CODERP (Companhia de Desenvolvimento de Ribeirão Preto)",
+      "role": "Compras / TI",
+      "people": [
+        {"name": "Camila Prieto", "email": "crprieto@coderp.ribeiraopreto.sp.gov.br"},
+        {"name": "Camila Prieto (legacy)", "email": "cprieto@coderp.sp.gov.br"},
+        {"name": "Compras", "email": "compras@coderp.ribeiraopreto.sp.gov.br"}
+      ],
+      "status": "Historical HP/Dell 24x7 RFQs 2024–2026. 2026-09-15: Free Discovery + AI trial (new offer, not a quote chase). Carlos owns any PDF."
+    },
+    {
+      "org": "PRODAM",
+      "role": "Núcleo de Licitações",
+      "people": [
+        {"name": "Wesley Mesquita", "email": "wesleymsilva@prodam.sp.gov.br", "phone": "+55 11 95169-9875"},
+        {"name": "Compras NLI", "email": "compranli@prodam.sp.gov.br"}
+      ],
+      "status": "2024 VoIP RFQ declined (no OEM firmware). 2026-09-15: Free Discovery + AI trial. Do not reopen VoIP firmware. Do not invent VoIP prices."
+    },
+    {
+      "org": "BANESE",
+      "role": "Contratos de tecnologia",
+      "people": [
+        {"name": "Emily Santana", "email": "emily.santana@terceiros.banese.com.br"},
+        {"name": "Contratos Tecnologia", "email": "contratos.tecnologia@banese.com.br"}
+      ],
+      "status": "IBM maintenance proposal updated 2026-07-23. 2026-09-15: Free Discovery + AI trial while they analyze. Carlos owns IBM PDF. No invented IBM prices."
+    },
+    {
+      "org": "Prefeitura de São José dos Campos",
+      "role": "TI / Compras",
+      "people": [
+        {"name": "Joana Cristina da Silva", "email": "joana.cristina@sjc.sp.gov.br"},
+        {"name": "Andrea Motta", "email": "andrea.motta@sjc.sp.gov.br"}
+      ],
+      "status": "EMC storage 24x7 RFQ Aug–Dec 2024, no close. 2026-09-15: Free Discovery + AI trial. Carlos owns any PDF."
+    },
+    {
+      "org": "PRODEMGE",
+      "people": [{"name": "Compras", "email": "compras@prodemge.gov.br"}],
+      "status": "Cotação 753762 servidores 24x7 Sep 2024. 2026-09-15: Free Discovery + AI trial. Do not republish old prices."
+    },
+    {
+      "org": "Suzano",
+      "role": "TI",
+      "people": [
+        {"name": "Jonas Junior", "email": "jonasjunior@suzano.com.br"},
+        {"name": "Marcelo Silveira", "email": "cmsilveira@suzano.com.br"}
+      ],
+      "status": "Won 2024 Precision 7920 HDD + PSU PO. Returning client. 2026-09-15: Free Discovery + AI trial."
+    },
+    {
+      "org": "Cooper (Cooperativa Vale do Itajaí)",
+      "role": "TI / Segurança da Informação",
+      "people": [
+        {"name": "Paulo Roberto Boscheti", "email": "paulo@cooper.coop.br", "phone": "+55 47 3144-1000", "mobile": "+55 47 99187-8852"},
+        {"name": "Leonel Bruno Curtipassi", "email": "leonel.curtipassi@cooper.coop.br"},
+        {"name": "Lucio", "email": "lucio@cooper.coop.br"}
+      ],
+      "status": "Oracle R740 lease closed Sep 2026 (they evolved elsewhere). Backup device: Paulo asked interest; Kleber requested spec; Carlos prices when model/capacity arrives. Tape library removal Jun 2026 still open. Do not resend garbled Parceria AI mail to Leonel. Returning client = Free Discovery."
+    },
+    {
+      "org": "Instituto Dante Pazzanese",
+      "role": "TI (park extras for FAJ minuta)",
+      "people": [
+        {"name": "Aldo Levi Gomes Barroso", "email": "aldo.levi@dantepazzanese.org.br"},
+        {"name": "Rodrigo Leite", "email": "roleite@dantepazzanese.org.br"}
+      ],
+      "status": "2026-09-15: asked Aldo yes/no whether 2025 extra storages enter FAJ prorrogação park. Do not invent asset lists in new mail. Carlos owns minuta after yes/no."
+    },
+    {
+      "org": "Cockroach Labs",
+      "people": [{"name": "Rohit Singh", "email": "rohit.singh@cockroachlabs.com"}],
+      "status": "Paid Discovery booked Tue 2026-09-22 13:00 ET / 14:00 BRT. Already confirmed. Do not resend."
     }
   ]
 }

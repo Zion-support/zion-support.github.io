@@ -1,8 +1,11 @@
 # Cloudflare Workers Builds: static HTML in public/. Not Next.js, not Pages.
-# [build].command skips framework detection (Next in package.json).
+# Dashboard MUST set build variable SKIP_DEPENDENCY_INSTALL=true — Workers Builds
+# ignores wrangler [build] and otherwise npm-ci's the Next/Storybook lockfile.
+# Deploy command: npx wrangler deploy   Preview: npx wrangler versions upload
 name = "ziontechgroup"
 main = "src/index.js"
 compatibility_date = "2026-09-15"
+no_bundle = true
 
 [build]
 command = "bash scripts/cf-static-build.sh"
@@ -12,3 +15,7 @@ directory = "./public"
 binding = "ASSETS"
 html_handling = "auto-trailing-slash"
 not_found_handling = "404-page"
+
+# Hint only (runtime). Real skip is the dashboard build variable above.
+[vars]
+SKIP_DEPENDENCY_INSTALL = "true"

@@ -9,6 +9,8 @@ const required = [
   "directory = \"./public\"",
   'binding = "ASSETS"',
   "cf-static-build.sh",
+  "no_bundle = true",
+  "SKIP_DEPENDENCY_INSTALL",
 ];
 const missing = required.filter((t) => !wrangler.includes(t));
 if (missing.length) {

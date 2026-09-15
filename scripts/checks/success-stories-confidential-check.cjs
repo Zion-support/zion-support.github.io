@@ -24,6 +24,12 @@ const forbidden = [
   /MSA2060/,
   /Qnap TS-431P/i,
   /buy\.stripe\.com\/8x2eVe6Fm71qfATaupcMM1d/,
+  /\bCaloi\b/i,
+  /Assefaz/i,
+  /FUNCATE/i,
+  /\bCODERP\b/i,
+  /\bPRODAM\b/i,
+  /\bBANESE\b/i,
 ];
 
 let failed = false;
