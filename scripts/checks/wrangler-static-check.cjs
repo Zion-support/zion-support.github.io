@@ -30,4 +30,17 @@ if (!fs.existsSync(worker)) {
   console.error("wrangler-static-check: missing src/index.js");
   process.exit(1);
 }
+const nvmrc = fs.readFileSync(path.join(__dirname, "..", "..", ".nvmrc"), "utf8").trim();
+if (nvmrc !== "20") {
+  console.error("wrangler-static-check: .nvmrc must pin Node 20 for Workers Builds");
+  process.exit(1);
+}
+if (!fs.existsSync(path.join(__dirname, "..", "..", "public", "404.html"))) {
+  console.error("wrangler-static-check: missing public/404.html for assets not_found_handling");
+  process.exit(1);
+}
+if (!pkg.includes('"build": "bash scripts/cf-static-build.sh"')) {
+  console.error("wrangler-static-check: package.json build must be cf-static-build.sh (not next)");
+  process.exit(1);
+}
 console.log("wrangler-static-check: ok");

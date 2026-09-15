@@ -89,4 +89,4 @@ Do not mail again before **22 Sep** unless they reply.
 
 Official SKUs only: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo. Stripe links live on `/` and `/plans/`. `/cases/` is anonymized — no client names, POs, or prices.
 
-Cloudflare Workers Builds must serve `public/` via `wrangler.toml` + `src/index.js` (ASSETS). Dashboard **MUST** set `SKIP_DEPENDENCY_INSTALL=true`. Never deploy a stub worker.
+Cloudflare Workers Builds must serve `public/` via `wrangler.toml` + `src/index.js` (ASSETS). `npm run build` is `bash scripts/cf-static-build.sh` (not Next). Dashboard **MUST** set build variable `SKIP_DEPENDENCY_INSTALL=true` — wrangler `[vars]` is runtime only. The GitHub check `Workers Builds: ziontechgroup` is the Cloudflare GitHub App; it currently fails in 0s on **main** as well as PR branches (dashboard/API, not missing wrangler.toml). Never deploy a stub worker. GitHub Action `wrangler-static` dry-run is the repo-controlled check.
