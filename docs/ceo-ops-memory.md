@@ -12,7 +12,7 @@ Success stories and homepage “inbox wins” are sector-level only. Never publi
 - **Tech Domain**: Thu 17/09 10:00–10:30 BRT.
 - **Caloi**: phone if needed; only pagamentosti@ is a live mailbox.
 - **Cooper backup**: Paulo asked interest; wait for model/capacity; Carlos prices. Do not invent tape prices. Do not resend garbled Parceria mail to Leonel.
-- **Inbound Free Discovery CCs (2026-09-15)**: CODERP Camila, PRODAM Wesley, BANESE Emily, SJC Joana, PRODEMGE compras, Suzano Jonas. Carlos owns any PDF.
+- **Inbound Free Discovery CCs (2026-09-15)**: CODERP Camila, PRODAM Wesley, BANESE Emily, SJC Joana, PRODEMGE compras, Suzano Jonas, BBP Márcio. Carlos owns any PDF.
 
 ## Identity
 - CEO: Kleber Garcia Alcatrão — kleber@ziontechgroup.com — +1 302 464 0950
