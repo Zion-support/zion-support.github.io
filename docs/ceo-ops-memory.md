@@ -1,6 +1,9 @@
 # Zion CEO operations memory (Kleber Garcia Alcatrão)
 
-Last updated: 2026-09-15. Help **carlos@ziontechgroup.com** first on every commercial loop.
+Last updated: 2026-09-15 (evening). Help **carlos@ziontechgroup.com** first on every commercial loop.
+
+## Public-site rule
+Success stories and homepage “inbox wins” are sector-level only. Never publish PO numbers, account codes, contract end dates, asset model lists, or named contract rates on case pages. SKU prices and Stripe links stay on product cards and service pages. Live contacts: `docs/ceo-live-contacts.json`. Labels: `docs/ceo-label-policy.md`.
 
 ## Identity
 - CEO: Kleber Garcia Alcatrão — kleber@ziontechgroup.com — +1 302 464 0950
@@ -51,7 +54,7 @@ Last updated: 2026-09-15. Help **carlos@ziontechgroup.com** first on every comme
 - **Ilha Capital NDA**: Clicksign envelope `20260915 - NDA Ilha Capital x Zion tech.pdf`. Kleber signed. Carlos is witness — must sign in portal. Deadline 15/10/2026. Do not forward token.
 - **FAJ (Fundação Adib Jatene)**: vigência até 07/10/2026. Gyovanna wants minuta. Park extras (Buffalo LS441D, MSA2060, Qnap TS-431P) need Rodrigo/Rogerio (dantepazzanese.org.br) yes/no. MSA2060 HDD 14TB already swapped (imported). Thread restored from Trash.
 - **FUNCATE workstations**: Carlos has PDF with Zion margin. Paulo/Somatica resent Dell quote to Fabio Pontes. Carlos must attach Zion PDF (CIF, 21 ddl, no DIFAL). No prices in body.
-- **Caloi 24x7**: imanso@caloi.com 550 bounce. Follow-up sent to vsjardim, jcampos, pagamentosti, mrabela. Historical 2023 invoices SP + Manaus.
+- **Caloi 24x7**: Google 550 on imanso, vsjardim, jcampos, and mrabela. Do not resend those. pagamentosti@caloi.com had no bounce on the same send. Carlos to phone if needed. Historical 2023 invoices SP + Manaus.
 - **Park Place**: Erick Mendes / Mathias — reschedule Teams; they sell to us, we also sell Brazil field to them.
 - **Tech Domain**: Ali Naqi accepted calendar. Thu 17/09/2026 10:00–10:30 BRT.
 - **SKY/DIRECTV EC**: CW2629606 / OCB 4700350631 registered. Won/document complete.

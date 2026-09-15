@@ -1,0 +1,87 @@
+{
+  "updated": "2026-09-15",
+  "owner": "carlos@ziontechgroup.com",
+  "ceo": "kleber@ziontechgroup.com",
+  "contacts": [
+    {
+      "org": "Fundação Assefaz",
+      "role": "Compras e Contratos / CCC-GNAF",
+      "people": [
+        {"name": "Halberty Amorim", "email": "contratos@assefaz.org.br", "phone": "+55 61 2108-0456"},
+        {"name": "José Roberto Soares", "email": "jose.roberto@assefaz.org.br"},
+        {"name": "Glauber Arrighi", "email": "glauber.arrighi@assefaz.org.br"},
+        {"name": "Jossenildo Santos", "email": "jossenildo.santos@assefaz.org.br"}
+      ],
+      "status": "NetApp storage support renewal in force (confirmed 2026-09-09). Logo vector still owed for 2025 sponsorship video — send for next event.",
+      "do_not_disclose": ["contract values", "PIX / bank details"]
+    },
+    {
+      "org": "Caloi",
+      "role": "TI / Pagamentos",
+      "people": [
+        {"name": "Mouriza Rabela", "email": "mrabela@caloi.com"},
+        {"name": "Victor Jardim", "email": "vsjardim@caloi.com"},
+        {"name": "Joseane Campos", "email": "jcampos@caloi.com"},
+        {"name": "Pagamentos TI", "email": "pagamentosti@caloi.com"}
+      ],
+      "dead": ["imanso@caloi.com", "vsjardim@caloi.com", "jcampos@caloi.com", "mrabela@caloi.com"],
+      "status": "Historical 24x7 SP + Manaus. 2026 outreach live. Google 550 on imanso/vsjardim/jcampos/mrabela. Try pagamentosti@caloi.com or phone. Do not resend to bounced boxes."
+    },
+    {
+      "org": "Fundação Adib Jatene",
+      "role": "Contratos",
+      "people": [
+        {"name": "Gyovanna Dantas", "email": "gyovanna.dantas@fajsaude.com.br"},
+        {"name": "Wesley Santos", "email": "wesley.santos@fajsaude.com.br"},
+        {"name": "Vanessa", "email": "vanessaft@fajsaude.com.br"}
+      ],
+      "status": "Minuta blocked on park yes/no (Rodrigo/Rogerio dantepazzanese.org.br). Carlos owns minuta. Do not invent assets.",
+      "owner": "carlos@ziontechgroup.com"
+    },
+    {
+      "org": "FUNCATE / Somatica",
+      "role": "Workstation RFQ",
+      "people": [
+        {"name": "Paulo Sergio Blotto", "email": "pauloblotto@somaticabrasil.com", "phone": "+55 11 3486"},
+        {"name": "Somatica comercial", "email": "comercial@somaticabrasil.com"}
+      ],
+      "status": "Carlos has PDF with Zion margin. Attach PDF (CIF, 21 ddl, no DIFAL). No prices in email body."
+    },
+    {
+      "org": "ClickHouse",
+      "people": [{"name": "Rafael", "email": "rafael@clickhouse.com"}],
+      "status": "Prior project. Last Zion notes Jul 2026 were generic — follow up short, no invented 60% metrics."
+    },
+    {
+      "org": "Elastic",
+      "people": [{"name": "Partner Team", "email": "admin@partners.elastic.co"}],
+      "status": "Partner portal access pending since 2026-07-24."
+    },
+    {
+      "org": "Park Place Technologies",
+      "people": [
+        {"name": "Erick Mendes", "email": "erick.mendes@parkplacetech.com"},
+        {"name": "Mathias Pellissari", "email": "mathias.pellissari@parkplacetech.com"}
+      ],
+      "status": "Reschedule Teams. They sell to us; we sell Brazil field to them. Waiting on their times."
+    },
+    {
+      "org": "Tech Domain",
+      "people": [{"name": "Ali Naqi", "email": ""}],
+      "status": "Call Thu 2026-09-17 10:00–10:30 BRT. Overflow field coverage."
+    },
+    {
+      "org": "Ilha Capital",
+      "status": "NDA Clicksign envelope 20260915. Kleber signed. Carlos witness — sign in portal. Deadline 2026-10-15. Do not forward token. Do not put CPF in email."
+    },
+    {
+      "org": "SKY / DIRECTV Ecuador",
+      "status": "2026 field renewal document pack complete. Do not publish PO or account codes."
+    },
+    {
+      "org": "Intersoftkk / China DC",
+      "people": [{"name": "Wayne Hibbert", "email": "wayne.hibbert@intersoftkk.com", "note": "550 bounce — do not rely on this mailbox"}],
+      "status": "Band 2 won. Do not publish the commercial rate on case pages."
+    }
+  ]
+}
