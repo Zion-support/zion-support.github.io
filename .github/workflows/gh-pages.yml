@@ -32,13 +32,13 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --fund=false
         env:
-          NODE_OPTIONS: --max-old-space-size=4096
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Build artifact
         id: build
         run: |
           set -euo pipefail
-          export NODE_OPTIONS="--max-old-space-size=4096"
+          export NODE_OPTIONS="--max-old-space-size=6144"
           node scripts/build-wrapper.cjs > build.log 2>&1 || true
           echo "build_log_start"
           set +x
