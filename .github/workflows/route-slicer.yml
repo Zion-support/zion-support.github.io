@@ -51,7 +51,7 @@ jobs:
         retention-days: 30
     - name: Create Pull Request (if apply=true and proposals found)
       if: steps.slicer.outputs.exit_code == '0' && github.event.inputs.apply == 'true'
-      uses: peter-evans/create-pull-request@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      uses: peter-evans/create-pull-request@v7
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: 'feat(auto): apply lazy-load route slicing for bundle optimization'
