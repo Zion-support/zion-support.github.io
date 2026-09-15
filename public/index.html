@@ -23,8 +23,9 @@
     .cta { display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #7c3aed, #db2777); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.05rem; }
     .cta-secondary { display: inline-block; padding: 16px 32px; border: 2px solid rgba(167, 139, 250, 0.4); color: #a78bfa; text-decoration: none; border-radius: 12px; font-weight: 600; }
     .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; max-width: 1100px; margin: 0 auto 24px; padding: 0 24px; font-size: 0.95rem; }
-    .nav a { color: #c4b5fd; text-decoration: none; }
-    .nav a:hover { text-decoration: underline; }
+    .nav a { color: #c4b5fd; text-decoration: none; padding: 6px 4px; }
+    .nav a:hover, .nav a:focus { text-decoration: underline; color: #fff; }
+    .skip:focus { left: 8px !important; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 24px; }
     .card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(124,58,237,0.2); border-radius: 16px; padding: 28px; text-align: left; }
     .card h3 { color: #a78bfa; font-size: 1.2rem; margin-bottom: 8px; }
@@ -38,6 +39,7 @@
   </style>
 </head>
 <body>
+  <a class="skip" href="#plans" style="position:absolute;left:-999px;top:8px;background:#7c3aed;color:#fff;padding:8px 12px;border-radius:8px;z-index:20">Ir ao conteúdo</a>
   <nav class="nav" aria-label="Primary">
     <a href="/services/">Services</a>
     <a href="/plans/">Plans</a>
@@ -119,14 +121,14 @@
     </div>
     <div class="card">
       <span class="new-tag">FIELD</span>
-      <h3>Field, pecas e licitacao</h3>
-      <p>Sourcing de pecas, manutencao de frota Dell/HPE/Lenovo e apoio a edital de TI. Escopo e prazo saem do Discovery — nao vendemos peca avulsa por link.</p>
+      <h3>Field, peças e licitação</h3>
+      <p>Sourcing de peças, manutenção de frota Dell/HPE/Lenovo e apoio a edital de TI. Escopo e prazo saem do Discovery — não vendemos peça avulsa por link.</p>
       <a href="/field-services/">Field services →</a>
     </div>
   </div>
 
-  <h2 id="field-proven">Trabalho de campo (sem preco, sem dado confidencial)</h2>
-  <p class="subheadline">Só o tipo de trabalho. Sem nomes de cliente, logotipos, precos, pedidos de compra ou datas de contrato.</p>
+  <h2 id="field-proven">Trabalho de campo (sem preço, sem dado confidencial)</h2>
+  <p class="subheadline">Só o tipo de trabalho. Sem nomes de cliente, logotipos, preços, pedidos de compra ou datas de contrato.</p>
   <div class="grid">
     <div class="card">
       <span class="new-tag">LATAM · PLATAFORMA</span>
@@ -138,7 +140,7 @@
       <span class="new-tag">BRASIL · STORAGE</span>
       <h3>Suporte de storage em produção</h3>
       <p>Contrato vivo de infraestrutura e storage no setor público. Atendimento de campo no parque do cliente. Sem detalhe de chamado ou equipamento publicado.</p>
-      <a href="/services/">Servicos de infra →</a>
+      <a href="/services/">Serviços de infra →</a>
     </div>
     <div class="card">
       <span class="new-tag">EUA / CANADÁ · FIELD</span>
@@ -148,8 +150,8 @@
     </div>
     <div class="card">
       <span class="new-tag">BRASIL · HARDWARE</span>
-      <h3>Manutencao midrange / HPE</h3>
-      <p>Atendimento de campo em storage midrange com pecas e mao de obra. Demanda recorrente de pecas HPE/Dell em contas enterprise. Sem valor de nota no site.</p>
+      <h3>Manutenção midrange / HPE</h3>
+      <p>Atendimento de campo em storage midrange com peças e mão de obra. Demanda recorrente de peças HPE/Dell em contas enterprise. Sem valor de nota no site.</p>
       <a href="/field-services/">Hardware field →</a>
     </div>
     <div class="card">
@@ -182,11 +184,11 @@
   <div class="grid">
     <div class="card">
       <h3>Agentes de IA</h3>
-      <p>Agentes autonomos para suporte, ops e receita.</p>
+      <p>Agentes autônomos para suporte, ops e receita.</p>
       <a href="/autonomous-ai-agents/">Autonomous AI agents →</a>
     </div>
     <div class="card">
-      <h3>Automacao</h3>
+      <h3>Automação</h3>
       <p>Telegram, WhatsApp, booking e CPA com dono humano.</p>
       <a href="/telegram/">Telegram agents →</a>
     </div>
@@ -196,8 +198,8 @@
       <a href="/finops-consulting/">FinOps consulting →</a>
     </div>
     <div class="card">
-      <h3>Seguranca</h3>
-      <p>Deteccao, compliance e entrega segura.</p>
+      <h3>Segurança</h3>
+      <p>Detecção, compliance e entrega segura.</p>
       <a href="/services/">Services →</a>
     </div>
     <div class="card">
@@ -224,6 +226,8 @@
     <a href="/contact/">Contact</a>
     <a href="https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1">Calendly</a>
     <a href="https://wa.me/13024640950">WhatsApp</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
     <p>Zion Tech Group · kleber@ziontechgroup.com · +1 302 464 0950<br>364 E Main St STE 1008, Middletown, DE 19709</p>
   </footer>
 </body>

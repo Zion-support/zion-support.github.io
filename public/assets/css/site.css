@@ -13,7 +13,11 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .links .cta:hover,.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(34,211,238,.25);text-decoration:none}
 .btn.alt{background:transparent;border:1px solid rgba(139,92,246,.5);color:var(--text)!important}
 .menu{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:8px;padding:8px 10px}
-.hero{padding:84px 0 56px}.eyebrow{color:#c4b5fd;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:800}
+.hero{padding:84px 0 56px}.page{padding:36px 0 72px}.eyebrow{color:#c4b5fd;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:800}
+.status-ok{display:flex;align-items:center;gap:10px;margin:18px 0;color:var(--ok);font-weight:700}
+.status-ok i{width:12px;height:12px;border-radius:50%;background:var(--ok);display:inline-block;box-shadow:0 0 0 6px rgba(74,222,128,.15)}
+.contact-list{list-style:none;padding:0;margin:18px 0 28px}.contact-list li{padding:10px 0;border-bottom:1px solid rgba(139,92,246,.12);color:var(--muted)}
+.contact-list a{font-weight:700}
 .hero h1,.page h1,h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.03em;margin:12px 0 16px;background:linear-gradient(90deg,#e2e8f0,#67e8f9 45%,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{color:var(--muted);font-size:1.15rem;max-width:720px}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}

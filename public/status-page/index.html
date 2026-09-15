@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="index, follow">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Status Page — Zion Tech Group</title>
-<meta name="description" content="Live operational status for Zion services, uptime, and incident history.">
+<title>Status | Zion Tech Group</title>
+<meta name="description" content="Published commercial surfaces for Zion Tech Group. Incident reports go to contact — we do not invent uptime percentages.">
 <link rel="canonical" href="https://ziontechgroup.com/status-page/">
+<link rel="preload" href="/assets/css/site.css" as="style">
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-<nav style="background:#0f172a;padding:16px 0;border-bottom:1px solid #1f2937"><div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center"><a href="/" style="color:#f5f5f5;text-decoration:none;font-weight:700">Zion</a><div><a href="/services/" style="color:#cbd5e1;text-decoration:none;margin-left:16px">Services</a><a href="/contact/" style="color:#cbd5e1;text-decoration:none;margin-left:16px">Contact</a></div></div></nav>
-<main style="max-width:720px;margin:auto;padding:24px">
-<h1>Status Page</h1>
-<p>Live operational status for Zion services, uptime, and incident history.</p>
-<p><a href="/contact/">contact</a></p>
-</main>
-<footer style="padding:24px 0;text-align:center;color:#6b7280;border-top:1px solid #1f2937"><div style="max-width:1200px;margin:0 auto;padding:0 24px"><p>© Zion Tech Group</p></div></footer>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="/">Zion Tech Group</a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links" aria-label="Primary">
+<a href="/services/">Services</a>
+<a href="/plans/">Plans</a>
+<a href="/autonomous-ai-agents/">Agents</a>
+<a href="/discovery/">Discovery</a>
+<a href="/field-services/">Field</a>
+<a href="/offers/">Offers</a>
+<a href="/cases/">Cases</a>
+<a href="/contact/">Contact</a>
+<a href="/blog/">Blog</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+<span class="langsw" aria-label="Language"><a href="/">PT</a><a href="/en/" aria-current="true">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>
+</nav></div></header>
+<main class="page" id="conteudo"><div class="wrap">
+<p class="crumb"><a href="/">Home</a> / Status</p>
+<h1>Status</h1>
+<p class="lead">This page lists the published commercial surfaces. We do not invent a 99.9% uptime number. If checkout or scheduling fails, write <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> or use <a href="/contact/">contact</a>.</p>
+<p class="status-ok"><i></i> Published menu is live — Discovery, Consulting, Starter, Growth</p>
+<div class="grid">
+<article class="card"><h3>Website</h3><p>Homepage, plans, discovery, services, field, cases and contact.</p><a href="/">Open site</a></article>
+<article class="card"><h3>Stripe checkout</h3><p>Self-serve Payment Links for the four official plans. Invoice path remains /contact/.</p><a href="/plans/">Plans</a></article>
+<article class="card"><h3>Scheduling</h3><p>Calendly Discovery session and WhatsApp for the same commercial menu.</p><a href="https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1">Calendly</a></article>
+</div>
+<p class="note">Incidents are handled on the human channel — email, WhatsApp or Calendly — not as a public ticker with invented history.</p>
+</div></main>
+<footer><div class="wrap foot">
+<div><h3>Company</h3><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a></div>
+<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/services/">Services</a></div>
+<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/cookies/">Cookies</a></div>
+</div></footer>
+<script src="/assets/js/zion-shell.js" defer></script>
 </body>
 </html>
