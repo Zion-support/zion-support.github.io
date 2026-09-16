@@ -1,10 +1,10 @@
 {
-  "timestamp": 1789517479,
+  "timestamp": 1789535215,
   "active": false,
   "has_endpoint": false,
-  "has_api_key": true,
+  "has_api_key": false,
   "model": "not-configured",
-  "llm_tailor_enabled": true,
+  "llm_tailor_enabled": false,
   "local_gmail_modules": {
     "auth_error": "AttributeError(\"module 'importlib' has no attribute 'util'\")"
   }
