@@ -23,7 +23,7 @@ UNCOMMITTED=$(git -C "$REPO" status --porcelain 2>/dev/null | wc -l | tr -d ' ')
 echo "Git: $GIT_SHA | Uncommitted: $UNCOMMITTED"
 
 # --- 3. Service + page counts ---
-SERVICE_DIRS=$(ls -d "$REPO/app/services"/*/ 2>/dev/null | wc -l | tr -d ' ')
+SERVICE_DIRS=$(ls -d "$REPO/app/services"/*/ 2>/dev/null | wc -l | tr -d ' ') || true
 SITEMAP_URLS=$(grep -c '<loc>' "$REPO/public/sitemap.xml" 2>/dev/null || echo "0")
 echo "Pages: $SERVICE_DIRS | Sitemap URLs: $SITEMAP_URLS"
 
