@@ -115,7 +115,8 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <script>
 const API='https://api.github.com/repos/Zion-support/zion-support.github.io/issues/71361/comments?per_page=100';
 const HEADER=/^###\s+[\d\-]+\s+[\d:]+\s+\S+\s*\|\s*([^|]+?)\s*\|\s*(\S+)/m;
-const BOTS=/^(pulse|watchdog|roombot|github-actions)/i;
+const BOTS=/^(pulse|watchdog|roombot|github-actions(\[bot\])?)$/i;
+const SKIP=/^(agent|your_name|your-name|name)$/i;
 const OFFLINE_MIN=90;
 const ACTIVE_MIN=20;
 
@@ -139,8 +140,10 @@ function rosterFrom(comments){
     if(body.indexOf('war-room-standing:v1')!==-1) return;
     const m=HEADER.exec(body);
     const name=(m?m[1]:c.user.login).trim();
-    if(BOTS.test(name)) return;
-    map[name]={name:name, last:c.created_at, action:m?m[2]:'COMMENT'};
+    if(!name || BOTS.test(name) || SKIP.test(name)) return;
+    const key=name.toLowerCase();
+    const prev=map[key];
+    map[key]={name:(prev?prev.name:name), last:c.created_at, action:m?m[2]:'COMMENT'};
   });
   const now=Date.now();
   return Object.keys(map).sort().map(function(k){

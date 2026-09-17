@@ -58,6 +58,18 @@ class PulseHelpersTest(unittest.TestCase):
         self.assertEqual(agents["Benjamin"]["status"], "OFFLINE")
         self.assertNotIn("Pulse", agents)
 
+    def test_parse_agents_skips_template_and_merges_case(self):
+        comments = [
+            comment(20, "h1", "### 2026-09-17 21:10 UTC | HERMES | CHECK-IN", "2026-09-17T21:10:00Z"),
+            comment(21, "h2", "### 2026-09-17 21:25 UTC | Hermes | JOIN", "2026-09-17T21:25:00Z"),
+            comment(22, "t", "### 2026-09-17 21:26 UTC | AGENT | HEARTBEAT", "2026-09-17T21:26:00Z"),
+        ]
+        agents = wrp.parse_agents(comments, self.now)
+        self.assertIn("HERMES", agents)
+        self.assertNotIn("Hermes", agents)
+        self.assertNotIn("AGENT", agents)
+        self.assertEqual(agents["HERMES"]["last_action"], "JOIN")
+
     def test_learn_actions_skips_standing_and_short_lines(self):
         comments = [
             comment(1, "github-actions[bot]", wrp.STANDING_MARKER + "\nDone:\n- ignore standing done line that is long enough"),

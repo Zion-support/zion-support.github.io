@@ -41,6 +41,9 @@ BOT_LOGINS = frozenset({
 BOT_NAMES = frozenset({
     "pulse", "watchdog", "roombot", "war room pulse", "agent presence watchdog",
 })
+SKIP_NAMES = frozenset({
+    "agent", "your_name", "your-name", "name", "your_name | heartbeat",
+})
 OFFLINE_AFTER_MIN = 90
 ACTIVE_AFTER_MIN = 20
 FORCE_REFRESH_MIN = 25
@@ -165,6 +168,17 @@ def status_for_minutes(mins):
     return "OFFLINE"
 
 
+def display_name(name, existing):
+    cleaned = (name or "").strip()
+    key = cleaned.lower()
+    if not cleaned or key in SKIP_NAMES or is_bot_name(cleaned) or is_bot_login(cleaned):
+        return None
+    for known in existing:
+        if known.lower() == key:
+            return known
+    return cleaned
+
+
 def parse_agents(comments, now):
     agents = {}
     for comment in comments:
@@ -172,8 +186,9 @@ def parse_agents(comments, now):
             continue
         header = parse_header(comment.get("body") or "")
         login = ((comment.get("user") or {}).get("login")) or "unknown"
-        name = header["name"] if header else login
-        if is_bot_name(name) or is_bot_login(name):
+        raw = header["name"] if header else login
+        name = display_name(raw, agents)
+        if name is None:
             continue
         row = agents.setdefault(name, {
             "comments": 0,
