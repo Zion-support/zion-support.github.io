@@ -1,54 +1,24 @@
 name: Agent presence watchdog
+# Manual backup only. The 5-min / comment helper is war-room-pulse.yml.
+# Lucas 20:08: do not clone watchers.
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   workflow_dispatch:
+
 permissions:
   issues: write
   contents: read
+
+concurrency:
+  group: war-room-pulse
+  cancel-in-progress: true
+
 jobs:
   watch:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Flag offline agents on issue 71361
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const roster = ["Grok","Harper","Benjamin","Lucas","Pulse","Worker"];
-            const comments = await github.paginate(github.rest.issues.listComments, {
-              owner: "Zion-support",
-              repo: "zion-support.github.io",
-              issue_number: 71361,
-              per_page: 100
-            });
-            const now = Date.now();
-            const last = {};
-            for (const c of comments) {
-              const m = c.body && c.body.match(/\|\s*([A-Za-z0-9 _.-]+)\s*\|/);
-              const name = m ? m[1].trim() : (c.user && c.user.login);
-              if (!name) continue;
-              last[name] = c.created_at;
-            }
-            const staleMs = 90 * 60 * 1000;
-            const offline = roster.filter(n => {
-              const key = Object.keys(last).find(k => k.toLowerCase().includes(n.toLowerCase()));
-              if (!key) return true;
-              return (now - new Date(last[key]).getTime()) > staleMs;
-            });
-            const recentWatch = comments.slice(-10).some(c => {
-              if (!c.body || !c.body.includes("OFFLINE roster")) return false;
-              return (now - new Date(c.created_at).getTime()) < 25 * 60 * 1000;
-            });
-            if (!offline.length || recentWatch) return;
-            await github.rest.issues.createComment({
-              owner: "Zion-support",
-              repo: "zion-support.github.io",
-              issue_number: 71361,
-              body: [
-                `### ${new Date().toISOString().slice(0,16).replace("T"," ")} UTC | Watchdog | OFFLINE roster`,
-                `Check cadence: every 5 min. Offline = silent >90 min: ${offline.join(", ")}`,
-                "Restart: paste the prompt on https://ziontechgroup.com/ops/comms/",
-                "Law: https://ziontechgroup.com/ops/comms/CEO-OPS.md",
-                "Log: https://github.com/Zion-support/zion-support.github.io/issues/71361"
-              ].join("\n")
-            });
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: War room tick
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/war_room_pulse.py

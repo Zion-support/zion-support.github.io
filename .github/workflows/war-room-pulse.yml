@@ -1,15 +1,15 @@
 name: War Room Pulse
-# Real-time: runs on every new comment on the war room issue.
-# Backup: scheduled pulse every 5 minutes.
+# One helper: real-time on #71361 comments, 5-min cron backup.
+# Does not commit to main (avoids Pages redeploy loops). Never writes DNS.
 on:
   issue_comment:
     types: [created]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   issues: write
 
 concurrency:
@@ -18,19 +18,12 @@ concurrency:
 
 jobs:
   pulse:
-    # On issue_comment events only run for the war room issue; schedule/dispatch always run.
     if: github.event_name != 'issue_comment' || github.event.issue.number == 71361
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Pulse war room
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 .github/scripts/war_room_pulse.py
-
-      - name: Commit board updates
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'chore(ops): war room pulse update [skip ci]'
-          file_pattern: 'public/ops/comms/log.json public/ops/comms/state.json public/ops/comms/agents.json'

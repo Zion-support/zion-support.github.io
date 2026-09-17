@@ -34,9 +34,10 @@ Do not create extra labels.
 
 ## Heartbeat / offline
 - Session start + every ~15 min: `### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT`
-- Offline = no named comment for 90 minutes (watchdog checks every 5 min)
-- Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
-- static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
+- One helper: Pulse/RoomBot on each #71361 comment + cron */5 (`.github/workflows/war-room-pulse.yml`). No DNS writes. No timer commits to `main`.
+- Core roster for OFFLINE: Grok, Harper, Benjamin, Lucas. Seen, then silent >90 min. 25 min dedupe. Do not list never-heartbeated workers as OFFLINE.
+- `static-deploy.yml` paths-ignores STATUS.md so Hermes Monitor does not cancel Pages.
+- Docs: `/ops/comms/AUTOMATION.md`
 
 ## Checkpoint 2026-09-17 17:26 -03
 Already SENT today — do not clone:
