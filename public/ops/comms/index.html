@@ -42,7 +42,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 
 <div class="card">
 <h2>Working money URLs</h2>
-<p>Checked 2026-09-17 17:00 -03. Prefer HTTPS-safe catalog until satellite ACME is issued. Do not orange-cloud. Do not CREATE apps. DNS.</p>
+<p>Checked 2026-09-17 21:08 UTC. Prefer HTTPS-safe catalog until satellite ACME is issued. Do not orange-cloud. Do not CREATE apps. DNS.</p>
 <ul>
 <li class="ok"><a href="https://ziontechgroup.com/en/plans/">https://ziontechgroup.com/en/plans/</a> — HTTPS 200, title Plans | Zion Tech Group (preferred catalog)</li>
 <li class="ok"><a href="https://ziontechgroup.com/plans/">https://ziontechgroup.com/plans/</a> — HTTPS 200, title Planos | Zion Tech Group (flush complete)</li>
@@ -53,12 +53,24 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 </div>
 
 <div class="card">
+<h2>Path-apps (HTTPS, same user site)</h2>
+<p>Do <strong>not</strong> create a new GitHub repo or Pages project for each app. Short-name Pages steal <code>/&lt;repo&gt;/</code> from the user site. DNS quota is full — never CREATE <code>apps.</code> Correct pattern: <code>public/&lt;app-name&gt;/index.html</code> → <a href="https://ziontechgroup.com/app-name/">ziontechgroup.com/app-name/</a>. Catalog: <a href="/apps/">/apps/</a> · alias <a href="/tools/">/tools/</a>.</p>
+<ul>
+<li class="ok">Live 200: <a href="/roi-calc/">/roi-calc/</a> · <a href="/finops-estimator/">/finops-estimator/</a> · <a href="/apps/">/apps/</a></li>
+<li class="warn">On main but live 404 until Pages is not cancelled: <a href="/stack-audit/">/stack-audit/</a> · <a href="/agent-brief/">/agent-brief/</a> · <a href="/edital-desk/">/edital-desk/</a> · <a href="/tools/">/tools/</a></li>
+<li>Grok batch (this PR): <a href="/token-cost/">/token-cost/</a> · <a href="/sla-uptime/">/sla-uptime/</a> · <a href="/runbook/">/runbook/</a> · <a href="/vendor-score/">/vendor-score/</a> · <a href="/prompt-eval/">/prompt-eval/</a> · <a href="/field-eta/">/field-eta/</a> · <a href="/anonymize/">/anonymize/</a> · <a href="/handoff-kit/">/handoff-kit/</a></li>
+</ul>
+<p class="warn">Hermes STATUS.md/PROTOCOL.md timer commits to <code>main</code> cancel in-progress Pages deploys. Ignore those paths + <code>cancel-in-progress: false</code> on static-deploy. Stop the timer.</p>
+</div>
+
+<div class="card">
 <h2>Hard rules</h2>
 <ol>
 <li>Read this page + last 10 comments on #71361 before acting.</li>
 <li>Do not orange-cloud the apex.</li>
 <li>Do not CREATE <code>apps.</code> DNS.</li>
-<li>Do not restore colliding repo CNAMEs.</li>
+<li>Do not restore colliding repo CNAMEs (plans, discovery, tools, case-studies, ai-services, blog, agents, managed-it, cloud-migration).</li>
+<li>New apps = unique <code>public/&lt;name&gt;/</code> path-apps. Never a sibling Pages repo. Never <code>apps.</code> DNS.</li>
 <li>After durable work: comment on #71361 and patch this page if the protocol changed.</li>
 </ol>
 </div>
@@ -80,9 +92,9 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 2) Read the last 10 comments. Heartbeat immediately:
 ### YYYY-MM-DD HH:MM TZ | YOUR_NAME | HEARTBEAT
 3) Help Carlos first. Always CC carlos@ziontechgroup.com AND commercial@ziontechgroup.com. Reply-All, same thread.
-4) Money URLs: https://plans.ziontechgroup.com/ and https://ziontechgroup.com/en/plans/
-5) Never orange-cloud the apex. Never CREATE apps. DNS. Never restore colliding CNAMEs.
-6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets.
+4) Money URL: https://ziontechgroup.com/en/plans/ (plans.ziontechgroup.com TLS fail — do not send buyers)
+5) Never orange-cloud the apex. Never CREATE apps. DNS. Never restore colliding CNAMEs. Never new Pages repos for short names — path-apps only.
+6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets. Discovery cap used 17 Sep (Ledervin) — none until 18 Sep.
 7) One follow-up/week if silent; same-day if they replied. Closed cases: Discovery GRATIS + 1h trial.
 8) Record every durable action and Kleber feedback on issue 71361. Improve /ops/comms/ when a fact changes.
 9) Then continue the user's current request.</textarea>

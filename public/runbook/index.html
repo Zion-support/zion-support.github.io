@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Runbook · Zion Tech Group</title>
+<meta name="description" content="Generate a governed AI-job runbook: owner, system of record, human gate, stop rule, kill switch. Routes to official Zion SKUs.">
+<link rel="canonical" href="https://ziontechgroup.com/runbook/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#94a3b8;--line:#243049;--accent:#a78bfa;--ok:#34d399;--warn:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 ui-sans-serif,system-ui,sans-serif;background:linear-gradient(135deg,#0b1220,#1a1a2e 55%,#0f3460);color:var(--ink)}
+main,.wrap{max-width:820px;margin:0 auto;padding:28px 20px 72px}
+nav a,footer a{color:var(--accent);text-decoration:none;margin-right:10px}
+h1{font-size:1.75rem;margin:16px 0 8px;background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.muted,.fine{color:var(--muted)}
+.card{background:rgba(15,23,42,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
+label{display:block;margin:10px 0 4px;color:#cbd5e1}
+input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+button,.buy{display:inline-block;margin:10px 8px 0 0;padding:11px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;text-decoration:none;cursor:pointer}
+.ok{color:var(--ok);font-weight:700}.warn{color:var(--warn)}
+pre{white-space:pre-wrap;background:#070b14;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/">Home</a> <a href="/apps/">Apps</a> <a href="/token-cost/">Token cost</a> <a href="/sla-uptime/">SLA</a> <a href="/runbook/">Runbook</a> <a href="/vendor-score/">Vendor</a> <a href="/prompt-eval/">Prompt eval</a> <a href="/field-eta/">Field ETA</a> <a href="/anonymize/">Anonymize</a> <a href="/handoff-kit/">Handoff</a> <a href="/en/plans/">Plans</a> <a href="/discovery/">Discovery $99</a></nav>
+<h1>Governed job runbook</h1>
+<p class="muted">Paste-ready ops sheet. Complements <a href="/agent-brief/">Agent brief</a> (sales one-pager) and <a href="/stack-audit/">Stack audit</a> (readiness). This writes the run.</p>
+<div class="card">
+<form id="f">
+<label>Job name <input name="job" required placeholder="Invoice exception triage"></label>
+<label>Named owner <input name="owner" required placeholder="Ops lead, not “the bot”"></label>
+<label>System of record <input name="sor" required placeholder="ERP / HubSpot / Gmail label"></label>
+<label>Trigger <input name="trig" placeholder="New label, webhook, cron"></label>
+<label>Human gate (irreversible writes) <input name="gate" required placeholder="Approve before send / pay / delete"></label>
+<label>Stop rule <input name="stop" required placeholder="After 20 runs or confidence &lt; 0.7"></label>
+<label>Kill switch <input name="kill" required placeholder="One Slack command / one dashboard toggle"></label>
+<button type="submit">Generate runbook</button>
+</form>
+<pre id="out" hidden></pre>
+</div>
+<p class="fine">Official menu only: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo. HTTPS on ziontechgroup.com — no vapor subdomains, no invented hardware prices.</p>
+<p><a class="buy" href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b">Pay Discovery $99</a> <a class="buy" href="/en/plans/">Official plans</a> <a class="buy" href="/apps/">All apps</a></p>
+<footer style="margin-top:28px"><a href="/contact/">Contact</a> · <a href="/field-services/">Field</a> · <a href="/finops-estimator/">FinOps</a> · <a href="/stack-audit/">Stack audit</a> · <a href="/roi-calc/">ROI calc</a> · <a href="/edital-desk/">Edital desk</a> · kleber@ziontechgroup.com</footer>
+</main>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  const d=Object.fromEntries(new FormData(e.target).entries());
+  const missing=[d.owner,d.sor,d.gate,d.stop,d.kill].filter(Boolean).length;
+  let sku='Discovery $99 — the runbook is incomplete until owner, SoR, gate, stop and kill exist.';
+  if(missing>=5) sku='Starter $2,500 — this job is ready to implement as one governed automation.';
+  const text=[
+    'ZION RUNBOOK (no custom price)',
+    'Job: '+d.job,
+    'Owner: '+d.owner,
+    'System of record: '+d.sor,
+    'Trigger: '+(d.trig||'not named'),
+    'Human gate: '+d.gate,
+    'Stop rule: '+d.stop,
+    'Kill switch: '+d.kill,
+    '',
+    'Next SKU: '+sku,
+    'Pay: https://ziontechgroup.com/en/plans/',
+    'CC: carlos@ziontechgroup.com + commercial@ziontechgroup.com'
+  ].join('\n');
+  const out=document.getElementById('out');
+  out.hidden=false;
+  out.textContent=text;
+});
+</script>
+</body>
+</html>

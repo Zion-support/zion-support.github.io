@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vendor Score · Zion Tech Group</title>
+<meta name="description" content="Score an IT/AI vendor on Brazil support, SLA, data residency, lock-in, API, LGPD and field coverage. Routes to Consulting or Starter.">
+<link rel="canonical" href="https://ziontechgroup.com/vendor-score/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#94a3b8;--line:#243049;--accent:#a78bfa;--ok:#34d399;--warn:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 ui-sans-serif,system-ui,sans-serif;background:linear-gradient(135deg,#0b1220,#1a1a2e 55%,#0f3460);color:var(--ink)}
+main,.wrap{max-width:820px;margin:0 auto;padding:28px 20px 72px}
+nav a,footer a{color:var(--accent);text-decoration:none;margin-right:10px}
+h1{font-size:1.75rem;margin:16px 0 8px;background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.muted,.fine{color:var(--muted)}
+.card{background:rgba(15,23,42,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
+label{display:block;margin:10px 0 4px;color:#cbd5e1}
+input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+button,.buy{display:inline-block;margin:10px 8px 0 0;padding:11px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;text-decoration:none;cursor:pointer}
+.ok{color:var(--ok);font-weight:700}.warn{color:var(--warn)}
+pre{white-space:pre-wrap;background:#070b14;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/">Home</a> <a href="/apps/">Apps</a> <a href="/token-cost/">Token cost</a> <a href="/sla-uptime/">SLA</a> <a href="/runbook/">Runbook</a> <a href="/vendor-score/">Vendor</a> <a href="/prompt-eval/">Prompt eval</a> <a href="/field-eta/">Field ETA</a> <a href="/anonymize/">Anonymize</a> <a href="/handoff-kit/">Handoff</a> <a href="/en/plans/">Plans</a> <a href="/discovery/">Discovery $99</a></nav>
+<h1>IT / AI vendor scorecard</h1>
+<p class="muted">Procurement lens. Complements <a href="/edital-desk/">Edital desk</a> (RFQ brief, no prices) — this scores a named vendor, still with no invented bid figures.</p>
+<div class="card" id="q"></div>
+<div class="card"><div id="out"></div></div>
+<p class="fine">Official menu only: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo. HTTPS on ziontechgroup.com — no vapor subdomains, no invented hardware prices.</p>
+<p><a class="buy" href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b">Pay Discovery $99</a> <a class="buy" href="/en/plans/">Official plans</a> <a class="buy" href="/apps/">All apps</a></p>
+<footer style="margin-top:28px"><a href="/contact/">Contact</a> · <a href="/field-services/">Field</a> · <a href="/finops-estimator/">FinOps</a> · <a href="/stack-audit/">Stack audit</a> · <a href="/roi-calc/">ROI calc</a> · <a href="/edital-desk/">Edital desk</a> · kleber@ziontechgroup.com</footer>
+</main>
+<script>
+const qs=[
+  'Named Brazil support hours (not a chatbot only).',
+  'Written SLA with restore target.',
+  'Data residency you can point to (region / DPA).',
+  'Exit / export path without a hostage fee.',
+  'Documented API or webhook.',
+  'LGPD lawful basis is written, not implied.',
+  'Field / on-site option in Brazil if the stack dies.',
+  'Invoice owner is a human, not a marketplace alias.'
+];
+const box=document.getElementById('q');
+box.innerHTML='<p class="muted">Tick what is true today.</p>'+qs.map(t=>'<label class="check"><input type="checkbox"> <span>'+t+'</span></label>').join('')+'<button type="button" id="go">Score vendor</button>';
+document.getElementById('go').onclick=function(){
+  const n=box.querySelectorAll('input:checked').length;
+  let rec='Discovery $99 — too many unknowns to sign. Map the process and the exit path first.';
+  if(n>=7) rec='Starter $2,500 — vendor is usable; implement one governed job on top.';
+  else if(n>=4) rec='Consulting $499 — score the gaps (SLA, DPA, field) before Starter.';
+  document.getElementById('out').innerHTML='<p><b>'+n+'/8</b> controls present.</p><p>'+rec+'</p><p class="fine">Do not paste bid R$ or confidential RFQ numbers on this page.</p>';
+};
+</script>
+</body>
+</html>

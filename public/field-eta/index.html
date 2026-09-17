@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Field ETA · Zion Tech Group</title>
+<meta name="description" content="Plan a Brazil field-services window from region, visit type and SLA. Complements field-services pages. No invented hardware prices.">
+<link rel="canonical" href="https://ziontechgroup.com/field-eta/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#94a3b8;--line:#243049;--accent:#a78bfa;--ok:#34d399;--warn:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 ui-sans-serif,system-ui,sans-serif;background:linear-gradient(135deg,#0b1220,#1a1a2e 55%,#0f3460);color:var(--ink)}
+main,.wrap{max-width:820px;margin:0 auto;padding:28px 20px 72px}
+nav a,footer a{color:var(--accent);text-decoration:none;margin-right:10px}
+h1{font-size:1.75rem;margin:16px 0 8px;background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.muted,.fine{color:var(--muted)}
+.card{background:rgba(15,23,42,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
+label{display:block;margin:10px 0 4px;color:#cbd5e1}
+input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+button,.buy{display:inline-block;margin:10px 8px 0 0;padding:11px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;text-decoration:none;cursor:pointer}
+.ok{color:var(--ok);font-weight:700}.warn{color:var(--warn)}
+pre{white-space:pre-wrap;background:#070b14;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/">Home</a> <a href="/apps/">Apps</a> <a href="/token-cost/">Token cost</a> <a href="/sla-uptime/">SLA</a> <a href="/runbook/">Runbook</a> <a href="/vendor-score/">Vendor</a> <a href="/prompt-eval/">Prompt eval</a> <a href="/field-eta/">Field ETA</a> <a href="/anonymize/">Anonymize</a> <a href="/handoff-kit/">Handoff</a> <a href="/en/plans/">Plans</a> <a href="/discovery/">Discovery $99</a></nav>
+<h1>Brazil field window planner</h1>
+<p class="muted">Dispatch sketch for Zion field work. Complements <a href="/field-services/">Field services</a> and <a href="/sla-uptime/">SLA uptime</a>. No PO values, no CPF.</p>
+<div class="card">
+<label>Region</label>
+<select id="reg">
+  <option value="1.2">SP / RJ metro</option>
+  <option value="1.6">Sul / Interior SP</option>
+  <option value="2.0">DF / MG / ES</option>
+  <option value="2.6">NE / CO</option>
+  <option value="3.2">Norte / remote</option>
+</select>
+<label>Visit type</label>
+<select id="kind">
+  <option value="4">Break/fix (rack, server, storage)</option>
+  <option value="6">Install / swap</option>
+  <option value="8">Move / relocation</option>
+  <option value="3">Survey / photos only</option>
+</select>
+<label>Requested restore (hours)</label><input id="sla" type="number" value="8" min="1">
+<button type="button" id="go">Plan window</button>
+<div id="out"></div>
+</div>
+<p class="fine">Official menu only: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo. HTTPS on ziontechgroup.com — no vapor subdomains, no invented hardware prices.</p>
+<p><a class="buy" href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b">Pay Discovery $99</a> <a class="buy" href="/en/plans/">Official plans</a> <a class="buy" href="/apps/">All apps</a></p>
+<footer style="margin-top:28px"><a href="/contact/">Contact</a> · <a href="/field-services/">Field</a> · <a href="/finops-estimator/">FinOps</a> · <a href="/stack-audit/">Stack audit</a> · <a href="/roi-calc/">ROI calc</a> · <a href="/edital-desk/">Edital desk</a> · kleber@ziontechgroup.com</footer>
+</main>
+<script>
+document.getElementById('go').onclick=function(){
+  const travel=+document.getElementById('reg').value;
+  const onsite=+document.getElementById('kind').value;
+  const sla=+document.getElementById('sla').value||8;
+  const eta=travel+onsite;
+  const ok=eta<=sla;
+  let rec='Discovery $99 — confirm site access, dock and named owner before promising a window.';
+  if(ok && sla<=8) rec='Starter $2,500 if this is one governed run; Growth $8,000/mo if you need a standing Brazil bench.';
+  else if(!ok) rec='Consulting $499 — the requested restore is tighter than travel+onsite. Do not invent a hardware SLA.';
+  document.getElementById('out').innerHTML='<p>Planning ETA ~ <b class="ok">'+eta.toFixed(1)+' h</b> (travel factor + onsite type). Requested restore: '+sla+' h — <b class="'+(ok?'ok':'warn')+'">'+(ok?'inside window':'outside window')+'</b>.</p><p>'+rec+'</p><p class="fine">This is a window sketch, not a commercial proposal.</p>';
+};
+document.getElementById('go').click();
+</script>
+</body>
+</html>

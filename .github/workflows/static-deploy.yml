@@ -8,8 +8,11 @@ on:
     branches: [main, cursor/field-services-family-a-0b5b]
     paths-ignore:
       - "STATUS.md"
+      - "PROTOCOL.md"
       - "ops/comms/STATUS.md"
+      - "ops/comms/PROTOCOL.md"
       - "public/ops/comms/STATUS.md"
+      - "public/ops/comms/PROTOCOL.md"
       - "public/ops/comms/log.json"
       - "public/ops/comms/state.json"
       - "public/ops/comms/agents.json"
