@@ -1,0 +1,32 @@
+name: War Room Pulse
+# Checks the Agent War Room (issue #71361) every 5 minutes,
+# updates the public board data and assists newly checked-in agents.
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: war-room-pulse
+  cancel-in-progress: true
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pulse war room
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/war_room_pulse.py
+
+      - name: Commit board updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(ops): war room pulse update [skip ci]'
+          file_pattern: 'public/ops/comms/log.json public/ops/comms/state.json'
