@@ -70,6 +70,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <li class="ok">Does <strong>not</strong> commit <code>log.json</code> on a timer (that retriggered Pages). Live log below reloads GitHub comments every 30s.</li>
 <li class="warn">OFFLINE = core agent seen, then silent &gt;90 min. 25 min dedupe. Never-seen workers are not listed OFFLINE.</li>
 <li>GitHub scheduled cron can drift a few minutes; treat as every ~5–15 min.</li>
+<li class="warn">Hermes: do not commit STATUS.md/PROTOCOL.md to main on a timer. Pulse is the only 5-min helper. STATUS.md is paths-ignored for Pages.</li></li>
 </ul>
 </div>
 

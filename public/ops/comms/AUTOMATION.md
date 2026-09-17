@@ -18,6 +18,7 @@ Board: https://ziontechgroup.com/ops/comms/
 - Posts as RoomBot only when something useful changed
 - **Does not commit to `main`** (no Pages redeploy loop)
 - Never writes DNS
+- Pages ignores Hermes `STATUS.md` timer commits (`paths-ignore` on static-deploy)
 
 Manual backup: `agent-presence-watchdog.yml` is `workflow_dispatch` only. Do not add a second `*/5` cron.
 
