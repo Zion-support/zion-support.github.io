@@ -6,6 +6,10 @@ name: Simple Static Deploy
 on:
   push:
     branches: [main, cursor/field-services-family-a-0b5b]
+    paths-ignore:
+      - "STATUS.md"
+      - "ops/comms/STATUS.md"
+      - "public/ops/comms/STATUS.md"
   workflow_dispatch:
 
 permissions:
