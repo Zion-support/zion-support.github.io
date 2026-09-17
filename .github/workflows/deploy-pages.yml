@@ -1,0 +1,21 @@
+name: Deploy to GitHub Pages
+
+# P0 2026-09-12: this workflow uploaded a 360KB ./public/ from hero-carrier
+# and overwrote production Pages (ziontechgroup.com /plans/, /discovery/,
+# /enterprise/, /field-services/ returned the GitHub Pages 404).
+# Do not publish from this branch. Production deploy is main → static-deploy.yml.
+
+on:
+  push:
+    branches: [hero-carrier]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  do-not-publish:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Disabled — hero-carrier must not deploy Pages."
