@@ -73,7 +73,7 @@ function main() {
   let lastLines = '';
   let exitCode = 1;
   let attempted = [];
-  const buildEnv = { ...process.env, NODE_OPTIONS: '--max-old-space-size=15360 --stack-size=8192', NEXT_TURBOPACK_USE_WORKER: '0', NEXT_TELEMETRY_DISABLED: '1' };
+  const buildEnv = { ...process.env, NODE_OPTIONS: '--max-old-space-size=15360', NEXT_TURBOPACK_USE_WORKER: '0', NEXT_TELEMETRY_DISABLED: '1' };
   for (const c of candidates) {
     attempted.push(c.method);
     console.log(`[build-wrapper] trying ${c.method}: ${c.cmd}`);

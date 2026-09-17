@@ -40,7 +40,7 @@ jobs:
         id: build
         run: |
           set -euo pipefail
-          export NODE_OPTIONS="--max-old-space-size=15360 --stack-size=8192"
+          export NODE_OPTIONS="--max-old-space-size=15360"
           export NEXT_TELEMETRY_DISABLED=1
           export NEXT_TURBOPACK_USE_WORKER=0
           export NEXT_BUILD_WORKER_COUNT=1
