@@ -9,6 +9,7 @@ on:
     paths-ignore:
       - "STATUS.md"
       - "ops/comms/STATUS.md"
+      - "ops/comms/PROTOCOL.md"
       - "public/ops/comms/STATUS.md"
       - "public/ops/comms/log.json"
       - "public/ops/comms/state.json"
@@ -22,7 +23,9 @@ permissions:
 
 concurrency:
   group: pages-deploy
-  cancel-in-progress: true
+  # Finish the in-flight Pages deploy. Cancelling mid-publish left agents
+  # on a stale board while Hermes/Pulse were writing ignored paths.
+  cancel-in-progress: false
 
 jobs:
   deploy:
