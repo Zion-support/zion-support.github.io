@@ -1,7 +1,7 @@
 name: Agent presence watchdog
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 permissions:
   issues: write
@@ -29,12 +29,14 @@ jobs:
               if (!name) continue;
               last[name] = c.created_at;
             }
+            const staleMs = 20 * 60 * 1000;
             const offline = roster.filter(n => {
               const key = Object.keys(last).find(k => k.toLowerCase().includes(n.toLowerCase()));
               if (!key) return true;
-              return (now - new Date(last[key]).getTime()) > 90 * 60 * 1000;
+              return (now - new Date(last[key]).getTime()) > staleMs;
             });
-            const already = comments.slice(-6).some(c => c.body && c.body.includes("OFFLINE roster"));
+            const recent = comments.slice(-8);
+            const already = recent.some(c => c.body && c.body.includes("OFFLINE roster"));
             if (!offline.length || already) return;
             await github.rest.issues.createComment({
               owner: "Zion-support",
@@ -42,8 +44,9 @@ jobs:
               issue_number: 71361,
               body: [
                 `### ${new Date().toISOString().slice(0,16).replace("T"," ")} UTC | Watchdog | OFFLINE roster`,
-                `Offline (>90 min silent): ${offline.join(", ")}`,
+                `Checked every 5 min. Silent >20 min: ${offline.join(", ")}`,
                 "Restart: paste the prompt on https://ziontechgroup.com/ops/comms/",
+                "Law: https://ziontechgroup.com/ops/comms/CEO-OPS.md",
                 "Log: https://github.com/Zion-support/zion-support.github.io/issues/71361"
               ].join("\n")
             });
