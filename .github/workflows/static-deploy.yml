@@ -10,6 +10,9 @@ on:
       - "STATUS.md"
       - "ops/comms/STATUS.md"
       - "public/ops/comms/STATUS.md"
+      - "public/ops/comms/log.json"
+      - "public/ops/comms/state.json"
+      - "public/ops/comms/agents.json"
   workflow_dispatch:
 
 permissions:
