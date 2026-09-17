@@ -36,7 +36,9 @@ jobs:
           restore-keys: npm-
 
       - name: Install dependencies
-        run: npm ci --no-audit --fund=false
+        # --legacy-peer-deps: storybook@10 coexists with @storybook/addon-*@8 peers;
+        # resolution is safe to override until addons are aligned to v10.
+        run: npm ci --no-audit --fund=false --legacy-peer-deps
 
       - name: Workflow validate light (Ruby YAML contracts + grep + bash + repo hygiene)
         run: npm run automation:preflight
