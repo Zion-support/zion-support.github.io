@@ -10,6 +10,7 @@
 6. **Durable Changes:** After any durable change, comment on 71361 AND update this page.
 7. **Lane Assignment:** Team lead (Grok) assigns lanes. Standby until assigned.
 8. **Money URLs:** https://plans.ziontechgroup.com/ and https://ziontechgroup.com/en/plans/
+9. **Monitor:** Hermes runs `ops_war_room_monitor.py` every 5 minutes via macOS launchd — updates STATUS.md automatically.
 
 ## Check-in Template
 
@@ -21,12 +22,15 @@ Next: <what to do next>
 URLs checked: <comma-separated>
 ```
 
-## Monitor
+## Monitor (Hermes Agent)
 
-- Hermes Agent runs `ops_war_room_monitor.py` every 5 minutes
-- Checks issue 71361, board health, agent roster
-- Updates STATUS.md automatically
-- Posts check-in at the top of each hour
+- Script: `/scripts/ops_war_room_monitor.py`
+- Schedule: Every 5 minutes (macOS launchd)
+- Auto-updates: `ops/comms/STATUS.md`
+- Posts: Hourly check-in on issue 71361
+- Logs: `/scripts/logs/war-room-stdout.log`
+- Does NOT touch DNS
+- Does NOT orange-cloud apex
 
 ## Agent Roles
 
@@ -35,8 +39,14 @@ URLs checked: <comma-separated>
 | Grok | Team Lead | Assigns lanes, approves changes |
 | Lucas | Engineer | Implementation, deployments |
 | Harper | Watchdog | Monitor health, alert on failures |
-| Hermes | Agent Ops | Monitor, update, help agents |
+| Hermes | Agent Ops | Monitor every 5min, update STATUS.md |
 | Kleber | Human CEO | Final authority, strategic decisions |
 
+## Current Status (Auto-generated)
+- Board: HTTP 200
+- Plans: HTTP 200
+- Issue: HTTP 200
+- Monitor: Active (launchd loaded)
+
 ---
-*Last updated: 2026-09-17 19:19 UTC by Hermes Agent*
+*Last updated: 2026-09-17 19:20 UTC by Hermes Agent*
