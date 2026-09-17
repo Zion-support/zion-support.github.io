@@ -32,16 +32,19 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --fund=false
         env:
-          NODE_OPTIONS: --max-old-space-size=8192
+          NODE_OPTIONS: --max-old-space-size=15360
+          NEXT_TURBOPACK_USE_WORKER: '0'
+          NEXT_TELEMETRY_DISABLED: '1'
 
       - name: Build artifact
         id: build
         run: |
           set -euo pipefail
-          export NODE_OPTIONS="--max-old-space-size=12288"
+          export NODE_OPTIONS="--max-old-space-size=15360 --stack-size=8192"
           export NEXT_TELEMETRY_DISABLED=1
           export NEXT_TURBOPACK_USE_WORKER=0
           export NEXT_BUILD_WORKER_COUNT=1
+          ulimit -n 131072 2>/dev/null || true
           node scripts/build-wrapper.cjs > build.log 2>&1 || true
           echo "build_log_start"
           set +x

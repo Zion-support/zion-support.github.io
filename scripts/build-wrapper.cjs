@@ -38,10 +38,11 @@ function safeStat(p) {
 
 function nextCandidates() {
   const items = [];
-  items.push({ cmd: 'npm exec -- next build --webpack', method: 'npm-exec-next' });
-  items.push({ cmd: 'npx --yes next build --webpack', method: 'npx-next' });
-  items.push({ cmd: `node "${path.join('node_modules', 'next', 'bin', 'next')}" build --webpack`, method: 'next-bin' });
-  items.push({ cmd: `node "${path.join('node_modules', 'next', 'dist', 'bin', 'next.js')}" build --webpack`, method: 'next-dist' });
+  items.push({ cmd: 'npm exec -- next build --no-lint', method: 'npm-exec-next' });
+  items.push({ cmd: 'npx --yes next build --no-lint', method: 'npx-next' });
+  items.push({ cmd: `node "--stack-size=8192" --max-old-space-size=15360 "${path.join('node_modules', 'next', 'dist', 'bin', 'next')}" build`, method: 'next-node-direct' });
+  items.push({ cmd: `node "${path.join('node_modules', 'next', 'dist', 'bin', 'next')}" build`, method: 'next-bin' });
+  items.push({ cmd: `node "${path.join('node_modules', 'next', 'dist', 'bin', 'next.js')}" build`, method: 'next-dist' });
   return items;
 }
 
@@ -72,7 +73,7 @@ function main() {
   let lastLines = '';
   let exitCode = 1;
   let attempted = [];
-  const buildEnv = { ...process.env, NODE_OPTIONS: '--max-old-space-size=12288', NEXT_TURBOPACK_USE_WORKER: '0' };
+  const buildEnv = { ...process.env, NODE_OPTIONS: '--max-old-space-size=15360 --stack-size=8192', NEXT_TURBOPACK_USE_WORKER: '0', NEXT_TELEMETRY_DISABLED: '1' };
   for (const c of candidates) {
     attempted.push(c.method);
     console.log(`[build-wrapper] trying ${c.method}: ${c.cmd}`);
