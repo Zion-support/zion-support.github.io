@@ -1,0 +1,41 @@
+name: Grok hourly URL coverage
+
+# 24/7 money-URL probe. No git writes (Hermes STATUS commits already cancel Pages).
+# Path-app 404s are logged, not failed, until Pages flush lands.
+
+on:
+  schedule:
+    - cron: "12 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: grok-hourly-coverage
+  cancel-in-progress: false
+
+jobs:
+  urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl money URLs (must be 200)
+        run: |
+          set -euo pipefail
+          fail=0
+          for p in / /en/plans/ /discovery/ /apps/ /ops/comms/ /roi-calc/; do
+            code=$(curl -sS -o /tmp/u.html -w '%{http_code}' --max-time 25 "https://ziontechgroup.com${p}")
+            echo "${code}  https://ziontechgroup.com${p}"
+            if [ "${code}" != "200" ]; then
+              fail=1
+            fi
+          done
+          exit "${fail}"
+
+      - name: Log path-app routes (report-only)
+        run: |
+          set -euo pipefail
+          for p in /stack-audit/ /agent-brief/ /edital-desk/ /tools/ /token-cost/ /sla-uptime/ /runbook/ /vendor-score/ /prompt-eval/ /field-eta/ /anonymize/ /handoff-kit/; do
+            code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 25 "https://ziontechgroup.com${p}")
+            echo "${code}  https://ziontechgroup.com${p}"
+          done
