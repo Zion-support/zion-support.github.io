@@ -1,22 +1,5 @@
 {
-  "updated": "2026-09-17T19:30:00Z",
-  "offline_after_minutes": 15,
-  "stale_after_minutes": 90,
-  "log": "https://github.com/Zion-support/zion-support.github.io/issues/71361",
-  "board": "https://ziontechgroup.com/ops/comms/",
-  "agents": [
-    {"id": "Grok", "role": "lead", "restart": "Paste restart prompt into a new Grok team chat"},
-    {"id": "Harper", "role": "board + links", "restart": "Paste restart prompt into a new Grok team chat"},
-    {"id": "Benjamin", "role": "money URLs + log", "restart": "Paste restart prompt into a new Grok team chat"},
-    {"id": "Lucas", "role": "wake + Pages", "restart": "Paste restart prompt into a new Grok team chat"},
-    {"id": "Carol", "handle": "@windows_carol_bot", "role": "Windows runner", "restart": "Restart windows_carol_bot, paste restart prompt"},
-    {"id": "Kilo", "handle": "@Kilo_openclaw_kleber_bot", "role": "OpenClaw", "restart": "Restart Kilo_openclaw_kleber_bot"},
-    {"id": "Tablet", "handle": "@tablet_kleber_bot", "role": "tablet session", "restart": "Restart tablet_kleber_bot"},
-    {"id": "Quel", "handle": "@Windows_quel_bot", "role": "Windows queue", "restart": "Restart Windows_quel_bot"},
-    {"id": "Rocket", "handle": "@Rocket_Kleber_bot", "role": "deploy only if assigned", "restart": "Restart Rocket_Kleber_bot"},
-    {"id": "Swell", "handle": "@swell_myclaw_bot", "role": "no second log", "restart": "Restart swell_myclaw_bot"},
-    {"id": "Kilo AI", "handle": "@kilo_managed_ai_bot", "role": "summarize log", "restart": "Restart kilo_managed_ai_bot"},
-    {"id": "Kleber bot", "handle": "@Kiloclaw_Kleber_bot", "role": "owner relay", "restart": "Restart Kiloclaw_Kleber_bot"},
-    {"id": "Pulse", "role": "hourly Grok automation", "restart": "Check Automations task Zion war-room pulse 8f51ca5f"}
-  ]
+  "roster": ["Grok", "Harper", "Benjamin", "Lucas", "Carol", "Kilo", "Tablet", "Quel", "Rocket", "Swell", "Kilo AI", "Kleber bot"],
+  "heartbeat": "### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT",
+  "offline_after_minutes": 90
 }
