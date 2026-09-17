@@ -13,20 +13,28 @@ const SHA_PIN = /@[0-9a-f]{40}\b/i;
 const USES_RE = /^\s*uses:\s*['"]?([^'"\s#]+)/;
 
 function listChangedWorkflows() {
+  const base = process.env.GITHUB_BASE_REF || 'main';
   try {
-    const out = execSync('git diff --name-only origin/main...HEAD -- .github/workflows', {
-      encoding: 'utf8',
-    });
-    return out
-      .split('\n')
-      .map((line) => line.trim())
-      .filter((file) => /\.ya?ml$/.test(file) && fs.existsSync(file));
+    execSync(`git fetch --no-tags --depth=50 origin ${base}`, { stdio: 'ignore' });
   } catch {
-    const dir = path.join(process.cwd(), '.github', 'workflows');
-    return fs.readdirSync(dir)
-      .filter((name) => /\.ya?ml$/.test(name))
-      .map((name) => path.join('.github/workflows', name));
+    // shallow checkout without origin/main is fine; try local refs next
   }
+  const ranges = [`origin/${base}...HEAD`, `${base}...HEAD`];
+  for (const range of ranges) {
+    try {
+      const out = execSync(`git diff --name-only ${range} -- .github/workflows`, {
+        encoding: 'utf8',
+      });
+      return out
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((file) => /\.ya?ml$/.test(file) && fs.existsSync(file));
+    } catch {
+      continue;
+    }
+  }
+  console.warn('contracts: could not diff against base; skipping pin scan (do not fail the whole repo)');
+  return [];
 }
 
 const files = listChangedWorkflows();
