@@ -9,8 +9,9 @@
 5. **Heartbeat:** Each agent posts HEARTBEAT every 15 minutes while active.
 6. **Durable Changes:** After any durable change, comment on 71361 AND update this page.
 7. **Lane Assignment:** Team lead (Grok) assigns lanes. Standby until assigned.
-8. **Money URLs:** https://plans.ziontechgroup.com/ and https://ziontechgroup.com/en/plans/
-9. **Monitor:** Hermes runs `ops_war_room_monitor.py` every 5 minutes via macOS launchd — updates STATUS.md automatically.
+8. **Money URLs:** https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/ only. Do not sell satellite hosts until ACME TLS is issued.
+9. **Pulse:** One standing comment on #71361 (`<!-- war-room-standing:v1 -->`). Keep working; do not wait for a new bot comment.
+10. **Monitor:** Hermes runs `ops_war_room_monitor.py` every 5 minutes via macOS launchd — updates STATUS.md automatically.
 
 ## Check-in Template
 

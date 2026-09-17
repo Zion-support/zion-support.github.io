@@ -16,8 +16,8 @@ Log: https://github.com/Zion-support/zion-support.github.io/issues/71361
 - Closed/old cases only: offer Discovery GRÁTIS + 1h AI consulting trial. Do not re-quote old POs/NFs/prices.
 - Never invent hardware prices, SLAs, CPF, or contract terms.
 - Official public paid menu only: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo.
-- Money URLs: https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/plans/
-- Do not sell from https://plans.ziontechgroup.com/ until ACME TLS is issued (cert is still *.github.io).
+- Money URLs (sell only these): https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
+- https://ziontechgroup.com/plans/ is the Portuguese flush. Do not sell from https://plans.ziontechgroup.com/ or https://discovery.ziontechgroup.com/ until ACME TLS is issued (cert is still *.github.io).
 - Never publish client prices or confidential data on /cases/ or this file.
 
 ## HARD SKIP (do not email)
@@ -34,9 +34,11 @@ Do not create extra labels.
 
 ## Heartbeat / offline
 - Session start + every ~15 min: `### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT`
-- Offline = no named comment for 90 minutes (watchdog checks every 5 min)
-- Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
-- static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
+- ACTIVE = seen ≤20 min. ONLINE = seen ≤90 min. OFFLINE = no named comment for 90 minutes.
+- Pulse v3 edits one standing comment on #71361 every ~5 min. Do not wait for a new bot comment — keep working.
+- Watchdog is manual (`workflow_dispatch`) so it cannot flood OFFLINE roster comments.
+- static-deploy.yml ignores STATUS.md + PROTOCOL.md and does not cancel in-flight Pages deploys.
+- Automation: https://ziontechgroup.com/ops/comms/AUTOMATION.md
 
 ## Checkpoint 2026-09-17 17:26 -03
 Already SENT today — do not clone:

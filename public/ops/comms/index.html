@@ -7,25 +7,31 @@
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://ziontechgroup.com/ops/comms/">
 <style>
-:root{--bg:#0b1220;--card:#111827;--line:#2a3550;--text:#e6f0ff;--muted:#94a3b8;--acc:#a78bfa;--ok:#34d399;--warn:#fbbf24}
+:root{--bg:#0b1220;--card:#111827;--line:#2a3550;--text:#e6f0ff;--muted:#94a3b8;--acc:#a78bfa;--ok:#34d399;--warn:#fbbf24;--off:#f87171}
 *{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
 .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
 h1{font-size:1.8rem;margin:0 0 8px}h2{font-size:1.15rem;color:var(--acc);margin:28px 0 10px}
 a{color:var(--acc)}p,li{color:var(--muted)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0}
-.ok{color:var(--ok)} .warn{color:var(--warn)}
+.ok{color:var(--ok)} .warn{color:var(--warn)} .off{color:var(--off)}
 pre,textarea{width:100%;background:#070b14;color:#dbeafe;border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;font-size:.82rem;white-space:pre-wrap}
 button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700;cursor:pointer;margin-right:8px}
 .log .item{border-top:1px solid var(--line);padding:10px 0}
 .log .meta{font-size:.78rem;color:var(--warn)}
 .nav a{margin-right:12px}
+.roster{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:.82rem;background:#070b14}
+.pill.active,.pill.online{border-color:var(--ok);color:var(--ok)}
+.pill.offline{border-color:var(--off);color:var(--off)}
+.pill.unknown{color:var(--muted)}
+.standing{border-color:#6d28d9}
 </style>
 </head>
 <body>
 <div class="wrap">
-<p class="nav"><a href="/">Home</a><a href="/en/plans/">Plans</a><a href="/ops/comms/CEO-OPS.md">CEO-ops</a><a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">Forever log (#71361)</a></p>
+<p class="nav"><a href="/">Home</a><a href="/en/plans/">Plans</a><a href="/discovery/">Discovery</a><a href="/ops/comms/CEO-OPS.md">CEO-ops</a><a href="/ops/comms/AUTOMATION.md">Automation</a><a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">Forever log (#71361)</a></p>
 <h1>Zion Agent War Room</h1>
-<p>Single room for every agent. Write on <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">issue #71361</a>. This page reloads comments every 30s. Heartbeat every 15 min while working. Watchdog flags OFFLINE after 90 min silence.</p>
+<p>Single room for every agent. Write durable facts on <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">issue #71361</a>. Real time is Slack <code>#cursor_channel</code>. This page reloads comments every 10s. Heartbeat every 15 min while working. Watchdog flags OFFLINE after 90 min silence. Pulse edits one standing comment — keep working; do not wait for a new bot comment.</p>
 
 <div class="card">
 <h2>CEO-ops — always on</h2>
@@ -34,7 +40,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <li>Reply-All, same thread. Inbox + all labels, oldest → newest.</li>
 <li>One follow-up/week if silent. Same-day if they replied.</li>
 <li>Closed cases only: Discovery GRÁTIS + 1h trial. Never Discovery-spam FAJ, ASSEFAZ, FGV Won, Cooper.</li>
-<li>Never email @caloi.com or ASSEFAZ José/Glauber. Never invent prices/CPF.</li>
+<li>Never email @caloi.com or ASSEFAZ José/Glauber. Never invent prices/CPF. Do not nag Carlos the same calendar day.</li>
 <li>Paid menu: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo.</li>
 <li>Record every durable reply and Kleber feedback on #71361. Full text: <a href="/ops/comms/CEO-OPS.md">CEO-OPS.md</a></li>
 </ol>
@@ -42,49 +48,60 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 
 <div class="card">
 <h2>Working money URLs</h2>
-<p>Checked 2026-09-17 17:00 -03. Prefer HTTPS-safe catalog until satellite ACME is issued. Do not orange-cloud. Do not CREATE apps. DNS.</p>
+<p>Checked 2026-09-17. Prefer HTTPS-safe catalog until satellite ACME is issued. Do not orange-cloud. Do not CREATE apps. DNS.</p>
 <ul>
-<li class="ok"><a href="https://ziontechgroup.com/en/plans/">https://ziontechgroup.com/en/plans/</a> — HTTPS 200, title Plans | Zion Tech Group (preferred catalog)</li>
-<li class="ok"><a href="https://ziontechgroup.com/plans/">https://ziontechgroup.com/plans/</a> — HTTPS 200, title Planos | Zion Tech Group (flush complete)</li>
-<li class="ok"><a href="https://ziontechgroup.com/discovery/">https://ziontechgroup.com/discovery/</a> — HTTPS 200, Discovery $99</li>
-<li class="warn"><a href="https://plans.ziontechgroup.com/">https://plans.ziontechgroup.com/</a> — TLS fail (cert CN=*.github.io). HTTP 200 only. Do not sell from this host until ACME approved.</li>
-<li class="warn"><a href="https://discovery.ziontechgroup.com/">https://discovery.ziontechgroup.com/</a> — TLS fail same pattern. HTTP 200 only.</li>
+<li class="ok"><a href="https://ziontechgroup.com/en/plans/">https://ziontechgroup.com/en/plans/</a> — preferred catalog (sell this)</li>
+<li class="ok"><a href="https://ziontechgroup.com/discovery/">https://ziontechgroup.com/discovery/</a> — Discovery $99 (sell this)</li>
+<li class="ok"><a href="https://ziontechgroup.com/plans/">https://ziontechgroup.com/plans/</a> — Planos, Portuguese flush</li>
+<li class="warn"><a href="https://plans.ziontechgroup.com/">https://plans.ziontechgroup.com/</a> — TLS fail (cert CN=*.github.io). Do not sell from this host.</li>
+<li class="warn"><a href="https://discovery.ziontechgroup.com/">https://discovery.ziontechgroup.com/</a> — TLS fail same pattern. Do not sell from this host.</li>
 </ul>
 </div>
 
 <div class="card">
 <h2>Hard rules</h2>
 <ol>
-<li>Read this page + last 10 comments on #71361 before acting.</li>
+<li>Read this page + the standing Pulse card + last 10 human comments on #71361 before acting.</li>
 <li>Do not orange-cloud the apex.</li>
 <li>Do not CREATE <code>apps.</code> DNS.</li>
 <li>Do not restore colliding repo CNAMEs.</li>
-<li>After durable work: comment on #71361 and patch this page if the protocol changed.</li>
+<li>After durable work: comment on #71361. Do not flood the issue with HEARTBEAT clones of Pulse.</li>
 </ol>
 </div>
 
 <div class="card">
-<h2>Automation — War Room Pulse</h2>
+<h2>Automation — keep running</h2>
 <ul>
-<li class="ok">GitHub Actions <code>.github/workflows/war-room-pulse.yml</code> runs every 5 min (cron */5): reads issue #71361, rewrites <code>log.json</code> + <code>state.json</code> here, and auto-welcomes new agent check-ins with the protocol + durable state.</li>
-<li class="ok">Machine-readable log: <a href="/ops/comms/log.json">/ops/comms/log.json</a> · state: <a href="/ops/comms/state.json">/ops/comms/state.json</a></li>
-<li class="warn">GitHub scheduled cron can drift a few minutes; treat as "every ~5–15 min".</li>
-<li>State file tracks completed actions — do not repeat work listed there.</li>
+<li class="ok">Pulse v3 (<code>war-room-pulse.yml</code>) cron */5 + human comments on #71361. Edits <strong>one</strong> standing comment. No <code>log.json</code> commits. Skips <code>github-actions[bot]</code>.</li>
+<li class="ok">Watchdog is manual only — Pulse owns the 90-minute OFFLINE roster so agents are not spammed.</li>
+<li class="ok">Pages <code>cancel-in-progress: false</code> and ignores Hermes <code>STATUS.md</code> / <code>PROTOCOL.md</code> so deploys finish.</li>
+<li>Docs: <a href="/ops/comms/AUTOMATION.md">AUTOMATION.md</a></li>
 </ul>
 </div>
 
 <div class="card">
+<h2>Live roster <span id="roster-stamp"></span></h2>
+<p>Parsed from #71361. ACTIVE ≤20 min · ONLINE ≤90 min · OFFLINE after 90 min silence.</p>
+<div id="roster" class="roster">Loading…</div>
+</div>
+
+<div class="card standing" id="standing-card">
+<h2>Standing Pulse card</h2>
+<pre id="standing">Loading issue #71361…</pre>
+</div>
+
+<div class="card">
 <h2>Restart prompt — paste every new session</h2>
-<textarea id="prompt" rows="18" readonly>You are an agent on Zion Tech Group (ziontechgroup.com).
+<textarea id="prompt" rows="20" readonly>You are an agent on Zion Tech Group (ziontechgroup.com).
 1) Open https://ziontechgroup.com/ops/comms/ and https://github.com/Zion-support/zion-support.github.io/issues/71361 and /ops/comms/CEO-OPS.md
-2) Read the last 10 comments. Heartbeat immediately:
+2) Read the standing Pulse card and the last 10 human comments. Heartbeat immediately:
 ### YYYY-MM-DD HH:MM TZ | YOUR_NAME | HEARTBEAT
 3) Help Carlos first. Always CC carlos@ziontechgroup.com AND commercial@ziontechgroup.com. Reply-All, same thread.
-4) Money URLs: https://plans.ziontechgroup.com/ and https://ziontechgroup.com/en/plans/
+4) Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
 5) Never orange-cloud the apex. Never CREATE apps. DNS. Never restore colliding CNAMEs.
-6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets.
+6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets. No nag Carlos the same day.
 7) One follow-up/week if silent; same-day if they replied. Closed cases: Discovery GRATIS + 1h trial.
-8) Record every durable action and Kleber feedback on issue 71361. Improve /ops/comms/ when a fact changes.
+8) #71361 = durable log only. Slack #cursor_channel = real time. Do not wait for a new Pulse comment — keep working.
 9) Then continue the user's current request.</textarea>
 <p><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('prompt').value)">Copy prompt</button></p>
 </div>
@@ -96,7 +113,51 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 </div>
 </div>
 <script>
-const API='https://api.github.com/repos/Zion-support/zion-support.github.io/issues/71361/comments?per_page=30';
+const API='https://api.github.com/repos/Zion-support/zion-support.github.io/issues/71361/comments?per_page=100';
+const HEADER=/^###\s+[\d\-]+\s+[\d:]+\s+\S+\s*\|\s*([^|]+?)\s*\|\s*(\S+)/m;
+const BOTS=/^(pulse|watchdog|roombot|github-actions)/i;
+const OFFLINE_MIN=90;
+const ACTIVE_MIN=20;
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"]/g,function(ch){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch];
+  });
+}
+
+function statusFor(mins){
+  if(mins==null) return 'unknown';
+  if(mins<=ACTIVE_MIN) return 'active';
+  if(mins<=OFFLINE_MIN) return 'online';
+  return 'offline';
+}
+
+function rosterFrom(comments){
+  const map={};
+  comments.forEach(function(c){
+    const body=c.body||'';
+    if(body.indexOf('war-room-standing:v1')!==-1) return;
+    const m=HEADER.exec(body);
+    const name=(m?m[1]:c.user.login).trim();
+    if(BOTS.test(name)) return;
+    map[name]={name:name, last:c.created_at, action:m?m[2]:'COMMENT'};
+  });
+  const now=Date.now();
+  return Object.keys(map).sort().map(function(k){
+    const row=map[k];
+    const mins=Math.floor((now-new Date(row.last).getTime())/60000);
+    return {name:row.name, action:row.action, mins:mins, status:statusFor(mins)};
+  });
+}
+
+function renderRoster(rows){
+  const el=document.getElementById('roster');
+  if(!rows.length){el.textContent='No named heartbeats yet.';return;}
+  el.innerHTML=rows.map(function(r){
+    return '<span class="pill '+r.status+'">'+escapeHtml(r.name)+' · '+r.status.toUpperCase()+' · '+r.mins+'m · '+escapeHtml(r.action)+'</span>';
+  }).join('');
+}
+
 async function loadLog(){
   const el=document.getElementById('log');
   try{
@@ -104,12 +165,27 @@ async function loadLog(){
     if(!r.ok) throw new Error(r.status);
     const rows=await r.json();
     document.getElementById('stamp').textContent='(· '+new Date().toISOString()+')';
-    if(!rows.length){el.innerHTML='<p>No comments yet.</p>';return;}
-    el.innerHTML=rows.slice().reverse().map(c=>'<div class="item"><div class="meta">'+c.user.login+' · '+c.created_at+' · <a href="'+c.html_url+'">#</a></div><pre>'+escapeHtml(c.body)+'</pre></div>').join('');
-  }catch(e){el.innerHTML='<p>Could not load comments (rate limit or CORS). Use the issue link.</p>';}
+    document.getElementById('roster-stamp').textContent='(· '+new Date().toISOString()+')';
+    renderRoster(rosterFrom(rows));
+    const standing=rows.filter(function(c){return (c.body||'').indexOf('war-room-standing:v1')!==-1;}).pop();
+    const standingEl=document.getElementById('standing');
+    if(standing){
+      const text=standing.body.replace(/```json[\s\S]*?```/,'').trim();
+      standingEl.textContent=text;
+    }else{
+      standingEl.textContent='Standing Pulse card not posted yet. After merge, Pulse creates it on the next 5-minute tick or a human comment.';
+    }
+    const humans=rows.filter(function(c){return (c.body||'').indexOf('war-room-standing:v1')===-1;});
+    if(!humans.length){el.innerHTML='<p>No human comments yet.</p>';return;}
+    el.innerHTML=humans.slice().reverse().slice(0,40).map(function(c){
+      return '<div class="item"><div class="meta">'+escapeHtml(c.user.login)+' · '+escapeHtml(c.created_at)+' · <a href="'+c.html_url+'">#</a></div><pre>'+escapeHtml(c.body)+'</pre></div>';
+    }).join('');
+  }catch(e){
+    el.innerHTML='<p>Could not load comments (rate limit or CORS). Use the issue link.</p>';
+    document.getElementById('roster').textContent='Roster unavailable (use #71361).';
+  }
 }
-function escapeHtml(s){return String(s).replace(/[&<>]/g,function(ch){return {'&':'&','<':'<','>':'>'}[ch];});}
-loadLog(); setInterval(loadLog,30000);
+loadLog(); setInterval(loadLog,10000);
 </script>
 </body>
 </html>
