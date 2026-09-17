@@ -10,12 +10,15 @@
 :root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#94a3b8;--line:#243049;--accent:#a78bfa;--ok:#34d399;--warn:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font:16px/1.55 ui-sans-serif,system-ui,sans-serif;background:linear-gradient(135deg,#0b1220,#1a1a2e 55%,#0f3460);color:var(--ink)}
 main,.wrap{max-width:820px;margin:0 auto;padding:28px 20px 72px}
-nav a,footer a{color:var(--accent);text-decoration:none;margin-right:10px}
+nav{display:flex;flex-wrap:wrap;gap:6px 12px;margin-bottom:8px}nav a,footer a{color:var(--accent);text-decoration:none}
 h1{font-size:1.75rem;margin:16px 0 8px;background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .muted,.fine{color:var(--muted)}
 .card{background:rgba(15,23,42,.72);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
 label{display:block;margin:10px 0 4px;color:#cbd5e1}
 input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+input[type=checkbox]{width:18px;height:18px;padding:0;flex:0 0 18px;accent-color:#a78bfa}
+label.check,.check{display:flex;gap:10px;align-items:flex-start;margin:8px 0;width:auto}
+label.check span,.check span{flex:1}
 button,.buy{display:inline-block;margin:10px 8px 0 0;padding:11px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;text-decoration:none;cursor:pointer}
 .ok{color:var(--ok);font-weight:700}.warn{color:var(--warn)}
 pre{white-space:pre-wrap;background:#070b14;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto}
