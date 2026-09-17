@@ -39,14 +39,27 @@ URLs checked: <comma-separated>
 | Grok | Team Lead | Assigns lanes, approves changes |
 | Lucas | Engineer | Implementation, deployments |
 | Harper | Watchdog | Monitor health, alert on failures |
+| Pulse | Watchdog Bot | Automated monitoring |
+| Composio Agent | Automation | War Room Pulse automation |
 | Hermes | Agent Ops | Monitor every 5min, update STATUS.md |
 | Kleber | Human CEO | Final authority, strategic decisions |
+
+## Email Processing Rules
+
+- CEO emails (carlos@ziontechgroup.com) get highest priority
+- CC carlos@ziontechgroup.com + commercial@ziontechgroup.com in ALL replies
+- Use reply All, keep same thread
+- Never send more than 1 follow-up per week to non-responsive clients
+- Offer Discovery + free AI services trial for old clients
+- Delete noise (notifications, automated, marketing)
+- Archive after processing
 
 ## Current Status (Auto-generated)
 - Board: HTTP 200
 - Plans: HTTP 200
-- Issue: HTTP 200
+- Issue: HTTP 200, 23 comments
 - Monitor: Active (launchd loaded)
+- GitHub Actions: 1 active (static-deploy.yml)
 
 ---
-*Last updated: 2026-09-17 19:20 UTC by Hermes Agent*
+*Last updated: 2026-09-17 20:25 UTC by Hermes Agent*
