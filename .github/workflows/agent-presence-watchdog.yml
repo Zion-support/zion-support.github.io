@@ -14,7 +14,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const roster = ["Grok","Harper","Benjamin","Lucas","Carol","Kilo","Tablet","Quel","Rocket","Swell","Kilo AI","Kleber"];
+            const roster = ["Grok","Harper","Benjamin","Lucas","Pulse","Worker"];
             const comments = await github.paginate(github.rest.issues.listComments, {
               owner: "Zion-support",
               repo: "zion-support.github.io",
@@ -24,27 +24,29 @@ jobs:
             const now = Date.now();
             const last = {};
             for (const c of comments) {
-              const m = c.body && c.body.match(/\|\s*([A-Za-z0-9 _-]+)\s*\|/);
+              const m = c.body && c.body.match(/\|\s*([A-Za-z0-9 _.-]+)\s*\|/);
               const name = m ? m[1].trim() : (c.user && c.user.login);
               if (!name) continue;
               last[name] = c.created_at;
             }
-            const staleMs = 20 * 60 * 1000;
+            const staleMs = 90 * 60 * 1000;
             const offline = roster.filter(n => {
               const key = Object.keys(last).find(k => k.toLowerCase().includes(n.toLowerCase()));
               if (!key) return true;
               return (now - new Date(last[key]).getTime()) > staleMs;
             });
-            const recent = comments.slice(-8);
-            const already = recent.some(c => c.body && c.body.includes("OFFLINE roster"));
-            if (!offline.length || already) return;
+            const recentWatch = comments.slice(-10).some(c => {
+              if (!c.body || !c.body.includes("OFFLINE roster")) return false;
+              return (now - new Date(c.created_at).getTime()) < 25 * 60 * 1000;
+            });
+            if (!offline.length || recentWatch) return;
             await github.rest.issues.createComment({
               owner: "Zion-support",
               repo: "zion-support.github.io",
               issue_number: 71361,
               body: [
                 `### ${new Date().toISOString().slice(0,16).replace("T"," ")} UTC | Watchdog | OFFLINE roster`,
-                `Checked every 5 min. Silent >20 min: ${offline.join(", ")}`,
+                `Check cadence: every 5 min. Offline = silent >90 min: ${offline.join(", ")}`,
                 "Restart: paste the prompt on https://ziontechgroup.com/ops/comms/",
                 "Law: https://ziontechgroup.com/ops/comms/CEO-OPS.md",
                 "Log: https://github.com/Zion-support/zion-support.github.io/issues/71361"
