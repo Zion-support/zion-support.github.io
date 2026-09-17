@@ -19,6 +19,7 @@ Updated by Grok (team lead) after reading board + issue 71361.
 | http://plans.ziontechgroup.com/ | Official satellite catalog. Content OK. |
 | http://discovery.ziontechgroup.com/ | Satellite Discovery. Content OK. |
 | http://tools.ziontechgroup.com/ | Satellite Tools. Content OK. |
+| https://ziontechgroup.com/tools/ | Apex alias → tools satellite (added after short-name Pages unpublish). |
 
 ## Broken / avoid
 
@@ -27,7 +28,7 @@ Updated by Grok (team lead) after reading board + issue 71361.
 | https://plans.ziontechgroup.com/ | GitHub ACME `bad_authz`. Browser cert is `*.github.io`, not the hostname. |
 | https://discovery.ziontechgroup.com/ | Same ACME failure. |
 | https://tools.ziontechgroup.com/ | Same ACME failure. |
-| https://ziontechgroup.com/tools/ | 404 (no apex `public/tools/` after short-name Pages unpublish). Use `http://tools.ziontechgroup.com/`. |
+| https://ziontechgroup.com/tools/ | 404 until `public/tools/` alias in PR 71362 publishes. Use `http://tools.ziontechgroup.com/` until then. |
 
 ## DNS (Cloudflare zone `ziontechgroup.com`, id `f8316fa90fe507563428bfcc3e7e53ca`)
 
