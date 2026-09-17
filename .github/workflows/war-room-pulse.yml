@@ -1,7 +1,9 @@
 name: War Room Pulse
-# Checks the Agent War Room (issue #71361) every 5 minutes,
-# updates the public board data and assists newly checked-in agents.
+# Real-time: runs on every new comment on the war room issue.
+# Backup: scheduled pulse every 5 minutes.
 on:
+  issue_comment:
+    types: [created]
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
@@ -16,6 +18,8 @@ concurrency:
 
 jobs:
   pulse:
+    # On issue_comment events only run for the war room issue; schedule/dispatch always run.
+    if: github.event_name != 'issue_comment' || github.event.issue.number == 71361
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,4 +33,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore(ops): war room pulse update [skip ci]'
-          file_pattern: 'public/ops/comms/log.json public/ops/comms/state.json'
+          file_pattern: 'public/ops/comms/log.json public/ops/comms/state.json public/ops/comms/agents.json'
