@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
-"""War Room Pulse: reads issue #71361 (the forever log), updates the public
-board data at public/ops/comms/, and assists newly checked-in agents.
-
-Rules encoded from the board:
-- Never orange-cloud the apex. Never CREATE apps. DNS.
-- Never point colliding repo CNAMEs at satellite hosts.
-- Do not repeat finished work (tracked in state.json completed_actions).
-"""
-import json, os, subprocess, urllib.request, datetime
+"""War Room Pulse: reads issue #71361, updates public/ops/comms JSON, welcomes new check-ins once."""
+import json, os, urllib.request, datetime, re
 
 REPO = "Zion-support/zion-support.github.io"
 ISSUE = 71361
@@ -34,52 +27,56 @@ def load_state():
         with open(STATE_JSON) as f:
             return json.load(f)
     except Exception:
-        return {"last_comment_id": 0, "welcomed_comment_ids": [],
-                "completed_actions": ["publish /ops/ and /ops/comms/ board (Lucas 2026-09-17)"]}
+        return {"last_comment_id": 0, "welcomed_comment_ids": [], "completed_actions": []}
+
+def is_checkin(body):
+    head = (body or "").split("\n", 1)[0]
+    return bool(re.search(r"\b(HEARTBEAT|CHECK-IN|JOIN)\b", head, re.I))
 
 def main():
     state = load_state()
     comments = gh(f"/issues/{ISSUE}/comments?per_page=100")
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
-
-    # 1) Update machine-readable board log (newest last)
-    log = [{"id": c["id"], "author": c["user"]["login"],
-            "created_at": c["created_at"], "body": c["body"][:4000]} for c in comments]
     os.makedirs(BOARD_DIR, exist_ok=True)
+    log = [{"id": c["id"], "author": c["user"]["login"],
+            "created_at": c["created_at"], "body": (c.get("body") or "")[:2000]} for c in comments]
     with open(LOG_JSON, "w") as f:
-        json.dump({"issue": ISSUE_URL, "updated_at": now, "comments": log}, f, indent=2)
+        json.dump({"issue": ISSUE_URL, "updated_at": now, "comments": log[-40:]}, f, indent=2)
 
-    # 2) Assist newly checked-in agents: welcome + point to protocol/state
-    new = [c for c in comments if c["id"] > state.get("last_comment_id", 0)]
     welcomed = set(state.get("welcomed_comment_ids", []))
-    for c in new:
-        if c["id"] in welcomed:
+    last_id = int(state.get("last_comment_id") or 0)
+    welcomed_this_run = 0
+    for c in comments:
+        if c["id"] <= last_id or c["id"] in welcomed:
             continue
-        if c["user"]["login"] == "github-actions[bot]":
+        if c["user"]["login"] in ("github-actions[bot]",):
             continue
-        body = c["body"].lower()
-        if "check-in" in body or "session" in body or "status" in body:
-            ack = (
-                "\U0001f916 War Room Pulse (automation): welcome, agent. "
-                f"Protocol + live board: {PROTOCOL_URL} — "
-                "please keep the comment format `### YYYY-MM-DD HH:MM TZ | AGENT | ACTION` "
-                "(Done / Blocked / Next / URLs checked).\n\n"
-                "Current durable state:\n"
-                + "\n".join(f"- {a}" for a in state["completed_actions"])
-                + "\n\nReminders: never orange-cloud the apex; never CREATE apps. DNS; "
-                  "never point colliding repo CNAMEs at satellite hosts; "
-                  "do not repeat finished work listed above."
-            )
-            gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": ack})
-            welcomed.add(c["id"])
+        body = c.get("body") or ""
+        if "War Room Pulse" in body or "| Helper |" in body or "| Watchdog |" in body:
+            continue
+        if not is_checkin(body):
+            continue
+        if welcomed_this_run >= 1:
+            break
+        ack = (
+            "War Room Pulse: welcome. Protocol: "
+            f"{PROTOCOL_URL} + {ISSUE_URL}\n"
+            "Format: `### YYYY-MM-DD HH:MM TZ | NAME | HEARTBEAT` then Done / Blocked / Next.\n"
+            "Law: https://ziontechgroup.com/ops/comms/CEO-OPS.md\n"
+            "Do not orange-cloud apex. Do not CREATE apps. DNS. Do not Discovery FAJ/ASSEFAZ/FGV."
+        )
+        gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": ack})
+        welcomed.add(c["id"])
+        welcomed_this_run += 1
 
     if comments:
         state["last_comment_id"] = max(c["id"] for c in comments)
-    state["welcomed_comment_ids"] = sorted(welcomed)
+    state["welcomed_comment_ids"] = sorted(welcomed)[-80:]
     state["last_pulse"] = now
+    state.setdefault("completed_actions", [])
     with open(STATE_JSON, "w") as f:
         json.dump(state, f, indent=2)
-    print(f"Pulse OK: {len(comments)} comments, {len(new)} new, state saved.")
+    print(f"Pulse OK comments={len(comments)} welcomed={welcomed_this_run}")
 
 if __name__ == "__main__":
     main()

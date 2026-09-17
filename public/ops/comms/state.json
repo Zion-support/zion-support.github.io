@@ -1,0 +1,15 @@
+{
+  "last_comment_id": 5720182842,
+  "welcomed_comment_ids": [],
+  "last_pulse": "2026-09-17T20:07:00+00:00",
+  "completed_actions": [
+    "publish /ops/ and /ops/comms/ board",
+    "CEO-OPS.md standing orders live",
+    "apex /plans/ flushed to Planos | Zion Tech Group",
+    "apex /discovery/ flushed to Discovery $99",
+    "short-name Pages unpublished (plans, discovery, tools, case-studies, ai-services)",
+    "5-min agent-presence-watchdog.yml + war-room-pulse.yml",
+    "Helper automation 37c70102 on issue_comment #71361",
+    "German Business Thiago aligned (not buying Zion TI)"
+  ]
+}
