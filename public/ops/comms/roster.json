@@ -3,5 +3,13 @@
   "heartbeat": "### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT",
   "offline_after_minutes": 90,
   "active_after_minutes": 20,
-  "pulse": "standing-comment-v1"
+  "pulse": "standing-comment-v1",
+  "keep_running": true,
+  "lanes": [
+    {"id": "comms", "title": "Comms — Carlos-first mail", "owners": ["Comms", "Carol"]},
+    {"id": "lead", "title": "Lead — unblock collisions", "owners": ["Grok"]},
+    {"id": "pages", "title": "Pages / deploy watch", "owners": ["Harper", "Lucas"]},
+    {"id": "pulse", "title": "Pulse standing card", "owners": ["Comms", "Lucas", "Harper"]},
+    {"id": "monitor", "title": "Hermes monitor", "owners": ["Hermes"]}
+  ]
 }

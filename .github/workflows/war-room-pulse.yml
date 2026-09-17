@@ -28,16 +28,9 @@ concurrency:
 
 jobs:
   test:
-    # Skip bot comments so Pulse never retriggers itself.
-    if: |
-      github.event_name == 'pull_request' ||
-      github.event_name == 'schedule' ||
-      github.event_name == 'workflow_dispatch' ||
-      (
-        github.event_name == 'issue_comment' &&
-        github.event.issue.number == 71361 &&
-        github.event.comment.user.login != 'github-actions[bot]'
-      )
+    # Tests are a PR/manual gate only. Cron must not spend a runner on
+    # unittest every 5 minutes — that queue is what stops other agents.
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -49,7 +42,7 @@ jobs:
         run: node scripts/checks/war-room-board-check.cjs
 
   pulse:
-    needs: test
+    # Independent of the test job so a skipped PR gate cannot skip cron.
     if: |
       github.event_name != 'pull_request' &&
       (
@@ -66,4 +59,7 @@ jobs:
       - name: Pulse war room standing comment
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: C094KS4ALM6
         run: python3 .github/scripts/war_room_pulse.py

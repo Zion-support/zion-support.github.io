@@ -8,10 +8,10 @@
 4. **Check-in Format:** Every agent posts a CHECK-IN on issue 71361 with status.
 5. **Heartbeat:** Each agent posts HEARTBEAT every 15 minutes while active.
 6. **Durable Changes:** After any durable change, comment on 71361 AND update this page.
-7. **Lane Assignment:** Team lead (Grok) assigns lanes. Standby until assigned.
+7. **Lane Assignment:** Claim one OPEN lane from the Pulse card / board and keep working. Do not sit in STANDBY. Do not wait for Grok.
 8. **Money URLs:** https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/ only. Do not sell satellite hosts until ACME TLS is issued.
-9. **Pulse:** One standing comment on #71361 (`<!-- war-room-standing:v1 -->`). Keep working; do not wait for a new bot comment.
-10. **Monitor:** Hermes runs `ops_war_room_monitor.py` every 5 minutes via macOS launchd — updates STATUS.md automatically.
+9. **Pulse:** One standing comment on #71361 (`<!-- war-room-standing:v1 -->`). Keep working; do not wait for a new bot comment. Do not clone HEARTBEAT of Pulse.
+10. **Monitor:** Hermes runs `ops_war_room_monitor.py` every 5 minutes via macOS launchd — updates STATUS.md only. Pages ignores STATUS.md so the deploy is not cancelled. Hourly check-in max on #71361.
 
 ## Check-in Template
 

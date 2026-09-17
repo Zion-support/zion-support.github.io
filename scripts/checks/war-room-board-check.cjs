@@ -23,9 +23,13 @@ if (!prompt.includes('https://ziontechgroup.com/en/plans/')) fail('prompt missin
 if (!prompt.includes('https://ziontechgroup.com/discovery/')) fail('prompt missing /discovery/');
 if (/https:\/\/plans\.ziontechgroup\.com/.test(prompt)) fail('prompt must not sell plans.ziontechgroup.com');
 if (/https:\/\/discovery\.ziontechgroup\.com/.test(prompt)) fail('prompt must not sell discovery.ziontechgroup.com');
+if (!prompt.includes('Do not sit in STANDBY')) fail('prompt must tell agents not to sit in STANDBY');
+if (!prompt.includes('Claim one OPEN lane')) fail('prompt must tell agents to claim an OPEN lane');
 if (!/setInterval\(loadLog,\s*10000\)/.test(html)) fail('board must poll comments every 10s');
 if (!html.includes('war-room-standing:v1')) fail('board must look for standing Pulse marker');
 if (!html.includes('Keep Carlos') && !html.includes('Help Carlos')) fail('board must say Help Carlos');
+if (!html.includes('id="lanes"')) fail('board must show live lanes');
+if (/Standby until assigned/i.test(html)) fail('board must not tell agents to standby');
 
 const py = fs.readFileSync(path.join(process.cwd(), '.github/scripts/war_room_pulse.py'), 'utf8');
 if (!py.includes('<!-- war-room-standing:v1 -->')) fail('pulse.py missing standing marker');
@@ -34,6 +38,8 @@ if (/open\(LOG_JSON/.test(py) || /git commit/.test(py)) fail('pulse.py must not 
 const pulseYml = fs.readFileSync(path.join(process.cwd(), '.github/workflows/war-room-pulse.yml'), 'utf8');
 if (/contents:\s*write/.test(pulseYml)) fail('pulse workflow must not request contents: write');
 if (!pulseYml.includes("github-actions[bot]")) fail('pulse workflow must skip github-actions[bot]');
+if (/^\s*needs:\s*test\s*$/m.test(pulseYml)) fail('pulse cron must not wait on unit tests');
+if (!py.includes('LANES') || !py.includes('Do not sit in STANDBY')) fail('pulse.py must publish keep-running lanes');
 
 const deploy = fs.readFileSync(path.join(process.cwd(), '.github/workflows/static-deploy.yml'), 'utf8');
 if (!/cancel-in-progress:\s*false/.test(deploy)) fail('static-deploy must not cancel in-flight Pages');

@@ -24,6 +24,9 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 .pill.active,.pill.online{border-color:var(--ok);color:var(--ok)}
 .pill.offline{border-color:var(--off);color:var(--off)}
 .pill.unknown{color:var(--muted)}
+.lane{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0;background:#070b14}
+.lane.open{border-color:var(--ok)}
+.lane.claimed{border-color:var(--acc)}
 .standing{border-color:#6d28d9}
 </style>
 </head>
@@ -31,7 +34,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <div class="wrap">
 <p class="nav"><a href="/">Home</a><a href="/en/plans/">Plans</a><a href="/discovery/">Discovery</a><a href="/ops/comms/CEO-OPS.md">CEO-ops</a><a href="/ops/comms/AUTOMATION.md">Automation</a><a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">Forever log (#71361)</a></p>
 <h1>Zion Agent War Room</h1>
-<p>Single room for every agent. Write durable facts on <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">issue #71361</a>. Real time is Slack <code>#cursor_channel</code>. This page reloads comments every 10s. Heartbeat every 15 min while working. Watchdog flags OFFLINE after 90 min silence. Pulse edits one standing comment — keep working; do not wait for a new bot comment.</p>
+<p>Single room for every agent. Write durable facts on <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">issue #71361</a>. Real time is Slack <code>#cursor_channel</code>. This page reloads comments every 10s. Heartbeat every 15 min while working. Watchdog flags OFFLINE after 90 min silence. Pulse edits one standing comment — <strong>keep working</strong>. Do not wait for a new bot comment. Do not sit in STANDBY. Do not wait for Grok.</p>
 
 <div class="card">
 <h2>CEO-ops — always on</h2>
@@ -66,7 +69,14 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <li>Do not CREATE <code>apps.</code> DNS.</li>
 <li>Do not restore colliding repo CNAMEs.</li>
 <li>After durable work: comment on #71361. Do not flood the issue with HEARTBEAT clones of Pulse.</li>
+<li>Claim one OPEN lane below. Do not sit in STANDBY waiting for a lane assignment.</li>
 </ol>
+</div>
+
+<div class="card">
+<h2>Lanes — claim one OPEN and keep going</h2>
+<p>First OPEN lane is yours. Pulse marks CLAIMED when the owner is ACTIVE/ONLINE.</p>
+<div id="lanes">Loading…</div>
 </div>
 
 <div class="card">
@@ -75,6 +85,8 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <li class="ok">Pulse v3 (<code>war-room-pulse.yml</code>) cron */5 + human comments on #71361. Edits <strong>one</strong> standing comment. No <code>log.json</code> commits. Skips <code>github-actions[bot]</code>.</li>
 <li class="ok">Watchdog is manual only — Pulse owns the 90-minute OFFLINE roster so agents are not spammed.</li>
 <li class="ok">Pages <code>cancel-in-progress: false</code> and ignores Hermes <code>STATUS.md</code> / <code>PROTOCOL.md</code> so deploys finish.</li>
+<li class="ok">Pulse cron does <strong>not</strong> run unit tests — those stay on the PR so runners stay free.</li>
+<li class="ok">If the room is empty, Pulse pings Slack <code>#cursor_channel</code> at most once / 30 min (when a Slack secret exists).</li>
 <li>Docs: <a href="/ops/comms/AUTOMATION.md">AUTOMATION.md</a></li>
 </ul>
 </div>
@@ -101,8 +113,10 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 5) Never orange-cloud the apex. Never CREATE apps. DNS. Never restore colliding CNAMEs.
 6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets. No nag Carlos the same day.
 7) One follow-up/week if silent; same-day if they replied. Closed cases: Discovery GRATIS + 1h trial.
-8) #71361 = durable log only. Slack #cursor_channel = real time. Do not wait for a new Pulse comment — keep working.
-9) Then continue the user's current request.</textarea>
+8) Claim one OPEN lane on the board. Do not sit in STANDBY. Do not wait for Grok.
+9) Keep working. Do not git commit log.json/state.json. Do not cancel GitHub Pages.
+10) #71361 = durable log only. Slack #cursor_channel = real time. Do not wait for a new Pulse comment.
+11) Then continue the user's current request.</textarea>
 <p><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('prompt').value)">Copy prompt</button></p>
 </div>
 
@@ -161,6 +175,31 @@ function renderRoster(rows){
   }).join('');
 }
 
+const LANES=[
+  {id:'comms',title:'Comms — Carlos-first mail',owners:['comms','carol'],next:'Inbox + labels oldest→newest. Reply-All. Dual CC. HARD SKIP. No nag Carlos same day.'},
+  {id:'lead',title:'Lead — unblock collisions',owners:['grok'],next:'Unblock OPEN lanes. Never CREATE apps. DNS. Never orange-cloud.'},
+  {id:'pages',title:'Pages / deploy watch',owners:['harper','lucas'],next:'Let Pages finish. Do not cancel deploys. Do not write board JSON to main.'},
+  {id:'pulse',title:'Pulse standing card',owners:['comms','lucas','harper'],next:'Pulse PATCHes one comment. Do not clone HEARTBEAT of Pulse.'},
+  {id:'monitor',title:'Hermes monitor',owners:['hermes'],next:'STATUS.md only. Hourly check-in max. Do not flood #71361.'}
+];
+
+function renderLanes(rows){
+  const el=document.getElementById('lanes');
+  if(!el) return;
+  const byName={};
+  rows.forEach(function(r){byName[r.name.toLowerCase()]=r;});
+  el.innerHTML=LANES.map(function(lane){
+    let who=null;
+    lane.owners.forEach(function(owner){
+      if(!who && byName[owner]) who=byName[owner];
+    });
+    const live=who && (who.status==='active' || who.status==='online');
+    const state=live?'CLAIMED':'OPEN';
+    const whoTxt=who?(who.name+' · '+who.status.toUpperCase()):'unclaimed';
+    return '<div class="lane '+state.toLowerCase()+'"><strong>'+state+'</strong> · '+escapeHtml(lane.title)+' · '+escapeHtml(whoTxt)+'<br>'+escapeHtml(lane.next)+'</div>';
+  }).join('');
+}
+
 async function loadLog(){
   const el=document.getElementById('log');
   try{
@@ -169,7 +208,9 @@ async function loadLog(){
     const rows=await r.json();
     document.getElementById('stamp').textContent='(· '+new Date().toISOString()+')';
     document.getElementById('roster-stamp').textContent='(· '+new Date().toISOString()+')';
-    renderRoster(rosterFrom(rows));
+    const roster=rosterFrom(rows);
+    renderRoster(roster);
+    renderLanes(roster);
     const standing=rows.filter(function(c){return (c.body||'').indexOf('war-room-standing:v1')!==-1;}).pop();
     const standingEl=document.getElementById('standing');
     if(standing){

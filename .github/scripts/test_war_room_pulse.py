@@ -130,6 +130,42 @@ class PulseHelpersTest(unittest.TestCase):
         self.assertIn("Keep working", body)
         self.assertIn("Harper", body)
         self.assertIn("```json", body)
+        self.assertIn("Do not sit in STANDBY", body)
+        self.assertIn("**Lanes", body)
+        self.assertIn("**CLAIMED** · Pages / deploy watch", body)
+        self.assertIn("**OPEN** · Comms — Carlos-first mail", body)
+
+    def test_lane_states_open_until_owner_is_live(self):
+        agents = {
+            "Harper": {"status": "ACTIVE", "minutes_since_seen": 4},
+            "Hermes": {"status": "OFFLINE", "minutes_since_seen": 120},
+        }
+        states = {row["id"]: row for row in wrp.lane_states(agents)}
+        self.assertEqual(states["pages"]["state"], "CLAIMED")
+        self.assertEqual(states["pages"]["who"], "Harper")
+        self.assertEqual(states["comms"]["state"], "OPEN")
+        self.assertEqual(states["monitor"]["state"], "OPEN")
+        self.assertEqual(states["lead"]["state"], "OPEN")
+
+    def test_should_slack_keepalive_cools_down(self):
+        empty = {"Grok": {"status": "OFFLINE"}}
+        live = {"Comms": {"status": "ACTIVE"}}
+        self.assertFalse(wrp.should_slack_keepalive(live, "", self.now))
+        self.assertTrue(wrp.should_slack_keepalive(empty, "", self.now))
+        self.assertFalse(wrp.should_slack_keepalive(
+            empty, "2026-09-17T21:20:00+00:00", self.now
+        ))
+        self.assertTrue(wrp.should_slack_keepalive(
+            empty, "2026-09-17T20:50:00+00:00", self.now
+        ))
+
+    def test_fingerprint_includes_lane_state(self):
+        agents = {"Harper": {"status": "ACTIVE", "minutes_since_seen": 4, "last_action": "HEARTBEAT"}}
+        open_lanes = [{"id": "comms", "state": "OPEN"}]
+        claimed = [{"id": "comms", "state": "CLAIMED"}]
+        fp1 = wrp.fingerprint_for(agents, ["a"], [], 1, open_lanes)
+        fp2 = wrp.fingerprint_for(agents, ["a"], [], 1, claimed)
+        self.assertNotEqual(fp1, fp2)
 
 
 if __name__ == "__main__":

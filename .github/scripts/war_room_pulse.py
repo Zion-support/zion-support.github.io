@@ -47,7 +47,47 @@ SKIP_NAMES = frozenset({
 OFFLINE_AFTER_MIN = 90
 ACTIVE_AFTER_MIN = 20
 FORCE_REFRESH_MIN = 25
+SLACK_COOLDOWN_MIN = 30
 MAX_PAGES = 15
+SLACK_CHANNEL = "C094KS4ALM6"
+SLACK_RE = re.compile(r"<!-- war-room-slack:([0-9T:\+\-]+) -->")
+
+# Open lanes keep agents moving. Never tell anyone to sit in STANDBY.
+LANES = (
+    {
+        "id": "comms",
+        "title": "Comms — Carlos-first mail",
+        "owners": ("comms", "carol"),
+        "next": (
+            "Inbox + labels oldest→newest. Reply-All. "
+            "CC carlos@ AND commercial@. HARD SKIP list. No nag Carlos same day."
+        ),
+    },
+    {
+        "id": "lead",
+        "title": "Lead — unblock collisions",
+        "owners": ("grok",),
+        "next": "Unblock OPEN lanes. Never CREATE apps. DNS. Never orange-cloud.",
+    },
+    {
+        "id": "pages",
+        "title": "Pages / deploy watch",
+        "owners": ("harper", "lucas"),
+        "next": "Let Pages finish. Do not cancel deploys. Do not write board JSON to main.",
+    },
+    {
+        "id": "pulse",
+        "title": "Pulse standing card",
+        "owners": ("comms", "lucas", "harper"),
+        "next": "Pulse PATCHes this card. Do not clone HEARTBEAT of Pulse onto #71361.",
+    },
+    {
+        "id": "monitor",
+        "title": "Hermes monitor",
+        "owners": ("hermes",),
+        "next": "STATUS.md only (Pages ignores it). Hourly check-in max. Do not flood.",
+    },
+)
 
 
 def github_token():
@@ -260,7 +300,89 @@ def find_standing(comments):
     return standing
 
 
-def fingerprint_for(agents, done, checkins, last_human_id):
+def lane_owner_row(agents, owners):
+    owners_l = {o.lower() for o in owners}
+    for name, row in agents.items():
+        if name.lower() in owners_l:
+            return name, row
+    return None, None
+
+
+def lane_states(agents):
+    out = []
+    for lane in LANES:
+        name, row = lane_owner_row(agents, lane["owners"])
+        live = bool(row and row.get("status") in ("ACTIVE", "ONLINE"))
+        out.append({
+            "id": lane["id"],
+            "title": lane["title"],
+            "next": lane["next"],
+            "state": "CLAIMED" if live else "OPEN",
+            "who": name,
+            "status": (row or {}).get("status") or "EMPTY",
+        })
+    return out
+
+
+def extract_slack_stamp(body):
+    match = SLACK_RE.search(body or "")
+    return match.group(1) if match else ""
+
+
+def should_slack_keepalive(agents, last_slack_iso, now, cooldown_min=SLACK_COOLDOWN_MIN):
+    """Ping Slack only when the room is empty, and at most once per cooldown."""
+    if any(row.get("status") in ("ACTIVE", "ONLINE") for row in agents.values()):
+        return False
+    if last_slack_iso:
+        mins = minutes_ago(last_slack_iso, now)
+        if mins is not None and mins < cooldown_min:
+            return False
+    return True
+
+
+def slack_keepalive(text):
+    webhook = os.environ.get("SLACK_WEBHOOK_URL") or ""
+    token = os.environ.get("SLACK_BOT_TOKEN") or ""
+    channel = os.environ.get("SLACK_CHANNEL") or SLACK_CHANNEL
+    payload = {"text": text}
+    try:
+        if webhook:
+            req = urllib.request.Request(
+                webhook,
+                method="POST",
+                headers={"Content-Type": "application/json", "User-Agent": "war-room-pulse"},
+                data=json.dumps(payload).encode(),
+            )
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                resp.read()
+            return "webhook"
+        if token:
+            payload = {"channel": channel, "text": text}
+            req = urllib.request.Request(
+                "https://slack.com/api/chat.postMessage",
+                method="POST",
+                headers={
+                    "Authorization": f"Bearer {token}",
+                    "Content-Type": "application/json; charset=utf-8",
+                    "User-Agent": "war-room-pulse",
+                },
+                data=json.dumps(payload).encode(),
+            )
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                raw = resp.read()
+            body = json.loads(raw) if raw else {}
+            if not body.get("ok"):
+                print(f"Pulse Slack keepalive skipped: {body.get('error') or 'not_ok'}")
+                return None
+            return "api"
+    except Exception as exc:
+        print(f"Pulse Slack keepalive skipped: {exc}")
+        return None
+    print("Pulse Slack keepalive skipped: no SLACK_WEBHOOK_URL or SLACK_BOT_TOKEN")
+    return None
+
+
+def fingerprint_for(agents, done, checkins, last_human_id, lanes=None):
     payload = {
         "agents": {
             name: {
@@ -273,6 +395,10 @@ def fingerprint_for(agents, done, checkins, last_human_id):
         "done": done,
         "checkins": checkins,
         "last_human_id": last_human_id,
+        "lanes": [
+            {"id": row["id"], "state": row["state"]}
+            for row in (lanes or [])
+        ],
     }
     raw = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
     return hashlib.sha256(raw).hexdigest()[:16]
@@ -301,21 +427,28 @@ def needs_update(standing, fingerprint, now):
     return mins is None or mins >= FORCE_REFRESH_MIN
 
 
-def render_standing(now, agents, done, checkins, fingerprint):
+def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_stamp=""):
     stamp = now.strftime("%Y-%m-%d %H:%M UTC")
     online = sum(1 for a in agents.values() if a["status"] in ("ACTIVE", "ONLINE"))
     offline = [name for name, row in sorted(agents.items()) if row["status"] == "OFFLINE"]
+    lanes = lanes if lanes is not None else lane_states(agents)
+    open_lanes = [row for row in lanes if row["state"] == "OPEN"]
     lines = [
         STANDING_MARKER,
         f"<!-- war-room-fp:{fingerprint} -->",
+    ]
+    if slack_stamp:
+        lines.append(f"<!-- war-room-slack:{slack_stamp} -->")
+    lines.extend([
         f"### {stamp} | Pulse | STANDING",
         "",
-        "**Keep working.** This card is edited in place every ~5 min. "
+        "**Keep working. Do not sit in STANDBY. Do not wait for Grok.** "
+        "This card is edited in place every ~5 min. "
         "Do not wait for a new Pulse comment. Heartbeat every 15 min while working.",
         "",
         f"**Roster** ({online} ACTIVE/ONLINE, offline = silent >{OFFLINE_AFTER_MIN} min, "
         f"ACTIVE = seen ≤{ACTIVE_AFTER_MIN} min)",
-    ]
+    ])
     if agents:
         for name, row in sorted(agents.items(), key=lambda kv: (kv[1]["status"] != "ACTIVE", kv[0].lower())):
             mins = row.get("minutes_since_seen")
@@ -336,7 +469,28 @@ def render_standing(now, agents, done, checkins, fingerprint):
         lines.append("**OFFLINE — restart now:** " + ", ".join(offline))
         lines.append(f"Paste the restart prompt on {BOARD_URL} and HEARTBEAT. Do not sit idle.")
         lines.append("")
+    lines.append(
+        "**Lanes — claim one OPEN lane and keep going.** "
+        "Do not wait for a lane assignment."
+    )
+    if lanes:
+        for row in lanes:
+            who = f" · {row['who']} {row['status']}" if row.get("who") else " · unclaimed"
+            lines.append(f"- **{row['state']}** · {row['title']}{who} — {row['next']}")
+        if open_lanes:
+            lines.append(
+                "First OPEN lane for a new agent: **" + open_lanes[0]["title"] + "**"
+            )
+    else:
+        lines.append("- (lanes unavailable)")
     lines.extend([
+        "",
+        "**Do not stop**",
+        "- If you are in this room, work. Paste the restart prompt if you just woke.",
+        "- Do not write board JSON (`log` / `state` / `agents`) onto main.",
+        "- Do not cancel GitHub Pages. Hermes `STATUS.md` is ignored by deploy.",
+        "- Do not flood #71361 with HEARTBEAT clones of this card. Slack is real time.",
+        "",
         "**Already done — do not repeat:**",
     ])
     if done:
@@ -360,6 +514,7 @@ def render_standing(now, agents, done, checkins, fingerprint):
             "offline_after_minutes": OFFLINE_AFTER_MIN,
             "active_after_minutes": ACTIVE_AFTER_MIN,
             "agents": agents,
+            "lanes": lanes,
         }, indent=2, sort_keys=True),
         "```",
     ])
@@ -382,21 +537,35 @@ def main(argv=None):
     done = learn_actions(comments)
     checkins = recent_checkins(comments, now)
     last_human = last_human_comment_id(comments)
-    fingerprint = fingerprint_for(agents, done, checkins, last_human)
+    lanes = lane_states(agents)
+    fingerprint = fingerprint_for(agents, done, checkins, last_human, lanes)
     standing = find_standing(comments)
-    if not needs_update(standing, fingerprint, now):
+    slack_stamp = extract_slack_stamp((standing or {}).get("body") or "")
+    slack_posted = False
+    if should_slack_keepalive(agents, slack_stamp, now):
+        posted = slack_keepalive(
+            "War room empty — all named agents OFFLINE. "
+            f"Paste the restart prompt on {BOARD_URL} and keep working. "
+            "Claim one OPEN lane. Do not sit in STANDBY. Do not wait for Grok. "
+            f"Durable log: {ISSUE_URL}"
+        )
+        if posted:
+            slack_stamp = now.replace(microsecond=0).isoformat()
+            slack_posted = True
+    if not needs_update(standing, fingerprint, now) and not slack_posted:
         print(
             f"Pulse v3 skip: fingerprint {fingerprint} unchanged, "
             f"{len(comments)} comments, {len(agents)} agents "
             f"({sum(1 for a in agents.values() if a['status'] in ('ACTIVE', 'ONLINE'))} live)."
         )
         return 0
-    body = render_standing(now, agents, done, checkins, fingerprint)
+    body = render_standing(now, agents, done, checkins, fingerprint, lanes, slack_stamp)
     action, comment_id = upsert_standing(standing, body)
     print(
         f"Pulse v3 {action} comment {comment_id}: {len(comments)} comments, "
         f"{len(agents)} agents, {len(done)} learned actions, "
-        f"{len(checkins)} recent check-ins, fp {fingerprint}."
+        f"{len(checkins)} recent check-ins, {sum(1 for row in lanes if row['state']=='OPEN')} open lanes, "
+        f"fp {fingerprint}."
     )
     return 0
 

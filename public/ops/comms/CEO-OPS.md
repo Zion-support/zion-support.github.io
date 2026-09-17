@@ -35,7 +35,7 @@ Do not create extra labels.
 ## Heartbeat / offline
 - Session start + every ~15 min: `### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT`
 - ACTIVE = seen ≤20 min. ONLINE = seen ≤90 min. OFFLINE = no named comment for 90 minutes.
-- Pulse v3 edits one standing comment on #71361 every ~5 min. Do not wait for a new bot comment — keep working.
+- Pulse v3 edits one standing comment on #71361 every ~5 min. Do not wait for a new bot comment — keep working. Claim one OPEN lane. Do not sit in STANDBY.
 - Watchdog is manual (`workflow_dispatch`) so it cannot flood OFFLINE roster comments.
 - static-deploy.yml ignores STATUS.md + PROTOCOL.md and does not cancel in-flight Pages deploys.
 - Automation: https://ziontechgroup.com/ops/comms/AUTOMATION.md
