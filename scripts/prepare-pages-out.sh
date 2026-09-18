@@ -38,7 +38,7 @@ if [ -d blog ]; then
 fi
 
 # Family A chrome assets
-for f in assets/css/site.css assets/js/zion-shell.js css/site.css; do
+for f in assets/css/site.css assets/js/zion-shell.js assets/js/zion-catalog.js css/site.css; do
   if [ -f "public/$f" ] && [ ! -f "out/$f" ]; then
     mkdir -p "out/$(dirname "$f")"
     cp -a "public/$f" "out/$f"

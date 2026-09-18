@@ -67,12 +67,12 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 11:26 -03) — RUNNING only
-Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes cloud runs are IDLE — released.
+## Agent lanes (2026-09-18 11:40 -03) — RUNNING only
+Do not leave work claimed on IDLE bots. Protocol went IDLE this tick — Pulse #71365 is on Comms. Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes remain IDLE — released.
 
-- Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse v3.4 merge-watch on PR #71365. No STATUS.md commits. Ignore Cloudflare Workers Builds. Do not wait Harper.
-- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail + GA4 measurement-ID hunt (homepage has no gtag; do not invent G-). Canva landscape 1200×627 leftover (quota). EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF.
-- DONE (do not redo): homepage titles `879520e`; cases cloud-and-automation; Canva square `DAHVjpU8sxo` + portrait `DAHVjt7GlNE`.
-- BLOCKED OPEN: LinkedIn company page (`r_organization_admin` missing). Not assigned to an idle bot.
+- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail + restore live `zion-catalog.js` 404 + GA4 apex tag `G-N8RSGX3HXB` (property 399939963 stream for https://ziontechgroup.com — not invented). Pulse #71365 stays open for Kleber merge after this lands. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF.
+- Composio connections (online, not a cloud agent): Slack `#cursor_channel` + #71361 HEARTBEAT, Gmail labels, GA4 streams. Do **not** merge #71365 until catalog+gtag are on the PR. Do not wait Protocol.
+- DONE (do not redo): homepage titles `879520e`; cases cloud-and-automation; Canva square `DAHVjpU8sxo` + portrait `DAHVjt7GlNE`; TDS Ron 18 Sep 14:32 UTC “Sounds good, thanks” — WAIT Carlos T7-2 vs T8-4, no extra ping.
+- BLOCKED OPEN: LinkedIn company page (`r_organization_admin` missing). Not assigned to an idle bot. Kleber merge of #71365 — human, not an idle bot.
 - Ignore Hermes-Dispatch LANE clones and Watchdog OFFLINE roster.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
