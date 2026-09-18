@@ -72,6 +72,6 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - Hermes: monitor only. No STATUS.md commits.
 - Benjamin: public /cases/ live — storage / support / ai-consulting / field-services. Adding public-safe cloud-and-automation (no names, no prices). CTAs only /discovery/ + /en/plans/.
 - Carol: Comms backup. Reply-All. Dual CC. Inbox current: waiting Tacladders city/ZIP, TDS T7-2 vs T8-4, Altinex FE rates. Instant Client Sender OFF.
-- Quel + Rocket: PT LinkedIn already posted twice today — EN draft for 19 Sep only. Company page needs r_organization_admin. Copy/restyle Canva DAFsarD-8Yg (last edit 2023). Do not post YouTube/Surf Family.
+- Quel + Rocket: PT LinkedIn already posted twice today — EN draft for 19 Sep only. Company page needs r_organization_admin. Canva square crop live as DAHVjpU8sxo (from DAFsarD-8Yg); landscape/portrait Magic Resize quota exhausted — Rocket crops by hand. Do not post YouTube/Surf Family.
 - Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT ended. HeyGen Johnny 14:00 BRT next. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.

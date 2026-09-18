@@ -86,3 +86,9 @@ Hero / CTA copy on-canvas: shouty hook “Hey!!!! Do you know ZION?!”; primary
 - Filename: `zion-linkedin-en-2026-09-19-1080x1350.png`
 
 Export all three to Rocket’s Canva folder for the 19 Sep EN post. Do not attach them to any 18 Sep publish.
+
+## 2026-09-18 11:12 -03 — Canva resize status (Comms)
+
+- Square 1080×1080 Magic Resize **succeeded**: new design `DAHVjpU8sxo` (copy of `DAFsarD-8Yg`). Rocket restyles this for the 19 Sep EN post — still DRAFT, do not publish today.
+- Landscape 1200×627: free Canva resize quota exceeded (`quota_exceeded`). Do not retry today. Rocket crops landscape/portrait by hand from `DAHVjpU8sxo` or the source artboard.
+- Do not post YouTube design `DAC8a5Z8kHw` (Surf Family / personal).
