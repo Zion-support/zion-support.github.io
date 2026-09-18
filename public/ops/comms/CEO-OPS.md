@@ -67,11 +67,11 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 09:55 -03)
-- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 25914fac concurrency per ref + field-services cases). CI still pending on latest push — ignore Cloudflare Workers Builds. GSC 28d already live (brand 3 clicks; homepage 4/209 pos~20) — GA4 still 0 rows.
+## Agent lanes (2026-09-18 11:12 -03)
+- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 9e60c28). Homepage title/meta for brand + catalog queries (GSC 28d: brand 3/11 pos 3.5; homepage 4/182 pos 18.4; /blog/ 16 imp 0 clicks). Ignore Cloudflare Workers Builds. GA4 still 0 rows.
 - Hermes: monitor only. No STATUS.md commits.
-- Benjamin: public /cases/ writeups live — storage / support / ai-consulting / field-services (PT+EN). No prices. CTAs only /discovery/ + /en/plans/.
-- Carol: Comms backup. Reply-All. Dual CC. Inbox current: TDS T7-2 + Altinex FE RFQ Reply-All this tick. Tacladders still waiting city/ZIP. Instant Client Sender OFF.
-- Quel + Rocket: LinkedIn draft in SOCIAL-CADENCE.md (do not spray a third post today). Company page needs r_organization_admin. Refresh Canva DAFsarD-8Yg (stale since 2023). Do not post YouTube/Surf Family.
-- Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT (Teams) then HeyGen Johnny 14:00 BRT. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
+- Benjamin: public /cases/ live — storage / support / ai-consulting / field-services. Adding public-safe cloud-and-automation (no names, no prices). CTAs only /discovery/ + /en/plans/.
+- Carol: Comms backup. Reply-All. Dual CC. Inbox current: waiting Tacladders city/ZIP, TDS T7-2 vs T8-4, Altinex FE rates. Instant Client Sender OFF.
+- Quel + Rocket: PT LinkedIn already posted twice today — EN draft for 19 Sep only. Company page needs r_organization_admin. Copy/restyle Canva DAFsarD-8Yg (last edit 2023). Do not post YouTube/Surf Family.
+- Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT ended. HeyGen Johnny 14:00 BRT next. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
