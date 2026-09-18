@@ -23,7 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
       - name: Pulse war room
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,6 +30,8 @@ jobs:
 
       - name: Commit board updates
         # plain git — no third-party action (repo hygiene: SHA-pinned actions only)
+        # rebase + retry loop: concurrent scheduled bots push to main, causing
+        # non-fast-forward rejections ("fetch first"). Rebase before each retry.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -39,5 +40,16 @@ jobs:
             echo "No board changes."
           else
             git commit -m "chore(ops): war room pulse update [skip ci]"
-            git push
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin main && git push; then
+                echo "Push succeeded on attempt $i"
+                break
+              fi
+              echo "Push attempt $i failed; retrying after backoff"
+              sleep $((i * 5))
+              if [ "$i" -eq 5 ]; then
+                echo "::error::Push failed after 5 attempts"
+                exit 1
+              fi
+            done
           fi
