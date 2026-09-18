@@ -61,7 +61,7 @@ Carlos still owns (his clicks, not another brief):
 5. Crypto.com BRL withdraw/convert before 25/10.
 6. HPE Gen11 SKU list / R760XA PO for Diego (IT Creations). Do not guess SKUs.
 
-WAIT: HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS Ron T7-2 alternative vs T8-4 — Carlos confirms FC 16/32 and QLogic/Emulex (supplier price stays off this page) · Altinex Malik FE RFQ USA/Canada Reply-All 1a0b4b6e3ac0bb10 — Carlos rates, no invented day rates · Tacladders Archana waiting city/ZIP · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Microsoft Sergio 10:00 BRT window ended (do not nag).
+WAIT: HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS Ron T7-2 alternative vs T8-4 — Carlos confirms FC 16/32 and QLogic/Emulex (supplier price stays off this page) · Altinex Malik FE USA/Canada — Pleasanton 23 Sep first; remaining week of 28 Sep. Reply-All 1a0b509859543ad4. Carlos rates/FE; no invented day rates. Cincinnati 3941/5000 same street — waiting one vs two visits · Tacladders Archana waiting city/ZIP · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Microsoft Sergio 10:00 BRT window ended (do not nag) · Suzano Coupa 6800-GT0-00007 — Carlos already mailed Andrielly 18 Sep 14:57 UTC (do not nag).
 
 Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix is merge PR #71365 Pulse v3.4 (no git writes). Cloudflare Workers Builds: ziontechgroup is dashboard off-PR — ignore.
 
