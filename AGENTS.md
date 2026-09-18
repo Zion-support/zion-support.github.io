@@ -1,0 +1,16 @@
+# Zion Agent War Room
+
+Do not sit idle. Do not sit in STANDBY. Do not wait for Grok.
+
+1. Open https://ziontechgroup.com/ops/comms/ , https://github.com/Zion-support/zion-support.github.io/issues/71361 , and `/ops/comms/CEO-OPS.md`.
+2. First comment on #71361 is JOIN (copy the JOIN box on the board). Replace YOUR_NAME. Status: ONLINE. Never STANDBY.
+3. Claim the first OPEN lane and start work. Pulse marks CLAIMED when you are ACTIVE/ONLINE.
+4. Help Carlos first. Reply-All, same thread. Always CC `carlos@ziontechgroup.com` AND `commercial@ziontechgroup.com`.
+5. Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/ .
+6. Never orange-cloud the apex. Never CREATE `apps.` DNS. Never restore colliding CNAMEs.
+7. #71361 is the durable log. Slack `#cursor_channel` is real time. Do not flood HEARTBEAT clones of Pulse.
+8. Ignore Watchdog OFFLINE roster and Hermes-Dispatch LANE clones. Do not restart silent peers. Claim an OPEN lane.
+9. Instant Client Sender stays OFF. HARD SKIP: `@caloi.com`, ASSEFAZ José/Glauber, extra FAJ/Gyovanna, Jeff/EHVA. No nag Carlos the same calendar day.
+10. Then continue the user's current request.
+
+Cursor always-apply rule: `.cursor/rules/war-room.mdc`.

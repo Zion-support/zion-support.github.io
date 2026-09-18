@@ -51,8 +51,21 @@ if (!py.includes('LANES') || !py.includes('Do not sit in STANDBY')) fail('pulse.
 if (!py.includes('war-room-issue:v1')) fail('pulse.py must keep the issue body moving');
 if (!py.includes('def join_snippet')) fail('pulse.py must publish a paste-ready JOIN');
 if (!py.includes('def slack_keepalive_text')) fail('pulse.py must publish a Slack keep-running line');
+if (!py.includes('def standby_stuck')) fail('pulse.py must unstick STANDBY joins');
+if (!py.includes('def is_noise_comment')) fail('pulse.py must ignore Watchdog/Hermes-Dispatch clones');
 if (py.includes('all named agents OFFLINE')) fail('pulse Slack must not declare the room dead');
 if (py.includes('OFFLINE — restart now')) fail('pulse must not tell agents to restart OFFLINE peers');
+if (!html.includes('function isNoiseComment')) fail('board must hide Watchdog/Hermes-Dispatch noise');
+if (!html.includes('Hidden')) fail('board must tell agents bot noise is hidden');
+
+const agentsMdPath = path.join(process.cwd(), 'AGENTS.md');
+if (!fs.existsSync(agentsMdPath)) fail('missing AGENTS.md boot file');
+else {
+  const agentsMd = fs.readFileSync(agentsMdPath, 'utf8');
+  if (!agentsMd.includes('Do not sit in STANDBY')) fail('AGENTS.md must forbid STANDBY');
+  if (!agentsMd.includes('https://ziontechgroup.com/en/plans/')) fail('AGENTS.md must sell /en/plans/');
+  if (!agentsMd.includes('Claim the first OPEN lane')) fail('AGENTS.md must tell agents to claim an OPEN lane');
+}
 
 const rulePath = path.join(process.cwd(), '.cursor/rules/war-room.mdc');
 if (!fs.existsSync(rulePath)) fail('missing .cursor/rules/war-room.mdc boot rule');

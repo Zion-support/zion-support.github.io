@@ -2,10 +2,10 @@
   "roster": ["Grok", "Harper", "Benjamin", "Lucas", "Comms", "Hermes", "Carol", "Kilo", "Tablet", "Quel", "Rocket", "Swell", "Kilo AI", "Kleber bot"],
   "heartbeat": "### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT",
   "join": "### YYYY-MM-DD HH:MM TZ | YOUR_NAME | JOIN",
-  "keep_working": "Claim first OPEN lane. JOIN then work. Do not sit in STANDBY. Slack is real time.",
+  "keep_working": "Claim first OPEN lane. JOIN then work. Do not sit in STANDBY. Ignore Watchdog/Hermes-Dispatch clones. Slack is real time.",
   "offline_after_minutes": 90,
   "active_after_minutes": 20,
-  "pulse": "standing-comment-v1",
+  "pulse": "standing-comment-v1.4",
   "keep_running": true,
   "lanes": [
     {"id": "comms", "title": "Comms — Carlos-first mail", "owners": ["Comms", "Carol"]},

@@ -242,6 +242,61 @@ class PulseHelpersTest(unittest.TestCase):
         self.assertIn("| YOUR_NAME | JOIN", body)
         self.assertIn("You already have a lane", body)
 
+    def test_noise_comments_are_not_work_to_clone(self):
+        watchdog = comment(
+            80, "github-actions[bot]",
+            "### 2026-09-17 21:20 UTC | Watchdog | OFFLINE roster\nRestart: paste the prompt",
+        )
+        dispatch = comment(
+            81, "github-actions[bot]",
+            "### 2026-09-17 21:21 UTC | Hermes-Dispatch | LANE\nHermes: take this one task.",
+        )
+        welcome = comment(82, "github-actions[bot]", "🤖 War Room Pulse: welcome, agent.")
+        human = comment(83, "alice", "### 2026-09-17 21:22 UTC | Comms | HEARTBEAT")
+        self.assertTrue(wrp.is_noise_comment(watchdog))
+        self.assertTrue(wrp.is_noise_comment(dispatch))
+        self.assertTrue(wrp.is_noise_comment(welcome))
+        self.assertTrue(wrp.is_bot_comment(watchdog))
+        self.assertTrue(wrp.is_bot_comment(dispatch))
+        self.assertFalse(wrp.is_noise_comment(human))
+        self.assertFalse(wrp.is_bot_comment(human))
+
+    def test_standby_stuck_only_latest_status(self):
+        comments = [
+            comment(90, "alice", "### 2026-09-17 21:10 UTC | Lucas | JOIN\nStatus: STANDBY", "2026-09-17T21:10:00Z"),
+            comment(91, "bob", "### 2026-09-17 21:12 UTC | Harper | JOIN\nStatus: STANDBY", "2026-09-17T21:12:00Z"),
+            comment(92, "bob", "### 2026-09-17 21:20 UTC | Harper | HEARTBEAT\nStatus: ONLINE", "2026-09-17T21:20:00Z"),
+        ]
+        stuck = wrp.standby_stuck(comments, self.now)
+        self.assertEqual(stuck, ["Lucas"])
+
+    def test_slack_unstick_names_the_open_lane(self):
+        text = wrp.slack_unstick_text(
+            ["Lucas"],
+            [{"id": "comms", "title": "Comms — Carlos-first mail", "state": "OPEN"}],
+        )
+        self.assertIn("Lucas", text)
+        self.assertIn("STANDBY", text)
+        self.assertIn("Comms — Carlos-first mail", text)
+        self.assertIn("ONLINE", text)
+        self.assertFalse(wrp.should_slack_unstick([], "", self.now))
+        self.assertTrue(wrp.should_slack_unstick(["Lucas"], "", self.now))
+        self.assertFalse(wrp.should_slack_unstick(["Lucas"], "2026-09-17T21:20:00+00:00", self.now))
+
+    def test_render_standing_unsticks_standby(self):
+        body = wrp.render_standing(
+            self.now, {}, [], [], "deadbeefcafebabe", stuck=["Lucas"]
+        )
+        self.assertIn("Unstick — STANDBY is not a lane", body)
+        self.assertIn("Lucas", body)
+        self.assertIn("Ignore Watchdog OFFLINE roster", body)
+
+    def test_fingerprint_includes_stuck_standby(self):
+        agents = {"Harper": {"status": "ACTIVE", "minutes_since_seen": 4, "last_action": "HEARTBEAT"}}
+        fp1 = wrp.fingerprint_for(agents, ["a"], [], 1, [{"id": "comms", "state": "OPEN"}])
+        fp2 = wrp.fingerprint_for(agents, ["a"], [], 1, [{"id": "comms", "state": "OPEN"}], ["Lucas"])
+        self.assertNotEqual(fp1, fp2)
+
 
 if __name__ == "__main__":
     unittest.main()

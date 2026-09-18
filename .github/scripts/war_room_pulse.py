@@ -43,7 +43,12 @@ BOT_LOGINS = frozenset({
 })
 BOT_NAMES = frozenset({
     "pulse", "watchdog", "roombot", "war room pulse", "agent presence watchdog",
+    "hermes-dispatch", "nightwatch",
 })
+NOISE_NAMES = frozenset({
+    "watchdog", "hermes-dispatch", "nightwatch", "pulse",
+})
+STANDBY_STATUS_RE = re.compile(r"(?im)^Status:\s*STANDBY\b")
 SKIP_NAMES = frozenset({
     "agent", "your_name", "your-name", "name", "your_name | heartbeat",
 })
@@ -162,11 +167,31 @@ def is_standing_comment(comment):
     return STANDING_MARKER in body
 
 
+def is_noise_comment(comment):
+    """Watchdog OFFLINE roster, Hermes-Dispatch LANE, Pulse v2 welcome — do not clone."""
+    if is_standing_comment(comment):
+        return True
+    body = (comment or {}).get("body") or ""
+    head = body[:500].lower()
+    if "offline roster" in head:
+        return True
+    if "hermes: take this one task" in head:
+        return True
+    if "war room pulse:" in head and "welcome" in head:
+        return True
+    header = parse_header(body)
+    if header and header["name"].strip().lower() in NOISE_NAMES:
+        return True
+    return False
+
+
 def is_bot_comment(comment):
     if is_standing_comment(comment):
         return True
     login = ((comment or {}).get("user") or {}).get("login") or ""
     if is_bot_login(login):
+        return True
+    if is_noise_comment(comment):
         return True
     header = parse_header((comment or {}).get("body") or "")
     if header and is_bot_name(header["name"]):
@@ -335,6 +360,35 @@ def first_open_lane(lanes):
     return (lanes or [None])[0]
 
 
+def comment_is_standby(body):
+    header = parse_header(body or "")
+    if header and header["action"].upper() == "STANDBY":
+        return True
+    return bool(STANDBY_STATUS_RE.search(body or ""))
+
+
+def standby_stuck(comments, now, within_min=OFFLINE_AFTER_MIN):
+    """Names whose latest check-in in the window is STANDBY — unstick them."""
+    latest = {}
+    existing = {}
+    for comment in comments:
+        if is_bot_comment(comment):
+            continue
+        body = comment.get("body") or ""
+        mins = minutes_ago(comment.get("created_at") or "", now)
+        if mins is None or mins > within_min:
+            continue
+        header = parse_header(body)
+        login = ((comment.get("user") or {}).get("login")) or "agent"
+        raw = header["name"] if header else login
+        name = display_name(raw, existing)
+        if name is None:
+            continue
+        existing[name] = True
+        latest[name] = comment_is_standby(body)
+    return [name for name, stuck in latest.items() if stuck]
+
+
 def join_snippet(lane=None):
     """Paste-ready first comment. Never mentions STANDBY."""
     lane = lane or LANES[0]
@@ -370,9 +424,31 @@ def slack_keepalive_text(lanes=None):
     )
 
 
+def slack_unstick_text(names, lanes=None):
+    """Slack ping when someone joined STANDBY instead of working."""
+    who = ", ".join(names) if names else "an agent"
+    first = first_open_lane(lanes)
+    title = (first or {}).get("title") or LANES[0]["title"]
+    return (
+        f"War room unstick: {who} sat in STANDBY. Claim *{title}* now. "
+        "Paste JOIN with Status: ONLINE. Do not wait for Grok. "
+        f"Board: {BOARD_URL}"
+    )
+
+
 def should_slack_keepalive(agents, last_slack_iso, now, cooldown_min=SLACK_COOLDOWN_MIN):
     """Ping Slack only when the room is empty, and at most once per cooldown."""
     if any(row.get("status") in ("ACTIVE", "ONLINE") for row in agents.values()):
+        return False
+    if last_slack_iso:
+        mins = minutes_ago(last_slack_iso, now)
+        if mins is not None and mins < cooldown_min:
+            return False
+    return True
+
+
+def should_slack_unstick(stuck, last_slack_iso, now, cooldown_min=SLACK_COOLDOWN_MIN):
+    if not stuck:
         return False
     if last_slack_iso:
         mins = minutes_ago(last_slack_iso, now)
@@ -423,7 +499,7 @@ def slack_keepalive(text):
     return None
 
 
-def fingerprint_for(agents, done, checkins, last_human_id, lanes=None):
+def fingerprint_for(agents, done, checkins, last_human_id, lanes=None, stuck=None):
     payload = {
         "agents": {
             name: {
@@ -440,6 +516,7 @@ def fingerprint_for(agents, done, checkins, last_human_id, lanes=None):
             {"id": row["id"], "state": row["state"]}
             for row in (lanes or [])
         ],
+        "stuck": list(stuck or []),
     }
     raw = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
     return hashlib.sha256(raw).hexdigest()[:16]
@@ -468,7 +545,7 @@ def needs_update(standing, fingerprint, now):
     return mins is None or mins >= FORCE_REFRESH_MIN
 
 
-def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_stamp=""):
+def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_stamp="", stuck=None):
     stamp = now.strftime("%Y-%m-%d %H:%M UTC")
     online = sum(1 for a in agents.values() if a["status"] in ("ACTIVE", "ONLINE"))
     offline = [name for name, row in sorted(agents.items()) if row["status"] == "OFFLINE"]
@@ -508,6 +585,15 @@ def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_
             "Do not wait. Help Carlos first. Paste JOIN only once, then HEARTBEAT every 15 min."
         )
         lines.append("")
+    if stuck:
+        unstick_lane = first_open_lane(lanes)
+        unstick_title = (unstick_lane or {}).get("title") or LANES[0]["title"]
+        lines.append("**Unstick — STANDBY is not a lane:** " + ", ".join(stuck))
+        lines.append(
+            "Claim **" + unstick_title + "** now. Paste JOIN with Status: ONLINE, then work. "
+            "Do not wait for Grok."
+        )
+        lines.append("")
     if offline:
         lines.append("**Silent >90 min — do not wait for them:** " + ", ".join(offline))
         lines.append(
@@ -541,6 +627,7 @@ def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_
         "",
         "**Do not stop**",
         "- If you are in this room, work. Paste the restart prompt if you just woke.",
+        "- Ignore Watchdog OFFLINE roster and Hermes-Dispatch LANE clones. Do not restart silent peers.",
         "- Do not write board JSON (`log` / `state` / `agents`) onto main.",
         "- Do not cancel GitHub Pages. Hermes `STATUS.md` is ignored by deploy.",
         "- Do not flood #71361 with HEARTBEAT clones of this card. Slack is real time.",
@@ -590,6 +677,7 @@ def render_issue_card(now, lanes, fingerprint):
         "**Do not sit in STANDBY. Do not wait for Grok.** Claim one OPEN lane and keep going.",
         f"Board (live roster + restart prompt): {BOARD_URL}",
         "Real time: Slack `#cursor_channel`. This issue is the durable log only.",
+        "Ignore Watchdog OFFLINE roster and Hermes-Dispatch LANE clones — do not restart silent peers.",
         "",
         f"**OPEN lanes:** {listed}",
         f"**Start here:** {start}",
@@ -672,14 +760,20 @@ def main(argv=None):
     agents = parse_agents(comments, now)
     done = learn_actions(comments)
     checkins = recent_checkins(comments, now)
+    stuck = standby_stuck(comments, now)
     last_human = last_human_comment_id(comments)
     lanes = lane_states(agents)
-    fingerprint = fingerprint_for(agents, done, checkins, last_human, lanes)
+    fingerprint = fingerprint_for(agents, done, checkins, last_human, lanes, stuck)
     standing = find_standing(comments)
     slack_stamp = extract_slack_stamp((standing or {}).get("body") or "")
     slack_posted = False
     if should_slack_keepalive(agents, slack_stamp, now):
         posted = slack_keepalive(slack_keepalive_text(lanes))
+        if posted:
+            slack_stamp = now.replace(microsecond=0).isoformat()
+            slack_posted = True
+    elif should_slack_unstick(stuck, slack_stamp, now):
+        posted = slack_keepalive(slack_unstick_text(stuck, lanes))
         if posted:
             slack_stamp = now.replace(microsecond=0).isoformat()
             slack_posted = True
@@ -691,7 +785,7 @@ def main(argv=None):
             f"({sum(1 for a in agents.values() if a['status'] in ('ACTIVE', 'ONLINE'))} live)."
         )
         return 0
-    body = render_standing(now, agents, done, checkins, fingerprint, lanes, slack_stamp)
+    body = render_standing(now, agents, done, checkins, fingerprint, lanes, slack_stamp, stuck)
     action, comment_id = upsert_standing(standing, body)
     print(
         f"Pulse v3 {action} comment {comment_id}: {len(comments)} comments, "
