@@ -257,3 +257,30 @@
 </div>
 </div>
 </div>
+  <h2 id="catalogo">Catálogo vivo</h2>
+  <p class="subheadline">Diagnóstico rápido em minutos: escolha um serviço abaixo ou use o Estimador FinOps para medir o custo atual da sua nuvem.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Diagnóstico rápido</h3>
+      <p>Responda 5 perguntas e receba uma recomendação objetiva: Discovery $99, Consulting $499 ou ir direto para Starter.</p>
+      <a href="/discovery/">Começar o Discovery →</a>
+    </div>
+    <div class="card">
+      <h3>Academia Zion</h3>
+      <p>Treinamentos curtos de IA aplicada, automação e FinOps para o seu time — conteúdo prático, em português e inglês.</p>
+      <a href="/academy/">Academia →</a>
+    </div>
+    <div class="card">
+      <h3>Estimador FinOps</h3>
+      <p>Estime sua fatura de nuvem e veja onde cortar custos.</p>
+      <form id="finops-form">
+        <label>Gasto mensal de cloud (USD): <input id="finops-spend" type="number" min="0" value="5000" style="width:120px"></label>
+        <button type="submit" class="buy">Estimar</button>
+      </form>
+      <p id="finops-result"></p>
+    </div>
+  </div>
+  <script src="/assets/js/zion-catalog.js" defer></script>
+
+</body>
+</html>
