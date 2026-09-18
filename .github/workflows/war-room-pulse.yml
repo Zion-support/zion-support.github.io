@@ -23,7 +23,10 @@ permissions:
   issues: write
 
 concurrency:
-  group: war-room-pulse-${{ github.event_name }}-${{ github.ref }}
+  # One group per ref — not per event_name. Cron and issue_comment both
+  # PATCH the #71361 body; splitting groups lets them race and lose updates.
+  # PR runs stay isolated (github.ref is refs/pull/N/merge).
+  group: war-room-pulse-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
