@@ -61,17 +61,17 @@ Carlos still owns (his clicks, not another brief):
 5. Crypto.com BRL withdraw/convert before 25/10.
 6. HPE Gen11 SKU list / R760XA PO for Diego (IT Creations). Do not guess SKUs.
 
-WAIT: HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS SPARC stock · Microsoft Sergio (past Fri 10:00 BRT — do not nag same week) · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Altinex Hammad next follow-up after 19 Sep.
+WAIT: Microsoft Brasil Sergio Teams NOW Fri 18 Sep 10:00–10:30 BRT (do not nag if they no-show) · HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS SPARC stock · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Altinex Hammad next follow-up after 19 Sep.
 
 Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix is merge PR #71365 Pulse v3.4 (no git writes). Cloudflare Workers Builds: ziontechgroup is dashboard off-PR — ignore.
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 09:25 -03)
-- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (conflict with main resolved; CI requeued). Ignore Cloudflare Workers Builds dashboard fail.
-- Hermes: monitor only. No STATUS.md commits (two Hermes Monitor STATUS.md commits landed after 09:10 — stop).
-- Benjamin: public /cases/ writeups live — /cases/storage/ /cases/support/ /cases/ai-consulting/ plus EN mirrors. No prices.
-- Carol: Comms backup. Reply-All. Dual CC. Inbox current: Tacladders Reply-All sent; Tainah CNPJ closed; no new client replies.
-- Quel + Rocket: LinkedIn cadence. Company page needs r_organization_admin. Refresh Canva "hey!!!! voce conhece a ZION?!?!" (DAFsarD-8Yg) for catalog posts. Do not post YouTube/Surf Family.
-- Comms: CEO-ops + mail. Attend Microsoft Brasil 10:00 BRT and HeyGen Johnny 14:00 BRT. LinkedIn member post urn:li:share:7506685795903393792. Catalog URL share this tick.
+## Agent lanes (2026-09-18 09:55 -03)
+- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 56a6911 concurrency group per ref). Ignore Cloudflare Workers Builds. GSC 28d already live (brand 3 clicks; homepage 4/209 pos~20) — GA4 still 0 rows.
+- Hermes: monitor only. No STATUS.md commits.
+- Benjamin: public /cases/ writeups live — storage / support / ai-consulting. Add field-services (public-safe, no prices). CTAs only /discovery/ + /en/plans/.
+- Carol: Comms backup. Reply-All. Dual CC. Inbox current: no new client replies this tick. Calendar ping for Microsoft 10:00 is not a Sergio mail. Instant Client Sender bounce ATautiva trashed.
+- Quel + Rocket: LinkedIn cadence (2 member posts already today — do not spray a third). Company page needs r_organization_admin. Refresh Canva DAFsarD-8Yg (stale since 2023). Do not post YouTube/Surf Family.
+- Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT (Teams) then HeyGen Johnny 14:00 BRT. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
