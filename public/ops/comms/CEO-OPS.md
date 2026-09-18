@@ -54,7 +54,7 @@ Already SENT — do not clone:
 - Discovery GRÁTIS is allowed again on 18 Sep BRT for CLOSED cases only. Do not Discovery-spam FAJ/ASSEFAZ/FGV/Cooper/IMA/Câmara/FUNCATE.
 
 Carlos still owns (his clicks, not another brief):
-1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
+1. FAJ minuta — STOP extra mail. Carlos 18 Sep 16:00 BRT (1a0b5e4855e96af9): proposta já encaminhada ao cliente; cancelar mensagem extra neste trial. Confirmed internally to Carlos+commercial (1a0b5f2dae4c7ca3). Do **not** mail Gyovanna / FAJ / Dante again. Carlos owns the minuta (vence 07/10). Instant Client Sender OFF.
 2. FUNCATE PDF to Paulo Blotto on the live thread.
 3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page. Victoria 18 Sep 15:40 BRT: “Entendido! Aguardamos o seu retorno.” No Reply-All this tick (Unique/pay is Carlos). Do not nag. Checkout https://checkout.agilize.com.br/faturas/41c96ab5-fcaf-4a9f-5cf1-4e43592ce08d. Unique da Praia Digital NÃO cobre Zion Comércio CNPJ 08.933.804/0001-55 — Carlos confirma se contrata Unique separado. Sem pré-venda/WhatsApp. Carlos clicks pay.
 4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
@@ -67,13 +67,13 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 16:00 -03) — RUNNING only
+## Agent lanes (2026-09-18 16:16 -03) — RUNNING only
 Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol remain IDLE — released. Hermes CHECK-IN is a clone; watch-only URL HEAD; unload launchd; no STATUS.md to main.
 
 - Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse #71365 merge-watch. Do **not** merge — Kleber merges. Hermes STATUS.md take-theirs only.
-- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail only. Catalog.js already on the PR. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF. Do **not** merge.
+- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail only. Catalog.js already on the PR. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF. FAJ extra-mail cancelled per Carlos. Do **not** merge.
 - Grok (ACTIVE on #71361, not this environment): lead/watch only. Do **not** merge.
 - Composio (connections, online): Do **not** merge #71365. Kleber merges. Live `https://ziontechgroup.com/assets/js/zion-catalog.js` is still HTTP 404 until Pages. After Kleber merges, curl that URL for HTTP 200 + `Discovery $99`. Slack HEARTBEAT + Gmail labels. Instant Client Sender OFF. Firecrawl credits are 0. Do not restore the old catalog-health must-strings (WhatsApp/CPA). `b7fc6fe` is not the site restore — that is `51aad16` on this PR.
-- DONE: homepage titles; cloud-and-automation; Canva square/portrait; catalog.js on the PR; TDS Ron “Sounds good” WAIT Carlos T7-2 vs T8-4; Altinex two-visit + Pleasanton 10:00 AM LT Reply-All 1a0b584c3468440b; leftover `Field` chrome spelled out + lang-matched; #71365 vs latest main: sitemap union (simple) + STATUS.md left to Hermes (timestamp-only take-theirs); Microsoft Sergio receipt confirmed; Victoria Agilize 15:40 BRT read — no Reply-All (Carlos Unique/pay).
+- DONE: homepage titles; cloud-and-automation; Canva square/portrait; catalog.js on the PR; TDS Ron “Sounds good” WAIT Carlos T7-2 vs T8-4; Altinex two-visit + Pleasanton 10:00 AM LT Reply-All 1a0b584c3468440b; leftover `Field` chrome spelled out + lang-matched; #71365 vs latest main: sitemap union (simple) + STATUS.md left to Hermes (timestamp-only take-theirs); Microsoft Sergio receipt confirmed; Victoria Agilize 15:40 BRT read — no Reply-All (Carlos Unique/pay); Carlos FAJ cancel — no more mail on that trial.
 - BLOCKED OPEN: LinkedIn company page (`r_organization_admin`). Kleber merge of #71365. Pulse on main still v2 (failed 18:48 UTC) until that merge.
 - Instant Client Sender OFF. Ignore Hermes-Dispatch LANE clones and Watchdog OFFLINE roster.
