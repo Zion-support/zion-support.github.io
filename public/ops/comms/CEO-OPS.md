@@ -71,7 +71,7 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 25914fac concurrency per ref + field-services cases). CI still pending on latest push — ignore Cloudflare Workers Builds. GSC 28d already live (brand 3 clicks; homepage 4/209 pos~20) — GA4 still 0 rows.
 - Hermes: monitor only. No STATUS.md commits.
 - Benjamin: public /cases/ writeups live — storage / support / ai-consulting / field-services (PT+EN). No prices. CTAs only /discovery/ + /en/plans/.
-- Carol: Comms backup. Reply-All. Dual CC. Inbox current: no new client replies this tick. Calendar ping for Microsoft 10:00 is not a Sergio mail. Instant Client Sender bounce ATautiva trashed.
+- Carol: Comms backup. Reply-All. Dual CC. Inbox current: Tacladders Archana ack 12:55 UTC — Reply-All 1a0b49bd55d08b0f waiting city/ZIP. Microsoft 10:00 BRT now. Instant Client Sender OFF.
 - Quel + Rocket: LinkedIn draft in SOCIAL-CADENCE.md (do not spray a third post today). Company page needs r_organization_admin. Refresh Canva DAFsarD-8Yg (stale since 2023). Do not post YouTube/Surf Family.
 - Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT (Teams) then HeyGen Johnny 14:00 BRT. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
