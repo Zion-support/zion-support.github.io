@@ -56,7 +56,7 @@ Already SENT — do not clone:
 Carlos still owns (his clicks, not another brief):
 1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
 2. FUNCATE PDF to Paulo Blotto on the live thread.
-3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page. Auto-cancel notice 18 Sep 09:18 BRT (nao-responda) — Comms did not reply to no-reply; Reply-All on #2423990 1a0b4806f990bc7c asking Victoria to hold. Carlos clicks pay.
+3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page. Victoria 18 Sep 10:54 BRT: old checkout expired; new link https://checkout.agilize.com.br/faturas/41c96ab5-fcaf-4a9f-5cf1-4e43592ce08d. Reply-All 1a0b4d341011e277. Unique da Praia Digital NÃO cobre Zion Comércio CNPJ 08.933.804/0001-55 — Carlos confirma se contrata Unique separado. Sem pré-venda/WhatsApp. Carlos clicks pay.
 4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
 5. Crypto.com BRL withdraw/convert before 25/10.
 6. HPE Gen11 SKU list / R760XA PO for Diego (IT Creations). Do not guess SKUs.
