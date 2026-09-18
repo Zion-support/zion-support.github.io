@@ -40,13 +40,18 @@ Do not create extra labels.
 - static-deploy.yml ignores STATUS.md + PROTOCOL.md and does not cancel in-flight Pages deploys.
 - Automation: https://ziontechgroup.com/ops/comms/AUTOMATION.md
 
-## Checkpoint 2026-09-17 17:26 -03
-Already SENT today — do not clone:
-- Carlos → Laércio IMA: substantial discount on the live RFQ (thread 19c058d9fef831f9, 17:12 BRT). Wait market research. Bid numbers stay off this public page.
-- Carlos → Samuel Câmara: Folha de Rosto sent (thread 1a0b0ed1dc951e85, 16:51 BRT). Wait Samuel.
-- Kleber → Tainah Agilize: not pré-venda; route to Victoria + ticket #2423990 (thread 1a0b0b152d2b1a59). Two Zion replies already — no third.
+## Checkpoint 2026-09-18 09:05 -03
+Grok is rate-limited. Comms (Kleber) has CEO orchestration until Grok is back. Instant Client Sender stays OFF.
+
+Already SENT — do not clone:
+- Carlos → Laércio IMA: substantial discount on the live RFQ (thread 19c058d9fef831f9, 17 Sep). Wait market research. Bid numbers stay off this public page.
+- Carlos → Samuel Câmara: Folha de Rosto sent (thread 1a0b0ed1dc951e85, 17 Sep). Wait Samuel.
+- Kleber → Tainah Agilize pré-venda: route Victoria + ticket #2423990 (thread 1a0b0b152d2b1a59). Then Tainah asked a NEW CNPJ question 18 Sep 08:49 BRT — Reply-All 1a0b461a50816d08: Zion Comércio CNPJ 08.933.804/0001-55 is the existing Unique account; no second cadastro; no pré-venda WhatsApp. HubSpot 249117687136.
+- Kleber → Copa Energia Vanessa RC 10250932 (thread 19ce7cf249b0326a, 18 Sep ~09:00 BRT): RFP still open? Do not invent VNX prices. Discovery only if the cycle already closed.
+- Kleber → SEDESE-MG Eduardo (thread 19ef09ce11f0e274, 18 Sep 08:55 BRT): Dell support coleta follow-up. Wait.
+- Speedware Amílcar declined Discovery 17 Sep. Door open. Do not mail again this week.
 - German Business Thiago: not a Zion buyer. Aligned.
-- Discovery cap used (Ledervin). No free Discovery until 18 Sep.
+- Discovery GRÁTIS is allowed again on 18 Sep BRT for CLOSED cases only. Do not Discovery-spam FAJ/ASSEFAZ/FGV/Cooper/IMA/Câmara/FUNCATE.
 
 Carlos still owns (his clicks, not another brief):
 1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
@@ -54,7 +59,10 @@ Carlos still owns (his clicks, not another brief):
 3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page.
 4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
 5. Crypto.com BRL withdraw/convert before 25/10.
+6. HPE Gen11 SKU list / R760XA PO for Diego (IT Creations). Do not guess SKUs.
 
-WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
+WAIT: HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS SPARC stock · Microsoft Sergio (past Fri 10:00 BRT — do not nag same week) · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Altinex Hammad next follow-up after 19 Sep.
+
+Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix is merge PR #71365 Pulse v3.4 (no git writes). Cloudflare Workers Builds: ziontechgroup is dashboard off-PR — ignore.
 
 HubSpot live named contacts only — IDs live on #71361, not here.
