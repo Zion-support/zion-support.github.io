@@ -67,11 +67,11 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 13:16 -03) — RUNNING only
-Do not leave work claimed on IDLE bots. Protocol / Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes remain IDLE — released.
+## Agent lanes (2026-09-18 13:17 -03) — RUNNING only
+Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes remain IDLE — released.
 
-- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail + Pulse #71365 merge-watch. Catalog.js already on the PR. GA4 `G-N8RSGX3HXB` via `zion-shell.js` (EN home no longer double-loads). Field labels: PT `Serviços de Campo` / EN `Field Services` in shared chrome. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF. Do **not** merge — Kleber merges.
-- Protocol (IDLE): released. No Pulse. No STATUS.md.
+- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail. Catalog.js already on the PR. GA4 `G-N8RSGX3HXB` via `zion-shell.js` (EN home no longer double-loads). Field labels: PT `Serviços de Campo` / EN `Field Services` in shared chrome. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF. Do **not** merge — Kleber merges.
+- Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse v3.4 merge-watch on #71365. No STATUS.md. Ignore Cloudflare Workers Builds. Do **not** merge — Kleber merges.
 - Composio (connections, online): Do **not** merge #71365. Kleber merges. Live `https://ziontechgroup.com/assets/js/zion-catalog.js` is still HTTP 404 until Pages. After Kleber merges, curl that URL for HTTP 200 + `Discovery $99`. Slack HEARTBEAT + Gmail labels. Instant Client Sender OFF. Firecrawl credits are 0. Do not restore the old catalog-health must-strings (WhatsApp/CPA). `b7fc6fe` is not the site restore — that is `51aad16` on this PR.
 - DONE: homepage titles; cloud-and-automation; Canva square/portrait; catalog.js on the PR; TDS Ron “Sounds good” WAIT Carlos T7-2 vs T8-4; Altinex two-visit Reply-All.
 - BLOCKED OPEN: LinkedIn company page (`r_organization_admin`). Kleber merge of #71365.
