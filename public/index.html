@@ -31,6 +31,8 @@
     .card h3 { color: #a78bfa; font-size: 1.2rem; margin-bottom: 8px; }
     .card p { color: #94a3b8; line-height: 1.6; margin-bottom: 16px; }
     .card a { color: #a78bfa; text-decoration: none; font-weight: 600; }
+    .card .eyebrow { color: #34d399; font-size: 0.75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+    #catalog-empty { text-align: center; color: #94a3b8; }
     .price { color: #34d399; font-weight: 700; font-size: 1.15rem; margin-bottom: 12px; }
     footer { text-align: center; padding: 40px 24px; border-top: 1px solid rgba(124,58,237,0.15); margin-top: 40px; line-height: 2.2; }
     footer a { color: #a78bfa; text-decoration: none; margin: 0 8px; }
@@ -259,6 +261,8 @@
 </div>
   <h2 id="catalogo">Catálogo vivo</h2>
   <p class="subheadline">Atalhos para o menu oficial. Pagamento só em Discovery e planos — não inventamos SKU na home.</p>
+  <div id="catalog-grid" class="grid" aria-label="Menu oficial pago"></div>
+  <p id="catalog-empty" hidden>Nenhum plano neste filtro.</p>
   <div class="grid">
     <div class="card">
       <h3>Diagnóstico rápido</h3>

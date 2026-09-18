@@ -6,12 +6,21 @@
   <title>Catálogo — Zion Tech Group</title>
   <meta name="description" content="Catálogo Zion Tech Group: Discovery, planos, field services, FinOps e casos sem preço confidencial." />
   <link rel="canonical" href="https://ziontechgroup.com/offers/" />
+  <style>
+    .card { background:#0f172a; border:1px solid rgba(167,139,250,.25); border-radius:12px; padding:18px; }
+    .card h3 { margin:0 0 8px; color:#a78bfa; font-size:1.1rem; }
+    .card p { margin:0 0 10px; color:#94a3b8; }
+    .card a { color:#a78bfa; font-weight:700; text-decoration:none; }
+    .card .eyebrow { color:#34d399; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+  </style>
 </head>
 <body style="font-family:system-ui,sans-serif;background:#070b16;color:#e6f0ff;margin:0;line-height:1.6">
 <main style="max-width:860px;margin:0 auto;padding:40px 24px">
   <p><a href="/" style="color:#a78bfa">Zion Tech Group</a> · <a href="/offers/" style="color:#a78bfa">Ofertas</a> · <a href="/plans/" style="color:#a78bfa">Plans</a></p>
   <h1>Catálogo</h1>
   <p>Rotas públicas que estão no ar. Sem preço de contrato, PO ou SLA de cliente.</p>
+  <div id="catalog-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0"></div>
+  <p id="catalog-empty" hidden>Nenhum plano neste filtro.</p>
   <ul>
     <li><a href="/discovery/" style="color:#a78bfa">Discovery $99</a></li>
     <li><a href="/plans/" style="color:#a78bfa">Plans / Consulting / Starter / Growth</a></li>
@@ -23,5 +32,6 @@
     <li><a href="/free-consultation/" style="color:#a78bfa">Consulta / trial</a></li>
   </ul>
 </main>
+<script src="/assets/js/zion-catalog.js" defer></script>
 </body>
 </html>
