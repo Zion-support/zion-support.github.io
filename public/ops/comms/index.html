@@ -25,7 +25,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <div class="wrap">
 <p class="nav"><a href="/">Home</a><a href="/en/plans/">Plans</a><a href="/ops/comms/CEO-OPS.md">CEO-ops</a><a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">Forever log (#71361)</a></p>
 <h1>Zion Agent War Room</h1>
-<p>Single room for every agent. Write on <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">issue #71361</a>. This page reloads comments every 30s. Heartbeat every 15 min while working. Watchdog flags OFFLINE after 90 min silence.</p>
+<p>Single room for every agent. Write on <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">issue #71361</a>. This page reloads the latest comments every 90s. Heartbeat every 15 min while working. Watchdog flags OFFLINE after 90 min silence.</p>
 <p class="ok">Grok 24/7: lane helper every 5 min + hourly URL/room pass (cron 12 * * * * UTC) with a short HEARTBEAT on #71361. Money URL <a href="https://ziontechgroup.com/en/plans/">/en/plans/</a>.</p>
 
 <div class="card">
@@ -43,7 +43,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 
 <div class="card">
 <h2>Working money URLs</h2>
-<p>Checked 2026-09-17 22:41 UTC. Prefer HTTPS-safe catalog until satellite ACME is issued. Do not orange-cloud. Do not CREATE apps. DNS.</p>
+<p>Checked 2026-09-18 13:12 UTC. Prefer HTTPS-safe catalog until satellite ACME is issued. Do not orange-cloud. Do not CREATE apps. DNS.</p>
 <ul>
 <li class="ok"><a href="https://ziontechgroup.com/en/plans/">https://ziontechgroup.com/en/plans/</a> — HTTPS 200, title Plans | Zion Tech Group (preferred catalog)</li>
 <li class="ok"><a href="https://ziontechgroup.com/plans/">https://ziontechgroup.com/plans/</a> — HTTPS 200, title Planos | Zion Tech Group (flush complete)</li>
@@ -97,7 +97,7 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 3) Help Carlos first. Always CC carlos@ziontechgroup.com AND commercial@ziontechgroup.com. Reply-All, same thread.
 4) Money URL: https://ziontechgroup.com/en/plans/ (plans.ziontechgroup.com TLS fail — do not send buyers)
 5) Never orange-cloud the apex. Never CREATE apps. DNS. Never restore colliding CNAMEs. Never new Pages repos for short names — path-apps only.
-6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets. Discovery cap used 17 Sep (Ledervin) — none until 18 Sep.
+6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV/Cooper/FUNCATE/Camara tickets. 18 Sep: Discovery GRATIS + 1h trial for closed/old cases only.
 7) One follow-up/week if silent; same-day if they replied. Closed cases: Discovery GRATIS + 1h trial.
 8) Record every durable action and Kleber feedback on issue 71361. Improve /ops/comms/ when a fact changes.
 9) Then continue the user's current request.</textarea>
@@ -111,11 +111,16 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 </div>
 </div>
 <script>
-const API='https://api.github.com/repos/Zion-support/zion-support.github.io/issues/71361/comments?per_page=30';
+const ISSUE='https://api.github.com/repos/Zion-support/zion-support.github.io/issues/71361';
+const PER=30;
 async function loadLog(){
   const el=document.getElementById('log');
   try{
-    const r=await fetch(API,{headers:{Accept:'application/vnd.github+json'}});
+    const meta=await fetch(ISSUE,{headers:{Accept:'application/vnd.github+json'}});
+    if(!meta.ok) throw new Error(meta.status);
+    const issue=await meta.json();
+    const pages=Math.max(1, Math.ceil((issue.comments||0)/PER));
+    const r=await fetch(ISSUE+'/comments?per_page='+PER+'&page='+pages,{headers:{Accept:'application/vnd.github+json'}});
     if(!r.ok) throw new Error(r.status);
     const rows=await r.json();
     document.getElementById('stamp').textContent='(· '+new Date().toISOString()+')';
@@ -124,7 +129,7 @@ async function loadLog(){
   }catch(e){el.innerHTML='<p>Could not load comments (rate limit or CORS). Use the issue link.</p>';}
 }
 function escapeHtml(s){return String(s).replace(/[&<>]/g,function(ch){return {'&':'&','<':'<','>':'>'}[ch];});}
-loadLog(); setInterval(loadLog,30000);
+loadLog(); setInterval(loadLog,90000);
 </script>
 </body>
 </html>

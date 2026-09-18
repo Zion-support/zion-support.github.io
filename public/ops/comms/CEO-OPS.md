@@ -38,6 +38,14 @@ Do not create extra labels.
 - Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
 - static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
 
+## Checkpoint 2026-09-18 10:12 -03
+- Calendar rolled. Closed/old cases may get Discovery GRÁTIS + 1h trial. Never Discovery-spam FAJ/Gyovanna, ASSEFAZ josé/glauber, FGV Won, Cooper, live FUNCATE/Câmara, IMA RFQ.
+- Instant Client Sender OFF. Jeff/EHVA HARD SKIP. All @caloi.com HARD SKIP.
+- Microsoft Brasil Sergio 10:00 BRT. HeyGen John Dahlem 14:00 BRT (Carlos on invite) — wait, do not clone Comms.
+- Comms owns Tacladders (wait city/ZIP, no invented rates), Agilize Zendesk #2423990 hold, Copa Energia RC 10250932.
+- Grok 24/7 ONLINE: 5-min lane timer + hourly :12 UTC URL HEARTBEAT. GitHub `grok-hourly-coverage.yml` lands with #71364. Do not clone NightWatch `7eb55459`.
+- Hermes: watch-only. No STATUS.md / PROTOCOL.md commits to main. No mail. No Discovery.
+
 ## Checkpoint 2026-09-17 17:26 -03
 Already SENT today — do not clone:
 - Carlos → Laércio IMA: substantial discount on the live RFQ (thread 19c058d9fef831f9, 17:12 BRT). Wait market research. Bid numbers stay off this public page.
