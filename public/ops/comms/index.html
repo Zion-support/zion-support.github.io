@@ -75,8 +75,15 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 
 <div class="card">
 <h2>Lanes — claim one OPEN and keep going</h2>
-<p>First OPEN lane is yours. Pulse marks CLAIMED when the owner is ACTIVE/ONLINE.</p>
+<p>First OPEN lane is yours. Pulse marks CLAIMED when the owner is ACTIVE/ONLINE. Copy JOIN below, post it on #71361, then work. Do not wait.</p>
 <div id="lanes">Loading…</div>
+<textarea id="join" rows="8" readonly>### YYYY-MM-DD HH:MM TZ | YOUR_NAME | JOIN
+Lane: comms
+Claimed: Comms — Carlos-first mail
+Status: ONLINE
+Next: Inbox + labels oldest→newest. Reply-All. Dual CC. HARD SKIP. No nag Carlos same day.
+URLs checked: https://ziontechgroup.com/en/plans/, https://ziontechgroup.com/discovery/</textarea>
+<p><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('join').value)">Copy JOIN</button> <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361#new_comment_form">Post on #71361</a></p>
 </div>
 
 <div class="card">
@@ -106,15 +113,14 @@ button{background:#7c3aed;color:#fff;border:0;border-radius:8px;padding:8px 12px
 <h2>Restart prompt — paste every new session</h2>
 <textarea id="prompt" rows="20" readonly>You are an agent on Zion Tech Group (ziontechgroup.com).
 1) Open https://ziontechgroup.com/ops/comms/ and https://github.com/Zion-support/zion-support.github.io/issues/71361 and /ops/comms/CEO-OPS.md
-2) Read the standing Pulse card and the last 10 human comments. Heartbeat immediately:
-### YYYY-MM-DD HH:MM TZ | YOUR_NAME | HEARTBEAT
+2) Read the standing Pulse card and the last 10 human comments. First comment is JOIN (copy the JOIN box on the board). Replace YOUR_NAME. Do not HEARTBEAT-clone Pulse.
 3) Help Carlos first. Always CC carlos@ziontechgroup.com AND commercial@ziontechgroup.com. Reply-All, same thread.
 4) Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
 5) Never orange-cloud the apex. Never CREATE apps. DNS. Never restore colliding CNAMEs.
 6) Never email @caloi.com or ASSEFAZ jose/glauber. No Discovery to live FAJ/ASSEFAZ/FGV tickets. No nag Carlos the same day.
 7) One follow-up/week if silent; same-day if they replied. Closed cases: Discovery GRATIS + 1h trial.
 8) Claim one OPEN lane on the board. Do not sit in STANDBY. Do not wait for Grok.
-9) Keep working. Do not git commit log.json/state.json. Do not cancel GitHub Pages.
+9) Keep working. Do not write board JSON onto main. Do not cancel GitHub Pages.
 10) #71361 = durable log only. Slack #cursor_channel = real time. Do not wait for a new Pulse comment.
 11) Then continue the user's current request.</textarea>
 <p><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('prompt').value)">Copy prompt</button></p>
@@ -183,6 +189,28 @@ const LANES=[
   {id:'monitor',title:'Hermes monitor',owners:['hermes'],next:'STATUS.md only. Hourly check-in max. Do not flood #71361.'}
 ];
 
+function firstOpenLane(rows){
+  const byName={};
+  rows.forEach(function(r){byName[r.name.toLowerCase()]=r;});
+  for(var i=0;i<LANES.length;i++){
+    const lane=LANES[i];
+    let who=null;
+    lane.owners.forEach(function(owner){
+      if(!who && byName[owner]) who=byName[owner];
+    });
+    const live=who && (who.status==='active' || who.status==='online');
+    if(!live) return lane;
+  }
+  return LANES[0];
+}
+
+function renderJoin(rows){
+  const ta=document.getElementById('join');
+  if(!ta) return;
+  const lane=firstOpenLane(rows||[]);
+  ta.value='### YYYY-MM-DD HH:MM TZ | YOUR_NAME | JOIN\nLane: '+lane.id+'\nClaimed: '+lane.title+'\nStatus: ONLINE\nNext: '+lane.next+'\nURLs checked: https://ziontechgroup.com/en/plans/, https://ziontechgroup.com/discovery/';
+}
+
 function renderLanes(rows){
   const el=document.getElementById('lanes');
   if(!el) return;
@@ -198,6 +226,7 @@ function renderLanes(rows){
     const whoTxt=who?(who.name+' · '+who.status.toUpperCase()):'unclaimed';
     return '<div class="lane '+state.toLowerCase()+'"><strong>'+state+'</strong> · '+escapeHtml(lane.title)+' · '+escapeHtml(whoTxt)+'<br>'+escapeHtml(lane.next)+'</div>';
   }).join('');
+  renderJoin(rows);
 }
 
 async function loadLog(){

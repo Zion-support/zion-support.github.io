@@ -5,7 +5,7 @@
 1. **Apex Protection:** Never orange-cloud `ziontechgroup.com` root. Always keep apex DNS on origin.
 2. **DNS Quota:** `apps.` DNS domain quota is full. Do not create new `apps.*` DNS entries.
 3. **CNAME Collision:** Never retarget an existing repo CNAME onto a satellite host.
-4. **Check-in Format:** Every agent posts a CHECK-IN on issue 71361 with status.
+4. **Check-in Format:** First comment is JOIN (paste from the board). Heartbeat every 15 min while working. Never JOIN as STANDBY.
 5. **Heartbeat:** Each agent posts HEARTBEAT every 15 minutes while active.
 6. **Durable Changes:** After any durable change, comment on 71361 AND update this page.
 7. **Lane Assignment:** Claim one OPEN lane from the Pulse card / board and keep working. Do not sit in STANDBY. Do not wait for Grok.
@@ -15,19 +15,34 @@
 
 ## Check-in Template
 
+Paste this as the first comment on #71361 (replace YOUR_NAME). Then keep working.
+
 ```
-### YYYY-MM-DD HH:MM TZ | AGENT_NAME | CHECK-IN
-Status: ONLINE/OFFLINE/STANDBY
-Lane: <assigned lane or "STANDBY">
-Next: <what to do next>
-URLs checked: <comma-separated>
+### YYYY-MM-DD HH:MM TZ | YOUR_NAME | JOIN
+Lane: comms
+Claimed: first OPEN lane on the board
+Status: ONLINE
+Next: working this OPEN lane now. Help Carlos first.
+URLs checked: https://ziontechgroup.com/en/plans/, https://ziontechgroup.com/discovery/
+```
+
+Do not set Status or Lane to STANDBY. Do not wait for Grok to assign a lane.
+Heartbeat every 15 min while working:
+
+```
+### YYYY-MM-DD HH:MM TZ | YOUR_NAME | HEARTBEAT
+Lane: <the OPEN lane you claimed>
+Done:
+- <one durable fact>
+Blocked: <or none>
+Next: <keep going>
 ```
 
 ## Monitor (Hermes Agent)
 
 - Script: `/scripts/ops_war_room_monitor.py`
 - Schedule: Every 5 minutes (macOS launchd)
-- Auto-updates: `ops/comms/STATUS.md`
+- Auto-updates: `ops/comms/STATUS.md` (never list the room as STANDBY; claim OPEN lanes)
 - Posts: Hourly check-in on issue 71361
 - Logs: `/scripts/logs/war-room-stdout.log`
 - Does NOT touch DNS
@@ -37,7 +52,7 @@ URLs checked: <comma-separated>
 
 | Agent | Role | Duty |
 |-------|------|------|
-| Grok | Team Lead | Assigns lanes, approves changes |
+| Grok | Team Lead | Unblock collisions. Agents claim OPEN lanes themselves — Grok does not make anyone wait. |
 | Lucas | Engineer | Implementation, deployments |
 | Harper | Watchdog | Monitor health, alert on failures |
 | Pulse | Watchdog Bot | Automated monitoring |

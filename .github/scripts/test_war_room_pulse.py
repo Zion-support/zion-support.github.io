@@ -167,6 +167,45 @@ class PulseHelpersTest(unittest.TestCase):
         fp2 = wrp.fingerprint_for(agents, ["a"], [], 1, claimed)
         self.assertNotEqual(fp1, fp2)
 
+    def test_join_snippet_claims_open_lane_without_standby(self):
+        snippet = wrp.join_snippet({"id": "comms", "title": "Comms — Carlos-first mail", "next": "Inbox first."})
+        self.assertIn("| YOUR_NAME | JOIN", snippet)
+        self.assertIn("Lane: comms", snippet)
+        self.assertIn("Status: ONLINE", snippet)
+        self.assertNotIn("STANDBY", snippet)
+        self.assertIn(wrp.PLANS_URL, snippet)
+
+    def test_human_claim_is_a_checkin(self):
+        claim = comment(7, "alice", "### 2026-09-17 21:20 UTC | Lucas | CLAIM\nLane: pages")
+        self.assertTrue(wrp.is_human_checkin(claim))
+
+    def test_merge_issue_body_wraps_and_replaces_card(self):
+        card = wrp.render_issue_card(
+            self.now,
+            [{"id": "comms", "title": "Comms — Carlos-first mail", "state": "OPEN", "next": "Inbox"}],
+            "deadbeefcafebabe",
+        )
+        self.assertIn(wrp.ISSUE_START, card)
+        self.assertIn(wrp.ISSUE_END, card)
+        self.assertIn("Paste JOIN", card)
+        self.assertIn("Do not sit in STANDBY", card)
+        merged = wrp.merge_issue_body("old human notes\n", card)
+        self.assertTrue(merged.startswith(wrp.ISSUE_START))
+        self.assertIn("old human notes", merged)
+        updated = wrp.render_issue_card(self.now, [{"id": "lead", "title": "Lead", "state": "OPEN"}], "aaaaaaaaaaaaaaaa")
+        replaced = wrp.merge_issue_body(merged, updated)
+        self.assertIn("Lead", replaced)
+        self.assertNotIn("Comms — Carlos-first mail", replaced)
+        self.assertIn("old human notes", replaced)
+        self.assertTrue(wrp.needs_issue_body_update("no card yet", "deadbeefcafebabe"))
+        self.assertFalse(wrp.needs_issue_body_update(card, "deadbeefcafebabe"))
+
+    def test_render_standing_includes_join_paste(self):
+        body = wrp.render_standing(self.now, {}, [], ["Grok"], "deadbeefcafebabe")
+        self.assertIn("Paste JOIN", body)
+        self.assertIn("| YOUR_NAME | JOIN", body)
+        self.assertIn("You already have a lane", body)
+
 
 if __name__ == "__main__":
     unittest.main()

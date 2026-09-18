@@ -29,7 +29,14 @@ if (!/setInterval\(loadLog,\s*10000\)/.test(html)) fail('board must poll comment
 if (!html.includes('war-room-standing:v1')) fail('board must look for standing Pulse marker');
 if (!html.includes('Keep Carlos') && !html.includes('Help Carlos')) fail('board must say Help Carlos');
 if (!html.includes('id="lanes"')) fail('board must show live lanes');
+if (!html.includes('id="join"')) fail('board must ship a paste-ready JOIN box');
 if (/Standby until assigned/i.test(html)) fail('board must not tell agents to standby');
+if (/Status:\s*ONLINE\/OFFLINE\/STANDBY/.test(html)) fail('JOIN box must not offer STANDBY status');
+
+const protocol = fs.readFileSync(path.join(process.cwd(), 'ops/comms/PROTOCOL.md'), 'utf8');
+if (/Status:\s*ONLINE\/OFFLINE\/STANDBY/.test(protocol)) fail('PROTOCOL check-in must not offer STANDBY');
+if (!protocol.includes('| YOUR_NAME | JOIN')) fail('PROTOCOL must ship a paste-ready JOIN');
+if (/Assigns lanes/.test(protocol)) fail('PROTOCOL must not tell agents to wait for Grok to assign lanes');
 
 const py = fs.readFileSync(path.join(process.cwd(), '.github/scripts/war_room_pulse.py'), 'utf8');
 if (!py.includes('<!-- war-room-standing:v1 -->')) fail('pulse.py missing standing marker');
@@ -40,6 +47,8 @@ if (/contents:\s*write/.test(pulseYml)) fail('pulse workflow must not request co
 if (!pulseYml.includes("github-actions[bot]")) fail('pulse workflow must skip github-actions[bot]');
 if (/^\s*needs:\s*test\s*$/m.test(pulseYml)) fail('pulse cron must not wait on unit tests');
 if (!py.includes('LANES') || !py.includes('Do not sit in STANDBY')) fail('pulse.py must publish keep-running lanes');
+if (!py.includes('war-room-issue:v1')) fail('pulse.py must keep the issue body moving');
+if (!py.includes('def join_snippet')) fail('pulse.py must publish a paste-ready JOIN');
 
 const deploy = fs.readFileSync(path.join(process.cwd(), '.github/workflows/static-deploy.yml'), 'utf8');
 if (!/cancel-in-progress:\s*false/.test(deploy)) fail('static-deploy must not cancel in-flight Pages');

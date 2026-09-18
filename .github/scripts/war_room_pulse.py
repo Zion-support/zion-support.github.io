@@ -29,6 +29,8 @@ ISSUE_URL = f"https://github.com/{REPO}/issues/{ISSUE}"
 PLANS_URL = "https://ziontechgroup.com/en/plans/"
 DISCOVERY_URL = "https://ziontechgroup.com/discovery/"
 STANDING_MARKER = "<!-- war-room-standing:v1 -->"
+ISSUE_START = "<!-- war-room-issue:v1 -->"
+ISSUE_END = "<!-- /war-room-issue:v1 -->"
 FP_RE = re.compile(r"<!-- war-room-fp:([0-9a-f]+) -->")
 HEADER_RE = re.compile(
     r"^###\s+([\d\-]+)\s+([\d:]+)\s+(\S+)\s*\|\s*([^|]+?)\s*\|\s*(\S+)",
@@ -184,6 +186,7 @@ def is_human_checkin(comment):
         "check-in" in head
         or "check in" in head
         or "| join" in head
+        or "| claim" in head
         or "| check-in" in head
     )
 
@@ -324,6 +327,29 @@ def lane_states(agents):
     return out
 
 
+def first_open_lane(lanes):
+    for row in lanes or []:
+        if row.get("state") == "OPEN":
+            return row
+    return (lanes or [None])[0]
+
+
+def join_snippet(lane=None):
+    """Paste-ready first comment. Never mentions STANDBY."""
+    lane = lane or LANES[0]
+    lane_id = lane.get("id") if isinstance(lane, dict) else "comms"
+    title = lane.get("title") if isinstance(lane, dict) else LANES[0]["title"]
+    nxt = lane.get("next") if isinstance(lane, dict) else LANES[0]["next"]
+    return (
+        "### YYYY-MM-DD HH:MM TZ | YOUR_NAME | JOIN\n"
+        f"Lane: {lane_id}\n"
+        f"Claimed: {title}\n"
+        "Status: ONLINE\n"
+        f"Next: {nxt}\n"
+        f"URLs checked: {PLANS_URL}, {DISCOVERY_URL}"
+    )
+
+
 def extract_slack_stamp(body):
     match = SLACK_RE.search(body or "")
     return match.group(1) if match else ""
@@ -460,9 +486,11 @@ def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_
     lines.append("")
     if checkins:
         lines.append("**Just joined** (last 30 min): " + ", ".join(checkins))
+        welcome_lane = first_open_lane(lanes)
+        welcome_title = (welcome_lane or {}).get("title") or "first OPEN lane"
         lines.append(
-            "Welcome. Format: `### YYYY-MM-DD HH:MM TZ | AGENT | ACTION` "
-            "with Done / Blocked / Next / URLs checked. Help Carlos first."
+            "Welcome. You already have a lane: **" + welcome_title + "**. "
+            "Do not wait. Help Carlos first. Paste JOIN only once, then HEARTBEAT every 15 min."
         )
         lines.append("")
     if offline:
@@ -483,6 +511,14 @@ def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_
             )
     else:
         lines.append("- (lanes unavailable)")
+    first = first_open_lane(lanes)
+    lines.extend([
+        "",
+        "**Paste JOIN (replace YOUR_NAME) then keep working:**",
+        "```",
+        join_snippet(first),
+        "```",
+    ])
     lines.extend([
         "",
         "**Do not stop**",
@@ -521,12 +557,75 @@ def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_
     return "\n".join(lines) + "\n"
 
 
+def render_issue_card(now, lanes, fingerprint):
+    """Keep-running banner on the issue itself so agents who skip the board still move."""
+    first = first_open_lane(lanes)
+    open_titles = [row["title"] for row in (lanes or []) if row.get("state") == "OPEN"]
+    stamp = now.strftime("%Y-%m-%d %H:%M UTC")
+    listed = ", ".join(open_titles) if open_titles else "all claimed — pick any lane and help"
+    start = (first or {}).get("title") or "first OPEN lane"
+    return "\n".join([
+        ISSUE_START,
+        f"<!-- war-room-fp:{fingerprint} -->",
+        f"## Keep working ({stamp})",
+        "",
+        "**Do not sit in STANDBY. Do not wait for Grok.** Claim one OPEN lane and keep going.",
+        f"Board (live roster + restart prompt): {BOARD_URL}",
+        "Real time: Slack `#cursor_channel`. This issue is the durable log only.",
+        "",
+        f"**OPEN lanes:** {listed}",
+        f"**Start here:** {start}",
+        "",
+        "**Paste JOIN as your first comment (replace YOUR_NAME), then work:**",
+        "```",
+        join_snippet(first),
+        "```",
+        "",
+        f"Sell only {PLANS_URL} and {DISCOVERY_URL}. Help Carlos first. Reply-All. Dual CC.",
+        "Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAMEs.",
+        ISSUE_END,
+    ]) + "\n"
+
+
+def merge_issue_body(existing, card):
+    existing = existing or ""
+    card = (card or "").strip()
+    if ISSUE_START in existing and ISSUE_END in existing:
+        pattern = re.compile(
+            re.escape(ISSUE_START) + r".*?" + re.escape(ISSUE_END),
+            re.S,
+        )
+        updated, count = pattern.subn(card, existing, count=1)
+        return updated if count else card + "\n\n" + existing.lstrip()
+    if existing.strip():
+        return card + "\n\n" + existing.lstrip()
+    return card + "\n"
+
+
+def needs_issue_body_update(existing, fingerprint):
+    if ISSUE_START not in (existing or ""):
+        return True
+    return extract_fingerprint(existing) != fingerprint
+
+
 def upsert_standing(standing, body):
     if standing is None:
         created = gh(f"/issues/{ISSUE}/comments", method="POST", data={"body": body})
         return "created", created.get("id")
     gh(f"/issues/comments/{standing['id']}", method="PATCH", data={"body": body})
     return "patched", standing["id"]
+
+
+def upsert_issue_card(fingerprint, now, lanes):
+    issue = gh(f"/issues/{ISSUE}")
+    existing = issue.get("body") or ""
+    if not needs_issue_body_update(existing, fingerprint):
+        return "skipped"
+    merged = merge_issue_body(existing, render_issue_card(now, lanes, fingerprint))
+    if merged == existing:
+        return "skipped"
+    gh(f"/issues/{ISSUE}", method="PATCH", data={"body": merged})
+    return "patched"
 
 
 def main(argv=None):
@@ -552,10 +651,11 @@ def main(argv=None):
         if posted:
             slack_stamp = now.replace(microsecond=0).isoformat()
             slack_posted = True
+    issue_action = upsert_issue_card(fingerprint, now, lanes)
     if not needs_update(standing, fingerprint, now) and not slack_posted:
         print(
-            f"Pulse v3 skip: fingerprint {fingerprint} unchanged, "
-            f"{len(comments)} comments, {len(agents)} agents "
+            f"Pulse v3 skip standing: fingerprint {fingerprint} unchanged, "
+            f"issue body {issue_action}, {len(comments)} comments, {len(agents)} agents "
             f"({sum(1 for a in agents.values() if a['status'] in ('ACTIVE', 'ONLINE'))} live)."
         )
         return 0
@@ -565,7 +665,7 @@ def main(argv=None):
         f"Pulse v3 {action} comment {comment_id}: {len(comments)} comments, "
         f"{len(agents)} agents, {len(done)} learned actions, "
         f"{len(checkins)} recent check-ins, {sum(1 for row in lanes if row['state']=='OPEN')} open lanes, "
-        f"fp {fingerprint}."
+        f"issue body {issue_action}, fp {fingerprint}."
     )
     return 0
 
