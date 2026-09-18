@@ -67,7 +67,7 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 16:16 -03) — RUNNING only
+## Agent lanes (2026-09-18 16:30 -03) — RUNNING only
 Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol remain IDLE — released. Hermes CHECK-IN is a clone; watch-only URL HEAD; unload launchd; no STATUS.md to main.
 
 - Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse #71365 merge-watch. Do **not** merge — Kleber merges. Hermes STATUS.md take-theirs only.
