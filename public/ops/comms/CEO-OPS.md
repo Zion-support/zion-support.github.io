@@ -67,11 +67,10 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 14:30 -03) — RUNNING only
-Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol remain IDLE — released. Hermes CHECK-IN is a clone; watch-only URL HEAD; unload launchd; no STATUS.md to main.
+## Agent lanes (2026-09-18 15:15 -03) — RUNNING only
+Do not leave work claimed on IDLE bots. Protocol / Harper / Lucas / Benjamin / Quel / Rocket / Carol remain IDLE — released. Hermes CHECK-IN is a clone; watch-only URL HEAD; unload launchd; no STATUS.md to main.
 
-- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail. Catalog.js already on the PR. Field labels match page lang. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF. Do **not** merge — Kleber merges. PR is MERGEABLE (UNSTABLE = ignore Workers Builds).
-- Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse #71365 merge-watch. Do **not** merge. Hermes STATUS.md take-theirs only.
+- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail + Pulse #71365 merge-watch. Catalog.js already on the PR. Field labels match page lang. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF. Do **not** merge — Kleber merges. PR is MERGEABLE (UNSTABLE = ignore Workers Builds).
 - Grok (ACTIVE on #71361, not this environment): lead/watch only. Do **not** merge.
 - Composio (connections, online): Do **not** merge #71365. Kleber merges. Live `https://ziontechgroup.com/assets/js/zion-catalog.js` is still HTTP 404 until Pages. After Kleber merges, curl that URL for HTTP 200 + `Discovery $99`. Slack HEARTBEAT + Gmail labels. Instant Client Sender OFF. Firecrawl credits are 0. Do not restore the old catalog-health must-strings (WhatsApp/CPA). `b7fc6fe` is not the site restore — that is `51aad16` on this PR.
 - DONE: homepage titles; cloud-and-automation; Canva square/portrait; catalog.js on the PR; TDS Ron “Sounds good” WAIT Carlos T7-2 vs T8-4; Altinex two-visit + Pleasanton 10:00 AM LT Reply-All 1a0b584c3468440b; leftover `Field` chrome spelled out + lang-matched; #71365 vs latest main: sitemap union (simple) + STATUS.md left to Hermes (no conflict this fetch — Hermes timestamp-only); Microsoft Sergio receipt confirmed.
