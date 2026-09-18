@@ -89,6 +89,9 @@ Export all three to Rocket’s Canva folder for the 19 Sep EN post. Do not attac
 
 ## 2026-09-18 11:12 -03 — Canva resize status (Comms)
 
-- Square 1080×1080 Magic Resize **succeeded**: new design `DAHVjpU8sxo` (copy of `DAFsarD-8Yg`). Rocket restyles this for the 19 Sep EN post — still DRAFT, do not publish today.
-- Landscape 1200×627: free Canva resize quota exceeded (`quota_exceeded`). Do not retry today. Rocket crops landscape/portrait by hand from `DAHVjpU8sxo` or the source artboard.
+- Square 1080×1080 Magic Resize **succeeded**: `DAHVjpU8sxo` (copy of `DAFsarD-8Yg`).
+- Portrait 1080×1350 Magic Resize **succeeded**: `DAHVjt7GlNE`.
+- Landscape 1200×627: free Canva resize quota exceeded. Do not retry today. Rocket crops landscape by hand from `DAHVjpU8sxo`.
+- Rocket restyles square + portrait for the **19 Sep EN** post — still DRAFT, do not publish today.
 - Do not post YouTube design `DAC8a5Z8kHw` (Surf Family / personal).
+- Instant Client Sender OFF. Do not email Notion abandoned-checkout lists.
