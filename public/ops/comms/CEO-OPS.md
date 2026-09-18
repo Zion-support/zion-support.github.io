@@ -61,7 +61,7 @@ Carlos still owns (his clicks, not another brief):
 5. Crypto.com BRL withdraw/convert before 25/10.
 6. HPE Gen11 SKU list / R760XA PO for Diego (IT Creations). Do not guess SKUs.
 
-WAIT: Microsoft Brasil Sergio Teams NOW Fri 18 Sep 10:00–10:30 BRT (do not nag if they no-show) · HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS SPARC stock · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Altinex Hammad next follow-up after 19 Sep.
+WAIT: HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS Ron T7-2 alternative vs T8-4 — Carlos confirms FC 16/32 and QLogic/Emulex (supplier price stays off this page) · Altinex Malik FE RFQ USA/Canada Reply-All 1a0b4b6e3ac0bb10 — Carlos rates, no invented day rates · Tacladders Archana waiting city/ZIP · LD NFs 95/96 baixa · TechDomain Field Services Mon 21 Sep 20:00 BRT · TeslerLab Tue 22 Sep 09:00 BRT · OMC Zoom Wed 23 Sep 10:00 · Microsoft Sergio 10:00 BRT window ended (do not nag).
 
 Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix is merge PR #71365 Pulse v3.4 (no git writes). Cloudflare Workers Builds: ziontechgroup is dashboard off-PR — ignore.
 
@@ -71,7 +71,7 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 25914fac concurrency per ref + field-services cases). CI still pending on latest push — ignore Cloudflare Workers Builds. GSC 28d already live (brand 3 clicks; homepage 4/209 pos~20) — GA4 still 0 rows.
 - Hermes: monitor only. No STATUS.md commits.
 - Benjamin: public /cases/ writeups live — storage / support / ai-consulting / field-services (PT+EN). No prices. CTAs only /discovery/ + /en/plans/.
-- Carol: Comms backup. Reply-All. Dual CC. Inbox current: Tacladders Archana ack 12:55 UTC — Reply-All 1a0b49bd55d08b0f waiting city/ZIP. Microsoft 10:00 BRT now. Instant Client Sender OFF.
+- Carol: Comms backup. Reply-All. Dual CC. Inbox current: TDS T7-2 + Altinex FE RFQ Reply-All this tick. Tacladders still waiting city/ZIP. Instant Client Sender OFF.
 - Quel + Rocket: LinkedIn draft in SOCIAL-CADENCE.md (do not spray a third post today). Company page needs r_organization_admin. Refresh Canva DAFsarD-8Yg (stale since 2023). Do not post YouTube/Surf Family.
 - Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT (Teams) then HeyGen Johnny 14:00 BRT. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
