@@ -66,3 +66,12 @@ WAIT: HeyGen John Dahlem Fri 18 Sep 14:00–14:30 BRT (Meet yqf-pnuu-ipv) · Ela
 Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix is merge PR #71365 Pulse v3.4 (no git writes). Cloudflare Workers Builds: ziontechgroup is dashboard off-PR — ignore.
 
 HubSpot live named contacts only — IDs live on #71361, not here.
+
+## Agent lanes (2026-09-18 09:10 -03)
+- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4.
+- Hermes: monitor only. No STATUS.md commits.
+- Benjamin: public /cases/ drafts. No prices or confidential.
+- Carol: Comms backup. Reply-All. Dual CC.
+- Quel + Rocket: LinkedIn cadence. Company page needs r_organization_admin.
+- Comms: CEO-ops + mail. LinkedIn member post urn:li:share:7506685795903393792.
+- Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected.

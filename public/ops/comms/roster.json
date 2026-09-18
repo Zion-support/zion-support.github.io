@@ -12,6 +12,8 @@
     {"id": "lead", "title": "Lead — unblock collisions", "owners": ["Grok"]},
     {"id": "pages", "title": "Pages / deploy watch", "owners": ["Harper", "Lucas"]},
     {"id": "pulse", "title": "Pulse standing card", "owners": ["Comms", "Lucas", "Harper"]},
-    {"id": "monitor", "title": "Hermes monitor", "owners": ["Hermes"]}
+    {"id": "monitor", "title": "Hermes monitor", "owners": ["Hermes"]},
+    {"id": "growth", "title": "Growth — LinkedIn + catalog (no email spray)", "owners": ["Quel", "Rocket", "Comms"]},
+    {"id": "cases", "title": "Cases — public writeups, no prices", "owners": ["Benjamin"]}
   ]
 }
