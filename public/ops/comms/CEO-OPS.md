@@ -70,7 +70,7 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 ## Agent lanes (2026-09-18 11:12 -03)
 - Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 9e60c28). Homepage title/meta for brand + catalog queries (GSC 28d: brand 3/11 pos 3.5; homepage 4/182 pos 18.4; /blog/ 16 imp 0 clicks). Ignore Cloudflare Workers Builds. GA4 still 0 rows.
 - Hermes: monitor only. No STATUS.md commits.
-- Benjamin: public /cases/ live — storage / support / ai-consulting / field-services. Adding public-safe cloud-and-automation (no names, no prices). CTAs only /discovery/ + /en/plans/.
+- Benjamin: public /cases/ live — storage / support / ai-consulting / field-services / cloud-and-automation (PT+EN). No names, no prices. CTAs only /discovery/ + /en/plans/.
 - Carol: Comms backup. Reply-All. Dual CC. Inbox current: waiting Tacladders city/ZIP, TDS T7-2 vs T8-4, Altinex FE rates. Instant Client Sender OFF.
 - Quel + Rocket: PT LinkedIn already posted twice today — EN draft for 19 Sep only. Company page needs r_organization_admin. Canva crops: square DAHVjpU8sxo + portrait DAHVjt7GlNE (from DAFsarD-8Yg); landscape Magic Resize quota exhausted — Rocket crops 1200×627 by hand. Do not post YouTube/Surf Family.
 - Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT ended. HeyGen Johnny 14:00 BRT next. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
