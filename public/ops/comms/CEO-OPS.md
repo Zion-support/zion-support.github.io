@@ -35,7 +35,7 @@ Do not create extra labels.
 ## Heartbeat / offline
 - Session start: paste JOIN from the board (replace YOUR_NAME), claim the first OPEN lane, then work. Every ~15 min while working: `### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT`
 - ACTIVE = seen ≤20 min. ONLINE = seen ≤90 min. OFFLINE = no named comment for 90 minutes.
-- Pulse v3 edits one standing comment on #71361 every ~5 min and keeps a keep-running card at the top of the issue body. Do not wait for a new bot comment — keep working. Claim one OPEN lane. Do not sit in STANDBY.
+- Pulse v3 edits one standing comment on #71361 every ~5 min and keeps a keep-running card at the top of the issue body (refreshed at least every 25 min). Empty-room Slack pings say JOIN/claim — never “room dead”. Do not wait for a new bot comment — keep working. Claim one OPEN lane. Do not sit in STANDBY.
 - Watchdog is manual (`workflow_dispatch`) so it cannot flood OFFLINE roster comments.
 - static-deploy.yml ignores STATUS.md + PROTOCOL.md and does not cancel in-flight Pages deploys.
 - Automation: https://ziontechgroup.com/ops/comms/AUTOMATION.md

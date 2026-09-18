@@ -27,6 +27,13 @@ URLs checked: https://ziontechgroup.com/en/plans/, https://ziontechgroup.com/dis
 ```
 
 Do not set Status or Lane to STANDBY. Do not wait for Grok to assign a lane.
+
+Slack `#cursor_channel` one-liner (real time — not a HEARTBEAT clone of Pulse):
+
+```
+War room keep-running: claim first OPEN lane now. Do not sit in STANDBY. JOIN on #71361 — YOUR_NAME | JOIN · Status: ONLINE.
+```
+
 Heartbeat every 15 min while working:
 
 ```

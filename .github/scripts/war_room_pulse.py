@@ -32,6 +32,7 @@ STANDING_MARKER = "<!-- war-room-standing:v1 -->"
 ISSUE_START = "<!-- war-room-issue:v1 -->"
 ISSUE_END = "<!-- /war-room-issue:v1 -->"
 FP_RE = re.compile(r"<!-- war-room-fp:([0-9a-f]+) -->")
+ISSUE_STAMP_RE = re.compile(r"## Keep working \((\d{4}-\d{2}-\d{2} \d{2}:\d{2}) UTC\)")
 HEADER_RE = re.compile(
     r"^###\s+([\d\-]+)\s+([\d:]+)\s+(\S+)\s*\|\s*([^|]+?)\s*\|\s*(\S+)",
     re.M,
@@ -355,6 +356,20 @@ def extract_slack_stamp(body):
     return match.group(1) if match else ""
 
 
+def slack_keepalive_text(lanes=None):
+    """Slack ping that starts work. Never says the room is dead."""
+    first = first_open_lane(lanes)
+    title = (first or {}).get("title") or LANES[0]["title"]
+    lane_id = (first or {}).get("id") or LANES[0]["id"]
+    return (
+        f"War room keep-running: claim *{title}* now. "
+        "Do not sit in STANDBY. Do not wait for Grok. "
+        f"First comment on #71361 is JOIN — YOUR_NAME | JOIN · Lane: {lane_id} · Status: ONLINE. "
+        f"Board: {BOARD_URL} "
+        f"Sell only {PLANS_URL} and {DISCOVERY_URL}."
+    )
+
+
 def should_slack_keepalive(agents, last_slack_iso, now, cooldown_min=SLACK_COOLDOWN_MIN):
     """Ping Slack only when the room is empty, and at most once per cooldown."""
     if any(row.get("status") in ("ACTIVE", "ONLINE") for row in agents.values()):
@@ -494,8 +509,11 @@ def render_standing(now, agents, done, checkins, fingerprint, lanes=None, slack_
         )
         lines.append("")
     if offline:
-        lines.append("**OFFLINE — restart now:** " + ", ".join(offline))
-        lines.append(f"Paste the restart prompt on {BOARD_URL} and HEARTBEAT. Do not sit idle.")
+        lines.append("**Silent >90 min — do not wait for them:** " + ", ".join(offline))
+        lines.append(
+            "Their lanes are OPEN. Claim one, paste JOIN, and keep working. "
+            f"Restart prompt: {BOARD_URL}"
+        )
         lines.append("")
     lines.append(
         "**Lanes — claim one OPEN lane and keep going.** "
@@ -602,10 +620,29 @@ def merge_issue_body(existing, card):
     return card + "\n"
 
 
-def needs_issue_body_update(existing, fingerprint):
+def issue_card_age_min(existing, now):
+    match = ISSUE_STAMP_RE.search(existing or "")
+    if not match:
+        return None
+    try:
+        stamped = datetime.datetime.strptime(match.group(1), "%Y-%m-%d %H:%M").replace(
+            tzinfo=datetime.timezone.utc
+        )
+    except ValueError:
+        return None
+    return max(0, int((now - stamped).total_seconds() // 60))
+
+
+def needs_issue_body_update(existing, fingerprint, now=None):
     if ISSUE_START not in (existing or ""):
         return True
-    return extract_fingerprint(existing) != fingerprint
+    if extract_fingerprint(existing) != fingerprint:
+        return True
+    if now is not None:
+        age = issue_card_age_min(existing, now)
+        if age is None or age >= FORCE_REFRESH_MIN:
+            return True
+    return False
 
 
 def upsert_standing(standing, body):
@@ -619,7 +656,7 @@ def upsert_standing(standing, body):
 def upsert_issue_card(fingerprint, now, lanes):
     issue = gh(f"/issues/{ISSUE}")
     existing = issue.get("body") or ""
-    if not needs_issue_body_update(existing, fingerprint):
+    if not needs_issue_body_update(existing, fingerprint, now):
         return "skipped"
     merged = merge_issue_body(existing, render_issue_card(now, lanes, fingerprint))
     if merged == existing:
@@ -642,12 +679,7 @@ def main(argv=None):
     slack_stamp = extract_slack_stamp((standing or {}).get("body") or "")
     slack_posted = False
     if should_slack_keepalive(agents, slack_stamp, now):
-        posted = slack_keepalive(
-            "War room empty — all named agents OFFLINE. "
-            f"Paste the restart prompt on {BOARD_URL} and keep working. "
-            "Claim one OPEN lane. Do not sit in STANDBY. Do not wait for Grok. "
-            f"Durable log: {ISSUE_URL}"
-        )
+        posted = slack_keepalive(slack_keepalive_text(lanes))
         if posted:
             slack_stamp = now.replace(microsecond=0).isoformat()
             slack_posted = True

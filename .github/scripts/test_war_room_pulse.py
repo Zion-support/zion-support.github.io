@@ -200,6 +200,42 @@ class PulseHelpersTest(unittest.TestCase):
         self.assertTrue(wrp.needs_issue_body_update("no card yet", "deadbeefcafebabe"))
         self.assertFalse(wrp.needs_issue_body_update(card, "deadbeefcafebabe"))
 
+    def test_issue_card_refreshes_when_stamp_is_stale(self):
+        lanes = [{"id": "comms", "title": "Comms — Carlos-first mail", "state": "OPEN"}]
+        card = wrp.render_issue_card(self.now, lanes, "deadbeefcafebabe")
+        later = self.now + datetime.timedelta(minutes=wrp.FORCE_REFRESH_MIN + 1)
+        self.assertTrue(wrp.needs_issue_body_update(card, "deadbeefcafebabe", later))
+        fresh = self.now + datetime.timedelta(minutes=5)
+        self.assertFalse(wrp.needs_issue_body_update(card, "deadbeefcafebabe", fresh))
+
+    def test_slack_keepalive_starts_work_instead_of_declaring_dead(self):
+        text = wrp.slack_keepalive_text([
+            {"id": "comms", "title": "Comms — Carlos-first mail", "state": "OPEN"},
+        ])
+        self.assertIn("claim", text.lower())
+        self.assertIn("Comms — Carlos-first mail", text)
+        self.assertIn("JOIN", text)
+        self.assertIn("ONLINE", text)
+        self.assertIn(wrp.BOARD_URL, text)
+        self.assertIn(wrp.PLANS_URL, text)
+        self.assertNotIn("all named agents OFFLINE", text)
+        self.assertNotIn("War room empty", text)
+
+    def test_render_standing_does_not_tell_agents_to_restart_offline(self):
+        agents = {
+            "Benjamin": {
+                "comments": 1,
+                "last_seen": "2026-09-17T19:00:00Z",
+                "last_action": "HEARTBEAT",
+                "login": "b",
+                "minutes_since_seen": 150,
+                "status": "OFFLINE",
+            }
+        }
+        body = wrp.render_standing(self.now, agents, [], [], "deadbeefcafebabe")
+        self.assertIn("do not wait for them", body.lower())
+        self.assertNotIn("OFFLINE — restart now", body)
+
     def test_render_standing_includes_join_paste(self):
         body = wrp.render_standing(self.now, {}, [], ["Grok"], "deadbeefcafebabe")
         self.assertIn("Paste JOIN", body)

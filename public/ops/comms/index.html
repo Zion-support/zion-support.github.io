@@ -84,6 +84,8 @@ Status: ONLINE
 Next: Inbox + labels oldest→newest. Reply-All. Dual CC. HARD SKIP. No nag Carlos same day.
 URLs checked: https://ziontechgroup.com/en/plans/, https://ziontechgroup.com/discovery/</textarea>
 <p><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('join').value)">Copy JOIN</button> <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361#new_comment_form">Post on #71361</a></p>
+<textarea id="slack" rows="3" readonly>War room keep-running: claim Comms — Carlos-first mail now. Do not sit in STANDBY. Do not wait for Grok. First comment on #71361 is JOIN — YOUR_NAME | JOIN · Lane: comms · Status: ONLINE. Board: https://ziontechgroup.com/ops/comms/ Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/.</textarea>
+<p><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('slack').value)">Copy Slack</button> Real time is <code>#cursor_channel</code> — paste this one line, then work.</p>
 </div>
 
 <div class="card">
@@ -209,6 +211,10 @@ function renderJoin(rows){
   if(!ta) return;
   const lane=firstOpenLane(rows||[]);
   ta.value='### YYYY-MM-DD HH:MM TZ | YOUR_NAME | JOIN\nLane: '+lane.id+'\nClaimed: '+lane.title+'\nStatus: ONLINE\nNext: '+lane.next+'\nURLs checked: https://ziontechgroup.com/en/plans/, https://ziontechgroup.com/discovery/';
+  const slack=document.getElementById('slack');
+  if(slack){
+    slack.value='War room keep-running: claim '+lane.title+' now. Do not sit in STANDBY. Do not wait for Grok. First comment on #71361 is JOIN — YOUR_NAME | JOIN · Lane: '+lane.id+' · Status: ONLINE. Board: https://ziontechgroup.com/ops/comms/ Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/.';
+  }
 }
 
 function renderLanes(rows){

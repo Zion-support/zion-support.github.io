@@ -30,6 +30,7 @@ if (!html.includes('war-room-standing:v1')) fail('board must look for standing P
 if (!html.includes('Keep Carlos') && !html.includes('Help Carlos')) fail('board must say Help Carlos');
 if (!html.includes('id="lanes"')) fail('board must show live lanes');
 if (!html.includes('id="join"')) fail('board must ship a paste-ready JOIN box');
+if (!html.includes('id="slack"')) fail('board must ship a paste-ready Slack keep-running line');
 if (/Standby until assigned/i.test(html)) fail('board must not tell agents to standby');
 if (/Status:\s*ONLINE\/OFFLINE\/STANDBY/.test(html)) fail('JOIN box must not offer STANDBY status');
 
@@ -49,6 +50,19 @@ if (/^\s*needs:\s*test\s*$/m.test(pulseYml)) fail('pulse cron must not wait on u
 if (!py.includes('LANES') || !py.includes('Do not sit in STANDBY')) fail('pulse.py must publish keep-running lanes');
 if (!py.includes('war-room-issue:v1')) fail('pulse.py must keep the issue body moving');
 if (!py.includes('def join_snippet')) fail('pulse.py must publish a paste-ready JOIN');
+if (!py.includes('def slack_keepalive_text')) fail('pulse.py must publish a Slack keep-running line');
+if (py.includes('all named agents OFFLINE')) fail('pulse Slack must not declare the room dead');
+if (py.includes('OFFLINE — restart now')) fail('pulse must not tell agents to restart OFFLINE peers');
+
+const rulePath = path.join(process.cwd(), '.cursor/rules/war-room.mdc');
+if (!fs.existsSync(rulePath)) fail('missing .cursor/rules/war-room.mdc boot rule');
+else {
+  const rule = fs.readFileSync(rulePath, 'utf8');
+  if (!rule.includes('alwaysApply: true')) fail('war-room rule must alwaysApply so new agents boot');
+  if (!rule.includes('| YOUR_NAME | JOIN') && !rule.includes('First comment')) fail('war-room rule must tell agents to JOIN');
+  if (!rule.includes('Do not sit in STANDBY')) fail('war-room rule must forbid STANDBY');
+  if (!rule.includes('https://ziontechgroup.com/en/plans/')) fail('war-room rule must sell /en/plans/');
+}
 
 const deploy = fs.readFileSync(path.join(process.cwd(), '.github/workflows/static-deploy.yml'), 'utf8');
 if (!/cancel-in-progress:\s*false/.test(deploy)) fail('static-deploy must not cancel in-flight Pages');
