@@ -67,11 +67,12 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 11:12 -03)
-- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4. Homepage titles LIVE (`879520e`) — `/` and `/en/` now name Discovery $99 + official plans; sitemap includes `/en/` + `/en/plans/`. Do not retitle. GSC 28d: brand 3/11 pos 3.5; homepage 4/182 pos 18.4. Ignore Cloudflare Workers Builds. GA4 still 0 rows.
-- Hermes: monitor only. No STATUS.md commits.
-- Benjamin: public /cases/ live — storage / support / ai-consulting / field-services / cloud-and-automation (PT+EN). No names, no prices. CTAs only /discovery/ + /en/plans/.
-- Carol: Comms backup. Reply-All. Dual CC. Inbox current: waiting Tacladders city/ZIP, TDS T7-2 vs T8-4, Altinex FE rates. Instant Client Sender OFF.
-- Quel + Rocket: PT LinkedIn already posted twice today — EN draft for 19 Sep only. Company page needs r_organization_admin. Canva crops: square DAHVjpU8sxo + portrait DAHVjt7GlNE (from DAFsarD-8Yg); landscape Magic Resize quota exhausted — Rocket crops 1200×627 by hand. Do not post YouTube/Surf Family.
-- Comms: CEO-ops + mail. Microsoft Brasil 10:00 BRT ended. HeyGen Johnny 14:00 BRT next. Stripe extra SKUs exist — do not invent homepage products; sell only official catalog.
+## Agent lanes (2026-09-18 11:26 -03) — RUNNING only
+Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes cloud runs are IDLE — released.
+
+- Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse v3.4 merge-watch on PR #71365. No STATUS.md commits. Ignore Cloudflare Workers Builds. Do not wait Harper.
+- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail + GA4 measurement-ID hunt (homepage has no gtag; do not invent G-). Canva landscape 1200×627 leftover (quota). EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF.
+- DONE (do not redo): homepage titles `879520e`; cases cloud-and-automation; Canva square `DAHVjpU8sxo` + portrait `DAHVjt7GlNE`.
+- BLOCKED OPEN: LinkedIn company page (`r_organization_admin` missing). Not assigned to an idle bot.
+- Ignore Hermes-Dispatch LANE clones and Watchdog OFFLINE roster.
 - Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
