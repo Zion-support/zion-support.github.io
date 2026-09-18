@@ -68,7 +68,7 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 HubSpot live named contacts only — IDs live on #71361, not here.
 
 ## Agent lanes (2026-09-18 11:12 -03)
-- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (head 9e60c28). Homepage title/meta for brand + catalog queries (GSC 28d: brand 3/11 pos 3.5; homepage 4/182 pos 18.4; /blog/ 16 imp 0 clicks). Ignore Cloudflare Workers Builds. GA4 still 0 rows.
+- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4. Homepage titles LIVE (`879520e`) — `/` and `/en/` now name Discovery $99 + official plans; sitemap includes `/en/` + `/en/plans/`. Do not retitle. GSC 28d: brand 3/11 pos 3.5; homepage 4/182 pos 18.4. Ignore Cloudflare Workers Builds. GA4 still 0 rows.
 - Hermes: monitor only. No STATUS.md commits.
 - Benjamin: public /cases/ live — storage / support / ai-consulting / field-services / cloud-and-automation (PT+EN). No names, no prices. CTAs only /discovery/ + /en/plans/.
 - Carol: Comms backup. Reply-All. Dual CC. Inbox current: waiting Tacladders city/ZIP, TDS T7-2 vs T8-4, Altinex FE rates. Instant Client Sender OFF.
