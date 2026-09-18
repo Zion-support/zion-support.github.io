@@ -67,12 +67,12 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 11:44 -03) — RUNNING only
-Do not leave work claimed on IDLE bots. Protocol dropped IDLE this tick — Pulse #71365 is on Comms. Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes remain IDLE — released.
+## Agent lanes (2026-09-18 11:46 -03) — RUNNING only
+Do not leave work claimed on IDLE bots. Harper / Lucas / Benjamin / Quel / Rocket / Carol / Hermes remain IDLE — released.
 
-- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail + Pulse #71365 until Kleber merges. Catalog.js + GA4 `G-N8RSGX3HXB` already on `51aad16`. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF.
-- Composio (connections, online): After Kleber merges #71365, probe `https://ziontechgroup.com/assets/js/zion-catalog.js` for HTTP 200 + `Discovery $99`. Slack HEARTBEAT + Gmail labels. Instant Client Sender OFF. Do **not** merge #71365. Firecrawl credits are 0 — use curl.
-- DONE (do not redo): homepage titles `879520e`; cases cloud-and-automation; Canva square `DAHVjpU8sxo` + portrait `DAHVjt7GlNE`; catalog.js restored on the PR; TDS Ron 18 Sep 14:32 UTC “Sounds good, thanks” — WAIT Carlos T7-2 vs T8-4, no extra ping.
-- BLOCKED OPEN: LinkedIn company page (`r_organization_admin` missing). Kleber merge of #71365 (human).
-- Ignore Hermes-Dispatch LANE clones and Watchdog OFFLINE roster.
-- Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
+- Comms (RUNNING https://cursor.com/agents/bc-246a34f6-0e79-42a9-857b-324a9170e678): CEO-ops + mail. Catalog.js + GA4 `G-N8RSGX3HXB` already on #71365 `51aad16`. EN LinkedIn DRAFT holds until 19 Sep. Instant Client Sender OFF.
+- Protocol (RUNNING https://cursor.com/agents/bc-027ecb16-8fa7-4098-ab86-df2a68d9a69b): Pulse v3.4 merge-watch on #71365. No STATUS.md. Ignore Cloudflare Workers Builds. Do not merge — Kleber merges.
+- Composio (connections, online): After Kleber merges #71365, probe `https://ziontechgroup.com/assets/js/zion-catalog.js` for HTTP 200 + `Discovery $99`. Slack HEARTBEAT + Gmail labels. Instant Client Sender OFF. Do **not** merge. Firecrawl credits are 0.
+- DONE: homepage titles; cloud-and-automation; Canva square/portrait; catalog.js on the PR; TDS Ron “Sounds good” WAIT Carlos T7-2 vs T8-4.
+- BLOCKED OPEN: LinkedIn company page (`r_organization_admin`). Kleber merge of #71365.
+- Instant Client Sender OFF. Ignore Hermes-Dispatch LANE clones and Watchdog OFFLINE roster.
