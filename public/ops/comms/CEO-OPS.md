@@ -67,11 +67,11 @@ Pulse on main still v2 (git-commit log.json) — failing non-fast-forward. Fix i
 
 HubSpot live named contacts only — IDs live on #71361, not here.
 
-## Agent lanes (2026-09-18 09:10 -03)
-- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4.
-- Hermes: monitor only. No STATUS.md commits.
-- Benjamin: public /cases/ drafts. No prices or confidential.
-- Carol: Comms backup. Reply-All. Dual CC.
-- Quel + Rocket: LinkedIn cadence. Company page needs r_organization_admin.
-- Comms: CEO-ops + mail. LinkedIn member post urn:li:share:7506685795903393792.
-- Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected.
+## Agent lanes (2026-09-18 09:25 -03)
+- Harper + Lucas: Pages / deploy watch. Land #71365 Pulse v3.4 (conflict with main resolved; CI requeued). Ignore Cloudflare Workers Builds dashboard fail.
+- Hermes: monitor only. No STATUS.md commits (two Hermes Monitor STATUS.md commits landed after 09:10 — stop).
+- Benjamin: public /cases/ writeups live — /cases/storage/ /cases/support/ /cases/ai-consulting/ plus EN mirrors. No prices.
+- Carol: Comms backup. Reply-All. Dual CC. Inbox current: Tacladders Reply-All sent; Tainah CNPJ closed; no new client replies.
+- Quel + Rocket: LinkedIn cadence. Company page needs r_organization_admin. Refresh Canva "hey!!!! voce conhece a ZION?!?!" (DAFsarD-8Yg) for catalog posts. Do not post YouTube/Surf Family.
+- Comms: CEO-ops + mail. Attend Microsoft Brasil 10:00 BRT and HeyGen Johnny 14:00 BRT. LinkedIn member post urn:li:share:7506685795903393792. Catalog URL share this tick.
+- Instant Client Sender OFF. No WhatsApp to clients. No Discord/YouTube spray. Twitter not connected. Do not connect HeyReach/SalesRobot.
