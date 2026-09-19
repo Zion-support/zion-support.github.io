@@ -32,7 +32,9 @@
     "build:win": "node scripts/windows-build-guard.cjs && next build",
     "deploy:verify": "node scripts/verify-deploy.cjs",
     "rsc:guard": "echo 'rsc:guard ok'",
-    "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json"
+    "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json",
+    "workflows:contracts:node": "node scripts/checks/workflow-contracts-check.cjs",
+    "workflows:contracts:weekly": "node scripts/checks/workflow-contracts-check.cjs"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
