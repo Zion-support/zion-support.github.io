@@ -22,34 +22,42 @@
     '<a class="brand" href="/">Zion Tech Group</a>' +
     '<button class="menu" aria-label="Abrir menu" onclick="document.querySelector(\'.links\').classList.toggle(\'open\')">☰</button>' +
     '<nav class="links" aria-label="Principal">' +
-    '<a href="/services/">Serviços</a><a href="/plans/">Planos</a><a href="/para/">Para você</a>' +
-    '<a href="/faq/">FAQ</a><a href="/whatsapp/">WhatsApp</a><a href="/contact/">Contato</a>' +
+    '<a href="/services/">Serviços</a><a href="/plans/">Planos</a><a href="/autonomous-ai-agents/">Agentes</a>' +
+    '<a href="/discovery/">Discovery</a><a href="/field-services/">Field</a><a href="/offers/">Ofertas</a>' +
+    '<a href="/cases/">Casos</a><a href="/contact/">Contato</a><a href="/blog/">Blog</a>' +
     '<a class="cta" href="/discovery/">Discovery $99</a>' +
+    '<span class="langsw" aria-label="Idioma"><a href="/">PT</a><a href="/en/">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>' +
     '</nav></div></header>';
 
   var HEADER_EN = '<a class="skip" href="#conteudo">Skip to content</a>' +
     '<header class="nav"><div class="wrap navin">' +
-    '<a class="brand" href="/">Zion Tech Group</a>' +
+    '<a class="brand" href="/en/">Zion Tech Group</a>' +
     '<button class="menu" aria-label="Open menu" onclick="document.querySelector(\'.links\').classList.toggle(\'open\')">☰</button>' +
     '<nav class="links" aria-label="Primary">' +
-    '<a href="/solutions/">Solutions</a><a href="/services/">Services</a><a href="/plans/">Plans</a>' +
-    '<a href="/faq/">FAQ</a><a href="/whatsapp/">WhatsApp</a><a href="/contact/">Contact</a>' +
+    '<a href="/services/">Services</a><a href="/plans/">Plans</a><a href="/autonomous-ai-agents/">Agents</a>' +
+    '<a href="/discovery/">Discovery</a><a href="/field-services/">Field</a><a href="/offers/">Offers</a>' +
+    '<a href="/cases/">Cases</a><a href="/contact/">Contact</a><a href="/blog/">Blog</a>' +
     '<a class="cta" href="/discovery/">Discovery $99</a>' +
+    '<span class="langsw" aria-label="Language"><a href="/">PT</a><a href="/en/">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>' +
     '</nav></div></header>';
 
   var FOOTER_PT = '<footer><div class="wrap foot">' +
-    '<div><h3>Empresa</h3><a href="/about/">Sobre</a><a href="/partners/">Parceiros</a><a href="/indique/">Indique</a><a href="/contact/">Contato</a></div>' +
-    '<div><h3>Oferta</h3><a href="/plans/">Planos</a><a href="/discovery/">Discovery $99</a><a href="/comece/">Comece</a><a href="/cpa/">CPA</a></div>' +
-    '<div><h3>Recursos</h3><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/mapa-do-site/">Mapa do site</a><a href="/whatsapp/">WhatsApp</a></div>' +
-    '<div><h3>Legal</h3><a href="/privacidade/">Privacidade</a><a href="/privacy/">Privacy</a><a href="/cookie-policy/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
-    '</div></footer>';
+    '<div><h3>Empresa</h3><a href="/about/">Sobre</a><a href="/cases/">Casos</a><a href="/contact/">Contato</a><a href="/status-page/">Status</a></div>' +
+    '<div><h3>Oferta</h3><a href="/plans/">Planos</a><a href="/discovery/">Discovery $99</a><a href="/offers/">Ofertas</a><a href="/field-services/">Field</a></div>' +
+    '<div><h3>Recursos</h3><a href="/blog/">Blog</a><a href="/autonomous-ai-agents/">Agentes</a><a href="/telegram/">Telegram</a><a href="/finops-consulting/">FinOps</a></div>' +
+    '<div><h3>Legal</h3><a href="/privacidade/">Privacidade</a><a href="/terms/">Termos</a><a href="/cookies/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
+    '</div>' +
+    '<div class="wrap"><p class="muted">Zion Tech Group · +1 302 464 0950 · 364 E Main St STE 1008, Middletown, DE 19709</p></div>' +
+    '</footer>';
 
   var FOOTER_EN = '<footer><div class="wrap foot">' +
-    '<div><h3>Company</h3><a href="/about/">About</a><a href="/partners/">Partners</a><a href="/careers/">Careers</a><a href="/contact/">Contact</a></div>' +
-    '<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a><a href="/solutions/">Solutions</a><a href="/cpa/">CPA</a></div>' +
-    '<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/mapa-do-site/">Site map</a><a href="/whatsapp/">WhatsApp</a></div>' +
-    '<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/privacidade/">Privacidade</a><a href="/cookie-policy/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
-    '</div></footer>';
+    '<div><h3>Company</h3><a href="/about/">About</a><a href="/cases/">Cases</a><a href="/contact/">Contact</a><a href="/status-page/">Status</a></div>' +
+    '<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a><a href="/offers/">Offers</a><a href="/field-services/">Field</a></div>' +
+    '<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/autonomous-ai-agents/">Agents</a><a href="/telegram/">Telegram</a><a href="/finops-consulting/">FinOps</a></div>' +
+    '<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/cookies/">Cookies</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>' +
+    '</div>' +
+    '<div class="wrap"><p class="muted">Zion Tech Group · +1 302 464 0950 · 364 E Main St STE 1008, Middletown, DE 19709</p></div>' +
+    '</footer>';
 
   function hideLegacyChrome() {
     [].forEach.call(document.querySelectorAll('nav.top'), function (n) {
