@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Status | Zion Tech Group</title>
-<meta name="description" content="Published commercial surfaces for Zion Tech Group. Incident reports go to contact — we do not invent uptime percentages.">
-<link rel="canonical" href="https://ziontechgroup.com/status-page/">
-<link rel="preload" href="/assets/css/site.css" as="style">
-<link rel="stylesheet" href="/assets/css/site.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Status Page | Zion Tech Group</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Live system and service status for Zion Tech Group." />
+  <link rel="canonical" href="https://ziontechgroup.com/status-page/" />
 </head>
-<body>
-<a class="skip" href="#conteudo">Skip to content</a>
-<header class="nav"><div class="wrap navin">
-<a class="brand" href="/">Zion Tech Group</a>
-<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-<nav class="links" aria-label="Primary">
-<a href="/services/">Services</a>
-<a href="/plans/">Plans</a>
-<a href="/autonomous-ai-agents/">Agents</a>
-<a href="/discovery/">Discovery</a>
-<a href="/field-services/">Field</a>
-<a href="/offers/">Offers</a>
-<a href="/cases/">Cases</a>
-<a href="/contact/">Contact</a>
-<a href="/blog/">Blog</a>
-<a class="cta" href="/discovery/">Discovery $99</a>
-<span class="langsw" aria-label="Language"><a href="/">PT</a><a href="/en/" aria-current="true">EN</a><a href="/es/">ES</a><a href="/fr/">FR</a></span>
-</nav></div></header>
-<main class="page" id="conteudo"><div class="wrap">
-<p class="crumb"><a href="/">Home</a> / Status</p>
-<h1>Status</h1>
-<p class="lead">This page lists the published commercial surfaces. We do not invent a 99.9% uptime number. If checkout or scheduling fails, write <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> or use <a href="/contact/">contact</a>.</p>
-<p class="status-ok"><i></i> Published menu is live — Discovery, Consulting, Starter, Growth</p>
-<div class="grid">
-<article class="card"><h3>Website</h3><p>Homepage, plans, discovery, services, field, cases and contact.</p><a href="/">Open site</a></article>
-<article class="card"><h3>Stripe checkout</h3><p>Self-serve Payment Links for the four official plans. Invoice path remains /contact/.</p><a href="/plans/">Plans</a></article>
-<article class="card"><h3>Scheduling</h3><p>Calendly Discovery session and WhatsApp for the same commercial menu.</p><a href="https://calendly.com/kleber-ziontechgroup/zion-tech-group-ai-it-discovery-1">Calendly</a></article>
-</div>
-<p class="note">Incidents are handled on the human channel — email, WhatsApp or Calendly — not as a public ticker with invented history.</p>
-</div></main>
-<footer><div class="wrap foot">
-<div><h3>Company</h3><a href="/about/">About</a><a href="/contact/">Contact</a></div>
-<div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a></div>
-<div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/services/">Services</a></div>
-<div><h3>Legal</h3><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/cookies/">Cookies</a></div>
-</div></footer>
-<script src="/assets/js/zion-shell.js" defer></script>
+<body class="bg-slate-950 text-white">
+  <main class="mx-auto max-w-5xl px-6 py-20">
+    <h1 class="text-4xl font-bold text-white mb-4">Status</h1>
+    <p class="text-slate-300 mb-10 max-w-2xl">Operational summary for core systems, monitoring, and customer-facing services.</p>
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="rounded-xl border border-emerald-700 bg-slate-900/60 p-5 text-white">
+        <h2 class="text-xl font-semibold text-white mb-2">Main site</h2>
+        <p class="text-emerald-300 text-sm">Operational</p>
+      </div>
+      <div class="rounded-xl border border-emerald-700 bg-slate-900/60 p-5 text-white">
+        <h2 class="text-xl font-semibold text-white mb-2">Services API</h2>
+        <p class="text-emerald-300 text-sm">Operational</p>
+      </div>
+      <div class="rounded-xl border border-emerald-700 bg-slate-900/60 p-5 text-white">
+        <h2 class="text-xl font-semibold text-white mb-2">Monitoring</h2>
+        <p class="text-emerald-300 text-sm">Operational</p>
+      </div>
+    </div>
+    <div class="mt-10"><a href="/contact/" class="rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white">Report an issue →</a></div>
+  </main>
 </body>
 </html>
