@@ -1,492 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
 <channel>
-  <title>Zion Tech Group</title>
-  <link>https://ziontechgroup.com</link>
-  <description>AI, IT &amp; Micro SAAS Solutions — 29070 services and growing.</description>
-  <language>en-us</language>
-  <lastBuildDate>Sat, 19 Sep 2026 18:02:56 +0000</lastBuildDate>
-  <atom:link href="https://ziontechgroup.com/feed.xml" rel="self" type="application/rss+xml"/>
-
+  <title>Zion Tech Group — Services</title>
+  <link>https://ziontechgroup.com/services</link>
+  <description>Latest AI & IT services from Zion Tech Group</description>
+  <lastBuildDate>Thu, 14 May 2026 17:39:40 GMT</lastBuildDate>
+  <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-49d23f95/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-49d23f95/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>No-Code AI Chatbot Builder</title>
+    <link>https://ziontechgroup.com/ai-services/ai-chatbot-builder</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-chatbot-builder</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Draft contracts, NDAs, term sheets, and privacy policies with jurisdiction-specific clauses. Trained on actual filings from SEC, Companies House, etc.]]></description>
   </item>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-582b5813/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-582b5813/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>AI Image Upscaler and Restorer</title>
+    <link>https://ziontechgroup.com/ai-services/ai-image-upscaling</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-image-upscaling</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Automatically detects and redacts PII, PHI, and sensitive data in documents, PDFs, images, and transcripts. SOC2-compliant audit trail included.]]></description>
   </item>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-7f874fd2/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-7f874fd2/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>AI Supply Chain Predictor</title>
+    <link>https://ziontechgroup.com/ai-services/ai-supply-chain-predictor</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-supply-chain-predictor</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[ML-based fraud detection for fintech, e-commerce, and marketplaces. Adapts to new fraud patterns within hours, not weeks.]]></description>
   </item>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-b2232347/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-b2232347/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>AI Video Dubbing and Lip-Sync</title>
+    <link>https://ziontechgroup.com/ai-services/ai-video-dubbing</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-video-dubbing</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Autonomous meeting agent that joins Zoom and Teams, transcribes, summarizes decisions, extracts action items with owners and due dates, and pushes to your project tools.]]></description>
   </item>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-cb909bf5/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-cb909bf5/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>AI Legal Document Drafter</title>
+    <link>https://ziontechgroup.com/ai-services/ai-legal-drafting</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-legal-drafting</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Deep static analysis that finds complex vulnerabilities — logic bugs, race conditions, crypto misuses — beyond traditional linters. Uses LLMs to understand intent.]]></description>
   </item>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-d43a3f1d/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-d43a3f1d/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>AI Document Redaction and PII Removal</title>
+    <link>https://ziontechgroup.com/ai-services/ai-document-redaction</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-document-redaction</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Clone any voice with full emotional control — happiness, sadness, anger, urgency — for audiobooks, games, and accessibility. Supports 40+ languages and real-time modulation.]]></description>
   </item>
   <item>
-    <title>5G Network Slicing Optimizer</title>
-    <link>https://ziontechgroup.com/services/5g-network-slicing-optimizer-e04c40dd/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/5g-network-slicing-optimizer-e04c40dd/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.]]></description>
+    <title>Real-Time Fraud Detection Engine</title>
+    <link>https://ziontechgroup.com/ai-services/ai-fraud-detection-realtime</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-fraud-detection-realtime</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Automated cost governance for AWS, Azure, and GCP. Right-sizes resources, eliminates waste, and enforces budgets with predictive alerts before overspend.]]></description>
   </item>
   <item>
-    <title>AI Crop Disease Detection Platform</title>
-    <link>https://ziontechgroup.com/services/agritech-crop-disease-detection/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/agritech-crop-disease-detection/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>agritech</category>
-    <description><![CDATA[Detect crop diseases, pest infestations, and nutrient deficiencies from drone and smartphone imagery. Early detection saves 20-40% of crop yield.]]></description>
+    <title>AI Meeting Intelligence Suite</title>
+    <link>https://ziontechgroup.com/ai-services/ai-meeting-intelligence</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-meeting-intelligence</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Proactively test system resilience by injecting failures — VM kill, network latency, dependency outage — in production-like environments. Improve reliability before incidents happen.]]></description>
   </item>
   <item>
-    <title>Precision Agriculture Platform</title>
-    <link>https://ziontechgroup.com/services/agritech-precision-farming/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/agritech-precision-farming/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-powered precision farming with satellite imagery, soil analysis, crop health monitoring, yield prediction, and automated irrigation scheduling.]]></description>
+    <title>AI Code Audit and Security Scanner</title>
+    <link>https://ziontechgroup.com/ai-services/ai-code-audit-security</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-code-audit-security</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Track and optimize carbon footprint across your IT estate — data centers, cloud workloads, employee devices, and network. Set reduction targets and auto-generate ESG reports.]]></description>
   </item>
   <item>
-    <title>AI Accessibility Compliance Auditor</title>
-    <link>https://ziontechgroup.com/services/ai-accessibility-compliance-auditor/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-accessibility-compliance-auditor/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Automated WCAG 2.1/2.2 compliance auditing for websites and applications. Detect accessibility violations, generate remediation guidance, and monitor compliance over time. ADA and Section 508 compliance reports.]]></description>
+    <title>Emotional Voice Cloning Studio</title>
+    <link>https://ziontechgroup.com/ai-services/ai-voice-cloning-emotion</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-voice-cloning-emotion</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Deploy and manage containerized workloads on distributed edge nodes — factories, retail stores, telco sites. Unified control plane with zero-touch provisioning.]]></description>
   </item>
   <item>
-    <title>AI Agent Orchestration Platform</title>
-    <link>https://ziontechgroup.com/services/ai-agent-orchestration-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-agent-orchestration-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Build, deploy, and manage autonomous AI agents. Multi-agent workflows, tool integration, memory management, and human-in-the-loop controls.]]></description>
+    <title>Cloud Cost Optimization Platform</title>
+    <link>https://ziontechgroup.com/ai-services/it-cost-optimization-platform</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-cost-optimization-platform</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Evaluate your cryptographic infrastructure against future quantum threats. We inventory all PKI assets, identify vulnerable algorithms, and produce a migration roadmap to post-quantum cryptography.]]></description>
   </item>
   <item>
-    <title>AI Analytics &amp; BI</title>
-    <link>https://ziontechgroup.com/services/ai-analytics/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-analytics/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Transform your data into actionable insights with our advanced AI analytics platform.]]></description>
+    <title>Chaos Engineering as a Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-chaos-engineering</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-chaos-engineering</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Unified Communications & Collaboration Platform. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Real-Time Anomaly Detection Platform</title>
-    <link>https://ziontechgroup.com/services/ai-anomaly-detection-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-anomaly-detection-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-powered anomaly detection for metrics, logs, and events. Unsupervised learning, adaptive thresholds, root cause analysis, and automated alerting across your entire stack.]]></description>
+    <title>IT Sustainability Dashboard</title>
+    <link>https://ziontechgroup.com/ai-services/it-sustainability-dashboard</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-sustainability-dashboard</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Wireless Network Design & Optimization. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Autonomous Research Assistant</title>
-    <link>https://ziontechgroup.com/services/ai-autonomous-research-assistant/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-autonomous-research-assistant/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI agent that autonomously conducts deep research across academic papers, patents, news, and databases. Produces cited reports, literature reviews, and competitive intelligence briefs. Supports 50+ data sources including PubMed, arXiv, Google Patents, and SEC filings.]]></description>
+    <title>Edge Computing Deployment and Ops</title>
+    <link>https://ziontechgroup.com/ai-services/it-edge-computing-deployment</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-edge-computing-deployment</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Low-Code Integration Platform as a Service. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Bank Fraud Investigation Platform</title>
-    <link>https://ziontechgroup.com/services/ai-bank-fraud-investigator/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-bank-fraud-investigator/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Automate fraud investigation workstreams: transaction link analysis, entity resolution, SAR filing automation, and regulatory reporting. Reduces investigation time by 75%.]]></description>
+    <title>Quantum Readiness Assessment</title>
+    <link>https://ziontechgroup.com/ai-services/it-quantum-readiness-assessment</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-quantum-readiness-assessment</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: API Gateway & Developer Portal. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Carbon Footprint Optimizer</title>
-    <link>https://ziontechgroup.com/services/ai-carbon-optimizer/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-carbon-optimizer/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Automated Scope 1-3 carbon accounting: ingests utility bills, cloud usage, travel itineraries, supplier invoices, and calculates real-time carbon intensity scores with prioritised reduction actions and ESG report-ready outputs.]]></description>
+    <title>Unified Communications & Collaboration Platform</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-024</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-024</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Enterprise Data Warehouse Modernization. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Enterprise AI Chatbot Builder</title>
-    <link>https://ziontechgroup.com/services/ai-chatbot-builder-enterprise/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-chatbot-builder-enterprise/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Build and deploy AI chatbots for customer service, sales, and internal support. No-code builder with GPT-4 integration, multi-language support, and analytics. Handles 10,000+ concurrent conversations.]]></description>
+    <title>Wireless Network Design & Optimization</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-023</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-023</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Managed SOC 2 Compliance Platform. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Chronic Disease Progression Tracker</title>
-    <link>https://ziontechgroup.com/services/ai-chronic-disease-tracker/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-chronic-disease-tracker/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Longitudinal patient analytics: track chronic disease progression across EHR data, lab results, and wearables. AI identifies early deterioration signals, predicts hospitalisation risk, and generates personalised care plans.]]></description>
+    <title>Low-Code Integration Platform as a Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-022</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-022</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Legacy Application Containerization Service. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Code Documentation Generator</title>
-    <link>https://ziontechgroup.com/services/ai-code-documentation-generator/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-code-documentation-generator/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Automatically generate comprehensive documentation from source code. Produces API docs, inline comments, README files, architecture diagrams, and changelogs. Supports 30+ programming languages.]]></description>
+    <title>API Gateway & Developer Portal</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-021</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-021</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Observability & SRE Platform as a Service. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Computer Vision for Manufacturing</title>
-    <link>https://ziontechgroup.com/services/ai-computer-vision-manufacturing/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-computer-vision-manufacturing/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Automated visual inspection, defect detection, quality control, and process monitoring using AI computer vision. Works with existing cameras and IoT sensors.]]></description>
+    <title>Enterprise Data Warehouse Modernization</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-020</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-020</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: IT Strategy & Digital Transformation Consulting. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Contract Lifecycle Management</title>
-    <link>https://ziontechgroup.com/services/ai-contract-lifecycle/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-contract-lifecycle/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[End-to-end contract management with AI drafting, review, approval workflows, and risk analysis.]]></description>
+    <title>Managed SOC 2 Compliance Platform</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-019</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-019</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: AI-Ready Data Pipeline Builder. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Contract Lifecycle Intelligence</title>
-    <link>https://ziontechgroup.com/services/ai-contract-lifecycle-intelligence/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-contract-lifecycle-intelligence/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI contract lifecycle management: extract clauses and dates, auto-flag risk, renewal calendar, benchmark against market terms, amendment tracker across 200+ contract types.]]></description>
+    <title>Legacy Application Containerization Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-018</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-018</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Container Security & Runtime Protection. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Conversational AI Platform</title>
-    <link>https://ziontechgroup.com/services/ai-conversational-ai-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-conversational-ai-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Build and deploy AI-powered conversational agents for customer service, sales, and internal support. Multi-language, multi-channel, with human handoff and analytics.]]></description>
+    <title>Observability & SRE Platform as a Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-017</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-017</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Secure Backup & Disaster Recovery as a Service. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Conversational Commerce Platform</title>
-    <link>https://ziontechgroup.com/services/ai-conversational-commerce/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-conversational-commerce/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI shopping assistant that engages customers in natural conversations to recommend products, answer questions, and complete purchases. Increases conversion by 35%.]]></description>
+    <title>IT Strategy & Digital Transformation Consulting</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-016</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-016</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Cloud Cost Allocation & Tag Governance. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Conversational Commerce Platform</title>
-    <link>https://ziontechgroup.com/services/ai-conversational-commerce-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-conversational-commerce-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-powered shopping assistant that engages customers via chat, voice, and messaging apps. Product recommendations, order management, and personalized offers through natural conversation. Integrates with Shopify, WooCommerce, and custom stores.]]></description>
+    <title>AI-Ready Data Pipeline Builder</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-015</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-015</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Database Migration as a Service. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Conversational Enterprise Search</title>
-    <link>https://ziontechgroup.com/services/ai-conversational-search/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-conversational-search/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-powered search that understands natural language questions. Searches across documents, databases, emails, and apps to find and synthesize answers.]]></description>
+    <title>Container Security & Runtime Protection</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-014</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-014</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Enterprise Identity Governance & Administration. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI CRM Automation Suite</title>
-    <link>https://ziontechgroup.com/services/ai-crm-automation-suite/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-crm-automation-suite/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Full CRM automation platform: AI lead scoring, email sequences, pipeline tracking, deal insights, automated follow-ups, and smart forecasting across HubSpot, Salesforce, and Pipedrive.]]></description>
+    <title>Secure Backup & Disaster Recovery as a Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-013</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-013</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Automated Incident Response (SOAR). Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>Customer Churn Prediction &amp; Prevention</title>
-    <link>https://ziontechgroup.com/services/ai-customer-churn-prediction/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-churn-prediction/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Predict which customers are at risk of leaving, understand why, and trigger automated retention campaigns. Integrates with CRM, billing, and support systems.]]></description>
+    <title>Cloud Cost Allocation & Tag Governance</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-012</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-012</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Secure File Transfer & Managed File Transfer. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Customer Churn Prevention Platform</title>
-    <link>https://ziontechgroup.com/services/ai-customer-churn-prevention/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-churn-prevention/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Predict and prevent customer churn with AI. Behavioral analysis, early warning alerts, automated retention campaigns, and win-back workflows.]]></description>
+    <title>Database Migration as a Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-011</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-011</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Edge Computing Deployment & Management. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Customer Feedback Analyzer</title>
-    <link>https://ziontechgroup.com/services/ai-customer-feedback-analyzer/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-feedback-analyzer/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Analyze customer feedback from surveys, reviews, support tickets, and social media. AI-powered theme extraction, sentiment tracking, and actionable insight generation.]]></description>
+    <title>Enterprise Identity Governance & Administration</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-010</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-010</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: IT Asset Discovery & Configuration Management. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Customer Intent Prediction Engine</title>
-    <link>https://ziontechgroup.com/services/ai-customer-intent-prediction/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-intent-prediction/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Real-time customer intent prediction using behavioral signals, browsing patterns, and historical data. Identifies buying intent, support needs, and churn risk to trigger proactive engagement.]]></description>
+    <title>Automated Incident Response (SOAR)</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-009</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-009</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: API Security Testing & Runtime Protection. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Customer Service Automation</title>
-    <link>https://ziontechgroup.com/services/ai-customer-service-automation/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-service-automation/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[End-to-end customer service automation with AI chatbots, ticket classification, and quality analytics.]]></description>
+    <title>Secure File Transfer & Managed File Transfer</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-008</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-008</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Database-as-a-Service with Automated Backups. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Customer Support</title>
-    <link>https://ziontechgroup.com/services/ai-customer-support/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-support/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[24/7 AI-powered customer service with intelligent ticket routing, auto-resolution, and sentiment analysis.]]></description>
+    <title>Edge Computing Deployment & Management</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-007</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-007</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Kubernetes Cluster Hardening & Compliance. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Customer Support Copilot</title>
-    <link>https://ziontechgroup.com/services/ai-customer-support-copilot/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-customer-support-copilot/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI copilot for support agents that suggests responses, auto-summarizes tickets, and routes inquiries to the right team. Reduces average handle time by 40% while improving CSAT.]]></description>
+    <title>IT Asset Discovery & Configuration Management</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-006</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-006</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Multi-Cloud Cost Visibility & Optimization. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Cyber Threat Intelligence Platform</title>
-    <link>https://ziontechgroup.com/services/ai-cyber-threat-intelligence/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-cyber-threat-intelligence/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[AI-powered threat intelligence platform that aggregates, analyzes, and contextualizes threat data from 100+ sources. Proactively identify threats targeting your organization.]]></description>
+    <title>API Security Testing & Runtime Protection</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-005</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-005</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Enterprise IT service: Unified Endpoint Management as a Service. Robust, scalable, secure.]]></description>
   </item>
   <item>
-    <title>AI Cybersecurity Operations Center</title>
-    <link>https://ziontechgroup.com/services/ai-cybersecurity-operations/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-cybersecurity-operations/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI-powered SOC that automates threat detection, investigation, and response. Reduce alert fatigue by 90% and mean time to respond by 80%.]]></description>
+    <title>Database-as-a-Service with Automated Backups</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-004</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-004</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Real-Time Fraud Detection for FinTech. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Cybersecurity Threat Hunting Platform</title>
-    <link>https://ziontechgroup.com/services/ai-cybersecurity-threat-hunting/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-cybersecurity-threat-hunting/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Proactively hunt for advanced threats using AI-driven behavioral analytics, anomaly detection, and automated investigation playbooks across endpoints, network, and cloud.]]></description>
+    <title>Kubernetes Cluster Hardening & Compliance</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-003</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-003</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI-Powered Customer Onboarding Workflows. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Deepfake Detection Enterprise</title>
-    <link>https://ziontechgroup.com/services/ai-deepfake-detection-enterprise/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-deepfake-detection-enterprise/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Enterprise-grade deepfake detection for images, video, and audio. Real-time API for content moderation, identity verification, and fraud prevention.]]></description>
+    <title>Multi-Cloud Cost Visibility & Optimization</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-002</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-002</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Intelligent Supply Chain Carbon Footprint Tracker. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Demand Forecasting &amp; Inventory Optimization</title>
-    <link>https://ziontechgroup.com/services/ai-demand-forecasting/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-demand-forecasting/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[ML-powered demand forecasting that analyzes seasonality, trends, promotions, and external factors to predict demand with 95%+ accuracy. Optimize inventory and reduce stockouts.]]></description>
+    <title>Unified Endpoint Management as a Service</title>
+    <link>https://ziontechgroup.com/ai-services/it-new-001</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/it-new-001</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI-Powered Competitive Intelligence Dashboard. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Digital Twin Factory Platform</title>
-    <link>https://ziontechgroup.com/services/ai-digital-twin-factory/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-digital-twin-factory/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Build and deploy digital twins for manufacturing: real-time sensor fusion, predictive simulation, what-if scenario modeling, and automated optimization recommendations.]]></description>
+    <title>Real-Time Fraud Detection for FinTech</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-025</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-025</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI Lab: Autonomous Feature Prioritizer. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Digital Twin for Manufacturing</title>
-    <link>https://ziontechgroup.com/services/ai-digital-twin-manufacturing/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-digital-twin-manufacturing/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Create digital twins of manufacturing processes for simulation, optimization, and predictive analytics. Reduce downtime and improve throughput.]]></description>
+    <title>AI-Powered Customer Onboarding Workflows</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-024</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-024</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Conversational Sales Assistant for E-Commerce. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Document Generation Platform</title>
-    <link>https://ziontechgroup.com/services/ai-document-generation/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-document-generation/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Auto-generate contracts, proposals, reports, and emails from templates and data. Conditional logic, data merging, e-signature, and lifecycle management.]]></description>
+    <title>Intelligent Supply Chain Carbon Footprint Tracker</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-023</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-023</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI-Powered Accessibility Testing Suite. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Document Intelligence</title>
-    <link>https://ziontechgroup.com/services/ai-document-intelligence/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-document-intelligence/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[End-to-end intelligent document processing with 99%+ accuracy OCR, classification, field-level data extraction, and automated workflow triggers.]]></description>
+    <title>AI-Powered Competitive Intelligence Dashboard</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-022</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-022</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Predictive Maintenance for Manufacturing Equipment. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Document Understanding &amp; Data Extraction</title>
-    <link>https://ziontechgroup.com/services/ai-document-understanding/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-document-understanding/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[AI that reads and understands any document — invoices, contracts, forms, handwritten notes. Extract structured data with 99% accuracy and learn from corrections.]]></description>
+    <title>AI Lab: Autonomous Feature Prioritizer</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-021</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-021</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI-Driven Content Repurposing Engine. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Document Understanding Platform</title>
-    <link>https://ziontechgroup.com/services/ai-document-understanding-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-document-understanding-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Enterprise document AI platform that extracts, classifies, and processes unstructured documents at scale. Handles contracts, invoices, forms, IDs, and custom documents with 99%+ accuracy.]]></description>
+    <title>Conversational Sales Assistant for E-Commerce</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-020</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-020</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Automated Financial Statement Analysis. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Elder Care Monitoring &amp; Alert Platform</title>
-    <link>https://ziontechgroup.com/services/ai-elder-care-assistant/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-elder-care-assistant/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[IoT + AI for independent seniors: fall detection, medication reminders, vitals monitoring, emergency response, and family alerts. HIPAA-compliant with 24/7 monitoring.]]></description>
+    <title>AI-Powered Accessibility Testing Suite</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-019</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-019</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI-Powered PR & Media Monitoring. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Email Personalization Engine</title>
-    <link>https://ziontechgroup.com/services/ai-email-personalization-engine/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-email-personalization-engine/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Hyper-personalize marketing emails with AI. Dynamic content, subject line optimization, send-time optimization, and automated A/B testing for higher open and conversion rates.]]></description>
+    <title>Predictive Maintenance for Manufacturing Equipment</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-018</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-018</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Smart Energy Optimization for Buildings. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI ESG Reporting &amp; Sustainability Platform</title>
-    <link>https://ziontechgroup.com/services/ai-esg-reporting-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-esg-reporting-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Data & Analytics</category>
-    <description><![CDATA[Automated ESG data collection, scoring, and reporting: GHG emissions tracking, social impact measurement, governance scoring, and GRI/SASB/TCFD compliant reports.]]></description>
+    <title>AI-Driven Content Repurposing Engine</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-017</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-017</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI Talent Matching for Tech Hiring. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Financial Forecasting Engine</title>
-    <link>https://ziontechgroup.com/services/ai-financial-forecasting-engine/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-financial-forecasting-engine/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Enterprise financial forecasting powered by ML. Predict revenue, cash flow, expenses, and key financial metrics with scenario modeling. Integrates with ERP and accounting systems.]]></description>
+    <title>Automated Financial Statement Analysis</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-016</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-016</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: Autonomous Code Review & Security Scanner. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
   <item>
-    <title>AI Model Fine-Tuning Platform</title>
-    <link>https://ziontechgroup.com/services/ai-fine-tuning-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fine-tuning-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Fine-tune LLMs and foundation models on your data. Managed training, RLHF, LoRA/QLoRA support, and model evaluation with A/B testing.]]></description>
-  </item>
-  <item>
-    <title>Fintech Fraud Graph</title>
-    <link>https://ziontechgroup.com/services/ai-fintech-fraud-graph/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fintech-fraud-graph/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Real-time fraud detection as a knowledge graph: entity resolution across accounts, IP, device, and card fingerprints; ML scoring per transaction in under 15ms; SAR and CTR auto-draft; global rule engine.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-32fb762e/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-32fb762e/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-39ab562d/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-39ab562d/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-3ad3c8dd/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-3ad3c8dd/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-40777e97/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-40777e97/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-af04324e/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-af04324e/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-e1f00184/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-e1f00184/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-engine-ecfc694b/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-engine-ecfc694b/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>Security</category>
-    <description><![CDATA[Real-time fraud detection for payments, banking, and insurance. Graph neural networks detect complex fraud rings with 99.9% accuracy and sub-millisecond latency.]]></description>
-  </item>
-  <item>
-    <title>AI Real-Time Fraud Detection Engine</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-detection-realtime/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-detection-realtime/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Machine learning fraud detection system that analyzes transactions in real-time with sub-100ms latency. Detects payment fraud, account takeover, identity theft, and money laundering patterns.]]></description>
-  </item>
-  <item>
-    <title>AI Fraud Investigation Platform</title>
-    <link>https://ziontechgroup.com/services/ai-fraud-investigation-platform/</link>
-    <guid isPermaLink="true">https://ziontechgroup.com/services/ai-fraud-investigation-platform/</guid>
-    <pubDate>Sat, 19 Sep 2026 18:02:56 +0000</pubDate>
-    <category>AI Services</category>
-    <description><![CDATA[Automate fraud investigation with AI. Link analysis, pattern detection, evidence compilation, and case management for financial institutions and insurance companies.]]></description>
+    <title>AI-Powered PR & Media Monitoring</title>
+    <link>https://ziontechgroup.com/ai-services/ai-new-015</link>
+    <guid isPermaLink="true">https://ziontechgroup.com/ai-services/ai-new-015</guid>
+    <pubDate>Thu, 14 May 2026 17:39:40 GMT</pubDate>
+    <category>services</category>
+    <description><![CDATA[Advanced AI service: AI-Powered Grant Writing Assistant. Deliver cutting-edge intelligence for enterprise workflows.]]></description>
   </item>
 </channel>
 </rss>
