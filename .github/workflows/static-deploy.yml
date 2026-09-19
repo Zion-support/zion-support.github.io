@@ -7,7 +7,7 @@ on:
   push:
     branches: [main, cursor/field-services-family-a-0b5b]
     paths-ignore:
-      - 'STATUS.md'
+      - '**/STATUS.md'
   workflow_dispatch:
 
 permissions:
