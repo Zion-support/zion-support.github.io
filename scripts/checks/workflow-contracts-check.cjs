@@ -1,73 +1,68 @@
 #!/usr/bin/env node
-/**
- * Workflow contracts (dedupe + SHA pin) for changed workflow files.
- * Missing this script was failing `npm run workflows:contracts:node` on every
- * workflow PR and stopping agents.
- */
-'use strict';
+// Workflow contracts check: dedupe, integrity, pin-strict.
+// Zero-dependency Node script so CI never fails on a missing package.
+// Usage: node scripts/checks/workflow-contracts-check.cjs
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-const SHA_PIN = /@[0-9a-f]{40}\b/i;
-const USES_RE = /^\s*uses:\s*['"]?([^'"\s#]+)/;
-
-function listChangedWorkflows() {
-  const base = process.env.GITHUB_BASE_REF || 'main';
-  try {
-    execSync(`git fetch --no-tags --depth=50 origin ${base}`, { stdio: 'ignore' });
-  } catch {
-    // shallow checkout without origin/main is fine; try local refs next
-  }
-  const ranges = [`origin/${base}...HEAD`, `${base}...HEAD`];
-  for (const range of ranges) {
-    try {
-      const out = execSync(`git diff --name-only ${range} -- .github/workflows`, {
-        encoding: 'utf8',
-      });
-      return out
-        .split('\n')
-        .map((line) => line.trim())
-        .filter((file) => /\.ya?ml$/.test(file) && fs.existsSync(file));
-    } catch {
-      continue;
-    }
-  }
-  console.warn('contracts: could not diff against base; skipping pin scan (do not fail the whole repo)');
-  return [];
-}
-
-const files = listChangedWorkflows();
-const names = new Map();
+const dir = path.join(__dirname, '..', '..', '.github', 'workflows');
 let errors = 0;
+const fail = (msg) => { console.error(`contract error: ${msg}`); errors++; };
 
-for (const file of files) {
-  const text = fs.readFileSync(file, 'utf8');
-  const nameMatch = text.match(/^name:\s*(.+)$/m);
+if (!fs.existsSync(dir)) {
+  console.log('No .github/workflows directory; nothing to check.');
+  process.exit(0);
+}
+
+const files = fs.readdirSync(dir).filter((f) => /\.ya?ml$/i.test(f));
+if (files.length === 0) {
+  console.log('No workflow files found; nothing to check.');
+  process.exit(0);
+}
+
+// 1) Dedupe: unique file basenames and unique workflow `name:` values.
+const seenNames = new Map();
+const seenFiles = new Set();
+for (const f of files) {
+  const key = f.toLowerCase();
+  if (seenFiles.has(key)) fail(`duplicate workflow file (case-insensitive): ${f}`);
+  seenFiles.add(key);
+
+  const text = fs.readFileSync(path.join(dir, f), 'utf8');
+
+  // 2) Integrity: minimal structural sanity without a YAML parser.
+  if (/\t/.test(text)) fail(`${f}: contains tab characters (invalid YAML indentation)`);
+  if (!/^\s*name\s*:/m.test(text)) fail(`${f}: missing top-level "name:"`);
+  if (!/^\s*("on"|'on'|on)\s*:/m.test(text)) fail(`${f}: missing top-level "on:" trigger`);
+  if (!/^\s*jobs\s*:/m.test(text)) fail(`${f}: missing top-level "jobs:"`);
+
+  const nameMatch = text.match(/^\s*name\s*:\s*['"]?([^'"\n]+)['"]?\s*$/m);
   if (nameMatch) {
-    const name = nameMatch[1].trim();
-    if (names.has(name)) {
-      console.error(`ERROR ${file}: duplicate workflow name "${name}" (also ${names.get(name)})`);
-      errors++;
+    const wfName = nameMatch[1].trim();
+    if (seenNames.has(wfName)) {
+      fail(`duplicate workflow name "${wfName}" in ${f} and ${seenNames.get(wfName)}`);
     } else {
-      names.set(name, file);
+      seenNames.set(wfName, f);
     }
   }
-  for (const line of text.split('\n')) {
-    const match = line.match(USES_RE);
-    if (!match) continue;
-    const action = match[1];
-    if (action.startsWith('./')) continue;
-    if (!SHA_PIN.test(line)) {
-      console.error(`ERROR ${file}: unpinned action ${action}`);
-      errors++;
+
+  // 3) Pin strict: every remote action in `uses:` must be pinned to a 40-char SHA.
+  //    Local reusable workflows (./...) and docker:// are exempt.
+  const usesLines = text.match(/^\s*uses\s*:\s*[^#\n]+/gm) || [];
+  for (const line of usesLines) {
+    const ref = line.replace(/^\s*uses\s*:\s*/, '').replace(/\s+#.*$/, '').trim().replace(/^['"]|['"]$/g, '');
+    if (ref.startsWith('./') || ref.startsWith('docker://')) continue;
+    const at = ref.lastIndexOf('@');
+    if (at === -1) { fail(`${f}: action "${ref}" has no version pin`); continue; }
+    const pin = ref.slice(at + 1);
+    if (!/^[0-9a-f]{40}$/i.test(pin)) {
+      fail(`${f}: action "${ref}" is not SHA-pinned (pin strict)`);
     }
   }
 }
 
-console.log(
-  errors
-    ? `contracts: ${files.length} workflow file(s), ${errors} error(s)`
-    : `contracts: ${files.length} workflow file(s), pin + name check ok`,
-);
-process.exit(errors > 0 ? 1 : 0);
+if (errors > 0) {
+  console.error(`workflow contracts: ${errors} error(s) across ${files.length} file(s)`);
+  process.exit(1);
+}
+console.log(`workflow contracts ok: ${files.length} file(s), dedupe + integrity + pin-strict passed`);
