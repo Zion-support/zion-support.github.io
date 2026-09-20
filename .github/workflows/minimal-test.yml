@@ -7,11 +7,14 @@ name: Minimal Build Test
 jobs:
   minimal:
     runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: '--max-old-space-size=6144'
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
     - uses: actions/checkout@v6.0.2
     - uses: actions/setup-node@v6.3.0
       with:
-        node-version: '20'
+        node-version: '22'
         cache: npm
     - run: rm -rf node_modules .next out
     - run: npm install
