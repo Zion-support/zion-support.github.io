@@ -25,6 +25,7 @@ jobs:
     timeout-minutes: 20
     env:
       NEXT_TELEMETRY_DISABLED: '1'
+      NODE_OPTIONS: '--max-old-space-size=6144'
     outputs:
       sha: ${{ steps.resolve-sha.outputs.sha }}
     steps:
