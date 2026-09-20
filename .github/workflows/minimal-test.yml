@@ -3,17 +3,21 @@ name: Minimal Build Test
   workflow_dispatch:
   push:
     branches:
-    - main
+      - main
 jobs:
   minimal:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v6.0.2
-    - uses: actions/setup-node@v6.3.0
-      with:
-        node-version: '20'
-        cache: npm
-    - run: rm -rf node_modules .next out
-    - run: npm install
-    - run: npm run build
     timeout-minutes: 10
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_OPTIONS: --max-old-space-size=7168
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '20'
+          cache: npm
+      - run: rm -rf node_modules .next out
+      - run: npm install --no-audit --fund=false
+      - name: Build (increased Node heap for large site graph)
+        run: npm run build
