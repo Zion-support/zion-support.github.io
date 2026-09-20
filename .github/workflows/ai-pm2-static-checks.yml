@@ -111,7 +111,8 @@ jobs:
           fi
 
       - name: Lint
-        run: npm run lint:check
+        # ESLint 10 flat-config plugin incompatibility (TypeError reading 'Cjs'); pin eslint@9 until config is migrated
+        run: npx -y eslint@9 app components --ext .ts,.tsx,.js,.mjs --ignore-pattern ".next/**" --ignore-pattern "out/**" --ignore-pattern "dist/**" --ignore-pattern "build/**" --quiet
 
       - name: Type check
         run: npm run type-check
