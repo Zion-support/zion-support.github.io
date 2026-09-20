@@ -1,0 +1,65 @@
+name: Money Paths Stub Guard
+
+# Fail CI on push/PR if money pages are stubs. Complements prepare-pages-out deploy gate.
+# FIELD-SERVICES LOCK: does not touch field-services.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/services/ai-automation/index.html'
+      - 'services/ai-automation/index.html'
+      - 'public/plans/index.html'
+      - 'plans/index.html'
+      - 'public/discovery/index.html'
+      - 'discovery/index.html'
+      - '.github/workflows/money-paths-stub-guard.yml'
+      - 'scripts/prepare-pages-out.sh'
+  pull_request:
+    paths:
+      - 'public/services/ai-automation/index.html'
+      - 'services/ai-automation/index.html'
+      - 'public/plans/index.html'
+      - 'plans/index.html'
+      - 'public/discovery/index.html'
+      - 'discovery/index.html'
+      - '.github/workflows/money-paths-stub-guard.yml'
+      - 'scripts/prepare-pages-out.sh'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reject-stubs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject stub money pages on source paths
+        run: |
+          set -euo pipefail
+          PLINK='7sY00k7JScFV99Bf044ZG06'
+          MIN=5120
+          check() {
+            local f="$1"
+            if [ ! -f "$f" ]; then echo "::error::missing money path $f"; exit 1; fi
+            local sz; sz=$(wc -c < "$f" | tr -d ' ')
+            if [ "$sz" -lt "$MIN" ]; then echo "::error::$f is stub-sized (${sz}B < ${MIN}B)"; exit 1; fi
+            if ! grep -Fq "$PLINK" "$f"; then echo "::error::$f lacks Starter Pay link $PLINK"; exit 1; fi
+            if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fi "http-equiv='refresh'" "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
+              echo "::error::$f looks like meta-refresh / PLACEHOLDER stub"; exit 1
+            fi
+            local n; n=$(grep -Fo "$PLINK" "$f" | wc -l | tr -d ' ')
+            echo "OK $f (${sz}B, ZG06x${n})"
+          }
+          check public/services/ai-automation/index.html
+          check services/ai-automation/index.html
+          for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
+            if [ -f "$f" ]; then
+              sz=$(wc -c < "$f" | tr -d ' ')
+              if [ "$sz" -lt "$MIN" ] || grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
+                echo "::error::$f looks stub-sized or redirect stub (${sz}B)"; exit 1
+              fi
+              echo "OK $f (${sz}B)"
+            fi
+          done
