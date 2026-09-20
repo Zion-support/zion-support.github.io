@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ROI Calc · Zion Tech Group</title>
+<meta name="description" content="Compare horas manuais contra os planos oficiais Zion: Discovery $99, Consulting $499, Starter $2.500."/>
+<link rel="canonical" href="https://ziontechgroup.com/roi-calc/"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#0b1220;color:#e6f0ff;line-height:1.5}
+.wrap{max-width:880px;margin:0 auto;padding:32px 20px}
+nav a,footer a{color:#c4b5fd;margin-right:12px;text-decoration:none}
+h1{font-size:2rem;background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:16px 0}
+label{display:block;margin:12px 0 4px;color:#94a3b8}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#fff}
+button,.buy{display:inline-block;margin-top:16px;padding:12px 20px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;cursor:pointer;text-decoration:none}
+.out{margin-top:24px;padding:20px;border:1px solid rgba(124,58,237,.3);border-radius:12px;background:#0f172a}
+.ok{color:#34d399}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Home</a><a href="/apps/">Apps</a><a href="/plans/">Plans</a><a href="/discovery/">Discovery</a><a href="/stack-audit/">Stack audit</a><a href="/agent-brief/">Agent brief</a></nav>
+<h1>ROI Calc</h1>
+<p>Quantas horas por mês o processo consome, e o que os planos oficiais Zion cobrem. Sem inventar preço de hardware.</p>
+<label>Horas manuais / mês</label>
+<input id="hours" type="number" value="20" min="1">
+<label>Custo carregado por hora (USD)</label>
+<input id="rate" type="number" value="45" min="1">
+<button type="button" onclick="run()">Calcular</button>
+<div class="out" id="out"></div>
+<p style="margin-top:24px"><a class="buy" href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b">Pagar Discovery $99</a>
+<a class="buy" href="/plans/">Ver planos</a></p>
+</div>
+<footer style="text-align:center;padding:24px"><a href="/contact/">Contato</a> · kleber@ziontechgroup.com</footer>
+<script>
+function run(){
+  var h=+document.getElementById('hours').value||0;
+  var r=+document.getElementById('rate').value||0;
+  var monthly=h*r;
+  var yearly=monthly*12;
+  var rec='Discovery $99 — mapear o processo primeiro.';
+  if(monthly>=2500) rec='Starter $2.500 (uma automação) ou Growth $8.000/mês.';
+  else if(monthly>=499) rec='Consulting $499 para roadmap, depois Starter.';
+  document.getElementById('out').innerHTML='<p>Custo manual: <b class="ok">$'+monthly.toLocaleString()+'/mês</b> · $'+yearly.toLocaleString()+'/ano</p><p>'+rec+'</p><p>Official menu only: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>';
+}
+run();
+</script>
+</body></html>

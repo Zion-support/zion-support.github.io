@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stack Audit · Zion Tech Group</title>
+<link rel="canonical" href="https://ziontechgroup.com/stack-audit/">
+<meta name="description" content="Ten checks that route you to Discovery $99, Consulting $499 or Starter $2,500.">
+<style>
+:root{--bg:#0b1020;--card:#141a2e;--ink:#eef2ff;--mut:#9aa3b8}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 ui-sans-serif,system-ui;background:var(--bg);color:var(--ink)}
+main{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+a{color:#c4b5fd}h1{font-size:1.7rem}
+.card{background:var(--card);border:1px solid #243049;border-radius:16px;padding:18px;margin:14px 0}
+label{display:flex;gap:10px;margin:8px 0}
+button,.buy{display:inline-block;margin:8px 8px 0 0;padding:10px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,#7c3aed,#db2777);color:#fff;font-weight:700;text-decoration:none;cursor:pointer}
+.fine{color:var(--mut);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/">Home</a> · <a href="/apps/">Apps</a> · <a href="/roi-calc/">ROI Calc</a> · <a href="/agent-brief/">Agent brief</a> · <a href="/en/plans/">Plans</a></nav>
+<h1>Ops stack audit</h1>
+<p>Ten yes/no checks. Score picks the next official SKU. Not a custom quote.</p>
+<div class="card" id="q"></div>
+<div class="card"><div id="out"></div>
+<p class="fine">Official menu: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>
+<p><a class="buy" href="/discovery/">Discovery $99</a> <a class="buy" href="/agent-brief/">Agent brief</a> <a class="buy" href="/roi-calc/">ROI calc</a></p>
+</div>
+</main>
+<script>
+const qs=['One named owner for the process.','System of record is written down.','Irreversible writes have a human gate.','Spend envelope or kill switch for model calls.','Exceptions have a queue and an SLA owner.','The job has a stop rule.','Logs can replay the last 20 runs.','PII is stripped before any LLM call.','A human can disable the agent in one click.','Success is one metric, not a portfolio KPI.'];
+const box=document.getElementById('q');
+box.innerHTML=qs.map(t=>'<label><input type=checkbox> '+t+'</label>').join('')+'<button type=button id=go>Score</button>';
+document.getElementById('go').onclick=function(){
+  const n=box.querySelectorAll('input:checked').length;
+  let rec='Discovery $99 — map owner, system of record and gate first.';
+  if(n>=8) rec='Starter $2,500 — one governed job is ready to implement.';
+  else if(n>=5) rec='Consulting $499 — the map exists; you need a roadmap and controls.';
+  document.getElementById('out').innerHTML='<b>'+n+'/10 ready.</b> '+rec;
+};
+</script>
+</body>
+</html>
