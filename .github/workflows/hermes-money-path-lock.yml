@@ -1,0 +1,99 @@
+name: Hermes Money Path Lock
+
+# Fail-closed: Hermes Agent service-page sync MUST NOT rewrite money HTML.
+# External agent (hermes@ziontechgroup.com) is not a workflow we can disable;
+# this guard restores known-good blobs if money paths are stubbed on main.
+# FIELD-SERVICES LOCK: does not touch field-services. No DNS. No #71365.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/services/ai-automation/**'
+      - 'services/ai-automation/**'
+      - 'public/plans/**'
+      - 'plans/**'
+      - 'public/discovery/**'
+      - 'discovery/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hermes-money-path-lock
+  cancel-in-progress: true
+
+jobs:
+  restore-if-stubbed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 5
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fail-closed restore money paths if stubbed
+        env:
+          GOOD_BLOB: 4a3b859876c6854c53d204828457394d152e645a
+          PLINK: 7sY00k7JScFV99Bf044ZG06
+          MIN: 5120
+        run: |
+          set -euo pipefail
+          author_email="$(git log -1 --pretty='%ae')"
+          author_name="$(git log -1 --pretty='%an')"
+          msg="$(git log -1 --pretty='%s')"
+          echo "head author=${author_name} <${author_email}> msg=${msg}"
+
+          need_restore=0
+          check() {
+            local f="$1"
+            if [ ! -f "$f" ]; then echo "MISSING $f"; need_restore=1; return; fi
+            local sz; sz=$(wc -c < "$f" | tr -d ' ')
+            if [ "$sz" -lt "$MIN" ]; then echo "STUB $f (${sz}B)"; need_restore=1; return; fi
+            if ! grep -Fq "$PLINK" "$f"; then echo "NO_PLINK $f"; need_restore=1; return; fi
+            if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null || grep -Fq 'PLACEHOLDER' "$f"; then
+              echo "REDIRECT_STUB $f"; need_restore=1; return
+            fi
+            echo "OK $f (${sz}B)"
+          }
+
+          check public/services/ai-automation/index.html
+          check services/ai-automation/index.html
+          for f in public/plans/index.html plans/index.html public/discovery/index.html discovery/index.html; do
+            if [ -f "$f" ]; then check "$f"; fi
+          done
+
+          # Always block Hermes Agent money-path commits that look like service sync
+          if echo "$author_email" | grep -qi 'hermes@ziontechgroup.com'; then
+            if echo "$msg" | grep -Eiq 'deploy:.*service pages|sync latest service|pipeline auto-run'; then
+              echo "Hermes service-page sync commit detected on money paths — forcing restore"
+              need_restore=1
+            fi
+          fi
+
+          if [ "$need_restore" -eq 0 ]; then
+            echo "Money paths healthy; no restore"
+            exit 0
+          fi
+
+          echo "Restoring ai-automation dual-path from blob ${GOOD_BLOB}"
+          git cat-file -e "${GOOD_BLOB}^{blob}" 2>/dev/null || git fetch --depth=50 origin main || true
+          # Prefer object from history; fallback to current if blob missing
+          if git cat-file -e "${GOOD_BLOB}^{blob}" 2>/dev/null; then
+            mkdir -p public/services/ai-automation services/ai-automation
+            git cat-file -p "$GOOD_BLOB" > public/services/ai-automation/index.html
+            cp -a public/services/ai-automation/index.html services/ai-automation/index.html
+          else
+            echo "::error::good blob ${GOOD_BLOB} not in history; cannot restore"
+            exit 1
+          fi
+
+          git config user.name "money-path-lock[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/services/ai-automation/index.html services/ai-automation/index.html
+          if git diff --staged --quiet; then
+            echo "Nothing to commit after restore attempt"
+            exit 1
+          fi
+          git commit -m "lock(money): restore ai-automation pay HTML after Hermes stub (blob ${GOOD_BLOB:0:7})"
+          git push origin HEAD:main
