@@ -2,6 +2,10 @@ name: Continuous Pages Deploy
 "on":
   push:
     branches: [ main ]
+    # Narrow race fix: war-room pulse may commit STATUS.md without intending a Pages publish.
+    # Do NOT disable war-room pulse — only stop this workflow from calling deploy-pages on STATUS.md-only pushes.
+    paths-ignore:
+      - '**/STATUS.md'
   workflow_dispatch:
 permissions:
   contents: read

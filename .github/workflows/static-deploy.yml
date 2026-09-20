@@ -2,13 +2,27 @@ name: Simple Static Deploy
 
 # Production Pages is build_type=workflow (not gh-pages branch).
 # Last good publisher: e23c3b71 — no environment gate, deploy-pages@v4.
+#
+# DURABLE GUARD: push/deploy only from main. Non-main branches (hero-carousel,
+# feature branches) must never publish Pages — workflow_dispatch from
+# hero-carousel previously shipped stub ai-automation and wiped live Pay CTAs.
+#
+# workflow_dispatch: use GitHub UI "Use workflow from" = main (default).
+# YAML cannot hard-lock dispatch ref; Guard main ref step rejects non-main.
+# Prefer prepare-pages-out.sh money-path gate over flaky live curl (runners
+# often block egress).
 
 on:
   push:
-    branches: [main, cursor/field-services-family-a-0b5b]
+    branches: [main]
     paths-ignore:
       - '**/STATUS.md'
   workflow_dispatch:
+    inputs:
+      note:
+        description: 'Dispatch from main only (Use workflow from = main)'
+        required: false
+        default: 'main'
 
 permissions:
   contents: read
@@ -24,9 +38,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Guard main ref
+        run: |
+          set -euo pipefail
+          echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME}"
+          if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
+            echo "::error::Simple Static Deploy is pinned to main only (got ${GITHUB_REF}). Re-run with Use workflow from = main."
+            exit 1
+          fi
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
       - uses: actions/deploy-pages@v4
+      # Post-deploy live curl skipped: runners often block egress and probes flake.
+      # The prepare-pages-out money-path gate above is the durable Pay RED guard.

@@ -49,4 +49,39 @@ for f in assets/css/site.css assets/js/zion-shell.js css/site.css; do
 done
 
 touch out/.nojekyll
+
+# DURABLE GUARD: reject stub / placeholder money paths before Pages publish.
+# Prevents Pay RED when a thin meta-refresh stub overwrites live ai-automation
+# (e.g. hero-carousel workflow_dispatch publishing stub out/).
+# FIELD-SERVICES LOCK: this gate does not touch field-services country leaves.
+assert_money_path() {
+  local rel="$1"
+  local f="out/$rel"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing money path out/$rel" >&2
+    exit 1
+  fi
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -lt 5120 ]; then
+    echo "ERROR: out/$rel is stub-sized (${sz}B < 5KB)" >&2
+    exit 1
+  fi
+  if ! grep -Fq '7sY00k7JScFV99Bf044ZG06' "$f"; then
+    echo "ERROR: out/$rel lacks live Starter Pay link 7sY00k7JScFV99Bf044ZG06" >&2
+    exit 1
+  fi
+  if grep -Fi 'http-equiv="refresh"' "$f" >/dev/null \
+    || grep -Fi "http-equiv='refresh'" "$f" >/dev/null \
+    || grep -Fq 'PLACEHOLDER' "$f"; then
+    echo "ERROR: out/$rel looks like a meta-refresh / PLACEHOLDER stub redirect" >&2
+    exit 1
+  fi
+  echo "OK money path out/$rel (${sz}B)"
+}
+
+assert_money_path services/ai-automation/index.html
+assert_money_path plans/index.html
+assert_money_path discovery/index.html
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
