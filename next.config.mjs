@@ -3,6 +3,8 @@ import path from 'node:path';
 
 const nextConfig = {
   output: 'export',
+  // Next.js 16 defaults to Turbopack; empty config silences the webpack-only error
+  turbopack: {},
   outputFileTracingRoot: process.cwd(),
   basePath: '',
   trailingSlash: true,
