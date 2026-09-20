@@ -111,8 +111,12 @@ jobs:
           fi
 
       - name: Lint
-        # ESLint 10 flat-config plugin incompatibility (TypeError reading 'Cjs'); pin eslint@9 until config is migrated
-        run: npx -y eslint@9 app components --ext .ts,.tsx,.js,.mjs --ignore-pattern ".next/**" --ignore-pattern "out/**" --ignore-pattern "dist/**" --ignore-pattern "build/**" --quiet
+        # Repo pins typescript@7 + eslint@10; typescript-eslint v8 crashes on TS 7
+        # (TypeError reading 'Cjs' in typescript-estree). Upgrade typescript-eslint
+        # to v10 (TS 7 support) in-memory, then run the locally pinned eslint.
+        run: |
+          npm install --no-save --no-audit --fund=false @typescript-eslint/parser@^10 @typescript-eslint/eslint-plugin@^10
+          npx eslint app components --ext .ts,.tsx,.js,.mjs --ignore-pattern ".next/**" --ignore-pattern "out/**" --ignore-pattern "dist/**" --ignore-pattern "build/**" --quiet
 
       - name: Type check
         run: npm run type-check
