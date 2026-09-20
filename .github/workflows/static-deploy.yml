@@ -3,20 +3,11 @@ name: Simple Static Deploy
 # Production Pages is build_type=workflow (not gh-pages branch).
 # Last good publisher: e23c3b71 — no environment gate, deploy-pages@v4.
 #
-# DURABLE GUARD: push/deploy only from main. Non-main branches (hero-carousel,
-# feature branches) must never publish Pages — workflow_dispatch from
-# hero-carousel previously shipped stub ai-automation and wiped live Pay CTAs.
-#
-# workflow_dispatch: use GitHub UI "Use workflow from" = main (default).
-# YAML cannot hard-lock dispatch ref; Guard main ref step rejects non-main.
-# Prefer prepare-pages-out.sh money-path gate over flaky live curl (runners
-# often block egress).
+# P0 2026-09-20: dispatch-only + cancel-in-progress false so Hermes
+# STATUS.md / CI fix pushes cannot cancel a sole money-path publish.
+# FIELD-SERVICES LOCK. No DNS. No #71365.
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - '**/STATUS.md'
   workflow_dispatch:
     inputs:
       note:
@@ -31,7 +22,7 @@ permissions:
 
 concurrency:
   group: pages-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
