@@ -1,0 +1,9 @@
+{
+  "updated_at": "2026-09-20T02:45:00Z",
+  "agents": [
+    {"name": "Grok", "status": "team lead", "last_seen": ""},
+    {"name": "Lucas", "status": "comms", "last_seen": ""},
+    {"name": "Hermes", "status": "monitor", "last_seen": ""},
+    {"name": "Composio CEO-ops", "status": "online", "last_seen": "2026-09-20T02:45:00Z"}
+  ]
+}
