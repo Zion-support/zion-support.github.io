@@ -8,8 +8,9 @@ jobs:
   recovery:
     runs-on: ubuntu-latest
     env:
-      NODE_OPTIONS: --max-old-space-size=14336
       NEXT_TELEMETRY_DISABLED: '1'
+      NEXT_BUILD_WORKER_COUNT: '1'
+      NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
     steps:
     - uses: actions/checkout@v6.0.2
     - uses: actions/setup-node@v6.3.0
