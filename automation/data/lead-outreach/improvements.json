@@ -1,0 +1,111 @@
+{
+  "digests": [
+    {
+      "ts": "2026-09-09T19:21:00.000000Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "recencyDays": 11.45,
+        "reconciliationNote": "Snapshot from 2026-09-09: 708 total runs, 0 canonical sends, 0 duplicates suppressed, 0 auth failures. Pool collapsed to 0 on Sep 7 and stayed at zero. Send-path wiring is the gating blocker. Hot-followup label empty -- no active threads."
+      }
+    },
+    {
+      "ts": "2026-09-18T13:33:01.312692Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "recencyDays": 11.45,
+        "reconciliationNote": "Cron review 2026-09-18T13:33:01.312692Z: no material state delta vs prior entries. Latest complete event still carries potentialClients=0 despite prior improvements entry claiming 18 -- no recovery occurred. Same stale zero-send zero-potential-client topology. 343 legacy direct Gmail sends bypass canonical pipeline. Suggestions only: (1) suppression window is unexercised (0 canonical sends) -- no tuning signal, (2) prompt wording/scoring unobservable until sends resume, (3) if send path restored, re-evaluate suppression after first send burst produces responses, (4) re-evaluate prompt/scoring after enough sends+responses accumulate to measure reply rate by variant."
+      }
+    },
+    {
+      "ts": "2026-09-18T14:45:00.000000Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 708,
+        "sendsAttempted": 0,
+        "duplicatesSuppressed": 0,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-07T01:27:59.585368Z",
+        "potentialClients": 0,
+        "scanned": 501,
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "recencyDays": 11.45,
+        "reconciliationNote": "Cron review 2026-09-18T14:45:00Z (UTC-03:00): no material state delta vs prior entries (latest digest ts=2026-09-18T13:33:01.312692Z, prior improvements entry ts=2026-09-18T13:33:01.312692Z). Live outreach-log.jsonl: 708 non-empty lines, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event), scanned=501. Auth healthy: zero No auth for gmail across all 708 records. Gmail search probe succeeds, canonical send path remains unconfigured (sendEnabled=false, gmailAuth=true). Hot-followup label empty -- no active threads to draft CEO replies. No actionable suppression-window/prompt-wording/scoring pattern: 0 canonical sends means suppression never exercised, and content experiments are unobservable until sends resume."
+      }
+    }
+  ],
+  "improvements": [
+    {
+      "ts": "2026-09-11T23:34:14Z",
+      "pattern": "Cron review 2026-09-11T23:34:14Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T04:25:30Z",
+      "pattern": "Cron review 2026-09-18T04:25:30Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T07:25:19Z",
+      "pattern": "Cron review 2026-09-18T07:25:19Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T08:14:27Z",
+      "pattern": "Cron review 2026-09-18T08:14:27Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T10:48:47.000000Z",
+      "pattern": "Cron review 2026-09-18T10:48:47.000000Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T10:48:58.000000Z",
+      "pattern": "Cron review 2026-09-18T10:48:58.000000Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T12:09:56.091Z",
+      "pattern": "Cron review 2026-09-18T11:52:26Z: material state delta -- potentialClients recovered from 0 to 18 in the latest complete event (scanned=501, ts=2026-09-07T00:35:17.196027Z). This is a positive signal but incomplete: sendsAttempted still 0 because sendEnabled=false (send-path wiring is unconfigured). Recovery is trapped until send auth/wiring is restored. No suppression-window tuning warranted yet (duplicatesSuppressed=0 because canonical sends never attempted). No prompt wording or scoring changes: effect unobservable until sends resume.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T13:33:01.312692Z",
+      "pattern": "Cron review 2026-09-18T13:33:01.312692Z: no material state delta vs prior digest (ts=2026-09-18T12:09:56.091Z). Live outreach-log.jsonl unchanged: 708 non-empty lines, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0 in latest complete event (no recovery from the 18-client peak on Sep 7). Same stale zero-send zero-potential-client topology persists. 343 legacy direct Gmail sends bypass canonical pipeline.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T14:45:00.000000Z",
+      "pattern": "Cron review 2026-09-18T14:45:00Z (UTC-03:00): no material state delta vs prior entries (latest digest ts=2026-09-18T13:33:01.312692Z, prior improvements entry ts=2026-09-18T13:33:01.312692Z). Live outreach-log.jsonl: 708 non-empty lines, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event), scanned=501. Auth healthy: zero No auth for gmail across all 708 records. Gmail search probe succeeds, canonical send path remains unconfigured (sendEnabled=false, gmailAuth=true). Hot-followup label empty -- no active threads to draft CEO replies. No actionable suppression-window/prompt-wording/scoring pattern: 0 canonical sends means suppression never exercised, and content experiments are unobservable until sends resume.",
+      "metrics": {}
+    },
+    {
+      "ts": "2026-09-18T21:59:23.753612Z",
+      "pattern": "Cron review 2026-09-18T21:59Z (UTC-03:00): active/working, send-disabled, stale candidate pool, no hot-follow-up threads. Live outreach-log.jsonl: 708 non-empty lines (343 legacy sends + 3 send_disabled_analysis + 133 start + 229 complete), 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event), scanned=501. Auth healthy: gmailAuth=true, 0 No auth for gmail across all 708 records. Gmail search probe succeeds, canonical send path remains unconfigured (sendEnabled=false). Hot-followup label empty -- no active threads, no CEO draft prepared. No suppression-window/prompt-wording/scoring signal: 0 canonical sends leaves suppression unexercised, content experiments unobservable. Gating blocker: send-path wiring. No material state delta vs prior improvements entry (ts=2026-09-18T14:45:00Z); skip append of duplicate observation.",
+      "metrics": {}
+    }
+  ],
+  "updatedAt": "2026-09-18T21:59:23.753612Z"
+}
