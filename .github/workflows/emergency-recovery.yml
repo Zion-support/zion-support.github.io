@@ -4,6 +4,9 @@ name: Emergency Recovery - Minimal Build
   push:
     branches:
     - main
+    paths-ignore:
+    - '**/STATUS.md'
+    - 'automation/reports/**'
 jobs:
   recovery:
     runs-on: ubuntu-latest
@@ -18,7 +21,5 @@ jobs:
         node-version: '22'
     - run: rm -rf node_modules .next node
     - run: npm install --force
-    # Build exceeds hosted-runner memory (Next 16 OOM even at 12GB heap). Non-blocking: real deploy path is static-deploy.yml.
     - run: npm run build
-      continue-on-error: true
     timeout-minutes: 15
