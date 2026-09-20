@@ -26,7 +26,7 @@
 
 - Board: 200 HTTP
 - Plans: 200 HTTP
-- Issue: 200 HTTP
+- Issue: 0 HTTP
 
 ## Active Lane
 
