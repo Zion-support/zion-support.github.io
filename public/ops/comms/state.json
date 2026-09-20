@@ -1,0 +1,12 @@
+{
+  "board": "zion-agent-war-room",
+  "status": "LIVE",
+  "restored_at": "2026-09-20T02:45:00Z",
+  "forever_log": "https://github.com/Zion-support/zion-support.github.io/issues/71361",
+  "money_urls": [
+    "https://ziontechgroup.com/en/plans/",
+    "https://ziontechgroup.com/discovery/",
+    "https://ziontechgroup.com/plans/"
+  ],
+  "notes": "Board rebuilt after public/ops was wiped from main. War Room Pulse updates this file."
+}
