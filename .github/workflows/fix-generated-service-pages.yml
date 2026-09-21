@@ -1,0 +1,46 @@
+name: Fix generated service pages (one-off codemod)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fix-generated-service-pages
+  cancel-in-progress: false
+
+"on":
+  workflow_dispatch:
+
+jobs:
+  codemod:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Apply fixes to generated service pages
+        run: |
+          set -euo pipefail
+          echo "Before: $(grep -rlE 'path=`' app/services --include=page.tsx | wc -l) files with bad path= template literal"
+          # Fix 1: JSX attribute with raw template literal: path=`...` -> path={`...`}
+          find app/services -name page.tsx -type f -print0 | xargs -0 sed -i -E 's/(path=)(`[^`]*`)/\1{\2}/g'
+          echo "After fix1: $(grep -rlE 'path=`' app/services --include=page.tsx | wc -l) remaining"
+          echo "Before fix2: $(grep -rlE '<script type="application/ld\+json">\{' app/services --include=page.tsx | wc -l) files with raw JSON-LD"
+          # Fix 2: raw JSON object inside JSX script tag -> wrap as template literal expression
+          find app/services -name page.tsx -type f -print0 | xargs -0 perl -0777 -pi -e 's/(<script type="application\/ld\+json">)(\{.*?\})(<\/script>)/$1{\`$2\`}$3/gs'
+          echo "After fix2: $(grep -rlE '<script type="application/ld\+json">\{' app/services --include=page.tsx | wc -l) remaining"
+
+      - name: Commit fixes
+        run: |
+          set -euo pipefail
+          git config user.name "Zion Bot"
+          git config user.email "kleber@ziontechgroup.com"
+          git add app/services
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "fix(pages): repair JSX syntax in 13k auto-generated service pages (template-literal path attr + JSON-LD wrapping)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && break || sleep 5
+          done
