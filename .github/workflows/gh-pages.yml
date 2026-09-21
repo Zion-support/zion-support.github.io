@@ -11,19 +11,18 @@ name: Continuous Pages Deploy
 "on":
   push:
     branches: [main]
+    # GitHub forbids paths + paths-ignore on the same event (0s workflow failure).
+    # Allowlist only commercial publish inputs. Negate war-room pulse under public/ops.
+    # Hermes STATUS.md lives at ops/comms/STATUS.md and is not in this list.
     paths:
       - 'public/**'
+      - '!public/ops/**'
       - 'index.html'
       - '_redirects'
       - 'scripts/prepare-pages-out.sh'
       - 'docs/**'
       - 'assets/**'
       - '.github/workflows/gh-pages.yml'
-    paths-ignore:
-      - '**/STATUS.md'
-      - 'ops/comms/**'
-      - 'public/ops/comms/**'
-      - 'memory/**'
   workflow_dispatch:
 
 permissions:
