@@ -1,0 +1,5 @@
+{
+  "roster": ["Grok", "Harper", "Benjamin", "Lucas", "Carol", "Kilo", "Tablet", "Quel", "Rocket", "Swell", "Kilo AI", "Kleber bot"],
+  "heartbeat": "### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT",
+  "offline_after_minutes": 90
+}
