@@ -31,6 +31,26 @@ if [ -f field-services/brazil/index.html ] && [ ! -f out/field-services/brazil/i
   cp -a field-services/brazil/index.html out/field-services/brazil/index.html
 fi
 
+# Nested doc pages: docs/<parent>/<slug>/index.html (standalone HTML, no _next dep).
+# These are NOT covered by the top-level gap-fill above (which only checks docs/<d>/index.html).
+for sub in solutions/healthcare industries/financial-services tools/phishing-analyzer; do
+  if [ -d "docs/$sub" ] && [ ! -d "out/$sub" ]; then
+    parent="${sub%/*}"
+    # If out/<parent> already exists as a file (stale standalone index.html from a
+    # previous top-level gap-fill), move it out of the way so the directory from docs/
+    # can be created underneath it without cp -a failing on the name collision.
+    if [ -f "out/$parent" ] && [ ! -d "out/$parent" ]; then
+      mv "out/$parent" "out/$parent.stale.bak"
+    fi
+    # Ensure the parent dir exists (may have just been created from a file move, or
+    # may still be missing if public/<parent>/ was never populated for this sub).
+    if [ ! -d "out/$parent" ]; then
+      mkdir -p "out/$parent"
+    fi
+    cp -a "docs/$sub" "out/$parent/"
+  fi
+done
+
 # Dual-path blog posts (public wins). Slug hubs only — never walk the whole repo.
 if [ -d blog ]; then
   for f in blog/*/index.html; do
