@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-customer-director-83ff32be` title="Adaptive Customer Director" />
+        <BreadcrumbSchema path="/services/adaptive-customer-director-83ff32be" title="Adaptive Customer Director" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Customer Director</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Adaptive Customer Director. Powered by cutting-edge AI, this platform delivers workflow management like never before.</p>
 

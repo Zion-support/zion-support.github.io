@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-cognitive---gaming-5be7e00d` title="Processor Cognitive - Gaming" />
+        <BreadcrumbSchema path="/services/processor-cognitive---gaming-5be7e00d" title="Processor Cognitive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Processor Cognitive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Processor Cognitive - Gaming. Powered by cutting-edge AI, this platform delivers energy management like never before.</p>
 

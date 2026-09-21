@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-processor-system-finance-3a23e042` title="Autonomous Processor System - Finance" />
+        <BreadcrumbSchema path="/services/autonomous-processor-system-finance-3a23e042" title="Autonomous Processor System - Finance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Processor System - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with Autonomous Processor System - Finance. Powered by cutting-edge AI, this platform delivers workflow management like never befo</p>
 

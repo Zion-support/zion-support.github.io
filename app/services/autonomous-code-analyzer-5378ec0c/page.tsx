@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-code-analyzer-5378ec0c` title="Autonomous Code Analyzer" />
+        <BreadcrumbSchema path="/services/autonomous-code-analyzer-5378ec0c" title="Autonomous Code Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Code Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: Autonomous Code Analyzer. Combines energy management with adaptive intelligence for optimal results.</p>
 

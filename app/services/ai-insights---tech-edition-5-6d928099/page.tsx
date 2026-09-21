@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-insights---tech-edition-5-6d928099` title="AI Insights - Tech Edition #5" />
+        <BreadcrumbSchema path="/services/ai-insights---tech-edition-5-6d928099" title="AI Insights - Tech Edition #5" />
         <h1 className="text-4xl font-bold mb-6">AI Insights - Tech Edition #5</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Insights - Tech Edition #5. This autonomous system provides maintenance scheduling with zero manual intervention needed.</p>
 

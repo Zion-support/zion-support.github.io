@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-platform-for-education-27cdc1db` title="Intelligent Platform for Education" />
+        <BreadcrumbSchema path="/services/intelligent-platform-for-education-27cdc1db" title="Intelligent Platform for Education" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Platform for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Intelligent Platform for Education. This AI-driven solution automates inventory management with unprecedented accur</p>
 

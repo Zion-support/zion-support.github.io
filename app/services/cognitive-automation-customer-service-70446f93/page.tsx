@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-automation-customer-service-70446f93` title="Cognitive Automation Customer Service" />
+        <BreadcrumbSchema path="/services/cognitive-automation-customer-service-70446f93" title="Cognitive Automation Customer Service" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Automation Customer Service</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Gaming is here with Cognitive Automation Customer Service. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

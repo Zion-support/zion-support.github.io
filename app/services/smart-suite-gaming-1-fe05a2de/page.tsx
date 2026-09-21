@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-suite-gaming-1-fe05a2de` title="Smart suite-gaming #1" />
+        <BreadcrumbSchema path="/services/smart-suite-gaming-1-fe05a2de" title="Smart suite-gaming #1" />
         <h1 className="text-4xl font-bold mb-6">Smart suite-gaming #1</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart suite-gaming #1. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

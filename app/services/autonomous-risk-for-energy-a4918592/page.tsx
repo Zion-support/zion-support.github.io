@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-risk-for-energy-a4918592` title="Autonomous Risk for Energy" />
+        <BreadcrumbSchema path="/services/autonomous-risk-for-energy-a4918592" title="Autonomous Risk for Energy" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Risk for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Energy is here with Autonomous Risk for Energy. Powered by cutting-edge AI, this platform delivers data governance like never before.</p>
 

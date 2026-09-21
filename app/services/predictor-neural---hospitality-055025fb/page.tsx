@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-neural---hospitality-055025fb` title="Predictor Neural - Hospitality" />
+        <BreadcrumbSchema path="/services/predictor-neural---hospitality-055025fb" title="Predictor Neural - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Predictor Neural - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Predictor Neural - Hospitality. Powered by cutting-edge AI, this platform delivers customer insights like never before.</p>
 

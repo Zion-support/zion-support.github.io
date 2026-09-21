@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analyzer---sports-edition-3-cbcc1102` title="AI Analyzer - Sports Edition #3" />
+        <BreadcrumbSchema path="/services/ai-analyzer---sports-edition-3-cbcc1102" title="AI Analyzer - Sports Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Analyzer - Sports Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize sports through intelligent automation. Our AI Analyzer - Sports Edition #3 leverages advanced machine learning to deliver language processing at s</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-intelligent---sports-5de5529c` title="Generator Intelligent - Sports" />
+        <BreadcrumbSchema path="/services/generator-intelligent---sports-5de5529c" title="Generator Intelligent - Sports" />
         <h1 className="text-4xl font-bold mb-6">Generator Intelligent - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Generator Intelligent - Sports. This AI-driven solution automates fraud prevention with unprecedented accuracy and eff</p>
 

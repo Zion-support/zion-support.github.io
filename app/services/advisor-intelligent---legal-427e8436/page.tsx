@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-intelligent---legal-427e8436` title="Advisor Intelligent - Legal" />
+        <BreadcrumbSchema path="/services/advisor-intelligent---legal-427e8436" title="Advisor Intelligent - Legal" />
         <h1 className="text-4xl font-bold mb-6">Advisor Intelligent - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Advisor Intelligent - Legal. Combines risk assessment with adaptive intelligence for optimal results.</p>
 

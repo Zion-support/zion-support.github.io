@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-context-aware-threat-detection-7425aa2a` title="AI-Powered Context-Aware Threat Detection" />
+        <BreadcrumbSchema path="/services/ai-powered-context-aware-threat-detection-7425aa2a" title="AI-Powered Context-Aware Threat Detection" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Context-Aware Threat Detection</h1>
         <p className="text-lg text-gray-300 mb-8">Advanced cybersecurity platform that identifies and mitigates context-aware threats in real-time.</p>
 

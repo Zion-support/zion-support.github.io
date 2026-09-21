@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-content-optimization-d20c39a8` title="Intelligent Content Optimization" />
+        <BreadcrumbSchema path="/services/intelligent-content-optimization-d20c39a8" title="Intelligent Content Optimization" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Content Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Content Optimization. This autonomous system provides data processing with zero manual intervention needed.</p>
 

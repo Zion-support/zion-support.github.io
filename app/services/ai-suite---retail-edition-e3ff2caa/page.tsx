@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-suite---retail-edition-e3ff2caa` title="AI Suite - Retail Edition" />
+        <BreadcrumbSchema path="/services/ai-suite---retail-edition-e3ff2caa" title="AI Suite - Retail Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Suite - Retail Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Suite - Retail Edition. This autonomous system provides performance monitoring with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-smart---legal-7ef7879a` title="Intelligence Smart - Legal" />
+        <BreadcrumbSchema path="/services/intelligence-smart---legal-7ef7879a" title="Intelligence Smart - Legal" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Smart - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize legal through intelligent automation. Our Intelligence Smart - Legal leverages advanced machine learning to deliver risk assessment at scale.</p>
 

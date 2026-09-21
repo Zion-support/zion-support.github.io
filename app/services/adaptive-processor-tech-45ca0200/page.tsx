@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-processor-tech-45ca0200` title="Adaptive processor-tech" />
+        <BreadcrumbSchema path="/services/adaptive-processor-tech-45ca0200" title="Adaptive processor-tech" />
         <h1 className="text-4xl font-bold mb-6">Adaptive processor-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize technology through intelligent automation. Our Adaptive processor-tech leverages advanced machine learning to deliver code optimization at scale.</p>
 

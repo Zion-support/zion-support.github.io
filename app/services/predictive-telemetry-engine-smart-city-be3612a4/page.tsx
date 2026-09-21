@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-telemetry-engine-smart-city-be3612a4` title="Predictive Telemetry Engine - Smart-City" />
+        <BreadcrumbSchema path="/services/predictive-telemetry-engine-smart-city-be3612a4" title="Predictive Telemetry Engine - Smart-City" />
         <h1 className="text-4xl font-bold mb-6">Predictive Telemetry Engine - Smart-City</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your smart-city business with Predictive Telemetry Engine - Smart-City. Our solution provides telemetry collection with enterprise-grade reliability and</p>
 

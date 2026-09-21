@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-context-aware-customer-deployment-60161424` title="Serverless Context-Aware Customer Deployment" />
+        <BreadcrumbSchema path="/services/serverless-context-aware-customer-deployment-60161424" title="Serverless Context-Aware Customer Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Context-Aware Customer Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales context-aware customer workloads without infrastructure management.</p>
 

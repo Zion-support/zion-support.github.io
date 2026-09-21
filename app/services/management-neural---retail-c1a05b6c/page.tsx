@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/management-neural---retail-c1a05b6c` title="Management Neural - Retail" />
+        <BreadcrumbSchema path="/services/management-neural---retail-c1a05b6c" title="Management Neural - Retail" />
         <h1 className="text-4xl font-bold mb-6">Management Neural - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Management Neural - Retail leverages advanced machine learning to deliver data processing at scale.</p>
 

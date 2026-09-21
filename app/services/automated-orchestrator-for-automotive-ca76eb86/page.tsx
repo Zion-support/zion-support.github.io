@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-orchestrator-for-automotive-ca76eb86` title="Automated Orchestrator for Automotive" />
+        <BreadcrumbSchema path="/services/automated-orchestrator-for-automotive-ca76eb86" title="Automated Orchestrator for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Automated Orchestrator for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Automated Orchestrator for Automotive. This AI-driven solution automates inventory management with unprecedented a</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-adaptive---energy-26a378d2` title="Director Adaptive - Energy" />
+        <BreadcrumbSchema path="/services/director-adaptive---energy-26a378d2" title="Director Adaptive - Energy" />
         <h1 className="text-4xl font-bold mb-6">Director Adaptive - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your energy operations with our Director Adaptive - Energy. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and e</p>
 

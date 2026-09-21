@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-ai---logistics-dc4bf0ba` title="Orchestrator AI - Logistics" />
+        <BreadcrumbSchema path="/services/orchestrator-ai---logistics-dc4bf0ba" title="Orchestrator AI - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator AI - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Orchestrator AI - Logistics. This AI-driven solution automates data processing with unprecedented accuracy and effi</p>
 

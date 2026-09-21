@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-optimization-real-estate-c29a55f5` title="Predictive optimization-real-estate" />
+        <BreadcrumbSchema path="/services/predictive-optimization-real-estate-c29a55f5" title="Predictive optimization-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Predictive optimization-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive optimization-real-estate. This autonomous system provides maintenance scheduling with zero manual intervention neede</p>
 

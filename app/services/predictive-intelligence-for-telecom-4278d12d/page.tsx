@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-intelligence-for-telecom-4278d12d` title="Predictive Intelligence for Telecom" />
+        <BreadcrumbSchema path="/services/predictive-intelligence-for-telecom-4278d12d" title="Predictive Intelligence for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Predictive Intelligence for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Predictive Intelligence for Telecom. This AI-driven solution automates workflow management with unprecedented accurac</p>
 

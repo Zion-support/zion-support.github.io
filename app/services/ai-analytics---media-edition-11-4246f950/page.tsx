@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analytics---media-edition-11-4246f950` title="AI Analytics - Media Edition #11" />
+        <BreadcrumbSchema path="/services/ai-analytics---media-edition-11-4246f950" title="AI Analytics - Media Edition #11" />
         <h1 className="text-4xl font-bold mb-6">AI Analytics - Media Edition #11</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our AI Analytics - Media Edition #11. This AI-driven solution automates inventory management with unprecedented accuracy an</p>
 

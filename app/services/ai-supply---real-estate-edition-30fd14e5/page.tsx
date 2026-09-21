@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-supply---real-estate-edition-30fd14e5` title="AI Supply - Real Estate Edition" />
+        <BreadcrumbSchema path="/services/ai-supply---real-estate-edition-30fd14e5" title="AI Supply - Real Estate Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Supply - Real Estate Edition</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Real Estate is here with AI Supply - Real Estate Edition. Powered by cutting-edge AI, this platform delivers content generation like never before.</p>
 

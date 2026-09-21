@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-coordinator-for-retail-bbde85c7` title="Neural Coordinator for Retail" />
+        <BreadcrumbSchema path="/services/neural-coordinator-for-retail-bbde85c7" title="Neural Coordinator for Retail" />
         <h1 className="text-4xl font-bold mb-6">Neural Coordinator for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Neural Coordinator for Retail leverages advanced machine learning to deliver user experience at scale.</p>
 

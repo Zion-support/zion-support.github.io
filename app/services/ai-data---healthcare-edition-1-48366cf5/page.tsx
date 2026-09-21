@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-data---healthcare-edition-1-48366cf5` title="AI Data - Healthcare Edition #1" />
+        <BreadcrumbSchema path="/services/ai-data---healthcare-edition-1-48366cf5" title="AI Data - Healthcare Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI Data - Healthcare Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Healthcare is here with AI Data - Healthcare Edition #1. Powered by cutting-edge AI, this platform delivers customer service automation like never</p>
 

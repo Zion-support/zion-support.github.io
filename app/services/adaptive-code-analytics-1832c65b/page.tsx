@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-code-analytics-1832c65b` title="Adaptive Code Analytics" />
+        <BreadcrumbSchema path="/services/adaptive-code-analytics-1832c65b" title="Adaptive Code Analytics" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Code Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Adaptive Code Analytics leverages advanced machine learning to deliver compliance monitoring at sc</p>
 

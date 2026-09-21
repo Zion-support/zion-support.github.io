@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-optimization-for-telecom-3c0c12d0` title="Self-Optimizing Optimization for Telecom" />
+        <BreadcrumbSchema path="/services/self-optimizing-optimization-for-telecom-3c0c12d0" title="Self-Optimizing Optimization for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Optimization for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Self-Optimizing Optimization for Telecom. This AI-driven solution automates document processing with unprecedented ac</p>
 

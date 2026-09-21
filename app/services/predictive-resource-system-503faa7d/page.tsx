@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-resource-system-503faa7d` title="Predictive Resource System" />
+        <BreadcrumbSchema path="/services/predictive-resource-system-503faa7d" title="Predictive Resource System" />
         <h1 className="text-4xl font-bold mb-6">Predictive Resource System</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Predictive Resource System. Combines inventory management with adaptive intelligence for optimal results.</p>
 

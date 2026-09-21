@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-advisor-for-hospitality-3567c74b` title="Adaptive Advisor for Hospitality" />
+        <BreadcrumbSchema path="/services/adaptive-advisor-for-hospitality-3567c74b" title="Adaptive Advisor for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Advisor for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Adaptive Advisor for Hospitality. Powered by cutting-edge AI, this platform delivers inventory management like never befo</p>
 

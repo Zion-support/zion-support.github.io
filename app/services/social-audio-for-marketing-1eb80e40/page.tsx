@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/social-audio-for-marketing-1eb80e40` title="Social Audio for Marketing" />
+        <BreadcrumbSchema path="/services/social-audio-for-marketing-1eb80e40" title="Social Audio for Marketing" />
         <h1 className="text-4xl font-bold mb-6">Social Audio for Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your marketing operations with our Social Audio for Marketing. This AI-driven solution automates audio analysis with unprecedented accuracy and effici</p>
 

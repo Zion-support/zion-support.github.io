@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quantum-ready-resilient-e-commerce-analytics-4a6fe56a` title="Quantum-Ready Resilient E-Commerce Analytics" />
+        <BreadcrumbSchema path="/services/quantum-ready-resilient-e-commerce-analytics-4a6fe56a" title="Quantum-Ready Resilient E-Commerce Analytics" />
         <h1 className="text-4xl font-bold mb-6">Quantum-Ready Resilient E-Commerce Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Quantum-ready analytics platform that prepares resilient e-commerce workloads for future quantum acceleration.</p>
 

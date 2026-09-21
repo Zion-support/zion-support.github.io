@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-automation-engine-logistics-dc386f1b` title="Predictive Automation Engine - Logistics" />
+        <BreadcrumbSchema path="/services/predictive-automation-engine-logistics-dc386f1b" title="Predictive Automation Engine - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Predictive Automation Engine - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive Automation Engine - Logistics. This autonomous system provides predictive maintenance with zero manual intervention </p>
 

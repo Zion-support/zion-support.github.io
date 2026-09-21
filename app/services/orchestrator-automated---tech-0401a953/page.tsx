@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-automated---tech-0401a953` title="Orchestrator Automated - Tech" />
+        <BreadcrumbSchema path="/services/orchestrator-automated---tech-0401a953" title="Orchestrator Automated - Tech" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Automated - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize technology through intelligent automation. Our Orchestrator Automated - Tech leverages advanced machine learning to deliver workflow management at</p>
 

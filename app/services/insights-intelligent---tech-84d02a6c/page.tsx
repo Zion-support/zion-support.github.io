@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-intelligent---tech-84d02a6c` title="Insights Intelligent - Tech" />
+        <BreadcrumbSchema path="/services/insights-intelligent---tech-84d02a6c" title="Insights Intelligent - Tech" />
         <h1 className="text-4xl font-bold mb-6">Insights Intelligent - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Insights Intelligent - Tech. This AI-driven solution automates compliance monitoring with unprecedented accuracy a</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-market-system-27de2353` title="Automated Market System" />
+        <BreadcrumbSchema path="/services/automated-market-system-27de2353" title="Automated Market System" />
         <h1 className="text-4xl font-bold mb-6">Automated Market System</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Market System. This autonomous system provides decision support with zero manual intervention needed.</p>
 

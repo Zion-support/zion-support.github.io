@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-predictive---finance-a2798a45` title="Coordinator Predictive - Finance" />
+        <BreadcrumbSchema path="/services/coordinator-predictive---finance-a2798a45" title="Coordinator Predictive - Finance" />
         <h1 className="text-4xl font-bold mb-6">Coordinator Predictive - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Coordinator Predictive - Finance. Combines performance monitoring with adaptive intelligence for optimal results.</p>
 

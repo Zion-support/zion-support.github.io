@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-predictive---education-d9516903` title="Analyzer Predictive - Education" />
+        <BreadcrumbSchema path="/services/analyzer-predictive---education-d9516903" title="Analyzer Predictive - Education" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Predictive - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Analyzer Predictive - Education. This AI-driven solution automates quality control with unprecedented accuracy and </p>
 

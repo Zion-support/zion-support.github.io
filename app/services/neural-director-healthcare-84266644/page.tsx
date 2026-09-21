@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-director-healthcare-84266644` title="Neural director-healthcare" />
+        <BreadcrumbSchema path="/services/neural-director-healthcare-84266644" title="Neural director-healthcare" />
         <h1 className="text-4xl font-bold mb-6">Neural director-healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our Neural director-healthcare leverages advanced machine learning to deliver sales forecasting at scal</p>
 

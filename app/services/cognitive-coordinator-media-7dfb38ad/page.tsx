@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-coordinator-media-7dfb38ad` title="Cognitive coordinator-media" />
+        <BreadcrumbSchema path="/services/cognitive-coordinator-media-7dfb38ad" title="Cognitive coordinator-media" />
         <h1 className="text-4xl font-bold mb-6">Cognitive coordinator-media</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with Cognitive coordinator-media. Powered by cutting-edge AI, this platform delivers quality control like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/3-enterprise-ai-governance-platform` title="Enterprise AI Governance Platform" />
+        <BreadcrumbSchema path="/services/3-enterprise-ai-governance-platform" title="Enterprise AI Governance Platform" />
         <h1 className="text-4xl font-bold mb-6">Enterprise AI Governance Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Comprehensive framework for managing AI ethics, compliance, risk, and performance across enterprise AI deployments with automated monitoring and reporting.</p>
 

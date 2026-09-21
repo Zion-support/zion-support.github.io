@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-inventory-automation-70e87a14` title="Autonomous Inventory Automation" />
+        <BreadcrumbSchema path="/services/autonomous-inventory-automation-70e87a14" title="Autonomous Inventory Automation" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Inventory Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Autonomous Inventory Automation. Combines image recognition with adaptive intelligence for optimal results.</p>
 

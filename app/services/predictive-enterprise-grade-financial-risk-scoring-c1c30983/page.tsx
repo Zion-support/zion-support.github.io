@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-enterprise-grade-financial-risk-scoring-c1c30983` title="Predictive Enterprise-Grade Financial Risk Scoring" />
+        <BreadcrumbSchema path="/services/predictive-enterprise-grade-financial-risk-scoring-c1c30983" title="Predictive Enterprise-Grade Financial Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Enterprise-Grade Financial Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses enterprise-grade financial vulnerabilities with machine learning.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-self-optimizing---energy-fee51ea4` title="Insights Self-Optimizing - Energy" />
+        <BreadcrumbSchema path="/services/insights-self-optimizing---energy-fee51ea4" title="Insights Self-Optimizing - Energy" />
         <h1 className="text-4xl font-bold mb-6">Insights Self-Optimizing - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Insights Self-Optimizing - Energy. Combines market intelligence with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/risk-neural---healthcare-d26fc7c9` title="Risk Neural - Healthcare" />
+        <BreadcrumbSchema path="/services/risk-neural---healthcare-d26fc7c9" title="Risk Neural - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Risk Neural - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Healthcare through intelligent automation. Our Risk Neural - Healthcare leverages advanced machine learning to deliver market intelligence at scal</p>
 

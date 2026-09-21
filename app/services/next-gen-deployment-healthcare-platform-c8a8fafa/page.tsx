@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-gen-deployment-healthcare-platform-c8a8fafa` title="Next-Gen Deployment Healthcare Platform" />
+        <BreadcrumbSchema path="/services/next-gen-deployment-healthcare-platform-c8a8fafa" title="Next-Gen Deployment Healthcare Platform" />
         <h1 className="text-4xl font-bold mb-6">Next-Gen Deployment Healthcare Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your healthcare business with Next-Gen Deployment Healthcare Platform. Our solution provides infrastructure as code with enterprise-grade reliability an</p>
 

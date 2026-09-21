@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/2-quantum-computing-optimization-service` title="Quantum Computing Optimization Service" />
+        <BreadcrumbSchema path="/services/2-quantum-computing-optimization-service" title="Quantum Computing Optimization Service" />
         <h1 className="text-4xl font-bold mb-6">Quantum Computing Optimization Service</h1>
         <p className="text-lg text-gray-300 mb-8">Leverage quantum algorithms to optimize complex business processes, financial modeling, and cryptographic operations that are intractable for classical computers.</p>
 

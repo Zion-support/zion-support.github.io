@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/antavo-f01e7ca2` title="Antavo" />
+        <BreadcrumbSchema path="/services/antavo-f01e7ca2" title="Antavo" />
         <h1 className="text-4xl font-bold mb-6">Antavo</h1>
         <p className="text-lg text-gray-300 mb-8">Antavo is a Hungarian company marketing an AI-powered B2B loyalty platform to help companies develop and manage loyalty programs. It was founded in 2012 by Hung</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-devices-for-logistics-e6e1e275` title="Advanced Devices for Logistics" />
+        <BreadcrumbSchema path="/services/advanced-devices-for-logistics-e6e1e275" title="Advanced Devices for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Advanced Devices for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">The future of logistics is here with Advanced Devices for Logistics. Powered by cutting-edge AI, this platform delivers automation control like never before.</p>
 

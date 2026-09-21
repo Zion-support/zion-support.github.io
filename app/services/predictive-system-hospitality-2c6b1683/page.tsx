@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-system-hospitality-2c6b1683` title="Predictive system-hospitality" />
+        <BreadcrumbSchema path="/services/predictive-system-hospitality-2c6b1683" title="Predictive system-hospitality" />
         <h1 className="text-4xl font-bold mb-6">Predictive system-hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation hospitality solution: Predictive system-hospitality. Combines content generation with adaptive intelligence for optimal results.</p>
 

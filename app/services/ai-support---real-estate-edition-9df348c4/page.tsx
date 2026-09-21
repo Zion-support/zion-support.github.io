@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-support---real-estate-edition-9df348c4` title="AI Support - Real Estate Edition" />
+        <BreadcrumbSchema path="/services/ai-support---real-estate-edition-9df348c4" title="AI Support - Real Estate Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Support - Real Estate Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Support - Real Estate Edition. This autonomous system provides customer service automation with zero manual intervention nee</p>
 

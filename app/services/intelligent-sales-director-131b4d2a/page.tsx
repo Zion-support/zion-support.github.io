@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-sales-director-131b4d2a` title="Intelligent Sales Director" />
+        <BreadcrumbSchema path="/services/intelligent-sales-director-131b4d2a" title="Intelligent Sales Director" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Sales Director</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Intelligent Sales Director. This AI-driven solution automates performance monitoring with unprecedented accuracy </p>
 

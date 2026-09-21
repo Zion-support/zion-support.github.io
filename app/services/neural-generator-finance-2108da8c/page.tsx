@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-generator-finance-2108da8c` title="Neural generator-finance" />
+        <BreadcrumbSchema path="/services/neural-generator-finance-2108da8c" title="Neural generator-finance" />
         <h1 className="text-4xl font-bold mb-6">Neural generator-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Neural generator-finance. This AI-driven solution automates security monitoring with unprecedented accuracy and effic</p>
 

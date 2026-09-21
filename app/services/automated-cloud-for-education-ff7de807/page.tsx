@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-cloud-for-education-ff7de807` title="Automated Cloud for Education" />
+        <BreadcrumbSchema path="/services/automated-cloud-for-education-ff7de807" title="Automated Cloud for Education" />
         <h1 className="text-4xl font-bold mb-6">Automated Cloud for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Cloud for Education. This autonomous system provides sentiment analysis with zero manual intervention needed.</p>
 

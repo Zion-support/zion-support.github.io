@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-self-optimizing---hospitality-84f52e7b` title="Suite Self-Optimizing - Hospitality" />
+        <BreadcrumbSchema path="/services/suite-self-optimizing---hospitality-84f52e7b" title="Suite Self-Optimizing - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Suite Self-Optimizing - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Suite Self-Optimizing - Hospitality leverages advanced machine learning to deliver decision suppor</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-multi-tenant-pharmaceuticals-automation-378a628e` title="Next-Generation Multi-Tenant Pharmaceuticals Automation" />
+        <BreadcrumbSchema path="/services/next-generation-multi-tenant-pharmaceuticals-automation-378a628e" title="Next-Generation Multi-Tenant Pharmaceuticals Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Multi-Tenant Pharmaceuticals Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines multi-tenant pharmaceuticals workflows with intelligent orchestration.</p>
 

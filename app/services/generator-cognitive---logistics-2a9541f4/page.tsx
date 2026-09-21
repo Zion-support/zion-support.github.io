@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-cognitive---logistics-2a9541f4` title="Generator Cognitive - Logistics" />
+        <BreadcrumbSchema path="/services/generator-cognitive---logistics-2a9541f4" title="Generator Cognitive - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Generator Cognitive - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Generator Cognitive - Logistics. This autonomous system provides fraud prevention with zero manual intervention needed.</p>
 

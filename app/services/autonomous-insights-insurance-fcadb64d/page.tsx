@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-insights-insurance-fcadb64d` title="Autonomous insights-insurance" />
+        <BreadcrumbSchema path="/services/autonomous-insights-insurance-fcadb64d" title="Autonomous insights-insurance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous insights-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous insights-insurance. This autonomous system provides content generation with zero manual intervention needed.</p>
 

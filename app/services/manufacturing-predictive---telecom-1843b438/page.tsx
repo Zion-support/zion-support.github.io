@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manufacturing-predictive---telecom-1843b438` title="Manufacturing Predictive - Telecom" />
+        <BreadcrumbSchema path="/services/manufacturing-predictive---telecom-1843b438" title="Manufacturing Predictive - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Manufacturing Predictive - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Manufacturing Predictive - Telecom. This autonomous system provides competitive intelligence with zero manual intervention need</p>
 

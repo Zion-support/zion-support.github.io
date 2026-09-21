@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/black-duck-software-61032245` title="Black Duck Software" />
+        <BreadcrumbSchema path="/services/black-duck-software-61032245" title="Black Duck Software" />
         <h1 className="text-4xl font-bold mb-6">Black Duck Software</h1>
         <p className="text-lg text-gray-300 mb-8">Black Duck Software is an artificial intelligence and automation technology company.</p>
 

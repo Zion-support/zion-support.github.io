@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-predictive-suite-7ab25991` title="Smart Predictive Suite" />
+        <BreadcrumbSchema path="/services/smart-predictive-suite-7ab25991" title="Smart Predictive Suite" />
         <h1 className="text-4xl font-bold mb-6">Smart Predictive Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our Smart Predictive Suite. This AI-driven solution automates network optimization with unprecedented accuracy and efficie</p>
 

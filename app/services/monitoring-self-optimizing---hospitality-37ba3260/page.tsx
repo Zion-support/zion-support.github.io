@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/monitoring-self-optimizing---hospitality-37ba3260` title="Monitoring Self-Optimizing - Hospitality" />
+        <BreadcrumbSchema path="/services/monitoring-self-optimizing---hospitality-37ba3260" title="Monitoring Self-Optimizing - Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Monitoring Self-Optimizing - Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Monitoring Self-Optimizing - Hospitality. This autonomous system provides cost reduction with zero manual intervention needed.</p>
 

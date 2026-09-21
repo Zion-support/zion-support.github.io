@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-system-sports-e5313b1c` title="Automated system-sports" />
+        <BreadcrumbSchema path="/services/automated-system-sports-e5313b1c" title="Automated system-sports" />
         <h1 className="text-4xl font-bold mb-6">Automated system-sports</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize sports through intelligent automation. Our Automated system-sports leverages advanced machine learning to deliver quality control at scale.</p>
 

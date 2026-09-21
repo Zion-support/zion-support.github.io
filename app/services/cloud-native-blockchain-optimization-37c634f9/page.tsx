@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-blockchain-optimization-37c634f9` title="Cloud-Native Blockchain Optimization" />
+        <BreadcrumbSchema path="/services/cloud-native-blockchain-optimization-37c634f9" title="Cloud-Native Blockchain Optimization" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Blockchain Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven cloud optimization platform that automatically manages resource allocation and cost optimization.</p>
 

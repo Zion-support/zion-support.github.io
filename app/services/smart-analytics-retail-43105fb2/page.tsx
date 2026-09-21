@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-analytics-retail-43105fb2` title="Smart analytics-retail" />
+        <BreadcrumbSchema path="/services/smart-analytics-retail-43105fb2" title="Smart analytics-retail" />
         <h1 className="text-4xl font-bold mb-6">Smart analytics-retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Smart analytics-retail. This AI-driven solution automates process automation with unprecedented accuracy and efficienc</p>
 

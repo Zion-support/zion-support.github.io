@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-revenue-predictor-b6f34a66` title="Adaptive Revenue Predictor" />
+        <BreadcrumbSchema path="/services/adaptive-revenue-predictor-b6f34a66" title="Adaptive Revenue Predictor" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Revenue Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with Adaptive Revenue Predictor. Powered by cutting-edge AI, this platform delivers security monitoring like never before.</p>
 

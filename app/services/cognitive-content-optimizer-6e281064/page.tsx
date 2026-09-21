@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-content-optimizer-6e281064` title="Cognitive Content Optimizer" />
+        <BreadcrumbSchema path="/services/cognitive-content-optimizer-6e281064" title="Cognitive Content Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Content Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Logistics operations with our Cognitive Content Optimizer. This AI-driven solution automates compliance monitoring with unprecedented accuracy an</p>
 

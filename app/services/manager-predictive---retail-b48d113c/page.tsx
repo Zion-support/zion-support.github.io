@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-predictive---retail-b48d113c` title="Manager Predictive - Retail" />
+        <BreadcrumbSchema path="/services/manager-predictive---retail-b48d113c" title="Manager Predictive - Retail" />
         <h1 className="text-4xl font-bold mb-6">Manager Predictive - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with Manager Predictive - Retail. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.</p>
 

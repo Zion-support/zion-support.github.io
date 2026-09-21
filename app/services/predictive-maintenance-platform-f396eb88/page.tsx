@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-maintenance-platform-f396eb88` title="Predictive Maintenance Platform" />
+        <BreadcrumbSchema path="/services/predictive-maintenance-platform-f396eb88" title="Predictive Maintenance Platform" />
         <h1 className="text-4xl font-bold mb-6">Predictive Maintenance Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive Maintenance Platform. This autonomous system provides security monitoring with zero manual intervention needed.</p>
 

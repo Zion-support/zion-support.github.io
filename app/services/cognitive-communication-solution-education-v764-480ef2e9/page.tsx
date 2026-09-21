@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-communication-solution-education-v764-480ef2e9` title="Cognitive Communication Solution - Education v764" />
+        <BreadcrumbSchema path="/services/cognitive-communication-solution-education-v764-480ef2e9" title="Cognitive Communication Solution - Education v764" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Communication Solution - Education v764</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your education workflows with Cognitive Communication Solution - Education v764. This intelligent platform delivers meeting intelligence through advanc</p>
 

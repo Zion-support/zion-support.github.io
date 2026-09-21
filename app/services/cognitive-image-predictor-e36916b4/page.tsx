@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-image-predictor-e36916b4` title="Cognitive Image Predictor" />
+        <BreadcrumbSchema path="/services/cognitive-image-predictor-e36916b4" title="Cognitive Image Predictor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Image Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Cognitive Image Predictor. This AI-driven solution automates image recognition with unprecedented accuracy and effici</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-intelligent---retail-2-9dcc3a14` title="Optimizer Intelligent - Retail #2" />
+        <BreadcrumbSchema path="/services/optimizer-intelligent---retail-2-9dcc3a14" title="Optimizer Intelligent - Retail #2" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Intelligent - Retail #2</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Optimizer Intelligent - Retail #2. This autonomous system provides threat detection with zero manual intervention needed.</p>
 

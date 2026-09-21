@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-adaptive---media-9576e882` title="Intelligence Adaptive - Media" />
+        <BreadcrumbSchema path="/services/intelligence-adaptive---media-9576e882" title="Intelligence Adaptive - Media" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Adaptive - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Intelligence Adaptive - Media. This AI-driven solution automates document processing with unprecedented accuracy and ef</p>
 

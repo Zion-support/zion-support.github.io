@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-analyzer-for-education-1c379e5e` title="Self-Optimizing Analyzer for Education" />
+        <BreadcrumbSchema path="/services/self-optimizing-analyzer-for-education-1c379e5e" title="Self-Optimizing Analyzer for Education" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Analyzer for Education</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with Self-Optimizing Analyzer for Education. Powered by cutting-edge AI, this platform delivers process automation like never be</p>
 

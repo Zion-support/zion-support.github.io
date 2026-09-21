@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-self-optimizing---energy-4a3464dc` title="Coordinator Self-Optimizing - Energy" />
+        <BreadcrumbSchema path="/services/coordinator-self-optimizing---energy-4a3464dc" title="Coordinator Self-Optimizing - Energy" />
         <h1 className="text-4xl font-bold mb-6">Coordinator Self-Optimizing - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">The future of energy is here with Coordinator Self-Optimizing - Energy. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

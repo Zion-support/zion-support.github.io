@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-analytics-media-ef5f54a4` title="Predictive analytics-media" />
+        <BreadcrumbSchema path="/services/predictive-analytics-media-ef5f54a4" title="Predictive analytics-media" />
         <h1 className="text-4xl font-bold mb-6">Predictive analytics-media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Predictive analytics-media leverages advanced machine learning to deliver code optimization at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-document-processor-ebe3eaf0` title="Self-Optimizing Document Processor" />
+        <BreadcrumbSchema path="/services/self-optimizing-document-processor-ebe3eaf0" title="Self-Optimizing Document Processor" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Document Processor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of energy is here with Self-Optimizing Document Processor. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before</p>
 

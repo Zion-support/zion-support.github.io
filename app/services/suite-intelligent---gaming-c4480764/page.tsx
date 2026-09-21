@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-intelligent---gaming-c4480764` title="Suite Intelligent - Gaming" />
+        <BreadcrumbSchema path="/services/suite-intelligent---gaming-c4480764" title="Suite Intelligent - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Suite Intelligent - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Suite Intelligent - Gaming. Powered by cutting-edge AI, this platform delivers image recognition like never before.</p>
 

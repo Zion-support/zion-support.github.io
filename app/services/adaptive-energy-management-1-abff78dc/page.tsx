@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-energy-management-1-abff78dc` title="Adaptive Energy Management #1" />
+        <BreadcrumbSchema path="/services/adaptive-energy-management-1-abff78dc" title="Adaptive Energy Management #1" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Energy Management #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Adaptive Energy Management #1. This AI-driven solution automates resource optimization with unprecedented accu</p>
 

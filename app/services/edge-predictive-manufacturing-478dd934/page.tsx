@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-predictive-manufacturing-478dd934` title="Edge Predictive - Manufacturing" />
+        <BreadcrumbSchema path="/services/edge-predictive-manufacturing-478dd934" title="Edge Predictive - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Edge Predictive - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our Edge Predictive - Manufacturing leverages advanced machine learning to deliver predictive mainte</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-self-optimizing---logistics-5e5beee6` title="Generator Self-Optimizing - Logistics" />
+        <BreadcrumbSchema path="/services/generator-self-optimizing---logistics-5e5beee6" title="Generator Self-Optimizing - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Generator Self-Optimizing - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Generator Self-Optimizing - Logistics. This AI-driven solution automates decision support with unprecedented accura</p>
 

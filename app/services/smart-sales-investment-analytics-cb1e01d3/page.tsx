@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-sales-investment-analytics-cb1e01d3` title="Smart Sales Investment Analytics" />
+        <BreadcrumbSchema path="/services/smart-sales-investment-analytics-cb1e01d3" title="Smart Sales Investment Analytics" />
         <h1 className="text-4xl font-bold mb-6">Smart Sales Investment Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven real estate investment platform that identifies automated opportunities, analyzes market trends, and optimizes portfolio performance through predictiv</p>
 

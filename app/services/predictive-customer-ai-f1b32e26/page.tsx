@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-customer-ai-f1b32e26` title="Predictive Customer AI" />
+        <BreadcrumbSchema path="/services/predictive-customer-ai-f1b32e26" title="Predictive Customer AI" />
         <h1 className="text-4xl font-bold mb-6">Predictive Customer AI</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your technology business with Predictive Customer AI. Our solution provides training optimization with enterprise-grade reliability and security.</p>
 

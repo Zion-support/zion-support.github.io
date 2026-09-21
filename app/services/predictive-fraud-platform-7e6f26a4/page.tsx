@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-fraud-platform-7e6f26a4` title="Predictive Fraud Platform" />
+        <BreadcrumbSchema path="/services/predictive-fraud-platform-7e6f26a4" title="Predictive Fraud Platform" />
         <h1 className="text-4xl font-bold mb-6">Predictive Fraud Platform</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Predictive Fraud Platform. Powered by cutting-edge AI, this platform delivers inventory management like never before.</p>
 

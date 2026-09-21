@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-risk-for-telecom-495eb205` title="Cognitive Risk for Telecom" />
+        <BreadcrumbSchema path="/services/cognitive-risk-for-telecom-495eb205" title="Cognitive Risk for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Risk for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our Cognitive Risk for Telecom. This AI-driven solution automates code optimization with unprecedented accuracy and effic</p>
 

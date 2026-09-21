@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-context-aware-hospitality-decision-engine-1a3a0ffb` title="Cognitive Context-Aware Hospitality Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-context-aware-hospitality-decision-engine-1a3a0ffb" title="Cognitive Context-Aware Hospitality Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Context-Aware Hospitality Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes context-aware signals to drive hospitality strategy with deep learning.</p>
 

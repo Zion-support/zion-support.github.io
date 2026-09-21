@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-processor---healthcare-edition-8-fbb69a37` title="AI Processor - Healthcare Edition #8" />
+        <BreadcrumbSchema path="/services/ai-processor---healthcare-edition-8-fbb69a37" title="AI Processor - Healthcare Edition #8" />
         <h1 className="text-4xl font-bold mb-6">AI Processor - Healthcare Edition #8</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Processor - Healthcare Edition #8. This autonomous system provides data processing with zero manual intervention needed.</p>
 

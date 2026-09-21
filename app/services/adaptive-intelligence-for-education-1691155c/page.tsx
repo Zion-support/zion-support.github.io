@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-intelligence-for-education-1691155c` title="Adaptive Intelligence for Education" />
+        <BreadcrumbSchema path="/services/adaptive-intelligence-for-education-1691155c" title="Adaptive Intelligence for Education" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Intelligence for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Adaptive Intelligence for Education leverages advanced machine learning to deliver content generatio</p>
 

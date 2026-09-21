@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-analyzer-media-1-b13e0263` title="Adaptive analyzer-media #1" />
+        <BreadcrumbSchema path="/services/adaptive-analyzer-media-1-b13e0263" title="Adaptive analyzer-media #1" />
         <h1 className="text-4xl font-bold mb-6">Adaptive analyzer-media #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Adaptive analyzer-media #1 leverages advanced machine learning to deliver customer insights at scale.</p>
 

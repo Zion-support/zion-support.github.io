@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-optimization-manufacturing-b6aeadb4` title="Smart optimization-manufacturing" />
+        <BreadcrumbSchema path="/services/smart-optimization-manufacturing-b6aeadb4" title="Smart optimization-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Smart optimization-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with Smart optimization-manufacturing. Powered by cutting-edge AI, this platform delivers customer service automation like n</p>
 

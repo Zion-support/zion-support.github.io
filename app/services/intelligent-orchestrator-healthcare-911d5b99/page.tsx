@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-orchestrator-healthcare-911d5b99` title="Intelligent orchestrator-healthcare" />
+        <BreadcrumbSchema path="/services/intelligent-orchestrator-healthcare-911d5b99" title="Intelligent orchestrator-healthcare" />
         <h1 className="text-4xl font-bold mb-6">Intelligent orchestrator-healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your healthcare operations with our Intelligent orchestrator-healthcare. This AI-driven solution automates customer insights with unprecedented accura</p>
 

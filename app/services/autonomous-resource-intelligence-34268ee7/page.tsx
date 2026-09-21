@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-resource-intelligence-34268ee7` title="Autonomous Resource Intelligence" />
+        <BreadcrumbSchema path="/services/autonomous-resource-intelligence-34268ee7" title="Autonomous Resource Intelligence" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Resource Intelligence</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: Autonomous Resource Intelligence. Combines resource optimization with adaptive intelligence for optimal results.</p>
 

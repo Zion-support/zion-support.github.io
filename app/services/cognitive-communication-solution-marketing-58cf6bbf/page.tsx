@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-communication-solution-marketing-58cf6bbf` title="Cognitive Communication Solution - Marketing" />
+        <BreadcrumbSchema path="/services/cognitive-communication-solution-marketing-58cf6bbf" title="Cognitive Communication Solution - Marketing" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Communication Solution - Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of marketing is here with Cognitive Communication Solution - Marketing. Powered by cutting-edge AI, this platform delivers spam detection like never </p>
 

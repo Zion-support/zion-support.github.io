@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-autonomous---telecom-dec7589e` title="Generator Autonomous - Telecom" />
+        <BreadcrumbSchema path="/services/generator-autonomous---telecom-dec7589e" title="Generator Autonomous - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Generator Autonomous - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Generator Autonomous - Telecom leverages advanced machine learning to deliver document processing at s</p>
 

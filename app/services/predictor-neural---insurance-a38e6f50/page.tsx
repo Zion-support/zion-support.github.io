@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-neural---insurance-a38e6f50` title="Predictor Neural - Insurance" />
+        <BreadcrumbSchema path="/services/predictor-neural---insurance-a38e6f50" title="Predictor Neural - Insurance" />
         <h1 className="text-4xl font-bold mb-6">Predictor Neural - Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize insurance through intelligent automation. Our Predictor Neural - Insurance leverages advanced machine learning to deliver market intelligence at s</p>
 

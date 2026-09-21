@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-optimizer-real-estate-f9b5ca5e` title="Adaptive optimizer-real-estate" />
+        <BreadcrumbSchema path="/services/adaptive-optimizer-real-estate-f9b5ca5e" title="Adaptive optimizer-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Adaptive optimizer-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Adaptive optimizer-real-estate. This AI-driven solution automates performance monitoring with unprecedented accur</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-industry-specific-financial-orchestration-1924a9cc` title="Cloud-Native Industry-Specific Financial Orchestration" />
+        <BreadcrumbSchema path="/services/cloud-native-industry-specific-financial-orchestration-1924a9cc" title="Cloud-Native Industry-Specific Financial Orchestration" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Industry-Specific Financial Orchestration</h1>
         <p className="text-lg text-gray-300 mb-8">Cloud-native orchestration platform that manages industry-specific financial resources with auto-scaling and cost control.</p>
 

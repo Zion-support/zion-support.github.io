@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---healthcare-edition-0c4b5240` title="AI Generator - Healthcare Edition" />
+        <BreadcrumbSchema path="/services/ai-generator---healthcare-edition-0c4b5240" title="AI Generator - Healthcare Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Healthcare Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our AI Generator - Healthcare Edition leverages advanced machine learning to deliver resource optimizat</p>
 

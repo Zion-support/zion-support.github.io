@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-natural-language-processing-for-legal-tech-22538d` title="Advanced Natural Language Processing for Legal Tech" />
+        <BreadcrumbSchema path="/services/advanced-natural-language-processing-for-legal-tech-22538d" title="Advanced Natural Language Processing for Legal Tech" />
         <h1 className="text-4xl font-bold mb-6">Advanced Natural Language Processing for Legal Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform legal workflows with our Advanced NLP for Legal Tech, automating contract analysis, legal research, and case prediction.</p>
 

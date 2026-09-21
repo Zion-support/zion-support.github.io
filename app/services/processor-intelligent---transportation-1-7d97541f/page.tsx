@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-intelligent---transportation-1-7d97541f` title="Processor Intelligent - Transportation #1" />
+        <BreadcrumbSchema path="/services/processor-intelligent---transportation-1-7d97541f" title="Processor Intelligent - Transportation #1" />
         <h1 className="text-4xl font-bold mb-6">Processor Intelligent - Transportation #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: Processor Intelligent - Transportation #1. Combines data processing with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/5g-network-slicing-optimizer-d43a3f1d` title="5G Network Slicing Optimizer" />
+        <BreadcrumbSchema path="/services/5g-network-slicing-optimizer-d43a3f1d" title="5G Network Slicing Optimizer" />
         <h1 className="text-4xl font-bold mb-6">5G Network Slicing Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven optimization of 5G network slices for maximum efficiency and QoS. Dynamic resource allocation based on traffic patterns and service requirements.</p>
 

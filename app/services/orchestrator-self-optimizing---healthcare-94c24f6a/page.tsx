@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-self-optimizing---healthcare-94c24f6a` title="Orchestrator Self-Optimizing - Healthcare" />
+        <BreadcrumbSchema path="/services/orchestrator-self-optimizing---healthcare-94c24f6a" title="Orchestrator Self-Optimizing - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Self-Optimizing - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with Orchestrator Self-Optimizing - Healthcare. Powered by cutting-edge AI, this platform delivers process automation like neve</p>
 

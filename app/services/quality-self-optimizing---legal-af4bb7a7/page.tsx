@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/quality-self-optimizing---legal-af4bb7a7` title="Quality Self-Optimizing - Legal" />
+        <BreadcrumbSchema path="/services/quality-self-optimizing---legal-af4bb7a7" title="Quality Self-Optimizing - Legal" />
         <h1 className="text-4xl font-bold mb-6">Quality Self-Optimizing - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Legal is here with Quality Self-Optimizing - Legal. Powered by cutting-edge AI, this platform delivers healthcare data analytics like never before</p>
 

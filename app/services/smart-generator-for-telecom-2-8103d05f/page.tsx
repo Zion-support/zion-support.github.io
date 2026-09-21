@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-generator-for-telecom-2-8103d05f` title="Smart Generator for Telecom #2" />
+        <BreadcrumbSchema path="/services/smart-generator-for-telecom-2-8103d05f" title="Smart Generator for Telecom #2" />
         <h1 className="text-4xl font-bold mb-6">Smart Generator for Telecom #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Smart Generator for Telecom #2. This AI-driven solution automates image recognition with unprecedented accuracy and e</p>
 

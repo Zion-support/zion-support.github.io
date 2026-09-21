@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-decision-automation-9e255c68` title="Cognitive Decision Automation" />
+        <BreadcrumbSchema path="/services/cognitive-decision-automation-9e255c68" title="Cognitive Decision Automation" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Decision Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation healthcare solution: Cognitive Decision Automation. Combines workflow management with adaptive intelligence for optimal results.</p>
 

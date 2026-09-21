@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-adaptive---insurance-ca37da32` title="Platform Adaptive - Insurance" />
+        <BreadcrumbSchema path="/services/platform-adaptive---insurance-ca37da32" title="Platform Adaptive - Insurance" />
         <h1 className="text-4xl font-bold mb-6">Platform Adaptive - Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Platform Adaptive - Insurance. This autonomous system provides performance monitoring with zero manual intervention needed.</p>
 

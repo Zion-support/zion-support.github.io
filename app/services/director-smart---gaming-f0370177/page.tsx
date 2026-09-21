@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-smart---gaming-f0370177` title="Director Smart - Gaming" />
+        <BreadcrumbSchema path="/services/director-smart---gaming-f0370177" title="Director Smart - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Director Smart - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Gaming operations with our Director Smart - Gaming. This AI-driven solution automates budget optimization with unprecedented accuracy and efficie</p>
 

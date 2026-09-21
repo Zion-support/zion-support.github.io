@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-document-analytics-a9a5b182` title="Cognitive Document Analytics" />
+        <BreadcrumbSchema path="/services/cognitive-document-analytics-a9a5b182" title="Cognitive Document Analytics" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Document Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Cognitive Document Analytics. Combines document processing with adaptive intelligence for optimal results.</p>
 

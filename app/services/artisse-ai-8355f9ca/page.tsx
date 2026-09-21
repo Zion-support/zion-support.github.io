@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/artisse-ai-8355f9ca` title="Artisse AI" />
+        <BreadcrumbSchema path="/services/artisse-ai-8355f9ca" title="Artisse AI" />
         <h1 className="text-4xl font-bold mb-6">Artisse AI</h1>
         <p className="text-lg text-gray-300 mb-8">Artisse AI is a Hong Kong-based technology company founded by William Wu. The company developed a mobile photography application using generative artificial int</p>
 

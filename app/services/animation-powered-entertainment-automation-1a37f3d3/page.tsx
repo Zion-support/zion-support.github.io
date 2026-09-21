@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/animation-powered-entertainment-automation-1a37f3d3` title="Animation-Powered Entertainment Automation" />
+        <BreadcrumbSchema path="/services/animation-powered-entertainment-automation-1a37f3d3" title="Animation-Powered Entertainment Automation" />
         <h1 className="text-4xl font-bold mb-6">Animation-Powered Entertainment Automation</h1>
         <p className="text-lg text-gray-300 mb-8">The future of entertainment is here with Animation-Powered Entertainment Automation. Powered by cutting-edge AI, this platform delivers broadcast automation lik</p>
 

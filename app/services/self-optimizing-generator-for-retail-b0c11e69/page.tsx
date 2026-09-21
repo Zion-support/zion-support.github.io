@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-generator-for-retail-b0c11e69` title="Self-Optimizing Generator for Retail" />
+        <BreadcrumbSchema path="/services/self-optimizing-generator-for-retail-b0c11e69" title="Self-Optimizing Generator for Retail" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Generator for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Self-Optimizing Generator for Retail. This AI-driven solution automates maintenance scheduling with unprecedented accu</p>
 

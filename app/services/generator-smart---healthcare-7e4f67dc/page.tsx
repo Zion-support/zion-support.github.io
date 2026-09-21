@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-smart---healthcare-7e4f67dc` title="Generator Smart - Healthcare" />
+        <BreadcrumbSchema path="/services/generator-smart---healthcare-7e4f67dc" title="Generator Smart - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Generator Smart - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Healthcare operations with our Generator Smart - Healthcare. This AI-driven solution automates sales process optimization with unprecedented accu</p>
 

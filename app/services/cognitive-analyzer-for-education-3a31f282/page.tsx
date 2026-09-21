@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-analyzer-for-education-3a31f282` title="Cognitive Analyzer for Education" />
+        <BreadcrumbSchema path="/services/cognitive-analyzer-for-education-3a31f282" title="Cognitive Analyzer for Education" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Analyzer for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Analyzer for Education. This autonomous system provides inventory management with zero manual intervention needed.</p>
 

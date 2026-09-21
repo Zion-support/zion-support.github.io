@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-suite-real-estate-5a8f7c7f` title="Adaptive suite-real-estate" />
+        <BreadcrumbSchema path="/services/adaptive-suite-real-estate-5a8f7c7f" title="Adaptive suite-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Adaptive suite-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Adaptive suite-real-estate leverages advanced machine learning to deliver market intelligence at s</p>
 

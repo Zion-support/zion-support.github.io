@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-automation-for-sales-ef586609` title="Advanced Automation for Sales" />
+        <BreadcrumbSchema path="/services/advanced-automation-for-sales-ef586609" title="Advanced Automation for Sales" />
         <h1 className="text-4xl font-bold mb-6">Advanced Automation for Sales</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your sales workflows with Advanced Automation for Sales. This intelligent platform delivers automation workflows through advanced automation and AI.</p>
 

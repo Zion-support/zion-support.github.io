@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-analytics---transportation-edition-6-36dd2a91` title="AI Analytics - Transportation Edition #6" />
+        <BreadcrumbSchema path="/services/ai-analytics---transportation-edition-6-36dd2a91" title="AI Analytics - Transportation Edition #6" />
         <h1 className="text-4xl font-bold mb-6">AI Analytics - Transportation Edition #6</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: AI Analytics - Transportation Edition #6. Combines network optimization with adaptive intelligence for optimal results.</p>
 

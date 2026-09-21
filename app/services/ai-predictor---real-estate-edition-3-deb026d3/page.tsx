@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-predictor---real-estate-edition-3-deb026d3` title="AI Predictor - Real-Estate Edition #3" />
+        <BreadcrumbSchema path="/services/ai-predictor---real-estate-edition-3-deb026d3" title="AI Predictor - Real-Estate Edition #3" />
         <h1 className="text-4xl font-bold mb-6">AI Predictor - Real-Estate Edition #3</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation real-estate solution: AI Predictor - Real-Estate Edition #3. Combines market intelligence with adaptive intelligence for optimal results.</p>
 

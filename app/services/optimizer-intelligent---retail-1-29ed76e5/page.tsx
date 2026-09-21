@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-intelligent---retail-1-29ed76e5` title="Optimizer Intelligent - Retail #1" />
+        <BreadcrumbSchema path="/services/optimizer-intelligent---retail-1-29ed76e5" title="Optimizer Intelligent - Retail #1" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Intelligent - Retail #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with Optimizer Intelligent - Retail #1. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

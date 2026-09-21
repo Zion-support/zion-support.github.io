@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-automation-for-finance-f797837f` title="Neural Automation for Finance" />
+        <BreadcrumbSchema path="/services/neural-automation-for-finance-f797837f" title="Neural Automation for Finance" />
         <h1 className="text-4xl font-bold mb-6">Neural Automation for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Neural Automation for Finance. Combines compliance monitoring with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-data-optimizer-589cd5ab` title="Autonomous Data Optimizer" />
+        <BreadcrumbSchema path="/services/autonomous-data-optimizer-589cd5ab" title="Autonomous Data Optimizer" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Data Optimizer</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation manufacturing solution: Autonomous Data Optimizer. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-suite---real-estate-edition-4-230e2cd8` title="AI Suite - Real-Estate Edition #4" />
+        <BreadcrumbSchema path="/services/ai-suite---real-estate-edition-4-230e2cd8" title="AI Suite - Real-Estate Edition #4" />
         <h1 className="text-4xl font-bold mb-6">AI Suite - Real-Estate Edition #4</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our AI Suite - Real-Estate Edition #4. This AI-driven solution automates sales forecasting with unprecedented accurac</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-insights-telecom-a24cf9c3` title="Adaptive insights-telecom" />
+        <BreadcrumbSchema path="/services/adaptive-insights-telecom-a24cf9c3" title="Adaptive insights-telecom" />
         <h1 className="text-4xl font-bold mb-6">Adaptive insights-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">The future of telecom is here with Adaptive insights-telecom. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

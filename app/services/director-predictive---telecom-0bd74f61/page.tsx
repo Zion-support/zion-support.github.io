@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-predictive---telecom-0bd74f61` title="Director Predictive - Telecom" />
+        <BreadcrumbSchema path="/services/director-predictive---telecom-0bd74f61" title="Director Predictive - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Director Predictive - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Director Predictive - Telecom. This AI-driven solution automates image recognition with unprecedented accuracy and ef</p>
 

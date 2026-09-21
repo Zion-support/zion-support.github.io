@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-security-orchestrator-0b3cdce8` title="Self-Optimizing Security Orchestrator" />
+        <BreadcrumbSchema path="/services/self-optimizing-security-orchestrator-0b3cdce8" title="Self-Optimizing Security Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Security Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Self-Optimizing Security Orchestrator. This AI-driven solution automates security monitoring with unprecedented acc</p>
 

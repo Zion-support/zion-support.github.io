@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai21-labs-951a8b5c` title="AI21 Labs" />
+        <BreadcrumbSchema path="/services/ai21-labs-951a8b5c" title="AI21 Labs" />
         <h1 className="text-4xl font-bold mb-6">AI21 Labs</h1>
         <p className="text-lg text-gray-300 mb-8">AI21 Labs is an Israeli company specializing in Natural Language Processing (NLP), which develops AI systems that can understand and generate natural language.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-market-management-c493bf47` title="Predictive Market Management" />
+        <BreadcrumbSchema path="/services/predictive-market-management-c493bf47" title="Predictive Market Management" />
         <h1 className="text-4xl font-bold mb-6">Predictive Market Management</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation logistics solution: Predictive Market Management. Combines supply chain with adaptive intelligence for optimal results.</p>
 

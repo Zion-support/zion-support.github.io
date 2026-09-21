@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-inventory-director-24dffd13` title="Autonomous Inventory Director" />
+        <BreadcrumbSchema path="/services/autonomous-inventory-director-24dffd13" title="Autonomous Inventory Director" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Inventory Director</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous Inventory Director. This autonomous system provides document processing with zero manual intervention needed.</p>
 

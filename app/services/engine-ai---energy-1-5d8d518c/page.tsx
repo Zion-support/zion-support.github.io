@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/engine-ai---energy-1-5d8d518c` title="Engine AI - Energy #1" />
+        <BreadcrumbSchema path="/services/engine-ai---energy-1-5d8d518c" title="Engine AI - Energy #1" />
         <h1 className="text-4xl font-bold mb-6">Engine AI - Energy #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Engine AI - Energy #1 leverages advanced machine learning to deliver compliance monitoring at scale.</p>
 

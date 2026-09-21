@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-user-risk-78af4490` title="Automated User Risk" />
+        <BreadcrumbSchema path="/services/automated-user-risk-78af4490" title="Automated User Risk" />
         <h1 className="text-4xl font-bold mb-6">Automated User Risk</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Finance solution: Automated User Risk. Combines compliance monitoring with adaptive intelligence for optimal results.</p>
 

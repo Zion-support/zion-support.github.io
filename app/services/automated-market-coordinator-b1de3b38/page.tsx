@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-market-coordinator-b1de3b38` title="Automated Market Coordinator" />
+        <BreadcrumbSchema path="/services/automated-market-coordinator-b1de3b38" title="Automated Market Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Automated Market Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Automated Market Coordinator. Combines maintenance scheduling with adaptive intelligence for optimal results.</p>
 

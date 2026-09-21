@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-machine-learning-system-logistics-37c48415` title="Autonomous Machine Learning System - Logistics" />
+        <BreadcrumbSchema path="/services/autonomous-machine-learning-system-logistics-37c48415" title="Autonomous Machine Learning System - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Machine Learning System - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">The future of logistics is here with Autonomous Machine Learning System - Logistics. Powered by cutting-edge AI, this platform delivers customer journey mapping</p>
 

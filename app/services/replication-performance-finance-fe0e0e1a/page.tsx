@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/replication-performance-finance-fe0e0e1a` title="Replication Performance - Finance" />
+        <BreadcrumbSchema path="/services/replication-performance-finance-fe0e0e1a" title="Replication Performance - Finance" />
         <h1 className="text-4xl font-bold mb-6">Replication Performance - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your finance workflows with Replication Performance - Finance. This intelligent platform delivers performance tuning through advanced automation and AI</p>
 

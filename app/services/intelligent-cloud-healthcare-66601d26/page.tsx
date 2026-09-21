@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-cloud-healthcare-66601d26` title="Intelligent cloud-healthcare" />
+        <BreadcrumbSchema path="/services/intelligent-cloud-healthcare-66601d26" title="Intelligent cloud-healthcare" />
         <h1 className="text-4xl font-bold mb-6">Intelligent cloud-healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Healthcare is here with Intelligent cloud-healthcare. Powered by cutting-edge AI, this platform delivers sales process optimization like never bef</p>
 

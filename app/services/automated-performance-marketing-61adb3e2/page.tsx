@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-performance-marketing-61adb3e2` title="Automated Performance Marketing" />
+        <BreadcrumbSchema path="/services/automated-performance-marketing-61adb3e2" title="Automated Performance Marketing" />
         <h1 className="text-4xl font-bold mb-6">Automated Performance Marketing</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: Automated Performance Marketing. Combines reputation management with adaptive intelligence for optimal results.</p>
 

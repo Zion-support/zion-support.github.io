@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-processor---telecom-edition-1-04146b20` title="AI Processor - Telecom Edition #1" />
+        <BreadcrumbSchema path="/services/ai-processor---telecom-edition-1-04146b20" title="AI Processor - Telecom Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI Processor - Telecom Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Telecom through intelligent automation. Our AI Processor - Telecom Edition #1 leverages advanced machine learning to deliver sales process optimiz</p>
 

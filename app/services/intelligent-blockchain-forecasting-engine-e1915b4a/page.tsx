@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-blockchain-forecasting-engine-e1915b4a` title="Intelligent Blockchain Forecasting Engine" />
+        <BreadcrumbSchema path="/services/intelligent-blockchain-forecasting-engine-e1915b4a" title="Intelligent Blockchain Forecasting Engine" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Blockchain Forecasting Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning-powered forecasting system that predicts blockchain trends, demands, and outcomes with high accuracy.</p>
 

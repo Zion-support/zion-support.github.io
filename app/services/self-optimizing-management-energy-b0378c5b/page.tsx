@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-management-energy-b0378c5b` title="Self-Optimizing management-energy" />
+        <BreadcrumbSchema path="/services/self-optimizing-management-energy-b0378c5b" title="Self-Optimizing management-energy" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing management-energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Self-Optimizing management-energy leverages advanced machine learning to deliver maintenance scheduling</p>
 

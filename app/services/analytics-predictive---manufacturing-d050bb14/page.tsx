@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-predictive---manufacturing-d050bb14` title="Analytics Predictive - Manufacturing" />
+        <BreadcrumbSchema path="/services/analytics-predictive---manufacturing-d050bb14" title="Analytics Predictive - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Analytics Predictive - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our Analytics Predictive - Manufacturing leverages advanced machine learning to deliver predictive a</p>
 

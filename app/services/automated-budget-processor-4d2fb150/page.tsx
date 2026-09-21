@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-budget-processor-4d2fb150` title="Automated Budget Processor" />
+        <BreadcrumbSchema path="/services/automated-budget-processor-4d2fb150" title="Automated Budget Processor" />
         <h1 className="text-4xl font-bold mb-6">Automated Budget Processor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Manufacturing is here with Automated Budget Processor. Powered by cutting-edge AI, this platform delivers sales process optimization like never be</p>
 

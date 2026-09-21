@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-document-management-7b4e6e3b` title="Self-Optimizing Document Management" />
+        <BreadcrumbSchema path="/services/self-optimizing-document-management-7b4e6e3b" title="Self-Optimizing Document Management" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Document Management</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Self-Optimizing Document Management leverages advanced machine learning to deliver security monitoring</p>
 

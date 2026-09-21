@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-automated---finance-0ae573d4` title="Predictor Automated - Finance" />
+        <BreadcrumbSchema path="/services/predictor-automated---finance-0ae573d4" title="Predictor Automated - Finance" />
         <h1 className="text-4xl font-bold mb-6">Predictor Automated - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictor Automated - Finance. This autonomous system provides scenario planning with zero manual intervention needed.</p>
 

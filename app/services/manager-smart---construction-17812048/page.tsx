@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-smart---construction-17812048` title="Manager Smart - Construction" />
+        <BreadcrumbSchema path="/services/manager-smart---construction-17812048" title="Manager Smart - Construction" />
         <h1 className="text-4xl font-bold mb-6">Manager Smart - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Manager Smart - Construction leverages advanced machine learning to deliver compliance monitoring</p>
 

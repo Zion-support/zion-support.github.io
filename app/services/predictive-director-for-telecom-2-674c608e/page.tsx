@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-director-for-telecom-2-674c608e` title="Predictive Director for Telecom #2" />
+        <BreadcrumbSchema path="/services/predictive-director-for-telecom-2-674c608e" title="Predictive Director for Telecom #2" />
         <h1 className="text-4xl font-bold mb-6">Predictive Director for Telecom #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Telecom solution: Predictive Director for Telecom #2. Combines customer service automation with adaptive intelligence for optimal results.</p>
 

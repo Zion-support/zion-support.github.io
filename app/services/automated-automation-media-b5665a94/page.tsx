@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-automation-media-b5665a94` title="Automated automation-media" />
+        <BreadcrumbSchema path="/services/automated-automation-media-b5665a94" title="Automated automation-media" />
         <h1 className="text-4xl font-bold mb-6">Automated automation-media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Automated automation-media leverages advanced machine learning to deliver predictive analytics at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-proactive-food-service-optimization-engine-32c6fbe3` title="AI-Powered Proactive Food Service Optimization Engine" />
+        <BreadcrumbSchema path="/services/ai-powered-proactive-food-service-optimization-engine-32c6fbe3" title="AI-Powered Proactive Food Service Optimization Engine" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Proactive Food Service Optimization Engine</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered optimization engine that continuously improves proactive food service performance through self-tuning algorithms.</p>
 

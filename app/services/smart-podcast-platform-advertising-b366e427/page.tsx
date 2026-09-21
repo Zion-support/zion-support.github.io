@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-podcast-platform-advertising-b366e427` title="Smart Podcast Platform - Advertising" />
+        <BreadcrumbSchema path="/services/smart-podcast-platform-advertising-b366e427" title="Smart Podcast Platform - Advertising" />
         <h1 className="text-4xl font-bold mb-6">Smart Podcast Platform - Advertising</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in advertising with Smart Podcast Platform - Advertising. This AI-powered platform transforms marketing analytics into a competitive advantage.</p>
 

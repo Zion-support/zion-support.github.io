@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-telemetry-logistics-de35bb62` title="Edge Telemetry - Logistics" />
+        <BreadcrumbSchema path="/services/edge-telemetry-logistics-de35bb62" title="Edge Telemetry - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Edge Telemetry - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Edge Telemetry - Logistics. This autonomous system provides telemetry collection with zero manual intervention needed.</p>
 

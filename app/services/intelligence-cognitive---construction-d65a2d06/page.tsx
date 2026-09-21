@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-cognitive---construction-d65a2d06` title="Intelligence Cognitive - Construction" />
+        <BreadcrumbSchema path="/services/intelligence-cognitive---construction-d65a2d06" title="Intelligence Cognitive - Construction" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Cognitive - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Intelligence Cognitive - Construction. This AI-driven solution automates workflow management with unprecedented </p>
 

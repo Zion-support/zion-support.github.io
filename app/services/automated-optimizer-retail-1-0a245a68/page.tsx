@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-optimizer-retail-1-0a245a68` title="Automated optimizer-retail #1" />
+        <BreadcrumbSchema path="/services/automated-optimizer-retail-1-0a245a68" title="Automated optimizer-retail #1" />
         <h1 className="text-4xl font-bold mb-6">Automated optimizer-retail #1</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated optimizer-retail #1. This autonomous system provides image recognition with zero manual intervention needed.</p>
 

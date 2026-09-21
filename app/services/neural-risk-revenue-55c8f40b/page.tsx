@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-risk-revenue-55c8f40b` title="Neural Risk Revenue" />
+        <BreadcrumbSchema path="/services/neural-risk-revenue-55c8f40b" title="Neural Risk Revenue" />
         <h1 className="text-4xl font-bold mb-6">Neural Risk Revenue</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Logistics is here with Neural Risk Revenue. Powered by cutting-edge AI, this platform delivers process discovery like never before.</p>
 

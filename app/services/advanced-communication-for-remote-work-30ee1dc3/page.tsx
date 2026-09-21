@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-communication-for-remote-work-30ee1dc3` title="Advanced Communication for Remote-Work" />
+        <BreadcrumbSchema path="/services/advanced-communication-for-remote-work-30ee1dc3" title="Advanced Communication for Remote-Work" />
         <h1 className="text-4xl font-bold mb-6">Advanced Communication for Remote-Work</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your remote-work workflows with Advanced Communication for Remote-Work. This intelligent platform delivers integration management through advanced auto</p>
 

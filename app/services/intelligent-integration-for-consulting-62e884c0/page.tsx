@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-integration-for-consulting-62e884c0` title="Intelligent Integration for Consulting" />
+        <BreadcrumbSchema path="/services/intelligent-integration-for-consulting-62e884c0" title="Intelligent Integration for Consulting" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Integration for Consulting</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Integration for Consulting. This autonomous system provides workflow optimization with zero manual intervention nee</p>
 

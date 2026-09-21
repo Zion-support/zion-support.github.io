@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-management-for-agriculture-f0883951` title="Intelligent Management for Agriculture" />
+        <BreadcrumbSchema path="/services/intelligent-management-for-agriculture-f0883951" title="Intelligent Management for Agriculture" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Management for Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Intelligent Management for Agriculture. Powered by cutting-edge AI, this platform delivers predictive analytics like neve</p>
 

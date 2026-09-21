@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-logistics-healthcare-e73b34a9` title="Predictive Logistics Healthcare" />
+        <BreadcrumbSchema path="/services/predictive-logistics-healthcare-e73b34a9" title="Predictive Logistics Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Predictive Logistics Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Insurance solution: Predictive Logistics Healthcare. Combines budget optimization with adaptive intelligence for optimal results.</p>
 

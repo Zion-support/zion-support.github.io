@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-event-driven-proptech-decision-engine-2cf8f107` title="Cognitive Event-Driven Proptech Decision Engine" />
+        <BreadcrumbSchema path="/services/cognitive-event-driven-proptech-decision-engine-2cf8f107" title="Cognitive Event-Driven Proptech Decision Engine" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Event-Driven Proptech Decision Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Cognitive decision engine that processes event-driven signals to drive proptech strategy with deep learning.</p>
 

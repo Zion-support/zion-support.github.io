@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-automated---logistics-ab43dd77` title="Processor Automated - Logistics" />
+        <BreadcrumbSchema path="/services/processor-automated---logistics-ab43dd77" title="Processor Automated - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Processor Automated - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your logistics operations with our Processor Automated - Logistics. This AI-driven solution automates maintenance scheduling with unprecedented accura</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-analyzer-tech-2-66dcc18f` title="AI-Powered analyzer-tech #2" />
+        <BreadcrumbSchema path="/services/ai-powered-analyzer-tech-2-66dcc18f" title="AI-Powered analyzer-tech #2" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered analyzer-tech #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our AI-Powered analyzer-tech #2. This AI-driven solution automates process automation with unprecedented accuracy and </p>
 

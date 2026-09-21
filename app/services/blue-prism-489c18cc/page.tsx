@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/blue-prism-489c18cc` title="Blue Prism" />
+        <BreadcrumbSchema path="/services/blue-prism-489c18cc" title="Blue Prism" />
         <h1 className="text-4xl font-bold mb-6">Blue Prism</h1>
         <p className="text-lg text-gray-300 mb-8">Blue Prism is an artificial intelligence and automation technology company.</p>
 

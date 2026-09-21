@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-orchestrator-for-education-25bf3d69` title="Neural Orchestrator for Education" />
+        <BreadcrumbSchema path="/services/neural-orchestrator-for-education-25bf3d69" title="Neural Orchestrator for Education" />
         <h1 className="text-4xl font-bold mb-6">Neural Orchestrator for Education</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with Neural Orchestrator for Education. Powered by cutting-edge AI, this platform delivers inventory management like never befor</p>
 

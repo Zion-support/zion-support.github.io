@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimization-adaptive---gaming-c6f81810` title="Optimization Adaptive - Gaming" />
+        <BreadcrumbSchema path="/services/optimization-adaptive---gaming-c6f81810" title="Optimization Adaptive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Optimization Adaptive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Optimization Adaptive - Gaming. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

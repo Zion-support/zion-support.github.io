@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-code-orchestrator-096aaf70` title="AI-Powered Code Orchestrator" />
+        <BreadcrumbSchema path="/services/ai-powered-code-orchestrator-096aaf70" title="AI-Powered Code Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Code Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with AI-Powered Code Orchestrator. Powered by cutting-edge AI, this platform delivers document processing like never before.</p>
 

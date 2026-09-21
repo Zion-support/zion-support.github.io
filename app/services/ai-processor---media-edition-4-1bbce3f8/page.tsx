@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-processor---media-edition-4-1bbce3f8` title="AI Processor - Media Edition #4" />
+        <BreadcrumbSchema path="/services/ai-processor---media-edition-4-1bbce3f8" title="AI Processor - Media Edition #4" />
         <h1 className="text-4xl font-bold mb-6">AI Processor - Media Edition #4</h1>
         <p className="text-lg text-gray-300 mb-8">The future of media is here with AI Processor - Media Edition #4. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.</p>
 

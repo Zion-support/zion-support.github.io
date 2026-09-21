@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-data-analytics-dbb24f0a` title="Predictive Data Analytics" />
+        <BreadcrumbSchema path="/services/predictive-data-analytics-dbb24f0a" title="Predictive Data Analytics" />
         <h1 className="text-4xl font-bold mb-6">Predictive Data Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">The future of manufacturing is here with Predictive Data Analytics. Powered by cutting-edge AI, this platform delivers supply chain like never before.</p>
 

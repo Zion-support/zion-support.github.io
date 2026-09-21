@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-insightful-retail-personalization-c308a18e` title="AI-Powered Insightful Retail Personalization" />
+        <BreadcrumbSchema path="/services/ai-powered-insightful-retail-personalization-c308a18e" title="AI-Powered Insightful Retail Personalization" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Insightful Retail Personalization</h1>
         <p className="text-lg text-gray-300 mb-8">Omnichannel personalization engine that delivers insightful product recommendations, dynamic pricing, and individualized experiences across all retail touchpoin</p>
 

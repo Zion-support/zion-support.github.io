@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-predictor-real-estate-f3d6075b` title="Cognitive predictor-real-estate" />
+        <BreadcrumbSchema path="/services/cognitive-predictor-real-estate-f3d6075b" title="Cognitive predictor-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Cognitive predictor-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Cognitive predictor-real-estate leverages advanced machine learning to deliver document processing</p>
 

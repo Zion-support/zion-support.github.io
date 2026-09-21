@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-manufacturing-customer-service-2a9ef2b3` title="Predictive Manufacturing Customer Service" />
+        <BreadcrumbSchema path="/services/predictive-manufacturing-customer-service-2a9ef2b3" title="Predictive Manufacturing Customer Service" />
         <h1 className="text-4xl font-bold mb-6">Predictive Manufacturing Customer Service</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Predictive Manufacturing Customer Service. This AI-driven solution automates document processing with unprecedent</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-coordinator-for-gaming-7f5e52e1` title="Adaptive Coordinator for Gaming" />
+        <BreadcrumbSchema path="/services/adaptive-coordinator-for-gaming-7f5e52e1" title="Adaptive Coordinator for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Coordinator for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Coordinator for Gaming. This autonomous system provides predictive analytics with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-quality-processor-85a18c9f` title="Automated Quality Processor" />
+        <BreadcrumbSchema path="/services/automated-quality-processor-85a18c9f" title="Automated Quality Processor" />
         <h1 className="text-4xl font-bold mb-6">Automated Quality Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Automated Quality Processor. Combines resource optimization with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-user-intelligence-1-1088a611` title="Cognitive User Intelligence #1" />
+        <BreadcrumbSchema path="/services/cognitive-user-intelligence-1-1088a611" title="Cognitive User Intelligence #1" />
         <h1 className="text-4xl font-bold mb-6">Cognitive User Intelligence #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Cognitive User Intelligence #1. This AI-driven solution automates customer insights with unprecedented accuracy</p>
 

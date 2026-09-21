@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-neural---legal-8fdf55f0` title="Insights Neural - Legal" />
+        <BreadcrumbSchema path="/services/insights-neural---legal-8fdf55f0" title="Insights Neural - Legal" />
         <h1 className="text-4xl font-bold mb-6">Insights Neural - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Legal through intelligent automation. Our Insights Neural - Legal leverages advanced machine learning to deliver threat detection at scale.</p>
 

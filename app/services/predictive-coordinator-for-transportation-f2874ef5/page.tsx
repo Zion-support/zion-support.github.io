@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-coordinator-for-transportation-f2874ef5` title="Predictive Coordinator for Transportation" />
+        <BreadcrumbSchema path="/services/predictive-coordinator-for-transportation-f2874ef5" title="Predictive Coordinator for Transportation" />
         <h1 className="text-4xl font-bold mb-6">Predictive Coordinator for Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our Predictive Coordinator for Transportation leverages advanced machine learning to deliver langua</p>
 

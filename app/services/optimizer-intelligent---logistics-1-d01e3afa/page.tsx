@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-intelligent---logistics-1-d01e3afa` title="Optimizer Intelligent - Logistics #1" />
+        <BreadcrumbSchema path="/services/optimizer-intelligent---logistics-1-d01e3afa" title="Optimizer Intelligent - Logistics #1" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Intelligent - Logistics #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation logistics solution: Optimizer Intelligent - Logistics #1. Combines risk assessment with adaptive intelligence for optimal results.</p>
 

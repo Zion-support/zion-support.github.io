@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-fraud-insights-fcaeb553` title="Self-Optimizing Fraud Insights" />
+        <BreadcrumbSchema path="/services/self-optimizing-fraud-insights-fcaeb553" title="Self-Optimizing Fraud Insights" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Fraud Insights</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Self-Optimizing Fraud Insights leverages advanced machine learning to deliver market intelligence </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-orchestrator-finance-a2149e0b` title="Predictive orchestrator-finance" />
+        <BreadcrumbSchema path="/services/predictive-orchestrator-finance-a2149e0b" title="Predictive orchestrator-finance" />
         <h1 className="text-4xl font-bold mb-6">Predictive orchestrator-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Predictive orchestrator-finance. Combines security monitoring with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-resource-intelligence-1-71c208e6` title="Self-Optimizing Resource Intelligence #1" />
+        <BreadcrumbSchema path="/services/self-optimizing-resource-intelligence-1-71c208e6" title="Self-Optimizing Resource Intelligence #1" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Resource Intelligence #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Self-Optimizing Resource Intelligence #1. This AI-driven solution automates data processing with unprecedented ac</p>
 

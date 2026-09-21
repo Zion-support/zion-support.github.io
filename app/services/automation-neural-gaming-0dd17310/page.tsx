@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-neural-gaming-0dd17310` title="Automation Neural - Gaming" />
+        <BreadcrumbSchema path="/services/automation-neural-gaming-0dd17310" title="Automation Neural - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Automation Neural - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Automation Neural - Gaming. Powered by cutting-edge AI, this platform delivers vendor management like never before.</p>
 

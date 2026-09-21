@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-inventory-director-0b6cc64c` title="Automated Inventory Director" />
+        <BreadcrumbSchema path="/services/automated-inventory-director-0b6cc64c" title="Automated Inventory Director" />
         <h1 className="text-4xl font-bold mb-6">Automated Inventory Director</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Automated Inventory Director. This AI-driven solution automates fraud prevention with unprecedented accuracy a</p>
 

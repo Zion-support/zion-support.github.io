@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-neural---education-ad66d8a5` title="Automation Neural - Education" />
+        <BreadcrumbSchema path="/services/automation-neural---education-ad66d8a5" title="Automation Neural - Education" />
         <h1 className="text-4xl font-bold mb-6">Automation Neural - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automation Neural - Education. This autonomous system provides workflow management with zero manual intervention needed.</p>
 

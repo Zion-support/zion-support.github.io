@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-performance-coordinator-ad6cf765` title="Smart Performance Coordinator" />
+        <BreadcrumbSchema path="/services/smart-performance-coordinator-ad6cf765" title="Smart Performance Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Smart Performance Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize agriculture through intelligent automation. Our Smart Performance Coordinator leverages advanced machine learning to deliver document processing a</p>
 

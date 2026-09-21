@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-coordinator-automotive-3848e36b` title="Adaptive coordinator-automotive" />
+        <BreadcrumbSchema path="/services/adaptive-coordinator-automotive-3848e36b" title="Adaptive coordinator-automotive" />
         <h1 className="text-4xl font-bold mb-6">Adaptive coordinator-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with Adaptive coordinator-automotive. Powered by cutting-edge AI, this platform delivers image recognition like never before.</p>
 

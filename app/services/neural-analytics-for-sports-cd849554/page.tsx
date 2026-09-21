@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-analytics-for-sports-cd849554` title="Neural Analytics for Sports" />
+        <BreadcrumbSchema path="/services/neural-analytics-for-sports-cd849554" title="Neural Analytics for Sports" />
         <h1 className="text-4xl font-bold mb-6">Neural Analytics for Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize sports through intelligent automation. Our Neural Analytics for Sports leverages advanced machine learning to deliver content generation at scale.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-optimizer-manufacturing-80cbe4d4` title="Neural optimizer-manufacturing" />
+        <BreadcrumbSchema path="/services/neural-optimizer-manufacturing-80cbe4d4" title="Neural optimizer-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Neural optimizer-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our Neural optimizer-manufacturing leverages advanced machine learning to deliver quality control at</p>
 

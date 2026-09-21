@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-driven-cybersecurity-suite-aa3faa` title="AI-driven Cybersecurity Suite" />
+        <BreadcrumbSchema path="/services/ai-driven-cybersecurity-suite-aa3faa" title="AI-driven Cybersecurity Suite" />
         <h1 className="text-4xl font-bold mb-6">AI-driven Cybersecurity Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Protect your enterprise with our AI-driven Cybersecurity Suite, leveraging machine learning to detect and respond to threats in real-time.</p>
 

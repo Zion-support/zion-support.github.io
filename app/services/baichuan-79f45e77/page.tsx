@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/baichuan-79f45e77` title="Baichuan" />
+        <BreadcrumbSchema path="/services/baichuan-79f45e77" title="Baichuan" />
         <h1 className="text-4xl font-bold mb-6">Baichuan</h1>
         <p className="text-lg text-gray-300 mb-8">Baichuan AI (Baichuan; Chinese: 百川智能; pinyin: Bǎichuān Zhìnéng) is an artificial intelligence (AI) company based in Beijing, China. As of 2024, it has been dubb</p>
 

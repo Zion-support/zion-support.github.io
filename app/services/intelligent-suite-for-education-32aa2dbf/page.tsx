@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-suite-for-education-32aa2dbf` title="Intelligent Suite for Education" />
+        <BreadcrumbSchema path="/services/intelligent-suite-for-education-32aa2dbf" title="Intelligent Suite for Education" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Suite for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Suite for Education. This autonomous system provides maintenance scheduling with zero manual intervention needed.</p>
 

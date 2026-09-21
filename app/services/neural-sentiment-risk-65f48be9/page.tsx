@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-sentiment-risk-65f48be9` title="Neural Sentiment Risk" />
+        <BreadcrumbSchema path="/services/neural-sentiment-risk-65f48be9" title="Neural Sentiment Risk" />
         <h1 className="text-4xl font-bold mb-6">Neural Sentiment Risk</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Manufacturing operations with our Neural Sentiment Risk. This AI-driven solution automates budget optimization with unprecedented accuracy and ef</p>
 

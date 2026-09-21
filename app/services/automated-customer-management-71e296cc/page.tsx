@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-customer-management-71e296cc` title="Automated Customer Management" />
+        <BreadcrumbSchema path="/services/automated-customer-management-71e296cc" title="Automated Customer Management" />
         <h1 className="text-4xl font-bold mb-6">Automated Customer Management</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Automated Customer Management. Powered by cutting-edge AI, this platform delivers risk assessment like never before.</p>
 

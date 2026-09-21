@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-code-system-04ee0e9b` title="Neural Code System" />
+        <BreadcrumbSchema path="/services/neural-code-system-04ee0e9b" title="Neural Code System" />
         <h1 className="text-4xl font-bold mb-6">Neural Code System</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Neural Code System. Combines data processing with adaptive intelligence for optimal results.</p>
 

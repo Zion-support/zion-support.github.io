@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-analyzer-sports-7d7f1ccf` title="Smart analyzer-sports" />
+        <BreadcrumbSchema path="/services/smart-analyzer-sports-7d7f1ccf" title="Smart analyzer-sports" />
         <h1 className="text-4xl font-bold mb-6">Smart analyzer-sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Smart analyzer-sports. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and effici</p>
 

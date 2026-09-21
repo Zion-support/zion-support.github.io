@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-next-generation-human-resources-automation-2173b6d2` title="Next-Generation Next-Generation Human Resources Automation" />
+        <BreadcrumbSchema path="/services/next-generation-next-generation-human-resources-automation-2173b6d2" title="Next-Generation Next-Generation Human Resources Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Next-Generation Human Resources Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines next-generation human resources workflows with intelligent orchestration.</p>
 

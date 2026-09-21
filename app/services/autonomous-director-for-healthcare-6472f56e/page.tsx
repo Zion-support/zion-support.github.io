@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-director-for-healthcare-6472f56e` title="Autonomous Director for Healthcare" />
+        <BreadcrumbSchema path="/services/autonomous-director-for-healthcare-6472f56e" title="Autonomous Director for Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Director for Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Healthcare operations with our Autonomous Director for Healthcare. This AI-driven solution automates energy management with unprecedented accurac</p>
 

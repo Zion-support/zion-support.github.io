@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-advisor-gaming-475cb29a` title="Intelligent advisor-gaming" />
+        <BreadcrumbSchema path="/services/intelligent-advisor-gaming-475cb29a" title="Intelligent advisor-gaming" />
         <h1 className="text-4xl font-bold mb-6">Intelligent advisor-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our Intelligent advisor-gaming leverages advanced machine learning to deliver content generation at scale.</p>
 

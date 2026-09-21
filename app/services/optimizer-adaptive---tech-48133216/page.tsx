@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-adaptive---tech-48133216` title="Optimizer Adaptive - Tech" />
+        <BreadcrumbSchema path="/services/optimizer-adaptive---tech-48133216" title="Optimizer Adaptive - Tech" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Adaptive - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">The future of technology is here with Optimizer Adaptive - Tech. Powered by cutting-edge AI, this platform delivers language processing like never before.</p>
 

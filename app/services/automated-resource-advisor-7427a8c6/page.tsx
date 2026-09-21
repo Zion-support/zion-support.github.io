@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-resource-advisor-7427a8c6` title="Automated Resource Advisor" />
+        <BreadcrumbSchema path="/services/automated-resource-advisor-7427a8c6" title="Automated Resource Advisor" />
         <h1 className="text-4xl font-bold mb-6">Automated Resource Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Resource Advisor. This autonomous system provides data processing with zero manual intervention needed.</p>
 

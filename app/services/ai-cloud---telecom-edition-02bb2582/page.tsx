@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-cloud---telecom-edition-02bb2582` title="AI Cloud - Telecom Edition" />
+        <BreadcrumbSchema path="/services/ai-cloud---telecom-edition-02bb2582" title="AI Cloud - Telecom Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Cloud - Telecom Edition</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Telecom is here with AI Cloud - Telecom Edition. Powered by cutting-edge AI, this platform delivers compliance monitoring like never before.</p>
 

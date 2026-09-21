@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-process-predictor-b7f7e518` title="Automated Process Predictor" />
+        <BreadcrumbSchema path="/services/automated-process-predictor-b7f7e518" title="Automated Process Predictor" />
         <h1 className="text-4xl font-bold mb-6">Automated Process Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Automated Process Predictor. Powered by cutting-edge AI, this platform delivers financial planning like never before.</p>
 

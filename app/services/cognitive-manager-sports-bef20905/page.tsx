@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-manager-sports-bef20905` title="Cognitive manager-sports" />
+        <BreadcrumbSchema path="/services/cognitive-manager-sports-bef20905" title="Cognitive manager-sports" />
         <h1 className="text-4xl font-bold mb-6">Cognitive manager-sports</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Cognitive manager-sports. Combines quality control with adaptive intelligence for optimal results.</p>
 

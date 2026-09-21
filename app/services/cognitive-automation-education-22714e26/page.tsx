@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-automation-education-22714e26` title="Cognitive automation-education" />
+        <BreadcrumbSchema path="/services/cognitive-automation-education-22714e26" title="Cognitive automation-education" />
         <h1 className="text-4xl font-bold mb-6">Cognitive automation-education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive automation-education. This autonomous system provides language processing with zero manual intervention needed.</p>
 

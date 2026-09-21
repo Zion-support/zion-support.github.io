@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-quality-system-c5bfce78` title="Cognitive Quality System" />
+        <BreadcrumbSchema path="/services/cognitive-quality-system-c5bfce78" title="Cognitive Quality System" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Quality System</h1>
         <p className="text-lg text-gray-300 mb-8">The future of transportation is here with Cognitive Quality System. Powered by cutting-edge AI, this platform delivers document processing like never before.</p>
 

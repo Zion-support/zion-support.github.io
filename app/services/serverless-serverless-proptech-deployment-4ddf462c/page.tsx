@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-serverless-proptech-deployment-4ddf462c` title="Serverless Serverless Proptech Deployment" />
+        <BreadcrumbSchema path="/services/serverless-serverless-proptech-deployment-4ddf462c" title="Serverless Serverless Proptech Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Serverless Proptech Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales serverless proptech workloads without infrastructure management.</p>
 

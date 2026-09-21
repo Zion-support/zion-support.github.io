@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-supply-platform-94fa77b9` title="Cognitive Supply Platform" />
+        <BreadcrumbSchema path="/services/cognitive-supply-platform-94fa77b9" title="Cognitive Supply Platform" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Supply Platform</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with Cognitive Supply Platform. Powered by cutting-edge AI, this platform delivers threat detection like never before.</p>
 

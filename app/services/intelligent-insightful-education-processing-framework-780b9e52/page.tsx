@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-insightful-education-processing-framework-780b9e52` title="Intelligent Insightful Education Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-insightful-education-processing-framework-780b9e52" title="Intelligent Insightful Education Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Insightful Education Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates insightful education data flows with real-time transformation.</p>
 

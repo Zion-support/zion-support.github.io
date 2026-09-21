@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-intelligence-tech-1e3c4f7c` title="Predictive intelligence-tech" />
+        <BreadcrumbSchema path="/services/predictive-intelligence-tech-1e3c4f7c" title="Predictive intelligence-tech" />
         <h1 className="text-4xl font-bold mb-6">Predictive intelligence-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Predictive intelligence-tech. This AI-driven solution automates image recognition with unprecedented accuracy and </p>
 

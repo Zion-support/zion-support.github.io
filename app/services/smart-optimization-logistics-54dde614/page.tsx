@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-optimization-logistics-54dde614` title="Smart optimization-logistics" />
+        <BreadcrumbSchema path="/services/smart-optimization-logistics-54dde614" title="Smart optimization-logistics" />
         <h1 className="text-4xl font-bold mb-6">Smart optimization-logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize logistics through intelligent automation. Our Smart optimization-logistics leverages advanced machine learning to deliver workflow management at s</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-team-for-tech-5716f2d4` title="Advanced Team for Tech" />
+        <BreadcrumbSchema path="/services/advanced-team-for-tech-5716f2d4" title="Advanced Team for Tech" />
         <h1 className="text-4xl font-bold mb-6">Advanced Team for Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your tech workflows with Advanced Team for Tech. This intelligent platform delivers team productivity through advanced automation and AI.</p>
 

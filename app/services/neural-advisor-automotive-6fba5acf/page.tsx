@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-advisor-automotive-6fba5acf` title="Neural advisor-automotive" />
+        <BreadcrumbSchema path="/services/neural-advisor-automotive-6fba5acf" title="Neural advisor-automotive" />
         <h1 className="text-4xl font-bold mb-6">Neural advisor-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Neural advisor-automotive. This AI-driven solution automates resource optimization with unprecedented accuracy and</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-composable-fintech-management-system-d17843d5` title="Autonomous Composable Fintech Management System" />
+        <BreadcrumbSchema path="/services/autonomous-composable-fintech-management-system-d17843d5" title="Autonomous Composable Fintech Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Composable Fintech Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes composable fintech processes with minimal human intervention.</p>
 

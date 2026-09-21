@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-processor-for-logistics-5b3a9049` title="Cognitive Processor for Logistics" />
+        <BreadcrumbSchema path="/services/cognitive-processor-for-logistics-5b3a9049" title="Cognitive Processor for Logistics" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Processor for Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive Processor for Logistics. This autonomous system provides resource optimization with zero manual intervention needed.</p>
 

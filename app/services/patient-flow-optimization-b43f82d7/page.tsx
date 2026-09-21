@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/patient-flow-optimization-b43f82d7` title="Patient Flow Optimization" />
+        <BreadcrumbSchema path="/services/patient-flow-optimization-b43f82d7" title="Patient Flow Optimization" />
         <h1 className="text-4xl font-bold mb-6">Patient Flow Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered hospital operations platform. Predicts admission surges, optimizes bed management, reduces ED wait times, and coordinates discharge planning across d</p>
 

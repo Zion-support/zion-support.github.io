@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-precision-insurtech-analytics-928f1663` title="AI-Powered Precision Insurtech Analytics" />
+        <BreadcrumbSchema path="/services/ai-powered-precision-insurtech-analytics-928f1663" title="AI-Powered Precision Insurtech Analytics" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Precision Insurtech Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven analytics platform that delivers precision insights into insurtech operations, providing real-time monitoring, predictive modeling, and automated repo</p>
 

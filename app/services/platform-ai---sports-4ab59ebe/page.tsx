@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-ai---sports-4ab59ebe` title="Platform AI - Sports" />
+        <BreadcrumbSchema path="/services/platform-ai---sports-4ab59ebe" title="Platform AI - Sports" />
         <h1 className="text-4xl font-bold mb-6">Platform AI - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your sports operations with our Platform AI - Sports. This AI-driven solution automates content generation with unprecedented accuracy and efficiency.</p>
 

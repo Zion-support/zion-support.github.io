@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-context-aware-travel-processing-framework-c3dcb21d` title="Intelligent Context-Aware Travel Processing Framework" />
+        <BreadcrumbSchema path="/services/intelligent-context-aware-travel-processing-framework-c3dcb21d" title="Intelligent Context-Aware Travel Processing Framework" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Context-Aware Travel Processing Framework</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent processing framework that automates context-aware travel data flows with real-time transformation.</p>
 

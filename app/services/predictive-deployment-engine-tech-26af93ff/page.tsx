@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-deployment-engine-tech-26af93ff` title="Predictive Deployment Engine - Tech" />
+        <BreadcrumbSchema path="/services/predictive-deployment-engine-tech-26af93ff" title="Predictive Deployment Engine - Tech" />
         <h1 className="text-4xl font-bold mb-6">Predictive Deployment Engine - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation technology solution: Predictive Deployment Engine - Tech. Combines deployment strategies with adaptive intelligence for optimal results.</p>
 

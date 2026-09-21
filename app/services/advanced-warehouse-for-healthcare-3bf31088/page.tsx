@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-warehouse-for-healthcare-3bf31088` title="Advanced Warehouse for Healthcare" />
+        <BreadcrumbSchema path="/services/advanced-warehouse-for-healthcare-3bf31088" title="Advanced Warehouse for Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Advanced Warehouse for Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your healthcare workflows with Advanced Warehouse for Healthcare. This intelligent platform delivers schema design through advanced automation and AI.</p>
 

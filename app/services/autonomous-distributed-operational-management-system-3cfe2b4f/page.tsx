@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-distributed-operational-management-system-3cfe2b4f` title="Autonomous Distributed Operational Management System" />
+        <BreadcrumbSchema path="/services/autonomous-distributed-operational-management-system-3cfe2b4f" title="Autonomous Distributed Operational Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Distributed Operational Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes distributed operational processes with minimal human intervention.</p>
 

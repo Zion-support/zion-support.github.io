@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-automated---insurance-7eac9b4a` title="System Automated - Insurance" />
+        <BreadcrumbSchema path="/services/system-automated---insurance-7eac9b4a" title="System Automated - Insurance" />
         <h1 className="text-4xl font-bold mb-6">System Automated - Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your insurance operations with our System Automated - Insurance. This AI-driven solution automates risk assessment with unprecedented accuracy and eff</p>
 

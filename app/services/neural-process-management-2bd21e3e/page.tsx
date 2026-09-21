@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-process-management-2bd21e3e` title="Neural Process Management" />
+        <BreadcrumbSchema path="/services/neural-process-management-2bd21e3e" title="Neural Process Management" />
         <h1 className="text-4xl font-bold mb-6">Neural Process Management</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Neural Process Management leverages advanced machine learning to deliver performance monitoring a</p>
 

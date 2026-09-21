@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-network-orchestrator-136fe6c2` title="Adaptive Network Orchestrator" />
+        <BreadcrumbSchema path="/services/adaptive-network-orchestrator-136fe6c2" title="Adaptive Network Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Network Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Network Orchestrator. This autonomous system provides predictive analytics with zero manual intervention needed.</p>
 

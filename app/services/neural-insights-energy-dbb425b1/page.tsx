@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-insights-energy-dbb425b1` title="Neural insights-energy" />
+        <BreadcrumbSchema path="/services/neural-insights-energy-dbb425b1" title="Neural insights-energy" />
         <h1 className="text-4xl font-bold mb-6">Neural insights-energy</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in energy with Neural insights-energy. This AI-powered platform transforms user provisioning into a competitive advantage.</p>
 

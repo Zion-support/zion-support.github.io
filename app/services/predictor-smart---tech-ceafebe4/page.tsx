@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-smart---tech-ceafebe4` title="Predictor Smart - Tech" />
+        <BreadcrumbSchema path="/services/predictor-smart---tech-ceafebe4" title="Predictor Smart - Tech" />
         <h1 className="text-4xl font-bold mb-6">Predictor Smart - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">The future of technology is here with Predictor Smart - Tech. Powered by cutting-edge AI, this platform delivers data processing like never before.</p>
 

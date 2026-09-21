@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-processor-hospitality-2-c5dfc67c` title="AI-Powered processor-hospitality #2" />
+        <BreadcrumbSchema path="/services/ai-powered-processor-hospitality-2-c5dfc67c" title="AI-Powered processor-hospitality #2" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered processor-hospitality #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our AI-Powered processor-hospitality #2. This AI-driven solution automates financial planning with unprecedented accu</p>
 

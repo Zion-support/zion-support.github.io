@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-processor-real-estate-216961dd` title="Neural processor-real-estate" />
+        <BreadcrumbSchema path="/services/neural-processor-real-estate-216961dd" title="Neural processor-real-estate" />
         <h1 className="text-4xl font-bold mb-6">Neural processor-real-estate</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Neural processor-real-estate leverages advanced machine learning to deliver security monitoring at</p>
 

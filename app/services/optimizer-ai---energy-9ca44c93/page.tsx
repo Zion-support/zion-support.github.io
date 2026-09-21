@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-ai---energy-9ca44c93` title="Optimizer AI - Energy" />
+        <BreadcrumbSchema path="/services/optimizer-ai---energy-9ca44c93" title="Optimizer AI - Energy" />
         <h1 className="text-4xl font-bold mb-6">Optimizer AI - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation energy solution: Optimizer AI - Energy. Combines image recognition with adaptive intelligence for optimal results.</p>
 

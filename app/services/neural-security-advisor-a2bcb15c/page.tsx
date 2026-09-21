@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-security-advisor-a2bcb15c` title="Neural Security Advisor" />
+        <BreadcrumbSchema path="/services/neural-security-advisor-a2bcb15c" title="Neural Security Advisor" />
         <h1 className="text-4xl font-bold mb-6">Neural Security Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Neural Security Advisor. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

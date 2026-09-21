@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-enterprise-grade-blockchain-management-system-2fff23d5` title="Autonomous Enterprise-Grade Blockchain Management System" />
+        <BreadcrumbSchema path="/services/autonomous-enterprise-grade-blockchain-management-system-2fff23d5" title="Autonomous Enterprise-Grade Blockchain Management System" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Enterprise-Grade Blockchain Management System</h1>
         <p className="text-lg text-gray-300 mb-8">Autonomous management system that self-optimizes enterprise-grade blockchain processes with minimal human intervention.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-platform-finance-3933ceba` title="Adaptive platform-finance" />
+        <BreadcrumbSchema path="/services/adaptive-platform-finance-3933ceba" title="Adaptive platform-finance" />
         <h1 className="text-4xl font-bold mb-6">Adaptive platform-finance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Adaptive platform-finance. This AI-driven solution automates content generation with unprecedented accuracy and effic</p>
 

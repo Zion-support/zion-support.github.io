@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-enterprise-grade-retail-orchestration-b0032d2c` title="Cloud-Native Enterprise-Grade Retail Orchestration" />
+        <BreadcrumbSchema path="/services/cloud-native-enterprise-grade-retail-orchestration-b0032d2c" title="Cloud-Native Enterprise-Grade Retail Orchestration" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Enterprise-Grade Retail Orchestration</h1>
         <p className="text-lg text-gray-300 mb-8">Cloud-native orchestration platform that manages enterprise-grade retail resources with auto-scaling and cost control.</p>
 

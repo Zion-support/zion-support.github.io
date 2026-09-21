@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-adaptive---gaming-e4d97327` title="Processor Adaptive - Gaming" />
+        <BreadcrumbSchema path="/services/processor-adaptive---gaming-e4d97327" title="Processor Adaptive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Processor Adaptive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Processor Adaptive - Gaming. Powered by cutting-edge AI, this platform delivers image recognition like never before.</p>
 

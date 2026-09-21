@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-platform-telecom-bb03dbd7` title="Cognitive platform-telecom" />
+        <BreadcrumbSchema path="/services/cognitive-platform-telecom-bb03dbd7" title="Cognitive platform-telecom" />
         <h1 className="text-4xl font-bold mb-6">Cognitive platform-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation telecom solution: Cognitive platform-telecom. Combines content generation with adaptive intelligence for optimal results.</p>
 

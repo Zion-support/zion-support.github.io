@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-optimizer-finance-1-0f8d03d3` title="Predictive optimizer-finance #1" />
+        <BreadcrumbSchema path="/services/predictive-optimizer-finance-1-0f8d03d3" title="Predictive optimizer-finance #1" />
         <h1 className="text-4xl font-bold mb-6">Predictive optimizer-finance #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with Predictive optimizer-finance #1. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

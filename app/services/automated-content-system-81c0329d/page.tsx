@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-content-system-81c0329d` title="Automated Content System" />
+        <BreadcrumbSchema path="/services/automated-content-system-81c0329d" title="Automated Content System" />
         <h1 className="text-4xl font-bold mb-6">Automated Content System</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize transportation through intelligent automation. Our Automated Content System leverages advanced machine learning to deliver image recognition at sc</p>
 

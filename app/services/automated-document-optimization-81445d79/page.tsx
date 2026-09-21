@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-document-optimization-81445d79` title="Automated Document Optimization" />
+        <BreadcrumbSchema path="/services/automated-document-optimization-81445d79" title="Automated Document Optimization" />
         <h1 className="text-4xl font-bold mb-6">Automated Document Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated Document Optimization. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

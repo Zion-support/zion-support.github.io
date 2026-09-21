@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-code-predictor-e3a138e2` title="Cognitive Code Predictor" />
+        <BreadcrumbSchema path="/services/cognitive-code-predictor-e3a138e2" title="Cognitive Code Predictor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Code Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of manufacturing is here with Cognitive Code Predictor. Powered by cutting-edge AI, this platform delivers data processing like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-smart---automotive-b895ccb6` title="Manager Smart - Automotive" />
+        <BreadcrumbSchema path="/services/manager-smart---automotive-b895ccb6" title="Manager Smart - Automotive" />
         <h1 className="text-4xl font-bold mb-6">Manager Smart - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize automotive through intelligent automation. Our Manager Smart - Automotive leverages advanced machine learning to deliver content generation at sca</p>
 

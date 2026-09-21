@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-predictor-for-hospitality-45afcd0a` title="Autonomous Predictor for Hospitality" />
+        <BreadcrumbSchema path="/services/autonomous-predictor-for-hospitality-45afcd0a" title="Autonomous Predictor for Hospitality" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Predictor for Hospitality</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize hospitality through intelligent automation. Our Autonomous Predictor for Hospitality leverages advanced machine learning to deliver user experienc</p>
 

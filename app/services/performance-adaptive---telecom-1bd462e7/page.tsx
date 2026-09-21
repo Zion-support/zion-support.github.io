@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/performance-adaptive---telecom-1bd462e7` title="Performance Adaptive - Telecom" />
+        <BreadcrumbSchema path="/services/performance-adaptive---telecom-1bd462e7" title="Performance Adaptive - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Performance Adaptive - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize Telecom through intelligent automation. Our Performance Adaptive - Telecom leverages advanced machine learning to deliver quality control at scale</p>
 

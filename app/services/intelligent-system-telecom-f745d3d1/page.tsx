@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-system-telecom-f745d3d1` title="Intelligent system-telecom" />
+        <BreadcrumbSchema path="/services/intelligent-system-telecom-f745d3d1" title="Intelligent system-telecom" />
         <h1 className="text-4xl font-bold mb-6">Intelligent system-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your telecom operations with our Intelligent system-telecom. This AI-driven solution automates security monitoring with unprecedented accuracy and eff</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-security-predictor-342cea47` title="Adaptive Security Predictor" />
+        <BreadcrumbSchema path="/services/adaptive-security-predictor-342cea47" title="Adaptive Security Predictor" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Security Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Adaptive Security Predictor. This AI-driven solution automates compliance monitoring with unprecedented accuracy and ef</p>
 

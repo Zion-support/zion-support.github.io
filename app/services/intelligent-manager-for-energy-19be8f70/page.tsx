@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-manager-for-energy-19be8f70` title="Intelligent Manager for Energy" />
+        <BreadcrumbSchema path="/services/intelligent-manager-for-energy-19be8f70" title="Intelligent Manager for Energy" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Manager for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Intelligent Manager for Energy. This autonomous system provides quality control with zero manual intervention needed.</p>
 

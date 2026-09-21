@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-quality-performance-4b3aad06` title="Smart Quality Performance" />
+        <BreadcrumbSchema path="/services/smart-quality-performance-4b3aad06" title="Smart Quality Performance" />
         <h1 className="text-4xl font-bold mb-6">Smart Quality Performance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Finance is here with Smart Quality Performance. Powered by cutting-edge AI, this platform delivers automation opportunity like never before.</p>
 

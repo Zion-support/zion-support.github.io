@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-fraud-engine-a346a06e` title="Adaptive Fraud Engine" />
+        <BreadcrumbSchema path="/services/adaptive-fraud-engine-a346a06e" title="Adaptive Fraud Engine" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Fraud Engine</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Fraud Engine. This autonomous system provides inventory management with zero manual intervention needed.</p>
 

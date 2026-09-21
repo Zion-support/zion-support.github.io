@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-self-learning-iot-intelligence-2db505c7` title="AI-Powered Self-Learning IoT Intelligence" />
+        <BreadcrumbSchema path="/services/ai-powered-self-learning-iot-intelligence-2db505c7" title="AI-Powered Self-Learning IoT Intelligence" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Self-Learning IoT Intelligence</h1>
         <p className="text-lg text-gray-300 mb-8">Edge AI platform that processes IoT sensor data in real-time with self-learning insights.</p>
 

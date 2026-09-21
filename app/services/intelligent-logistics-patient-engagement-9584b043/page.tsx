@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-logistics-patient-engagement-9584b043` title="Intelligent Logistics Patient Engagement" />
+        <BreadcrumbSchema path="/services/intelligent-logistics-patient-engagement-9584b043" title="Intelligent Logistics Patient Engagement" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Logistics Patient Engagement</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven patient engagement platform that delivers proactive personalized care journeys, remote monitoring, and adherence support through intelligent automatio</p>
 

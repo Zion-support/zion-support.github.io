@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-suite-healthcare-1f66ee1e` title="Automated suite-healthcare" />
+        <BreadcrumbSchema path="/services/automated-suite-healthcare-1f66ee1e" title="Automated suite-healthcare" />
         <h1 className="text-4xl font-bold mb-6">Automated suite-healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation healthcare solution: Automated suite-healthcare. Combines market intelligence with adaptive intelligence for optimal results.</p>
 

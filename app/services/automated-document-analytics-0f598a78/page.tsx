@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-document-analytics-0f598a78` title="Automated Document Analytics" />
+        <BreadcrumbSchema path="/services/automated-document-analytics-0f598a78" title="Automated Document Analytics" />
         <h1 className="text-4xl font-bold mb-6">Automated Document Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Automated Document Analytics. This AI-driven solution automates inventory management with unprecedented accuracy </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-supply-chain-workflow-automation-29a90208` title="Smart Supply Chain Workflow Automation" />
+        <BreadcrumbSchema path="/services/smart-supply-chain-workflow-automation-29a90208" title="Smart Supply Chain Workflow Automation" />
         <h1 className="text-4xl font-bold mb-6">Smart Supply Chain Workflow Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Intelligent workflow automation platform that streamlines supply chain processes and eliminates manual tasks.</p>
 

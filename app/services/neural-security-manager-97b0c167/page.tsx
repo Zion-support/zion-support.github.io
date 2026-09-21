@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-security-manager-97b0c167` title="Neural Security Manager" />
+        <BreadcrumbSchema path="/services/neural-security-manager-97b0c167" title="Neural Security Manager" />
         <h1 className="text-4xl font-bold mb-6">Neural Security Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Neural Security Manager. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

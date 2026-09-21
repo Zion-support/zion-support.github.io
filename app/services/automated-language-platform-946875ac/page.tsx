@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-language-platform-946875ac` title="Automated Language Platform" />
+        <BreadcrumbSchema path="/services/automated-language-platform-946875ac" title="Automated Language Platform" />
         <h1 className="text-4xl font-bold mb-6">Automated Language Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your legal operations with our Automated Language Platform. This AI-driven solution automates document processing with unprecedented accuracy and effi</p>
 

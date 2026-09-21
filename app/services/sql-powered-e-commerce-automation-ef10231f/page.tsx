@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/sql-powered-e-commerce-automation-ef10231f` title="SQL-Powered E-Commerce Automation" />
+        <BreadcrumbSchema path="/services/sql-powered-e-commerce-automation-ef10231f" title="SQL-Powered E-Commerce Automation" />
         <h1 className="text-4xl font-bold mb-6">SQL-Powered E-Commerce Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in e-commerce with SQL-Powered E-Commerce Automation. This AI-powered platform transforms analytics processing into a competitive advantage.</p>
 

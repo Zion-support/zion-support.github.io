@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-language-revenue-d4aeea24` title="Smart Language Revenue" />
+        <BreadcrumbSchema path="/services/smart-language-revenue-d4aeea24" title="Smart Language Revenue" />
         <h1 className="text-4xl font-bold mb-6">Smart Language Revenue</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Telecom solution: Smart Language Revenue. Combines risk assessment with adaptive intelligence for optimal results.</p>
 

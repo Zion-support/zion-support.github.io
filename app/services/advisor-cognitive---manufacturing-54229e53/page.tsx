@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-cognitive---manufacturing-54229e53` title="Advisor Cognitive - Manufacturing" />
+        <BreadcrumbSchema path="/services/advisor-cognitive---manufacturing-54229e53" title="Advisor Cognitive - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Advisor Cognitive - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize manufacturing through intelligent automation. Our Advisor Cognitive - Manufacturing leverages advanced machine learning to deliver customer insigh</p>
 

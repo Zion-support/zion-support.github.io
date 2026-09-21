@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/aikido-security-0a308121` title="Aikido Security" />
+        <BreadcrumbSchema path="/services/aikido-security-0a308121" title="Aikido Security" />
         <h1 className="text-4xl font-bold mb-6">Aikido Security</h1>
         <p className="text-lg text-gray-300 mb-8">Aikido Security BV is a cybersecurity company based in Ghent, Belgium and founded in 2022. The company develops application security software.</p>
 

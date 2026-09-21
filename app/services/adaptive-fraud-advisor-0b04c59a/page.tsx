@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-fraud-advisor-0b04c59a` title="Adaptive Fraud Advisor" />
+        <BreadcrumbSchema path="/services/adaptive-fraud-advisor-0b04c59a" title="Adaptive Fraud Advisor" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Fraud Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your insurance operations with our Adaptive Fraud Advisor. This AI-driven solution automates quality control with unprecedented accuracy and efficienc</p>
 

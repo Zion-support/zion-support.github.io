@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-data-processor-96aea41b` title="AI-Powered Data Processor" />
+        <BreadcrumbSchema path="/services/ai-powered-data-processor-96aea41b" title="AI-Powered Data Processor" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Data Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: AI-Powered Data Processor. Combines supply chain with adaptive intelligence for optimal results.</p>
 

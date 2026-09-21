@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-maintenance-analyzer-262b4936` title="Cognitive Maintenance Analyzer" />
+        <BreadcrumbSchema path="/services/cognitive-maintenance-analyzer-262b4936" title="Cognitive Maintenance Analyzer" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Maintenance Analyzer</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation retail solution: Cognitive Maintenance Analyzer. Combines risk assessment with adaptive intelligence for optimal results.</p>
 

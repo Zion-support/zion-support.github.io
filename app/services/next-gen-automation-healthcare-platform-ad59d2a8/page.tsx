@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-gen-automation-healthcare-platform-ad59d2a8` title="Next-Gen Automation Healthcare Platform" />
+        <BreadcrumbSchema path="/services/next-gen-automation-healthcare-platform-ad59d2a8" title="Next-Gen Automation Healthcare Platform" />
         <h1 className="text-4xl font-bold mb-6">Next-Gen Automation Healthcare Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Next-Gen Automation Healthcare Platform. This autonomous system provides performance insights with zero manual intervention nee</p>
 

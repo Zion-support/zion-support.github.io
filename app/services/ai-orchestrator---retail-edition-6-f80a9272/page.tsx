@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-orchestrator---retail-edition-6-f80a9272` title="AI Orchestrator - Retail Edition #6" />
+        <BreadcrumbSchema path="/services/ai-orchestrator---retail-edition-6-f80a9272" title="AI Orchestrator - Retail Edition #6" />
         <h1 className="text-4xl font-bold mb-6">AI Orchestrator - Retail Edition #6</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our AI Orchestrator - Retail Edition #6. This AI-driven solution automates quality control with unprecedented accuracy and</p>
 

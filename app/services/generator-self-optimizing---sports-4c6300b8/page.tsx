@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-self-optimizing---sports-4c6300b8` title="Generator Self-Optimizing - Sports" />
+        <BreadcrumbSchema path="/services/generator-self-optimizing---sports-4c6300b8" title="Generator Self-Optimizing - Sports" />
         <h1 className="text-4xl font-bold mb-6">Generator Self-Optimizing - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">The future of sports is here with Generator Self-Optimizing - Sports. Powered by cutting-edge AI, this platform delivers market intelligence like never before.</p>
 

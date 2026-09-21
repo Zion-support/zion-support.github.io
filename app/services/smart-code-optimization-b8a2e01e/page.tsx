@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-code-optimization-b8a2e01e` title="Smart Code Optimization" />
+        <BreadcrumbSchema path="/services/smart-code-optimization-b8a2e01e" title="Smart Code Optimization" />
         <h1 className="text-4xl font-bold mb-6">Smart Code Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Smart Code Optimization. This AI-driven solution automates financial planning with unprecedented accuracy and eff</p>
 

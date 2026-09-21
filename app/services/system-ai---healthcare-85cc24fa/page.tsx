@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-ai---healthcare-85cc24fa` title="System AI - Healthcare" />
+        <BreadcrumbSchema path="/services/system-ai---healthcare-85cc24fa" title="System AI - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">System AI - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with System AI - Healthcare. Powered by cutting-edge AI, this platform delivers sales forecasting like never before.</p>
 

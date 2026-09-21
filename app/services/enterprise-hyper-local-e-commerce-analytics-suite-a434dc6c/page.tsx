@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-hyper-local-e-commerce-analytics-suite-a434dc6c` title="Enterprise Hyper-Local E-Commerce Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-hyper-local-e-commerce-analytics-suite-a434dc6c" title="Enterprise Hyper-Local E-Commerce Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Hyper-Local E-Commerce Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers hyper-local e-commerce insights with unified dashboards and reporting.</p>
 

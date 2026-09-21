@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-network-optimization-41469267` title="Cognitive Network Optimization" />
+        <BreadcrumbSchema path="/services/cognitive-network-optimization-41469267" title="Cognitive Network Optimization" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Network Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your real-estate operations with our Cognitive Network Optimization. This AI-driven solution automates document processing with unprecedented accuracy</p>
 

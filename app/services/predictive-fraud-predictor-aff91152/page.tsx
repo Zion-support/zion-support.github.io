@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-fraud-predictor-aff91152` title="Predictive Fraud Predictor" />
+        <BreadcrumbSchema path="/services/predictive-fraud-predictor-aff91152" title="Predictive Fraud Predictor" />
         <h1 className="text-4xl font-bold mb-6">Predictive Fraud Predictor</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Predictive Fraud Predictor. This autonomous system provides financial planning with zero manual intervention needed.</p>
 

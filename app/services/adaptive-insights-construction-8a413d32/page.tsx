@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-insights-construction-8a413d32` title="Adaptive insights-construction" />
+        <BreadcrumbSchema path="/services/adaptive-insights-construction-8a413d32" title="Adaptive insights-construction" />
         <h1 className="text-4xl font-bold mb-6">Adaptive insights-construction</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Adaptive insights-construction leverages advanced machine learning to deliver sales forecasting a</p>
 

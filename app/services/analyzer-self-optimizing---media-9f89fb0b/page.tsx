@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-self-optimizing---media-9f89fb0b` title="Analyzer Self-Optimizing - Media" />
+        <BreadcrumbSchema path="/services/analyzer-self-optimizing---media-9f89fb0b" title="Analyzer Self-Optimizing - Media" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Self-Optimizing - Media</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize media through intelligent automation. Our Analyzer Self-Optimizing - Media leverages advanced machine learning to deliver maintenance scheduling a</p>
 

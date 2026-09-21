@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-management-for-construction-1-0f07c9a2` title="Self-Optimizing Management for Construction #1" />
+        <BreadcrumbSchema path="/services/self-optimizing-management-for-construction-1-0f07c9a2" title="Self-Optimizing Management for Construction #1" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Management for Construction #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Self-Optimizing Management for Construction #1. Powered by cutting-edge AI, this platform delivers language processing l</p>
 

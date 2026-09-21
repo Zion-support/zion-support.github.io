@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-analytics-automotive-f85f3baa` title="Smart analytics-automotive" />
+        <BreadcrumbSchema path="/services/smart-analytics-automotive-f85f3baa" title="Smart analytics-automotive" />
         <h1 className="text-4xl font-bold mb-6">Smart analytics-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Smart analytics-automotive. This AI-driven solution automates threat detection with unprecedented accuracy and eff</p>
 

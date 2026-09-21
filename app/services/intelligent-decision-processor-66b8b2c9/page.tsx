@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-decision-processor-66b8b2c9` title="Intelligent Decision Processor" />
+        <BreadcrumbSchema path="/services/intelligent-decision-processor-66b8b2c9" title="Intelligent Decision Processor" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Decision Processor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of telecom is here with Intelligent Decision Processor. Powered by cutting-edge AI, this platform delivers language processing like never before.</p>
 

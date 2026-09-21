@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-security-manager-326f221b` title="Self-Optimizing Security Manager" />
+        <BreadcrumbSchema path="/services/self-optimizing-security-manager-326f221b" title="Self-Optimizing Security Manager" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Security Manager</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Self-Optimizing Security Manager. This AI-driven solution automates process automation with unprecedented accuracy</p>
 

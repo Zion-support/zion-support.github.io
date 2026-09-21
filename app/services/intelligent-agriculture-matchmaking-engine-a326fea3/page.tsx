@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-agriculture-matchmaking-engine-a326fea3` title="Intelligent Agriculture Matchmaking Engine" />
+        <BreadcrumbSchema path="/services/intelligent-agriculture-matchmaking-engine-a326fea3" title="Intelligent Agriculture Matchmaking Engine" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Agriculture Matchmaking Engine</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven matchmaking system that creates cloud-native player matches based on skill, playstyle, and behavioral patterns for optimal gaming experiences.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-security-generator-6d6eb631` title="Automated Security Generator" />
+        <BreadcrumbSchema path="/services/automated-security-generator-6d6eb631" title="Automated Security Generator" />
         <h1 className="text-4xl font-bold mb-6">Automated Security Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize real-estate through intelligent automation. Our Automated Security Generator leverages advanced machine learning to deliver fraud prevention at sc</p>
 

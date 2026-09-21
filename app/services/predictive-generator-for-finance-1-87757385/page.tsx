@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-generator-for-finance-1-87757385` title="Predictive Generator for Finance #1" />
+        <BreadcrumbSchema path="/services/predictive-generator-for-finance-1-87757385" title="Predictive Generator for Finance #1" />
         <h1 className="text-4xl font-bold mb-6">Predictive Generator for Finance #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Finance is here with Predictive Generator for Finance #1. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never bef</p>
 

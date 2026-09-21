@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-next-generation-financial-optimization-engine-d0101cfe` title="AI-Powered Next-Generation Financial Optimization Engine" />
+        <BreadcrumbSchema path="/services/ai-powered-next-generation-financial-optimization-engine-d0101cfe" title="AI-Powered Next-Generation Financial Optimization Engine" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Next-Generation Financial Optimization Engine</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered optimization engine that continuously improves next-generation financial performance through self-tuning algorithms.</p>
 

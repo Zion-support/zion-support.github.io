@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-process-insights-928efbec` title="Smart Process Insights" />
+        <BreadcrumbSchema path="/services/smart-process-insights-928efbec" title="Smart Process Insights" />
         <h1 className="text-4xl font-bold mb-6">Smart Process Insights</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Process Insights. This autonomous system provides maintenance scheduling with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-autonomous---finance-7a4a1a11` title="Advisor Autonomous - Finance" />
+        <BreadcrumbSchema path="/services/advisor-autonomous---finance-7a4a1a11" title="Advisor Autonomous - Finance" />
         <h1 className="text-4xl font-bold mb-6">Advisor Autonomous - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Advisor Autonomous - Finance leverages advanced machine learning to deliver compliance monitoring at s</p>
 

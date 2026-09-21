@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/platform-self-optimizing---healthcare-a0dc3d2e` title="Platform Self-Optimizing - Healthcare" />
+        <BreadcrumbSchema path="/services/platform-self-optimizing---healthcare-a0dc3d2e" title="Platform Self-Optimizing - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Platform Self-Optimizing - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize healthcare through intelligent automation. Our Platform Self-Optimizing - Healthcare leverages advanced machine learning to deliver workflow manag</p>
 

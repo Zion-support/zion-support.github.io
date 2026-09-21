@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictor-for-manufacturing-ba5c2534` title="Neural Predictor for Manufacturing" />
+        <BreadcrumbSchema path="/services/neural-predictor-for-manufacturing-ba5c2534" title="Neural Predictor for Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Neural Predictor for Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">The future of manufacturing is here with Neural Predictor for Manufacturing. Powered by cutting-edge AI, this platform delivers maintenance scheduling like neve</p>
 

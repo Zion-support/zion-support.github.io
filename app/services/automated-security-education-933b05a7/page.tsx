@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-security-education-933b05a7` title="Automated security-education" />
+        <BreadcrumbSchema path="/services/automated-security-education-933b05a7" title="Automated security-education" />
         <h1 className="text-4xl font-bold mb-6">Automated security-education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated security-education. This autonomous system provides master data management with zero manual intervention needed.</p>
 

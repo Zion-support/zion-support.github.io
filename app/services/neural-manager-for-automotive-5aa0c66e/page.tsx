@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-manager-for-automotive-5aa0c66e` title="Neural Manager for Automotive" />
+        <BreadcrumbSchema path="/services/neural-manager-for-automotive-5aa0c66e" title="Neural Manager for Automotive" />
         <h1 className="text-4xl font-bold mb-6">Neural Manager for Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">The future of automotive is here with Neural Manager for Automotive. Powered by cutting-edge AI, this platform delivers process automation like never before.</p>
 

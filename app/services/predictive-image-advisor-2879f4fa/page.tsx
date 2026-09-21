@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-image-advisor-2879f4fa` title="Predictive Image Advisor" />
+        <BreadcrumbSchema path="/services/predictive-image-advisor-2879f4fa" title="Predictive Image Advisor" />
         <h1 className="text-4xl font-bold mb-6">Predictive Image Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">The future of healthcare is here with Predictive Image Advisor. Powered by cutting-edge AI, this platform delivers process automation like never before.</p>
 

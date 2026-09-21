@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/graphics-streaming-for-advertising-be52c9bc` title="Graphics Streaming for Advertising" />
+        <BreadcrumbSchema path="/services/graphics-streaming-for-advertising-be52c9bc" title="Graphics Streaming for Advertising" />
         <h1 className="text-4xl font-bold mb-6">Graphics Streaming for Advertising</h1>
         <p className="text-lg text-gray-300 mb-8">Drive innovation in advertising with Graphics Streaming for Advertising. This AI-powered platform transforms streaming optimization into a competitive advantage</p>
 

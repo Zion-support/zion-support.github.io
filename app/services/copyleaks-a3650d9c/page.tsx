@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/copyleaks-a3650d9c` title="Copyleaks" />
+        <BreadcrumbSchema path="/services/copyleaks-a3650d9c" title="Copyleaks" />
         <h1 className="text-4xl font-bold mb-6">Copyleaks</h1>
         <p className="text-lg text-gray-300 mb-8">Copyleaks is an artificial intelligence and automation technology company.</p>
 

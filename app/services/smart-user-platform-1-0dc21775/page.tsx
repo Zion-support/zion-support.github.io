@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-user-platform-1-0dc21775` title="Smart User Platform #1" />
+        <BreadcrumbSchema path="/services/smart-user-platform-1-0dc21775" title="Smart User Platform #1" />
         <h1 className="text-4xl font-bold mb-6">Smart User Platform #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Smart User Platform #1. Combines data processing with adaptive intelligence for optimal results.</p>
 

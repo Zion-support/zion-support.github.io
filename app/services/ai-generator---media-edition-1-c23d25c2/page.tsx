@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-generator---media-edition-1-c23d25c2` title="AI Generator - Media Edition #1" />
+        <BreadcrumbSchema path="/services/ai-generator---media-edition-1-c23d25c2" title="AI Generator - Media Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI Generator - Media Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with AI Generator - Media Edition #1. This autonomous system provides content generation with zero manual intervention needed.</p>
 

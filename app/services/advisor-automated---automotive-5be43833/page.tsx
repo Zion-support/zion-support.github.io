@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-automated---automotive-5be43833` title="Advisor Automated - Automotive" />
+        <BreadcrumbSchema path="/services/advisor-automated---automotive-5be43833" title="Advisor Automated - Automotive" />
         <h1 className="text-4xl font-bold mb-6">Advisor Automated - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Advisor Automated - Automotive. This autonomous system provides predictive analytics with zero manual intervention needed.</p>
 

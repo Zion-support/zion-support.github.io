@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-compliance-management-2821ab56` title="AI-Powered Compliance Management" />
+        <BreadcrumbSchema path="/services/ai-powered-compliance-management-2821ab56" title="AI-Powered Compliance Management" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Compliance Management</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our AI-Powered Compliance Management. This AI-driven solution automates resource optimization with unprecedented accuracy </p>
 

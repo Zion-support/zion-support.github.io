@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-ai---tech-1e319e9a` title="Automation AI - Tech" />
+        <BreadcrumbSchema path="/services/automation-ai---tech-1e319e9a" title="Automation AI - Tech" />
         <h1 className="text-4xl font-bold mb-6">Automation AI - Tech</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your technology operations with our Automation AI - Tech. This AI-driven solution automates fraud prevention with unprecedented accuracy and efficienc</p>
 

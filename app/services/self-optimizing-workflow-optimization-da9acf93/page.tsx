@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-workflow-optimization-da9acf93` title="Self-Optimizing Workflow Optimization" />
+        <BreadcrumbSchema path="/services/self-optimizing-workflow-optimization-da9acf93" title="Self-Optimizing Workflow Optimization" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Workflow Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize sports through intelligent automation. Our Self-Optimizing Workflow Optimization leverages advanced machine learning to deliver supply chain at sc</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-system---real-estate-edition-1-dd1907e2` title="AI System - Real-Estate Edition #1" />
+        <BreadcrumbSchema path="/services/ai-system---real-estate-edition-1-dd1907e2" title="AI System - Real-Estate Edition #1" />
         <h1 className="text-4xl font-bold mb-6">AI System - Real-Estate Edition #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of real-estate is here with AI System - Real-Estate Edition #1. Powered by cutting-edge AI, this platform delivers image recognition like never befor</p>
 

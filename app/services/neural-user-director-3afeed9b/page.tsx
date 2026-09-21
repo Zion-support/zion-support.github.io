@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-user-director-3afeed9b` title="Neural User Director" />
+        <BreadcrumbSchema path="/services/neural-user-director-3afeed9b" title="Neural User Director" />
         <h1 className="text-4xl font-bold mb-6">Neural User Director</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Neural User Director. Powered by cutting-edge AI, this platform delivers market intelligence like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/serverless-resilient-marketing-deployment-7594b9f6` title="Serverless Resilient Marketing Deployment" />
+        <BreadcrumbSchema path="/services/serverless-resilient-marketing-deployment-7594b9f6" title="Serverless Resilient Marketing Deployment" />
         <h1 className="text-4xl font-bold mb-6">Serverless Resilient Marketing Deployment</h1>
         <p className="text-lg text-gray-300 mb-8">Serverless deployment platform that auto-scales resilient marketing workloads without infrastructure management.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-analytics-for-ecommerce-8290c6ca` title="Advanced Analytics for Ecommerce" />
+        <BreadcrumbSchema path="/services/advanced-analytics-for-ecommerce-8290c6ca" title="Advanced Analytics for Ecommerce" />
         <h1 className="text-4xl font-bold mb-6">Advanced Analytics for Ecommerce</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your ecommerce workflows with Advanced Analytics for Ecommerce. This intelligent platform delivers email analytics through advanced automation and AI.</p>
 

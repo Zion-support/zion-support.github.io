@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-smart---legal-fd8e1116` title="Predictor Smart - Legal" />
+        <BreadcrumbSchema path="/services/predictor-smart---legal-fd8e1116" title="Predictor Smart - Legal" />
         <h1 className="text-4xl font-bold mb-6">Predictor Smart - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation legal solution: Predictor Smart - Legal. Combines quality control with adaptive intelligence for optimal results.</p>
 

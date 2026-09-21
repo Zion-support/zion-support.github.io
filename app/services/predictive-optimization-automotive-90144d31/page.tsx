@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-optimization-automotive-90144d31` title="Predictive optimization-automotive" />
+        <BreadcrumbSchema path="/services/predictive-optimization-automotive-90144d31" title="Predictive optimization-automotive" />
         <h1 className="text-4xl font-bold mb-6">Predictive optimization-automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our Predictive optimization-automotive. This AI-driven solution automates risk assessment with unprecedented accuracy </p>
 

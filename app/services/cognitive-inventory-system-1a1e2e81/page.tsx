@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-inventory-system-1a1e2e81` title="Cognitive Inventory System" />
+        <BreadcrumbSchema path="/services/cognitive-inventory-system-1a1e2e81" title="Cognitive Inventory System" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Inventory System</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize finance through intelligent automation. Our Cognitive Inventory System leverages advanced machine learning to deliver supply chain at scale.</p>
 

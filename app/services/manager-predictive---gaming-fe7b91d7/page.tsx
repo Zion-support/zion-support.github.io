@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-predictive---gaming-fe7b91d7` title="Manager Predictive - Gaming" />
+        <BreadcrumbSchema path="/services/manager-predictive---gaming-fe7b91d7" title="Manager Predictive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Manager Predictive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Gaming solution: Manager Predictive - Gaming. Combines energy management with adaptive intelligence for optimal results.</p>
 

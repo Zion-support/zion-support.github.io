@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-energy-suite-84f5216d` title="Cognitive Energy Suite" />
+        <BreadcrumbSchema path="/services/cognitive-energy-suite-84f5216d" title="Cognitive Energy Suite" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Energy Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your hospitality operations with our Cognitive Energy Suite. This AI-driven solution automates maintenance scheduling with unprecedented accuracy and </p>
 

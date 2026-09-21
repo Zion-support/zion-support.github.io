@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/project-powered-remote-work-automation-48be1059` title="Project-Powered Remote-Work Automation" />
+        <BreadcrumbSchema path="/services/project-powered-remote-work-automation-48be1059" title="Project-Powered Remote-Work Automation" />
         <h1 className="text-4xl font-bold mb-6">Project-Powered Remote-Work Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your remote-work business with Project-Powered Remote-Work Automation. Our solution provides document collaboration with enterprise-grade reliability an</p>
 

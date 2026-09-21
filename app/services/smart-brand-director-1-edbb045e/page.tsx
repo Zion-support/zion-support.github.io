@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-brand-director-1-edbb045e` title="Smart Brand Director #1" />
+        <BreadcrumbSchema path="/services/smart-brand-director-1-edbb045e" title="Smart Brand Director #1" />
         <h1 className="text-4xl font-bold mb-6">Smart Brand Director #1</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Gaming is here with Smart Brand Director #1. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

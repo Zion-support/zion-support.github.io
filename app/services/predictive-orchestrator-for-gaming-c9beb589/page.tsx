@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-orchestrator-for-gaming-c9beb589` title="Predictive Orchestrator for Gaming" />
+        <BreadcrumbSchema path="/services/predictive-orchestrator-for-gaming-c9beb589" title="Predictive Orchestrator for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Predictive Orchestrator for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">The future of gaming is here with Predictive Orchestrator for Gaming. Powered by cutting-edge AI, this platform delivers document processing like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/suite-predictive---sports-79389f3f` title="Suite Predictive - Sports" />
+        <BreadcrumbSchema path="/services/suite-predictive---sports-79389f3f" title="Suite Predictive - Sports" />
         <h1 className="text-4xl font-bold mb-6">Suite Predictive - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: Suite Predictive - Sports. Combines performance monitoring with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-advisor-for-telecom-cb902d5e` title="Neural Advisor for Telecom" />
+        <BreadcrumbSchema path="/services/neural-advisor-for-telecom-cb902d5e" title="Neural Advisor for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Neural Advisor for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize telecom through intelligent automation. Our Neural Advisor for Telecom leverages advanced machine learning to deliver predictive analytics at scal</p>
 

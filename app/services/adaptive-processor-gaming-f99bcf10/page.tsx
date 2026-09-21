@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-processor-gaming-f99bcf10` title="Adaptive processor-gaming" />
+        <BreadcrumbSchema path="/services/adaptive-processor-gaming-f99bcf10" title="Adaptive processor-gaming" />
         <h1 className="text-4xl font-bold mb-6">Adaptive processor-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive processor-gaming. This autonomous system provides financial planning with zero manual intervention needed.</p>
 

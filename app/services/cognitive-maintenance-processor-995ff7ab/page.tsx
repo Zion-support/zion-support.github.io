@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-maintenance-processor-995ff7ab` title="Cognitive Maintenance Processor" />
+        <BreadcrumbSchema path="/services/cognitive-maintenance-processor-995ff7ab" title="Cognitive Maintenance Processor" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Maintenance Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Cognitive Maintenance Processor. This AI-driven solution automates code optimization with unprecedented accuracy </p>
 

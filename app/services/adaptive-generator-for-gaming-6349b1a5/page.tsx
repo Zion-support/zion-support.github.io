@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-generator-for-gaming-6349b1a5` title="Adaptive Generator for Gaming" />
+        <BreadcrumbSchema path="/services/adaptive-generator-for-gaming-6349b1a5" title="Adaptive Generator for Gaming" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Generator for Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation gaming solution: Adaptive Generator for Gaming. Combines user experience with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-platform-retail-f65bb90b` title="Self-Optimizing platform-retail" />
+        <BreadcrumbSchema path="/services/self-optimizing-platform-retail-f65bb90b" title="Self-Optimizing platform-retail" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing platform-retail</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with Self-Optimizing platform-retail. Powered by cutting-edge AI, this platform delivers code optimization like never before.</p>
 

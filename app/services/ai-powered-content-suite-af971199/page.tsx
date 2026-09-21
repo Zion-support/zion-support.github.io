@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-content-suite-af971199` title="AI-Powered Content Suite" />
+        <BreadcrumbSchema path="/services/ai-powered-content-suite-af971199" title="AI-Powered Content Suite" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Content Suite</h1>
         <p className="text-lg text-gray-300 mb-8">The future of retail is here with AI-Powered Content Suite. Powered by cutting-edge AI, this platform delivers resource optimization like never before.</p>
 

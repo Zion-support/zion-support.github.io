@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-inventory-generator-07bf776c` title="Adaptive Inventory Generator" />
+        <BreadcrumbSchema path="/services/adaptive-inventory-generator-07bf776c" title="Adaptive Inventory Generator" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Inventory Generator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of hospitality is here with Adaptive Inventory Generator. Powered by cutting-edge AI, this platform delivers document processing like never before.</p>
 

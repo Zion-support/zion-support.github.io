@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-insights---tech-edition-4-72dd6d90` title="AI Insights - Tech Edition #4" />
+        <BreadcrumbSchema path="/services/ai-insights---tech-edition-4-72dd6d90" title="AI Insights - Tech Edition #4" />
         <h1 className="text-4xl font-bold mb-6">AI Insights - Tech Edition #4</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation technology solution: AI Insights - Tech Edition #4. Combines user experience with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/all-turtles-0b483e1f` title="All Turtles" />
+        <BreadcrumbSchema path="/services/all-turtles-0b483e1f" title="All Turtles" />
         <h1 className="text-4xl font-bold mb-6">All Turtles</h1>
         <p className="text-lg text-gray-300 mb-8">All Turtles is an AI startup studio based in San Francisco, Paris, and Tokyo. It \&quot;specializes in developing practical AI products\&quot;.</p>
 

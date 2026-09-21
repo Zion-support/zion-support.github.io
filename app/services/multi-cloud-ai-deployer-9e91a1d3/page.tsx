@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/multi-cloud-ai-deployer-9e91a1d3` title="Multi-Cloud AI Deployer" />
+        <BreadcrumbSchema path="/services/multi-cloud-ai-deployer-9e91a1d3" title="Multi-Cloud AI Deployer" />
         <h1 className="text-4xl font-bold mb-6">Multi-Cloud AI Deployer</h1>
         <p className="text-lg text-gray-300 mb-8">Deploy AI models across AWS, Azure, and GCP with automatic load balancing and failover.</p>
 

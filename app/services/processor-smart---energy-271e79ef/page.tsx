@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-smart---energy-271e79ef` title="Processor Smart - Energy" />
+        <BreadcrumbSchema path="/services/processor-smart---energy-271e79ef" title="Processor Smart - Energy" />
         <h1 className="text-4xl font-bold mb-6">Processor Smart - Energy</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize energy through intelligent automation. Our Processor Smart - Energy leverages advanced machine learning to deliver financial planning at scale.</p>
 

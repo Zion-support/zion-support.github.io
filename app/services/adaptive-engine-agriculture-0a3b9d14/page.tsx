@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-engine-agriculture-0a3b9d14` title="Adaptive engine-agriculture" />
+        <BreadcrumbSchema path="/services/adaptive-engine-agriculture-0a3b9d14" title="Adaptive engine-agriculture" />
         <h1 className="text-4xl font-bold mb-6">Adaptive engine-agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with Adaptive engine-agriculture. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never before.</p>
 

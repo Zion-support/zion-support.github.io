@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-ai---construction-d0d0f206` title="Advisor AI - Construction" />
+        <BreadcrumbSchema path="/services/advisor-ai---construction-d0d0f206" title="Advisor AI - Construction" />
         <h1 className="text-4xl font-bold mb-6">Advisor AI - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Advisor AI - Construction. Powered by cutting-edge AI, this platform delivers supply chain like never before.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automated-devops-telecom-9c4518b6` title="Automated devops-telecom" />
+        <BreadcrumbSchema path="/services/automated-devops-telecom-9c4518b6" title="Automated devops-telecom" />
         <h1 className="text-4xl font-bold mb-6">Automated devops-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Automated devops-telecom. This autonomous system provides executive dashboards with zero manual intervention needed.</p>
 

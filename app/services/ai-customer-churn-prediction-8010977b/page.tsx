@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-customer-churn-prediction-8010977b` title="AI Customer Churn Prediction" />
+        <BreadcrumbSchema path="/services/ai-customer-churn-prediction-8010977b" title="AI Customer Churn Prediction" />
         <h1 className="text-4xl font-bold mb-6">AI Customer Churn Prediction</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive analytics tool that identifies at-risk customers before they leave. Provides intervention recommendations to improve retention and reduce churn rates</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-customer-service-for-healthcare-d0f9c7ca` title="Intelligent Customer Service for Healthcare" />
+        <BreadcrumbSchema path="/services/intelligent-customer-service-for-healthcare-d0f9c7ca" title="Intelligent Customer Service for Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Customer Service for Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your healthcare business with Intelligent Customer Service for Healthcare. Our solution provides customer service automation with enterprise-grade relia</p>
 

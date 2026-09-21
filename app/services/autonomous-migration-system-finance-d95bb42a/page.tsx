@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-migration-system-finance-d95bb42a` title="Autonomous Migration System - Finance" />
+        <BreadcrumbSchema path="/services/autonomous-migration-system-finance-d95bb42a" title="Autonomous Migration System - Finance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Migration System - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your finance business with Autonomous Migration System - Finance. Our solution provides performance tuning with enterprise-grade reliability and securit</p>
 

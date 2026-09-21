@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-powered-finance-automation-6280d3c4` title="Automation-Powered Finance Automation" />
+        <BreadcrumbSchema path="/services/automation-powered-finance-automation-6280d3c4" title="Automation-Powered Finance Automation" />
         <h1 className="text-4xl font-bold mb-6">Automation-Powered Finance Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your finance operations with our Automation-Powered Finance Automation. This AI-driven solution automates infrastructure as code with unprecedented ac</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-processor-for-retail-5b2b2be9` title="AI-Powered Processor for Retail" />
+        <BreadcrumbSchema path="/services/ai-powered-processor-for-retail-5b2b2be9" title="AI-Powered Processor for Retail" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Processor for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Retail solution: AI-Powered Processor for Retail. Combines quality control with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/devops-automated---gaming-6d2a37ec` title="DevOps Automated - Gaming" />
+        <BreadcrumbSchema path="/services/devops-automated---gaming-6d2a37ec" title="DevOps Automated - Gaming" />
         <h1 className="text-4xl font-bold mb-6">DevOps Automated - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Gaming operations with our DevOps Automated - Gaming. This AI-driven solution automates budget optimization with unprecedented accuracy and effic</p>
 

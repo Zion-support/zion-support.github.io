@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-processor-for-insurance-9202fc35` title="Cognitive Processor for Insurance" />
+        <BreadcrumbSchema path="/services/cognitive-processor-for-insurance-9202fc35" title="Cognitive Processor for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Processor for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your insurance operations with our Cognitive Processor for Insurance. This AI-driven solution automates image recognition with unprecedented accuracy </p>
 

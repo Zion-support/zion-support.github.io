@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-real-estate-for-retail-466028d0` title="Adaptive Real Estate for Retail" />
+        <BreadcrumbSchema path="/services/adaptive-real-estate-for-retail-466028d0" title="Adaptive Real Estate for Retail" />
         <h1 className="text-4xl font-bold mb-6">Adaptive Real Estate for Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Adaptive Real Estate for Retail. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

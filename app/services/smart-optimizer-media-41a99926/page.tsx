@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-optimizer-media-41a99926` title="Smart optimizer-media" />
+        <BreadcrumbSchema path="/services/smart-optimizer-media-41a99926" title="Smart optimizer-media" />
         <h1 className="text-4xl font-bold mb-6">Smart optimizer-media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Smart optimizer-media. This AI-driven solution automates customer insights with unprecedented accuracy and efficiency.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-performance-processor-e4b79a39` title="Smart Performance Processor" />
+        <BreadcrumbSchema path="/services/smart-performance-processor-e4b79a39" title="Smart Performance Processor" />
         <h1 className="text-4xl font-bold mb-6">Smart Performance Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Smart Performance Processor. This AI-driven solution automates decision support with unprecedented accuracy and e</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-customer-monitoring-3ceed14d` title="Intelligent Customer Monitoring" />
+        <BreadcrumbSchema path="/services/intelligent-customer-monitoring-3ceed14d" title="Intelligent Customer Monitoring" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Customer Monitoring</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Retail solution: Intelligent Customer Monitoring. Combines code optimization with adaptive intelligence for optimal results.</p>
 

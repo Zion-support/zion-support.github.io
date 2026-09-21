@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-system-for-insurance-df4a930f` title="Self-Optimizing System for Insurance" />
+        <BreadcrumbSchema path="/services/self-optimizing-system-for-insurance-df4a930f" title="Self-Optimizing System for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing System for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of insurance is here with Self-Optimizing System for Insurance. Powered by cutting-edge AI, this platform delivers code optimization like never befor</p>
 

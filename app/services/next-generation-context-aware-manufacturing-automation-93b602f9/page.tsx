@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-generation-context-aware-manufacturing-automation-93b602f9` title="Next-Generation Context-Aware Manufacturing Automation" />
+        <BreadcrumbSchema path="/services/next-generation-context-aware-manufacturing-automation-93b602f9" title="Next-Generation Context-Aware Manufacturing Automation" />
         <h1 className="text-4xl font-bold mb-6">Next-Generation Context-Aware Manufacturing Automation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation automation suite that streamlines context-aware manufacturing workflows with intelligent orchestration.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-automated---construction-180777a1` title="Intelligence Automated - Construction" />
+        <BreadcrumbSchema path="/services/intelligence-automated---construction-180777a1" title="Intelligence Automated - Construction" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Automated - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Intelligence Automated - Construction. Powered by cutting-edge AI, this platform delivers predictive analytics like neve</p>
 

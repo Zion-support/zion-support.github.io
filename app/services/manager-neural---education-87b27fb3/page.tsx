@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/manager-neural---education-87b27fb3` title="Manager Neural - Education" />
+        <BreadcrumbSchema path="/services/manager-neural---education-87b27fb3" title="Manager Neural - Education" />
         <h1 className="text-4xl font-bold mb-6">Manager Neural - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Manager Neural - Education. This autonomous system provides security monitoring with zero manual intervention needed.</p>
 

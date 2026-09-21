@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-language-coordinator-07e56006` title="Predictive Language Coordinator" />
+        <BreadcrumbSchema path="/services/predictive-language-coordinator-07e56006" title="Predictive Language Coordinator" />
         <h1 className="text-4xl font-bold mb-6">Predictive Language Coordinator</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Healthcare is here with Predictive Language Coordinator. Powered by cutting-edge AI, this platform delivers compliance monitoring like never befor</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/coordinator-ai---gaming-2c9d6dec` title="Coordinator AI - Gaming" />
+        <BreadcrumbSchema path="/services/coordinator-ai---gaming-2c9d6dec" title="Coordinator AI - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Coordinator AI - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Coordinator AI - Gaming. This autonomous system provides code optimization with zero manual intervention needed.</p>
 

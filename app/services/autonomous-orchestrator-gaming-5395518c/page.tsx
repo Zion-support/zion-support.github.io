@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-orchestrator-gaming-5395518c` title="Autonomous orchestrator-gaming" />
+        <BreadcrumbSchema path="/services/autonomous-orchestrator-gaming-5395518c" title="Autonomous orchestrator-gaming" />
         <h1 className="text-4xl font-bold mb-6">Autonomous orchestrator-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Autonomous orchestrator-gaming. This autonomous system provides threat detection with zero manual intervention needed.</p>
 

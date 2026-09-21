@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-security-system-bb9bc8a7` title="Cognitive Security System" />
+        <BreadcrumbSchema path="/services/cognitive-security-system-bb9bc8a7" title="Cognitive Security System" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Security System</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize retail through intelligent automation. Our Cognitive Security System leverages advanced machine learning to deliver compliance monitoring at scale</p>
 

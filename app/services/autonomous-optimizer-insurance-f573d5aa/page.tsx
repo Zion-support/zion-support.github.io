@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-optimizer-insurance-f573d5aa` title="Autonomous optimizer-insurance" />
+        <BreadcrumbSchema path="/services/autonomous-optimizer-insurance-f573d5aa" title="Autonomous optimizer-insurance" />
         <h1 className="text-4xl font-bold mb-6">Autonomous optimizer-insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Autonomous optimizer-insurance. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

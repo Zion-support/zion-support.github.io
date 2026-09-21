@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advanced-observability-for-finance-213e0da6` title="Advanced Observability for Finance" />
+        <BreadcrumbSchema path="/services/advanced-observability-for-finance-213e0da6" title="Advanced Observability for Finance" />
         <h1 className="text-4xl font-bold mb-6">Advanced Observability for Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Enhance your finance business with Advanced Observability for Finance. Our solution provides infrastructure as code with enterprise-grade reliability and securi</p>
 

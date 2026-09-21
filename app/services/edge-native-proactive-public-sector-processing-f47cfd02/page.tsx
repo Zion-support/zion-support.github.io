@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-native-proactive-public-sector-processing-f47cfd02` title="Edge-Native Proactive Public Sector Processing" />
+        <BreadcrumbSchema path="/services/edge-native-proactive-public-sector-processing-f47cfd02" title="Edge-Native Proactive Public Sector Processing" />
         <h1 className="text-4xl font-bold mb-6">Edge-Native Proactive Public Sector Processing</h1>
         <p className="text-lg text-gray-300 mb-8">Edge-native processing layer that delivers proactive public sector insights with sub-millisecond latency.</p>
 

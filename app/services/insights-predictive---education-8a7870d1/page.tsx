@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/insights-predictive---education-8a7870d1` title="Insights Predictive - Education" />
+        <BreadcrumbSchema path="/services/insights-predictive---education-8a7870d1" title="Insights Predictive - Education" />
         <h1 className="text-4xl font-bold mb-6">Insights Predictive - Education</h1>
         <p className="text-lg text-gray-300 mb-8">The future of education is here with Insights Predictive - Education. Powered by cutting-edge AI, this platform delivers security monitoring like never before.</p>
 

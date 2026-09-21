@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-adaptive---healthcare-5c423527` title="Processor Adaptive - Healthcare" />
+        <BreadcrumbSchema path="/services/processor-adaptive---healthcare-5c423527" title="Processor Adaptive - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Processor Adaptive - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Healthcare operations with our Processor Adaptive - Healthcare. This AI-driven solution automates manufacturing quality control with unprecedente</p>
 

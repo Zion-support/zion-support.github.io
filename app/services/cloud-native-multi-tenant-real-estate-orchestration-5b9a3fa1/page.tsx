@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cloud-native-multi-tenant-real-estate-orchestration-5b9a3fa1` title="Cloud-Native Multi-Tenant Real Estate Orchestration" />
+        <BreadcrumbSchema path="/services/cloud-native-multi-tenant-real-estate-orchestration-5b9a3fa1" title="Cloud-Native Multi-Tenant Real Estate Orchestration" />
         <h1 className="text-4xl font-bold mb-6">Cloud-Native Multi-Tenant Real Estate Orchestration</h1>
         <p className="text-lg text-gray-300 mb-8">Cloud-native orchestration platform that manages multi-tenant real estate resources with auto-scaling and cost control.</p>
 

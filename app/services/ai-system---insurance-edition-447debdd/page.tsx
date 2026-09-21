@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-system---insurance-edition-447debdd` title="AI System - Insurance Edition" />
+        <BreadcrumbSchema path="/services/ai-system---insurance-edition-447debdd" title="AI System - Insurance Edition" />
         <h1 className="text-4xl font-bold mb-6">AI System - Insurance Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: AI System - Insurance Edition. Combines sales forecasting with adaptive intelligence for optimal results.</p>
 

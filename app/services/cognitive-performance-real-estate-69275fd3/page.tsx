@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-performance-real-estate-69275fd3` title="Cognitive performance-real estate" />
+        <BreadcrumbSchema path="/services/cognitive-performance-real-estate-69275fd3" title="Cognitive performance-real estate" />
         <h1 className="text-4xl font-bold mb-6">Cognitive performance-real estate</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Cognitive performance-real estate. This autonomous system provides risk assessment with zero manual intervention needed.</p>
 

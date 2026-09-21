@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-logistics-suite-99d270b5` title="Autonomous Logistics Suite" />
+        <BreadcrumbSchema path="/services/autonomous-logistics-suite-99d270b5" title="Autonomous Logistics Suite" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Logistics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Telecom is here with Autonomous Logistics Suite. Powered by cutting-edge AI, this platform delivers brand monitoring like never before.</p>
 

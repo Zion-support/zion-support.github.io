@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-resource-processor-e8ea161c` title="Smart Resource Processor" />
+        <BreadcrumbSchema path="/services/smart-resource-processor-e8ea161c" title="Smart Resource Processor" />
         <h1 className="text-4xl font-bold mb-6">Smart Resource Processor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your retail operations with our Smart Resource Processor. This AI-driven solution automates data processing with unprecedented accuracy and efficiency</p>
 

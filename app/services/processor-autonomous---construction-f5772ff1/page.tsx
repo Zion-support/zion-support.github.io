@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/processor-autonomous---construction-f5772ff1` title="Processor Autonomous - Construction" />
+        <BreadcrumbSchema path="/services/processor-autonomous---construction-f5772ff1" title="Processor Autonomous - Construction" />
         <h1 className="text-4xl font-bold mb-6">Processor Autonomous - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">The future of construction is here with Processor Autonomous - Construction. Powered by cutting-edge AI, this platform delivers fraud prevention like never befo</p>
 

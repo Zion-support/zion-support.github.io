@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/4-advanced-cybersecurity-ai-defense-system` title="Advanced Cybersecurity AI Defense System" />
+        <BreadcrumbSchema path="/services/4-advanced-cybersecurity-ai-defense-system" title="Advanced Cybersecurity AI Defense System" />
         <h1 className="text-4xl font-bold mb-6">Advanced Cybersecurity AI Defense System</h1>
         <p className="text-lg text-gray-300 mb-8">AI-powered proactive threat detection, automated incident response, and adaptive security architecture that evolves with emerging cyber threats.</p>
 

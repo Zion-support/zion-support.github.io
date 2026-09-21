@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-device-logistics-04d3f857` title="Smart Device - Logistics" />
+        <BreadcrumbSchema path="/services/smart-device-logistics-04d3f857" title="Smart Device - Logistics" />
         <h1 className="text-4xl font-bold mb-6">Smart Device - Logistics</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Device - Logistics. This autonomous system provides device management with zero manual intervention needed.</p>
 

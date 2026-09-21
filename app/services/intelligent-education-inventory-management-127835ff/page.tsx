@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-education-inventory-management-127835ff` title="Intelligent Education Inventory Management" />
+        <BreadcrumbSchema path="/services/intelligent-education-inventory-management-127835ff" title="Intelligent Education Inventory Management" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Education Inventory Management</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven inventory optimization platform that provides enterprise-grade demand forecasting, automated replenishment, and assortment planning for retail operati</p>
 

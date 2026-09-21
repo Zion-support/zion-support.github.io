@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-smart-platform-smart-city-76b50838` title="Smart Smart Platform - Smart-City" />
+        <BreadcrumbSchema path="/services/smart-smart-platform-smart-city-76b50838" title="Smart Smart Platform - Smart-City" />
         <h1 className="text-4xl font-bold mb-6">Smart Smart Platform - Smart-City</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Smart Smart Platform - Smart-City. This autonomous system provides telemetry collection with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-automated---healthcare-2c1893a4` title="Advisor Automated - Healthcare" />
+        <BreadcrumbSchema path="/services/advisor-automated---healthcare-2c1893a4" title="Advisor Automated - Healthcare" />
         <h1 className="text-4xl font-bold mb-6">Advisor Automated - Healthcare</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Healthcare is here with Advisor Automated - Healthcare. Powered by cutting-edge AI, this platform delivers maintenance scheduling like never befor</p>
 

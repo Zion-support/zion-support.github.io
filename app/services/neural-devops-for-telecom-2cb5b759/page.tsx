@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-devops-for-telecom-2cb5b759` title="Neural DevOps for Telecom" />
+        <BreadcrumbSchema path="/services/neural-devops-for-telecom-2cb5b759" title="Neural DevOps for Telecom" />
         <h1 className="text-4xl font-bold mb-6">Neural DevOps for Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our Neural DevOps for Telecom. This AI-driven solution automates customer journey mapping with unprecedented accuracy and</p>
 

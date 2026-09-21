@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-optimization-tech-6eafc54c` title="Adaptive optimization-tech" />
+        <BreadcrumbSchema path="/services/adaptive-optimization-tech-6eafc54c" title="Adaptive optimization-tech" />
         <h1 className="text-4xl font-bold mb-6">Adaptive optimization-tech</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation technology solution: Adaptive optimization-tech. Combines security monitoring with adaptive intelligence for optimal results.</p>
 

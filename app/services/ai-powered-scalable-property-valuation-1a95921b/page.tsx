@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-scalable-property-valuation-1a95921b` title="AI-Powered Scalable Property Valuation" />
+        <BreadcrumbSchema path="/services/ai-powered-scalable-property-valuation-1a95921b" title="AI-Powered Scalable Property Valuation" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Scalable Property Valuation</h1>
         <p className="text-lg text-gray-300 mb-8">Machine learning platform that provides scalable property valuations using computer vision, market analytics, and predictive modeling. Delivers accurate apprais</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/alice-company-a4225226` title="Alice (company)" />
+        <BreadcrumbSchema path="/services/alice-company-a4225226" title="Alice (company)" />
         <h1 className="text-4xl font-bold mb-6">Alice (company)</h1>
         <p className="text-lg text-gray-300 mb-8">Alice, formerly ActiveFence, is an Israeli-American artificial intelligence safety company. Founded in 2018 by Noam Schwartz, Alon Porat, Eyal Dykan and Iftach </p>
 

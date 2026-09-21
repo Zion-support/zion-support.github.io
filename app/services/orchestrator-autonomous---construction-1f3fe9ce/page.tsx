@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/orchestrator-autonomous---construction-1f3fe9ce` title="Orchestrator Autonomous - Construction" />
+        <BreadcrumbSchema path="/services/orchestrator-autonomous---construction-1f3fe9ce" title="Orchestrator Autonomous - Construction" />
         <h1 className="text-4xl font-bold mb-6">Orchestrator Autonomous - Construction</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your construction operations with our Orchestrator Autonomous - Construction. This AI-driven solution automates workflow management with unprecedented</p>
 

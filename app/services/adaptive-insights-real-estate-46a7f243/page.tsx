@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-insights-real-estate-46a7f243` title="Adaptive insights-real estate" />
+        <BreadcrumbSchema path="/services/adaptive-insights-real-estate-46a7f243" title="Adaptive insights-real estate" />
         <h1 className="text-4xl font-bold mb-6">Adaptive insights-real estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Adaptive insights-real estate. This AI-driven solution automates fraud prevention with unprecedented accuracy and</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-social-solution-entertainment-2029083f` title="Cognitive Social Solution - Entertainment" />
+        <BreadcrumbSchema path="/services/cognitive-social-solution-entertainment-2029083f" title="Cognitive Social Solution - Entertainment" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Social Solution - Entertainment</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize entertainment through intelligent automation. Our Cognitive Social Solution - Entertainment leverages advanced machine learning to deliver content</p>
 

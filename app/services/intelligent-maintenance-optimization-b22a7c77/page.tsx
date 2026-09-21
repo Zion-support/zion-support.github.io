@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-maintenance-optimization-b22a7c77` title="Intelligent Maintenance Optimization" />
+        <BreadcrumbSchema path="/services/intelligent-maintenance-optimization-b22a7c77" title="Intelligent Maintenance Optimization" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Maintenance Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation technology solution: Intelligent Maintenance Optimization. Combines image recognition with adaptive intelligence for optimal results.</p>
 

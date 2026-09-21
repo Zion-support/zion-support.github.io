@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-manager-gaming-701a97d5` title="Autonomous manager-gaming" />
+        <BreadcrumbSchema path="/services/autonomous-manager-gaming-701a97d5" title="Autonomous manager-gaming" />
         <h1 className="text-4xl font-bold mb-6">Autonomous manager-gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our Autonomous manager-gaming. This AI-driven solution automates compliance monitoring with unprecedented accuracy and eff</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/adaptive-processor-manufacturing-e8d86f73` title="Adaptive processor-manufacturing" />
+        <BreadcrumbSchema path="/services/adaptive-processor-manufacturing-e8d86f73" title="Adaptive processor-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Adaptive processor-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Adaptive processor-manufacturing. This AI-driven solution automates document processing with unprecedented accu</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-self-optimizing---manufacturing-5413c70f` title="Analyzer Self-Optimizing - Manufacturing" />
+        <BreadcrumbSchema path="/services/analyzer-self-optimizing---manufacturing-5413c70f" title="Analyzer Self-Optimizing - Manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Self-Optimizing - Manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Manufacturing operations with our Analyzer Self-Optimizing - Manufacturing. This AI-driven solution automates brand monitoring with unprecedented</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/generator-adaptive---telecom-8c26e143` title="Generator Adaptive - Telecom" />
+        <BreadcrumbSchema path="/services/generator-adaptive---telecom-8c26e143" title="Generator Adaptive - Telecom" />
         <h1 className="text-4xl font-bold mb-6">Generator Adaptive - Telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Generator Adaptive - Telecom. This autonomous system provides customer insights with zero manual intervention needed.</p>
 

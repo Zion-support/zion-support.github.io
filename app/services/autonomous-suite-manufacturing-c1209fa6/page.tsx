@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-suite-manufacturing-c1209fa6` title="Autonomous suite-manufacturing" />
+        <BreadcrumbSchema path="/services/autonomous-suite-manufacturing-c1209fa6" title="Autonomous suite-manufacturing" />
         <h1 className="text-4xl font-bold mb-6">Autonomous suite-manufacturing</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your manufacturing operations with our Autonomous suite-manufacturing. This AI-driven solution automates sales forecasting with unprecedented accuracy</p>
 

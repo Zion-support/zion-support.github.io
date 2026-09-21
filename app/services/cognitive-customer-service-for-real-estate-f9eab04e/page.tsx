@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-customer-service-for-real-estate-f9eab04e` title="Cognitive Customer Service for Real Estate" />
+        <BreadcrumbSchema path="/services/cognitive-customer-service-for-real-estate-f9eab04e" title="Cognitive Customer Service for Real Estate" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Customer Service for Real Estate</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Real Estate is here with Cognitive Customer Service for Real Estate. Powered by cutting-edge AI, this platform delivers sales process optimization</p>
 

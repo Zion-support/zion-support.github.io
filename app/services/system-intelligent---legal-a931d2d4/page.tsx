@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-intelligent---legal-a931d2d4` title="System Intelligent - Legal" />
+        <BreadcrumbSchema path="/services/system-intelligent---legal-a931d2d4" title="System Intelligent - Legal" />
         <h1 className="text-4xl font-bold mb-6">System Intelligent - Legal</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with System Intelligent - Legal. This autonomous system provides document processing with zero manual intervention needed.</p>
 

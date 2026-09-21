@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-warehouse-solution-finance-3914264b` title="Cognitive Warehouse Solution - Finance" />
+        <BreadcrumbSchema path="/services/cognitive-warehouse-solution-finance-3914264b" title="Cognitive Warehouse Solution - Finance" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Warehouse Solution - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">The future of finance is here with Cognitive Warehouse Solution - Finance. Powered by cutting-edge AI, this platform delivers data migration like never before.</p>
 

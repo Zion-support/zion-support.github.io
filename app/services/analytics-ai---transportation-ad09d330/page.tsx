@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analytics-ai---transportation-ad09d330` title="Analytics AI - Transportation" />
+        <BreadcrumbSchema path="/services/analytics-ai---transportation-ad09d330" title="Analytics AI - Transportation" />
         <h1 className="text-4xl font-bold mb-6">Analytics AI - Transportation</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation transportation solution: Analytics AI - Transportation. Combines predictive analytics with adaptive intelligence for optimal results.</p>
 

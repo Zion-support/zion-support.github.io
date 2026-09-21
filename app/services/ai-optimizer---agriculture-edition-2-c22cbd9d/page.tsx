@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-optimizer---agriculture-edition-2-c22cbd9d` title="AI Optimizer - Agriculture Edition #2" />
+        <BreadcrumbSchema path="/services/ai-optimizer---agriculture-edition-2-c22cbd9d" title="AI Optimizer - Agriculture Edition #2" />
         <h1 className="text-4xl font-bold mb-6">AI Optimizer - Agriculture Edition #2</h1>
         <p className="text-lg text-gray-300 mb-8">The future of agriculture is here with AI Optimizer - Agriculture Edition #2. Powered by cutting-edge AI, this platform delivers supply chain like never before.</p>
 

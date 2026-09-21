@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-director---gaming-edition-6-dee7b60a` title="AI Director - Gaming Edition #6" />
+        <BreadcrumbSchema path="/services/ai-director---gaming-edition-6-dee7b60a" title="AI Director - Gaming Edition #6" />
         <h1 className="text-4xl font-bold mb-6">AI Director - Gaming Edition #6</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize gaming through intelligent automation. Our AI Director - Gaming Edition #6 leverages advanced machine learning to deliver fraud prevention at scal</p>
 

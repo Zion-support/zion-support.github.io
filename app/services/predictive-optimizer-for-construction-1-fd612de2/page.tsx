@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-optimizer-for-construction-1-fd612de2` title="Predictive Optimizer for Construction #1" />
+        <BreadcrumbSchema path="/services/predictive-optimizer-for-construction-1-fd612de2" title="Predictive Optimizer for Construction #1" />
         <h1 className="text-4xl font-bold mb-6">Predictive Optimizer for Construction #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation construction solution: Predictive Optimizer for Construction #1. Combines inventory management with adaptive intelligence for optimal results.</p>
 

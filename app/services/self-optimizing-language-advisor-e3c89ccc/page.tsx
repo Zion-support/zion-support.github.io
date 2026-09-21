@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-language-advisor-e3c89ccc` title="Self-Optimizing Language Advisor" />
+        <BreadcrumbSchema path="/services/self-optimizing-language-advisor-e3c89ccc" title="Self-Optimizing Language Advisor" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Language Advisor</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Self-Optimizing Language Advisor. This AI-driven solution automates resource optimization with unprecedented a</p>
 

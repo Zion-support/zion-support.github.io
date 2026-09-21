@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-analyzer-media-1-8992e761` title="Cognitive analyzer-media #1" />
+        <BreadcrumbSchema path="/services/cognitive-analyzer-media-1-8992e761" title="Cognitive analyzer-media #1" />
         <h1 className="text-4xl font-bold mb-6">Cognitive analyzer-media #1</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation media solution: Cognitive analyzer-media #1. Combines customer insights with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-system-for-construction-1-32d214fb` title="Smart System for Construction #1" />
+        <BreadcrumbSchema path="/services/smart-system-for-construction-1-32d214fb" title="Smart System for Construction #1" />
         <h1 className="text-4xl font-bold mb-6">Smart System for Construction #1</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize construction through intelligent automation. Our Smart System for Construction #1 leverages advanced machine learning to deliver threat detection </p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-manufacturing---automotive-edition-3c4d26d3` title="AI Manufacturing - Automotive Edition" />
+        <BreadcrumbSchema path="/services/ai-manufacturing---automotive-edition-3c4d26d3" title="AI Manufacturing - Automotive Edition" />
         <h1 className="text-4xl font-bold mb-6">AI Manufacturing - Automotive Edition</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Automotive solution: AI Manufacturing - Automotive Edition. Combines decision support with adaptive intelligence for optimal results.</p>
 

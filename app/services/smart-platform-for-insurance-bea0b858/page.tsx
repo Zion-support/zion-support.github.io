@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/smart-platform-for-insurance-bea0b858` title="Smart Platform for Insurance" />
+        <BreadcrumbSchema path="/services/smart-platform-for-insurance-bea0b858" title="Smart Platform for Insurance" />
         <h1 className="text-4xl font-bold mb-6">Smart Platform for Insurance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation insurance solution: Smart Platform for Insurance. Combines sales forecasting with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-security-for-education-dff571c6` title="Predictive Security for Education" />
+        <BreadcrumbSchema path="/services/predictive-security-for-education-dff571c6" title="Predictive Security for Education" />
         <h1 className="text-4xl font-bold mb-6">Predictive Security for Education</h1>
         <p className="text-lg text-gray-300 mb-8">Optimize your education workflows with Predictive Security for Education. This intelligent platform delivers regulatory tracking through advanced automation and</p>
 

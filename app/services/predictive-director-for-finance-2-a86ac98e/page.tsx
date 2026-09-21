@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictive-director-for-finance-2-a86ac98e` title="Predictive Director for Finance #2" />
+        <BreadcrumbSchema path="/services/predictive-director-for-finance-2-a86ac98e" title="Predictive Director for Finance #2" />
         <h1 className="text-4xl font-bold mb-6">Predictive Director for Finance #2</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Predictive Director for Finance #2. Combines process automation with adaptive intelligence for optimal results.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-smart---automotive-b2e6d141` title="Predictor Smart - Automotive" />
+        <BreadcrumbSchema path="/services/predictor-smart---automotive-b2e6d141" title="Predictor Smart - Automotive" />
         <h1 className="text-4xl font-bold mb-6">Predictor Smart - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize automotive through intelligent automation. Our Predictor Smart - Automotive leverages advanced machine learning to deliver sales forecasting at sc</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/data-smart---retail-3104bc69` title="Data Smart - Retail" />
+        <BreadcrumbSchema path="/services/data-smart---retail-3104bc69" title="Data Smart - Retail" />
         <h1 className="text-4xl font-bold mb-6">Data Smart - Retail</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Retail operations with our Data Smart - Retail. This AI-driven solution automates language processing with unprecedented accuracy and efficiency.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-real-time-biotechnology-intelligence-platform-e7fe8e03` title="AI-Powered Real-Time Biotechnology Intelligence Platform" />
+        <BreadcrumbSchema path="/services/ai-powered-real-time-biotechnology-intelligence-platform-e7fe8e03" title="AI-Powered Real-Time Biotechnology Intelligence Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Real-Time Biotechnology Intelligence Platform</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven intelligence platform that delivers real-time insights and automated decision-making for biotechnology operations.</p>
 

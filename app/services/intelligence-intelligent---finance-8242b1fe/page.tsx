@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligence-intelligent---finance-8242b1fe` title="Intelligence Intelligent - Finance" />
+        <BreadcrumbSchema path="/services/intelligence-intelligent---finance-8242b1fe" title="Intelligence Intelligent - Finance" />
         <h1 className="text-4xl font-bold mb-6">Intelligence Intelligent - Finance</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation finance solution: Intelligence Intelligent - Finance. Combines data processing with adaptive intelligence for optimal results.</p>
 

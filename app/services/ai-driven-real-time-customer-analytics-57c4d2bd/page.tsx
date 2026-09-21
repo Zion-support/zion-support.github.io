@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-driven-real-time-customer-analytics-57c4d2bd` title="AI-Driven Real-Time Customer Analytics" />
+        <BreadcrumbSchema path="/services/ai-driven-real-time-customer-analytics-57c4d2bd" title="AI-Driven Real-Time Customer Analytics" />
         <h1 className="text-4xl font-bold mb-6">AI-Driven Real-Time Customer Analytics</h1>
         <p className="text-lg text-gray-300 mb-8">Customer intelligence platform that delivers real-time insights into shopper behavior, lifetime value, and churn prediction for retail and e-commerce businesses</p>
 

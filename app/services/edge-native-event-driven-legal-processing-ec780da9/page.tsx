@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-native-event-driven-legal-processing-ec780da9` title="Edge-Native Event-Driven Legal Processing" />
+        <BreadcrumbSchema path="/services/edge-native-event-driven-legal-processing-ec780da9" title="Edge-Native Event-Driven Legal Processing" />
         <h1 className="text-4xl font-bold mb-6">Edge-Native Event-Driven Legal Processing</h1>
         <p className="text-lg text-gray-300 mb-8">Edge-native processing layer that delivers event-driven legal insights with sub-millisecond latency.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-predictor-media-8ca8d831` title="Neural predictor-media" />
+        <BreadcrumbSchema path="/services/neural-predictor-media-8ca8d831" title="Neural predictor-media" />
         <h1 className="text-4xl font-bold mb-6">Neural predictor-media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Neural predictor-media. This AI-driven solution automates threat detection with unprecedented accuracy and efficiency.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-document-platform-2-d570266f` title="Cognitive Document Platform #2" />
+        <BreadcrumbSchema path="/services/cognitive-document-platform-2-d570266f" title="Cognitive Document Platform #2" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Document Platform #2</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your energy operations with our Cognitive Document Platform #2. This AI-driven solution automates performance monitoring with unprecedented accuracy a</p>
 

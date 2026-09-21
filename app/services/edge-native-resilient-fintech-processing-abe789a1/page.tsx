@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/edge-native-resilient-fintech-processing-abe789a1` title="Edge-Native Resilient Fintech Processing" />
+        <BreadcrumbSchema path="/services/edge-native-resilient-fintech-processing-abe789a1" title="Edge-Native Resilient Fintech Processing" />
         <h1 className="text-4xl font-bold mb-6">Edge-Native Resilient Fintech Processing</h1>
         <p className="text-lg text-gray-300 mb-8">Edge-native processing layer that delivers resilient fintech insights with sub-millisecond latency.</p>
 

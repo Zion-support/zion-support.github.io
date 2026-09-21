@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-intelligent---agriculture-cf5aa5b3` title="System Intelligent - Agriculture" />
+        <BreadcrumbSchema path="/services/system-intelligent---agriculture-cf5aa5b3" title="System Intelligent - Agriculture" />
         <h1 className="text-4xl font-bold mb-6">System Intelligent - Agriculture</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation Agriculture solution: System Intelligent - Agriculture. Combines market analysis with adaptive intelligence for optimal results.</p>
 

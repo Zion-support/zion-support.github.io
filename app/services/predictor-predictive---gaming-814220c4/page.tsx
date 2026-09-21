@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/predictor-predictive---gaming-814220c4` title="Predictor Predictive - Gaming" />
+        <BreadcrumbSchema path="/services/predictor-predictive---gaming-814220c4" title="Predictor Predictive - Gaming" />
         <h1 className="text-4xl font-bold mb-6">Predictor Predictive - Gaming</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your gaming operations with our Predictor Predictive - Gaming. This AI-driven solution automates compliance monitoring with unprecedented accuracy and</p>
 

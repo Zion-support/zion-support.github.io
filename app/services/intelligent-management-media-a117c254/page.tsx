@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-management-media-a117c254` title="Intelligent management-media" />
+        <BreadcrumbSchema path="/services/intelligent-management-media-a117c254" title="Intelligent management-media" />
         <h1 className="text-4xl font-bold mb-6">Intelligent management-media</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your media operations with our Intelligent management-media. This AI-driven solution automates energy management with unprecedented accuracy and effic</p>
 

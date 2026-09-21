@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/automation-smart---education-49f270fc` title="Automation Smart - Education" />
+        <BreadcrumbSchema path="/services/automation-smart---education-49f270fc" title="Automation Smart - Education" />
         <h1 className="text-4xl font-bold mb-6">Automation Smart - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your education operations with our Automation Smart - Education. This AI-driven solution automates predictive analytics with unprecedented accuracy an</p>
 

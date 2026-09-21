@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/autonomous-data-orchestrator-f8a6a52f` title="Autonomous Data Orchestrator" />
+        <BreadcrumbSchema path="/services/autonomous-data-orchestrator-f8a6a52f" title="Autonomous Data Orchestrator" />
         <h1 className="text-4xl font-bold mb-6">Autonomous Data Orchestrator</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your transportation operations with our Autonomous Data Orchestrator. This AI-driven solution automates quality control with unprecedented accuracy an</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/analyzer-cognitive---sports-10125ff4` title="Analyzer Cognitive - Sports" />
+        <BreadcrumbSchema path="/services/analyzer-cognitive---sports-10125ff4" title="Analyzer Cognitive - Sports" />
         <h1 className="text-4xl font-bold mb-6">Analyzer Cognitive - Sports</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Analyzer Cognitive - Sports. This autonomous system provides document processing with zero manual intervention needed.</p>
 

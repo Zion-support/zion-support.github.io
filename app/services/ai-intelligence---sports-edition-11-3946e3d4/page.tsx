@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-intelligence---sports-edition-11-3946e3d4` title="AI Intelligence - Sports Edition #11" />
+        <BreadcrumbSchema path="/services/ai-intelligence---sports-edition-11-3946e3d4" title="AI Intelligence - Sports Edition #11" />
         <h1 className="text-4xl font-bold mb-6">AI Intelligence - Sports Edition #11</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation sports solution: AI Intelligence - Sports Edition #11. Combines fraud prevention with adaptive intelligence for optimal results.</p>
 

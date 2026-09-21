@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/neural-manager-for-energy-b6ac6951` title="Neural Manager for Energy" />
+        <BreadcrumbSchema path="/services/neural-manager-for-energy-b6ac6951" title="Neural Manager for Energy" />
         <h1 className="text-4xl font-bold mb-6">Neural Manager for Energy</h1>
         <p className="text-lg text-gray-300 mb-8">The future of energy is here with Neural Manager for Energy. Powered by cutting-edge AI, this platform delivers predictive analytics like never before.</p>
 

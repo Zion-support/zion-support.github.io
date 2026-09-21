@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/director-self-optimizing---education-ae9a657e` title="Director Self-Optimizing - Education" />
+        <BreadcrumbSchema path="/services/director-self-optimizing---education-ae9a657e" title="Director Self-Optimizing - Education" />
         <h1 className="text-4xl font-bold mb-6">Director Self-Optimizing - Education</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize education through intelligent automation. Our Director Self-Optimizing - Education leverages advanced machine learning to deliver financial planni</p>
 

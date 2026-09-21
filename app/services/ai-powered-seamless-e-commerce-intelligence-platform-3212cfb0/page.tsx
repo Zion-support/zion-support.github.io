@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/ai-powered-seamless-e-commerce-intelligence-platform-3212cfb0` title="AI-Powered Seamless E-Commerce Intelligence Platform" />
+        <BreadcrumbSchema path="/services/ai-powered-seamless-e-commerce-intelligence-platform-3212cfb0" title="AI-Powered Seamless E-Commerce Intelligence Platform" />
         <h1 className="text-4xl font-bold mb-6">AI-Powered Seamless E-Commerce Intelligence Platform</h1>
         <p className="text-lg text-gray-300 mb-8">AI-driven intelligence platform that delivers seamless insights and automated decision-making for e-commerce operations.</p>
 

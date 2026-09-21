@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/self-optimizing-quality-generator-a31cec12` title="Self-Optimizing Quality Generator" />
+        <BreadcrumbSchema path="/services/self-optimizing-quality-generator-a31cec12" title="Self-Optimizing Quality Generator" />
         <h1 className="text-4xl font-bold mb-6">Self-Optimizing Quality Generator</h1>
         <p className="text-lg text-gray-300 mb-8">Next-generation manufacturing solution: Self-Optimizing Quality Generator. Combines security monitoring with adaptive intelligence for optimal results.</p>
 

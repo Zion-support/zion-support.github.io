@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-marketing-for-real-estate-e528fcd4` title="Intelligent Marketing for Real Estate" />
+        <BreadcrumbSchema path="/services/intelligent-marketing-for-real-estate-e528fcd4" title="Intelligent Marketing for Real Estate" />
         <h1 className="text-4xl font-bold mb-6">Intelligent Marketing for Real Estate</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Real Estate operations with our Intelligent Marketing for Real Estate. This AI-driven solution automates market analysis with unprecedented accur</p>
 

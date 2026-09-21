@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/next-gen-broadcast-entertainment-platform-767a1fae` title="Next-Gen Broadcast Entertainment Platform" />
+        <BreadcrumbSchema path="/services/next-gen-broadcast-entertainment-platform-767a1fae" title="Next-Gen Broadcast Entertainment Platform" />
         <h1 className="text-4xl font-bold mb-6">Next-Gen Broadcast Entertainment Platform</h1>
         <p className="text-lg text-gray-300 mb-8">Revolutionize entertainment through intelligent automation. Our Next-Gen Broadcast Entertainment Platform leverages advanced machine learning to deliver broadca</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/enterprise-optimized-healthcare-analytics-suite-7d9ae2df` title="Enterprise Optimized Healthcare Analytics Suite" />
+        <BreadcrumbSchema path="/services/enterprise-optimized-healthcare-analytics-suite-7d9ae2df" title="Enterprise Optimized Healthcare Analytics Suite" />
         <h1 className="text-4xl font-bold mb-6">Enterprise Optimized Healthcare Analytics Suite</h1>
         <p className="text-lg text-gray-300 mb-8">Enterprise analytics suite that delivers optimized healthcare insights with unified dashboards and reporting.</p>
 

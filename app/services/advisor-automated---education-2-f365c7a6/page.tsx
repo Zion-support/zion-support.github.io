@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/advisor-automated---education-2-f365c7a6` title="Advisor Automated - Education #2" />
+        <BreadcrumbSchema path="/services/advisor-automated---education-2-f365c7a6" title="Advisor Automated - Education #2" />
         <h1 className="text-4xl font-bold mb-6">Advisor Automated - Education #2</h1>
         <p className="text-lg text-gray-300 mb-8">Unlock unprecedented growth with Advisor Automated - Education #2. This autonomous system provides decision support with zero manual intervention needed.</p>
 

@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/optimizer-smart---agriculture-1-49ccad78` title="Optimizer Smart - Agriculture #1" />
+        <BreadcrumbSchema path="/services/optimizer-smart---agriculture-1-49ccad78" title="Optimizer Smart - Agriculture #1" />
         <h1 className="text-4xl font-bold mb-6">Optimizer Smart - Agriculture #1</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your agriculture operations with our Optimizer Smart - Agriculture #1. This AI-driven solution automates threat detection with unprecedented accuracy </p>
 

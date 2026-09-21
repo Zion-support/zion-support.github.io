@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/intelligent-revenue-telecom-31b98e73` title="Intelligent revenue-telecom" />
+        <BreadcrumbSchema path="/services/intelligent-revenue-telecom-31b98e73" title="Intelligent revenue-telecom" />
         <h1 className="text-4xl font-bold mb-6">Intelligent revenue-telecom</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your Telecom operations with our Intelligent revenue-telecom. This AI-driven solution automates market analysis with unprecedented accuracy and effici</p>
 

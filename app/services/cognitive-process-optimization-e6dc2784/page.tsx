@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/cognitive-process-optimization-e6dc2784` title="Cognitive Process Optimization" />
+        <BreadcrumbSchema path="/services/cognitive-process-optimization-e6dc2784" title="Cognitive Process Optimization" />
         <h1 className="text-4xl font-bold mb-6">Cognitive Process Optimization</h1>
         <p className="text-lg text-gray-300 mb-8">The future of Real Estate is here with Cognitive Process Optimization. Powered by cutting-edge AI, this platform delivers workflow management like never before.</p>
 

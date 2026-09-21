@@ -13,7 +13,7 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path=`/services/system-smart---automotive-c41dcba3` title="System Smart - Automotive" />
+        <BreadcrumbSchema path="/services/system-smart---automotive-c41dcba3" title="System Smart - Automotive" />
         <h1 className="text-4xl font-bold mb-6">System Smart - Automotive</h1>
         <p className="text-lg text-gray-300 mb-8">Transform your automotive operations with our System Smart - Automotive. This AI-driven solution automates workflow management with unprecedented accuracy and e</p>
 
