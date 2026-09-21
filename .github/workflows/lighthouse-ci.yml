@@ -30,6 +30,9 @@ jobs:
     timeout-minutes: 20
     env:
       NEXT_TELEMETRY_DISABLED: "1"
+      # Match Deploy on Push. Default V8 heap (~4GB) OOMs this static export.
+      NODE_OPTIONS: "--max-old-space-size=6144"
+      NEXT_BUILD_WORKER_COUNT: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
