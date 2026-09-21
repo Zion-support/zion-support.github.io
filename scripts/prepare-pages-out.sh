@@ -11,6 +11,12 @@ mkdir -p out
 if [ -d public ]; then
   cp -a public/. out/
 fi
+# Override public/_redirects (may be a stale 37MB next-build auto-gen monster
+# with 550K+ service-slug rules and NO entries for canonical doc routes) with the
+# curated root _redirects that has explicit 200 rules for all money-path doc pages.
+if [ -f _redirects ]; then
+  cp _redirects out/_redirects
+fi
 # public/sitemap-0.xml + sitemap.xml (index → sitemap-0) + robots.txt ship as-is.
 
 # Dual-path gap-fill (public wins). Hubs only — never copy country leaves.
