@@ -45,6 +45,8 @@ jobs:
       run: npm ci --prefer-offline --no-audit --fund=false
     - name: Static site build
       run: npm run build
+    - name: Overlay docs pages onto out/
+      run: bash scripts/prepare-pages-out.sh
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4
       with:
