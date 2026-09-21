@@ -48,7 +48,7 @@ jobs:
         with:
           name: workflow-flakes-${{ github.run_id }}
           path: automation/reports/workflow-flakes-latest.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
 
       - name: Open issue for flaky workflows
