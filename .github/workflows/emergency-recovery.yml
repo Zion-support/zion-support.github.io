@@ -15,7 +15,7 @@ jobs:
       NEXT_BUILD_WORKER_COUNT: '1'
       NODE_OPTIONS: --max-old-space-size=15360 --max-semi-space-size=64
     steps:
-    - uses: actions/checkout@v6.0.2
+    - uses: actions/checkout@v7
     - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
       run: |
         # Newer ubuntu-24.04 runner images ship an active /swapfile; make this step idempotent
@@ -30,7 +30,7 @@ jobs:
           sudo swapon /swapfile || true
         fi
         free -h
-    - uses: actions/setup-node@v6.3.0
+    - uses: actions/setup-node@v7
       with:
         node-version: '22'
     - run: rm -rf node_modules .next node
