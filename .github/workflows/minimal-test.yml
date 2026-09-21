@@ -1,14 +1,6 @@
 name: Minimal Build Test
 "on":
   workflow_dispatch:
-  push:
-    branches:
-    - main
-    paths-ignore:
-    - '**/STATUS.md'
-    - 'ops/**'
-    - 'automation/reports/**'
-    - 'public/ops/**'
 jobs:
   minimal:
     runs-on: ubuntu-latest
