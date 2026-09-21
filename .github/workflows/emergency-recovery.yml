@@ -1,0 +1,39 @@
+name: Emergency Recovery - Minimal Build
+"on":
+  workflow_dispatch: null
+  push:
+    branches:
+    - main
+    paths-ignore:
+    - '**/STATUS.md'
+    - 'automation/reports/**'
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      NEXT_BUILD_WORKER_COUNT: '1'
+      NODE_OPTIONS: --max-old-space-size=15360 --max-semi-space-size=64
+    steps:
+    - uses: actions/checkout@v6.0.2
+    - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
+      run: |
+        # Newer ubuntu-24.04 runner images ship an active /swapfile; make this step idempotent
+        if swapon --show=NAME --noheadings | grep -qx '/swapfile'; then
+          echo "swap already active, skipping"
+        else
+          if [ ! -f /swapfile ]; then
+            sudo fallocate -l 12G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=12288
+          fi
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile || true
+          sudo swapon /swapfile || true
+        fi
+        free -h
+    - uses: actions/setup-node@v6.3.0
+      with:
+        node-version: '22'
+    - run: rm -rf node_modules .next node
+    - run: npm install --force
+    - run: npm run build
+    timeout-minutes: 25
