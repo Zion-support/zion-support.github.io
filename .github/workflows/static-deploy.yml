@@ -28,7 +28,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Guard main ref
         run: |
           set -euo pipefail
@@ -39,9 +39,9 @@ jobs:
           fi
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: out
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
       # Post-deploy live curl skipped: runners often block egress and probes flake.
       # The prepare-pages-out money-path gate above is the durable Pay RED guard.
