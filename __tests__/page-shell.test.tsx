@@ -42,24 +42,8 @@ describe('PageShell', () => {
     expect(container.querySelector('h1')?.textContent).toBe('Pricing');
     expect(container.textContent).toContain('Transparent engagement models');
     expect(container.textContent).toContain('Transparent Pricing');
-    expect(container.querySelector('[aria-label="Breadcrumb"]')).toBeTruthy();
     expect(container.textContent).toContain('Get a custom proposal');
     expect(container.textContent).toContain('Browse services');
     expect(container.textContent).toContain('Pricing models');
-  });
-
-  it('adds blog breadcrumbs from the canonical URL', () => {
-    act(() => {
-      root.render(
-        <PageShell
-          title="Autonomous Code Deployment"
-          description="Practical guide"
-          canonical="https://ziontechgroup.com/blog/autonomous-code-deployment-2026-6936/"
-        />
-      );
-    });
-
-    expect(container.textContent).toContain('Blog');
-    expect(container.textContent).toContain('Autonomous Code Deployment');
   });
 });

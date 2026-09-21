@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 import { allServices, type Service } from '../../data/servicesData';
 
 export async function generateStaticParams() {
@@ -192,7 +193,7 @@ export async function generateMetadata({ params }: { params: Promise<{ key: stri
   };
 }
 
-export default async function IndustryPage({ params }: { params: Promise<{ key: string }> }}) {
+export default async function IndustryPage({ params }: { params: Promise<{ key: string }> }) {
   const { key } = await params;
   const config = INDUSTRY_CONFIG[key] || INDUSTRY_CONFIG.healthcare;
   
@@ -203,87 +204,46 @@ export default async function IndustryPage({ params }: { params: Promise<{ key: 
   ).slice(0, 8);
 
   return (
-    <main className="min-h-screen bg-slate-950">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'CollectionPage',
-            name: config.title,
-            description: config.description,
-            url: `https://ziontechgroup.com/industries/${key}`,
-            isPartOf: {
-              '@type': 'WebSite',
-              url: 'https://ziontechgroup.com',
-              name: 'Zion Tech Group'
-            }
-          })
-        }}
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-y border-purple-500/20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-violet-900/40 to-pink-900/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(120,50,200,0.3),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(200,50,150,0.2),transparent_50%)]" />
-        <div className="relative container-page py-20">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <Link href="/industries" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-                ← All Industries
-              </Link>
-            </div>
-            
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-                <span className="text-green-400">●</span> {config.title}
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                <span className="gradient-text">{config.emoji}</span>{' '}
-                <span className="text-white">{config.title.split(' AI')[0]}</span>
-                </br />
-                <span className="text-slate-300">{config.description}</span>
-              </h1>
-              
-              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-                <Link href="/contact/" className="btn-primary text-lg px-8 py-3">
-                  📞 Get Industry-Specific Proposal
-                </Link>
-                <a href={`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(config.title)}`} className="btn-secondary text-lg px-8 py-3">
-                  ✉ Email Us
-                </a>
-              </div>
-
-              {/* Benefits */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                {config.benefits.map((benefit, i) => (
-                  <div key={i} className="bg-slate-900/60 rounded-xl p-4 border border-slate-700/50">
-                    <div className="flex items-start gap-3">
-                      <span className="text-purple-400 mt-0.5">✓</span>
-                      <p className="text-slate-300 text-sm">{benefit}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+    <PageShell
+      title={config.title}
+      description={config.description}
+      eyebrow={`${config.emoji} Industry`}
+      align="center"
+      canonical={`https://ziontechgroup.com/industries/${key}`}
+      jsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: config.title,
+        description: config.description,
+        url: `https://ziontechgroup.com/industries/${key}`,
+      }}
+      actions={
+        <>
+          <Link href="/contact/" className="btn-primary">Get an industry proposal</Link>
+          <Link href="/industries" className="btn-secondary">All industries</Link>
+        </>
+      }
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+        {config.benefits.map((benefit, i) => (
+          <div key={i} className="page-card">
+            <div className="flex items-start gap-3">
+              <span className="text-purple-400 mt-0.5">✓</span>
+              <p className="text-slate-300 text-sm">{benefit}</p>
             </div>
           </div>
+        ))}
+      </div>
+
+      <section>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            {config.emoji} {config.title.split(' AI')[0]} Solutions
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            Tailored AI and IT services designed specifically for {config.title.split(' AI')[0].toLowerCase()} businesses
+          </p>
         </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="container-page py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              {config.emoji} {config.title.split(' AI')[0]} Solutions
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              Tailored AI and IT services designed specifically for {config.title.split(' AI')[0].toLowerCase()} businesses
-            </p>
-          </div>
 
           {industryServices.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -324,41 +284,11 @@ export default async function IndustryPage({ params }: { params: Promise<{ key: 
           )}
 
           <div className="text-center mt-12">
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-xl font-medium
-                         hover:bg-purple-500 transition-all"
-            >
-              🛠️ Browse All Services →
+            <Link href="/services/" className="btn-primary">
+              Browse all services
             </Link>
           </div>
-        </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="relative overflow-hidden border-y border-purple-500/20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-violet-900/40 to-pink-900/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(120,50,200,0.3),transparent_50%)]" />
-        <div className="relative container-page py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Transform Your {config.title.split(' AI')[0]} Business?
-            </h3>
-            <p className="text-slate-300 mb-6">
-              Get a custom AI solution tailored to your {config.title.split(' AI')[0].toLowerCase()} needs. 
-              Our experts will analyze your requirements and deliver a complete proposal within minutes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
-                🚀 Get Your Custom Proposal
-              </Link>
-              <a href="tel:+130****0950" className="btn-secondary text-lg px-10 py-4">
-                ☎ +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </PageShell>
   );
 }

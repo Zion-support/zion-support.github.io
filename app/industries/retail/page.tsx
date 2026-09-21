@@ -1,17 +1,27 @@
-import { Metadata } from 'next'
+import Link from 'next/link';
+import { Metadata } from 'next';
+import PageShell from '@/components/PageShell';
+
 export const metadata: Metadata = {
   title: 'AI for Retail | Zion Tech Group',
-  description: 'Retail AI for demand, personalization, inventory, operations, and customer experience.'
-}
+  description: 'Retail AI for demand, personalization, inventory, operations, and customer experience.',
+  alternates: { canonical: '/industries/retail/' },
+};
+
 export default function Page() {
   return (
-    <main className="container-page py-20">
-      <h1 className="text-4xl font-bold text-white mb-4">AI for Retail</h1>
-      <p className="text-xl text-slate-300 mb-10">Retail AI for demand, personalization, inventory, operations, and customer experience.</p>
-      <div className="text-center">
-        <a className="btn-primary" href="/contact/">Contact us</a>
-        <a className="btn-secondary" href="/services/">Services</a>
-      </div>
-    </main>
-  )
+    <PageShell
+      title="AI for Retail"
+      description="Retail AI for demand, personalization, inventory, operations, and customer experience."
+      eyebrow="Industry"
+      align="center"
+      canonical="https://ziontechgroup.com/industries/retail/"
+      actions={
+        <>
+          <Link href="/contact/" className="btn-primary">Contact us</Link>
+          <Link href="/services/" className="btn-secondary">Browse services</Link>
+        </>
+      }
+    />
+  );
 }

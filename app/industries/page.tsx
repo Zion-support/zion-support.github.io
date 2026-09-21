@@ -2,8 +2,8 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 import { allServices, type Service } from '../data/servicesData';
-import { CATEGORIES } from '../constants/categories';
 
 // Industry definitions with icons, colors, and descriptions
 const INDUSTRIES = [
@@ -152,125 +152,82 @@ export default function IndustriesPage() {
   }, [industryStats, searchQuery]);
 
   return (
-    <main className="min-h-screen bg-slate-950">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'CollectionPage',
-            name: 'Industry Solutions | Zion Tech Group',
-            description: 'AI and IT solutions tailored for healthcare, finance, retail, manufacturing, telecommunications, energy, logistics, gaming, real estate, and legal industries.',
-            url: 'https://ziontechgroup.com/industries',
-            isPartOf: {
-              '@type': 'WebSite',
-              url: 'https://ziontechgroup.com',
-              name: 'Zion Tech Group'
-            }
-          })
-        }}
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-y border-purple-500/20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-violet-900/40 to-pink-900/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(120,50,200,0.3),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(200,50,150,0.2),transparent_50%)]" />
-        <div className="relative container-page py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> Industry Solutions
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">Industry-Specific AI Solutions</span>
-              <br />
-              <span className="text-white">Built for Real Business Impact</span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              AI and IT services tailored to your industry's unique challenges and opportunities. 
-              From healthcare to finance, we deliver measurable outcomes with transparent pricing.
-            </p>
-            
-            {/* Search */}
-            <div className="max-w-2xl mx-auto mb-10">
-              <div className="relative">
-                <svg
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500"
-                  fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  placeholder="Search industries... (healthcare, finance, retail, etc.)"
-                  className="w-full bg-slate-800/80 border border-slate-700 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-500 outline-none
-                           transition-all focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => setSearchQuery('')}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full
-                             bg-slate-700 text-slate-300 text-xs hover:bg-slate-600"
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
-              <div className="bg-slate-900/60 rounded-xl p-4 border border-slate-700/50">
-                <div className="text-2xl font-bold text-purple-400">{INDUSTRIES.length}+</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wider">Industries</div>
-              </div>
-              <div className="bg-slate-900/60 rounded-xl p-4 border border-slate-700/50">
-                <div className="text-2xl font-bold text-emerald-400">{allServices.length}+</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wider">Services</div>
-              </div>
-              <div className="bg-slate-900/60 rounded-xl p-4 border border-slate-700/50">
-                <div className="text-2xl font-bold text-cyan-400">8+</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wider">AI Agents</div>
-              </div>
-              <div className="bg-slate-900/60 rounded-xl p-4 border border-slate-700/50">
-                <div className="text-2xl font-bold text-amber-400">24/7</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wider">Autonomous Ops</div>
-              </div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-              <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
-                📞 Get Industry-Specific Proposal
-              </Link>
-              <Link href="/services/" className="btn-secondary text-lg px-10 py-4">
-                🛠️ Browse All Services
-              </Link>
-              <a href="mailto:kleber@ziontechgroup.com" className="btn-secondary text-lg px-10 py-4">
-                ✉ Email Us
-              </a>
-            </div>
-          </div>
+    <PageShell
+      title="Industry-Specific AI Solutions"
+      description="AI and IT services tailored to your industry's unique challenges and opportunities. From healthcare to finance, we deliver measurable outcomes with transparent pricing."
+      eyebrow="Industry Solutions"
+      align="center"
+      canonical="https://ziontechgroup.com/industries/"
+      jsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Industry Solutions | Zion Tech Group',
+        description: 'AI and IT solutions tailored for healthcare, finance, retail, manufacturing, telecommunications, energy, logistics, gaming, real estate, and legal industries.',
+        url: 'https://ziontechgroup.com/industries',
+      }}
+      actions={
+        <>
+          <Link href="/contact/" className="btn-primary">Get an industry proposal</Link>
+          <Link href="/services/" className="btn-secondary">Browse all services</Link>
+        </>
+      }
+    >
+      <div className="mb-10 max-w-2xl mx-auto">
+        <div className="relative">
+          <svg
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500"
+            fill="none" stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            placeholder="Search industries... (healthcare, finance, retail, etc.)"
+            className="w-full bg-slate-800/80 border border-slate-700 rounded-xl pl-12 pr-4 py-3.5 text-white placeholder-slate-500 outline-none
+                     transition-all focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full
+                       bg-slate-700 text-slate-300 text-xs hover:bg-slate-600"
+            >
+              ✕
+            </button>
+          )}
         </div>
-      </section>
+      </div>
 
-      {/* Industries Grid */}
-      <section className="container-page py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Solutions by Industry
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              Explore AI and IT solutions specifically designed for your industry's unique challenges
-            </p>
-          </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
+        <div className="page-card text-center">
+          <div className="text-2xl font-bold text-purple-400">{INDUSTRIES.length}+</div>
+          <div className="text-xs text-slate-400 uppercase tracking-wider">Industries</div>
+        </div>
+        <div className="page-card text-center">
+          <div className="text-2xl font-bold text-emerald-400">{allServices.length}+</div>
+          <div className="text-xs text-slate-400 uppercase tracking-wider">Services</div>
+        </div>
+        <div className="page-card text-center">
+          <div className="text-2xl font-bold text-cyan-400">8+</div>
+          <div className="text-xs text-slate-400 uppercase tracking-wider">AI Agents</div>
+        </div>
+        <div className="page-card text-center">
+          <div className="text-2xl font-bold text-amber-400">24/7</div>
+          <div className="text-xs text-slate-400 uppercase tracking-wider">Autonomous Ops</div>
+        </div>
+      </div>
+
+      <section>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Solutions by Industry</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            Explore AI and IT solutions specifically designed for your industry's unique challenges
+          </p>
+        </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredIndustries.map((industry) => (
@@ -303,33 +260,7 @@ export default function IndustriesPage() {
               </Link>
             ))}
           </div>
-        </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="relative overflow-hidden border-y border-purple-500/20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-violet-900/40 to-pink-900/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(120,50,200,0.3),transparent_50%)]" />
-        <div className="relative container-page py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Not seeing your industry?
-            </h3>
-            <p className="text-slate-300 mb-6">
-              We work across 20+ industries and can customize solutions for any sector.
-              Get in touch for a custom proposal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8 py-3">
-                ✉ Email for Custom Solution
-              </a>
-              <Link href="/contact/" className="btn-secondary text-lg px-8 py-3">
-                📅 Book a Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </PageShell>
   );
 }

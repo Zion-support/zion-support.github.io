@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight, Cog, Search, BarChart3 } from 'lucide-react';
+import PageShell from '@/components/PageShell';
 
 export const metadata: Metadata = {
   title: 'AI Lab | Zion Tech Group',
@@ -93,102 +94,49 @@ const tools = [
 
 export default function AIServicesHub() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'CollectionPage',
-            name: 'AI Services Hub - Zion Tech Group',
-            description:
-              'Explore our comprehensive catalog of AI services including machine learning, NLP, computer vision, predictive analytics, and more. Enterprise AI solutions for businesses of all sizes.',
-            url: 'https://ziontechgroup.com/ai/',
-            keywords:
-              'AI services, machine learning, natural language processing, computer vision, predictive analytics, enterprise AI',
-          }),
-        }}
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-32 pb-24">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(120,50,200,0.18),rgba(20,10,40,0.92))]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(59,130,246,0.12),transparent_60%)]" />
-        <div className="relative container-page">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-sm mb-6">
-              <span className="text-green-400">●</span> AI-Powered Solutions
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-400 bg-clip-text text-transparent">
-                Enterprise AI Services
-              </span>{' '}
-              <span className="text-white">for Modern Businesses</span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Deploy AI solutions that drive measurable ROI. From machine learning to computer vision,
-              fraud detection to healthcare AI — we build custom solutions that transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="/configurator" className="btn-primary text-lg px-10 py-4">
-                🚀 Get Your Custom AI Solution →
-              </Link>
-              <Link href="/services?category=ai" className="btn-secondary text-lg px-10 py-4">
-                📋 Browse All AI Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Tools / Lab */}
-      <section className="relative mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-purple-300">
-            AI Lab
-          </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Tools for Autonomous AI
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+    <PageShell
+      title="Enterprise AI Services"
+      description="Deploy AI solutions that drive measurable ROI. From machine learning to computer vision, fraud detection to healthcare AI — we build custom solutions that transform your business."
+      eyebrow="AI Lab"
+      align="center"
+      canonical="https://ziontechgroup.com/ai/"
+      jsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'AI Services Hub - Zion Tech Group',
+        description:
+          'Explore our comprehensive catalog of AI services including machine learning, NLP, computer vision, predictive analytics, and more. Enterprise AI solutions for businesses of all sizes.',
+        url: 'https://ziontechgroup.com/ai/',
+      }}
+      actions={
+        <>
+          <Link href="/contact/" className="btn-primary">Get a custom AI solution</Link>
+          <Link href="/services?category=ai" className="btn-secondary">Browse AI services</Link>
+        </>
+      }
+    >
+      <section className="mb-16">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-white mb-3">Tools for Autonomous AI</h2>
+          <p className="mx-auto max-w-2xl text-slate-400">
             Interactive tools that show how Zion's autonomous agents can configure solutions,
             audit technical assets, and plan AI implementations — all computed in your browser.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-cyan-700/20 transition hover:-translate-y-0.5"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
-              href="/services/"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-500/80 bg-slate-900/60 px-6 py-3 text-base font-semibold text-slate-100 transition hover:border-purple-300/70 hover:text-white"
-            >
-              View Services
-            </Link>
-          </div>
         </div>
-      </section>
 
-      {/* AI Tools Grid */}
-      <section className="relative mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2">
           {tools.map((tool) => (
             <Link
               key={tool.href}
               href={tool.href}
-              className="group flex flex-col rounded-2xl border border-slate-700/70 bg-slate-900/65 p-6 transition hover:border-purple-400/70 hover:bg-slate-900"
+              className="page-card group flex flex-col transition hover:border-purple-400/70"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/15">
                 <tool.icon className="h-6 w-6 text-purple-400" />
               </div>
-              <h2 className="mt-4 text-xl font-semibold text-white group-hover:text-purple-200">
+              <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-purple-200">
                 {tool.name}
-              </h2>
+              </h3>
               <p className="mt-2 flex-1 text-sm text-slate-300">{tool.description}</p>
               <div className="mt-4 inline-flex items-center text-xs font-medium text-purple-300">
                 Try it now
@@ -199,114 +147,82 @@ export default function AIServicesHub() {
         </div>
       </section>
 
-      {/* Featured AI Services */}
-      <section className="py-20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Featured AI Solutions
-              </span>
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              Proven AI services delivering 30-60% ROI improvements across industries.
-              Each solution includes full implementation, training, and 24/7 support.
-            </p>
-          </div>
+      <section className="mb-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Featured AI Solutions</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            Proven AI services delivering 30-60% ROI improvements across industries.
+            Each solution includes full implementation, training, and 24/7 support.
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {AI_SERVICE_CARDS.map((service) => (
-              <Link
-                key={service.id}
-                href={service.href}
-                className="group block rounded-2xl border border-slate-700 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/40 p-6 transition-all"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-2xl">🤖</span>
-                  <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">
-                    {service.roi.split(' ')[0]}
-                  </span>
-                </div>
-                <h3 className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-xs text-slate-400 line-clamp-3 mb-2">{service.description}</p>
-                <div className="text-xs text-purple-400 font-medium">
-                  {service.stats}
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {AI_SERVICE_CARDS.map((service) => (
             <Link
-              href="/services?category=ai"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-500 hover:to-pink-500 transition-all"
+              key={service.id}
+              href={service.href}
+              className="page-card group block transition hover:border-purple-500/40"
             >
-              View Full AI Catalog →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 via-slate-900/40 to-slate-950">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                How Our AI Works
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
-            {[
-              { step: '01', title: 'Discovery', desc: 'AI agents analyze your business needs and identify automation opportunities' },
-              { step: '02', title: 'Design', desc: 'Custom AI solution architecture built with best-in-class frameworks' },
-              { step: '03', title: 'Deploy', desc: 'Production-ready AI services deployed with monitoring and support' },
-              { step: '04', title: 'Optimize', desc: 'Continuous improvement with AI-driven insights and performance tuning' },
-            ].map((item) => (
-              <div key={item.step} className="text-center p-6 rounded-2xl bg-slate-900/50 border border-slate-700">
-                <div className="text-4xl font-bold text-purple-400 mb-4">{item.step}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-slate-400 text-sm">{item.desc}</p>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-2xl">🤖</span>
+                <span className="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full">
+                  {service.roi.split(' ')[0]}
+                </span>
               </div>
-            ))}
-          </div>
+              <h3 className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors mb-2">
+                {service.title}
+              </h3>
+              <p className="text-xs text-slate-400 line-clamp-3 mb-2">{service.description}</p>
+              <div className="text-xs text-purple-400 font-medium">
+                {service.stats}
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* ROI Stats */}
-      <section className="py-20">
-        <div className="container-page">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">
-                Proven Results
-              </span>
-            </h2>
-          </div>
+      <section className="mb-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">How Our AI Works</h2>
+        </div>
+        <div className="grid md:grid-cols-4 gap-6">
+          {[
+            { step: '01', title: 'Discovery', desc: 'AI agents analyze your business needs and identify automation opportunities' },
+            { step: '02', title: 'Design', desc: 'Custom AI solution architecture built with best-in-class frameworks' },
+            { step: '03', title: 'Deploy', desc: 'Production-ready AI services deployed with monitoring and support' },
+            { step: '04', title: 'Optimize', desc: 'Continuous improvement with AI-driven insights and performance tuning' },
+          ].map((item) => (
+            <div key={item.step} className="page-card text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-4">{item.step}</div>
+              <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+              <p className="text-slate-400 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-emerald-900/30 to-green-900/30 border border-emerald-500/20">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">40-60%</div>
-              <div className="text-slate-300 mb-2">Average ROI Improvement</div>
-              <div className="text-slate-500 text-sm">Across all AI implementations</div>
-            </div>
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border border-blue-500/20">
-              <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-slate-300 mb-2">Uptime Guarantee</div>
-              <div className="text-slate-500 text-sm">Enterprise-grade reliability</div>
-            </div>
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20">
-              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-slate-300 mb-2">AI Operations</div>
-              <div className="text-slate-500 text-sm">Continuous monitoring and optimization</div>
-            </div>
+      <section>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Proven Results</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="page-card text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">40-60%</div>
+            <div className="text-slate-300 mb-2">Average ROI Improvement</div>
+            <div className="text-slate-500 text-sm">Across all AI implementations</div>
+          </div>
+          <div className="page-card text-center">
+            <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
+            <div className="text-slate-300 mb-2">Uptime Guarantee</div>
+            <div className="text-slate-500 text-sm">Enterprise-grade reliability</div>
+          </div>
+          <div className="page-card text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+            <div className="text-slate-300 mb-2">AI Operations</div>
+            <div className="text-slate-500 text-sm">Continuous monitoring and optimization</div>
           </div>
         </div>
       </section>
-    </main>
+    </PageShell>
   );
 }

@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import JsonLd from './JsonLd';
-import SiteBreadcrumbs from './SiteBreadcrumbs';
 
 export type PageShellBreadcrumb = { label: string; href?: string };
 
@@ -25,31 +24,12 @@ export type PageShellProps = {
   contentClassName?: string;
 };
 
-function defaultBreadcrumbs(title: string, canonical?: string): PageShellBreadcrumb[] {
-  const items: PageShellBreadcrumb[] = [{ label: 'Home', href: '/' }];
-  if (canonical?.includes('/blog/')) {
-    items.push({ label: 'Blog', href: '/blog' });
-  } else if (canonical?.includes('/services/')) {
-    items.push({ label: 'Services', href: '/services' });
-  } else if (canonical?.includes('/industries/')) {
-    items.push({ label: 'Industries', href: '/industries' });
-  } else if (canonical?.includes('/tools/')) {
-    items.push({ label: 'Tools', href: '/tools' });
-  } else if (canonical?.includes('/ai/')) {
-    items.push({ label: 'AI Lab', href: '/ai' });
-  }
-  items.push({ label: title });
-  return items;
-}
-
 export default function PageShell({
   title,
   description,
   eyebrow,
   eyebrowIcon = '✦',
-  canonical,
   jsonLd,
-  breadcrumbs,
   actions,
   align = 'left',
   showCta = true,
@@ -59,15 +39,12 @@ export default function PageShell({
   className = '',
   contentClassName = '',
 }: PageShellProps) {
-  const crumbs = breadcrumbs?.length ? breadcrumbs : defaultBreadcrumbs(title, canonical);
   const isCentered = align === 'center';
 
   return (
     <div className={`page-shell ${className}`.trim()}>
       {jsonLd ? <JsonLd data={jsonLd} /> : null}
       <div className={`container-page ${contentClassName}`.trim()}>
-        <SiteBreadcrumbs items={crumbs} className="mb-8" />
-
         <header className={`page-hero ${isCentered ? 'page-hero--center' : ''}`}>
           {eyebrow ? (
             <div className="page-eyebrow">

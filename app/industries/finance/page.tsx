@@ -41,18 +41,7 @@ const FINANCE_SERVICES = [
 
 export default function FinanceIndustryPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      {/* Breadcrumb */}
-      <div className="container-page py-4">
-        <nav className="text-sm text-slate-400">
-          <Link href="/" className="hover:text-white">Home</Link>
-          <span className="mx-2">›</span>
-          <Link href="/industries" className="hover:text-white">Industries</Link>
-          <span className="mx-2">›</span>
-          <span className="text-slate-300">Finance</span>
-        </nav>
-      </div>
-
+    <main className="min-h-screen bg-slate-950 text-white">
       {/* Hero Section */}
       <section className="relative py-16 px-4">
         <div className="container-page max-w-4xl mx-auto text-center">

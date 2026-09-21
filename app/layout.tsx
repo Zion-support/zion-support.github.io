@@ -22,6 +22,7 @@ import FloatingAgentStatus from './components/FloatingAgentStatus';
 import { AutoJsonLd } from './hooks/useAutoJsonLdPage';
 import GlobalErrorBoundary from './GlobalErrorBoundary';
 import { siteConfig } from './lib/siteConfig';
+import RouteBreadcrumbs from './components/RouteBreadcrumbs';
 import './globals.css';
 
 export const siteUrl = 'https://ziontechgroup.com';
@@ -107,6 +108,7 @@ export default function RootLayout({
             <Header />
             <main className="relative z-10 flex-1" id="main-content" tabIndex={-1} role="main">
               <GlobalErrorBoundary>
+                <RouteBreadcrumbs />
                 {children}
               </GlobalErrorBoundary>
             </main>
