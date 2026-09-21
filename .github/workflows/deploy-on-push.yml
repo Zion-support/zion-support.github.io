@@ -44,6 +44,14 @@ jobs:
     - name: Install dependencies
       run: npm ci --prefer-offline --no-audit --fund=false
     - name: Static site build
+      # Best-effort: the Pages artifact is assembled from public/ (source of truth)
+      # by prepare-pages-out.sh below, which rm -rf's out/ and rebuilds it from
+      # static content. The Next.js build OOMs on this 90k+ file tree (exit 134)
+      # and must not block the deploy.
+      continue-on-error: true
+      env:
+        NODE_OPTIONS: '--max-old-space-size=12288 --max-semi-space-size=64'
+        NEXT_BUILD_WORKER_COUNT: '1'
       run: npm run build
     - name: Overlay docs pages onto out/
       run: bash scripts/prepare-pages-out.sh
