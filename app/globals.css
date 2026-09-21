@@ -43,6 +43,71 @@
   .btn-secondary:hover {
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.04));
   }
+  .container-page {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .glass-card,
+  .page-card {
+    @apply rounded-2xl border border-slate-800 bg-slate-900/60 p-6;
+  }
+  .page-shell {
+    @apply py-16 md:py-20 text-slate-100;
+  }
+  .page-hero {
+    @apply mb-12 max-w-4xl;
+  }
+  .page-hero--center {
+    @apply mx-auto mb-16 max-w-4xl text-center;
+  }
+  .page-eyebrow {
+    @apply mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-emerald-300;
+  }
+  .page-title {
+    @apply mb-4 text-4xl font-bold text-white md:text-5xl;
+  }
+  .page-lede {
+    @apply max-w-3xl text-lg leading-relaxed text-slate-300 md:text-xl;
+  }
+  .page-hero--center .page-lede {
+    @apply mx-auto;
+  }
+  .page-actions {
+    @apply mt-6 flex flex-wrap gap-3;
+  }
+  .page-hero--center .page-actions {
+    @apply justify-center;
+  }
+  .page-body {
+    @apply mb-16;
+  }
+  .page-cta,
+  .cta-section {
+    @apply mx-auto mt-8 max-w-3xl rounded-2xl border border-purple-500/30 bg-purple-900/20 px-8 py-10 text-center;
+  }
+  .page-cta h2,
+  .cta-section h2 {
+    @apply mb-3 text-2xl font-bold text-white md:text-3xl;
+  }
+  .page-cta p,
+  .cta-section p {
+    @apply mx-auto mb-6 max-w-2xl text-slate-300;
+  }
+  .page-cta .page-actions,
+  .cta-section .page-actions {
+    @apply mt-0 justify-center;
+  }
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 /* Hide scrollbar for horizontal pill nav */
@@ -52,4 +117,61 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Unify nested page wrappers so every route shares the same chrome */
+#main-content > main.min-h-screen,
+#main-content > div.min-h-screen {
+  min-height: 0;
+}
+
+#main-content > main.bg-slate-950,
+#main-content > main.bg-gradient-to-b,
+#main-content > div.bg-slate-950 {
+  background-color: transparent;
+  background-image: none;
+}
+
+#main-content .lead {
+  color: #cbd5e1;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+#main-content .container:not(.container-page) {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 1rem;
+}
+
+#main-content .card {
+  border: 1px solid rgb(30 41 59);
+  background: rgb(15 23 42 / 0.6);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Generated service landings: same cards, CTA, and width as company pages */
+#main-content main .max-w-4xl.mx-auto {
+  max-width: 80rem;
+}
+
+#main-content main .bg-slate-900.rounded-xl {
+  border: 1px solid rgb(30 41 59);
+  background: rgb(15 23 42 / 0.6);
+}
+
+#main-content a.inline-block.bg-purple-600 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-image: linear-gradient(90deg, #7c3aed, #db2777);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 10px 15px -3px rgb(168 85 247 / 0.25);
 }

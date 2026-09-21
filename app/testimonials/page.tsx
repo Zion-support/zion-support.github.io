@@ -1,24 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import { testimonials, type Testimonial } from '@/data/testimonials';
+import { testimonials } from '@/data/testimonials';
+import PageShell from '@/components/PageShell';
 
 export default function TestimonialsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="container-page py-20">
-        <div className="text-center max-w-4xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-6">
-            <span className="text-xs">💬</span>
-            <span className="text-xs text-emerald-300 font-medium uppercase tracking-wider">Client Voices</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            What clients say <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-violet-400 bg-clip-text text-transparent">about Zion</span>
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Real outcomes, real teams, real contracts — from support automation to cloud efficiency and AI adoption.
-          </p>
-        </div>
+    <PageShell
+      title="What clients say about Zion"
+      description="Real outcomes, real teams, real contracts — from support automation to cloud efficiency and AI adoption."
+      eyebrow="Client Voices"
+      eyebrowIcon="💬"
+      align="center"
+      canonical="https://ziontechgroup.com/testimonials/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Testimonials' },
+      ]}
+      showCta={false}
+    >
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {(testimonials).map((t) => (
@@ -39,40 +39,14 @@ export default function TestimonialsPage() {
           ))}
         </div>
 
-        <section className="mt-16 border-t border-slate-800/60 pt-10">
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="max-w-2xl">
-              <h3 className="text-white font-semibold text-lg mb-2">Want similar results?</h3>
-              <p className="text-slate-300 text-sm">Tell us your goal and we’ll return a short list of best-fit services with estimated ROI and timeline.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/contact" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/20">
-                Talk to an Engineer
-              </Link>
-              <Link href="/case-studies" className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-700 text-slate-200 font-semibold hover:border-purple-500/60 hover:text-white transition-all">
-                View Case Studies
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm text-slate-400">
-            <Link href="/success-stories/" className="hover:text-purple-300 transition-colors">More success stories →</Link>
-            <Link href="/pricing/" className="hover:text-purple-300 transition-colors">Pricing →</Link>
-            <Link href="/contact/" className="hover:text-purple-300 transition-colors">Request proposal →</Link>
+        <section className="page-cta mt-16">
+          <h2>Want similar results?</h2>
+          <p>Tell us your goal and we will return a short list of best-fit services with estimated ROI and timeline.</p>
+          <div className="page-actions">
+            <Link href="/contact" className="btn-primary">Talk to an engineer</Link>
+            <Link href="/case-studies" className="btn-secondary">View case studies</Link>
           </div>
         </section>
-
-        {/* Sticky bottom CTA for mobile and quick conversion */}
-        <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden border-t border-purple-500/30 bg-slate-900/95 backdrop-blur-xl p-4 shadow-2xl">
-          <div className="flex gap-3">
-            <Link href="/contact/" className="flex-1 text-center px-4 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-sm hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/25">
-              ⚡ Get Your Custom Proposal
-            </Link>
-            <a href="tel:+130****0950" className="px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold text-sm hover:bg-slate-700 transition-all">
-              ☎ Call
-            </a>
-          </div>
-        </div>
-      </div>
-    </main>
+    </PageShell>
   );
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 
 const posts = [
   {
@@ -200,13 +201,18 @@ export default function BlogIndex() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="container-page pt-24 pb-16">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Blog</h1>
-          <p className="text-slate-400 text-lg mb-10 max-w-3xl">
-            Practical guides on AI, IT operations, cloud, security, and growth—written for decision-makers who want implementation, not slides.
-          </p>
+    <PageShell
+      title="Blog"
+      description="Practical guides on AI, IT operations, cloud, security, and growth — written for decision-makers who want implementation, not slides."
+      eyebrow="Insights"
+      align="center"
+      canonical="https://ziontechgroup.com/blog/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Blog' },
+      ]}
+      showCta={false}
+    >
 
           <div className="grid md:grid-cols-3 gap-5 mb-14">
             {featured.map((post) => (
@@ -275,11 +281,11 @@ export default function BlogIndex() {
           </div>
 
           <div className="mt-14">
-            <div className="glass-card p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-white mb-2">
+            <div className="page-card">
+              <h2 className="mb-2 text-2xl font-bold text-white">
                 Want a custom post based on your environment?
               </h2>
-              <p className="text-slate-400 mb-4 max-w-2xl">
+              <p className="mb-4 max-w-2xl text-slate-400">
                 Tell us your stack, goals, and constraints. We can generate a tailored implementation playbook from this catalog as a starting point.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -292,8 +298,6 @@ export default function BlogIndex() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+    </PageShell>
   );
 }

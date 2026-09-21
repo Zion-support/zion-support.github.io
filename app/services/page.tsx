@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import PageShell from '@/components/PageShell';
 
 export const metadata = {
   title: "All Services — Zion Tech Group",
@@ -9,11 +10,24 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+    <PageShell
+      title="Our Services"
+      description="Zion Tech Group delivers premium AI and IT services that transform businesses. Each solution is engineered for impact, backed by expert consultation."
+      eyebrow="Catalog"
+      align="center"
+      canonical="https://ziontechgroup.com/services/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Services' },
+      ]}
+      actions={
+        <>
+          <Link href="/contact/" className="btn-primary">Request a proposal</Link>
+          <Link href="/tools/service-comparison/" className="btn-secondary">Compare services</Link>
+        </>
+      }
+    >
         <BreadcrumbSchema path="/services/" title="All Services" />
-        <h1 className="text-4xl font-bold mb-4">Our Services</h1>
-        <p className="text-lg text-gray-300 mb-8">Zion Tech Group delivers premium AI and IT services that transform businesses. Each solution is engineered for impact, backed by expert consultation.</p>
               <div className="bg-slate-900 rounded-xl p-6 mb-4 border border-slate-800 hover:border-purple-500 transition-colors">
         <h3 className="text-xl font-bold mb-2"><Link href="/services/premium/quantum-computing-optimization" className="text-purple-300 hover:text-purple-200">Quantum Computing Optimization Service</Link></h3>
         <p className="text-gray-400 mb-3">Enterprise-grade quantum computing optimization service that helps organizations leverage quantum algorithms for complex optimization problems in logistics, finance, and cryptography.</p>
@@ -86,10 +100,9 @@ export default function ServicesPage() {
           <span className="bg-slate-800 text-gray-400 px-2 py-1 rounded text-xs">$28,000/month</span>
         </div>
       </div>
-        <div className="text-center mt-8">
-          <a href="https://calendly.com/kleber-ziontechgroup/30min" target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg">Book a Consultation</a>
+        <div className="mt-8 text-center">
+          <a href="https://calendly.com/kleber-ziontechgroup/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Consultation</a>
         </div>
-      </div>
-    </main>
+    </PageShell>
   );
 }

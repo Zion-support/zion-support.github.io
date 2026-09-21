@@ -1,9 +1,9 @@
-// app/portal/projects/page.tsx
-import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 
 export const metadata = {
   title: 'Project Dashboard — Client Portal',
   description: 'Active project dashboards, milestones, and status updates.',
+  alternates: { canonical: '/portal/projects/' },
 };
 
 export default function ProjectsPage() {
@@ -14,30 +14,32 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <div className="container-page py-16">
-      <Link href="/portal/" className="text-purple-400 hover:text-purple-300 text-sm mb-6 inline-block">&larr; Back to Client Portal</Link>
-      <div className="glass-card max-w-2xl">
-        <div className="text-5xl mb-4">&#x1F4CA;</div>
-        <h1 className="text-4xl font-bold text-white mb-4">Project Dashboard</h1>
-        <p className="text-slate-400 mb-8">Track active projects, milestones, and status updates in real time.</p>
-        <div className="space-y-4">
-          {projects.map((p, i) => (
-            <div key={i} className="bg-slate-800/50 rounded-xl p-5 border border-slate-700">
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="text-white font-semibold">{p.name}</h3>
-                <span className="text-xs font-semibold text-purple-300 bg-purple-900/40 px-2.5 py-1 rounded-full">{p.status}</span>
-              </div>
-              <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                <div className={`${p.color} h-full rounded-full`} style={{ width: `${p.progress}%` }} />
-              </div>
-              <p className="text-slate-500 text-xs mt-1.5">{p.progress}% complete</p>
+    <PageShell
+      title="Project Dashboard"
+      description="Track active projects, milestones, and status updates in real time."
+      eyebrow="Client Portal"
+      align="center"
+      canonical="https://ziontechgroup.com/portal/projects/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Client Portal', href: '/portal' },
+        { label: 'Projects' },
+      ]}
+    >
+      <div className="space-y-4">
+        {projects.map((project) => (
+          <div key={project.name} className="page-card">
+            <div className="mb-2 flex items-center justify-between">
+              <h3 className="font-semibold text-white">{project.name}</h3>
+              <span className="rounded-full bg-purple-900/40 px-2.5 py-1 text-xs font-semibold text-purple-300">{project.status}</span>
             </div>
-          ))}
-        </div>
-        <div className="mt-8 p-4 bg-green-950/30 rounded-xl border border-green-500/20">
-          <p className="text-green-300 text-sm">Need to request a change or check on a milestone? <a href="/contact/" className="underline hover:text-green-200">Contact your project manager</a> or call <a href="tel:+13024640950" className="underline">+1 302 464 0950</a>.</p>
-        </div>
+            <div className="h-2 w-full overflow-hidden rounded-full bg-slate-800">
+              <div className={`${project.color} h-full rounded-full`} style={{ width: `${project.progress}%` }} />
+            </div>
+            <p className="mt-1.5 text-xs text-slate-500">{project.progress}% complete</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </PageShell>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import PageShell from '@/components/PageShell';
 
 const FAQ_ITEMS = [
   {
@@ -55,13 +56,18 @@ export default function HelpPage() {
   });
 
   return (
-    <main className="min-h-screen">
-      <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-20">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Help Center</h1>
-          <p className="text-slate-300 text-base max-w-2xl mb-8">
-            Start here for common support questions before booking a consultation. Phone: <a className="text-purple-300 hover:text-purple-200" href="tel:+13024640950">+1 302 464 0950</a>.
-          </p>
+    <PageShell
+      title="Help Center"
+      description="Start here for common support questions before booking a consultation."
+      eyebrow="Support"
+      align="center"
+      canonical="https://ziontechgroup.com/help/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Help' },
+      ]}
+      showCta={false}
+    >
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {CONTACTS.map((c) => (
@@ -121,24 +127,14 @@ export default function HelpPage() {
             </div>
           </section>
 
-          <section className="border-t border-slate-800 mt-12 pt-10">
-            <div className="max-w-2xl mx-auto text-center">
-              <h3 className="text-white font-semibold text-lg mb-2">Still need human support?</h3>
-              <p className="text-slate-300 text-sm mb-4">
-                We respond to onboarding, pre-sales, and support requests quickly.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-3">
-                <Link href="/contact" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-500 hover:to-pink-500 transition-all shadow-lg shadow-purple-500/20">
-                  Contact support →
-                </Link>
-                <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-700 text-white font-semibold hover:border-purple-500/60 transition-all">
-                  Schedule a call
-                </a>
-              </div>
+          <section className="page-cta mt-12">
+            <h2>Still need human support?</h2>
+            <p>We respond to onboarding, pre-sales, and support requests quickly.</p>
+            <div className="page-actions">
+              <Link href="/contact" className="btn-primary">Contact support</Link>
+              <a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer" className="btn-secondary">Schedule a call</a>
             </div>
           </section>
-        </div>
-      </div>
-    </main>
+    </PageShell>
   );
 }

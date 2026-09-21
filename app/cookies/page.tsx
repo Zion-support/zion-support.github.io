@@ -1,5 +1,4 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 
 export const metadata = {
   title: 'Cookie Policy',
@@ -10,21 +9,18 @@ export const metadata = {
 
 export default function CookiesPage() {
   return (
-    <main className="min-h-screen bg-slate-950 py-20">
-      <div className="container-page">
-        <div className="max-w-3xl mx-auto">
-          <Link href="/privacy/" className="text-purple-400 hover:text-purple-300 text-sm mb-6 inline-block">
-            ← Privacy Policy
-          </Link>
-
-          <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Cookie Policy
-          </h1>
-          <p className="text-slate-400 mb-10">
-            Zion Tech Group uses cookies and similar technologies on <Link href="/" className="text-purple-400 hover:underline">ziontechgroup.com</Link>.
-            This policy explains what types of cookies we use, why we use them, and how you can manage your preferences.
-            For information about how we handle your personal data, please see our <Link href="/privacy/" className="text-purple-400 hover:underline">Privacy Policy</Link>.
-          </p>
+    <PageShell
+      title="Cookie Policy"
+      description="Zion Tech Group uses cookies and similar technologies on ziontechgroup.com. This policy explains what types of cookies we use, why we use them, and how you can manage your preferences."
+      eyebrow="Legal"
+      align="center"
+      canonical="https://ziontechgroup.com/cookies/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Cookie Policy' },
+      ]}
+      showCta={false}
+    >
 
           <Section num="1" title="What Are Cookies?">
             <p className="text-slate-300">
@@ -130,12 +126,10 @@ export default function CookiesPage() {
             </div>
           </Section>
 
-          <p className="text-slate-500 text-xs mt-10">
+          <p className="mt-10 text-xs text-slate-500">
             Last updated: May 22, 2025
           </p>
-        </div>
-      </div>
-    </main>
+    </PageShell>
   );
 }
 

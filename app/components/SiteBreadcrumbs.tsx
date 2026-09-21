@@ -70,7 +70,7 @@ export default function SiteBreadcrumbs({ items, className = '' }: SiteBreadcrum
 
       <nav aria-label="Breadcrumb" className={`w-full ${className}`}>
         <ol
-          className="flex flex-wrap items-center gap-1 text-sm text-gray-500 dark:text-gray-400"
+          className="flex flex-wrap items-center gap-1 text-sm text-slate-400"
           itemScope
           itemType="https://schema.org/BreadcrumbList"
         >
@@ -93,7 +93,7 @@ export default function SiteBreadcrumbs({ items, className = '' }: SiteBreadcrum
                 {/* Separator (except for first item) */}
                 {i > 0 && (
                   <span
-                    className="mx-1.5 text-gray-400 dark:text-gray-500 select-none shrink-0"
+                    className="mx-1.5 shrink-0 select-none text-slate-600"
                     aria-hidden="true"
                   >
                     /
@@ -103,7 +103,7 @@ export default function SiteBreadcrumbs({ items, className = '' }: SiteBreadcrum
                 {/* Ellipsis indicator for skipped items on mobile */}
                 {isEllipsisTarget && (
                   <span
-                    className="md:hidden text-gray-400 dark:text-gray-500 px-0.5 select-none"
+                    className="select-none px-0.5 text-slate-500 md:hidden"
                     aria-hidden="true"
                   >
                     &hellip;
@@ -134,7 +134,7 @@ export default function SiteBreadcrumbs({ items, className = '' }: SiteBreadcrum
     if (isLast || !item.href) {
       return (
         <span
-          className="truncate max-w-[120px] md:max-w-[200px] text-gray-800 dark:text-gray-100 font-medium"
+          className="max-w-[120px] truncate font-medium text-slate-100 md:max-w-[200px]"
           aria-current={isLast ? 'page' : undefined}
           itemProp="name"
         >
@@ -146,7 +146,7 @@ export default function SiteBreadcrumbs({ items, className = '' }: SiteBreadcrum
     return (
       <Link
         href={item.href}
-        className="truncate max-w-[120px] md:max-w-[200px] text-gray-500 hover:text-brand-600 dark:text-gray-400 dark:hover:text-brand-400 transition-colors"
+        className="max-w-[120px] truncate text-slate-400 transition-colors hover:text-purple-300 md:max-w-[200px]"
         itemProp="item"
       >
         <span itemProp="name">{labelOf(item)}</span>

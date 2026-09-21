@@ -1,29 +1,45 @@
 import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 
 export const metadata = {
   title: 'Service Level Agreements | Zion Tech Group',
   description: 'Our commitment to uptime, performance, and support response times.',
+  alternates: { canonical: '/sla/' },
 };
+
+const commitments = [
+  { title: 'Uptime', body: '99.9% availability target for managed platforms, with published maintenance windows.' },
+  { title: 'Response', body: 'Critical incidents acknowledged within one business hour during contracted coverage.' },
+  { title: 'Reporting', body: 'Monthly service reviews covering incidents, changes, and improvement actions.' },
+];
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-4">Service Level Agreements</h1>
-        <p className="text-slate-400 text-lg mb-8">Our commitment to uptime, performance, and support response times.</p>
-        <div className="flex flex-wrap gap-4">
-        <Link href="/pricing" className="text-emerald-400 hover:text-emerald-300 underline">Pricing Plans</Link>
-        <Link href="/contact" className="text-emerald-400 hover:text-emerald-300 underline">Contact Sales</Link>
-        </div>
-        <div className="mt-12 p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
-          <h2 className="text-xl font-semibold text-white mb-3">Get Started Today</h2>
-          <p className="text-slate-400 mb-4">Contact our team for a free consultation.</p>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <a href="tel:+13024640950" className="text-emerald-400">📞 +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-emerald-400">✉️ kleber@ziontechgroup.com</a>
+    <PageShell
+      title="Service Level Agreements"
+      description="Our commitment to uptime, performance, and support response times for managed AI and IT services."
+      eyebrow="Reliability"
+      align="center"
+      canonical="https://ziontechgroup.com/sla/"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'SLA' },
+      ]}
+      actions={
+        <>
+          <Link href="/pricing/" className="btn-primary">Pricing plans</Link>
+          <Link href="/contact/" className="btn-secondary">Contact sales</Link>
+        </>
+      }
+    >
+      <div className="grid gap-6 md:grid-cols-3">
+        {commitments.map((item) => (
+          <div key={item.title} className="page-card">
+            <h2 className="text-xl font-semibold text-white">{item.title}</h2>
+            <p className="mt-2 text-sm text-slate-400">{item.body}</p>
           </div>
-        </div>
+        ))}
       </div>
-    </main>
+    </PageShell>
   );
 }
