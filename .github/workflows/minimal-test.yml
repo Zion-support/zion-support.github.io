@@ -5,7 +5,8 @@ name: Minimal Build Test
     branches:
     - main
     paths-ignore:
-    - 'STATUS.md'
+    - '**/STATUS.md'
+    - 'ops/**'
     - 'automation/reports/**'
     - 'public/ops/**'
 jobs:
