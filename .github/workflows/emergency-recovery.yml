@@ -13,13 +13,19 @@ jobs:
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       NEXT_BUILD_WORKER_COUNT: '1'
-      NODE_OPTIONS: --max-old-space-size=14336 --max-semi-space-size=64
+      NODE_OPTIONS: --max-old-space-size=15360 --max-semi-space-size=64
     steps:
     - uses: actions/checkout@v6.0.2
+    - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
+      run: |
+        sudo fallocate -l 8G /swapfile
+        sudo chmod 600 /swapfile
+        sudo mkswap /swapfile
+        sudo swapon /swapfile
     - uses: actions/setup-node@v6.3.0
       with:
         node-version: '22'
     - run: rm -rf node_modules .next node
     - run: npm install --force
     - run: npm run build
-    timeout-minutes: 15
+    timeout-minutes: 25
