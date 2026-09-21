@@ -51,56 +51,121 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .glass-card,
-  .page-card {
-    @apply rounded-2xl border border-slate-800 bg-slate-900/60 p-6;
-  }
-  .page-shell {
-    @apply py-16 md:py-20 text-slate-100;
-  }
-  .page-hero {
-    @apply mb-12 max-w-4xl;
-  }
-  .page-hero--center {
-    @apply mx-auto mb-16 max-w-4xl text-center;
-  }
-  .page-eyebrow {
-    @apply mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-emerald-300;
-  }
+}
+
+html, body {
+  background-color: #020617;
+  color: #f1f5f9;
+}
+
+.glass-card,
+.page-card {
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+  background: rgb(15 23 42 / 0.6);
+  padding: 1.5rem;
+}
+
+.page-shell {
+  padding: 4rem 0 5rem;
+  color: #f1f5f9;
+}
+
+.page-hero {
+  margin-bottom: 3rem;
+  max-width: 56rem;
+}
+
+.page-hero--center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  max-width: 56rem;
+  text-align: center;
+}
+
+.page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgb(16 185 129 / 0.2);
+  background: rgb(16 185 129 / 0.1);
+  padding: 0.375rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
   .page-title {
-    @apply mb-4 text-4xl font-bold text-white md:text-5xl;
+    font-size: 3rem;
   }
-  .page-lede {
-    @apply max-w-3xl text-lg leading-relaxed text-slate-300 md:text-xl;
-  }
-  .page-hero--center .page-lede {
-    @apply mx-auto;
-  }
-  .page-actions {
-    @apply mt-6 flex flex-wrap gap-3;
-  }
-  .page-hero--center .page-actions {
-    @apply justify-center;
-  }
-  .page-body {
-    @apply mb-16;
-  }
-  .page-cta,
-  .cta-section {
-    @apply mx-auto mt-8 max-w-3xl rounded-2xl border border-purple-500/30 bg-purple-900/20 px-8 py-10 text-center;
-  }
-  .page-cta h2,
-  .cta-section h2 {
-    @apply mb-3 text-2xl font-bold text-white md:text-3xl;
-  }
-  .page-cta p,
-  .cta-section p {
-    @apply mx-auto mb-6 max-w-2xl text-slate-300;
-  }
-  .page-cta .page-actions,
-  .cta-section .page-actions {
-    @apply mt-0 justify-center;
-  }
+}
+
+.page-lede {
+  max-width: 48rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.page-hero--center .page-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.page-hero--center .page-actions,
+.page-cta .page-actions,
+.cta-section .page-actions {
+  justify-content: center;
+}
+
+.page-body {
+  margin-bottom: 4rem;
+}
+
+.page-cta,
+.cta-section {
+  margin: 2rem auto 0;
+  max-width: 48rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(168 85 247 / 0.3);
+  background: rgb(88 28 135 / 0.2);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.page-cta h2,
+.cta-section h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.page-cta p,
+.cta-section p {
+  margin: 0 auto 1.5rem;
+  max-width: 42rem;
+  color: #cbd5e1;
 }
 
 @media (min-width: 640px) {
