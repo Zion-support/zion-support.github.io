@@ -6,7 +6,7 @@
     5720876792,
     5720939336
   ],
-  "last_pulse": "2026-09-21T20:36:03.205354+00:00",
+  "last_pulse": "2026-09-21T20:40:37.826746+00:00",
   "completed_actions": [
     "**CI fixed**: root-caused failing \"Workflow YAML sanity\" + \"Workflow Change Guard\" \u2014 pre-existing npm ERESOLVE (storybook@10 vs @storybook/addon-*@8 peer conflict), NOT a YAML issue. Fix: `npm ci --legacy-peer-deps` in reusable-workflow-ci.yml (commit 80ba345). Guard runs re-running on the fix push.",
     "**Carlos-first:** Reply-All same IMA thread backing Carlos\u2019s updated proposta (La\u00e9rcio + contratos). Did not restate bid figures here or on the board.",
