@@ -18,7 +18,7 @@ export function buildBreadcrumbItems(pathname: string) {
 
   const items = [{ label: 'Home', href: '/' }];
   segments.forEach((segment, index) => {
-    const href = `/${segments.slice(0, index + 1).join('/')}`;
+    const href = `/${segments.slice(0, index + 1).join('/')}/`;
     const isLast = index === segments.length - 1;
     items.push({
       label: labelForSegment(segment),
