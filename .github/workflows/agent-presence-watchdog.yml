@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Flag offline agents on issue 71361
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const roster = ["Grok","Harper","Benjamin","Lucas","Pulse","Worker"];
