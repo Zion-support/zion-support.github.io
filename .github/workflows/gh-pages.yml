@@ -4,11 +4,12 @@ name: Continuous Pages Deploy
 # Do NOT rebuild Next.js here — that 30–70m job held the concurrency slot and
 # let STATUS.md / CI / dispatch floods cancel the #71405 Family A publish.
 #
-# Hermes Monitor (ops/comms/STATUS.md) and war-room pulse (public/ops/comms/**)
-# must not enter this workflow. They never share the deploy slot.
+# Hermes Monitor (ops/comms/STATUS.md) and war-room pulse outside public/
+# never match `paths` below, so they never share the deploy slot.
+# Avoid paths+paths-ignore together — GitHub rejects that combo (YAML fail).
 # FIELD-SERVICES LOCK. No invented Stripe/prices. Apollo HOLD.
 
-"on":
+on:
   push:
     branches: [main]
     paths:
@@ -19,11 +20,6 @@ name: Continuous Pages Deploy
       - 'docs/**'
       - 'assets/**'
       - '.github/workflows/gh-pages.yml'
-    paths-ignore:
-      - '**/STATUS.md'
-      - 'ops/comms/**'
-      - 'public/ops/comms/**'
-      - 'memory/**'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +30,7 @@ permissions:
 concurrency:
   # Keep this group name so a merged commercial run can preempt the in-flight
   # Next.js Continuous Pages Deploy (same group). STATUS/Hermes never join
-  # because they are filtered out of `on.push` above.
+  # because they are filtered out of on.push paths above.
   # cancel-in-progress: latest commercial push wins (prepare is ~1m, not 60m).
   group: continuous-pages-deploy-${{ github.ref }}
   cancel-in-progress: true
