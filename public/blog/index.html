@@ -1,84 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Blog | Zion Tech Group</title>
-  <meta name="description" content="AI and IT insights on automation, managed services, cloud, security, enterprise delivery, pre-sales, and partnership strategy."/>
-  <link rel="canonical" href="https://ziontechgroup.com/blog/"/>
-  <link rel="stylesheet" href="/styles.css"/>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Blog",
-    "name":"Zion Tech Group Blog",
-    "url":"https://ziontechgroup.com/blog/",
-    "description":"AI and IT insights on automation, managed services, cloud, security, enterprise delivery, pre-sales, and partnership strategy."
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog | Zion Tech Group</title>
+<meta name="description" content="Field notes on AI, automation, IT operations, cloud, security, and enterprise implementation from Zion Tech Group. Written to ship, not to decorate a slide.">
+<link rel="canonical" href="https://ziontechgroup.com/blog/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Field notes on AI and IT | Zion Tech Group">
+<meta property="og:description" content="Implementation guides for operators and buyers — automation, security, cloud, and delivery.">
+<meta property="og:url" content="https://ziontechgroup.com/blog/">
+<meta property="og:type" content="website">
+<link rel="preload" href="/assets/css/site.css" as="style">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/hub.css">
+<link rel="icon" href="/favicon.ico">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Zion Tech Group Blog","url":"https://ziontechgroup.com/blog/","description":"Practical guides on AI, automation, IT operations, cloud, security, and enterprise implementation."}
+</script>
 </head>
 <body>
-  <nav class="site-nav">
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav">
+  <div class="wrap navin">
     <a class="brand" href="/">Zion Tech Group</a>
-    <a href="/services/">Services</a>
-    <a href="/case-studies/">Case Studies</a>
-    <a href="/industries/">Industries</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a>
-  </nav>
-  <main class="container">
-    <section class="hero">
-      <h1>Blog</h1>
-      <p class="lead">Executable guidance on AI delivery, managed operations, cloud, security, and revenue growth for partners and clients.</p>
-      <div class="actions">
-        <a class="btn primary" href="/contact/">Book a consultation</a>
-        <a class="btn secondary" href="/services/">Browse services</a>
-      </div>
-    </section>
+    <button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <nav class="links" aria-label="Primary">
+      <a href="/services/">Services</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/contact/">Contact</a>
+      <a class="cta" href="/discovery/">Discovery $99</a>
+    </nav>
+  </div>
+</header>
 
-    <section class="proof">
-      <div class="proof">
-        <div class="proof-item"><div class="val">4.8/5</div><div class="lbl">Client rating</div></div>
-        <div class="proof-item"><div class="val">24h</div><div class="lbl">Response time</div></div>
-        <div class="proof-item"><div class="val">&lt;7 days</div><div class="lbl">Engagement start</div></div>
-        <div class="proof-item"><div class="val">US-Based</div><div class="lbl">Delivery lead</div></div>
-      </div>
-    </section>
+<main id="conteudo" class="hero">
+  <div class="wrap">
+    <p class="crumb"><a href="/">Home</a> / Blog</p>
+    <p class="eyebrow">Insights</p>
+    <h1>Field notes on AI and IT</h1>
+    <p class="lead">Implementation guides for operators and buyers — automation, security, cloud, and delivery. Written to ship, not to decorate a slide.</p>
+    <div class="actions">
+      <a class="btn" href="/contact/">Request a custom playbook</a>
+      <a class="btn alt" href="/case-studies/">See client results</a>
+    </div>
+  </div>
+</main>
 
-    <section class="proof">
-      <div class="grid">
-        <article class="card">
-          <h2>Managed AI Operations</h2>
-          <p>Reliability, cost controls, model updates, and observability for production AI systems.</p>
-          <a class="btn secondary" href="/managed-ai-services/">Apply this</a>
-        </article>
-        <article class="card">
-          <h2>Automation & Delivery</h2>
-          <p>Workflow automation, incident response, CI/CD, and faster GTM execution.</p>
-          <a class="btn secondary" href="/services/">Apply this</a>
-        </article>
-        <article class="card">
-          <h2>Growth & Partnerships</h2>
-          <p>Lead generation, GTM automation, partner programs, pricing, and procurement strategy.</p>
-          <a class="btn secondary" href="/partners/">Explore partnership</a>
-        </article>
-      </div>
-    </section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <label class="hub-meta" for="catalog-q">Search the catalog</label>
+    <input id="catalog-q" class="hub-search" type="search" placeholder="Search AI, cloud, security, operations…" autocomplete="off">
+    <p class="hub-meta" id="catalog-count">31 notes</p>
 
-    <section class="cta-section">
-      <h2>Turn insight into implementation</h2>
-      <p>Tell us your goal and constraints. We’ll return an engagement plan with milestones, timeline, and estimated ROI.</p>
-      <div class="actions" style="justify-content:center; margin-top:1rem;">
-        <a class="btn primary" href="mailto:kleber@ziontechgroup.com">Email us</a>
-        <a class="btn secondary" href="tel:+13024640950">Call +1 302 464 0950</a>
-        <a class="btn secondary" href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer">Book consultation</a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Zion Tech Group · AI and IT services for business growth.</p>
-  </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+    <div class="grid" id="catalog">
+      <article class="card featured" data-catalog-item data-search="finops consulting cloud waste rightsizing cost">
+        <p class="chips"><span class="badge">Featured</span><span class="chip">Cloud</span><span class="chip">FinOps</span></p>
+        <h3><a href="/blog/finops-consulting-services/">FinOps Consulting: Cut Cloud Waste Without Slowing Teams</a></h3>
+        <p>Waste register, rightsizing before commitments, and a 30–90 day evaluation window — not invented savings percentages.</p>
+      </article>
+      <article class="card featured" data-catalog-item data-search="ai consulting services business what you get">
+        <p class="chips"><span class="badge">Featured</span><span class="chip">AI</span><span class="chip">Consulting</span></p>
+        <h3><a href="/blog/ai-consulting-services-for-business/">AI Consulting Services for Business: What You Actually Get</a></h3>
+        <p>Scope, artifacts, and the path from a $99 discovery to a written pilot — without a brochure deck.</p>
+      </article>
+      <article class="card featured" data-catalog-item data-search="autonomous ai agents business chatbots">
+        <p class="chips"><span class="badge">Featured</span><span class="chip">Automation</span><span class="chip">Agents</span></p>
+        <h3><a href="/blog/autonomous-ai-agents-for-business/">Autonomous AI Agents for Business: Beyond Chatbots</a></h3>
+        <p>When an agent is the right cut versus a scripted workflow, and how to pilot without mixing lanes.</p>
+      </article>
+      <article class="card featured" data-catalog-item data-search="managed it mid-market msp co-managed">
+        <p class="chips"><span class="badge">Featured</span><span class="chip">Operations</span><span class="chip">IT</span></p>
+        <h3><a href="/blog/managed-it-services-for-mid-market/">Managed IT for Mid-Market: MSP vs Co-Managed</a></h3>
+        <p>Which operating model fits when you already have an internal IT owner and still need coverage.</p>
+      </article>
+      <article class="card featured" data-catalog-item data-search="hipaa compliant it services baa healthcare">
+        <p class="chips"><span class="badge">Featured</span><span class="chip">Security</span><span class="chip">Healthcare</span></p>
+        <h3><a href="/blog/hipaa-compliant-it-services/">HIPAA Compliant IT Services: BAA Path, Ops Baseline, Safe AI</a></h3>
+        <p>BAA, ops baseline, and where AI is allowed — before anyone trains a model on clinical text.</p>
+      </article>
+      <article class="card featured" data-catalog-item data-search="discovery starter 99 2500 zion path first win">
+        <p class="chips"><span class="badge">Featured</span><span class="chip">Plans</span></p>
+        <h3><a href="/blog/discovery-vs-starter-zion/">Discovery $99 vs Starter $2,500: Which Path Fits the First Win</a></h3>
+        <p>Map the process first, or pay for one owned cut when the scope is already written.</p>
+      </article>
+
+      <article class="card" data-catalog-item data-search="pay vs consulte ai automation engagement">
+        <h3><a href="/blog/pay-vs-consulte-ai-automation/">Pay vs Consulte: First AI Automation Engagement</a></h3>
+        <p>When to pay Starter ZG06 versus a consulting conversation if the problem is still political.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="enterprise ai it engagement consulte discovery pilot">
+        <h3><a href="/blog/enterprise-ai-it-engagement-path/">Enterprise AI &amp; IT Engagement Path</a></h3>
+        <p>Consulte, Discovery, then a scoped pilot — the order that keeps procurement honest.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="enterprise ai agent risk checklist production">
+        <h3><a href="/blog/enterprise-ai-agent-risk-checklist/">Enterprise AI Agent Risk Checklist</a></h3>
+        <p>What to gate before an agent touches production data, tools, or customer messages.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="ai managed it fintech controls autonomy">
+        <h3><a href="/blog/ai-managed-it-for-fintech/">AI and Managed IT for Fintech</a></h3>
+        <p>Controls before autonomy: identity, logging, and change windows for regulated stacks.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="ai automation msps managed service provider">
+        <h3><a href="/blog/ai-automation-for-msps/">AI Automation for MSPs</a></h3>
+        <p>Where automation helps a service desk — and where it just hides the queue.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="co-managed it vs msp mid-market">
+        <h3><a href="/blog/co-managed-it-vs-msp/">Co-Managed IT vs MSP</a></h3>
+        <p>Split ownership, tickets, and after-hours coverage without a second help desk.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="zion plans ladder discovery starter growth">
+        <h3><a href="/blog/zion-plans-ladder-discovery-starter-growth/">Zion Plans Ladder</a></h3>
+        <p>Discovery $99, Starter $2,500, Growth — without foggy retainers.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="rpa vs autonomous ai agents pilot">
+        <h3><a href="/blog/rpa-vs-autonomous-ai-agents-pilot/">RPA vs Autonomous AI Agents</a></h3>
+        <p>How to pilot one lane at a time so RPA and agents do not fight the same process.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="ai data lakehouse pipelines pay consulte">
+        <h3><a href="/blog/ai-data-lakehouse-pipelines-pay-vs-consulte/">AI Data Lakehouse Pipelines</a></h3>
+        <p>Pay vs Consulte when the first cut is a pipeline, not a chatbot.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="devops pipeline automation ci cd">
+        <h3><a href="/blog/devops-pipeline-automation-pay-vs-consulte/">DevOps Pipeline Automation</a></h3>
+        <p>CI/CD ownership, flaky jobs, and the first automation that actually ships.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="employee onboarding platform hr">
+        <h3><a href="/blog/employee-onboarding-platform-pay-vs-consulte/">Employee Onboarding Platform</a></h3>
+        <p>When a Starter pilot beats another spreadsheet nobody updates.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="ai revenue operations revops">
+        <h3><a href="/blog/ai-revenue-operations-pay-vs-consulte/">AI Revenue Operations</a></h3>
+        <p>Speed-to-lead, follow-up, and forecast hygiene — Pay vs Consulte.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="privileged access management pam security">
+        <h3><a href="/blog/privileged-access-management-pay-vs-consulte/">Privileged Access Management</a></h3>
+        <p>Vault the admin path before you automate the rest of the stack.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="it vcio service fractional cio">
+        <h3><a href="/blog/it-vcio-service-pay-vs-consulte/">IT vCIO Service</a></h3>
+        <p>When you need a named owner for roadmap and vendors, not another ticket queue.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="it cloud migration">
+        <h3><a href="/blog/it-cloud-migration-pay-vs-consulte/">IT Cloud Migration</a></h3>
+        <p>Move one owned workload first. Do not buy a migration theater.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="cloud security posture cspm">
+        <h3><a href="/blog/cloud-security-posture-pay-vs-consulte/">Cloud Security Posture</a></h3>
+        <p>Misconfig, identity, and the first control that actually pages someone.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="invoice automation ai ap">
+        <h3><a href="/blog/invoice-automation-ai-pay-vs-consulte/">Invoice Automation AI</a></h3>
+        <p>Extraction, validation, and routing — with a human on the exception pile.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="saas knowledge base wiki">
+        <h3><a href="/blog/saas-knowledge-base-pay-vs-consulte/">SaaS Knowledge Base</a></h3>
+        <p>When a Starter pilot beats another wiki nobody reads.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="ai model cost governor tokens genai">
+        <h3><a href="/blog/ai-model-cost-governor-pay-vs-consulte/">AI Model Cost Governor</a></h3>
+        <p>Token spend, routing, and alerts before the bill surprises finance.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="it outsourcing msa">
+        <h3><a href="/blog/it-outsourcing-pay-vs-consulte/">IT Outsourcing</a></h3>
+        <p>Consulte first before you sign another blanket MSA.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="it service desk automation tickets">
+        <h3><a href="/blog/it-service-desk-automation-pay-vs-consulte/">IT Service Desk Automation</a></h3>
+        <p>Triage, deflection, and the first queue that gets a named owner.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="it api management">
+        <h3><a href="/blog/it-api-management-pay-vs-consulte/">IT API Management</a></h3>
+        <p>Gateways, keys, and the first API that is safe to expose internally.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="kubernetes cost optimizer k8s">
+        <h3><a href="/blog/kubernetes-cost-optimizer-pay-vs-consulte/">Kubernetes Cost Optimizer</a></h3>
+        <p>Idle namespaces, requests vs usage, and one owned cut on the cluster bill.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="itil service desk">
+        <h3><a href="/blog/itil-service-desk-pay-vs-consulte/">ITIL Service Desk</a></h3>
+        <p>Process that operators will actually run — Pay vs Consulte.</p>
+      </article>
+      <article class="card" data-catalog-item data-search="multi-cloud cost optimizer">
+        <h3><a href="/blog/multi-cloud-cost-optimizer-pay-vs-consulte/">Multi-Cloud Cost Optimizer</a></h3>
+        <p>When the first cut spans accounts, not a single AWS bill.</p>
+      </article>
+    </div>
+    <p class="card" id="catalog-empty" hidden>No notes match that search. Try “finops”, “hipaa”, or “agents”.</p>
+
+    <div class="cta-box">
+      <p><strong>Want a brief written for your stack?</strong></p>
+      <p>Tell us the systems you run and the outcome you want. We return a short implementation note with services, timeline, and expected ROI.</p>
+      <p><a class="btn" href="/contact/">Talk to an engineer</a> <a class="btn alt" href="/discovery/">Discovery $99</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><h3>Company</h3><a href="/about/">About</a><a href="/enterprise/">Enterprise</a><a href="/case-studies/">Case studies</a></div>
+    <div><h3>Offer</h3><a href="/plans/">Plans</a><a href="/discovery/">Discovery $99</a><a href="/solutions/">Solutions</a></div>
+    <div><h3>Resources</h3><a href="/blog/">Blog</a><a href="/services/">Services</a><a href="/faq/">FAQ</a></div>
+    <div><h3>Talk</h3><a href="/contact/">Contact</a><a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
+  </div>
+  <div class="wrap" style="margin-top:18px">© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</div>
+</footer>
+<script>
+(function(){
+  var input = document.getElementById('catalog-q');
+  var cards = document.querySelectorAll('[data-catalog-item]');
+  var empty = document.getElementById('catalog-empty');
+  var count = document.getElementById('catalog-count');
+  function filter(){
+    var q = (input.value || '').toLowerCase().trim();
+    var shown = 0;
+    cards.forEach(function(card){
+      var hay = (card.getAttribute('data-search') || '') + ' ' + (card.textContent || '');
+      var ok = !q || hay.toLowerCase().indexOf(q) !== -1;
+      card.hidden = !ok;
+      if (ok) shown += 1;
+    });
+    if (empty) empty.hidden = shown > 0;
+    if (count) count.textContent = shown + (shown === 1 ? ' note' : ' notes');
+  }
+  input.addEventListener('input', filter);
+})();
+</script>
 </body>
 </html>
