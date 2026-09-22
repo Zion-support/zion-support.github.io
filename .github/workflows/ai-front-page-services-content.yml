@@ -74,8 +74,15 @@ jobs:
             npm run rsc:guard
             npm run build
             git commit -m "chore(content): front page services and content - promote apps, sync core services"
-            git push
-            if false # Netlify build hook removed (migrated to GitHub Pages) && [ "$TRIGGER_DEPLOY" = "1" ]; then
-              echo "# NO-OP: Netlify deploy removed (migrated to GitHub Pages)"
-            fi
+            for i in 1 2 3 4 5; do
+              if git push; then
+                echo "Push OK on attempt $i"
+                break
+              fi
+              echo "Push rejected (attempt $i) - rebasing onto origin/main and retrying"
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort; echo "Rebase conflict; abandoning push"; exit 0; }
+              sleep $((i * 2))
+            done
+            # Netlify deploy hook removed (migrated to GitHub Pages); deploy handled by Pages build
           fi
