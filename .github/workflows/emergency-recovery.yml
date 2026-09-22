@@ -13,15 +13,21 @@ jobs:
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       NEXT_BUILD_WORKER_COUNT: '1'
-      NODE_OPTIONS: --max-old-space-size=15360 --max-semi-space-size=64
+      NODE_OPTIONS: --max-old-space-size=24576 --max-semi-space-size=64
     steps:
     - uses: actions/checkout@v6.0.2
     - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
       run: |
-        sudo fallocate -l 8G /swapfile
-        sudo chmod 600 /swapfile
-        sudo mkswap /swapfile
-        sudo swapon /swapfile
+        # Ensure total swap >= 16G; runner image may already ship a small /swapfile
+        SWAP_MB=$(swapon --show=SIZE --noheadings --bytes | awk '{s+=$1} END {print int(s/1048576)}')
+        echo "existing swap: ${SWAP_MB} MB"
+        if [ "${SWAP_MB:-0}" -lt 16384 ]; then
+          sudo fallocate -l 16G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=16384
+          sudo chmod 600 /swapfile2
+          sudo mkswap /swapfile2
+          sudo swapon /swapfile2
+        fi
+        free -h
     - uses: actions/setup-node@v6.3.0
       with:
         node-version: '22'

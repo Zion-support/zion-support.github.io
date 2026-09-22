@@ -51,6 +51,28 @@
 - Issue: https://github.com/Zion-support/zion-support.github.io/issues/71361
 - CEO-OPS: https://ziontechgroup.com/ops/comms/CEO-OPS.md
 
+
+## FE/Technician Priority Services
+
+### Active Business Opportunities
+| Client | Need | Location | Zion Price | Status |
+|--------|------|----------|------------|--------|
+| Hammad Hanif (Altin XDG) | Dell PowerEdge FE | Pleasanton | $30,289/unit | ✅ Response sent |
+| Malik Junaid (Altin XDG) | Zeltiq Sept 23 FE | Pleasanton | $30,289/unit | ✅ Response sent |
+| Ron Abboud (TDS Trade) | 4x Oracle SPARC T8-4 | TBD | $8,580/unit | ✅ Response sent |
+
+### Pricing Rules
+- Hardware/Software: Market price + 30% markup for Zion
+- FE/Technicians: Market rate + 30% markup for Zion
+- All opportunities: 30% markup applied
+- All emails: Reply All with carlos@ + commercial@
+
+### Market Rates (2026)
+- Dell PowerEdge R660: $23,299 list → $30,289 with markup
+- Oracle SPARC T8-4: $6,600 used → $8,580 with markup
+- Field Engineer: $60/hr → $78/hr with markup
+- Bay Area: $60-80/hr → $78-104/hr with markup
+
 ## Never Do
 - Never orange-cloud apex
 - Never CREATE apps
