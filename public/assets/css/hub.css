@@ -1,0 +1,13 @@
+/* Extra chrome for catalog + inquiry hubs. Does not change money-path pages. */
+.hub-search{width:100%;border-radius:12px;border:1px solid var(--line);background:#0c1222;color:#fff;padding:12px 14px;font:inherit;margin:8px 0 4px}
+.hub-search:focus{outline:none;border-color:#8b5cf6}
+.hub-meta{color:var(--muted);font-size:.9rem;margin:0 0 8px}
+.hub-split{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:28px}
+.field{display:block;color:#c5d0e8;font-size:.92rem;margin:0 0 14px}
+.field input,.field select,.field textarea{display:block;width:100%;margin-top:6px;border-radius:12px;border:1px solid var(--line);background:#0c1222;color:#fff;padding:11px 12px;font:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#8b5cf6}
+.channel{display:block;text-decoration:none}
+.channel .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#8793ac}
+.channel .val{margin-top:4px;color:#fff;font-weight:700}
+.card[hidden],[hidden]{display:none!important}
+@media(max-width:860px){.hub-split{grid-template-columns:1fr}}
