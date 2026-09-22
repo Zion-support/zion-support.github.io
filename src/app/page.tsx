@@ -8,6 +8,7 @@ import { getHomepageAICatalogItems, getHomepageHeroCtas, getHomepageLiveNowItems
 import { allServices } from '@/app/data/servicesData';
 import LiveActivityFeed from './components/marketing/LiveActivityFeed';
 import ClientTestimonials from './components/marketing/ClientTestimonials';
+import ServiceComparisonTable from './components/ServiceComparisonTable';
 export default function Home() {
 
   return (
@@ -485,6 +486,51 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {/* ZION APPS NETWORK */}
+      <section className="container mx-auto px-4 mt-12">
+        <div className="rounded-2xl border border-slate-200 bg-slate-900 p-8 shadow-sm text-white">
+          <p className="text-xs font-semibold uppercase tracking-wide text-sky-400">Zion Apps Network</p>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl">48 production AI apps, one interlinked network</h2>
+          <p className="mt-3 max-w-3xl text-slate-300">
+            Explore live, in-browser AI apps built by Zion Tech Group — autonomous agents, voice AI, security &amp; governance,
+            FinOps, growth, field operations and developer tools. Every app is free to try and backed by our enterprise services.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <a href="/zion-ai-agent-builder/" className="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:border-sky-400">
+              <h3 className="font-semibold text-sky-300">Zion AI Agent Builder</h3>
+              <p className="mt-1 text-sm text-slate-400">No-code AI agent design studio.</p>
+            </a>
+            <a href="/voice-agent-studio/" className="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:border-sky-400">
+              <h3 className="font-semibold text-sky-300">Voice Agent Studio</h3>
+              <p className="mt-1 text-sm text-slate-400">AI voice agents for calls &amp; IVR.</p>
+            </a>
+            <a href="/prompt-shield/" className="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:border-sky-400">
+              <h3 className="font-semibold text-sky-300">Prompt Shield</h3>
+              <p className="mt-1 text-sm text-slate-400">LLM security testing &amp; prompt-injection defense.</p>
+            </a>
+            <a href="/ai-finops-suite/" className="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:border-sky-400">
+              <h3 className="font-semibold text-sky-300">AI FinOps Suite</h3>
+              <p className="mt-1 text-sm text-slate-400">Optimize cloud and AI costs.</p>
+            </a>
+            <a href="/churn-radar/" className="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:border-sky-400">
+              <h3 className="font-semibold text-sky-300">Churn Radar</h3>
+              <p className="mt-1 text-sm text-slate-400">Customer health scoring &amp; churn prediction.</p>
+            </a>
+            <a href="/zion-ai-code-reviewer/" className="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:border-sky-400">
+              <h3 className="font-semibold text-sky-300">AI Code Reviewer</h3>
+              <p className="mt-1 text-sm text-slate-400">Automated PR review and security linting.</p>
+            </a>
+          </div>
+          <p className="mt-6 text-sm">
+            <a href="/apps/" className="font-semibold text-sky-400 underline underline-offset-4">Browse all 48 apps &rarr;</a>
+            &nbsp;&nbsp;
+            <a href="/discovery/" className="font-semibold text-sky-400 underline underline-offset-4">Book a $99 AI Discovery &rarr;</a>
+            &nbsp;&nbsp;
+            <a href="/en/plans/" className="font-semibold text-sky-400 underline underline-offset-4">Plans &amp; pricing &rarr;</a>
+          </p>
+        </div>
+      </section>
 
       {/* CONTACT CTA BANNER */}
       <Link href="/contact" className="mt-6 block">
