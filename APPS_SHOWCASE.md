@@ -90,5 +90,22 @@ Zion Tech Group builds and operates a growing constellation of **280+ AI-powered
 - [ai-language-tutor](https://ai-language-tutor.ziontechgroup.com) — Personalized language learning
 - …[see all](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
 
+## Master directory & field services suite
+
+- 🗂️ **Master directory (all 46+ apps, interlinked):** [Zion-support/zion-app-network](https://github.com/Zion-support/zion-app-network) · live hub: https://ziontechgroup.com/zion-app-network/ · apps hub: https://ziontechgroup.com/zion-apps-hub/
+- 🛠️ **Field Services Suite spotlight:** [quote → dispatch → survey → parts → warranty → RMA](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
+- ✨ **New apps spotlight (Contract Guardian & Energy Sentinel):** [docs](https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md)
+
+### Field services & hardware ops quick links
+| App | Link |
+|---|---|
+| Zion AI Quote Builder | https://ziontechgroup.com/zion-ai-quote-builder/ |
+| Zion AI Field Dispatch | https://ziontechgroup.com/zion-ai-field-dispatch/ |
+| Zion AI Site Survey Planner | https://ziontechgroup.com/zion-ai-site-survey-planner/ |
+| Zion AI Spare Parts Matcher | https://ziontechgroup.com/zion-ai-spare-parts-matcher/ |
+| Zion AI Warranty Tracker | https://ziontechgroup.com/zion-ai-warranty-tracker/ |
+| Zion AI RMA Tracker | https://ziontechgroup.com/zion-ai-rma-tracker/ |
+
+
 ---
 All apps are built by [Zion Tech Group](https://ziontechgroup.com). Full interlinked index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
