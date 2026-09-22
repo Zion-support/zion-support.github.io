@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import PageShell from '@/components/PageShell';
+import HubCards from '@/components/HubCards';
 
 export const metadata = {
   title: 'FAQ | Zion Tech Group',
-  description:
-    'Common questions about AI and IT services, engagement models, pricing, onboarding, support, security, and deployment timelines.',
+  description: 'Common questions about AI and IT services, engagement models, pricing, onboarding, support, security, and deployment timelines.',
   openGraph: {
     title: 'FAQ | Zion Tech Group',
-    description:
-      'Common questions about AI and IT services, timing, security, pricing, and onboarding.',
+    description: 'Common questions about AI and IT services, timing, security, pricing, and onboarding.',
     url: 'https://ziontechgroup.com/faq/',
     siteName: 'Zion Tech Group',
     type: 'website',
@@ -18,54 +17,34 @@ export const metadata = {
 };
 
 const faqs = [
-  {
-    q: 'How fast can you start?',
-    a: 'Most engagements begin within 7 days. Managed services and advisory work can onboard faster if the scope is clear.',
-  },
-  {
-    q: 'Do you support HIPAA and compliance regimes?',
-    a: 'Yes. We design delivery with privacy-first controls and can support compliance evidence packages and operational requirements.',
-  },
-  {
-    q: 'What does managed AI include?',
-    a: 'Monitoring, cost controls, model updates, observability, performance tuning, and incident response for production AI systems.',
-  },
-  {
-    q: 'How do you price engagements?',
-    a: 'We use time-and-materials, fixed-price, and retainer models. After a short scoping call, we return a proposal with clear cost structure and milestones.',
-  },
+  { title: 'How fast can you start?', body: 'Most engagements begin within 7 days. Advisory and managed work can start sooner when the scope is already written down.' },
+  { title: 'Do you support HIPAA and other regimes?', body: 'Yes. We design with privacy-first controls and can support evidence packages for HIPAA, SOC 2, and similar operational requirements.' },
+  { title: 'What does managed AI include?', body: 'Monitoring, cost controls, model updates, observability, performance tuning, and incident response for systems already in production.' },
+  { title: 'How do you price work?', body: 'Time-and-materials, fixed-price, or retainer. After a short scoping call we return a proposal with the model, milestones, and who does what.' },
+  { title: 'Do I need AI to work with you?', body: 'No. Many clients start with audits, managed IT, or cloud cleanup. We use AI when it shortens analysis or makes operations repeatable.' },
+  { title: 'Which clouds and tools do you integrate?', body: 'AWS, Azure, GCP, Kubernetes, GitHub, common ITSM/CRM/ERP stacks, and SIEM/EDR. Exact fit is confirmed in discovery.' },
+  { title: 'Which industries do you serve?', body: 'Healthcare, financial services, SaaS, logistics, media, energy, education, legal, manufacturing, and internal enterprise IT.' },
+  { title: 'What languages and hours?', body: 'English and Portuguese. Coverage is set per contract; email, Calendly, and Google Meet cover most pre-sales questions the same day.' },
 ];
 
 export default function FAQPage() {
   return (
     <PageShell
-      title="Frequently Asked Questions"
-      description="Straight answers about AI and IT services, pricing, onboarding, support, and what to expect from a Zion engagement."
+      title="Questions we hear before a kickoff"
+      description="Straight answers on timing, security, pricing, and what a Zion engagement actually includes."
       eyebrow="Help & FAQs"
-      eyebrowIcon="💬"
       align="center"
       canonical="https://ziontechgroup.com/faq/"
-      breadcrumbs={[
-        { label: 'Home', href: '/' },
-        { label: 'FAQ' },
-      ]}
       actions={
         <>
           <Link href="/contact/" className="btn-primary">Ask a question</Link>
-          <Link href="/services/" className="btn-secondary">Browse services</Link>
+          <Link href="/help/" className="btn-secondary">Open the help center</Link>
         </>
       }
-      ctaTitle="Still have questions?"
-      ctaDescription="Email or call us directly. Most questions get a detailed reply within one business hour."
+      ctaTitle="Still have a specific stack question?"
+      ctaDescription="Email or call. Most pre-sales questions get a detailed reply within one business hour."
     >
-      <div className="mx-auto grid max-w-4xl gap-6">
-        {faqs.map((item) => (
-          <div key={item.q} className="page-card">
-            <h2 className="mb-2 text-2xl font-bold text-white">{item.q}</h2>
-            <p className="leading-relaxed text-slate-300">{item.a}</p>
-          </div>
-        ))}
-      </div>
+      <HubCards items={faqs} columns={2} />
     </PageShell>
   );
 }

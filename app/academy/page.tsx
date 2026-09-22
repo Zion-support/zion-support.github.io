@@ -1,57 +1,68 @@
 import Link from 'next/link';
 import PageShell from '@/components/PageShell';
+import HubCards from '@/components/HubCards';
 
 export const metadata = {
   title: 'Academy | Zion Tech Group',
-  description: 'Learning paths for AI, cloud, security, and modern IT operations.',
+  description: 'Learning paths for AI, cloud, security, and modern IT operations from Zion Tech Group.',
   alternates: { canonical: '/academy/' },
 };
-
-const tracks = [
-  {
-    title: 'AI Basics',
-    body: 'Foundations for automation, agents, and assistive tooling.',
-    href: '/blog/ai-consulting-services-for-enterprise-it-in-2026/',
-    label: 'AI Consulting',
-  },
-  {
-    title: 'Cloud & Security',
-    body: 'Implement safer cloud and zero-trust architectures.',
-    href: '/services/zero-trust-network-access/',
-    label: 'Zero Trust Access',
-  },
-  {
-    title: 'Operations',
-    body: 'Reduce cost and improve reliability with observability.',
-    href: '/services/ai-document-processing/',
-    label: 'Document Processing',
-  },
-];
 
 export default function Academy() {
   return (
     <PageShell
-      title="Academy"
-      description="Practical courses and guides for implementing AI and IT services — written for operators who need production outcomes."
-      eyebrow="Learn"
+      title="Learn what we actually deploy"
+      description="Short paths for operators who need production outcomes — not a 40-hour course that never reaches a ticket queue."
+      eyebrow="Academy"
       align="center"
       canonical="https://ziontechgroup.com/academy/"
-      breadcrumbs={[
-        { label: 'Home', href: '/' },
-        { label: 'Academy' },
-      ]}
+      actions={
+        <>
+          <Link href="/blog/" className="btn-primary">Browse guides</Link>
+          <Link href="/contact/" className="btn-secondary">Ask for a workshop</Link>
+        </>
+      }
     >
-      <div className="grid gap-6 md:grid-cols-3">
-        {tracks.map((track) => (
-          <div key={track.title} className="page-card">
-            <h2 className="text-xl font-semibold text-white">{track.title}</h2>
-            <p className="mt-2 text-sm text-slate-400">{track.body}</p>
-            <Link href={track.href} className="mt-4 inline-block text-sm font-semibold text-purple-300 hover:text-purple-200">
-              {track.label} →
-            </Link>
-          </div>
-        ))}
-      </div>
+      <HubCards
+        items={[
+          {
+            title: 'AI delivery',
+            body: 'Agents, document intelligence, and assistive tooling — how to pick a first use case and keep it in production.',
+            href: '/blog/ai-consulting-services-for-enterprise-it-in-2026/',
+            tags: ['AI', 'Automation'],
+          },
+          {
+            title: 'Cloud and FinOps',
+            body: 'Rightsizing, reserved capacity, and anomaly detection so cloud spend stays explainable.',
+            href: '/blog/ai-finops-and-cloud-cost-optimization-with-machine-learning/',
+            tags: ['Cloud', 'FinOps'],
+          },
+          {
+            title: 'Security operations',
+            body: 'Alert triage, threat enrichment, and MSP-ready reporting without adding another console.',
+            href: '/blog/ai-cybersecurity-operations-for-msp/',
+            tags: ['Security', 'MSP'],
+          },
+          {
+            title: 'IT operations',
+            body: 'Incident response, service desk, and change risk — the workflows that eat the week.',
+            href: '/blog/ai-for-it-incident-management-and-response/',
+            tags: ['Operations'],
+          },
+          {
+            title: 'Document automation',
+            body: 'Ingestion, extraction, validation, and routing for invoices, contracts, and claims.',
+            href: '/blog/ai-document-processing/',
+            tags: ['Data', 'Automation'],
+          },
+          {
+            title: 'Free tools',
+            body: 'Formatters, JWT inspection, and readiness checks you can run in the browser.',
+            href: '/tools/',
+            tags: ['Tools'],
+          },
+        ]}
+      />
     </PageShell>
   );
 }

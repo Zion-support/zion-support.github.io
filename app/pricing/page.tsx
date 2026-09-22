@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import PageShell from '@/components/PageShell';
+import HubCards from '@/components/HubCards';
 
 export const metadata = {
   title: 'Pricing | Zion Tech Group',
-  description:
-    'Flexible pricing and engagement models for AI and IT services, with transparent cost structures, payment terms, and ROI expectations.',
+  description: 'Flexible pricing and engagement models for AI and IT services, with transparent cost structures, payment terms, and ROI expectations.',
   openGraph: {
     title: 'Pricing | Zion Tech Group',
-    description:
-      'Flexible pricing and engagement models for AI and IT services, with transparent cost structures and ROI expectations.',
+    description: 'Flexible pricing and engagement models for AI and IT services, with transparent cost structures and ROI expectations.',
     url: 'https://ziontechgroup.com/pricing/',
     siteName: 'Zion Tech Group',
     type: 'website',
@@ -17,51 +16,54 @@ export const metadata = {
   alternates: { canonical: '/pricing/' },
 };
 
-const models = [
-  {
-    title: 'Time and Materials',
-    body: 'Hourly or daily rates for staffing, advisory, and iterative delivery. Best for evolving scopes and fast engagement starts.',
-  },
-  {
-    title: 'Fixed Price',
-    body: 'Scoped deliverables with milestone payments and acceptance criteria. Best for well-defined outcomes and predictable budgets.',
-  },
-  {
-    title: 'Retainer',
-    body: 'Ongoing managed services with predictable monthly spend and SLA terms. Best for continuous improvement and support coverage.',
-  },
-];
-
 export default function PricingPage() {
   return (
     <PageShell
-      title="Pricing & Engagement Models"
-      description="Flexible engagement models with transparent cost structures, payment terms, and ROI expectations — so you can scale AI and IT services predictably."
+      title="Pick a model, then we price the work"
+      description="No mystery retainers. You get a written model, a first milestone, and the number that belongs to that scope."
       eyebrow="Transparent Pricing"
-      eyebrowIcon="💎"
       align="center"
       canonical="https://ziontechgroup.com/pricing/"
-      breadcrumbs={[
-        { label: 'Home', href: '/' },
-        { label: 'Pricing' },
-      ]}
       actions={
         <>
-          <a href="mailto:kleber@ziontechgroup.com" className="btn-primary">Email for pricing</a>
-          <Link href="/contact/" className="btn-secondary">Request proposal</Link>
+          <Link href="/contact/" className="btn-primary">Request a proposal</Link>
+          <Link href="/sla/" className="btn-secondary">Read SLA terms</Link>
         </>
       }
-      ctaTitle="Ready for a transparent cost model?"
-      ctaDescription="Share your scope and constraints. We will return a tailored proposal with pricing model, timeline, team, and estimated ROI."
+      ctaTitle="Need a number for your scope?"
+      ctaDescription="Share systems, outcome, and deadline. We return a model, team shape, timeline, and estimated ROI."
     >
-      <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
-        {models.map((model) => (
-          <div key={model.title} className="page-card">
-            <h2 className="mb-2 text-2xl font-bold text-white">{model.title}</h2>
-            <p className="leading-relaxed text-slate-300">{model.body}</p>
-          </div>
-        ))}
-      </div>
+      <HubCards
+        items={[
+          {
+            title: 'Time and materials',
+            body: 'Hourly or daily rates for advisory and evolving builds. Best when the problem is clear but the path will change.',
+            meta: 'Typical start: discovery week',
+          },
+          {
+            title: 'Fixed price',
+            body: 'Scoped deliverables, milestone payments, and acceptance criteria. Best when the outcome and systems are already known.',
+            meta: 'Typical start: written SOW',
+          },
+          {
+            title: 'Retainer',
+            body: 'Monthly managed coverage with an SLA. Best for monitoring, cost control, and a named team that already knows the stack.',
+            meta: 'Typical start: 30-day onboarding',
+          },
+        ]}
+      />
+      <section className="mt-12">
+        <h2 className="mb-6 text-2xl font-semibold text-white">What every proposal includes</h2>
+        <HubCards
+          columns={2}
+          items={[
+            { title: 'Scope you can defend', body: 'In and out of scope, systems touched, and the first production milestone.' },
+            { title: 'Who does the work', body: 'Named roles, not a generic “blended team” line.' },
+            { title: 'Commercials', body: 'Model, payment terms, and what happens if the scope moves.' },
+            { title: 'Risk', body: 'Dependencies, access we need, and how incidents are handled after go-live.' },
+          ]}
+        />
+      </section>
     </PageShell>
   );
 }

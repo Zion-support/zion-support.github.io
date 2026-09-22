@@ -1,6 +1,5 @@
-'use client';
-
 import Link from 'next/link';
+import PageShell from '@/components/PageShell';
 
 export const metadata = {
   title: 'Case Studies | Zion Tech Group',
@@ -143,38 +142,20 @@ const studies = [
 
 export default function CaseStudies() {
   return (
-    <main className="min-h-screen bg-slate-950">
-      <div className="container-page py-20">
-        <nav aria-label="Breadcrumb" className="hidden">
-          <span>Home</span>
-          <span>Case Studies</span>
-        </nav>
-
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-6">
-            <span className="text-xs">📈</span>
-            <span className="text-xs text-emerald-300 font-medium uppercase tracking-wider">Proven Business Outcomes</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Client <span className="gradient-text">Case Studies</span>
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Real enterprise transformations — measurable ROI, implementation timelines, and the lessons we carried forward.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mt-6">
-            <a href="mailto:kleber@ziontechgroup.com" className="btn-primary text-lg px-8 py-3">Email for similar results</a>
-            <a href="/contact/" className="btn-secondary text-lg px-8 py-3">Request proposal</a>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm text-slate-400">
-            <span className="text-white font-semibold">4.8/5</span><span>Client rating</span>
-            <span>•</span>
-            <span>24h</span><span>Response</span>
-            <span>•</span>
-            <span>US-Based</span><span>Delivery</span>
-          </div>
-        </div>
-
-        <div className="grid gap-10 max-w-5xl mx-auto">
+    <PageShell
+      title="Client case studies"
+      description="Measurable ROI, timelines, and the lessons we carried forward — written after the system was in production."
+      eyebrow="Proven outcomes"
+      align="center"
+      canonical="https://ziontechgroup.com/case-studies/"
+      actions={
+        <>
+          <Link href="/contact/" className="btn-primary">Request similar results</Link>
+          <Link href="/testimonials/" className="btn-secondary">Read testimonials</Link>
+        </>
+      }
+    >
+      <div className="grid gap-10">
           {studies.map((study) => (
             <article
               key={study.slug}
@@ -250,23 +231,6 @@ export default function CaseStudies() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center gap-4 rounded-2xl border border-purple-500/30 bg-purple-900/20 px-8 py-10">
-            <h3 className="text-3xl font-bold text-white">Ready for similar results?</h3>
-            <p className="text-slate-300 max-w-2xl">
-              Tell us your goal and we’ll design a tailored engagement plan — including estimated ROI, timeline, and team allocation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/contact/" className="btn-primary text-lg px-10 py-4">
-                ⚡ Get Your Custom Proposal →
-              </Link>
-              <Link href="/contact/" className="btn-secondary text-lg px-10 py-4">
-                Talk to an Engineer
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    </PageShell>
   );
 }

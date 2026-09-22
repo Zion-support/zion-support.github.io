@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import PageShell from '@/components/PageShell';
+import ContactChannels from '@/components/ContactChannels';
 
 const FAQ_ITEMS = [
   {
@@ -38,13 +39,6 @@ const QUICK_TOPICS = [
   { title: 'All Free Tools', href: '/free-tools/', desc: 'Developer utilities, security scanners, and formatter tools at no cost.' },
 ];
 
-const CONTACTS = [
-  { label: 'Call', value: '+1 302 464 0950', href: 'tel:+13024640950', icon: '📞' },
-  { label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com?subject=Zion%20Help%20Inquiry', icon: '✉️' },
-  { label: 'Calendly', value: 'Book 30 min', href: 'https://calendly.com/kleber-ziontechgroup', icon: '📅' },
-  { label: 'Meet', value: 'Join meeting', href: 'https://meet.google.com/ouu-khao-kuy', icon: '🗓️' },
-];
-
 export default function HelpPage() {
   const [open, setOpen] = useState<string | null>(null);
   const [q, setQ] = useState('');
@@ -69,16 +63,8 @@ export default function HelpPage() {
       showCta={false}
     >
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            {CONTACTS.map((c) => (
-              <a key={c.label} href={c.href} target="_blank" rel="noreferrer" className="flex items-start gap-3 p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-purple-500/40 transition-all">
-                <span className="text-xl leading-none">{c.icon}</span>
-                <div className="min-w-0">
-                  <div className="text-xs text-slate-400">{c.label}</div>
-                  <div className="text-sm font-medium text-white truncate">{c.value}</div>
-                </div>
-              </a>
-            ))}
+          <div className="mb-12">
+            <ContactChannels />
           </div>
 
           <div className="mb-8">

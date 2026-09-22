@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PageShell from '@/components/PageShell';
+import HubCards from '@/components/HubCards';
 
 export const metadata = {
   title: 'About Zion Tech Group | AI & IT Company',
@@ -14,25 +15,14 @@ export const metadata = {
   alternates: { canonical: '/about/' },
 };
 
-const cards = [
-  { title: 'Mission', body: 'Make enterprise AI reliable, measurable, and easy to run.' },
-  { title: 'Approach', body: 'Outcome-first delivery, accountable milestones, and real production systems.' },
-  { title: 'Clients', body: 'Business-to-business engagements across mid-market and enterprise.' },
-  { title: 'Capability', body: 'AI, cloud, security, data, automation, DevOps, and IT operations.' },
-];
-
 export default function AboutPage() {
   return (
     <PageShell
       title="About Zion Tech Group"
-      description="Zion Tech Group designs and builds AI-driven systems for enterprises that need reliable automation, secure infrastructure, and measurable ROI. We operate across AI services, IT delivery, cloud, security, data, and automation."
+      description="We design and run AI-driven systems for teams that need reliable automation, secure infrastructure, and a number they can defend in a board meeting."
       eyebrow="Company"
       align="center"
       canonical="https://ziontechgroup.com/about/"
-      breadcrumbs={[
-        { label: 'Home', href: '/' },
-        { label: 'About' },
-      ]}
       actions={
         <>
           <Link href="/contact/" className="btn-primary">Talk to an engineer</Link>
@@ -40,14 +30,29 @@ export default function AboutPage() {
         </>
       }
     >
-      <div className="grid gap-6 sm:grid-cols-2">
-        {cards.map((card) => (
-          <div key={card.title} className="page-card">
-            <h2 className="text-lg font-semibold text-white">{card.title}</h2>
-            <p className="mt-2 text-sm text-slate-400">{card.body}</p>
+      <div className="mb-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+        {[
+          ['B2B', 'Mid-market and enterprise'],
+          ['US + BR', 'English and Portuguese'],
+          ['7 days', 'Typical start window'],
+          ['4.8/5', 'Client rating'],
+        ].map(([stat, label]) => (
+          <div key={stat} className="page-card text-center">
+            <div className="text-2xl font-bold text-white">{stat}</div>
+            <div className="mt-1 text-xs uppercase tracking-wider text-slate-500">{label}</div>
           </div>
         ))}
       </div>
+      <HubCards
+        items={[
+          { title: 'Mission', body: 'Make enterprise AI reliable, measurable, and easy to operate after the demo ends.' },
+          { title: 'Approach', body: 'Outcome-first delivery: named owner, written milestones, and production systems — not slideware.' },
+          { title: 'Clients', body: 'Operators in healthcare, finance, SaaS, logistics, and internal IT who need a partner that can ship.' },
+          { title: 'Capability', body: 'AI, cloud, security, data, automation, DevOps, and managed IT — assembled around the problem, not a catalog slot.' },
+          { title: 'How we start', body: 'A short discovery call, then a proposal with scope, cost model, and the first milestone.', href: '/contact/' },
+          { title: 'How we prove it', body: 'Public case studies and a written plan before you commit to a retainer.', href: '/case-studies/' },
+        ]}
+      />
     </PageShell>
   );
 }

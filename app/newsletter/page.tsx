@@ -1,28 +1,42 @@
 import Link from 'next/link';
+import PageShell from '@/components/PageShell';
+import ContactInquiryForm from '@/components/ContactInquiryForm';
+import HubCards from '@/components/HubCards';
 
 export const metadata = {
   title: 'Newsletter | Zion Tech Group',
-  description: 'Subscribe to our newsletter for AI insights, tech trends, and product updates.',
+  description: 'A short monthly briefing on AI delivery, IT operations, and what Zion is shipping.',
+  alternates: { canonical: '/newsletter/' },
 };
 
-export default function Page() {
+export default function NewsletterPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-4">Newsletter</h1>
-        <p className="text-slate-400 text-lg mb-8">Subscribe to our newsletter for AI insights, tech trends, and product updates.</p>
-        <div className="flex flex-wrap gap-4">
-        <Link href="/contact" className="text-emerald-400 hover:text-emerald-300 underline">Contact Us</Link>
-        </div>
-        <div className="mt-12 p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
-          <h2 className="text-xl font-semibold text-white mb-3">Get Started Today</h2>
-          <p className="text-slate-400 mb-4">Contact our team for a free consultation.</p>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <a href="tel:+13024640950" className="text-emerald-400">📞 +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-emerald-400">✉️ kleber@ziontechgroup.com</a>
-          </div>
-        </div>
+    <PageShell
+      title="A short briefing, not a blast"
+      description="One note a month: what we shipped, what broke in the field, and which AI or IT move is actually worth the budget."
+      eyebrow="Newsletter"
+      align="center"
+      canonical="https://ziontechgroup.com/newsletter/"
+      actions={
+        <>
+          <Link href="/blog/" className="btn-primary">Read the blog</Link>
+          <Link href="/contact/" className="btn-secondary">Talk to us instead</Link>
+        </>
+      }
+      showCta={false}
+    >
+      <div className="grid gap-8 lg:grid-cols-2">
+        <ContactInquiryForm mode="newsletter" heading="Subscribe" />
+        <HubCards
+          columns={2}
+          items={[
+            { title: 'What you get', body: 'A field note on delivery, cost, or risk — plus one service or tool you can use the same week.' },
+            { title: 'What you will not get', body: 'No partner recaps, no purchased lists, no weekly drip. Unsubscribe from any email.' },
+            { title: 'Also useful', body: 'The blog keeps the longer guides. Case studies keep the numbers.', href: '/blog/' },
+            { title: 'Prefer a human', body: 'Send a project brief and we will reply with a plan, not a newsletter sequence.', href: '/contact/' },
+          ]}
+        />
       </div>
-    </main>
+    </PageShell>
   );
 }

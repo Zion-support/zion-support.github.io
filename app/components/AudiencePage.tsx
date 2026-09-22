@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PageShell from './PageShell';
+import HubCards from './HubCards';
 
 export type AudiencePageProps = {
   title: string;
@@ -28,14 +29,7 @@ export default function AudiencePage({ title, description, eyebrow, path, cards 
         </>
       }
     >
-      <div className="grid gap-6 md:grid-cols-3">
-        {cards.map((card) => (
-          <div key={card.title} className="page-card">
-            <h2 className="text-xl font-semibold text-white">{card.title}</h2>
-            <p className="mt-2 text-sm text-slate-400">{card.body}</p>
-          </div>
-        ))}
-      </div>
+      <HubCards items={cards} />
     </PageShell>
   );
 }
