@@ -11375,6 +11375,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/cloud-finops-cost-optimization</loc>
+<lastmod>2026-09-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/cloud-migration-agriculture-e723915b</loc>
 <lastmod>2026-09-22</lastmod>
 <changefreq>monthly</changefreq>
@@ -25855,6 +25860,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/it-service-desk-automation</loc>
+<lastmod>2026-09-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/it-services</loc>
 <lastmod>2026-09-22</lastmod>
 <changefreq>monthly</changefreq>
@@ -34381,6 +34391,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/quantum-ready-zero-trust-travel-analytics-35de6266</loc>
+<lastmod>2026-09-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/robotic-process-automation</loc>
 <lastmod>2026-09-22</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -109061,11 +109076,6 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/it-service-desk</loc>
-<lastmod>2026-09-22</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-  <url><loc>https://ziontechgroup.com/services/it-service-desk-automation</loc>
 <lastmod>2026-09-22</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>

@@ -110,4 +110,67 @@ assert_money_path services/ai-automation/index.html
 assert_money_path plans/index.html
 assert_money_path discovery/index.html
 
+# P0 2026-09-21: reject the broken Next.js homepage shell and require sealed
+# commercial markers before any Pages publish. Does not touch field-services.
+assert_family_a_home() {
+  local f="out/index.html"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing out/index.html" >&2
+    exit 1
+  fi
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -gt 80000 ]; then
+    echo "ERROR: out/index.html is ${sz}B — Next.js shell, not Family A static" >&2
+    exit 1
+  fi
+  if grep -Fq '/_next/' "$f"; then
+    echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'Discovery $99' "$f"; then
+    echo "ERROR: out/index.html missing Family A marker Discovery \$99" >&2
+    exit 1
+  fi
+  if ! grep -Fq '/assets/css/site.css' "$f"; then
+    echo "ERROR: out/index.html missing /assets/css/site.css" >&2
+    exit 1
+  fi
+  echo "OK Family A homepage (${sz}B)"
+}
+
+assert_mit_fgv() {
+  local f="out/managed-it-services/index.html"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing out/managed-it-services/index.html" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'proof-fgv' "$f"; then
+    echo "ERROR: out/managed-it-services/index.html missing #proof-fgv" >&2
+    exit 1
+  fi
+  if ! grep -Fq 'SDCOMPRASTIC-6963' "$f"; then
+    echo "ERROR: out/managed-it-services/index.html missing SDCOMPRASTIC-6963" >&2
+    exit 1
+  fi
+  echo "OK MIT FGV proof"
+}
+
+assert_aaa_official_ladder() {
+  local f="out/autonomous-ai-agents/index.html"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing out/autonomous-ai-agents/index.html" >&2
+    exit 1
+  fi
+  if grep -Fq '$6,500' "$f"; then
+    echo "ERROR: out/autonomous-ai-agents/index.html contains invented \$6,500 SKU" >&2
+    exit 1
+  fi
+  echo "OK AAA official ladder"
+}
+
+assert_family_a_home
+assert_mit_fgv
+assert_aaa_official_ladder
+
 echo "Prepared out ($(find out -type f | wc -l) files)"

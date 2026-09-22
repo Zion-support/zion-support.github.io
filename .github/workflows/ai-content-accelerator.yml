@@ -1,7 +1,7 @@
 # AI Content Accelerator - High-Throughput Off-Peak Runs
 # Runs 2x daily (1 AM, 14 UTC) with maximum template content creation.
 # Fills gaps between burst/rapid/velocity for fastest possible content growth.
-# Uses content-commit concurrency to avoid parallel commits.
+# Uses content-commit concurbency to avoid parallel commits.
 
 name: AI Content Accelerator
 
@@ -50,12 +50,26 @@ jobs:
     timeout-minutes: 25
     env:
       NEXT_TELEMETRY_DISABLED: "1"
-      NODE_OPTIONS: '--max-old-space-size=4096'
+      NODE_OPTIONS: '--max-old-space-size=8192'
       NEXT_BUILD_WORKER_COUNT: 1
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           token: ${{ github.token }}
+
+      - name: Add swap space (mitigate Next.js build OOM)
+        run: |
+          if swapon --show=NAME --noheadings | grep -qx '/swapfile'; then
+            echo "swap already active, skipping"
+          else
+            if [ ! -f /swapfile ]; then
+              sudo fallocate -l 8G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=8192
+            fi
+            sudo chmod 600 /swapfile
+            sudo mkswap /swapfile || true
+            sudo swapon /swapfile || true
+          fi
+          free -h
 
       - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:

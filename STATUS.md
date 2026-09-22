@@ -18,11 +18,3 @@
 - 37eee93559 Update STATUS.md [Hermes Monitor]
 
 ## Escalation checks
-- Site down: NO (200 OK)
-- Commits >5 since last run: NO (5, threshold is >5)
-- Sitemap >2h old: NO (8 min)
-
-## Notes
-- servicesData.json at app/data/servicesData.json contains 84 curated entries
-- Full catalog represented in app/services/ (17749 dirs) and sitemap (17775 service URLs)
-- Telegram auto-delivery configured via HERMES_CRON_AUTO_DELIVER_PLATFORM=telegram
