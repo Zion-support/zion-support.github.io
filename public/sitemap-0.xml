@@ -2,6 +2,21 @@
 <!-- Commercial sitemap-0. Field-services: hub + brazil only. No hashed /services/* orphans. EN commercial hubs included. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://ziontechgroup.com/</loc><lastmod>2026-09-18</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://ziontechgroup.com/apps/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+<url><loc>https://ziontechgroup.com/apps/playbook/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/roi-calc/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/sla-calculator/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/token-cost/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/incident-cost/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/finops-estimator/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/ai-governance-checklist/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/stack-audit/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/rfp-readiness/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/prompt-library/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/agent-brief/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/edital-desk/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/patch-window/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://ziontechgroup.com/tools/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/about/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/ai-consulting-services/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/autonomous-ai-agents/</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>

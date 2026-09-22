@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RFP readiness · Zion Tech Group</title>
+<meta name="description" content="Eight-check score for an edital, RFQ or TR before you bid. Links to Edital desk and Discovery $99. No invented prices.">
+<link rel="canonical" href="https://ziontechgroup.com/rfp-readiness/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:flex;gap:10px;margin:10px 0;color:var(--ink)}
+.btn{display:inline-block;margin-top:12px;border:0;cursor:pointer;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;text-decoration:none}
+.result{font-size:1.35rem;font-weight:800;color:var(--accent);margin-top:10px}
+.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav></nav>
+<h1>RFP / edital readiness</h1>
+<p class="muted">Score the packet. Then write the brief in <a href="/edital-desk/">Edital desk</a>. Never invent hardware price, SLA or CPF.</p>
+<div class="card" id="q"></div>
+<div class="card"><div id="out"></div>
+<p class="muted">Official menu: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>
+<p><a class="btn" href="/edital-desk/">Open Edital desk</a> <a class="btn" href="/discovery/">Discovery $99</a></p>
+</div>
+<h2>More from the network</h2>
+<div class="grid" data-apps-related></div>
+</div>
+<script>
+var qs=['Objeto is written without a price.','Prazo / abertura is on a calendar.','Visit or sample is confirmed or marked N/A.','Guarantee / SLA language exists (even if we will not invent hours).','Documents list is complete (PDF, planilha, Atestado).','Named commercial owner (Carlos lane, not a ghost SKU).','No colliding CNAME / vapor subdomain in the packet.','Next step is Discovery or a written quote request — not a fifth price.'];
+var box=document.getElementById('q');
+box.innerHTML=qs.map(function(t){return '<label><input type="checkbox"> '+t+'</label>';}).join('')+'<button class="btn" type="button" id="go">Score</button>';
+document.getElementById('go').onclick=function(){
+  var n=box.querySelectorAll('input:checked').length;
+  var rec='Discovery $99 — map the gaps before a week of writing.';
+  if(n>=7) rec='Packet is bid-ready. Use Edital desk, then Contact. Still no invented unit prices.';
+  else if(n>=4) rec='Consulting $499 if the objeto is real but the packet is thin. Otherwise Discovery first.';
+  document.getElementById('out').innerHTML='<div class="result">'+n+'/8 ready</div><p class="muted">'+rec+'</p>';
+};
+</script>
+<script src="/assets/js/apps-network.js" defer></script>
+</body>
+</html>

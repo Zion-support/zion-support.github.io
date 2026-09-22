@@ -3,35 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Apps · Zion Tech Group</title>
+<title>Apps network · Zion Tech Group</title>
+<meta name="description" content="Working HTTPS tools on ziontechgroup.com: ROI, SLA, token cost, FinOps, governance, stack audit, prompts, agent brief, edital desk and patch windows. Official menu only.">
 <link rel="canonical" href="https://ziontechgroup.com/apps/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
 *{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
 .wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
-.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700}
+h1{margin:12px 0 8px}h2{margin:28px 0 10px;font-size:1.2rem}h3{margin:0 0 8px;font-size:1.05rem}
+.muted{color:var(--muted)}.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700}
+.kicker{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:#9aa8bd;font-weight:800}
 </style>
 </head>
 <body>
 <div class="wrap">
-<p><a href="/">Zion Tech Group</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<nav class="apps-nav" data-apps-nav aria-label="Apps network"></nav>
 <h1>Working apps on this domain</h1>
-<p class="muted">HTTPS paths on the main site. Official menu: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo. No vapor subdomains.</p>
+<p class="muted">HTTPS paths on the main site. Official menu: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo. No vapor subdomains. <a href="/apps/catalog.json">Machine catalog</a> · <a href="/apps/playbook/">How the network fits a deal</a>.</p>
+
+<h2>Money &amp; spend</h2>
 <div class="grid">
-<article class="card"><h2>SLA calculator</h2><p>Uptime, downtime &amp; penalty math.</p><a class="btn" href="/sla-calculator/">Open /sla-calculator/</a></article>
-<article class="card"><h2>AI prompt library</h2><p>10 enterprise IT-ops prompts, copy-ready.</p><a class="btn" href="/prompt-library/">Open /prompt-library/</a></article>
-<article class="card"><h2>AI governance checklist</h2><p>Live readiness score, 10 controls.</p><a class="btn" href="/ai-governance-checklist/">Open /ai-governance-checklist/</a></article>
-<article class="card"><h2>ROI calculator</h2><p>Hours leaked vs official SKUs.</p><a class="btn" href="/roi-calc/">Open /roi-calc/</a></article>
-<article class="card"><h2>Agent brief</h2><p>One-pager for Discovery.</p><a class="btn" href="/agent-brief/">Open /agent-brief/</a></article>
-<article class="card"><h2>Stack audit</h2><p>Ten-check ops readiness.</p><a class="btn" href="/stack-audit/">Open /stack-audit/</a></article>
-<article class="card"><h2>FinOps estimator</h2><p>Existing cost sketch.</p><a class="btn" href="/finops-estimator/">Open /finops-estimator/</a></article>
-<article class="card"><h2>Discovery $99</h2><p>Map one process.</p><a class="btn" href="/discovery/">Open /discovery/</a></article>
-<article class="card"><h2>Official plans</h2><p>Stripe checkout.</p><a class="btn" href="/en/plans/">Open /en/plans/</a></article>
+<article class="card"><p class="kicker">Hours vs SKU</p><h3>ROI calculator</h3><p>How many hours leak each month, and which official plan covers them.</p><a class="btn" href="/roi-calc/">Open /roi-calc/</a></article>
+<article class="card"><p class="kicker">LLM envelope</p><h3>Token cost</h3><p>Monthly model spend from tokens/day. Use this before you buy an agent.</p><a class="btn" href="/token-cost/">Open /token-cost/</a></article>
+<article class="card"><p class="kicker">Cloud sketch</p><h3>FinOps estimator</h3><p>Compute, storage, egress and model lines you already pay. Not a quote.</p><a class="btn" href="/finops-estimator/">Open /finops-estimator/</a></article>
 </div>
-<p class="muted">network.ziontechgroup.com fails TLS hostname checks — do not send buyers there.</p>
+
+<h2>Ops &amp; incidents</h2>
+<div class="grid">
+<article class="card"><p class="kicker">Contract math</p><h3>SLA calculator</h3><p>Allowed downtime and penalty exposure for a written SLA.</p><a class="btn" href="/sla-calculator/">Open /sla-calculator/</a></article>
+<article class="card"><p class="kicker">Outage $</p><h3>Incident cost</h3><p>Revenue, users and hours down → a number you can take to Discovery.</p><a class="btn" href="/incident-cost/">Open /incident-cost/</a></article>
+<article class="card"><p class="kicker">Change nights</p><h3>Patch window</h3><p>How many maintenance nights a crew needs for a patch batch.</p><a class="btn" href="/patch-window/">Open /patch-window/</a></article>
 </div>
+
+<h2>Governance &amp; bid</h2>
+<div class="grid">
+<article class="card"><p class="kicker">AI controls</p><h3>AI governance</h3><p>Ten controls. Live score. Routes to Discovery or Consulting.</p><a class="btn" href="/ai-governance-checklist/">Open /ai-governance-checklist/</a></article>
+<article class="card"><p class="kicker">Ops readiness</p><h3>Stack audit</h3><p>Ten yes/no checks that pick the next official SKU.</p><a class="btn" href="/stack-audit/">Open /stack-audit/</a></article>
+<article class="card"><p class="kicker">Public bid</p><h3>RFP readiness</h3><p>Score an edital / RFQ before you spend a week on a packet.</p><a class="btn" href="/rfp-readiness/">Open /rfp-readiness/</a></article>
+</div>
+
+<h2>Worksheets</h2>
+<div class="grid">
+<article class="card"><p class="kicker">Copy-ready</p><h3>Prompt library</h3><p>Ten enterprise IT-ops prompts. Clipboard only. Nothing stored.</p><a class="btn" href="/prompt-library/">Open /prompt-library/</a></article>
+<article class="card"><p class="kicker">Discovery input</p><h3>Agent brief</h3><p>Process, owner, kill rule. Paste into Discovery.</p><a class="btn" href="/agent-brief/">Open /agent-brief/</a></article>
+<article class="card"><p class="kicker">RFQ brief</p><h3>Edital desk</h3><p>Órgão, objeto, lacunas. No invented hardware price.</p><a class="btn" href="/edital-desk/">Open /edital-desk/</a></article>
+</div>
+
+<h2>Commercial path</h2>
+<div class="grid">
+<article class="card"><h3>Discovery $99</h3><p>Map one process. Then decide build / wait / do-not-build.</p><a class="btn" href="/discovery/">Open /discovery/</a></article>
+<article class="card"><h3>Official plans</h3><p>Stripe checkout. Four SKUs. No fifth ladder.</p><a class="btn" href="/en/plans/">Open /en/plans/</a></article>
+<article class="card"><h3>Playbook</h3><p>Which tool to open first in a sales or ops conversation.</p><a class="btn" href="/apps/playbook/">Open /apps/playbook/</a></article>
+</div>
+
+<p class="muted">Also listed at <a href="/tools/">/tools/</a> and <a href="/free-ai-it-tools/">/free-ai-it-tools/</a>. <strong>network.ziontechgroup.com fails TLS hostname checks</strong> — do not send buyers there. The live network is this path.</p>
+</div>
+<script src="/assets/js/apps-network.js" defer></script>
 </body>
 </html>

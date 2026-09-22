@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Edital Desk · Zion Tech Group</title>
   <link rel="canonical" href="https://ziontechgroup.com/edital-desk/">
+  <link rel="stylesheet" href="/assets/css/apps-network.css">
   <style>
     :root { color-scheme: dark; }
     body { font-family: ui-sans-serif, system-ui, sans-serif; margin: 0; background: #0b1020; color: #e8eefc; }
@@ -19,7 +20,7 @@
 </head>
 <body>
 <main>
-  <nav><a href="/">Home</a> · <a href="/apps/">Apps</a> · <a href="/roi-calc/">ROI Calc</a> · <a href="/stack-audit/">Stack Audit</a> · <a href="/discovery/">Discovery $99</a> · <a href="/en/plans/">Plans</a></nav>
+  <nav class="apps-nav" data-apps-nav></nav>
   <h1>Edital Desk</h1>
   <p class="note">Checklist para RFQ / edital / TR. Não gera preço de hardware. Caminho: Discovery $99 → Consulting $499 → Starter / Growth.</p>
   <form id="f">
@@ -31,8 +32,11 @@
     <button type="submit">Gerar brief</button>
   </form>
   <pre id="out" hidden></pre>
-  <p><a href="/discovery/">Abrir Discovery $99</a> · <a href="mailto:commercial@ziontechgroup.com">commercial@</a></p>
+  <p><a href="/rfp-readiness/">RFP readiness</a> · <a href="/discovery/">Abrir Discovery $99</a> · <a href="mailto:commercial@ziontechgroup.com">commercial@</a></p>
+  <h2>More from the network</h2>
+  <div class="apps-grid" data-apps-related></div>
 </main>
+<script src="/assets/js/apps-network.js" defer></script>
 <script>
  document.getElementById('f').addEventListener('submit', function (e) {
    e.preventDefault();

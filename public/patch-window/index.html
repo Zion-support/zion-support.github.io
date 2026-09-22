@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patch window · Zion Tech Group</title>
+<meta name="description" content="Estimate how many maintenance nights a patch crew needs. Official Zion menu only.">
+<link rel="canonical" href="https://ziontechgroup.com/patch-window/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:block;margin:12px 0 4px;color:var(--muted);font-size:.9rem}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:var(--ink)}
+.btn{display:inline-block;margin-top:12px;border:0;cursor:pointer;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;text-decoration:none}
+.result{font-size:1.35rem;font-weight:800;color:var(--accent);margin-top:10px}
+.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav></nav>
+<h1>Patch window planner</h1>
+<p class="muted">Crew size × hours per host × hosts. Pair with <a href="/sla-calculator/">SLA</a> and <a href="/incident-cost/">incident cost</a> so the window is not fiction.</p>
+<div class="card">
+<label>Hosts to patch<input id="hosts" type="number" value="40" min="1"></label>
+<label>Hours per host (including verify)<input id="hph" type="number" value="0.5" min="0.1" step="0.1"></label>
+<label>Engineers on the window<input id="crew" type="number" value="2" min="1"></label>
+<label>Hours allowed per night<input id="night" type="number" value="4" min="1"></label>
+<button class="btn" type="button" onclick="run()">Plan</button>
+<div id="out"></div>
+</div>
+<p><a class="btn" href="/stack-audit/">Score the stack</a> <a class="btn" href="/discovery/">Discovery $99</a></p>
+<h2>More from the network</h2>
+<div class="grid" data-apps-related></div>
+</div>
+<script>
+function run(){
+  var hosts=+document.getElementById('hosts').value||0;
+  var hph=+document.getElementById('hph').value||0;
+  var crew=+document.getElementById('crew').value||1;
+  var night=+document.getElementById('night').value||1;
+  var hours=hosts*hph;
+  var nights=Math.ceil(hours/(crew*night));
+  var rec='Discovery $99 — name the owner, the freeze and the rollback.';
+  if(nights>=6) rec='Growth $8,000/mo if this is a recurring estate. Otherwise Consulting $499 to sequence the waves.';
+  else if(nights>=3) rec='Consulting $499 to write the waves, then Starter $2,500 for the first governed window.';
+  document.getElementById('out').innerHTML='<div class="result">'+nights+' night'+(nights===1?'':'s')+' · '+hours.toFixed(1)+' crew-hours</div><p class="muted">'+crew+' engineer(s) × '+night+' h/night. '+rec+'</p>';
+}
+run();
+</script>
+<script src="/assets/js/apps-network.js" defer></script>
+</body>
+</html>
