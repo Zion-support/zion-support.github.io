@@ -173,4 +173,37 @@ assert_family_a_home
 assert_mit_fgv
 assert_aaa_official_ladder
 
+# Legal pages must be real Family A documents, never self-redirect stubs.
+# Live /privacy/ and /terms/ shipped as location.href="/privacy/" loops.
+assert_legal_page() {
+  local rel="$1"
+  local marker="$2"
+  local f="out/$rel"
+  if [ ! -f "$f" ]; then
+    echo "ERROR: missing legal path out/$rel" >&2
+    exit 1
+  fi
+  local sz
+  sz=$(wc -c < "$f" | tr -d ' ')
+  if [ "$sz" -lt 1200 ]; then
+    echo "ERROR: out/$rel is stub-sized (${sz}B < 1200B)" >&2
+    exit 1
+  fi
+  if grep -Fq 'Redirecting...' "$f"; then
+    echo "ERROR: out/$rel is still a Redirecting stub" >&2
+    exit 1
+  fi
+  if ! grep -Fq "$marker" "$f"; then
+    echo "ERROR: out/$rel missing marker: $marker" >&2
+    exit 1
+  fi
+  echo "OK legal path out/$rel (${sz}B)"
+}
+
+assert_legal_page privacy/index.html 'Privacy Policy'
+assert_legal_page terms/index.html 'Terms of Service'
+assert_legal_page privacidade/index.html 'Privacidade'
+assert_legal_page termos/index.html 'Termos'
+node scripts/checks/public-page-health-check.cjs out
+
 echo "Prepared out ($(find out -type f | wc -l) files)"
