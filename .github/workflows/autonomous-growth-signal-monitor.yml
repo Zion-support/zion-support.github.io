@@ -13,6 +13,9 @@ concurrency:
     - cron: '15 */8 * * *'
   workflow_dispatch:
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   growth-signal:
     runs-on: ubuntu-latest

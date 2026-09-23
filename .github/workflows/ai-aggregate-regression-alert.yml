@@ -13,6 +13,9 @@ concurrency:
   group: ai-aggregate-regression-alert
   cancel-in-progress: false
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   alert:
     runs-on: ubuntu-latest
