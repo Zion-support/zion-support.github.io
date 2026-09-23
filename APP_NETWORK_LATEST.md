@@ -6,7 +6,7 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 
 - 🗂️ **Master directory (all apps, fully interlinked):** https://github.com/Zion-support/zion-app-network — live at https://ziontechgroup.com/zion-app-network/
 - 🧭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
-- 🏠 **Homepage:** https://ziontechgroup.com
+- 🌐 **Homepage:** https://ziontechgroup.com
 
 ## Just launched 🚀
 
@@ -14,6 +14,21 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - **[Zion AI Energy Sentinel](https://ziontechgroup.com/zion-ai-energy-sentinel/)** — data-center energy analytics: PUE tracking, thermal alerts, sustainability reporting. Pairs with [GreenCloud Optimizer](https://greencloud.ziontechgroup.com) and [Cloud Cost Navigator](https://cloud-cost.ziontechgroup.com). [Source](https://github.com/Zion-support/zion-ai-energy-sentinel)
 
 Details: https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md
+
+## New this week: SecOps & Reliability Suite expanded ⭐
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md)
+
+- **[Zion AI SSL Monitor](https://ziontechgroup.com/zion-ai-ssl-monitor/)** — certificate expiry, renewal automation, compliance reporting
+- **[Zion AI Incident Responder](https://ziontechgroup.com/zion-ai-incident-responder/)** — automated triage + runbook execution
+- **[AI Incident Timeline](https://ziontechgroup.com/ai-incident-timeline/)** — evidence-linked incident reconstruction
+- **[AI API Health Monitor](https://ziontechgroup.com/ai-api-health-monitor/)** — uptime, latency & contract-drift monitoring
+- **[AI Backup Integrity](https://ziontechgroup.com/ai-backup-integrity/)** — verified, restorable backups
+- **[Zion AI Compliance Scanner](https://ziontechgroup.com/zion-ai-compliance-scanner/)** — continuous compliance evidence
+- **[Zion AI Cost Optimizer](https://ziontechgroup.com/zion-ai-cost-optimizer/)** — cut cloud waste 20–40%
+- **[Zion AI Drift Detector](https://ziontechgroup.com/zion-ai-drift-detector/)** — infra, config, model & data drift
+- **[Zion AI Service Catalog](https://ziontechgroup.com/zion-ai-service-catalog/)** — living service catalog
+- **[AI Offboarding Checker](https://ziontechgroup.com/ai-offboarding-checker/)** — provable access revocation
 
 ## Field Services Suite
 The complete AI toolchain for IT field services — quote → dispatch → survey → parts → warranty → RMA:
@@ -36,4 +51,4 @@ Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md)
