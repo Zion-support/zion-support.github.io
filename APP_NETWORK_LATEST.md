@@ -15,6 +15,16 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 
 Details: https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md
 
+## New: Everyday AI Apps spotlight ✨
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md](APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md) — free apps anyone can use, live demos of our enterprise AI:
+
+- **[AI Resume Builder](https://zion-support.github.io/ai-resume-builder/)** — ATS-optimized CVs & cover letters
+- **[AI Supply Chain Optimizer](https://zion-support.github.io/ai-supply-chain/)** — demand forecasting & supplier risk
+- **[AI Social Media Manager](https://zion-support.github.io/ai-social-manager/)** — scheduling, AI captions, analytics
+- **[AI Weather Forecast](https://zion-support.github.io/ai-weather-forecast/)** — hyperlocal predictions & alerts
+- **[AI Recipe Generator](https://zion-support.github.io/ai-recipe-generator/)** — meal planning assistant
+
 ## New this week: Developer & SRE Tools Suite 🛠️
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) — eight free utilities, no signup:
@@ -82,4 +92,4 @@ Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md](APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md)
