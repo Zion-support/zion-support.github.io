@@ -8,9 +8,14 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 🧭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🏠 **Homepage:** https://ziontechgroup.com
 
-## New & featured
+## Just launched 🚀
 
-### Field Services Suite
+- **[Zion AI Contract Guardian](https://ziontechgroup.com/zion-ai-contract-guardian/)** — AI contract review: clause extraction, SLA verification, renewal alerts. Pairs with [Quote Builder](https://ziontechgroup.com/zion-ai-quote-builder/) and [SLA Breach Sentinel](https://ziontechgroup.com/zion-ai-sla-breach-sentinel/). [Source](https://github.com/Zion-support/zion-ai-contract-guardian)
+- **[Zion AI Energy Sentinel](https://ziontechgroup.com/zion-ai-energy-sentinel/)** — data-center energy analytics: PUE tracking, thermal alerts, sustainability reporting. Pairs with [GreenCloud Optimizer](https://greencloud.ziontechgroup.com) and [Cloud Cost Navigator](https://cloud-cost.ziontechgroup.com). [Source](https://github.com/Zion-support/zion-ai-energy-sentinel)
+
+Details: https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md
+
+## Field Services Suite
 The complete AI toolchain for IT field services — quote → dispatch → survey → parts → warranty → RMA:
 
 - [Zion AI Quote Builder](https://ziontechgroup.com/zion-ai-quote-builder/)
@@ -23,13 +28,7 @@ The complete AI toolchain for IT field services — quote → dispatch → surve
 
 Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md
 
-### Coming soon
-- **Zion AI Contract Guardian** — AI contract review: clause extraction, SLA verification, renewal alerts. Pairs with [Quote Builder](https://ziontechgroup.com/zion-ai-quote-builder/) and [SLA Breach Sentinel](https://ziontechgroup.com/zion-ai-sla-breach-sentinel/).
-- **Zion AI Energy Sentinel** — data-center energy analytics: PUE tracking, thermal alerts. Pairs with [GreenCloud Optimizer](https://greencloud.ziontechgroup.com) and [Cloud Cost Navigator](https://cloud-cost.ziontechgroup.com).
-
-Details: https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md
-
-### Recently launched
+## Recently launched
 - [Agent SLA Monitor](https://ziontechgroup.com/agent-sla-monitor/)
 - [Zion AI Accessibility Auditor](https://ziontechgroup.com/zion-ai-accessibility-auditor/)
 - [Zion AI Ticket Triage](https://ziontechgroup.com/zion-ai-ticket-triage/)
