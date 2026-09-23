@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Employee Engagement Pulse — Zion Tech Group</title><meta name="description" content="Continuous employee pulse surveys with AI insight summaries and trend detection for people teams.">
+<style>body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f8fafc;color:#0f172a}header{background:linear-gradient(135deg,#0b1b3a,#14306b);color:#fff;padding:36px 20px;text-align:center}header h1{margin:0 0 8px}header p{color:#cbd5e1}nav a{color:#93c5fd;margin:0 8px;text-decoration:none;font-size:.85rem;font-weight:600}main{max-width:880px;margin:0 auto;padding:28px 20px}.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;margin-bottom:16px}button{background:#22c55e;border:0;color:#052e16;padding:10px 20px;border-radius:8px;font-weight:700;cursor:pointer;margin:8px 0}table{width:100%;border-collapse:collapse;margin-top:10px}td,th{padding:7px;border-bottom:1px solid #e2e8f0;text-align:left;font-size:.9rem}th{background:#f1f5f9}footer{text-align:center;color:#64748b;font-size:.8rem;padding:20px}footer a{color:#2563eb}.badge{display:inline-block;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:600}</style></head><body>
+<header><h1>Employee Engagement Pulse</h1><p>Weekly pulses, AI summaries, and trend alerts before burnout happens.</p>
+<nav><a href="https://ziontechgroup.com">Zion Tech Group</a><a href="https://zion-support.github.io/apps/">App Showcase</a><a href="https://github.com/Zion-support/zion-app-network">App Network Hub</a><a href="https://github.com/Zion-support/employee-engagement-pulse">GitHub</a></nav></header>
+<main>
+<div class="card"><span class="badge">HR</span><h2>Interactive demo</h2>
+<p>Sample data below — click the button to run the analysis.</p>
+<button onclick="run()">Summarize pulse</button><div id="out"></div></div>
+<div class="card"><h2>About</h2><p>Continuous employee pulse surveys with AI insight summaries and trend detection for people teams.</p><ul><li>2-minute rotating pulse surveys</li><li>AI theme and sentiment summaries</li><li>Team-level trend and turnover-risk signals</li></ul>
+<p>Need this customized or integrated? <a href="https://ziontechgroup.com/discovery/">Book a free Discovery Call</a>.</p></div>
+<div class="card"><h2>Related apps in the network</h2><ul>
+<li><a href="https://ziontechgroup.com/app-network/">App directory</a></li>
+<li><a href="https://ziontechgroup.com/apps/">Live catalog</a></li>
+<li><a href="https://ziontechgroup.com/knowledge-gap-finder/">Knowledge Gap Finder</a></li>
+<li><a href="https://ziontechgroup.com/site-uptime-watchdog/">Site Uptime Watchdog</a></li>
+<li><a href="https://ziontechgroup.com/discovery/">Discovery $99</a></li>
+</ul></div>
+</main>
+<footer>Part of the <a href="https://zion-support.github.io/apps/">Zion AI App Network</a> · <a href="https://ziontechgroup.com">ziontechgroup.com</a> · <a href="https://github.com/Zion-support/zion-app-network">Master directory</a></footer>
+<script>
+const data=[["I have the tools to do my best work","4.1 / 5","▲ +0.2"],["My workload is sustainable","3.2 / 5","▼ -0.4 ⚠️"],["I see growth opportunities here","3.8 / 5","▲ +0.1"],["I would recommend Zion as employer","4.4 / 5","▲ +0.3"]];
+function run(){let h='<table><tr><th>Question</th><th>Score</th><th>Trend</th></tr>';for(const r of data){h+='<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>';}document.getElementById('out').innerHTML=h+'</table>';}
+run();
+</script></body></html>
