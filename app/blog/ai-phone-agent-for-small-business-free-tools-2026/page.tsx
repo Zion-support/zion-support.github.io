@@ -12,7 +12,7 @@ export const metadata = {
     url: 'https://ziontechgroup.com/blog/ai-phone-agent-for-small-business-free-tools-2026',
     siteName: 'Zion Tech Group',
     type: 'article',
-    images: [{ url: '/og-ai-phone-agent-small-business.png', width: 1200, height: 630, alt: 'AI Phone Agent for Small Business' }]
+    images: [{ url: '/og-home.svg', width: 1200, height: 630, alt: 'AI Phone Agent for Small Business' }]
   },
 
 };
