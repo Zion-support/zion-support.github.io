@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SSL/TLS Config Auditor | Zion Tech Group</title>
+<meta name="description" content="Analyze SSL/TLS configuration and certificate chain.">
+<style>
+body{margin:0;background:#080b16;color:#f8fafc;font:16px/1.6 system-ui,sans-serif}
+a{color:#b9a4f7;text-decoration:none}
+.wrap{max-width:900px;margin:auto;padding:24px}
+.brand{font-size:20px;font-weight:850;background:linear-gradient(90deg,#a78bfa,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:clamp(30px,5vw,46px);letter-spacing:-.03em}
+.feat{margin:6px 0;padding:10px 14px;border-radius:9px;background:#0c1222;border:1px solid #26324d}
+.net{border-top:1px solid #26324d;margin-top:50px;padding-top:26px;color:#aab6d0}
+.net li{margin:6px 0}
+button{margin-top:18px;padding:12px 20px;border:0;border-radius:10px;background:#7c3aed;color:#fff;font-weight:750;cursor:pointer}
+input,textarea{width:100%;padding:11px;border-radius:9px;border:1px solid #26324d;background:#0e1528;color:#fff;box-sizing:border-box;font-family:monospace;margin-top:8px}
+label{color:#aab6d0;font-size:14px;display:block;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="brand" href="https://ziontechgroup.com">Zion Tech Group</a>
+<h1>SSL/TLS Config Auditor</h1>
+<p style="color:#aab6d0">Analyze SSL/TLS configuration and certificate chain. Free tool by <a href="https://ziontechgroup.com">Zion Tech Group</a>.</p>
+
+<div id="app">
+<p style="color:#8793ac">Interactive app — try it below:</p>
+<textarea id="input" rows="6" placeholder="Paste your input here..."></textarea>
+<button onclick="process()">Analyze</button>
+<pre id="output" style="margin-top:20px;padding:16px;background:#0c1222;border-radius:9px;border:1px solid #26324d;color:#f8fafc;white-space:pre-wrap"></pre>
+</div>
+
+<h2 style="margin-top:40px">Features</h2>
+<ul style="padding:0;list-style:none">
+<li class="feat">TLS version and cipher suite analysis</li>
+<li class="feat">Certificate chain validation</li>
+<li class="feat">Expiration monitoring</li>
+<li class="feat">Protocol vulnerability detection</li>
+<li class="feat">Graded security assessment</li>
+</ul>
+
+<div class="net">
+<h2>Zion AI Apps Network</h2>
+<ul>
+<li><a href="https://ziontechgroup.com">Zion Tech Group — Main Hub</a></li>
+<li><a href="https://ziontechgroup.com/en/plans/">Plans & Pricing</a></li>
+<li><a href="https://ziontechgroup.com/discovery/">Discovery</a></li>
+<li><a href="https://plans.ziontechgroup.com">Zion Plans</a></li>
+</ul>
+<p>Need a custom solution? <a href="https://ziontechgroup.com/contact/">Talk to Zion →</a></p>
+</div>
+<p style="color:#8793ac;margin-top:30px">© 2026 Zion Tech Group</p>
+</div>
+<script>
+function process(){
+  const input = document.getElementById('input').value;
+  if (!input.trim()) { document.getElementById('output').textContent = 'Please enter input above.'; return; }
+  document.getElementById('output').textContent = 'Analyzing... (demo mode)\nInput length: ' + input.length + ' characters';
+}
+</script>
+</body>
+</html>
