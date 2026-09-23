@@ -41,6 +41,9 @@ concurrency:
       - '.github/workflows/ai-pm2-ops-digest.yml'
   workflow_dispatch:
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   static:
     runs-on: ubuntu-latest
