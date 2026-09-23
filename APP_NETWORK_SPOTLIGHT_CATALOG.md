@@ -1,19 +1,34 @@
-# Zion App Network — Catalog Spotlight (2026-09-23)
+# Zion App Network Spotlight — 2026-09-23
 
-Zion Tech Group operates the **Zion App Network**: 200+ free, open-source AI & IT micro-apps.
+Zion Tech Group operates the **Zion App Network**, a growing network of 200+ free, open-source AI and IT micro-apps.
 
-## Links
-- Live explorer: https://ziontechgroup.com/apps/
-- Static catalog (all 200+ apps): https://ziontechgroup.com/apps/catalog.html
+## Public entry points
+
+- Homepage: https://ziontechgroup.com/
+- Live app explorer: https://ziontechgroup.com/apps/
+- Static catalog: https://ziontechgroup.com/apps/catalog.html
 - Network overview: https://ziontechgroup.com/app-network/
-- Blog announcement: https://ziontechgroup.com/blog/zion-app-network-200-apps.html
-- GitHub org: https://github.com/Zion-support
-- Homepage: https://ziontechgroup.com
+- Announcement post: https://ziontechgroup.com/blog/zion-app-network-200-apps.html
+- GitHub organization: https://github.com/Zion-support
 
-## What changed on 2026-09-23
-- Added `apps/catalog.html` — a static, searchable catalog of all 200+ app repos with live-app and GitHub interlinks (no GitHub API dependency).
-- Added `blog/zion-app-network-200-apps.html` — blog post advertising the network with featured-app interlinks.
-- Updated NETWORK.md interlink files across app repos to point to the new catalog + blog hubs.
+## Featured app categories
 
-## Interlink graph
-Homepage (ziontechgroup.com) → /apps/ explorer → /apps/catalog.html → each app live URL → each app repo NETWORK.md → back to hubs. Every repo README/NETWORK.md links to the explorer, catalog, blog, GitHub org and sibling apps.
+- AI Agents & Automation
+- FinOps & ROI
+- Security & Compliance
+- Data & ML
+- Content & Marketing
+- HR & Education
+- Field Services & Ops
+- Industry Platforms
+
+## Featured apps
+
+- [AI Readiness Score](https://ziontechgroup.com/ai-readiness-score/)
+- [AI ROI Calculator](https://ziontechgroup.com/ai-roi-calculator/)
+- [Cloud Cost Estimator](https://ziontechgroup.com/cloud-cost-estimator/)
+- [Accessibility Checker](https://ziontechgroup.com/accessibility-checker/)
+- [Field Tech Scheduler](https://ziontechgroup.com/field-tech-scheduler/)
+- [LLM Cost Calculator](https://ziontechgroup.com/llm-cost-calculator/)
+
+All app repositories should link back to the hubs above and to sibling apps through `NETWORK.md` interlink files.
