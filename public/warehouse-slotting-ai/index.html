@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Warehouse Slotting | Zion Tech Group</title>
+<meta name="description" content="Estimate pick travel from picks, a distance and how many aisles you walk.">
+<link rel="canonical" href="https://ziontechgroup.com/warehouse-slotting-ai/">
+<meta name="robots" content="index,follow">
+<style>body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}nav a{color:#e2e8f0;margin-right:12px;text-decoration:none}h1{color:#fff;letter-spacing:-.03em;font-size:1.8rem}h2{color:#e2e8f0;font-size:1.05rem}label{display:block;margin:12px 0 6px;color:#94a3b8}input,textarea,select{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}footer,p.note{margin-top:22px;color:#94a3b8}.checks label{display:flex;gap:8px;align-items:center} .checks input{width:auto}</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/apps/">Apps</a><a href="/app-network/">App Network</a><a href="/discovery/">Discovery $99</a><a href="/plans/">Plans</a></nav>
+<h1>Warehouse Slotting</h1>
+<p>Estimate pick travel from picks, a distance and how many aisles you walk. The math stays in your browser. Nothing is uploaded.</p>
+<label>Picks per day</label><input id="picks" type="number" min="0" step="1" value="900">
+<label>Average meters per pick with today's slotting</label><input id="meters" type="number" min="0" step="0.1" value="28">
+<label>Walking speed (meters per minute)</label><input id="speed" type="number" min="1" step="1" value="50">
+<label>Aisles a typical pick crosses</label><input id="aisles" type="number" min="1" step="1" value="4">
+<label>Target aisles after a reslot</label><input id="target" type="number" min="1" step="1" value="2">
+<button type="button" onclick="calc()">Estimate</button>
+<pre id="out" hidden></pre>
+<p class="note">Related: <a href="/depot-stock-balancer/">Depot stock</a> · <a href="/route-density-planner/">Route density</a> · <a href="/spare-price-scout/">Spare price scout</a></p>
+<p class="note"><a href="/apps/">All apps</a> · <a href="/app-network/">Directory</a> · <a href="/discovery/">Discovery $99</a> · <a href="/contact/">Contact</a></p>
+<script>
+
+function show(lines){const o=document.getElementById('out');o.hidden=false;o.textContent=lines.join('\n');}
+function num(id){return Number(document.getElementById(id).value)||0;}
+function text(id){return (document.getElementById(id).value||'').trim();}
+
+function calc(){
+  const speed=Math.max(1,num('speed'));
+  const now=num('picks')*num('meters')/speed;
+  const ratio=num('target')/Math.max(1,num('aisles'));
+  const after=now*ratio;
+  show(['Travel today: '+now.toFixed(0)+' minutes','If aisle crossings fall in proportion: '+after.toFixed(0)+' minutes','Minutes back: '+(now-after).toFixed(0),'This assumes distance scales with aisles. Measure a sample of picks before you move racks.']);
+}
+
+</script>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+</body>
+</html>
