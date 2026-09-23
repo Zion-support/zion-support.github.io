@@ -1,44 +1,33 @@
-# App Network Spotlight — Customer Success Suite (2026-09-23)
+# 💚 App Network Spotlight — Customer Success & Retention AI
 
-**New from Zion Tech Group:** six AI apps that cover the entire post-sale journey — from first onboarding milestone to renewal and expansion.
+Keep every customer healthy, growing and renewing. This spotlight showcases the **Customer Success & Retention AI** suite of the [Zion App Network](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) — 8 interconnected AI apps from [Zion Tech Group](https://ziontechgroup.com), each free to try and open-source.
 
-## 🚀 The apps
+## The suite
 
-### 1. Customer Health Scorer
-Unified customer health scoring from product usage, support and billing signals. Configurable weights per segment, portfolio heatmaps, CRM webhooks.
-🔗 https://ziontechgroup.com/customer-health-scorer/ · [GitHub](https://github.com/Zion-support/customer-health-scorer)
+| App | What it does | Live | Repo |
+|---|---|---|---|
+| Churn Radar | See churn coming 90 days out — health scores & save plays | [ziontechgroup.com/churn-radar](https://ziontechgroup.com/churn-radar/) | [GitHub](https://github.com/Zion-support/churn-radar) |
+| Churn Risk Radar | Portfolio-wide churn prediction with exec alerts | [ziontechgroup.com/churn-risk-radar](https://ziontechgroup.com/churn-risk-radar/) | [GitHub](https://github.com/Zion-support/churn-risk-radar) |
+| Customer Health Scorer | Unified health scores from usage, support & billing | [ziontechgroup.com/customer-health-scorer](https://ziontechgroup.com/customer-health-scorer/) | [GitHub](https://github.com/Zion-support/customer-health-scorer) |
+| NPS Insight Engine | AI themes & drivers from NPS/CSAT verbatims | [ziontechgroup.com/nps-insight-engine](https://ziontechgroup.com/nps-insight-engine/) | [GitHub](https://github.com/Zion-support/nps-insight-engine) |
+| Support Sentiment Monitor | Real-time ticket/chat/call sentiment + escalations | [ziontechgroup.com/support-sentiment-monitor](https://ziontechgroup.com/support-sentiment-monitor/) | [GitHub](https://github.com/Zion-support/support-sentiment-monitor) |
+| Upsell Signal Scout | Expansion & upsell signals from usage | [ziontechgroup.com/upsell-signal-scout](https://ziontechgroup.com/upsell-signal-scout/) | [GitHub](https://github.com/Zion-support/upsell-signal-scout) |
+| Onboarding Journey Tracker | Milestones, time-to-value, stalled-account alerts | [ziontechgroup.com/onboarding-journey-tracker](https://ziontechgroup.com/onboarding-journey-tracker/) | [GitHub](https://github.com/Zion-support/onboarding-journey-tracker) |
+| Voice of Customer Hub | Reviews, tickets, surveys & social in one hub | [ziontechgroup.com/voice-of-customer-hub](https://ziontechgroup.com/voice-of-customer-hub/) | [GitHub](https://github.com/Zion-support/voice-of-customer-hub) |
 
-### 2. Churn Risk Radar
-Predict churn before it happens. Account-level risk scoring, automated save plays and executive alerts.
-🔗 https://ziontechgroup.com/churn-risk-radar/ · [GitHub](https://github.com/Zion-support/churn-risk-radar)
+## Why it works as one system
 
-### 3. NPS Insight Engine
-Turn NPS/CSAT verbatims into themes, drivers and follow-up workflows with AI.
-🔗 https://ziontechgroup.com/nps-insight-engine/ · [GitHub](https://github.com/Zion-support/nps-insight-engine)
+1. **Sense** — Support Sentiment Monitor + Voice of Customer Hub stream raw customer signals.
+2. **Score** — Customer Health Scorer + NPS Insight Engine turn signals into health and loyalty metrics.
+3. **Predict** — Churn Radar + Churn Risk Radar forecast who's at risk, and when.
+4. **Grow** — Upsell Signal Scout + Onboarding Journey Tracker find expansion and protect time-to-value.
 
-### 4. Support Sentiment Monitor
-Real-time sentiment across tickets, chats and calls — with escalation triggers that feed your health scores.
-🔗 https://ziontechgroup.com/support-sentiment-monitor/ · [GitHub](https://github.com/Zion-support/support-sentiment-monitor)
+## More from the network
 
-### 5. Upsell Signal Scout
-Detect expansion signals from product usage and account activity; ranked opportunities for CSMs and AEs.
-🔗 https://ziontechgroup.com/upsell-signal-scout/ · [GitHub](https://github.com/Zion-support/upsell-signal-scout)
-
-### 6. Onboarding Journey Tracker
-Track onboarding milestones, time-to-value and stalled accounts with next-best-action alerts.
-🔗 https://ziontechgroup.com/onboarding-journey-tracker/ · [GitHub](https://github.com/Zion-support/onboarding-journey-tracker)
-
-## 🔁 How they interlink
-Onboarding Journey Tracker feeds early-life signals into **Customer Health Scorer**; **Support Sentiment Monitor** and **NPS Insight Engine** enrich the same score; **Churn Risk Radar** consumes it to trigger save plays, while **Upsell Signal Scout** finds the expansion moments in healthy accounts. One data loop, zero swivel-chair.
-
-## 📚 Explore the network
-
-- Master directory: https://github.com/Zion-support/zion-app-network (708 apps, tools & field playbooks)
-- Suite doc: https://github.com/Zion-support/zion-app-network/blob/main/docs/CUSTOMER_SUCCESS_SUITE.md
-- Hub page: https://ziontechgroup.com/zion-app-network/
-- All tools: https://ziontechgroup.com/tools/
-- Plans & pricing: https://ziontechgroup.com/en/plans/
-- Book a discovery call: https://ziontechgroup.com/discovery/
+- 📣 Homepage showcase copy: [HOMEPAGE_APPS.md](https://github.com/Zion-support/zion-network/blob/main/HOMEPAGE_APPS.md)
+- 💼 Related: [Sales & Lead Gen AI](https://github.com/Zion-support/zion-network/blob/main/network/sales-lead-gen-ai.md) · [MSP & Partner Ecosystem](https://github.com/Zion-support/zion-network/blob/main/network/msp-partner-ecosystem.md)
+- 🗂️ Master index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) · Hub: [network.ziontechgroup.com](https://network.ziontechgroup.com)
+- 💳 Plans & pricing: [ziontechgroup.com/en/plans](https://ziontechgroup.com/en/plans/) · 📞 [Book a discovery call](https://ziontechgroup.com/discovery/)
 
 ---
-© 2026 [Zion Tech Group](https://ziontechgroup.com/) · Part of the Zion App Network spotlight series.
+© 2026 [Zion Tech Group](https://ziontechgroup.com) · commercial@ziontechgroup.com
