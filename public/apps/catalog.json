@@ -1,7 +1,7 @@
 {
   "name": "Zion Tech Group apps network",
-  "canonical": "https://ziontechgroup.com/apps-network/",
-  "hubs": ["/apps/", "/apps-network/", "/zion-app-network/", "/free-ai-it-tools/"],
+  "canonical": "https://ziontechwroup.com/apps-network/",
+  "hubs": ["/apps/", "/apps-network/", "/app-network/", "/free-ai-it-tools/"],
   "note": "HTTPS paths on the main site only. network.ziontechgroup.com fails TLS — do not send buyers there.",
   "menu": ["Discovery $99", "Consulting $499", "Starter $2,500", "Growth $8,000/mo"],
   "categories": {
@@ -12,7 +12,7 @@
   "apps": [
     {"href": "/apps-network/", "title": "Apps Network hub", "group": "hub"},
     {"href": "/apps/", "title": "Live catalog", "group": "hub"},
-    {"href": "/zion-app-network/", "title": "Full directory", "group": "hub"},
+    {"href": "/app-network/", "title": "Full directory", "group": "hub"},
     {"href": "/roi-calc/", "title": "ROI calculator", "group": "money"},
     {"href": "/token-cost/", "title": "Token cost", "group": "money"},
     {"href": "/finops-estimator/", "title": "FinOps estimator", "group": "money"},
@@ -36,6 +36,24 @@
     {"href": "/llm-gateway/", "title": "LLM Gateway", "group": "ai"},
     {"href": "/model-observatory/", "title": "Model Observatory", "group": "ai"},
     {"href": "/zion-ai-field-dispatch-optimizer/", "title": "Field Dispatch", "group": "field"},
-    {"href": "/apps/playbook/", "title": "Playbook", "group": "hub"}
+    {"href": "/apps/playbook/", "title": "Playbook", "group": "hub"},
+    {"href": "/ai-model-cost-calculator/", "title": "AI model cost calculator", "group": "money"},
+    {"href": "/ai-readiness-score/", "title": "AI readiness score", "group": "govern"},
+    {"href": "/data-contract-validator/", "title": "Data contract validator", "group": "govern"},
+    {"href": "/fleet-fuel-optimizer/", "title": "Fleet fuel optimizer", "group": "field"},
+    {"href": "/invoice-match-ai/", "title": "Invoice match", "group": "money"},
+    {"href": "/knowledge-gap-finder/", "title": "Knowledge gap finder", "group": "work"},
+    {"href": "/maintenance-ticket-triage/", "title": "Maintenance ticket triage", "group": "ops"},
+    {"href": "/onboarding-buddy-ai/", "title": "Onboarding buddy", "group": "work"},
+    {"href": "/quote-builder-ai/", "title": "Quote builder", "group": "money"},
+    {"href": "/route-density-planner/", "title": "Route density planner", "group": "field"},
+    {"href": "/site-uptime-watchdog/", "title": "Site uptime watchdog", "group": "ops"},
+    {"href": "/sla-risk-forecaster/", "title": "SLA risk forecaster", "group": "ops"},
+    {"href": "/spare-price-scout/", "title": "Spare price scout", "group": "field"},
+    {"href": "/technician-coach-ai/", "title": "Technician coach", "group": "field"},
+    {"href": "/warehouse-slotting-ai/", "title": "Warehouse slotting", "group": "field"},
+    {"href": "/zion-ai-compliance-scanner/", "title": "Compliance control scanner", "group": "govern"},
+    {"href": "/zion-ai-cost-optimizer/", "title": "Cloud cost optimizer", "group": "money"},
+    {"href": "/zion-ai-drift-detector/", "title": "Config drift detector", "group": "ops"}
   ]
 }
