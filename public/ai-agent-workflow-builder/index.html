@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Workflow Builder — Zion Tech Group</title>
+<meta name="description" content="Construa e valide um caso de uso para agente autônomo de IA. Escolha um fluxo, defina ferramentas e gate humano, receba um veredito e um link para Discovery.">
+<link rel="canonical" href="https://ziontechgroup.com/ai-agent-workflow-builder/">
+<meta property="og:title" content="AI Agent Workflow Builder — Zion Tech Group">
+<meta property="og:description" content="Valide um caso de uso para agente autônomo antes de comprar plataforma.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ziontechgroup.com/ai-agent-workflow-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface2: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #8888a0;
+    --accent: #4f8cff;
+    --accent2: #7c5cff;
+    --green: #34d399;
+    --red: #f87171;
+    --yellow: #fbbf24;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  header { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+  .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+  .logo span { color: var(--text); }
+  nav { display: flex; gap: 20px; align-items: center; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  nav a:hover { color: var(--text); }
+  nav .btn-nav { background: var(--accent); color: #fff !important; padding: 6px 14px; border-radius: 6px; font-weight: 600; }
+  nav .btn-nav:hover { background: var(--accent2); color: #fff !important; }
+  main { padding: 48px 0 80px; }
+  h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+  .card h2 { font-size: 1.2rem; margin-bottom: 20px; color: var(--text); }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1rem; font-family: var(--font); transition: border-color 0.2s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; width: 100%; justify-content: center; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(79,140,255,0.3); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text); padding: 10px 20px; border-radius: 8px; font-weight: 500; font-size: 0.9rem; border: 1px solid var(--border); cursor: pointer; text-decoration: none; transition: border-color 0.2s; }
+  .btn-secondary:hover { border-color: var(--accent); }
+  .results { display: none; margin-top: 32px; animation: fadeUp 0.4s ease; }
+  .results.visible { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .score-bar-container { background: var(--surface2); border-radius: 8px; height: 10px; margin: 8px 0; overflow: hidden; }
+  .score-bar { height: 100%; border-radius: 8px; transition: width 0.6s ease; }
+  .score-bar.high { background: linear-gradient(90deg, var(--green), #2bbf7a); }
+  .score-bar.medium { background: linear-gradient(90deg, var(--yellow), #f59e0b); }
+  .score-bar.low { background: linear-gradient(90deg, var(--red), #ef4444); }
+  .score-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; display: flex; justify-content: space-between; }
+  .checklist { list-style: none; padding: 0; margin: 16px 0; }
+  .checklist li { padding: 8px 0 8px 28px; position: relative; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+  .checklist li.warn::before { content: '!'; color: var(--yellow); }
+  .checklist li.bad::before { content: '✗'; color: var(--red); }
+  .verdict-card { background: var(--surface2); border-radius: 10px; padding: 24px; margin-top: 20px; border-left: 4px solid var(--accent); }
+  .verdict-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .verdict-card p { color: var(--muted); font-size: 0.95rem; }
+  .badge { display: inline-block; background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: var(--muted); margin-bottom: 12px; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .footer { border-top: 1px solid var(--border); margin-top: 60px; padding: 32px 0; color: var(--muted); font-size: 0.85rem; }
+  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+  .footer-links a { color: var(--muted); text-decoration: none; }
+  .footer-links a:hover { color: var(--text); }
+  .workflow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 480px) { .workflow-grid { grid-template-columns: 1fr; } }
+  .workflow-option { padding: 12px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: border-color 0.2s, background 0.2s; font-size: 0.9rem; }
+  .workflow-option:hover { border-color: var(--accent); background: var(--surface); }
+  .workflow-option.selected { border-color: var(--accent); background: rgba(79,140,255,0.1); }
+  .workflow-option input { display: none; }
+  .tool-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tool-chip { padding: 6px 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; color: var(--muted); }
+  .tool-chip:hover { border-color: var(--accent); color: var(--text); }
+  .tool-chip.selected { background: rgba(79,140,255,0.15); border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <a href="https://ziontechgroup.com/" class="logo">Zion <span>Tech Group</span></a>
+    <nav>
+      <a href="https://ziontechgroup.com/discovery/">Discovery $99</a>
+      <a href="https://ziontechgroup.com/plans/">Plans</a>
+      <a href="https://ziontechgroup.com/ai-roi-calculator/">ROI Calculator</a>
+      <a href="https://ziontechgroup.com/managed-it-health-check/">IT Health Check</a>
+      <a href="https://ziontechgroup.com/finops-spend-analyzer/">FinOps Analyzer</a>
+      <a href="https://ziontechgroup.com/contact/" class="btn-nav">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <span class="badge">Ferramenta gratuita · Sem cadastro</span>
+    <h1>AI Agent Workflow Builder</h1>
+    <p class="subtitle">Monte um caso de uso para agente autônomo, defina ferramentas e gates humanos, e receba um veredito: fazer, aguardar ou não construir. Isso é um diagnóstico — não uma demonstração de plataforma.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>1. Seu caso de uso</h2>
+
+        <div class="form-group">
+          <label>Fluxo / workflow</label>
+          <div class="workflow-grid" id="workflow-grid">
+            <label class="workflow-option" data-value="sales">
+              <input type="radio" name="workflow" value="sales">
+              ✅ Sales ops — lead routing, CRM hygiene, follow-up
+            </label>
+            <label class="workflow-option" data-value="support">
+              <input type="radio" name="workflow" value="support">
+              🛎️ Support & IT — ticket triage,지식, escalação
+            </label>
+            <label class="workflow-option" data-value="finance">
+              <input type="radio" name="workflow" value="finance">
+              💰 Finance & ops — exceções, cheques de fechamento, rotina de faturas
+            </label>
+            <label class="workflow-option" data-value="enablement">
+              <input type="radio" name="workflow" value="enablement">
+              📚 Internal enablement — Q&A de política, onboarding, "onde clico"
+            </label>
+            <label class="workflow-option" data-value="msp">
+              <input type="radio" name="workflow" value="msp">
+              🔧 MSP helpdesk — triagem de fila, enriquecimento, roteamento
+            </label>
+            <label class="workflow-option" data-value="custom">
+              <input type="radio" name="workflow" value="custom">
+              ✏️ Fluxo customizado — descrever abaixo
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="custom-workflow-group" style="display: none;">
+          <label for="custom-workflow">Descreva o fluxo</label>
+          <textarea id="custom-workflow" placeholder="Ex: Assim que um lead chega no CRM, verifico se tem faturamento ativo, senão creio uma task para o SDR e envio um e-mail de welcome..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Ferramentas que o agente usaria (selecione todas que se aplicam)</label>
+          <div class="tool-grid" id="tool-grid">
+            <span class="tool-chip" data-tool="crm">CRM</span>
+            <span class="tool-chip" data-tool="itsm">ITSM / Tickets</span>
+            <span class="tool-chip" data-tool="email">E-mail</span>
+            <span class="tool-chip" data-tool="slack">Slack</span>
+            <span class="tool-chip" data-tool="whatsapp">WhatsApp</span>
+            <span class="tool-chip" data-tool="api">API interna</span>
+            <span class="tool-chip" data-tool="docs">Docs / Wiki</span>
+            <span class="tool-chip" data-tool="erp">ERP</span>
+            <span class="tool-chip" data-tool="finance">Finance / Contabilidade</span>
+            <span class="tool-chip" data-tool="monitoring">Monitoramento / Alertas</span>
+            <span class="tool-chip" data-tool="filesystem">Arquivos / S3</span>
+            <span class="tool-chip" data-tool="db">Banco de dados</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="human-gate">Ações irreversíveis ou de alto custo precisam de aprovação humana?</label>
+          <select id="human-gate">
+            <option value="always">Sim — sempre (ex: acessar produção, movimentar dinheiro)</option>
+            <option value="high-cost">Apenas ações de alto custo</option>
+            <option value="never">Não — todas as ações são reversíveis e de baixo custo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="data-sensitivity">Sensibilidade dos dados que o agente leria</label>
+          <select id="data-sensitivity">
+            <option value="public">Público / não sensível</option>
+            <option value="internal">Interno — visível para a empresa</option>
+            <option value="confidential">Confidencial — PII, contratos, financials</option>
+            <option value="regulated">Regulado — HIPAA, LGPD, PCI, finance regido</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ownership">Quem é o dono named desse fluxo? (cargo ou função)</label>
+          <input type="text" id="ownership" placeholder="Ex: Líder de Suporte, CFO, Gerente de Sales Ops">
+        </div>
+
+        <button type="button" class="btn-primary" id="analyze-btn">Analisar caso de uso</button>
+      </div>
+
+      <div>
+        <div class="card" style="height: fit-content;">
+          <h2>2. Veredito do caso de uso</h2>
+          <div id="results" class="results">
+            <div style="margin-bottom: 16px;">
+              <div style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Score de prontidão para agente</div>
+              <div class="score-bar-container">
+                <div class="score-bar" id="score-bar" style="width: 0%;"></div>
+              </div>
+              <div class="score-label">
+                <span id="score-text">—</span>
+                <span id="score-pct">0%</span>
+              </div>
+            </div>
+
+            <ul class="checklist" id="checklist">
+              <li id="chk-workflow">Fluxo definido — <span id="chk-workflow-text">esperando</span></li>
+              <li id="chk-tools">Ferramentas delimitadas — <span id="chk-tools-text">esperando</span></li>
+              <li id="chk-human">Gate humano definido — <span id="chk-human-text">esperando</span></li>
+              <li id="chk-data">Limite de dados claro — <span id="chk-data-text">esperando</span></li>
+              <li id="chk-owner">Dono named identificado — <span id="chk-owner-text">esperando</span></li>
+              <li id="chk-audit">Audit trail possível — <span id="chk-audit-text">esperando</span></li>
+              <li id="chk-killswitch">Kill switch planejado — <span id="chk-killswitch-text">esperando</span></li>
+            </ul>
+
+            <div class="verdict-card">
+              <h3>Veredito: <span id="verdict-label" style="color: var(--accent);">—</span></h3>
+              <p id="verdict-text">—</p>
+            </div>
+
+            <div class="cta-row">
+              <a href="https://ziontechgroup.com/discovery/" class="btn-primary" style="width: auto; padding: 12px 24px;">Discovery $99 — mapear esse fluxo</a>
+              <a href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b" class="btn-secondary" style="width: auto; padding: 12px 24px;" target="_blank">Pagar Discovery $99 (USD)</a>
+            </div>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: var(--muted);">
+              Depois do Discovery: <a href="https://ziontechgroup.com/ai-consulting-services/" style="color: var(--accent);">Consulting $499</a> ·
+              <a href="https://ziontechgroup.com/plans/" style="color: var(--accent);">Starter $2.500</a> (1 agente em produção) ·
+              <a href="https://ziontechgroup.com/plans/" style="color: var(--accent);">Growth $8.000/mês</a> (operação gerida + SLA)
+            </p>
+          </div>
+          <div id="results-placeholder" style="color: var(--muted); font-size: 0.9rem; padding: 20px 0;">
+            Escolha um fluxo, selecione ferramentas e clique em "Analisar caso de uso". O veredito diz se o agente é fazer, aguardar ou não construir.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a href="https://ziontechgroup.com/" style="color: var(--accent); font-weight: 600;">Zion Tech Group</a> · Agentes de IA autônomos, governados e gerenciados
+      <br><span style="font-size: 0.75rem;">Agente sem dono nomeado = shadow IT. Sem plataforma genérica.</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://ziontechgroup.com/discovery/">Discovery $99</a>
+      <a href="https://ziontechgroup.com/plans/">Plans</a>
+      <a href="https://ziontechgroup.com/ai-roi-calculator/">ROI Calculator</a>
+      <a href="https://ziontechgroup.com/managed-it-health-check/">IT Health Check</a>
+      <a href="https://ziontechgroup.com/finops-spend-analyzer/">FinOps Analyzer</a>
+      <a href="https://ziontechgroup.com/contact/">Contato</a>
+      <a href="https://github.com/Zion-support/ai-agent-workflow-builder">Código</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const workflowRadios = document.querySelectorAll('input[name="workflow"]');
+  const workflowOptions = document.querySelectorAll('.workflow-option');
+  const customGroup = document.getElementById('custom-workflow-group');
+  const toolChips = document.querySelectorAll('.tool-chip');
+  const analyzeBtn = document.getElementById('analyze-btn');
+  const results = document.getElementById('results');
+  const placeholder = document.getElementById('results-placeholder');
+
+  // Workflow selection UI
+  workflowOptions.forEach(opt => {
+    opt.addEventListener('click', function() {
+      workflowOptions.forEach(o => o.classList.remove('selected'));
+      this.classList.add('selected');
+      const val = this.dataset.value;
+      workflowRadios.forEach(r => { r.checked = r.value === val; });
+      customGroup.style.display = val === 'custom' ? 'block' : 'none';
+    });
+  });
+
+  // Tool selection UI
+  toolChips.forEach(chip => {
+    chip.addEventListener('click', function() {
+      this.classList.toggle('selected');
+    });
+  });
+
+  function getSelectedTools() {
+    const tools = [];
+    toolChips.forEach(chip => {
+      if (chip.classList.contains('selected')) tools.push(chip.dataset.tool);
+    });
+    return tools;
+  }
+
+  function getSelectedWorkflow() {
+    for (const r of workflowRadios) {
+      if (r.checked) return r.value;
+    }
+    return null;
+  }
+
+  analyzeBtn.addEventListener('click', function() {
+    const workflow = getSelectedWorkflow();
+    if (!workflow) {
+      alert('Selecione um fluxo antes de analisar.');
+      return;
+    }
+    const customDesc = document.getElementById('custom-workflow').value.trim();
+    const tools = getSelectedTools();
+    const humanGate = document.getElementById('human-gate').value;
+    const dataSensitivity = document.getElementById('data-sensitivity').value;
+    const ownership = document.getElementById('ownership').value.trim();
+
+    // Scoring
+    let score = 0;
+    const maxScore = 7;
+    const checks = {};
+
+    // 1. Workflow defined (1 point)
+    checks.workflow = workflow === 'custom' && customDesc ? { pass: true, text: 'Fluxo customizado descrito' } :
+                       workflow ? { pass: true, text: 'Fluxo ' + workflow + ' selecionado' } :
+                       { pass: false, text: 'Nenhum fluxo selecionado' };
+    if (checks.workflow.pass) score++;
+
+    // 2. Tools bounded (1 point)
+    checks.tools = tools.length > 0 ? { pass: true, text: tools.length + ' ferramentas delimitadas' } :
+                                     { pass: false, text: 'Nenhuma ferramenta selecionada' };
+    if (checks.tools.pass) score++;
+
+    // 3. Human gate defined (1 point)
+    checks.human = humanGate !== 'never' ? { pass: true, text: 'Gate humano: ' + humanGate } :
+                                        { pass: false, text: 'Sem gate humano — ação irreversível sem aprovação é risco' };
+    if (checks.human.pass) score++;
+
+    // 4. Data boundary clear (1 point)
+    checks.data = dataSensitivity !== 'public' ? { pass: true, text: 'Dados: ' + dataSensitivity } :
+                                         { pass: true, text: 'Dados públicos — limite ainda assim recomendado' };
+    if (checks.data.pass) score++;
+
+    // 5. Named owner (1 point)
+    checks.owner = ownership ? { pass: true, text: 'Dono: ' + ownership } :
+                               { pass: false, text: 'Sem dono nomeado — agente sem owner = shadow IT' };
+    if (checks.owner.pass) score++;
+
+    // 6. Audit trail possible (1 point)
+    checks.audit = (tools.length > 0 && humanGate !== 'never') ? { pass: true, text: 'Ferramentas + gate permitem log de ações' } :
+                                                                 { pass: true, text: 'Audit trail recomendado — definir com o dono' };
+    if (checks.audit.pass && tools.length > 0) score++;
+
+    // 7. Kill switch planned (1 point)
+    checks.killswitch = ownership ? { pass: true, text: 'Dono pode pausar o agente' } :
+                                   { pass: false, text: 'Sem dono — kill switch sem owner não funciona' };
+    if (checks.killswitch.pass) score++;
+
+    const pct = Math.round((score / maxScore) * 100);
+    const scoreBar = document.getElementById('score-bar');
+    scoreBar.style.width = pct + '%';
+    scoreBar.className = 'score-bar ' + (pct >= 70 ? 'high' : pct >= 40 ? 'medium' : 'low');
+    document.getElementById('score-text').textContent = pct >= 70 ? 'Pronto para agente' : pct >= 40 ? 'Discutir gates antes' : 'Aguardar — incompleto';
+    document.getElementById('score-pct').textContent = pct + '%';
+
+    // Render checklist
+    const chkMap = {
+      workflow: checks.workflow,
+      tools: checks.tools,
+      human: checks.human,
+      data: checks.data,
+      owner: checks.owner,
+      audit: checks.audit,
+      killswitch: checks.killswitch
+    };
+    Object.keys(chkMap).forEach(key => {
+      const el = document.getElementById('chk-' + key);
+      const textEl = document.getElementById('chk-' + key + '-text');
+      const c = chkMap[key];
+      el.className = c.pass ? '' : (c.pass === false ? 'bad' : 'warn');
+      textEl.textContent = c.text;
+    });
+
+    // Verdict
+    let verdictLabel, verdictText, verdictColor;
+    if (pct >= 70 && checks.owner.pass && checks.human.pass) {
+      verdictLabel = 'FAZER — agente em ámbito';
+      verdictText = 'O caso de uso tem fluxo, ferramentas, gate humano e dono. Pronto para Discovery $99 mapear o fluxo com detalhe, ou ir direto para Consulting $499 se o escopo já estiver claro. Starter $2.500 implementa o primeiro agente em produção com os 5 controles mínimos.';
+      verdictColor = 'var(--green)';
+    } else if (pct >= 40) {
+      verdictLabel = 'DISCUTIR — fechar gaps antes de construir';
+      verdictText = 'O caso tem parte do caminho, mas falta um ou mais dos controles mínimos: dono nomeado, gate humano em ações irreversíveis, ou limite de dados. Preencher esses gaps antes de comprar plataforma. Discovery $99 ajuda a escrever o recorte.';
+      verdictColor = 'var(--yellow)';
+    } else {
+      verdictLabel = 'NÃO CONSTRUIR — ainda é um chatbot';
+      verdictText = 'Sem dono, sem gate humano ou sem ferramentas delimitadas, isso é um chatbot de demonstração — não um agente. Não comprar plataforma. Focar no processo manual primeiro, ou Discovery $99 para ver se o fluxo ainda é o certo.';
+      verdictColor = 'var(--red)';
+    }
+
+    document.getElementById('verdict-label').textContent = verdictLabel;
+    document.getElementById('verdict-label').style.color = verdictColor;
+    document.getElementById('verdict-text').textContent = verdictText;
+
+    placeholder.style.display = 'none';
+    results.classList.add('visible');
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  window.addEventListener('load', function() {
+    // Pre-select sales ops workflow + a few tools for demo
+    document.querySelector('.workflow-option[data-value="sales"]').click();
+    document.querySelector('.tool-chip[data-tool="crm"]').click();
+    document.querySelector('.tool-chip[data-tool="email"]').click();
+    document.querySelector('.tool-chip[data-tool="slack"]').click();
+    document.getElementById('ownership').value = 'Líder de Sales Ops';
+  });
+})();
+</script>
+</body>
+</html>
