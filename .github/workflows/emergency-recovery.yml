@@ -7,9 +7,19 @@ name: Emergency Recovery - Minimal Build
     paths-ignore:
     - '**/STATUS.md'
     - 'automation/reports/**'
+
+# Prevent duplicate recovery runs from rapid consecutive pushes from
+# cancelling/colliding with each other.
+concurrency:
+  group: emergency-recovery-main
+  cancel-in-progress: false
+
 jobs:
   recovery:
     runs-on: ubuntu-latest
+    # Next.js build on the 90k+ file tree regularly exceeds 20-25 min;
+    # give the build enough headroom so it is not killed mid-compile.
+    timeout-minutes: 60
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       NEXT_BUILD_WORKER_COUNT: '1'
@@ -34,4 +44,3 @@ jobs:
     - run: rm -rf node_modules .next node
     - run: npm install --force
     - run: npm run build
-    timeout-minutes: 25
