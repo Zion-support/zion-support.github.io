@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Client from './Client';
 
 export const metadata: Metadata = {
-  title: 'AI Quick Audit — 2 Minute Readiness Check | Zion Tech Group',
+  title: 'AI Quick Audit — 2 Minute Readiness Check',
   description: 'Take the 8-question AI readiness quick audit. Get a maturity score and recommended next steps in 2 minutes.',
   alternates: { canonical: '/tools/ai-quick-audit' },
 };

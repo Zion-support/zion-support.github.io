@@ -12,7 +12,7 @@ export const metadata = {
     url: 'https://ziontechgroup.com/blog/healthcare-crm-automation-ai-patient-workflows-2026',
     siteName: 'Zion Tech Group',
     type: 'article',
-    images: [{ url: '/og-healthcare-crm-automation.png', width: 1200, height: 630, alt: 'Healthcare CRM Automation' }]
+    images: [{ url: '/og-home.svg', width: 1200, height: 630, alt: 'Healthcare CRM Automation' }]
   },
 
 };

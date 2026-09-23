@@ -12,7 +12,7 @@ export const metadata = {
     url: 'https://ziontechgroup.com/blog/ai-email-outreach-automation-for-msps-2026',
     siteName: 'Zion Tech Group',
     type: 'article',
-    images: [{ url: '/og-ai-email-outreach-automation.png', width: 1200, height: 630, alt: 'AI Email Outreach Automation' }]
+    images: [{ url: '/og-home.svg', width: 1200, height: 630, alt: 'AI Email Outreach Automation' }]
   },
 
 };
