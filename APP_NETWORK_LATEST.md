@@ -76,7 +76,7 @@ Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/
 
 ## New spotlight: Field Services & Logistics 🚚
 
-Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) — 16 interlinked apps for field operations:
+Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) — 16 interlinked apps for field operations:
 
 - **[AI Field Dispatch Optimizer](https://ziontechgroup.com/zion-ai-field-dispatch-optimizer/)** — intelligent routing & dispatch · [Field Tech Scheduler](https://ziontechgroup.com/field-tech-scheduler/)
 - **[Route Density Planner](https://ziontechgroup.com/route-density-planner/)** — cluster service calls into efficient routes
@@ -86,17 +86,18 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT
 - **[Warranty Lens](https://ziontechgroup.com/warranty-lens/)** · [AI Warranty Tracker](https://ziontechgroup.com/zion-ai-warranty-tracker/)
 - **[Invoice Match AI](https://ziontechgroup.com/invoice-match-ai/)** · [Fleet Fuel Optimizer](https://ziontechgroup.com/fleet-fuel-optimizer/) · [Maintenance Ticket Triage](https://ziontechgroup.com/maintenance-ticket-triage/) · [Energy SLA Reporter](https://ziontechgroup.com/energy-sla-reporter/)
 
-## New spotlight: Free Calculators & Decision Tools 🧮
+## New spotlight: AI by Industry 🏭
 
-Full spotlight: [APP_NETWORK_SPOTLIGHT_CALCULATORS.md](APP_NETWORK_SPOTLIGHT_CALCULATORS.md) — 19 free browser tools, no signup:
+Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) — pre-built AI solution packs per vertical:
 
-- **[AI ROI Calculator](https://ziontechgroup.com/zion-ai-roi-calculator/)** · **[LLM Cost Calculator](https://ziontechgroup.com/llm-cost-calculator/)** · **[Model Cost Simulator](https://ziontechgroup.com/zion-ai-model-cost-simulator/)**
-- **[Cloud Cost Estimator](https://ziontechgroup.com/cloud-cost-estimator/)** · **[Cloud Migration Calculator](https://ziontechgroup.com/cloud-migration-calculator/)** · **[Cloud Cost Navigator](https://cloud-cost.ziontechgroup.com)**
-- **[Meeting Cost Calculator](https://ziontechgroup.com/meeting-cost-calculator/)** · **[IT Staffing Calculator](https://ziontechgroup.com/it-staffing-calculator/)**
-- **[SLO & Error Budget Calculator](https://ziontechgroup.com/slo-calculator/)** · **[SLA Breach Cost Calculator](https://ziontechgroup.com/zion-sla-cost-calculator/)**
-- **[Token & Context Calculator](https://ziontechgroup.com/token-context-calculator/)** · **[Context Window Planner](https://ziontechgroup.com/zion-context-window-planner/)**
-- **[Website Carbon Estimator](https://ziontechgroup.com/website-carbon-estimator/)** · **[Green Cloud Picker](https://ziontechgroup.com/green-cloud-picker/)** · **[Green AI Estimator](https://ziontechgroup.com/zion-green-ai-estimator/)**
-- **[AI Readiness Quiz](https://aireadiness.ziontechgroup.com)** · **[AI Readiness Score](https://ziontechgroup.com/ai-readiness-score/)** · **[Vendor Lock-in Score](https://ziontechgroup.com/zion-vendor-lockin-score/)** · **[Model Arena](https://modelarena.ziontechgroup.com)**
+- **[AI Industry Solutions](https://ziontechgroup.com/ai-industry-solutions/)** — solution maps & reference architectures per vertical
+- **[AI Healthcare Platform](https://ziontechgroup.com/ai-healthcare-platform/)** — clinical documentation, triage, HIPAA-grade guardrails
+- **[AI Financial Services Suite](https://ziontechgroup.com/ai-financial-services-suite/)** — KYC/AML, fraud detection, reg reporting
+- **[AI Retail & Commerce Hub](https://ziontechgroup.com/ai-retail-commerce-hub/)** — demand forecasting, dynamic pricing, personalization
+- **[AI Legal Intelligence](https://ziontechgroup.com/ai-legal-intelligence/)** — contract review & citation-verified research
+- **[AI HR Talent Platform](https://ziontechgroup.com/ai-hr-talent-platform/)** — sourcing, screening, retention analytics
+- **[AI MLOps Platform](https://ziontechgroup.com/ai-ml-ops-platform/)** — pipelines, registry, deployment & monitoring
+- **[Zion AI ROI Calculator](https://ziontechgroup.com/zion-ai-roi-calculator/)** — board-ready payback, NPV and IRR
 
 ## Recently launched
 - [Agent SLA Monitor](https://ziontechgroup.com/agent-sla-monitor/)
@@ -106,4 +107,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_CALCULATORS.md](APP_NETWORK_SPOTLIGHT_CAL
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_CALCULATORS.md](APP_NETWORK_SPOTLIGHT_CALCULATORS.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
