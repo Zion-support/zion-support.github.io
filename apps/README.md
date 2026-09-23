@@ -1,24 +1,19 @@
-# 🕸️ Zion App Network
+# Zion App Network — Full Catalog
 
-**Zion Tech Group** maintains a network of 100+ free, open, interactive AI & IT tools. Each app runs in the browser, is open source under the [Zion-support GitHub org](https://github.com/Zion-support), and interlinks with sibling apps.
+Live showcase: **https://ziontechgroup.com/apps/**
+Advertising page: **https://ziontechgroup.com/app-network/**
 
-## Browse
-- 🌐 Showcase: https://ziontechgroup.com/apps/
-- 🧰 All tools: https://ziontechgroup.com/tools/
-- 📊 Network status: https://zion-support.github.io/zion-status/
-- 💼 Client portal: https://zion-support.github.io/zion-portal/
+The Zion App Network contains **550+ interlinked apps** built by Zion Tech Group:
 
-## Categories
-| Category | Examples |
-|---|---|
-| FinOps & Cost | finops-spend-analyzer, cost-anomaly-detector, llm-cost-calculator, cloud-cost-estimator |
-| Security & Compliance | k8s-pod-security-scanner, prompt-injection-playground, quantum-safe-migrator |
-| DevOps & SRE | api-health-probe, log-anomaly-spotter, incident-timeline-reconstructor, k8s-yaml-linter |
-| Cloud & Green IT | cloud-architect-diagram-builder, green-cloud-picker, website-carbon-estimator |
-| AI Engineering & LLM Ops | prompt-forge, ai-eval-harness, zion-ai-prompt-router, mock-api-generator |
-| Data & Business | data-quality-sentinel, ai-supply-chain-optimizer, vendor-matrix-compare, tech-debt-radar |
+- **AI Tools** (130+): agents, swarms, compliance auditors, eval harnesses, prompt toolkits
+- **IT & Business Tools** (140+): calculators, planners, scanners, generators
+- **Security & Compliance**: AI Act / ISO 42001 / NIST AI RMF readiness, phishing simulation, secrets scanning
+- **FinOps & ROI**: cloud cost optimization, ROI calculators, quote builders
+- **Data & ML**: pipelines, RAG evaluators, LLM cost calculators, benchmark labs
+- **Field Services & Ops**: dispatch optimizers, site-survey planners, spare-parts finders, SLA monitors
+- **Field Network**: 177 regional field-service playbooks (`zion-field-*`) covering countries and cities worldwide
+- **Content & Marketing / HR & Education**: caption generators, SEO optimizers, interview copilots, tutors
 
-Every app repo contains `index.html` (the app), `README.md` (docs + links) and `NETWORK.md` (interlinks to related apps).
+Every app links back to this catalog and to [ziontechgroup.com](https://ziontechgroup.com), and every repo cross-links its sibling apps. The showcase page (`apps/index.html`) loads the live repo list from the GitHub API, so it is always up to date.
 
----
-© 2026 Zion Tech Group · https://ziontechgroup.com/
+Contact: commercial@ziontechgroup.com — Discovery & AI consulting trial are free.
