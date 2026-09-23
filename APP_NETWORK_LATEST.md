@@ -15,16 +15,6 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 
 Details: https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md
 
-## New: Everyday AI Apps spotlight ✨
-
-Full spotlight: [APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md](APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md) — free apps anyone can use, live demos of our enterprise AI:
-
-- **[AI Resume Builder](https://zion-support.github.io/ai-resume-builder/)** — ATS-optimized CVs & cover letters
-- **[AI Supply Chain Optimizer](https://zion-support.github.io/ai-supply-chain/)** — demand forecasting & supplier risk
-- **[AI Social Media Manager](https://zion-support.github.io/ai-social-manager/)** — scheduling, AI captions, analytics
-- **[AI Weather Forecast](https://zion-support.github.io/ai-weather-forecast/)** — hyperlocal predictions & alerts
-- **[AI Recipe Generator](https://zion-support.github.io/ai-recipe-generator/)** — meal planning assistant
-
 ## New this week: Developer & SRE Tools Suite 🛠️
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) — eight free utilities, no signup:
@@ -84,6 +74,18 @@ Field playbook libraries: [zion-field-playbooks](https://github.com/Zion-support
 
 Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md
 
+## New spotlight: Field Services & Logistics 🚚
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) — 16 interlinked apps for field operations:
+
+- **[AI Field Dispatch Optimizer](https://ziontechgroup.com/zion-ai-field-dispatch-optimizer/)** — intelligent routing & dispatch · [Field Tech Scheduler](https://ziontechgroup.com/field-tech-scheduler/)
+- **[Route Density Planner](https://ziontechgroup.com/route-density-planner/)** — cluster service calls into efficient routes
+- **[Site Survey Planner](https://ziontechgroup.com/site-survey-planner/)** · [AI Site Survey Brief](https://ziontechgroup.com/zion-ai-site-survey-brief/) · [Field Safety Brief](https://ziontechgroup.com/field-safety-brief/)
+- **[Technician Coach AI](https://ziontechgroup.com/technician-coach-ai/)** — guided diagnostics
+- **[AI Spare Parts Finder](https://ziontechgroup.com/zion-ai-spare-parts-finder/)** · [Spare Price Scout](https://ziontechgroup.com/spare-price-scout/) · [Depot Stock Balancer](https://ziontechgroup.com/depot-stock-balancer/)
+- **[Warranty Lens](https://ziontechgroup.com/warranty-lens/)** · [AI Warranty Tracker](https://ziontechgroup.com/zion-ai-warranty-tracker/)
+- **[Invoice Match AI](https://ziontechgroup.com/invoice-match-ai/)** · [Fleet Fuel Optimizer](https://ziontechgroup.com/fleet-fuel-optimizer/) · [Maintenance Ticket Triage](https://ziontechgroup.com/maintenance-ticket-triage/) · [Energy SLA Reporter](https://ziontechgroup.com/energy-sla-reporter/)
+
 ## Recently launched
 - [Agent SLA Monitor](https://ziontechgroup.com/agent-sla-monitor/)
 - [Zion AI Accessibility Auditor](https://ziontechgroup.com/zion-ai-accessibility-auditor/)
@@ -92,4 +94,4 @@ Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md](APP_NETWORK_SPOTLIGHT_EVERYDAY_AI.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md)
