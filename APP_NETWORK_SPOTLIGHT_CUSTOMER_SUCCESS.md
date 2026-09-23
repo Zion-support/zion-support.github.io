@@ -1,51 +1,44 @@
-# App Network Spotlight — Customer Success Suite (Sept 2026)
+# App Network Spotlight — Customer Success Suite (2026-09-23)
 
-**New from [Zion Tech Group](https://ziontechgroup.com/): a 7-app Customer Success Suite** that takes an account from onboarding → health → retention → expansion, with every signal wired together.
+**New from Zion Tech Group:** six AI apps that cover the entire post-sale journey — from first onboarding milestone to renewal and expansion.
 
-- 💼 Plans & pricing: https://ziontechgroup.com/en/plans/
-- 📞 Discovery call: https://ziontechgroup.com/discovery/
-- 🧰 All tools: https://ziontechgroup.com/tools/
-- 🌐 Master directory: https://github.com/Zion-support/zion-app-network
+## 🚀 The apps
 
-## The suite
+### 1. Customer Health Scorer
+Unified customer health scoring from product usage, support and billing signals. Configurable weights per segment, portfolio heatmaps, CRM webhooks.
+🔗 https://ziontechgroup.com/customer-health-scorer/ · [GitHub](https://github.com/Zion-support/customer-health-scorer)
 
-### 1. Onboarding Journey Tracker — start right
-Track onboarding milestones, time-to-value and stalled accounts before they drift.
-🔗 Live: https://ziontechgroup.com/onboarding-journey-tracker/ · [Repo](https://github.com/Zion-support/onboarding-journey-tracker)
+### 2. Churn Risk Radar
+Predict churn before it happens. Account-level risk scoring, automated save plays and executive alerts.
+🔗 https://ziontechgroup.com/churn-risk-radar/ · [GitHub](https://github.com/Zion-support/churn-risk-radar)
 
-### 2. Customer Health Scorer — one score, every signal
-Unified health scoring from product usage, support and billing signals, with portfolio heatmaps.
-🔗 Live: https://ziontechgroup.com/customer-health-scorer/ · [Repo](https://github.com/Zion-support/customer-health-scorer)
+### 3. NPS Insight Engine
+Turn NPS/CSAT verbatims into themes, drivers and follow-up workflows with AI.
+🔗 https://ziontechgroup.com/nps-insight-engine/ · [GitHub](https://github.com/Zion-support/nps-insight-engine)
 
-### 3. Churn Risk Radar — save accounts before they leave
-Predict churn risk with health scores, automated save plays and executive alerts.
-🔗 Live: https://ziontechgroup.com/churn-risk-radar/ · [Repo](https://github.com/Zion-support/churn-risk-radar)
+### 4. Support Sentiment Monitor
+Real-time sentiment across tickets, chats and calls — with escalation triggers that feed your health scores.
+🔗 https://ziontechgroup.com/support-sentiment-monitor/ · [GitHub](https://github.com/Zion-support/support-sentiment-monitor)
 
-### 4. Support Sentiment Monitor — hear frustration in real time
-Real-time sentiment monitoring across support tickets, chats and calls with escalation triggers.
-🔗 Live: https://ziontechgroup.com/support-sentiment-monitor/ · [Repo](https://github.com/Zion-support/support-sentiment-monitor)
+### 5. Upsell Signal Scout
+Detect expansion signals from product usage and account activity; ranked opportunities for CSMs and AEs.
+🔗 https://ziontechgroup.com/upsell-signal-scout/ · [GitHub](https://github.com/Zion-support/upsell-signal-scout)
 
-### 5. NPS Insight Engine — know what moves your score
-NPS & CSAT survey analysis with AI themes, driver detection and follow-up workflows.
-🔗 Live: https://ziontechgroup.com/nps-insight-engine/ · [Repo](https://github.com/Zion-support/nps-insight-engine)
+### 6. Onboarding Journey Tracker
+Track onboarding milestones, time-to-value and stalled accounts with next-best-action alerts.
+🔗 https://ziontechgroup.com/onboarding-journey-tracker/ · [GitHub](https://github.com/Zion-support/onboarding-journey-tracker)
 
-### 6. Upsell Signal Scout — grow what you keep
-Detect upsell and expansion signals from product usage and account activity, synced to your CRM.
-🔗 Live: https://ziontechgroup.com/upsell-signal-scout/ · [Repo](https://github.com/Zion-support/upsell-signal-scout)
+## 🔁 How they interlink
+Onboarding Journey Tracker feeds early-life signals into **Customer Health Scorer**; **Support Sentiment Monitor** and **NPS Insight Engine** enrich the same score; **Churn Risk Radar** consumes it to trigger save plays, while **Upsell Signal Scout** finds the expansion moments in healthy accounts. One data loop, zero swivel-chair.
 
-### 7. Support Deflection Analyzer — cut ticket volume
-Measure and grow ticket deflection from docs and bots with gap analysis and savings estimates.
-🔗 Live: https://ziontechgroup.com/support-deflection-analyzer/ · [Repo](https://github.com/Zion-support/support-deflection-analyzer)
+## 📚 Explore the network
 
-## Why it works as a suite
-Each app feeds the next: onboarding milestones power health scores; health and sentiment drive churn prediction; NPS drivers and usage signals surface expansion opportunities; deflection analytics keep support costs flat as you scale. One data layer, seven focused tools.
-
-## Explore more of the network (709 apps)
-- 🗂 Master directory: https://github.com/Zion-support/zion-app-network
-- 📰 What's new: [APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md)
-- 🛡 SecOps & Reliability spotlight: [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md)
-- 🏭 Industry verticals spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
-- 🧰 Full catalog: https://github.com/Zion-support/zion-app-network/blob/main/CATALOG.md
+- Master directory: https://github.com/Zion-support/zion-app-network (708 apps, tools & field playbooks)
+- Suite doc: https://github.com/Zion-support/zion-app-network/blob/main/docs/CUSTOMER_SUCCESS_SUITE.md
+- Hub page: https://ziontechgroup.com/zion-app-network/
+- All tools: https://ziontechgroup.com/tools/
+- Plans & pricing: https://ziontechgroup.com/en/plans/
+- Book a discovery call: https://ziontechgroup.com/discovery/
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com/
+© 2026 [Zion Tech Group](https://ziontechgroup.com/) · Part of the Zion App Network spotlight series.
