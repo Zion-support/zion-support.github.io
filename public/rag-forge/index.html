@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAG Forge | Zion Tech Group</title>
+<meta name="description" content="Free browser tool to sketch a production RAG pipeline: sources, chunking, retrieval questions, and evaluation gates. No login.">
+<link rel="canonical" href="https://ziontechgroup.com/rag-forge/">
+<meta name="robots" content="index,follow">
+<link rel="preload" href="/assets/css/site.css" as="style">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="/">Zion Tech Group</a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links" aria-label="Primary">
+<a href="/zion-app-network/">Apps</a><a href="/plans/">Plans</a><a href="/contact/">Contact</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+</nav></div></header>
+<main class="page" id="conteudo"><div class="wrap">
+<p class="crumb"><a href="/">Home</a> / <a href="/zion-app-network/">Apps</a> / RAG Forge</p>
+<h1>RAG Forge</h1>
+<p class="lead">Sketch a retrieval-augmented generation pipeline in the browser. Nothing is uploaded. Use it to decide what to build — then book Discovery if you want it in production.</p>
+<div class="prose">
+<label for="src">Knowledge sources</label>
+<input id="src" value="Confluence + GitHub + PDF runbooks" style="width:100%;padding:11px;border-radius:9px;border:1px solid #26324d;background:#0e1528;color:#fff;box-sizing:border-box">
+<label for="chunk" style="display:block;margin-top:14px">Chunking</label>
+<select id="chunk" style="width:100%;padding:11px;border-radius:9px;border:1px solid #26324d;background:#0e1528;color:#fff">
+<option>512 tokens, 64 overlap — policy / FAQ</option>
+<option>1024 tokens, 128 overlap — runbooks</option>
+<option>Section-aware (headings) — contracts</option>
+</select>
+<label for="q" style="display:block;margin-top:14px">First retrieval question</label>
+<textarea id="q" rows="3" style="width:100%;padding:11px;border-radius:9px;border:1px solid #26324d;background:#0e1528;color:#fff;box-sizing:border-box">What is the rollback if the Friday patch window fails?</textarea>
+<p><button class="btn" type="button" onclick="forge()">Forge pipeline brief</button></p>
+<pre id="out" class="card" style="white-space:pre-wrap;display:none"></pre>
+</div>
+<p class="see-also">Also: <a href="/prompt-forge/">Prompt Forge</a> · <a href="/zion-app-network/">App network</a> · <a href="/discovery/">Discovery $99</a></p>
+</div></main>
+<footer><div class="wrap foot">
+<div><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>
+</div></footer>
+<script>
+function forge(){
+  var src=document.getElementById('src').value.trim()||'internal docs';
+  var chunk=document.getElementById('chunk').value;
+  var q=document.getElementById('q').value.trim()||'a production question';
+  var text=[
+    'RAG pipeline brief',
+    '',
+    'Sources: '+src,
+    'Chunking: '+chunk,
+    'Gold question: '+q,
+    '',
+    'Gates before production:',
+    '1. Citation required on every answer.',
+    '2. Human review on high-risk actions.',
+    '3. Eval set of 20 gold questions, fail if citation miss >10%.',
+    '4. No customer PII in the prompt log.',
+    '',
+    'Next step: Discovery $99 if you want this scoped against a real corpus.'
+  ].join('\n');
+  var el=document.getElementById('out');
+  el.style.display='block';
+  el.textContent=text;
+}
+</script>
+<script src="/assets/js/zion-shell.js" defer></script>
+</body>
+</html>
