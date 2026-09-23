@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Software Composition Analysis (SCA) Service | Zion Tech Group',
+  title: 'Software Composition Analysis (SCA) Service',
   description: 'Automate open-source license compliance, detect known vulnerabilities, generate SBOMs, and enforce security policies across your entire codebase. Stay audit-ready and reduce supply-chain risk with continuous SCA.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/software-composition-analysis-sca',

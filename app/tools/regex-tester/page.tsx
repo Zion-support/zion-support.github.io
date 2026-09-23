@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Regex Tester | Zion Tech Group',
+  title: 'Regex Tester',
   description: 'Test regular expressions with live matches.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/regex-tester' },
 };

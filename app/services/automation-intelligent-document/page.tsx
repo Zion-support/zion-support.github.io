@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automation Intelligent Document Processing | Zion Tech Group',
+  title: 'Automation Intelligent Document Processing',
   description: 'AI-powered document processing that extracts, classifies, and routes documents automatically.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-intelligent-document',

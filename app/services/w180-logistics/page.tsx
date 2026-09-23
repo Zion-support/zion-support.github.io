@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Logistics and Freight Automation | Zion Tech Group',
+  title: 'Logistics and Freight Automation',
   description: 'Automate logistics: freight booking, route optimization, tracking, customs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-logistics',

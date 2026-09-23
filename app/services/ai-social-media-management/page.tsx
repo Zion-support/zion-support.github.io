@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Social Media Management | Zion Tech Group',
+  title: 'AI Social Media Management',
   description: 'AI Social Media Management solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-social-media-management',

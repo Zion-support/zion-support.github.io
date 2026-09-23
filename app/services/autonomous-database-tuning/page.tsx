@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Autonomous Database Tuning & Optimization | Zion Tech Group',
+  title: 'Autonomous Database Tuning & Optimization',
   description: 'AI-powered database optimization that continuously monitors, tunes, and repairs database performance. Auto-index creation, query optimization, and anomaly detection for PostgreSQL, MySQL, SQL Server, and MongoDB.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/autonomous-database-tuning',

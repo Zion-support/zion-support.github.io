@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Structured Cabling & Fiber Infrastructure | Zion Tech Group',
+  title: 'Data Center Structured Cabling & Fiber Infrastructure',
   description: 'Design, certify, and deploy high-density structured cabling systems for data centers: copper Cat6a/Cat7 and single-mode/multi-mode fiber. TIA-942/EIA/TIA-568 compliant with full test reports and traceability.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-structured-cabling',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Onboarding Automation | Zion Tech Group',
+  title: 'Customer Onboarding Automation',
   description: 'Automate customer onboarding with guided workflows, email sequences, in-app walkthroughs, and progress tracking. Reduces time-to-value and churn.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/onboarding-automation',

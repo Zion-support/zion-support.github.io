@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Identity & Access Management (IAM) | Zion Tech Group',
+  title: 'Identity & Access Management (IAM)',
   description: 'Enterprise IAM with SSO, MFA, privileged access management, and automated provisioning for secure, frictionless access across all applications.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/identity-access-management-ai',

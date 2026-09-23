@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'CSS Gradient Generator | Zion Tech Group',
+  title: 'CSS Gradient Generator',
   description: 'Build CSS gradients with a live preview.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/css-gradient-generator' },
 };

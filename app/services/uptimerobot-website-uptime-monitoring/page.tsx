@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'UptimeRobot — Website & Service Uptime Monitoring | Zion Tech Group',
+  title: 'UptimeRobot — Website & Service Uptime Monitoring',
   description: 'UptimeRobot is a widely-used uptime monitoring service that checks websites, APIs, ports, and cron jobs every 5 minutes to detect downtime instantly. With over 2 million users, it sends real-time alerts via email, SMS, Slack, Telegram, and 20+ integrations when services go down. UptimeRobot also provides public status pages, SSL certificate monitoring, and heartbeat monitoring for cron jobs and scheduled tasks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/uptimerobot-website-uptime-monitoring',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Conversation Risk Classifier | Zion Tech Group',
+  title: 'Conversation Risk Classifier',
   description: 'Flags risky communications in email, chat, and support channels with sensitivity routing and retention pairing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-conversation-risk-classifier',

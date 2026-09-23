@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real-Time Data Quality Monitor | Zion Tech Group',
+  title: 'Real-Time Data Quality Monitor',
   description: 'Continuous data quality monitoring platform that profiles datasets, detects anomalies, and enforces quality rules across your entire data pipeline. Sends alerts before bad data reaches downstream consumers.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-quality-monitor',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Synthetic Data Generation Platform | Zion Tech Group',
+  title: 'AI Synthetic Data Generation Platform',
   description: 'Generate realistic, privacy-safe synthetic data for testing, ML training, and data sharing. AI models learn the statistical properties of your real data and produce synthetic datasets that preserve relationships without exposing PII. Essential for dev/test environments and ML pipelines.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-synthetic-data-platform',

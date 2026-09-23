@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Retention and Lifecycle Management | Zion Tech Group',
+  title: 'Data Retention and Lifecycle Management',
   description: 'Automate data retention: policy enforcement, archival, deletion, compliance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-retention-lifecycle',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT ITSM Platform | Zion Tech Group',
+  title: 'IT ITSM Platform',
   description: 'Modern IT service management with asset discovery, change management, and self-service portal.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-itsm-platform',

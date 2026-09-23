@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Outline Knowledge Base | Zion Tech Group',
+  title: 'Outline Knowledge Base',
   description: 'Beautiful, open-source knowledge base and documentation platform designed for teams that want a self-hosted alternative to Notion or Confluence. Features a real-time collaborative editor, hierarchical document organization, full-text search, and a clean Slack-like interface that makes documentation enjoyable to write and maintain.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/outline-knowledge-base',

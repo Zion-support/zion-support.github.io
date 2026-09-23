@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mobile Device Management Checklist | Zion Tech Group',
+  title: 'Mobile Device Management Checklist',
   description: 'Enforces consistent MDM policies, compliance checks, and audit evidence across phones, tablets, and kiosks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-mobile-device-management-checklist',

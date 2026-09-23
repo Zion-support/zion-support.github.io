@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Internal Software Request Portal | Zion Tech Group',
+  title: 'Internal Software Request Portal',
   description: 'Routes software install requests through approval, licensing checks, provisioning, and lifecycle tracking with owner accountability.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-software-request-portal',

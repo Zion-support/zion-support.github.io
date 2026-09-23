@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Contract Testing Framework | Zion Tech Group',
+  title: 'Data Contract Testing Framework',
   description: 'Automated data contract testing platform that validates data quality, schema, and freshness at every pipeline stage. Shift-left data testing with CI/CD integration and automatic breakage alerts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-contract-testing',

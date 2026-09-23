@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Uplift AI — AI-Powered Financial Planning & Analysis | Zion Tech Group',
+  title: 'Uplift AI — AI-Powered Financial Planning & Analysis',
   description: 'Uplift AI is an AI-powered financial planning and analysis (FP&A) platform that automates budgeting, forecasting, and financial reporting for mid-market and enterprise finance teams. Using machine learning, Uplift AI analyzes historical financial data, identifies trends, and generates accurate forecasts that update in real time.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/uplift-ai-financial-planning',

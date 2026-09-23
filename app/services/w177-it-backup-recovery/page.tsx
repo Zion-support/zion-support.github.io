@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Backup & Disaster Recovery | Zion Tech Group',
+  title: 'Backup & Disaster Recovery',
   description: 'Policy-driven backups, point-in-time recovery, and DR runbooks for SaaS and infrastructure with RPO/RTO guarantees.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-it-backup-recovery',

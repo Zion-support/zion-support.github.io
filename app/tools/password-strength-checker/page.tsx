@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Password Strength Checker | Zion Tech Group',
+  title: 'Password Strength Checker',
   description: 'Analyze password strength locally.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/password-strength-checker' },
 };

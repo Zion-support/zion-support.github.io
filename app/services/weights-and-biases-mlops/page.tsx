@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Weights & Biases — MLOps Platform for Experiment Tracking and Model Management | Zion Tech Group',
+  title: 'Weights & Biases — MLOps Platform for Experiment Tracking and Model Management',
   description: 'Weights & Biases (W&B) is the leading MLOps platform for experiment tracking, model management, and AI workflow orchestration. Used by over 800,000 AI researchers and engineers at organizations including OpenAI, Google DeepMind, NVIDIA, and Toyota Research, W&B provides a centralized system to log training runs, compare hyperparameters, visualize metrics, and version datasets and models. Its platform includes W&B Experiments (tracking), W&B Artifacts (data/model versioning), W&B Sweeps (hyperparameter optimization), and W&B Launch (distributed training jobs). W&B reduces the time from experiment to production by 60% and is the de facto standard in AI research labs worldwide.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/weights-and-biases-mlops',

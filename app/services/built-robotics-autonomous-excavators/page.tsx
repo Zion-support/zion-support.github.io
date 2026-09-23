@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Built Robotics — Autonomous Heavy Construction Equipment | Zion Tech Group',
+  title: 'Built Robotics — Autonomous Heavy Construction Equipment',
   description: 'Built Robotics retrofits existing excavators, bulldozers, and skid steers with AI-powered autonomy, enabling them to dig, grade, and move earth without human operators. Their AI operator (ARI) uses GPS, LiDAR, and computer vision to execute construction plans with millimeter precision. Deployed on 100+ job sites across the US, Built Robotics addresses the construction industry\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/built-robotics-autonomous-excavators',

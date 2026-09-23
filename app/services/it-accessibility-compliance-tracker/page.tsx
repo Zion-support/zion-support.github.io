@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Accessibility Compliance Tracker | Zion Tech Group',
+  title: 'Accessibility Compliance Tracker',
   description: 'Tracks internal systems, documents, and services for WCAG and Section 508 gaps with issue routing and evidence logging.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-accessibility-compliance-tracker',

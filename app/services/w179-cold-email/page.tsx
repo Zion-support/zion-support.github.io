@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ColdOutreach - Cold Email Platform | Zion Tech Group',
+  title: 'ColdOutreach - Cold Email Platform',
   description: 'Cold email outreach: warmup, personalization, deliverability optimization, analytics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-cold-email',

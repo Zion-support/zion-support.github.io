@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Sentiment Analysis for Social Media | Zion Tech Group',
+  title: 'AI-Powered Sentiment Analysis for Social Media',
   description: 'Real-time brand monitoring and sentiment analysis platform that tracks mentions, conversations, and trends across Twitter, Reddit, Instagram, and other social channels. Advanced NLP models deliver granular sentiment scores, emotion detection, competitor benchmarking, and trend alerts so marketing and PR teams can act on brand perception in real time.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-sentiment-analysis-social-media',

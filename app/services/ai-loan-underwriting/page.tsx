@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Loan Underwriting & Risk Scoring Engine | Zion Tech Group',
+  title: 'AI Loan Underwriting & Risk Scoring Engine',
   description: 'Automate consumer and commercial loan underwriting: alternative data scoring, income verification, fraud detection, and FICO/NMFS-compliant decisioning. Processes applications in 30 seconds.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-loan-underwriting',

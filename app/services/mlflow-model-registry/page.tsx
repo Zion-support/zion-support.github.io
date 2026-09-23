@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'MLflow Model Registry | Zion Tech Group',
+  title: 'MLflow Model Registry',
   description: 'Open-source platform for managing the complete machine learning lifecycle — experiment tracking, model versioning, deployment, and monitoring. Provides a centralized model registry with stage transitions (staging → production), A/B testing support, and reproducible pipelines that bridge the gap between data science experimentation and production deployment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/mlflow-model-registry',

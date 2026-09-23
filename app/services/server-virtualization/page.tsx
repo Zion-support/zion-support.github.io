@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Server Virtualization | Zion Tech Group',
+  title: 'Server Virtualization',
   description: 'Server Virtualization is an enterprise infrastructure solution that consolidates physical servers into virtual machines using VMware, Hyper-V, or KVM. It features live migration, high-availability clustering, and reduces hardware costs by up to 70% while improving disaster recovery capabilities.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/server-virtualization',

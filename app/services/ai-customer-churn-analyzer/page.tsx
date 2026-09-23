@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Customer Churn Analyzer | Zion Tech Group',
+  title: 'AI Customer Churn Analyzer',
   description: 'Predictive churn analysis platform that combines product usage, billing, support, and engagement data to identify customers at risk of leaving. Prescribes specific retention actions per customer segment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-customer-churn-analyzer',

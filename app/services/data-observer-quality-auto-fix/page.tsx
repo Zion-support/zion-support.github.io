@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Observer Quality Auto-Fix | Zion Tech Group',
+  title: 'Data Observer Quality Auto-Fix',
   description: 'Monitors data quality and applies automated remediation actions within policy boundaries so pipelines stay healthy with limited manual ops.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-observer-quality-auto-fix',

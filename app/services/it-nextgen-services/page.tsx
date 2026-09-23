@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Next-Generation IT Modernization | Zion Tech Group',
+  title: 'Next-Generation IT Modernization',
   description: 'Modernize legacy IT operations with platform engineering, reliability automation, and cloud-native tooling. Covers containerized infrastructure, progressive delivery, and IT operations standardization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-nextgen-services',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Threat Landscape Digest Service | Zion Tech Group',
+  title: 'Threat Landscape Digest Service',
   description: 'Aggregates threat feeds, CVE data, and industry telemetry into concise executive and analyst digests for faster decisions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-threat-landscape-digest',

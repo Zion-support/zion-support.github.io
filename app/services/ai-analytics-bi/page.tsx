@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Analytics & BI | Zion Tech Group',
+  title: 'AI Analytics & BI',
   description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-analytics-bi',

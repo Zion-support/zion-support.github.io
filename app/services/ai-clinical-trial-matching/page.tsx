@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Clinical Trial Matching Platform | Zion Tech Group',
+  title: 'AI Clinical Trial Matching Platform',
   description: 'Match patients to eligible clinical trials using AI that parses unstructured EHR data, lab results, and physician notes against trial inclusion/exclusion criteria. Increases trial enrollment rates by 3x and reduces screening time by 80%. Integrates with major EHR systems and CTMS platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-clinical-trial-matching',

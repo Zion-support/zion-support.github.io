@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ThingsBoard IoT Platform | Zion Tech Group',
+  title: 'ThingsBoard IoT Platform',
   description: 'Open-source IoT platform for device management, data collection, processing, and visualization at scale. Handles millions of devices with real-time telemetry ingestion, rule engine for automated alerts and actions, and customizable dashboards — enabling everything from smart building management to industrial predictive maintenance without vendor lock-in.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/thingsboard-iot-platform',

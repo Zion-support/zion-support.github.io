@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Workflow Automator | Zion Tech Group',
+  title: 'AI Workflow Automator',
   description: 'AI-defined automation across apps and data. Detects repetitive tasks, builds automation flows, and keeps them healthy with change-aware self-repair.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-ai-workflow-automator',

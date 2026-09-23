@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Digital Twin Platform | Zion Tech Group',
+  title: 'Digital Twin Platform',
   description: 'Create virtual replicas of physical assets, processes, or systems. Real-time simulation, predictive maintenance, and what-if scenario planning.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/digital-twin',

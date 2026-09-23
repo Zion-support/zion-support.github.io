@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Disaster Recovery & Business Continuity Planning | Zion Tech Group',
+  title: 'Disaster Recovery & Business Continuity Planning',
   description: 'Comprehensive DR/BC planning including risk assessment, RTO/RPO definition, runbook creation, backup strategy, and quarterly testing. Ensure your business survives any outage.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/disaster-recovery-planning',

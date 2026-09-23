@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Knowledge Base & Help Center Builder | Zion Tech Group',
+  title: 'Micro-SaaS Knowledge Base & Help Center Builder',
   description: 'Create a searchable, AI-powered knowledge base for your customers or internal team. Drag-and-drop editor, AI article suggestions, analytics on what customers search for, and seamless embedding in your website.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-knowledge-base-builder',

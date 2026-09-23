@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'MLOps Platform and Model Lifecycle | Zion Tech Group',
+  title: 'MLOps Platform and Model Lifecycle',
   description: 'End-to-end ML lifecycle: experiment tracking, model registry, CI/CD for ML.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ml-ops-platform',

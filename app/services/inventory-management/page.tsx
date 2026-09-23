@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Inventory Management System | Zion Tech Group',
+  title: 'Inventory Management System',
   description: 'Real-time inventory tracking across warehouses and stores. Barcode scanning, reorder alerts, supplier management, and demand forecasting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/inventory-management',

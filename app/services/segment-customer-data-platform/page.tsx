@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Twilio Segment — Customer Data Platform (CDP) | Zion Tech Group',
+  title: 'Twilio Segment — Customer Data Platform (CDP)',
   description: 'Twilio Segment is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/segment-customer-data-platform',

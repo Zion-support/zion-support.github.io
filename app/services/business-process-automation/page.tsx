@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Business Process Automation (BPA) Suite | Zion Tech Group',
+  title: 'Business Process Automation (BPA) Suite',
   description: 'Enterprise BPA platform that discovers, models, and automates complex business processes across departments. Combines workflow automation, document processing, and AI decision-making in one platform.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/business-process-automation',

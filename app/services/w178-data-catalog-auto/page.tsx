@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automated Data Catalog | Zion Tech Group',
+  title: 'Automated Data Catalog',
   description: 'Auto-discover and catalog data assets: schema inference, lineage tracking, business glossary.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-catalog-auto',

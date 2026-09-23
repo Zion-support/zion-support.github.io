@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro SaaS Appointment Scheduler | Zion Tech Group',
+  title: 'Micro SaaS Appointment Scheduler',
   description: 'Micro SaaS Appointment Scheduler solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-appointment-scheduler',

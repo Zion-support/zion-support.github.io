@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Security Operations Automation | Zion Tech Group',
+  title: 'AI Security Operations Automation',
   description: 'AI Security Operations Automation services from Zion Tech Group — strategy, implementation, and managed operations.',
   alternates: { canonical: 'https://ziontechgroup.com/ai-security-operations-automation' },
 };

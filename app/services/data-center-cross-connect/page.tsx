@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Cross-Connect & Interconnection Services | Zion Tech Group',
+  title: 'Data Center Cross-Connect & Interconnection Services',
   description: 'Provision and manage intra-facility cross-connects, inter-carrier peering, and hybrid cloud connectivity (AWS Direct Connect, Azure ExpressRoute, Google Cloud Interconnect). Layer 2 and Layer 3 circuit design.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-cross-connect',

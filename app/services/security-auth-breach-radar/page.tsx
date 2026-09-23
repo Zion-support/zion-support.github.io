@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Auth Breach Radar | Zion Tech Group',
+  title: 'Auth Breach Radar',
   description: 'Watches for leaked credentials, session abuse, MFA fatigue, and unusual auth-path changes across applications.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-auth-breach-radar',

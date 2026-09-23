@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Business Customers | Zion Tech Group',
+  title: 'Business Customers',
   description: 'Modernize operations with Zion Tech Group AI, IT, and automation services built for measurable outcomes.',
   alternates: { canonical: 'https://ziontechgroup.com/business-customers' },
 };

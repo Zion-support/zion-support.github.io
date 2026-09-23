@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Patient Scheduling & Flow Optimizer | Zion Tech Group',
+  title: 'AI Patient Scheduling & Flow Optimizer',
   description: 'Intelligent patient scheduling platform for healthcare systems that optimizes appointment slots, reduces no-shows, and balances provider workloads. Predictive no-show modeling with automated reminder campaigns.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-patient-scheduling',

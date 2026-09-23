@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IoT Device Management | Zion Tech Group',
+  title: 'IoT Device Management',
   description: 'Centralized IoT device provisioning, monitoring, and firmware updates. Supports MQTT, CoAP, and HTTP protocols with real-time dashboards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/iot-device-management',

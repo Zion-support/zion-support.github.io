@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Invoice Builder & Payments | Zion Tech Group',
+  title: 'Invoice Builder & Payments',
   description: 'Professional invoicing with payment tracking, recurring billing, and multi-currency support.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-invoice-builder',

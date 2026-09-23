@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Virtual Desktop Infrastructure (VDI) | Zion Tech Group',
+  title: 'Virtual Desktop Infrastructure (VDI)',
   description: 'Cloud-hosted virtual desktop platform that delivers Windows and Linux desktops to any device. Centralized management, GPU acceleration for design workloads, and enterprise security with zero-trust access.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/virtual-desktop-infrastructure',

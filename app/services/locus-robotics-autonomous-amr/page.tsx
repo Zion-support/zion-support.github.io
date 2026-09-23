@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Locus Robotics — Autonomous Mobile Robots for Warehouses | Zion Tech Group',
+  title: 'Locus Robotics — Autonomous Mobile Robots for Warehouses',
   description: 'Locus Robotics provides autonomous mobile robots (AMRs) that work alongside human workers in warehouses and distribution centers, picking, transporting, and sorting goods with minimal infrastructure changes. Their robots use AI-powered navigation, computer vision, and multi-robot coordination to increase pick productivity by 2-3x. Deployed in 300+ warehouses globally for retailers including DHL, Boots, and Material Bank.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/locus-robotics-autonomous-amr',

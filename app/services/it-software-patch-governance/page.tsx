@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Software Patch Governance & Management | Zion Tech Group',
+  title: 'Software Patch Governance & Management',
   description: 'Enterprise patch governance with discovery, risk ranking, change control, fast-path exceptions, automation, and evidence for compliance reviews.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-software-patch-governance',

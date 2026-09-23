@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Task Priority Engine | Zion Tech Group',
+  title: 'AI Task Priority Engine',
   description: 'AI task prioritization: deadline urgency, importance scoring, dependency mapping, focus time.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-task-priority',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Brand Monitoring | Zion Tech Group',
+  title: 'AI Brand Monitoring',
   description: 'AI Brand Monitoring solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-brand-monitoring',

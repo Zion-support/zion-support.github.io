@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'JWT Decoder | Zion Tech Group',
+  title: 'JWT Decoder',
   description: 'Decode JWT header and payload client-side.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/jwt-decoder' },
 };

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Feedback Platform | Zion Tech Group',
+  title: 'Customer Feedback Platform',
   description: 'Collect, analyze, and act on customer feedback. In-app surveys, NPS tracking, sentiment analysis, and automated follow-up workflows.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/customer-feedback-platform',

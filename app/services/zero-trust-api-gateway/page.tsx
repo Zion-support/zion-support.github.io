@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zero-Trust API Gateway & Micro-Segmentation | Zion Tech Group',
+  title: 'Zero-Trust API Gateway & Micro-Segmentation',
   description: 'Secure all API traffic with zero-trust principles. Every request is authenticated, authorized, and encrypted. Micro-segmentation prevents lateral movement. Real-time threat detection and automatic rate limiting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/zero-trust-api-gateway',

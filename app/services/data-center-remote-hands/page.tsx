@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Remote Hands & Smart Hands Support | Zion Tech Group',
+  title: 'Data Center Remote Hands & Smart Hands Support',
   description: 'On-demand engineering support for hardware installation, rack-and-stack, cable patching, equipment swaps, and break-fix. 15-minute response SLA with technician dispatch to any facility location.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-remote-hands',

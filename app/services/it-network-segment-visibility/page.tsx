@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Segment Visibility & Control | Zion Tech Group',
+  title: 'Network Segment Visibility & Control',
   description: 'Maps network segments, access paths, and device exposure across sites and cloud with risk scoring and change control.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-network-segment-visibility',

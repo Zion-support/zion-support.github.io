@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Locus Robotics — Autonomous Mobile Robots for Warehouses | Zion Tech Group',
+  title: 'Locus Robotics — Autonomous Mobile Robots for Warehouses',
   description: 'Locus Robotics is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/locus-autonomous-mobile-robots',

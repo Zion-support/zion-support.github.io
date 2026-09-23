@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Document Automation Platform | Zion Tech Group',
+  title: 'Document Automation Platform',
   description: 'Automate document creation: templates, data merge, approval workflows, e-signature.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-doc-automate',

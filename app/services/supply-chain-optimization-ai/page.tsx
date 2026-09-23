@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Supply Chain | Zion Tech Group',
+  title: 'Supply Chain',
   description: 'Supply Chain delivers purpose-built AI solutions tailored to specific industry requirements. Accelerate digital transformation with domain-specific...',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/supply-chain-optimization-ai',

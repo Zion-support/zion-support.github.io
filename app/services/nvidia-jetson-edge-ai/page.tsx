@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'NVIDIA Jetson — Edge AI Inference Platform | Zion Tech Group',
+  title: 'NVIDIA Jetson — Edge AI Inference Platform',
   description: 'NVIDIA Jetson is the leading edge AI computing platform, delivering data center-level AI performance in power-constrained embedded systems. The Orin NX and AGX Orin modules provide up to 275 TOPS of AI compute for autonomous machines, industrial inspection, smart cities, and medical devices — all at under 60W power consumption.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/nvidia-jetson-edge-ai',

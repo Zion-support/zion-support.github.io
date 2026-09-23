@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Form Automation Hub | Zion Tech Group',
+  title: 'Form Automation Hub',
   description: 'Form Automation Hub is a powerful form builder and workflow automation platform featuring conditional logic, 50+ integrations, and multi-step workflows. It replaces paper forms, spreadsheets, and manual processes with intelligent digital forms that route data automatically.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/form-automation-hub',

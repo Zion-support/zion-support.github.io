@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Remote Support Quality Assurance | Zion Tech Group',
+  title: 'Remote Support Quality Assurance',
   description: 'Reviews remote support sessions for outcome quality, compliance, and coaching moments with approval, redaction, and evidence capture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-remote-support-quality-assurance',

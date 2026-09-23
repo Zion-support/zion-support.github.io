@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Code Review & Security Scanning | Zion Tech Group',
+  title: 'AI Code Review & Security Scanning',
   description: 'Automated code review powered by large language models trained on millions of code reviews. Detects bugs, security vulnerabilities, performance issues, and style violations. Integrates with GitHub, GitLab, and Bitbucket. Reduces review time by 80% and catches 3x more issues than manual review alone.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-code-review',

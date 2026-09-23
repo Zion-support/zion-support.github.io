@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Project Management Suite | Zion Tech Group',
+  title: 'Project Management Suite',
   description: 'All-in-one project management platform with Gantt charts, Kanban boards, time tracking, resource planning, and client portals. Built for agencies and IT teams managing multiple concurrent projects.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/project-management-suite',

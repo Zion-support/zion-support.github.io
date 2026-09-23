@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Contract Enforcement Platform | Zion Tech Group',
+  title: 'Data Contract Enforcement Platform',
   description: 'Define, enforce, and monitor data contracts between producers and consumers. Prevent breaking schema changes, validate data quality SLAs, and auto-generate documentation. Essential for data mesh and platform engineering teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-contract-enforcement-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Qualcomm AI Engine — Mobile & IoT Edge AI Processing | Zion Tech Group',
+  title: 'Qualcomm AI Engine — Mobile & IoT Edge AI Processing',
   description: 'Qualcomm AI Engine, integrated into Snapdragon mobile and IoT platforms, brings dedicated AI acceleration to over 1 billion devices. Its Hexagon Neural Processing Unit (NPU) handles on-device LLM inference (up to 7B parameters), real-time translation, voice assistants, and computational photography without cloud round-trips.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/qualcomm-ai-engine-mobile-edge',

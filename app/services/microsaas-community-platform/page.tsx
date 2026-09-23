@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Branded Community & Membership Platform | Zion Tech Group',
+  title: 'Branded Community & Membership Platform',
   description: 'Launch a branded online community for your customers, members, or fans. Includes discussion forums, member directories, event management, content libraries, and monetization (paid memberships, subscriptions). White-labeled with your domain and branding. Alternative to Facebook Groups and Slack with full data ownership.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-community-platform',

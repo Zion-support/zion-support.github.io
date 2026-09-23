@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Data Protection & Backup Strategy | Zion Tech Group',
+  title: 'IT Data Protection & Backup Strategy',
   description: 'Protect business-critical data with layered backup, retention policies, recovery testing, and capacity planning. Reduce data loss impact and improve recovery confidence.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-data-protection-services',

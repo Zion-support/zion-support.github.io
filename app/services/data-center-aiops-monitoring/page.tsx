@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Driven Data Center Operations (DC AIOps) | Zion Tech Group',
+  title: 'AI-Driven Data Center Operations (DC AIOps)',
   description: 'Automate data center operations with AI/ML-powered monitoring, predictive maintenance, and self-healing infrastructure. Reduce MTTR, optimize power usage effectiveness, and eliminate alert fatigue.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-aiops-monitoring',

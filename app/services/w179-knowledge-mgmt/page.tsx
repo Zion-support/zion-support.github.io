@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Enterprise Knowledge Management | Zion Tech Group',
+  title: 'Enterprise Knowledge Management',
   description: 'AI-powered knowledge management: auto-organize, answer questions, surface relevant info.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-knowledge-mgmt',

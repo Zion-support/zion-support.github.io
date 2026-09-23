@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Usage-Based Billing Platform | Zion Tech Group',
+  title: 'Usage-Based Billing Platform',
   description: 'Flexible usage-based and hybrid billing platform for SaaS companies. Supports metered billing, tiered pricing, overage charges, and custom pricing models. Real-time usage tracking, invoice generation, and revenue recognition. Integrates with Stripe and your product via API.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-usage-based-billing',

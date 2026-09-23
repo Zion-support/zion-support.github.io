@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Renewable Energy & PPA Advisory for Data Centers | Zion Tech Group',
+  title: 'Renewable Energy & PPA Advisory for Data Centers',
   description: 'Navigate renewable energy procurement, PPAs, and carbon offsetting specifically for data center power demand. We evaluate solar, wind, and hydro options, negotiate contracts, and validate REC delivery against your actual load profile.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dc-renewable-ppa-advisory',

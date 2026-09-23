@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Edge Comployment Deployment | Zion Tech Group',
+  title: 'IT Edge Comployment Deployment',
   description: 'IT Edge Comployment Deployment solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-edge-comployment-deployment',

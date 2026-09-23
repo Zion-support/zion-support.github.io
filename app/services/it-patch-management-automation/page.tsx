@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Patch Management & Compliance Automation | Zion Tech Group',
+  title: 'IT Patch Management & Compliance Automation',
   description: 'Automate OS and application patching across Windows, Linux, and macOS endpoints. Test patches in staging, enforce SLA timelines, generate compliance reports for SOC 2, HIPAA, and PCI DSS. Zero-touch patching for critical CVEs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-patch-management-automation',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ClassScheduler - Class Booking | Zion Tech Group',
+  title: 'ClassScheduler - Class Booking',
   description: 'Manage class bookings: scheduling, waitlists, payments, instructor management.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-class-scheduler',

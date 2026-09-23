@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Accessibility Compliance Suite (WCAG/ADA/Section 508) | Zion Tech Group',
+  title: 'AI Accessibility Compliance Suite (WCAG/ADA/Section 508)',
   description: 'Automated accessibility testing and remediation for web and mobile apps. AI scans for WCAG 2.2, ADA, and Section 508 violations, generates fix suggestions, and tracks compliance over time. VPAT and ACR report generation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-accessibility-compliance-suite',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Resume Screener | Zion Tech Group',
+  title: 'AI Resume Screener',
   description: 'AI Resume Screener is an intelligent recruitment tool that ranks and filters resumes based on job requirements, detects potential bias in hiring decisions, and integrates with leading applicant tracking systems. It reduces time-to-hire by 50% while promoting fair and objective candidate evaluation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-resume-screener',

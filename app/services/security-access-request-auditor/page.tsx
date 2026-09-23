@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Access Request Auditor | Zion Tech Group',
+  title: 'Access Request Auditor',
   description: 'Reviews access requests, approver behavior, and entitlement drift across directory and cloud identity systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-access-request-auditor',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Access Governance Hub | Zion Tech Group',
+  title: 'IT Access Governance Hub',
   description: 'Manages access reviews, role mining, entitlement inventories, and policy enforcement for IAM, SaaS, and privileged-access programs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-access-governance-hub',

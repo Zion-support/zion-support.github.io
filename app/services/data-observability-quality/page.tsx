@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Observability & Quality AI Platform | Zion Tech Group',
+  title: 'Data Observability & Quality AI Platform',
   description: 'Monitor data freshness, volume, distribution, and schema with AI-powered anomaly detection. Auto-detect breaking changes, classify incidents, and suggest fixes. Keep analytics and ML training reliable.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-observability-quality',

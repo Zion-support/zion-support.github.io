@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Churn Prediction Suite | Zion Tech Group',
+  title: 'Churn Prediction Suite',
   description: 'ML-powered churn prediction with automated retention campaigns and health scoring.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-churn-prediction',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Asset Management (ITAM) | Zion Tech Group',
+  title: 'IT Asset Management (ITAM)',
   description: 'Lifecycle tracking, audit-ready records, vendor warranty management, and cost accountability for IT inventory.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-itam',

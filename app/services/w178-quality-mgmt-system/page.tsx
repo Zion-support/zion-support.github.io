@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Quality Management System (QMS) | Zion Tech Group',
+  title: 'Quality Management System (QMS)',
   description: 'Manage quality: CAPA, audits, document control, compliance. ISO 9001, ISO 13485 aligned.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-quality-mgmt-system',

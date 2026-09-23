@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Construction Project Automation | Zion Tech Group',
+  title: 'Construction Project Automation',
   description: 'Automate construction: scheduling, RFIs, change orders, progress tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-construct',

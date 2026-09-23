@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Feedback Analytics | Zion Tech Group',
+  title: 'Customer Feedback Analytics',
   description: 'Collect, analyze, and act on customer feedback from surveys, reviews, and support tickets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-customer-feedback',

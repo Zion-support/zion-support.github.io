@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Legal Contract Review & Risk Scoring | Zion Tech Group',
+  title: 'AI Legal Contract Review & Risk Scoring',
   description: 'Upload any contract — NDA, MSA, SaaS agreement, employment contract — and get an instant risk score, clause analysis, and redline suggestions. Trained on millions of legal documents. Reduces attorney review time by 70%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-legal-contract-review',

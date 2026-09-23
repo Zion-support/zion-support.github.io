@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Process Mining & Automation Discovery | Zion Tech Group',
+  title: 'Process Mining & Automation Discovery',
   description: 'Discover real workflows from system logs, model optimization paths, and generate automation candidates with ROI estimates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-automation-process-mining',

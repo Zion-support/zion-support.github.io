@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Smart CRM Automation — Lead Scoring & Nurturing | Zion Tech Group',
+  title: 'Smart CRM Automation — Lead Scoring & Nurturing',
   description: 'AI-powered CRM that scores leads, sends personalized emails, and schedules follow-ups automatically.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/smart-crm-automation',

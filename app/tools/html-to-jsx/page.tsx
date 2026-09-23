@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'HTML to JSX Converter | Zion Tech Group',
+  title: 'HTML to JSX Converter',
   description: 'Convert HTML markup to React JSX.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/html-to-jsx' },
 };

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cyber Incident Response Retainer | Zion Tech Group',
+  title: 'Cyber Incident Response Retainer',
   description: 'Cyber Incident Response Retainer solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cyber-incident-response-retainer',

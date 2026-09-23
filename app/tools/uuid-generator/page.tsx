@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'UUID Generator | Zion Tech Group',
+  title: 'UUID Generator',
   description: 'Generate RFC 4122 UUIDs.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/uuid-generator' },
 };

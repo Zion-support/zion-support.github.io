@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Voice Analytics for Call Centers | Zion Tech Group',
+  title: 'AI Voice Analytics for Call Centers',
   description: 'Analyze customer calls: sentiment, intent, compliance, agent performance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-voice-analytics',

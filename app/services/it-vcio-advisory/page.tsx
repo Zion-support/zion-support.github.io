@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'vCIO Advisory & Planning | Zion Tech Group',
+  title: 'vCIO Advisory & Planning',
   description: 'Fractional CIO support for planning, vendor strategy, governance, and board-ready technology reporting suited to companies that need executive guidance without a full-time CTO.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-vcio-advisory',

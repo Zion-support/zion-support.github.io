@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'BuildingOS — Smart Building IoT Management Platform | Zion Tech Group',
+  title: 'BuildingOS — Smart Building IoT Management Platform',
   description: 'BuildingOS is a comprehensive smart building IoT management platform that integrates HVAC, lighting, security, occupancy sensors, and energy systems into a single intelligent dashboard. Using AI-driven analytics, BuildingOS optimizes energy consumption by 25-40%, predicts equipment failures, and automatically adjusts building conditions based on occupancy patterns and weather forecasts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/building-os-smart-building-iot',

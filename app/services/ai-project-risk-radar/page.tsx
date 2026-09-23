@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Project Risk Radar | Zion Tech Group',
+  title: 'AI Project Risk Radar',
   description: 'Predicts project delivery risk from schedule, dependency, staffing, and change signals with early mitigation routing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-project-risk-radar',

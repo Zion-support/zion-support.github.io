@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Security, DMARC & Deliverability Management | Zion Tech Group',
+  title: 'Email Security, DMARC & Deliverability Management',
   description: 'Protect your domain from phishing and spoofing with DMARC, SPF, and DKIM management. Monitor email deliverability, investigate threats, and ensure legitimate emails reach the inbox. Full visibility into who is sending email using your domain.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-email-dmarc',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud Networking Fabric | Zion Tech Group',
+  title: 'Multi-Cloud Networking Fabric',
   description: 'Unified networking across AWS, Azure, and GCP with SD-WAN, service mesh, and traffic optimization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-multi-cloud-networking',

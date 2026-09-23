@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Tiered Support Escalation Framework | Zion Tech Group',
+  title: 'Tiered Support Escalation Framework',
   description: 'Structures L1/L2/L3 tiers, escalation gates, and ops review loops so support stays predictable and measurable.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-support-tiered-escalation-framework',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Computer Vision | Zion Tech Group',
+  title: 'AI Computer Vision',
   description: 'Image recognition, object detection, quality inspection, and visual search powered by deep learning models trained on your domain data.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-computer-vision-quality',

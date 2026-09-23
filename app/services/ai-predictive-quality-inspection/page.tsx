@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Predictive Quality Inspection for Manufacturing | Zion Tech Group',
+  title: 'AI Predictive Quality Inspection for Manufacturing',
   description: 'Computer vision AI that inspects products on manufacturing lines in real-time, detecting defects, dimensional deviations, and assembly errors at speeds up to 500 parts per minute. Reduces defect escape rate by 90% and eliminates manual inspection bottlenecks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-predictive-quality-inspection',

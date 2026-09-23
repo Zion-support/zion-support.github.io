@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'String Case Converter | Zion Tech Group',
+  title: 'String Case Converter',
   description: 'Convert between common string cases.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/string-case-converter' },
 };

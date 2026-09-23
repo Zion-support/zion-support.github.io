@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Linkerd Service Mesh | Zion Tech Group',
+  title: 'Linkerd Service Mesh',
   description: 'Linkerd is a lightweight, ultra-secure service mesh for Kubernetes. It provides observability, reliability, and security without requiring application changes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/linkerd',

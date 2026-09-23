@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Compliance Monitor & Regulatory Tracker | Zion Tech Group',
+  title: 'AI Compliance Monitor & Regulatory Tracker',
   description: 'Continuously monitor your systems, data practices, and operations for compliance with GDPR, HIPAA, SOC 2, PCI-DSS, and industry-specific regulations. AI detects compliance gaps, auto-generates evidence packages, and alerts teams before audits.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-compliance-monitor',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Property Maintenance AI | Zion Tech Group',
+  title: 'Property Maintenance AI',
   description: 'Property Maintenance AI solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/property-maintenance-ai',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'API Rate Limiter & Usage Billing Platform | Zion Tech Group',
+  title: 'API Rate Limiter & Usage Billing Platform',
   description: 'Developer-friendly API monetization and rate limiting. Define usage-based pricing tiers, enforce rate limits per customer, and generate invoices automatically. Real-time usage dashboards for both you and your API customers. Supports REST, GraphQL, WebSocket, and gRPC APIs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-api-rate-limiter',

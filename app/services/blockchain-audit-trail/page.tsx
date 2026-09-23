@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Blockchain Audit Trail | Zion Tech Group',
+  title: 'Blockchain Audit Trail',
   description: 'Immutable audit logging using distributed ledger technology. Tamper-proof records for compliance, supply chain verification, and financial auditing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/blockchain-audit-trail',

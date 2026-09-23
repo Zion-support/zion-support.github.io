@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Status Page & Incident Communication | Zion Tech Group',
+  title: 'Status Page & Incident Communication',
   description: 'Beautiful, customizable status pages for SaaS companies. Real-time uptime monitoring, incident management, subscriber notifications, and historical uptime reports. Supports custom domains, white-labeling, and API status endpoints. Trusted by 5,000+ companies for transparent communication.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-status-page',

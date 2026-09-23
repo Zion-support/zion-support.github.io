@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Performance Monitoring & Optimization | Zion Tech Group',
+  title: 'Network Performance Monitoring & Optimization',
   description: 'Gain complete visibility into your network infrastructure with real-time performance monitoring, deep bandwidth analysis, automated QoS configuration, and predictive capacity planning. Identify bottlenecks before they impact users and optimize network performance across on-premises, cloud, and hybrid environments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/network-performance-monitoring-optimization',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Product Management | Zion Tech Group',
+  title: 'IT Product Management',
   description: 'Roadmapping, customer feedback synthesis, prioritization, and go-to-market alignment for internal IT products.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-products',

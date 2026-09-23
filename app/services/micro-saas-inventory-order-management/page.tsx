@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Inventory & Order Management | Zion Tech Group',
+  title: 'Micro-SaaS Inventory & Order Management',
   description: 'Multi-channel inventory sync, order tracking, supplier management, and low-stock alerts. Purpose-built for e-commerce sellers who need a lightweight yet powerful operations hub without enterprise complexity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-inventory-order-management',

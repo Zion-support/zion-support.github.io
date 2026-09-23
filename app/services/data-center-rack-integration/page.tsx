@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Rack & Cabinet Integration Services | Zion Tech Group',
+  title: 'Rack & Cabinet Integration Services',
   description: 'End-to-end rack builds: mounting, labeling, PDUs, cable management, and network gear installation for new deployments and refreshes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-rack-integration',

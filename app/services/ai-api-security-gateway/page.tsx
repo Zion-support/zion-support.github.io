@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI API Security Gateway & Threat Protection | Zion Tech Group',
+  title: 'AI API Security Gateway & Threat Protection',
   description: 'Protect your APIs from abuse, data exfiltration, and business logic attacks. AI learns normal API behavior and automatically blocks anomalous requests. Includes rate limiting, schema validation, bot detection, and sensitive data masking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-api-security-gateway',

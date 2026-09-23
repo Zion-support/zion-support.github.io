@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meeting Notes Action Items | Zion Tech Group',
+  title: 'AI Meeting Notes Action Items',
   description: 'AI Meeting Notes Action Items solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-meeting-notes-action-items',

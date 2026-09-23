@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Incident Response Retainer | Zion Tech Group',
+  title: 'Incident Response Retainer',
   description: '24/7 incident response retainer for breaches, outages, and ransomware. Includes on-call IR team, forensics, containment, communication plan, and post-incident reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-security-incident-response',

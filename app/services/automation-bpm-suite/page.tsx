@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Business Process Management Suite | Zion Tech Group',
+  title: 'Business Process Management Suite',
   description: 'Enterprise BPM with visual process design, RPA integration, and real-time analytics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-bpm-suite',

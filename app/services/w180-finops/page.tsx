@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud FinOps Advisory Service | Zion Tech Group',
+  title: 'Cloud FinOps Advisory Service',
   description: 'Expert cloud cost optimization: RI strategy, right-sizing, waste elimination.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-finops',

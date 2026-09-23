@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Master Data Management Platform | Zion Tech Group',
+  title: 'Data Master Data Management Platform',
   description: 'Master data management for consistent, governed golden records across enterprise systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-mdm-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Subtitle and Caption Generator | Zion Tech Group',
+  title: 'AI Subtitle and Caption Generator',
   description: 'Auto-generate subtitles: 100+ languages, speaker identification, formatting, export to SRT/VTT.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-subtitle-gen',

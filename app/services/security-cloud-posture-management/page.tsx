@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security Cloud Security Posture Management | Zion Tech Group',
+  title: 'Security Cloud Security Posture Management',
   description: 'Continuous multi-cloud security posture assessment with auto-remediation and compliance mapping.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-cloud-posture-management',

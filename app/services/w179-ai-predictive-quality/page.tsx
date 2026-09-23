@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Predictive Quality Management | Zion Tech Group',
+  title: 'AI Predictive Quality Management',
   description: 'Predict quality issues before they happen: SPC analysis, root cause prediction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-predictive-quality',

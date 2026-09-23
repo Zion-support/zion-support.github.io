@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Learning Management System (LMS) | Zion Tech Group',
+  title: 'Learning Management System (LMS)',
   description: 'Manage training: course creation, delivery, tracking, compliance. SCORM and xAPI compliant.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-learning-mgmt-system',

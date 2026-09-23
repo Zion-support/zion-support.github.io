@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Identity Lifecycle Automation | Zion Tech Group',
+  title: 'Identity Lifecycle Automation',
   description: 'Automates joiner-mover-leaver identity workflows with role suggestions, policy enforcement, and audit evidence across directories and cloud apps.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-identity-lifecycle-automation',

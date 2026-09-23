@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Employee Onboarding Platform | Zion Tech Group',
+  title: 'Micro-SaaS Employee Onboarding Platform',
   description: 'Digital onboarding platform that automates the entire new hire experience from offer letter to day-one readiness. Configurable onboarding workflows, digital document collection with e-signatures, training track assignment, and real-time progress dashboards help HR teams deliver a consistent, engaging onboarding experience at scale.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/employee-onboarding-platform',

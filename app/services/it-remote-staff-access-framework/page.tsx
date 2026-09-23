@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Remote Staff Access Framework | Zion Tech Group',
+  title: 'Remote Staff Access Framework',
   description: 'Safely provisions and governs remote access for distributed teams with MFA, device trust, least privilege, and session controls.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-remote-staff-access-framework',

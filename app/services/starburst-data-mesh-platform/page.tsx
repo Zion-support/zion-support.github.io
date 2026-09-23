@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Starburst — Data Mesh & Lakehouse Platform | Zion Tech Group',
+  title: 'Starburst — Data Mesh & Lakehouse Platform',
   description: 'Starburst is the leading data mesh and lakehouse platform that enables organizations to access and analyze data wherever it lives without moving or copying data. Built on the open-source Trino query engine, Starburst provides a single SQL interface to 50+ data sources with enterprise governance and security. Used by 300+ companies including Comcast, Finra, and Samsung.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/starburst-data-mesh-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Dictionary Auto Harmonizer | Zion Tech Group',
+  title: 'Data Dictionary Auto Harmonizer',
   description: 'Reconciles field definitions, synonyms, and classifications across systems with owner review and approval workflows.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-dictionary-auto-harmonizer',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Procure-to-Pay Automation | Zion Tech Group',
+  title: 'Procure-to-Pay Automation',
   description: 'Automate procurement-to-payment: requisitions, POs, receiving, invoice matching, payment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-procure-to-pay-auto',

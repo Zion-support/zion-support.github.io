@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Metrics Store & Observability Platform | Zion Tech Group',
+  title: 'Metrics Store & Observability Platform',
   description: 'Centralized metrics store that standardizes business and technical metrics across the organization. Single source of truth for KPIs, SLOs, and operational metrics with versioning and access control.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/metrics-store-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Predictive Maintenance AI — Equipment Failure Prevention | Zion Tech Group',
+  title: 'Predictive Maintenance AI — Equipment Failure Prevention',
   description: 'AI system that predicts equipment failures using sensor data, reducing downtime by up to 50%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/predictive-maintenance-ai',

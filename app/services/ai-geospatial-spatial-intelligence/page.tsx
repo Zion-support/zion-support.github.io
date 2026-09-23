@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Geospatial & Spatial Intelligence Platform | Zion Tech Group',
+  title: 'AI Geospatial & Spatial Intelligence Platform',
   description: 'Process satellite imagery, aerial photography, and geospatial vectors with AI for object detection, change monitoring, and predictive spatial analytics. Supports agriculture, defense, logistics, and climate use cases.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-geospatial-spatial-intelligence',

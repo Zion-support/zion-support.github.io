@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Delivery & CDN Hardening | Zion Tech Group',
+  title: 'Edge Delivery & CDN Hardening',
   description: 'Secure, high-performance content delivery: edge routing, WAF rules, TLS hardening, and caching strategy tuned for static and dynamic assets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w176-it-edge-delivery',

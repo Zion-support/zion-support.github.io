@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Project Time Tracking & Invoicing | Zion Tech Group',
+  title: 'Micro-SaaS Project Time Tracking & Invoicing',
   description: 'All-in-one team time tracking, client billing, automated invoicing, and profitability reports. Built for small agencies and freelancers who need professional billing without enterprise complexity. Integrates with Stripe and PayPal for seamless payment collection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/project-time-tracking-invoicing',

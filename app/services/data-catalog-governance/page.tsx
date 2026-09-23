@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Catalog & Governance Platform | Zion Tech Group',
+  title: 'Data Catalog & Governance Platform',
   description: 'Enterprise data catalog with automated discovery, lineage tracking, and governance policies.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-catalog-governance',

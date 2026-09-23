@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Subscription Analytics & Billing Platform | Zion Tech Group',
+  title: 'Subscription Analytics & Billing Platform',
   description: 'SaaS metrics and billing platform that tracks MRR, ARR, churn, LTV, and cohort analysis. Integrated billing with Stripe and Chargebee, dunning management, and revenue recognition automation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/subscription-analytics',

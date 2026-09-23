@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Backstage — Spotify Open-Source Developer Portal Platform | Zion Tech Group',
+  title: 'Backstage — Spotify Open-Source Developer Portal Platform',
   description: 'Backstage is an open-source developer portal platform originally built at Spotify and now a CNCF Graduated project. It provides a unified software catalog, developer self-service templates, plugin ecosystem, and technical documentation hub for engineering organizations. With 3,000+ adopters including American Airlines, Spotify, Southwest, and Zalando, Backstage manages software ownership, tracks service health, and enables developers to scaffold new microservices, create cloud resources, and publish docs from a single interface. Its 1,500+ plugin ecosystem integrates with GitHub, GitLab, Kubernetes, Datadog, PagerDuty, Snyk, and every major cloud and SaaS tool. Backstage reduces onboarding from weeks to hours and enforces golden-path templates for consistent, secure infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/backstage-developer-portal',

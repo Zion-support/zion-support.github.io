@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Training Coach | Zion Tech Group',
+  title: 'Micro-SaaS AI Training Coach',
   description: 'Delivers role-based training paths, quizzes, and progress coaching for staff onboarding and skills refresh with admin dashboards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-training-coach',

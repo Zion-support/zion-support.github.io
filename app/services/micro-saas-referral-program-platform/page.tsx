@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Referral Program & Affiliate Management Platform | Zion Tech Group',
+  title: 'Referral Program & Affiliate Management Platform',
   description: 'Launch and manage customer referral programs and affiliate partnerships that drive viral growth. AI optimizes reward structures, identifies your best advocates, and automates payout processing. Tracks attribution across channels and prevents fraud.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-referral-program-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Software Supply Chain Security | Zion Tech Group',
+  title: 'Software Supply Chain Security',
   description: 'End-to-end software supply chain security platform that scans dependencies, verifies SBOM integrity, detects malicious packages, and enforces artifact signing. Protects against dependency confusion, typosquatting, and compromised build pipelines.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/supply-chain-security',

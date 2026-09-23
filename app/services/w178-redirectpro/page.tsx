@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'RedirectPro — URL Redirect Manager | Zion Tech Group',
+  title: 'RedirectPro — URL Redirect Manager',
   description: 'Manage URL redirects: 301/302/307, regex patterns, bulk import, analytics. Prevent 404 errors.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-redirectpro',

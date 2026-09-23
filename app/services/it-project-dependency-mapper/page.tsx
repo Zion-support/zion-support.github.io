@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Project Dependency Mapper | Zion Tech Group',
+  title: 'IT Project Dependency Mapper',
   description: 'Maps project tasks, teams, systems, and vendors with dependency paths, blockers, and change impact across runbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-project-dependency-mapper',

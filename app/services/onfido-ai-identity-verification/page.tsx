@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Onfido (Plural) — AI-Powered Identity Verification | Zion Tech Group',
+  title: 'Onfido (Plural) — AI-Powered Identity Verification',
   description: 'Onfido uses AI to verify user identity through document analysis and facial biometrics, enabling banks, fintechs, and marketplaces to onboard customers remotely with bank-grade security. Their Real Identity Framework analyzes ID documents from 200+ countries, performs liveness detection, and cross-references against global watchlists — processing verifications in under 15 seconds with 99.9% accuracy.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/onfido-ai-identity-verification',

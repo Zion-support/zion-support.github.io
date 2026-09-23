@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Workflow Orchestrator | Zion Tech Group',
+  title: 'AI Workflow Orchestrator',
   description: 'AI Workflow Orchestrator solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-workflow-orchestrator',

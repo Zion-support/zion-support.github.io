@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Machine Learning Platform | Zion Tech Group',
+  title: 'AI Machine Learning Platform',
   description: 'AI Machine Learning Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-machine-learning-platform',

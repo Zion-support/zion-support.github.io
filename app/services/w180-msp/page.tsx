@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Service Provider Platform | Zion Tech Group',
+  title: 'Managed Service Provider Platform',
   description: 'All-in-one MSP: RMM, PSA, remote access, ticketing, billing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-msp',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Multimodal Search Engine | Zion Tech Group',
+  title: 'AI Multimodal Search Engine',
   description: 'Search across text, images, video, and audio: unified embeddings, hybrid ranking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-multimodal-search',

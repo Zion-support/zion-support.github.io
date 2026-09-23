@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Subnet Calculator | Zion Tech Group',
+  title: 'Subnet Calculator',
   description: 'Calculate CIDR subnet ranges.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/subnet-calculator' },
 };

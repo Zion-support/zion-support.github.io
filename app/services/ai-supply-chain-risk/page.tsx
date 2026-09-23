@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Supply Chain Risk Monitor | Zion Tech Group',
+  title: 'AI Supply Chain Risk Monitor',
   description: 'Real-time supply chain risk intelligence platform that monitors suppliers, geopolitical events, weather disruptions, and financial health signals. Predicts disruptions 30-90 days in advance and recommends mitigation strategies.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-supply-chain-risk',

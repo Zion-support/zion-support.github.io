@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Supply Chain Exposure Radar | Zion Tech Group',
+  title: 'Supply Chain Exposure Radar',
   description: 'Monitors third-party and supplier risk across repos, build pipelines, and device fleets with exposure alerting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-supply-chain-exposure-radar',

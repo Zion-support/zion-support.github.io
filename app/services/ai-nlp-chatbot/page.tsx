@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Nlp Chatbot | Zion Tech Group',
+  title: 'AI Nlp Chatbot',
   description: 'AI Nlp Chatbot solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-nlp-chatbot',

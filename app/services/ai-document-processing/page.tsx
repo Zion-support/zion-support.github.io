@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Document Processing Pipeline | Zion Tech Group',
+  title: 'AI Document Processing Pipeline',
   description: 'End-to-end intelligent document processing that ingests, classifies, extracts, and routes documents across your organization. Handles PDFs, scans, emails, and images with custom ML models trained on your document types. Processes millions of documents with human-in-the-loop validation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-document-processing',

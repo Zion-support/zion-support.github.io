@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Event Management Automation | Zion Tech Group',
+  title: 'Event Management Automation',
   description: 'Automate events: registration, ticketing, email sequences, virtual events.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-event',

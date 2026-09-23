@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud Cost Optimization Service | Zion Tech Group',
+  title: 'Multi-Cloud Cost Optimization Service',
   description: 'Ongoing cloud cost optimization across AWS, Azure, and GCP. Right-sizing, reserved instance planning, idle resource detection, and FinOps governance. Average 35% cost reduction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-cost-optimization-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Customer Support Ticket Routing & Triage | Zion Tech Group',
+  title: 'AI Customer Support Ticket Routing & Triage',
   description: 'Eliminate manual ticket sorting with AI that auto-classifies incoming support requests, analyzes customer sentiment, assigns priority scores based on urgency and account value, and routes each ticket to the best-equipped support agent — reducing resolution times and improving customer satisfaction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-customer-support-ticket-routing-triage',

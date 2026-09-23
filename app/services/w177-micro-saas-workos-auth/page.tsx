@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WorkOS Auth Kit | Zion Tech Group',
+  title: 'WorkOS Auth Kit',
   description: 'Drop-in SSO, directory sync, and audit logs for micro-SaaS: SAML, OIDC, SCIM, and admin APIs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-micro-saas-workos-auth',

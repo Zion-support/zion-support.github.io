@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Satellite Imagery Analytics Platform | Zion Tech Group',
+  title: 'AI Satellite Imagery Analytics Platform',
   description: 'Process and analyze satellite and drone imagery with AI for agriculture, urban planning, disaster response, and environmental monitoring. Change detection, object classification, and predictive modeling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-satellite-imagery-analytics',

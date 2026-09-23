@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'URL Shortener & Link Analytics | Zion Tech Group',
+  title: 'URL Shortener & Link Analytics',
   description: 'Branded URL shortener with deep link analytics, QR code generation, retargeting pixel support, and custom domains. Perfect for marketing teams tracking campaign performance across channels.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/url-shortener-analytics',

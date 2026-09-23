@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Jellyfin Open-Source Media Streaming | Zion Tech Group',
+  title: 'Jellyfin Open-Source Media Streaming',
   description: 'Jellyfin is a fully open-source media system that lets you collect, manage, and stream your own media library — a free alternative to Plex, Emby, and Netflix-style self-hosting. Unlike Plex (which requires Plex Pass for hardware transcoding and mobile sync) or Emby (paid model), Jellyfin provides every feature completely free with no premium tier.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/jellyfin',

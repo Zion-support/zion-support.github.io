@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Report Card Builder | Zion Tech Group',
+  title: 'Micro-SaaS AI Report Card Builder',
   description: 'Builds vendor, customer, and internal performance report cards with score calculations, trend charts, and exception summaries.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-report-card-builder',

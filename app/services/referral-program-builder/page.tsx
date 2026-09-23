@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Referral Program Builder | Zion Tech Group',
+  title: 'Referral Program Builder',
   description: 'Create and manage customer referral programs with automated tracking, reward fulfillment, and analytics. Integrates with major CRM and e-commerce platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/referral-program-builder',

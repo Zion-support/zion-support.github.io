@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Personalized Medicine & Genomics Platform | Zion Tech Group',
+  title: 'AI Personalized Medicine & Genomics Platform',
   description: 'AI-driven genomic analysis for personalized treatment plans, drug response prediction, and rare disease diagnosis.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-personalized-medicine',

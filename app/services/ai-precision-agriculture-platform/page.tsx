@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Precision Agriculture Platform | Zion Tech Group',
+  title: 'AI Precision Agriculture Platform',
   description: 'Satellite imagery, IoT sensor data, and weather models combined with AI to optimize crop yields, reduce water usage, and minimize fertilizer runoff. Provides field-level recommendations for planting, irrigation, pest management, and harvest timing. Increases yields by 15-20% while reducing input costs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-precision-agriculture-platform',

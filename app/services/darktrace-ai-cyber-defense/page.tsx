@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Darktrace — Self-Learning AI Cybersecurity Defense | Zion Tech Group',
+  title: 'Darktrace — Self-Learning AI Cybersecurity Defense',
   description: 'Darktrace uses self-learning AI to detect and respond to cyber threats in real time across cloud, email, endpoints, and industrial systems. Unlike rule-based security tools, Darktrace\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/darktrace-ai-cyber-defense',

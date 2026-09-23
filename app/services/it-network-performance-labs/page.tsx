@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Performance & Connectivity Labs | Zion Tech Group',
+  title: 'Network Performance & Connectivity Labs',
   description: 'Baseline, optimize, and validate enterprise network performance. Tests bandwidth, latency, failover, SaaS connectivity, and remote office coverage with actionable tuning plans.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-network-performance-labs',

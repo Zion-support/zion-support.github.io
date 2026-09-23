@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security SOC AI Copilot — Analyst Force Multiplier | Zion Tech Group',
+  title: 'Security SOC AI Copilot — Analyst Force Multiplier',
   description: 'AI copilot for Security Operations Center analysts. Automatically triages alerts, enriches with threat intel, suggests investigation steps, and drafts incident reports. Reduces MTTD by 60% and analyst fatigue by 50%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-soc-ai-copilot',

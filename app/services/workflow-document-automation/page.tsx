@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Document Workflow Automation Platform | Zion Tech Group',
+  title: 'Document Workflow Automation Platform',
   description: 'End-to-end document workflow automation that handles creation, review, approval, signing, and archival. Template library, conditional routing, e-signature integration, and compliance audit trails.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/workflow-document-automation',

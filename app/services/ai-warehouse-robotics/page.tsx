@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Warehouse Robotics Planner | Zion Tech Group',
+  title: 'AI Warehouse Robotics Planner',
   description: 'Intelligent warehouse automation planning platform that designs optimal robot fleet layouts, pick-path algorithms, and inventory placement strategies. Simulates throughput, identifies bottlenecks, and generates ROI projections for robotics investments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-warehouse-robotics',

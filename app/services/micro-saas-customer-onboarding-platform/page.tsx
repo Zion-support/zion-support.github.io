@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Onboarding & Time-to-Value Platform | Zion Tech Group',
+  title: 'Customer Onboarding & Time-to-Value Platform',
   description: 'Automated customer onboarding that guides new users to their ',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-customer-onboarding-platform',

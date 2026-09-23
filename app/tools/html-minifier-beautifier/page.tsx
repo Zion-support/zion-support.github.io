@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'HTML Minifier & Beautifier | Zion Tech Group',
+  title: 'HTML Minifier & Beautifier',
   description: 'Minify or format HTML.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/html-minifier-beautifier' },
 };

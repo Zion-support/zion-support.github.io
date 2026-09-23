@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Site Selection & Real Estate Advisory | Zion Tech Group',
+  title: 'Data Center Site Selection & Real Estate Advisory',
   description: 'Evaluate and acquire data center sites with the right power, fiber, tax, and risk profiles. Fiber route analysis, utility redundancy maps, and tax incentive programs across target markets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-site-selection',

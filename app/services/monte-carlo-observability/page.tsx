@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Monte Carlo Data Observability | Zion Tech Group',
+  title: 'Monte Carlo Data Observability',
   description: 'Monte Carlo is the category-defining data observability platform. It uses machine learning to automatically detect, resolve, and prevent data incidents — giving data teams end-to-end visibility into data health across modern cloud data stacks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/monte-carlo-observability',

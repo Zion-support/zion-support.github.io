@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'MemberPort — Membership Management | Zion Tech Group',
+  title: 'MemberPort — Membership Management',
   description: 'Manage members: directory, dues, events, communications, renewals. For associations and clubs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-memberport',

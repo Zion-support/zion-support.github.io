@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Sec Soc As A Service | Zion Tech Group',
+  title: 'Sec Soc As A Service',
   description: 'Sec Soc As A Service solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/sec-soc-as-a-service',

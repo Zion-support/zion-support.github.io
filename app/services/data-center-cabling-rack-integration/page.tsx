@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Structured Cabling & Rack Integration | Zion Tech Group',
+  title: 'Data Center Structured Cabling & Rack Integration',
   description: 'Design and install TIA-942 compliant structured cabling: copper Cat6A/Cat8, single-mode/multi-mode fiber, MPO/MTP breakout panels, cable management, and rack/cabinet installation with proper labeling and documentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-cabling-rack-integration',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Migration Service | Zion Tech Group',
+  title: 'Email Migration Service',
   description: 'Seamless email migration: Google Workspace, Microsoft 365, Exchange. Zero-downtime cutover.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-email-migrate',

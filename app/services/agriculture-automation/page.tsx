@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agriculture Automation | Zion Tech Group',
+  title: 'Agriculture Automation',
   description: 'IoT-powered smart farming platform. Automated irrigation, soil monitoring, crop health analysis via drone imagery, and yield prediction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/agriculture-automation',

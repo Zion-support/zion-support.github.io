@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agentic AI Workflows — Autonomous Task Automation | Zion Tech Group',
+  title: 'Agentic AI Workflows — Autonomous Task Automation',
   description: 'No-code platform for building autonomous AI agents that can reason, plan, and execute complex multi-step tasks using LLMs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/agentic-ai-workflows',

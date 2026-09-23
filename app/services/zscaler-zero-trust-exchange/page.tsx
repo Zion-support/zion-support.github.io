@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zscaler Zero Trust Exchange — Cloud-Native Security Platform | Zion Tech Group',
+  title: 'Zscaler Zero Trust Exchange — Cloud-Native Security Platform',
   description: 'Zscaler Zero Trust Exchange is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/zscaler-zero-trust-exchange',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Gitpod Cloud Development Environments | Zion Tech Group',
+  title: 'Gitpod Cloud Development Environments',
   description: 'Gitpod is a cloud development environment (CDE) platform that provides on-demand, fully-configured dev environments accessible from any browser. Every commit gets a pre-built workspace — eliminating ',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/gitpod-cde',

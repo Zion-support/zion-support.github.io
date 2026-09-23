@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Chaos Mesh Cloud-native Chaos Engineering | Zion Tech Group',
+  title: 'Chaos Mesh Cloud-native Chaos Engineering',
   description: 'Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos on Kubernetes environments. It helps you improve the resilience of your systems by injecting faults.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/chaos-mesh',

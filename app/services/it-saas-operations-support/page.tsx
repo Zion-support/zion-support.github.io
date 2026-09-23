@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SaaS Operations Support | Zion Tech Group',
+  title: 'SaaS Operations Support',
   description: 'Keep SaaS operations reliable through lifecycle management, permission hygiene, integrations, usage monitoring, and renewals review tailored to business needs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-saas-operations-support',

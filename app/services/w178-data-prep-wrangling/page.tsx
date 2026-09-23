@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Preparation and Wrangling | Zion Tech Group',
+  title: 'Data Preparation and Wrangling',
   description: 'Self-service data prep: cleaning, transformation, deduplication, enrichment. No-code for analysts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-prep-wrangling',

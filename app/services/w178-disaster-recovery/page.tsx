@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Disaster Recovery Planning and Testing | Zion Tech Group',
+  title: 'Disaster Recovery Planning and Testing',
   description: 'DR strategy, design, and testing: BIA, RTO/RPO, runbook development, regular DR test execution.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-disaster-recovery',

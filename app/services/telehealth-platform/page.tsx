@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Telehealth & Virtual Care Platform | Zion Tech Group',
+  title: 'Telehealth & Virtual Care Platform',
   description: 'Complete telehealth solution for healthcare providers with HD video consultations, e-prescribing, appointment scheduling, and integrated billing. HIPAA-compliant with EHR integration and patient portal.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/telehealth-platform',

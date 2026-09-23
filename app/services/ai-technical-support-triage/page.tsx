@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Technical Support Triage | Zion Tech Group',
+  title: 'AI Technical Support Triage',
   description: 'AI Technical Support Triage solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-technical-support-triage',

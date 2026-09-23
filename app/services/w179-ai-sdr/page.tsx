@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI SDR and Prospecting Agent | Zion Tech Group',
+  title: 'AI SDR and Prospecting Agent',
   description: 'AI sales development rep: research, outreach, sequences, meeting booking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-sdr',

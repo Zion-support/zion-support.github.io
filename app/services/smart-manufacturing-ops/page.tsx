@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Smart Manufacturing Operations Platform | Zion Tech Group',
+  title: 'Smart Manufacturing Operations Platform',
   description: 'Industry 4.0 platform that connects factory equipment, monitors production in real-time, and optimizes manufacturing processes. OEE tracking, predictive quality, and digital twin integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/smart-manufacturing-ops',

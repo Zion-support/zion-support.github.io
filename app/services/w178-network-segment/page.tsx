@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Segmentation and Micro-Segmentation | Zion Tech Group',
+  title: 'Network Segmentation and Micro-Segmentation',
   description: 'Design and implement network segmentation: VLANs, firewall policies, zero trust micro-segmentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-network-segment',

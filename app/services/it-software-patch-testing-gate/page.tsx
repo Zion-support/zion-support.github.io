@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Software Patch Testing Gate | Zion Tech Group',
+  title: 'Software Patch Testing Gate',
   description: 'Creates structured patch testing windows, rollback plans, and blast-radius controls before production rollout.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-software-patch-testing-gate',

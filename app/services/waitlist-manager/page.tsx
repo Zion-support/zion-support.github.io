@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Waitlist Manager | Zion Tech Group',
+  title: 'Waitlist Manager',
   description: 'Waitlist Manager is a product launch platform that manages waitlists with position tracking, referral incentive programs, and automated onboarding sequences. It helps businesses build hype, convert interested prospects into paying customers, and optimize their launch funnel.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/waitlist-manager',

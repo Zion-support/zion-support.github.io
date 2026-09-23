@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contract Renewal Automation Runner | Zion Tech Group',
+  title: 'Contract Renewal Automation Runner',
   description: 'Manages renewal workflows for SaaS, suppliers, and vendor contracts with renewal scoring, owner routing, and evidence capture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-contract-renewal-runner',

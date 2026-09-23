@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Cybersecurity Analyst | Zion Tech Group',
+  title: 'AI Cybersecurity Analyst',
   description: 'Autonomous AI security analyst that continuously monitors networks, endpoints, and cloud workloads for threats. Mimics human SOC analyst decision-making with automated triage, investigation, and response — operating 24/7 without fatigue.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-cybersecurity-analyst',

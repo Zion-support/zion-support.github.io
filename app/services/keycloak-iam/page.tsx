@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Keycloak Identity & Access Management | Zion Tech Group',
+  title: 'Keycloak Identity & Access Management',
   description: 'Full-featured open-source identity and access management (IAM) solution providing single sign-on (SSO), user federation, identity brokering, and multi-tenancy. Supports OAuth 2.0, OpenID Connect, and SAML 2.0 — a drop-in replacement for Auth0, Okta, and Azure AD B2C without per-MAU pricing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/keycloak-iam',

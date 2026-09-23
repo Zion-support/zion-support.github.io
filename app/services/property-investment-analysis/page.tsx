@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Property Investment Analysis | Zion Tech Group',
+  title: 'Property Investment Analysis',
   description: 'Property Investment Analysis solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/property-investment-analysis',

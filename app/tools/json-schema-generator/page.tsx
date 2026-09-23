@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'JSON Schema Generator | Zion Tech Group',
+  title: 'JSON Schema Generator',
   description: 'Generate a JSON Schema from sample JSON.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/json-schema-generator' },
 };

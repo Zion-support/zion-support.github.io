@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Secure Development Lifecycle (SDL) | Zion Tech Group',
+  title: 'Secure Development Lifecycle (SDL)',
   description: 'Embed security into SDLC: threat modeling, secure coding, security testing gates, developer training.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-secure-dev',

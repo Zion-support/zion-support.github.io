@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Advanced Form Builder & Workflow Automation | Zion Tech Group',
+  title: 'Advanced Form Builder & Workflow Automation',
   description: 'Drag-and-drop form builder with conditional logic, calculations, file uploads, e-signatures, and multi-step workflows. Routes submissions to the right team, triggers automations, and updates databases. Replaces Typeform, JotForm, and paper processes. HIPAA and GDPR compliant options available.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-form-builder',

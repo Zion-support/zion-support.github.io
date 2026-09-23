@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Data Center Design & 5G Integration | Zion Tech Group',
+  title: 'Edge Data Center Design & 5G Integration',
   description: 'Deploy localized edge data centers for IoT, 5G, autonomous systems, and real-time analytics. Low-latency micro-data centers with ruggedized form factors and direct cloud interconnect.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-edge-computing',

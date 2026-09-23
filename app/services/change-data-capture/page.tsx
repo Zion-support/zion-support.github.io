@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Change Data Capture (CDC) Platform | Zion Tech Group',
+  title: 'Change Data Capture (CDC) Platform',
   description: 'Real-time change data capture platform that streams database changes to data warehouses, lakes, and applications with sub-second latency. Supports all major databases with exactly-once delivery guarantees.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/change-data-capture',

@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'JSON Diff Viewer | Zion Tech Group',
+  title: 'JSON Diff Viewer',
   description: 'Compare two JSON documents side by side.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/json-diff-viewer' },
 };

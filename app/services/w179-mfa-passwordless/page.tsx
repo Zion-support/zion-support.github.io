@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'MFA and Passwordless Authentication | Zion Tech Group',
+  title: 'MFA and Passwordless Authentication',
   description: 'Deploy modern MFA and passwordless auth: FIDO2/WebAuthn, passkeys, push auth.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-mfa-passwordless',

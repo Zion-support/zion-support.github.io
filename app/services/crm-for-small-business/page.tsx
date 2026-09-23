@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'CRM for Small Business | Zion Tech Group',
+  title: 'CRM for Small Business',
   description: 'Simple yet powerful CRM designed for small businesses and solopreneurs. Contact management, deal tracking, email sequences, appointment scheduling, and invoicing in one affordable platform.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/crm-for-small-business',

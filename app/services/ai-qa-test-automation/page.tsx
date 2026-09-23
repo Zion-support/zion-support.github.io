@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered QA & Test Automation Platform | Zion Tech Group',
+  title: 'AI-Powered QA & Test Automation Platform',
   description: 'Automate functional, regression, and performance testing with AI-generated test scripts, visual validation, and self-healing locators. Reduce test maintenance and expand coverage without adding headcount.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-qa-test-automation',

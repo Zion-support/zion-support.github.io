@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Observability Modernization | Zion Tech Group',
+  title: 'Observability Modernization',
   description: 'Observability Modernization solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/observability-modernization',

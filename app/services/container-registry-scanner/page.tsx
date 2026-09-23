@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Container Registry & Image Scanner | Zion Tech Group',
+  title: 'Container Registry & Image Scanner',
   description: 'Secure container registry with built-in vulnerability scanning, image signing, and policy enforcement. Blocks deployment of vulnerable or unsigned images with SBOM generation and compliance reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/container-registry-scanner',

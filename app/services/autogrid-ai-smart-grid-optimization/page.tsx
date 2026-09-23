@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AutoGrid — AI-Powered Smart Grid Energy Optimization | Zion Tech Group',
+  title: 'AutoGrid — AI-Powered Smart Grid Energy Optimization',
   description: 'AutoGrid uses AI to optimize distributed energy resources (DERs) across the electrical grid, managing millions of EVs, batteries, solar panels, and smart thermostats as a virtual power plant. Their platform shifts energy consumption to off-peak hours, reduces grid stress during peak demand, and enables utilities to defer billions in infrastructure upgrades by intelligently managing existing capacity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/autogrid-ai-smart-grid-optimization',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Support Copilot | Zion Tech Group',
+  title: 'AI Support Copilot',
   description: 'Assists support teams with suggested answers, summaries, and escalation prompts from tickets, chat, and call transcripts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-support-copilot',

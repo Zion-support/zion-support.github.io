@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Database Performance Tuning & Optimization | Zion Tech Group',
+  title: 'Database Performance Tuning & Optimization',
   description: 'Expert database performance analysis and optimization for PostgreSQL, MySQL, MongoDB, Redis, and cloud-managed databases. AI identifies slow queries, missing indexes, connection pool issues, and schema inefficiencies. Includes ongoing monitoring and auto-tuning recommendations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-database-performance-tuning',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Affectiva (Smart Eye) — Emotion AI & Facial Coding Platform | Zion Tech Group',
+  title: 'Affectiva (Smart Eye) — Emotion AI & Facial Coding Platform',
   description: 'Affectiva, now part of Smart Eye, pioneered emotion AI — using computer vision and deep learning to detect human emotions, cognitive states, and reactions from facial expressions and voice. Their technology analyzes 7 billion+ face frames across 90 countries, enabling automotive safety (driver monitoring), media testing (ad effectiveness), healthcare (mental health screening), and retail (customer experience optimization).',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/affectiva-emotion-ai-platform',

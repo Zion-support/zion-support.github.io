@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Client Portal & Collaboration Hub | Zion Tech Group',
+  title: 'Micro-SaaS Client Portal & Collaboration Hub',
   description: 'Build a branded client portal in minutes. Share files, track project status, collect feedback, and communicate with clients — all in one white-labeled space. Perfect for agencies, consultants, and service businesses.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-client-portal-builder',

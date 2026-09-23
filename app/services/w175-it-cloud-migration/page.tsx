@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Migration Services | Zion Tech Group',
+  title: 'Cloud Migration Services',
   description: 'End-to-end cloud migration with assessment, migration, validation, and training. Migrates workloads to AWS, Azure, or GCP with minimal downtime.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-it-cloud-migration',

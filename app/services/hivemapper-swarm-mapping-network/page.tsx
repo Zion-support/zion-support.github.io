@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Hivemapper — Decentralized Swarm Mapping Network | Zion Tech Group',
+  title: 'Hivemapper — Decentralized Swarm Mapping Network',
   description: 'Hivemapper operates a community-driven global mapping network using 100,000+ dashcam-equipped vehicles that collectively build and update maps in real time. Its swarm intelligence processes crowd-sourced video into 3D map tiles, detecting road changes, signage, and construction faster than any centralized mapping provider.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/hivemapper-swarm-mapping-network',

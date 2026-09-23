@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Realtime Data Pipeline | Zion Tech Group',
+  title: 'Realtime Data Pipeline',
   description: 'Kafka/Flink-based streaming pipelines for operational analytics, CDC, and event-driven architectures with schema governance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-data-realtime-pipeline',

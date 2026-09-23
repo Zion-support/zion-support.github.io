@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Keycloak Identity and Access Management | Zion Tech Group',
+  title: 'Keycloak Identity and Access Management',
   description: 'Keycloak is an open source identity and access management solution for modern applications and services. It adds authentication to applications and secures them with minimum effort, so you dont have to deal with storing users, authenticating users, or managing users.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/keycloak',

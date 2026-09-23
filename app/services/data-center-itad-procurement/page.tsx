@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center ITAD & Procurement Lifecycle Services | Zion Tech Group',
+  title: 'Data Center ITAD & Procurement Lifecycle Services',
   description: 'End-to-end IT asset disposition (ITAD) and procurement: secure chain-of-custody, NIST 800-88 sanitization, remarketing, and vendor-neutral hardware procurement for data center refresh cycles.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-itad-procurement',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'DevOps Automation Platform — CI/CD Pipeline Management | Zion Tech Group',
+  title: 'DevOps Automation Platform — CI/CD Pipeline Management',
   description: 'Complete DevOps platform with automated testing, deployment, and monitoring for modern applications.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/devops-automation-platform',

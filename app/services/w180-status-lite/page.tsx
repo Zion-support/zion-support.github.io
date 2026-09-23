@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'StatusLite — Service Status Page | Zion Tech Group',
+  title: 'StatusLite — Service Status Page',
   description: 'Beautiful status pages: real-time monitoring, incident management.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-status-lite',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Resume Screener | Zion Tech Group',
+  title: 'AI Resume Screener',
   description: 'AI resume screening: parse, rank, shortlist candidates. Bias detection, skills matching, ATS integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-resume-screen',

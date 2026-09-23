@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SIEM Log Correlation Engine | Zion Tech Group',
+  title: 'SIEM Log Correlation Engine',
   description: 'Advanced log correlation with rule-based and ML-powered threat detection and response automation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-siem-correlation',

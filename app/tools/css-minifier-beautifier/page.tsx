@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'CSS Minifier & Beautifier | Zion Tech Group',
+  title: 'CSS Minifier & Beautifier',
   description: 'Minify or beautify CSS code.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/css-minifier-beautifier' },
 };

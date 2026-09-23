@@ -141,7 +141,7 @@ function servicePageSource(meta) {
   return `import Link from 'next/link';
 
 export const metadata = {
-  title: '${esc(title)} | Zion Tech Group',
+  title: '${esc(title)}',
   description: '${esc(description).replace(/'/g, "\\'")}',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/${meta.id}',
@@ -224,7 +224,7 @@ function audiencePage(slug, title, description, bullets) {
   return `import Link from 'next/link';
 
 export const metadata = {
-  title: '${esc(title)} | Zion Tech Group',
+  title: '${esc(title)}',
   description: '${esc(description).replace(/'/g, "\\'")}',
   alternates: { canonical: 'https://ziontechgroup.com/${slug}' },
 };

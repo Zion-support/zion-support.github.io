@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS White-Label Reseller Portal | Zion Tech Group',
+  title: 'Micro-SaaS White-Label Reseller Portal',
   description: 'Launch a fully white-labeled client management portal with automated billing, custom branding, and usage analytics. Perfect for agencies and service providers who want to offer a branded self-service experience to their clients.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-white-label-reseller-portal',

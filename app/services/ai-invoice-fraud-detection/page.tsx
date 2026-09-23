@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Invoice Fraud Detection & AP Automation | Zion Tech Group',
+  title: 'AI Invoice Fraud Detection & AP Automation',
   description: 'AI-powered accounts payable automation that detects fraudulent invoices, duplicate payments, and policy violations. Processes invoices from any format with 99.7% accuracy.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-invoice-fraud-detection',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Smart Inventory Management System | Zion Tech Group',
+  title: 'AI Smart Inventory Management System',
   description: 'Predict demand, optimize stock levels, and automate purchase orders with AI. Integrates with Shopify, WooCommerce, Amazon, and ERP systems. Reduces carrying costs by 30% and virtually eliminates stockouts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-smart-inventory-management',

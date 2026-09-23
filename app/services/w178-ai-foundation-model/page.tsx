@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Foundation Model Fine-Tuning | Zion Tech Group',
+  title: 'AI Foundation Model Fine-Tuning',
   description: 'Fine-tune LLMs for your domain: data preparation, training, evaluation, deployment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-foundation-model',

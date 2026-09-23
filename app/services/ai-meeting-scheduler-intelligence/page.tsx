@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meeting Scheduler Intelligence | Zion Tech Group',
+  title: 'AI Meeting Scheduler Intelligence',
   description: 'AI Meeting Scheduler Intelligence solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-meeting-scheduler-intelligence',

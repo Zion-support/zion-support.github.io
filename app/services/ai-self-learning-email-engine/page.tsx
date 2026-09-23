@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Self Learning Email Engine | Zion Tech Group',
+  title: 'AI Self Learning Email Engine',
   description: 'AI Self Learning Email Engine solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-self-learning-email-engine',

@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Base64 Encoder / Decoder | Zion Tech Group',
+  title: 'Base64 Encoder / Decoder',
   description: 'Encode and decode Base64 strings.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/base64' },
 };

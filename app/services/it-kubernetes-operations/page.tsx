@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Kubernetes Operations | Zion Tech Group',
+  title: 'Managed Kubernetes Operations',
   description: 'Managed Kubernetes clusters with automated provisioning, governance, upgrades, security hardening, cost controls, and runbooks. Includes backups, multi-env promotion, and incident response for control plane and workloads.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-kubernetes-operations',

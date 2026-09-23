@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Revenue Operations Platform | Zion Tech Group',
+  title: 'AI Revenue Operations Platform',
   description: 'AI-powered RevOps platform that unifies sales, marketing, and customer success data. Provides pipeline forecasting, lead scoring, deal health analysis, and automated playbook recommendations to maximize revenue per rep.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-revenue-operations',

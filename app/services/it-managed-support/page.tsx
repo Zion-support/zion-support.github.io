@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed IT Support & Help Desk | Zion Tech Group',
+  title: 'Managed IT Support & Help Desk',
   description: 'Full help desk coverage for growing teams: ticket routing, user provisioning, endpoint support, and a single escalation path so internal IT stays small and reliable.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-managed-support',

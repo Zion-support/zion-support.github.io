@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Software Asset Management Itam | Zion Tech Group',
+  title: 'Software Asset Management Itam',
   description: 'Software Asset Management Itam solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/software-asset-management-itam',

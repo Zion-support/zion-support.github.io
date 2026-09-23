@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Currency Converter | Zion Tech Group',
+  title: 'Currency Converter',
   description: 'Estimate currency conversion rates.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/currency-converter' },
 };

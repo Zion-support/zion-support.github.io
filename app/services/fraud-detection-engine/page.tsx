@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real-Time Fraud Detection Engine | Zion Tech Group',
+  title: 'Real-Time Fraud Detection Engine',
   description: 'AI-powered fraud detection platform that analyzes transactions in real-time using behavioral biometrics, device intelligence, and network analysis. Sub-50ms scoring with adaptive models that evolve with fraud patterns.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/fraud-detection-engine',

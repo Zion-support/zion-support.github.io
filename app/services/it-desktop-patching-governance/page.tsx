@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Desktop Patching Governance & Evidence | Zion Tech Group',
+  title: 'Desktop Patching Governance & Evidence',
   description: 'Governs OS and app patching across Windows, macOS, and Linux with approval routing, compliance evidence, and failure analysis.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-desktop-patching-governance',

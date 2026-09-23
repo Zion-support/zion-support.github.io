@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ML Feature Store Platform | Zion Tech Group',
+  title: 'ML Feature Store Platform',
   description: 'Enterprise feature store that manages the complete ML feature lifecycle — creation, storage, versioning, serving, and monitoring. Ensures training-serving skew elimination and feature reuse across teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/feature-store-platform',

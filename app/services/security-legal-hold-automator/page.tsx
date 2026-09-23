@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security Legal Hold Automator | Zion Tech Group',
+  title: 'Security Legal Hold Automator',
   description: 'Automates legal hold workflows with policy-based collection, access controls, chain-of-custody records, and attorney review queues.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-legal-hold-automator',

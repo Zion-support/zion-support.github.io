@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Inventory Demand Forecaster | Zion Tech Group',
+  title: 'AI Inventory Demand Forecaster',
   description: 'AI Inventory Demand Forecaster solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-inventory-demand-forecaster',

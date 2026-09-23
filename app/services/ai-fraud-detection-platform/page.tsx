@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Fraud Detection & Prevention | Zion Tech Group',
+  title: 'AI Fraud Detection & Prevention',
   description: 'Real-time fraud detection for payments, accounts, and transactions. AI models trained on billions of transactions detect anomalies, synthetic identities, account takeover, and money laundering. Sub-50ms scoring API with explainable decisions for compliance teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-fraud-detection-platform',

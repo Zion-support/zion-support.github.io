@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Kubernetes Service | Zion Tech Group',
+  title: 'Managed Kubernetes Service',
   description: 'Managed K8s: cluster management, auto-scaling, monitoring, security, upgrades.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-k8s-managed',

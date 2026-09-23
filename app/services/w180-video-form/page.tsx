@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'VideoForms — Video Form Builder | Zion Tech Group',
+  title: 'VideoForms — Video Form Builder',
   description: 'Collect video responses: customer feedback, job applications, surveys.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-video-form',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Pricing Optimizer | Zion Tech Group',
+  title: 'AI Pricing Optimizer',
   description: 'AI Pricing Optimizer is an intelligent pricing platform that monitors competitor prices, forecasts demand, and implements dynamic pricing strategies in real time. It maximizes revenue and margins by automatically adjusting prices based on market conditions, inventory levels, and customer behavior.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-pricing-optimizer',

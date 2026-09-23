@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WishList Pro — Customer Wishlists | Zion Tech Group',
+  title: 'WishList Pro — Customer Wishlists',
   description: 'Let customers save and share wishlists: reminders, price drop alerts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-wishlist',

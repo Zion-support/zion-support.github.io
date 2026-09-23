@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security Identity Governance & Administration | Zion Tech Group',
+  title: 'Security Identity Governance & Administration',
   description: 'IGA platform for access certification, role management, and identity lifecycle automation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-identity-governance',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center FinOps & Cost Optimization | Zion Tech Group',
+  title: 'Data Center FinOps & Cost Optimization',
   description: 'Implement FinOps practices across colocation and cloud hybrid environments. Track spend per tenant, workload, and team. Identify waste, negotiate contracts, and build showback/chargeback models that actually work.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dc-finops-cost-optimization',

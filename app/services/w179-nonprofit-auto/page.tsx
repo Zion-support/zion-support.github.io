@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Nonprofit Operations Automation | Zion Tech Group',
+  title: 'Nonprofit Operations Automation',
   description: 'Automate nonprofit: donors, fundraising, grants, volunteers, compliance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-nonprofit-auto',

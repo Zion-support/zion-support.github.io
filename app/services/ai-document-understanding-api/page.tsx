@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Document Understanding API | Zion Tech Group',
+  title: 'AI Document Understanding API',
   description: 'Extract structured data from any document type — invoices, receipts, contracts, IDs, forms — with a single API call. Pre-trained models for 50+ document types. Custom model training available. Processes documents in under 3 seconds.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-document-understanding-api',

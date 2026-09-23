@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS SEO Rank Tracker & Auditor | Zion Tech Group',
+  title: 'Micro-SaaS SEO Rank Tracker & Auditor',
   description: 'Daily rank tracking, technical SEO audits, competitor analysis, and backlink monitoring in one streamlined platform. Purpose-built for agencies and marketers who need actionable SEO insights without enterprise tool complexity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-seo-rank-tracker-auditor',

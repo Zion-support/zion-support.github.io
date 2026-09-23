@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Cost Anomaly Storyteller | Zion Tech Group',
+  title: 'Cloud Cost Anomaly Storyteller',
   description: 'Turns cloud spend anomalies into readable narratives with owner-ready findings, evidence links, and action checklists.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-cost-anomaly-storyteller',

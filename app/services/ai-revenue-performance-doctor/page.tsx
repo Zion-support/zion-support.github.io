@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Revenue Performance Doctor | Zion Tech Group',
+  title: 'AI Revenue Performance Doctor',
   description: 'Diagnoses revenue anomalies across pipeline, invoicing, collections, and renewals with prioritized fixes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-revenue-performance-doctor',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real-Time Analytics Engine | Zion Tech Group',
+  title: 'Real-Time Analytics Engine',
   description: 'Sub-second analytics on streaming data with pre-aggregation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-realtime',

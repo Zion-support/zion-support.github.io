@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Churn Prediction Engine | Zion Tech Group',
+  title: 'Churn Prediction Engine',
   description: 'ML-powered customer churn prediction with actionable retention recommendations. Analyzes usage patterns, support tickets, and engagement signals to flag at-risk accounts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/churn-prediction',

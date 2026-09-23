@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'LangChain + LangGraph — AI Agent Orchestration Framework | Zion Tech Group',
+  title: 'LangChain + LangGraph — AI Agent Orchestration Framework',
   description: 'LangChain and LangGraph are the leading open-source frameworks for building, orchestrating, and deploying autonomous AI agents. LangChain provides the building blocks — LLM integrations, prompt chains, memory, and tool connectors — while LangGraph adds stateful, cyclic agent workflows with human-in-the-loop checkpoints. Together, they power production AI agents at companies like LinkedIn, Uber, and JP Morgan. With 90,000+ GitHub stars, LangChain has the largest AI engineering community, and LangGraph\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/langchain-langgraph-agent-orchestration',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Survey & NPS Platform | Zion Tech Group',
+  title: 'Micro-SaaS Survey & NPS Platform',
   description: 'Create beautiful surveys, collect NPS and CSAT scores, analyze results with AI-powered insights, and automate follow-up workflows. Built for teams that need enterprise-grade feedback tools without enterprise complexity or pricing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-survey-nps-platform',

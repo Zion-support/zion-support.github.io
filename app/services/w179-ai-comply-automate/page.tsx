@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Compliance Automation | Zion Tech Group',
+  title: 'AI Compliance Automation',
   description: 'Automate regulatory compliance: change monitoring, control testing, evidence collection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-comply-automate',

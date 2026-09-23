@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'White-Label Analytics Dashboard | Zion Tech Group',
+  title: 'White-Label Analytics Dashboard',
   description: 'Embeddable white-label analytics platform that SaaS companies can rebrand and offer to their own customers. Includes customizable dashboards, report builder, data connectors, and multi-tenant architecture out of the box.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/white-label-analytics',

@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Box Shadow Generator | Zion Tech Group',
+  title: 'Box Shadow Generator',
   description: 'Create CSS box-shadow with live preview.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/box-shadow-generator' },
 };

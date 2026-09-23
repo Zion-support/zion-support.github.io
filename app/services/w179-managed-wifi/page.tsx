@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed WiFi Service | Zion Tech Group',
+  title: 'Managed WiFi Service',
   description: 'Fully managed WiFi: design, deployment, monitoring, support. Coverage guarantees.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-managed-wifi',

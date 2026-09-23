@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Device Trust & Compliance Verifier | Zion Tech Group',
+  title: 'Device Trust & Compliance Verifier',
   description: 'Evaluates device trust posture for access decisions using health checks, telemetry, and behavioral signals rather than static credentials.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-device-trust-verifier',

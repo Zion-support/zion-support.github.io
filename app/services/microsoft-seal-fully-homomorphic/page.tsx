@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Microsoft SEAL — Fully Homomorphic Encryption as a Service | Zion Tech Group',
+  title: 'Microsoft SEAL — Fully Homomorphic Encryption as a Service',
   description: 'Microsoft SEAL enables computation on encrypted data without ever decrypting it. Enterprises can run analytics, ML inference, and database queries on ciphertext — meaning sensitive data (health records, financial data, government intel) is never exposed during processing. Now available as a managed cloud service.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsoft-seal-fully-homomorphic',

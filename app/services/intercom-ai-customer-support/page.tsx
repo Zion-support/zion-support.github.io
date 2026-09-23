@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Intercom — AI-Powered Customer Support Platform | Zion Tech Group',
+  title: 'Intercom — AI-Powered Customer Support Platform',
   description: 'Intercom is the leading AI-powered customer support platform that combines messaging, help desk, and proactive engagement into one unified solution. Its AI agent, Fin, resolves 50% of customer conversations autonomously. Used by 25,000+ companies including Amazon, Atlassian, and Lyft, Intercom processes millions of conversations monthly across live chat, email, WhatsApp, and in-app messaging.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/intercom-ai-customer-support',

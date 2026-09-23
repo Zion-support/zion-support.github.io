@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Anomaly Detection for IoT Fleets | Zion Tech Group',
+  title: 'AI Anomaly Detection for IoT Fleets',
   description: 'Real-time anomaly detection for IoT device fleets using edge ML models. Detect equipment failures, security breaches, and operational anomalies before they cause downtime.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-anomaly-detection-iot',

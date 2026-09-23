@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cybersecurity Incident Response — 24/7 Threat Management | Zion Tech Group',
+  title: 'Cybersecurity Incident Response — 24/7 Threat Management',
   description: '24/7 cybersecurity monitoring with automated incident response and threat hunting capabilities.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cybersecurity-incident-response',

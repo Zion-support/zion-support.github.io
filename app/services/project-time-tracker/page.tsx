@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Project Time Tracker | Zion Tech Group',
+  title: 'Project Time Tracker',
   description: 'Time tracking and project management for teams. Automatic time capture, project budgeting, client billing, and productivity analytics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/project-time-tracker',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Legal Deposition Analyzer | Zion Tech Group',
+  title: 'AI Legal Deposition Analyzer',
   description: 'Transform legal deposition transcripts into structured, searchable intelligence. AI identifies key admissions, contradictions, credibility indicators, and case-relevant testimony. Compare statements across multiple depositions to find inconsistencies. Reduces attorney review time by 70%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-legal-deposition-analyzer',

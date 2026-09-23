@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Chargeback Prevention | Zion Tech Group',
+  title: 'AI Chargeback Prevention',
   description: 'Prevent payment chargebacks: fraud scoring, rule optimization, representment automation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-chargeback',

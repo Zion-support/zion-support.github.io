@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Campaign Orchestrator & Deliverability Suite | Zion Tech Group',
+  title: 'Email Campaign Orchestrator & Deliverability Suite',
   description: 'End-to-end email campaign automation with AI-powered content generation, send-time optimization, deliverability monitoring, and A/B testing. Warm up new domains, manage sender reputation, and stay out of spam.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-email-campaign-orchestrator',

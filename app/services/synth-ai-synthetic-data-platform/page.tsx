@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Synthesia & Synthetic Data Vault — AI Training Data Generation | Zion Tech Group',
+  title: 'Synthesia & Synthetic Data Vault — AI Training Data Generation',
   description: 'Synthetic data generation platforms create statistically equivalent artificial datasets that preserve the patterns and relationships of real data while eliminating privacy risks. Used by Fortune 500 companies to train ML models when real data is scarce, biased, or restricted by HIPAA/GDPR. Now generating tabular data, video, text, and 3D scenes at scale.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/synth-ai-synthetic-data-platform',

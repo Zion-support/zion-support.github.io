@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Device Lifecycle & Endpoint Services | Zion Tech Group',
+  title: 'IT Device Lifecycle & Endpoint Services',
   description: 'Standardize device provisioning, patching, monitoring, and decommission workflows across fleets. Reduce support overhead and maintain consistent security baselines.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-device-lifecycle-services',

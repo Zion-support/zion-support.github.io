@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Satisfaction Survey Tool | Zion Tech Group',
+  title: 'Satisfaction Survey Tool',
   description: 'Satisfaction Survey Tool is a customer feedback platform supporting NPS, CSAT, and CES survey types with real-time analytics and automated follow-up workflows. It helps businesses measure, understand, and improve customer satisfaction at every touchpoint.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/satisfaction-survey-tool',

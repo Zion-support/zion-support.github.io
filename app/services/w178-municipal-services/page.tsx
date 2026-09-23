@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Municipal and City Services Automation | Zion Tech Group',
+  title: 'Municipal and City Services Automation',
   description: 'Automate city operations: permit processing, citizen requests, work orders, public records.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-municipal-services',

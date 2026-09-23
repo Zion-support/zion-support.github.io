@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Digital Twin & Capacity Simulation | Zion Tech Group',
+  title: 'Data Center Digital Twin & Capacity Simulation',
   description: 'Create a live digital replica of your data center for capacity planning, thermal simulation, and failure testing. Model hardware changes, power/thermal impact, and growth scenarios in 3D before touching physical infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dc-digital-twin-capacity-simulation',

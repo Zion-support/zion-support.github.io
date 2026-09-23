@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Credit Risk Scoring Platform | Zion Tech Group',
+  title: 'AI Credit Risk Scoring Platform',
   description: 'AI-powered credit risk assessment platform that analyzes traditional and alternative data sources for lending decisions. Explainable AI models with regulatory compliance, bias monitoring, and real-time scoring APIs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-credit-risk-scorer',

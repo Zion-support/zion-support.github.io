@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Migration Assessment & Planning | Zion Tech Group',
+  title: 'Cloud Migration Assessment & Planning',
   description: 'Comprehensive assessment of your on-premises infrastructure, applications, and data to create a prioritized cloud migration roadmap. AI analyzes dependencies, estimates costs, identifies risks, and recommends the optimal migration strategy (rehost, replatform, refactor) for each workload.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-cloud-migration-assessment',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed WAF and Bot Management | Zion Tech Group',
+  title: 'Managed WAF and Bot Management',
   description: 'Cloud WAF with AI rule tuning, bot management, DDoS protection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-waf',

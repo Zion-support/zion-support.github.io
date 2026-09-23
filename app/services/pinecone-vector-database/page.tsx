@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Pinecone — Managed Vector Database for AI Applications | Zion Tech Group',
+  title: 'Pinecone — Managed Vector Database for AI Applications',
   description: 'Pinecone is the leading purpose-built vector database that provides long-term memory for AI applications at scale. It enables organizations to store, search, and retrieve high-dimensional embeddings with millisecond latency, powering semantic search, RAG (retrieval-augmented generation), recommendation engines, and AI chatbots. Pinecone handles infrastructure, scaling, and indexing automatically so teams can focus on building AI features. With 5,000+ customers including Notion, Gong, and HubSpot, Pinecone stores billions of vectors and serves over 1 billion queries per month with 99.99% uptime.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/pinecone-vector-database',

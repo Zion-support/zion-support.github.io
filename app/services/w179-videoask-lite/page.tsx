@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'VideoAsk Lite - Video Forms | Zion Tech Group',
+  title: 'VideoAsk Lite - Video Forms',
   description: 'Collect video responses: customer feedback, job applications, surveys. Async video at scale.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-videoask-lite',

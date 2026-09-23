@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Database Administration | Zion Tech Group',
+  title: 'Managed Database Administration',
   description: 'Expert DBA: PostgreSQL, MySQL, SQL Server, Oracle, MongoDB. Performance tuning, HA/DR.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-dba-managed',

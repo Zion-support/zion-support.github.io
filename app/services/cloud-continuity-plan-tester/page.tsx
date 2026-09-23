@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Continuity Plan Tester | Zion Tech Group',
+  title: 'Cloud Continuity Plan Tester',
   description: 'Simulates outages, data-loss scenarios, and key-service failures to validate recovery procedures, RTO, and RPO targets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-continuity-plan-tester',

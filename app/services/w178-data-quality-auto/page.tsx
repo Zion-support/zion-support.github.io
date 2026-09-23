@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automated Data Quality Platform | Zion Tech Group',
+  title: 'Automated Data Quality Platform',
   description: 'Automated data quality: completeness, accuracy, consistency checks. Great Expectations and dbt integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-quality-auto',

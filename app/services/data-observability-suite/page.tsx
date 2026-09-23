@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Observability & Reliability Suite | Zion Tech Group',
+  title: 'Data Observability & Reliability Suite',
   description: 'End-to-end data observability platform that monitors data pipelines for freshness, volume, schema, and quality issues. Automatic anomaly detection, root cause analysis, and incident management for data teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-observability-suite',

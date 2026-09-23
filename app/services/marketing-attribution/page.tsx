@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Marketing Attribution | Zion Tech Group',
+  title: 'Marketing Attribution',
   description: 'Multi-touch attribution modeling for marketing campaigns. Track ROI across channels, optimize ad spend, and predict customer journey outcomes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/marketing-attribution',

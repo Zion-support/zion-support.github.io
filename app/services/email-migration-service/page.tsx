@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Migration Service | Zion Tech Group',
+  title: 'Email Migration Service',
   description: 'Email Migration Service is a professional migration service for transferring email, contacts, and calendars between Google Workspace, Microsoft 365, and Exchange. It ensures zero data loss with zero downtime, making email platform transitions seamless for businesses of any size.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/email-migration-service',

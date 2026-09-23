@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Disaster Recovery Automation Platform | Zion Tech Group',
+  title: 'Disaster Recovery Automation Platform',
   description: 'Automated disaster recovery platform that orchestrates failover, data replication, and recovery across multi-cloud environments. One-click DR testing, RTO/RPO monitoring, and compliance-ready runbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/disaster-recovery-automation',

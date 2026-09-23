@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Crop Disease Detection & Yield Prediction | Zion Tech Group',
+  title: 'AI Crop Disease Detection & Yield Prediction',
   description: 'Analyze drone and satellite imagery with AI to detect crop diseases early, forecast yields accurately, and recommend targeted treatments. Reduce crop loss, optimize inputs, and maximize harvest value with actionable intelligence.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-crop-disease-detection-yield-prediction',

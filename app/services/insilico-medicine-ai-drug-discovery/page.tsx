@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Insilico Medicine — AI-Powered Drug Discovery Platform | Zion Tech Group',
+  title: 'Insilico Medicine — AI-Powered Drug Discovery Platform',
   description: 'Insilico Medicine uses generative AI and deep learning to discover new drug candidates in months instead of years. Their Pharma.AI platform generates novel molecular structures, predicts clinical trial outcomes, and identifies new disease targets. In 2023, Insilico advanced the first fully AI-discovered drug (for idiopathic pulmonary fibrosis) to Phase II clinical trials — a milestone that previously took the industry 4-5 years and $400M.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/insilico-medicine-ai-drug-discovery',

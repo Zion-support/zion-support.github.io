@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security Event Correlator | Zion Tech Group',
+  title: 'Security Event Correlator',
   description: 'Correlates security telemetry from endpoints, identities, cloud, and networks into prioritized incident candidates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-security-event-correlator',

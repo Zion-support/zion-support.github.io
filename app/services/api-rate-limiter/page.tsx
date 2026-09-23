@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'API Rate Limiter | Zion Tech Group',
+  title: 'API Rate Limiter',
   description: 'Advanced rate limiting and traffic shaping for APIs. Supports token bucket, sliding window, and concurrent request limits with real-time dashboards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/api-rate-limiter',

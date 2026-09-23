@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Asset Management & Lifecycle Service | Zion Tech Group',
+  title: 'IT Asset Management & Lifecycle Service',
   description: 'Full IT asset management covering hardware and software tracking, license compliance, refresh planning, and end-of-life disposition. Centralized visibility into your entire IT estate with automated discovery, audit-ready reporting, and cost optimization recommendations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-asset-management-lifecycle',

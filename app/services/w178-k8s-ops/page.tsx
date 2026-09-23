@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kubernetes Operations and Management | Zion Tech Group',
+  title: 'Kubernetes Operations and Management',
   description: 'Managed Kubernetes: cluster management, monitoring, security, upgrades. EKS, GKE, AKS, on-prem.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-k8s-ops',

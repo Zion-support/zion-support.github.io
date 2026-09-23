@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'API Security Audit & Penetration Testing | Zion Tech Group',
+  title: 'API Security Audit & Penetration Testing',
   description: 'Comprehensive security assessment of your REST, GraphQL, and gRPC APIs. AI-powered scanning combined with manual penetration testing identifies authentication flaws, injection vulnerabilities, data exposure, and business logic weaknesses. Includes detailed remediation guidance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-api-security-audit',

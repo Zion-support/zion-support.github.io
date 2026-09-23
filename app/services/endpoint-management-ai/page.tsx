@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Unified Endpoint Management (UEM) | Zion Tech Group',
+  title: 'Unified Endpoint Management (UEM)',
   description: 'Manage and secure all devices (laptops, mobile, IoT) from a single dashboard: enrollment, policy enforcement, patch management, and remote wipe.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/endpoint-management-ai',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Wisk Aero — Autonomous Air Taxi & Drone Delivery | Zion Tech Group',
+  title: 'Wisk Aero — Autonomous Air Taxi & Drone Delivery',
   description: 'Wisk Aero, backed by Boeing, is building the first self-flying air taxi and autonomous cargo drone network. Their 6th-generation aircraft carries passengers or 100kg of cargo with zero pilot input. Vertiport-to-vertiport logistics and urban air mobility are expected to launch commercially by 2026-2027.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/wisk-aero-autonomous-air-taxi',

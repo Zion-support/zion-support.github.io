@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ITIL Service Desk & Incident Management | Zion Tech Group',
+  title: 'ITIL Service Desk & Incident Management',
   description: 'Full ITIL-aligned service desk with incident, problem, change, and request management. AI-powered ticket routing, SLA tracking, and self-service portal. Replace expensive legacy tools like ServiceNow with a modern, affordable alternative that actually works.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-itil-service-desk',

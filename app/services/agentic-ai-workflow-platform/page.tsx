@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agentic AI Workflow Orchestration Platform | Zion Tech Group',
+  title: 'Agentic AI Workflow Orchestration Platform',
   description: 'Build and deploy autonomous AI agent teams that collaborate on complex business workflows. Agents plan, execute, review, and iterate — handling multi-step processes like RFP responses, compliance audits, and research synthesis with minimal human oversight.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/agentic-ai-workflow-platform',

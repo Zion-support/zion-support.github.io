@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Security Posture Management | Zion Tech Group',
+  title: 'Cloud Security Posture Management',
   description: 'CSPM for AWS, Azure, GCP: misconfiguration detection, compliance checks, drift detection, auto-remediation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-cspm',

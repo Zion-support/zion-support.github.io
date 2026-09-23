@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Content Compliance & Moderation Engine | Zion Tech Group',
+  title: 'AI Content Compliance & Moderation Engine',
   description: 'Automatically moderate user-generated content across text, images, and video using fine-tuned AI models. Detect hate speech, misinformation, copyright violations, and brand-safety risks in milliseconds. Essential for platforms, marketplaces, and social apps.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-content-compliance-moderation',

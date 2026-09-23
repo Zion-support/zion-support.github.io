@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Meeting Intelligence Platform | Zion Tech Group',
+  title: 'Meeting Intelligence Platform',
   description: 'Record, transcribe, summarize meetings, extract action items, and push them to CRM/project tools automatically.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-ai-meeting-intelligence',

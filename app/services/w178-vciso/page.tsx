@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Virtual CISO (vCISO) Service | Zion Tech Group',
+  title: 'Virtual CISO (vCISO) Service',
   description: 'Fractional CISO: security strategy, compliance roadmap, incident response planning, board reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-vciso',

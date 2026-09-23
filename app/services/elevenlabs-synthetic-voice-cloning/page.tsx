@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ElevenLabs — AI Synthetic Voice Cloning & Text-to-Speech | Zion Tech Group',
+  title: 'ElevenLabs — AI Synthetic Voice Cloning & Text-to-Speech',
   description: 'ElevenLabs is the leading AI voice technology platform that creates hyper-realistic synthetic voices from short audio samples. Their voice cloning technology captures vocal characteristics, accent, emotion, and speaking style to produce indistinguishable-from-human speech in 32 languages. With 1 million+ users and enterprise customers including The New York Times, Storytel, and Flo, ElevenLabs powers audiobook narration, podcast localization, video dubbing, and IVR replacement. Their Voice Library offers 10,000+ pre-built voices, while custom Voice Design creates unique brand voices from scratch.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/elevenlabs-synthetic-voice-cloning',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Cyber-Physical Security Convergence | Zion Tech Group',
+  title: 'Data Center Cyber-Physical Security Convergence',
   description: 'Unify IT security with physical data center controls: integrate SIEM, access control, CCTV/AI video, and environmental sensors into a single SOC 2 and ISO 27001 aligned security architecture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-cyber-physical-convergence',

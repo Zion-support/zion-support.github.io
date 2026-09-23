@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'TimesheetLite — Time Tracking | Zion Tech Group',
+  title: 'TimesheetLite — Time Tracking',
   description: 'Simple time tracking: projects, tasks, reports, payroll export. For teams that need simplicity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-timesheet-lite',

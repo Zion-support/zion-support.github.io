@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'UiPath Autonomous Agents — Next-Generation Intelligent RPA | Zion Tech Group',
+  title: 'UiPath Autonomous Agents — Next-Generation Intelligent RPA',
   description: 'UiPath has evolved from rule-based robotic process automation to autonomous AI agents that handle end-to-end business processes with minimal human input. Their platform combines traditional RPA task automation with LLM-powered reasoning, computer vision understanding of any UI, and self-healing workflows that adapt when applications change.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ui-path-autonomous-agents-rpa',

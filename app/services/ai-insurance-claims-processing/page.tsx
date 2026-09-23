@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Insurance Claims Processing & Fraud Detection | Zion Tech Group',
+  title: 'AI Insurance Claims Processing & Fraud Detection',
   description: 'Automate insurance claims intake, validation, and adjudication with AI. OCR extracts data from claim documents, AI validates against policy rules, detects fraud patterns, and calculates payouts. Reduces claims processing time from weeks to hours.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-insurance-claims-processing',

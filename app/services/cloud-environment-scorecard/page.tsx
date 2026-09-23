@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Environment Scorecard | Zion Tech Group',
+  title: 'Cloud Environment Scorecard',
   description: 'Grades cloud environments on cost, security posture, reliability, and operational maturity with prioritized action plans.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-environment-scorecard',

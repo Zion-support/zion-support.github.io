@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Reputation Manager | Zion Tech Group',
+  title: 'Reputation Manager',
   description: 'Monitor and manage online reviews across Google, Yelp, and social media with AI response suggestions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-reputation-manager',

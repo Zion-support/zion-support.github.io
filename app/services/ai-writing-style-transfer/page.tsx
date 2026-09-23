@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Writing Style Transfer | Zion Tech Group',
+  title: 'AI Writing Style Transfer',
   description: 'AI Writing Style Transfer solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-writing-style-transfer',

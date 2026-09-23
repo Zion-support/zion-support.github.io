@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'NPS & Customer Feedback Platform | Zion Tech Group',
+  title: 'NPS & Customer Feedback Platform',
   description: 'Collect, analyze, and act on customer feedback at scale. AI-powered sentiment analysis, trend detection, and automated follow-up workflows. Supports NPS, CSAT, CES, and custom surveys across email, in-app, and web channels.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-nps-feedback-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Environmental Monitoring & Alarming | Zion Tech Group',
+  title: 'Data Center Environmental Monitoring & Alarming',
   description: 'Deploy sensor networks for temperature, humidity, airflow, water detection, and particulate monitoring across hot/cold aisles. Real-time alarming, integration with DCIM/BMS, and predictive analytics for early failure detection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-environmental-monitoring',

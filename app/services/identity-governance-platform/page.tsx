@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Identity Governance & Administration | Zion Tech Group',
+  title: 'Identity Governance & Administration',
   description: 'Comprehensive identity governance platform that manages the complete identity lifecycle — joiner, mover, leaver processes, access certifications, role management, and compliance reporting. Ensures least-privilege access at scale.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/identity-governance-platform',

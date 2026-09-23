@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Social Media Scheduler Pro | Zion Tech Group',
+  title: 'Social Media Scheduler Pro',
   description: 'Multi-platform social media scheduling with AI content suggestions, analytics, and team collaboration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-social-media-scheduler',

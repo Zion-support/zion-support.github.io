@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud Management Platform | Zion Tech Group',
+  title: 'Multi-Cloud Management Platform',
   description: 'Manage AWS, Azure, GCP: unified dashboards, policy, cost.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-multi-cloud',

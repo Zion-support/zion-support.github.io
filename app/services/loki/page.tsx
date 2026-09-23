@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Grafana Loki Log Aggregation | Zion Tech Group',
+  title: 'Grafana Loki Log Aggregation',
   description: 'Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective and easy to operate, as it does not index the contents of the logs, but rather a set of labels for each log stream.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/loki',

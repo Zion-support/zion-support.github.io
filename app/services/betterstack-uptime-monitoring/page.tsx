@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Better Uptime (by Better Stack) — Modern Uptime Monitoring and Status Pages | Zion Tech Group',
+  title: 'Better Uptime (by Better Stack) — Modern Uptime Monitoring and Status Pages',
   description: 'Better Uptime is a modern uptime monitoring platform that combines website/API monitoring, incident management, and public status pages in a single, beautifully designed platform. It monitors endpoints from 20+ global locations with checks as frequent as every 10 seconds, detecting downtime in under 30 seconds. When incidents occur, it automatically creates incident timelines, notifies on-call teams via phone, SMS, Slack, and email, and updates public status pages in real-time. Used by 100,000+ companies including Vercel, Linear, and Retool, Better Uptime is known for its developer-friendly API, generous free tier, and incident management workflows that rival dedicated incident platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/betterstack-uptime-monitoring',

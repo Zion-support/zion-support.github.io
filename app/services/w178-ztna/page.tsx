@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zero Trust Network Access (ZTNA) | Zion Tech Group',
+  title: 'Zero Trust Network Access (ZTNA)',
   description: 'ZTNA replaces VPN: identity-based access, device posture verification, per-application access.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ztna',

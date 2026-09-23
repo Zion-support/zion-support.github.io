@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Velero Kubernetes Backup and Disaster Recovery | Zion Tech Group',
+  title: 'Velero Kubernetes Backup and Disaster Recovery',
   description: 'Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. It provides a simple, configurable and operationally robust way to back up your application state and associated data.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/velero',

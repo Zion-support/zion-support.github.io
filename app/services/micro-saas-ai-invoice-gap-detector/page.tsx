@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Invoice Gap Detector | Zion Tech Group',
+  title: 'Micro-SaaS AI Invoice Gap Detector',
   description: 'Detects missing, duplicate, and mismatched invoices across ERP, spreadsheet, and vendor payment records.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-invoice-gap-detector',

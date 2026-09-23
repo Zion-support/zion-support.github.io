@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Test Automation Platform | Zion Tech Group',
+  title: 'Test Automation Platform',
   description: 'AI-powered test automation with self-healing tests, visual testing, and cross-browser coverage.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-test-automation',

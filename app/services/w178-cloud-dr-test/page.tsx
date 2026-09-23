@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud DR Testing and Validation | Zion Tech Group',
+  title: 'Cloud DR Testing and Validation',
   description: 'Regular DR testing: automated failover testing, RTO/RPO validation, compliance documentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-dr-test',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Prometheus Monitoring & Alerting | Zion Tech Group',
+  title: 'Prometheus Monitoring & Alerting',
   description: 'Prometheus is an open-source monitoring and alerting toolkit originally built at SoundCloud. It has become the industry standard for monitoring cloud-native applications, providing a powerful dimensional data model, flexible query language, and efficient storage for time series data.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/prometheus',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Fermyon Spin — WebAssembly Serverless Runtime for Cloud & Edge | Zion Tech Group',
+  title: 'Fermyon Spin — WebAssembly Serverless Runtime for Cloud & Edge',
   description: 'Fermyon Spin is an open-source serverless runtime built on WebAssembly (Wasm) that enables developers to build, deploy, and scale microservices with near-instant cold starts (sub-millisecond), smaller binaries (MBs vs. GBs for containers), and strong sandboxing. Built on the Wasmtime and WasmSpin engines, Spin supports Rust, JavaScript/TypeScript, Go, Python, and .NET with a single CLI. Fermyon Cloud provides a fully managed Tier 0 serverless platform running Spin applications at the edge, and Fermyon Platform enables on-premises Wasm deployment for regulated industries. Used by enterprises for serverless APIs, plugin systems, event-driven functions, and edge compute where cold start and security isolation matter.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/fermyon-spin-wasm-runtime',

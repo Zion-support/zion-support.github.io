@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Data Catalog & Discovery Platform | Zion Tech Group',
+  title: 'AI-Powered Data Catalog & Discovery Platform',
   description: 'Automatically discover, classify, and catalog all data assets across your organization. AI infers data types, detects PII, maps lineage, and makes data searchable. Self-service data discovery for analysts with built-in quality metrics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-ai-catalog-discovery',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SOC as a Service (SOCaaS) | Zion Tech Group',
+  title: 'SOC as a Service (SOCaaS)',
   description: '24/7 Security Operations Center: certified analysts, SIEM, threat detection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-socaas',

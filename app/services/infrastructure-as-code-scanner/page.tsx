@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Infrastructure-as-Code Security Scanner | Zion Tech Group',
+  title: 'Infrastructure-as-Code Security Scanner',
   description: 'DevSecOps platform that scans Terraform, CloudFormation, Kubernetes manifests, and Ansible playbooks for security misconfigurations, compliance violations, and cost issues before deployment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/infrastructure-as-code-scanner',

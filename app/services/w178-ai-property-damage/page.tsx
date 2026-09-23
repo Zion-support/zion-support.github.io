@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Property Damage Assessor | Zion Tech Group',
+  title: 'AI Property Damage Assessor',
   description: 'Assess property damage from photos: damage classification, severity scoring, repair cost estimation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-property-damage',

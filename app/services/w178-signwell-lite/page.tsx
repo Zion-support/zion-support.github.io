@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SignWell Lite — E-Signatures | Zion Tech Group',
+  title: 'SignWell Lite — E-Signatures',
   description: 'Legally binding e-signatures: templates, bulk send, audit trail. ESIGN, UETA, eIDAS compliant.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-signwell-lite',

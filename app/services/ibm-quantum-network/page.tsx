@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IBM Quantum Network — Enterprise Quantum Computing | Zion Tech Group',
+  title: 'IBM Quantum Network — Enterprise Quantum Computing',
   description: 'IBM Quantum Network provides enterprises access to real quantum hardware (100+ qubit processors), quantum-safe cryptography tools, and hybrid quantum-classical algorithms. Industries from drug discovery to financial optimization are beginning practical quantum advantage pilots using IBM\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ibm-quantum-network',

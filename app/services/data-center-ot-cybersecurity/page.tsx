@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center OT Cybersecurity & ICS Protection | Zion Tech Group',
+  title: 'Data Center OT Cybersecurity & ICS Protection',
   description: 'Secure operational technology systems (BMS, UPS, generator controllers, HVAC BAS, fire panels) against ransomware and targeted attacks. Network segmentation, vulnerability assessment, and incident response playbooks for DC infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-ot-cybersecurity',

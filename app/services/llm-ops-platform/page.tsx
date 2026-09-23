@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'LLM Ops Platform — Model Lifecycle Management | Zion Tech Group',
+  title: 'LLM Ops Platform — Model Lifecycle Management',
   description: 'Enterprise LLM operations platform for deploying, monitoring, and scaling large language models. Supports OpenAI, Anthropic, Llama, and custom models.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/llm-ops-platform',

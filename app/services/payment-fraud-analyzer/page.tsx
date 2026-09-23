@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Payment Fraud Analyzer | Zion Tech Group',
+  title: 'Payment Fraud Analyzer',
   description: 'Real-time payment fraud detection using behavioral analytics and ML. Monitors transactions across cards, ACH, wire transfers, and digital wallets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/payment-fraud-analyzer',

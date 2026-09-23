@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Network Architecture Design | Zion Tech Group',
+  title: 'Cloud Network Architecture Design',
   description: 'Design cloud networking: VPC, transit gateway, private connectivity, DNS, load balancing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-network',

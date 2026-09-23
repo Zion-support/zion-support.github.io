@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Sustainable Data Center Strategy & Green Energy | Zion Tech Group',
+  title: 'Sustainable Data Center Strategy & Green Energy',
   description: 'Transition data centers to net-zero operations with renewable energy sourcing, carbon tracking, and efficiency metrics. Build ESG-compliant infrastructure with PPAs, battery storage, and grid-interactive demand response.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-sustainability',

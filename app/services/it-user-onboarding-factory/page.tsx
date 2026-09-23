@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT User Onboarding Factory | Zion Tech Group',
+  title: 'IT User Onboarding Factory',
   description: 'Automates provisioning, access requests, training assignments, and day-one readiness workflows for employees, vendors, and contractors.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-user-onboarding-factory',

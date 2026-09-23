@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Spend Forecasting Model | Zion Tech Group',
+  title: 'Cloud Spend Forecasting Model',
   description: 'Forecasts cloud spend by workload and team with variance analysis, anomaly explanation, and budget alerts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-spend-forecasting-model',

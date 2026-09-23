@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Education and LMS Automation | Zion Tech Group',
+  title: 'Education and LMS Automation',
   description: 'Automate education: enrollment, grading, content delivery, plagiarism, communication.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-education-auto',

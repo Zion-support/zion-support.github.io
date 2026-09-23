@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Native Migration — Kubernetes + Microservices | Zion Tech Group',
+  title: 'Cloud Native Migration — Kubernetes + Microservices',
   description: 'Migrate legacy applications to cloud-native architecture with Kubernetes, containers, and microservices.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-native-migration',

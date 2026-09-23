@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Predictive Maintenance for Manufacturing | Zion Tech Group',
+  title: 'AI Predictive Maintenance for Manufacturing',
   description: 'IoT sensor analysis, failure prediction, maintenance scheduling, and spare parts optimization powered by machine learning. Helps manufacturers minimize unplanned downtime, extend equipment life, and optimize maintenance budgets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-predictive-maintenance-manufacturing',

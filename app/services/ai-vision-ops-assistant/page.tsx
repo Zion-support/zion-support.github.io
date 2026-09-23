@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Vision Ops Assistant | Zion Tech Group',
+  title: 'AI Vision Ops Assistant',
   description: 'Reads dashboards, inspection images, and physical environment footage to suggest operational actions and incident signals.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-vision-ops-assistant',

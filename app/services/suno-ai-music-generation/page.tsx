@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Suno AI — Text-to-Music Generation Platform | Zion Tech Group',
+  title: 'Suno AI — Text-to-Music Generation Platform',
   description: 'Suno AI is a generative music platform that creates complete original songs — vocals, instruments, and production — from text prompts. Users describe a style, mood, or concept in natural language and Suno produces a broadcast-ready 2-4 minute track. With 10 million+ users, Suno is democratizing music production for content creators, game developers, advertisers, and independent artists who lack traditional music production resources.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/suno-ai-music-generation',

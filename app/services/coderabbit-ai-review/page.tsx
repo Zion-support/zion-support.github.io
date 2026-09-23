@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'CodeRabbit AI Code Review | Zion Tech Group',
+  title: 'CodeRabbit AI Code Review',
   description: 'CodeRabbit is an AI-powered code review assistant that integrates with GitHub, GitLab, and Bitbucket to provide context-aware, line-by-line review comments on pull requests — helping teams ship higher-quality code with less manual review overhead.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/coderabbit-ai-review',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Policy-to-Control Compliance Mapper | Zion Tech Group',
+  title: 'Policy-to-Control Compliance Mapper',
   description: 'Maps written policies to enforceable controls, evidence requirements, and test schedules across frameworks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-policy-compliance-mapper',

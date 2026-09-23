@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud Cost Optimizer | Zion Tech Group',
+  title: 'Multi-Cloud Cost Optimizer',
   description: 'AI-driven cloud cost management across AWS, Azure, and GCP. Identifies waste, recommends reserved instance purchases, and automates resource right-sizing. Real-time cost allocation and chargeback.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/multi-cloud-cost-optimizer',

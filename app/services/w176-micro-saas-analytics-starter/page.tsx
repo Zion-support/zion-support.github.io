@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Analytics Starter — Micro SaaS Metrics | Zion Tech Group',
+  title: 'Analytics Starter — Micro SaaS Metrics',
   description: 'Prebuilt analytics dashboard for micro-SaaS: MRR, churn, signups, activation, LTV, and cohort retention. Connect Stripe, PostHog, or Baremetrics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w176-micro-saas-analytics-starter',

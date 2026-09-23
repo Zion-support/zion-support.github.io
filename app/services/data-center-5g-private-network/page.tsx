@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center 5G Private Network Integration | Zion Tech Group',
+  title: 'Data Center 5G Private Network Integration',
   description: 'Deploy private 5G networks inside data centers for low-latency connectivity between staff, IoT sensors, autonomous vehicles, and warehouse robots. Integration with existing DC fabric and edge compute platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-5g-private-network',

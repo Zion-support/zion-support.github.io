@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Quality Control Vision | Zion Tech Group',
+  title: 'AI Quality Control Vision',
   description: 'AI Quality Control Vision solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-quality-control-vision',

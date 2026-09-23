@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Access Control & Compliance | Zion Tech Group',
+  title: 'Data Center Access Control & Compliance',
   description: 'Physical security hardening for data centers: man traps, badge readers, biometric access, visitor management, and SOC/PCI-ready audit trails.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-access-control',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Appwrite Self-Hosted Backend-as-a-Service | Zion Tech Group',
+  title: 'Appwrite Self-Hosted Backend-as-a-Service',
   description: 'Appwrite is a self-hosted open-source Backend-as-a-Service (BaaS) platform that provides everything mobile and web developers need — databases, authentication, storage, functions, real-time subscriptions, messaging — as a drop-in replacement for Firebase. Unlike Firebase (Google-owned, vendor lock-in, unpredictable pricing), Appwrite can be self-hosted on any infrastructure with full data control.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/appwrite',

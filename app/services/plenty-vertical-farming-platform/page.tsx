@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Plenty — AI-Powered Vertical Farming Platform | Zion Tech Group',
+  title: 'Plenty — AI-Powered Vertical Farming Platform',
   description: 'Plenty operates AI-controlled vertical farms that grow leafy greens and strawberries indoors using 99% less water and 95% less land than conventional agriculture. Their proprietary platform uses computer vision, machine learning, and environmental controls to optimize every aspect of plant growth — light spectrum, nutrients, temperature, and airflow — producing 350x more food per acre than outdoor farms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/plenty-vertical-farming-platform',

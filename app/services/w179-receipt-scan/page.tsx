@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ReceiptScan - Expense Receipt OCR | Zion Tech Group',
+  title: 'ReceiptScan - Expense Receipt OCR',
   description: 'Scan and extract receipt data: merchant, date, amount, tax. Auto-categorize and export.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-receipt-scan',

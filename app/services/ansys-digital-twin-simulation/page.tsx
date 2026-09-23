@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Ansys — Digital Twin Simulation & Engineering Platform | Zion Tech Group',
+  title: 'Ansys — Digital Twin Simulation & Engineering Platform',
   description: 'Ansys is the global leader in engineering simulation and digital twin technology, providing physics-based simulation software that creates virtual replicas of physical products, systems, and processes. Used by 50,000+ companies including Tesla, Boeing, and Siemens.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ansys-digital-twin-simulation',

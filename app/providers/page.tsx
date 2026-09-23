@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Technology Providers | Zion Tech Group',
+  title: 'Technology Providers',
   description: 'Partner with Zion Tech Group to deliver AI, cloud, and IT services through co-sell and implementation programs.',
   alternates: { canonical: 'https://ziontechgroup.com/providers' },
 };

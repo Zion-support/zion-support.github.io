@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Saildrone — Autonomous Ocean Data Collection Vehicles | Zion Tech Group',
+  title: 'Saildrone — Autonomous Ocean Data Collection Vehicles',
   description: 'Saildrone builds wind and solar-powered autonomous surface vehicles (ASVs) that patrol the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/saildrone-autonomous-ocean-vehicles',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Defect Detection Manufacturing | Zion Tech Group',
+  title: 'AI Defect Detection Manufacturing',
   description: 'AI Defect Detection Manufacturing solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-defect-detection-manufacturing',

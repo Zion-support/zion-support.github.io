@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Meilisearch Instant Search Engine | Zion Tech Group',
+  title: 'Meilisearch Instant Search Engine',
   description: 'Lightning-fast, typo-tolerant search engine for modern applications. Delivers relevant results in under 50ms with built-in faceting, filtering, geosearch, and AI-powered relevance tuning. Drop-in replacement for Elasticsearch at 1/10th the cost.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/search-meilisearch-engine',

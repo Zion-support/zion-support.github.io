@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Pen Testing Automation | Zion Tech Group',
+  title: 'AI Pen Testing Automation',
   description: 'AI Pen Testing Automation solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-pen-testing-automation',

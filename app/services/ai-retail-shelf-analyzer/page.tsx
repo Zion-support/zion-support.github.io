@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Retail Shelf Analyzer | Zion Tech Group',
+  title: 'AI Retail Shelf Analyzer',
   description: 'AI Retail Shelf Analyzer solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-retail-shelf-analyzer',

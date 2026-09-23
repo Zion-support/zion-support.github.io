@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Application Performance Monitoring | Zion Tech Group',
+  title: 'Application Performance Monitoring',
   description: 'Application Performance Monitoring solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/application-performance-monitoring',

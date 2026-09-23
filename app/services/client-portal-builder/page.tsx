@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Client Portal Builder | Zion Tech Group',
+  title: 'Client Portal Builder',
   description: 'Client Portal Builder is a white-label client management platform featuring secure file sharing, project tracking, integrated invoicing, and real-time messaging. It gives your business a professional client experience that strengthens relationships and streamlines communication.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/client-portal-builder',

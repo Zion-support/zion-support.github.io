@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Augury — AI-Predictive Maintenance for Industrial Machines | Zion Tech Group',
+  title: 'Augury — AI-Predictive Maintenance for Industrial Machines',
   description: 'Augury is an AI-powered predictive maintenance platform that uses vibration, temperature, ultrasonic, and magnetic sensors combined with machine learning to detect faults in industrial equipment before they cause unplanned downtime. Augury\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/augury-predictive-maintenance-iot',

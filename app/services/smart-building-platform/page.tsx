@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Smart Building Platform | Zion Tech Group',
+  title: 'Smart Building Platform',
   description: 'IoT platform for intelligent building management. Energy optimization, occupancy tracking, predictive maintenance, and environmental monitoring via unified dashboard.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/smart-building-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'EdTech Learning Platform | Zion Tech Group',
+  title: 'EdTech Learning Platform',
   description: 'Modern LMS with AI personalization, gamification, and virtual classroom capabilities.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-edtech-learning-platform',

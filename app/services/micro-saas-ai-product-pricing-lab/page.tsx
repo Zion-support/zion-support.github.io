@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Product Pricing Lab | Zion Tech Group',
+  title: 'Micro-SaaS AI Product Pricing Lab',
   description: 'Tests price sensitivity, packaging, and discount timing signals with revenue simulation and rollout guardrails.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-product-pricing-lab',

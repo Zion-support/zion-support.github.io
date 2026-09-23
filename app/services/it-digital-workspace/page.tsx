@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Digital Workspace Platform | Zion Tech Group',
+  title: 'Digital Workspace Platform',
   description: 'Unified workspace with VDI, app virtualization, endpoint management, and zero trust access.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-digital-workspace',

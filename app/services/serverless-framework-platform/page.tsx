@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Serverless Application Platform | Zion Tech Group',
+  title: 'Serverless Application Platform',
   description: 'Complete serverless development platform with function-as-a-service, API gateway, event routing, and built-in observability. Deploy from Git with automatic scaling, zero cold starts, and pay-per-use pricing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/serverless-framework-platform',

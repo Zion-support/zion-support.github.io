@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Churn Analytics | Zion Tech Group',
+  title: 'Customer Churn Analytics',
   description: 'Predictive analytics platform to identify at-risk customers and recommend retention strategies.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-customer-churn-analytics',

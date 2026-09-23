@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Polygon ID — Blockchain-Based Digital Identity | Zion Tech Group',
+  title: 'Polygon ID — Blockchain-Based Digital Identity',
   description: 'Polygon ID is a blockchain-based digital identity platform that enables self-sovereign identity (SSI) — giving individuals and organizations full control over their identity data without relying on centralized authorities. Built on Polygon\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/polygon-id-blockchain-identity',

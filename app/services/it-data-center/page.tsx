@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Design & Management | Zion Tech Group',
+  title: 'Data Center Design & Management',
   description: 'Full-service data center consulting from design to daily management. Includes site planning, power/cooling design, rack layout, equipment procurement, and 24/7 remote monitoring. Optimize for energy efficiency (PUE under 1.3), redundancy (Tier III+), and cost reduction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-data-center',

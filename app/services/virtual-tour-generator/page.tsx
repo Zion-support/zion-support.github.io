@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Virtual Tour Generator | Zion Tech Group',
+  title: 'Virtual Tour Generator',
   description: 'Virtual Tour Generator solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/virtual-tour-generator',

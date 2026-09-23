@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Penetration Testing | Zion Tech Group',
+  title: 'Network Penetration Testing',
   description: 'Network Penetration Testing is a comprehensive security assessment service that identifies vulnerabilities in your network infrastructure, web applications, and human defenses. Conducted by certified ethical hackers, it provides actionable recommendations to strengthen your security posture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/network-penetration-testing',

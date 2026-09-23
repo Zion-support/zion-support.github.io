@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Synthesia — AI Video Generation & Synthetic Media Platform | Zion Tech Group',
+  title: 'Synthesia — AI Video Generation & Synthetic Media Platform',
   description: 'Synthesia is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/synthia-deepfake-detection',

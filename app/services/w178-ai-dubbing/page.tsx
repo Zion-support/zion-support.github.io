@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Dubbing and Voiceover Studio | Zion Tech Group',
+  title: 'AI Dubbing and Voiceover Studio',
   description: 'AI dubbing for video content: lip-sync, emotion matching, 50+ languages. Professional voiceovers without recording.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-dubbing',

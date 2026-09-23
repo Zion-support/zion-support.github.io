@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'System Integrators | Zion Tech Group',
+  title: 'System Integrators',
   description: 'Accelerate delivery with Zion Tech Group accelerators for AI, automation, and cloud modernization.',
   alternates: { canonical: 'https://ziontechgroup.com/integrators' },
 };

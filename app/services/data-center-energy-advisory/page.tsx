@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Energy Procurement & PPA Advisory | Zion Tech Group',
+  title: 'Data Center Energy Procurement & PPA Advisory',
   description: 'Navigate utility procurement, renewable PPAs, and grid-interactive demand response for data center operators. Energy benchmarking, tariff optimization, and sustainability-linked financing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-energy-advisory',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Social Media Content Calendar & Scheduler | Zion Tech Group',
+  title: 'AI Social Media Content Calendar & Scheduler',
   description: 'AI-powered social media management that creates content ideas, writes posts, generates hashtags, and schedules publishing across platforms. Analyzes performance to optimize future content. Works with Instagram, LinkedIn, X/Twitter, Facebook.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-social-media-content-calendar',

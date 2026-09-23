@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Data Platform (CDP) | Zion Tech Group',
+  title: 'Customer Data Platform (CDP)',
   description: 'Enterprise customer data platform that unifies customer data from all touchpoints into a single, actionable profile. Real-time identity resolution, segmentation, and activation across marketing, sales, and service channels.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/customer-data-platform',

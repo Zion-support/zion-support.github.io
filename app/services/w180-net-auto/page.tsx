@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Automation and Intent-Based Networking | Zion Tech Group',
+  title: 'Network Automation and Intent-Based Networking',
   description: 'Automate network: define desired state, platform enforces it.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-net-auto',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Lead Scoring Real Estate | Zion Tech Group',
+  title: 'AI Lead Scoring Real Estate',
   description: 'AI Lead Scoring Real Estate solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-lead-scoring-real-estate',

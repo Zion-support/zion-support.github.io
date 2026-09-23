@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Harvest Forecasting | Zion Tech Group',
+  title: 'Harvest Forecasting',
   description: 'Harvest Forecasting solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/harvest-forecasting',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Consulting Latam Partnerships | Zion Tech Group',
+  title: 'AI Consulting Latam Partnerships',
   description: 'AI Consulting Latam Partnerships solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-consulting-latam-partnerships',

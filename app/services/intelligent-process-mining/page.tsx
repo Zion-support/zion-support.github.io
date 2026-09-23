@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Intelligent Process Mining | Zion Tech Group',
+  title: 'Intelligent Process Mining',
   description: 'AI-powered process mining platform that discovers actual process flows from event logs, identifies bottlenecks and deviations, and recommends automation opportunities. Bridges the gap between process analysis and RPA implementation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/intelligent-process-mining',

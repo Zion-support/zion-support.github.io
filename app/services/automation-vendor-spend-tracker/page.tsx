@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Vendor Spend Tracker | Zion Tech Group',
+  title: 'Vendor Spend Tracker',
   description: 'Aggregates spend, contract, and renewal signals across vendors with exception routing and monthly cost reviews.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-vendor-spend-tracker',

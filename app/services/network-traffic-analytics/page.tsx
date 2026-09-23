@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Traffic Analytics | Zion Tech Group',
+  title: 'Network Traffic Analytics',
   description: 'Network Traffic Analytics solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/network-traffic-analytics',

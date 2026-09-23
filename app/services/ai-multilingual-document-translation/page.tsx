@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Multilingual Document Translation Engine | Zion Tech Group',
+  title: 'AI Multilingual Document Translation Engine',
   description: 'Enterprise-grade document translation that preserves formatting across 100+ languages. Handles PDFs, Word docs, presentations, and HTML with context-aware AI translation. Industry-specific models for legal, medical, financial, and technical content.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-multilingual-document-translation',

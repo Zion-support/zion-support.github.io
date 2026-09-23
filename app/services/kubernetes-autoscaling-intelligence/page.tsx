@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kubernetes Autoscaling Intelligence | Zion Tech Group',
+  title: 'Kubernetes Autoscaling Intelligence',
   description: 'Kubernetes Autoscaling Intelligence solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/kubernetes-autoscaling-intelligence',

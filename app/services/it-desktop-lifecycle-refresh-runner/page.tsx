@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Desktop Lifecycle Refresh Runner | Zion Tech Group',
+  title: 'Desktop Lifecycle Refresh Runner',
   description: 'Manages PC/Mac refresh cycles, OS migrations, and handoffs with inventory, imaging, and readiness tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-desktop-lifecycle-refresh-runner',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Customer Health Dashboard | Zion Tech Group',
+  title: 'AI Customer Health Dashboard',
   description: 'AI Customer Health Dashboard solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-customer-health-dashboard',

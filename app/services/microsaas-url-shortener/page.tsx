@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'URL Shortener & Link Management Platform | Zion Tech Group',
+  title: 'URL Shortener & Link Management Platform',
   description: 'Enterprise URL shortener with branded domains, QR codes, link analytics, and team management. Track clicks by location, device, and referrer. A/B test destination links. API-first design with webhooks for marketing automation integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-url-shortener',

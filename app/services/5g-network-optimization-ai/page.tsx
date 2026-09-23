@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: '5g Network Optimization AI | Zion Tech Group',
+  title: '5g Network Optimization AI',
   description: '5g Network Optimization AI solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/5g-network-optimization-ai',

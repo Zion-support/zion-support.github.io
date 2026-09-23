@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data API Platform | Zion Tech Group',
+  title: 'Data API Platform',
   description: 'Turn any data source into a REST or GraphQL API: auto-generated, documented, secured, monitored.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-api-platform',

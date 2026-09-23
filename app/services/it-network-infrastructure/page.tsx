@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Infrastructure Design & Support | Zion Tech Group',
+  title: 'Network Infrastructure Design & Support',
   description: 'Complete network infrastructure services from design to ongoing support. Includes LAN/WAN design, SD-WAN deployment, WiFi site surveys, network security hardening, and 24/7 NOC monitoring. Optimize for performance, reliability, and cost. Supports Cisco, Meraki, Ubiquiti, and Aruba environments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-network-infrastructure',

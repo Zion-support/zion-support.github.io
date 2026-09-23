@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Digital Twin & Simulation-as-a-Service | Zion Tech Group',
+  title: 'Digital Twin & Simulation-as-a-Service',
   description: 'Create living digital replicas of physical assets, production lines, or supply chains for simulation, optimization, and predictive insights. Supports real-time telemetry, scenario planning, and what-if analysis.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/digital-twin-simulation-service',

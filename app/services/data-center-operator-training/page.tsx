@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Operations Training & Certification Programs | Zion Tech Group',
+  title: 'Data Center Operations Training & Certification Programs',
   description: 'Uptime Institute, DCi, and custom curricula for data center technicians, facilities staff, and managers: maintenance, safety, power, cooling, and emergency response. Hands-on labs and online instructor-led sessions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-operator-training',

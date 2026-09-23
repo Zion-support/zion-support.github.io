@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Observability Assistant | Zion Tech Group',
+  title: 'AI Observability Assistant',
   description: 'Correlates metrics, traces, and logs into natural-language signals and recommended fixes for engineering teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-observability-assistant',

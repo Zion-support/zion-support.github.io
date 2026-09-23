@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'VoIP Phone System Management & Deployment | Zion Tech Group',
+  title: 'VoIP Phone System Management & Deployment',
   description: 'Cloud VoIP phone system deployment and management for businesses of all sizes. Auto-attendant, call routing, voicemail-to-email, call recording, CRM integration, and mobile apps. Replace expensive PBX systems with modern cloud telephony.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-voip-phone-system',

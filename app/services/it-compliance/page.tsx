@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Compliance & Audit Readiness Service | Zion Tech Group',
+  title: 'IT Compliance & Audit Readiness Service',
   description: 'Comprehensive compliance consulting for SOC 2, HIPAA, PCI DSS, GDPR, and ISO 27001. Includes gap assessment, policy development, technical controls implementation, and audit preparation. Achieve compliance 3x faster than DIY with our proven methodology and automation tools.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-compliance',

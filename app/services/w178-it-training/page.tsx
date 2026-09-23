@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Training and Enablement | Zion Tech Group',
+  title: 'IT Training and Enablement',
   description: 'IT training: cloud certifications, security awareness, DevOps practices, custom curriculum.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-it-training',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Application Inventory Verifier | Zion Tech Group',
+  title: 'Application Inventory Verifier',
   description: 'Audits deployed applications, running services, and dependency maps for drift, orphan, and operational risk signals.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-application-inventory-verifier',

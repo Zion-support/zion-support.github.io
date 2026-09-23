@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Automation Sdwan | Zion Tech Group',
+  title: 'Network Automation Sdwan',
   description: 'Network Automation Sdwan solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/network-automation-sdwan',

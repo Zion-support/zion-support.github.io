@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Knowledge Base & Help Center | Zion Tech Group',
+  title: 'AI-Powered Knowledge Base & Help Center',
   description: 'Self-service knowledge base platform with AI-powered search and content suggestions. Automatically suggests articles based on support tickets, tracks article effectiveness, and identifies content gaps. Reduces support ticket volume by 45% and improves customer satisfaction scores.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-knowledge-base',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Transactional Email Delivery Platform | Zion Tech Group',
+  title: 'Transactional Email Delivery Platform',
   description: 'High-deliverability transactional email service with API, SMTP relay, template engine, real-time analytics, and automatic bounce/complaint handling. Built for SaaS companies who need reliable email infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/email-delivery-platform',

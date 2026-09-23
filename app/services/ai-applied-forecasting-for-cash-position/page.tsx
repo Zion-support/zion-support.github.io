@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Forecasting for Cash Position | Zion Tech Group',
+  title: 'AI Forecasting for Cash Position',
   description: 'Forecasts short-term cash position from receivables, payables, and payroll with scenario stress tests and alert rules.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-applied-forecasting-for-cash-position',

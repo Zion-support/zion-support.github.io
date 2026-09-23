@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Secure Access Service Edge (SASE) | Zion Tech Group',
+  title: 'Secure Access Service Edge (SASE)',
   description: 'SASE platform: SD-WAN, SWG, CASB, ZTNA, FWaaS in one cloud service.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-sase',

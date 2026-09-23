@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Meeting Summary & Agenda Builder | Zion Tech Group',
+  title: 'Micro-SaaS AI Meeting Summary & Agenda Builder',
   description: 'Generates agendas from past meeting summaries and builds focused next-meeting prep packs with owners and decisions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-meeting-summary-agenda',

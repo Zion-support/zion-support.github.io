@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'JSON Formatter & Validator | Zion Tech Group',
+  title: 'JSON Formatter & Validator',
   description: 'Format, validate, and beautify JSON in your browser.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/json-formatter' },
 };

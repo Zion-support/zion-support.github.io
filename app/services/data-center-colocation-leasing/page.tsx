@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Colocation & Wholesale Space Leasing | Zion Tech Group',
+  title: 'Data Center Colocation & Wholesale Space Leasing',
   description: 'Flexible colocation options from single cabinets to wholesale suites and build-to-spec shells. Power configurations from 5 kW to 2 MW+, redundant utility feeds, and carrier-neutral interconnection included.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-colocation-leasing',

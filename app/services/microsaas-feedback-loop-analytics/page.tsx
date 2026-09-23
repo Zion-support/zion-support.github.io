@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Customer Feedback Loop Analytics | Zion Tech Group',
+  title: 'Micro-SaaS Customer Feedback Loop Analytics',
   description: 'Collect in-app feedback, NPS, CSAT, and feature requests with AI-powered sentiment analysis and trend detection. Auto-route feedback to product teams, link to support tickets, and track sentiment over time.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-feedback-loop-analytics',

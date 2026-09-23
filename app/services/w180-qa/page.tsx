@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI QA and Testing Agent | Zion Tech Group',
+  title: 'AI QA and Testing Agent',
   description: 'Autonomous QA agent: test plans, execution, bug reports, fix verification.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-qa',

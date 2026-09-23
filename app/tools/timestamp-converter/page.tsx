@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Unix Timestamp Converter | Zion Tech Group',
+  title: 'Unix Timestamp Converter',
   description: 'Convert Unix timestamps and dates.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/timestamp-converter' },
 };

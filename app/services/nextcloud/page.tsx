@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Nextcloud Self-Hosted Collaboration Platform | Zion Tech Group',
+  title: 'Nextcloud Self-Hosted Collaboration Platform',
   description: 'Nextcloud is the most widely deployed open-source self-hosted collaboration platform, providing a complete alternative to Google Workspace, Microsoft 365, and Dropbox. It combines file sync & share, collaborative document editing (Collabora/OnlyOffice), video conferencing (Talk), email, calendar, contacts, Kanban boards (Deck), and 300+ community apps — all under your own infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/nextcloud',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Perfect Day — Precision Fermentation Dairy Proteins | Zion Tech Group',
+  title: 'Perfect Day — Precision Fermentation Dairy Proteins',
   description: 'Perfect Day uses precision fermentation to produce real whey and casein proteins identical to those in cow\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/perfect-day-precision-fermentation',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Pulumi — Modern Infrastructure as Code with Real Programming Languages | Zion Tech Group',
+  title: 'Pulumi — Modern Infrastructure as Code with Real Programming Languages',
   description: 'Pulumi is an open-source Infrastructure as Code platform that lets engineers define cloud infrastructure using real programming languages (TypeScript, Python, Go, C#, Java) instead of YAML or DSLs. With 250,000+ users and adoption by Mercedes-Benz, Atlassian, and Nike, Pulumi manages 100+ cloud providers including AWS, Azure, GCP, Kubernetes, Datadog, and Cloudflare through a single workflow. Its Automation API enables embedding infrastructure provisioning in CI/CD pipelines, and Pulumi ESC (Environments, Secrets, and Configuration) provides enterprise-grade secrets management and environment composition. Pulumi Copilot adds AI-powered infrastructure generation from natural language prompts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/pulumi-infrastructure-as-code',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Change Management & CAB Support | Zion Tech Group',
+  title: 'IT Change Management & CAB Support',
   description: 'Change advisory processes, rollout governance, risk assessment, and rollback planning for IT change windows.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-change-management',

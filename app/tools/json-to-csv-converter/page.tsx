@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'JSON to CSV Converter | Zion Tech Group',
+  title: 'JSON to CSV Converter',
   description: 'Convert JSON arrays to CSV instantly.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/json-to-csv-converter' },
 };

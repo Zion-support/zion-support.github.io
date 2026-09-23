@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'No-Code Workflow Builder | Zion Tech Group',
+  title: 'No-Code Workflow Builder',
   description: 'Visual workflow builder: drag-drop, conditional logic, API orchestration, 200+ connectors.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-workflow-builder',

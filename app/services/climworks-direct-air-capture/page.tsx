@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Climeworks — Direct Air Carbon Capture & Storage | Zion Tech Group',
+  title: 'Climeworks — Direct Air Carbon Capture & Storage',
   description: 'Climeworks operates the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/climworks-direct-air-capture',

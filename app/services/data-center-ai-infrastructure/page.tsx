@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Ready Data Center Infrastructure & Colocation | Zion Tech Group',
+  title: 'AI-Ready Data Center Infrastructure & Colocation',
   description: 'Design, deploy, and optimize data centers for AI and GPU-heavy workloads. High-density power, advanced cooling, and scalable rack solutions tailored for LLM training, inference, and HPC clusters.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-ai-infrastructure',

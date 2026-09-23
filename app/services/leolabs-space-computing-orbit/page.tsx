@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'LeoLabs — Space Computing & Orbital Data Centers | Zion Tech Group',
+  title: 'LeoLabs — Space Computing & Orbital Data Centers',
   description: 'LeoLabs is pioneering orbital data centers that leverage the vacuum of space for zero-cooling-cost computing, direct downlinks to any point on Earth, and solar-powered AI inference. As terrestrial data centers face power and cooling constraints, space computing offers virtually unlimited scale for AI training, Earth observation analytics, and global content delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/leolabs-space-computing-orbit',

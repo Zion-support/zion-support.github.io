@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kubernetes Cost Optimizer | Zion Tech Group',
+  title: 'Kubernetes Cost Optimizer',
   description: 'Kubernetes-specific cost management platform that analyzes cluster resource utilization, right-sizes workloads, identifies idle resources, and automates spot instance diversification. Reduces K8s cloud spend by 30-60%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/kubernetes-cost-optimizer',

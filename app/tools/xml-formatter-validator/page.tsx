@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'XML Formatter & Validator | Zion Tech Group',
+  title: 'XML Formatter & Validator',
   description: 'Format and validate XML documents.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/xml-formatter-validator' },
 };

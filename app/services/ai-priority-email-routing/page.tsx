@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Priority Email Routing | Zion Tech Group',
+  title: 'AI Priority Email Routing',
   description: 'AI Priority Email Routing solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-priority-email-routing',

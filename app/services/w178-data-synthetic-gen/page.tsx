@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Synthetic Data Generation | Zion Tech Group',
+  title: 'Synthetic Data Generation',
   description: 'Generate privacy-safe synthetic data: statistical fidelity, referential integrity, privacy guarantees.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-synthetic-gen',

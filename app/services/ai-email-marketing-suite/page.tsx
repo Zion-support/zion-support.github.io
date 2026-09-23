@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Email Marketing Suite — Personalized Campaigns | Zion Tech Group',
+  title: 'AI Email Marketing Suite — Personalized Campaigns',
   description: 'Create and send personalized email campaigns with AI-optimized subject lines and content.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-email-marketing-suite',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud Architecture Design | Zion Tech Group',
+  title: 'Multi-Cloud Architecture Design',
   description: 'Design multi-cloud architecture: AWS, Azure, GCP with unified networking, security, governance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-multi-cloud-arch',

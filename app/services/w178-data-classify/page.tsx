@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Classification and Discovery | Zion Tech Group',
+  title: 'Data Classification and Discovery',
   description: 'Automatically discover and classify sensitive data: PII, PHI, PCI, IP. Across cloud, on-prem, SaaS.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-classify',

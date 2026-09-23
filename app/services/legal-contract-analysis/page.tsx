@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Legal Contract Analysis | Zion Tech Group',
+  title: 'Legal Contract Analysis',
   description: 'AI-powered contract review and analysis. Clause extraction, risk scoring, obligation tracking, and comparison against standard templates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/legal-contract-analysis',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Backup as a Service (BaaS) | Zion Tech Group',
+  title: 'Backup as a Service (BaaS)',
   description: 'Automated cloud backup: deduplication, encryption, compliance retention.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-baas',

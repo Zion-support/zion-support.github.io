@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'DevOps Pipeline Automation | Zion Tech Group',
+  title: 'DevOps Pipeline Automation',
   description: 'End-to-end CI/CD pipeline as a service. Automated testing, security scanning, container building, and multi-environment deployment with rollback.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/devops-pipeline',

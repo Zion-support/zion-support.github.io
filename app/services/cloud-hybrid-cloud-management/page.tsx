@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Hybrid Cloud Management Platform | Zion Tech Group',
+  title: 'Hybrid Cloud Management Platform',
   description: 'Unified management across on-premises, private, and public cloud infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-hybrid-cloud-management',

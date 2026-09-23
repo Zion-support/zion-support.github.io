@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Interconnect & Hybrid Cloud Networking | Zion Tech Group',
+  title: 'Data Center Interconnect & Hybrid Cloud Networking',
   description: 'Design and implement high-speed interconnects between data centers and cloud providers. Dedicated fiber, wavelength services, and SD-WAN for hybrid cloud. Achieve sub-1ms latency between on-prem and cloud with guaranteed bandwidth.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-data-center-interconnect',

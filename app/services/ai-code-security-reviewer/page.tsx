@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Code Security Reviewer | Zion Tech Group',
+  title: 'AI Code Security Reviewer',
   description: 'Static application security testing (SAST) platform powered by large language models. Detects vulnerabilities, insecure patterns, and compliance issues in source code across 30+ languages with fix suggestions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-code-security-reviewer',

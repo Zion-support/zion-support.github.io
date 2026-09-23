@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Supply Chain Predictive Analytics | Zion Tech Group',
+  title: 'Supply Chain Predictive Analytics',
   description: 'AI-powered supply chain analytics for inventory optimization, demand forecasting, and logistics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-supply-chain-analytics',

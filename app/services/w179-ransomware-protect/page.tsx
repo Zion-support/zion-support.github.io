@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Ransomware Protection and Recovery | Zion Tech Group',
+  title: 'Ransomware Protection and Recovery',
   description: 'Multi-layer ransomware defense: prevention, detection, containment, recovery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ransomware-protect',

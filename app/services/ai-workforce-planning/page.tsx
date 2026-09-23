@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Workforce Planning Optimizer | Zion Tech Group',
+  title: 'AI Workforce Planning Optimizer',
   description: 'AI-powered workforce planning and optimization platform. Forecast staffing needs, optimize schedules, predict attrition, and plan succession. Integrates with HRIS, ATS, and payroll systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-workforce-planning',

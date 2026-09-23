@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Infrastructure Capacity Planning | Zion Tech Group',
+  title: 'AI-Powered Infrastructure Capacity Planning',
   description: 'Predict infrastructure needs before they become problems. AI analyzes historical usage patterns, seasonal trends, and growth rates to forecast CPU, memory, storage, and network requirements. Generate procurement recommendations and budget forecasts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-ai-capacity-planning',

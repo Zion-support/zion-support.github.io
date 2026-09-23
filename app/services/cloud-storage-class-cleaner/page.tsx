@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Storage Class Cleaner | Zion Tech Group',
+  title: 'Storage Class Cleaner',
   description: 'Recommends storage lifecycle rules, tier transitions, and cleanup candidates to reduce cost and exposure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-storage-class-cleaner',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Contract Lifecycle Management (CLM) | Zion Tech Group',
+  title: 'Micro-SaaS Contract Lifecycle Management (CLM)',
   description: 'Simple, affordable CLM for small and mid-size businesses. Track contract milestones, auto-renewal deadlines, deliverables, and obligations. No enterprise complexity — just the features growing businesses need to stay on top of contracts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-contract-lifecycle-tracker',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Subscription Billing & Revenue Platform | Zion Tech Group',
+  title: 'Micro-SaaS Subscription Billing & Revenue Platform',
   description: 'Launch and manage recurring revenue with a lightweight subscription billing platform. Stripe and PayPal integration, dunning management, proration, usage-based billing, and revenue analytics. Designed for SaaS startups and digital product businesses.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-subscription-billing',

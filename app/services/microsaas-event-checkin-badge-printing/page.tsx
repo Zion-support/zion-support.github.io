@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Event Check-in & Badge Printing | Zion Tech Group',
+  title: 'Micro-SaaS Event Check-in & Badge Printing',
   description: 'Streamline event arrivals with mobile check-in, QR code scanning, on-demand badge printing, and real-time attendee analytics. Reduce check-in lines, impress attendees, and capture data that matters.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-event-checkin-badge-printing',

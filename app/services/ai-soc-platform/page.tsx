@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Soc Platform | Zion Tech Group',
+  title: 'AI Soc Platform',
   description: 'AI Soc Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-soc-platform',

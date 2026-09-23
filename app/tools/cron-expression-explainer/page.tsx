@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Cron Expression Explainer | Zion Tech Group',
+  title: 'Cron Expression Explainer',
   description: 'Explain cron schedules in plain English.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/cron-expression-explainer' },
 };

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Voice Cloning & Synthetic Media | Zion Tech Group',
+  title: 'AI-Powered Voice Cloning & Synthetic Media',
   description: 'Clone any voice from a short audio sample and generate hyper-realistic synthetic media. Create AI-powered avatars with perfect lip-sync, produce multi-language voiceovers, and scale content production globally without recording studios.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-voice-cloning-synthetic-media',

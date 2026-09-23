@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Medical Image Analyzer | Zion Tech Group',
+  title: 'AI Medical Image Analyzer',
   description: 'AI Medical Image Analyzer solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-medical-image-analyzer',

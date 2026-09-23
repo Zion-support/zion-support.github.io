@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Healthcare Workflow Automation | Zion Tech Group',
+  title: 'Healthcare Workflow Automation',
   description: 'HIPAA-compliant workflow automation for healthcare. Patient scheduling, referral management, prior authorization, and clinical documentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/healthcare-workflow',

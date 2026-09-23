@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Low-Code AI Application Platform | Zion Tech Group',
+  title: 'Low-Code AI Application Platform',
   description: 'Empower business teams to build internal tools, workflows, and customer-facing apps with AI-assisted UI generation, natural language requirements, and multi-source data integration. No frontend expertise required.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/low-code-ai-app-platform',

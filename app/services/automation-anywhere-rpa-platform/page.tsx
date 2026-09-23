@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automation Anywhere — Enterprise RPA & AI Automation Platform | Zion Tech Group',
+  title: 'Automation Anywhere — Enterprise RPA & AI Automation Platform',
   description: 'Automation Anywhere is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-anywhere-rpa-platform',

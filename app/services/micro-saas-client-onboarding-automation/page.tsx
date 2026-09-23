@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Client Onboarding Automation | Zion Tech Group',
+  title: 'Micro-SaaS Client Onboarding Automation',
   description: 'Automated welcome sequences, document collection, task checklists, and progress tracking in one streamlined platform. Designed for SaaS companies and professional services firms that want to deliver a polished, consistent onboarding experience at scale.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-client-onboarding-automation',

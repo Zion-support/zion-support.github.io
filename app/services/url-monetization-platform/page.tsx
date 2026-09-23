@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'URL Monetization Platform | Zion Tech Group',
+  title: 'URL Monetization Platform',
   description: 'Smart URL monetization platform that turns any link into revenue. Automatic interstitial ads, link cloaking, click analytics, and A/B testing for affiliates, creators, and marketers. Supports deep links, QR codes, and branded short domains.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/url-monetization-platform',

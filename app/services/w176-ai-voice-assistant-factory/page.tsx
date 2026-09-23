@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Voice Assistant Factory | Zion Tech Group',
+  title: 'Voice Assistant Factory',
   description: 'Build branded voice assistants for phone, web, and kiosk: speech-to-text, LLM orchestration, text-to-speech, and CRM integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w176-ai-voice-assistant-factory',

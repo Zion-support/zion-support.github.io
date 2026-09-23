@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Healthcare Data Interoperability Hub | Zion Tech Group',
+  title: 'Healthcare Data Interoperability Hub',
   description: 'HL7 FHIR-compliant data integration platform that connects EHRs, labs, pharmacies, and medical devices. Real-time data exchange with patient identity matching and consent management.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/healthcare-data-interoperability',

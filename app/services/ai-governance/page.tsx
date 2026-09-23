@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Governance Platform | Zion Tech Group',
+  title: 'AI Governance Platform',
   description: 'Enterprise AI governance, risk management, and compliance. Model inventory, bias detection, explainability reports, and regulatory compliance tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-governance',

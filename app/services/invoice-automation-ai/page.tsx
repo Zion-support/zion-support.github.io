@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Invoice Automation AI — Bill Processing | Zion Tech Group',
+  title: 'Invoice Automation AI — Bill Processing',
   description: 'Scan invoices, extract data, match to POs, and process payments automatically.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/invoice-automation-ai',

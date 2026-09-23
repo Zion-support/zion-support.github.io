@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Workflow & Document Generator | Zion Tech Group',
+  title: 'AI Workflow & Document Generator',
   description: 'Generate SOPs, process documentation, training materials, and workflow diagrams automatically from screen recordings, verbal descriptions, or existing docs. Uses AI to structure, format, and keep documentation up-to-date as processes change.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-workflow-document-generator',

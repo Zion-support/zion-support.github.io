@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Onboarding Flow Automator | Zion Tech Group',
+  title: 'Onboarding Flow Automator',
   description: 'Automates employee and vendor onboarding sequences with provisioning, access, training assignment, and evidence capture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-onboarding-flow-automator',

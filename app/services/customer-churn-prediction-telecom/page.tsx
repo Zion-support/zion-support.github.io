@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Customer Churn Prediction Telecom | Zion Tech Group',
+  title: 'Customer Churn Prediction Telecom',
   description: 'Customer Churn Prediction Telecom solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/customer-churn-prediction-telecom',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS HR Leave & Attendance Tracker | Zion Tech Group',
+  title: 'Micro-SaaS HR Leave & Attendance Tracker',
   description: 'Leave requests, attendance logging, shift scheduling, and payroll integration in one streamlined app. Designed for small-to-mid-sized teams that need modern HR tools without the bloat of enterprise suites.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-hr-leave-attendance-tracker',

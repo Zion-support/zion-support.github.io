@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Social Media Content Calendar | Zion Tech Group',
+  title: 'Micro-SaaS Social Media Content Calendar',
   description: 'Plan, schedule, and analyze your social media presence across all major platforms from a single intuitive calendar. Our AI suggests optimal hashtags, identifies the best posting times, provides engagement analytics, and enables seamless team collaboration — so you can build your audience consistently and efficiently.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-social-media-content-calendar',

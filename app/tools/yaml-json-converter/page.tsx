@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'YAML ⇄ JSON Converter | Zion Tech Group',
+  title: 'YAML ⇄ JSON Converter',
   description: 'Convert between YAML and JSON formats.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/yaml-json-converter' },
 };

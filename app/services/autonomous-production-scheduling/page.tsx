@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Autonomous Production Scheduling | Zion Tech Group',
+  title: 'Autonomous Production Scheduling',
   description: 'Autonomous Production Scheduling solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/autonomous-production-scheduling',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Revenue Recognition & ASC 606 Compliance | Zion Tech Group',
+  title: 'AI Revenue Recognition & ASC 606 Compliance',
   description: 'Automate revenue recognition for complex multi-element arrangements, subscriptions, usage-based pricing, and milestone contracts. AI handles contract analysis, performance obligation identification, variable consideration estimation, and journal entry generation. Fully compliant with ASC 606 and IFRS 15. Reduces close time for revenue by 80%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-revenue-recognition',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Board Meeting Management & Governance Portal | Zion Tech Group',
+  title: 'Micro-SaaS Board Meeting Management & Governance Portal',
   description: 'Complete board management platform for generating board books, tracking action items, managing approvals, and maintaining governance records. Secure role-based access with e-signatures, voting, and audit trails. Designed for SMBs and non-profits.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-board-meeting-manager',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Ironclad — AI-Powered Contract Lifecycle Management | Zion Tech Group',
+  title: 'Ironclad — AI-Powered Contract Lifecycle Management',
   description: 'Ironclad is an AI-powered contract lifecycle management (CLM) platform that automates the entire contract workflow from creation to execution to renewal. Their AI extracts key terms, flags risks, suggests alternative clauses, and tracks obligations across millions of contracts. Used by 2,500+ enterprises including L\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ironclad-ai-contract-lifecycle-management',

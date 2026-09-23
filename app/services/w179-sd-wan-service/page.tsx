@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SD-WAN Managed Service | Zion Tech Group',
+  title: 'SD-WAN Managed Service',
   description: 'Managed SD-WAN: intelligent path selection, application-aware routing, built-in security.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-sd-wan-service',

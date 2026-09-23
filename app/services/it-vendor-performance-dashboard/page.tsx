@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Vendor Performance Dashboard | Zion Tech Group',
+  title: 'IT Vendor Performance Dashboard',
   description: 'Tracks vendor SLA performance, ticket trends, and cost against contract terms with escalation routing and renewal preparation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-vendor-performance-dashboard',

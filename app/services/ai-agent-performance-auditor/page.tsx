@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Agent Performance Auditor | Zion Tech Group',
+  title: 'AI Agent Performance Auditor',
   description: 'Reviews AI agent, chatbot, and copilot outputs for quality, tone, policy adherence, and escalation behavior across channels.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-agent-performance-auditor',

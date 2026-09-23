@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Torq — AI-Powered Procurement & Vendor Security Automation | Zion Tech Group',
+  title: 'Torq — AI-Powered Procurement & Vendor Security Automation',
   description: 'Torq is an enterprise security and procurement automation platform that uses AI to automate security questionnaires, vendor risk assessments, RFP responses, and compliance workflows. Used by enterprises managing thousands of vendor relationships, Torq replaces weeks of manual security review work with AI-driven workflows that analyze SOC 2 reports, ISO 27001 certificates, penetration test results, and privacy policies in minutes. Its AI agent continuously monitors vendor risk posture and alerts teams to changes, reducing vendor onboarding from 4-6 weeks to days. Torq integrates with Salesforce, ServiceNow, Jira, and all major GRC platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/torq-ai-procurement-automation',

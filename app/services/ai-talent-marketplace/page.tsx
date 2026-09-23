@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Talent Marketplace & Skills Intelligence | Zion Tech Group',
+  title: 'AI-Powered Talent Marketplace & Skills Intelligence',
   description: 'Transform your HR with an internal talent marketplace. AI matches employees to projects, gigs, and mentorships based on skills, aspirations, and growth potential. Identifies skill gaps, recommends learning paths, and forecasts future talent needs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-talent-marketplace',

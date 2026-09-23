@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'PetBoard — Pet Boarding Software | Zion Tech Group',
+  title: 'PetBoard — Pet Boarding Software',
   description: 'Manage pet boarding: reservations, pet profiles, feeding schedules, photo updates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-pet',

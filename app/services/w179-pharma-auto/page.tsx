@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Pharma and Life Sciences Automation | Zion Tech Group',
+  title: 'Pharma and Life Sciences Automation',
   description: 'Automate pharma: clinical trials, regulatory submissions, pharmacovigilance, GxP.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-pharma-auto',

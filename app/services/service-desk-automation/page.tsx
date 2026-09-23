@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Service Desk & IT Support | Zion Tech Group',
+  title: 'AI Service Desk & IT Support',
   description: 'AI-powered IT service desk that automates ticket classification, routing, and resolution. Chatbot handles L1 requests automatically, escalates complex issues to human agents, and learns from resolved tickets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/service-desk-automation',

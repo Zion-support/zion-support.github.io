@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Commonwealth Fusion Systems — SPARC Compact Fusion Reactor | Zion Tech Group',
+  title: 'Commonwealth Fusion Systems — SPARC Compact Fusion Reactor',
   description: 'Commonwealth Fusion Systems (CFS), spun out of MIT, is building SPARC — the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/commonwealth-fusion-sparc-reactor',

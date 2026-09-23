@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'axe by Deque — AI-Powered Web Accessibility Testing | Zion Tech Group',
+  title: 'axe by Deque — AI-Powered Web Accessibility Testing',
   description: 'axe by Deque Systems is the leading AI-powered accessibility testing platform that automatically detects WCAG 2.2, Section 508, and EN 301 549 compliance issues in web and mobile applications. Their AI engine uses computer vision and machine learning to identify 80%+ of accessibility issues that manual testing misses, including color contrast, missing alt text, keyboard navigation, and screen reader compatibility. With 1 million+ developers using axe tools and enterprise customers including Microsoft, Google, and the US federal government, Deque has tested over 10 billion web pages for accessibility compliance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/axe-deque-ai-accessibility-testing',

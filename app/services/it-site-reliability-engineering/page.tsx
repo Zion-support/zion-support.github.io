@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Site Reliability Engineering (SRE) Services | Zion Tech Group',
+  title: 'Site Reliability Engineering (SRE) Services',
   description: 'Enterprise SRE-as-a-Service. We design and operate your reliability platform: SLOs/SLIs, error budgets, incident management, capacity planning, and chaos engineering. Reduce MTTR by 70% and achieve 99.99% uptime without building an internal SRE team.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-site-reliability-engineering',

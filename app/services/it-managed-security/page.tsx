@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Security Operations Center (SOC) | Zion Tech Group',
+  title: 'Managed Security Operations Center (SOC)',
   description: '24/7 managed SOC service with real-time threat detection, incident response, and compliance monitoring. Our security analysts and AI-powered SIEM platform monitor your infrastructure around the clock. Includes monthly security reports, vulnerability assessments, and incident response playbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-managed-security',

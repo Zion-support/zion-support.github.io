@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Change Note Compiler | Zion Tech Group',
+  title: 'Micro-SaaS AI Change Note Compiler',
   description: 'Compiles product and policy change notes, release summaries, and customer-facing update drafts from scattered sources.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-change-note-compiler',

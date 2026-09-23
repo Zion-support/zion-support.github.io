@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Number Base Converter | Zion Tech Group',
+  title: 'Number Base Converter',
   description: 'Convert binary, octal, decimal, and hex.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/number-base-converter' },
 };

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Felix Smart — AI-Powered Smart City IoT Management | Zion Tech Group',
+  title: 'Felix Smart — AI-Powered Smart City IoT Management',
   description: 'Felix Smart provides an AI platform for managing smart city infrastructure — street lighting, waste collection, parking, air quality, and traffic flow — through a unified IoT dashboard. Their platform connects 100,000+ city devices, uses predictive analytics to optimize operations, and reduces municipal energy costs by 30-60%. Deployed in cities across Europe, Asia, and North America.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/felix-smart-city-iot-platform',

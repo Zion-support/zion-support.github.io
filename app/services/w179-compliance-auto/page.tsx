@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Compliance Automation Suite | Zion Tech Group',
+  title: 'Compliance Automation Suite',
   description: 'Automate compliance: SOC 2, HIPAA, PCI DSS, GDPR, ISO 27001. Continuous control monitoring.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-compliance-auto',

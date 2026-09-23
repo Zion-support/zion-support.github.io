@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Ar Surgical Navigation Platform | Zion Tech Group',
+  title: 'AI Ar Surgical Navigation Platform',
   description: 'AI Ar Surgical Navigation Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-ar-surgical-navigation-platform',

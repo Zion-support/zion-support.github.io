@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Governance and Policy Engine | Zion Tech Group',
+  title: 'Cloud Governance and Policy Engine',
   description: 'Cloud governance: policy-as-code, tagging enforcement, cost controls, compliance guardrails.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-governance',

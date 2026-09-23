@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Backup Integrity & Verification Service | Zion Tech Group',
+  title: 'Backup Integrity & Verification Service',
   description: 'Validates backup freshness, restorability, and retention policies across cloud and on-premises estates with evidence summaries.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-backup-verification-service',

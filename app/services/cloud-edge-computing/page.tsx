@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Computing Platform | Zion Tech Group',
+  title: 'Edge Computing Platform',
   description: 'Deploy and manage workloads at the edge with low-latency processing for IoT and real-time apps.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-edge-computing',

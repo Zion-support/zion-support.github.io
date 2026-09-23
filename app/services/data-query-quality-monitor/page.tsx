@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Query Quality Monitor | Zion Tech Group',
+  title: 'Data Query Quality Monitor',
   description: 'Monitors query and report quality across BI and SQL workloads with freshness, duplicate, null, and schema drift signals per dataset.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-query-quality-monitor',

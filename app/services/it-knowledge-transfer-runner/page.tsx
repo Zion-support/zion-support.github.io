@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Knowledge Transfer Runner | Zion Tech Group',
+  title: 'Knowledge Transfer Runner',
   description: 'Structures tacit tribal IT knowledge into reusable guides, checklists, and validation steps for turnover and growth.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-knowledge-transfer-runner',

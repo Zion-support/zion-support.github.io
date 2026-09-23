@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Enterprise Data Fabric Mesh | Zion Tech Group',
+  title: 'Enterprise Data Fabric Mesh',
   description: 'Enterprise Data Fabric Mesh solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/enterprise-data-fabric-mesh',

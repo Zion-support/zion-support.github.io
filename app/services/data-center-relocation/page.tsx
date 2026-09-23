@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Migration & Relocation Services | Zion Tech Group',
+  title: 'Data Center Migration & Relocation Services',
   description: 'End-to-end data center migration planning and execution. From assessment and design to physical move, cloud migration, and post-move validation. Minimize downtime and risk.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-relocation',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Telecommunications & Carrier Coordination | Zion Tech Group',
+  title: 'Data Center Telecommunications & Carrier Coordination',
   description: 'Streamline carrier onboarding, telco coordination, and meet-me room management for data centers. Carrier-neutral provisioning, circuit ordering, and SLA monitoring across multiple service providers.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-telecom-carrier-coordination',

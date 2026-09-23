@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Smart Manufacturing Automation | Zion Tech Group',
+  title: 'Smart Manufacturing Automation',
   description: 'Industry 4.0 automation connecting IoT sensors, digital twins, and production optimization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-smart-manufacturing',

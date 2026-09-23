@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contract Lifecycle Management | Zion Tech Group',
+  title: 'Contract Lifecycle Management',
   description: 'Manage contracts: drafting, negotiation, execution, renewal, compliance. Reduce cycle time 50%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-contract-lifecycle',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Chatbot Enterprise | Zion Tech Group',
+  title: 'AI Chatbot Enterprise',
   description: 'AI Chatbot Enterprise solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-chatbot-enterprise',

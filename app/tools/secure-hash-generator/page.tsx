@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Secure Hash Generator | Zion Tech Group',
+  title: 'Secure Hash Generator',
   description: 'Generate SHA-256 hashes in the browser.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/secure-hash-generator' },
 };

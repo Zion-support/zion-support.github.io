@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed IT Infrastructure | Zion Tech Group',
+  title: 'Managed IT Infrastructure',
   description: '24/7 managed infrastructure: network, servers, storage, and backup. Proactive monitoring, patching, and capacity planning under one SLA.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-it-infrastructure',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Document Classification & Data Extraction | Zion Tech Group',
+  title: 'AI Document Classification & Data Extraction',
   description: 'Auto-classify documents, extract structured data with OCR, and route workflows intelligently. Eliminate manual data entry and accelerate document-driven processes across finance, legal, and operations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-document-classification-extraction',

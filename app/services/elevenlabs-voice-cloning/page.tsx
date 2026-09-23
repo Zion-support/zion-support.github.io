@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ElevenLabs — AI Voice Cloning & Speech Synthesis | Zion Tech Group',
+  title: 'ElevenLabs — AI Voice Cloning & Speech Synthesis',
   description: 'ElevenLabs is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/elevenlabs-voice-cloning',

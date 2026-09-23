@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Enterprise AI Chatbot Builder | Zion Tech Group',
+  title: 'Enterprise AI Chatbot Builder',
   description: 'Build and deploy AI chatbots for customer service, sales, and internal support. No-code builder with GPT-4 integration, multi-language support, and analytics. Handles 10,000+ concurrent conversations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-chatbot-builder',

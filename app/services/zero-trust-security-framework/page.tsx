@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zero Trust Security Framework — Identity-Centric Protection | Zion Tech Group',
+  title: 'Zero Trust Security Framework — Identity-Centric Protection',
   description: 'Complete zero-trust security implementation including identity management, device security, and network segmentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/zero-trust-security-framework',

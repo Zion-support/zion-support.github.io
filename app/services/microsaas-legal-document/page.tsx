@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Legal Document Automation | Zion Tech Group',
+  title: 'Legal Document Automation',
   description: 'AI-powered legal document creation, review, and lifecycle management for law firms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-legal-document',

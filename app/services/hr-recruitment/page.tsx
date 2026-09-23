@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'HR Recruitment Platform | Zion Tech Group',
+  title: 'HR Recruitment Platform',
   description: 'End-to-end recruitment management. AI resume screening, interview scheduling, candidate scoring, offer management, and onboarding automation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/hr-recruitment',

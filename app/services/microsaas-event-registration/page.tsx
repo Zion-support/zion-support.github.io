@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Event Registration & Ticketing Platform | Zion Tech Group',
+  title: 'Micro-SaaS Event Registration & Ticketing Platform',
   description: 'Launch and manage events with a lightweight registration and ticketing platform. Custom event pages, Stripe payment collection, attendee management, check-in apps, and post-event analytics. Perfect for workshops, conferences, and webinars.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-event-registration',

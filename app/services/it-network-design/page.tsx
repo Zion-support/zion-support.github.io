@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Design & Optimization Service | Zion Tech Group',
+  title: 'Network Design & Optimization Service',
   description: 'Professional network architecture design, implementation, and optimization for offices, data centers, and cloud environments. Includes network assessment, topology design, hardware selection, configuration, and performance tuning. Achieve 99.99% network uptime with redundant, secure architecture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-network-design',

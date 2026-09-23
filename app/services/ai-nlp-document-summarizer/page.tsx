@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI NLP Document Summarizer | Zion Tech Group',
+  title: 'AI NLP Document Summarizer',
   description: 'Automated summarization of legal, financial, and technical documents with key extraction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-nlp-document-summarizer',

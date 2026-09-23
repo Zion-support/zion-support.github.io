@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Liquid & Immersion Cooling Deployment | Zion Tech Group',
+  title: 'Liquid & Immersion Cooling Deployment',
   description: 'End-to-end liquid and immersion cooling migration for data centers. From feasibility and ROI analysis to installation, maintenance, and fire-suppression integration. Supports dielectric immersion, direct-to-chip, and rear-door heat exchangers.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dc-liquid-immersion-cooling',

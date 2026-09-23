@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Free Tools Enterprise | Zion Tech Group',
+  title: 'AI Free Tools Enterprise',
   description: 'AI Free Tools Enterprise services from Zion Tech Group — strategy, implementation, and managed operations.',
   alternates: { canonical: 'https://ziontechgroup.com/ai-free-tools-enterprise' },
 };

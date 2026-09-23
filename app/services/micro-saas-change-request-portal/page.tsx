@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Engineering Change Request Portal | Zion Tech Group',
+  title: 'Engineering Change Request Portal',
   description: 'Lightweight change request platform for engineering teams. Standardizes submission, review, approval, rollout, and rollback with policy checks and audit history.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-change-request-portal',

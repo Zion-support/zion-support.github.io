@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Remote Workforce Enablement | Zion Tech Group',
+  title: 'Remote Workforce Enablement',
   description: 'Deploy and secure remote and hybrid workforce tooling: VPN-free access, endpoint readiness checks, collaboration hygiene, and policy enforcement for distributed teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-remote-workforce-services',

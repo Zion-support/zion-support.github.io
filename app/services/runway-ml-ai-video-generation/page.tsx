@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Runway ML — AI Video Generation Platform | Zion Tech Group',
+  title: 'Runway ML — AI Video Generation Platform',
   description: 'Runway ML is the leading AI video generation and editing platform that enables creators, filmmakers, and marketers to produce professional-quality video content using generative AI. Its Gen-3 Alpha model produces cinematic-quality video from text prompts, images, and reference videos. Used by 3 million+ creators and major studios including Marvel, BBC, and Samsung.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/runway-ml-ai-video-generation',

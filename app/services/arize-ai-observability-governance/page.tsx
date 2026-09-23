@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Arize AI — Enterprise AI Observability and Governance Platform | Zion Tech Group',
+  title: 'Arize AI — Enterprise AI Observability and Governance Platform',
   description: 'Arize AI is the leading enterprise AI observability and governance platform that helps organizations monitor, explain, and improve production AI and LLM applications. It provides end-to-end visibility into model performance, data drift, bias detection, and LLM prompt-response quality, enabling responsible AI deployment at scale. Used by Apple, Airbnb, and Stanford Medicine, Arize AI supports every major ML framework and LLM provider (OpenAI, Anthropic, Google, Cohere) with automatic monitoring, alerting, and root cause analysis. Its Phoenix open-source library provides local debugging and evaluation for LLM applications, while the Arize platform delivers enterprise-grade monitoring, governance dashboards, and compliance reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/arize-ai-observability-governance',

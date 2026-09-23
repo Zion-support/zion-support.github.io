@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Onboarding and Offboarding Automation | Zion Tech Group',
+  title: 'IT Onboarding and Offboarding Automation',
   description: 'Automated user provisioning and deprovisioning across all systems. Day-one productivity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-it-onboard-auto',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Cost Optimization | Zion Tech Group',
+  title: 'Cloud Cost Optimization',
   description: 'Reduce cloud spend 20-40% with rightsizing, reserved instance planning, and waste detection across AWS, Azure, and GCP.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w177-cloud-cost-optimization',

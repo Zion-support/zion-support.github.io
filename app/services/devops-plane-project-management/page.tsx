@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Plane DevOps Project Management | Zion Tech Group',
+  title: 'Plane DevOps Project Management',
   description: 'Open-source alternative to Jira and Linear built for modern engineering teams. Combines issue tracking, sprint planning, cycle analytics, and release management in a blazing-fast interface with AI-powered workload balancing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/devops-plane-project-management',

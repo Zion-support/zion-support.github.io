@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Livestock Monitoring AI | Zion Tech Group',
+  title: 'Livestock Monitoring AI',
   description: 'Livestock Monitoring AI solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/livestock-monitoring-ai',

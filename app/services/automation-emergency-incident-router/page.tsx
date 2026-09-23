@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Emergency Incident Router | Zion Tech Group',
+  title: 'Emergency Incident Router',
   description: 'Executes calibrated emergency response flows across alerts, people, vendors, and customers with status tracking and confirmation loops.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-emergency-incident-router',

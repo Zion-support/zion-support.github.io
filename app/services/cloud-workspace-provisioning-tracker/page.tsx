@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Workspace Provisioning Tracker | Zion Tech Group',
+  title: 'Cloud Workspace Provisioning Tracker',
   description: 'Tracks cloud workspaces, lab environments, and SaaS account provisioning against expense, usage, and lifecycle rules.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-workspace-provisioning-tracker',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SOC 2 Type II Audit Support | Zion Tech Group',
+  title: 'SOC 2 Type II Audit Support',
   description: 'Full SOC 2 Type II audit support: control implementation, evidence collection, auditor management.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-soc2-type2',

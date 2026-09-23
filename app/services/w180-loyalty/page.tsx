@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'LoyaltyPlus — Loyalty Program | Zion Tech Group',
+  title: 'LoyaltyPlus — Loyalty Program',
   description: 'Build customer loyalty programs: points, tiers, rewards, referrals.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-loyalty',

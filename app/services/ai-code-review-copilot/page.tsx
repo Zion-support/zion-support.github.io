@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Code Review Copilot | Zion Tech Group',
+  title: 'AI Code Review Copilot',
   description: 'Automated code review powered by large language models that understand context, architecture patterns, and security implications. Reviews every PR in real-time with actionable suggestions, catches bugs before merge, and enforces team coding standards. Integrates with GitHub, GitLab, and Bitbucket.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-code-review-copilot',

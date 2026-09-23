@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Spot by NetApp — Cloud Cost Optimization Platform | Zion Tech Group',
+  title: 'Spot by NetApp — Cloud Cost Optimization Platform',
   description: 'Spot by NetApp is the leading cloud cost optimization platform that uses predictive analytics and automation to continuously reduce cloud infrastructure costs while maintaining performance and reliability. Processing $2B+ in cloud spend across 2,000+ customers including Samsung, Adobe, and Ticketmaster, Spot\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/spot-io-netapp-cloud-cost',

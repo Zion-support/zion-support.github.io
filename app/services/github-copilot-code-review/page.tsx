@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'GitHub Copilot Code Review — AI-Powered Pull Request Review | Zion Tech Group',
+  title: 'GitHub Copilot Code Review — AI-Powered Pull Request Review',
   description: 'GitHub Copilot Code Review is an AI-powered code review tool that automatically analyzes pull requests, identifies bugs, security vulnerabilities, and code quality issues, and leaves contextual review comments directly in the PR. Built on OpenAI\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/github-copilot-code-review',

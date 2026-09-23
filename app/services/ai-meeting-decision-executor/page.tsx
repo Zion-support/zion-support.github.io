@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meeting Decision Executor | Zion Tech Group',
+  title: 'AI Meeting Decision Executor',
   description: 'Turns meeting outputs into tracked actions with owners, deadlines, and status checks while integrating with project systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-meeting-decision-executor',

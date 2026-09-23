@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Product Launch Intelligence | Zion Tech Group',
+  title: 'AI Product Launch Intelligence',
   description: 'Tracks competitor launches, market noise, pricing signals, and demand trends to inform launch timing and messaging.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-product-launch-intelligence',

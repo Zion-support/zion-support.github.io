@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Merge Request Health Check | Zion Tech Group',
+  title: 'Merge Request Health Check',
   description: 'Reviews pull/merge request quality, security, test coverage, docs completeness, and rollback readiness before merge.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-merge-request-health-check',

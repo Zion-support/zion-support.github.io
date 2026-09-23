@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'FormBuilder Lite - Online Forms | Zion Tech Group',
+  title: 'FormBuilder Lite - Online Forms',
   description: 'Drag-drop form builder: conditional logic, payments, file uploads, analytics. No-code.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-formbuilder-lite',

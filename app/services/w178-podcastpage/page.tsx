@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'PodcastPage — Podcast Hosting | Zion Tech Group',
+  title: 'PodcastPage — Podcast Hosting',
   description: 'All-in-one podcast hosting: upload, distribute, analytics, monetization. RSS feed and website.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-podcastpage',

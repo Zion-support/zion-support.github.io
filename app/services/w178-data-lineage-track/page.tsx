@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Lineage and Impact Analysis | Zion Tech Group',
+  title: 'Data Lineage and Impact Analysis',
   description: 'Track data lineage end-to-end: source to dashboard, impact analysis, compliance documentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-lineage-track',

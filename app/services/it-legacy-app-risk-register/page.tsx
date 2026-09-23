@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Legacy Application Risk Register | Zion Tech Group',
+  title: 'Legacy Application Risk Register',
   description: 'Catalogues legacy apps with risk scoring, support status, integration inventory, and modernization roadmap tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-legacy-app-risk-register',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Incident Postcard | Zion Tech Group',
+  title: 'Micro-SaaS AI Incident Postcard',
   description: 'Creates concise incident postcards for customers and leadership with timeline, impact, next actions, and confidence signals.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-incident-postcard',

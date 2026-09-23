@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Video Content Moderation | Zion Tech Group',
+  title: 'AI-Powered Video Content Moderation',
   description: 'Real-time video analysis, inappropriate content detection, age verification, and copyright detection powered by advanced computer vision and machine learning. Helps platforms maintain safe, compliant content at scale without manual review bottlenecks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-powered-video-content-moderation',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'PCI DSS Compliance Monitoring & Reporting Service | Zion Tech Group',
+  title: 'PCI DSS Compliance Monitoring & Reporting Service',
   description: 'Continuous PCI DSS compliance scanning, automated evidence collection, gap analysis, and audit-ready reporting. Stay compliant year-round with real-time monitoring of all 12 PCI DSS requirements across your cardholder data environment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/pci-dss-compliance-monitoring',

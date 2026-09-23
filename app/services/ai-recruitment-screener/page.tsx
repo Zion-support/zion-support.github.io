@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Recruitment Screening Platform | Zion Tech Group',
+  title: 'AI Recruitment Screening Platform',
   description: 'Bias-aware AI recruitment platform that screens resumes, ranks candidates, and conducts initial video interview analysis. Ensures fair evaluation while reducing time-to-hire by 60%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-recruitment-screener',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'k6 Load Testing | Zion Tech Group',
+  title: 'k6 Load Testing',
   description: 'k6 is a modern load testing tool, building on Load Impact',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/k6',

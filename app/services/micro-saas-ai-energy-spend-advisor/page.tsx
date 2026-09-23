@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Energy Spend Advisor | Zion Tech Group',
+  title: 'Micro-SaaS AI Energy Spend Advisor',
   description: 'Advises on cloud and facility energy spend with workload, scheduling, and optimization suggestions tied to cost and carbon.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-energy-spend-advisor',

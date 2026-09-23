@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cybersecurity Operations | Zion Tech Group',
+  title: 'Cybersecurity Operations',
   description: 'Managed security operations: threat detection, incident response, vulnerability management, and compliance audits.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-it-cybersecurity',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Appointment Booking & Reminders | Zion Tech Group',
+  title: 'Micro-SaaS Appointment Booking & Reminders',
   description: 'Online booking, automated SMS and email reminders, calendar sync, and payment collection in one simple platform. Designed for professional services — consultants, salons, clinics, and tutors — who need to reduce no-shows and streamline scheduling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-appointment-booking',

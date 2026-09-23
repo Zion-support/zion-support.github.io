@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Threat Intelligence Platform Management & Monitoring | Zion Tech Group',
+  title: 'Threat Intelligence Platform Management & Monitoring',
   description: 'Managed Threat Intelligence Platform that aggregates, enriches, and operationalizes threat data from commercial, open-source, and internal feeds. AI correlates threats to your infrastructure and prioritizes by relevance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-threat-intel-platform',

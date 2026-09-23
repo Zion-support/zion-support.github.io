@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Migration Service | Zion Tech Group',
+  title: 'Data Migration Service',
   description: 'Expert data migration: schema translation, data transformation, validation, zero-downtime cutover.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-migration',

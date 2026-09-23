@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Invoice & Expense Tracker for Freelancers | Zion Tech Group',
+  title: 'Micro-SaaS Invoice & Expense Tracker for Freelancers',
   description: 'All-in-one invoicing and expense tracking for freelancers and solopreneurs. Create professional invoices, track expenses by category, auto-calculate taxes, and get paid online. Integrates with Stripe, PayPal, and bank feeds.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-invoice-expense-tracker',

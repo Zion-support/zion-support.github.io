@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Physical Security & Access Control Systems | Zion Tech Group',
+  title: 'Data Center Physical Security & Access Control Systems',
   description: 'Design, install, and certify layered physical security for data halls and support rooms: biometric access, mantraps, CCTV/AI video analytics, perimeter detection, and SOC 2 / ISO 27001 compliance alignment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-physical-security',

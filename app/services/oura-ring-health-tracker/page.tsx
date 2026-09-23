@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Oura Ring — Clinical-Grade Health Tracking Wearable | Zion Tech Group',
+  title: 'Oura Ring — Clinical-Grade Health Tracking Wearable',
   description: 'Oura Ring is a finger-worn health tracker that provides clinical-grade sleep analysis, heart rate variability (HRV), blood oxygen, body temperature, and activity tracking. With FDA-cleared features and partnerships with the US Department of Defense, Mayo Clinic, and 100+ research institutions, Oura has 2.5 million+ rings sold and is used for early illness detection, fertility tracking, and athletic performance optimization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/oura-ring-health-tracker',

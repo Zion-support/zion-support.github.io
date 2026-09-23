@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Compliance Checkpoint Automator | Zion Tech Group',
+  title: 'Compliance Checkpoint Automator',
   description: 'Automates recurring compliance checkpoints with evidence collection, owner assignment, and remediation routing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-compliance-checkpoint-automator',

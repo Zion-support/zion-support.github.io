@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Waymo — Autonomous Vehicle Telemetry & Fleet Intelligence | Zion Tech Group',
+  title: 'Waymo — Autonomous Vehicle Telemetry & Fleet Intelligence',
   description: 'Waymo, an Alphabet subsidiary, operates the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/waymo-autonomous-vehicle-telemetry',

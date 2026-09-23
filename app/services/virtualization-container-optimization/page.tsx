@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Virtualization Container Optimization | Zion Tech Group',
+  title: 'Virtualization Container Optimization',
   description: 'Virtualization Container Optimization solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/virtualization-container-optimization',

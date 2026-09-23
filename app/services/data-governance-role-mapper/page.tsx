@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Governance Role Mapper | Zion Tech Group',
+  title: 'Data Governance Role Mapper',
   description: 'Maps data ownership, stewardship, and duty-of-care roles across datasets, reports, and exports with accountability dashboards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-governance-role-mapper',

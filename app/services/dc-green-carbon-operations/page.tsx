@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Green Data Center & Carbon-Aware Operations | Zion Tech Group',
+  title: 'Green Data Center & Carbon-Aware Operations',
   description: 'Carbon tracking, renewable energy matching, and ESG reporting purpose-built for data centers. Automate Scope 2 emissions calculations, source renewable PPAs, and optimize workload placement for lowest-carbon compute.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dc-green-carbon-operations',

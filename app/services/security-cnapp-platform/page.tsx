@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud-Native Application Protection Platform (CNAPP) | Zion Tech Group',
+  title: 'Cloud-Native Application Protection Platform (CNAPP)',
   description: 'Unified cloud security platform that combines CSPM, CWPP, CIEM, and container security into a single dashboard. Scans IaC templates in CI/CD, protects cloud workloads at runtime, and maps attack paths across your entire cloud estate.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-cnapp-platform',

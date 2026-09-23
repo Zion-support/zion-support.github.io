@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Hybrid Cloud & Data Center Repatriation Services | Zion Tech Group',
+  title: 'Hybrid Cloud & Data Center Repatriation Services',
   description: 'Seamlessly bridge on-premises data centers with public and private clouds. Migrate, repatriate, and orchestrate workloads across hybrid environments while controlling costs and maintaining compliance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-hybrid-cloud-migration',

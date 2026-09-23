@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Deepfake Detection | Zion Tech Group',
+  title: 'AI Deepfake Detection',
   description: 'Detect deepfake images, video, and audio with 99.7% accuracy.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-ai-deepfake',

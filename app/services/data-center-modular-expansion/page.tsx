@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Modular Data Center Expansion & Prefabricated Data Halls | Zion Tech Group',
+  title: 'Modular Data Center Expansion & Prefabricated Data Halls',
   description: 'Accelerate data center expansion with prefabricated data halls, modular power and cooling pods, and rapid-deployment shell-and-core designs. Reduce build timelines from 18 months to under 6 months.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-modular-expansion',

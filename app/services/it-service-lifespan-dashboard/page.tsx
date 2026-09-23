@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Service Lifespan Dashboard | Zion Tech Group',
+  title: 'IT Service Lifespan Dashboard',
   description: 'Tracks end-to-end asset and service lifecycles with renewal forecasts, upgrade windows, and retirement risk scoring across teams and vendors.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-service-lifespan-dashboard',

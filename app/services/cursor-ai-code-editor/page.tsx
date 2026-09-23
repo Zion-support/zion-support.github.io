@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cursor — AI-First Code Editor for Professional Developers | Zion Tech Group',
+  title: 'Cursor — AI-First Code Editor for Professional Developers',
   description: 'Cursor is the AI-first code editor built on top of VS Code that integrates large language models directly into the coding workflow. Unlike autocomplete tools, Cursor understands entire codebases, enabling developers to make large-scale changes with natural language prompts, generate functions from docstrings, debug errors with AI context, and navigate unfamiliar code with AI-powered explanations. With 1 million+ developers and $9.9 billion valuation, Cursor has become the fastest-growing developer tool in history. Its features include Cmd+K (inline editing), Cmd+L (AI chat with codebase context), Composer (multi-file AI agent), and automatic import management.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cursor-ai-code-editor',

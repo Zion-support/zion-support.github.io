@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Contracts and Schema Registry | Zion Tech Group',
+  title: 'Data Contracts and Schema Registry',
   description: 'Enforce data contracts: schema registry, breaking change detection, compatibility modes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-data-contracts',

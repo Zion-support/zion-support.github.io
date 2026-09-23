@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SLA Breach Risk Radar | Zion Tech Group',
+  title: 'SLA Breach Risk Radar',
   description: 'Predicts SLA breach probability from capacity, change backlog, and incident signals with mitigation routing and alerting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-sla-breach-risk-radar',

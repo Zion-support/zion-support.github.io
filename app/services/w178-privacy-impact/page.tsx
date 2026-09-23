@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Impact Assessment (PIA) | Zion Tech Group',
+  title: 'Privacy Impact Assessment (PIA)',
   description: 'Automate privacy impact assessments: data flow mapping, risk scoring, compliance documentation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-privacy-impact',

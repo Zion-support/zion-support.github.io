@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Tenant Screening AI | Zion Tech Group',
+  title: 'Tenant Screening AI',
   description: 'Tenant Screening AI solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/tenant-screening-ai',

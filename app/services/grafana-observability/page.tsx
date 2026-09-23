@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Grafana Observability Stack | Zion Tech Group',
+  title: 'Grafana Observability Stack',
   description: 'Open-source metrics, logs, and traces visualization through composable dashboards. Combined with Loki (log aggregation) and Tempo (distributed tracing), delivers a full-stack observability suite that rivals Datadog and New Relic at zero licensing cost for self-hosted deployments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/grafana-observability',

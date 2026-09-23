@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Irrigation Optimization | Zion Tech Group',
+  title: 'Irrigation Optimization',
   description: 'Irrigation Optimization solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/irrigation-optimization',

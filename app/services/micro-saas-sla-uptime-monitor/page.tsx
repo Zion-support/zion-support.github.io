@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'External SLA & Uptime Monitor for Vendors | Zion Tech Group',
+  title: 'External SLA & Uptime Monitor for Vendors',
   description: 'Monitor vendor SLAs, uptime, response latency, and incident history from your customer perspective. Generates vendor scorecards and renewal risk alerts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-sla-uptime-monitor',

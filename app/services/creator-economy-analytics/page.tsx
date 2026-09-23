@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Creator Economy Analytics | Zion Tech Group',
+  title: 'Creator Economy Analytics',
   description: 'Analytics dashboard for content creators. Track revenue across platforms, audience growth, engagement trends, and content performance optimization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/creator-economy-analytics',

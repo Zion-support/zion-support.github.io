@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Advanced Form Builder & Workflow | Zion Tech Group',
+  title: 'Advanced Form Builder & Workflow',
   description: 'No-code form builder with conditional logic, payment collection, file uploads, and workflow automation. Multi-step forms, calculated fields, and 50+ integrations for lead generation, surveys, and applications.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/form-builder-pro',

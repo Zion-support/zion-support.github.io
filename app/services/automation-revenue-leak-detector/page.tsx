@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automation Revenue Leak Detector | Zion Tech Group',
+  title: 'Automation Revenue Leak Detector',
   description: 'Finds recoverable revenue leaks across renewals, underbilling, price drift, and partner rebates with prioritized actions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-revenue-leak-detector',

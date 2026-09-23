@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Smart Invoice Generator & Payment Hub | Zion Tech Group',
+  title: 'Micro-SaaS Smart Invoice Generator & Payment Hub',
   description: 'Create and send professional invoices in seconds. Auto-calculate taxes, accept online payments, send reminders, and reconcile with bank feeds. AI suggests optimal send times for faster payment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-invoice-generator',

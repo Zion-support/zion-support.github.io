@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Computer Vision Quality Inspection | Zion Tech Group',
+  title: 'Computer Vision Quality Inspection',
   description: 'Computer Vision Quality Inspection solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/computer-vision-quality-inspection',

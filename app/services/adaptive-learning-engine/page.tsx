@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Adaptive Learning Engine | Zion Tech Group',
+  title: 'Adaptive Learning Engine',
   description: 'AI-powered adaptive learning platform that personalizes educational content in real-time. Adjusts difficulty, pacing, and content type based on student performance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/adaptive-learning-engine',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Data Sovereignty and Residency | Zion Tech Group',
+  title: 'Cloud Data Sovereignty and Residency',
   description: 'Ensure data stays in the right jurisdiction: residency controls.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-sovereignty',

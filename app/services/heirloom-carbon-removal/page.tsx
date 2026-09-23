@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Heirloom — Enhanced Rock Weathering Carbon Removal | Zion Tech Group',
+  title: 'Heirloom — Enhanced Rock Weathering Carbon Removal',
   description: 'Heirloom accelerates natural limestone weathering to capture CO₂ from the air and permanently store it in concrete and soil. Their enhanced weathering process spreads pulverized limestone on agricultural land, where it absorbs CO₂ within months instead of the natural centuries-long timeline. This dual-use approach also improves soil pH and crop yields for farming communities.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/heirloom-carbon-removal',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Looking Glass Factory — Glasses-Free Holographic Displays | Zion Tech Group',
+  title: 'Looking Glass Factory — Glasses-Free Holographic Displays',
   description: 'Looking Glass Factory produces glasses-free holographic displays that show true 3D images viewable by multiple people simultaneously without headsets. Their displays use a proprietary light field engine that projects 45-100 perspectives of a 3D scene, creating a holographic effect visible to the naked eye. Applications span medical imaging, retail product visualization, digital signage, and creative industries.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/looking-glass-holographic-displays',

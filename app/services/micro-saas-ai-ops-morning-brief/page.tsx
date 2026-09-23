@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Ops Morning Brief | Zion Tech Group',
+  title: 'Micro-SaaS AI Ops Morning Brief',
   description: 'Delivers concise morning ops briefs with overnight incidents, changes, SLA risks, and prioritized action items.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-ops-morning-brief',

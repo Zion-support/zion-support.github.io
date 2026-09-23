@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Upkeep AI Predictive Maintenance Platform | Zion Tech Group',
+  title: 'Upkeep AI Predictive Maintenance Platform',
   description: 'Upkeep (formerly Asset Reliability Platform) is the leading AI-powered predictive maintenance platform that uses machine learning to predict equipment failures before they happen.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/upkeep-predictive-maintenance-ai',

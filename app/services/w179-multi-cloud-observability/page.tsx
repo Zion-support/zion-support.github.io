@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud Observability Platform | Zion Tech Group',
+  title: 'Multi-Cloud Observability Platform',
   description: 'Unified observability across AWS, Azure, GCP: metrics, traces, logs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-multi-cloud-observability',

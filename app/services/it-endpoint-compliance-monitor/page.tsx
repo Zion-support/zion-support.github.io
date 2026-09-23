@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Endpoint Compliance Monitor | Zion Tech Group',
+  title: 'IT Endpoint Compliance Monitor',
   description: 'Continuously checks endpoint posture across Windows, macOS, and Linux. Enforces policies, blocks drift, and delivers compliance dashboards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-endpoint-compliance-monitor',

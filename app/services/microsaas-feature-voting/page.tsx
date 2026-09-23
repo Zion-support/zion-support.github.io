@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Feature Voting Board | Zion Tech Group',
+  title: 'Feature Voting Board',
   description: 'Customer feedback and feature voting platform to democratize your product roadmap.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-feature-voting',

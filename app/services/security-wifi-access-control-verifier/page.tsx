@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Wi-Fi Access Control Verifier | Zion Tech Group',
+  title: 'Wi-Fi Access Control Verifier',
   description: 'Validates wireless access policies, AP placement, segmentation, and guest isolation posture with periodic checks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-wifi-access-control-verifier',

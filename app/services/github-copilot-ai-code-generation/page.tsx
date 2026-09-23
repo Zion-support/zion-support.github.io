@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'GitHub Copilot — AI-Powered Code Generation | Zion Tech Group',
+  title: 'GitHub Copilot — AI-Powered Code Generation',
   description: 'GitHub Copilot is an AI pair programmer that uses large language models trained on billions of lines of code to suggest entire lines or functions inside your editor. Integrated with VS Code, JetBrains, Neovim, and Visual Studio, Copilot understands context from comments, variable names, and surrounding code to generate contextually relevant code in 40+ programming languages. Over 1.8 million paid subscribers and 73,000 enterprise customers use Copilot to accelerate development by up to 55%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/github-copilot-ai-code-generation',

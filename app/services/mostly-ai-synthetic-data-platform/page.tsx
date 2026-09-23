@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'MOSTLY AI — Enterprise Synthetic Data Generation Platform | Zion Tech Group',
+  title: 'MOSTLY AI — Enterprise Synthetic Data Generation Platform',
   description: 'MOSTLY AI is the leading enterprise synthetic data platform that generates statistically accurate, privacy-safe replicas of real-world data. Using state-of-the-art generative AI models, it produces synthetic datasets that preserve the statistical properties, correlations, and distributions of original data while containing zero real personal information. This enables organizations to share, analyze, and train AI models on data that would otherwise be restricted by GDPR, HIPAA, or internal governance. Used by financial institutions, healthcare organizations, and Fortune 500 companies, MOSTLY AI supports tabular, time-series, and relational data with up to 100% statistical fidelity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/mostly-ai-synthetic-data-platform',

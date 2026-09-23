@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Jupiter Intelligence — AI Climate Risk Analytics | Zion Tech Group',
+  title: 'Jupiter Intelligence — AI Climate Risk Analytics',
   description: 'Jupiter Intelligence is the leading AI-powered climate risk analytics platform that helps organizations quantify and manage physical climate risks to assets, supply chains, and operations. Used by 100+ organizations including the US Department of Defense, Bank of America, and Unilever.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/jupiter-intelligence-climate-risk',

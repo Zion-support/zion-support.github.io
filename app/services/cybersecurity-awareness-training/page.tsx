@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cybersecurity & Penetration Testing | Zion Tech Group',
+  title: 'Cybersecurity & Penetration Testing',
   description: 'Comprehensive security assessments, vulnerability management, and incident response to protect your digital assets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cybersecurity-awareness-training',

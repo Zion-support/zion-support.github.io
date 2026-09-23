@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Playwright Test Automation Suite | Zion Tech Group',
+  title: 'Playwright Test Automation Suite',
   description: 'End-to-end browser testing framework for modern web applications. Supports Chromium, Firefox, and WebKit with auto-wait, network interception, visual regression testing, and parallel execution across multiple browsers and devices.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/testing-playwright-automation',

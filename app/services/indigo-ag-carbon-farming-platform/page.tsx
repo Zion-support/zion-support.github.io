@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Indigo Ag — AI-Powered Carbon Farming Platform | Zion Tech Group',
+  title: 'Indigo Ag — AI-Powered Carbon Farming Platform',
   description: 'Indigo Ag uses satellite imagery, soil sampling AI, and machine learning to help farmers transition to regenerative agriculture practices that sequester carbon in soil. Their platform measures, reports, and verifies (MRV) carbon removal at field level, enabling farmers to sell verified carbon credits to corporations. Over 10 million acres enrolled, with farmers earning $15-40/acre in carbon credit revenue.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/indigo-ag-carbon-farming-platform',

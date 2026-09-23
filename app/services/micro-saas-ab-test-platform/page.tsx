@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'A/B Testing & Feature Experiment Platform | Zion Tech Group',
+  title: 'A/B Testing & Feature Experiment Platform',
   description: 'Run experiments on features, pricing, and UX with statistical rigor. Bayesian statistics, sequential testing, and automatic winner declaration. No more waiting weeks for results — get answers 3x faster.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ab-test-platform',

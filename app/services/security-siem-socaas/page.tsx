@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security SIEM & SOC as a Service | Zion Tech Group',
+  title: 'Security SIEM & SOC as a Service',
   description: 'Cloud-native SIEM with managed SOC, threat intelligence, and incident response.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-siem-socaas',

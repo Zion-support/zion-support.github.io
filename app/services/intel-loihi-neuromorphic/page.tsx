@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Intel Loihi 2 — Neuromorphic Computing Platform | Zion Tech Group',
+  title: 'Intel Loihi 2 — Neuromorphic Computing Platform',
   description: 'Intel Loihi 2 is a neuromorphic processor that mimics the human brain\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/intel-loihi-neuromorphic',

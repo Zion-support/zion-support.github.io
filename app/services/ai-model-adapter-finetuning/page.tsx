@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Model Fine-Tuning, Adapters & Safeguards | Zion Tech Group',
+  title: 'AI Model Fine-Tuning, Adapters & Safeguards',
   description: 'Fine-tune LLMs and vision models on proprietary data with LoRA/QLoRA adapters. Deploy with prompt caching, guardrails, and evaluation suites. Reduce hallucination and align outputs with brand and compliance requirements.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-model-adapter-finetuning',

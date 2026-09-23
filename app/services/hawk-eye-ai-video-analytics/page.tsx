@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Hawk-Eye — AI-Powered Video Analytics for Sports & Security | Zion Tech Group',
+  title: 'Hawk-Eye — AI-Powered Video Analytics for Sports & Security',
   description: 'Hawk-Eye is a computer vision technology company that provides AI-powered video analysis for sports officiating, security, and entertainment. Their Smart Replay and Synchronized Multi-Angle Replay Technology (SMART) systems use 30+ high-speed cameras and deep learning to track ball trajectory, player movement, and event detection with millimeter accuracy. Used by FIFA, NFL, Premier League, and Wimbledon, Hawk-Eye processes over 100,000 decisions annually with 99.9% accuracy. Their security division provides real-time threat detection and crowd analytics for stadiums and public venues.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/hawk-eye-ai-video-analytics',

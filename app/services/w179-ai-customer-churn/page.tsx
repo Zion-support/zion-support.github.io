@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Customer Churn Predictor | Zion Tech Group',
+  title: 'AI Customer Churn Predictor',
   description: 'Predict churn 30-60 days before: usage patterns, support tickets, payment history.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-customer-churn',

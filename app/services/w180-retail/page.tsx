@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Retail Operations Automation | Zion Tech Group',
+  title: 'Retail Operations Automation',
   description: 'Automate retail: POS, inventory, loss prevention, workforce scheduling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-retail',

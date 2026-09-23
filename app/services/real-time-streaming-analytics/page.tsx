@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real-Time Streaming Analytics Engine | Zion Tech Group',
+  title: 'Real-Time Streaming Analytics Engine',
   description: 'High-performance streaming analytics platform that processes millions of events per second with sub-second latency. Supports complex event processing, windowed aggregations, and real-time anomaly detection on live data streams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/real-time-streaming-analytics',

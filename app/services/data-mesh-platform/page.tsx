@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Mesh Orchestration Platform | Zion Tech Group',
+  title: 'Data Mesh Orchestration Platform',
   description: 'Self-service data platform that implements data mesh principles — domain-oriented data ownership, data as a product, federated governance. Enables teams to publish, discover, and consume data products with automated quality SLAs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-mesh-platform',

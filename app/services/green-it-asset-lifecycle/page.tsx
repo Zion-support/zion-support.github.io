@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Green IT Asset Lifecycle & E-Waste Management | Zion Tech Group',
+  title: 'Green IT Asset Lifecycle & E-Waste Management',
   description: 'Track and optimize the environmental impact of your IT assets from procurement to disposal. Carbon footprint per device, energy-efficient refresh recommendations, certified e-waste recycling, and ESG reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/green-it-asset-lifecycle',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Proposal & RFP Response Platform | Zion Tech Group',
+  title: 'AI Proposal & RFP Response Platform',
   description: 'AI-powered proposal management platform that automates RFP responses, proposal creation, and contract drafting. Content library, collaboration workflows, and win rate analytics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/proposal-software',

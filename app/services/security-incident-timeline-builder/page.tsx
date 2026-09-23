@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Security Incident Timeline Builder | Zion Tech Group',
+  title: 'Security Incident Timeline Builder',
   description: 'Assembles defensible incident timelines from logs, tickets, alerts, and communication channels with blast-radius framing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-incident-timeline-builder',

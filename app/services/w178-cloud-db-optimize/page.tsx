@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Database Performance Optimization | Zion Tech Group',
+  title: 'Cloud Database Performance Optimization',
   description: 'Optimize cloud databases: query tuning, indexing, partitioning, cost reduction.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-db-optimize',

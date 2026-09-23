@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Synchron Stentrode — Minimally Invasive Brain-Computer Interface | Zion Tech Group',
+  title: 'Synchron Stentrode — Minimally Invasive Brain-Computer Interface',
   description: 'Synchron\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/synchron-stentrode-bci',

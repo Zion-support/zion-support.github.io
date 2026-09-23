@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Vendor Selection Advisor | Zion Tech Group',
+  title: 'AI Vendor Selection Advisor',
   description: 'Compares vendor proposals, capabilities, and risk scores across evaluation criteria with recommendation packs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-vendor-selection-advisor',

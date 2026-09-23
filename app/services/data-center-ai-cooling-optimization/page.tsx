@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Driven Data Center Cooling Optimization | Zion Tech Group',
+  title: 'AI-Driven Data Center Cooling Optimization',
   description: 'Machine learning models that optimize CRAC/CRAH setpoints, air distribution, and liquid cooling controls in real time. Reduce cooling energy by 20–40% while maintaining strict ASHRAE thermal envelopes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-ai-cooling-optimization',

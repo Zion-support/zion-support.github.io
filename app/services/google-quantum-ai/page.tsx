@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Google Quantum AI — Willow Processor Access | Zion Tech Group',
+  title: 'Google Quantum AI — Willow Processor Access',
   description: 'Google Quantum AI offers enterprise access to the Willow quantum processor, demonstrating below-threshold quantum error correction for the first time. Their quantum computing service enables research and early commercial applications in materials science, logistics optimization, and machine learning.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/google-quantum-ai',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'HireVue — AI-Powered Recruiting & Talent Acquisition | Zion Tech Group',
+  title: 'HireVue — AI-Powered Recruiting & Talent Acquisition',
   description: 'HireVue is the leading AI-powered recruiting platform that transforms talent acquisition through video interviewing, AI assessments, and predictive analytics. Used by 700+ enterprise customers including Hilton, Unilever, and Delta Air Lines, HireVue processes 20 million+ interviews per year.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/hirevue-ai-recruiting-platform',

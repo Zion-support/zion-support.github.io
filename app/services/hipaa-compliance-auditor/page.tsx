@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Hipaa Compliance Auditor | Zion Tech Group',
+  title: 'Hipaa Compliance Auditor',
   description: 'Hipaa Compliance Auditor solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/hipaa-compliance-auditor',

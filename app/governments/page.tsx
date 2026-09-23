@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Government & Public Sector | Zion Tech Group',
+  title: 'Government & Public Sector',
   description: 'Secure, compliant AI and IT modernization for agencies and public institutions.',
   alternates: { canonical: 'https://ziontechgroup.com/governments' },
 };

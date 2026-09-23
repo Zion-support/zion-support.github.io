@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data PII Detection & Classifier | Zion Tech Group',
+  title: 'Data PII Detection & Classifier',
   description: 'Identifies sensitive personal data fields across datasets, exports, and analytics reports with masking recommendations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-pii-detection-classifier',

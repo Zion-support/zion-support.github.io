@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Print Services | Zion Tech Group',
+  title: 'Managed Print Services',
   description: 'Managed Print Services is a comprehensive print infrastructure management solution that monitors printer fleets, automates supply replenishment, and tracks printing costs across the organization. It reduces print-related expenses by up to 30% while ensuring zero downtime for critical printing operations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/managed-print-services',

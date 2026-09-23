@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real Estate Data Analytics | Zion Tech Group',
+  title: 'Real Estate Data Analytics',
   description: 'Market intelligence platform for real estate investors. Property valuations, rental yield predictions, neighborhood scoring, and investment opportunity alerts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/real-estate-data-analytics',

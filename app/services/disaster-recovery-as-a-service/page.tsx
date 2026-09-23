@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Disaster Recovery as a Service (DRaaS) | Zion Tech Group',
+  title: 'Disaster Recovery as a Service (DRaaS)',
   description: 'Enterprise-grade disaster recovery platform delivering automated failover, encrypted backups, and DR runbook automation. Guarantees RPO under 1 hour and RTO under 4 hours with continuous replication, regular DR testing, and compliance-ready audit trails. Protects critical workloads across on-premises and cloud environments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/disaster-recovery-as-a-service',

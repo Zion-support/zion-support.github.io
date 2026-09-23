@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Document Understanding Engine | Zion Tech Group',
+  title: 'AI Document Understanding Engine',
   description: 'Advanced document AI platform that extracts, classifies, and structures data from any document type — PDFs, scans, forms, contracts, invoices. Goes beyond OCR with contextual understanding, table extraction, and automated workflow triggers.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-document-processor',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Powered Customer Success | Zion Tech Group',
+  title: 'AI Powered Customer Success',
   description: 'AI Powered Customer Success solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-powered-customer-success',

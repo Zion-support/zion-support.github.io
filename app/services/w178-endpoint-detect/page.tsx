@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Endpoint Detection and Response (EDR) | Zion Tech Group',
+  title: 'Endpoint Detection and Response (EDR)',
   description: 'EDR deployment and management: threat detection, investigation, response across all endpoints.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-endpoint-detect',

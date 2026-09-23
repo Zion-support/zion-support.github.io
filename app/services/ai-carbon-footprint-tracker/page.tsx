@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Carbon Footprint Tracker | Zion Tech Group',
+  title: 'AI Carbon Footprint Tracker',
   description: 'AI-powered carbon emissions monitoring and reduction platform for enterprises. Tracks Scope 1, 2, and 3 emissions across supply chains, recommends reduction strategies, and automates ESG reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-carbon-footprint-tracker',

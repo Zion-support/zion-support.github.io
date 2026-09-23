@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Platform Engineering Idp | Zion Tech Group',
+  title: 'Platform Engineering Idp',
   description: 'Platform Engineering Idp solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/platform-engineering-idp',

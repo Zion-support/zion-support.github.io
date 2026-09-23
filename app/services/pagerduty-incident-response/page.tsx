@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'PagerDuty Incident Management & AIOps | Zion Tech Group',
+  title: 'PagerDuty Incident Management & AIOps',
   description: 'PagerDuty is the industry-standard incident management and AIOps platform used by DevOps and SRE teams. It combines AI-powered event orchestration, on-call scheduling, automation, and real-time operations to help teams detect, triage, and resolve incidents faster.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/pagerduty-incident-response',

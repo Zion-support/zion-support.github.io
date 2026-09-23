@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Digital Experience Monitoring (DEM) | Zion Tech Group',
+  title: 'Digital Experience Monitoring (DEM)',
   description: 'Monitor end-user experience across web, mobile, and desktop applications. Real user monitoring, synthetic testing, and AI-powered root cause analysis for performance issues.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/digital-experience-monitoring',

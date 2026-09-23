@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Crop Disease Detection | Zion Tech Group',
+  title: 'Crop Disease Detection',
   description: 'Crop Disease Detection solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/crop-disease-detection',

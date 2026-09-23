@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Booking & Scheduler Pro | Zion Tech Group',
+  title: 'Booking & Scheduler Pro',
   description: 'Online booking and scheduling system with payments, reminders, and calendar sync for service businesses.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-booking-scheduler',

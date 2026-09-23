@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Proposal & Contract Generator | Zion Tech Group',
+  title: 'Micro-SaaS Proposal & Contract Generator',
   description: 'Close deals faster with a streamlined proposal and contract creation platform. Choose from professionally designed templates, integrate e-signatures, set automated payment terms, and schedule follow-up reminders — turning hours of document preparation into minutes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-proposal-contract-generator',

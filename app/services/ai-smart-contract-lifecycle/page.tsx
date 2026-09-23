@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Smart Contract Lifecycle Platform | Zion Tech Group',
+  title: 'Smart Contract Lifecycle Platform',
   description: 'IDE, testing, deployment, and monitoring for smart contracts on EVM chains.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-smart-contract-lifecycle',

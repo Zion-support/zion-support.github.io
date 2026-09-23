@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Multilingual Content Localization | Zion Tech Group',
+  title: 'AI Multilingual Content Localization',
   description: 'Go beyond translation — localize content for culture, context, and market. AI adapts idioms, references, humor, and formatting for each target market. Supports 50+ languages with human-in-the-loop quality assurance. Reduces localization costs by 70%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-multilingual-content-localization',

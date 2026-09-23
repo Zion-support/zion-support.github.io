@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Patient No-Show Predictor | Zion Tech Group',
+  title: 'AI Patient No-Show Predictor',
   description: 'Predict patient no-shows: risk scoring, automated reminders, overbooking optimization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-patient-no-show',

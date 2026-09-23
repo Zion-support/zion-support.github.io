@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'FinOps Cloud Cost Optimizer | Zion Tech Group',
+  title: 'FinOps Cloud Cost Optimizer',
   description: 'Comprehensive FinOps platform that analyzes cloud spend across AWS, Azure, and GCP. Identifies waste, recommends rightsizing, automates reserved instance purchases, and provides chargeback reports per team and project.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/finops-cloud-optimizer',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Real Time Data Streaming Platform | Zion Tech Group',
+  title: 'Real Time Data Streaming Platform',
   description: 'Real Time Data Streaming Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/real-time-data-streaming-platform',

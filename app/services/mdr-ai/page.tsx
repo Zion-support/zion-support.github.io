@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mdr AI | Zion Tech Group',
+  title: 'Mdr AI',
   description: 'Mdr AI solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/mdr-ai',

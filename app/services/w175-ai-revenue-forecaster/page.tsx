@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Revenue Forecaster | Zion Tech Group',
+  title: 'AI Revenue Forecaster',
   description: 'Forecast revenue with AI-driven pipeline analysis, seasonality detection, and risk-adjusted close probabilities. Connects to CRM and finance systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-ai-revenue-forecaster',

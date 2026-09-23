@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Digital Twin & Simulation | Zion Tech Group',
+  title: 'Data Center Digital Twin & Simulation',
   description: 'Create physics-accurate digital twins of power, cooling, and IT infrastructure. Simulate changes before implementation, optimize capacity planning, and reduce risk with AI-driven scenario modeling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-digital-twin',

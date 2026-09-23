@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Accessibility Compliance Checker | Zion Tech Group',
+  title: 'AI-Powered Accessibility Compliance Checker',
   description: 'Automate WCAG 2.1 and 2.2 compliance testing across your entire digital presence. Our AI simulates screen reader experiences, analyzes color contrast ratios, detects missing ARIA labels, and generates auto-fix suggestions — ensuring your website is accessible to every user while meeting legal compliance requirements.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-accessibility-compliance-checker',

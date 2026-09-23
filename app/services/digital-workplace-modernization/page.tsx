@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Digital Workplace Solutions | Zion Tech Group',
+  title: 'Digital Workplace Solutions',
   description: 'Modern workplace technology stack with collaboration tools, secure remote access, AI assistants, and unified communications for distributed teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/digital-workplace-modernization',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kong API Gateway | Zion Tech Group',
+  title: 'Kong API Gateway',
   description: 'Kong is a cloud-native API gateway that delivers high performance and extensibility for managing, securing, and orchestrating APIs and microservices.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/kong',

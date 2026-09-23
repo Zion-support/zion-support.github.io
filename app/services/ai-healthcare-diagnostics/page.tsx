@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Medical Diagnostics Assistance Platform | Zion Tech Group',
+  title: 'AI Medical Diagnostics Assistance Platform',
   description: 'FDA-cleared AI diagnostic assistance for radiology, pathology, and dermatology. Analyzes medical images with superhuman accuracy, flags anomalies for physician review, and generates structured reports. Integrates with EHR systems (Epic, Cerner). Reduces diagnostic errors by 45% and reading time by 30%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',

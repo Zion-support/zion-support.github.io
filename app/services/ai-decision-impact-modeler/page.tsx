@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Decision Impact Modeler | Zion Tech Group',
+  title: 'AI Decision Impact Modeler',
   description: 'Estimates downstream impact of decisions on costs, timelines, and risk so teams choose options with explicit evidence.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-decision-impact-modeler',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Windows Hybrid AD Modernization | Zion Tech Group',
+  title: 'Windows Hybrid AD Modernization',
   description: 'Modernize on-premises Active Directory into a cloud-connected hybrid model with identity sync, conditional access, device management, and migration runbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-windows-hybrid-ad',

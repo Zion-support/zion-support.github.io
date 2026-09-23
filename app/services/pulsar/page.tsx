@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Apache Pulsar Event Streaming | Zion Tech Group',
+  title: 'Apache Pulsar Event Streaming',
   description: 'Apache Pulsar is a cloud-native, distributed messaging and streaming platform built for geo-replication, multi-tenancy, and high performance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/pulsar',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Competitive Intelligence Monitor | Zion Tech Group',
+  title: 'AI Competitive Intelligence Monitor',
   description: 'AI-powered competitor tracking that monitors pricing changes, feature launches, hiring patterns, SEO shifts, and market positioning. Delivers weekly strategic briefings with actionable recommendations for your business.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-competitive-intelligence-monitor',

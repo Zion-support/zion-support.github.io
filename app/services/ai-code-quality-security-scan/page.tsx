@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Code Quality & Security Scanning Platform | Zion Tech Group',
+  title: 'AI Code Quality & Security Scanning Platform',
   description: 'Comprehensive SAST/DAST scanning, vulnerability detection, code quality metrics, and auto-fix suggestions for Python, JavaScript, Go, and Java. Integrates into CI/CD pipelines to catch bugs and security flaws before they reach production.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-code-quality-security-scan',

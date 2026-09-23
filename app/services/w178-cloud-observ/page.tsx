@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Observability Platform | Zion Tech Group',
+  title: 'Cloud Observability Platform',
   description: 'Full-stack cloud observability: metrics, traces, logs, profiling. OpenTelemetry-native with AI anomaly detection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-observ',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Clinical Trial Management Platform | Zion Tech Group',
+  title: 'AI Clinical Trial Management Platform',
   description: 'Streamline clinical trials with AI-powered patient recruitment, site selection, and protocol optimization. Real-time monitoring, adverse event detection, and regulatory submission automation.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/clinical-trial-management',

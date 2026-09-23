@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Video Content Analyzer & Platform | Zion Tech Group',
+  title: 'AI Video Content Analyzer & Platform',
   description: 'Automatically analyze video content for brand safety, transcription, object detection, and engagement scoring. Process user-generated video at scale. AI detects inappropriate content, extracts key moments, generates chapters, and creates searchable transcripts. Essential for media companies, education platforms, and enterprise video.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-video-content-analyzer',

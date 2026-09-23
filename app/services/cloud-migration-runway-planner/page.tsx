@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Migration Runway Planner | Zion Tech Group',
+  title: 'Cloud Migration Runway Planner',
   description: 'Creates prioritized migration runways with dependency mapping, blast-radius estimation, and rollback planning for hybrid estates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-migration-runway-planner',

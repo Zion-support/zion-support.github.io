@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'CalcBuilder — Calculator Builder | Zion Tech Group',
+  title: 'CalcBuilder — Calculator Builder',
   description: 'Build interactive calculators: pricing, ROI, savings, assessments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-calc-builder',

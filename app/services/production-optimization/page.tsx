@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Production Optimization | Zion Tech Group',
+  title: 'Production Optimization',
   description: 'Production Optimization solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/production-optimization',

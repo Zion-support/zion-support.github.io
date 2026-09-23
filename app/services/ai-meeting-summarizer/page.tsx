@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meeting Summarizer & Action Item Extractor | Zion Tech Group',
+  title: 'AI Meeting Summarizer & Action Item Extractor',
   description: 'Automatically transcribe, summarize, and extract action items from meetings. Works with Zoom, Teams, Google Meet, and in-person recordings. AI identifies decisions, owners, and deadlines. Integrates with Slack, email, and project management tools.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-meeting-summarizer',

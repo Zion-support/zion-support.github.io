@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Founder Revenue Intelligence Dashboard | Zion Tech Group',
+  title: 'Founder Revenue Intelligence Dashboard',
   description: 'Unified founder dashboard for MRR, churn, LTV, CAC, and pipeline health with anomaly detection and action items wired into alerts and exports.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-revenue-dashboard',

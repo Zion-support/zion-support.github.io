@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Managed Detection & Response (MDR) Cybersecurity Service | Zion Tech Group',
+  title: 'Managed Detection & Response (MDR) Cybersecurity Service',
   description: '24/7 managed security operations center (SOC) providing continuous threat monitoring, proactive threat hunting, endpoint detection and response (EDR), and rapid incident response. Expert analysts backed by AI-driven threat detection protect your organization around the clock.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-managed-detection-response-cybersecurity',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Cost Anomaly Guard | Zion Tech Group',
+  title: 'Cloud Cost Anomaly Guard',
   description: 'Detects abnormal cloud spend changes by workload, region, and team with root-cause hints and budget alert routing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',

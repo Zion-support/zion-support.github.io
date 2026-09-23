@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Cyber Range Simulator | Zion Tech Group',
+  title: 'AI Cyber Range Simulator',
   description: 'AI Cyber Range Simulator solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-cyber-range-simulator',

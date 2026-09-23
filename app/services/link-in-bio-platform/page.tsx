@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Link-in-Bio Platform | Zion Tech Group',
+  title: 'Link-in-Bio Platform',
   description: 'Link-in-Bio Platform is a social media landing page tool that creates analytics-rich pages with e-commerce capabilities and lead capture forms. It transforms your social media bio link into a powerful marketing and sales channel.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/link-in-bio-platform',

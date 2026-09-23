@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Vanna.AI — Natural Language to SQL Query Engine | Zion Tech Group',
+  title: 'Vanna.AI — Natural Language to SQL Query Engine',
   description: 'Vanna.AI is an open-source Python framework that enables natural language queries against databases using AI. Users ask questions in plain English and Vanna generates accurate SQL queries, executes them, and returns results with visualizations. Built on large language models fine-tuned on SQL patterns.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/vanna-ai-natural-language-sql',

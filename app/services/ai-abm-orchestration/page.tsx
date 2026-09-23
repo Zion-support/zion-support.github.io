@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Abm Orchestration | Zion Tech Group',
+  title: 'AI Abm Orchestration',
   description: 'AI Abm Orchestration solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-abm-orchestration',

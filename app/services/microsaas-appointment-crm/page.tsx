@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Appointment & CRM Suite | Zion Tech Group',
+  title: 'Micro-SaaS Appointment & CRM Suite',
   description: 'Lightweight appointment booking with built-in CRM for service businesses (salons, clinics, consultants). Online scheduling, automated reminders, client history, and payment collection in one simple app. No bloated features, just what small businesses need.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-appointment-crm',

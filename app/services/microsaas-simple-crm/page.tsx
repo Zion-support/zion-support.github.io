@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Lightweight CRM for Small Teams | Zion Tech Group',
+  title: 'Micro-SaaS Lightweight CRM for Small Teams',
   description: 'A clean, fast CRM designed for small sales teams and startups. Contact management, deal pipeline, email tracking, and activity logging — none of the enterprise bloat. Set up in 5 minutes, start selling immediately.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-simple-crm',

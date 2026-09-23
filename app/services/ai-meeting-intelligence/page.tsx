@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Meeting Intelligence & Action Tracking | Zion Tech Group',
+  title: 'AI Meeting Intelligence & Action Tracking',
   description: 'Automatically records, transcribes, and analyzes meetings across Zoom, Teams, and Google Meet. AI generates summaries, extracts action items, tracks decisions, and follow-ups. Integrates with project management tools. Never miss an action item again. Speakers are identified, sentiment is tracked, and meeting ROI is measured.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-meeting-intelligence',

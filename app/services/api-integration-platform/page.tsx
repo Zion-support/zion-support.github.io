@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'API Integration & Orchestration Platform | Zion Tech Group',
+  title: 'API Integration & Orchestration Platform',
   description: 'No-code API integration platform that connects SaaS applications, databases, and services with pre-built connectors and custom API orchestration. Event-driven workflows, data transformation, and error handling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/api-integration-platform',

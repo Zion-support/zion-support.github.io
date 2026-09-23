@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Project Delivery Services | Zion Tech Group',
+  title: 'IT Project Delivery Services',
   description: 'Run infrastructure and application rollout projects with defined timelines, testing checkpoints, change management, and post-launch support periods.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-project-delivery',

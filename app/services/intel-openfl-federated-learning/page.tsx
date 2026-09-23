@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Intel OpenFL — Federated Learning Without Data Centralization | Zion Tech Group',
+  title: 'Intel OpenFL — Federated Learning Without Data Centralization',
   description: 'Intel OpenFL is an open-source framework for federated learning that enables organizations to collaboratively train AI models without sharing raw data. Each participant trains on local data, and only model weight updates (gradients) are shared — keeping sensitive data behind organizational firewalls. Projects include medical imaging AI across hospitals without sharing patient scans.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/intel-openfl-federated-learning',

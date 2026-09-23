@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Knowledge Retrieval Graph | Zion Tech Group',
+  title: 'AI Knowledge Retrieval Graph',
   description: 'Builds a searchable internal knowledge graph from docs, tickets, and chat with entity resolution and provenance tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-knowledge-retrieval-graph',

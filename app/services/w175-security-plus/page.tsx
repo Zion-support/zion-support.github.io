@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'SecurityPlus Lite — Basic SIEM | Zion Tech Group',
+  title: 'SecurityPlus Lite — Basic SIEM',
   description: 'Lightweight SIEM and log monitoring for small teams: threat rules, alerting, and incident tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-security-plus',

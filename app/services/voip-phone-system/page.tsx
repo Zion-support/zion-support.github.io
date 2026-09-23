@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'VoIP Phone System | Zion Tech Group',
+  title: 'VoIP Phone System',
   description: 'VoIP Phone System is a cloud-based business phone platform featuring auto-attendant, intelligent call routing, and deep CRM integration. It replaces legacy PBX systems with a modern, scalable communication solution that supports remote and hybrid workforces.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/voip-phone-system',

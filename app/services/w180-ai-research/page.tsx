@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Research Assistant | Zion Tech Group',
+  title: 'AI Research Assistant',
   description: 'Autonomous research agent: search, read, synthesize, and cite sources.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-ai-research',

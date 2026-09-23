@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Customer Intelligence Platform | Zion Tech Group',
+  title: 'AI Customer Intelligence Platform',
   description: 'Unify customer data from every touchpoint into a single AI-powered intelligence layer. Predict lifetime value, identify at-risk accounts, and auto-trigger retention campaigns. Integrates with Salesforce, HubSpot, Stripe, and any API source.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-customer-intelligence-platform',

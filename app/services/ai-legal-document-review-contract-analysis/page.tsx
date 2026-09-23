@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Legal Document Review & Contract Analysis | Zion Tech Group',
+  title: 'AI-Powered Legal Document Review & Contract Analysis',
   description: 'Automate legal document review and contract analysis with NLP-based AI. Clause extraction, risk scoring, deviation detection, and obligation tracking. Reduce contract review time from days to minutes while improving accuracy. Supports NDAs, MSAs, SOWs, employment agreements, and procurement contracts.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-legal-document-review-contract-analysis',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Financial Forecasting Copilot | Zion Tech Group',
+  title: 'AI Financial Forecasting Copilot',
   description: 'AI-powered financial planning and analysis (FP&A) copilot that builds rolling forecasts, variance analyses, and scenario models from your actuals. Connects to ERPs, CRMs, and spreadsheets. Natural language queries let any stakeholder ask ',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-financial-forecasting-copilot',

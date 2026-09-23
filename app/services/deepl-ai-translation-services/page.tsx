@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'DeepL — AI-Powered Translation for Business | Zion Tech Group',
+  title: 'DeepL — AI-Powered Translation for Business',
   description: 'DeepL is the world\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/deepl-ai-translation-services',

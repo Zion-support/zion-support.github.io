@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Optimization Assessment | Zion Tech Group',
+  title: 'Cloud Optimization Assessment',
   description: 'Assess and optimize cloud spend: right-sizing, reserved instances, waste elimination. Typical 30-50% savings.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-cloud-optimize',

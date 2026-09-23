@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'NVIDIA Triton Inference Server — Production AI Inference at the Edge | Zion Tech Group',
+  title: 'NVIDIA Triton Inference Server — Production AI Inference at the Edge',
   description: 'NVIDIA Triton Inference Server is the leading open-source inference serving platform that standardizes AI model deployment and execution across cloud, data center, and edge environments. It supports every major framework — TensorFlow, PyTorch, ONNX, TensorRT, Python, and custom backends — and optimizes inference on NVIDIA GPUs, x86 CPUs, and ARM processors. Triton powers production AI inference for companies like Microsoft, Tencent, and Siemens, handling billions of inferences per day with features like dynamic batching, model ensemble pipelines, and concurrent model execution. Its integration with NVIDIA\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/nvidia-triton-inference-server',

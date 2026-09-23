@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Stripe Financial Infrastructure | Zion Tech Group',
+  title: 'Stripe Financial Infrastructure',
   description: 'Complete financial infrastructure platform that enables businesses to accept payments, manage subscriptions, issue cards, lend capital, and handle global compliance — all through a single API. Powers millions of companies from startups to Fortune 500s, handling hundreds of billions in payment volume annually with built-in fraud detection and regulatory compliance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/stripe-financial-infrastructure',

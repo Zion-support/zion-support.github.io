@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Speech Recognition Engine | Zion Tech Group',
+  title: 'Speech Recognition Engine',
   description: 'Multi-language speech-to-text with 98%+ accuracy. Real-time transcription, speaker diarization, custom vocabulary, and industry-specific models.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/speech-recognition',

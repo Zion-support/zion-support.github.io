@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automotive and Mobility Automation | Zion Tech Group',
+  title: 'Automotive and Mobility Automation',
   description: 'Automate automotive: dealer management, inventory, service scheduling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-auto',

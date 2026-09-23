@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Starlink — Low Earth Orbit Satellite Internet | Zion Tech Group',
+  title: 'Starlink — Low Earth Orbit Satellite Internet',
   description: 'Starlink, operated by SpaceX, provides high-speed, low-latency internet access globally via a constellation of 6,000+ low Earth orbit satellites. With download speeds of 50-250 Mbps and latency of 20-40ms, Starlink serves rural communities, maritime vessels, aircraft, and enterprise locations where terrestrial internet is unavailable. The network is expanding to 12,000+ satellites with direct-to-cell phone service launching 2025.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/starlink-satellite-internet',

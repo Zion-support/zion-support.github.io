@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Voice Answer Drafter | Zion Tech Group',
+  title: 'Micro-SaaS AI Voice Answer Drafter',
   description: 'Drafts concise email replies and support responses from voice notes with tone control and approval workflows for busy operators.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-voice-answer-drafter',

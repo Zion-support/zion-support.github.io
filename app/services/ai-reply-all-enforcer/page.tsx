@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Reply All Enforcer | Zion Tech Group',
+  title: 'AI Reply All Enforcer',
   description: 'AI Reply All Enforcer solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-reply-all-enforcer',

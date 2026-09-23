@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Customer Journey Orchestration Engine | Zion Tech Group',
+  title: 'AI Customer Journey Orchestration Engine',
   description: 'Orchestrate personalized, multi-channel customer journeys powered by AI. Analyzes real-time behavior to determine the next best action across email, SMS, push, in-app, and web. AI optimizes timing, channel, and message for each individual. Increases engagement by 40% and conversion by 25%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-customer-journey-orchestration',

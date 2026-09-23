@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Price Optimization — Dynamic Pricing Engine | Zion Tech Group',
+  title: 'AI Price Optimization — Dynamic Pricing Engine',
   description: 'Dynamic pricing that adapts to market conditions, competitor prices, and demand patterns.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-price-optimization',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Knowledge Base & FAQ Chatbot | Zion Tech Group',
+  title: 'AI-Powered Knowledge Base & FAQ Chatbot',
   description: 'NLP-based chatbot that automatically builds and maintains your knowledge base. Generates FAQs from existing content, supports 50+ languages, and integrates with Slack and Microsoft Teams for instant employee and customer support.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-knowledge-base-faq-chatbot',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Archival & Retention Coordinator | Zion Tech Group',
+  title: 'Data Archival & Retention Coordinator',
   description: 'Automates retention, archival, and deletion workflows across databases, object storage, and analytics systems with legal hold pairing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-archival-retention-coordinator',

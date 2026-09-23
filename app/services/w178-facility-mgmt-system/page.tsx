@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Facility Management System | Zion Tech Group',
+  title: 'Facility Management System',
   description: 'Manage facilities: work orders, preventive maintenance, space management, vendor coordination.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-facility-mgmt-system',

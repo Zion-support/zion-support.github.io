@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Social Media AI Manager — Content Creation & Posting | Zion Tech Group',
+  title: 'Social Media AI Manager — Content Creation & Posting',
   description: 'AI creates engaging social media posts, schedules them, and analyzes performance across platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/social-media-ai-manager',

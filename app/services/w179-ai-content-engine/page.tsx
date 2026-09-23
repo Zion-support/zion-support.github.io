@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Content Generation Engine | Zion Tech Group',
+  title: 'AI Content Generation Engine',
   description: 'AI content engine: blog posts, social media, email sequences, ad copy, whitepapers.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-ai-content-engine',

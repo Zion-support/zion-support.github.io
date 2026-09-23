@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Serverless Architecture & Platform Advisory | Zion Tech Group',
+  title: 'Serverless Architecture & Platform Advisory',
   description: 'Design and migrate to event-driven serverless architectures on AWS, Azure, and GCP. Reduce operational overhead with managed functions, queues, and storage. Includes cost modeling and reliability trade-off analysis.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/serverless-platform-advisory',

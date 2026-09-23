@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Application Decommission Runner | Zion Tech Group',
+  title: 'Application Decommission Runner',
   description: 'Plans and executes app retirement with data migration, licensing cleanup, access revocation, and risk validation before shutdown.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-application-decommission-runner',

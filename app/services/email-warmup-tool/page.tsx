@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Warmup & Deliverability Platform | Zion Tech Group',
+  title: 'Email Warmup & Deliverability Platform',
   description: 'Email warmup platform that gradually builds sender reputation for new domains and IPs. Automated email interactions, spam trap monitoring, and deliverability analytics to ensure inbox placement.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/email-warmup-tool',

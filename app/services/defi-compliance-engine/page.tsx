@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'DeFi Compliance Engine | Zion Tech Group',
+  title: 'DeFi Compliance Engine',
   description: 'Automated compliance monitoring for DeFi protocols and cryptocurrency exchanges. Real-time AML screening, transaction monitoring, and regulatory reporting across multiple chains.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/defi-compliance-engine',

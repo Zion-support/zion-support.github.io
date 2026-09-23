@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Reverse ETL and Data Activation | Zion Tech Group',
+  title: 'Reverse ETL and Data Activation',
   description: 'Push data from warehouse to operational systems: CRM, ad platforms, support tools.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-reverse-etl',

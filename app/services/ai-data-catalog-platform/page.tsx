@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Data Catalog Platform | Zion Tech Group',
+  title: 'AI Data Catalog Platform',
   description: 'AI Data Catalog Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-data-catalog-platform',

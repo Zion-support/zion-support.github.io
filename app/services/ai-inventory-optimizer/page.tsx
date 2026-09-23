@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Inventory Optimization Engine | Zion Tech Group',
+  title: 'AI Inventory Optimization Engine',
   description: 'AI-powered inventory management platform that forecasts demand, optimizes reorder points, and balances stock across warehouses. Reduces carrying costs while preventing stockouts with probabilistic demand modeling.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-inventory-optimizer',

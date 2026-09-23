@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Snyk — AI-Powered Code Security Platform | Zion Tech Group',
+  title: 'Snyk — AI-Powered Code Security Platform',
   description: 'Snyk is the leading AI-powered code security platform that helps developers find, prioritize, and fix vulnerabilities in code, dependencies, containers, and infrastructure as code. Trusted by 2.2 million+ developers and 1,200+ enterprises including Google, Microsoft, and Salesforce, Snyk scans 3 billion+ tests per month.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/snyk-ai-code-security',

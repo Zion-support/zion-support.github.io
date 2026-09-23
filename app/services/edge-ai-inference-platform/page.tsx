@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge AI Inference & IoT Intelligence Platform | Zion Tech Group',
+  title: 'Edge AI Inference & IoT Intelligence Platform',
   description: 'Deploy trained AI models to edge devices, gateways, and IoT sensors with low-latency inference, model monitoring, and OTA updates. Optimize for bandwidth, compute, and power constraints.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/edge-ai-inference-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Apache Kafka Data Streaming Platform | Zion Tech Group',
+  title: 'Apache Kafka Data Streaming Platform',
   description: 'Enterprise-grade real-time data streaming platform built on Apache Kafka. Handles millions of events per second with exactly-once processing guarantees, schema registry, and managed connectors for seamless data pipeline orchestration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-streaming-kafka-platform',

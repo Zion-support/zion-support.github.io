@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'dbt (Data Build Tool) — Analytics Engineering Platform | Zion Tech Group',
+  title: 'dbt (Data Build Tool) — Analytics Engineering Platform',
   description: 'dbt (data build tool) is the industry-standard analytics engineering platform that transforms raw warehouse data into reliable, tested, documented data models. Created by dbt Labs, it enables analytics engineers to apply software engineering best practices — version control, testing, CI/CD, and modularity — to SQL-based data transformations. With 40,000+ companies using dbt including HubSpot, Vimeo, and Cisco, and a community of 300,000+ analytics engineers, dbt has defined the modern data stack. dbt Cloud provides a hosted development environment with job scheduling, observability, and a semantic layer for consistent metric definitions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dbt-data-build-tool',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Expense Tracker Pro | Zion Tech Group',
+  title: 'Expense Tracker Pro',
   description: 'Expense Tracker Pro is an AI-powered expense management platform that automates receipt scanning, categorization, and budget tracking for small and medium businesses. With seamless QuickBooks and Xero integration, it eliminates manual expense entry and gives finance teams real-time visibility into company spending.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/expense-tracker-pro',

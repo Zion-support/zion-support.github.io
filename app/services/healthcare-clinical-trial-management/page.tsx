@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Healthcare Clinical Trial Management | Zion Tech Group',
+  title: 'Healthcare Clinical Trial Management',
   description: 'End-to-end clinical trial management with patient recruitment, eConsent, and regulatory compliance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/healthcare-clinical-trial-management',

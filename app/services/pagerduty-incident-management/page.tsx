@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'PagerDuty — Digital Operations and Incident Management Platform | Zion Tech Group',
+  title: 'PagerDuty — Digital Operations and Incident Management Platform',
   description: 'PagerDuty is the leading digital operations management platform that helps organizations detect, triage, and resolve incidents affecting their digital services. Processing over 15 million incidents per year for 25,000+ customers including Salesforce, Shopify, and Netflix, PagerDuty correlates alerts from 700+ monitoring tools, routes them to the right on-call engineer, and orchestrates response workflows. Its AI-powered AIOps engine reduces alert noise by 98% through event grouping and contextual enrichment. PagerDuty\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/pagerduty-incident-management',

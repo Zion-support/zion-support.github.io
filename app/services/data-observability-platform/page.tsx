@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Observability Platform | Zion Tech Group',
+  title: 'Data Observability Platform',
   description: 'End-to-end data observability with freshness, volume, schema, and lineage monitoring.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-observability-platform',

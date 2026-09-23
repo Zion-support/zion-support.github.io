@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Property Valuation & Market Analysis Tool | Zion Tech Group',
+  title: 'AI Property Valuation & Market Analysis Tool',
   description: 'AI-powered property valuations using comparable sales, market trends, neighborhood data, and property characteristics. Generates appraisal-grade reports for investors, agents, and homeowners. Covers residential and commercial properties.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-property-valuation',

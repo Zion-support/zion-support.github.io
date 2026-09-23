@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edge Micro Data Center as a Service | Zion Tech Group',
+  title: 'Edge Micro Data Center as a Service',
   description: 'Deploy and manage containerized micro data centers (5 kW to 200 kW) at factory, retail, telecom, or remote field sites. Pre-integrated power, cooling, security, and connectivity with centralized cloud orchestration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-edge-micro-data-center',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zero-Trust Remote Access VPN Service | Zion Tech Group',
+  title: 'Zero-Trust Remote Access VPN Service',
   description: 'Identity-based zero-trust remote access replacing legacy VPN. Device posture verification, split tunneling, full audit logging, and MFA enforcement ensure secure access from any device, anywhere. No network-level trust — every session is verified.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/zero-trust-remote-access-vpn',

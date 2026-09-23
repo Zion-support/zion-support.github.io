@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Assessment and Optimization | Zion Tech Group',
+  title: 'Network Assessment and Optimization',
   description: 'Comprehensive network assessment: topology mapping, bottleneck identification, optimization.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-network-assess',

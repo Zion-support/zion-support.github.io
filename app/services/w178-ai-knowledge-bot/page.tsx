@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Knowledge Bot for Sales | Zion Tech Group',
+  title: 'AI Knowledge Bot for Sales',
   description: 'AI bot answering sales questions: product info, pricing, competitive intel, battlecards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-ai-knowledge-bot',

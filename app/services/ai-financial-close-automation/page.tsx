@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Financial Close & Reconciliation Automation | Zion Tech Group',
+  title: 'AI Financial Close & Reconciliation Automation',
   description: 'Automate the month-end close process with AI-powered reconciliation, journal entry automation, variance analysis, and compliance documentation. Reduces close time from 10 days to 3 days. Integrates with QuickBooks, Xero, NetSuite, and SAP. Trusted by CFOs at mid-market and enterprise companies.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-financial-close-automation',

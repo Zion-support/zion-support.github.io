@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Green Cloud Sustainability & Carbon Dashboard | Zion Tech Group',
+  title: 'Green Cloud Sustainability & Carbon Dashboard',
   description: 'Measure, track, and optimize the carbon footprint of your cloud infrastructure. Real-time emissions data across AWS, Azure, and GCP with carbon-aware workload scheduling, green region recommendations, and ESG reporting integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/green-cloud-sustainability-dashboard',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Voice-to-CRM Auto-Logging Assistant | Zion Tech Group',
+  title: 'AI Voice-to-CRM Auto-Logging Assistant',
   description: 'Automatically logs sales calls, meetings, and voice notes into your CRM. AI transcribes conversations, extracts action items, identifies deal signals, and creates CRM records. Works with Zoom, Teams, Google Meet, and phone calls.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-voice-to-crm-logger',

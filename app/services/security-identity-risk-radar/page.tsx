@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Identity Risk Radar | Zion Tech Group',
+  title: 'Identity Risk Radar',
   description: 'Ranks identity risk across users, service accounts, and federated identities with privilege change signals and dormant-account detection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-identity-risk-radar',

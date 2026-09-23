@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Strapi Headless CMS | Zion Tech Group',
+  title: 'Strapi Headless CMS',
   description: 'Leading open-source headless CMS giving developers full control over content architecture while providing a beautiful admin panel for content editors. Self-hostable, API-first, and framework-agnostic — works with Next.js, Nuxt, Gatsby, React, Vue, mobile apps via REST or GraphQL APIs.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/strapi-headless-cms',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'HR Onboarding and Offboarding | Zion Tech Group',
+  title: 'HR Onboarding and Offboarding',
   description: 'Automate HR onboarding: offer letters, paperwork, equipment, training, access.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-hr-onboard-auto',

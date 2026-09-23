@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Client Onboarding Gate | Zion Tech Group',
+  title: 'Client Onboarding Gate',
   description: 'Runs structured client onboarding sequences with agreement checks, provisioning, access handoff, and success milestone tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-client-onboarding-gate',

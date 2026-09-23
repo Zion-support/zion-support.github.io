@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Mesh Platform | Zion Tech Group',
+  title: 'Data Mesh Platform',
   description: 'Implement data mesh: domain-owned data products, federated governance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-mesh',

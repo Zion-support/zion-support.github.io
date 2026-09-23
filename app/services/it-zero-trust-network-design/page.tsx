@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zero-Trust Network Architecture Design & Implementation | Zion Tech Group',
+  title: 'Zero-Trust Network Architecture Design & Implementation',
   description: 'Design and implement a zero-trust network architecture from the ground up. Identity-aware micro-segmentation, continuous verification, no implicit trust. Includes network assessment, architecture design, implementation, and managed monitoring.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-zero-trust-network-design',

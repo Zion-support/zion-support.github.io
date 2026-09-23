@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Financial Data Warehouse Platform | Zion Tech Group',
+  title: 'Financial Data Warehouse Platform',
   description: 'Purpose-built financial data warehouse with pre-built schemas for banking, insurance, and capital markets. Regulatory reporting, risk analytics, and real-time position tracking with SOX-compliant audit trails.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/financial-data-warehouse',

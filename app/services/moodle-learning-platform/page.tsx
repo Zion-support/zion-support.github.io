@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Moodle Learning Platform | Zion Tech Group',
+  title: 'Moodle Learning Platform',
   description: 'World',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/moodle-learning-platform',

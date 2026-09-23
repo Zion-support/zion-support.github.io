@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Supply Chain Demand Forecasting Engine | Zion Tech Group',
+  title: 'AI Supply Chain Demand Forecasting Engine',
   description: 'ML-based demand prediction platform that ingests historical sales data, market signals, and external variables to generate highly accurate demand forecasts. Seasonal trend analysis, inventory optimization recommendations, and supplier lead time forecasting help supply chain teams reduce stockouts, minimize excess inventory, and improve procurement planning.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-supply-chain-demand-forecasting',

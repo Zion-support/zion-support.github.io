@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'MenuBuilder - Digital Menu Creator | Zion Tech Group',
+  title: 'MenuBuilder - Digital Menu Creator',
   description: 'Create digital menus: QR code menus, online ordering, daily specials. For restaurants.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-menu-builder',

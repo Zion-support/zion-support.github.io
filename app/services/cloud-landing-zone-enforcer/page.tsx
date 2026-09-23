@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Landing Zone Enforcer | Zion Tech Group',
+  title: 'Cloud Landing Zone Enforcer',
   description: 'Enforces landing-zone standards across accounts and subscriptions with guardrails, drift alerts, and remediation playbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-landing-zone-enforcer',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Configuration Drift Detector | Zion Tech Group',
+  title: 'IT Configuration Drift Detector',
   description: 'Detects unauthorized changes across firewall rules, device configs, endpoint settings, and cloud infra with policy-based compliance scoring.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-configuration-drift-detector',

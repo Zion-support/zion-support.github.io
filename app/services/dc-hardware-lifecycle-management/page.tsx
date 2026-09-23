@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Hardware Lifecycle Management | Zion Tech Group',
+  title: 'Data Center Hardware Lifecycle Management',
   description: 'Plan, execute, and track hardware refresh cycles from procurement to decommission. IT asset disposition (ITAD), secure data wiping, resale value recovery, and sustainability reporting. Avoid unplanned outages from aging infrastructure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/dc-hardware-lifecycle-management',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Neuralink — Brain-Computer Interface Platform | Zion Tech Group',
+  title: 'Neuralink — Brain-Computer Interface Platform',
   description: 'Neuralink has developed the N1 brain-computer interface chip, implanted in its first human patients in 2024. The coin-sized device with 1,024 electrodes records and stimulates brain activity, enabling paralyzed patients to control computers and smartphones with thought alone. Neuralink\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/neuralink-brain-computer-interface',

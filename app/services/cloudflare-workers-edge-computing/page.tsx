@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloudflare Workers — Serverless Edge Computing Platform | Zion Tech Group',
+  title: 'Cloudflare Workers — Serverless Edge Computing Platform',
   description: 'Cloudflare Workers is a serverless execution environment that runs code on Cloudflare\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloudflare-workers-edge-computing',

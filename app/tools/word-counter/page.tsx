@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'Word & Character Counter | Zion Tech Group',
+  title: 'Word & Character Counter',
   description: 'Count words, characters, and sentences.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/word-counter' },
 };

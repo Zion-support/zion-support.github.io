@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Attack Path Simulator | Zion Tech Group',
+  title: 'Attack Path Simulator',
   description: 'Models probable attacker paths from exposure to crown-jewel assets using graph analysis and control coverage mapping.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-attack-path-simulator',

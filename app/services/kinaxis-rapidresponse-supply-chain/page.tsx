@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kinaxis RapidResponse — AI Supply Chain Optimization | Zion Tech Group',
+  title: 'Kinaxis RapidResponse — AI Supply Chain Optimization',
   description: 'Kinaxis RapidResponse is the leading AI-powered supply chain planning platform that enables concurrent planning — connecting demand, supply, inventory, and capacity planning in a single real-time model. Used by 40,000+ users at 100+ global enterprises including Ford, Cisco, and Qualcomm.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/kinaxis-rapidresponse-supply-chain',

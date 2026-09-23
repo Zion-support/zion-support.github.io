@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multi-Cloud DNS & Traffic Manager | Zion Tech Group',
+  title: 'Multi-Cloud DNS & Traffic Manager',
   description: 'Unified DNS management across cloud providers with intelligent traffic routing, health checks, and failover automation. Supports geo-routing, weighted round-robin, and latency-based routing policies.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/multi-cloud-dns-manager',

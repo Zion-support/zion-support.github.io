@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Supply Chain Risk Monitor | Zion Tech Group',
+  title: 'AI Supply Chain Risk Monitor',
   description: 'Monitor supply chain risks: supplier financial health, geopolitical events, weather disruptions.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-ai-supply-risk',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Multimodal Content Moderation Engine | Zion Tech Group',
+  title: 'AI Multimodal Content Moderation Engine',
   description: 'Real-time content moderation across text, images, video, and audio using multimodal AI. Detects harmful content, hate speech, nudity, violence, and policy violations with 99.2% accuracy. Custom policy engine lets you define granular rules per community, region, and content type. Processes millions of pieces of content daily with sub-100ms latency.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-multimodal-content-moderation',

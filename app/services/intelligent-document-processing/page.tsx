@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Intelligent Document Processing (IDP) | Zion Tech Group',
+  title: 'Intelligent Document Processing (IDP)',
   description: 'AI-powered document processing that extracts, classifies, and validates data from any document type. Handles invoices, contracts, forms, and unstructured documents with human-in-the-loop verification.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/intelligent-document-processing',

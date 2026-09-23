@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'LandingPage Gen — AI Landing Pages | Zion Tech Group',
+  title: 'LandingPage Gen — AI Landing Pages',
   description: 'Generate high-converting landing pages from a brief: copy, layout, images, and CTA variants. Publish to your domain or export as clean HTML.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w175-landing-page-gen',

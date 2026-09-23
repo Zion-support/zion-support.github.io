@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kilobots — Swarm Intelligence Orchestration Platform | Zion Tech Group',
+  title: 'Kilobots — Swarm Intelligence Orchestration Platform',
   description: 'Kilobots provides a commercial-grade swarm intelligence platform for coordinating hundreds to thousands of autonomous agents working collectively. Inspired by ant colonies and bee hives, swarm intelligence enables distributed problem-solving for logistics optimization, warehouse robotics, agricultural drone fleets, and emergency response coordination without central control.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/kilobots-swarm-intelligence-platform',

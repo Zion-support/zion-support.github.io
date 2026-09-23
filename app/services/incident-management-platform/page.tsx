@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Incident Management & Response Platform | Zion Tech Group',
+  title: 'Incident Management & Response Platform',
   description: 'Full-cycle incident management platform that automates detection, triage, communication, and post-mortem. On-call scheduling, escalation policies, status page updates, and blameless post-mortem workflows.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/incident-management-platform',

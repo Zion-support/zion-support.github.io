@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Precision Farming AI | Zion Tech Group',
+  title: 'Precision Farming AI',
   description: 'Precision Farming AI solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/precision-farming-ai',

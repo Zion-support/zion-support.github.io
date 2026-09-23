@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Red Team and Adversary Simulation | Zion Tech Group',
+  title: 'Red Team and Adversary Simulation',
   description: 'Red team operations: adversary simulation, social engineering, physical security testing, purple team.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-red-team',

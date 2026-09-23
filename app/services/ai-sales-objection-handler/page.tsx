@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Sales Objection Handler | Zion Tech Group',
+  title: 'AI Sales Objection Handler',
   description: 'AI Sales Objection Handler solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-sales-objection-handler',

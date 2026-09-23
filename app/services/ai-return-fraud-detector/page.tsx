@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Return Fraud Detector | Zion Tech Group',
+  title: 'AI Return Fraud Detector',
   description: 'AI Return Fraud Detector solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-return-fraud-detector',

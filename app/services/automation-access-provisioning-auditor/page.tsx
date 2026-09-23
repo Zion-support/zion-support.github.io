@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Access Provisioning Auditor | Zion Tech Group',
+  title: 'Access Provisioning Auditor',
   description: 'Audits provisioning workflows, approval behavior, access entropy, and dormant entitlement issues across systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-access-provisioning-auditor',

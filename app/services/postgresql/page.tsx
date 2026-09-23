@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'PostgreSQL Database Solutions | Zion Tech Group',
+  title: 'PostgreSQL Database Solutions',
   description: 'PostgreSQL is the world',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/postgresql',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Clinical Trial Optimizer | Zion Tech Group',
+  title: 'AI Clinical Trial Optimizer',
   description: 'AI-powered clinical trial management platform that optimizes patient recruitment, site selection, and protocol design. Predicts enrollment timelines, identifies at-risk sites, and recommends adaptive trial designs to accelerate drug development.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-clinical-trial-optimizer',

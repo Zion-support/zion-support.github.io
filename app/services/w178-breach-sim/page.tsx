@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Breach and Attack Simulation (BAS) | Zion Tech Group',
+  title: 'Breach and Attack Simulation (BAS)',
   description: 'Continuously simulate attacks: validate detection, test response, measure security posture.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-breach-sim',

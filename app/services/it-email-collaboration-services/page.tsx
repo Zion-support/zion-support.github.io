@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email & Collaboration Security Services | Zion Tech Group',
+  title: 'Email & Collaboration Security Services',
   description: 'Harden email and collaboration suites with anti-phishing controls, DMARC enforcement, anomaly detection, and incident response playbooks for modern messaging platforms.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-email-collaboration-services',

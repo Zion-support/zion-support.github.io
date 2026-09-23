@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Release Management & Feature Flags | Zion Tech Group',
+  title: 'Release Management & Feature Flags',
   description: 'Enterprise release management platform with feature flags, progressive delivery, and automated rollback. Decouple deployment from release, run A/B tests, and target specific user segments with zero-downtime releases.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/release-management-platform',

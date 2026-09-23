@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Disaster Recovery Tester | Zion Tech Group',
+  title: 'Cloud Disaster Recovery Tester',
   description: 'Schedules, runs, and reviews DR tests across workloads with RTO/RPO evidence, failure triage, and executive reporting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-disaster-recovery-tester',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Optomec — Aerosol Jet 3D-Printed Electronics | Zion Tech Group',
+  title: 'Optomec — Aerosol Jet 3D-Printed Electronics',
   description: 'Optomec\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/optomec-aerosol-jet-3d-printing',

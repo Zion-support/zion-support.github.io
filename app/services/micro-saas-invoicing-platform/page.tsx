@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro SaaS Invoicing Platform | Zion Tech Group',
+  title: 'Micro SaaS Invoicing Platform',
   description: 'Micro SaaS Invoicing Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-invoicing-platform',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Meeting Alchemy | Zion Tech Group',
+  title: 'Data Meeting Alchemy',
   description: 'Turns meeting artifacts into structured datasets: action items, owners, deadlines, decisions, and sentiment for business intelligence use.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-meeting-alchemy',

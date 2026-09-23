@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Endpoint Detection & Response Guidance | Zion Tech Group',
+  title: 'Endpoint Detection & Response Guidance',
   description: 'Advises EDR placement, tuning, and alert triage workflows with mapping to MITRE ATT&CK and incident playbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-endpoint-detection-guidance',

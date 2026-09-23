@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Field Service Management | Zion Tech Group',
+  title: 'Field Service Management',
   description: 'Manage field service: scheduling, dispatch, mobile work orders, customer communication.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-field-service-mgmt',

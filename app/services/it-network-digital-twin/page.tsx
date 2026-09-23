@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Digital Twin & Simulation Platform | Zion Tech Group',
+  title: 'Network Digital Twin & Simulation Platform',
   description: 'Create a virtual replica of your entire network infrastructure. Simulate changes, test failover scenarios, and predict bottlenecks before they impact production. AI recommends optimal configurations and identifies single points of failure.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-network-digital-twin',

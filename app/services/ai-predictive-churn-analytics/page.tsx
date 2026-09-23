@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Predictive Churn Analytics Engine | Zion Tech Group',
+  title: 'AI Predictive Churn Analytics Engine',
   description: 'Predict customer churn 30-90 days before it happens using behavioral, transactional, and engagement signals. AI identifies at-risk segments, recommends retention actions, and measures intervention effectiveness. Integrates with your CRM and billing platform.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-predictive-churn-analytics',

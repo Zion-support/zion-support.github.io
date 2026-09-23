@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automated Penetration Testing | Zion Tech Group',
+  title: 'Automated Penetration Testing',
   description: 'Continuous automated pen testing with vulnerability scanning, exploit validation, and remediation guidance.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-pen-testing',

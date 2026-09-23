@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Client Hardware Repair & Triage | Zion Tech Group',
+  title: 'Client Hardware Repair & Triage',
   description: 'Triage, dispatch, and repair tracking for client hardware with SLA visibility and spare parts forecasting.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-client-hw-repair-triage',

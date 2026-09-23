@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Test Data Management Platform | Zion Tech Group',
+  title: 'Test Data Management Platform',
   description: 'Enterprise test data management platform that creates, masks, and provisions realistic test datasets. Ensures data privacy compliance in non-production environments while maintaining referential integrity and data realism.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/test-data-management',

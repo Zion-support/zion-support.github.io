@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center NOC Staffing & Managed Operations | Zion Tech Group',
+  title: 'Data Center NOC Staffing & Managed Operations',
   description: '24/7 NOC staffing, remote hands, smart hands, and managed infrastructure services. Augment or fully outsource data center operations with certified technicians and DC-aware monitoring toolchains.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-noc-managed-services',

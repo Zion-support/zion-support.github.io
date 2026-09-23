@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT VPN Health Monitor | Zion Tech Group',
+  title: 'IT VPN Health Monitor',
   description: 'Monitors VPN tunnels, concentrators, and remote-access session health for SMB and enterprise networks with alert-driven ops dashboards.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-vpn-health-monitor',

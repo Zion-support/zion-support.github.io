@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Cabling & Infrastructure Management | Zion Tech Group',
+  title: 'Data Center Cabling & Infrastructure Management',
   description: 'Structured cabling, copper/fiber remediation, and patch panel management for reliable colocation and cloud connectivity. Supports TIA-606 labeling standards, move/add/change, and Panduit/Corning/Dynacom deployments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-cabling-management',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Email Coaching Platform | Zion Tech Group',
+  title: 'AI Email Coaching Platform',
   description: 'AI Email Coaching Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-email-coaching-platform',

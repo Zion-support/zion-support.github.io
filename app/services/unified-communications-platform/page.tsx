@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Unified Communications as a Service (UCaaS) | Zion Tech Group',
+  title: 'Unified Communications as a Service (UCaaS)',
   description: 'Cloud-native unified communications platform combining voice, video, messaging, and collaboration. PBX replacement with global PSTN connectivity, team chat, and video conferencing in one platform.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/unified-communications-platform',

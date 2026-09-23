@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Staff Augmentation | Zion Tech Group',
+  title: 'IT Staff Augmentation',
   description: 'Add experienced engineers and operators without committing to permanent hires. Each engagement includes knowledge transfer, runbooks, and coverage planning for continuity.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-staff-augmentation',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Demand Generation | Zion Tech Group',
+  title: 'AI Demand Generation',
   description: 'AI Demand Generation solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-demand-generation',

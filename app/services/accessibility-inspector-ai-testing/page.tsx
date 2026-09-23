@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Accessibility Inspector — AI-Powered Accessibility Testing | Zion Tech Group',
+  title: 'Accessibility Inspector — AI-Powered Accessibility Testing',
   description: 'Accessibility Inspector is an AI-powered accessibility testing platform that automatically detects, prioritizes, and helps fix digital accessibility issues across websites, mobile apps, and documents. Using computer vision, NLP, and machine learning, it identifies WCAG 2.2 violations that traditional rule-based tools miss.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/accessibility-inspector-ai-testing',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Proposal Template Factory | Zion Tech Group',
+  title: 'IT Proposal Template Factory',
   description: 'Generates repeatable proposals, SOWs, change orders, and support agreements using client inputs and prior approved templates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-proposal-template-factory',

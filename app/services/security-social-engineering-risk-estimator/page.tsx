@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Social Engineering Risk Estimator | Zion Tech Group',
+  title: 'Social Engineering Risk Estimator',
   description: 'Estimates phishing and social engineering risk from email patterns, click behavior, and awareness training signals.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-social-engineering-risk-estimator',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zero Trust AI Architecture | Zion Tech Group',
+  title: 'Zero Trust AI Architecture',
   description: 'Zero Trust AI Architecture solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/zero-trust-ai-architecture',

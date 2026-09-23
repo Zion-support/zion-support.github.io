@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Patch Management and Vulnerability Remediation | Zion Tech Group',
+  title: 'Patch Management and Vulnerability Remediation',
   description: 'Automated OS and application patching: vulnerability scanning, zero-day response.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-patch-management',

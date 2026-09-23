@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Project & Engineering Management | Zion Tech Group',
+  title: 'IT Project & Engineering Management',
   description: 'Delivery governance, milestone tracking, risk triage, and stakeholder reporting for IT initiatives.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-engineering-management',

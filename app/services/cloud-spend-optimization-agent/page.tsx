@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Spend Optimization Agent | Zion Tech Group',
+  title: 'Cloud Spend Optimization Agent',
   description: 'Monitors cost anomalies, idle resources, and committed-use coverage across clouds with actionable savings recommendations.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-spend-optimization-agent',

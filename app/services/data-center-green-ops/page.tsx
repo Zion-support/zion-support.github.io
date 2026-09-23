@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Green Ops | Zion Tech Group',
+  title: 'Data Center Green Ops',
   description: 'Data Center Green Ops solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-green-ops',

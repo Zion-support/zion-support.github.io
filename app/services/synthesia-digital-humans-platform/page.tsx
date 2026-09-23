@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Synthesia AI Digital Humans Platform | Zion Tech Group',
+  title: 'Synthesia AI Digital Humans Platform',
   description: 'Synthesia is the leading AI video generation platform that creates photorealistic digital human presenters from text. Users type a script, select from 240+ AI avatars (diverse in ethnicity, age, and language), and Synthesia generates a professional video with natural lip-sync, gestures, and voice in 140+ languages. Used by 50,000+ companies including Google, Nike, and the BBC for training, marketing, and internal communications, Synthesia reduces video production costs by 90% and time from weeks to minutes. Its enterprise platform includes custom avatar creation (digital twins of real people), API access, and analytics on viewer engagement.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/synthesia-digital-humans-platform',

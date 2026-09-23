@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Cart Abandonment Analyzer | Zion Tech Group',
+  title: 'Micro-SaaS AI Cart Abandonment Analyzer',
   description: 'Detects cart abandonment patterns, drop-off signals, and recovery campaign opportunities across stores.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-cart-abandonment-analyzer',

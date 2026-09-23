@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Energy Grid Optimization | Zion Tech Group',
+  title: 'AI-Powered Energy Grid Optimization',
   description: 'Smart grid load forecasting, renewable integration, demand response, and outage prediction powered by machine learning. Helps utilities reduce costs, improve reliability, and accelerate the transition to clean energy.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-energy-grid-optimization',

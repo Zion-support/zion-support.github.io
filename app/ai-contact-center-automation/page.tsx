@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Contact Center Automation | Zion Tech Group',
+  title: 'AI Contact Center Automation',
   description: 'AI Contact Center Automation services from Zion Tech Group — strategy, implementation, and managed operations.',
   alternates: { canonical: 'https://ziontechgroup.com/ai-contact-center-automation' },
 };

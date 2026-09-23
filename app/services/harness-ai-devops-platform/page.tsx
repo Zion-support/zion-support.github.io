@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Harness — AI-Powered DevOps Platform | Zion Tech Group',
+  title: 'Harness — AI-Powered DevOps Platform',
   description: 'Harness is the industry\\',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/harness-ai-devops-platform',

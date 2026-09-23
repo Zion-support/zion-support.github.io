@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Expense Report Auditor | Zion Tech Group',
+  title: 'AI Expense Report Auditor',
   description: 'Automate expense auditing: receipt verification, policy checking, duplicate detection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w180-ai-expense',

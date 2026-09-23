@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Compliance Evidence Runner | Zion Tech Group',
+  title: 'Compliance Evidence Runner',
   description: 'Collects, normalizes, and packages controls evidence from multiple systems into audit-ready packages with countersignature queues.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/security-compliance-evidence-runner',

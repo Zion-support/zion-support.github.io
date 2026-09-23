@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'BookingLite — Appointment Scheduling | Zion Tech Group',
+  title: 'BookingLite — Appointment Scheduling',
   description: 'Simple appointment scheduling: online booking, calendar sync, reminders, payments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-booking-lite',

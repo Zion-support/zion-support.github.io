@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Green Cloud and Sustainability Optimizer | Zion Tech Group',
+  title: 'Green Cloud and Sustainability Optimizer',
   description: 'Optimize cloud workloads for carbon efficiency: right-size, green regions, off-peak.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w179-green-cloud',

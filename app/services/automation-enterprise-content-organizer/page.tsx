@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Enterprise Content Organizer | Zion Tech Group',
+  title: 'Enterprise Content Organizer',
   description: 'Classifies, tags, routes, and retires internal and external content with retention pairing and compliance metadata.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/automation-enterprise-content-organizer',

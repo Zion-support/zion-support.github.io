@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Lake Platform | Zion Tech Group',
+  title: 'Data Lake Platform',
   description: 'Data Lake Platform solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-lake-platform',

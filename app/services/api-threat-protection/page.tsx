@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'API Threat Protection Platform | Zion Tech Group',
+  title: 'API Threat Protection Platform',
   description: 'Dedicated API security platform that discovers shadow APIs, detects abuse patterns, enforces rate limits, and protects against OWASP API Top 10 threats. Provides real-time threat intelligence and automated response.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/api-threat-protection',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Employee Onboarding & Offboarding Platform | Zion Tech Group',
+  title: 'Employee Onboarding & Offboarding Platform',
   description: 'End-to-end employee lifecycle management — from offer letter to exit. Automated onboarding checklists, equipment provisioning, training workflows, and compliance tracking. IT, HR, and managers stay aligned with real-time dashboards. Offboarding ensures zero security gaps when employees leave.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-employee-onboarding-platform',

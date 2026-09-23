@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Logistics Route Optimization | Zion Tech Group',
+  title: 'Logistics Route Optimization',
   description: 'AI-powered route planning for delivery fleets. Reduces fuel costs by 20%, improves on-time delivery, and handles real-time traffic and weather adjustments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/logistics-route-optimization',

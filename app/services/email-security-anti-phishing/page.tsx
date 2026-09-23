@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Security & Anti-Phishing Service | Zion Tech Group',
+  title: 'Email Security & Anti-Phishing Service',
   description: 'Advanced threat protection with DMARC/DKIM/SPF management, phishing simulation, and incident response. Shields your organization from business email compromise, ransomware, and social engineering attacks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/email-security-anti-phishing',

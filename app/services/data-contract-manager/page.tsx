@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Contract Governance Platform | Zion Tech Group',
+  title: 'Data Contract Governance Platform',
   description: 'Data contract management platform that defines, enforces, and monitors data quality agreements between producers and consumers. Ensures schema consistency, freshness SLAs, and semantic correctness across organizational boundaries.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-contract-manager',

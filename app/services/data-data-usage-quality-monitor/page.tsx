@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Usage Quality Monitor | Zion Tech Group',
+  title: 'Data Usage Quality Monitor',
   description: 'Monitors downstream report usage, freshness, field behavior, and consumer satisfaction signals for key datasets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-data-usage-quality-monitor',

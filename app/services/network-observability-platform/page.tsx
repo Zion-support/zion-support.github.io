@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Network Observability Platform | Zion Tech Group',
+  title: 'Network Observability Platform',
   description: 'Full-stack network observability platform that provides real-time visibility into network performance, traffic patterns, and health metrics. Combines flow analysis, packet capture, and synthetic monitoring with AI-powered root cause analysis.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/network-observability-platform',

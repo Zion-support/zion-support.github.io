@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Incident Response & Runbook Automation | Zion Tech Group',
+  title: 'IT Incident Response & Runbook Automation',
   description: 'Turn incident response from fire drills into automated workflows. Embed runbooks into ChatOps, auto-triage with AI, and orchestrate remediation across AWS, Azure, GCP, and on-prem systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-incident-response-runbook-automation',

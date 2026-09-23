@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Advanced Network & Secure Access Services | Zion Tech Group',
+  title: 'Advanced Network & Secure Access Services',
   description: 'Design and operate secure, high-performance networks with SD-WAN, SASE, Zero Trust access, and traffic optimization. Improve performance while reducing security risk.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-advanced-network-services',

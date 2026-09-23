@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Trivy Comprehensive Security Scanner | Zion Tech Group',
+  title: 'Trivy Comprehensive Security Scanner',
   description: 'Trivy is a comprehensive and versatile security scanner that targets vulnerabilities in container images, file systems, and Git repositories, as well as configuration issues. It detects OS packages and language-specific dependencies with CVEs, IaC files and Kubernetes with misconfigurations, and secrets.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/trivy',

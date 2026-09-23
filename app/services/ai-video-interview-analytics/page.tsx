@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Video Interview Analytics Platform | Zion Tech Group',
+  title: 'AI Video Interview Analytics Platform',
   description: 'Analyze video interviews at scale with AI that evaluates candidate responses, communication skills, and role-fit indicators. Provides structured scoring, reduces interviewer bias, and accelerates hiring decisions. Integrates with major ATS platforms and video interview tools.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-video-interview-analytics',

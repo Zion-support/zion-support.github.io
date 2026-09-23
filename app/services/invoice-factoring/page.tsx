@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Invoice Factoring Platform | Zion Tech Group',
+  title: 'Invoice Factoring Platform',
   description: 'Instant working capital for B2B businesses. Upload invoices, get approved in minutes, receive funds within 24 hours. AI-powered risk assessment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/invoice-factoring',

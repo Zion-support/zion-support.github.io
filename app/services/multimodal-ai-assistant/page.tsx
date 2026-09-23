@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Multimodal AI Assistant — Text/Image/Audio/Video | Zion Tech Group',
+  title: 'Multimodal AI Assistant — Text/Image/Audio/Video',
   description: 'All-in-one AI assistant that understands and generates text, images, audio, and video. Perfect for content creation and analysis.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/multimodal-ai-assistant',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Loss Prevention (DLP) Suite | Zion Tech Group',
+  title: 'Data Loss Prevention (DLP) Suite',
   description: 'Enterprise data loss prevention platform that monitors, detects, and blocks sensitive data exfiltration across endpoints, cloud apps, and network. Content inspection, user behavior analytics, and automated response policies.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-loss-prevention',

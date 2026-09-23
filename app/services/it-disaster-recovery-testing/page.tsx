@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Automated Disaster Recovery Testing | Zion Tech Group',
+  title: 'Automated Disaster Recovery Testing',
   description: 'Turn DR plans into tested, repeatable executions. Automates recovery validation, reporting, and compliance evidence for auditors and leadership.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-disaster-recovery-testing',

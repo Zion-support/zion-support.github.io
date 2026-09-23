@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Incident Timeline | Zion Tech Group',
+  title: 'Micro-SaaS AI Incident Timeline',
   description: 'Builds concise incident timelines from alerts, tickets, chat, and monitoring signals with impact framing and remediation tracking.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-incident-timeline',

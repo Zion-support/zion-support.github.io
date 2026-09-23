@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Harvey AI — Enterprise Legal AI Platform | Zion Tech Group',
+  title: 'Harvey AI — Enterprise Legal AI Platform',
   description: 'Harvey AI is a generative AI platform built specifically for law firms and legal departments. Trained on legal data and integrated with Westlaw, LexisNexis, and firm knowledge bases, Harvey performs legal research, contract analysis, due diligence, and document drafting at superhuman speed. Used by 15,000+ lawyers at firms including Allen & Overy, PwC, and KPMG, Harvey reduces legal research time by 80% and contract review by 90%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/harvey-ai-legal-platform',

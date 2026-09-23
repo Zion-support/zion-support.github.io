@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Medusa Composable Commerce | Zion Tech Group',
+  title: 'Medusa Composable Commerce',
   description: 'Open-source composable commerce platform built for developers who want full control over their e-commerce stack. Headless, modular, and developer-first — built on Node.js with a modern API architecture. Provides the core commerce engine (products, orders, carts, payments, shipping) while letting developers compose exactly the features they need.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/medusa-commerce',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center Healthcare Compliance (HIPAA & HITRUST) | Zion Tech Group',
+  title: 'Data Center Healthcare Compliance (HIPAA & HITRUST)',
   description: 'Specialized compliance assessments, policy frameworks, and audit readiness for healthcare data centers handling PHI. HITRUST CSF, HIPAA Security Rule, and FedRAMP mapping with automated evidence collection.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-healthcare-compliance',

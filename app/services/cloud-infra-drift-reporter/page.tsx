@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Infrastructure Drift Reporter | Zion Tech Group',
+  title: 'Cloud Infrastructure Drift Reporter',
   description: 'Detects drift across IaC, live cloud, and service configs with evidence packages, blast-radius hints, and remediation playbooks.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-infra-drift-reporter',

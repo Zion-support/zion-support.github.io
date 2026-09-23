@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Web Application Penetration Testing | Zion Tech Group',
+  title: 'Web Application Penetration Testing',
   description: 'Expert web app pentesting: OWASP Top 10, business logic, API testing. OSCP certified testers.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-pen-test-web',

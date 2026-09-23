@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Email Threat Detector | Zion Tech Group',
+  title: 'Email Threat Detector',
   description: 'AI-powered email security platform that detects phishing, BEC attacks, spear-phishing, and zero-day email threats. Real-time scanning of inbound and outbound mail with natural language understanding.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/email-threat-detector',

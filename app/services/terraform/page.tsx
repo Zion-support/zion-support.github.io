@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Terraform Infrastructure-as-Code | Zion Tech Group',
+  title: 'Terraform Infrastructure-as-Code',
   description: 'Terraform is the industry-standard infrastructure-as-code (IaC) tool used by millions of engineers to declaratively provision and manage cloud infrastructure across AWS, Azure, GCP, and 3,000+ other providers. Instead of clicking through cloud consoles, you define infrastructure in HCL and Terraform figures out the exact API calls needed. With plan-apply workflow, you get a preview of every change before it happens.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/terraform',

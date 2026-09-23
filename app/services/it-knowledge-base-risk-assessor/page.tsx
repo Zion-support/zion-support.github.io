@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Knowledge Base Risk Assessor | Zion Tech Group',
+  title: 'IT Knowledge Base Risk Assessor',
   description: 'Monitors internal docs, wikis, runbooks, and tickets for outdated instructions, access risks, and operational blind spots.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-knowledge-base-risk-assessor',

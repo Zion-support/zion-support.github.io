@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IBM AI Factsheets — Enterprise AI Governance & Compliance | Zion Tech Group',
+  title: 'IBM AI Factsheets — Enterprise AI Governance & Compliance',
   description: 'IBM AI Factsheets provides end-to-end AI model governance, documenting model provenance, training data lineage, bias metrics, and regulatory compliance status. As AI regulation accelerates globally (EU AI Act, NIST AI RMF, Singapore Model AI Governance), AI Factsheets automates the compliance documentation that enterprises need to deploy AI responsibly and legally.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ibm-ai-factsheets-governance',

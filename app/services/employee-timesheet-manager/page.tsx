@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Employee Timesheet Manager | Zion Tech Group',
+  title: 'Employee Timesheet Manager',
   description: 'Employee Timesheet Manager is a cloud-based time tracking solution with GPS-enabled clock-in, automated payroll export, and a full-featured mobile app. It simplifies workforce time management for distributed teams and ensures accurate, compliant time records across all departments.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/employee-timesheet-manager',

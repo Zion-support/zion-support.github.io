@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ReadMe — Developer-First API Documentation Platform | Zion Tech Group',
+  title: 'ReadMe — Developer-First API Documentation Platform',
   description: 'ReadMe is the leading interactive API documentation platform that transforms OpenAPI/Swagger specs into beautiful, interactive developer portals. Used by 500,000+ companies including Stripe, Twilio, and Plaid, ReadMe provides auto-generated docs, try-it-now API explorers, changelogs, and developer analytics. Its platform includes AI-powered search, personalized onboarding flows, and Usage Insights that show which endpoints generate the most errors, traffic, and revenue. ReadMe reduces support tickets by 40% and improves developer onboarding time from days to minutes.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/readme-api-documentation-platform',

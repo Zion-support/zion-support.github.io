@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Desktop Automation Pack for IT Ops | Zion Tech Group',
+  title: 'Desktop Automation Pack for IT Ops',
   description: 'Standardizes workstation setup, patching signals, access checks, and repetitive ticket tasks for IT operations teams.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/it-desktop-automation-pack',

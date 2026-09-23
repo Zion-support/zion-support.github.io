@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Voice Agent for Customer Service | Zion Tech Group',
+  title: 'AI Voice Agent for Customer Service',
   description: 'Deploy AI voice agents that handle customer calls naturally — not robotic IVRs. Understands context, detects emotions, resolves common issues, and seamlessly transfers to humans when needed. Reduces call center costs by 60% while improving CSAT scores.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-voice-agent-customer-service',

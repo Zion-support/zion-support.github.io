@@ -1,7 +1,7 @@
 import FreeToolClient from '@/components/tools/FreeToolClient';
 
 export const metadata = {
-  title: 'QR Code Generator | Zion Tech Group',
+  title: 'QR Code Generator',
   description: 'Generate a QR code for any text or URL.',
   alternates: { canonical: 'https://ziontechgroup.com/tools/qr-code-generator' },
 };

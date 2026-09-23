@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cloud Migration Assessment Tool | Zion Tech Group',
+  title: 'Cloud Migration Assessment Tool',
   description: 'Automated cloud migration planning platform that inventories on-premises workloads, analyzes dependencies, estimates migration effort, and generates optimized migration waves. Supports AWS, Azure, and GCP target architectures.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/cloud-migration-assessment',

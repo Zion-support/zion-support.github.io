@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI SOW Builder | Zion Tech Group',
+  title: 'Micro-SaaS AI SOW Builder',
   description: 'Generates statement-of-work drafts from client briefs with scope boundaries, milestones, risks, and acceptance criteria.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-sow-builder',

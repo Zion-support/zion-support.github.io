@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Center DCIM Software Deployment & Integration | Zion Tech Group',
+  title: 'Data Center DCIM Software Deployment & Integration',
   description: 'Deploy and integrate data center infrastructure management (DCIM) platforms for unified monitoring of power, cooling, space, and network assets. Real-time dashboards, capacity forecasting, and automated ticketing integration.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-center-dcim-deployment',

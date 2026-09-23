@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ShipmentTrack — Package Tracking | Zion Tech Group',
+  title: 'ShipmentTrack — Package Tracking',
   description: 'Track packages across carriers: UPS, FedEx, USPS, DHL, Amazon. Notifications and analytics.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-shipment-track',

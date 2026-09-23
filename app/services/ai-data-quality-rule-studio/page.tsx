@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Data Quality Rule Studio | Zion Tech Group',
+  title: 'AI Data Quality Rule Studio',
   description: 'Lets data owners define, test, and monitor validation rules with alerting, lineage links, and owner accountability.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-data-quality-rule-studio',

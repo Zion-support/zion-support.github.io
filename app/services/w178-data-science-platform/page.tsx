@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Science and ML Platform | Zion Tech Group',
+  title: 'Data Science and ML Platform',
   description: 'Managed data science environment: Jupyter, GPU notebooks, experiment tracking, model deployment.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/w178-data-science-platform',

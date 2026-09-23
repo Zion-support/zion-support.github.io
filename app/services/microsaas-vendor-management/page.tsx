@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Vendor & Procurement Management Platform | Zion Tech Group',
+  title: 'Vendor & Procurement Management Platform',
   description: 'Centralized vendor management with AI-powered procurement workflows. Track contracts, manage renewals, score vendor performance, and automate purchase approvals. Reduces procurement cycle time by 50% and ensures no contract auto-renews unexpectedly. Integrates with accounting and ERP systems.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-vendor-management',

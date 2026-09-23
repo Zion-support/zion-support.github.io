@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS AI Competitor Daily Brief | Zion Tech Group',
+  title: 'Micro-SaaS AI Competitor Daily Brief',
   description: 'Delivers concise competitor briefs with pricing, release, and hiring signals for operators who need timely competitive context.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/micro-saas-ai-competitor-daily-brief',

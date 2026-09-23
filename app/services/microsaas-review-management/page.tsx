@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Review Management & Reputation Platform | Zion Tech Group',
+  title: 'Micro-SaaS Review Management & Reputation Platform',
   description: 'Monitor, manage, and respond to online reviews across Google, Yelp, TripAdvisor, and industry-specific sites. AI analyzes sentiment, suggests responses, and tracks reputation trends. Single dashboard for multi-location businesses.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-review-management',

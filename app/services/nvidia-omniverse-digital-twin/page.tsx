@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'NVIDIA Omniverse — Industrial Digital Twin Platform | Zion Tech Group',
+  title: 'NVIDIA Omniverse — Industrial Digital Twin Platform',
   description: 'NVIDIA Omniverse is a platform for creating, simulating, and operating industrial digital twins at planet scale. It connects real-time 3D data from physical assets to virtual replicas using OpenUSD, enabling factories, buildings, and entire cities to be simulated, optimized, and operated from a single digital model.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/nvidia-omniverse-digital-twin',

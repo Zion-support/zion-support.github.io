@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Deepfake Detection Suite | Zion Tech Group',
+  title: 'AI Deepfake Detection Suite',
   description: 'Enterprise-grade deepfake detection platform that analyzes images, video, and audio for synthetic media manipulation. Uses ensemble models trained on latest generation attacks with real-time API for content moderation workflows.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-deepfake-detector',

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Autonomous Incident Response & Remediation | Zion Tech Group',
+  title: 'AI Autonomous Incident Response & Remediation',
   description: 'AI-powered incident response that detects, triages, and auto-remediates security and infrastructure incidents without human intervention. Analyzes alerts, executes runbooks, isolates affected systems, and generates post-incident reports. Reduces MTTR by 80%.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-autonomous-incident-response',

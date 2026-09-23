@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Micro-SaaS Employee Pulse & Culture Analytics | Zion Tech Group',
+  title: 'Micro-SaaS Employee Pulse & Culture Analytics',
   description: 'Weekly pulse surveys with AI-powered sentiment analysis, culture benchmarking, and engagement trend tracking. Quick 1-5 minute surveys keep a finger on organizational health. Manager-level dashboards with anonymized team insights.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/microsaas-employee-pulse',

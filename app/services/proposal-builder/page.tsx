@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Proposal Builder | Zion Tech Group',
+  title: 'Proposal Builder',
   description: 'Proposal Builder is a sales enablement platform that lets teams create professional, branded proposals in minutes using drag-and-drop templates, integrated e-signatures, and real-time analytics. It accelerates deal cycles and gives sales leaders insight into proposal engagement and win rates.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/proposal-builder',

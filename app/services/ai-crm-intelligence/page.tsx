@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI CRM Intelligence | Zion Tech Group',
+  title: 'AI CRM Intelligence',
   description: 'AI CRM Intelligence solutions from Zion Tech Group — implementation, integration, and managed delivery.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/ai-crm-intelligence',

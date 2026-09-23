@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Data Query Policy Enforcer | Zion Tech Group',
+  title: 'Data Query Policy Enforcer',
   description: 'Enforces query-time access policy across data warehouses, lakes, and BI tools with near-real-time controls and usage telemetry.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/data-query-policy-enforcer',

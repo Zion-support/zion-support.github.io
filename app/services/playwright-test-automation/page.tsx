@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Playwright — Microsoft\\ | Zion Tech Group',
+  title: 'Playwright — Microsoft\\',
   description: 'Playwright is an open-source end-to-end test automation framework created by Microsoft that enables reliable testing across all modern browsers (Chromium, Firefox, WebKit). Built by the original creators of Puppeteer, Playwright delivers auto-wait, retry-agnostic assertions, and multi-tab/multi-browser testing with a single API. With 65,000+ GitHub stars, 4 million weekly npm downloads, and adoption by Adobe, React, and Visual Studio Code, Playwright has become the industry standard for browser testing. Its built-in test runner, Codegen (record-and-playback), and Trace Viewer (time-travel debugging) solve the flaky test problem that plagues E2E testing.',
   alternates: {
     canonical: 'https://ziontechgroup.com/services/playwright-test-automation',
