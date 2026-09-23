@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Incident cost · Zion Tech Group</title>
+<meta name="description" content="Estimate the cost of an IT outage from revenue per hour, users and hours down. Links to the SLA calculator and Discovery $99.">
+<link rel="canonical" href="https://ziontechgroup.com/incident-cost/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:block;margin:12px 0 4px;color:var(--muted);font-size:.9rem}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:var(--ink)}
+.btn{display:inline-block;margin-top:12px;border:0;cursor:pointer;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;text-decoration:none}
+.result{font-size:1.35rem;font-weight:800;color:var(--accent);margin-top:10px}
+.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav></nav>
+<h1>Incident cost</h1>
+<p class="muted">Hours down × what an hour is worth. Then check the written allowance in the <a href="/sla-calculator/">SLA calculator</a>.</p>
+<div class="card">
+<label>Revenue at risk / hour (USD)<input id="rev" type="number" value="8000" min="0"></label>
+<label>Hours down<input id="hrs" type="number" value="2" min="0" step="0.25"></label>
+<label>People idle<input id="people" type="number" value="12" min="0"></label>
+<label>Loaded cost / person / hour (USD)<input id="rate" type="number" value="45" min="0"></label>
+<button class="btn" type="button" onclick="run()">Estimate</button>
+<div id="out"></div>
+</div>
+<p><a class="btn" href="/sla-calculator/">Open SLA calculator</a> <a class="btn" href="/discovery/">Discovery $99</a></p>
+<h2>More from the network</h2>
+<div class="grid" data-apps-related></div>
+</div>
+<script>
+function run(){
+  var rev=+document.getElementById('rev').value||0;
+  var hrs=+document.getElementById('hrs').value||0;
+  var people=+document.getElementById('people').value||0;
+  var rate=+document.getElementById('rate').value||0;
+  var lost=rev*hrs;
+  var idle=people*rate*hrs;
+  var total=lost+idle;
+  var rec='Discovery $99 — write the blast radius and the first human gate.';
+  if(total>=8000) rec='Growth $8,000/mo if this class of incident is monthly. Otherwise Starter $2,500 for one monitor + runbook.';
+  else if(total>=499) rec='Consulting $499 to write the SLA and the stop rule before the next window.';
+  document.getElementById('out').innerHTML='<div class="result">~$'+total.toLocaleString(undefined,{maximumFractionDigits:0})+' this incident</div><p class="muted">Revenue at risk $'+lost.toLocaleString()+' · idle labor $'+idle.toLocaleString()+'. '+rec+'</p>';
+}
+run();
+</script>
+<script src="/assets/js/apps-network.js" defer></script>
+</body>
+</html>

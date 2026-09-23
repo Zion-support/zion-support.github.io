@@ -1,0 +1,21 @@
+{
+  "name": "Zion Tech Group apps network",
+  "canonical": "https://ziontechgroup.com/apps/",
+  "note": "HTTPS paths on the main site only. network.ziontechgroup.com fails TLS — do not send buyers there.",
+  "menu": ["Discovery $99", "Consulting $499", "Starter $2,500", "Growth $8,000/mo"],
+  "apps": [
+    {"href": "/apps/", "title": "Apps hub", "group": "hub"},
+    {"href": "/roi-calc/", "title": "ROI calculator", "group": "money"},
+    {"href": "/sla-calculator/", "title": "SLA calculator", "group": "ops"},
+    {"href": "/incident-cost/", "title": "Incident cost", "group": "ops"},
+    {"href": "/token-cost/", "title": "Token cost", "group": "money"},
+    {"href": "/finops-estimator/", "title": "FinOps estimator", "group": "money"},
+    {"href": "/ai-governance-checklist/", "title": "AI governance", "group": "govern"},
+    {"href": "/stack-audit/", "title": "Stack audit", "group": "govern"},
+    {"href": "/rfp-readiness/", "title": "RFP readiness", "group": "govern"},
+    {"href": "/prompt-library/", "title": "Prompt library", "group": "work"},
+    {"href": "/agent-brief/", "title": "Agent brief", "group": "work"},
+    {"href": "/edital-desk/", "title": "Edital desk", "group": "work"},
+    {"href": "/patch-window/", "title": "Patch window", "group": "ops"}
+  ]
+}

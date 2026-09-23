@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Agent Brief · Zion Tech Group</title>
 <link rel="canonical" href="https://ziontechgroup.com/agent-brief/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
 *{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
@@ -18,7 +19,7 @@ pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);pad
 </head>
 <body>
 <div class="wrap">
-<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/roi-calc/">ROI</a> · <a href="/stack-audit/">Audit</a> · <a href="/discovery/">Discovery $99</a> · <a href="/en/plans/">Plans</a></p>
+<nav class="apps-nav" data-apps-nav></nav>
 <h1>Agent brief</h1>
 <p>Fill the fields. Copy the brief into Discovery. Nothing is stored on our servers.</p>
 <label>Process to automate</label><input id="process" placeholder="e.g. inbound commercial email triage">
@@ -29,6 +30,11 @@ pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);pad
 <label>What must stay human</label><textarea id="human" placeholder="Quotes, legal text, money movement"></textarea>
 <pre id="out"></pre>
 <a class="btn" href="/discovery/">Continue to Discovery $99</a>
+<a class="btn" href="/prompt-library/">Prompt library</a>
+<a class="btn" href="/stack-audit/">Stack audit</a>
+<h2>More from the network</h2>
+<div class="apps-grid" data-apps-related></div>
+<script src="/assets/js/apps-network.js" defer></script>
 <script>
 const ids=['process','systems','owner','metric','kill','human'];
 function run(){

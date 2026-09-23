@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="0;url=/finops-consulting/" />
-  <link rel="canonical" href="https://ziontechgroup.com/finops-consulting/" />
-  <title>FinOps estimator — Zion Tech Group</title>
-  <script>location.replace('/finops-consulting/');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FinOps estimator · Zion Tech Group</title>
+<meta name="description" content="Sketch monthly cloud + model spend from numbers you already pay. Not a quote. Links to token cost, ROI and FinOps consulting.">
+<link rel="canonical" href="https://ziontechgroup.com/finops-estimator/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:block;margin:12px 0 4px;color:var(--muted);font-size:.9rem}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:var(--ink)}
+.btn{display:inline-block;margin-top:12px;border:0;cursor:pointer;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;text-decoration:none}
+.result{font-size:1.35rem;font-weight:800;color:var(--accent);margin-top:10px}
+.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+</style>
 </head>
 <body>
-  <p>Redirecionando para <a href="/finops-consulting/">FinOps consulting</a> · <a href="/discovery/">Discovery $99</a>.</p>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav></nav>
+<h1>FinOps estimator</h1>
+<p class="muted">You paste last month’s lines. We add them. This is not a Zion invoice and not a hardware quote. For model-only spend use <a href="/token-cost/">token cost</a>. For hours leaked use <a href="/roi-calc/">ROI</a>.</p>
+<div class="card">
+<label>Compute / month (USD)<input id="compute" type="number" value="4200" min="0"></label>
+<label>Storage / month (USD)<input id="storage" type="number" value="800" min="0"></label>
+<label>Egress / month (USD)<input id="egress" type="number" value="350" min="0"></label>
+<label>Model / API / month (USD)<input id="model" type="number" value="600" min="0"></label>
+<label>Observability / other (USD)<input id="other" type="number" value="250" min="0"></label>
+<button class="btn" type="button" onclick="run()">Sketch</button>
+<div id="out"></div>
+</div>
+<p><a class="btn" href="/finops-consulting/">FinOps consulting</a> <a class="btn" href="/discovery/">Discovery $99</a></p>
+<h2>More from the network</h2>
+<div class="grid" data-apps-related></div>
+</div>
+<script>
+function run(){
+  var ids=['compute','storage','egress','model','other'];
+  var sum=ids.reduce(function(acc,id){return acc+(+document.getElementById(id).value||0);},0);
+  var rec='Discovery $99 — pick one line to attack first (usually idle compute or unbounded tokens).';
+  if(sum>=8000) rec='Growth $8,000/mo if you want a co-managed spend review. Otherwise Consulting $499 for the first envelope.';
+  else if(sum>=2500) rec='Consulting $499 to write the envelope, then Starter $2,500 for one governed cut.';
+  document.getElementById('out').innerHTML='<div class="result">$'+sum.toLocaleString()+' / month sketched</div><p class="muted">$'+ (sum*12).toLocaleString() +' / year if nothing changes. '+rec+'</p>';
+}
+run();
+</script>
+<script src="/assets/js/apps-network.js" defer></script>
 </body>
 </html>
