@@ -1,33 +1,43 @@
-# 💚 App Network Spotlight — Customer Success & Retention AI
+# 💚 Spotlight: Customer Success & Retention AI — Zion App Network
 
-Keep every customer healthy, growing and renewing. This spotlight showcases the **Customer Success & Retention AI** suite of the [Zion App Network](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) — 8 interconnected AI apps from [Zion Tech Group](https://ziontechgroup.com), each free to try and open-source.
+Keeping a customer is cheaper than winning a new one. This spotlight covers the **Customer Success & Retention suite** of the Zion App Network — eleven interconnected apps that predict churn, score health, listen to customers and surface expansion revenue.
 
-## The suite
+- 🗂️ Category page: [Customer Success & Retention](https://github.com/Zion-support/zion-network/blob/main/network/customer-success-retention.md)
+- 📦 Machine-readable registry: [customer-success-apps.json](https://github.com/Zion-support/zion-network/blob/main/network/customer-success-apps.json)
+- 🌐 Master index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
+- 🏠 Homepage: [ziontechgroup.com](https://ziontechgroup.com)
 
-| App | What it does | Live | Repo |
-|---|---|---|---|
-| Churn Radar | See churn coming 90 days out — health scores & save plays | [ziontechgroup.com/churn-radar](https://ziontechgroup.com/churn-radar/) | [GitHub](https://github.com/Zion-support/churn-radar) |
-| Churn Risk Radar | Portfolio-wide churn prediction with exec alerts | [ziontechgroup.com/churn-risk-radar](https://ziontechgroup.com/churn-risk-radar/) | [GitHub](https://github.com/Zion-support/churn-risk-radar) |
-| Customer Health Scorer | Unified health scores from usage, support & billing | [ziontechgroup.com/customer-health-scorer](https://ziontechgroup.com/customer-health-scorer/) | [GitHub](https://github.com/Zion-support/customer-health-scorer) |
-| NPS Insight Engine | AI themes & drivers from NPS/CSAT verbatims | [ziontechgroup.com/nps-insight-engine](https://ziontechgroup.com/nps-insight-engine/) | [GitHub](https://github.com/Zion-support/nps-insight-engine) |
-| Support Sentiment Monitor | Real-time ticket/chat/call sentiment + escalations | [ziontechgroup.com/support-sentiment-monitor](https://ziontechgroup.com/support-sentiment-monitor/) | [GitHub](https://github.com/Zion-support/support-sentiment-monitor) |
-| Upsell Signal Scout | Expansion & upsell signals from usage | [ziontechgroup.com/upsell-signal-scout](https://ziontechgroup.com/upsell-signal-scout/) | [GitHub](https://github.com/Zion-support/upsell-signal-scout) |
-| Onboarding Journey Tracker | Milestones, time-to-value, stalled-account alerts | [ziontechgroup.com/onboarding-journey-tracker](https://ziontechgroup.com/onboarding-journey-tracker/) | [GitHub](https://github.com/Zion-support/onboarding-journey-tracker) |
-| Voice of Customer Hub | Reviews, tickets, surveys & social in one hub | [ziontechgroup.com/voice-of-customer-hub](https://ziontechgroup.com/voice-of-customer-hub/) | [GitHub](https://github.com/Zion-support/voice-of-customer-hub) |
+## Predict churn before it happens
 
-## Why it works as one system
+- **[Churn Radar](https://ziontechgroup.com/churn-radar/)** — spot at-risk clients early with usage and billing drift signals. [Source](https://github.com/Zion-support/churn-radar)
+- **[Churn Risk Radar](https://ziontechgroup.com/churn-risk-radar/)** — account-level risk scoring with save plays and executive alerts. [Source](https://github.com/Zion-support/churn-risk-radar)
+- **[SLA Breach Predictor](https://ziontechgroup.com/sla-breach-predictor/)** — SLA misses drive churn; forecast breaches weeks ahead. [Source](https://github.com/Zion-support/sla-breach-predictor)
 
-1. **Sense** — Support Sentiment Monitor + Voice of Customer Hub stream raw customer signals.
-2. **Score** — Customer Health Scorer + NPS Insight Engine turn signals into health and loyalty metrics.
-3. **Predict** — Churn Radar + Churn Risk Radar forecast who's at risk, and when.
-4. **Grow** — Upsell Signal Scout + Onboarding Journey Tracker find expansion and protect time-to-value.
+## Measure health and sentiment
 
-## More from the network
+- **[Customer Health Scorer](https://ziontechgroup.com/customer-health-scorer/)** — one score from product usage, support load and billing signals. [Source](https://github.com/Zion-support/customer-health-scorer)
+- **[NPS Insight Engine](https://ziontechgroup.com/nps-insight-engine/)** — AI themes, driver detection and follow-up workflows from NPS/CSAT. [Source](https://github.com/Zion-support/nps-insight-engine)
+- **[Support Sentiment Monitor](https://ziontechgroup.com/support-sentiment-monitor/)** — real-time sentiment across tickets, chats and calls. [Source](https://github.com/Zion-support/support-sentiment-monitor)
 
-- 📣 Homepage showcase copy: [HOMEPAGE_APPS.md](https://github.com/Zion-support/zion-network/blob/main/HOMEPAGE_APPS.md)
-- 💼 Related: [Sales & Lead Gen AI](https://github.com/Zion-support/zion-network/blob/main/network/sales-lead-gen-ai.md) · [MSP & Partner Ecosystem](https://github.com/Zion-support/zion-network/blob/main/network/msp-partner-ecosystem.md)
-- 🗂️ Master index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) · Hub: [network.ziontechgroup.com](https://network.ziontechgroup.com)
-- 💳 Plans & pricing: [ziontechgroup.com/en/plans](https://ziontechgroup.com/en/plans/) · 📞 [Book a discovery call](https://ziontechgroup.com/discovery/)
+## Grow the accounts you keep
+
+- **[Onboarding Journey Tracker](https://ziontechgroup.com/onboarding-journey-tracker/)** — milestones and time-to-value; catch stalled accounts before they drift. [Source](https://github.com/Zion-support/onboarding-journey-tracker)
+- **[Upsell Signal Scout](https://ziontechgroup.com/upsell-signal-scout/)** — expansion signals from product usage and account activity. [Source](https://github.com/Zion-support/upsell-signal-scout)
+- **[Partner Referral Tracker](https://ziontechgroup.com/partner-referral-tracker/)** — referrals, commissions and pipeline attribution in one place. [Source](https://github.com/Zion-support/partner-referral-tracker)
+
+## Close the feedback loop
+
+- **[Voice of Customer Hub](https://ziontechgroup.com/voice-of-customer-hub/)** — reviews, tickets, surveys and social mentions unified into AI insights. [Source](https://github.com/Zion-support/voice-of-customer-hub)
+- **[Support Deflection Analyzer](https://ziontechgroup.com/support-deflection-analyzer/)** — prove and grow self-service deflection. [Source](https://github.com/Zion-support/support-deflection-analyzer)
+
+## Works with the rest of the network
+
+- Feed churn signals into outbound saves with the [Sales & Lead Gen suite](APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md)
+- MSPs: retention dashboards for every client via the [MSP & Partner Ecosystem](APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md)
+- Automate the follow-ups with [AI Operations & Workflow apps](APP_NETWORK_SPOTLIGHT_AI_OPERATIONS.md)
+- Track everything on the [network hub](https://zion-support.github.io/zion-network/) and [network.ziontechgroup.com](https://network.ziontechgroup.com)
 
 ---
-© 2026 [Zion Tech Group](https://ziontechgroup.com) · commercial@ziontechgroup.com
+💼 [Plans & pricing](https://ziontechgroup.com/en/plans/) · 📞 [Discovery call $99](https://ziontechgroup.com/discovery/) · ✉️ kleber@ziontechgroup.com
+
+Zion Tech Group · Middletown, DE
