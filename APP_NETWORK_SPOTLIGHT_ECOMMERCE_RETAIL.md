@@ -1,34 +1,33 @@
-# 🛒 Spotlight: E-commerce & Retail AI Suite
+# 🛒 App Network Spotlight — E-commerce & Retail AI
 
-Sell more, stock smarter, return less. The newest suite in the [Zion App Network](https://ziontechgroup.com/zion-app-network/) brings six AI apps for online stores and retail brands — fully interlinked with our [Sales & Lead Gen AI](https://zion-support.github.io/zion-network/network/sales-lead-gen-ai.md) and [Data & Analytics](https://zion-support.github.io/zion-network/network/data-analytics.md) categories.
+Run your whole retail loop with AI: write better product pages, price them right, keep items in stock, learn from reviews, prevent returns and win back abandoning shoppers. Six interconnected apps from the [Zion App Network](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) by [Zion Tech Group](https://ziontechgroup.com).
 
 ## The suite
 
-| App | Try it live | What it does |
-|-----|-------------|--------------|
-| **AI Product Description Writer** | [ziontechgroup.com/ai-product-description-writer/](https://ziontechgroup.com/ai-product-description-writer/) | SEO-optimized product copy at catalog scale |
-| **AI Pricing Optimizer** | [ziontechgroup.com/ai-pricing-optimizer/](https://ziontechgroup.com/ai-pricing-optimizer/) | Dynamic pricing from demand, competition and margin targets |
-| **AI Inventory Forecaster** | [ziontechgroup.com/ai-inventory-forecaster/](https://ziontechgroup.com/ai-inventory-forecaster/) | Demand forecasting and replenishment alerts |
-| **AI Review Insights** | [ziontechgroup.com/ai-review-insights/](https://ziontechgroup.com/ai-review-insights/) | Sentiment and theme mining across reviews |
-| **AI Returns Reducer** | [ziontechgroup.com/ai-returns-reducer/](https://ziontechgroup.com/ai-returns-reducer/) | Predicts return risk before checkout |
-| **AI Cart Recovery** | [ziontechgroup.com/ai-cart-recovery/](https://ziontechgroup.com/ai-cart-recovery/) | Personalized abandoned-cart recovery sequences |
+| App | What it does | Live | Repo |
+|---|---|---|---|
+| AI Product Description Writer | SEO-optimized product descriptions at catalog scale | [ziontechgroup.com/ai-product-description-writer](https://ziontechgroup.com/ai-product-description-writer/) | [GitHub](https://github.com/Zion-support/ai-product-description-writer) |
+| AI Pricing Optimizer | Dynamic pricing from demand, competition and margin targets | [ziontechgroup.com/ai-pricing-optimizer](https://ziontechgroup.com/ai-pricing-optimizer/) | [GitHub](https://github.com/Zion-support/ai-pricing-optimizer) |
+| AI Inventory Forecaster | Demand forecasting & replenishment alerts | [ziontechgroup.com/ai-inventory-forecaster](https://ziontechgroup.com/ai-inventory-forecaster/) | [GitHub](https://github.com/Zion-support/ai-inventory-forecaster) |
+| AI Review Insights | Sentiment, themes and product fixes from reviews | [ziontechgroup.com/ai-review-insights](https://ziontechgroup.com/ai-review-insights/) | [GitHub](https://github.com/Zion-support/ai-review-insights) |
+| AI Returns Reducer | Predict return risk, intervene before checkout | [ziontechgroup.com/ai-returns-reducer](https://ziontechgroup.com/ai-returns-reducer/) | [GitHub](https://github.com/Zion-support/ai-returns-reducer) |
+| AI Cart Recovery | Personalized abandoned-cart recovery sequences | [ziontechgroup.com/ai-cart-recovery](https://ziontechgroup.com/ai-cart-recovery/) | [GitHub](https://github.com/Zion-support/ai-cart-recovery) |
 
-## Why it matters
+## The full-stack retail loop
 
-- **Conversion**: better product pages + right price + cart recovery = more completed checkouts.
-- **Margin**: pricing optimization and return-risk prevention protect profit per order.
-- **Inventory health**: forecasts cut stockouts and overstock carrying costs.
-- **Learning loop**: review insights feed product, copy and merchandising decisions.
+1. **Content** — Product Description Writer fills catalog pages.
+2. **Price** — Pricing Optimizer keeps margins and competitiveness.
+3. **Stock** — Inventory Forecaster prevents stockouts and overstock.
+4. **Learn** — Review Insights feeds product and listing fixes.
+5. **Protect** — Returns Reducer cuts return cost before it happens.
+6. **Recover** — Cart Recovery wins back abandoning shoppers.
 
-## Works with the rest of the network
+## More from the network
 
-- Pair with [Churn Radar](https://ziontechgroup.com/churn-radar/) and the [AI Customer Experience Hub](https://ziontechgroup.com/ai-customer-experience-hub/) for post-purchase retention.
-- Feed campaigns with the [AI Growth Marketing Hub](https://ziontechgroup.com/ai-growth-marketing-hub/) and [AI Advertising Optimizer](https://ziontechgroup.com/ai-advertising-optimizer/).
-- Full category page: [E-commerce & Retail AI](https://zion-support.github.io/zion-network/network/ecommerce-retail-ai.md) · Master index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-
-## Get started
-
-💼 [Plans & pricing](https://ziontechgroup.com/en/plans/) · 📞 [Discovery call](https://ziontechgroup.com/discovery/) · ✉️ commercial@ziontechgroup.com
+- 💚 Pair with: [Customer Success & Retention AI spotlight](https://github.com/Zion-support/zion-support.github.io/blob/main/APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) — retention after the first purchase
+- 💼 Related: [Sales & Lead Gen AI](https://github.com/Zion-support/zion-network/blob/main/network/sales-lead-gen-ai.md) · [🛒 category page](https://github.com/Zion-support/zion-network/blob/main/network/ecommerce-retail-ai.md)
+- 🗂️ Master index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) · Hub: [network.ziontechgroup.com](https://network.ziontechgroup.com)
+- 💳 Plans & pricing: [ziontechgroup.com/en/plans](https://ziontechgroup.com/en/plans/) · 📞 [Book a discovery call](https://ziontechgroup.com/discovery/)
 
 ---
-© 2026 [Zion Tech Group](https://ziontechgroup.com) · Part of the Zion App Network — 539 interlinked apps & sites
+© 2026 [Zion Tech Group](https://ziontechgroup.com) · commercial@ziontechgroup.com
