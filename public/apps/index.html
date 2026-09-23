@@ -73,9 +73,65 @@ footer a{color:var(--accent)}
 <main id="root"></main>
 <footer>
 <p>© 2026 Zion Tech Group — <a href="https://ziontechgroup.com">ziontechgroup.com</a> · <a href="https://github.com/Zion-support">GitHub</a> · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p>
-<p>Need a custom AI solution or field-service support? <a href="https://ziontechgroup.com/contact/">Talk to us — Discovery is free</a>.</p>
+<p>Need a custom AI solution or field-service support? <a href="https://ziontechgroup.com/discovery/">Start with Discovery $99</a>.</p>
 </footer>
 <script>
+const ALLOW_HOSTS=new Set([
+ 'ziontechgroup.com','www.ziontechgroup.com',
+ 'chatbot-builder.ziontechgroup.com','code-assistant.ziontechgroup.com',
+ 'crm-intelligence.ziontechgroup.com','email-marketing.ziontechgroup.com',
+ 'fraud-detection.ziontechgroup.com','invoice-genius.ziontechgroup.com',
+ 'knowledge-base.ziontechgroup.com','lead-scoring.ziontechgroup.com',
+ 'meeting-assistant.ziontechgroup.com','seo-optimizer.ziontechgroup.com',
+ 'field.ziontechgroup.com','field-brazil.ziontechgroup.com',
+ 'field-city-sao-paulo.ziontechgroup.com'
+]);
+const PATH_REWRITE={
+ '/prompt-forge/':'/prompt-studio/',
+ '/roi-calculator/':'/ai-roi-calculator/',
+ '/k8s-yaml-linter/':'/kubernetes-linter/',
+ '/accessibility-checker/':'/a11y-checker/',
+ '/zion-ai-energy-sentinel/':'/energy-sentinel/',
+ '/ai-readiness-assessment/':'/readiness-brief/',
+ '/zion-agentforge/':'/agentforge/',
+ '/zion-content-studio/':'/content-studio/',
+ '/ai-agent-fleet/':'/agent-fleet/',
+ '/ai-billing-automation/':'/billing-automation/',
+ '/ai-fraud-prevention/':'/fraud-prevention/',
+ '/zion-app-network/':'/app-network/'
+};
+const PATH_BLOCK=new Set([
+ '/ai-advertising-optimizer/','/ai-agriculture-tech/','/ai-architecture-design/',
+ '/ai-assessment-engine/','/ai-automated-booking/','/ai-backup-recovery/',
+ '/ai-banking-platform/','/zion-ai-workflow-automator/','/zion-cyber-ai/',
+ '/zion-data-pipelines/','/zion-field-coverage/','/zion-field-es/',
+ '/zion-field-norway/','/zion-field-parts/','/zion-field-playbooks/',
+ '/zion-field-pt/','/zion-field-residency/','/zion-idp/','/zion-security-shield/',
+ '/zion-smart-analytics-dashboard/','/zion-field-cooperatives/','/zion-field-hy/',
+ '/zion-field-ms/','/zion-field-museums/','/zion-field-postal/','/zion-field-power/',
+ '/zion-field-rail-office/','/zion-field-weather/'
+]);
+function normPath(pathname){
+ let p=pathname||'/';
+ if(!p.startsWith('/')) p='/'+p;
+ if(p.length>1 && !p.endsWith('/')) p+='/';
+ return p;
+}
+function safeLive(repo){
+ const gh=repo.html_url;
+ const hp=(repo.homepage||'').trim();
+ let u;
+ try{ u=new URL(hp); }catch(e){ return null; }
+ const host=u.hostname.toLowerCase();
+ if(host==='ziontechgroup.com'||host==='www.ziontechgroup.com'){
+  const path=normPath(u.pathname);
+  if(PATH_REWRITE[path]) return 'https://ziontechgroup.com'+PATH_REWRITE[path];
+  if(PATH_BLOCK.has(path)) return null;
+  return 'https://ziontechgroup.com'+path;
+ }
+ if(ALLOW_HOSTS.has(host)) return hp;
+ return null;
+}
 const CATS=[
  ['Security & Compliance',['compliance','governance','security','secret','phishing','audit','policy','risk','deepfake','regs','ssl','k8s-pod']],
  ['FinOps & ROI',['cost','finops','roi','billing','budget','price','quote','invoice']],
@@ -98,7 +154,7 @@ async function load(){
   all=all.concat(b);page++;
   if(page>8)break;
  }
- REPOS=all.map(r=>({n:r.name,d:(r.description||'Zion App Network app').split('. Live')[0],l:r.homepage||('https://ziontechgroup.com/'+r.name+'/'),g:r.html_url,c:classify(r.name)}));
+ REPOS=all.map(r=>({n:r.name,d:(r.description||'Zion App Network app').split('. Live')[0],l:safeLive(r),g:r.html_url,c:classify(r.name)}));
  const cats=[...new Set(REPOS.map(r=>r.c))].sort();
  document.getElementById('cat').innerHTML='<option value="">All categories</option>'+cats.map(c=>`<option>${c}</option>`).join('');
  render();
@@ -112,7 +168,7 @@ function render(){
  list.forEach(r=>(groups[r.c]=groups[r.c]||[]).push(r));
  document.getElementById('root').innerHTML=Object.keys(groups).sort().map(c=>
   `<h2 class="cat">${c} (${groups[c].length})</h2><div class="grid">`+groups[c].map(r=>
-   `<div class="card"><span class="tag">${r.c}</span><h3>${esc(r.n)}</h3><p>${esc(r.d)}</p><div class="links"><a href="${r.l}" target="_blank">▶ Live app</a><a href="${r.g}" target="_blank">GitHub</a></div></div>`).join('')+'</div>').join('');
+   `<div class="card"><span class="tag">${r.c}</span><h3>${esc(r.n)}</h3><p>${esc(r.d)}</p><div class="links">${r.l?`<a href="${esc(r.l)}">▶ Live app</a>`:''}<a href="${esc(r.g)}" target="_blank" rel="noopener">GitHub</a></div></div>`).join('')+'</div>').join('');
 }
 document.getElementById('q').addEventListener('input',render);
 document.getElementById('cat').addEventListener('change',render);
