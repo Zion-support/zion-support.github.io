@@ -6,6 +6,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
 - [APPS_SHOWCASE.md](APPS_SHOWCASE.md) — app showcase overview
 - [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) — original network spotlight
+- [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — NEW Batch 18: readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation
 - [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) — 13-app SecOps & reliability toolchain: SSL Monitor, Incident Responder, Incident Timeline, API Health Monitor, Backup Integrity, Compliance Scanner, Cost Optimizer, Drift Detector, Service Catalog, Offboarding Checker
 - [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) — AI by industry: Healthcare, Financial Services, Retail & Commerce, Legal, HR & Talent, MLOps
 - [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) — SEO Optimizer, Lead Scoring, Email Marketing Pro, Sales Intelligence, RFP Responder, Quote Builder, Sales Call Analyst, ROI Calculator
@@ -16,8 +17,8 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_DATA_ENERGY.md](APP_NETWORK_SPOTLIGHT_DATA_ENERGY.md)
 - [APP_NETWORK_SPOTLIGHT_LLM_HR.md](APP_NETWORK_SPOTLIGHT_LLM_HR.md)
 - [APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md](APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md)
-
-- [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation (Batch 18)
+- [APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md](APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md) — MSP & partner ecosystem apps
+- [APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md](APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md) — sales & lead-gen AI apps
 
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
