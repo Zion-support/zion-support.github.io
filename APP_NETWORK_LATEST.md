@@ -8,6 +8,24 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🚀 Fresh releases — September 23, 2026 (13 apps)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md)
+
+- **[Contract Renewal Radar](https://ziontechgroup.com/contract-renewal-radar/)** — auto-renewal & escalator alerts
+- **[Contract Clause Sentry](https://ziontechgroup.com/contract-clause-sentry/)** — clause-level risk scanner
+- **[Field Tech Scheduler](https://ziontechgroup.com/field-tech-scheduler/)** — AI tech scheduling & routing
+- **[Field Safety Brief](https://ziontechgroup.com/field-safety-brief/)** — PPE/JSA briefings
+- **[Dispatch Window Optimizer](https://ziontechgroup.com/dispatch-window-optimizer/)** — first-time-fix windows
+- **[Churn Radar](https://ziontechgroup.com/churn-radar/)** — churn prediction & save plays
+- **[Energy Usage Optimizer](https://ziontechgroup.com/energy-usage-optimizer/)** — facility energy savings
+- **[Data Retention Enforcer](https://ziontechgroup.com/data-retention-enforcer/)** — legal holds & deletion proof
+- **[Compliance Policy Writer](https://ziontechgroup.com/compliance-policy-writer/)** — SOC2/ISO/GDPR/HIPAA policies
+- **[Driver Hours Compliance](https://ziontechgroup.com/driver-hours-compliance/)** — HOS violation alerts
+- **[Dock Appointment Scheduler](https://ziontechgroup.com/dock-appointment-scheduler/)** — dock scheduling & dwell
+- **[Customs Doc Generator](https://ziontechgroup.com/customs-doc-generator/)** — cross-border docs
+- **[Asset Lifecycle Tracker](https://ziontechgroup.com/asset-lifecycle-tracker/)** — ITAM with refresh forecasting
+
 ## Just launched 🚀
 
 - **[Zion AI Contract Guardian](https://ziontechgroup.com/zion-ai-contract-guardian/)** — AI contract review: clause extraction, SLA verification, renewal alerts. Pairs with [Quote Builder](https://ziontechgroup.com/zion-ai-quote-builder/) and [SLA Breach Sentinel](https://ziontechgroup.com/zion-ai-sla-breach-sentinel/). [Source](https://github.com/Zion-support/zion-ai-contract-guardian)
@@ -107,4 +125,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
