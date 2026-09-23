@@ -117,6 +117,18 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - **[AI MLOps Platform](https://ziontechgroup.com/ai-ml-ops-platform/)** — pipelines, registry, deployment & monitoring
 - **[Zion AI ROI Calculator](https://ziontechgroup.com/zion-ai-roi-calculator/)** — board-ready payback, NPV and IRR
 
+## 🚀 New: Customer Success Suite — September 23, 2026 (7 apps)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) — onboarding → health → retention → expansion, wired together:
+
+- **[Churn Risk Radar](https://ziontechgroup.com/churn-risk-radar/)** — churn prediction, save plays & exec alerts · [Repo](https://github.com/Zion-support/churn-risk-radar)
+- **[Customer Health Scorer](https://ziontechgroup.com/customer-health-scorer/)** — unified health from usage, support & billing · [Repo](https://github.com/Zion-support/customer-health-scorer)
+- **[NPS Insight Engine](https://ziontechgroup.com/nps-insight-engine/)** — AI themes, drivers & follow-up workflows · [Repo](https://github.com/Zion-support/nps-insight-engine)
+- **[Upsell Signal Scout](https://ziontechgroup.com/upsell-signal-scout/)** — expansion signals from product usage · [Repo](https://github.com/Zion-support/upsell-signal-scout)
+- **[Onboarding Journey Tracker](https://ziontechgroup.com/onboarding-journey-tracker/)** — milestones, time-to-value & stalled accounts · [Repo](https://github.com/Zion-support/onboarding-journey-tracker)
+- **[Support Sentiment Monitor](https://ziontechgroup.com/support-sentiment-monitor/)** — real-time sentiment across tickets, chats & calls · [Repo](https://github.com/Zion-support/support-sentiment-monitor)
+- **[Support Deflection Analyzer](https://ziontechgroup.com/support-deflection-analyzer/)** — measure & grow ticket deflection · [Repo](https://github.com/Zion-support/support-deflection-analyzer)
+
 ## Recently launched
 - [Agent SLA Monitor](https://ziontechgroup.com/agent-sla-monitor/)
 - [Zion AI Accessibility Auditor](https://ziontechgroup.com/zion-ai-accessibility-auditor/)
@@ -125,4 +137,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md)
