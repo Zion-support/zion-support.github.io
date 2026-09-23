@@ -15,6 +15,21 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 
 Details: https://github.com/Zion-support/zion-app-network/blob/main/docs/NEW_APPS_SPOTLIGHT.md
 
+## New this week: DevOps & FinOps Toolkit ⚙️
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_DEVOPS_FINOPS.md](APP_NETWORK_SPOTLIGHT_DEVOPS_FINOPS.md)
+
+- **[Managed IT Health Check](https://ziontechgroup.com/managed-it-health-check/)** — infra/security/ops self-assessment
+- **[Tech Debt Radar](https://zion-support.github.io/tech-debt-radar/)** — scored, prioritized technical debt
+- **[Cloud Migration Calculator](https://ziontechgroup.com/cloud-migration-calculator/)** — on-prem vs cloud TCO
+- **[Vendor Matrix Compare](https://zion-support.github.io/vendor-matrix-compare/)** — defensible vendor scoring
+- **[K8s Pod Security Scanner](https://ziontechgroup.com/k8s-pod-security-scanner/)** — Pod Security Standards checks
+- **[Log Anomaly Spotter](https://ziontechgroup.com/log-anomaly-spotter/)** — error spikes & anomaly detection
+- **[FinOps Spend Analyzer](https://ziontechgroup.com/finops-spend-analyzer/)** — cloud waste & savings
+- **[LLM Cost Calculator](https://ziontechgroup.com/llm-cost-calculator/)** — token pricing comparison
+
+Full toolchain doc: https://github.com/Zion-support/zion-app-network/blob/main/docs/DEVOPS_FINOPS_TOOLKIT.md
+
 ## New this week: Sales & Marketing AI Suite 📈
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md)
@@ -68,4 +83,4 @@ Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEVOPS_FINOPS.md](APP_NETWORK_SPOTLIGHT_DEVOPS_FINOPS.md)
