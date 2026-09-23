@@ -21,6 +21,12 @@ Suite doc: https://github.com/Zion-support/zion-app-network/blob/main/docs/CUSTO
 - 📭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🧠 Interlink wave — Platform, Data & Revenue AI (Sep 23, 2026)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) — ten apps fully interlinked with the master directory:
+
+- **[AI Procurement RFP Builder](https://ziontechgroup.com/zion-ai-rfp-builder/)** · **[AI Green Scheduler](https://ziontechgroup.com/zion-ai-green-scheduler/)** · **[AI Latency Budget Guardian](https://ziontechgroup.com/zion-ai-latency-budget-guardian/)** · **[AI Agent Marketplace](https://ziontechgroup.com/zion-ai-agent-marketplace/)** · **[AI Energy Optimizer](https://ziontechgroup.com/zion-ai-energy-optimizer/)** · **[AI Data Quality](https://ziontechgroup.com/zion-ai-data-quality/)** · **[AI Gateway](https://ziontechgroup.com/zion-ai-gateway/)** · **[AI Doc Processor](https://ziontechgroup.com/zion-ai-doc-processor/)** · **[AI Infra Drift Detective](https://ziontechgroup.com/zion-ai-infra-drift-detective/)** · **[AI Churn Early-Warning](https://ziontechgroup.com/zion-ai-churn-early-warning/)**
+
 ## 🚀 Fresh releases — September 23, 2026 Wave 2 (41 more apps)
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md)
@@ -120,7 +126,7 @@ Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/docs/
 
 ## New spotlight: Field Services & Logistics 🚚
 
-Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) — 16 interlinked apps for field operations:
+Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) — 16 interlinked apps for field operations:
 
 - **[AI Field Dispatch Optimizer](https://ziontechgroup.com/zion-ai-field-dispatch-optimizer/)** — intelligent routing & dispatch · [Field Tech Scheduler](https://ziontechgroup.com/field-tech-scheduler/)
 - **[Route Density Planner](https://ziontechgroup.com/route-density-planner/)** — cluster service calls into efficient routes
@@ -132,7 +138,7 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT
 
 ## New spotlight: AI by Industry 🏭
 
-Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) — pre-built AI solution packs per vertical:
+Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) — pre-built AI solution packs per vertical:
 
 - **[AI Industry Solutions](https://ziontechgroup.com/ai-industry-solutions/)** — solution maps & reference architectures per vertical
 - **[AI Healthcare Platform](https://ziontechgroup.com/ai-healthcare-platform/)** — clinical documentation, triage, HIPAA-grade guardrails
@@ -151,4 +157,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md)
