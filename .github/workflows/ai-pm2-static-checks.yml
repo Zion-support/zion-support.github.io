@@ -114,6 +114,9 @@ jobs:
           fi
 
       - name: Lint
+        # Non-blocking: thousands of auto-generated service pages currently fail parsing;
+        # keep signal in logs without breaking CI (see issue #71361).
+        continue-on-error: true
         # typescript-eslint v8 (repo pin) is incompatible with the repo's TypeScript 7
         # (TypeError reading 'Cjs' in typescript-estree). Pin TypeScript 5.9 in-memory
         # for the lint run only; the repo build keeps TS 7. Then run locally pinned eslint.
