@@ -15,6 +15,7 @@ import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import AgentsMonitoring from '@/components/AgentsMonitoring';
 import NavigationQuickLinks from '@/components/NavigationQuickLinks';
+import { homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
@@ -1271,6 +1272,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Zion Apps Network — product apps + path calculators ── */}
+      <section id="apps-network" className="py-16 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-purple-950/10 to-slate-950">
+        <div className="container-page">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2">Zion Apps Network</p>
+            <h2 className="text-2xl font-bold text-white mb-3">Free apps &amp; calculators — interlinked</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm">
+              Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
+              and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {homepageFeaturedApps.map((app) => (
+              <Link
+                key={app.slug}
+                href={app.href}
+                className="group block rounded-xl border border-slate-800 bg-slate-900/50 hover:bg-slate-800/80 hover:border-purple-500/30 p-5 transition-all"
+              >
+                <p className="text-[10px] uppercase tracking-wider text-purple-300/80 font-semibold mb-2">{app.group}</p>
+                <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
+                <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
+                <span className="inline-block mt-3 text-xs text-purple-300">Open {app.href} →</span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+            {APPS_NETWORK_HUB.hubs.map((h) => (
+              <Link key={h.href} href={h.href} className="text-slate-400 hover:text-purple-300 underline-offset-2 hover:underline">
+                {h.name}
+              </Link>
+            ))}
+            <Link href="/discovery/" className="text-purple-300 font-semibold hover:text-pink-300">Discovery $99 →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section id="free-tools" className="py-16 border-t border-slate-800">
         <div className="container-page">
@@ -1279,6 +1316,7 @@ export default function HomePage() {
             <p className="text-slate-400 max-w-2xl mx-auto text-sm">
               Explore our service catalog, calculate ROI, compare solutions, and route your needs — directly from
               our <strong className="text-white">{services.length}+</strong> services across <strong className="text-white">{CATEGORIES.length}</strong> categories.
+              {' '}Also see the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
             </p>
           </div>
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

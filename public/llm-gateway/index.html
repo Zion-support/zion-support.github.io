@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LLM Gateway | Zion Tech Group</title>
+<meta name="description" content="One API for every model: routing, fallbacks, caching, rate limits and spend controls.">
+<link rel="canonical" href="https://ziontechgroup.com/llm-gateway/">
+<meta property="og:title" content="LLM Gateway | Zion Tech Group">
+<meta property="og:description" content="One API for every model: routing, fallbacks, caching, rate limits and spend controls.">
+<meta property="og:url" content="https://ziontechgroup.com/llm-gateway/">
+<style>
+:root{{color-scheme:dark;--bg:#080b16;--panel:#0e1528;--line:#26324d;--muted:#aab6d0;--purple:#a78bfa;--pink:#f0abfc}}
+*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:#f8fafc;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}}
+a{{color:inherit}}.wrap{{max-width:1100px;margin:auto;padding:0 24px}}
+.nav{{position:sticky;top:0;z-index:10;border-bottom:1px solid #26324dcc;background:#080b16ee;backdrop-filter:blur(16px)}}
+.navin{{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}}
+.brand{{font-size:20px;font-weight:850;background:linear-gradient(90deg,var(--purple),var(--pink));background-clip:text;color:transparent;text-decoration:none}}
+.nav a{{text-decoration:none;color:#b7c1d8;margin-left:14px;font-size:15px}}.nav a.cta{{background:linear-gradient(100deg,#7c3aed,#a855f7);color:#fff;font-weight:700;padding:9px 14px;border-radius:9px}}
+.hero{{padding:80px 0 56px;background:radial-gradient(circle at 78% 12%,#482080 0,transparent 38%),radial-gradient(circle at 12% 35%,#172554 0,transparent 34%)}}
+.eyebrow{{color:#c4b5fd;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:13px}}
+h1{{font-size:clamp(36px,6vw,64px);line-height:1.05;letter-spacing:-.04em;margin:16px 0}}
+.gradient{{background:linear-gradient(90deg,#c4b5fd,#f5d0fe 50%,#93c5fd);background-clip:text;color:transparent}}
+.hero p{{max-width:680px;color:#bac5db;font-size:19px}}
+.actions{{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}}
+.button{{display:inline-block;padding:13px 18px;border-radius:11px;background:#7c3aed;font-weight:750;text-decoration:none;color:#fff;border:0;cursor:pointer;font-size:15px}}
+.button.alt{{background:#151e35;border:1px solid #384766}}
+.section{{padding:56px 0}}.section h2{{font-size:clamp(26px,4vw,38px);margin:0 0 10px}}
+.lead{{color:var(--muted);max-width:680px}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:26px}}
+.card{{background:linear-gradient(145deg,#101a31,#0c1222);border:1px solid var(--line);border-radius:16px;padding:22px}}
+.card h3{{margin:10px 0 6px;font-size:19px}}.card p{{margin:0;color:var(--muted);font-size:15px}}
+.band{{border-block:1px solid var(--line);background:#0c1325}}
+.demo{{background:#0e1528;border:1px solid var(--line);border-radius:16px;padding:26px;margin-top:26px}}
+textarea,input[type=text]{{width:100%;background:#0a0f1f;border:1px solid #384766;color:#f8fafc;border-radius:10px;padding:12px;font:15px/1.5 system-ui}}
+textarea{{min-height:130px}}
+.out{{background:#0a0f1f;border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px;white-space:pre-wrap;font-size:14px;color:#c9d4ea;display:none}}
+footer{{border-top:1px solid var(--line);padding:38px 0;color:#8793ac;font-size:14px}}
+footer a{{color:#b9a4f7;text-decoration:none;margin-right:16px}}
+.badge{{display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);color:#34d399;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap navin"><a class="brand" href="https://ziontechgroup.com/">Zion Tech Group</a><nav><a href="https://ziontechgroup.com/services/">Services</a><a href="https://ziontechgroup.com/#app-network">App Network</a><a href="https://ziontechgroup.com/blog/">Blog</a><a class="cta" href="https://ziontechgroup.com/discovery/">Discovery $99</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap">
+<span class="badge">Part of the Zion App Network</span>
+<div class="eyebrow" style="margin-top:18px">AI infrastructure</div>
+<h1>One gateway. <span class='gradient'>Every model.</span></h1>
+<p>A unified LLM gateway pattern: provider routing, automatic fallbacks, semantic caching, per-team budgets and full logging.</p>
+<div class="actions"><a class="button" href="#demo">Try the live demo ↓</a><a class="button alt" href="https://ziontechgroup.com/contact/">Talk to the team</a></div>
+</div></section>
+<section class="section band"><div class="wrap"><div class="eyebrow">Capabilities</div><h2>What it does</h2><div class="grid"><div class="card"><div style="font-size:24px">🔀</div><h3>Routing</h3><p>Cost/latency/quality-based model selection.</p></div><div class="card"><div style="font-size:24px">🛟</div><h3>Fallbacks</h3><p>Provider outage? Automatic failover.</p></div><div class="card"><div style="font-size:24px">💾</div><h3>Semantic cache</h3><p>Reuse answers for similar prompts.</p></div><div class="card"><div style="font-size:24px">💰</div><h3>Budgets</h3><p>Per-team/per-feature spend caps.</p></div><div class="card"><div style="font-size:24px">📜</div><h3>Logging</h3><p>Full request audit trail.</p></div><div class="card"><div style="font-size:24px">🏢</div><h3>Platform</h3><p>Zion deploys managed LLM gateways.</p></div></div></div></section>
+<section class="section" id="demo"><div class="wrap"><div class="eyebrow">Interactive demo</div><h2>Try it now — free, in your browser</h2><p class="lead">Try the free analyzer:</p><div class="demo"><textarea id="p" placeholder="Describe your setup... e.g. 3 providers, no fallbacks, costs spiking"></textarea>
+<div style="margin-top:12px"><button class="button" onclick="run()">Analyze</button></div>
+<div class="out" id="o"></div></div></div></section>
+<section class="section band"><div class="wrap"><div class="eyebrow">Zion App Network</div><h2>Explore the other apps</h2><p class="lead">Every app is a standalone micro-SaaS site in the Zion network — built by AI, backed by real engineering services.</p><div class="grid" style="margin-top:24px">
+    <a href="https://ziontechgroup.com/zion-ai-prompt-forge/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">AI Prompt Forge</strong><br><span style="font-size:14px;color:#94a3b8">Prompt library, tester and optimizer for LLM teams.</span></a>
+    <a href="https://ziontechgroup.com/zion-ai-rfp-responder/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">RFP Responder</strong><br><span style="font-size:14px;color:#94a3b8">Turn RFPs into structured proposal drafts in minutes.</span></a>
+    <a href="https://ziontechgroup.com/zion-ai-accessibility-auditor/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">Accessibility Auditor</strong><br><span style="font-size:14px;color:#94a3b8">WCAG 2.2 scanning with fix guidance.</span></a>
+    <a href="https://ziontechgroup.com/llm-cost-calculator/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">LLM Cost Calculator</strong><br><span style="font-size:14px;color:#94a3b8">Compare GPT, Claude, Gemini and Llama pricing per workload.</span></a>
+    <a href="https://ziontechgroup.com/agent-sla-monitor/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">Agent SLA Monitor</strong><br><span style="font-size:14px;color:#94a3b8">Uptime and task-success SLAs for AI agent fleets.</span></a>
+    <a href="https://ziontechgroup.com/data-contract-validator/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">Data Contract Validator</strong><br><span style="font-size:14px;color:#94a3b8">Schema drift checks between producers and consumers.</span></a>
+    <a href="https://ziontechgroup.com/ai-red-team-playbook/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">AI Red-Team Playbook</strong><br><span style="font-size:14px;color:#94a3b8">Adversarial test scenarios per industry.</span></a>
+    <a href="https://ziontechgroup.com/finops-alert-triage/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">FinOps Alert Triage</strong><br><span style="font-size:14px;color:#94a3b8">Cloud cost anomaly explainer and triage.</span></a>
+    <a href="https://ziontechgroup.com/mcp-server-scaffold/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">MCP Server Scaffold</strong><br><span style="font-size:14px;color:#94a3b8">Generate Model Context Protocol servers.</span></a>
+    <a href="https://ziontechgroup.com/ai-vendor-comparison/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">AI Vendor Comparison</strong><br><span style="font-size:14px;color:#94a3b8">Side-by-side AI platform comparisons.</span></a>
+    <a href="https://ziontechgroup.com/synthetic-data-studio/" style="display:block;padding:18px;border:1px solid #312e81;border-radius:12px;background:#0b0620;color:#e2e8f0;text-decoration:none"><strong style="color:#c4b5fd">Synthetic Data Studio</strong><br><span style="font-size:14px;color:#94a3b8">Privacy-safe synthetic dataset generation.</span></a>
+</div>
+<p style="margin-top:24px"><a href="https://ziontechgroup.com/" style="color:#22d3ee">← Back to ziontechgroup.com</a> · <a href="https://ziontechgroup.com/services/" style="color:#22d3ee">All services</a> · <a href="https://ziontechgroup.com/plans/" style="color:#22d3ee">Plans</a></p>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Zion Tech Group · LLM Gateway · <a href="https://ziontechgroup.com/about/">About</a><a href="https://ziontechgroup.com/contact/">Contact</a><a href="https://ziontechgroup.com/privacy/">Privacy</a><a href="https://github.com/Zion-support/llm-gateway">Source on GitHub</a></div></footer>
+<script>function run(){var t=document.getElementById('p').value.toLowerCase();var o=document.getElementById('o');if(!t.trim()){o.style.display='block';o.textContent='Describe your scenario first.';return}var out='LLM GATEWAY REPORT\n================\n\n';var found=0;if(/no fallback|outage|single/.test(t)){out+='[FOUND] Add provider fallbacks with circuit breakers.\n';found++}
+if(/cost|spend|budget/.test(t)){out+='[FOUND] Enable semantic cache + small-model-first routing.\n';found++}
+if(/3 providers|multi/.test(t)){out+='[FOUND] Multi-provider: normalize via gateway, track per-provider quality.\n';found++}
+if(!found)out+='No specific signals detected. General best practices apply.\n';out+='\n\nZion delivers this end-to-end -> https://ziontechgroup.com/ai-services/';o.style.display='block';o.textContent=out}</script>
+
+<section class="zion-apps-network-footer" style="max-width:1100px;margin:40px auto;padding:24px;border-top:1px solid #26324d;color:#9aa8bd;font:14px/1.6 system-ui,sans-serif">
+  <p style="margin:0 0 8px;font-weight:700;color:#e8eef8">Zion Apps Network</p>
+  <p style="margin:0 0 10px">This app is part of the interlinked constellation on ziontechgroup.com.</p>
+  <p style="margin:0">
+    <a href="/apps-network/" style="color:#c4b5fd;margin-right:12px">Apps Network hub</a>
+    <a href="/apps/" style="color:#c4b5fd;margin-right:12px">Live catalog</a>
+    <a href="/apps/playbook/" style="color:#c4b5fd;margin-right:12px">Playbook</a>
+    <a href="/discovery/" style="color:#c4b5fd;margin-right:12px">Discovery $99</a>
+    <a href="/" style="color:#c4b5fd">Home</a>
+  </p>
+</section>
+<script src="/assets/js/apps-network.js" defer></script>
+</body></html>

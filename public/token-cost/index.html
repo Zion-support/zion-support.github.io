@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Token cost · Zion Tech Group</title>
+<meta name="description" content="Estimate monthly LLM spend from tokens per day. Official Zion menu only — Discovery $99, Consulting $499, Starter $2,500.">
+<link rel="canonical" href="https://ziontechgroup.com/token-cost/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:block;margin:12px 0 4px;color:var(--muted);font-size:.9rem}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:var(--ink)}
+.btn{display:inline-block;margin-top:12px;border:0;cursor:pointer;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;text-decoration:none}
+.result{font-size:1.35rem;font-weight:800;color:var(--accent);margin-top:10px}
+.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav></nav>
+<h1>Token cost estimator</h1>
+<p class="muted">You type tokens and a published list price. We do not invent a model invoice. Pair with <a href="/roi-calc/">ROI</a> and <a href="/finops-estimator/">FinOps estimator</a>.</p>
+<div class="card">
+<label>Tokens in + out / day<input id="tok" type="number" value="2000000" min="1"></label>
+<label>Working days / month<input id="days" type="number" value="22" min="1"></label>
+<label>List price (USD / 1M tokens)<select id="price">
+<option value="0.15">$0.15 — cheap small model</option>
+<option value="0.40" selected>$0.40 — mid-tier chat</option>
+<option value="2.50">$2.50 — capable chat</option>
+<option value="5.00">$5.00 — premium / reasoning</option>
+<option value="15">$15.00 — top-tier</option>
+</select></label>
+<label>Or custom USD / 1M<input id="custom" type="number" step="0.01" placeholder="leave blank to use the preset"></label>
+<button class="btn" type="button" onclick="run()">Estimate</button>
+<div id="out"></div>
+</div>
+<p><a class="btn" href="/discovery/">Continue to Discovery $99</a> <a class="btn" href="/agent-brief/">Write an agent brief</a></p>
+<h2>More from the network</h2>
+<div class="grid" data-apps-related></div>
+<p class="muted">Official menu: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>
+</div>
+<script>
+function run(){
+  var tok=+document.getElementById('tok').value||0;
+  var days=+document.getElementById('days').value||0;
+  var preset=+document.getElementById('price').value||0;
+  var custom=+document.getElementById('custom').value;
+  var perM=custom>0?custom:preset;
+  var monthly=(tok*days/1e6)*perM;
+  var yearly=monthly*12;
+  var rec='Discovery $99 — map the job and put a kill switch on spend.';
+  if(monthly>=2500) rec='Starter $2,500 for one governed job, or Growth $8,000/mo if this is already production volume.';
+  else if(monthly>=499) rec='Consulting $499 — roadmap plus a spend envelope before you scale tokens.';
+  document.getElementById('out').innerHTML='<div class="result">~$'+monthly.toLocaleString(undefined,{maximumFractionDigits:0})+' / month</div><p class="muted">~$'+yearly.toLocaleString(undefined,{maximumFractionDigits:0})+' / year at $'+perM+' per 1M tokens. '+rec+'</p>';
+}
+run();
+</script>
+<script src="/assets/js/apps-network.js" defer></script>
+
+<section class="zion-apps-network-footer" style="max-width:1100px;margin:40px auto;padding:24px;border-top:1px solid #26324d;color:#9aa8bd;font:14px/1.6 system-ui,sans-serif">
+  <p style="margin:0 0 8px;font-weight:700;color:#e8eef8">Zion Apps Network</p>
+  <p style="margin:0 0 10px">This app is part of the interlinked constellation on ziontechgroup.com.</p>
+  <p style="margin:0">
+    <a href="/apps-network/" style="color:#c4b5fd;margin-right:12px">Apps Network hub</a>
+    <a href="/apps/" style="color:#c4b5fd;margin-right:12px">Live catalog</a>
+    <a href="/apps/playbook/" style="color:#c4b5fd;margin-right:12px">Playbook</a>
+    <a href="/discovery/" style="color:#c4b5fd;margin-right:12px">Discovery $99</a>
+    <a href="/" style="color:#c4b5fd">Home</a>
+  </p>
+</section>
+</body>
+</html>

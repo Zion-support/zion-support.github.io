@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apps playbook · Zion Tech Group</title>
+<meta name="description" content="Which Zion apps-network tool to open first: spend, outage, governance, or bid. Links every working app on ziontechgroup.com.">
+<link rel="canonical" href="https://ziontechgroup.com/apps/playbook/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+h1{margin:12px 0}.muted{color:var(--muted)}ol{color:var(--muted)}li{margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+.btn{display:inline-block;margin-top:8px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav></nav>
+<h1>How to use the apps network</h1>
+<p class="muted">These tools live on GitHub Pages at <a href="https://ziontechgroup.com/apps/">ziontechgroup.com/apps/</a>. They do not create SKUs. They help a buyer (or an agent) walk into Discovery with a number, a brief, or a score.</p>
+
+<div class="card">
+<h2>If the pain is money</h2>
+<ol>
+<li>Open <a href="/roi-calc/">ROI calculator</a> — hours × loaded rate vs the official menu.</li>
+<li>If the spend is model calls, open <a href="/token-cost/">token cost</a>.</li>
+<li>If the spend is cloud, open <a href="/finops-estimator/">FinOps estimator</a>, then <a href="/cloud-waste/">cloud waste</a>, then <a href="/finops-consulting/">FinOps consulting</a>.</li>
+</ol>
+</div>
+<div class="card">
+<h2>If the pain is an outage</h2>
+<ol>
+<li><a href="/incident-cost/">Incident cost</a> turns hours-down into a dollar figure.</li>
+<li><a href="/sla-calculator/">SLA calculator</a> shows the contract allowance and penalty math.</li>
+<li><a href="/change-risk/">Change risk</a> scores the next change before you book the window.</li>
+<li><a href="/patch-window/">Patch window</a> sizes the next change night so the same outage does not repeat.</li>
+<li>Product path: <a href="/zion-ai-incident-commander/">AI Incident Commander</a> · <a href="/ops-runbook-ai/">Ops Runbook AI</a>.</li>
+</ol>
+</div>
+<div class="card">
+<h2>If the pain is “we want an agent”</h2>
+<ol>
+<li><a href="/stack-audit/">Stack audit</a> — ten gates. Under 5 → Discovery. 5–7 → Consulting. 8+ → Starter.</li>
+<li><a href="/ai-governance-checklist/">AI governance</a> — policy, HITL, PII, spend tracking.</li>
+<li><a href="/agent-brief/">Agent brief</a> + <a href="/prompt-library/">prompt library</a> — paste into Discovery.</li>
+<li>Product path: <a href="/llm-gateway/">LLM Gateway</a> · <a href="/prompt-shield/">Prompt Shield</a> · <a href="/zion-ai-agent-builder/">AI Agent Builder</a>.</li>
+</ol>
+</div>
+<div class="card">
+<h2>If the pain is a public bid</h2>
+<ol>
+<li><a href="/rfp-readiness/">RFP readiness</a> — score the packet before a week of writing.</li>
+<li><a href="/edital-desk/">Edital desk</a> — órgão, objeto, lacunas. Never invent hardware price.</li>
+<li>Product path: <a href="/licitacao-radar/">Licitação Radar</a> · <a href="/ai-tender-scout/">AI Tender Scout</a>.</li>
+<li>Then <a href="/discovery/">Discovery $99</a> or <a href="/contact/">contact</a>.</li>
+</ol>
+</div>
+
+<p>Official menu only: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>
+<p><a class="btn" href="/apps-network/">Apps Network hub</a> <a class="btn" href="/apps/">Live catalog</a> <a class="btn" href="/discovery/">Discovery $99</a></p>
+<h2>Every app</h2>
+<div class="grid" data-apps-related></div>
+</div>
+<script src="/assets/js/apps-network.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Change Risk Scorer · Zion Apps Network</title>
+<meta name="description" content="Score change risk before a patch window — blast radius, rollback readiness, and change nights. Part of the Zion Apps Network.">
+<link rel="canonical" href="https://ziontechgroup.com/change-risk/">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+label{display:block;margin:14px 0 6px;color:var(--muted);font-size:.9rem}
+input,select{width:100%;background:#0a1220;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:18px}
+.btn{display:inline-block;margin-top:14px;color:#042033;background:var(--accent);padding:10px 14px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+.muted{color:var(--muted)}.score{font-size:2rem;font-weight:800;margin:8px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="apps-nav" data-apps-nav aria-label="Apps network"></nav>
+<p class="kicker muted" style="text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:800">Ops · Zion Apps Network</p>
+<h1>Change risk scorer</h1>
+<p class="muted">Estimate change risk before you book a patch window. Pairs with <a href="/patch-window/">Patch window</a> and <a href="/incident-cost/">Incident cost</a>.</p>
+<div class="card">
+  <div class="grid">
+    <div><label for="systems">Systems touched</label><input id="systems" type="number" min="1" value="4"></div>
+    <div><label for="blast">Blast radius</label>
+      <select id="blast"><option value="1">Single service</option><option value="2" selected>Service group</option><option value="3">Platform / shared</option><option value="4">Customer-facing core</option></select>
+    </div>
+    <div><label for="rollback">Rollback ready?</label>
+      <select id="rollback"><option value="0">Yes, tested</option><option value="1" selected>Partial</option><option value="2">No clear rollback</option></select>
+    </div>
+    <div><label for="window">Change window (hours)</label><input id="window" type="number" min="1" value="3"></div>
+  </div>
+  <button class="btn" type="button" id="go">Score risk</button>
+  <div id="out" class="card" style="display:none;margin-top:16px">
+    <div class="score" id="score"></div>
+    <p id="blurb" class="muted"></p>
+    <p><a href="/patch-window/">Open Patch window →</a> · <a href="/discovery/">Book Discovery $99</a> · <a href="/apps/">Apps hub</a></p>
+  </div>
+</div>
+<section style="margin-top:28px">
+  <h2>Related in the network</h2>
+  <div class="apps-related grid" data-apps-related data-limit="6" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px"></div>
+</section>
+</div>
+<script>
+(function(){
+  function score(){
+    var s=+document.getElementById('systems').value||1;
+    var b=+document.getElementById('blast').value;
+    var r=+document.getElementById('rollback').value;
+    var w=+document.getElementById('window').value||1;
+    var raw=s*b*2 + r*8 + Math.max(0,4-w)*3;
+    var band=raw<18?'Low':raw<32?'Medium':raw<48?'High':'Critical';
+    document.getElementById('out').style.display='block';
+    document.getElementById('score').textContent=band+' · '+raw+' pts';
+    document.getElementById('blurb').textContent=band==='Low'
+      ?'Likely a calm patch night. Still pair with Patch window for crew sizing.'
+      :band==='Medium'
+      ?'Tighten rollback and cut blast radius before the window.'
+      :'Do not ship cold. Use Discovery to map one process, or Consulting for a change gate.';
+  }
+  document.getElementById('go').addEventListener('click',score);
+})();
+</script>
+<script src="/assets/js/apps-network.js" defer></script>
+</body>
+</html>
