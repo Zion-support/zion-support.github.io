@@ -1,0 +1,41 @@
+{
+  "name": "Zion Tech Group apps network",
+  "canonical": "https://ziontechgroup.com/apps-network/",
+  "hubs": ["/apps/", "/apps-network/", "/zion-app-network/", "/free-ai-it-tools/"],
+  "note": "HTTPS paths on the main site only. network.ziontechgroup.com fails TLS — do not send buyers there.",
+  "menu": ["Discovery $99", "Consulting $499", "Starter $2,500", "Growth $8,000/mo"],
+  "categories": {
+    "money": "/apps/categories/money/",
+    "ops": "/apps/categories/ops/",
+    "govern": "/apps/categories/govern/"
+  },
+  "apps": [
+    {"href": "/apps-network/", "title": "Apps Network hub", "group": "hub"},
+    {"href": "/apps/", "title": "Live catalog", "group": "hub"},
+    {"href": "/zion-app-network/", "title": "Full directory", "group": "hub"},
+    {"href": "/roi-calc/", "title": "ROI calculator", "group": "money"},
+    {"href": "/token-cost/", "title": "Token cost", "group": "money"},
+    {"href": "/finops-estimator/", "title": "FinOps estimator", "group": "money"},
+    {"href": "/cloud-waste/", "title": "Cloud waste", "group": "money"},
+    {"href": "/finops-autopilot/", "title": "FinOps Autopilot", "group": "money"},
+    {"href": "/cloud-cost-estimator/", "title": "Cloud cost estimator", "group": "money"},
+    {"href": "/sla-calculator/", "title": "SLA calculator", "group": "ops"},
+    {"href": "/incident-cost/", "title": "Incident cost", "group": "ops"},
+    {"href": "/patch-window/", "title": "Patch window", "group": "ops"},
+    {"href": "/change-risk/", "title": "Change risk", "group": "ops"},
+    {"href": "/zion-ai-incident-commander/", "title": "AI Incident Commander", "group": "ops"},
+    {"href": "/ops-runbook-ai/", "title": "Ops Runbook AI", "group": "ops"},
+    {"href": "/ai-governance-checklist/", "title": "AI governance", "group": "govern"},
+    {"href": "/stack-audit/", "title": "Stack audit", "group": "govern"},
+    {"href": "/rfp-readiness/", "title": "RFP readiness", "group": "govern"},
+    {"href": "/edital-desk/", "title": "Edital desk", "group": "govern"},
+    {"href": "/prompt-shield/", "title": "Prompt Shield", "group": "govern"},
+    {"href": "/licitacao-radar/", "title": "Licitação Radar", "group": "govern"},
+    {"href": "/prompt-library/", "title": "Prompt library", "group": "work"},
+    {"href": "/agent-brief/", "title": "Agent brief", "group": "work"},
+    {"href": "/llm-gateway/", "title": "LLM Gateway", "group": "ai"},
+    {"href": "/model-observatory/", "title": "Model Observatory", "group": "ai"},
+    {"href": "/zion-ai-field-dispatch-optimizer/", "title": "Field Dispatch", "group": "field"},
+    {"href": "/apps/playbook/", "title": "Playbook", "group": "hub"}
+  ]
+}

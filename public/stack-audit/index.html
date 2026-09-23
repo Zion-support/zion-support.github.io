@@ -6,6 +6,7 @@
 <title>Stack Audit · Zion Tech Group</title>
 <link rel="canonical" href="https://ziontechgroup.com/stack-audit/">
 <meta name="description" content="Ten checks that route you to Discovery $99, Consulting $499 or Starter $2,500.">
+<link rel="stylesheet" href="/assets/css/apps-network.css">
 <style>
 :root{--bg:#0b1020;--card:#141a2e;--ink:#eef2ff;--mut:#9aa3b8}
 *{box-sizing:border-box}body{margin:0;font:16px/1.5 ui-sans-serif,system-ui;background:var(--bg);color:var(--ink)}
@@ -19,15 +20,18 @@ button,.buy{display:inline-block;margin:8px 8px 0 0;padding:10px 16px;border:0;b
 </head>
 <body>
 <main>
-<nav><a href="/">Home</a> · <a href="/apps/">Apps</a> · <a href="/roi-calc/">ROI Calc</a> · <a href="/agent-brief/">Agent brief</a> · <a href="/en/plans/">Plans</a></nav>
+<nav class="apps-nav" data-apps-nav></nav>
 <h1>Ops stack audit</h1>
 <p>Ten yes/no checks. Score picks the next official SKU. Not a custom quote.</p>
 <div class="card" id="q"></div>
 <div class="card"><div id="out"></div>
 <p class="fine">Official menu: Discovery $99 · Consulting $499 · Starter $2,500 · Growth $8,000/mo.</p>
-<p><a class="buy" href="/discovery/">Discovery $99</a> <a class="buy" href="/agent-brief/">Agent brief</a> <a class="buy" href="/roi-calc/">ROI calc</a></p>
+<p><a class="buy" href="/discovery/">Discovery $99</a> <a class="buy" href="/agent-brief/">Agent brief</a> <a class="buy" href="/ai-governance-checklist/">AI governance</a></p>
 </div>
+<h2>More from the network</h2>
+<div class="apps-grid" data-apps-related></div>
 </main>
+<script src="/assets/js/apps-network.js" defer></script>
 <script>
 const qs=['One named owner for the process.','System of record is written down.','Irreversible writes have a human gate.','Spend envelope or kill switch for model calls.','Exceptions have a queue and an SLA owner.','The job has a stop rule.','Logs can replay the last 20 runs.','PII is stripped before any LLM call.','A human can disable the agent in one click.','Success is one metric, not a portfolio KPI.'];
 const box=document.getElementById('q');
@@ -40,5 +44,17 @@ document.getElementById('go').onclick=function(){
   document.getElementById('out').innerHTML='<b>'+n+'/10 ready.</b> '+rec;
 };
 </script>
+
+<section class="zion-apps-network-footer" style="max-width:1100px;margin:40px auto;padding:24px;border-top:1px solid #26324d;color:#9aa8bd;font:14px/1.6 system-ui,sans-serif">
+  <p style="margin:0 0 8px;font-weight:700;color:#e8eef8">Zion Apps Network</p>
+  <p style="margin:0 0 10px">This app is part of the interlinked constellation on ziontechgroup.com.</p>
+  <p style="margin:0">
+    <a href="/apps-network/" style="color:#c4b5fd;margin-right:12px">Apps Network hub</a>
+    <a href="/apps/" style="color:#c4b5fd;margin-right:12px">Live catalog</a>
+    <a href="/apps/playbook/" style="color:#c4b5fd;margin-right:12px">Playbook</a>
+    <a href="/discovery/" style="color:#c4b5fd;margin-right:12px">Discovery $99</a>
+    <a href="/" style="color:#c4b5fd">Home</a>
+  </p>
+</section>
 </body>
 </html>
