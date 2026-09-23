@@ -35,6 +35,9 @@ permissions:
         default: true
         type: boolean
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   live-content-ideas:
     runs-on: ubuntu-latest

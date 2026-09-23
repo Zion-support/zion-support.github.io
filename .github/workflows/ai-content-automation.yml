@@ -44,6 +44,9 @@ permissions:
         default: false
         type: boolean
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   content:
     runs-on: ubuntu-latest
