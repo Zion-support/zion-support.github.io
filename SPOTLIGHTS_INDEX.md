@@ -16,6 +16,9 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_DATA_ENERGY.md](APP_NETWORK_SPOTLIGHT_DATA_ENERGY.md)
 - [APP_NETWORK_SPOTLIGHT_LLM_HR.md](APP_NETWORK_SPOTLIGHT_LLM_HR.md)
 - [APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md](APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md)
+- [APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md](APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md) — MSP & partner ecosystem apps with plans pricing
+- [APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md](APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md) — Sales & lead-gen AI suite: Sales Email Copilot, Advertising Optimizer, Growth Marketing Hub, CX Hub, Email Classifier, Churn Radar
+- [APP_NETWORK_SPOTLIGHT_ECOMMERCE_RETAIL.md](APP_NETWORK_SPOTLIGHT_ECOMMERCE_RETAIL.md) — E-commerce & retail AI: Product Description Writer, Pricing Optimizer, Inventory Forecaster, Review Insights, Returns Reducer, Cart Recovery
 
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
