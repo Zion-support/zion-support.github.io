@@ -801,7 +801,7 @@ function main() {
       `import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Demo Sandbox | Zion Tech Group',
+  title: 'AI Demo Sandbox',
   description: 'Explore Zion Tech Group AI demos — readiness assessments, URL audits, and solution configurators.',
   alternates: { canonical: 'https://ziontechgroup.com/ai/demo' },
 };
