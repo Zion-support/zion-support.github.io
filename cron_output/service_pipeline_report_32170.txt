@@ -1,0 +1,31 @@
+## Service Pipeline Deployer — Cron Run Report
+
+**Script:** `generate_pages_for_new.py --once` (~/.hermes/scripts/)
+**Date:** 2026-09-23 UTC
+**Branch:** hero-carousel
+
+### Results
+- **Pages generated:** 50 (batch 32120→32170)
+- **Pages skipped (already existed):** 0
+- **Progress file:** 32120 → 32170
+- **Catalog total:** 35,201 services (3,031 remaining)
+
+### Sitemap
+- **Total URLs:** 32,036 (32 static + 32,004 service pages)
+- **Written to:** public/sitemap.xml
+
+### Files
+- **App pages:** 50 × app/services/<id>/page.tsx
+- **HTML fallbacks:** 50 × public/services/<id>/index.html
+- **Total committed:** 102 files, 9,551 insertions
+
+### Git
+- **Commit:** 109abdd1382e on hero-carousel
+- **Push:** SUCCESS (fast-forward, local HEAD == remote HEAD verified)
+- **Deploy status:** Staged commits only (hero-carousel). Production deploy requires merge to main.
+- **Live site:** New service pages return 404 on ziontechgroup.com — expected (hero-carousel is integration-only; deploy-on-push.yml triggers on main push only).
+
+### Note
+- Pre-run script output was complete; script was NOT re-run (saved ~600s timeout window) per established protocol.
+- `--once` flag is a no-op (script has no argparse; always processes one batch of 50).
+- Stale .git/index.lock removed before staging.
