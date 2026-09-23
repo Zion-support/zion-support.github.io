@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Model Cost Calculator | Zion Tech Group</title>
+<meta name="description" content="Compare two model price cards from the token rates you type.">
+<link rel="canonical" href="https://ziontechgroup.com/ai-model-cost-calculator/">
+<meta name="robots" content="index,follow">
+<style>body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}nav a{color:#e2e8f0;margin-right:12px;text-decoration:none}h1{color:#fff;letter-spacing:-.03em;font-size:1.8rem}h2{color:#e2e8f0;font-size:1.05rem}label{display:block;margin:12px 0 6px;color:#94a3b8}input,textarea,select{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}footer,p.note{margin-top:22px;color:#94a3b8}.checks label{display:flex;gap:8px;align-items:center} .checks input{width:auto}</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/apps/">Apps</a><a href="/app-network/">App Network</a><a href="/discovery/">Discovery $99</a><a href="/plans/">Plans</a></nav>
+<h1>AI Model Cost Calculator</h1>
+<p>Compare two model price cards from the token rates you type. The math stays in your browser. Nothing is uploaded.</p>
+<label>Model A name</label><input id="na" value="Model A">
+<label>Model A input / output USD per 1M tokens</label><input id="ai" type="number" min="0" step="0.01" value="3"><input id="ao" type="number" min="0" step="0.01" value="15">
+<label>Model B name</label><input id="nb" value="Model B">
+<label>Model B input / output USD per 1M tokens</label><input id="bi" type="number" min="0" step="0.01" value="0.5"><input id="bo" type="number" min="0" step="0.01" value="2">
+<label>Input tokens per call</label><input id="tin" type="number" min="0" step="1" value="2000">
+<label>Output tokens per call</label><input id="tout" type="number" min="0" step="1" value="600">
+<label>Calls per month</label><input id="calls" type="number" min="0" step="1" value="20000">
+<button type="button" onclick="calc()">Compare</button>
+<pre id="out" hidden></pre>
+<p class="note">Related: <a href="/llm-cost-calculator/">LLM cost calculator</a> · <a href="/token-cost/">Token cost</a> · <a href="/finops-estimator/">FinOps estimator</a></p>
+<p class="note"><a href="/apps/">All apps</a> · <a href="/app-network/">Directory</a> · <a href="/discovery/">Discovery $99</a> · <a href="/contact/">Contact</a></p>
+<script>
+
+function show(lines){const o=document.getElementById('out');o.hidden=false;o.textContent=lines.join('\n');}
+function num(id){return Number(document.getElementById(id).value)||0;}
+function text(id){return (document.getElementById(id).value||'').trim();}
+
+function calc(){
+  const tin=num('tin'), tout=num('tout'), calls=num('calls');
+  const cost=(i,o)=>((tin*i)+(tout*o))/1e6*calls;
+  const a=cost(num('ai'),num('ao')), b=cost(num('bi'),num('bo'));
+  const cheaper=a===b?'Tie':(a<b?text('na'):text('nb'));
+  show(['Monthly model bill (typed prices only)', text('na')+': $'+a.toFixed(2), text('nb')+': $'+b.toFixed(2), 'Lower bill: '+cheaper, 'Confirm both price cards on the provider invoice before you budget.']);
+}
+
+</script>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechwroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+</body>
+</html>
