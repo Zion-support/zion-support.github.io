@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AI red-team scoping playbook | Zion Tech Group</title>
+<meta name="description" content="Scope an authorized AI test: owner, data class, evidence, and stop rules. This page does not publish attack strings."/>
+<link rel="canonical" href="https://ziontechgroup.com/ai-red-team-playbook/"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main class="container">
+  <section class="hero">
+    <h1>AI red-team scoping playbook</h1>
+    <p class="lead">Use this worksheet before anyone tests a model that can see customer data. It records who authorized the test and what evidence to keep. It does not include attack strings, jailbreak text, or payloads. Those stay inside an engagement with a named owner. Defensive checks you can run yourself are on <a href="/prompt-shield/">Prompt Shield</a>.</p>
+  </section>
+  <section>
+    <div class="grid">
+      <article class="card"><h3>Name the system</h3><p>Write the model, the tool it can call, and the data class it can read. If you cannot name the data class, the test waits.</p></article>
+      <article class="card"><h3>Name the authorizer</h3><p>One person signs the window: start, stop, and which environments are in bounds. Production customer actions are out of bounds unless that sentence is in the note.</p></article>
+      <article class="card"><h3>Evidence, not a trophy</h3><p>Keep the prompt id, model version, time, and the outcome a reviewer can replay. Drop screenshots that contain secrets.</p></article>
+      <article class="card"><h3>Stop rules</h3><p>Stop when the test would email a customer, move money, change a production config, or touch data you did not list. Log the stop. Do not improvise a second path.</p></article>
+    </div>
+  </section>
+  <section>
+    <h2>Questions by industry</h2>
+    <div class="grid">
+      <article class="card"><h3>Healthcare</h3><p>Would this test read or write PHI? If yes, the healthcare hub and a BAA conversation come before any prompt. <a href="/healthcare-it-hipaa/">Healthcare IT</a></p></article>
+      <article class="card"><h3>Finance</h3><p>Would this test place, hold, or release a payment? If yes, it is a process review, not a playground. <a href="/fintech-it-ai/">Fintech IT</a></p></article>
+      <article class="card"><h3>Support</h3><p>Would this test send a message a customer can see? Draft it in a closed queue first. <a href="/support-deflection-analyzer/">Support deflection</a></p></article>
+    </div>
+    <p class="lead">Related: <a href="/ai-governance-checklist/">AI governance checklist</a> · <a href="/ai-compliance-auditor/">Compliance auditor</a> · <a href="/prompt-shield/">Prompt Shield</a></p>
+  </section>
+  <section class="cta-strip">
+    <h2>Next step</h2>
+    <a class="btn primary" href="/discovery/">Discovery $99</a>
+    <a class="btn secondary" href="/apps/">App catalog</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

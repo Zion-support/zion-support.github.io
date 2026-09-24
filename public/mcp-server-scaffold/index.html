@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MCP server scaffold | Zion Tech Group</title>
+<meta name="description" content="Print a minimal Model Context Protocol tool descriptor from a name and a one-line description."/>
+<link rel="canonical" href="https://ziontechgroup.com/mcp-server-scaffold/"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main class="container">
+  <section class="hero">
+    <h1>MCP server scaffold</h1>
+    <p class="lead">Name one tool. This page prints a descriptor you can paste into a server you own. It does not deploy anything and it does not call the network.</p>
+  </section>
+  <section>
+    <label>Server name <input id="srv" value="ops-notes"></label>
+    <label>Tool name <input id="tool" value="read_runbook"></label>
+    <label>What the tool does, in one sentence <input id="desc" value="Return the runbook title for an incident id the caller already has."></label>
+    <p><button class="btn primary" type="button" onclick="build()">Print scaffold</button></p>
+    <pre id="out" hidden></pre>
+    <p class="lead">Keep the tool read-only until a person reviews the first call. Related: <a href="/ops-runbook-ai/">Ops runbook</a> · <a href="/apps/">App catalog</a> · <a href="/ai-agent-workflow-builder/">Agent workflow builder</a></p>
+  </section>
+  <style>label{display:block;margin:10px 0}input{width:100%;max-width:640px;padding:8px;border-radius:8px;border:1px solid #26324d;background:#0e1528;color:#fff;box-sizing:border-box}pre{white-space:pre-wrap}</style>
+  <script>
+  function slug(s){return (s||"tool").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,40)||"tool";}
+  function build(){
+    const srv=slug(document.getElementById("srv").value);
+    const tool=slug(document.getElementById("tool").value);
+    const desc=(document.getElementById("desc").value||"").trim().slice(0,180);
+    const spec={name:srv,version:"0.1.0",tools:[{name:tool,description:desc,input:{type:"object",properties:{id:{type:"string"}},required:["id"]}}]};
+    const note=[
+      "Files to add in a repo you control:",
+      "package.json  name "+srv,
+      "src/server.ts  register the tool below and return a string",
+      "Do not grant write, shell, or credential tools in the first commit.",
+      JSON.stringify(spec,null,2)
+    ];
+    const o=document.getElementById("out"); o.hidden=false; o.textContent=note.join("\n");
+  }
+  </script>
+  <section class="cta-strip">
+    <h2>Next step</h2>
+    <a class="btn primary" href="/discovery/">Discovery $99</a>
+    <a class="btn secondary" href="/apps/">App catalog</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

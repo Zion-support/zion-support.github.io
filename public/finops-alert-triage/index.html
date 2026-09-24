@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>FinOps alert triage | Zion Tech Group</title>
+<meta name="description" content="Classify a cloud spend alert against a baseline you type, then pick the next owner."/>
+<link rel="canonical" href="https://ziontechgroup.com/finops-alert-triage/"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main class="container">
+  <section class="hero">
+    <h1>FinOps alert triage</h1>
+    <p class="lead">Paste the baseline and the alert. The note stays in the browser and tells you whether to assign an owner, watch, or open a rightsizing pass. Nothing is uploaded.</p>
+  </section>
+  <section>
+    <label>Service or account <input id="svc" placeholder="prod-api / aws account"></label>
+    <label>Baseline this month ($) <input id="base" type="number" min="0" value="10000"></label>
+    <label>Alert amount ($) <input id="alert" type="number" min="0" value="14000"></label>
+    <label>Named owner already? <select id="owner"><option value="no">No</option><option value="yes">Yes</option></select></label>
+    <p><button class="btn primary" type="button" onclick="triage()">Triage</button></p>
+    <pre id="out" hidden></pre>
+    <p class="lead">Related: <a href="/finops-estimator/">FinOps estimator</a> · <a href="/cloud-waste/">Cloud waste</a> · <a href="/finops-autopilot/">FinOps Autopilot</a> · <a href="/cloud-cost-estimator/">Cloud cost estimator</a></p>
+  </section>
+  <style>label{display:block;margin:10px 0}input,select{padding:8px;border-radius:8px;border:1px solid #26324d;background:#0e1528;color:#fff}pre{white-space:pre-wrap}</style>
+  <script>
+  function triage(){
+    const base=Number(document.getElementById("base").value)||0;
+    const alert=Number(document.getElementById("alert").value)||0;
+    const svc=document.getElementById("svc").value.trim()||"(unnamed service)";
+    const owner=document.getElementById("owner").value;
+    const delta=base?Math.round((alert-base)/base*100):0;
+    let next="Watch. The move is under 20% of the baseline you typed.";
+    if(!base) next="Set a baseline before you treat the alert as an anomaly.";
+    else if(delta>=20 && owner==="no") next="Assign an owner before anyone rightsizes. An unowned spike gets re-bought next month.";
+    else if(delta>=20) next="Open a rightsizing pass on this service. Use the FinOps estimator for the next 30 days, not a new commitment yet.";
+    else if(owner==="no") next="Delta is small. Still name an owner so the next spike has a person.";
+    const o=document.getElementById("out"); o.hidden=false;
+    o.textContent=[svc, "Delta: "+delta+"%", next, "Figures are the ones you typed."].join("\n");
+  }
+  </script>
+  <section class="cta-strip">
+    <h2>Next step</h2>
+    <a class="btn primary" href="/discovery/">Discovery $99</a>
+    <a class="btn secondary" href="/apps/">App catalog</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

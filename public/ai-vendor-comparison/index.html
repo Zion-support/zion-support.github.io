@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AI vendor comparison | Zion Tech Group</title>
+<meta name="description" content="Score two AI vendors on criteria you type. The page does not rank products for you."/>
+<link rel="canonical" href="https://ziontechgroup.com/ai-vendor-comparison/"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main class="container">
+  <section class="hero">
+    <h1>AI vendor comparison</h1>
+    <p class="lead">Type two names and a score from 1 to 5 on each row. The sheet only adds what you entered. It does not look up vendors or invent a winner from a catalog.</p>
+  </section>
+  <section>
+    <label>Vendor A <input id="a" value="Vendor A"></label>
+    <label>Vendor B <input id="b" value="Vendor B"></label>
+    <div class="grid" id="rows"></div>
+    <p><button class="btn primary" type="button" id="go">Compare</button></p>
+    <pre id="out" hidden></pre>
+    <p class="lead">Related: <a href="/ai-readiness-score/">Readiness score</a> · <a href="/ai-governance-checklist/">Governance checklist</a> · <a href="/discovery/">Discovery $99</a></p>
+  </section>
+  <style>label{display:block;margin:10px 0}input{padding:8px;border-radius:8px;border:1px solid #26324d;background:#0e1528;color:#fff}pre{white-space:pre-wrap}</style>
+  <script>
+  const criteria=["Data residency you can name","Human override before a customer action","Audit log you can export","Exit cost you can estimate","Support hours that match your on-call","Eval set you already own"];
+  const box=document.getElementById("rows");
+  criteria.forEach((c,i)=>{
+    const d=document.createElement("article");
+    d.className="card";
+    d.innerHTML="<h3>"+c+"</h3><label>A <input id='a"+i+"' type='number' min='1' max='5' value='3'></label><label>B <input id='b"+i+"' type='number' min='1' max='5' value='3'></label>";
+    box.appendChild(d);
+  });
+  document.getElementById("go").onclick=()=>{
+    let as=0,bs=0,gaps=[];
+    criteria.forEach((c,i)=>{
+      const x=Math.min(5,Math.max(1,Number(document.getElementById("a"+i).value)||0));
+      const y=Math.min(5,Math.max(1,Number(document.getElementById("b"+i).value)||0));
+      as+=x; bs+=y;
+      if(x!==y) gaps.push(c+": "+x+" vs "+y);
+    });
+    const A=document.getElementById("a").value.trim()||"A";
+    const B=document.getElementById("b").value.trim()||"B";
+    const lead=as===bs?"Tie on the scores you typed.":(as>bs?A:B)+" leads "+Math.abs(as-bs)+" point(s).";
+    const o=document.getElementById("out");
+    o.hidden=false;
+    o.textContent=[A+" "+as, B+" "+bs, lead, gaps.join("\n")||"No gaps on these rows.", "Scores are yours. This is not a market ranking."].join("\n");
+  };
+  </script>
+  <section class="cta-strip">
+    <h2>Next step</h2>
+    <a class="btn primary" href="/discovery/">Discovery $99</a>
+    <a class="btn secondary" href="/apps/">App catalog</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
