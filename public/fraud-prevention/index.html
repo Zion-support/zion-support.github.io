@@ -5,5 +5,5 @@
 <label>Evidence on hand</label><textarea id="ev" rows="3"></textarea>
 <label>Who can decide</label><input id="who" placeholder="Controller">
 <button type="button" onclick="card()">Write review card</button><pre id="out" hidden></pre>
-<p>Related: <a href="/ai-compliance-auditor/">Compliance auditor</a> · <a href="/discovery/">Discovery</a></p>
+<p>Related: <a href="/compliance-desk/">Compliance auditor</a> · <a href="/discovery/">Discovery</a></p>
 <script>function card(){const g=id=>document.getElementById(id).value.trim();const lines=["Fraud review card","Event: "+(g("event")||"(not named)"),"Evidence: "+(g("ev")||"(none yet)"),"Decider: "+(g("who")||"(not named)"),"","Hold the change until the decider has looked at the evidence. Do not email account numbers in the ticket."];const o=document.getElementById("out");o.hidden=false;o.textContent=lines.join(String.fromCharCode(10));}</script><footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer></div></body></html>
