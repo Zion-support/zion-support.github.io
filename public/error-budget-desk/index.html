@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Error budget desk | Zion Tech Group</title>
+<meta name="description" content="Turn an availability target and a window into allowed downtime. Nothing is uploaded."/>
+<link rel="canonical" href="https://ziontechgroup.com/error-budget-desk/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#0f172a;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/sla/">Service levels</a><a href="/kubernetes-linter/">Kubernetes linter</a><a href="/apps/">Apps</a><a href="/contact/">Contact</a></nav>
+<h1>Error budget desk</h1>
+<p>The older SLO page still links hostnames that do not resolve. Use this one. Type the target and the window. The page does not call a monitoring system.</p>
+<label>Service name<input id="name" placeholder="Checkout API"></label>
+<label>Availability target (percent)<input id="slo" inputmode="decimal" placeholder="99.9"></label>
+<label>Window (days)<input id="days" inputmode="decimal" placeholder="30"></label>
+<button type="button" id="go">Calculate</button>
+<pre id="out" hidden></pre>
+<p>Related: <a href="/sla/">Service levels</a> · <a href="/sla-calculator/">SLA calculator</a> · <a href="/site-uptime-watchdog/">Uptime watchdog</a> · <a href="/runbook-desk/">Runbook desk</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const n=id=>Number(String(document.getElementById(id).value).replace(/[^0-9.]/g,""))||0;
+  const slo=n("slo"), days=n("days");
+  const budget=(1-slo/100)*days*24*60;
+  const lines=[
+    "Service: "+(document.getElementById("name").value.trim()||"(unnamed)"),
+    "Target percent: "+slo,
+    "Window days: "+days,
+    "Allowed downtime minutes: "+(Number.isFinite(budget)?budget.toFixed(1):"0"),
+    "",
+    "This is (100 minus the target) times the window. Nothing was uploaded."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+</body>
+</html>
