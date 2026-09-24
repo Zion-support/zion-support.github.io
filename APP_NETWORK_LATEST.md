@@ -8,6 +8,28 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📓 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🚀 Batch 33 — AI Field Service & Smart Dispatch (September 24, 2026 — Late Night Wave)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP24_BATCH33.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH33.md) · Showcase page: https://ziontechgroup.com/apps/september-2026-batch3.html
+
+- **[Smart Dispatch Optimizer](https://ziontechgroup.com/smart-dispatch-optimizer/)** — match FEs & technicians to jobs by skill, location, SLA & cost ([repo](https://github.com/Zion-support/smart-dispatch-optimizer))
+- **[Field Tech Marketplace](https://ziontechgroup.com/field-tech-marketplace/)** — vetted field engineers on demand, 50+ countries ([repo](https://github.com/Zion-support/field-tech-marketplace))
+- **[Geo Coverage Finder](https://ziontechgroup.com/geo-coverage-finder/)** — live coverage map by city, skill & response time ([repo](https://github.com/Zion-support/geo-coverage-finder))
+- **[Onsite Work Order Copilot](https://ziontechgroup.com/onsite-work-order-copilot/)** — AI checklists, parts & digital sign-off ([repo](https://github.com/Zion-support/onsite-work-order-copilot))
+- **[Field Service Quote Engine](https://ziontechgroup.com/field-service-quote-engine/)** — instant transparent quotes with SLA options ([repo](https://github.com/Zion-support/field-service-quote-engine))
+- **[Technician Route AI](https://ziontechgroup.com/technician-route-ai/)** — multi-stop routing, traffic & SLA windows ([repo](https://github.com/Zion-support/technician-route-ai))
+
+## 🛡️ Batch 32 — AI Audit, Compliance & Vendor Governance (September 24, 2026 — Night Wave)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP24_BATCH32.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH32.md)
+
+- **[Audit Readiness Copilot](https://ziontechgroup.com/audit-readiness-copilot/)** — control gaps, evidence status, auditor Q&A prep ([repo](https://github.com/Zion-support/audit-readiness-copilot))
+- **[Compliance Evidence Collector](https://ziontechgroup.com/compliance-evidence-collector/)** — continuous SOC 2 / ISO evidence ([repo](https://github.com/Zion-support/compliance-evidence-collector))
+- **[Policy Change Tracker](https://ziontechgroup.com/policy-change-tracker/)** — regulatory change alerts per jurisdiction ([repo](https://github.com/Zion-support/policy-change-tracker))
+- **[Contract Clause Extractor](https://ziontechgroup.com/contract-clause-extractor/)** — obligations, dates, risks from any contract ([repo](https://github.com/Zion-support/contract-clause-extractor))
+- **[Vendor Risk Scorecard](https://ziontechgroup.com/vendor-risk-scorecard/)** — vendor risk scoring across signals ([repo](https://github.com/Zion-support/vendor-risk-scorecard))
+- **[Vendor Risk Screener](https://ziontechgroup.com/vendor-risk-screener/)** — pre-onboarding vendor screening ([repo](https://github.com/Zion-support/vendor-risk-screener))
+
 ## 🧭 Assessment & Readiness Tools Spotlight (September 24, 2026)
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md](APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md) — know where you stand before you invest:
@@ -60,19 +82,6 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPP
 - **[Voice of Customer Hub](https://ziontechgroup.com/voice-of-customer-hub/)** — unified reviews, tickets, surveys and social
 - **[Support Deflection Analyzer](https://ziontechgroup.com/support-deflection-analyzer/)** — ticket deflection and self-service ROI
 - **[Partner Referral Tracker](https://ziontechgroup.com/partner-referral-tracker/)** — referrals, commissions and attribution
-
-## 🛡️ New spotlight: AI Trust, Governance & Compliance Suite — Sep 24, 2026 (8 apps)
-
-Full spotlight: [APP_NETWORK_SPOTLIGHT_TRUST_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_TRUST_GOVERNANCE.md) — ship AI with guardrails:
-
-- **[Zion AI Governance Policy Generator](https://ziontechgroup.com/zion-ai-policy-generator/)** — EU AI Act / NIST AI RMF / ISO 42001 policy skeletons
-- **[Zion AI Meeting Policy Gen](https://ziontechgroup.com/zion-ai-meeting-policy-gen/)** — consent, retention and vendor rules for AI notetakers
-- **[DPIA Assistant](https://ziontechgroup.com/dpia-assistant/)** — guided data-protection impact assessments with risk scoring
-- **[Zion AI Incident Postmortem](https://ziontechgroup.com/zion-ai-postmortem/)** — blameless AI incident postmortems
-- **[Data Retention Enforcer](https://ziontechgroup.com/data-retention-enforcer/)** — legal holds & deletion proof
-- **[Accessibility Statement Gen](https://ziontechgroup.com/accessibility-statement-gen/)** — WCAG/ADA/EAA statements
-- **[Vendor Questionnaire Autopilot](https://ziontechgroup.com/vendor-questionnaire-autopilot/)** — security questionnaires answered in minutes
-- **[Security Awareness Coach](https://ziontechgroup.com/security-awareness-coach/)** — micro-training that sticks
 
 ## 🚀 Fresh releases — September 23, 2026 (13 apps)
 
@@ -191,4 +200,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md](APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) · [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) · [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md) · [APP_NETWORK_SPOTLIGHT_TRUST_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_TRUST_GOVERNANCE.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md](APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) · [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) · [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md) · [APP_NETWORK_SPOTLIGHT_SEP24_BATCH32.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH32.md) · [APP_NETWORK_SPOTLIGHT_SEP24_BATCH33.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH33.md)
