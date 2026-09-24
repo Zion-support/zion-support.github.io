@@ -1,12 +1,23 @@
-# App Network Spotlight — Sep 24 Batch 28
+# App Network Spotlight — September 24, 2026 · Batch 28: Zion AI Workplace Suite
 
-Three new free tools on the Zion AI App Network:
+Published on [ziontechgroup.com](https://ziontechgroup.com/) as part of the Zion App Network showcase.
 
-- **AI Procurement Copilot** — supplier comparison, RFQ drafting, spend-anomaly detection → https://ziontechgroup.com/ai-procurement-copilot/
-- **Incident Runbook AI** — executable runbooks from alert signals → https://ziontechgroup.com/incident-runbook-ai/
-- **Warranty Claim Triager** — AI claim classification and auto-adjudication routing → https://ziontechgroup.com/warranty-claim-triager/
+The **Zion AI Workplace Suite** brings six flagship AI apps to everyday work:
 
-Full network directory: https://ziontechgroup.com/zion-app-network/
-GitHub hub: https://github.com/Zion-support/zion-app-network
+| App | Live page | What it does |
+|---|---|---|
+| Zion AI Meeting Assistant | https://zion-support.github.io/zion-ai-meeting-assistant/ | AI transcription, summaries, action items |
+| Zion AI Voice Assistant | https://zion-support.github.io/zion-ai-voice-assistant/ | Voice-first assistant for calls & dictation |
+| Zion AI Help Desk | https://zion-support.github.io/zion-ai-help-desk/ | AI ticket triage and SLA-aware routing |
+| Zion AI Knowledge Base | https://zion-support.github.io/zion-ai-knowledge-base/ | RAG-powered answers from your docs |
+| Zion AI Lead Scoring | https://zion-support.github.io/zion-ai-lead-scoring/ | Predictive lead scoring and routing |
+| Zion AI Email Marketing Pro | https://zion-support.github.io/zion-ai-email-marketing-pro/ | AI campaigns, sequencing, deliverability |
 
-Related spotlights: APP_NETWORK_SPOTLIGHT_SEP24_BATCH27.md, APP_NETWORK_SPOTLIGHT_SEP24_BATCH26.md
+## Interlinks
+- App Network hub: https://github.com/Zion-support/zion-app-network
+- Batch 28 spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH28.md
+- Previous spotlights: [Batch 27](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH27.md) · [What's New](APP_NETWORK_LATEST.md)
+- Homepage: https://ziontechgroup.com/ · Plans: https://ziontechgroup.com/en/plans/ · Discovery: https://ziontechgroup.com/discovery/ · Tools: https://ziontechgroup.com/tools/
+
+---
+© 2026 Zion Tech Group · https://ziontechgroup.com/
