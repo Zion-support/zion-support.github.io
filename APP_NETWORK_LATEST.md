@@ -8,45 +8,6 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
-## 🆕 New spotlight: September 24, 2026 batch (25 apps)
-
-Full showcase page: [apps/new-september-2026.html](apps/new-september-2026.html) — live at https://ziontechgroup.com/apps/new-september-2026.html · Network landing: https://ziontechgroup.com/ai-app-network/
-
-**🤖 AI Agents & Voice**
-- **[Voice Agent Studio](https://ziontechgroup.com/voice-agent-studio/)** — AI voice agents for calls & IVR ([repo](https://github.com/Zion-support/voice-agent-studio))
-- **[AI Agent Marketplace](https://ziontechgroup.com/zion-ai-agent-marketplace/)** — discover, rate & monetize AI agents ([repo](https://github.com/Zion-support/zion-ai-agent-marketplace))
-- **[Agent Stack Builder](https://ziontechgroup.com/zion-agent-stack-builder/)** — use case → recommended MCP/agent stack ([repo](https://github.com/Zion-support/zion-agent-stack-builder))
-- **[MCP Server Finder](https://ziontechgroup.com/zion-mcp-finder/)** — discover & compare MCP servers ([repo](https://github.com/Zion-support/zion-mcp-finder))
-
-**🛠️ IT Operations & Reliability**
-- **[SLA Risk Forecaster](https://ziontechgroup.com/sla-risk-forecaster/)** — predicts SLA breaches days ahead ([repo](https://github.com/Zion-support/sla-risk-forecaster))
-- **[Status Page Generator](https://ziontechgroup.com/status-page-generator/)** — static status pages in minutes ([repo](https://github.com/Zion-support/status-page-generator))
-- **[AI Latency Budget Guardian](https://ziontechgroup.com/zion-ai-latency-budget-guardian/)** — end-to-end latency budgets in CI ([repo](https://github.com/Zion-support/zion-ai-latency-budget-guardian))
-- **[AI Cluster Manager](https://ziontechgroup.com/ai-cluster-manager/)** — intelligent Kubernetes optimization ([repo](https://github.com/Zion-support/ai-cluster-manager))
-- **[AI Backup & Recovery](https://ziontechgroup.com/ai-backup-recovery/)** — backup verification & DR automation ([repo](https://github.com/Zion-support/ai-backup-recovery))
-- **[AI Data Quality](https://ziontechgroup.com/zion-ai-data-quality/)** — pipeline monitoring & anomaly detection ([repo](https://github.com/Zion-support/zion-ai-data-quality))
-
-**📈 Sales, Procurement & Governance**
-- **[AI Quote Builder](https://ziontechgroup.com/zion-ai-quote-builder/)** — instant quotes with margin guardrails ([repo](https://github.com/Zion-support/zion-ai-quote-builder))
-- **[AI Procurement RFP Builder](https://ziontechgroup.com/zion-ai-rfp-builder/)** — vendor RFPs with AI-specific clauses ([repo](https://github.com/Zion-support/zion-ai-rfp-builder))
-- **[Upsell Signal Scout](https://ziontechgroup.com/upsell-signal-scout/)** — expansion signals from usage data ([repo](https://github.com/Zion-support/upsell-signal-scout))
-- **[Policy Attestation Tracker](https://ziontechgroup.com/policy-attestation-tracker/)** — attestations & re-certifications ([repo](https://github.com/Zion-support/policy-attestation-tracker))
-- **[Vendor DPA Checker](https://ziontechgroup.com/vendor-dpa-checker/)** — DPAs & SCCs clause checking ([repo](https://github.com/Zion-support/vendor-dpa-checker))
-- **[AI Governance Dashboard](https://ziontechgroup.com/ai-governance-dashboard/)** — model registry & compliance monitoring ([repo](https://github.com/Zion-support/ai-governance-dashboard))
-
-**🌱 Sustainability & Cost**
-- **[AI Green Scheduler](https://ziontechgroup.com/zion-ai-green-scheduler/)** — shift workloads to low-carbon windows ([repo](https://github.com/Zion-support/zion-ai-green-scheduler))
-- **[AI Energy Optimizer](https://ziontechgroup.com/zion-ai-energy-optimizer/)** — cloud cost & carbon optimization ([repo](https://github.com/Zion-support/zion-ai-energy-optimizer))
-- **[Energy Usage Optimizer](https://ziontechgroup.com/energy-usage-optimizer/)** — facility energy savings ([repo](https://github.com/Zion-support/energy-usage-optimizer))
-- **[Energy SLA Reporter](https://ziontechgroup.com/energy-sla-reporter/)** — energy contract SLA reporting ([repo](https://github.com/Zion-support/energy-sla-reporter))
-
-**🚀 More new apps**
-- **[AI Code Migration](https://ziontechgroup.com/ai-code-migration/)** — automated codebase migration ([repo](https://github.com/Zion-support/ai-code-migration))
-- **[Synthetic Data Studio](https://ziontechgroup.com/zion-synthetic-data-studio/)** — privacy-safe synthetic datasets ([repo](https://github.com/Zion-support/zion-synthetic-data-studio))
-- **[Quantum Readiness Advisory](https://ziontechgroup.com/zion-quantum-readiness/)** — post-quantum readiness assessment ([repo](https://github.com/Zion-support/zion-quantum-readiness))
-- **[Driver Hours Compliance](https://ziontechgroup.com/driver-hours-compliance/)** — HOS violation alerts ([repo](https://github.com/Zion-support/driver-hours-compliance))
-- **[AI Accessibility Auditor](https://ziontechgroup.com/ai-accessibility-auditor/)** — WCAG scanning & auto-fix ([repo](https://github.com/Zion-support/ai-accessibility-auditor))
-
 ## 🎯 New spotlight: Customer Experience & Support AI Suite — Sep 23, 2026 (10 apps)
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) — the complete post-sale journey, interlinked:
