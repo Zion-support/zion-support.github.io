@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Status note | Zion Tech Group</title>
+<meta name="description" content="Write a customer status update in the browser. The status hostname does not open, and this page does not publish an uptime number."/>
+<link rel="canonical" href="https://ziontechgroup.com/status-note/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}h2{color:#e2e8f0;font-size:1.15rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea,select{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#0f172a;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/incident-commander-desk/">Commander</a><a href="/sla/">Service levels</a><a href="/dashboard/">Operator desk</a><a href="/contact/">Contact</a></nav>
+<h1>Status note</h1>
+<p>Older pages link a status hostname that does not open over HTTPS. Write the update here. This page does not publish an uptime percentage and does not open a private login.</p>
+<h2>What a useful update contains</h2>
+<ul>
+<li>Which service, in the name customers use.</li>
+<li>Whether you are investigating, have a cause, are watching, or are done.</li>
+<li>What the customer should do, or that they should do nothing.</li>
+<li>When the next sentence will be posted.</li>
+</ul>
+<label>Service<input id="service" placeholder="Checkout"></label>
+<label>State
+<select id="state">
+<option>Investigating</option>
+<option>Identified</option>
+<option>Monitoring</option>
+<option>Resolved</option>
+</select></label>
+<label>What customers should do<textarea id="action" rows="3" placeholder="Retry in 15 minutes, or use the backup form"></textarea></label>
+<label>Next update<input id="next" placeholder="15:40 America/New_York"></label>
+<button type="button" id="go">Write the note</button>
+<pre id="out" hidden></pre>
+<p>Related: <a href="/incident-commander-desk/">Incident commander</a> · <a href="/runbook-desk/">Runbook</a> · <a href="/sla/">Service levels</a> · <a href="/error-budget-desk/">Error budget</a> · <a href="/dashboard/">Operator desk</a></p>
+<p>The operator desk explains that this domain has no self-serve admin login. A tenant workspace is a <a href="/discovery/">Discovery $99</a> conversation.</p>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+<script>
+document.getElementById("go").onclick=function(){
+  const v=function(id){return document.getElementById(id).value.trim();};
+  const lines=[
+    "Service: "+(v("service")||"(unnamed)"),
+    "State: "+(v("state")||"Investigating"),
+    "Customer action: "+(v("action")||"(blank)"),
+    "Next update: "+(v("next")||"(unset)"),
+    "",
+    "Posted by a person. No uptime number was generated."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("
+");
+};
+</script>
+</body>
+</html>

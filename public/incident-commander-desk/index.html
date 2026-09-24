@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Incident commander desk | Zion Tech Group</title>
+<meta name="description" content="Name the commander, the severity, and the sentence a person will post. This page does not page anyone."/>
+<link rel="canonical" href="https://ziontechgroup.com/incident-commander-desk/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}h2{color:#e2e8f0;font-size:1.15rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea,select{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#0f172a;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/runbook-desk/">Runbook</a><a href="/status-note/">Status note</a><a href="/error-budget-desk/">Error budget</a><a href="/contact/">Contact</a></nav>
+<h1>Incident commander desk</h1>
+<p>The older incident commander page still sends one link to a status hostname that does not open. Use this note instead. Nothing is paged, and nothing is uploaded.</p>
+<h2>What to name before the first update</h2>
+<ul>
+<li>One commander. A second person covers comms if the commander is in the bridge.</li>
+<li>A severity the team already uses. Do not invent a new scale on this page.</li>
+<li>The sentence a person will post, in words a customer can act on.</li>
+<li>The time of the next update, even if the next update is "no change".</li>
+</ul>
+<label>Incident name<input id="name" placeholder="Checkout errors"></label>
+<label>Commander<input id="commander" placeholder="Name and how to reach them"></label>
+<label>Comms owner<input id="comms" placeholder="Who posts the customer update"></label>
+<label>Severity
+<select id="sev">
+<option>SEV1 — customers cannot complete the main job</option>
+<option>SEV2 — a major path is degraded</option>
+<option>SEV3 — a workaround exists</option>
+</select></label>
+<label>Sentence a person will post<textarea id="sentence" rows="3" placeholder="What customers should do right now"></textarea></label>
+<label>Next update<textarea id="next" rows="2" placeholder="Time and channel, for example 15:40 in the status note"></textarea></label>
+<button type="button" id="go">Write the handoff</button>
+<pre id="out" hidden></pre>
+<h2>Where the rest of the work lives</h2>
+<ul>
+<li><a href="/runbook-desk/">Runbook desk</a> — first check and stop rule.</li>
+<li><a href="/status-note/">Status note</a> — the customer update, written here.</li>
+<li><a href="/error-budget-desk/">Error budget</a> — how much of the window this incident spends.</li>
+<li><a href="/sla/">Service levels</a> — a written SLA is scoped per engagement, not copied from a template.</li>
+<li><a href="/cybersecurity/">Cybersecurity desk</a> — when the incident is a security event.</li>
+</ul>
+<p>A scoped response is a <a href="/discovery/">Discovery $99</a> conversation, not a button on this page.</p>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+<script>
+document.getElementById("go").onclick=function(){
+  const v=function(id){return document.getElementById(id).value.trim();};
+  const lines=[
+    "Incident: "+(v("name")||"(unnamed)"),
+    "Commander: "+(v("commander")||"(unnamed)"),
+    "Comms: "+(v("comms")||"(same as commander)"),
+    "Severity: "+(v("sev")||"(unset)"),
+    "Customer sentence: "+(v("sentence")||"(blank)"),
+    "Next update: "+(v("next")||"(unset)"),
+    "",
+    "A person still posts the update. This page did not page anyone."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("
+");
+};
+</script>
+</body>
+</html>
