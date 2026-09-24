@@ -1,17 +1,21 @@
-# Zion App Network
+# Zion AI App Network — Showcase Hub
 
-Full catalog of the Zion Tech Group AI App Network — **412 AI apps + 277 field playbooks = 689 interconnected public repos**.
+This directory powers the public showcase of the Zion AI App Network (760+ apps, tools and field playbooks).
 
-- Live catalog (searchable): https://ziontechgroup.com/apps/
-- Homepage: https://ziontechgroup.com/
-- GitHub org: https://github.com/Zion-support
-- Spotlight page: https://ziontechgroup.com/apps/catalog.html
+## Pages
 
-## Categories
-- AI Agents (18) · Reliability & SRE (33) · Security (14) · FinOps & Cost (29) · Compliance & Legal (43)
-- Data & Knowledge (31) · Cloud & DevTools (46) · Field & Logistics (22) · Marketing & Sales (20)
-- People & Productivity (17) · AI & Specialty (139) · Zion Field Playbooks (277)
+| Page | URL | Purpose |
+|------|-----|---------|
+| Full Showcase | https://ziontechgroup.com/apps/ | Categorized, searchable catalog of the network |
+| New & Featured — Sept 2026 | https://ziontechgroup.com/apps/new-september-2026.html | Latest releases: voice agents, SLA forecasting, AI marketplace, green scheduling, RFP/quote builders |
+| Spotlight | https://ziontechgroup.com/apps/spotlight.html | Editorial spotlight on selected apps |
+| Catalog | https://ziontechgroup.com/apps/catalog.html | Machine-readable catalog view (see catalog.json) |
+| App Network landing | https://ziontechgroup.com/ai-app-network/ | Marketing landing page advertising the network |
 
-Every app repo links back to this network, its live page at ziontechgroup.com/<app>/, and related apps — the network is fully interlinked.
+## Conventions
 
-Updated 2026-09-23.
+- Every app card links to its **Live** page (https://ziontechgroup.com/&lt;app&gt;/) and its **Repo** (https://github.com/Zion-support/&lt;app&gt;).
+- New monthly releases are added to `new-<month>-<year>.html` and cross-linked from the showcase and the landing page.
+- Sitemaps: `apps-sitemap.xml` (index) + `apps-sitemap-1..4.xml`.
+
+Maintained by Zion Tech Group — https://ziontechgroup.com
