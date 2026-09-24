@@ -34,6 +34,9 @@ permissions:
         default: true
         type: boolean
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   live-daily:
     runs-on: ubuntu-latest

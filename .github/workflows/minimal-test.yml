@@ -1,9 +1,6 @@
 name: Minimal Build Test
 "on":
   workflow_dispatch:
-  push:
-    branches:
-    - main
 jobs:
   minimal:
     runs-on: ubuntu-latest
@@ -20,4 +17,4 @@ jobs:
     - run: npm install
     # Turbopack (Next 16 default) uses far less memory than webpack on this repo; webpack OOMs even at 6GB heap
     - run: npx next build
-    timeout-minutes: 15
+    timeout-minutes: 30

@@ -1,0 +1,66 @@
+name: Hermes task dispatch
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+permissions:
+  issues: write
+  contents: read
+concurrency:
+  group: hermes-dispatch
+  cancel-in-progress: false
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign one intelligent lane to Hermes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = 'Zion-support';
+            const repo = 'zion-support.github.io';
+            const issue_number = 71361;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner, repo, issue_number, per_page: 40
+            });
+            const now = Date.now();
+            const recent = comments.slice(-15);
+            const lastDispatch = [...comments].reverse().find(c => c.body && c.body.includes('| Hermes-Dispatch |'));
+            if (lastDispatch && (now - new Date(lastDispatch.created_at).getTime()) < 9 * 60 * 1000) {
+              console.log('skip: dispatch younger than 9 min');
+              return;
+            }
+            const blob = comments.slice(-30).map(c => c.body || '').join('\n');
+            const queue = [
+              {
+                id: 'urls',
+                task: 'HEAD https://ziontechgroup.com/en/plans/ /discovery/ /ops/comms/ /apps/ /roi-calc/. If any money URL is not 200, comment ALERT. Do not push main.'
+              },
+              {
+                id: 'inbox',
+                task: 'Scan kleber@ inbox for NEW humans after TDS Canada / Thiago. Reply-All + CC carlos@ and commercial@ only if a human asked something new. Never clone IMA/Camara/Tainah/ehva. Instant Client Sender OFF.'
+              },
+              {
+                id: 'carlos',
+                task: 'Help Carlos without mailing him a brief: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Log blockers on this issue only.'
+              },
+              {
+                id: 'apps',
+                task: 'If a unique path-app is missing on main and static-deploy is not queued, add ONE public/<slug>/index.html. Never CREATE apps. DNS. Never colliding CNAME.'
+              },
+              {
+                id: 'room',
+                task: 'Read /ops/comms/CEO-OPS.md. If a live fact on the board is stale, patch CEO-OPS.md only. Do not rewrite index.html while static-deploy is queued.'
+              }
+            ];
+            const doneish = queue.filter(q => blob.toLowerCase().includes(q.id) && /done|sent|200|no new human/i.test(blob));
+            const pick = queue.find(q => !blob.includes('| Hermes |') || !blob.toLowerCase().includes(q.id)) || queue[Math.floor(now / 600000) % queue.length];
+            const body = [
+              `### ${new Date().toISOString().slice(0,16).replace('T',' ')} UTC | Hermes-Dispatch | LANE`,
+              `Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.`,
+              `Task (${pick.id}): ${pick.task}`,
+              'Cadence: every 10 min. Skip if you already own an open lane.',
+              'Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/',
+              'Log: https://github.com/Zion-support/zion-support.github.io/issues/71361'
+            ].join('\n');
+            await github.rest.issues.createComment({ owner, repo, issue_number, body });

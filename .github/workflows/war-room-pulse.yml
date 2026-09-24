@@ -1,0 +1,53 @@
+name: War Room Pulse
+# Real-time: runs on every new comment on the war room issue.
+# Backup: scheduled pulse every 5 minutes.
+on:
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: war-room-pulse
+  cancel-in-progress: true
+
+jobs:
+  pulse:
+    # On issue_comment events only run for the war room issue; schedule/dispatch always run.
+    if: github.event_name != 'issue_comment' || github.event.issue.number == 71361
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Pulse war room
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/war_room_pulse.py
+
+      - name: Commit board updates
+        # plain git — no third-party action (repo hygiene: SHA-pinned actions only)
+        # v2.2 fix: rebase + retry loop so concurrent commits (Hermes, other pulses)
+        # no longer fail the run with a non-fast-forward push rejection.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/ops/comms/log.json public/ops/comms/state.json public/ops/comms/agents.json || true
+          if git diff --cached --quiet; then
+            echo "No board changes."
+          else
+            git commit -m "chore(ops): war room pulse update [skip ci]"
+            for i in 1 2 3 4 5; do
+              if git push; then
+                echo "Push OK on attempt $i"
+                break
+              fi
+              echo "Push rejected (attempt $i) — rebasing onto origin/main and retrying"
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort; echo "Rebase conflict; abandoning push"; exit 0; }
+              sleep $((i * 2))
+            done
+          fi

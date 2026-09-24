@@ -19,6 +19,9 @@ concurrency:
     - cron: '0 8 * * 2'
   workflow_dispatch:
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   accessibility-audit:
     name: Accessibility Audit
@@ -69,9 +72,9 @@ jobs:
             TOTAL_VIOLATIONS=$((TOTAL_VIOLATIONS + VIOLATIONS))
 
             if [ "$VIOLATIONS" -gt 0 ]; then
-              BADGE="🔴"
+              BADGE="\U0001F534"
             else
-              BADGE="🟢"
+              BADGE="\U0001F7E2"
             fi
             REPORT="${REPORT}| ${BADGE} \`${PAGE}\` | ${VIOLATIONS} |\n"
           done
@@ -100,7 +103,7 @@ jobs:
         with:
           script: |
             const total = '${{ steps.audit.outputs.total }}';
-            const emoji = total === '0' ? '🟢' : '🔴';
+            const emoji = total === '0' ? '\U0001F7E2' : '\U0001F534';
             const body = `### ${emoji} Accessibility Audit
 
             **${total}** accessibility violation(s) detected across key pages.

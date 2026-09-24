@@ -12,6 +12,9 @@ concurrency:
   group: ai-autonomous-opportunity-radar-refresh
   cancel-in-progress: false
 
+env:
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
 jobs:
   refresh-radar:
     runs-on: ubuntu-latest
