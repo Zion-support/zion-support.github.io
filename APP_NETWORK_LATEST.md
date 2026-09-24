@@ -149,6 +149,22 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - **[AI MLOps Platform](https://ziontechgroup.com/ai-ml-ops-platform/)** — pipelines, registry, deployment & monitoring
 - **[Zion AI ROI Calculator](https://ziontechgroup.com/zion-ai-roi-calculator/)** — board-ready payback, NPV and IRR
 
+## New spotlight: Compliance & Governance Suite ⚖️
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md) — audit-ready compliance without the audit scramble:
+
+- **[Compliance Policy Writer](https://ziontechgroup.com/compliance-policy-writer/)** — SOC2/ISO/GDPR/HIPAA policies in minutes
+- **[Zion AI Compliance Scanner](https://ziontechgroup.com/zion-ai-compliance-scanner/)** — continuous audit-ready evidence
+- **[Data Retention Enforcer](https://ziontechgroup.com/data-retention-enforcer/)** — legal holds & deletion proof
+- **[Contract Renewal Radar](https://ziontechgroup.com/contract-renewal-radar/)** — auto-renewal & escalator alerts
+- **[Vendor Questionnaire Autopilot](https://ziontechgroup.com/vendor-questionnaire-autopilot/)** — evidence-library answers
+- **[Accessibility Statement Gen](https://ziontechgroup.com/accessibility-statement-gen/)** — WCAG statements & evidence
+- **[License Renewal Planner](https://ziontechgroup.com/license-renewal-planner/)** — renewals & true-up exposure
+- **[Security Awareness Coach](https://ziontechgroup.com/security-awareness-coach/)** — phishing coaching & risk scoring
+- **[Patch Priority Radar](https://ziontechgroup.com/patch-priority-radar/)** — exploitability-ranked patching
+
+Full toolchain doc: https://github.com/Zion-support/zion-app-network/blob/main/docs/COMPLIANCE_GOVERNANCE_SUITE.md
+
 ## Recently launched
 - [Agent SLA Monitor](https://ziontechgroup.com/agent-sla-monitor/)
 - [Zion AI Accessibility Auditor](https://ziontechgroup.com/zion-ai-accessibility-auditor/)
@@ -157,4 +173,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) · [APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md)
