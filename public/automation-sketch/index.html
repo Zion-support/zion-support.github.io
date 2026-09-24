@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Automation sketch | Zion Tech Group</title>
+<meta name="description" content="Write the trigger, the action, and the human gate before you automate a task."/>
+<link rel="canonical" href="https://ziontechgroup.com/automation-sketch/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}
+.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}
+nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em;font-size:clamp(28px,4vw,40px)}
+h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/orchestration-map/">Map</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<h1>Automation sketch</h1>
+<p>A sketch is the note you keep next to an automation. This page does not connect to a system and it does not click anything for you.</p>
+<h2>Write down</h2>
+<ul><li>What starts it.</li><li>What it is allowed to change.</li><li>The case that must stay manual.</li></ul>
+<label>Automation<input id="name" placeholder="Renewal reminder"></label>
+<label>Trigger<input id="trigger" placeholder="Contract end date is inside 30 days"></label>
+<label>Allowed action<input id="action" placeholder="Draft an email to the owner"></label>
+<label>Stays manual<input id="manual" placeholder="Anything that changes price or access"></label>
+<button type="button" id="go">Write sketch</button>
+<pre id="out" hidden></pre>
+<p>If the manual case is blank, do not turn the automation on.</p>
+<p>Related: <a href="/services/ai-automation/">AI automation</a> · <a href="/workflow-desk/">Workflow desk</a> · <a href="/discovery/">Discovery $99</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const g=id=>(document.getElementById(id).value||"").trim();
+  const lines=['Automation: '+(g('name')||'(blank)'),'Trigger: '+(g('trigger')||'(blank)'),'Allowed action: '+(g('action')||'(blank)'),'Stays manual: '+(g('manual')||'(blank)'),"","Nothing was uploaded. Copy this into the system of record."];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer>
+<a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>
+Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950
+</footer>
+</div>
+</body>
+</html>
