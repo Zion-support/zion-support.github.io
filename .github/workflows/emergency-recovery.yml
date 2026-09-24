@@ -1,15 +1,13 @@
 name: Emergency Recovery - Minimal Build
+
+# Manual-only: this is an emergency fallback build. Running it on every
+# push burned 20+ min of runner time per commit and the runs were being
+# cancelled mid-build by the constant commit churn on main, producing
+# nonstop failure notifications. Trigger manually when a recovery build
+# is actually needed.
 "on":
   workflow_dispatch: null
-  push:
-    branches:
-    - main
-    paths-ignore:
-    - '**/STATUS.md'
-    - 'automation/reports/**'
 
-# Prevent duplicate recovery runs from rapid consecutive pushes from
-# cancelling/colliding with each other.
 concurrency:
   group: emergency-recovery-main
   cancel-in-progress: false
