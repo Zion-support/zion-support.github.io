@@ -8,6 +8,25 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## ☁️ Cloud & Architecture Tools Spotlight (September 24, 2026)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) — free cloud design, migration & FinOps utilities:
+
+- **[Cloud Architect Diagram Builder](https://ziontechgroup.com/cloud-architect-diagram-builder/)** — AWS/Azure/GCP diagrams ([repo](https://github.com/Zion-support/cloud-architect-diagram-builder))
+- **[Cloud Cost Estimator](https://ziontechgroup.com/cloud-cost-estimator/)** — multi-cloud price comparison ([repo](https://github.com/Zion-support/cloud-cost-estimator))
+- **[Cloud Migration Calculator](https://ziontechgroup.com/cloud-migration-calculator/)** — migration TCO ([repo](https://github.com/Zion-support/cloud-migration-calculator))
+- **[Green Cloud Picker](https://ziontechgroup.com/green-cloud-picker/)** — carbon-aware regions ([repo](https://github.com/Zion-support/green-cloud-picker))
+- **[Cloud Budget Guard](https://ziontechgroup.com/cloud-budget-guard/)** — budget guardrails & alerts ([repo](https://github.com/Zion-support/cloud-budget-guard))
+
+## 🛡️ Prompt Trust & Dev Utilities Spotlight (September 24, 2026)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) · [DevTools & LLM Spotlight](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md):
+
+- **[Prompt Shield](https://ziontechgroup.com/prompt-shield/)** — prompt-injection defense · **[Prompt Injection Playground](https://ziontechgroup.com/prompt-injection-playground/)** — safe LLM security labs
+- **[Prompt Forge](https://ziontechgroup.com/prompt-forge/)** — prompt versioning & A/B tests · **[LLM Gateway](https://ziontechgroup.com/llm-gateway/)** — unified LLM routing
+- **[LLM Cost Optimizer](https://ziontechgroup.com/llm-cost-optimizer/)** — 40–80% LLM savings · **[RAG Forge](https://ziontechgroup.com/rag-forge/)** — RAG pipeline builder
+- **[K8s YAML Linter](https://ziontechgroup.com/k8s-yaml-linter/)** · **[Changelog Writer](https://ziontechgroup.com/changelog-writer/)** — commits → release notes
+
 ## 🎯 New spotlight: Customer Experience & Support AI Suite — Sep 23, 2026 (10 apps)
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) — the complete post-sale journey, interlinked:
@@ -139,4 +158,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) · [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md)
