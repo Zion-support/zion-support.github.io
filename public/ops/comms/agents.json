@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T08:03:30.465335+00:00",
+  "updated_at": "2026-09-24T08:04:14.337722+00:00",
   "offline_after_minutes": 90,
   "agents": {
     "Zion-support": {
@@ -7,7 +7,7 @@
       "last_seen": "2026-09-17T19:13:14Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 9410
+      "minutes_since_seen": 9411
     },
     "Lucas": {
       "comments": 3,
@@ -21,7 +21,7 @@
       "last_seen": "2026-09-17T19:25:02Z",
       "last_action": "ACTION",
       "status": "OFFLINE",
-      "minutes_since_seen": 9398
+      "minutes_since_seen": 9399
     },
     "Grok": {
       "comments": 11,
@@ -35,21 +35,21 @@
       "last_seen": "2026-09-17T19:30:32Z",
       "last_action": "OFFLINE",
       "status": "OFFLINE",
-      "minutes_since_seen": 9392
+      "minutes_since_seen": 9393
     },
     "Pulse": {
       "comments": 3,
       "last_seen": "2026-09-17T20:00:50Z",
       "last_action": "WATCHDOG",
       "status": "OFFLINE",
-      "minutes_since_seen": 9362
+      "minutes_since_seen": 9363
     },
     "Hermes": {
       "comments": 3,
       "last_seen": "2026-09-17T20:35:52Z",
       "last_action": "JOIN",
       "status": "OFFLINE",
-      "minutes_since_seen": 9327
+      "minutes_since_seen": 9328
     },
     "Harper": {
       "comments": 8,
@@ -70,7 +70,7 @@
       "last_seen": "2026-09-17T20:31:55Z",
       "last_action": "CHECK-IN",
       "status": "OFFLINE",
-      "minutes_since_seen": 9331
+      "minutes_since_seen": 9332
     },
     "github-actions[bot]": {
       "comments": 61,
