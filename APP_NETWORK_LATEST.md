@@ -27,9 +27,22 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_P
 
 - **[AI Procurement RFP Builder](https://ziontechgroup.com/zion-ai-rfp-builder/)** · **[AI Green Scheduler](https://ziontechgroup.com/zion-ai-green-scheduler/)** · **[AI Latency Budget Guardian](https://ziontechgroup.com/zion-ai-latency-budget-guardian/)** · **[AI Agent Marketplace](https://ziontechgroup.com/zion-ai-agent-marketplace/)** · **[AI Energy Optimizer](https://ziontechgroup.com/zion-ai-energy-optimizer/)** · **[AI Data Quality](https://ziontechgroup.com/zion-ai-data-quality/)** · **[AI Gateway](https://ziontechgroup.com/zion-ai-gateway/)** · **[AI Doc Processor](https://ziontechgroup.com/zion-ai-doc-processor/)** · **[AI Infra Drift Detective](https://ziontechgroup.com/zion-ai-infra-drift-detective/)** · **[AI Churn Early-Warning](https://ziontechgroup.com/zion-ai-churn-early-warning/)**
 
+## 🆕 New this week: Developer & LLM Tools Spotlight (September 23, 2026)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) — eight free tools, no signup:
+
+- **[LLM Gateway](https://ziontechgroup.com/llm-gateway/)** — unified LLM API gateway ([repo](https://github.com/Zion-support/llm-gateway))
+- **[RAG Forge](https://ziontechgroup.com/rag-forge/)** — RAG pipeline builder ([repo](https://github.com/Zion-support/rag-forge))
+- **[Prompt Shield](https://ziontechgroup.com/prompt-shield/)** — prompt-injection defense ([repo](https://github.com/Zion-support/prompt-shield))
+- **[Prompt Forge](https://ziontechgroup.com/prompt-forge/)** — prompt workbench ([repo](https://github.com/Zion-support/prompt-forge))
+- **[LLM Cost Optimizer](https://ziontechgroup.com/llm-cost-optimizer/)** — 40–80% LLM savings ([repo](https://github.com/Zion-support/llm-cost-optimizer))
+- **[Mock API Generator](https://ziontechgroup.com/mock-api-generator/)** · **[Regex Builder](https://ziontechgroup.com/regex-builder/)** · **[K8s YAML Linter](https://ziontechgroup.com/k8s-yaml-linter/)**
+
+Master directory batch 17: https://github.com/Zion-support/zion-app-network
+
 ## 🚀 Fresh releases — September 23, 2026 Wave 2 (41 more apps)
 
-Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md)
+Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md)
 
 - 💚 **Customer Success suite:** [Churn Risk Radar](https://ziontechgroup.com/churn-risk-radar/) · [Customer Health Scorer](https://ziontechgroup.com/customer-health-scorer/) · [NPS Insight Engine](https://ziontechgroup.com/nps-insight-engine/) · [Upsell Signal Scout](https://ziontechgroup.com/upsell-signal-scout/) · [Onboarding Journey Tracker](https://ziontechgroup.com/onboarding-journey-tracker/) · [Support Sentiment Monitor](https://ziontechgroup.com/support-sentiment-monitor/) · [Voice of Customer Hub](https://ziontechgroup.com/voice-of-customer-hub/) · [Support Deflection Analyzer](https://ziontechgroup.com/support-deflection-analyzer/)
 - 📈 **Sales & Marketing:** [AI Sales Email Copilot](https://ziontechgroup.com/ai-sales-email-copilot/) · [Proposal Builder AI](https://ziontechgroup.com/proposal-builder-ai/) · [Content ROI Dashboard](https://ziontechgroup.com/content-roi-dashboard/) · [SEO Content Optimizer](https://ziontechgroup.com/seo-content-optimizer/) · [Partner Referral Tracker](https://ziontechgroup.com/partner-referral-tracker/)
@@ -173,4 +186,4 @@ Full toolchain doc: https://github.com/Zion-support/zion-app-network/blob/main/d
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) · [APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) · [APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md)
