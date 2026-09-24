@@ -1,30 +1,32 @@
-# App Network Spotlight — 2026-09-24 — Batch 28 (homepage copy): AI Service Operations & Revenue Suite
+# 📣 App Network Spotlight — Sep 24, 2026 · Batch 28: Procurement, Vendor & IT Reliability AI
 
-Six apps that connect service delivery to revenue: warranty claims, incident runbooks, procurement, SLA risk, knowledge gaps and quoting.
+Zion Tech Group's app network keeps growing. This batch spotlights **12 AI apps** for procurement, vendor management, SLA assurance, and incident reliability — all live, all interlinked.
 
-| App | Live | Focus |
-|---|---|---|
-| [warranty-claim-triager](https://github.com/Zion-support/warranty-claim-triager) | https://ziontechgroup.com/warranty-claim-triager/ | AI classification and auto-adjudication routing of warranty claims |
-| [incident-runbook-ai](https://github.com/Zion-support/incident-runbook-ai) | https://ziontechgroup.com/incident-runbook-ai/ | Turns incidents into step-by-step executable runbooks |
-| [ai-procurement-copilot](https://github.com/Zion-support/ai-procurement-copilot) | https://ziontechgroup.com/ai-procurement-copilot/ | Sourcing, vendor comparison and purchase-request automation |
-| [sla-risk-forecaster](https://github.com/Zion-support/sla-risk-forecaster) | https://ziontechgroup.com/sla-risk-forecaster/ | Predicts SLA breaches before they happen |
-| [knowledge-gap-finder](https://github.com/Zion-support/knowledge-gap-finder) | https://ziontechgroup.com/knowledge-gap-finder/ | Finds missing docs & unanswered-question clusters |
-| [quote-builder-ai](https://github.com/Zion-support/quote-builder-ai) | https://ziontechgroup.com/quote-builder-ai/ | Generate accurate quotes from requirements in minutes |
+👉 Explore the full network: [ziontechgroup.com/app-network/](https://ziontechgroup.com/app-network/) · [Network Hub](https://zion-support.github.io/zion-network/) · [network.ziontechgroup.com](https://network.ziontechgroup.com)
 
-## Why they work together
+## 🆕 New & Fixed This Batch
+- **[AI Procurement Copilot](https://ziontechgroup.com/ai-procurement-copilot/)** — sourcing, RFx drafting, spend analysis, and savings detection. ([repo](https://github.com/Zion-support/ai-procurement-copilot))
+- **[Incident Runbook AI](https://ziontechgroup.com/incident-runbook-ai/)** — auto-generated executable runbooks that cut MTTR. ([repo](https://github.com/Zion-support/incident-runbook-ai))
 
-Triage warranty claims → resolve incidents with runbooks → forecast SLA risk → fill knowledge gaps → streamline procurement → quote deals faster. One connected service-to-revenue loop.
+## 🤝 Procurement & Vendor
+- **[Vendor Risk Screener](https://ziontechgroup.com/vendor-risk-screener/)** — supplier risk scoring & compliance screening
+- **[Contract Renewal Radar](https://ziontechgroup.com/contract-renewal-radar/)** — never miss a renewal again
+- **[Contract Clause Extractor](https://ziontechgroup.com/contract-clause-extractor/)** — clause-level contract intelligence
 
-## Related batches
+## 🚨 Reliability & SLA
+- **[AI Incident Timeline](https://ziontechgroup.com/ai-incident-timeline/)** — incident chronology reconstruction
+- **[AI Infrastructure Monitor](https://ziontechgroup.com/ai-infrastructure-monitor/)** — full-stack health signals
+- **[AI API Health Monitor](https://ziontechgroup.com/ai-api-health-monitor/)** — uptime, latency & error tracking
+- **[Agent SLA Monitor](https://ziontechgroup.com/agent-sla-monitor/)** — SLA compliance monitoring
+- **[SLA Forecast Guardian](https://ziontechgroup.com/sla-forecast-guardian/)** — predict breaches before they happen
+- **[SLA Risk Forecaster](https://ziontechgroup.com/sla-risk-forecaster/)** — SLA risk modeling
+- **[ETL Pipeline Monitor](https://ziontechgroup.com/etl-pipeline-monitor/)** — pipeline reliability & freshness alerts
 
-- [Batch 27 — AI Data & Analytics Ops Suite](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH27.md)
-- [Batch 26 — AI Legal & Compliance Ops](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH26.md)
-- [Batch 25 — AI Customer Success & Support](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH25.md)
-- Homepage batch docs: [Batch 23](APP_NETWORK_SPOTLIGHT_SEP24_BATCH23.md) · [Batch 24](APP_NETWORK_SPOTLIGHT_SEP24_BATCH24.md) · [Batch 25](APP_NETWORK_SPOTLIGHT_SEP24_BATCH25.md) · [Batch 26](APP_NETWORK_SPOTLIGHT_SEP24_BATCH26.md) · [Batch 27](APP_NETWORK_SPOTLIGHT_SEP24_BATCH27.md)
+## 🗂️ New category page
+[Procurement, Vendor & IT Reliability AI](https://github.com/Zion-support/zion-network/blob/main/network/procurement-vendor-it-reliability.md) — 12 apps with repos, live URLs, and cross-links.
 
-- 💳 Plans: https://ziontechgroup.com/en/plans/
-- 🔎 Free AI Discovery: https://ziontechgroup.com/discovery/
-- 🗇 Full index: [APPS_INDEX.md](https://github.com/Zion-support/zion-app-network/blob/main/APPS_INDEX.md) · [CATALOG.md](https://github.com/Zion-support/zion-app-network/blob/main/CATALOG.md)
-- 📰 [What's New in the Zion App Network](APP_NETWORK_LATEST.md) · [Spotlight Index](SPOTLIGHTS_INDEX.md)
+---
+**Plans:** Starter $99/mo · Growth $499/mo · Enterprise custom — [ziontechgroup.com/pricing](https://ziontechgroup.com/pricing)
+✉️ commercial@ziontechgroup.com · 🏠 [ziontechgroup.com](https://ziontechgroup.com) · 📇 [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
 
-© 2026 Zion Tech Group · https://ziontechgroup.com
+*All emails CC commercial@ziontechgroup.com*
