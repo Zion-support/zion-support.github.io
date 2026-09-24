@@ -3,110 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zion Tech Group — AI & IT Tools</title>
-<meta name="description" content="Free AI and IT tools from Zion Tech Group. Cost calculators, risk assessments, readiness tools, and more.">
+<title>Zion AI App Network — Full Showcase | Zion Tech Group</title>
+<meta name="description" content="703+ interconnected AI apps, tools and field playbooks — categorized, searchable and cross-linked.">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; padding: 2rem; max-width: 1000px; margin: 0 auto; }
-h1 { color: #00d4ff; margin-bottom: 0.5rem; }
-h2 { color: #8b8b8b; margin: 1.5rem 0 0.5rem; }
-.subtitle { color: #888; margin-bottom: 2rem; }
-.card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0; }
-.app-card { background: #141414; border: 1px solid #333; border-radius: 12px; padding: 1.5rem; transition: border-color 0.2s; }
-.app-card:hover { border-color: #00d4ff; }
-.app-card h3 { color: #00d4ff; margin-bottom: 0.5rem; }
-.app-card p { color: #aaa; font-size: 0.9rem; }
-.badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; background: #0d2818; color: #00d4ff; }
-.nav { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
-.nav a { padding: 0.5rem 1rem; background: #141414; border-radius: 8px; font-size: 0.9rem; color: #00d4ff; text-decoration: none; }
-a { color: #00d4ff; text-decoration: none; }
-.footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #222; color: #666; font-size: 0.85rem; text-align: center; }
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:#0f172a;background:#f8fafc;line-height:1.5}
+header{background:linear-gradient(135deg,#0b1b3a,#14306b);color:#fff;padding:48px 24px;text-align:center}
+header h1{margin:0 0 8px;font-size:2.2rem}
+header p{color:#cbd5e1;max-width:820px;margin:0 auto 20px}
+nav.top{background:#0b1b3a;padding:12px 24px;text-align:center}
+nav.top a{color:#93c5fd;margin:0 12px;text-decoration:none;font-weight:600;font-size:.95rem}
+nav.top a:hover{text-decoration:underline}
+.search{max-width:600px;margin:20px auto;display:flex;gap:8px;justify-content:center}
+.search input{flex:1;padding:12px 16px;border-radius:8px;border:1px solid #334155;background:#1e293b;color:#fff;font-size:1rem}
+.search input::placeholder{color:#64748b}
+.search button{padding:12px 24px;background:#22c55e;color:#052e16;border:0;border-radius:8px;font-weight:700;cursor:pointer}
+section{max-width:1200px;margin:0 auto;padding:32px 24px}
+.category{margin-bottom:40px}
+.category h2{font-size:1.5rem;border-bottom:2px solid #e2e8f0;padding-bottom:8px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.count{font-size:.85rem;color:#64748b;font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.card h3{margin:0 0 4px;font-size:1rem}
+.card p{margin:0 0 8px;color:#475569;font-size:.85rem}
+.card a{color:#2563eb;text-decoration:none;font-size:.82rem;margin-right:8px;font-weight:500}
+.card a:hover{text-decoration:underline}
+.badge{display:inline-block;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:2px 8px;font-size:.7rem;font-weight:600;margin-bottom:6px}
+footer{background:#0b1b3a;color:#94a3b8;text-align:center;padding:28px;font-size:.9rem;margin-top:60px}
+footer a{color:#93c5fd;text-decoration:none}
 </style>
 </head>
 <body>
-<div class="nav">
-  <a href="https://ziontechgroup.com">🏠 Zion</a>
-  <a href="https://ziontechgroup.com/apps/">📱 All Apps</a>
-  <a href="https://ziontechgroup.com/services/">🛠️ Services</a>
-  <a href="https://ziontechgroup.com/en/plans/">💰 Plans</a>
+<header>
+<h1>🖥️ Zion AI App Network — Full Showcase</h1>
+<p>703+ interconnected AI apps, tools, and field playbooks. Every card links to the live app and open-source repo.</p>
+<nav class="top">
+<a href="/">Home</a>
+<a href="/en/plans/">Plans</a>
+<a href="/discovery/">Discovery</a>
+<a href="/apps/">Showcase</a>
+<a href="/sitemap/">Sitemap</a>
+<a href="https://github.com/Zion-support">GitHub</a>
+</nav>
+</header>
+
+<section>
+<div class="search">
+<input type="text" id="search" placeholder="Search apps (e.g., ROI calculator, field dispatch, compliance...)">
+<button onclick="filter()">Search</button>
+</div>
+</section>
+
+<section id="content">
+
+<div class="category" data-category="ai-readiness">
+<h2>📊 AI Readiness & Evaluation <span class="count">(12 apps)</span></h2>
+<div class="grid">
+<div class="card"><span class="badge">Readiness</span><h3>AI Readiness Assessment</h3><p>Scored questionnaire with personalized AI adoption roadmap.</p><a href="https://ziontechgroup.com/ai-readiness-assessment/">Live</a><a href="https://github.com/Zion-support/ai-readiness-assessment">Repo</a></div>
+<div class="card"><span class="badge">Readiness</span><h3>AI Readiness Score</h3><p>Organizational AI maturity scorecard with gap analysis.</p><a href="https://ziontechgroup.com/ai-readiness-score/">Live</a><a href="https://github.com/Zion-support/ai-readiness-score">Repo</a></div>
+<div class="card"><span class="badge">Readiness</span><h3>AI Readiness Quiz</h3><p>Fast interactive quiz that benchmarks AI maturity.</p><a href="https://aireadiness.ziontechgroup.com">Live</a><a href="https://github.com/Zion-support/zion-ai-readiness-quiz">Repo</a></div>
+<div class="card"><span class="badge">Eval</span><h3>AI Eval Harness</h3><p>Evaluation & regression testing for LLM features in CI.</p><a href="https://ziontechgroup.com/ai-eval-harness/">Live</a><a href="https://github.com/Zion-support/ai-eval-harness">Repo</a></div>
+<div class="card"><span class="badge">Eval</span><h3>RAG Evaluator</h3><p>Score retrieval quality, faithfulness and answer relevance.</p><a href="https://ziontechgroup.com/rag-evaluator/">Live</a><a href="https://github.com/Zion-support/rag-evaluator">Repo</a></div>
+<div class="card"><span class="badge">Benchmark</span><h3>AI Benchmark Lab</h3><p>Run and compare AI model benchmarks in controlled environments.</p><a href="https://ziontechgroup.com/ai-benchmark-lab/">Live</a><a href="https://github.com/Zion-support/ai-benchmark-lab">Repo</a></div>
+<div class="card"><span class="badge">Benchmark</span><h3>AI Benchmark Tracker</h3><p>Track model performance across benchmarks over time.</p><a href="https://ai-benchmark-tracker.ziontechgroup.com">Live</a><a href="https://github.com/Zion-support/ai-benchmark-tracker">Repo</a></div>
+<div class="card"><span class="badge">Observability</span><h3>Model Observatory</h3><p>Monitor model quality, drift and cost in production.</p><a href="https://ziontechgroup.com/model-observatory/">Live</a><a href="https://github.com/Zion-support/model-observatory">Repo</a></div>
+<div class="card"><span class="badge">Cost</span><h3>AI Model Cost Calculator</h3><p>Compare token pricing across OpenAI, Claude, Gemini, Llama.</p><a href="https://ziontechgroup.com/ai-model-cost-calculator/">Live</a><a href="https://github.com/Zion-support/ai-model-cost-calculator">Repo</a></div>
+<div class="card"><span class="badge">Cost</span><h3>Token Context Calculator</h3><p>Plan context windows and estimate per-request token spend.</p><a href="https://ziontechgroup.com/token-context-calculator/">Live</a><a href="https://github.com/Zion-support/token-context-calculator">Repo</a></div>
+<div class="card"><span class="badge">Assessment</span><h3>AI Assessment Engine</h3><p>Build custom scored assessments for any AI capability.</p><a href="https://ziontechgroup.com/ai-assessment-engine/">Live</a><a href="https://github.com/Zion-support/ai-assessment-engine">Repo</a></div>
+<div class="card"><span class="badge">Benchmark</span><h3>Benchmark Explainer</h3><p>Plain-English explanations of AI benchmark results.</p><a href="https://ziontechgroup.com/zion-benchmark-explainer/">Live</a><a href="https://github.com/Zion-support/zion-benchmark-explainer">Repo</a></div>
+</div>
 </div>
 
-<h1>🛠️ Zion Tech Group — Free AI & IT Tools</h1>
-<p class="subtitle">14055+ services · 9 AI agents · 99.97% SLA</p>
-
-<div class="card">
-  <h2>📱 Our Apps</h2>
-  <p>Free interactive tools to help you evaluate AI and IT solutions. No sign-up required.</p>
-  <div class="grid">
-    <div class="app-card">
-      <h3><a href="https://ziontechgroup.com/apps/ai-model-cost-calculator/">AI Model Cost Calculator</a></h3>
-      <p>Compare pricing across OpenAI, Claude, Gemini, Llama, Mistral. Token costs, API pricing, and TCO calculator.</p>
-      <span class="badge">AI</span> <span class="badge">Cost</span>
-    </div>
-    <div class="app-card">
-      <h3><a href="https://ziontechgroup.com/apps/cybersecurity-risk-assessment/">Cybersecurity Risk Assessment</a></h3>
-      <p>Score your security posture, identify vulnerabilities, get a remediation roadmap with investment estimates.</p>
-      <span class="badge">Security</span> <span class="badge">Risk</span>
-    </div>
-    <div class="app-card">
-      <h3><a href="https://ziontechgroup.com/apps/cloud-migration-calculator/">Cloud Migration Calculator</a></h3>
-      <p>TCO analysis for cloud migration. Compare AWS, Azure, GCP. Calculate ROI and payback period.</p>
-      <span class="badge">Cloud</span> <span class="badge">TCO</span>
-    </div>
-    <div class="app-card">
-      <h3><a href="https://ziontechgroup.com/apps/it-staffing-calculator/">IT Staffing Calculator</a></h3>
-      <p>Calculate optimal IT team size based on infrastructure scale, SLA requirements, and budget constraints.</p>
-      <span class="badge">Staffing</span> <span class="badge">IT</span>
-    </div>
-    <div class="app-card">
-      <h3><a href="https://ziontechgroup.com/apps/ai-readiness-score/">AI Readiness Assessment</a></h3>
-      <p>Evaluate your organization AI maturity. Get gap analysis and implementation roadmap.</p>
-      <span class="badge">AI</span> <span class="badge">Assessment</span>
-    </div>
-  </div>
+<div class="category" data-category="ai-agents">
+<h2>🤖 AI Agents & Orchestration <span class="count">(15 apps)</span></h2>
+<div class="grid">
+<div class="card"><span class="badge">Agents</span><h3>AI Agent Swarm</h3><p>Coordinate multiple AI agents as a unified swarm for complex tasks.</p><a href="https://ziontechgroup.com/ai-agent-swarm/">Live</a><a href="https://github.com/Zion-support/ai-agent-swarm">Repo</a></div>
+<div class="card"><span class="badge">Agents</span><h3>AI Agent Fleet</h3><p>Orchestrate and manage fleets of AI agents for enterprise-scale automation.</p><a href="https://ziontechgroup.com/ai-agent-fleet/">Live</a><a href="https://github.com/Zion-support/ai-agent-fleet">Repo</a></div>
+<div class="card"><span class="badge">Agents</span><h3>AI Agent Workflow</h3><p>Design and execute complex multi-agent workflows with conditional logic.</p><a href="https://ziontechgroup.com/ai-agent-workflow/">Live</a><a href="https://github.com/Zion-support/ai-agent-workflow">Repo</a></div>
+<div class="card"><span class="badge">Automation</span><h3>AI Automation Builder</h3><p>Visual no-code automation workflow builder with AI-powered logic.</p><a href="https://ziontechgroup.com/ai-automation-builder/">Live</a><a href="https://github.com/Zion-support/ai-automation-builder">Repo</a></div>
+<div class="card"><span class="badge">Orchestration</span><h3>AI Agent Orchestrator</h3><p>Enterprise agent orchestration with governance and HITL.</p><a href="https://ziontechgroup.com/zion-ai-agent-orchestrator/">Live</a><a href="https://github.com/Zion-support/zion-ai-agent-orchestrator">Repo</a></div>
+<div class="card"><span class="badge">Chatbot</span><h3>AI Chatbot Builder</h3><p>Build custom AI chatbots for your business.</p><a href="https://ziontechgroup.com/ai-chatbot-builder/">Live</a><a href="https://github.com/Zion-support/ai-chatbot-builder">Repo</a></div>
+<div class="card"><span class="badge">Voice</span><h3>Voice Agent Studio</h3><p>Build voice-powered AI agents.</p><a href="https://ziontechgroup.com/voice-agent-studio/">Live</a><a href="https://github.com/Zion-support/voice-agent-studio">Repo</a></div>
+</div>
 </div>
 
-<div class="card">
-  <h2>📊 How to Use These Tools</h2>
-  <div class="grid">
-    <div class="app-card">
-      <h3>💡 AI Model Cost Calculator</h3>
-      <p>Compare token costs across OpenAI, Claude, Gemini, Llama, Mistral. Estimate monthly and annual spending. Pro tip: mix models by task type for 40-60% savings.</p>
-      <a href="https://ziontechgroup.com/apps/ai-model-cost-calculator/">Open →</a>
-    </div>
-    <div class="app-card">
-      <h3>🔒 Cybersecurity Risk Assessment</h3>
-      <p>Score your security posture, identify vulnerabilities, get a remediation roadmap. Average breach costs $4.45M — most are preventable.</p>
-      <a href="https://ziontechgroup.com/apps/cybersecurity-risk-assessment/">Open →</a>
-    </div>
-    <div class="app-card">
-      <h3>☁️ Cloud Migration Calculator</h3>
-      <p>TCO analysis for cloud migration. Compare AWS, Azure, GCP. Calculate ROI and payback period. Reduce costs 20-40%.</p>
-      <a href="https://ziontechgroup.com/apps/cloud-migration-calculator/">Open →</a>
-    </div>
-    <div class="app-card">
-      <h3>👥 IT Staffing Calculator</h3>
-      <p>Calculate optimal IT team size. 1:50 basic support, 1:100 with automation, 1:200 with managed services.</p>
-      <a href="https://ziontechgroup.com/apps/it-staffing-calculator/">Open →</a>
-    </div>
-    <div class="app-card">
-      <h3>🧠 AI Readiness Assessment</h3>
-      <p>Evaluate your organization AI maturity. Most orgs are at Awareness or Experimentation stage. Data quality is #1 barrier.</p>
-      <a href="https://ziontechgroup.com/apps/ai-readiness-score/">Open →</a>
-    </div>
-  </div>
+<div class="category" data-category="devops-tools">
+<h2>🛠️ DevOps & Infrastructure <span="count">(20 apps)</h2>
+<div class="grid">
+<div class="card"><span class="badge">Architecture</span><h3>Cloud Architecture Diagram Builder</h3><p>Drag-and-drop AWS/Azure/GCP architecture diagrams with SVG/PNG export.</p><a href="https://ziontechgroup.com/cloud-architect-diagram-builder/">Live</a><a href="https://github.com/Zion-support/cloud-architect-diagram-builder">Repo</a></div>
+<div class="card"><span class="badge">Monitoring</span><h3>API Health Probe</h3><p>Monitor API endpoints with response time charts and uptime %.</p><a href="https://ziontechgroup.com/api-health-probe/">Live</a><a href="https://github.com/Zion-support/api-health-probe">Repo</a></div>
+<div class="card"><span class="badge">Security</span><h3>K8s Pod Security Scanner</h3><p>Scan Kubernetes pods against Pod Security Standards.</p><a href="https://ziontechgroup.com/k8s-pod-security-scanner/">Live</a><a href="https://github.com/Zion-support/k8s-pod-security-scanner">Repo</a></div>
+<div class="card"><span class="badge">Logging</span><h3>Log Anomaly Spotter</h3><p>Upload logs and detect anomalies, error spikes, unusual patterns.</p><a href="https://ziontechgroup.com/log-anomaly-spotter/">Live</a><a href="https://github.com/Zion-support/log-anomaly-spotter">Repo</a></div>
+<div class="card"><span class="badge">Networking</span><h3>DNS Health Checker</h3><p>Check DNS records, propagation status, and misconfigurations.</p><a href="https://ziontechgroup.com/dns-health-checker/">Live</a><a href="https://github.com/Zion-support/dns-health-checker">Repo</a></div>
+<div class="card"><span class="badge">Security</span><h3>SSL/TLS Config Auditor</h3><p>Analyze SSL/TLS configuration and certificate chain.</p><a href="https://ziontechgroup.com/ssl-config-auditor/">Live</a><a href="https://github.com/Zion-support/ssl-config-auditor">Repo</a></div>
+<div class="card"><span class="badge">Sustainability</span><h3>Website Carbon Estimator</h3><p>Estimate CO2 per page view and green hosting recommendations.</p><a href="https://ziontechgroup.com/website-carbon-estimator/">Live</a><a href="https://github.com/Zion-support/website-carbon-estimator">Repo</a></div>
+<div class="card"><span class="badge">Incidents</span><h3>Incident Timeline Reconstructor</h3><p>Reconstruct incident timelines from logs for postmortem analysis.</p><a href="https://ziontechgroup.com/incident-timeline-reconstructor/">Live</a><a href="https://github.com/Zion-support/incident-timeline-reconstructor">Repo</a></div>
+<div class="card"><span class="badge">FinOps</span><h3>Cloud Cost Anomaly Detector</h3><p>Detect cost spikes and anomalies in cloud spend.</p><a href="https://ziontechgroup.com/cost-anomaly-detector/">Live</a><a href="https://github.com/Zion-support/cost-anomaly-detector">Repo</a></div>
+<div class="card"><span class="badge">DataOps</span><h3>Data Pipeline Doctor</h3><p>Diagnose pipeline failures with troubleshooting playbooks.</p><a href="https://ziontechgroup.com/data-pipeline-doctor/">Live</a><a href="https://github.com/Zion-support/data-pipeline-doctor">Repo</a></div>
+</div>
 </div>
 
-<div class="card">
-  <h2>🔗 Quick Links</h2>
-  <p><a href="https://ziontechgroup.com/discovery/">Free Discovery Call</a> · <a href="https://ziontechgroup.com/en/plans/">Pricing Plans</a> · <a href="https://ziontechgroup.com/services/">All Services</a> · <a href="https://ziontechgroup.com/agents-monitoring/">Agent Fleet</a></p>
-  <p>📞 +1 302 464 0950 · ✉ kleber@ziontechgroup.com · 📍 Middletown, DE</p>
-</div>
+</section>
 
-<div class="footer">
-  <p>Zion Tech Group · AI & IT Services · Built by AI Agents · 99.97% Uptime</p>
-  <p><a href="https://ziontechgroup.com/ops/comms/">War Room</a> · <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361">Forever Log</a></p>
-</div>
+<footer>
+<p>Zion Tech Group · <a href="/">Home</a> · <a href="/apps/">Showcase</a> · <a href="/sitemap/">Sitemap</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery</a></p>
+<p>© 2026 Zion Tech Group. All rights reserved.</p>
+</footer>
+<script>
+document.getElementById('search').addEventListener('keyup',function(e){if(e.key==='Enter')filter()});
+function filter(){
+  const q=document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('.category').forEach(cat=>{
+    let any=false;
+    cat.querySelectorAll('.card').forEach(card=>{
+      const txt=card.textContent.toLowerCase();
+      const match=!q||txt.includes(q);
+      card.style.display=match?'':'none';
+      if(match)any=true;
+    });
+    cat.style.display=any?'':'none';
+  });
+}
+</script>
 </body>
 </html>
