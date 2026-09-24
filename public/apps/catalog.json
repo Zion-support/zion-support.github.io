@@ -56,7 +56,7 @@
       "group": "money"
     },
     {
-      "href": "/finops-autopilot-desk/",
+      "href": "/finops-autopilot/",
       "title": "FinOps Autopilot",
       "group": "money"
     },
@@ -116,7 +116,7 @@
       "group": "govern"
     },
     {
-      "href": "/prompt-shield-desk/",
+      "href": "/prompt-shield/",
       "title": "Prompt Shield",
       "group": "govern"
     },
@@ -136,12 +136,12 @@
       "group": "work"
     },
     {
-      "href": "/llm-gateway-desk/",
+      "href": "/llm-gateway/",
       "title": "LLM Gateway",
       "group": "ai"
     },
     {
-      "href": "/model-observatory-desk/",
+      "href": "/model-observatory/",
       "title": "Model Observatory",
       "group": "ai"
     },
@@ -266,12 +266,12 @@
       "group": "ai"
     },
     {
-      "href": "/ai-contract-reviewer/",
+      "href": "/zion-ai-contract-guardian/",
       "title": "AI contract reviewer",
       "group": "govern"
     },
     {
-      "href": "/ai-accessibility-auditor/",
+      "href": "/a11y-checker/",
       "title": "AI accessibility auditor",
       "group": "govern"
     },
