@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T21:32:52.171008+00:00",
+  "updated_at": "2026-09-24T21:33:29.400136+00:00",
   "offline_after_minutes": 90,
   "agents": {
     "Zion-support": {
@@ -7,28 +7,28 @@
       "last_seen": "2026-09-17T19:13:14Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 10219
+      "minutes_since_seen": 10220
     },
     "Lucas": {
       "comments": 3,
       "last_seen": "2026-09-17T20:08:29Z",
       "last_action": "FEEDBACK",
       "status": "OFFLINE",
-      "minutes_since_seen": 10164
+      "minutes_since_seen": 10165
     },
     "AGENT": {
       "comments": 1,
       "last_seen": "2026-09-17T19:25:02Z",
       "last_action": "ACTION",
       "status": "OFFLINE",
-      "minutes_since_seen": 10207
+      "minutes_since_seen": 10208
     },
     "Grok": {
       "comments": 11,
       "last_seen": "2026-09-17T20:41:15Z",
       "last_action": "LANE",
       "status": "OFFLINE",
-      "minutes_since_seen": 10131
+      "minutes_since_seen": 10132
     },
     "Watchdog": {
       "comments": 1,
@@ -56,28 +56,28 @@
       "last_seen": "2026-09-17T20:35:25Z",
       "last_action": "HEARTBEAT",
       "status": "OFFLINE",
-      "minutes_since_seen": 10137
+      "minutes_since_seen": 10138
     },
     "Composio Agent": {
       "comments": 6,
       "last_seen": "2026-09-17T20:37:25Z",
       "last_action": "ACTION",
       "status": "OFFLINE",
-      "minutes_since_seen": 10135
+      "minutes_since_seen": 10136
     },
     "HERMES": {
       "comments": 2,
       "last_seen": "2026-09-17T20:31:55Z",
       "last_action": "CHECK-IN",
       "status": "OFFLINE",
-      "minutes_since_seen": 10140
+      "minutes_since_seen": 10141
     },
     "github-actions[bot]": {
       "comments": 61,
       "last_seen": "2026-09-17T20:43:20Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 10129
+      "minutes_since_seen": 10130
     }
   }
 }
