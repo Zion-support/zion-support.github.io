@@ -1,40 +1,21 @@
-# App Network Spotlight — September 24, 2026 (Batch 22): Prompt Trust & Dev Utilities
+# App Network Spotlight — Sep 24 Batch 22: AI Data Quality & Pipeline Intelligence
 
-Five freshly-upgraded, fully-interlinked tools from the **Zion Tech Group App Network** — 700+ interconnected AI apps and tools. All free, browser-based, no signup.
 
-- 🌐 Homepage: https://ziontechgroup.com/
-- 🧰 All tools: https://ziontechgroup.com/tools/
-- 💼 Plans & pricing: https://ziontechgroup.com/en/plans/
-- 📞 Discovery call: https://ziontechgroup.com/discovery/
-- 🗂️ Master directory: https://github.com/Zion-support/zion-app-network
-- 🗂️ Spotlight index: [SPOTLIGHTS_INDEX.md](SPOTLIGHTS_INDEX.md)
+Six new Zion App Network releases focused on trustworthy data: monitor quality, diagnose pipelines, enforce contracts and narrate insights.
 
-## 🛡️ Prompt Shield — https://ziontechgroup.com/prompt-shield/
-Production-grade prompt-injection defense: input sanitization, jailbreak detection, system-prompt hardening and per-request risk scoring.
-[GitHub repo](https://github.com/Zion-support/prompt-shield) · practice attacks safely in [Prompt Injection Playground](https://ziontechgroup.com/prompt-injection-playground/)
+- **[data-quality-sentinel](https://github.com/Zion-support/data-quality-sentinel)** — Continuous data quality monitoring — freshness, completeness and anomaly SLAs for every critical table · Live: https://ziontechgroup.com/data-quality-sentinel/
+- **[data-quality-watchdog](https://github.com/Zion-support/data-quality-watchdog)** — Detects schema drift, nulls and distribution shifts before they break dashboards and models · Live: https://ziontechgroup.com/data-quality-watchdog/
+- **[data-pipeline-doctor](https://github.com/Zion-support/data-pipeline-doctor)** — Guided troubleshooting for common data pipeline failures with ranked root causes · Live: https://ziontechgroup.com/data-pipeline-doctor/
+- **[data-contract-validator](https://github.com/Zion-support/data-contract-validator)** — Schema and SLA validation for data contracts between producers and consumers · Live: https://ziontechgroup.com/data-contract-validator/
+- **[data-catalog-copilot](https://github.com/Zion-support/data-catalog-copilot)** — AI copilot that auto-documents tables, lineage and ownership across your data catalog · Live: https://ziontechgroup.com/data-catalog-copilot/
+- **[dashboard-insight-narrator](https://github.com/Zion-support/dashboard-insight-narrator)** — Turns dashboards into plain-language insight narratives for executives and clients · Live: https://ziontechgroup.com/dashboard-insight-narrator/
 
-## 🎓 Prompt Injection Playground — https://ziontechgroup.com/prompt-injection-playground/
-Hands-on LLM security labs: direct & indirect injection, jailbreaks and exfiltration patterns with scored challenges and an OWASP LLM Top 10 coverage map.
-[GitHub repo](https://github.com/Zion-support/prompt-injection-playground) · then deploy defenses with [Prompt Shield](https://ziontechgroup.com/prompt-shield/)
-
-## 🔥 Prompt Forge — https://ziontechgroup.com/prompt-forge/
-Prompt versioning, A/B testing across models and team-ready prompt packs for IT & engineering workflows.
-[GitHub repo](https://github.com/Zion-support/prompt-forge) · route prompts through [LLM Gateway](https://ziontechgroup.com/llm-gateway/)
-
-## 💸 LLM Cost Optimizer — https://ziontechgroup.com/llm-cost-optimizer/
-Token spend estimator and model comparison — route to the cheapest model that meets quality targets; typical savings of 40–80%.
-[GitHub repo](https://github.com/Zion-support/llm-cost-optimizer) · estimate first with [LLM Cost Calculator](https://ziontechgroup.com/llm-cost-calculator/)
-
-## ☸️ K8s YAML Linter — https://ziontechgroup.com/k8s-yaml-linter/
-Catch manifest misconfigurations, privileged pods, missing resource limits and over-provisioning cost hints before they hit the cluster.
-[GitHub repo](https://github.com/Zion-support/k8s-yaml-linter) · pair with [K8s Pod Security Scanner](https://ziontechgroup.com/k8s-pod-security-scanner/)
-
-## 📝 Changelog Writer — https://ziontechgroup.com/changelog-writer/
-Turn commit lists into polished release notes: categorized changes, tone presets, semver suggestions and Keep-a-Changelog export.
-[GitHub repo](https://github.com/Zion-support/changelog-writer) · announce incidents with [Incident Comms Writer](https://ziontechgroup.com/incident-comms-writer/)
-
-## Explore more
-- [What's New](APP_NETWORK_LATEST.md) · [DevTools & LLM Spotlight](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) · [Batch 21](APP_NETWORK_SPOTLIGHT_SEP24_BATCH21.md) · [Master Directory](https://github.com/Zion-support/zion-app-network) · [Apps Hub](https://github.com/Zion-support/zion-apps-hub)
+## Interlinks
+- Hub: [zion-app-network](https://github.com/Zion-support/zion-app-network) · Homepage: https://ziontechgroup.com/ · Plans: https://ziontechgroup.com/en/plans/ · Discovery: https://ziontechgroup.com/discovery/ · Tools: https://ziontechgroup.com/tools/
+- Related batches: [Batch 20 AI Legal, Privacy & Compliance](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH20.md) · [Batch 21 AI Marketing & Growth](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH21.md)
+- Related apps: [etl-pipeline-monitor](https://github.com/Zion-support/etl-pipeline-monitor) · [log-anomaly-spotter](https://github.com/Zion-support/log-anomaly-spotter) · [data-retention-enforcer](https://github.com/Zion-support/data-retention-enforcer) · [knowledge-base-copilot](https://github.com/Zion-support/knowledge-base-copilot)
 
 ---
-© 2026 Zion Tech Group · Middletown, DE · kleber@ziontechgroup.com · https://ziontechgroup.com/
+© 2026 Zion Tech Group · https://ziontechgroup.com/
+
+Homepage feature page: https://ziontechgroup.com/apps/ai-data-quality-pipeline.html
