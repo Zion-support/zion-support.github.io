@@ -71,6 +71,11 @@
       "group": "ops"
     },
     {
+      "href": "/recovery-notes/",
+      "title": "Recovery notes",
+      "group": "ops"
+    },
+    {
       "href": "/incident-cost/",
       "title": "Incident cost",
       "group": "ops"

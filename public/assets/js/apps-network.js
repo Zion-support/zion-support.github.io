@@ -16,9 +16,10 @@
     { href: '/agent-brief/', slug: 'agent-brief', title: 'Agent brief', blurb: 'One-pager for Discovery. Nothing stored.', group: 'work' },
     { href: '/edital-desk/', slug: 'edital-desk', title: 'Edital desk', blurb: 'RFQ / TR brief. No invented hardware prices.', group: 'work' },
     { href: '/patch-window/', slug: 'patch-window', title: 'Patch window', blurb: 'Nights needed for a patch crew.', group: 'ops' },
-    { href: '/llm-gateway/', slug: 'llm-gateway', title: 'LLM Gateway', blurb: 'Model routing, caching and failover.', group: 'ai' },
-    { href: '/prompt-shield/', slug: 'prompt-shield', title: 'Prompt Shield', blurb: 'Prompt-injection defense and LLM security tests.', group: 'ai' },
-    { href: '/finops-autopilot/', slug: 'finops-autopilot', title: 'FinOps Autopilot', blurb: 'Cloud cost anomaly detection & rightsizing.', group: 'money' },
+    { href: '/recovery-notes/', slug: 'recovery-notes', title: 'Recovery notes', blurb: 'How long you can be down, and how much data you can lose.', group: 'ops' },
+    { href: '/llm-gateway-desk/', slug: 'llm-gateway', title: 'LLM Gateway', blurb: 'Write the route, the fallback, and the monthly cap. No live model call.', group: 'ai' },
+    { href: '/prompt-shield-desk/', slug: 'prompt-shield', title: 'Prompt Shield', blurb: 'Name the prompt, the data it may see, and who can stop it.', group: 'ai' },
+    { href: '/finops-autopilot-desk/', slug: 'finops-autopilot', title: 'FinOps Autopilot', blurb: 'Name the spike and the owner. No cloud account is connected.', group: 'money' },
     { href: '/apps/playbook/', slug: 'playbook', title: 'Playbook', blurb: 'Which tool to open first in a sales or ops conversation.', group: 'hub' }
   ];
   var COMMERCIAL = [
