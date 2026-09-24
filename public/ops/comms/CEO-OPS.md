@@ -28,6 +28,7 @@ Log: https://github.com/Zion-support/zion-support.github.io/issues/71361
 - Do not send Discovery to live tickets: FAJ/Gyovanna, ASSEFAZ chamado, FGV Won, Cooper active, IMA RFQ, Câmara TR, FUNCATE PDF
 - Do not nag Carlos with a duplicate status brief the same calendar day
 - Instant Client Sender stays OFF unless Kleber turns it on
+- ALL @cordeos.com — permanent suppression (Carlos Presidente 24 Sep 16:28 UTC). Do NOT reply to the blacklist notice. Bulk outreach stays paused until Carlos writes resume after list dedup + public-source check + opt-out.
 - Extra outreach to @hpe.com and @ldsistemas.com.br (Carlos 21 Sep 18:11 `1a0c52aaee9ffe3b`) — FGV EPS closed; do not mail Fabiana / HPE / LD again
 - **Carlos 22 Sep 14:00 `1a0c96b4ae4d0bf6` — AI HARD SKIP active clients:** FGV / Fundação Getulio Vargas, Fundação Adib Jatene, Acelen / Refinaria Mataripe, Prefeitura de São José dos Campos, FAJ, Sky TV, Cia Suzano, Zoomtech, Magnum, ASSEFAZ, Cooper, Tupan, Distac, Associação Comercial de São Paulo, Don Paco, LD Sistemas, HPE. Carlos+SDM own those tickets. Do **not** Reply-All the client. Internal ack only `1a0c96d7b7daa70e`.
 
