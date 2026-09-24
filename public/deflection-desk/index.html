@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Support deflection desk | Zion Tech Group</title>
+<meta name="description" content="Estimate ticket deflection from numbers you type. Contained contacts are not the same as abandoned chats."/>
+<link rel="canonical" href="https://ziontechgroup.com/deflection-desk/"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main class="container">
+  <section class="hero">
+    <h1>Support deflection desk</h1>
+    <p class="lead">Type the contacts you already counted. The note stays in the browser and separates a contained answer from a chat the customer abandoned. Nothing is uploaded.</p>
+  </section>
+  <section>
+    <label>Channel <input id="channel" placeholder="help center, chat, phone"></label>
+    <label>Contacts in the window <input id="contacts" type="number" min="0" value="400"></label>
+    <label>Contained by an article or bot, with the customer finished <input id="contained" type="number" min="0" value="90"></label>
+    <label>Closed by a person after the bot or article <input id="human" type="number" min="0" value="70"></label>
+    <label>Left without a confirmed answer <input id="abandoned" type="number" min="0" value="40"></label>
+    <p><button class="btn primary" type="button" onclick="defl()">Read the rate</button></p>
+    <pre id="out" hidden></pre>
+    <style>label{display:block;margin:10px 0}input{padding:8px;border-radius:8px;border:1px solid #26324d;background:#0e1528;color:#fff;min-width:280px}pre{white-space:pre-wrap}</style>
+    <script>
+    function defl(){
+      const channel=document.getElementById("channel").value.trim()||"(unnamed channel)";
+      const contacts=Number(document.getElementById("contacts").value)||0;
+      const contained=Number(document.getElementById("contained").value)||0;
+      const human=Number(document.getElementById("human").value)||0;
+      const abandoned=Number(document.getElementById("abandoned").value)||0;
+      const rate=contacts?Math.round(contained/contacts*100):0;
+      const lines=[
+        channel,
+        "Contained share of contacts: "+rate+"%.",
+        "Person still closed: "+human+".",
+        "Left without a confirmed answer: "+abandoned+". Do not add these to the contained count.",
+      ];
+      if(contained+human+abandoned>contacts && contacts){
+        lines.push("The three buckets add up to more than the contacts you typed. Recount before you publish a rate.");
+      } else if(!contacts){
+        lines.push("Set the contact count before you treat the rate as real.");
+      } else if(rate>=40 && human>contained){
+        lines.push("The bot is busy and people still close more than it contains. Fix the articles those humans keep writing before you widen the bot.");
+      } else if(abandoned>contained){
+        lines.push("More people left than finished inside the bot. That is not deflection.");
+      } else {
+        lines.push("Use the rate in the queue review. It is the ratio of the numbers you typed, not a benchmark.");
+      }
+      const o=document.getElementById("out");
+      o.hidden=false;
+      o.textContent=lines.join("\n");
+    }
+    </script>
+    <h2>What to count</h2>
+    <div class="grid">
+      <article class="card"><h3>Contained</h3><p>The customer got an answer and did not need a person. A citation to an article you own is the usual proof.</p></article>
+      <article class="card"><h3>Handed to a person</h3><p>The bot or article started the thread and someone still closed it. That is assisted volume, not deflection.</p></article>
+      <article class="card"><h3>Abandoned</h3><p>The customer left. Do not call that contained. It belongs in the gap list with the question they asked.</p></article>
+    </div>
+    <p class="lead">Related: <a href="https://chatbot-builder.ziontechgroup.com/">Chatbot Builder</a> · <a href="https://knowledge-base.ziontechgroup.com/">Knowledge Base</a> · <a href="/zion-ai-ticket-sentinel/">Ticket sentinel</a> · <a href="/knowledge-gap-finder/">Knowledge gap finder</a> · <a href="/ai-chatbot-solutions/">Chatbot guide</a> · <a href="/app-network/">App directory</a></p>
+  </section>
+  <section class="cta-strip">
+    <h2>Next step</h2>
+    <a class="btn primary" href="/discovery/">Discovery $99</a>
+    <a class="btn secondary" href="/apps/customer-success/">Customer success tools</a>
+    <a class="btn secondary" href="/contact/">Contact</a>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
