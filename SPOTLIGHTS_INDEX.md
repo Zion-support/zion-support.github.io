@@ -19,6 +19,9 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md](APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md)
 - [APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md](APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md) — MSP & partner ecosystem apps
 - [APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md](APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md) — sales & lead-gen AI apps
+- [APP_NETWORK_SPOTLIGHT_DATA_KNOWLEDGE.md](APP_NETWORK_SPOTLIGHT_DATA_KNOWLEDGE.md) — NEW: Data & Knowledge AI: pipeline doctor, data quality, contracts, RAG & knowledge copilots, retention
+- [APP_NETWORK_SPOTLIGHT_DEVOPS_FINOPS.md](APP_NETWORK_SPOTLIGHT_DEVOPS_FINOPS.md) — DevOps & FinOps toolkit
+- [APP_NETWORK_SPOTLIGHT_REVENUE_RENEWALS.md](APP_NETWORK_SPOTLIGHT_REVENUE_RENEWALS.md) — churn radar, license renewals, obligations, proposals
 
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
