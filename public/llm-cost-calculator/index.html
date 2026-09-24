@@ -5,5 +5,5 @@
 <label>Output tokens per call</label><input id="tout" type="number" min="0" step="1" value="500">
 <label>Calls per month</label><input id="calls" type="number" min="0" step="1" value="10000">
 <button type="button" onclick="calc()">Estimate</button><pre id="out" hidden></pre>
-<p>Related: <a href="/llm-cost-optimizer/">LLM cost optimizer</a> · <a href="/token-cost/">Token cost</a> · <a href="/discovery/">Discovery</a></p>
+<p>Related: <a href="/llm-spend-compare/">LLM cost optimizer</a> · <a href="/token-cost/">Token cost</a> · <a href="/discovery/">Discovery</a></p>
 <script>function calc(){const n=id=>Number(document.getElementById(id).value)||0;const per=(n("tin")*n("pin")+n("tout")*n("pout"))/1e6;const month=per*n("calls");const lines=["LLM cost estimate","Per call: $"+per.toFixed(4),"Per month: $"+month.toFixed(2),"Calls: "+n("calls"),"","Prices are the numbers you typed. Confirm them on the provider invoice before you budget."];const o=document.getElementById("out");o.hidden=false;o.textContent=lines.join(String.fromCharCode(10));}</script><footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer></div></body></html>
