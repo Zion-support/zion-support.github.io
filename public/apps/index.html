@@ -45,6 +45,8 @@ footer a{color:var(--accent)}
 <a href="/apps/ai-agents-spotlight.html">🤖 AI Agents & Automation: 35 Apps</a>
 <a href="/apps/field-network-spotlight.html">🌍 Field Network: 56 City Playbooks</a>
 <a href="/apps/finops-roi-spotlight.html">💰 FinOps & ROI: 42 Tools</a>
+<a href="/apps/security-compliance-spotlight.html">🛡 Security & Compliance: 41 Apps</a>
+<a href="/apps/data-ml-spotlight.html">📊 Data & ML: 56 Apps</a>
 <a href="/apps/spotlight.html">🔦 All Spotlights</a>
 <a href="/apps/catalog.html">📚 Catalog</a>
 <a href="https://ziontechgroup.com/services/">🛠 Services</a>
@@ -83,7 +85,7 @@ async function load(){
   const b=await r.json();
   if(!Array.isArray(b)||!b.length)break;
   all=all.concat(b);page++;
-  if(page>8)break;
+  if(page>9)break;
  }
  REPOS=all.map(r=>({n:r.name,d:(r.description||'Zion App Network app').split('. Live')[0],l:r.homepage||('https://ziontechgroup.com/'+r.name+'/'),g:r.html_url,c:classify(r.name)}));
  const cats=[...new Set(REPOS.map(r=>r.c))].sort();
