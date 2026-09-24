@@ -22,7 +22,7 @@ footer{margin-top:28px;color:#94a3b8;font-size:14px}
 </head>
 <body>
 <div class="wrap">
-<nav><a href="/">Zion Tech Group</a><a href="/zion-ai-spare-parts-matcher/">Parts matcher</a><a href="/field-plan-desk/">Field plan</a><a href="/apps/">Apps</a><a href="/contact/">Contact</a></nav>
+<nav><a href="/">Zion Tech Group</a><a href="/parts-desk/">Parts matcher</a><a href="/field-plan-desk/">Field plan</a><a href="/apps/">Apps</a><a href="/contact/">Contact</a></nav>
 <h1>Parts desk</h1>
 <p>Capture the part request before a visit. The older field-parts hostname answers only on HTTP. This page does not check a warehouse and does not promise a FRU is in stock.</p>
 <label>Site or ticket<input id="site" placeholder="Store 14 / ticket 4412"></label>
@@ -31,7 +31,7 @@ footer{margin-top:28px;color:#94a3b8;font-size:14px}
 <label>Needed by<input id="by" placeholder="2026-10-02"></label>
 <button type="button" id="go">Write the note</button>
 <pre id="out" hidden></pre>
-<p>Match a number you already have in <a href="/zion-ai-spare-parts-matcher/">Spare parts matcher</a>. Schedule the visit in <a href="/ai-smart-hands-scheduler/">Smart hands</a>. For a quote, use <a href="/discovery/">Discovery $99</a>.</p>
+<p>Match a number you already have in <a href="/parts-desk/">Spare parts matcher</a>. Schedule the visit in <a href="/ai-smart-hands-scheduler/">Smart hands</a>. For a quote, use <a href="/discovery/">Discovery $99</a>.</p>
 <script>
 document.getElementById("go").onclick=function(){
   const qty=Number(String(document.getElementById("qty").value).replace(/[^0-9.]/g,""))||0;
