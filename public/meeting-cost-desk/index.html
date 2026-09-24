@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Meeting cost desk | Zion Tech Group</title>
+<meta name="description" content="Estimate a meeting from people, minutes, and an hourly rate you type. Nothing is uploaded."/>
+<link rel="canonical" href="https://ziontechgroup.com/meeting-cost-desk/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/free-tools/">Free tools</a><a href="/apps/">Apps</a><a href="/app-network/">Directory</a><a href="/orchestration-map/">Map</a><a href="/contact/">Contact</a></nav>
+<h1>Meeting cost desk</h1>
+<p>Multiply the people in the room by the minutes and by the hourly rate you type. The older calculator page still links to hostnames that do not resolve. Use this one.</p>
+<h2>Write down</h2>
+<ul><li>People who are actually in the meeting.</li><li>Length in minutes.</li><li>A blended hourly rate your finance lead accepts.</li></ul>
+<label>Meeting<input id="name" placeholder="Design review"></label>
+<label>People<input id="people" inputmode="decimal" placeholder="6"></label>
+<label>Minutes<input id="minutes" inputmode="decimal" placeholder="45"></label>
+<label>Hourly rate (USD)<input id="rate" inputmode="decimal" placeholder="80"></label>
+<button type="button" id="go">Estimate</button>
+<pre id="out" hidden></pre>
+<p>This does not read a calendar. For the decision and the owner, use minutes and actions.</p>
+<p>Related: <a href="/ai-meeting-intelligence-minutes-and-actions/">Minutes and actions</a> · <a href="/ai-meeting-notes-copilot/">Meeting notes copilot</a> · <a href="/transcript-desk/">Transcript desk</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const n=id=>Number(String(document.getElementById(id).value).replace(/[^0-9.]/g,""))||0;
+  const people=n("people"), minutes=n("minutes"), rate=n("rate");
+  const hours=minutes/60;
+  const cost=people*hours*rate;
+  const lines=[
+    "Meeting: "+(document.getElementById("name").value.trim()||"(unnamed)"),
+    "People: "+people,
+    "Minutes: "+minutes,
+    "Hourly rate USD: "+rate,
+    "Estimate USD: "+cost.toFixed(2),
+    "",
+    "People times hours times rate. Nothing was uploaded."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+</body>
+</html>
