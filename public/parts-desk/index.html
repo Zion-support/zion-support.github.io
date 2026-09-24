@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Parts desk | Zion Tech Group</title>
+<meta name="description" content="A spare-parts note: part number, quantity, and the site that needs it. Nothing is uploaded and no stock is promised."/>
+<link rel="canonical" href="https://ziontechgroup.com/parts-desk/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}h2{color:#e2e8f0;font-size:1.15rem}
+.card{background:#111c33;border:1px solid #1e293b;border-radius:12px;padding:16px;margin:12px 0}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#0f172a;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/zion-ai-spare-parts-matcher/">Parts matcher</a><a href="/field-plan-desk/">Field plan</a><a href="/apps/">Apps</a><a href="/contact/">Contact</a></nav>
+<h1>Parts desk</h1>
+<p>Capture the part request before a visit. The older field-parts hostname answers only on HTTP. This page does not check a warehouse and does not promise a FRU is in stock.</p>
+<label>Site or ticket<input id="site" placeholder="Store 14 / ticket 4412"></label>
+<label>Part number<input id="pn" placeholder="Vendor PN"></label>
+<label>Quantity<input id="qty" inputmode="decimal" placeholder="1"></label>
+<label>Needed by<input id="by" placeholder="2026-10-02"></label>
+<button type="button" id="go">Write the note</button>
+<pre id="out" hidden></pre>
+<p>Match a number you already have in <a href="/zion-ai-spare-parts-matcher/">Spare parts matcher</a>. Schedule the visit in <a href="/ai-smart-hands-scheduler/">Smart hands</a>. For a quote, use <a href="/discovery/">Discovery $99</a>.</p>
+<script>
+document.getElementById("go").onclick=function(){
+  const qty=Number(String(document.getElementById("qty").value).replace(/[^0-9.]/g,""))||0;
+  const lines=[
+    "Site: "+(document.getElementById("site").value.trim()||"(unnamed)"),
+    "Part number: "+(document.getElementById("pn").value.trim()||"(blank)"),
+    "Quantity: "+qty,
+    "Needed by: "+(document.getElementById("by").value.trim()||"(not set)"),
+    "",
+    "Stock was not checked. A person still confirms the part before it ships."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+</body>
+</html>
