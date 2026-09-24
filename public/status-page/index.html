@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Status Page | Zion Tech Group</title>
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="Live system and service status for Zion Tech Group." />
-  <link rel="canonical" href="https://ziontechgroup.com/status-page/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status | Zion Tech Group</title>
+<meta name="description" content="This page is not a live status board. Customer updates are written on the status note.">
+<link rel="canonical" href="https://ziontechgroup.com/status-page/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Status | Zion Tech Group">
+<meta property="og:description" content="This page is not a live status board. Customer updates are written on the status note.">
+<meta property="og:url" content="https://ziontechgroup.com/status-page/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Zion Tech Group">
+<link rel="preload" href="/assets/css/site.css" as="style">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.ico">
 </head>
-<body class="bg-slate-950 text-white">
-  <main class="mx-auto max-w-5xl px-6 py-20">
-    <h1 class="text-4xl font-bold text-white mb-4">Status</h1>
-    <p class="text-slate-300 mb-10 max-w-2xl">Operational summary for core systems, monitoring, and customer-facing services.</p>
-    <div class="grid gap-6 md:grid-cols-3">
-      <div class="rounded-xl border border-emerald-700 bg-slate-900/60 p-5 text-white">
-        <h2 class="text-xl font-semibold text-white mb-2">Main site</h2>
-        <p class="text-emerald-300 text-sm">Operational</p>
-      </div>
-      <div class="rounded-xl border border-emerald-700 bg-slate-900/60 p-5 text-white">
-        <h2 class="text-xl font-semibold text-white mb-2">Services API</h2>
-        <p class="text-emerald-300 text-sm">Operational</p>
-      </div>
-      <div class="rounded-xl border border-emerald-700 bg-slate-900/60 p-5 text-white">
-        <h2 class="text-xl font-semibold text-white mb-2">Monitoring</h2>
-        <p class="text-emerald-300 text-sm">Operational</p>
-      </div>
-    </div>
-    <div class="mt-10"><a href="/contact/" class="rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white">Report an issue →</a></div>
-  </main>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="/">Zion Tech Group</a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links" aria-label="Primary">
+<a href="/services/">Services</a>
+<a href="/plans/">Plans</a>
+<a href="/discovery/">Discovery</a>
+<a href="/field-services/">Field</a>
+<a href="/case-studies/">Cases</a>
+<a href="/blog/">Blog</a>
+<a href="/contact/">Contact</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+</nav></div></header>
+<main id="conteudo" class="section"><div class="wrap">
+<p class="crumb"><a href="/">Home</a> / Status</p>
+<h1>Status</h1>
+<p class="lead">This page is not a live monitor and it does not publish an uptime number. When we write a customer update, it is a sentence a person posts.</p>
+<div class="grid">
+<div class="card"><h3>Customer update</h3><p>The note we use instead of a status hostname.</p><p><a href="/status-note/">Open the status note</a></p></div>
+<div class="card"><h3>Report something</h3><p>Send what you saw and when. We reply from the contact desk.</p><p><a href="/contact/">Contact</a></p></div>
+<div class="card"><h3>Service terms</h3><p>The SLA page states the agreement. It does not invent a current uptime figure.</p><p><a href="/sla/">Read the SLA</a></p></div>
+</div>
+<p class="see-also"><a href="/incident-commander-desk/">Incident commander desk</a> · <a href="/runbook-desk/">Runbook desk</a></p>
+
+</div></main>
+<script src="/assets/js/zion-shell.js" defer></script>
 </body>
 </html>
