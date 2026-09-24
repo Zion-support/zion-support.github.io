@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Evals studio | Zion Tech Group</title>
+<meta name="description" content="Score an assistant on criteria you type. The sheet does not call a model."/>
+<link rel="canonical" href="https://ziontechgroup.com/evals-studio/"/>
+<link rel="stylesheet" href="/styles.css"/>
+<style>
+nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:18px 24px;border-bottom:1px solid #1e293b}
+nav a{color:#d8b4fe}
+main{max-width:880px;margin:0 auto;padding:8px 20px 64px}
+h1{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.15}
+.lead{color:#cbd5e1;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid #1e293b;border-radius:14px;padding:14px 16px;background:rgba(15,23,42,.6)}
+label{display:block;margin:10px 0;color:#cbd5e1}
+input,textarea{width:100%;max-width:440px;padding:8px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f8fafc}
+button{margin-top:8px;padding:10px 16px;border:0;border-radius:10px;background:#7c3aed;color:#fff;font-weight:650;cursor:pointer}
+pre{white-space:pre-wrap;background:#0c1222;border:1px solid #26324d;border-radius:12px;padding:14px}
+footer{margin-top:36px;color:#94a3b8;font-size:14px}
+ul.plain{padding-left:18px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main>
+<h1>Evals studio</h1>
+<p class="lead">Score one assistant from 1 to 5 on rows you care about. The total is the sum of what you typed. This page does not call a model and does not publish a rank.</p>
+<label>Assistant name <input id="name" value="Assistant"></label>
+<div class="grid" id="rows"></div>
+<p><button type="button" id="go">Add the scores</button></p>
+<pre id="out" hidden></pre>
+<p>Related: <a href="/ai-vendor-comparison/">Vendor comparison</a> · <a href="/ai-red-team/">Review desk</a> · <a href="/mcp-hub/">MCP hub</a> · <a href="/zion-ai-agent-marketplace/">Agent marketplace</a></p>
+<script>
+const rows=['Finished the asked task','Stayed inside the written scope','Cited a source you can open','Latency was acceptable','Cost was acceptable'];
+const box=document.getElementById('rows');
+rows.forEach((label,i)=>{
+  const d=document.createElement('label');
+  d.className='card';
+  d.textContent=label+' ';
+  const inp=document.createElement('input');
+  inp.id='s'+i; inp.value='3'; inp.inputMode='numeric';
+  d.appendChild(inp); box.appendChild(d);
+});
+document.getElementById('go').onclick=function(){
+  let sum=0; const lines=[document.getElementById('name').value||'Assistant'];
+  rows.forEach((label,i)=>{
+    let v=parseInt(document.getElementById('s'+i).value,10);
+    if(!Number.isFinite(v)) v=0;
+    v=Math.max(1,Math.min(5,v));
+    sum+=v; lines.push(label+': '+v);
+  });
+  lines.push('Total: '+sum+' / '+(rows.length*5));
+  lines.push('This is your score, not a benchmark.');
+  const o=document.getElementById('out'); o.hidden=false; o.textContent=lines.join('\n');
+};
+</script>
+
+<footer>
+<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</p>
+</footer>
+</main>
+</body>
+</html>

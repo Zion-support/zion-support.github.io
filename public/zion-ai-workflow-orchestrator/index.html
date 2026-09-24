@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Workflow orchestrator | Zion Tech Group</title>
+<meta name="description" content="List each step, its owner, its input, and the condition that stops the run."/>
+<link rel="canonical" href="https://ziontechgroup.com/zion-ai-workflow-orchestrator/"/>
+<link rel="stylesheet" href="/styles.css"/>
+<style>
+nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:18px 24px;border-bottom:1px solid #1e293b}
+nav a{color:#d8b4fe}
+main{max-width:880px;margin:0 auto;padding:8px 20px 64px}
+h1{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.15}
+.lead{color:#cbd5e1;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid #1e293b;border-radius:14px;padding:14px 16px;background:rgba(15,23,42,.6)}
+label{display:block;margin:10px 0;color:#cbd5e1}
+input,textarea{width:100%;max-width:440px;padding:8px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f8fafc}
+button{margin-top:8px;padding:10px 16px;border:0;border-radius:10px;background:#7c3aed;color:#fff;font-weight:650;cursor:pointer}
+pre{white-space:pre-wrap;background:#0c1222;border:1px solid #26324d;border-radius:12px;padding:14px}
+footer{margin-top:36px;color:#94a3b8;font-size:14px}
+ul.plain{padding-left:18px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main>
+<h1>Workflow orchestrator</h1>
+<p class="lead">Write the steps in order. Each step needs an owner, an input, an output, and a condition that stops the run. This page does not execute the workflow and does not move data between systems.</p>
+<label>Workflow name <input id="name" value=""></label>
+<label>Steps, one per line, as owner — input — output <textarea id="steps" rows="6" placeholder="Alex — new ticket — tagged queue"></textarea></label>
+<label>Stop when <textarea id="stop" rows="2"></textarea></label>
+<p><button type="button" id="go">Lay out the run</button></p>
+<pre id="out" hidden></pre>
+<p>Related: <a href="/automation/">Automation</a> · <a href="/services/ai-automation/">AI automation</a> · <a href="/agent-fleet/">Agent fleet</a> · <a href="/ai-agent-workflow-builder/">Workflow builder</a> · <a href="/mcp-hub/">MCP hub</a></p>
+<script>
+document.getElementById('go').onclick=function(){
+  const name=(document.getElementById('name').value||'(unnamed)').trim();
+  const steps=(document.getElementById('steps').value||'').split(/\n/).map(s=>s.trim()).filter(Boolean);
+  const stop=(document.getElementById('stop').value||'(no stop written)').trim();
+  const lines=['Workflow: '+name,'Stop when: '+stop,''];
+  if(!steps.length) lines.push('No steps yet.');
+  steps.forEach((s,i)=>lines.push((i+1)+'. '+s));
+  lines.push('','A person still has to run this. The page did not call another system.');
+  const o=document.getElementById('out'); o.hidden=false; o.textContent=lines.join('\n');
+};
+</script>
+
+<footer>
+<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</p>
+</footer>
+</main>
+</body>
+</html>
