@@ -38,6 +38,16 @@ Build, test and operate fleets of autonomous agents:
 - **[Zion AI Benchmark Lab](https://ziontechgroup.com/zion-ai-benchmark-lab/)** — model evaluations and leaderboards for vendor selection
 - **[Zion AI Churn Predictor](https://ziontechgroup.com/zion-ai-churn-predictor/)** — customer health scoring and save playbooks
 
+## 🧠 LLM & Prompt Engineering
+
+- **[LLM Gateway](https://ziontechgroup.com/llm-gateway/)** — unified multi-provider LLM routing & fallbacks
+- **[RAG Forge](https://ziontechgroup.com/rag-forge/)** — build & test RAG pipelines visually
+- **[Prompt Shield](https://ziontechgroup.com/prompt-shield/)** — prompt-injection defense
+- **[Prompt Forge](https://ziontechgroup.com/prompt-forge/)** — prompt versioning & A/B testing
+- **[LLM Cost Optimizer](https://ziontechgroup.com/llm-cost-optimizer/)** — cheapest model meeting quality targets
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md)
+
 ## 🔒 Security & Compliance
 
 - **[Zion AI Phishing Simulator](https://ziontechgroup.com/ai-phishing-simulator/)** — security awareness training
