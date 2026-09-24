@@ -30,7 +30,7 @@ footer{margin-top:28px;color:#94a3b8;font-size:14px}
 <label>Window (days)<input id="days" inputmode="decimal" placeholder="30"></label>
 <button type="button" id="go">Calculate</button>
 <pre id="out" hidden></pre>
-<p>Related: <a href="/sla/">Service levels</a> · <a href="/sla-calculator/">SLA calculator</a> · <a href="/site-uptime-watchdog/">Uptime watchdog</a> · <a href="/runbook-desk/">Runbook desk</a></p>
+<p>Related: <a href="/sla/">Service levels</a> · <a href="/sla-calculator/">SLA calculator</a> · <a href="/site-uptime-watchdog/">Uptime watchdog</a> · <a href="/runbook-desk/">Runbook desk</a> · <a href="/recovery-notes/">Recovery notes</a></p>
 <script>
 document.getElementById("go").onclick=function(){
   const n=id=>Number(String(document.getElementById(id).value).replace(/[^0-9.]/g,""))||0;
