@@ -4,6 +4,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 ## Homepage spotlight pages (this repo)
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
+- [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md) — NEW Batch 28: warranty claims, incident runbooks, procurement, SLA risk, knowledge gaps, quote building
 - [APPS_SHOWCASE.md](APPS_SHOWCASE.md) — app showcase overview
 - [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) — original network spotlight
 - [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — NEW Batch 18: readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation
@@ -54,7 +55,6 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_SEP24_BATCH20.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH20.md) — Sept 24 batch 20 launches
 - [APP_NETWORK_SPOTLIGHT_SEP24_BATCH21.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH21.md) — Sept 24 batch 21 launches
 - [APP_NETWORK_SPOTLIGHT_SEP24_BATCH22.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH22.md) — Sept 24 batch 22: AI data quality & pipeline intelligence
-- [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md) — NEW Sept 24 batch 28: HR & People AI + Sales Pipeline & Revenue AI (12 apps)
 - [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) — prompt trust & dev utilities: Prompt Shield, Injection Playground, Prompt Forge, LLM Cost Optimizer, K8s YAML Linter, Changelog Writer
 - [APP_NETWORK_SPOTLIGHT_SLA_PREDICTOR.md](APP_NETWORK_SPOTLIGHT_SLA_PREDICTOR.md) — SLA prediction apps
 - [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) — support & customer experience
