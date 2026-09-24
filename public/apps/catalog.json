@@ -1,59 +1,324 @@
 {
   "name": "Zion Tech Group apps network",
-  "canonical": "https://ziontechwroup.com/apps-network/",
-  "hubs": ["/apps/", "/apps-network/", "/app-network/", "/free-ai-it-tools/"],
-  "note": "HTTPS paths on the main site only. network.ziontechgroup.com fails TLS — do not send buyers there.",
-  "menu": ["Discovery $99", "Consulting $499", "Starter $2,500", "Growth $8,000/mo"],
+  "canonical": "https://ziontechgroup.com/apps-network/",
+  "hubs": [
+    "/apps/",
+    "/apps-network/",
+    "/app-network/",
+    "/free-ai-it-tools/"
+  ],
+  "note": "HTTPS paths on the main site only. network.ziontechgroup.com fails TLS \u2014 do not send buyers there.",
+  "menu": [
+    "Discovery $99",
+    "Consulting $499",
+    "Starter $2,500",
+    "Growth $8,000/mo"
+  ],
   "categories": {
     "money": "/apps/categories/money/",
     "ops": "/apps/categories/ops/",
     "govern": "/apps/categories/govern/"
   },
   "apps": [
-    {"href": "/apps-network/", "title": "Apps Network hub", "group": "hub"},
-    {"href": "/apps/", "title": "Live catalog", "group": "hub"},
-    {"href": "/app-network/", "title": "Full directory", "group": "hub"},
-    {"href": "/roi-calc/", "title": "ROI calculator", "group": "money"},
-    {"href": "/token-cost/", "title": "Token cost", "group": "money"},
-    {"href": "/finops-estimator/", "title": "FinOps estimator", "group": "money"},
-    {"href": "/cloud-waste/", "title": "Cloud waste", "group": "money"},
-    {"href": "/finops-autopilot/", "title": "FinOps Autopilot", "group": "money"},
-    {"href": "/cloud-cost-estimator/", "title": "Cloud cost estimator", "group": "money"},
-    {"href": "/sla-calculator/", "title": "SLA calculator", "group": "ops"},
-    {"href": "/incident-cost/", "title": "Incident cost", "group": "ops"},
-    {"href": "/patch-window/", "title": "Patch window", "group": "ops"},
-    {"href": "/change-risk/", "title": "Change risk", "group": "ops"},
-    {"href": "/zion-ai-incident-commander/", "title": "AI Incident Commander", "group": "ops"},
-    {"href": "/ops-runbook-ai/", "title": "Ops Runbook AI", "group": "ops"},
-    {"href": "/ai-governance-checklist/", "title": "AI governance", "group": "govern"},
-    {"href": "/stack-audit/", "title": "Stack audit", "group": "govern"},
-    {"href": "/rfp-readiness/", "title": "RFP readiness", "group": "govern"},
-    {"href": "/edital-desk/", "title": "Edital desk", "group": "govern"},
-    {"href": "/prompt-shield/", "title": "Prompt Shield", "group": "govern"},
-    {"href": "/licitacao-radar/", "title": "Licitação Radar", "group": "govern"},
-    {"href": "/prompt-library/", "title": "Prompt library", "group": "work"},
-    {"href": "/agent-brief/", "title": "Agent brief", "group": "work"},
-    {"href": "/llm-gateway/", "title": "LLM Gateway", "group": "ai"},
-    {"href": "/model-observatory/", "title": "Model Observatory", "group": "ai"},
-    {"href": "/zion-ai-field-dispatch-optimizer/", "title": "Field Dispatch", "group": "field"},
-    {"href": "/apps/playbook/", "title": "Playbook", "group": "hub"},
-    {"href": "/ai-model-cost-calculator/", "title": "AI model cost calculator", "group": "money"},
-    {"href": "/ai-readiness-score/", "title": "AI readiness score", "group": "govern"},
-    {"href": "/data-contract-validator/", "title": "Data contract validator", "group": "govern"},
-    {"href": "/fleet-fuel-optimizer/", "title": "Fleet fuel optimizer", "group": "field"},
-    {"href": "/invoice-match-ai/", "title": "Invoice match", "group": "money"},
-    {"href": "/knowledge-gap-finder/", "title": "Knowledge gap finder", "group": "work"},
-    {"href": "/maintenance-ticket-triage/", "title": "Maintenance ticket triage", "group": "ops"},
-    {"href": "/onboarding-buddy-ai/", "title": "Onboarding buddy", "group": "work"},
-    {"href": "/quote-builder-ai/", "title": "Quote builder", "group": "money"},
-    {"href": "/route-density-planner/", "title": "Route density planner", "group": "field"},
-    {"href": "/site-uptime-watchdog/", "title": "Site uptime watchdog", "group": "ops"},
-    {"href": "/sla-risk-forecaster/", "title": "SLA risk forecaster", "group": "ops"},
-    {"href": "/spare-price-scout/", "title": "Spare price scout", "group": "field"},
-    {"href": "/technician-coach-ai/", "title": "Technician coach", "group": "field"},
-    {"href": "/warehouse-slotting-ai/", "title": "Warehouse slotting", "group": "field"},
-    {"href": "/zion-ai-compliance-scanner/", "title": "Compliance control scanner", "group": "govern"},
-    {"href": "/zion-ai-cost-optimizer/", "title": "Cloud cost optimizer", "group": "money"},
-    {"href": "/zion-ai-drift-detector/", "title": "Config drift detector", "group": "ops"}
+    {
+      "href": "/apps-network/",
+      "title": "Apps Network hub",
+      "group": "hub"
+    },
+    {
+      "href": "/apps/",
+      "title": "Live catalog",
+      "group": "hub"
+    },
+    {
+      "href": "/app-network/",
+      "title": "Full directory",
+      "group": "hub"
+    },
+    {
+      "href": "/roi-calc/",
+      "title": "ROI calculator",
+      "group": "money"
+    },
+    {
+      "href": "/token-cost/",
+      "title": "Token cost",
+      "group": "money"
+    },
+    {
+      "href": "/finops-estimator/",
+      "title": "FinOps estimator",
+      "group": "money"
+    },
+    {
+      "href": "/cloud-waste/",
+      "title": "Cloud waste",
+      "group": "money"
+    },
+    {
+      "href": "/finops-autopilot/",
+      "title": "FinOps Autopilot",
+      "group": "money"
+    },
+    {
+      "href": "/cloud-cost-estimator/",
+      "title": "Cloud cost estimator",
+      "group": "money"
+    },
+    {
+      "href": "/sla-calculator/",
+      "title": "SLA calculator",
+      "group": "ops"
+    },
+    {
+      "href": "/incident-cost/",
+      "title": "Incident cost",
+      "group": "ops"
+    },
+    {
+      "href": "/patch-window/",
+      "title": "Patch window",
+      "group": "ops"
+    },
+    {
+      "href": "/change-risk/",
+      "title": "Change risk",
+      "group": "ops"
+    },
+    {
+      "href": "/zion-ai-incident-commander/",
+      "title": "AI Incident Commander",
+      "group": "ops"
+    },
+    {
+      "href": "/ops-runbook-ai/",
+      "title": "Ops Runbook AI",
+      "group": "ops"
+    },
+    {
+      "href": "/ai-governance-checklist/",
+      "title": "AI governance",
+      "group": "govern"
+    },
+    {
+      "href": "/stack-audit/",
+      "title": "Stack audit",
+      "group": "govern"
+    },
+    {
+      "href": "/rfp-readiness/",
+      "title": "RFP readiness",
+      "group": "govern"
+    },
+    {
+      "href": "/edital-desk/",
+      "title": "Edital desk",
+      "group": "govern"
+    },
+    {
+      "href": "/prompt-shield/",
+      "title": "Prompt Shield",
+      "group": "govern"
+    },
+    {
+      "href": "/licitacao-radar/",
+      "title": "Licita\u00e7\u00e3o Radar",
+      "group": "govern"
+    },
+    {
+      "href": "/prompt-library/",
+      "title": "Prompt library",
+      "group": "work"
+    },
+    {
+      "href": "/agent-brief/",
+      "title": "Agent brief",
+      "group": "work"
+    },
+    {
+      "href": "/llm-gateway/",
+      "title": "LLM Gateway",
+      "group": "ai"
+    },
+    {
+      "href": "/model-observatory/",
+      "title": "Model Observatory",
+      "group": "ai"
+    },
+    {
+      "href": "/zion-ai-field-dispatch-optimizer/",
+      "title": "Field Dispatch",
+      "group": "field"
+    },
+    {
+      "href": "/apps/playbook/",
+      "title": "Playbook",
+      "group": "hub"
+    },
+    {
+      "href": "/ai-model-cost-calculator/",
+      "title": "AI model cost calculator",
+      "group": "money"
+    },
+    {
+      "href": "/ai-readiness-score/",
+      "title": "AI readiness score",
+      "group": "govern"
+    },
+    {
+      "href": "/data-contract-validator/",
+      "title": "Data contract validator",
+      "group": "govern"
+    },
+    {
+      "href": "/fleet-fuel-optimizer/",
+      "title": "Fleet fuel optimizer",
+      "group": "field"
+    },
+    {
+      "href": "/invoice-match-ai/",
+      "title": "Invoice match",
+      "group": "money"
+    },
+    {
+      "href": "/knowledge-gap-finder/",
+      "title": "Knowledge gap finder",
+      "group": "work"
+    },
+    {
+      "href": "/maintenance-ticket-triage/",
+      "title": "Maintenance ticket triage",
+      "group": "ops"
+    },
+    {
+      "href": "/onboarding-buddy-ai/",
+      "title": "Onboarding buddy",
+      "group": "work"
+    },
+    {
+      "href": "/quote-builder-ai/",
+      "title": "Quote builder",
+      "group": "money"
+    },
+    {
+      "href": "/route-density-planner/",
+      "title": "Route density planner",
+      "group": "field"
+    },
+    {
+      "href": "/site-uptime-watchdog/",
+      "title": "Site uptime watchdog",
+      "group": "ops"
+    },
+    {
+      "href": "/sla-risk-forecaster/",
+      "title": "SLA risk forecaster",
+      "group": "ops"
+    },
+    {
+      "href": "/spare-price-scout/",
+      "title": "Spare price scout",
+      "group": "field"
+    },
+    {
+      "href": "/technician-coach-ai/",
+      "title": "Technician coach",
+      "group": "field"
+    },
+    {
+      "href": "/warehouse-slotting-ai/",
+      "title": "Warehouse slotting",
+      "group": "field"
+    },
+    {
+      "href": "/zion-ai-compliance-scanner/",
+      "title": "Compliance control scanner",
+      "group": "govern"
+    },
+    {
+      "href": "/zion-ai-cost-optimizer/",
+      "title": "Cloud cost optimizer",
+      "group": "money"
+    },
+    {
+      "href": "/zion-ai-drift-detector/",
+      "title": "Config drift detector",
+      "group": "ops"
+    },
+    {
+      "href": "/data-quality-desk/",
+      "title": "Data quality desk",
+      "group": "govern"
+    },
+    {
+      "href": "/llm-spend-compare/",
+      "title": "LLM spend compare",
+      "group": "money"
+    },
+    {
+      "href": "/rag-quality-check/",
+      "title": "RAG quality check",
+      "group": "ai"
+    },
+    {
+      "href": "/ai-agent-workflow-builder/",
+      "title": "Agent workflow builder",
+      "group": "ai"
+    },
+    {
+      "href": "/ai-contract-reviewer/",
+      "title": "AI contract reviewer",
+      "group": "govern"
+    },
+    {
+      "href": "/ai-accessibility-auditor/",
+      "title": "AI accessibility auditor",
+      "group": "govern"
+    },
+    {
+      "href": "/ai-red-team-playbook/",
+      "title": "AI red-team scoping playbook",
+      "group": "govern"
+    },
+    {
+      "href": "/ai-vendor-comparison/",
+      "title": "AI vendor comparison",
+      "group": "govern"
+    },
+    {
+      "href": "/finops-alert-triage/",
+      "title": "FinOps alert triage",
+      "group": "money"
+    },
+    {
+      "href": "/mcp-server-scaffold/",
+      "title": "MCP server scaffold",
+      "group": "ai"
+    },
+    {
+      "href": "/synthetic-data-studio/",
+      "title": "Synthetic data studio",
+      "group": "ai"
+    },
+    {
+      "href": "/ai-chatbot-solutions/",
+      "title": "AI chatbot solutions",
+      "group": "ai"
+    },
+    {
+      "href": "/cloud-services/",
+      "title": "Cloud services",
+      "group": "ops"
+    },
+    {
+      "href": "/ai-knowledge-base-rag-platform/",
+      "title": "Knowledge base and RAG",
+      "group": "ai"
+    },
+    {
+      "href": "/apps/customer-success/",
+      "title": "Customer success tools",
+      "group": "work"
+    }
   ]
 }
