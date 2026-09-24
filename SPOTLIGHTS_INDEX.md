@@ -27,6 +27,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 ## More spotlight pages
 - [APP_NETWORK_SPOTLIGHTS.md](APP_NETWORK_SPOTLIGHTS.md) — alternate spotlights overview
 - [APP_NETWORK_SPOTLIGHT_AI_OPERATIONS.md](APP_NETWORK_SPOTLIGHT_AI_OPERATIONS.md) — AI operations apps
+- [APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md](APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md) — NEW: assessment & readiness tools: Managed IT Health Check, Cybersecurity Risk Assessment, AI Readiness, IT Staffing Calculator, ROI Calculator
 - [APP_NETWORK_SPOTLIGHT_CALCULATORS.md](APP_NETWORK_SPOTLIGHT_CALCULATORS.md) — free calculators collection
 - [APP_NETWORK_SPOTLIGHT_CITY_CLUSTERS.md](APP_NETWORK_SPOTLIGHT_CITY_CLUSTERS.md) — city cluster deployments
 - [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) — NEW: cloud architecture, migration & FinOps tools

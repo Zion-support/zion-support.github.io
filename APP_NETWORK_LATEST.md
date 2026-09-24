@@ -8,6 +8,16 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📓 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🧭 Assessment & Readiness Tools Spotlight (September 24, 2026)
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md](APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md) — know where you stand before you invest:
+
+- **[Managed IT Health Check](https://ziontechgroup.com/managed-it-health-check/)** — scored infra/security/ops self-assessment ([repo](https://github.com/Zion-support/managed-it-health-check))
+- **[Cybersecurity Risk Assessment](https://ziontechgroup.com/cybersecurity-risk-assessment/)** — posture scoring & prioritization ([repo](https://github.com/Zion-support/cybersecurity-risk-assessment))
+- **[AI Readiness Assessment](https://ziontechgroup.com/ai-readiness-assessment/)** · **[AI Readiness Score](https://ziontechgroup.com/ai-readiness-score/)** — AI adoption readiness
+- **[IT Staffing Calculator](https://ziontechgroup.com/it-staffing-calculator/)** — team sizing & in-house vs managed ([repo](https://github.com/Zion-support/it-staffing-calculator))
+- **[AI ROI Calculator](https://ziontechgroup.com/roi-calculator/)** — payback, NPV & TCO ([repo](https://github.com/Zion-support/roi-calculator))
+
 ## 🆕 September 24, 2026 — Evening Batch (25 apps + 1 new launch)
 
 Full spotlight page: https://ziontechgroup.com/apps/september-2026-batch2.html
@@ -168,4 +178,4 @@ Full spotlight: [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLI
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) · [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) · [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md](APP_NETWORK_SPOTLIGHT_ASSESSMENT_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md](APP_NETWORK_SPOTLIGHT_PROMPT_TRUST.md) · [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) · [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md) · [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md)
