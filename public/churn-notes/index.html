@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Churn notes | Zion Tech Group</title>
+<meta name="description" content="Write the account, the signal you already noticed, and the next conversation. Nothing is scored or uploaded."/>
+<link rel="canonical" href="https://ziontechgroup.com/churn-notes/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em;font-size:clamp(28px,4vw,40px)}h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+ul{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<h1>Churn notes</h1>
+<p>The older Churn Radar page still shows broken styles. Use this note. It does not predict a score and it does not connect to a CRM.</p>
+<h2>Write down</h2>
+<ul>
+<li>The account name.</li>
+<li>The signal a person already saw: a missed renewal, a quiet champion, an open ticket.</li>
+<li>Who owns the next conversation.</li>
+<li>The date of that conversation.</li>
+</ul>
+<label>Account<input id="account" placeholder="Northwind Logistics"></label>
+<label>Signal you noticed<textarea id="signal" rows="3" placeholder="Champion left. Renewal in 45 days."></textarea></label>
+<label>Owner<input id="owner" placeholder="Customer lead"></label>
+<label>Next conversation<input id="when" placeholder="2026-10-02"></label>
+<button type="button" id="go">Write the account note</button>
+<pre id="out" hidden></pre>
+<p>Bring the note to the person who owns the account. The page does not email them.</p>
+<p>Related: <a href="/apps/customer-success/">Customer success</a> · <a href="/retail-desk/">Retail desk</a> · <a href="/discovery/">Discovery</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const g=id=>(document.getElementById(id).value||"").trim();
+  const lines=[
+    "Account: "+(g("account")||"(blank)"),
+    "Signal: "+(g("signal")||"(blank)"),
+    "Owner: "+(g("owner")||"(blank)"),
+    "Next conversation: "+(g("when")||"(blank)"),
+    "",
+    "This is not a churn score. Nothing was uploaded."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer>
+<a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>
+Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950
+</footer>
+</div>
+</body>
+</html>
