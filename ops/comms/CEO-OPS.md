@@ -1,48 +1,4 @@
-# CEO Operations — Zion Tech Group
-
-## Standing Orders
-
-1. **Help carlos@ziontechgroup.com first.** Always.
-2. **CC carlos@ziontechgroup.com + commercial@ziontechgroup.com** on all emails and responses.
-3. **Reply All** — never create new threads if one exists.
-4. **Sell only** https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
-5. **Never orange-cloud the apex.** Never create apps. DNS. Never colliding CNAMEs.
-6. **#71361 = durable log only.** Chatroom = real time.
-7. **Heartbeat every 5 minutes.** Claim lane in ONE line.
-
-## Agent Lane Assignment
-
-| Agent | Lane | Priority |
-|-------|------|----------|
-| Grok | Team Lead | 1 — Assigns lanes |
-| Hermes | Agent Ops | 2 — Monitor, automate, help |
-| Lucas | Engineer | 3 — Implementation |
-| Harper | Watchdog | 4 — Health monitoring |
-| Kleber | Human CEO | — Final authority |
-
-## Communication Protocol
-
-### Heartbeat Format (ONE LINE)
-```
-🟢 HERMES: ONLINE | Lane: MONITORING | Next: Standby
-```
-
-### Reply Rules
-- Always Reply All
-- Keep same thread
-- CC carlos@ziontechgroup.com + commercial@ziontechgroup.com
-- Max 1 follow-up/week for non-responsive clients
-- Offer Discovery + free AI services trial for old clients
-
-## Automation Schedule
-
-| Automation | Frequency | Purpose |
-|-----------|-----------|---------|
-| War Room Monitor | Every 5 min | Update STATUS.md, heartbeat |
-| Email Scanner | Every 10 min | Scan inbox, flag urgent |
-| Site Health Check | Every 5 min | Verify all pages HTTP 200 |
-| Issue Logger | Hourly | Post check-in on #71361 |
-| Agent Roster Update | Every 5 min | Update agent status |
+# CEO OPS — Zion Tech Group
 
 ## Key URLs
 - Board: https://ziontechgroup.com/ops/comms/
@@ -51,35 +7,48 @@
 - Issue: https://github.com/Zion-support/zion-support.github.io/issues/71361
 - CEO-OPS: https://ziontechgroup.com/ops/comms/CEO-OPS.md
 
+## Active Business Opportunities (2026-09-24 17:00 UTC)
+| Client | Need | Location | Status |
+|--------|------|----------|--------|
+| PNG Ports Corp (Darby, VITS admin@vits.com.pg) | HPE EOSL/TPM CNT-200012118 | Papua New Guinea | 🟢 Meeting CONFIRMED Sat 26 Sep 10:00 PNG (Fri 25 Sep 21:00 Brasília); proposal being finalized by Carlos/Fernanda; awaiting asset/serial list |
+| Empowered SMS / Scott Constable (Synthesia client) Opp-31830 | WiFi survey w/ Ekahau, 1 floor | 675 Ave of the Americas, NY | 🟢 Scott raising pricing with client; FE rate requests out to Malik (Altinex) + Joe (UTC); mobilize ~3 days after quote acceptance; min 30% markup |
+| TDS Trade (Ron Abboud rabboud@tdstrade.com) | 3x Oracle SPARC T8-4 | TBD | 🟡 US$17,000/unit ×3, 6-mo warranty incl., +US$1,000 9-mo option; order ONLY after client approval |
+| Inntech (Esgardo Cook, Héctor Cardoso) | AI+cybersecurity distribution, white-label | Mexico | 🟢 HOT — wants bounded AI+Cybersec deck before meeting; deck due in 24-48h; Fri 25/09 10:00 CDMX slot held, Mon 28/09 fallback |
+| BRIA Tech (Felipe Von Zuben) | AI partnership complementarity | Brazil | 🟢 Replied 16:30 UTC; format under discussion |
+| HeyGen Voice AI partnership | Voice AI reseller | — | 🟢 Chili Piper link received; Carlos booking with Johnny |
+| TRS Texas RFP TRS000658 | AI & IT advisory services | Texas | 🟢 Intent to propose submitted; due Oct 21; pre-proposal Q&A ongoing (Max Hernandez) |
+| Denver Water RFP | CX AI Chatbot | Denver | 🟢 Submission logistics answered (Colin Flynn); due Sep 30 |
+| UMS (Univ. of Maine) | IT RFPs | Maine | 🟢 Open sourcing events received (Derek Houtman); vendor registration next |
+| Hemmersbach | PartnerLink registration | — | 🟡 Registration in progress; Carlos+Commercial CC'd |
+| Zendesk call | — | — | 📅 Wed 30 Sep 16:00 GMT-3 |
+| Abracloud | — | — | 📅 Fri 25 Sep 16:30 GMT-3 |
+| Cloudflare/Anca sync | — | — | 📅 Tue 29 Sep 11:00 GMT-3 |
 
-## FE/Technician Priority Services
+## CI / GitHub Actions (2026-09-24 17:00 UTC) — ALL GREEN
+- plans catalog-health watchdog: probe realigned to live homepage anchors, commit 0db6c25, runs 36029622302/36029622276 SUCCESS
+- rag-forge Pages: SUCCESS (ziontechgroup.com/rag-forge/)
+- stale-smoke dispatch 36027658986 SUCCESS; MTTR digest 36027658794 SUCCESS; zion-support.github.io catalog watchdog 36027420011 SUCCESS
+- LESSON: never re-run old failed runs — they reuse original workflow files; dispatch fresh on main
 
-### Active Business Opportunities
-| Client | Need | Location | Zion Price | Status |
-|--------|------|----------|------------|--------|
-| Hammad Hanif (Altin XDG) | Dell PowerEdge FE | Pleasanton | $30,289/unit | ✅ Response sent |
-| Malik Junaid (Altin XDG) | Zeltiq Sept 23 FE | Pleasanton | $30,289/unit | ✅ Response sent |
-| Ron Abboud (TDS Trade) | 4x Oracle SPARC T8-4 | TBD | $8,580/unit | ✅ Response sent |
+## Suppression List (PERMANENT — never email)
+- cordeos.com entire domain (ratified by Carlos 2026-09-24)
+- Aline.gobbi@fujitsu.com (hard bounce; mark invalid in HubSpot when connector fixed)
+- ehva.ai suppression directive
+- @caloi.com, ASSEFAZ Jose/Glauber
+- Bulk outreach PAUSED 24-48h from 2026-09-24 ~16:00 UTC (two complaints same day); inbound replies only
 
-### Pricing Rules
-- Hardware/Software: Market price + 30% markup for Zion
-- FE/Technicians: Market rate + 30% markup for Zion
-- All opportunities: 30% markup applied
-- All emails: Reply All with carlos@ + commercial@
-
-### Market Rates (2026)
-- Dell PowerEdge R660: $23,299 list → $30,289 with markup
-- Oracle SPARC T8-4: $6,600 used → $8,580 with markup
-- Field Engineer: $60/hr → $78/hr with markup
-- Bay Area: $60-80/hr → $78-104/hr with markup
+## Pricing Rules
+- Hardware/Software: provider price + 30% markup for Zion
+- FE/Technicians: confirm rate, negotiate, min 30% markup
+- Confirm supplier ONLY after client accepts quote
+- All emails: Reply-All same thread, CC carlos@ + commercial@
 
 ## Never Do
 - Never orange-cloud apex
 - Never CREATE apps
-- Never touch DNS
-- Never collide CNAMEs
+- Never touch DNS / collide CNAMEs
 - Never send >1 follow-up/week
-- Never exclude carlos@ from replies
+- Never duplicate-send threads Carlos/SDM/Fernanda are handling
 
 ---
-*Last updated: 2026-09-17 20:45 UTC | Hermes Agent*
+*Last updated: 2026-09-24 17:00 UTC | Zion Agent (Composio)*
