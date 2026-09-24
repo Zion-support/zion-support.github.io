@@ -10,34 +10,34 @@
 <meta property="og:description" content="Continuous data-quality monitoring: freshness, volume, nulls, distributions and schema checks.">
 <meta property="og:url" content="https://ziontechgroup.com/data-quality-desk/">
 <style>
-:root{{color-scheme:dark;--bg:#080b16;--panel:#0e1528;--line:#26324d;--muted:#aab6d0;--purple:#a78bfa;--pink:#f0abfc}}
-*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:#f8fafc;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}}
-a{{color:inherit}}.wrap{{max-width:1100px;margin:auto;padding:0 24px}}
-.nav{{position:sticky;top:0;z-index:10;border-bottom:1px solid #26324dcc;background:#080b16ee;backdrop-filter:blur(16px)}}
-.navin{{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}}
-.brand{{font-size:20px;font-weight:850;background:linear-gradient(90deg,var(--purple),var(--pink));background-clip:text;color:transparent;text-decoration:none}}
-.nav a{{text-decoration:none;color:#b7c1d8;margin-left:14px;font-size:15px}}.nav a.cta{{background:linear-gradient(100deg,#7c3aed,#a855f7);color:#fff;font-weight:700;padding:9px 14px;border-radius:9px}}
-.hero{{padding:80px 0 56px;background:radial-gradient(circle at 78% 12%,#482080 0,transparent 38%),radial-gradient(circle at 12% 35%,#172554 0,transparent 34%)}}
-.eyebrow{{color:#c4b5fd;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:13px}}
-h1{{font-size:clamp(36px,6vw,64px);line-height:1.05;letter-spacing:-.04em;margin:16px 0}}
-.gradient{{background:linear-gradient(90deg,#c4b5fd,#f5d0fe 50%,#93c5fd);background-clip:text;color:transparent}}
-.hero p{{max-width:680px;color:#bac5db;font-size:19px}}
-.actions{{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}}
-.button{{display:inline-block;padding:13px 18px;border-radius:11px;background:#7c3aed;font-weight:750;text-decoration:none;color:#fff;border:0;cursor:pointer;font-size:15px}}
-.button.alt{{background:#151e35;border:1px solid #384766}}
-.section{{padding:56px 0}}.section h2{{font-size:clamp(26px,4vw,38px);margin:0 0 10px}}
-.lead{{color:var(--muted);max-width:680px}}
-.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:26px}}
-.card{{background:linear-gradient(145deg,#101a31,#0c1222);border:1px solid var(--line);border-radius:16px;padding:22px}}
-.card h3{{margin:10px 0 6px;font-size:19px}}.card p{{margin:0;color:var(--muted);font-size:15px}}
-.band{{border-block:1px solid var(--line);background:#0c1325}}
-.demo{{background:#0e1528;border:1px solid var(--line);border-radius:16px;padding:26px;margin-top:26px}}
-textarea,input[type=text]{{width:100%;background:#0a0f1f;border:1px solid #384766;color:#f8fafc;border-radius:10px;padding:12px;font:15px/1.5 system-ui}}
-textarea{{min-height:130px}}
-.out{{background:#0a0f1f;border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px;white-space:pre-wrap;font-size:14px;color:#c9d4ea;display:none}}
-footer{{border-top:1px solid var(--line);padding:38px 0;color:#8793ac;font-size:14px}}
-footer a{{color:#b9a4f7;text-decoration:none;margin-right:16px}}
-.badge{{display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);color:#34d399;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}}
+:root{color-scheme:dark;--bg:#080b16;--panel:#0e1528;--line:#26324d;--muted:#aab6d0;--purple:#a78bfa;--pink:#f0abfc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f8fafc;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit}.wrap{max-width:1100px;margin:auto;padding:0 24px}
+.nav{position:sticky;top:0;z-index:10;border-bottom:1px solid #26324dcc;background:#080b16ee;backdrop-filter:blur(16px)}
+.navin{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:20px;font-weight:850;background:linear-gradient(90deg,var(--purple),var(--pink));background-clip:text;color:transparent;text-decoration:none}
+.nav a{text-decoration:none;color:#b7c1d8;margin-left:14px;font-size:15px}.nav a.cta{background:linear-gradient(100deg,#7c3aed,#a855f7);color:#fff;font-weight:700;padding:9px 14px;border-radius:9px}
+.hero{padding:80px 0 56px;background:radial-gradient(circle at 78% 12%,#482080 0,transparent 38%),radial-gradient(circle at 12% 35%,#172554 0,transparent 34%)}
+.eyebrow{color:#c4b5fd;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:13px}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.05;letter-spacing:-.04em;margin:16px 0}
+.gradient{background:linear-gradient(90deg,#c4b5fd,#f5d0fe 50%,#93c5fd);background-clip:text;color:transparent}
+.hero p{max-width:680px;color:#bac5db;font-size:19px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.button{display:inline-block;padding:13px 18px;border-radius:11px;background:#7c3aed;font-weight:750;text-decoration:none;color:#fff;border:0;cursor:pointer;font-size:15px}
+.button.alt{background:#151e35;border:1px solid #384766}
+.section{padding:56px 0}.section h2{font-size:clamp(26px,4vw,38px);margin:0 0 10px}
+.lead{color:var(--muted);max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:26px}
+.card{background:linear-gradient(145deg,#101a31,#0c1222);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:10px 0 6px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:15px}
+.band{border-block:1px solid var(--line);background:#0c1325}
+.demo{background:#0e1528;border:1px solid var(--line);border-radius:16px;padding:26px;margin-top:26px}
+textarea,input[type=text]{width:100%;background:#0a0f1f;border:1px solid #384766;color:#f8fafc;border-radius:10px;padding:12px;font:15px/1.5 system-ui}
+textarea{min-height:130px}
+.out{background:#0a0f1f;border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:16px;white-space:pre-wrap;font-size:14px;color:#c9d4ea;display:none}
+footer{border-top:1px solid var(--line);padding:38px 0;color:#8793ac;font-size:14px}
+footer a{color:#b9a4f7;text-decoration:none;margin-right:16px}
+.badge{display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);color:#34d399;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
 </style>
 </head>
 <body>
@@ -69,7 +69,7 @@ footer a{{color:#b9a4f7;text-decoration:none;margin-right:16px}}
 </div>
 <p style="margin-top:24px"><a href="https://ziontechgroup.com/" style="color:#22d3ee">← Back to ziontechgroup.com</a> · <a href="https://ziontechgroup.com/services/" style="color:#22d3ee">All services</a> · <a href="https://ziontechgroup.com/plans/" style="color:#22d3ee">Plans</a></p>
 </div></section>
-</main>
+<section class="section"><div class="wrap"><div class="eyebrow">Scope</div><h2>What this page does</h2><p class="lead">The notes and the demo stay in this browser. Nothing is sent to a model provider, a warehouse, or a cloud account. Write down the check, the owner, and the next step. A mapped process starts at <a href="https://ziontechgroup.com/discovery/">Discovery $99</a>. Prices stay on <a href="https://ziontechgroup.com/plans/">Plans</a>.</p></div></section></main>
 <footer><div class="wrap">© 2026 Zion Tech Group · Data Quality Sentinel · <a href="https://ziontechgroup.com/about/">About</a><a href="https://ziontechgroup.com/contact/">Contact</a><a href="https://ziontechgroup.com/privacy/">Privacy</a><a href="https://github.com/Zion-support/data-quality-sentinel">Source on GitHub</a></div></footer>
 <script>function run(){var t=document.getElementById('p').value.toLowerCase();var o=document.getElementById('o');if(!t.trim()){o.style.display='block';o.textContent='Describe your scenario first.';return}var out='DATA QUALITY SENTINEL REPORT\n================\n\n';var found=0;if(/daily|hourly/.test(t)){out+='[FOUND] Freshness SLA set to your cadence with 25% grace.\n';found++}
 if(/revenue|finance|order/.test(t)){out+='[FOUND] Revenue-critical: add volume anomaly + duplicate detection.\n';found++}
