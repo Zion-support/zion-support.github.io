@@ -8,6 +8,25 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📭 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🌙 Fresh releases — September 24, 2026 (evening wave, 14 apps)
+
+Full spotlight: [SPOTLIGHT-2026-09-24-BATCH29.md](https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-24-BATCH29.md) · homepage copy: [homepage-content-batch29.md](https://github.com/Zion-support/zion-app-network/blob/main/homepage-content-batch29.md)
+
+- **[Warranty Claim Triager](https://ziontechgroup.com/warranty-claim-triager/)** — AI claim classification & auto-adjudication routing ([repo](https://github.com/Zion-support/warranty-claim-triager))
+- **[Incident Runbook AI](https://ziontechgroup.com/incident-runbook-ai/)** — executable runbooks from alerts & postmortems ([repo](https://github.com/Zion-support/incident-runbook-ai))
+- **[AI Procurement Copilot](https://ziontechgroup.com/ai-procurement-copilot/)** — sourcing, vendor comparison & PO drafting ([repo](https://github.com/Zion-support/ai-procurement-copilot))
+- **[SLA Risk Forecaster](https://ziontechgroup.com/sla-risk-forecaster/)** — predict SLA breaches before they happen
+- **[Knowledge Gap Finder](https://ziontechgroup.com/knowledge-gap-finder/)** — missing docs surfaced from tickets
+- **[Quote Builder AI](https://ziontechgroup.com/quote-builder-ai/)** — instant, accurate sales quotes
+- **[Returns Optimization AI](https://ziontechgroup.com/returns-optimization-ai/)** — cut return costs & fraud
+- **[Route Density Planner](https://ziontechgroup.com/route-density-planner/)** — denser routes, fewer miles
+- **[Upsell Signal Scout](https://ziontechgroup.com/upsell-signal-scout/)** — expansion revenue signals
+- **[Support Sentiment Monitor](https://ziontechgroup.com/support-sentiment-monitor/)** — real-time sentiment scoring
+- **[Voice of Customer Hub](https://ziontechgroup.com/voice-of-customer-hub/)** — unified VoC analytics
+- **[NPS Insight Engine](https://ziontechgroup.com/nps-insight-engine/)** — drivers behind your NPS
+- **[Support Deflection Analyzer](https://ziontechgroup.com/support-deflection-analyzer/)** — self-service ROI
+- **[Partner Referral Tracker](https://ziontechgroup.com/partner-referral-tracker/)** — partner-sourced pipeline
+
 ## ☁️ Cloud & Architecture Tools Spotlight (September 24, 2026)
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md](APP_NETWORK_SPOTLIGHT_CLOUD_ARCHITECTURE.md) — free cloud design, migration & FinOps utilities:
