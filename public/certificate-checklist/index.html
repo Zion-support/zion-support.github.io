@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Certificate checklist | Zion Tech Group</title>
+<meta name="description" content="Write down the hostname, the name on the certificate, the expiry, and who renews it. This page does not connect to a host."/>
+<link rel="canonical" href="https://ziontechgroup.com/certificate-checklist/"/>
+<link rel="stylesheet" href="/styles.css"/>
+<style>
+nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:18px 24px;border-bottom:1px solid #1e293b}
+nav a{color:#d8b4fe}
+main{max-width:880px;margin:0 auto;padding:8px 20px 64px}
+h1{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.15}
+.lead{color:#cbd5e1;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid #1e293b;border-radius:14px;padding:14px 16px;background:rgba(15,23,42,.6)}
+label{display:block;margin:10px 0;color:#cbd5e1}
+input,textarea{width:100%;max-width:440px;padding:8px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f8fafc}
+button{margin-top:8px;padding:10px 16px;border:0;border-radius:10px;background:#7c3aed;color:#fff;font-weight:650;cursor:pointer}
+pre{white-space:pre-wrap;background:#0c1222;border:1px solid #26324d;border-radius:12px;padding:14px}
+footer{margin-top:36px;color:#94a3b8;font-size:14px}
+ul.plain{padding-left:18px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main>
+<h1>Certificate checklist</h1>
+<p class="lead">Record the name people type, the name printed on the certificate, when it expires, and who renews it. This page stays in the browser. It does not open a connection to the host and it does not grade a cipher suite.</p>
+<div class="grid">
+<article class="card"><h2>Name</h2><p>The hostname in the address bar must match the name on the certificate, including the subdomain.</p></article>
+<article class="card"><h2>Date</h2><p>Write the expiry as a calendar date and the person who receives the renewal reminder.</p></article>
+<article class="card"><h2>Owner</h2><p>Name the team that can replace the certificate. If no one owns it, do not point a new app at that host.</p></article>
+</div>
+<form id="sheet">
+<label>Hostname people type <input name="host" required placeholder="app.example.com"/></label>
+<label>Name on the certificate <input name="cn" required placeholder="app.example.com"/></label>
+<label>Expiry date <input name="exp" type="date" required/></label>
+<label>Who renews it <input name="owner" required placeholder="Name or team"/></label>
+<button type="submit">Write the note</button>
+</form>
+<pre id="out">The note appears here.</pre>
+<p>Plans stay on this site at <a href="/plans/">/plans/</a>. A paid readout is <a href="/discovery/">Discovery $99</a>. The wider inventory is the <a href="/ai-cybersecurity-platform/">cybersecurity desk</a>.</p>
+<footer>
+<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</p>
+</footer>
+</main>
+<script>
+document.getElementById("sheet").addEventListener("submit", function (ev) {
+  ev.preventDefault();
+  var f = new FormData(ev.target);
+  var host = String(f.get("host") || "").trim();
+  var cn = String(f.get("cn") || "").trim();
+  var exp = String(f.get("exp") || "").trim();
+  var owner = String(f.get("owner") || "").trim();
+  var match = host.toLowerCase() === cn.toLowerCase() ? "The typed name matches the certificate name." : "The typed name and the certificate name differ. Fix that before you send traffic.";
+  document.getElementById("out").textContent = [
+    "Hostname: " + host,
+    "Certificate name: " + cn,
+    "Expires: " + exp,
+    "Renewal owner: " + owner,
+    match
+  ].join("\n");
+});
+</script>
+</body>
+</html>
