@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AI cybersecurity platform | Zion Tech Group</title>
+<meta name="description" content="A desk for listing the systems, data, and people an AI tool can reach. This page does not scan hosts or run attacks."/>
+<link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-platform/"/>
+<link rel="stylesheet" href="/styles.css"/>
+<style>
+nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:18px 24px;border-bottom:1px solid #1e293b}
+nav a{color:#d8b4fe}
+main{max-width:880px;margin:0 auto;padding:8px 20px 64px}
+h1{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.15}
+.lead{color:#cbd5e1;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid #1e293b;border-radius:14px;padding:14px 16px;background:rgba(15,23,42,.6)}
+label{display:block;margin:10px 0;color:#cbd5e1}
+input,textarea{width:100%;max-width:440px;padding:8px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f8fafc}
+button{margin-top:8px;padding:10px 16px;border:0;border-radius:10px;background:#7c3aed;color:#fff;font-weight:650;cursor:pointer}
+pre{white-space:pre-wrap;background:#0c1222;border:1px solid #26324d;border-radius:12px;padding:14px}
+footer{margin-top:36px;color:#94a3b8;font-size:14px}
+ul.plain{padding-left:18px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main>
+<h1>AI cybersecurity platform</h1>
+<p class="lead">Use this desk before a model is connected to company data. Write down what it can reach, who can invoke it, and where the log goes. The page does not open ports, scan hosts, or try prompts against a live system.</p>
+<div class="grid">
+<article class="card"><h2>Systems</h2><p>Name each model, the vendor, and the environment (laptop, tenant, or VPC). One row per system is enough to start.</p></article>
+<article class="card"><h2>Data</h2><p>List the stores the system can read or write: mail, tickets, files, customer records. If you cannot name the store, it is not ready to connect.</p></article>
+<article class="card"><h2>People</h2><p>Who may invoke it, who can change the prompt or the tool list, and who is called when it does something unexpected.</p></article>
+</div>
+<h2>Checks to finish before go-live</h2>
+<ul class="plain">
+<li>The certificate name matches the hostname people actually type. Use the <a href="/ssl-config-auditor/">certificate checklist</a>.</li>
+<li>An incident owner and a phone number are written down. Start from <a href="/ai-incident-response/">incident response</a> or the <a href="/incident-runbook/">runbook generator</a>.</li>
+<li>A review of scope, evidence, and stop rules exists. Use the <a href="/ai-red-team-playbook/">scoping worksheet</a>. It does not contain attack text.</li>
+<li>Vendor questions live on <a href="/cybersecurity-services/">cybersecurity services</a>.</li>
+</ul>
+<p>Related: <a href="/prompt-injection-playground/">Prompt injection playground</a> · <a href="/ai-red-team/">Review desk</a> · <a href="/discovery/">Discovery $99</a></p>
+
+<footer>
+<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</p>
+</footer>
+</main>
+</body>
+</html>
