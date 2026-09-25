@@ -54,6 +54,7 @@ footer a{color:var(--accent)}
 <a href="/apps/field-service-suite.html">🛠️ Field service notes</a>
 <a href="/app-network-wave3-sept24.html">🌐 Wave 3 Spotlight</a>
 <a href="/apps/spotlight.html">🔦 All Spotlights</a>
+<a href="/apps/spotlight-2026-09-25.html">🌟 25 September spotlight</a>
 <a href="/apps/catalog.html">📚 Catalog</a>
 <a href="https://ziontechgroup.com/services/">🛠 Services</a>
 <a href="https://ziontechgroup.com/contact/">✉️ Contact</a>
@@ -68,7 +69,7 @@ footer a{color:var(--accent)}
 <main id="root"></main>
 <footer>
 <p>© 2026 Zion Tech Group — <a href="https://ziontechgroup.com">ziontechgroup.com</a> · <a href="https://github.com/Zion-support">GitHub</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-<p>Need a custom AI solution or field-service support? <a href="https://ziontechgroup.com/contact/">Talk to us — Discovery is free</a>.</p>
+<p>Need a custom AI solution or field-service support? <a href="https://ziontechgroup.com/contact/">Talk to us — Discovery is $99</a>.</p>
 </footer>
 <script>
 const CATS=[
@@ -83,6 +84,23 @@ const CATS=[
  ['AI Tools',['ai-','zion-ai']]
 ];
 function classify(n){for(const [c,ks] of CATS){if(ks.some(k=>n.includes(k)))return c;}return 'IT & Business Tools';}
+const OPEN_HOSTS=['chatbot-builder','code-assistant','crm-intelligence','email-marketing','fraud-detection','invoice-genius','knowledge-base','lead-scoring','meeting-assistant','seo-optimizer','field','field-brazil','field-city-sao-paulo','smart-analytics-dashboard','security-shield'];
+const BLOCK=['zion-ai-governance','ai-billing-automation','ai-banking-platform','ai-automated-booking','ai-advertising-optimizer','zion-discovery','zion-edge-ai','zion-data-sync','zion-ai-voice-assistant','zion-content-studio','zion-app-network','ai-agent-fleet','ai-fraud-prevention','zion-network','prompt-forge','zion-ai-workflow-automator'];
+function safeLive(home){
+ if(!home||typeof home!=='string') return '';
+ let u; try{ u=new URL(home); }catch(e){ return ''; }
+ if(u.protocol!=='https:') return '';
+ const h=u.hostname.toLowerCase();
+ if(h==='ziontechgroup.com'||h==='www.ziontechgroup.com'){
+  const seg=(u.pathname.split('/').filter(Boolean)[0]||'');
+  if(BLOCK.indexOf(seg)!==-1) return '';
+  return u.href;
+ }
+ if(!h.endsWith('.ziontechgroup.com')) return '';
+ const sub=h.slice(0,-'.ziontechgroup.com'.length);
+ if(OPEN_HOSTS.indexOf(sub)===-1) return '';
+ return u.href;
+}
 let REPOS=[];
 async function load(){
  let page=1,all=[];
@@ -93,7 +111,7 @@ async function load(){
   all=all.concat(b);page++;
   if(page>9)break;
  }
- REPOS=all.map(r=>({n:r.name,d:(r.description||'Zion App Network app').split('. Live')[0],l:r.homepage||('https://ziontechgroup.com/'+r.name+'/'),g:r.html_url,c:classify(r.name)}));
+ REPOS=all.map(r=>({n:r.name,d:(r.description||'Zion App Network app').split('. Live')[0],l:safeLive(r.homepage),g:r.html_url,c:classify(r.name)}));
  const cats=[...new Set(REPOS.map(r=>r.c))].sort();
  document.getElementById('cat').innerHTML='<option value="">All categories</option>'+cats.map(c=>`<option>${c}</option>`).join('');
  render();
@@ -107,7 +125,7 @@ function render(){
  list.forEach(r=>(groups[r.c]=groups[r.c]||[]).push(r));
  document.getElementById('root').innerHTML=Object.keys(groups).sort().map(c=>
   `<h2 class="cat">${c} (${groups[c].length})</h2><div class="grid">`+groups[c].map(r=>
-   `<div class="card"><span class="tag">${r.c}</span><h3>${esc(r.n)}</h3><p>${esc(r.d)}</p><div class="links"><a href="${r.l}" target="_blank">▶ Live app</a><a href="${r.g}" target="_blank">GitHub</a></div></div>`).join('')+'</div>').join('');
+   `<div class="card"><span class="tag">${r.c}</span><h3>${esc(r.n)}</h3><p>${esc(r.d)}</p><div class="links">${r.l?`<a href="${esc(r.l)}" target="_blank" rel="noopener">▶ Live app</a>`:''}<a href="${r.g}" target="_blank" rel="noopener">GitHub</a></div></div>`).join('')+'</div>').join('');
 }
 document.getElementById('q').addEventListener('input',render);
 document.getElementById('cat').addEventListener('change',render);
