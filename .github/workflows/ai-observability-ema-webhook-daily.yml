@@ -73,25 +73,14 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -f automation/reports/observability-webhook-state.json ]; then
-            git add -f automation/reports/observability-webhook-state.json
-          fi
-          if [ -f automation/reports/observability-ema-fp-history.json ]; then
-            git add -f automation/reports/observability-ema-fp-history.json
-          fi
-          if [ -f automation/reports/fingerprint-delta-webhook-state.json ]; then
-            git add -f automation/reports/fingerprint-delta-webhook-state.json
-          fi
-          if [ -f automation/reports/automation-health-latest.json ]; then
-            git add -f automation/reports/automation-health-latest.json
-          fi
-          if [ -f automation/reports/automation-health-history.json ]; then
-            git add -f automation/reports/automation-health-history.json
-          fi
-          if [ -f public/api/automation-health.json ]; then
-            git add -f public/api/automation-health.json
-          fi
-          if [ -f public/api/automation-health-history.json ]; then
-            git add -f public/api/automation-health-history.json
-          fi
+          for f in \
+            automation/reports/observability-webhook-state.json \
+            automation/reports/observability-ema-fp-history.json \
+            automation/reports/fingerprint-delta-webhook-state.json \
+            automation/reports/automation-health-latest.json \
+            automation/reports/automation-health-history.json \
+            public/api/automation-health.json \
+            public/api/automation-health-history.json; do
+            if [ -f "$f" ]; then git add -f "$f"; fi
+          done
           bash scripts/automation/commit-and-push-main.sh "chore(reports): observability webhook state + trend history"
