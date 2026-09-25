@@ -1,24 +1,30 @@
-# 🎬 Zion AI App Network — Spotlight Batch 31 (Sep 25, 2026)
+# 🚀 Zion AI App Network — Spotlight Batch 31 (Sep 25, 2026)
 
-Seven more apps are now fully interlinked across the **Zion AI App Network** (770+ apps, tools and playbooks). Public showcase page: https://ziontechgroup.com/zion-app-network/app-network-sept25-batch31.html
+Five more category spotlights went live today, covering **154 apps** across data, engineering, marketing, HR and AI evaluation. Every app links back to the [master directory](https://ziontechgroup.com/zion-app-network/), the [GitHub hub](https://github.com/Zion-support/zion-app-network) and its live app page.
 
-## Featured this batch
+## Featured categories
 
-| App | What it does | Live |
-|---|---|---|
-| Voice Agent Studio | Design, test and launch AI voice agents | https://ziontechgroup.com/voice-agent-studio/ |
-| FinOps Autopilot | Hands-free cloud cost optimization | https://ziontechgroup.com/finops-autopilot/ |
-| AI Deepfake Detector | Verify media authenticity | https://ziontechgroup.com/ai-deepfake-detector/ |
-| AI Document Classifier | Auto-classify documents at scale | https://ziontechgroup.com/ai-document-classifier/ |
-| AI Education Platform | Adaptive, AI-personalized learning | https://ziontechgroup.com/ai-education-platform/ |
-| AI Fraud Prevention | Real-time fraud interdiction | https://ziontechgroup.com/ai-fraud-prevention/ |
-| AI Health Tracker | Workforce & population health insights | https://ziontechgroup.com/ai-health-tracker/ |
+### 📊 Data & Analytics — 29 apps
+Pipelines, quality monitoring, synthetic data and dashboards. Try the [Smart Analytics Dashboard](https://ziontechgroup.com/zion-smart-analytics-dashboard/) or the [Synthetic Data Lab](https://ziontechgroup.com/synthetic-data-lab/).
+
+### 🛠 Dev & Ops Tools — 90 apps
+Runbooks, code migration, MLOps and status pages. Try [Ops Runbook AI](https://ziontechgroup.com/ops-runbook-ai/) or the [Status Page Generator](https://ziontechgroup.com/status-page-generator/).
+
+### 📣 Content & Marketing — 16 apps
+SEO, social, email, video and localization. Try [Zion Content Studio](https://content-studio.ziontechgroup.com) or [Zion AI Video Studio](https://ziontechgroup.com/zion-ai-video-studio/).
+
+### 🧑‍💼 HR & Talent AI — 7 apps
+Sourcing → screening → interviewing → onboarding → engagement. Try [Zion AI Recruiter](https://ziontechgroup.com/zion-ai-recruiter/) or [Interview Prep Copilot](https://ziontechgroup.com/interview-prep-copilot/).
+
+### ✅ AI Readiness & Evaluation — 12 apps
+Score, evaluate and benchmark your AI stack. Try the [AI Readiness Quiz](https://aireadiness.ziontechgroup.com) or the [RAG Evaluator](https://ziontechgroup.com/rag-evaluator/).
 
 ## Explore
 - 🏠 Homepage: https://ziontechgroup.com
-- 🗂️ Master directory: https://ziontechgroup.com/zion-app-network/
-- 🐙 GitHub hub: https://github.com/Zion-support/zion-app-network
-- 💼 Plans: https://ziontechgroup.com/en/plans/
+- 🗂 Master directory: https://ziontechgroup.com/zion-app-network/
+- 🌐 Network hub: https://network.ziontechgroup.com
+- 📂 Spotlights index: https://github.com/Zion-support/zion-network/tree/main/spotlights
+- 💳 Plans: https://ziontechgroup.com/en/plans/
 - 📞 Book a discovery call: https://ziontechgroup.com/discovery/
 
 © 2026 Zion Tech Group.
