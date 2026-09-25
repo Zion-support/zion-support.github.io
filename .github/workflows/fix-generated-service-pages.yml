@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Apply fixes to generated service pages
+      - name: Apply fixes to generated pages
         run: |
           set -euo pipefail
           echo "Before: $(grep -rlE 'path=`' app/services --include=page.tsx | wc -l) files with bad path= template literal"
@@ -29,18 +29,22 @@ jobs:
           # Fix 2: raw JSON object inside JSX script tag -> wrap as template literal expression
           find app/services -name page.tsx -type f -print0 | xargs -0 perl -0777 -pi -e 's/(<script type="application\/ld\+json">)(\{.*?\})(<\/script>)/$1{\`$2\`}$3/gs'
           echo "After fix2: $(grep -rlE '<script type="application/ld\+json">\{' app/services --include=page.tsx | wc -l) remaining"
+          echo "Before fix3: $(grep -rlE 'dangerouslySetInnerHTML=\{__html:' app components --include='*.tsx' 2>/dev/null | wc -l) files with broken dangerouslySetInnerHTML"
+          # Fix 3: dangerouslySetInnerHTML={__html: X} -> dangerouslySetInnerHTML={{ __html: X }} (repo-wide)
+          grep -rlE 'dangerouslySetInnerHTML=\{__html:' app components --include='*.tsx' 2>/dev/null | xargs -r sed -i -E 's/dangerouslySetInnerHTML=\{__html: (.*)\}/dangerouslySetInnerHTML={{ __html: \1 }}/g'
+          echo "After fix3: $(grep -rlE 'dangerouslySetInnerHTML=\{__html:' app components --include='*.tsx' 2>/dev/null | wc -l) remaining"
 
       - name: Commit fixes
         run: |
           set -euo pipefail
           git config user.name "Zion Bot"
           git config user.email "kleber@ziontechgroup.com"
-          git add app/services
+          git add app components
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "fix(pages): repair JSX syntax in 13k auto-generated service pages (template-literal path attr + JSON-LD wrapping)"
+          git commit -m "fix(pages): repair JSX syntax in auto-generated pages (template-literal path attr + JSON-LD wrapping + dangerouslySetInnerHTML braces)"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push origin HEAD:main && break || sleep 5
           done
