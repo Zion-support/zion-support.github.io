@@ -1,28 +1,24 @@
-# 🚀 New on Zion: Autonomous AI Agent Apps (Sep 25, 2025 wave)
+# 🎬 Zion AI App Network — Spotlight Batch 31 (Sep 25, 2026)
 
-**[Zion Tech Group](https://ziontechgroup.com/)** just expanded the [App Network](https://ziontechgroup.com/apps/) (600+ free AI & IT ops tools) with a full **AI Agents & Autonomous Operations** suite — agents that plan, act and verify real work end-to-end.
+Seven more apps are now fully interlinked across the **Zion AI App Network** (770+ apps, tools and playbooks). Public showcase page: https://ziontechgroup.com/zion-app-network/app-network-sept25-batch31.html
 
-## Try the agents now — free, in your browser
+## Featured this batch
 
-- 🤖 **[AI PR Review Swarm](https://ziontechgroup.com/ai-pr-review-swarm/)** — a swarm of agents reviewing every pull request for security, style and logic.
-- 🧭 **[AI Dispatch Orchestrator](https://ziontechgroup.com/ai-dispatch-orchestrator/)** — autonomous ticket routing to the right team, every time.
-- 🎫 **[AI Ticket Sentinel](https://ziontechgroup.com/ai-ticket-sentinel/)** — watches queues, classifies, dedupes and escalates automatically.
-- 📞 **[Voice Agent Studio](https://ziontechgroup.com/voice-agent-studio/)** — build, test and deploy voice AI agents for inbound/outbound calls.
-- 💰 **[FinOps Autopilot](https://ziontechgroup.com/finops-autopilot/)** — cloud cost guardrails that detect, decide and remediate.
-- ✉️ **[AI Sales Email Copilot](https://ziontechgroup.com/ai-sales-email-copilot/)** — agentic outbound email with prospect research and follow-up cadences.
-- 📈 **[AI Growth Marketing Hub](https://ziontechgroup.com/ai-growth-marketing-hub/)** — autonomous campaign planning, generation and optimization.
-- 🛟 **[Churn Radar](https://ziontechgroup.com/churn-radar/)** — monitors usage signals and triggers save plays before customers leave.
+| App | What it does | Live |
+|---|---|---|
+| Voice Agent Studio | Design, test and launch AI voice agents | https://ziontechgroup.com/voice-agent-studio/ |
+| FinOps Autopilot | Hands-free cloud cost optimization | https://ziontechgroup.com/finops-autopilot/ |
+| AI Deepfake Detector | Verify media authenticity | https://ziontechgroup.com/ai-deepfake-detector/ |
+| AI Document Classifier | Auto-classify documents at scale | https://ziontechgroup.com/ai-document-classifier/ |
+| AI Education Platform | Adaptive, AI-personalized learning | https://ziontechgroup.com/ai-education-platform/ |
+| AI Fraud Prevention | Real-time fraud interdiction | https://ziontechgroup.com/ai-fraud-prevention/ |
+| AI Health Tracker | Workforce & population health insights | https://ziontechgroup.com/ai-health-tracker/ |
 
-## Why it matters
+## Explore
+- 🏠 Homepage: https://ziontechgroup.com
+- 🗂️ Master directory: https://ziontechgroup.com/zion-app-network/
+- 🐙 GitHub hub: https://github.com/Zion-support/zion-app-network
+- 💼 Plans: https://ziontechgroup.com/en/plans/
+- 📞 Book a discovery call: https://ziontechgroup.com/discovery/
 
-Every agent runs **plan → act → verify** loops with full audit logs and human-in-the-loop approval gates — and they compose: Ticket Sentinel feeds Dispatch Orchestrator; Churn Radar feeds the Sales Copilot.
-
-## Explore more
-
-- 🌐 Network hub: [network.ziontechgroup.com](https://network.ziontechgroup.com) · [zion-support.github.io/zion-network](https://zion-support.github.io/zion-network/)
-- 📂 Category page & registry: [AI Agents & Autonomous Operations](https://github.com/Zion-support/zion-network/blob/main/network/ai-agents-autonomous-ops.md)
-- 🗂 More spotlights: [AI Ops](./APP_NETWORK_SPOTLIGHT_AIOPS.md) · [Security](./APP_NETWORK_SPOTLIGHT_SECURITY.md) · [FinOps](./APP_NETWORK_SPOTLIGHT_FINOPS.md) · [Customer Success](./APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md)
-- 💼 Services & pricing: [ziontechgroup.com/services](https://ziontechgroup.com/services/) · [Plans](https://zion-support.github.io/plans/) · **[Discovery session — $99](https://ziontechgroup.com/discovery/)**
-
----
-Zion Tech Group · Middletown, DE · kleber@ziontechgroup.com · [ziontechgroup.com](https://ziontechgroup.com/)
+© 2026 Zion Tech Group.
