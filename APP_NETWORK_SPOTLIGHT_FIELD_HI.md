@@ -1,6 +1,6 @@
 # 🛰️ Zion App Network Spotlight — Vol. 13: Field Network H–I Wave — Hospitality to Israel
 
-*Published 2026-09-24 · [Zion Tech Group](https://ziontechgroup.com) · [App Network Showcase](https://ziontechgroup.com/app-network/) · [Apps Directory](https://ziontechgroup.com/apps/)*
+*Published 2026-09-25 · [Zion Tech Group](https://ziontechgroup.com) · [App Network Showcase](https://ziontechgroup.com/app-network/) · [Apps Directory](https://ziontechgroup.com/apps/)*
 
 This wave interlinks **14 more `zion-field-*` satellites** — from Hospitality to Israel — bringing the network to **371 of 640 repositories** fully interlinked with the [network index](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md), the [Field & City Sites catalog](https://github.com/Zion-support/zion-network/blob/main/network/field-city-sites.md) and the [master catalog](https://github.com/Zion-support/zion-app-network/blob/main/CATALOG.md).
 
@@ -12,17 +12,18 @@ This wave interlinks **14 more `zion-field-*` satellites** — from Hospitality 
 - **[Indonesia](https://ziontechgroup.com/zion-field-indonesia/)** · [repo](https://github.com/Zion-support/zion-field-indonesia)
 - **[Ireland](https://ziontechgroup.com/zion-field-ireland/)** · [repo](https://github.com/Zion-support/zion-field-ireland)
 - **[Israel](https://ziontechgroup.com/zion-field-israel/)** · [repo](https://github.com/Zion-support/zion-field-israel)
-- **[HY shortcode desk](https://ziontechgroup.com/zion-field-hy/)** · [repo](https://github.com/Zion-support/zion-field-hy)
+- **[Hong Kong](https://ziontechgroup.com/zion-field-hong-kong/)** (Vol. 12) · [repo](https://github.com/Zion-support/zion-field-hong-kong)
 
 ## 🧰 Vertical & operations satellites
 
-- **[Hospitality](https://ziontechgroup.com/zion-field-hospitality/)** — hotels, venues & guest-tech field support · [repo](https://github.com/Zion-support/zion-field-hospitality)
-- **[Hours](https://ziontechgroup.com/zion-field-hours/)** — coverage calendars & service windows · [repo](https://github.com/Zion-support/zion-field-hours)
-- **[HPE](https://ziontechgroup.com/zion-field-hpe/)** — HPE hardware field services · [repo](https://github.com/Zion-support/zion-field-hpe)
-- **[iMac](https://ziontechgroup.com/zion-field-imac/)** — Apple/iMac break-fix & deployment · [repo](https://github.com/Zion-support/zion-field-imac)
-- **[Imaging](https://ziontechgroup.com/zion-field-imaging/)** — device imaging & rollout staging · [repo](https://github.com/Zion-support/zion-field-imaging)
-- **[Insurance](https://ziontechgroup.com/zion-field-insurance/)** — insurance-sector IT field support · [repo](https://github.com/Zion-support/zion-field-insurance)
-- **[Islands](https://ziontechgroup.com/zion-field-islands/)** — island-territory logistics & coverage · [repo](https://github.com/Zion-support/zion-field-islands)
+- **[Hospitality](https://ziontechgroup.com/zion-field-hospitality/)** — hotel & venue IT field support · [repo](https://github.com/Zion-support/zion-field-hospitality)
+- **[Hours](https://ziontechgroup.com/zion-field-hours/)** — coverage-hours planning desk · [repo](https://github.com/Zion-support/zion-field-hours)
+- **[HPE](https://ziontechgroup.com/zion-field-hpe/)** — HPE hardware service band · [repo](https://github.com/Zion-support/zion-field-hpe)
+- **[HY desk](https://ziontechgroup.com/zion-field-hy/)** · [repo](https://github.com/Zion-support/zion-field-hy)
+- **[iMac](https://ziontechgroup.com/zion-field-imac/)** — Apple iMac/Mac field service · [repo](https://github.com/Zion-support/zion-field-imac)
+- **[Imaging](https://ziontechgroup.com/zion-field-imaging/)** — printers, scanners & imaging fleets · [repo](https://github.com/Zion-support/zion-field-imaging)
+- **[Insurance](https://ziontechgroup.com/zion-field-insurance/)** — insurance-sector IT field ops · [repo](https://github.com/Zion-support/zion-field-insurance)
+- **[Islands](https://ziontechgroup.com/zion-field-islands/)** — island-region logistics & coverage · [repo](https://github.com/Zion-support/zion-field-islands)
 
 ## 🩺 Field-service AI behind every site
 
