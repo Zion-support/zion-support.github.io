@@ -43,10 +43,9 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f automation/reports/*.json
+          git add -f automation/reports/*.json 2>/dev/null || echo "skip: no telemetry json files"
           if git diff --staged --quiet; then
             echo "No telemetry compaction changes."
             exit 0
           fi
           bash scripts/automation/commit-and-push-main.sh "chore(reports): compact telemetry history files"
-
