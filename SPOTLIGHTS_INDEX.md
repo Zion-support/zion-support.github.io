@@ -62,6 +62,8 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_VERTICALS.md](APP_NETWORK_SPOTLIGHT_VERTICALS.md) — vertical solutions
 - [APP_NETWORK_SPOTLIGHT_VOICE_VIDEO_VENDOR.md](APP_NETWORK_SPOTLIGHT_VOICE_VIDEO_VENDOR.md) — voice, video & vendor AI
 
+- [APP_NETWORK_SPOTLIGHT_INDUSTRY_SUITES.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_SUITES.md) — 13 industry vertical AI suites (banking, insurance, pharma, education, energy, transport, construction, agriculture, hospitality, real estate, gov, nonprofit, media)
+
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
 - [Secops & Reliability Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/SECOPS_RELIABILITY_SUITE.md)
