@@ -79,7 +79,7 @@ export default function IntelligentServiceDiscovery() {
       // Industry filter
       if (filters.industries.length > 0 && service.industry) {
         const industryKey = service.industry.toLowerCase().replace(/[^a-z0-9-]+/g, '-');
-        if (!filters.industries.some(ind => 
+        if (!filters.industries.some(ind =>
           service.industry?.toLowerCase().includes(ind.split(' ')[0].toLowerCase()) ||
           industryKey.includes(ind)
         )) {
@@ -90,7 +90,7 @@ export default function IntelligentServiceDiscovery() {
       // Search query filter
       if (filters.searchQuery.trim()) {
         const q = filters.searchQuery.toLowerCase();
-        const matchesSearch = 
+        const matchesSearch =
           service.title?.toLowerCase().includes(q) ||
           service.description?.toLowerCase().includes(q) ||
           service.id?.toLowerCase().includes(q);
@@ -112,23 +112,23 @@ export default function IntelligentServiceDiscovery() {
   // AI-powered recommendations based on selected filters
   const recommendations = useMemo(() => {
     if (filteredServices.length === 0) return [];
-    
+
     // Score services based on relevance
     return filteredServices
       .map((service: any) => {
         let score = 0;
-        
+
         // Category match bonus
         if (filters.categories.includes(service.category)) score += 10;
-        
+
         // Industry match bonus
         if (filters.industries.length > 0 && service.industry) {
-          const industryMatch = filters.industries.some(ind => 
+          const industryMatch = filters.industries.some(ind =>
             service.industry?.toLowerCase().includes(ind.split(' ')[0].toLowerCase())
           );
           if (industryMatch) score += 8;
         }
-        
+
         // Benefit/outcome matching
         if (service.benefits) {
           const benefitText = service.benefits.join(' ').toLowerCase();
@@ -136,13 +136,13 @@ export default function IntelligentServiceDiscovery() {
           if (benefitText.includes('efficiency') || benefitText.includes('automation')) score += 3;
           if (benefitText.includes('insight') || benefitText.includes('analytics')) score += 3;
         }
-        
+
         // Popularity bonus
         if (service.popular) score += 5;
-        
+
         // Feature count bonus (more features = more comprehensive)
         if (service.features) score += service.features.length;
-        
+
         return { ...service, _score: score };
       })
       .sort((a: any, b: any) => b._score - a._score)
@@ -202,7 +202,7 @@ export default function IntelligentServiceDiscovery() {
             </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Find the perfect AI & IT solutions with our intelligent discovery engine. 
+            Find the perfect AI & IT solutions with our intelligent discovery engine.
             Filter by industry, use case, and business outcomes.
           </p>
         </div>
@@ -322,9 +322,9 @@ export default function IntelligentServiceDiscovery() {
                   {comparisonIds.includes(service.id) ? '✓' : '⊕'}
                 </button>
               </div>
-              
+
               <p className="text-slate-300 text-xs line-clamp-2 mb-3 flex-1">{service.description}</p>
-              
+
               {service.benefits && service.benefits.length > 0 && (
                 <div className="mb-3">
                   <div className="text-xs text-slate-500 mb-1">Key Benefits:</div>
@@ -337,10 +337,10 @@ export default function IntelligentServiceDiscovery() {
                   </div>
                 </div>
               )}
-              
+
               <div className="mt-auto pt-3 border-t border-slate-700/50 flex justify-between items-center">
                 <span className="text-xs font-semibold text-cyan-400">
-                  ${service.pricing ? Object.values(service.pricing)[0] : 'Contact'}
+                  ${service.pricing ? String(Object.values(service.pricing)[0] ?? 'Contact') : 'Contact'}
                 </span>
                 <a
                   href={service.href || `/services/${service.id}`}
@@ -385,7 +385,7 @@ export default function IntelligentServiceDiscovery() {
                 {comparisonIds.map((id, index) => {
                   const service = services.find(s => s.id === id);
                   if (!service) return null;
-                  
+
                   return (
                     <div key={id} className="border-b border-slate-800 pb-4 last:border-b-0 last:pb-0">
                       <h4 className="font-semibold text-white mb-2">{service.title}</h4>
@@ -400,7 +400,7 @@ export default function IntelligentServiceDiscovery() {
                         </div>
                         <div>
                           <p className="text-slate-500">Starting Price</p>
-                          <p className="text-slate-300">${service.pricing ? Object.values(service.pricing)[0] : 'Contact'}</p>
+                          <p className="text-slate-300">${service.pricing ? String(Object.values(service.pricing)[0] ?? 'Contact') : 'Contact'}</p>
                         </div>
                       </div>
                       {index < comparisonIds.length - 1 && (
