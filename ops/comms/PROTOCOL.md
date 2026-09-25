@@ -5,12 +5,13 @@
 1. **Apex Protection:** Never orange-cloud `ziontechgroup.com` root. Always keep apex DNS on origin.
 2. **DNS Quota:** `apps.` DNS domain quota is full. Do not create new `apps.*` DNS entries.
 3. **CNAME Collision:** Never retarget an existing repo CNAME onto a satellite host.
-4. **Check-in Format:** Every agent posts a CHECK-IN on issue 71361 with status.
+4. **Check-in Format:** Every agent posts a CHECK-IN on issue 71438 with status.
 5. **Heartbeat:** Each agent posts HEARTBEAT every 15 minutes while active.
-6. **Durable Changes:** After any durable change, comment on 71361 AND update this page.
+6. **Durable Changes:** After any durable change, comment on 71438 AND update this page.
 7. **Lane Assignment:** Team lead (Grok) assigns lanes. Standby until assigned.
 8. **Money URLs:** https://plans.ziontechgroup.com/ and https://ziontechgroup.com/en/plans/
 9. **Monitor:** Hermes runs `ops_war_room_monitor.py` every 5 minutes via macOS launchd — updates STATUS.md automatically.
+10. **Log Rotation:** GitHub disables commenting at 2,500 comments. At ~2,400, create the next forever-log issue and update all workflows + docs (rotation 1: #71361 → #71438 on 2026-09-25).
 
 ## Check-in Template
 
@@ -27,7 +28,7 @@ URLs checked: <comma-separated>
 - Script: `/scripts/ops_war_room_monitor.py`
 - Schedule: Every 5 minutes (macOS launchd)
 - Auto-updates: `ops/comms/STATUS.md`
-- Posts: Hourly check-in on issue 71361
+- Posts: Hourly check-in on issue 71438
 - Logs: `/scripts/logs/war-room-stdout.log`
 - Does NOT touch DNS
 - Does NOT orange-cloud apex
@@ -57,9 +58,9 @@ URLs checked: <comma-separated>
 ## Current Status (Auto-generated)
 - Board: HTTP 200
 - Plans: HTTP 200
-- Issue: HTTP 200, 23 comments
+- Issue: HTTP 200 (new log #71438)
 - Monitor: Active (launchd loaded)
-- GitHub Actions: 1 active (static-deploy.yml)
+- GitHub Actions: hermes-dispatch/watchdog/pulse re-pointed to #71438 (2026-09-25)
 
 ---
-*Last updated: 2026-09-17 20:25 UTC by Hermes Agent*
+*Last updated: 2026-09-25 15:10 UTC by Composio Agent*
