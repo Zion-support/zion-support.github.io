@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zion AI App Network — Full Showcase (778 Apps) | Zion Tech Group</title>
-<meta name="description" content="778 interconnected AI apps, tools and field playbooks — categorized, searchable and cross-linked. Every app links to its live demo and open-source repo.">
+<title>Zion AI App Network — Full Showcase (775 Apps) | Zion Tech Group</title>
+<meta name="description" content="775 interconnected AI apps, tools and field playbooks — categorized, searchable and cross-linked. Every app links to its live demo and open-source repo.">
 <link rel="canonical" href="https://ziontechgroup.com/apps/">
 <style>
 body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:#0f172a;background:#f8fafc;line-height:1.5}
@@ -31,23 +31,24 @@ footer a{color:#93c5fd}
 </head>
 <body>
 <header>
-<h1>🖥️ Zion AI App Network — Full Showcase</h1>
-<p>778 interconnected AI apps, tools, and field playbooks. Every card interlinks the live app and its open-source repo.</p>
+<h1>⚡️ Zion AI App Network — Full Showcase</h1>
+<p>775 interconnected AI apps, tools, and field playbooks. Every card interlinks the live app and its open-source repo.</p>
 <nav class="top">
-<a href="/">Home</a><a href="/apps/">Showcase</a><a href="/apps/spotlight-2026-09-24.html">Latest Spotlight</a><a href="/apps/catalog.html">Catalog</a><a href="/discovery/">Discovery</a><a href="/blog/">Blog</a><a href="/case-studies/">Case Studies</a><a href="https://github.com/Zion-support">GitHub Org</a>
+<a href="/">Home</a><a href="/apps/">Showcase</a><a href="/apps/spotlight-2026-09-25.html">Latest Spotlight</a><a href="/apps/catalog.html">Catalog</a><a href="/apps/new-september-2026.html">New in September</a><a href="/discovery/">Discovery</a><a href="/blog/">Blog</a><a href="/case-studies/">Case Studies</a><a href="https://github.com/Zion-support">GitHub Org</a>
 </nav>
 </header>
 <section>
-<div class="search"><input type="text" id="search" placeholder="Search 778 apps (e.g., ROI calculator, field dispatch, compliance...)" oninput="render()"></div>
+<div class="search"><input type="text" id="search" placeholder="Search 775 apps (e.g., ROI calculator, field dispatch, compliance...)" oninput="render()"></div>
 <p id="meta" style="text-align:center;color:#64748b">Loading app network…</p>
 </section>
 <section id="content"></section>
 <footer>
 <p>Zion Tech Group — AI App Network · <a href="/">ziontechgroup.com</a> · <a href="https://github.com/Zion-support">Open-source on GitHub</a> · <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a></p>
-<p>Updated 2026-09-24 · 778 apps cross-linked · <a href="/apps/catalog-full.json">Machine-readable catalog (JSON)</a></p>
+<p>Updated 2026-09-25 · 775 apps cross-linked · <a href="/apps/catalog.json">Machine-readable catalog (JSON)</a></p>
 </footer>
 <script>
 let DATA=null;
+const CATS=["AI & Automation","Finance & ROI","IT Ops & Cloud","Security & Compliance","HR & Workplace","Sales & Marketing","Field Services & Hardware","Government & Procurement","Data & Analytics","Customer Experience"];
 const GH=n=>`https://github.com/Zion-support/${n}`;
 const LIVE=(n,u)=>u||`https://ziontechgroup.com/${n}/`;
 const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -55,17 +56,19 @@ function title(n){return n.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())
 function render(){
   const q=document.getElementById('search').value.toLowerCase();
   let shown=0;
-  const html=DATA.categories.map((c,i)=>{
-    const apps=DATA.apps.filter(a=>a[3]===i && (!q || a[0].includes(q) || a[1].toLowerCase().includes(q)));
+  const html=CATS.map((c,i)=>{
+    const apps=DATA.filter(a=>a[3]===i && (!q || a[0].includes(q) || a[1].toLowerCase().includes(q)));
     if(!apps.length) return '';
     shown+=apps.length;
-    const cards=apps.map(a=>`<div class="card"><span class="badge">${esc(a[0])}</span><h3>${esc(title(a[0]))}</h3><p>${esc(a[1])}</p><a href="${LIVE(a[0],a[2])}" target="_blank" rel="noopener">Live app ↗</a><a href="${GH(a[0])}" target="_blank" rel="noopener">GitHub repo ↗</a></div>`).join('');
+    const cards=apps.map(a=>`<div class="card"><span class="badge">${esc(a[0])}</span><h3>${esc(title(a[0]))}</h3><p>${esc(a[1])}</p><a href="${LIVE(a[0],a[2])}" target="_blank" rel="noopener">Live app →</a><a href="${GH(a[0])}" target="_blank" rel="noopener">GitHub repo →</a></div>`).join('');
     return `<div class="category"><h2>${c} <span class="count">(${apps.length} apps)</span></h2><div class="grid">${cards}</div></div>`;
   }).join('');
   document.getElementById('content').innerHTML=html;
-  document.getElementById('meta').textContent=`Showing ${shown} of ${DATA.apps.length} apps across ${DATA.categories.length} categories — all interlinked.`;
+  document.getElementById('meta').textContent=`Showing ${shown} of ${DATA.length} apps across ${CATS.length} categories — all interlinked.`;
 }
-fetch('/apps/catalog-full.json').then(r=>r.json()).then(d=>{DATA=d;render();}).catch(e=>{document.getElementById('meta').textContent='Catalog failed to load.';});
+Promise.all([0,1,2,3,4,5,6,7].map(i=>fetch(`/apps/catalog-full-${i}.json`).then(r=>r.json())))
+.then(parts=>{DATA=parts.flatMap(p=>p.apps);render();})
+.catch(e=>{document.getElementById('meta').textContent='Catalog failed to load.';});
 </script>
 </body>
 </html>
