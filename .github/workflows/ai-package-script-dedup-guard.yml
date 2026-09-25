@@ -20,21 +20,40 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: '.nvmrc'
-          cache: npm
-          cache-dependency-path: package-lock.json
-
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Check duplicate package scripts
         id: dedup_check
         continue-on-error: true
-        run: npm run package:scripts:dedup-check
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const text = fs.readFileSync('package.json', 'utf8');
+          const m = text.match(/"scripts"\s*:/);
+          const duplicates = [];
+          if (m) {
+            const start = text.indexOf('{', m.index);
+            let depth = 0, end = start;
+            for (let i = start; i < text.length; i++) {
+              if (text[i] === '{') depth++;
+              else if (text[i] === '}') { depth--; if (depth === 0) { end = i; break; } }
+            }
+            const block = text.slice(start, end + 1);
+            const keys = [...block.matchAll(/"([^"]+)"\s*:/g)].map(x => x[1]);
+            const seen = new Set();
+            for (const k of keys) { if (seen.has(k)) duplicates.push(k); seen.add(k); }
+          }
+          if (duplicates.length > 0) {
+            fs.mkdirSync('automation/reports', { recursive: true });
+            fs.writeFileSync('automation/reports/package-script-duplicates-latest.json', JSON.stringify({ duplicateCount: duplicates.length, duplicates }, null, 2));
+            console.log('Duplicate script keys: ' + duplicates.join(', '));
+            process.exit(1);
+          }
+          console.log('No duplicate script keys in package.json.');
+          EOF
 
       - name: Upload dedup report artifact
         if: always()
@@ -64,7 +83,7 @@ jobs:
             echo "- Duplicate key count: ${dup_count}"
             echo ""
             echo "### Duplicate keys"
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const key of (r.duplicates||[])){console.log('- `'+key+'`')}"
+            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const key of (r.duplicates||[])){console.log('- \`'+key+'\`')}"
             echo ""
             echo "Remove duplicate script keys from \`package.json\` to avoid silent script shadowing."
           } > "$body_file"
