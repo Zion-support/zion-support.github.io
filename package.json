@@ -44,7 +44,9 @@
     "openclaw:skills:audit": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-cadence-audit-latest.json',JSON.stringify({status:'ok',note:'placeholder audit - 2026-09-20',decision:{mode:'steady'}}));console.log('openclaw skills audit placeholder: ok')\"",
     "openclaw:skills:tune": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-auto-tuner-latest.json',JSON.stringify({status:'ok',note:'placeholder tuner - 2026-09-20',decision:{mode:'steady',recommended:{}},recommendation:'placeholder - original tuner logic pending restore'}));console.log('openclaw skills tuner placeholder: ok')\"",
     "openclaw:runtime:apply": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-runtime-apply-latest.json',JSON.stringify({status:'ok',note:'placeholder runtime apply - 2026-09-24',applied:{}}));console.log('openclaw runtime apply placeholder: ok')\"",
-    "workflows:contracts:node": "bash scripts/automation/run-workflow-grep-guards.sh contracts"
+    "workflows:contracts:node": "bash scripts/automation/run-workflow-grep-guards.sh contracts",
+    "autonomy:intelligence:plan": "node automation/autonomy-intelligence-planner.cjs",
+    "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
