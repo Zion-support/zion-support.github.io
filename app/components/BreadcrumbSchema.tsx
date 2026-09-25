@@ -1,7 +1,7 @@
 'use client';
 
-export default function BreadcrumbSchema({ path, title }: { path: string; title: string }) {
-  const url = `https://ziontechgroup.com${path}`;
+export default function BreadcrumbSchema({ path, title, serviceName, serviceDescription }: { path?: string; title?: string; serviceName?: string; serviceDescription?: string }) {
+  const url = `https://ziontechgroup.com${path || ''}`;
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -21,7 +21,7 @@ export default function BreadcrumbSchema({ path, title }: { path: string; title:
       {
         '@type': 'ListItem',
         position: 3,
-        name: title,
+        name: title || serviceName || 'Service',
         item: url,
       },
     ],
