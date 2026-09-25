@@ -2,6 +2,20 @@
 
 Zion Tech Group's app network keeps growing. This page highlights the latest additions and where to find everything.
 
+## 🛰️ New spotlight: Field Network I–L Wave — September 25, 2026
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_IL.md](APP_NETWORK_SPOTLIGHT_FIELD_IL.md) — 14 more `zion-field-*` satellites (IT → Languages) now interlinked, bringing the network to **385 of 640 repositories** connected:
+
+- **[Italy](https://ziontechgroup.com/zion-field-italy/)** · **[Japan](https://ziontechgroup.com/zion-field-japan/)** · **[Kenya](https://ziontechgroup.com/zion-field-kenya/)** · **[Kuwait](https://ziontechgroup.com/zion-field-kuwait/)** · **[Jordan](https://ziontechgroup.com/zion-field-jordan/)** · **[Kazakhstan](https://ziontechgroup.com/zion-field-kazakhstan/)** · **[Ivory Coast](https://ziontechgroup.com/zion-field-ivory-coast/)** · **[Jamaica](https://ziontechgroup.com/zion-field-jamaica/)** · **[Kosovo](https://ziontechgroup.com/zion-field-kosovo/)** · **[Kyrgyzstan](https://ziontechgroup.com/zion-field-kyrgyzstan/)** · **[IT desk](https://ziontechgroup.com/zion-field-it/)** · **[JA desk](https://ziontechgroup.com/zion-field-ja/)**
+- **Operations:** [Labs](https://ziontechgroup.com/zion-field-labs/) · [Languages](https://ziontechgroup.com/zion-field-languages/)
+
+## 🛰️ Spotlight: Field Network H–I Wave — September 24, 2026
+
+Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_HI.md](APP_NETWORK_SPOTLIGHT_FIELD_HI.md) — 14 `zion-field-*` satellites (Hospitality → Israel) interlinked, 371 of 640 repositories connected:
+
+- **[Hospitality](https://ziontechgroup.com/zion-field-hospitality/)** · **[Hungary](https://ziontechgroup.com/zion-field-hungary/)** · **[Iceland](https://ziontechgroup.com/zion-field-iceland/)** · **[India](https://ziontechgroup.com/zion-field-india/)** · **[Indonesia](https://ziontechgroup.com/zion-field-indonesia/)** · **[Ireland](https://ziontechgroup.com/zion-field-ireland/)** · **[Israel](https://ziontechgroup.com/zion-field-israel/)** · **[HPE desk](https://ziontechgroup.com/zion-field-hpe/)**
+- **Operations:** [Hours](https://ziontechgroup.com/zion-field-hours/) · [HY](https://ziontechgroup.com/zion-field-hy/) · [iMac](https://ziontechgroup.com/zion-field-imac/) · [Imaging](https://ziontechgroup.com/zion-field-imaging/) · [Insurance](https://ziontechgroup.com/zion-field-insurance/) · [Islands](https://ziontechgroup.com/zion-field-islands/)
+
 ## 🛰️ New spotlight: Field Network F–G Wave — September 24, 2026
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_FIELD_FG.md](APP_NETWORK_SPOTLIGHT_FIELD_FG.md) — 14 more `zion-field-*` satellites (France → Hong Kong) now interlinked, bringing the network to **357 of 640 repositories** connected:
@@ -180,4 +194,4 @@ Full toolchain doc: https://github.com/Zion-support/zion-app-network/blob/main/d
 - [Zion AI RFP Responder](https://ziontechgroup.com/zion-ai-rfp-responder/)
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_FIELD_FG.md](APP_NETWORK_SPOTLIGHT_FIELD_FG.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) · [APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md)
+© 2026 Zion Tech Group · https://ziontechgroup.com · See also: [APPS_SHOWCASE.md](APPS_SHOWCASE.md) · [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) · [APP_NETWORK_SPOTLIGHT_FIELD_FG.md](APP_NETWORK_SPOTLIGHT_FIELD_FG.md) · [APP_NETWORK_SPOTLIGHT_FIELD_HI.md](APP_NETWORK_SPOTLIGHT_FIELD_HI.md) · [APP_NETWORK_SPOTLIGHT_FIELD_IL.md](APP_NETWORK_SPOTLIGHT_FIELD_IL.md) · [APP_NETWORK_SPOTLIGHT_SEP23.md](APP_NETWORK_SPOTLIGHT_SEP23.md) · [APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md](APP_NETWORK_SPOTLIGHT_SEP23_WAVE2.md) · [APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md](APP_NETWORK_SPOTLIGHT_CUSTOMER_SUCCESS.md) · [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) · [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) · [APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md](APP_NETWORK_SPOTLIGHT_DEV_SRE_TOOLS.md) · [APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md](APP_NETWORK_SPOTLIGHT_FIELD_LOGISTICS.md) · [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md](APP_NETWORK_SPOTLIGHT_PLATFORM_DATA.md) · [APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md](APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md)
