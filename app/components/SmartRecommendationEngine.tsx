@@ -70,11 +70,11 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
 
     const industryConfig = INDUSTRY_KEYWORDS[industry];
     const allKeywords = [...(industryConfig?.keywords || []), ...problem.toLowerCase().split(/\s+/)];
-    
+
     const scoredServices: Recommendation[] = allServices
       .map(service => {
         const serviceText = `${service.title} ${service.description} ${(service.features || []).join(' ')} ${(service.benefits || []).join(' ')}`.toLowerCase();
-        
+
         // Calculate keyword match score
         let keywordScore = 0;
         const matchedKeywords: string[] = [];
@@ -87,15 +87,15 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
 
         // Bonus for category match
         const categoryMatch = industryConfig?.category === service.category ? 3 : 0;
-        
+
         // Size-based pricing filter
         const pricingValues = Object.values(service.pricing || {});
-        const minPrice = Math.min(...pricingValues.map(p => parseFloat(p.replace('$', '').replace('/mo', '')) || 999999));
+        const minPrice = Math.min(...pricingValues.map(p => parseFloat(String(p).replace('$', '').replace('/mo', '')) || 999999));
         const sizeMultiplier = BUSINESS_SIZE_MULTIPLIERS[businessSize] || 1;
         const priceCompatible = minPrice * sizeMultiplier <= (parseInt(budget) || Infinity);
 
         const score = keywordScore + categoryMatch + (priceCompatible ? 2 : 0);
-        
+
         if (score < 3) return null;
 
         return {
@@ -111,8 +111,8 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
           matchReasons: matchedKeywords.slice(0, 3)
         };
       })
-      .filter(Boolean)
-      .sort((a, b) => b.score - a.score)
+      .filter((r): r is Recommendation => r !== null && r !== undefined)
+      .sort((a, b) => (b?.score ?? 0) - (a?.score ?? 0))
       .slice(0, 6);
 
     return scoredServices;
@@ -132,7 +132,7 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
           {/* Smart Discovery Form */}
           <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 mb-10">
             <h2 className="text-2xl font-bold text-white mb-6">Find Your Perfect AI Solution</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-4 mb-4">
               <select
                 value={industry}
@@ -196,7 +196,7 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
                 <p className="text-purple-300 text-sm mb-3">
                   ✨ Found {recommendations.length} personalized recommendations
                 </p>
-                <button 
+                <button
                   onClick={reset}
                   className="text-slate-400 text-xs hover:text-purple-400"
                 >
@@ -221,11 +221,11 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
                       {rec.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-sm font-semibold text-white mb-2 leading-tight line-clamp-2 group-hover:text-purple-300 transition-colors">
                     {rec.title}
                   </h3>
-                  
+
                   <p className="text-slate-400 text-xs mb-3 line-clamp-3">
                     {rec.description}
                   </p>
@@ -265,8 +265,8 @@ export default function SmartRecommendationEngine({ className = '' }: SmartRecom
               <p className="text-slate-400 mb-4">
                 Try adjusting your search criteria or browse our full catalog below.
               </p>
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-500 hover:to-pink-500 transition-all"
               >
                 Browse All Services →
