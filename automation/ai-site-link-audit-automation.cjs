@@ -15,7 +15,12 @@
 const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
-const { createLLMClient } = require('./lib/llm-client.cjs');
+let createLLMClient = null;
+try {
+  ({ createLLMClient } = require('./lib/llm-client.cjs'));
+} catch {
+  console.warn('[site-link-audit] optional automation/lib/llm-client.cjs not found; --create-pages disabled.');
+}
 
 const CONFIG = {
   rootDir: process.cwd(),
@@ -261,6 +266,11 @@ async function run(createPages = false) {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
     console.log('\nSet OPENROUTER_API_KEY to create missing pages.');
+    return result;
+  }
+
+  if (!createLLMClient) {
+    console.log('\nLLM client unavailable (automation/lib/llm-client.cjs missing); skipping page creation.');
     return result;
   }
 
