@@ -15,6 +15,7 @@ import FloatingActionDock from '@/components/FloatingActionDock';
 import ServiceMatchQuiz from '@/components/ServiceMatchQuiz';
 import AgentsMonitoring from '@/components/AgentsMonitoring';
 import NavigationQuickLinks from '@/components/NavigationQuickLinks';
+import { homepageFeaturedApps, APPS_NETWORK_HUB } from './data/appsNetwork';
 
 // Category accent color for showcase cards (maps category key → gradient)
 // Category accent color for showcase card styles (static RGBA + hex)
@@ -1271,6 +1272,185 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Zion Apps Network — product apps + path calculators ── */}
+      <section id="apps-network" className="py-16 border-t border-slate-800 bg-gradient-to-b from-slate-950 via-purple-950/10 to-slate-950">
+        <div className="container-page">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-2">Free apps &amp; calculators — interlinked</h2>
+              <p className="text-sm text-slate-400">
+                Path tools on this domain and product apps from the GitHub constellation. Every card links to the app
+                and back into the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">network hub</Link>.
+              </p>
+            </div>
+            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-500 transition-colors">
+              View all apps <span>→</span>
+            </Link>
+          </div>
+
+          {/* Featured apps grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {homepageFeaturedApps.map((app) => (
+              <Link key={app.slug} href={app.href} className="block rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-purple-500/40 transition-colors">
+                <p className="text-[10px] uppercase tracking-wider text-purple-300/80 font-semibold mb-2">{app.group}</p>
+                <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
+                <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
+                <span className="inline-block mt-3 text-xs text-purple-300">Open {app.href} →</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Category groups */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-4">🧠 AI Product Apps</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  {{ name: 'AI Agent Swarm', href: '/zion-ai-agent-swarm/' }},
+                  {{ name: 'Multi-Agent Orchestrator', href: '/multi-agent-orchestrator/' }},
+                  {{ name: 'AI Service Router', href: '/ai-service-router/' }},
+                  {{ name: 'AI Content Strategy', href: '/ai-content-strategy-engine/' }},
+                  {{ name: 'AI SEO Generator', href: '/ai-seo-content-generator/' }},
+                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
+                  {{ name: 'AI Fraud Detection', href: '/ai-fraud-detection/' }},
+                  {{ name: 'AI Recommendation Engine', href: '/ai-recommendation-engine/' }},
+                ].map((app) => (
+                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-purple-600/20 text-purple-300 text-xs hover:bg-purple-600/30 transition-colors">
+                    {app.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-4">💰 Money &amp; FinOps</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  {{ name: 'ROI Calculator', href: '/roi-calc/' }},
+                  {{ name: 'Token Cost', href: '/token-cost/' }},
+                  {{ name: 'FinOps Autopilot', href: '/finops-autopilot/' }},
+                  {{ name: 'Cloud Waste', href: '/cloud-waste/' }},
+                  {{ name: 'Pricing Calculator', href: '/pricing-calculator/' }},
+                  {{ name: 'FinOps Estimator', href: '/finops-estimator/' }},
+                  {{ name: 'AI Cloud Cost Opt.', href: '/ai-first-cloud-cost-optimization/' }},
+                ].map((app) => (
+                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-green-600/20 text-green-300 text-xs hover:bg-green-600/30 transition-colors">
+                    {app.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-4">🔧 Ops &amp; Incidents</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  {{ name: 'Incident Cost', href: '/incident-cost/' }},
+                  {{ name: 'AI Incident Commander', href: '/zion-ai-incident-commander/' }},
+                  {{ name: 'Change Risk', href: '/change-risk/' }},
+                  {{ name: 'Ops Runbook AI', href: '/ops-runbook-ai/' }},
+                  {{ name: 'Agents Monitoring', href: '/agents-monitoring/' }},
+                  {{ name: 'SLA Calculator', href: '/sla-calculator/' }},
+                ].map((app) => (
+                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-red-600/20 text-red-300 text-xs hover:bg-red-600/30 transition-colors">
+                    {app.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-4">🛡️ Governance &amp; Security</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  {{ name: 'AI Governance Checklist', href: '/ai-governance-checklist/' }},
+                  {{ name: 'AI Compliance Auditor', href: '/zion-ai-compliance-auditor/' }},
+                  {{ name: 'Security Scanning', href: '/security-scanning/' }},
+                  {{ name: 'Identity Management', href: '/identity-management/' }},
+                  {{ name: 'Prompt Shield', href: '/prompt-shield/' }},
+                  {{ name: 'Secret Notes', href: '/secret-notes/' }},
+                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
+                ].map((app) => (
+                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-amber-600/20 text-amber-300 text-xs hover:bg-amber-600/30 transition-colors">
+                    {app.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-4">📡 Field &amp; Support</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  {{ name: 'Field Dispatch', href: '/field-dispatch/' }},
+                  {{ name: 'Parts Desk', href: '/parts-desk/' }},
+                  {{ name: 'Warranty Lens', href: '/warranty-lens/' }},
+                  {{ name: 'AI Lead Generator', href: '/zion-ai-lead-generator/' }},
+                  {{ name: 'Rapid Outreach', href: '/rapid-outreach/' }},
+                  {{ name: 'Sales Lead Gen Suite', href: '/sales-leadgen-suite/' }},
+                  {{ name: 'Customer Success', href: '/customer-success/' }},
+                  {{ name: 'AI CRM Integration', href: '/zion-ai-crm-integration/' }},
+                ].map((app) => (
+                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-300 text-xs hover:bg-blue-600/30 transition-colors">
+                    {app.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-4">📋 Governance &amp; Bids</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  {{ name: 'Licitação Radar', href: '/licitacao-radar/' }},
+                  {{ name: 'RFP Readiness', href: '/rfp-readiness/' }},
+                  {{ name: 'Edital Desk', href: '/edital-desk/' }},
+                  {{ name: 'AI Tender Scout', href: '/ai-tender-scout/' }},
+                ].map((app) => (
+                  <Link key={app.href} href={app.href} className="px-3 py-1.5 rounded-lg bg-cyan-600/20 text-cyan-300 text-xs hover:bg-cyan-600/30 transition-colors">
+                    {app.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Interlink map */}
+          <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-6 mb-8">
+            <h3 className="text-lg font-bold text-white mb-4">🔗 Interlink Map — All Apps Connected</h3>
+            <p className="text-sm text-slate-400 mb-4">Every app in the Zion Apps Network is interlinked. Click any app to see its related apps.</p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'AI Agent Swarm', 'Multi-Agent Orchestrator', 'AI Service Router', 'AI Content Strategy',
+                'AI SEO Generator', 'AI Lead Generator', 'ROI Calculator', 'Token Cost',
+                'FinOps Autopilot', 'Cloud Waste', 'Pricing Calculator', 'Incident Cost',
+                'AI Incident Commander', 'Change Risk', 'Ops Runbook AI', 'Agents Monitoring',
+                'AI Governance Checklist', 'AI Compliance Auditor', 'Security Scanning',
+                'Identity Management', 'Prompt Shield', 'Field Dispatch', 'Parts Desk',
+                'Warranty Lens', 'Licitação Radar', 'RFP Readiness', 'Edital Desk',
+                'AI Tender Scout', 'Rapid Outreach', 'Sales Lead Gen Suite',
+                'Customer Success', 'AI CRM Integration', 'Zion App Network',
+                'Service Discovery', 'Service Comparison', 'AI Workflow Automation',
+                'Process Automation', 'Blog Automation', 'Zion Tech Blog',
+                'Free AI Tools', 'AI Email Intelligence', 'Email Automation',
+                'Data Analytics Suite', 'AI Predictive Analytics', 'AI Fraud Detection',
+                'AI Recommendation Engine', 'Data Services', 'LLM Gateway',
+                'Model Observatory', 'FinOps Estimator', 'AI Cloud Cost Opt.',
+                'AI DevSecOps 2026', 'AI Cloud Migration 2026', 'AI Low-Code Workflow',
+                'AI Agent Services', 'AI Consulting Services', 'Zion Apps Hub',
+                'Secret Notes', 'Churn Notes', 'Zion AI Field Dispatch',
+              ].map((name) => (
+                <span key={name} className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs bg-slate-800 text-slate-300">
+                  <span className="text-purple-400">↔</span> {name}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center py-8">
+            <Link href="/apps-network/" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-500 transition-colors text-lg">
+              Explore the Full Apps Network →
+            </Link>
+            <p className="text-sm text-slate-500 mt-3">35,000+ services | 60+ interlinked apps | 500+ GitHub repositories</p>
+          </div>
+        </div>
+      </section></section>
+
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section id="free-tools" className="py-16 border-t border-slate-800">
         <div className="container-page">
@@ -1279,6 +1459,7 @@ export default function HomePage() {
             <p className="text-slate-400 max-w-2xl mx-auto text-sm">
               Explore our service catalog, calculate ROI, compare solutions, and route your needs — directly from
               our <strong className="text-white">{services.length}+</strong> services across <strong className="text-white">{CATEGORIES.length}</strong> categories.
+              {' '}Also see the <Link href="/apps-network/" className="text-purple-300 hover:text-pink-300">Apps Network hub</Link>.
             </p>
           </div>
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
