@@ -1,3 +1,13 @@
+# HEARTBEAT.md
+
+### Operating Mandate
+
+- Read USER.md, AGENTS.md (AGENTS) and SOUL.md (SOUL) before acting.
+- Never commit secrets.
+- Keep this heartbeat file updated; the weekly smoke checks these anchors.
+
+---
+
 # zion.app — Workspace Status
 CI/CD, V32, Partners, Gmail, ghcli
 
