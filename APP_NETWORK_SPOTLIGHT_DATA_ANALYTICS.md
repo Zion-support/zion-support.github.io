@@ -1,28 +1,42 @@
-# App Network Spotlight — Data & Analytics Suite
+# 📊 Zion AI App Network — Spotlight: Data, Analytics & Business Tools (Sep 25, 2026)
 
-**Published 2026-09-25 · Zion Tech Group**
+Three more categories of the **Zion AI App Network** are now fully spotlighted and interlinked: **Data & Analytics** (29 apps), **Business Tools & Calculators** (35 apps) and **Dev & Ops Tools** (90 apps). Each links back to the [master directory](https://ziontechgroup.com/zion-app-network/), the [GitHub hub](https://github.com/Zion-support/zion-network) and its live app page.
 
-The Zion AI App Network spotlights **Data & Analytics** — 29 free, open-source apps covering pipelines, quality, visualization, synthetic data and governance.
+## Data & Analytics highlights
 
-## Why it matters
-AI is only as good as the data under it. This suite gets your data pipelines reliable, your quality measurable and your insights self-serve.
+| App | What it does | Live |
+|---|---|---|
+| Zion AI Data Analyst | Natural-language analytics & insights | https://ziontechgroup.com/zion-ai-data-analyst/ |
+| Smart Analytics Dashboard | AI-powered business analytics | https://ziontechgroup.com/zion-smart-analytics-dashboard/ |
+| AI Data Pipeline | AI-driven pipeline automation | https://ai-data-pipeline.ziontechgroup.com |
+| Synthetic Data Lab | Privacy-safe synthetic data generation | https://ziontechgroup.com/synthetic-data-lab/ |
+| Zion Vector Search | Hosted embeddings & vector DB API | https://ziontechgroup.com/zion-vector-search/ |
+| Data Readiness Audit | Scored AI-readiness assessment | https://ziontechgroup.com/zion-data-readiness-audit/ |
 
-## Featured apps
-- **Zion AI Data Analyst** — natural-language analytics → [Live app](https://ziontechgroup.com/zion-ai-data-analyst/) · [GitHub](https://github.com/Zion-support/zion-ai-data-analyst)
-- **AI Chart Builder** — automatic data-driven charts → [Live app](https://ai-chart-builder.ziontechgroup.com) · [GitHub](https://github.com/Zion-support/ai-chart-builder)
-- **Data Quality Sentinel** — continuous quality monitoring → [Live app](https://ziontechgroup.com/data-quality-sentinel/) · [GitHub](https://github.com/Zion-support/data-quality-sentinel)
-- **Synthetic Data Lab** — privacy-safe synthetic data → [Live app](https://ziontechgroup.com/synthetic-data-lab/) · [GitHub](https://github.com/Zion-support/synthetic-data-lab)
-- **Zion Smart Analytics Dashboard** — AI business analytics → [Live app](https://ziontechgroup.com/zion-smart-analytics-dashboard/) · [GitHub](https://github.com/Zion-support/zion-smart-analytics-dashboard)
-- **Zion Vector Search** — hosted embeddings & vector DB API → [Live app](https://ziontechgroup.com/zion-vector-search/) · [GitHub](https://github.com/Zion-support/zion-vector-search)
-- **Zion AI Data Anonymizer** — PII detection & masking → [Live app](https://ziontechgroup.com/zion-ai-data-anonymizer) · [GitHub](https://github.com/Zion-support/zion-ai-data-anonymizer)
+## Business Tools & Calculators highlights
+
+| App | What it does | Live |
+|---|---|---|
+| AI ROI Calculator | Payback & TCO for AI projects | https://ziontechgroup.com/roi-calculator/ |
+| SLO Calculator | Uptime & error-budget math | https://ziontechgroup.com/slo-calculator/ |
+| AI Contract Reviewer | Clause-level risk scoring | https://ziontechgroup.com/ai-contract-reviewer/ |
+| AI Tender Scout | Public-sector bid discovery | https://ziontechgroup.com/ai-tender-scout/ |
+
+## Dev & Ops Tools highlights
+
+| App | What it does | Live |
+|---|---|---|
+| Ops Runbook AI | AI-generated operational runbooks | https://ziontechgroup.com/ops-runbook-ai/ |
+| Postmortem Generator | Blameless postmortems from incident data | https://ziontechgroup.com/postmortem-generator/ |
+| Status Page Generator | Hosted status pages in minutes | https://ziontechgroup.com/status-page-generator/ |
+| Tech Debt Radar | Quantify and track technical debt | https://ziontechgroup.com/tech-debt-radar/ |
 
 ## Explore
-- Category page: [network/data-analytics.md](https://github.com/Zion-support/zion-network/blob/main/network/data-analytics.md)
-- Spotlight: [spotlights/data-analytics.md](https://github.com/Zion-support/zion-network/blob/main/spotlights/data-analytics.md)
-- Network hub: [network.ziontechgroup.com](https://network.ziontechgroup.com) · Master directory: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
+- 🏠 Homepage: https://ziontechgroup.com
+- 🗂 Master directory: https://ziontechgroup.com/zion-app-network/
+- 🌐 Network hub: https://network.ziontechgroup.com
+- 📂 Category pages: [data-analytics](https://github.com/Zion-support/zion-network/blob/main/network/data-analytics.md) · [business-tools-calculators](https://github.com/Zion-support/zion-network/blob/main/network/business-tools-calculators.md) · [dev-ops-tools](https://github.com/Zion-support/zion-network/blob/main/network/dev-ops-tools.md)
+- 💳 Plans: https://ziontechgroup.com/en/plans/
+- 📞 Book a discovery call: https://ziontechgroup.com/discovery/
 
-## Related spotlights
-- [AI Readiness & Evaluation](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md)
-- [HR & People AI](APP_NETWORK_SPOTLIGHT_HR_PEOPLE.md) · [Sales Pipeline & Revenue AI](APP_NETWORK_SPOTLIGHT_SALES_PIPELINE.md)
-
-Every app is free to try. Production deployment & SLAs: [plans & pricing](https://ziontechgroup.com/plans/) · [ziontechgroup.com](https://ziontechgroup.com)
+© 2026 Zion Tech Group.
