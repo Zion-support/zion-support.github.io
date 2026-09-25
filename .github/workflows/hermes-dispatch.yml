@@ -19,7 +19,7 @@ jobs:
           script: |
             const owner = 'Zion-support';
             const repo = 'zion-support.github.io';
-            const issue_number = 71361;
+            const issue_number = 71438;
             const comments = await github.paginate(github.rest.issues.listComments, {
               owner, repo, issue_number, per_page: 40
             });
@@ -61,6 +61,6 @@ jobs:
               `Task (${pick.id}): ${pick.task}`,
               'Cadence: every 10 min. Skip if you already own an open lane.',
               'Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/',
-              'Log: https://github.com/Zion-support/zion-support.github.io/issues/71361'
+              'Log: https://github.com/Zion-support/zion-support.github.io/issues/71438'
             ].join('\n');
             await github.rest.issues.createComment({ owner, repo, issue_number, body });
