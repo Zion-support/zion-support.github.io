@@ -18,21 +18,51 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Apply fixes to generated pages
+      - name: Apply fixes to generated pages (python)
         run: |
           set -euo pipefail
-          echo "Before: $(grep -rlE 'path=`' app/services --include=page.tsx | wc -l) files with bad path= template literal"
-          # Fix 1: JSX attribute with raw template literal: path=`...` -> path={`...`}
-          find app/services -name page.tsx -type f -print0 | xargs -0 sed -i -E 's/(path=)(`[^`]*`)/\1{\2}/g'
-          echo "After fix1: $(grep -rlE 'path=`' app/services --include=page.tsx | wc -l) remaining"
-          echo "Before fix2: $(grep -rlE '<script type="application/ld\+json">\{' app/services --include=page.tsx | wc -l) files with raw JSON-LD"
-          # Fix 2: raw JSON object inside JSX script tag -> wrap as template literal expression
-          find app/services -name page.tsx -type f -print0 | xargs -0 perl -0777 -pi -e 's/(<script type="application\/ld\+json">)(\{.*?\})(<\/script>)/$1{\`$2\`}$3/gs'
-          echo "After fix2: $(grep -rlE '<script type="application/ld\+json">\{' app/services --include=page.tsx | wc -l) remaining"
-          echo "Before fix3: $(grep -rlE 'dangerouslySetInnerHTML=\{__html:' app components --include='*.tsx' 2>/dev/null | wc -l) files with broken dangerouslySetInnerHTML"
-          # Fix 3: dangerouslySetInnerHTML={__html: X} -> dangerouslySetInnerHTML={{ __html: X }} (repo-wide)
-          grep -rlE 'dangerouslySetInnerHTML=\{__html:' app components --include='*.tsx' 2>/dev/null | xargs -r sed -i -E 's/dangerouslySetInnerHTML=\{__html: (.*)\}/dangerouslySetInnerHTML={{ __html: \1 }}/g'
-          echo "After fix3: $(grep -rlE 'dangerouslySetInnerHTML=\{__html:' app components --include='*.tsx' 2>/dev/null | wc -l) remaining"
+          python3 - <<'PYEOF'
+          import re, pathlib
+          roots = ['app', 'components']
+          exts = ('.tsx',)
+          f1 = f2 = f3 = 0
+          for root in roots:
+              r = pathlib.Path(root)
+              if not r.exists():
+                  continue
+              for p in r.rglob('*.tsx'):
+                  try:
+                      t = p.read_text(encoding='utf-8')
+                  except Exception:
+                      continue
+                  o = t
+                  # Fix 1: path=`...` -> path={`...`}
+                  t = re.sub(r'(path=)(`[^`]*`)', r'\1{\2}', t)
+                  if t != o:
+                      f1 += 1; o = t
+                  # Fix 2: raw JSON object inside JSX script tag -> template literal expression
+                  t = re.sub(r'(<script type="application/ld\+json">)(\{.*?\})(</script>)',
+                             lambda m: m.group(1) + '{`' + m.group(2) + '`}' + m.group(3),
+                             t, flags=re.DOTALL)
+                  if t != o:
+                      f2 += 1; o = t
+                  # Fix 3: dangerouslySetInnerHTML={__html: X} -> {{ __html: X }}
+                  t = re.sub(r'dangerouslySetInnerHTML=\{__html: (.*?)\}',
+                             r'dangerouslySetInnerHTML={{ __html: \1 }}', t)
+                  if t != o:
+                      f3 += 1
+                  if t != o or True:
+                      pass
+                  if t != pathlib.Path(p).read_text(encoding='utf-8'):
+                      p.write_text(t, encoding='utf-8')
+          print(f"fix1 files: {f1}, fix2 files: {f2}, fix3 files: {f3}")
+          # verify no remaining broken patterns
+          import subprocess
+          for pat in [r'path=`', r'dangerouslySetInnerHTML=\{__html:']:
+              out = subprocess.run(['grep','-rlE',pat,'app','components','--include=*.tsx'],
+                                   capture_output=True, text=True).stdout.strip()
+              print(pat, 'remaining:', 0 if not out else len(out.splitlines()))
+          PYEOF
 
       - name: Commit fixes
         run: |
