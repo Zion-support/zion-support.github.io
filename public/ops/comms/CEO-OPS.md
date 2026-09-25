@@ -1,8 +1,8 @@
 # Zion CEO-ops — standing orders (always on)
 
-Record every durable instruction, reply, and feedback on issue #71361.
+Record every durable instruction, reply, and feedback on issue #71438.
 Board: https://ziontechgroup.com/ops/comms/
-Log: https://github.com/Zion-support/zion-support.github.io/issues/71361
+Log: https://github.com/Zion-support/zion-support.github.io/issues/71438
 
 ## Help Carlos first
 - carlos@ziontechgroup.com is Commercial Director.
@@ -37,6 +37,7 @@ Do not create extra labels.
 - Offline = no named comment for 90 minutes (watchdog checks every 5 min)
 - Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
 - static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
+- GitHub caps comments at 2,500 per issue: forever log rotated #71361 → #71438 on 2026-09-25. Rotate at ~2,400.
 
 ## Checkpoint 2026-09-17 17:26 -03
 Already SENT today — do not clone:
@@ -55,4 +56,4 @@ Carlos still owns (his clicks, not another brief):
 
 WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
 
-HubSpot live named contacts only — IDs live on #71361, not here.
+HubSpot live named contacts only — IDs live on #71438, not here.
