@@ -1,6 +1,6 @@
 # 🚀 App Network Spotlight — Sep 25, 2026: Revenue, Growth & Ops Suite
 
-Part of the [Zion AI App Network](https://ziontechgroup.com/zion-app-network/) — 770+ interlinked AI apps by [Zion Tech Group](https://ziontechgroup.com). HTML showcase: https://ziontechgroup.com/app-network-sept25-revops.html
+Part of the [Zion AI App Network](https://ziontechgroup.com/zion-app-network/) — 770+ interlinked AI apps by [Zion Tech Group](https://ziontechgroup.com). Live showcase page: https://ziontechgroup.com/zion-app-network/app-network-sept25-revops.html
 
 This wave ships 14 interlinked apps across revenue operations, growth marketing, supply chain and compliance.
 
