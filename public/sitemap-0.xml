@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Commercial sitemap-0. Field-services: hub + brazil only. No hashed /services/* orphans. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://ziontechgroup.com/</loc><lastmod>2026-09-22</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>https://ziontechgroup.com/about/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/</loc><lastmod>2026-09-24</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://ziontechgroup.com/about/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/ai-consulting-services/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/autonomous-ai-agents/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/blog/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/blog/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-agent-governance-enterprise/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-consulting-roi-board/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/blog/ai-consulting-services-for-business/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -45,22 +45,22 @@
 <url><loc>https://ziontechgroup.com/blog/saas-knowledge-base-pay-vs-consulte/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/blog/zion-plans-ladder-discovery-starter-growth/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 <url><loc>https://ziontechgroup.com/case-studies/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/contact/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/discovery/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/enterprise/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/contact/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/discovery/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/enterprise/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/field-services-brazil/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/field-services/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/field-services/brazil/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/finops-consulting/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/free-consultation/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://ziontechgroup.com/free-consultation/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/industries/healthcare/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/industries/insurance/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/industries/legal/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/managed-it-services/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/plans/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/plans/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/public-roadmap/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/services/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://ziontechgroup.com/solutions/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://ziontechgroup.com/solutions/</loc><lastmod>2026-09-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://ziontechgroup.com/status-page/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/telegram/</loc><lastmod>2026-09-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 <url><loc>https://ziontechgroup.com/use-cases/</loc><lastmod>2026-09-22</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
