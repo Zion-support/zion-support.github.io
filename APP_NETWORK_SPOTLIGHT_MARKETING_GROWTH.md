@@ -1,42 +1,32 @@
-# 📈 App Network Spotlight — Marketing & Growth AI Suite
+# 📣 APP NETWORK SPOTLIGHT — Marketing & Growth AI Suite (2026-09-26, Batch 35)
 
-**Published:** 2026-09-25 · **Suite size:** 14 live apps · **Network:** [Zion App Network](https://ziontechgroup.com/app-network/)
+**Advertising copy for [ziontechgroup.com](https://ziontechgroup.com) — links to live apps.**
 
-Grow faster with Zion's **Marketing & Growth AI** suite — 14 interconnected apps that run your entire growth loop: **attract → convert → nurture → refer**.
+## Headline
+**Your entire growth loop, run by AI.** Twelve apps that plan campaigns, produce content, publish everywhere and prove ROI — so a lean team punches like a full growth department.
 
-## ⭐ Featured
+## Plan & create
+- **[AI Growth Marketing Hub](https://ziontechgroup.com/ai-growth-marketing-hub/)** — the AI command center for your campaigns
+- **[Zion Content Studio](https://content-studio.ziontechgroup.com)** — end-to-end AI content production
+- **[AI Caption Generator](https://ai-caption-generator.ziontechgroup.com)** — on-brand captions in seconds
 
-- **AI Growth Marketing Hub** — orchestrate full-funnel AI marketing campaigns from one command center. [Launch app](https://ziontechgroup.com/ai-growth-marketing-hub/)
-- **Ad Budget Optimizer** — AI reallocates ad spend across channels for maximum ROAS. [Launch app](https://ziontechgroup.com/ad-budget-optimizer/)
-- **Landing Page A/B Tester** — AI-generated variants with automated experiment analysis. [Launch app](https://ziontechgroup.com/landing-page-ab-tester/)
-- **SEO Content Optimizer** — content scoring and semantic keyword coverage to rank higher. [Launch app](https://ziontechgroup.com/seo-content-optimizer/)
-- **Referral Engine AI** — turn customers into advocates with AI-optimized referral programs. [Launch app](https://ziontechgroup.com/referral-engine-ai/)
-- **Webinar Funnel Hub** — end-to-end webinar promotion, registration and follow-up funnels. [Launch app](https://ziontechgroup.com/webinar-funnel-hub/)
+## Publish & distribute
+- **[Newsletter Growth Copilot](https://ziontechgroup.com/newsletter-growth-copilot/)** — grow and monetize your list
+- **[AI Social Manager](https://ziontechgroup.com/ai-social-manager/)** — schedule, draft and engage across every network
+- **[Webinar Funnel Hub](https://ziontechgroup.com/webinar-funnel-hub/)** — webinars that end in pipeline, not just attendance
+- **[Referral Engine AI](https://ziontechgroup.com/referral-engine-ai/)** — turn happy customers into your best channel
 
-## 🧩 Full suite
+## Optimize & prove
+- **[Ad Budget Optimizer](https://ziontechgroup.com/ad-budget-optimizer/)** — shift spend to what actually converts
+- **[Landing Page A/B Tester](https://ziontechgroup.com/landing-page-ab-tester/)** — AI-proposed variants with statistics you can trust
+- **[SEO Content Optimizer](https://ziontechgroup.com/seo-content-optimizer/)** — briefs and scoring that rank
+- **[Social Listening Radar](https://ziontechgroup.com/social-listening-radar/)** — real-time brand and competitor signal
+- **[Content ROI Dashboard](https://ziontechgroup.com/content-roi-dashboard/)** — attribute pipeline to every asset
 
-| App | Live |
-|---|---|
-| AI Growth Marketing Hub | https://ziontechgroup.com/ai-growth-marketing-hub/ |
-| Newsletter Growth Copilot | https://ziontechgroup.com/newsletter-growth-copilot/ |
-| Social Listening Radar | https://ziontechgroup.com/social-listening-radar/ |
-| Ad Budget Optimizer | https://ziontechgroup.com/ad-budget-optimizer/ |
-| Landing Page A/B Tester | https://ziontechgroup.com/landing-page-ab-tester/ |
-| SEO Content Optimizer | https://ziontechgroup.com/seo-content-optimizer/ |
-| Content ROI Dashboard | https://ziontechgroup.com/content-roi-dashboard/ |
-| Zion Content Studio | https://content-studio.ziontechgroup.com |
-| AI Social Manager | https://ziontechgroup.com/ai-social-manager/ |
-| AI Caption Generator | https://ai-caption-generator.ziontechgroup.com |
-| Referral Engine AI | https://ziontechgroup.com/referral-engine-ai/ |
-| Webinar Funnel Hub | https://ziontechgroup.com/webinar-funnel-hub/ |
-| Zion AI Email Marketing Pro | https://email-marketing.ziontechgroup.com |
-| AI Sales Email Copilot | https://ziontechgroup.com/ai-sales-email-copilot/ |
+## Explore the network
+- 🌐 [Zion App Network hub](https://network.ziontechgroup.com) · [Showcase](https://ziontechgroup.com/app-network/)
+- 📂 Category: [Marketing & Growth AI](https://github.com/Zion-support/zion-network/blob/main/network/marketing-growth-ai.md)
+- 🔗 Related suites: [Sales & Lead Gen AI](https://github.com/Zion-support/zion-network/blob/main/network/sales-lead-gen-ai.md) · [Customer Success AI](https://github.com/Zion-support/zion-network/blob/main/network/customer-success-ai.md) · [Compliance & GRC AI](https://github.com/Zion-support/zion-network/blob/main/network/compliance-grc-ai.md)
+- 📊 [Status](https://zion-support.github.io/zion-status/) · 💳 [Plans](https://zion-support.github.io/plans/)
 
-## 🔗 Explore the network
-
-- 🌐 [Zion App Network — master index](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-- 📂 [Marketing & Growth AI category page](https://github.com/Zion-support/zion-network/blob/main/network/marketing-growth-ai.md)
-- 💼 [Sales & Lead Gen AI suite](https://github.com/Zion-support/zion-network/blob/main/network/sales-lead-gen-ai.md) · 💚 [Customer Success AI](https://github.com/Zion-support/zion-network/blob/main/network/customer-success-ai.md)
-- 🏠 [ziontechgroup.com](https://ziontechgroup.com) · [Plans & pricing](https://ziontechgroup.com/plans/) · [Contact us](https://ziontechgroup.com/contact/)
-
-_All apps are part of the Zion Tech Group app network — 535+ interlinked AI & IT ops apps. Need a custom deployment? Start with a [$99 Discovery](https://ziontechgroup.com/discovery/)._
+_Part of the Zion App Network — 535+ interlinked apps and sites under [github.com/Zion-support](https://github.com/Zion-support)._
