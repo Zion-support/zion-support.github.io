@@ -1,22 +1,31 @@
-# 📣 App Network Spotlight — Data Operations & Observability AI (2026-09-24)
+# Homepage Spotlight: Data Observability & Reliability AI — September 26, 2026
 
-New on the homepage: **[Data Operations & Observability AI Suite](https://ziontechgroup.com/ai-data-observability-suite/)** — a landing page advertising 9 interlinked, free, open-source apps.
+**New from the Zion App Network:** eight free AI tools that watch your data stack so your team can trust every dashboard, pipeline and model — no data platform team required.
 
-## Featured apps
-- [Data Catalog Copilot](https://ziontechgroup.com/data-catalog-copilot/) — AI copilot for data catalogs — auto-documents tables, lineage, and ownership. ([repo](https://github.com/Zion-support/data-catalog-copilot))
-- [Data Quality Watchdog](https://ziontechgroup.com/data-quality-watchdog/) — Detects schema drift, nulls, and anomalies across pipelines before they hit dashboards. ([repo](https://github.com/Zion-support/data-quality-watchdog))
-- [ETL Pipeline Monitor](https://ziontechgroup.com/etl-pipeline-monitor/) — AI ETL/pipeline monitoring — predicts failures and ranks root causes. ([repo](https://github.com/Zion-support/etl-pipeline-monitor))
-- [Metric Anomaly Alerter](https://ziontechgroup.com/metric-anomaly-alerter/) — Real-time metric anomaly detection and alerting with business context. ([repo](https://github.com/Zion-support/metric-anomaly-alerter))
-- [Dashboard Insight Narrator](https://ziontechgroup.com/dashboard-insight-narrator/) — Turns dashboards into plain-language insight narratives for stakeholders. ([repo](https://github.com/Zion-support/dashboard-insight-narrator))
-- [Report Scheduler AI](https://ziontechgroup.com/report-scheduler-ai/) — AI report scheduling and distribution — right report, right person, right time. ([repo](https://github.com/Zion-support/report-scheduler-ai))
-- [API Health Probe](https://ziontechgroup.com/api-health-probe/) — Monitor API endpoints with response-time charts, uptime %, and alerts. ([repo](https://github.com/Zion-support/api-health-probe))
-- [Cloud Cost Estimator](https://ziontechgroup.com/cloud-cost-estimator/) — Multi-cloud compute & serverless price comparison. ([repo](https://github.com/Zion-support/cloud-cost-estimator))
-- [Cloud Architect Diagram Builder](https://ziontechgroup.com/cloud-architect-diagram-builder/) — Drag-and-drop AWS/Azure/GCP architecture diagrams with SVG/PNG export. ([repo](https://github.com/Zion-support/cloud-architect-diagram-builder))
+## The apps
 
-## Interlinks
-- Suite page: https://ziontechgroup.com/ai-data-observability-suite/
-- Network category: https://github.com/Zion-support/zion-network/blob/main/network/data-observability-ai.md
-- Registry: https://github.com/Zion-support/zion-network/blob/main/network/data-observability-apps.json
-- Spotlight: https://github.com/Zion-support/zion-network/blob/main/spotlights/data-observability.md
-- Master index: https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md
-- Plans: https://ziontechgroup.com/plans/
+- **[Data Quality Watchdog](https://ziontechgroup.com/data-quality-watchdog/)** — detects schema drift, nulls and anomalies before they hit reports ([repo](https://github.com/Zion-support/data-quality-watchdog))
+- **[ETL Pipeline Monitor](https://ziontechgroup.com/etl-pipeline-monitor/)** — predicts pipeline failures and ranks root causes ([repo](https://github.com/Zion-support/etl-pipeline-monitor))
+- **[Metric Anomaly Alerter](https://ziontechgroup.com/metric-anomaly-alerter/)** — real-time KPI anomaly alerts with business context ([repo](https://github.com/Zion-support/metric-anomaly-alerter))
+- **[Data Catalog Copilot](https://ziontechgroup.com/data-catalog-copilot/)** — auto-documents tables, lineage and owners ([repo](https://github.com/Zion-support/data-catalog-copilot))
+- **[Dashboard Insight Narrator](https://ziontechgroup.com/dashboard-insight-narrator/)** — turns dashboards into plain-language insight narratives for stakeholders ([repo](https://github.com/Zion-support/dashboard-insight-narrator))
+- **[Zion AI Data Analyst](https://ziontechgroup.com/zion-ai-data-analyst/)** — natural-language analytics: ask questions, get answers and charts ([repo](https://github.com/Zion-support/zion-ai-data-analyst))
+- **[Synthetic Data Lab](https://ziontechgroup.com/synthetic-data-lab/)** — privacy-safe synthetic data generation for testing and demos ([repo](https://github.com/Zion-support/synthetic-data-lab))
+- **[Zion AI Drift Detector](https://ziontechgroup.com/zion-ai-drift-detector/)** — model and data drift monitoring with retraining triggers ([repo](https://github.com/Zion-support/zion-ai-drift-detector))
+
+## Why it matters
+
+- **Trust before traffic** — catch broken pipelines and drifting metrics before executives see wrong numbers. Pair with [Zion Insight Dashboard](https://ziontechgroup.com/zion-insight-dashboard/) for a unified KPI view.
+- **Reliability on a budget** — combine with [API Health Probe](https://ziontechgroup.com/api-health-probe/) and [SLA Risk Forecaster](https://ziontechgroup.com/sla-risk-forecaster/) for end-to-end reliability coverage.
+- **Ship AI safely** — [Zion AI Drift Detector](https://ziontechgroup.com/zion-ai-drift-detector/) + [AI Eval Harness](https://ziontechgroup.com/ai-eval-harness/) keep production models honest.
+
+## Explore the network
+
+- 🗂️ Category page: [network/data-observability-ai.md](https://github.com/Zion-support/zion-network/blob/main/network/data-observability-ai.md)
+- 📊 Network spotlight: [spotlights/data-observability-reliability.md](https://github.com/Zion-support/zion-network/blob/main/spotlights/data-observability-reliability.md)
+- 🤖 Also new: [Autonomous AI Agents](APP_NETWORK_SPOTLIGHT_AI_AGENTS.md) · [Green IT & Sustainability AI](APP_NETWORK_SPOTLIGHT_GREEN_IT.md)
+- 🧰 All tools: https://ziontechgroup.com/tools/ · 💼 Plans: https://ziontechgroup.com/en/plans/ · 📞 Discovery $99: https://ziontechgroup.com/discovery/
+- ✉️ commercial@ziontechgroup.com
+
+---
+© 2026 Zion Tech Group · https://ziontechgroup.com
