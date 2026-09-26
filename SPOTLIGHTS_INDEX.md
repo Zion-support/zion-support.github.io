@@ -4,6 +4,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 ## Homepage spotlight pages (this repo)
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
+- [APP_NETWORK_SPOTLIGHT_SEP26_BATCH50_FINOPS.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH50_FINOPS.md) — NEW Batch 50: FinOps & Cloud Cost Optimization — 8 interlinked apps (estimate, analyze, optimize, automate, prove ROI)
 - [APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md](APP_NETWORK_SPOTLIGHT_SEP24_BATCH28.md) — NEW Batch 28: warranty claims, incident runbooks, procurement, SLA risk, knowledge gaps, quote building
 - [APPS_SHOWCASE.md](APPS_SHOWCASE.md) — app showcase overview
 - [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) — original network spotlight
