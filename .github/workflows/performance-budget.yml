@@ -27,14 +27,14 @@ jobs:
       run: npm ci --include=dev
     - name: Build site
       env:
-        NODE_OPTIONS: --max-old-space-size=6144 --max-semi-space-size=64
+        NODE_OPTIONS: --max-old-space-size=12288 --max-semi-space-size=64
         NEXT_BUILD_WORKER_COUNT: "1"
       run: |
         set -euo pipefail
-        if timeout 12m npm run build; then
+        if timeout 840 npm run build; then
           echo "Next.js build succeeded"
         else
-          echo "::warning::Next.js build timed out or failed (heap OOM on 90k+ file tree); falling back to serving the static repository root."
+          echo "::warning::Next.js build timed out (>14min) or failed on 90k+ file tree; falling back to serving the static repository root."
           rm -rf out
         fi
     - name: Start local server (background)
