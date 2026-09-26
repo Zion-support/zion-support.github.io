@@ -1,40 +1,37 @@
-# App Network Spotlight — Sep 26, 2026 (Batch 11: Security, Compliance & Vendor Trust)
+# App Network Spotlight — 2026-09-26 — Batch 11: CX & AI Governance
 
-Batch 11 page: https://ziontechgroup.com/apps/september-2026-batch11.html
+Published: 2026-09-26 (UTC)
+Pages:
+- https://ziontechgroup.com/apps/september-2026-batch11.html
+- https://ziontechgroup.com/apps/spotlight-2026-09-26b.html
 
-Eight interconnected apps for vendor risk, compliance readiness and accessibility:
+## Theme
+Close the loop from support signal to governed AI: CX intelligence apps surface the
+signal, governance apps keep the response compliant and audit-ready.
 
-- **Vendor Risk Scorecard** — Score and monitor vendor risk across security, finance and compliance signals, with live alerts.
-  - Live: https://ziontechgroup.com/vendor-risk-scorecard/
-  - Repo: https://github.com/Zion-support/vendor-risk-scorecard
-- **Vendor Questionnaire Autopilot** — Auto-answer vendor security questionnaires from your evidence library — hours, not weeks.
-  - Live: https://ziontechgroup.com/vendor-questionnaire-autopilot/
-  - Repo: https://github.com/Zion-support/vendor-questionnaire-autopilot
-- **Vendor Risk Screener** — AI vendor risk screening across security, financial and compliance signals before onboarding.
-  - Live: https://ziontechgroup.com/vendor-risk-screener/
-  - Repo: https://github.com/Zion-support/vendor-risk-screener
-- **Vendor Matrix Compare** — Side-by-side vendor/service comparison with weighted scoring and recommendations.
-  - Live: https://ziontechgroup.com/vendor-matrix-compare/
-  - Repo: https://github.com/Zion-support/vendor-matrix-compare
-- **Zion AI Compliance Checker** — Compliance Readiness Checker — SOC 2, HIPAA, GDPR and ISO 27001 readiness scoring.
-  - Live: https://ziontechgroup.com/zion-ai-compliance-checker/
-  - Repo: https://github.com/Zion-support/zion-ai-compliance-checker
-- **Zion AI Compliance Scanner** — Automated compliance scanning — CIS benchmarks, policy enforcement and drift alerts.
-  - Live: https://ziontechgroup.com/zion-ai-compliance-scanner/
-  - Repo: https://github.com/Zion-support/zion-ai-compliance-scanner
-- **Zion Data Readiness Audit** — Scored assessment of data quality, governance and AI readiness before you build.
-  - Live: https://ziontechgroup.com/zion-data-readiness-audit/
-  - Repo: https://github.com/Zion-support/zion-data-readiness-audit
-- **AI Accessibility Auditor** — WCAG 2.2 compliance scanning with prioritized auto-fix guidance for every page.
-  - Live: https://ziontechgroup.com/ai-accessibility-auditor/
-  - Repo: https://github.com/Zion-support/ai-accessibility-auditor
+## Apps featured (live app + repo, all interlinked)
+| App | Live | Repo |
+|---|---|---|
+| Support Ticket Triager | https://ziontechgroup.com/support-ticket-triager/ | https://github.com/Zion-support/support-ticket-triager |
+| Support Sentiment Monitor | https://ziontechgroup.com/support-sentiment-monitor/ | https://github.com/Zion-support/support-sentiment-monitor |
+| Support Deflection Analyzer | https://ziontechgroup.com/support-deflection-analyzer/ | https://github.com/Zion-support/support-deflection-analyzer |
+| Voice of Customer Hub | https://ziontechgroup.com/voice-of-customer-hub/ | https://github.com/Zion-support/voice-of-customer-hub |
+| AI Customer Experience Hub | https://ziontechgroup.com/ai-customer-experience-hub/ | https://github.com/Zion-support/ai-customer-experience-hub |
+| Churn Signal Radar | https://ziontechgroup.com/churn-signal-radar/ | https://github.com/Zion-support/churn-signal-radar |
+| Prompt Shield | https://ziontechgroup.com/prompt-shield/ | https://github.com/Zion-support/prompt-shield |
+| Data Contract Validator | https://ziontechgroup.com/data-contract-validator/ | https://github.com/Zion-support/data-contract-validator |
+| AI Readiness Score | https://ziontechgroup.com/ai-readiness-score/ | https://github.com/Zion-support/ai-readiness-score |
+| Stack Audit | https://ziontechgroup.com/stack-audit/ | https://github.com/Zion-support/stack-audit |
+| RFP Readiness | https://ziontechgroup.com/rfp-readiness/ | https://github.com/Zion-support/rfp-readiness |
+| Licitacao Radar | https://ziontechgroup.com/licitacao-radar/ | https://github.com/Zion-support/licitacao-radar |
 
-## Interlinks
-- Showcase: https://ziontechgroup.com/apps/
-- Batch 10: https://ziontechgroup.com/apps/september-2026-batch10.html
-- Batch 9: https://ziontechgroup.com/apps/september-2026-batch9.html
-- Content Hub: https://ziontechgroup.com/apps/content-hub.html
-- Network Map: https://ziontechgroup.com/apps/network-map-2026-09-25.html
-- Catalog (JSON): https://ziontechgroup.com/apps/catalog.json
+## Interlinks added
+- apps/index.html nav + footer link Batch 11 and Spotlight 09-26b.
+- Homepage index.html: new "September 2026 Batch 11" section with 12 cards.
+- Batch 11 page links back to Batches 4, 7, 8, 9, 10, suites, content hub, network map, catalog JSON.
+- Spotlight 09-26b links the narrative flow across the 12 apps.
 
-See also: APP_NETWORK_SPOTLIGHT_SEP26_BATCH52_GRC.md, APP_NETWORK_SPOTLIGHT_GRC.md, APP_NETWORK_SPOTLIGHT_SECURITY.md, APP_NETWORK_SPOTLIGHT_COMPLIANCE_GOVERNANCE.md, homepage-content-batch11.md.
+## Verification checklist
+- [ ] https://ziontechgroup.com/apps/september-2026-batch11.html → 200
+- [ ] https://ziontechgroup.com/apps/spotlight-2026-09-26b.html → 200
+- [ ] Homepage shows Batch 11 section
