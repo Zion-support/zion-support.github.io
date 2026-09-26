@@ -1,25 +1,35 @@
-# 🏙️ Homepage Spotlight — Industry Vertical AI Suites (2026-09-25)
+# Homepage Spotlight: Industry Vertical AI Suites — September 26, 2026
 
-**AI that speaks your industry's language.** The Zion App Network now ships thirteen vertical AI suites — pre-built data models, KPIs and compliance guardrails per industry, all managed by [Zion Tech Group](https://ziontechgroup.com).
+**New from the Zion App Network:** thirteen ready-made AI suites that speak your industry's language on day one — pre-built prompts, checklists and KPIs instead of a blank canvas.
 
 ## The suites
-- 🏦 **Financial services** — [AI Banking Platform](https://ziontechgroup.com/ai-banking-platform/) · [AI Insurance Suite](https://ziontechgroup.com/ai-insurance-suite/)
-- 💊 **Life sciences & learning** — [AI Pharma Suite](https://ziontechgroup.com/ai-pharma-suite/) · [AI Education Suite](https://ziontechgroup.com/ai-education-suite/)
-- ⚡ **Infrastructure & logistics** — [AI Energy & Utilities Suite](https://ziontechgroup.com/ai-energy-utilities-suite/) · [AI Transportation Suite](https://ziontechgroup.com/ai-transportation-suite/)
-- 🏗️ **Field industries** — [AI Construction Suite](https://ziontechgroup.com/ai-construction-suite/) · [AI Agriculture Platform](https://ziontechgroup.com/ai-agriculture-platform/)
-- 🏨 **Experience economy** — [AI Hospitality Suite](https://ziontechgroup.com/ai-hospitality-suite/) · [AI Real Estate Hub](https://ziontechgroup.com/ai-real-estate-hub/)
-- 🏛️ **Public & social sector** — [AI Gov Services Platform](https://ziontechgroup.com/ai-gov-services-platform/) · [AI Nonprofit Hub](https://ziontechgroup.com/ai-nonprofit-hub/)
-- 🎬 **Media** — [AI Media & Entertainment Hub](https://ziontechgroup.com/ai-media-entertainment-hub/)
 
-## Why vertical suites win
-Generic copilots stall on industry data models and regulations. Zion's vertical suites ship with the ontology, workflows and audit trails already built in — deploy in weeks, not quarters. Pair them with horizontal apps from the network: [Churn Radar](https://ziontechgroup.com/churn-radar/), [FinOps Autopilot](https://ziontechgroup.com/finops-autopilot/), [Voice Agent Studio](https://ziontechgroup.com/voice-agent-studio/).
+- **[AI Banking Platform](https://ziontechgroup.com/ai-banking-platform/)** — fraud signals, KYC copilots, credit memo drafting ([repo](https://github.com/Zion-support/ai-banking-platform))
+- **[AI Insurance Suite](https://ziontechgroup.com/ai-insurance-suite/)** — claims triage, underwriting notes, FNOL intake ([repo](https://github.com/Zion-support/ai-insurance-suite))
+- **[AI Pharma Suite](https://ziontechgroup.com/ai-pharma-suite/)** — literature monitoring, PV signal triage, MLR drafting ([repo](https://github.com/Zion-support/ai-pharma-suite))
+- **[AI Education Suite](https://ziontechgroup.com/ai-education-suite/)** — lesson planning, rubric grading, student risk signals ([repo](https://github.com/Zion-support/ai-education-suite))
+- **[AI Media & Entertainment Hub](https://ziontechgroup.com/ai-media-entertainment-hub/)** — content tagging and rights tracking ([repo](https://github.com/Zion-support/ai-media-entertainment-hub))
+- **[AI Energy & Utilities Suite](https://ziontechgroup.com/ai-energy-utilities-suite/)** — load forecasting, outage triage ([repo](https://github.com/Zion-support/ai-energy-utilities-suite))
+- **[AI Transportation Suite](https://ziontechgroup.com/ai-transportation-suite/)** — ETA prediction and fleet maintenance ([repo](https://github.com/Zion-support/ai-transportation-suite))
+- **[AI Construction Suite](https://ziontechgroup.com/ai-construction-suite/)** — bid takeoff, safety observations, schedule risk ([repo](https://github.com/Zion-support/ai-construction-suite))
+- **[AI Agriculture Platform](https://ziontechgroup.com/ai-agriculture-platform/)** — crop signals and yield forecasting ([repo](https://github.com/Zion-support/ai-agriculture-platform))
+- **[AI Hospitality Suite](https://ziontechgroup.com/ai-hospitality-suite/)** — review insights and staffing forecasts ([repo](https://github.com/Zion-support/ai-hospitality-suite))
+- **[AI Real Estate Hub](https://ziontechgroup.com/ai-real-estate-hub/)** — listing enrichment and lead routing ([repo](https://github.com/Zion-support/ai-real-estate-hub))
+- **[AI Gov Services Platform](https://ziontechgroup.com/ai-gov-services-platform/)** — citizen intake and accessibility checks ([repo](https://github.com/Zion-support/ai-gov-services-platform))
+- **[AI Nonprofit Hub](https://ziontechgroup.com/ai-nonprofit-hub/)** — grant drafting, donor signals, impact reporting ([repo](https://github.com/Zion-support/ai-nonprofit-hub))
 
-## Explore
-- 🌐 Network hub: https://zion-support.github.io/zion-network/ · Category: [industry-verticals-suites](https://github.com/Zion-support/zion-network/blob/main/network/industry-verticals-suites.md)
-- 🧰 All tools: https://ziontechgroup.com/tools/ · 💼 Plans: https://ziontechgroup.com/plans/ · 📞 Discovery: https://ziontechgroup.com/discovery/
+## Why it matters
+
+- **Day-one value** — industry vocabulary, templates and compliance notes built in.
+- **Composable** — energy pairs with our [Green IT spotlight](APP_NETWORK_SPOTLIGHT_GREEN_IT.md); education/healthcare pair with [Healthcare & Education AI](https://github.com/Zion-support/zion-network/blob/main/network/healthcare-education-ai.md).
+- **Enterprise path** — deploy and customize any suite with [Zion services](https://ziontechgroup.com/services/), starting with a [$99 Discovery](https://ziontechgroup.com/discovery/).
+
+## Explore the network
+
+- 🧭 Category page: [network/industry-verticals-suites.md](https://github.com/Zion-support/zion-network/blob/main/network/industry-verticals-suites.md)
+- 📡 Also new: [Creative & Media AI spotlight](APP_NETWORK_SPOTLIGHT_CREATIVE_MEDIA.md) · [Autonomous AI Agents](APP_NETWORK_SPOTLIGHT_AI_AGENTS.md)
+- 🛠 All tools: https://ziontechgroup.com/tools/ · 💼 Plans: https://ziontechgroup.com/en/plans/ · 🔎 Discovery $99: https://ziontechgroup.com/discovery/
 - ✉️ commercial@ziontechgroup.com
-
-More spotlights: [SPOTLIGHTS_INDEX.md](SPOTLIGHTS_INDEX.md)
 
 ---
 © 2026 Zion Tech Group · https://ziontechgroup.com
