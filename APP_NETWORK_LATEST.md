@@ -8,6 +8,28 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📓 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🎧 AI Support, CX & Field Service Suites (September 26, 2026)
+
+Twelve new apps for support teams and field service operations. Showcase: https://ziontechgroup.com/zion-app-network/app-network-sept26-support-field.html
+
+Support & CX:
+
+- **[Ticket Triage AI](https://ziontechgroup.com/ticket-triage-ai/)** — ticket classification, prioritization & routing ([repo](https://github.com/Zion-support/ticket-triage-ai))
+- **[Support Copilot AI](https://ziontechgroup.com/support-copilot-ai/)** — agent-assist: suggested replies & next-best-action ([repo](https://github.com/Zion-support/support-copilot-ai))
+- **[CS Escalation Radar](https://ziontechgroup.com/cs-escalation-radar/)** — early escalation-risk detection ([repo](https://github.com/Zion-support/cs-escalation-radar))
+- **[Knowledge Base Gen](https://ziontechgroup.com/knowledge-base-gen/)** — help-center articles from resolved tickets ([repo](https://github.com/Zion-support/knowledge-base-gen))
+- **[Help Center Optimizer](https://ziontechgroup.com/help-center-optimizer/)** — deflection analytics & article optimization ([repo](https://github.com/Zion-support/help-center-optimizer))
+- **[Feedback Loop AI](https://ziontechgroup.com/feedback-loop-ai/)** — feedback → prioritized product actions ([repo](https://github.com/Zion-support/feedback-loop-ai))
+
+Field Service & Workforce (Batch 49):
+
+- **[Field Service Dispatch AI](https://ziontechgroup.com/field-service-dispatch-ai/)** — right tech, right job, right time ([repo](https://github.com/Zion-support/field-service-dispatch-ai))
+- **[FE Ticket Triage](https://ziontechgroup.com/fe-ticket-triage/)** — field ticket triage by priority, skills & parts ([repo](https://github.com/Zion-support/fe-ticket-triage))
+- **[Technician Scheduler AI](https://ziontechgroup.com/technician-scheduler-ai/)** — routes, SLAs & skill matching ([repo](https://github.com/Zion-support/technician-scheduler-ai))
+- **[Onsite Support Copilot](https://ziontechgroup.com/onsite-support-copilot/)** — on-site guides, manuals & parts lookup ([repo](https://github.com/Zion-support/onsite-support-copilot))
+- **[Service SLA Tracker](https://ziontechgroup.com/service-sla-tracker/)** — SLA monitoring & breach prediction ([repo](https://github.com/Zion-support/service-sla-tracker))
+- **[Field Workforce Analytics](https://ziontechgroup.com/field-workforce-analytics/)** — utilization, cost & performance ([repo](https://github.com/Zion-support/field-workforce-analytics))
+
 ## 🏭 AI Industry Verticals Suite (September 26, 2026)
 
 Fourteen industry-focused AI suites — domain copilots, dashboards and automation playbooks for every major vertical. Showcase: https://ziontechgroup.com/zion-app-network/app-network-sept26-verticals.html
