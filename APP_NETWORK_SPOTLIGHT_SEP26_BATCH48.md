@@ -1,20 +1,24 @@
-# App Network Spotlight — Sep 26, 2026 — Batch 48
+# 📚 Zion AI App Network — Spotlight Batch 48 (Sep 26, 2026)
 
-**New: AI Data Engineering Suite** — six apps for trustworthy, compliant data pipelines.
+Knowledge, research and governance — six apps that just gained full network interlinks, each tied to the [master directory](https://ziontechgroup.com/zion-app-network/), the [GitHub hub](https://github.com/Zion-support/zion-network) and its live page.
 
-- 🎭 **AI Data Anonymizer** — privacy-safe data masking: https://ziontechgroup.com/zion-ai-data-anonymizer/
-- 📜 **AI Data Contract Enforcer** — contracts that hold pipelines accountable: https://ziontechgroup.com/zion-ai-data-contract-enforcer/
-- 🚚 **AI Data Migration** — safe, validated migrations: https://ziontechgroup.com/zion-ai-data-migration/
-- ✅ **AI Data Quality** — quality gates everywhere: https://ziontechgroup.com/zion-ai-data-quality/
-- 📊 **AI Data Analyst** — ask questions, get analysis: https://ziontechgroup.com/zion-ai-data-analyst/
-- 📄 **AI Doc Processor** — documents → structured data: https://ziontechgroup.com/zion-ai-doc-processor/
+## Featured this batch
 
-**The loop:** ingest → anonymize → contract → migrate → validate → analyze.
+| App | What it does | Live |
+|---|---|---|
+| AI Deep Research | Multi-source research synthesis with citations | https://ai-deep-research.ziontechgroup.com |
+| AI Document Summarizer | Key insights from long documents | https://ai-document-summarizer.ziontechgroup.com |
+| AI Eval Harness | LLM evaluation & regression testing | https://ziontechgroup.com/ai-eval-harness/ |
+| AI Governance Dashboard | Policy compliance & model-risk oversight | https://ai-governance-dashboard.ziontechgroup.com |
+| AI Crypto Tracker | AI-driven crypto market signals | https://ai-crypto-tracker.ziontechgroup.com |
+| AI Crypto Arbitrage | Cross-exchange arbitrage detection | https://ai-crypto-arbitrage.ziontechgroup.com |
 
-Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch48-sept26.html
+## Explore
+- 🏠 Homepage: https://ziontechgroup.com
+- 🗂 Master directory: https://ziontechgroup.com/zion-app-network/
+- 🌐 Network hub: https://network.ziontechgroup.com
+- 📂 Categories: [Data, Search & Documents](https://github.com/Zion-support/zion-network/blob/main/network/data-search-documents.md) · [AI Readiness & Evaluation](https://github.com/Zion-support/zion-network/blob/main/network/ai-readiness-evaluation.md) · [Security & Compliance](https://github.com/Zion-support/zion-network/blob/main/network/security-compliance.md)
+- 💳 Plans: https://ziontechgroup.com/en/plans/
+- 📞 Book a discovery call: https://ziontechgroup.com/discovery/
 
-GitHub: [batch-48 repos](https://github.com/Zion-support?tab=repositories) · [Network hub](https://github.com/Zion-support/zion-app-network)
-
-CTAs: [Plans & pricing](https://ziontechgroup.com/en/plans/) · [Free AI Discovery](https://ziontechgroup.com/discovery/)
-
-© 2026 Zion Tech Group
+© 2026 Zion Tech Group.
