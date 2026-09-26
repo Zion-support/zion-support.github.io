@@ -6,6 +6,8 @@ name: Simple Static Deploy
 # P0 2026-09-20: dispatch-only + cancel-in-progress false so Hermes
 # STATUS.md / CI fix pushes cannot cancel a sole money-path publish.
 # FIELD-SERVICES LOCK. No DNS. No #71365.
+# 2026-09-26: job-level main gate + graceful guard (no red failures when
+# dispatched from a non-main ref such as hero-carousel).
 
 on:
   workflow_dispatch:
@@ -27,21 +29,19 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Guard main ref
-        run: |
-          set -euo pipefail
-          echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME}"
-          if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
-            echo "::error::Simple Static Deploy is pinned to main only (got ${GITHUB_REF}). Re-run with Use workflow from = main."
-            exit 1
-          fi
+      - name: Confirm main ref
+        run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
       - uses: actions/deploy-pages@v4
-      # Post-deploy live curl skipped: runners often block egress and probes flake.
-      # The prepare-pages-out money-path gate above is the durable Pay RED guard.
+        # Post-deploy live curl skipped: runners often block egress and probes flake.
+        # The prepare-pages-out money-path gate above is the durable Pay RED guard.
