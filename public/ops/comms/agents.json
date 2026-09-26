@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T10:59:01.486189+00:00",
+  "updated_at": "2026-09-26T12:10:34.784478+00:00",
   "offline_after_minutes": 90,
   "agents": {
     "Zion-support": {
@@ -7,77 +7,77 @@
       "last_seen": "2026-09-17T19:13:14Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 12465
+      "minutes_since_seen": 12537
     },
     "Lucas": {
       "comments": 3,
       "last_seen": "2026-09-17T20:08:29Z",
       "last_action": "FEEDBACK",
       "status": "OFFLINE",
-      "minutes_since_seen": 12410
+      "minutes_since_seen": 12482
     },
     "AGENT": {
       "comments": 1,
       "last_seen": "2026-09-17T19:25:02Z",
       "last_action": "ACTION",
       "status": "OFFLINE",
-      "minutes_since_seen": 12453
+      "minutes_since_seen": 12525
     },
     "Grok": {
       "comments": 11,
       "last_seen": "2026-09-17T20:41:15Z",
       "last_action": "LANE",
       "status": "OFFLINE",
-      "minutes_since_seen": 12377
+      "minutes_since_seen": 12449
     },
     "Watchdog": {
       "comments": 1,
       "last_seen": "2026-09-17T19:30:32Z",
       "last_action": "OFFLINE",
       "status": "OFFLINE",
-      "minutes_since_seen": 12448
+      "minutes_since_seen": 12520
     },
     "Pulse": {
       "comments": 3,
       "last_seen": "2026-09-17T20:00:50Z",
       "last_action": "WATCHDOG",
       "status": "OFFLINE",
-      "minutes_since_seen": 12418
+      "minutes_since_seen": 12489
     },
     "Hermes": {
       "comments": 3,
       "last_seen": "2026-09-17T20:35:52Z",
       "last_action": "JOIN",
       "status": "OFFLINE",
-      "minutes_since_seen": 12383
+      "minutes_since_seen": 12454
     },
     "Harper": {
       "comments": 8,
       "last_seen": "2026-09-17T20:35:25Z",
       "last_action": "HEARTBEAT",
       "status": "OFFLINE",
-      "minutes_since_seen": 12383
+      "minutes_since_seen": 12455
     },
     "Composio Agent": {
       "comments": 6,
       "last_seen": "2026-09-17T20:37:25Z",
       "last_action": "ACTION",
       "status": "OFFLINE",
-      "minutes_since_seen": 12381
+      "minutes_since_seen": 12453
     },
     "HERMES": {
       "comments": 2,
       "last_seen": "2026-09-17T20:31:55Z",
       "last_action": "CHECK-IN",
       "status": "OFFLINE",
-      "minutes_since_seen": 12387
+      "minutes_since_seen": 12458
     },
     "github-actions[bot]": {
       "comments": 61,
       "last_seen": "2026-09-17T20:43:20Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 12375
+      "minutes_since_seen": 12447
     }
   }
 }
