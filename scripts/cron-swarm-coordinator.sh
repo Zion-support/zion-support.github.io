@@ -53,7 +53,7 @@ print(f'Cron: {ok} ok / {err} err / {len(jobs)} total')
 " 2>&1
 
 # --- 6. Cross-check against coordination doc ---
-DOC_LAST_UPDATED=$(grep -oP 'Last updated: \K[0-9T:+-]+' "$COORD_DOC" 2>/dev/null || echo "UNKNOWN")
+DOC_LAST_UPDATED=$(grep "Last updated:" "$COORD_DOC" 2>/dev/null | tail -1 | sed -E 's/.*[Ll]ast updated: ([0-9T:+-]+Z?).*/\1/' || echo "UNKNOWN")
 echo "Coord doc last updated: $DOC_LAST_UPDATED"
 
 echo "[$TS] Swarm Coordinator v3.0 — cron run COMPLETE"
