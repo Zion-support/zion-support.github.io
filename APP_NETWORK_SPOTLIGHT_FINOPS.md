@@ -1,29 +1,22 @@
-# App Network Spotlight — Cost, FinOps & Cloud Suite
+# Homepage Spotlight — FinOps & Cloud Cost Suite
 
-**Published 2026-09-25 · Zion Tech Group**
+**Suggested placement:** ziontechgroup.com homepage featured-apps section (rotates with Reliability, Field Ops, Data & Analytics, Customer Support spotlights).
 
-The Zion AI App Network spotlights **Cost, FinOps & Cloud** — 27 free, open-source apps that cut cloud, AI inference and SaaS spend while shrinking carbon footprint.
+## Headline
+Cut cloud waste before it happens — meet the FinOps & Cloud Cost Suite.
 
-## Why it matters
-Cloud and GPU bills grow faster than revenue. This suite finds waste, forecasts spend, and shifts workloads to cheaper, greener capacity — automatically.
+## Copy
+**Cloud Cost Estimator** prices an architecture before you deploy it. **FinOps Spend Analyzer** finds the waste in what you already run. **AI Cloud Optimizer** and **AI Compute Optimizer** rightsize continuously, automatically. And on the revenue side, **Revenue Recognition Copilot** and **AI Billing Automation** keep the books as efficient as the infrastructure. Spend less, bill faster, prove the ROI.
 
-## Featured apps
-- **FinOps Autopilot** — cost anomaly detection & rightsizing → [Live app](https://ziontechgroup.com/finops-autopilot/) · [GitHub](https://github.com/Zion-support/finops-autopilot)
-- **Cloud Cost Estimator** — multi-cloud price comparison → [Live app](https://ziontechgroup.com/cloud-cost-estimator/) · [GitHub](https://github.com/Zion-support/cloud-cost-estimator)
-- **AI FinOps Optimizer** — GPU/inference spend, reserved vs on-demand → [Live app](https://ziontechgroup.com/zion-ai-finops-optimizer/) · [GitHub](https://github.com/Zion-support/zion-ai-finops-optimizer)
-- **FinOps Radar** — streaming billing anomaly detection → [Live app](https://ziontechgroup.com/zion-ai-finops-radar) · [GitHub](https://github.com/Zion-support/zion-ai-finops-radar)
-- **Green Cloud Picker** — carbon-aware region advisor → [Live app](https://ziontechgroup.com/green-cloud-picker/) · [GitHub](https://github.com/Zion-support/green-cloud-picker)
-- **Green Scheduler** — shift batch jobs to low-carbon windows → [Live app](https://ziontechgroup.com/zion-ai-green-scheduler) · [GitHub](https://github.com/Zion-support/zion-ai-green-scheduler)
-- **SLA Cost Calculator** — downtime cost and SLA credit exposure → [Live app](https://ziontechgroup.com/zion-sla-cost-calculator/) · [GitHub](https://github.com/Zion-support/zion-sla-cost-calculator)
-- **K8s YAML Linter** — misconfiguration and cost hints → [Live app](https://ziontechgroup.com/k8s-yaml-linter/) · [GitHub](https://github.com/Zion-support/k8s-yaml-linter)
+## Call-to-action links
+- Explore the suite: https://github.com/Zion-support/zion-app-network
+- FinOps Spend Analyzer: https://github.com/Zion-support/finops-spend-analyzer
+- Cloud Cost Estimator: https://github.com/Zion-support/cloud-cost-estimator
+- AI Cloud Optimizer: https://github.com/Zion-support/ai-cloud-optimizer
+- AI Compute Optimizer: https://github.com/Zion-support/ai-compute-optimizer
+- Revenue Recognition Copilot: https://github.com/Zion-support/revenue-recognition-copilot
+- AI Billing Automation: https://github.com/Zion-support/ai-billing-automation
+- Live network directory: https://zion-support.github.io/zion-network/
 
-## Explore
-- Category page: [network/cost-finops-cloud.md](https://github.com/Zion-support/zion-network/blob/main/network/cost-finops-cloud.md)
-- Spotlight: [spotlights/cost-finops-cloud.md](https://github.com/Zion-support/zion-network/blob/main/spotlights/cost-finops-cloud.md)
-- Network hub: [network.ziontechgroup.com](https://network.ziontechgroup.com) · Master directory: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-
-## Related spotlights
-- [Security & Compliance](APP_NETWORK_SPOTLIGHT_SECURITY.md)
-- [AI Ops & Incident Response](APP_NETWORK_SPOTLIGHT_AIOPS.md)
-
-Every app is free to try. Production deployment, SLAs and managed ops: [plans & pricing](https://ziontechgroup.com/plans/) · [ziontechgroup.com](https://ziontechgroup.com)
+## Meta description (SEO)
+Zion Tech Group's FinOps & Cloud Cost Suite: AI cloud spend analysis, cost estimation, continuous optimization, revenue recognition, and billing automation.
