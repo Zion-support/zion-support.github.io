@@ -1,30 +1,79 @@
-# App Network Spotlight — September 2026 Batch 9: FinOps, Revenue & Analytics Intelligence
+# App Network Spotlight — September 2026 Batch 9
 
-**Live spotlight page:** https://ziontechgroup.com/apps/september-2026-batch9.html
+Fourteen new live apps in the Zion App Network: SRE & reliability tooling plus vertical industry AI suites.
 
-Twelve newly featured AI applications from Zion Tech Group. Each app ships live with an open GitHub repository.
+**Showcase page:** https://ziontechgroup.com/apps/september-2026-batch9.html
 
-| App | Live demo | GitHub |
-|---|---|---|
-| FinOps Autopilot | https://ziontechgroup.com/finops-autopilot/ | https://github.com/Zion-support/finops-autopilot |
-| FinOps Spend Analyzer | https://ziontechgroup.com/finops-spend-analyzer/ | https://github.com/Zion-support/finops-spend-analyzer |
-| Cloud Budget Guard | https://ziontechgroup.com/cloud-budget-guard/ | https://github.com/Zion-support/cloud-budget-guard |
-| Cost Anomaly Detector | https://ziontechgroup.com/cost-anomaly-detector/ | https://github.com/Zion-support/cost-anomaly-detector |
-| Revenue Leak Detector | https://ziontechgroup.com/revenue-leak-detector/ | https://github.com/Zion-support/revenue-leak-detector |
-| Subscription Dunning Hero | https://ziontechgroup.com/subscription-dunning-hero/ | https://github.com/Zion-support/subscription-dunning-hero |
-| Quote-to-Cash Accelerator | https://ziontechgroup.com/quote-to-cash-accelerator/ | https://github.com/Zion-support/quote-to-cash-accelerator |
-| Pricing Signal Radar | https://ziontechgroup.com/pricing-signal-radar/ | https://github.com/Zion-support/pricing-signal-radar |
-| Invoice Match AI | https://ziontechgroup.com/invoice-match-ai/ | https://github.com/Zion-support/invoice-match-ai |
-| Metric Anomaly Alerter | https://ziontechgroup.com/metric-anomaly-alerter/ | https://github.com/Zion-support/metric-anomaly-alerter |
-| Demand Sensing Hub | https://ziontechgroup.com/demand-sensing-hub/ | https://github.com/Zion-support/demand-sensing-hub |
-| SQL Query Explainer | https://ziontechgroup.com/sql-query-explainer/ | https://github.com/Zion-support/sql-query-explainer |
+## Deployment Guardian AI
+- Progressive delivery guardrails, canary analysis and auto-rollback for every release.
+- Live: https://ziontechgroup.com/deployment-guardian-ai/
+- Repo: https://github.com/Zion-support/deployment-guardian-ai
+
+## SLI/SLO Tracker
+- Define, monitor and forecast service-level objectives with error-budget alerts.
+- Live: https://ziontechgroup.com/sli-slo-tracker/
+- Repo: https://github.com/Zion-support/sli-slo-tracker
+
+## Incident Commander AI
+- Automated incident response coordination: timelines, roles and status comms.
+- Live: https://ziontechgroup.com/incident-commander-ai/
+- Repo: https://github.com/Zion-support/incident-commander-ai
+
+## Release Risk Radar
+- Score every release for risk using change size, test coverage and history.
+- Live: https://ziontechgroup.com/release-risk-radar/
+- Repo: https://github.com/Zion-support/release-risk-radar
+
+## On-Call Optimizer AI
+- Fair rotations, burnout alerts and escalation tuning for on-call teams.
+- Live: https://ziontechgroup.com/oncall-optimizer-ai/
+- Repo: https://github.com/Zion-support/oncall-optimizer-ai
+
+## Chaos Engineering AI
+- Design, run and learn from resilience experiments safely.
+- Live: https://ziontechgroup.com/chaos-engineering-ai/
+- Repo: https://github.com/Zion-support/chaos-engineering-ai
+
+## AI Safety Incident Reporter
+- Capture, classify and route workplace safety incidents with AI triage.
+- Live: https://ziontechgroup.com/ai-safety-incident-reporter/
+- Repo: https://github.com/Zion-support/ai-safety-incident-reporter
+
+## Revenue Recognition Copilot
+- ASC 606 / IFRS 15 automation: contract grouping and performance obligations.
+- Live: https://ziontechgroup.com/revenue-recognition-copilot/
+- Repo: https://github.com/Zion-support/revenue-recognition-copilot
+
+## Energy Demand Forecaster
+- Forecast energy demand by site, meter and weather with budget alerts.
+- Live: https://ziontechgroup.com/energy-demand-forecaster/
+- Repo: https://github.com/Zion-support/energy-demand-forecaster
+
+## Vendor Onboarding Copilot
+- Document collection, compliance checks and risk screening for new vendors.
+- Live: https://ziontechgroup.com/vendor-onboarding-copilot/
+- Repo: https://github.com/Zion-support/vendor-onboarding-copilot
+
+## AI Logistics Suite
+- Route optimization, freight intelligence and transportation analytics.
+- Live: https://ziontechgroup.com/ai-logistics-suite/
+- Repo: https://github.com/Zion-support/ai-logistics-suite
+
+## AI Retail & E-commerce Suite
+- Demand forecasting, personalization and inventory intelligence.
+- Live: https://ziontechgroup.com/ai-retail-suite/
+- Repo: https://github.com/Zion-support/ai-retail-suite
+
+## AI Energy & Utilities Suite
+- Grid analytics, outage prediction and demand forecasting.
+- Live: https://ziontechgroup.com/ai-energy-utilities-suite/
+- Repo: https://github.com/Zion-support/ai-energy-utilities-suite
+
+## AI Construction Suite
+- Project controls, safety monitoring and site intelligence.
+- Live: https://ziontechgroup.com/ai-construction-suite/
+- Repo: https://github.com/Zion-support/ai-construction-suite
 
 ## Interlinks
-- Apps showcase: https://ziontechgroup.com/apps/
-- Content hub: https://ziontechgroup.com/apps/content-hub.html
-- Previous batches: [Batch 8](https://ziontechgroup.com/apps/september-2026-batch8.html) · [Batch 7](https://ziontechgroup.com/apps/september-2026-batch7.html) · [Batch 6](https://ziontechgroup.com/apps/september-2026-batch6.html) · [Batch 5](https://ziontechgroup.com/apps/september-2026-batch5.html)
-- Next batch: [Batch 10 — Finance, Legal & Compliance AI](https://ziontechgroup.com/apps/september-2026-batch10.html)
-- Network map: https://ziontechgroup.com/apps/network-map-2026-09-25.html
-- AI App Network: https://ziontechgroup.com/ai-app-network/
-
-Contact: commercial@ziontechgroup.com
+- Batches: [2](https://ziontechgroup.com/apps/september-2026-batch2.html) · [3](https://ziontechgroup.com/apps/september-2026-batch3.html) · [4](https://ziontechgroup.com/apps/september-2026-batch4.html) · [5](https://ziontechgroup.com/apps/september-2026-batch5.html) · [6](https://ziontechgroup.com/apps/september-2026-batch6.html) · [7](https://ziontechgroup.com/apps/september-2026-batch7.html) · [8](https://ziontechgroup.com/apps/september-2026-batch8.html)
+- Directory: https://ziontechgroup.com/apps/ · Hub: https://ziontechgroup.com/apps/content-hub.html
