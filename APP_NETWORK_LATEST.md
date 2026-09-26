@@ -8,6 +8,12 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📓 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 💰 Batch 50 — FinOps & Cloud Cost Optimization (September 26, 2026)
+
+Eight interlinked apps forming one FinOps toolchain — estimate → analyze → optimize → automate → prove. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-26-BATCH50.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch50-sept26.html
+
+[AI FinOps Suite](https://ziontechgroup.com/ai-finops-suite/) · [FinOps Spend Analyzer](https://ziontechgroup.com/finops-spend-analyzer/) · [FinOps Autopilot](https://ziontechgroup.com/finops-autopilot/) · [Cloud Cost Estimator](https://ziontechgroup.com/cloud-cost-estimator/) · [Zion AI ROI Calculator](https://ziontechgroup.com/zion-ai-roi-calculator/) · [AI Cloud Optimizer](https://ziontechgroup.com/ai-cloud-optimizer/) · [AI Compute Optimizer](https://ziontechgroup.com/ai-compute-optimizer/) · [Cloud Architect Diagram Builder](https://ziontechgroup.com/cloud-architect-diagram-builder/)
+
 ## 🧩 AI Micro-Apps Library — 54 free tools (September 26, 2026)
 
 Single-purpose AI tools — agents, audio, documents, data, dev, crypto, imaging. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-26-MICROAPPS.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-sept26-microapps.html
