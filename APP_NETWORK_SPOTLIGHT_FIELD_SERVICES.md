@@ -1,48 +1,26 @@
-# 🧑‍🔧📦 Zion App Network Spotlight — Field Services, Supply Chain & Support Ops (September 2026, Vol. 6)
+# App Network Spotlight — Field Services & Regional Hubs (2026-09-26, Session 30)
 
-Part of the [Zion Tech Group](https://ziontechgroup.com) app network — **640+ interlinked AI apps and micro-SaaS tools**, all live and free to try. This volume spotlights field-service operations, supply chain, and customer support tooling.
+Zion Tech Group delivers AI-powered field services worldwide through our regional **Zion Field** hubs — local delivery, on-site deployment and support coverage for every app in the [Zion App Network](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md).
 
-🌐 [Network Hub](https://zion-support.github.io/zion-network/) · 📊 [Status](https://zion-support.github.io/zion-status/) · 💠 [Plans](https://zion-support.github.io/zion-plans/) · 🗂 [Full Index](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) · 📰 [Vol. 1](https://github.com/Zion-support/zion-support.github.io/blob/main/APP_NETWORK_SPOTLIGHT.md) · [Vol. 2](https://github.com/Zion-support/zion-support.github.io/blob/main/APP_NETWORK_SPOTLIGHT_COMPLIANCE_FINOPS.md) · [Vol. 3](https://github.com/Zion-support/zion-support.github.io/blob/main/APP_NETWORK_SPOTLIGHT_DATA_ENERGY.md) · [Vol. 4](https://github.com/Zion-support/zion-support.github.io/blob/main/APP_NETWORK_SPOTLIGHT_SRE_PRODUCTIVITY.md) · [Vol. 5](https://github.com/Zion-support/zion-support.github.io/blob/main/APP_NETWORK_SPOTLIGHT_LLM_HR.md)
+## 🌍 Regional field hubs
+- **[Zion Field — Americas](https://ziontechgroup.com/zion-field-americas/)** — North & South America coverage ([repo](https://github.com/Zion-support/zion-field-americas))
+- **[Zion Field — APAC](https://ziontechgroup.com/zion-field-apac/)** — Asia-Pacific coverage ([repo](https://github.com/Zion-support/zion-field-apac))
+- **[Zion Field — United Kingdom](https://ziontechgroup.com/zion-field-united-kingdom/)** — UK & Ireland delivery ([repo](https://github.com/Zion-support/zion-field-united-kingdom))
+- **[Zion Field — Thailand](https://ziontechgroup.com/zion-field-thailand/)** — Thailand on-site services ([repo](https://github.com/Zion-support/zion-field-thailand))
+- **[Zion Field — Time & Materials](https://ziontechgroup.com/zion-field-tm/)** — transparent T&M engagement billing ([repo](https://github.com/Zion-support/zion-field-tm))
 
-## 🧑‍🔧 Field Service Operations
+## 🤖 Featured field-service apps
+- **[AI Field Service Automation](https://ziontechgroup.com/ai-field-service-automation/)** — dispatch, routing and work-order automation
+- **[Fleet Fuel Optimizer](https://ziontechgroup.com/fleet-fuel-optimizer/)** — cut fleet fuel costs with AI route & load optimization
+- **[AI Energy Optimizer](https://ziontechgroup.com/ai-energy-optimizer/)** — facility load forecasting and peak-shaving
+- **[Metric Anomaly Alerter](https://ziontechgroup.com/metric-anomaly-alerter/)** — real-time anomaly alerts across field KPIs
+- **[Zion Insight Dashboard](https://ziontechgroup.com/zion-insight-dashboard/)** — unified executive view of cross-app KPIs
 
-- **[Zion AI Site Survey Brief](https://ziontechgroup.com/zion-ai-site-survey-brief/)** — AI-generated pre-visit briefs for field deployments
-- **[Zion AI Site Survey Planner](https://ziontechgroup.com/zion-ai-site-survey-planner/)** — pre-visit checklists and site access docs
-- **[Zion AI RMA Tracker](https://ziontechgroup.com/zion-ai-rma-tracker/)** — end-to-end RMA lifecycle with AI status prediction
-- **[Zion AI Spare Parts Finder](https://ziontechgroup.com/zion-ai-spare-parts-finder/)** — cross-vendor part-number intelligence
-- **[Zion AI Spare Parts Matcher](https://ziontechgroup.com/zion-ai-spare-parts-matcher/)** — compatibility matching for Dell, HPE, Oracle
-- **[Zion AI Field Dispatch](https://ziontechgroup.com/zion-ai-field-dispatch/)** — skills matching and SLA windows
-
-## 📦 Supply Chain & Procurement
-
-- **[Zion AI Supply Chain](https://ziontechgroup.com/zion-ai-supply-chain/)** — vendor comparison, lead times, inventory intelligence
-- **[AI Supply Chain Optimizer](https://ziontechgroup.com/ai-supply-chain-optimizer/)** — predictive logistics and inventory
-- **[Zion AI Procurement](https://ziontechgroup.com/zion-ai-procurement/)** — vendor evaluation and RFP drafting
-
-## 🎧 Support & Customer Experience
-
-- **[Zion AI Support Copilot](https://ziontechgroup.com/zion-ai-support-copilot/)** — agent-assist for support teams
-- **[Zion AI Help Desk](https://help-desk.ziontechgroup.com)** — AI help desk
-- **[Zion AI Status Comms](https://ziontechgroup.com/zion-ai-status-comms/)** — AI-drafted incident communications
-- **[Zion AI SLA Breach Sentinel](https://ziontechgroup.com/zion-ai-sla-breach-sentinel/)** — SLA breach early-warning and credit calculations
-- **[Zion AI Social Listening](https://ziontechgroup.com/zion-ai-social-listening/)** — brand monitoring and sentiment
-
-## 💹 Sales Intelligence
-
-- **[Zion AI Sales Intelligence](https://ziontechgroup.com/zion-ai-sales-intelligence/)** — deal insights, forecasting, next-best-action
-- **[Zion AI Sales Call Analyst](https://ziontechgroup.com/zion-ai-sales-call-analyst)** — conversation intelligence feeding your CRM
-- **[Zion AI ROI Calculator](https://roi-calculator.ziontechgroup.com)** — payback, savings and TCO modeling
-
-## 🛡️ Security & Reliability Utilities
-
-- **[Zion AI Secrets Sentinel](https://ziontechgroup.com/zion-ai-secrets-sentinel)** — continuous secret scanning with auto-rotation runbooks
-- **[Zion AI SSL Monitor](https://ziontechgroup.com/zion-ai-ssl-monitor/)** — certificate expiry tracking and renewal automation
-- **[Zion AI Threat Brief](https://threat-brief.ziontechgroup.com)** — weekly cyber threat intelligence briefs
-- **[Zion AI SRE Postmortem Writer](https://ziontechgroup.com/zion-ai-sre-postmortem-writer)** — blameless postmortems auto-drafted
-- **[Zion AI SDK Generator](https://ziontechgroup.com/zion-ai-sdk-generator)** — typed SDKs in 6 languages from OpenAPI specs
-- **[Zion AI SEO Optimizer](https://seo-optimizer.ziontechgroup.com)** — AI SEO optimization
-- **[Zion AI Service Catalog](https://ziontechgroup.com/zion-ai-service-catalog/)** — discover, document and govern IT services
+## 🔗 Explore the network
+- 🌐 Network hub: https://zion-support.github.io/zion-network/
+- 🗂️ Master index: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
+- 📓 Registry: [network.json](https://github.com/Zion-support/zion-network/blob/main/network.json)
+- 💼 Plans & pricing: https://ziontechgroup.com/en/plans/ · 📞 Discovery call: https://ziontechgroup.com/discovery/
 
 ---
-
-Every app links back to the [Zion App Network Index](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md) — 640+ apps, one interconnected constellation. Built with 💙 by [Zion Tech Group](https://ziontechgroup.com).
+© 2026 Zion Tech Group · https://ziontechgroup.com/
