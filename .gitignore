@@ -102,3 +102,5 @@ app/routes/
 app/zion-ai-*/**
 Google Drive
 cron_output/
+__pycache__/
+*.pyc
