@@ -51,13 +51,14 @@ jobs:
         run: node automation/ai-content-generator-automation.cjs bulk "$BULK_COUNT"
 
       - name: Validate build
+        timeout-minutes: 20
         run: |
           set -euo pipefail
           npm run rsc:guard
-          if timeout 20m npm run build; then
-            echo "Build validation passed"
+          if timeout 900 npm run build; then
+            echo "Next.js build validated"
           else
-            echo "::warning::Build timed out or failed (known heap pressure on large file tree); continuing with content commit."
+            echo "::warning::Next.js build timed out or failed (known Turbopack hang on 90k+ file tree); continuing so generated content still deploys."
           fi
 
       - name: Commit, push, and deploy
