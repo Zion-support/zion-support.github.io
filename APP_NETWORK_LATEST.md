@@ -8,6 +8,12 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📓 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
+## 🛡️ Batch 52 — Assessment, Compliance & GRC (September 26, 2026)
+
+Eight interlinked apps to assess, evidence and stay ahead of audits, regulations and vendor risk. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-26-BATCH52.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch52-sept26.html
+
+[Cybersecurity Risk Assessment](https://ziontechgroup.com/cybersecurity-risk-assessment/) · [Managed IT Health Check](https://ziontechgroup.com/managed-it-health-check/) · [AI Readiness Assessment](https://ziontechgroup.com/ai-readiness-assessment/) · [Compliance Evidence Collector](https://ziontechgroup.com/compliance-evidence-collector/) · [Audit Readiness Copilot](https://ziontechgroup.com/audit-readiness-copilot/) · [Policy Change Tracker](https://ziontechgroup.com/policy-change-tracker/) · [Vendor Risk Screener](https://ziontechgroup.com/vendor-risk-screener/) · [Contract Clause Extractor](https://ziontechgroup.com/contract-clause-extractor/)
+
 ## 📊 Batch 51 — Data Engineering & Observability (September 26, 2026)
 
 Eight interlinked apps for the modern data stack — build → catalog → trust → serve → optimize. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-26-BATCH51.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch51-sept26.html
