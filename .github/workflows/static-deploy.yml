@@ -30,16 +30,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-      - name: Guard main ref
-        run: |
-          set -euo pipefail
-          echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME}"
-          if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
-            echo "::error::Simple Static Deploy is pinned to main only (got ${GITHUB_REF}). Re-run with Use workflow from = main."
-            exit 1
-          fi
+      - name: Confirm main ref
+        run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
       - uses: actions/upload-pages-artifact@v3
