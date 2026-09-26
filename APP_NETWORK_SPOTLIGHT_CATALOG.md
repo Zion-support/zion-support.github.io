@@ -40,4 +40,4 @@ Zion Tech Group operates the **Zion App Network**, a growing network of 200+ fre
 All app repositories should link back to the hubs above and to sibling apps through `NETWORK.md` interlink files.
 ## Spotlight index
 
-- [What's new](APP_NETWORK_LATEST.md) · [Support & CX suite](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [Sep 23 releases](APP_NETWORK_SPOTLIGHT_SEP23.md) · [Field services](APP_NETWORK_SPOTLIGHT_FIELD_SERVICES.md) · [Industry verticals](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md)
+- [What's new](APP_NETWORK_LATEST.md) · [Support & CX suite](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [Sep 23 releases](APP_NETWORK_SPOTLIGHT_SEP23.md) · [Field services](APP_NETWORK_SPOTLIGHT_FIELD_SERVICES.md) · [Industry verticals](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [Trust & Governance](APP_NETWORK_SPOTLIGHT_TRUST_GOVERNANCE.md) · [Meetings & Productivity](APP_NETWORK_SPOTLIGHT_MEETINGS_PRODUCTIVITY.md) · [Platform Engineering & DevOps](APP_NETWORK_SPOTLIGHT_PLATFORM_ENG.md)
