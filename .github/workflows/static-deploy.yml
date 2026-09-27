@@ -6,8 +6,8 @@ name: Simple Static Deploy
 # P0 2026-09-20: dispatch-only + cancel-in-progress false so Hermes
 # STATUS.md / CI fix pushes cannot cancel a sole money-path publish.
 # FIELD-SERVICES LOCK. No DNS. No #71365.
-# 2026-09-26: job-level main gate + graceful guard (no red failures when
-# dispatched from a non-main ref such as hero-carousel).
+# 2026-09-27: synced from main — dispatch-only + main-ref job guard so
+# branch pushes on this branch never trigger a failing deploy run.
 
 on:
   workflow_dispatch:
@@ -29,10 +29,10 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
       - name: Confirm main ref
