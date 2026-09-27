@@ -36,7 +36,6 @@
   .accent{color:var(--accent)}
   .gold{color:var(--gold)}
   hr{border:0;border-top:1px solid var(--border);margin:32px 0}
-  /* Hero */
   .hero{position:relative;padding:64px 0 48px;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 80% 0%,rgba(70,224,178,.08),transparent 70%),radial-gradient(ellipse 60% 50% at 0% 100%,rgba(56,189,248,.05),transparent 70%);pointer-events:none}
   .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:start}
@@ -59,13 +58,11 @@
   .trust{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
   .trust-item{flex:1;min-width:0;border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-size:11px;background:var(--panel);color:var(--muted)}
   .trust-item strong{display:block;color:var(--fg);font-size:12px;margin-bottom:2px}
-  /* Section */
   .section{padding:56px 0;border-top:1px solid var(--border)}
   .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
   .section-head h2{font-size:26px;font-weight:700;letter-spacing:-.02em}
   .section-head p{color:var(--muted);font-size:14px;max-width:480px}
   .section-head .view-all{font-size:13px;color:var(--accent);font-weight:600}
-  /* Category grid */
   .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
   .cat-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;cursor:pointer;transition:all .15s;position:relative;overflow:hidden}
   .cat-card:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -75,7 +72,6 @@
   .cat-card .cat-count{font-size:11px;color:var(--accent);font-weight:600;margin-top:8px}
   .cat-card .cat-arrow{position:absolute;top:14px;right:16px;font-size:16px;color:var(--muted)}
   .cat-card:hover .cat-arrow{color:var(--accent)}
-  /* Featured row */
   .featured-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
   .app-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;transition:all .15s;position:relative}
   .app-card:hover{border-color:var(--border2)}
@@ -87,7 +83,6 @@
   .app-card .app-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
   .app-card .app-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);padding:6px 0;border-top:1px solid var(--border);margin-top:4px}
   .app-card:hover .app-link{color:var(--green)}
-  /* Search */
   .search-box{margin-bottom:24px}
   .search-box input{width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border2);background:var(--panel);color:var(--fg);font-size:14px;font-family:inherit}
   .search-box input:focus{outline:none;border-color:var(--accent)}
@@ -96,7 +91,6 @@
   .filter-btn{padding:6px 14px;border-radius:999px;border:1px solid var(--border2);background:var(--panel);color:var(--muted);font-size:12px;font-weight:600;cursor:pointer}
   .filter-btn.active{background:var(--accent);color:#04151a;border-color:var(--accent)}
   .filter-btn:hover{border-color:var(--accent);color:var(--fg)}
-  /* Tool grid */
   .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
   .tool-card{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px;transition:all .12s}
   .tool-card:hover{border-color:var(--border2)}
@@ -104,18 +98,15 @@
   .tool-card .tool-url{font-size:10px;color:var(--muted);font-family:monospace;margin-bottom:6px;word-break:break-all}
   .tool-card .tool-desc{font-size:11px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .tool-card .tool-link{font-size:12px;color:var(--accent);font-weight:600;margin-top:8px;display:inline-flex;align-items:center;gap:4px}
-  /* Footer */
   footer{padding:40px 0 32px;border-top:1px solid var(--border);margin-top:40px;font-size:13px;color:var(--muted)}
   footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
   footer .links a{font-size:13px}
   footer .copy{font-size:11px}
-  /* Responsive */
   @media(max-width:600px){.cat-grid{grid-template-columns:1fr}.featured-row{grid-template-columns:1fr}.tool-grid{grid-template-columns:1fr}.section{padding:40px 0}.hero{padding:40px 0 32px}}
 </style>
 </head>
 <body>
 
-<!-- Navigation -->
 <div class="container" style="padding:16px 20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
   <a href="/" class="logo">Zion<span>.</span>tech</a>
   <nav style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
@@ -128,7 +119,6 @@
   </nav>
 </div>
 
-<!-- Hero -->
 <section class="hero">
 <div class="container hero-grid">
   <div>
@@ -164,30 +154,6 @@
 </div>
 </section>
 
-<!-- What's new: Batch 59 -->
-<section class="section" id="whats-new">
-<div class="container">
-  <div class="section-head">
-    <div>
-      <h2>🏭 What's New: Manufacturing &amp; Industrial Ops AI</h2>
-      <p>Batch 59 of the <a href="https://ziontechgroup.com/zion-app-network/">Zion App Network</a> — six interlinked apps that schedule, inspect, maintain, measure, de-risk and decarbonize your factory.</p>
-    </div>
-    <a href="https://ziontechgroup.com/zion-app-network/app-network-batch59-sept27.html" class="view-all">Full showcase →</a>
-  </div>
-  <div class="featured-row">
-    <div class="app-card featured"><div class="app-icon">📅</div><h4>Production Schedule AI</h4><div class="app-url">ziontechgroup.com/production-schedule-ai/</div><div class="app-desc">Constraint-based scheduling, changeover optimization and order prioritization.</div><a href="https://ziontechgroup.com/production-schedule-ai/" class="app-link">Open app →</a></div>
-    <div class="app-card featured"><div class="app-icon">🔍</div><h4>Quality Vision Inspector</h4><div class="app-url">ziontechgroup.com/quality-vision-inspector/</div><div class="app-desc">Computer-vision defect detection, SPC alerts and traceability.</div><a href="https://ziontechgroup.com/quality-vision-inspector/" class="app-link">Open app →</a></div>
-    <div class="app-card featured"><div class="app-icon">🛠️</div><h4>Predictive Maintenance AI</h4><div class="app-url">ziontechgroup.com/predictive-maintenance-ai/</div><div class="app-desc">Machine health scoring, failure prediction and maintenance windows.</div><a href="https://ziontechgroup.com/predictive-maintenance-ai/" class="app-link">Open app →</a></div>
-    <div class="app-card featured"><div class="app-icon">📊</div><h4>OEE Dashboard AI</h4><div class="app-url">ziontechgroup.com/oee-dashboard-ai/</div><div class="app-desc">Real-time OEE, downtime Pareto and throughput analytics.</div><a href="https://ziontechgroup.com/oee-dashboard-ai/" class="app-link">Open app →</a></div>
-    <div class="app-card featured"><div class="app-icon">📡</div><h4>Supplier Risk Radar</h4><div class="app-url">ziontechgroup.com/supplier-risk-radar/</div><div class="app-desc">Supplier risk scoring, disruption alerts and dual-sourcing recommendations.</div><a href="https://ziontechgroup.com/supplier-risk-radar/" class="app-link">Open app →</a></div>
-    <div class="app-card featured"><div class="app-icon">⚡</div><h4>Factory Energy Optimizer</h4><div class="app-url">ziontechgroup.com/factory-energy-optimizer/</div><div class="app-desc">Energy optimization, peak shaving and carbon reporting.</div><a href="https://ziontechgroup.com/factory-energy-optimizer/" class="app-link">Open app →</a></div>
-  </div>
-  <p style="margin-top:16px" class="muted">Also new — Batch 58 Legal &amp; Compliance Ops: <a href="https://ziontechgroup.com/legal-brief-drafter/">Legal Brief Drafter</a> · <a href="https://ziontechgroup.com/e-discovery-copilot/">E-Discovery Copilot</a> · <a href="https://ziontechgroup.com/dpo-privacy-assistant/">DPO Privacy Assistant</a> · <a href="https://ziontechgroup.com/contract-negotiation-ai/">Contract Negotiation AI</a> · <a href="https://ziontechgroup.com/ip-portfolio-tracker/">IP Portfolio Tracker</a> · <a href="https://ziontechgroup.com/regulatory-filing-copilot/">Regulatory Filing Copilot</a> · <a href="https://ziontechgroup.com/litigation-risk-scorer/">Litigation Risk Scorer</a> · <a href="https://ziontechgroup.com/legal-spend-optimizer/">Legal Spend Optimizer</a></p>
-  <p><a href="/en/plans/" class="btn primary">See Plans &amp; Pricing</a> <a href="/discovery/" class="btn">Book a $99 Discovery</a></p>
-</div>
-</section>
-
-<!-- Category grid -->
 <section class="section" id="categories">
 <div class="container">
   <div class="section-head">
@@ -258,7 +224,62 @@
 </div>
 </section>
 
-<!-- Featured apps -->
+<section class="section" id="new-batches">
+<div class="container">
+  <div class="section-head">
+    <div>
+      <h2>🆕 New this week — 45 apps in 6 interlinked suites (Sep 27, 2026)</h2>
+      <p>Each suite is a connected toolchain: every app links to its live page, source code and sibling apps across the network.</p>
+    </div>
+    <a href="https://github.com/Zion-support/zion-app-network/blob/main/APPS_INDEX.md" class="view-all">Full index →</a>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card" onclick="location.href='https://ziontechgroup.com/zion-app-network/app-network-batch54-sept27.html'" style="cursor:pointer">
+      <div class="cat-icon">🤖</div>
+      <h4>Batch 54 — AI Agents, Platform &amp; Assurance</h4>
+      <div class="cat-desc">Agent Builder, Voice Agent Studio, MCP Stack, Eval Harness, Threat Brief, Compliance Auditor, Backup Recovery.</div>
+      <div class="cat-count">Live showcase →</div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card" onclick="location.href='https://ziontechgroup.com/zion-app-network/app-network-batch55-sept27.html'" style="cursor:pointer">
+      <div class="cat-icon">👥</div>
+      <h4>Batch 55 — People &amp; Workforce AI</h4>
+      <div class="cat-desc">Skills Matrix, Retention Risk Radar, Interview Intelligence, Comp Benchmarks, Engagement Pulse, Capacity Planner, Learning Paths, Hiring Funnel.</div>
+      <div class="cat-count">Live showcase →</div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card" onclick="location.href='https://ziontechgroup.com/zion-app-network/app-network-batch56-sept27.html'" style="cursor:pointer">
+      <div class="cat-icon">🛒</div>
+      <h4>Batch 56 — E-commerce &amp; Conversion AI</h4>
+      <div class="cat-desc">Product Descriptions, SEO Pages, Review Sentiment, Dynamic Pricing, Cart Abandonment, Demand Planner, Loyalty Optimizer, Checkout Funnel.</div>
+      <div class="cat-count">Live showcase →</div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card" onclick="location.href='https://ziontechgroup.com/zion-app-network/app-network-batch57-sept27.html'" style="cursor:pointer">
+      <div class="cat-icon">🛡️</div>
+      <h4>Batch 57 — Reliability &amp; SRE AI</h4>
+      <div class="cat-desc">Incident Commander, Deployment Guardian, Oncall Optimizer, SLI/SLO Tracker, Release Risk Radar, Incident Runbook, Chaos Engineering.</div>
+      <div class="cat-count">Live showcase →</div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card" onclick="location.href='https://ziontechgroup.com/zion-app-network/app-network-batch58-sept27.html'" style="cursor:pointer">
+      <div class="cat-icon">⚖️</div>
+      <h4>Batch 58 — Legal &amp; Compliance Ops AI</h4>
+      <div class="cat-desc">Brief Drafter, E-Discovery, DPO Privacy Assistant, Contract Negotiation, IP Portfolio Tracker, Regulatory Filing, Litigation Risk, Legal Spend.</div>
+      <div class="cat-count">Live showcase →</div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card" onclick="location.href='https://ziontechgroup.com/zion-app-network/app-network-batch59-sept27.html'" style="cursor:pointer">
+      <div class="cat-icon">🏭</div>
+      <h4>Batch 59 — Manufacturing &amp; Industrial Ops AI</h4>
+      <div class="cat-desc">Production Scheduling, Quality Vision, Predictive Maintenance, OEE Dashboard, Supplier Risk, Factory Energy Optimizer.</div>
+      <div class="cat-count">Live showcase →</div>
+      <div class="cat-arrow">→</div>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="section" style="border-top:0;padding-top:32px">
 <div class="container">
   <div class="section-head">
@@ -321,7 +342,6 @@
 </div>
 </section>
 
-<!-- Searchable tools -->
 <section class="section" id="tools" style="border-top:1px solid var(--border)">
 <div class="container">
   <div class="section-head">
@@ -349,7 +369,6 @@
   </div>
 
   <div class="tool-grid" id="toolGrid">
-    <!-- Populated by JS from catalog.json -->
     <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted)">
       <div style="font-size:32px;margin-bottom:8px">⌛</div>
       <div>Loading tool catalog from <code>/apps/catalog.json</code>…</div>
@@ -358,7 +377,6 @@
 </div>
 </section>
 
-<!-- How it works -->
 <section class="section">
 <div class="container">
   <div class="section-head">
@@ -411,7 +429,6 @@
 </footer>
 
 <script>
-// Load catalog and render tool grid
 const catUrl = '/apps/catalog.json';
 let allTools = [];
 
