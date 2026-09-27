@@ -76,6 +76,8 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 - [APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md](APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md) — NEW: Healthcare & Life Sciences AI suite: clinical docs, trials, HIPAA, patient flow, billing, telehealth
 
+- [APP_NETWORK_SPOTLIGHT_SEP27_REALESTATE.md](APP_NETWORK_SPOTLIGHT_SEP27_REALESTATE.md) — NEW: Real Estate & Property AI suite: valuation, listings, tenant screening, leases, smart buildings, maintenance
+
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
 - [Secops & Reliability Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/SECOPS_RELIABILITY_SUITE.md)
