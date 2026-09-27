@@ -1,61 +1,61 @@
 # App Network Spotlight — September 2026 Batch 20
 
-Fourteen new live apps in the Zion App Network: Healthcare & Life Sciences AI (hub batch 60) and Hospitality & Travel AI (hub batch 61).
+Fourteen new live apps in the Zion App Network: Healthcare AI and Hospitality & Travel AI.
 
 **Showcase page:** https://ziontechgroup.com/apps/september-2026-batch20.html
 
 ## HIPAA Compliance Scanner
-- HIPAA readiness scanning, evidence collection and remediation tracking.
+- Continuous HIPAA compliance scanning with gap reports and remediation guidance.
 - Live: https://ziontechgroup.com/hipaa-compliance-scanner/
 - Repo: https://github.com/Zion-support/hipaa-compliance-scanner
 
 ## Clinical Trial Matcher
-- Match patients to clinical trials from eligibility criteria and records.
+- Match patients to clinical trials with eligibility screening and site recommendations.
 - Live: https://ziontechgroup.com/clinical-trial-matcher/
 - Repo: https://github.com/Zion-support/clinical-trial-matcher
 
 ## Care Gap Radar
-- Detect care gaps, build outreach lists and track quality measures (HEDIS).
+- Detect care gaps across patient panels and trigger outreach workflows.
 - Live: https://ziontechgroup.com/care-gap-radar/
 - Repo: https://github.com/Zion-support/care-gap-radar
 
 ## Pharma Cold-Chain Monitor
-- Cold-chain excursion monitoring and alerts for pharma logistics.
+- Temperature excursion alerts and cold-chain compliance for pharma logistics.
 - Live: https://ziontechgroup.com/pharma-coldchain-monitor/
 - Repo: https://github.com/Zion-support/pharma-coldchain-monitor
 
 ## Patient Flow Optimizer
-- Hospital patient flow, bed management and discharge planning.
+- Optimize admissions, transfers and discharge with AI flow predictions.
 - Live: https://ziontechgroup.com/patient-flow-optimizer/
 - Repo: https://github.com/Zion-support/patient-flow-optimizer
 
 ## Medical Billing Scrubber
-- Claims scrubbing, denial prevention and coding validation.
+- Claim scrubbing: catch coding errors and denial risks before submission.
 - Live: https://ziontechgroup.com/medical-billing-scrubber/
 - Repo: https://github.com/Zion-support/medical-billing-scrubber
 
 ## Clinical Doc Copilot
-- Note summarization, coding hints and chart completeness.
+- AI clinical documentation — note drafting, coding hints and chart summaries.
 - Live: https://ziontechgroup.com/clinical-doc-copilot/
 - Repo: https://github.com/Zion-support/clinical-doc-copilot
 
 ## Telehealth Scheduler AI
-- Telehealth scheduling, reminders and intake triage.
+- Smart telehealth scheduling with provider matching and reminder cascades.
 - Live: https://ziontechgroup.com/telehealth-scheduler-ai/
 - Repo: https://github.com/Zion-support/telehealth-scheduler-ai
 
 ## Guest Experience AI
-- Automated guest messaging, review responses and upsell offers for hotels.
+- Personalized guest journeys, sentiment monitoring and service recovery.
 - Live: https://ziontechgroup.com/guest-experience-ai/
 - Repo: https://github.com/Zion-support/guest-experience-ai
 
 ## Itinerary Builder AI
-- Personalized multi-day itineraries with budget, routing and booking links.
+- AI travel itineraries with booking links, budgets and live updates.
 - Live: https://ziontechgroup.com/itinerary-builder-ai/
 - Repo: https://github.com/Zion-support/itinerary-builder-ai
 
 ## Hotel Revenue Pilot
-- Dynamic room pricing, RevPAR optimization and rate recommendations.
+- Hotel revenue management — dynamic rates, occupancy forecasts and upsells.
 - Live: https://ziontechgroup.com/hotel-revenue-pilot/
 - Repo: https://github.com/Zion-support/hotel-revenue-pilot
 
