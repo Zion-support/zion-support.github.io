@@ -56,6 +56,9 @@ footer a{color:var(--accent)}
 <a href="/apps/spotlight.html">🔦 All Spotlights</a>
 <a href="/apps/spotlight-2026-09-25.html">🌟 25 September spotlight</a>
 <a href="/apps/spotlight-2026-09-26.html">🌟 26 September spotlight</a>
+<a href="/apps/september-2026-batch10.html">🤖 Batch 10: AI Agents, Accessibility & Growth (14 apps)</a>
+<a href="/apps/spotlight-2026-09-27.html">🌟 27 September spotlight</a>
+<a href="/apps/spotlight-2026-09-27b.html">🌟 27 September spotlight: AI Agents & Accessibility</a>
 <a href="/apps/september-2026-batch9.html">📣 Batch 9: Marketing, SEO & Growth (13 apps)</a>
 <a href="/apps/september-2026-batch8.html">🛎️ Batch 8: Service Ops & Support (13 apps)</a>
 <a href="/apps/september-2026-batch7.html">🚀 Batch 7</a>
@@ -93,7 +96,7 @@ const CATS=[
 ];
 function classify(n){for(const [c,ks] of CATS){if(ks.some(k=>n.includes(k)))return c;}return 'IT & Business Tools';}
 const OPEN_HOSTS=['chatbot-builder','code-assistant','crm-intelligence','email-marketing','fraud-detection','invoice-genius','knowledge-base','lead-scoring','meeting-assistant','seo-optimizer','field','field-brazil','field-city-sao-paulo','smart-analytics-dashboard','security-shield'];
-const BLOCK=['zion-ai-governance','ai-billing-automation','ai-banking-platform','ai-automated-booking','ai-advertising-optimizer','zion-discovery','zion-edge-ai','zion-data-sync','zion-ai-voice-assistant','zion-content-studio','zion-app-network','ai-agent-fleet','ai-fraud-prevention','zion-network','prompt-forge','zion-ai-workflow-automator'];
+const BLOCK=['zion-ai-governance','ai-billing-automation','ai-banking-platform','zion-discovery','zion-edge-ai','zion-data-sync','zion-ai-voice-assistant','zion-content-studio','zion-app-network','ai-fraud-prevention','zion-network','prompt-forge','zion-ai-workflow-automator'];
 function safeLive(home){
  if(!home||typeof home!=='string') return '';
  let u; try{ u=new URL(home); }catch(e){ return ''; }
