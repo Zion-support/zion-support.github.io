@@ -1,28 +1,22 @@
-# App Network Spotlight — Content & Marketing AI Suite
+# Homepage Spotlight — Content & Marketing Suite
 
-**Published 2026-09-25 · Zion Tech Group**
+**Suggested placement:** ziontechgroup.com homepage featured-apps section (rotates with the other 7 suite spotlights).
 
-The Zion AI App Network spotlights **Content & Marketing AI** — 16 free, open-source apps for content production, SEO, social media and campaign optimization.
+## Headline
+Your always-on content engine — meet the Content & Marketing Suite.
 
-## Why it matters
-Content velocity wins markets. This suite lets a small team produce, optimize and distribute like a large one — on-brand and measurable.
+## Copy
+Create once, shine everywhere. **AI Content Translator** localizes your message into any market with brand voice intact. **AI Image Generator** and **AI Image Editor** produce stunning visuals on demand. **AI Advertising Optimizer** squeezes more ROAS from every campaign. **AI Chart Builder** turns data into stories, and **AI Document Summarizer** keeps everyone on the same page — literally. Marketing that moves at AI speed.
 
-## Featured apps
-- **Zion Content Studio** — end-to-end AI content production → [Live app](https://content-studio.ziontechgroup.com) · [GitHub](https://github.com/Zion-support/zion-content-studio)
-- **Zion AI SEO Optimizer** — technical & content SEO automation → [Live app](https://seo-optimizer.ziontechgroup.com) · [GitHub](https://github.com/Zion-support/zion-ai-seo-optimizer)
-- **AI Caption Generator** — engaging social captions → [Live app](https://ai-caption-generator.ziontechgroup.com) · [GitHub](https://github.com/Zion-support/ai-caption-generator)
-- **AI Advertising Optimizer** — budget & creative optimization → [Live app](https://ziontechgroup.com/ai-advertising-optimizer/) · [GitHub](https://github.com/Zion-support/ai-advertising-optimizer)
-- **Zion AI Social Listening** — brand monitoring & sentiment → [Live app](https://ziontechgroup.com/zion-ai-social-listening/) · [GitHub](https://github.com/Zion-support/zion-ai-social-listening)
-- **Zion AI Video Studio** — AI video generation & editing → [Live app](https://ziontechgroup.com/zion-ai-video-studio/) · [GitHub](https://github.com/Zion-support/zion-ai-video-studio)
-- **AI Localizer** — continuous AI localization → [Live app](https://ziontechgroup.com/ai-localizer/) · [GitHub](https://github.com/Zion-support/ai-localizer)
+## Call-to-action links
+- Explore the suite: https://github.com/Zion-support/zion-app-network
+- AI Content Translator: https://github.com/Zion-support/ai-content-translator
+- AI Image Generator: https://github.com/Zion-support/ai-image-generator
+- AI Image Editor: https://github.com/Zion-support/ai-image-editor
+- AI Advertising Optimizer: https://github.com/Zion-support/ai-advertising-optimizer
+- AI Chart Builder: https://github.com/Zion-support/ai-chart-builder
+- AI Document Summarizer: https://github.com/Zion-support/ai-document-summarizer
+- Live network directory: https://zion-support.github.io/zion-network/
 
-## Explore
-- Category page: [network/content-marketing.md](https://github.com/Zion-support/zion-network/blob/main/network/content-marketing.md)
-- Spotlight: [spotlights/content-marketing.md](https://github.com/Zion-support/zion-network/blob/main/spotlights/content-marketing.md)
-- Network hub: [network.ziontechgroup.com](https://network.ziontechgroup.com) · Master directory: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-
-## Related spotlights
-- [Industry Platforms](APP_NETWORK_SPOTLIGHT_INDUSTRY_PLATFORMS.md)
-- [AI Readiness & Evaluation](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) · [Data & Analytics](APP_NETWORK_SPOTLIGHT_DATA_ANALYTICS.md)
-
-Every app is free to try. Production deployment & SLAs: [plans & pricing](https://ziontechgroup.com/plans/) · [ziontechgroup.com](https://ziontechgroup.com)
+## Meta description (SEO)
+Zion Tech Group's Content & Marketing Suite: AI translation, image generation and editing, ad optimization, chart building, and document summarization — an always-on content engine.
