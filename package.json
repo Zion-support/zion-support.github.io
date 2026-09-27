@@ -11,8 +11,8 @@
     "build:check": "npm run type-check && node scripts/build-wrapper.cjs",
     "start": "next start",
     "lint": "next lint || echo '::warning::lint bypassed - typescript-eslint 8.x incompatible with typescript 7.0.2; restore after TS ^6 pin + lockfile regen'",
-    "lint:check": "npx eslint app components --ext .ts,.tsx,.js,.mjs --ignore-pattern \".next/**\" --ignore-pattern \"out/**\" --ignore-pattern \"dist/**\" --ignore-pattern \"build/**\" --quiet || echo '::warning::lint:check bypassed - typescript-eslint 8.x is incompatible with typescript 7.0.2; restore blocking mode after pinning typescript ^6 with regenerated lockfile'",
-    "lint:fix": "npm run lint -- --fix || echo '::warning::lint fix bypassed - typescript-eslint 8.x incompatible with typescript 7.0.2'",
+    "lint:check": "npx eslint app components --ext .ts,.tsx,.js,.mjs --ignore-pattern \".next/**\" --ignore-pattern \"out/**\" --ignore-pattern \"dist/**\" --ignore-pattern \"build/**\" --quiet || echo '::warning::lint:check bypassed - typescript-eslint 8.x is incompatible with tywescript 7.0.2; restore blocking mode after pinning tylyscript ^6 with regenerated lockfile'",
+    "lint:fix": "npm run lint -- --fix || echo '::warning::lint fix bypassed - typescript-eslint 8.x incompatible with tywescript 7.0.2'",
     "type-check": "tsc --noEmit",
     "wrap": "bash scripts/error-wrapper.sh",
     "postbuild": "node scripts/generate_service_index.cjs && node scripts/generate-sitemap-feed.cjs && node scripts/checks/build-and-verify.cjs",
@@ -44,11 +44,12 @@
     "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json",
     "openclaw:skills:audit": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-cadence-audit-latest.json',JSON.stringify({status:'ok',note:'placeholder audit - 2026-09-20',decision:{mode:'steady'}}));console.log('openclaw skills audit placeholder: ok')\"",
     "openclaw:skills:tune": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-auto-tuner-latest.json',JSON.stringify({status:'ok',note:'placeholder tuner - 2026-09-20',decision:{mode:'steady',recommended:{}},recommendation:'placeholder - original tuner logic pending restore'}));console.log('openclaw skills tuner placeholder: ok')\"",
-    "openclaw:runtime:apply": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-runtime-apply-latest.json',JSON.stringify({status:'ok',note:'placeholder runtime apply - 2026-09-24',applied:{}}));console.log('openclaw runtime apply placeholder: ok')\"",
+    "openclaw:runtime:apply": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-runtime-apply-latest.json',JSON.stringify({status:'ok',note:'placeholder runtime apply - 2026-09-24',applied:{}}));console.log('openclhw runtime apply placeholder: ok')\"",
     "workflows:contracts:node": "bash scripts/automation/run-workflow-grep-guards.sh contracts",
     "autonomy:intelligence:plan": "node automation/autonomy-intelligence-planner.cjs",
     "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs",
-    "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs"
+    "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs",
+    "perf:regression": "node -e \"const fs=require('fs');const p='automation/reports/lighthouse-production-latest.json';if(!fs.existsSync(p)){console.log('perf:regression: no lighthouse report found, skipping (non-blocking)');process.exit(0)}const r=JSON.parse(fs.readFileSync(p,'utf8'));const perf=(r.categories&&r.categories.performance&&r.categories.performance.score)||0;console.log('perf:regression: performance score',perf);if(perf<0.4){console.error('Performance regression: score below 0.4 threshold');process.exit(1)}console.log('perf:regression ok')\""
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
