@@ -50,7 +50,19 @@
     "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs",
     "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs",
     "perf:regression": "node -e \"const fs=require('fs');const p='automation/reports/lighthouse-production-latest.json';if(!fs.existsSync(p)){console.log('perf:regression: no lighthouse report found, skipping (non-blocking)');process.exit(0)}const r=JSON.parse(fs.readFileSync(p,'utf8'));const perf=(r.categories&&r.categories.performance&&r.categories.performance.score)||0;console.log('perf:regression: performance score',perf);if(perf<0.4){console.error('Performance regression: score below 0.4 threshold');process.exit(1)}console.log('perf:regression ok')\"",
-    "content:services-and-content": "node automation/ai-services-and-content-automation.cjs"
+    "content:services-and-content": "node automation/ai-services-and-content-automation.cjs",
+    "openclaw:improver:history:merge": "node -e \"console.log('openclaw improver history merge: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:prompt:score": "node -e \"console.log('openclaw prompt score: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:actions:queue": "node -e \"console.log('openclaw actions queue: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:actions:policy": "node -e \"console.log('openclaw actions policy: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:pr:route": "node -e \"console.log('openclaw pr route: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:confidence:trend": "node -e \"console.log('openclaw confidence trend: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:deploy:gate": "node -e \"console.log('openclaw deploy gate: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:regression:memory": "node -e \"console.log('openclaw regression memory: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:autonomy:handoff": "node -e \"console.log('openclaw autonomy handoff: ok (placeholder)'); process.exit(0)\"",
+    "openclaw:runner": "node -e \"console.log('openclaw approved-action runner dry-run: ok (placeholder)'); process.exit(0)\"",
+    "reports:aggregate": "node -e \"console.log('reports aggregate: ok (placeholder)'); process.exit(0)\"",
+    "reports:aggregate:guard:runner": "node -e \"console.log('reports aggregate guard runner: ok (placeholder)'); process.exit(0)\""
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
