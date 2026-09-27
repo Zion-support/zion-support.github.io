@@ -164,6 +164,29 @@
 </div>
 </section>
 
+<!-- What's new: Batch 59 -->
+<section class="section" id="whats-new">
+<div class="container">
+  <div class="section-head">
+    <div>
+      <h2>🏭 What's New: Manufacturing &amp; Industrial Ops AI</h2>
+      <p>Batch 59 of the <a href="https://ziontechgroup.com/zion-app-network/">Zion App Network</a> — six interlinked apps that schedule, inspect, maintain, measure, de-risk and decarbonize your factory.</p>
+    </div>
+    <a href="https://ziontechgroup.com/zion-app-network/app-network-batch59-sept27.html" class="view-all">Full showcase →</a>
+  </div>
+  <div class="featured-row">
+    <div class="app-card featured"><div class="app-icon">📅</div><h4>Production Schedule AI</h4><div class="app-url">ziontechgroup.com/production-schedule-ai/</div><div class="app-desc">Constraint-based scheduling, changeover optimization and order prioritization.</div><a href="https://ziontechgroup.com/production-schedule-ai/" class="app-link">Open app →</a></div>
+    <div class="app-card featured"><div class="app-icon">🔍</div><h4>Quality Vision Inspector</h4><div class="app-url">ziontechgroup.com/quality-vision-inspector/</div><div class="app-desc">Computer-vision defect detection, SPC alerts and traceability.</div><a href="https://ziontechgroup.com/quality-vision-inspector/" class="app-link">Open app →</a></div>
+    <div class="app-card featured"><div class="app-icon">🛠️</div><h4>Predictive Maintenance AI</h4><div class="app-url">ziontechgroup.com/predictive-maintenance-ai/</div><div class="app-desc">Machine health scoring, failure prediction and maintenance windows.</div><a href="https://ziontechgroup.com/predictive-maintenance-ai/" class="app-link">Open app →</a></div>
+    <div class="app-card featured"><div class="app-icon">📊</div><h4>OEE Dashboard AI</h4><div class="app-url">ziontechgroup.com/oee-dashboard-ai/</div><div class="app-desc">Real-time OEE, downtime Pareto and throughput analytics.</div><a href="https://ziontechgroup.com/oee-dashboard-ai/" class="app-link">Open app →</a></div>
+    <div class="app-card featured"><div class="app-icon">📡</div><h4>Supplier Risk Radar</h4><div class="app-url">ziontechgroup.com/supplier-risk-radar/</div><div class="app-desc">Supplier risk scoring, disruption alerts and dual-sourcing recommendations.</div><a href="https://ziontechgroup.com/supplier-risk-radar/" class="app-link">Open app →</a></div>
+    <div class="app-card featured"><div class="app-icon">⚡</div><h4>Factory Energy Optimizer</h4><div class="app-url">ziontechgroup.com/factory-energy-optimizer/</div><div class="app-desc">Energy optimization, peak shaving and carbon reporting.</div><a href="https://ziontechgroup.com/factory-energy-optimizer/" class="app-link">Open app →</a></div>
+  </div>
+  <p style="margin-top:16px" class="muted">Also new — Batch 58 Legal &amp; Compliance Ops: <a href="https://ziontechgroup.com/legal-brief-drafter/">Legal Brief Drafter</a> · <a href="https://ziontechgroup.com/e-discovery-copilot/">E-Discovery Copilot</a> · <a href="https://ziontechgroup.com/dpo-privacy-assistant/">DPO Privacy Assistant</a> · <a href="https://ziontechgroup.com/contract-negotiation-ai/">Contract Negotiation AI</a> · <a href="https://ziontechgroup.com/ip-portfolio-tracker/">IP Portfolio Tracker</a> · <a href="https://ziontechgroup.com/regulatory-filing-copilot/">Regulatory Filing Copilot</a> · <a href="https://ziontechgroup.com/litigation-risk-scorer/">Litigation Risk Scorer</a> · <a href="https://ziontechgroup.com/legal-spend-optimizer/">Legal Spend Optimizer</a></p>
+  <p><a href="/en/plans/" class="btn primary">See Plans &amp; Pricing</a> <a href="/discovery/" class="btn">Book a $99 Discovery</a></p>
+</div>
+</section>
+
 <!-- Category grid -->
 <section class="section" id="categories">
 <div class="container">
@@ -398,7 +421,6 @@ async function loadCatalog(){
     if(!r.ok){ throw new Error('HTTP '+r.status); }
     const data = await r.json();
     allTools = data.apps || [];
-    // Also load the four plan entries
     renderTools();
   }catch(e){
     document.getElementById('toolGrid').innerHTML =
