@@ -4,6 +4,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 ## Homepage spotlight pages (this repo)
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
+- [APP_NETWORK_SPOTLIGHT_SEP27_COPILOTS.md](APP_NETWORK_SPOTLIGHT_SEP27_COPILOTS.md) — NEW Batch 54: AI Copilots Suite — 12 department copilots (sales, HR, support, legal, finance, data, energy) + unified insight dashboard
 - [APP_NETWORK_SPOTLIGHT_SEP26_BATCH52_GRC.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH52_GRC.md) — NEW Batch 52: Assessment, Compliance & GRC — 8 interlinked apps (assess, evidence, watch, screen)
 - [APP_NETWORK_SPOTLIGHT_SEP26_BATCH51_DATA.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH51_DATA.md) — NEW Batch 51: Data Engineering & Observability — 8 interlinked apps (build, catalog, trust, serve, optimize)
 - [APP_NETWORK_SPOTLIGHT_SEP26_BATCH50_FINOPS.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH50_FINOPS.md) — NEW Batch 50: FinOps & Cloud Cost Optimization — 8 interlinked apps (estimate, analyze, optimize, automate, prove ROI)
