@@ -46,7 +46,8 @@
     "openclaw:runtime:apply": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-runtime-apply-latest.json',JSON.stringify({status:'ok',note:'placeholder runtime apply - 2026-09-24',applied:{}}));console.log('openclaw runtime apply placeholder: ok')\"",
     "workflows:contracts:node": "bash scripts/automation/run-workflow-grep-guards.sh contracts",
     "autonomy:intelligence:plan": "node automation/autonomy-intelligence-planner.cjs",
-    "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs"
+    "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs",
+    "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
