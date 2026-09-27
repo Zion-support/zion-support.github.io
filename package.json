@@ -49,7 +49,8 @@
     "autonomy:intelligence:plan": "node automation/autonomy-intelligence-planner.cjs",
     "autonomy:growth-signal": "node automation/autonomous-growth-signal.cjs",
     "app:evolution-ideas-from-audits": "node automation/ai-evolution-ideas-from-audits-agent.cjs",
-    "perf:regression": "node -e \"const fs=require('fs');const p='automation/reports/lighthouse-production-latest.json';if(!fs.existsSync(p)){console.log('perf:regression: no lighthouse report found, skipping (non-blocking)');process.exit(0)}const r=JSON.parse(fs.readFileSync(p,'utf8'));const perf=(r.categories&&r.categories.performance&&r.categories.performance.score)||0;console.log('perf:regression: performance score',perf);if(perf<0.4){console.error('Performance regression: score below 0.4 threshold');process.exit(1)}console.log('perf:regression ok')\""
+    "perf:regression": "node -e \"const fs=require('fs');const p='automation/reports/lighthouse-production-latest.json';if(!fs.existsSync(p)){console.log('perf:regression: no lighthouse report found, skipping (non-blocking)');process.exit(0)}const r=JSON.parse(fs.readFileSync(p,'utf8'));const perf=(r.categories&&r.categories.performance&&r.categories.performance.score)||0;console.log('perf:regression: performance score',perf);if(perf<0.4){console.error('Performance regression: score below 0.4 threshold');process.exit(1)}console.log('perf:regression ok')\"",
+    "content:services-and-content": "node automation/ai-services-and-content-automation.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
