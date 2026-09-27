@@ -1,29 +1,22 @@
-# App Network Spotlight — Security & Compliance AI Suite
+# Homepage Spotlight — Security & Compliance Suite
 
-**Published 2026-09-25 · Zion Tech Group**
+**Suggested placement:** ziontechgroup.com homepage featured-apps section (rotates with Reliability, Field Ops, Data & Analytics, Customer Support, and FinOps spotlights).
 
-The Zion AI App Network spotlights **Security & Compliance** — 52 free, open-source apps covering cybersecurity operations, AI governance, compliance automation and contract risk.
+## Headline
+Secure by default, compliant by design — meet the Security & Compliance Suite.
 
-## Why it matters
-Regulation (EU AI Act, ISO 42001, NIST AI RMF, SOC 2) and attack volume are both rising. This suite automates evidence, testing and governance so teams stay audit-ready and breach-resistant.
+## Copy
+**AI Compliance Auditor** turns audit prep from weeks to hours. **Prompt Injection Playground** red-teams your LLMs before attackers do. **AI Phishing Simulator** trains your people with realistic campaigns. **Zion AI Threat Brief** starts every morning with curated threat intel. And the **AI Governance Dashboard** with **AI Safety Incident Reporter** keep leadership in control of AI risk. Offense-tested, defense-ready, audit-proof.
 
-## Featured apps
-- **AI Compliance Auditor** — EU AI Act / ISO 42001 / NIST AI RMF automation → [Live app](https://ziontechgroup.com/ai-compliance-auditor/) · [GitHub](https://github.com/Zion-support/ai-compliance-auditor)
-- **Prompt Shield** — LLM security & prompt-injection defense → [Live app](https://ziontechgroup.com/prompt-shield/) · [GitHub](https://github.com/Zion-support/prompt-shield)
-- **Secrets Sentinel** — secret scanning & leak response → [Live app](https://ziontechgroup.com/secrets-sentinel/) · [GitHub](https://github.com/Zion-support/secrets-sentinel)
-- **AI Phishing Simulator** — awareness training → [Live app](https://ziontechgroup.com/ai-phishing-simulator/) · [GitHub](https://github.com/Zion-support/ai-phishing-simulator)
-- **Compliance Evidence Collector** — continuous SOC 2 / ISO 27001 evidence → [Live app](https://ziontechgroup.com/zion-ai-compliance-evidence-collector) · [GitHub](https://github.com/Zion-support/zion-ai-compliance-evidence-collector)
-- **AI Contract Reviewer** — clause-level risk scoring → [Live app](https://ziontechgroup.com/zion-ai-contract-reviewer) · [GitHub](https://github.com/Zion-support/zion-ai-contract-reviewer)
-- **AI Governance** — EU AI Act readiness & model registries → [Live app](https://governance.ziontechgroup.com) · [GitHub](https://github.com/Zion-support/zion-ai-governance)
-- **Threat Modeler** — STRIDE models from architecture diagrams → [Live app](https://ziontechgroup.com/zion-ai-threat-modeler) · [GitHub](https://github.com/Zion-support/zion-ai-threat-modeler)
+## Call-to-action links
+- Explore the suite: https://github.com/Zion-support/zion-app-network
+- AI Compliance Auditor: https://github.com/Zion-support/ai-compliance-auditor
+- AI Phishing Simulator: https://github.com/Zion-support/ai-phishing-simulator
+- Prompt Injection Playground: https://github.com/Zion-support/prompt-injection-playground
+- Zion AI Threat Brief: https://github.com/Zion-support/zion-ai-threat-brief
+- AI Governance Dashboard: https://github.com/Zion-support/ai-governance-dashboard
+- AI Safety Incident Reporter: https://github.com/Zion-support/ai-safety-incident-reporter
+- Live network directory: https://zion-support.github.io/zion-network/
 
-## Explore
-- Category page: [network/security-compliance.md](https://github.com/Zion-support/zion-network/blob/main/network/security-compliance.md)
-- Spotlight: [spotlights/security-compliance.md](https://github.com/Zion-support/zion-network/blob/main/spotlights/security-compliance.md)
-- Network hub: [network.ziontechgroup.com](https://network.ziontechgroup.com) · Master directory: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-
-## Related spotlights
-- [FinOps & Cloud](APP_NETWORK_SPOTLIGHT_FINOPS.md)
-- [AI Ops & Incident Response](APP_NETWORK_SPOTLIGHT_AIOPS.md)
-
-Every app is free to try. Production deployment, SLAs and managed ops: [plans & pricing](https://ziontechgroup.com/plans/) · [ziontechgroup.com](https://ziontechgroup.com)
+## Meta description (SEO)
+Zion Tech Group's Security & Compliance Suite: AI compliance audits, phishing simulation, LLM red-teaming, threat intelligence, AI governance, and safety incident reporting.
