@@ -1,27 +1,20 @@
-# App Network Spotlight — Sales Pipeline & Revenue AI Suite
+# App Network Spotlight — AI Sales & Pipeline Intelligence (Sep 26, 2026)
 
-**Published 2026-09-25 · Zion Tech Group**
+Six new revenue apps are live in the **Zion App Network**:
 
-The Zion AI App Network spotlights **Sales Pipeline & Revenue AI** — six free, open-source apps that take a deal from first touch to closed-won: score → analyze → quote → propose → forecast → close.
+| App | Live page |
+|---|---|
+| Pipeline Risk Radar — Stall-signal scoring, forecast confidence, deal rescue plays | https://ziontechgroup.com/pipeline-risk-radar/ |
+| Renewal & Upsell Radar — Churn-risk and expansion signals 90+ days early | https://ziontechgroup.com/renewal-upsell-radar/ |
+| Deal Coach AI — Next-best-action, MEDDICC gaps, objection responses per deal | https://ziontechgroup.com/deal-coach-ai/ |
+| Forecast Accuracy AI — Rep bias profiles, commit confidence, scenario modeling | https://ziontechgroup.com/forecast-accuracy-ai/ |
+| Outbound Sequencer AI — Persona sequences, reply-intent AI, deliverability guardrails | https://ziontechgroup.com/outbound-sequencer-ai/ |
+| Win/Loss Analyzer AI — Win/loss reason clustering, competitor radar, pricing feedback | https://ziontechgroup.com/win-loss-analyzer-ai/ |
 
-## Why it matters
-Revenue teams lose deals to slow quotes, inconsistent discovery and blind forecasts. This suite compresses the sales cycle and makes the number predictable.
+**The loop:** [Outbound Sequencer AI](https://ziontechgroup.com/outbound-sequencer-ai/) fills the funnel → [Pipeline Risk Radar](https://ziontechgroup.com/pipeline-risk-radar/) guards it → [Deal Coach AI](https://ziontechgroup.com/deal-coach-ai/) moves deals forward → [Forecast Accuracy AI](https://ziontechgroup.com/forecast-accuracy-ai/) proves the number → [Renewal & Upsell Radar](https://ziontechgroup.com/renewal-upsell-radar/) grows accounts → [Win/Loss Analyzer AI](https://ziontechgroup.com/win-loss-analyzer-ai/) makes the whole loop smarter.
 
-## Featured apps
-- **Lead Score Copilot** — explainable lead scoring and routing → [Live app](https://ziontechgroup.com/lead-score-copilot/) · [GitHub](https://github.com/Zion-support/lead-score-copilot)
-- **Sales Call Analyzer** — transcripts, objections, coaching cues → [Live app](https://ziontechgroup.com/sales-call-analyzer/) · [GitHub](https://github.com/Zion-support/sales-call-analyzer)
-- **Deal Desk Assistant** — approvals and discount guardrails → [Live app](https://ziontechgroup.com/deal-desk-assistant/) · [GitHub](https://github.com/Zion-support/deal-desk-assistant)
-- **Quote Generator AI** — branded quotes in seconds → [Live app](https://ziontechgroup.com/quote-generator-ai/) · [GitHub](https://github.com/Zion-support/quote-generator-ai)
-- **Proposal Writer AI** — proposals from discovery notes → [Live app](https://ziontechgroup.com/proposal-writer-ai/) · [GitHub](https://github.com/Zion-support/proposal-writer-ai)
-- **Pipeline Forecast AI** — deal-level forecast confidence → [Live app](https://ziontechgroup.com/pipeline-forecast-ai/) · [GitHub](https://github.com/Zion-support/pipeline-forecast-ai)
+- 💼 Plans & pricing: https://ziontechgroup.com/en/plans/
+- 📞 Free AI Discovery call: https://ziontechgroup.com/discovery/
+- 🕸️ Full network: https://ziontechgroup.com/zion-app-network/
 
-## Explore
-- Category page: [network/sales-pipeline-ai.md](https://github.com/Zion-support/zion-network/blob/main/network/sales-pipeline-ai.md)
-- Spotlight: [spotlights/sales-pipeline-ai.md](https://github.com/Zion-support/zion-network/blob/main/spotlights/sales-pipeline-ai.md)
-- Network hub: [network.ziontechgroup.com](https://network.ziontechgroup.com) · Master directory: [APPS_NETWORK.md](https://github.com/Zion-support/zion-network/blob/main/APPS_NETWORK.md)
-
-## Related spotlights
-- [HR & People AI](APP_NETWORK_SPOTLIGHT_HR_PEOPLE.md)
-- [AI Ops & Incident Response](APP_NETWORK_SPOTLIGHT_AIOPS.md)
-
-Every app is free to try. Production deployment, SLAs and managed ops: [plans & pricing](https://ziontechgroup.com/plans/) · [ziontechgroup.com](https://ziontechgroup.com)
+© 2026 Zion Tech Group
