@@ -4,6 +4,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 ## Homepage spotlight pages (this repo)
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
+- [APP_NETWORK_SPOTLIGHT_SEP27_BATCH54_AGENTS.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH54_AGENTS.md) — NEW Batch 54: AI Agents, Platform & Assurance — 8 interlinked apps (build, evaluate, assure)
 - [APP_NETWORK_SPOTLIGHT_SEP26_BATCH53_REVPROTECT.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH53_REVPROTECT.md) — NEW Batch 53: Revenue Protection & Operations Signals — 8 interlinked apps (detect, recover, price, watch)
 - [APP_NETWORK_SPOTLIGHT_SEP26_BATCH52_GRC.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH52_GRC.md) — NEW Batch 52: Assessment, Compliance & GRC — 8 interlinked apps (assess, evidence, watch, screen)
 - [APP_NETWORK_SPOTLIGHT_SEP26_BATCH51_DATA.md](APP_NETWORK_SPOTLIGHT_SEP26_BATCH51_DATA.md) — NEW Batch 51: Data Engineering & Observability — 8 interlinked apps (build, catalog, trust, serve, optimize)
