@@ -40,12 +40,12 @@ Do not create extra labels.
 - GitHub caps comments at 2,500 per issue: forever log rotated #71361 → #71438 on 2026-09-25. Rotate at ~2,400.
 
 ## Checkpoint 2026-09-17 17:26 -03
-Already SENT today — do not clone:
+Already SENT that day — do not clone:
 - Carlos → Laércio IMA: substantial discount on the live RFQ (thread 19c058d9fef831f9, 17:12 BRT). Wait market research. Bid numbers stay off this public page.
 - Carlos → Samuel Câmara: Folha de Rosto sent (thread 1a0b0ed1dc951e85, 16:51 BRT). Wait Samuel.
 - Kleber → Tainah Agilize: not pré-venda; route to Victoria + ticket #2423990 (thread 1a0b0b152d2b1a59). Two Zion replies already — no third.
 - German Business Thiago: not a Zion buyer. Aligned.
-- Discovery cap used (Ledervin). No free Discovery until 18 Sep.
+- Discovery cap (Ledervin) calendar date 18 Sep 2026 has passed as of 2026-09-27. Do not invent a new free-Discovery window. Paid menu only: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo.
 
 Carlos still owns (his clicks, not another brief):
 1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
@@ -54,6 +54,10 @@ Carlos still owns (his clicks, not another brief):
 4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
 5. Crypto.com BRL withdraw/convert before 25/10.
 
-WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
+WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · LD NFs 95/96 baixa.
+- Microsoft Sergio Fri 10:00 BRT from the 17 Sep checkpoint is stale as of 2026-09-27 (that Friday is past). Do not re-mail Sergio from this board fact.
 
 HubSpot live named contacts only — IDs live on #71438, not here.
+
+## Room tick 2026-09-27 19:09 -03
+Patched stale board facts only (CEO-OPS.md). Did not rewrite index.html. static-deploy was not queued. Instant Client Sender OFF. Never nag Carlos. Never orange-cloud.
