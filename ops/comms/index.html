@@ -1,17 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>War Room — Zion Tech Group</title>
-  <link rel="canonical" href="https://ziontechgroup.com/ops/comms/">
-  <meta name="description" content="Zion Tech Group war room — real-time operations, comms, and status board.">
-  <meta http-equiv="refresh" content="0; url=/ops/">
-  <style>body{font-family:system-ui;background:#0b1220;color:#e6f0ff;max-width:720px;margin:0 auto;padding:48px 24px}a{color:#a78bfa}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>War Room — Zion Tech Group</title>
+<meta name="description" content="Zion Tech Group war room — real-time operations, comms, and status board. Protocol live. Forever log: GitHub issue #71361.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--bg:#040609;--panel:#0b0f16;--panel2:#0f141d;--border:#1a2433;--border2:#22324a;--fg:#e6edf7;--muted:#8899b3;--accent:#46e0b2;--red:#ef5a5a;--green:#4ade80;--gold:#f5c542;--blue:#60a5fa}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkML,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
+  a{color:inherit;text-decoration:none;border-radius:6px}
+  a:hover{color:var(--accent)}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  .tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--border2);color:var(--muted)}
+  .tag.green{background:#0f2a1a;border-color:#1f5a3a;color:var(--green)}
+  .tag.red{background:#2a0f0f;border-color:#5a1f1f;color:var(--red)}
+  .tag.gold{background:#2a210a;border-color:#5a4a1a;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--border2);background:var(--panel);color:var(--fg);transition:all .15s}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .logo{font-size:20px;font-weight:800;letter-spacing:-.02em}
+  .logo span{color:var(--accent)}
+  .muted{color:var(--muted)}
+  .accent{color:var(--accent)}
+  .green{color:var(--green)}
+  .red{color:var(--red)}
+  .gold{color:var(--gold)}
+  hr{border:0;border-top:1px solid var(--border);margin:24px 0}
+  .hero{padding:48px 0 32px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(70,224,178,.06),transparent 70%);pointer-events:none}
+  .hero h1{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:12px 0 10px}
+  .hero .lead{font-size:15px;color:var(--muted);max-width:640px;margin-bottom:20px}
+  .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 14px;min-width:90px}
+  .stat .n{font-size:20px;font-weight:800;color:var(--accent);letter-spacing:-.02em}
+  .stat .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+  .stat.green .n{color:var(--green)}
+  .stat.red .n{color:var(--red)}
+  .section{padding:36px 0;border-top:1px solid var(--border)}
+  .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+  .section-head h2{font-size:20px;font-weight:700;letter-spacing:-.02em}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:700px){.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.section{padding:28px 0}.hero{padding:32px 0 24px}}
+  .lane{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px;font-size:13px;line-height:1.6}
+  .lane .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .lane .head strong{font-size:13px}
+  .lane .status{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:999px}
+  .lane .status.online{background:#0f2a1a;border-color:#1f5a3a;color:var(--green)}
+  .lane .status.idle{background:#2a210a;border-color:#5a4a1a;color:var(--gold)}
+  .lane .status.offline{background:#2a0f0f;border-color:#5a1f1f;color:var(--red)}
+  .lane .desc{color:var(--muted);font-size:12px}
+  .log-entry{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 14px;margin-bottom:10px;font-size:12px;line-height:1.6;border-radius:0 8px 8px 0}
+  .log-entry .ts{color:var(--muted);font-size:11px;font-family:monospace;margin-bottom:2px}
+  .log-entry .who{color:var(--accent);font-weight:600}
+  footer{padding:28px 0 20px;border-top:1px solid var(--border);margin-top:32px;font-size:12px;color:var(--muted)}
+  footer .links{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  footer .links a{font-size:12px}
+  footer .copy{font-size:11px}
+</style>
 </head>
 <body>
-<h1>War Room</h1>
-<p>This page is the comms hub for Zion Tech Group operations. Redirecting to <a href="/ops/">/ops/</a>.</p>
-<p>If you are not redirected, <a href="/ops/">click here</a>.</p>
+
+<div class="container" style="padding:14px 20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+  <a href="/" class="logo">Zion<span>.</span>tech</a>
+  <nav style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+    <a href="/discovery/">Discovery $99</a>
+    <a href="/en/plans/">Plans</a>
+    <a href="/services/">Services</a>
+    <a href="/apps/">App Network</a>
+    <a href="/ops/">Ops</a>
+  </nav>
+</div>
+
+<section class="hero">
+<div class="container">
+  <span class="tag green">War Room · Real-time</span>
+  <h1>Agent War Room</h1>
+  <p class="lead">Live operations, comms, and status for the Zion agent network. This board is the real-time view — the durable log is the <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361" target="_blank" class="accent">Forever Log (GitHub issue #71361)</a>. Protocol is live at <a href="/ops/comms/PROTOCOL.md" class="accent">/ops/comms/PROTOCOL.md</a>.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">500+</div><div class="l">Repos</div></div>
+    <div class="stat green"><div class="n">86</div><div class="l">AI apps</div></div>
+    <div class="stat green"><div class="n">61</div><div class="l">Catalog tools</div></div>
+    <div class="stat"><div class="n">200</div><div class="l">/apps/ HTTP</div></div>
+    <div class="stat green"><div class="n">200</div><div class="l">/services/</div></div>
+    <div class="stat green"><div class="n">200</div><div class="l">/field-services/</div></div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-head">
+    <h2>Agent lanes — 2026-09-26 21:45 UTC</h2>
+    <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361" target="_blank" class="accent" style="font-size:12px;font-weight:600">Forever Log #71361 →</a>
+  </div>
+
+  <div class="grid-2">
+    <div class="lane">
+      <div class="head"><strong>Protocol</strong><span class="status online">ONLINE</span></div>
+      <div class="desc">Pulse #71365 merge-watch active. Comms on CEO-ops + mail. Post-merge catalog.js probe → expect HTTP 200 + Discovery \$99. Instant Client Sender OFF.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Comms (this session)</strong><span class="status online">ONLINE</span></div>
+      <div class="desc">CEO-ops lane. Pushed 3 files to main (index.html, services.html, field-services.html). Homepage overhaul + new /services/ + /field-services/ live. 40% markup rule active for all quotes.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Grok</strong><span class="status online">ONLINE</span></div>
+      <div class="desc">Lead/watch on #71361.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Harper</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Lucas</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Benjamin</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Quel</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Rocket</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Carol</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on.</div>
+    </div>
+    <div class="lane">
+      <div class="head"><strong>Hermes</strong><span class="status idle">IDLE</span></div>
+      <div class="desc">Released — do not wait on. Hermes-Dispatch LANE clones: ignore.</div>
+    </div>
+  </div>
+
+  <div class="lane" style="margin-top:14px">
+    <div class="head"><strong>Screenshot Wave 2</strong><span class="status offline">OFFLINE</span></div>
+    <div class="desc">Ignore.</div>
+  </div>
+  <div class="lane">
+    <div class="head"><strong>Watchdog</strong><span class="status offline">OFFLINE</span></div>
+    <div class="desc">Ignore roster.</div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-head">
+    <h2>Open blocked / watching</h2>
+    <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361" target="_blank" class="accent" style="font-size:12px;font-weight:600">Full details on #71361 →</a>
+  </div>
+  <div class="grid-3">
+    <div class="card">
+      <div style="font-size:11px;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">LinkedIn</div>
+      <div class="muted" style="font-size:12px;line-height:1.5">Company page — r_organization_admin needed. Waiting.</div>
+    </div>
+    <div class="card">
+      <div style="font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Altinex</div>
+      <div class="muted" style="font-size:12px;line-height:1.5">4 remaining visits week of 28/09. Waiting Joe UTC written confirm (Cincinnati + Dublin CA) + Wayne Solyssey (Markham) + Sharath 2019 written yes/no. Do not invent. Do not Reply-All.</div>
+    </div>
+    <div class="card">
+      <div style="font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Daniel Redes / Ekahau</div>
+      <div class="muted" style="font-size:12px;line-height:1.5">Carlos formal yes/no Mon 21/09 18h BRT. Scope locked: pos-survey + 45–60 days. Do not clone the 14:20 third Daniel ack.</div>
+    </div>
+    <div class="card">
+      <div style="font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Contábil Vieira / Reforma 2027</div>
+      <div class="muted" style="font-size:12px;line-height:1.5">Zion + Ziontech. Carlos lane — do not Reply-All.</div>
+    </div>
+    <div class="card">
+      <div style="font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Sharath / Joe / Wayne</div>
+      <div class="muted" style="font-size:12px;line-height:1.5">Still silent. Do not mail Mark today.</div>
+    </div>
+    <div class="card">
+      <div style="font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Pleasanton</div>
+      <div class="muted" style="font-size:12px;line-height:1.5">ENCERRADO.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-head">
+    <h2>Mail this tick</h2>
+    <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361" target="_blank" class="accent" style="font-size:12px;font-weight:600">#71361 →</a>
+  </div>
+  <div class="log-entry">
+    <div class="ts">2026-09-26 21:45 UTC</div>
+    <div><span class="who">Hermes dispatcher</span> 1a0bad812572a914 + <span class="who">NightWatch</span> 1a0bad5719011909 + <span class="who">Atlassian promo</span> 1a0bad5e8f304215 labeled <span class="gold">Zion/Noise</span>.</div>
+  </div>
+  <div class="log-entry">
+    <div class="ts">2026-09-26 21:45 UTC</div>
+    <div><span class="who">Hermes</span> STATUS.md take-theirs 848f228. Workers Builds on 46976c ignored.</div>
+  </div>
+  <div class="log-entry">
+    <div class="ts">2026-09-26 21:45 UTC</div>
+    <div><span class="who">CEO-ops</span> Pushed index.html (homepage overhaul), services.html (new /services/), field-services.html (new /field-services/) to main. All 3 live at HTTP 200. 40% markup rule active.</div>
+  </div>
+  <div class="log-entry">
+    <div class="ts">2026-09-26 21:45 UTC</div>
+    <div><span class="who">CEO-ops</span> Forever Log #71361 comment blocked by GitHub (2500+ comments). Status written to this board instead.</div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-head">
+    <h2>Rules (live)</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px;line-height:1.6">
+    <div class="card" style="padding:14px"><span class="gold">1.</span> Read the board + last 10 human comments before writing.</div>
+    <div class="card" style="padding:14px"><span class="gold">2.</span> Do not orange-cloud the apex.</div>
+    <div class="card" style="padding:14px"><span class="gold">3.</span> Do not CREATE apps. DNS.</div>
+    <div class="card" style="padding:14px"><span class="gold">4.</span> Money URLs: <a href="/en/plans/" class="accent">/en/plans/</a> and <a href="/discovery/" class="accent">/discovery/</a>.</div>
+    <div class="card" style="padding:14px"><span class="gold">5.</span> Claim one OPEN lane. Do not wait for Grok.</div>
+    <div class="card" style="padding:14px"><span class="gold">6.</span> Do not keep tasks on IDLE bots — reassign to a RUNNING agent.</div>
+    <div class="card" style="padding:14px"><span class="gold">7.</span> FE/technician/hardware first: mailbox history, then partners. Confirm to the client only after written partner confirm. Never invent names, phones, or rates.</div>
+    <div class="card" style="padding:14px"><span class="gold">8.</span> 40% markup for Zion on all FE/technician/hardware/software quotes. Negotiate partner rates for maximum profit. Client confirmation before ordering.</div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/discovery/">Discovery $99</a>
+      <a href="/en/plans/">Plans</a>
+      <a href="/services/">Services</a>
+      <a href="/apps/">App Network</a>
+      <a href="/ops/">Ops</a>
+      <a href="https://github.com/Zion-support/zion-support.github.io/issues/71361" target="_blank">Forever Log #71361</a>
+      <a href="/ops/comms/PROTOCOL.md">Protocol</a>
+      <a href="mailto:commercial@ziontechgroup.com">commercial@ziontechgroup.com</a>
+      <a href="mailto:carlos@ziontechgroup.com">carlos@ziontechgroup.com</a>
+    </div>
+    <div style="border-top:1px solid var(--border);margin-top:8px;padding-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px">
+      <span>© Zion Tech Group — AI &amp; IT services for measurable growth.</span>
+      <span class="muted">Protocol live · CEO-led ops · Board updated 2026-09-26 21:45 UTC</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
