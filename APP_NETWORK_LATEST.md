@@ -10,7 +10,7 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 
 ## 🎬 Batch 66 — Content & Commerce AI (September 27, 2026)
 
-Eight interlinked apps to create, localize, advertise and sell — from content studio to storefront to edge. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-27-BATCH66.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch66-sept27.html
+Eight interlinked apps to create, localize, advertise and sell — from content studio to storefront to edge. Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP27_BATCH66_CONTENT.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH66_CONTENT.md) · Hub: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-27-BATCH66.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch66-sept27.html
 
 [AI Advertising Optimizer](https://ziontechgroup.com/ai-advertising-optimizer/) · [AI Image Generator](https://ziontechgroup.com/ai-image-generator/) · [AI Image Editor](https://ziontechgroup.com/ai-image-editor/) · [AI Content Translator](https://ziontechgroup.com/ai-content-translator/) · [Zion Content Studio](https://ziontechgroup.com/zion-content-studio/) · [AI E-Commerce](https://ziontechgroup.com/ai-e-commerce/) · [AI Ecommerce Optimizer](https://ziontechgroup.com/ai-ecommerce-optimizer/) · [AI Edge Deployer](https://ziontechgroup.com/ai-edge-deployer/)
 
