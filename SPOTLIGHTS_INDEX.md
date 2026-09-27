@@ -74,6 +74,8 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_INDUSTRY_SUITES.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_SUITES.md) — 13 industry vertical AI suites (banking, insurance, pharma, education, energy, transport, construction, agriculture, hospitality, real estate, gov, nonprofit, media)
 - [APP_NETWORK_SPOTLIGHT_GREEN_IT.md](APP_NETWORK_SPOTLIGHT_GREEN_IT.md) — NEW: Green IT & Sustainability AI: carbon-aware cloud, energy dashboards, e-waste lifecycle, sustainable code profiling
 
+- [APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md](APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md) — NEW: Healthcare & Life Sciences AI suite: clinical docs, trials, HIPAA, patient flow, billing, telehealth
+
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
 - [Secops & Reliability Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/SECOPS_RELIABILITY_SUITE.md)
