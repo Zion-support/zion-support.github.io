@@ -8,9 +8,15 @@ Zion Tech Group's app network keeps growing. This page highlights the latest add
 - 📓 **Apps hub:** https://ziontechgroup.com/zion-apps-hub/
 - 🌐 **Homepage:** https://ziontechgroup.com
 
-## 🤖 Batch 54 — AI Agents, Platform & Assurance (September 27, 2026)
+## 👥 Batch 54 — People & Workforce AI (September 27, 2026)
 
-Eight interlinked apps to build AI agents, evaluate them rigorously and assure security, compliance and continuity. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-27-BATCH54.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch54-sept27.html
+Eight interlinked apps to hire, grow, engage and retain your team — one connected people-ops toolchain. Full spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-09-27-BATCH54.md · Showcase: https://ziontechgroup.com/zion-app-network/app-network-batch54-sept27.html
+
+[Skills Matrix AI](https://ziontechgroup.com/skills-matrix-ai/) · [Retention Risk Radar](https://ziontechgroup.com/retention-risk-radar/) · [Interview Intelligence AI](https://ziontechgroup.com/interview-intelligence-ai/) · [Comp Benchmark Scout](https://ziontechgroup.com/comp-benchmark-scout/) · [Engagement Pulse AI](https://ziontechgroup.com/engagement-pulse-ai/) · [Workforce Capacity Planner](https://ziontechgroup.com/workforce-capacity-planner/) · [Learning Path AI](https://ziontechgroup.com/learning-path-ai/) · [Hiring Funnel Optimizer](https://ziontechgroup.com/hiring-funnel-optimizer/)
+
+## 🤖 Batch 55 — AI Agents, Platform & Assurance (September 27, 2026)
+
+Eight interlinked apps to build AI agents, evaluate them rigorously and assure security, compliance and continuity. Hub: https://ziontechgroup.com/zion-app-network/
 
 [Zion AI Agent Builder](https://ziontechgroup.com/zion-ai-agent-builder/) · [Voice Agent Studio](https://ziontechgroup.com/voice-agent-studio/) · [Zion MCP Stack](https://ziontechgroup.com/zion-mcp-stack/) · [AI Eval Harness](https://ziontechgroup.com/ai-eval-harness/) · [AI Assessment Engine](https://ziontechgroup.com/ai-assessment-engine/) · [Zion AI Threat Brief](https://ziontechgroup.com/zion-ai-threat-brief/) · [AI Compliance Auditor](https://ziontechgroup.com/ai-compliance-auditor/) · [AI Backup Recovery](https://ziontechgroup.com/ai-backup-recovery/)
 
