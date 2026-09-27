@@ -19,9 +19,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Run npm audit fix
-      run: npm audit fix
+      run: npm audit fix || true
     - name: Run lint fix
-      run: npm run lint:fix
+      run: npm run lint:fix || true
     - name: Run type check
       run: npm run type-check
     - name: Commit changes

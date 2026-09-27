@@ -37,7 +37,7 @@ jobs:
       - name: Evaluate static health freshness
         id: freshness
         env:
-          AUTOMATION_HEALTH_STATIC_MAX_HOURS: ${{ vars.AUTOMATION_HEALTH_STATIC_MAX_HOURS }}
+          AUTOMATION_HEALTH_STATIC_MAX_HOURS: ${{ vars.AUTOMATION_HEALTH_STATIC_MAX_HOURS || '24' }}
         run: node scripts/automation/check-automation-health-static-freshness.cjs
 
       - name: Escalate stale static health snapshot
