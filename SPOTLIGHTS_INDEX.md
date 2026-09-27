@@ -4,6 +4,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 ## Homepage spotlight pages (this repo)
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
+- [APP_NETWORK_SPOTLIGHT_SEP27_BATCH66_CONTENT.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH66_CONTENT.md) — NEW Batch 66: Content & Commerce AI — 8 interlinked apps (advertise, generate, edit, translate, produce, sell, optimize, deploy)
 - [APP_NETWORK_SPOTLIGHT_SEP27_BATCH65_TOOLKIT.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH65_TOOLKIT.md) — NEW Batch 65: AI Engineering & Productivity Toolkit — 8 interlinked apps (research, prompt, pipeline, migrate, format, chart, summarize, track)
 - [APP_NETWORK_SPOTLIGHT_AGENT_TOOLKIT.md](APP_NETWORK_SPOTLIGHT_AGENT_TOOLKIT.md) — NEW Batch 39: AI Agent Builder Toolkit — design, orchestrate, test & observe autonomous agents (12 apps)
 - [APP_NETWORK_SPOTLIGHT_SEP27_BATCH55_SRE.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH55_SRE.md) — NEW Batch 55: SRE, Reliability & Incident Response — 7 interlinked apps (define, de-risk, respond, learn)
