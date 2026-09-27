@@ -4,6 +4,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 
 ## Homepage spotlight pages (this repo)
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
+- [APP_NETWORK_SPOTLIGHT_SEP27_BATCH67_OPS.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH67_OPS.md) — NEW Batch 67: Operations & Business Ops AI — 8 interlinked apps (assess, book, protect, onboard, alert, forecast, report, learn)
 - [APP_NETWORK_SPOTLIGHT_SEP27_BATCH66_CONTENT.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH66_CONTENT.md) — NEW Batch 66: Content & Commerce AI — 8 interlinked apps (advertise, generate, edit, translate, produce, sell, optimize, deploy)
 - [APP_NETWORK_SPOTLIGHT_SEP27_BATCH65_TOOLKIT.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH65_TOOLKIT.md) — NEW Batch 65: AI Engineering & Productivity Toolkit — 8 interlinked apps (research, prompt, pipeline, migrate, format, chart, summarize, track)
 - [APP_NETWORK_SPOTLIGHT_AGENT_TOOLKIT.md](APP_NETWORK_SPOTLIGHT_AGENT_TOOLKIT.md) — NEW Batch 39: AI Agent Builder Toolkit — design, orchestrate, test & observe autonomous agents (12 apps)
@@ -75,8 +76,6 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_GREEN_IT.md](APP_NETWORK_SPOTLIGHT_GREEN_IT.md) — NEW: Green IT & Sustainability AI: carbon-aware cloud, energy dashboards, e-waste lifecycle, sustainable code profiling
 
 - [APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md](APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md) — NEW: Healthcare & Life Sciences AI suite: clinical docs, trials, HIPAA, patient flow, billing, telehealth
-
-- [APP_NETWORK_SPOTLIGHT_SEP27_REALESTATE.md](APP_NETWORK_SPOTLIGHT_SEP27_REALESTATE.md) — NEW: Real Estate & Property AI suite: valuation, listings, tenant screening, leases, smart buildings, maintenance
 
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
