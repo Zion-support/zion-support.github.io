@@ -47,6 +47,7 @@ jobs:
         git diff --cached --quiet || git commit -m "chore(auto): update sitemap.xml
         with fresh priorities and lastmod"
 
+        git pull --rebase origin main || git rebase --abort
         git push origin HEAD:${{ github.ref }}
 
         '
