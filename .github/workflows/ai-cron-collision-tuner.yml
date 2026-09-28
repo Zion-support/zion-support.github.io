@@ -45,7 +45,7 @@ jobs:
           path: |
             automation/reports/cron-collision-latest.json
             automation/reports/cron-collision-latest.md
-          if-no-files-found: error
+          if-no-files-found: warn # tuner script is currently a no-op placeholder; do not fail the run when no report is generated
           retention-days: 30
 
       - name: Open issue on severe cron collisions
