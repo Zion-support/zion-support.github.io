@@ -18,6 +18,64 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Zion Tech Group","telephone":"+1 302 464 0950","email":"kleber@ziontechgroup.com","address":{"@type":"PostalAddress","streetAddress":"364 E Main St STE 1008","addressLocality":"Middletown","addressRegion":"DE","postalCode":"19709","addressCountry":"US"},"url":"https://ziontechgroup.com/contact/"}
 </script>
+<style>
+/* Contact redesign 2026-09-28 — scoped (ct-), builds on /assets/css/site.css + hub.css */
+:focus-visible{outline:2px solid #67e8f9;outline-offset:3px;border-radius:6px}
+.ct-hero{padding:72px 0 32px}
+.ct-hero .lead{margin:0}
+.ct-hero .actions{margin-top:24px}
+.ct-facts{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:26px 0 0}
+.ct-facts li{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(14,22,40,.7);border-radius:999px;padding:7px 14px;font-size:.88rem;color:#c5d0e8}
+.ct-facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(74,222,128,.15)}
+.ct-main{padding:16px 0 40px}
+.ct-split{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px;align-items:start}
+.ct-form{background:linear-gradient(160deg,#101a31,#0c1222);border:1px solid var(--line);border-radius:20px;padding:32px}
+.ct-form h2{margin:0 0 6px;font-size:clamp(1.4rem,2.4vw,1.8rem)}
+.ct-form .hub-meta{margin:0 0 22px}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.ct-form .field{font-weight:600;color:#e2e8f0}
+.ct-form .field input,.ct-form .field select,.ct-form .field textarea{font-weight:400;background:#070b16;min-height:46px;border-color:#34426a}
+.ct-form .field input:focus,.ct-form .field select:focus,.ct-form .field textarea:focus{border-color:#67e8f9;box-shadow:0 0 0 3px rgba(103,232,249,.25)}
+.ct-form .field textarea{min-height:130px;resize:vertical}
+.ct-req{color:#f0abfc;margin-left:2px}
+.ct-opt{color:var(--muted);font-weight:400;font-size:.82rem;margin-left:4px}
+.ct-submit{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:6px}
+.ct-submit .btn{border:0;cursor:pointer;font:inherit;font-weight:700;padding:12px 22px}
+.ct-submit small{color:var(--muted);font-size:.84rem}
+#inquiry-status{margin-top:14px;padding:12px 14px;border-radius:12px;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.3);color:#e2e8f0}
+.ct-aside{display:grid;gap:16px}
+.ct-panel{background:linear-gradient(160deg,#101a31,#0c1222);border:1px solid var(--line);border-radius:18px;padding:22px}
+.ct-panel h2,.ct-panel h3{margin:0 0 12px;font-size:1.05rem;color:#fff}
+.ct-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ct-list a{display:grid;grid-template-columns:40px 1fr;gap:2px 12px;align-items:center;padding:12px;border-radius:12px;border:1px solid transparent;color:#fff;text-decoration:none;transition:background .15s,border-color .15s}
+.ct-list a:hover{background:#15203a;border-color:#8b5cf6;text-decoration:none}
+.ct-ico{grid-row:span 2;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(139,92,246,.18);color:#c4b5fd;font-size:1.05rem}
+.ct-list .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#9aa8c7}
+.ct-list .val{font-weight:700;overflow-wrap:anywhere;line-height:1.35}
+.ct-dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}
+.ct-dl dt{color:#9aa8c7;font-size:.86rem}
+.ct-dl dd{margin:0;color:#e2e8f0;font-weight:600;font-size:.92rem}
+.ct-proof{border-color:rgba(34,211,238,.4);background:radial-gradient(circle at 100% 0,rgba(139,92,246,.22),transparent 60%),#0c1222}
+.ct-proof p{color:#c5d0e8;margin:0 0 10px;font-size:.94rem}
+.ct-proof a{font-weight:700}
+.ct-sec{padding:40px 0}
+.ct-sec h2{margin:0 0 6px}
+.ct-sec>.wrap>p{color:var(--muted);margin:0}
+.ct-steps{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.ct-steps li{position:relative;padding:24px 22px 22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,#101a31,#0c1222)}
+.ct-steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(100deg,#0069ff,#0e7490);color:#fff;font-weight:800;margin-bottom:12px}
+.ct-steps h3{margin:0 0 6px;font-size:1.05rem;color:#e9d5ff}
+.ct-steps p{margin:0;color:var(--muted)}
+.ct-cta{padding:24px 0 80px}
+.ct-cta-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-radius:22px;padding:32px;background:linear-gradient(135deg,rgba(0,105,255,.22),rgba(124,58,237,.22));border:1px solid rgba(0,212,255,.25)}
+.ct-cta-in h2{margin:0 0 4px;font-size:clamp(1.3rem,2.4vw,1.7rem)}
+.ct-cta-in p{margin:0;color:#c5d0e8}
+.ct-cta-in .actions{margin:0}
+@media(max-width:960px){.ct-split{grid-template-columns:1fr}}
+@media(max-width:700px){.ct-steps{grid-template-columns:1fr}}
+@media(max-width:560px){.ct-panel{padding:18px 14px}.ct-list a{padding:10px 8px}.ct-list .val{font-size:.95rem}.ct-hero{padding:44px 0 20px}.ct-row{grid-template-columns:1fr}.ct-form{padding:22px}.ct-cta-in{padding:24px}.ct-submit .btn{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 <a class="skip" href="#conteudo">Skip to content</a>
@@ -35,7 +93,8 @@
   </div>
 </header>
 
-<main id="conteudo" class="hero">
+<main id="conteudo">
+<section class="ct-hero">
   <div class="wrap">
     <p class="crumb"><a href="/">Home</a> / Contact</p>
     <p class="eyebrow">Get in touch</p>
@@ -45,75 +104,111 @@
       <a class="btn" href="tel:+13024640950">+1 302 464 0950</a>
       <a class="btn alt" href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer">Book 30 minutes</a>
     </div>
+    <ul class="ct-facts" aria-label="At a glance">
+      <li>Usually within one business hour</li>
+      <li>Monday–Friday, 9:00–18:00 ET</li>
+      <li>English and Portuguese</li>
+    </ul>
   </div>
-</main>
+</section>
 
-<section class="section" style="padding-top:0">
+<section class="ct-main">
   <div class="wrap">
-    <div class="hub-split">
-      <form id="inquiry" class="card" novalidate>
-        <h2>Send a project brief</h2>
-        <p class="hub-meta">Most inquiries get a reply within one business hour. Share enough context for a useful first reply.</p>
-        <label class="field">Name
-          <input name="name" required autocomplete="name">
-        </label>
-        <label class="field">Work email
-          <input name="email" type="email" required autocomplete="email">
-        </label>
-        <label class="field">Company
-          <input name="company" autocomplete="organization">
-        </label>
-        <label class="field">What do you need?
-          <select name="need">
-            <option>AI implementation</option>
-            <option>Managed IT / support</option>
-            <option>Cloud and FinOps</option>
-            <option>Security and compliance</option>
-            <option>Partnership</option>
-            <option>Something else</option>
-          </select>
-        </label>
+    <div class="ct-split">
+      <form id="inquiry" class="ct-form" novalidate aria-labelledby="inquiry-h">
+        <h2 id="inquiry-h">Send a project brief</h2>
+        <p class="hub-meta">Most inquiries get a reply within one business hour. Share enough context for a useful first reply. Fields marked <span class="ct-req" aria-hidden="true">*</span> are required.</p>
+        <div class="ct-row">
+          <label class="field">Name<span class="ct-req" aria-hidden="true">*</span>
+            <input name="name" required aria-required="true" autocomplete="name">
+          </label>
+          <label class="field">Work email<span class="ct-req" aria-hidden="true">*</span>
+            <input name="email" type="email" required aria-required="true" autocomplete="email">
+          </label>
+        </div>
+        <div class="ct-row">
+          <label class="field">Company<span class="ct-opt">(optional)</span>
+            <input name="company" autocomplete="organization">
+          </label>
+          <label class="field">What do you need?
+            <select name="need">
+              <option>AI implementation</option>
+              <option>Managed IT / support</option>
+              <option>Cloud and FinOps</option>
+              <option>Security and compliance</option>
+              <option>Partnership</option>
+              <option>Something else</option>
+            </select>
+          </label>
+        </div>
         <label class="field">Scope, systems, and timeline
           <textarea name="message" rows="5" placeholder="Current stack, the outcome you want, and any constraints."></textarea>
         </label>
-        <button type="submit" class="btn">Send inquiry</button>
-        <p id="inquiry-status" class="hub-meta" hidden></p>
+        <div class="ct-submit">
+          <button type="submit" class="btn">Send inquiry</button>
+          <small>Opens a pre-filled email to kleber@ziontechgroup.com.</small>
+        </div>
+        <p id="inquiry-status" class="hub-meta" role="status" aria-live="polite" hidden></p>
       </form>
 
-      <div>
-        <div class="grid grid-2">
-          <a class="card channel" href="tel:+13024640950"><div class="lbl">Call</div><div class="val">+1 302 464 0950</div></a>
-          <a class="card channel" href="mailto:kleber@ziontechgroup.com"><div class="lbl">Email</div><div class="val">kleber@ziontechgroup.com</div></a>
-          <a class="card channel" href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noreferrer"><div class="lbl">Office</div><div class="val">364 E Main St STE 1008, Middletown, DE 19709</div></a>
-          <div class="card channel"><div class="lbl">Hours</div><div class="val">Monday–Friday, 9:00–18:00 ET</div></div>
-          <div class="card channel"><div class="lbl">Languages</div><div class="val">English and Portuguese</div></div>
-          <div class="card channel"><div class="lbl">Response</div><div class="val">Usually within one business hour</div></div>
+      <aside class="ct-aside" aria-label="Other ways to reach us">
+        <div class="ct-panel">
+          <h2>Reach us directly</h2>
+          <ul class="ct-list">
+            <li><a href="tel:+13024640950"><span class="ct-ico" aria-hidden="true">☎</span><span class="lbl">Call</span><span class="val">+1 302 464 0950</span></a></li>
+            <li><a href="mailto:kleber@ziontechgroup.com"><span class="ct-ico" aria-hidden="true">✉</span><span class="lbl">Email</span><span class="val">kleber@ziontechgroup.com</span></a></li>
+            <li><a href="https://calendly.com/kleber-ziontechgroup" target="_blank" rel="noreferrer"><span class="ct-ico" aria-hidden="true">◷</span><span class="lbl">Calendly</span><span class="val">Book 30 minutes</span></a></li>
+            <li><a href="https://meet.google.com/ouu-khao-kuy" target="_blank" rel="noreferrer"><span class="ct-ico" aria-hidden="true">▶</span><span class="lbl">Live walkthrough</span><span class="val">Google Meet</span></a></li>
+            <li><a href="https://wa.me/13024640950" target="_blank" rel="noreferrer"><span class="ct-ico" aria-hidden="true">✆</span><span class="lbl">Short questions</span><span class="val">WhatsApp</span></a></li>
+            <li><a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noreferrer"><span class="ct-ico" aria-hidden="true">⌂</span><span class="lbl">Office</span><span class="val">364 E Main St STE 1008, Middletown, DE 19709</span></a></li>
+          </ul>
         </div>
-        <article class="card" style="margin-top:18px">
-          <h3>Prefer a live walkthrough?</h3>
-          <p>Use Calendly or Google Meet if you already know the scope. WhatsApp works for short questions.</p>
-          <p class="actions">
-            <a class="btn alt" href="https://meet.google.com/ouu-khao-kuy" target="_blank" rel="noreferrer">Google Meet</a>
-            <a class="btn alt" href="https://wa.me/13024640950" target="_blank" rel="noreferrer">WhatsApp</a>
-          </p>
-        </article>
-      </div>
-    </div>
-
-    <h2 style="margin-top:56px">What happens next</h2>
-    <div class="grid">
-      <article class="card"><h3>1. Discovery</h3><p>A 20–30 minute call to map systems, constraints, and the outcome that matters.</p></article>
-      <article class="card"><h3>2. Proposal</h3><p>Scope, team, timeline, and pricing model — usually within one business day.</p></article>
-      <article class="card"><h3>3. Start</h3><p>Kickoff with a written plan, named owner, and the first delivery milestone.</p></article>
-    </div>
-
-    <div class="cta-box">
-      <p><strong>Need a service instead of a call?</strong></p>
-      <p>Browse the catalog or compare engagement models first, then send the brief.</p>
-      <p><a class="btn" href="/services/">Browse services</a> <a class="btn alt" href="/plans/">See plans</a></p>
+        <div class="ct-panel">
+          <h3>Availability</h3>
+          <dl class="ct-dl">
+            <dt>Hours</dt><dd>Monday–Friday, 9:00–18:00 ET</dd>
+            <dt>Languages</dt><dd>English and Portuguese</dd>
+            <dt>Response</dt><dd>Usually within one business hour</dd>
+          </dl>
+        </div>
+        <div class="ct-panel ct-proof">
+          <h3>Recent proof</h3>
+          <p>FGV renewed Zion for IT maintenance (SDCOMPRASTIC-6963 · PO 12 Aug 2026). Operational continuity — not invented ROI.</p>
+          <a href="/case-studies/">See case studies →</a>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
+
+<section class="ct-sec" aria-labelledby="next-h">
+  <div class="wrap">
+    <h2 id="next-h">What happens next</h2>
+    <p>Prefer a live walkthrough? Use Calendly or Google Meet if you already know the scope. WhatsApp works for short questions.</p>
+    <ol class="ct-steps">
+      <li><h3>Discovery</h3><p>A 20–30 minute call to map systems, constraints, and the outcome that matters.</p></li>
+      <li><h3>Proposal</h3><p>Scope, team, timeline, and pricing model — usually within one business day.</p></li>
+      <li><h3>Start</h3><p>Kickoff with a written plan, named owner, and the first delivery milestone.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="ct-cta" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div class="ct-cta-in">
+      <div>
+        <h2 id="cta-h">Need a service instead of a call?</h2>
+        <p>Browse the catalog or compare engagement models first, then send the brief.</p>
+      </div>
+      <p class="actions">
+        <a class="btn" href="/discovery/">Discovery $99</a>
+        <a class="btn alt" href="/services/">Browse services</a>
+        <a class="btn alt" href="/plans/">See plans</a>
+      </p>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="wrap foot">
