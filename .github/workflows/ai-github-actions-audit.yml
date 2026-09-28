@@ -81,7 +81,9 @@ jobs:
         id: merge_ideas
         run: |
           node automation/merge-github-actions-app-ideas-to-backlog.cjs
-          if git diff --quiet automation/data/app-evolution-backlog.json 2>/dev/null; then
+          if [ ! -f automation/data/app-evolution-backlog.json ]; then
+            echo "backlog_updated=false" >> "$GITHUB_OUTPUT"
+          elif git diff --quiet automation/data/app-evolution-backlog.json 2>/dev/null; then
             echo "backlog_updated=false" >> "$GITHUB_OUTPUT"
           else
             echo "backlog_updated=true" >> "$GITHUB_OUTPUT"
