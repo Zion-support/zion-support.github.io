@@ -1,8 +1,10 @@
 // app/utils/seoConstants.ts
 export const SITE_URL = 'https://ziontechgroup.com';
+export const SITE_NAME = 'Zion Tech Group';
 
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
+  commercialEmail: 'commercial@ziontechgroup.com',
   phone: '+1 302 464 0950',
   address: {
     street: '364 E Main St STE 1008',
