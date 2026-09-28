@@ -51,7 +51,7 @@ jobs:
         run: |
           set -euo pipefail
           npm run rsc:guard
-          if npm run build; then
+          if timeout 12m npm run build; then  # timeout: Turbopack stall on 70k+ file tree must exit (124) and trigger static fallback instead of hanging until runner shutdown
             echo "Next.js build succeeded"
           else
             echo "::warning::Next.js build failed (heap OOM on 90k+ file tree); falling back to auditing the static site from the repository root (same content GitHub Pages serves)."
