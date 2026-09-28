@@ -1,33 +1,29 @@
-# NEW: Healthcare & Life Sciences AI Suite — 8 Interlinked Apps
+# App Network Spotlight — Healthcare (Sep 27, 2026)
 
-**Zion Tech Group** just expanded the [Zion App Network](https://ziontechgroup.com/zion-app-network/) with a connected healthcare suite: document → comply → match → flow → bill → schedule. Every app interlinks with the others.
+**Sector:** Healthcare IT  |  **Scope:** AI-assisted service desk + field services coverage  |  **Status:** Delivered
 
-## What's inside
+## The challenge
 
-| App | What it does |
-|---|---|
-| [Clinical Doc Copilot](https://ziontechgroup.com/clinical-doc-copilot/) | AI-drafted clinical notes & discharge summaries |
-| [HIPAA Compliance Scanner](https://ziontechgroup.com/hipaa-compliance-scanner/) | Continuous PHI compliance posture scanning |
-| [Clinical Trial Matcher](https://ziontechgroup.com/clinical-trial-matcher/) | Match patients to eligible trials in seconds |
-| [Care Gap Radar](https://ziontechgroup.com/care-gap-radar/) | Detect & close care gaps across populations |
-| [Patient Flow Optimizer](https://ziontechgroup.com/patient-flow-optimizer/) | Bed, capacity & throughput optimization |
-| [Medical Billing Scrubber](https://ziontechgroup.com/medical-billing-scrubber/) | Claim scrubbing & denial prevention |
-| [Telehealth Scheduler AI](https://ziontechgroup.com/telehealth-scheduler-ai/) | Smart virtual-visit scheduling, fewer no-shows |
-| [Pharma Coldchain Monitor](https://ziontechgroup.com/pharma-coldchain-monitor/) | Excursion detection for vaccines & biologics |
+A multi-site healthcare operator needed predictable IT support across clinics: overnight ticket pressure, strict uptime expectations for clinical systems, and onsite interventions that could not wait for central IT travel.
+
+## What Zion deployed
+
+- **AI-assisted service desk** — ticket triage, prioritization and first-response automation integrated with the client's existing stack.
+- **Field services network** — vetted local technicians dispatched per site, coordinated through a single Zion point of contact with documented ETAs.
+- **Proactive monitoring** — autonomous health checks and incident severity orchestration across the app network.
+
+## Outcomes
+
+- Faster first response on priority tickets through AI triage.
+- Same-day onsite coverage in the client's metropolitan areas.
+- A single operational channel (ops board + written thread) for full auditability.
 
 ## Why it matters
-- **Fewer denials**: documentation quality from Clinical Doc Copilot feeds Medical Billing Scrubber.
-- **Safer data**: HIPAA Compliance Scanner + [Audit Trail Analyzer](https://ziontechgroup.com/audit-trail-analyzer/) give continuous evidence.
-- **Better access**: Care Gap Radar books follow-ups directly through Telehealth Scheduler AI.
 
-## Explore the network
-- 🌐 Full network: https://ziontechgroup.com/zion-app-network/
-- 🧰 All tools: https://ziontechgroup.com/tools/
-- 💼 Plans & pricing: https://ziontechgroup.com/en/plans/
-- 📞 Book a discovery call: https://ziontechgroup.com/discovery/
-- 🗂️ Spotlight index: [SPOTLIGHTS_INDEX.md](SPOTLIGHTS_INDEX.md) · Master directory: [zion-app-network](https://github.com/Zion-support/zion-app-network)
-
-✉️ commercial@ziontechgroup.com
+Healthcare IT cannot wait. This engagement shows the Zion model: AI for speed, a global technician network for reach, and disciplined written coordination for compliance-grade traceability.
 
 ---
-© 2026 Zion Tech Group · https://ziontechgroup.com
+
+*Published with client consent. Commercial terms are confidential and never disclosed in spotlights.*
+
+Explore more: [Spotlights Index](SPOTLIGHTS_INDEX.md) | [Plans](https://ziontechgroup.com/en/plans/) | [Free AI Discovery](https://ziontechgroup.com/discovery/)
