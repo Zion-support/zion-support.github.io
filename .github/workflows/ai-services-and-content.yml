@@ -73,7 +73,7 @@ jobs:
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
+          timeout 30m npm run build  # fail fast (exit 124) on build hang instead of being killed by runner shutdown
 
       - name: Commit, push, and deploy
         env:
