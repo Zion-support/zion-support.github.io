@@ -33,7 +33,7 @@ jobs:
           grep -Fq "cron: '17 */6 * * *'" "$f"
           grep -Fq 'generate-incident-suppression-registry.cjs' "$f"
           grep -Fq 'incident-suppression-registry-latest.json' "$f"
-          grep -Fq 'Commit and push' "$f"
+          grep -Fq 'commit-and-push-main.sh' "$f"
           grep -Fq 'token:' "$f" && grep -Fq 'github.token' "$f"
           grep -Fq 'GH_TOKEN:' "$f" && grep -Fq 'github.token' "$f"
           echo "ok: $f"
