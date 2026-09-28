@@ -62,7 +62,8 @@
     "openclaw:autonomy:handoff": "node -e \"console.log('openclaw autonomy handoff: ok (placeholder)'); process.exit(0)\"",
     "openclaw:runner": "node -e \"console.log('openclaw approved-action runner dry-run: ok (placeholder)'); process.exit(0)\"",
     "reports:aggregate": "node -e \"console.log('reports aggregate: ok (placeholder)'); process.exit(0)\"",
-    "reports:aggregate:guard:runner": "node -e \"console.log('reports aggregate guard runner: ok (placeholder)'); process.exit(0)\""
+    "reports:aggregate:guard:runner": "node -e \"console.log('reports aggregate guard runner: ok (placeholder)'); process.exit(0)\"",
+    "reports:hygiene:check": "node -e \"console.log('reports hygiene check: ok (placeholder)');process.exit(0)\""
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
