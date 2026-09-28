@@ -66,7 +66,8 @@
     "reports:hygiene:check": "node -e \"console.log('reports hygiene check: ok (placeholder)');process.exit(0)\"",
     "cron:tuner": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/cron-tuner-latest.json',JSON.stringify({status:'ok',note:'placeholder cron tuner - 2026-09-28',decision:{mode:'steady'}}));console.log('cron tuner placeholder: ok')\"",
     "automation:health": "node automation/ai-automation-health-monitor.cjs",
-    "cron:health": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true});fs.writeFileSync('automation/logs/cron-health-monitor.log','cron health ok '+new Date().toISOString());console.log('cron health ok')\""
+    "cron:health": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true});fs.writeFileSync('automation/logs/cron-health-monitor.log','cron health ok '+new Date().toISOString());console.log('cron health ok')\"",
+    "reports:size:guard": "node automation/report-size-budget-guard.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
