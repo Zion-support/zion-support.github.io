@@ -48,7 +48,9 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f automation/reports/automation-open-issues-index-latest.json automation/reports/automation-issue-mttr-history.json
+          for f in automation/reports/automation-open-issues-index-latest.json automation/reports/automation-issue-mttr-history.json; do
+            if [ -f "$f" ]; then git add -f "$f"; else echo "SKIP: $f not generated"; fi
+          done
           if git diff --staged --quiet; then
             echo "No issue index changes."
             exit 0
