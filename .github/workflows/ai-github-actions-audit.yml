@@ -92,6 +92,10 @@ jobs:
       - name: Commit evolution backlog when updated
         if: steps.merge_ideas.outputs.backlog_updated == 'true' && (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true')
         run: |
+          if [ ! -f automation/data/app-evolution-backlog.json ]; then
+            echo "backlog file absent; nothing to commit"
+            exit 0
+          fi
           git add automation/data/app-evolution-backlog.json
           if git diff --staged --quiet; then
             exit 0
