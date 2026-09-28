@@ -28,8 +28,8 @@ jobs:
           test -f app/layout.tsx
           test -s app/layout.tsx
           grep -Fq "import './globals.css';" app/layout.tsx
-          grep -Fq 'export const metadata:' app/layout.tsx
-          grep -Fq 'export const viewport:' app/layout.tsx
+          grep -Eq 'export const metadata\s*[:=]' app/layout.tsx
+          grep -Eq 'export const viewport\s*[:=]' app/layout.tsx
           grep -Fq 'export default function RootLayout' app/layout.tsx
           grep -Fq 'id="main-content"' app/layout.tsx
           echo 'ok: app/layout.tsx'
