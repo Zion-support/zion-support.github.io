@@ -1,11 +1,11 @@
 name: War Room Pulse
 # Real-time: runs on every new comment on the war room issue.
 # Backup: scheduled pulse every 5 minutes.
+# PRIVACY HOTFIX 2026-09-29: schedule + issue_comment triggers disabled. This job wrote
+# log.json / state.json / agents.json (client names, emails, tickets) into public/ops/comms/,
+# which Continuous Pages Deploy publishes. Do not re-enable or dispatch until the board
+# output no longer lands in public/ or in this public repo.
 on:
-  issue_comment:
-    types: [created]
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
