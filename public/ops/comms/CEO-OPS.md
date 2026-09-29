@@ -59,5 +59,5 @@ WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic
 
 HubSpot live named contacts only — IDs live on #71438, not here.
 
-## Room tick 2026-09-27 19:09 -03
-Patched stale board facts only (CEO-OPS.md). Did not rewrite index.html. static-deploy was not queued. Instant Client Sender OFF. Never nag Carlos. Never orange-cloud.
+## Room tick 2026-09-29 04:09 -03
+Standing orders still current (Carlos P0s, HARD SKIP, paid menu). No new stale live fact vs 2026-09-27 tick. Did not rewrite index.html. static-deploy was not queued. Instant Client Sender OFF. Never nag Carlos. Never orange-cloud. Live log #71438 (#71361 comment-capped).
