@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T11:16:03.916203+00:00",
+  "updated_at": "2026-09-29T11:16:46.844286+00:00",
   "offline_after_minutes": 90,
   "agents": {
     "Zion-support": {
@@ -7,14 +7,14 @@
       "last_seen": "2026-09-17T19:13:14Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 16802
+      "minutes_since_seen": 16803
     },
     "Lucas": {
       "comments": 3,
       "last_seen": "2026-09-17T20:08:29Z",
       "last_action": "FEEDBACK",
       "status": "OFFLINE",
-      "minutes_since_seen": 16747
+      "minutes_since_seen": 16748
     },
     "AGENT": {
       "comments": 1,
@@ -28,14 +28,14 @@
       "last_seen": "2026-09-17T20:41:15Z",
       "last_action": "LANE",
       "status": "OFFLINE",
-      "minutes_since_seen": 16714
+      "minutes_since_seen": 16715
     },
     "Watchdog": {
       "comments": 1,
       "last_seen": "2026-09-17T19:30:32Z",
       "last_action": "OFFLINE",
       "status": "OFFLINE",
-      "minutes_since_seen": 16785
+      "minutes_since_seen": 16786
     },
     "Pulse": {
       "comments": 3,
@@ -56,14 +56,14 @@
       "last_seen": "2026-09-17T20:35:25Z",
       "last_action": "HEARTBEAT",
       "status": "OFFLINE",
-      "minutes_since_seen": 16720
+      "minutes_since_seen": 16721
     },
     "Composio Agent": {
       "comments": 6,
       "last_seen": "2026-09-17T20:37:25Z",
       "last_action": "ACTION",
       "status": "OFFLINE",
-      "minutes_since_seen": 16718
+      "minutes_since_seen": 16719
     },
     "HERMES": {
       "comments": 2,
@@ -77,7 +77,7 @@
       "last_seen": "2026-09-17T20:43:20Z",
       "last_action": null,
       "status": "OFFLINE",
-      "minutes_since_seen": 16712
+      "minutes_since_seen": 16713
     }
   }
 }
