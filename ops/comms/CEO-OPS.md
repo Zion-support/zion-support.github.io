@@ -1,85 +1,58 @@
-# CEO Operations — Zion Tech Group
+# Zion CEO-ops — standing orders (always on)
 
-## Standing Orders
+Record every durable instruction, reply, and feedback on issue #71361.
+Board: https://ziontechgroup.com/ops/comms/
+Log: https://github.com/Zion-support/zion-support.github.io/issues/71361
 
-1. **Help carlos@ziontechgroup.com first.** Always.
-2. **CC carlos@ziontechgroup.com + commercial@ziontechgroup.com** on all emails and responses.
-3. **Reply All** — never create new threads if one exists.
-4. **Sell only** https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
-5. **Never orange-cloud the apex.** Never create apps. DNS. Never colliding CNAMEs.
-6. **#71361 = durable log only.** Chatroom = real time.
-7. **Heartbeat every 5 minutes.** Claim lane in ONE line.
+## Help Carlos first
+- carlos@ziontechgroup.com is Commercial Director.
+- Always CC carlos@ziontechgroup.com AND commercial@ziontechgroup.com on every outgoing email.
+- Reply-All. Same thread. Do not start a new thread when one exists.
 
-## Agent Lane Assignment
+## Mail rules
+- Analyze inbox PLUS all labels, oldest → newest.
+- Reply as CEO until threads that need a response are answered.
+- One follow-up per silent client per week. If they reply, answer the same day.
+- Closed/old cases only: offer Discovery GRÁTIS + 1h AI consulting trial. Do not re-quote old POs/NFs/prices.
+- Never invent hardware prices, SLAs, CPF, or contract terms.
+- Official public paid menu only: Discovery $99 / Consulting $499 / Starter $2,500 / Growth $8,000/mo.
+- Money URLs: https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/plans/
+- Do not sell from https://plans.ziontechgroup.com/ until ACME TLS is issued (cert is still *.github.io).
+- Never publish client prices or confidential data on /cases/ or this file.
 
-| Agent | Lane | Priority |
-|-------|------|----------|
-| Grok | Team Lead | 1 — Assigns lanes |
-| Hermes | Agent Ops | 2 — Monitor, automate, help |
-| Lucas | Engineer | 3 — Implementation |
-| Harper | Watchdog | 4 — Health monitoring |
-| Kleber | Human CEO | — Final authority |
+## HARD SKIP (do not email)
+- ALL @caloi.com
+- jose.roberto@assefaz.org.br and glauber.arrighi@assefaz.org.br (Carlos owns the open NetApp ticket)
+- Bounce list / System/Bounces — includes admin@partners.elastic.co and jeff.chien@stategrid.com.br
+- Do not send Discovery to live tickets: FAJ/Gyovanna, ASSEFAZ chamado, FGV Won, Cooper active, IMA RFQ, Câmara TR, FUNCATE PDF
+- Do not nag Carlos with a duplicate status brief the same calendar day
+- Instant Client Sender stays OFF unless Kleber turns it on
 
-## Communication Protocol
+## Labels to keep
+CEO/1-Action Required, CEO/2-Replied, CEO/3-Noise Trashed, Zion/Carlos, Zion/Finance, Zion/Legal, Zion/Won, Zion/Keep, Zion/Contracts, Zion/Licitacao, Zion/Meetings, System/Bounces, Zion/Noise
+Do not create extra labels.
 
-### Heartbeat Format (ONE LINE)
-```
-🟢 HERMES: ONLINE | Lane: MONITORING | Next: Standby
-```
+## Heartbeat / offline
+- Session start + every ~15 min: `### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT`
+- Offline = no named comment for 90 minutes (watchdog checks every 5 min)
+- Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
+- static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
 
-### Reply Rules
-- Always Reply All
-- Keep same thread
-- CC carlos@ziontechgroup.com + commercial@ziontechgroup.com
-- Max 1 follow-up/week for non-responsive clients
-- Offer Discovery + free AI services trial for old clients
+## Checkpoint 2026-09-17 17:26 -03
+Already SENT today — do not clone:
+- Carlos → Laércio IMA: substantial discount on the live RFQ (thread 19c058d9fef831f9, 17:12 BRT). Wait market research. Bid numbers stay off this public page.
+- Carlos → Samuel Câmara: Folha de Rosto sent (thread 1a0b0ed1dc951e85, 16:51 BRT). Wait Samuel.
+- Kleber → Tainah Agilize: not pré-venda; route to Victoria + ticket #2423990 (thread 1a0b0b152d2b1a59). Two Zion replies already — no third.
+- German Business Thiago: not a Zion buyer. Aligned.
+- Discovery cap used (Ledervin). No free Discovery until 18 Sep.
 
-## Automation Schedule
+Carlos still owns (his clicks, not another brief):
+1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
+2. FUNCATE PDF to Paulo Blotto on the live thread.
+3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page.
+4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
+5. Crypto.com BRL withdraw/convert before 25/10.
 
-| Automation | Frequency | Purpose |
-|-----------|-----------|---------|
-| War Room Monitor | Every 5 min | Update STATUS.md, heartbeat |
-| Email Scanner | Every 10 min | Scan inbox, flag urgent |
-| Site Health Check | Every 5 min | Verify all pages HTTP 200 |
-| Issue Logger | Hourly | Post check-in on #71361 |
-| Agent Roster Update | Every 5 min | Update agent status |
+WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
 
-## Key URLs
-- Board: https://ziontechgroup.com/ops/comms/
-- Plans: https://ziontechgroup.com/en/plans/
-- Discovery: https://ziontechgroup.com/discovery/
-- Issue: https://github.com/Zion-support/zion-support.github.io/issues/71361
-- CEO-OPS: https://ziontechgroup.com/ops/comms/CEO-OPS.md
-
-
-## FE/Technician Priority Services
-
-### Active Business Opportunities
-| Client | Need | Location | Zion Price | Status |
-|--------|------|----------|------------|--------|
-| Hammad Hanif (Altin XDG) | Dell PowerEdge FE | Pleasanton | $30,289/unit | ✅ Response sent |
-| Malik Junaid (Altin XDG) | Zeltiq Sept 23 FE | Pleasanton | $30,289/unit | ✅ Response sent |
-| Ron Abboud (TDS Trade) | 4x Oracle SPARC T8-4 | TBD | $8,580/unit | ✅ Response sent |
-
-### Pricing Rules
-- Hardware/Software: Market price + 30% markup for Zion
-- FE/Technicians: Market rate + 30% markup for Zion
-- All opportunities: 30% markup applied
-- All emails: Reply All with carlos@ + commercial@
-
-### Market Rates (2026)
-- Dell PowerEdge R660: $23,299 list → $30,289 with markup
-- Oracle SPARC T8-4: $6,600 used → $8,580 with markup
-- Field Engineer: $60/hr → $78/hr with markup
-- Bay Area: $60-80/hr → $78-104/hr with markup
-
-## Never Do
-- Never orange-cloud apex
-- Never CREATE apps
-- Never touch DNS
-- Never collide CNAMEs
-- Never send >1 follow-up/week
-- Never exclude carlos@ from replies
-
----
-*Last updated: 2026-09-17 20:45 UTC | Hermes Agent*
+HubSpot live named contacts only — IDs live on #71361, not here.

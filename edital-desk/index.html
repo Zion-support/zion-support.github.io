@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edital Desk · Zion Tech Group</title>
+  <link rel="canonical" href="https://ziontechgroup.com/edital-desk/">
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: ui-sans-serif, system-ui, sans-serif; margin: 0; background: #0b1020; color: #e8eefc; }
+    main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem; }
+    a { color: #8ec5ff; }
+    label, input, textarea, select { display: block; width: 100%; }
+    input, textarea, select { margin: .35rem 0 1rem; padding: .65rem .7rem; border-radius: 8px; border: 1px solid #2a355f; background: #151b33; color: inherit; }
+    button { background: #5b8cff; color: #06101f; border: 0; border-radius: 8px; padding: .7rem 1rem; font-weight: 700; cursor: pointer; }
+    pre { white-space: pre-wrap; background: #151b33; padding: 1rem; border-radius: 10px; border: 1px solid #2a355f; }
+    .note { color: #b7c2e0; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="/">Home</a> · <a href="/apps/">Apps</a> · <a href="/roi-calc/">ROI Calc</a> · <a href="/stack-audit/">Stack Audit</a> · <a href="/discovery/">Discovery $99</a> · <a href="/en/plans/">Plans</a></nav>
+  <h1>Edital Desk</h1>
+  <p class="note">Checklist para RFQ / edital / TR. Não gera preço de hardware. Caminho: Discovery $99 → Consulting $499 → Starter / Growth.</p>
+  <form id="f">
+    <label>Órgão / entidade<input name="org" required placeholder="Secretaria, fundação, câmara"></label>
+    <label>Tipo<select name="tipo"><option>Edital / pregão</option><option>TR / especificação</option><option>Coleta de preços</option><option>Contrato / aditivo</option></select></label>
+    <label>Objeto (sem preço)<textarea name="objeto" rows="4" required placeholder="Storage, servidores, campo, software, suporte"></textarea></label>
+    <label>Prazo<input name="prazo" placeholder="Abertura ou entrega da minuta"></label>
+    <label>O que falta no pacote<textarea name="faltas" rows="3" placeholder="PDF, planilha, visita técnica, garantia, SLA"></textarea></label>
+    <button type="submit">Gerar brief</button>
+  </form>
+  <pre id="out" hidden></pre>
+  <p><a href="/discovery/">Abrir Discovery $99</a> · <a href="mailto:commercial@ziontechgroup.com">commercial@</a></p>
+</main>
+<script>
+ document.getElementById('f').addEventListener('submit', function (e) {
+   e.preventDefault();
+   var d = Object.fromEntries(new FormData(e.target).entries());
+   var text = [
+     'EDITAL DESK — brief interno (sem preço)',
+     'Órgão: ' + d.org,
+     'Tipo: ' + d.tipo,
+     'Objeto: ' + d.objeto,
+     'Prazo: ' + (d.prazo || 'não informado'),
+     'Lacunas: ' + (d.faltas || 'não listadas'),
+     '',
+     'Próximo passo: Discovery $99 em https://ziontechgroup.com/discovery/',
+     'Não inventar hardware price, SLA ou CPF.',
+     'CC: carlos@ziontechgroup.com + commercial@ziontechgroup.com'
+   ].join('\n');
+   var out = document.getElementById('out');
+   out.hidden = false;
+   out.textContent = text;
+ });
+</script>
+</body>
+</html>
