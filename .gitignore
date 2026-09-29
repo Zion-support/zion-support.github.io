@@ -40,3 +40,6 @@ llama.cpp
 *.pkg
 .mypy_cache/
 .pytest_cache/
+
+# never commit SSH keys
+.ssh/
