@@ -1,4 +1,5 @@
 # Ensures reusable-workflow-ci.yml keeps core workflow_call + validate/contracts anchors (grep-only).
+# Fixed 2026-09-29: accept current validate step anchor (automation:preflight) as well as legacy workflows:validate:light.
 
 name: reusable workflow CI smoke (weekly)
 
@@ -33,6 +34,6 @@ jobs:
           grep -Fq 'run_contracts:' "$f"
           grep -Fq "type: boolean" "$f"
           grep -Fq "node-version-file: '.nvmrc'" "$f"
-          grep -Fq 'npm run workflows:validate:light' "$f"
+          grep -Fq 'npm run workflows:validate:light' "$f" || grep -Fq 'npm run automation:preflight' "$f"
           grep -Fq 'npm run workflows:contracts:node' "$f"
           echo "ok: $f"
