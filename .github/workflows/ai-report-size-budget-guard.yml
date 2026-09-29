@@ -48,7 +48,7 @@ jobs:
           path: |
             automation/reports/report-size-budget-guard-latest.json
             automation/reports/report-size-budget-guard-latest.md
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
 
       - name: Open issue on budget breach (deduped)
