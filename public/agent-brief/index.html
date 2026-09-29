@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Brief · Zion Tech Group</title>
+<link rel="canonical" href="https://ziontechgroup.com/agent-brief/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:840px;margin:0 auto;padding:28px 20px 64px}a{color:var(--accent)}nav a{margin-right:12px;color:var(--muted);text-decoration:none}
+label{display:block;margin:12px 0 6px;color:var(--muted)}
+input,textarea{width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:var(--ink)}
+textarea{min-height:80px}
+pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);padding:16px;border-radius:12px}
+.btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;border-radius:999px;background:var(--accent);color:#042033;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/roi-calc/">ROI</a> · <a href="/stack-audit/">Audit</a> · <a href="/discovery/">Discovery $99</a> · <a href="/en/plans/">Plans</a></p>
+<h1>Agent brief</h1>
+<p>Fill the fields. Copy the brief into Discovery. Nothing is stored on our servers.</p>
+<label>Process to automate</label><input id="process" placeholder="e.g. inbound commercial email triage">
+<label>Systems in the path</label><input id="systems" placeholder="Gmail, HubSpot, WhatsApp">
+<label>Named owner</label><input id="owner" placeholder="Role + person">
+<label>Success metric</label><input id="metric" placeholder="First reply under 4 business hours">
+<label>Kill rule</label><input id="kill" placeholder="Stop if it drafts pricing without a human">
+<label>What must stay human</label><textarea id="human" placeholder="Quotes, legal text, money movement"></textarea>
+<pre id="out"></pre>
+<a class="btn" href="/discovery/">Continue to Discovery $99</a>
+<script>
+const ids=['process','systems','owner','metric','kill','human'];
+function run(){
+  const v=Object.fromEntries(ids.map(id=>[id,document.getElementById(id).value.trim()||'—']));
+  document.getElementById('out').textContent='Zion agent brief\nProcess: '+v.process+'\nSystems: '+v.systems+'\nOwner: '+v.owner+'\nSuccess metric: '+v.metric+'\nKill rule: '+v.kill+'\nStays human: '+v.human+'\nNext step: Discovery $99 \u2014 https://ziontechgroup.com/discovery/';
+}
+ids.forEach(id=>document.getElementById(id).addEventListener('input',run));run();
+</script>
+</div>
+</body>
+</html>
