@@ -1,4 +1,0 @@
-/* Zion Tech Group site-wide CSS */
-:root{{--font-sans:system-ui,sans-serif;--foreground:#1a1a1a;--accent:#0070f3;--border:#e5e5e5;--card:#fff}}
-*{{margin:0;padding:0;box-sizing:border-box}}
-body{{font-family:var(--font-sans);color:var(--foreground);background:var(--card)}}
