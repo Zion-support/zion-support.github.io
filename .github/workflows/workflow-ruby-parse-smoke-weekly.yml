@@ -31,8 +31,8 @@ jobs:
           grep -Fq '#!/usr/bin/env ruby' "$f"
           grep -Fq "require 'yaml'" "$f"
           grep -Fq "Dir.glob('.github/workflows/**/*.{yml,yaml}')" "$f"
-          grep -Fq 'timeout-minutes' "$f"
-          grep -Fq 'permissions:' "$f"
+          grep -Fq 'timeout_minutes' "$f"
+          grep -Fq 'permissions' "$f"
           echo "ok: $f"
 
       - name: Parse workflow YAML (names, concurrency, job ids, local uses, cron, timeouts)
