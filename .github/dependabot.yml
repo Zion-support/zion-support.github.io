@@ -1,0 +1,8 @@
+# Repository is a static site (no root package.json). Keep Dependabot scoped to GitHub Actions only.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
