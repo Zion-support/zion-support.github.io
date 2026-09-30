@@ -9,21 +9,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
       - name: Restore public/ from d0588781 onto a branch
         run: |
           set -euo pipefail
-          GOOD=$(git rev-parse d0588781)
-          STALE=$(git rev-parse ce155e6c)
+          GOOD=d05887813d29534414630dbe3f120ac5445dac8f
+          STALE=ce155e6cea83b13f2110f0017178d06f7c836a56
+          git fetch --no-tags --depth=1 origin "$GOOD" "$STALE"
           git config user.name "Zion Chefe"
           git config user.email "kleber@ziontechgroup.com"
           git checkout -b chefe/restore-public-2026-09-30
-          SKIP='^public/(index\.html|sitemap\.xml|llm-cost-calculator/index\.html)$'
-          git diff --no-renames --name-only --diff-filter=DM "$GOOD" HEAD -- public/ | grep -Ev "$SKIP" > /tmp/restore.txt || true
-          echo "restoring $(wc -l < /tmp/restore.txt) files"
+          git diff --no-renames --name-only "$STALE" HEAD -- public/ > /tmp/post.txt
+          git diff --no-renames --name-only --diff-filter=DM "$GOOD" HEAD -- public/ > /tmp/dm.txt
+          grep -vxF -f /tmp/post.txt /tmp/dm.txt > /tmp/restore.txt || true
+          grep -xF -f /tmp/post.txt /tmp/dm.txt | grep -vxF -e public/sitemap.xml -e public/sitemap-0.xml > /tmp/merge.txt || true
+          echo "restoring $(wc -l < /tmp/restore.txt) files; 3-way: $(cat /tmp/merge.txt | tr '\n' ' ')"
           tr '\n' '\0' < /tmp/restore.txt | xargs -0 -r -n 200 git checkout "$GOOD" --
-          git show "$GOOD:public/index.html" > /tmp/o; git show "$STALE:public/index.html" > /tmp/b; cp public/index.html /tmp/t
-          if git merge-file -p /tmp/o /tmp/b /tmp/t > /tmp/r; then cp /tmp/r public/index.html; echo "index.html 3-way merged"; else echo "index.html conflict: kept main"; fi
+          while IFS= read -r f; do
+            git show "$GOOD:$f" > /tmp/o; git show "$STALE:$f" > /tmp/b 2>/dev/null || : > /tmp/b; cp "$f" /tmp/t 2>/dev/null || : > /tmp/t
+            if git merge-file -p /tmp/o /tmp/b /tmp/t > /tmp/r; then mkdir -p "$(dirname "$f")"; cp /tmp/r "$f"; echo "merged $f"; else echo "CONFLICT kept main: $f"; fi
+          done < /tmp/merge.txt
+          git checkout "$GOOD" -- public/sitemap-0.xml
           for f in managed-it-services/index.html healthcare-it-hipaa/index.html blog/hipaa-compliant-it-services/index.html; do mkdir -p "$(dirname "$f")"; git show "$GOOD:$f" > "$f"; done
           git rm -q --ignore-unmatch public/ops/comms/CEO-OPS.md public/ops/comms/log.json public/ops/comms/agents.json public/ops/comms/roster.json public/ops/comms/state.json public/ops/comms/presence.json
           git add -A public/ managed-it-services/index.html healthcare-it-hipaa/index.html blog/hipaa-compliant-it-services/index.html
