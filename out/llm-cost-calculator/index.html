@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LLM Cost Calculator · Zion Tech Group</title>
+<meta name="description" content="Free LLM cost calculator: estimate token costs for any model. Input tokens, output tokens, price per 1M tokens, and monthly run volume.">
+<link rel="canonical" href="https://ziontechgroup.com/llm-cost-calculator/">
+<style>:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+h2{margin:0 0 8px;font-size:1.1rem}.muted{color:var(--muted)}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700}
+input,select{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px;width:100%;margin:4px 0}
+label{font-size:.85rem;color:var(--muted)}
+.result{font-size:1.4rem;font-weight:800;color:var(--accent);margin-top:10px}
+li{margin:6px 0}</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<h1>LLM Cost Calculator</h1>
+<p class="muted">Free token-cost estimator: input tokens, output tokens, price per 1M tokens, and monthly run volume.</p>
+<div class="card">
+<label>Input / prompt tokens (per run) <input id="it" type="number" value="1000000" min="0"></label>
+<label>Output / completion tokens (per run) <input id="ot" type="number" value="200000" min="0"></label>
+<label>Price per 1M input tokens (USD) <input id="ip" type="number" value="3" step="0.01" min="0"></label>
+<label>Price per 1M output tokens (USD) <input id="op" type="number" value="15" step="0.01" min="0"></label>
+<label>Runs per month <input id="r" type="number" value="100" min="0"></label>
+<button class="btn" onclick="calc()" style="border:0;cursor:pointer">Calculate</button>
+<div id="out"></div>
+</div>
+<div class="card">
+<h2>Common model prices</h2>
+<ul>
+<li>GPT-4o: $3.00 / 1M in, $15.00 / 1M out</li>
+<li>GPT-4o-mini: $0.15 / 1M in, $0.60 / 1M out</li>
+<li>GPT-3.5-turbo: $0.50 / 1M in, $1.50 / 1M out</li>
+<li>Claude 3.5 Sonnet: $3.00 / 1M in, $15.00 / 1M out</li>
+<li>Claude 3 Haiku: $0.25 / 1M in, $1.25 / 1M out</li>
+<li>Gemini 1.5 Pro: $3.50 / 1M in, $10.50 / 1M out</li>
+<li>Gemma 2 9B (local): $0.00 / 1M in, $0.00 / 1M out</li>
+<li>Open-source llama.cpp: infra cost only (GPU amortization)</li>
+</ul>
+<p class="muted">Prices are per 1 million tokens. Local models eliminate per-token API fees; you only pay for compute.</p>
+</div>
+<h2>More free tools from the network</h2>
+<div class="grid"><article class="card"><h2>AI Prompt Library</h2><p>Enterprise prompts for IT ops.</p><a class="btn" href="/prompt-library/">Open</a></article><article class="card"><h2>AI Governance Checklist</h2><p>Readiness score for AI adoption.</p><a class="btn" href="/ai-governance-checklist/">Open</a></article><article class="card"><h2>ROI calculator</h2><p>Hours leaked vs official SKUs.</p><a class="btn" href="/roi-calc/">Open</a></article><article class="card"><h2>SLA calculator</h2><p>Uptime &amp; penalty math.</p><a class="btn" href="/sla-calculator/">Open</a></article><article class="card"><h2>FinOps estimator</h2><p>Existing cost sketch.</p><a class="btn" href="/finops-estimator/">Open</a></article></div>
+<p class="muted">Need hands-on help? <a href="/discovery/">Book a $99 Discovery</a> or <a href="/en/plans/">see official plans</a>.</p>
+</div>
+<script>function calc(){var it=+document.getElementById('it').value||0;var ot=+document.getElementById('ot').value||0;var ip=+document.getElementById('ip').value||0;var op=+document.getElementById('op').value||0;var r=+document.getElementById('r').value||0;
+var inputCost=it/1000000*ip;var outputCost=ot/1000000*op;var totalRun=inputCost+outputCost;var monthly=totalRun*r;var yearly=monthly*12;
+var html='<div class="result">Per run: $'+totalRun.toFixed(2)+'</div>';
+html+='<li>Input cost: $'+inputCost.toFixed(2)+'</li>';
+html+='<li>Output cost: $'+outputCost.toFixed(2)+'</li>';
+html+=(r>0?'<li>Monthly ('+r+' runs): <b>$'+monthly.toFixed(2)+'</b></li><li>Yearly: <b>$'+yearly.toFixed(2)+'</b></li>':'');
+html+='<li>Per 1M tokens: $'+(ip+op).toFixed(2)+'</li>';
+document.getElementById('out').innerHTML='<ul>'+html+'</ul>';
+}calc();</script>
+<footer style="text-align:center;padding:24px"><a href="/contact/">Contato</a> · kleber@ziontechgroup.com</footer>
+</body>
+</html>
