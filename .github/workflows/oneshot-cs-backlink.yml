@@ -1,0 +1,24 @@
+name: oneshot-cs-backlink
+on:
+  push:
+    branches: [ops/cs-backlink-wf]
+permissions:
+  contents: write
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build ship branch from main
+        run: |
+          set -euo pipefail
+          git init -q repo && cd repo
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git fetch -q --depth=1 origin d42570b6f3078b58fe5efa7a060e6990b536edac ${{ github.sha }}
+          git show ${{ github.sha }}:ops/cs.patch > /tmp/cs.patch
+          git checkout -q -b ship/cs-backlink d42570b6f3078b58fe5efa7a060e6990b536edac
+          git apply /tmp/cs.patch
+          echo '6f3f62c4d4b5609cc25cc8698a346d14a573a62ac3bd05cb8c2d742cfc71ee5e  public/case-studies/index.html' > /tmp/seal
+          sha256sum -c /tmp/seal
+          test "$(git status --porcelain | wc -l)" = "1"
+          git -c user.name=zion-bot -c user.email=bot@ziontechgroup.com commit -qam "feat(proof): /case-studies/ back-link to smart-hands post (public/ only)"
+          git push -f origin ship/cs-backlink

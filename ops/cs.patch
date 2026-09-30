@@ -1,0 +1,12 @@
+diff --git a/public/case-studies/index.html b/public/case-studies/index.html
+index 25bf738..c878e8b 100644
+--- a/public/case-studies/index.html
++++ b/public/case-studies/index.html
+@@ -43,6 +43,7 @@
+ <h2>Suporte de hardware on-site — associação de saúde (Brasília)</h2>
+ <p>Uma associação de saúde em Brasília acionou a Zion para <strong>suporte de hardware on-site (smart hands)</strong>. Um técnico da Zion foi ao local e trocou a <strong>fonte (PSU)</strong> de um storage <strong>NetApp</strong>.</p>
+ <p>Serviço concluído em <strong>28–29 de setembro de 2026</strong>, com o cliente notificado.</p>
++<p>Leia mais: <a href="/blog/smart-hands-suporte-hardware-on-site/">como funciona o suporte smart hands on-site</a>.</p>
+ <p class="actions">
+ <a class="btn" href="/contact/">Consulte</a>
+ <a class="btn alt" href="/discovery/">Discovery $99</a>
