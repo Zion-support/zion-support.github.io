@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Secret notes | Zion Tech Group</title>
+<meta name="description" content="Record where a credential might live and who rotates it. This page does not scan code and does not accept a key."/>
+<link rel="canonical" href="https://ziontechgroup.com/secret-notes/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em;font-size:clamp(28px,4vw,40px)}h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+ul{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<h1>Secret notes</h1>
+<p>The older Secrets Sentinel page still shows broken styles and asks you to paste a config. Use this note instead. Do not type a key, token, or password here.</p>
+<h2>Write down</h2>
+<ul>
+<li>The system name, not the secret.</li>
+<li>Where the config lives: a repo name or a host name.</li>
+<li>The person who rotates it, and the date.</li>
+<li>Who to tell if it was copied into a ticket.</li>
+</ul>
+<label>System<input id="system" placeholder="Billing API"></label>
+<label>Where it lives<input id="where" placeholder="repo name only"></label>
+<label>Who rotates it<input id="who" placeholder="Platform owner"></label>
+<label>Rotate by<input id="when" placeholder="2026-10-15"></label>
+<label>Who to tell<input id="tell" placeholder="Security lead"></label>
+<button type="button" id="go">Write the rotation note</button>
+<pre id="out" hidden></pre>
+<p>A filled note is a reminder for a person. It is not a scan result and not proof that a repository is clean.</p>
+<p>Related: <a href="/cybersecurity/">Cybersecurity</a> · <a href="/certificate-checklist/">Certificate checklist</a> · <a href="/compliance-desk/">Compliance desk</a> · <a href="/prompt-shield-desk/">Prompt shield desk</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const g=id=>(document.getElementById(id).value||"").trim();
+  const lines=[
+    "System: "+(g("system")||"(blank)"),
+    "Where: "+(g("where")||"(blank)"),
+    "Rotates: "+(g("who")||"(blank)"),
+    "By: "+(g("when")||"(blank)"),
+    "Tell: "+(g("tell")||"(blank)"),
+    "",
+    "No key was typed. Nothing was scanned. Nothing was uploaded."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer>
+<a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>
+Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950
+</footer>
+</div>
+</body>
+</html>

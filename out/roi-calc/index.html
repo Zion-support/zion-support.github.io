@@ -6,6 +6,7 @@
 <title>ROI Calc · Zion Tech Group</title>
 <meta name="description" content="Compare horas manuais contra os planos oficiais Zion: Discovery $99, Consulting $499, Starter $2.500."/>
 <link rel="canonical" href="https://ziontechgroup.com/roi-calc/"/>
+<link rel="stylesheet" href="/assets/css/apps-network.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,sans-serif;background:#0b1220;color:#e6f0ff;line-height:1.5}
@@ -21,7 +22,7 @@ button,.buy{display:inline-block;margin-top:16px;padding:12px 20px;border:0;bord
 </head>
 <body>
 <div class="wrap">
-<nav><a href="/">Home</a><a href="/apps/">Apps</a><a href="/plans/">Plans</a><a href="/discovery/">Discovery</a><a href="/stack-audit/">Stack audit</a><a href="/agent-brief/">Agent brief</a></nav>
+<nav class="apps-nav" data-apps-nav></nav>
 <h1>ROI Calc</h1>
 <p>Quantas horas por mês o processo consome, e o que os planos oficiais Zion cobrem. Sem inventar preço de hardware.</p>
 <label>Horas manuais / mês</label>
@@ -31,9 +32,14 @@ button,.buy{display:inline-block;margin-top:16px;padding:12px 20px;border:0;bord
 <button type="button" onclick="run()">Calcular</button>
 <div class="out" id="out"></div>
 <p style="margin-top:24px"><a class="buy" href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b">Pagar Discovery $99</a>
-<a class="buy" href="/plans/">Ver planos</a></p>
+<a class="buy" href="/plans/">Ver planos</a>
+<a class="buy" href="/token-cost/">Token cost</a>
+<a class="buy" href="/finops-estimator/">FinOps estimator</a></p>
+<h2 style="margin-top:32px">More from the network</h2>
+<div class="apps-grid" data-apps-related></div>
 </div>
-<footer style="text-align:center;padding:24px"><a href="/contact/">Contato</a> · kleber@ziontechgroup.com</footer>
+<footer style="text-align:center;padding:24px"><a href="/apps/">Apps hub</a> · <a href="/contact/">Contato</a> · kleber@ziontechgroup.com</footer>
+<script src="/assets/js/apps-network.js" defer></script>
 <script>
 function run(){
   var h=+document.getElementById('hours').value||0;
@@ -47,4 +53,16 @@ function run(){
 }
 run();
 </script>
+
+<section class="zion-apps-network-footer" style="max-width:1100px;margin:40px auto;padding:24px;border-top:1px solid #26324d;color:#9aa8bd;font:14px/1.6 system-ui,sans-serif">
+  <p style="margin:0 0 8px;font-weight:700;color:#e8eef8">Zion Apps Network</p>
+  <p style="margin:0 0 10px">This app is part of the interlinked constellation on ziontechgroup.com.</p>
+  <p style="margin:0">
+    <a href="/apps-network/" style="color:#c4b5fd;margin-right:12px">Apps Network hub</a>
+    <a href="/apps/" style="color:#c4b5fd;margin-right:12px">Live catalog</a>
+    <a href="/apps/playbook/" style="color:#c4b5fd;margin-right:12px">Playbook</a>
+    <a href="/discovery/" style="color:#c4b5fd;margin-right:12px">Discovery $99</a>
+    <a href="/" style="color:#c4b5fd">Home</a>
+  </p>
+</section>
 </body></html>

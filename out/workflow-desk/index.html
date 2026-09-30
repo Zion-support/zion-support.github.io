@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Workflow desk | Zion Tech Group</title>
+<meta name="description" content="Write the steps, the branch, and the person who can stop a multi-step agent workflow."/>
+<link rel="canonical" href="https://ziontechgroup.com/workflow-desk/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}
+.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}
+nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em;font-size:clamp(28px,4vw,40px)}
+h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/orchestration-map/">Map</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<h1>Workflow desk</h1>
+<p>Use this desk before you draw a workflow. The builder on this site is linked below. This page does not execute a step.</p>
+<h2>Write down</h2>
+<ul><li>The trigger, in one sentence.</li><li>The branch: what happens when the check fails.</li><li>The person who can stop the run.</li></ul>
+<label>Workflow<input id="name" placeholder="After-hours ticket"></label>
+<label>Trigger<input id="trigger" placeholder="A ticket arrives with priority high"></label>
+<label>Steps<input id="steps" placeholder="Classify, draft, wait for a person"></label>
+<label>If the check fails<input id="branch" placeholder="Leave the ticket with the queue owner"></label>
+<label>Who stops it<input id="stop" placeholder="Service desk lead"></label>
+<button type="button" id="go">Write workflow card</button>
+<pre id="out" hidden></pre>
+<p>A step that changes a customer, a payment, or access waits for the person named above.</p>
+<p>Related: <a href="/ai-agent-workflow-builder/">Workflow builder</a> · <a href="/services/ai-workflow-automation/">Workflow guide</a> · <a href="/automation-sketch/">Automation sketch</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const g=id=>(document.getElementById(id).value||"").trim();
+  const lines=['Workflow: '+(g('name')||'(blank)'),'Trigger: '+(g('trigger')||'(blank)'),'Steps: '+(g('steps')||'(blank)'),'If the check fails: '+(g('branch')||'(blank)'),'Who stops it: '+(g('stop')||'(blank)'),"","Nothing was uploaded. Copy this into the system of record."];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer>
+<a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>
+Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950
+</footer>
+</div>
+</body>
+</html>
