@@ -4,6 +4,10 @@
 /sitemap.xml  /sitemap-0.xml  301
 
 /case-studies/    /contact/    301
+/industries/financial-services/ /industries/financial-services/index.html 200
+/industries/financial-services /industries/financial-services/index.html 200
+/tools/phishing-analyzer /tools/phishing-analyzer/index.html 200
+/tools/phishing-analyzer/ /tools/phishing-analyzer/index.html 200
 /industries/    /services/    301
 /free-tools-hub/    /tools/    301
 /products/    /services/    301
@@ -26,12 +30,8 @@
 /industries/insurance/ /industries/insurance/index.html 200
 /industries/healthcare/ /industries/healthcare/index.html 200
 /industries/legal/ /industries/legal/index.html 200
-/industries/financial-services/ /industries/financial-services/index.html 200
-/industries/financial-services /industries/financial-services/index.html 200
 /tools/ai-quick-audit /tools/ai-quick-audit/index.html 200
 /tools/ai-quick-audit/ /tools/ai-quick-audit/index.html 200
-/tools/phishing-analyzer /tools/phishing-analyzer/index.html 200
-/tools/phishing-analyzer/ /tools/phishing-analyzer/index.html 200
 /assets/js/conversion-events.js /assets/js/conversion-events.js 200
 /pricing/ /pricing/index.html 200
 /stripe/ /stripe/index.html 200
