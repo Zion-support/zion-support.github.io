@@ -1,0 +1,30 @@
+name: oneshot-proof-interlink
+on:
+  push:
+    branches: [ops/proof-interlink-wf]
+permissions:
+  contents: write
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build ship branch from main
+        run: |
+          set -euo pipefail
+          git init -q repo && cd repo
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git fetch -q --depth=1 origin 221aef49dfdd45f99d43d34b842397a340763326 ${{ github.sha }}
+          git show ${{ github.sha }}:ops/pi.patch > /tmp/pi.patch
+          git checkout -q -b ship/proof-interlink 221aef49dfdd45f99d43d34b842397a340763326
+          git apply /tmp/pi.patch
+          printf '%s\n' \
+            '32da72919a1c20d5146644f6fc5b8361fbe4838f6e1b8d8d1da8eac675591a6c  public/index.html' \
+            '75a1654ef02a26aa5e25351e181657c683fbaa1dda7d12dc22c3b67b3d057ec5  public/para-msp/index.html' \
+            'c022999e6a720be3a32cc7e6f3b06e5b2b0843fe1454a09c1b77113bc38d19f1  public/ai-consulting-services/index.html' \
+            'e0a3c7e49bdcd1b8c00ae53976302b9ae5434d58984146e05c8dfd95f1610424  public/discovery/index.html' \
+            '6cb0b9eb8ea9f7aa6951a9ff97ec9f18db92d5665608a454503db0e5a93d89d4  public/plans/index.html' \
+            '09794b06b96f06d82c4e5321df5faff19400e8fc222f5b6ec68a5500c36d0bad  public/en/plans/index.html' > /tmp/seal
+          sha256sum -c /tmp/seal
+          test "$(git status --porcelain | wc -l)" = "6"
+          git -c user.name=zion-bot -c user.email=bot@ziontechgroup.com commit -qam "feat(proof): smart-hands proof interlinks + /pricing/ anchor cleanup (6 pages, public/ only)"
+          git push -f origin ship/proof-interlink

@@ -1,0 +1,94 @@
+diff --git a/public/ai-consulting-services/index.html b/public/ai-consulting-services/index.html
+index 35015f1..fc620b8 100644
+--- a/public/ai-consulting-services/index.html
++++ b/public/ai-consulting-services/index.html
+@@ -59,8 +59,9 @@
+     <li><strong>ROI-ordered list</strong> — what to do first, what to wait on, what not to automate.</li>
+     <li><strong>Build / buy / wait</strong> — a recommendation, not a catalog upsell.</li>
+     <li><strong>Architecture sketch</strong> — data boundaries, human approvals, and the smallest useful pilot.</li>
+-    <li><strong>Written commercial path</strong> — Discovery → Consulting → Starter or Growth, with live prices on <a href="/plans/">/plans/</a> (<a href="/plans/">/pricing/</a> is a soft noindex alias).</li>
++    <li><strong>Written commercial path</strong> — Discovery → Consulting → Starter or Growth, with live prices on <a href="/plans/">/plans/</a>.</li>
+   </ol>
++  <p>On-site delivery: for a health association in Brasília, a Zion technician swapped the power supply on a NetApp storage system (28–29 Sep 2026) and notified the client. This was hands-on hardware work, not an AI engagement. <a href="/case-studies/#proof-saude-df">See the case</a> · <a href="/blog/smart-hands-suporte-hardware-on-site/">Smart hands post (in Portuguese)</a>.</p>
+ </section>
+ 
+ <section id="board-level-roi">
+@@ -213,7 +214,7 @@
+   <a class="btn" href="/discovery/">Start Discovery — $99</a>
+   <a class="btn alt" href="/contact/">Or write Zion</a>
+ </div>
+-<p class="see-also">Related blogs: <a href="/blog/discovery-vs-starter-zion/">Discovery vs Starter</a> · <a href="/blog/pay-vs-consulte-ai-automation/">Pay vs Consulte</a> · <a href="/blog/invoice-automation-ai-pay-vs-consulte/">invoice automation</a> · <a href="/blog/it-api-management-pay-vs-consulte/">API management</a> · <a href="/blog/ai-data-lakehouse-pipelines-pay-vs-consulte/">lakehouse</a> · <a href="/blog/ai-revenue-operations-pay-vs-consulte/">RevOps</a> · <a href="/blog/">Blog hub</a> · See also: <a href="/discovery/">Discovery $99</a> · <a href="/ai-services/">AI services hub</a> · <a href="/autonomous-ai-agents/">Autonomous AI agents</a> · <a href="/agents/">/agents/</a> (capability hub) · <a href="/finops-consulting/">FinOps consulting</a> · <a href="/managed-it-services/">Managed IT</a> · <a href="/fintech-it-ai/">Fintech IT / AI</a> · <a href="/healthcare-it-hipaa/">Healthcare IT / HIPAA</a> · <a href="#board-level-roi">Board-level ROI</a> · <a href="#readiness-checks">Readiness checks</a> · <a href="/blog/ai-consulting-services-for-business/">AI consulting ROI for the board</a> · <a href="/blog/ai-consulting-services-for-business/">AI consulting blog</a> · <a href="/plans/">Plans</a> · <a href="/plans/">Pricing</a></p>
++<p class="see-also">Related blogs: <a href="/blog/discovery-vs-starter-zion/">Discovery vs Starter</a> · <a href="/blog/pay-vs-consulte-ai-automation/">Pay vs Consulte</a> · <a href="/blog/invoice-automation-ai-pay-vs-consulte/">invoice automation</a> · <a href="/blog/it-api-management-pay-vs-consulte/">API management</a> · <a href="/blog/ai-data-lakehouse-pipelines-pay-vs-consulte/">lakehouse</a> · <a href="/blog/ai-revenue-operations-pay-vs-consulte/">RevOps</a> · <a href="/blog/">Blog hub</a> · See also: <a href="/discovery/">Discovery $99</a> · <a href="/ai-services/">AI services hub</a> · <a href="/autonomous-ai-agents/">Autonomous AI agents</a> · <a href="/agents/">/agents/</a> (capability hub) · <a href="/finops-consulting/">FinOps consulting</a> · <a href="/managed-it-services/">Managed IT</a> · <a href="/fintech-it-ai/">Fintech IT / AI</a> · <a href="/healthcare-it-hipaa/">Healthcare IT / HIPAA</a> · <a href="#board-level-roi">Board-level ROI</a> · <a href="#readiness-checks">Readiness checks</a> · <a href="/blog/ai-consulting-services-for-business/">AI consulting ROI for the board</a> · <a href="/blog/ai-consulting-services-for-business/">AI consulting blog</a> · <a href="/plans/">Plans</a></p>
+ 
+ <footer>
+   <p>© 2026 Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p>
+diff --git a/public/discovery/index.html b/public/discovery/index.html
+index 830d5a9..013fdfe 100644
+--- a/public/discovery/index.html
++++ b/public/discovery/index.html
+@@ -115,7 +115,7 @@
+ 
+ <section>
+   <h2>Por que $99</h2>
+-  <p>Barreira baixa para um recorte escrito. Você compra clareza antes de Consulting $499, Starter $2.500 ou Growth $8.000/mês. O preço do Discovery é o único oferecido como Offer neste hub — os demais planos estão em <a href="/plans/">/plans/</a> e <a href="/plans/">/pricing/</a>.</p>
++  <p>Barreira baixa para um recorte escrito. Você compra clareza antes de Consulting $499, Starter $2.500 ou Growth $8.000/mês. O preço do Discovery é o único oferecido como Offer neste hub — os demais planos estão em <a href="/plans/">/plans/</a>.</p>
+ </section>
+ 
+ <section>
+diff --git a/public/en/plans/index.html b/public/en/plans/index.html
+index 91e7a38..8be470c 100644
+--- a/public/en/plans/index.html
++++ b/public/en/plans/index.html
+@@ -149,7 +149,7 @@
+   </details>
+   <details>
+     <summary>Is /pricing/ the same as /plans/?</summary>
+-    <p>Yes — <a href="/plans/">/pricing/</a> is a soft alias (noindex) for this menu. The indexable source is <strong>/plans/</strong> (PT) and <strong>/en/plans/</strong> (EN).</p>
++    <p>Yes — /pricing/ is a soft alias (noindex) for this menu. The indexable source is <strong>/plans/</strong> (PT) and <strong>/en/plans/</strong> (EN).</p>
+   </details>
+ </section>
+ 
+diff --git a/public/index.html b/public/index.html
+index 6f72104..4e2052f 100644
+--- a/public/index.html
++++ b/public/index.html
+@@ -82,6 +82,10 @@
+     <p>FGV renovou a Zion para manutenção de informática (SDCOMPRASTIC-6963 · PO 12 Aug 2026). Continuidade operacional — não ROI inventado.</p>
+     <p><a class="btn" href="/case-studies/">Ver case studies</a></p>
+   </div>
++  <div class="card">
++    <h3>Suporte on-site — smart hands</h3>
++    <p>Suporte on-site: numa associação de saúde em Brasília, um técnico Zion trocou a fonte de um storage NetApp (28–29/09/2026), com o cliente notificado. <a href="/case-studies/#proof-saude-df">Ver o caso</a> · <a href="/blog/smart-hands-suporte-hardware-on-site/">Smart hands on-site</a>.</p>
++  </div>
+ </section>
+ 
+ <section id="app-network" aria-labelledby="apps-h">
+diff --git a/public/para-msp/index.html b/public/para-msp/index.html
+index c0e62be..07544aa 100644
+--- a/public/para-msp/index.html
++++ b/public/para-msp/index.html
+@@ -77,6 +77,11 @@
+ <p>A FGV renovou com a Zion a manutenção de informática referenciada como SDCOMPRASTIC-6963, com PO de 12/08/2026. É um caso de managed IT (continuidade operacional), não um resultado de MSP nem de agentes.</p>
+ <p><a href="/managed-it-services/#proof-fgv">Ver a prova FGV</a> · <a href="/case-studies/">Cases</a></p>
+ </article>
++<article class="card">
++<p class="eyebrow">Prova irmã</p>
++<h3>Suporte on-site — smart hands</h3>
++<p>Suporte on-site: numa associação de saúde em Brasília, um técnico Zion trocou a fonte de um storage NetApp (28–29/09/2026), com o cliente notificado. <a href="/case-studies/#proof-saude-df">Ver o caso</a> · <a href="/blog/smart-hands-suporte-hardware-on-site/">Smart hands on-site</a>.</p>
++</article>
+ </div>
+ 
+ <h2>Como começar</h2>
+diff --git a/public/plans/index.html b/public/plans/index.html
+index 52f7d1e..7f259a8 100644
+--- a/public/plans/index.html
++++ b/public/plans/index.html
+@@ -150,7 +150,7 @@
+   </details>
+   <details>
+     <summary>/pricing/ é a mesma coisa que /plans/?</summary>
+-    <p>Sim — <a href="/plans/">/pricing/</a> é alias soft (noindex) para este menu. A fonte indexável é <strong>/plans/</strong>. Não ressuscitamos /pricing/ como página indexável.</p>
++    <p>Sim — /pricing/ é alias soft (noindex) para este menu. A fonte indexável é <strong>/plans/</strong>. Não ressuscitamos /pricing/ como página indexável.</p>
+   </details>
+ </section>
+ 
