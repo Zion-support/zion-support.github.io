@@ -1,0 +1,32 @@
+name: Chefe restore public (one-shot)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore public/ from d0588781 onto a branch
+        run: |
+          set -euo pipefail
+          GOOD=$(git rev-parse d0588781)
+          STALE=$(git rev-parse ce155e6c)
+          git config user.name "Zion Chefe"
+          git config user.email "kleber@ziontechgroup.com"
+          git checkout -b chefe/restore-public-2026-09-30
+          SKIP='^public/(index\.html|sitemap\.xml|llm-cost-calculator/index\.html)$'
+          git diff --no-renames --name-only --diff-filter=DM "$GOOD" HEAD -- public/ | grep -Ev "$SKIP" > /tmp/restore.txt || true
+          echo "restoring $(wc -l < /tmp/restore.txt) files"
+          tr '\n' '\0' < /tmp/restore.txt | xargs -0 -r -n 200 git checkout "$GOOD" --
+          git show "$GOOD:public/index.html" > /tmp/o; git show "$STALE:public/index.html" > /tmp/b; cp public/index.html /tmp/t
+          if git merge-file -p /tmp/o /tmp/b /tmp/t > /tmp/r; then cp /tmp/r public/index.html; echo "index.html 3-way merged"; else echo "index.html conflict: kept main"; fi
+          for f in managed-it-services/index.html healthcare-it-hipaa/index.html blog/hipaa-compliant-it-services/index.html; do mkdir -p "$(dirname "$f")"; git show "$GOOD:$f" > "$f"; done
+          git rm -q --ignore-unmatch public/ops/comms/CEO-OPS.md public/ops/comms/log.json public/ops/comms/agents.json public/ops/comms/roster.json public/ops/comms/state.json public/ops/comms/presence.json
+          git add -A public/ managed-it-services/index.html healthcare-it-hipaa/index.html blog/hipaa-compliant-it-services/index.html
+          git commit -q -m "Chefe P0: restore public/ to d0588781 after 173f65ba wipe + stale ce155e6c restore (index.html 3-way; Hermes /services/* kept)"
+          for p in sitemap-0.xml healthcare-it-hipaa/index.html case-studies/index.html blog/ai-automation-for-msps/index.html; do echo "$p $(sha256sum public/$p | cut -c1-12)"; done
+          git push -f origin chefe/restore-public-2026-09-30
