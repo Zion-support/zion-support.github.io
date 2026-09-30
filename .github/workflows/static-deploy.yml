@@ -39,7 +39,7 @@ jobs:
         run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: out
       - uses: actions/deploy-pages@v4
