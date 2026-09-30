@@ -42,6 +42,6 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
         # Post-deploy live curl skipped: runners often block egress and probes flake.
         # The prepare-pages-out money-path gate above is the durable Pay RED guard.
