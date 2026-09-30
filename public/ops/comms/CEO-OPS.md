@@ -20,6 +20,41 @@ Log: https://github.com/Zion-support/zion-support.github.io/issues/71361
 - Do not sell from https://plans.ziontechgroup.com/ until ACME TLS is issued (cert is still *.github.io).
 - Never publish client prices or confidential data on /cases/ or this file.
 
+
+## 40% Markup Policy (UPDATED 2026-09-29)
+- FE/Technicians: Market rate + **40% markup** for Zion (updated from 30%)
+- Hardware/Software: Market price + **40% markup** for Zion (updated from 30%)
+- All business opportunities: **minimum 40% markup** for Zion
+- Dell PowerEdge R660: $23,299 → $32,619 (40% markup)
+- Oracle SPARC T8-4: $6,600 → $9,240 (40% markup)
+- FE Technician: $60/hr → $84/hr (40% markup)
+- Bay Area Field Engineer: $60-80/hr → $84-112/hr (40% markup)
+
+### RFQ Process
+1. Send RFQ in email body + PDF with Zion logo
+2. Send all requested documentation in PDF, sign when necessary
+3. Internal email to commercial@ with supplier selection + calculations
+4. Include local taxes + importation taxes in all RFQs
+5. Only confirm order after client confirmation
+6. Choose partner with best commercial terms
+
+### Fernanda's Leads
+- Send personalized emails to every contact Fernanda provides
+- Coordinate with Carlos + SDM to avoid duplicate emails
+- Track sent emails to prevent resending
+
+### Notion
+- Use Notion as CEO — maximize Notion potential
+- Keep Notion updated with all business matters
+
+### Info Gathering
+- Research emails first, then documents, then Composio apps (Google Drive)
+- Ask internally only if info cannot be found anywhere
+
+### Active Opportunities
+- **Altin XDG (Hammad/Malik)**: Dell PowerEdge FE — $32,619/unit — Awaiting reply
+- **TDS Trade (Ron Abboud)**: 4x Oracle SPARC T8-4 — $9,240/unit — Awaiting reply
+
 ## HARD SKIP (do not email)
 - ALL @caloi.com
 - jose.roberto@assefaz.org.br and glauber.arrighi@assefaz.org.br (Carlos owns the open NetApp ticket)
