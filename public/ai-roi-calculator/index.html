@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI ROI Calculator — Zion Tech Group</title>
+<meta name="description" content="Calcule o ROI estimado de um projeto de automação ou IA antes de investir. Input seu processo, receba uma ordem de grandeza e um relatório para a diretoria.">
+<link rel="canonical" href="https://ziontechgroup.com/ai-roi-calculator/">
+<meta property="og:title" content="AI ROI Calculator — Zion Tech Group">
+<meta property="og:description" content="Calcule o ROI estimado de automação e IA antes de investir.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ziontechgroup.com/ai-roi-calculator/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface2: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #8888a0;
+    --accent: #4f8cff;
+    --accent2: #7c5cff;
+    --green: #34d399;
+    --red: #f87171;
+    --yellow: #fbbf24;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  header { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+  .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+  .logo span { color: var(--text); }
+  nav { display: flex; gap: 20px; align-items: center; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  nav a:hover { color: var(--text); }
+  nav .btn-nav { background: var(--accent); color: #fff !important; padding: 6px 14px; border-radius: 6px; font-weight: 600; }
+  nav .btn-nav:hover { background: var(--accent2); color: #fff !important; }
+  main { padding: 48px 0 80px; }
+  h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+  .card h2 { font-size: 1.2rem; margin-bottom: 20px; color: var(--text); }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1rem; font-family: var(--font); transition: border-color 0.2s; }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; width: 100%; justify-content: center; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(79,140,255,0.3); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text); padding: 10px 20px; border-radius: 8px; font-weight: 500; font-size: 0.9rem; border: 1px solid var(--border); cursor: pointer; text-decoration: none; transition: border-color 0.2s; }
+  .btn-secondary:hover { border-color: var(--accent); }
+  .results { display: none; margin-top: 32px; animation: fadeUp 0.4s ease; }
+  .results.visible { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  @media (max-width: 600px) { .result-grid { grid-template-columns: 1fr; } }
+  .result-item { background: var(--surface2); border-radius: 10px; padding: 20px; text-align: center; border: 1px solid var(--border); }
+  .result-item .value { font-size: 2.2rem; font-weight: 700; color: var(--green); }
+  .result-item .label { font-size: 0.8rem; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .result-item.accent .value { color: var(--accent); }
+  .result-item.warning .value { color: var(--yellow); }
+  .result-item.danger .value { color: var(--red); }
+  .verdict { background: var(--surface2); border-radius: 10px; padding: 24px; border-left: 4px solid var(--accent); margin-bottom: 20px; }
+  .verdict h3 { font-size: 1rem; margin-bottom: 8px; }
+  .verdict p { color: var(--muted); font-size: 0.95rem; }
+  .board-report { background: var(--surface2); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+  .board-report h4 { font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .board-report pre { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 14px; font-size: 0.8rem; color: var(--text); overflow-x: auto; white-space: pre-wrap; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .footer { border-top: 1px solid var(--border); margin-top: 60px; padding: 32px 0; color: var(--muted); font-size: 0.85rem; }
+  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+  .footer-links a { color: var(--muted); text-decoration: none; }
+  .footer-links a:hover { color: var(--text); }
+  .badge { display: inline-block; background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; color: var(--muted); margin-bottom: 12px; }
+  .toggle-lang { background: none; border: 1px solid var(--border); color: var(--muted); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+  .toggle-lang:hover { border-color: var(--accent); color: var(--text); }
+  .lang-active { color: var(--accent) !important; border-color: var(--accent) !important; }
+</style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <a href="https://ziontechgroup.com/" class="logo">Zion <span>Tech Group</span></a>
+    <nav>
+      <a href="https://ziontechgroup.com/discovery/">Discovery $99</a>
+      <a href="https://ziontechgroup.com/plans/">Plans</a>
+      <a href="https://ziontechgroup.com/ai-agent-workflow-builder/">Workflow Builder</a>
+      <a href="https://ziontechgroup.com/managed-it-health-check/">IT Health Check</a>
+      <a href="https://ziontechgroup.com/finops-spend-analyzer/">FinOps Analyzer</a>
+      <a href="https://ziontechgroup.com/contact/" class="btn-nav">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <span class="badge">Ferramenta gratuita · Sem cadastro</span>
+    <h1>AI ROI Calculator</h1>
+    <p class="subtitle">Informe um processo de automação ou IA e receba uma estimativa de ROI — ordem de grandeza, relatório para a diretoria e próximo passo. Não é garantia financeira.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>1. Seu processo</h2>
+        <form id="roi-form">
+          <div class="form-group">
+            <label for="process_name">Nome do processo</label>
+            <input type="text" id="process_name" placeholder="Ex: Onboarding de clientes, Triagem de tickets, Fechamento mensal" required>
+          </div>
+          <div class="form-group">
+            <label for="industry">Setor</label>
+            <select id="industry">
+              <option value="tiete">Tietê / Serviços gerais</option>
+              <option value="saude">Saúde / HIPAA</option>
+              <option value="financas">Finanças / Fintech</option>
+              <option value="manufatura">Manufatura / Industrial</option>
+              <option value="retail">Varejo / E-commerce</option>
+              <option value="gov">Governo / Público</option>
+              <option value="tech">Tecnologia / SaaS</option>
+              <option value="logistica">Logística / Supply Chain</option>
+              <option value="energy">Energia / Utilities</option>
+              <option value="mid-market">Mid-market / Enterprise</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cycle_time">Ciclo atual (horas)</label>
+              <input type="number" id="cycle_time" placeholder="Ex: 8" min="0.1" step="0.5" required>
+            </div>
+            <div class="form-group">
+              <label for="frequency">Frequência (por mes)</label>
+              <input type="number" id="frequency" placeholder="Ex: 40" min="1" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="labor_cost">Custo hora da tarefa (R$)</label>
+              <input type="number" id="labor_cost" placeholder="Ex: 60" min="1" step="0.5" required>
+            </div>
+            <div class="form-group">
+              <label for="people">Pessoas envolvidas</label>
+              <input type="number" id="people" placeholder="Ex: 3" min="1" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="error_rate">Taxa de erro / retrabalho (% das execucoes)</label>
+            <input type="number" id="error_rate" placeholder="Ex: 15" min="0" max="100" step="1" value="5">
+          </div>
+          <div class="form-group">
+            <label for="software_spend">Gasto mensal atual com SaaS / ferramentas (R$)</label>
+            <input type="number" id="software_spend" placeholder="Ex: 2000" min="0" step="100" value="0">
+          </div>
+          <button type="submit" class="btn-primary">Calcular ROI estimado</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="card" style="height: fit-content;">
+          <h2>2. Resultado estimado</h2>
+          <div id="results" class="results">
+            <div class="result-grid">
+              <div class="result-item accent">
+                <div class="value" id="r-annual-savings">—</div>
+                <div class="label">Economia anual estimada</div>
+              </div>
+              <div class="result-item">
+                <div class="value" id="r-payback">—</div>
+                <div class="label">Payback estimado</div>
+              </div>
+              <div class="result-item warning">
+                <div class="value" id="r annual-invested">—</div>
+                <div class="label">Investimento anual estimado</div>
+              </div>
+            </div>
+            <div class="verdict" id="verdict">
+              <h3>Veredito: <span id="verdict-label">—</span></h3>
+              <p id="verdict-text">—</p>
+            </div>
+            <div class="board-report">
+              <h4>Relatório para a diretoria (copiar)</h4>
+              <pre id="board-report-text">—</pre>
+            </div>
+            <div class="cta-row">
+              <a href="https://ziontechgroup.com/discovery/" class="btn-primary" style="width: auto; padding: 12px 24px;">Discovery $99 — verificar esse processo</a>
+              <a href="https://buy.stripe.com/8x214o8NW35l5Xp3hm4ZG0b" class="btn-secondary" style="width: auto; padding: 12px 24px;" target="_blank">Pagar Discovery $99 (USD)</a>
+            </div>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: var(--muted);">
+              Depois do Discovery: <a href="https://ziontechgroup.com/ai-consulting-services/" style="color: var(--accent);">Consulting $499</a> ·
+              <a href="https://ziontechgroup.com/plans/" style="color: var(--accent);">Starter $2.500</a> ·
+              <a href="https://ziontechgroup.com/plans/" style="color: var(--accent);">Growth $8.000/mês</a>
+            </p>
+          </div>
+          <div id="results-placeholder" style="color: var(--muted); font-size: 0.9rem; padding: 20px 0;">
+            Preencha o formulário ao lado e clique em calcular. A estimativa é ordem de grandeza — não garantia financeira.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a href="https://ziontechgroup.com/" style="color: var(--accent); font-weight: 600;">Zion Tech Group</a> · Automação, Agentes de IA e Managed IT
+      <br><span style="font-size: 0.75rem;">Mid-market · Enterprise · Middletown, DE</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://ziontechgroup.com/discovery/">Discovery $99</a>
+      <a href="https://ziontechgroup.com/plans/">Plans</a>
+      <a href="https://ziontechgroup.com/ai-agent-workflow-builder/">Workflow Builder</a>
+      <a href="https://ziontechgroup.com/managed-it-health-check/">IT Health Check</a>
+      <a href="https://ziontechgroup.com/finops-spend-analyzer/">FinOps Analyzer</a>
+      <a href="https://ziontechgroup.com/contact/">Contato</a>
+      <a href="https://github.com/Zion-support/ai-roi-calculator">Código</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const form = document.getElementById('roi-form');
+  const results = document.getElementById('results');
+  const placeholder = document.getElementById('results-placeholder');
+
+  function calc() {
+    const cycleTime = parseFloat(document.getElementById('cycle_time').value) || 0;
+    const frequency = parseInt(document.getElementById('frequency').value) || 0;
+    const laborCost = parseFloat(document.getElementById('labor_cost').value) || 0;
+    const people = parseInt(document.getElementById('people').value) || 1;
+    const errorRate = parseFloat(document.getElementById('error_rate').value) || 0;
+    const softwareSpend = parseFloat(document.getElementById('software_spend').value) || 0;
+    const processName = document.getElementById('process_name').value.trim() || 'Processo';
+    const industry = document.getElementById('industry').value;
+
+    if (!cycleTime || !frequency || !laborCost) return;
+
+    const monthlyManualCost = cycleTime * frequency * laborCost * people;
+    const annualManualCost = monthlyManualCost * 12;
+    const errorCost = annualManualCost * (errorRate / 100);
+    const annualManualWithErrors = annualManualCost + errorCost;
+    const softwareAnnual = softwareSpend * 12;
+
+    // AI/automation investment estimate: 40-60% of manual cost saved, with implementation cost
+    const savingsRate = 0.5; // conservative 50% savings estimate
+    const annualSavings = annualManualWithErrors * savingsRate;
+    const implementationCost = Math.min(annualManualCost * 0.4, 25000); // cap realistic implementation
+    const annualInvested = implementationCost + (annualManualCost * 0.15); // 15% ongoing run cost
+    const netAnnual = annualSavings - annualInvested;
+    const paybackMonths = annualInvested > 0 ? Math.round((implementationCost / (annualSavings / 12)) * 10) / 10 : 0;
+    const paybackDisplay = paybackMonths <= 0 ? 'Imediato' : paybackMonths + ' meses';
+    const roiPercent = annualInvested > 0 ? Math.round((netAnnual / annualInvested) * 100) : 0;
+
+    let verdict, verdictLabel, verdictColor;
+    if (netAnnual > 50000) {
+      verdict = 'Investir — retorno claro em 12 meses';
+      verdictLabel = 'INVESTIR';
+      verdictColor = 'var(--green)';
+    } else if (netAnnual > 0) {
+      verdict = 'Discutir — retorno presente, escopo antes de escalar';
+      verdictLabel = 'DISCUTIR';
+      verdictColor = 'var(--yellow)';
+    } else {
+      verdict = 'Aguardar — o processo ainda não vale a pena automatizar';
+      verdictLabel = 'AGUARDAR';
+      verdictColor = 'var(--red)';
+    }
+
+    document.getElementById('r-annual-savings').textContent = 'R$ ' + Math.round(annualSavings).toLocaleString('pt-BR');
+    document.getElementById('r-payback').textContent = paybackDisplay;
+    document.getElementById('r-annual-invested').textContent = 'R$ ' + Math.round(annualInvested).toLocaleString('pt-BR');
+    document.getElementById('verdict-label').textContent = verdictLabel;
+    document.getElementById('verdict-label').style.color = verdictColor;
+    document.getElementById('verdict-text').textContent = verdict;
+    document.getElementById('board-report-text').textContent =
+      'RELATÓRIO DISCOVERY — ' + processName.toUpperCase() + ' (' + industry.toUpperCase() + ')\n' +
+      '------------------------------------------------------------\n' +
+      'Ciclo atual: ' + cycleTime + 'h x ' + frequency + '/mes x ' + people + ' pessoa(s) = R$ ' + Math.round(monthlyManualCost).toLocaleString('pt-BR') + '/mes\n' +
+      'Custo anual manual (com retrabalho de ' + errorRate + '%): R$ ' + Math.round(annualManualWithErrors).toLocaleString('pt-BR') + '\n' +
+      'Gasto SaaS atual: R$ ' + Math.round(softwareAnnual).toLocaleString('pt-BR') + '/ano\n' +
+      '------------------------------------------------------------\n' +
+      'Estimativa de economia anual com automação/IA (50% conservador): R$ ' + Math.round(annualSavings).toLocaleString('pt-BR') + '\n' +
+      'Investimento anual estimado (implementação + manutenção): R$ ' + Math.round(annualInvested).toLocaleString('pt-BR') + '\n' +
+      'Payback estimado: ' + paybackDisplay + '\n' +
+      'ROI estimado: ' + roiPercent + '% ao ano\n' +
+      '------------------------------------------------------------\n' +
+      'Veredito: ' + verdict + '\n' +
+      'Próximo passo sugerido: Discovery $99 (mapa de 1 processo + relatório executivo + sessão de 30 min).\n' +
+      'Nota: estimativa de ordem de grandeza, não garantia financeira. Dados reais exigem acesso ao sistema.';
+
+    placeholder.style.display = 'none';
+    results.classList.add('visible');
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    calc();
+  });
+
+  // Generate placeholder on load with sample
+  window.addEventListener('load', function() {
+    // Pre-fill with sample data for demo
+    document.getElementById('process_name').value = 'Triagem de tickets de suporte';
+    document.getElementById('cycle_time').value = 2;
+    document.getElementById('frequency').value = 200;
+    document.getElementById('labor_cost').value = 45;
+    document.getElementById('people').value = 2;
+    document.getElementById('error_rate').value = 12;
+    document.getElementById('software_spend').value = 1500;
+  });
+})();
+</script>
+</body>
+</html>

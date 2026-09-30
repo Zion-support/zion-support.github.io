@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translation brief | Zion Tech Group</title>
+<meta name="description" content="Write the source line, the term that must not change, and who approves the file. This page does not translate and does not upload a document.">
+<link rel="canonical" href="https://ziontechgroup.com/translation-brief/">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.ico">
+<style>
+label{display:block;margin:12px 0 6px}
+input{width:100%;max-width:640px;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#fff}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #334155;border-radius:12px;padding:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top" aria-label="Primary"><a class="brand" href="/">Zion Tech Group</a> <a href="/services/">Services</a> <a href="/solutions/">Solutions</a> <a href="/plans/">Plans</a> <a href="/discovery/">Discovery $99</a> <a href="/apps/">Apps</a> <a href="/contact/">Contact</a></nav>
+<p><a href="/apps/">Apps</a> · <a href="/content-studio/">Content studio</a> · <a href="/industries/media/">Media</a></p>
+<h1>Translation brief</h1>
+<p class="lead">The older translator page sent people to hosts that do not present a valid certificate, and it listed mailboxes this company does not use. Use this brief instead. Nothing is uploaded, and nothing is translated on this page.</p>
+<h2>Write down</h2>
+<ul>
+<li>The source line, in the language you already have.</li>
+<li>The name, price, or legal line that must not change.</li>
+<li>The language you need, and the channel (subtitle, email, or page).</li>
+<li>The person who approves the file before it is published.</li>
+</ul>
+<label for="source">Source line</label>
+<input id="source" placeholder="The sentence you already have">
+<label for="keep">Must not change</label>
+<input id="keep" placeholder="A product name or a legal line">
+<label for="lang">Target language</label>
+<input id="lang" placeholder="Portuguese">
+<label for="who">Who approves</label>
+<input id="who" placeholder="Editor or counsel">
+<p><button class="btn" type="button" id="go">Write the brief</button></p>
+<pre id="out" hidden></pre>
+<p>A filled brief is a note for a person. It is not a translation, not a likeness, and not proof that a file is ready to publish.</p>
+<h2>Related pages</h2>
+<p><a href="/content-studio/">Content studio</a> · <a href="/prompt-studio/">Prompt studio</a> · <a href="/solutions/media-entertainment/">Media solution</a> · <a href="/industries/media/">Media industry</a> · <a href="/portrait-consent/">Portrait consent</a> · <a href="/campaign-notes/">Campaign notes</a></p>
+<p><a class="btn" href="/discovery/">Discovery $99</a> <a class="btn alt" href="/contact/">Contact</a> <a class="btn alt" href="/plans/">Plans</a></p>
+<footer class="site-foot"><p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</p></footer>
+</div>
+<script>
+document.getElementById("go").onclick=function(){
+  var g=function(id){return (document.getElementById(id).value||"").trim();};
+  var lines=[
+    "Source: "+(g("source")||"(blank)"),
+    "Keep: "+(g("keep")||"(blank)"),
+    "Language: "+(g("lang")||"(blank)"),
+    "Approves: "+(g("who")||"(blank)"),
+    "",
+    "No file was uploaded. No translation was produced."
+  ];
+  var o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+</body>
+</html>

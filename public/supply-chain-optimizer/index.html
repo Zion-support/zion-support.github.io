@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supply chain optimizer | Zion Tech Group</title>
+<meta name="description" content="A reorder note you write yourself. Nothing on this page is ordered or shipped.">
+<link rel="canonical" href="https://ziontechgroup.com/supply-chain-optimizer/">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="/">Zion Tech Group</a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links" aria-label="Primary">
+<a href="/services/">Services</a>
+<a href="/plans/">Plans</a>
+<a href="/discovery/">Discovery</a>
+<a href="/solutions/">Solutions</a>
+<a href="/blog/">Blog</a>
+<a href="/contact/">Contact</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+</nav></div></header>
+<main id="conteudo" class="section"><div class="wrap">
+<p class="crumb"><a href="/">Home</a> / <a href="/scope-notes/">Scope notes</a> / Supply chain optimizer</p>
+<h1>Supply chain optimizer</h1>
+<p class="lead">The 28 September spotlight links here from smart inventory. Write the reorder note in the browser. Nothing is ordered, shipped, or sent to a supplier.</p>
+<h2>Write the note</h2>
+<label for="item">Item or category</label>
+<input id="item" autocomplete="off">
+<label for="lead">Lead time you already measured</label>
+<input id="lead" autocomplete="off">
+<label for="who">Who can change the reorder point</label>
+<input id="who" autocomplete="off">
+<label for="hold">What you will not automate yet</label>
+<textarea id="hold" rows="3"></textarea>
+<button type="button" onclick="note()">Write the note</button>
+<pre id="out" hidden></pre>
+<h2>Pages that open</h2>
+<ul>
+<li><a href="/smart-inventory/">Smart inventory</a>.</li>
+<li><a href="/inventory-forecast-ai/">Inventory forecast notes</a>.</li>
+<li><a href="/demand-sensing-hub/">Demand notes</a>.</li>
+<li><a href="/freight-rate-scout/">Freight notes</a>.</li>
+<li><a href="/solutions/logistics-supply-chain/">Logistics and supply chain</a>.</li>
+<li><a href="/industries/logistics/">Logistics industry note</a>.</li>
+<li><a href="/retail-desk/">Retail commerce desk</a>.</li>
+<li><a href="/apps/spotlight-2026-09-28.html">28 September spotlight</a>.</li>
+</ul>
+<p class="see-also"><a href="/scope-notes/">Scope notes</a> · <a href="/apps/ai-retail-suite.html">Retail suite</a> · <a href="/discovery/">Discovery $99</a></p>
+<script>
+function note(){
+  var g=function(id){return document.getElementById(id).value.trim();};
+  var lines=[
+    "Item: "+(g("item")||"(not set)"),
+    "Lead time measured: "+(g("lead")||"(not set)"),
+    "Reorder owner: "+(g("who")||"(not set)"),
+    "Not automated: "+(g("hold")||"(none)"),
+    "",
+    "A lead time without a measurement stays blank. This page does not place an order."
+  ];
+  var o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join(String.fromCharCode(10));
+}
+</script>
+<style>
+label{display:block;margin:12px 0 6px}
+input,textarea{width:100%;box-sizing:border-box;padding:10px}
+button{margin:14px 0;padding:10px 16px;font-weight:700}
+pre{white-space:pre-wrap}
+</style>
+
+</div></main>
+<script src="/assets/js/zion-shell.js" defer></script>
+</body>
+</html>
