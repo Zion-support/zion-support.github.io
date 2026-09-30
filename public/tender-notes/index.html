@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Tender notes | Zion Tech Group</title>
+<meta name="description" content="Record a public notice, the deadline, and whether you will bid. This page does not file a response."/>
+<link rel="canonical" href="https://ziontechgroup.com/tender-notes/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em;font-size:clamp(28px,4vw,40px)}h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+ul{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<h1>Tender notes</h1>
+<p>The older AI Tender Scout page still shows broken styles. Use this note. It does not search a portal and it does not submit a bid.</p>
+<h2>Write down</h2>
+<ul>
+<li>The notice name and the deadline.</li>
+<li>The person who decides go or no-go.</li>
+<li>The evidence you still do not have.</li>
+<li>Leave price blank. Do not invent a bid amount.</li>
+</ul>
+<label>Notice<input id="notice" placeholder="State network support RFQ"></label>
+<label>Deadline<input id="when" placeholder="2026-10-20"></label>
+<label>Decision owner<input id="owner" placeholder="Bid lead"></label>
+<label>Go or no-go<input id="decision" placeholder="No-go until the scope is clear"></label>
+<label>Missing evidence<textarea id="gap" rows="3" placeholder="Current architecture diagram"></textarea></label>
+<button type="button" id="go">Write the bid note</button>
+<pre id="out" hidden></pre>
+<p>A filled note is the list you take into <a href="/discovery/">Discovery</a>. It is not a proposal.</p>
+<p>Related: <a href="/rfp-readiness/">RFP readiness</a> · <a href="/edital-desk/">Edital desk</a> · <a href="/compliance-desk/">Compliance desk</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const g=id=>(document.getElementById(id).value||"").trim();
+  const lines=[
+    "Notice: "+(g("notice")||"(blank)"),
+    "Deadline: "+(g("when")||"(blank)"),
+    "Owner: "+(g("owner")||"(blank)"),
+    "Decision: "+(g("decision")||"(blank)"),
+    "Missing: "+(g("gap")||"(blank)"),
+    "",
+    "No bid was filed. No price was calculated. Nothing was uploaded."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer>
+<a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>
+Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Price gap notes | Zion Tech Group</title>
+<meta name="description" content="Compare up to three quotes you already have. This page does not watch a market or place an order."/>
+<link rel="canonical" href="https://ziontechgroup.com/price-gap-notes/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/free-tools/">Free tools</a><a href="/apps/">Apps</a><a href="/app-network/">Directory</a><a href="/orchestration-map/">Map</a><a href="/contact/">Contact</a></nav>
+<h1>Price gap notes</h1>
+<p>Enter quotes you already collected. The page shows the lowest, the highest, and the gap. It does not connect to an exchange, and it does not suggest a trade.</p>
+<h2>Write down</h2>
+<ul><li>The item.</li><li>Up to three vendor quotes, in the currency on the quote.</li><li>Who picks the vendor.</li></ul>
+<label>Item<input id="item" placeholder="Replacement fan, site 4"></label>
+<label>Vendor A<input id="na" placeholder="Name"></label>
+<label>Quote A<input id="pa" inputmode="decimal" placeholder="1200"></label>
+<label>Vendor B<input id="nb" placeholder="Name"></label>
+<label>Quote B<input id="pb" inputmode="decimal" placeholder="980"></label>
+<label>Vendor C<input id="nc" placeholder="Name"></label>
+<label>Quote C<input id="pc" inputmode="decimal" placeholder="1100"></label>
+<label>Decides<input id="who" placeholder="Procurement lead"></label>
+<button type="button" id="go">Write gap note</button>
+<pre id="out" hidden></pre>
+<p>Related: <a href="/spare-price-scout/">Spare price scout</a> · <a href="/invoice-match-ai/">Invoice match</a> · <a href="/finops-estimator/">FinOps estimator</a></p>
+<script>
+document.getElementById("go").onclick=function(){
+  const t=id=>(document.getElementById(id).value||"").trim();
+  const n=id=>{const v=Number(String(document.getElementById(id).value).replace(/[^0-9.]/g,"")); return isFinite(v)&&document.getElementById(id).value.trim()!==""?v:null;};
+  const rows=[["A",t("na"),n("pa")],["B",t("nb"),n("pb")],["C",t("nc"),n("pc")]].filter(r=>r[2]!==null);
+  let extra="Add at least one numeric quote.";
+  if(rows.length){
+    const nums=rows.map(r=>r[2]);
+    const lo=Math.min.apply(null,nums), hi=Math.max.apply(null,nums);
+    extra="Lowest: "+lo+"\nHighest: "+hi+"\nGap: "+(hi-lo).toFixed(2);
+  }
+  const lines=["Item: "+(t("item")||"(blank)"),"Decides: "+(t("who")||"(blank)")];
+  rows.forEach(r=>lines.push("Quote "+r[0]+": "+(r[1]||"(vendor)")+" "+r[2]));
+  lines.push(extra,"","Quotes you typed. No market was queried.");
+  const o=document.getElementById("out"); o.hidden=false; o.textContent=lines.join("\n");
+};
+</script>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+</body>
+</html>
