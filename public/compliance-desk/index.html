@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Compliance desk | Zion Tech Group</title>
+<meta name="description" content="Record the owner, the data, and the person who reviews an AI system. This page does not issue a certificate."/>
+<link rel="canonical" href="https://ziontechgroup.com/compliance-desk/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em;font-size:clamp(28px,4vw,40px)}h2{color:#e2e8f0;font-size:1.05rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#111c33;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+ul{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<h1>Compliance desk</h1>
+<p>The older auditor address still links hostnames that do not open. Use this desk. It does not certify a system, and it does not send the form anywhere.</p>
+<h2>Write down</h2>
+<ul>
+<li>The system name and the person who owns it.</li>
+<li>The data it reads, in plain words.</li>
+<li>Where a person reviews the output before it reaches a customer.</li>
+<li>The date of the next review.</li>
+</ul>
+<label>System<input id="system" placeholder="Support draft assistant"></label>
+<label>Owner<input id="owner" placeholder="Service owner"></label>
+<label>Data it touches<textarea id="data" rows="3" placeholder="Ticket text. No payment numbers."></textarea></label>
+<label>Who reviews the output<input id="review" placeholder="Queue lead"></label>
+<label>Next review<input id="when" placeholder="2026-12-01"></label>
+<button type="button" id="go">Write the control note</button>
+<pre id="out" hidden></pre>
+<p>A filled note is not an ISO certificate and not an EU AI Act filing. It is the list you take to <a href="/discovery/">Discovery</a> or to your own counsel.</p>
+<p>Related: <a href="/ai-governance-checklist/">Governance checklist</a> · <a href="/cybersecurity/">Cybersecurity</a> · <a href="/certificate-checklist/">Certificate checklist</a> · <a href="/eval-notes/">Eval notes</a> · <a href="/quantum-readiness/">Quantum readiness</a></p>
+
+<script>
+document.getElementById("go").onclick=function(){
+  const g=id=>(document.getElementById(id).value||"").trim();
+  const lines=[
+    "System: "+(g("system")||"(blank)"),
+    "Owner: "+(g("owner")||"(blank)"),
+    "Data: "+(g("data")||"(blank)"),
+    "Reviewer: "+(g("review")||"(blank)"),
+    "Next review: "+(g("when")||"(blank)"),
+    "",
+    "This note is not a certificate. Nothing was uploaded."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("\n");
+};
+</script>
+<footer>
+<a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>
+Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950
+</footer>
+</div>
+</body>
+</html>

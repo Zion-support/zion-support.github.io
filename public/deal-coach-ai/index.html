@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal coach | Zion Tech Group</title>
+<meta name="description" content="A deal brief you write yourself. Nothing on this page is emailed or logged to a CRM.">
+<link rel="canonical" href="https://ziontechgroup.com/deal-coach-ai/">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="/">Zion Tech Group</a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links" aria-label="Primary">
+<a href="/services/">Services</a>
+<a href="/plans/">Plans</a>
+<a href="/discovery/">Discovery</a>
+<a href="/solutions/">Solutions</a>
+<a href="/blog/">Blog</a>
+<a href="/contact/">Contact</a>
+<a class="cta" href="/discovery/">Discovery $99</a>
+</nav></div></header>
+<main id="conteudo" class="section"><div class="wrap">
+<p class="crumb"><a href="/">Home</a> / <a href="/scope-notes/">Scope notes</a> / Deal coach</p>
+<h1>Deal coach</h1>
+<p class="lead">The 27 September spotlight links here. Fill the brief in the browser. Nothing is emailed, scored, or written to a CRM.</p>
+<h2>Write the brief</h2>
+<label for="acct">Account</label>
+<input id="acct" autocomplete="off">
+<label for="stage">Stage you would say out loud</label>
+<input id="stage" autocomplete="off">
+<label for="next">Next step, and the date you mean</label>
+<input id="next" autocomplete="off">
+<label for="owner">Owner</label>
+<input id="owner" autocomplete="off">
+<label for="proof">Evidence you already have</label>
+<textarea id="proof" rows="3"></textarea>
+<button type="button" onclick="outline()">Write the brief</button>
+<pre id="out" hidden></pre>
+<h2>Pages that open</h2>
+<ul>
+<li><a href="/sales-notes/">Sales notes</a>.</li>
+<li><a href="/lead-scoring-ai/">Lead scoring</a>.</li>
+<li><a href="/sales-forecast-ai/">Sales forecast</a>.</li>
+<li><a href="/pipeline-insights-ai/">Pipeline insights</a>.</li>
+<li><a href="/quote-builder-ai/">Quote builder</a> — a draft quote, not a sent one.</li>
+<li><a href="/deal-desk-copilot/">Deal desk copilot</a> and <a href="/deal-desk-assistant/">deal desk assistant</a>.</li>
+<li><a href="/apps/spotlight-2026-09-27.html">27 September spotlight</a>.</li>
+</ul>
+<p class="see-also"><a href="/scope-notes/">Scope notes</a> · <a href="/discovery/">Discovery $99</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+<script>
+function outline(){
+  var g=function(id){return document.getElementById(id).value.trim();};
+  var lines=[
+    "Account: "+(g("acct")||"(not set)"),
+    "Stage: "+(g("stage")||"(not set)"),
+    "Next step: "+(g("next")||"(not set)"),
+    "Owner: "+(g("owner")||"(not set)"),
+    "Evidence: "+(g("proof")||"(none)"),
+    "",
+    "If the next step has no owner, it is not a next step. This page does not send the brief."
+  ];
+  var o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join(String.fromCharCode(10));
+}
+</script>
+<style>
+label{display:block;margin:12px 0 6px}
+input,textarea{width:100%;box-sizing:border-box;padding:10px}
+button{margin:14px 0;padding:10px 16px;font-weight:700}
+pre{white-space:pre-wrap}
+</style>
+
+</div></main>
+<script src="/assets/js/zion-shell.js" defer></script>
+</body>
+</html>

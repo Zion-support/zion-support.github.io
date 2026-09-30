@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Campaign notes | Zion Tech Group</title>
+<meta name="description" content="Write the channel, the offer, and the claim you can prove. This page does not connect to an ad account."/>
+<link rel="canonical" href="https://ziontechgroup.com/campaign-notes/"/>
+<meta name="robots" content="index,follow"/>
+<style>
+body{margin:0;background:#0b1120;color:#cbd5e1;font:16px/1.6 system-ui,sans-serif}
+a{color:#38bdf8}.wrap{max-width:880px;margin:0 auto;padding:24px}
+nav{display:flex;gap:12px;flex-wrap:wrap}nav a{color:#e2e8f0;text-decoration:none}
+h1{color:#fff;letter-spacing:-.03em}h2{color:#e2e8f0;font-size:1.15rem}
+label{display:block;margin:12px 0 6px;color:#94a3b8}
+input,textarea,select{width:100%;box-sizing:border-box;padding:10px;border-radius:8px;border:1px solid #1e293b;background:#0f172a;color:#fff}
+button{margin-top:14px;padding:10px 16px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+pre{white-space:pre-wrap;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:14px}
+footer{margin-top:28px;color:#94a3b8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Zion Tech Group</a><a href="/retail-desk/">Retail desk</a><a href="/zion-ai-marketing-automation/">Marketing</a><a href="/solutions/ecommerce-retail/">Retail solutions</a><a href="/contact/">Contact</a></nav>
+<h1>Campaign notes</h1>
+<p>The older advertising optimizer address does not resolve. Start the brief here. This page does not connect to an ad account, does not spend budget, and does not invent a price.</p>
+<h2>Bring this to the first working session</h2>
+<ul>
+<li>One channel, not the whole calendar.</li>
+<li>The offer in the words already on the product page.</li>
+<li>The claim you can prove, and the sentence you will not say.</li>
+<li>A stop rule: the number or the date that ends the flight.</li>
+</ul>
+<label>Channel<input id="channel" placeholder="Search, email, or the storefront banner"></label>
+<label>Offer<input id="offer" placeholder="What the customer receives"></label>
+<label>Claim you can prove<textarea id="claim" rows="3" placeholder="The fact a person can point to"></textarea></label>
+<label>Do not say<textarea id="avoid" rows="2" placeholder="A claim the team cannot support"></textarea></label>
+<label>Stop rule<textarea id="stop" rows="2" placeholder="Date, spend cap you already have, or a result that ends the flight"></textarea></label>
+<button type="button" id="go">Write the brief</button>
+<pre id="out" hidden></pre>
+<h2>Pages on this site</h2>
+<ul>
+<li><a href="/retail-desk/">Retail desk</a> — demand, price, and stock in one place.</li>
+<li><a href="/price-gap-notes/">Price gap notes</a> — the price you already have.</li>
+<li><a href="/smart-inventory/">Smart inventory</a> — stock notes in the browser.</li>
+<li><a href="/zion-ai-marketing-automation/">Marketing automation</a> — the campaign workflow on this domain.</li>
+<li><a href="/solutions/ecommerce-retail/">Ecommerce and retail</a> — what a first engagement covers.</li>
+</ul>
+<p>Mapping one campaign to one queue is a <a href="/discovery/">Discovery $99</a> session.</p>
+<footer><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · +1 302 464 0950</footer>
+</div>
+<script>
+document.getElementById("go").onclick=function(){
+  const v=function(id){return document.getElementById(id).value.trim();};
+  const lines=[
+    "Channel: "+(v("channel")||"(unset)"),
+    "Offer: "+(v("offer")||"(blank)"),
+    "Claim you can prove: "+(v("claim")||"(blank)"),
+    "Do not say: "+(v("avoid")||"(blank)"),
+    "Stop rule: "+(v("stop")||"(blank)"),
+    "",
+    "No ad account was connected. A person still approves the flight."
+  ];
+  const o=document.getElementById("out");
+  o.hidden=false;
+  o.textContent=lines.join("
+");
+};
+</script>
+</body>
+</html>

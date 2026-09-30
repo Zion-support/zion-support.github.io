@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Smart inventory | Zion Tech Group</title>
+<meta name="description" content="Count on-hand, reserved, and reorder quantities for one part. The sheet does not look up a warehouse."/>
+<link rel="canonical" href="https://ziontechgroup.com/smart-inventory/"/>
+<link rel="stylesheet" href="/styles.css"/>
+<style>
+nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:18px 24px;border-bottom:1px solid #1e293b}
+nav a{color:#d8b4fe}
+main{max-width:880px;margin:0 auto;padding:8px 20px 64px}
+h1{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.15}
+.lead{color:#cbd5e1;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid #1e293b;border-radius:14px;padding:14px 16px;background:rgba(15,23,42,.6)}
+label{display:block;margin:10px 0;color:#cbd5e1}
+input,textarea{width:100%;max-width:440px;padding:8px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f8fafc}
+button{margin-top:8px;padding:10px 16px;border:0;border-radius:10px;background:#7c3aed;color:#fff;font-weight:650;cursor:pointer}
+pre{white-space:pre-wrap;background:#0c1222;border:1px solid #26324d;border-radius:12px;padding:14px}
+footer{margin-top:36px;color:#94a3b8;font-size:14px}
+ul.plain{padding-left:18px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">Zion Tech Group</a>
+  <a href="/free-tools/">Free tools</a>
+  <a href="/apps/">Apps</a>
+  <a href="/app-network/">Directory</a>
+  <a href="/plans/">Plans</a>
+  <a href="/contact/">Contact</a>
+</nav>
+<main>
+<h1>Smart inventory</h1>
+<p class="lead">Type the counts you already have for one part. The page subtracts reserved stock from on-hand and compares the result with the reorder point you entered. It does not query a warehouse or invent a price.</p>
+<label>Part <input id="part" value=""></label>
+<label>On hand <input id="on" inputmode="numeric" value="0"></label>
+<label>Reserved <input id="rsv" inputmode="numeric" value="0"></label>
+<label>Reorder point <input id="rop" inputmode="numeric" value="0"></label>
+<p><button type="button" id="go">Compare</button></p>
+<pre id="out" hidden></pre>
+<p>Related: <a href="/spare-price-scout/">Spare price scout</a> · <a href="/warehouse-slotting-ai/">Warehouse slotting</a> · <a href="/zion-ai-quote-builder/">Quote builder</a></p>
+<script>
+document.getElementById('go').onclick=function(){
+  const n=id=>{const v=parseFloat(document.getElementById(id).value); return Number.isFinite(v)?v:0;};
+  const free=n('on')-n('rsv');
+  const gap=n('rop')-free;
+  const lines=['Part: '+(document.getElementById('part').value||'(unnamed)'),'Available after reservations: '+free,'Reorder point: '+n('rop'), gap>0?('Short by '+gap+' before the reorder point.'):'At or above the reorder point.','Confirm both counts on the shelf before you buy.'];
+  const o=document.getElementById('out'); o.hidden=false; o.textContent=lines.join('\n');
+};
+</script>
+
+<footer>
+<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br>Zion Tech Group · 364 E Main St STE 1008, Middletown, DE 19709 · +1 302 464 0950</p>
+</footer>
+</main>
+</body>
+</html>
