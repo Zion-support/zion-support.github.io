@@ -94,7 +94,7 @@ assert_money_path() {
     exit 1
   fi
   local sz
-  sz=$(wc -c < "$f" ~ tr -d ' ')
+  sz=$(wc -c < "$f" | tr -d ' ')
   if [ "$sz" -lt 5120 ]; then
     echo "ERROR: out/$rel is stub-sized (${sz}B < 5KB)" >&2
     exit 1
@@ -125,7 +125,7 @@ assert_family_a_home() {
     exit 1
   fi
   local sz
-  sz=$(wc -c < "$f" ~ tr -d ' ')
+  sz=$(wc -c < "$f" | tr -d ' ')
   if [ "$sz" -gt 80000 ]; then
     echo "ERROR: out/index.html is ${sz}B — Next.js shell, not Family A static" >&2
     exit 1
