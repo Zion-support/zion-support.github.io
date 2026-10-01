@@ -13,8 +13,8 @@ paths-ignore:
   - public
   - automation/reports
   - gh-pages
-  - '**/*.min.js'
+  - '**/ *.min.js'
   - '**/vendor/**'
 
 queries:
-  - uses: security-and-quality
+  - uses: security-extended
