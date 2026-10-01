@@ -84,7 +84,12 @@ jobs:
       - name: Merge app automation ideas into evolution backlog
         id: merge_ideas
         run: |
-          node automation/merge-github-actions-app-ideas-to-backlog.cjs
+          # The merge script may be absent in static-site mode; skip gracefully.
+          if [ -f automation/merge-github-actions-app-ideas-to-backlog.cjs ]; then
+            node automation/merge-github-actions-app-ideas-to-backlog.cjs
+          else
+            echo "automation/merge-github-actions-app-ideas-to-backlog.cjs not present; skipping merge."
+          fi
           if git diff --quiet automation/data/app-evolution-backlog.json 2>/dev/null; then
             echo "backlog_updated=false" >> "$GITHUB_OUTPUT"
           else
