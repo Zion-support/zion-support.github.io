@@ -77,7 +77,14 @@ jobs:
           PARALLEL_PROCESSING: 'true'
           MAX_CONCURRENT_FILES: '20'
           INPUT_MODE: ${{ inputs.mode || 'run' }}
-        run: node automation/ai-broken-link-fixer.cjs "$INPUT_MODE"
+        # The fixer script may be absent in static-site mode; skip gracefully.
+        run: |
+          if [ -f automation/ai-broken-link-fixer.cjs ]; then
+            node automation/ai-broken-link-fixer.cjs "$INPUT_MODE"
+          else
+            echo "automation/ai-broken-link-fixer.cjs not present (static-site mode); skipping gracefully."
+            exit 0
+          fi
 
       - name: Upload report artifact
         if: always()

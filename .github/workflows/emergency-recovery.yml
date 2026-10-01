@@ -23,18 +23,18 @@ jobs:
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       NEXT_BUILD_WORKER_COUNT: '1'
-      # 12 GB heap was still hitting 'Reached heap limit' on the 90k-file tree;
-      # bump to 16 GB backed by 24 GB of swap below.
-      NODE_OPTIONS: --max-old-space-size=16384 --max-semi-space-size=128
+      # 16 GB heap was still hitting 'Reached heap limit' (exit 134) on the 90k-file tree;
+      # bump to 20 GB backed by 32 GB of swap below.
+      NODE_OPTIONS: --max-old-space-size=20480 --max-semi-space-size=128
     steps:
     - uses: actions/checkout@v6.0.2
     - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
       run: |
-        # Ensure total swap >= 24G; runner image may already ship a small /swapfile
+        # Ensure total swap >= 32G; runner image may already ship a small /swapfile
         SWAP_MB=$(swapon --show=SIZE --noheadings --bytes | awk '{s+=$1} END {print int(s/1048576)}')
         echo "existing swap: ${SWAP_MB} MB"
-        if [ "${SWAP_MB:-0}" -lt 24576 ]; then
-          sudo fallocate -l 24G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=24576
+        if [ "${SWAP_MB:-0}" -lt 32768 ]; then
+          sudo fallocate -l 32G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=32768
           sudo chmod 600 /swapfile2
           sudo mkswap /swapfile2
           sudo swapon /swapfile2

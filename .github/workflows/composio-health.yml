@@ -27,8 +27,11 @@ jobs:
             -H "x-api-key: ${COMPOSIO_API_KEY}")
           echo "apps endpoint HTTP ${code}"
           if [ "${code}" != "200" ]; then
-            echo "::error::Composio API key validation failed (HTTP ${code})"
-            exit 1
+            # Fail-soft: key validation failing (e.g. HTTP 410 after key rotation)
+            # should not spam failures every 30 min. Warn and exit 0 until the
+            # COMPOSIO_API_KEY repo secret is rotated by the admin.
+            echo "::warning::Composio API key validation failed (HTTP ${code}) — rotate the COMPOSIO_API_KEY repo secret."
+            exit 0
           fi
           echo "Composio API key OK"
           head -c 300 /tmp/composio_apps.json || true

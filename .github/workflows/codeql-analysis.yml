@@ -22,7 +22,12 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
+    env:
+      # Bound CodeQL extractor/analyze resources so the 90k+ file repo
+      # does not exhaust runner memory during 'Perform CodeQL Analysis'.
+      CODEQL_THREADS: '2'
+      CODEQL_RAM: '10240'
 
     strategy:
       fail-fast: false

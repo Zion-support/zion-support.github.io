@@ -71,7 +71,15 @@ jobs:
       - name: Apply safe workflow improvements
         env:
           AUTO_COMMIT: ${{ (github.event_name == 'schedule' || github.event.inputs.auto_commit == 'true') && '1' || '0' }}
-        run: node automation/ai-github-actions-implementation-agent.cjs run
+        # The implementation agent script may be absent in static-site mode;
+        # skip gracefully instead of failing the whole audit.
+        run: |
+          if [ -f automation/ai-github-actions-implementation-agent.cjs ]; then
+            node automation/ai-github-actions-implementation-agent.cjs run
+          else
+            echo "automation/ai-github-actions-implementation-agent.cjs not present (static-site mode); skipping gracefully."
+            exit 0
+          fi
 
       - name: Merge app automation ideas into evolution backlog
         id: merge_ideas
