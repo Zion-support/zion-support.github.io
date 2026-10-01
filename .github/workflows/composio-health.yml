@@ -18,25 +18,34 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install Composio
-        run: npm install -g composio
-
-      - name: Composio Whoami
-        run: composio whoami
+      - name: Composio Whoami (API key validation via REST)
+        # npm package 'composio' no longer ships a CLI binary (exit 127).
+        # Use the official REST API to validate the key instead.
+        run: |
+          code=$(curl -s -o /tmp/composio_apps.json -w "%{http_code}" \
+            https://backend.composio.dev/api/v1/apps \
+            -H "x-api-key: ${COMPOSIO_API_KEY}")
+          echo "apps endpoint HTTP ${code}"
+          if [ "${code}" != "200" ]; then
+            echo "::error::Composio API key validation failed (HTTP ${code})"
+            exit 1
+          fi
+          echo "Composio API key OK"
+          head -c 300 /tmp/composio_apps.json || true
 
       - name: List Connected Accounts
-        run: composio connections list
+        run: |
+          code=$(curl -s -o /tmp/composio_accounts.json -w "%{http_code}" \
+            "https://backend.composio.dev/api/v3/connected_accounts?show_active_only=true" \
+            -H "x-api-key: ${COMPOSIO_API_KEY}")
+          echo "connected_accounts HTTP ${code}"
+          head -c 1000 /tmp/composio_accounts.json || true
 
       - name: List Toolkits (1Password focus)
-        run: composio tools list _1password 2>/dev/null || echo "1Password tools not available"
-
-      - name: 1Password List Vaults
-        run: composio execute _1PASSWORD_LIST_VAULTS -d '{}' || echo "1Password vault listing failed"
+        run: |
+          curl -s "https://backend.composio.dev/api/v3/toolkits?slug=_1password" \
+            -H "x-api-key: ${COMPOSIO_API_KEY}" | head -c 500 \
+            || echo "1Password tools not available"
 
       - name: Summary
         run: |
