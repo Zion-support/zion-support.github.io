@@ -1,7 +1,7 @@
 name: Agent presence watchdog
 on:
-  schedule:
-    - cron: "*/5 * * * *"
+  # schedule:
+  #   - cron: "*/5 * * * *"  # DISABLED 2026-10-01: posted to retired issue #71361 (War Room moved to Notion) and was failing every 5 min. Re-enable only with a Notion-backed target.
   workflow_dispatch:
 permissions:
   issues: write
