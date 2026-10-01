@@ -1,0 +1,20 @@
+name: "CodeQL config - Zion static site"
+
+# Keep analysis focused on first-party source. The repo ships a 90k+ file
+# tree (generated pages, assets, reports) that was blowing up the
+# 'Perform CodeQL Analysis' step.
+paths-ignore:
+  - node_modules
+  - .next
+  - out
+  - dist
+  - build
+  - coverage
+  - public
+  - automation/reports
+  - gh-pages
+  - '**/*.min.js'
+  - '**/vendor/**'
+
+queries:
+  - uses: security-and-quality
