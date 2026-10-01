@@ -1,124 +1,29 @@
-/tools/favicon-generator/  /tools/favicon-generator/index.html  200
+# Zion Tech Group - Premium AI/IT Services
+# Generated 2026-09-06
 
-# Canonical sitemap
-/sitemap.xml  /sitemap-0.xml  301
+# Premium services (200 - served from public/services/<name>/index.html)
+/services/premium/ /services/premium/index.html 200
+/services/ai-agent-swarm/ /services/ai-agent-swarm/index.html 200
+/services/generative-ai-implementation/ /services/generative-ai-implementation/index.html 200
+/services/ai-strategy-roadmap/ /services/ai-strategy-roadmap/index.html 200
+/services/managed-security-operations/ /services/managed-security-operations/index.html 200
+/services/penetration-testing/ /services/penetration-testing/index.html 200
+/services/compliance-automation/ /services/compliance-automation/index.html 200
+/services/cloud-migration-enterprise/ /services/cloud-migration-enterprise/index.html 200
+/services/devops-mlops-pipeline/ /services/devops-mlops-pipeline/index.html 200
+/services/data-engineering-analytics/ /services/data-engineering-analytics/index.html 200
+/services/digital-transformation-program/ /services/digital-transformation-program/index.html 200
+/services/api-integration-enterprise/ /services/api-integration-enterprise/index.html 200
+/services/ai-customer-support/ /services/ai-customer-support/index.html 200
+/integrations/composio/    /integrations/composio/index.html  200
+/solutions/government/     /solutions/government/index.html  200
+/whatsapp-business-automation/ /whatsapp-business-automation/index.html  200
+# Blog posts from zion-tech-group (Sep 2026)
+/blog/hermes-agent-introducao/	/blog/hermes-agent-introducao/index.html	200
+/blog/zephyr-solar-esclarecimento/	/blog/zephyr-solar-esclarecimento/index.html	200
 
-/free-tools-hub/    /tools/    301
-/products/    /services/    301
-/consultation/    /contact/    301
-/site-map/    /    301
-/faq/    /about/    301
-/status/    /    301
-/configurator/    /contact/    301
-/dashboard/    /contact/    301
-/docs/    /    301
-/automation/  /services/ai-workflow-automation/  301
-/free-ai-itools/ /free-ai-it-tools/ 302
-/free-ai-itools /free-ai-it-tools/ 302
-/free-consultation /free-consultation/index.html 200
-/free-consultation/ /free-consultation/index.html 200
-/free-audit /free-audit/index.html 200
-/free-audit/ /free-audit/index.html 200
-/proposal /proposal/index.html 200
-/proposal/ /proposal/index.html 200
-/industries/insurance/ /industries/insurance/index.html 200
-/industries/healthcare/ /industries/healthcare/index.html 200
-/industries/legal/ /industries/legal/index.html 200
-/industries/financial-services/ /industries/financial-services/index.html 200
-/industries/financial-services /industries/financial-services/index.html 200
-/tools/ai-quick-audit /tools/ai-quick-audit/index.html 200
-/tools/ai-quick-audit/ /tools/ai-quick-audit/index.html 200
-/tools/phishing-analyzer /tools/phishing-analyzer/index.html 200
-/tools/phishing-analyzer/ /tools/phishing-analyzer/index.html 200
-/assets/js/conversion-events.js /assets/js/conversion-events.js 200
-/pricing/ /pricing/index.html 200
-/stripe/ /stripe/index.html 200
-/monetization/ /monetization/index.html 200
-/monetization-hub/ /monetization-hub/index.html 200
-/composio/ /composio/index.html 200
-/growth/ /growth/index.html 200
-/blog/how-to-win-ai-services-clients-in-latam/ /blog/how-to-win-ai-services-clients-in-latam/index.html 200
-/blog/strategy-to-close-ai-projects-in-latam/ /blog/strategy-to-close-ai-projects-in-latam/index.html 200
-/blog/ai-services-for-latam-businesses/ /blog/ai-services-for-latam-businesses/index.html 200
-/ /index.html  200
-/public-roadmap /public-roadmap/index.html 200
-/public-roadmap/ /public-roadmap/index.html 200
-/status-page /status-page/index.html 200
-/status-page/ /status-page/index.html 200
-/use-cases /use-cases/index.html 200
-/use-cases/ /use-cases/index.html 200
-/solutions/healthcare /solutions/healthcare/index.html 200
-/solutions/healthcare/ /solutions/healthcare/index.html 200
-/industry/ /industry/index.html 200
-/solutions/government/ /solutions/government/index.html 200
-/trust/ /trust/index.html 200
-/zion-composio-automation-stack/ /zion-composio-automation-stack/index.html 200
-/whatsapp-business-automation/ /whatsapp-business-automation/index.html 200
-/privacy-policy/ /privacy-policy/index.html 200
+# pt-BR canonical redirect (fixes 404)
+/pt-BR/*	/pt-BR/:splat	200
 
-# 2026-09-21 link hotfix — do not send /case-studies/ to /contact/
-/case-studies /case-studies/index.html 200
-/case-studies/ /case-studies/index.html 200
-/industries /industries/index.html 200
-/industries/ /industries/index.html 200
-
-# P0 invented premium catalog → official hubs
-/services/premium/quantum-computing-optimization/  /ai-consulting-services/  301
-/services/premium/quantum-computing-optimization  /ai-consulting-services/  301
-/services/premium/ai-powered-digital-twin/  /ai-consulting-services/  301
-/services/premium/ai-powered-digital-twin  /ai-consulting-services/  301
-/services/premium/enterprise-risk-management/  /ai-consulting-services/  301
-/services/premium/enterprise-risk-management  /ai-consulting-services/  301
-/services/premium/supply-chain-optimization/  /ai-consulting-services/  301
-/services/premium/supply-chain-optimization  /ai-consulting-services/  301
-/services/premium/customer-experience-intelligence/  /ai-consulting-services/  301
-/services/premium/customer-experience-intelligence  /ai-consulting-services/  301
-/services/premium/enterprise-ai-governance/  /autonomous-ai-agents/  301
-/services/premium/enterprise-ai-governance  /autonomous-ai-agents/  301
-/services/premium/advanced-cybersecurity-ai/  /managed-it-services/  301
-/services/premium/advanced-cybersecurity-ai  /managed-it-services/  301
-/services/premium/hyperautomation-enterprise/  /services/ai-automation/  301
-/services/premium/hyperautomation-enterprise  /services/ai-automation/  301
-/services/premium/healthcare-innovation/  /healthcare-it-hipaa/  301
-/services/premium/healthcare-innovation  /healthcare-it-hipaa/  301
-
-# Misc commercial 404s
-/pricing-calculator/  /plans/  301
-/pricing-calculator  /plans/  301
-/affiliate/  /partners/  301
-/affiliate  /partners/  301
-/explore/  /services/  301
-/explore  /services/  301
-/roteiros/  /services/  301
-/roteiros  /services/  301
-/en/services/ai-automation/  /services/ai-automation/  301
-/en/services/ai-automation  /services/ai-automation/  301
-/services/cloud-finops-cost-optimization/  /finops-consulting/  301
-/services/cloud-finops-cost-optimization  /finops-consulting/  301
-/services/it-service-desk-automation/  /managed-it-services/  301
-/services/it-service-desk-automation  /managed-it-services/  301
-/services/robotic-process-automation/  /services/ai-automation/  301
-/services/robotic-process-automation  /services/ai-automation/  301
-/use-cases/diagnostic-imaging/  /healthcare-it-hipaa/  301
-/use-cases/diagnostic-imaging  /healthcare-it-hipaa/  301
-/use-cases/fraud-detection/  /fintech-it-ai/  301
-/use-cases/fraud-detection  /fintech-it-ai/  301
-/use-cases/personalization/  /fintech-it-ai/  301
-/use-cases/personalization  /fintech-it-ai/  301
-/use-cases/predictive-maintenance/  /ai-consulting-services/  301
-/use-cases/predictive-maintenance  /ai-consulting-services/  301
-/use-cases/process-automation/  /services/ai-automation/  301
-/use-cases/process-automation  /services/ai-automation/  301
-/use-cases/supply-chain/  /ai-consulting-services/  301
-/use-cases/supply-chain  /ai-consulting-services/  301
-/blog/ai-consulting-roi-board/  /blog/ai-consulting-services-for-business/  301
-/blog/ai-consulting-roi-board  /blog/ai-consulting-services-for-business/  301
-/blog/ai-agent-governance-enterprise/  /blog/enterprise-ai-agent-risk-checklist/  301
-/blog/ai-agent-governance-enterprise  /blog/enterprise-ai-agent-risk-checklist/  301
-/blog/managed-it-for-ai-first-companies/  /blog/managed-it-services-for-mid-market/  301
-/blog/managed-it-for-ai-first-companies  /blog/managed-it-services-for-mid-market/  301
-/blog/managed-it-services-pricing/  /blog/co-managed-it-vs-msp/  301
-/blog/managed-it-services-pricing  /blog/co-managed-it-vs-msp/  301
-
-# Field-services LOCK: dead country paths → hub
-# GitHub Pages does not honor Netlify splats; explicit rules + HTML stubs.
+/blog/how-much-does-ai-consultant-cost-2026/  /blog/how-much-does-ai-consultant-cost-2026/index.html  200
+/blog/how-much-does-ai-consultant-cost-2026 /blog/how-much-does-ai-consultant-cost-2026/index.html 200
