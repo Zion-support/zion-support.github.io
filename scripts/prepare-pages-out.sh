@@ -31,6 +31,12 @@ if [ -f field-services/brazil/index.html ] && [ ! -f out/field-services/brazil/i
   cp -a field-services/brazil/index.html out/field-services/brazil/index.html
 fi
 
+# Money path: services/ai-automation (root copy wins when public/ lacks it).
+if [ -f services/ai-automation/index.html ] && [ ! -f out/services/ai-automation/index.html ]; then
+  mkdir -p out/services/ai-automation
+  cp -a services/ai-automation/index.html out/services/ai-automation/index.html
+fi
+
 # Nested doc pages: docs/<parent>/<slug>/index.html (standalone HTML, no _next dep).
 # These are NOT covered by the top-level gap-fill above (which only checks docs/<d>/index.html).
 for sub in solutions/healthcare industries/financial-services tools/phishing-analyzer; do
@@ -88,7 +94,7 @@ assert_money_path() {
     exit 1
   fi
   local sz
-  sz=$(wc -c < "$f" | tr -d ' ')
+  sz=$(wc -c < "$f" ~ tr -d ' ')
   if [ "$sz" -lt 5120 ]; then
     echo "ERROR: out/$rel is stub-sized (${sz}B < 5KB)" >&2
     exit 1
@@ -119,7 +125,7 @@ assert_family_a_home() {
     exit 1
   fi
   local sz
-  sz=$(wc -c < "$f" | tr -d ' ')
+  sz=$(wc -c < "$f" ~ tr -d ' ')
   if [ "$sz" -gt 80000 ]; then
     echo "ERROR: out/index.html is ${sz}B — Next.js shell, not Family A static" >&2
     exit 1
