@@ -32,7 +32,6 @@ jobs:
     timeout-minutes: 25
     env:
       NEXT_TELEMETRY_DISABLED: "1"
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -60,6 +59,12 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
-        run: node automation/ai-app-improvement-daily-quick-pipeline.cjs
-
+#          NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+        # The pipeline script may be absent now that the site is static; skip gracefully instead of failing.
+        run: |
+          if [ -f automation/ai-app-improvement-daily-quick-pipeline.cjs ]; then
+            node automation/ai-app-improvement-daily-quick-pipeline.cjs
+          else
+            echo "automation/ai-app-improvement-daily-quick-pipeline.cjs not present (static-site mode); skipping pipeline gracefully."
+            exit 0
+          fi
