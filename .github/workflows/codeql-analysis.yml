@@ -38,6 +38,10 @@ jobs:
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
+          # Repo ships a 90k+ file tree of generated pages/assets; the config
+          # narrows analysis to first-party source so the analyze step does not
+          # run out of resources.
+          config-file: ./.github/codeql/codeql-config.yml
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
