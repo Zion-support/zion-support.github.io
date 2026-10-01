@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import { } from 'next/navigation';
 
 export const metadata = {
   title: "Predictive Next-Generation Insurtech Risk Scoring - Zion Tech Group",
@@ -13,10 +12,9 @@ export default function ServicePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <BreadcrumbSchema path="/services/predictive-next-generation-insurtech-risk-scoring-5aabdab8" title="Predictive Next-Generation Insurtech Risk Scoring" />
         <h1 className="text-4xl font-bold mb-6">Predictive Next-Generation Insurtech Risk Scoring</h1>
         <p className="text-lg text-gray-300 mb-8">Predictive risk scoring engine that assesses next-generation insurtech vulnerabilities with machine learning.</p>
-
+        
         <div className="bg-slate-900 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
           <ul className="list-disc list-inside space-y-2">
@@ -26,7 +24,7 @@ export default function ServicePage() {
             <li>Mitigation planning</li>
           </ul>
         </div>
-
+        
         <div className="bg-slate-900 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Benefits</h2>
           <ul className="list-disc list-inside space-y-2">
@@ -36,7 +34,7 @@ export default function ServicePage() {
             <li>Faster incident response</li>
           </ul>
         </div>
-
+        
         <div className="border border-purple-500 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Pricing</h2>
           <div className="grid grid-cols-3 gap-4">
@@ -54,11 +52,7 @@ export default function ServicePage() {
             </div>
           </div>
         </div>
-        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-          <Link href="/services/" className="text-purple-300 hover:text-purple-200">← Back to All Services</Link>
-          <Link href="/tools/" className="text-slate-400 hover:text-slate-300">Try our free tools →</Link>
-        </div>
-
+        
         <div className="text-center">
           <a 
             href="https://calendly.com/kleber-ziontechgroup/consultation" 
