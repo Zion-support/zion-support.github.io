@@ -1,8 +1,0 @@
-{
-  "apps": [],
-  "settings": {
-    "singletonPolicy": "one-instance-per-app",
-    "maxRestarts": 10,
-    "minUptimeMs": 5000
-  }
-}
