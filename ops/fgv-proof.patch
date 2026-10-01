@@ -1,0 +1,38 @@
+diff --git a/public/case-studies/index.html b/public/case-studies/index.html
+index c878e8b..2bac478 100644
+--- a/public/case-studies/index.html
++++ b/public/case-studies/index.html
+@@ -25,7 +25,7 @@
+ <h1>Primeiro win em um processo. Depois escala.</h1>
+ <p class="lead">Não inventamos ROI de catálogo. Abaixo: um caso verificado de renovação (FGV) e recortes típicos do tipo de trabalho que o Discovery $99 decide se vale implementar. Também registramos um segundo caso: <a href="#proof-saude-df">suporte de hardware on-site para uma associação de saúde em Brasília</a>.</p>
+ 
+-<article class="card featured">
++<article class="card featured" id="proof-fgv">
+ <p class="eyebrow">Caso verificado · renovação</p>
+ <h2>Renovação de manutenção — FGV (SDCOMPRASTIC)</h2>
+ <p>A FGV renovou com a Zion a <strong>manutenção de informática</strong> referenciada como <strong>SDCOMPRASTIC-6963</strong>, com PO emitida em <strong>12 de agosto de 2026</strong>. É continuidade operacional — renovação de manutenção — não um piloto de agentes nem um case de ROI de catálogo.</p>
+diff --git a/public/fintech-it-ai/index.html b/public/fintech-it-ai/index.html
+index ef0f358..ebfd393 100644
+--- a/public/fintech-it-ai/index.html
++++ b/public/fintech-it-ai/index.html
+@@ -87,6 +87,7 @@
+     <li>Ticket triage with clear escalation to engineering/ops/security owners</li>
+     <li>Optional governed AI helpers for L1 deflection <strong>after</strong> controls are defined</li>
+   </ul>
++  <p>Managed-IT continuity proof: FGV, an education and research foundation (not a financial institution), renewed its IT maintenance with Zion (SDCOMPRASTIC-6963, PO 12 Aug 2026). <a href="/case-studies/#proof-fgv">See the case (in Portuguese)</a>.</p>
+   <p>See <a href="/managed-it-services/">managed IT services</a> for the broader co-managed model and transparent pricing path (Discovery $99 → Growth $8,000/mo). Longer write-up: <a href="/blog/ai-managed-it-for-fintech/">AI and Managed IT for Fintech</a>.</p>
+ </section>
+ 
+diff --git a/public/industries/finance/index.html b/public/industries/finance/index.html
+index d997ca4..d518d52 100644
+--- a/public/industries/finance/index.html
++++ b/public/industries/finance/index.html
+@@ -52,7 +52,7 @@
+ <section>
+   <h2>Official hubs for this industry</h2>
+   <div class="grid">
+-    <div class="card"><h3>Financial services solution</h3><p>The first-week scope for one reconciliation or review.</p><p><a href="/solutions/financial-services/">Open the solution</a></p></div><div class="card"><h3>Fintech hub</h3><p>The commercial page for fintech operations.</p><p><a href="/fintech-it-ai/">Open the hub</a></p></div><div class="card"><h3>Finance desk</h3><p>A browser note. It does not post a payment.</p><p><a href="/finance-desk/">Open the desk</a></p></div><div class="card"><h3>Fraud prevention</h3><p>A review queue. It does not score a customer by itself.</p><p><a href="/fraud-prevention/">Open fraud prevention</a></p></div><div class="card"><h3>FinOps</h3><p>Cloud and model spend on one review.</p><p><a href="/finops-consulting/">Open FinOps</a></p></div><div class="card"><h3>Managed IT</h3><p>Coverage and escalation when the desk needs a partner.</p><p><a href="/managed-it-services/">Open managed IT</a></p></div>
++    <div class="card"><h3>Financial services solution</h3><p>The first-week scope for one reconciliation or review.</p><p><a href="/solutions/financial-services/">Open the solution</a></p></div><div class="card"><h3>Fintech hub</h3><p>The commercial page for fintech operations.</p><p><a href="/fintech-it-ai/">Open the hub</a></p></div><div class="card"><h3>Finance desk</h3><p>A browser note. It does not post a payment.</p><p><a href="/finance-desk/">Open the desk</a></p></div><div class="card"><h3>Fraud prevention</h3><p>A review queue. It does not score a customer by itself.</p><p><a href="/fraud-prevention/">Open fraud prevention</a></p></div><div class="card"><h3>FinOps</h3><p>Cloud and model spend on one review.</p><p><a href="/finops-consulting/">Open FinOps</a></p></div><div class="card"><h3>Managed IT</h3><p>Coverage and escalation when the desk needs a partner. Continuity proof: FGV, an education and research foundation (not a financial institution), renewed its IT maintenance with Zion (SDCOMPRASTIC-6963, PO 12 Aug 2026) — <a href="/case-studies/#proof-fgv">see the case (in Portuguese)</a>.</p><p><a href="/managed-it-services/">Open managed IT</a></p></div>
+   </div>
+ </section>
+ <p class="see-also"><a href="/industries/">All industries</a> · <a href="/plans/">Plans</a> · <a href="/case-studies/">Case studies</a></p>

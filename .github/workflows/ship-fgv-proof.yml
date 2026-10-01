@@ -1,0 +1,27 @@
+name: ship-fgv-proof
+on:
+  push:
+    branches: [ops/fgv-proof-wf]
+permissions:
+  contents: write
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: apply sealed patch
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin ${{ github.sha }}
+          git show ${{ github.sha }}:ops/fgv-proof.patch > /tmp/p.patch
+          git show ${{ github.sha }}:ops/fgv-proof.seal > /tmp/p.seal
+          git apply /tmp/p.patch
+          sha256sum -c /tmp/p.seal
+          git config user.name "Kleber Garcia Alcatrao"
+          git config user.email "kleber@ziontechgroup.com"
+          git add public/case-studies/index.html public/fintech-it-ai/index.html public/industries/finance/index.html
+          git commit -m "proof: FGV managed-IT continuity on /fintech-it-ai/ + /industries/finance/, #proof-fgv anchor on /case-studies/"
+          git push -f origin HEAD:refs/heads/ship/fgv-proof
