@@ -1,0 +1,41 @@
+Lead-Outreach Pipeline Health Review
+=====================================
+
+Date: 2026-09-18
+Computed from: outreach-log.jsonl, improvements.json
+
+METRICS (live recomputation):
+  totalRuns: 708
+  sendsAttempted: 0
+  duplicatesSuppressed: 0
+  authFailures: 0
+  hotFollowups: 0
+  latestComplete: 2026-09-07T01:27:59.585368Z
+  potentialClients: 0 (latest complete scan)
+  scanned (last scan): 501
+
+STATE:
+  status: active/working
+  sendEnabled: false
+  gmailAuth: true
+
+OBSERVATION:
+  Pipeline is in send-disabled state with sendEnabled=false.
+  Gmail auth is healthy (authFailures=0) but sends are policy-locked.
+  342 legacy direct Gmail sends bypass canonical pipeline (outreach-log.jsonl).
+  No meaningful metric delta since 2026-09-07.
+  Latest complete shows 18 potential clients discovered across 501 emails scanned,
+  then pool contracted to 0. No sends, no duplicate suppression, no hot-followups.
+
+HOT-FOLLOWUP:
+  label:!!!hot-follow-up search returned "No results".
+  No active hot-followup threads to draft CEO replies.
+  No draft file written.
+
+RECOMMENDATION:
+  1. Enable sendEnabled / wire canonical send path to convert 18-discovered
+     potential clients into actual outreach.
+  2. Address 342 legacy direct Gmail sends that bypass canonical pipeline.
+  3. Review dedupe/suppression window only after send path is restored.
+
+DRAFT FILE: not created (no active hot-followup threads)

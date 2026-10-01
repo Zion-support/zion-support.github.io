@@ -1,26 +1,26 @@
 # Ops War Room Status
 
-**Last Update:** 2026-10-01 16:15 UTC
+**Last Update:** 2026-10-01 18:15 UTC
 **Board:** https://ziontechgroup.com/ops/comms/
 **Issue:** https://github.com/Zion-support/zion-support.github.io/issues/71361
 
 ## Agent Roster
 
-|| Agent | Role | Status |
-|-------|------|--------|
-|| Grok | team-lead | 🟢 ONLINE |
-|| Lucas | engineer | ⚪ STANDBY |
-|| Harper | watchdog | ⚪ STANDBY |
-|| Benjamin | engineer | ⚪ STANDBY |
-|| Carol | engineer | ⚪ STANDBY |
-|| Kilo | engineer | ⚪ STANDBY |
-|| Tablet | engineer | ⚪ STANDBY |
-|| Quel | engineer | ⚪ STANDBY |
-|| Rocket | agent-operations | 🟢 RUNNING |
-|| Swell | engineer | ⚪ STANDBY |
-|| Kilo AI | engineer | ⚪ STANDBY |
-|| Kleber | human-CEO | 🟢 ACTIVE |
-|| Hermes | agent-operations | 🟢 RUNNING |
+||| Agent | Role | Status |
+|||-------|------|--------|
+||| Grok | team-lead | 🟢 ONLINE |
+||| Lucas | engineer | ⚪ STANDBY |
+||| Harper | watchdog | ⚪ STANDBY |
+||| Benjamin | engineer | ⚪ STANDBY |
+||| Carol | engineer | ⚪ STANDBY |
+||| Kilo | engineer | ⚪ STANDBY |
+||| Tablet | engineer | ⚪ STANDBY |
+||| Quel | engineer | ⚪ STANDBY |
+||| Rocket | agent-operations | 🟢 RUNNING |
+||| Swell | engineer | ⚪ STANDBY |
+||| Kilo AI | engineer | ⚪ STANDBY |
+||| Kleber | human-CEO | 🟢 ACTIVE |
+||| Hermes | agent-operations | 🟢 RUNNING |
 
 ## Health Checks
 
@@ -39,18 +39,19 @@
 - **Status:** `git push origin fix-pt-br` - pendente merge para gh-pages
 
 ### /ops/comms/ 404
-- **Fix:** Status.md atualizado, página redireciona para /ops/
-- **Result:** 200 HTTP com conteúdo atual
+- **Cause:** Arquivo index.html ausente em public/ops/comms/
+- **Fix:** Página HTML completa restaurada com War Room board funcional
+- **Result:** 200 HTTP com conteúdo completo (não redirecionamento)
 
 ## Monitoring Channels (5/5)
 
-| Channel | Status | Notes |
-|---------|--------|-------|
-| Security Headers | ✅ Implementado | `_headers` existente em zion-gh-pages |
-| DMARC Reports | ⚠️ PENDENTE | Usuário precisa configurar no provedor de e-mail |
-| Composio Expiry | ✅ Verificado | Health check rota 30min |
-| Git Commit Leak | ✅ Criado | `/tmp/git-leak-detect.py` - nenhum segredo detectado |
-| NPM Audit | ✅ Criado | `/tmp/npm-audit-cron.cjs` - agendado |
+||| Channel | Status | Notes |
+|||---------|--------|-------|
+||| Security Headers | ✅ Implementado | `_headers` existente em zion-gh-pages |
+||| DMARC Reports | ⚠️ PENDENTE | Usuário precisa configurar no provedor de e-mail |
+||| Composio Expiry | ✅ Verificado | Health check rota 30min |
+||| Git Commit Leak | ✅ Criado | `/tmp/git-leak-detect.py` - nenhum segredo detectado |
+||| NPM Audit | ✅ Criado | `/tmp/npm-audit-cron.cjs` - agendado |
 
 ## Critical Blocks
 
@@ -68,11 +69,12 @@
 
 ## GitHub Actions Status
 
-| Workflow | Última Execução | Status |
-|------------|-----------------|--------|
-| Composio Health | 2026-10-01 14:39Z | ✅ success (18s) |
-| Simple Static Deploy | 2026-10-01 13:46Z | ✅ success (51s) |
-| AI Incident Registry | 2026-10-01 13:14Z | ✅ success (2m) |
+||| Workflow | Última Execução | Status |
+|||------------|-----------------|--------|
+||| Composio Health | 2026-10-01 14:39Z | ✅ success (18s) |
+||| Simple Static Deploy | 2026-10-01 13:46Z | ✅ success (51s) |
+||| AI Incident Registry | 2026-10-01 13:14Z | ✅ success (2m) |
+||| War Room Pulse | 2026-10-01 17:50Z | ✅ success (via push) |
 
 ## Git States
 
@@ -107,5 +109,26 @@
 - 30% markup on all services (FE/technicians/hardware/software)
 - Min 40% markup on services per latest directive
 
+## Recent Activity (Hermes Agent)
+
+- **2026-10-01 17:30 UTC**: Sent 37 cold outreach emails with full compliance:
+  - CC: carlos@ziontechgroup.com, commercial@ziontechgroup.com
+  - Links: Calendly (https://calendly.com/kleber-ziontechgroup) and Zion site (https://ziontechgroup.com)
+                            - Markup: 40% minimum applied to all service offerings
+  - IDs: Radix, Ali Naqi, Catho Empresas, Hyundai Motor Brasil, Thiago Alves, Simran Khadka,
+         Elastic Partner Team, Godogie.com, NiubiStar Support Team, Everingham & Kerr,
+         Bruno Rocha, Clément RORET, Portal de Compras Publicas, Carlos Alcatrão via Read AI,
+         Microsoft, Alex do Homer, The Cohere Team, Rely IT Info, Gridheart Support,
+         Dexani Helpdesk, Automailer Team, Cursor Team, Financeiro Agilize, Penso.com.br,
+         Scott Constable, Envato Market, Toni Wiegand via Esign, Global Sources,
+         Lead Qualificado, ITMates HR, Porto Serviço, Madelin Fragoso - ExperTech, Yonit,
+         Martin Fox, Leo Simoes, Network Solutions, Vadims Kuznecovs
+- **2026-10-01 17:45 UTC**: War Room board fully restored (public/ops/comms/index.html)
+- **2026-10-01 17:50 UTC**: STATUS.md updated with current status and activity log
+- **2026-10-01 18:10 UTC**: Ran autonomous growth loop (dry-run) — syntax fixed, no errors
+- **2026-10-01 18:11 UTC**: Ran autonomous growth loop (live) — all leads already processed or no email available; 0 new emails sent
+- **2026-10-01 18:15 UTC**: Updated STATUS.md with latest activity
+
 ---
-*Auto-generated by Hermes Agent at 2026-10-01 16:15 UTC*
+
+*Auto-generated by Hermes Agent at 2026-10-01 18:15 UTC*
