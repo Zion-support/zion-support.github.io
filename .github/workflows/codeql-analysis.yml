@@ -50,7 +50,10 @@ jobs:
         uses: github/codeql-action/init@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
         with:
           languages: ${{ matrix.language }}
-          queries: security-and-quality
+          # security-extended instead of security-and-quality: the latter
+          # produced 30,333 SARIF results, above GitHub's 25,000 upload limit,
+          # which failed every 'Perform CodeQL Analysis' step.
+          queries: security-extended
           # Repo ships a 90k+ file tree of generated pages/assets; the config
           # narrows analysis to first-party source so the analyze step does not
           # run out of resources.
@@ -71,4 +74,4 @@ jobs:
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Language:** ${{ matrix.language }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Status:** Completed" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Queries:** security-and-quality" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Queries:** security-extended" >> "$GITHUB_STEP_SUMMARY"
