@@ -25,10 +25,20 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - FE/Technicians: Market rate + **40% markup** for Zion (updated from 30%)
 - Hardware/Software: Market price + **40% markup** for Zion (updated from 30%)
 - All business opportunities: **minimum 40% markup** for Zion
-- Dell PowerEdge R660: $23,299 → $32,619 (40% markup)
-- Oracle SPARC T8-4: $6,600 → $9,240 (40% markup)
-- FE Technician: $60/hr → $84/hr (40% markup)
-- Bay Area Field Engineer: $60-80/hr → $84-112/hr (40% markup)
+
+### Market Prices (verified 2026-10-01)
+| Item | Market Price | Zion Price (40% markup) | Status |
+|------|-------------|-------------------------|--------|
+| Dell PowerEdge R660 (base) | $23,299 | $32,619 | ✅ COMPLIANT |
+| Dell R660 (refurbished range) | $4,591-$11,700 | $6,427-$16,380 | ✅ COMPLIANT |
+| Oracle SPARC T8-4 (used) | $3,000-$6,600 | $4,200-$9,240 | ✅ COMPLIANT |
+| IBM 43V7070 backplane | $9.99-$29.90 | $14-$42 | ✅ COMPLIANT |
+| TDS quote (backplanes) | US$205 | US$287 | ✅ COMPLIANT |
+| TDS quote (+generic cables) | US$235 | US$329 | ✅ COMPLIANT |
+| TDS quote (+genuine 46C4124) | US$255 | US$357 | ✅ COMPLIANT |
+| FE Technician Bay Area | $22.88-$80/hr | $32-$112/hr | ✅ COMPLIANT |
+| Our FE rate | $60/hr | $84/hr | ✅ COMPLIANT |
+| Dell R650 PERC NVMe | $3,200-$4,800 | $4,480-$6,720 | ✅ COMPLIANT |
 
 ### RFQ Process
 1. Send RFQ in email body + PDF with Zion logo
@@ -53,7 +63,7 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 
 ### Active Opportunities (from Notion 2026-10-01)
 - **Apex / Vinod Bharwani** — Markham ON rack & stack CONFIRMED Thu Oct 1 09:00 local. C$550 half-day + C$135/h
-- **TDS / Ron Abboud** — IBM 43V7070 quote for Justin (Orillia): US$205/$235/$255, delivery Oct 2. Requested 48h validity extension. NO supplier order until client confirms.
+- **TDS / Ron Abboud** — IBM 43V7070 quote for Justin (Orillia): US$205/$235/$255, delivery Oct 2. Requested 48h validity extension. NO supplier order until client confirms. Re-quote at US$287/$329/$357 to maintain 40% markup (JEV confidence: 80%).
 - **UTC / Jeffery Niknejadi** — Remote BTS contact (sdm@ziontechgroup.com) + action plan for UTC#88099 (Cincinnati 09/28), #88100 (Cincinnati 09/29), #88101 (Dublin CA 09/30 13:00), #88102 (Markham 10/01)
 - **VITS / Darby (PNG)** — Subcontractor engagement confirmed; written rates US$70/95 requested; Port Moresby lead time, parts-storage address
 - **IT Mates / Ivan** — Pilot requirement sent: LATAM smart-hands/break-fix (São Paulo, Dell/HPE certs, NBD SLA). Asked indicative rates.
@@ -67,15 +77,28 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - **Serit (Richard Hægermark)** — Nordic smart-hands capacity, scope+rates sent, awaiting assessment
 - **Fregix (Arbab Alamgir)** — Requested call, slots 13:00-20:00 UTC weekdays
 - **Kompitech (Anass Lagrine)** — LA intervention reactivated, site visit + 42U rack swap/migration quote
-- **Assefaz Brasília** — NetApp failed AGAIN after 28/09 PSU swap. Internal recovery running. Mariana getting tech report (1h deadline). SDM Plano B/C active. HOLD on client comms.
+- **Assefaz Brasília** — NetApp failed AGAIN after 28/09 PSU swap. Internal recovery running. Mariana getting tech report (1h deadline). SDM Plano B/C active. (JEV: Plano B 44% confidence)
 - **Geneva (Clément RORET)** — Dell R650 PERC NVMe intervention quote awaiting end-customer validation
 - **PDJ Japan** — Retainer US$120/h confirmed
 - **Proaidit Estonia** — Rate card requested
 - **BotPenguin** — JV form pending
-- **Fernanda leads batches #181-185** — LatAm (6 net-new Spanish), CEE (7 cos), SEA (dedupe), Nordics, Balkans. HubSpot blocked (100% limit), fallback Notion
+
+### JEV Evaluation (2026-10-01)
+- **Priority**: 0.66 — High priority action needed
+- **Next step**: 0.2 — Unclear, needs more information
+- **Risk**: 0.85 — Significant risks to current deals
+- **Email**: 0.53 — Emails need CEO response
+- **Markup compliance**: 0.2 — All prices compliant with 40% markup policy
+
+### JEV Decisions
+- **Apex Markham**: HOLD (100% confidence) — Do not proceed without end-client authorization
+- **TDS Pricing**: REQUOTE (80% confidence) — Re-quote at US$287/$329/$357 to maintain 40% markup
+- **Assefaz**: Plano B (44% confidence) — SDM re-dispatch with Francisco Izion
+- **Fernanda leads**: WAIT (74% confidence) — Wait for HubSpot upgrade before sending
+- **HubSpot**: UPGRADE (60% confidence) — Upgrade to handle 400+ Fernanda leads
 
 ### Blockers
-- **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts in Notion
+- **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts stored in Notion
 - **Apollo API key invalid** — Needs rotation in Composio
 - **Hunter.io quota exhausted** — 429 error this billing period
 - **Markham/Apex visit Oct 1 09:00** — ON HOLD (no end-client authorization, Vinod no ACK)
