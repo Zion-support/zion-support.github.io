@@ -41,6 +41,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ ! -f automation/reports/autonomous-opportunity-radar-latest.json ]; then
+            echo "Report file not generated; skipping commit."
+            exit 0
+          fi
           git add -f automation/reports/autonomous-opportunity-radar-latest.json
           if git diff --cached --quiet; then
             exit 0
@@ -48,7 +52,7 @@ jobs:
           bash scripts/automation/commit-and-push-main.sh "chore(automation): refresh autonomous opportunity radar report"
 
       - name: Upload report artifact
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@bbbca2dda5d8feaa63e36b76f6daad77386f024f # v7.0.0
         with:
           name: autonomous-opportunity-radar-${{ github.run_id }}
           path: automation/reports/autonomous-opportunity-radar-latest.json
