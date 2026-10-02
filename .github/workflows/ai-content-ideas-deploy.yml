@@ -95,7 +95,7 @@ jobs:
       - name: Run content ideas to deploy pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned -> GitHub Pages)
           SKIP_IDEATION: ${{ github.event.inputs.skip_ideation == 'true' && '1' || '' }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page == 'true' && '1' || '' }}
           SKIP_BURST: ${{ github.event.inputs.skip_burst == 'true' && '1' || '' }}
@@ -105,16 +105,17 @@ jobs:
           MAX_ADD: ${{ github.event.inputs.max_add || '5' }}
         run: node automation/ai-content-ideas-to-deploy-pipeline.cjs
 
-      - name: Validate build (catch content errors before push)
+      # Full `npm run build` removed: 125k-file tree OOMs (exit 134) on 15GB
+      # GitHub-hosted runners. rsc:guard stays; full build runs in Deploy on Push.
+      - name: Validate content (rsc guard; build moved to Deploy on Push)
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
 
       - name: Commit, push, and deploy
         env:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned -> GitHub Pages)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
