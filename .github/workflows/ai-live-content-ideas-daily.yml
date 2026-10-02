@@ -35,7 +35,7 @@ permissions:
         type: boolean
 
 env:
-  NODE_OPTIONS: '--max-old-space-size=6144'
+  NODE_OPTIONS: '--max-old-space-size=20480'
 
 jobs:
   live-daily:
@@ -88,6 +88,18 @@ jobs:
 
       - name: Homepage industry sync
         run: node automation/ai-homepage-industry-sync-agent.cjs run --apply
+
+      - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
+        run: |
+          SWAP_MB=$(swapon --show=SIZE --noheadings --bytes | awk '{s+=$1} END {print int(s/1048576)}')
+          echo "existing swap: ${SWAP_MB} MB"
+          if [ "${SWAP_MB:-0}" -lt 24576 ]; then
+            sudo fallocate -l 24G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=24576
+            sudo chmod 600 /swapfile2
+            sudo mkswap /swapfile2
+            sudo swapon /swapfile2
+          fi
+          free -h
 
       - name: Validate build
         run: |
