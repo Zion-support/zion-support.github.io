@@ -72,7 +72,7 @@ jobs:
 
       - name: Run content burst (template-only, no LLM)
         env:
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned -> GitHub Pages)
           MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '12' }}
           MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '12' }}
           MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '6' }}
@@ -80,28 +80,17 @@ jobs:
           MAX_ADD: "8"
         run: node automation/ai-content-burst-agent.cjs
 
-      - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
-        run: |
-          SWAP_MB=$(swapon --show=SIZE --noheadings --bytes | awk '{s+=$1} END {print int(s/1048576)}')
-          echo "existing swap: ${SWAP_MB} MB"
-          if [ "${SWAP_MB:-0}" -lt 24576 ]; then
-            sudo fallocate -l 24G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=24576
-            sudo chmod 600 /swapfile2
-            sudo mkswap /swapfile2
-            sudo swapon /swapfile2
-          fi
-          free -h
-
-      - name: Validate build (catch content errors before push)
+      # Full `npm run build` removed: 125k-file tree OOMs (exit 134) on 15GB
+      # GitHub-hosted runners. rsc:guard stays; full build runs in Deploy on Push.
+      - name: Validate content (rsc guard; build moved to Deploy on Push)
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
 
       - name: Commit, push, and deploy
         env:
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned -> GitHub Pages)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
