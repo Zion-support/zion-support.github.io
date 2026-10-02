@@ -175,12 +175,22 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/agent-brief/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/agents-monitoring/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/ai-agent-services/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/ai-apps-directory/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -285,6 +295,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/ai-governance-checklist/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/ai-lab/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -370,6 +385,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/ai-tender-scout/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/ai-workflow-automation/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -420,6 +440,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/blog-hub/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/business-intelligence-services/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -450,6 +475,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/change-risk/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/changelog/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -470,6 +500,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/cloud-cost-estimator/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/cloud-cost-optimization-platform/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -486,6 +521,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/cloud-services/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/cloud-waste/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -570,6 +610,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/depot-stock-balancer/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/devops-automation/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -615,6 +660,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/edital-desk/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/edtech-services/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -641,6 +691,16 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/enterprise-security/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/finops-autopilot/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/finops-estimator/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -676,6 +736,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/free-contact/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/free-resources-hub/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -716,6 +781,16 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/identity-services/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/incident-cost/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/industries-hub/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -780,6 +855,16 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/licitacao-radar/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/llm-gateway/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/low-code-services/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -825,6 +910,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/model-observatory/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/monitoring/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -845,12 +935,22 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/ops-runbook-ai/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/partner-portal/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/partners/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/patch-window/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -895,6 +995,16 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/prompt-library/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/prompt-shield/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/property-management-ai/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -915,7 +1025,17 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/rfp-readiness/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/robotic-process-automation/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/roi-calc/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -936,6 +1056,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/search/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/secrets-sentinel/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -980,12 +1105,27 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/sla-calculator/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/sla/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/smart-inventory/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/solutions-hub/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/stack-audit/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -1025,6 +1165,16 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/token-cost/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/tools-hub/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/tools/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -1036,6 +1186,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/use-cases/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/warranty-lens/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -1360,6 +1515,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/zion-chatbot-builder/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/zion-cloud-vault/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -1381,6 +1541,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/zion-devops-automation/</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/zion-edge-ai-platform/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -85505,6 +85670,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/ai-enabled-privacy-compliance-suite-4938cdea</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/ai-enabled-privacy-compliance-suite-7c20cf15</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -93931,6 +94101,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/ai-powered-autonomous-data-center-cooling-optimization-a0d00a26</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/ai-powered-autonomous-data-center-cooling-optimization-a71462a6</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -112900,6 +113075,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/automated-model-registry-governance-d7cbbdc9</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/automated-monitoring-for-finance-a53d8bea</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -119301,6 +119481,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/autonomous-orchestrator-tech-e4e6797d</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/autonomous-penetration-testing-platform-16d27121</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -131860,6 +132045,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/data-lineage-intelligence-platform-16ffee1d</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/data-lineage-intelligence-platform-66a4a59c</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -138356,6 +138546,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/explainable-ai-governance-platform-8f9b8ca8</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/explainable-ai-governance-platform-9c21dfc7</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -148215,6 +148410,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/llm-augmented-decision-support-system-df1ee5a7</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/llm-augmented-decision-support-system-f64f0718</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -148235,12 +148435,22 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/llm-powered-business-intelligence-and-analytics-assistant-e73da292</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/llm-powered-knowledge-base-synthesis-7538deb4</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/llm-powered-knowledge-base-synthesis-89f83c97</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/llm-powered-knowledge-base-synthesis-ac44d4d7</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -150201,6 +150411,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/misp-threat-intel</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/mlops-feature-store-automation-5c1a2240</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -153755,6 +153970,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/neuro-symbolic-reasoning-engine-81a013c9</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/neuro-symbolic-reasoning-engine-d2f71070</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -156436,6 +156656,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/observability-aiops</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/observability-intelligence-platform-0c777911</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -166465,6 +166690,11 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
+  <url><loc>https://ziontechgroup.com/services/quantum-inspired-optimization-platform-2755988b</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
   <url><loc>https://ziontechgroup.com/services/quantum-inspired-optimization-platform-327174a5</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -173141,6 +173371,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/self-service-analytics</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/semantic-code-review-engine-032025dc</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -181156,6 +181391,11 @@
 <priority>0.6</priority>
 </url>
   <url><loc>https://ziontechgroup.com/services/vector-database-optimization-and-intelligent-indexing-service-12b9ee40</loc>
+<lastmod>2026-10-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+  <url><loc>https://ziontechgroup.com/services/vector-database-optimization-and-intelligent-indexing-service-3a4b3f64</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
