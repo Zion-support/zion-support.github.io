@@ -460,11 +460,6 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-  <url><loc>https://ziontechgroup.com/client-success-roadmap/</loc>
-<lastmod>2026-10-02</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
   <url><loc>https://ziontechgroup.com/cloud-ai-services/</loc>
 <lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
@@ -180650,8 +180645,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-  <url><loc>https://ziontechgroup.com/services/system-ai---logistics-1-59e8a9a0</loc>
-<lastmod>2026-10-02</lastmod>
+  <url><lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -180660,8 +180654,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-  <url><loc>https://ziontechgroup.com/services/system-ai---logistics-6b55a496</loc>
-<lastmod>2026-10-02</lastmod>
+  <url><lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -180770,8 +180763,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-  <url><loc>https://ziontechgroup.com/services/system-autonomous---insurance-3976a94c</loc>
-<lastmod>2026-10-02</lastmod>
+  <url><lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -180800,8 +180792,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-  <url><loc>https://ziontechgroup.com/services/system-autonomous---transportation-9e9e0bbe</loc>
-<lastmod>2026-10-02</lastmod>
+  <url><lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -180850,8 +180841,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
-  <url><loc>https://ziontechgroup.com/services/system-cognitive---telecom-73ee8d3f</loc>
-<lastmod>2026-10-02</lastmod>
+  <url><lastmod>2026-10-02</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
