@@ -43,7 +43,7 @@ jobs:
     timeout-minutes: 22
     env:
       NEXT_TELEMETRY_DISABLED: "1"
-      NODE_OPTIONS: '--max-old-space-size=6144'
+      NODE_OPTIONS: '--max-old-space-size=20480'
       NEXT_BUILD_WORKER_COUNT: 1
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -86,6 +86,18 @@ jobs:
         env:
           MAX_ADD: "8"
         run: node automation/ai-front-page-services-advertiser-agent.cjs || true
+
+      - name: Add swap space (mitigate Next.js build OOM on 90k+ file tree)
+        run: |
+          SWAP_MB=$(swapon --show=SIZE --noheadings --bytes | awk '{s+=$1} END {print int(s/1048576)}')
+          echo "existing swap: ${SWAP_MB} MB"
+          if [ "${SWAP_MB:-0}" -lt 24576 ]; then
+            sudo fallocate -l 24G /swapfile2 || sudo dd if=/dev/zero of=/swapfile2 bs=1M count=24576
+            sudo chmod 600 /swapfile2
+            sudo mkswap /swapfile2
+            sudo swapon /swapfile2
+          fi
+          free -h
 
       - name: Validate build
         run: |
