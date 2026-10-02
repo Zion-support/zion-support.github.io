@@ -1,0 +1,10 @@
+{
+  "name": "zion-tech-group",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@10.9.8",
+  "scripts": {
+    "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
+  }
+}
