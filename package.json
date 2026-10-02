@@ -54,7 +54,8 @@
     "routes:drift:sitemap": "echo 'routes drift sitemap: OK (stub)'",
     "reports:aggregate": "echo 'reports aggregate: OK (stub)'",
     "aggregate:regression:check": "echo 'regression check: OK (stub)'",
-    "release:risk:score": "echo 'release risk score: OK (stub)'"
+    "release:risk:score": "echo 'release risk score: OK (stub)'",
+    "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
