@@ -119,8 +119,16 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - Gradual price increases as demand increases
 - Digital products for passive income alongside services
 
+### API Blockers (2026-10-01)
+| API | Status | Action Needed |
+|-----|--------|---------------|
+| Apollo | 401 Invalid API key | Rotate API key in Composio |
+| Hunter.io | 429 Quota exhausted (0/50 remaining) | Wait until Oct 23 reset or upgrade plan |
+| Gmail | Token expired (13h ago) | Refresh from macOS host |
+| Stripe | All accounts EXPIRED | Re-authenticate in Composio |
+
 ### Blockers
-- **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts in Notion
+- **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts stored in Notion
 - **Apollo API key invalid** — Needs rotation in Composio (JEV: fix first, 98% confidence)
 - **Hunter.io quota exhausted** — 429 error this billing period (JEV: fix first, 98% confidence)
 - **Markham/Apex visit Oct 1 09:00** — ON HOLD (no end-client authorization, Vinod no ACK) (JEV: wait, 81% confidence)
