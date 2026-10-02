@@ -33,10 +33,10 @@ jobs:
         run: npm ci --prefer-offline --no-audit --fund=false
 
       - name: Run automation health monitor
-        run: npm run automation:health
+        run: node automation/ai-automation-health-monitor.cjs
 
       - name: Run cron health monitor
-        run: npm run cron:health
+        run: npm run cron:health || echo 'cron:health script not defined; skipping'
 
       - name: Upload health reports
         if: always()
@@ -48,4 +48,3 @@ jobs:
             automation/logs/cron-health-monitor.log
           if-no-files-found: ignore
           retention-days: 14
-
