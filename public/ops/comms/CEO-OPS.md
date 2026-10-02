@@ -119,17 +119,17 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - Gradual price increases as demand increases
 - Digital products for passive income alongside services
 
-### API Blockers (2026-10-01)
+### API Blockers (2026-10-02)
 | API | Status | Action Needed |
 |-----|--------|---------------|
-| Apollo | 401 Invalid API key | Rotate API key in Composio |
+| Apollo | ✅ FIXED — new key gqPmKwSMH044F7HhipxTdQ | Working, email OAuth tokens expired |
 | Hunter.io | 429 Quota exhausted (0/50 remaining) | Wait until Oct 23 reset or upgrade plan |
 | Gmail | Token expired (13h ago) | Refresh from macOS host |
 | Stripe | All accounts EXPIRED | Re-authenticate in Composio |
 
 ### Blockers
 - **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts stored in Notion
-- **Apollo API key invalid** — Needs rotation in Composio (JEV: fix first, 98% confidence)
+- **Apollo API key** — FIXED with new key gqPmKwSMH044F7HhipxTdQ (2026-10-02)
 - **Hunter.io quota exhausted** — 429 error this billing period (JEV: fix first, 98% confidence)
 - **Markham/Apex visit Oct 1 09:00** — ON HOLD (no end-client authorization, Vinod no ACK) (JEV: wait, 81% confidence)
 - **UTC POs + Zion billing address** — owed by Carlos/Commercial
@@ -164,7 +164,7 @@ CEO/1-Action Required, CEO/2-Replied, CEO/3-Noise Trashed, Zion/Carlos, Zion/Fin
 Do not create extra labels.
 
 ## Heartbeat / offline
-- Session start + every ~15 min: `### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT`
+- Session start + every ~15 min: ### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT
 - Offline = no named comment for 90 minutes (watchdog checks every 5 min)
 - Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
 - static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
