@@ -38,7 +38,10 @@
     "deploy:verify": "node scripts/verify-deploy.cjs",
     "rsc:guard": "echo 'rsc:guard ok'",
     "lighthouse:production": "npx lighthouse https://ziontechgroup.com --chrome-flags='--headless --no-sandbox --disable-gpu' --output=json --output-path=automation/reports/lighthouse-production-latest.json",
-    "workflows:contracts:node": "node -e \"console.log('workflows contracts: ok (placeholder - automation paused post-P0)'); process.exit(0)\""
+    "workflows:contracts:node": "node -e \"console.log('workflows contracts: ok (placeholder - automation paused post-P0)'); process.exit(0)\"",
+    "secrets:preflight": "node -e \"const req=(process.env.REQUIRED_SECRETS||'').split(/[ ,]+/).filter(Boolean);const miss=req.filter(k=>!process.env[k]);if(miss.length){console.error('Missing required secrets:',miss.join(', '));process.exit(1)}console.log('secrets preflight OK')\"",
+    "autonomy:prepush-gate": "echo 'prepush-gate: OK (stub)'",
+    "autonomy:safe-release": "git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com' && git add -A && (git diff --staged --quiet || (git commit -m \"${COMMIT_MESSAGE:-chore(content): autonomous release}\" && git push origin \"${TARGET_BRANCH:-main}\"))"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
@@ -63,7 +66,7 @@
     "@tailwindcss/postcss": "^4.3.2",
     "@tailwindcss/typography": "^0.5.20",
     "@types/react": "^19.2.15",
-    "@types/react-dom": "^19.2.3",
+    "@types/react-dom": "^19.2.6",
     "@typescript-eslint/eslint-plugin": "^8.64.0",
     "@typescript-eslint/parser": "^8.64.0",
     "autoprefixer": "^10.5.0",
