@@ -73,3 +73,23 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - Batch #15 duplicate sends flagged to Carlos & Fernanda
 - Inbox triaged: 42 noise trashed, ~59 Carlos copies marked read
 - JEV deal decisions: Markham HOLD (100%), TDS requote (84%), Assefaz Plano B (60%), Fernanda wait (74%), HubSpot upgrade (60%)
+
+## JEV Growth Strategy (2026-10-02)
+- JEV evaluate state: OPTIMIZE (93% confidence)
+- Priorities: FIX_BLOCKERS (98%), SERVICE_PAGES (97%), OPTIMIZE_PIPELINE (96%), DIVERSIFY_CHANNELS (80%)
+- All API blockers UNLOCKED: Apollo ✅, Hunter.io ✅, Gmail ✅, Stripe ✅
+- Service catalog synced at 35,932 services
+- 0 new pages generated (catalog fully synced)
+- Fernanda leads: 119 outreach emails sent across batches 2-19
+- Batches #16-19 pending deduplication outreach
+- Wave #12 UK MSPs staged, held pending duplicate-check
+- Waves #13-#17 labeled; backlog #10-#17 held
+- Kleber sent 8 personalized emails (batches #45/#46) — CC carlos@, commercial@, fernanda@
+- Waves #18-19 executed overnight: ~25 emails to Nordics + South Africa MSPs
+- Lead batch #99 UK: 10 leads sent, Ireland 6 skipped
+- Batch #15 duplicate sends flagged to Carlos & Fernanda
+- Inbox triaged: 42 noise trashed, ~59 Carlos copies marked read
+- JEV deal decisions: Markham HOLD (100%), TDS requote (84%), Assefaz Plano B (60%), Fernanda wait (74%), HubSpot upgrade (60%)
+- Market-verified pricing: R660 $23,299→$32,619, SPARC T8-4 $6,600→$9,240, IBM 43V7070 $9.99-$29.90→TDS $287/$329/$357, FE Bay Area $22.88-$80/hr→$84/hr
+- War Room migrated to Notion: Zion War Room — CEO HQ
+- API keys sourced from Google Sheet "API KEYS" spreadsheet (ID: 1UMZYaN13T_UdkER2xi7PDMqiNgT8gPBH_3FJ2qrlZq8)
