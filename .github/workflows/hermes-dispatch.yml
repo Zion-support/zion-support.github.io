@@ -63,4 +63,21 @@ jobs:
               'Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/',
               'Log: https://github.com/Zion-support/zion-support.github.io/issues/71361'
             ].join('\n');
-            await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            let target = issue_number;
+            try {
+              await github.rest.issues.createComment({ owner, repo, issue_number: target, body });
+            } catch (e) {
+              if (e && e.message && e.message.includes('2500 comments')) {
+                const stamp = new Date().toISOString().slice(0,10);
+                const created = await github.rest.issues.create({
+                  owner, repo,
+                  title: `Zion Agent War Room — Forever Log (auto ${stamp})`,
+                  body: 'Successor log: previous issue hit GitHub\'s 2500-comment limit. Continue logging here.'
+                });
+                target = created.data.number;
+                await github.rest.issues.createComment({ owner, repo, issue_number: target, body });
+                console.log('rotated log issue -> #' + target);
+              } else {
+                throw e;
+              }
+            }
