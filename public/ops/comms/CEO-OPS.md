@@ -120,17 +120,15 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - Digital products for passive income alongside services
 
 ### API Blockers (2026-10-02)
-| API | Status | Action Needed |
-|-----|--------|---------------|
-| Apollo | ✅ FIXED — new key gqPmKwSMH044F7HhipxTdQ | Working, email OAuth tokens expired |
-| Hunter.io | 429 Quota exhausted (0/50 remaining) | Wait until Oct 23 reset or upgrade plan |
-| Gmail | Token expired (13h ago) | Refresh from macOS host |
-| Stripe | All accounts EXPIRED | Re-authenticate in Composio |
+| API | Status | Detail |
+|-----|--------|--------|
+| Apollo | ✅ FIXED | New key gqPmKwSMH044F7HhipxTdQ — Kleber Alcatrao verified |
+| Hunter.io | ✅ FIXED | New key 7f7cf7ca14cee1ae794cd5ab4ed3087f963760e0 — 2000 searches, 4000 verifications |
+| Gmail | ✅ FIXED | Token refreshed — kleber@ziontechgroup.com profile loaded |
+| Stripe | ✅ FIXED | Key sk_live_...EmBcX — acct_1NOurtJPiDPdradq, 4 payment links found |
 
 ### Blockers
 - **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts stored in Notion
-- **Apollo API key** — FIXED with new key gqPmKwSMH044F7HhipxTdQ (2026-10-02)
-- **Hunter.io quota exhausted** — 429 error this billing period (JEV: fix first, 98% confidence)
 - **Markham/Apex visit Oct 1 09:00** — ON HOLD (no end-client authorization, Vinod no ACK) (JEV: wait, 81% confidence)
 - **UTC POs + Zion billing address** — owed by Carlos/Commercial
 - **Agilize suspended** accounting services for Praia Digital Imoveis LTDA
