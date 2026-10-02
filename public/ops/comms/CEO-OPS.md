@@ -62,8 +62,8 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - Ask internally only if info cannot be found anywhere
 
 ### Active Opportunities (from Notion 2026-10-01)
-- **Apex / Vinod Bharwani** — Markham ON rack & stack CONFIRMED Thu Oct 1 09:00 local. C$550 half-day + C$135/h
-- **TDS / Ron Abboud** — IBM 43V7070 quote for Justin (Orillia): US$205/$235/$255, delivery Oct 2. Requested 48h validity extension. NO supplier order until client confirms. Re-quote at US$287/$329/$357 to maintain 40% markup (JEV confidence: 80%).
+- **Apex / Vinod Bharwani** — Markham ON rack & pack CONFIRMED Thu Oct 1 09:00 local. C$550 half-day + C$135/h
+- **TDS / Ron Abboud** — IBM 43V7070 quote for Justin (Orillia): US$205/$235/$255, delivery Oct 2. Requested 48h validity extension. NO supplier order until client confirms. Re-quote at US$287/$329/$357 to maintain 40% markup (JEV: 84% confidence).
 - **UTC / Jeffery Niknejadi** — Remote BTS contact (sdm@ziontechgroup.com) + action plan for UTC#88099 (Cincinnati 09/28), #88100 (Cincinnati 09/29), #88101 (Dublin CA 09/30 13:00), #88102 (Markham 10/01)
 - **VITS / Darby (PNG)** — Subcontractor engagement confirmed; written rates US$70/95 requested; Port Moresby lead time, parts-storage address
 - **IT Mates / Ivan** — Pilot requirement sent: LATAM smart-hands/break-fix (São Paulo, Dell/HPE certs, NBD SLA). Asked indicative rates.
@@ -77,35 +77,57 @@ Notion: https://app.notion.com/p/Zion-War-Room-CEO-HQ-3ecb94b0eaf781f6b5a0f4768c
 - **Serit (Richard Hægermark)** — Nordic smart-hands capacity, scope+rates sent, awaiting assessment
 - **Fregix (Arbab Alamgir)** — Requested call, slots 13:00-20:00 UTC weekdays
 - **Kompitech (Anass Lagrine)** — LA intervention reactivated, site visit + 42U rack swap/migration quote
-- **Assefaz Brasília** — NetApp failed AGAIN after 28/09 PSU swap. Internal recovery running. Mariana getting tech report (1h deadline). SDM Plano B/C active. (JEV: Plano B 44% confidence)
+- **Assefaz Brasília** — NetApp failed AGAIN after 28/09 PSU swap. Internal recovery running. Mariana getting tech report (1h deadline). SDM Plano B/C active. (JEV: Plano B 60% confidence)
 - **Geneva (Clément RORET)** — Dell R650 PERC NVMe intervention quote awaiting end-customer validation
 - **PDJ Japan** — Retainer US$120/h confirmed
 - **Proaidit Estonia** — Rate card requested
 - **BotPenguin** — JV form pending
 
-### JEV Evaluation (2026-10-01)
-- **Priority**: 0.66 — High priority action needed
-- **Next step**: 0.2 — Unclear, needs more information
-- **Risk**: 0.85 — Significant risks to current deals
-- **Email**: 0.53 — Emails need CEO response
-- **Markup compliance**: 0.2 — All prices compliant with 40% markup policy
+### JEV Growth Strategy Evaluation (2026-10-01)
+**Overall Strategy: OPTIMIZE (93% confidence)**
+- Optimize existing deals first before expanding
+- Growth is spread across many actions — no clear single highest-impact item
+- Markup compliance risk: 38% — some growth actions may compromise 40% markup policy
+- Growth actions carry significant risks: 75%
+- Speed limited by external dependencies: 37%
 
-### JEV Decisions
-- **Apex Markham**: HOLD (100% confidence) — Do not proceed without end-client authorization
-- **TDS Pricing**: REQUOTE (80% confidence) — Re-quote at US$287/$329/$357 to maintain 40% markup
-- **Assefaz**: Plano B (44% confidence) — SDM re-dispatch with Francisco Izion
-- **Fernanda leads**: WAIT (74% confidence) — Wait for HubSpot upgrade before sending
-- **HubSpot**: UPGRADE (60% confidence) — Upgrade to handle 400+ Fernanda leads
+**JEV Decisions:**
+| Decision | Confidence | Action |
+|----------|-----------|--------|
+| TDS Pricing | 84% | REQUOTE at US$287/$329/$357 — maintain 40% markup |
+| Apex Markham | 81% | WAIT for end-client authorization — lowest risk |
+| Assefaz Recovery | 60% | Plano B — SDM re-dispatch Francisco Izion |
+| Fernanda Leads | 46% | PARTIAL_SEND — send partial batch with dedup |
+| Email Automation | 76% | IMPROVE — improve automations for faster outreach |
+
+**JEV Growth Priorities:**
+1. **Fix Blockers** (98% confidence) — Fix API blockers (Apollo, Hunter.io, Gmail) first
+2. **Service Pages** (97% confidence) — Create more service pages for discovery
+3. **Optimize Pipeline** (96% confidence) — Optimize pipeline efficiency before increasing volume
+4. **Diversify Channels** (80% confidence) — Diversify outreach beyond email
+
+**Growth Strategy (from web research 2026-10-01):**
+- Multi-channel outreach: email + LinkedIn + phone + content
+- AI Search and GEO (Generative Engine Optimization) for AI visibility
+- Geographic diversification: Australia, Middle East, Southeast Asia
+- Structured referral programs for amplification
+- Signal-based outbound email for immediate pipeline
+- LinkedIn outreach and content for trust-building
+- AI/LLM visibility through entity mentions on G2, Clutch, Reddit, industry directories
+- Content marketing and SEO as primary channels
+- One service category mastery before expanding
+- Gradual price increases as demand increases
+- Digital products for passive income alongside services
 
 ### Blockers
-- **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts stored in Notion
-- **Apollo API key invalid** — Needs rotation in Composio
-- **Hunter.io quota exhausted** — 429 error this billing period
-- **Markham/Apex visit Oct 1 09:00** — ON HOLD (no end-client authorization, Vinod no ACK)
+- **HubSpot at 100% contact limit** — 400+ Fernanda leads pending. Decision: upgrade or purge/merge. Fallback: contacts in Notion
+- **Apollo API key invalid** — Needs rotation in Composio (JEV: fix first, 98% confidence)
+- **Hunter.io quota exhausted** — 429 error this billing period (JEV: fix first, 98% confidence)
+- **Markham/Apex visit Oct 1 09:00** — ON HOLD (no end-client authorization, Vinod no ACK) (JEV: wait, 81% confidence)
 - **UTC POs + Zion billing address** — owed by Carlos/Commercial
 - **Agilize suspended** accounting services for Praia Digital Imoveis LTDA
 - **CI: case-studies composio-1password-sync blocked** — needs COMPOSIO_API_KEY repo secret
-- **Assefaz Brasília NetApp** — PSU failed again, Plano B/C active
+- **Assefaz Brasília NetApp** — PSU failed again, Plano B/C active (JEV: Plano B, 60% confidence)
 
 ### Watch Items
 - Ron Abboud: 48h extension reply; T8-4 availability (T7-2 alternative)
