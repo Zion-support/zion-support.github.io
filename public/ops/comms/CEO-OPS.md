@@ -56,3 +56,20 @@ Carlos still owns (his clicks, not another brief):
 WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
 
 HubSpot live named contacts only — IDs live on #71361, not here.
+
+## JEV Growth Strategy
+- JEV evaluate state: OPTIMIZE (93% confidence)
+- Priorities: FIX_BLOCKERS (98%), SERVICE_PAGES (97%), OPTIMIZE_PIPELINE (96%), DIVERSIFY_CHANNELS (80%)
+- All API blockers UNLOCKED: Apollo ✅, Hunter.io ✅, Gmail ✅, Stripe ✅
+- Service catalog synced at 35,932 services
+- 0 new pages generated (catalog fully synced)
+- Fernanda leads: 119 outreach emails sent across batches 2-19
+- Batches #16-19 pending deduplication outreach
+- Wave #12 UK MSPs staged, held pending duplicate-check
+- Waves #13-#17 labeled; backlog #10-#17 held
+- Kleber sent 8 personalized emails (batches #45/#46) — CC carlos@, commercial@, fernanda@
+- Waves #18-19 executed overnight: ~25 emails to Nordics + South Africa MSPs
+- Lead batch #99 UK: 10 leads sent, Ireland 6 skipped
+- Batch #15 duplicate sends flagged to Carlos & Fernanda
+- Inbox triaged: 42 noise trashed, ~59 Carlos copies marked read
+- JEV deal decisions: Markham HOLD (100%), TDS requote (84%), Assefaz Plano B (60%), Fernanda wait (74%), HubSpot upgrade (60%)
