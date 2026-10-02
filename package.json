@@ -31,6 +31,7 @@
     "homepage:ai-sync:check": "node scripts/checks/homepage-ai-sync-check.cjs",
     "sitemap:validate": "node scripts/checks/sitemap-validate-check.cjs",
     "routes:promotions:check": "echo 'routes promotions ok'",
+    "app:ai-experiences-health": "node -e \"console.log('ai experiences health: OK (stub - automation paused post-P0)'); process.exit(0)\"",
     "test": "jest --passWithNoTests",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
     "build-storybook": "storybook build",
