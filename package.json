@@ -33,6 +33,7 @@
     "routes:promotions:check": "echo 'routes promotions ok'",
     "app:ai-experiences-health": "node -e \"console.log('ai experiences health: OK (stub - automation paused post-P0)'); process.exit(0)\"",
     "content:services-and-content": "node automation/ai-services-and-content-automation.cjs",
+    "nav:live-audit": "node automation/live-navigation-audit.cjs",
     "test": "jest --passWithNoTests",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
     "build-storybook": "storybook build",
