@@ -1,0 +1,10 @@
+name: "Zion CodeQL config"
+# Exclude generated/static content so analysis fits in the runner
+# (repo ships 36k+ generated HTML/JS pages under public/).
+paths-ignore:
+  - public
+  - automation/reports
+  - node_modules
+  - .next
+  - out
+  - "**/*.min.js"
