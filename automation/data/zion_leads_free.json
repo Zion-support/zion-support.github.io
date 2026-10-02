@@ -1,7 +1,15 @@
 {
-  "generated_at": "2026-09-20T12:29:06.137400+00:00",
-  "generated_by": "gmail-scan-reseed",
-  "total_leads": 56,
+  "generated_at": "2026-10-02T12:00:18.060505+00:00",
+  "generated_by": "lead-discovery-batch-2026-09-01",
+  "total_leads": 82,
+  "sources": [
+    "GitHub Lead Discovery (github_lead_discovery.py) - 75 repos",
+    "SAM.gov - 8 government RFPs/BPAs (DNFSB, NIST CAPSS, DoD Agentic AI, C5ISRT, FDA, IRS BPA)",
+    "Web search - Brazilian companies (Beep Saúde, Bliss Health, Natura, Conta Azul, Stone, Neurosia, Red Lotus, SCM Gestão, Radix, Wildlife Studios)",
+    "Web search - US/international companies (Starbridge, AI Automation Agency UK, Agency AI Solutions, Entech)",
+    "Web search - Software/digital agencies (Xovak Studio, Krishang Technolab, DoodleWeb, Allusivedigital, Taskip)",
+    "Prior session leads (28 existing leads enriched)"
+  ],
   "leads": [
     {
       "empresa": "\"Kleber Garcia Alcatrão\"",
@@ -587,37 +595,333 @@
       "contato_proventivo": "seminarios@godogie.com"
     },
     {
-      "empresa": "\"Service Delivery Management @ Zion Holdings\"",
-      "email": "sdm@ziontechgroup.com",
-      "site": "https://ziontechgroup.com",
+      "empresa": "NiubiStar Support Team",
+      "email": "market@mcpcnserver.com",
+      "site": "https://mcpcnserver.com",
       "servico_relevante": "AI Automation",
-      "motivo": "Olá, analisei seu e-mail sobre: Re: Proposal for 03 Analysts (2 L1 and 1 L2)",
+      "motivo": "Olá, analisei seu e-mail sobre: Developer marketing plan for open-source projects",
       "fonte": "gmail-scan-reseed",
       "tipo": "email_inbound_lead",
       "prioridade": "alta",
-      "contato_proventivo": "sdm@ziontechgroup.com"
+      "contato_proventivo": "market@mcpcnserver.com"
     },
     {
-      "empresa": "\"Carlos Alcatrão\"",
-      "email": "carlos@ziontechgroup.com",
-      "site": "https://ziontechgroup.com",
+      "empresa": "\"Everingham & Kerr, Inc.\"",
+      "email": "admin1@everkerr.com",
+      "site": "https://everkerr.com",
       "servico_relevante": "AI Automation",
-      "motivo": "Olá, analisei seu e-mail sobre: Solicitação de Proposta",
+      "motivo": "Olá, analisei seu e-mail sobre: E&K: New Acquisition Opportunity - Custom Sign & Lighting Fabrication Company",
       "fonte": "gmail-scan-reseed",
       "tipo": "email_inbound_lead",
       "prioridade": "alta",
-      "contato_proventivo": "carlos@ziontechgroup.com"
+      "contato_proventivo": "admin1@everkerr.com"
     },
     {
-      "empresa": "Lloyd brendan James",
-      "email": "lloydbrendanjames20@gmail.com",
-      "site": "https://gmail.com",
+      "empresa": "Bruno Rocha",
+      "email": "comercial02@zetechnobreak.com.br",
+      "site": "https://zetechnobreak.com.br",
       "servico_relevante": "AI Automation",
-      "motivo": "Olá, analisei seu e-mail sobre: INVESTMENT PROJECT PROPOSAL",
+      "motivo": "Olá, analisei seu e-mail sobre: Accepted: Zion Tech Group × Zetech — Parceria manutenção nobreaks @ Thu Sep 24, 2026 10:00 - 10:40 (GMT-3) (kleber@ziont",
       "fonte": "gmail-scan-reseed",
       "tipo": "email_inbound_lead",
       "prioridade": "alta",
-      "contato_proventivo": "lloydbrendanjames20@gmail.com"
+      "contato_proventivo": "comercial02@zetechnobreak.com.br"
+    },
+    {
+      "empresa": "\"Clément RORET\"",
+      "email": "Clement.RORET@creitvity-consulting.com",
+      "site": "https://creitvity-consulting.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Request for Quote - Geneve Switzerland intervention - Server DELL",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "Clement.RORET@creitvity-consulting.com"
+    },
+    {
+      "empresa": "Portal de Compras Publicas",
+      "email": "falecom@portaldecompraspublicas.com.br",
+      "site": "https://portaldecompraspublicas.com.br",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Alerta de Licitações - ZION COMERCIO E SERVICOS DE INFORMATICA LTDA, hoje temos 41 oportunidades para você.",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "falecom@portaldecompraspublicas.com.br"
+    },
+    {
+      "empresa": "\"Carlos Alcatrão via Read AI\"",
+      "email": "executiveassistant@e.read.ai",
+      "site": "https://e.read.ai",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: 🗓 Zion Tech Group × TechDomain — Field Services Partnership on September 21, 2026 | Read Meeting Report",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "executiveassistant@e.read.ai"
+    },
+    {
+      "empresa": "Microsoft",
+      "email": "replyto@email.microsoft.com",
+      "site": "https://email.microsoft.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: See what’s ahead for business leaders at Microsoft Ignite",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "replyto@email.microsoft.com"
+    },
+    {
+      "empresa": "Alex do Homer",
+      "email": "ajuda@homer.com.br",
+      "site": "https://homer.com.br",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Kleber, seu cliente já está conversando com a concorrência?",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "ajuda@homer.com.br"
+    },
+    {
+      "empresa": "The Cohere Team",
+      "email": "info@email.cohere.com",
+      "site": "https://email.cohere.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Did you know 1 in 3 leaders can’t define sovereign AI?",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "info@email.cohere.com"
+    },
+    {
+      "empresa": "Rely IT Info",
+      "email": "info@relyit.se",
+      "site": "https://relyit.se",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Automatic reply: AI agents for your MSP practice — partnership offer for Rely IT",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "info@relyit.se"
+    },
+    {
+      "empresa": "Gridheart Support",
+      "email": "support@gridheart.com",
+      "site": "https://gridheart.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: New ticket: Partnership: AI services for your Nordic MSP network — Zion Tech Group [ID:0021457]",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "support@gridheart.com"
+    },
+    {
+      "empresa": "Dexani Helpdesk",
+      "email": "support@dexani.co.za",
+      "site": "https://dexani.co.za",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Ticket Received - [#38271] AI agents for MSP operations — partnership offer for Dexani (free assessment)",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "support@dexani.co.za"
+    },
+    {
+      "empresa": "Automailer Team",
+      "email": "hello@automailer.io",
+      "site": "https://automailer.io",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Your leads now land in HubSpot",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "hello@automailer.io"
+    },
+    {
+      "empresa": "Cursor Team",
+      "email": "team@mail.cursor.com",
+      "site": "https://mail.cursor.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Projects is now in Cursor",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "team@mail.cursor.com"
+    },
+    {
+      "empresa": "Financeiro Agilize",
+      "email": "contato@agilize.com.br",
+      "site": "https://agilize.com.br",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: [FIN] Não queremos perder a parceria com você! 😥🚨",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "contato@agilize.com.br"
+    },
+    {
+      "empresa": "Atendimento",
+      "email": "atendimento@penso.com.br",
+      "site": "https://penso.com.br",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Resolvido: IA aplicada a serviços gerenciados — proposta para a Penso",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "atendimento@penso.com.br"
+    },
+    {
+      "empresa": "Scott Constable",
+      "email": "Scott.Constable@empowereduk.com",
+      "site": "https://empowereduk.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Opp-31830 - Request for Quote WiFi Survey - Opp 433250883791 / Synthesia / Wifi Survey / NY Offices",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "Scott.Constable@empowereduk.com"
+    },
+    {
+      "empresa": "Envato Market",
+      "email": "do-not-reply@market.envato.com",
+      "site": "https://market.envato.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: [CodeCanyon] Update available for 'WordPress Automatic Plugin'",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "do-not-reply@market.envato.com"
+    },
+    {
+      "empresa": "Toni Wiegand via Esign",
+      "email": "mike.dixonveV2x@synauta.com",
+      "site": "https://synauta.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Project Resources – Please Review",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "mike.dixonveV2x@synauta.com"
+    },
+    {
+      "empresa": "Global Sources",
+      "email": "hotline@lead.globalsources.com",
+      "site": "https://lead.globalsources.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: 4 Market Export Strategies to Win More Buyers Worldwide",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "hotline@lead.globalsources.com"
+    },
+    {
+      "empresa": "Lead Qualificado",
+      "email": "contato@imodari.com.br",
+      "site": "https://imodari.com.br",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Receba 22 Leads qualificados por dia",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "contato@imodari.com.br"
+    },
+    {
+      "empresa": "ITMates HR",
+      "email": "hello@itmates.io",
+      "site": "https://itmates.io",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: IT Mates x Zion: Houston L2 shortlist and partnership terms",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "hello@itmates.io"
+    },
+    {
+      "empresa": "\"Porto Serviço\"",
+      "email": "comunicacao@novidades.portoservico.com.br",
+      "site": "https://novidades.portoservico.com.br",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Seu carro merece um cuidado Porto",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "comunicacao@novidades.portoservico.com.br"
+    },
+    {
+      "empresa": "Madelin Fragoso - ExperTech",
+      "email": "negocios@expertech.com.co",
+      "site": "https://expertech.com.co",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: RE: Propuesta de alianza — Zion Tech Group × ExperTech Colombia",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "negocios@expertech.com.co"
+    },
+    {
+      "empresa": "Yonit",
+      "email": "vip@vip.cinclinepower.ltd",
+      "site": "https://vip.cinclinepower.ltd",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Power Solutions for Air-Cooled Data Center Projects",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "vip@vip.cinclinepower.ltd"
+    },
+    {
+      "empresa": "Martin Fox",
+      "email": "martinfox@sudlows.com",
+      "site": "https://sudlows.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Looking to build up my Talent pool across the following location to help deliver projects",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "martinfox@sudlows.com"
+    },
+    {
+      "empresa": "Leo Simoes",
+      "email": "lsimoes@cloudflare.com",
+      "site": "https://cloudflare.com",
+      "servico_relevante": "Cloud Migration & FinOps",
+      "motivo": "Olá, analisei seu e-mail sobre: Invitation: Zion Group | Cloudflare: Possivel Parceria  @ Thu Oct 1, 2026 17:30 - 18:00 (GMT-3) (kleber@ziontechgroup.co",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "lsimoes@cloudflare.com"
+    },
+    {
+      "empresa": "Network Solutions",
+      "email": "info@eml.networksolutions.com",
+      "site": "https://eml.networksolutions.com",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: One AI subscription. Multiple leading models.",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "info@eml.networksolutions.com"
+    },
+    {
+      "empresa": "Vadims Kuznecovs",
+      "email": "vadims.kuznecovs@ksk-it.eu",
+      "site": "https://ksk-it.eu",
+      "servico_relevante": "AI Automation",
+      "motivo": "Olá, analisei seu e-mail sobre: Accepted: Zion Tech Group × KSK IT — Technical meeting (white-label field services partnership)",
+      "fonte": "gmail-scan-reseed",
+      "tipo": "email_inbound_lead",
+      "prioridade": "alta",
+      "contato_proventivo": "vadims.kuznecovs@ksk-it.eu"
     }
-  ]
+  ],
+  "_metadata": {
+    "github_repos_found": 75,
+    "government_opportunities": 8,
+    "brazil_companies": 10,
+    "usa_companies": 4,
+    "agencies": 5,
+    "github_repo_owners": 5,
+    "video_audio_ai": 1,
+    "iot_edge": 1
+  }
 }

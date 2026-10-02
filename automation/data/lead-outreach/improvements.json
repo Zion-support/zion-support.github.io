@@ -1,111 +1,428 @@
 {
   "digests": [
     {
-      "ts": "2026-09-09T19:21:00.000000Z",
+      "ts": "2026-09-29T03:07:14.069143Z",
       "status": "active/working",
       "metrics": {
-        "totalRuns": 708,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
         "authFailures": 0,
         "hotFollowups": 0,
-        "latestComplete": "2026-09-07T01:27:59.585368Z",
-        "potentialClients": 0,
-        "scanned": 501,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
         "sendEnabled": false,
         "gmailAuth": true,
-        "recencyDays": 11.45,
-        "reconciliationNote": "Snapshot from 2026-09-09: 708 total runs, 0 canonical sends, 0 duplicates suppressed, 0 auth failures. Pool collapsed to 0 on Sep 7 and stayed at zero. Send-path wiring is the gating blocker. Hot-followup label empty -- no active threads."
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Freshness cycle (2026-09-30): potentialClients grew 219\u2192289 after new scan. sendsAttempted=1, duplicatesSuppressed=1, authFailures=0 unchanged. sendEnabled=false remains sole blocker; gmailAuth=true. No hot-follow-up threads. Dedupe 7-day window functioning correctly. No suppression-window, prompt-wording, or scoring change warranted.",
+        "reconciliationDate": "2026-09-30T11:53:51.179Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, only 1 duplicate suppressed across 24 runs.",
+          "Scan criteria producing results (219 potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool not stale at this snapshot."
+        ]
       }
     },
     {
-      "ts": "2026-09-18T13:33:01.312692Z",
+      "ts": "2026-09-30T11:53:51.179Z",
       "status": "active/working",
       "metrics": {
-        "totalRuns": 708,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
         "authFailures": 0,
         "hotFollowups": 0,
-        "latestComplete": "2026-09-07T01:27:59.585368Z",
-        "potentialClients": 0,
-        "scanned": 501,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
         "sendEnabled": false,
         "gmailAuth": true,
-        "recencyDays": 11.45,
-        "reconciliationNote": "Cron review 2026-09-18T13:33:01.312692Z: no material state delta vs prior entries. Latest complete event still carries potentialClients=0 despite prior improvements entry claiming 18 -- no recovery occurred. Same stale zero-send zero-potential-client topology. 343 legacy direct Gmail sends bypass canonical pipeline. Suggestions only: (1) suppression window is unexercised (0 canonical sends) -- no tuning signal, (2) prompt wording/scoring unobservable until sends resume, (3) if send path restored, re-evaluate suppression after first send burst produces responses, (4) re-evaluate prompt/scoring after enough sends+responses accumulate to measure reply rate by variant."
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Patched duplicatesSuppressed 0\u21921 from live log scan on 2026-09-30. One duplicate suppression event detected in complete record 2026-09-22T00:21:06Z.",
+        "reconciliationDate": "2026-09-30T13:40:22Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool growing not stale."
+        ]
       }
     },
     {
-      "ts": "2026-09-18T14:45:00.000000Z",
+      "ts": "2026-09-30T16:50:56Z",
       "status": "active/working",
       "metrics": {
-        "totalRuns": 708,
-        "sendsAttempted": 0,
-        "duplicatesSuppressed": 0,
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
         "authFailures": 0,
         "hotFollowups": 0,
-        "latestComplete": "2026-09-07T01:27:59.585368Z",
-        "potentialClients": 0,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "potentialClients": 289,
+        "scanned": 501,
+        "recommendations": [
+          "sendEnabled=false is the sole blocker; gmailAuth=true confirmed.",
+          "Dedupe 7-day window functioning (1 duplicate suppressed across 27 runs).",
+          "Candidate pool recovered: 289 potential clients after fresh scan (grew 219->289).",
+          "No suppression-window, prompt-wording, or scoring change warranted.",
+          "Send path not wired; enable sendEnabled + Gmail auth to resume outbound."
+        ],
+        "reconciliationNote": "Freshness reconciliation (2026-09-30T18:08Z): potentialClients corrected from stale 0 to live value 289 (grew 219->289 in latest scan window). totalRuns=27, sendsAttempted=1, duplicatesSuppressed=1, authFailures=0, hotFollowups=0 unchanged. scanned=501. sendEnabled=false remains sole blocker; gmailAuth=true. No hot-follow-up threads. Dedupe 7-day window functioning. No suppression-window, prompt-wording, or scoring change warranted. Leaked sibling latestComplete removed; canonicalized inside metrics only.",
+        "reconciliationDate": "2026-09-30T18:08:00.000000Z"
+      }
+    },
+    {
+      "ts": "2026-09-30T16:51:16Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "potentialClients": 289,
+        "scanned": 501,
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 unique potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool growing not stale."
+        ],
+        "reconciliationNote": "Fresh recompute on 2026-09-30. 27 non-empty log lines, 1 legacy send event, 1 duplicate suppression event in complete record 2026-09-22T00:21:06Z. One canonical complete event confirms sendsAttempted=1. 289 unique potential clients from 523 raw candidates.",
+        "reconciliationDate": "2026-09-30T16:51:16Z"
+      }
+    },
+    {
+      "ts": "2026-09-30T17:08:18.408008Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "potentialClients": 289,
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review-only cycle: metrics unchanged from latest digest. 289 potential clients, 1 send, 1 duplicate suppressed, 0 auth failures across 27 runs. sendEnabled=false is the sole blocker; gmailAuth=true. No hot-follow-up threads found (label scan returned empty). No suppression-window, prompt-wording, or scoring change warranted.",
+        "reconciliationDate": "2026-09-30T17:08:18.408008Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool not stale."
+        ]
+      }
+    },
+    {
+      "ts": "2026-09-30T17:09:45.501356Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "potentialClients": 289,
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review-only cycle: metrics unchanged from latest digest. 289 potential clients, 1 send, 1 duplicate suppressed, 0 auth failures across 27 runs. sendEnabled=false is the sole blocker; gmailAuth=true. No hot-follow-up threads found (label scan returned empty). No suppression-window, prompt-wording, or scoring change warranted.",
+        "reconciliationDate": "2026-09-30T17:09:45.501356Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path - sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) - working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 potential clients) - no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted - dedupe working, pool not stale."
+        ]
+      }
+    },
+    {
+      "ts": "2026-09-30T19:05:00.000000Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "potentialClients": 289,
         "scanned": 501,
         "sendEnabled": false,
         "gmailAuth": true,
-        "recencyDays": 11.45,
-        "reconciliationNote": "Cron review 2026-09-18T14:45:00Z (UTC-03:00): no material state delta vs prior entries (latest digest ts=2026-09-18T13:33:01.312692Z, prior improvements entry ts=2026-09-18T13:33:01.312692Z). Live outreach-log.jsonl: 708 non-empty lines, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event), scanned=501. Auth healthy: zero No auth for gmail across all 708 records. Gmail search probe succeeds, canonical send path remains unconfigured (sendEnabled=false, gmailAuth=true). Hot-followup label empty -- no active threads to draft CEO replies. No actionable suppression-window/prompt-wording/scoring pattern: 0 canonical sends means suppression never exercised, and content experiments are unobservable until sends resume."
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Freshness-only update: totalRuns advanced from 25 to 27 (line-count growth from orphaned start event, concurrent cron fire). No auth delta, no send burst, no status change. State remains active/working. See improvements[-1] for full context.",
+        "reconciliationDate": "2026-09-30T23:15:00Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path - sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) - working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 potential clients) - no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted - dedupe working, pool healthy, 0 sends is send-path config issue not suppression issue."
+        ]
+      }
+    },
+    {
+      "ts": "2026-10-01T03:15:28Z",
+      "status": "active/working",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review cycle 2026-10-01T03:14Z: metrics unchanged from 2026-09-30T19:05Z digest. 27 runs, 1 send (roberval.correa@newcon-br.com), 1 duplicate suppressed, 0 auth failures, 289 potential clients from 501 scanned. sendEnabled=false remains sole blocker; gmailAuth=true. No hot-follow-up threads (label scan returned empty). Dedupe 7-day window functioning correctly. No suppression-window, prompt-wording, or scoring change warranted.",
+        "reconciliationDate": "2026-10-01T03:15:28Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool healthy, 0 sends is send-path config issue not suppression issue."
+        ]
       }
     }
   ],
   "improvements": [
     {
-      "ts": "2026-09-11T23:34:14Z",
-      "pattern": "Cron review 2026-09-11T23:34:14Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
-      "metrics": {}
+      "ts": "2026-09-29T03:07:14.069143Z",
+      "metrics": {
+        "totalRuns": 24,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 219,
+        "latestComplete": "2026-09-29T03:07:14.069143Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Log truncated/replaced since 2026-07-23T12:04Z baseline (totalRuns 1174\u219224, sendsAttempted 0\u21921, duplicatesSuppressed 759\u21921). Current log supports only 24 non-empty lines. Prior baseline no longer valid. Authorization restored (gmailAuth=true); sendEnabled remains false \u2014 canonical send path not wired.",
+        "reconciliationDate": "2026-09-29T03:07:14.069143Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, only 1 duplicate suppressed across 24 runs.",
+          "Scan criteria producing results (219 potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool not stale at this snapshot."
+        ]
+      },
+      "pattern": "Auth-restored active/working with log truncation and 1 send burst. sendEnabled=false is the only send blocker; dedupe and scan criteria are healthy. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "outreach-log.jsonl truncated/replaced since 2026-07-23T12:04Z; prior baseline (totalRuns=1174, sendsAttempted=0, duplicatesSuppressed=759) no longer supported. Live baseline: totalRuns=24, sendsAttempted=1, duplicatesSuppressed=1.",
+        "gmailAuth restored (was false in July 23 baseline); auth is no longer a blocker.",
+        "sendEnabled=false remains the sole send blocker. 219 potential clients available \u2014 send path wiring is the priority, not suppression tuning.",
+        "1 send attempted to roberval.correa@newcon-br.com (newcon-br.com) \u2014 outbound activity resumed post-truncation. Dedupe caught 1 duplicate across 24 runs; suppression window functioning as designed."
+      ]
     },
     {
-      "ts": "2026-09-18T04:25:30Z",
-      "pattern": "Cron review 2026-09-18T04:25:30Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
-      "metrics": {}
+      "ts": "2026-09-30T04:00:00.000000Z",
+      "metrics": {
+        "totalRuns": 24,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 219,
+        "latestComplete": "2026-09-29T03:07:14.069143Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review-only cycle: metrics unchanged from 2026-09-29T03:07Z digest. No suppression-window, prompt-wording, or scoring change warranted \u2014 dedupe working, pool healthy, scan criteria producing 219 potential clients. No hot-follow-up threads active in Gmail.",
+        "reconciliationDate": "2026-09-30T04:00:00.000000Z"
+      },
+      "pattern": "No meaningful state delta since 2026-09-29 digest. sendEnabled=false remains sole blocker; no hot-follow-up threads to act on. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach pipeline: gmailAuth restored, sendEnabled=false. 219 potential clients available. 1 send completed (roberval.correa@newcon-br.com), 1 duplicate suppressed; dedupe and scan criteria healthy.",
+        "No suppression-window, prompt-wording, or scoring update indicated. Dedupe 7-day window functioning as designed. Scan criteria producing consistent results.",
+        "No active hot-follow-up threads found in Gmail (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "Priority remains: enable canonical send path so the 219 potential clients can be contacted."
+      ]
     },
     {
-      "ts": "2026-09-18T07:25:19Z",
-      "pattern": "Cron review 2026-09-18T07:25:19Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
-      "metrics": {}
+      "ts": "2026-09-30T10:38:51.000000Z",
+      "metrics": {
+        "totalRuns": 24,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 219,
+        "latestComplete": "2026-09-29T03:07:14.069143Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review-only cycle (2026-09-30T~10:16Z): metrics unchanged from 2026-09-30T04:00Z digest. No suppression-window, prompt-wording, or scoring change warranted. Dedupe 7-day window functioning correctly (1 duplicate across 24 runs). Scan criteria producing 219 potential clients \u2014 no narrowing needed. sendEnabled=false remains sole blocker; gmailAuth=true. No hot-follow-up threads active.",
+        "reconciliationDate": "2026-09-30T10:38:51.000000Z"
+      },
+      "pattern": "No meaningful state delta since 2026-09-30T04:00Z entry. sendEnabled=false remains sole blocker; no hot-follow-up threads. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach pipeline: gmailAuth=true, sendEnabled=false. 219 potential clients available. 1 send completed (roberval.correa@newcon-br.com), 1 duplicate suppressed; dedupe and scan criteria healthy.",
+        "No suppression-window, prompt-wording, or scoring update indicated. Dedupe 7-day window functioning as designed. Scan criteria producing consistent results across 9 complete events (potentialClients ranging 30-219).",
+        "No active hot-follow-up threads found in Gmail (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "Priority remains: enable canonical send path (sendEnabled=false) so the 219 potential clients can be contacted. No suppression tuning needed until send path is live."
+      ]
     },
     {
-      "ts": "2026-09-18T08:14:27Z",
-      "pattern": "Cron review 2026-09-18T08:14:27Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
-      "metrics": {}
+      "ts": "2026-09-30T11:53:51.179Z",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Scan produced 289 potential clients (up from 219 in prior window). 1 send attempted (roberval.correa@newcon-br.com), 1 duplicate suppressed. sendEnabled=false is the sole blocker; gmailAuth=true. No suppression-window, prompt-wording, or scoring change indicated.",
+        "reconciliationDate": "2026-09-30T11:53:51.179Z"
+      },
+      "pattern": "potentialClients grew 219\u2192289 across consecutive scans \u2014 scan criteria producing broader results, not a stale pool. sendEnabled=false remains sole blocker. No hot-follow-up threads. Dedupe 7-day window working as designed.",
+      "improvements": [
+        "Outreach scan: 289 potential clients discovered (up from 219). Scan criteria producing broader results \u2014 no narrowing needed.",
+        "1 send attempted (roberval.correa@newcon-br.com), 1 duplicate suppressed across 25 runs. Dedupe functioning correctly.",
+        "sendEnabled=false remains the sole send blocker; gmailAuth=true. Canonical send path wiring is the priority.",
+        "No active hot-follow-up threads (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "No suppression-window, prompt-wording, or scoring change warranted. Dedupe 7-day window and scan criteria healthy."
+      ]
     },
     {
-      "ts": "2026-09-18T10:48:47.000000Z",
-      "pattern": "Cron review 2026-09-18T10:48:47.000000Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
-      "metrics": {}
+      "ts": "2026-09-30T12:25:38.300Z",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Canonical metrics reconciled from live log (2026-09-30T12:25Z): sendsAttempted=1 (1 canonical complete with sent:1), duplicatesSuppressed=1 (1 canonical suppression across complete events). totalRuns=27, authFailures=0, potentialClients=289. sendEnabled=false remains sole blocker; gmailAuth=true. No hot-follow-up threads.",
+        "reconciliationDate": "2026-09-30T12:25:38.300Z"
+      },
+      "pattern": "Active/working with sendDisabled blocker; canonical metrics reconciled from live log. sendsAttempted=1 (1 canonical complete with sent:1), duplicatesSuppressed=1 (1 canonical suppression). 289 potential clients. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach: 1 send attempted (canonical complete with sent:1 to roberval.correa@newcon-br.com), 1 duplicate suppressed across 27 runs. Gmail auth active, send path still disabled.",
+        "Canonical counts corrected: prior entry reported 2 sends / 2 duplicates but legacy sent/skipped events lack sent/emailsSentCount/skippedDuplicateSuppression fields. Canonical verifier counts only complete events with those fields: 1 send, 1 duplicate.",
+        "289 potential clients \u2014 scan criteria producing broad results. Dedupe 7-day window functioning correctly.",
+        "No hot-follow-up threads (label:!!!hot-follow-up returned no results). No CEO draft prepared.",
+        "Priority: enable canonical send path (sendEnabled=false) to reach 289 prospects. No suppression tuning needed."
+      ]
     },
     {
-      "ts": "2026-09-18T10:48:58.000000Z",
-      "pattern": "Cron review 2026-09-18T10:48:58.000000Z: no material state delta vs prior entries. 708 totalRuns, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event).sendEnabled=false, gmailAuth=true. Hot-followup label empty. No suppression-window/prompt-wording/scoring signal -- 0 canonical sends leaves suppression unexercised and content experiments unobservable.",
-      "metrics": {}
+      "ts": "2026-09-30T19:05:00.000000Z",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "potentialClients": 289,
+        "scanned": 501,
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review-only cycle (2026-09-30T19:05Z): metrics unchanged. 289 potential clients, 1 send, 1 duplicate suppressed, 0 auth failures across 27 runs. sendEnabled=false sole blocker; gmailAuth=true. No hot-follow-up threads. Dedupe 7-day window functioning. No suppression-window, prompt-wording, or scoring change warranted."
+      },
+      "pattern": "No meaningful state delta since 2026-09-30T17:09Z digest. sendEnabled=false remains sole blocker; no hot-follow-up threads to act on. Send path wiring is the priority. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach pipeline: gmailAuth=true, sendEnabled=false. 289 potential clients available. 1 send completed (roberval.correa@newcon-br.com), 1 duplicate suppressed; dedupe and scan criteria healthy.",
+        "No suppression-window, prompt-wording, or scoring update indicated. Dedupe 7-day window functioning. Scan criteria producing consistent results (289 potential clients from 501 scanned).",
+        "No active hot-follow-up threads found in Gmail (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "Priority remains: enable canonical send path (sendEnabled=false) so the 289 prospects can be contacted. No suppression tuning needed until send path is live."
+      ]
     },
     {
-      "ts": "2026-09-18T12:09:56.091Z",
-      "pattern": "Cron review 2026-09-18T11:52:26Z: material state delta -- potentialClients recovered from 0 to 18 in the latest complete event (scanned=501, ts=2026-09-07T00:35:17.196027Z). This is a positive signal but incomplete: sendsAttempted still 0 because sendEnabled=false (send-path wiring is unconfigured). Recovery is trapped until send auth/wiring is restored. No suppression-window tuning warranted yet (duplicatesSuppressed=0 because canonical sends never attempted). No prompt wording or scoring changes: effect unobservable until sends resume.",
-      "metrics": {}
+      "ts": "2026-09-30T20:50:00.000000Z",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 289,
+        "scanned": 501,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review-only cycle (2026-09-30T20:50Z): no meaningful state delta since 2026-09-30T19:05Z digest. All metrics unchanged \u2014 27 runs, 1 send (roberval.correa@newcon-br.com), 1 duplicate suppressed, 0 auth failures, 289 potential clients from 501 scanned. sendEnabled=false remains sole blocker; gmailAuth=true. No hot-follow-up threads (label:!!!hot-follow-up returned no results). No suppression-window, prompt-wording, or scoring change warranted. Dedupe 7-day window functioning correctly.",
+        "reconciliationDate": "2026-09-30T20:50:00.000000Z",
+        "recommendations": [
+          "Wire canonical send path / enable Gmail send path \u2014 sendEnabled=false is the blocker, not suppression.",
+          "Dedupe conservative (7-day window) \u2014 working correctly, 1 duplicate suppressed across 27 runs.",
+          "Scan criteria producing results (289 potential clients) \u2014 no narrowing needed.",
+          "No suppression-window/prompt/scoring change warranted \u2014 dedupe working, pool healthy, 0 sends is send-path config issue not suppression issue."
+        ]
+      },
+      "pattern": "No meaningful state delta since 2026-09-30T19:05Z digest. sendEnabled=false remains sole blocker; no hot-follow-up threads to act on. Send path wiring is the priority. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach pipeline: gmailAuth=true, sendEnabled=false. 289 potential clients available. 1 send completed (roberval.correa@newcon-br.com), 1 duplicate suppressed; dedupe and scan criteria healthy.",
+        "No suppression-window, prompt-wording, or scoring update indicated. Dedupe 7-day window functioning. Scan criteria producing consistent results (289 potential clients from 501 scanned).",
+        "No active hot-follow-up threads found in Gmail (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "Priority remains: enable canonical send path (sendEnabled=false) so the 289 prospects can be contacted. No suppression tuning needed until send path is live."
+      ]
     },
     {
-      "ts": "2026-09-18T13:33:01.312692Z",
-      "pattern": "Cron review 2026-09-18T13:33:01.312692Z: no material state delta vs prior digest (ts=2026-09-18T12:09:56.091Z). Live outreach-log.jsonl unchanged: 708 non-empty lines, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z, potentialClients=0 in latest complete event (no recovery from the 18-client peak on Sep 7). Same stale zero-send zero-potential-client topology persists. 343 legacy direct Gmail sends bypass canonical pipeline.",
-      "metrics": {}
+      "ts": "2026-10-01T03:16:04Z",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review cycle 2026-10-01T03:15Z: metrics unchanged from 2026-09-30T20:50Z entry. 27 runs, 1 send (roberval.correa@newcon-br.com), 1 duplicate suppressed, 0 auth failures, 289 potential clients from 501 scanned. sendEnabled=false sole blocker; gmailAuth=true. No hot-follow-up threads (label scan returned empty). Dedupe 7-day window functioning. No suppression-window, prompt-wording, or scoring change warranted.",
+        "reconciliationDate": "2026-10-01T03:16:04Z"
+      },
+      "pattern": "No meaningful state delta since 2026-09-30T20:50Z entry. sendEnabled=false remains sole blocker; no hot-follow-up threads. Send path wiring is the priority. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach pipeline: gmailAuth=true, sendEnabled=false. 289 potential clients available. 1 canonical send (roberval.correa@newcon-br.com), 1 duplicate suppressed across 27 runs; dedupe and scan criteria healthy.",
+        "No suppression-window, prompt-wording, or scoring update indicated. Dedupe 7-day window functioning. Scan criteria producing consistent results (289 potential clients from 501 scanned).",
+        "No active hot-follow-up threads found in Gmail (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "Priority remains: enable canonical send path (sendEnabled=false) so the 289 prospects can be contacted. No suppression tuning needed until send path is live."
+      ]
     },
     {
-      "ts": "2026-09-18T14:45:00.000000Z",
-      "pattern": "Cron review 2026-09-18T14:45:00Z (UTC-03:00): no material state delta vs prior entries (latest digest ts=2026-09-18T13:33:01.312692Z, prior improvements entry ts=2026-09-18T13:33:01.312692Z). Live outreach-log.jsonl: 708 non-empty lines, 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event), scanned=501. Auth healthy: zero No auth for gmail across all 708 records. Gmail search probe succeeds, canonical send path remains unconfigured (sendEnabled=false, gmailAuth=true). Hot-followup label empty -- no active threads to draft CEO replies. No actionable suppression-window/prompt-wording/scoring pattern: 0 canonical sends means suppression never exercised, and content experiments are unobservable until sends resume.",
-      "metrics": {}
-    },
-    {
-      "ts": "2026-09-18T21:59:23.753612Z",
-      "pattern": "Cron review 2026-09-18T21:59Z (UTC-03:00): active/working, send-disabled, stale candidate pool, no hot-follow-up threads. Live outreach-log.jsonl: 708 non-empty lines (343 legacy sends + 3 send_disabled_analysis + 133 start + 229 complete), 0 canonical sends, 0 duplicates suppressed, 0 auth failures, 0 hotFollowups, latestComplete=2026-09-07T01:27:59.585368Z (11+ days stale), potentialClients=0 (latest complete event), scanned=501. Auth healthy: gmailAuth=true, 0 No auth for gmail across all 708 records. Gmail search probe succeeds, canonical send path remains unconfigured (sendEnabled=false). Hot-followup label empty -- no active threads, no CEO draft prepared. No suppression-window/prompt-wording/scoring signal: 0 canonical sends leaves suppression unexercised, content experiments unobservable. Gating blocker: send-path wiring. No material state delta vs prior improvements entry (ts=2026-09-18T14:45:00Z); skip append of duplicate observation.",
-      "metrics": {}
+      "ts": "2026-10-01T03:16:24Z",
+      "metrics": {
+        "totalRuns": 27,
+        "sendsAttempted": 1,
+        "duplicatesSuppressed": 1,
+        "authFailures": 0,
+        "hotFollowups": 0,
+        "potentialClients": 289,
+        "latestComplete": "2026-09-30T11:53:51.179Z",
+        "sendEnabled": false,
+        "gmailAuth": true,
+        "dedupeWindowDays": 7,
+        "reconciliationNote": "Review cycle 2026-10-01T03:15Z: metrics unchanged from 2026-09-30T20:50Z entry. 27 runs, 1 send (roberval.correa@newcon-br.com), 1 duplicate suppressed, 0 auth failures, 289 potential clients from 501 scanned. sendEnabled=false sole blocker; gmailAuth=true. No hot-follow-up threads (label:!!!hot-follow-up returned no results). Dedupe 7-day window functioning. No suppression-window, prompt-wording, or scoring change warranted.",
+        "reconciliationDate": "2026-10-01T03:16:24Z"
+      },
+      "pattern": "No meaningful state delta since 2026-09-30T20:50Z entry. sendEnabled=false remains sole blocker; no hot-follow-up threads. Send path wiring is the priority. No suppression-window, prompt-wording, or scoring change indicated.",
+      "improvements": [
+        "Outreach pipeline: gmailAuth=true, sendEnabled=false. 289 potential clients available. 1 canonical send (roberval.correa@newcon-br.com), 1 duplicate suppressed across 27 runs; dedupe and scan criteria healthy.",
+        "No suppression-window, prompt-wording, or scoring update indicated. Dedupe 7-day window functioning. Scan criteria producing consistent results (289 potential clients from 501 scanned).",
+        "No active hot-follow-up threads found in Gmail (label:!!!hot-follow-up returned no results). No CEO reply draft prepared.",
+        "Priority remains: enable canonical send path (sendEnabled=false) so the 289 prospects can be contacted. No suppression tuning needed until send path is live."
+      ]
     }
   ],
-  "updatedAt": "2026-09-18T21:59:23.753612Z"
+  "updatedAt": "2026-10-01T03:16:24Z"
 }

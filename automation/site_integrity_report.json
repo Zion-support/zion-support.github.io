@@ -1,6 +1,67 @@
 {
-  "total_crawled": 189,
-  "http_200": 189,
-  "broken_count": 0,
-  "broken": []
+  "total_crawled": 300,
+  "http_200": 288,
+  "broken_count": 12,
+  "broken": [
+    {
+      "url": "https://ziontechgroup.com/llm-cost-calculator/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/llm-cost-calculator/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-meeting-notes-copilot/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/ai-meeting-notes-copilot/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-smart-hands-scheduler/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/ai-smart-hands-scheduler/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/incident-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/incident-cost/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-ticket-triage/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/ai-ticket-triage/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/maintenance-ticket-triage/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/maintenance-ticket-triage/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-ticket-sentinel/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/ai-ticket-sentinel/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/site-uptime-watchdog/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/site-uptime-watchdog/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-data-warehouse/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/ai-data-warehouse/",
+      "type": "missing page"
+    },
+    {
+      "url": "https://ziontechgroup.com/token-cost/",
+      "status": 404,
+      "final": "https://ziontechgroup.com/token-cost/",
+      "type": "missing page"
+    }
+  ]
 }

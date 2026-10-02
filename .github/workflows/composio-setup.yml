@@ -21,8 +21,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Composio
-        run: npm install -g composio
+      - name: Install Composio CLI (v3)
+        run: |
+          curl -fsSL https://composio.dev/install | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Composio Whoami
         run: composio whoami

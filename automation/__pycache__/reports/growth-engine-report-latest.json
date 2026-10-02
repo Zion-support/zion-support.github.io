@@ -1,0 +1,8 @@
+{
+  "run_id": "4365de2f",
+  "ts": "2026-09-20T13:34:28.274005+00:00",
+  "dry_run": false,
+  "status": "error",
+  "command": "python3 autonomous_growth_loop.py",
+  "error": "send_cold_outreach_v2.py not found in workspace"
+}
