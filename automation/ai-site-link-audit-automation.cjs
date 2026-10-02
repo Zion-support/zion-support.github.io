@@ -15,7 +15,18 @@
 const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
-const { createLLMClient } = require('./lib/llm-client.cjs');
+// Lazy-loaded: only required when --create-pages mode runs (module lives outside this repo's trimmed tree)
+let _createLLMClient = null;
+function createLLMClient(opts) {
+  if (!_createLLMClient) {
+    try {
+      _createLLMClient = require('./lib/llm-client.cjs').createLLMClient;
+    } catch (e) {
+      throw new Error('LLM client unavailable (automation/lib/llm-client.cjs missing): ' + e.message);
+    }
+  }
+  return _createLLMClient(opts);
+}
 
 const CONFIG = {
   rootDir: process.cwd(),
