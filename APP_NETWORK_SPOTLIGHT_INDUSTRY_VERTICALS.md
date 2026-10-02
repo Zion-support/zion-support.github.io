@@ -20,3 +20,4 @@ Generic AI doesn't cut it in regulated, specialized industries. The **Industry V
 
 ## Meta description (SEO)
 Zion Tech Group's Industry Verticals Suite: purpose-built AI for pharma, construction, retail, logistics, transportation, and energy & utilities — with industry workflows and compliance baked in.
+

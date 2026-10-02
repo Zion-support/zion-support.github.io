@@ -22,6 +22,7 @@ export const AI_LAB_LINKS: NavigationLink[] = [
   { name: 'URL Audit Assistant', href: '/ai/url-audit-assistant' },
   { name: 'AI Readiness Assessment', href: '/ai/ai-readiness-assessment' },
   { name: 'Demo Sandbox', href: '/ai/demo' },
+
 ];
 
 export const SOLUTION_LINKS: NavigationLink[] = [
@@ -36,6 +37,7 @@ export const SOLUTION_LINKS: NavigationLink[] = [
   { name: '📡 IoT & Edge', href: '/services/?category=iot' },
   { name: '📧 Email Intelligence', href: '/services/?category=email-intelligence' },
   { name: '──────────', href: '#' },
+
   { name: '🛠️ All Services →', href: '/services' },
 ];
 
@@ -48,6 +50,7 @@ export const RESOURCE_LINKS: NavigationLink[] = [
   { name: '❓ FAQ', href: '/faq' },
   { name: 'ℹ️ About Us', href: '/about' },
   { name: '🤝 Partners', href: '/partners' },
+
 ];
 
 export const FEATURED_AI_SERVICE_LINKS: NavigationLink[] = [
@@ -73,3 +76,4 @@ export const TOOL_LINKS: NavigationLink[] = [
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'CSS Gradient Generator', href: '/tools/css-gradient-generator' },
 ];
+

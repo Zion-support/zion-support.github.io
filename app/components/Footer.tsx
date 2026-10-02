@@ -84,6 +84,7 @@ const FOOTER_LINKS: { title: string; links: FooterLink[] }[] = [
   },
 ];
 
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -93,6 +94,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
+
             <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Zion Tech Group
             </Link>
@@ -119,6 +121,7 @@ const Footer: React.FC = () => {
               <h4 className="text-sm font-semibold text-white uppercase tracking-wider">{column.title}</h4>
               <ul className="space-y-2.5">
                 {column.links.map((link) => (
+
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -164,6 +167,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
+
         <div className="border-t border-slate-800/60 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
@@ -184,3 +188,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

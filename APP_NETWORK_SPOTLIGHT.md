@@ -16,6 +16,7 @@ The master index now covers **all 41 category pages**. Two suites fully interlin
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_SEP27_BATCH56.md](APP_NETWORK_SPOTLIGHT_SEP27_BATCH56.md) · Hub pages: [HR & Talent AI](https://github.com/Zion-support/zion-network/blob/main/network/hr-talent-ai.md) · [CS & Retention](https://github.com/Zion-support/zion-network/blob/main/network/customer-success-retention.md)
 
+
 ## 🤖 AI Agents & Orchestration
 
 Build, test and operate fleets of autonomous agents:
@@ -59,6 +60,7 @@ Build, test and operate fleets of autonomous agents:
 - **[LLM Cost Optimizer](https://ziontechgroup.com/llm-cost-optimizer/)** — cheapest model meeting quality targets
 
 Full spotlight: [APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md](APP_NETWORK_SPOTLIGHT_DEVTOOLS_LLM.md)
+
 
 ## 🔒 Security & Compliance
 

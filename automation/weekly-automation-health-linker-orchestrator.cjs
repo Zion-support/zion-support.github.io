@@ -7,3 +7,4 @@
  */
 console.log('Weekly automation health linker placeholder: nothing to link.');
 process.exit(0);
+

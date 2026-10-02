@@ -78,4 +78,5 @@ jobs:
             if false # Netlify build hook removed (migrated to GitHub Pages) && [ "$TRIGGER_DEPLOY" = "1" ]; then
               echo "# NO-OP: Netlify deploy removed (migrated to GitHub Pages)"
             fi
+
           fi

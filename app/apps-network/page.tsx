@@ -21,6 +21,7 @@ const GROUPS: { key: AppsNetworkApp['group']; label: string; href: string }[] = 
   { key: 'ai', label: 'AI product apps', href: '/apps/' },
   { key: 'field', label: 'Field & support', href: '/apps/' },
   { key: 'work', label: 'Worksheets', href: '/apps/playbook/' },
+
 ];
 
 function AppCard({ app }: { app: AppsNetworkApp }) {
@@ -103,6 +104,7 @@ export default function AppsNetworkPage() {
               </p>
             </Link>
           ))}
+
         </div>
       </section>
 

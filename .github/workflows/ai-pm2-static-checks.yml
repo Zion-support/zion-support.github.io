@@ -41,6 +41,7 @@ concurrency:
       - '.github/workflows/ai-pm2-ops-digest.yml'
   workflow_dispatch:
 
+
 jobs:
   static:
     runs-on: ubuntu-latest
@@ -111,6 +112,7 @@ jobs:
           fi
 
       - name: Lint
+
         # typescript-eslint v8 (repo pin) is incompatible with the repo's TypeScript 7
         # (TypeError reading 'Cjs' in typescript-estree). Pin TypeScript 5.9 in-memory
         # for the lint run only; the repo build keeps TS 7. Then run locally pinned eslint.
@@ -119,4 +121,5 @@ jobs:
           npx eslint app components --ext .ts,.tsx,.js,.mjs --ignore-pattern ".next/**" --ignore-pattern "out/**" --ignore-pattern "dist/**" --ignore-pattern "build/**" --quiet
 
       - name: Type check
+
         run: npm run type-check

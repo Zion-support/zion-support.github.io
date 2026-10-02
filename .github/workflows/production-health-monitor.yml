@@ -28,12 +28,14 @@ jobs:
             "/services/"
             "/services/ai-agents-autonomous/"
             "/services/cloud-cost-optimization-platform/"
+
             "/about/"
             "/contact/"
             "/pricing/"
             "/blog/"
             "/partners/"
             "/careers/"
+
             "/tools/"
             "/ai-services/"
             "/privacy/"

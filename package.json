@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
+
     "build:ci": "node scripts/build-wrapper.cjs",
     "build:check": "npm run type-check && node scripts/build-wrapper.cjs",
     "start": "next start",
@@ -34,6 +35,7 @@
     "secrets:preflight": "node -e \"if(!process.env.OPENROUTER_API_KEY){console.error('Missing OPENROUTER_API_KEY');process.exit(1)}else{console.log('secrets preflight ok: OPENROUTER_API_KEY present')}\"",
     "autonomy:prepush-gate": "node -e \"console.log('autonomy prepush gate: ok (placeholder)');process.exit(0)\"",
     "autonomy:safe-release": "node -e \"console.log('autonomy safe release: ok (placeholder)');process.exit(0)\"",
+
     "test": "jest --passWithNoTests",
     "test:ci": "jest --ci --coverage --watchAll=false --passWithNoTests",
     "build-storybook": "storybook build",
@@ -44,6 +46,7 @@
     "openclaw:skills:audit": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-cadence-audit-latest.json',JSON.stringify({status:'ok',note:'placeholder audit - 2026-09-20',decision:{mode:'steady'}}));console.log('openclaw skills audit placeholder: ok')\"",
     "openclaw:skills:tune": "node -e \"const fs=require('fs');fs.mkdirSync('automation/reports',{recursive:true});fs.writeFileSync('automation/reports/openclaw-skill-auto-tuner-latest.json',JSON.stringify({status:'ok',note:'placeholder tuner - 2026-09-20',decision:{mode:'steady',recommended:{}},recommendation:'placeholder - original tuner logic pending restore'}));console.log('openclaw skills tuner placeholder: ok')\"",
     "workflows:contracts:node": "bash scripts/automation/run-workflow-grep-guards.sh contracts"
+
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
@@ -78,6 +81,7 @@
     "jest-environment-jsdom": "^30.4.1",
     "lighthouse": "^13.3.0",
     "next": "^16.3.3",
+
     "next-bundle-analyzer": "^0.6.8",
     "next-sitemap": "^4.1.0",
     "pixelmatch": "^7.2.0",
@@ -99,3 +103,4 @@
     "postcss": "^8.5.10"
   }
 }
+

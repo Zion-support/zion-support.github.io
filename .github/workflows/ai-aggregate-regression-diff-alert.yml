@@ -13,6 +13,7 @@ concurrency:
   group: ai-aggregate-regression-diff-alert
   cancel-in-progress: false
 
+
 jobs:
   diff:
     runs-on: ubuntu-latest

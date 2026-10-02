@@ -104,3 +104,5 @@ Google Drive
 cron_output/
 __pycache__/
 *.pyc
+
+.netrc

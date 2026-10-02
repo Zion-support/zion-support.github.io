@@ -34,6 +34,7 @@ permissions:
         default: true
         type: boolean
 
+
 jobs:
   live-daily:
     runs-on: ubuntu-latest
@@ -86,6 +87,7 @@ jobs:
       - name: Homepage industry sync
         run: node automation/ai-homepage-industry-sync-agent.cjs run --apply
 
+
       - name: Validate build
         run: |
           set -euo pipefail
@@ -105,4 +107,5 @@ jobs:
             if false # Netlify build hook removed (migrated to GitHub Pages) && [ "$TRIGGER_DEPLOY" = "1" ]; then
               echo "# NO-OP: Netlify deploy removed (migrated to GitHub Pages)"
             fi
+
           fi

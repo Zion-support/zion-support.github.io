@@ -21,6 +21,7 @@ concurrency:
       - 'tsconfig.json'
   workflow_dispatch:
 
+
 jobs:
   bundle-size:
     name: Analyze Bundle

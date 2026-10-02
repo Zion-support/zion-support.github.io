@@ -463,6 +463,7 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* ── AI Agent Monitoring — Live Fleet Banner (Priority) ── */}
       <AgentsMonitoring />
 
@@ -1292,6 +1293,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {homepageFeaturedApps.map((app) => (
               <Link key={app.slug} href={app.href} className="block rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-purple-500/40 transition-colors">
+
                 <p className="text-[10px] uppercase tracking-wider text-purple-300/80 font-semibold mb-2">{app.group}</p>
                 <h3 className="text-base font-semibold text-white group-hover:text-purple-300 transition-colors">{app.name}</h3>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{app.description}</p>
@@ -1450,6 +1452,7 @@ export default function HomePage() {
           </div>
         </div>
       </section></section>
+
 
       {/* ── Free Tools & Interactive Utilities — {serviceCount}+-service catalog ── */}
       <section id="free-tools" className="py-16 border-t border-slate-800">

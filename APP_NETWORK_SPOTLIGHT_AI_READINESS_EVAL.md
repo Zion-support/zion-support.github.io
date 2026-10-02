@@ -27,3 +27,4 @@ Most AI projects fail without a readiness baseline and continuous evaluation. Th
 - [AI Ops & Incident Response](APP_NETWORK_SPOTLIGHT_AIOPS.md)
 
 Every app is free to try. Start with a [$99 Discovery](https://ziontechgroup.com/discovery/) or see [plans & pricing](https://ziontechgroup.com/plans/).
+

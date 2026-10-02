@@ -12,6 +12,7 @@ concurrency:
   group: ai-autonomous-opportunity-radar-refresh
   cancel-in-progress: false
 
+
 jobs:
   refresh-radar:
     runs-on: ubuntu-latest
@@ -38,6 +39,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add -f automation/reports/autonomous-opportunity-radar-latest.json
           if git diff --cached --quiet; then
             exit 0
@@ -46,6 +48,7 @@ jobs:
 
       - name: Upload report artifact
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+
         with:
           name: autonomous-opportunity-radar-${{ github.run_id }}
           path: automation/reports/autonomous-opportunity-radar-latest.json

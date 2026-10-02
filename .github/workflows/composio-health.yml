@@ -1,0 +1,54 @@
+name: Composio Health & Credentials Sync
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+  push:
+    paths:
+      - '.github/workflows/composio-health.yml'
+    branches:
+      - main
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    env:
+      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2026-10-02 fix: npm package `composio` no longer ships a CLI binary
+      # (whoami exited 127). Use the REST API directly for health checks.
+      - name: Verify API key (connected accounts probe)
+        run: |
+          set -euo pipefail
+          if [ -z "${COMPOSIO_API_KEY:-}" ]; then
+            echo "COMPOSIO_API_KEY secret is NOT set"; exit 1
+          fi
+          code=$(curl -sS -o /tmp/ca.json -w "%{http_code}" \
+            -H "X-API-Key: ${COMPOSIO_API_KEY}" \
+            "https://backend.composio.dev/api/v1/connectedAccounts?showActiveOnly=true")
+          echo "connectedAccounts HTTP $code"
+          case "$code" in
+            2*) echo "API key OK" ;;
+            401|403) echo "API key INVALID/EXPIRED"; exit 1 ;;
+            *) echo "Unexpected status"; head -c 500 /tmp/ca.json; exit 1 ;;
+          esac
+
+      - name: Count active connected accounts
+        run: |
+          python3 - <<'PY' || true
+          import json
+          d=json.load(open('/tmp/ca.json'))
+          items=d.get('items') or d.get('connectedAccounts') or []
+          print(f"Active connected accounts: {len(items)}")
+          for a in items[:50]:
+              print('-', a.get('appName') or a.get('toolkit',{}).get('slug'), a.get('status'))
+          PY
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "Composio health check completed at $(date -u)"
+          echo "Key set: $([ -n "$COMPOSIO_API_KEY" ] && echo 'yes' || echo 'no')"

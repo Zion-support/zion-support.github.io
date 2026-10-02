@@ -14,6 +14,7 @@ Zion Tech Group operates the **Zion App Network**, a growing network of 200+ fre
 ## Featured app categories
 
 - Customer Experience & Support (new — see [APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md))
+
 - AI Agents & Automation
 - FinOps & ROI
 - Security & Compliance
@@ -30,6 +31,7 @@ Zion Tech Group operates the **Zion App Network**, a growing network of 200+ fre
 - [Churn Risk Radar](https://ziontechgroup.com/churn-risk-radar/) · [repo](https://github.com/Zion-support/churn-risk-radar)
 - [Voice of Customer Hub](https://ziontechgroup.com/voice-of-customer-hub/) · [repo](https://github.com/Zion-support/voice-of-customer-hub)
 - [Partner Referral Tracker](https://ziontechgroup.com/partner-referral-tracker/) · [repo](https://github.com/Zion-support/partner-referral-tracker)
+
 - [AI Readiness Score](https://ziontechgroup.com/ai-readiness-score/)
 - [AI ROI Calculator](https://ziontechgroup.com/ai-roi-calculator/)
 - [Cloud Cost Estimator](https://ziontechgroup.com/cloud-cost-estimator/)
@@ -41,3 +43,4 @@ All app repositories should link back to the hubs above and to sibling apps thro
 ## Spotlight index
 
 - [What's new](APP_NETWORK_LATEST.md) · [Support & CX suite](APP_NETWORK_SPOTLIGHT_SUPPORT_CX.md) · [Sep 23 releases](APP_NETWORK_SPOTLIGHT_SEP23.md) · [Field services](APP_NETWORK_SPOTLIGHT_FIELD_SERVICES.md) · [Industry verticals](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) · [Trust & Governance](APP_NETWORK_SPOTLIGHT_TRUST_GOVERNANCE.md) · [Meetings & Productivity](APP_NETWORK_SPOTLIGHT_MEETINGS_PRODUCTIVITY.md) · [Platform Engineering & DevOps](APP_NETWORK_SPOTLIGHT_PLATFORM_ENG.md)
+

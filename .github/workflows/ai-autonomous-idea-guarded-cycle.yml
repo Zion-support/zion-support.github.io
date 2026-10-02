@@ -18,6 +18,7 @@ concurrency:
   group: ai-autonomous-idea-guarded-cycle
   cancel-in-progress: false
 
+
 jobs:
   run-guarded-cycle:
     if: github.actor != 'github-actions[bot]'

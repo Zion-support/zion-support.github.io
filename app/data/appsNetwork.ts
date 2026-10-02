@@ -731,6 +731,7 @@ export const appsNetworkCatalog: AppsNetworkApp[] = [
   },
 
 
+
 export const appsNetworkBySlug = Object.fromEntries(
   appsNetworkCatalog.map((app) => [app.slug, app])
 ) as Record<string, AppsNetworkApp>;
@@ -761,6 +762,7 @@ export const homepageFeaturedApps = [
   'zion-ai-incident-commander',
   'rfp-readiness',
   'model-observatory',
+
 ]
   .map((s) => appsNetworkBySlug[s])
   .filter(Boolean) as AppsNetworkApp[];

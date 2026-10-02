@@ -9,6 +9,7 @@ name: Simple Static Deploy
 # 2026-09-27: synced from main — dispatch-only + main-ref job guard so
 # branch pushes on this branch never trigger a failing deploy run.
 
+
 on:
   workflow_dispatch:
     inputs:
@@ -37,6 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Confirm main ref
         run: echo "ref=${GITHUB_REF} sha=${GITHUB_SHA} event=${GITHUB_EVENT_NAME} (main-only deploy)"
+
       - name: Prepare pages
         run: bash scripts/prepare-pages-out.sh
       - uses: actions/upload-pages-artifact@v3
@@ -45,3 +47,4 @@ jobs:
       - uses: actions/deploy-pages@v4
         # Post-deploy live curl skipped: runners often block egress and probes flake.
         # The prepare-pages-out money-path gate above is the durable Pay RED guard.
+

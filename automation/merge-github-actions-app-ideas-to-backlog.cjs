@@ -7,3 +7,4 @@
  */
 console.log('Merge ideas placeholder: backlog unchanged.');
 process.exit(0);
+

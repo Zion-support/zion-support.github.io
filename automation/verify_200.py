@@ -11,6 +11,7 @@ primary_urls = [
   "https://ziontechgroup.com/services/",
   "https://ziontechgroup.com/services/ai-services/",
   "https://ziontechgroup.com/services/cloud-services/",
+
   "https://ziontechgroup.com/blog/",
   "https://ziontechgroup.com/partners/",
   "https://ziontechgroup.com/careers/",
