@@ -18,18 +18,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2026-10-02 fix: npm package `composio` no longer ships a CLI binary
-      # (whoami exited 127). Use the REST API directly for health checks.
-      - name: Verify API key (connected accounts probe)
+      # 2026-10-02 fix #2: v1 connectedAccounts endpoint now returns HTTP 410
+      # ("Please upgrade to v3 APIs"). Probe the v3 API instead.
+      - name: Verify API key (v3 connected accounts probe)
         run: |
           set -euo pipefail
           if [ -z "${COMPOSIO_API_KEY:-}" ]; then
             echo "COMPOSIO_API_KEY secret is NOT set"; exit 1
           fi
           code=$(curl -sS -o /tmp/ca.json -w "%{http_code}" \
-            -H "X-API-Key: ${COMPOSIO_API_KEY}" \
-            "https://backend.composio.dev/api/v1/connectedAccounts?showActiveOnly=true")
-          echo "connectedAccounts HTTP $code"
+            -H "x-api-key: ${COMPOSIO_API_KEY}" \
+            "https://backend.composio.dev/api/v3/connected_accounts?status=ACTIVE&limit=50")
+          echo "v3 connected_accounts HTTP $code"
           case "$code" in
             2*) echo "API key OK" ;;
             401|403) echo "API key INVALID/EXPIRED"; exit 1 ;;
@@ -41,10 +41,11 @@ jobs:
           python3 - <<'PY' || true
           import json
           d=json.load(open('/tmp/ca.json'))
-          items=d.get('items') or d.get('connectedAccounts') or []
+          items=d.get('items') or d.get('connected_accounts') or d.get('connectedAccounts') or []
           print(f"Active connected accounts: {len(items)}")
           for a in items[:50]:
-              print('-', a.get('appName') or a.get('toolkit',{}).get('slug'), a.get('status'))
+              tk=a.get('toolkit') or {}
+              print('-', tk.get('slug') or a.get('appName'), a.get('status'))
           PY
 
       - name: Summary
