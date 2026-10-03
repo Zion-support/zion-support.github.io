@@ -89,10 +89,14 @@ jobs:
 
 
       - name: Validate build
+        env:
+          # 2026-10-03 fix: build OOMed at default ~4GB heap on 135k-file tree;
+          # use Turbopack (Next 16 default) via `npx next build` with 8GB heap.
+          NODE_OPTIONS: "--max-old-space-size=8192"
         run: |
           set -euo pipefail
           npm run rsc:guard
-          npm run build
+          npx next build
 
       - name: Commit, push, and deploy
         env:
