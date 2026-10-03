@@ -23,19 +23,20 @@ jobs:
         id: health
         run: |
           SITE="https://ziontechgroup.com"
+          # 2026-10-03 fix: /services/ai-agents-autonomous/ and
+          # /services/cloud-cost-optimization-platform/ were 404 (retired slugs).
+          # Replaced with live equivalents; blank entries removed.
           PAGES=(
             "/"
             "/services/"
-            "/services/ai-agents-autonomous/"
-            "/services/cloud-cost-optimization-platform/"
-
+            "/autonomous-ai-agents/"
+            "/finops-consulting/"
             "/about/"
             "/contact/"
             "/pricing/"
             "/blog/"
             "/partners/"
             "/careers/"
-
             "/tools/"
             "/ai-services/"
             "/privacy/"
@@ -43,6 +44,7 @@ jobs:
           )
           FAILURES=0
           REPORT=""
+          FAILED_PAGES=""
 
           for PAGE in "${PAGES[@]}"; do
             URL="${SITE}${PAGE}"
@@ -58,12 +60,14 @@ jobs:
             else
               BADGE="🔴"
               FAILURES=$((FAILURES + 1))
+              FAILED_PAGES="${FAILED_PAGES}${PAGE} (${HTTP_CODE}) "
             fi
 
             REPORT="${REPORT}| ${BADGE} \`${PAGE}\` | ${HTTP_CODE} | ${DURATION}ms |\n"
           done
 
           echo "failures=$FAILURES" >> "$GITHUB_OUTPUT"
+          echo "failed_pages=$FAILED_PAGES" >> "$GITHUB_OUTPUT"
 
           {
             echo "## Production Health Check"
@@ -78,12 +82,20 @@ jobs:
             if [ "$FAILURES" -eq 0 ]; then
               echo "All endpoints healthy."
             else
-              echo "**${FAILURES} endpoint(s) returned errors.**"
+              echo "**${FAILURES} endpoint(s) returned errors: ${FAILED_PAGES}**"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
+          # 2026-10-03 fix (false-green): exit non-zero when endpoints fail so the
+          # run is visibly red; issue creation below runs with if: always().
+          if [ "$FAILURES" -gt 0 ]; then
+            echo "::error::${FAILURES} endpoint(s) down: ${FAILED_PAGES}"
+            exit 1
+          fi
+
       - name: Check SSL certificate
         id: ssl
+        if: always()
         run: |
           set -euo pipefail
           EXPIRY=$(echo | openssl s_client -servername ziontechgroup.com -connect ziontechgroup.com:443 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2 || true)
@@ -111,6 +123,7 @@ jobs:
           fi
 
       - name: Check response headers
+        if: always()
         run: |
           HEADERS=$(curl -sS -I --max-time 10 "https://ziontechgroup.com" 2>/dev/null)
 
@@ -131,13 +144,15 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Create issue on failure
-        if: steps.health.outputs.failures != '0'
+        if: always() && steps.health.outputs.failures != '0'
         uses: actions/github-script@v8
         env:
           FAILURES: ${{ steps.health.outputs.failures }}
+          FAILED_PAGES: ${{ steps.health.outputs.failed_pages }}
         with:
           script: |
             const failures = process.env.FAILURES || '0';
+            const failedPages = process.env.FAILED_PAGES || 'unknown';
             const { data: issues } = await github.rest.issues.listForRepo({
               ...context.repo,
               state: 'open',
@@ -150,13 +165,13 @@ jobs:
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number: existing.number,
-                body: `Health check failed again at ${new Date().toISOString()}. ${failures} endpoint(s) down.`,
+                body: `Health check failed again at ${new Date().toISOString()}. ${failures} endpoint(s) down: ${failedPages}`,
               });
             } else {
               await github.rest.issues.create({
                 ...context.repo,
                 title: `🔴 Production Health Check Failed - ${new Date().toISOString().split('T')[0]}`,
-                body: `## Production Health Alert\n\n${failures} endpoint(s) returned errors during the scheduled health check.\n\nCheck the [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.`,
+                body: `## Production Health Alert\n\n${failures} endpoint(s) returned errors during the scheduled health check: ${failedPages}\n\nCheck the [workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for details.`,
                 labels: ['production-incident', 'bug'],
               });
             }
