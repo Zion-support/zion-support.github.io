@@ -44,7 +44,7 @@ Already SENT today — do not clone:
 - Carlos → Samuel Câmara: Folha de Rosto sent (thread 1a0b0ed1dc951e85, 16:51 BRT). Wait Samuel.
 - Kleber → Tainah Agilize: not pré-venda; route to Victoria + ticket #2423990 (thread 1a0b0b152d2b1a59). Two Zion replies already — no third.
 - German Business Thiago: not a Zion buyer. Aligned.
-- Discovery cap used (Ledervin). No free Discovery until 18 Sep.
+- Discovery cap used (Ledervin) through 18 Sep 2026. Cap date has passed (board patched 2026-10-03). Do not auto-send free Discovery. Closed/old cases still follow mail rules; never re-quote old POs/NFs/prices.
 
 Carlos still owns (his clicks, not another brief):
 1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only.
@@ -56,23 +56,6 @@ Carlos still owns (his clicks, not another brief):
 WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
 
 HubSpot live named contacts only — IDs live on #71361, not here.
-
-## JEV Growth Strategy
-- JEV evaluate state: OPTIMIZE (93% confidence)
-- Priorities: FIX_BLOCKERS (98%), SERVICE_PAGES (97%), OPTIMIZE_PIPELINE (96%), DIVERSIFY_CHANNELS (80%)
-- All API blockers UNLOCKED: Apollo ✅, Hunter.io ✅, Gmail ✅, Stripe ✅
-- Service catalog synced at 35,932 services
-- 0 new pages generated (catalog fully synced)
-- Fernanda leads: 119 outreach emails sent across batches 2-19
-- Batches #16-19 pending deduplication outreach
-- Wave #12 UK MSPs staged, held pending duplicate-check
-- Waves #13-#17 labeled; backlog #10-#17 held
-- Kleber sent 8 personalized emails (batches #45/#46) — CC carlos@, commercial@, fernanda@
-- Waves #18-19 executed overnight: ~25 emails to Nordics + South Africa MSPs
-- Lead batch #99 UK: 10 leads sent, Ireland 6 skipped
-- Batch #15 duplicate sends flagged to Carlos & Fernanda
-- Inbox triaged: 42 noise trashed, ~59 Carlos copies marked read
-- JEV deal decisions: Markham HOLD (100%), TDS requote (84%), Assefaz Plano B (60%), Fernanda wait (74%), HubSpot upgrade (60%)
 
 ## JEV Growth Strategy (2026-10-02)
 - JEV evaluate state: OPTIMIZE (93% confidence)
@@ -93,3 +76,9 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - Market-verified pricing: R660 $23,299→$32,619, SPARC T8-4 $6,600→$9,240, IBM 43V7070 $9.99-$29.90→TDS $287/$329/$357, FE Bay Area $22.88-$80/hr→$84/hr
 - War Room migrated to Notion: Zion War Room — CEO HQ
 - API keys sourced from Google Sheet "API KEYS" spreadsheet (ID: 1UMZYaN13T_UdkER2xi7PDMqiNgT8gPBH_3FJ2qrlZq8)
+
+## Dispatch 2026-10-03 19:11 -03 | Hermes-Dispatch | room
+- #71361 comment create returned 403 (commenting disabled above 2500 comments). Lane logged here instead.
+- static-deploy not queued at dispatch (last run 37100782301 success 2026-10-03T05:44:15Z). index.html not rewritten.
+- Backup: Grok. Last HEARTBEAT on #71361 is 2026-09-24 19:08 UTC, older than 90 min.
+- Instant Client Sender OFF. Do not nag Carlos.
