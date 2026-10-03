@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contract Risk Scanner · Zion Tech Group</title>
+<meta name="description" content="Paste contract text and get an instant clause-level risk score with red-flag highlights — free tool by Zion Tech Group.">
+<link rel="canonical" href="https://ziontechgroup.com/contract-risk-scanner/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+.muted{color:var(--muted)}textarea,input,select{width:100%;background:#0d1526;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;font-family:inherit}
+label{font-size:.9rem;color:var(--muted);display:block;margin:10px 0 4px}pre{background:#0d1526;border:1px solid var(--line);border-radius:10px;padding:14px;white-space:pre-wrap}
+footer{margin-top:40px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/app-network/">App Network</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<h1>Contract Risk Scanner</h1>
+<p class="muted">Paste contract text below. The scanner flags high-risk clauses (liability, indemnity, auto-renewal, IP assignment, non-compete) and scores overall exposure. 100% client-side — your text never leaves the browser.</p>
+<div class="card"><label for="t">Contract text</label><textarea id="t" rows="10" placeholder="Paste contract clauses here..."></textarea>
+<button class="btn" onclick="scan()">Scan contract</button></div>
+<div class="card" id="out" style="display:none"><h2>Risk report</h2><div id="rep"></div></div>
+<script>
+const RULES=[
+ [/unlimited liability|liability.{0,40}unlimited/i,'Unlimited liability',9],
+ [/indemnif/i,'Indemnification clause',7],
+ [/auto.?renew|automatic renewal/i,'Auto-renewal',6],
+ [/intellectual property.{0,60}(assign|transfer|vest)/i,'IP assignment',8],
+ [/non.?compete/i,'Non-compete',6],
+ [/terminat\w+.{0,40}(convenience|any time|without cause)/i,'Termination for convenience',7],
+ [/penalt|liquidated damages/i,'Penalties / liquidated damages',6],
+ [/jurisdiction|governing law/i,'Governing law / jurisdiction',4],
+ [/confidential/i,'Confidentiality',3],
+ [/warrant/i,'Warranty terms',4]];
+function scan(){
+ const t=document.getElementById('t').value; if(!t.trim())return;
+ let hits=[],score=0;
+ for(const[re,name,w]of RULES){const m=t.match(re); if(m){hits.push([name,w]);score+=w;}}
+ score=Math.min(100,score*2);
+ let lvl=score>=60?'🔴 High risk — escalate to counsel before signing':score>=30?'🟡 Medium risk — negotiate flagged clauses':'🟢 Low risk — standard review';
+ let h='<p><b>Score: '+score+'/100</b> · '+lvl+'</p>';
+ h+=hits.length?'<ul>'+hits.map(x=>'<li>'+x[0]+' <span class="muted">(weight '+x[1]+')</span></li>').join('')+'</ul>':'<p>No red-flag patterns found.</p>';
+ h+='<p class="muted">Not legal advice. For full contract review, book a <a href="/discovery/">Discovery $99</a> session.</p>';
+ document.getElementById('rep').innerHTML=h;document.getElementById('out').style.display='block';
+}
+</script>
+<h2>Explore more of the Zion AI App Network</h2>
+<div class="grid">
+<div class="card"><h3><a href="/contract-risk-scanner/">Contract Risk Scanner</a></h3><p class="muted">Score contract clauses for legal &amp; commercial risk.</p></div>
+<div class="card"><h3><a href="/meeting-notes-summarizer/">Meeting Notes Summarizer</a></h3><p class="muted">Turn raw notes into decisions, actions &amp; owners.</p></div>
+<div class="card"><h3><a href="/ai-email-drafter/">AI Email Drafter</a></h3><p class="muted">Draft sales, support &amp; follow-up emails in seconds.</p></div>
+<div class="card"><h3><a href="/cloud-inventory-mapper/">Cloud Inventory Mapper</a></h3><p class="muted">Map cloud resources, owners and cost centers.</p></div>
+<div class="card"><h3><a href="/apps/october-2026-batch1.html">October 2026 Batch 1 Spotlight</a></h3><p class="muted">Launch notes for this batch.</p></div>
+<div class="card"><h3><a href="/sla-calculator/">SLA Calculator</a></h3><p class="muted">Uptime, downtime &amp; penalty math.</p></div>
+<div class="card"><h3><a href="/roi-calc/">ROI Calculator</a></h3><p class="muted">Hours leaked vs official SKUs.</p></div>
+<div class="card"><h3><a href="/stack-audit/">Stack Audit</a></h3><p class="muted">Ten-check ops readiness.</p></div>
+</div>
+<footer class="muted">Part of the <a href="/app-network/">Zion AI App Network</a> · Official menu: <a href="/discovery/">Discovery $99</a> / Consulting $499 / Starter $2,500 / Growth $8,000/mo · <a href="/en/plans/">See plans</a></footer>
+</div>
+</body>
+</html>
