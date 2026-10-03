@@ -3,6 +3,7 @@
 One page linking every spotlight, suite doc and news page for the [Zion App Network](https://ziontechgroup.com/zion-app-network/) ([master directory](https://github.com/Zion-support/zion-app-network)). 700+ interlinked AI apps, tools and field playbooks by [Zion Tech Group](https://ziontechgroup.com).
 
 ## Homepage spotlight pages (this repo)
+- [APP_NETWORK_SPOTLIGHT_OCT3_CORE_APPS.md](APP_NETWORK_SPOTLIGHT_OCT3_CORE_APPS.md) — **NEW Oct 3:** Core Business AI Apps: Governance, Voice Assistant, Chatbot Builder, Content Studio, SEO Optimizer, Fraud Detection, Project Master, Edge AI · Showcase: https://ziontechgroup.com/network-core-apps-showcase.html
 - [APP_NETWORK_SPOTLIGHT_OCT3_SECURITY.md](APP_NETWORK_SPOTLIGHT_OCT3_SECURITY.md) — **NEW Oct 3:** Security, Compliance & Edge AI suite: Cyber AI, AI Governance, Fraud Detection, Edge AI Platform, IDP, Data Pipelines
 - [APP_NETWORK_SPOTLIGHT_SEP27_COPILOTS.md](APP_NETWORK_SPOTLIGHT_SEP27_COPILOTS.md) — AI Copilots suite (12 copilots)
 - [APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md](APP_NETWORK_SPOTLIGHT_SEP27_HEALTHCARE.md) — Healthcare & Life Sciences suite
