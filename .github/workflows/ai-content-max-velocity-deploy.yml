@@ -1,1 +1,122 @@
-IyBBSSBDb250ZW50IE1heCBWZWxvY2l0eSBEZXBsb3kKIyA1eCBkYWlseTogaWRlYXRpb24gKyBhdWRpdCBpZGVhcyArIGZyb250IHBhZ2UgZXhwYW5zaW9uICsgY29udGVudCBidXJzdCDihpIgYnVpbGQg4oaSIGNvbW1pdCArIGRlcGxveS4KIyBNYXhpbWl6ZXMgY29udGVudCB2ZWxvY2l0eSB3aXRoIGd1YXJhbnRlZWQgZGVwbG95OyB1c2VzIGNvbnRlbnQtY29tbWl0IGNvbmN1cnJlbmN5LgoKbmFtZTogQUkgQ29udGVudCBNYXggVmVsb2NpdHkgRGVwbG95Cgpjb25jdXJyZW5jeToKICBncm91cDogYXV0b25vbW91cy1tYWluLXdyaXRlcgogIGNhbmNlbC1pbi1wcm9ncmVzczogZmFsc2UKCnBlcm1pc3Npb25zOgogIGNvbnRlbnRzOiB3cml0ZQoKIm9uIjoKICBzY2hlZHVsZToKICAgIC0gY3JvbjogJzAgMyAqICogKicKICAgIC0gY3JvbjogJzAgOSAqICogKicKICAgIC0gY3JvbjogJzAgMTIgKiAqIConCiAgICAtIGNyb246ICcwIDE4ICogKiAqJwogICAgLSBjcm9uOiAnMCAyMSAqICogKicKICB3b3JrZmxvd19kaXNwYXRjaDoKICAgIGlucHV0czoKICAgICAgc2tpcF9pZGVhdGlvbjoKICAgICAgICBkZXNjcmlwdGlvbjogJ1NraXAgaWRlYXRpb24nCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgZGVmYXVsdDogZmFsc2UKICAgICAgICB0eXBlOiBib29sZWFuCiAgICAgIHNraXBfZnJvbnRfcGFnZToKICAgICAgICBkZXNjcmlwdGlvbjogJ1NraXAgZnJvbnQgcGFnZSBleHBhbnNpb24nCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgZGVmYXVsdDogZmFsc2UKICAgICAgICB0eXBlOiBib29sZWFuCiAgICAgIHNraXBfYnVyc3Q6CiAgICAgICAgZGVzY3JpcHRpb246ICdTa2lwIGNvbnRlbnQgYnVyc3QnCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgZGVmYXVsdDogZmFsc2UKICAgICAgICB0eXBlOiBib29sZWFuCiAgICAgIG1heF90ZW1wbGF0ZV9ibG9nOgogICAgICAgIGRlc2NyaXB0aW9uOiAnVGVtcGxhdGUgYmxvZyBwb3N0cyAoZGVmYXVsdCA1KScKICAgICAgICByZXF1aXJlZDogZmFsc2UKICAgICAgICBkZWZhdWx0OiAnNScKICAgICAgbWF4X3RlbXBsYXRlX2Nhc2Vfc3R1ZGllczoKICAgICAgICBkZXNjcmlwdGlvbjogJ1RlbXBsYXRlIGNhc2Ugc3R1ZGllcyAoZGVmYXVsdCA1KScKICAgICAgICByZXF1aXJlZDogZmFsc2UKICAgICAgICBkZWZhdWx0OiAnNScKICAgICAgbWF4X2luZHVzdHJ5X3BhZ2VzOgogICAgICAgIGRlc2NyaXB0aW9uOiAnSW5kdXN0cnkgcGFnZXMgKGRlZmF1bHQgNCknCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgZGVmYXVsdDogJzQnCiAgICAgIG1heF9hZGQ6CiAgICAgICAgZGVzY3JpcHRpb246ICdBcHBzIHRvIHByb21vdGUgdG8gZnJvbnQgcGFnZSAoZGVmYXVsdCA2KScKICAgICAgICByZXF1aXJlZDogZmFsc2UKICAgICAgICBkZWZhdWx0OiAnNicKICAgICAgdHJpZ2dlcl9kZXBsb3k6CiAgICAgICAgZGVzY3JpcHRpb246ICdUcmlnZ2VyIGRlcGxveSBhZnRlciBjb21taXQgKEdpdEh1YiBQYWdlcyknCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgZGVmYXVsdDogdHJ1ZQogICAgICAgIHR5cGU6IGJvb2xlYW4KCmpvYnM6CiAgbWF4LXZlbG9jaXR5OgogICAgcnVucy1vbjogdWJ1bnR1LWxhdGVzdAogICAgdGltZW91dC1taW51dGVzOiAyOAogICAgZW52OgogICAgICBORVhUX1RFTEVNRVRSWV9ESVNBQkxFRDogIjEiCiAgICAgIE5PREVfT1BUSU9OUzogJy0tbWF4LW9sZC1zcGFjZS1zaXplPTgxOTInCiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QGRlMGZhYzJlNDUwMGRhYmUwMDA5ZTY3MjE0ZmY1ZjU0NDdjZTgzZGQgIyB2Ni4wLjIKICAgICAgICB3aXRoOgogICAgICAgICAgdG9rZW46ICR7eyBnaXRodWIudG9rZW4gfX0KCiAgICAgIC0gdXNlczogYWN0aW9ucy9zZXR1cC1ub2RlQDUzYjgzOTQ3YTVhOThjOGQxMTMxMzBlNTY1Mzc3ZmFlMWE1MGQwMmYgIyB2Ni4zLjAKICAgICAgICB3aXRoOgogICAgICAgICAgbm9kZS12ZXJzaW9uLWZpbGU6ICcubnZtcmMnCiAgICAgICAgICBjYWNoZTogJ25wbScKICAgICAgICAgIGNhY2hlLWRlcGVuZGVuY3ktcGF0aDogcGFja2FnZS1sb2NrLmpzb24KCiAgICAgIC0gbmFtZTogUmVzdG9yZSBjb250ZW50IHJ1bnRpbWUgY2FjaGUKICAgICAgICB1c2VzOiBhY3Rpb25zL2NhY2hlQDY2ODIyODQyMmFlNmEwMGU0YWQ4ODllZTg3Y2Q3MTA5ZWM1NjY2YTcgIyB2NS4wLjQKICAgICAgICB3aXRoOgogICAgICAgICAgcGF0aDogfAogICAgICAgICAgICBhdXRvbWF0aW9uL3JlcG9ydHMvLnJ1bnRpbWUKICAgICAgICAgIGtleTogY29udGVudC1ydW50aW1lLSR7eyBydW5uZXIub3MgfX0tJHt7IGhhc2hGaWxlcygnYXV0b21hdGlvbi9vcGVucm91dGVyLWNvbnRlbnQtZ2VuZXJhdG9yLmNqcycpIH19CiAgICAgICAgICByZXN0b3JlLWtleXM6IHwKICAgICAgICAgICAgY29udGVudC1ydW50aW1lLSR7eyBydW5uZXIub3MgfX0tCgogICAgICAtIG5hbWU6IEluc3RhbGwgZGVwZW5kZW5jaWVzCiAgICAgICAgcnVuOiBucG0gY2kgLS1wcmVmZXItb2ZmbGluZSAtLW5vLWF1ZGl0IC0tZnVuZD1mYWxzZQoKICAgICAgLSBuYW1lOiBSdW4gY29udGVudCBpZGVhcyB0byBkZXBsb3kgcGlwZWxpbmUKICAgICAgICBlbnY6CiAgICAgICAgICBBVVRPX0NPTU1JVDogIjEiCiAgICAgICAgICBUUklHR0VSX0RFUExPWTogJHt7IGdpdGh1Yi5ldmVudC5pbnB1dHMudHJpZ2dlcl9kZXBsb3kgIT0gJ2ZhbHNlJyAmJiAnMScgfHwgJzEnIH19CiAgICAgICAgICBPUEVOUk9VVEVSX0FQSV9LRVk6ICR7eyBzZWNyZXRzLk9QRU5ST1VURVJfQVBJX0tFWSB9fQogICAgICAgICAgT1BFTlJPVVRFUl9NT0RFTDogb3BlbnJvdXRlci9mcmVlCiMgICAgICAgICAgIE5FVExJRllfQlVJTERfSE9PSyByZW1vdmVkIChOZXRsaWZ5IGRlY29tbWlzc2lvbmVkIOKGkiBHaXRIdWIgUGFnZXMpCiAgICAgICAgICBTS0lQX0lERUFUSU9OOiAke3sgZ2l0aHViLmV2ZW50LmlucHV0cy5za2lwX2lkZWF0aW9uID09ICd0cnVlJyAmJiAnMScgfHwgJycgfX0KICAgICAgICAgIFNLSVBfRlJPTlRfUEFHRTogJHt7IGdpdGh1Yi5ldmVudC5pbnB1dHMuc2tpcF9mcm9udF9wYWdlID09ICd0cnVlJyAmJiAnMScgfHwgJycgfX0KICAgICAgICAgIFNLSVBfQlVSU1Q6ICR7eyBnaXRodWIuZXZlbnQuaW5wdXRzLnNraXBfYnVyc3QgPT0gJ3RydWUnICYmICcxJyB8fCAnJyB9fQogICAgICAgICAgTUFYX1RFTVBMQVRFX0JMT0c6ICR7eyBnaXRodWIuZXZlbnQuaW5wdXRzLm1heF90ZW1wbGF0ZV9ibG9nIHx8ICc1JyB9fQogICAgICAgICAgTUFYX1RFTVBMQVRFX0NBU0VfU1RVRElFUzogJHt7IGdpdGh1Yi5ldmVudC5pbnB1dHMubWF4X3RlbXBsYXRlX2Nhc2Vfc3R1ZGllcyB8fCAnNScgfX0KICAgICAgICAgIE1BWF9JTkRVU1RSWV9QQUdFUzogJHt7IGdpdGh1Yi5ldmVudC5pbnB1dHMubWF4X2luZHVzdHJ5X3BhZ2VzIHx8ICc0JyB9fQogICAgICAgICAgTUFYX0FERDogJHt7IGdpdGh1Yi5ldmVudC5pbnB1dHMubWF4X2FkZCB8fCAnNicgfX0KICAgICAgICBydW46IG5vZGUgYXV0b21hdGlvbi9haS1jb250ZW50LWlkZWFzLXRvLWRlcGxveS1waXBlbGluZS5janMKCiAgICAgIC0gbmFtZTogVmFsaWRhdGUgYnVpbGQgKGJlZm9yZSBjb21taXQpCiAgICAgICAgcnVuOiB8CiAgICAgICAgICBzZXQgLWV1byBwaXBlZmFpbAogICAgICAgICAgbnBtIHJ1biByc2M6Z3VhcmQKICAgICAgICAgIG5wbSBydW4gYnVpbGQKCiAgICAgIC0gbmFtZTogQ29tbWl0LCBwdXNoLCBhbmQgZGVwbG95CiAgICAgICAgZW52OgogICAgICAgICAgVFJJR0dFUl9ERVBMT1k6ICR7eyBnaXRodWIuZXZlbnQuaW5wdXRzLnRyaWdnZXJfZGVwbG95ICE9ICdmYWxzZScgJiYgJzEnIHx8ICcnIH19CiMgICAgICAgICAgIE5FVExJRllfQlVJTERfSE9PSyByZW1vdmVkIChOZXRsaWZ5IGRlY29tbWlzc2lvbmVkIOKGkiBHaXRIdWIgUGFnZXMpCiAgICAgICAgcnVuOiB8CiAgICAgICAgICBnaXQgY29uZmlnIHVzZXIubmFtZSAiZ2l0aHViLWFjdGlvbnNbYm90XSIKICAgICAgICAgIGdpdCBjb25maWcgdXNlci5lbWFpbCAiZ2l0aHViLWFjdGlvbnNbYm90XUB1c2Vycy5ub3JlcGx5LmdpdGh1Yi5jb20iCiAgICAgICAgICBnaXQgYWRkIC1BCiAgICAgICAgICBpZiAhIGdpdCBkaWZmIC0tc3RhZ2VkIC0tcXVpZXQ7IHRoZW4KICAgICAgICAgICAgYmFzaCBzY3JpcHRzL2F1dG9tYXRpb24vY29tbWl0LWFuZC1wdXNoLW1haW4uc2ggImNob3JlKGNvbnRlbnQpOiBtYXggdmVsb2NpdHkgZGVwbG95IC0gaWRlYXRpb24gKyBmcm9udCBwYWdlICsgYnVyc3QiCiAgICAgICAgICAgIGlmIGZhbHNlICMgTmV0bGlmeSBidWlsZCBob29rIHJlbW92ZWQgKG1pZ3JhdGVkIHRvIEdpdEh1YiBQYWdlcykgJiYgWyAiJFRSUSSJVSUlfREVQTE9ZIiA9ICIxIiBdOyB0aGVuCiAgICAgICAgICAgICAgZWNobyAiIyBOTy1PUDogTmV0bGlmeSBkZXBsb3kgcmVtb3ZlZCAobWlncmF0ZWQgdG8gR2l0SHViIFBhZ2VzKSIKICAgICAgICAgICAgZmkKCiAgICAgICAgICBmaQo=
+# AI Content Max Velocity Deploy
+# 5x daily: ideation + audit ideas + front page expansion + content burst → build → commit + deploy.
+# Maximizes content velocity with guaranteed deploy; uses content-commit concurrency.
+
+name: AI Content Max Velocity Deploy
+
+concurrency:
+  group: autonomous-main-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+"on":
+  schedule:
+    - cron: '0 3 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 18 * * *'
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      skip_ideation:
+        description: 'Skip ideation'
+        required: false
+        default: false
+        type: boolean
+      skip_front_page:
+        description: 'Skip front page expansion'
+        required: false
+        default: false
+        type: boolean
+      skip_burst:
+        description: 'Skip content burst'
+        required: false
+        default: false
+        type: boolean
+      max_template_blog:
+        description: 'Template blog posts (default 5)'
+        required: false
+        default: '5'
+      max_template_case_studies:
+        description: 'Template case studies (default 5)'
+        required: false
+        default: '5'
+      max_industry_pages:
+        description: 'Industry pages (default 4)'
+        required: false
+        default: '4'
+      max_add:
+        description: 'Apps to promote to front page (default 6)'
+        required: false
+        default: '6'
+      trigger_deploy:
+        description: 'Trigger deploy after commit (GitHub Pages)'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  max-velocity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_OPTIONS: '--max-old-space-size=8192'
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ github.token }}
+
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Restore content runtime cache
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        with:
+          path: |
+            automation/reports/.runtime
+          key: content-runtime-${{ runner.os }}-${{ hashFiles('automation/openrouter-content-generator.cjs') }}
+          restore-keys: |
+            content-runtime-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --fund=false
+
+      - name: Run content ideas to deploy pipeline
+        env:
+          AUTO_COMMIT: "1"
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '1' }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: openrouter/free
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+          SKIP_IDEATION: ${{ github.event.inputs.skip_ideation == 'true' && '1' || '' }}
+          SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page == 'true' && '1' || '' }}
+          SKIP_BURST: ${{ github.event.inputs.skip_burst == 'true' && '1' || '' }}
+          MAX_TEMPLATE_BLOG: ${{ github.event.inputs.max_template_blog || '5' }}
+          MAX_TEMPLATE_CASE_STUDIES: ${{ github.event.inputs.max_template_case_studies || '5' }}
+          MAX_INDUSTRY_PAGES: ${{ github.event.inputs.max_industry_pages || '4' }}
+          MAX_ADD: ${{ github.event.inputs.max_add || '6' }}
+        run: node automation/ai-content-ideas-to-deploy-pipeline.cjs
+
+      - name: Validate build (before commit)
+        run: |
+          set -euo pipefail
+          npm run rsc:guard
+          npm run build
+
+      - name: Commit, push, and deploy
+        env:
+          TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy != 'false' && '1' || '' }}
+#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --staged --quiet; then
+            bash scripts/automation/commit-and-push-main.sh "chore(content): max velocity deploy - ideation + front page + burst"
+            if false # Netlify build hook removed (migrated to GitHub Pages) && [ "$TR
