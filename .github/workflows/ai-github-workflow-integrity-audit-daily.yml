@@ -45,7 +45,7 @@ jobs:
       - name: Build issue body
         run: |
           set -euo pipefail
-          node -e "const fs=require('fs');const p='automation/reports/github-workflow-integrity-audit-latest.json';const j=JSON.parse(fs.readFileSync(p,'utf8'));const lines=['## GitHub workflow integrity audit','','- status: **'+j.status+'**','- workflowCount: '+j.workflowCount,'- findings: '+j.counts.totalFindings,''];for(const f of (j.findings||[]).slice(0,20)){lines.push('- ['+f.severity+'] '+f.type+' '+(f.file||f.name||'')+' '+(f.detail||''));}fs.writeFileSync('automation/reports/github-workflow-integrity-audit-body.md',lines.join('\n')+'\n');"
+          node -e "const fs=require('fs');const p='automation/reports/github-workflow-integrity-audit-latest.json';const j=fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):{status:'unknown',workflowCount:0,counts:{totalFindings:0},findings:[{severity:'warning',type:'report-missing',name:'automation/reports/github-workflow-integrity-audit-latest.json',detail:'Auditor produced no report this run - investigate script output.'}]};const lines=['## GitHub workflow integrity audit','','- status: **'+j.status+'**','- workflowCount: '+j.workflowCount,'- findings: '+j.counts.totalFindings,''];for(const f of (j.findings||[]).slice(0,20)){lines.push('- ['+f.severity+'] '+f.type+' '+(f.file||f.name||'')+' '+(f.detail||''));}fs.writeFileSync('automation/reports/github-workflow-integrity-audit-body.md',lines.join('\n')+'\n');"
 
       - name: Escalate integrity issue when degraded
         if: ${{ hashFiles('automation/reports/github-workflow-integrity-audit-latest.json') != '' }}
@@ -86,7 +86,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f automation/reports/github-workflow-integrity-audit-latest.json
+          if [ -f automation/reports/github-workflow-integrity-audit-latest.json ]; then git add -f automation/reports/github-workflow-integrity-audit-latest.json; else echo 'No integrity report to commit.'; exit 0; fi
           if [ -f automation/reports/workflow-trust-score-latest.json ]; then
             git add -f automation/reports/workflow-trust-score-latest.json
           fi
