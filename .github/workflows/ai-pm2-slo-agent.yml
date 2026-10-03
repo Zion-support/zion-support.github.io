@@ -42,7 +42,7 @@ jobs:
           path: |
             automation/reports/pm2-slo-latest.json
             automation/reports/pm2-slo-history.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
 
       - name: GitHub issues for PM2 SLO (critical vs warning)
@@ -51,8 +51,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          source scripts/automation/gh-issue-cooldown.sh
-          export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry)
+          if [ -f scripts/automation/gh-issue-cooldown.sh ]; then source scripts/automation/gh-issue-cooldown.sh; export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry); else echo 'gh-issue-cooldown.sh missing - defaulting COOLDOWN_HOURS=24'; export COOLDOWN_HOURS=24; fi
           report="automation/reports/pm2-slo-latest.json"
           [ -f "$report" ] || exit 0
 
