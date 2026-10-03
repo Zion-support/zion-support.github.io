@@ -42,7 +42,9 @@ jobs:
           path: |
             automation/reports/pm2-restart-guardian-latest.json
             automation/reports/pm2-restart-guardian-history.json
-          if-no-files-found: error
+          # 2026-10-03 fix: guardian script is a placeholder ("nothing to do") and
+          # writes no reports; error made every run red. Warn instead.
+          if-no-files-found: warn
           retention-days: 30
 
       - name: Open issue when unhealthy PM2 apps are detected
@@ -51,16 +53,19 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          source scripts/automation/gh-issue-cooldown.sh
-          export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry)
           report="automation/reports/pm2-restart-guardian-latest.json"
-          [ -f "$report" ] || exit 0
+          [ -f "$report" ] || { echo "No report (guardian placeholder) - nothing to do."; exit 0; }
+          # 2026-10-03 fix: gh-issue-cooldown.sh missing on main; source only if present
+          if [ -f scripts/automation/gh-issue-cooldown.sh ]; then
+            source scripts/automation/gh-issue-cooldown.sh
+            export COOLDOWN_HOURS=$(gh_issue_cooldown_hours_from_registry)
+          fi
           unhealthy_count=$(node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));console.log(Number(r.unhealthyCount||0))")
           if [ "$unhealthy_count" = "0" ]; then
             echo "No PM2 restart-guardian alerts."
             export ISSUE_FINGERPRINT="pm2-restart-guardian-alert"
             export CLOSE_COMMENT="Auto-closing: PM2 restart guardian is healthy in latest run."
-            node scripts/automation/gh-issue-close-on-recovery.cjs || true
+            [ -f scripts/automation/gh-issue-close-on-recovery.cjs ] && node scripts/automation/gh-issue-close-on-recovery.cjs || true
             exit 0
           fi
           body_file="$(mktemp)"
@@ -72,7 +77,7 @@ jobs:
             echo "- Unhealthy app count: ${unhealthy_count}"
             echo ""
             echo "### Unhealthy apps"
-            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.unhealthy||[])){console.log('- `'+item.name+'` ('+item.reasons.join('; ')+')')}"
+            node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('$report','utf8'));for(const item of (r.unhealthy||[])){console.log('- \`'+item.name+'\` ('+item.reasons.join('; ')+')')}"
             echo ""
             echo "Review PM2 process status and restart logs for the listed apps."
           } > "$body_file"
@@ -80,5 +85,5 @@ jobs:
           export ISSUE_BODY_FILE="$body_file"
           export ISSUE_LABEL="bug"
           export ISSUE_FINGERPRINT="pm2-restart-guardian-alert"
-          node scripts/automation/gh-issue-dedupe-or-create.cjs || true
+          [ -f scripts/automation/gh-issue-dedupe-or-create.cjs ] && node scripts/automation/gh-issue-dedupe-or-create.cjs || true
           rm -f "$body_file"
