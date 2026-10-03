@@ -5,6 +5,10 @@
 
 name: AI Content Automation
 
+concurrency:
+  group: autonomous-main-writer
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -34,7 +38,7 @@ permissions:
         default: false
         type: boolean
       trigger_deploy:
-        description: 'Trigger Netlify deploy after commit (maximum pipeline)'
+        description: 'Trigger deploy after commit (GitHub Pages; maximum pipeline)'
         required: false
         default: true
         type: boolean
@@ -72,7 +76,6 @@ jobs:
           MAX_BLOG_POSTS: ${{ github.event.inputs.max_blog_posts }}
           SKIP_FRONT_PAGE: ${{ github.event.inputs.skip_front_page && '1' || '' }}
           TRIGGER_DEPLOY: ${{ github.event.inputs.trigger_deploy && '1' || '' }}
-#           NETLIFY_BUILD_HOOK removed (Netlify decommissioned → GitHub Pages)
           SKIP_SERVICES_ADVERTISE: ${{ github.event.inputs.skip_services_advertise && '1' || '' }}
         run: |
           PIPELINE="${{ github.event.inputs.pipeline || 'maximum' }}"
@@ -94,4 +97,13 @@ jobs:
           fi
           git add -A
           git diff --staged --quiet || git commit -m "chore(content): AI-generated content via OpenRouter pipeline"
-          git push
+          # Push with rebase-retry loop to survive concurrent writers on main
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $i"
+              break
+            fi
+            echo "Push rejected (attempt $i); pulling with rebase and retrying..."
+            git pull --rebase origin main || { git rebase --abort; exit 1; }
+            sleep $((i * 5))
+          done
