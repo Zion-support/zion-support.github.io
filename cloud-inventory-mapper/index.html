@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud Inventory Mapper · Zion Tech Group</title>
+<meta name="description" content="Build a lightweight inventory map of cloud resources with owners, environments and monthly cost — free tool by Zion Tech Group.">
+<link rel="canonical" href="https://ziontechgroup.com/cloud-inventory-mapper/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+.muted{color:var(--muted)}textarea,input,select{width:100%;background:#0d1526;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;font-family:inherit}
+label{font-size:.9rem;color:var(--muted);display:block;margin:10px 0 4px}pre{background:#0d1526;border:1px solid var(--line);border-radius:10px;padding:14px;white-space:pre-wrap}
+footer{margin-top:40px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/app-network/">App Network</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<h1>Cloud Inventory Mapper</h1>
+<p class="muted">Add your cloud resources below to build an inventory table with total monthly cost by environment. Export as CSV. Data stays in your browser.</p>
+<div class="card">
+<label>Resource name</label><input id="rn" placeholder="prod-api-cluster">
+<label>Provider</label><select id="rp"><option>AWS</option><option>Azure</option><option>GCP</option><option>Other</option></select>
+<label>Environment</label><select id="re"><option>prod</option><option>staging</option><option>dev</option></select>
+<label>Owner</label><input id="ro" placeholder="team-platform">
+<label>Monthly cost (USD)</label><input id="rc" type="number" placeholder="1200">
+<button class="btn" onclick="add()">Add resource</button></div>
+<div class="card" id="out" style="display:none"><h2>Inventory</h2><div id="rep"></div><button class="btn" onclick="csv()">Export CSV</button></div>
+<script>
+let rows=[];
+function add(){
+ const r=[rn.value,rp.value,re.value,ro.value,parseFloat(rc.value||0)];if(!r[0])return;
+ rows.push(r);render();
+}
+function render(){
+ let tot={prod:0,staging:0,dev:0};
+ let h='<table style="width:100%;border-collapse:collapse"><tr><th>Name</th><th>Provider</th><th>Env</th><th>Owner</th><th>$/mo</th></tr>';
+ for(const r of rows){tot[r[2]]+=r[4];h+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td><td>$'+r[4].toLocaleString()+'</td></tr>';}
+ h+='</table><p><b>Totals:</b> prod $'+tot.prod.toLocaleString()+' · staging $'+tot.staging.toLocaleString()+' · dev $'+tot.dev.toLocaleString()+'</p>';
+ h+='<p class="muted">Overspend in dev? Run the <a href="/finops-estimator/">FinOps estimator</a> and <a href="/roi-calc/">ROI calculator</a>.</p>';
+ rep.innerHTML=h;out.style.display='block';
+}
+function csv(){
+ const c='name,provider,env,owner,monthly_cost\n'+rows.map(r=>r.join(',')).join('\n');
+ const a=document.createElement('a');a.href='data:text/csv,'+encodeURIComponent(c);a.download='cloud-inventory.csv';a.click();
+}
+</script>
+<h2>Explore more of the Zion AI App Network</h2>
+<div class="grid">
+<div class="card"><h3><a href="/contract-risk-scanner/">Contract Risk Scanner</a></h3><p class="muted">Score contract clauses for legal &amp; commercial risk.</p></div>
+<div class="card"><h3><a href="/meeting-notes-summarizer/">Meeting Notes Summarizer</a></h3><p class="muted">Turn raw notes into decisions, actions &amp; owners.</p></div>
+<div class="card"><h3><a href="/ai-email-drafter/">AI Email Drafter</a></h3><p class="muted">Draft sales, support &amp; follow-up emails in seconds.</p></div>
+<div class="card"><h3><a href="/cloud-inventory-mapper/">Cloud Inventory Mapper</a></h3><p class="muted">Map cloud resources, owners and cost centers.</p></div>
+<div class="card"><h3><a href="/apps/october-2026-batch1.html">October 2026 Batch 1 Spotlight</a></h3><p class="muted">Launch notes for this batch.</p></div>
+<div class="card"><h3><a href="/sla-calculator/">SLA Calculator</a></h3><p class="muted">Uptime, downtime &amp; penalty math.</p></div>
+<div class="card"><h3><a href="/roi-calc/">ROI Calculator</a></h3><p class="muted">Hours leaked vs official SKUs.</p></div>
+<div class="card"><h3><a href="/stack-audit/">Stack Audit</a></h3><p class="muted">Ten-check ops readiness.</p></div>
+</div>
+<footer class="muted">Part of the <a href="/app-network/">Zion AI App Network</a> · Official menu: <a href="/discovery/">Discovery $99</a> / Consulting $499 / Starter $2,500 / Growth $8,000/mo · <a href="/en/plans/">See plans</a></footer>
+</div>
+</body>
+</html>
