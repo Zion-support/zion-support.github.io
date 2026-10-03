@@ -20,6 +20,9 @@ jobs:
 
       # 2026-10-02 fix: npm package `composio` no longer ships a CLI binary
       # (whoami exited 127). Use the REST API directly for health checks.
+      # 2026-10-03 fix: v1 /connectedAccounts endpoint retired by Composio
+      # ("This endpoint is no longer available. Please upgrade to v3 APIs.").
+      # Migrated probe to v3 /connected_accounts.
       - name: Verify API key (connected accounts probe)
         run: |
           set -euo pipefail
@@ -28,7 +31,7 @@ jobs:
           fi
           code=$(curl -sS -o /tmp/ca.json -w "%{http_code}" \
             -H "X-API-Key: ${COMPOSIO_API_KEY}" \
-            "https://backend.composio.dev/api/v1/connectedAccounts?showActiveOnly=true")
+            "https://backend.composio.dev/api/v3/connected_accounts?statuses=ACTIVE&limit=100")
           echo "connectedAccounts HTTP $code"
           case "$code" in
             2*) echo "API key OK" ;;
@@ -41,10 +44,10 @@ jobs:
           python3 - <<'PY' || true
           import json
           d=json.load(open('/tmp/ca.json'))
-          items=d.get('items') or d.get('connectedAccounts') or []
+          items=d.get('items') or d.get('connected_accounts') or d.get('connectedAccounts') or []
           print(f"Active connected accounts: {len(items)}")
           for a in items[:50]:
-              print('-', a.get('appName') or a.get('toolkit',{}).get('slug'), a.get('status'))
+              print('-', a.get('appName') or (a.get('toolkit') or {}).get('slug'), a.get('status'))
           PY
 
       - name: Summary
