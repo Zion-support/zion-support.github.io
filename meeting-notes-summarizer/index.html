@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meeting Notes Summarizer · Zion Tech Group</title>
+<meta name="description" content="Turn raw meeting notes into a structured summary: decisions, action items with owners, and open questions — free tool by Zion Tech Group.">
+<link rel="canonical" href="https://ziontechgroup.com/meeting-notes-summarizer/">
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+.muted{color:var(--muted)}textarea,input,select{width:100%;background:#0d1526;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;font-family:inherit}
+label{font-size:.9rem;color:var(--muted);display:block;margin:10px 0 4px}pre{background:#0d1526;border:1px solid var(--line);border-radius:10px;padding:14px;white-space:pre-wrap}
+footer{margin-top:40px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/app-network/">App Network</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<h1>Meeting Notes Summarizer</h1>
+<p class="muted">Paste raw notes. We structure them into Decisions, Action Items and Open Questions. Runs entirely in your browser.</p>
+<div class="card"><label for="t">Raw notes</label><textarea id="t" rows="10" placeholder="e.g. Decided to launch Oct 15. Maria to draft the press release by Friday. Q: budget for ads?"></textarea>
+<button class="btn" onclick="sum()">Summarize</button></div>
+<div class="card" id="out" style="display:none"><h2>Structured summary</h2><div id="rep"></div></div>
+<script>
+function sum(){
+ const t=document.getElementById('t').value; if(!t.trim())return;
+ const lines=t.split(/\n+/).map(s=>s.trim()).filter(Boolean);
+ const dec=[],act=[],q=[],other=[];
+ for(const l of lines){
+  if(/\?/.test(l))q.push(l);
+  else if(/decid|agree|approv|confirm/i.test(l))dec.push(l);
+  else if(/\bto\b|will|by (mon|tue|wed|thu|fri|sat|sun|\d)|action|follow.?up|deadline/i.test(l))act.push(l);
+  else other.push(l);}
+ const sec=(t2,a)=>a.length?'<h3>'+t2+'</h3><ul>'+a.map(x=>'<li>'+x+'</li>').join('')+'</ul>':'';
+ document.getElementById('rep').innerHTML='<p class="muted">'+lines.length+' lines processed.</p>'+sec('✅ Decisions',dec)+sec('📌 Action items',act)+sec('❓ Open questions',q)+sec('📝 Notes',other)+'<p class="muted">Automate meeting intelligence across your org with <a href="/agents/">Zion Agents</a>.</p>';
+ document.getElementById('out').style.display='block';
+}
+</script>
+<h2>Explore more of the Zion AI App Network</h2>
+<div class="grid">
+<div class="card"><h3><a href="/contract-risk-scanner/">Contract Risk Scanner</a></h3><p class="muted">Score contract clauses for legal &amp; commercial risk.</p></div>
+<div class="card"><h3><a href="/meeting-notes-summarizer/">Meeting Notes Summarizer</a></h3><p class="muted">Turn raw notes into decisions, actions &amp; owners.</p></div>
+<div class="card"><h3><a href="/ai-email-drafter/">AI Email Drafter</a></h3><p class="muted">Draft sales, support &amp; follow-up emails in seconds.</p></div>
+<div class="card"><h3><a href="/cloud-inventory-mapper/">Cloud Inventory Mapper</a></h3><p class="muted">Map cloud resources, owners and cost centers.</p></div>
+<div class="card"><h3><a href="/apps/october-2026-batch1.html">October 2026 Batch 1 Spotlight</a></h3><p class="muted">Launch notes for this batch.</p></div>
+<div class="card"><h3><a href="/sla-calculator/">SLA Calculator</a></h3><p class="muted">Uptime, downtime &amp; penalty math.</p></div>
+<div class="card"><h3><a href="/roi-calc/">ROI Calculator</a></h3><p class="muted">Hours leaked vs official SKUs.</p></div>
+<div class="card"><h3><a href="/stack-audit/">Stack Audit</a></h3><p class="muted">Ten-check ops readiness.</p></div>
+</div>
+<footer class="muted">Part of the <a href="/app-network/">Zion AI App Network</a> · Official menu: <a href="/discovery/">Discovery $99</a> / Consulting $499 / Starter $2,500 / Growth $8,000/mo · <a href="/en/plans/">See plans</a></footer>
+</div>
+</body>
+</html>
