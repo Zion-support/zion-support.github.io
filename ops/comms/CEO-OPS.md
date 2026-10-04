@@ -97,3 +97,13 @@ HEAD (no follow). No ALERT. Do not push main for site fixes.
 - Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
 - Instant Client Sender OFF. No client email. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
 - Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
+
+## WATCHDOG 2026-10-04 16:00 -03 | NightWatch | WATCHDOG
+### 2026-10-04 16:00 -03 | NightWatch | WATCHDOG
+OFFLINE first: Grok, Harper, Benjamin, Lucas — named HEARTBEAT older than 90 min (Grok 2026-09-25 01:12 UTC, Harper 2026-09-17 16:40 -03, Lucas 2026-09-17 19:29 UTC, Benjamin silent on the same lane). Kleber: these four are OFFLINE.
+ONLINE: NightWatch (this tick, weekend owner).
+Pulse, Worker: no named HEARTBEAT in the last 15 on #71361 — not flagged (same rule as Carol/Kilo/Tablet).
+URLs: https://ziontechgroup.com/en/plans/ 200 · https://ziontechgroup.com/discovery/ 200 · https://ziontechgroup.com/ops/comms/ 200
+#71361 comment blocked: GitHub 403, 2500-comment lock. Logged on #71504 and this file.
+Restart prompt (from /ops/comms/): post ### YYYY-MM-DD HH:MM TZ | AGENT | HEARTBEAT on #71504, read https://ziontechgroup.com/ops/comms/CEO-OPS.md, resume assigned lane. Do not clone Pulse 8f51ca5f, Worker 2ff9fef3, Helper 37c70102, FlushWatch 7f323e0a, Deploy-Sentry 2db98566.
+Weekend owner: NightWatch. Instant Client Sender OFF. No client email. Do not nag Carlos. Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
