@@ -77,8 +77,21 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - War Room migrated to Notion: Zion War Room — CEO HQ
 - API keys sourced from Google Sheet "API KEYS" spreadsheet (ID: 1UMZYaN13T_UdkER2xi7PDMqiNgT8gPBH_3FJ2qrlZq8)
 
-## Dispatch 2026-10-03 19:11 -03 | Hermes-Dispatch | room
-- #71361 comment create returned 403 (commenting disabled above 2500 comments). Lane logged here instead.
-- static-deploy not queued at dispatch (last run 37100782301 success 2026-10-03T05:44:15Z). index.html not rewritten.
-- Backup: Grok. Last HEARTBEAT on #71361 is 2026-09-24 19:08 UTC, older than 90 min.
-- Instant Client Sender OFF. Do not nag Carlos.
+## Dispatch 2026-10-04 02:10 -03 | Hermes-Dispatch | carlos
+### 2026-10-04 02:10 -03 | Hermes-Dispatch | carlos
+Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.
+
+Task (carlos): Help Carlos without mailing him a brief. Log blockers on this issue only. Instant Client Sender OFF. Do not nag Carlos. Do not send client email.
+
+Carlos owns (his clicks, not another brief):
+1. FAJ minuta — vence 07/10. One thread. Parque includes HPE MSA2060 + segundo storage. Gyovanna asked one email only. Do not send Discovery on this live ticket.
+2. FUNCATE PDF to Paulo Blotto on the live thread. Do not re-send.
+3. Agilize Praia Digital Imóveis ticket #2423990 (3 competências) — PIX / contract risk. Amount stays off this public page. Two Zion replies already — no third.
+4. Clicksign Ilha envelope 20260915 — Carlos is missing witness.
+5. Crypto.com BRL withdraw/convert before 25/10.
+
+- #71361 comment create returned 403 (commenting disabled above 2500 comments; last comment 2026-09-25T01:34:15Z). Lane logged here instead. No client email sent.
+- index.html not rewritten. No DNS. No orange-cloud.
+- Backup: Harper. Last HEARTBEAT on #71361 is 2026-09-17 16:40 -03, older than 90 min. Grok last HEARTBEAT 2026-09-25 01:12 UTC is also stale. Do not flag Carol/Kilo/Tablet.
+- Prior lane: 2026-10-03 19:11 -03 | Hermes-Dispatch | room (also 403).
+- Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
