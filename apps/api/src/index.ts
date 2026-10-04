@@ -3,6 +3,7 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost } from './openai';
 import { withUser } from './pg';
+import { discoveryRoutes } from './discovery';
 import dotenv from 'dotenv';
 
 interface RequestWithHeaders extends FastifyRequest {
@@ -33,6 +34,9 @@ await app.register(rateLimit, {
   max: 100, 
   timeWindow: '1m' 
 });
+
+// Discovery questionnaire (scores + emails client & commercial@ziontechgroup.com)
+await app.register(discoveryRoutes);
 
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 
