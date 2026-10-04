@@ -63,7 +63,7 @@
     "autonomy:intelligence:plan": "node automation/autonomy-intelligence-planner.cjs",
     "autonomy:quality-drift": "echo 'autonomy:quality-drift: OK (stub - automation paused post-P0)'",
     "autonomy:queue-guard": "node scripts/automation/autonomous-writer-queue-guard.cjs",
-    "autonomy:release-guardian": "echo 'autonomy:release-guardian: OK (stub - automation paused post-P0)'",
+    "autonomy:release-guardian": "node automation/autonomous-release-guardian.cjs",
     "build:lock:check": "echo 'build:lock:check: OK (stub - automation paused post-P0)'",
     "content:services-and-content": "node automation/ai-services-and-content-automation.cjs",
     "cron:health": "echo 'cron:health: OK (stub - automation paused post-P0)'",
