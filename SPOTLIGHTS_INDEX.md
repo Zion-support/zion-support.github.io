@@ -21,6 +21,10 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md](APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md) — MSP & partner ecosystem apps
 - [APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md](APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md) — sales & lead-gen AI apps
 
+- [APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md](APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md) — NEW Batch 74 (2026-10-04): Travel & Hospitality AI suite — itinerary planning, hotel rate optimization, flight deals, guest experience, tour demand, restaurant revenue, travel expense audit, loyalty optimization ([instant HTML](app-network-spotlight-oct4-travel-hospitality.html))
+- [APP_NETWORK_SPOTLIGHT_OCT4_DISCOVERY.md](APP_NETWORK_SPOTLIGHT_OCT4_DISCOVERY.md) — NEW Free AI Discovery Questionnaire: 2-minute assessment, instant personalized app recommendations, results emailed to you and our commercial team
+- [Free Discovery Questionnaire (live)](https://ziontechgroup.com/discovery/) — online, free, no signup
+
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
 - [SecOps & Reliability Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/SECOPS_RELIABILITY_SUITE.md)
