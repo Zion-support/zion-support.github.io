@@ -1,0 +1,53 @@
+name: Codemod — fix generated page syntax
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/codemod-fix-syntax.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  codemod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Apply syntax codemods
+        run: |
+          set -e
+          # 1. generated service/data pages: path=`...` -> path={`...`}
+          grep -rl 'path=`/services/' app 2>/dev/null | xargs -r sed -i 's/path=`\([^`]*\)`/path={`\1`}/g'
+          # 2. blog pages: dangerouslySetInnerHTML missing braces
+          grep -rl 'dangerouslySetInnerHTML={__html' app 2>/dev/null | xargs -r sed -i 's/dangerouslySetInnerHTML={__html: \(.*\)}$/dangerouslySetInnerHTML={{ __html: \1 }}/'
+          # 3. QuickJump incomplete ternary
+          sed -i "s/? document.querySelector('.opacity-100');/? document.querySelector('.opacity-100') : null;/" app/components/QuickJump.tsx || true
+          # 4. app/page.tsx: double-brace objects in array + duplicated closing section tag
+          sed -i "s/{{ name:/{ name:/g; s/' }},/' },/g; s|</section></section>|</section>|g" app/page.tsx || true
+          # 5. industries pages: invalid </br /> and extra brace in [key]
+          sed -i 's|</br />|<br />|g' app/industries/page.tsx 'app/industries/[key]/page.tsx' || true
+          sed -i 's/params: Promise<{ key: string }> }})/params: Promise<{ key: string }> })/' 'app/industries/[key]/page.tsx' || true
+          # 6. search page: merge sibling spans into one
+          perl -0777 -pi -e 's/\{service\.industry && \(\s*<span className="text-slate-500">•<\/span>\s*<span className="text-slate-500">\{service\.industry\}<\/span>\s*\)\}/{service.industry \&\& (<span className="text-slate-500">• {service.industry}<\/span>)}/s' app/search/page.tsx || true
+          # 7. appsNetwork.ts: catalog array closed before new-app objects — move the closing bracket
+          perl -0777 -pi -e 's/\];\n\n\n  // ── New apps added 2026-09-25 ──/\n\n  // ── New apps added 2026-09-25 ──/s' app/data/appsNetwork.ts
+          perl -0777 -pi -e 's/\},\n\n\n\nexport const appsNetworkBySlug/},\n];\n\nexport const appsNetworkBySlug/s' app/data/appsNetwork.ts
+          # 8. ServiceDiscoveryHub: missing return close at EOF
+          if ! tail -3 app/components/ServiceDiscoveryHub.tsx | grep -q '}'; then printf '\n  );\n}\n' >> app/components/ServiceDiscoveryHub.tsx; fi
+          # 9. dead duplicate files in app/ root (not valid routes, broken JSX)
+          git rm -q --ignore-unmatch app/services-agritech-page.tsx app/services-ai-page.tsx || true
+      - name: Install and verify lint
+        run: |
+          npm ci --prefer-offline --no-audit --fund=false
+          npm run lint:check
+      - name: Commit and push if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          if git diff --quiet && git diff --cached --quiet; then echo 'no changes'; exit 0; fi
+          git add -A
+          git commit -m 'fix(ci): codemod syntax repairs — generated pages path attr, __html braces, core TSX fixes [skip ci]'
+          git pull --rebase origin main || (git rebase --abort && git pull --rebase origin main)
+          git push origin main
