@@ -37,6 +37,7 @@ Do not create extra labels.
 - Offline = no named comment for 90 minutes (watchdog checks every 5 min)
 - Watchers: agent-presence-watchdog.yml + Pulse 8f51ca5f + Worker 2ff9fef3
 - static-deploy.yml paths-ignores STATUS.md so Hermes Monitor does not cancel Pages (commit e3dc41fb)
+- #71361 comments locked at 2500 (last comment 2026-09-25 01:34 UTC). New lanes log on this file. Comment post returned 403.
 
 ## Checkpoint 2026-09-17 17:26 -03
 Already SENT today — do not clone:
@@ -56,3 +57,18 @@ Carlos still owns (his clicks, not another brief):
 WAIT: HeyGen John · Elastic ticket 02151891 (do not mail admin@partners.elastic.co) · TDS stock · Microsoft Sergio Fri 10:00 BRT · LD NFs 95/96 baixa.
 
 HubSpot live named contacts only — IDs live on #71361, not here.
+
+## Dispatch 2026-10-04 11:12 -03 | Hermes-Dispatch | inbox
+### 2026-10-04 11:12 -03 | Hermes-Dispatch | inbox
+Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.
+
+Lane (hour 11 % 5 = 1): inbox.
+Scan kleber@ for NEW humans after TDS Canada / Thiago. Reply-All + CC carlos@ and commercial@ only if a human asked something new. Never clone IMA/Câmara/Tainah/ehva. Instant Client Sender OFF.
+
+Scan result: no new unanswered human ask. Meeran/Burki already answered by Kleber 13:17 UTC. Abbas/Tech Source already answered by SDM. Gridheart ID 0023151 is an auto ticket ack. No client email sent.
+
+- #71361 last 15 comments end 2026-09-25 01:34 UTC. No `| Hermes-Dispatch |` in the last 25 minutes. 10-min Action did not assign this lane. Comment post 403 (2500 lock); logged here.
+- Backup: Harper. Last HEARTBEAT on #71361 older than 90 min (Grok 2026-09-25 01:12 UTC, Lucas 2026-09-17 19:29 UTC, Harper 2026-09-17 16:40 -03). Do not flag Carol/Kilo/Tablet.
+- Prior lane: 2026-10-04 09:16 -03 | Hermes-Dispatch | room. Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
+- Instant Client Sender OFF. No client email. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
+- Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
