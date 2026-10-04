@@ -3,11 +3,13 @@
 One page linking every spotlight, suite doc and news page for the [Zion App Network](https://ziontechgroup.com/zion-app-network/) ([master directory](https://github.com/Zion-support/zion-app-network)). 700+ interlinked AI apps, tools and field playbooks by [Zion Tech Group](https://ziontechgroup.com).
 
 ## Homepage spotlight pages (this repo)
+- [APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md](APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md) — NEW Batch 74 (2026-10-04): Travel, Hospitality & Events AI — itinerary planning, hotel revenue, dynamic pricing, guest experience, events, airline disruption, F&B forecasting, loyalty
+- [app-network-discovery.html](app-network-discovery.html) — NEW: Free AI Discovery ad page — always online, always free, instant results emailed to you + commercial@ziontechgroup.com
 - [What's New — APP_NETWORK_LATEST.md](APP_NETWORK_LATEST.md) — latest launches and weekly features
 - [APPS_SHOWCASE.md](APPS_SHOWCASE.md) — app showcase overview
 - [APP_NETWORK_SPOTLIGHT.md](APP_NETWORK_SPOTLIGHT.md) — original network spotlight
-- [APP_NETWORK_SPOTLIGHT_OCT3_ESG.md](APP_NETWORK_SPOTLIGHT_OCT3_ESG.md) — NEW Batch 68 (2026-10-03): Sustainability & ESG AI suite — carbon tracking, energy audit/optimization, renewable forecasting, grid balancing, ESG reporting ([instant HTML](APP_NETWORK_SPOTLIGHT_OCT3_ESG.html))
-- [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — NEW Batch 18: readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation
+- [APP_NETWORK_SPOTLIGHT_OCT3_ESG.md](APP_NETWORK_SPOTLIGHT_OCT3_ESG.md) — Batch 68 (2026-10-03): Sustainability & ESG AI suite — carbon tracking, energy audit/optimization, renewable forecasting, grid balancing, ESG reporting ([instant HTML](APP_NETWORK_SPOTLIGHT_OCT3_ESG.html))
+- [APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md](APP_NETWORK_SPOTLIGHT_AI_READINESS_EVAL.md) — Batch 18: readiness scoring, LLM/RAG evaluation, benchmarks & cost simulation
 - [APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md](APP_NETWORK_SPOTLIGHT_SECOPS_RELIABILITY.md) — 13-app SecOps & reliability toolchain: SSL Monitor, Incident Responder, Incident Timeline, API Health Monitor, Backup Integrity, Compliance Scanner, Cost Optimizer, Drift Detector, Service Catalog, Offboarding Checker
 - [APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md](APP_NETWORK_SPOTLIGHT_INDUSTRY_VERTICALS.md) — AI by industry: Healthcare, Financial Services, Retail & Commerce, Legal, HR & Talent, MLOps
 - [APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md](APP_NETWORK_SPOTLIGHT_SALES_MARKETING.md) — SEO Optimizer, Lead Scoring, Email Marketing Pro, Sales Intelligence, RFP Responder, Quote Builder, Sales Call Analyst, ROI Calculator
@@ -21,10 +23,6 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md](APP_NETWORK_SPOTLIGHT_MSP_ECOSYSTEM.md) — MSP & partner ecosystem apps
 - [APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md](APP_NETWORK_SPOTLIGHT_SALES_LEADGEN.md) — sales & lead-gen AI apps
 
-- [APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md](APP_NETWORK_SPOTLIGHT_OCT4_TRAVEL_HOSPITALITY.md) — NEW Batch 74 (2026-10-04): Travel & Hospitality AI suite — itinerary planning, hotel rate optimization, flight deals, guest experience, tour demand, restaurant revenue, travel expense audit, loyalty optimization ([instant HTML](app-network-spotlight-oct4-travel-hospitality.html))
-- [APP_NETWORK_SPOTLIGHT_OCT4_DISCOVERY.md](APP_NETWORK_SPOTLIGHT_OCT4_DISCOVERY.md) — NEW Free AI Discovery Questionnaire: 2-minute assessment, instant personalized app recommendations, results emailed to you and our commercial team
-- [Free Discovery Questionnaire (live)](https://ziontechgroup.com/discovery/) — online, free, no signup
-
 ## Suite docs (zion-app-network repo)
 - [Field Services Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/FIELD_SERVICES_SUITE.md)
 - [SecOps & Reliability Suite](https://github.com/Zion-support/zion-app-network/blob/main/docs/SECOPS_RELIABILITY_SUITE.md)
@@ -34,7 +32,7 @@ One page linking every spotlight, suite doc and news page for the [Zion App Netw
 - [Full repository catalog — CATALOG.md](https://github.com/Zion-support/zion-app-network/blob/main/CATALOG.md)
 
 ## Explore
-- 🧰 All tools: https://ziontechgroup.com/tools/ · 💼 Plans & pricing: https://ziontechgroup.com/en/plans/ · 📞 Discovery call: https://ziontechgroup.com/discovery/
+- 🧰 All tools: https://ziontechgroup.com/tools/ · 💼 Plans & pricing: https://ziontechgroup.com/en/plans/ · 📞 Discovery: https://network.ziontechgroup.com/discovery/
 - ✉️ commercial@ziontechgroup.com
 
 ---
