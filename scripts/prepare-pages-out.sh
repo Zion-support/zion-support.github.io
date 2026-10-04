@@ -128,8 +128,10 @@ assert_family_a_home() {
     echo "ERROR: out/index.html contains /_next/ (broken Next shell)" >&2
     exit 1
   fi
-  if ! grep -Fq 'Discovery $99' "$f"; then
-    echo "ERROR: out/index.html missing Family A marker Discovery \$99" >&2
+  # Discovery is ALWAYS free & online (policy 2026-10-04): require a link to the
+  # free Discovery questionnaire instead of the retired "$99" marker.
+  if ! grep -Fq '/discovery/' "$f"; then
+    echo "ERROR: out/index.html missing free Discovery link /discovery/" >&2
     exit 1
   fi
   if ! grep -Fq '/assets/css/site.css' "$f"; then
