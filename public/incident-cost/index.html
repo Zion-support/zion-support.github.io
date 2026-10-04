@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Incident Cost · Zion Tech Group</title>
+<meta name="description" content="Estimate the cost of an IT incident from downtime minutes, people blocked, and loaded hourly rate. Official plans only.">
+<link rel="canonical" href="https://ziontechgroup.com/incident-cost/">
+<style>:root{--bg:#0b1220;--card:#121a2b;--ink:#e8eef8;--muted:#9aa8bd;--line:#243049;--accent:#7dd3fc}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 72px}a{color:var(--accent);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.muted{color:var(--muted)}
+.btn{display:inline-block;margin-top:10px;color:#042033;background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+input{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px;width:100%;margin:4px 0}
+label{font-size:.85rem;color:var(--muted)}
+.result{font-size:1.4rem;font-weight:800;color:var(--accent);margin-top:10px}</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">Zion Tech Group</a> · <a href="/apps/">Apps</a> · <a href="/en/plans/">Plans</a> · <a href="/discovery/">Discovery $99</a></p>
+<h1>Incident Cost</h1>
+<p class="muted">Quantify incident impact from downtime, people blocked, and a loaded hourly rate. No client figures. Official menu only.</p>
+<div class="card">
+<label>Downtime (minutes) <input id="m" type="number" value="45" min="0"></label>
+<label>People blocked <input id="p" type="number" value="8" min="0"></label>
+<label>Loaded hourly rate (US$) <input id="r" type="number" value="84" min="0"></label>
+<button class="btn" onclick="calc()">Estimate</button>
+<div id="out"></div>
+</div>
+<p class="muted">Need hands-on help? <a href="/discovery/">Book a $99 Discovery</a> or <a href="/en/plans/">see official plans</a>. Related: <a href="/sla-calculator/">SLA Calculator</a> · <a href="/ai-incident-response/">AI Incident Response</a>.</p>
+</div>
+<script>function calc(){var m=parseFloat(document.getElementById('m').value)||0,p=parseFloat(document.getElementById('p').value)||0,r=parseFloat(document.getElementById('r').value)||0;var h=m/60;var cost=h*p*r;document.getElementById('out').innerHTML='<div class="result">Estimated labor exposure: US$ '+cost.toFixed(2)+'</div><p class="muted">'+h.toFixed(2)+' h × '+p+' people × US$ '+r.toFixed(2)+'/h. Not a quote.</p>';}</script>
+</body>
+</html>
