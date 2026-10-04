@@ -98,8 +98,8 @@ HEAD (no follow). No ALERT. Do not push main for site fixes.
 - Instant Client Sender OFF. No client email. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
 - Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
 
-## WATCHDOG 2026-10-04 16:00 -03 | NightWatch | WATCHDOG
-### 2026-10-04 16:00 -03 | NightWatch | WATCHDOG
+## WATCHDOG 2026-10-04 17:00 -03 | NightWatch | WATCHDOG
+### 2026-10-04 17:00 -03 | NightWatch | WATCHDOG
 OFFLINE first: Grok, Harper, Benjamin, Lucas — named HEARTBEAT older than 90 min (Grok 2026-09-25 01:12 UTC, Harper 2026-09-17 16:40 -03, Lucas 2026-09-17 19:29 UTC, Benjamin silent on the same lane). Kleber: these four are OFFLINE.
 ONLINE: NightWatch (this tick, weekend owner).
 Pulse, Worker: no named HEARTBEAT in the last 15 on #71361 — not flagged (same rule as Carol/Kilo/Tablet).
