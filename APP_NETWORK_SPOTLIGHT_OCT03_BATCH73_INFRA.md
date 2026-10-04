@@ -1,6 +1,8 @@
-# Zion App Network Spotlight — Batch 69: Infrastructure, Supply & Continuity AI (Oct 3, 2026)
+# Zion App Network Spotlight — Batch 73: Infrastructure, Supply & Continuity AI (Oct 4, 2026)
 
 Eight interlinked AI apps for operations, infrastructure and supply-chain teams — keep platforms healthy, stock aligned, vendors sharp and recovery proven.
+
+(Note: renumbered from Batch 69 → Batch 73; Batch 69 is Healthcare & Life Sciences AI.)
 
 ## The apps
 1. **AI Carbon Tracker** 🌱 — carbon emissions tracking and ESG-ready reporting → https://ziontechgroup.com/ai-carbon-tracker/
@@ -16,9 +18,9 @@ Eight interlinked AI apps for operations, infrastructure and supply-chain teams 
 AI Infrastructure Monitor + AI Cluster Manager keep platforms healthy; AI Capacity Planner turns their signals into scaling plans; AI Inventory Forecaster and AI Procurement Copilot align stock and suppliers; AI Vendor Comparator picks the best partners; AI Carbon Tracker keeps growth sustainable; AI Backup Integrity guarantees continuity when anything fails.
 
 ## Links
-- Showcase page: https://ziontechgroup.com/zion-app-network/app-network-batch69-oct03.html
-- Hub spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-03-BATCH69.md
-- Interlinks: https://github.com/Zion-support/zion-app-network/blob/main/INTERLINKS-batch69-infra-ops.md
+- Showcase page: https://ziontechgroup.com/zion-app-network/app-network-batch73-oct03.html
+- Hub spotlight: https://github.com/Zion-support/zion-app-network/blob/main/SPOTLIGHT-2026-10-04-BATCH73.md
+- Interlinks: https://github.com/Zion-support/zion-app-network/blob/main/INTERLINKS-batch73-infra-ops.md
 - Master directory: https://github.com/Zion-support/zion-app-network · live at https://ziontechgroup.com/zion-app-network/
 - Start with a $99 AI Discovery: https://ziontechgroup.com/discovery/
 
