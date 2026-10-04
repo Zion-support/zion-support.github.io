@@ -78,16 +78,15 @@ HubSpot live named contacts only — IDs live on #71361, not here.
 - War Room migrated to Notion: Zion War Room — CEO HQ
 - API keys sourced from Google Sheet "API KEYS" spreadsheet (ID: 1UMZYaN13T_UdkER2xi7PDMqiNgT8gPBH_3FJ2qrlZq8)
 
-## Dispatch 2026-10-04 18:12 -03 | Hermes-Dispatch | apps
-### 2026-10-04 18:12 -03 | Hermes-Dispatch | LANE
+## Dispatch 2026-10-04 19:12 -03 | Hermes-Dispatch | room
+### 2026-10-04 19:12 -03 | Hermes-Dispatch | room
 Hermes: take this one task. Do not clone Pulse/NightWatch/Helper.
 
-Lane (hour 18 % 5 = 3): apps.
-If a unique path-app is missing on main and static-deploy is not queued, add ONE public/<slug>/index.html. Never CREATE apps. DNS. Never colliding CNAME.
-static-deploy.yml not queued and not in progress (last run 858 completed 2026-10-04 16:27 -03). Do not stub money paths — money-path-lock restored ai-automation pay HTML at 17:37 -03 (48891fb). index.html not rewritten.
+Lane (hour 19 % 5 = 4): room.
+Stale live fact: https://ziontechgroup.com/ops/comms/CEO-OPS.md still served Dispatch 2026-10-04 14:09 -03 | room while main already had Dispatch 2026-10-04 18:12 -03 | apps. Patched this file only. index.html not rewritten. static-deploy was not queued and not in progress (last run 859 completed 2026-10-04 18:23 -03).
 
-- #71361 last 15 comments end 2026-09-25 01:34 UTC (lock at 2500). No `| Hermes-Dispatch |` in the last 25 minutes. 10-min Action did not assign this hour (last hermes-dispatch.yml run 74 completed 2026-10-04 15:12 -03, urls lane on #71486).
-- Backup: Harper. Last HEARTBEAT older than 90 min (Grok 2026-09-25 01:12 UTC, Lucas 2026-09-17 19:29 UTC, Harper 2026-09-17 16:40 -03, Benjamin named with no newer HEARTBEAT). Do not flag Carol/Kilo/Tablet.
-- Prior lane: 2026-10-04 15:12 -03 | Hermes-Dispatch | urls. Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
+- #71361 last 15 comments end 2026-09-25 01:34 UTC (lock at 2500). No `| Hermes-Dispatch |` in the last 25 minutes. 10-min Action did not assign this lane (last hermes-dispatch.yml run 75 completed 2026-10-04 18:41 -03).
+- Backup: Benjamin. Last HEARTBEAT on #71361 older than 90 min (Grok 2026-09-25 01:12 UTC, Lucas 2026-09-17 19:29 UTC, Harper 2026-09-17 16:40 -03, Benjamin no newer HEARTBEAT). Do not flag Carol/Kilo/Tablet.
+- Prior lane: 2026-10-04 18:12 -03 | Hermes-Dispatch | apps. Carlos items unchanged: FAJ 07/10, FUNCATE PDF, Agilize #2423990, Clicksign Ilha, Crypto.com before 25/10. Do not nag Carlos.
 - Instant Client Sender OFF. No client email. Never orange-cloud. Never CREATE apps. DNS. Never colliding CNAME.
 - Sell only https://ziontechgroup.com/en/plans/ and https://ziontechgroup.com/discovery/
